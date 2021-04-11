@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.270 --> 00:00:04.140
+Peki, kod yazma ve hata 
+düzeltmeyi ilk kez denediniz.
+
+00:00:04.140 --> 00:00:06.830
+Bu tür bir deney, 
+öðrenme açýsýndan çok önemli
+
+00:00:06.830 --> 00:00:08.200
+Android geliþtirme.
+
+00:00:08.200 --> 00:00:10.310
+Þimdi izleme büyüklüðüne bakalým.
+
+00:00:10.310 --> 00:00:13.720
+Geniþlik ve yükseklik DP 
+deðerleriyle veya yoðunluktan
+
+00:00:13.720 --> 00:00:15.390
+baðýmsýz piksel olarak veriliyor.
+
+00:00:15.390 --> 00:00:18.290
+Böylece farklý cihazlarda 
+iyi bir görünüm oluyor.
+
+00:00:18.290 --> 00:00:21.260
+Fakat bu UI'de hâlâ 
+iyileþtirme yapýlabilir.
+
+00:00:21.260 --> 00:00:25.440
+Bu metni daha uzun hâle 
+getirirsem, mesela,bir dakika
+
+00:00:25.440 --> 00:00:27.170
+bugün doðum gününüz mü?
+
+00:00:27.170 --> 00:00:30.780
+Metin güncellemeleri burada 
+görülüyor ama iki diziden ibaret.
+
+00:00:32.400 --> 00:00:35.530
+çünkü bu tarafta 
+birçok ekran emlaðý mevcut.
+
+00:00:35.530 --> 00:00:37.300
+Kutunun taraf 
+deðiþtirmemesinin sebebi,
+
+00:00:37.300 --> 00:00:41.500
+150 dp geniþlik 
+ve yükseklik vermemiz.
+
+00:00:41.500 --> 00:00:43.500
+Geniþlik ve yükseklik için böyle
+
+00:00:43.500 --> 00:00:47.240
+bir deðer girdiðinizde 
+buna hard coding deðeri denir.
+
+00:00:47.240 --> 00:00:49.440
+Genellikle iyi bir 
+uygulama deðildir,
+
+00:00:49.440 --> 00:00:53.760
+çünkü metin bu þekilde 
+deðiþtirildiðinde tuhaf görünecektir.
+
+00:00:53.760 --> 00:00:56.380
+Geniþliði 200 gibi 
+deðiþtirmemiz gerekir ki
+
+00:00:56.380 --> 00:00:58.740
+hepsi tek bir 
+satýra sýðsýn.
+
+00:00:58.740 --> 00:01:01.250
+Metne göre geniþlik ve 
+yüksekliði güncellemek
+
+00:01:01.250 --> 00:01:03.750
+karmaþýk olacaktýr.
+
+00:01:03.750 --> 00:01:06.440
+Metnin ne olduðunu göremeyebilirsiniz.
+
+00:01:06.440 --> 00:01:09.890
+Mesela, haber yazýlarýný gösteren 
+bir uygulamanýz varsa or example,
+
+00:01:15.720 --> 00:01:17.380
+istemeyeceksinizdir.
+
+00:01:17.380 --> 00:01:20.390
+Android telefonda geniþliði 
+sarma içerik denen bu sorunu
+
+00:01:20.390 --> 00:01:24.010
+özel bir deðerle bu sorunu çözebiliriz.
+
+00:01:24.010 --> 00:01:26.500
+Bu adres,TextView geniþliði, yani
+
+00:01:26.500 --> 00:01:30.640
+tam olarak içeriðin geniþliðidir.
+
+00:01:30.640 --> 00:01:32.770
+Çok kýsa ve büyük deðildir.
+
+00:01:32.770 --> 00:01:34.010
+Tam uyuyor.
+
+00:01:34.010 --> 00:01:37.520
+Ayný þekilde, 
+yüksekliði 150 dp yerine,
+
+00:01:37.520 --> 00:01:42.010
+özel sarma içeriðine ayarlayabiliriz, 
+metin güncellenecektir,
+
+00:01:42.010 --> 00:01:46.480
+metnin büyüklüðü içindeki 
+metin kadar olacaktýr.
+
+00:01:50.610 --> 00:01:54.710
+çünkü burada doðru içeriðe karar 
+vermiþseniz, içerik þimdi deðiþecektir.
+
+00:01:54.710 --> 00:01:58.020
+Metin görünümünde 
+bu fazlalýk olmayacak.
+
+00:01:58.020 --> 00:02:00.860
+Yine bunun altýnda 
+baþka metin görünümleri varsa,
+
+00:02:00.860 --> 00:02:05.130
+bu ilk görünümün altýna kayabilir.
+
+00:02:05.130 --> 00:02:09.220
+Haber uygulamasý örneðine geri 
+dönersek, haber baþlýðý söz konsuysa,
+
+00:02:09.220 --> 00:02:13.560
+haber tanýmýnýn en aþaðýda, 
+150 DPI uzakta olmasýný isteyebilirsiniz.
+
+00:02:13.560 --> 00:02:17.830
+Bunun hemen haber baþlýðý 
+altýnda olmasýný isteyebilirsiniz.
+
+00:02:17.830 --> 00:02:20.760
+Geriye zoom yaparak, 
+daha küçük bir string deneyelim.
+
+00:02:20.760 --> 00:02:22.840
+Peki, þimdi sýra sizde.
+
+00:02:22.840 --> 00:02:25.420
+Kodla birkaç þeyi 
+deðiþtirmenizi istiyoruz.
+
+00:02:25.420 --> 00:02:29.000
+TextView geniþliði ve yüksekliðini 
+sarma içeriðine dönüþtürün.
+
+00:02:29.000 --> 00:02:32.970
+Ardýndan metni çok uzun bir 
+cümle veya paragraf olarak deðiþtirin,
+
+00:02:32.970 --> 00:02:35.860
+cihaz ön izlemesinde birden 
+fazla metin satýrý görünsün.
+
+00:02:35.860 --> 00:02:40.640
+Dilerseniz, doðumgünü þarkýsýný 
+yazabilirsiniz, epey uzun.
+
+00:02:40.640 --> 00:02:42.450
+Baþlamanýz için gerekli 
+kod aþaðýdaki linkte.
+

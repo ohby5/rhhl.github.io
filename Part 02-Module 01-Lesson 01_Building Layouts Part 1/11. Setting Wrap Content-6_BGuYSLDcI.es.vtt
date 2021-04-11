@@ -1,0 +1,203 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.270 --> 00:00:04.140
+Muy bien, habéis hecho el primer intento
+de escribir código y solucionar errores.
+
+00:00:04.181 --> 00:00:08.177
+Este tipo de experimentación es básico
+para aprender a desarrollar Android.
+
+00:00:08.218 --> 00:00:10.079
+Hablemos del tamaño de las <i>views.</i>
+
+00:00:10.120 --> 00:00:12.439
+Sabemos que la anchura y altura
+están expresadas
+
+00:00:12.479 --> 00:00:15.207
+en valores dp
+o píxeles independientes de la densidad.
+
+00:00:15.208 --> 00:00:18.118
+Esto hace que se vea bien
+en diferentes dispositivos.
+
+00:00:18.159 --> 00:00:21.028
+De todos modos, esta interfaz de usuario
+aÃºn se puede mejorar.
+
+00:00:21.069 --> 00:00:24.049
+Si cambio este texto de aquí
+para que sea más largo,
+
+00:00:24.090 --> 00:00:26.697
+por ejemplo:
+"Wait, today's your birthday?"
+
+00:00:27.018 --> 00:00:30.748
+Vemos que el texto se actualiza aquí,
+pero ocupa dos líneas.
+
+00:00:30.789 --> 00:00:32.417
+Idealmente, debería ocupar solo una,
+
+00:00:32.458 --> 00:00:35.454
+porque hay suficiente espacio
+en este lado de la pantalla.
+
+00:00:35.495 --> 00:00:37.248
+La caja no ha cambiado de tamaño
+
+00:00:37.289 --> 00:00:41.391
+porque hemos establecido una anchura
+y altura fijas de 150 dp.
+
+00:00:41.471 --> 00:00:44.823
+Cuando se establece un valor tan concreto
+para la anchura y la altura como este,
+
+00:00:44.864 --> 00:00:47.020
+se dice que es un valor
+<i>hardcoded</i> [incrustado a fuego].
+
+00:00:47.060 --> 00:00:49.358
+En general no se considera
+una buena práctica,
+
+00:00:49.399 --> 00:00:53.711
+porque si el texto cambia, como aquí,
+entonces se ve raro.
+
+00:00:53.752 --> 00:00:56.739
+Tenemos que cambiar la anchura
+a algo así como 200
+
+00:00:56.780 --> 00:00:58.696
+para que quepa todo en una línea.
+
+00:00:58.737 --> 00:01:03.384
+Pero es molesto ir actualizando
+la anchura y la altura segÃºn el texto.
+
+00:01:03.425 --> 00:01:06.133
+Es posible que no sepas
+qué texto habrá hasta más tarde.
+
+00:01:06.174 --> 00:01:09.679
+Por ejemplo, si tienes una aplicación
+que muestra artículos de noticias,
+
+00:01:09.720 --> 00:01:11.918
+el título de cada pieza puede variar.
+
+00:01:11.959 --> 00:01:14.358
+Y no queréis que la interfaz de usuario
+se desconfigure
+
+00:01:14.399 --> 00:01:17.226
+si tenéis un título muy largo
+o uno muy corto.
+
+00:01:17.267 --> 00:01:20.313
+Así que en Android podemos solucionar
+este problema configurando la anchura
+
+00:01:20.354 --> 00:01:23.732
+con un valor especial llamado
+<i>wrap_content</i> [ajustado al contenido].
+
+00:01:23.733 --> 00:01:26.164
+Este ajusta la anchura de TextView,
+
+00:01:26.205 --> 00:01:30.506
+para que sea igual de ancho
+que el contenido que tiene dentro.
+
+00:01:30.547 --> 00:01:33.703
+No es ni demasiado corto
+ni demasiado largo, es perfecto.
+
+00:01:33.744 --> 00:01:37.205
+De manera similar, con la altura,
+en lugar de establecerla a 150 dp,
+
+00:01:37.246 --> 00:01:40.206
+la configuramos con el valor especial
+de <i>wrap_content,</i>
+
+00:01:40.247 --> 00:01:42.035
+y entonces el TextView se actualiza
+
+00:01:42.076 --> 00:01:46.225
+de manera que es tan alto
+como el texto que contiene.
+
+00:01:46.266 --> 00:01:49.670
+Establecer <i>wrap_content</i> para la altura
+o la anchura es muy potente,
+
+00:01:49.711 --> 00:01:53.180
+porque puedes tener contenido al lado,
+aquí a la derecha,
+
+00:01:53.221 --> 00:01:57.862
+que se desplazará porque ya no queda
+el espacio que sobraba con el TextView.
+
+00:01:57.903 --> 00:02:00.768
+Y, del mismo modo, si tenéis más
+TextViews debajo de este,
+
+00:02:00.809 --> 00:02:04.704
+se pueden desplazar hacia arriba,
+justo debajo de este primer TextView.
+
+00:02:04.745 --> 00:02:06.891
+Volviendo al ejemplo
+de la aplicación de noticias,
+
+00:02:06.932 --> 00:02:08.634
+si este fuera el titular,
+
+00:02:08.636 --> 00:02:13.304
+no os gustaría que la descripción
+apareciera aquí abajo, a 150 dp,
+
+00:02:13.345 --> 00:02:17.470
+sino que preferiríais que la descripción
+apareciera justo debajo del titular.
+
+00:02:17.511 --> 00:02:20.182
+Desampliemos y probemos
+con un texto más corto.
+
+00:02:20.549 --> 00:02:22.557
+Muy bien, ahora tendréis que practicar.
+
+00:02:22.598 --> 00:02:24.834
+Queremos que cambiéis
+un par de cosas con el código.
+
+00:02:24.875 --> 00:02:28.680
+Queremos que cambiéis la anchura
+y altura de TextView a <i>wrap_content.</i>
+
+00:02:28.721 --> 00:02:32.657
+Entonces cambiad el texto para que sea
+una frase muy larga o un párrafo,
+
+00:02:32.698 --> 00:02:36.098
+de manera que ocupe varias líneas
+en la vista previa del dispositivo.
+
+00:02:36.139 --> 00:02:40.402
+Podéis escribir la canción completa
+de "Cumpleaños feliz", es bastante larga.
+
+00:02:40.443 --> 00:02:42.589
+Abajo tenéis un enlace
+al código para empezar.
+

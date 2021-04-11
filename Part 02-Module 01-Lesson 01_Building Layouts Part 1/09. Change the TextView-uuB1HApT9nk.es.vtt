@@ -1,0 +1,358 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.660 --> 00:00:03.923
+Bien, hemos visto el código <i>TextView</i>
+por primera vez.
+
+00:00:03.923 --> 00:00:05.753
+Pero es como estar en el limbo.
+
+00:00:05.755 --> 00:00:09.025
+Correcto, necesitamos un espacio
+donde alojarlo.
+
+00:00:09.025 --> 00:00:10.936
+Sí, y ese espacio es un IDE.
+
+00:00:10.937 --> 00:00:12.873
+- Otra vez ese acrónimo.
+- Sí.
+
+00:00:12.874 --> 00:00:14.141
+¿Qué significa, Catherine?
+
+00:00:14.141 --> 00:00:16.312
+- Entorno de Desarrollo Integrado.
+- Correcto.
+
+00:00:16.312 --> 00:00:19.660
+Y en esta clase usaremos Android Studio.
+
+00:00:19.660 --> 00:00:21.650
+Así es como se ve.
+
+00:00:21.650 --> 00:00:23.310
+Todavía un poco intimidante.
+
+00:00:23.310 --> 00:00:25.100
+Sí, creo que podríamos necesitar algo
+
+00:00:25.100 --> 00:00:27.829
+que ayude a facilitar un poco
+el aprendizaje del alumno.
+
+00:00:27.829 --> 00:00:30.251
+Así que hemos trabajado
+en el desarrollo de algo
+
+00:00:30.251 --> 00:00:32.713
+que es Android Studio
+sobre ruedas de entrenamiento,
+
+00:00:32.713 --> 00:00:34.757
+que en la tradición
+de siglas muy complejas
+
+00:00:34.757 --> 00:00:37.998
+en ciencias de computación,
+lo llamamos XMLV.
+
+00:00:37.998 --> 00:00:39.634
+Lo que significa Visualizador XML.
+
+00:00:39.634 --> 00:00:42.280
+Entonces escribes un poco de XML
+y puedes ver la salida.
+
+00:00:42.280 --> 00:00:44.560
+Escribes un poco más,
+y puedes ver más salida.
+
+00:00:44.560 --> 00:00:46.064
+Sí, entonces usémoslo.
+
+00:00:46.170 --> 00:00:47.175
+Bueno.
+
+00:00:47.420 --> 00:00:49.586
+Puesto que este visualizador de XML
+
+00:00:49.587 --> 00:00:51.600
+fue creado específicamente
+para este curso,
+
+00:00:51.600 --> 00:00:53.460
+no proporcionará toda la funcionalidad
+
+00:00:53.460 --> 00:00:55.121
+que Android Studio soporta.
+
+00:00:55.121 --> 00:00:58.160
+Pero en definitiva con el conjunto
+de problemas de esta lección,
+
+00:00:58.160 --> 00:00:59.930
+te introduciremos en Android Studio
+
+00:00:59.930 --> 00:01:02.450
+y ya no necesitarás este sitio web.
+
+00:01:02.450 --> 00:01:04.400
+Hay un enlace en las notas del instructor
+
+00:01:04.400 --> 00:01:05.700
+si quieres seguir adelante.
+
+00:01:05.700 --> 00:01:08.110
+En este código,
+el texto dice <i>"Happy Birthday!"</i>.
+
+00:01:08.110 --> 00:01:11.810
+Así que cuando me fijo en el dispositivo
+dice <i>Happy Birthday!</i>.
+
+00:01:12.190 --> 00:01:15.491
+Ahora cambiemos el texto
+a <i>"Happy Birthday, Kunal!"</i>.
+
+00:01:16.350 --> 00:01:18.670
+Cuando observamos
+la vista previa del dispositivo
+
+00:01:18.670 --> 00:01:21.270
+vemos que ahora dice,
+<i>Happy Birthday, Kunal!</i>.
+
+00:01:21.270 --> 00:01:24.250
+Y qué sucede si establecemos
+la anchura y la altura.
+
+00:01:24.250 --> 00:01:26.228
+Tomaré algunos valores arbitrarios
+
+00:01:26.229 --> 00:01:30.581
+como 300 dp para la anchura
+y 500 para la altura.
+
+00:01:31.400 --> 00:01:33.050
+Ahora en el panel de vista previa,
+
+00:01:33.050 --> 00:01:35.160
+ves que el <i>TextView</i> es mucho más grande.
+
+00:01:35.160 --> 00:01:38.147
+El texto, sin embargo,
+sigue siendo del mismo tamaño
+
+00:01:38.147 --> 00:01:39.760
+en la esquina superior izquierda.
+
+00:01:40.607 --> 00:01:42.829
+Observa que los valores
+de anchura y de altura
+
+00:01:42.830 --> 00:01:48.296
+de 300 y 500 son seguidos
+por <i>dp</i> en cada caso.
+
+00:01:48.297 --> 00:01:50.047
+Esta es una unidad de medida,
+
+00:01:50.047 --> 00:01:51.884
+como los centímetros y los milímetros,
+
+00:01:51.884 --> 00:01:55.120
+que utilizamos para describir
+el tamaño de las vistas en Android,
+
+00:01:55.120 --> 00:01:58.000
+así como el distanciamiento
+entre las vistas.
+
+00:01:58.550 --> 00:02:01.680
+La unidad dp significa
+píxeles independientes de la densidad.
+
+00:02:02.540 --> 00:02:04.836
+Déjame explicar
+por qué necesitamos eso.
+
+00:02:04.836 --> 00:02:07.672
+Digamos que estos rectángulos
+que están bellamente dibujados
+
+00:02:07.672 --> 00:02:09.410
+representan diferentes dispositivos.
+
+00:02:09.410 --> 00:02:11.230
+Son del mismo tamaño físico,
+
+00:02:11.230 --> 00:02:14.230
+pero difieren en cuanto a la resolución.
+
+00:02:14.230 --> 00:02:16.605
+Este es un dispositivo
+de resolución media
+
+00:02:16.606 --> 00:02:18.980
+con un número medio
+de píxeles en la pantalla,
+
+00:02:18.980 --> 00:02:22.519
+un dispositivo de resolución alta
+y uno de resolución extra-alta.
+
+00:02:22.520 --> 00:02:25.347
+Cuando digo píxel, me refiero
+a que una pantalla de teléfono
+
+00:02:25.347 --> 00:02:27.942
+se compone de muchos cuadraditos,
+que son los píxeles,
+
+00:02:27.942 --> 00:02:30.300
+y se encienden según lo que estés viendo.
+
+00:02:30.300 --> 00:02:33.579
+Si defino que el tamaño de una vista,
+por ejemplo un botón,
+
+00:02:33.580 --> 00:02:35.976
+sea de 2 píxeles de alto
+por 2 píxeles de ancho,
+
+00:02:35.984 --> 00:02:39.040
+se vería así en un dispositivo
+de resolución media.
+
+00:02:39.670 --> 00:02:41.500
+En un dispositivo de resolución alta,
+
+00:02:41.500 --> 00:02:43.470
+también sería de 2 píxeles por 2 píxeles.
+
+00:02:43.470 --> 00:02:44.850
+Pero es un poco más pequeño,
+
+00:02:44.850 --> 00:02:46.412
+porque hay muchos más píxeles
+
+00:02:46.412 --> 00:02:48.862
+que están comprimidos en este dispositivo,
+
+00:02:48.862 --> 00:02:50.954
+y en un dispositivo
+de extra alta resolución
+
+00:02:50.955 --> 00:02:52.365
+donde hay muchos más píxeles
+
+00:02:52.365 --> 00:02:54.262
+que están comprimidos en este espacio,
+
+00:02:54.262 --> 00:02:56.720
+este botón es realmente muy pequeño.
+
+00:02:56.720 --> 00:02:58.580
+Apenas puedo tocarlo con mi dedo.
+
+00:02:58.580 --> 00:03:02.520
+Tengo que usar el borde de mi dedo
+o mi uña para llegar a él.
+
+00:03:02.520 --> 00:03:05.200
+El hecho de tener un dispositivo
+de extra alta resolución
+
+00:03:05.200 --> 00:03:07.220
+no significa que tenga
+un dedo más pequeño.
+
+00:03:07.220 --> 00:03:10.060
+Aún así, quisiera poder tocar
+los botones en la pantalla.
+
+00:03:10.060 --> 00:03:13.050
+Y es por eso que tenemos
+píxeles independientes de la densidad.
+
+00:03:13.050 --> 00:03:16.150
+Puedo definir que mi botón sea
+de 2 dp de alto por 2 dp de ancho.
+
+00:03:16.150 --> 00:03:19.390
+Así se vería
+en los diferentes dispositivos.
+
+00:03:19.390 --> 00:03:21.446
+Es el mismo tamaño físico,
+
+00:03:21.447 --> 00:03:26.090
+pero por debajo, Android asigna
+una cantidad distinta de píxeles.
+
+00:03:26.090 --> 00:03:28.411
+No tienes que preocuparte
+por nada de esa lógica.
+
+00:03:28.411 --> 00:03:29.870
+Todo lo que necesitas recordar
+
+00:03:29.870 --> 00:03:33.520
+es que tienes que definir los tamaños
+en términos de valores dp.
+
+00:03:33.520 --> 00:03:35.658
+Al diseñar tus aplicaciones,
+te recomendamos
+
+00:03:35.658 --> 00:03:38.040
+que todos los objetivos táctiles
+como los botones
+
+00:03:38.040 --> 00:03:41.160
+tengan al menos 48 dp de alto y de ancho.
+
+00:03:41.160 --> 00:03:44.100
+Nota que dice 48 dp y no 48 píxeles,
+
+00:03:44.100 --> 00:03:45.946
+de lo contrario se vería muy pequeño
+
+00:03:45.947 --> 00:03:48.070
+en este dispositivo
+de extra alta resolución.
+
+00:03:48.070 --> 00:03:50.780
+Esto hará que tu aplicación
+sea fácil de usar para todos.
+
+00:03:50.780 --> 00:03:52.666
+Con todo este conocimiento,
+
+00:03:52.666 --> 00:03:55.293
+quiero que intentes cambiar
+el código <i>TextView</i> ahora.
+
+00:03:55.647 --> 00:03:59.890
+Vas a escribir tus primeras líneas de XML,
+¡qué emocionante!.
+
+00:03:59.890 --> 00:04:02.700
+Primero trata de cambiar
+el texto en el <i>TextView</i>.
+
+00:04:02.700 --> 00:04:05.120
+Y luego trata de cambiar
+el tamaño del <i>TextView</i>.
+
+00:04:05.950 --> 00:04:09.700
+Luego quiero que trates de crear
+un error, cara triste.
+
+00:04:09.700 --> 00:04:11.900
+Y luego quiero que lo deshagas,
+cara feliz.
+

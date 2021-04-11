@@ -1,0 +1,374 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.490 --> 00:00:01.851
+Você fez algumas boas observações
+
+00:00:01.863 --> 00:00:04.200
+no último questionário sobre XML
+que nós mostrámos.
+
+00:00:04.707 --> 00:00:07.563
+Agora vamos falar formalmente
+sobre a sintaxe XML.
+
+00:00:08.150 --> 00:00:12.030
+Sintaxe significa as regras
+que definem o que é um XML válido.
+
+00:00:12.455 --> 00:00:15.720
+Se você escrever um XML inválido,
+ele nem aparecerá no seu celular.
+
+00:00:16.713 --> 00:00:19.378
+Este é o código para o elemento
+XML chamado<i> TextView.</i>
+
+00:00:20.129 --> 00:00:23.740
+Sempre começamos com o sinal de menor "&lt;",
+seguido do nome da <i>view</i>.
+
+00:00:24.160 --> 00:00:27.126
+Isso pode ser uma <i>ImageView</i>,
+botão, ou qualquer outro tipo de view.
+
+00:00:28.036 --> 00:00:31.070
+Agora temos a lista de atributos
+aqui, um por linha,
+
+00:00:31.901 --> 00:00:34.880
+e depois temos uma barra "/"
+e o sinal de maior "&gt;".
+
+00:00:35.907 --> 00:00:37.716
+Há um monte de símbolos
+e caracteres aqui.
+
+00:00:38.436 --> 00:00:41.913
+Para ajudá-lo a se lembrar dela,
+você pode pensar em um sinal de menor,
+
+00:00:42.270 --> 00:00:43.913
+[SOM] e então o nome da exibição...
+
+00:00:44.301 --> 00:00:46.449
+[SOM] ...e então os atributos...
+
+00:00:46.880 --> 00:00:48.375
+[SOM]
+
+00:00:48.680 --> 00:00:50.043
+e, em seguida, a barra [SOM]
+
+00:00:50.436 --> 00:00:52.320
+e então o sinal de maior [SOM].
+
+00:00:53.107 --> 00:00:58.360
+Então, todos juntos é [SOM].
+
+00:00:59.160 --> 00:01:02.460
+Se esquecer um desses símbolos,
+então você terá um XML inválido.
+
+00:01:03.003 --> 00:01:07.040
+Aqui está o raciocínio por trás
+do que parecem ser símbolos arbitrários.
+
+00:01:07.500 --> 00:01:10.701
+Para cada elemento XML,
+quando você iniciar ou abrir uma tag,
+
+00:01:10.910 --> 00:01:12.073
+você sempre precisa fechá-la.
+
+00:01:12.880 --> 00:01:15.163
+É como colocar ponto final
+no fim de uma frase,
+
+00:01:15.433 --> 00:01:17.163
+mas no XML, em vez de uma frase,
+
+00:01:17.409 --> 00:01:19.366
+você precisa
+se certificar de fechar cada tag.
+
+00:01:20.460 --> 00:01:23.144
+Porque começamos "&lt;" a tag aqui 
+e a fechamos "&gt;" logo em seguida,
+
+00:01:23.396 --> 00:01:25.353
+ela é chamada de tag de auto-fechamento.
+
+00:01:26.690 --> 00:01:28.286
+Em vez de uma tag de auto-fechamento,
+
+00:01:28.530 --> 00:01:30.172
+você pode ter uma tag de abertura separada
+
+00:01:30.338 --> 00:01:31.720
+e uma tag de fechamento separada.
+
+00:01:33.060 --> 00:01:34.652
+Tem aqui um exemplo onde isso seria útil.
+
+00:01:35.113 --> 00:01:36.720
+Isso é para a <i>view</i> do <i>LinearLayout</i>,
+
+00:01:36.990 --> 00:01:39.255
+que é o que você irá aprender
+mais tarde nesta lição.
+
+00:01:39.740 --> 00:01:42.947
+Mas saiba que essa é a tag de abertura
+e essa é a tag de fechamento.
+
+00:01:44.541 --> 00:01:49.193
+A tag de fechamento é igual,
+exceto por um sinal de menor,
+
+00:01:49.538 --> 00:01:53.218
+uma barra, o nome da view
+e, em seguida, o sinal de maior.
+
+00:01:54.301 --> 00:01:58.436
+Assim, a diferença entre a tag de abertura
+e a de fechamento é essa barra "/".
+
+00:02:00.061 --> 00:02:04.221
+E você também irá notar que, no meio,
+temos dois elementos XML de <i>TextView.</i>
+
+00:02:04.652 --> 00:02:08.941
+Estes são também chamados elementos XML
+filhosdentro do <i>LinearLayout </i>pai.
+
+00:02:09.895 --> 00:02:13.446
+Imagina se tivesse uma tag de auto-fechamento
+aqui para o <i>LinearLayout</i>,
+
+00:02:13.790 --> 00:02:16.233
+então você não teria idéia
+de quantos filhos ele contém.
+
+00:02:16.810 --> 00:02:18.578
+Mas agora que a tag de fechamento está aqui,
+
+00:02:18.769 --> 00:02:20.664
+você sabe exatamente
+que você tem dois filhos.
+
+00:02:22.010 --> 00:02:23.335
+No nosso caso, para a <i>TextView</i>,
+
+00:02:23.513 --> 00:02:25.433
+não existem elementos XML filhos,
+
+00:02:25.630 --> 00:02:28.295
+por isso, podemos fazer logo
+uma tag de auto-fechamento,
+
+00:02:28.590 --> 00:02:30.744
+porque isso nos poupa de ter que escrever
+
+00:02:31.329 --> 00:02:34.880
+sinal de menor, barra inclinada,
+TextView, sinal de maior.
+
+00:02:36.123 --> 00:02:39.643
+Você percebe que tem um monte
+de texto adicional dentro desta<i> tag</i>.
+
+00:02:40.210 --> 00:02:41.587
+Estes são chamados atributos.
+
+00:02:42.150 --> 00:02:44.830
+Os atributos são características
+que determinam o comportamento
+
+00:02:44.855 --> 00:02:47.304
+ou a aparência da <i>view</i>
+em um dispositivo Android.
+
+00:02:48.067 --> 00:02:50.886
+Por exemplo, pense nessa analogia.
+
+00:02:50.972 --> 00:02:53.944
+Uma pessoa tem atributos
+como cabelo preto e olhos castanhos.
+
+00:02:54.380 --> 00:02:57.209
+Um texto também tem atributos
+como largura, altura, fundo,
+
+00:02:57.243 --> 00:02:58.818
+texto, entre vários outros.
+
+00:02:59.169 --> 00:03:02.147
+Olhando mais de perto
+para o formato em cada linha,
+
+00:03:02.560 --> 00:03:05.464
+temos o atributo de nome
+no lado esquerdo.
+
+00:03:06.018 --> 00:03:07.366
+sublinhado a amarelo aqui,
+
+00:03:07.735 --> 00:03:09.956
+e no lado direito,
+temos o valor real.
+
+00:03:11.600 --> 00:03:14.024
+É importante notar
+que os valores de atributo
+
+00:03:14.141 --> 00:03:17.913
+devem ser colocados entre aspas
+como parte da sintaxe de XML.
+
+00:03:19.258 --> 00:03:22.723
+Então temos um sinal de igual no meio
+para dizer que o nome do atributo
+
+00:03:22.720 --> 00:03:25.187
+à esquerda está definido
+para o valor à direita.
+
+00:03:25.926 --> 00:03:28.941
+Então o texto para a <i>TextView</i>
+é "Parabéns!",
+
+00:03:29.316 --> 00:03:32.640
+e a altura é 75 dp.
+
+00:03:34.061 --> 00:03:36.160
+Todos esses atributos
+têm valores padrão,
+
+00:03:36.320 --> 00:03:38.166
+e há atributos que nem sequer listamos aqui.
+
+00:03:38.861 --> 00:03:42.215
+Isso porque a <i>TextView</i> tem valores padrão
+para todos os seus atributos.
+
+00:03:42.726 --> 00:03:45.766
+Se os valores padrões satisfazem,
+então não precisa modificá-los aqui.
+
+00:03:46.775 --> 00:03:48.180
+Você só deve escrever código aqui,
+
+00:03:48.190 --> 00:03:50.276
+que você quer que seja diferente
+dos valores padrões.
+
+00:03:50.960 --> 00:03:52.800
+Por exemplo,
+a cor de fundo padrão
+
+00:03:52.873 --> 00:03:54.812
+para uma <i>TextView</i> é a cor transparente.
+
+00:03:55.170 --> 00:03:57.538
+Mas, queremos configurá-la
+para ser uma cor cinza escura,
+
+00:03:57.796 --> 00:03:59.495
+e por isso temos essa linha de código aqui.
+
+00:04:01.390 --> 00:04:02.609
+Mais uma nota importante.
+
+00:04:03.260 --> 00:04:04.326
+Humanos são inteligentes.
+
+00:04:04.590 --> 00:04:06.018
+Se eu escrever frases como esta,
+
+00:04:06.180 --> 00:04:07.335
+você sabe o que eu digo.
+
+00:04:07.660 --> 00:04:10.929
+Mesmo que eu não esteja usando
+pontuação ou gramática correta,
+
+00:04:11.113 --> 00:04:12.240
+ou mesmo palavras reais.
+
+00:04:13.003 --> 00:04:14.720
+Mas computadores não são tão inteligentes,
+
+00:04:14.750 --> 00:04:18.326
+por isso precisa usar símbolos precisos
+e nomes que eles reconheçam,
+
+00:04:18.632 --> 00:04:20.392
+senão, não saberão o que você quer dizer.
+
+00:04:20.600 --> 00:04:24.301
+e haverá erros em seu código,
+aqui está um exemplo.
+
+00:04:24.787 --> 00:04:28.000
+Para o nome da <i>view</i>,
+não podemos soletrar <i>TxtView</i>,
+
+00:04:28.424 --> 00:04:31.895
+ou <i>Textview</i> com letra maiúscula,
+ou <i>text view</i> com um espaço.
+
+00:04:32.664 --> 00:04:33.784
+Estas formas são incorretas
+
+00:04:34.030 --> 00:04:36.836
+e o computador não saberá
+que nós queriamos dizer <i>TextView</i>.
+
+00:04:37.236 --> 00:04:40.570
+Se quisermos <i>TextView</i> precisamos
+soletrar exatamente do mesmo modo,
+
+00:04:40.806 --> 00:04:43.360
+com "T" e "V" maiúsculo,
+em CamelCase.
+
+00:04:44.590 --> 00:04:48.910
+Nomes de atributos devem ser escritos
+com dois pontos depois de "android".
+
+00:04:49.260 --> 00:04:53.187
+Precisamos ter um sinal de igual,
+e colocar aspas em torno dos valores.
+
+00:04:53.926 --> 00:04:58.900
+Mais uma vez para
+que você não esqueça [SOM].
+
+00:04:59.890 --> 00:05:02.449
+Agora que nós estudámos
+as regras de sintaxe de XML,
+
+00:05:02.750 --> 00:05:05.680
+você pode responder a estas
+perguntas para este elemento XML?
+
+00:05:06.430 --> 00:05:08.818
+Em primeiro lugar,
+qual é o nome desse elemento XML?
+
+00:05:09.501 --> 00:05:12.738
+Consegue listar todos os nomes de atributos
+separados por vírgulas?
+
+00:05:13.310 --> 00:05:14.658
+Não os valores de atributo.
+
+00:05:15.384 --> 00:05:17.590
+Por fim, em qual linha a tag é fechada?
+
+00:05:18.596 --> 00:05:21.513
+Anotei os números das linhas
+no lado esquerdo para ajudar.
+

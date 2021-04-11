@@ -1,0 +1,257 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.333 --> 00:00:01.600
+Por si no te has dado cuenta,
+
+00:00:01.867 --> 00:00:05.167
+el texto es pequeño
+en la pantalla de este dispositivo.
+
+00:00:05.500 --> 00:00:09.200
+Yo tengo la vista fatal, así que necesito
+que sea mucho más grande.
+
+00:00:09.533 --> 00:00:10.533
+Por suerte,
+
+00:00:10.600 --> 00:00:14.333
+existe un atributo
+para cambiar el tamaño del texto.
+
+00:00:14.800 --> 00:00:17.067
+Pero espera,
+aquí abajo aparece un error.
+
+00:00:17.200 --> 00:00:20.300
+Dice que el ordenador
+no es capaz de entender mi XML.
+
+00:00:20.600 --> 00:00:24.300
+Revisando el código,
+veo que la línea que hemos añadido aparece
+
+00:00:24.367 --> 00:00:27.833
+en negro,
+mientras aquí encima se usa azul
+
+00:00:27.933 --> 00:00:30.767
+para el nombre del atributo
+y rojo para el valor del atributo.
+
+00:00:31.167 --> 00:00:32.732
+Entonces,
+en este línea hay algo mal.
+
+00:00:33.233 --> 00:00:34.433
+Vale, ya lo veo.
+
+00:00:34.500 --> 00:00:38.000
+La barra oblicua dentro del corchete
+angular de cierre está en esta línea.
+
+00:00:38.167 --> 00:00:41.200
+Es un error común de principiante
+añadir el atributo
+
+00:00:41.267 --> 00:00:43.033
+después de haber cerrado la etiqueta.
+
+00:00:43.200 --> 00:00:46.067
+Técnicamente,
+esto está como flotando en el limbo XML
+
+00:00:46.167 --> 00:00:50.067
+o algo así, porque no está vinculado
+a ningún elemento XML.
+
+00:00:50.133 --> 00:00:53.667
+Debemos copiar estos símbolos
+y moverlos aquí abajo.
+
+00:00:53.733 --> 00:00:54.733
+Así está mucho mejor.
+
+00:00:54.867 --> 00:00:58.800
+No hay errores y este XML es válido.
+Y ahora la fuente es más grande.
+
+00:00:59.867 --> 00:01:01.433
+Ahora es mucho más legible.
+
+00:01:01.633 --> 00:01:04.632
+Fíjate en que el tamaño del texto
+está configurado en 45sp.
+
+00:01:04.800 --> 00:01:06.933
+SP significa
+"píxeles independientes de la escala".
+
+00:01:07.267 --> 00:01:11.233
+Es una unidad de medida similar a DP,
+que hace consistente a la app
+
+00:01:11.300 --> 00:01:15.733
+en dispositivos distintos
+con distintas densidades.
+
+00:01:15.800 --> 00:01:19.133
+Los SP se usan solo para las fuentes
+porque se ajustan basándose
+
+00:01:19.200 --> 00:01:22.767
+en las preferencias y configuración
+del usuario en cuanto a tamaño de texto.
+
+00:01:22.833 --> 00:01:23.933
+Vamos a verlo.
+
+00:01:24.300 --> 00:01:25.633
+Para ir a la configuración,
+
+00:01:26.067 --> 00:01:28.933
+ve a la app de ajustes,
+dale a <i>visualizar</i>
+
+00:01:29.700 --> 00:01:31.600
+y verás una opción
+para el tamaño de la fuente.
+
+00:01:32.133 --> 00:01:34.800
+Si haces clic en ella,
+verás varios tamaños de fuente.
+
+00:01:35.000 --> 00:01:38.767
+Si hago clic en <i>huge</i>,
+aumentará el tamaño de fuente de todo.
+
+00:01:39.133 --> 00:01:41.633
+Usa siempre SP para configurar
+los tamaños de la fuente
+
+00:01:41.700 --> 00:01:44.900
+para que aumenten o disminuyan
+según la preferencia del usuario.
+
+00:01:45.433 --> 00:01:48.100
+El tamaño del texto de la <i>TextView</i>
+se cambia en un momento.
+
+00:01:48.167 --> 00:01:50.300
+Pero antes quiero enseñarte una cosa.
+
+00:01:50.600 --> 00:01:52.500
+Esta es la especificación
+de Material Design.
+
+00:01:52.667 --> 00:01:55.333
+Se trata de un nuevo lenguaje de diseño
+desarrollado por Google
+
+00:01:55.433 --> 00:01:58.233
+para ayudar a crear
+apps buenas y consistentes
+
+00:01:58.333 --> 00:02:02.133
+en distintos dispositivos y plataformas,
+tanto para web como para móvil.
+
+00:02:02.467 --> 00:02:05.233
+La especificación de diseño,
+conocida como <i>design specs,</i>
+
+00:02:05.533 --> 00:02:08.167
+destaca los mejores métodos
+para diseñar tu app.
+
+00:02:08.267 --> 00:02:12.067
+Ofrece orientación sobre el diseño
+de la app, estilo visual, imágenes,
+
+00:02:12.133 --> 00:02:13.633
+animaciones y mucho más.
+
+00:02:13.867 --> 00:02:17.000
+También tiene una sección
+de tipografía o fuentes.
+
+00:02:17.433 --> 00:02:20.233
+Hay listas con mucha información
+que podrás leer después.
+
+00:02:20.333 --> 00:02:22.500
+Pero lo más importante es esta guía
+
+00:02:22.567 --> 00:02:24.633
+que habla
+sobre los tamaños de texto recomendados.
+
+00:02:24.700 --> 00:02:26.500
+Si visualizas un encabezado muy grande,
+
+00:02:26.567 --> 00:02:28.733
+puedes usar estos valores
+de tamaño de texto.
+
+00:02:28.933 --> 00:02:31.767
+Para crear un título,
+el cuerpo de un texto o un subtítulo,
+
+00:02:31.867 --> 00:02:33.467
+puedes usar estos tamaños.
+
+00:02:33.567 --> 00:02:36.300
+Esto te asesorará en cuanto
+a los valores que puedes elegir
+
+00:02:36.367 --> 00:02:38.633
+dependiendo de cuál sea
+tu ejemplo de uso.
+
+00:02:38.767 --> 00:02:40.967
+Pero, cuidado:
+si eliges demasiados tamaños
+
+00:02:41.033 --> 00:02:44.233
+o estilos en tu app, puede resultar
+muy agobiante para el usuario.
+
+00:02:44.433 --> 00:02:48.067
+Así que elige solo un par de estilos
+para visualizar la información.
+
+00:02:48.500 --> 00:02:50.433
+Al cambiar el tamaño del texto
+para <i>TextView,</i>
+
+00:02:50.500 --> 00:02:52.467
+prueba dos de estos valores.
+
+00:02:53.033 --> 00:02:54.867
+Cambia el tamaño de fuente
+de la <i>TextView</i>
+
+00:02:54.933 --> 00:02:56.800
+usando la especificación
+de Material Design.
+
+00:02:57.100 --> 00:02:58.467
+Y si te apetece un reto,
+
+00:02:58.633 --> 00:03:01.533
+intenta aprender cosas
+sobre el atributo de apariencia del texto
+
+00:03:01.600 --> 00:03:04.867
+en Google Plus Pro Tips
+para dispositivos Android.
+
+00:03:05.233 --> 00:03:08.067
+Y luego también puedes intentar esto
+en el visor de XML.
+
+00:03:08.133 --> 00:03:12.000
+Abajo tienes el enlace al visor de XML
+con el código para que puedas empezar.
+

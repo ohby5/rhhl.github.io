@@ -1,0 +1,301 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.530 --> 00:00:02.460
+On a joué un peu avec <i>TextView</i>.
+
+00:00:02.460 --> 00:00:05.914
+Une autre vue qu'on doit étudier
+maintenant pour faire notre carton
+
+00:00:05.914 --> 00:00:07.248
+d'invitation est <i>ImageView</i>.
+
+00:00:07.248 --> 00:00:09.910
+Voici le code XML pour <i>ImageView</i>.
+
+00:00:09.910 --> 00:00:12.140
+Analysons ses lignes une par une.
+
+00:00:12.140 --> 00:00:15.600
+L'élément XML débute par
+un signe <i>moins</i>, ding !
+
+00:00:15.600 --> 00:00:20.208
+Ensuite, on a le nom de la vue [SON]
+et la liste des attributs,
+
+00:00:20.208 --> 00:00:20.795
+[SON].
+
+00:00:20.795 --> 00:00:24.124
+Suivent une barre oblique
+puis un signe <i>supérieur à</i>,
+
+00:00:24.124 --> 00:00:25.832
+[SON] boum.
+
+00:00:25.832 --> 00:00:30.540
+Quand on a écrit le code XML de <i>TextView</i>,
+elle a affiché du texte à l'écran.
+
+00:00:30.540 --> 00:00:34.710
+Donc si on écrit le code d'<i>ImageView</i>,
+ça affichera une image à l'écran.
+
+00:00:34.710 --> 00:00:36.963
+Le premier attribut n'a encore jamais
+été abordé.
+
+00:00:36.963 --> 00:00:41.010
+Il dit : « <i>android:src</i>, signe égal,
+arobase, <i>drawable/cake</i> ».
+
+00:00:41.010 --> 00:00:46.330
+Ça veut dire que la SouRCe de l'image
+devrait être dans ce fichier, ici.
+
+00:00:46.330 --> 00:00:48.580
+Le nom du fichier est <i>cake</i> (gâteau).
+
+00:00:48.580 --> 00:00:51.225
+On emploie l'arobase pour dire
+qu'on fait appel à
+
+00:00:51.225 --> 00:00:56.405
+une ressource de l'application Android,
+et <i>drawable</i> en est son type.
+
+00:00:56.405 --> 00:01:00.205
+Un <i>drawable</i> est un objet graphique
+qui s'affichera sur un écran Android.
+
+00:01:00.205 --> 00:01:02.505
+Et pour finir, <i>cake</i> est
+le nom du fichier image.
+
+00:01:02.505 --> 00:01:04.670
+On ne précise pas l'extension du fichier.
+
+00:01:04.670 --> 00:01:07.890
+Inutile de dire si c'est
+une image JPEG ou PNG.
+
+00:01:07.890 --> 00:01:08.550
+Le nom suffit.
+
+00:01:08.550 --> 00:01:12.050
+Si vous vous demandez d'où sort
+cette image, eh bien la gestion dans le
+
+00:01:12.050 --> 00:01:15.270
+Visualiseur XML diffère
+légèrement de l'application.
+
+00:01:15.270 --> 00:01:18.190
+En résumé, on a chargé
+un tas d'images auparavant pour
+
+00:01:18.190 --> 00:01:21.510
+pouvoir les utiliser pour s'entraîner
+dans le Visualiseur XML.
+
+00:01:21.510 --> 00:01:23.990
+Quand vous créerez une appli
+dans Android Studio, vous devrez
+
+00:01:23.990 --> 00:01:28.380
+ajouter vos images manuellement à
+l'application, dans le dossier <i>Drawable</i>.
+
+00:01:28.380 --> 00:01:31.740
+Alors, si j'essaie de faire appel
+à une image qui n'existe pas,
+
+00:01:31.740 --> 00:01:35.150
+par exemple l'image <i>toys</i> (jouets),
+
+00:01:35.150 --> 00:01:39.105
+vous obtiendrez une erreur parce
+que <i>toys</i> n'est pas une image valide.
+
+00:01:39.105 --> 00:01:42.325
+Donc faites attention à ne faire appel
+qu'à des images disponibles.
+
+00:01:42.325 --> 00:01:44.375
+Revenons en arrière avec Annuler.
+
+00:01:44.375 --> 00:01:47.495
+Ensuite on a la largeur et la hauteur,
+qui valent ici <i>wrap_content</i>.
+
+00:01:47.495 --> 00:01:52.085
+Ainsi notre <i>ImageView</i> ne dépasse pas
+l'image de gâteau qu'elle contient.
+
+00:01:52.085 --> 00:01:55.165
+Pour finir, on a cet attribut
+<i>android:scaledType</i>
+
+00:01:55.165 --> 00:01:57.265
+qui vaut <i>center</i> (centré).
+
+00:01:57.265 --> 00:02:00.125
+Le type d'échelle dit à l'appareil
+comment redimensionner
+
+00:02:00.125 --> 00:02:04.320
+les vues suivant
+les contraintes de l'<i>ImageView</i>.
+
+00:02:04.320 --> 00:02:05.400
+Voyons ce que ça donne.
+
+00:02:06.710 --> 00:02:10.280
+Là on voit l'image de gâteau
+affichée sur l'appareil.
+
+00:02:10.280 --> 00:02:14.980
+Cette image de gâteau est plutôt grande,
+plus grande que la taille de l'écran.
+
+00:02:14.980 --> 00:02:16.640
+Si on précise <i>scaleType</i>,
+
+00:02:16.640 --> 00:02:20.420
+on ne change pas la taille
+de l'image, on va juste la centrer.
+
+00:02:20.420 --> 00:02:23.330
+On voit que l'image de gâteau
+est au final vraiment, vraiment grande,
+
+00:02:23.330 --> 00:02:26.040
+mais on a ici le centre
+de cette image.
+
+00:02:26.040 --> 00:02:29.750
+<i>scaleType</i> accepte d'autres valeurs
+comme <i>centerCrop</i>.
+
+00:02:29.750 --> 00:02:33.460
+Ça redimensionne l'image à
+la hauteur ou à la largeur de la vue.
+
+00:02:33.460 --> 00:02:36.680
+Dans notre cas, on est limités
+par les bords de l'écran.
+
+00:02:36.680 --> 00:02:39.670
+Le ratio d'aspect de l'image d'origine
+est d'ailleurs conservé pour
+
+00:02:39.670 --> 00:02:41.680
+éviter de trop la tordre.
+
+00:02:41.680 --> 00:02:44.330
+Une fois redimensionnée,
+on va aussi centrer l'image et
+
+00:02:44.330 --> 00:02:47.805
+la rogner pour qu'elle rentre
+dans les dimensions de cette vue.
+
+00:02:47.805 --> 00:02:51.355
+Quand je veux afficher des photos,
+j'aime utiliser <i>centerCrop</i>.
+
+00:02:51.355 --> 00:02:55.955
+C'est parce qu'il est généralement
+accepté de rogner les bord d'une photo
+
+00:02:55.955 --> 00:02:58.715
+pour parvenir à ce style
+avec des bords piles sur le conteneur.
+
+00:02:58.715 --> 00:03:01.285
+Quand une image rentre dans
+un conteneur sans bordure blanche ni
+
+00:03:01.285 --> 00:03:05.475
+séparateur, c'est ce qu'on appelle
+une image à bords perdus.
+
+00:03:05.475 --> 00:03:08.349
+On utilise beaucoup les images à bords
+perdus en conception de maquette.
+
+00:03:09.430 --> 00:03:10.740
+Voici quelques exemples.
+
+00:03:12.120 --> 00:03:14.060
+Vous avez vu ? Les bords sont
+collés à l'image.
+
+00:03:14.060 --> 00:03:16.580
+Ça donne un bel effet d'immersion.
+
+00:03:16.580 --> 00:03:18.750
+Bon, maintenant
+c'est à vous d'essayer.
+
+00:03:18.750 --> 00:03:21.990
+Plus précisément, on aimerait
+que vous changiez la hauteur et la
+
+00:03:21.990 --> 00:03:25.240
+largeur de l'<i>ImageView</i> pour
+lui donner une valeur fixe en dp.
+
+00:03:25.240 --> 00:03:27.370
+Essayez par exemple 100 dp.
+
+00:03:27.370 --> 00:03:30.630
+Ensuite changez le type d'échelle
+de <i>center</i> à <i>centerCrop</i>,
+
+00:03:30.630 --> 00:03:35.350
+n'hésitez pas à ajuster la hauteur
+ou la largeur de l'image en conséquence.
+
+00:03:35.350 --> 00:03:39.120
+D'ailleurs, que se passe-t-il si on change
+la hauteur ou la largeur de l'<i>ImageView</i>
+
+00:03:39.120 --> 00:03:42.520
+pour dépasser de l'écran de l'appareil ?
+Que se passe-t-il si on règle
+
+00:03:42.520 --> 00:03:46.080
+les dimensions pour les rendre
+plus petites que la taille de l'écran ?
+
+00:03:46.080 --> 00:03:48.770
+&gt;&gt; Dans chaque cas, vous verrez que
+<i>center</i> et <i>centerCrop</i> ont
+
+00:03:48.770 --> 00:03:51.490
+des effets différents.
+&gt;&gt; Essayez aussi de changer d'image
+
+00:03:51.490 --> 00:03:54.610
+en suivant le lien
+<i>Images disponibles</i>.
+
+00:03:54.610 --> 00:03:56.880
+On a aussi inclus une version
+miniature du gâteau,
+
+00:03:56.880 --> 00:04:00.610
+et une version beaucoup plus grande, pour
+essayer les différents types d'échelle.
+
+00:04:00.610 --> 00:04:03.180
+On a aussi inclus une icône Android.
+
+00:04:03.180 --> 00:04:05.830
+Utilisez le lien ci-dessous pour
+aller voir le Visualiseur XML.
+

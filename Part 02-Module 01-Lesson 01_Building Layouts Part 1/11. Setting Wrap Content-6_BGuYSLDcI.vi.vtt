@@ -1,0 +1,192 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.270 --> 00:00:04.140
+Được rồi, vậy bạn đã có nỗ lực đầu 
+tiên trong việc viết code và sửa lỗi.
+
+00:00:04.140 --> 00:00:06.830
+Đây là thử nghiệm là một
+phần quan trọng của việc
+
+00:00:06.830 --> 00:00:08.200
+học Phát triển Android.
+
+00:00:08.200 --> 00:00:10.310
+Chúng ta sẽ nói về kích 
+thước của <i>view</i>
+
+00:00:10.310 --> 00:00:13.720
+Chúng ta biết rằng chiều rộng và chiều cao
+được thể hiện trong các giá trị DP, hoặc
+
+00:00:13.720 --> 00:00:15.390
+mật độ điểm ảnh độc lập.
+
+00:00:15.390 --> 00:00:18.290
+Điều này làm cho nó nhìn đẹp hơn trên
+các thiết bị khác nhau.
+
+00:00:18.290 --> 00:00:21.260
+Tuy nhiên, vẫn còn chỗ để cải tiến
+trong giao diện người dùng này.
+
+00:00:21.260 --> 00:00:25.440
+Nếu tôi thay đổi văn bản ở đây để được
+một cái gì đó lâu hơn, như chờ đợi,
+
+00:00:25.440 --> 00:00:27.170
+hôm nay sinh nhật của bạn?
+
+00:00:27.170 --> 00:00:30.780
+Chú ý cập nhật văn bản ở đây
+nhưng nó lại thành hai dòng.
+
+00:00:30.780 --> 00:00:32.400
+Lý tưởng nhất là viết trên một dòng,
+
+00:00:32.400 --> 00:00:35.530
+vì có rất nhiều khoảng trống
+trên màn hình bên này.
+
+00:00:35.530 --> 00:00:37.300
+Lý do hộp không thay đổi kích cỡ,
+
+00:00:37.300 --> 00:00:41.500
+là bởi vì chúng ta đã cho nó một chiều rộng 
+cố định và chiều cao của 150dp.
+
+00:00:41.500 --> 00:00:43.500
+Khi bạn thiết lập một giá trị rất cụ thể 
+cho chiều rộng và chiều cao
+
+00:00:43.500 --> 00:00:47.240
+như thế này, được gọi là 
+mã hóa cứng một giá trị.
+
+00:00:47.240 --> 00:00:49.440
+Nó không được coi là một sự
+luyện tập tốt,
+
+00:00:49.440 --> 00:00:53.760
+vì nếu văn bản chưa thay đổi
+như thế này, nó có vẻ buồn cười.
+
+00:00:53.760 --> 00:00:56.380
+Chúng tôi phải thay đổi chiều rộng
+chẳng hạn 200, vì vậy
+
+00:00:56.380 --> 00:00:58.740
+nó đã đưa tất cả đã trên một dòng.
+
+00:00:58.740 --> 00:01:01.250
+Nhưng nó sẽ là một rắc rối nếu như
+cứ tiếp tục cập nhật chiều rộng và
+
+00:01:01.250 --> 00:01:03.750
+chiều cao, 
+dựa trên những các văn bản.
+
+00:01:03.750 --> 00:01:06.440
+Bạn có thể không biết
+văn bản là gì cho đến sau này.
+
+00:01:06.440 --> 00:01:09.890
+Ví dụ, nếu bạn có một ứng dụng
+đó là hiển thị các bài báo,
+
+00:01:09.890 --> 00:01:11.780
+tiêu đề của mỗi 
+câu chuyện có thể thay đổi.
+
+00:01:11.780 --> 00:01:15.720
+Và bạn không muốn giao diện người dùng bị
+phá vỡ nếu bạn có một tiêu đề rất dài hoặc
+
+00:01:15.720 --> 00:01:17.380
+nếu bạn có một tiêu đề rất ngắn.
+
+00:01:17.380 --> 00:01:20.390
+Vì vậy, trong Android, chúng tôi có thể giải 
+quyết vấn đề bằng cách thiết lập chiều rộng
+
+00:01:20.390 --> 00:01:24.010
+có một giá trị đặc biệt
+được gọi là <i>wrap content</i>.
+
+00:01:24.010 --> 00:01:26.500
+Ở đây là, chiều rộng của 
+<i>TextView</i>, vì vậy
+
+00:01:26.500 --> 00:01:30.640
+nó là chính xác chiều rộng
+các nội dung bên trong của nó.
+
+00:01:30.640 --> 00:01:32.770
+Nó không quá ngắn và
+nó không phải là quá lớn.
+
+00:01:32.770 --> 00:01:34.010
+Đó là vừa phải.
+
+00:01:34.010 --> 00:01:37.520
+Tương tự đối với chiều cao thay vì cho nó
+bằng 150 dp, chúng tôi có thể cho nó
+
+00:01:37.520 --> 00:01:42.010
+giá trị đặc biệt của <i>wrap content</i>, 
+<i>TextView</i> sẽ cập nhật,
+
+00:01:42.010 --> 00:01:46.480
+do đó kích thước của văn bản sử dụng
+chỉ cao như các văn bản bên trong của nó.
+
+00:01:46.480 --> 00:01:50.610
+Việc thiết lập <i>wrapcontent</i> cho chiều
+cao và rộng là rất mạnh mẽ, bởi vì bạn
+
+00:01:50.610 --> 00:01:54.710
+có thể có quyết định được nội dung
+ở đây, cái sẽ được hiển thị,
+
+00:01:54.710 --> 00:01:58.020
+bởi vì bạn không có không gian
+dư thừa trong <i>TextView</i>.
+
+00:01:58.020 --> 00:02:00.860
+Và tương tự,nếu bạn
+có <i>TextView</i> khác dưới đây,
+
+00:02:00.860 --> 00:02:05.130
+thì họ có thể dịch chuyển lên ngay phía
+dưới đây để <i>TextView</i> đầu tiên này.
+
+00:02:05.130 --> 00:02:09.220
+Quay lại ví dụ ứng dụng tin tức, nếu đây
+là tựa đề câu chuyện, bạn sẽ không
+
+00:02:09.220 --> 00:02:13.560
+muốn diễn tả tất câu chuyện 
+ở dưới đây cách xa 150 DPIs.
+
+00:02:13.560 --> 00:02:17.830
+Thay vào đó, bạn muốn diễn tả
+nó dưới tiêu đề câu chuyện.
+
+00:02:17.830 --> 00:02:20.760
+phóng to ra,
+chúng ta hãy thử một chuỗi ngắn hơn,
+
+00:02:20.760 --> 00:02:22.840
+Được rồi, đây là thời gian để bạn có 
+thể thực hành ngay bây giờ.
+
+00:02:22.840 --> 00:02:25.420
+Chúng tôi muốn bạn thay đổi một vài
+thứ với code
+
+00:02:25.420 --> 00:02:29.000
+Thay đổi chiều rộng và chiều cao của
+<i>TextView</i> để <i>wrapcontent</i>.
+

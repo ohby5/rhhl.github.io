@@ -1,0 +1,75 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.301 --> 00:00:01.729
+Se tentarmos a imagem menor,
+
+00:00:01.956 --> 00:00:05.575
+vemos que a imagem é, na verdade,
+menor que o tamanho da tela.
+
+00:00:06.210 --> 00:00:10.547
+Então não importa se escolhemos
+<i>scaleType</i> para ser <i>center</i> ou <i>centerCrop</i>,
+
+00:00:11.050 --> 00:00:13.858
+a imagem inteira vai poder
+ser exibida na <i>view</i>.
+
+00:00:14.166 --> 00:00:16.116
+E é assim que fica com uma fotografia.
+
+00:00:16.410 --> 00:00:17.624
+Agora vamos tentar o ícone.
+
+00:00:18.100 --> 00:00:19.440
+Que chamamos de Android.
+
+00:00:20.780 --> 00:00:23.526
+Então o tamanho do ícone é menor
+do que o tamanho da tela,
+
+00:00:23.747 --> 00:00:28.116
+se fazemos <i>wrap_content</i> para a largura e altura
+então deverá caber na tela.
+
+00:00:28.652 --> 00:00:30.603
+Não importa se usamos <i>center</i> ou <i>centerCrop</i>.
+
+00:00:31.052 --> 00:00:35.501
+Agora o que acontece se definimos
+a ImageView para ser maior que o dispositivo?
+
+00:00:36.020 --> 00:00:39.433
+Digamos que optamos por um número
+bem alto, como 900dp de largura e e altura,
+
+00:00:40.000 --> 00:00:43.913
+aí a <i>ImageView</i> vai tomar um espaço
+maior que o tamanho da tela.
+
+00:00:44.280 --> 00:00:45.920
+Mas <i>scaleType</i> está como <i>center</i>.
+
+00:00:46.240 --> 00:00:49.963
+Assim, o ícone será centralizado
+dentro dessa <i>ImageView</i> gigantesca.
+
+00:00:50.418 --> 00:00:51.944
+Se escolhemos <i>centerCrop</i>, porém,
+
+00:00:52.073 --> 00:00:58.215
+o sistem tenta redimensionar a imagem para um quadrado de 900dp por 900dp.
+
+00:00:58.683 --> 00:01:00.701
+E depois centraliza e corta a imagem.
+
+00:01:01.230 --> 00:01:03.796
+Agora que você já experimentou
+com o XML da <i>ImageView</i>,
+
+00:01:04.060 --> 00:01:07.476
+tomara que você tenha uma idéia melhor
+de como exibir imagens em seu app.
+

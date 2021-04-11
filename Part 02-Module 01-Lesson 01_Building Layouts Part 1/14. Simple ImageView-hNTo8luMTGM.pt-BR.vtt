@@ -1,0 +1,309 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.530 --> 00:00:02.227
+Nós brincamos um pouco com <i>TextView</i>.
+
+00:00:02.430 --> 00:00:04.147
+E a outra <i>view</i> que queremos
+aprender agora,
+
+00:00:04.155 --> 00:00:05.278
+para um cartão de aniversário
+
+00:00:05.592 --> 00:00:06.911
+é a <i>ImageView</i>.
+
+00:00:07.735 --> 00:00:09.464
+Ora aqui está o XML da <i>ImageView</i>
+
+00:00:09.912 --> 00:00:11.609
+Vamos olhar as linhas,
+uma de cada vez.
+
+00:00:12.186 --> 00:00:15.209
+O elemento XML começa
+com um sinal de menor. [SOM]
+
+00:00:15.586 --> 00:00:17.302
+E então, o nome da <i>view</i>
+[SOM].
+
+00:00:17.745 --> 00:00:19.212
+E, em seguida,
+a lista de atributos,
+
+00:00:19.499 --> 00:00:20.893
+[SOM].
+
+00:00:21.390 --> 00:00:25.353
+Depois é seguido por uma barra,
+e depois um sinal de maior [SOM]. Bum!
+
+00:00:26.552 --> 00:00:28.510
+Quando escrevemos o XML
+para a <i>TextView</i>,
+
+00:00:28.777 --> 00:00:30.150
+ele exibia texto na tela.
+
+00:00:30.550 --> 00:00:33.944
+Então, quando escrevemos <i>ImageView</i> aqui,
+aparece uma imagem na tela.
+
+00:00:34.746 --> 00:00:37.003
+O primeiro atributo
+é algo que não vimos antes.
+
+00:00:37.301 --> 00:00:40.732
+Diz android:src igual a @drawable/cake.
+
+00:00:41.410 --> 00:00:45.956
+Significa que a fonte para esta imagem
+deve ser encontrada neste arquivo aqui.
+
+00:00:46.366 --> 00:00:47.830
+O nome do arquivo é chamado "bolo".
+
+00:00:48.598 --> 00:00:51.153
+Usamos o símbolo @
+para dizer que estamos referenciando
+
+00:00:51.216 --> 00:00:55.733
+um recurso no aplicativo Android,
+e <i>drawable</i> é o tipo de recurso.
+
+00:00:56.395 --> 00:00:59.413
+Um <i>drawable</i> é como um gráfico
+que será mostrado na tela no Android.
+
+00:01:00.200 --> 00:01:02.195
+De novo, "bolo" é o nome
+do arquivo da imagem.
+
+00:01:02.533 --> 00:01:04.379
+Nós não incluimos a extensão do arquivo.
+
+00:01:04.640 --> 00:01:08.792
+Apenas diga o nome do arquivo,
+não precisa dizer se é JPEG ou PNG.
+
+00:01:09.494 --> 00:01:11.029
+Se pergunta de onde esta imagem veio,
+
+00:01:11.041 --> 00:01:13.953
+nós lidamos com isso um pouco diferente
+no Visualizador XML,
+
+00:01:13.966 --> 00:01:14.785
+comparando com o app.
+
+00:01:15.313 --> 00:01:17.865
+Mas, basicamente, carregamos
+imagens de antemão,
+
+00:01:18.050 --> 00:01:20.814
+para você poder usá-las
+para praticar no Visualizador XML.
+
+00:01:21.530 --> 00:01:23.099
+Quando constrói apps no Android Studio,
+
+00:01:23.162 --> 00:01:25.246
+você precisará adicionar
+imagens manualmente
+
+00:01:25.270 --> 00:01:27.582
+em seu aplicativo,
+para a pasta <i>drawable</i>.
+
+00:01:28.378 --> 00:01:31.092
+Agora se eu tentar fazer referência
+a uma imagem que não existe,
+
+00:01:31.576 --> 00:01:34.440
+por exemplo, a imagem
+"brinquedos" não existe.
+
+00:01:35.191 --> 00:01:38.265
+Então haverá um erro porque
+"brinquedos" não é uma imagem válida.
+
+00:01:39.105 --> 00:01:41.587
+Confirme se só faz referência
+a imagens disponíveis.
+
+00:01:42.330 --> 00:01:43.804
+Vamos anular,
+apertando em desfazer.
+
+00:01:44.370 --> 00:01:47.046
+Agora temos largura e altura,
+definidos para ser <i>wrap_content</i>.
+
+00:01:47.501 --> 00:01:51.410
+Para que a <i>ImageView</i> seja apenas tão grande,
+quanto a imagem "bolo" dentro dela.
+
+00:01:52.080 --> 00:01:54.872
+Por fim, temos este atributo
+chamado <i>android:scaledType</i>
+
+00:01:55.130 --> 00:01:56.408
+definido para <i>center</i>.
+
+00:01:57.260 --> 00:02:01.094
+<i>ScaleType</i> informa o dispositivo
+como ampliar ou reduzir a imagem
+
+00:02:01.368 --> 00:02:03.492
+com base nos limites da <i>ImageView</i>.
+
+00:02:04.309 --> 00:02:05.576
+Vamos ver como vai ficar.
+
+00:02:06.709 --> 00:02:09.597
+Agora pode ver a imagem "bolo"
+aparecendo no dispositivo.
+
+00:02:10.326 --> 00:02:14.311
+Na verdade, a imagem "bolo" é bem grande,
+é maior que o tamanho da tela.
+
+00:02:15.004 --> 00:02:16.395
+Assim, quando dizemos <i>scaleType</i>,
+
+00:02:16.635 --> 00:02:19.800
+ele não altera o tamanho
+da imagem, apenas a centraliza.
+
+00:02:20.435 --> 00:02:23.389
+Assim vemos que a imagem "bolo"
+é realmente bem grande,
+
+00:02:23.593 --> 00:02:25.400
+mas este é o centro da imagem "bolo".
+
+00:02:26.060 --> 00:02:29.120
+Podemos definir outros valores
+para <i>scaleType</i>, como <i>centerCrop</i>.
+
+00:02:29.778 --> 00:02:33.004
+Isso reduz a imagem para ajustar
+a altura e a largura da <i>view</i>.
+
+00:02:33.452 --> 00:02:36.067
+Neste caso, estamos limitados
+pelas laterais da tela.
+
+00:02:36.703 --> 00:02:39.372
+Nós também mantemos
+a proporção da imagem original,
+
+00:02:39.574 --> 00:02:40.749
+para ela não distorcer.
+
+00:02:41.660 --> 00:02:44.996
+Uma vez reduzida, nós centralizamos
+a imagem e depois cortamos
+
+00:02:45.193 --> 00:02:47.076
+para ela encaixar neste tamanho de <i>view</i>.
+
+00:02:47.842 --> 00:02:50.642
+Ao exibir fotografias,
+gosto de usar <i>centerCrop</i>.
+
+00:02:51.390 --> 00:02:55.440
+Isso porque é geralmente aceitável
+cortar os cantos da imagem
+
+00:02:55.936 --> 00:02:58.130
+para conseguir esse visual bordo a bordo.
+
+00:02:58.747 --> 00:03:01.875
+Quando as imagens vão de bordo a bordo,
+sem qualquer margem branca ou algo,
+
+00:03:02.390 --> 00:03:04.750
+chamamos de imagem 
+<i>full bleed</i> (sem margens).
+
+00:03:05.507 --> 00:03:08.515
+Nós usamos muitas imagens <i>full bleed </i>
+na guia de design de material.
+
+00:03:09.406 --> 00:03:10.795
+Tem aqui alguns exemplos.
+
+00:03:12.110 --> 00:03:13.980
+Como as imagens vão de bordo a bordo aqui,
+
+00:03:13.995 --> 00:03:16.060
+isso dá uma sensação legal de imersão.
+
+00:03:16.550 --> 00:03:18.326
+Ok, agora é hora de você experimentar!
+
+00:03:18.730 --> 00:03:22.000
+Especificamente, nós adorariamos
+que você alterasse a altura
+
+00:03:22.010 --> 00:03:24.836
+e largura da <i>ImageView</i>
+para ser um valor dp fixo.
+
+00:03:25.249 --> 00:03:26.760
+Tente algo como 100dp.
+
+00:03:27.384 --> 00:03:30.060
+Então mude <i>ScaleType</i>
+de <i>center</i> para <i>centerCrop</i>.
+
+00:03:30.540 --> 00:03:34.707
+Também pode ajustar a altura
+e largura da imagem de acordo.
+
+00:03:35.384 --> 00:03:39.130
+Por exemplo, o que acontece se alterar
+a altura e largura da <i>ImageView</i>
+
+00:03:39.145 --> 00:03:41.046
+para ser maior que os lados do dispositivo?
+
+00:03:41.510 --> 00:03:43.163
+Ou ao definir a altura e largura
+
+00:03:43.200 --> 00:03:45.403
+para ser menor que os lados do dispositivo?
+
+00:03:46.060 --> 00:03:48.098
+Nesses casos, poderá ver
+um comportamento diferente
+
+00:03:48.196 --> 00:03:49.476
+para <i>center</i> e <i>centerCrop</i>.
+
+00:03:50.233 --> 00:03:52.184
+Tente ainda mudar
+a imagem para outra coisa,
+
+00:03:52.409 --> 00:03:54.122
+verificando o link de Imagens Disponíveis.
+
+00:03:54.620 --> 00:03:56.873
+Incluímos uma versão pequena
+da imagem <i>cake</i>,
+
+00:03:56.904 --> 00:04:00.141
+bem como uma versão maior,
+para tentar diferentes tipos de escala.
+
+00:04:00.631 --> 00:04:02.585
+Incluímos também um ícone Android.
+
+00:04:03.141 --> 00:04:05.983
+Use o link abaixo para chegar
+ao Visualizador XML.
+

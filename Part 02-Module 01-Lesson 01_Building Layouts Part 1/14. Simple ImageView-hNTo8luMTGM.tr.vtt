@@ -1,0 +1,278 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.530 --> 00:00:02.460
+TextView ile biraz oynadık.
+
+00:00:02.460 --> 00:00:05.914
+Doğum günü kartı yapmak için
+öğrenmek istediğimiz diğer görüntüleme
+
+00:00:05.914 --> 00:00:07.588
+ImageView (resim görüntüleme).
+
+00:00:07.588 --> 00:00:09.910
+ImageView için XML kodu bu şekilde.
+
+00:00:09.910 --> 00:00:12.140
+Satırlara bir bakalım.
+
+00:00:12.140 --> 00:00:15.600
+XML elemanları açık açı parantez ile başlar.
+
+00:00:15.600 --> 00:00:19.578
+Sonra da görüntülemenin ismi
+ve sonra özniteliklerin listesi.
+
+00:00:20.795 --> 00:00:24.124
+Daha sonra bölü işareti
+ve kapalı açı parantez şeklindedir.
+
+00:00:24.124 --> 00:00:25.832
+Bum.
+
+00:00:25.832 --> 00:00:30.540
+TextView için XML yazdığımızda
+metni ekranda göstermişti.
+
+00:00:30.540 --> 00:00:34.710
+Şimdi ise, buraya ImageView yazdığımızda,
+ekranda bir resim gösterir.
+
+00:00:34.710 --> 00:00:36.963
+İlk öznitelik daha önce
+görmediğimiz bir şey.
+
+00:00:36.963 --> 00:00:41.010
+android:src = drawable/pasta
+
+00:00:41.010 --> 00:00:46.330
+Bu demek oluyor ki bu resmin kaynağı
+buradaki dosyada bulunmalıdır.
+
+00:00:46.330 --> 00:00:48.580
+Dosya adı pasta.
+
+00:00:48.580 --> 00:00:51.225
+@ işaretini Android
+uygulaması içindeki bir kaynağı
+
+00:00:51.225 --> 00:00:56.405
+kullandığımızı göstermek için kullanıyoruz.
+Drawable ise kaynak tipi.
+
+00:00:56.405 --> 00:01:00.205
+Bir drawable Android'de ekranda
+gösterilecek olan bir grafik gibidir.
+
+00:01:00.205 --> 00:01:02.505
+Tekrar ediyorum, pasta resim dosya adı.
+
+00:01:02.505 --> 00:01:04.670
+Dosya uzantısını dahil etmiyoruz.
+
+00:01:04.670 --> 00:01:07.870
+JPEG veya PNG olduğunu
+belirtmenize gerek yok.
+
+00:01:07.870 --> 00:01:09.330
+Sadece dosya adını söyleyin.
+
+00:01:09.330 --> 00:01:12.050
+Eğer bu resmin nereden
+geldiğini merak ediyorsanız, bunu
+
+00:01:12.050 --> 00:01:15.270
+XML Görüntüleyicide uygulamaya göre
+biraz farklı bir şekilde hallediyoruz.
+
+00:01:15.270 --> 00:01:18.830
+Fakat öncelikle, XML Görüntüleyicide
+alıştırma yaparken kullanmanız için
+
+00:01:18.830 --> 00:01:21.510
+önceden birkaç resim yükledik.
+
+00:01:21.510 --> 00:01:23.490
+Android Stüdyo'da uygulamanızı geliştirirken
+
+00:01:23.490 --> 00:01:28.380
+uygulamanıza elle resim eklemek
+zorundasınız, drawable dosyasına.
+
+00:01:28.380 --> 00:01:31.740
+Şimdi, eğer olmayan bir
+resmi kaynak gösterirsem,
+
+00:01:31.740 --> 00:01:35.150
+örneğin, oyuncaklar resmi yok.
+
+00:01:35.150 --> 00:01:39.105
+Dolayısıyla hata oluşacaktır
+çünkü oyuncaklar geçerli bir resim değil.
+
+00:01:39.105 --> 00:01:42.325
+Bu nedenle, mevcut olan resimleri
+kaynak gösterdiğinizden emin olun.
+
+00:01:42.325 --> 00:01:44.375
+Geri alarak eski haline getirelim.
+
+00:01:44.375 --> 00:01:47.495
+Şimdi, genişlik ve yükseklik
+wrap_content olarak ayarlı.
+
+00:01:47.495 --> 00:01:52.085
+Yani ImageView sadece içindeki
+pasta resmi kadar büyük olacak.
+
+00:01:52.085 --> 00:01:55.165
+Son olarak, Android:scaledType
+denilen bir özniteliğimiz var ve
+
+00:01:55.165 --> 00:01:57.265
+merkez olarak ayarlı.
+
+00:01:57.265 --> 00:02:01.975
+Ölçek tipi cihaza
+ImageView sınırları içerisinde
+
+00:02:01.975 --> 00:02:04.320
+nasıl büyütüp küçülteceğini anlatır.
+
+00:02:04.320 --> 00:02:05.830
+Nasıl göründüğüne bakalım.
+
+00:02:06.710 --> 00:02:10.280
+Pasta resminin cihazda görüyorsunuz.
+
+00:02:10.280 --> 00:02:14.980
+Pasta resmi oldukça büyük,
+ekran boyutundan da büyük.
+
+00:02:14.980 --> 00:02:16.640
+O zaman scaleType dediğimizde,
+
+00:02:16.640 --> 00:02:20.420
+resmin boyutunu değiştirmez,
+sadece ortalar.
+
+00:02:20.420 --> 00:02:23.330
+Pasta resminin gerçekten
+büyük olduğunu görüyoruz
+
+00:02:23.330 --> 00:02:26.040
+fakat bu pasta resminin ortası.
+
+00:02:26.040 --> 00:02:29.750
+scaleType için başka değerler
+belirleyebiliriz, örneğin centerCrop.
+
+00:02:29.750 --> 00:02:33.460
+Bu, resmi sığacak şekilde küçültecektir.
+
+00:02:33.460 --> 00:02:36.680
+Bu durumda, ekranın kenarları
+bizi sınırlıyor.
+
+00:02:36.680 --> 00:02:39.670
+Ayrıca resmin en-boy oranını koruyoruz ki
+
+00:02:39.670 --> 00:02:41.680
+resim bozulmasın.
+
+00:02:41.680 --> 00:02:44.330
+Onu küçülttüğümüzde,
+resmi ayrıca ortalıyoruz ve
+
+00:02:44.330 --> 00:02:47.805
+görüntü boyutuna uyması için kırpıyoruz.
+
+00:02:47.805 --> 00:02:51.355
+Fotoğrafları görüntülerken
+centerCrop kullanmayı seviyorum.
+
+00:02:51.355 --> 00:02:54.295
+Çünkü fotoğrafın kenarlarını
+
+00:02:54.295 --> 00:02:58.715
+kenardan kenara görünüşü
+sağlamak için kırpmak sorun olmaz.
+
+00:02:58.715 --> 00:03:02.235
+Resimler beyaz bir sınır olmadan
+kenardan kenara gidiyorsa
+
+00:03:02.235 --> 00:03:05.475
+buna tam taşan resim diyoruz.
+
+00:03:05.475 --> 00:03:08.589
+Materyal Tasarım rehberinde çokça
+tam taşan resim kullanıyoruz.
+
+00:03:09.430 --> 00:03:10.740
+Birkaç örnek şu şekilde.
+
+00:03:12.120 --> 00:03:14.060
+Resimlerin kenardan kenara
+nasıl gittiğini görüyorsunuz.
+
+00:03:14.060 --> 00:03:16.580
+Bu çevreleyen, hoş bir his veriyor.
+
+00:03:16.580 --> 00:03:18.750
+Peki, şimdi deneme sırası sizde.
+
+00:03:18.750 --> 00:03:21.990
+Özellikle, sabit bir ImageView değeri için
+
+00:03:21.990 --> 00:03:25.240
+yükseklik ve genişliği
+değiştirebilmenizi istiyoruz.
+
+00:03:25.240 --> 00:03:27.370
+100dp gibi bir şeyi deneyin.
+
+00:03:27.370 --> 00:03:30.630
+Sonra ölçek tipini center ve
+centerCrop arasında değiştirin
+
+00:03:30.630 --> 00:03:35.350
+ve buna uygun olarak yükseklik
+ve genişliği ayarlayabilirsiniz.
+
+00:03:35.350 --> 00:03:39.120
+Örneğin, ImageView yükseklik
+ve genişliğini cihazın
+
+00:03:39.120 --> 00:03:42.520
+kenarlarından büyük ayarlasanız
+veya yükseklik ve genişliğini
+
+00:03:42.520 --> 00:03:46.080
+cihazın boyutundan
+küçük ayarlasanız ne olur?
+
+00:03:46.080 --> 00:03:50.220
+Bu durumlarda, center ve centerCrop
+için farklı davranışlar görebilirsiniz.
+
+00:03:50.220 --> 00:03:54.590
+Ayrıca resmi Mevcut Resimler
+Bağlantısına bakarak değiştirmeyi deneyin.
+
+00:03:54.610 --> 00:03:58.050
+Farklı ölçek tiplerini deneyebilmeniz
+için pasta resminin
+
+00:03:58.050 --> 00:04:00.610
+küçük ve büyük hallerini paylaştık.
+
+00:04:00.610 --> 00:04:03.180
+Ayrıca Android ikonu da koyduk.
+
+00:04:03.180 --> 00:04:05.830
+XML Görüntüleyici için
+alttaki bağlantıyı kullanın.
+

@@ -1,0 +1,300 @@
+WEBVTT
+Kind: captions
+Language: en-US
+
+00:00:00.530 --> 00:00:02.460
+We played around a little
+bit with TextView.
+
+00:00:02.460 --> 00:00:05.914
+And the other view we want to learn
+about now to make our birthday
+
+00:00:05.914 --> 00:00:07.248
+card is the ImageView.
+
+00:00:07.248 --> 00:00:09.910
+Now here's the XML for ImageView.
+
+00:00:09.910 --> 00:00:12.140
+Let's look at the lines one at a time.
+
+00:00:12.140 --> 00:00:15.600
+The XML element starts with
+an open angle bracket, ding.
+
+00:00:15.600 --> 00:00:20.208
+And then the name of the view [SOUND]
+and then the list of attributes,
+
+00:00:20.208 --> 00:00:20.795
+[SOUND] Piu.
+
+00:00:20.795 --> 00:00:24.124
+Then it's followed by a forward slash,
+and then a closing angle bracket.
+
+00:00:24.124 --> 00:00:25.832
+[SOUND] Boom.
+
+00:00:25.832 --> 00:00:30.540
+When we wrote the XML for TextView,
+it displayed text on the screen.
+
+00:00:30.540 --> 00:00:34.710
+So now, when we write ImageView here,
+it displays an image on the screen.
+
+00:00:34.710 --> 00:00:36.963
+The first attribute is something
+we haven't seen before.
+
+00:00:36.963 --> 00:00:41.010
+It says android:src
+equals at drawable/cake.
+
+00:00:41.010 --> 00:00:46.330
+This is saying that the source for this
+image should be found in this file here.
+
+00:00:46.330 --> 00:00:48.580
+The file name is called cake.
+
+00:00:48.580 --> 00:00:51.225
+We use the at symbol to
+say that we're referencing
+
+00:00:51.225 --> 00:00:56.405
+a resource in the Android app, and
+drawable is the resource type.
+
+00:00:56.405 --> 00:01:00.205
+A drawable is like a graphic that
+will be shown on screen in Android.
+
+00:01:00.205 --> 00:01:02.505
+And again, cake is the file image name.
+
+00:01:02.505 --> 00:01:04.670
+We don't include the file extension.
+
+00:01:04.670 --> 00:01:07.890
+You don't need to say if it's a JPEG or
+PNG image.
+
+00:01:07.890 --> 00:01:08.550
+Just say the file name.
+
+00:01:08.550 --> 00:01:12.050
+If you're wondering where this image
+came from, well we handle this a little
+
+00:01:12.050 --> 00:01:15.270
+bit differently in the XML Visualizer
+compared to the app.
+
+00:01:15.270 --> 00:01:18.190
+But basically, we loaded in
+a bunch of images beforehand so
+
+00:01:18.190 --> 00:01:21.510
+that you can use them to
+practice in XML Visualizer.
+
+00:01:21.510 --> 00:01:23.990
+When you build your app in
+Android Studio you're going to have to
+
+00:01:23.990 --> 00:01:28.380
+add images manually into your app,
+into the drawable folder.
+
+00:01:28.380 --> 00:01:31.740
+Now, if I try to reference
+an image that doesn't exist, for
+
+00:01:31.740 --> 00:01:35.150
+example, the toys image does not exist.
+
+00:01:35.150 --> 00:01:39.105
+Then there will be an error
+because toys is not a valid image.
+
+00:01:39.105 --> 00:01:42.325
+So make sure that you only reference
+images that are available.
+
+00:01:42.325 --> 00:01:44.375
+So let's change it back by hitting undo.
+
+00:01:44.375 --> 00:01:47.495
+Now we have the width and height,
+which are set to be wrapped content.
+
+00:01:47.495 --> 00:01:52.085
+So that the image view is only as
+big as the cake image inside of it.
+
+00:01:52.085 --> 00:01:55.165
+Lastly, we have this attribute
+called Android:scaledType and
+
+00:01:55.165 --> 00:01:57.265
+it's set to be center.
+
+00:01:57.265 --> 00:02:00.125
+Scale type tells the device
+how to scale up or
+
+00:02:00.125 --> 00:02:04.320
+scale down,
+based on the bound of the ImageView.
+
+00:02:04.320 --> 00:02:05.400
+Let's see what that looks like.
+
+00:02:06.710 --> 00:02:10.280
+Now you can see the cake image
+showing up on the device.
+
+00:02:10.280 --> 00:02:14.980
+The cake image is actually pretty large,
+and it's larger than the screen size.
+
+00:02:14.980 --> 00:02:16.640
+So when we say scaleType,
+
+00:02:16.640 --> 00:02:20.420
+it doesn't change the size of the image,
+it just centers it.
+
+00:02:20.420 --> 00:02:23.330
+So we see that the cake image
+is actually really big,
+
+00:02:23.330 --> 00:02:26.040
+but this is the center
+of the cake image.
+
+00:02:26.040 --> 00:02:29.750
+We can set other values for
+scaleType, such as centerCrop.
+
+00:02:29.750 --> 00:02:33.460
+This scales down the image to fit
+the height and width of the view.
+
+00:02:33.460 --> 00:02:36.680
+In this case, we're constrained
+by the sides of the screen.
+
+00:02:36.680 --> 00:02:39.670
+We also maintain the aspect
+ratio of the original image so
+
+00:02:39.670 --> 00:02:41.680
+it doesn't get distorted.
+
+00:02:41.680 --> 00:02:44.330
+Once we scale it down,
+we also center the image, and
+
+00:02:44.330 --> 00:02:47.805
+then crop it so
+that it fits this ViewSize.
+
+00:02:47.805 --> 00:02:51.355
+When displaying photographs,
+I like to use center crop.
+
+00:02:51.355 --> 00:02:55.955
+This is because it's typically okay to
+crop off the edges of the photograph
+
+00:02:55.955 --> 00:02:58.715
+in order to achieve
+this edge to edge look.
+
+00:02:58.715 --> 00:03:01.285
+When images go edge to edge
+without any white border or
+
+00:03:01.285 --> 00:03:05.475
+anything, this is what we
+call a full bleed image.
+
+00:03:05.475 --> 00:03:08.349
+We use a lot of full bleed images
+in the material design guide.
+
+00:03:09.430 --> 00:03:10.740
+Here are some examples.
+
+00:03:12.120 --> 00:03:14.060
+You see how the images go
+edge to edge here, and
+
+00:03:14.060 --> 00:03:16.580
+it give it a nice immersive feel.
+
+00:03:16.580 --> 00:03:18.750
+Okay, now it is time for you to try.
+
+00:03:18.750 --> 00:03:21.990
+Specifically, we would love for
+you to be able to change the height and
+
+00:03:21.990 --> 00:03:25.240
+width of the image view
+to be a fixed dp value.
+
+00:03:25.240 --> 00:03:27.370
+Try something like 100dp.
+
+00:03:27.370 --> 00:03:30.630
+Then change the scale type between
+center and center crop, and
+
+00:03:30.630 --> 00:03:35.350
+you can also adjust the height and
+width of the image accordingly.
+
+00:03:35.350 --> 00:03:39.120
+For example, what happens if you change
+the height and width of the image view
+
+00:03:39.120 --> 00:03:42.520
+to be greater than the sides of
+the device, or what happens if you set
+
+00:03:42.520 --> 00:03:46.080
+the height and width to be something
+smaller than the size of the device?
+
+00:03:46.080 --> 00:03:48.770
+&gt;&gt; In those cases you may see
+different behavior for center and
+
+00:03:48.770 --> 00:03:51.490
+center crop
+&gt;&gt; Also, try to change the image to
+
+00:03:51.490 --> 00:03:54.610
+something else by checking
+the Available Images link.
+
+00:03:54.610 --> 00:03:56.880
+We've included a small
+version of the cake image,
+
+00:03:56.880 --> 00:04:00.610
+as well as a larger version, so that
+you can try the different scale types.
+
+00:04:00.610 --> 00:04:03.180
+We also included an Android icon.
+
+00:04:03.180 --> 00:04:05.830
+Use the link below to get
+to the XML Visualizer.
+

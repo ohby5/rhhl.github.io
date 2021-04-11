@@ -1,0 +1,296 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.660 --> 00:00:03.923
+Tamam, TextView kodunu ilk defa gördük.
+
+00:00:03.923 --> 00:00:05.911
+Ancak daha tam yerli yerine oturmadı.
+
+00:00:05.911 --> 00:00:09.025
+Yerleştireceğimiz bir alana ihtiyaç var.
+
+00:00:09.025 --> 00:00:10.521
+O alan da bir IDE.
+
+00:00:10.521 --> 00:00:12.580
+Yeniden o kısaltma.
+
+00:00:12.580 --> 00:00:14.161
+Neyin kısaltmasıydı, Katherine?
+
+00:00:14.161 --> 00:00:16.062
+Integrated Development Enviroment 
+(Tümleşik Geliştirme Ortamı).
+
+00:00:16.062 --> 00:00:19.660
+Evet ve bu derste
+Android Studio'yu kullanacağız.
+
+00:00:19.660 --> 00:00:21.650
+İşte böyle gözüküyor.
+
+00:00:21.650 --> 00:00:23.310
+Hâlâ biraz ürkütücü.
+
+00:00:23.310 --> 00:00:24.870
+Evet. Öğrencimizin daha da
+
+00:00:24.870 --> 00:00:27.560
+hızlanması için bir şeylere 
+ihtiyacımız var.
+
+00:00:27.560 --> 00:00:30.806
+Evet, destek tekerlekli 
+Android Studio diyebileceğimiz
+
+00:00:30.806 --> 00:00:34.667
+bir şey geliştirmeye çalışıyoruz,
+bilgisayar biliminin karışık
+
+00:00:34.667 --> 00:00:37.568
+isim kısaltma geleneğine göre
+XMLV diyoruz.
+
+00:00:37.568 --> 00:00:39.344
+XML Visualizer (Görüntüleyici) anlamında.
+
+00:00:39.344 --> 00:00:41.250
+Biraz XML yazıyorsun,
+sonra çıktıya bakıyorsun.
+
+00:00:41.980 --> 00:00:44.560
+Biraz daha yazıp,
+tekrar çıktılara bakıyorsun.
+
+00:00:44.560 --> 00:00:45.720
+Evet, kullanıp görelim.
+
+00:00:46.170 --> 00:00:47.420
+Tamam.
+
+00:00:47.420 --> 00:00:51.600
+XML Visualizer sırf bu kurs
+için tasarlandığından
+
+00:00:51.600 --> 00:00:55.280
+Android Studio'nun sunduğu 
+olanakları sağlamayacaktır.
+
+00:00:55.280 --> 00:00:57.530
+Eninde sonunda, 
+bu ders setinde,
+
+00:00:57.530 --> 00:01:01.220
+sizi Android Studio ile tanıştıracağız,
+böylece bu siteye ihtiyacınız olmayacak.
+
+00:01:02.450 --> 00:01:05.670
+Takip etmek isterseniz
+eğitmen notlarında bir bağlantı var.
+
+00:01:05.670 --> 00:01:08.110
+Bu kod için,
+metinde <i>Happy Birthday!</i> yazıyor.
+
+00:01:08.110 --> 00:01:12.190
+Cihaza baktığımda da
+<i>Happy Birthday!</i> yazıyor.
+
+00:01:12.190 --> 00:01:15.320
+Metini değiştirip
+<i>Happy Birthday, Kunal!</i> yazalım.
+
+00:01:16.350 --> 00:01:19.550
+Cihaza yakınlaştığımda 
+önizlemede görüyorsunuz ki
+
+00:01:19.550 --> 00:01:21.270
+<i>Happy Birthday, Kunal!</i> yazıyor.
+
+00:01:21.270 --> 00:01:24.250
+Genişlik, yükseklik değerlerini
+değiştirince ne oluyor görelim.
+
+00:01:24.250 --> 00:01:27.580
+Genişlik için 300 dp ve
+yükseklik için 500 dp
+
+00:01:27.580 --> 00:01:30.140
+gibi rastgele değerler veriyorum.
+
+00:01:30.140 --> 00:01:34.119
+Önizlemede TextView'in 
+daha büyük olduğunu gördük.
+
+00:01:35.160 --> 00:01:39.220
+Ancak metin aynı boyutta
+sol üst köşede duruyor.
+
+00:01:40.750 --> 00:01:43.890
+Genişlik değeri 300,
+yükseklik değeri 500,
+
+00:01:43.890 --> 00:01:48.400
+değerleri dp ile 
+tanımlandığına dikkat edin.
+
+00:01:48.400 --> 00:01:51.000
+Bu ölçü birimini santimetre,
+milimetre gibi, Android'de
+
+00:01:51.000 --> 00:01:55.120
+görüntü boyutlarını tanımlamak
+için kullanıyoruz.
+
+00:01:55.120 --> 00:01:57.440
+Aynı şekilde görüntüler 
+arası uzaklık için de.
+
+00:01:58.550 --> 00:02:01.450
+Dp'nin açılımı, density-independent pixels 
+(Yoğunluktan bağımsız pikseller).
+
+00:02:02.540 --> 00:02:04.840
+Bunu neden kullandığımızı açıklayayım.
+
+00:02:04.840 --> 00:02:09.030
+Bu güzelce çizilmiş dörtgenler
+farklı cihazları temsil etsin.
+
+00:02:09.030 --> 00:02:14.230
+Fiziksel olarak aynı boyuttalar,
+ancak çözünürlük olarak farklılar.
+
+00:02:14.230 --> 00:02:18.980
+Orta çözünürlüklü bir cihaz için
+orta sayıda piksel var ekranda.
+
+00:02:18.980 --> 00:02:22.580
+Yüksek çözünürlüklü bir cihaz ve
+ekstra yüksek çözünürlüklü bir cihaz var.
+
+00:02:22.580 --> 00:02:26.540
+Piksel dediğim zaman birçok 
+küçük kareden oluşan telefon ekranı,
+
+00:02:26.540 --> 00:02:30.300
+küçük kareler piksel, neye baktığınıza
+göre ışık veriyorlar.
+
+00:02:30.300 --> 00:02:34.740
+Bir görüntünün boyutlarını belirliyorum,
+örneğin, bir buton, 2 piksel boyunda,
+
+00:02:34.740 --> 00:02:38.620
+2 piksel genişliğinde, orta çözünürlüklü
+bir cihazda böyle gözükecek.
+
+00:02:39.670 --> 00:02:43.350
+Yüksek çözünürlüklü cihazda
+2 piksele 2 piksel olacak,
+
+00:02:43.350 --> 00:02:44.850
+ancak daha küçük.
+
+00:02:44.850 --> 00:02:49.060
+Çünkü cihaz üzerinde 
+daha fazla piksel var.
+
+00:02:49.060 --> 00:02:52.680
+Ekstra yüksek çözünürlüklü bir cihazda
+daha fazla piksel olduğundan
+
+00:02:52.680 --> 00:02:56.720
+bu alanda, buton bayağı küçük.
+
+00:02:56.720 --> 00:02:58.470
+Parmağımla zor dokunuyorum.
+
+00:02:58.470 --> 00:03:02.520
+Parmağımın kenarları ya da
+tırnağımı kullanıyorum.
+
+00:03:02.520 --> 00:03:04.990
+Ekstra çözünürlüklü 
+cihazım var diye,
+
+00:03:04.990 --> 00:03:06.790
+daha küçük parmağım olacak değil.
+
+00:03:06.790 --> 00:03:10.060
+Ekrandaki butonlara 
+yine de dokumak istiyorum.
+
+00:03:10.060 --> 00:03:12.730
+İşte bu yüzden
+yoğunluktan bağımsız pikseller var.
+
+00:03:12.730 --> 00:03:15.720
+Butonumu 2 dp boy,
+2 dp en olarak tanımlayabilirim.
+
+00:03:15.720 --> 00:03:19.390
+Farklı cihazlarda böyle gözükecektir.
+
+00:03:19.390 --> 00:03:21.800
+Fiziksel olarak aynı, ancak
+
+00:03:21.800 --> 00:03:26.090
+arka planda Android farklı sayıda 
+piksele tanımlıyor.
+
+00:03:26.090 --> 00:03:29.360
+Bunları dert etmenize gerek yok,
+ancak şunu hatırlayın,
+
+00:03:29.360 --> 00:03:33.520
+boyutları dp değerleriyle
+tanımlamalısınız.
+
+00:03:33.520 --> 00:03:38.040
+Uygulama tasarlarken
+buton gibi tüm dokunulacak görüntüler
+
+00:03:38.040 --> 00:03:41.160
+en azından 48 dp boy ve 48 dp en olmalı.
+
+00:03:41.160 --> 00:03:44.100
+48 piksel değil, 48 dp dikkat edin,
+
+00:03:44.100 --> 00:03:47.930
+diğer türlü ekstra yüksek çözünürlüklü
+cihazlarda çok küçük olur.
+
+00:03:47.930 --> 00:03:50.730
+Bu uygulamanızı herkes için
+kolay kullanılır yapacak.
+
+00:03:50.730 --> 00:03:53.489
+Tüm bu bildiklerinizle, 
+şimdi TextView kodunu
+
+00:03:53.489 --> 00:03:55.213
+değiştirmenizi istiyorum.
+
+00:03:55.213 --> 00:03:59.890
+XML'de ilk satırlarınızı
+yazacaksınız, çok heyecanlı.
+
+00:03:59.890 --> 00:04:02.700
+İlk önce TextView içindeki metni
+değiştirmeye çalışın.
+
+00:04:02.700 --> 00:04:05.390
+Sonra da TextView boyutlarını
+değiştirmeyi deneyin.
+
+00:04:05.950 --> 00:04:09.700
+Bir hata mutsuz yüzü 
+oluşturmanızı istiyorum.
+
+00:04:09.700 --> 00:04:11.770
+Sonra da hatayı geri alıp 
+mutlu yüz olarak düzeltmenizi.
+

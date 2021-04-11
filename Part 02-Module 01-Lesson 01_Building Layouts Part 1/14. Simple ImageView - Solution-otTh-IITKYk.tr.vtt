@@ -1,0 +1,71 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.320 --> 00:00:01.910
+Küçük resim deneyecek olursak,
+
+00:00:01.910 --> 00:00:06.210
+resmin ekrandan küçük olduğunu görürüz.
+
+00:00:06.210 --> 00:00:11.050
+Yani ölçek tipini center ve centerCrop
+seçmemizin bir önemi yok.
+
+00:00:11.050 --> 00:00:13.780
+Tam resim gösterilebilir.
+
+00:00:13.780 --> 00:00:16.410
+Fotoğraf ise bu şekilde görünüyor.
+
+00:00:16.410 --> 00:00:18.100
+Şimdi ikonu deneyelim.
+
+00:00:18.100 --> 00:00:19.380
+Adı Android.
+
+00:00:20.780 --> 00:00:23.710
+İkonun boyutu, ekran boyutundan daha küçük.
+
+00:00:23.710 --> 00:00:28.610
+Yani genişlik ve yükseklik için wrap_content
+yaparsak ekrana sığacaktır.
+
+00:00:28.610 --> 00:00:31.080
+center veya centerCrop kullanmamız fark etmez.
+
+00:00:31.080 --> 00:00:36.020
+Şimdi eğer resmi cihaz boyutundan
+büyük ayarlarsak ne olur?
+
+00:00:36.020 --> 00:00:39.690
+Diyelim ki 900dp gibi büyük bir
+genişlik ve yükseklik belirlersek
+
+00:00:39.690 --> 00:00:44.270
+alacağınız resim ekran
+boyutundan büyük olacak.
+
+00:00:44.270 --> 00:00:46.240
+Fakat ölçek tipi (scaleType) center ayarlı.
+
+00:00:46.240 --> 00:00:50.440
+Yani ikon koca görüntü içinde ortalanacak.
+
+00:00:50.440 --> 00:00:52.050
+Eğer centerCrop seçersek,
+
+00:00:52.050 --> 00:00:58.640
+sistem resmi 900dp x 900dp
+olacak şekilde ölçeklemeye çalışır.
+
+00:00:58.640 --> 00:01:01.230
+Ve resmi ortalayıp kırpar.
+
+00:01:01.230 --> 00:01:04.069
+ImageView XML'i denediğinize göre
+
+00:01:04.069 --> 00:01:08.058
+umarım uygulamanızda nasıl resim
+göstereceğinizi iyice anlamışsınızdır.
+

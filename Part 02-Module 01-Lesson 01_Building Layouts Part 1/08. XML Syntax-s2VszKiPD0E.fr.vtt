@@ -1,0 +1,368 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.490 --> 00:00:03.560
+Vous avez fait de bonnes observations
+lors du dernier quiz sur XML qui vous
+
+00:00:03.560 --> 00:00:04.720
+a été donné.
+
+00:00:04.720 --> 00:00:08.150
+On va maintenant parler plus
+formellement de la syntaxe d'XML.
+
+00:00:08.150 --> 00:00:12.470
+La syntaxe regroupe les règles qui
+définissent la validité d'un code XML.
+
+00:00:12.470 --> 00:00:15.570
+Quand votre code XML est invalide, il
+n'apparaîtra même pas sur le téléphone.
+
+00:00:16.680 --> 00:00:20.130
+Voici le code de l'élément XML
+<i>TextView</i>.
+
+00:00:20.130 --> 00:00:24.110
+On l'introduit toujours par un signe
+<i>inférieur à</i>, puis par le nom de la vue.
+
+00:00:24.110 --> 00:00:28.020
+On aurait pu avoir <i>ImageView</i>, <i>Button</i>,
+n'importe quelle vue.
+
+00:00:28.020 --> 00:00:30.790
+Ensuite, on a ici
+une série d'attributs, un par ligne.
+
+00:00:30.790 --> 00:00:35.880
+Enfin on a un trait oblique
+et le signe <i>supérieur à</i>.
+
+00:00:35.880 --> 00:00:38.420
+On a beaucoup
+de symboles et de lettres ici.
+
+00:00:38.420 --> 00:00:41.945
+Pour s'en souvenir, on peut se dire
+qu'on a le signe <i>inférieur à</i>
+
+00:00:41.945 --> 00:00:44.089
+[SON] ; le nom de la vue,
+
+00:00:44.089 --> 00:00:47.052
+[SON] ; ensuite les attributs [SON] ;
+
+00:00:47.052 --> 00:00:52.008
+ensuite, la barre oblique [SON] ;
+et enfin le signe <i>supérieur à</i>,
+
+00:00:52.008 --> 00:00:59.066
+[SON]. Donc en tout on a [SON].
+
+00:00:59.066 --> 00:01:02.814
+S'il manque un seul de ces symboles,
+votre code XML sera invalide.
+
+00:01:02.814 --> 00:01:07.500
+Voilà le raisonnement derrière
+ce qui a l'air d'un texte arbitraire.
+
+00:01:07.500 --> 00:01:10.490
+Pour tout élément XML,
+quand on insère ou « ouvre » une balise,
+
+00:01:10.490 --> 00:01:12.910
+il faut toujours la fermer.
+
+00:01:12.910 --> 00:01:15.680
+C'est un peu comme mettre
+le point en bout de phrase, mais pour
+
+00:01:15.680 --> 00:01:19.260
+XML, contrairement à une phrase, il faut
+faire attention à ces balises fermantes.
+
+00:01:20.440 --> 00:01:21.900
+Comme notre balise s'ouvre ici et
+
+00:01:21.900 --> 00:01:25.197
+se ferme directement, on dit que
+la balise est orpheline.
+
+00:01:26.690 --> 00:01:28.410
+Au lieu d'une balise orpheline,
+
+00:01:28.410 --> 00:01:31.570
+on peut avoir une balise ouvrante
+et une balise fermante séparées.
+
+00:01:33.060 --> 00:01:35.090
+Voici un exemple où
+elles peuvent être utiles.
+
+00:01:35.090 --> 00:01:37.990
+Voici le code de la vue <i>LinearLayout</i>
+qu'on étudiera
+
+00:01:37.990 --> 00:01:39.740
+plus tard dans ce cours.
+
+00:01:39.740 --> 00:01:42.820
+Sachez juste qu'on a la balise
+ouvrante ici et la balise fermante là.
+
+00:01:44.510 --> 00:01:49.550
+Une balise fermante est comme l'ouvrante,
+mais avec un signe <i>inférieur à</i>,
+
+00:01:49.550 --> 00:01:53.199
+une barre oblique, le nom de la vue
+et le signe <i>supérieur à</i>.
+
+00:01:54.330 --> 00:01:55.730
+La différence entre
+balise ouvrante
+
+00:01:55.730 --> 00:01:58.400
+et balise fermante est
+donc la barre oblique.
+
+00:02:00.080 --> 00:02:04.630
+On remarque aussi qu'entre les deux,
+on a deux éléments XML <i>TextView</i>.
+
+00:02:04.630 --> 00:02:09.840
+On les appelle aussi des éléments XML
+<i>enfants</i> de la <i>parente LinearLayout</i>.
+
+00:02:09.840 --> 00:02:12.775
+Imaginons que cette balise
+<i>LinearLayout</i> ait été orpheline,
+
+00:02:12.775 --> 00:02:16.810
+on n'aurait aucune idée du nombre
+de balises enfants qu'elle contiendrait.
+
+00:02:16.810 --> 00:02:18.430
+Maintenant qu'on a
+cette balise fermante,
+
+00:02:18.430 --> 00:02:20.550
+on sait qu'on a exactement
+deux enfants.
+
+00:02:22.020 --> 00:02:25.750
+Dans notre cas, dans cette TextView,
+il n'y a aucun élément XML enfant, donc
+
+00:02:25.750 --> 00:02:30.200
+on peut directement rendre la balise
+orpheline, ça nous évite d'avoir à
+
+00:02:30.200 --> 00:02:34.840
+écrire <i>inférieur à</i>, barre oblique,
+<i>TextView</i>, <i>supérieur à</i>.
+
+00:02:36.140 --> 00:02:40.210
+On remarque qu'il y a un autre 
+bloc de texte dans cette balise.
+
+00:02:40.210 --> 00:02:42.160
+On appelle ces lignes des attributs.
+
+00:02:42.160 --> 00:02:44.950
+Les attributs sont des traits
+qui définissent le comportement ou
+
+00:02:44.950 --> 00:02:48.040
+l'aspect d'une vue
+sur le téléphone Android.
+
+00:02:48.040 --> 00:02:51.000
+Par exemple, on peut le voir
+avec cette analogie :
+
+00:02:51.000 --> 00:02:54.230
+Une personne a des attributs comme
+des cheveux noirs et des yeux marrons ;
+
+00:02:54.230 --> 00:02:57.492
+Une <i>TextView</i> a des attributs comme
+sa largeur, sa hauteur, un fond,
+
+00:02:57.492 --> 00:02:59.190
+du texte, entre autres choses.
+
+00:02:59.190 --> 00:03:02.560
+Si on regarde mieux la mise
+en forme de chaque ligne,
+
+00:03:02.560 --> 00:03:06.040
+on a le nom de l'attribut à gauche,
+
+00:03:06.040 --> 00:03:07.040
+souligné en jaune ici,
+
+00:03:07.040 --> 00:03:09.970
+et à droite on a sa valeur réelle.
+
+00:03:11.600 --> 00:03:14.180
+Il est important de voir que
+les valeurs des attributs
+
+00:03:14.180 --> 00:03:17.730
+sont entre guillemets, ça fait partie
+de la syntaxe d'XML.
+
+00:03:19.220 --> 00:03:22.830
+On a aussi le signe égal au milieu
+pour dire que tel attribut à gauche
+
+00:03:22.830 --> 00:03:25.940
+est réglé pour avoir
+la valeur indiquée à droite.
+
+00:03:25.940 --> 00:03:29.570
+Donc le <i>text</i> de cette <i>TextView</i>
+dit « <i>Happy Birthday!</i> », et
+
+00:03:29.570 --> 00:03:32.640
+sa hauteur <i>height</i>
+vaut 75 dip (<i>density independent pixels</i>).
+
+00:03:34.080 --> 00:03:36.070
+Tous ces attributs
+ont des valeurs par défaut,
+
+00:03:36.070 --> 00:03:38.850
+et il existe des attributs
+qu'on n'a même pas listés ici.
+
+00:03:38.850 --> 00:03:42.740
+C'est parce que <i>TextView</i> a des valeurs
+par défaut pour tous ses attributs.
+
+00:03:42.740 --> 00:03:45.690
+Si ces valeurs par défaut vous
+conviennent, inutile de les régler ici.
+
+00:03:46.750 --> 00:03:48.000
+On n'écrira que
+les lignes de code
+
+00:03:48.000 --> 00:03:50.940
+qui ne devraient pas avoir
+les valeurs par défaut.
+
+00:03:50.940 --> 00:03:52.920
+Par exemple,
+la couleur de fond par défaut des
+
+00:03:52.920 --> 00:03:55.170
+éléments <i>TextView</i>
+est transparente.
+
+00:03:55.170 --> 00:03:57.890
+Nous, on voulait
+qu'elle soit gris foncé,
+
+00:03:57.890 --> 00:03:59.400
+d'où cette ligne de code, ici.
+
+00:04:01.430 --> 00:04:03.250
+Autre remarque importante.
+
+00:04:03.250 --> 00:04:06.770
+Les humains sont assez malins. Si
+j'écris ces expressions, vous comprenez
+
+00:04:06.770 --> 00:04:10.450
+sans doute leurs sens, même si
+je n'ai pas respecté la ponctuation ou
+
+00:04:10.450 --> 00:04:13.040
+la grammaire,
+ni même l'orthographe des mots.
+
+00:04:13.040 --> 00:04:17.089
+Les ordinateurs ne sont pas si malins,
+donc il faut utiliser les bons termes et
+
+00:04:17.089 --> 00:04:20.720
+noms pour être reconnus,
+sinon ils ne comprendront rien, et
+
+00:04:20.720 --> 00:04:22.110
+on aura des erreurs de code.
+
+00:04:23.410 --> 00:04:24.740
+Voici un exemple.
+
+00:04:24.740 --> 00:04:28.580
+Pour le nom de cette vue,
+on ne peut pas écrire *<i>TxtView</i>,
+
+00:04:28.580 --> 00:04:32.640
+*<i>Textview</i> avec un v minuscule,
+ou *<i>text view</i> avec une espace.
+
+00:04:32.640 --> 00:04:34.140
+Tous ces noms sont incorrects,
+
+00:04:34.140 --> 00:04:37.260
+l'ordinateur ne saura jamais
+qu'on veut en fait dire <i>TextView</i>.
+
+00:04:37.260 --> 00:04:40.800
+Si on veut une TextView,
+il faut l'épeler exactement ainsi,
+
+00:04:40.800 --> 00:04:43.370
+avec un T et un V majuscules
+pour la notation CamelCase.
+
+00:04:44.610 --> 00:04:48.080
+Les noms des attributs doivent aussi
+être épelés comme ceci avec deux points
+
+00:04:48.080 --> 00:04:49.260
+après <i>android</i>.
+
+00:04:49.260 --> 00:04:53.960
+On doit avoir ce signe égal, et
+les valeurs doivent avoir des guillemets.
+
+00:04:53.960 --> 00:04:59.892
+Une dernière fois,
+pour ne pas oublier : [SON].
+
+00:04:59.892 --> 00:05:02.683
+Maintenant q'on a couvert
+les règles syntaxiques d'XML,
+
+00:05:02.683 --> 00:05:06.440
+répondez à mes questions
+pour cet élément XML.
+
+00:05:06.440 --> 00:05:09.530
+D'abord, comment s'appelle
+cet élément XML ?
+
+00:05:09.530 --> 00:05:13.320
+Ensuite, listez les noms des attributs
+en les séparant par des virgules.
+
+00:05:13.320 --> 00:05:15.570
+Sans leurs valeurs.
+
+00:05:15.570 --> 00:05:17.540
+Ensuite, à quelle ligne
+se ferme cette balise ?
+
+00:05:18.580 --> 00:05:21.490
+Pour vous aider, j'ai numéroté
+les lignes dans une colonne à gauche.
+

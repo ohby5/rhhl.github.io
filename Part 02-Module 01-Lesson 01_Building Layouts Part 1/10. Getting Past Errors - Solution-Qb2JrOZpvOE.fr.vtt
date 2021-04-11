@@ -1,0 +1,158 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.520 --> 00:00:02.590
+Commençons par lire
+la première erreur.
+
+00:00:02.590 --> 00:00:06.850
+C'est inscrit en Ligne 1, le <i>Tag Text</i>
+n'est pas un tag d'ouverture reconnu.
+
+00:00:08.460 --> 00:00:12.270
+Donc en regardant les nombres des lignes,
+la ligne 1 correspond à celle-ci.
+
+00:00:12.270 --> 00:00:16.540
+Effectivement, on voit que le nom de
+la vue devrait être TextView
+
+00:00:16.540 --> 00:00:20.785
+sans espace ici, et ça devrait
+être en <i>CamelCase</i> aussi.
+
+00:00:20.785 --> 00:00:25.035
+Donc, les majuscules sont bien,
+mais on doit se débarasser de cet espace,
+
+00:00:25.035 --> 00:00:29.320
+pour qu'il reconnaisse cette <i>TextView</i>
+dont on parle.
+
+00:00:29.320 --> 00:00:31.490
+Ca nous enlève une erreur.
+
+00:00:31.490 --> 00:00:33.710
+Cool.
+Plus que trois.
+
+00:00:33.710 --> 00:00:37.570
+L'erreur suivante, c'est que le tag
+de <i>TextView</i> devrait s'auto-fermer.
+
+00:00:37.570 --> 00:00:41.800
+Cela signifie qu'il devrait se fermer
+avec un slash avant et un chevron.
+
+00:00:41.800 --> 00:00:45.880
+Donc, en vérifiant le code, on devrait
+voir un tag <i>TextView</i> s'auto-fermer
+
+00:00:45.880 --> 00:00:49.190
+mais on ne voit que le chevron
+de fermeture.
+
+00:00:49.190 --> 00:00:55.481
+On n'a pas le slash qu'on ajoute.
+
+00:00:55.481 --> 00:00:56.119
+Voilà.
+
+00:00:56.119 --> 00:00:58.940
+Plus que deux erreurs.
+
+00:00:58.940 --> 00:01:00.610
+Cool.
+Ensuite, la prochaine dit
+
+00:01:00.610 --> 00:01:04.700
+L'attribut androidlayout_height
+ne reconnait pas la valeur 150,
+
+00:01:04.700 --> 00:01:06.710
+et c'est en ligne 4.
+
+00:01:06.710 --> 00:01:12.110
+Donc, allons en ligne 4, et on voit
+que ce code est incorrect.
+
+00:01:12.110 --> 00:01:15.120
+On sait peut-être quel est le problème,
+on va le comparer
+
+00:01:15.120 --> 00:01:17.320
+à la largeur de la mise en page au-dessus
+
+00:01:17.320 --> 00:01:20.090
+vu que la hauteur et la largeur
+sont à peu près similaires.
+
+00:01:20.090 --> 00:01:22.800
+Et on règle la largeur à 150 dp.
+
+00:01:22.800 --> 00:01:26.250
+Vous vous souvenez de dp
+d'après notre dernière discussion.
+
+00:01:26.250 --> 00:01:30.875
+Effectivement, il nous manque dp,
+pour la hauteur, donc ajoutons dp.
+
+00:01:30.875 --> 00:01:33.180
+Youpi, et il ne nous
+reste plus qu'une erreur.
+
+00:01:33.180 --> 00:01:35.310
+Et la dernière erreur c'est :
+
+00:01:35.310 --> 00:01:39.670
+La couleur <i>@android:color/darker_groy</i>
+n'est pas reconnue.
+
+00:01:39.670 --> 00:01:40.810
+L'avez-vous mal tapé ?
+
+00:01:42.080 --> 00:01:48.220
+A mon avis, grus sombre, ce n'est pas
+une couleur, mais le gris sombre, si.
+
+00:01:48.220 --> 00:01:51.500
+Donc je supprime U,
+j'écris I,
+
+00:01:51.500 --> 00:01:56.340
+et oui, notre appareil se met à jour
+avec un aperçu de la <i>TextView</i>.
+
+00:01:56.340 --> 00:01:58.250
+Oh, encore une chose.
+
+00:01:58.250 --> 00:02:01.670
+Ce texte <i>Happy Birthday</i>
+est en fait mal orthographié,
+
+00:02:01.670 --> 00:02:06.390
+mais il n'y a pas d'erreur
+pour ce problème.
+
+00:02:06.390 --> 00:02:10.600
+C'est parce que le texte en <i>TextView</i> peut
+être n'importe quoi entre les guillemets.
+
+00:02:10.600 --> 00:02:14.510
+Donc on l'épeler ou y faire
+autant d'erreurs que l'on veut.
+
+00:02:14.510 --> 00:02:17.930
+Ca n'a pas d'importance
+et ça s'affichera juste comme ça.
+
+00:02:18.490 --> 00:02:20.940
+Quand vous créez votre app,
+ne vous concentrez pas
+
+00:02:20.940 --> 00:02:25.110
+pas sur les règles grammaticales,
+faites attention aux règles de <i>XML Syntax</i>.
+

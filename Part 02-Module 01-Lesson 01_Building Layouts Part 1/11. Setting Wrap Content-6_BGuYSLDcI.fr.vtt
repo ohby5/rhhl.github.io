@@ -1,0 +1,228 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.000 --> 00:00:01.980
+Vous venez de finir votre
+première tentative
+
+00:00:01.980 --> 00:00:04.125
+d'écriture de code
+et de correction d'erreurs.
+
+00:00:04.125 --> 00:00:06.390
+Ce type d'expérimentation est
+un moment critique
+
+00:00:06.390 --> 00:00:08.440
+de l'apprentissage dans
+le développement Android.
+
+00:00:08.440 --> 00:00:10.310
+Parlons des tailles de vue maintenant.
+
+00:00:10.310 --> 00:00:13.620
+On sait que la largeur et la hauteur
+sont exprimées en valeurs DP,
+
+00:00:13.620 --> 00:00:15.390
+ou en densité de pixels indépendants.
+
+00:00:15.390 --> 00:00:18.290
+Pour que ce soit bon
+pour plusieurs types d'appareils.
+
+00:00:18.290 --> 00:00:21.680
+Seulement, il y a toujours possibilité
+de s'améliorer dans cette UI.
+
+00:00:21.680 --> 00:00:25.300
+Si je change le texte ici,
+pour qu'il soit plus long, par exemple,
+
+00:00:25.300 --> 00:00:27.170
+aujourd'hui c'est ton anniversaire ?
+
+00:00:27.170 --> 00:00:30.840
+Remarquez comme le texte se met à jour
+ici, mais il prend plus de deux lignes.
+
+00:00:30.840 --> 00:00:33.020
+Idéalement, ça ne devrait être
+que sur une seule ligne,
+
+00:00:33.020 --> 00:00:35.530
+parce qu'il y a plein
+de <i>screen real estate</i> de ce côté.
+
+00:00:35.530 --> 00:00:37.300
+Si la boîte n'a pas changé de côté,
+
+00:00:37.300 --> 00:00:41.500
+c'est parce qu'on lui a donné une largeur
+et hauteur limitée de 150dp.
+
+00:00:41.500 --> 00:00:43.500
+Quand on définit une valeur très spécifique
+
+00:00:43.500 --> 00:00:47.170
+pour la hauteur et la largeur comme ça,
+on appelle ça «&nbsp;coder en dur&nbsp;» une valeur.
+
+00:00:47.170 --> 00:00:49.870
+C'est généralement considéré
+comme une mauvaise pratique,
+
+00:00:49.870 --> 00:00:53.660
+parce que si le texte change
+ainsi, ça a l'air bizarre.
+
+00:00:53.660 --> 00:00:56.880
+Il faut qu'on aille changer la largeur
+pour quelque chose comme 200,
+
+00:00:56.880 --> 00:00:58.740
+pour que tout tienne sur une ligne.
+
+00:00:58.740 --> 00:01:02.230
+Mais ce serait tellement galère
+de mettre à jour la largeur et la hauteur,
+
+00:01:02.230 --> 00:01:03.750
+en fonction du texte.
+
+00:01:03.750 --> 00:01:06.800
+On ne saura peut-être
+ce qu'il sera écrit que bien plus tard.
+
+00:01:06.800 --> 00:01:09.890
+Par exemple, si j'ai une app
+qui montre de nouveaux articles,
+
+00:01:09.890 --> 00:01:12.130
+le titre de chaque histoire
+pourra changer.
+
+00:01:12.130 --> 00:01:15.720
+Et on ne veut pas que notre UI se casse,
+si jamais on a un très long titre
+
+00:01:15.720 --> 00:01:17.380
+ou alors un titre très court.
+
+00:01:17.380 --> 00:01:20.630
+Dans Android, on peut résoudre
+ce problème en allouant à la largeur
+
+00:01:20.630 --> 00:01:24.010
+une valeur spéciale nommée
+<i>wrap_content</i>.
+
+00:01:24.010 --> 00:01:26.500
+Cela règle
+la largeur du <i>TextView</i>,
+
+00:01:26.500 --> 00:01:30.640
+pour que ce soit précisément la largeur
+du contenu à l'intérieur.
+
+00:01:30.640 --> 00:01:32.770
+Ce n'est ni trop petit
+ni trop grand.
+
+00:01:32.770 --> 00:01:34.010
+C'est exactement ce qu'il faut.
+
+00:01:34.010 --> 00:01:37.520
+De même, pour la hauteur,
+au lieu de placer 150 dp,
+
+00:01:37.520 --> 00:01:40.330
+on peut le régler à la valeur spéciale
+de <i>wrap_content</i>,
+
+00:01:40.330 --> 00:01:42.010
+le texte se mettra alors à jour,
+
+00:01:42.010 --> 00:01:44.240
+pour que la taille du texte soit juste,
+
+00:01:44.240 --> 00:01:46.270
+qu'elle soit aussi grande
+que le texte dedans.
+
+00:01:46.270 --> 00:01:49.370
+Maintenant, placer <i>wrap_content</i>
+pour la hauteur et la largeur,
+
+00:01:49.370 --> 00:01:50.510
+c'est très puissant,
+
+00:01:50.510 --> 00:01:54.710
+parce qu'on a du contenu ici à droite,
+qui sera maintenant placé là,
+
+00:01:54.710 --> 00:01:58.020
+parce qu'on n'a pas cet espace
+excédant dans la vue de texte.
+
+00:01:58.020 --> 00:02:00.860
+De même, si on a d'autres vues
+de texte en-dessous,
+
+00:02:00.860 --> 00:02:02.950
+elles peuvent à présent être placées
+
+00:02:02.950 --> 00:02:05.130
+à droite à côté
+de la première vue de texte.
+
+00:02:05.130 --> 00:02:09.220
+Dans l'exemple de l'app d'informations,
+si c'était le titre de l'histoire,
+
+00:02:09.220 --> 00:02:10.740
+on ne voudrait pas que la description
+
+00:02:10.740 --> 00:02:13.560
+de l'histoire soit en bas,
+à 150 DPIs de là.
+
+00:02:13.560 --> 00:02:17.830
+Non, on veut que la description
+soit juste en-dessous du titre.
+
+00:02:17.830 --> 00:02:20.760
+En dézoomant,
+essayons avec une plus petite séquence.
+
+00:02:20.760 --> 00:02:22.840
+Ok, c'est à votre tour d'essayer.
+
+00:02:22.840 --> 00:02:25.420
+On veut que vous changiez
+quelques choses avec le code.
+
+00:02:25.420 --> 00:02:29.000
+Changez la hauteur et la largueur,
+du <i>TextView</i> par <i>wrap_content</i>.
+
+00:02:29.000 --> 00:02:32.480
+Puis changez le texte par une très très
+longue phrase, un paragraphe,
+
+00:02:32.480 --> 00:02:34.430
+pour que ça affiche plus d'1 ligne
+
+00:02:34.430 --> 00:02:36.260
+de texte sur la prévisualisation
+d'appareil.
+
+00:02:36.260 --> 00:02:40.590
+Vous pouvez même taper joyeux anniversaire
+en entier, c'est assez long.
+
+00:02:40.590 --> 00:02:42.958
+Le lien ci-dessous vous donne
+le code pour commencer
+

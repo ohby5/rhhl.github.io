@@ -1,0 +1,161 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.492 --> 00:00:02.270
+Vamos começar por ler o primeiro erro.
+
+00:00:02.541 --> 00:00:06.929
+Ele diz que a tag <i>text</i> na linha 1,
+não é uma tag de abertura suportada.
+
+00:00:08.455 --> 00:00:11.815
+Se olhar os números de linha,
+a linha 1 corresponde a esta.
+
+00:00:12.240 --> 00:00:16.085
+E, de fato, vemos que o nome
+da <i>view</i> devia ser <i>TextView</i>,
+
+00:00:16.566 --> 00:00:19.981
+sem o espaço e devia ser <i>CamelCase </i>também.
+
+00:00:20.430 --> 00:00:23.852
+A capitalização está correta,
+mas precisamos nos livrar do espaço,
+
+00:00:24.412 --> 00:00:27.243
+e agora ele reconhece a <i>TextView</i>
+
+00:00:27.507 --> 00:00:28.523
+de que estamos falando.
+
+00:00:29.329 --> 00:00:30.621
+E é um erro a menos.
+
+00:00:31.501 --> 00:00:33.120
+Legal.
+Faltam três.
+
+00:00:33.716 --> 00:00:37.095
+O próximo erro diz que a tag da <i>TextView </i>
+deveria ser de auto-fechamento.
+
+00:00:37.593 --> 00:00:41.095
+Isso significa que deveria terminar com
+uma barra&nbsp;e um sinal de maior.
+
+00:00:41.815 --> 00:00:45.249
+Ao verificar o código, deveria haver
+uma tag de auto-fechamento na <i>TextView</i>,
+
+00:00:45.747 --> 00:00:48.861
+mas apenas vemos o sinal de maior.
+
+00:00:49.163 --> 00:00:53.009
+Está faltando o... [SOM],
+então&nbsp;vamos acrescentá-lo.
+
+00:00:55.692 --> 00:00:58.363
+Ai está,
+e agora faltam dois erros.
+
+00:00:58.972 --> 00:01:00.381
+Legal. 
+Então o&nbsp;próximo diz,
+
+00:01:00.627 --> 00:01:04.720
+"O atributo <i>android:layout_height</i>
+não suporta o valor 150",
+
+00:01:05.089 --> 00:01:06.246
+que&nbsp;está na linha 4.
+
+00:01:06.726 --> 00:01:08.020
+Então vamos para a linha 4,
+
+00:01:08.086 --> 00:01:11.450
+e vemos que este código está incorreto.
+
+00:01:12.227 --> 00:01:15.089
+Podemos não saber o que há de errado,
+mas podemos compará-lo
+
+00:01:15.089 --> 00:01:16.849
+com a linha de layout_width acima,
+
+00:01:17.526 --> 00:01:19.107
+já que a largura e altura são similares.
+
+00:01:19.630 --> 00:01:22.055
+Aqui nós definimos a largura para ser 150 dp.
+
+00:01:22.578 --> 00:01:25.581
+Lembra do que falámos antes sobre dp?
+
+00:01:25.987 --> 00:01:30.098
+De fato, está faltando "dp" na altura,
+então vamos adicioná-lo.
+
+00:01:31.015 --> 00:01:32.713
+Oba! E agora falta um erro.
+
+00:01:33.415 --> 00:01:34.787
+E o último erro diz,
+
+00:01:35.320 --> 00:01:37.895
+"A cor <i>@android:color/darker_groy</i>
+
+00:01:38.252 --> 00:01:40.920
+não é suportada.
+Terá digitado incorretamente?"
+
+00:01:41.760 --> 00:01:46.630
+Realmente <i>darker groy</i> não é uma cor,
+mas <i>darker gray</i> (cinza escuro) é,
+
+00:01:46.732 --> 00:01:48.340
+ou seja é um erro de digitação.
+
+00:01:48.360 --> 00:01:50.824
+Vou então apagar o "o" e digitar "a"
+
+00:01:51.261 --> 00:01:55.513
+Oba! Nosso dispositivo atualizou
+e pode pré-visualizar a <i>TextView.</i>
+
+00:01:56.283 --> 00:01:57.778
+Olha, tem mais uma coisa!
+
+00:01:58.258 --> 00:02:01.323
+O texto aqui está&nbsp;na verdade
+escrito incorretamente,
+
+00:02:01.686 --> 00:02:05.710
+mas não existem erros
+para estes problemas ortográficos.
+
+00:02:06.400 --> 00:02:10.073
+Isso porque o texto na <i>TextView</i>
+pode ser qualquer coisa entre as aspas.
+
+00:02:10.609 --> 00:02:12.780
+Você pode cometer erros
+em qualquer palavra,
+
+00:02:12.790 --> 00:02:14.141
+ou soletrar corretamente.
+
+00:02:14.535 --> 00:02:17.409
+Isso realmente não importa,
+e só vai aparecer assim.
+
+00:02:18.486 --> 00:02:19.661
+Ao criar seu aplicativo,
+
+00:02:20.150 --> 00:02:22.160
+não está verificando as regras de gramática,
+
+00:02:22.504 --> 00:02:25.100
+mas sim as regras de sintaxe XML.
+

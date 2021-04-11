@@ -1,0 +1,299 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.530 --> 00:00:02.460
+Chúng ta đã đá qua một chút về TextView.
+
+00:00:02.460 --> 00:00:05.914
+Một view khác mà chúng tôi muốn tìm hiểu
+lúc này để làm thiệp sinh nhật
+
+00:00:05.914 --> 00:00:07.248
+chính là ImageView.
+
+00:00:07.248 --> 00:00:09.910
+Giờ, đây là XML cho ImageView.
+
+00:00:09.910 --> 00:00:12.140
+Hãy lần lượt nhìn vào các dòng.
+
+00:00:12.140 --> 00:00:15.600
+Các yếu tố XML bắt đầu 
+với một dấu mở ngoặc.
+
+00:00:15.600 --> 00:00:20.058
+Sau đó là tên của view [Âm thanh]
+và danh sách các thuộc tính,
+
+00:00:20.058 --> 00:00:20.795
+[Âm thanh].
+
+00:00:20.795 --> 00:00:24.124
+Theo sau bởi một dấu gạch chéo,
+và dấu đóng ngoặc.
+
+00:00:24.124 --> 00:00:25.832
+[Âm thanh] Bùm.
+
+00:00:25.832 --> 00:00:30.540
+Khi ta viết XML cho TextView,
+nó hiển thị văn bản trên màn hình.
+
+00:00:30.540 --> 00:00:34.710
+Giờ khi chúng ta viết ImageView ở đây,
+nó sẽ hiển thị một hình ảnh trên màn hình.
+
+00:00:34.710 --> 00:00:36.963
+Thuộc tính đầu tiên
+ta chưa từng thấy trước đây.
+
+00:00:36.963 --> 00:00:41.010
+Nó ghi là android: src = @drawable/cake.
+
+00:00:41.010 --> 00:00:46.330
+Nó nói rằng nguồn cho của hình ảnh này
+sẽ được tìm thấy trong tập tin này ở đây.
+
+00:00:46.330 --> 00:00:48.580
+Tên tập tin được gọi là bánh.
+
+00:00:48.580 --> 00:00:51.225
+Ta sử dụng biểu tượng @
+để nói rằng ta đang tham khảo
+
+00:00:51.225 --> 00:00:56.405
+một tài nguyên trong ứng dụng Android, 
+và drawable là loại tài nguyên đó.
+
+00:00:56.405 --> 00:01:00.205
+Một drawable giống như một đồ họa
+sẽ được hiển thị trên màn hình Android.
+
+00:01:00.205 --> 00:01:02.505
+Và một lần nữa, cake là tên tập tin ảnh.
+
+00:01:02.505 --> 00:01:04.670
+Chúng ta không bao gồm 
+phần mở rộng tập tin.
+
+00:01:04.670 --> 00:01:07.890
+Bạn không cần phải biết rõ đó là 
+một ảnh JPEG hay PNG.
+
+00:01:07.890 --> 00:01:08.870
+Chỉ cần tên tập tin.
+
+00:01:08.870 --> 00:01:12.050
+Nếu bạn tự hỏi hình ảnh này từ đâu mà có
+à ta thực hiện điều này
+
+00:01:12.050 --> 00:01:15.270
+hơi khác nhau một chút 
+giữa Visualizer XML và ứng dụng.
+
+00:01:15.270 --> 00:01:18.190
+Nhưng về cơ bản, chúng ta nạp trước
+một loạt các hình ảnh
+
+00:01:18.190 --> 00:01:21.510
+để bạn có thể sử dụng chúng
+thực hành trong XML Visualizer.
+
+00:01:21.510 --> 00:01:23.990
+Khi xây dựng ứng dụng 
+trong Android Studio
+
+00:01:23.990 --> 00:01:28.380
+bạn sẽ phải thêm hình ảnh bằng tay 
+vào ứng dụng, trong thư mục drawable.
+
+00:01:28.380 --> 00:01:31.740
+Bây giờ, nếu tôi thử tham chiếu
+một hình ảnh không tồn tại,
+
+00:01:31.740 --> 00:01:35.150
+chẳng hạn như, 
+hình ảnh toys không tồn tại.
+
+00:01:35.150 --> 00:01:39.105
+Sau đó sẽ xuất hiện một lỗi
+vì toys không phải là một hình ảnh hợp lệ.
+
+00:01:39.105 --> 00:01:42.325
+Vậy hãy chắc chắn rằng bạn chỉ tham chiếu
+những hình ảnh có sẵn.
+
+00:01:42.325 --> 00:01:44.375
+Hãy đổi nó trở lại bằng cách nhấn undo.
+
+00:01:44.375 --> 00:01:47.495
+Ta có chiều rộng và chiều dài,
+được thiết lập là wrapped_content.
+
+00:01:47.495 --> 00:01:52.085
+Vì vậy mà các view ảnh chỉ lớn 
+như hình ảnh chiếc bánh bên trong của nó.
+
+00:01:52.085 --> 00:01:55.165
+Cuối cùng, ta có thuộc tính này
+gọi là Android: scaledType
+
+00:01:55.165 --> 00:01:57.265
+và nó được thiết lập là center.
+
+00:01:57.265 --> 00:02:00.125
+ScaleType cho các thiết bị biết cách
+mở rộng hoặc thu hẹp
+
+00:02:00.125 --> 00:02:04.320
+quy mô, dựa trên các ràng buộc 
+của ImageView.
+
+00:02:04.320 --> 00:02:05.770
+Hãy xem nó trông như thế nào.
+
+00:02:06.710 --> 00:02:10.280
+Bây giờ bạn có thể nhìn thấy 
+ảnh chiếc bánh hiển thị trên thiết bị.
+
+00:02:10.280 --> 00:02:14.980
+Ảnh cái bánh thực sự là khá lớn,
+và nó lớn hơn kích thước màn hình.
+
+00:02:14.980 --> 00:02:16.640
+Vì vậy, khi chúng ta gõ scaleType,
+
+00:02:16.640 --> 00:02:20.420
+nó không thay đổi kích thước hình ảnh,
+mà chỉ căn giữa hình ảnh.
+
+00:02:20.420 --> 00:02:23.330
+Vậy ta thấy ảnh cái bánh
+thực sự quá lớn,
+
+00:02:23.330 --> 00:02:26.040
+nhưng đây là trọng tâm
+của cái bánh.
+
+00:02:26.040 --> 00:02:29.750
+Chúng ta có thể thiết lập các giá trị khác
+cho scaleType, như centerCrop.
+
+00:02:29.750 --> 00:02:33.460
+Nó sẽ thu nhỏ hình ảnh để vừa với
+chiều dài và chiều rộng của khung nhìn.
+
+00:02:33.460 --> 00:02:36.680
+Trong trường hợp này, chúng ta bị hạn chế
+bởi các cạnh của màn hình.
+
+00:02:36.680 --> 00:02:39.670
+Chúng ta cũng duy trì tỷ lệ các cạnh
+của hình ảnh gốc
+
+00:02:39.670 --> 00:02:41.680
+để nó không bị bóp méo.
+
+00:02:41.680 --> 00:02:44.330
+Khi ta thu nhỏ hình ảnh,
+ta cũng tập trung hình ảnh đó,
+
+00:02:44.330 --> 00:02:47.805
+và sau đó cắt nó 
+cho vừa với ViewSize này.
+
+00:02:47.805 --> 00:02:51.355
+Khi hiển thị hình ảnh,
+Tôi thích sử dụng centerCrop.
+
+00:02:51.355 --> 00:02:55.955
+Bởi vì có thể cắt các cạnh của bức ảnh
+để có được
+
+00:02:55.955 --> 00:02:58.605
+cạnh này đến cạnh khác như thế này.
+
+00:02:58.605 --> 00:03:01.285
+Khi hình ảnh đi từ cạnh đến cạnh
+không có giới hạn trắng
+
+00:03:01.285 --> 00:03:05.475
+hay bất cứ điều gì, đây được gọi là
+một hình ảnh bòn rút đầy đủ.
+
+00:03:05.475 --> 00:03:08.819
+Ta sử dụng nhiều hình ảnh dạng này
+trong hướng dẫn thiết kế vật liệu.
+
+00:03:09.430 --> 00:03:10.740
+Dưới đây là một số ví dụ.
+
+00:03:11.610 --> 00:03:14.060
+Bạn thấy cách những hình ảnh 
+đi từ cạnh đến cạnh,
+
+00:03:14.060 --> 00:03:16.580
+và điều đó mang lại 
+một cảm giác nhập vai tốt đẹp.
+
+00:03:16.580 --> 00:03:18.750
+Được rồi, giờ đến lượt bạn sẽ thử.
+
+00:03:18.750 --> 00:03:21.990
+Cụ thể, chúng tôi muốn bạn 
+thay đổi chiều dài và chiều rộng
+
+00:03:21.990 --> 00:03:25.240
+của view image thành 
+một giá trị dp cố định.
+
+00:03:25.240 --> 00:03:27.370
+Hãy thử 100dp.
+
+00:03:27.370 --> 00:03:30.630
+Sau đó thay đổi các loại quy mô 
+giữa center và centerCrop,
+
+00:03:30.630 --> 00:03:35.350
+và bạn cũng có thể điều chỉnh
+chiều dài và rộng của ảnh cho phù hợp.
+
+00:03:35.350 --> 00:03:39.120
+Ví dụ, điều gì sẽ xảy ra nếu bạn thay đổi
+chiều dài và chiều rộng của ảnh
+
+00:03:39.120 --> 00:03:42.520
+lớn hơn so với các mặt của thiết bị,
+hoặc chuyện gì sẽ xảy ra
+
+00:03:42.520 --> 00:03:45.720
+nếu bạn thiết lập chúng
+nhỏ hơn so với kích thước của thiết bị?
+
+00:03:45.720 --> 00:03:48.770
+Trong các trường hợp đó,
+bạn có thể thấy các hành vi khác nhau .
+
+00:03:48.770 --> 00:03:51.490
+với center và centercrop 
+Ngoài ra, hãy thử đổi ảnh khác
+
+00:03:51.490 --> 00:03:54.610
+bằng cách kiểm tra 
+liên kết Available Images.
+
+00:03:54.610 --> 00:03:56.880
+Chúng tôi có phiên bản nhỏ
+
+00:03:56.880 --> 00:04:00.610
+và phiên bản lớn của ảnh cái bánh 
+để bạn có thể thử các quy mô khác nhau.
+
+00:04:00.610 --> 00:04:03.180
+Chúng cũng bao gồm một biểu tượng Android.
+
+00:04:03.180 --> 00:04:05.830
+Sử dụng các liên kết dưới đây 
+để đến XML Visualizer.
+

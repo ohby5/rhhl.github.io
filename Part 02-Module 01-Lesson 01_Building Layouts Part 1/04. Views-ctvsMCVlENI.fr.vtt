@@ -1,0 +1,191 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.220 --> 00:00:04.210
+La première étape consiste 
+à choisir les vues à utiliser.
+
+00:00:04.210 --> 00:00:08.290
+D'abord, je dois expliquer
+ce qu'est une vue sur Android.
+
+00:00:08.290 --> 00:00:12.400
+Simplement, une vue est un rectangle
+sur l'écran qui montre du contenu.
+
+00:00:12.400 --> 00:00:15.610
+Cela peut être une image,
+un texte, un bouton
+
+00:00:15.610 --> 00:00:17.170
+ou tout ce que l'app peut afficher.
+
+00:00:18.490 --> 00:00:22.780
+Donc, ces vues individuelles forment 
+ce que l'on nomme la mise en page.
+
+00:00:22.780 --> 00:00:24.690
+Tout ce que vous voyez
+
+00:00:24.690 --> 00:00:29.120
+et communiquez dans l'app s'appelle
+l'interface utilisateur, ou UI.
+
+00:00:29.120 --> 00:00:32.910
+Il y a différents types de vues
+avec des noms différents.
+
+00:00:32.910 --> 00:00:35.620
+Une vue qui affiche
+du texte s'appelle <i>TextView</i>.
+
+00:00:35.620 --> 00:00:37.490
+Voici quelques exemples.
+
+00:00:37.490 --> 00:00:41.540
+Une vue montrant une image s'appelle
+<i>ImageView</i>, et voici des exemples.
+
+00:00:41.540 --> 00:00:45.070
+Une vue montrant un bouton s'appelle,
+eh bien, un bouton.
+
+00:00:45.070 --> 00:00:46.620
+Voici quelques exemples.
+
+00:00:46.620 --> 00:00:49.910
+Il y a beaucoup d'autres types de vues
+sur Android qui sont très pratiques
+
+00:00:49.910 --> 00:00:53.020
+à utiliser, mais on va se concentrer
+sur ces trois premières.
+
+00:00:53.020 --> 00:00:55.770
+J'ai dit plus tôt que
+chaque vue est un rectangle sur l'écran,
+
+00:00:55.770 --> 00:00:57.890
+mais où sont tous les rectangles?
+
+00:00:57.890 --> 00:01:00.880
+Techniquement, ils sont invisibles, 
+mais je vais les dessiner
+
+00:01:00.880 --> 00:01:02.200
+afin que vous puissiez voir
+
+00:01:02.200 --> 00:01:04.060
+où se trouvent les limites
+de chaque rectangle.
+
+00:01:04.480 --> 00:01:05.730
+Comme vous pouvez le constatez,
+
+00:01:05.730 --> 00:01:10.250
+chaque app peut être divisée en
+vue individuelle qui la compose.
+
+00:01:10.250 --> 00:01:13.690
+Autrement dit, une vue est le bloc
+de construction de base que vous utilisez
+
+00:01:13.690 --> 00:01:16.150
+pour produire la mise en page
+de votre app.
+
+00:01:16.150 --> 00:01:17.750
+Pour vous aider à comprendre l'idée
+
+00:01:17.750 --> 00:01:20.080
+des vues qui sont
+des rectangles sur l'écran,
+
+00:01:20.080 --> 00:01:22.840
+voici une situation à laquelle
+vous serez plus habitué.
+
+00:01:22.840 --> 00:01:26.110
+Si vous vous êtes déjà servi d'une app
+comme Paint ou Google drawings
+
+00:01:26.110 --> 00:01:29.580
+vous avez sûrement déjà ajouté
+un encadré de texte à votre document
+
+00:01:29.580 --> 00:01:31.130
+et vous y avez tapé votre texte.
+
+00:01:31.130 --> 00:01:32.710
+Mais si vous cliquez en dehors,
+
+00:01:32.710 --> 00:01:36.280
+vous ne voyez pas les limites
+du rectangle mais elles y sont.
+
+00:01:36.280 --> 00:01:39.090
+Et les limites sont importantes 
+quand vous commencez
+
+00:01:39.090 --> 00:01:41.490
+à faire des choses comme ajouter 
+une trame de fond ou bien
+
+00:01:41.490 --> 00:01:45.410
+ajouter une bordure autour ; la taille
+du rectangle devient donc importante.
+
+00:01:46.598 --> 00:01:51.100
+Je veux aussi préciser que le format
+du nom de ces vues est en <i>Camel Case</i>.
+
+00:01:52.240 --> 00:01:56.140
+<i>Camel Case</i> signifie qu'il n'y a plus
+d'espaces entre les mots,
+
+00:01:56.140 --> 00:01:58.860
+et que chaque mot commence
+avec une lettre majuscule.
+
+00:01:58.860 --> 00:02:03.750
+Cela s'appelle <i>Camel Case</i> car l'alternance
+de majuscules et de minuscules dans le mot
+
+00:02:03.750 --> 00:02:05.540
+rappelle les bosses d'un dos de chameau.
+
+00:02:06.680 --> 00:02:09.299
+Vous allez voir plus de notation
+<i>Camel Case</i> durant ce cours.
+
+00:02:10.310 --> 00:02:12.750
+Maintenant, mettons en pratique 
+ce que nous avons appris.
+
+00:02:12.750 --> 00:02:15.350
+Voici une capture d'écran
+de la nouvelle application de messagerie
+
+00:02:15.350 --> 00:02:16.660
+de Google, appelée Inbox.
+
+00:02:16.660 --> 00:02:19.380
+Pouvez-vous identifier
+les divers types de vues ici ?
+
+00:02:19.380 --> 00:02:22.430
+Pour vous aider,
+J'ai surligné les vues individuelles.
+
+00:02:22.430 --> 00:02:24.000
+Par exemple, pour A,
+
+00:02:24.000 --> 00:02:26.880
+pouvez-vous me dire s'il s'agit
+d'un <i>TextView</i>, <i>ImageView</i> ou d'un bouton ?
+
+00:02:26.880 --> 00:02:29.350
+Faites la même chose pour B,
+ainsi que pour le reste des vues.
+

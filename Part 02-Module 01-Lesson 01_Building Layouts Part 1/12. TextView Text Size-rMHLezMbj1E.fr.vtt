@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.150 --> 00:00:03.610
+Si vous ne l'avez pas encore vu,
+le texte est un peu petit
+
+00:00:03.610 --> 00:00:05.310
+sur l'écran de cet appareil.
+
+00:00:05.310 --> 00:00:06.860
+J'ai une mauvaise vue,
+
+00:00:06.860 --> 00:00:08.980
+donc il faut vraiment
+que ce soit plus grand.
+
+00:00:09.370 --> 00:00:10.380
+Heureusement pour nous,
+
+00:00:10.380 --> 00:00:14.110
+il y a un attribut qu'on peut déclarer
+pour changer la taille du texte.
+
+00:00:14.800 --> 00:00:17.210
+Mais, attendez.
+Un message d'erreur apparaît en bas.
+
+00:00:17.210 --> 00:00:20.460
+Il est écrit que l'ordinateur
+n'a pas réussi à comprendre mon XML.
+
+00:00:20.460 --> 00:00:23.240
+En vérifiant le code, je vois
+que la ligne que nous avons ajoutée
+
+00:00:23.240 --> 00:00:25.480
+est affichée avec une police noire,
+
+00:00:25.790 --> 00:00:29.000
+alors que les autres lignes
+sont en bleues pour le nom de l'attribut
+
+00:00:29.000 --> 00:00:31.120
+et en rouge pour la valeur de l'attribut.
+
+00:00:31.120 --> 00:00:33.100
+Donc quelque chose ne va pas
+avec cette ligne.
+
+00:00:33.100 --> 00:00:34.438
+Attends, je vois le problème.
+
+00:00:34.438 --> 00:00:37.770
+La barre oblique et le chevron
+sont sur cette ligne ici.
+
+00:00:38.060 --> 00:00:40.430
+Ajouter un attribut
+après que la balise soit fermée
+
+00:00:40.430 --> 00:00:42.850
+est en fait une erreur fréquente
+chez les débutants.
+
+00:00:43.230 --> 00:00:46.290
+Techniquement, c'est comme être
+dans un capharnaüm XML,
+
+00:00:46.290 --> 00:00:49.550
+car elle n'est pas liée à un élément XML.
+
+00:00:50.080 --> 00:00:53.320
+Nous voulons donc copier ces symboles
+pour les mettre en bas ici.
+
+00:00:53.810 --> 00:00:54.870
+C'est mieux comme ça.
+
+00:00:54.870 --> 00:00:58.730
+Il n'y a pas d'erreur, le XML est valide,
+et la police est plus grande.
+
+00:00:59.680 --> 00:01:01.480
+C'est beaucoup plus lisible maintenant.
+
+00:01:01.480 --> 00:01:04.319
+Remarquez que la taille du texte
+est ajustée à 45 sp.
+
+00:01:04.479 --> 00:01:07.240
+<i>Sp</i> signifie <i>scale independent pixels</i> :
+pixels à échelle indépendante.
+
+00:01:07.240 --> 00:01:09.720
+C'est une unité de mesure semblable à <i>dp</i>
+
+00:01:09.720 --> 00:01:12.140
+et qui permet à l'appli
+d'avoir la même apparence
+
+00:01:12.140 --> 00:01:15.000
+à travers différents appareils
+de densités différentes.
+
+00:01:15.420 --> 00:01:18.800
+Sp n'est utilisé que pour la police
+car ça se règle
+
+00:01:18.800 --> 00:01:21.580
+en fonction des préférences
+et des paramètres de l'utilisateur
+
+00:01:21.580 --> 00:01:22.760
+pour la taille du texte.
+
+00:01:22.760 --> 00:01:24.220
+Regardons ça maintenant.
+
+00:01:24.220 --> 00:01:26.090
+Je vais vous montrer
+où se trouvent les paramètres.
+
+00:01:26.090 --> 00:01:29.180
+Ouvrez l'appli paramètres,
+appuyez sur affichage
+
+00:01:29.720 --> 00:01:32.030
+et il y a une option
+pour la taille de la police.
+
+00:01:32.030 --> 00:01:34.920
+Si vous appuyez là-dessus,
+vous pouvez voir les différentes tailles.
+
+00:01:34.920 --> 00:01:38.590
+En appuyant sur immense,
+la taille de la police augmente partout.
+
+00:01:39.000 --> 00:01:41.670
+Donc utilisez toujours sp
+pour déclarer vos tailles de police
+
+00:01:41.670 --> 00:01:45.000
+pour que ça augmente ou rétrécisse
+en fonction des préférences utilisateur.
+
+00:01:45.370 --> 00:01:48.270
+Dans un instant, vous allez changer
+la taille du texte de TextView.
+
+00:01:48.270 --> 00:01:50.600
+Par contre, je veux d'abord
+vous montrer une chose.
+
+00:01:50.600 --> 00:01:52.560
+Ce sont les spécifications
+du Material Design.
+
+00:01:52.560 --> 00:01:54.480
+Material Design est
+un nouveau langage de design
+
+00:01:54.480 --> 00:01:57.330
+créé par Google pour aider les gens
+à créer des applis belles et
+
+00:01:57.330 --> 00:02:00.330
+qui se ressemblent
+sur plusieurs appareils et plate-formes,
+
+00:02:00.730 --> 00:02:02.490
+comme sur Internet ou sur des portables.
+
+00:02:02.490 --> 00:02:05.910
+Les spécifications du design,
+ou design specs, mettent en avant
+
+00:02:05.910 --> 00:02:08.150
+les meilleures pratiques à suivre
+pour créer votre appli.
+
+00:02:08.150 --> 00:02:11.330
+Il vous guide concernant la mise en page
+de votre appli, le style visuel,
+
+00:02:11.330 --> 00:02:13.800
+les images, les animations
+et bien plus encore.
+
+00:02:13.800 --> 00:02:16.860
+Il y a aussi une section
+sur la typographie, ou la police.
+
+00:02:17.320 --> 00:02:20.350
+On y trouve tout un tas d'informations
+que vous pouvez lire plus tard.
+
+00:02:20.350 --> 00:02:22.400
+Mais le plus important est ce guide ici.
+
+00:02:22.400 --> 00:02:24.620
+Il nous explique
+les tailles de texte recommandées.
+
+00:02:24.620 --> 00:02:26.700
+Si vous affichez un en-tête super grand,
+
+00:02:26.700 --> 00:02:28.870
+vous pouvez ces valeurs
+de taille de texte.
+
+00:02:28.870 --> 00:02:31.780
+Si vous voulez créer un titre
+ou une partie du texte ou légende,
+
+00:02:31.780 --> 00:02:33.590
+vous pouvez utiliser ces tailles.
+
+00:02:33.590 --> 00:02:38.170
+Ça vous aidera à choisir la bonne valeur
+en fonction de votre cas d'utilisation.
+
+00:02:38.760 --> 00:02:42.120
+Faites attention, car si vous choisissez
+trop de tailles de texte ou trop de styles
+
+00:02:42.120 --> 00:02:44.070
+ça peut perturber l'utilisateur.
+
+00:02:44.440 --> 00:02:48.120
+Choisissez seulement un ou deux styles
+pour afficher l'information voulue.
+
+00:02:48.420 --> 00:02:50.570
+Quand vous changez
+la taille du texte pour TextView,
+
+00:02:50.570 --> 00:02:52.480
+essayez quelques valeurs qui sont ici.
+
+00:02:52.920 --> 00:02:55.090
+Allez-y et changez
+la taille de la police de TextView
+
+00:02:55.090 --> 00:02:56.730
+en utilisant Material Design Spec.
+
+00:02:56.980 --> 00:02:58.590
+Et si vous voulez un défi,
+
+00:02:58.590 --> 00:03:01.550
+essayez de vous renseigner
+sur l'attribut <i>text appearance</i>
+
+00:03:01.550 --> 00:03:04.690
+à partir du Google+ AndroidDev Protip
+que j'ai publié ci-dessous.
+
+00:03:05.040 --> 00:03:07.720
+Et puis, vous pourriez l'utiliser
+dans XML Visualizer aussi.
+
+00:03:08.020 --> 00:03:11.020
+Le lien pour retrouver XML Visualizer,
+ainsi que le code pour commencer
+
+00:03:11.020 --> 00:03:12.010
+se trouve ci-dessous.
+

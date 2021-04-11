@@ -1,0 +1,319 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.540 --> 00:00:04.430
+Sizden bir hata oluşturmanızı ve
+hatayı düzeltmenizi istedik,
+
+00:00:04.430 --> 00:00:08.570
+bunun sebebi ise 
+bir geliştiricinin önemli özelliklerinden
+
+00:00:08.570 --> 00:00:11.330
+biri de hataları düzeltebilmesidir.
+
+00:00:11.330 --> 00:00:14.255
+İlk seferde mükemmel şekilde
+kod yazan bir geliştirici yoktur.
+
+00:00:14.255 --> 00:00:15.875
+Eğer düşünecek olursanız,
+
+00:00:15.875 --> 00:00:20.765
+Google arama motoru bir günde
+mükemmel şekilde yazılmadı.
+
+00:00:20.765 --> 00:00:25.585
+Yıllardır tekrar eden 
+ve edecek olan bir süreç.
+
+00:00:25.585 --> 00:00:30.203
+Acemi ya da tecrübeli bir 
+geliştirici olmanıza bağlı olmaksızın,
+
+00:00:30.203 --> 00:00:34.794
+hedefe ulaşmak her zaman
+düz bir yol değil.
+
+00:00:34.794 --> 00:00:39.087
+Yolda engellerle karşılaşacaksınız
+ve bu engelleri aşmak için
+
+00:00:39.087 --> 00:00:43.650
+çözüm üretmede 
+gerçekten yaratıcı olmalısınız.
+
+00:00:43.650 --> 00:00:47.880
+Birini aşınca başka 
+bir engel ortaya çıkıyor, böyle devam.
+
+00:00:47.880 --> 00:00:50.860
+Her zaman engelleri 
+nasıl aşacağınızı
+
+00:00:50.860 --> 00:00:52.640
+düşünmek zorundasınız.
+
+00:00:52.640 --> 00:00:59.680
+En sonunda, çokça çalıştıktan sonra hedefe
+ulaşmak için doğru yolu buluyorsunuz,
+
+00:00:59.680 --> 00:01:03.000
+her ne kadar yol zorlu olsa da
+sonunda kesinlikle değer, çünkü
+
+00:01:03.000 --> 00:01:06.820
+kendinizi yetkili ve emin hissediyorsunuz
+ve yaptıklarınızla gurur duyuyorsunuz.
+
+00:01:08.060 --> 00:01:11.700
+Gerçekten iyi geliştiriciler bir hatayı 
+nasıl düzelteceklerini bilir
+
+00:01:11.700 --> 00:01:13.220
+ve işlerine devam ederler.
+
+00:01:13.220 --> 00:01:14.330
+İşte hataları düzeltmek ve
+
+00:01:14.330 --> 00:01:19.810
+debug etmek için 
+birkaç alışkanlık ve yöntem.
+
+00:01:19.810 --> 00:01:21.920
+İlk önce hata mesajını okurlar.
+
+00:01:21.920 --> 00:01:24.770
+Google Docs'da bir doküman
+yazarken, örneğin bir kelimeyi
+
+00:01:24.770 --> 00:01:29.280
+yanlış yazdınız, altını kırmızıyla
+çizerek bunu size belirtir.
+
+00:01:29.280 --> 00:01:34.250
+Android Studio'da da benzer
+yanlış bir XML yazdıysanız,
+
+00:01:34.250 --> 00:01:38.810
+altı kırmızı dalgalı şekilde çizilir
+ya da kırmızı renkle vurgulanır.
+
+00:01:38.810 --> 00:01:40.866
+Yan taraftaki çizgide de
+
+00:01:40.866 --> 00:01:44.169
+kırmızı renkli kısımlar üstüne gelince 
+size mesajı gösterecektir.
+
+00:01:44.169 --> 00:01:48.871
+XML Visualizer'da da
+faydalı hata mesajları verir.
+
+00:01:48.871 --> 00:01:52.996
+Tırnak işaretini silmek gibi 
+bir hata oluşturursam,
+
+00:01:52.996 --> 00:01:57.350
+bana düzeltmem gereken eksik 
+işaret var diye uyarı verecek.
+
+00:01:57.350 --> 00:02:00.630
+Bazen problem olan satırın
+numarasını da veriyor.
+
+00:02:00.630 --> 00:02:03.320
+Satır numaraları burada sol tarafta.
+
+00:02:03.320 --> 00:02:06.320
+Altıncı satırda, bir problem 
+olduğunu biliyoruz.
+
+00:02:06.320 --> 00:02:10.370
+Tüm kodu taramak yerine,
+belli bir satırda hatayı arayarak
+
+00:02:10.370 --> 00:02:13.210
+problemin nerede olduğunu 
+bulmanıza yardımcı oluyor.
+
+00:02:13.210 --> 00:02:15.720
+Hata mesajının ne olduğunu 
+hâlâ anlamazsanız,
+
+00:02:15.720 --> 00:02:19.780
+bildiğiniz ve bilmediğiniz kelimeleri
+anlamaya çalışın.
+
+00:02:19.780 --> 00:02:24.170
+Anlamadığınız kelimeler için
+Google araması yapabilirsiniz ya da
+
+00:02:24.170 --> 00:02:28.440
+tüm hata mesajını kopyalayıp yapıştırarak
+yine Google'da aratabilirsiniz.
+
+00:02:28.440 --> 00:02:31.150
+Başka bir teknik ise
+çalışan kod örneklerini,
+
+00:02:31.150 --> 00:02:34.970
+kendi kodunuzla karşılaştırıp
+nerede hata yaptığınızı bulmaya çalışmak.
+
+00:02:34.970 --> 00:02:38.310
+Son birkaç videoda size göz atmanız
+için kod verdik zaten ve
+
+00:02:38.310 --> 00:02:41.308
+başka bir güzel kaynak ise size 
+sağlayacağımız
+
+00:02:41.308 --> 00:02:42.960
+Common Android Views Cheat Sheat.
+
+00:02:42.960 --> 00:02:47.090
+Burada farklı görünümlerin 
+isimleri ve kod parçaları var,
+
+00:02:47.090 --> 00:02:49.470
+cihazda nasıl gözükeceklerine
+dair önizleme de var.
+
+00:02:49.470 --> 00:02:53.120
+Kodunuzu her zaman 
+buradaki ile karşılaştırıp
+
+00:02:53.120 --> 00:02:55.170
+farklılıklara bakabilirsiniz.
+
+00:02:55.170 --> 00:02:56.800
+Üçüncü teknik ise geri alma.
+
+00:02:56.800 --> 00:02:59.240
+Yazarken dikkatli davranıyorsanız,
+
+00:02:59.240 --> 00:03:02.410
+yanlış bir şey yazdığınızda 
+hemen fark edersiniz.
+
+00:03:03.430 --> 00:03:07.257
+Son yazdıklarınızı geri almayı deneyin ve 
+bunun hataları düzeltip düzeltmediğine bakın.
+
+00:03:08.400 --> 00:03:12.385
+Daha önce gösterdiğimiz gibi,
+Cmd+Z ile geri alabilir ya da
+
+00:03:12.385 --> 00:03:15.470
+Cmd+Shift+Z ile yineleyebilirsiniz.
+
+00:03:15.470 --> 00:03:19.945
+Windows için Ctrl+Z geri al ve
+Ctrl+Shift+Z yineledir.
+
+00:03:20.965 --> 00:03:24.645
+Ya da XML Visualizer için bu hoş, pratik
+geri al ve yinele butonlarımız var.
+
+00:03:25.725 --> 00:03:29.477
+Eğer işin içinden çıkamazsanız,
+Reset Code butonunu tıklayın,
+
+00:03:29.477 --> 00:03:31.997
+bu sizi en başta verdiğimiz koda 
+geri döndürecektir,
+
+00:03:31.997 --> 00:03:32.767
+bu işe yarar.
+
+00:03:33.867 --> 00:03:37.167
+Dördüncü teknik ise 
+yalnızca yardım istemek.
+
+00:03:37.167 --> 00:03:40.527
+Diğer öğrencilere ders içi 
+sohbette ya da forumlardan
+
+00:03:40.527 --> 00:03:42.242
+ulaşabilirsiniz.
+
+00:03:42.242 --> 00:03:44.697
+Çoğu zaman sadece
+başka biriyle konuşmak
+
+00:03:44.697 --> 00:03:46.817
+bile hatalarınızı çözmeye 
+yardımcı olacaktır.
+
+00:03:46.817 --> 00:03:48.217
+Yardım istemekten çekinmeyin.
+
+00:03:48.217 --> 00:03:51.409
+Toplulukta size yardım
+edebilecek bir sürü çok iyi
+
+00:03:51.409 --> 00:03:52.790
+Android geliştirici var.
+
+00:03:53.880 --> 00:03:58.200
+Aslında yardım isteyebilmek 
+geliştiriciler için önemli bir özellik.
+
+00:03:58.200 --> 00:03:59.490
+Kötü soru yoktur.
+
+00:04:00.550 --> 00:04:05.070
+Ne kadar çok alıştırma yaparsanız, 
+yanıtınızı hızla almak için
+
+00:04:05.070 --> 00:04:08.290
+kime soracağınız ve ne soracağınızı 
+o kadar iyi bilirsiniz.
+
+00:04:08.290 --> 00:04:12.800
+Ne yapıyorsanız onun ekran fotoğrafını
+çekebilirsiniz, telefonda olsun,
+
+00:04:12.800 --> 00:04:17.660
+XML Visualizer'da olsun,
+kodunuzla beraber forumlarda veya
+
+00:04:17.660 --> 00:04:21.779
+sohbet kanallarında paylaşabilirsiniz ki
+insanlar sorduğunuz içeriği bilsin.
+
+00:04:22.780 --> 00:04:25.219
+Daha fazla ayrıntı için 
+eğitmen notlarına bakın.
+
+00:04:25.580 --> 00:04:29.260
+Bu teknikleri uygulamanız için
+size bir şans sunuyorum.
+
+00:04:29.260 --> 00:04:31.540
+Birkaç hata olan kodum var.
+
+00:04:31.540 --> 00:04:34.640
+Aşağıdaki linke tıklarsanız,
+karşınıza XML Visualizer
+
+00:04:34.640 --> 00:04:37.240
+bu kod yazılmış hâlde gelecektir.
+
+00:04:37.240 --> 00:04:40.010
+Birkaç hata mesajı var,
+bunları okumanızı ve
+
+00:04:40.010 --> 00:04:41.790
+hataları çözmenizi istiyorum.
+
+00:04:41.790 --> 00:04:45.870
+Sonra görmüş olduğunuz 
+en az iki hatayı tarif edin.
+
+00:04:45.870 --> 00:04:48.780
+Fazla puan için dördünü de bulup 
+bulmadığınızı bana söyleyin.
+

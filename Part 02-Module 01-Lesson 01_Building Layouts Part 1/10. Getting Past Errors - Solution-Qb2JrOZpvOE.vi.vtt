@@ -1,0 +1,151 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.520 --> 00:00:02.590
+Hãy bắt đầu bằng việc đọc lỗi đầu tiên.
+
+00:00:02.590 --> 00:00:06.850
+Nó nói rằng Dòng 1, Tag Text,
+không phải là 1 tag mở đúng.
+
+00:00:08.460 --> 00:00:12.270
+Vậy nếu nhìn vào số dòng,
+dòng 1 tương ứng với dòng này.
+
+00:00:12.270 --> 00:00:16.540
+Và đúng là ta thấy tên view
+nên là TextView
+
+00:00:16.540 --> 00:00:20.785
+không có dấu cách ở đó,
+và nên ở dạng camel case.
+
+00:00:20.785 --> 00:00:25.035
+Vậy là đã viết hoa đúng,
+nhưng cần bỏ dấu cách,
+
+00:00:25.035 --> 00:00:29.320
+và giờ nó đã nhận diện được TextView
+mà chúng ta đang nói tới.
+
+00:00:29.320 --> 00:00:31.490
+Thế là xong 1 lỗi.
+
+00:00:31.490 --> 00:00:33.710
+Tuyệt. Giờ còn 3 lỗi nữa.
+
+00:00:33.710 --> 00:00:37.570
+Lỗi tiếp theo là tag TextView
+nên là tag tự đóng.
+
+00:00:37.570 --> 00:00:41.800
+Có nghĩa là nó nên kết thúc
+bằng dấu gạch chéo và ngoặc nhọn.
+
+00:00:41.800 --> 00:00:45.880
+Vậy nếu kiểm tra dòng code,
+lẽ ra nên là tag TextView tự đóng,
+
+00:00:45.880 --> 00:00:49.190
+nhưng lại chỉ thấy dấu ngoặc nhọn.
+
+00:00:49.190 --> 00:00:55.351
+Vậy là thiếu...
+nên ta thêm vào.
+
+00:00:55.351 --> 00:00:56.119
+Xong.
+
+00:00:56.119 --> 00:00:58.940
+Giờ ta còn 2 lỗi.
+
+00:00:58.940 --> 00:01:00.610
+Tuyệt.
+Thông báo tiếp theo nói
+
+00:01:00.610 --> 00:01:03.890
+đặc tính androidlayout_height
+không hỗ trợ giá trị 150,
+
+00:01:03.890 --> 00:01:06.710
+là ở dòng 4.
+
+00:01:06.710 --> 00:01:12.230
+Di chuyển tới dòng 4,
+và ta thấy dòng code này sai.
+
+00:01:12.230 --> 00:01:15.120
+Có thể ta không biết sai ở đâu,
+tuy thế ta có thể so sánh nó
+
+00:01:15.120 --> 00:01:19.670
+với dòng độ rộng phía trên
+vì độ rộng và độ cao khá giống nhau.
+
+00:01:19.670 --> 00:01:22.800
+Ở đây ta đặt độ rộng là 150dp.
+
+00:01:22.800 --> 00:01:26.250
+Hãy nhớ lại dp từ bài học trước.
+
+00:01:26.250 --> 00:01:30.875
+Và đúng là ta đã thiếu dp cho độ cao,
+nên thêm nó vào.
+
+00:01:30.875 --> 00:01:32.610
+Giờ thì còn 1 lỗi thôi.
+
+00:01:32.610 --> 00:01:35.310
+Và lỗi cuối cùng là
+
+00:01:35.310 --> 00:01:39.670
+màu sắc @android:color/darker_groy
+không được hỗ trợ.
+
+00:01:39.670 --> 00:01:40.810
+Bạn đã gõ sai ư?
+
+00:01:42.080 --> 00:01:48.220
+Darker groy không phải là màu,
+phải là darker gray, vậy là lỗi đánh máy.
+
+00:01:48.220 --> 00:01:51.500
+Vậy nên tôi xóa chữ o,
+gõ chữ a,
+
+00:01:51.500 --> 00:01:56.340
+và giờ thiết bị sau khi cập nhập
+đã hiện preview của TextView.
+
+00:01:56.340 --> 00:01:58.250
+Ồ, còn một điều nữa.
+
+00:01:58.250 --> 00:02:01.670
+Dòng text Happy Birthday này
+thật ra đã sai chính tả
+
+00:02:01.670 --> 00:02:06.390
+nhưng không có báo lỗi
+cho lỗi chính tả này.
+
+00:02:06.390 --> 00:02:10.600
+Vì dòng text cho TextView có thể là
+bất kì gì giữa hai dấu ngoặc kép.
+
+00:02:10.600 --> 00:02:14.510
+Vậy nên bạn có thể sai chính tả
+nếu bạn muốn hay gõ đúng lại.
+
+00:02:14.510 --> 00:02:17.170
+Điều này không quan trọng
+và nó sẽ vẫn hiện lên.
+
+00:02:18.300 --> 00:02:20.940
+Khi bạn tạo ra app của mình,
+chúng tôi không kiểm tra
+
+00:02:20.945 --> 00:02:24.945
+Tiếng Anh của bạn, chúng tôi chỉ kiểm tra
+các quy tắc cấu trúc XML.
+

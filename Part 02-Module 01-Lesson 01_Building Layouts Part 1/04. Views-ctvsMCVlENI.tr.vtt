@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.220 --> 00:00:04.200
+Birinci adım, kullanmak istediğiniz
+görünümlerin seçimiyle ilgili.
+
+00:00:04.200 --> 00:00:08.290
+Önce Android'de bir görünümün
+ne olduğunu açıklayayım.
+
+00:00:08.290 --> 00:00:12.400
+Basitçe, görünüm, ekranda bir içerik
+gösteren bir dörtgendir.
+
+00:00:12.400 --> 00:00:15.610
+Bir resim, bir yazı, bir düğme
+veya uygulamanın gösterebildiği
+
+00:00:15.610 --> 00:00:18.190
+herhangi bir şey olabilir.
+
+00:00:18.190 --> 00:00:22.780
+Bu tekil görünümler, ekran yerleşimi
+(layout) dediğimiz alanı oluşturur.
+
+00:00:22.780 --> 00:00:24.940
+Uygulamanızda gördüğünüz veya etkileşim
+
+00:00:24.940 --> 00:00:29.120
+kurduğunuz her şeye, kullanıcı arayüzü
+veya kısaca UI denir.
+
+00:00:29.120 --> 00:00:32.910
+Farklı adlarla anılan farklı
+görünümler mevcuttur.
+
+00:00:32.910 --> 00:00:35.620
+Bir metin gösteren görünüme
+TextView denir.
+
+00:00:35.620 --> 00:00:37.490
+İşte birkaç örnek.
+
+00:00:37.490 --> 00:00:41.540
+Resim gösteren görünüme de ImageView
+denir, işte bunun da birkaç örneği.
+
+00:00:41.540 --> 00:00:45.070
+Düğme gösteren bir görünüme de
+Düğme denir.
+
+00:00:45.070 --> 00:00:46.620
+İşte birkaç örnek.
+
+00:00:46.620 --> 00:00:50.280
+Android'de, kullanmanın faydalı olduğu
+birçok görünüm türü daha var,
+
+00:00:50.280 --> 00:00:53.020
+ancak biz öncelikle
+bu üçüne yoğunlaşacağız.
+
+00:00:53.020 --> 00:00:55.770
+Daha önce, her görünümün
+ekrandaki bir dörtgen olduğunu söylemiştim,
+
+00:00:55.770 --> 00:00:57.890
+peki ama tüm o dörtgenler nerede?
+
+00:00:57.890 --> 00:01:01.290
+Teknik olarak görünmezler,
+ancak her dörtgenin sınırını
+
+00:01:01.290 --> 00:01:04.500
+görebilmeniz için size
+bunları çizeyim.
+
+00:01:04.500 --> 00:01:05.730
+Gördüğünüz gibi,
+
+00:01:05.730 --> 00:01:10.250
+her uygulama kendisini oluşturan tekil
+görünümlere ayrılabilir.
+
+00:01:10.250 --> 00:01:13.690
+Bir diğer deyişle, görünüm
+uygulamanızı inşa ederken kullandığınız
+
+00:01:13.690 --> 00:01:16.150
+temel yapı taşıdır.
+
+00:01:16.150 --> 00:01:20.080
+Görünümlerin ekrandaki dörtgenler olduğunu
+anlamanızı kolaylaştırmak için,
+
+00:01:20.080 --> 00:01:22.840
+size daha tanıdık gelebilecek
+bir durumu göstereyim.
+
+00:01:22.840 --> 00:01:26.110
+Paint veya Google Çizimler
+gibi bir uygulama kullanırsanız,
+
+00:01:26.110 --> 00:01:31.130
+tuvale bir metin kutusu
+ekleyip içine yazı yazmışsınızdır.
+
+00:01:31.130 --> 00:01:32.710
+Ancak dışını tıkladığınızda
+
+00:01:32.710 --> 00:01:36.280
+dörtgenin sınırlarını görmeseniz de
+sınırlar oradadır.
+
+00:01:36.280 --> 00:01:39.090
+Ve bu sınırlar, arka plan
+rengi ekleme veya
+
+00:01:39.090 --> 00:01:41.260
+etrafına bir sınır
+sınır çizme gibi bir şey
+
+00:01:41.260 --> 00:01:45.380
+yaptığınızda, dörtgenin ne kadar
+büyük olduğu önemli olacaktır.
+
+00:01:46.598 --> 00:01:51.100
+Ayrıca bu görünüm adlarının da
+CamelCase yazıldığına dikkatinizi çekerim.
+
+00:01:52.240 --> 00:01:56.140
+CamelCase, kelimeler arasında
+boşluk bırakılmaması ve
+
+00:01:56.140 --> 00:01:58.860
+her kelimenin ilk harfinin
+büyük yazılmasıdır.
+
+00:01:58.860 --> 00:02:02.000
+CamelCase (deve punto)
+denmesinin sebebi de, ortadaki
+
+00:02:02.000 --> 00:02:05.540
+büyük harfin deve hörgücü
+gibi yukarı çıkıntı yapmasıdır.
+
+00:02:06.680 --> 00:02:09.299
+Bu kurs boyunca, CamelCase ile
+defalarca karşılaşacaksınız.
+
+00:02:10.310 --> 00:02:12.420
+Şimdi öğrendiklerimizi pratiğe dökelim.
+
+00:02:12.420 --> 00:02:16.660
+Bu, Google'ın yeni e-posta uygulaması
+Inbox'tan bir ekran görüntüsü.
+
+00:02:16.660 --> 00:02:19.380
+Buradaki farklı görünüm
+türlerini belirleyebilir misiniz?
+
+00:02:19.380 --> 00:02:22.430
+Size yardım için,
+tekil görünümleri vurguladım.
+
+00:02:22.430 --> 00:02:23.490
+Örneğin, bana A'nın
+
+00:02:23.490 --> 00:02:26.880
+TextView mi, ImageViewmi, yoksa
+Button mı olduğunu söyleyebilir misiniz?
+
+00:02:26.880 --> 00:02:29.350
+Aynısını B ve diğer
+görünümler için de yapın.
+

@@ -1,0 +1,349 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.490 --> 00:00:04.000
+Son alıştırmada XML hakkında 
+bazı iyi gözlemlerde bulundunuz.
+
+00:00:04.720 --> 00:00:08.150
+Şimdi ise XML sentaksından daha ciddi
+şekilde bahsedeceğiz.
+
+00:00:08.150 --> 00:00:12.470
+Sentaks, geçerli XML' in ne olduğunu
+tanımlayan kurallardır.
+
+00:00:12.470 --> 00:00:15.570
+XML'de geçersiz yazım yaparsanız,
+telefonda gözükmeyecektir.
+
+00:00:16.680 --> 00:00:20.130
+TextView adlı XML 
+elementinin kodu bu.
+
+00:00:20.130 --> 00:00:24.110
+Her zaman ayraç açarak başlayıp
+görüntünün adını yazıyoruz.
+
+00:00:24.110 --> 00:00:28.020
+Bu bir resim görüntüsü, buton ya da
+herhangi bir şeyin görüntüsü olabilir.
+
+00:00:28.020 --> 00:00:30.790
+Burada özellik listesi var,
+her satıra bir tane.
+
+00:00:30.790 --> 00:00:35.880
+Bölü işareti ve 
+kapama ayracı var.
+
+00:00:35.880 --> 00:00:38.420
+Birçok sembol ve karakter var.
+
+00:00:38.420 --> 00:00:41.945
+Yardımcı olacaksa 
+açılış ayracını hatırlayın,
+
+00:00:41.945 --> 00:00:44.089
+ve görüntü adını.
+
+00:00:44.089 --> 00:00:47.052
+Sonra özellikler ve
+
+00:00:47.052 --> 00:00:52.008
+bölü işareti, 
+kapama ayracı
+
+00:00:52.008 --> 00:00:54.686
+Hepsi bir arada.
+
+00:00:59.066 --> 00:01:02.814
+Bunlardan birini yazmazsanız
+geçersiz XML yazmış olursunuz.
+
+00:01:02.814 --> 00:01:07.500
+Bu keyfi gözüken sembollerin
+arkasındaki sebep burada.
+
+00:01:07.500 --> 00:01:10.490
+Her XML element için 
+bir açılış etiketi açıyorsunuz,
+
+00:01:10.490 --> 00:01:12.910
+her zaman kapatmalısınız.
+
+00:01:12.910 --> 00:01:15.680
+Cümlenin sonuna nokta koymak gibi,
+
+00:01:15.680 --> 00:01:19.260
+XML'de cümle yerine, her etiketi
+kapatmalısınız.
+
+00:01:20.440 --> 00:01:21.900
+Etikete burada başladık
+
+00:01:21.900 --> 00:01:25.197
+sonrasında hemen kapattık,
+buna kendiliğinden kapanan etiket deniyor.
+
+00:01:26.690 --> 00:01:28.410
+Kendiliğinden kapanan etiket yerine
+
+00:01:28.410 --> 00:01:31.570
+ayrı açılış ve kapanış etiketleri
+de yapabilirdiniz.
+
+00:01:32.800 --> 00:01:35.090
+Nasıl kullanışlı olacak 
+bir örnekle açıklayalım.
+
+00:01:35.090 --> 00:01:37.990
+Bu LinearLayout görünümü
+bu derste
+
+00:01:37.990 --> 00:01:39.740
+daha sonra öğreneceğiz.
+
+00:01:39.740 --> 00:01:42.820
+Bunun açılış etiketi 
+bununda kapanış etiketi olduğunu bilin.
+
+00:01:44.510 --> 00:01:49.550
+Kapanış etiketi aynı
+ancak açık ayraç kullanılmış,
+
+00:01:49.550 --> 00:01:53.199
+bölü işareti, görünümün adı
+sonra da kapama ayracı.
+
+00:01:54.330 --> 00:01:58.290
+Açılış ve kapanış etiketi 
+arasındaki fark bölü işareti.
+
+00:02:00.080 --> 00:02:04.630
+Bu arada iki tane TextView XML
+elementi olduğuna dikkat edin.
+
+00:02:04.630 --> 00:02:09.840
+Parent LinearLayout'un
+XML child'ları.
+
+00:02:09.840 --> 00:02:12.775
+Kendinen kapanan bir 
+etiket olsa burada,
+
+00:02:12.775 --> 00:02:16.810
+LinearLayout için, kaç tane 
+child olduğunu bilemezdiniz.
+
+00:02:16.810 --> 00:02:18.430
+Ancak kapanış 
+etiketi burada,
+
+00:02:18.430 --> 00:02:20.550
+iki child olduğunu, 
+kesinlikle biliyorsunuz.
+
+00:02:22.020 --> 00:02:25.750
+Bizim durumumuzda TextView
+için child XML element yok,
+
+00:02:25.750 --> 00:02:30.200
+hemen ardından kendinden kapanan 
+etiketi koyuyoruz çünkü
+
+00:02:30.200 --> 00:02:34.840
+ayraç aç, bölü, TextView yaz, 
+ayraç kapa bundan kurtarıyor.
+
+00:02:36.140 --> 00:02:40.210
+Bu etiket içinde bazı ek metinler
+dikkatinizi çekmiştir.
+
+00:02:40.210 --> 00:02:42.160
+Bunlara özellik deniyor.
+
+00:02:42.160 --> 00:02:44.950
+Özellikler ve karakteristikler
+Android telefon üzerinde
+
+00:02:44.950 --> 00:02:48.040
+görünümün nasıl olacağını belirliyor.
+
+00:02:48.040 --> 00:02:51.000
+Örneğin,
+bu benzetmeyle canlandırabilirsiniz..
+
+00:02:51.000 --> 00:02:54.230
+Bir kişinin siyah saç
+kahverengi göz gibi özellikleri olabilir.
+
+00:02:54.230 --> 00:02:58.532
+Bir metin de genişlik, yükseklik
+arkaplan gibi birçok özelliğe sahip.
+
+00:02:59.190 --> 00:03:02.560
+Her satırdaki formata
+daha yakından bakınca,
+
+00:03:02.560 --> 00:03:06.040
+sol el tarafında özellik ismi var.
+
+00:03:06.040 --> 00:03:07.040
+Altı sarıyla çizilmiş.
+
+00:03:07.040 --> 00:03:09.970
+Sağ el tarafında ise 
+gerçek değer var.
+
+00:03:11.600 --> 00:03:14.180
+Özelliklerin değerleri
+tırnak içine alınmalı.
+
+00:03:14.180 --> 00:03:17.730
+XML sentaksının
+bir parçası unutmayın.
+
+00:03:19.220 --> 00:03:22.830
+Özellik işaretinden sonra
+eşittir işareti var,
+
+00:03:22.830 --> 00:03:25.940
+soldaki özellikler
+sağdaki değerlere eşitlenmiş.
+
+00:03:25.940 --> 00:03:29.570
+TextView için metin
+Happy Birthday! ve
+
+00:03:29.570 --> 00:03:32.640
+yükseklik 75 dp.
+
+00:03:34.080 --> 00:03:36.180
+Tüm bu özellikler varsayılan
+değerlere sahip
+
+00:03:36.180 --> 00:03:38.850
+burada listelemediğimiz
+özellikler de var.
+
+00:03:38.850 --> 00:03:42.740
+Çünkü TextView özellikleri 
+için varsayılan değerlere sahip.
+
+00:03:42.740 --> 00:03:46.070
+Varsayılan değerler sizin için yeterliyse
+tekrar ayarlamaya gerek yok.
+
+00:03:46.750 --> 00:03:49.340
+Yalnızca farklı olmasını 
+istediğiniz değerler için
+
+00:03:49.340 --> 00:03:50.940
+kod yazmalısınız.
+
+00:03:50.940 --> 00:03:52.920
+Örneğin,
+TextView için varsayılan
+
+00:03:52.920 --> 00:03:55.170
+arkaplan rengi transparan.
+
+00:03:55.170 --> 00:03:57.890
+Koyu gri rengine ayarlamak istedik,
+
+00:03:57.890 --> 00:03:59.400
+o yüzden buraya kod yazdık.
+
+00:04:01.430 --> 00:04:03.250
+Bir şey daha var.
+
+00:04:03.250 --> 00:04:06.770
+İnsanlar akılı varlıklar
+böyle bir şey yazarsam,
+
+00:04:06.770 --> 00:04:10.070
+ne demek istediğimi anlarsınız 
+noktalamaya dikkat etmesem,
+
+00:04:10.070 --> 00:04:13.040
+grameri kullanmasam ya da 
+gerçek kelimeler kullanmasam bile.
+
+00:04:13.040 --> 00:04:17.089
+Ancak bilgisayarlar o kadar akıllı değil
+o yüzden sembolleri ve işaretleri
+
+00:04:17.089 --> 00:04:20.720
+yerinde kullanmalıyız, diğer türlü
+ne demek istediğiniz anlaşılmaz,
+
+00:04:20.720 --> 00:04:22.110
+kodunuzda hatalar olur.
+
+00:04:23.410 --> 00:04:24.740
+Bir örnek.
+
+00:04:24.740 --> 00:04:28.580
+Görünümün ismi için
+TxtView yazamayız ya da
+
+00:04:28.580 --> 00:04:32.640
+küçük v ile Textview, 
+boşluklu text view.
+
+00:04:32.640 --> 00:04:34.140
+Bunların hepsi yanlış
+
+00:04:34.140 --> 00:04:37.260
+ve bilgisayar TextView 
+dediğimizi anlamayacak.
+
+00:04:37.260 --> 00:04:40.800
+TextView istiyorsak direkt olarak
+öyle yazmalıyız,
+
+00:04:40.800 --> 00:04:43.370
+büyük T ve büyük V
+hörgüçlü yazım kullanarak.
+
+00:04:44.610 --> 00:04:48.080
+Özellik isimleri iki nokta üst üste
+işaretiyle android isminden sonra
+
+00:04:48.080 --> 00:04:49.260
+aynen yazılmalı.
+
+00:04:49.260 --> 00:04:53.960
+Eşittir işareti koymalıyız ve tırnak 
+işareti içine değeri yazmalıyız.
+
+00:04:53.980 --> 00:04:59.892
+Bir kez daha unutmayasınız diye.
+
+00:04:59.892 --> 00:05:02.683
+XML sentaksının 
+kurallarını öğrendik
+
+00:05:02.683 --> 00:05:06.440
+Bu XML elementi için sorularıma 
+cevap verebilir misiniz?
+
+00:05:06.440 --> 00:05:09.530
+Birincisi bu XML elementinin adı ne?
+
+00:05:09.530 --> 00:05:13.320
+Tüm özellik isimlerini 
+virgülle ayrılmış şekilde yazabilir misin?
+
+00:05:13.320 --> 00:05:15.570
+Özellik değerleri değil.
+
+00:05:15.570 --> 00:05:17.540
+Hangi satırda etiket kapatıldı?
+
+00:05:18.580 --> 00:05:21.490
+Size yardım için sol kenara
+satır numaralarını yazdım.
+

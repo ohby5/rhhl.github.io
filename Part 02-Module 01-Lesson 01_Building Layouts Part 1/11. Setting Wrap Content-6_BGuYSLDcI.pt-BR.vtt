@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:04.140
+Ok, então você fez sua primeira tentativa
+de escrever código e corrigir erros.
+
+00:00:04.140 --> 00:00:06.570
+Este tipo de experiência é uma parte
+crítica da aprendizagem
+
+00:00:06.570 --> 00:00:08.200
+sobre Desenvolvimento Android.
+
+00:00:08.200 --> 00:00:10.310
+Vamos falar sobre o tamanho 
+das <i>views</i>, agora.
+
+00:00:10.310 --> 00:00:13.720
+Sabemos que a largura e altura 
+são expressas em valores de DP,
+
+00:00:13.720 --> 00:00:15.390
+ou pixels independentes da densidade.
+
+00:00:15.390 --> 00:00:18.290
+Isso aparenta bem em uma
+gama de dispositivos diferentes.
+
+00:00:18.290 --> 00:00:21.260
+No entanto, ainda há espaço 
+para melhoria nesta UI.
+
+00:00:21.260 --> 00:00:25.160
+Se eu mudar este texto aqui,
+para algo mais longo, por exemplo,
+
+00:00:25.160 --> 00:00:27.170
+"Espere, hoje é seu aniversário?"
+
+00:00:27.170 --> 00:00:30.820
+Observe que o texto se atualiza aqui,
+mas ocupa duas linhas.
+
+00:00:30.820 --> 00:00:32.570
+O ideal seria tudo em uma linha só,
+
+00:00:32.570 --> 00:00:35.530
+porque há bastante espaço de tela
+deste lado.
+
+00:00:35.530 --> 00:00:37.470
+A razão da caixa 
+não ter mudado de lado,
+
+00:00:37.470 --> 00:00:41.410
+é porque demos uma largura fixa
+e altura de 150dp.
+
+00:00:41.410 --> 00:00:43.450
+Quando você define um valor 
+muito específico
+
+00:00:43.450 --> 00:00:45.120
+para a largura e a altura como este,
+
+00:00:45.120 --> 00:00:47.240
+chamamos de "embutir 
+um valor no código fonte"
+
+00:00:47.240 --> 00:00:49.440
+Geralmente, não é considerada
+uma boa prática,
+
+00:00:49.440 --> 00:00:53.760
+porque se o texto mudar desta forma, 
+aí ele parece engraçado.
+
+00:00:53.760 --> 00:00:56.790
+Nós temos que mudar a largura
+para algo como 200,
+
+00:00:56.790 --> 00:00:58.830
+para que se encaixe em uma única linha.
+
+00:00:58.830 --> 00:01:01.250
+Mas seria um grande incômodo
+ficar atualizando a largura
+
+00:01:01.250 --> 00:01:03.750
+e a altura, com base no que o texto é.
+
+00:01:03.750 --> 00:01:06.440
+Talvez você só saiba 
+o que é o texto depois.
+
+00:01:06.440 --> 00:01:09.890
+Por exemplo, se você tiver 
+um aplicativo que mostre noticiários,
+
+00:01:09.890 --> 00:01:12.410
+o título de cada história pode mudar.
+
+00:01:12.410 --> 00:01:15.720
+E você não quer que sua UI quebre,
+se você tem um título muito longo
+
+00:01:15.720 --> 00:01:17.380
+ou um título muito curto.
+
+00:01:17.380 --> 00:01:20.390
+Assim, no Android, podemos resolver 
+esse problema, definindo a largura
+
+00:01:20.390 --> 00:01:24.010
+para ser um valor especial
+chamado de conteúdo envoltório.
+
+00:01:24.010 --> 00:01:26.500
+Ele trata da largura da <i>TextView</i>,
+
+00:01:26.500 --> 00:01:30.600
+de forma que seja exatamente 
+da largura do conteúdo dentro dela.
+
+00:01:30.600 --> 00:01:32.710
+Não é muito pequena 
+e não é muito grande.
+
+00:01:32.710 --> 00:01:34.100
+É simplesmente correta.
+
+00:01:34.100 --> 00:01:37.210
+Da mesma forma para a altura,
+em vez de defini-la para 150 dp,
+
+00:01:37.210 --> 00:01:40.560
+podemos configurá-la para o valor 
+especial de conteúdo envoltório,
+
+00:01:40.560 --> 00:01:42.140
+então a <i>TextView</i> se atualizará,
+
+00:01:42.140 --> 00:01:46.480
+de modo que o tamanho da <i>TextView</i> 
+seja tão alto quanto o texto dentro dela.
+
+00:01:46.480 --> 00:01:49.870
+Agora, configurar o conteúdo envoltório 
+para altura e largura é muito eficaz,
+
+00:01:49.870 --> 00:01:54.710
+porque você pode ter conteúdo determinado
+à direita aqui, que será deslocado agora,
+
+00:01:54.710 --> 00:01:58.020
+porque você não tem esse
+excesso de espaço na <i>TextView</i>.
+
+00:01:58.020 --> 00:02:00.860
+E, similarmente, se você tem outras 
+<i>TextViews</i> abaixo disso,
+
+00:02:00.860 --> 00:02:05.100
+elas podem deslocar-se, agora, à direita, 
+abaixo desta primeira <i>TextView</i>.
+
+00:02:05.100 --> 00:02:07.110
+De volta ao exemplo 
+do aplicativo de notícias,
+
+00:02:07.110 --> 00:02:08.840
+se este fosse o título da história,
+
+00:02:08.840 --> 00:02:11.710
+você não gostaria que a descrição
+da história viesse até aqui,
+
+00:02:11.710 --> 00:02:13.560
+a 150 DPIs de distância.
+
+00:02:13.560 --> 00:02:16.260
+Em vez disso, você gostaria 
+que a descrição estivesse acima,
+
+00:02:16.260 --> 00:02:17.830
+sob o título história.
+
+00:02:17.830 --> 00:02:20.740
+Tirando o zoom,
+vamos tentar um <i>string</i> mais curto.
+
+00:02:20.740 --> 00:02:22.840
+Ok, é hora de você praticar agora.
+
+00:02:22.840 --> 00:02:25.420
+Queremos que mude algumas
+coisas com o código.
+
+00:02:25.420 --> 00:02:29.000
+Alterar a largura e a altura da <i>TextView</i>
+para conteúdo envoltório.
+
+00:02:29.000 --> 00:02:32.970
+Depois, altere o texto para uma frase
+ou parágrafo bem longo,
+
+00:02:32.970 --> 00:02:36.550
+para que exiba mais do que uma linha
+do texto na visualização do dispositivo.
+
+00:02:36.550 --> 00:02:39.170
+Você pode até digitar a canção
+de aniversário completa, se quiser,
+
+00:02:39.170 --> 00:02:40.710
+pois é bem longa.
+
+00:02:40.710 --> 00:02:42.450
+O código para começar
+está no link abaixo.
+
