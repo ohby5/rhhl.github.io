@@ -1,0 +1,639 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.710 --> 00:00:04.570
+Okay, Tôi sẽ bắt đầu trả lời 
+cho 
+các câu hỏitrước khi chuyển sang XML.
+
+00:00:04.570 --> 00:00:07.050
+Đầu tiên đó là 
+việc lựa chọn <i>view</i>.
+
+00:00:07.050 --> 00:00:08.670
+Tôi vẽ mấy hộp xung quanh 
+những cái tôi thấy ở đây.
+
+00:00:09.700 --> 00:00:11.130
+vậy sẽ có năm view khác nhau,
+
+00:00:11.130 --> 00:00:14.070
+không bao gồm <i>viewgroup</i>,
+
+00:00:14.070 --> 00:00:17.610
+Nhưng dù sau, trong năm <i>view</i>
+ở đây có hai <i>TextView</i>,
+
+00:00:17.610 --> 00:00:19.330
+theo sau đó là 3 <i>Button</i>
+
+00:00:19.330 --> 00:00:24.480
+Và không có <i>ImageViews</i> nào, vì vậy
+tôi nói là không có <i>ImageViews</i>
+
+00:00:24.480 --> 00:00:28.300
+Bây giờ bạn có thể tự hỏi tại sao 
+có hai <i>TextView</i>s khác nhau,
+
+00:00:28.300 --> 00:00:31.940
+vâng, trong sản phẩm cuối cùng, 
+kiểu của <i>teamA</i> và <i>score</i>
+
+00:00:31.940 --> 00:00:34.050
+trông rất khác nhau.
+
+00:00:34.050 --> 00:00:37.530
+Vì vậy tôi quyết định giữ chúng 
+như là 2 <i>TextView</i>s riêng biệt.
+
+00:00:37.530 --> 00:00:40.080
+Chuyển sang bước 2, 
+đâu là vị trí của các <i>view</i>.
+
+00:00:40.080 --> 00:00:43.100
+Tôi bắt đầu lựa chọn <i>viewgroup</i> 
+tôi muốn sử dụng ở đây
+
+00:00:43.100 --> 00:00:46.830
+và cả hai đã ở trong 
+đầu tôi là 
+<i>linear layout</i>
+
+00:00:46.830 --> 00:00:49.450
+và <i>relative layouts</i>. Và đây là 
+một cột thẳng đứng của các <i>view</i>.
+
+00:00:49.450 --> 00:00:52.720
+Như vậy, những cái tôi muốn đã rõ ràng, 
+và đây là <i>linear layout</i>.
+
+00:00:54.370 --> 00:00:57.310
+Okay, Cuối cùng tôi chuyển sang bước 3, 
+ở đây tôi tạo mẫu cho các <i>view</i>.
+
+00:00:57.310 --> 00:01:00.320
+Và tôi sẽ giải quyết
+khi tôi làm việc với XML.
+
+00:01:00.320 --> 00:01:02.780
+Okay, vậy nên chúng ta sẽ 
+cùng chuyến sang XML.
+
+00:01:02.780 --> 00:01:04.970
+Okay, Tôi muốn xem thanh <i>Text</i>.
+
+00:01:04.970 --> 00:01:07.740
+vậy nên trước tiên tôi sẽ đến đây
+
+00:01:07.740 --> 00:01:09.760
+chỉ để xóa những gì tôi không cần.
+
+00:01:09.760 --> 00:01:12.470
+Vì vậy tôi sẽ lên bên trên và 
+bắt đầu xóa <i>TextView</i> này.
+
+00:01:13.490 --> 00:01:16.597
+Và tất cả <i>paddingLeft</i>,
+
+00:01:16.597 --> 00:01:19.750
+và <i>paddingBottom</i>
+
+00:01:19.750 --> 00:01:23.090
+Hãy cẩn thận khi xóa những gì 
+bạn không cần.
+
+00:01:23.090 --> 00:01:24.568
+Okay.
+
+00:01:24.568 --> 00:01:27.760
+Bây giờ tôi có thể nói rằng <i>viewgroup</i> 
+chúng ta định sử dụng không phải là
+
+00:01:27.760 --> 00:01:30.370
+relative layoutt mà là linear layout,
+
+00:01:31.370 --> 00:01:34.590
+Và bên trong <i>linear layout</i> 
+này
+Tôi sẽ tạo ra hai <i>TextView</i>
+
+00:01:34.590 --> 00:01:35.800
+sau đó là ba <i>Button</i>.
+
+00:01:35.800 --> 00:01:37.710
+Và tôi bắt đầu tạo chúng.
+
+00:01:37.710 --> 00:01:40.460
+Bây giờ tôi chưa đi 
+sâu vào chi tiết
+
+00:01:40.460 --> 00:01:42.780
+như chiều rộng và chiều cao 
+của <i>TextView</i> này.
+
+00:01:42.780 --> 00:01:45.300
+Bây giờ tôi chỉ để nó 
+như là một <i>wrap_content</i>,
+
+00:01:45.300 --> 00:01:48.070
+nó sẽ đặt khung của 
+<i>TextView</i> bao quanh văn bản.
+
+00:01:49.310 --> 00:01:52.490
+Tôi sẽ quay lại bên trên để thiết 
+lập 
+văn bản cho <i>TextView</i> này.
+
+00:01:52.490 --> 00:01:54.710
+Và đây là <i>TextView</i> đầu tiên 
+được gọi là <i>Team A</i>.
+
+00:01:56.250 --> 00:01:58.710
+Okay, hãy cũng xem nó trông 
+thế nào qua phần Xem trước.
+
+00:01:58.710 --> 00:02:01.800
+Okay, tôi có thể thấy một
+<i>TextView</i> 
+nhỏ hiển thị <i>Team A</i>.
+
+00:02:01.800 --> 00:02:03.610
+Bây giờ chúng ta sẽ xây 
+dựng cái thứ hai
+
+00:02:03.610 --> 00:02:07.200
+Và cái tiếp theo dưới đây là <i>Score</i>, 
+và nó cũng là một <i>TextView</i>
+
+00:02:07.200 --> 00:02:09.758
+Và chúng ta bắt 
+đầu gõ vào <i>Text</i>.
+
+00:02:09.758 --> 00:02:12.490
+Okay,tôi thấy <i>TextView</i> 
+và tôi ấn Enter.
+
+00:02:12.490 --> 00:02:15.590
+Và tôi cũng định tạo 
+cho nó một <i>wrap_content</i>.
+
+00:02:15.590 --> 00:02:17.860
+Và tôi bắt đầu thêm <i>Text</i>&gt;.
+
+00:02:17.860 --> 00:02:21.560
+Và <i>Score</i> luôn bắt đầu bằng 0, 
+vì vậy tôi cho nó bắt đầu bằng 0.
+
+00:02:21.560 --> 00:02:22.580
+Okay.
+
+00:02:22.580 --> 00:02:23.250
+Bây giờ là các 
+<i>Button</i> của tôi.
+
+00:02:23.250 --> 00:02:25.510
+Và tôi bắt đâu gõ <i>Button</i>.
+
+00:02:25.510 --> 00:02:28.230
+Tiếp tục tạo 
+<i>wrap_content</i> cho nó.
+
+00:02:28.230 --> 00:02:32.002
+Okay, và đây là nút đầu tiên 
+được gọi là <i>+3 Points</i>
+
+00:02:32.002 --> 00:02:34.800
+Tôi sao chép nó và
+
+00:02:34.800 --> 00:02:39.780
+dán lần một,
+
+00:02:39.780 --> 00:02:43.020
+Và chúng ta có một nút 
+gọi là <i>+2 Points</i> và
+
+00:02:43.020 --> 00:02:45.250
+một nút gọi là <i>Free Throw</i>
+
+00:02:45.250 --> 00:02:47.000
+Okay, Hãy cùng xem chúng như thế nào 
+rồi qua màn hình xem trước.
+
+00:02:48.180 --> 00:02:51.070
+Vâng, dường như tôi có 3 nút.
+
+00:02:51.070 --> 00:02:54.420
+Và tôi có thể thấy <i>Team A</i> 
+và số 0.
+
+00:02:54.420 --> 00:02:55.910
+như vậy tôi đã có tất cả 
+các <i>view</i>
+
+00:02:55.910 --> 00:02:59.100
+Nhưng nó không thật sự giống 
+mục tiêu cuối cùng được đặt ra.
+
+00:02:59.100 --> 00:03:01.080
+Nhờ rằng, 
+chúng đang ở dạng cột.
+
+00:03:01.080 --> 00:03:03.222
+Vì vậy tôi nghĩ rằng tôi phải thay đổi 
+hướng của <i>layout</i> của tôi,do đó
+
+00:03:03.222 --> 00:03:05.190
+Tôi trở lại bên trên để làm điều đó.
+
+00:03:05.190 --> 00:03:09.600
+Vì vậy tôi bắt đầu gõ <i>orientation</i>
+và tôi muốn nó là thẳng đứng
+
+00:03:09.600 --> 00:03:11.860
+Okay, bây giờ nhìn nó 
+tốt hơn một chút rồi.
+
+00:03:11.860 --> 00:03:17.290
+Bây giờ những nút này phải trải dài ra
+để điền đầy chiều rộng của màn hình.
+
+00:03:17.290 --> 00:03:19.950
+Vì vậy tôi có thể không thực sự 
+muốn kiểu <i>wrap_content</i>
+
+00:03:19.950 --> 00:03:23.290
+cho những nút này, thay vào đó
+tôi 
+chuyển thành <i>match_parent</i>.
+
+00:03:23.290 --> 00:03:24.470
+Vì vậy tôi sẽ thực hiện 
+thay đổi này ngay.
+
+00:03:25.830 --> 00:03:29.030
+Okay, vì vậy chiều rộng của tất cả 
+các nút của tôi đã là <i>match_parent</i>.
+
+00:03:29.030 --> 00:03:29.740
+Chúng ta hãy cùng Xem trước.
+
+00:03:30.760 --> 00:03:33.470
+Okay, nhìn đã tốt hơn rồi đây, 
+chúng đã trải rộng ra.
+
+00:03:33.470 --> 00:03:34.270
+Được rồi.
+
+00:03:34.270 --> 00:03:39.220
+Vâng, các <i>Text</i>
+
+00:03:39.220 --> 00:03:43.680
+và để xử lý nó, tôi bắt đầu 
+sử dụng một kiểu gọi là <i>gravity</i>.
+
+00:03:43.680 --> 00:03:46.430
+Okay, Và tôi đang xử lý với 
+<i>Google Drawing</i>
+
+00:03:46.430 --> 00:03:48.710
+bây giờ chúng ta sẽ cùng tạo ra
+hộp văn bản với <i>Google Drawing</i>.
+
+00:03:50.030 --> 00:03:52.350
+Okay, vì vậy nó giống như 
+là các cạnh của <i>view</i>.
+
+00:03:52.350 --> 00:03:54.330
+Tôi có thể gõ vào đó <i>Team A</i>,
+
+00:03:54.330 --> 00:03:57.790
+và nó mặc định hiển thị 
+ở phía góc trên bên trái.
+
+00:03:57.790 --> 00:04:00.780
+Và điều này xảy ra tương tự với 
+<i>TextView</i>,
+
+00:04:00.780 --> 00:04:03.440
+khi bạn gõ văn bản vào đó,
+mặc định nó nằm ở góc trên bên trái.
+
+00:04:03.440 --> 00:04:08.700
+Bây giờ, với <i>Google Drawing</i>, tôi 
+có thể lựa chọn văn bản này và sử dụng
+
+00:04:08.700 --> 00:04:13.740
+thuộc tính tương đương cơ bản,
+
+00:04:13.740 --> 00:04:18.940
+theo chiều ngang bên trong hộp và ở giữa 
+theo chiều thẳng đứng ở bên trong hộp.
+
+00:04:18.940 --> 00:04:20.190
+Thật là tuyệt.
+
+00:04:20.190 --> 00:04:23.980
+Giữ các thành phần của <i>view</i> 
+và di chuyển xung quanh bên trong
+
+00:04:23.980 --> 00:04:27.340
+giới hạn của <i>view</i> một cách chính 
+xác
+là cái mà layout gravity có thể làm được
+
+00:04:27.340 --> 00:04:30.330
+Và nếu bạn đang nghĩ nó có thể giống 
+một vài phương thức <i>alignment</i> bạn
+
+00:04:30.330 --> 00:04:34.220
+có thể sử dụng với <i>relative layouts</i>
+,
+nhưng bạn có thể sử dụng thuộc tính
+
+00:04:34.220 --> 00:04:36.990
+<i>gravity</i>
+
+00:04:36.990 --> 00:04:38.670
+Chúng ta sẽ cùng nhìn vào code của nó.
+
+00:04:40.130 --> 00:04:43.980
+Tôi bắt đầu vào <i>TextView</i>
+đầu tiên
+và tôi bắt đầu gõ <i>gravity</i>.
+
+00:04:45.190 --> 00:04:46.970
+Okay.
+Với <i>gravity</i>, 
+tôi có hai lựa chọn,
+
+00:04:46.970 --> 00:04:48.990
+<i>layout gravity</i>
+và <i>gravity</i>.
+
+00:04:48.990 --> 00:04:50.570
+Tôi chỉ mới nói về 
+thuộc tính <i>gravity</i>.
+
+00:04:50.570 --> 00:04:52.650
+Vì đó là thuộc 
+tính chúng ta đang dùng.
+
+00:04:52.650 --> 00:04:55.650
+Okay.
+Và tiếp đó ta có một 
+loạt lựa chọn ở đây,
+
+00:04:55.650 --> 00:04:58.220
+và tôi nghĩ tôi muốn nó được đặt 
+ở giữa theo chiều thẳng đứng
+
+00:04:58.220 --> 00:05:00.088
+Vì vậy, đây là cái tôi định dùng.
+
+00:05:00.088 --> 00:05:02.620
+Và tôi lại quay lên trên và 
+Xem trước những gì tôi vừa làm.
+
+00:05:04.010 --> 00:05:08.130
+Không giống những gì tôi vừa làm lắm,
+
+00:05:09.440 --> 00:05:13.300
+Vì vậy nếu tôi ấn vào đây, và chúng 
+ta
+thử phóng to đến khi khó có thể nhìn thấy.
+
+00:05:14.610 --> 00:05:15.750
+Okay, vậy ở đây 
+chúng ta có <i>Team A</i>
+
+00:05:15.750 --> 00:05:20.960
+và bạn có thể thấy 
+được
+loại đường bao quanh nó.
+
+00:05:20.960 --> 00:05:24.650
+Vâng, nếu Tôi đã nói với bạn rằng, 
+nó được đặt ở giữa của <i>view</i>,
+
+00:05:24.650 --> 00:05:26.950
+Thì bạn không thể cãi lại tôi.
+
+00:05:26.950 --> 00:05:31.510
+Nó thực sự nằm ở giữa view, 
+nhưng view quá nhỏ.
+
+00:05:31.510 --> 00:05:33.020
+Quay lại với <i>Google Drawing</i> 
+của chúng ta,
+
+00:05:33.020 --> 00:05:38.940
+Dường như sẽ tốt hơn nếu tôi giảm kích 
+thước của nó bằng kích thước của văn bản.
+
+00:05:38.940 --> 00:05:40.450
+Nó là trung tâm, nhưng
+
+00:05:40.450 --> 00:05:44.520
+nó thực sự nhìn không khác mấy 
+nếu được đẩy sang bên trái.
+
+00:05:44.520 --> 00:05:47.230
+Okay, vậy
+Nếu tôi 
+muốn để nó giữa điện thoại,
+
+00:05:47.230 --> 00:05:50.090
+Tôi cần phải làm cho <i>view</i> mở rộng 
+ra theo chiều dài điện thoại.
+
+00:05:50.090 --> 00:05:52.170
+Nó đòi hỏi chúng ta 
+phải thay đổi chiều rộng.
+
+00:05:54.020 --> 00:05:55.970
+Okay, vậy thì
+quay trở lại đây, 
+tôi sẽ đóng Xem trước.
+
+00:05:57.200 --> 00:05:58.840
+Và tôi đến chỗ chiều rộng ở đây.
+
+00:06:00.120 --> 00:06:04.850
+Thay vì dùng <i>wrap_content</i>
+
+00:06:04.850 --> 00:06:06.150
+Okay, và chúng ta hãy 
+Xem lại một lần nữa.
+
+00:06:07.430 --> 00:06:07.930
+Thu nhỏ.
+
+00:06:09.120 --> 00:06:10.610
+Okay.
+Nhìn có vẻ tốt hơn rồi đấy.
+
+00:06:10.610 --> 00:06:12.200
+Nó dường như đã trung tâm hơn.
+
+00:06:12.200 --> 00:06:14.420
+Và tôi cũng làm điều tương tự với 
+<i>score</i> ở đây.
+
+00:06:15.840 --> 00:06:18.910
+Okay, vậy thì Tôi thêm <i>gravity</i> 
+vào và <i>gravity</i>
+
+00:06:18.910 --> 00:06:20.425
+trong tất cả các 
+<i>layout gravity</i>
+
+00:06:20.425 --> 00:06:25.950
+<i>center_horizontal</i> và tôi
+thay 
+đổi độ rộng trong <i>match_parent</i>.
+
+00:06:27.260 --> 00:06:29.160
+Okay, 
+và hãy cùng kiểm tra lại lần nữa.
+
+00:06:29.160 --> 00:06:30.870
+Cool!
+
+00:06:30.870 --> 00:06:32.190
+Trông khá tốt rồi đấy.
+
+00:06:32.190 --> 00:06:34.400
+Ngoại trừ chúng thực 
+sự quá sít vào nhau
+
+00:06:34.400 --> 00:06:37.330
+Không có nhiều khoảng không 
+giữa các thành phần
+
+00:06:37.330 --> 00:06:41.020
+Tôi bắt đầu cho mỗi 
+<i>TextView</i>s 
+một <i>padding</i>
+
+00:06:41.020 --> 00:06:45.875
+Tôi bắt đầu gõ <i>padding</i>
+= 4dp.
+
+00:06:47.000 --> 00:06:48.360
+Bạn có nhớ dp? 
+Và tôi chỉ sử dụng
+
+00:06:48.360 --> 00:06:52.010
+<i>padding</i>, không phải
+<i>padding bottom</i> hoặc cái khác.
+
+00:06:52.010 --> 00:06:54.260
+Và tất cả đều = 4 
+dp
+xung quanh toàn bộ <i>TextView</i>.
+
+00:06:54.260 --> 00:06:56.950
+Hãy cùng xem nó như thế nào
+
+00:06:58.390 --> 00:07:00.850
+Okay.
+Nó đã cho tôi 
+thêm một ít không gian.
+
+00:07:00.850 --> 00:07:03.750
+Tôi thực hiện điều đó 
+tương tự cho
+<i>Score TextView</i>.
+
+00:07:07.830 --> 00:07:10.808
+Okay, bây giờ tôi áp dụng 
+nó với 
+tất cả các nút.
+
+00:07:15.811 --> 00:07:18.610
+Hmm, vâng nó dường như 
+không làm được gì nhiều
+
+00:07:18.610 --> 00:07:23.693
+Liệu nó có khác gì hơn 
+khi ta chuyển lên 8
+
+00:07:23.693 --> 00:07:25.528
+hay 20?
+
+00:07:25.528 --> 00:07:29.820
+Hmm, rất thú vị, và nó 
+dường như làm <i>Button</i> lớn lên
+
+00:07:29.820 --> 00:07:31.740
+Tôi lại không muốn các 
+<i>Button</i> lớn lên
+
+00:07:31.740 --> 00:07:33.980
+Tôi muốn khoảng không gian 
+quanh <i>Button</i> lớn lên
+
+00:07:33.980 --> 00:07:37.640
+và thực sự nó là sẽ được 
+làm tốt hơn với,
+<i>layout_margin</i>.
+
+00:07:37.640 --> 00:07:41.040
+Nhớ rằng, <i>padding</i> thực sự thêm 
+<i>padding</i>vào bên trong <i>view</i>,
+
+00:07:41.040 --> 00:07:42.930
+trong khi đó <i>margin</i> thêm 
+không gian xung quanh <i>view</i>.
+
+00:07:43.930 --> 00:07:45.310
+Vì vậy chúng ta sẽ thay đổi 
+<i>layout_margin</i>.
+
+00:07:45.310 --> 00:07:46.890
+Tôi bắt đầu với 8dp.
+
+00:07:46.890 --> 00:07:48.850
+Tuyệt, nó trông ổn hơn rồi đấy.
+
+00:07:48.850 --> 00:07:53.120
+Bây giờ có thêm không gian 
+xung quanh các <i>view</i>
+
+00:07:53.120 --> 00:07:55.019
+Và hãy tiếp tục làm thế 
+với các <i>Button</i> khác.
+
+00:07:56.480 --> 00:07:59.710
+<i>Margin</i>, không phải <i>padding</i>, 
+<i>layout_margin</i>.
+
+00:07:59.710 --> 00:08:01.440
+Okay, vậy là đã trông tốt hơn rồi.
+
+00:08:01.440 --> 00:08:04.100
+Bây giờ nếu bạn chọn thuộc 
+tính khác tôi chọn,
+
+00:08:04.100 --> 00:08:08.320
+ví dụ <i>padding</i> là 5 thay vì 4, 
+nó vẫn ok.
+
+00:08:08.320 --> 00:08:11.710
+Nhờ rằng, tại điểm này, 
+tôi chỉ muốn làm mọi thứ dễ nhìn hơn.
+
+00:08:11.710 --> 00:08:15.409
+Chúng ta sẽ tiếp tục với màu và 
+phông chữ tại các bước sau.
+
+00:08:16.750 --> 00:08:17.920
+Okay.
+
+00:08:17.920 --> 00:08:18.670
+Và ta đã làm tốt.
+
+00:08:18.670 --> 00:08:19.860
+Bạn đã hoàn thành bước này.
+

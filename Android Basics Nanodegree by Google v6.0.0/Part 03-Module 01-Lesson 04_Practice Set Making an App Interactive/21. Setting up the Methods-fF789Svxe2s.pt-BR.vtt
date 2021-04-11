@@ -1,0 +1,268 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:04.550
+Para começar a resolver este problema,
+eu vou escrever alguns <i>Methods</i> primeiro.
+
+00:00:04.550 --> 00:00:07.750
+<i>Methods</i> são pequenos blocos de
+código entre chaves e
+
+00:00:07.750 --> 00:00:10.690
+eu posso fazer meus botões
+ativarem meus <i>Methods</i>.
+
+00:00:10.690 --> 00:00:13.250
+Portanto, eu terei um <i>Method</i>
+para cada botão.
+
+00:00:13.250 --> 00:00:19.060
+Eu vou começar com o botão <i>+3 Pontos</i>,
+vou digitar <i>public void</i>.
+
+00:00:19.060 --> 00:00:21.290
+Agora seria quando você digitaria
+o nome do <i>Method</i>.
+
+00:00:21.290 --> 00:00:24.910
+E sinta-se livre para
+nomeá-lo como quiser.
+
+00:00:24.910 --> 00:00:27.570
+E digo isso contanto que faça sentido.
+
+00:00:27.570 --> 00:00:31.068
+Portanto vou tentar nomear este <i>Method</i>
+de modo que seja explícito
+
+00:00:31.068 --> 00:00:33.770
+o que vai acontecer quando você
+clicar o botão <i>+3 Pontos</i>.
+
+00:00:33.770 --> 00:00:40.700
+O nome deste <i>Method</i> será:
+<i>addThreeForTeamA</i>.
+
+00:00:41.200 --> 00:00:43.600
+E de novo, você pode dar um nome
+um pouco diferente,
+
+00:00:43.600 --> 00:00:45.195
+como somaTrêsPontosParaTimeA.
+
+00:00:46.301 --> 00:00:49.380
+Depois disso eu vou digitar os
+parâmetros do <i>Method</i>.
+
+00:00:49.380 --> 00:00:51.290
+Você não sabe muito sobre isso, mas
+
+00:00:51.290 --> 00:00:53.440
+você aprenderá mais na próxima aula.
+
+00:00:53.440 --> 00:00:56.280
+Será <i>View</i> com V maiúsculo,
+e então a letra <i>v</i>.
+
+00:00:56.280 --> 00:01:00.760
+Então vou abrir as chaves, e o
+Android Studio é esperto o bastante
+
+00:01:00.760 --> 00:01:03.290
+para me dar o fechamento das chaves
+para eu fechar meu <i>Method</i>.
+
+00:01:04.620 --> 00:01:08.960
+E agora quaisquer declarações que eu
+puser aqui serão o que vai acontecer
+
+00:01:08.960 --> 00:01:10.960
+quando este <i>Method</i> for chamado.
+
+00:01:11.850 --> 00:01:16.980
+Assim, o que eu quero que aconteça
+é que ele exiba para o
+
+00:01:16.980 --> 00:01:21.890
+time A, e então eu darei a ele o
+número que eu quero que exiba,
+
+00:01:21.890 --> 00:01:23.385
+e eu quero que seja 3.
+
+00:01:24.780 --> 00:01:28.010
+Ele ainda não foi associado aos
+meus botões ainda, então
+
+00:01:28.010 --> 00:01:32.120
+eu tenho que voltar ao meu XML, e vou
+
+00:01:32.120 --> 00:01:35.990
+até o <i>Button</i> que é <i>+3 Pontos</i>,
+este bem aqui.
+
+00:01:37.370 --> 00:01:40.480
+E eu vou adicionar um
+atributo <i>onClick</i>.
+
+00:01:40.480 --> 00:01:44.760
+E neste atributo <i>onClick</i>, eu vou
+dar exatamente o mesmo nome
+
+00:01:44.760 --> 00:01:47.350
+que eu dei para o <i>Method</i>
+no meu <i>MainActivity</i>.
+
+00:01:48.620 --> 00:01:51.400
+E de fato o Android Studio está
+queimando um pouco a largada.
+
+00:01:51.400 --> 00:01:55.510
+Ele está até tentando sugerir que eu
+deveria colocar aqui <i>None</i>.
+
+00:01:55.510 --> 00:01:59.570
+Porque ele meio que vê todos os <i>Methods</i>
+que estão disponíveis no <i>MainActivity</i> e
+
+00:01:59.570 --> 00:02:00.660
+este parece dar conta do recado.
+
+00:02:01.720 --> 00:02:05.000
+Assim é claro que vou clicar nisso.
+
+00:02:05.000 --> 00:02:07.640
+Agora tenho o atributo <i>onClick</i> aqui.
+
+00:02:07.640 --> 00:02:12.125
+Com este <i>Button</i> que diz
+<i>+3 Pontos</i>, e que vai acionar
+
+00:02:12.125 --> 00:02:15.490
+o <i>addThreeForTeamA</i>, e eu posso
+voltar para meu <i>MainActivity</i> e
+
+00:02:15.490 --> 00:02:20.551
+ver que dentro do <i>addThreeForTeamA</i>
+ele diz <i>displayForTeamA(3)</i>
+
+00:02:20.551 --> 00:02:23.540
+o que fará aparecer 3 na
+tela para o placar.
+
+00:02:23.540 --> 00:02:27.570
+Vamos nos certificar de que
+toda esta lógica está certa.
+
+00:02:27.570 --> 00:02:31.450
+Aqui está o meu aplicativo. Eu
+vou apertar +3 Pontos.
+
+00:02:31.450 --> 00:02:32.550
+Legal! Ele diz 3.
+
+00:02:32.550 --> 00:02:36.500
+Pode estar meio pequeno na
+sua tela, mas acredite, ele diz 3.
+
+00:02:36.500 --> 00:02:39.910
+Estes outros botões ainda não
+funcionam, como esperado,
+
+00:02:39.910 --> 00:02:42.190
+pois não mudamos nada do código para eles.
+
+00:02:42.190 --> 00:02:43.980
+Certo, continuemos a trabalhar.
+
+00:02:44.370 --> 00:02:46.680
+Bem, agora que sei que funcionou,
+eu vou fazer o mesmo
+
+00:02:46.680 --> 00:02:49.000
+com os outros dois botões.
+
+00:02:49.000 --> 00:02:54.059
+De fato, eu vou fazer tudo tão igual
+que vou copiar isto e
+
+00:02:54.059 --> 00:02:56.190
+vou colar duas vezes.
+
+00:02:58.580 --> 00:03:02.375
+E só vou dizer
+
+00:03:02.375 --> 00:03:08.970
+<i>addTwoForTeamA</i>, e <i>addOneForTeamA</i>.
+
+00:03:08.970 --> 00:03:14.990
+E aqui eu vou mudar isso para
+mostrar 2 e este para mostrar 1
+
+00:03:16.070 --> 00:03:21.530
+Então é basicamente a mesma coisa para
+2 e 1 o que eu fiz para somar 3 pontos,
+
+00:03:21.530 --> 00:03:25.650
+Mas eu também tenho que me lembrar de ir
+até o XML, então eu clico para vir aqui.
+
+00:03:28.090 --> 00:03:30.250
+E eu vou adicionar mais dois <i>onClicks</i>.
+
+00:03:30.250 --> 00:03:33.590
+Para o meu botão +2 Pontos,
+
+00:03:33.590 --> 00:03:38.820
+eu vou fazer um <i>onClick</i>, e
+oh, que legal.
+
+00:03:38.820 --> 00:03:41.340
+Ele está me dando três opções agora e
+
+00:03:41.340 --> 00:03:43.820
+quero estar certo de selecionar o correto.
+
+00:03:43.820 --> 00:03:47.490
+Então, este é +2 Pontos, assim
+vou selecionar <i>addTwoForTeamA</i>.
+
+00:03:47.490 --> 00:03:49.990
+E agora venho aqui embaixo,
+
+00:03:51.250 --> 00:03:52.930
+Digito <i>onClick</i>,
+
+00:03:53.640 --> 00:03:55.500
+e seleciono <i>addOneForTeamA</i>
+
+00:03:56.970 --> 00:03:59.860
+Bem, estou bastante confiante
+de que vai funcionar.
+
+00:03:59.860 --> 00:04:02.810
+Eu até apostaria, mas ainda
+assim eu devo rodá-lo para testar.
+
+00:04:03.840 --> 00:04:06.120
+Certo, eu aperto +3,
+
+00:04:06.120 --> 00:04:07.190
+ainda funciona.
+
+00:04:07.190 --> 00:04:09.860
+Aperto +2, legal, ele diz 2!
+
+00:04:10.120 --> 00:04:13.670
+E agora eu aperto Lance Livre,
+e ele mostra 1.
+
+00:04:13.670 --> 00:04:16.600
+Incrível! Completei a tarefa.
+
+00:04:17.250 --> 00:04:21.260
+E porque eu completei a tarefa, eu
+tenho a honra de marcar esta caixa.
+

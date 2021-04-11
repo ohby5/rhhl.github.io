@@ -1,0 +1,67 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.210
+All right. Hopefully, this wasn't too tricky.
+
+00:00:03.210 --> 00:00:07.365
+This is actually a very similar situation to the udacicolaVotes.
+
+00:00:07.365 --> 00:00:10.200
+pepcityVotes was also made a local variable,
+
+00:00:10.200 --> 00:00:14.735
+and similarly, its scope is limited to just the votePepcity method.
+
+00:00:14.735 --> 00:00:18.180
+Meaning that, it gets created here and then in
+
+00:00:18.180 --> 00:00:21.885
+this next line after adding one to its value, it gets trashed.
+
+00:00:21.885 --> 00:00:25.500
+Now something you might have noticed is how pepcityVotes doesn't
+
+00:00:25.500 --> 00:00:29.925
+have the initialization to zero that udacicolaVotes does.
+
+00:00:29.925 --> 00:00:31.980
+This is actually a pretty big error,
+
+00:00:31.980 --> 00:00:34.125
+and will cause your code to not be able to compile.
+
+00:00:34.125 --> 00:00:36.135
+Meaning, it won't be able to run on the phone.
+
+00:00:36.135 --> 00:00:38.785
+Local variables must be initialized.
+
+00:00:38.785 --> 00:00:40.520
+Meaning, that they must be given some sort of
+
+00:00:40.520 --> 00:00:43.355
+initial value like we're doing here with the udacicolaVotes.
+
+00:00:43.355 --> 00:00:47.300
+Then we have the same problems that we had with the udacicola between button clicks.
+
+00:00:47.300 --> 00:00:51.050
+It's not actually really counting up how many votes that pepcity has,
+
+00:00:51.050 --> 00:00:53.900
+and when we do the show me votes method,
+
+00:00:53.900 --> 00:00:55.670
+because the scope ends here,
+
+00:00:55.670 --> 00:00:58.910
+you actually won't be able to use the variable value down here.
+
+00:00:58.910 --> 00:01:03.540
+So if you said that this has the same problems as udacicolaVotes does, you'd be correct.
+
+00:01:03.540 --> 00:01:05.600
+Okay. Let's look at another problem.
+

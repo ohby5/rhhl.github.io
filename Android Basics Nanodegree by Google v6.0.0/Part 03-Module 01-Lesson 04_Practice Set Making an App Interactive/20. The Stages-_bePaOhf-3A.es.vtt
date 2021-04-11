@@ -1,0 +1,485 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.710 --> 00:00:04.570
+Voy a responder a estas preguntas
+antes de pasar al XML.
+
+00:00:04.570 --> 00:00:07.050
+Lo primero que tenemos que hacer
+es seleccionar las vistas.
+
+00:00:07.050 --> 00:00:08.770
+He dibujado un rectángulo a su alrededor.
+
+00:00:09.700 --> 00:00:14.530
+Hay cinco vistas sin contar la <i>ViewGroup</i>,
+que también se considera una vista.
+
+00:00:14.670 --> 00:00:17.710
+Estas cinco vistas
+son dos <i>TextViews</i> que tenemos aquí arriba
+
+00:00:17.910 --> 00:00:19.430
+y estos tres botones de abajo.
+
+00:00:19.430 --> 00:00:24.480
+Aquí no tenemos <i>ImageViews</i>,
+así que ponemos un cero.
+
+00:00:24.580 --> 00:00:28.300
+Igual os preguntáis por qué he decidido
+que esto sean dos <i>TextViews</i> diferentes.
+
+00:00:28.400 --> 00:00:34.040
+El estilo de <i>Team A</i> y de <i>Score</i>
+son muy diferentes en el producto final.
+
+00:00:34.150 --> 00:00:36.730
+Por eso he decidido
+que sean dos <i>TextViews</i> diferentes.
+
+00:00:37.630 --> 00:00:40.080
+Vamos con el paso dos,
+que es posicionar las vistas.
+
+00:00:40.180 --> 00:00:42.500
+Voy a seleccionar la <i>ViewGroup</i>
+que quiero utilizar aquí.
+
+00:00:43.200 --> 00:00:46.330
+Las dos que me vienen a la cabeza son
+la <i>LinearLayout</i> y la <i>RelativeLayout</i>.
+
+00:00:46.930 --> 00:00:52.950
+Tenemos una columna vertical de vistas,
+así que lo mejor es una <i>LinearLayout</i>.
+
+00:00:54.370 --> 00:00:57.310
+Y, por último, el tercer paso,
+que es el estilo de las vistas.
+
+00:00:57.410 --> 00:00:59.720
+Con eso me pondré
+cuando esté trabajando con el XML.
+
+00:01:00.420 --> 00:01:04.180
+Bueno, vamos ya con el XML.
+Primero quiero ir a la pestaña <i>Text</i>.
+
+00:01:04.970 --> 00:01:07.740
+Lo primero que voy a hacer aquí
+
+00:01:07.840 --> 00:01:09.760
+es borrar unas cosas que no necesito.
+
+00:01:09.860 --> 00:01:12.570
+Voy a empezar borrando esta <i>TextView</i>.
+
+00:01:13.490 --> 00:01:16.597
+También el <i>paddingLeft</i> [rellenoIzquierda]
+el <i>paddingRight</i> [rellenoDerecha],
+
+00:01:16.697 --> 00:01:19.236
+el <i>paddingTop</i> [rellenoArriba]
+y el <i>paddingBottom</i> [rellenoAbajo].
+
+00:01:19.850 --> 00:01:23.407
+Cuidado con no borrar nada importante.
+Muy bien.
+
+00:01:24.568 --> 00:01:27.760
+Ya he dicho que la <i>ViewGroup</i> que usaremos
+no es una <i>RelativeLayout</i>.
+
+00:01:27.860 --> 00:01:30.370
+Es una <i>LinearLayout</i>,
+así que la voy a cambiar ahora mismo.
+
+00:01:31.370 --> 00:01:35.651
+Y dentro de la <i>LinearLayout</i>
+tendremos dos <i>TextViews</i> con tres botones.
+
+00:01:35.800 --> 00:01:37.310
+Voy a empezar a ponerlos.
+
+00:01:37.710 --> 00:01:42.260
+No quiero detallar ahora mismo
+el ancho y la altura de la <i>TextView</i>.
+
+00:01:42.780 --> 00:01:45.300
+De momento, lo dejamos como <i>wrap_content</i>,
+
+00:01:45.300 --> 00:01:48.170
+lo que permitirá que tengamos
+la caja de la <i>TextView</i> rodeando el texto.
+
+00:01:49.310 --> 00:01:54.790
+Establecemos el texto de esta <i>TextView</i>,
+que va a ser <i>Team A</i>.
+
+00:01:56.250 --> 00:02:01.610
+Bueno, vamos a ver cómo ha quedado.
+Aquí está la pequeña <i>TextView Team A</i>.
+
+00:02:01.800 --> 00:02:03.610
+Ahora vamos a hacer un par más.
+
+00:02:03.710 --> 00:02:07.200
+La que vamos a poner debajo será <i>Score</i>
+y también es una <i>TextView</i>.
+
+00:02:07.300 --> 00:02:12.458
+Empezamos escribiendo <i>Text</i>.
+Veo la palabra <i>TextView</i> y le doy a <i>Enter</i>.
+
+00:02:13.090 --> 00:02:17.790
+Aquí también voy a poner <i>wrap_content</i>
+y le voy a añadir el texto.
+
+00:02:17.860 --> 00:02:20.960
+La puntuación suele empezar en cero,
+así que lo vamos a poner aquí.
+
+00:02:21.660 --> 00:02:25.480
+Bien, ahora los botones.
+Empiezo escribiendo la palabra <i>Button</i>.
+
+00:02:25.510 --> 00:02:27.430
+Aquí también vamos a poner <i>wrap_content</i>.
+
+00:02:28.330 --> 00:02:32.002
+El primer botón se va a llamar <i>+3 Points</i>.
+
+00:02:32.102 --> 00:02:33.800
+Ahora copio esto.
+
+00:02:34.900 --> 00:02:38.980
+Lo pego una vez
+y otra vez porque quiero dos botones más.
+
+00:02:39.780 --> 00:02:44.620
+Quiero un botón que se llame <i>+2 Points</i>
+y otro que se llame <i>Free Throw</i>.
+
+00:02:45.250 --> 00:02:47.000
+Vamos a ver cómo ha quedado.
+
+00:02:48.180 --> 00:02:54.070
+Parece que sí tenemos tres botones.
+Veo <i>Team A</i> y el cero.
+
+00:02:54.420 --> 00:02:59.010
+Ya tengo las vistas, pero no se parece
+al resultado final que queremos.
+
+00:02:59.100 --> 00:03:00.980
+Recordad que es una columna vertical.
+
+00:03:01.080 --> 00:03:03.122
+Tengo que cambiar
+la orientación del diseño,
+
+00:03:03.222 --> 00:03:04.690
+así que me voy a poner a ello.
+
+00:03:05.190 --> 00:03:08.700
+Tengo que cambiar la orientación
+porque la quiero vertical.
+
+00:03:09.600 --> 00:03:11.347
+Vale, así está un poco mejor.
+
+00:03:11.860 --> 00:03:16.790
+Estos botones se han expandido
+para rellenar el ancho de la ventana.
+
+00:03:17.290 --> 00:03:22.650
+Así que no voy a utilizar el <i>wrap_content</i>,
+sino el <i>match_parent</i>.
+
+00:03:23.290 --> 00:03:24.470
+Voy a cambiarlo.
+
+00:03:25.830 --> 00:03:28.930
+Ahora tengo puesto <i>match_parent</i>
+en el ancho de todos los botones.
+
+00:03:29.030 --> 00:03:33.040
+A ver qué tal queda.
+Parece que mejor, son más grandes.
+
+00:03:33.470 --> 00:03:39.270
+Vale, aunque parece que el texto
+sigue estando arrinconado en una esquina.
+
+00:03:40.020 --> 00:03:42.980
+Para arreglarlo voy a utilizar un atributo
+que se llama <i>gravity</i>.
+
+00:03:43.680 --> 00:03:48.730
+He abierto Google Drawing
+y voy a crear una caja de texto.
+
+00:03:50.030 --> 00:03:54.450
+Esto es el límite de la vista.
+Voy a escribir <i>Team A</i>
+
+00:03:54.830 --> 00:03:57.490
+y aparecerá por defecto
+en la esquina superior izquierda.
+
+00:03:57.790 --> 00:04:00.780
+Con las <i>TextViews</i> pasa lo mismo
+cuando se escribe un texto.
+
+00:04:00.880 --> 00:04:03.040
+Aparece por defecto
+en la esquina superior izquierda.
+
+00:04:03.440 --> 00:04:09.879
+Con Google Drawing selecciono este texto
+y utilizo el equivalente del atributo.
+
+00:04:10.882 --> 00:04:13.740
+Es una línea que sirve para centrarlo
+dentro de la caja de texto
+
+00:04:13.740 --> 00:04:18.245
+tanto de forma horizontal
+como de forma vertical.
+
+00:04:18.940 --> 00:04:19.951
+Genial.
+
+00:04:20.190 --> 00:04:23.980
+<i>Gravity</i> sirve precisamente
+para coger el contenido de la vista
+
+00:04:24.080 --> 00:04:27.340
+y moverlo dónde sea necesario
+dentro de la propia vista.
+
+00:04:27.440 --> 00:04:30.230
+Puede que os parezca
+similar a algunos métodos de alineamiento
+
+00:04:30.330 --> 00:04:34.220
+de los que usamos con las RelativeLayouts.
+Es cierto, pero el atributo <i>gravity</i>
+
+00:04:34.320 --> 00:04:37.090
+también lo usamos con las LinearLayouts
+y eso lo hace muy potente.
+
+00:04:37.290 --> 00:04:38.970
+Vamos a echarle un vistazo al código.
+
+00:04:40.130 --> 00:04:43.980
+Voy a coger la primera <i>TextView</i>
+y voy a empezar a escribir <i>gravity</i>.
+
+00:04:45.190 --> 00:04:48.670
+Vale, ahora tengo dos opciones:
+<i>layout_gravity</i> y <i>gravity</i>.
+
+00:04:48.990 --> 00:04:51.970
+Ya os he hablado de sus características
+y voy a utilizar esta.
+
+00:04:52.650 --> 00:04:58.050
+Aquí tengo muchas opciones
+y creo que lo voy centrar horizontalmente.
+
+00:04:58.320 --> 00:04:59.588
+Así que voy a seleccionar esta.
+
+00:05:00.088 --> 00:05:02.620
+Vamos a ver una vista previa
+de lo que acabamos de hacer.
+
+00:05:04.010 --> 00:05:08.130
+Parece que no ha cambiado mucho,
+pero todo tiene una explicación.
+
+00:05:09.440 --> 00:05:13.300
+Lo vemos pinchando aquí,
+pero voy a acercarlo para verlo mejor.
+
+00:05:14.610 --> 00:05:20.150
+Aquí pone <i>Team A</i>
+y se ve una especie de límite alrededor.
+
+00:05:20.960 --> 00:05:25.950
+Si os dijera que esto está centrado,
+no me lo podríais discutir.
+
+00:05:26.950 --> 00:05:31.010
+Parece que sí está centrado en la vista,
+aunque es muy pequeña.
+
+00:05:31.510 --> 00:05:33.020
+Vamos a volver a <i>Google Drawing</i>.
+
+00:05:33.120 --> 00:05:38.140
+Es como si hubiese reducido el tamaño
+para ajustarlo al texto.
+
+00:05:38.940 --> 00:05:43.950
+Está centrado, pero no parece diferente
+a cuando estaba a la izquierda.
+
+00:05:44.520 --> 00:05:49.530
+Si quiero centrarlo en el móvil,
+tengo que ajustar la vista a su longitud.
+
+00:05:50.090 --> 00:05:52.170
+Y para eso es necesario
+que modifiquemos la anchura.
+
+00:05:54.020 --> 00:05:55.970
+Bueno, voy a cerrar la vista previa
+
+00:05:57.200 --> 00:05:58.840
+y voy a modificar la anchura.
+
+00:06:00.120 --> 00:06:04.050
+En lugar de poner <i>wrap_content</i>,
+voy a poner <i>match_parent</i>.
+
+00:06:04.850 --> 00:06:07.650
+Vamos de nuevo con la vista previa.
+Fuera el zoom.
+
+00:06:09.120 --> 00:06:12.110
+Ahora está mucho mejor
+y más centrado.
+
+00:06:12.200 --> 00:06:14.420
+Vamos a hacer lo mismo con <i>score</i>.
+
+00:06:15.840 --> 00:06:20.410
+Voy a añadirle a esto <i>gravity</i> también,
+pero no <i>layout_gravity</i>.
+
+00:06:21.225 --> 00:06:26.150
+<i>center_horizontal</i>
+y voy a cambiar el ancho a <i>match_parent</i>.
+
+00:06:27.260 --> 00:06:30.760
+Vamos a comprobarlo de nuevo.
+Vale, ahora está todo centrado.
+
+00:06:30.870 --> 00:06:32.190
+Está quedando genial.
+
+00:06:32.290 --> 00:06:36.400
+Pero parece que está todo apretujado
+y que no hay espacio entre los elementos.
+
+00:06:37.330 --> 00:06:40.320
+Voy a ponerle a cada <i>TextView</i>
+un relleno de 4.
+
+00:06:42.417 --> 00:06:45.875
+Escribimos <i>padding</i> y ponemos <i>4dp</i>.
+
+00:06:47.000 --> 00:06:48.360
+¿Os acordáis de eso?
+
+00:06:48.360 --> 00:06:52.010
+He utilizado simplemente padding
+y no padding-bottom o algo por el estilo.
+
+00:06:52.010 --> 00:06:55.060
+Así le hemos proporcionado <i>4dp</i>
+a toda la <i>TextView</i>.
+
+00:06:55.560 --> 00:06:57.250
+A ver cómo ha quedado en la vista previa.
+
+00:06:58.390 --> 00:07:00.850
+Vale, ya tenemos un poco más de espacio.
+
+00:07:00.850 --> 00:07:03.750
+Ahora voy a hacer lo mismo
+con la <i>TextView</i> de <i>Score</i>.
+
+00:07:07.830 --> 00:07:10.808
+Ahora voy a intentar
+hacer lo mismo con los botones.
+
+00:07:16.311 --> 00:07:18.510
+Parece que no ha servido de mucho.
+
+00:07:18.610 --> 00:07:22.393
+¿Y si le pongo mejor ocho?
+
+00:07:23.693 --> 00:07:24.694
+¿20?
+
+00:07:25.528 --> 00:07:29.720
+Qué interesante.
+Parece que ha ensanchado el botón.
+
+00:07:29.820 --> 00:07:33.940
+No quiero que sea más grande el botón,
+sino el espacio que hay a su alrededor.
+
+00:07:33.980 --> 00:07:37.240
+Creo que sería mejor
+utilizar <i>layout_margin</i> [margen].
+
+00:07:37.640 --> 00:07:40.640
+Recordad que <i>padding</i>
+es para añadir relleno dentro de la vista
+
+00:07:41.040 --> 00:07:42.930
+y <i>margin</i> añade espacio
+alrededor de la vista.
+
+00:07:43.930 --> 00:07:47.110
+Vamos a cambiar esto a <i>layout_margin</i>.
+Voy a probar con <i>8dp</i>.
+
+00:07:47.978 --> 00:07:49.050
+Ahora mucho mejor.
+
+00:07:50.314 --> 00:07:52.820
+Hay más espacio alrededor de la vista
+y entre estas dos vistas.
+
+00:07:53.120 --> 00:07:55.019
+Vamos a hacer lo mismo
+con el resto de botones.
+
+00:07:56.480 --> 00:07:58.370
+Ponemos margen, no relleno.
+Es <i>layout_margin</i>.
+
+00:07:59.710 --> 00:08:01.440
+Ahora está mucho mejor.
+
+00:08:01.440 --> 00:08:04.100
+Si habéis elegido atributos diferentes,
+no pasa nada.
+
+00:08:04.100 --> 00:08:08.320
+Como poner un relleno de cinco
+en lugar de cuatro.
+
+00:08:08.320 --> 00:08:10.901
+Recordad que ahora mismo
+sólo queremos que se pueda leer.
+
+00:08:11.710 --> 00:08:15.409
+Nos encargaremos del tamaño de la letra
+y de los colores más adelante.
+
+00:08:16.750 --> 00:08:18.520
+Bien, buen trabajo.
+
+00:08:18.670 --> 00:08:19.960
+Hemos terminado con este paso.
+

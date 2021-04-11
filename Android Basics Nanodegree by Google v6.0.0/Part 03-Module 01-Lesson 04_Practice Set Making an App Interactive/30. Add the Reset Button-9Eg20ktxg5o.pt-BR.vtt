@@ -1,0 +1,717 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:03.234
+Aqui está uma imagem
+do nosso app Court Counter,
+
+00:00:03.267 --> 00:00:05.567
+ou melhor, de como queremos
+que ele fique.
+
+00:00:05.601 --> 00:00:09.834
+Vou seguir meu próprio conselho
+e começar pelo XML.
+
+00:00:09.834 --> 00:00:12.434
+Reflitamos sobre os Views.
+
+00:00:12.467 --> 00:00:14.467
+Temos todos estes Views...
+
+00:00:14.501 --> 00:00:18.534
+que estão dentro
+de LinearLayouts verticais.
+
+00:00:18.534 --> 00:00:23.067
+Tem o LinearLayout do time B
+e o LinearLayout do time A.
+
+00:00:23.100 --> 00:00:25.434
+E não dá para ter
+dois rootViews,
+
+00:00:25.467 --> 00:00:26.801
+então, além disso,
+
+00:00:26.834 --> 00:00:29.300
+eles estão encapsulados
+em outro LinearLayout,
+
+00:00:29.334 --> 00:00:30.868
+que por acaso é horizontal,
+
+00:00:30.901 --> 00:00:33.200
+de modo que estes dois
+LinearLayouts filhos
+
+00:00:33.234 --> 00:00:34.934
+podem ficar lado a lado.
+
+00:00:34.968 --> 00:00:38.033
+Temos que adicionar
+o botão "reset" embaixo.
+
+00:00:38.033 --> 00:00:41.734
+Para você não endoidar
+pensando em tantos layouts,
+
+00:00:41.767 --> 00:00:46.167
+considere tudo que está
+neste LinearLayout horizontal
+
+00:00:46.200 --> 00:00:48.234
+um View só.
+
+00:00:48.267 --> 00:00:52.634
+Agora você só está lidando
+com este LinearLayout
+
+00:00:52.667 --> 00:00:54.367
+e com este botão "reset".
+
+00:00:54.400 --> 00:00:56.634
+Você está tentando
+dispor dois Views.
+
+00:00:56.634 --> 00:01:01.334
+Um está no topo
+e outro no fim da tela.
+
+00:01:01.334 --> 00:01:05.467
+A pergunta agora é:
+qual viewGroup permitiria
+
+00:01:05.501 --> 00:01:09.334
+um View aqui em cima
+e outro aqui embaixo da tela?
+
+00:01:09.367 --> 00:01:13.133
+Acontece que um RelativeLayout
+é um belo candidato para esse caso.
+
+00:01:13.167 --> 00:01:16.100
+Deixo meu LinearLayout
+horizontal aqui,
+
+00:01:16.133 --> 00:01:17.701
+igualo sua largura à do pai
+
+00:01:17.734 --> 00:01:20.434
+e encapsulo o conteúdo
+para a altura...
+
+00:01:20.434 --> 00:01:23.000
+e posso fazer
+meu botão "reset" aqui,
+
+00:01:23.033 --> 00:01:25.801
+alinhado com o centro
+e com a base do pai.
+
+00:01:25.834 --> 00:01:28.133
+Bom,
+você tem um RelativeLayout...
+
+00:01:28.133 --> 00:01:33.133
+que tem como filhos um botão
+e um LinearLayout.
+
+00:01:33.133 --> 00:01:35.634
+O botão é o "reset",
+
+00:01:35.667 --> 00:01:40.267
+e o LinearLayout
+é este horizontal aqui.
+
+00:01:40.300 --> 00:01:43.734
+Este LinearLayout horizontal,
+por sua vez, tem dois filhos,
+
+00:01:43.734 --> 00:01:46.601
+que também são
+LinearLayouts.
+
+00:01:46.634 --> 00:01:48.634
+São o LinearLayout
+do time A
+
+00:01:48.634 --> 00:01:51.467
+e o LinearLayout do time B,
+vistos aqui.
+
+00:01:51.501 --> 00:01:55.267
+O LinearLayout do time A
+tem dois textViews
+
+00:01:55.300 --> 00:01:57.067
+e 3 botões.
+
+00:01:57.100 --> 00:01:59.901
+A mesma coisa vale
+para o LinearLayout do time B.
+
+00:01:59.934 --> 00:02:02.934
+5 crianças,
+2 textViews e 3 botões.
+
+00:02:02.968 --> 00:02:05.033
+Esta parte do layout
+você já fez,
+
+00:02:05.067 --> 00:02:08.334
+só falta adicionar isto.
+Então vamos lá.
+
+00:02:08.367 --> 00:02:10.868
+Estou no meu código XML...
+
+00:02:10.901 --> 00:02:15.501
+e de cara vou criar
+o RelativeLayout raiz,
+
+00:02:15.534 --> 00:02:17.801
+que você viu no diagrama.
+
+00:02:17.834 --> 00:02:21.634
+Aqui eu digito
+"RelativeLayout"...
+
+00:02:22.400 --> 00:02:26.634
+e recorto e colo
+estas duas linhas
+
+00:02:26.667 --> 00:02:28.234
+para ficarem
+no layout da raiz.
+
+00:02:28.267 --> 00:02:33.567
+Recortei e colei ambas
+no meu layout raiz.
+
+00:02:33.601 --> 00:02:37.000
+Agora eu fecho
+meu RelativeLayout
+
+00:02:37.033 --> 00:02:40.100
+e ponho esta tag
+de fechamento...
+
+00:02:40.968 --> 00:02:43.734
+lá no final.
+
+00:02:45.334 --> 00:02:47.834
+O que tenho agora,
+basicamente,
+
+00:02:47.868 --> 00:02:50.067
+é esta parte do diagrama.
+
+00:02:50.100 --> 00:02:53.934
+Parece que há erros.
+Vejamos.
+
+00:02:53.934 --> 00:02:57.801
+Certo, temos que definir
+uma altura e uma largura. Vamos lá.
+
+00:02:58.334 --> 00:03:02.033
+Meu RelativeLayout tinha
+um botão centralizado na base.
+
+00:03:02.067 --> 00:03:05.033
+Então provavelmente
+será preciso encher a tela.
+
+00:03:05.033 --> 00:03:07.400
+Vou usar "match_parent"
+nos dois.
+
+00:03:08.534 --> 00:03:11.334
+Certo. Agora tenho
+que adicionar o botão.
+
+00:03:11.334 --> 00:03:14.834
+Vou descer até aqui,
+
+00:03:14.834 --> 00:03:18.567
+onde o LinearLayout acaba
+
+00:03:18.601 --> 00:03:21.234
+e o RelativeLayout
+continua,
+
+00:03:21.267 --> 00:03:23.234
+e vou adicionar um botão.
+
+00:03:23.267 --> 00:03:26.434
+Vou encapsular
+o conteúdo dele,
+
+00:03:26.467 --> 00:03:31.234
+pois não é para o botão
+tomar toda a base da tela
+
+00:03:31.267 --> 00:03:33.534
+ou toda a tela.
+
+00:03:34.133 --> 00:03:37.200
+O pai deste botão
+é o RelativeLayout,
+
+00:03:37.234 --> 00:03:41.100
+e o texto dele é "reset".
+
+00:03:41.634 --> 00:03:43.133
+Vejamos como fica.
+
+00:03:43.133 --> 00:03:45.100
+Meu botão de zerar
+está aqui.
+
+00:03:45.133 --> 00:03:47.701
+Não é bem onde eu queria.
+
+00:03:47.734 --> 00:03:49.634
+Mas como o pai dele
+é o RelativeLayout
+
+00:03:49.634 --> 00:03:53.968
+que toma a tela toda,
+posso alinhá-lo ao pai.
+
+00:03:54.000 --> 00:03:56.934
+Quero alinhá-lo
+à base do pai...
+
+00:03:56.934 --> 00:04:00.934
+e que fique centralizado
+no sentido horizontal.
+
+00:04:00.934 --> 00:04:03.868
+Legal, meu botão
+parece estar onde devia.
+
+00:04:03.901 --> 00:04:06.033
+Vou selecionar tudo...
+
+00:04:06.033 --> 00:04:09.367
+e dar um Command + Option + L,
+no Mac,
+
+00:04:09.400 --> 00:04:12.834
+o mesmo que Control + Alt + L
+no Windows,
+
+00:04:12.868 --> 00:04:15.701
+para reformatar o código.
+
+00:04:15.734 --> 00:04:18.434
+Vamos voltar
+para nosso código Java.
+
+00:04:18.434 --> 00:04:22.968
+Eu fiz o botão,
+mas ele não faz nada.
+
+00:04:23.000 --> 00:04:25.501
+Vamos começar
+criando um método para ele.
+
+00:04:25.534 --> 00:04:29.133
+Vou fazê-lo logo antes
+dos métodos de display.
+
+00:04:29.133 --> 00:04:32.000
+"public void"...
+
+00:04:32.033 --> 00:04:34.834
+Vou chamar o método
+de "resetScore",
+
+00:04:34.868 --> 00:04:37.968
+pois quero
+que ele zere o placar.
+
+00:04:38.000 --> 00:04:42.601
+Eu subo, coloco-o no padrão
+dos demais métodos,
+
+00:04:42.634 --> 00:04:46.434
+com o "View v",
+e abro chaves.
+
+00:04:46.434 --> 00:04:49.834
+Não vou me preocupar
+com o que vem após a chave.
+
+00:04:49.868 --> 00:04:52.868
+Vou voltar
+para o código XML...
+
+00:04:52.901 --> 00:04:56.934
+e fazer a segunda parte
+da ligação do botão ao Java
+
+00:04:56.968 --> 00:05:01.734
+adicionando um atributo onClick
+para resetScore.
+
+00:05:01.734 --> 00:05:04.067
+Agora,
+quando clico neste botão,
+
+00:05:04.100 --> 00:05:05.934
+este código será acionado.
+
+00:05:05.968 --> 00:05:07.868
+Mas não tem
+nenhum código aqui.
+
+00:05:07.901 --> 00:05:09.734
+Vejamos
+o que falta adicionar.
+
+00:05:10.434 --> 00:05:13.534
+Vamos voltar à discussão
+do pseudocódigo.
+
+00:05:13.534 --> 00:05:17.133
+Quando aperto em "reset",
+o que quero que aconteça?
+
+00:05:17.167 --> 00:05:20.734
+Quero que o placar
+mostre 0x0.
+
+00:05:20.767 --> 00:05:23.467
+E quero que as variáveis
+da pontuação do time A
+
+00:05:23.501 --> 00:05:26.534
+e da pontuação do time B
+voltem para 0.
+
+00:05:26.567 --> 00:05:29.100
+Lembre-se,
+quando clico nestes botões,
+
+00:05:29.133 --> 00:05:31.834
+estou somando 2
+e exibindo a variável.
+
+00:05:31.868 --> 00:05:33.934
+Então, se a variável
+não voltar a 0,
+
+00:05:33.968 --> 00:05:35.901
+exibirei um número errado.
+
+00:05:35.934 --> 00:05:39.100
+Então fiz o seguinte
+em relação ao pseudocódigo:
+
+00:05:39.133 --> 00:05:43.234
+primeiro é preciso definir
+a pontuação de A como 0.
+
+00:05:43.234 --> 00:05:46.133
+Depois, faço o mesmo
+com o time B.
+
+00:05:46.167 --> 00:05:49.734
+Agora, o placar está 0 x 0,
+mas não está sendo exibido,
+
+00:05:49.767 --> 00:05:51.534
+razão pela qual,
+no 3º passo,
+
+00:05:51.534 --> 00:05:55.033
+eu exibo a pontuação de A,
+que foi definida como 0.
+
+00:05:55.634 --> 00:05:57.367
+E, para ser mais específico,
+
+00:05:57.400 --> 00:06:00.534
+vou exibir a pontuação de A
+aqui...
+
+00:06:00.567 --> 00:06:03.901
+e a pontuação de B
+aqui.
+
+00:06:03.934 --> 00:06:07.400
+E, por nos primeiros passos
+eu ter garantido que os zerei,
+
+00:06:07.434 --> 00:06:10.033
+será exibido 0 x 0 aqui.
+
+00:06:10.033 --> 00:06:12.100
+Agora, quando eu clicar
+em qualquer botão
+
+00:06:12.133 --> 00:06:15.434
+que atualize ScoreForTeamA
+ou ScoreForTeamB,
+
+00:06:15.467 --> 00:06:19.267
+a atualização partirá
+de 0 de pontuação.
+
+00:06:19.300 --> 00:06:23.901
+Em resetScore eu digitarei
+meu pseudocódigo como código.
+
+00:06:23.934 --> 00:06:26.567
+A primeira coisa a fazer
+é escolher "scoreTeamA"
+
+00:06:27.200 --> 00:06:29.167
+e definir seu valor como 0
+
+00:06:29.200 --> 00:06:33.701
+usando um operador de atribuição
+e o valor de 0.
+
+00:06:33.734 --> 00:06:36.133
+E não esqueça
+do ponto e vírgula.
+
+00:06:36.834 --> 00:06:38.934
+Farei o mesmo com "scoreB".
+
+00:06:42.067 --> 00:06:46.133
+Depois, vou exibir
+no lugar do time A
+
+00:06:46.167 --> 00:06:47.534
+a pontuação de A...
+
+00:06:48.400 --> 00:06:51.667
+e vou exibir
+no lugar do time B
+
+00:06:51.701 --> 00:06:53.634
+a pontuação de B.
+
+00:06:54.434 --> 00:06:57.634
+Também vou adicionar
+um comentário.
+
+00:06:58.334 --> 00:06:59.834
+Parece fazer sentido.
+
+00:06:59.834 --> 00:07:02.234
+Como faz tempo
+que não rodo no meu celular,
+
+00:07:02.234 --> 00:07:04.100
+vou clicar em "run".
+
+00:07:04.868 --> 00:07:07.734
+Legal,
+tenho um botão de "reset".
+
+00:07:07.734 --> 00:07:09.334
+Vamos ver se funciona.
+
+00:07:13.234 --> 00:07:16.167
+Ótimo, define como 0.
+Vamos clicar em outros botões
+
+00:07:16.200 --> 00:07:19.767
+só para ver se tudo
+continua funcionando.
+
+00:07:23.868 --> 00:07:26.801
+Bom. Parece que sim.
+Maravilha.
+
+00:07:28.100 --> 00:07:31.834
+Isso foi mais complicado.
+Agora vou mostrar o que acontece
+
+00:07:31.868 --> 00:07:35.334
+se fizer em outra ordem
+ou se fizer algo diferente.
+
+00:07:35.834 --> 00:07:38.734
+E se eu inverter
+estes dois?
+
+00:07:38.734 --> 00:07:41.167
+Vamos ver no que dá.
+
+00:07:42.067 --> 00:07:45.434
+Aqui está.
+Vejamos o que acontece.
+
+00:07:45.467 --> 00:07:47.834
+Vou adicionar uns pontos...
+
+00:07:48.634 --> 00:07:51.234
+Hora da verdade: "reset".
+
+00:07:53.667 --> 00:07:57.100
+Não parece fazer nada.
+Vamos tentar clicar.
+
+00:07:57.901 --> 00:08:00.367
+Interessante.
+É difícil de ver,
+
+00:08:00.400 --> 00:08:02.868
+mas antes o placar
+indicava "19".
+
+00:08:02.901 --> 00:08:05.267
+Eu apertei "reset"
+e nada aconteceu.
+
+00:08:05.300 --> 00:08:08.267
+Daí eu cliquei em lance livre
+e o placar foi para 1.
+
+00:08:09.434 --> 00:08:12.234
+Vamos somar 2 pontos
+do outro lado.
+
+00:08:12.234 --> 00:08:13.968
+Mostra 2!
+
+00:08:14.000 --> 00:08:17.367
+Vamos analisar o código
+para entender o porquê.
+
+00:08:17.400 --> 00:08:21.300
+Eu inverti a exibição
+e a definição do placar
+
+00:08:21.334 --> 00:08:24.567
+só para ver que tipo de erro
+eu poderia observar.
+
+00:08:24.601 --> 00:08:29.601
+Digamos que o time A tenha 30
+e o time B tenha 40 pontos.
+
+00:08:29.634 --> 00:08:33.234
+Quando digo "displayForTeamA",
+o placar mostrará 30,
+
+00:08:33.267 --> 00:08:35.133
+e, quando digo
+"displayForTeamB",
+
+00:08:35.167 --> 00:08:37.033
+mostrará 40.
+
+00:08:37.033 --> 00:08:41.234
+Só então o placar será
+definido como 0.
+
+00:08:41.234 --> 00:08:45.467
+Como a exibição vem antes,
+o valor 0 não vai aparecer.
+
+00:08:45.501 --> 00:08:48.200
+Mas a variável será, sim, 0.
+
+00:08:48.234 --> 00:08:52.534
+Então, quando eu aperto
+"addThreeForTeamB",
+
+00:08:52.567 --> 00:08:57.000
+parte-se do placar de 0,
+definido aqui,
+
+00:08:57.033 --> 00:08:59.901
+soma-se 3 e mostra-se 3.
+
+00:08:59.934 --> 00:09:05.667
+Para nós, parecerá que o time B
+foi de 30 pontos no placar
+
+00:09:05.701 --> 00:09:11.434
+para, após clicar em "reset",
+ir para 3 pontos, o que é esquisito.
+
+00:09:11.434 --> 00:09:15.234
+Um jeito de consertar isso,
+fora retornar à ordem certa,
+
+00:09:15.267 --> 00:09:19.133
+é digitar "display(0)" aqui.
+
+00:09:19.133 --> 00:09:22.100
+Pode testar.
+Funcionaria mesmo,
+
+00:09:22.133 --> 00:09:24.601
+só é meio ilógico.
+
+00:09:25.234 --> 00:09:28.033
+Gosto de exemplos assim
+porque eles mostram
+
+00:09:28.067 --> 00:09:30.601
+a beleza e a subjetividade
+da programação.
+
+00:09:30.634 --> 00:09:33.300
+Contudo, neste caso,
+tenho convicção
+
+00:09:33.334 --> 00:09:36.100
+de que o código
+estava melhor antes.
+
+00:09:36.133 --> 00:09:37.601
+Mas você verá situações
+
+00:09:37.634 --> 00:09:42.634
+em que há duas formas certas
+de escrever um mesmo código.
+
+00:09:42.667 --> 00:09:45.133
+Como nem sempre há
+uma resposta correta,
+
+00:09:45.167 --> 00:09:48.934
+não se limite a fazer
+estritamente do modo certo.
+
+00:09:48.968 --> 00:09:51.133
+Tente programar algo
+do seu jeito,
+
+00:09:51.133 --> 00:09:53.133
+veja como outros fazem
+
+00:09:53.133 --> 00:09:57.400
+e depois compare
+a eficiência e a coesão.
+
+00:09:57.434 --> 00:10:00.534
+Esse tipo de discussão
+pode ensinar muito.
+
+00:10:00.567 --> 00:10:03.834
+Bom, vou reverter o código
+ao estado anterior,
+
+00:10:03.834 --> 00:10:05.000
+quando funcionava,
+
+00:10:05.033 --> 00:10:07.501
+e agora meu app
+já funciona plenamente.
+
+00:10:07.534 --> 00:10:10.467
+Mas está feio.
+Vamos dar um jeito nisso.
+

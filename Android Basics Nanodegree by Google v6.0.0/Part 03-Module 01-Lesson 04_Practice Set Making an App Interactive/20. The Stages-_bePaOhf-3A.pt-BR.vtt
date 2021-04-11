@@ -1,0 +1,574 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.710 --> 00:00:04.570
+Eu vou responder a estas perguntas
+antes de entrar no XML.
+
+00:00:04.570 --> 00:00:07.050
+A primeira coisa é selecionar os <i>views</i>.
+
+00:00:07.050 --> 00:00:08.670
+Vou desenhar caixas em
+volta das que eu vejo.
+
+00:00:09.700 --> 00:00:11.130
+Certo, há cinco diferentes <i>views</i>,
+
+00:00:11.130 --> 00:00:14.070
+sem contar o <i>view group</i>,
+que é tecnicamente considerado um <i>view</i>.
+
+00:00:14.070 --> 00:00:17.610
+De todo modo, estes cinco <i>views</i>
+são dois <i>TextViews</i> aqui em cima,
+
+00:00:17.610 --> 00:00:19.330
+seguidos de três Botões.
+
+00:00:19.330 --> 00:00:24.480
+E não há <i>ImageViews</i> aqui em
+lugar algum, assim eu diria sem <i>ImageViews</i>
+
+00:00:24.480 --> 00:00:28.300
+Você deve estar imaginando por que eu 
+decidi que estes dois <i>TextViews</i> distintos.
+
+00:00:28.300 --> 00:00:31.940
+Bem, no produto final, o 
+estilo do time A e
+
+00:00:31.940 --> 00:00:34.050
+o placar são bem diferentes.
+
+00:00:34.050 --> 00:00:37.530
+Então eu resolvi manter estes
+dois como <i>TextViews</i> separados.
+
+00:00:37.530 --> 00:00:40.080
+Seguindo ao passo dois, que
+é posicionar os <i>views</i>.
+
+00:00:40.080 --> 00:00:43.100
+Eu vou selecionar qual
+<i>ViewGroup</i> eu quero usar aqui.
+
+00:00:43.100 --> 00:00:46.830
+E os dois que estão na minha mente
+são <i>LinearLayout</i> e <i>RelativeLayout</i>.
+
+00:00:46.830 --> 00:00:49.450
+Esta é uma coluna vertical de <i>views</i>.
+
+00:00:49.450 --> 00:00:52.720
+Então fica bem claro para mim o 
+que eu quero, e isso é um <i>LinearLayout</i>.
+
+00:00:54.370 --> 00:00:57.310
+Finalmente, o passo três, que é
+dar estilo aos <i>views</i>.
+
+00:00:57.310 --> 00:01:00.320
+E eu vou abordar este enquanto
+eu trabalho no XML.
+
+00:01:00.320 --> 00:01:02.780
+Certo. Vamos ao XML.
+
+00:01:02.780 --> 00:01:04.970
+Vamos prestar atenção
+à aba texto.
+
+00:01:04.970 --> 00:01:07.740
+A primeira coisa que vou fazer aqui é só
+
+00:01:07.740 --> 00:01:09.760
+apagar algumas coisas de que não preciso.
+
+00:01:09.760 --> 00:01:12.470
+Vou seguir adiante e começar
+apagando este <i>TextView</i>.
+
+00:01:13.490 --> 00:01:16.597
+E apagarei também todos esses
+<i>paddingLeft</i>,<i>paddingRight</i>,
+
+00:01:16.597 --> 00:01:19.750
+<i>paddingTop</i> e <i>paddingBottom</i>.
+
+00:01:19.750 --> 00:01:23.090
+Tomando muito cuidado para não
+apagar coisas que você não quer.
+
+00:01:24.568 --> 00:01:27.760
+Dissemos que o <i>ViewGroup</i> que
+vamos usar não é um <i>RelativeLayout</i>
+
+00:01:27.760 --> 00:01:30.370
+mas um <i>LinearLayout</i>,
+assim vou mudar isso agora.
+
+00:01:31.370 --> 00:01:34.590
+E dentro deste <i>LinearLayout</i> eu
+terei dois <i>TextViews</i>
+
+00:01:34.590 --> 00:01:35.800
+seguidos de três Botões.
+
+00:01:35.800 --> 00:01:37.710
+Então vou começar a fazê-los.
+
+00:01:37.710 --> 00:01:40.460
+Agora não serei muito detalhista
+sobre qual será a largura e
+
+00:01:40.460 --> 00:01:42.780
+a altura que deste <i>TextView</i>.
+
+00:01:42.780 --> 00:01:45.300
+Por enquanto só vou deixar isto
+como um <i>wrap_content</i>,
+
+00:01:45.300 --> 00:01:48.070
+o qual porá a caixa do <i>TextView</i>
+bem em volta do texto.
+
+00:01:49.310 --> 00:01:52.490
+Vou configurar o texto para
+este <i>TextView</i> também.
+
+00:01:52.490 --> 00:01:54.710
+E este primeiro <i>TextView</i>
+só vai dizer <i>Time A</i>.
+
+00:01:56.250 --> 00:01:58.710
+Vejamos como isso se
+parece no <i>Preview</i>.
+
+00:01:58.710 --> 00:02:01.800
+Certo. Eu vejo um pequeno
+<i>TextView</i> aqui que diz <i>Time A</i>.
+
+00:02:01.800 --> 00:02:03.610
+Agora façamos mais dois.
+
+00:02:03.610 --> 00:02:07.200
+O próximo abaixo deste é o placar,
+e isso é um <i>TextView</i> também.
+
+00:02:07.200 --> 00:02:09.758
+Começaremos digitando <i>Text</i>.
+
+00:02:09.758 --> 00:02:12.490
+Eu vejo a palavra <i>TextView</i>,
+então eu aperto Enter.
+
+00:02:12.490 --> 00:02:15.590
+E eu também vou fazer
+disso um <i>wrap_content</i>.
+
+00:02:15.590 --> 00:02:17.860
+E vou adicionar o texto.
+
+00:02:17.860 --> 00:02:21.560
+Bem, o placar geralmente começa em zero,
+então vamos fazê-lo começar em zero.
+
+00:02:22.580 --> 00:02:23.250
+E agora meus Botões.
+
+00:02:23.250 --> 00:02:25.510
+Vou começar digitando a
+palavra <i>Button</i>
+
+00:02:25.510 --> 00:02:28.230
+Vá em frente e use o <i>wrap_content</i>
+para estes também.
+
+00:02:28.230 --> 00:02:32.002
+O primeiro <i>Button</i> vai dizer <i>+3 Pontos</i>.
+
+00:02:32.002 --> 00:02:34.800
+Eu vou copiar isso e
+
+00:02:34.800 --> 00:02:39.780
+colar uma vez, colar duas vezes
+para ter mais dois Botões.
+
+00:02:39.780 --> 00:02:43.020
+E teremos um <i>Button</i> que
+diz <i>+2 Pontos</i> e
+
+00:02:43.020 --> 00:02:45.250
+um <i>Button</i> que diz <i>Lance Livre</i>.
+
+00:02:45.250 --> 00:02:47.000
+Vejamos como isso se parece no <i>Preview</i>.
+
+00:02:48.180 --> 00:02:51.070
+Bem, parece que tenho três Botões.
+
+00:02:51.070 --> 00:02:54.420
+Consigo ver <i>Time A</i> e <i>0</i>.
+
+00:02:54.420 --> 00:02:55.910
+Portanto tenho todos os meus <i>views</i>,
+
+00:02:55.910 --> 00:02:59.100
+Mas isto não se parece muito com o que
+nosso objetivo final deveria se parecer.
+
+00:02:59.100 --> 00:03:01.080
+Lembre-se, eles estão
+numa coluna vertical.
+
+00:03:01.080 --> 00:03:03.222
+Acho que devo mudar a orientação
+do meu layout, assim
+
+00:03:03.222 --> 00:03:05.190
+Vou fazer isso.
+
+00:03:05.190 --> 00:03:09.600
+Começarei digitando <i>orientation</i>
+e eu quero que seja <i>vertical</i>.
+
+00:03:09.600 --> 00:03:11.860
+Assim está um pouco melhor.
+
+00:03:11.860 --> 00:03:17.290
+Estes botões eram expandidos para
+preencher a largura da janela.
+
+00:03:17.290 --> 00:03:19.950
+Então eu provavelmente não queira
+usar o <i>wrap_content</i> para
+
+00:03:19.950 --> 00:03:23.290
+os Botões. Ao invés disso, 
+vou usar o <i>match_parent</i>.
+
+00:03:23.290 --> 00:03:24.470
+Então vou mudar isso já.
+
+00:03:25.830 --> 00:03:29.030
+Então as larguras de todos os
+meus Botões agora estão <i>match_parent</i>.
+
+00:03:29.030 --> 00:03:29.740
+Vamos ao <i>Preview</i>.
+
+00:03:30.760 --> 00:03:33.470
+Parece bem melhor,
+eles se expandiram.
+
+00:03:33.470 --> 00:03:34.270
+Legal.
+
+00:03:34.270 --> 00:03:39.220
+Bem, meu texto ainda está
+meio espremido no canto,
+
+00:03:39.220 --> 00:03:43.680
+e para consertar isso vou usar
+uma coisa chamada <i>gravity</i>.
+
+00:03:43.680 --> 00:03:46.430
+Estou aqui com um Google Drawing.
+
+00:03:46.430 --> 00:03:48.710
+Façamos uma caixa de texto
+no Google Drawing.
+
+00:03:50.030 --> 00:03:52.350
+Isto é bastante como os <i>bounds</i> de um <i>view</i>.
+
+00:03:52.350 --> 00:03:54.330
+Posso digitar a palavra <i>Time A</i>,
+
+00:03:54.330 --> 00:03:57.790
+e por padrão ela estará no
+canto superior esquerdo.
+
+00:03:57.790 --> 00:04:00.780
+E isto é o mesmo para <i>TextViews</i>.
+Quando você põe texto num <i>TextView</i>,
+
+00:04:00.780 --> 00:04:03.440
+ele estará no canto superior
+esquerdo por padrão.
+
+00:04:03.440 --> 00:04:08.700
+Agora, no Google Drawings, eu posso
+selecionar este texto e usar basicamente
+
+00:04:08.700 --> 00:04:13.740
+o equivalente de um atributo, chamado
+<i>Align</i> para centralizá-lo
+
+00:04:13.740 --> 00:04:18.940
+horizontalmente dentro da caixa de texto
+e centralizá-lo verticalmente também.
+
+00:04:18.940 --> 00:04:20.190
+Bem legal.
+
+00:04:20.190 --> 00:04:23.980
+Pegar o conteúdo do <i>view</i> e movê-lo
+dentro dos limites do <i>view</i>
+
+00:04:23.980 --> 00:04:27.340
+é exatamente o que o layout
+<i>gravity</i> faz.
+
+00:04:27.340 --> 00:04:30.330
+E se você pensa que isso se assemelha
+a alguns métodos de alinhamento
+
+00:04:30.330 --> 00:04:34.220
+que você pode usar com <i>RelativeLayout</i>,
+é mesmo, mas você pode usar o atributo
+
+00:04:34.220 --> 00:04:36.990
+<i>gravity</i> com <i>LinearLayout</i>, que
+é o que o torna poderoso.
+
+00:04:36.990 --> 00:04:38.670
+Daremos uma olhada nele no código.
+
+00:04:40.130 --> 00:04:43.980
+Vou pegar meu primeiro <i>TextView</i>
+e vou começar a digitar <i>gravity</i>.
+
+00:04:45.190 --> 00:04:46.970
+Com <i>gravity</i> tenho duas opções,
+
+00:04:46.970 --> 00:04:48.990
+<i>layout_gravity</i> e <i>gravity</i>.
+
+00:04:48.990 --> 00:04:50.570
+Eu acabei de falar sobre o 
+atributo <i>gravity</i>.
+
+00:04:50.570 --> 00:04:52.650
+Assim é este que vou usar.
+
+00:04:52.650 --> 00:04:55.650
+E agora tenho um monte de opções aqui,
+
+00:04:55.650 --> 00:04:58.220
+e acho que quero que seja
+centralizado horizontalmente.
+
+00:04:58.220 --> 00:05:00.088
+Então é isso que vou usar.
+
+00:05:00.088 --> 00:05:02.620
+E eu vou ver no <i>Preview</i> o que isso fez.
+
+00:05:04.010 --> 00:05:08.130
+Não parece ter feito muito, mas de
+fato há um motivo para isso.
+
+00:05:09.440 --> 00:05:13.300
+Se eu clicar aqui, e vamos aumentar o zoom
+já que pode ser difícil que você veja...
+
+00:05:15.750 --> 00:05:20.960
+Aqui temos <i>Time A</i>, e você pode ver
+o limite do <i>view</i> em volta dele.
+
+00:05:20.960 --> 00:05:24.650
+Bem, se eu dissesse que isto está
+centralizado dentro do <i>view</i>,
+
+00:05:24.650 --> 00:05:26.950
+você não poderia discutir comigo.
+
+00:05:26.950 --> 00:05:31.510
+Ele realmente parece centralizado no
+<i>view</i>. É só que o <i>view</i> é bem pequeno
+
+00:05:31.510 --> 00:05:33.020
+Voltando ao nosso Google Drawing,
+
+00:05:33.020 --> 00:05:38.940
+é mais ou menos como se eu diminuísse
+até ficar do tamanho do texto.
+
+00:05:38.940 --> 00:05:40.450
+Está centralizado, mas
+
+00:05:40.450 --> 00:05:44.520
+não ficaria muito diferente se ele
+fosse empurrado para a esquerda.
+
+00:05:44.520 --> 00:05:47.230
+Se eu quisesse centralizar no telefone,
+
+00:05:47.230 --> 00:05:50.090
+Eu preciso fazer com que o <i>view</i>
+se estique até a largura do telefone.
+
+00:05:50.090 --> 00:05:52.170
+O que requer que mudemos a largura.
+
+00:05:54.020 --> 00:05:55.970
+Aqui de volta eu vou fechar meu <i>Preview</i>,
+
+00:05:57.200 --> 00:05:58.840
+e eu vou ao <i>width</i> aqui.
+
+00:06:00.120 --> 00:06:04.850
+Ao invés de usar <i>wrap_content</i>,
+vou usar <i>match_parent</i>.
+
+00:06:04.850 --> 00:06:06.150
+Vamos ver nosso <i>Preview</i> de novo.
+
+00:06:07.430 --> 00:06:08.930
+Menos zoom.
+
+00:06:09.120 --> 00:06:10.610
+Está bem melhor.
+
+00:06:10.610 --> 00:06:12.200
+Parece estar centralizado.
+
+00:06:12.200 --> 00:06:14.420
+Façamos o mesmo com o placar aqui.
+
+00:06:15.840 --> 00:06:18.910
+Vou adicionar o <i>gravity</i> a isso também,
+
+00:06:18.910 --> 00:06:20.425
+<i>gravity</i> e não <i>layout_gravity</i>.
+
+00:06:20.425 --> 00:06:25.950
+<i>center_horizontal</i> e vou mudar
+as larguras para <i>match_parent</i>.
+
+00:06:27.260 --> 00:06:29.160
+Vamos ver de novo.
+
+00:06:29.160 --> 00:06:30.870
+Legal!
+Tudo está centralizado.
+
+00:06:30.870 --> 00:06:32.190
+Parece muito bom.
+
+00:06:32.190 --> 00:06:34.400
+Só que está tudo muito apertado junto.
+
+00:06:34.400 --> 00:06:37.330
+Não há muito espaço para respirar
+entre estes elementos.
+
+00:06:37.330 --> 00:06:41.020
+Vou dar a cada um dos
+<i>TextViews</i> 4 de <i>padding</i> .
+
+00:06:41.020 --> 00:06:45.875
+Vou começar a digitar <i>padding</i>,
+vou fazer <i>4dp</i>.
+
+00:06:47.000 --> 00:06:48.360
+Lembra-se do <i>dp</i>?
+
+00:06:48.360 --> 00:06:52.010
+E estou usando só <i>padding</i>, não
+<i>padding_bottom</i> ou coisas assim.
+
+00:06:52.010 --> 00:06:54.260
+E isto dará <i>4dp</i> ao redor
+de todo o <i>TextView</i>.
+
+00:06:54.260 --> 00:06:56.950
+Vejamos como isso está no <i>Preview</i>.
+
+00:06:58.390 --> 00:07:00.850
+Isto me dá um pouco mais de espaço.
+
+00:07:00.850 --> 00:07:03.750
+Farei o mesmo com o <i>TextView</i> do placar.
+
+00:07:07.830 --> 00:07:10.808
+Agora vou tentar fazer o mesmo com <i>Button</i>.
+
+00:07:15.811 --> 00:07:18.610
+Bem, isso não parece ter 
+feito muita coisa.
+
+00:07:18.610 --> 00:07:23.693
+E se eu o deixasse um pouco maior, tipo 8?
+
+00:07:23.693 --> 00:07:25.528
+20?
+
+00:07:25.528 --> 00:07:29.820
+Interessante. Parece que isso está 
+tornando o próprio botão maior.
+
+00:07:29.820 --> 00:07:31.740
+Eu não quero que o botão seja maior.
+
+00:07:31.740 --> 00:07:33.980
+Quero que o espaço ao redor do
+botão seja maior.
+
+00:07:33.980 --> 00:07:37.640
+E de fato, isso é um trabalho melhor
+para o <i>layout_margin</i>.
+
+00:07:37.640 --> 00:07:41.040
+Lembre-se: <i>padding</i> acrescenta
+<i>padding</i> dentro do <i>view</i>,
+
+00:07:41.040 --> 00:07:42.930
+ao passo que <i>margin</i> põe
+espaço ao redor do <i>view</i>.
+
+00:07:43.930 --> 00:07:45.310
+Assim, mudaremos isso para <i>layout_margin</i>.
+
+00:07:45.310 --> 00:07:46.890
+Vou colocar <i>8dp</i>.
+
+00:07:46.890 --> 00:07:48.850
+Parece melhor.
+
+00:07:48.850 --> 00:07:53.120
+Agora há espaço em volta do <i>view</i>
+entre estes dois <i>views</i>.
+
+00:07:53.120 --> 00:07:55.019
+Façamos isso com os outros <i>Buttons</i>.
+
+00:07:56.480 --> 00:07:59.710
+<i>Margin</i>, não <i>padding</i>, <i>layout_margin</i>.
+
+00:07:59.710 --> 00:08:01.440
+Isso parece muito bom!
+
+00:08:01.440 --> 00:08:04.100
+Agora, se você escolhesse atributos 
+diferentes dos que eu escolhi,
+
+00:08:04.100 --> 00:08:08.320
+como talvez <i>padding</i> 5
+ao invés de 4, tudo bem.
+
+00:08:08.320 --> 00:08:11.710
+Lembre-se, neste ponto só estou
+tentando deixar as coisas legíveis.
+
+00:08:11.710 --> 00:08:15.409
+Nos preocuparemos com tamanhos
+de fonte e cores bonitas mais tarde.
+
+00:08:17.920 --> 00:08:20.670
+Ótimo trabalho!
+Você terminou este passo.
+

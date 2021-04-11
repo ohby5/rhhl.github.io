@@ -1,0 +1,156 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.280 --> 00:00:03.860
+Neste cenário, você está trabalhando
+em um aplicativo chamado exame de saúde, e
+
+00:00:03.860 --> 00:00:07.382
+o exame de saúde é basicamente
+um aplicativo que administra um teste, é
+
+00:00:07.382 --> 00:00:11.350
+um teste que diz a pessoa que está
+usando-o se eles estão vivendo saudavelmente.
+
+00:00:12.610 --> 00:00:16.331
+As perguntas aparecem nesta caixa aqui,
+e o usuário pode responder sim,
+
+00:00:16.331 --> 00:00:20.526
+Às vezes, ou não, e digamos que não há
+cerca de 100 perguntas diferentes, e
+
+00:00:20.526 --> 00:00:24.740
+eles variam de coisas como, você
+exerce mais de três vezes por semana?
+
+00:00:24.740 --> 00:00:27.140
+Você bebe menos de dois
+bebidas com cafeína por dia?
+
+00:00:27.140 --> 00:00:28.840
+Ou, você tem um suporte para
+rede social?
+
+00:00:28.840 --> 00:00:32.490
+Agora, as perguntas são formuladas de tal
+de forma que quando você diz Sim, isso sempre
+
+00:00:32.490 --> 00:00:36.410
+Significa que você é mais saudável e quando você
+diz Não, isso significa que você é menos saudável.
+
+00:00:36.410 --> 00:00:39.240
+Às vezes é uma espécie de
+uma resposta inconclusiva.
+
+00:00:39.240 --> 00:00:41.980
+E o que o aplicativo está fazendo é
+realmente manter o controle de uma pontuação.
+
+00:00:41.980 --> 00:00:44.890
+Quando você bate Sim,
+ele adiciona 1 para o nível sanitário.
+
+00:00:44.890 --> 00:00:48.300
+Quando você responder Às vezes,
+ele permanece inalterado, e
+
+00:00:48.300 --> 00:00:51.260
+quando você responder Não,
+subtrai 1 do nível de saúde.
+
+00:00:51.260 --> 00:00:53.940
+Além disso, uma vez que você selecionou
+uma dessas opções,
+
+00:00:53.940 --> 00:00:56.800
+ele vai mostrar-lhe um resumo de
+o que você acabou de responder e
+
+00:00:56.800 --> 00:01:00.020
+qual é o seu nível de saúde atual 
+antes de dar-lhe a pergunta seguinte.
+
+00:01:00.020 --> 00:01:02.470
+Nós apenas estamos indo para olhar
+a interação entre clicar em um dos
+
+00:01:02.470 --> 00:01:06.360
+estes botões e mostrando o resumo
+de onde você está aqui mesmo.
+
+00:01:06.360 --> 00:01:07.310
+Vamos olhar para o código.
+
+00:01:07.310 --> 00:01:11.130
+Ok, então aqui está o código, e eu também tenho
+desde que nas notas do instrutor,
+
+00:01:11.130 --> 00:01:14.250
+se você quiser dar uma olhada
+a espécie de versão texto desta.
+
+00:01:14.250 --> 00:01:16.120
+Mais uma vez, 
+não é o código completo.
+
+00:01:16.120 --> 00:01:18.700
+Essas pequenas elipses dizem
+que não há código antes e
+
+00:01:18.700 --> 00:01:20.560
+após o que os métodos
+aqui mostram.
+
+00:01:20.560 --> 00:01:21.955
+Então como isso funciona?
+
+00:01:21.955 --> 00:01:25.850
+Bem, quando você apertar o botão Sim,
+o método sim é chamado.
+
+00:01:25.850 --> 00:01:31.210
+Isto aumenta a <i>healthLevel</i>, faz um
+mensagem, e em seguida, exibe a mensagem.
+
+00:01:31.210 --> 00:01:36.030
+Da mesma forma, quando você bate o Às vezes
+botão, o método às vezes é chamado.
+
+00:01:36.030 --> 00:01:38.840
+A única diferença aqui é que
+em vez de adicionar um, você adiciona 0,
+
+00:01:38.840 --> 00:01:41.640
+o que significa que o valor da
+variável não muda realmente.
+
+00:01:41.640 --> 00:01:43.770
+E o formato é semelhante
+quando você bater no botão Não.
+
+00:01:43.770 --> 00:01:47.520
+A mensagem não é chamado,
+1 é subtraída da <i>healthLevel</i> e
+
+00:01:47.520 --> 00:01:48.740
+uma mensagem é impressa.
+
+00:01:48.740 --> 00:01:53.230
+Ok, temos duas variáveis ​​do presente
+programa, <i>healthLevel</i> e mensagem.
+
+00:01:53.230 --> 00:01:54.860
+Vamos olhar para primeira mensagem.
+
+00:01:54.860 --> 00:01:56.510
+Assim, a minha primeira 
+pergunta para você é:
+
+00:01:56.510 --> 00:02:00.610
+A partir do código que você vê aqui,
+é mensagem de uma variável local ou global?
+

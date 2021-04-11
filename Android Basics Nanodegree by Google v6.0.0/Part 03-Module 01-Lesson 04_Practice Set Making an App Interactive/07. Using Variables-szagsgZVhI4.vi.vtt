@@ -1,0 +1,475 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.650 --> 00:00:01.569
+Trong loạt bài kiểm tra tiếp theo,
+
+00:00:01.569 --> 00:00:04.390
+Tôi sẽ chỉ cho các bạn cách
+các biến được sử dụng.
+
+00:00:04.390 --> 00:00:08.100
+Tất cả các chương trình mà bạn sẽ
+làm trong phần 2, sẽ biên dịch.
+
+00:00:08.100 --> 00:00:10.820
+Điều đó có nghĩa là máy tính có thể
+hiểu đoạn mã được viết ra
+
+00:00:10.820 --> 00:00:12.614
+cho chúng, và chúng ta
+sẽ có thể tạo ra một ứng dụng.
+
+00:00:13.675 --> 00:00:16.065
+Bây giờ, khi các chương trình
+có thể chạy trên điện thoại,
+
+00:00:16.065 --> 00:00:19.605
+có khả năng rằng chúng có thể
+không thực hiện được mục tiêu dự định.
+
+00:00:19.605 --> 00:00:21.775
+Điều này được gọi là lỗi logic.
+
+00:00:21.775 --> 00:00:24.535
+Lỗi logic nghĩa là có
+cái gì đó sai logic mà bạn
+
+00:00:24.535 --> 00:00:25.245
+thường viết mã.
+
+00:00:26.895 --> 00:00:28.445
+Hãy xem một chương trình ngắn và
+
+00:00:28.445 --> 00:00:32.415
+kịch bản ví dụ và tôi sẽ hướng dẫn bạn
+cách giải quyết một trong những lỗi này.
+
+00:00:32.415 --> 00:00:34.380
+Đây là ví dụ.
+
+00:00:34.380 --> 00:00:37.560
+Mỗi chương trình này sẽ có một mục tiêu,
+mà sẽ được viết ra ở đây.
+
+00:00:37.560 --> 00:00:40.450
+Bản thân chương trình sẽ
+được đóng khung màu xanh.
+
+00:00:40.450 --> 00:00:44.590
+Được rồi, mục tiêu của chương trình này là
+tính toán cái gọi là tình trạng thiếu ngủ.
+
+00:00:44.590 --> 00:00:48.080
+Bạn cần ngủ bao nhiêu thay đổi chút ít
+tùy theo độ tuổi, nhưng trung bình,
+
+00:00:48.080 --> 00:00:50.730
+con người cần ngủ khoảng tám
+tiếng mỗi đêm.
+
+00:00:50.730 --> 00:00:54.710
+Cái mà chương trình này cố gắng làm là
+tính toán sự thiếu ngủ trong một tuần.
+
+00:00:54.710 --> 00:00:57.850
+Người dùng của chương trình sẽ tiến tới
+và ước tính họ ngủ trung bình bao nhiêu
+
+00:00:57.850 --> 00:01:02.310
+vào ngày thường trong tuần, và ngủ
+trung bình bao nhiêu vào ngày cuối tuần.
+
+00:01:02.310 --> 00:01:06.340
+Ở ví dụ này, chúng ta giả sử
+người dùng ngủ năm giờ vào ngày thường
+
+00:01:06.340 --> 00:01:08.190
+và chín giờ vào ngày cuối tuần.
+
+00:01:08.190 --> 00:01:11.400
+Đoạn mã cho nhiệm vụ này là ở đây
+trong khung màu xanh lá cây.
+
+00:01:11.400 --> 00:01:14.390
+Điều đầu tiên mà bạn sẽ thử
+làm là đọc qua đoạn mã này và
+
+00:01:14.390 --> 00:01:17.130
+quyết định xem mục tiêu
+đã được hoàn thành hay chưa.
+
+00:01:17.130 --> 00:01:19.620
+Sau đó, bạn cũng sẽ
+đi qua từng dòng lệnh
+
+00:01:19.620 --> 00:01:23.490
+diễn ra trong đoạn mã và quyết định
+cái gì thực sự hiển thị trên màn hình.
+
+00:01:23.490 --> 00:01:28.920
+Giả sử rằng phương thức này gọi ra đây
+những thứ trông giống như hiển thị và
+
+00:01:28.920 --> 00:01:29.860
+có dấu ngoặc đơn và
+
+00:01:29.860 --> 00:01:32.960
+thứ gì đó ở giữa chúng,
+sẽ hiển thị nội dung lên màn hình.
+
+00:01:32.960 --> 00:01:35.860
+Bây giờ, một vài trong số vấn đề này
+sẽ có nhiều phần nội dung mà chúng
+
+00:01:35.860 --> 00:01:40.410
+cần hiển thị, nên bạn có thể thấy
+display1, display2, display3.
+
+00:01:40.410 --> 00:01:42.060
+Được rồi,
+nếu bạn vẫn đang theo dõi video này,
+
+00:01:42.060 --> 00:01:45.120
+có lẽ bạn đang tự hỏi làm thế nào
+để giải quyết một trong các vấn đề này.
+
+00:01:45.120 --> 00:01:47.930
+Đây không phải là lần đầu tiên bạn
+tương tác với nhiều biến,
+
+00:01:47.930 --> 00:01:50.540
+các giá trị có thể thay đổi
+một vài lần trong vấn đề.
+
+00:01:51.800 --> 00:01:54.590
+Để tôi thực hiện cái đầu tiên cùng
+bạn trước khi tôi để bạn thoải mái.
+
+00:01:54.590 --> 00:01:57.990
+Bây giờ tôi sẽ sử dụng kỹ thuật gọi là
+mô phỏng tay và kỹ thuật này
+
+00:01:57.990 --> 00:02:01.050
+liên quan đến việc cố gắng tìm hiểu
+máy tính đang làm gì,
+
+00:02:01.050 --> 00:02:03.090
+mà không gắn
+nó với máy tính.
+
+00:02:03.090 --> 00:02:06.230
+Với chúng ta, nó là một cách có tổ chức
+để theo dõi những gì đang xảy ra với
+
+00:02:06.230 --> 00:02:07.580
+các biến.
+
+00:02:07.580 --> 00:02:10.190
+Được rồi, giờ bạn sẽ đi từng dòng một
+để tôi bắt đầu dòng này với bạn.
+
+00:02:10.190 --> 00:02:13.130
+Trong dòng đầu tiên ở đây tôi thấy
+khai báo của một biến, vì vậy
+
+00:02:13.130 --> 00:02:15.560
+Tôi sẽ tiếp tục và viết tên biến
+là ngày trong tuần.
+
+00:02:17.030 --> 00:02:19.890
+Nó cũng được khởi tạo
+đến một giá trị là 5,
+
+00:02:19.890 --> 00:02:22.280
+vậy ở ngày trong tuần, tôi
+sẽ đặt giá trị 5.
+
+00:02:22.280 --> 00:02:25.794
+Nó thể hiện rằng biến
+ngày trong tuần hiện lưu trữ 5.
+
+00:02:27.550 --> 00:02:29.760
+Được rồi, đó là dòng đầu tiên,
+Tôi sẽ di chuyển đến dòng kế tiếp.
+
+00:02:29.760 --> 00:02:32.620
+Ta có một biến gọi là ngày cuối tuần,
+vì vậy tôi sẽ viết ra,
+
+00:02:32.620 --> 00:02:37.770
+và giá trị của biến đó là 9.
+
+00:02:37.770 --> 00:02:39.110
+Nó trông ổn rồi, nên
+
+00:02:39.110 --> 00:02:42.310
+tôi sẽ chuyển sang dòng tiếp theo
+là một khai báo và
+
+00:02:42.310 --> 00:02:45.410
+thuyết minh của biến
+optimalHours, nên tôi sẽ làm tương tự.
+
+00:02:48.090 --> 00:02:49.690
+Được rồi,
+Tôi sẽ không viết các giá trị 7*8.
+
+00:02:49.690 --> 00:02:52.730
+Thực ra, tôi sẽ tính toán nó ra,
+bởi vì nó là
+
+00:02:52.730 --> 00:02:55.180
+cái được lưu trữ trong optimalHours.
+
+00:02:55.180 --> 00:02:59.660
+Bằng cách tính nhẩm,
+7 lần 8 là 56.
+
+00:02:59.660 --> 00:03:02.170
+Rồi, chúng ta có một khai báo khác ở đây.
+
+00:03:02.170 --> 00:03:06.030
+Ta tạo ra một biến gọi là actualHours,
+vậy tôi sẽ viết nó ra.
+
+00:03:06.030 --> 00:03:08.260
+Nó bằng giá trị
+của ngày trong tuần, và
+
+00:03:08.260 --> 00:03:10.130
+là giá trị hiện tại của ngày trong tuần.
+
+00:03:10.130 --> 00:03:13.170
+Đó không phải giá trị quá khứ hay
+giá trị tương lai của ngày trong tuần.
+
+00:03:13.170 --> 00:03:17.370
+Giờ ta đang theo dõi giá trị hiện tại
+của ngày trong tuần kết thúc ở đây là gì.
+
+00:03:17.370 --> 00:03:19.720
+Vì vậy, tôi có thể tìm ở đây và
+thấy rằng nó là 5.
+
+00:03:19.720 --> 00:03:21.920
+Tôi thực sự nên nghĩ
+nó là con số 5.
+
+00:03:21.920 --> 00:03:25.570
+Nó nói rằng int
+actualHours bằng 5, nên
+
+00:03:25.570 --> 00:03:28.230
+Tôi sẽ tiếp tục và
+viết nó ở đó.
+
+00:03:29.230 --> 00:03:31.070
+Chúng ta sẽ chuyển đến dòng kế tiếp.
+
+00:03:31.070 --> 00:03:35.800
+Bây giờ chúng ta lại thay đổi giờ thực tế
+để bằng với giá trị hiện tại
+
+00:03:35.800 --> 00:03:40.020
+của actualHours cộng cuối tuần nhân 2.
+
+00:03:40.020 --> 00:03:45.720
+Tôi có thể xem đến đây, giá trị
+hiện tại của actualHours là 5 và
+
+00:03:45.720 --> 00:03:50.720
+giá trị hiện tại của cuối tuần là 9.
+
+00:03:50.720 --> 00:03:53.330
+Bây giờ tôi có phương trình
+nhỏ này ở đây.
+
+00:03:53.330 --> 00:03:56.100
+Tôi làm phép nhân trước
+phép cộng sau,
+
+00:03:56.100 --> 00:03:59.240
+9 lần 2 là 18 và sau đó cộng thêm 5.
+
+00:03:59.240 --> 00:04:03.670
+Và tính nhẩm một chút,
+18 cộng 5 là 23.
+
+00:04:03.670 --> 00:04:06.350
+Nó bằng 23.
+
+00:04:06.350 --> 00:04:11.100
+Và tôi cần phải gạch đi giá trị cũ
+của số giờ thực tế, và
+
+00:04:11.100 --> 00:04:13.650
+điền vào giá trị mới của giờ thực tế.
+
+00:04:13.650 --> 00:04:14.810
+Xong rồi.
+
+00:04:14.810 --> 00:04:16.440
+Tiếp tục chuyển đến dòng kế tiếp.
+
+00:04:16.440 --> 00:04:19.540
+Chúng ta có n giải pháp, vậy
+đó là một khai báo biến.
+
+00:04:19.540 --> 00:04:21.000
+Nó được thiết lập bằng một cái gì đó,
+
+00:04:21.000 --> 00:04:22.820
+nhưng trước hết, tôi sẽ viết ra
+các giải pháp từ.
+
+00:04:22.820 --> 00:04:26.860
+Và giải pháp bằng số giờ tối ưu 
+trừ đi giờ thực tế.
+
+00:04:26.860 --> 00:04:32.700
+Hãy chuyển qua đây, số giờ tối ưu
+là 56 và giờ thực tế là 23.
+
+00:04:32.700 --> 00:04:35.860
+Giờ bạn có thể sử dụng máy tính,
+
+00:04:35.860 --> 00:04:41.140
+Tôi đã làm việc đó trước rồi và
+Tôi biết 56 trừ 23 bằng 33.
+
+00:04:41.140 --> 00:04:45.050
+Được rồi,
+hãy đi tiếp đến dòng tiếp theo và
+
+00:04:45.050 --> 00:04:47.810
+dòng cuối cho biết giải pháp hiển thị.
+
+00:04:47.810 --> 00:04:51.810
+Chúng ta có thể nhìn qua đây để xem
+giá trị của giải pháp là gì, đó là 33.
+
+00:04:51.810 --> 00:04:56.100
+Vậy nó sẽ hiển thị số 33.
+
+00:04:56.100 --> 00:04:59.110
+Đó là cách mà tôi, hoặc bạn, hoặc
+
+00:04:59.110 --> 00:05:02.560
+bất cứ ai, có thể tìm ra 
+chương trình này vừa thực hiện điều gì.
+
+00:05:02.560 --> 00:05:05.590
+Nhưng câu hỏi thực sự là,
+nó đã làm điều đúng?
+
+00:05:05.590 --> 00:05:08.170
+Có một lỗi logic ở đâu đó
+ngay đây hoặc
+
+00:05:08.170 --> 00:05:11.730
+liệu ai đó ngủ 5 giờ đêm ngày trong tuần
+và chín giờ vào đêm ngày cuối tuần
+
+00:05:11.730 --> 00:05:15.640
+sẽ có ba mươi ba giờ
+thiếu ngủ khi hết tuần.
+
+00:05:15.640 --> 00:05:16.660
+Và tôi muốn biết bạn nghĩ gì.
+
+00:05:16.660 --> 00:05:21.360
+Như một phụ chú nhanh, giờ bạn đã
+tạo ra bộ 2 ứng dụng thực hành này, nên
+
+00:05:21.360 --> 00:05:24.440
+Tôi chỉ sẽ cho bạn thấy làm thế nào bạn
+có thể đưa đoạn mã này vào bộ
+
+00:05:24.440 --> 00:05:26.870
+hai ứng dụng thực hành nếu bạn muốn thử.
+
+00:05:26.870 --> 00:05:28.590
+Tôi thực sự khuyên nên
+mô phỏng tay trước,
+
+00:05:28.590 --> 00:05:32.530
+bởi vì nó sẽ cho phép não của bạn
+nắm bắt tốt hơn về những gì đang xảy ra.
+
+00:05:32.530 --> 00:05:35.690
+Nhưng nó cũng có thể đưa
+mã vào Android Studio và
+
+00:05:35.690 --> 00:05:37.160
+thử nó một chút.
+
+00:05:37.160 --> 00:05:41.510
+Gợi ý của tôi là bạn sao chép và dán
+đoạn mã về vấn đề,
+
+00:05:41.510 --> 00:05:45.880
+vốn sẽ được cung cấp trong ghi chép
+hướng dẫn, vào phương thức onCreate.
+
+00:05:45.880 --> 00:05:49.480
+Đó là phương thức đầu tiên bạn thấy
+ở lớp hoạt động chính của bạn ở đây.
+
+00:05:49.480 --> 00:05:52.240
+Để rõ hơn,
+onCreate của bạn trông sẽ thế này
+
+00:05:52.240 --> 00:05:56.650
+trước khi nó được sửa đổi và sau đó bạn
+có thể dán lên đoạn mã, như tôi đã làm.
+
+00:05:57.890 --> 00:06:00.920
+Thứ khác mà bạn sẽ
+cần phải sao chép và dán,
+
+00:06:00.920 --> 00:06:06.480
+thứ sẽ làm dòng mã này hoạt động,
+là ở dưới đây.
+
+00:06:06.480 --> 00:06:10.460
+Nó là mã này, và tôi cũng đã
+đưa nó vào trong ghi chép hướng dẫn.
+
+00:06:11.650 --> 00:06:15.840
+Một thứ cuối cùng mà bạn cần làm
+là đi đến XML của mình, và
+
+00:06:15.840 --> 00:06:21.632
+đảm bảo rằng dạng xem văn bản
+của mình có Id/display_text_view,
+
+00:06:21.632 --> 00:06:25.990
+và nó cần khớp chính xác
+với những gì đang thể hiện ở đây.
+
+00:06:27.255 --> 00:06:30.425
+Miễn là hai thứ đó khớp nhau
+khi bạn chạy
+
+00:06:30.425 --> 00:06:35.155
+đoạn mã này, bạn sẽ thấy giá trị 
+được in ra trên màn hình.
+
+00:06:35.155 --> 00:06:38.500
+Nó khá khó nhìn nhưng
+nó cho biết 33 ở ngay đó.
+
+00:06:38.500 --> 00:06:41.325
+Và với tất cả điều đó,
+tôi sẽ thử mô phỏng tay và
+
+00:06:41.325 --> 00:06:43.805
+một số có tác dụng và
+chạy trên điện thoại của bạn.
+
+00:06:43.805 --> 00:06:47.165
+Mạnh dạn và thử tìm hiểu xem chương trình 
+này có đang hoạt động như mong muốn.
+

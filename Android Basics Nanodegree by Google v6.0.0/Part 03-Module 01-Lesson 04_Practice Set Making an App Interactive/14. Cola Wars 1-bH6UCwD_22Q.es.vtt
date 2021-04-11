@@ -1,0 +1,228 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:01.334
+Lo primero que te pregunté
+
+00:00:01.401 --> 00:00:05.005
+era si <i>udacicolaVotes</i>
+es una variable local o global.
+
+00:00:05.071 --> 00:00:07.440
+Debes haber notado
+que es una variable local.
+
+00:00:07.741 --> 00:00:11.745
+Para averiguarlo ve a donde
+está declarada la variable, aquí.
+
+00:00:12.078 --> 00:00:14.614
+Sabes que se ha declarado
+porque está escrita aquí.
+
+00:00:15.482 --> 00:00:21.187
+¿Se ha declarado dentro de un método,
+entre estas dos llaves,
+
+00:00:21.454 --> 00:00:23.523
+o fuera de ese método?
+
+00:00:23.857 --> 00:00:27.394
+Si se ha declarado dentro de un método,
+quiere decir que es una variable local.
+
+00:00:27.460 --> 00:00:31.131
+Aquí se ve claramente
+que se ha declarado dentro de un método.
+
+00:00:32.131 --> 00:00:33.700
+Así que es una variable local.
+
+00:00:33.767 --> 00:00:35.101
+¿Qué significa esto?
+
+00:00:35.168 --> 00:00:36.703
+La pregunta que deberíamos hacernos es
+
+00:00:36.711 --> 00:00:39.072
+si se debería haber declarado
+como una variable local.
+
+00:00:39.539 --> 00:00:40.974
+¿Debería?
+
+00:00:41.041 --> 00:00:42.742
+Vamos a pensar este caso.
+
+00:00:42.876 --> 00:00:44.010
+Aquí está nuestro teléfono.
+
+00:00:44.019 --> 00:00:45.779
+Hemos estado hablando sobre Udacicola,
+
+00:00:45.780 --> 00:00:48.948
+así que fijémonos únicamente
+en cuando pulsamos el botón de Udacicola.
+
+00:00:49.516 --> 00:00:51.985
+Cuando pulsamos este botón,
+empieza a ejecutarse este método.
+
+00:00:52.218 --> 00:00:54.220
+Pone en cero <i>udacicolaVotes</i>
+
+00:00:55.055 --> 00:00:58.224
+y luego añade 1 a <i>udacicolaVotes</i>,
+que está en cero.
+
+00:00:58.725 --> 00:01:00.660
+Y <i>udacicolaVotes</i> pasa a ser 1.
+
+00:01:00.827 --> 00:01:03.930
+Como <i>udacicolaVotes</i> es una variable local,
+
+00:01:04.096 --> 00:01:07.867
+cuando acaba este método
+se destruye, se borra.
+
+00:01:07.934 --> 00:01:11.604
+El hecho de que <i>udacicolaVotes</i> se borre
+o se destruya al final de este método,
+
+00:01:11.611 --> 00:01:15.008
+dado que es una variable local,
+provoca algunos problemas.
+
+00:01:15.575 --> 00:01:16.843
+¿Por qué?
+
+00:01:16.844 --> 00:01:21.548
+Pensarás que si tres personas diferentes
+votan por Udacicola apretando este botón
+
+00:01:23.354 --> 00:01:25.752
+<i>udacicolaVotes</i> debería ser 3.
+
+00:01:25.852 --> 00:01:28.788
+Lo que en verdad ocurre
+es que la primera vez que pulsas el botón
+
+00:01:28.855 --> 00:01:30.890
+<i>udacicolaVotes</i> es cero.
+
+00:01:30.957 --> 00:01:33.159
+Después se añade 1,
+
+00:01:33.226 --> 00:01:35.428
+y luego se borra, ya no existe.
+
+00:01:35.795 --> 00:01:38.264
+La segunda vez que alguien pulsa
+para votar Udacicola
+
+00:01:38.598 --> 00:01:42.635
+<i>udacicolaVotes</i> vuelve a empezar de cero,
+vuelve a declararse.
+
+00:01:44.170 --> 00:01:47.507
+Recuerda que la primera vez
+se había destruido,
+
+00:01:47.574 --> 00:01:49.359
+así que vuelve a ejecutarse.
+
+00:01:49.442 --> 00:01:51.478
+Y cuando vuelve a ejecutarse,
+se pone en cero.
+
+00:01:51.778 --> 00:01:54.714
+Vuelve a añadirse un 1
+pero recuerda que el valor era cero,
+
+00:01:54.721 --> 00:01:58.785
+así que <i>udacicolaVotes</i> es 1
+aunque el botón se haya pulsado dos veces.
+
+00:01:59.786 --> 00:02:02.022
+Y lo mismo ocurre
+cuando se pulsa por tercera vez.
+
+00:02:02.196 --> 00:02:05.725
+Todavía está en 1 y vuelve a borrarse
+al final de este método.
+
+00:02:06.526 --> 00:02:07.661
+Ese es el primer problema,
+
+00:02:07.727 --> 00:02:11.064
+que no se está guardando el estado
+conforme se pulsa el botón.
+
+00:02:11.297 --> 00:02:14.067
+No se guarda el número de personas
+que están votando.
+
+00:02:14.134 --> 00:02:16.136
+Pero hay otro problema aquí abajo:
+
+00:02:16.536 --> 00:02:18.605
+este código va a generar un error.
+
+00:02:18.672 --> 00:02:22.609
+El motivo es que, si lo recuerdas,
+he dicho que <i>udacicolaVotes</i>
+
+00:02:22.610 --> 00:02:26.312
+aparece aquí,
+su visibilidad empieza aquí.
+
+00:02:26.780 --> 00:02:29.716
+Y, al final del método <i>voteUdacicola</i>,
+
+00:02:29.783 --> 00:02:32.018
+se destruye, deja de existir.
+
+00:02:32.085 --> 00:02:36.022
+Lo que significa que cuando vengo aquí,
+<i>udacicolaVotes</i> ya no existe.
+
+00:02:36.122 --> 00:02:38.958
+Técnicamente decimos
+que esta variable no es visible.
+
+00:02:39.559 --> 00:02:40.960
+Su visibilidad está aquí.
+
+00:02:41.594 --> 00:02:44.197
+Se declara aquí y se acaba aquí.
+
+00:02:45.065 --> 00:02:47.500
+Pero estamos intentando usarla aquí
+y no se puede.
+
+00:02:47.600 --> 00:02:51.438
+Que <i>udacicolaVotes</i> sea una variable local
+no es una decisión acertada en este caso.
+
+00:02:51.439 --> 00:02:53.907
+Resumo los motivos en dos puntos:
+
+00:02:54.107 --> 00:02:56.710
+no guarda los votos
+al pulsar varias veces el botón
+
+00:02:56.843 --> 00:02:59.500
+y no es visible
+dentro del método <i>showMeVotes</i>,
+
+00:02:59.546 --> 00:03:01.448
+así que esto dará error.
+
+00:03:01.614 --> 00:03:03.616
+Esto de aquí no se compilará.
+
+00:03:03.683 --> 00:03:06.453
+Vamos a echar un vistazo
+a la otra variable de este programa.
+

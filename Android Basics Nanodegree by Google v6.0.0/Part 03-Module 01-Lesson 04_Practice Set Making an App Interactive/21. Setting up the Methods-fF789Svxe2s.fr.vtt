@@ -1,0 +1,287 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.500 --> 00:00:04.550
+Pour commencer à résoudre ce problème,
+je vais d'abord écrire quelques méthodes.
+
+00:00:04.550 --> 00:00:07.750
+Les méthodes sont des éléments
+de codes courts entre accolades.
+
+00:00:07.750 --> 00:00:10.690
+Mes boutons vont donc
+déclencher les méthodes.
+
+00:00:10.690 --> 00:00:13.250
+Je vais donc avoir une méthode
+par bouton.
+
+00:00:13.250 --> 00:00:19.060
+Je commence par le bouton plus
+trois points, je tape public void.
+
+00:00:19.060 --> 00:00:21.290
+C'est ici qu'on inscrit
+le nom de la méthode.
+
+00:00:21.290 --> 00:00:24.910
+Vous pouvez l'appeler comme vous voulez
+
+00:00:24.910 --> 00:00:27.570
+tant que ce nom la décrit.
+
+00:00:27.570 --> 00:00:31.068
+Je lui donne un nom très explicite
+qui décrira ce qui doit se produire
+
+00:00:31.068 --> 00:00:33.770
+quand on clique sur le bouton
+plus trois points.
+
+00:00:33.770 --> 00:00:41.700
+Le nom de cette méthode sera :
+ajouterTroisÀÉquipeA
+
+00:00:41.700 --> 00:00:43.600
+Vous pouvez l'appeler un peu différemment,
+
+00:00:43.600 --> 00:00:45.195
+ajouterTroisPointsÀÉquipeA, par exemple.
+
+00:00:46.080 --> 00:00:47.083
+Ok. Ensuite,
+
+00:00:47.083 --> 00:00:49.380
+je vais entrer les paramètres
+de la méthode.
+
+00:00:49.380 --> 00:00:51.290
+Vous n'y connaissez pas encore grand chose
+
+00:00:51.290 --> 00:00:53.440
+mais vous en saurez plus
+après la prochaine leçon.
+
+00:00:53.440 --> 00:00:56.280
+C'est view avec un V majuscule,
+suivi de la lettre v.
+
+00:00:56.280 --> 00:01:00.760
+J'ouvre une accolade et Android Studio
+comprend immédiatement
+
+00:01:00.760 --> 00:01:03.290
+qu'il doit aussi afficher
+une accolade fermée.
+
+00:01:04.620 --> 00:01:08.960
+Tout ce que je vais noter ici indiquera
+ce qui doit se produire
+
+00:01:08.960 --> 00:01:10.210
+quand cette méthode est appelée.
+
+00:01:11.850 --> 00:01:16.980
+Ce que je veux afficher,
+c'est le score
+
+00:01:16.980 --> 00:01:21.890
+de l'équipe A. Je vais donc indiquer
+le nombre qui doit s'afficher,
+
+00:01:21.890 --> 00:01:23.385
+c'est-à-dire 3.
+
+00:01:24.780 --> 00:01:28.010
+Maintenant, je dois l'associer
+à mes boutons.
+
+00:01:28.010 --> 00:01:32.120
+Je dois donc retourner
+au fichier XML
+
+00:01:32.120 --> 00:01:35.990
+et atteindre le bouton plus
+trois points qui se trouve ici.
+
+00:01:37.370 --> 00:01:40.480
+Je vais lui ajouter
+un attribut OnClick.
+
+00:01:40.480 --> 00:01:44.760
+Je vais donner exactement le même nom
+à cet attribut
+
+00:01:44.760 --> 00:01:47.350
+que celui que j'ai donné à la méthode
+dans le Main Activity.
+
+00:01:48.620 --> 00:01:51.400
+Et là, Android Studio/dégaine vite.
+
+00:01:51.400 --> 00:01:55.510
+Il me suggère d'insérer
+ajouterTroisÀÉquipeA ici
+
+00:01:55.510 --> 00:01:59.570
+parce qu'il peut reconnaître les méthodes
+du main activity
+
+00:01:59.570 --> 00:02:00.660
+et que celle-ci est en or.
+
+00:02:01.720 --> 00:02:05.000
+Oui, je vais cliquer dessus.
+
+00:02:05.000 --> 00:02:07.640
+Voilà, maintenant, j'ai
+l'attribut OnClick ici.
+
+00:02:07.640 --> 00:02:12.125
+Le bouton + 3 Points,
+va déclencher
+
+00:02:12.125 --> 00:02:15.490
+ajouterTroisÀÉquipeA et si
+je retourne au main activity,
+
+00:02:15.490 --> 00:02:20.551
+Je vois que dans ajouterTroisÀÉquipeA,
+on lit afficherÉquipeA(3).
+
+00:02:20.551 --> 00:02:23.540
+Le chiffre 3 indique
+le score à l'écran.
+
+00:02:23.540 --> 00:02:27.570
+Vérifions que cette logique
+fonctionne bien.
+
+00:02:27.570 --> 00:02:31.450
+Voici mon appli.
+Je vais appuyer sur + 3 points
+
+00:02:31.450 --> 00:02:32.550
+Génial, le 3 apparaît !
+
+00:02:32.550 --> 00:02:36.500
+C'est peut-être pas très lisible pour vous
+mais, croyez-moi, il y a bien un 3 !
+
+00:02:36.500 --> 00:02:39.910
+Les autres boutons ne fonctionnent pas
+mais c'est normal
+
+00:02:39.910 --> 00:02:42.190
+vu que nous n'avons pas modifié
+leurs lignes de codes.
+
+00:02:42.190 --> 00:02:43.200
+Très bien, continuons.
+
+00:02:44.370 --> 00:02:46.680
+Maintenant que ça fonctionne,
+
+00:02:46.680 --> 00:02:49.000
+faisons la même chose
+avec deux autres boutons.
+
+00:02:49.000 --> 00:02:54.059
+C'est tellement identique
+que je vais juste copier ici
+
+00:02:54.059 --> 00:02:56.190
+et coller deux fois !
+
+00:02:58.580 --> 00:03:02.375
+Cette fois, je vais intégrer :
+
+00:03:02.375 --> 00:03:08.970
+ajouterDeuxÀÉquipeA et ajouterUnÀÉquipeA.
+
+00:03:08.970 --> 00:03:14.990
+Et là, je modifie ainsi :
+afficher 2 et afficher 1.
+
+00:03:14.990 --> 00:03:16.070
+Ok.
+
+00:03:16.070 --> 00:03:21.530
+J'ai fait à peu près pareil pour 2 et 1
+que j'avais fait pour 3 points.
+
+00:03:21.530 --> 00:03:25.650
+Je dois quand même penser à revenir
+au XML. Je clique pour y retourner.
+
+00:03:27.100 --> 00:03:28.090
+Ok.
+
+00:03:28.090 --> 00:03:30.250
+J'ajoute deux OnClicks supplémentaires.
+
+00:03:30.250 --> 00:03:33.590
+Pour le bouton + 2 points,
+
+00:03:33.590 --> 00:03:38.820
+je fais OnClick
+et waouh, la classe !
+
+00:03:38.820 --> 00:03:41.340
+J'ai trois options
+différentes
+
+00:03:41.340 --> 00:03:43.820
+Je veux être sûre de choisir
+la bonne !
+
+00:03:43.820 --> 00:03:47.490
+C'est + 2 points, je vais donc
+choisir ajouterDeuxÀÉquipeA
+
+00:03:47.490 --> 00:03:49.990
+Puis, je me place ici.
+
+00:03:51.250 --> 00:03:51.930
+Je tape OnClick
+
+00:03:53.640 --> 00:03:55.500
+et je choisis ajouterUnÀÉquipeA
+
+00:03:56.970 --> 00:03:59.860
+Ok, je suis quasiment sûre
+que ça va marcher.
+
+00:03:59.860 --> 00:04:03.010
+Je parierais bien de l'argent mais je dois
+d'abord vérifier que ça fonctionne !
+
+00:04:03.840 --> 00:04:06.120
+Ok, j'appuie sur + 3.
+
+00:04:06.120 --> 00:04:07.190
+Ça marche toujours !
+
+00:04:07.190 --> 00:04:09.260
+J'appuie sur + 2.
+
+00:04:09.260 --> 00:04:10.120
+Cool.
++ 2 s'affiche.
+
+00:04:10.120 --> 00:04:13.670
+Maintenant, j'appuie sur lancer-franc
+et le 1 apparaît.
+
+00:04:13.670 --> 00:04:14.600
+Trop bien !
+
+00:04:14.600 --> 00:04:15.730
+J'ai réussi l'exercice.
+
+00:04:17.250 --> 00:04:21.260
+Et comme j'ai réussi, j'ai le privilège
+de cocher cette case !
+

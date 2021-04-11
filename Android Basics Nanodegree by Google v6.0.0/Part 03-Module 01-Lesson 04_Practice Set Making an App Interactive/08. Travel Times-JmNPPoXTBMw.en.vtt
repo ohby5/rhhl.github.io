@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.725
+Okay. I'm going to just jump right in and hand simulate what's going on here.
+
+00:00:04.725 --> 00:00:08.190
+These first three lines we just declare three variables and
+
+00:00:08.190 --> 00:00:11.215
+set them to initial values, so I'm going to do that.
+
+00:00:11.215 --> 00:00:13.440
+Okay, so that's what that would look like,
+
+00:00:13.440 --> 00:00:15.165
+and then here in display,
+
+00:00:15.165 --> 00:00:17.955
+I'm saying display this arithmetic here.
+
+00:00:17.955 --> 00:00:19.810
+Let's look and see what the values of day 1,
+
+00:00:19.810 --> 00:00:22.745
+day 2 and day 3 are at this point of the program.
+
+00:00:22.745 --> 00:00:28.725
+Day 1 is 15, day 2 is 22,
+
+00:00:28.725 --> 00:00:30.855
+and day 3 is 18.
+
+00:00:30.855 --> 00:00:33.570
+Now this might seem a little bit silly that I went off here to
+
+00:00:33.570 --> 00:00:36.210
+the side and started keeping track of these variables,
+
+00:00:36.210 --> 00:00:38.780
+but as the programs get more complicated and
+
+00:00:38.780 --> 00:00:42.080
+variables kind of change and get modified in this space,
+
+00:00:42.080 --> 00:00:44.530
+it's really important to be keeping track of things.
+
+00:00:44.530 --> 00:00:47.360
+Anyways, the key insight for this problem is
+
+00:00:47.360 --> 00:00:50.255
+that you're doing both addition and a division here.
+
+00:00:50.255 --> 00:00:53.750
+Now if you remember from when Catherine was talking about order of operation,
+
+00:00:53.750 --> 00:00:55.850
+division always comes before addition.
+
+00:00:55.850 --> 00:00:58.950
+Meaning, the first thing that's going to happen is this division right here.
+
+00:00:58.950 --> 00:01:02.350
+So 18 gets divided by 3 which is 6,
+
+00:01:02.350 --> 00:01:07.285
+and then we have 15 plus 22 plus 6 which equals 43.
+
+00:01:07.285 --> 00:01:09.430
+So it's going to print out 43.
+
+00:01:09.430 --> 00:01:12.730
+So is that correct? Well, what we're trying to do is find the average.
+
+00:01:12.730 --> 00:01:14.750
+Finding the average involves adding up
+
+00:01:14.750 --> 00:01:17.980
+all the numbers and then dividing by the number of numbers you have.
+
+00:01:17.980 --> 00:01:19.790
+But we do the addition too early.
+
+00:01:19.790 --> 00:01:22.470
+We do it before we've added up these three numbers.
+
+00:01:22.470 --> 00:01:27.060
+Really, it should be 15 plus 22 plus 18 then divided by 3.
+
+00:01:27.060 --> 00:01:31.850
+So 43 is not the correct answer and to make this code do the correct thing,
+
+00:01:31.850 --> 00:01:34.550
+you should be surrounding these three variables with parentheses.
+
+00:01:34.550 --> 00:01:36.110
+Then you'll add.
+
+00:01:36.110 --> 00:01:40.405
+15 plus 22 plus 18 and then divide it by 3,
+
+00:01:40.405 --> 00:01:44.540
+which will give you the correct answer of about 18.3
+

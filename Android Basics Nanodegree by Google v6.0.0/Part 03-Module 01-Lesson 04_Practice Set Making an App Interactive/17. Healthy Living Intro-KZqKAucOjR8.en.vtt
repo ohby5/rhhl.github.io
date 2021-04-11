@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.165
+This scenario, you're working on an app called Health Check.
+
+00:00:03.165 --> 00:00:07.140
+And what Health Check is, is basically an app that administers a quiz.
+
+00:00:07.140 --> 00:00:10.260
+And that quiz can tell the person who's using it,
+
+00:00:10.260 --> 00:00:12.100
+how helpfully they're living.
+
+00:00:12.100 --> 00:00:14.910
+The questions appear in this box here and
+
+00:00:14.910 --> 00:00:17.475
+the user can answer either yes, sometimes, or no.
+
+00:00:17.475 --> 00:00:21.900
+And let's say there's about 100 different questions and they range from things like,
+
+00:00:21.900 --> 00:00:24.780
+do you exercise more than three times a week?
+
+00:00:24.780 --> 00:00:27.120
+Do you drink less than two caffeinated drinks a day?
+
+00:00:27.120 --> 00:00:28.730
+Or do you have a supportive social network?
+
+00:00:28.730 --> 00:00:31.800
+Now, the questions are phrased in such a way that when you say yes,
+
+00:00:31.800 --> 00:00:36.030
+that always means you're more healthy and when you say no it means you're less healthy.
+
+00:00:36.030 --> 00:00:38.985
+Sometimes, it's sort of an inconclusive answer.
+
+00:00:38.985 --> 00:00:41.805
+And what the app is doing, is really keeping track of the score.
+
+00:00:41.805 --> 00:00:44.910
+When you hit "Yes", it adds one to the health level,
+
+00:00:44.910 --> 00:00:46.380
+when you answer sometimes,
+
+00:00:46.380 --> 00:00:49.350
+it remains unchanged, and when you answer no,
+
+00:00:49.350 --> 00:00:50.990
+it subtracts one from the health level.
+
+00:00:50.990 --> 00:00:53.880
+Also, once you've selected one of these options,
+
+00:00:53.880 --> 00:00:56.625
+it will show you a summary of what you just answered
+
+00:00:56.625 --> 00:00:59.850
+and what your current health level is before giving you the next question.
+
+00:00:59.850 --> 00:01:02.490
+We're just going to look at the interaction between clicking one of
+
+00:01:02.490 --> 00:01:05.925
+these buttons and showing the summary of where you're at right here.
+
+00:01:05.925 --> 00:01:08.630
+Let's look at the code. Okay, so here's the code.
+
+00:01:08.630 --> 00:01:11.130
+And I've also provided in the instructor notes,
+
+00:01:11.130 --> 00:01:13.830
+if you want to take a look at the sort of text version of this.
+
+00:01:13.830 --> 00:01:16.005
+Again, it's not the complete code.
+
+00:01:16.005 --> 00:01:18.180
+This little ellipsis here mean that there's code
+
+00:01:18.180 --> 00:01:20.490
+before and after the methods that you're shown here.
+
+00:01:20.490 --> 00:01:21.765
+So, how does this work?
+
+00:01:21.765 --> 00:01:23.535
+Well, when you hit the "Yes" button,
+
+00:01:23.535 --> 00:01:25.410
+the yes method is called.
+
+00:01:25.410 --> 00:01:27.750
+This increases the health level,
+
+00:01:27.750 --> 00:01:31.030
+makes a message, and then displays that message.
+
+00:01:31.030 --> 00:01:33.730
+Similarly, when you hit the "Sometimes" button,
+
+00:01:33.730 --> 00:01:35.805
+the sometimes method is called.
+
+00:01:35.805 --> 00:01:38.790
+The only difference here is that instead of adding one you add zero,
+
+00:01:38.790 --> 00:01:41.460
+which means that the variable value doesn't really change.
+
+00:01:41.460 --> 00:01:43.800
+And the format is similar when you get the "No" button.
+
+00:01:43.800 --> 00:01:45.255
+The no method is called,
+
+00:01:45.255 --> 00:01:47.270
+one is subtracted from the health level,
+
+00:01:47.270 --> 00:01:48.330
+and the message is printed.
+
+00:01:48.330 --> 00:01:50.955
+Okay, we have two variables in this program.
+
+00:01:50.955 --> 00:01:52.950
+Health level and message.
+
+00:01:52.950 --> 00:01:54.660
+Let's look at message first.
+
+00:01:54.660 --> 00:01:56.370
+So, my first question to you is,
+
+00:01:56.370 --> 00:01:57.990
+from the code that you see here,
+
+00:01:57.990 --> 00:02:00.800
+is message a local or global variable?
+

@@ -1,0 +1,593 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.550 --> 00:00:04.570
+Baiklah. Saya akan menjawab pertanyaan-
+pertanyaan ini sebelum masuk ke XML.
+
+00:00:04.570 --> 00:00:06.920
+Pertama, memilih &lt;i&gt;view&lt;/i&gt;.
+
+00:00:06.920 --> 00:00:09.600
+Saya akan menggambar kotak di
+sekeliling yang saya lihat.
+
+00:00:09.600 --> 00:00:11.130
+Oke, jadi ada lima &lt;i&gt;view&lt;/i&gt; berbeda
+
+00:00:11.130 --> 00:00:14.600
+tidak termasuk &lt;i&gt;view group&lt;/i&gt;, yang
+secara teknis dianggap satu &lt;i&gt;view&lt;/i&gt;.
+
+00:00:14.600 --> 00:00:17.610
+Tapi, lima &lt;i&gt;view&lt;/i&gt; ini adalah
+dua &lt;i&gt;TextViews&lt;/i&gt; di atas sini.
+
+00:00:17.610 --> 00:00:19.330
+diikuti oleh tiga tombol.
+
+00:00:19.330 --> 00:00:24.480
+Dan tidak ada &lt;i&gt;ImageViews&lt;/i&gt; di manapun
+jadi saya rasa tidak perlu &lt;i&gt;ImageViews&lt;/i&gt;.
+
+00:00:24.480 --> 00:00:28.300
+Anda mungkin berpikir kenapa saya
+buat dua ini adalah &lt;i&gt;TextViews&lt;/i&gt; berbeda,
+
+00:00:28.300 --> 00:00:31.940
+pada produk akhir, &lt;i&gt;styling
+Team A&lt;/i&gt; dan skornya
+
+00:00:31.940 --> 00:00:34.050
+terlihat sangat berbeda.
+
+00:00:34.050 --> 00:00:37.530
+Jadi saya putuskan untuk membiarkan
+keduanya sebagai &lt;i&gt;TextViews&lt;/i&gt; terpisah.
+
+00:00:37.530 --> 00:00:40.080
+Lanjut ke langkah kedua,
+memposisikan &lt;i&gt;view&lt;/i&gt;.
+
+00:00:40.080 --> 00:00:43.100
+Saya akan memilih &lt;i&gt;ViewGroup&lt;/i&gt; mana
+yang akan dipakai di sini.
+
+00:00:43.100 --> 00:00:46.830
+Ada dua dalam benak saya yaitu
+&lt;i&gt;linear layout&lt;/i&gt; dan &lt;i&gt;relative layout&lt;/i&gt;.
+
+00:00:46.830 --> 00:00:49.450
+Ini adalah kolom vertikal pada &lt;i&gt;view&lt;/i&gt;.
+
+00:00:49.450 --> 00:00:52.720
+Jadi lumayan jelas apa yang saya mau,
+yaitu &lt;i&gt;linear layout&lt;/i&gt;.
+
+00:00:54.370 --> 00:00:57.310
+Terakhir saya masuk ke langkah
+ketiga, menata &lt;i&gt;view&lt;/i&gt;.
+
+00:00:57.310 --> 00:01:00.320
+Dan saya akan mengerjakannya
+saat bekerja dengan XML.
+
+00:01:00.320 --> 00:01:02.780
+Mari kita masuk ke XML.
+
+00:01:02.780 --> 00:01:04.970
+Saya ingin melihat
+ke tab &lt;i&gt;Text&lt;/i&gt;.
+
+00:01:04.970 --> 00:01:07.520
+Hal pertama yang akan saya
+lakukan di sini adalah
+
+00:01:07.520 --> 00:01:09.760
+menghapus yang tidak diperlukan.
+
+00:01:09.760 --> 00:01:12.470
+Saya akan lanjut dan mulai dengan
+menghapus &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:01:13.490 --> 00:01:16.597
+Dan semua &lt;i&gt;paddingLeft&lt;/i&gt;, &lt;i&gt;paddingRight&lt;/i&gt;,
+&lt;i&gt;paddingTop&lt;/i&gt; dan &lt;i&gt;paddingBottom&lt;/i&gt;,
+
+00:01:16.597 --> 00:01:19.750
+juga akan saya hapus.
+
+00:01:19.750 --> 00:01:23.090
+Hati-hati, jangan menghapus
+yang diperlukan.
+
+00:01:23.090 --> 00:01:24.308
+Oke.
+
+00:01:24.308 --> 00:01:27.900
+Kita telah sepakat bahwa &lt;i&gt;ViewGroup&lt;/i&gt; yang
+akan digunakan bukan &lt;i&gt;relative layout&lt;/i&gt;
+
+00:01:27.900 --> 00:01:30.540
+tapi &lt;i&gt;linear layout&lt;/i&gt;, maka saya akan
+mengubahnya sekarang.
+
+00:01:31.190 --> 00:01:34.590
+Dalam &lt;i&gt;linear layout&lt;/i&gt; ini saya akan
+membuat dua &lt;i&gt;TextViews&lt;/i&gt;
+
+00:01:34.590 --> 00:01:35.800
+dan tiga tombol.
+
+00:01:35.800 --> 00:01:37.710
+Saya akan memulai membuatnya.
+
+00:01:37.710 --> 00:01:40.840
+Saya tidak akan terlalu
+spesifik tentang lebar dan
+
+00:01:40.840 --> 00:01:42.780
+tinggi &lt;i&gt;TextViews&lt;/i&gt; ini nantinya.
+
+00:01:42.780 --> 00:01:45.340
+Saat ini saya akan membiarkannya
+sebagai &lt;i&gt;wrap_content&lt;/i&gt;
+
+00:01:45.340 --> 00:01:48.300
+yang akan menempatkan kotak &lt;i&gt;TextView&lt;/i&gt;
+di sekeliling teksnya.
+
+00:01:49.300 --> 00:01:52.490
+Saya akan menentukan teks untuk
+&lt;i&gt;TextView&lt;/i&gt; ini juga.
+
+00:01:52.490 --> 00:01:54.710
+&lt;i&gt;TextView&lt;/i&gt; pertama ini akan 
+terbaca &lt;i&gt;Team A&lt;/i&gt;.
+
+00:01:56.080 --> 00:01:58.710
+Mari kita lihat hasilnya di &lt;i&gt;Preview&lt;/i&gt;.
+
+00:01:58.710 --> 00:02:01.860
+Saya dapat melihat &lt;i&gt;TextView&lt;/i&gt; kecil
+di sini yang bernama &lt;i&gt;Team A&lt;/i&gt;.
+
+00:02:01.860 --> 00:02:03.820
+Mari kita buat
+lebih banyak lagi.
+
+00:02:03.820 --> 00:02:07.200
+Yang di bawahnya adalah skor,
+itu juga sebuah &lt;i&gt;TextView&lt;/i&gt;.
+
+00:02:07.200 --> 00:02:09.758
+Kita akan ketik &lt;i&gt;Text&lt;/i&gt;.
+
+00:02:09.758 --> 00:02:12.640
+Saya lihat ada tulisan &lt;i&gt;TextView&lt;/i&gt;,
+maka saya tekan &lt;i&gt;Enter&lt;/i&gt;.
+
+00:02:12.640 --> 00:02:15.590
+Saya juga akan membuatnya &lt;i&gt;wrap_content&lt;/i&gt;.
+
+00:02:15.590 --> 00:02:17.860
+Dan saya akan menambahkan teksnya.
+
+00:02:17.860 --> 00:02:21.560
+Skor biasanya mulai dari nol,
+maka kita memulainya dari nol.
+
+00:02:21.560 --> 00:02:22.410
+Oke.
+
+00:02:22.410 --> 00:02:23.350
+Sekarang tombolnya.
+
+00:02:23.350 --> 00:02:25.510
+Saya akan mengetik huruf &lt;i&gt;Button&lt;/i&gt;.
+
+00:02:25.510 --> 00:02:28.230
+Teruskan dan tambahkan &lt;i&gt;wrap_content&lt;/i&gt;
+untuk ini juga.
+
+00:02:28.230 --> 00:02:32.002
+&lt;i&gt;Button&lt;/i&gt; pertama akan
+terbilang &lt;i&gt;+3 Points&lt;/i&gt;.
+
+00:02:32.002 --> 00:02:34.800
+Saya akan lanjut dan salin ini dan
+
+00:02:34.800 --> 00:02:39.780
+menempelkannya di sini sekali,
+dua kali untuk mendapat dua &lt;i&gt;Button&lt;/i&gt; lagi.
+
+00:02:39.780 --> 00:02:43.020
+Satu &lt;i&gt;Button&lt;/i&gt; akan terbilang
+&lt;i&gt;+2 Points&lt;/i&gt; dan
+
+00:02:43.020 --> 00:02:45.250
+satu lagi terbilang &lt;i&gt;Free Throw&lt;/i&gt;.
+
+00:02:45.250 --> 00:02:47.410
+Oke, mari kita lihat tampilannya 
+di &lt;i&gt;Preview&lt;/i&gt;.
+
+00:02:48.180 --> 00:02:51.070
+Kelihatannya saya punya tiga tombol.
+
+00:02:51.070 --> 00:02:54.050
+Saya dapat melihat &lt;i&gt;Team A&lt;/i&gt; dan &lt;i&gt;0&lt;/i&gt;.
+
+00:02:54.050 --> 00:02:55.910
+Jadi semua &lt;i&gt;view&lt;/i&gt; saya
+sudah ada,
+
+00:02:55.910 --> 00:02:59.120
+tapi tak terlihat seperti bayangan akhir
+yang diharapkan.
+
+00:02:59.120 --> 00:03:01.080
+Ingat, mereka ada di kolom vertikal.
+
+00:03:01.080 --> 00:03:03.452
+Jadi saya akan mengubah
+orientasi &lt;i&gt;layout&lt;/i&gt;.
+
+00:03:03.452 --> 00:03:05.190
+Akan saya lakukan itu.
+
+00:03:05.190 --> 00:03:09.600
+Mulai ketik &lt;i&gt;orientation&lt;/i&gt; dan saya
+menginginkannya vertikal.
+
+00:03:09.600 --> 00:03:11.860
+Oke, terlihat lebih baik.
+
+00:03:11.860 --> 00:03:17.290
+Tombol-tombol ini sebenarnya diperluas
+untuk mengisi lebarnya jendela layar.
+
+00:03:17.290 --> 00:03:20.940
+Jadi saya tidak mau melakukan
+&lt;i&gt;wrap_content&lt;/i&gt; untuknya,
+
+00:03:20.940 --> 00:03:23.290
+sebagai gantinya saya akan melakukan
+&lt;i&gt;match_parent&lt;/i&gt;.
+
+00:03:23.290 --> 00:03:25.260
+Jadi, ijinkan saya 
+mengubahnya sekarang.
+
+00:03:25.830 --> 00:03:29.030
+Maka, lebar semua tombol telah
+menjadi &lt;i&gt;match_parent&lt;/i&gt;.
+
+00:03:29.030 --> 00:03:29.850
+Lihat di &lt;i&gt;Preview&lt;/i&gt;.
+
+00:03:30.760 --> 00:03:33.470
+Sudah lebih baik,
+mereka membesar.
+
+00:03:33.470 --> 00:03:34.270
+Baiklah.
+
+00:03:34.270 --> 00:03:39.220
+Teks saya masih agak
+terpojok di sudut,
+
+00:03:39.220 --> 00:03:43.680
+untuk membetulkannya saya akan
+memakai sesuatu bernama &lt;i&gt;gravity&lt;/i&gt;.
+
+00:03:43.680 --> 00:03:46.430
+Oke, di sini saya memakai Google Drawing.
+
+00:03:46.430 --> 00:03:48.710
+Mari kita buat satu &lt;i&gt;text box&lt;/i&gt; di
+Google Drawing.
+
+00:03:50.030 --> 00:03:52.350
+Sebanyak inilah batas pandangan &lt;i&gt;view&lt;/i&gt;.
+
+00:03:52.350 --> 00:03:54.330
+Saya dapat mengetik kata &lt;i&gt;Team A&lt;/i&gt;,
+
+00:03:54.330 --> 00:03:57.790
+dan secara &lt;i&gt;default&lt;/i&gt; akan tampil di
+sudut kiri atas.
+
+00:03:57.790 --> 00:04:00.780
+Sama seperti &lt;i&gt;TextView&lt;/i&gt;, saat Anda
+mengetik teks di &lt;i&gt;TextView&lt;/i&gt;,
+
+00:04:00.780 --> 00:04:03.440
+secara &lt;i&gt;default&lt;/i&gt; akan ada di
+sudut kiri atas.
+
+00:04:03.440 --> 00:04:08.700
+Dengan Google Drawings, saya dapat
+memilih teks ini dan menggunakan
+
+00:04:08.700 --> 00:04:13.740
+sesuatu yang setara dengan &lt;i&gt;attribute&lt;/i&gt;,
+namanya &lt;i&gt;line&lt;/i&gt;, agar rata tengah
+
+00:04:13.740 --> 00:04:18.940
+secara mendatar dalam kotak teks dan
+rata tengah vertikal di dalamnya.
+
+00:04:18.940 --> 00:04:20.190
+Lumayan keren.
+
+00:04:20.190 --> 00:04:23.980
+Mengambil konten dan menggerakkannya 
+di dalam batas pandangan adalah
+
+00:04:23.980 --> 00:04:27.340
+tugas &lt;i&gt;layout gravity&lt;/i&gt;.
+
+00:04:27.340 --> 00:04:30.330
+Jika Anda pikir ini mungkin mirip
+metode &lt;i&gt;alignment&lt;/i&gt;
+
+00:04:30.330 --> 00:04:33.530
+yang dapat Anda pakai untuk
+&lt;i&gt;relative layout&lt;/i&gt;, memang benar, tapi Anda
+
+00:04:33.530 --> 00:04:37.150
+dapat memakai &lt;i&gt;gravity attribute&lt;/i&gt; untuk
+&lt;i&gt;linear layout&lt;/i&gt;, yang membuatnya berguna.
+
+00:04:37.150 --> 00:04:38.870
+Kita akan melihatnya di dalam kode.
+
+00:04:40.130 --> 00:04:43.980
+Saya akan ambil &lt;i&gt;TextView&lt;/i&gt; pertama dan
+ketik &lt;i&gt;gravity&lt;/i&gt;.
+
+00:04:44.860 --> 00:04:46.970
+Dengan &lt;i&gt;gravity&lt;/i&gt;,
+saya punya dua pilihan:
+
+00:04:46.970 --> 00:04:48.730
+&lt;i&gt;layout gravity&lt;/i&gt; dan &lt;i&gt;gravity&lt;/i&gt;.
+
+00:04:48.730 --> 00:04:51.170
+Saya sudah katakan
+tentang atribut &lt;i&gt;gravity&lt;/i&gt;.
+
+00:04:51.170 --> 00:04:52.650
+Itu yang akan kita gunakan.
+
+00:04:52.650 --> 00:04:55.650
+Kemudian saya punya beberapa
+pilihan di sini,
+
+00:04:55.650 --> 00:04:58.220
+dan saya menginginkannya
+ditengahkan secara mendatar.
+
+00:04:58.220 --> 00:05:00.088
+Jadi itu yang akan saya pakai.
+
+00:05:00.088 --> 00:05:02.620
+Saya akan lanjut dan lihat 
+hasilnya di &lt;i&gt;Preview&lt;/i&gt;.
+
+00:05:04.010 --> 00:05:08.130
+Tidak terlihat berubah banyak,
+tapi ada sebabnya.
+
+00:05:09.440 --> 00:05:13.300
+Bila saya klik di sini, perbesarlah
+karena mungkin terlalu kecil.
+
+00:05:15.750 --> 00:05:20.960
+ada &lt;i&gt;Team A&lt;/i&gt; di sini, dan Anda dapat
+melihat batas &lt;i&gt;view&lt;/i&gt; di sekelilingnya.
+
+00:05:20.960 --> 00:05:24.280
+Kalau saya bilang ini tadinya diletakkan
+di tengah &lt;i&gt;view&lt;/i&gt;,
+
+00:05:24.280 --> 00:05:26.950
+itu memang benar.
+
+00:05:26.950 --> 00:05:31.510
+Memang terlihat seperti terletak di tengah
+pandangan, karena sangat kecil.
+
+00:05:31.510 --> 00:05:33.020
+Kembali ke Google Drawing.
+
+00:05:33.020 --> 00:05:38.680
+Bila saya perkecil ukurannya menjadi
+sebesar teks,
+
+00:05:38.680 --> 00:05:40.450
+Rata tengah, tapi tidak terlihat
+
+00:05:40.450 --> 00:05:44.520
+sangat berbeda dari 
+jika didorong ke kiri.
+
+00:05:44.520 --> 00:05:47.230
+Kalau saya menginginkannya
+di tengah-tengah ponsel,
+
+00:05:47.230 --> 00:05:50.090
+saya perlu memperbesar &lt;i&gt;view&lt;/i&gt;
+selebar ponsel.
+
+00:05:50.090 --> 00:05:52.170
+Jadi kita perlu mengubah lebarnya.
+
+00:05:54.020 --> 00:05:55.970
+Oke, di sini saya akan menutup &lt;i&gt;Preview&lt;/i&gt;.
+
+00:05:57.200 --> 00:05:58.840
+Dan melihat lebarnya di sini.
+
+00:06:00.120 --> 00:06:04.620
+Saya akan lakukan &lt;i&gt;match_parent&lt;/i&gt;,
+daripada &lt;i&gt;wrap_content&lt;/i&gt;.
+
+00:06:04.620 --> 00:06:06.430
+Mari kita lihat di &lt;i&gt;Preview&lt;/i&gt; lagi.
+
+00:06:07.240 --> 00:06:08.100
+Kita perkecil.
+
+00:06:09.000 --> 00:06:10.610
+Jauh lebih baik.
+
+00:06:10.610 --> 00:06:12.200
+Kelihatannya rata tengah.
+
+00:06:12.200 --> 00:06:14.480
+Mari kita ulangi untuk skor di sini.
+
+00:06:15.840 --> 00:06:18.910
+Saya akan tambahkan juga
+&lt;i&gt;gravity&lt;/i&gt; ke sini, dan
+
+00:06:18.910 --> 00:06:20.605
+&lt;i&gt;gravity&lt;/i&gt; di semua &lt;i&gt;layout gravity&lt;/i&gt;.
+
+00:06:20.605 --> 00:06:25.950
+&lt;i&gt;center_horizontal&lt;/i&gt; dan saya akan mengubah
+lebarnya jadi &lt;i&gt;match_parent&lt;/i&gt;.
+
+00:06:27.260 --> 00:06:29.160
+Kita periksa lagi.
+
+00:06:29.160 --> 00:06:30.870
+Keren! Semuanya rata tengah.
+
+00:06:30.870 --> 00:06:32.190
+Lumayan bagus.
+
+00:06:32.190 --> 00:06:34.400
+Selain terlihat sedikit 
+tertekan jadi satu,
+
+00:06:34.400 --> 00:06:37.330
+terlalu sedikit ruang untuk
+elemen-elemen ini.
+
+00:06:37.330 --> 00:06:41.020
+Saya akan memberi 4 &lt;i&gt;padding&lt;/i&gt;
+ke setiap &lt;i&gt;TextView&lt;/i&gt;.
+
+00:06:41.020 --> 00:06:45.875
+Saya mulai mengetik &lt;i&gt;padding&lt;/i&gt;,
+memberinya &lt;i&gt;4dp&lt;/i&gt;.
+
+00:06:47.000 --> 00:06:48.360
+Ingat &lt;i&gt;dp&lt;/i&gt;?
+
+00:06:48.360 --> 00:06:52.010
+Saya hanya menggunakan &lt;i&gt;padding&lt;/i&gt;,
+bukan &lt;i&gt;padding bottom&lt;/i&gt; atau sejenisnya.
+
+00:06:52.010 --> 00:06:54.260
+Itu akan memberi &lt;i&gt;4dp&lt;/i&gt; di sekitar
+semua &lt;i&gt;TextView&lt;/i&gt;.
+
+00:06:54.260 --> 00:06:56.950
+Mari kita lihat tampilannya di &lt;i&gt;Preview&lt;/i&gt;.
+
+00:06:58.390 --> 00:07:00.850
+Itu memberinya sedikit ruang lebih.
+
+00:07:00.850 --> 00:07:03.750
+Saya akan lakukan yang sama untuk
+&lt;i&gt;Score TextView&lt;/i&gt;.
+
+00:07:07.830 --> 00:07:10.808
+Sekarang saya akan lakukan yang sama
+sama untuk &lt;i&gt;Button&lt;/i&gt;.
+
+00:07:15.811 --> 00:07:18.610
+Kelihatannya tidak berubah banyak.
+
+00:07:18.610 --> 00:07:23.693
+Bagaimana kalau saya buat
+agak besar, 8 mungkin?
+
+00:07:23.693 --> 00:07:25.528
+20?
+
+00:07:25.528 --> 00:07:29.820
+Menarik. Sepertinya memperbesar tombol.
+
+00:07:29.820 --> 00:07:31.740
+Saya tidak mau tombolnya membesar,
+
+00:07:31.740 --> 00:07:33.980
+saya ingin ruang sekitarnya yang membesar.
+
+00:07:33.980 --> 00:07:37.640
+Sebenarnya, itu adalah tugas
+yang lebih baik untuk &lt;i&gt;layout_margin&lt;/i&gt;.
+
+00:07:37.640 --> 00:07:41.040
+Ingat, &lt;i&gt;padding&lt;/i&gt; menambahkan lapisan
+dalam &lt;i&gt;view&lt;/i&gt;,
+
+00:07:41.040 --> 00:07:43.020
+&lt;i&gt;margin&lt;/i&gt; menambahkan ruang
+di sekitar &lt;i&gt;view&lt;/i&gt;.
+
+00:07:43.530 --> 00:07:45.310
+Kita ubah ini jadi &lt;i&gt;layout_margin&lt;/i&gt;.
+
+00:07:45.310 --> 00:07:46.890
+Saya akan membuatnya 8dp.
+
+00:07:46.890 --> 00:07:48.850
+Terlihat lebih baik.
+
+00:07:48.850 --> 00:07:53.120
+Sekarang ada ruang di sekitar &lt;i&gt;view&lt;/i&gt; di
+antara dua &lt;i&gt;view&lt;/i&gt; ini.
+
+00:07:53.120 --> 00:07:55.849
+Ayo kita lanjut melakukannya
+pada tombol-tombol lainnya.
+
+00:07:56.480 --> 00:07:59.710
+&lt;i&gt;Margin&lt;/i&gt;, bukan &lt;i&gt;padding&lt;/i&gt;, &lt;i&gt;layout_margin&lt;/i&gt;.
+
+00:07:59.710 --> 00:08:01.440
+Terlihat lumayan bagus.
+
+00:08:01.440 --> 00:08:04.100
+Kalau Anda memilih atribut yang 
+berbeda dari saya,
+
+00:08:04.100 --> 00:08:08.320
+mungkin Anda punya lima &lt;i&gt;padding&lt;/i&gt;
+bukan empat, tidak masalah.
+
+00:08:08.320 --> 00:08:11.710
+Ingat, saat ini saya hanya mencoba
+membuat teksnya terbaca.
+
+00:08:11.710 --> 00:08:15.409
+Kita akan belajar tentang ukuran &lt;i&gt;font&lt;/i&gt;
+dan warna yang bagus
+
+00:08:16.750 --> 00:08:17.920
+di tahap berikutnya.
+Oke.
+
+00:08:17.920 --> 00:08:19.140
+Menakjubkan.
+
+00:08:19.140 --> 00:08:21.203
+Langkah itu telah selesai.
+

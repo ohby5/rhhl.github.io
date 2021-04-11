@@ -1,0 +1,139 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.805
+You've just seen some tricky situations involving
+
+00:00:02.805 --> 00:00:05.970
+multiple variables and interesting ordering here,
+
+00:00:05.970 --> 00:00:09.285
+hence simulating to figure out what the computer does is key.
+
+00:00:09.285 --> 00:00:11.250
+Now let's talk about scope.
+
+00:00:11.250 --> 00:00:15.000
+I've linked the video in scope if you don't remember what I mean by variable scope.
+
+00:00:15.000 --> 00:00:19.170
+Scope is what differentiates a local variable from a global variable.
+
+00:00:19.170 --> 00:00:22.550
+A local variable is stuck in the block of code that it was defined in,
+
+00:00:22.550 --> 00:00:25.160
+usually a method, whereas a global variable has
+
+00:00:25.160 --> 00:00:28.160
+a little bit more freedom to go to different parts of the program.
+
+00:00:28.160 --> 00:00:31.295
+Let's look at a few different questions to see if you understand the difference.
+
+00:00:31.295 --> 00:00:34.265
+In these exercises, we're going to look at longer code examples.
+
+00:00:34.265 --> 00:00:37.310
+All of these examples will either have no errors or will have
+
+00:00:37.310 --> 00:00:40.925
+an error involving scope. Here's the first example.
+
+00:00:40.925 --> 00:00:43.550
+In this scenario, let's say you're a market researcher,
+
+00:00:43.550 --> 00:00:45.230
+and you've made an app to figure out which
+
+00:00:45.230 --> 00:00:48.935
+sugary drink consumers prefer, Udacicola or Pepsi.
+
+00:00:48.935 --> 00:00:51.740
+You'll talk to people on the street and hand them to drinks,
+
+00:00:51.740 --> 00:00:55.505
+and then ask them to vote with the app to say which one they like better.
+
+00:00:55.505 --> 00:00:57.705
+Let's look at the code that goes with this.
+
+00:00:57.705 --> 00:01:02.130
+These ellipses here and here mean that there's more code that I'm not showing you.
+
+00:01:02.130 --> 00:01:05.250
+But I'm showing you the important code that has to deal with voting.
+
+00:01:05.250 --> 00:01:07.095
+When you click the "Udacicola" button,
+
+00:01:07.095 --> 00:01:09.285
+it'll call the voteUdacicola method,
+
+00:01:09.285 --> 00:01:11.430
+which adds one to you udacicolaVotes,
+
+00:01:11.430 --> 00:01:15.465
+a variable that's meant to keep track of how many people have voted for Udacicola.
+
+00:01:15.465 --> 00:01:17.430
+In the same way, let's say that you've programmed
+
+00:01:17.430 --> 00:01:20.190
+the XML so that when you click on the "Pepsi" button,
+
+00:01:20.190 --> 00:01:22.335
+it calls the votePepcity method,
+
+00:01:22.335 --> 00:01:23.730
+which also adds one,
+
+00:01:23.730 --> 00:01:25.950
+but instead to the number of Pepcity votes.
+
+00:01:25.950 --> 00:01:27.660
+Then, for the sake of argument,
+
+00:01:27.660 --> 00:01:30.870
+let's say that there's a third secret button which only you can use,
+
+00:01:30.870 --> 00:01:32.265
+which will show the votes.
+
+00:01:32.265 --> 00:01:34.725
+That button will call the showMeVotes method,
+
+00:01:34.725 --> 00:01:37.815
+which will show the udacicolaVotes versus the pepcityVotes,
+
+00:01:37.815 --> 00:01:39.810
+so you can compare the two for your research.
+
+00:01:39.810 --> 00:01:43.245
+Okay. So, let's start thinking about the scope of some of these variables.
+
+00:01:43.245 --> 00:01:46.500
+We'll look at the udacicolaVotes variable first.
+
+00:01:46.500 --> 00:01:49.155
+From what you see here in the code right now,
+
+00:01:49.155 --> 00:01:52.860
+is udacicolaVotes a local variable or a global variable?
+
+00:01:52.860 --> 00:01:56.970
+Now, this doesn't mean should it be a local variable or should it be a global variable.
+
+00:01:56.970 --> 00:01:58.710
+Look at the code and tell me,
+
+00:01:58.710 --> 00:02:03.105
+is it instantiated and defined as a local variable or as a global variable?
+
+00:02:03.105 --> 00:02:04.860
+After you answer this,
+
+00:02:04.860 --> 00:02:07.160
+there's going to be one more additional question.
+

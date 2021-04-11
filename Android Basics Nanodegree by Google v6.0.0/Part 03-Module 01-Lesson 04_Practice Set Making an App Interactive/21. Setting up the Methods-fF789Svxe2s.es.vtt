@@ -1,0 +1,233 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.450 --> 00:00:04.121
+Para tratar de resolver el problema,
+primero escribiré algunos métodos.
+
+00:00:04.454 --> 00:00:07.357
+Los métodos son secciones de código
+entre llaves.
+
+00:00:07.550 --> 00:00:10.060
+Voy a hacer mis botones
+para activar los métodos,
+
+00:00:10.590 --> 00:00:12.796
+así tendré un método para cada botón.
+
+00:00:13.150 --> 00:00:15.265
+Empezaré con el botón "+3 puntos".
+
+00:00:15.700 --> 00:00:18.140
+Tecleo "public void".
+
+00:00:18.960 --> 00:00:21.030
+Aquí teclearíais el nombre del método.
+
+00:00:21.530 --> 00:00:24.107
+Podéis nombrar los métodos como queráis,
+
+00:00:24.808 --> 00:00:26.877
+siempre que tengan sentido.
+
+00:00:27.511 --> 00:00:30.380
+Nombro explícitamente el método
+que se activa
+
+00:00:30.720 --> 00:00:33.283
+al pulsar el botón "+3 puntos",
+
+00:00:33.683 --> 00:00:40.680
+así que este método se llamará
+"añadirTresAlEquipoA".
+
+00:00:41.600 --> 00:00:45.350
+Podríais nombrarlo también
+"añadirTresPuntosAlEquipoA".
+
+00:00:46.463 --> 00:00:48.870
+Y ahora tecleo los parámetros del método.
+
+00:00:49.490 --> 00:00:52.869
+No sabéis mucho de esto
+pero lo aprenderéis en la próxima lección.
+
+00:00:53.370 --> 00:00:56.606
+Escribo "Vista" con uve mayúscula,
+después una "v"
+
+00:00:57.240 --> 00:00:59.142
+y luego abro una llave
+
+00:00:59.350 --> 00:01:03.447
+y Android Studio entiende que debe
+cerrarme la llave para cerrar el método.
+
+00:01:04.548 --> 00:01:08.200
+Todos los códigos que escriba aquí
+se tendrán en cuenta
+
+00:01:08.400 --> 00:01:10.253
+cuando se active este método.
+
+00:01:11.800 --> 00:01:15.058
+Lo que quiero que pase es que se muestre
+
+00:01:16.630 --> 00:01:17.630
+el "Equipo A",
+
+00:01:18.862 --> 00:01:23.467
+y le daré el número que quiero mostrar.
+En este caso quiero mostrar el 3.
+
+00:01:24.734 --> 00:01:29.440
+Esto aún no se ha asociado a mis botones,
+así que debo volver a mi XML
+
+00:01:31.842 --> 00:01:36.079
+e ir al botón "+3 puntos",
+este de aquí.
+
+00:01:37.314 --> 00:01:39.716
+Añado un atributo <i>onClick</i>
+
+00:01:40.350 --> 00:01:47.350
+y le daré a este atributo el mismo nombre
+del método en mi actividad principal.
+
+00:01:48.550 --> 00:01:55.132
+De hecho, Android se adelanta al sugerir
+que ponga "añadirTresAlEquipoA"
+
+00:01:55.432 --> 00:01:59.136
+porque detecta los métodos disponibles
+en la actividad principal
+
+00:01:59.200 --> 00:02:01.000
+y este parece que sirve.
+
+00:02:01.638 --> 00:02:03.340
+Así que lo pulso.
+
+00:02:04.841 --> 00:02:06.840
+Ahora tengo el atributo <i>onClick</i> aquí
+
+00:02:07.677 --> 00:02:10.449
+con el botón que dice "+3 puntos",
+
+00:02:10.747 --> 00:02:12.849
+que activará "añadirTresAlEquipoA",
+
+00:02:13.310 --> 00:02:17.810
+y podría volver a mi actividad
+y ver que dentro de "añadirTresAlEquipoA"
+
+00:02:18.221 --> 00:02:20.357
+dice "mostrarEquipoA(3)",
+
+00:02:20.891 --> 00:02:23.160
+y hará que el 3 aparezca
+en el marcador de la pantalla.
+
+00:02:23.493 --> 00:02:25.762
+Vamos a asegurarnos de que todo está bien.
+
+00:02:27.400 --> 00:02:28.431
+Aquí está mi app.
+
+00:02:28.565 --> 00:02:30.767
+Voy a pulsar "+3 puntos".
+
+00:02:31.368 --> 00:02:32.836
+¡Sí, dice 3!
+
+00:02:32.930 --> 00:02:35.930
+Puede que se vea pequeño,
+pero creedme, dice 3.
+
+00:02:36.940 --> 00:02:39.943
+Estos otros botones no van,
+como era de esperar,
+
+00:02:39.980 --> 00:02:42.010
+porque no hemos cambiado sus códigos.
+
+00:02:42.050 --> 00:02:43.246
+Sigamos trabajando.
+
+00:02:44.347 --> 00:02:48.380
+Sabiendo que ya funciona,
+haré lo mismo con los otros dos botones.
+
+00:02:48.980 --> 00:02:51.955
+De hecho,
+voy a hacer lo mismo.
+
+00:02:51.990 --> 00:02:56.120
+Voy a copiar este
+y después lo pegaré dos veces.
+
+00:02:58.461 --> 00:03:04.140
+Y ahora solo tengo que escribir
+"añadirDosAlEquipoA"
+
+00:03:04.880 --> 00:03:08.338
+y "añadirUnoAlEquipoA".
+
+00:03:08.872 --> 00:03:14.344
+Aquí cambio esto para que se muestre el 2
+y esto para que se muestre el 1.
+
+00:03:16.012 --> 00:03:21.418
+Para añadir 1 y 2 puntos
+hago lo mismo que hice para añadir 3,
+
+00:03:21.450 --> 00:03:25.450
+pero tengo que volver al XML,
+así que pulso aquí
+
+00:03:28.024 --> 00:03:32.395
+y añado dos <i>onClick</i> más.
+Para el botón "+2 puntos"
+
+00:03:33.460 --> 00:03:35.332
+voy a escribir un <i>onClick</i>.
+
+00:03:37.620 --> 00:03:40.904
+¡Qué bonito!
+Me da tres opciones diferentes.
+
+00:03:41.100 --> 00:03:43.039
+Quiero asegurarme
+de seleccionar la correcta.
+
+00:03:43.773 --> 00:03:47.720
+Para "+2 puntos"
+selecciono "añadirDosAlEquipoA".
+
+00:03:48.760 --> 00:03:55.719
+Y ahora voy aquí, tecleo <i>onClick</i>,
+y selecciono "añadirUnoAlEquipoA".
+
+00:03:56.886 --> 00:04:03.090
+Confío en que esto funcione:
+he invertido dinero y ahora debo probarlo.
+
+00:04:04.127 --> 00:04:06.630
+Pulso "+3".
+Aún va.
+
+00:04:07.130 --> 00:04:10.130
+Pulso "+2".
+Bien, dice 2.
+
+00:04:10.800 --> 00:04:15.540
+Y ahora pulso "Tiro libre" y me sale 1.
+Perfecto, he acabado la tarea.
+
+00:04:17.100 --> 00:04:21.399
+Y como he acabado la tarea,
+tengo el honor de marcar esta casilla.
+

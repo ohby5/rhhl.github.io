@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.640 --> 00:00:03.960
+Você acabou de ver algumas situações 
+complicadas envolvendo variáveis múltiplas ​​e
+
+00:00:03.960 --> 00:00:05.460
+ordenação interessante.
+
+00:00:05.460 --> 00:00:09.550
+Aqui, estimulando a mão para descobrir
+o que o computador faz é fundamental.
+
+00:00:09.550 --> 00:00:11.440
+Agora vamos falar sobre o escopo.
+
+00:00:11.440 --> 00:00:13.950
+Tenho ligado o vídeo no escopo se
+você não se lembra o que eu quero dizer com
+
+00:00:13.950 --> 00:00:15.200
+escopo de variáveis.
+
+00:00:15.200 --> 00:00:19.370
+Escopo é o que diferencia uma variável local,
+de uma variável global.
+
+00:00:19.370 --> 00:00:22.580
+Uma variável local é preso no bloco
+de código em que foi definido,
+
+00:00:22.580 --> 00:00:23.730
+geralmente um método.
+
+00:00:23.730 --> 00:00:26.920
+Considerando que uma variável global tem um pouco
+pouco mais de liberdade para ir para diferentes
+
+00:00:26.920 --> 00:00:28.360
+partes do programa.
+
+00:00:28.360 --> 00:00:31.390
+Vejamos algumas perguntas diferentes
+para ver se você entende a diferença.
+
+00:00:31.390 --> 00:00:34.320
+Nestes exercícios vamos olhar 
+para exemplos de código mais longos.
+
+00:00:34.320 --> 00:00:36.940
+Todos estes exemplos
+quer ter nenhum erro ou
+
+00:00:36.940 --> 00:00:39.580
+ele terá um âmbito de erro envolvendo.
+
+00:00:39.580 --> 00:00:41.240
+Aqui está o primeiro exemplo.
+
+00:00:41.240 --> 00:00:43.970
+Neste cenário, digamos que você é
+um pesquisador de mercado, e você fez
+
+00:00:43.970 --> 00:00:49.030
+um aplicativo para descobrir qual bebida açucarada
+consumidores preferem, <i>UdasiCola</i> ou <i>Pepcity</i>.
+
+00:00:49.030 --> 00:00:51.730
+Você vai falar com as pessoas na rua e
+entregá-os as duas bebidas.
+
+00:00:51.730 --> 00:00:54.940
+E, em seguida, pede-lhes para votar com o 
+aplicativo dizer qual deles gostam melhor.
+
+00:00:54.940 --> 00:00:58.040
+Vamos olhar para o código
+que vai com isso.
+
+00:00:58.040 --> 00:00:59.170
+Essas elipses aqui e
+
+00:00:59.170 --> 00:01:02.260
+aqui significa que há mais
+código que eu não estou mostrando a você.
+
+00:01:02.260 --> 00:01:05.340
+Mas eu estou vou lhe mostrandar como é importante
+o código que tem de lidar com a votação.
+
+00:01:05.340 --> 00:01:09.310
+Quando você clica no botão <i>Udacicola</i>,
+ele vai chamar o método <i>voteUdacicola</i>,
+
+00:01:09.310 --> 00:01:12.520
+que adiciona um a <i>udacicolaVotes</i>,
+uma variável que está destinado a
+
+00:01:12.520 --> 00:01:15.720
+manter o controle de quantas pessoas
+votou <i>Udacicola</i>.
+
+00:01:15.720 --> 00:01:18.370
+Da mesma forma, vamos dizer que
+você programou o XML para
+
+00:01:18.370 --> 00:01:22.320
+que quando você clica no <i>Pepcity</i>
+botão, ele chama o método <i>votePepcity</i>,
+
+00:01:22.320 --> 00:01:26.090
+que também acrescenta um, mas
+em vez disso, o número de <i>Pepcity</i> úteis.
+
+00:01:26.090 --> 00:01:27.770
+Então, por uma questão de argumento,
+
+00:01:27.770 --> 00:01:30.950
+digamos que há um terceiro botão
+secreto que só você pode usar.
+
+00:01:30.950 --> 00:01:32.430
+Que irá mostrar os votos.
+
+00:01:32.430 --> 00:01:36.130
+Esse botão vai chamar os <i>showMeVotes</i>
+método, que irá mostrar o <i>Udacicola</i>
+
+00:01:36.130 --> 00:01:40.080
+Votos contra os votos <i>pepcity</i>, para que
+pode comparar os dois para sua pesquisa.
+
+00:01:40.080 --> 00:01:41.290
+OK.
+Então, vamos começar a pensar no
+
+00:01:41.290 --> 00:01:43.500
+alcance de algumas destas variáveis.
+
+00:01:43.500 --> 00:01:46.940
+Nós vamos olhar para o <i>Udacicola</i>
+votos variável primeiro.
+
+00:01:46.940 --> 00:01:49.320
+Pelo que você vê aqui
+no código agora,
+
+00:01:49.320 --> 00:01:53.060
+é <i>udacicola</i> votos uma variável local ou
+uma variável global?
+
+00:01:53.060 --> 00:01:55.440
+Agora isso não significa que deveria
+seja uma variável local ou
+
+00:01:55.440 --> 00:01:57.120
+deveria ser uma variável global.
+
+00:01:57.120 --> 00:01:59.950
+Olhe para o código e diga-me,
+ele é instanciado e
+
+00:01:59.950 --> 00:02:02.610
+definida como uma variável local ou
+como uma variável global?
+
+00:02:04.160 --> 00:02:06.780
+Depois de responder a esta lá vai
+ser mais uma pergunta adicional.
+

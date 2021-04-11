@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.080 --> 00:00:01.290
+Size ilk sorduğum şey,
+
+00:00:01.290 --> 00:00:04.710
+udacicolaOyları, yerel bir değişken mi
+yoksa küresel bir değişken mi olduğuydu.
+
+00:00:04.710 --> 00:00:07.780
+Yerel bir değişken olarak
+belirlemeliydiniz.
+
+00:00:07.780 --> 00:00:11.330
+Peki, bunun nedenini kavramak için buraya
+yani değişkenin bildirildiği yere gidin,
+
+00:00:11.330 --> 00:00:14.340
+veri türü tam şurada olduğu için
+değişkenin bildirildiğini biliyorsunuz.
+
+00:00:15.590 --> 00:00:19.800
+Peki, metodun, yani çengelli
+parantezlerin
+
+00:00:19.800 --> 00:00:23.900
+içinde mi yoksa dışında mı bildirilmiş?
+
+00:00:23.900 --> 00:00:25.890
+Eğer metod içinde
+bildirildiyse,
+
+00:00:25.890 --> 00:00:27.670
+bu yerel değişken olduğu anlamına gelir, ve
+
+00:00:27.670 --> 00:00:30.960
+gerçekten metot içinde bildirildiğini
+açık biçimde görebiliriz.
+
+00:00:32.150 --> 00:00:33.790
+Yani, yerel bir değişkendir.
+
+00:00:33.790 --> 00:00:35.150
+Pekala, bunun anlamı nedir?
+
+00:00:35.150 --> 00:00:36.720
+Kendimize şunu sormalıyız,
+
+00:00:36.720 --> 00:00:41.030
+bir şeyi yerel değişken bildirdim peki
+başka türlü de yapabilir miydim?
+
+00:00:41.030 --> 00:00:42.930
+Bu örnek üzerinden
+bunu üzerine düşünelim.
+
+00:00:42.930 --> 00:00:44.060
+İşte telefonumuz.
+
+00:00:44.060 --> 00:00:46.010
+Udacicola üzerine konuşuyorduk, bu nedenle
+
+00:00:46.010 --> 00:00:49.550
+yalnızca udacicola tuşuna
+bastığımız da ne olduğuna odaklanalım.
+
+00:00:49.550 --> 00:00:52.230
+Tuşa bastığımız zaman
+method yürütülmeye başlar.
+
+00:00:52.230 --> 00:00:57.008
+Udacicola oylarına sıfır değeri verir ve
+sonra sıfır olan udacicolaOylarına
+
+00:00:57.008 --> 00:00:58.790
+bir ekler.
+
+00:00:58.790 --> 00:01:00.870
+Böylece udacicolaOyları 1 olur.
+
+00:01:00.870 --> 00:01:05.430
+udacicolaOyları yerel bir değişken
+olduğu için, bu metodun sonunda,
+
+00:01:05.430 --> 00:01:07.990
+bir şekilde noktalanır
+ya da silinir.
+
+00:01:07.990 --> 00:01:11.940
+Yerel bir değişken olması
+nedeniyle metodun sonunda
+
+00:01:11.940 --> 00:01:15.640
+udacicolaOylarının silinmesi
+iki soruna neden olur.
+
+00:01:15.640 --> 00:01:16.880
+Bu neden bir sorundur?
+
+00:01:16.880 --> 00:01:19.580
+Pekala, eğer üç farklı insan
+tuşa basarak
+
+00:01:19.580 --> 00:01:25.905
+udacicola'ya oy verseydi,
+udacicolaOyları'nun üç olması gerekirdi.
+
+00:01:25.905 --> 00:01:30.001
+Gerçekte olan ise
+tuşa ilk tıklandığında
+
+00:01:30.001 --> 00:01:31.105
+udacicolanın sıfırlanmasıdır.
+
+00:01:31.105 --> 00:01:32.865
+Bir olması için, 1 eklenmesi gerekir.
+
+00:01:32.865 --> 00:01:34.185
+1 olduktan sonra silinir.
+
+00:01:34.185 --> 00:01:35.815
+Artık yoktur.
+
+00:01:35.815 --> 00:01:38.605
+ikinci kez biri
+udacicolaOyları'na tıklarsa
+
+00:01:38.605 --> 00:01:41.785
+udacicolaOyları
+yeni baştan oluşur.
+
+00:01:41.785 --> 00:01:42.565
+Yeniden bildirilir.
+
+00:01:44.155 --> 00:01:47.575
+Hatırlayın, çünkü ilk seferde
+bütünüyle silinmişti.
+
+00:01:47.575 --> 00:01:49.520
+Yani yeniden oluşturulmaya
+ihtiyacı vardır.
+
+00:01:49.520 --> 00:01:51.840
+Ve tekrar oluşturulduğunda
+değer sıfırdır.
+
+00:01:51.840 --> 00:01:54.690
+Tekrar 1 ekliyoruz ama
+unutmayın değer sıfır.
+
+00:01:54.690 --> 00:01:58.700
+Bu nedenle, tuşa iki kere tıklanmış
+olsa bile, udacicola hala birdir.
+
+00:01:59.930 --> 00:02:02.250
+Aynı şey üçüncü kez
+tıklandığı zaman da olur,
+
+00:02:02.250 --> 00:02:06.550
+Tekrar bir olur ve metodun sonunda
+yine silinir.
+
+00:02:06.550 --> 00:02:07.740
+İşte bu ilk problemdir.
+
+00:02:07.740 --> 00:02:11.350
+İki tıklama arasında
+durum kaydı yapılamıyor.
+
+00:02:11.350 --> 00:02:14.190
+Yani kaç insanın oy verdiği
+kaydedilemiyor.
+
+00:02:14.190 --> 00:02:18.700
+Diğer bir problem ise,
+bu kodun hata verecek olmasıdır.
+
+00:02:18.700 --> 00:02:22.610
+Bunun arkasındaki neden,
+dana önce söylediğim gibi,
+
+00:02:22.610 --> 00:02:26.820
+udacicolaOyları'nın oluşması ve
+faaliyetinin tam burada başlamasıdır.
+
+00:02:26.820 --> 00:02:29.880
+Daha sonra
+metodun sonunda
+
+00:02:29.880 --> 00:02:32.090
+silinir ve
+oluşumu sonlanır.
+
+00:02:32.090 --> 00:02:36.190
+Bunun anlamı, buraya geldiğim zaman
+udacicola gerçekten mevcut olmamasıdır.
+
+00:02:36.190 --> 00:02:39.640
+Teknik olarak söylersek,
+bu değişken faaliyet dışıdır.
+
+00:02:39.640 --> 00:02:44.010
+Faaliyet alanı burasıdır,
+burada bildirilir ve sonlanır.
+
+00:02:45.040 --> 00:02:46.700
+Ama biz bunu burada kullanmak istiyoruz.
+
+00:02:46.700 --> 00:02:47.612
+lakin kullanılamıyor.
+
+00:02:47.612 --> 00:02:51.490
+udacicolaOyları'nın yerel olarak atanması
+bu örnekte doğru bir karar değildi.
+
+00:02:51.490 --> 00:02:54.130
+Bunun neden böyle olduğunu
+şu iki nokta ile özetleyebilirim.
+
+00:02:54.130 --> 00:02:58.320
+Tıklamalar arasında oylar kaydedilmiyor
+oylarıBanagöster metodu
+
+00:02:58.320 --> 00:02:59.650
+faaliyet alanı içinde değil.
+
+00:02:59.650 --> 00:03:01.700
+Böylece hatalar ortaya çıkıyor.
+
+00:03:01.700 --> 00:03:03.680
+Ve derleme mümkün olmuyor.
+
+00:03:03.680 --> 00:03:06.140
+Pekala, şimdi bu programdaki
+başka bir değişkene bakalım.
+

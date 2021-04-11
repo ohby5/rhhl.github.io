@@ -1,0 +1,445 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.400
+Antes de começar,
+vou responder a esta pergunta.
+
+00:00:03.434 --> 00:00:06.234
+Eu só sei
+de dois ViewGroups:
+
+00:00:06.267 --> 00:00:08.434
+LinearLayouts
+e RelativeLayouts.
+
+00:00:08.467 --> 00:00:10.133
+A questão aqui...
+
+00:00:10.167 --> 00:00:13.434
+é que estes espaço
+deve ser dividido ao meio.
+
+00:00:13.467 --> 00:00:16.467
+Usando layout_weight
+fica bem fácil.
+
+00:00:17.234 --> 00:00:19.801
+Bem, vamos ver o código.
+
+00:00:19.834 --> 00:00:21.734
+Não estou mais
+trabalhando em Java,
+
+00:00:21.767 --> 00:00:25.567
+então vou até a aba
+activity_main.xml.
+
+00:00:25.601 --> 00:00:27.434
+Aqui está meu XML.
+
+00:00:28.133 --> 00:00:32.200
+Eu vou começar
+colando todo este código
+
+00:00:32.234 --> 00:00:33.701
+em outro LinearLayout.
+
+00:00:33.734 --> 00:00:36.300
+Este é o LinearLayout pai...
+
+00:00:36.334 --> 00:00:39.000
+dos meus dois
+LinearLayouts menores.
+
+00:00:39.033 --> 00:00:43.701
+E vou trazer estas duas linhas
+aqui para cima...
+
+00:00:43.734 --> 00:00:46.334
+porque elas precisam
+estar anexadas à rootView.
+
+00:00:47.200 --> 00:00:49.400
+Adiciono uma chave
+de fechamento.
+
+00:00:49.434 --> 00:00:51.400
+O Android Studio
+fez automaticamente
+
+00:00:51.434 --> 00:00:53.701
+uma tag de fechamento
+para mim aqui.
+
+00:00:53.734 --> 00:00:56.834
+Vou simplesmente
+recortá-la...
+
+00:00:56.868 --> 00:00:59.834
+e colá-la no final.
+
+00:01:00.934 --> 00:01:05.000
+Certo,
+um sublinhado vermelho.
+
+00:01:05.033 --> 00:01:07.701
+O erro diz...
+
+00:01:07.734 --> 00:01:10.467
+que devo definir
+layout_height e layout_width.
+
+00:01:10.501 --> 00:01:12.434
+Opa! Vamos fazer isso.
+
+00:01:13.100 --> 00:01:15.400
+Como esta é a rootView,
+
+00:01:16.033 --> 00:01:18.133
+usarei match_parent.
+
+00:01:19.834 --> 00:01:22.901
+Certo, eu tenho
+um LinearLayout
+
+00:01:22.934 --> 00:01:26.200
+envolvendo
+um LinearLayout filho.
+
+00:01:26.234 --> 00:01:27.801
+Se eu pré-visualizar...
+
+00:01:28.534 --> 00:01:30.234
+É quase a mesma coisa.
+
+00:01:30.267 --> 00:01:34.234
+Certo, então vou copiar...
+
+00:01:34.267 --> 00:01:37.701
+tudo no LinearLayout
+do time A...
+
+00:01:37.734 --> 00:01:41.901
+e colarei sob o time A.
+
+00:01:41.934 --> 00:01:45.801
+Este será o LinearLayout
+do time B.
+
+00:01:47.434 --> 00:01:52.000
+As coisas estão começando
+a ficar meio bagunçadas.
+
+00:01:52.033 --> 00:01:57.000
+Vou apertar Cmd+A,
+ou "Selecionar tudo",
+
+00:01:57.033 --> 00:02:01.133
+e vou usar o atalho de teclado
+Cmd+Option+L
+
+00:02:01.167 --> 00:02:03.267
+para formatar meu código.
+
+00:02:03.300 --> 00:02:07.734
+No Windows, é Ctrl+Alt+L.
+Agora está melhor.
+
+00:02:07.767 --> 00:02:11.300
+Quero garantir que você está
+entendendo o que houve.
+
+00:02:11.334 --> 00:02:16.400
+No topo,
+há um LinearLayout raiz.
+
+00:02:16.434 --> 00:02:20.968
+Começa aqui e,
+rolando para o fim,
+
+00:02:21.000 --> 00:02:22.534
+termina aqui.
+
+00:02:23.167 --> 00:02:26.934
+Dentro do LinearLayout raiz -
+vou voltar para cima -
+
+00:02:28.000 --> 00:02:31.801
+tem um layout filho,
+que começa aqui -
+
+00:02:31.834 --> 00:02:33.667
+vou rolar devagar -
+
+00:02:35.501 --> 00:02:38.667
+e termina aqui.
+É do time A.
+
+00:02:38.701 --> 00:02:40.801
+E tem outro
+LinearLayout filho,
+
+00:02:40.834 --> 00:02:43.734
+que começa aqui -
+vou rolar devagar -
+
+00:02:45.033 --> 00:02:47.400
+e termina aqui,
+que é do time B.
+
+00:02:47.434 --> 00:02:49.267
+Percebi algo vermelho
+lá em cima,
+
+00:02:49.300 --> 00:02:53.033
+então vou voltar
+para ver o erro.
+
+00:02:54.200 --> 00:02:56.901
+"Orientação errada,
+não especificada
+
+00:02:56.934 --> 00:02:58.200
+e padrão é horizontal,
+
+00:02:58.234 --> 00:03:00.267
+mas layout tem
+muitos filhos
+
+00:03:00.300 --> 00:03:03.767
+e a largura de pelo menos um
+é igual à do pai."
+
+00:03:05.200 --> 00:03:07.534
+Eu quero mesmo
+que seja horizontal.
+
+00:03:07.567 --> 00:03:10.367
+Mas vamos especificar
+a orientação.
+
+00:03:11.133 --> 00:03:14.934
+Isto não é de fato necessário,
+pois o padrão é horizontal,
+
+00:03:14.968 --> 00:03:16.767
+mas é bom deixar explícito.
+
+00:03:17.834 --> 00:03:21.334
+E dizia algo sobre os filhos
+estarem se sobrepondo.
+
+00:03:22.167 --> 00:03:23.934
+Vou pré-visualizar.
+
+00:03:24.834 --> 00:03:26.868
+Não parece ter mudado
+muita coisa,
+
+00:03:26.901 --> 00:03:31.701
+embora eu tenha tido o trabalho
+de copiar outro LinearLayout.
+
+00:03:31.734 --> 00:03:34.767
+Pode ter a ver com o erro
+que acabei de ler.
+
+00:03:35.367 --> 00:03:38.701
+Dizia que é
+um layout horizontal,
+
+00:03:38.734 --> 00:03:42.200
+que tenta justapor
+estes LinearLayouts,
+
+00:03:42.234 --> 00:03:46.434
+mas que o layout_width
+do LinearLayout
+
+00:03:46.467 --> 00:03:49.701
+é match_parent,
+o que toma a tela.
+
+00:03:49.734 --> 00:03:54.133
+Então meu primeiro LinearLayout
+está tomando a tela toda...
+
+00:03:54.167 --> 00:03:58.868
+e o outro está justaposto
+em algum lugar fora da tela.
+
+00:03:59.634 --> 00:04:03.200
+Vamos pensar
+no que pretendemos.
+
+00:04:03.234 --> 00:04:06.467
+Queremos que os layouts
+tomem o mesmo espaço
+
+00:04:06.501 --> 00:04:07.868
+e fiquem lado a lado.
+
+00:04:07.901 --> 00:04:11.601
+Eis o que teremos que usar:
+layout_weights.
+
+00:04:11.634 --> 00:04:15.200
+Vou até o primeiro
+LinearLayout...
+
+00:04:15.234 --> 00:04:19.901
+e adicionarei
+"layout_weight=1".
+
+00:04:20.901 --> 00:04:25.934
+Também vou definir
+sua largura como 0.
+
+00:04:25.968 --> 00:04:29.701
+Já dá para ver que temos
+dois LinearLayouts
+
+00:04:29.734 --> 00:04:32.701
+que só não estão
+sendo bem exibidos.
+
+00:04:32.734 --> 00:04:34.300
+Mas já melhorou.
+
+00:04:34.334 --> 00:04:37.501
+Também porei layout_weight
+no meu segundo LinearLayout,
+
+00:04:37.534 --> 00:04:38.634
+este aqui.
+
+00:04:38.667 --> 00:04:41.968
+Vou rolar para baixo...
+Aqui está o segundo.
+
+00:04:42.000 --> 00:04:44.000
+Vou fazer
+a mesmíssima coisa.
+
+00:04:44.033 --> 00:04:48.968
+Definirei que ele também
+tem peso 1,
+
+00:04:49.000 --> 00:04:51.334
+ou seja,
+layout_weights iguais,
+
+00:04:52.434 --> 00:04:56.033
+e definirei a largura como 0.
+
+00:04:56.567 --> 00:04:59.901
+Bom, a razão para definir
+as larguras como 0...
+
+00:04:59.934 --> 00:05:04.300
+é que, se os dois lados
+não tomam nenhum espaço,
+
+00:05:04.334 --> 00:05:08.501
+todo o espaço extra,
+ou seja, a tela toda,
+
+00:05:08.534 --> 00:05:12.000
+será dividido ao meio
+e distribuído aos dois,
+
+00:05:12.033 --> 00:05:14.701
+pois ambos têm
+o mesmo peso.
+
+00:05:14.734 --> 00:05:17.300
+Se isso for meio confuso,
+deixei alguns vídeos
+
+00:05:17.334 --> 00:05:20.100
+nas "Notas do instrutor"
+sobre layout_weight.
+
+00:05:20.133 --> 00:05:24.601
+Bom, está bem legal,
+só que diz que é do time A.
+
+00:05:24.634 --> 00:05:27.133
+Vou rolar a tela
+e mudar isso.
+
+00:05:27.167 --> 00:05:30.300
+Pronto, mudei para time B.
+
+00:05:30.334 --> 00:05:34.868
+Você pode ter percebido
+que tem outro erro aqui.
+
+00:05:34.901 --> 00:05:39.501
+Este erro acontece
+por termos um ID duplicado.
+
+00:05:39.534 --> 00:05:42.133
+Lembre-se,
+eu copiei e colei um código.
+
+00:05:42.167 --> 00:05:45.868
+Há duas coisas tentando
+ter o mesmo ID,
+
+00:05:45.901 --> 00:05:47.801
+"team_a_score".
+
+00:05:47.834 --> 00:05:51.567
+Vou mudar
+para "team_b_score".
+
+00:05:51.601 --> 00:05:53.601
+Está bem bonito!
+
+00:05:53.634 --> 00:05:55.834
+Está meio pequeno,
+vou dar um zoom,
+
+00:05:56.634 --> 00:05:58.601
+mas diz time B aqui.
+
+00:05:59.133 --> 00:06:02.200
+Todos os botões
+e TextViews estão certos,
+
+00:06:02.234 --> 00:06:04.234
+então vou tentar rodar
+no meu celular.
+
+00:06:05.300 --> 00:06:07.801
+Pronto. Está bem bonito.
+
+00:06:07.834 --> 00:06:12.000
+Os botões do time A
+estão respondendo,
+
+00:06:12.033 --> 00:06:13.200
+que ótimo.
+
+00:06:13.234 --> 00:06:18.634
+E os do time B, bem...
+também respondem.
+
+00:06:18.667 --> 00:06:20.634
+Que coisa.
+
+00:06:20.667 --> 00:06:23.234
+Mas nós só queríamos
+consertar o XML,
+
+00:06:23.267 --> 00:06:25.434
+não nos importamos
+com o Java.
+
+00:06:25.467 --> 00:06:29.734
+Agora que o XML funciona,
+que tal consertar o Java?
+

@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.280 --> 00:00:03.400
+Di skenario ini, Anda
+mengerjakan aplikasi bernama Health Check.
+
+00:00:03.400 --> 00:00:07.162
+Health Check adalah aplikasi yang
+memberikan tes.
+
+00:00:07.162 --> 00:00:11.350
+Tes itu dapat memberitahu pengguna
+seberapa sehatnya hidup mereka.
+
+00:00:12.610 --> 00:00:16.331
+Pertanyaan tampil di kotak ini,
+dan pengguna dapat menjawab Yes,
+
+00:00:16.331 --> 00:00:20.386
+Sometimes, atau No. Anggaplah ada sekitar
+100 pertanyaan yang berbeda,
+
+00:00:20.386 --> 00:00:24.280
+berkisar pada pertanyaan seperti: apakah
+Anda olahraga lebih dari 3 kali seminggu?
+
+00:00:24.280 --> 00:00:27.030
+Apa Anda minum kurang dari
+dua gelas kopi per hari?
+
+00:00:27.030 --> 00:00:29.150
+Atau, apa Anda punya jejaring sosial ?
+
+00:00:29.150 --> 00:00:32.150
+Pertanyaan dirangkai sedemikian
+agar saat Anda menjawab Yes,
+
+00:00:32.150 --> 00:00:36.500
+selalu berarti Anda lebih sehat dan
+waktu jawab No, berarti kurang sehat.
+
+00:00:36.500 --> 00:00:39.240
+Sometimes berarti tidak yakin.
+
+00:00:39.240 --> 00:00:41.980
+Sebenarnya yang dilakukan aplikasi adalah
+melacak skor.
+
+00:00:41.980 --> 00:00:45.110
+Waktu Anda tekan Yes,
+ditambahkan 1 ke &lt;i&gt;health level&lt;/i&gt; Anda.
+
+00:00:45.110 --> 00:00:48.340
+Waktu Anda menjawab Sometimes,
+nilainya tidak berubah.
+
+00:00:48.340 --> 00:00:51.260
+Waktu Anda menjawab No,
+dikurangi 1 dari &lt;i&gt;health level&lt;/i&gt;.
+
+00:00:51.260 --> 00:00:53.940
+Setelah Anda memilih salah satu
+dari pilihan ini,
+
+00:00:53.940 --> 00:00:56.800
+aplikasi akan menunjukkan ringkasan
+jawaban Anda dan
+
+00:00:56.800 --> 00:01:00.290
+&lt;i&gt;health level&lt;/i&gt; Anda saat itu sebelum
+memberikan pertanyaan selanjutnya.
+
+00:01:00.290 --> 00:01:03.180
+Kita akan lihat interaksi antara
+mengklik salah satu tombol
+
+00:01:03.180 --> 00:01:06.360
+dan menunjukkan ringkasan &lt;i&gt;level&lt;/i&gt;
+Anda berada di sini.
+
+00:01:06.360 --> 00:01:07.470
+Mari lihat kodenya.
+
+00:01:07.470 --> 00:01:11.130
+Baiklah, ini kodenya. Saya juga telah
+menyediakannya di catatan instruktur
+
+00:01:11.130 --> 00:01:13.940
+jika Anda ingin melihat versi teksnya.
+
+00:01:13.940 --> 00:01:16.120
+Sekali lagi, itu bukan kode yang lengkap.
+
+00:01:16.120 --> 00:01:18.920
+Bulatan-bulatan panjang disini artinya
+ada kode sebelum dan
+
+00:01:18.920 --> 00:01:20.800
+sesudah metode yang ditunjukkan.
+
+00:01:20.800 --> 00:01:22.435
+Jadi bagaimana cara kerjanya?
+
+00:01:22.435 --> 00:01:25.250
+Begini, waktu Anda tekan tombol Yes,
+&lt;i&gt;yes method&lt;/i&gt; teraktifkan.
+
+00:01:25.250 --> 00:01:31.290
+Ini meningkatkan healthLevel,
+membuat message, lalu menunjukkannya.
+
+00:01:31.290 --> 00:01:36.030
+Demikian pula, waktu Anda tekan tombol
+Sometimes, &lt;i&gt;sometimes method&lt;/i&gt; diaktifkan.
+
+00:01:36.030 --> 00:01:38.840
+Bedanya hanya daripada menambahkan 1,
+Anda menambahkan 0.
+
+00:01:38.840 --> 00:01:41.640
+Artinya nilai variabel tidak berubah.
+
+00:01:41.640 --> 00:01:44.270
+Formatnya juga mirip ketika Anda
+menekan tombol No.
+
+00:01:44.270 --> 00:01:47.730
+Waktu &lt;i&gt;no message&lt;/i&gt; terpanggil, 1 nilai
+dikurangi dari healthLevel dan
+
+00:01:47.730 --> 00:01:48.810
+satu pesan dicetak.
+
+00:01:48.810 --> 00:01:52.880
+Baiklah, kita punya dua variabel dalam
+program ini, healthLevel dan &lt;i&gt;message&lt;/i&gt;.
+
+00:01:52.880 --> 00:01:54.810
+Mari kita lihat &lt;i&gt;message&lt;/i&gt; terlebih dahulu.
+
+00:01:54.810 --> 00:01:56.750
+Pertanyaan pertama saya
+untuk Anda adalah
+
+00:01:56.750 --> 00:02:00.741
+dari kode yang Anda lihat disini, apakah
+&lt;i&gt;message&lt;/i&gt; sebuah variabel lokal atau global?
+

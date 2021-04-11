@@ -1,0 +1,615 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.710 --> 00:00:03.930
+Bon, je vais répondre à ces questions
+avant de commencer avec XML.
+
+00:00:04.570 --> 00:00:07.050
+En premier, il faut
+sélectionner les modes d'affichage.
+
+00:00:07.050 --> 00:00:09.150
+Je vais dessiner
+autour de ceux que je vois.
+
+00:00:09.660 --> 00:00:11.130
+Il y a cinq modes d'affichage,
+
+00:00:11.130 --> 00:00:14.070
+sans compter le groupe View,
+qui est vraiment un mode d'affichage.
+
+00:00:14.070 --> 00:00:17.260
+Mais bon, ces cinq modes
+sont deux TextViews en haut ici,
+
+00:00:17.610 --> 00:00:19.050
+et puis, trois boutons.
+
+00:00:19.330 --> 00:00:23.730
+Et il n'y a pas vraiment d'ImageViews ici,
+donc on dit qu'il n'y pas d'ImageViews.
+
+00:00:24.170 --> 00:00:26.310
+Peut-être que vous vous demandez
+pourquoi j'ai décidé
+
+00:00:26.310 --> 00:00:28.150
+que ce sont deux TextViews différents.
+
+00:00:28.300 --> 00:00:29.760
+Eh ben, dans le produit final,
+
+00:00:29.760 --> 00:00:33.810
+le style pour l'Équipe A
+et le score ne se ressemblent pas.
+
+00:00:34.050 --> 00:00:37.330
+Donc, j'ai décidé de les séparer
+pour avoir deux TextViews différents.
+
+00:00:37.470 --> 00:00:40.110
+Regardons la deuxième étape
+où on positionne les modes d'affichage.
+
+00:00:40.110 --> 00:00:42.700
+Je vais sélectionner
+quel groupe d'affichage je veux utiliser.
+
+00:00:43.100 --> 00:00:46.330
+Et les deux auxquels je pense sont
+LinearLayout et RelativeLayout.
+
+00:00:46.830 --> 00:00:49.450
+Ici on a une colonne verticale
+des modes d'affichage.
+
+00:00:49.450 --> 00:00:52.720
+C'est plutôt clair pour moi ce je veux,
+c'est le LinearLayout.
+
+00:00:54.330 --> 00:00:57.320
+Et pour finir, j'ai la troisième étape,
+ce qui consiste à styler les modes.
+
+00:00:57.320 --> 00:01:00.320
+Et je vais travailler dessus
+pendant que je travaille avec XML.
+
+00:01:00.320 --> 00:01:02.090
+Bien, travaillons maintenant sur XML.
+
+00:01:02.780 --> 00:01:04.970
+Je veux regarder l'onglet Text.
+
+00:01:04.970 --> 00:01:07.020
+Donc la première chose
+que je vais faire ici,
+
+00:01:07.020 --> 00:01:09.550
+c'est de supprimer les choses
+dont je n'ai pas besoin.
+
+00:01:09.760 --> 00:01:12.710
+Donc je vais procéder avec ça
+et je vais supprimer ce TextView.
+
+00:01:13.490 --> 00:01:17.507
+Tous ces paddingLeft, paddingRight,
+paddingTop et paddingBottom,
+
+00:01:17.507 --> 00:01:19.200
+je vais aussi les supprimer.
+
+00:01:19.720 --> 00:01:23.130
+Je fais très attention à ne pas supprimer
+d'autres éléments par accident.
+
+00:01:23.130 --> 00:01:23.898
+Bon.
+
+00:01:24.568 --> 00:01:27.760
+On avait dit que le groupe d'affichage
+à utiliser n'est pas un RelativeLayout,
+
+00:01:27.760 --> 00:01:30.460
+mais un LinearLayout,
+donc je vais changer ça maintenant.
+
+00:01:31.370 --> 00:01:33.230
+Et à l'intérieur de ce LinearLayout,
+
+00:01:33.230 --> 00:01:35.800
+je vais avoir deux TextViews
+et trois boutons.
+
+00:01:35.800 --> 00:01:37.710
+Donc je vais commencer à les créer.
+
+00:01:37.710 --> 00:01:39.560
+Je ne vais pas être précise tout de suite
+
+00:01:39.560 --> 00:01:41.890
+concernant la largeur
+et la hauteur de TextView.
+
+00:01:42.780 --> 00:01:45.300
+Pour l'instant, je vais laisser cela
+en tant que wrap_content,
+
+00:01:45.300 --> 00:01:47.870
+ce qui va mettre le champ de TextView
+autour du texte.
+
+00:01:49.310 --> 00:01:51.750
+Je vais écrire le texte
+pour ce TextView aussi.
+
+00:01:52.490 --> 00:01:55.390
+Et ce premier TextView
+va simplement dire <i>Team A</i>, ou Équipe A.
+
+00:01:56.250 --> 00:01:58.710
+Voyons à quoi ça ressemble
+dans l'aperçu, dans <i>Preview</i>.
+
+00:01:58.710 --> 00:02:01.510
+Je peux voir un petit TextView là
+où est écrit Team A.
+
+00:02:01.800 --> 00:02:03.620
+Créons-en encore quelques-uns de plus.
+
+00:02:03.620 --> 00:02:07.200
+Donc celui en-dessous est le score,
+et c'est un TextView aussi.
+
+00:02:07.920 --> 00:02:09.758
+Donc on va commencer
+à écrire un peu de texte.
+
+00:02:09.758 --> 00:02:12.490
+Bien, je vois le mot TextView,
+donc j'appuie sur Entrée.
+
+00:02:12.490 --> 00:02:15.080
+Et je vais aussi faire
+de cela du wrap_content.
+
+00:02:15.590 --> 00:02:17.610
+Et je vais aussi ajouter du texte.
+
+00:02:17.860 --> 00:02:21.320
+Ben le score commence normalement à zéro,
+donc on va le commencer à zéro.
+
+00:02:21.560 --> 00:02:22.350
+Bon.
+
+00:02:22.580 --> 00:02:23.560
+Maintenant, les boutons.
+
+00:02:23.560 --> 00:02:25.510
+Donc je vais commencer
+à écrire le mot Button.
+
+00:02:25.510 --> 00:02:27.970
+Allez-y et faites wrap_content
+pour ceux-ci aussi.
+
+00:02:28.230 --> 00:02:32.002
+Maintenant, le premier bouton
+va afficher +3 points.
+
+00:02:32.322 --> 00:02:34.090
+Je vais aller le copier
+
+00:02:34.650 --> 00:02:35.650
+et puis le coller
+
+00:02:36.220 --> 00:02:37.080
+une fois,
+
+00:02:37.280 --> 00:02:39.230
+deux fois pour avoir encore deux boutons.
+
+00:02:39.780 --> 00:02:42.140
+Et on va avoir un bouton qui dit +2 points
+
+00:02:42.750 --> 00:02:45.070
+et un bouton
+qui dit <i>Free Throw</i>, ou Lancer Franc.
+
+00:02:45.250 --> 00:02:47.410
+Bien, voyons
+à quoi ça ressemble dans Preview.
+
+00:02:48.180 --> 00:02:50.590
+Bon, il semble que j'ai trois boutons.
+
+00:02:51.070 --> 00:02:53.740
+Je peux voir Team A et zéro.
+
+00:02:54.340 --> 00:02:55.910
+J'ai tous mes modes d'affichage,
+
+00:02:55.910 --> 00:02:58.740
+mais ça ne ressemble pas vraiment
+au produit final voulu.
+
+00:02:59.100 --> 00:03:00.900
+Ils sont dans une colonne verticale.
+
+00:03:00.900 --> 00:03:03.392
+Je pense que je dois changer
+l'orientation de la mise en page,
+
+00:03:03.392 --> 00:03:05.190
+donc c'est ce que je vais faire.
+
+00:03:05.190 --> 00:03:08.980
+Je vais commencer par écrire orientation
+et je veux qu'elle soit verticale.
+
+00:03:09.600 --> 00:03:11.860
+Bien, ça semble être mieux.
+
+00:03:11.860 --> 00:03:16.720
+Donc ces boutons ont été élargis
+pour remplir la largeur de la fenêtre.
+
+00:03:17.290 --> 00:03:20.880
+Je ne veux donc peut-être pas
+faire wrap_content pour les boutons,
+
+00:03:20.880 --> 00:03:23.290
+je vais plutôt faire match_parent.
+
+00:03:23.290 --> 00:03:24.820
+Je vais le changer maintenant.
+
+00:03:25.830 --> 00:03:29.030
+Bon, la largeur de tous mes boutons
+sont maintenant match_parent.
+
+00:03:29.030 --> 00:03:30.030
+Allons voir Preview.
+
+00:03:30.760 --> 00:03:33.470
+Bien, c'est mieux maintenant,
+ils ont été élargis.
+
+00:03:33.470 --> 00:03:34.270
+Bien.
+
+00:03:34.270 --> 00:03:38.980
+Mon texte est toujours
+un peu coincé dans le coin,
+
+00:03:39.730 --> 00:03:42.940
+et pour le corriger, je vais utiliser
+<i>gravity</i> ou de la pesanteur.
+
+00:03:43.680 --> 00:03:46.430
+Donc nous voici avec un Google Drawing,
+
+00:03:46.430 --> 00:03:48.710
+et créons un champ de saisie
+dans Google Drawing.
+
+00:03:50.030 --> 00:03:52.350
+Donc c'est tout comme
+la bordure de TextView.
+
+00:03:53.090 --> 00:03:54.700
+Je peux écrire les mots Team A,
+
+00:03:55.170 --> 00:03:57.770
+et par défaut, ça sera
+dans le coin en haut à gauche.
+
+00:03:57.770 --> 00:04:00.900
+Et c'est la même chose avec les TextViews,
+quand on met du texte dans TextView,
+
+00:04:00.900 --> 00:04:02.990
+par défaut, ça sera
+dans le coin en haut à gauche.
+
+00:04:03.440 --> 00:04:06.380
+Donc, avec Google Drawing,
+je peux sélectionner ce texte
+
+00:04:07.450 --> 00:04:11.350
+et utiliser l'équivalent d'un attribut,
+appelé une ligne,
+
+00:04:11.750 --> 00:04:15.460
+pour le centrer horizontalement
+dans le champ de saisie
+
+00:04:15.940 --> 00:04:18.560
+et pour le centrer verticalement
+dans le champ de saisie.
+
+00:04:18.940 --> 00:04:20.190
+C'est plutôt cool.
+
+00:04:20.190 --> 00:04:22.250
+Prendre le contenu de ce mode d'affichage
+
+00:04:22.250 --> 00:04:24.980
+et le déplacer à l'intérieur
+du contour de ce mode
+
+00:04:24.980 --> 00:04:27.340
+est le rôle de LayoutGravity.
+
+00:04:27.340 --> 00:04:30.330
+Et si vous pensez que c'est semblable
+à certaines des méthodes d'alignement
+
+00:04:30.330 --> 00:04:32.020
+qu'on peut utiliser avec RelativeLayout,
+
+00:04:32.020 --> 00:04:33.040
+c'est exact,
+
+00:04:33.040 --> 00:04:35.950
+mais on peut utiliser
+l'attribut Gravity avec LinearLayout,
+
+00:04:35.950 --> 00:04:37.540
+ce qui le rend plus puissant.
+
+00:04:37.540 --> 00:04:39.420
+On va le regarder dans la version code.
+
+00:04:40.130 --> 00:04:43.980
+Donc je vais prendre mon premier TextView
+et je vais écrire gravity.
+
+00:04:45.190 --> 00:04:46.970
+Bon.
+Avec gravity, on a deux options :
+
+00:04:46.970 --> 00:04:48.680
+layout_gravity et gravity.
+
+00:04:48.940 --> 00:04:50.700
+Je viens
+d'expliquer les attributs gravity.
+
+00:04:50.700 --> 00:04:52.650
+Donc on va utiliser celui-là.
+
+00:04:52.650 --> 00:04:54.860
+Bon. Et puis, j'ai un tas d'options ici,
+
+00:04:55.650 --> 00:04:58.220
+et je pense que je veux
+que ce soit centré horizontalement.
+
+00:04:58.220 --> 00:05:00.088
+Donc c'est ce que je vais utiliser.
+
+00:05:00.088 --> 00:05:02.620
+Et je vais aller l'effet
+que ça a eu dans Preview.
+
+00:05:04.010 --> 00:05:08.130
+On ne voit pas un grand changement,
+mais il y a une raison pour cela.
+
+00:05:09.440 --> 00:05:13.410
+Si j'appuie ici et on fait un zoom dessus
+car c'est difficile pour vous de le voir.
+
+00:05:14.610 --> 00:05:20.220
+Bien, alors ici on a Équipe A,
+et on peut à peu près voir le contour.
+
+00:05:20.960 --> 00:05:24.650
+Ben si je vous disais que c'est centré
+à l'intérieur de ce mode d'affichage,
+
+00:05:24.650 --> 00:05:26.550
+ce serait dur de prouver le contraire.
+
+00:05:26.950 --> 00:05:30.600
+Ça semble être centré à l'intérieur
+de ce mode, c'est juste petit.
+
+00:05:31.470 --> 00:05:33.020
+Retournons à notre Google Drawing.
+
+00:05:33.020 --> 00:05:38.100
+C'est comme si je rétrécissais la taille
+pour qu'elle soit la taille du texte.
+
+00:05:38.940 --> 00:05:39.920
+C'est centré,
+
+00:05:39.920 --> 00:05:43.990
+mais ce n'est pas si différent
+par rapport à quand c'est aligné à gauche.
+
+00:05:44.520 --> 00:05:47.230
+Donc, si je veux
+que ce soit centré sur l'écran,
+
+00:05:47.230 --> 00:05:50.110
+j'ai besoin d'élargir le TextView
+pour être la longueur de l'écran,
+
+00:05:50.110 --> 00:05:52.170
+on va donc devoir changer la largeur.
+
+00:05:54.020 --> 00:05:56.120
+Donc ici, je vais fermer l'onglet Preview.
+
+00:05:57.200 --> 00:05:59.080
+Je vais travailler avec la largeur ici.
+
+00:06:00.120 --> 00:06:03.810
+Au lieu de faire wrap_content,
+je vais faire match_parent.
+
+00:06:04.850 --> 00:06:06.290
+Regardons Preview encore.
+
+00:06:07.430 --> 00:06:08.380
+Zoomons en arrière.
+
+00:06:09.120 --> 00:06:10.610
+C'est beaucoup mieux comme ça.
+
+00:06:10.610 --> 00:06:12.200
+Ça semble être centré.
+
+00:06:12.200 --> 00:06:14.420
+Faisons la même chose avec le score ici.
+
+00:06:15.840 --> 00:06:18.490
+Donc je vais ajouter gravity ici aussi,
+
+00:06:18.490 --> 00:06:20.465
+et gravity dans tous les layout_gravity.
+
+00:06:21.345 --> 00:06:22.770
+center_horizontal
+
+00:06:24.140 --> 00:06:26.490
+Je vais changer les largeurs
+à match_parent.
+
+00:06:27.260 --> 00:06:28.760
+Vérifiions de nouveau.
+
+00:06:29.160 --> 00:06:30.870
+Génial ! Tout est centré.
+
+00:06:30.870 --> 00:06:32.190
+Ça semble être plutôt bien.
+
+00:06:32.190 --> 00:06:34.400
+Sauf que tout est serré ensemble,
+
+00:06:34.400 --> 00:06:37.330
+il n'y a pas beaucoup de place
+pour que ces éléments puissent respirer.
+
+00:06:37.330 --> 00:06:40.390
+Je vais donner à tous ces TextViews,
+un padding de quatre.
+
+00:06:41.680 --> 00:06:46.235
+Je vais commencer à taper padding,
+je vais faire 4dp.
+
+00:06:47.000 --> 00:06:48.360
+Souvenez-vous de dp ?
+
+00:06:48.360 --> 00:06:51.660
+Et j'utilise seulement padding,
+pas de padding bottom, rien de cela.
+
+00:06:52.010 --> 00:06:54.800
+Et on aura 4dp tout autour le TextView.
+
+00:06:55.410 --> 00:06:57.560
+Voyons à quoi ça ressemble dans Preview.
+
+00:06:58.390 --> 00:07:00.850
+Bien, ça me donne un peu plus d'espace.
+
+00:07:00.850 --> 00:07:03.950
+Je vais faire la même chose
+avec le TextView pour le score.
+
+00:07:07.830 --> 00:07:10.968
+Maintenant, je vais essayer
+de faire la même chose avec le bouton.
+
+00:07:15.811 --> 00:07:18.610
+Mouais... il n'y a de grands changements.
+
+00:07:18.610 --> 00:07:22.513
+Et si je l'agrandissais un peu,
+jusqu'à huit ?
+
+00:07:23.693 --> 00:07:24.738
+Ou vingt ?
+
+00:07:25.528 --> 00:07:29.450
+Intéressant...ça semble
+agrandir le bouton lui-même.
+
+00:07:29.800 --> 00:07:31.740
+Je ne veux pas que le bouton s'agrandisse.
+
+00:07:31.740 --> 00:07:33.980
+Je veux que l'espace
+autour du bouton s'agrandisse.
+
+00:07:33.980 --> 00:07:37.060
+En fait, ça serait mieux
+pour layout_margin.
+
+00:07:37.640 --> 00:07:41.040
+Padding ajoute de l'espace
+à l'intérieur du mode d'affichage,
+
+00:07:41.040 --> 00:07:43.340
+alors que margin met
+de l'espace à l'extérieur du mode.
+
+00:07:43.930 --> 00:07:45.450
+Donc on le change à layout_margin.
+
+00:07:45.980 --> 00:07:47.150
+Je vais faire 8dp.
+
+00:07:48.000 --> 00:07:49.080
+C'est mieux comme ça.
+
+00:07:49.970 --> 00:07:53.120
+Alors il y a de l'espace
+autour du mode et entre les deux modes.
+
+00:07:53.120 --> 00:07:55.339
+Faisons-le maintenant
+avec les autres boutons.
+
+00:07:56.480 --> 00:07:58.540
+Margin et non padding :
+layout_margin.
+
+00:07:59.710 --> 00:08:01.440
+Donc ça c'est plutôt bien.
+
+00:08:01.440 --> 00:08:04.100
+Alors si vous aviez choisi
+des attributs différents des miens,
+
+00:08:04.100 --> 00:08:07.930
+peut-être que vous avez mis un padding
+de cinq et non de quatre, pas de problème.
+
+00:08:08.320 --> 00:08:10.860
+En ce moment, j'essaye
+seulement de le rendre lisible.
+
+00:08:11.710 --> 00:08:15.409
+On va s'occuper de la taille de la police
+et de belles couleurs plus tard.
+
+00:08:16.750 --> 00:08:17.510
+D'accord.
+
+00:08:17.850 --> 00:08:19.960
+Et joli travail.
+Vous avez fini cette étape.
+

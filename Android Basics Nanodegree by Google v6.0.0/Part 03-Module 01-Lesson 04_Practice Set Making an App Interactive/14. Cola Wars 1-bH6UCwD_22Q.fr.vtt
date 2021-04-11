@@ -1,0 +1,239 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.080 --> 00:00:01.290
+Donc, la premičre chose
+que je vous ai demandée,
+
+00:00:01.290 --> 00:00:04.710
+c'est si les udacicolaVotes
+sont une variable locale ou globale.
+
+00:00:04.710 --> 00:00:07.780
+Et vous devriez voir déterminé
+que c'est une variable locale.
+
+00:00:07.780 --> 00:00:11.330
+Bien, pour trouver ça, vous allez lŕ
+oů la variable est déclarée, et c'est
+
+00:00:11.330 --> 00:00:14.340
+ici, et vous savez que c'est déclaré
+car le type de donnée est juste ici.
+
+00:00:15.590 --> 00:00:19.800
+Et vous voyez que c'est déclaré dans
+une méthode, c'est ŕ dire entre les deux
+
+00:00:19.800 --> 00:00:23.900
+accolades ici, ou est-ce déclaré
+en dehors de la méthode?
+
+00:00:23.900 --> 00:00:25.890
+Maintenant, si c'est déclaré
+ŕ l'intérieur de la méthode
+
+00:00:25.890 --> 00:00:27.670
+ça signifie que
+c'est une variable locale et alors
+
+00:00:27.670 --> 00:00:30.960
+on peut clairement voir que c'est bien
+déclaré ŕ l'intérieur de la méthode.
+
+00:00:32.150 --> 00:00:33.790
+Donc c'est une variable locale.
+
+00:00:33.790 --> 00:00:35.150
+Bien, qu'est-ce que ça veut dire ?
+
+00:00:35.150 --> 00:00:36.720
+On devrait aussi se demander,
+
+00:00:36.720 --> 00:00:41.030
+si j'ai déclaré quelque chose comme
+une variable locale, ai-je bien fait ?
+
+00:00:41.030 --> 00:00:42.930
+Réfléchissons-y dans ce cas.
+
+00:00:42.930 --> 00:00:44.060
+Voici notre téléphone.
+
+00:00:44.060 --> 00:00:46.010
+Et nous avons parlé
+d'udacicola, donc
+
+00:00:46.010 --> 00:00:49.550
+concentrons-nous seulement sur le moment
+oů on clique sur le bouton udacicola.
+
+00:00:49.550 --> 00:00:52.230
+Lorsque l'on clique sur ce bouton,
+cette méthode démarre.
+
+00:00:52.230 --> 00:00:57.008
+Cela définit les votes udacicola ŕ zéro,
+puis ça ajoute un aux udacicolaVotes,
+
+00:00:57.008 --> 00:00:58.790
+qui sont ŕ zéro.
+
+00:00:58.790 --> 00:01:00.870
+Donc les udacicolaVotes passent ŕ un.
+
+00:01:00.870 --> 00:01:05.430
+Comme le vote udacicola est une variable
+locale, ŕ la fin de cette méthode,
+
+00:01:05.430 --> 00:01:07.990
+il meurt en quelques sortes,
+ou il est supprimé.
+
+00:01:07.990 --> 00:01:11.940
+Les udacicolaVotes soient détruits ou
+disparaissent en fin de méthode car
+
+00:01:11.940 --> 00:01:15.640
+c'est une variable locale,
+ce qui cause quelques problčmes.
+
+00:01:15.640 --> 00:01:16.880
+Alors, pourquoi est-ce un problčme ?
+
+00:01:16.880 --> 00:01:19.580
+Bien, vous pourriez penser
+que si trois personnes ont votés
+
+00:01:19.580 --> 00:01:25.905
+udacicola en cliquant sur le bouton,
+les udacicolaVotes devraient ętre ŕ 3.
+
+00:01:25.905 --> 00:01:30.001
+Ce qui se passe, c'est qu'au premier clic
+sur le bouton, udacicola
+
+00:01:30.001 --> 00:01:31.105
+devient zéro.
+
+00:01:31.105 --> 00:01:32.865
+Il y en a un qui s'ajoute
+et ça devient un.
+
+00:01:32.865 --> 00:01:34.185
+Puis il se détruit.
+
+00:01:34.185 --> 00:01:35.815
+Il n'existe plus.
+
+00:01:35.815 --> 00:01:38.605
+La deuxičme fois que quelqu'un clique
+sur les udacicolaVotes,
+
+00:01:38.605 --> 00:01:41.785
+les udacicolaVotes sont ŕ nouveau faits.
+
+00:01:41.785 --> 00:01:42.565
+C'est ŕ nouveau déclaré.
+
+00:01:44.155 --> 00:01:47.575
+Car rappelez-vous, la premičre fois
+il a été détruit.
+
+00:01:47.575 --> 00:01:49.520
+Donc il doit ętre refait.
+
+00:01:49.520 --> 00:01:51.840
+Et lorsqu'il reste, il est définit ŕ zéro.
+
+00:01:51.840 --> 00:01:54.690
+Maintenant on ajoute ŕ nouveau un,
+mais rappelez-vous la valeur est zéro.
+
+00:01:54.690 --> 00:01:58.700
+Les udacicolaVotes sont donc ŕ un,
+bien qu'on ait cliqué deux fois.
+
+00:01:59.930 --> 00:02:02.250
+Et la męme chose
+se produit au troisičme clic
+
+00:02:02.250 --> 00:02:06.550
+il est toujours ŕ un et sera ŕ nouveau
+détruit ŕ la fin de cette méthode.
+
+00:02:06.550 --> 00:02:07.740
+C'est donc le premier problčme.
+
+00:02:07.740 --> 00:02:11.350
+Ce n'est pas vraiment de sauvegarder
+l'état entre le clics de bouton
+
+00:02:11.350 --> 00:02:14.190
+ŕ propos de combien de personnes
+ont voté pour udacicola.
+
+00:02:14.190 --> 00:02:18.700
+Mais il y a un autre problčme ici,
+ce code va en fait déclencher une erreur.
+
+00:02:18.700 --> 00:02:22.610
+Et lŕ raison c'est que, rappelez vous
+que j'ai dit que les udacicolaVotes
+
+00:02:22.610 --> 00:02:26.820
+voient en quelque sorte le jour,
+ou leur portée commence ici.
+
+00:02:26.820 --> 00:02:29.880
+Et ŕ la fin de cette méthode
+de vote udacicola.
+
+00:02:29.880 --> 00:02:32.090
+Ils sont détruits, ils n'existent plus.
+
+00:02:32.090 --> 00:02:36.190
+Ça veut dire que quand je viens ici, les
+udacicolaVotes n'existent pas vraiment.
+
+00:02:36.190 --> 00:02:39.640
+Plus techniquement, on dit
+que cette variable est hors de portée.
+
+00:02:39.640 --> 00:02:44.010
+Sa portée était lŕ, elle a été
+déclarée lŕ, et ça s'est terminé ici.
+
+00:02:45.040 --> 00:02:46.700
+Mais on essaie de l'utiliser ici.
+
+00:02:46.700 --> 00:02:47.612
+Et elle ne peut pas ętre utilisée.
+
+00:02:47.612 --> 00:02:51.490
+Les udacicolaVotes en local ça n'était
+pas une bonne décision dans ce cas.
+
+00:02:51.490 --> 00:02:54.130
+Et je peux résumer
+pourquoi avec ces deux points.
+
+00:02:54.130 --> 00:02:58.320
+Ça ne mémorise pas le vote entre
+les clics, et ce n'est pas dans la portée
+
+00:02:58.320 --> 00:02:59.650
+pour la méthode show me votes.
+
+00:02:59.650 --> 00:03:01.700
+Cela va donc effectivement
+causer des erreurs.
+
+00:03:01.700 --> 00:03:03.680
+Donc cela ne va pas se compiler.
+
+00:03:03.680 --> 00:03:06.140
+Ok, regardons les autres variables
+de ce programme.
+

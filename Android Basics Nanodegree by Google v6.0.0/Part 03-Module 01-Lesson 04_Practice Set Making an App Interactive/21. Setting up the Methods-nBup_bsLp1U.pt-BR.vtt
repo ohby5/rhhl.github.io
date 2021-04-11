@@ -1,0 +1,348 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.370 --> 00:00:03.100
+Então, o nosso layout 
+está muito bom, mas
+
+00:00:03.100 --> 00:00:09.030
+quando pressionamos estes botões,
+nada realmente acontece.
+
+00:00:10.170 --> 00:00:13.760
+O que você vai precisar fazer, é
+associar o XML e Java assim
+
+00:00:13.760 --> 00:00:18.050
+quando você pressionar um botão algum 
+tipo de situação acontece no código Java.
+
+00:00:18.050 --> 00:00:20.470
+Agora você já fez isto,
+com o aplicativo JustJava, então
+
+00:00:20.470 --> 00:00:23.110
+você vai dar alguns
+passos semelhantes agora.
+
+00:00:23.110 --> 00:00:26.089
+Certo, então a primeira coisa que você 
+vai fazer é copiar e colar
+
+00:00:26.089 --> 00:00:30.440
+no método <i>displayForTeamA</i>, que eu
+forneci nas observações do instrutor.
+
+00:00:30.440 --> 00:00:31.650
+Eu lhe mostrarei
+como fazer isso agora.
+
+00:00:32.659 --> 00:00:35.680
+Bem, então aqui estou eu 
+meu código XML, mas
+
+00:00:35.680 --> 00:00:38.170
+na verdade, queremos estar 
+no código Java.
+
+00:00:38.170 --> 00:00:43.130
+Para isso agora, você pode ter o
+<i>Mainactivity.java</i> aberto 
+em outra guia, mas se não,
+
+00:00:43.130 --> 00:00:46.900
+avance e siga até a pasta Java,
+e depois clique no primeiro dos dois,
+
+00:00:46.900 --> 00:00:50.400
+e você verá a principal atividade lá,
+pode clicar duas vezes para abri-la.
+
+00:00:51.530 --> 00:00:53.970
+Agora, esta é a principal 
+classe de atividade e
+
+00:00:53.970 --> 00:00:57.190
+ela contém estes trechos de 
+códigos chamados métodos.
+
+00:00:57.190 --> 00:01:00.569
+O que eu quero que você faça é colar
+dentro da <i>Mainactivity.java</i>, mas
+
+00:01:00.569 --> 00:01:03.210
+não dentro de qualquer 
+um dos outros métodos.
+
+00:01:03.210 --> 00:01:05.610
+Então, vamos olhar onde a principal
+classe de atividade começa.
+
+00:01:05.610 --> 00:01:07.700
+Começa aqui em cima, e
+
+00:01:07.700 --> 00:01:13.080
+eu vou descer um pouco mais devagar,
+e termina por aqui.
+
+00:01:13.080 --> 00:01:17.860
+Logo antes da última chave,
+logo, não dentro deste método, mas
+
+00:01:17.860 --> 00:01:22.660
+bem aqui, agora eu vou
+colar o código usando Command+V.
+
+00:01:22.660 --> 00:01:26.100
+Eu estou usando em um Mac, se você estiver 
+em um Windows, você pode usar Control+V.
+
+00:01:26.100 --> 00:01:27.940
+Agora eu estou vendo um 
+pouco de vermelho, e
+
+00:01:27.940 --> 00:01:32.230
+é, na verdade, porque o auto-import 
+deste computador está desligado.
+
+00:01:32.230 --> 00:01:33.780
+Então, eu vou fazer isso.
+
+00:01:33.780 --> 00:01:35.460
+Se você também está 
+vendo o vermelho aqui,
+
+00:01:35.460 --> 00:01:38.030
+isso significa que você provavelmente 
+está tendo o mesmo problema.
+
+00:01:38.030 --> 00:01:40.770
+Catherine mostrou como fazê-lo na
+lição dois e eu forneci um link nas
+
+00:01:40.770 --> 00:01:44.090
+observações do instrutor, se você
+precisar ver aquele vídeo novamente.
+
+00:01:44.090 --> 00:01:45.070
+Certo, muito melhor.
+
+00:01:45.070 --> 00:01:46.570
+Eu ainda tenho 
+um pouco de vermelho.
+
+00:01:46.570 --> 00:01:48.140
+Vamos resolver isso agora.
+
+00:01:48.140 --> 00:01:49.690
+Bom,então eu dei o 
+primeiro passo.
+
+00:01:49.690 --> 00:01:52.660
+A próxima coisa que você
+precisa fazer é mudar o ID
+
+00:01:52.660 --> 00:01:56.090
+da visualização do texto da 
+contagem para <i>team_a_score.</i>
+
+00:01:56.090 --> 00:01:57.640
+Eu também lhe mostrarei
+como fazer isto.
+
+00:01:58.920 --> 00:02:03.440
+Para isso, eu na verdade estou indo
+para a atividade principal XML, e
+
+00:02:03.440 --> 00:02:05.530
+agora estamos no nosso XML e
+Vou procurar por
+
+00:02:05.530 --> 00:02:08.288
+<i>TextView</i>
+que exibe a contagem.
+
+00:02:08.288 --> 00:02:12.650
+Aqui estão os meus dois <i>TextView</i>, 
+e aqui há <i>TextView</i> zero,
+
+00:02:12.650 --> 00:02:14.420
+que está exibindo o placar.
+
+00:02:14.420 --> 00:02:17.380
+Eu vou configurar o ID para isso, 
+apenas avançarei e
+
+00:02:17.380 --> 00:02:21.510
+começarei digitando o ID, e
+quero realmente um ID.
+
+00:02:21.510 --> 00:02:24.530
+Bem, agora está me dando
+opções diferentes, mas
+
+00:02:24.530 --> 00:02:26.100
+eu vou usar 
+o símbolo mais id.
+
+00:02:26.100 --> 00:02:29.820
+E então eu vou digitar meu id.
+
+00:02:29.820 --> 00:02:36.630
+Que se você se lembra
+era <i>team_ a_score</i>.
+
+00:02:36.630 --> 00:02:38.130
+Certo,legal.
+Tudo bem e
+
+00:02:38.130 --> 00:02:40.390
+ele deve ser digitado 
+exatamente assim.
+
+00:02:40.390 --> 00:02:45.770
+E o que você está procurando é 
+esta palavra aqui, team_a-score
+
+00:02:45.770 --> 00:02:50.670
+corresponde exatamente a esta palavra
+bem aqui, <i>team_a_score</i>.
+
+00:02:50.670 --> 00:02:53.980
+E uma vez que você fizer isto, esta deve
+mudar de uma cor vermelha insalubre,
+
+00:02:53.980 --> 00:02:58.150
+para uma cor púrpura saudável, e seu
+método de exibição vai trabalhar para você.
+
+00:02:59.180 --> 00:03:00.620
+Se você quiser testá-lo,
+
+00:03:00.620 --> 00:03:05.620
+você pode na verdade ir acima em seu
+Código Java para o método <i>onCreate</i>.
+
+00:03:05.620 --> 00:03:07.985
+Agora no início da lição,
+
+00:03:07.985 --> 00:03:12.870
+Catherine tinha mencionado que <i>onCreate</i>
+ocorre logo quando seu aplicativo é iniciado.
+
+00:03:12.870 --> 00:03:19.140
+Então, eu realmente posso adicionar 
+o código aqui, um <i>displayForTeamA</i>,
+
+00:03:19.140 --> 00:03:23.290
+e lhe dar seja qual for o seu 
+número favorito, o meu é oito, e
+
+00:03:23.290 --> 00:03:27.640
+Eu deveria ser capaz de ver que imediatamente
+a pontuação será atualizada para oito.
+
+00:03:27.640 --> 00:03:30.260
+Então, eu estou avançar e
+executar este, e ver se isso é verdade.
+
+00:03:31.880 --> 00:03:34.620
+Certo, então aqui está o meu 
+aplicativo, e é muito pequeno, mas
+
+00:03:34.620 --> 00:03:36.820
+você deve ser capaz de ver
+que este é 8 e não 0.
+
+00:03:36.820 --> 00:03:40.340
+Então eu fiz os dois primeiros passos 
+corretamente, e você deve testar, também,
+
+00:03:40.340 --> 00:03:43.480
+para se certificar de que você fez aqueles
+primeiros dois passos corretamente.
+
+00:03:43.480 --> 00:03:46.350
+Na próxima lição, você está, na verdade,
+aprenderá sobre como este código
+
+00:03:46.350 --> 00:03:49.800
+aqui funciona, mas por agora,
+apenas se divirta com a magia.
+
+00:03:49.800 --> 00:03:51.720
+Certo. Agora, vem a 
+parte divertida.
+
+00:03:51.720 --> 00:03:54.420
+Então, eu não lhe vou dar
+instruções sobre como fazer isto, mas
+
+00:03:54.420 --> 00:03:57.719
+Vou lincar alguns vídeos onde
+Catherine fez coisas muito semelhantes.
+
+00:03:58.840 --> 00:04:02.270
+Eu quero dar a você o seguinte
+comportamento: quando os 3 Points é
+
+00:04:02.270 --> 00:04:04.150
+clicado, ele deve mostrar três.
+
+00:04:04.150 --> 00:04:07.180
+Quando 2 Points é clicado,
+ele deve mostrar dois.
+
+00:04:07.180 --> 00:04:10.210
+Quando free throw é clicado,
+ele deve mostrar um.
+
+00:04:10.210 --> 00:04:12.110
+Aqui eu vou mostrar-lhe no meu celular.
+
+00:04:12.110 --> 00:04:13.780
+Bom, então aqui está o 
+que eu quero dizer.
+
+00:04:13.780 --> 00:04:18.620
+Tenho meu aplicativo, eu clico plus 3 points,
+3 é mostrado, eu clico plus 2 points,
+
+00:04:18.620 --> 00:04:22.490
+2 é mostrado, e
+clico free throw e um é mostrado.
+
+00:04:22.490 --> 00:04:25.679
+Agora, quando eu clico plus 2 points
+novamente isto só mostra dois.
+
+00:04:25.679 --> 00:04:28.080
+Não está acrescentando nada ainda.
+
+00:04:28.080 --> 00:04:31.210
+Agora eu sei que esta não é a última
+funcionalidade que eu estava procurando,
+
+00:04:31.210 --> 00:04:33.250
+mas é uma de bom estado intermediário.
+
+00:04:33.250 --> 00:04:35.820
+É importante realizar metas
+intermediária para que se aproxime
+
+00:04:35.820 --> 00:04:37.060
+ao objetivo final.
+
+00:04:37.060 --> 00:04:39.570
+Você faz algo pequeno como você
+já sabe como fazer, verifique,
+
+00:04:39.570 --> 00:04:43.380
+tenha certeza de que funciona e em seguida, 
+o modifique para conseguir o que precisa.
+
+00:04:43.380 --> 00:04:47.800
+Então, começaremos com isso, e,quando
+estiver pronto, avance e marque esta caixa.
+

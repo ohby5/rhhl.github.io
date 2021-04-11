@@ -1,0 +1,601 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.660
+Right now, our app has all the functionality that it needs.
+
+00:00:03.660 --> 00:00:05.100
+It just doesn't look very pretty.
+
+00:00:05.100 --> 00:00:08.310
+So, I'm going to be walking you through how to make those changes.
+
+00:00:08.310 --> 00:00:12.900
+So, the first thing we're going to do is modify something called the styles file,
+
+00:00:12.900 --> 00:00:15.585
+and that's located in Values.
+
+00:00:15.585 --> 00:00:18.555
+And then it's right here, this styles.xml.
+
+00:00:18.555 --> 00:00:20.355
+So, I'm going to double click.
+
+00:00:20.355 --> 00:00:23.129
+Now, this is a file that you've never really touched before,
+
+00:00:23.129 --> 00:00:25.935
+and I'm not going to go into the details of exactly how this works.
+
+00:00:25.935 --> 00:00:27.660
+We've provided you with some code,
+
+00:00:27.660 --> 00:00:29.370
+which will change your buttons to orange,
+
+00:00:29.370 --> 00:00:31.410
+and also change your action bar to orange.
+
+00:00:31.410 --> 00:00:32.820
+And this code will do that,
+
+00:00:32.820 --> 00:00:35.100
+because the styles file is responsible for
+
+00:00:35.100 --> 00:00:37.920
+controlling the basic default styles of your app.
+
+00:00:37.920 --> 00:00:39.390
+Whereas right now in our xml,
+
+00:00:39.390 --> 00:00:42.100
+if you wanted to change the color of the background,
+
+00:00:42.100 --> 00:00:44.140
+we would do it for each element.
+
+00:00:44.140 --> 00:00:45.780
+But if you do to the styles file,
+
+00:00:45.780 --> 00:00:47.190
+it'll do it for the entire layout.
+
+00:00:47.190 --> 00:00:50.550
+So, I'm going to paste the code that I gave you over.
+
+00:00:50.550 --> 00:00:54.600
+This color primary here is the color that the action bar will be,
+
+00:00:54.600 --> 00:00:59.670
+and this colorButtonNormal is the color that your buttons will be. Now, a quick note.
+
+00:00:59.670 --> 00:01:01.305
+Because of API updates,
+
+00:01:01.305 --> 00:01:06.930
+this colorButtonNormal tag will actually only work if you have API level 22 and above.
+
+00:01:06.930 --> 00:01:09.650
+So what this means is that, if you have a newer phone,
+
+00:01:09.650 --> 00:01:11.460
+you will see the orange buttons,
+
+00:01:11.460 --> 00:01:13.305
+and you can check it out of the emulator.
+
+00:01:13.305 --> 00:01:15.105
+If your phone is a little bit older,
+
+00:01:15.105 --> 00:01:16.530
+you'll still see grey buttons.
+
+00:01:16.530 --> 00:01:18.195
+Now, there are ways to get around this,
+
+00:01:18.195 --> 00:01:21.605
+but I don't want us to get too caught up in the weeds of how to color our buttons.
+
+00:01:21.605 --> 00:01:24.360
+Okay, let's go back to our activity_main.xml.
+
+00:01:24.360 --> 00:01:27.540
+Okay, cool, so, we can see now that it actually
+
+00:01:27.540 --> 00:01:31.440
+updated to show that our buttons are orange and our action bar is also orange.
+
+00:01:31.440 --> 00:01:34.200
+Our status bar also became a light grey,
+
+00:01:34.200 --> 00:01:37.020
+which is due to us changing this parent attribute right here,
+
+00:01:37.020 --> 00:01:40.290
+to AppCompact.Light instead of AppCompact.Dark.
+
+00:01:40.290 --> 00:01:43.275
+It gave us a light theming instead of a dark theming.
+
+00:01:43.275 --> 00:01:45.240
+Okay, let me go back to the xml.
+
+00:01:45.240 --> 00:01:49.605
+So, the next thing on our list is to make a nice little divider bar right here.
+
+00:01:49.605 --> 00:01:52.710
+So, if I click on this linear layout right here,
+
+00:01:52.710 --> 00:01:55.785
+we can see that it's this view that lives here.
+
+00:01:55.785 --> 00:01:58.335
+If I scroll down a little bit,
+
+00:01:58.335 --> 00:02:01.785
+I'll see the other linear layout when I click on it.
+
+00:02:01.785 --> 00:02:04.230
+Is this linear layout right here.
+
+00:02:04.230 --> 00:02:07.890
+So, if I wanted a bar in between the two,
+
+00:02:07.890 --> 00:02:09.345
+I would put it right here,
+
+00:02:09.345 --> 00:02:11.900
+after which the first linear layout closes,
+
+00:02:11.900 --> 00:02:13.860
+and before the second linear layout opens.
+
+00:02:13.860 --> 00:02:19.425
+And because the parents of both of these two linear layout is another linear layout,
+
+00:02:19.425 --> 00:02:21.360
+I'll scroll up to show you,
+
+00:02:21.360 --> 00:02:24.090
+this linear layout right here,
+
+00:02:24.090 --> 00:02:26.940
+which has an orientation of horizontal.
+
+00:02:26.940 --> 00:02:29.040
+When I put the bar right here,
+
+00:02:29.040 --> 00:02:31.200
+it's going to show this linear layout,
+
+00:02:31.200 --> 00:02:33.420
+then the bar, then this linear layout,
+
+00:02:33.420 --> 00:02:34.680
+all in a horizontal row.
+
+00:02:34.680 --> 00:02:37.005
+Let me go down.
+
+00:02:37.005 --> 00:02:39.750
+If you just want to make a colored square,
+
+00:02:39.750 --> 00:02:42.605
+which is essentially what a line is that runs down the center here,
+
+00:02:42.605 --> 00:02:45.930
+we can use a view called, View.
+
+00:02:46.600 --> 00:02:48.710
+Now, just like other views,
+
+00:02:48.710 --> 00:02:50.905
+this view needs a width and a height.
+
+00:02:50.905 --> 00:02:52.530
+Now, we want a thin line.
+
+00:02:52.530 --> 00:02:55.680
+So, the width of this View should be 1dp.
+
+00:02:55.680 --> 00:02:58.785
+This is what the thickness of the line is going to be.
+
+00:02:58.785 --> 00:03:02.490
+And what I want is for this line to be just as tall as all the text and
+
+00:03:02.490 --> 00:03:06.870
+the buttons in the linear layout for Team A and the linear layout for Team B.
+
+00:03:06.870 --> 00:03:09.600
+So, I'm going to make the height match parent.
+
+00:03:09.600 --> 00:03:16.845
+Now, this view is basically a box that has 1dp in width and has the height of the parent,
+
+00:03:16.845 --> 00:03:18.510
+linearly out of all of this.
+
+00:03:18.510 --> 00:03:21.660
+But we can't see it because the background color is white.
+
+00:03:21.660 --> 00:03:26.050
+So, I'm going to change the background color to dark grey.
+
+00:03:26.050 --> 00:03:30.435
+So, now we have a dark gray line that's going down the center of the screen.
+
+00:03:30.435 --> 00:03:32.770
+But if we zoom in,
+
+00:03:32.770 --> 00:03:39.390
+we'll see that it's actually going down the entire center of the screen,
+
+00:03:39.390 --> 00:03:43.800
+even through the Reset button and we actually want it to stop right about here.
+
+00:03:43.800 --> 00:03:46.710
+So, the way that we're going to do that,
+
+00:03:46.710 --> 00:03:51.765
+is we're going to start telling things to wrap content instead of match parent.
+
+00:03:51.765 --> 00:03:55.425
+Specifically for the Team A and Team B linear layouts,
+
+00:03:55.425 --> 00:03:57.780
+instead of having their height be the entire screen,
+
+00:03:57.780 --> 00:04:00.690
+we're going to have it wrap content for both of these,
+
+00:04:00.690 --> 00:04:03.750
+so that the Layouts will end right at the bottom of the buttons.
+
+00:04:03.750 --> 00:04:06.360
+And then, for the parent layout,
+
+00:04:06.360 --> 00:04:08.415
+the horizontal layout that's laying out all this,
+
+00:04:08.415 --> 00:04:10.185
+we'll also tell it to wrap content,
+
+00:04:10.185 --> 00:04:12.885
+which will wrap the content uptight against
+
+00:04:12.885 --> 00:04:16.110
+the bottom of the Team B and Team A linear layouts.
+
+00:04:16.110 --> 00:04:19.470
+And that should make the line the same height as both of these layouts.
+
+00:04:19.470 --> 00:04:21.000
+So, let's make those changes.
+
+00:04:21.000 --> 00:04:23.205
+Let's start with this linear layout right here,
+
+00:04:23.205 --> 00:04:25.155
+which is the linear layout for Team B,
+
+00:04:25.155 --> 00:04:28.275
+and I'm going to change its height to wrap content.
+
+00:04:28.275 --> 00:04:31.720
+Good. It's wrapping the content of the buttons right now.
+
+00:04:31.720 --> 00:04:36.255
+I'm going to click on the Team A layout and I'm also going to change its layout height,
+
+00:04:36.255 --> 00:04:39.615
+instead of match parent, to wrap content.
+
+00:04:39.615 --> 00:04:41.760
+So, now both of these layouts here,
+
+00:04:41.760 --> 00:04:45.435
+are wrapping the content of their children.
+
+00:04:45.435 --> 00:04:48.300
+But the line down the middle is still extended towards the bottom,
+
+00:04:48.300 --> 00:04:49.560
+and that's because the parent of
+
+00:04:49.560 --> 00:04:52.080
+these two linear layouts is still taking up all the space,
+
+00:04:52.080 --> 00:04:53.970
+because it has a height of match parent,
+
+00:04:53.970 --> 00:04:55.230
+which is the entire screen.
+
+00:04:55.230 --> 00:04:59.340
+So, now, I'm going to tell this as well to wrap content.
+
+00:04:59.340 --> 00:05:04.925
+So, now, the gray line ends here at the bottom of both of these linear layouts.
+
+00:05:04.925 --> 00:05:08.960
+Cool. Now, I didn't want the gray line to extend all the way up here,
+
+00:05:08.960 --> 00:05:12.140
+but that's an issue that can be resolved with padding and layout margin,
+
+00:05:12.140 --> 00:05:13.645
+so, we'll do that in a little bit.
+
+00:05:13.645 --> 00:05:17.780
+Now, what I want to do is go through and get all the appropriate text sizes,
+
+00:05:17.780 --> 00:05:19.490
+colors, and the correct fonts.
+
+00:05:19.490 --> 00:05:22.865
+So, we're going to just start at the top and make those changes.
+
+00:05:22.865 --> 00:05:24.910
+What I've been told for this first text field,
+
+00:05:24.910 --> 00:05:31.420
+is that it's going to have a font family of sans-serif-medium.
+
+00:05:31.420 --> 00:05:34.175
+And it's going to have a text size of 14sp.
+
+00:05:34.175 --> 00:05:39.500
+And finally also that it's text color is going to be the hex code 616161,
+
+00:05:39.500 --> 00:05:42.985
+which is a nice light gray text color.
+
+00:05:42.985 --> 00:05:44.940
+So, that's the font, the size,
+
+00:05:44.940 --> 00:05:46.975
+and the color for this Team A text view.
+
+00:05:46.975 --> 00:05:50.255
+I'm going to move on to the Team A score.
+
+00:05:50.255 --> 00:05:54.965
+Now, for the score, the font family is going to be sans-serif-light,
+
+00:05:54.965 --> 00:06:00.005
+the text size is going to be a large 56sp,
+
+00:06:00.005 --> 00:06:02.210
+so that our score is nice and big.
+
+00:06:02.210 --> 00:06:06.224
+And the text color is actually going to be black,
+
+00:06:06.224 --> 00:06:10.840
+which in Hex is represented as 000000.
+
+00:06:10.840 --> 00:06:13.320
+Cool. I'm going to zoom out.
+
+00:06:13.320 --> 00:06:16.370
+So, for our buttons, we actually don't change anything about
+
+00:06:16.370 --> 00:06:19.340
+the text styling or text size or text color. These are fine.
+
+00:06:19.340 --> 00:06:21.380
+But I do want to change the other side,
+
+00:06:21.380 --> 00:06:23.660
+and I change it exactly as I change the first side.
+
+00:06:23.660 --> 00:06:25.840
+So, let me do that really quickly.
+
+00:06:25.840 --> 00:06:29.765
+So, it just updated, so that these two are exactly the same now,
+
+00:06:29.765 --> 00:06:31.760
+and our text sizes, colors,
+
+00:06:31.760 --> 00:06:33.530
+and font families are looking pretty good.
+
+00:06:33.530 --> 00:06:37.385
+So, really the only thing left is to work on the spacing issues that I'm seeing.
+
+00:06:37.385 --> 00:06:40.070
+We'll start with the first TextView here.
+
+00:06:40.070 --> 00:06:42.585
+Instead of a padding of a 4dp,
+
+00:06:42.585 --> 00:06:45.270
+we're going to change it to a padding of 16dp.
+
+00:06:45.270 --> 00:06:47.834
+Now, here in the score TextView,
+
+00:06:47.834 --> 00:06:49.890
+instead of a padding of 4dp,
+
+00:06:49.890 --> 00:06:53.380
+we're going to change it to padding bottom of 24dp.
+
+00:06:53.380 --> 00:06:56.015
+And that's because with the 16dp padding here
+
+00:06:56.015 --> 00:06:59.150
+we already have enough room between these two lines of text.
+
+00:06:59.150 --> 00:07:04.005
+Now, for the buttons. Now, our buttons are looking a little bit wide.
+
+00:07:04.005 --> 00:07:06.140
+I don't want to give them a specific width,
+
+00:07:06.140 --> 00:07:09.260
+but I do want them to be a little bit farther away from the edges.
+
+00:07:09.260 --> 00:07:11.330
+Now, we can't use padding, because remember,
+
+00:07:11.330 --> 00:07:13.850
+padding is space added inside the view,
+
+00:07:13.850 --> 00:07:17.665
+and button views have a background color that extends throughout the view.
+
+00:07:17.665 --> 00:07:19.895
+So, we're going to be using margin here.
+
+00:07:19.895 --> 00:07:22.510
+Now, right now I have a layout margin of eight.
+
+00:07:22.510 --> 00:07:24.470
+But what I'm going to do, is change this to
+
+00:07:24.470 --> 00:07:29.399
+a layout margin bottom of eight and then a margin left and right of 24,
+
+00:07:29.399 --> 00:07:33.090
+which will keep the same spacing vertically,
+
+00:07:33.090 --> 00:07:34.905
+but will push in the sides of the button.
+
+00:07:34.905 --> 00:07:36.750
+So, let's do that now.
+
+00:07:36.750 --> 00:07:39.160
+So, that button's looking a little bit better.
+
+00:07:39.160 --> 00:07:42.005
+I'm going to do the same thing to the other two buttons here.
+
+00:07:42.005 --> 00:07:45.140
+And I'm actually copying and pasting to do this.
+
+00:07:45.140 --> 00:07:47.840
+All right, cool. Now, I don't want to bore you so,
+
+00:07:47.840 --> 00:07:50.995
+I'm just going to make the same changes to this side that I just made to Team A,
+
+00:07:50.995 --> 00:07:52.655
+so give me one second.
+
+00:07:52.655 --> 00:07:55.055
+Great. Now, my two sides look the same.
+
+00:07:55.055 --> 00:07:57.860
+The only other real margin that I have to deal with is the margin
+
+00:07:57.860 --> 00:08:00.725
+for this gray line here and the margin for the Reset button.
+
+00:08:00.725 --> 00:08:03.100
+Well let's do the Reset button first.
+
+00:08:03.100 --> 00:08:07.260
+So, I'm going to get the reset button a bottom margin of 8dp,
+
+00:08:07.260 --> 00:08:11.240
+and I'm going to give it a left and right margin of 22dp.
+
+00:08:11.240 --> 00:08:14.195
+Now, I'm going to scroll up to the gray line.
+
+00:08:14.195 --> 00:08:16.320
+That's this view right here.
+
+00:08:16.320 --> 00:08:20.045
+And basically, I don't want the gray line to be touching the app bar right here.
+
+00:08:20.045 --> 00:08:21.710
+I want to give in a little bit of space.
+
+00:08:21.710 --> 00:08:24.110
+And I'm going to be using margin
+
+00:08:24.110 --> 00:08:26.855
+instead of padding for the same reasons that I did on the button,
+
+00:08:26.855 --> 00:08:28.430
+because this has a great background,
+
+00:08:28.430 --> 00:08:32.660
+so any padding that I use actually is not going to really change anything.
+
+00:08:32.660 --> 00:08:35.570
+But margin, which is space around the view, will.
+
+00:08:35.570 --> 00:08:37.115
+So, let's do that right now.
+
+00:08:37.115 --> 00:08:41.610
+MarginTop and we'll do 16dp.
+
+00:08:41.610 --> 00:08:44.210
+There we go, there's little space above the gray line there.
+
+00:08:44.210 --> 00:08:46.940
+Now, my codes are looking a little bit
+
+00:08:46.940 --> 00:08:50.060
+sloppy because I was just adding attributes willy nilly.
+
+00:08:50.060 --> 00:08:51.780
+So, I'm going to do a command+A,
+
+00:08:51.780 --> 00:08:55.670
+or if you're on a Windows device a control+A to select all.
+
+00:08:55.670 --> 00:08:58.960
+And then I'm going to do a command option+L,
+
+00:08:58.960 --> 00:09:03.200
+and if you're on a Windows device that's a control+alt+L.
+
+00:09:03.200 --> 00:09:05.420
+And that will automatically reformat the code for me,
+
+00:09:05.420 --> 00:09:06.965
+it will look really nice and pretty,
+
+00:09:06.965 --> 00:09:09.700
+just as pretty as our new Court Counter app.
+
+00:09:09.700 --> 00:09:11.440
+Now, I kind of want to see this on my phone.
+
+00:09:11.440 --> 00:09:14.315
+So, I'm going to load up my phone right now with this newly skid app.
+
+00:09:14.315 --> 00:09:16.445
+Remember, if you have an older phone,
+
+00:09:16.445 --> 00:09:18.290
+it's going to show the buttons as a different color.
+
+00:09:18.290 --> 00:09:20.905
+But you can always use the emulator.
+
+00:09:20.905 --> 00:09:23.720
+What a stylish looking app.
+
+00:09:23.720 --> 00:09:26.270
+Now, the question is, is it still working?
+
+00:09:26.270 --> 00:09:29.425
+Well, I didn't touch any of the Java code, so, yes.
+
+00:09:29.425 --> 00:09:31.610
+And the scores are nice and big now and I got
+
+00:09:31.610 --> 00:09:35.650
+these wonderful colors for my buttons. Awesome work.
+

@@ -1,0 +1,368 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.472 --> 00:00:03.540
+La réponse à la question est
+qu'on va mettre à jour le score
+
+00:00:03.540 --> 00:00:06.770
+pour que trois points soient ajoutés,
+et puis on va l'afficher.
+
+00:00:07.200 --> 00:00:10.780
+Une autre façon pour dire
+qu'on va y ajouter trois points
+
+00:00:11.000 --> 00:00:13.730
+est de dire augmenter le score,
+ou « increase the score ».
+
+00:00:14.140 --> 00:00:16.370
+Donc la première étape serait D.
+
+00:00:16.710 --> 00:00:19.090
+Et puis, afficher le score
+serait la deuxième.
+
+00:00:19.710 --> 00:00:20.890
+Donc, je sélectionne A.
+
+00:00:21.680 --> 00:00:23.760
+Voilà, nous avons
+les deux bonnes réponses.
+
+00:00:24.270 --> 00:00:26.640
+Il faut préciser
+qu'on fait augmenter le score,
+
+00:00:26.640 --> 00:00:30.530
+ce qui veut dire qu'on prend
+l'ancienne valeur et qu'on y ajoute trois.
+
+00:00:31.860 --> 00:00:33.920
+Regardons ceci en plus de détail
+
+00:00:33.920 --> 00:00:36.290
+pour comprendre
+pourquoi ça va marcher correctement.
+
+00:00:36.290 --> 00:00:38.270
+Donc mon score est à zéro initialement.
+
+00:00:38.610 --> 00:00:40.640
+Et puis, j'appuie sur le bouton +3 points.
+
+00:00:40.960 --> 00:00:44.360
+Selon ma première étape, j'ai d'abord
+augmenté le score de trois points.
+
+00:00:44.710 --> 00:00:47.540
+En ce moment, j'ai zéro,
+j'y ajoute trois, j'obtiens trois.
+
+00:00:48.350 --> 00:00:49.880
+Pour l'instant, tout va bien.
+
+00:00:50.530 --> 00:00:53.940
+Et puis, pour la prochaine étape,
+je fais afficher le score sur l'écran.
+
+00:00:54.540 --> 00:00:56.150
+Dessinons un petit téléphone.
+
+00:00:56.450 --> 00:01:00.090
+Donc, voici mon portable,
+et il va afficher le score, donc trois.
+
+00:01:00.530 --> 00:01:01.560
+Ça m'a l'air pas mal.
+
+00:01:02.150 --> 00:01:05.320
+J'appuie de nouveau,
+ça vérifie le score actuel
+
+00:01:05.800 --> 00:01:07.800
+et puis, trois points sont ajoutés.
+
+00:01:08.160 --> 00:01:09.630
+Le score devient six.
+
+00:01:09.630 --> 00:01:11.690
+Et puis, le score apparaît sur l'écran.
+
+00:01:11.690 --> 00:01:14.280
+Et on voit plutôt facilement,
+qu'à force d'appuyer sur le bouton,
+
+00:01:14.280 --> 00:01:16.910
+le scénario se répète :
+le score est mis à jour et il est affiché.
+
+00:01:16.910 --> 00:01:18.030
+Ça semble plutôt bien.
+
+00:01:18.490 --> 00:01:22.070
+Peut-être que vous vous êtes trompés
+sur l'ordre de ces deux étapes.
+
+00:01:22.700 --> 00:01:24.160
+Voyons ce qui se produirait.
+
+00:01:24.160 --> 00:01:25.900
+Donc voici l'inversement des étapes.
+
+00:01:26.240 --> 00:01:28.090
+Si j'appuie sur le bouton +3 points,
+
+00:01:28.100 --> 00:01:31.070
+la première chose que je fais ici,
+c'est afficher le score.
+
+00:01:31.540 --> 00:01:35.375
+Donc ça vérifie scoreTeamA,
+qui est à zéro,
+
+00:01:35.375 --> 00:01:39.805
+donc ça enlève ce qui y était avant,
+et affiche le zéro sur l'écran.
+
+00:01:40.605 --> 00:01:42.385
+Puis, j'ajoute trois au score.
+
+00:01:43.245 --> 00:01:46.890
+Mouais, bon, alors l'écran montre zéro,
+mais le score est en fait à trois.
+
+00:01:47.590 --> 00:01:51.540
+Quand j'appuie de nouveau--
+rappelez-vous que l'équipe a six points.
+
+00:01:52.340 --> 00:01:57.400
+Ça vérifie mon score, qui est à trois,
+et ça l'affiche,
+
+00:01:57.920 --> 00:02:00.385
+et puis, trois points
+sont ajoutés au score.
+
+00:02:01.350 --> 00:02:02.050
+Mouais.
+
+00:02:02.050 --> 00:02:07.030
+Donc ici, il semble que mon score
+est toujours trois points plus élevé
+
+00:02:07.030 --> 00:02:09.140
+que ce qui est affiché sur l'écran.
+
+00:02:09.510 --> 00:02:10.990
+Il y a donc un problème.
+
+00:02:11.450 --> 00:02:13.190
+Regardons donc ce scénario.
+
+00:02:13.830 --> 00:02:15.710
+J'appuie sur le bouton +3 points.
+
+00:02:16.600 --> 00:02:19.690
+Et la première étape est pour régler
+scoreTeamA à trois points.
+
+00:02:20.590 --> 00:02:23.010
+Et puis, à la deuxième étape,
+le score est affiché.
+
+00:02:23.480 --> 00:02:24.890
+Donc, ça semble bien se passer.
+
+00:02:24.890 --> 00:02:27.650
+J'appuie sur +3 points,
+et le chiffre trois est affiché.
+
+00:02:28.290 --> 00:02:29.840
+Maintenant, j'appuie de nouveau.
+
+00:02:30.550 --> 00:02:33.241
+Et la première étape
+fait que scoreTeamA devienne trois.
+
+00:02:34.692 --> 00:02:37.617
+Plutôt bête, mais c'est
+ce que vous lui avez demandé de faire.
+
+00:02:38.047 --> 00:02:40.090
+Et puis, scoreTeamA s'affiche.
+
+00:02:40.875 --> 00:02:45.299
+Donc, comme vous pouvez le voir,
+je pourrais appuyer sur +3 plusieurs fois,
+
+00:02:45.299 --> 00:02:49.109
+mais le score restera trois,
+car il sera toujours réglé à trois,
+
+00:02:49.109 --> 00:02:50.675
+et il n'affichera que trois.
+
+00:02:50.675 --> 00:02:54.140
+En principe, c'est ce que nous faisons
+en ce moment avec l'appli,
+
+00:02:54.440 --> 00:02:56.990
+mais au lieu de lui demander
+d'afficher trois,
+
+00:02:57.000 --> 00:02:59.910
+nous utilisons une variable
+qui a toujours la valeur de trois.
+
+00:03:01.350 --> 00:03:02.890
+Regardons un autre exemple.
+
+00:03:03.540 --> 00:03:06.750
+Peut-être que vous trouvez
+que cette option est une très bonne idée.
+
+00:03:07.270 --> 00:03:10.960
+Après tout, il va afficher le score
+et y ajouter trois points,
+
+00:03:10.960 --> 00:03:12.610
+et ça semble être correct.
+
+00:03:13.210 --> 00:03:16.100
+Maintenant, je vais rien mettre
+pour la deuxième étape.
+
+00:03:16.100 --> 00:03:18.950
+On va voir ce qui se passe
+si c'est la seule étape.
+
+00:03:19.680 --> 00:03:21.330
+Donc, j'appuie sur +3 points.
+
+00:03:22.510 --> 00:03:25.900
+Puis, scoreTeamA plus trois est affiché.
+
+00:03:26.520 --> 00:03:30.140
+Donc je regarde le score pour l'Équipe A,
+qui est à zéro, et puis j'y ajoute trois.
+
+00:03:30.140 --> 00:03:31.980
+Donc le chiffre trois va être affiché.
+
+00:03:32.370 --> 00:03:33.890
+Ça me semble bien.
+
+00:03:34.730 --> 00:03:39.260
+Appuie de nouveau,
+et le score pour l'Équipe A,
+
+00:03:39.260 --> 00:03:43.020
+qui est toujours à zéro, sera affiché,
+puis trois est ajouté, ce qui fait trois.
+
+00:03:43.650 --> 00:03:46.440
+Bon, on a le même problème qu'avant,
+
+00:03:46.440 --> 00:03:48.630
+le chiffre trois sera toujours affiché.
+
+00:03:48.630 --> 00:03:52.720
+C'est parce que quand je demande
+d'afficher scoreTeamA plus trois,
+
+00:03:53.030 --> 00:03:56.635
+en effet, la valeur de scoreTeamA
+ne change pas.
+
+00:03:57.670 --> 00:04:00.420
+La valeur est utilisée seulement
+pour faire partie du calcul.
+
+00:04:01.130 --> 00:04:03.440
+Alors, on peut faire
+en sorte que ça marche,
+
+00:04:04.670 --> 00:04:05.370
+Bon.
+
+00:04:05.370 --> 00:04:06.340
+Regardons celui-là.
+
+00:04:06.660 --> 00:04:10.104
+Donc, j'appuie sur le bouton +3 points,
+et la première étape est activée,
+
+00:04:10.104 --> 00:04:12.580
+donc d'afficher scoreTeamA plus trois.
+
+00:04:13.120 --> 00:04:15.860
+ScoreTeamA était à zéro,
+donc zéro et trois font trois.
+
+00:04:16.620 --> 00:04:19.345
+Et puis, le score de l'Équipe A
+augmente par trois.
+
+00:04:20.640 --> 00:04:21.380
+Bon.
+
+00:04:21.540 --> 00:04:25.260
+J'appuie sur le bouton de nouveau,
+le score de l'Équipe A est vérifié : trois
+
+00:04:25.260 --> 00:04:28.020
+et trois points sont ajoutés,
+donc le chiffre six est affiché.
+
+00:04:28.020 --> 00:04:30.900
+Et puis, le score de Team A
+augmente de trois.
+
+00:04:31.290 --> 00:04:33.550
+Donc, ça se passe plutôt bien là,
+
+00:04:34.000 --> 00:04:36.940
+et, techniquement,
+la réponse est correcte.
+
+00:04:36.940 --> 00:04:41.320
+Il réussira à faire ce que vous voulez,
+mais c'est un peu inefficace et bizarre
+
+00:04:41.320 --> 00:04:42.700
+et ce pour plusieurs raisons.
+
+00:04:42.950 --> 00:04:45.384
+Premièrement, le même calcul
+est effectué deux fois.
+
+00:04:45.794 --> 00:04:48.210
+Ici, vous ajoutez trois à scoreTeamA.
+
+00:04:48.530 --> 00:04:52.810
+Lorsque vous faites que le score augmente,
+il faut ajouter trois à scoreTeamA,
+
+00:04:52.820 --> 00:04:57.020
+ce qui montre que vous faites
+tout un peu à l'envers.
+
+00:04:57.590 --> 00:05:00.100
+L'ordre semble un peu plus compliqué
+à comprendre.
+
+00:05:00.810 --> 00:05:04.627
+C'est aussi un peu plus compliqué
+à cause de l'étape en plus.
+
+00:05:05.277 --> 00:05:08.640
+Donc, ajouter trois au score
+et puis afficher le score,
+
+00:05:08.640 --> 00:05:11.900
+est une bien meilleure méthode,
+et c'est celle que je vais utiliser.
+

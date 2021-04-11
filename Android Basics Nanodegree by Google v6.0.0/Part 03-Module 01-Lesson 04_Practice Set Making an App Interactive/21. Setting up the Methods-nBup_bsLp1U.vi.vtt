@@ -1,0 +1,355 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.370 --> 00:00:03.100
+Vậy <i>layout</i> của chúng ta 
+đã trông khá tốt, nhưng
+
+00:00:03.100 --> 00:00:09.030
+khi tôi ấn vào <i>Button</i>,
+
+00:00:10.170 --> 00:00:13.760
+Cái bạn cần làm 
+là kết hợp XML và Java do đó
+
+00:00:13.760 --> 00:00:18.050
+khi tôi ấn vào <i>Button</i>, 
+một số sự kiện xảy ra trong code Java
+
+00:00:18.050 --> 00:00:20.470
+Bây giờ tôi đã hoàn thành nó 
+trong ứng dụng Java, vậy nên
+
+00:00:20.470 --> 00:00:23.110
+bạn phải thực hiện 
+một số bước
+như sau
+
+00:00:23.110 --> 00:00:26.089
+Okay, đầu tiên bạn cần làm 
+là sao chép và dán vào
+
+00:00:26.089 --> 00:00:30.440
+phương thức <i>displayForTeamA</i>, được 
+chúng 
+tôi cung cấp trong các hướng dẫn lưu ý.
+
+00:00:30.440 --> 00:00:31.650
+Tôi sẽ cho bạn thấy cách 
+để thực hiện ngay đây.
+
+00:00:32.659 --> 00:00:35.680
+Okay, đây là code XML của tôi, 
+nhưng
+
+00:00:35.680 --> 00:00:38.170
+Tôi thực sự muốn 
+code Java cho nó
+
+00:00:38.170 --> 00:00:43.130
+Bây giờ, tôi có thể có cửa sổ chính .java 
+được mở ở tab khác, nhưng nếu không
+
+00:00:43.130 --> 00:00:46.900
+kéo lên trên và vào thư mục Java và 
+ấn vào cái đầu tiên trong hai cái
+
+00:00:46.900 --> 00:00:50.400
+và bạn sẽ thấy cửa sổ chính ở đây, 
+bạn ấn đúp để mở.
+
+00:00:51.530 --> 00:00:53.970
+Bây giờ, 
+đây là cửa sổ chính và
+
+00:00:53.970 --> 00:00:57.190
+nó chứa đựng các 
+code
+gọi các phương thức.
+
+00:00:57.190 --> 00:01:00.569
+Cái tôi muốn bạn làm là dán nó vào 
+bên trong cửa sổ chính, nhưng
+
+00:01:00.569 --> 00:01:03.210
+không ở trong các 
+phương thức khác.
+
+00:01:03.210 --> 00:01:05.610
+Vậy hãy nhìn vào 
+chỗ mà cửa sổ chính bắt đầu.
+
+00:01:05.610 --> 00:01:07.700
+Nó bắt đầu ở đây, và
+
+00:01:07.700 --> 00:01:13.080
+Tôi sẽ cuộn xuống dưới chậm một tý 
+và nó kết thúc ở đây.
+
+00:01:13.080 --> 00:01:17.860
+Ngay trước dấu ngoặc móc cuối cùng, 
+và nó không nằm trong phương thức, nhưng
+
+00:01:17.860 --> 00:01:22.660
+ngay ở đây, bây giờ tôi sẽ dán code 
+vào
+sử dụng tổ hợp phím <i>Command+V</i>.
+
+00:01:22.660 --> 00:01:26.100
+Tôi làm trên Mac, nếu bạn làm trên Windows,
+
+00:01:26.100 --> 00:01:27.940
+Bây giờ tôi thấy 
+rất nhiều màu đỏ, và
+
+00:01:27.940 --> 00:01:32.230
+đó thực sự vì tôi bật chế độ 
+tự động import trên máy tính này
+
+00:01:32.230 --> 00:01:33.780
+và tôi bắt đầu làm điều đó.
+
+00:01:33.780 --> 00:01:35.460
+Nếu bạn cũng thấy 
+những chỗ đỏ như ở đây
+
+00:01:35.460 --> 00:01:38.030
+có nghĩa là bạn có cùng vấn đề
+
+00:01:38.030 --> 00:01:40.770
+Catherine cho thấy cách để sửa nó trong 
+bài 2 và tôi sẽ cung cấp link ở đây,
+
+00:01:40.770 --> 00:01:44.090
+và các hướng dẫn lưu ý, 
+nếu bạn cần xem video lần nữa.
+
+00:01:44.090 --> 00:01:45.070
+Okay, tốt hơn rồi đấy
+
+00:01:45.070 --> 00:01:46.570
+Vẫn còn một vài chỗ bị đỏ nữa
+
+00:01:46.570 --> 00:01:48.140
+Chúng ta hãy cùng xử lý nó
+
+00:01:48.140 --> 00:01:49.690
+vậy tôi đã xong bước 1.
+
+00:01:49.690 --> 00:01:52.660
+Điều bạn cần làm 
+tiếp theo là thay đổi ID
+
+00:01:52.660 --> 00:01:56.090
+của <i>score textview</i>
+
+00:01:56.090 --> 00:01:57.640
+Tôi sẽ chỉ cho bạn 
+cách làm ngay đây
+
+00:01:58.920 --> 00:02:03.440
+với trường hợp này, tôi phải chuyển sang 
+màn hình code XML, và
+
+00:02:03.440 --> 00:02:05.530
+bây giờ, tôi đang ở trong 
+code XML 
+của mình và tôi tìm kiếm
+
+00:02:05.530 --> 00:02:08.288
+<i>TextVie</i>w 
+hiển thị <i>score</i>.
+
+00:02:08.288 --> 00:02:12.650
+Đây là 2 <i>TextView</i> của tôi, 
+và đây là
+<i>TextView</i> có văn bản zero,
+
+00:02:12.650 --> 00:02:14.420
+nó hiển thị <i>score</i>.
+
+00:02:14.420 --> 00:02:17.380
+Tôi thiết lập ID cho 
+nó
+tôi sẽ quay trở lại bên trên
+
+00:02:17.380 --> 00:02:21.510
+và bắt đầu gõ ID, 
+và tôi muốn một ID.
+
+00:02:21.510 --> 00:02:24.530
+Okay và bây giờ nó cho tôi 
+một lựa chọn khác, nhưng
+
+00:02:24.530 --> 00:02:26.100
+tôi sẽ sử 
+dụng biểu tượng cộng id.
+
+00:02:26.100 --> 00:02:29.820
+và tôi gõ id của tôi vào.
+
+00:02:29.820 --> 00:02:36.630
+nếu bạn còn nhớ
+nó là 
+<i>team_ a_score</i>.
+
+00:02:36.630 --> 00:02:38.130
+Okay tốt.
+Được rồi và
+
+00:02:38.130 --> 00:02:40.390
+nó nên được gõ chính xác như thế.
+
+00:02:40.390 --> 00:02:45.770
+Và cái mà bạn tìm kiếm là từ này 
+ngay ở đây, <i>team a score</i>
+
+00:02:45.770 --> 00:02:50.670
+khớp chính xác 
+với từ ở đây
+<i>team_a_score</i>.
+
+00:02:50.670 --> 00:02:53.980
+Và một khi bạn làm như thế, 
+nó sẽ thay đổi màu đỏ,
+
+00:02:53.980 --> 00:02:58.150
+thành màu tím, và phương thức hiển 
+thị của bạn
+sẽ bắt đầu hoạt động.
+
+00:02:59.180 --> 00:03:00.620
+Nếu bạn muốn kiểm tra nó,
+
+00:03:00.620 --> 00:03:05.620
+Bạn có thể vào màn hình Java code
+
+00:03:05.620 --> 00:03:07.985
+Trong bài học trước đây,
+
+00:03:07.985 --> 00:03:12.870
+Catherine đã để cập đến <i>onCreate</i>
+xảy ra ngay khi ứng dụng của bạn chạy.
+
+00:03:12.870 --> 00:03:19.140
+Và tôi có thể thực sự thêm code 
+vào đây,
+<i>displayForTeam A</i>,
+
+00:03:19.140 --> 00:03:23.290
+và đưa ra bất cứ số nào bạn thích,
+
+00:03:23.290 --> 00:03:27.640
+Tôi có thể thấy <i>score</i>
+
+00:03:27.640 --> 00:03:30.260
+Và tôi quay trở lại bên trên
+chạy nó, 
+và xem có đúng không.
+
+00:03:31.880 --> 00:03:34.620
+Okay, và đây là ứng dụng của tôi,
+
+00:03:34.620 --> 00:03:36.820
+bạn có thể thấy
+nó là 
+8 chứ không phải 0.
+
+00:03:36.820 --> 00:03:40.340
+Vì vậy tôi đã hoàn thành chính xác hai 
+bước dầu tiên, và bạn có thể kiểm tra.
+
+00:03:40.340 --> 00:03:43.480
+để đảm bảo bạn đã làm 
+hai bước đầu tiên chính xác.
+
+00:03:43.480 --> 00:03:46.350
+Trong bài học tiếp theo, bạn sẽ 
+thực sự 
+học về làm thế nào để code này
+
+00:03:46.350 --> 00:03:49.800
+hoạt động, nhưng hiện 
+tại
+hãy coi đó là một phép màu.
+
+00:03:49.800 --> 00:03:51.720
+Okay.
+Bây giờ, để vui vẻ.
+
+00:03:51.720 --> 00:03:54.420
+Tôi sẽ không cho bạn hướng 
+dẫn làm sao để chạy nó, nhưng
+
+00:03:54.420 --> 00:03:57.719
+Tôi sẽ liên kết bạn đến video ở đây, 
+và 
+Catherine cũng đã làm điều tương tự.
+
+00:03:58.840 --> 00:04:02.270
+tôi muốn bạn hoạt động như sau: 
+khi <i>3 Score button</i>
+
+00:04:02.270 --> 00:04:04.150
+nó sẽ hiển thị 3.
+
+00:04:04.150 --> 00:04:07.180
+Khi 2 được ấn,
+nó sẽ hiển thị 2.
+
+00:04:07.180 --> 00:04:10.210
+Khi <i>free throw</i> 
+được ấn,
+nó sẽ hiển thị 1.
+
+00:04:10.210 --> 00:04:12.110
+Ở đây tôi sẽ cho bạn thấy 
+số điện thoại của tôi.
+
+00:04:12.110 --> 00:04:13.780
+Okay, 
+và đây là cái tôi nói đến.
+
+00:04:13.780 --> 00:04:18.620
+Tôi ấn vào nút 3 trong ứng dụng của tôi
+
+00:04:18.620 --> 00:04:22.490
+2 hiện ra, và
+Tôi ấn vào 
+<i>free-throw</i> và 1 hiện ra.
+
+00:04:22.490 --> 00:04:25.679
+Bây giờ khi tôi ấn <i>+ 2 score</i>
+
+00:04:25.679 --> 00:04:28.080
+Nó không thêm cái gì hết.
+
+00:04:28.080 --> 00:04:31.210
+Bây giờ tôi biết nó không phải là 
+chức năng cuối cùng tôi mong muốn,
+
+00:04:31.210 --> 00:04:33.250
+nhưng nó là một trạng 
+thái trung gian tốt.
+
+00:04:33.250 --> 00:04:35.820
+Việc đạt được các mục tiêu trung gian 
+là quan trọng giúp bạn tiến gần tới
+
+00:04:35.820 --> 00:04:37.060
+kết quả cuối cùng.
+
+00:04:37.060 --> 00:04:39.570
+Bạn hãy làm những gì nhỏ nhỏ như bạn đã làm, 
+hiểu cách làm và kiểm tra,
+
+00:04:39.570 --> 00:04:43.380
+và đảm bảo nó hoạt động
+và 
+chỉnh sửa nó để đạt được điều bạn muốn.
+
+00:04:43.380 --> 00:04:47.800
+Vì vậy tôi bắt đầu với nó, và bạn cũng đã
+làm được nó, tiếp tục tiến lên.
+

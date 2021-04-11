@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.080 --> 00:00:01.290
+Hal pertama yang saya tanya
+
+00:00:01.290 --> 00:00:04.710
+yaitu apakah udacicolaVotes termasuk
+variabel lokal atau global.
+
+00:00:04.710 --> 00:00:07.780
+Dan harusnya sudah Anda tentukan
+kalau dia termasuk variabel lokal.
+
+00:00:07.780 --> 00:00:11.330
+Nah, untuk memahaminya Anda perlu menuju
+tempat dimana variabel dinyatakan
+
+00:00:11.330 --> 00:00:14.340
+yaitu di sini, dan sudah dinyatakan
+karena tipe data ada di sini.
+
+00:00:15.590 --> 00:00:19.800
+Dan dinyatakan di dalam sebuah
+metode, yang bearti di dalam
+
+00:00:19.800 --> 00:00:23.900
+kurung kurawal ini atau apakah
+ini dinyatakan di luar metode?
+
+00:00:23.900 --> 00:00:25.890
+Sekarang, jika ini dinyatakan
+dalam sebuah metode,
+
+00:00:25.890 --> 00:00:27.670
+maka artinya ini adalah
+variabel lokal dan
+
+00:00:27.670 --> 00:00:30.960
+kita bisa lihat jelas kalau ini
+dinyatakan di dalam sebuah metode.
+
+00:00:32.150 --> 00:00:33.790
+Jadi ini merupakan sebuah lokal variabel.
+
+00:00:33.790 --> 00:00:35.150
+Nah, apa artinya?
+
+00:00:35.150 --> 00:00:36.720
+Kita juga harus tanya
+pada diri kita,
+
+00:00:36.720 --> 00:00:41.030
+jika saya menyatakan sesuatu sebagai
+variabel lokal, haruskah saya punya?
+
+00:00:41.030 --> 00:00:42.930
+Mari kita bahas.
+
+00:00:42.930 --> 00:00:44.060
+Ini adalah ponsel kita.
+
+00:00:44.060 --> 00:00:46.010
+Dan kita telah membahas
+tentang udacicola, jadi
+
+00:00:46.010 --> 00:00:49.550
+marilah hanya fokus pada saat kita
+mengeklik tombol udacicola.
+
+00:00:49.550 --> 00:00:52.230
+Saat kita mengeklik tombol ini,
+metode ini memulai.
+
+00:00:52.230 --> 00:00:57.008
+Ini mengatur nilai udacicola ke nol, lalu
+menambah satu untuk udacicolaVotes,
+
+00:00:57.008 --> 00:00:58.790
+yang bernilai nol.
+
+00:00:58.790 --> 00:01:00.870
+jadi udacicolaVotes menjadi satu.
+
+00:01:00.870 --> 00:01:05.430
+Karena udacicolaVotes adalah
+variabel lokal, pada akhir metode ini,
+
+00:01:05.430 --> 00:01:07.990
+dia akan mati atau dihapus.
+
+00:01:07.990 --> 00:01:11.940
+Penyebab udacicolaVotes hancur atau
+menghilang pada akhir metode ini adalah
+
+00:01:11.940 --> 00:01:15.640
+karena variabel lokal
+menyebabkan beberapa masalah.
+
+00:01:15.640 --> 00:01:16.880
+Jadi, kenapa ini
+bermasalah?
+
+00:01:16.880 --> 00:01:19.580
+Jika Anda pikir kalau tiga
+orang berbeda melakukan vote untuk
+
+00:01:19.580 --> 00:01:25.905
+udacicola dengan cara mengeklik tombol,
+maka nilai udacicolaVvotes menjadi tiga.
+
+00:01:25.905 --> 00:01:30.001
+Yang sebenarnya terjadi adalah saat
+pertama kali Anda mengeklik tombol,
+
+00:01:30.001 --> 00:01:31.105
+udacicola menjadi nol.
+
+00:01:31.105 --> 00:01:32.865
+Ditambah satu, menjadi satu.
+
+00:01:32.865 --> 00:01:34.185
+Dan kemudian terbuang.
+
+00:01:34.185 --> 00:01:35.815
+Tidak ada lagi.
+
+00:01:35.815 --> 00:01:38.605
+Kali kedua seseorang
+mengeklik udacicolaVotes,
+
+00:01:38.605 --> 00:01:41.785
+maka udacicolaVotes
+mengulang dari awal lagi.
+
+00:01:41.785 --> 00:01:42.865
+Ini dinyatakan kembali.
+
+00:01:44.155 --> 00:01:47.575
+Ingat, kali pertama dia terbuang.
+
+00:01:47.575 --> 00:01:49.520
+Dia harus dibuat kembali.
+
+00:01:49.520 --> 00:01:51.840
+Dan ketika dibuat kembali,
+dia diatur ke nol.
+
+00:01:51.840 --> 00:01:54.690
+Sekarang kita tambahkan satu lagi,
+tapi ingat nilainya adalah nol.
+
+00:01:54.690 --> 00:01:58.700
+Jadi udacicolaVotes masih tetap satu,
+walaupun tombolnya di klik dua kali.
+
+00:01:59.900 --> 00:02:02.220
+Hal sama terjadi juga saat
+mengeklik yang ketiga kalinya,
+
+00:02:02.250 --> 00:02:06.550
+masih tetap satu dan akan terbuang
+kembali pada akhir metode ini.
+
+00:02:06.550 --> 00:02:07.740
+Itu adalah masalah pertama.
+
+00:02:07.740 --> 00:02:11.350
+Tidak akan benar-benar menyimpan nilai
+antara tombol klik.
+
+00:02:11.350 --> 00:02:14.190
+Mengenai jumlah orang yang telah
+memberi vote untuk udacicola.
+
+00:02:14.190 --> 00:02:18.700
+Masalah lain ada di bawah ini,
+kode ini akan membuat masalah.
+
+00:02:18.700 --> 00:02:22.610
+Dan alasannya, ingat yang pernah
+saya katakan kalau udacicolaVotes
+
+00:02:22.610 --> 00:02:26.820
+seperti hidup atau bisa dibilang kalau
+jangkauannya dimulai di sini.
+
+00:02:26.820 --> 00:02:29.880
+Lalu, di akhir metode voteudacicola ini.
+
+00:02:29.880 --> 00:02:32.090
+Menjadi sampah, tidak ada lagi.
+
+00:02:32.090 --> 00:02:36.190
+Yang berarti saat saya turun kesini,
+udacicolaVotes tidak ada.
+
+00:02:36.190 --> 00:02:39.640
+Secara teknis, variabel ini
+di luar jangkauan.
+
+00:02:39.640 --> 00:02:44.010
+Jangkauannya ada di sini, dinyatakan
+di sini dan berakhir pula di sini.
+
+00:02:45.040 --> 00:02:47.612
+Tapi, kita sedang mencobanya di sini.
+Dan tidak bisa digunakan.
+
+00:02:47.612 --> 00:02:51.490
+Memiliki udacicolaVotes sebagai lokal
+bukanlah keputusan yang tepat.
+
+00:02:51.490 --> 00:02:54.130
+Dan saya rangkum dalam dua poin.
+
+00:02:54.130 --> 00:02:58.320
+Ini tidak menyimpan vote antara
+tombol klik dan tidak berada dalam
+
+00:02:58.320 --> 00:02:59.650
+jangkauan metode show me votes.
+
+00:02:59.650 --> 00:03:01.700
+Jadi, ini benar-benar
+akan membuat kesalahan.
+
+00:03:01.700 --> 00:03:03.680
+Jadi ini tidak akan dikumpulkan.
+
+00:03:03.680 --> 00:03:06.140
+Oke, ayo lihat variabel lainnya
+dalam program ini.
+

@@ -1,0 +1,333 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.370 --> 00:00:03.100
+Donc, notre mise en page est à la recherche assez bon, mais
+
+00:00:03.100 --> 00:00:09.030
+Quand je Appuyez sur ces touches,
+rien ne se passe vraiment.
+
+00:00:10.170 --> 00:00:13.760
+Ce que vous allez avoir besoin de faire est
+associer le XML et Java afin
+
+00:00:13.760 --> 00:00:18.050
+Que lorsque vous appuyez sur une touche un peu
+de genre d'événement se produit dans le code Java.
+
+00:00:18.050 --> 00:00:20.470
+Maintenant que vous avez déjà fait cela avec l'application
+Juste Java, donc
+
+00:00:20.470 --> 00:00:23.110
+Vous allez faire
+quelques mesures similaires maintenant.
+
+00:00:23.110 --> 00:00:26.089
+Bon, alors la première chose que vous
+vais faire est de copier et coller plus
+
+00:00:26.089 --> 00:00:30.440
+La méthode displayForTeamA, que je l'ai
+fournies dans les notes de l'instructeur.
+
+00:00:30.440 --> 00:00:31.650
+Je vais vous montrer comment le faire dès maintenant.
+
+00:00:32.659 --> 00:00:35.680
+Bon, alors je suis ici dans mon code XML, mais
+
+00:00:35.680 --> 00:00:38.170
+Nous voulons réellement être en
+le code Java pour cela.
+
+00:00:38.170 --> 00:00:43.130
+Maintenant, vous pourriez avoir activity.java principal
+ouvert dans un autre onglet, mais sinon,
+
+00:00:43.130 --> 00:00:46.900
+Aller de l'avant et la tête dans le dossier Java,
+et cliquez ensuite sur le premier des deux,
+
+00:00:46.900 --> 00:00:50.400
+Et vous verrez activité principale il,
+vous pouvez double-cliquer pour l'ouvrir.
+
+00:00:51.530 --> 00:00:53.970
+Maintenant, cela est la principale classe d'activité et
+
+00:00:53.970 --> 00:00:57.190
+Il contient ces morceaux de code de
+méthodes dites.
+
+00:00:57.190 --> 00:01:00.569
+Ce que je veux vous faire est de le coller
+intérieur de la principale classe d'activité, mais
+
+00:01:00.569 --> 00:01:03.210
+Pas à l'intérieur de l'une des autres méthodes.
+
+00:01:03.210 --> 00:01:05.610
+Alors regardons où la principale catégorie d'activité
+commence.
+
+00:01:05.610 --> 00:01:07.700
+Il commence ici, et
+
+00:01:07.700 --> 00:01:13.080
+Je vais faire défiler un peu plus lentement,
+et il se termine ici.
+
+00:01:13.080 --> 00:01:17.860
+Juste avant la dernière accolade,
+donc pas dans cette méthode, mais
+
+00:01:17.860 --> 00:01:22.660
+Ici, alors maintenant je vais
+coller le code en utilisant Commande + V.
+
+00:01:22.660 --> 00:01:26.100
+Je suis sur un Mac, si vous êtes sur un ordinateur Windows, vous pouvez utiliser
+Ctrl + V.
+
+00:01:26.100 --> 00:01:27.940
+Maintenant que je vois beaucoup de rouge, et
+
+00:01:27.940 --> 00:01:32.230
+Qui est en fait parce que je ne l'ai
+auto-import est activée sur cet ordinateur.
+
+00:01:32.230 --> 00:01:33.780
+Donc, je vais le faire.
+
+00:01:33.780 --> 00:01:35.460
+Si vous êtes aussi voir rouge ici,
+
+00:01:35.460 --> 00:01:38.030
+Cela signifie que vous êtes probablement
+avoir le même problème.
+
+00:01:38.030 --> 00:01:40.770
+Catherine a montré comment le faire dans
+leçon deux et je l'ai fourni un lien dans
+
+00:01:40.770 --> 00:01:44.090
+L'instructeur note si vous
+besoin de regarder à nouveau cette vidéo.
+
+00:01:44.090 --> 00:01:45.070
+Accord, beaucoup mieux.
+
+00:01:45.070 --> 00:01:46.570
+Je avons encore un peu de rouge.
+
+00:01:46.570 --> 00:01:48.140
+Engageons-nous en ce moment.
+
+00:01:48.140 --> 00:01:49.690
+Bon, alors je l'ai fait la première étape.
+
+00:01:49.690 --> 00:01:52.660
+La prochaine chose que vous devez faire
+est changer l'ID
+
+00:01:52.660 --> 00:01:56.090
+Du score vue de texte
+pour être team_a_score.
+
+00:01:56.090 --> 00:01:57.640
+Je vais aussi vous montrer comment
+à le faire dès maintenant.
+
+00:01:58.920 --> 00:02:03.440
+Pour celui-ci, je vais réellement à
+aller vers le XML principal de l'activité, et
+
+00:02:03.440 --> 00:02:05.530
+Maintenant nous sommes dans notre XML et
+Je vais chercher
+
+00:02:05.530 --> 00:02:08.288
+L'TextView qui affiche le score.
+
+00:02:08.288 --> 00:02:12.650
+Voici mes deux TextViews, et il est présent
+TextView ici que le texte a zéro,
+
+00:02:12.650 --> 00:02:14.420
+Qui est l'affichage du score.
+
+00:02:14.420 --> 00:02:17.380
+Je vais définir l'ID pour
+cela, je vais juste aller de l'avant et
+
+00:02:17.380 --> 00:02:21.510
+Commencez par taper ID, et je ne veux un ID.
+
+00:02:21.510 --> 00:02:24.530
+Bon et maintenant il me donne
+différentes options, mais
+
+00:02:24.530 --> 00:02:26.100
+I vais utiliser le symbole arobase Plus ID.
+
+00:02:26.100 --> 00:02:29.820
+Et puis je vais taper dans mon id.
+
+00:02:29.820 --> 00:02:36.630
+Quels si vous vous souvenez
+il était team_ a_score.
+
+00:02:36.630 --> 00:02:38.130
+Ok cool.
+Tous droite et
+
+00:02:38.130 --> 00:02:40.390
+Il doit être tapé exactement comme ça.
+
+00:02:40.390 --> 00:02:45.770
+Et ce que vous cherchez est que
+ce mot ici, l'équipe un score
+
+00:02:45.770 --> 00:02:50.670
+Correspond exactement avec ce mot
+ici, team_a_score.
+
+00:02:50.670 --> 00:02:53.980
+Et une fois que vous faites cela, cela devrait
+changement d'une couleur rouge malsain,
+
+00:02:53.980 --> 00:02:58.150
+Pour une couleur pourpre en bonne santé, et votre méthode d'affichage de
+va travailler pour vous.
+
+00:02:59.180 --> 00:03:00.620
+Si vous voulez le tester,
+
+00:03:00.620 --> 00:03:05.620
+Vous pouvez effectivement aller dans votre code Java de
+à la méthode onCreate.
+
+00:03:05.620 --> 00:03:07.985
+Maintenant au début de la leçon,
+
+00:03:07.985 --> 00:03:12.870
+Catherine avait mentionné que onCreate
+survient droite lorsque votre application démarre.
+
+00:03:12.870 --> 00:03:19.140
+Donc, je peux effectivement ajouter le code ici,
+displayForTeam A,
+
+00:03:19.140 --> 00:03:23.290
+Et lui donner tout ce que votre favori
+nombre est, la mine se trouve être huit, et
+
+00:03:23.290 --> 00:03:27.640
+Je devrais être capable de voir que
+immédiatement le score sera mise à jour à huit.
+
+00:03:27.640 --> 00:03:30.260
+Alors je vais aller de l'avant et
+exécuter cette commande, et de voir si cela est vrai.
+
+00:03:31.880 --> 00:03:34.620
+Bon, alors voici mon application,
+et il est très petit, mais
+
+00:03:34.620 --> 00:03:36.820
+Vous devriez être en mesure de voir que cette
+est 8 et non 0.
+
+00:03:36.820 --> 00:03:40.340
+Donc je l'ai fait les deux premières étapes correctement,
+et vous devriez tester, aussi,
+
+00:03:40.340 --> 00:03:43.480
+Pour vous assurer que vous avez fait ces
+deux premières étapes correctement.
+
+00:03:43.480 --> 00:03:46.350
+Dans la leçon suivante, vous êtes réellement
+allez apprendre sur la façon dont ce code
+
+00:03:46.350 --> 00:03:49.800
+Travaille ici, mais pour l'instant,
+simplement se vautrer dans la magie.
+
+00:03:49.800 --> 00:03:51.720
+Accord.
+Maintenant, pour la partie amusante.
+
+00:03:51.720 --> 00:03:54.420
+Donc, je ne vais pas vous donner
+instructions sur la façon de le faire, mais
+
+00:03:54.420 --> 00:03:57.719
+Je vais vous reliez à quelques vidéos où
+Catherine ont fait des choses très similaires.
+
+00:03:58.840 --> 00:04:02.270
+Je veux que vous donnez le comportement suivant
+: lorsque les majoré de 3 points est
+
+00:04:02.270 --> 00:04:04.150
+Cliqué il doit montrer trois.
+
+00:04:04.150 --> 00:04:07.180
+Lorsque majoré de 2 points est cliqué,
+il devrait montrer deux.
+
+00:04:07.180 --> 00:04:10.210
+Lorsque lancer franc est cliqué,
+il devrait montrer un.
+
+00:04:10.210 --> 00:04:12.110
+Ici, je vais vous montrer sur mon téléphone.
+
+00:04:12.110 --> 00:04:13.780
+Bon, alors voici ce que je veux dire.
+
+00:04:13.780 --> 00:04:18.620
+Je dois mon application, je cliquez sur le majoré de 3 points,
+3 est représenté, je clique majoré de 2 points,
+
+00:04:18.620 --> 00:04:22.490
+2 est représenté, et
+je clique sur lancer franc et l'un est représenté.
+
+00:04:22.490 --> 00:04:25.679
+Maintenant, quand je clique majoré de 2 points
+encore, il montre juste deux.
+
+00:04:25.679 --> 00:04:28.080
+Son ne pas ajouter encore rien.
+
+00:04:28.080 --> 00:04:31.210
+Maintenant, je sais que ce ne sont pas les
+fonctionnalité finale que je cherchais,
+
+00:04:31.210 --> 00:04:33.250
+Mais il est un bon état intermédiaire.
+
+00:04:33.250 --> 00:04:35.820
+Il est important de prendre
+objectifs intermédiaires pour vous rapprocher de
+
+00:04:35.820 --> 00:04:37.060
+L'objectif final.
+
+00:04:37.060 --> 00:04:39.570
+Vous faites quelque chose de petit comme vous
+savez déjà comment faire, vérifier,
+
+00:04:39.570 --> 00:04:43.380
+Vous assurer qu'il fonctionne et
+puis le modifier pour obtenir ce que vous avez besoin.
+
+00:04:43.380 --> 00:04:47.800
+Donc, nous allons commencer avec cela, et quand
+Vous êtes fait aller de l'avant et de cocher cette case.
+

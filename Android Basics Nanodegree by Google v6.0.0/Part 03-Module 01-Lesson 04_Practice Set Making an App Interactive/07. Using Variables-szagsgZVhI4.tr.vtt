@@ -1,0 +1,459 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.650 --> 00:00:01.569
+Aşağıdaki birkaç sorguda,
+
+00:00:01.569 --> 00:00:04.390
+sizlere değişkenlerin aslında nasıl 
+kullandığını göstermiş olacağım.
+
+00:00:04.390 --> 00:00:08.100
+Yapmanız gereken tüm programlar ikinci 
+bölümde derlenecektir.
+
+00:00:08.100 --> 00:00:10.820
+Bilgisayarın kendisi için yazılan kodu
+anlayabildiği anlamına
+
+00:00:10.820 --> 00:00:12.614
+gelmektedir ve bir uygulama oluşturacağız.
+
+00:00:13.675 --> 00:00:16.065
+Şimdi, programlar telefonda çalışırken,
+
+00:00:16.065 --> 00:00:19.605
+istenilen amacı yapmama olasılığı vardır.
+
+00:00:19.605 --> 00:00:21.775
+Bu bir mantık hatası olarak bilinmektedir.
+
+00:00:21.775 --> 00:00:24.535
+Mantık hatası, kodu yazmak için 
+kullandığınızda mantıkla ilgili
+
+00:00:24.535 --> 00:00:25.245
+bir sorun var demektedir.
+
+00:00:26.895 --> 00:00:28.445
+Haydı, kısa programa ve senaryoya 
+bakalım ve bunları
+
+00:00:28.445 --> 00:00:32.415
+nasıl çözeceğinizin üzerinden geçeceğim.
+
+00:00:32.415 --> 00:00:34.380
+Tamam, işte size bir örnek.
+
+00:00:34.380 --> 00:00:37.560
+Bu programların herbiri burada yazıya 
+dökülecek bir amaca sahip olacaktır.
+
+00:00:37.560 --> 00:00:40.450
+Programın kendisi yeşil kutuda olacaktır.
+
+00:00:40.450 --> 00:00:44.590
+Tamam, bu programın amacı uyku hesabı 
+denilen şeyi hesaplamak.
+
+00:00:44.590 --> 00:00:48.080
+Şimdi, yaşa göre ne kadar uykuya ihtiyaç 
+duymanız değişmektedir, ancak ortalama
+
+00:00:48.080 --> 00:00:50.730
+bir gece için insanlar sekiz saatlik bir
+uykuya gereksinim duyarlar.
+
+00:00:50.730 --> 00:00:54.710
+Şimdi bu programın yapmak istediği şey, bir
+haftalık uykuyu hesaplamak.
+
+00:00:54.710 --> 00:00:57.850
+Programı kullanan kişi devam edecek 
+ve ortalama bir hafta içinde
+
+00:00:57.850 --> 00:01:02.310
+ve hafta sonunda ne kadar uyuduğunu 
+hesaplayacaktır.
+
+00:01:02.310 --> 00:01:06.340
+Bu örnekte, kullanıcının hafta içinde beş 
+saat ve hafta sonunda
+
+00:01:06.340 --> 00:01:08.190
+dokuz saat uyuduğunu varsayacağız.
+
+00:01:08.190 --> 00:01:11.400
+Bu görevin kodu burada yeşil kutuda.
+
+00:01:11.400 --> 00:01:14.390
+Ve yapmaya çalıştığınız ilk şey bu kodu
+iyice okumak ve hedefin başarılıp
+
+00:01:14.390 --> 00:01:17.130
+başarılamadığına karar vermektir.
+
+00:01:17.130 --> 00:01:19.620
+Daha sonra, kodda oluşan her ifadeye
+göz atmaya çalışacaksınız ve
+
+00:01:19.620 --> 00:01:23.490
+ekranda aslında neyin gösterildiğine karar 
+vereceksiniz.
+
+00:01:23.490 --> 00:01:28.920
+Farzedin bu metot burada çağrılıyor, 
+bunlar ekrana benziyor ve
+
+00:01:28.920 --> 00:01:29.860
+paranteze sahipler ve
+
+00:01:29.860 --> 00:01:32.960
+bunların arasında içeriği ekranda 
+gösterecekler.
+
+00:01:32.960 --> 00:01:35.860
+Şimdi bu problemlerin bazıları göstermeleri
+gereken çoklu içerik parçalarına
+
+00:01:35.860 --> 00:01:40.410
+sahip olacaklar, siz display1, display2, 
+display3 olarak görebilirsiniz.
+
+00:01:40.410 --> 00:01:42.060
+Eğer hala bu videoyu izliyorsanız,
+
+00:01:42.060 --> 00:01:45.120
+muhtemelen bu problemlerin bir tanesinin 
+nasıl çözüleceğini merak ediyorsunuzdur.
+
+00:01:45.120 --> 00:01:47.930
+İlk defa çoklu değişkenlerle etkileşim
+içesinde değilsiniz, problem
+
+00:01:47.930 --> 00:01:50.540
+esnasında değerler birkaç kez 
+değişebilir.
+
+00:01:51.800 --> 00:01:54.590
+Sizi serbest bırakmadan önce, izin 
+verin bir tanesini birlikte yapalım.
+
+00:01:54.590 --> 00:01:57.990
+Şimdi el simülasyonu denilen bir tekniği 
+kullanacağım ve bu teknik
+
+00:01:57.990 --> 00:02:01.050
+bilgisayarın ne yaptığını hesaplamaya 
+çalışacak ancak
+
+00:02:01.050 --> 00:02:03.090
+tabi ki bunu bilgisayara koymadan.
+
+00:02:03.090 --> 00:02:06.230
+Bizim için gerçekten değişkenlerle ilgili 
+neler olup bittiğine takip
+
+00:02:06.230 --> 00:02:07.580
+etmemiz gereken bir organize yöntemdir.
+
+00:02:07.580 --> 00:02:10.190
+Tamam, şimdi satır satır gideceksiniz,
+izin verin birlikte başlayalım.
+
+00:02:10.190 --> 00:02:13.130
+İlk satırda burada değişkenin tanımını 
+görüyorum öyleyse
+
+00:02:13.130 --> 00:02:15.560
+hafta içi olan değişkenin ismiyle 
+başlayacağım ve yazacağım.
+
+00:02:17.030 --> 00:02:19.890
+Aynı zamanda 5 numaralı değer 
+ile başlatıldı,
+
+00:02:19.890 --> 00:02:22.280
+öyleyse hafta içi günlerinin altına 
+5 değerini gireceğim.
+
+00:02:22.280 --> 00:02:25.794
+Bu halihazır 5'de kaydedilen hafta içi 
+değişkenliğini temsil etmektedir.
+
+00:02:27.550 --> 00:02:29.760
+Tamam, bu ilk satır içindi, ikinci 
+satıra geçeceğim.
+
+00:02:29.760 --> 00:02:32.620
+Hafta sonu denilen değişkenimiz var,
+şimdi bunu yazacağım
+
+00:02:32.620 --> 00:02:37.770
+ve bu değişkenin değeri 9.
+
+00:02:37.770 --> 00:02:39.110
+Tamam, bu iyi görünüyor
+
+00:02:39.110 --> 00:02:42.310
+optimalHours değişkenin tanımı ve 
+örneklemesi olan
+
+00:02:42.310 --> 00:02:45.410
+bir sonraki satıra geçiyorum ve
+aynı şeyi yapacağım.
+
+00:02:48.090 --> 00:02:49.690
+Tamam, değeri 
+7*8 olarak yazacağım.
+
+00:02:49.690 --> 00:02:52.730
+Bunu aslında dışarıda hesaplayacağım, 
+çünkü bu
+
+00:02:52.730 --> 00:02:55.180
+optimalHours'da kaydedildi.
+
+00:02:55.180 --> 00:02:59.660
+Öyleyse, ufak bir mental matematikle
+7 kere 8 eşittir 56.
+
+00:02:59.660 --> 00:03:02.170
+Tamam, şimdi farklı bir tanımımız var.
+
+00:03:02.170 --> 00:03:06.030
+actualHours denilen bir değişken
+yapıyoruz, şimdi bunu yazacağım.
+
+00:03:06.030 --> 00:03:08.260
+Bu hafta içi değerlerine eşit 
+ve hafta içi
+
+00:03:08.260 --> 00:03:10.130
+günlerinin mevcut değeridir.
+
+00:03:10.130 --> 00:03:13.170
+Bu geçmiş bazı hafta içi değer 
+veya gelecek hafta içi değer değildir.
+
+00:03:13.170 --> 00:03:17.370
+Şimdi, mevcut hafta içi değerin burada
+bitmiş olduğuna dikkat ediyoruz.
+
+00:03:17.370 --> 00:03:19.720
+Ve sadece buraya bakıyorum ve 
+5 olduğunu görüyorum.
+
+00:03:19.720 --> 00:03:21.920
+Öyleyse, bunu gerçekten 5 numara 
+olarak düşünmem gerekiyor.
+
+00:03:21.920 --> 00:03:25.570
+Öyleyse actualHours sayı 5'dir ve
+
+00:03:25.570 --> 00:03:28.230
+başlayacağım ve onu buraya yazacağım.
+
+00:03:29.230 --> 00:03:31.070
+Tamam, bir sonraki satıra geçelim.
+
+00:03:31.070 --> 00:03:35.800
+O zaman actual hours'u tekrar mevcut 
+actualHours değere artı hafta sonunu
+
+00:03:35.800 --> 00:03:40.020
+2'ye eşitlemek için değiştiriyoruz.
+
+00:03:40.020 --> 00:03:45.720
+O zaman bu yana bakabilirim, mevcut 
+actualHours değeri 5'dir ve mevcut
+
+00:03:45.720 --> 00:03:50.720
+hafta sonu değeri 9'dur.
+
+00:03:50.720 --> 00:03:53.330
+Ve şu an bu denkleme sahibim.
+
+00:03:53.330 --> 00:03:56.100
+O zaman eklemeden önce bu çarpma
+işlemini yapıyorum,
+
+00:03:56.100 --> 00:03:59.240
+9 kere 2 eşittir 18 ve 5 ekliyorum.
+
+00:03:59.240 --> 00:04:03.670
+Ve biraz daha mental matematikle
+18 artı 5 eşittir 23.
+
+00:04:03.670 --> 00:04:06.350
+Tamam, bunların hepsi eşittir 23.
+
+00:04:06.350 --> 00:04:11.100
+Ve yapmam gereken şey, eski actual hours 
+veriyi listeden kaldırmak ve
+
+00:04:11.100 --> 00:04:13.650
+yeni actual hours değerini yazmaktır.
+
+00:04:13.650 --> 00:04:14.810
+Tamam, işte bitti.
+
+00:04:14.810 --> 00:04:16.440
+Haydi, bir sonraki satıra geçelim.
+
+00:04:16.440 --> 00:04:19.540
+Çözümümüz var, bu bir değişken tanımıdır.
+
+00:04:19.540 --> 00:04:21.000
+Bu birşeye eşitleniyor ancak
+
+00:04:21.000 --> 00:04:22.820
+öncelikle çözüm kelimesini yazacağım.
+
+00:04:22.820 --> 00:04:26.860
+Ve çözüm eşittir optimal hours eksi
+actual hours.
+
+00:04:26.860 --> 00:04:32.700
+Haydi birlikte inceleyelim, optimal
+hous 56 ve actual hours 23.
+
+00:04:32.700 --> 00:04:35.860
+Şimdi, hesap makinanızı kullanabilirsiniz,
+
+00:04:35.860 --> 00:04:41.140
+Bunu daha önce yapabilirdim ve 
+biliyorum 56 eksi 23 eşittir 33.
+
+00:04:41.140 --> 00:04:45.050
+Tamam, şimdi ekran çözümü 
+(display solution)
+
+00:04:45.050 --> 00:04:47.810
+denilen son satıra geçiyoruz.
+
+00:04:47.810 --> 00:04:51.810
+Öyleyse çözüm değeri 33 olan şeyi 
+görmek için buraya göz atabiliriz
+
+00:04:51.810 --> 00:04:56.100
+O zaman 33 numaralı sayıyı gösterecek.
+
+00:04:56.100 --> 00:04:59.110
+İşte bu programın yaptığı da, 
+benim veya
+
+00:04:59.110 --> 00:05:02.560
+sizin ya da başkasının yaptığı gibi.
+
+00:05:02.560 --> 00:05:05.590
+Ancak önemli olan, doğru şeyi yaptı mı?
+
+00:05:05.590 --> 00:05:08.170
+Burada manktıksal bir hata var mı veya 
+hafta içi birisi 5 saat ve hafta sonu
+
+00:05:08.170 --> 00:05:11.730
+9 saat mi uyuyor, haftanın
+sonunda uyku borcu
+
+00:05:11.730 --> 00:05:15.640
+otuz üç saat olacak.
+
+00:05:15.640 --> 00:05:16.660
+Ne düşündüğünüzü bilmek istiyorum.
+
+00:05:16.660 --> 00:05:21.360
+Pekala hızlı bir ilave not, siz bu 2 app 
+uygulama metini oluşturdunuz.
+
+00:05:21.360 --> 00:05:24.440
+Eğer test etmek isteseydiniz, 2 app
+uygulama ayarı içerisine
+
+00:05:24.440 --> 00:05:26.870
+kodu nasıl koyabileceğınizi sizlere 
+göstereceğim.
+
+00:05:26.870 --> 00:05:28.590
+Gerçekten ilk önce el simülasyonunu 
+tavsiye ediyorum,
+
+00:05:28.590 --> 00:05:32.530
+çünkü neler olduğuyla ilgili beyninize 
+bu daha iyi bir kavram sağlamaktadır.
+
+00:05:32.530 --> 00:05:35.690
+Ancak aynı zamanda kodu Android 
+Studio ve play'in biraz
+
+00:05:35.690 --> 00:05:37.160
+içerisine koyabilmektir.
+
+00:05:37.160 --> 00:05:41.510
+O zaman size önerim onCreate metodu
+içerisinde eğitici notlarda
+
+00:05:41.510 --> 00:05:45.880
+sağlanan problemin kodunu
+kopyalayı yapıştırmaktır.
+
+00:05:45.880 --> 00:05:49.480
+Bu, buradaki esas aktivite sınıfınızda 
+göreceğiniz ilk metot.
+
+00:05:49.480 --> 00:05:52.240
+Tamam, açık olmak gerekirse değiştirilmeden
+önce işte sizin onCreate'nunuz
+
+00:05:52.240 --> 00:05:56.650
+buna benziyor ve sonra benim yaptığım
+gibi kodun üzerine yapıştırabilirsiniz.
+
+00:05:57.890 --> 00:06:00.920
+Tamam, diğer bir şey aşağıda bu
+kod çalışması satırı yapılacak yere
+
+00:06:00.920 --> 00:06:06.480
+kopyalayıp yapıştırmanız gerekecek.
+
+00:06:06.480 --> 00:06:10.460
+İşte o, bu kod ve aynı zamanda
+ben bunu eğitim notlarına dahil ettim.
+
+00:06:11.650 --> 00:06:15.840
+Son olarak XML'inize gitmeniz ve metin
+görünümünüzün Id/display_text_view
+
+00:06:15.840 --> 00:06:21.632
+olarak göründüğünü kontrol etmeniz 
+gerekecek ve
+
+00:06:21.632 --> 00:06:25.990
+bunun burada gösterilenle tam
+olarak eşleşmesi gerek.
+
+00:06:27.255 --> 00:06:30.425
+Pekala, bu kodu çalıştırdığıızda bu iki 
+şey eşleştiği müddetçe ekranda
+
+00:06:30.425 --> 00:06:35.155
+bilgisayar çıktısı değeri alacaksınız.
+
+00:06:35.155 --> 00:06:38.500
+Bunu görmek biraz zor ancak 
+orada 33 olduğu söyleniyor.
+
+00:06:38.500 --> 00:06:41.325
+Tamam ve bunların hepsiyle biraz 
+yardım alıp telefonunuzda
+
+00:06:41.325 --> 00:06:43.805
+çalıştırarak el simülasyonu yapmaya
+çalışacağım.
+
+00:06:43.805 --> 00:06:47.165
+Devam edin ve bu programın yapmanız
+gerekeni yapıp yapmadığını düşünün.
+

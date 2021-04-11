@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.640 --> 00:00:03.960
+Bazý zor durumlarý gördük. 
+Bunlar çoklu deðiþkenleri ve
+
+00:00:03.960 --> 00:00:05.460
+ilginç bir sýralamayý içermektedir.
+
+00:00:05.460 --> 00:00:09.550
+Burada, bilgisayarýn 
+ne yaptýðýný anlamak önemli.
+
+00:00:09.550 --> 00:00:11.440
+Þimdi kapsamdan söz edelim.
+
+00:00:11.440 --> 00:00:13.950
+Kapsamla ilgili video linkini verdim, 
+eðer kapsamdan kastýmý hatýrlamýyorsanýz
+
+00:00:13.950 --> 00:00:15.200
+izleyebilirsiniz.
+
+00:00:15.200 --> 00:00:19.370
+Kapsam, yerel deðiþkeni global 
+deðiþkenden ayýrýr.
+
+00:00:19.370 --> 00:00:22.580
+yerel deðiþken, genelde metodla 
+belirlenmiþ kod bloðunda
+
+00:00:22.580 --> 00:00:23.730
+yer alýr.
+
+00:00:23.730 --> 00:00:26.920
+Global deðiþken ise programýn 
+farklý bölümlerinde yer alma
+
+00:00:26.920 --> 00:00:28.360
+özgürlüðündedir.
+
+00:00:28.360 --> 00:00:31.390
+Farký anlayýp anlamadýðýnýzý grmek 
+için farklý sorulara bir bakalým.
+
+00:00:31.390 --> 00:00:34.320
+Bu alýþtýrmalarda uzun kod 
+örneklerine bakacaðýz.
+
+00:00:34.320 --> 00:00:36.940
+Bu örneklerin hepsinde 
+ya hata yoktur ya da
+
+00:00:36.940 --> 00:00:39.580
+kapsamlý hata vardýr.
+
+00:00:39.580 --> 00:00:41.240
+Ýþte ilk örnek.
+
+00:00:41.240 --> 00:00:43.970
+Bu senaryoda diyelim ki pazar 
+araþtýrmacýsýsýnýz ve
+
+00:00:43.970 --> 00:00:49.030
+kullanýcýlarýn UdasiCola veya Pepcity içeceklerinden 
+hangisini tercih ettiðini görmek üzere uygulama oluþtudunuz.
+
+00:00:49.030 --> 00:00:51.730
+Sokaktakilerle konuþup onlara 
+iki içecek vereceksiniz.
+
+00:00:51.730 --> 00:00:54.940
+ve uygulamayla hangisini 
+beðendiklerini soracaksýnýz.
+
+00:00:54.940 --> 00:00:58.040
+Þimdi ilgili koda bakalým.
+
+00:00:58.040 --> 00:00:59.170
+Buradaki elipsler
+
+00:00:59.170 --> 00:01:02.260
+size gösterdiðimden 
+fazla kod var demek.
+
+00:01:02.260 --> 00:01:05.340
+Ama size oylamayla ilgili 
+önemli kodu gösteriyorum.
+
+00:01:05.340 --> 00:01:09.310
+Udacicola butonuna basýnca,
+Udacicola metodunu seçecek,
+
+00:01:09.310 --> 00:01:12.520
+udacicola oylarýna bir eklenecek, 
+kaç kiþinin Udacicola'ya
+
+00:01:12.520 --> 00:01:15.720
+oy verdiðini gösteren 
+bir uygulama.
+
+00:01:15.720 --> 00:01:18.370
+Ayný þekilde, diyelim 
+ki XML'i programladýnýz.
+
+00:01:18.370 --> 00:01:22.320
+Pepcity
+butonuna týklayýnca, 
+Pepcity metodunu seçecek,
+
+00:01:22.320 --> 00:01:26.090
+yine bir oy eklenecek ama bu 
+sefer Pepcity oylarý artacak.
+
+00:01:26.090 --> 00:01:27.770
+Ýnceleme adýna diyelim ki
+
+00:01:27.770 --> 00:01:30.950
+kullanabileceðiniz üçüncü 
+bir gizli buton var.
+
+00:01:30.950 --> 00:01:32.430
+Oylarý gösterecek.
+
+00:01:32.430 --> 00:01:36.130
+Bu buton Oylarý Gster'i açar 
+ve 
+method,udacicola oylarý ile
+
+00:01:36.130 --> 00:01:40.080
+pepcity oylarýný gösterir, araþtýrmanýz 
+için bu ikisini karþýlaþtýrabiirsiniz.
+
+00:01:40.080 --> 00:01:41.290
+Tamam. Þimdi bu deðiþkenlerin
+
+00:01:41.290 --> 00:01:43.500
+kapsamýný düþünelim.
+
+00:01:43.500 --> 00:01:46.940
+Önce udacicola oylarý 
+deðiþkenine bakalým.
+
+00:01:46.940 --> 00:01:49.320
+Kodda gördüðünüze göre,
+
+00:01:49.320 --> 00:01:53.060
+udacicola oylarý yerel 
+deðiþken mi yoksa global mi?
+
+00:01:53.060 --> 00:01:55.440
+Yerel veya global deðiþken olmalý
+
+00:01:55.440 --> 00:01:57.120
+demek deðil bu.
+
+00:01:57.120 --> 00:01:59.950
+Koda bakýn ve söyleyin, yerel 
+mi yoksa global deðiþken olarak mý
+
+00:01:59.950 --> 00:02:02.610
+baþlatýlýp tanýmlanmýþ?
+
+00:02:04.160 --> 00:02:06.780
+Bunu yanýtladýktan 
+sonra ek sorular olacak.
+

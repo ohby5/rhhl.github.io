@@ -1,0 +1,469 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.550 --> 00:00:01.569
+No próximo grupo de testes
+
+00:00:01.569 --> 00:00:04.390
+vou mostrar para você como
+variáveis são usadas.
+
+00:00:04.390 --> 00:00:08.100
+Todos os programas que você está prestes
+a fazer na parte 2 serão compilados.
+
+00:00:08.100 --> 00:00:10.820
+O que significa que o computador
+pode entender o código escrito
+
+00:00:10.820 --> 00:00:13.614
+para ele, e seremos capazes de
+criar um aplicativo.
+
+00:00:13.675 --> 00:00:16.065
+Ao passo que os programas
+poderão rodar no telefone,
+
+00:00:16.065 --> 00:00:19.605
+há uma chance de que eles não façam
+aquilo que pretendíamos.
+
+00:00:19.605 --> 00:00:21.775
+Isto é algo conhecido como
+erro lógico.
+
+00:00:21.775 --> 00:00:24.535
+Um erro lógico significa que há
+algo errado com a lógica que você
+
+00:00:24.535 --> 00:00:26.245
+usou para escrever o código.
+
+00:00:26.895 --> 00:00:28.445
+Vejamos um programa curto e
+
+00:00:28.445 --> 00:00:32.415
+um cenário exemplo e eu vou guiá-lo
+na solução de um destes erros.
+
+00:00:32.415 --> 00:00:34.380
+Aqui está um exemplo.
+
+00:00:34.380 --> 00:00:37.560
+Cada um destes programas tem um
+objetivo, que será escrito aqui.
+
+00:00:37.560 --> 00:00:40.450
+O programa em si estará
+dentro da caixa verde.
+
+00:00:40.450 --> 00:00:44.590
+O objetivo deste programa é calcular
+algo chamado Débito de Sono.
+
+00:00:44.590 --> 00:00:48.080
+O tempo de sono necessário varia um
+pouco com a idade, mas na média
+
+00:00:48.080 --> 00:00:50.730
+pessoas precisam cerca de 8 horas
+de sono por noite.
+
+00:00:50.730 --> 00:00:54.710
+Portanto o que este programa tenta fazer
+é calcular o débito de sono numa semana.
+
+00:00:54.710 --> 00:00:57.850
+O usuário do programa vai estimar
+o quanto ele dorme num dia de semana
+
+00:00:57.850 --> 00:01:02.310
+normal e o quanto ele dorme num dia
+de fim de semana normal.
+
+00:01:02.310 --> 00:01:06.340
+Para este exemplo, presumimos que o
+usuário dorme 5 horas em dias de semana
+
+00:01:06.340 --> 00:01:08.190
+e 9 horas no fim de semana.
+
+00:01:08.190 --> 00:01:11.400
+O código para esta tarefa está
+na caixa verde.
+
+00:01:11.400 --> 00:01:14.390
+E a primeira coisa que você vai tentar
+fazer é ler o código e
+
+00:01:14.390 --> 00:01:17.130
+decidir se o objetivo foi 
+alcançado ou não.
+
+00:01:17.130 --> 00:01:19.620
+Daí o que você também vai fazer é
+passar por cada declaração que
+
+00:01:19.620 --> 00:01:23.490
+ocorreu no código e decidir o que
+foi exibido de fato na tela.
+
+00:01:23.490 --> 00:01:28.860
+Presuma que estas <i>chamadas de método</i> aqui,
+coisas que se parecem com <i>display</i> e
+
+00:01:28.860 --> 00:01:29.860
+têm parênteses e
+
+00:01:29.860 --> 00:01:32.960
+algo entre eles, exibirão
+conteúdo na tela.
+
+00:01:32.960 --> 00:01:35.860
+Alguns destes problemas terão muitas
+partes de conteúdos que precisam
+
+00:01:35.860 --> 00:01:40.410
+exibir, portanto você pode ver
+<i>display1</i>, <i>display2</i>, <i>display3</i>.
+
+00:01:40.410 --> 00:01:42.060
+Se você ainda estiver vendo este vídeo,
+
+00:01:42.060 --> 00:01:45.120
+você está provavelmente imaginando
+como resolver algum destes problemas.
+
+00:01:45.120 --> 00:01:47.930
+Esta não é a primeira vez que você
+interage com múltiplas variáveis,
+
+00:01:47.930 --> 00:01:50.540
+cujos valores podem mudar algumas
+vezes durante o problema.
+
+00:01:51.800 --> 00:01:54.590
+Então deixe-me fazer o primeiro
+com você antes de liberá-lo
+
+00:01:54.590 --> 00:01:57.990
+Agora vou usar uma técnica chamada
+simulação manual e o que esta técnica
+
+00:01:57.990 --> 00:02:01.050
+envolve é tentar descobrir o que
+o computador está fazendo, mas
+
+00:02:01.050 --> 00:02:03.090
+sem ficar preso ao computador.
+
+00:02:03.090 --> 00:02:06.230
+Para nós é apenas uma maneira organizada
+de acompanhar o que se passa com
+
+00:02:06.230 --> 00:02:07.580
+as variáveis.
+
+00:02:07.580 --> 00:02:10.190
+Agora você vai linha por linha.
+Deixe-me começar com você.
+
+00:02:10.190 --> 00:02:13.130
+Na primeira linha eu vejo a
+declaração de uma variável, assim
+
+00:02:13.130 --> 00:02:16.560
+vou escrever o nome da variável,
+que é <i>weekday</i> [dia de semana].
+
+00:02:17.030 --> 00:02:19.890
+Ela também é inicializada com
+um valor, que é 5,
+
+00:02:19.890 --> 00:02:22.280
+portanto abaixo de <i>weekday</i>
+colocarei o valor 5.
+
+00:02:22.280 --> 00:02:25.794
+Isto representa que a variável
+<i>weekday</i> agora armazena 5.
+
+00:02:27.550 --> 00:02:29.760
+Esta foi a primeira linha.
+Vou para a próxima linha.
+
+00:02:29.760 --> 00:02:35.020
+Há variável chamada <i>weekend</i>
+[fim de semana], então escreverei isso,
+
+00:02:35.220 --> 00:02:37.770
+e o valor da variável é 9.
+
+00:02:37.770 --> 00:02:39.110
+Parece bom, portanto
+
+00:02:39.110 --> 00:02:42.310
+vou para a próxima linha, que
+é uma declaração e
+
+00:02:42.310 --> 00:02:45.410
+instanciação da variável <i>optimalHours</i>
+[horas ótimas], então farei o mesmo.
+
+00:02:48.090 --> 00:02:49.690
+Não escreverei o valor 7*8.
+
+00:02:49.690 --> 00:02:52.730
+Calcularei isso pois é isso
+
+00:02:52.730 --> 00:02:55.180
+que fica armazenado em <i>optimalHours</i>
+
+00:02:55.180 --> 00:02:59.660
+Assim, com um pouco de matemática
+mental, 7 vezes 8 é igual a 56.
+
+00:02:59.660 --> 00:03:02.170
+Certo. Temos outra declaração aqui.
+
+00:03:02.170 --> 00:03:06.030
+Criamos uma variável chamada <i>actualHours</i>
+[horas de fato], portanto escrevemos isso.
+
+00:03:06.030 --> 00:03:08.260
+Bem, é igual ao valor de <i>weekday</i>, e
+
+00:03:08.260 --> 00:03:10.130
+este é o valor atual de <i>weekday</i>.
+
+00:03:10.130 --> 00:03:13.170
+Não é algum valor passado
+ou futuro de <i>weekday</i>.
+
+00:03:13.170 --> 00:03:17.370
+Estamos acompanhando qual o valor
+atual de <i>weekday</i> aqui.
+
+00:03:17.370 --> 00:03:19.720
+Portanto posso apenas olhar aqui
+e ver que é 5.
+
+00:03:19.720 --> 00:03:21.920
+Portanto devo pensar sobre
+isso como sendo o número 5.
+
+00:03:21.920 --> 00:03:25.570
+Ele está dizendo <i>int
+actualHours</i> é igual a 5.
+
+00:03:25.570 --> 00:03:28.230
+Vou escrever isso aqui.
+
+00:03:29.230 --> 00:03:31.070
+Certo. Vamos para a próxima linha.
+
+00:03:31.070 --> 00:03:35.800
+Então agora mudamos <i>actualHours</i>
+de novo para ser igual ao valor atual de
+
+00:03:35.800 --> 00:03:40.020
+<i>actualHours</i> mais <i>weekend</i> vezes 2.
+
+00:03:40.020 --> 00:03:45.720
+Posso olhar aqui. O valor atual de 
+<i>actualHours</i> é 5 e
+
+00:03:45.720 --> 00:03:50.720
+o valor atual de <i>weekend</i> é 9.
+
+00:03:50.720 --> 00:03:53.330
+E agora eu tenho esta pequena
+equação aqui.
+
+00:03:53.330 --> 00:03:56.100
+Eu faço a multiplicação antes
+da adição, portanto
+
+00:03:56.100 --> 00:03:59.240
+9 vezes 2 é 18, e então eu somo 5.
+
+00:03:59.240 --> 00:04:03.670
+E com um pouco mais de matemática
+mental, 18 mais 5 é 23.
+
+00:04:03.670 --> 00:04:06.350
+Então isso é igual a 23.
+
+00:04:06.350 --> 00:04:11.100
+E o que tenho que fazer é cortar
+o valor antigo de <i>actualHours</i> e
+
+00:04:11.100 --> 00:04:13.650
+escrever o novo valor de <i>actualHours</i>.
+
+00:04:13.650 --> 00:04:14.810
+Certo. Está feito.
+
+00:04:14.810 --> 00:04:16.440
+Vamos para a próxima linha.
+
+00:04:16.440 --> 00:04:19.540
+Temos <i>int solution</i>, portanto
+esta é uma declaração de variável.
+
+00:04:19.540 --> 00:04:21.000
+E ela está sendo igual a algo, mas
+
+00:04:21.000 --> 00:04:22.820
+escreverei a palavra
+<i>solution</i> [solução] antes.
+
+00:04:22.820 --> 00:04:26.860
+E <i>solution</i> é igual a <i>optimalHours</i>
+menos <i>actualHours</i>.
+
+00:04:26.860 --> 00:04:33.700
+Vamos para cá. <i>optimalHours</i> é 56,
+e <i>actualHours</i> é 23.
+
+00:04:35.000 --> 00:04:37.000
+Tudo bem usar a calculadora.
+
+00:04:37.000 --> 00:04:41.140
+Eu fiz isso antes e sei que
+56 menos 23 é 33.
+
+00:04:43.140 --> 00:04:45.050
+Então seguimos para a próxima e
+
+00:04:45.050 --> 00:04:47.810
+última linha, que diz <i>display (solution)</i>.
+
+00:04:47.810 --> 00:04:51.810
+Podemos olhar aqui para ver qual o
+valor de <i>solution</i>, que é 33.
+
+00:04:51.810 --> 00:04:56.100
+Portanto ele exibirá o número 33.
+
+00:04:56.100 --> 00:04:59.110
+É assim que eu, ou você, ou
+
+00:04:59.110 --> 00:05:02.560
+qualquer pessoa pode descobrir o
+que este programa acabou de fazer.
+
+00:05:02.560 --> 00:05:05.590
+Mas a questão real é:
+ele fez a coisa certa?
+
+00:05:05.590 --> 00:05:08.170
+Há um erro lógico em algum lugar aqui ou
+
+00:05:08.170 --> 00:05:11.730
+alguém que dorme 5h por noite em dias
+de semana e 9h nos finais de semana
+
+00:05:11.730 --> 00:05:15.340
+terá um débito de sono de 33h ao
+final de uma semana?
+
+00:05:15.340 --> 00:05:16.660
+Quero saber o que você acha.
+
+00:05:16.660 --> 00:05:21.360
+Só um aparte, agora que você criou
+este aplicativo do <i>Conjunto de Prática 2</i>,
+
+00:05:21.360 --> 00:05:24.440
+eu só vou mostrar como você poderia
+também colocar o código dentro do
+
+00:05:24.440 --> 00:05:26.870
+<i>Conjunto de Prática 2</i> se
+você quisesse testá-lo.
+
+00:05:26.870 --> 00:05:28.590
+Recomendo muito testar
+manualmente primeiro
+
+00:05:28.590 --> 00:05:32.530
+pois isso dará ao seu cérebro
+uma noção melhor do que está acontecendo.
+
+00:05:32.530 --> 00:05:35.690
+Mas também é bom poder por o
+código no Android Studio e
+
+00:05:35.690 --> 00:05:37.160
+brincar um pouco com ele.
+
+00:05:37.160 --> 00:05:41.510
+Sugiro que você copie e cole o
+código do problema,
+
+00:05:41.510 --> 00:05:45.880
+que será fornecido nas notas do
+instrutor, dentro do método <i>onCreate</i>.
+
+00:05:45.880 --> 00:05:49.480
+Este é o primeiro método que você verá
+aqui no seu <i>MainActivity class</i>.
+
+00:05:49.480 --> 00:05:52.240
+Só para ficar bem claro, é assim
+que seu <i>onCreate</i> se parece
+
+00:05:52.240 --> 00:05:56.650
+antes de ser modificado, e então você
+pode colar o código, como eu fiz.
+
+00:05:57.890 --> 00:06:00.920
+A outra coisa que você
+precisará copiar e colar,
+
+00:06:00.920 --> 00:06:06.480
+que fará esta linha de código
+funcionar, está aqui embaixo.
+
+00:06:06.480 --> 00:06:10.460
+É este código, e eu também o
+incluí nas notas do instrutor.
+
+00:06:11.650 --> 00:06:15.840
+A última coisa que você precisará
+fazer é ir ao seu XML, e
+
+00:06:15.840 --> 00:06:21.632
+certificar-se de que seu <i>TextView</i> tenha
+um <i>id display_text_view</i>,
+
+00:06:21.632 --> 00:06:25.990
+que deve ser exatamente como
+o que é mostrado aqui.
+
+00:06:27.255 --> 00:06:30.425
+Contanto que estas duas coisas
+estejam certas quando você rodar este
+
+00:06:30.425 --> 00:06:35.155
+código, você terá o valor
+exibido na tela.
+
+00:06:35.155 --> 00:06:38.500
+É um pouco difícil de ver, mas
+diz 33 aqui.
+
+00:06:38.500 --> 00:06:41.325
+E com tudo isso, o conhecimento
+que teve ao simular manualmente e
+
+00:06:41.325 --> 00:06:43.805
+alguma ajuda para fazer
+funcionar no seu telefone,
+
+00:06:43.805 --> 00:06:47.165
+siga em frente e tente descobrir: este
+programa está fazendo o que deveria?
+

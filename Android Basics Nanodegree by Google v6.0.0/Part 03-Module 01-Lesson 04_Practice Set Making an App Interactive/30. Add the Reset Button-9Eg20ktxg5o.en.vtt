@@ -1,0 +1,632 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.120 --> 00:00:03.640
+Okay, so here is our picture
+of our court counter app, or
+
+00:00:03.640 --> 00:00:05.820
+at least how we want it to look.
+
+00:00:05.820 --> 00:00:10.120
+Now, I'm going to follow my own
+advice and start with the XML first.
+
+00:00:10.120 --> 00:00:12.640
+Let's think about the view
+situation right now.
+
+00:00:12.640 --> 00:00:17.540
+So, we still have all these views,
+and these views are in vertical and
+
+00:00:17.540 --> 00:00:18.720
+linear layouts.
+
+00:00:18.720 --> 00:00:23.270
+We have a linear layout for team B and
+a linear layout for team A.
+
+00:00:23.270 --> 00:00:26.574
+and you can't just have two
+root views so furthermore,
+
+00:00:26.574 --> 00:00:30.793
+these are wrapped in a linear layout,
+which happens to be horizontal so
+
+00:00:30.793 --> 00:00:35.200
+that these two child linear layouts
+can be next to one another.
+
+00:00:35.200 --> 00:00:38.230
+Okay, now we want to add
+a reset button down here.
+
+00:00:38.230 --> 00:00:40.920
+For the sake of your brain not
+exploding thinking about all these
+
+00:00:40.920 --> 00:00:44.800
+different layouts, I want you to
+think of everything inside of this
+
+00:00:44.800 --> 00:00:48.460
+horizontal linear layout
+kind of like a single view.
+
+00:00:48.460 --> 00:00:52.910
+And now you're just trying to lay out
+this horizontal linear layout right here
+
+00:00:52.910 --> 00:00:53.910
+and this reset button.
+
+00:00:53.910 --> 00:00:56.850
+You're trying to lay out two views.
+
+00:00:56.850 --> 00:01:01.570
+One view is at the top and the other
+view is at the bottom of the screen.
+
+00:01:01.570 --> 00:01:05.680
+So the question now is what view
+group would allow you to have
+
+00:01:05.680 --> 00:01:08.800
+a view up here at the top and
+a view down by the bottom of the screen?
+
+00:01:08.800 --> 00:01:13.450
+And it turns out that a relative layout
+is a pretty good candidate for this.
+
+00:01:13.450 --> 00:01:17.310
+I can have my horizontal linear
+layout here, match the parent for
+
+00:01:17.310 --> 00:01:19.560
+the width, and
+then wrap content for the height.
+
+00:01:20.630 --> 00:01:24.490
+And I can have my reset button right
+here, align with the center and
+
+00:01:24.490 --> 00:01:26.060
+bottom of the pairing.
+
+00:01:26.060 --> 00:01:28.510
+Okay, so you have a Relative Layout, and
+
+00:01:28.510 --> 00:01:33.340
+that Relative Layout has a Button
+child and a Linear Layout child.
+
+00:01:33.340 --> 00:01:36.120
+And the Button child is
+this Reset button, and
+
+00:01:36.120 --> 00:01:40.430
+the Linear Layout is the Linear Layout
+here, the horizontal one.
+
+00:01:40.430 --> 00:01:44.060
+Furthermore, this horizontal linear
+layout has two children, and
+
+00:01:44.060 --> 00:01:46.810
+those children are also linear layouts.
+
+00:01:46.810 --> 00:01:49.870
+They are the linear layout for
+team A and the linear layout for
+
+00:01:49.870 --> 00:01:51.670
+team B that you see here.
+
+00:01:51.670 --> 00:01:57.280
+The linear layout for team A has
+two text views and three buttons.
+
+00:01:57.280 --> 00:02:00.170
+The same is true of this
+linear layout for team B.
+
+00:02:00.170 --> 00:02:03.160
+Five children, two text views,
+and three buttons.
+
+00:02:03.160 --> 00:02:05.260
+This portion of the layout
+you've already made,
+
+00:02:05.260 --> 00:02:08.770
+you just need to add this,
+all right, let's do it.
+
+00:02:08.770 --> 00:02:13.035
+Okay, I'm here in my XML code and so the
+first thing I'm going to do is is I'm
+
+00:02:13.035 --> 00:02:18.010
+going to make the Root Relative Layout
+that you saw in the diagram.
+
+00:02:18.010 --> 00:02:23.580
+So here going to type RelativeLayout,
+and I actually want
+
+00:02:23.580 --> 00:02:28.440
+to cut and paste these two lines because
+they need to be in the root layout.
+
+00:02:28.440 --> 00:02:33.920
+So I'm cutting them and I'm pasting
+them here, in my root layout.
+
+00:02:33.920 --> 00:02:37.260
+Okay, now I'm going to close
+off my RelativeLayout here and
+
+00:02:37.260 --> 00:02:43.500
+I'm going to move this closing
+tag all the way to the bottom.
+
+00:02:45.590 --> 00:02:49.470
+Okay, so what I essentially have right
+now Is this part of the diagram.
+
+00:02:49.470 --> 00:02:52.610
+All right,
+looks like I have some errors as well.
+
+00:02:52.610 --> 00:02:57.210
+Let's see, yes, I haven't defined
+a height or a width, so let's do that.
+
+00:02:58.580 --> 00:03:02.250
+Now my relative layout had the button
+at the bottom center of the screen.
+
+00:03:02.250 --> 00:03:05.260
+So, to do that, it's probably going to
+need to fill the whole screen.
+
+00:03:05.260 --> 00:03:06.960
+So I'm going to do
+match parents on both.
+
+00:03:08.830 --> 00:03:11.530
+Okay, now I need to add the button.
+
+00:03:11.530 --> 00:03:17.587
+I'm going to scroll down, right here,
+to where the linear layout closes,
+
+00:03:17.587 --> 00:03:23.462
+but I still am inside the relative
+layout, and I'm going to add a button.
+
+00:03:23.462 --> 00:03:26.664
+And I'm going to go ahead and
+wrap content for that button,
+
+00:03:26.664 --> 00:03:30.398
+because it's not a button that
+expands to fill the entire bottom of
+
+00:03:30.398 --> 00:03:33.150
+the screen or
+expands to fill the entire screen.
+
+00:03:34.310 --> 00:03:36.640
+And now the parent of this button
+is the RelativeLayout, and
+
+00:03:36.640 --> 00:03:40.370
+we're going to set the text
+of this button to Reset.
+
+00:03:40.370 --> 00:03:43.390
+Let's see what this looks like.
+
+00:03:43.390 --> 00:03:46.960
+Okay so my reset button's up here,
+that's not exactly where I want it to
+
+00:03:46.960 --> 00:03:51.730
+be, but it's parent is relatively out,
+that fills up the entire screen.
+
+00:03:51.730 --> 00:03:54.240
+So I can align it to the parent.
+
+00:03:54.240 --> 00:03:57.450
+I want to align it to
+the parents bottom, and
+
+00:03:57.450 --> 00:04:01.170
+I want it to be in the center of
+the parent, horizontally anyways.
+
+00:04:01.170 --> 00:04:04.150
+Cool, my button seems to
+be in the right place.
+
+00:04:04.150 --> 00:04:06.270
+I'm going to select everything here.
+
+00:04:06.270 --> 00:04:09.560
+And I'm going to do
+a command option L on Mac.
+
+00:04:09.560 --> 00:04:14.490
+Which is the same thing as Control-Alt-L
+on Windows to just reformat the code and
+
+00:04:14.490 --> 00:04:15.890
+get it to look nice.
+
+00:04:15.890 --> 00:04:18.690
+Okay let's go back to our Java code.
+
+00:04:18.690 --> 00:04:23.190
+Now I've got my button but
+it's not doing anything.
+
+00:04:23.190 --> 00:04:25.690
+Let's start by making a method for it.
+
+00:04:25.690 --> 00:04:32.250
+I'm going to make this right above
+the display methods, here, public void.
+
+00:04:32.250 --> 00:04:35.100
+I'm going to call this
+method resetScore,
+
+00:04:35.100 --> 00:04:38.180
+because that's what I intend for
+it to do.
+
+00:04:38.180 --> 00:04:42.860
+Scroll up, I'm going to make
+it match these other methods
+
+00:04:42.860 --> 00:04:46.670
+with the View v, and then, curly braces.
+
+00:04:46.670 --> 00:04:50.100
+I won't worry about what's
+going to go in here for now.
+
+00:04:50.100 --> 00:04:53.200
+I'm going to go back to my XML code And
+
+00:04:53.200 --> 00:04:57.200
+I'm going to do the second part of
+the hooking the button to the Java code
+
+00:04:57.200 --> 00:05:01.970
+by adding a onClick attribute here for
+resetScore.
+
+00:05:01.970 --> 00:05:06.310
+Okay, so now when I click this button
+the code here will be run, but
+
+00:05:06.310 --> 00:05:08.110
+there isn't any code here.
+
+00:05:08.110 --> 00:05:09.290
+Let's figure out what I need to add.
+
+00:05:10.650 --> 00:05:13.750
+Okay, let's go back to this
+discussion of pseudoCode.
+
+00:05:13.750 --> 00:05:17.340
+When I hit the Reset button,
+what do I want to happen?
+
+00:05:17.340 --> 00:05:20.950
+Well, I want both of these
+two scores to show 0.
+
+00:05:20.950 --> 00:05:24.130
+Furthermore, I want the variables for
+score team A and for
+
+00:05:24.130 --> 00:05:26.740
+score team B to go back to zero.
+
+00:05:26.740 --> 00:05:30.330
+Remember, when I click on any of
+these buttons, I'm adding two and
+
+00:05:30.330 --> 00:05:32.060
+then displaying the variable.
+
+00:05:32.060 --> 00:05:33.820
+So, if I don't put
+the variable back to zero,
+
+00:05:33.820 --> 00:05:36.160
+it's going to show an incorrect number.
+
+00:05:36.160 --> 00:05:39.300
+So here’s what I came up
+with pseudoCode-wise.
+
+00:05:39.300 --> 00:05:43.380
+The first thing I want to do is
+set the score for Team A to zero.
+
+00:05:43.380 --> 00:05:46.440
+Then I want to do the same thing for
+Team B.
+
+00:05:46.440 --> 00:05:50.260
+Now both of the scores are zero, but
+nothing's been displayed yet, which is
+
+00:05:50.260 --> 00:05:54.570
+why in Step 3 I'll display the score for
+Team A, which has been set to zero.
+
+00:05:55.850 --> 00:06:00.185
+And to be a little bit more specific,
+I’m going to display the score for
+
+00:06:00.185 --> 00:06:04.091
+Team A here, and then I'll display
+the score for Team B here.
+
+00:06:04.091 --> 00:06:07.610
+And because in Steps 1 and 2,
+I've ensured that they're set to zero,
+
+00:06:07.610 --> 00:06:10.230
+they will display zero here and here.
+
+00:06:10.230 --> 00:06:14.400
+Then when I click any of these
+buttons to update ScoreForTeamA or
+
+00:06:14.400 --> 00:06:18.389
+ScoreForTeamB, it's going to be updating
+but starting with a score of zero.
+
+00:06:19.545 --> 00:06:23.984
+Okay, so in reset score I'm going to
+type my pseudo code as code, code.
+
+00:06:23.984 --> 00:06:28.952
+So the first thing I'm going to do is
+take score A and set it's value to
+
+00:06:28.952 --> 00:06:34.010
+zero using a assignment operator
+here and the value of zero.
+
+00:06:34.010 --> 00:06:35.800
+Oh and
+don't forget the semi colon of course.
+
+00:06:37.120 --> 00:06:38.550
+I'll do the same for score B.
+
+00:06:42.280 --> 00:06:48.515
+After that, I'm going to display in
+the team A spot, the score for team A.
+
+00:06:48.515 --> 00:06:53.150
+And then I'm going to display in
+the team B spot, the score for team B.
+
+00:06:54.640 --> 00:06:57.289
+I'll also go ahead here and
+add a comment.
+
+00:06:58.550 --> 00:07:00.080
+Okay, this all seems reasonable.
+
+00:07:00.080 --> 00:07:03.750
+And it's been a while since I've
+run anything on my phone, so
+
+00:07:03.750 --> 00:07:06.587
+I'm going to press the Run button,
+okay, cool.
+
+00:07:06.587 --> 00:07:08.000
+I have a RESET button.
+
+00:07:08.000 --> 00:07:08.997
+Let's see if it works.
+
+00:07:13.339 --> 00:07:14.732
+Good, it sets to zero.
+
+00:07:14.732 --> 00:07:16.500
+Let's click a little bit more,
+
+00:07:16.500 --> 00:07:19.457
+just to make sure that
+everything's still working.
+
+00:07:23.961 --> 00:07:28.338
+Cool, and it looks like it is, awesome.
+
+00:07:28.338 --> 00:07:30.270
+Now this was a little
+bit of a tricky one.
+
+00:07:30.270 --> 00:07:33.720
+So let me show you what happens if
+you were to switch around the order,
+
+00:07:33.720 --> 00:07:35.050
+do something a little bit differently.
+
+00:07:36.090 --> 00:07:38.890
+What if I switch these two around?
+
+00:07:38.890 --> 00:07:40.809
+Well, let's just see what happens.
+
+00:07:42.360 --> 00:07:45.710
+Okay, so here it is,
+let's see what it does.
+
+00:07:45.710 --> 00:07:47.660
+Okay, so I'm going to add some points.
+
+00:07:48.860 --> 00:07:53.080
+Now for the moment of truth,
+Reset button.
+
+00:07:53.080 --> 00:07:55.850
+Huh, doesn't seem to do anything.
+
+00:07:55.850 --> 00:07:59.090
+Let's try clicking, huh, interesting.
+
+00:07:59.090 --> 00:08:00.520
+Well it's kind of hard to see,
+
+00:08:00.520 --> 00:08:05.470
+but the score before said 19,
+I hit the reset button nothing changed.
+
+00:08:05.470 --> 00:08:07.650
+But then when I hit free
+throw it showed one.
+
+00:08:09.570 --> 00:08:12.500
+let's try with the other side,
+if I hit plus two points.
+
+00:08:12.500 --> 00:08:14.220
+Oh, it shows two.
+
+00:08:14.220 --> 00:08:17.600
+let's look at the code again for
+why that might be the case.
+
+00:08:17.600 --> 00:08:21.490
+So I switched around displaying and
+setting the score.
+
+00:08:21.490 --> 00:08:24.870
+Just to see what kind of error
+behavior I might get from that.
+
+00:08:24.870 --> 00:08:29.732
+Let's say TeamA has a score of 30 and
+TeamB has a score of 40.
+
+00:08:29.732 --> 00:08:33.049
+When I say displayForTeamA
+it's going to show 30 and
+
+00:08:33.049 --> 00:08:37.230
+when I say displayForTeamB
+it's going to show 40.
+
+00:08:37.230 --> 00:08:41.490
+Only after that, will it actually
+set these values to zero.
+
+00:08:41.490 --> 00:08:45.730
+But since it displayed first it's not
+going to show the values of zero.
+
+00:08:45.730 --> 00:08:48.440
+But the variable will be zero.
+
+00:08:48.440 --> 00:08:53.430
+So when I press something like
+addThreeForTeamB, it's going to take
+
+00:08:53.430 --> 00:08:59.960
+the value of zero that I set down here,
+add three, and then display three.
+
+00:08:59.960 --> 00:09:06.490
+So to us, it would look like TeamB
+went from having a score of 30 then to
+
+00:09:06.490 --> 00:09:11.630
+after clicking the reset button, a score
+of three, which is kind of a weird jump.
+
+00:09:11.630 --> 00:09:15.490
+Now one way I could fix this besides
+swapping it back to how it should be
+
+00:09:15.490 --> 00:09:19.370
+Is I could put display zero here.
+
+00:09:19.370 --> 00:09:22.390
+And you can test this out on your own,
+but this would actually work.
+
+00:09:22.390 --> 00:09:24.200
+It's just a little bit counterintuitive.
+
+00:09:25.490 --> 00:09:29.080
+I like showing examples like this
+because it kind of shows the beauty and
+
+00:09:29.080 --> 00:09:30.800
+subjectivity of code.
+
+00:09:30.800 --> 00:09:34.360
+Now, in this case, I happen to think
+fairly strongly that the first way that
+
+00:09:34.360 --> 00:09:36.290
+I had the code was better.
+
+00:09:36.290 --> 00:09:39.130
+But you might start seeing scenarios
+where there could be two different
+
+00:09:39.130 --> 00:09:42.880
+ways to write the code, and
+both of them are technically correct.
+
+00:09:42.880 --> 00:09:45.430
+Since there isn't always
+one right answer,
+
+00:09:45.430 --> 00:09:49.140
+you shouldn't feel constricted
+to do it the exact correct way.
+
+00:09:49.140 --> 00:09:52.600
+Try coding up something that works
+your way, see how other people do it,
+
+00:09:52.600 --> 00:09:57.640
+and then compare, who's more efficient,
+whose code is clearer.
+
+00:09:57.640 --> 00:10:00.770
+These kind of discussions could be
+a really helpful learning experience.
+
+00:10:00.770 --> 00:10:04.030
+Okay, but I'm going to revert the code
+back to the state that it was before
+
+00:10:04.030 --> 00:10:05.390
+which was working and
+
+00:10:05.390 --> 00:10:09.660
+now I have all the functionality of my
+app but it's not pretty, let's fix that.
+

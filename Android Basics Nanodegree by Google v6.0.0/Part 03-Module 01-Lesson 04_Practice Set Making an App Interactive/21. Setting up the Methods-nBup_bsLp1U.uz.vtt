@@ -1,0 +1,323 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.370 --> 00:00:03.100
+Shunday qilib, bizning joylashuv tartibimiz
+juda yaxshi ko‘rinishga ega, ammo
+
+00:00:03.100 --> 00:00:09.030
+men ushbu tugmalarni bosganimda
+hech narsa sodir bo‘lmaydi.
+
+00:00:10.170 --> 00:00:13.760
+Buning uchun XML va Javani bog‘lash kerak, 
+shunda siz biron bir tugmani bosganingizda 
+
+00:00:13.760 --> 00:00:18.050
+Java kodda biror bir voqea sodir bo‘ladi.
+
+00:00:18.050 --> 00:00:20.470
+Endi siz buni Just Java ilovasi 
+bilan bajardingiz, hozir ham 
+
+00:00:20.470 --> 00:00:23.110
+shunga o‘xshash bosqichlarni bosasiz.
+
+00:00:23.110 --> 00:00:26.089
+Xo‘sh, shuning uchun siz qilishingiz 
+kerak bo‘lgan birinchi narsa bu men 
+
+00:00:26.089 --> 00:00:30.440
+o‘qituvchining yo‘riqnomalarida taqdim etgan 
+displayForTeamA usulida nusxa ko‘chirish va joylashtirish.
+
+00:00:30.440 --> 00:00:31.650
+Buni hozir qanday qilish kerakligini sizga ko‘rsataman.
+
+00:00:32.659 --> 00:00:35.680
+Xo‘sh, bu yerda men XML kodimdaman, 
+lekin 
+
+00:00:35.680 --> 00:00:38.170
+biz aslida Java kodida bo‘lishimiz kerak.
+
+00:00:38.170 --> 00:00:43.130
+Endi, sizda yana bir asosiy oynada 
+Main activity.java ochilgan bo‘lsa kerak, 
+
+00:00:43.130 --> 00:00:46.900
+agar yo‘q bo‘lsa, Java jildiga o‘ting 
+va ikkisidan birinchisini bosing va u yerda 
+
+00:00:46.900 --> 00:00:50.400
+main activity ni ko‘rasiz, 
+uni ochish uchun ikki marta bosing.
+
+00:00:51.530 --> 00:00:53.970
+Endi bu asosiy faoliyat sinfi va 
+unda usul deb nomlangan 
+
+00:00:53.970 --> 00:00:57.190
+ushbu kod bo‘limlari mavjud.
+
+00:00:57.190 --> 00:01:00.569
+Men sizdan shuni istaymanki, 
+buni asosiy sahifaning sinfiga 
+
+00:01:00.569 --> 00:01:03.210
+joylashtiring, ammo boshqa 
+usullarning birortasiga kiritmang.
+
+00:01:03.210 --> 00:01:05.610
+Shunday qilib, asosiy sahifa sinfining 
+qayerdan boshlanishini ko‘rib chiqamiz.
+
+00:01:05.610 --> 00:01:07.700
+Asosiy sahifa shu yerda boshlanadi va men 
+bir oz sekinroq pastga aylantiraman 
+
+00:01:07.700 --> 00:01:13.080
+va u shu yerda tugaydi.
+
+00:01:13.080 --> 00:01:17.860
+Oxirgi figurali qavsdan oldin, ya’ni shu 
+usulda emas, balki bu yerda, 
+
+00:01:17.860 --> 00:01:22.660
+shuning uchun endi men Ctrl + V 
+yordamida kodni qo‘yaman.
+
+00:01:22.660 --> 00:01:26.100
+Men Mac kompyuterdaman, agar siz Windows da 
+bo‘lsangiz, siz Control + V dan foydalanishingiz mumkin.
+
+00:01:26.100 --> 00:01:27.940
+Hozir men juda ko‘p qizillarni ko‘rmoqdaman 
+va bu kompyuterda avtomatik 
+
+00:01:27.940 --> 00:01:32.230
+import yoqilmaganligi sabablidir.
+
+00:01:32.230 --> 00:01:33.780
+Shunday qilib, men buni qilaman.
+
+00:01:33.780 --> 00:01:35.460
+Agar siz ham bu yerda qizil rangni 
+ko‘rsangiz, demak 
+
+00:01:35.460 --> 00:01:38.030
+sizda ham shunday muammo bor.
+
+00:01:38.030 --> 00:01:40.770
+Caterine buni ikkinchi darsda qanday 
+qilishni ko‘rsatgandi va agar 
+
+00:01:40.770 --> 00:01:44.090
+siz ushbu videoni yana ko‘rishingiz kerak bo‘lsa, 
+men o‘qituvchining yo‘riqnomalarida havolani keltirdim.
+
+00:01:44.090 --> 00:01:45.070
+Yaxshi.
+
+00:01:45.070 --> 00:01:46.570
+Menda hali ham ozgina qizil bor.
+
+00:01:46.570 --> 00:01:48.140
+Keling, buni hal qilamiz.
+
+00:01:48.140 --> 00:01:49.690
+OK, shuning uchun men birinchi bosqichni bajardim.
+
+00:01:49.690 --> 00:01:52.660
+Keyingi qilishingiz kerak bo‘lgan ish 
+bu ochko matnining ko‘rinishi ID sini 
+
+00:01:52.660 --> 00:01:56.090
+team_a_score bo‘lish uchun o‘zgartirish.
+
+00:01:56.090 --> 00:01:57.640
+Men hozir buni qanday qilishni ko‘rsataman.
+
+00:01:58.920 --> 00:02:03.440
+Buning uchun men aslida asosiy sahifa 
+XML ga o‘tmoqchiman, endi 
+
+00:02:03.440 --> 00:02:05.530
+biz XML da natijani ko‘rsatadigan 
+
+00:02:05.530 --> 00:02:08.288
+TextView ni qidirmoqchiman.
+
+00:02:08.288 --> 00:02:12.650
+Mana mening ikkita TextViews im va mana 
+bu TextView hisobni 
+
+00:02:12.650 --> 00:02:14.420
+ko‘rsatadigan matn nolga teng.
+
+00:02:14.420 --> 00:02:17.380
+Men buning uchun identifikatorni 
+o‘rnatmoqchiman, davom etib 
+
+00:02:17.380 --> 00:02:21.510
+va ID raqamini yozishni boshlayman 
+va men o‘zim ID ni qo‘yaman.
+
+00:02:21.510 --> 00:02:24.530
+Mayli hozir u menga turli xil 
+variantlarni taklif qilmoqda, 
+
+00:02:24.530 --> 00:02:26.100
+ammo men atamada va ID dan foydalanmoqchiman.
+
+00:02:26.100 --> 00:02:29.820
+Keyin men id raqamimni kiritaman.
+
+00:02:29.820 --> 00:02:36.630
+Agar eslasangiz, bu team_a_score edi.
+
+00:02:36.630 --> 00:02:38.130
+Yaxshi. Hammasi yaxshi 
+
+00:02:38.130 --> 00:02:40.390
+va xuddi 
+shunday yozilishi kerak.
+
+00:02:40.390 --> 00:02:45.770
+Siz qidirayotgan narsa shuki, 
+ushbu so‘z aynan shu yerda, 
+
+00:02:45.770 --> 00:02:50.670
+jamoa hisobi aynan shu so‘zga to‘g‘ri 
+keladi, ya’ni team_a_score .
+
+00:02:50.670 --> 00:02:53.980
+Va buni amalga oshirgandan so‘ng, 
+bu zararli qizil rangdan sog‘lom 
+
+00:02:53.980 --> 00:02:58.150
+binafsha ranggacha o‘zgarishi kerak va 
+sizning display usuli uchun ishlaydi.
+
+00:02:59.180 --> 00:03:00.620
+Agar siz buni sinab ko‘rmoqchi bo‘lsangiz, 
+aslida Java kodingizda 
+
+00:03:00.620 --> 00:03:05.620
+onCreate usuliga o‘tishingiz mumkin.
+
+00:03:05.620 --> 00:03:07.985
+Endi darsning boshida, Caterine onCreate 
+ilovangiz ishga tushganda 
+
+00:03:07.985 --> 00:03:12.870
+darhol paydo bo‘lishini aytib o‘tdi.
+
+00:03:12.870 --> 00:03:19.140
+Shunday qilib, haqiqatan ham bu yerga 
+kodni qo‘shishim mumkin, displayForTeamA 
+
+00:03:19.140 --> 00:03:23.290
+va unga yoqtirgan raqamimizni berishim mumkin, 
+menda 8 bo‘ladi, 
+
+00:03:23.290 --> 00:03:27.640
+shuning uchun men buni 
+davom ettiraman 
+
+00:03:27.640 --> 00:03:30.260
+va bu to‘g‘ri ekanligini ko‘raman.
+
+00:03:31.880 --> 00:03:34.620
+Yaxshi, bu mening ilovam va u juda kichik, 
+ammo bu 8 emas, balki 0 ekanligini 
+
+00:03:34.620 --> 00:03:36.820
+ko‘rishingiz kerak.
+
+00:03:36.820 --> 00:03:40.340
+Shunday qilib, men dastlabki ikkita 
+qadamni to‘g‘ri qildim va siz ham 
+
+00:03:40.340 --> 00:03:43.480
+birinchi ikkita qadamni to‘g‘ri bajarganligingizga 
+ishonch hosil qilish uchun sinovdan o‘tishingiz kerak.
+
+00:03:43.480 --> 00:03:46.350
+Keyingi darsda, aslida bu yerda ushbu kod 
+qanday ishlashini bilib olasiz, 
+
+00:03:46.350 --> 00:03:49.800
+ammo hozircha sehrli tarzda tanishasiz.
+
+00:03:49.800 --> 00:03:51.720
+Xo‘sh, hozir.
+
+00:03:51.720 --> 00:03:54.420
+Shunday qilib, men buni qanday qilish 
+haqida ko‘rsatma bermayman, 
+
+00:03:54.420 --> 00:03:57.719
+lekin sizga Caterine shunga o‘xshash 
+narsalarni qilgan ba’zi videolarni beraman.
+
+00:03:58.840 --> 00:04:02.270
+Sizga quyidagi xatti-harakatni berishingizni 
+xohlayman: 3 ball bosilganda 
+
+00:04:02.270 --> 00:04:04.150
+u uchta ko‘rsatkichni ko‘rsatishi kerak.
+
+00:04:04.150 --> 00:04:07.180
+Agar 2 ball bosilsa, ikkita ko‘rsatishi kerak.
+
+00:04:07.180 --> 00:04:10.210
+Erkin otish bosilganda, bitta ko‘rsatish kerak.
+
+00:04:10.210 --> 00:04:12.110
+Bu yerda sizga telefonimda ko‘rsataman.
+
+00:04:12.110 --> 00:04:13.780
+OK, shuning uchun men nimani nazarda tutyapman.
+
+00:04:13.780 --> 00:04:18.620
+Mening o‘z ilovam bor, 3 ballni qo‘shishni 
+bosaman, 3 ko‘rsatdi, men 2 ballni 
+
+00:04:18.620 --> 00:04:22.490
+qo‘shishni bosaman, 2 ko‘rsatildi va men erkin 
+to‘p tashlashni bosaman va bitta ko‘rsatildi.
+
+00:04:22.490 --> 00:04:25.679
+Endi yana 2 ballni bosganimda, ikkita ko‘rsatadi.
+
+00:04:25.679 --> 00:04:28.080
+Bu hali hech narsa qo‘shmaydi.
+
+00:04:28.080 --> 00:04:31.210
+Endi men bilmoqchi edim, bu so‘nggi 
+funksional imkoniyat emas, 
+
+00:04:31.210 --> 00:04:33.250
+lekin yaxshiroq oraliq holat hisoblanadi.
+
+00:04:33.250 --> 00:04:35.820
+Sizni yakuniy maqsadga 
+yaqinlashtirish uchun oraliq 
+
+00:04:35.820 --> 00:04:37.060
+maqsadlarni tanlash muhimdir.
+
+00:04:37.060 --> 00:04:39.570
+Siz o‘zingiz istagan kabi kichik bir ish qilasiz, 
+buni qanday qilishni bilasiz, tekshirib ko‘ring, 
+
+00:04:39.570 --> 00:04:43.380
+ishlayotganiga ishonch hosil qiling va keyin 
+kerakli narsani olish uchun uni o‘zgartiring.
+
+00:04:43.380 --> 00:04:47.800
+Shunday qilib, biz buni shu bilan boshladik,
+endi bajarganingizdan so‘ng ushbu katakchani belgilang.
+

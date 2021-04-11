@@ -1,0 +1,161 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.280 --> 00:00:03.860
+Trong kịch bản này, chúng ta đang làm việc 
+với một ứng dụng gọi là Health Check, và
+
+00:00:03.860 --> 00:00:07.382
+cơ sở của HealthCheck là một ứng dụng 
+quản lý các bài kiểm tra, và
+
+00:00:07.382 --> 00:00:11.350
+bài kiểm tra này có thể nói với người dùng 
+cuộc sống của bạn lành mạnh thể nào.
+
+00:00:12.610 --> 00:00:16.331
+Câu hỏi sẽ xuất hiện trong hộp này và 
+người sử dụng có thể trả lời là Có,
+
+00:00:16.331 --> 00:00:20.526
+Thỉnh thoảng, hoặc Không, và chúng ta coi 
+là có khoảng 100 câu hỏi khác nhau, và
+
+00:00:20.526 --> 00:00:24.740
+chúng bao gồm những câu hỏi như Bạn 
+có 
+luyện tập nhiều hơn 3 lần trong tuần?
+
+00:00:24.740 --> 00:00:27.140
+Bạn có uống ít hơn 
+hai cốc cafe mỗi ngày?
+
+00:00:27.140 --> 00:00:28.840
+Hoặc, bạn có khuyến 
+khích mạng xã hội?
+
+00:00:28.840 --> 00:00:32.490
+Hiện tại những câu hỏi này được diễn 
+đạt theo cách sau khi bạn nói Có, nó luôn
+
+00:00:32.490 --> 00:00:36.410
+có nghĩa là bạn lành mạnh hơn khi 
+bạn nói
+Không, nó có nghĩa là bạn không lành mạnh.
+
+00:00:36.410 --> 00:00:39.240
+Đôi khi lại là một câu 
+trả lời không thuyết phục
+
+00:00:39.240 --> 00:00:41.980
+Và việc mà ứng dụng làm 
+là theo dõi điểm số.
+
+00:00:41.980 --> 00:00:44.890
+Khi bạn ấn có, nó thêm 
+1 điểm vào độ lành mạnh.
+
+00:00:44.890 --> 00:00:48.300
+Khi bạn trả lời là Thỉnh thoảng, 
+nó sẽ không thay đổi, và
+
+00:00:48.300 --> 00:00:51.260
+khi bạn trả lời là Không,
+
+00:00:51.260 --> 00:00:53.940
+Ngoài ra, một khi bạn đã chọn 
+một trong các lựa chọn,
+
+00:00:53.940 --> 00:00:56.800
+nó sẽ cho bạn thấy tổng kết của 
+những gì bạn vừa mới trả lời và
+
+00:00:56.800 --> 00:01:00.020
+mức độ lành mạnh hiện tại của 
+bạn
+trước khi trả lời câu hỏi tiếp theo.
+
+00:01:00.020 --> 00:01:02.470
+Chúng ta chỉ cần nhìn vào 
+sự 
+tương tác khi ấn vào các nút
+
+00:01:02.470 --> 00:01:06.360
+và xem tổng kết để 
+biết
+bạn đang ở mức độ nào.
+
+00:01:06.360 --> 00:01:07.310
+Hãy cùng xem code.
+
+00:01:07.310 --> 00:01:11.130
+Okay, như vậy đây là code, và tôi 
+cũng 
+cung cấp nó trong các ghi chú hướng dẫn,
+
+00:01:11.130 --> 00:01:14.250
+nếu bạn muốn xem 
+bản text của code này.
+
+00:01:14.250 --> 00:01:16.120
+Tôi nhắc lại một lần nữa, 
+đây không phải là một code hoàn chỉnh.
+
+00:01:16.120 --> 00:01:18.700
+Có nhiều sự tỉnh lược ở đây 
+có nghĩa là có code trước và
+
+00:01:18.700 --> 00:01:20.560
+sau những phương thức
+bạn thấy ở đây.
+
+00:01:20.560 --> 00:01:21.955
+Vậy nó làm việc như thế nào?
+
+00:01:21.955 --> 00:01:25.850
+Vâng, khi bạn ấn vào nút <i>Yes</i>, 
+phương thức <i>Yes</i> sẽ được gọi.
+
+00:01:25.850 --> 00:01:31.210
+Nó làm tăng độ lành mạnh, 
+tạo ra một tin nhắn và hiển thị nó.
+
+00:01:31.210 --> 00:01:36.030
+Tương tự khi ấn vào nút <i>Sometimes</i>, 
+phương thức <i>sometimes</i> được gọi.
+
+00:01:36.030 --> 00:01:38.840
+Chỉ có một điểm khác ở đây là 
+thay vì thêm vào 1 nó lại thêm vào 0,
+
+00:01:38.840 --> 00:01:41.640
+nó có nghĩa là giá trị của biến 
+thực sự không thay đổi.
+
+00:01:41.640 --> 00:01:43.770
+và hoàn toàn tương tự 
+khi bạn ấn vào nút <i>No</i>
+
+00:01:43.770 --> 00:01:47.520
+Không có tin nhắn nào được gọi, 
+và <i>healthLevel</i>
+
+00:01:47.520 --> 00:01:48.740
+một tin nhắn được in ra.
+
+00:01:48.740 --> 00:01:53.230
+chúng ta có hai biến trong chương trình này
+là <i>healthLevel</i> và <i>\message</i>.
+
+00:01:53.230 --> 00:01:54.860
+Chúng ta hãy xem xét 
+<i>message</i> trước.
+
+00:01:54.860 --> 00:01:56.510
+Như vậy câu hỏi 
+đầu tiên cho bạn là,
+
+00:01:56.510 --> 00:02:00.610
+từ đoạn code bạn thấy ở đây,<i>message</i>
+

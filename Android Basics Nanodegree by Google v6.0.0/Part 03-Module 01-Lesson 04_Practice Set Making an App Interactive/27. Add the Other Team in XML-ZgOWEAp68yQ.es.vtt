@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.740 --> 00:00:02.272
+Estás haciendo un gran trabajo
+
+00:00:02.528 --> 00:00:04.032
+y tu app tiene un aspecto estupendo.
+
+00:00:04.620 --> 00:00:07.008
+Por desgracia,
+por ahora solo funciona
+
+00:00:07.072 --> 00:00:09.150
+para un partido de baloncesto
+con un solo equipo.
+
+00:00:10.150 --> 00:00:13.248
+Lo que queremos de verdad es que pueda
+llevar el marcador de dos equipos.
+
+00:00:13.950 --> 00:00:16.736
+Empecemos con el XML
+y luego nos preocuparemos por el Java.
+
+00:00:17.770 --> 00:00:20.592
+Bueno, entonces vamos a añadir
+otra columna para el equipo B.
+
+00:00:21.080 --> 00:00:23.380
+Recuerda que ahora mismo
+solo nos fijamos en el XML.
+
+00:00:24.480 --> 00:00:26.496
+Si te acuerdas del diseño
+para la primera parte,
+
+00:00:26.770 --> 00:00:30.336
+era un montón de vistas,
+todas dentro de un LinearLayout vertical.
+
+00:00:31.056 --> 00:00:33.760
+Pues el lado para el equipo B
+es clavadito.
+
+00:00:34.310 --> 00:00:37.024
+Pero por mucho que lo intentes,
+no puede haber dos vistas raíz,
+
+00:00:37.296 --> 00:00:39.696
+así que necesitarás usar
+layouts anidados en este caso.
+
+00:00:40.220 --> 00:00:42.688
+Deberías concebir
+cada uno de estos LinearLayouts
+
+00:00:42.864 --> 00:00:44.810
+como si fueran una sola vista.
+
+00:00:45.910 --> 00:00:50.608
+Así, imaginemos que esto es una sola vista
+y que esto es una sola vista.
+
+00:00:51.320 --> 00:00:55.408
+Y cada una de estas vistas necesita ocupar
+la misma cantidad de espacio,
+
+00:00:55.632 --> 00:00:57.248
+básicamente la mitad de la pantalla.
+
+00:00:57.630 --> 00:00:59.560
+¿Qué ViewGroup padre habría que usar?
+
+00:01:00.750 --> 00:01:02.256
+Pon tu respuesta aquí.
+
+00:01:02.970 --> 00:01:04.336
+Una vez des con la respuesta,
+
+00:01:04.560 --> 00:01:07.584
+creo que tendrás la información suficiente
+para empezar a escribir el código.
+
+00:01:08.170 --> 00:01:11.968
+Inténtalo, siempre puedes ver
+el vídeo con la solución si te atascas.
+
+00:01:13.170 --> 00:01:15.664
+Una vez que tengas el código,
+debería tener este aspecto.
+
+00:01:16.010 --> 00:01:20.736
+Entonces, el equipo A...
+Ese lado debería aún funcionar bien.
+
+00:01:21.430 --> 00:01:23.408
+El equipo B quizá...
+
+00:01:23.840 --> 00:01:26.880
+tenga un funcionamiento
+un tanto extraño.
+
+00:01:27.360 --> 00:01:29.770
+Eso pasa porque no hemos pulido
+el código Java para ese lado.
+
+00:01:29.850 --> 00:01:32.720
+No te preocupes,
+solo intenta que se parezca a esto.
+

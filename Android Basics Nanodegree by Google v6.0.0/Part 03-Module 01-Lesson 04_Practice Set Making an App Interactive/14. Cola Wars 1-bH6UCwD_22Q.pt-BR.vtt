@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.080 --> 00:00:01.290
+Então a primeira coisa 
+que perguntei a você,
+
+00:00:01.290 --> 00:00:04.710
+foi se <i>udacicolaVotes</i>
+é uma variável local ou uma variável global.
+
+00:00:04.710 --> 00:00:07.780
+E você deveria ter respondido
+que é uma variável local.
+
+00:00:07.780 --> 00:00:11.330
+Bem, para descobrir isto, você vai para
+onde a variável é declarada, que é
+
+00:00:11.330 --> 00:00:14.340
+aqui, e você sabe que é declarado,
+porque o tipo de dado é aqui mesmo.
+
+00:00:15.590 --> 00:00:19.800
+E você vê que é declarada dentro de um
+método, ou seja, entre as duas
+
+00:00:19.800 --> 00:00:23.900
+chaves aqui, ou
+é declarada fora do método?
+
+00:00:23.900 --> 00:00:25.890
+Agora, se ele é declarado
+dentro de um método,
+
+00:00:25.890 --> 00:00:27.670
+que significa que é uma 
+variável local, e
+
+00:00:27.670 --> 00:00:30.960
+podemos ver muito claramente que é
+na verdade declarada dentro de um método.
+
+00:00:32.150 --> 00:00:33.790
+Portanto, é uma variável local.
+
+00:00:33.790 --> 00:00:35.150
+Bem, o que isso significa?
+
+00:00:35.150 --> 00:00:36.720
+Devemos também nos perguntar,
+
+00:00:36.720 --> 00:00:41.030
+se eu declarei algo como uma variável 
+local, eu deveria tê-lo feito?
+
+00:00:41.030 --> 00:00:42.930
+Vamos pensar sobre isto neste caso.
+
+00:00:42.930 --> 00:00:44.060
+Aqui está o nosso celular.
+
+00:00:44.060 --> 00:00:46.010
+E nós temos falado sobre o
+botão <i>udacicola</i>, assim
+
+00:00:46.010 --> 00:00:49.550
+vamos apenas focar quando
+clicarmos no botão <i>udacicola</i>.
+
+00:00:49.550 --> 00:00:52.230
+Ao clicarmos neste botão,
+este método inicializa.
+
+00:00:52.230 --> 00:00:57.008
+Ele define votos <i>udacicola</i> a zero, e
+depois, adiciona um a <i>udacicolaVotes</i>,
+
+00:00:57.008 --> 00:00:58.790
+que é zero.
+
+00:00:58.790 --> 00:01:00.870
+Assim, <i>udacicolaVotes</i>
+se torna um.
+
+00:01:00.870 --> 00:01:05.430
+Agora, por <i>udacicolaVotes</i> ser uma
+variável local, no fim deste método,
+
+00:01:05.430 --> 00:01:07.990
+na verdade meio que morre,
+ou é apagado.
+
+00:01:07.990 --> 00:01:11.940
+O fato do <i>udacicolaVotes</i> ser
+descartadom ou apagao, no fim deste método
+
+00:01:11.940 --> 00:01:15.640
+é por ele ser uma variável local,
+causa alguns problemas.
+
+00:01:15.640 --> 00:01:16.880
+Então, por que este é um problema?
+
+00:01:16.880 --> 00:01:19.580
+Bem, você pensaria que se
+três pessoas diferentes votassem
+
+00:01:19.580 --> 00:01:25.905
+<i>udacicola</i> clicando no botão,
+aquele <i>udacicolaVvotes</i> deveria ser três.
+
+00:01:25.905 --> 00:01:30.001
+Bem, o que realmente acontece é que 
+na primeira vez que você clica no
+
+00:01:30.001 --> 00:01:31.105
+botão, <i>udacicola</i> se torna zero.
+
+00:01:31.105 --> 00:01:32.865
+Ela recebe um adicionado a ele, 
+tornando-se um.
+
+00:01:32.865 --> 00:01:34.185
+E então ele vai para a
+lixeira.
+
+00:01:34.185 --> 00:01:35.815
+Ela não existe mais.
+
+00:01:35.815 --> 00:01:38.605
+A segunda vez que alguém
+clicar em <i>udacicolaVotes</i>,
+
+00:01:38.605 --> 00:01:41.785
+bem <i>udacicolaVotes</i> é
+todo refeito.
+
+00:01:41.785 --> 00:01:42.565
+É declarado novamente.
+
+00:01:44.155 --> 00:01:47.575
+Porque,lembre-se, na primeira vez
+tinha essencialmente sido descartado.
+
+00:01:47.575 --> 00:01:49.520
+Por isto, precisa ser refeito.
+
+00:01:49.520 --> 00:01:51.840
+E quando ele permanece, 
+ele é definido como zero.
+
+00:01:51.840 --> 00:01:54.690
+Agora adicionamos um novo para ele, 
+mas lembre-se que o valor é zero.
+
+00:01:54.690 --> 00:01:58.700
+Então <i>udacicolaVotes</i> ainda é um,
+mesmo depois de se clicar duas vezes.
+
+00:01:59.930 --> 00:02:02.250
+E a mesma coisa acontece quando
+for clicado pela terceira vez,
+
+00:02:02.250 --> 00:02:06.550
+ainda é um e é, na verdade,
+descartado no final deste método.
+
+00:02:06.550 --> 00:02:07.740
+Então esse é o primeiro problema.
+
+00:02:07.740 --> 00:02:11.350
+Não é realmente salvar o estado
+entre cliques de botão.
+
+00:02:11.350 --> 00:02:14.190
+Sobre quantas pessoas votou
+<i>udacicola</i>.
+
+00:02:14.190 --> 00:02:18.700
+Mas outro problema aqui embaixo,
+este código na verdade errará.
+
+00:02:18.700 --> 00:02:22.610
+E o raciocínio para isso é porque
+lembre-se, eu disse que <i>udacicolaVotes</i>
+
+00:02:22.610 --> 00:02:26.820
+meio que começa a existir ou
+seu escopo começa bem aqui.
+
+00:02:26.820 --> 00:02:29.880
+E, em seguida, no final de
+este método <i>voteudacicola</i>.
+
+00:02:29.880 --> 00:02:32.090
+É lixo, qnã existe.
+
+00:02:32.090 --> 00:02:36.190
+O que significa que quando eu vir para cá,
+<i>udacicolaVotes</i> realmente não existe.
+
+00:02:36.190 --> 00:02:39.640
+Mais tecnicamente, dizemos que
+esta variável está fora do escopo.
+
+00:02:39.640 --> 00:02:44.010
+O seu escopo era aqui, ficou 
+declarado aqui, e terminou aqui.
+
+00:02:45.040 --> 00:02:46.700
+Mas estamos tentando usá-lo aqui.
+
+00:02:46.700 --> 00:02:47.612
+E não pode ser utilizado.
+
+00:02:47.612 --> 00:02:51.490
+Tendo <i>udacicolaVotes</i> para um local
+não foi uma decisão certa neste caso.
+
+00:02:51.490 --> 00:02:54.130
+E eu posso resumir as razões
+com estes dois pontos.
+
+00:02:54.130 --> 00:02:58.320
+Não está salvando o voto entre
+cliques de botão, e não está no escopo
+
+00:02:58.320 --> 00:02:59.650
+para o método showmevotes.
+
+00:02:59.650 --> 00:03:01.700
+Então, isto vai realmente causará erros.
+
+00:03:01.700 --> 00:03:03.680
+Então, isto realmente não compilará.
+
+00:03:03.680 --> 00:03:06.140
+Bem, então vamos olhar a outra
+variável deste programa.
+

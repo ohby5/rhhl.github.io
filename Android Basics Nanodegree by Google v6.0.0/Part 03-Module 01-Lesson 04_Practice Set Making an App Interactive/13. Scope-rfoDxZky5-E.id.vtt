@@ -1,0 +1,171 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.530 --> 00:00:03.960
+Anda baru melihat situasi sulit
+melibatkan beberapa variabel
+
+00:00:03.960 --> 00:00:05.460
+dan pengurutan yang menarik.
+
+00:00:05.460 --> 00:00:09.260
+Di sini, stimulasi tangan untuk tahu 
+yang dilakukan komputer adalah kunci.
+
+00:00:09.260 --> 00:00:11.090
+Sekarang, mari bicarakan cakupan.
+
+00:00:11.090 --> 00:00:13.220
+Saya menautkan video cakupan
+jika Anda lupa
+
+00:00:13.220 --> 00:00:15.200
+apa yang dimaksud dengan
+cakupan variabel.
+
+00:00:15.200 --> 00:00:19.370
+Cakupan yaitu pembeda
+variabel lokal dari variabel global.
+
+00:00:19.370 --> 00:00:22.580
+Variabel lokal terjebak
+dalam blok kode tempat ia didefinisikan,
+
+00:00:22.580 --> 00:00:23.730
+biasanya metode.
+
+00:00:23.730 --> 00:00:26.510
+Variabel global memiliki
+sedikit kebebasan untuk menuju
+
+00:00:26.510 --> 00:00:28.360
+bagian program yang berbeda.
+
+00:00:28.360 --> 00:00:31.320
+Ada beberapa pertanyaan untuk tahu
+apa Anda paham perbedaannya.
+
+00:00:31.320 --> 00:00:34.320
+Pada latihan ini, akan dilihat
+contoh kode yang lebih panjang.
+
+00:00:34.320 --> 00:00:36.940
+Semua contoh ini tidak akan
+memiliki kesalahan
+
+00:00:36.940 --> 00:00:39.580
+atau memiliki kesalahan
+yang melibatkan cakupan.
+
+00:00:39.580 --> 00:00:41.010
+Berikut contoh pertama.
+
+00:00:41.010 --> 00:00:44.260
+Di sini, katakanlah Anda peneilti pasar
+dan telah membuat aplikasi
+
+00:00:44.260 --> 00:00:49.030
+untuk tahu konsumen lebih suka
+minuman bergula, &lt;i&gt;UdasiCola atau Pepcity&lt;/i&gt;.
+
+00:00:49.030 --> 00:00:51.650
+Anda bicara pada orang di jalan
+dan memberi dua minuman.
+
+00:00:51.650 --> 00:00:54.940
+Minta mereka pilih dengan aplikasi
+guna mengetahui mana lebih disukai.
+
+00:00:55.450 --> 00:00:57.750
+Mari lihat kode yang sesuai dengan ini.
+
+00:00:57.750 --> 00:01:00.500
+Elips ini dan ini berarti
+ada lebih banyak kode
+
+00:01:00.500 --> 00:01:02.260
+yang saya tidak tunjukkan pada Anda.
+
+00:01:02.260 --> 00:01:05.340
+Tapi saya tunjukkan kode penting
+yang berhubungan dengan pilihan.
+
+00:01:05.340 --> 00:01:09.040
+Ketikan tombol &lt;i&gt;Udacicola&lt;/i&gt; diketik,
+ia memanggil metode &lt;i&gt;UdacicolaVotes&lt;/i&gt;
+
+00:01:09.040 --> 00:01:12.900
+yang menambah satu bagi &lt;i&gt;udacicolaVotes&lt;/i&gt;,
+variabel yang diperuntukkan untuk melacak
+
+00:01:12.900 --> 00:01:15.360
+berapa banyak orang
+yang telah memilih &lt;i&gt;Udacicola&lt;/i&gt;
+
+00:01:15.720 --> 00:01:18.370
+Dengan cara sama, katakanlah
+Anda telah programkan XML
+
+00:01:18.370 --> 00:01:22.320
+sehingga ketika tombol &lt;i&gt;Pepcity&lt;/i&gt; diklik,
+ia memanggil metode &lt;i&gt;votePepcity&lt;/i&gt;,
+
+00:01:22.320 --> 00:01:26.090
+yang juga menambah satu,
+melainkan jumlah &lt;i&gt;pepcityVotes&lt;/i&gt;.
+
+00:01:26.090 --> 00:01:27.770
+Lalu, demi kepentingan argumen,
+
+00:01:27.770 --> 00:01:30.950
+katakanlah ada tombol rahasia ke-3
+yang hanya bisa digunakan Anda.
+
+00:01:30.950 --> 00:01:32.430
+Yang tunjukkan jumlah suara.
+
+00:01:32.430 --> 00:01:36.130
+Tombol itu memanggil metode &lt;i&gt;showMeVotes&lt;/i&gt;,
+yang akan menunjukkan &lt;i&gt;udacicolaVotes&lt;/i&gt;
+
+00:01:36.130 --> 00:01:40.080
+melawan &lt;i&gt;pepcityVotes&lt;/i&gt;, sehingga
+dapat dibandingkan untuk penelitian Anda.
+
+00:01:40.080 --> 00:01:41.300
+Baik. Mari mulai pikirkan
+
+00:01:41.300 --> 00:01:43.160
+tentang cakupan beberapa variabel ini.
+
+00:01:43.510 --> 00:01:46.210
+Pertama, perhatikan
+variabel &lt;i&gt;udacicolaVotes&lt;/i&gt;.
+
+00:01:46.940 --> 00:01:49.320
+Dari yang Anda lihat
+pada kode ini sekarang,
+
+00:01:49.320 --> 00:01:52.770
+apakah &lt;i&gt;udacicolaVotes&lt;/i&gt;
+termasuk variabel lokal atau global?
+
+00:01:52.770 --> 00:01:55.400
+Ini tidak berarti bahwa
+ia harus termasuk variabel lokal
+
+00:01:55.400 --> 00:01:57.120
+atau harus termasuk variabel global.
+
+00:01:57.120 --> 00:02:00.510
+Lihat pada kode itu dan katakan,
+apakah ia dipakai dan diartikan sebagai
+
+00:02:00.510 --> 00:02:02.610
+variabel lokal atau variabel global?
+
+00:02:04.160 --> 00:02:06.780
+Setelah menjawabnya,
+ada satu lagi pertanyaan tambahan.
+

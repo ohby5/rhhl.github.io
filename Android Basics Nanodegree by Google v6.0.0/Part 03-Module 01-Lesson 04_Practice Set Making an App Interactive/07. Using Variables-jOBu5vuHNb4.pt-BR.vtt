@@ -1,0 +1,385 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.100 --> 00:00:01.970
+O número exibido aqui é 33.
+
+00:00:01.970 --> 00:00:05.730
+Agora, a pergunta real é: atingimos
+o nosso objetivo? Sim ou não?
+
+00:00:05.730 --> 00:00:07.860
+Vou remover tudo isso aqui embaixo e
+
+00:00:07.860 --> 00:00:11.865
+só descobrir qual deveria ser a resposta
+de fato. Deveria ser 33?
+
+00:00:11.865 --> 00:00:14.360
+Aqui só temos o problema do resultado.
+
+00:00:14.360 --> 00:00:17.210
+Para achar o débito de sono, temos
+pegar o tempo de sono que você
+
+00:00:17.210 --> 00:00:20.580
+precisa e subtrair o tempo de sono
+que você teve de fato.
+
+00:00:20.580 --> 00:00:22.850
+Qual é o tempo de sono
+que você precisa?
+
+00:00:22.850 --> 00:00:26.230
+Bem, assumimos que você precisa
+de 8h de sono numa noite.
+
+00:00:26.230 --> 00:00:31.280
+Então temos 8h, e devemos
+multiplicar o número de horas
+
+00:00:31.280 --> 00:00:35.690
+que você precisa numa única noite pelo
+número de noites na semana, que é 7.
+
+00:00:35.690 --> 00:00:36.970
+Ok, e este número é 56.
+
+00:00:36.970 --> 00:00:41.070
+Assim, a próxima pergunta é: quanto
+tempo esta pessoa dormiu de fato?
+
+00:00:41.070 --> 00:00:44.610
+Bem, numa noite de um día de semana
+típico ela dormiu 5h.
+
+00:00:44.610 --> 00:00:46.080
+Bem, quantos dias de semana
+há numa semana?
+
+00:00:46.080 --> 00:00:46.930
+Há 5.
+
+00:00:46.930 --> 00:00:49.520
+Portanto vou multiplicar as 5h
+que ela dormiu cada noite
+
+00:00:49.520 --> 00:00:51.139
+pelos 5 dias de semana que
+há numa semana.
+
+00:00:52.330 --> 00:00:54.630
+Agora, no fim de semana, a pessoa
+dormiu um pouco mais e
+
+00:00:54.630 --> 00:00:56.680
+ela dormiu 9h.
+
+00:00:56.680 --> 00:01:00.290
+As noites de sábado e domingo são
+as duas em que teve uma média de 9h, assim
+
+00:01:00.290 --> 00:01:01.977
+multiplicarei o 9 por 2.
+
+00:01:01.977 --> 00:01:07.080
+Agora precisaremos somar o tempo
+de sono que tiveram nos dias de semana,
+
+00:01:07.080 --> 00:01:11.000
+e o tempo de sono do fim de semana
+para termos quanto sono no total ela
+
+00:01:11.000 --> 00:01:12.830
+teve a semana toda.
+
+00:01:12.830 --> 00:01:13.838
+25 mais 18 é 43.
+
+00:01:13.838 --> 00:01:18.780
+Então agora temos o tempo de sono que
+ela teve e o que ela precisa.
+
+00:01:18.780 --> 00:01:22.990
+Se pegarmos o tempo de sono que ela
+precisa e subtrairmos o quanto teve
+
+00:01:22.990 --> 00:01:25.960
+veremos quantas horas de débito
+de sono ela adquiriu.
+
+00:01:25.960 --> 00:01:30.550
+Basicamente, quantas horas de sono
+extra ela deveria ter.
+
+00:01:30.550 --> 00:01:35.560
+Agora, 56 - 43 = 13, o que é ruim se
+ela precisa de mais 13 horas de sono.
+
+00:01:35.560 --> 00:01:39.550
+Mas não é nem de longe tão ruim quanto
+as 33 horas que nosso programa calculou.
+
+00:01:40.780 --> 00:01:42.710
+Então o que deu errado?
+
+00:01:42.710 --> 00:01:46.150
+Bem, lembremos os cálculos que fizemos
+aqui e voltemos ao código e
+
+00:01:46.150 --> 00:01:48.070
+vejamos se ele faz
+basicamente a mesma coisa.
+
+00:01:48.070 --> 00:01:51.120
+Aqui estão os números que
+calculei na minha mente antes.
+
+00:01:51.120 --> 00:01:54.890
+Novamente, preciso de 56h de sono,
+nos dias de semana durmo 25,
+
+00:01:54.890 --> 00:01:56.780
+no fim de semana durmo 18,
+
+00:01:56.780 --> 00:02:02.240
+o que totaliza 43h de sono, que são
+13h de débito de sono.
+
+00:02:02.240 --> 00:02:04.410
+O problema é que estou imprimindo 33.
+
+00:02:04.410 --> 00:02:05.320
+Então, o que deu errado?
+
+00:02:06.650 --> 00:02:07.370
+Bem.
+
+00:02:07.370 --> 00:02:09.970
+Comecei bem dizendo que 
+num dia de semana.
+
+00:02:09.970 --> 00:02:13.490
+durmo 5h e no fim de semana
+durmo 9h.
+
+00:02:13.490 --> 00:02:14.360
+Isso bate.
+
+00:02:15.600 --> 00:02:19.430
+Então, também calculei o número
+ótimo de horas corretamente, contando
+
+00:02:19.430 --> 00:02:23.790
+as 8h que o usuário deveria dormir cada
+noite e multiplicando por 7.
+
+00:02:23.790 --> 00:02:27.730
+O problema é com o cálculo
+das horas de fato.
+
+00:02:27.730 --> 00:02:28.870
+Está meio bagunçado.
+
+00:02:29.890 --> 00:02:32.880
+Estou calculando o número de horas
+do fim de semana corretamente
+
+00:02:32.880 --> 00:02:36.100
+Eu pego o fim de semana, que está
+configurado corretamente aqui, e
+
+00:02:36.100 --> 00:02:39.250
+e multiplico por 2, portanto isso está bem.
+
+00:02:39.250 --> 00:02:42.230
+Mas não estou realmente fazendo esse
+cálculo onde pego o número de horas
+
+00:02:42.230 --> 00:02:46.000
+de dias da semana que preciso e
+multiplico pelo número de dias que há.
+
+00:02:47.620 --> 00:02:49.520
+Não há multiplicação por 5 aqui.
+
+00:02:49.520 --> 00:02:51.970
+Esta linha de código não ajuda muito.
+
+00:02:53.090 --> 00:02:55.000
+Vou remover esta linha de código.
+
+00:02:55.000 --> 00:02:59.220
+Eu não declarei mais as horas
+de fato, pois eu acabei de removê-la.
+
+00:02:59.220 --> 00:03:00.980
+Assim tenho que colocar um <i>int</i> aqui.
+
+00:03:03.000 --> 00:03:06.400
+Para declarar as horas de
+fato adequadamente.
+
+00:03:06.400 --> 00:03:08.420
+E aí estas não devem ser horas de fato.
+
+00:03:10.050 --> 00:03:12.390
+Deve ser este cálculo aqui.
+
+00:03:12.390 --> 00:03:14.655
+O tempo de sono que preciso em
+um dia de semana,
+
+00:03:14.655 --> 00:03:16.698
+que está armazenada na variável <i>weekday</i>.
+
+00:03:16.698 --> 00:03:18.440
+Multiplique-a por 5.
+
+00:03:20.715 --> 00:03:24.207
+E a solução é novamente a
+subtração das horas ótimas,
+
+00:03:24.207 --> 00:03:27.050
+menos as horas de fato que tive.
+
+00:03:27.050 --> 00:03:30.110
+Que é o mesmo tipo de cálculo
+que estou fazendo aqui, e
+
+00:03:30.110 --> 00:03:30.930
+Deve ser 13.
+
+00:03:30.930 --> 00:03:33.190
+Então vejamos, com esta mudança,
+se funciona de fato.
+
+00:03:34.510 --> 00:03:35.790
+Vou simulá-lo manualmente.
+
+00:03:35.790 --> 00:03:39.779
+Olhando para a 1ª linha, enquanto
+simulo manualmente, <i>weekday</i> é igual a 5
+
+00:03:41.280 --> 00:03:46.520
+Então temos <i>weekend</i>
+
+00:03:46.520 --> 00:03:48.850
+Eu removi esta linha de código,
+assim vou descer aqui.
+
+00:03:48.850 --> 00:03:53.640
+Temos uma nova variável,
+<i>actualHours</i>, e isso é igual
+
+00:03:53.640 --> 00:03:58.610
+ao valor de <i>weekday</i> vezes 5 mais
+o valor de <i>weekend</i> vezes 2.
+
+00:03:58.610 --> 00:04:02.710
+O valor de <i>weekday</i>, se
+venho aqui vejo que é 5 e
+
+00:04:02.710 --> 00:04:04.850
+o valor de <i>weekend</i>,
+vejo aqui que é 9.
+
+00:04:04.850 --> 00:04:10.990
+5 x 5 = 25, 9 x 2 = 18, e
+some estes dois e temos 43.
+
+00:04:10.990 --> 00:04:13.780
+E então temos uma nova
+solução de variável.
+
+00:04:13.780 --> 00:04:17.459
+E a solução é <i>optimalHours</i>
+menos <i>actualHours</i>.
+
+00:04:17.459 --> 00:04:19.579
+<i>optimalHours</i> está configurado para 56.
+
+00:04:19.579 --> 00:04:24.605
+<i>actualHours</i> está configurado para 43.
+
+00:04:24.605 --> 00:04:27.240
+Faço 56 menos 43 e tenho 13.
+
+00:04:27.240 --> 00:04:30.077
+E isso basicamente seguiu a mesma
+sequencia de passos que eu fiz
+
+00:04:30.077 --> 00:04:33.170
+mentalmente quando estava
+tentando resolver este problema.
+
+00:04:33.170 --> 00:04:35.140
+Parece certo, parece bom.
+
+00:04:35.140 --> 00:04:39.240
+Novamente, vimos duas poderosas
+ferramentas aqui, a primeira das quais
+
+00:04:39.240 --> 00:04:43.330
+usava simulação manual para ter um sentido
+geral sobre o que o código estava fazendo.
+
+00:04:43.330 --> 00:04:46.680
+A outra coisa que fizemos foi ver o
+objetivo do programa e
+
+00:04:46.680 --> 00:04:50.340
+pensar sobre os passos que nós,
+como humanos,
+
+00:04:50.340 --> 00:04:53.970
+humanos pensantes, daríamos
+para chegar à resposta.
+
+00:04:53.970 --> 00:04:55.230
+E comparamos as duas.
+
+00:04:55.230 --> 00:04:56.500
+O que o código estava fazendo?
+
+00:04:56.500 --> 00:04:57.220
+O que nós faríamos?
+
+00:04:57.220 --> 00:04:58.390
+E neste caso,
+
+00:04:58.390 --> 00:05:01.710
+onde estão as diferenças entre o que
+o código estava fazendo e o que faríamos.
+
+00:05:01.710 --> 00:05:04.530
+Resolvemos estas diferenças
+mudando o código.
+
+00:05:04.530 --> 00:05:05.580
+E isto arrumou as coisas.
+
+00:05:05.580 --> 00:05:06.770
+Vamos ao próximo problema.
+
+00:05:06.770 --> 00:05:09.730
+Você verá muitos problemas
+neste formato e
+
+00:05:09.730 --> 00:05:12.970
+eu recomendo muito que você
+use tanto simulação manual, e
+
+00:05:12.970 --> 00:05:17.010
+calcular mentalmente você mesmo para
+ajudar a resolver esses problemas.
+
+00:05:17.010 --> 00:05:19.570
+Você praticará muito mais
+na parte dois.
+
+00:05:19.570 --> 00:05:21.400
+Vá em frente e parta
+para o próximo exercício.
+

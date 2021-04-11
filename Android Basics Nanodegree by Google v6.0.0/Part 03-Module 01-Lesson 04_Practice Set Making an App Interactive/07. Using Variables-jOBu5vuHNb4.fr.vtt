@@ -1,0 +1,385 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.100 --> 00:00:01.970
+Le nombre affiché ici est donc 33.
+
+00:00:01.970 --> 00:00:05.730
+La vraie question est donc,
+a-t-on atteint notre but, oui ou non ?
+
+00:00:05.730 --> 00:00:07.860
+Je vais retirer ce morceau en bas
+et essayer de
+
+00:00:07.860 --> 00:00:11.865
+trouver quelle réponse
+on devrait avoir, si c'est bien 33.
+
+00:00:11.865 --> 00:00:14.360
+Ok. Voilà le problème d'origine.
+
+00:00:14.360 --> 00:00:17.210
+Pour déterminer le déficit de sommeil,
+on va prendre la durée de repos
+
+00:00:17.210 --> 00:00:20.580
+nécessaire, et lui soustraire
+la durée de repos réelle.
+
+00:00:20.580 --> 00:00:22.850
+Quelle quantité de sommeil nous faut-il ?
+
+00:00:22.850 --> 00:00:26.230
+On va présumer qu'il faut dormir
+8 heures par nuit.
+
+00:00:26.230 --> 00:00:31.280
+On a donc 8 heures, et on va
+multiplier ce nombre d'heures
+
+00:00:31.280 --> 00:00:35.690
+nécessaires par nuit par le nombre
+de nuits dans une semaine, donc 7.
+
+00:00:35.690 --> 00:00:36.970
+Ok. Ce nombre vaut 56.
+
+00:00:36.970 --> 00:00:41.070
+Question suivante, pendant combien 
+d'heures ce type a-t-il vraiment dormi ?
+
+00:00:41.070 --> 00:00:44.610
+Apparemment, en semaine,
+il a dormi 5 heures.
+
+00:00:44.610 --> 00:00:46.080
+Combien de jours ouvrés
+par semaine ?
+
+00:00:46.080 --> 00:00:46.930
+Cinq.
+
+00:00:46.930 --> 00:00:49.520
+On multiplie donc les 5 heures
+de sommeil de chaque nuit
+
+00:00:49.520 --> 00:00:51.139
+par les 5 jours ouvrés
+de la semaine.
+
+00:00:52.330 --> 00:00:54.630
+En fin de semaine cette personne
+a un peu plus dormi,
+
+00:00:54.630 --> 00:00:56.680
+à savoir 9 heures.
+
+00:00:56.680 --> 00:01:00.290
+Samedi et dimanche sont les deux jours
+de week-end avec 9 heures de sommeil,
+
+00:01:00.290 --> 00:01:01.977
+je multiplie donc ce 9 par 2.
+
+00:01:01.977 --> 00:01:07.080
+Maintenant, on va additionner
+le repos des jours ouvrés
+
+00:01:07.080 --> 00:01:11.000
+avec le repos de fin de semaine pour
+savoir combien de temps cette personne
+
+00:01:11.000 --> 00:01:12.830
+a dormi cette semaine.
+
+00:01:12.830 --> 00:01:13.838
+<i>25 + 18 = 43.</i>
+
+00:01:13.838 --> 00:01:18.780
+On a ainsi la durée de repos réelle
+et la durée de repos requise.
+
+00:01:18.780 --> 00:01:22.990
+Si on prend la durée de repos requise
+et qu'on lui soustrait la durée réelle,
+
+00:01:22.990 --> 00:01:25.960
+on verra combien d'heures de sommeil
+il manque à cette personne.
+
+00:01:25.960 --> 00:01:30.550
+En gros, combien d'heures de sommeil
+il devrait récupérer.
+
+00:01:30.550 --> 00:01:35.560
+Alors <i>56 - 43 = 13</i>, ce qui est mauvais
+s'il lui manque 13 heures de repos.
+
+00:01:35.560 --> 00:01:39.550
+Ce n'est cependant pas pire que les
+33 heures calculées par notre programme.
+
+00:01:40.780 --> 00:01:42.710
+Ok, alors, que s'est-il passé ?
+
+00:01:42.710 --> 00:01:46.150
+Eh bien, reprenons le calcul qu'on vient
+de faire et relisons notre code pour
+
+00:01:46.150 --> 00:01:48.070
+voir s'il fait au moins la même chose.
+
+00:01:48.070 --> 00:01:51.120
+Ok. Voici les nombres que
+j'ai calculés de tête tout à l'heure.
+
+00:01:51.120 --> 00:01:54.890
+Alors, il me faut 56 heures de repos,
+en semaine j'en ai 25,
+
+00:01:54.890 --> 00:01:56.780
+en week-end, 18.
+
+00:01:56.780 --> 00:02:02.240
+Donc au total 43 heures de sommeil,
+et donc 13 heures à rattraper.
+
+00:02:02.240 --> 00:02:04.410
+Problème : ici, on m'affiche 33.
+
+00:02:04.410 --> 00:02:05.320
+Que s'est-il passé ?
+
+00:02:06.650 --> 00:02:07.370
+Alors,
+
+00:02:07.370 --> 00:02:09.970
+j'avais bien débuté
+en disant qu'en semaine,
+
+00:02:09.970 --> 00:02:13.490
+je dormais 5 heures
+et en fin de semaine, 9 heures.
+
+00:02:13.490 --> 00:02:14.360
+Ça, ça colle.
+
+00:02:15.600 --> 00:02:19.430
+Ensuite, j'ai aussi bien calculé la durée
+optimale de sommeil en prenant les
+
+00:02:19.430 --> 00:02:23.790
+8 heures que l'utilisateur devrait
+dormir par nuit, multipliées par 7.
+
+00:02:23.790 --> 00:02:27.730
+Le problème, c'est le calcul
+de ma durée de sommeil réelle.
+
+00:02:27.730 --> 00:02:28.870
+C'est un peu n'importe quoi.
+
+00:02:29.890 --> 00:02:32.880
+Je calcule correctement
+les heures de repos du week-end,
+
+00:02:32.880 --> 00:02:36.100
+je prends <i>weekend</i>, bien définie ici, que
+
+00:02:36.100 --> 00:02:39.250
+je multiplie par 2, là, tout va bien.
+
+00:02:39.250 --> 00:02:42.230
+Mais je ne calcule pas vraiment
+cette ligne-ci où je multiplie le nombre
+
+00:02:42.230 --> 00:02:46.000
+d'heures de repos en semaine
+par le nombre de jours ouvrés.
+
+00:02:47.620 --> 00:02:49.520
+Je n'ai ici aucune multiplication par 5.
+
+00:02:49.520 --> 00:02:51.970
+Et donc cette ligne de code,
+là, elle n'aide pas.
+
+00:02:53.090 --> 00:02:55.000
+Je vais retirer cette ligne de code.
+
+00:02:55.000 --> 00:02:59.220
+Du coup je n'ai plus ma déclaration
+d'<i>actualHours</i>, je viens de l'effacer.
+
+00:02:59.220 --> 00:03:00.980
+Je dois donc mettre mon <i>int</i> ici…
+
+00:03:03.000 --> 00:03:06.400
+pour déclarer correctement <i>actualHours</i>.
+
+00:03:06.400 --> 00:03:08.420
+D'ailleurs ici,
+on ne devrait avoir <i>actualHours</i>.
+
+00:03:10.050 --> 00:03:12.390
+On devrait avoir ce calcul, juste ici.
+
+00:03:12.390 --> 00:03:14.655
+Le repos que j'ai eu
+pendant ma semaine ouvrée
+
+00:03:14.655 --> 00:03:16.698
+stockée dans la variable <i>weekday</i>,
+
+00:03:16.698 --> 00:03:18.440
+multipliée par 5.
+
+00:03:20.715 --> 00:03:24.207
+Ma solution est, là encore,
+la différence entre le repos optimal
+
+00:03:24.207 --> 00:03:27.050
+et le repos que j'ai eu réellement.
+
+00:03:27.050 --> 00:03:30.110
+C'est le même type de calcul
+qu'effectué ici, donc
+
+00:03:30.110 --> 00:03:30.930
+on devrait avoir 13.
+
+00:03:30.930 --> 00:03:33.190
+Voyons si ça marche en pratique
+avec ce changement.
+
+00:03:34.510 --> 00:03:35.790
+Je vais refaire le calcul.
+
+00:03:35.790 --> 00:03:39.779
+Ok, je lis la première ligne,
+et je vois que <i>weekday</i> contient 5.
+
+00:03:41.280 --> 00:03:46.520
+On a ensuite <i>weekend = 9</i>,
+et <i>optimalHours = 7×8</i>.
+
+00:03:46.520 --> 00:03:48.850
+J'ai effacé cette ligne de code
+donc je poursuis plus bas.
+
+00:03:48.850 --> 00:03:53.640
+On a une nouvelle variable,
+<i>actualHours</i>, qui contient
+
+00:03:53.640 --> 00:03:58.610
+la valeur de <i>weekday</i> fois 5,
+plus la valeur de <i>weekend</i> fois 2.
+
+00:03:58.610 --> 00:04:02.710
+La valeur de <i>weekday</i>, si
+je vais lire ici, je vois que c'est 5 ;
+
+00:04:02.710 --> 00:04:04.850
+la valeur de <i>weekend</i>,
+que je vois par ici, est de 9.
+
+00:04:04.850 --> 00:04:10.990
+<i>5 × 5 = 25</i>, <i>9 × 2 = 18</i>,
+additionnez les deux et on obtient 43.
+
+00:04:10.990 --> 00:04:13.780
+Ensuite, on a une nouvelle variable,
+<i>solution</i>.
+
+00:04:13.780 --> 00:04:17.459
+Et <i>solution</i> vaut
+<i>optimalHours</i> moins <i>actualHours</i>.
+
+00:04:17.459 --> 00:04:19.579
+<i>optimalHours</i> contient actuellement 56.
+
+00:04:19.579 --> 00:04:24.605
+<i>actualHours</i> contient actuellement 43.
+
+00:04:24.605 --> 00:04:27.240
+Je fais <i>56 - 43</i>, et j'obtiens 13.
+
+00:04:27.240 --> 00:04:30.077
+On a simplement suivi
+les étapes dans le même ordre que
+
+00:04:30.077 --> 00:04:33.170
+mentalement, quand j'essayais
+de résoudre ce problème.
+
+00:04:33.170 --> 00:04:35.140
+Ok, ça m'a l'air juste et bon.
+
+00:04:35.140 --> 00:04:39.240
+Donc, on a vu deux outils très puissants
+en fait. Le premier est l'emploi
+
+00:04:39.240 --> 00:04:43.330
+de la simulation manuelle pour comprendre
+globalement ce que fait le code,
+
+00:04:43.330 --> 00:04:46.680
+l'autre est d'avoir observé l'objectif
+du programme et
+
+00:04:46.680 --> 00:04:50.340
+en quelque sorte réfléchi aux étapes
+que nous aurions suivis, en humains,
+
+00:04:50.340 --> 00:04:53.970
+en êtres pensants,
+pour parvenir à la réponse.
+
+00:04:53.970 --> 00:04:55.230
+On a ensuite comparé les deux.
+
+00:04:55.230 --> 00:04:56.500
+Que faisait le code ?
+
+00:04:56.500 --> 00:04:57.220
+Que ferions-nous ?
+
+00:04:57.220 --> 00:04:58.390
+Dans notre cas,
+
+00:04:58.390 --> 00:05:01.710
+là où il y avait des écarts
+entre le code et ce que nous ferions,
+
+00:05:01.710 --> 00:05:04.530
+on a comblé ces écarts
+en modifiant le code,
+
+00:05:04.530 --> 00:05:05.580
+ce qui a tout réglé.
+
+00:05:05.580 --> 00:05:06.770
+Passons au problème suivant.
+
+00:05:06.770 --> 00:05:09.730
+Vous verrez beaucoup
+de problèmes de cette forme et
+
+00:05:09.730 --> 00:05:12.970
+je recommande donc vivement
+d'utiliser la simulation à deux mains
+
+00:05:12.970 --> 00:05:17.010
+pour en quelque sorte faire le calcul
+de tête pour résoudre ces problèmes.
+
+00:05:17.010 --> 00:05:19.570
+Ok, vous aurez beaucoup
+plus de pratique dans la partie deux.
+
+00:05:19.570 --> 00:05:21.400
+Poursuivons avec
+l'exercice suivant.
+
