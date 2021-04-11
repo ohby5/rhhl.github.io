@@ -1,0 +1,210 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.340 --> 00:00:02.710
+Revenons à la méthode
+de calcul du prix.
+
+00:00:02.710 --> 00:00:06.440
+Quand on appelle cette méthode, ça va
+montrer le prix total de la commande.
+
+00:00:06.440 --> 00:00:10.300
+Et nous pouvons stocker cette valeur
+à l'intérieur cette variable appeléz prix.
+
+00:00:10.300 --> 00:00:11.510
+Ensuite, nous pouvons
+l'afficher sur l'écran.
+
+00:00:13.080 --> 00:00:15.670
+Pour intégrer la méthode de calcul
+du prix dans notre application
+
+00:00:15.670 --> 00:00:18.180
+nous allons avoir besoin d'utiliser
+les valeurs de retour.
+
+00:00:18.180 --> 00:00:20.330
+Regardons le PseudoCode en premier.
+
+00:00:20.330 --> 00:00:24.390
+Dans la méthode du submitOrder on veut
+appeler la méthode de calcul du prix
+
+00:00:24.390 --> 00:00:27.470
+Il va calculer
+le prix total de la commande.
+
+00:00:27.470 --> 00:00:29.530
+Et il va revenir
+à la sortie.
+
+00:00:29.530 --> 00:00:33.620
+Donc nous allons stocker cette sortie
+dans une variable entière appelée prix.
+
+00:00:33.620 --> 00:00:36.800
+Alors nous allons prendre ce prix,
+et ensuite l'afficher sur l'écran.
+
+00:00:36.800 --> 00:00:39.550
+Regardons le code Java pour cela.
+
+00:00:39.550 --> 00:00:42.740
+Dans la méthode de submitOrder,
+nous ajoutons cette ligne de code.
+
+00:00:42.740 --> 00:00:45.660
+Vous rappelez-vous l'opérateur
+d'affectation de la leçon 2 ?
+
+00:00:45.660 --> 00:00:49.300
+A chaque fois que je vois cela, j'évalue
+le côté droit en premier.
+
+00:00:49.300 --> 00:00:53.260
+La méthode de calcul de prix retourne
+une valeur unique, le prix de la commande.
+
+00:00:53.260 --> 00:00:57.010
+Et ça devrait être stocké à l'intérieur
+cette variable locale appelée prix.
+
+00:00:57.010 --> 00:01:00.040
+Ensuite, nous pouvons appeler une
+autre méthode, displayPrice.
+
+00:01:00.040 --> 00:01:03.530
+Et l'entrée de cette méthode va
+être la variable prix que nous
+
+00:01:03.530 --> 00:01:04.970
+venons de créer.
+
+00:01:04.970 --> 00:01:07.440
+C'est la première fois
+nous voyons comment une méthode
+
+00:01:07.440 --> 00:01:09.780
+peut être utilisée
+comme partie d'une expression.
+
+00:01:09.780 --> 00:01:12.360
+Par exemple,
+nous pouvons appeler cette méthode, et
+
+00:01:12.360 --> 00:01:16.330
+la valeur obtenue peut être ajoutée
+à d'autres numéros ou,
+
+00:01:16.330 --> 00:01:19.700
+si elle était une chaîne, nous pouvons
+la concaténer à d'autres chaînes .
+
+00:01:19.700 --> 00:01:23.450
+Tout ce qui importe est que tout ce
+qui est situé sur le côté droit soit
+
+00:01:23.450 --> 00:01:27.920
+évalué en une valeur unique, puis qu'elle 
+soit stockée sur la variable de gauche.
+
+00:01:27.920 --> 00:01:31.370
+Mais pour l'application Java on va juste
+utiliser le calcul du prix directement
+
+00:01:31.370 --> 00:01:32.220
+et l'afficher sur l'écran.
+
+00:01:33.590 --> 00:01:37.210
+Pour cette tâche de codage vous vérifiez
+que la méthode de calcul de prix
+
+00:01:37.210 --> 00:01:40.910
+soit définie et appelée
+correctement dans l'application Java.
+
+00:01:40.910 --> 00:01:43.620
+Concentrons nous d'abord sur la façon
+dont la méthode est définie.
+
+00:01:43.620 --> 00:01:46.980
+Modifier la méthode de calcul du prix pour
+avoir le type de données de retour
+
+00:01:46.980 --> 00:01:48.770
+correct dans la signature de la méthode.
+
+00:01:48.770 --> 00:01:50.960
+Supposez également qu'il y a
+0 en paramètre d'entrée.
+
+00:01:52.060 --> 00:01:54.930
+L'étape suivante consiste à modifier
+l'intérieur de cette méthode.
+
+00:01:54.930 --> 00:01:58.210
+Assurez-vous que ça renvoit bien
+le prix correct de la commande totale.
+
+00:01:58.210 --> 00:02:01.910
+Qui est la quantité de tasses 
+commandée fois le prix par tasse.
+
+00:02:01.910 --> 00:02:04.890
+Vous pouvez supposer que chaque
+tasse de café coûte 5 $ et
+
+00:02:04.890 --> 00:02:08.038
+il vous suffit de coder ça en dur 
+directement dans cette méthode.
+
+00:02:08.038 --> 00:02:12.410
+Une fois fait, alors vous pouvez passer 
+sur la façon dont la méthode est appelée.
+
+00:02:12.410 --> 00:02:15.360
+Appelez calcul du prix de
+la méthode de submitOrder, et
+
+00:02:15.360 --> 00:02:18.000
+vous pouvez utiliser le code dont
+nous avons parlé plus tôt.
+
+00:02:18.000 --> 00:02:20.840
+Alors, allez-y et
+affichez ce prix sur l'écran.
+
+00:02:20.840 --> 00:02:23.900
+Vous pourriez utiliser le displayPrice
+méthode, mais vous avez déjà vu ça
+
+00:02:23.900 --> 00:02:27.640
+à la fin de la 2ème leçon pour afficher
+un texte sur l'écran ainsi.
+
+00:02:27.640 --> 00:02:31.600
+Il dit également merci, donc si vous
+pouviez intégrer cette valeur de prix
+
+00:02:31.600 --> 00:02:34.140
+avec ce texte,
+ce serait l'idéal.
+
+00:02:34.140 --> 00:02:35.820
+Cela devrait ressembler 
+à quelque chose comme ça.
+
+00:02:35.820 --> 00:02:37.000
+Donc, si vous changez la quantité et
+
+00:02:37.000 --> 00:02:40.830
+puis cliquer sur ordre, alors le prix
+s'affiche icii avec le texte.
+
+00:02:42.210 --> 00:02:44.300
+Lorsque vous avez terminé,
+tickez ces cases pour continuer.
+

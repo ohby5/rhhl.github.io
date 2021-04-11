@@ -1,0 +1,209 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.520 --> 00:00:03.700
+On sait qu’on peut utiliser les ressources
+XML comme référence dans le code Java.
+
+00:00:08.680 --> 00:00:11.380
+Comment se retrouvent-ils ensemble comme 
+partis de l’expérience complète d’une application?
+
+00:00:12.460 --> 00:00:15.215
+Commençons au point où vous 
+cliquez sur l’icône de l’application JustJava.
+
+00:00:16.335 --> 00:00:18.615
+Ça ouvre la Main Activity.
+
+00:00:18.615 --> 00:00:21.925
+Maintenant, vous ne voyez rien pour 
+l’instant, car c’est en cours d’initialisation.
+
+00:00:21.925 --> 00:00:25.835
+Heureusement, beaucoup de la complexité, 
+concerné par l’initialisation de l’activité est
+
+00:00:25.835 --> 00:00:28.565
+automatiquement traitée pour 
+vous par Android.
+
+00:00:28.565 --> 00:00:31.995
+La partie importante qui nous concerne 
+est celle dans le fichier Main Activity
+
+00:00:31.995 --> 00:00:34.875
+la méthode onCreate se 
+fait automatiquement.
+
+00:00:34.875 --> 00:00:37.590
+C’est quand l’activité 
+est en train de se créer.
+
+00:00:37.590 --> 00:00:40.580
+Il y a diverses tâches et ensuite, nous
+avons une ligne importante qui dit
+
+00:00:40.580 --> 00:00:45.120
+setContentView et ensuite l’ID de la 
+ressource ID pour le fichier de layout.
+
+00:00:45.120 --> 00:00:47.640
+C’est R.layout.activity_main.
+
+00:00:47.640 --> 00:00:52.280
+Cela signifie que la vue du contenu de 
+l’activité devrait être définie pour le layout
+
+00:00:52.280 --> 00:00:55.720
+comme indiqué dans 
+le fichier XML de l’activité principale.
+
+00:00:55.720 --> 00:00:59.700
+C’est la méthode d’appel et le paramètre
+d’entrée est l’ID de cette ressource.
+
+00:00:59.700 --> 00:01:02.600
+Une fois que vous avez défini la présentation 
+que vous allez utiliser pour voir le contenu,
+
+00:01:02.600 --> 00:01:07.660
+et l’appareil android peut avancer et débuter 
+à analyser le fichier XML de mise en page.
+
+00:01:07.660 --> 00:01:09.410
+Analyser c’est lire ces fichiers et
+
+00:01:09.410 --> 00:01:12.490
+essayer de les interpréter ainsi :
+oh, c’est un layout linéaire.
+
+00:01:12.490 --> 00:01:13.570
+Oh, c’est un TextView.
+
+00:01:13.570 --> 00:01:15.270
+Ce sont les attributs, et ainsi de suite.
+
+00:01:15.270 --> 00:01:18.850
+Donc, c’est essayé de comprendre 
+ce que contient le fichier.
+
+00:01:18.850 --> 00:01:21.960
+L’appareil Android commence par 
+lire le haut du fichier.
+
+00:01:21.960 --> 00:01:24.670
+Il reconnait qu’il y a 
+une mise en page linéaire ici.
+
+00:01:24.670 --> 00:01:29.170
+Ensuite il inflate un objet Java 
+pour représenter ce layout linéaire.
+
+00:01:29.170 --> 00:01:30.570
+Ensuite il passe à la ligne suivante et
+
+00:01:30.570 --> 00:01:36.120
+voit qu’on a besoin d’ajouter un TextView comme 
+un enfant à ce layout linéaire, comme ceci.
+
+00:01:36.120 --> 00:01:39.865
+Cela commence à ressembler à 
+la vue hiérarchique de la leçon deux.
+
+00:01:39.865 --> 00:01:43.125
+Ce que je ne vous ai pas dit plutôt c’est 
+qu’en faite c’est une hiérarchie
+
+00:01:43.125 --> 00:01:45.265
+d’objets Java.
+
+00:01:45.265 --> 00:01:47.975
+On va en apprendre davantage sur les 
+objets Java dans les prochaines vidéos donc,
+
+00:01:47.975 --> 00:01:50.515
+ce n’est pas grave si vous ne 
+comprenez pas encore tout.
+
+00:01:50.515 --> 00:01:53.085
+Quand on arrive à la ligne suivante 
+on voit qu’on a besoin d’inflate
+
+00:01:53.085 --> 00:01:55.385
+un objet Java de layout linéaire.
+
+00:01:55.385 --> 00:01:58.855
+Cela s’ajoute comme un enfant 
+à cette racine LinearLayout.
+
+00:01:58.855 --> 00:02:00.480
+Ensuite, on voit un élément Button.
+
+00:02:00.480 --> 00:02:03.300
+Donc on l‘ajoute comme 
+un enfant au LinearLayout.
+
+00:02:03.300 --> 00:02:07.470
+On descend dans le fichier jusqu’à ce qu’on 
+ait inflate toutes les vues nécessaires pour
+
+00:02:07.470 --> 00:02:09.280
+notre vue hiérarchique.
+
+00:02:09.280 --> 00:02:13.740
+Une fois qu’on a la vue hiérarchique des 
+objets Java, on peut les manipuler et
+
+00:02:13.740 --> 00:02:15.470
+les changer pendant que l’application 
+est active.
+
+00:02:16.570 --> 00:02:19.930
+Un objet tel que le TextView ici,
+contient des informations d’état.
+
+00:02:19.930 --> 00:02:23.070
+Tel que le texte, la couleur du texte,
+la taille du texte.
+
+00:02:23.070 --> 00:02:26.880
+L’objet a aussi des méthodes donc 
+nous pouvons appeler ces méthodes et
+
+00:02:26.880 --> 00:02:29.130
+changer leur état interne.
+
+00:02:29.130 --> 00:02:31.670
+Donc par exemple, on peut changer
+le texte alors que l’application est active.
+
+00:02:32.690 --> 00:02:36.700
+Interagir avec tous ces objets 
+s’appelle programmation orientée objet.
+
+00:02:36.700 --> 00:02:40.220
+On abordera cela plus en 
+détail dans les prochaines vidéos.
+
+00:02:40.220 --> 00:02:44.230
+Donc, pour résumer, dans main activity
+lorsqu’on appele setContentView pour ce
+
+00:02:44.230 --> 00:02:49.440
+layout, ensuite on lit ce layout et
+ensuite inflate un tas d’objets Java.
+
+00:02:49.440 --> 00:02:53.590
+Ces objets Java font la vue 
+hiérarchique de l’application.
+
+00:02:53.590 --> 00:02:56.920
+La MainActivity contient cette 
+vue hiérarchique, et ensuite
+
+00:02:56.920 --> 00:03:00.400
+comme vous interagissez avec la MainActivity,
+elle peut actualiser ces objets.
+

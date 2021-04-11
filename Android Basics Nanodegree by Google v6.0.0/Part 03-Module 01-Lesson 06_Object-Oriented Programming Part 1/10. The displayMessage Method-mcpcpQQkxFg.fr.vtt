@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.390 --> 00:00:01.930
+Ok, nous venons d'apprendre
+beaucoup de choses sur les méthodes.
+
+00:00:01.930 --> 00:00:03.510
+Maintenant, il est temps pour vous
+de faire une pause.
+
+00:00:03.510 --> 00:00:05.380
+Vous pouvez faire quelques courses,
+
+00:00:05.380 --> 00:00:09.540
+vous pouvez aller vous promener, et même
+aller à un nouvel onglet du navigateur.
+
+00:00:09.540 --> 00:00:11.060
+Lorsque vous êtes prêt,
+Vous pouvez revenir ici et
+
+00:00:11.060 --> 00:00:13.190
+puis nous allons regarder
+dans la méthode d'affichage de message,
+
+00:00:13.190 --> 00:00:14.770
+une de mes méthodes préférée.
+
+00:00:16.239 --> 00:00:18.760
+Dans la tâche de codage suivante,
+vous allez modifier l'application afin
+
+00:00:18.760 --> 00:00:22.110
+qu'au lieu de dire le prix ici, cela va
+dire le récapitulatif de la commande.
+
+00:00:22.110 --> 00:00:25.220
+C'est un meilleur nom car si vous modifiez
+la quantité puis tapez sur commandé
+
+00:00:25.220 --> 00:00:27.870
+alors le résumé apparait ici,
+c'est plus que juste le prix.
+
+00:00:27.870 --> 00:00:31.010
+C'est un petit changement de l'interface 
+utilisateur, mais dans le processus,
+
+00:00:31.010 --> 00:00:34.080
+vous allez devoir modifier
+la méthode d'affichage du message,
+
+00:00:34.080 --> 00:00:38.120
+que nous vous avons donné dans la leçon 2
+sans vraiment vous dire ce qu'il fait.
+
+00:00:38.120 --> 00:00:41.160
+Dans les vidéos qui viennent, on va
+mieux comprendre les différentes
+
+00:00:41.160 --> 00:00:43.580
+parties qui vont
+à l'intérieur de cette méthode.
+
+00:00:43.580 --> 00:00:46.610
+Vous allez commencer par tester en
+changeant certaines de ces valeurs et
+
+00:00:46.610 --> 00:00:48.150
+voir ce qui se passe.
+
+00:00:48.150 --> 00:00:53.210
+Lors du changement, ça va provoquer une 
+erreur dans la méthode de displayPrice,
+
+00:00:53.210 --> 00:00:55.960
+donc vous pouvez
+supprimer cette méthode maintenant.
+
+00:00:55.960 --> 00:00:59.690
+Vous avez même un avertissement qui dit
+que cette méthode n'est jamais utilisée.
+
+00:00:59.690 --> 00:01:00.570
+Donc, allez-y et supprimez la.
+
+00:01:01.910 --> 00:01:04.760
+L'objectif global est de
+changer la section de prix
+
+00:01:04.760 --> 00:01:07.020
+en l'appelant le 
+récupitulatif de la commande.
+
+00:01:07.020 --> 00:01:09.643
+Il y a quelques changements
+supplémentaires que nous allons faire.
+
+00:01:09.643 --> 00:01:12.715
+Dans le fichier activity_main layout, 
+allez-y et
+
+00:01:12.715 --> 00:01:16.115
+changez l'en-tête de prix pour dire
+récapitulatif de la commande.
+
+00:01:16.115 --> 00:01:19.645
+Ensuite, trouvez le TextView pour
+la valeur du prix, pas l'en-tête, mais
+
+00:01:19.645 --> 00:01:21.215
+la valeur réelle.
+
+00:01:21.215 --> 00:01:24.095
+Changez cette vue pour
+avoir l'ID de ceci.
+
+00:01:24.095 --> 00:01:26.875
+L'ID de vue était quelque chose 
+comme price_text_view, mais
+
+00:01:26.875 --> 00:01:29.470
+Maintenant que nous l'avons changé en
+un récapitulatif de la commande,
+
+00:01:29.470 --> 00:01:31.500
+nous allons mettre à jour l'ID aussi.
+
+00:01:31.500 --> 00:01:35.690
+Puis, dans le fichier main activity dans 
+la méthode de displayMessage, allez-y
+
+00:01:35.690 --> 00:01:39.420
+changez le nom de la variable de
+priceTextView à orderSummaryTextView.
+
+00:01:40.450 --> 00:01:44.957
+Et enfin,allez changer
+la référence à R.id.price_text_view
+
+00:01:44.957 --> 00:01:49.260
+pour R.id.order_summary_text_view,
+avec les underscores ici.
+
+00:01:50.270 --> 00:01:51.790
+Lorsque vous avez terminé 
+vérifiez ces boîtes.
+
+00:01:52.960 --> 00:01:54.600
+Puis prennez un moment 
+pour prendre du recul et
+
+00:01:54.600 --> 00:01:58.350
+faire des observations sur ce qui s'est
+passé dans la méthode de displayMessage.
+
+00:01:58.350 --> 00:02:01.720
+Avez-vous des idées
+sur ce qui se passe ou
+
+00:02:01.720 --> 00:02:05.560
+ce qu'est la connexion est entre
+le layout XML et le fichier Java ?
+

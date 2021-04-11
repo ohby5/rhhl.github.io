@@ -1,0 +1,698 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.920 --> 00:00:03.410
+Keling bir daqiqaga JustJava
+ilovasiga qaytamiz.
+
+00:00:03.410 --> 00:00:07.260
+Keling MainActivity sinfi
+class displayMessage metodini ko‘ramiz.
+
+00:00:07.260 --> 00:00:09.950
+Bu yerda narsalar biroz 
+ma’no berishni boshlaydi.
+
+00:00:09.950 --> 00:00:14.350
+Biz orderSummaryTextView deb nomlangan 
+o‘zgaruvchi yaratayotganimizni angladik.
+
+00:00:14.350 --> 00:00:16.760
+Ushbu o‘zgaruvchining ma’lumot 
+turi TextView .
+
+00:00:17.790 --> 00:00:19.610
+Garchan, bu qismini hali tushunmadik.
+
+00:00:20.740 --> 00:00:23.290
+Keyingi qatorda bu TextView ob’ektida
+metodlarni chaqiramiz.
+
+00:00:24.650 --> 00:00:28.070
+Biz bu yerda e’lon qilingani kabi 
+bir xil o‘zgaruvchi nomidan foydalanamiz.
+
+00:00:28.070 --> 00:00:31.830
+orderSummaryTextView.setText ni chaqiramiz.
+
+00:00:31.830 --> 00:00:34.290
+Keyin metodga satrni kirish
+ma’lumoti sifatida qo‘yamiz.
+
+00:00:35.300 --> 00:00:38.790
+Ushbu satr xabari,aslida, 
+displayMessage metodiga 
+
+00:00:38.790 --> 00:00:40.200
+kiritish parametri sifatida keldi.
+
+00:00:41.720 --> 00:00:45.250
+Endi kodning biz tushunmagan bu qismini
+tekshirib ko‘raylik. 
+
+00:00:45.250 --> 00:00:48.210
+findViewById xuddi metod 
+chaqirilishiga o‘xshaydi.
+
+00:00:48.210 --> 00:00:53.530
+Chunki u qiyudagi qavslar bilan kiritish 
+argumentiga o‘xshab kelmoqda. 
+
+00:00:53.530 --> 00:00:57.458
+Ammo, g‘alati tarafi, u ushbu 
+sinfda hech qayerda aniqlanmagan.
+
+00:00:57.458 --> 00:01:02.355
+Bu nomning ustiga ikki marta bossam
+va F buyru‘ini bossam, 
+
+00:01:02.355 --> 00:01:07.560
+yoki Windowsda control+F ni bossam, bu
+faylda qidiruv amalga oshirsam bo‘ladi.
+
+00:01:07.560 --> 00:01:10.780
+Men findViewById ga ikki martagina
+duch kelyapman, va
+
+00:01:10.780 --> 00:01:12.790
+ular o‘xshash usulda qo‘llanilgan.
+
+00:01:12.790 --> 00:01:15.160
+Lekin findViewById deb nomlangan
+birorta ham metodni ko‘rmayapman.
+
+00:01:16.190 --> 00:01:19.640
+Avvalroq MainActivity 
+sinfida setContentView ni, 
+
+00:01:19.640 --> 00:01:23.450
+ko‘rgan edik, lekin bu 
+faylni qidirib ko‘rganda
+
+00:01:23.450 --> 00:01:26.280
+u ham MainActivity-da 
+ochiqlanmaga edi.
+
+00:01:27.820 --> 00:01:29.620
+Xo‘sh, bu metodlarning izohi qayerda? 
+
+00:01:30.620 --> 00:01:33.610
+MainActivity, aslini olganda,
+juda qisqa fayl.
+
+00:01:33.610 --> 00:01:35.150
+U 90 qatordangina iborat,
+
+00:01:35.150 --> 00:01:38.790
+ammo, bu sinfda ko‘ringanidan 
+ko‘proq narslar mavjud aslida. 
+
+00:01:38.790 --> 00:01:42.200
+Kod shunday demoqda,
+extends AppCompatActivity .
+
+00:01:42.200 --> 00:01:45.710
+Ma’nosi shuki, asosiy faoliyat
+(The main activity) - bu, 
+
+00:01:45.710 --> 00:01:49.290
+AppCompatActivity sinfidagi 
+funksionallikning kengaytmasidir. 
+
+00:01:49.290 --> 00:01:52.790
+Agar kompyuteringizda bu yerda harakat 
+paneli faoliyatini ko‘rsangiz, hechqisi yo‘q, 
+
+00:01:52.790 --> 00:01:55.450
+bu shunchaka, uning eski versiyasi. 
+
+00:01:55.450 --> 00:01:58.770
+Siz foydalanishingiz kerak bo‘lgan
+so‘nggi versiya AppCompatActivity . 
+
+00:01:58.770 --> 00:02:02.420
+AppCompatActivity eskiroq Android
+qurilmalarida qarama-qarshi
+
+00:02:02.420 --> 00:02:04.460
+muvofiqlikni qo‘llab-quvvatlaydi. 
+
+00:02:04.460 --> 00:02:07.980
+AppCompatActivity - bu, Androidni qo‘llab-
+quvvatlovchi kutubxonaning bir qismi. 
+
+00:02:07.980 --> 00:02:11.740
+U bizga eski Android qurilmasida
+ishlab turgan holda ham, UI-ning 
+
+00:02:11.740 --> 00:02:15.420
+yangi afvzalliklaridan foydalanishimizga
+imkon beradi.
+
+00:02:15.420 --> 00:02:17.940
+AppCompatActivity sinfini 
+kengaytirish orqali biz bepul
+
+00:02:17.940 --> 00:02:20.620
+ravishda MainActivity ning ichida
+barcha funksiyalar, holat va 
+
+00:02:20.620 --> 00:02:24.490
+metodlardan foydalanish 
+imkoniyatini qo‘lga kiritmoqdamiz.
+
+00:02:24.490 --> 00:02:26.980
+Men bu yerdan hech qanday kodni 
+ko‘chirmayman va joylamayman.
+
+00:02:26.980 --> 00:02:28.800
+Men shunchaki bu sinfni kengaytiraman.
+
+00:02:30.090 --> 00:02:31.020
+Agar qiziqsangiz,
+
+00:02:31.020 --> 00:02:35.880
+Googledan AppCompatActivity haqida
+ko‘proq ma’lumot topishingiz mumkin. 
+
+00:02:35.880 --> 00:02:39.700
+Bu yerda AppCompatActivity sinfi
+uchun ma’lumotnoma hujjati mavjud.
+
+00:02:39.700 --> 00:02:41.920
+Menda Chrome kengaytmasi 
+o‘rnatilganligi uchun
+
+00:02:41.920 --> 00:02:43.120
+men manbani ham ko‘rishim mumkin. 
+
+00:02:43.120 --> 00:02:47.890
+Mana bu AppCompatActivity sinfi
+aniqlangan kod.
+
+00:02:47.890 --> 00:02:50.360
+Siz bu yerda ko‘plab funsiyalar
+borligini ko‘rishingiz mumkin, ammo 
+
+00:02:50.360 --> 00:02:54.510
+siz uning qanday amalga oshirilgan
+ekanligini tushunishingiz shart emas. 
+
+00:02:54.510 --> 00:02:58.350
+Siz bilishingiz kerak bo‘lgani,qachonki
+AppCompatActivity ni kengaytirganingizda
+
+00:02:58.350 --> 00:03:01.010
+ushbu barcha funksiyalarni
+bepul qo‘lga kiritasiz. 
+
+00:03:01.010 --> 00:03:03.580
+Umumiy ravishda, uni shu 
+usulda tasavvur qiling.
+
+00:03:03.580 --> 00:03:05.900
+Bu MainActivity uchun sinf 
+ta’rifi.
+
+00:03:05.900 --> 00:03:08.000
+Deylik, sizda bu yerda 
+bir necha metodlar ta’riflangan. 
+
+00:03:08.000 --> 00:03:12.350
+AppCompatActivity ni kengaytirganingizda
+holatga va keyin AppCompatActivitydagi 
+
+00:03:12.350 --> 00:03:14.200
+metodlarga ega bo‘lasiz. 
+
+00:03:14.200 --> 00:03:17.870
+Hozir ular MainActivity sinfiga 
+fizik ravishda qo‘shilmagan, ammo 
+
+00:03:17.870 --> 00:03:19.280
+siz ularni o‘sha yerda deb tasavvur qiling,
+62
+00:03:19,280 --&gt; 00:03:22,930
+chunki siz baribir holat va 
+metodlarga murojaat qila olasiz. 
+
+00:03:22.930 --> 00:03:26.540
+Va bizning kodimiz setContentView 
+yoki findViewById kabi narsalarga 
+
+00:03:26.540 --> 00:03:27.840
+ushbu shaklda murojaat qilishi mumkin.
+
+00:03:27.840 --> 00:03:32.240
+Ushbu usullarni meros qilib olganimiz 
+uchun ularni MainActivity da aniqlamadik.
+
+00:03:32.240 --> 00:03:35.110
+MainActivity qurilmada ekran 
+sifatida ko‘rsatilgan, ammo biz 
+
+00:03:35.110 --> 00:03:39.520
+MainActivity da bu uchun kodni yozmaganmiz, 
+sababi biz uni ham meros qilib olganmiz.
+
+00:03:39.520 --> 00:03:42.750
+Bizda sinfda to‘g‘ridan-to‘g‘ri 
+AppCompatActivity ning holati va 
+
+00:03:42.750 --> 00:03:46.840
+metodlari yo‘q, ammo endi biz ular borligini
+bilamiz va ularga murojaat qilishimiz mumkin.
+
+00:03:46.840 --> 00:03:50.260
+Meros qilib olish haqida gapirganda, 
+uning yaxshi va yomon tomonlari ham bor.
+
+00:03:50.260 --> 00:03:52.540
+Ba’zida biz xulq-atvorni meros 
+qilib olishni xohlaymiz, lekin
+
+00:03:52.540 --> 00:03:54.980
+boshqa paytlar uni biroz
+o‘zgartirishni istashimiz mumkin. 
+
+00:03:55.980 --> 00:03:59.900
+Agar siz meros qoldirilgan sinfdan 
+ba’zi harakatlarini o‘zgartirishni istasangiz,
+
+00:03:59.900 --> 00:04:02.230
+ma’lum metodlarni qayta yozishingiz mumkin. 
+
+00:04:02.230 --> 00:04:07.360
+Siz metodning yuqorisiga @override matnini
+joylaysiz, shunda kompyuteringiz 
+
+00:04:07.360 --> 00:04:12.100
+siz AppCompatActivity dagi metod versiyadan
+foydalanamoqch emasligingizni, aksincha
+
+00:04:12.100 --> 00:04:15.830
+bu yerda yozgan versiyasidan
+foydalanmoqchiligingizni anglaydi.
+
+00:04:15.830 --> 00:04:18.620
+Bu biroz murakkab mavzu va 
+ko‘p praktikani talab qiladi.
+
+00:04:18.620 --> 00:04:21.660
+Lekin biz AppCompatActivity sinfida
+metodni qayta yozishning
+
+00:04:21.660 --> 00:04:23.640
+bitta misolini ko‘rdik. 
+
+00:04:23.640 --> 00:04:26.380
+Va bu onCreate metodi. 
+
+00:04:26.380 --> 00:04:31.170
+MainActivity da onCreate metodini
+qayta yozish orqali, biz metod
+
+00:04:31.170 --> 00:04:35.380
+chaqirilganda, nima sodir bo‘lishi 
+kerakligini o‘zimiz aniqlashtirib ketyapmiz.
+
+00:04:35.380 --> 00:04:37.180
+Agar buni darhol 
+anglamasangiz, tashvishlanmang.
+
+00:04:37.180 --> 00:04:40.534
+Men, shunchaki, sizga ob’ektga 
+yo‘naltirilgan dasturiy tushunchalar 
+
+00:04:40.534 --> 00:04:42.350
+haqida qisqacha ma’lumot beryapman.
+
+00:04:42.350 --> 00:04:46.160
+Sizda hali ham savollar 
+ko‘p bo‘lishi tabiiy.
+
+00:04:46.160 --> 00:04:49.370
+Siz ularni to‘liq tushunish uchun 
+ushbu mavzularni yanada ko‘proq 
+
+00:04:49.370 --> 00:04:50.860
+o‘qib chiqishingiz kerak.
+
+00:04:50.860 --> 00:04:53.771
+MainActivity va AppCompatActivity 
+sinflari o‘rtasidagi munosabatlarni 
+
+00:04:53.771 --> 00:04:58.220
+tasavvur etishning yana bir usuli - bu
+sinflar ierarxik diagrammasini chizish.
+
+00:04:58.220 --> 00:05:00.930
+Bu ko‘rinishlarning ierarxik diagrammasidan
+farq qiladi, chunki View iyerarxik 
+
+00:05:00.930 --> 00:05:05.340
+diagrammasi ekranda namoyish etiladigan 
+ko‘rinishlar daraxtini ko‘rsatadi.
+
+00:05:05.340 --> 00:05:07.810
+Sinflar ierarxiyasi diagrammasi 
+turli Java sinflari o‘rtasidagi 
+
+00:05:07.810 --> 00:05:09.990
+munosabatni ko‘rsatadi.
+
+00:05:09.990 --> 00:05:12.860
+Bizda superklass sifatida AppCompatActivity mavjud.
+
+00:05:12.860 --> 00:05:15.868
+MainActivity AppCompatActivity dan 
+kelib chiqqanligi sababli, 
+
+00:05:15.868 --> 00:05:18.560
+bu sinf osti yoki kichik sinf deb nomlanadi.
+
+00:05:18.560 --> 00:05:22.200
+Shunday qilib, siz kengaytiradigan 
+har qanday narsangiz 
+
+00:05:22.200 --> 00:05:23.970
+superklass deb nomlanadi.
+
+00:05:23.970 --> 00:05:25.770
+Bu sinf osti bo‘ladi.
+
+00:05:25.770 --> 00:05:29.070
+Shunday qilib, agar siz DetailActivity 
+deb nomlangan yana bir faoliyatni
+
+00:05:29.070 --> 00:05:32.340
+yaratgan bo‘lsangiz va AppCompatActivity ni 
+kengaytirsangiz, bu sinf osti bo‘ladi
+
+00:05:32.340 --> 00:05:33.409
+va bu superklass bo‘ladi.
+
+00:05:34.720 --> 00:05:37.840
+Bu yerda Java sinf merosiga 
+yana bir misol.
+
+00:05:37.840 --> 00:05:40.520
+Agar o‘ylab qarasangiz, text view, 
+image view, va
+
+00:05:40.520 --> 00:05:44.460
+button viewlar barchasi bir
+umumiy jihatga ega. 
+
+00:05:44.460 --> 00:05:48.070
+Ularning barchasining ekranda
+kengligi va balandligi mavjud. 
+
+00:05:48.070 --> 00:05:51.330
+Biz buni hali o‘rganmadik, ammo
+ular ko‘rinish holati mavjud.
+
+00:05:51.330 --> 00:05:54.400
+Ular ko‘rinadigan yoki 
+ko‘rinmaydigan qilinishi mumkin.
+
+00:05:54.400 --> 00:05:58.650
+Ular uchun umumiy bo‘lgan yana bir 
+necha xususiyatlar ham mavjud. 
+
+00:05:58.650 --> 00:06:02.370
+TextView sinfida ushbu xususiyatlar
+uchun kod yozib, so‘ngra uni 
+
+00:06:02.370 --> 00:06:05.590
+ImageView ga va so‘ngra Button sinfiga
+ko‘chirib o‘tkazish o‘rniga,
+
+00:06:05.590 --> 00:06:07.610
+aqlliroq ish qilsak bo‘ladi.
+
+00:06:07.610 --> 00:06:09.980
+Biz yangi sinf yaratamiz. 
+
+00:06:09.980 --> 00:06:14.110
+Ushbu View larning barcha o‘xshash 
+jihatlarini ajratib olamiz va
+
+00:06:14.110 --> 00:06:19.730
+uni ushbu view sinfiga kod bir martagina 
+yoziladigan usulda shunday joylaymiz. 
+
+00:06:19.730 --> 00:06:22.610
+Ammo keyin-ch, qanday qilib TextView 
+va View sinflari o‘rtasida 
+
+00:06:22.610 --> 00:06:24.000
+bog‘liqlikni amalga oshiramiz? 
+
+00:06:24.000 --> 00:06:26.548
+Agar meros haqida o‘ylayotgan 
+bo‘lsangiz, to‘g‘ri topdingiz.
+
+00:06:26.548 --> 00:06:30.080
+TextView java faylining ichida
+TextView sinfini ochiqlamoqchimiz.
+
+00:06:30.080 --> 00:06:33.240
+Shu yo‘l bilan biz View sinfidan barcha 
+ma‘lumot va metodlarni meros olamiz.
+
+00:06:34.270 --> 00:06:37.520
+Shunda biz TextView sinfida juda ko‘p 
+kodga ega bo‘lishga majbur bo‘lmaymiz, 
+
+00:06:37.520 --> 00:06:41.860
+chunki funksiyalarning bir qismi 
+allaqachon View sinfida yozilgan.
+
+00:06:41.860 --> 00:06:43.730
+Xuddi shu narsa ImageView va
+Button sinflariga ham amal 
+
+00:06:43.730 --> 00:06:46.800
+qiladi, biz k‘plab kod 
+yozishimiz shart emas.
+
+00:06:46.800 --> 00:06:49.690
+Ushbu fayllarda, faqatgina, 
+ImageView sinfining View sinfidan 
+
+00:06:49.690 --> 00:06:53.090
+qanday farqli taraflari 
+borligini yozishimiz kerak. 
+
+00:06:53.090 --> 00:06:57.720
+Men buni deltani aniqlashga o‘xshataman, 
+demak, ImageView sinfi faqatgina 
+
+00:06:57.720 --> 00:07:01.890
+ImageView ning View sinfiga nisbatan 
+qanday farqi borligini aniqlatirishi kerak.
+
+00:07:03.840 --> 00:07:06.960
+Agar biz View sinfidan muayyan xulq-
+atvorni meros qilib olishni istamasak, 
+
+00:07:06.960 --> 00:07:11.760
+biz ImageView sinfi yoki ushbu 
+sinflarning istalganida yangilangan 
+
+00:07:11.760 --> 00:07:12.820
+xatti-harakatni ko‘rsatishimiz mumkin.
+
+00:07:14.070 --> 00:07:16.680
+Atamalarga eslatma sifatida, 
+ushbu holatda, 
+
+00:07:16.680 --> 00:07:20.039
+TextView sinf osti, 
+View esa superklass bo‘ladi.
+
+00:07:21.430 --> 00:07:23.280
+Agar orqaga TextView sinfining 
+
+00:07:23.280 --> 00:07:27.310
+hujjatlariga qaytadigan bo‘lsak, 
+biz bu qismni tushunib yetamiz.
+
+00:07:27.310 --> 00:07:30.000
+Unda TextView View ni kengaytirishi deb aytiladi.
+
+00:07:30.000 --> 00:07:33.330
+Biz endi buning ViewClass dan
+holat va metodlarni meros 
+
+00:07:33.330 --> 00:07:35.280
+olayotganimiz ekanligini bilamiz. 
+
+00:07:35.280 --> 00:07:38.330
+Va pastroqda bu yerda Sinf ierarxik
+diagrammasi bor. 
+
+00:07:38.330 --> 00:07:41.884
+Bu TextView sinfining ViewClass dan 
+meros bo‘lib o‘tganligini ko‘rsatadi.
+
+00:07:43.730 --> 00:07:46.530
+Va o‘z navbatida View sinfi Object 
+sinfidan meros bo‘lib o‘tadi.
+
+00:07:47.650 --> 00:07:50.060
+Agar siz atroflicha o‘rgansangiz, aslida 
+TextView sinfidan kengayib boradigan 
+
+00:07:50.060 --> 00:07:54.780
+EditText sinfiga o‘xshash boshqa 
+sinflarni ham topishingiz mumkin.
+
+00:07:54.780 --> 00:07:57.570
+Shunday qilib, u TextView 
+sinfidan xulq-atvorni oladi va 
+
+00:07:57.570 --> 00:08:00.120
+keyin unga biroz o‘ziga xos 
+funksiyanallikni qo‘shadi.
+
+00:08:01.290 --> 00:08:03.590
+Shunday qilib, EditText TextView-dan kengayadi.
+
+00:08:03.590 --> 00:08:06.720
+Va TextView View dan, View 
+esa Object dan kengayadi.
+
+00:08:24.350 --> 00:08:26.860
+Va bu klass ierarxik diagrammasi.
+
+00:08:11.370 --> 00:08:13.950
+Bu yerda juda ko‘p narsa bor va 
+siz unga soatlab qarab turishingiz mumkin.
+
+00:08:13.950 --> 00:08:17.010
+Ammo TextView hujjatlar sahifasida 
+sizga bitta narsani ko‘rsatay.
+
+00:08:17.010 --> 00:08:20.820
+Men sizga SetVisibility 
+uchun metodni ko‘rsatmoqchiman.
+
+00:08:20.820 --> 00:08:24.350
+Bu yerda TextView sinfidagi 
+SetVisibility uchun Javaning metodi.
+
+00:08:24.350 --> 00:08:26.860
+Bu ko‘rinadigan yoki 
+ko‘rinmasligini o‘zgartiradi.
+
+00:08:28.000 --> 00:08:33.240
+Agar men ushbu metodni bossam, 
+u aslida View sinfiga olib keladi.
+
+00:08:33.240 --> 00:08:36.010
+Va keyin bu metod nima 
+qilayotganini tasvirlaydi.
+
+00:08:36.010 --> 00:08:39.860
+Shunday qilib, ko‘rishingiz mumkinki, TextView 
+ob’ekti ko‘rinuvchi metodga o‘rnatilgan.
+
+00:08:39.860 --> 00:08:43.659
+Ammo u aslida View sinfidan 
+meros bo‘lib o‘tgan.
+
+00:08:43.659 --> 00:08:47.470
+Shunday qilib, biz ushbu 
+funksiyani View sinfidan bepul oldik.
+
+00:08:47.470 --> 00:08:50.930
+Yaxshi, biz hozirgana ko‘plab
+yangi tushunchalarni qamrab oldik.
+
+00:08:50.930 --> 00:08:56.040
+Odatda, bu informatika kursining
+bir semestrida qismlab o‘rgatiladi.
+
+00:08:56.040 --> 00:08:58.260
+Biz hozir biroz mashq qilamiz 
+va umid qilamanki, 
+
+00:08:58.260 --> 00:09:01.170
+bu orqali, siz nuqtalarni
+birlashitirishni boshlaysiz.
+
+00:09:01.170 --> 00:09:03.010
+Ammo shuni bilingki, bu 
+vaqt oladi va tushunchalarni to‘liq 
+
+00:09:03.010 --> 00:09:06.610
+anglamaguningizcha ko‘proq
+mashqlarni bajarish kerak bo‘ladi.
+
+00:09:06.610 --> 00:09:09.700
+Mayli, birinchi mashq, yana bitta yangi 
+Android ilovasini yaratishingizni istayman,
+
+00:09:09.700 --> 00:09:11.530
+chunki biz Just Java dasturini 
+chalkashtirib yubormaylik.
+
+00:09:13.070 --> 00:09:14.640
+Loyihani yaratgandan so‘ng,
+dasturni ishga tushiring.
+
+00:09:15.790 --> 00:09:18.630
+Ilovangizni yaratgandan so‘ng, 
+siz MainActivity faylini ko‘rasiz.
+
+00:09:18.630 --> 00:09:22.530
+Ushbu MainActivity fayli 
+AppCompatActivity dan kengayadi.
+
+00:09:22.530 --> 00:09:26.060
+Sizdagi Android Studio-ning 
+versiyasida, agar MainActivity 
+
+00:09:26.060 --> 00:09:28.760
+o‘rniga ActionBarActivity 
+o‘rnatilgan bo‘lsa, hechqisi yo‘q.
+
+00:09:28.760 --> 00:09:32.200
+Bu shunchaki 
+AppCompatActivity ning eski versiyasi.
+
+00:09:32.200 --> 00:09:35.650
+Ushbu metodni bekor qilishni 
+olib tashlab biz onCreate 
+
+00:09:35.650 --> 00:09:40.280
+metodi AppCompatActivity sinfida 
+paydo bo‘lgan metodga qaytamiz.
+
+00:09:40.280 --> 00:09:44.540
+Ushbu usulning mavjudligi onCreate 
+uchun MainActivity da boshqa 
+
+00:09:44.540 --> 00:09:46.230
+xatti-harakatlarni xohlashimizni aytadi.
+
+00:09:46.230 --> 00:09:49.540
+Shunday qilib, uni olib tashlash 
+bizni AppCompatActivity sinfidagi 
+
+00:09:49.540 --> 00:09:52.040
+asl xatti-harakatlarimizga qaytaradi.
+
+00:09:52.040 --> 00:09:53.380
+Ilovani ishga tushirganingizda,
+
+00:09:53.380 --> 00:09:57.250
+birinchi marta ishlagandan 
+nimasi bilan farq qildi?
+
+00:09:57.250 --> 00:09:58.510
+Javobingizni ushbu matn maydoniga yozing.
+

@@ -1,0 +1,434 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.270 --> 00:00:01.540
+Hãy nhìn mục số 1.
+
+00:00:01.540 --> 00:00:04.470
+Trước khi cho biết câu trả lời,
+tôi sẽ copy đoạn code này và
+
+00:00:04.470 --> 00:00:06.700
+dán nó vào trong Android Studio.
+
+00:00:06.700 --> 00:00:09.060
+Tôi muốn cho các bạn xem
+loại lỗi nào sẽ hiện ra.
+
+00:00:09.060 --> 00:00:12.090
+Khi bạn trả lời câu hỏi này, bạn không
+nhất thiết phải dùng Android Studio,
+
+00:00:12.090 --> 00:00:14.510
+bạn có thể giải nó bằng cách
+nhìn vào những dòng code ở đây
+
+00:00:14.510 --> 00:00:16.280
+và viết ra câu trả lời.
+
+00:00:16.280 --> 00:00:19.520
+Vì thế, dù bạn có dùng Android Studio
+hay không cũng không sao.
+
+00:00:19.520 --> 00:00:22.260
+Để chạy code này,
+tôi đã tạo một project mới và
+
+00:00:22.260 --> 00:00:25.270
+chỉnh sửa tệp layout của phần
+thực thi chính sao cho
+
+00:00:25.270 --> 00:00:30.080
+nó chứa nhiều view với những ID
+mà chúng ta sẽ liên hệ đến.
+
+00:00:30.080 --> 00:00:31.880
+Tôi cũng không rõ
+layout này sẽ trông thế nào
+
+00:00:31.880 --> 00:00:36.060
+nhưng tôi chỉ muốn đặt view vào đây
+với tên ID view tương ứng.
+
+00:00:36.060 --> 00:00:38.210
+Bằng cách đó, code của tôi
+sẽ chạy được ở đây.
+
+00:00:38.210 --> 00:00:42.570
+Ở trường hợp thứ nhất, tôi dán đoạn code
+vào đây và nhận lại một lỗi.
+
+00:00:42.570 --> 00:00:46.270
+Android Studio cho biết nó không thể
+xử lý phương thức setText.
+
+00:00:46.270 --> 00:00:47.780
+Nếu bạn còn nhớ ở video trước,
+
+00:00:47.780 --> 00:00:51.510
+tôi đã nói rằng setText là
+một phương thức TextView.
+
+00:00:51.510 --> 00:00:55.100
+Điều này có nghĩa là bạn chỉ có thể
+triệu gọi nó trên đối tượng TextView.
+
+00:00:55.100 --> 00:00:57.920
+Trong trường hợp này, ta đang
+gọi nó trên nameTextView.
+
+00:00:57.920 --> 00:01:00.705
+nameTextView được định nghĩa
+là một đối tượng view,
+
+00:01:00.705 --> 00:01:04.057
+chúng ta cần phải chuyển nó thành
+một đối tượng TextView.
+
+00:01:05.990 --> 00:01:08.942
+Thế rồi chúng ta nhận được một lỗi khác
+về định dạng không tương thích.
+
+00:01:08.942 --> 00:01:12.390
+Nó cần một đối tượng thuộc dạng
+TextView, nhưng ngược lại
+
+00:01:12.390 --> 00:01:15.700
+nó nhận được một
+đối tượng dạng view.
+
+00:01:15.700 --> 00:01:18.570
+Đó là vì phương thức tìm view
+bằng ID sẽ trả lại một view, và
+
+00:01:18.570 --> 00:01:21.950
+phần bên trái này
+yêu cầu TextView.
+
+00:01:21.950 --> 00:01:24.860
+Có nghĩa là chúng ta phải
+gán phần view
+
+00:01:24.860 --> 00:01:28.730
+được findViewById trả lại
+thành một TextView.
+
+00:01:28.730 --> 00:01:30.800
+Sau đó chúng ta có thể
+lưu tất cả phần nameTextView
+
+00:01:30.800 --> 00:01:35.090
+vào phần biến ở bên trái.
+
+00:01:35.090 --> 00:01:40.760
+Vậy là phần lỗi đã biến mất, và ta có thể
+thiết lập dòng chữ "Laura" trên TextView.
+
+00:01:40.760 --> 00:01:44.510
+Phần lỗi nằm ở dòng 1, vì vậy
+tôi viết dòng code đúng lên đây.
+
+00:01:44.510 --> 00:01:49.540
+Giải thích ngắn gọn là ta cần phải
+gán view này vào TextView và
+
+00:01:49.540 --> 00:01:53.050
+lưu nó trong
+biến nameTextView.
+
+00:01:53.050 --> 00:01:56.340
+Bằng cách đó, chúng ta có thể
+gọi nameTextView.setText,
+
+00:01:56.340 --> 00:01:59.850
+một phương thức TextView,
+ở dòng tiếp theo của code ở đây.
+
+00:01:59.850 --> 00:02:00.830
+Hãy xem tiếp mục số hai.
+
+00:02:00.830 --> 00:02:03.290
+Tôi sẽ copy phần code này
+và dán vào Android Studio.
+
+00:02:04.540 --> 00:02:06.590
+Đây chính là phần code
+tôi đã dán vào.
+
+00:02:06.590 --> 00:02:09.620
+Dòng đầu tiên có vẻ đúng,
+không có lỗi nào cả.
+
+00:02:09.620 --> 00:02:11.550
+Nhưng dòng thứ hai có
+gạch chân màu đỏ và
+
+00:02:11.550 --> 00:02:14.420
+và nó cho thấy có lỗi
+định dạng không tương thích.
+
+00:02:14.420 --> 00:02:17.990
+Nó cho biết, ở đây cần một chuỗi
+nhưng nó chỉ tìm thấy một số nguyên.
+
+00:02:17.990 --> 00:02:19.290
+Để hiểu rõ hơn điều này,
+
+00:02:19.290 --> 00:02:24.250
+chúng ta nên tìm hiểu phương thức
+getMaxLinestrong tài liệu TextView
+
+00:02:24.250 --> 00:02:26.580
+Trong tài liệu về TextView,
+tôi sẽ tìm kiếm
+
+00:02:26.580 --> 00:02:28.650
+phương thức getMaxLines.
+
+00:02:28.650 --> 00:02:29.770
+Nó đây.
+
+00:02:29.770 --> 00:02:31.120
+Không có tham số đầu vào, và
+
+00:02:31.120 --> 00:02:33.520
+giá trị trả về của phương thức
+này là một số nguyên.
+
+00:02:34.758 --> 00:02:38.194
+Đó chính là lý do mà Android Studio đang
+làm khó chúng ta, vì phương thức này,
+
+00:02:38.194 --> 00:02:39.911
+nó trả về một giá trị số nguyên
+
+00:02:39.911 --> 00:02:42.700
+nhưng ta lại đang cố gắng lưu nó
+vào một biến dạng chuỗi.
+
+00:02:42.700 --> 00:02:47.870
+Kết quả là, tôi sẽ cần phải thay đổi
+dạng dữ liệu của biến thành số nguyên.
+
+00:02:47.870 --> 00:02:49.470
+Và vấn đề sẽ không còn nữa.
+
+00:02:49.470 --> 00:02:52.620
+Vậy, giá trị trả về của phương thức
+này là một số nguyên.
+
+00:02:52.620 --> 00:02:56.060
+Và chúng ta có thể lưu nó
+trong biến maxLines này.
+
+00:02:56.060 --> 00:02:57.870
+Vẫn còn một cảnh báo nữa.
+
+00:02:57.870 --> 00:03:00.870
+Nội dung là biến maxLines
+không hề được sử dụng
+
+00:03:00.870 --> 00:03:02.400
+Nhưng đây chỉ là
+một mẩu code rất nhỏ.
+
+00:03:02.400 --> 00:03:04.760
+Tôi tin rằng nếu đây
+là một ứng dụng thông thường,
+
+00:03:04.760 --> 00:03:06.740
+chúng ta sẽ cần phải
+sử dụng đến biến này sau này.
+
+00:03:07.800 --> 00:03:11.380
+vậy, lỗi nằm ở dòng số 2,
+và đây là code đã cập nhật.
+
+00:03:11.380 --> 00:03:14.340
+Giải thích ngắn gọn là giá trị trả về
+của phương thức này cần
+
+00:03:14.340 --> 00:03:15.480
+là một số nguyên.
+
+00:03:15.480 --> 00:03:16.620
+Hãy xem tiếp số 3.
+
+00:03:17.980 --> 00:03:19.830
+Đây là code của số 3.
+
+00:03:19.830 --> 00:03:22.960
+Tôi đã copy và dán phần code
+của số 3 vào Android Studio.
+
+00:03:22.960 --> 00:03:25.812
+Một lỗi xuất hiện với nội dung
+định dạng không tương thích.
+
+00:03:25.812 --> 00:03:29.400
+Ta cần một giá trị ImageView,
+nhưng nó chỉ nhận được một giá trị view.
+
+00:03:29.400 --> 00:03:32.740
+Lỗi này tương tự với lỗi
+ta đã gặp với TextView.
+
+00:03:32.740 --> 00:03:34.960
+Phương thức này trả về một view.
+
+00:03:34.960 --> 00:03:38.270
+Và, ở phía tay trái, chúng ta đang
+cố gắng lưu nó trong một ImageView.
+
+00:03:38.270 --> 00:03:42.370
+Vì vậy chúng ta cần phải gán đối tựợng
+view này thành một ImageView.
+
+00:03:42.370 --> 00:03:47.330
+Điều này hợp lệ vì phần view với
+ID icon thực chất là một ImageView,
+
+00:03:47.330 --> 00:03:49.630
+vì vậy chúng ta có thể
+gán nó thành ImageView.
+
+00:03:49.630 --> 00:03:52.560
+Bây giờ phần code ở phía bên phải
+đã có giá trị ImageView,
+
+00:03:52.560 --> 00:03:55.700
+ta có thể lưu trữ nó trong một biến
+nằm bên tay trái.
+
+00:03:55.700 --> 00:03:59.770
+Biến này có định dạng dữ liệu ImageView,
+và giờ mọi thứ đều trở nên hợp lý.
+
+00:03:59.770 --> 00:04:01.430
+Lỗi không còn nữa.
+
+00:04:01.430 --> 00:04:04.640
+Tiếp theo, ta có thể gọi
+một phương thức ImageView,
+
+00:04:04.640 --> 00:04:09.180
+SetImageResource, trên
+đối tượng IconImageView này.
+
+00:04:09.180 --> 00:04:12.830
+Còn một lỗi nữa cho biết
+không thể thực thi biểu tượng logo.
+
+00:04:12.830 --> 00:04:17.310
+Đó là vì tôi chưa thêm hình ảnh
+nào vào trong ứng dụng với tên logo.
+
+00:04:17.310 --> 00:04:21.410
+Chỉ cần tôi thêm ảnh, lỗi này sẽ biến mất
+và code của chúng ta ở đây là đúng.
+
+00:04:21.410 --> 00:04:25.400
+Đây là code chính xác sau khi tôi đã
+gán view này vào ImageView.
+
+00:04:25.400 --> 00:04:27.330
+Cuối cùng là số 4.
+
+00:04:27.330 --> 00:04:32.080
+Tôi dán phần code vào Android Studio,
+và thật ngạc nhiên là không có lỗi nào hết.
+
+00:04:32.080 --> 00:04:35.960
+Code này đang cố gắng tìm kiếm
+view bằng tiêu đề id, và
+
+00:04:35.960 --> 00:04:41.150
+nó sẽ trả lại một view, được lưu trong
+biến có tên TextView.
+
+00:04:41.150 --> 00:04:43.900
+TextView có định dạng
+dữ liệu là View, vì vậy
+
+00:04:43.900 --> 00:04:47.940
+khớp với vế bên phải,
+toàn bộ dòng code này là chính xác.
+
+00:04:47.940 --> 00:04:51.410
+Ở dòng tiếp theo, chúng ta
+sẽ lấy đối tượng dạng View này, và
+
+00:04:51.410 --> 00:04:54.410
+gọi phương thức
+setVisibility trên đó.
+
+00:04:54.410 --> 00:04:58.763
+Phương thức này nhận một tham số
+đầu vào là View.GONE.
+
+00:04:58.763 --> 00:05:02.790
+Tôi có thể kiểm tra tài liệu
+để xác minh.
+
+00:05:02.790 --> 00:05:06.050
+Trong tài liệu cho nhóm view,
+tôi có thể tìm kiếm
+
+00:05:06.050 --> 00:05:08.400
+phương thức setVisibility.
+
+00:05:08.400 --> 00:05:11.970
+Tôi có thể thấy rằng setVisibility là
+một phương thức nhánh của nhóm view.
+
+00:05:11.970 --> 00:05:16.310
+Nó nhận đầu vào là một số nguyên
+thể hiện trạng thái hiển thị.
+
+00:05:16.310 --> 00:05:21.175
+Các giá trị có thể nhận được là
+VISIBLE, INVISIBLE, và GONE.
+
+00:05:21.175 --> 00:05:24.490
+Bởi setVisibility là một phương thức
+nằm trong nhóm view,
+
+00:05:24.490 --> 00:05:26.320
+đây là một triệu gọi hợp lệ.
+
+00:05:26.320 --> 00:05:29.280
+Ta không cần phải
+gán nó thành TextView.
+
+00:05:29.280 --> 00:05:33.200
+Bởi vì phương thức chúng ta đang gọi
+là một phương thức thuộc nhóm view.
+
+00:05:33.200 --> 00:05:36.010
+Giờ nếu chúng ta muốn sử dụng
+phương thức TextView,
+
+00:05:36.010 --> 00:05:38.860
+chúng ta cần gán nó
+thành TextView.
+
+00:05:38.860 --> 00:05:41.600
+Vì vậy, với câu hỏi này,
+đáp án là không có lỗi, vì
+
+00:05:41.600 --> 00:05:45.930
+setVisibility là phương thức dạng View,
+ta có thể để nguyên nó là đối tượng view.
+
+00:05:45.930 --> 00:05:47.480
+Đây là những câu hỏi khó.
+
+00:05:47.480 --> 00:05:49.150
+Nếu bạn chưa thể trả lời đúng,
+không sao.
+
+00:05:49.150 --> 00:05:52.080
+Trong bài kiểm tra sắp tới,
+bạn sẽ có nhiều cơ hội để thực hành hơn.
+

@@ -1,0 +1,726 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.650 --> 00:00:03.285
+Mari kita kembali
+ke aplikasi JustJava untuk sesaat.
+
+00:00:03.310 --> 00:00:06.978
+Mari kita lihat di kelas &lt;i&gt;MainActivity&lt;/i&gt;
+metode &lt;i&gt;displayMessage.&lt;/i&gt;
+
+00:00:07.003 --> 00:00:09.670
+Semuanya mulai sedikit tegang di sini.
+
+00:00:09.695 --> 00:00:12.382
+Kita sudah mengenali
+bahwa kita menciptakan variabel
+
+00:00:12.407 --> 00:00:14.202
+yang disebut &lt;i&gt;orderSummaryTextView.&lt;/i&gt;
+
+00:00:14.227 --> 00:00:17.217
+Tipe data variabel ini adalah TextView.
+
+00:00:17.715 --> 00:00:20.081
+Kita masih belum memahami bagian ini.
+
+00:00:20.589 --> 00:00:23.804
+Pada baris berikutnya, kita sebut
+metode pada tampilan objek teks ini.
+
+00:00:24.532 --> 00:00:27.883
+Kita menggunakan nama variabel
+yang sama seeprti dinyatakan di sini.
+
+00:00:27.908 --> 00:00:31.292
+Jadi kita sebut
+&lt;i&gt;orderSummaryTextView.setText.&lt;/i&gt;
+
+00:00:31.688 --> 00:00:34.787
+Kemudian kita melewati &lt;i&gt;string&lt;/i&gt;
+sebagai masukan untuk metode ini.
+
+00:00:35.158 --> 00:00:38.664
+Pesan &lt;i&gt;string&lt;/i&gt; ini awalnya
+datang sebagai parameter masukan
+
+00:00:38.689 --> 00:00:40.812
+untuk metode menampilkan pesan.
+
+00:00:41.574 --> 00:00:45.061
+Sekarang kita masuk ke bagian kode,
+yang masih belum kita mengerti.
+
+00:00:45.086 --> 00:00:48.084
+Sepertinya &lt;i&gt;findViewById&lt;/i&gt;
+adalah panggilan metode.
+
+00:00:48.109 --> 00:00:50.628
+Karena memiliki tanda kurung ini
+
+00:00:50.653 --> 00:00:53.190
+yang tampak seperti
+sebuah argumen masukan.
+
+00:00:53.215 --> 00:00:58.086
+Tapi anehnya metode ini tidak
+didefinisikan di mana saja di kelas ini.
+
+00:00:58.514 --> 00:01:02.002
+Jika saya klik dua kali pada nama ini
+dan kemudian tekan perintah F,
+
+00:01:02.027 --> 00:01:04.093
+atau kontrol F jika kau memakai Windows,
+
+00:01:04.119 --> 00:01:07.244
+maka kita dapat mencoba
+melakukan pencarian di berkas ini.
+
+00:01:07.269 --> 00:01:10.497
+Saya hanya melihat
+dua kejadian &lt;i&gt;findViewById,&lt;/i&gt;
+
+00:01:10.522 --> 00:01:12.654
+dan mereka digunakan
+dengan cara yang sama.
+
+00:01:12.679 --> 00:01:15.874
+Tapi saya tidak melihat
+metode yang disebut &lt;i&gt;findViewById.&lt;/i&gt;
+
+00:01:15.899 --> 00:01:19.497
+Omong-omong,
+sebelumnya di kelas &lt;i&gt;MainActivity,&lt;/i&gt;
+
+00:01:19.522 --> 00:01:22.326
+Kita bisa melihat &lt;i&gt;setContentView,&lt;/i&gt;
+
+00:01:22.351 --> 00:01:24.350
+tapi jika kau mencari ini di berkas,
+
+00:01:24.375 --> 00:01:26.899
+hal ini juga tidak didefinisikan
+dalam &lt;i&gt;MainActivity.&lt;/i&gt;
+
+00:01:27.676 --> 00:01:30.097
+Jadi, di mana metode ini didefinisikan?
+
+00:01:30.383 --> 00:01:33.346
+&lt;i&gt;MainActivity&lt;/i&gt; sebenarnya
+berkas yang cukup singkat.
+
+00:01:33.371 --> 00:01:35.512
+Dan hanya terdiri dari sekitar 90 baris,
+
+00:01:35.537 --> 00:01:38.599
+tapi ada sebenarnya
+kelas ini yang penting.
+
+00:01:38.624 --> 00:01:42.035
+Kode mengatakan,
+perluas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:01:42.060 --> 00:01:45.468
+Ini berarti bahwa &lt;i&gt;MainActivity&lt;/i&gt;
+adalah perpanjangan
+
+00:01:45.493 --> 00:01:49.045
+dari fungsi di kelas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:01:49.070 --> 00:01:52.855
+Pada komputermu jika kau melihat
+kegiatan bar di sini, tidak apa-apa,
+
+00:01:52.880 --> 00:01:55.234
+itu hanya versi lama progaram ini.
+
+00:01:55.259 --> 00:01:58.637
+Versi terbaru yang harus kau
+gunakan adalah &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:01:58.662 --> 00:02:02.287
+Dan &lt;i&gt;AppCompatActivity&lt;/i&gt;
+memberi kita dukungan kompatibilitas
+
+00:02:02.312 --> 00:02:04.350
+Pada perangkat Android yang lebih tua.
+
+00:02:04.375 --> 00:02:07.727
+&lt;i&gt;AppCompatActivity&lt;/i&gt; adalah bagian
+perpustakaan dukungan Android.
+
+00:02:07.752 --> 00:02:11.576
+Hal ini memungkinkan kita untuk
+menggunakan fitur UI terbaru pada Android,
+
+00:02:11.601 --> 00:02:15.148
+Sementara masih bekerja pada
+perangkat Android yang lebih tua.
+
+00:02:15.173 --> 00:02:17.838
+Dengan memperluas kelas &lt;i&gt;AppCompatActivity,&lt;/i&gt;
+
+00:02:17.863 --> 00:02:19.651
+Kita mendapatkan semua fungsi tersebut,
+
+00:02:19.676 --> 00:02:24.302
+semua bagian dan metode dari sini,
+dalam &lt;i&gt;MainActivity&lt;/i&gt; secara gratis.
+
+00:02:24.327 --> 00:02:26.847
+Kita tidak perlu salin dan
+menempelkan kode apa pun dari sini.
+
+00:02:26.872 --> 00:02:29.572
+Kita hanya perlu memperpanjang kelas itu.
+
+00:02:29.865 --> 00:02:30.995
+Jika kau tertarik,
+
+00:02:31.020 --> 00:02:34.056
+kau dapat mengetahui informasi
+lebih lanjut tentang &lt;i&gt;AppCompatActivity&lt;/i&gt;
+
+00:02:34.081 --> 00:02:35.707
+dengan mencarinya di Google.
+
+00:02:35.732 --> 00:02:39.490
+Berikut ini adalah dokumen referensi
+untuk kelas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:02:39.515 --> 00:02:41.735
+Karena saya memiliki
+ekstensi Chrome yang diinstal,
+
+00:02:41.760 --> 00:02:43.973
+Saya bisa melihat sumbernya juga.
+
+00:02:43.998 --> 00:02:47.756
+Dan ini adalah kode di mana
+kelas &lt;i&gt;AppCompatActivity&lt;/i&gt; didefinisikan.
+
+00:02:47.781 --> 00:02:50.063
+Kau dapat melihat
+ada banyak fungsi di sini,
+
+00:02:50.088 --> 00:02:54.229
+tapi pesan utamanya kau tak perlu
+memahami bagaimana ini diterapkan.
+
+00:02:54.254 --> 00:02:58.216
+Kau hanya perlu tahu saat
+kau memperpanjang &lt;i&gt;AppCompatActivity,&lt;/i&gt;
+
+00:02:58.241 --> 00:03:00.839
+kau mendapatkan
+semua fungsi ini secara gratis.
+
+00:03:00.864 --> 00:03:03.434
+Pada tingkat tinggi,
+kau dapat memvisualisasikan seperti ini.
+
+00:03:03.459 --> 00:03:05.696
+Ini adalah definisi kelas
+untuk &lt;i&gt;MainActivity.&lt;/i&gt;
+
+00:03:05.721 --> 00:03:07.972
+Dan kau punya beberapa
+metode yang didefinisikan di sini.
+
+00:03:07.997 --> 00:03:12.186
+Saat kau memperpanjang &lt;i&gt;AppCompatActivity,&lt;/i&gt;
+maka kita dapat mengakses bagian ini
+
+00:03:12.211 --> 00:03:14.470
+dan metodenya dari &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:03:14.495 --> 00:03:17.535
+Secara fisik mereka tidak
+ditambahkan ke kelas &lt;i&gt;MainActivity,&lt;/i&gt;
+
+00:03:17.560 --> 00:03:19.185
+tapi kau bisa bayangkan mereka ada,
+
+00:03:19.210 --> 00:03:22.610
+karena kau masih dapat
+mereferensi bagian dan metodenya.
+
+00:03:22.635 --> 00:03:24.555
+Dan seperti itu bagaimana
+kode kita dapat merujuk
+
+00:03:24.580 --> 00:03:27.745
+pada hal-hal seperti
+&lt;i&gt;setContentView&lt;/i&gt; atau &lt;i&gt;FindViewById.&lt;/i&gt;
+
+00:03:27.770 --> 00:03:29.808
+Karena kita warisi metode-metode tersebut,
+
+00:03:29.833 --> 00:03:32.159
+yang kita tak definisikan di &lt;i&gt;MainActivity.&lt;/i&gt;
+
+00:03:32.184 --> 00:03:34.864
+&lt;i&gt;MainActivity&lt;/i&gt; akan ditampilkan
+sebagai layar pada perangkat tapi
+
+00:03:34.889 --> 00:03:39.299
+kita tidak menulis kodenya
+di &lt;i&gt;MainActivity&lt;/i&gt;, kita mewarisinya juga.
+
+00:03:39.324 --> 00:03:43.562
+Kita tidak punya bagian dan metode
+langsung dari AppCompatActivity di kelas
+
+00:03:43.587 --> 00:03:46.661
+tapi sekarang kita tahu mereka ada
+dan bisa merujuk pada mereka.
+
+00:03:46.686 --> 00:03:50.235
+Berbicara tentang mewarisi hal,
+ada hal baik dan buruk tentang itu.
+
+00:03:50.260 --> 00:03:52.322
+Terkadang kita ingin mewarisi perilaku,
+
+00:03:52.347 --> 00:03:55.640
+tapi lain kali kita mungkin ingin
+memodifikasinya sedikit.
+
+00:03:55.665 --> 00:03:59.768
+Jika kau ingin mengubah beberapa
+perilaku dari kelas warisan ini,
+
+00:03:59.793 --> 00:04:02.047
+kau dapat mengganti
+metode-metode tertentu.
+
+00:04:02.072 --> 00:04:07.205
+Kau dapat menambahkan teks
+&lt;i&gt;@Override&lt;/i&gt; di metodenya agar komputer tahu
+
+00:04:07.230 --> 00:04:11.994
+bahwa kau tidak ingin versi
+metode dari &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:04:12.019 --> 00:04:15.567
+Tapi sebaliknya, kau ingin versi
+yang telah kau definisikan di sini.
+
+00:04:15.592 --> 00:04:18.491
+Ini topik yang rumit,
+dan membutuhkan banyak latihan.
+
+00:04:18.516 --> 00:04:21.599
+Tapi kita telah melihat salah satu
+contoh menulis ulang metode
+
+00:04:21.624 --> 00:04:23.553
+dari kelas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:04:23.578 --> 00:04:26.202
+Dan metode itu ada di metode menciptakan.
+
+00:04:26.227 --> 00:04:28.555
+Dengan mengesampingkan metode yang ada
+
+00:04:28.580 --> 00:04:32.424
+di dalam &lt;i&gt;MainActivity&lt;/i&gt;,
+kita menentukan implementasi sendiri
+
+00:04:32.449 --> 00:04:35.171
+untuk apa yang harus terjadi
+saat metode itu dipanggil.
+
+00:04:35.196 --> 00:04:37.053
+Jangan khawatir jika kau tidak mengerti.
+
+00:04:37.078 --> 00:04:38.872
+Saya baru saja
+memberikanmu gambaran singkat
+
+00:04:38.897 --> 00:04:42.130
+mengenai sekelompok konsep
+objek pemrograman berorientasi.
+
+00:04:42.155 --> 00:04:46.026
+Sangat diharapkan bahwa
+kau masih mempunyai pertanyaan.
+
+00:04:46.051 --> 00:04:50.630
+Dan masih perlu membaca lebih lanjut
+topik ini untuk lebih memahaminya.
+
+00:04:50.655 --> 00:04:55.812
+Cara lain memvisualisasikan hubungan
+antara &lt;i&gt;MainActivity&lt;/i&gt; dan &lt;i&gt;AppCompatActivity&lt;/i&gt;
+
+00:04:55.837 --> 00:04:58.149
+dengan cara menggambar
+Diagram Hierarki Kelas.
+
+00:04:58.174 --> 00:05:00.536
+Ini berbeda dengan
+Diagram Hirearki Tampilan
+
+00:05:00.561 --> 00:05:03.671
+karena Diagram Hirearki Tampilan
+menunjukkan tampilan pohon
+
+00:05:03.696 --> 00:05:05.298
+yang ditampilkan pada layar.
+
+00:05:05.323 --> 00:05:07.766
+Diagram Hierarki Kelas
+menunjukkan hubungan
+
+00:05:07.791 --> 00:05:09.846
+antara kelas Java yang berbeda.
+
+00:05:09.871 --> 00:05:12.731
+Kami memiliki &lt;i&gt;AppCompatActivity&lt;/i&gt;
+sebagai kelas super.
+
+00:05:12.756 --> 00:05:16.132
+Sejak &lt;i&gt;MainActivity&lt;/i&gt; meluas
+dari &lt;i&gt;AppCompatActivity,&lt;/i&gt;
+
+00:05:16.157 --> 00:05:18.340
+maka ini dikenal sebagai bagian kelas.
+
+00:05:18.365 --> 00:05:20.491
+Jadi, setiap kali kau
+melihat definisi kelas ini,
+
+00:05:20.516 --> 00:05:23.703
+apa pun yang kau perpanjang
+dikenal kelas super.
+
+00:05:23.728 --> 00:05:25.588
+Ini akan menjadi bagian kelas.
+
+00:05:25.613 --> 00:05:28.835
+Jika kau membuat aktivitas lain
+yang disebut kegiatan rinci
+
+00:05:28.860 --> 00:05:30.923
+dan kau memperpanjang &lt;i&gt;AppCompatActivity,&lt;/i&gt;
+
+00:05:30.948 --> 00:05:33.992
+ini akan menjadi bagian kelas,
+dan ini akan menjadi kelas supernya.
+
+00:05:34.516 --> 00:05:37.621
+Berikut ini contoh lain
+dari warisan kelas Java.
+
+00:05:37.646 --> 00:05:41.294
+Jika kau berpikir tentang hal itu,
+tampilan teks, gambar, dan tombol,
+
+00:05:41.319 --> 00:05:44.239
+semuanya memiliki beberapa
+aspek umum kepada mereka.
+
+00:05:44.264 --> 00:05:47.874
+Semua tampilan ini memiliki
+lebar dan tinggi pada layar.
+
+00:05:47.899 --> 00:05:51.198
+Kita belum mempelajarinya, tapi
+mereka juga memiliki bagian visibilitas.
+
+00:05:51.223 --> 00:05:54.215
+Jadi mereka semua bisa dibuat
+tidak terlihat atau terlihat.
+
+00:05:54.240 --> 00:05:58.420
+Ada juga beberapa sifat lainnya,
+yang umum di antara mereka.
+
+00:05:58.445 --> 00:06:02.222
+Alih-alih menulis kode untuk
+properti ini dalam kelas tampilan teks
+
+00:06:02.247 --> 00:06:05.327
+dan kemudian menyalinnya
+ke tampilan gambar lalu kelas tombol.
+
+00:06:05.352 --> 00:06:07.494
+Kita bisa lakukan sesuatu
+yang sedikit lebih pintar.
+
+00:06:07.519 --> 00:06:09.864
+Kita dapat membuat tampilan kelas.
+
+00:06:09.889 --> 00:06:13.563
+Kita dapat mengekstrak
+sifat umum di antara tampilan ini,
+
+00:06:13.588 --> 00:06:16.250
+lalu masukkan mereka
+dalam tampilan kelas ini,
+
+00:06:16.275 --> 00:06:19.439
+dengan cara itu kode tersebut
+hanya harus ditulis sekali.
+
+00:06:19.464 --> 00:06:21.593
+Tapi bagaimana kita
+membuat hubungan antara
+
+00:06:21.618 --> 00:06:23.828
+kelas tampilan teks dan tampilan kelas?
+
+00:06:23.853 --> 00:06:26.349
+Jika kau berpikir warisan, kau benar.
+
+00:06:26.374 --> 00:06:29.908
+Dalam berkas java &lt;i&gt;TextView&lt;/i&gt; kita
+akan menentukan kelas tampilan teks.
+
+00:06:29.933 --> 00:06:34.023
+Dengan begitu kita akan mewarisi
+semua data dan metode dari tampilan kelas.
+
+00:06:34.048 --> 00:06:37.437
+Kemudian kita tidak perlu memiliki
+banyak kode seperti di kelas &lt;i&gt;TextView&lt;/i&gt;
+
+00:06:37.462 --> 00:06:41.725
+karena bagian dari fungsi tersebut
+sudah ditulis di kelas tampilan.
+
+00:06:41.750 --> 00:06:44.641
+Hal yang sama akan berlaku untuk
+yang kelas &lt;i&gt;ImageView&lt;/i&gt; dan tombol,
+
+00:06:44.666 --> 00:06:46.677
+kita tidak harus menulis kode yang banyak.
+
+00:06:46.708 --> 00:06:49.665
+Dalam berkas ini, kita hanya perlu
+menulis tentang apa yang berbeda
+
+00:06:49.690 --> 00:06:52.833
+mengenai &lt;i&gt;ImageView&lt;/i&gt;
+dibandingkan dengan kelas tampilan.
+
+00:06:52.858 --> 00:06:55.746
+Saya menganggap ini
+sebagai menentukan delta,
+
+00:06:55.771 --> 00:06:58.364
+jadi kelas &lt;i&gt;ImageView&lt;/i&gt;
+hanya harus menentukan
+
+00:06:58.389 --> 00:07:02.614
+apa yang berbeda tentang &lt;i&gt;ImageView&lt;/i&gt;
+dibandingkan dengan kelas tampilan.
+
+00:07:03.657 --> 00:07:06.779
+Jika kita tidak ingin mewarisi
+perilaku tertentu dari kelas tampilan,
+
+00:07:06.804 --> 00:07:09.575
+Kita dapat menentukan
+perilaku yang telah diperbarui
+
+00:07:09.600 --> 00:07:13.299
+di dalam kelas &lt;i&gt;ImageView&lt;/i&gt;
+atau kelas mana pun yang ada di sini.
+
+00:07:13.825 --> 00:07:15.860
+Untuk mengingatkanmu tentang terminologi,
+
+00:07:15.885 --> 00:07:20.650
+dalam hal ini TextView akan menjadi
+bagian kelas dan tampilan kelas supernya.
+
+00:07:21.214 --> 00:07:24.329
+Jika kita kembali ke dokumentasi
+untuk kelas &lt;i&gt;TextView,&lt;/i&gt;
+
+00:07:24.354 --> 00:07:27.116
+kita akan memahami bagian ini sekarang.
+
+00:07:27.141 --> 00:07:29.753
+Dikatakan &lt;i&gt;TextView&lt;/i&gt; memperluas tampilan.
+
+00:07:29.778 --> 00:07:32.494
+Sekarang kita tahu sudah mewarisi
+
+00:07:32.519 --> 00:07:35.145
+bagian dan metode dari &lt;i&gt;ViewClass.&lt;/i&gt;
+
+00:07:35.170 --> 00:07:38.144
+Dan di sini adalah diagram hierarki kelas.
+
+00:07:38.169 --> 00:07:42.591
+Ini menunjukkan bahwa kelas
+&lt;i&gt;TextView&lt;/i&gt; mewarisi dari &lt;i&gt;ViewClass.&lt;/i&gt;
+
+00:07:43.529 --> 00:07:47.100
+Dan pada gilirannya,
+kelas tampilan mewarisi dari kelas objek.
+
+00:07:47.498 --> 00:07:49.949
+Jika kau mencarinya lagi,
+kau akan menemukan kelas-kelas lain,
+
+00:07:49.974 --> 00:07:54.585
+Seperti kelas &lt;i&gt;EditText&lt;/i&gt;, yang
+sebenarnya pemanjangan kelas &lt;i&gt;TextView.&lt;/i&gt;
+
+00:07:54.610 --> 00:07:57.545
+Jadi dibutuhkan perilaku
+membentuk kelas &lt;i&gt;TextView&lt;/i&gt; dan
+
+00:07:57.570 --> 00:08:00.641
+kemudian menambahkan
+sedikit fungsi khusus untuk itu.
+
+00:08:01.147 --> 00:08:03.464
+Jadi &lt;i&gt;EditText&lt;/i&gt; pemajangan dari &lt;i&gt;TextView.&lt;/i&gt;
+
+00:08:03.489 --> 00:08:07.300
+Dan &lt;i&gt;TextView&lt;/i&gt; pemanangan tampilan,
+dan tampilan pemanjangan dari objek.
+
+00:08:07.325 --> 00:08:10.340
+Dan ini adalah diagram hirearki kelas.
+
+00:08:11.133 --> 00:08:13.941
+Ada banyak hal yang terjadi, dan
+kau bisa melihatnya selama berjam-jam.
+
+00:08:13.966 --> 00:08:17.605
+Tapi izinkan saya menunjukkan satu hal
+di halaman dokumentasi &lt;i&gt;TextView.&lt;/i&gt;
+
+00:08:17.630 --> 00:08:20.614
+Saya ingin menunjukkan
+metode untuk &lt;i&gt;SetVisibility.&lt;/i&gt;
+
+00:08:20.639 --> 00:08:24.229
+Berikut ini adalah metode Java
+untuk &lt;i&gt;SetVisibility&lt;/i&gt; dalam kelas &lt;i&gt;TextView.&lt;/i&gt;
+
+00:08:24.254 --> 00:08:27.364
+Ini mengubah apakah
+tampilannya terlihat atau tidak.
+
+00:08:27.753 --> 00:08:33.111
+Jika saya klik pada metode ini,
+ini akan membawa saya ke kelas tampilan.
+
+00:08:33.136 --> 00:08:35.854
+Dan kemudian menjelaskan soal metode ini.
+
+00:08:35.879 --> 00:08:39.688
+Jadi kau dapat melihat bahwa objek
+&lt;i&gt;TextView&lt;/i&gt; memiliki metode set visibilitas.
+
+00:08:39.714 --> 00:08:43.441
+Tapi itu sebenarnya mewarisi
+dari kelas tampilan.
+
+00:08:43.466 --> 00:08:47.272
+Jadi kita punya fungsi ini secara gratis,
+dari kelas tampilan.
+
+00:08:47.297 --> 00:08:50.710
+Oke, kita baru saja menemukan
+banyak konsep baru.
+
+00:08:50.735 --> 00:08:55.473
+Biasanya ini akan dipelajari selama
+satu semester dari jurusan ilmu komputer.
+
+00:08:55.886 --> 00:08:57.981
+Kami akan melakukan
+sedikit latihan sekarang
+
+00:08:58.006 --> 00:09:01.019
+dan mudah-mudahan itu
+akan membuatmu sedikit memahaminya.
+
+00:09:01.044 --> 00:09:03.532
+Tapi hal itu membutuhkan
+lebih banyak waktu dan latihan
+
+00:09:03.557 --> 00:09:06.398
+sampai kau sepenuhnya
+memahami konsep-konsep tersebut.
+
+00:09:06.423 --> 00:09:09.576
+Oke, latihan pertama, saya ingin kau
+membuat aplikasi Android lain yang baru
+
+00:09:09.601 --> 00:09:12.146
+karena kita tidak ingin
+mengacaukan aplikasi JustJava.
+
+00:09:12.885 --> 00:09:15.213
+Setelah kau membuat proyek,
+kemudian jalankan aplikasinya.
+
+00:09:15.606 --> 00:09:18.503
+Setelah kau membuat aplikasimu,
+kau akan melihat berkas &lt;i&gt;MainActivity.&lt;/i&gt;
+
+00:09:18.528 --> 00:09:22.332
+Berkas &lt;i&gt;MainActivity&lt;/i&gt; tersebut akan
+memperpanjang dari &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:09:22.357 --> 00:09:24.228
+Dalam versi Android Studio milikmu,
+
+00:09:24.253 --> 00:09:27.625
+jika &lt;i&gt;MainActivity&lt;/i&gt;
+memperpanjang dari &lt;i&gt;ActionBarActivity&lt;/i&gt;
+
+00:09:27.650 --> 00:09:28.868
+itu bukan sebuah masalah.
+
+00:09:28.893 --> 00:09:31.962
+Itu hanya versi lama
+dari &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:09:31.987 --> 00:09:35.365
+Dengan menghapus metode ini,
+kita akan mundur kembali
+
+00:09:35.390 --> 00:09:40.140
+di mana metode &lt;i&gt;OnCreate&lt;/i&gt;
+muncul di kelas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:09:40.165 --> 00:09:42.212
+Kehadiran metode ini mengatakan,
+
+00:09:42.237 --> 00:09:46.087
+kami ingin perilaku yang berbeda
+di &lt;i&gt;MainActivity&lt;/i&gt; untuk metode &lt;i&gt;OnCreate.&lt;/i&gt;
+
+00:09:46.112 --> 00:09:47.308
+Jadi dengan menghapusnya
+
+00:09:47.333 --> 00:09:51.870
+membawa kita kembali ke perilaku aslinya
+di dalam Kelas &lt;i&gt;AppCompatActivity.&lt;/i&gt;
+
+00:09:51.895 --> 00:09:53.261
+Saat kau menjalankan aplikasi,
+
+00:09:53.286 --> 00:09:54.774
+apa yang kauperhatikan berbeda
+
+00:09:54.799 --> 00:09:57.123
+dibandingkan saat pertama kali
+kau menjalankan aplikasinya?
+
+00:09:57.148 --> 00:09:59.055
+Tulis jawabanmu dalam kotak teks ini.
+

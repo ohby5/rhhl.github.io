@@ -1,0 +1,346 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The displayMessage Method</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Programming: Part 1</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Defining vs Calling a Method.html">02. Defining vs Calling a Method</a>
+    </li>
+    <li class="">
+      <a href="03. Calculate Price Method.html">03. Calculate Price Method</a>
+    </li>
+    <li class="">
+      <a href="04. Define a Method .html">04. Define a Method </a>
+    </li>
+    <li class="">
+      <a href="05. Inputs to a Method.html">05. Inputs to a Method</a>
+    </li>
+    <li class="">
+      <a href="06. Add or Remove Parameters.html">06. Add or Remove Parameters</a>
+    </li>
+    <li class="">
+      <a href="07. Output from a Method.html">07. Output from a Method</a>
+    </li>
+    <li class="">
+      <a href="08. Use Return Value from Method.html">08. Use Return Value from Method</a>
+    </li>
+    <li class="">
+      <a href="09. Define and Call a Method.html">09. Define and Call a Method</a>
+    </li>
+    <li class="">
+      <a href="10. The displayMessage Method.html">10. The displayMessage Method</a>
+    </li>
+    <li class="">
+      <a href="11. Resources.html">11. Resources</a>
+    </li>
+    <li class="">
+      <a href="12. Resource IDs.html">12. Resource IDs</a>
+    </li>
+    <li class="">
+      <a href="13. From XML to Java.html">13. From XML to Java</a>
+    </li>
+    <li class="">
+      <a href="14. What Are Java Objects.html">14. What Are Java Objects?</a>
+    </li>
+    <li class="">
+      <a href="15. What is a Java Class.html">15. What is a Java Class?</a>
+    </li>
+    <li class="">
+      <a href="16. Create an Object.html">16. Create an Object</a>
+    </li>
+    <li class="">
+      <a href="17. Call Methods on Object.html">17. Call Methods on Object</a>
+    </li>
+    <li class="">
+      <a href="18. Practice Calling Object Methods.html">18. Practice Calling Object Methods</a>
+    </li>
+    <li class="">
+      <a href="19. Inheriting Behavior.html">19. Inheriting Behavior</a>
+    </li>
+    <li class="">
+      <a href="20. Find View by Id.html">20. Find View by Id</a>
+    </li>
+    <li class="">
+      <a href="21. Casting with findViewById.html">21. Casting with findViewById</a>
+    </li>
+    <li class="">
+      <a href="22. Set Data on Views.html">22. Set Data on Views</a>
+    </li>
+    <li class="">
+      <a href="23. Quiz Read Data from Views.html">23. Quiz: Read Data from Views</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. The displayMessage Method</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>The displayMessage Method</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="10. The displayMessage Method-mcpcpQQkxFg.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="10. The displayMessage Method-mcpcpQQkxFg.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="10. The displayMessage Method-mcpcpQQkxFg.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="10. The displayMessage Method-mcpcpQQkxFg.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="10. The displayMessage Method-mcpcpQQkxFg.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="10. The displayMessage Method-mcpcpQQkxFg.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="10. The displayMessage Method-mcpcpQQkxFg.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="10. The displayMessage Method-mcpcpQQkxFg.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="10. The displayMessage Method-mcpcpQQkxFg.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="10. The displayMessage Method-mcpcpQQkxFg.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="10. The displayMessage Method-mcpcpQQkxFg.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="10. The displayMessage Method-mcpcpQQkxFg.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="10. The displayMessage Method-mcpcpQQkxFg.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="10. The displayMessage Method-mcpcpQQkxFg.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="10. The displayMessage Method-mcpcpQQkxFg.zh-TW.vtt" label="TW">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4576155843.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 27.435559866962304%; left: 5.89931421446384%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 35.601441241685144%; left: 6.041536783042394%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 65.37901884700665%; left: 6.982543640897755%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check3" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 80.66449556541019%; left: 7.331281172069826%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check4" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="10. The displayMessage Method-mE1wf6e4B2A.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="10. The displayMessage Method-mE1wf6e4B2A.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="US" src="10. The displayMessage Method-mE1wf6e4B2A.en-US.vtt" label="US">
+  <track default="true" kind="subtitles" srclang="en" src="10. The displayMessage Method-mE1wf6e4B2A.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="10. The displayMessage Method-mE1wf6e4B2A.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="10. The displayMessage Method-mE1wf6e4B2A.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="10. The displayMessage Method-mE1wf6e4B2A.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="10. The displayMessage Method-mE1wf6e4B2A.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="10. The displayMessage Method-mE1wf6e4B2A.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="10. The displayMessage Method-mE1wf6e4B2A.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="10. The displayMessage Method-mE1wf6e4B2A.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="10. The displayMessage Method-mE1wf6e4B2A.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="10. The displayMessage Method-mE1wf6e4B2A.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="10. The displayMessage Method-mE1wf6e4B2A.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="10. The displayMessage Method-mE1wf6e4B2A.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="10. The displayMessage Method-mE1wf6e4B2A.zh-TW.vtt" label="TW">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p>The end goal should look something like this:</p>
+<p><img src="media/unnamed-9857-instructor-note-0.gif" alt="End Goal" /></p>
+<p>In the <code>activity_main.xml</code> layout:</p>
+<ol>
+<li>Change <strong>PRICE</strong> label to <strong>ORDER SUMMARY</strong></li>
+<li>Change the TextView for price value to have an ID of <code>@+id/order_summary_text_view.</code></li>
+</ol>
+<p>In <code>MainActivity.java</code>, in the <code>displayMessage(String message)</code> method:</p>
+<ol start="3">
+<li>Change variable name from <code>priceTextView</code> to <code>orderSummaryTextView</code>.</li>
+<li>Change <code>R.id.price_text_view</code> to <code>R.id.order_summary_text_view</code>.</li>
+</ol>
+<p>In <code>MainActivity.java</code>:</p>
+<ol start="5">
+<li>Remember to delete the <code>displayPrice()</code> method because we don’t need that anymore.</li>
+</ol>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Resources.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. The displayMessage Method')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

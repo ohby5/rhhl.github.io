@@ -1,0 +1,455 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.371 --> 00:00:01.960
+Hagamos el primer paso juntos,
+
+00:00:01.960 --> 00:00:04.242
+para agregar un nuevo método
+en la <i>MainActivity</i>.
+
+00:00:04.801 --> 00:00:07.906
+Puedes escoger cualquier parte del archivo
+para agregar el método,
+
+00:00:07.906 --> 00:00:10.990
+siempre que se encuentre
+fuera de las llaves de otro método.
+
+00:00:10.990 --> 00:00:14.230
+Voy a agregarlo justo por debajo
+del otro método que hemos definido,
+
+00:00:14.230 --> 00:00:16.300
+que era <i>calculatePrice</i>.
+
+00:00:16.300 --> 00:00:18.767
+Digo <i>private</i> para el
+modificador de acceso,
+
+00:00:18.768 --> 00:00:21.267
+porque lo único que
+accederá a este método
+
+00:00:21.268 --> 00:00:23.292
+está dentro de la <i>MainActivity</i>.
+
+00:00:24.180 --> 00:00:27.060
+Luego digo <i>string</i> para el tipo de retorno,
+
+00:00:27.060 --> 00:00:30.550
+porque el método <i>createOrderSummary</i>
+debe retornar un <i>string</i>.
+
+00:00:30.550 --> 00:00:34.934
+Y luego el nombre del método
+que es <i>createOrderSummary</i>.
+
+00:00:36.084 --> 00:00:39.354
+Luego debe tomar como entrada
+un precio, que es un número.
+
+00:00:40.227 --> 00:00:42.756
+Bueno, terminamos la firma del método,
+
+00:00:42.757 --> 00:00:44.803
+pero ahora tenemos
+que implementar el método
+
+00:00:44.804 --> 00:00:47.060
+para que retorne este mensaje.
+
+00:00:47.060 --> 00:00:52.040
+El mensaje comienza con el nombre,
+una cantidad, un total y luego, "gracias".
+
+00:00:52.040 --> 00:00:54.364
+Entonces copiaré esto,
+
+00:00:54.365 --> 00:00:56.944
+y lo pegaré en el método
+<i>createOrderSummary</i>.
+
+00:00:57.666 --> 00:00:59.953
+Ahora, podemos empezar
+con algún código base.
+
+00:00:59.954 --> 00:01:02.948
+La diferencia ahora es que el resumen
+de la orden debe comenzar
+
+00:01:02.948 --> 00:01:05.015
+con un nombre y no con el precio total.
+
+00:01:05.015 --> 00:01:08.890
+Entonces, moveré esto a la siguiente línea
+y lo guardaré para más tarde.
+
+00:01:08.890 --> 00:01:14.580
+Inicializaré la variable <i>priceMessage</i>
+a "Name: Kaptain Kunal".
+
+00:01:14.580 --> 00:01:17.660
+En la siguiente línea,
+actualizaré <i>priceMessage</i>.
+
+00:01:18.690 --> 00:01:21.907
+Le agregaré al mensaje existente,
+
+00:01:21.908 --> 00:01:26.485
+entonces diré <i>priceMessage</i>
+más el nuevo texto,
+
+00:01:26.485 --> 00:01:31.509
+quiero añadir "Quantity: "
+y luego añadir la variable <i>quantity</i>.
+
+00:01:32.032 --> 00:01:34.095
+Como <i>quantity</i> es una variable global,
+
+00:01:34.095 --> 00:01:36.745
+podemos accederla dentro de este método.
+
+00:01:36.745 --> 00:01:39.340
+Bien, ya tenemos el nombre y la cantidad.
+
+00:01:39.340 --> 00:01:43.793
+En la línea siguiente
+actualizaré <i>priceMessage</i> nuevamente
+
+00:01:43.794 --> 00:01:45.940
+y añadiré más texto.
+
+00:01:45.940 --> 00:01:48.700
+En realidad se supone que este texto
+sea el precio total,
+
+00:01:48.700 --> 00:01:50.720
+así que puedo usar lo que teníamos antes.
+
+00:01:51.340 --> 00:01:55.080
+Bien, y luego en la última línea
+actualizamos <i>priceMessage</i> de nuevo.
+
+00:01:55.080 --> 00:01:57.620
+Tomamos el valor actual 
+de la cadena de caracteres
+
+00:01:57.620 --> 00:01:59.620
+y le añadimos, "Thank you!".
+
+00:01:59.620 --> 00:02:02.210
+Todo esto se ve bien,
+pero todavía hay un error aquí.
+
+00:02:02.210 --> 00:02:03.910
+Dice que falta la sentencia <i>return</i>.
+
+00:02:03.910 --> 00:02:07.160
+Dado que se supone que retornemos
+un resumen de cadena de caracteres,
+
+00:02:07.160 --> 00:02:10.370
+tengo que añadir otra línea de código
+que diga <i>return</i>.
+
+00:02:10.370 --> 00:02:12.240
+y luego el valor de retorno.
+
+00:02:12.240 --> 00:02:15.210
+En este caso, el valor de retorno
+es <i>priceMessage</i>.
+
+00:02:15.210 --> 00:02:17.430
+Y añado un punto y coma al final también.
+
+00:02:17.430 --> 00:02:19.440
+Bien, ahora el error se ha ido.
+
+00:02:19.440 --> 00:02:22.894
+Parece que nuestro código está bien,
+así que voy a ejecutarlo y probarlo.
+
+00:02:23.365 --> 00:02:26.142
+Bien, entonces si ahora cambio
+la cantidad a 3,
+
+00:02:26.143 --> 00:02:29.580
+y pulso el botón <i>Order</i>, no funciona.
+
+00:02:30.430 --> 00:02:32.320
+Veamos qué pasa.
+
+00:02:32.320 --> 00:02:35.150
+Mirando el código más de cerca,
+veo cuál es el problema.
+
+00:02:35.150 --> 00:02:38.660
+Hay una advertencia aquí que dice
+que el método privado <i>createOrderSummary</i>
+
+00:02:38.660 --> 00:02:39.730
+nunca se utiliza.
+
+00:02:39.730 --> 00:02:41.100
+Me olvidé de llamarlo.
+
+00:02:41.100 --> 00:02:43.307
+Volvamos a la diapositiva
+del cuestionario.
+
+00:02:43.307 --> 00:02:45.754
+Bien, entonces hicimos
+la primera tarea con éxito
+
+00:02:45.755 --> 00:02:48.722
+pero ahora tengo que llamar
+al método <i>createOrderSummary</i>
+
+00:02:48.723 --> 00:02:50.510
+desde el método <i>submitOrder</i>.
+
+00:02:51.220 --> 00:02:55.211
+Volviendo a <i>Android Studio</i>,
+tengo que arreglar el método <i>submitOrder</i>.
+
+00:02:55.212 --> 00:02:57.300
+He calculado el precio,
+lo cual es correcto.
+
+00:02:57.300 --> 00:03:00.320
+Pero ahora tengo que pasarlo
+al método <i>createOrderSummary</i>.
+
+00:03:00.320 --> 00:03:03.860
+Así que voy a hacer eso aquí,
+<i>createOrderSummary</i>
+
+00:03:03.860 --> 00:03:05.690
+con la variable <i>price</i>.
+
+00:03:05.690 --> 00:03:08.340
+El valor de retorno de este método
+quedará almacenado
+
+00:03:08.340 --> 00:03:10.380
+en la variable <i>priceMessage</i>.
+
+00:03:10.380 --> 00:03:13.190
+Ya no necesito esta línea de código
+porque "Thank you"
+
+00:03:13.190 --> 00:03:15.260
+ya está en el texto aquí abajo.
+
+00:03:15.260 --> 00:03:16.680
+Así que lo puedo borrar.
+
+00:03:16.680 --> 00:03:18.248
+Luego para actualizar la pantalla
+
+00:03:18.248 --> 00:03:20.672
+lo que tengo que hacer
+es llamar a <i>displayMessage</i>
+
+00:03:20.672 --> 00:03:23.230
+con la variable <i>priceMessage</i> como antes.
+
+00:03:23.230 --> 00:03:25.410
+Ahora ejecutemos la aplicación de nuevo.
+
+00:03:25.410 --> 00:03:27.268
+Si cambio la cantidad a 3
+
+00:03:27.269 --> 00:03:30.387
+y pulso el botón <i>Order</i>,
+todavía sigue sin funcionar.
+
+00:03:30.870 --> 00:03:32.924
+La mayor parte del texto está en una línea
+
+00:03:32.932 --> 00:03:34.970
+cuando debería estar en varias líneas,
+
+00:03:34.970 --> 00:03:37.210
+entonces volvamos
+y corrijamos nuestro código.
+
+00:03:37.210 --> 00:03:38.432
+Mirando este código
+
+00:03:38.433 --> 00:03:41.167
+me doy cuenta de que me olvidé
+el carácter de nueva línea.
+
+00:03:41.167 --> 00:03:44.130
+Lo añadí correctamente para "Thank you"
+pero no para las demás.
+
+00:03:44.130 --> 00:03:46.662
+Así que voy a añadirlo
+a las otras líneas ahora.
+
+00:03:47.408 --> 00:03:49.520
+Bien, ejecutémoslo de nuevo.
+
+00:03:50.274 --> 00:03:51.600
+Y funciona.
+
+00:03:51.600 --> 00:03:52.830
+Impresionante.
+
+00:03:52.830 --> 00:03:55.972
+Ahora Kaptain Kunal
+puede tomar sus tres tazas de café.
+
+00:03:55.973 --> 00:03:58.067
+Quiero mostrarte algunas
+otras optimizaciones
+
+00:03:58.067 --> 00:03:59.670
+que puedes hacer en tu código.
+
+00:03:59.670 --> 00:04:02.277
+Nota que podrías haber llamado
+al método <i>calculatePrice</i>
+
+00:04:02.278 --> 00:04:04.142
+dentro del método <i>createOrderSummary</i>
+
+00:04:04.143 --> 00:04:07.170
+en lugar de pasarlo
+como parámetro de entrada.
+
+00:04:07.170 --> 00:04:11.384
+Así que podría haber puesto
+<i>calculatePrice</i> aquí.
+
+00:04:11.385 --> 00:04:12.880
+Eso habría funcionado también.
+
+00:04:12.880 --> 00:04:16.250
+Pero quería mostrarte
+que puedes tomar la salida de un método
+
+00:04:16.250 --> 00:04:18.370
+y pasarlo como entrada a otro método.
+
+00:04:18.370 --> 00:04:20.373
+Así que vamos a dejarlo como estaba antes.
+
+00:04:21.440 --> 00:04:23.269
+Dentro del método <i>createOrderSummary</i>,
+
+00:04:23.270 --> 00:04:27.920
+la otra cosa que hubiera hecho
+es utilizar el operador +=.
+
+00:04:27.920 --> 00:04:29.114
+Es una forma abreviada,
+
+00:04:29.115 --> 00:04:35.070
+y significa lo mismo que
+<i>priceMessage = priceMessage +</i> todo esto.
+
+00:04:35.070 --> 00:04:36.673
+Así que si cambio todo esto
+
+00:04:36.674 --> 00:04:40.660
+para que sea +=,
+sería lo mismo que tenía antes.
+
+00:04:40.660 --> 00:04:43.680
+Con esto escribes menos
+y tu código es más conciso.
+
+00:04:44.740 --> 00:04:46.120
+En el método <i>calculatePrice</i>,
+
+00:04:46.120 --> 00:04:49.680
+otra cosa que hubiera hecho
+es retornar el valor inmediatamente
+
+00:04:49.681 --> 00:04:54.030
+en lugar de almacenarlo
+en una variable local y luego retornarlo.
+
+00:04:54.030 --> 00:04:56.710
+Esto también conduce
+a un código más conciso.
+
+00:04:56.710 --> 00:04:58.568
+Y luego aquí, en el método <i>submitOrder</i>,
+
+00:04:58.569 --> 00:05:00.530
+en lugar de crear el
+resumen de la orden,
+
+00:05:00.530 --> 00:05:03.430
+almacenarlo en una variable
+y usarlo inmediatamente después,
+
+00:05:03.431 --> 00:05:08.960
+podría haber llamado a <i>createOrderSummary</i>
+y luego a <i>displayMessage</i>.
+
+00:05:08.960 --> 00:05:11.290
+Esto conduce a lo mismo.
+
+00:05:11.290 --> 00:05:13.800
+El valor de retorno del método
+<i>createOrderSummary</i> es
+
+00:05:13.800 --> 00:05:15.040
+una cadena de caracteres,
+
+00:05:15.040 --> 00:05:19.190
+y será pasado como argumento de entrada
+al método <i>displayMessage</i>.
+
+00:05:19.190 --> 00:05:21.826
+Puedes dejarlo así si quieres,
+si es más fácil de leer.
+
+00:05:22.808 --> 00:05:26.236
+Todos estos consejos y trucos
+conducen a la misma lógica de todos modos.
+
+00:05:26.919 --> 00:05:28.094
+Antes de que lo olvide,
+
+00:05:28.095 --> 00:05:30.290
+también recuerda añadir
+un comentario <i>Javadoc</i>
+
+00:05:30.290 --> 00:05:33.430
+en la parte superior de este método
+para describir lo que hace.
+
+00:05:33.430 --> 00:05:35.780
+Técnicamente no es necesario
+un comentario <i>Javadoc</i>
+
+00:05:35.780 --> 00:05:36.931
+para un método privado,
+
+00:05:36.931 --> 00:05:39.920
+pero es de buena práctica
+escribir la descripción de un método,
+
+00:05:39.920 --> 00:05:43.797
+así otras personas que lean tu código
+podrán entender lo que trataste de hacer.
+
+00:05:44.380 --> 00:05:47.904
+La descripción de este método
+es que crea un resumen de la orden.
+
+00:05:47.905 --> 00:05:50.263
+El parámetro de entrada
+es el precio de la orden,
+
+00:05:50.263 --> 00:05:51.774
+y retorna el resumen de texto.
+

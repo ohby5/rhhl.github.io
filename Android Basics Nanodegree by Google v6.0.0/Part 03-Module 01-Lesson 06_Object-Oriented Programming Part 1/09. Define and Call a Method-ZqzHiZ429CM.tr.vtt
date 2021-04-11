@@ -1,0 +1,412 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.640 --> 00:00:03.565
+MainActivity'e yeni metot eklemenin
+ilk adımını hep birlikte yapalım.
+
+00:00:04.930 --> 00:00:07.390
+Metotunuzu eklemek için dosyanın içinden
+herhangi bir yeri seçebilirsiniz,
+
+00:00:07.390 --> 00:00:11.100
+bir başka metotun parantezleri
+dışında olduğu sürece.
+
+00:00:11.100 --> 00:00:14.230
+Tanımladığımız calculatePrice olan
+diğer metotun hemen
+
+00:00:14.230 --> 00:00:16.300
+altına ekleyeceğim.
+
+00:00:16.300 --> 00:00:19.530
+Erişim denetleyicilerini "private"
+olarak belirleyeceğim, çünkü
+
+00:00:19.530 --> 00:00:22.960
+bu metota erişmesi gereken her şey
+MainActivity'nin içinde.
+
+00:00:24.180 --> 00:00:27.060
+Sonrada geri dönüş türü olarak
+"String" yazacağım,
+
+00:00:27.060 --> 00:00:30.550
+çünkü createOrderSummary metotunun
+bir stringe dönmesi gerekiyor.
+
+00:00:30.550 --> 00:00:34.665
+Ve sonrasında isim olarak;
+createOrderSummary
+
+00:00:36.230 --> 00:00:38.940
+Ve sonra da, bir fiyat, yani rakam,
+girişini kabul etmeli.
+
+00:00:40.340 --> 00:00:42.890
+Pekala, metot imzası kısmını
+hallettik, fakat
+
+00:00:42.890 --> 00:00:47.060
+şimdi de buradaki mesaja dönüşecek
+metotu yerleştirmemiz gerekiyor.
+
+00:00:47.060 --> 00:00:52.040
+Mesaj isimle başlıyor, miktar, toplam
+ve sonra da teşekkürler!
+
+00:00:52.040 --> 00:00:54.580
+Öyleyse ben de burayı kopyalayacağım ve
+
+00:00:54.580 --> 00:00:56.590
+createOrderSummary metotunun
+içine yapıştıracağım.
+
+00:00:56.590 --> 00:01:00.120
+Şimdi, bazı temel kodlarla başlayabiliriz.
+
+00:01:00.120 --> 00:01:01.150
+Aradaki farksa,
+
+00:01:01.150 --> 00:01:05.090
+komut özet bilgisi isim ile başlamalı,
+toplam fiyatla değil.
+
+00:01:05.090 --> 00:01:08.890
+Bu yüzden ben de bunu bir alt satıra
+kaydırıp sonrası için saklayacağım.
+
+00:01:08.890 --> 00:01:12.459
+priceMessage'a "Name: Kaptain Kunal"
+
+00:01:12.459 --> 00:01:14.580
+değerini atayacağım.
+
+00:01:14.580 --> 00:01:17.660
+Ve sonra da, bir sonraki satırda,
+priceMessage'ı güncelleyeceğim.
+
+00:01:18.690 --> 00:01:22.025
+Varolan mesaja ekleme yapacağım, yani
+
+00:01:22.025 --> 00:01:26.485
+priceMessage + yeni metin, ve
+
+00:01:26.485 --> 00:01:31.115
+sonrasında qunatity ve
+değişken quantity eklemek istiyorum.
+
+00:01:32.265 --> 00:01:34.095
+Sonuçta quantity (miktar)
+global değişken olduğun için
+
+00:01:34.095 --> 00:01:36.745
+metotun içinde erişebilmeliyiz.
+
+00:01:36.745 --> 00:01:39.340
+Pekala,şu an için bir isim ve
+miktar belirledik.
+
+00:01:39.340 --> 00:01:44.020
+Bir sonraki satırda tekrardan
+priceMessage'ı güncelleyeceğim ve
+
+00:01:44.020 --> 00:01:45.940
+biraz daha metin ekleyeceğim.
+
+00:01:45.940 --> 00:01:48.700
+Aslında bu metinin toplam fiyat
+olması gerekiyor, o yüzden
+
+00:01:48.700 --> 00:01:50.270
+daha önceden yaptığımızın
+aynısı kullanabilirim.
+
+00:01:51.340 --> 00:01:55.080
+Peki, sonrasında tekrardan
+priceMessage'ı güncelliyoruz.
+
+00:01:55.080 --> 00:01:58.639
+O stringin mevcut değerini alıp ve
+sonrasında "Thank you" ekliyorum
+
+00:01:59.740 --> 00:02:02.210
+Hepsi iyi gözüküyor, fakat
+hala burada bir hata var.
+
+00:02:02.210 --> 00:02:04.260
+Ve dönüş komutunun olmadığını söylüyor.
+
+00:02:04.260 --> 00:02:07.090
+Sonuçta summary stringine dönüş
+yapmamız gerektiğine göre
+
+00:02:07.090 --> 00:02:10.370
+return yazan yeni bir sıra
+eklemem gerekiyor.
+
+00:02:10.370 --> 00:02:12.240
+Ve sonrasında bir return (dönüş) değeri.
+
+00:02:12.240 --> 00:02:15.210
+Bu durumda return değeri priceMessage.
+
+00:02:15.210 --> 00:02:16.630
+Ben de sonunda bir
+noktalı virgül ekliyorum.
+
+00:02:17.660 --> 00:02:19.440
+Peki, şimdi hata gitti.
+
+00:02:19.440 --> 00:02:22.150
+Kodumuz iyi gözüküyor, bu yüzden
+ben de onu çalışıtırıp test edeceğim.
+
+00:02:23.480 --> 00:02:26.300
+Peki, şimdi miktarı üç olarak değiştirip
+
+00:02:26.300 --> 00:02:28.930
+Order düğmesine bastığımda, işe yaramıyor.
+
+00:02:30.620 --> 00:02:32.320
+Bakalım yanlış olan neymiş.
+
+00:02:32.320 --> 00:02:35.260
+Koda daha yakından bakınca
+sorunun ne olduğu belli oldu.
+
+00:02:35.260 --> 00:02:38.660
+Burada "private metot 'createOrderSummary'
+hiç kullanılmadı"
+
+00:02:38.660 --> 00:02:39.730
+yazan bir uyarı var.
+
+00:02:39.730 --> 00:02:41.100
+Çağırmayı unuttum.
+
+00:02:41.100 --> 00:02:42.450
+Sınav slaytına geri dönelim.
+
+00:02:43.580 --> 00:02:46.910
+Tamam, başarıyla ilk görev yaptık
+fakat şimdi de
+
+00:02:46.910 --> 00:02:50.010
+submitOrder mettundan
+createOrderSummary metotunu çağırmalıyım.
+
+00:02:51.220 --> 00:02:55.300
+Android Studio'ya geri dönerek
+submitOrder metotunu düzeltmeliyim.
+
+00:02:55.300 --> 00:02:57.300
+Fiyatı hesapladım ve doğru gözüküyor.
+
+00:02:57.300 --> 00:03:00.320
+Fakat şimdi de bunu createOrderSummary
+metotunun içine atamam gerek.
+
+00:03:00.320 --> 00:03:03.860
+Onu da şimdi burada
+değişken fiyatla birlikte
+
+00:03:03.860 --> 00:03:05.690
+createOrderSummary'de yapacağım.
+
+00:03:05.690 --> 00:03:08.340
+Bu metotun dönüş değeri
+priceMessage değişkeninin
+
+00:03:08.340 --> 00:03:10.380
+içinde saklanacak.
+
+00:03:10.380 --> 00:03:13.190
+Artık bu kod satırına ihtiyacım yok
+çünkü "Thank you"
+
+00:03:13.190 --> 00:03:15.260
+zaten buradaki metinde yer alıyor.
+
+00:03:15.260 --> 00:03:16.680
+O yüzden onu silebilirim.
+
+00:03:16.680 --> 00:03:20.800
+Sonrasında, ekranı güncellemek için tek
+yapmam gereken önceden olduğu gibi
+
+00:03:20.800 --> 00:03:23.230
+priceMessage değişkeni ile birlikte
+displayMessage'ı çağırmak
+
+00:03:23.230 --> 00:03:25.410
+Şimdi tekrardan uygulamayı çalıştıralım.
+
+00:03:25.410 --> 00:03:27.370
+Eğer miktarı üç olarak değiştirip
+
+00:03:27.370 --> 00:03:29.930
+Order butonuna bastığımda,
+hala çalşımıyor.
+
+00:03:31.080 --> 00:03:34.970
+Yazıların çoğu bir kaç satırda olması
+gerekirken tek bir satırda yer alıyor.
+
+00:03:34.970 --> 00:03:37.210
+O halde geri dönüp kodumuzu düzeltelim.
+
+00:03:37.210 --> 00:03:40.650
+Koda baktığımda yeni bir karakter
+satırını unuttuğumu farkettim.
+
+00:03:40.650 --> 00:03:43.950
+Sadece "Thank you" için uygun
+bir tane ekledim, diğerleri için değil.
+
+00:03:43.950 --> 00:03:46.340
+Şimdi de diğer satırlara ekleyeceğim.
+
+00:03:47.510 --> 00:03:49.230
+Pekala, tekrardan çalıştırmayı deneyelim.
+
+00:03:50.370 --> 00:03:51.600
+Ve çalışıyor.
+
+00:03:51.600 --> 00:03:52.830
+Harika.
+
+00:03:52.830 --> 00:03:56.050
+Artık, Kaptain Kunal
+üç bardak kahvesini alabilir.
+
+00:03:56.050 --> 00:03:59.670
+Kodunuza uygulayacağınız bazı
+iyileştimeleri göstermek istiyorum size.
+
+00:03:59.670 --> 00:04:02.530
+Farkedeceğiniz gibi giriş parametresi
+olarak eklemek yerine createOrderSummary
+
+00:04:02.530 --> 00:04:07.170
+metotunun içinden calculatePrice
+metotunu çağırabilirdik.
+
+00:04:07.170 --> 00:04:10.420
+Yani calculatePrice'ı
+burada yapabilirdik.
+
+00:04:10.420 --> 00:04:12.880
+Bu da işe yarardı.
+
+00:04:12.880 --> 00:04:16.250
+Fakat size bir metotun çıktıısnı alıp
+
+00:04:16.250 --> 00:04:18.370
+diğer bir metota giriş olarak
+eklemeyi göstermek istedim.
+
+00:04:18.370 --> 00:04:20.040
+Böylece önceden olduğu
+gibi bırakacağız.
+
+00:04:21.440 --> 00:04:23.874
+CreateOrderSummary metotu içinde,
+
+00:04:23.874 --> 00:04:27.920
+yapabileceğim bir başka şey de
++= operator
+
+00:04:27.920 --> 00:04:29.240
+Bu kısaltmadır, ve
+
+00:04:29.240 --> 00:04:35.070
+anlamı da;
+priceMessage=priceMessage+bunların hepsi.
+
+00:04:35.070 --> 00:04:40.660
+Yani bunların hepsini "+ =" olarak
+değiştirirsem aynısı olacaktır.
+
+00:04:40.660 --> 00:04:43.680
+Daha az tuşlama olduğu için
+kodunuzda daha kısa olur.
+
+00:04:44.740 --> 00:04:46.120
+CalculatePrice metotunda,
+
+00:04:46.120 --> 00:04:49.160
+yapabileceğim bir başka şey de
+değeri bir lokal değişkenin içinde
+
+00:04:49.160 --> 00:04:54.030
+tutup sonra döndürmektense
+değeri hemen döndürmek.
+
+00:04:54.030 --> 00:04:56.840
+Bu da kodun daha kısa olmasını sağlıyor.
+
+00:04:56.840 --> 00:05:00.340
+Ve sonra burada, submitOrder metotunda,
+orderSummary oluşturarak değişkende
+
+00:05:00.340 --> 00:05:03.880
+saklayıp sonrasında kullanmak yerine
+sadece
+
+00:05:03.880 --> 00:05:08.960
+createOrderSummary'ı çağırıp, ardından
+displayMessage'ı çağırabilirdim.
+
+00:05:08.960 --> 00:05:11.290
+Bu da aynı sonucu veriyor.
+
+00:05:11.290 --> 00:05:14.590
+CreateOrderSummary metotunun
+dönüş değeri bir string,
+
+00:05:14.590 --> 00:05:19.190
+ve o da bir giriş değişkeni olarak
+DisplayMessage metotuna yazılır.
+
+00:05:19.190 --> 00:05:21.410
+Eğer okuması daha kolay geliyorsa,
+bu şekilde bırakabilirsiniz.
+
+00:05:23.110 --> 00:05:25.630
+Bütün bu ipuçları ve püf noktaları
+aynı mantığa çıkıyor zaten.
+
+00:05:27.030 --> 00:05:30.290
+Ayrıca unutmadan, bu metotun
+üstündeki Javadoc yorum kısmına
+
+00:05:30.290 --> 00:05:33.680
+işlemin ne yapması gerektiğini anlatan
+bir açıklama eklemeyi ihmal etmeyin.
+
+00:05:33.680 --> 00:05:36.821
+Teknik olarak, private metot için bir
+Javadoc yorumuna ihtiyacınız yok, fakat
+
+00:05:36.821 --> 00:05:39.449
+Sadece, kodunuzu inceleyen diğer
+insaların ne yapmaya çalıştığınızı
+
+00:05:39.449 --> 00:05:42.437
+anlaması için metotunuza
+bir açıklama yazmanız
+
+00:05:42.437 --> 00:05:44.380
+güzel bir alışkanlık.
+
+00:05:44.380 --> 00:05:48.002
+Bu metotun açıklaması şu şekilde;
+bir komut özeti oluşturma
+
+00:05:48.002 --> 00:05:51.560
+fiyat komutu olarak giriş parametresi,
+ve sonrada metin özetine dönüş.
+

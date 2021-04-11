@@ -1,0 +1,366 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.470 --> 00:00:03.770
+Kita sudah membuat versi sederhana
+dari kelas TextView
+
+00:00:03.770 --> 00:00:06.810
+yang akan di simpan di dalam
+berkas TextView.java.
+
+00:00:06.810 --> 00:00:08.290
+Kita sederhanakan agar lebih mudah
+
+00:00:08.290 --> 00:00:11.060
+untuk memahami wujud
+dari kelas itu sendiri
+
+00:00:11.060 --> 00:00:13.710
+Pertama, dimulai dengan pengubah akses.
+
+00:00:13.710 --> 00:00:15.100
+Ditandai sebagai publik agar
+
+00:00:15.100 --> 00:00:19.480
+hal lain seperti inactivity bisa
+menggunakan kelas TextView ini.
+
+00:00:19.480 --> 00:00:21.040
+Lalu terdapat kata class di sini.
+
+00:00:21.040 --> 00:00:24.310
+Ini menunjukkan pada java bahwa ini
+merupakan suatu kelas definisi.
+
+00:00:24.310 --> 00:00:26.400
+Lalu terdapat pula nama di dalam kelas.
+
+00:00:26.400 --> 00:00:30.590
+Nama kelas di dalam Java dimulai dengan
+huruf kapital yang disebut Kata Kapital.
+
+00:00:30.590 --> 00:00:34.360
+Jadi tidak ada jarak serta
+mengkapitalisasi kata berikutnya.
+
+00:00:34.360 --> 00:00:36.800
+Ada beberapa kata lain di sini
+tapi kita periksa nanti saja.
+
+00:00:36.800 --> 00:00:39.304
+Yang penting adalah kita punya
+kurung kurawal pembuka dan
+
+00:00:39.304 --> 00:00:42.354
+penutup yang terletak di bawah definisi.
+
+00:00:42.354 --> 00:00:47.130
+Di dalam kelas TextView terdapat
+banyak sekali variabel.
+
+00:00:47.130 --> 00:00:51.140
+Masing-masing mewakili sebuah bidang
+di dalam TextView, jadi terdapat sebuah
+
+00:00:51.140 --> 00:00:55.700
+bidang untuk teks dan
+warna teks dalam TextView.
+
+00:00:55.700 --> 00:00:57.850
+Tentunya terdapat pula bidang lain,
+tapi ingat,
+
+00:00:57.850 --> 00:00:59.928
+ini adalah versi sederhana
+dari kelas Textview.
+
+00:01:01.000 --> 00:01:04.239
+Anda juga punya sebuah variabel untuk
+menyimpan referensi ke
+
+00:01:04.239 --> 00:01:05.740
+dalam konteks aplikasi.
+
+00:01:05.740 --> 00:01:08.750
+Anda bisa baca lebih dalam tentang
+konteks di catatan instruktur berikut ini
+
+00:01:08.750 --> 00:01:13.170
+tapi pada dasarnya ini adalah sebuah
+jalan untuk mengakses informasi aplikasi,
+
+00:01:13.170 --> 00:01:16.670
+contohnya, sumber di dalam aplikasi bisa
+diakses dengan menggunakan konteks ini.
+
+00:01:17.870 --> 00:01:19.990
+Dan berikut ini adalah
+metode dari TextView.
+
+00:01:19.990 --> 00:01:23.690
+Metode setText dibutuhkan sebagai
+input teks string.
+
+00:01:23.690 --> 00:01:28.840
+Lalu dia memperbarui variabel global mText
+untuk menggunakan nilai baru ini.
+
+00:01:28.840 --> 00:01:32.480
+Hampir sama, setTextColor dibutuhkan
+sebagai input warna baru dan
+
+00:01:32.480 --> 00:01:36.080
+dia memperbarui kondisi internal
+untuk mendapat nilai warna baru ini.
+
+00:01:36.080 --> 00:01:38.045
+Ada juga metode seperti
+getText dan getTextColor,
+
+00:01:38.045 --> 00:01:42.920
+yang akan mengembalikan teks string
+internal atau warna teks internal.
+
+00:01:44.080 --> 00:01:48.091
+Satu hal lagi, Anda mungkin menyadari
+jika semua variabel global di sini
+
+00:01:48.091 --> 00:01:49.651
+dimulai dengan huruf kecil m.
+
+00:01:49.651 --> 00:01:51.510
+M singkatan dari member variable dan
+
+00:01:51.510 --> 00:01:55.330
+ini semua adalah member variable
+dari kelas TextView.
+
+00:01:55.330 --> 00:01:58.580
+Member variable hanyalah cara lain
+untuk menyebut bidang atau
+
+00:01:58.580 --> 00:02:00.990
+keadaan dari kelas TextView.
+
+00:02:00.990 --> 00:02:03.380
+Ini adalah versi sederhana
+dari kelas ImageView.
+
+00:02:03.380 --> 00:02:05.320
+Anda bisa temukan di dalam
+berkas ImageView.java.
+
+00:02:06.400 --> 00:02:10.580
+Dimulai dengan public class lalu
+ImageView di sini adalah nama kelas.
+
+00:02:10.580 --> 00:02:13.550
+Lalu kita punya kurung
+kurawal pembuka dan penutup.
+
+00:02:13.550 --> 00:02:15.980
+Dia membuat keadaan dari ImageView.
+
+00:02:15.980 --> 00:02:17.730
+Biasanya akan ada
+lebih banyak bidang, tapi
+
+00:02:17.730 --> 00:02:20.000
+saya akan tunjukkan satu contoh saja.
+
+00:02:20.000 --> 00:02:25.680
+Ini adalah variabel integer yang disebut
+mImageId, m untuk member variable.
+
+00:02:25.680 --> 00:02:28.340
+Dia menyimpan sumber id untuk
+
+00:02:28.340 --> 00:02:31.160
+gambar yang seharusnya
+muncul dalam ImageView ini.
+
+00:02:31.160 --> 00:02:34.470
+Di bawah ini, kita punya konstruktor
+yang digunakan untuk membangun
+
+00:02:34.470 --> 00:02:36.390
+sebuah objek ImageView baru.
+
+00:02:36.390 --> 00:02:38.730
+Dan dibutuhkan input dari Konteks ini.
+
+00:02:38.730 --> 00:02:40.809
+Lalu menginisialisasi
+variabel-variabel ini.
+
+00:02:42.120 --> 00:02:47.190
+Terdapat sebuah metode. Disebut setImage
+dan dibutuhkan input ini, sumber ID
+
+00:02:47.190 --> 00:02:50.500
+agar gambar baru muncul di ImageView ini.
+
+00:02:50.500 --> 00:02:53.850
+Di dalam metode ini, kita memperbarui
+variabel internal untuk ImageId.
+
+00:02:55.100 --> 00:02:57.691
+Sekali lagi, kita membuat
+versi sederhana TextView
+
+00:02:57.691 --> 00:03:01.880
+dan kelas-kelas ImageView ini untuk
+membantu Anda dalam memahami konsep kelas.
+
+00:03:01.880 --> 00:03:05.200
+Sekarang mari lihat versi asli
+kelas-kelas ini di dalam
+
+00:03:05.200 --> 00:03:06.210
+kerangka Android.
+
+00:03:07.950 --> 00:03:09.240
+Untuk melihat kode
+
+00:03:09.240 --> 00:03:13.240
+kelas-kelas Java di Android,
+pasang ekstensi Chrome ini.
+
+00:03:13.240 --> 00:03:14.960
+Jika Anda tidak memakai
+peramban Chrome,
+
+00:03:14.960 --> 00:03:17.989
+Anda bisa baca di catatan instruktur
+cara bagaimana mengakses berkas ini.
+
+00:03:19.020 --> 00:03:20.020
+Oke.
+
+00:03:21.840 --> 00:03:26.081
+Setelah Chrome terpasang,
+lalu saat saya mencari, misalnya seperti
+
+00:03:26.081 --> 00:03:30.260
+TextView Android, dan saya baca
+dokumentasi referensi untuk kelas ini.
+
+00:03:30.260 --> 00:03:34.830
+lalu akan ada tautan tambahan ini
+yang disebut view source.
+
+00:03:34.830 --> 00:03:36.730
+Ini diperuntukkan kepada
+pengembang lanjutan.
+
+00:03:36.730 --> 00:03:41.420
+Jika Anda penasaran terhadap kode yang
+digunakan untuk membuat TextView ini.
+
+00:03:41.420 --> 00:03:45.850
+Ini adalah berkas TextView.java yang
+ditentukan oleh seseorang di tim Android.
+
+00:03:45.850 --> 00:03:47.970
+Seperti yang Anda lihat, sangat
+panjang dan kompleks.
+
+00:03:47.970 --> 00:03:49.739
+Tapi masih memiliki bagian
+utama dari kelas.
+
+00:03:51.010 --> 00:03:55.330
+Dimulai dengan public class dan kemudian
+TextView yaitu nama kelas, dan
+
+00:03:55.330 --> 00:03:57.280
+kurung kurawal pembuka dan
+
+00:03:57.280 --> 00:03:59.500
+kurung kurawal penutup di bawah ini.
+
+00:04:00.930 --> 00:04:04.340
+Di atas kelas, kita bisa lihat
+banyak sekali bidang di sini
+
+00:04:04.340 --> 00:04:07.200
+dan ini membentuk keadaan kelas.
+Contohnya,
+
+00:04:07.200 --> 00:04:13.470
+Kita tahu kalau TextColor adalah bidang
+dan teks juga adalah sebuah bidang.
+
+00:04:13.470 --> 00:04:17.560
+Dan ini adalah konstruksi untuk TextView
+yang mengambil input ini sebuah konteks.
+
+00:04:17.560 --> 00:04:22.560
+Jika saya tekan Cmd+F, atau Ctl+F jika
+Anda memakai Windows, lalu saya akan cari
+
+00:04:22.560 --> 00:04:24.050
+setText.
+
+00:04:24.050 --> 00:04:26.250
+Inilah metode setText.
+
+00:04:26.250 --> 00:04:29.835
+Metode ini akan mengatur
+untaian nilai dari TextView.
+
+00:04:29.835 --> 00:04:31.205
+Dan jika saya cari GetText dan
+
+00:04:31.205 --> 00:04:35.605
+saya juga lihat metode ini mengembalikan
+teks yang ditampilkan oleh TextView.
+
+00:04:35.605 --> 00:04:38.275
+Anda punya idenya dan Anda
+bisa menjelajahinya jika Anda mau
+
+00:04:39.545 --> 00:04:42.245
+Jika saya cari halaman
+dokumentasi ImageView,
+
+00:04:42.245 --> 00:04:46.750
+lalu saya klik pada view source untuk
+melihat semua kode kelas ImageView.
+
+00:04:46.750 --> 00:04:49.370
+Berkasnya disebut public calls ImageView,
+dan
+
+00:04:49.370 --> 00:04:52.460
+ini merupakan bidang yang membuat
+keadaan dari ImagevIew,
+
+00:04:52.460 --> 00:04:55.810
+lalu ada banyak metode yang
+terdapat di bawah berkas.
+
+00:04:55.810 --> 00:04:57.810
+Kode berkas ini cukup kompleks,
+
+00:04:57.810 --> 00:05:00.360
+dan juga ada ribuan baris kode.
+
+00:05:00.360 --> 00:05:03.060
+Bagian terbaik dari
+pemrograman berorientasi objek
+
+00:05:03.060 --> 00:05:06.500
+adalah Anda tidak perlu tahu
+tentang semua rincian ini.
+
+00:05:06.500 --> 00:05:10.200
+Sebagai pengembang, Anda bisa pakai
+TextView dan ImageView dalam aplikasi Anda
+
+00:05:10.200 --> 00:05:13.630
+tanpa tahu tentang semua
+rincian bagian dalamnya.
+

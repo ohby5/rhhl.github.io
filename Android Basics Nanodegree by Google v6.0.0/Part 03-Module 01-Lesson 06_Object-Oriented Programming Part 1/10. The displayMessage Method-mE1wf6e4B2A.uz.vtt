@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.660 --> 00:00:05.050
+Birinchi qadamdan boshlaylik, 
+bunda price ni Order Summary ga 
+
+00:00:05.050 --> 00:00:05.656
+o‘zgartiramiz.
+
+00:00:05.656 --> 00:00:09.333
+Avval, men activity_main joylashuv tartibi
+faylini ochaman va keyin price 
+
+00:00:09.333 --> 00:00:12.000
+sarlavhasining boshqaruvchi 
+elementini topaman.
+
+00:00:12.000 --> 00:00:14.270
+Kursorimni bu yerga qo‘yaman, 
+
+00:00:14.270 --> 00:00:17.240
+shunda bu element view 
+to‘g‘ri tanlanganligini ko‘raman.
+
+00:00:17.240 --> 00:00:20.710
+Endi bu qatorni o‘zgartirishim mumkin.
+
+00:00:20.710 --> 00:00:23.800
+Men buni o‘chirib tashlayman 
+va Order Summary ni kiritaman.
+
+00:00:23.800 --> 00:00:26.370
+U preview oynasida to‘g‘ri yangilanadi.
+
+00:00:26.370 --> 00:00:28.690
+E’tibor bering, men kichik harflarni 
+
+00:00:28.690 --> 00:00:31.910
+yozish o‘rniga, uni O va S 
+bosh harflari bilan yozdim.
+
+00:00:31.910 --> 00:00:34.390
+Agar biz UI-ni o‘zgartirmoqchi 
+bo‘lsak va bosh harflarni 
+
+00:00:34.390 --> 00:00:39.950
+false qiymati bilan belgilangan 
+holatda ham ushbu matn ishlaydi.
+
+00:00:39.950 --> 00:00:42.360
+Men Order Summary ni shu 
+tarzda yozishni afzal ko‘raman, 
+
+00:00:42.360 --> 00:00:44.850
+so‘ng textAllCaps = true 
+atributni qo‘llayman.
+
+00:00:46.170 --> 00:00:47.840
+Shunday qilib, birinchi 
+bosqichni tushunib oldik.
+
+00:00:47.840 --> 00:00:51.600
+Ikkinchi vazifa - price qiymati 
+uchun TextView ni topish 
+
+00:00:51.600 --> 00:00:54.130
+va uni id tayinlash orqali o‘zgartirish.
+
+00:00:54.130 --> 00:00:58.050
+Agar men Order Summary dan 
+keyingi TextView ga tushsam, 
+
+00:00:58.050 --> 00:01:02.830
+bu price ning qiymati bo‘ladi 
+va u ham shu yerda yoritiladi.
+
+00:01:02.830 --> 00:01:07.840
+Talab qilinganidek, men id ni 
+order_summary_text_view ga o‘zgartiraman
+
+00:01:07.840 --> 00:01:11.170
+Hammasi yaxshi. Bu XML dagi 
+barcha o‘zgarishlardir.
+
+00:01:11.170 --> 00:01:13.210
+Ilovaning ishlashiga 
+ishonch hosil qilish uchun 
+uni ishga tushiraman.
+
+00:01:14.220 --> 00:01:15.210
+Ko‘rganimizdek, ishlamayapti.
+
+00:01:15.210 --> 00:01:19.490
+Bu yerda Java faylida price_text_view 
+belgisi topilmadi degan
+
+00:01:19.490 --> 00:01:21.320
+xatolik ko‘rsatilyapti.
+
+00:01:21.320 --> 00:01:24.250
+Bizning arizamizni tuzish uchun 
+avval qadamlarni oxiriga yetkazishingiz 
+
+00:01:24.250 --> 00:01:25.080
+kerak bo‘lganga o‘xshaydi.
+
+00:01:26.850 --> 00:01:29.730
+MainActivity dagi displayМessage 
+metodida o‘zgaruvchi nomini 
+
+00:01:29.730 --> 00:01:34.120
+priceTextView dan 
+orderSummaryTextView ga o‘zgartirishimiz kerak.
+
+00:01:34.120 --> 00:01:37.260
+МainАctivity dagi 
+displayМessage metodida 
+
+00:01:37.260 --> 00:01:39.430
+priceTextView ni mana 
+bu yerda topaman.
+
+00:01:39.430 --> 00:01:42.570
+Men buni o‘chirib 
+orderSummaryTextView ni kiritaman.
+
+00:01:42.570 --> 00:01:44.212
+Bu camelCase da bo‘ladi 
+va u kichkina o harfi 
+
+00:01:44.212 --> 00:01:47.940
+bilan boshlanadi, 
+chunki u o‘zgaruvchining nomi.
+
+00:01:47.940 --> 00:01:50.348
+Darhol men bu o‘zgaruvchi hech qayerda 
+ishlatilmasligi to‘g‘risida ogohlantirilaman.
+
+00:01:50.348 --> 00:01:53.410
+Shuning uchun men undan nusxa 
+ko‘chiraman va keyingi qatorda ishlataman, 
+
+00:01:53.410 --> 00:01:58.580
+chunki priceTextView ruxsat 
+berilmagan degan xatolik mavjud.
+
+00:01:58.580 --> 00:02:02.740
+Keyin uni o‘chirib tashlayman va 
+o‘zgaruvchining yangi nomini bu yerga qo‘yaman.
+
+00:02:02.740 --> 00:02:04.550
+Juda yaxshi, boshqa xatolar yo‘q.
+
+00:02:04.550 --> 00:02:07.859
+Ammo bu yerda yana bitta xatolik bor, 
+menimcha, u oxirgi vazifa bilan bog‘liq.
+
+00:02:09.080 --> 00:02:13.598
+Oxirgi punktda R.id.price_text_view ni 
+R.id.order_summary_text_view ga 
+
+00:02:13.598 --> 00:02:16.035
+o‘zgartirishingiz kerakligi aytilgan.
+
+00:02:16.035 --> 00:02:19.652
+Men qizil rangda ko‘rsatilgan xato ustiga 
+ikki marta bosib uni o‘chirib tashlayman 
+
+00:02:19.652 --> 00:02:24.437
+va order_summary_text_view ni yozaman.
+
+00:02:24.437 --> 00:02:26.630
+Ana endi xato yo‘qoldi.
+
+00:02:27.780 --> 00:02:29.930
+Endi ilova xatosiz ishlaydi.
+
+00:02:29.930 --> 00:02:31.660
+Endi dastlabki joylashuv tartibi to‘g‘ri.
+
+00:02:31.660 --> 00:02:34.340
+Endi Price o‘rnida Order Summary 
+turibdi va agar men miqdorni o‘zgartirib, 
+
+00:02:34.340 --> 00:02:37.520
+Order tugmasini bosganimda 
+natija bu yerda ko‘rsatiladi.
+
+00:02:38.660 --> 00:02:41.890
+Keling, kuzatuvlar natijalari 
+haqida gaplashaylik.
+
+00:02:41.890 --> 00:02:44.400
+Esda tutingki, to‘g‘ri yoki 
+noto‘g‘ri javoblar bo‘lmaydi.
+
+00:02:44.400 --> 00:02:49.098
+Avval, biz TextView dagi price ga 
+order_summary_text_view ID 
+
+00:02:49.098 --> 00:02:53.730
+tayinlaganimizda, keyinroq java kodida 
+displayMessage metodini 
+
+00:02:53.730 --> 00:02:58.460
+o‘zgartirganda, shunga o‘xshash 
+format yana paydo bo‘ladi.
+
+00:02:58.460 --> 00:03:02.010
+Price ni order summary ga 
+o‘zgartirganda, bu kodning bo‘shqa qismlariga
+
+00:03:02.010 --> 00:03:04.840
+ta’sir ko‘rsatganini sezgan 
+bo‘lishingiz mumkin.
+
+00:03:04.840 --> 00:03:09.230
+Ba’zi o‘zgarishlar ilovaning to‘g‘ri 
+ishlashi uchun zarur, boshqalari esa eski price 
+
+00:03:09.230 --> 00:03:11.840
+narxiga hech qanday havola 
+bo‘lmasligi uchun 
+
+00:03:11.840 --> 00:03:15.810
+faqat qulaylik maqsadida kerak edi.
+
+00:03:17.190 --> 00:03:19.880
+Agar siz displayMessage metodiga 
+e’tibor bilan qarasangiz, faqat 
+
+00:03:19.880 --> 00:03:23.910
+bitta input parametrini ko‘rishingiz 
+mumkin - bu esa string.
+
+00:03:23.910 --> 00:03:24.980
+Va return qiymati yo‘q.
+
+00:03:26.100 --> 00:03:30.640
+&gt;&gt; Shuning uchun, 
+bu metodda return qatori yo‘q.
+
+00:03:30.640 --> 00:03:34.864
+Shuningdek, siz XML dagi 
+TextView so‘zi bilan tanishdingiz, 
+
+00:03:34.864 --> 00:03:36.320
+u matnni kiritish uchun xizmat qiladi.
+
+00:03:37.500 --> 00:03:39.330
+U bu yerdagi kabi yoziladi.
+
+00:03:40.480 --> 00:03:44.830
+Kodning bu qatori, o‘zgaruvchi 
+tayinlanishiga o‘xshaydi, unda avval 
+
+00:03:44.830 --> 00:03:46.740
+o‘zgaruvchilar turi, nomi va 
+
+00:03:46.740 --> 00:03:50.674
+boshlang‘ich qiymat mana 
+bu yerda yoziladi.
+
+00:03:52.035 --> 00:03:55.825
+Bu butun sonlarni va satrlarni qanday 
+ekanligini ko‘rsatishimizga o‘xshaydi.
+
+00:03:55.825 --> 00:03:59.115
+Agar siz juda e’tiborli bo‘lsangiz, 
+bu findViewById metodini chaqirishga 
+
+00:03:59.115 --> 00:04:03.705
+o‘xshashligini sezgan bo‘lardingiz, 
+bunda qavs ochilib ichida 
+
+00:04:03.705 --> 00:04:06.885
+biror ma’lumot yoziladi va qavs yopiladi.
+
+00:04:06.885 --> 00:04:10.310
+Xuddi shu narsa setText ga ham tegishli, 
+bunda qavs ochilib ichida 
+
+00:04:10.310 --> 00:04:12.510
+biror ma’lumot yoziladi va qavs yopiladi.
+
+00:04:12.510 --> 00:04:14.200
+Shunday qilib, bu metodni chaqirish 
+usuli ham bo‘lishi mumkin.
+
+00:04:15.230 --> 00:04:18.240
+Kelgusi videolarda biz ushbu kod 
+satrlarida nimalar bo‘layotganini 
+
+00:04:18.240 --> 00:04:21.230
+batafsil ko‘rib chiqamiz va ularning 
+aslida nimani anglatishini 
+
+00:04:21.230 --> 00:04:23.350
+tushuna boshlaymiz.
+

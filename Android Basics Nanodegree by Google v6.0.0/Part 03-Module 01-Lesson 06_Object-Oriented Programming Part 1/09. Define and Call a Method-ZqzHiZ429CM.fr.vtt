@@ -1,0 +1,422 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.640 --> 00:00:03.565
+Faisons la première étape ensemble, ajoutons 
+une nouvelle méthode à la MainActivity.
+
+00:00:04.930 --> 00:00:07.390
+Vous pouvez choisir n’importe où dans 
+le document pour ajouter votre méthode,
+
+00:00:07.390 --> 00:00:11.100
+tant qu’elle reste en dehors des 
+accolades d’une méthode différente.
+
+00:00:11.100 --> 00:00:14.230
+Je vais simplement l’ajouter juste en 
+dessous de l’autre méthode qu’on a définie,
+
+00:00:14.230 --> 00:00:16.300
+qui était calculatePrice.
+
+00:00:16.300 --> 00:00:19.530
+Je vais mettre le modificateur d’accès 
+comme étant privé, car les seules choses
+
+00:00:19.530 --> 00:00:22.960
+qui nécessitent d’accéder à cette méthode 
+sont dans l’activité principale.
+
+00:00:24.180 --> 00:00:27.060
+Ensuite, je vais dire,
+chaîne de caractères pour le type de retour,
+
+00:00:27.060 --> 00:00:30.550
+car la méthode createOrderSummary
+devrait renvoyer une chaîne de caractère.
+
+00:00:30.550 --> 00:00:34.665
+Et ensuite le nom de la méthode 
+est createOrderSummary.
+
+00:00:36.230 --> 00:00:38.940
+Et ensuite, elle devra prendre un prix 
+comme entrée, qui est un nombre.
+
+00:00:40.340 --> 00:00:42.890
+Ok, donc, nous avons
+la méthode de signature faite,
+
+00:00:42.890 --> 00:00:47.060
+maintenant on doit instaurer la 
+méthode afin qu’elle renvoie ce message.
+
+00:00:47.060 --> 00:00:52.040
+Le message commence avec nom,
+quantité, total et ensuite, Thank you.
+
+00:00:52.040 --> 00:00:54.580
+Donc, je vais avancer et 
+copier ceci et ensuite,
+
+00:00:54.580 --> 00:00:56.590
+je vais le coller dans la méthode 
+createOrderSummary.
+
+00:00:56.590 --> 00:01:00.120
+Maintenant, nous pouvons commencer 
+avec quelques codes de base.
+
+00:01:00.120 --> 00:01:01.150
+Mais, la différence maintenant est que,
+
+00:01:01.150 --> 00:01:05.090
+le récapitulatif de commande devrait 
+débuter par un nom, et non par le prix total.
+
+00:01:05.090 --> 00:01:08.890
+Donc, je vais le déplacer sur la ligne 
+suivante, et le garder pour plus tard.
+
+00:01:08.890 --> 00:01:12.359
+Je vais initialiser le message de la 
+variable de prix sur Name, et
+
+00:01:12.359 --> 00:01:14.580
+ensuite Kaptain Kunal.
+
+00:01:14.580 --> 00:01:17.660
+Et ensuite, sur la ligne suivante,
+je vais actualiser le message de prix.
+
+00:01:18.690 --> 00:01:22.025
+Je vais l’annexer au 
+message existant, donc
+
+00:01:22.025 --> 00:01:26.485
+je vais mettre le message de prix, plus, 
+et ensuite le nouveau texte, et
+
+00:01:26.485 --> 00:01:31.115
+je veux ajouter la quantité et 
+ensuite ajouter la variable de quantité.
+
+00:01:32.265 --> 00:01:34.095
+Comme la quantité est une variable 
+globale,
+
+00:01:34.095 --> 00:01:36.745
+on devrait être capables d’y accéder 
+depuis cette méthode.
+
+00:01:36.745 --> 00:01:39.340
+Ok, donc, maintenant on a un nom 
+et une quantité.
+
+00:01:39.340 --> 00:01:44.020
+Sur la ligne suivante, je vais 
+à nouveau actualiser le priceMessage et
+
+00:01:44.020 --> 00:01:45.940
+ajouter plus de texte.
+
+00:01:45.940 --> 00:01:48.700
+En fait ce texte doit 
+être le prix total, donc
+
+00:01:48.700 --> 00:01:50.270
+je peux simplement utiliser ce 
+qu’on a fait avant.
+
+00:01:51.340 --> 00:01:55.080
+Ok, et ensuite sur la dernière ligne 
+on actualise à nouveau le priceMessage.
+
+00:01:55.080 --> 00:01:58.639
+Prenez la valeur existante de cette chaîne 
+de caractères et puis ajoutez-y, Thank you!
+
+00:01:59.740 --> 00:02:02.210
+Tout cela semble correct, mais 
+il y a toujours une erreur ici.
+
+00:02:02.210 --> 00:02:04.260
+Et elle dit instruction de retour manquante.
+
+00:02:04.260 --> 00:02:07.090
+Puisque on est censé renvoyer 
+un résumé de la chaîne de caractère,
+
+00:02:07.090 --> 00:02:10.370
+donc, je dois ajouter une autre ligne 
+de code qui dit retour.
+
+00:02:10.370 --> 00:02:12.240
+Et ensuite la valeur de retour.
+
+00:02:12.240 --> 00:02:15.210
+Dans ce cas-là, la valeur 
+de retour est le priceMessage.
+
+00:02:15.210 --> 00:02:16.630
+Et j’ajoute aussi un point-virgule à la fin.
+
+00:02:17.660 --> 00:02:19.440
+Ok, maintenant l’erreur a disparu.
+
+00:02:19.440 --> 00:02:22.150
+Il semble que notre code soit correct, 
+doncje vais le lancer et le tester.
+
+00:02:23.480 --> 00:02:26.300
+Ok, donc, maintenant si je change 
+la quantité pour trois, et
+
+00:02:26.300 --> 00:02:28.930
+j’appuie sur le bouton de commande, 
+ça ne marche pas.
+
+00:02:30.620 --> 00:02:32.320
+Voyons ce qui ne va pas.
+
+00:02:32.320 --> 00:02:35.260
+En examinant le code de plus près,
+je vois quel est le problème.
+
+00:02:35.260 --> 00:02:38.660
+Il y a une alerte qui dit 
+la méthode privée
+
+00:02:38.660 --> 00:02:39.730
+n’est jamais utilisée.
+
+00:02:39.730 --> 00:02:41.100
+J’ai oublié de la nommer.
+
+00:02:41.100 --> 00:02:42.450
+Retournons sur la page du questionnaire.
+
+00:02:43.580 --> 00:02:46.910
+Ok, donc, on a réussi à faire la première 
+tâche, mais maintenant on doit
+
+00:02:46.910 --> 00:02:50.010
+appeler la méthode createOrderSummary 
+à partir de la méthode submitOrder.
+
+00:02:51.220 --> 00:02:55.300
+En retournant dans l’Android Studio,
+je dois régler la méthode submitOrder.
+
+00:02:55.300 --> 00:02:57.300
+J’ai calculé le prix,
+qui est exact.
+
+00:02:57.300 --> 00:03:00.320
+Mais maintenant, je dois le passer dans
+la méthode createOrderSummary.
+
+00:03:00.320 --> 00:03:03.860
+Donc , je vais faire ça ici, 
+createOrderSummary avec
+
+00:03:03.860 --> 00:03:05.690
+la variable de prix.
+
+00:03:05.690 --> 00:03:08.340
+La valeur de retour de cette méthode 
+va être stockée dans
+
+00:03:08.340 --> 00:03:10.380
+la variable du priceMessage.
+
+00:03:10.380 --> 00:03:13.190
+Je n’ai plus besoin de cette ligne de 
+code, car «Thank
+
+00:03:13.190 --> 00:03:15.260
+you » est déjà dans le texte ci-dessous.
+
+00:03:15.260 --> 00:03:16.680
+Donc, je peux la supprimer.
+
+00:03:16.680 --> 00:03:20.800
+Puis pour actualiser l’écran tout ce je dois 
+faire c’est nommé le displayMessage avec
+
+00:03:20.800 --> 00:03:23.230
+la variable du priceMessage comme avant.
+
+00:03:23.230 --> 00:03:25.410
+Et maintenant, essayons de 
+relancer l’application.
+
+00:03:25.410 --> 00:03:27.370
+Si je change la quantité pour trois et
+
+00:03:27.370 --> 00:03:29.930
+j’appuie sur le bouton commande,
+ça ne marche toujours pas.
+
+00:03:31.080 --> 00:03:34.970
+La majorité du texte est sur une ligne, 
+alors qu’il devrait être sur plusieurs lignes,
+
+00:03:34.970 --> 00:03:37.210
+donc revenons en arrière et fixons le code.
+
+00:03:37.210 --> 00:03:40.650
+En regardant ce code, je m’aperçois que
+j’ai oublié la nouvelle ligne de caractères.
+
+00:03:40.650 --> 00:03:43.950
+Je l’ai ajouté correctement pour 
+Thank you mais pas pour les autres.
+
+00:03:43.950 --> 00:03:46.340
+Donc, maintenant je vais les 
+ajouter aux autres lignes.
+
+00:03:47.510 --> 00:03:49.230
+Ok, essayons de la lancer à nouveau.
+
+00:03:50.370 --> 00:03:51.600
+Et ça marche.
+
+00:03:51.600 --> 00:03:52.830
+Génial.
+
+00:03:52.830 --> 00:03:56.050
+Maintenant Kaptain Kunal peut avoir 
+ses trois tasses de café.
+
+00:03:56.050 --> 00:03:59.670
+Je voudrais vous montrer quelques autres 
+optimisations qu’on peut apporter au code.
+
+00:03:59.670 --> 00:04:02.530
+Noter que vous auriez pu nommer 
+la méthode du calculatePrice depuis
+
+00:04:02.530 --> 00:04:07.170
+la méthode du createOrderSummar au lieu 
+de la passer comme paramètre d’entrée.
+
+00:04:07.170 --> 00:04:10.420
+Donc vous auriez pu faire le 
+calculatePrice juste ici.
+
+00:04:10.420 --> 00:04:12.880
+Cela aurait aussi fonctionné.
+
+00:04:12.880 --> 00:04:16.250
+Mais je voulais vous montrer que vous 
+pouvez prendre la sortie d’une méthode et
+
+00:04:16.250 --> 00:04:18.370
+la passer comme entrée d’une 
+autre méthode.
+
+00:04:18.370 --> 00:04:20.040
+Donc on va le laisser comme il était.
+
+00:04:21.440 --> 00:04:23.874
+Depuis la méthode createOrderSummary,
+
+00:04:23.874 --> 00:04:27.920
+une autre chose que j’aurais faite 
+ce serait d’utiliser l’opérateur += .
+
+00:04:27.920 --> 00:04:29.240
+C’est de la sténographie, et
+
+00:04:29.240 --> 00:04:35.070
+cela signifie la même chose que 
+priceMessage = priceMessage + tout cela.
+
+00:04:35.070 --> 00:04:40.660
+Donc si je change tout cela pour +=, ce 
+sera identique à ce que j’avais avant.
+
+00:04:40.660 --> 00:04:43.680
+Cela demande simplement moins d’écriture 
+donc votre code est plus concis.
+
+00:04:44.740 --> 00:04:46.120
+Dans la méthode du calculatePrice,
+
+00:04:46.120 --> 00:04:49.160
+une autre chose que j’aurais faite ça aurait 
+été de simplement renvoyer la valeur
+
+00:04:49.160 --> 00:04:54.030
+immédiatement au lieu de la stocker dans 
+une variable locale et ensuite de la renvoyer.
+
+00:04:54.030 --> 00:04:56.840
+Cela donne aussi un code plus concis.
+
+00:04:56.840 --> 00:05:00.340
+Et puis, ici en haut, dans la méthode de 
+submitOrder au lieu de créer le récapitulatif
+
+00:05:00.340 --> 00:05:03.880
+de commande et de le stocker dans une 
+variable et de l’utiliser juste après, j’aurais
+
+00:05:03.880 --> 00:05:08.960
+simplement nommé createOrderSummary et
+ensuite nommé displayMessage depuis ça.
+
+00:05:08.960 --> 00:05:11.290
+Cela revient au même.
+
+00:05:11.290 --> 00:05:14.590
+La valeur de retour de la méthode 
+createOrderSummary est une chaîne de caractères,
+
+00:05:14.590 --> 00:05:19.190
+et ça passera comme un argument d’entrée 
+dans la méthode displayMessage.
+
+00:05:19.190 --> 00:05:21.410
+Vous pouvez le laisser comme ça si vous 
+voulez, si c’est plus facile à lire.
+
+00:05:23.110 --> 00:05:25.630
+Tous ces trucs et astuces amènent 
+à la même logique de toute façon.
+
+00:05:27.030 --> 00:05:30.290
+Et avant que je n’oublie, aussi, pensez à 
+ajouter un commentaire Javadoc en
+
+00:05:30.290 --> 00:05:33.680
+haut de cette méthode pour décrire 
+ce qu’elle est censée faire.
+
+00:05:33.680 --> 00:05:36.821
+Techniquement on n’a pas besoin d’un commentaire
+Javadoc dans une méthode privée, mais
+
+00:05:36.821 --> 00:05:39.449
+c’est simplement une bonne pratique d’écrire 
+une description de la méthode, ainsi
+
+00:05:39.449 --> 00:05:42.437
+les autres personnes qui vont lire 
+votre code comprendront aussi ce que
+
+00:05:42.437 --> 00:05:44.380
+vous essayez de faire.
+
+00:05:44.380 --> 00:05:48.002
+La description de cette méthode est qu’elle 
+crée un résumé de la commande.
+
+00:05:48.002 --> 00:05:51.560
+Le paramètre d’entrée étant le prix de la
+commande, et il renvoie le résumé du texte.
+

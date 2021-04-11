@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.000 --> 00:00:02.040
+Được rồi, chúng ta đã học
+khá nhiều về phương thức.
+
+00:00:02.040 --> 00:00:03.510
+Giờ là lúc
+nghỉ ngơi một chút.
+
+00:00:03.510 --> 00:00:05.380
+Bạn có thể làm vài động tác bật nhảy,
+
+00:00:05.380 --> 00:00:09.540
+đi bộ ngoài trời, hay mở ra
+một tab mới trên trình duyệt.
+
+00:00:09.540 --> 00:00:11.020
+Khi bạn đã sẵn sàng,
+hãy quay lại đây
+
+00:00:11.020 --> 00:00:13.290
+và chúng ta sẽ cùng nghiên cứu
+phương thức displayMessage,
+
+00:00:13.290 --> 00:00:15.330
+một trong những phương thức
+yêu thích của tôi.
+
+00:00:16.239 --> 00:00:18.760
+Trong bài tập code tiếp theo,
+bạn sẽ học cách chỉnh sửa ứng dụng
+
+00:00:18.760 --> 00:00:22.110
+sao cho thay vì hiển thị Giá ở đấy,
+nó sẽ thể hiện là Tóm tắt đơn hàng.
+
+00:00:22.110 --> 00:00:25.220
+Đây là cách đặt tên hay hơn vì nếu
+bạn thay đổi số lượng và bấm order,
+
+00:00:25.220 --> 00:00:27.870
+Thì tóm tắt đơn hàng sẽ hiện ra ở đây,
+nó không chỉ là về giá.
+
+00:00:27.870 --> 00:00:31.010
+Đây là một thay đổi nhỏ về UI,
+nhưng trong quá trình thực hiện,
+
+00:00:31.010 --> 00:00:34.080
+bạn sẽ phải chỉnh sửa
+phương thức displayMessage
+
+00:00:34.080 --> 00:00:38.120
+mà chúng tôi đã nêu qua ở Bài 2
+và chưa có lời giải thích.
+
+00:00:38.120 --> 00:00:41.160
+Trong những video sắp tới, chúng ta sẽ
+hiểu thêm về những thành phần khác nhau
+
+00:00:41.160 --> 00:00:43.580
+ở trong phương thức này.
+
+00:00:43.580 --> 00:00:46.610
+Bạn sẽ bắt đầu với việc thử
+thay đổi một số giá trị
+
+00:00:46.610 --> 00:00:48.150
+và xem điều gì sẽ xảy ra.
+
+00:00:48.150 --> 00:00:53.210
+Khi bạn chỉnh sửa, nó sẽ báo lỗi
+trong phương thức displayPrice, vì thế
+
+00:00:53.210 --> 00:00:55.960
+bạn có thể xóa phương thức này đi.
+
+00:00:55.960 --> 00:00:59.690
+Bạn còn nhận được một lời cảnh báo
+rằng phương thức này không hề được sử dụng
+
+00:00:59.690 --> 00:01:00.910
+Vì thế, cứ vô tư xóa nó đi.
+
+00:01:01.910 --> 00:01:04.760
+Mục tiêu chính là
+thay đổi phần Giá
+
+00:01:04.760 --> 00:01:07.020
+thành phần gọi là Tóm tắt đơn hàng.
+
+00:01:07.020 --> 00:01:09.643
+Có một vài thay đổi bổ sung
+mà chúng ta sẽ phải thực hiện.
+
+00:01:09.643 --> 00:01:12.715
+Trong tệp layout activity_main,
+
+00:01:12.715 --> 00:01:16.115
+thay thế phần đầu đề Giá,
+thành Tóm tắt đơn hàng.
+
+00:01:16.115 --> 00:01:19.645
+Sau đó tìm kiếm TextView
+cho giá trị của giá, không phải đầu đề
+
+00:01:19.645 --> 00:01:21.215
+mà là giá trị thực sự của nó.
+
+00:01:21.215 --> 00:01:24.095
+Thay đổi view đó sao cho
+nó có một ID như thế này.
+
+00:01:24.095 --> 00:01:26.875
+View ID trước đó có tên đại loại
+như price_text_view, nhưng
+
+00:01:26.875 --> 00:01:29.470
+giờ khi chúng ta đã biến nó thành
+mục Tóm tắt đơn hàng,
+
+00:01:29.470 --> 00:01:31.500
+chúng ta cũng sẽ phải
+cập nhật ID của nó.
+
+00:01:31.500 --> 00:01:35.690
+Sau đó, trong tệp main_activity của
+phương thức displayMessage, hãy tiếp tục
+
+00:01:35.690 --> 00:01:39.420
+thay đổi tên biến từ priceTextView
+thành orderSummaryTextView.
+
+00:01:40.450 --> 00:01:44.957
+Và cuối cùng, thay 
+đường dẫn tới R.id.price_text_view
+
+00:01:44.957 --> 00:01:49.260
+thành R.id.order_summary_text_view,
+đừng quên gạch dưới như thế này.
+
+00:01:50.270 --> 00:01:52.150
+Khi bạn đã hoàn thành,
+hãy bấm chọn các ô này.
+
+00:01:52.960 --> 00:01:54.600
+Sau đó nhìn lại và quan sát
+
+00:01:54.600 --> 00:01:58.350
+về những điều đang diễn ra
+trong phương thức displayMessage.
+
+00:01:58.350 --> 00:02:01.720
+Bạn có lờ mờ đoán được cách vận hành
+
+00:02:01.720 --> 00:02:05.560
+hay sự liên hệ giữa layout xml
+và tệp Java không?
+

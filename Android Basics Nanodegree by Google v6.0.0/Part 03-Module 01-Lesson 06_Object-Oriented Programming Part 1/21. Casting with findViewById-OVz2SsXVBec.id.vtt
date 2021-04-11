@@ -1,0 +1,430 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.270 --> 00:00:01.540
+Mari perhatikan nomor 1.
+
+00:00:01.540 --> 00:00:04.470
+Sebelum saya berikan jawabannya,
+saya akan salin kode ini,
+
+00:00:04.470 --> 00:00:06.700
+dan menempelnya ke dalam Android Studio.
+
+00:00:06.700 --> 00:00:09.060
+Saya ingin tunjukkan pada Anda
+kesalahan yang dapat muncul.
+
+00:00:09.060 --> 00:00:12.090
+Saat Anda menjawab kuis ini, Anda
+tidak perlu menggunakan Android Studio,
+
+00:00:12.090 --> 00:00:14.510
+Anda bisa menjawabnya hanya
+dari melihat kode ini
+
+00:00:14.510 --> 00:00:16.280
+lalu menuliskan jawabannya.
+
+00:00:16.280 --> 00:00:19.520
+Jadi, apakah menggunakan atau tidak
+menggunakan Android Studio, bukan masalah.
+
+00:00:19.520 --> 00:00:22.260
+Agar kode bekerja,
+saya membuat projek baru
+
+00:00:22.260 --> 00:00:25.270
+kemudian memodifikasi berkas
+activity_main layout, sehingga
+
+00:00:25.270 --> 00:00:30.080
+akan memiliki banyak View dengan
+ID yang kita akan referensi ini.
+
+00:00:30.080 --> 00:00:31.780
+Saya bahkan tak yakin
+nantinya seperti apa
+
+00:00:31.780 --> 00:00:36.060
+Saya hanya ingin menempatkan View di sini
+dengan nama ID yang sesuai.
+
+00:00:36.060 --> 00:00:38.210
+Dengan seperti itu,
+kode saya akan bekerja di sini.
+
+00:00:38.210 --> 00:00:42.570
+Untuk nomor satu, saya tempel kode
+di sini, dan bisa dilihat ada kesalahan.
+
+00:00:42.570 --> 00:00:46.270
+Android Studios mengatakan kalau dia
+tidak bisa memecahkan method setText.
+
+00:00:46.270 --> 00:00:47.780
+Jika Anda ingat
+video sebelumnya,
+
+00:00:47.780 --> 00:00:51.510
+Saya menyebutkan bahwa setText
+merupakan metode TextView.
+
+00:00:51.510 --> 00:00:55.100
+Yang berarti, Anda hanya dapat memanggil
+metode ini pada objek TextView.
+
+00:00:55.100 --> 00:00:57.920
+Dalam hal ini,
+kita memanggilnya pada nameTextView.
+
+00:00:57.920 --> 00:01:00.705
+nameTextView dinyatakan
+untuk menjadi objek View,
+
+00:01:00.705 --> 00:01:04.057
+kita harus mengubahnya menjadi
+objek TextView.
+
+00:01:05.990 --> 00:01:08.942
+Lalu, ada kesalahan yang menyebutkan
+terdapat tipe yang tidak kompatibel.
+
+00:01:08.942 --> 00:01:12.390
+Textview, objek dari tipe
+TextView yang dibutuhkan, tapi
+
+00:01:12.390 --> 00:01:15.700
+sebaliknya, dia malah menemukan
+objek dari type view.
+
+00:01:15.700 --> 00:01:18.570
+Hal itu karena, findViewById mengembalikan
+sebuah view, dan
+
+00:01:18.570 --> 00:01:21.950
+sebelah kiri sebenarnya membutuhkan
+sebuah TextView.
+
+00:01:21.950 --> 00:01:24.860
+Yang berarti, kita harus menambahkan ini
+untuk melempar
+
+00:01:24.860 --> 00:01:28.730
+view yang dikembalikan oleh
+findViewById ke dalam TextView.
+
+00:01:28.730 --> 00:01:30.800
+Kemudian, kita bisa menyimpan semua ini,
+
+00:01:30.800 --> 00:01:35.090
+yaitu nameTextView,
+ke variabel sebelah kiri.
+
+00:01:35.090 --> 00:01:40.760
+Kesalahan sudah tidak ada, dan kita atur
+setText "Laura" dalam TextView ini.
+
+00:01:40.760 --> 00:01:44.510
+Kesalahan ada pada baris 1, jadi
+saya tulis kode yang benar di sini.
+
+00:01:44.510 --> 00:01:49.540
+Penjelasan umumnya adalah bahwa kita perlu
+melempar view ini ke dalam TextView dan
+
+00:01:49.540 --> 00:01:53.050
+kemudian menyimpannya
+di dalam variabel nameTextView.
+
+00:01:53.050 --> 00:01:56.340
+Dengan seperti itu,
+kita dapat memanggil nameTextView.setText,
+
+00:01:56.340 --> 00:01:59.850
+yang merupakan metode TextView,
+pada baris lain dari kode ini.
+
+00:01:59.850 --> 00:02:03.290
+Lanjut ke nomor dua. Saya akan salin
+kode ini dan menaruh di Android Studio.
+
+00:02:04.540 --> 00:02:06.590
+Inilah kode yang saya tempel.
+
+00:02:06.590 --> 00:02:09.620
+Baris pertama kelihatannya benar,
+tidak ada kesalahan terlihat.
+
+00:02:09.620 --> 00:02:11.550
+Tapi terdapat garis merah
+pada baris kedua dan
+
+00:02:11.550 --> 00:02:14.420
+dikatakan kalau ada kesalahan
+tipe yang tidak kompatibel.
+
+00:02:14.420 --> 00:02:17.990
+Dikatakan bahwa string yang diperlukan
+tapi sebaliknya malah int yang ditemukan.
+
+00:02:17.990 --> 00:02:19.290
+Untuk memahami lebih baik,
+
+00:02:19.290 --> 00:02:24.250
+kita harus melihat metod getMaxLines
+yang ada di dalam dokuementasi TextView.
+
+00:02:24.250 --> 00:02:26.580
+Di dalam dokumentasi TextView,
+saya akan mencari
+
+00:02:26.580 --> 00:02:28.650
+metode getMaxLines.
+
+00:02:28.650 --> 00:02:29.770
+Dan ini dia.
+
+00:02:29.770 --> 00:02:31.120
+Tidak ada input parameter, dan
+
+00:02:31.120 --> 00:02:33.520
+nilai kembaliannya adalah
+sebuah integer
+
+00:02:34.758 --> 00:02:38.194
+Itulah mengapa Android studio mengeluh,
+karena metode ini,
+
+00:02:38.194 --> 00:02:39.911
+dia mengembalikan integer, tapi
+
+00:02:39.911 --> 00:02:42.700
+kita mencoba menyimpannya
+ke dalam variabel String.
+
+00:02:42.700 --> 00:02:47.870
+Sebagai hasilnya, saya perlu mengubah
+tipe data variabel menjadi int.
+
+00:02:47.870 --> 00:02:49.470
+Lalu, kesalahan ini akan menghilang.
+
+00:02:49.470 --> 00:02:52.620
+Nilai kembalian metode ini
+adalah integer.
+
+00:02:52.620 --> 00:02:56.060
+Jadi, kita bisa menyimpannya
+ke dalam variabel maxLines.
+
+00:02:56.060 --> 00:02:57.870
+Masih ada peringatan yang tersisa.
+
+00:02:57.870 --> 00:03:00.870
+Mengatakan kalau variabel
+maxLines tidak pernah digunakan.
+
+00:03:00.870 --> 00:03:02.260
+Tapi ini hanyalah potongan kode.
+
+00:03:02.260 --> 00:03:04.760
+Saya berasumsi jika ini
+berada dalam aplikasi biasa
+
+00:03:04.760 --> 00:03:06.740
+kita pasti ingin menggunakan
+variabel ini nanti.
+
+00:03:07.800 --> 00:03:11.380
+Jadi, kesalahan pada baris kedua dan
+inilah kode yang sudah diperbarui.
+
+00:03:11.380 --> 00:03:14.340
+Penjelasan umumnya adalah nilai kembalian
+dari metode ini harusnya
+
+00:03:14.340 --> 00:03:15.480
+sebuah integer.
+
+00:03:15.480 --> 00:03:16.620
+Lanjut ke nomor tiga.
+
+00:03:17.980 --> 00:03:19.830
+Inilah kode untuk nomor tiga.
+
+00:03:19.830 --> 00:03:22.960
+Saya salin dan tempel kode untuk
+nomor tiga di Android Studio.
+
+00:03:22.960 --> 00:03:25.812
+Kesalahan menyebutkan kalau
+terdapat tipe yang tidak kompatibel.
+
+00:03:25.812 --> 00:03:29.400
+Yang dibutuhkan adalah ImageView,
+tapi sebaliknya View yang ditemukan.
+
+00:03:29.400 --> 00:03:32.740
+Kesalahan ini mirip dengan
+yang ada dalam TextView.
+
+00:03:32.740 --> 00:03:34.960
+Metode ini mengembalikan view.
+
+00:03:34.960 --> 00:03:38.270
+Dan, pada sisi kiri, kita mencoba
+menyimpannya di dalam ImageView.
+
+00:03:38.270 --> 00:03:42.370
+Jadi, kita perlu melempar view ini
+ke dalam ImageView.
+
+00:03:42.370 --> 00:03:47.330
+Hal ini berlaku karena view dengan
+id.icon sebenarnya adalah ImageView,
+
+00:03:47.330 --> 00:03:49.630
+sehingga tak apa untuk melemparnya
+ke dalam ImageView.
+
+00:03:49.630 --> 00:03:52.560
+Sekarang, sebelah kanan
+mengevaluasi ke ImageView,
+
+00:03:52.560 --> 00:03:55.700
+kita bisa menyimpannya ke dalam
+variabel di sebelah kiri.
+
+00:03:55.700 --> 00:03:59.770
+Variabel ini memiliki tipe data ImageView
+jadi sekarang semuanya cocok dan
+
+00:03:59.770 --> 00:04:01.430
+kesalahan sudah menghilang.
+
+00:04:01.430 --> 00:04:04.640
+Di sebelahnya, kita bisa
+memanggil ImageView method,
+
+00:04:04.640 --> 00:04:09.180
+SetImageResource, ke dalam
+objek IconImageView ini.
+
+00:04:09.180 --> 00:04:12.830
+Satu kesalahan tersisa yang menyebutkan
+kalau tidak bisa memecahkan simbol logo.
+
+00:04:12.830 --> 00:04:17.310
+Itu karena saya tidak menambahkan gambar
+ke dalam aplikasi dengan nama logo.
+
+00:04:17.310 --> 00:04:21.410
+Jika saya menambahkannya, kesalahan itu
+menghilang, sehingga kode menjadi benar.
+
+00:04:21.410 --> 00:04:25.400
+Inilah kode yang benar dimana
+saya melepar view ke dalam ImageView.
+
+00:04:25.400 --> 00:04:27.330
+Terakhir, nomor 4.
+
+00:04:27.330 --> 00:04:32.080
+Saya tempel kode di Android Studio dan
+mengejutkannya tidak ada kesalahan lagi.
+
+00:04:32.080 --> 00:04:35.960
+Kodenya mencoba mencari view
+dengan id.title
+
+00:04:35.960 --> 00:04:41.150
+itu seharusnya bisa mengembalikan view,
+dan tersimpan ke dalam variabel TextView.
+
+00:04:41.150 --> 00:04:43.900
+TextView memiliki tipe data dari View,
+sehingga
+
+00:04:43.900 --> 00:04:47.940
+itu sesuai dengan sebelah kanan,
+jadi seluruh baris kode ini benar.
+
+00:04:47.940 --> 00:04:51.410
+Pada baris selanjutnya kita ambil
+kode ini, yang merupakan View
+
+00:04:51.410 --> 00:04:54.410
+dan kita memanggil metode
+setVisibility padanya.
+
+00:04:54.410 --> 00:04:58.763
+Metode ini mengambil satu
+parameter input yaitu View.GONE.
+
+00:04:58.763 --> 00:05:02.790
+Saya akan cek dokumentasi
+untuk membuktikan mengapa itu.
+
+00:05:02.790 --> 00:05:06.050
+Di dalam dokumentasi kelas View,
+saya bisa mencari
+
+00:05:06.050 --> 00:05:08.400
+metode setVisibility.
+
+00:05:08.400 --> 00:05:11.970
+Bisa dilihat kalau setVisibility adalah
+sebuah metode di dalam kelas view.
+
+00:05:11.970 --> 00:05:16.310
+Dibutuhkan input ini, integer yang
+mewakili keadaan visibility.
+
+00:05:16.310 --> 00:05:21.175
+Kemungkinan nilai visibility adalah
+VISIBLE, INVISIBLE, dan GONE.
+
+00:05:21.175 --> 00:05:24.490
+Karena setVisibility adalah
+metode di dalam kelas view,
+
+00:05:24.490 --> 00:05:26.320
+ini adalah panggilan yang sah di sini.
+
+00:05:26.320 --> 00:05:29.280
+Tidak perlu lagi melemparnya
+ke dalam TextView
+
+00:05:29.280 --> 00:05:33.200
+karena metode yang kita panggil
+adalah metode dari kelas view.
+
+00:05:33.200 --> 00:05:36.010
+Sekarang, jika kita mencoba untuk
+menggunakan metode TextView,
+
+00:05:36.010 --> 00:05:38.860
+maka kita perlu melemparnya
+ke dalam TextView.
+
+00:05:38.860 --> 00:05:41.600
+Jadi, untuk pertanyaan ini
+jangan ada kesalahan, karena
+
+00:05:41.600 --> 00:05:45.930
+setVisibility adalah metode View, dan tak
+apa meninggalkannya sebagai objek View.
+
+00:05:45.930 --> 00:05:47.480
+Ini semua adalah pertanyaan sulit.
+
+00:05:47.480 --> 00:05:48.860
+Tak apa jika
+salah menjawabnya.
+
+00:05:48.860 --> 00:05:52.080
+Dalam tes berikutnya, Anda punya
+kesempatan untuk berlatih lagi.
+

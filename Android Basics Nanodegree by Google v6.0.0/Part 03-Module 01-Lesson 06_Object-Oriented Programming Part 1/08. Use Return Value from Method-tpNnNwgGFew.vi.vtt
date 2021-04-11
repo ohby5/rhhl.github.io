@@ -1,0 +1,296 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.940 --> 00:00:04.070
+Đầu tiên chúng ta sẽ sửa đổi 
+ký số của phương pháp calculatePrice
+
+00:00:04.070 --> 00:00:06.480
+để có kiểu dữ liệu trả lại thích hợp.
+
+00:00:06.480 --> 00:00:08.640
+Chúng ta cũng sẽ giả định rằng 
+không có tham số đầu vào.
+
+00:00:09.850 --> 00:00:12.840
+Đây là cách mà phương pháp 
+calculatePrice được xác định.
+
+00:00:12.840 --> 00:00:15.930
+Mục đích của phương pháp này là để
+tính tổng giá của đặt hàng
+
+00:00:15.930 --> 00:00:18.160
+và sau đó trả lại giá trị đó.
+
+00:00:18.160 --> 00:00:19.660
+Giá phải là số nguyên do đó
+
+00:00:19.660 --> 00:00:22.670
+chúng ta phải thay đổi kiểu dữ liệu
+trả lại từ vô hiệu sang int.
+
+00:00:23.730 --> 00:00:25.800
+Điều đó sẽ là nhiệm vụ đầu tiên.
+
+00:00:25.800 --> 00:00:29.130
+Câu đố cũng yêu cầu đảm bảo chắc chắn rằng 
+không có tham số đầu vào, và
+
+00:00:29.130 --> 00:00:29.930
+đó là những gì chúng ta có ở đây.
+
+00:00:31.020 --> 00:00:34.150
+Bây giờ nhiệm vụ thứ hai là 
+sửa đổi bên trong phương pháp
+
+00:00:34.150 --> 00:00:36.798
+để đảm bảo rằng chúng ta đang tính toán 
+giá đúng của đặt hàng.
+
+00:00:36.798 --> 00:00:39.220
+Và giả định giá là 5$ một cốc cà phê.
+
+00:00:40.770 --> 00:00:43.880
+Bên trong phương pháp này chúng ta lấy 
+số lượng cốc cà phê đặt hàng.
+
+00:00:43.880 --> 00:00:46.460
+Và chúng ta nhân nó 
+với 5$ một cốc cà phê.
+
+00:00:47.700 --> 00:00:49.860
+Kết quả thu được là tổng giá đặt hàng.
+
+00:00:49.860 --> 00:00:51.100
+Vậy dòng mã lệnh này đã bị phá vỡ.
+
+00:00:52.250 --> 00:00:56.920
+Nhưng tôi thấy có hai vấn đề, 
+biến số giá chưa bao giờ được sử dụng và
+
+00:00:56.920 --> 00:00:59.490
+có lỗi sai báo thiếu câu lệnh trả lại.
+
+00:00:59.490 --> 00:01:03.470
+Giá trị trả lại của phương pháp là số nguyên, 
+nhưng chúng ta không trả lại giá trị gì.
+
+00:01:03.470 --> 00:01:07.120
+Ở thời điểm này mã lệnh của chúng ta giống
+như chúng ta nói.
+
+00:01:07.120 --> 00:01:12.060
+Ta cần một dòng yêu cầu giá trị trả lại và 
+sau đó đặt giá trị thực tế vào đây và
+
+00:01:12.060 --> 00:01:13.950
+giá trị trả lại sẽ là giá tiền.
+
+00:01:13.950 --> 00:01:18.220
+Do đó, tôi sẽ thêm giá, 
+là một biến số ta xác định ở đây.
+
+00:01:18.220 --> 00:01:20.760
+Tuyệt, vậy là giờ không còn lỗi nào nữa.
+
+00:01:20.760 --> 00:01:22.650
+Chúng ta cũng cần sửa đổi Java DOC.
+
+00:01:22.650 --> 00:01:27.060
+Qua đó chúng ta nêu rõ rằng chúng ta 
+đã chuyển tổng giá.
+
+00:01:27.060 --> 00:01:30.090
+Với cách đó khi ai đó áp dụng phương pháp
+này, họ biết họ sẽ đạt được điều gì.
+
+00:01:31.600 --> 00:01:35.730
+Được rồi, chúng ta đã hoàn thành tất cả
+các bước xác định phương pháp này.
+
+00:01:35.730 --> 00:01:38.600
+Bây giờ, chúng ta cùng chuyển sang phần
+khi nào nên áp dụng phương pháp này.
+
+00:01:38.600 --> 00:01:41.939
+Trong phạm vi phương pháp submitOrder, ta 
+nên áp dụng phương pháp calculatePrice.
+
+00:01:43.240 --> 00:01:46.120
+Hiện nay việc tính giá 
+không thuộc mục nào.
+
+00:01:46.120 --> 00:01:49.130
+Tôi sẽ sao chép, và 
+tôi sẽ dán giá vào đây.
+
+00:01:49.130 --> 00:01:52.830
+Bởi vì trước đây chúng ta tính 
+giá của đặt hàng theo dòng
+
+00:01:52.830 --> 00:01:55.500
+trong phương pháp gửi đặt hàng, nhưng 
+giờ chúng ta có phương pháp để tính giá.
+
+00:01:55.500 --> 00:01:57.670
+Vì vậy tôi sẽ dán giá ở đây.
+
+00:01:57.670 --> 00:01:59.910
+Giờ thì bỏ dấu chấm phẩy bổ sung.
+
+00:01:59.910 --> 00:02:03.170
+Bạn sẽ nhận thấy giá là một biến số 
+địa phương trong phương pháp này, và
+
+00:02:03.170 --> 00:02:04.910
+cũng trong phương pháp này.
+
+00:02:04.910 --> 00:02:06.520
+Không có vấn đề gì nếu biến số trùng tên,
+
+00:02:06.520 --> 00:02:09.258
+bởi vì chúng có phạm vi biến số
+khác nhau.
+
+00:02:09.258 --> 00:02:13.100
+Do đó biến số giá này hoàn toàn 
+không liên quan với biến số ở đây.
+
+00:02:13.100 --> 00:02:16.300
+Giá được cập nhật và 
+tạo ra một cách độc lập với nhau.
+
+00:02:16.300 --> 00:02:19.750
+Và khi phương pháp hoàn thành thực thi, 
+biến số giá này sẽ không còn.
+
+00:02:20.830 --> 00:02:23.230
+OK, hãy quay lại phương pháp submitOrder.
+
+00:02:23.230 --> 00:02:24.810
+Như vậy chúng ta đã tính giá và
+
+00:02:24.810 --> 00:02:29.680
+lưu trữ giá trong biến số, và sau đó chúng ta 
+có thể sử dụng nó để tạo ra thông tin giá.
+
+00:02:30.820 --> 00:02:33.390
+Như vậy, thực ra, 
+tất cả mã lệnh này có thể đều giống nhau.
+
+00:02:33.390 --> 00:02:34.800
+Chúng ta đã ghép nối số nguyên,
+
+00:02:34.800 --> 00:02:39.490
+giá, vào tổng chuỗi với biểu tượng tiền tệ.
+
+00:02:39.490 --> 00:02:43.680
+Sau đó chúng ta ghép nối “Cảm ơn!” và 
+sau đó chỉ hiển thị nó trên màn hình.
+
+00:02:43.680 --> 00:02:47.960
+Như vậy tôi sẽ xóa những dòng trống, 
+thừa và lưu lại, rồi
+
+00:02:47.960 --> 00:02:49.410
+sau đó ta chạy ứng dụng trên thiết bị.
+
+00:02:50.660 --> 00:02:52.250
+Được rồi, tôi đã thay đổi số lượng, và
+
+00:02:52.250 --> 00:02:55.700
+nhấn ORDER, cuối cùng nó hiển thị
+đúng giá 25$.
+
+00:02:56.790 --> 00:02:57.825
+Tuyệt vời, phương pháp hoạt động đúng.
+
+00:02:57.825 --> 00:03:00.864
+Nhưng làm thế nào tôi đảm bảo rằng 
+phương pháp calculatePrice đang thực sự
+
+00:03:00.864 --> 00:03:05.640
+hoạt động vì không có người dùng nào thấy 
+sự thay đổi của ứng dụng so với trước đó.
+
+00:03:05.640 --> 00:03:09.524
+Dưới đây là một vài kỹ thuật 
+bạn có thể làm để xác minh mã lệnh
+
+00:03:09.524 --> 00:03:10.644
+đang hoạt động.
+
+00:03:10.644 --> 00:03:14.420
+Tôi có thể nhận được giá trị trả lại là 
+một con số điên rồ, 700 chẳng hạn.
+
+00:03:14.420 --> 00:03:16.972
+Hãy lưu mã lệnh và chạy ứng dụng.
+
+00:03:16.972 --> 00:03:20.671
+Bây giờ điều tôi mong đợi là 
+nếu tôi thay đổi số lượng và
+
+00:03:20.671 --> 00:03:25.226
+nhấn nút ORDER, 
+tôi sẽ nhận được mức giá là 700$.
+
+00:03:25.226 --> 00:03:29.190
+Theo đó tôi sẽ biết phương pháp tính 
+giá này thực sự được áp dụng.
+
+00:03:30.250 --> 00:03:31.610
+Và đúng như vậy, thật tuyệt.
+
+00:03:32.910 --> 00:03:35.040
+Bây giờ tôi xem lại thay đổi này.
+
+00:03:35.040 --> 00:03:38.120
+Một cách khác để kiểm tra xem phương pháp
+này có được thực thi hay không
+
+00:03:38.120 --> 00:03:39.220
+đó là thêm điểm dừng ở đây.
+
+00:03:40.230 --> 00:03:43.390
+Do đó tôi nhấp vào 
+biểu tượng gỡ lỗi nhỏ này và
+
+00:03:43.390 --> 00:03:45.040
+sau đó hệ apple chạy chế độ gỡ lỗi.
+
+00:03:46.370 --> 00:03:47.530
+Nếu tôi thay đổi số lượng và
+
+00:03:47.530 --> 00:03:51.250
+Tôi nhấn order, thì tôi hi vọng rằng 
+ứng dụng sẽ tạm dừng ở điểm này.
+
+00:03:53.140 --> 00:03:54.580
+Và đúng như vậy.
+
+00:03:54.580 --> 00:03:57.460
+Như vậy bây giờ chúng ta đang
+dùng phương pháp tính giá.
+
+00:03:57.460 --> 00:04:00.100
+Có một biến toàn cầu, số lượng.
+
+00:04:00.100 --> 00:04:05.340
+Và nếu qua bước sang dòng tiếp theo thì 
+tôi thấy bây giờ có một biến địa phương,
+
+00:04:05.340 --> 00:04:12.670
+giá, Và giá được thiết lập là 15$ do 
+số lượng là 3, 3 nhân 5 bằng 15, tuyệt.
+
+00:04:12.670 --> 00:04:15.777
+Như vậy, phương pháp tính giá 
+thực sự được áp dụng, và
+
+00:04:15.777 --> 00:04:18.834
+nếu tôi nhấn Resume, 
+thì nó cập nhật chính xác trên màn hình.
+

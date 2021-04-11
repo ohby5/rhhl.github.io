@@ -1,0 +1,258 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.390 --> 00:00:03.210
+Trong câu đố này bạn sẽ luyện tập
+tạo đối tượng xem văn bản
+
+00:00:03.210 --> 00:00:05.210
+Sau đó đưa ra phương pháp áp dụng.
+
+00:00:05.210 --> 00:00:06.930
+Bởi vì phần này là để thực hành,
+
+00:00:06.930 --> 00:00:11.250
+Ta sẽ thực hiện việc này trong ứng dụng 
+Android mới bên ngoài ứng dụng JustJava.
+
+00:00:11.250 --> 00:00:13.020
+Để tránh làm rối ứng dụng JustJava.
+
+00:00:14.370 --> 00:00:19.070
+Tới File &gt; New Project để mở trình
+hướng dẫn dự án trong Android Studio.
+
+00:00:19.070 --> 00:00:21.650
+Sau đó bạn chấp nhận
+điều chỉnh mặc định với tất cả.
+
+00:00:21.650 --> 00:00:25.620
+Hãy chắc chắn rằng bạn đã chọn mẫu 
+activity trống, sau đó nhấn Finish.
+
+00:00:28.150 --> 00:00:31.550
+Khi dự án của bạn được tạo hãy 
+tiếp tục và chạy ứng dụng trên thiết bị.
+
+00:00:32.380 --> 00:00:36.020
+Phản hồi mặc định sẽ là dòng chữ
+Hello World hiển thị ở đây.
+
+00:00:36.020 --> 00:00:38.290
+Nhưng bây giờ chúng ta
+sẽ làm hơi khác một chút.
+
+00:00:38.290 --> 00:00:42.340
+Trong lớp MainActivity, chúng ta 
+sẽ thay đổi phương pháp tạo lập.
+
+00:00:42.340 --> 00:00:46.240
+Thay vì thiết lập dạng xem nội dung 
+trong activity XML layout
+
+00:00:46.240 --> 00:00:49.200
+Chúng ta sẽ tự tạo lập dạng xem
+văn bản và thiết lập nó ở đây.
+
+00:00:50.390 --> 00:00:51.960
+Trên trang Android Developers,
+
+00:00:51.960 --> 00:00:56.010
+có phần Training nói về cách xây dựng
+ứng dụng đầu tiên của bạn.
+
+00:00:56.010 --> 00:00:59.600
+Cụ thể, tôi đang thấy phần Display 
+the Message của hướng dẫn.
+
+00:00:59.600 --> 00:01:02.220
+Qua đó bạn biết rằng trong 
+phương pháp onCreate,
+
+00:01:02.220 --> 00:01:03.930
+chúng ta có thể tạo TextView.
+
+00:01:03.930 --> 00:01:07.220
+Và đây là lệnh chúng ta nhận thấy 
+trước đó trong bài học này.
+
+00:01:07.220 --> 00:01:08.850
+Chúng ta đang tạo một TextView mới
+
+00:01:08.850 --> 00:01:11.720
+lưu trữ trong một biến có tên textView.
+
+00:01:11.720 --> 00:01:14.708
+Hàm tạo cần bối cảnh
+là tham số đầu vào.
+
+00:01:14.708 --> 00:01:18.140
+Và có được (this) như là 
+một tham số đầu vào,
+
+00:01:18.140 --> 00:01:21.780
+bởi vì (this) đề cập đến 
+activity hiện tại.
+
+00:01:21.780 --> 00:01:24.450
+Vì một activity cũng là một bối cảnh,
+
+00:01:24.450 --> 00:01:27.450
+điều này sẽ tạo ra một đối tượng
+TextView thích hợp.
+
+00:01:27.450 --> 00:01:30.740
+Sau đó ta có thể áp dụng các phương pháp 
+với đối tượng TextView này.
+
+00:01:30.740 --> 00:01:35.330
+Hãy nhớ rằng đây là tên biến
+textView chứ không phải lớp TextView.
+
+00:01:35.330 --> 00:01:38.360
+Đó là lý do nó được viết thường ở đây.
+
+00:01:38.360 --> 00:01:42.430
+Ta có thể lấy textView.setTextSize và
+textView.setText như là một ví dụ.
+
+00:01:43.830 --> 00:01:47.160
+Khi bạn cuộn xuống, nó hiển thị 
+yêu cầu setContentView
+
+00:01:47.160 --> 00:01:49.890
+và xem textView này như là
+một tham số đầu vào.
+
+00:01:49.890 --> 00:01:51.690
+Nếu bạn cuộn xuống nữa, nó sẽ chỉ
+
+00:01:51.690 --> 00:01:53.470
+một mẫu code
+của phương pháp onCreate.
+
+00:01:54.180 --> 00:01:55.520
+Chúng ta không cần phần này.
+
+00:01:55.520 --> 00:01:58.220
+Chúng ta chỉ tập trung vào phần textView
+
+00:01:58.220 --> 00:02:01.300
+Sau đó chúng ta thiết lập nó là 
+contentView của activity layout.
+
+00:02:02.410 --> 00:02:04.610
+Quay lại Android Studio
+trong lớp MainActivity,
+
+00:02:04.610 --> 00:02:06.950
+Tôi sẽ thay đổi phương pháp onCreate.
+
+00:02:06.950 --> 00:02:08.624
+Tôi sẽ chèn vài dòng trống vào đây.
+
+00:02:09.415 --> 00:02:12.235
+Đầu tiên tôi sẽ tạo đối tượng 
+TextView mới sử dụng hàm tạo.
+
+00:02:13.245 --> 00:02:15.535
+Tôi sẽ gán tên biến cho nó là TextView,
+
+00:02:15.535 --> 00:02:20.075
+nhưng bạn gọi tên gì cũng được,
+miễn là phù hợp với mô tả của nó.
+
+00:02:22.080 --> 00:02:24.870
+Văn bản bạn xây dựng 
+đòi hỏi một bối cảnh,
+
+00:02:24.870 --> 00:02:28.100
+Tôi sẽ làm điều này 
+để tham chiếu tới activity này.
+
+00:02:28.100 --> 00:02:30.420
+Và sau đó trên dòng lệnh tiếp theo,
+
+00:02:30.420 --> 00:02:32.990
+Tôi sẽ áp dụng phương pháp 
+đối với đối tượng textView.
+
+00:02:33.770 --> 00:02:38.100
+Ngay khi tôi gõ dấu chấm, tôi sẽ thấy 
+các phương pháp tôi có thể
+
+00:02:38.100 --> 00:02:39.730
+áp dụng cho đối tượng textView.
+
+00:02:40.990 --> 00:02:44.340
+Nếu tôi bắt đầu gõ,
+nó sẽ tự động điền các tùy chọn.
+
+00:02:44.340 --> 00:02:47.720
+Bạn sẽ thấy
+các tùy chọn được thu hẹp lại.
+
+00:02:47.720 --> 00:02:51.230
+Tôi sẽ chọn setText để có thể 
+nhấn enter khi muốn sử dụng trình tự động.
+
+00:02:53.140 --> 00:02:56.370
+Sau đó tôi có thể điền một chuỗi 
+như đối số đầu vào.
+
+00:02:56.370 --> 00:02:59.230
+Và bước cuối cùng là thay đổi 
+thiết lập dòng xem nội dung.
+
+00:02:59.230 --> 00:03:04.240
+Nên thay vì sử dụng tệp layout XML,
+tôi chỉ cần dán vào textView.
+
+00:03:04.240 --> 00:03:06.810
+Tôi sẽ lưu lại và chạy
+ứng dụng trên thiết bị.
+
+00:03:07.860 --> 00:03:11.840
+Điều tôi muốn là màn hình
+sẽ hiển thị dạng xem văn bản mới
+
+00:03:11.840 --> 00:03:15.030
+có chữ Wow thay vì hello world.
+
+00:03:15.030 --> 00:03:15.830
+Và đúng như vậy.
+
+00:03:16.610 --> 00:03:17.860
+Dù không ấn tượng cho lắm.
+
+00:03:17.860 --> 00:03:20.390
+Vì vậy tôi muốn
+bạn làm nó thú vị hơn.
+
+00:03:20.390 --> 00:03:24.198
+Tôi muốn bạn áp dụng các phương pháp khác 
+cho đối tượng textView này,
+
+00:03:24.198 --> 00:03:27.254
+chẳng hạn như thử thay đổi màu sắc 
+hoặc kích cỡ văn bản.
+
+00:03:27.254 --> 00:03:29.294
+Nếu mạo hiểm hơn,
+
+00:03:29.294 --> 00:03:32.780
+Bạn có thể thử áp dụng phương pháp 
+khác với đối tượng textView.
+
+00:03:32.780 --> 00:03:35.280
+Hãy xem tài liệu trực tuyến về textView.
+
+00:03:35.280 --> 00:03:38.370
+Để tìm hiểu xem phương pháp khác
+có thể áp dụng là gì.
+
+00:03:38.370 --> 00:03:40.490
+Khi bạn xong, đánh dấu
+các ô này để tiếp tục.
+

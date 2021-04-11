@@ -1,0 +1,426 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.430 --> 00:00:02.969
+Vamos voltar para a atividade
+principal de nosso aplicativo <i>Just Java</i>.
+
+00:00:02.969 --> 00:00:06.190
+Estamos olhando especificamente 
+para o método <i>displayMessage</i>
+
+00:00:06.190 --> 00:00:08.570
+e tentando perceber tudo
+que está acontecendo aqui.
+
+00:00:08.570 --> 00:00:13.870
+Apesar do método <i>findViewById</i> não estar 
+declarado dentro desta classe,
+
+00:00:13.870 --> 00:00:18.740
+sabemos agora que está definido dentro
+da super classe em <i>AppCompatActivity</i>.
+
+00:00:18.740 --> 00:00:20.440
+O mesmo para <i>setContentView</i>.
+
+00:00:20.440 --> 00:00:23.820
+Isto está definido dentro 
+da classe <i>AppCompatActivity</i>.
+
+00:00:23.820 --> 00:00:26.710
+Mas o que exatamente está 
+acontecendo neste método,
+
+00:00:26.710 --> 00:00:29.300
+e porque precisamos passar 
+uma <i>Resource ID</i>?
+
+00:00:29.300 --> 00:00:31.930
+Por que temos parênteses extras aqui?
+
+00:00:31.930 --> 00:00:34.410
+Para responder essas questões vou resumir
+tudo o que aprendemos até agora
+
+00:00:34.410 --> 00:00:37.720
+e guiar você para o porquê 
+deste código existir aqui.
+
+00:00:38.870 --> 00:00:40.350
+Lembra-se deste diagrama?
+
+00:00:40.350 --> 00:00:44.910
+Quando clica no ícone do aplicativo no 
+aparelho, a atividade principal é aberta.
+
+00:00:44.910 --> 00:00:48.650
+Dentro de nosso código o método <i>onCreate</i>
+da atividade principal é chamado
+
+00:00:48.650 --> 00:00:49.770
+pelo sistema.
+
+00:00:49.770 --> 00:00:53.220
+Dentro deste método, temos um método 
+chamado para <i>setContentView</i>
+
+00:00:53.220 --> 00:00:55.340
+com a <i>Resource layout ID</i>.
+
+00:00:55.340 --> 00:00:59.710
+Em um exercício anterior passamos um único
+<i>TextView</i> para o <i>setContentView</i>.
+
+00:00:59.710 --> 00:01:01.950
+Mas queremos mais de um <i>view</i>
+para nosso aplicativo.
+
+00:01:01.950 --> 00:01:04.650
+Então passamos uma <i>layout resource ID</i>.
+
+00:01:04.650 --> 00:01:06.980
+Isto mapeia para um arquivo XML.
+
+00:01:06.980 --> 00:01:09.560
+Uma vez que fixamos o <i>ContentView</i>, 
+a atividade segue
+
+00:01:09.560 --> 00:01:13.200
+e encontra o arquivo XML, 
+e então lê todas as linhas.
+
+00:01:13.200 --> 00:01:18.140
+Para cada <i>View</i>, ele infla, 
+ou cria, um objeto Java.
+
+00:01:18.140 --> 00:01:19.860
+Vai través do arquivo XML,
+
+00:01:19.860 --> 00:01:23.040
+e então cria toda essa hierarquia 
+de objetos Java.
+
+00:01:23.040 --> 00:01:27.090
+Quando está inflando cada um desses <i>Views</i>
+está na verdade chamando o construtor
+
+00:01:27.090 --> 00:01:31.600
+<i>NewTextView</i> ou <i>NewLinearLayout</i>, 
+e então passando todos estes atributos
+
+00:01:31.600 --> 00:01:34.860
+para o objeto Java, para que possa 
+ser configurado de forma correta.
+
+00:01:34.860 --> 00:01:38.700
+Perceba que não escrevemos o código 
+para <i>NewTextView</i> ou <i>NewLinearLayout</i>,
+
+00:01:38.700 --> 00:01:40.650
+e para fixar um tamanho de fonte.
+
+00:01:40.650 --> 00:01:44.540
+Tudo isso foi feito pelo processo
+de inflação da atividade.
+
+00:01:44.540 --> 00:01:48.290
+Para interagir com estes <i>Views</i> enquanto 
+o app estiver rodando e os modificar,
+
+00:01:48.290 --> 00:01:49.890
+por exemplo, para alterar o texto
+
+00:01:49.890 --> 00:01:54.480
+ou alterar os botões, então precisamos 
+encontrar estes objetos Java.
+
+00:01:54.480 --> 00:01:58.560
+Uma vez encontrados, podemos armazená-los 
+como variáveis na atividade principal.
+
+00:01:58.560 --> 00:02:01.360
+Lembre-se, não estamos criando 
+novos <i>TextViews</i>,
+
+00:02:01.360 --> 00:02:04.780
+estamos apenas encontrando os que 
+já existem nesta hierarquia de <i>Views</i>.
+
+00:02:05.680 --> 00:02:09.069
+Estas são as variáveis que utilizamos 
+até agora na atividade principal.
+
+00:02:09.069 --> 00:02:13.160
+Temos uma variável para <i>quantity</i>, 
+<i>price</i>, e <i>priceMessage</i>.
+
+00:02:13.160 --> 00:02:15.830
+Esta é uma mistura de variáveis 
+locais e globais.
+
+00:02:15.830 --> 00:02:19.520
+Para interagir com os <i>Views</i> na hierarquia 
+de <i>Views</i> devemos criar variáveis
+
+00:02:19.520 --> 00:02:21.839
+que façam referência à estes 
+<i>Views</i> específicos.
+
+00:02:22.500 --> 00:02:25.765
+Por exemplo, podemos criar 
+uma variável chamada <i>quantityTextView</i>,
+
+00:02:25.765 --> 00:02:28.580
+que faça referência à este <i>TextView</i>.
+
+00:02:28.580 --> 00:02:31.340
+Se clicar no botão de "soma" 
+ou "subtração" na UI,
+
+00:02:31.340 --> 00:02:34.910
+então pode alterar o texto do <i>TextView</i>
+para que mostre um número diferente.
+
+00:02:36.220 --> 00:02:39.340
+Também podemos ter uma variável 
+chamada <i>orderSummaryTextView</i>
+
+00:02:39.340 --> 00:02:41.730
+que aponta para este <i>TextView</i>.
+
+00:02:41.730 --> 00:02:44.590
+Quando clica no botão <i>order</i>, 
+então o <i>orderSummaryTextView</i>
+
+00:02:44.590 --> 00:02:47.660
+irá alterar seu texto para mostrar 
+o novo resumo do pedido.
+
+00:02:47.660 --> 00:02:51.680
+Então como pode ver, ter variáveis 
+que apontem para alguns destes <i>Views</i>
+
+00:02:51.680 --> 00:02:55.440
+pode ser útil para alterar a UI quando 
+o aplicativo está rodando.
+
+00:02:55.440 --> 00:02:59.430
+Mas como fazemos a conexão 
+entre esta variável
+
+00:02:59.430 --> 00:03:00.790
+e este <i>TextView</i> ?
+
+00:03:00.790 --> 00:03:03.780
+E como fazemos a conexão entre 
+<i>orderSummaryTextView</i>, aqui,
+
+00:03:03.780 --> 00:03:04.795
+com este <i>TextView</i>?
+
+00:03:06.250 --> 00:03:08.139
+De volta ao arquivo de XML do layout,
+
+00:03:08.139 --> 00:03:11.699
+lembra-se que designamos IDs
+para <i>Views</i> específicos?
+
+00:03:12.953 --> 00:03:17.400
+Para este <i>TextView</i>, demos 
+a ID de <i>quantity.text.view</i>.
+
+00:03:17.400 --> 00:03:21.340
+Para este <i>View</i> demos a ID
+<i>order.summary.text.view</i>.
+
+00:03:21.340 --> 00:03:24.240
+A atribuição de IDs para <i>Views</i> é opcional
+
+00:03:24.240 --> 00:03:28.760
+e você somente deve atribuir uma ID 
+se precisar se referir ao <i>View</i> mais tarde.
+
+00:03:28.760 --> 00:03:33.180
+Por exemplo, você pode atribuir <i>View</i> IDs 
+para para tudo, mas isso é desnecessário.
+
+00:03:33.180 --> 00:03:37.470
+Nós só precisaremos nos referir a estes 
+dois <i>Views</i> mais tarde em nosso código.
+
+00:03:37.470 --> 00:03:39.860
+Então vamos atribuir IDs para estes dois.
+
+00:03:40.880 --> 00:03:43.900
+Tudo bem, estabelecemos que <i>Views</i>
+possuem <i>View</i> IDs
+
+00:03:43.900 --> 00:03:46.910
+para que possamos nos referir 
+a elas mais tarde no código Java.
+
+00:03:46.910 --> 00:03:51.350
+Também estabelecemos que queremos 
+variáveis que apontem para estes <i>Views</i>
+
+00:03:51.350 --> 00:03:53.740
+para que possamos manipular estes <i>Views</i>.
+
+00:03:53.740 --> 00:03:57.680
+Mas ainda não sabemos exatamente
+como fazer a conexão entre
+
+00:03:57.680 --> 00:04:01.160
+esta variável e este 
+objeto Java específico.
+
+00:04:01.160 --> 00:04:04.700
+E o mesmo para esta variável 
+e este objeto Java.
+
+00:04:04.700 --> 00:04:08.820
+Quero mostrar um método específico 
+na classe <i>AppCompatActivity</i>.
+
+00:04:08.820 --> 00:04:12.560
+Ele é chamado <i>findViewById</i> e toma 
+como entrada uma <i>Resource ID</i>.
+
+00:04:13.810 --> 00:04:16.290
+O método <i>findViewById</i>
+
+00:04:16.290 --> 00:04:21.220
+encontra o <i>View</i> que corresponde 
+à ID que foi passada como uma entrada.
+
+00:04:21.220 --> 00:04:23.790
+E a atividade procura por este <i>View</i>
+
+00:04:23.790 --> 00:04:28.890
+dentro da hierarquia de <i>Views</i> do arquivo 
+XML que foi processada no método <i>onCreate</i>.
+
+00:04:28.890 --> 00:04:30.560
+Então, como mencionei antes,
+
+00:04:30.560 --> 00:04:34.350
+a atividade do método <i>onCreate</i>
+cria uma hierarquia de <i>Views</i>
+
+00:04:34.350 --> 00:04:39.405
+e então o método <i>findViewById</i> encontra 
+um <i>View</i> dentro desta hierarquia.
+
+00:04:39.405 --> 00:04:43.615
+O valor de retorno deste método 
+é um objeto do tipo <i>View</i>.
+
+00:04:43.615 --> 00:04:47.415
+A coluna da esquerda mostra os valores 
+de retorno para todos estes métodos.
+
+00:04:47.415 --> 00:04:51.815
+Isso significa que dentro de nosso código 
+de atividade podemos chamar <i>findViewById</i>,
+
+00:04:51.815 --> 00:04:56.670
+passar o <i>Resource ID</i> do <i>View</i> que queremos,
+e então ele irá retornar o objeto
+
+00:04:56.670 --> 00:05:00.200
+<i>View</i> e então podemos armazenar isso 
+como uma variável dentro da atividade.
+
+00:05:02.170 --> 00:05:04.300
+O código Java da <i>MainActivity</i> seria assim.
+
+00:05:05.360 --> 00:05:07.230
+Podemos chamar <i>findViewById</i>
+
+00:05:07.230 --> 00:05:12.140
+e então passar a <i>resource ID</i> como 
+uma entrada do <i>View</i> que queremos.
+
+00:05:12.140 --> 00:05:15.050
+Demos à esse <i>TextView</i> uma ID 
+de <i>order.summary.text.view</i>.
+
+00:05:15.050 --> 00:05:19.370
+Então aqui a referenciamos como
+<i>R.id.order_summary_text_view</i>.
+
+00:05:19.370 --> 00:05:23.490
+Este método irá atravessar toda
+a hierarquia de <i>Views</i> e procurar
+
+00:05:23.490 --> 00:05:24.930
+pelo <i>View</i> com esta ID.
+
+00:05:26.110 --> 00:05:31.030
+Então irá retornar este objeto Java 
+como o valor de retorno deste método.
+
+00:05:31.030 --> 00:05:34.790
+Podemos armazenar o valor de retorno
+nesta variável do lado esquerdo,
+
+00:05:34.790 --> 00:05:39.160
+chamada <i>orderSummaryTextView</i>, 
+e esta é uma variável do tipo <i>View</i>.
+
+00:05:39.160 --> 00:05:42.610
+Então, isso retorna um <i>View</i> e 
+o armazenamos dentro de uma variável <i>View</i>.
+
+00:05:42.610 --> 00:05:47.280
+Mais tarde na <i>MainActivity</i>, podemos também
+chamar <i>findViewById</i> e então passar esta
+
+00:05:47.280 --> 00:05:53.120
+<i>Resource ID</i>, <i>R.id.quantity_text_view</i>,
+que se refere à este <i>TextView</i>.
+
+00:05:53.120 --> 00:05:55.210
+Este é o <i>TextView</i>
+no seletor de quantidade.
+
+00:05:55.210 --> 00:05:59.017
+Quando isto for chamado, a atividade irá 
+procurar através da hierarquia de <i>Views</i>
+
+00:05:59.017 --> 00:06:01.460
+e tentará encontrar o <i>View</i> com esta ID.
+
+00:06:01.460 --> 00:06:03.265
+Então irá retornar este <i>View</i>
+
+00:06:03.265 --> 00:06:07.190
+e então podemos armazená-lo em 
+uma variável chamada <i>quantity_text_view</i>.
+
+00:06:07.190 --> 00:06:09.660
+Esta variável também possui
+informação do tipo <i>View</i>.
+
+00:06:10.490 --> 00:06:13.440
+Isso explica como você pode 
+ter variáveis <i>quantityTextView</i>
+
+00:06:13.440 --> 00:06:17.190
+e <i>orderSummaryTextView</i>
+dentro da <i>MainActivity</i>
+
+00:06:17.190 --> 00:06:21.080
+e que estas variáveis podem ser conectadas
+a estes objetos na hierarquia de <i>Views</i>.
+
+00:06:21.396 --> 00:06:25.460
+Listei os tipos de informação, de cada uma
+dessas variáveis, na coluna da esquerda.
+
+00:06:26.450 --> 00:06:29.750
+Então essas duas variáveis possuem
+um tipo <i>View</i> como é declarado aqui.
+

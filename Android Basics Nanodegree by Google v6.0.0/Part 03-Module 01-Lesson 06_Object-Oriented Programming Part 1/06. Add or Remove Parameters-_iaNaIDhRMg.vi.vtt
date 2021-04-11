@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.680 --> 00:00:02.750
+Chúng ta đã cùng xem xét với một tham số 
+đầu vào.
+
+00:00:02.750 --> 00:00:05.689
+Đây là mã lệnh của phương pháp 
+calculatePrice đã được đề cập đến trong
+
+00:00:05.689 --> 00:00:07.110
+ghi chép hướng dẫn.
+
+00:00:07.110 --> 00:00:09.760
+Bây giờ chúng ta cùng xem xét trường hợp 
+có hai tham số đầu vào.
+
+00:00:09.760 --> 00:00:14.450
+Trong phương pháp submitOrder, ta muốn
+sử dụng calculatePrice(quantity,10).
+
+00:00:14.450 --> 00:00:18.580
+Trong đó 10 là giá 
+10$ một cốc cà phê.
+
+00:00:18.580 --> 00:00:20.900
+Vậy đầu tiên hãy cùng thay đổi điều này.
+
+00:00:20.900 --> 00:00:26.214
+Trong phương pháp submitOrder, tôi sẽ 
+áp dụng calculatePrice(quantity,10).
+
+00:00:26.214 --> 00:00:29.610
+Tôi thêm hai 
+đối số vào phương pháp này.
+
+00:00:29.610 --> 00:00:32.950
+Có một lỗi do không 
+phù hợp với ký số của phương pháp ở đây.
+
+00:00:32.950 --> 00:00:35.470
+Và tôi sẽ cập nhật.
+
+00:00:35.470 --> 00:00:38.580
+Bên trong dấu ngoặc đơn,
+tôi sẽ thêm dấu phẩy.
+
+00:00:38.580 --> 00:00:41.520
+Và sau đó gõ giá là số nguyên
+
+00:00:41.520 --> 00:00:47.040
+bởi vì chúng ta điền giá là 
+đầu vào thứ hai và đó là một số nguyên.
+
+00:00:47.040 --> 00:00:50.190
+Ngay lập tức có thông báo lỗi vì
+
+00:00:50.190 --> 00:00:54.140
+không phù hợp với ký số của phương pháp
+ở đây mà chỉ có một tham số đầu vào.
+
+00:00:54.140 --> 00:00:57.200
+Tôi sẽ thay đổi 
+để nó có hai tham số đầu vào.
+
+00:00:57.200 --> 00:00:58.420
+Vì vậy bên trong dấu ngoặc đơn mở và
+
+00:00:58.420 --> 00:01:01.070
+đóng,
+tôi sẽ thêm một tham số thứ hai.
+
+00:01:02.280 --> 00:01:05.630
+Do đây là giá của mỗi cốc 
+cà phê, tôi sẽ gọi đó là
+
+00:01:05.630 --> 00:01:10.030
+giá trên cốc, và đó là con số, nên tôi 
+nói kiểu dữ liệu là số nguyên.
+
+00:01:11.050 --> 00:01:13.420
+Tên của kiểu tham số 
+có thể là bất cứ tên gì bạn muốn.
+
+00:01:13.420 --> 00:01:16.850
+Tên đó phải mô tả 
+thông tin về nó.
+
+00:01:16.850 --> 00:01:20.530
+Trong khi kiểu dữ liệu phải là 
+kiểu dữ liệu java cụ thể.
+
+00:01:20.530 --> 00:01:24.090
+Do đó có thể là chuỗi số nguyên và 
+chuỗi khác mà chúng ta chưa biết.
+
+00:01:24.090 --> 00:01:29.670
+Tôi cũng cập nhật java doc để 
+mô tả tham số đầu vào thứ hai.
+
+00:01:29.670 --> 00:01:33.070
+Khi tôi xem xét phương pháp này, 
+chúng ta lấy số lượng và
+
+00:01:33.070 --> 00:01:36.630
+nhân với 5 là giá tiền
+5$ một cốc cà phê.
+
+00:01:36.630 --> 00:01:40.130
+Nhưng bây giờ giá trên cốc 
+đã thay đổi thành một biến số.
+
+00:01:40.130 --> 00:01:43.960
+Do đó hãy sử dụng giá trên cốc thay vì 
+mã hóa cứng với giá trị bằng 5.
+
+00:01:43.960 --> 00:01:47.340
+Bây giờ tổng giá đặt hàng 
+sẽ là số lượng
+
+00:01:47.340 --> 00:01:48.270
+nhân với giá trên cốc.
+
+00:01:48.270 --> 00:01:51.500
+Nếu bạn nhớ lại các mẫu
+tương tự mà tôi đã nhắc đến
+
+00:01:51.500 --> 00:01:55.350
+trước đây, bây giờ số lượng và 
+giá trên cốc có thể hoán đổi cho
+
+00:01:55.350 --> 00:01:57.699
+các giá trị khác nhau bởi vì 
+các thông số đầu vào của chúng.
+
+00:01:58.940 --> 00:02:01.700
+Bạn có thể áp dụng phương pháp tính giá 
+với số lượng khác và
+
+00:02:01.700 --> 00:02:04.860
+giá trên cốc khác và 
+phép tính này vẫn cho ra kết quả.
+
+00:02:06.030 --> 00:02:08.840
+Hãy xem xét nếu không có tham số đầu vào.
+
+00:02:08.840 --> 00:02:10.190
+Trong phương pháp gửi đặt hàng,
+
+00:02:10.190 --> 00:02:13.110
+Chúng ta cần áp dụng tính 
+giá không có giá trị nào trong ngoặc đơn.
+
+00:02:14.310 --> 00:02:17.200
+Trong phương pháp gửi đặt hàng, 
+khi tôi tính giá,
+
+00:02:17.200 --> 00:02:18.619
+Tôi sẽ bỏ các đối số.
+
+00:02:19.620 --> 00:02:21.700
+Bây giờ chúng ta không thêm bất kỳ 
+đầu vào nào trong phương pháp này.
+
+00:02:22.790 --> 00:02:25.590
+Ngay lập tức có gạch chân đỏ 
+do có sự không phù hợp với
+
+00:02:25.590 --> 00:02:28.290
+ký số của phương pháp; vì vậy
+tôi tiếp tục và
+
+00:02:28.290 --> 00:02:29.900
+xóa tất cả tham số đầu vào.
+
+00:02:31.110 --> 00:02:34.380
+Đây cũng là phản ánh về một lỗi 
+do các tham số không tồn tại nên
+
+00:02:34.380 --> 00:02:35.820
+tôi có thể tiếp tục và xóa bỏ tham số đó.
+
+00:02:37.330 --> 00:02:41.460
+Bây giờ xuất hiện thông báo lỗi rằng 
+không khắc phục biểu tượng giá trên cốc.
+
+00:02:41.460 --> 00:02:44.720
+Đó không còn là một biến số đầu vào, 
+vì vậy chúng ta cần chuyển đổi lại về
+
+00:02:44.720 --> 00:02:49.060
+giá trị giá đã được mã hóa cứng bằng
+5$ hoặc có thể chọn bất kỳ mức giá khác.
+
+00:02:50.070 --> 00:02:53.230
+Máy tính không phản ánh
+số lượng bởi đó thực sự
+
+00:02:53.230 --> 00:02:54.570
+là một biến số toàn cầu, và
+
+00:02:54.570 --> 00:02:58.790
+bạn có thể tham chiếu đến biến số lượng 
+với phương pháp khác ở hoạt động chính.
+
+00:02:58.790 --> 00:03:00.470
+Xin lỗi. 
+Đáng ra tôi nên chọn một cái tên ngoài
+
+00:03:00.470 --> 00:03:02.360
+số lượng cho tham số đầu vào.
+
+00:03:02.360 --> 00:03:05.830
+Nhưng bạn đã có ý tưởng 
+không cần bất kỳ tham số đầu vào nào,
+
+00:03:05.830 --> 00:03:08.120
+bạn có thể chỉ tham chiếu 
+đến các biến số toàn cầu.
+
+00:03:08.120 --> 00:03:11.680
+Bạn dùng các giá trị đã mã hóa cứng hoặc 
+nếu bạn tạo ra các biến địa phương ở đây,
+
+00:03:11.680 --> 00:03:12.630
+bạn có thể tham chiếu đến các biến đó.
+

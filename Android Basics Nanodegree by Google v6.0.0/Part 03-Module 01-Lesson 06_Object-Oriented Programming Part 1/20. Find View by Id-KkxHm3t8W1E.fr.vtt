@@ -1,0 +1,437 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.430 --> 00:00:02.969
+Revenons à l'activité principale
+de notre app Java.
+
+00:00:02.969 --> 00:00:06.190
+Spécifiquement, on a vu la méthode
+d'affichage de message et
+
+00:00:06.190 --> 00:00:08.570
+essayé de découvrir tout
+ce qui se passe ici.
+
+00:00:08.570 --> 00:00:13.870
+Même si la méthode <i>findViewById</i>
+n'est pas déclaré dans cette classe, on sait
+
+00:00:13.870 --> 00:00:18.740
+maintenant qu'il est défini dans la
+superclasse dans l'<i>AppCompatActivity</i>.
+
+00:00:18.740 --> 00:00:20.440
+Même chose pour <i>setContentView</i>.
+
+00:00:20.440 --> 00:00:23.820
+Ceci est défini dans la
+classe <i>AppCompatActivity</i>.
+
+00:00:23.820 --> 00:00:26.710
+Mais que se passe-t'il exactement
+dans cette méthode et
+
+00:00:26.710 --> 00:00:29.300
+pourquoi on a besoin de le passer dans
+la ressource ID?
+
+00:00:29.300 --> 00:00:31.930
+Pourquoi a-t'on des parenthèses
+supplémentaires ici ?
+
+00:00:31.930 --> 00:00:34.410
+Pour répondre à cette question, je vais
+résumé tout ce qu'on a appris jusqu'
+
+00:00:34.410 --> 00:00:37.720
+ici et vous mener à pourquoi
+ce code existe ici.
+
+00:00:38.870 --> 00:00:40.350
+Vous rappelez vous de ce diagramme ?
+
+00:00:40.350 --> 00:00:44.910
+Quand vous cliquez sur l'icône de app sur
+le dispositif, il ouvre l'activité principale.
+
+00:00:44.910 --> 00:00:48.650
+Dans notre code, la méthode <i>onCreate</i>
+de l'activité principale est appelée par
+
+00:00:48.650 --> 00:00:49.770
+le système.
+
+00:00:49.770 --> 00:00:53.220
+Dans cette méthode, on a
+une méthode appelée <i>setContentView</i>
+
+00:00:53.220 --> 00:00:55.340
+avec la disposition
+de la ressource ID.
+
+00:00:55.340 --> 00:00:59.710
+Dans un exercice précédent, on a passé une vue
+texte unique pour définir l'affichage de contenu.
+
+00:00:59.710 --> 00:01:01.950
+Mais on veut plus d'une
+vue pour notre app.
+
+00:01:01.950 --> 00:01:04.650
+Donc, on passe une
+disposition de ressource ID.
+
+00:01:04.650 --> 00:01:06.980
+Ça s'associe à un fichier XML.
+
+00:01:06.980 --> 00:01:09.560
+Une fois qu'on établit la
+vue du contenu, l'activité va et
+
+00:01:09.560 --> 00:01:13.200
+trouve le fichier XML de disposition et
+ensuite parcoure chaque ligne.
+
+00:01:13.200 --> 00:01:18.140
+Pour chaque vue, il gonfle ou
+crée, un objet Java pour ça.
+
+00:01:18.140 --> 00:01:19.860
+Elle passe par le
+fichier XML et
+
+00:01:19.860 --> 00:01:23.040
+puis construit cette entière
+hiérarchie d'objets Java.
+
+00:01:23.040 --> 00:01:27.090
+Quand elle gonfle chacune de ces vues,
+elle appelle en fait le constructeur,
+
+00:01:27.090 --> 00:01:31.600
+<i>NewTextView</i> ou <i>NewLinearLayout</i>
+
+00:01:31.600 --> 00:01:34.760
+dans l'objet Java, de
+sorte qu'il puisse s'établir proprement.
+
+00:01:34.760 --> 00:01:38.700
+Notez que on n'avait pas à écrire un code
+pour <i>NewTextView</i> ou <i>NewLinearLayout</i> et
+
+00:01:38.700 --> 00:01:40.650
+pour établir la
+taille de la police.
+
+00:01:40.650 --> 00:01:44.540
+Tout cela était manipulé par le processus
+de gonflement de l'activité.
+
+00:01:44.540 --> 00:01:48.290
+Pour interagir avec ces vues pendant que
+l'app est en exécution et pour les changer,
+
+00:01:48.290 --> 00:01:49.830
+par exemple,
+pour changer le texte ou
+
+00:01:49.830 --> 00:01:54.480
+pour changer les boutons,
+alors on doit trouver ces objets Java.
+
+00:01:54.480 --> 00:01:58.560
+Une fois qu'on les trouve, on peut les stocker
+comme variables dans l'activité principale.
+
+00:01:58.560 --> 00:02:01.360
+Rappelez-vous, on ne crée pas un
+nouveau <i>TextViews</i> à partir de zéro,
+
+00:02:01.360 --> 00:02:04.310
+on trouve juste ceux existant
+dans la nouvelle hiérarchie.
+
+00:02:06.060 --> 00:02:08.639
+Ce sont les variables qu'on a utilisé
+jusqu'ici dans l'activité principale.
+
+00:02:08.639 --> 00:02:13.160
+On a une variable pour la quantité,
+le prix et le message de prix.
+
+00:02:13.160 --> 00:02:15.830
+C'est un mélange des variables locaux
+et globaux.
+
+00:02:15.830 --> 00:02:19.520
+Pour interagir avec les vues dans la
+hiérarchie de vue, on devrait créer des variables
+
+00:02:19.520 --> 00:02:21.149
+qui référencent ces vues spécifiques.
+
+00:02:22.500 --> 00:02:25.765
+Par exemple, on peut créer une variable
+appelée <i>quantitytextview</i>,
+
+00:02:25.765 --> 00:02:28.580
+qui se référera
+à ce <i>TextView</i> ici.
+
+00:02:28.580 --> 00:02:31.340
+SI vous cliquez sur les boutons plus
+ou moins dans le UI,
+
+00:02:31.340 --> 00:02:34.340
+alors vous pouvez changer le texte du
+<i>TextView</i> pour montrer un nombre différent.
+
+00:02:36.220 --> 00:02:39.340
+On peut aussi avoir une variable
+appelée <i>orderSummaryTextView</i>
+
+00:02:39.340 --> 00:02:41.730
+qui pointe à ce <i>TextView</i>.
+
+00:02:41.730 --> 00:02:44.590
+Quand vous cliquez le bouton commander
+alors le <i>orderSummaryTextView</i>
+
+00:02:44.590 --> 00:02:47.660
+changera son texte pour montrer
+le nouveau récapitulatif de commande.
+
+00:02:47.660 --> 00:02:51.680
+Donc vous pouvez voir comment avoir des
+variables pointant quelques uns de ces vues
+
+00:02:51.680 --> 00:02:55.440
+serait utile pour
+changer le UI quand l'app s'exécute.
+
+00:02:55.440 --> 00:02:59.430
+Mais comment établir une connexion
+entre cette variable-ci
+
+00:02:59.430 --> 00:03:00.790
+et le <i>TextView</i> ?
+
+00:03:00.790 --> 00:03:03.780
+Mais comment établir une connexion
+entre <i>orderSummaryTextView</i> ci
+
+00:03:03.780 --> 00:03:04.495
+et ce <i>TextView</i> ?
+
+00:03:06.250 --> 00:03:08.139
+Retour au fichier <i>XML</i>
+de disposition,
+
+00:03:08.139 --> 00:03:11.699
+vous rappelez-vous qu'on a assigné
+des vues ID à certaines vues ?
+
+00:03:12.953 --> 00:03:17.400
+Pour ce <i>TextView</i>, on lui a donné
+une vue ID de <i>quantity.text.view</i>.
+
+00:03:17.400 --> 00:03:21.340
+Pour cette vue, on lui a donné un <i>ID
+order.summary.text.view</i>.
+
+00:03:21.340 --> 00:03:24.240
+C'est optionnel d'assigner
+des IDs aux vues et
+
+00:03:24.240 --> 00:03:28.760
+vous assignerez juste une vue ID si vous
+devez vous référer à cette vue plus tard.
+
+00:03:28.760 --> 00:03:33.180
+Par exemple, vous pouvez assigner des vues ID
+à tout, mais ce n'est pas nécessaire.
+
+00:03:33.180 --> 00:03:37.470
+On a juste besoin de se référer à ces
+deux vues dans notre code Java plus tard.
+
+00:03:37.470 --> 00:03:39.860
+Donc, assignons juste des
+IDs à ces deux vues.
+
+00:03:40.880 --> 00:03:43.900
+Ok, on a établi que
+que la vue a des vues ID pour
+
+00:03:43.900 --> 00:03:46.700
+qu'on puisse se référer à eux
+dans le code Java plus tard.
+
+00:03:46.700 --> 00:03:51.350
+On a aussi établi qu'on veut des
+variables pointant à ces vues pour
+
+00:03:51.350 --> 00:03:53.740
+qu'on puisse manipuler ces vues.
+
+00:03:53.740 --> 00:03:57.680
+Mais on ne sait toujours pas comment
+établir la connexion entre
+
+00:03:57.680 --> 00:04:01.160
+cette variable et
+cet objet Java spécifique.
+
+00:04:01.160 --> 00:04:04.700
+Et même chose pour cette variable et
+cet objet Java.
+
+00:04:04.700 --> 00:04:08.820
+Dans la classe <i>AppCompatActivity</i>,
+je veux vous montrer une méthode spécifique.
+
+00:04:08.820 --> 00:04:12.560
+Il est appelé <i>findViewById</i> et
+il prend une ressource ID comme une entrée.
+
+00:04:13.810 --> 00:04:16.290
+La méthode <i>findViewById</i>
+
+00:04:16.290 --> 00:04:21.220
+trouve une vue qui correspond à
+l' ID qui est passée comme une entrée.
+
+00:04:21.220 --> 00:04:23.790
+Et l'activité recherche cette vue
+
+00:04:23.790 --> 00:04:28.890
+dans la hiérarchie de vue du XML qu'on
+a procédé dans la méthode <i>onCreate</i>.
+
+00:04:28.890 --> 00:04:30.560
+Donc comme je l'ai mentionné précédemment,
+
+00:04:30.560 --> 00:04:34.350
+l'activité de la méthode <i>onCreate</i>
+établit une hiérarchie de vue et
+
+00:04:34.350 --> 00:04:39.405
+pui la méthode <i>findViewByID</i> va et
+trouve une vue dans cette hiérarchie de vue.
+
+00:04:39.405 --> 00:04:43.615
+La valeur de retour de cette méthode
+est un objet de type vue.
+
+00:04:43.615 --> 00:04:47.415
+Cette colonne de gauche montre la valeur
+de retour pour toutes ces méthodes.
+
+00:04:47.415 --> 00:04:51.815
+Ça signifie que dans notre code d'activité
+on peut appeler <i>findViewById</i>,
+
+00:04:51.815 --> 00:04:56.670
+passer la ressource ID de la vue qu'on
+veut et puis ça retournera un
+
+00:04:56.670 --> 00:04:59.980
+objet vue et alors on peut stocker cela
+comme une variable dans l'activité.
+
+00:05:02.170 --> 00:05:04.300
+Le code Java <i>MainActivity</i>
+ressemblerait à ça.
+
+00:05:05.360 --> 00:05:07.230
+On peut appeler <i>findViewById</i> et
+
+00:05:07.230 --> 00:05:12.140
+alors passer la ressource ID comme une
+entrée de la vue qu'on veut.
+
+00:05:12.140 --> 00:05:15.050
+On a donné à ce <i>TextView</i>
+un <i>ID order.summary.text.view</i>.
+
+00:05:15.050 --> 00:05:19.370
+Alors ici on le référence comme
+<i>R.id.order_summary_text_view</i>.
+
+00:05:19.370 --> 00:05:23.490
+Cette méthode ira et traversera l'entière
+hiérarchie de vue et puis cherche
+
+00:05:23.490 --> 00:05:24.930
+la vue avec cet ID.
+
+00:05:26.110 --> 00:05:31.030
+Alors il retournera cet objet Java
+comme une valeur de retour de cette méthode.
+
+00:05:31.030 --> 00:05:34.790
+On peut stocker cette valeur de retour dans
+cette variable sur le côté gauche,
+
+00:05:34.790 --> 00:05:39.290
+appelée <i>orderSummaryTextView</i> et
+c'est une variable de type vue.
+
+00:05:39.290 --> 00:05:42.610
+Donc, ça retourne une vue et
+on le stocke dans une variable vue.
+
+00:05:42.610 --> 00:05:47.280
+Plus tard dans l'activité principale, on
+peut appeler <i>findViewById</i> et puis passer
+
+00:05:47.280 --> 00:05:53.120
+cette ressource ID, <i>R.id.quantity_text_view</i>,
+qui se refère à ce <i>TextView</i> ici.
+
+00:05:53.120 --> 00:05:55.610
+le sélecteur de quantité.
+
+00:05:55.610 --> 00:05:58.847
+Quand ça appelait, l'activité cherchera
+à travers la hiérarchie de vue et puis
+
+00:05:58.847 --> 00:06:01.460
+essaye de trouver la vue avec cet ID.
+
+00:06:01.460 --> 00:06:03.265
+Ensuite ça retournera cette vue et
+
+00:06:03.265 --> 00:06:07.190
+alors on peut stocker ça dans une variable
+appelée <i>quantity_text_view</i>.
+
+00:06:07.190 --> 00:06:09.490
+Cette variable a aussi
+un type de données de Vue.
+
+00:06:10.490 --> 00:06:13.440
+Ça explique comment vous pouvez
+avoir les variables <i>quantityTextView</i>
+
+00:06:13.440 --> 00:06:17.190
+et <i>orderSummaryTextView</i> dans
+l'activité principale et que ces
+
+00:06:17.190 --> 00:06:20.800
+variables peuvent se connecter à ces
+objets Java dans la hiérarchie de vue.
+
+00:06:20.800 --> 00:06:21.396
+D'ailleurs,
+
+00:06:21.396 --> 00:06:25.460
+J'ai listé les types de données ici de chacun
+de ces variables dans la colonne de gauche.
+
+00:06:26.690 --> 00:06:29.750
+Alors ces deux variables ont
+un type Vue comme déclarées ici.
+

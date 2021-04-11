@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.520 --> 00:00:03.700
+Endi biz Java kodidagi XML resurslariga 
+murojaat qilishimiz mumkinligini bilamiz.
+
+00:00:04.710 --> 00:00:08.680
+Ammo resurslar va Java kodlar 
+qanday bog‘langan?
+
+00:00:08.680 --> 00:00:11.380
+Qanday qilib ular bir ilovaning 
+qismlari bo‘la oladilar?
+
+00:00:12.460 --> 00:00:15.215
+JustJava ilovasi 
+ikonkasini bosganingizda, 
+
+00:00:16.335 --> 00:00:18.615
+MainActivity ochiladi.
+
+00:00:18.615 --> 00:00:21.925
+Sizga hali hech narsa ko‘rinmaydi, 
+chunki initsializatsiya tugallanmagan.
+
+00:00:21.925 --> 00:00:25.835
+Yaxshiyamki, ushbu harakatni boshlash 
+bilan bog‘liq bo‘lgan ko‘plab murakkab 
+
+00:00:25.835 --> 00:00:28.565
+amallar avtomatik ravishda 
+Android tomonidan bajariladi.
+
+00:00:28.565 --> 00:00:31.995
+Bizning e‘tiborimizni talab qiladigan 
+narsa bu MainActivity faylida, 
+
+00:00:31.995 --> 00:00:34.875
+onCreate metodi avtomatik 
+ravishda chaqiriladi.
+
+00:00:34.875 --> 00:00:37.590
+Bu operatsiya yaratilish 
+davomida bajariladi.
+
+00:00:37.590 --> 00:00:40.580
+Bir necha xodisadan so‘ng 
+setContentView mavjud bo‘lgan muhim qator 
+
+00:00:40.580 --> 00:00:45.120
+paydo bo‘ladi, keyin resurs 
+ID si yoziladi.
+
+00:00:45.120 --> 00:00:47.640
+Bu R.layout.activity_main .
+
+00:00:47.640 --> 00:00:52.280
+Bu content view bosh 
+XML faylida ko‘rsatilgandek, 
+
+00:00:52.280 --> 00:00:55.720
+o‘rnatilish kerak.
+
+00:00:55.720 --> 00:00:59.700
+Bu metod chaqirig‘i va input 
+parametri mana bu ID resursidir.
+
+00:00:59.700 --> 00:01:02.600
+Buni o‘rnatganingizdan keyin, 
+content view dan foydalanasiz 
+
+00:01:02.600 --> 00:01:07.660
+va Android qurilmasi bu XML faylni 
+tahlil qilishni boshlashi mumkin.
+
+00:01:07.660 --> 00:01:09.410
+Tahlil faylni o‘qish va 
+izohlashga o‘xshaydi, 
+
+00:01:09.410 --> 00:01:12.490
+masalan, 
+"ha, bu LinearLayout ".
+
+00:01:12.490 --> 00:01:13.570
+"Bu esa text view ."
+
+00:01:13.570 --> 00:01:15.270
+"Bu atributlar" va hokazo.
+
+00:01:15.270 --> 00:01:18.850
+Ya’ni fayl tarkibi bilan 
+tanishishga urinishdir.
+
+00:01:18.850 --> 00:01:21.960
+Android qurilmasi faylning yuqori 
+qismidan o‘qib boshlaydi.
+
+00:01:21.960 --> 00:01:24.670
+Bu yerda linear layout 
+mavjudligini aniqlaydi.
+
+00:01:24.670 --> 00:01:29.170
+Va u shunga mos ravishda 
+Java ob’ektini yaratadi.
+
+00:01:29.170 --> 00:01:30.570
+Va keyingi qatorga otadi, 
+
+00:01:30.570 --> 00:01:36.120
+TextView ni linear layout ning 
+bo‘limi sifatida taqdim qiladi.
+
+00:01:36.120 --> 00:01:39.865
+Bu ikkinchi darsda o‘rganilgan View 
+ierarxiyasi kabidir. 
+
+00:01:39.865 --> 00:01:43.125
+Sizga ilgari bu Java ob’ektlari 
+ierarxiyasi ekanligini 
+
+00:01:43.125 --> 00:01:45.265
+aytmagan edim.
+
+00:01:45.265 --> 00:01:47.975
+Kelgusi videolarda Java ob’ektlari 
+haqida ko‘proq bilib olamiz, agar 
+
+00:01:47.975 --> 00:01:50.515
+ba’zi malumotlar tushunarsiz 
+bo‘lsa hech qisi yo‘q.
+
+00:01:50.515 --> 00:01:53.085
+Keyingi qatorda linear layout 
+Java ob’ektini 
+
+00:01:53.085 --> 00:01:55.385
+o‘rnatishimiz kerakligini ko‘ramiz.
+
+00:01:55.385 --> 00:01:58.855
+LinearLayout ushbu asosga 
+qism sifatida qo‘shiladi.
+
+00:01:58.855 --> 00:02:00.480
+Bizda shuningdek Button 
+elementi bor.
+
+00:02:00.480 --> 00:02:03.300
+Biz uni LinearLayout ga 
+qism sifatida qo‘shamiz.
+
+00:02:03.300 --> 00:02:07.470
+Shunday qilib, biz View ierarxiyasi 
+uchun zarur bo‘lgan barcha ma’lumotlarni 
+
+00:02:07.470 --> 00:02:09.280
+belgilaguncha faylni oxirigacha 
+davom etamiz.
+
+00:02:09.280 --> 00:02:13.740
+Java ob’ektlarining ierarxiyasi tayyor 
+bo‘lgandan so‘ng biz ularni boshqarishimiz 
+
+00:02:13.740 --> 00:02:15.470
+va ilova ishi davomida 
+o‘zgartirishimiz mumkin.
+
+00:02:16.570 --> 00:02:19.930
+TextView kabi ob’ektda 
+qurilma haqida ma’lumot mavjud.
+
+00:02:19.930 --> 00:02:23.070
+Masalan, matn, uning rangi, hajmi.
+
+00:02:23.070 --> 00:02:26.880
+Shuningdek, ob’ektda chaqirishimiz 
+mumkin bo‘lgan metodlar bor 
+
+00:02:26.880 --> 00:02:29.130
+va bu bilan ularning ichki 
+holatini o‘zgartirishimiz mumkin.
+
+00:02:29.130 --> 00:02:31.670
+Masalan, ilova ishlayotgan paytda 
+matnni o‘zgartirishimiz mumkin.
+
+00:02:32.690 --> 00:02:36.700
+Ushbu ob’ektlarning barchasi bilan o‘zaro aloqa 
+qilish - ob’ektga yo‘naltirilgan dasturlash deb ataladi.
+
+00:02:36.700 --> 00:02:40.220
+Kelgusi videolarda buni 
+batafsilroq ko‘rib chiqamiz.
+
+00:02:40.220 --> 00:02:44.230
+Xulosa qilib aytganda, MainActivity da 
+ushbu joylashuv tartibiga setContentView ni chaqiramiz, 
+
+00:02:44.230 --> 00:02:49.440
+keyin ushbu tartibni o‘qib chiqamiz 
+va bir nechta java ob’ektlarini ochamiz.
+
+00:02:49.440 --> 00:02:53.590
+Ushbu Java ob’ektlari ilovaning ko‘rinishlar 
+ierarxiyasini tashkil qiladi.
+
+00:02:53.590 --> 00:02:56.920
+MainActivity bu ko‘rinishlar 
+ierarxiyasiga amal qiladi 
+
+00:02:56.920 --> 00:03:00.400
+va keyin MainActivity bilan 
+ishlaganda ushbu ob’ektlarni yangilashi mumkin.
+

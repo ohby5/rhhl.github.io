@@ -1,0 +1,739 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.810 --> 00:00:03.100
+Retournons à l'appli JustJava
+pendant un instant.
+
+00:00:03.320 --> 00:00:06.440
+Regardons la classe MainActivity,
+et la méthode displayMessage.
+
+00:00:07.030 --> 00:00:09.440
+Ça commence à être un peu plus clair ici.
+
+00:00:09.690 --> 00:00:11.490
+Nous voyons déjà que nous créons
+
+00:00:11.490 --> 00:00:13.920
+une variable nommée
+orderSummaryTextView.
+
+00:00:14.100 --> 00:00:16.560
+Le type de données
+de cette variable était TextView.
+
+00:00:17.590 --> 00:00:19.710
+Mais on ne comprenait pas
+cette partie avant.
+
+00:00:20.480 --> 00:00:24.120
+Sur la ligne d'après, nous considérons
+une méthode pour cet objet TextView.
+
+00:00:24.430 --> 00:00:27.390
+On utilise le même nom de variable
+qui est mentionné ci-dessus.
+
+00:00:27.960 --> 00:00:31.030
+On l'appelle orderSummaryTextView.setText.
+
+00:00:31.650 --> 00:00:35.070
+Et nous écrivons une chaîne de caractères
+en tant que méthode de saisie.
+
+00:00:35.070 --> 00:00:38.450
+Cette chaîne était initialement apparue
+en tant que paramètre de saisie
+
+00:00:38.450 --> 00:00:40.440
+pour la méthode d'affichage du message.
+
+00:00:41.500 --> 00:00:44.940
+Regardons cette partie du code,
+qu'on ne comprend pas, en plus de détails.
+
+00:00:44.940 --> 00:00:47.980
+Mais on dirait que findViewByld
+est un appel de méthode,
+
+00:00:47.980 --> 00:00:52.550
+car il précède ces parenthèses
+avec peut-être un paramètre d'entrée.
+
+00:00:53.120 --> 00:00:57.148
+Mais il est étrange que cette méthode ne
+soit définie nulle part dans cette classe.
+
+00:00:58.338 --> 00:00:59.915
+Si je double-clique sur ce nom
+
+00:00:59.915 --> 00:01:03.605
+et puis, je fais command F
+ou control F sur Windows,
+
+00:01:04.185 --> 00:01:06.600
+on peut faire des recherches
+dans ce fichier.
+
+00:01:07.290 --> 00:01:10.450
+J'ai trouvé que findViewByld
+apparaît seulement deux fois,
+
+00:01:10.450 --> 00:01:12.610
+et à chaque fois,
+c'est utilisé de façon semblable.
+
+00:01:12.610 --> 00:01:15.160
+Mais je ne vois pas
+de méthode nommée findViewByld.
+
+00:01:16.190 --> 00:01:19.250
+Justement, plus tôt
+dans la classe MainActivity,
+
+00:01:19.250 --> 00:01:22.060
+on voit un appel pour setContentView,
+
+00:01:22.420 --> 00:01:24.240
+mais si on le cherche dans ce fichier,
+
+00:01:24.240 --> 00:01:26.540
+ce n'est pas défini non plus
+dans MainActivity.
+
+00:01:27.600 --> 00:01:30.150
+Donc, où est-ce que ces méthodes
+sont-elles définies ?
+
+00:01:30.490 --> 00:01:33.200
+Eh bien, MainActivity est en fait
+un fichier plutôt court.
+
+00:01:33.480 --> 00:01:35.270
+Il contient seulement 90 lignes,
+
+00:01:35.270 --> 00:01:38.210
+mais cette classe est plus compliquée
+qu'elle n'y paraît.
+
+00:01:38.570 --> 00:01:42.080
+Le code dit :
+« extends AppCompatActivity ».
+
+00:01:42.080 --> 00:01:46.620
+Ça signifie que MainActivity
+est une extension de la fonctionnalité
+
+00:01:46.620 --> 00:01:48.650
+dans la classe AppCompatActivity.
+
+00:01:49.100 --> 00:01:52.050
+Si, sur votre ordinateur,
+vous voyez ActionBarActivity ici,
+
+00:01:52.050 --> 00:01:54.720
+pas de souci,
+c'est juste une vieille version.
+
+00:01:55.260 --> 00:01:58.510
+La version qu'il faudrait utiliser,
+c'est AppCompatActivity.
+
+00:01:58.520 --> 00:02:02.160
+AppCompatActivity vous donne aussi
+du soutien pour la rétrocompatibilité
+
+00:02:02.160 --> 00:02:04.310
+pour les appareils Android plus ancien.
+
+00:02:04.310 --> 00:02:07.480
+AppCompatActivity apparaît
+dans l'Android Support Library.
+
+00:02:07.770 --> 00:02:09.950
+Ça nous permet
+d'utiliser les derniers caractéristiques
+
+00:02:09.950 --> 00:02:11.540
+de l'interface utilisateur sur Android,
+
+00:02:11.540 --> 00:02:14.440
+pendant qu'on travaille
+sur un appareil Android plus ancien.
+
+00:02:15.300 --> 00:02:17.760
+En étendant la classe AppCompatActivity,
+
+00:02:17.760 --> 00:02:20.990
+on obtient toutes les fonctionnalités,
+les états et les méthodes gratuitement
+
+00:02:20.990 --> 00:02:23.750
+à partir d'ici dans MainActivity.
+
+00:02:24.300 --> 00:02:26.880
+On n'a pas besoin de copier coller
+un code d'ici.
+
+00:02:26.880 --> 00:02:29.220
+On a juste besoin
+d'étendre la classe en question.
+
+00:02:29.760 --> 00:02:32.280
+Si ça vous intéresse,
+vous pouvez trouver plus d'informations
+
+00:02:32.280 --> 00:02:34.940
+sur AppCompatActivity
+en recherchant sur Google.
+
+00:02:35.610 --> 00:02:38.630
+Voici le document de référence
+pour la classe AppCompatActivity.
+
+00:02:39.520 --> 00:02:41.610
+Puisque j'ai l'extension Chrome installée,
+
+00:02:41.610 --> 00:02:43.120
+je peux aussi voir la source.
+
+00:02:43.930 --> 00:02:45.390
+Et voici le code pour l'endroit
+
+00:02:45.390 --> 00:02:47.640
+où la classe AppCompatActivity
+est définie.
+
+00:02:47.640 --> 00:02:50.010
+Il est clair qu'il existe
+beaucoup de fonctionnalités ici,
+
+00:02:50.010 --> 00:02:53.680
+mais il faut savoir qu'on n'a pas
+besoin de comprendre comment ça marche.
+
+00:02:54.250 --> 00:02:57.890
+On a juste besoin de savoir
+que quand on étend AppCompatActivity,
+
+00:02:57.890 --> 00:03:00.310
+toutes les fonctionnalités sont gratuites.
+
+00:03:00.730 --> 00:03:03.410
+Sur un autre plan,
+on peut le décrire de cette façon.
+
+00:03:03.420 --> 00:03:05.580
+Voici une définition de classe
+pour MainActivity.
+
+00:03:05.580 --> 00:03:07.810
+et par exemple, vous avez
+des méthodes définies ici.
+
+00:03:07.810 --> 00:03:12.060
+Quand on étend AppCompatActivity,
+on peut accéder à l'état
+
+00:03:12.060 --> 00:03:14.320
+et puis aux méthodes d'AppCompatActivity.
+
+00:03:14.320 --> 00:03:17.390
+Alors, ils ne sont pas ajoutés
+concrètement à la classe MainActivity,
+
+00:03:17.390 --> 00:03:19.120
+mais on peut imaginer qu'ils sont là,
+
+00:03:19.120 --> 00:03:22.660
+car on peut toujours faire allusion
+à l'état et aux méthodes.
+
+00:03:22.660 --> 00:03:24.530
+C'est comme ça
+que le code peut faire référence
+
+00:03:24.530 --> 00:03:27.640
+à des choses telles que setContentView
+ou findViewByld.
+
+00:03:27.640 --> 00:03:29.240
+On a hérité de ces méthodes,
+
+00:03:29.760 --> 00:03:31.810
+on ne les a pas définies
+dans MainActivity.
+
+00:03:32.070 --> 00:03:34.810
+MainActivity s'affiche
+comme un écran sur l'appareil,
+
+00:03:34.810 --> 00:03:37.440
+mais on n'a pas écrit de code
+pour ça dans MainActivity,
+
+00:03:37.440 --> 00:03:38.820
+on l'a aussi hérité.
+
+00:03:39.260 --> 00:03:40.860
+On n'obtient pas l'état et les méthodes
+
+00:03:40.860 --> 00:03:43.290
+d'AppCompatActivity
+directement dans la classe,
+
+00:03:43.290 --> 00:03:46.000
+mais on sait qu'ils sont là
+et qu'on peut s'y référer.
+
+00:03:46.550 --> 00:03:50.180
+Justement, pour ce qui est d'hériter,
+il y a de bons et de mauvais aspects.
+
+00:03:50.180 --> 00:03:52.300
+Parfois on veut hériter de comportements,
+
+00:03:52.300 --> 00:03:55.070
+mais dans d'autres situations,
+on va vouloir les modifier.
+
+00:03:55.770 --> 00:03:59.550
+Si vous voulez changer le comportement
+dans cette classe héritée,
+
+00:03:59.550 --> 00:04:01.760
+vous pouvez outrepasser
+certaines méthodes.
+
+00:04:02.050 --> 00:04:05.550
+On peut ajouter le texte @override
+par dessus la méthode
+
+00:04:05.550 --> 00:04:07.200
+pour que l'ordinateur sache
+
+00:04:07.200 --> 00:04:11.410
+qu'on ne veut pas cette version
+de la méthode d'AppCompatActivity,
+
+00:04:11.910 --> 00:04:15.010
+mais qu'on veut cette version
+qu'on a défini ici.
+
+00:04:15.580 --> 00:04:18.470
+C'est un sujet compliqué
+qui demande beaucoup d'entraînement.
+
+00:04:18.480 --> 00:04:21.260
+Mais on a vu un exemple
+pour outrepasser une méthode
+
+00:04:21.260 --> 00:04:23.200
+de la classe AppCompatActivity.
+
+00:04:23.410 --> 00:04:25.780
+Cette méthode est la méthode OnCreate.
+
+00:04:26.120 --> 00:04:29.740
+En outrepassant la méthode OnCreate
+dans MainActivity,
+
+00:04:29.740 --> 00:04:33.240
+on indique la mise en œuvre
+qu'on veut voir être exécutée
+
+00:04:33.240 --> 00:04:35.170
+quand cette méthode-là est appelée.
+
+00:04:35.170 --> 00:04:37.060
+Ne vous inquiétez pas
+si vous ne comprenez pas.
+
+00:04:37.060 --> 00:04:41.484
+Je vous donne un petit résumé
+de concepts de programmation par objet.
+
+00:04:42.090 --> 00:04:45.890
+C'est normal
+que vous ayez des questions après,
+
+00:04:45.890 --> 00:04:48.470
+et que vous ayez besoin
+de consulter des livres
+
+00:04:48.470 --> 00:04:50.200
+pour vraiment comprendre ces sujets.
+
+00:04:50.590 --> 00:04:52.461
+Une autre façon
+pour visualiser les liens
+
+00:04:52.461 --> 00:04:55.470
+entre les classes MainActivity
+et AppCompatActivity
+
+00:04:55.470 --> 00:04:57.890
+est de dessiner un diagramme
+hiérarchique de classes.
+
+00:04:57.890 --> 00:05:00.320
+C'est différent d'un diagramme
+hiérarchique d'aperçus,
+
+00:05:00.320 --> 00:05:02.340
+car un diagramme des aperçus nous montre
+
+00:05:02.340 --> 00:05:05.200
+une arborescence
+de ce qui est montré sur l'écran.
+
+00:05:05.200 --> 00:05:06.320
+Le diagramme de classes
+
+00:05:06.320 --> 00:05:09.280
+montre les liens
+entre les différentes classes Java.
+
+00:05:09.770 --> 00:05:12.320
+AppCompatActivity est une super-classe.
+
+00:05:12.650 --> 00:05:15.738
+Puisque MainActivity provient
+d'AppCompatActivity,
+
+00:05:15.738 --> 00:05:17.590
+c'est une sous-classe.
+
+00:05:18.300 --> 00:05:20.560
+À chaque fois qu'on voit
+cette définition de classe,
+
+00:05:20.560 --> 00:05:23.110
+la partie qu'on étend
+est une super-classe.
+
+00:05:23.620 --> 00:05:25.490
+Là, c'est la sous-classe.
+
+00:05:25.500 --> 00:05:28.290
+Si on crée une autre activité,
+appelée DetailActivity
+
+00:05:28.800 --> 00:05:31.860
+et on avait étendu AppCompatActivity,
+là c'est la sous-classe,
+
+00:05:31.860 --> 00:05:33.409
+et là, la super-classe.
+
+00:05:34.590 --> 00:05:37.090
+Voici un autre exemple
+d'héritage de la classe Java.
+
+00:05:37.570 --> 00:05:40.800
+Si on y pense,
+TextView, ImageView et Button
+
+00:05:40.800 --> 00:05:43.530
+ont tous des aspects communs.
+
+00:05:44.270 --> 00:05:47.660
+Ces visualisations ou Views ont
+une largeur et une hauteur sur l'écran.
+
+00:05:47.660 --> 00:05:48.900
+On ne l'a pas encore appris,
+
+00:05:48.900 --> 00:05:51.100
+mais elles ont aussi
+un état de visibilité.
+
+00:05:51.100 --> 00:05:53.490
+Elles peuvent donc
+être invisibles ou visibles.
+
+00:05:54.150 --> 00:05:57.730
+Il y a aussi quelques autres propriétés
+qu'elles ont en commun.
+
+00:05:58.270 --> 00:06:00.490
+Au lieu d'écrire un code
+pour ces propriétés
+
+00:06:00.490 --> 00:06:02.180
+dans la classe TextView
+
+00:06:02.180 --> 00:06:05.260
+et puis de les recopier dans ImageView
+et dans la classe Button,
+
+00:06:05.260 --> 00:06:07.230
+il existe une meilleure façon.
+
+00:06:07.610 --> 00:06:09.320
+On peut créer une classe View.
+
+00:06:09.800 --> 00:06:13.490
+On peut extraire les propriétés
+qu'elles ont en commun,
+
+00:06:13.490 --> 00:06:18.610
+puis on les insère dans cette classe View,
+pour qu'on écrive le code une fois.
+
+00:06:19.230 --> 00:06:20.800
+Mais alors, comment peut-on montrer
+
+00:06:20.800 --> 00:06:23.240
+un lien entre la classe TextView
+et la classe View ?
+
+00:06:23.740 --> 00:06:25.938
+Si vous pensez à l'héritage,
+vous avez raison.
+
+00:06:26.308 --> 00:06:29.480
+Dans le fichier Java TextView,
+on va définir la classe TextView.
+
+00:06:29.970 --> 00:06:33.260
+Comme ça, on va hériter des données
+et des méthodes de la classe View.
+
+00:06:33.910 --> 00:06:37.270
+Comme ça, on n'aura pas besoin d'écrire
+autant de codes dans la classe TextView
+
+00:06:37.270 --> 00:06:41.000
+car une partie de la fonctionnalité
+existe déjà dans la classe View.
+
+00:06:41.590 --> 00:06:44.360
+Les mêmes choses sont valables
+pour les classes ImageView et Button,
+
+00:06:44.360 --> 00:06:46.520
+il n'y a pas besoin d'écrire
+autant de codes.
+
+00:06:46.520 --> 00:06:48.490
+Dans ces fichiers, il ne faut qu'écrire
+
+00:06:48.490 --> 00:06:52.090
+ce qui diffère dans ImageView
+par rapport à la classe View.
+
+00:06:52.690 --> 00:06:55.330
+C'est comme si on précisait un delta,
+
+00:06:55.330 --> 00:06:58.990
+pour que la classe ImageView
+doit seulement préciser la différence
+
+00:06:58.990 --> 00:07:01.890
+entre ImageView et la classe View.
+
+00:07:03.640 --> 00:07:06.480
+Si on ne veut pas hériter
+de certains comportements de View,
+
+00:07:06.480 --> 00:07:11.120
+on précise le nouveau comportement
+de la classe ImageView,
+
+00:07:11.120 --> 00:07:12.820
+ou des autres classes.
+
+00:07:13.720 --> 00:07:15.820
+Pour vous faire un rappel du vocabulaire,
+
+00:07:15.820 --> 00:07:19.889
+ici, TextView est la sous-classe,
+View est la super-classe.
+
+00:07:21.180 --> 00:07:24.050
+Retournons aux documents
+concernant la classe TextView :
+
+00:07:24.050 --> 00:07:26.480
+on comprend cette partie maintenant.
+
+00:07:27.070 --> 00:07:29.790
+Il dit que TextView extends View :
+TextView provient de View.
+
+00:07:29.790 --> 00:07:34.450
+Maintenant, on sait qu'on hérite
+l'état et les méthodes de la classe View.
+
+00:07:35.000 --> 00:07:37.810
+Et voici un diagramme
+hiérarchique de classes.
+
+00:07:38.200 --> 00:07:41.704
+Ça montre la classe TextView
+qui hérite de ViewClass.
+
+00:07:43.450 --> 00:07:46.430
+À son tour, la classe View
+hérite de la classe Objet.
+
+00:07:47.430 --> 00:07:49.930
+Si on regarde autour,
+on peut trouver d'autres classes,
+
+00:07:49.930 --> 00:07:53.890
+par exemple la classe EditText,
+qui provient de la classe TextView.
+
+00:07:54.560 --> 00:07:57.290
+Donc elle prend les comportements
+de la classe TextView,
+
+00:07:57.290 --> 00:08:00.120
+et puis, des fonctionnalités
+plus précises y sont ajoutées.
+
+00:08:01.180 --> 00:08:03.480
+Donc EditText provient de TextView.
+
+00:08:03.480 --> 00:08:06.720
+Et TextView provient de View,
+et View provient d'Objet.
+
+00:08:07.160 --> 00:08:10.020
+Et voilà un diagramme
+hiérarchique de classes.
+
+00:08:11.050 --> 00:08:13.830
+Il y a beaucoup d'éléments,
+et on peut le regarder pendant des heures.
+
+00:08:13.830 --> 00:08:16.970
+Mais, laissez-moi vous montrer une chose
+sur la page TextView.
+
+00:08:17.510 --> 00:08:19.950
+Je veux vous montrer la méthode
+pour SetVisibility.
+
+00:08:20.630 --> 00:08:23.830
+Voici la méthode Java pour SetVisibility
+dans la classe TextView.
+
+00:08:24.140 --> 00:08:26.860
+Ça contrôle si View
+est visible ou invisible.
+
+00:08:27.800 --> 00:08:32.700
+Si j'appuie sur cette méthode,
+j'arrive dans la classe View.
+
+00:08:33.050 --> 00:08:35.950
+Et puis, il y a une description
+expliquant ce que fait cette méthode.
+
+00:08:35.950 --> 00:08:39.680
+On voit qu'un objet TextView possède
+une méthode de visibilité prédéfinie.
+
+00:08:39.680 --> 00:08:42.509
+Mais, en fait,
+c'est hérité de la classe View.
+
+00:08:43.459 --> 00:08:46.650
+On obtient donc cette fonctionnalité
+gratuitement de la classe View.
+
+00:08:47.310 --> 00:08:50.680
+Bien, on vient d'étudier
+un tas de nouveaux concepts.
+
+00:08:50.680 --> 00:08:55.000
+Normalement, ça prendrait
+un semestre d'informatique à l'université.
+
+00:08:55.840 --> 00:08:57.940
+On va s'entraîner un peu maintenant,
+
+00:08:57.940 --> 00:09:00.440
+et j'espère que tout va devenir clair
+pour vous.
+
+00:09:01.090 --> 00:09:03.690
+Mais ça va prendre
+beaucoup de temps et d'entraînement
+
+00:09:03.690 --> 00:09:05.800
+pour vraiment comprendre ces concepts.
+
+00:09:06.250 --> 00:09:09.720
+Bon, dans cet exercice, je souhaite que
+vous créiez une nouvelle appli Android,
+
+00:09:09.720 --> 00:09:11.950
+car on ne veut pas
+endommager l'appli Just Java.
+
+00:09:12.770 --> 00:09:14.790
+Après avoir créé le projet,
+lancez l'appli.
+
+00:09:15.590 --> 00:09:18.480
+Après avoir créé l'appli,
+vous allez voir un fichier MainActivity.
+
+00:09:18.480 --> 00:09:21.630
+Ce fichier va provenir
+d'AppCompatActivity.
+
+00:09:22.290 --> 00:09:25.660
+Dans votre version d'Android Studio,
+ne vous inquiétez pas
+
+00:09:25.660 --> 00:09:28.440
+si MainActivity provient
+d'ActionBarActivity.
+
+00:09:28.980 --> 00:09:31.650
+Ce n'est qu'une version
+plus vieille d'AppCompatActivity.
+
+00:09:31.980 --> 00:09:35.800
+En enlevant cette méthode qui outrepasse,
+on va se baser sur la façon
+
+00:09:35.800 --> 00:09:39.740
+que la méthode OnCreate est apparue
+dans la classe AppCompatActivity.
+
+00:09:40.090 --> 00:09:43.520
+La présence de cette méthode montre
+qu'on veut un autre comportement
+
+00:09:43.520 --> 00:09:45.760
+dans MainActivity
+pour la méthode OnCreate.
+
+00:09:46.090 --> 00:09:49.290
+Donc en l'enlevant, on retourne
+au comportement initial
+
+00:09:49.290 --> 00:09:51.150
+dans la classe AppCompatActivity.
+
+00:09:51.810 --> 00:09:52.930
+Quand vous lancez l'appli,
+
+00:09:52.930 --> 00:09:55.830
+qu'est-ce qui a changé
+en comparaison avec la première fois
+
+00:09:55.830 --> 00:09:57.090
+que vous aviez lancé l'appli ?
+
+00:09:57.090 --> 00:09:58.650
+Écrivez votre réponse dans ce champ.
+

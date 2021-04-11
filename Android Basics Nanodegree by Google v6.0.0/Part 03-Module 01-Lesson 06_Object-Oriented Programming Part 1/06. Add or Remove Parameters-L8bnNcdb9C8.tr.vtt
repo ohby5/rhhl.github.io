@@ -1,0 +1,376 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.420 --> 00:00:02.590
+Sizlere detaylı olarak giriş parametreleri
+farklı bir rakama sahip olan metotun
+
+00:00:02.590 --> 00:00:04.860
+örneğini göstereceğim.
+
+00:00:04.860 --> 00:00:09.660
+Android Studio'nun proje sihirbazını
+kullanarak yeni bir uygulama geliştirdim.
+
+00:00:09.660 --> 00:00:12.800
+Bu yüzden, Just Java uygulamasıyla
+herhangi bir bağlantısı yok.
+
+00:00:12.800 --> 00:00:15.460
+Bu metotu main activity'nin
+içine ekledim.
+
+00:00:15.460 --> 00:00:17.420
+Adı createWeatherMessage.
+
+00:00:17.420 --> 00:00:21.650
+Herhangi bir giriş parametresi yok, ve
+dönüş değeri bir dizi.
+
+00:00:21.650 --> 00:00:24.890
+Bu metotun şehir ismini ve
+sıcaklığı belirten yeni bir mesaj
+
+00:00:24.890 --> 00:00:26.080
+oluşturması gerekiyor.
+
+00:00:26.080 --> 00:00:29.590
+Metotu talimatlar şablonu
+olarak düşünebilirsiniz.
+
+00:00:29.590 --> 00:00:32.320
+Böylece sıcaklığın bir giriş parametresi
+olmasını sağlayabilirim.
+
+00:00:33.550 --> 00:00:36.650
+Ve bir rakam olduğu için ben de
+int temperature yazacağım.
+
+00:00:36.650 --> 00:00:40.990
+Ve sonra da burada kullanabilirim.
+
+00:00:40.990 --> 00:00:43.540
+Burası harflerden oluşan bir dizi, ve
+
+00:00:43.540 --> 00:00:46.000
+sonrasında temperature
+tamsayısıyla birleşiyor.
+
+00:00:46.000 --> 00:00:51.310
+Ve sonra da Fahrenheit yazan
+bir başka string ile birleşiyor.
+
+00:00:51.310 --> 00:00:54.890
+Artık mesaj, bir giriş parametresi
+olduğu için sıcaklığın (temperature)
+
+00:00:54.890 --> 00:00:56.380
+durumuna göre özelleştirilebilir.
+
+00:00:56.380 --> 00:00:59.874
+Tabii ya, daha önce söylemeyi unuttum,
+fakat MainActivity'nin onCreate metotunda
+
+00:00:59.874 --> 00:01:03.198
+adını etkinlik oluşturulduktan
+sonra alıyor
+
+00:01:03.198 --> 00:01:05.670
+Ben, createWeatherMessage
+olarak adlandırabilirim.
+
+00:01:05.670 --> 00:01:10.040
+Parametre girişini yapmadan önce,
+artık gerekli parametremiz var.
+
+00:01:10.040 --> 00:01:14.630
+Bu yüzden sıcaklık olarak 77'yi giriyorum.
+
+00:01:14.630 --> 00:01:18.990
+Bu sayede hata kayboldu ve
+metotun doğruluğunu gösteriyor.
+
+00:01:18.990 --> 00:01:21.900
+Değiştirmem gereken bir başka şey de
+metottaki bu yorum (comment)
+
+00:01:22.940 --> 00:01:24.400
+Boş bir satır ekleyeceğim, ve
+
+00:01:24.400 --> 00:01:28.351
+sonra da giriş parametresi olan
+burada sıcaklığı betimleyeceğim.
+
+00:01:28.351 --> 00:01:31.385
+@param temperature yazıp
+
+00:01:31.385 --> 00:01:34.265
+sonra da bu şehrin sıcaklığını
+belirten açıklamayı yazacağım.
+
+00:01:35.345 --> 00:01:38.555
+Bazen parametre isimlerini anlamak
+biraz zor olabiliyor, bu yüzden
+
+00:01:38.555 --> 00:01:39.801
+açıklama yazmak yararlı olur.
+
+00:01:41.232 --> 00:01:44.832
+Diğer zamanlardaysa, eğer metotunuz
+herkese açıksa diğer kişiler de
+
+00:01:44.832 --> 00:01:46.212
+bu metotu çağırabilir, ve
+
+00:01:46.212 --> 00:01:49.352
+Bu metotun içindeki direktiflerin
+neler olduğunu bilemeyebilirler.
+
+00:01:49.352 --> 00:01:50.642
+Bu yüzden bu java dökümanını ve
+
+00:01:50.642 --> 00:01:52.952
+parametre açıklamalarını okumak
+onlar için yararlı olacaktır.
+
+00:01:54.292 --> 00:01:57.242
+Daha önceden metotun bir şablona
+benzediğini söylemiştim.
+
+00:01:57.242 --> 00:02:01.102
+Peki ya sürekli San Francisco olmaması
+için şehir ismini değiştirmek istersek?
+
+00:02:02.130 --> 00:02:04.280
+Şehir ismini bir giriş parametresi
+haline getirebilirim.
+
+00:02:04.280 --> 00:02:06.260
+Buraya bir virgül ekliyorum.
+
+00:02:06.260 --> 00:02:10.889
+Ve şehir ismi yazı olduğundan onu
+dizi veri türü haline getireceğim.
+
+00:02:10.889 --> 00:02:15.740
+Sonra da San Francisco'yu silip
+değişebilen şehir adı ile değiştirebilirim.
+
+00:02:16.870 --> 00:02:20.009
+Tabii ki bunun öncesinde ve sonrasında
+boşluk bırakmayı da unutmuyorum.
+
+00:02:21.390 --> 00:02:24.410
+Güzel, şimdi bu metot belirli bir şehri
+ve sıcaklığı gösteren
+
+00:02:24.410 --> 00:02:26.970
+özelleştirilebilir bir mesaj
+oluşturabilir.
+
+00:02:26.970 --> 00:02:30.430
+Java belgesini de değiştirmeyi unutmadım
+bu sayede,
+
+00:02:30.430 --> 00:02:34.050
+şehir adı açıklaması için ekstra
+bir parametreye sahip.
+
+00:02:35.140 --> 00:02:39.100
+Metot imzasını değiştirdiğim için
+yukarıda bir hata gözüktü.
+
+00:02:39.100 --> 00:02:41.850
+Metot artık tek bir değişkenle
+çalışamayacak durumda.
+
+00:02:41.850 --> 00:02:44.130
+İki tane değişken atamam gerekiyor.
+
+00:02:44.130 --> 00:02:48.230
+Bu yüzden bir virgül ekliyorum ve sonra da
+San Francisco dizisini giriyorum.
+
+00:02:49.430 --> 00:02:51.130
+Şimdi hata kayboldu.
+
+00:02:51.130 --> 00:02:56.140
+Yani artık createWeatherMessage(77,
+çağırdığımda sıcaklıkı değeri gözükecek.
+
+00:02:56.140 --> 00:02:58.300
+ve şehir isminin değeri de
+San Francisco olacak.
+
+00:02:59.390 --> 00:03:01.783
+Ve burada uygun bir dizi oluşturacak.
+
+00:03:03.813 --> 00:03:06.874
+Şimdi tekrardan fiyat hesapla
+metotuna dönelim,
+
+00:03:06.874 --> 00:03:09.480
+ve metot imzasını
+değiştirelim ki bu sayede,
+
+00:03:09.480 --> 00:03:13.230
+giriş parametrelerinin
+rakamları farklı olsun.
+
+00:03:13.230 --> 00:03:18.710
+Sıfır giriş parametresiyle tanımlayacağız,
+sonra bir giriş parametresiyle
+
+00:03:18.710 --> 00:03:22.079
+ve son olarak da iki giriş parametresini
+deneyeceğiz.
+
+00:03:23.350 --> 00:03:26.660
+Metot imzasını değiştirerek farklı giriş
+parametreleri rakamlarına sahip olmanın
+
+00:03:26.660 --> 00:03:30.720
+metotun çağırılmasını nasıl etikeldiğini
+göreceksiniz.
+
+00:03:30.720 --> 00:03:32.270
+Normalde, uygulamanızı geliştirirken
+
+00:03:32.270 --> 00:03:36.280
+tek bir şekilde belirli giriş
+parametreleri tanımlayacaksınız.
+
+00:03:36.280 --> 00:03:39.360
+Ve genellikle de giriş parametrelerinin
+sayısı metotun içinde
+
+00:03:39.360 --> 00:03:42.380
+neler olduğuna bağlı olarak belirlenecek.
+
+00:03:42.380 --> 00:03:45.330
+En iyi yöntem, sadece metotun içinde
+gerçekten
+
+00:03:45.330 --> 00:03:47.590
+ihtiyacınız olan giriş
+parametrelerini atamanız.
+
+00:03:47.590 --> 00:03:50.450
+Buranın içinde kullanmayacaksanız,
+fazladan bilgi girmenizin
+
+00:03:50.450 --> 00:03:51.740
+pek bir anlamı yok.
+
+00:03:51.760 --> 00:03:54.560
+Bu görev için talimatları bunlar.
+
+00:03:54.640 --> 00:03:58.568
+Öncelikle uygulamanın içinde Main
+Activity'de fiyat hesapla'yı tanımlayın.
+
+00:03:58.568 --> 00:04:01.470
+Hangi kod ile başlayacağınızı görmek
+için eğitmen notlarına bakabilirsiniz.
+
+00:04:01.470 --> 00:04:04.123
+calculatePrice metotunu
+
+00:04:04.123 --> 00:04:06.690
+sadece bir giriş parametresi
+olacak şekilde değiştireceğiz.
+
+00:04:06.690 --> 00:04:09.970
+Sonra submitOrder metotunda
+calculatePrice'ı çağırıp
+
+00:04:09.970 --> 00:04:12.230
+giriş olarak miktarı gireceğiz.
+
+00:04:12.230 --> 00:04:16.450
+Sonra da iki giriş parametresi olması için
+calculatePrice metotunu değiştireceğiz.
+
+00:04:16.450 --> 00:04:21.714
+Bu sayede SubmitOrder metotunda
+calculatePrice miktarını çağıracak ve
+
+00:04:21.714 --> 00:04:26.093
+sonra da örneğin 10$ olan
+fiyatı girebileceksiniz.
+
+00:04:26.093 --> 00:04:31.150
+Son olarak, calculatePrice'ı değiştirmeye
+çalışıp sıfır giriş parametresi yapacağız.
+
+00:04:31.150 --> 00:04:34.324
+Bu sayede submitOrder metotu içinde
+calculatePrice'ı bu şekilde
+
+00:04:34.324 --> 00:04:34.870
+çağırabilirsiniz.
+
+00:04:35.950 --> 00:04:38.530
+İlkini birllikte yapalım, böylece
+ne demek istediğimi anlayabilirsiniz.
+
+00:04:38.530 --> 00:04:41.729
+Eğitmen notlarındaki
+bağlantıyı açacağım.
+
+00:04:41.729 --> 00:04:46.080
+Bu özette calculatePrice metotu için
+bir kod tanımladık.
+
+00:04:46.080 --> 00:04:50.480
+Şimdi hepsini seçin ve kopyalayın.
+
+00:04:50.480 --> 00:04:53.160
+Android Studio'da bu metotun
+içine yapıştıracağım.
+
+00:04:53.160 --> 00:04:56.580
+Tam submitOrder'ın altına
+yapıştıracağım, ve
+
+00:04:56.580 --> 00:05:01.370
+her bir metotun arasında boşluk
+olmasına dikkat edeceğim.
+
+00:05:01.370 --> 00:05:02.519
+Böyle olunca okuması daha kolay oluyor.
+
+00:05:03.650 --> 00:05:07.140
+Sonra bu metotu submitOrder
+metotundan çağırabilirim.
+
+00:05:07.140 --> 00:05:09.530
+Çağrıyı metotun en altına yerleştireceğim.
+
+00:05:09.530 --> 00:05:12.430
+Daha sonra bunu yukarıdaki
+kodla birleştireceğiz.
+
+00:05:12.430 --> 00:05:13.640
+Fakat şimdilik, böyle iyi.
+
+00:05:14.940 --> 00:05:19.000
+Bir giriş parametremiz olduğunu unutmuşum,
+bu yüzden bir miktar girmem gerekiyor.
+
+00:05:20.790 --> 00:05:21.960
+Şimdi aynısını buradaki
+
+00:05:21.960 --> 00:05:25.400
+giriş parametrelerini değiştirerek
+geri kalan iki görev için yapalım.
+
+00:05:27.000 --> 00:05:29.740
+Bu görevi tamamlamak için başvuracağınız
+örneklere ihtiyaç duyarsanız
+
+00:05:29.740 --> 00:05:33.761
+Java metotlarını Google'da
+arayabilirsiniz.
+

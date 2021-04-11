@@ -1,0 +1,379 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.420 --> 00:00:02.590
+Tôi sẽ hướng dẫn bạn trong 
+một ví dụ về phương pháp với
+
+00:00:02.590 --> 00:00:04.860
+các tham số đầu vào khác.
+
+00:00:04.860 --> 00:00:09.660
+Tôi bắt đầu tạo ra một ứng dụng mới từ 
+wizard dự án trong Android Studio, vì vậy
+
+00:00:09.660 --> 00:00:12.800
+điều này hoàn toàn không liên quan 
+đến ứng dụng Just Java.
+
+00:00:12.800 --> 00:00:15.460
+Tôi đã thêm phương pháp này 
+vào trong hoạt động chính.
+
+00:00:15.460 --> 00:00:17.420
+Phương pháp tên là createWeatherMessage.
+
+00:00:17.420 --> 00:00:21.650
+Không có tham số đầu vào và 
+giá trị trả lại là một chuỗi.
+
+00:00:21.650 --> 00:00:24.890
+Phương pháp này nhằm tạo ra một thông tin
+mới nêu rõ tên thành phố và
+
+00:00:24.890 --> 00:00:26.080
+nhiệt độ.
+
+00:00:26.080 --> 00:00:29.590
+Bạn có thể nghĩ đến một phương pháp giống 
+như là một mẫu hướng dẫn.
+
+00:00:29.590 --> 00:00:32.320
+Do đó tôi có thể coi nhiệt độ 
+là một tham số đầu vào.
+
+00:00:33.550 --> 00:00:36.650
+Và đó là một con số, nên 
+tôi sẽ nói nhiệt độ là số nguyên.
+
+00:00:36.650 --> 00:00:40.990
+Sau đó tôi có thể sử dụng số này tại đây.
+
+00:00:40.990 --> 00:00:43.540
+Vì vậy, đây là một chuỗi chữ, và
+
+00:00:43.540 --> 00:00:46.000
+sau đó nó được ghép với 
+số nguyên nhiệt độ.
+
+00:00:46.000 --> 00:00:51.310
+Và sau đó nó được ghép với chuỗi 
+khác để đưa ra độ Fahrenheit.
+
+00:00:51.310 --> 00:00:54.890
+Vì vậy, bây giờ thông tin được tùy chỉnh 
+dựa vào nhiệt độ vì đó là
+
+00:00:54.890 --> 00:00:56.380
+một tham số đầu vào.
+
+00:00:56.380 --> 00:00:59.874
+Ồ vâng, tôi quên đề cập đến điều này 
+trước đó, nhưng ở phương thức onCreate của
+
+00:00:59.874 --> 00:01:03.198
+hoạt động chính được áp dụng
+khi tạo ra hoạt động,
+
+00:01:03.198 --> 00:01:05.670
+tôi thực hiện phương pháp WeatherMessage.
+
+00:01:05.670 --> 00:01:10.040
+Trước khi tôi đạt được bất kỳ đối số nào, 
+chúng ta có thêm một tham số cần thiết.
+
+00:01:10.040 --> 00:01:14.630
+Vì vậy tôi sẽ đạt được giá trị 77 cho 
+nhiệt độ.
+
+00:01:14.630 --> 00:01:18.990
+Giờ thì lỗi sai đã được sửa, 
+và phương pháp này được áp dụng đúng.
+
+00:01:18.990 --> 00:01:21.900
+Một điểm nữa tôi cần sửa đổi 
+là chú giải về phương pháp này.
+
+00:01:22.940 --> 00:01:24.400
+Tôi sẽ thêm một dòng trống, và
+
+00:01:24.400 --> 00:01:28.351
+sau đó tôi sẽ bắt đầu mô tả tham số 
+đầu vào là nhiệt độ ở đây.
+
+00:01:28.351 --> 00:01:31.385
+Tôi sẽ gõ @param nhiệt độ, 
+và
+
+00:01:31.385 --> 00:01:34.265
+sau đó tôi có thể thêm mô tả nêu lên 
+đây là nhiệt độ của thành phố.
+
+00:01:35.345 --> 00:01:38.555
+Đôi khi tên những tham số 
+có một chút khó hiểu, vì vậy
+
+00:01:38.555 --> 00:01:39.801
+mà mô tả này rất hữu ích.
+
+00:01:41.232 --> 00:01:44.832
+Vào lần khác mà phương pháp được công khai 
+thì những người khác sẽ có thể
+
+00:01:44.832 --> 00:01:46.212
+áp dụng phương pháp này, và
+
+00:01:46.212 --> 00:01:49.352
+họ có thể không biết 
+hướng dẫn trong phương pháp này là gì.
+
+00:01:49.352 --> 00:01:50.642
+Vì vậy việc đọc tệp java này và
+
+00:01:50.642 --> 00:01:52.952
+mô tả của các tham số 
+rất có ích với họ.
+
+00:01:54.292 --> 00:01:57.242
+Tôi đã đề cập trước đây rằng 
+phương pháp giống như mô hình mẫu.
+
+00:01:57.242 --> 00:02:01.102
+Vậy, điều gì xảy ra nếu ta đổi thành phố 
+để không phải luôn luôn là San Francisco?
+
+00:02:02.130 --> 00:02:04.280
+Tôi biến thành phố thành tham số đầu vào.
+
+00:02:04.280 --> 00:02:06.260
+Vì vậy tôi chỉ cần thêm dấu phẩy ở đây.
+
+00:02:06.260 --> 00:02:10.889
+Và do tên thành phố là văn bản, tôi 
+sẽ biến nó thành kiểu dữ liệu chuỗi.
+
+00:02:10.889 --> 00:02:15.740
+Sau đó tôi có thể xóa San Francisco và 
+thay nó bằng biến tên thành phố.
+
+00:02:16.870 --> 00:02:20.009
+Và hãy nhớ thêm một khoảng trống trước và 
+sau chỗ này.
+
+00:02:21.390 --> 00:02:24.410
+Tuyệt, vậy là 
+bây giờ phương pháp này tạo ra thông tin
+
+00:02:24.410 --> 00:02:26.970
+có thể tùy chỉnh đối với 
+thành phố và nhiệt độ nhất định.
+
+00:02:26.970 --> 00:02:30.430
+Tôi cũng nhớ 
+thay đổi tệp java để
+
+00:02:30.430 --> 00:02:34.050
+thêm tham số này và 
+mô tả của tên thành phố.
+
+00:02:35.140 --> 00:02:39.100
+Bởi vì tôi thay đổi ký số của phương pháp, 
+bây giờ tôi gặp phải một lỗi ở đây.
+
+00:02:39.100 --> 00:02:41.850
+Phương pháp không sử dụng được 
+với chỉ một đối số.
+
+00:02:41.850 --> 00:02:44.130
+Tôi cần phải có được hai đối số.
+
+00:02:44.130 --> 00:02:48.230
+Vì vậy tôi thêm một dấu phẩy và 
+sau đó có được chuỗi San Francisco.
+
+00:02:49.430 --> 00:02:51.130
+Bây giờ lỗi sai đã được sửa.
+
+00:02:51.130 --> 00:02:56.140
+Vậy khi áp dụng createWeatherMessage(77, 
+đây sẽ là giá trị của nhiệt độ,
+
+00:02:56.140 --> 00:02:58.300
+và San Francisco sẽ là 
+giá trị của tên thành phố.
+
+00:02:59.390 --> 00:03:01.783
+Và nó sẽ tạo ra 
+một chuỗi thích hợp ở đây.
+
+00:03:03.813 --> 00:03:06.874
+Bây giờ chúng ta sẽ quay lại 
+phương pháp calculatePrice,
+
+00:03:06.874 --> 00:03:09.480
+và chúng ta sẽ sửa đổi 
+ký số của phương pháp để
+
+00:03:09.480 --> 00:03:13.230
+nó có con số 
+khác trong các tham số đầu vào.
+
+00:03:13.230 --> 00:03:18.710
+Chúng ta sẽ xác định ký số với 
+không tham số đầu vào, 1 tham số đầu vào,
+
+00:03:18.710 --> 00:03:22.079
+và cuối cùng, thử với hai tham số đầu vào.
+
+00:03:23.350 --> 00:03:26.660
+Bạn sẽ thấy ký số của 
+phương pháp thay đổi thế nào ở đây để có
+
+00:03:26.660 --> 00:03:30.720
+con số khác của tham số đầu vào ảnh hưởng 
+tới cách áp dụng phương pháp.
+
+00:03:30.720 --> 00:03:32.270
+Thông thường khi bạn xây dựng ứng dụng,
+
+00:03:32.270 --> 00:03:36.280
+bạn chỉ cần định nghĩa nó theo một cách với 
+một số lượng nhất định tham số đầu vào.
+
+00:03:36.280 --> 00:03:39.360
+Và thường thì số lượng tham số 
+đầu vào được xác định
+
+00:03:39.360 --> 00:03:42.380
+dựa trên những gì 
+xảy ra bên trong phương pháp.
+
+00:03:42.380 --> 00:03:45.330
+Cách tốt nhất là chỉ 
+cần các tham số đầu vào
+
+00:03:45.330 --> 00:03:47.590
+mà bạn thực sự 
+cần trong phương pháp này.
+
+00:03:47.590 --> 00:03:50.450
+Sẽ không có gì xả ra khi bạn bỏ qua nhiều 
+thông tin hơn nếu bạn không định
+
+00:03:50.450 --> 00:03:51.240
+sử dụng ở đây.
+
+00:03:51.240 --> 00:03:54.640
+Dưới đây là hướng dẫn cho nhiệm vụ này.
+
+00:03:54.640 --> 00:03:58.568
+Đầu tiên hãy xác định phương pháp tính giá 
+trong ứng dụng của bạn ở hoạt động chính.
+
+00:03:58.568 --> 00:04:01.470
+Hãy xem thông tin ghi chép hướng dẫn để 
+bạn có thể bắt đầu với một đoạn mã lệnh.
+
+00:04:01.470 --> 00:04:04.123
+Chúng ta sẽ sửa đổi 
+phương pháp calculatePrice để
+
+00:04:04.123 --> 00:04:06.690
+phương pháp chỉ có một tham số đầu vào.
+
+00:04:06.690 --> 00:04:09.970
+Sau đó trong phương pháp submitOrder 
+áp dụng calculatePrice và
+
+00:04:09.970 --> 00:04:12.230
+đạt được số lượng được coi là đầu vào.
+
+00:04:12.230 --> 00:04:16.450
+Sau đó thử sửa đổi phương pháp 
+calculatePrice để có hai tham số đầu vào.
+
+00:04:16.450 --> 00:04:21.714
+Theo cách đó với phương pháp submitOrder 
+bạn sẽ có số lượng calculatePrice và
+
+00:04:21.714 --> 00:04:26.093
+sau đó bạn có thể thu được một mức giá 
+ví dụ như là 10$.
+
+00:04:26.093 --> 00:04:31.150
+Và cuối cùng, thử thay đổi calculatePrice 
+để nó không có tham số đầu vào.
+
+00:04:31.150 --> 00:04:34.324
+Dùng cách đó cho phương pháp submitOrder 
+bạn sẽ có được calculatePrice
+
+00:04:34.324 --> 00:04:34.870
+như thế này.
+
+00:04:35.950 --> 00:04:38.530
+Chúng ta cùng làm lần đầu tiên để 
+bạn hiểu được điều tôi muốn nói.
+
+00:04:38.530 --> 00:04:41.729
+Tôi sẽ mở liên kết 
+trong ghi chép hướng dẫn.
+
+00:04:41.729 --> 00:04:46.080
+Trong ý chính này, ta cung cấp mã lệnh 
+của phương pháp calculatePrice.
+
+00:04:46.080 --> 00:04:50.480
+Vì vậy hãy tiếp tục và 
+lựa chọn mọi thứ và rồi sao chép nó.
+
+00:04:50.480 --> 00:04:53.160
+Trong Android Studio, 
+tôi sẽ dán vào trong phương pháp này.
+
+00:04:53.160 --> 00:04:56.580
+Tôi sẽ chỉ dán thông tin đó 
+ngay bên dưới submitOrder, và
+
+00:04:56.580 --> 00:05:01.370
+Tôi sẽ đảm bảo rằng có một dòng 
+trống giữa mỗi phương pháp ở đây.
+
+00:05:01.370 --> 00:05:02.519
+Điều đó giúp đọc dễ dàng hơn.
+
+00:05:03.650 --> 00:05:07.140
+Sau đó tôi có thể áp dụng phương pháp này 
+từ phương pháp submitOrder.
+
+00:05:07.140 --> 00:05:09.530
+Tôi chỉ cần chèn việc áp dụng phương pháp 
+ở bước cuối của phương pháp submitOrder.
+
+00:05:09.530 --> 00:05:12.430
+Sau đó chúng ta sẽ tích hợp 
+nó với mã lệnh lên đây.
+
+00:05:12.430 --> 00:05:13.640
+Nhưng bây giờ, thế này là tốt rồi.
+
+00:05:14.940 --> 00:05:19.000
+Ôi, tôi quên rằng chúng ta có một tham số 
+đầu vào, vì vậy tôi cần có số lượng.
+
+00:05:20.790 --> 00:05:21.960
+Bây giờ thì làm tương tự đối với
+
+00:05:21.960 --> 00:05:25.400
+hai nhiệm vụ còn lại bằng cách sửa đổi 
+các tham số đầu vào ở đây.
+
+00:05:27.000 --> 00:05:29.740
+Để hoàn thành nhiệm vụ này, 
+nếu bạn cần ví dụ để tham khảo,
+
+00:05:29.740 --> 00:05:33.761
+bạn luôn luôn có thể tìm kiếm trên Google 
+để biết về các phương pháp trong Java.
+

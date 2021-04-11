@@ -1,0 +1,368 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.860 --> 00:00:04.030
+Vamos voltar para o método <i>DisplayMessege</i>
+que estávamos vendo antes.
+
+00:00:05.030 --> 00:00:07.570
+Nós estávamos tentando entender
+o que exatamente é isso.
+
+00:00:08.630 --> 00:00:12.450
+Pelo que aprendemos até agora, parece
+que é um objeto <i>TextView</i> e
+
+00:00:12.450 --> 00:00:15.670
+o número variável é chamado
+<i>orderSummaryTextView.</i>
+
+00:00:15.670 --> 00:00:18.870
+seguindo de vários códigos que
+ainda não reconhecemos.
+
+00:00:18.870 --> 00:00:22.820
+Mas na próxima linha, nós usamos
+a variável <i>prderSummaryTextView,</i> e
+
+00:00:22.820 --> 00:00:25.030
+tentamos colocar o texto ali
+para que essa fosse a mensagem.
+
+00:00:26.250 --> 00:00:29.470
+Vamos descobrir como invocar
+métodos como esse em objetos.
+
+00:00:31.250 --> 00:00:34.920
+Quando invocamos o método no objeto
+tem que seguir esse formato.
+
+00:00:34.920 --> 00:00:39.560
+Primeiro escrevemos o nome da variável
+do objeto, nesse caso <i>titleTextView</i>,
+
+00:00:39.560 --> 00:00:41.160
+depois adicionamos um ponto (.),
+
+00:00:41.160 --> 00:00:45.350
+que é seguido do nome do método,
+que é <i>setText</i>, nesse caso.
+
+00:00:45.350 --> 00:00:49.390
+Esse método está definido exatamente assim
+no <i>TextView</i> da aula de Java.
+
+00:00:49.390 --> 00:00:53.250
+A declaração do método também especifica
+que existe um parâmetro de entrada
+
+00:00:53.250 --> 00:00:58.060
+de uma <i>string</i>, então colocamos parênteses
+e passamos a <i>string</i> para uma entrada.
+
+00:00:58.060 --> 00:00:59.700
+E terminamos a frase
+com um ponto e vírgula(;).
+
+00:01:00.920 --> 00:01:05.459
+Quando você digita essa linha de dados,
+modifica o título do objeto <i>TextView</i>,
+
+00:01:05.459 --> 00:01:08.100
+para que mostre isso na tela.
+
+00:01:08.100 --> 00:01:10.490
+O motivo para usarmos
+o nome da variável do objeto aqui,
+
+00:01:10.490 --> 00:01:13.600
+é porque pode ter vários
+<i>TextViews</i> em seu aplicativo.
+
+00:01:13.600 --> 00:01:16.379
+Então tenha certeza que está invocando
+o método na instancia do objeto correto.
+
+00:01:17.560 --> 00:01:20.980
+Quando você especifica os argumentos
+de entrada, lembre-se de especificar
+
+00:01:20.980 --> 00:01:24.620
+os argumentos corretos, na ordem certa,
+de acordo com as declarações de método.
+
+00:01:25.660 --> 00:01:29.460
+Então, se não houver entradas, você vai
+não vai ter nada entre os parênteses.
+
+00:01:29.460 --> 00:01:32.820
+O jeito de passarmos entradas para métodos
+é o mesmo que aprendemos anteriormente
+
+00:01:32.820 --> 00:01:34.110
+na lição três.
+
+00:01:34.110 --> 00:01:36.140
+Lembre-se de separar
+o nome da variável do objeto e
+
+00:01:36.140 --> 00:01:38.450
+o nome do método com um ponto (.).
+
+00:01:38.450 --> 00:01:42.450
+Este é um outro exemplo
+no mesmo objeto <i>tilleTextView.</i>
+
+00:01:42.450 --> 00:01:45.190
+Nós vamos invocar
+um método <i>setTextSize</i> nele.
+
+00:01:45.190 --> 00:01:49.220
+Esse método precisa de um inteiro como
+entrada para o novo tamanho do texto.
+
+00:01:49.220 --> 00:01:51.830
+Então nesse caso,
+vamos mudar o tamanho do texto para 18.
+
+00:01:52.980 --> 00:01:55.510
+Quando o dispositivo Android
+executar essa linha do código,
+
+00:01:55.510 --> 00:02:00.460
+vai mudar o <i>titleTextView</i>
+para um fonte de tamanho 18.
+
+00:02:00.460 --> 00:02:02.260
+Nesse exemplo,
+
+00:02:02.260 --> 00:02:06.540
+estamos invocando um método no objeto
+<i>TextView</i> que é chamado <i>warningTextView</i>.
+
+00:02:07.580 --> 00:02:11.140
+Esse método é chamado <i>setTextColor</i>,
+e tem como entrada uma nova cor.
+
+00:02:12.140 --> 00:02:16.010
+Observe que a cor está
+especificada como <i>Color.RED</i>.
+
+00:02:16.010 --> 00:02:17.670
+Então se olharmos no documento
+pela cor da classe
+
+00:02:17.670 --> 00:02:22.030
+podemos ir no final e veremos
+que o vermelho está definido aqui.
+
+00:02:22.030 --> 00:02:25.290
+Tem várias outras cores
+que você pode usar aqui.
+
+00:02:26.370 --> 00:02:30.850
+Quando você invocar um <i>setTextColor</i>, você
+pode colocar <i>Color.BLUE</i> ou <i>Color.BLACK.</i>
+
+00:02:30.850 --> 00:02:33.835
+E por último, um exemplo
+de invocar um método em um <i>ImageView.</i>
+
+00:02:34.882 --> 00:02:39.230
+O objeto <i>ImageView</i> tem uma variável
+chamada de <i>welcomeImageView,</i>
+
+00:02:39.230 --> 00:02:41.260
+nós chamamos esse método
+de <i>setImageResource</i>.
+
+00:02:42.380 --> 00:02:46.135
+Esse método tem como entrada uma nova
+imagem que devemos colocar no <i>ImageView</i>.
+
+00:02:47.400 --> 00:02:51.580
+Nós especificamos a nova imagem como
+um recurso ID, no formato de <i>R.drawable</i>.
+
+00:02:51.580 --> 00:02:53.000
+E esse é o nome do arquivo,
+
+00:02:54.100 --> 00:02:58.610
+esse é só mais um caso do uso
+de recursos ID no código Java.
+
+00:02:58.610 --> 00:03:02.059
+Para obter a lista completa de métodos que
+você pode invocar em um objeto <i>TextView</i>,
+
+00:03:02.059 --> 00:03:04.867
+abra a página de instruções
+do <i>TextView</i> para Android.
+
+00:03:04.867 --> 00:03:08.810
+Basta pesquisar por
+<i>TextView</i> Android e clicar aqui.
+
+00:03:09.840 --> 00:03:12.110
+Essa é uma página que nós já reconhecemos,
+
+00:03:12.110 --> 00:03:15.740
+e nós já sabemos sobre atributos <i>.XML</i>
+que estão listados nessa página.
+
+00:03:16.830 --> 00:03:19.900
+Se eu rolar a página, eu acho
+uma lista de todos os métodos públicos
+
+00:03:19.900 --> 00:03:20.790
+na classe de <i>TextView.</i>
+
+00:03:21.910 --> 00:03:22.870
+Se quiser procurar algo,
+
+00:03:22.870 --> 00:03:27.210
+você pode usar Cmd+F ou Ctrl+F
+se estiver no Windows.
+
+00:03:27.210 --> 00:03:29.900
+Vou procurar pelo método do <i>setTextColor</i>
+que nós usamos mais cedo.
+
+00:03:31.200 --> 00:03:32.740
+Aqui está o método do <i>setTextColor</i>
+
+00:03:32.740 --> 00:03:35.310
+e é preciso de um código de cor inteiro
+como um parâmetro de entrada.
+
+00:03:36.420 --> 00:03:40.540
+Todos esses métodos foram declarados
+como métodos públicos na classe <i>TextView</i>.
+
+00:03:40.540 --> 00:03:43.170
+Por isso podemos invocar
+esses métodos agora.
+
+00:03:43.170 --> 00:03:44.910
+Se eles estivessem declarados
+como métodos privados,
+
+00:03:44.910 --> 00:03:46.210
+nós não veríamos aqui.
+
+00:03:47.400 --> 00:03:49.070
+Quando você invoca esses métodos,
+
+00:03:49.070 --> 00:03:52.370
+tenha certeza que você está conferindo
+qual parâmetro de entrada é requerido
+
+00:03:52.370 --> 00:03:55.680
+e que você está colocando as entradas
+na ordem correta e o tipo de dados certo.
+
+00:03:56.910 --> 00:03:58.040
+Quando você olha para um código,
+
+00:03:58.040 --> 00:04:02.130
+algumas vezes você pode não ver
+o ponto ao invocar métodos.
+
+00:04:02.130 --> 00:04:06.150
+A diferença importa quando você está
+dentro de uma classe ou fora dela.
+
+00:04:06.150 --> 00:04:08.730
+Vamos olhar um exemplo
+na classe <i>TextView</i>.
+
+00:04:08.730 --> 00:04:12.540
+Nós temos o método <i>setText</i> definido,
+assim como outro método.
+
+00:04:12.540 --> 00:04:16.589
+Vamos dizer que você queria invocar
+o método <i>setText</i> desse outro método.
+
+00:04:16.589 --> 00:04:21.040
+Você pode chamar o <i>setText</i> e então
+passar para um parâmetro de entrada.
+
+00:04:21.040 --> 00:04:24.070
+Mas onde está o ponto
+e o nome da variável do objeto?
+
+00:04:24.070 --> 00:04:28.800
+Bem, essa linha é algo tipo:
+<i>this.setText("Hello")</i>.
+
+00:04:28.800 --> 00:04:31.360
+Isso se refere
+a instância do objeto atual e
+
+00:04:31.360 --> 00:04:34.800
+então <i>setText</i> está sendo
+invocado nesse objeto.
+
+00:04:34.800 --> 00:04:38.880
+Esse é um formato que estamos mais
+acostumados para chamar métodos em objetos.
+
+00:04:38.880 --> 00:04:42.301
+Entretanto, a parte <i>this.</i>
+está implícita e é opcional,
+
+00:04:42.301 --> 00:04:47.380
+para tornar nosso código mais conciso, nós
+podemos apenas escrever <i>setText("Hello")</i>.
+
+00:04:47.380 --> 00:04:50.670
+Perceba a diferença entre invocar
+<i>setTexts</i> dentro da classe e
+
+00:04:50.670 --> 00:04:53.800
+invocar <i>setTexts</i> fora da classe.
+
+00:04:53.800 --> 00:04:55.990
+Quando você pensa sobre isso,
+faz mais sentido,
+
+00:04:55.990 --> 00:04:59.380
+porque é muito claro qual <i>TextView</i>
+você quer colocar o texto,
+
+00:04:59.380 --> 00:05:03.380
+no caso de haver múltiplos <i>TextViews</i>
+dentro dessa classe.
+
+00:05:03.380 --> 00:05:06.280
+Aqui está outra diferença entre
+estar denro da classe <i>TextView</i>,
+
+00:05:06.280 --> 00:05:08.970
+e estar fora da classe.
+
+00:05:08.970 --> 00:05:12.330
+Dentro da classe <i>TextView</i>,
+você pode acessar variáveis privadas e
+
+00:05:12.330 --> 00:05:14.210
+métodos privados.
+
+00:05:14.210 --> 00:05:16.060
+Se você estiver fora de
+uma classe de <i>TextView</i>
+
+00:05:16.060 --> 00:05:21.150
+você não pode usar os métodos privados,
+ou acessar as variáveis privadas.
+
+00:05:21.150 --> 00:05:25.100
+Dentro da classe <i>MainActivity</i>,
+você só pode acessar métodos públicos
+
+00:05:25.100 --> 00:05:27.300
+e variáveis públicas da classe
+<i>TextView</i>.
+

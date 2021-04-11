@@ -1,0 +1,291 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.230 --> 00:00:02.992
+Dalam kuis ini kau akan berlatih
+menciptakan objek tampilan teks
+
+00:00:03.017 --> 00:00:05.079
+dan kemudian memanggil metodenya.
+
+00:00:05.104 --> 00:00:06.830
+Karena ini hanya untuk latihan,
+
+00:00:06.855 --> 00:00:08.827
+kita akan lakukan ini pada
+aplikasi Android baru,
+
+00:00:08.852 --> 00:00:11.113
+di luar aplikasi JustJava.
+
+00:00:11.138 --> 00:00:13.664
+Dengan begitu kita tidak
+membuat kacau aplikasi JustJava.
+
+00:00:14.194 --> 00:00:18.876
+Buka proyek wizard di Android Studio
+dengan pergi ke &lt;i&gt;File &amp;gt; New Project.&lt;/i&gt;
+
+00:00:18.901 --> 00:00:21.496
+Dan kau dapat menerima &lt;i&gt;default&lt;/i&gt;
+untuk semua ini.
+
+00:00:21.521 --> 00:00:24.489
+Pastikan kau mempunyai
+contoh aktivitas kosong yang dipilih,
+
+00:00:24.514 --> 00:00:26.140
+kemudian klik Finish [Selesai].
+
+00:00:28.052 --> 00:00:31.862
+Setelah proyekmu selesai dibuat, cobalah
+menjalankan aplikasimu pada perangkatmu.
+
+00:00:32.226 --> 00:00:36.070
+Perilaku default pasti harus melihat
+kata-kata &lt;i&gt;Hello World&lt;/i&gt; muncul di sini.
+
+00:00:36.095 --> 00:00:38.085
+Kita akan melakukan
+sesuatu yang sedikit berbeda.
+
+00:00:38.110 --> 00:00:42.089
+Di kelas &lt;i&gt;MainActivity&lt;/i&gt;, kita akan
+memodifikasi metode yang dibuat.
+
+00:00:42.114 --> 00:00:46.445
+Alih-alih memanggil tampilan konten
+pada tata letak &lt;i&gt;MainActivity&lt;/i&gt; XML,
+
+00:00:46.470 --> 00:00:49.735
+kita akan membuat tampilan
+teks sendiri dan mengaturnya di sini.
+
+00:00:50.212 --> 00:00:51.863
+Di situs Android Developer,
+
+00:00:51.888 --> 00:00:55.853
+ada bagian Pelatihan yang membicarakn
+soal membuat aplikasi pertamamu.
+
+00:00:55.878 --> 00:00:59.387
+Secara khusus, saya sedang
+melihat tampilan pesan dari tutorial.
+
+00:00:59.412 --> 00:01:02.139
+Ini memberitahumu bahwa
+dalam metode aktivitas &lt;i&gt;OnCreate&lt;/i&gt;,
+
+00:01:02.164 --> 00:01:03.715
+kita dapat membuat &lt;i&gt;TextView.&lt;/i&gt;
+
+00:01:03.740 --> 00:01:07.115
+Dan inilah kode yang kita sudah
+mengenalnya dari pelajaran sebelumnya.
+
+00:01:07.140 --> 00:01:08.700
+Kita menciptakan TextView baru dan
+
+00:01:08.725 --> 00:01:11.590
+dan kita menyimpannya dalam
+variabel yang disebut &lt;i&gt;TextView.&lt;/i&gt;
+
+00:01:11.615 --> 00:01:15.269
+Konstruktor ini membutuhkan
+konteks sebagai parameter masukan.
+
+00:01:15.294 --> 00:01:18.095
+Dan melewati [ini] sebagai
+parameter masukan,
+
+00:01:18.120 --> 00:01:21.539
+karena [ini] mengacu
+pada aktivitas saat ini.
+
+00:01:21.564 --> 00:01:23.956
+Dan kegiatan juga konteks,
+
+00:01:23.981 --> 00:01:27.374
+jadi ini akan dengan benar membuat
+objek &lt;i&gt;TextView&lt;/i&gt; bagi kita.
+
+00:01:27.399 --> 00:01:30.463
+Kemudian kita bisa memanggil
+metode pada objek &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:01:30.488 --> 00:01:35.198
+Ingat bahwa ini nama variabel &lt;i&gt;TextView&lt;/i&gt;,
+bukan kelas &lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:35.223 --> 00:01:38.230
+Itulah sebabnya huruf t
+yang ada di sini adalah huruf kecil.
+
+00:01:38.255 --> 00:01:40.337
+Kita dapat menulis &lt;i&gt;textView.setTextSize&lt;/i&gt;
+
+00:01:40.362 --> 00:01:43.107
+dan &lt;i&gt;textView.setText&lt;/i&gt; sebagai contoh.
+
+00:01:43.670 --> 00:01:46.877
+Saat kau gulir ke bawah, itu mengatakan
+memanggil &lt;i&gt;setContentView&lt;/i&gt;
+
+00:01:46.902 --> 00:01:49.716
+dan lulus dalam &lt;i&gt;TextView&lt;/i&gt; ini
+sebagai parameter masukan.
+
+00:01:49.741 --> 00:01:50.940
+Jika kau gulir ke bawah lagi,
+
+00:01:50.965 --> 00:01:53.628
+dia akan menunjukkan padamu
+contoh kode dari metode &lt;i&gt;OnCreate.&lt;/i&gt;
+
+00:01:54.041 --> 00:01:55.462
+Kita tidak perlu bagian ini.
+
+00:01:55.487 --> 00:01:58.150
+Kita hanya fokus pada bagian ini,
+di mana kita menciptakan &lt;i&gt;TextView&lt;/i&gt;
+
+00:01:58.175 --> 00:02:01.778
+dan kita menetapkannya sebagai
+&lt;i&gt;contentView&lt;/i&gt; dari aktivitas tata letak.
+
+00:02:02.247 --> 00:02:04.585
+Kembali di Android Studio
+di kelas &lt;i&gt;MainActivity&lt;/i&gt;,
+
+00:02:04.610 --> 00:02:06.882
+saya akan memodifikasi metode &lt;i&gt;OnCreate&lt;/i&gt;.
+
+00:02:06.914 --> 00:02:09.070
+Saya akan memasukkan
+beberapa baris kosong di sini.
+
+00:02:09.449 --> 00:02:12.560
+Pertama saya akan membuat objek
+&lt;i&gt;TextView&lt;/i&gt; baru menggunakan konstruktor.
+
+00:02:13.078 --> 00:02:15.339
+Saya akan menamai variabel
+tersebut dengan nama &lt;i&gt;TextView&lt;/i&gt;,
+
+00:02:15.364 --> 00:02:17.142
+tapi silakan memberi nama yang lain,
+
+00:02:17.167 --> 00:02:19.887
+selama bisa dijelaskan dengan deskriptif
+
+00:02:19.912 --> 00:02:21.852
+mengenai soal apa ini.
+
+00:02:21.877 --> 00:02:24.670
+Teks yang ingin kau buat
+membutuhkan konteks,
+
+00:02:24.695 --> 00:02:28.832
+jadi saya akan melewati ini
+untuk merujuk pada kegiatan ini.
+
+00:02:28.857 --> 00:02:30.378
+Lalu pada baris kode selanjutnya,
+
+00:02:30.403 --> 00:02:33.290
+saya akan memanggil metode
+pada objek &lt;i&gt;TextView&lt;/i&gt;.
+
+00:02:33.642 --> 00:02:35.031
+Begitu saya memukul titik,
+
+00:02:35.056 --> 00:02:38.100
+itu akan menunjukkan pada saya
+semua kemungkinan metode yang bisa
+
+00:02:38.125 --> 00:02:40.319
+saya panggil pada objek &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:02:40.834 --> 00:02:45.152
+Jika saya mulai mengetik maka akan
+menyaring secara otomatis pilihannya.
+
+00:02:45.177 --> 00:02:47.488
+Kau dapat melihat pilihannya
+telah menyempit.
+
+00:02:47.513 --> 00:02:49.250
+Saya akan memilih &lt;i&gt;setText&lt;/i&gt;,
+
+00:02:49.275 --> 00:02:52.222
+sehingga saya bisa tekan &lt;i&gt;enter&lt;/i&gt;
+untuk menggunakan hasil otomatis ini.
+
+00:02:52.976 --> 00:02:56.181
+Saya bisa memasukkan ke dalam
+&lt;i&gt;string&lt;/i&gt; sebagai argumen masukan.
+
+00:02:56.206 --> 00:02:59.104
+Dan langkah terakhir adalah
+mengubah tampilan baris kontennya.
+
+00:02:59.129 --> 00:03:01.424
+Jadi alih-alih menggunakan
+berkas tata letak XML,
+
+00:03:01.449 --> 00:03:04.935
+saya hanya akan menyisipkan &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:04.960 --> 00:03:07.653
+Saya akan menyimpan ini dan
+menjalankannya pada perangkat.
+
+00:03:07.678 --> 00:03:10.063
+Apa yang saya harapkan
+akan terjadi sekarang adalah
+
+00:03:10.088 --> 00:03:12.909
+layar akan menampilkan tampilan teks
+baru yang mengatakan wow,
+
+00:03:12.934 --> 00:03:14.870
+daripada mengatakan halo dunia.
+
+00:03:14.895 --> 00:03:16.430
+Dan itu tidak.
+
+00:03:16.455 --> 00:03:17.835
+Ini memang agak sedikit norak.
+
+00:03:17.860 --> 00:03:20.485
+Jadi saya ingin kau membuatnya
+menjadi sedikit lebih menarik.
+
+00:03:20.510 --> 00:03:23.878
+Saya ingin kau memanggil metode lain,
+pada objek &lt;i&gt;TextView&lt;/i&gt; ini,
+
+00:03:23.903 --> 00:03:27.307
+seperti mencoba untuk mengubah warna,
+atau ukuran teks.
+
+00:03:27.332 --> 00:03:29.055
+Jika kau bahkan lebih berani,
+
+00:03:29.080 --> 00:03:32.617
+kau dapat mencoba memanggil
+metode lain pada objek &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:32.642 --> 00:03:35.182
+Lihatlah dokumentasi
+online untuk &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:35.207 --> 00:03:38.181
+Untuk mencari tahu
+metode lain yang mungkin ada.
+
+00:03:38.206 --> 00:03:41.000
+Setelah kau selesai, periksalah
+kotak-kotak ini untuk melanjutkan.
+

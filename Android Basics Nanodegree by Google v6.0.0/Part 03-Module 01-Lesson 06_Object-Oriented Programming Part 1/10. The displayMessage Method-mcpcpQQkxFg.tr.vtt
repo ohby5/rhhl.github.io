@@ -1,0 +1,128 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.390 --> 00:00:01.930
+Tamam metodlar hakkında çok şey öğrendik.
+
+00:00:01.930 --> 00:00:03.510
+Şimdi bir ara vermenizin zamanı geldi.
+
+00:00:03.510 --> 00:00:05.380
+Biraz zıplama alıştırması yapabilirsiniz,
+
+00:00:05.380 --> 00:00:09.540
+dışarıda bir yürüyüşe çıkabilirsiniz, hatta yeni bir tarayıcı sekmesine bile gidebilirsiniz.
+
+00:00:09.540 --> 00:00:11.060
+Hazır olduğunuzda buraya geri gelin ve
+6
+
+00:00:13.190 --> 00:00:14.770
+görüntüleme mesajı metoduna bakacağız.
+
+00:00:16.239 --> 00:00:18.760
+Bir sonraki kodlama görevinde, uygulamayı düzenleyeceksiniz ve
+
+00:00:18.760 --> 00:00:22.110
+burada ücreti söylemek yerine, sipariş özetini söyleyecek.
+
+00:00:22.110 --> 00:00:25.220
+Bu daha iyi bir isim çünkü siz miktarı değiştirip sonra siparişe basarsanız
+
+00:00:25.220 --> 00:00:27.870
+burada gözüken özet sadece ücretten daha fazlasıdır.
+
+00:00:27.870 --> 00:00:31.010
+Bu küçük bir UI değişikliği, ama
+
+00:00:31.010 --> 00:00:34.080
+süreç içinde size 2. Derste anlattığımız ama ne işe yaradığını
+
+00:00:34.080 --> 00:00:38.120
+açıklamadığımız görüntüleme mesajı yöntemini düzenliyor olacaksınız.
+
+00:00:38.120 --> 00:00:41.160
+Gelecek videolarda, bu metodun içinde süregelen
+
+00:00:41.160 --> 00:00:43.580
+farklı parçaları hakkında daha fazla şey anlamaya başlayacağız.
+
+00:00:43.580 --> 00:00:46.610
+Bunu deneyimlemeye, bu değerlerin bazılarını değiştirip
+
+00:00:46.610 --> 00:00:48.150
+neler olduğunu görerek başlayacaksınız.
+
+00:00:48.150 --> 00:00:53.210
+Bir değişiklik yaptığınızda bu Ücretin görüntülenmesi metodunda bir hataya neden olacak
+
+00:00:53.210 --> 00:00:55.960
+o yüzden şimdi bu metodu silebilirsiniz.
+
+00:00:55.960 --> 00:00:59.690
+Şimdi bu metodun hiç kullanılmadığını söyleyen bir uyarı bile alıyorsunuz.
+
+00:00:59.690 --> 00:01:00.570
+Haydi ilerleyin ve onu silin.
+
+00:01:01.910 --> 00:01:04.760
+Genel amaç ücret kısmını sipariş
+
+00:01:04.760 --> 00:01:07.020
+özeti kısmı olarak değiştirmek.
+
+00:01:07.020 --> 00:01:09.643
+Bu hususta yapacağımız bir kaç ek değişiklik daha var.
+
+00:01:09.643 --> 00:01:12.715
+Ana aktivite planlama dosyasında
+
+00:01:12.715 --> 00:01:16.115
+ücret başlığını SİPARİŞ ÖZETİ olarak değiştirin.
+
+00:01:16.115 --> 00:01:19.645
+Sonra ücret değeri için TextView'i bulun, başlık için değil
+
+00:01:19.645 --> 00:01:21.215
+ama gerçek değeri.
+
+00:01:21.215 --> 00:01:24.095
+Bunun kimliği için o görünümü değiştirin.
+
+00:01:24.095 --> 00:01:26.875
+Görüntüleme Kimliği price_text_view gibi bir şeydi ama
+
+00:01:26.875 --> 00:01:29.470
+şimdi onu sipariş özeti kısmı olarak değiştirdiğimizden
+
+00:01:29.470 --> 00:01:31.500
+Kimliği de güncelleyeceğiz.
+
+00:01:31.500 --> 00:01:35.690
+Sonra Mesaj Görüntüleme metodundaki ana aktivite dosyası içinde
+
+00:01:35.690 --> 00:01:39.420
+değişkenin ismini priceTextview'dan Sipariş özeti TextView olarak değiştirin.
+
+00:01:40.450 --> 00:01:44.957
+Ve son olarak, referansı R.id.price_text_view'den
+
+00:01:44.957 --> 00:01:49.260
+R.id.order_summary_text_view olarak da değiştirin.
+
+00:01:50.270 --> 00:01:51.790
+İşiniz bittiğinde bu kutucukları işaretleyin.
+
+00:01:52.960 --> 00:01:54.600
+Sonra biraz geriye gidin ve
+
+00:01:54.600 --> 00:01:58.350
+Görüntüleme Mesajı metodunda neler olduğunu gözlemleyin.
+
+00:01:58.350 --> 00:02:01.720
+Ne olduğu hakkında ya da xml planlaması ile
+
+00:02:01.720 --> 00:02:05.560
+Java dosyası arasındaki bağlantı hakkında tahmininiz var mı?
+

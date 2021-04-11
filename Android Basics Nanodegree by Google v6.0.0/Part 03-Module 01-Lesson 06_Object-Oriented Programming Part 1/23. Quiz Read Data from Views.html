@@ -1,0 +1,327 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz: Read Data from Views</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Programming: Part 1</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Defining vs Calling a Method.html">02. Defining vs Calling a Method</a>
+    </li>
+    <li class="">
+      <a href="03. Calculate Price Method.html">03. Calculate Price Method</a>
+    </li>
+    <li class="">
+      <a href="04. Define a Method .html">04. Define a Method </a>
+    </li>
+    <li class="">
+      <a href="05. Inputs to a Method.html">05. Inputs to a Method</a>
+    </li>
+    <li class="">
+      <a href="06. Add or Remove Parameters.html">06. Add or Remove Parameters</a>
+    </li>
+    <li class="">
+      <a href="07. Output from a Method.html">07. Output from a Method</a>
+    </li>
+    <li class="">
+      <a href="08. Use Return Value from Method.html">08. Use Return Value from Method</a>
+    </li>
+    <li class="">
+      <a href="09. Define and Call a Method.html">09. Define and Call a Method</a>
+    </li>
+    <li class="">
+      <a href="10. The displayMessage Method.html">10. The displayMessage Method</a>
+    </li>
+    <li class="">
+      <a href="11. Resources.html">11. Resources</a>
+    </li>
+    <li class="">
+      <a href="12. Resource IDs.html">12. Resource IDs</a>
+    </li>
+    <li class="">
+      <a href="13. From XML to Java.html">13. From XML to Java</a>
+    </li>
+    <li class="">
+      <a href="14. What Are Java Objects.html">14. What Are Java Objects?</a>
+    </li>
+    <li class="">
+      <a href="15. What is a Java Class.html">15. What is a Java Class?</a>
+    </li>
+    <li class="">
+      <a href="16. Create an Object.html">16. Create an Object</a>
+    </li>
+    <li class="">
+      <a href="17. Call Methods on Object.html">17. Call Methods on Object</a>
+    </li>
+    <li class="">
+      <a href="18. Practice Calling Object Methods.html">18. Practice Calling Object Methods</a>
+    </li>
+    <li class="">
+      <a href="19. Inheriting Behavior.html">19. Inheriting Behavior</a>
+    </li>
+    <li class="">
+      <a href="20. Find View by Id.html">20. Find View by Id</a>
+    </li>
+    <li class="">
+      <a href="21. Casting with findViewById.html">21. Casting with findViewById</a>
+    </li>
+    <li class="">
+      <a href="22. Set Data on Views.html">22. Set Data on Views</a>
+    </li>
+    <li class="">
+      <a href="23. Quiz Read Data from Views.html">23. Quiz: Read Data from Views</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">23. Quiz: Read Data from Views</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="quiz-read-data-from-views">Quiz: Read Data from Views</h2>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><h2 id="read-data-from-views">Read Data from Views</h2>
+<h3 id="getter-and-setter-methods-review">Getter and Setter Methods Review</h3>
+<p>You’ve been using methods such as <code>setText</code> and <code>setImageResource</code>. These are called <em>setter</em> methods because they are meant to modify or manipulate one value of a view (such as the text or image that it stores). Conventionally they start with the word "set".</p>
+<p>There’s also a category of methods called <em>getter</em> methods, whose sole purpose is to "get" one value of a view, such as getting the current text of a view. Conventionally they start with the word "get". We’ll be using some getter methods in this next exercise.</p>
+<h3 id="logs">Logs</h3>
+<p>Another skill you will need for this exercise is the ability write to the Android Logs.  More information can be found <a href="http://developer.android.com/tools/debugging/debugging-log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">here</a>, but essentially you write a Java statement like this in your code:</p>
+<pre>
+Log.i("EnterpriseActivity.java", "Captain's Log, Stardate 43125.8. We have entered a spectacular binary star system in the Kavis Alpha sector on a most critical mission of astrophysical research.");
+</pre>
+<p>Then you run the app and look at the Android Log section of your screen. You’ll see some output that looks like this:</p>
+<p><img src="media/unnamed-68456-0.gif" height="120"></p>
+<p>Note the first argument is the <strong>name of the class</strong> that the logging statement comes from. The second is the <strong>text</strong> you want to display.</p>
+<p>We’ve used Log.i() here which stands for an "information" level log. You have these other options as well:</p>
+<ul>
+<li><a href="http://developer.android.com/reference/android/util/Log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#e(java.lang.String,%20java.lang.String)" target="_blank">e(String, String)</a> (error)</li>
+<li><a href="http://developer.android.com/reference/android/util/Log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#w(java.lang.String,%20java.lang.String)" target="_blank">w(String, String)</a> (warning)</li>
+<li><a href="http://developer.android.com/reference/android/util/Log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#i(java.lang.String,%20java.lang.String)" target="_blank">i(String, String)</a> (information)</li>
+<li><a href="http://developer.android.com/reference/android/util/Log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#d(java.lang.String,%20java.lang.String)" target="_blank">d(String, String)</a> (debug)</li>
+<li><a href="http://developer.android.com/reference/android/util/Log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#v(java.lang.String,%20java.lang.String)" target="_blank">v(String, String)</a> (verbose)</li>
+</ul>
+<p>They correlate to different log levels, which you can set when you’re running your app here:</p>
+<p><img src="media/unnamed-68456-1.gif" alt="" /></p>
+<p>When you set a log level, it will show anything from that log level <strong>and above</strong>, so the verbose log level displays the most information, while the error log level shows only the most critical logs.</p>
+<h3 id="your-turn">Your Turn</h3>
+<p>This next quiz also requires creating a new app. Create a new app called <strong>Menu</strong> and copy over this <a href="https://gist.github.com/udacityandroid/042a390d4414f32a5558" target="_blank">code</a>.</p>
+<p>Note: If using Android Studio 1.4 or newer, be sure to configure your project using the <strong>Empty</strong> Activity template.</p>
+<p>It should look like this when you load it up:</p>
+<p><img src="media/unnamed-68456-2.gif" alt="Log App Images" /></p>
+<p>When you press the button <strong>Print menu to logs</strong> the XML code has already been set up to trigger a method called <code>printToLogs</code>. Add code to this method to read data from each of the menu item TextViews and to print the value of each menu item to the logs.</p>
+<p>If you're feeling lost, don't fret—you can look at the quiz image on the next page for an example.</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4579250902.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 87.55196784922394%; left: 41.073098503740646%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><h2 id="read-data-from-view-solution">Read Data from View Solution</h2>
+<p>The final <code>printToLogs</code> method should look something like this:</p>
+<pre>
+public void printToLogs(View view) {
+   // Find first menu item TextView and print the text to the logs
+   TextView textViewItem1 = (TextView) findViewById(R.id.menu_item_1);
+   String menuItem1 = textViewItem1.getText().toString();
+   Log.v("MainActivity", menuItem1);
+
+   // Find second menu item TextView and print the text to the logs
+   TextView textViewItem2 = (TextView) findViewById(R.id.menu_item_2);
+   String menuItem2 = textViewItem2.getText().toString();
+   Log.v("MainActivity", menuItem2);
+
+   // Find third menu item TextView and print the text to the logs
+   TextView textViewItem3 = (TextView) findViewById(R.id.menu_item_3);
+   String menuItem3 = textViewItem3.getText().toString();
+   Log.v("MainActivity", menuItem3);
+}
+</pre>
+<p>You are doing the three steps three times:</p>
+<ol>
+<li>Get the TextView with findViewById.</li>
+<li>Use the <strong>getter</strong> called <a href="http://developer.android.com/reference/android/widget/TextView.html#getText()" target="_blank">getText</a> to get the text. Another method called <strong>toString</strong> must be used to convert the result (which is a CharSequence) returned from getText into a String. It’s complicated, we know. Sometimes you will need to massage the data you can get from a getter into the right type and the only way to know is by reading the documentation.</li>
+<li>Then use the method <code>Log.v</code> to print the log. You could have used any of the Logging methods to print the log, we chose verbose.</li>
+</ol>
+<p>The final solution is <a href="https://gist.github.com/udacityandroid/0d6a67d340cdf28bbf6e" target="_blank">here</a>.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('23. Quiz: Read Data from Views')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

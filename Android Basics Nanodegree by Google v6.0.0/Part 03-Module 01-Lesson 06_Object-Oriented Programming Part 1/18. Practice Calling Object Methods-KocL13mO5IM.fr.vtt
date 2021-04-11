@@ -1,0 +1,269 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.390 --> 00:00:03.210
+Dans ce quiz vous allez pratiquer
+la création d'un objet TexteView
+
+00:00:03.210 --> 00:00:05.210
+et appeler des méthodes dessus.
+
+00:00:05.210 --> 00:00:06.930
+Puisque c'est uniquement pour pratiquer,
+
+00:00:06.930 --> 00:00:11.250
+nous allons faire ça dans une nouvelle appli
+Android en dehors de l'appli JustJava.
+
+00:00:11.250 --> 00:00:13.020
+Cela évitera de mettre
+en désordre l'appli JustJava.
+
+00:00:14.370 --> 00:00:19.070
+Ouvrez l'assistant projet dans Android
+Studio en allant sur fichier &gt; Nouveau projet.
+
+00:00:19.070 --> 00:00:21.650
+Vous pouvez ensuite accepter
+les paramètres par défaut pour tous.
+
+00:00:21.650 --> 00:00:25.620
+Assurez-vous d'avoir le modèle
+Blank Activity sélectionné, puis cliquez finir.
+
+00:00:28.210 --> 00:00:31.190
+Une fois votre projet créé démarrez
+l'appli sur votre appareil.
+
+00:00:32.380 --> 00:00:36.220
+L'application par défaut devrait voir
+les mots Hello World apparaîtrent en haut.
+
+00:00:36.220 --> 00:00:38.220
+Mais à présent nous allons faire
+une chose un peu différente.
+
+00:00:38.220 --> 00:00:42.340
+Dans la classe principale d'activité, nous
+allons modifier la méthode OnCreate.
+
+00:00:42.340 --> 00:00:46.600
+Au lieu de l'appeler SetContentView
+dans l'activité principale XML layout,
+
+00:00:46.600 --> 00:00:49.080
+nous allons créer notre propre
+TextView et le mettre ici.
+
+00:00:50.390 --> 00:00:51.960
+Sur le site des développeurs Android,
+
+00:00:51.960 --> 00:00:56.010
+Il y a une section formation qui
+parle de la construction de votre appli.
+
+00:00:56.010 --> 00:00:59.600
+Je regarde spécifiquement la partie Display
+the Message du cours.
+
+00:00:59.600 --> 00:01:02.220
+Cela vous dit que dans
+l'activité méthode OnCreate,
+
+00:01:02.220 --> 00:01:03.930
+on peut créer un TextView.
+
+00:01:03.930 --> 00:01:07.290
+Et voici le code que l'on reconnait
+de précedemment.
+
+00:01:07.290 --> 00:01:08.850
+On peut créer un nouveau TextView et
+
+00:01:08.850 --> 00:01:11.720
+et on le garde dans une
+variable appelée textView.
+
+00:01:11.720 --> 00:01:14.708
+Le constructeur requiert un
+contexte comme paramètre de saisie.
+
+00:01:14.708 --> 00:01:18.140
+Et de passer (this) comme
+paramètre de saisie,
+
+00:01:18.140 --> 00:01:21.780
+car (this) renvoie
+à l'activité en cours.
+
+00:01:21.780 --> 00:01:24.450
+Et une activité est aussi un contexte,
+de manière
+
+00:01:24.450 --> 00:01:27.530
+à ce que cela créé correctement pour
+nous un objet TextView.
+
+00:01:27.530 --> 00:01:30.610
+On peut maintenant y appeler
+des méthodes.
+
+00:01:30.610 --> 00:01:35.330
+Rappelez-vous que ceci est un nom variable
+textView et non pas un TextView class.
+
+00:01:35.330 --> 00:01:38.360
+Voila pourquoi les T sont ici des miniscules .
+
+00:01:38.360 --> 00:01:42.430
+On peut l'appeler textView.setTextSize et
+textView.setText comme exemple.
+
+00:01:43.830 --> 00:01:47.160
+Quand vous descendez il est dit
+de l'appeler setContentView et
+
+00:01:47.160 --> 00:01:49.890
+et de passer textView
+comme paramètre de saisie.
+
+00:01:49.890 --> 00:01:51.690
+En descendant plus bas
+cela vous montre
+
+00:01:51.690 --> 00:01:53.230
+un modèle de code
+de la méthode onCreate.
+
+00:01:54.230 --> 00:01:55.520
+Pas besoin de cette partie.
+
+00:01:55.520 --> 00:01:58.360
+On garde le focus sur cette partie
+où nous créons un textView pour
+
+00:01:58.360 --> 00:02:01.160
+ensuite le définir comme le contentView
+de la mise en page d'activité.
+
+00:02:02.440 --> 00:02:04.610
+De retour dans Android Studio dans
+classe d'activité principale,
+
+00:02:04.610 --> 00:02:07.030
+Je vais modifier la méthode onCreate.
+
+00:02:07.030 --> 00:02:08.449
+Je vais y insérer quelques
+lignes vierges.
+
+00:02:09.535 --> 00:02:12.065
+En premier, je vais créer un nouvel objet
+TextView avec le constructeur.
+
+00:02:13.245 --> 00:02:15.535
+Je vais lui donner un nom de
+variable de TextView, mais
+
+00:02:15.535 --> 00:02:20.075
+sentez-vous libre de l'appeler par un
+autre nom tant que ça décrit
+
+00:02:20.075 --> 00:02:21.150
+de manière appropriée, ce que c'est.
+
+00:02:22.080 --> 00:02:24.870
+Le texte construit requiert
+un contexte, je
+
+00:02:24.870 --> 00:02:28.100
+vais le passer avec (this) pour le
+référer à cette activité.
+
+00:02:28.100 --> 00:02:30.500
+Et sur la ligne de code suivante,
+
+00:02:30.500 --> 00:02:32.630
+je vais appeler une méthode
+sur l'objet du textView.
+
+00:02:33.770 --> 00:02:38.100
+Dès que je presse point, cela me montre
+toute les méthodes possibles
+
+00:02:38.100 --> 00:02:39.730
+appelables sur cet objet textView.
+
+00:02:40.990 --> 00:02:44.340
+Si je commence à taper cela va filtrer
+les options auto-complétés.
+
+00:02:44.340 --> 00:02:47.720
+Vous pouvez voir que le
+nombre d'options à réduis.
+
+00:02:47.720 --> 00:02:51.230
+Je vais choisir setText et
+presser entrer pour l'utiliser.
+
+00:02:53.140 --> 00:02:56.370
+Je peux ensuite le mettre dans une chaine
+comme argument de saisi.
+
+00:02:56.370 --> 00:02:59.230
+Et la dernière étape est de changer
+la ligne de contenu défini.
+
+00:02:59.230 --> 00:03:04.240
+Au lieu d'utiliser ce fichier layout XML
+je vais simplement coller textView.
+
+00:03:04.240 --> 00:03:06.810
+Je sauvegarde le tout et
+le test sur mon appareil.
+
+00:03:07.860 --> 00:03:11.840
+Ce que je m'attends à voir sur
+l'écran est un nouveau textView qui
+
+00:03:11.840 --> 00:03:15.030
+dira Wow plutôt que Hello World.
+
+00:03:15.030 --> 00:03:16.030
+Et ça fonctionne.
+
+00:03:16.680 --> 00:03:17.860
+Ceci dit, ce n'est pas grand chose.
+
+00:03:17.860 --> 00:03:20.390
+J'aimerais alors que
+vous le rendiez plus intéressant.
+
+00:03:20.390 --> 00:03:24.198
+Je veux que vous appeliez d'autres
+méthodes, sur cet objet textView,
+
+00:03:24.198 --> 00:03:27.254
+comme changer la couleur,
+ou la taille du texte.
+
+00:03:27.254 --> 00:03:29.294
+Et en étant un peu plus aventureux,
+
+00:03:29.294 --> 00:03:32.780
+vous pouvez tenter d'appeler
+d'autres méthodes sur l'objet textView.
+
+00:03:32.780 --> 00:03:35.280
+Lisez la documentation en ligne
+pour textView.
+
+00:03:35.280 --> 00:03:38.370
+Pour découvrir ce que sont les autres
+méthodes possibles.
+
+00:03:38.370 --> 00:03:40.490
+Quand vous avez fini,
+cochez les cases pour continuer.
+

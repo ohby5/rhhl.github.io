@@ -1,0 +1,264 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.210 --> 00:00:04.370
+Mới đây, bạn đã thấy ta có thể sử dụng
+biến số trong phương thức hiển thị.
+
+00:00:04.370 --> 00:00:08.350
+Hãy nói thêm về sự khác biệt giữa đầu ra
+và đầu vào của một phương thức.
+
+00:00:08.350 --> 00:00:11.460
+Hãy nhìn vào phương thức submitOder
+trong MainActivity làm ví dụ.
+
+00:00:12.510 --> 00:00:15.000
+Giả sử bạn có rất nhiều dòng
+code trong phương thức đó.
+
+00:00:15.000 --> 00:00:16.670
+Khi người dùng bấm
+vào nút Order,
+
+00:00:16.670 --> 00:00:19.330
+nó sẽ kích hoạt và triệu gọi
+phương thức submitOrder này.
+
+00:00:19.330 --> 00:00:23.200
+Thiết bị Android sẽ thực thi từng chỉ dẫn
+một từ trên xuống dưới
+
+00:00:23.200 --> 00:00:26.980
+và khi tới phương thức
+calculatePrice, nó sẽ
+
+00:00:26.980 --> 00:00:30.400
+nhảy tới phần mà phương thức
+calculatePrice được định nghĩa.
+
+00:00:30.400 --> 00:00:33.830
+Giả sử nó được định nghĩa
+ở cuối tệp MainActivity.
+
+00:00:33.830 --> 00:00:37.020
+Thiết bị Android sẽ thực thi từng chỉ dẫn
+một theo thứ tự từ trên xuống dưới
+
+00:00:37.020 --> 00:00:41.270
+của phương thức, sau đó sẽ
+nhảy ngược về phương thức submitOrder.
+
+00:00:41.270 --> 00:00:44.340
+Sau đó, nó sẽ tiếp tục thực hiện từng
+chỉ dẫn một cho đến cuối cùng
+
+00:00:44.340 --> 00:00:45.268
+của phương thức.
+
+00:00:45.268 --> 00:00:47.240
+Khi phương thức calculatePrice
+được triệu gọi,
+
+00:00:47.240 --> 00:00:49.510
+chúng ta có thể sử dụng
+rất nhiều đầu vào để mà
+
+00:00:49.510 --> 00:00:53.620
+khi thực thi những dòng code này,
+chúng ta có thể sử dụng giá trị đầu vào.
+
+00:00:53.620 --> 00:00:55.070
+Nhờ có phương thức này,
+
+00:00:55.070 --> 00:00:58.940
+chúng ta có thể trả mộ giá trị
+đầu ra về lệnh gọi.
+
+00:00:58.940 --> 00:01:03.030
+Theo cách này, giá trị đầu ra có thể
+được sử dụng trong dòng code tiếp theo.
+
+00:01:03.030 --> 00:01:07.090
+Trong Java, chúng ta gọi đầu vào
+theo phương thức tham số đầu vào
+
+00:01:07.090 --> 00:01:09.520
+và chúng ta có thể có 0
+hoặc nhiều tham số đầu vào.
+
+00:01:10.550 --> 00:01:13.370
+Đối với Java, chúng ta
+gọi đầu ra là giá trị trả lại.
+
+00:01:13.370 --> 00:01:16.470
+Và chúng ta có thể có 0
+hoặc nhiều giá trị trả lai.
+
+00:01:16.470 --> 00:01:20.420
+Một ví dụ về tham số đầu vào
+là việc nhập số lượng
+
+00:01:20.420 --> 00:01:22.840
+vào phương thức calculatePrice.
+
+00:01:22.840 --> 00:01:26.957
+Nhờ đó, phương thức này có thể sử dụng
+số lượng để tìm ra tổng giá trị
+
+00:01:26.957 --> 00:01:28.130
+của toàn bộ đơn hàng.
+
+00:01:28.130 --> 00:01:31.350
+Sau đó ta có thể trả về
+tổng giá trị đơn hàng.
+
+00:01:31.350 --> 00:01:34.046
+Và rồi trong phương thức
+submitOrder ở dưới này,
+
+00:01:34.046 --> 00:01:38.253
+chúng ta có thể sử dụng tổng giá trị đó
+vào việc khác, như hiển thị lên màn hình
+
+00:01:38.253 --> 00:01:40.930
+hoặc lập hóa đơn
+hay cái gì tương tự như thế.
+
+00:01:40.930 --> 00:01:43.730
+Tóm lại, đây là nơi chúng ta định nghĩa
+phương thức calculatePrice, và
+
+00:01:43.730 --> 00:01:45.400
+đây là nơi chúng ta gọi nó.
+
+00:01:45.400 --> 00:01:49.490
+Chúng ta muốn thiết lập một phương thức
+để tính toán giá trị của đơn hàng cà phê.
+
+00:01:49.490 --> 00:01:53.410
+Hiện tại, chúng ta đang tính toán giá trị
+trực tiếp bằng phương thức submitOrder
+
+00:01:53.410 --> 00:01:57.020
+nhưng logic sử dụng để tính toán
+sẽ trở nên hơi phức tạp một chút.
+
+00:01:57.020 --> 00:01:59.030
+Vì vậy, hãy dời nó tới
+phương thức riêng của nó.
+
+00:01:59.030 --> 00:02:01.948
+Như thế ta có thể gọi nó bao nhiêu lần
+cũng được mà không phải copy và dán
+
+00:02:01.948 --> 00:02:04.080
+phần code khắp nơi.
+
+00:02:04.080 --> 00:02:07.730
+Khi bạn có nhiều kinh nghiệm hơn với
+phát triển Android, bạn sẽ có khả năng
+
+00:02:07.730 --> 00:02:11.850
+đánh giá xem khi nào cần tạo phương thức
+mới và khi nào không.
+
+00:02:11.850 --> 00:02:14.690
+Chỉ cần thêm kinh nghiệm
+và thêm thời gian.
+
+00:02:14.690 --> 00:02:17.640
+Như vậy, đây sẽ là lần đầu tiên
+chúng ta xây dựng
+
+00:02:17.640 --> 00:02:20.800
+một phương thức mới
+trên MainActivity.
+
+00:02:20.800 --> 00:02:24.575
+Thay vì bắt đầu viết nó từ đầu,
+chúng ta sẽ học cách nhận biết
+
+00:02:24.575 --> 00:02:28.460
+đâu là phương thức đúng bằng cách
+nghiên cứu một vài đoạn cốt.
+
+00:02:28.460 --> 00:02:31.700
+Như vậy trong chú thích của tác giả,
+chúng tôi sẽ cho bạn ba lựa chọn.
+
+00:02:31.700 --> 00:02:35.830
+Hãy đọc ba đoạn code này
+và xem xem đoạn nào
+
+00:02:35.830 --> 00:02:40.330
+thực hiện chính xác phương thức
+tính toán giá trị đơn hàng.
+
+00:02:40.330 --> 00:02:42.330
+Khi bạn bấm vào đường dẫn
+trong ghi chú của tác giả
+
+00:02:42.330 --> 00:02:46.850
+bạn sẽ thấy nó chỉ có code
+cho lựa chọn A, B, và C.
+
+00:02:48.380 --> 00:02:49.290
+Mục đích ở đây là
+
+00:02:49.290 --> 00:02:53.360
+giúp bạn thoải mái hơn khi đọc
+những code bạn chưa bao giờ thấy.
+
+00:02:53.360 --> 00:02:57.370
+Chúng ta vẫn chưa xem đến những nguyên tắc
+để tạo nên một phương thức hợp lệ
+
+00:02:57.370 --> 00:03:01.169
+nhưng tôi muốn bạn thử đoán xem
+lựa chọn nào là chính xác nhất.
+
+00:03:02.630 --> 00:03:05.091
+Tôi cũng khuyến khích bạn
+tìm kiếm thêm thông tin
+
+00:03:05.091 --> 00:03:09.140
+trên Google về cách
+định nghĩa phương thức Java.
+
+00:03:09.140 --> 00:03:11.450
+Khi bạn xem qua
+những kết quả nhận được,
+
+00:03:11.450 --> 00:03:15.100
+bạn sẽ bắt gặp những thông tin
+trong tài liệu mà bạn không hiểu.
+
+00:03:15.100 --> 00:03:18.290
+Nhưng tôi muốn bạn hãy thoải mái
+với việc không hiểu hết mọi thứ
+
+00:03:18.290 --> 00:03:21.950
+trên những trang đó, bởi vì việc không thể
+hiểu được tất cả là hết sức bình thường.
+
+00:03:21.950 --> 00:03:25.780
+Tất cả những gì bạn cần là lướt qua
+những bài viết, tìm những gì bạn hiểu
+
+00:03:25.780 --> 00:03:28.030
+và những gì bạn nghĩ là
+liên quan tới vấn đề.
+
+00:03:29.140 --> 00:03:30.610
+Vì vậy, hãy đọc đoạn code
+
+00:03:30.610 --> 00:03:34.260
+cho ba lựa chọn đó, tìm kiếm
+thêm thông tin trên mạng, và
+
+00:03:34.260 --> 00:03:37.627
+đưa ra lựa chọn đâu là cách chính xác
+để định nghĩa phương thức calculatePrice.
+

@@ -1,0 +1,191 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.160 --> 00:00:02.540
+Agora que você sabe o que 
+são recursos no Android,
+
+00:00:02.540 --> 00:00:05.260
+e que você pode colocá-los
+em diferentes pastas,
+
+00:00:05.260 --> 00:00:08.720
+vamos falar sobre como você pode
+acessar os recursos que você salvou
+
+00:00:08.720 --> 00:00:10.090
+nestas pastas.
+
+00:00:10.520 --> 00:00:15.050
+Quando seu aplicativo for compilado,
+há um recurso no Android chamado <i>AAPT</i>,
+
+00:00:15.050 --> 00:00:17.610
+que vai gerar o <i>R class</i>.
+
+00:00:17.610 --> 00:00:21.350
+Ele nada mais é que um arquivo <i>R.Java</i>
+e eu vou mostrar um exemplo a seguir.
+
+00:00:21.660 --> 00:00:26.170
+Ele contém os <i>IDs</i> de recurso para todos
+os recursos salvos no seu diretório <i>Res</i>.
+
+00:00:26.350 --> 00:00:30.370
+Logo, para cada recurso que você adicionou
+há um <i>ID</i> relacionado.
+
+00:00:30.760 --> 00:00:34.580
+O <i>ID</i> é um formato que é baseado
+no tipo de recurso.
+
+00:00:34.580 --> 00:00:39.900
+Então, para cada recurso Java que seja
+gráfico, ele seguirá o formato <i>R.drawable</i>.
+
+00:00:40.360 --> 00:00:44.965
+Para cada string que seja de recursos,
+ele vai seguir um formato <i>R.string</i>.
+
+00:00:44.965 --> 00:00:48.090
+seguido do nome do recurso
+que, nesse caso, é <i>hello</i>.
+
+00:00:49.190 --> 00:00:52.230
+Repare que há duas maneiras
+de acessar um recurso.
+
+00:00:52.230 --> 00:00:57.420
+No código Java, ele segue o formato:
+R.tipo de recurso.nome do recurso
+
+00:00:58.010 --> 00:01:01.370
+no XML porém ele segue a forma @,
+
+00:01:01.530 --> 00:01:08.050
+então ficaria: @tipo de recurso (string)/
+nome do recurso (<i>hello</i>).
+
+00:01:09.070 --> 00:01:12.730
+Aqui mais exemplos de tipos
+diferentes de recursos e como acessá-los.
+
+00:01:13.600 --> 00:01:16.110
+Esses são apenas alguns tipos
+de recursos comuns,
+
+00:01:16.110 --> 00:01:17.620
+mas existem muitos outros.
+
+00:01:17.700 --> 00:01:21.590
+Lembre-se que no código Java sempre
+começamos com um R maiúsculo, um ponto,
+
+00:01:21.590 --> 00:01:23.720
+seguido do tipo de recurso,
+
+00:01:23.720 --> 00:01:27.210
+outro ponto e então o nome do recurso,
+esse nome é de sua escolha.
+
+00:01:27.880 --> 00:01:31.390
+Em XML teremos @, seguido do tipo
+de recurso, uma barra
+
+00:01:31.390 --> 00:01:32.790
+e então o nome do recurso.
+
+00:01:33.680 --> 00:01:36.510
+Vamos tirar um momento para achar
+todos os <i>ID</i> de recursos em
+
+00:01:36.510 --> 00:01:38.620
+nosso arquivo Java de atividade principal.
+
+00:01:38.620 --> 00:01:41.160
+Eu vou abrir o comando <i>find</i>
+no <i>Android Studio</i>.
+
+00:01:41.160 --> 00:01:45.640
+Eu vou usar <i>Cmd+F</i>, ou você pode
+usar <i>Crtl+F</i> se for no <i>windows</i>.
+
+00:01:46.800 --> 00:01:48.460
+Aparece um campo de busca aqui.
+
+00:01:49.580 --> 00:01:51.850
+Vou buscar por R.
+
+00:01:52.780 --> 00:01:57.560
+E então clicar em <i>Match Case</i> para que 
+ele busque apenas os casos com R.
+
+00:01:58.250 --> 00:02:02.930
+A primeira referência que ele encontrou
+foi <i>R.layout.activity_main</i>
+
+00:02:03.050 --> 00:02:06.530
+Isso é interessante porque nós estamos
+nos referindo ao arquivo de <i>layout</i>
+
+00:02:06.530 --> 00:02:07.710
+da atividade principal.
+
+00:02:07.710 --> 00:02:11.620
+Essa é na verdade, como a atividade
+principal carrega esse arquivo XML.
+
+00:02:11.710 --> 00:02:13.220
+Isso não é legal?
+
+00:02:13.220 --> 00:02:14.639
+Vejamos a próxima referência.
+
+00:02:15.400 --> 00:02:17.440
+Ok. No método <i>displayQuantity</i>,
+
+00:02:17.440 --> 00:02:21.690
+nós temos uma referência para
+<i>R.id.quantity_text_view</i>
+
+00:02:22.230 --> 00:02:25.060
+Então é referente a um <i>View ID</i>.
+
+00:02:25.090 --> 00:02:28.300
+Especificamente, o <i>TextView</i>
+que mostra a quantidade.
+
+00:02:28.660 --> 00:02:31.660
+Felizmente, algumas peças do
+quebra-cabeças começam a se encaixar.
+
+00:02:31.660 --> 00:02:34.200
+Ao referir essa visualização
+no código Java,
+
+00:02:34.200 --> 00:02:36.410
+podemos atualizá-la enquanto o aplicativo
+
+00:02:36.410 --> 00:02:38.980
+está rodando para 
+mostrar o <i>numberOfCoffees</i>.
+
+00:02:38.980 --> 00:02:40.670
+Vamos para o próximo evento.
+
+00:02:40.670 --> 00:02:43.290
+Ok, no método <i>displayMessage</i>,
+
+00:02:43.290 --> 00:02:47.360
+vemos uma referência para
+<i>R.id.order_summary_text_view</i>
+
+00:02:47.360 --> 00:02:51.360
+Aqui parece que estamos tentando
+nos referir a esse <i>TextView</i> que mostra
+
+00:02:51.360 --> 00:02:54.480
+o resumo da conta, para que possamos
+atualizar com esta mensagem.
+

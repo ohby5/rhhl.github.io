@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.520 --> 00:00:03.700
+Ahora sabemos que podemos consultar
+recursos XML en código Java.
+
+00:00:04.710 --> 00:00:08.680
+Pero ¿cuál es, exactamente, la relación
+entre los recursos y el código Java?
+
+00:00:08.680 --> 00:00:11.380
+¿Cómo enlazarlos y formar parte
+de una aplicación completa?
+
+00:00:12.460 --> 00:00:15.515
+Comencemos pulsando
+el icono de la aplicación Just Java.
+
+00:00:16.215 --> 00:00:18.545
+Se abre <i>MainActivity</i>.
+
+00:00:18.615 --> 00:00:21.865
+Todavía no ves nada 
+porque se está iniciando.
+
+00:00:21.925 --> 00:00:25.835
+Por suerte, la mayoría de la complejidad 
+para iniciar la actividad
+
+00:00:25.835 --> 00:00:28.495
+la realiza Android automáticamente.
+
+00:00:28.565 --> 00:00:31.995
+Lo importante es que
+el archivo <i>MainActivity</i>
+
+00:00:31.995 --> 00:00:34.815
+automáticamente llama al método <i>onCreate</i>.
+
+00:00:34.875 --> 00:00:37.540
+Esto es cuando se crea la actividad.
+
+00:00:37.590 --> 00:00:40.580
+Hay mucho trabajo y tenemos 
+una línea importante que dice
+
+00:00:40.580 --> 00:00:45.070
+setContentView y el ID de recursos
+para el archivo del layout.
+
+00:00:45.120 --> 00:00:47.580
+Es R.layout.activity_main.
+
+00:00:47.640 --> 00:00:50.420
+Esto significa que la vista 
+del contenido de la actividad
+
+00:00:50.420 --> 00:00:52.470
+se debe establecer para el layout,
+
+00:00:52.470 --> 00:00:55.320
+como se especifica 
+en la actividad principal del archivo XML.
+
+00:00:55.410 --> 00:00:56.720
+Este es la llamada al método
+
+00:00:56.720 --> 00:00:59.620
+y el parámetro de entrada 
+es este ID de recursos.
+
+00:00:59.660 --> 00:01:02.600
+Una vez fijado el layout que vas a usar
+para la vista de contenido,
+
+00:01:02.600 --> 00:01:07.530
+el dispositivo inicia el análisis
+de este archivo layout XML.
+
+00:01:07.660 --> 00:01:09.350
+Analizar es como leer este archivo
+
+00:01:09.350 --> 00:01:12.190
+y tratar de interpretar eso como 
+¡Oh! esto es un layout lineal.
+
+00:01:12.190 --> 00:01:13.570
+¡Oh! esto es una vista de texto.
+
+00:01:13.570 --> 00:01:15.270
+Esos son los atributos y etcétera.
+
+00:01:15.270 --> 00:01:18.600
+Así que trata de entender 
+lo que contiene este archivo.
+
+00:01:18.850 --> 00:01:21.900
+El dispositivo comienza a leer 
+en la parte superior del archivo
+
+00:01:21.960 --> 00:01:24.610
+Reconoce que aquí hay un layout lineal.
+
+00:01:24.670 --> 00:01:29.090
+Entonces, se infla un objeto Java
+para representar ese layout lineal.
+
+00:01:29.130 --> 00:01:30.570
+Luego pasa a la siguiente línea
+
+00:01:30.570 --> 00:01:36.040
+y vemos que hay que añadir <i>TextView</i>
+como hijo a ese layout lineal, así.
+
+00:01:36.120 --> 00:01:39.825
+Esto comienza a parecerse 
+a la jerarquía de vistas de la lección dos
+
+00:01:39.865 --> 00:01:42.085
+Lo que antes no te dije es que,
+esta es, en realidad,
+
+00:01:42.085 --> 00:01:45.215
+una jerarquía de objetos Java.
+
+00:01:45.265 --> 00:01:47.975
+Sabremos más sobre los objetos Java
+en los siguientes vídeos,
+
+00:01:47.975 --> 00:01:50.445
+así que si todavía no los entiendes 
+completamente, no importa.
+
+00:01:50.515 --> 00:01:53.085
+En la siguiente línea 
+vemos que necesitamos inflar
+
+00:01:53.085 --> 00:01:55.385
+un layout lineal en Java.
+
+00:01:55.385 --> 00:01:58.855
+Que se añade como hijo a esta raíz
+de este <i>LinearLayout</i>.
+
+00:01:58.855 --> 00:02:00.480
+Después vemos el elemento <i>Button</i>
+
+00:02:00.480 --> 00:02:03.300
+y lo añadimos como hijo al <i>LinearLayout</i>.
+
+00:02:03.300 --> 00:02:06.990
+Continuamos en el archivo hasta que
+hayamos inflado todas las vistas
+
+00:02:06.990 --> 00:02:09.280
+que necesitamos para nuestra
+jerarquía de vistas.
+
+00:02:09.280 --> 00:02:12.100
+Una vez que tenemos esta jerarquía
+de vistas de objetos Java
+
+00:02:12.100 --> 00:02:15.470
+podemos manipularlos y cambiarlos
+mientras se ejecuta la aplicación.
+
+00:02:16.570 --> 00:02:19.930
+Un objeto como <i>TextView</i> aquí
+contiene información de estado.
+
+00:02:19.930 --> 00:02:23.070
+Como el texto, color del texto,
+tamaño del texto.
+
+00:02:23.070 --> 00:02:26.700
+El objeto también tiene métodos
+así que podemos llamar esos métodos
+
+00:02:26.700 --> 00:02:29.130
+y cambiar su estado interno.
+
+00:02:29.130 --> 00:02:31.800
+Por ejemplo, podemos cambiar el texto
+mientras que se ejecuta la aplicación.
+
+00:02:32.480 --> 00:02:36.700
+Interactuar con todos los objetos se llama
+programación orientada a objetos.
+
+00:02:36.700 --> 00:02:40.150
+Hablaremos de esto con más detalle
+en los próximos vídeos.
+
+00:02:40.220 --> 00:02:44.230
+Para resumir, en la actividad principal
+cuando llamamos <i>setContentView</i>
+
+00:02:44.230 --> 00:02:49.350
+a este layout, leemos este layout
+y después inflamos varios objetos Java.
+
+00:02:49.440 --> 00:02:53.500
+Esos objetos Java forman la jerarquía
+de vistas en la aplicación.
+
+00:02:53.590 --> 00:02:56.920
+<i>MainActivity</i> se mantiene en
+esta jerarquía de vistas
+
+00:02:56.920 --> 00:03:00.400
+y a medida que actúas en <i>MainActivity</i>,
+esos objetos pueden actualizarse.
+

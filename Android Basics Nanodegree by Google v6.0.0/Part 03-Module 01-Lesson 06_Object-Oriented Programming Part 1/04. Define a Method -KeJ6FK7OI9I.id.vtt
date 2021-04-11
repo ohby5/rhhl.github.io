@@ -1,0 +1,442 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.640 --> 00:00:04.200
+Untuk mencari tahu mengapa
+opsi C adalah yang terbaik,
+
+00:00:04.200 --> 00:00:08.420
+mari tinjau aturan sintaks yang sebenarnya
+dalam Java untuk mendefinisikan metode.
+
+00:00:08.420 --> 00:00:10.820
+Yang juga dikenal sebagai
+method signature.
+
+00:00:12.090 --> 00:00:13.460
+Ini adalah method signature untuk
+
+00:00:13.460 --> 00:00:16.239
+metode calculate price
+yang sudah pernah kita lihat.
+
+00:00:16.239 --> 00:00:20.100
+Anda mungkin bertanya-tanya mengapa
+kata diatur dalam urutan tertentu.
+
+00:00:20.100 --> 00:00:24.470
+Mereka mengikuti format tertentu,
+yang terlihat seperti ini.
+
+00:00:24.470 --> 00:00:27.050
+Memang kelihatannya membuat kewalahan,
+tapi jangan khawatir
+
+00:00:27.050 --> 00:00:29.040
+Kita akan membahas satu per satu.
+
+00:00:30.550 --> 00:00:34.250
+Bagian pertama dalam method signature
+adalah kata private.
+
+00:00:34.250 --> 00:00:36.400
+Dikenal sebagai pengubah akses JAVA.
+
+00:00:37.410 --> 00:00:41.400
+Dia menentukan siapa yang mendapat
+akses dalam metode ini, calculatePrice.
+
+00:00:41.400 --> 00:00:46.290
+pengubah akses paling umum yang Anda
+temui adalah publik atau privat.
+
+00:00:46.290 --> 00:00:51.010
+Metode ini ditandai sebagai privat,
+artinya calculatePrice
+
+00:00:51.010 --> 00:00:55.590
+hanya bisa dipanggil dalam
+metode lain di MainActivity.
+
+00:00:55.590 --> 00:00:56.830
+Diluar MainActivity,
+
+00:00:56.830 --> 00:01:00.750
+seperti aktivitas lain,
+Anda tidak bisa memanggil metode ini.
+
+00:01:00.750 --> 00:01:03.340
+Bersifat privat ke dalam MainActivity.
+
+00:01:03.340 --> 00:01:06.416
+Dengan kata lain, jika ditandai
+sebagai metode publik
+
+00:01:06.441 --> 00:01:09.100
+maka siapapun bisa memanggil metode ini,
+
+00:01:09.100 --> 00:01:12.560
+entah berada di dalam MainActivity
+atau di activity lain.
+
+00:01:13.710 --> 00:01:15.120
+Semacam analogi berikut ini.
+
+00:01:15.120 --> 00:01:18.530
+Jika Anda adalah selebritas dan publik,
+maka setiap orang mengenal Anda.
+
+00:01:18.530 --> 00:01:19.730
+Jika Anda tersendiri
+
+00:01:19.730 --> 00:01:24.420
+berada di dalam rumah sepanjang waktu,
+hanya beberapa orang yang mengenal Anda.
+
+00:01:24.420 --> 00:01:27.930
+Jadi untuk metode calculatePrice,
+kita akan menjaganya privat,
+
+00:01:27.930 --> 00:01:30.440
+Jadi dia hanya digunakan di dalam
+MainActivity.
+
+00:01:30.440 --> 00:01:33.770
+Selanjutnya ada "int" yang
+merupakan tipe data kembalian.
+
+00:01:33.770 --> 00:01:35.560
+Apakah Anda ingat diagram
+kita sebelumnya?
+
+00:01:35.560 --> 00:01:38.360
+Dimana ketika Anda memanggil sebuah
+metode Anda memberikan input dan
+
+00:01:38.360 --> 00:01:39.910
+mendapatkan output?
+
+00:01:39.910 --> 00:01:44.140
+tipe data kembalian adalah tipe data
+yang dikembalikan di dalam output.
+
+00:01:44.140 --> 00:01:48.020
+Dan tipe data yang telah dipelajari
+sejauh ini adalah Int dan
+
+00:01:48.020 --> 00:01:49.730
+String dari pelajaran yang sebelumnya.
+
+00:01:49.730 --> 00:01:52.410
+Ini juga dapat mengembalikan
+jenis objek data dan kita akan pelajari
+
+00:01:52.410 --> 00:01:54.449
+lebih lanjut objek dalam
+pelajaran selanjutnya.
+
+00:01:55.700 --> 00:01:58.150
+Di dalam hal ini,
+metode calculatePrice ini
+
+00:01:58.150 --> 00:02:02.030
+mengembalikan harga total order,
+yaitu integer.
+
+00:02:02.030 --> 00:02:06.540
+Di aplikasi media sosial, jika saya punya
+metode untuk mendapatkan jumlah teman
+
+00:02:06.540 --> 00:02:11.130
+saya di Facebook, ini dapat mengembalikan
+integer, yang mana adalah jumlah teman.
+
+00:02:11.130 --> 00:02:15.390
+Selanjutnya, ada method name,
+yang dalam hal ini adalah calculatePrice.
+
+00:02:15.390 --> 00:02:19.730
+Sama seperti cara kita merujuk ke variabel
+dengan namanya, kita juga bisa merujuk
+
+00:02:19.730 --> 00:02:23.790
+ke metode dengan namanya jadi kita bisa
+mengeksekusi instruksi dalam metode ini.
+
+00:02:23.790 --> 00:02:28.120
+Di dalam dokumentasi yang sama tentang
+mendefinisikan metode, kita bisa gulir
+
+00:02:28.120 --> 00:02:30.690
+ke bawah dan melihat bagian
+tentang penamaan metode.
+
+00:02:30.690 --> 00:02:34.450
+Anda bisa membaca lebih rinci nanti,
+tapi pada dasarnya dikatakan kalau nama
+
+00:02:34.450 --> 00:02:39.030
+metode harus di awali dengan kata kerja
+seperti run, get, compare atau set.
+
+00:02:39.030 --> 00:02:40.880
+Dimulai dengan huruf kecil
+
+00:02:40.880 --> 00:02:43.360
+lalu menggunakan kata kapital
+jika terdapat banyak kata.
+
+00:02:43.360 --> 00:02:46.400
+Setelah nama metode,
+terdapat daftar input
+
+00:02:46.400 --> 00:02:50.350
+yang ditandai dengan kurung pembuka
+dan penutup.
+
+00:02:50.350 --> 00:02:52.670
+Anda bisa tulis sebanyak mungkin
+input yang Anda inginkan.
+
+00:02:52.670 --> 00:02:57.010
+Jika Anda tidak ingin ada input, hanya
+akan ada sepasang tanda kurung kosong.
+
+00:02:57.010 --> 00:02:59.150
+Jika Anda punya satu input,
+akan terlihat seperti ini.
+
+00:02:59.150 --> 00:03:00.730
+Jika Anda punya banyak input,
+
+00:03:00.730 --> 00:03:03.890
+pisahkan saja dengan koma
+diantara setiap input.
+
+00:03:03.890 --> 00:03:07.110
+Mari kita lihat contoh dimana
+terdapat satu input,
+
+00:03:07.110 --> 00:03:10.070
+yang mana dikenal sebagai parameter input.
+
+00:03:10.070 --> 00:03:14.060
+Kita mendefinisikan parameter input
+dengan menentukan tipe data dan
+
+00:03:14.060 --> 00:03:16.460
+nama variabel yang kita pilih.
+
+00:03:16.460 --> 00:03:18.170
+Dari diagram input dan
+
+00:03:18.170 --> 00:03:22.370
+output, ini akan menjadi
+input pertama ke metode.
+
+00:03:23.560 --> 00:03:28.030
+Di dalam metode ini, lalu Anda bisa
+arahkan ke quantity variable.
+
+00:03:28.030 --> 00:03:30.190
+Seperti variabel yang lainnya,
+
+00:03:30.190 --> 00:03:32.930
+yang mana sudah memiliki
+sebuah nilai didalamnya.
+
+00:03:32.930 --> 00:03:36.990
+Nilainya berasal ketika Anda
+pertama memanggil metode dan
+
+00:03:36.990 --> 00:03:38.570
+Anda memasukkan inputnya.
+
+00:03:40.030 --> 00:03:43.850
+Jika kita ingin memodifikasi method
+signature guna menambah param
+
+00:03:43.850 --> 00:03:47.290
+input kedua, kita harus menentukan
+tipe data dan nama variabel
+
+00:03:47.290 --> 00:03:48.980
+untuk param input kedua itu.
+
+00:03:48.980 --> 00:03:52.200
+Lalu, di dalam metode ini kita
+bisa arahkan ke kuantitas atau
+
+00:03:52.200 --> 00:03:55.940
+variabel harga satu cangkir seperti
+halnya variabel biasa.
+
+00:03:55.940 --> 00:03:59.220
+Saat anda memanggil metode ini,
+Anda harus ingat untuk memberikan
+
+00:03:59.220 --> 00:04:02.790
+angka input yang tepat ke dalam
+metode yang diharapkan dan
+
+00:04:02.790 --> 00:04:06.980
+input itu harus berada di tipe data 
+dan urutan yang tepat.
+
+00:04:06.980 --> 00:04:08.380
+Anda tidak bisa membalik urutannya.
+
+00:04:08.380 --> 00:04:11.650
+Kalau tidak, metode ini akan
+menafsirkan dengan salah.
+
+00:04:11.650 --> 00:04:15.210
+Setelah Anda menuliskan inputnya,
+tambahkan kurung tutup dan
+
+00:04:15.210 --> 00:04:16.980
+kurung kurawal pembuka.
+
+00:04:16.980 --> 00:04:20.640
+Ini akan mengawali keseluruhan
+intruksi didalam metode Anda.
+
+00:04:20.640 --> 00:04:21.660
+Setelahnya,
+
+00:04:21.660 --> 00:04:25.270
+tambahkan kurung kurawal penutup
+untuk menandai akhir metode Anda.
+
+00:04:25.270 --> 00:04:27.060
+Kembali ke dokumentasi kita
+
+00:04:27.060 --> 00:04:30.470
+sekarang deklarasi metode ini
+akan jauh lebih masuk akal.
+
+00:04:30.470 --> 00:04:32.760
+Pertama, ada pengubah akses.
+
+00:04:32.760 --> 00:04:35.120
+Kemudian,tipe data kembalian.
+
+00:04:35.120 --> 00:04:39.100
+Nama metode, yang diikuti
+semua daftar input.
+
+00:04:39.100 --> 00:04:42.760
+Dalam hal ini, terdapat empat
+parameter input berbeda.
+
+00:04:42.760 --> 00:04:46.260
+Dan masing-masing punya
+tipe data dan nama variabel.
+
+00:04:46.260 --> 00:04:48.720
+Lalu, ada kurung kurawal pembuka.
+
+00:04:48.720 --> 00:04:50.610
+Daftar seluruh instruksi ada didalamnya.
+
+00:04:50.610 --> 00:04:51.990
+Kemudian, kurung kurawal penutup.
+
+00:04:53.100 --> 00:04:54.480
+Dan ini adalah deklarasi metode.
+
+00:04:55.640 --> 00:04:59.060
+Dalam kuis ini, Anda mendapat kesempatan
+untuk mempraktekkan identifikasi
+
+00:04:59.060 --> 00:05:00.850
+bagian berbeda dari deklarasi metode.
+
+00:05:00.850 --> 00:05:04.120
+Kita akan sediakan beberapa kode
+ke dalam catatan instruksi Anda.
+
+00:05:04.120 --> 00:05:08.000
+Kode ini mengandung banyak sekali metode
+yang terdapat dalam aplikasi apapun.
+
+00:05:08.000 --> 00:05:11.010
+Untuk masing-masing,
+bisakah Anda beritahu apa nama metodenya?
+
+00:05:11.010 --> 00:05:12.800
+Daftar parameter input?
+
+00:05:12.800 --> 00:05:14.010
+Dan tipe data kembalian.
+
+00:05:15.030 --> 00:05:16.330
+Ayo kerjakan contohnya bersama.
+
+00:05:17.910 --> 00:05:19.710
+Berikut ini adalah contoh metode.
+
+00:05:19.710 --> 00:05:23.520
+Tujuannya ialah menciptakan kustom pesan
+ucapan berdasarkan nama yang diberikan.
+
+00:05:23.520 --> 00:05:27.270
+Nilai kembaliannya adalah sebuah
+ucapan dalam bentuk teks.
+
+00:05:27.270 --> 00:05:29.580
+Abaikan dulu komentar untuk saat ini.
+
+00:05:29.580 --> 00:05:32.570
+Pertama, kita punya nama metode,
+dalam kataKapital di sini, dan
+
+00:05:32.570 --> 00:05:35.130
+dikatakan createCustomGreeting.
+
+00:05:35.130 --> 00:05:37.650
+Selanjutnya, kita punya daftar input.
+
+00:05:37.650 --> 00:05:39.780
+Ini adalah parameter input pertama.
+
+00:05:39.780 --> 00:05:42.490
+Tipe datanya adalah String dan
+nama variabelnya adalah firstName.
+
+00:05:43.520 --> 00:05:45.570
+Kemudian, kita punya
+parameter input kedua.
+
+00:05:45.570 --> 00:05:48.390
+Ini adalah tipe data,
+dan ini adalah nama variabel.
+
+00:05:48.390 --> 00:05:51.580
+Dan keduanya terpisah oleh
+sebuah tanda koma, dan
+
+00:05:51.580 --> 00:05:55.290
+tertutup dengan tanda kurung
+pembuka dan penutup.
+
+00:05:55.290 --> 00:05:57.350
+Lalu, ada output di sini.
+
+00:05:57.350 --> 00:06:00.605
+Tipe data dari nilai
+kembalian adalah String.
+
+00:06:00.605 --> 00:06:03.685
+karena kita ingin mengembalikan
+ucapan, yaitu sebuah string
+
+00:06:03.685 --> 00:06:07.365
+Dan ini kelihatannya jika
+dimasukan ke dalam tabel.
+
+00:06:08.725 --> 00:06:11.245
+Ayo lanjutkan dan isi bagian
+kosong untuk sisa tiga metode.
+

@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.680 --> 00:00:02.750
+Bir girdi parametresini zaten beraber yaptık.
+
+00:00:02.750 --> 00:00:05.689
+Bu Ücret yöntemini hesaplama koduydu ve zaten eğitici notlarına
+
+00:00:05.689 --> 00:00:07.110
+eklenmişti.
+
+00:00:07.110 --> 00:00:09.760
+Şimdi iki girdi parametresi örneğini yapalım.
+
+00:00:09.760 --> 00:00:14.450
+Siparişi Gönderme yönteminde, Ücreti hesaplayıp çağırmak istiyoruz (miktar, 10).
+
+00:00:14.450 --> 00:00:18.580
+10 burada bir bardak kahve için 10 doları temsil etmektedir.
+
+00:00:18.580 --> 00:00:20.900
+Haydi önce bu değişikliği yapalım.
+
+00:00:20.900 --> 00:00:26.214
+Siparişi Gönder metodunda Ücreti hesaplayı çağıracağım (miktar, 10).
+
+00:00:26.214 --> 00:00:29.610
+Bu metoda iki argüman ekliyorum.
+
+00:00:29.610 --> 00:00:32.950
+Bir hata var çünkü buradaki metod imzasıyla uyuşmuyor.
+
+00:00:32.950 --> 00:00:35.470
+Ve şimdi bunu güncelleyeceğim.
+
+00:00:35.470 --> 00:00:38.580
+Parantezin içine bir virgül ekleyeceğim.
+
+00:00:38.580 --> 00:00:41.520
+Ve sonra tam sayı ücreti yazacağım
+
+00:00:41.520 --> 00:00:47.040
+çünkü biz ücreti ikinci girdi olarak geçiyoruz ve o bir tamsayı.
+
+00:00:47.040 --> 00:00:50.190
+Hemen bir hata olduğunu söylüyor çünkü
+
+00:00:50.190 --> 00:00:54.140
+sadece bir girdi parametresi olan buradaki metod imzasıyla eşleşmiyor.
+
+00:00:54.140 --> 00:00:57.200
+Onu değiştireceğim ki ikinci bir girdi parametresi olsun.
+
+00:00:57.200 --> 00:00:58.420
+Yani bu açılan ve kapanan
+
+00:00:58.420 --> 00:01:01.070
+parantezin içine ikinci bir parametre ekleyeceğim.
+
+00:01:02.280 --> 00:01:05.630
+Bu bir bardak kahvenin ücreti olduğu için, bunu bardak başı fiyat olarak
+
+00:01:05.630 --> 00:01:10.030
+isimlendireceğim ve bu bir numara, bu nedenle veri türünün tam sayı olduğunu söyleyeceğim.
+
+00:01:11.050 --> 00:01:13.420
+Parametrenin ismi sizin istediğiniz herhangi bir şey olabilir.
+
+00:01:13.420 --> 00:01:16.850
+Barındırdığı bilgiyi açıklamalıdır.
+
+00:01:16.850 --> 00:01:20.530
+Bu arada veri türü belli bir Java veri türü olmalıdır.
+
+00:01:20.530 --> 00:01:24.090
+Tam sayı dizisi ve diğerlerini henüz öğrenmedik.
+
+00:01:24.090 --> 00:01:29.670
+Bu ikinci girdi parametresini açıklamak için aynı zamanda java belgesini güncelledim.
+
+00:01:29.670 --> 00:01:33.070
+Bu metoda baktığımda, miktarı alıyoruz ve
+
+00:01:33.070 --> 00:01:36.630
+onu 5 kere 5 Dolar olarak bir bardak kahve için çarpıyoruz.
+
+00:01:36.630 --> 00:01:40.130
+Ama şimdi bardak başı fiyat bir değişken olarak değişti.
+
+00:01:40.130 --> 00:01:43.960
+Şimdi 5 değerine kodlama yerine bardak başı fiyatı kullanalım.
+
+00:01:43.960 --> 00:01:47.340
+Şimdi siparişin toplam ücreti miktar çarpı
+
+00:01:47.340 --> 00:01:48.270
+bardak başı ücret olacak.
+
+00:01:48.270 --> 00:01:51.500
+Daha önce bahsettiğim şablon analojisini düşünürseniz
+
+00:01:51.500 --> 00:01:55.350
+şimdi miktarla bardak başı fiyat birbiriyle farklı değerler
+
+00:01:55.350 --> 00:01:57.699
+olarak yer değiştirilebilir çünkü onlar girdi parametreleri.
+
+00:01:58.940 --> 00:02:01.700
+Ücreti farklı bir miktarla ve bardak başına farklı bir ücretle
+
+00:02:01.700 --> 00:02:04.860
+hesaplayı çağırabilirsiniz ve bu hesaplama halen çalışacaktır.
+
+00:02:06.030 --> 00:02:08.840
+Şimdi bu durumu sıfır girdi parametresi örneğinde yapalım.
+
+00:02:08.840 --> 00:02:10.190
+Siparişi gönder metodunda
+
+00:02:10.190 --> 00:02:13.110
+ücreti hesaplayı boş parametrelerle çağırmalıyız.
+
+00:02:14.310 --> 00:02:17.200
+Siparişi gönder metodunda, ücerti hesaplarken
+
+00:02:17.200 --> 00:02:18.619
+argümanları kaldıracağım.
+
+00:02:19.620 --> 00:02:21.700
+Bu metoda herhangi bir girdi eklemiyoruz.
+
+00:02:22.790 --> 00:02:25.590
+Hemen kırmızı bir alt çizgi geldi çünkü
+
+00:02:25.590 --> 00:02:28.290
+imza metoduyla bir uyuşmazlık var, bu nedenle
+
+00:02:28.290 --> 00:02:29.900
+şimdi tüm bu girdi parametrelerini sileceğim.
+
+00:02:31.110 --> 00:02:34.380
+Bu aynı zamanda bir hatadan bahsediyor çünkü bu parametreler
+
+00:02:34.380 --> 00:02:35.820
+mevcut değil yani ben bunu silebilirim.
+
+00:02:37.330 --> 00:02:41.460
+Şimdi, bardak başı sembol ücreti çözümleyemediğini söyleyen bir hata alıyoruz.
+
+00:02:41.460 --> 00:02:44.720
+Bu artık bir girdi değişkeni değil, bu nedenle
+
+00:02:44.720 --> 00:02:49.060
+programın içine gömülü ücret değeri olan 5 Doları ya da sizin seçeceğiniz herhangi bir ücreti kullanacağız.
+
+00:02:50.070 --> 00:02:53.230
+Bilgisayar miktardan dolayı şikayetçi değil çünkü bu
+
+00:02:53.230 --> 00:02:54.570
+bir küresel değişken ve
+
+00:02:54.570 --> 00:02:58.790
+bu miktar değişkenin ana aktivitedeki tüm metodlarda referans gösterebilirsiniz.
+
+00:02:58.790 --> 00:03:00.470
+Üzgünüm. Girdi parametresi olarak miktardan başka
+
+00:03:00.470 --> 00:03:02.360
+bir değişken seçmem gerekirdi.
+
+00:03:02.360 --> 00:03:05.830
+Ama fikri anladınız, girdi parametreleri olmadan
+
+00:03:05.830 --> 00:03:08.120
+sadece küresel değişkenlere atıf yapabilirsiniz.
+
+00:03:08.120 --> 00:03:11.680
+Programın içine gömülü değerleri ya da yerel değişkenleri kullanabilirsiniz ve
+
+00:03:11.680 --> 00:03:12.630
+burada onlara değinebilirsiniz.
+

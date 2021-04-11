@@ -1,0 +1,445 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.640 --> 00:00:04.200
+Nima uchun C varianti so‘nggi 
+sinovda eng to‘g‘risi bo‘lganligini bilish uchun
+
+00:00:04.200 --> 00:00:08.420
+metodni aniqlash uchun Java-da haqiqiy 
+sintaksis qoidalarini ko‘rib chiqamiz.
+
+00:00:08.420 --> 00:00:10.820
+Shuningdek, u metod signaturasi
+sifatida ham tanilgan.
+
+00:00:12.090 --> 00:00:13.460
+Bu avvalroq ko‘rgan
+
+00:00:13.460 --> 00:00:16.239
+calculatePrice narxni hisoblash
+uchun metod signaturasidir.
+
+00:00:16.239 --> 00:00:20.100
+Nima uchun so‘zlar aniq bir qoyida 
+asosida joylashgan degan savol tug‘ilishi mumkin.
+
+00:00:20.100 --> 00:00:24.470
+Ular maxsus format bo‘yicha yoziladi
+va uning ko‘rinishi quydagicha.
+
+00:00:24.470 --> 00:00:27.050
+Men bu qiyin ko‘rinishini bilaman,
+lekin tashvishlanmang.
+
+00:00:27.050 --> 00:00:29.040
+Biz har birini alohida-alohida ko‘rib chiqamiz.
+
+00:00:30.550 --> 00:00:34.250
+Metod signaturasining 
+birinchi qismi bu private so‘zi.
+
+00:00:34.250 --> 00:00:36.400
+Bu Java kirish modifikatori
+(Java access modifier ) sifatida tanilgan.
+
+00:00:37.410 --> 00:00:41.400
+Ushbu calculatePrice metodidan
+kim foydalana olishini aniqlaydi.
+
+00:00:41.400 --> 00:00:46.290
+Siz duch keladigan eng keng tarqalgan
+kirish modifikatorlari public yoki private .
+
+00:00:46.290 --> 00:00:51.010
+Ushbu metod private deb belgilanadi, 
+ya’ni calculatePrice faqat boshqa 
+
+00:00:51.010 --> 00:00:55.590
+asosiy sahifa (main activity) metodlarining
+bir qismi sifatida chaqirilishi mumkin.
+
+00:00:55.590 --> 00:00:56.830
+Asosiy sahifadan (main activity) 
+tashqari, masalan,
+
+00:00:56.830 --> 00:01:00.750
+boshqa sahifa turlarida, 
+siz ushbu metodni chaqira olmaysiz.
+
+00:01:00.750 --> 00:01:03.340
+Bu asosiy sahifa (main activity) 
+uchun shaxsiydir (private ).
+
+00:01:03.340 --> 00:01:04.180
+Boshqa tomondan, 
+
+00:01:04.180 --> 00:01:09.100
+agar siz ushbu metodni public 
+sifatida belgilasangiz, asosiy sahifada 
+
+00:01:09.100 --> 00:01:12.560
+yoki boshqa sahifada bo‘lishingizdan 
+qat’iy nazar har kim bu usulni chaqira oladi.
+
+00:01:13.710 --> 00:01:15.120
+Mana shunga o‘xshash vaziyat:
+
+00:01:15.120 --> 00:01:18.530
+agar siz yulduz va taniqli odam bo‘lsangiz,
+hamma siz haqingizda barcha ma’lumotni biladi.
+
+00:01:18.530 --> 00:01:19.730
+Agar siz taniqli odam bo‘lmasangiz va 
+
+00:01:19.730 --> 00:01:24.420
+barcha vaqtingizni uyda o‘tkazsangiz,
+sizni juda kam odam biladi.
+
+00:01:24.420 --> 00:01:27.930
+calculatePrice metodida biz 
+uni private ko‘rinishida qoldiramiz,
+
+00:01:27.930 --> 00:01:30.440
+uni faqat asosiy sahifa
+doirasida qo‘llaymiz.
+
+00:01:30.440 --> 00:01:33.770
+Shu bulan birga, bizda int bor, 
+bu ma’lumotlarning qaytish turi.&nbsp;
+
+00:01:33.770 --> 00:01:35.560
+Bungacha bo‘lgan diagramma yodingizdami?
+
+00:01:35.560 --> 00:01:38.360
+biz metodni chaqirganda, uning
+kirish qiymatlarini kiritganingizda, 
+
+00:01:38.360 --> 00:01:39.910
+natijani qaytarasiz deb aytgan edik.
+
+00:01:39.910 --> 00:01:44.140
+Qaytish turi(return data type ) - bu 
+qiymat chiqishi(output ) bilan 
+qaytariladigan ma’lumotlarning turi.
+
+00:01:44.140 --> 00:01:48.020
+Biz hozirgacha 
+Int va String 
+
+00:01:48.020 --> 00:01:49.730
+ma’lumotlar turlari o‘rgandik.
+
+00:01:49.730 --> 00:01:52.410
+Shuningdek, u ob’ektning 
+ma’lumot turini qaytarishi mumkin 
+
+00:01:52.410 --> 00:01:54.449
+va biz keyinchalik ob’ektlar 
+haqida ko‘proq bilib olamiz.
+
+00:01:55.700 --> 00:01:58.150
+Bizning holatda, bu calculatePrice metodi
+
+00:01:58.150 --> 00:02:02.030
+butun son(integer ) bo‘lgan 
+buyurtmaning umumiy narxini qaytaradi.
+
+00:02:02.030 --> 00:02:06.540
+Ijtimoiy tarmoqlarda, agar men 
+Facebook-dagi do‘stlar sonini olish 
+
+00:02:06.540 --> 00:02:11.130
+metodiga ega bo‘lsam, do‘stlar 
+sonini butun sonda qaytaradi.
+
+00:02:11.130 --> 00:02:15.390
+Keyin metod nomi ko‘rsatiladi,
+bizning holatda bu calculatePrice .
+
+00:02:15.390 --> 00:02:19.730
+O‘zgaruvchilarga ularning nomi bo‘yicha 
+murojaat qilganimiz kabi, biz ushbu metodning
+
+00:02:19.730 --> 00:02:23.790
+ko‘rsatmalarini bajarishimiz uchun metodlarga
+ularning nomi bo‘yicha murojaat qilishimiz mumkin.
+
+00:02:23.790 --> 00:02:28.120
+Metodning ta’rifi haqidagi xuddi shu 
+hujjatlarda biz pastga o‘tamiz va nomlash 
+
+00:02:28.120 --> 00:02:30.690
+metodlari bo‘limiga qaraymiz.
+
+00:02:30.690 --> 00:02:34.450
+Bu haqda keyinroq batafsilroq 
+o‘qishingiz mumkin, lekin umuman aytganda 
+
+00:02:34.450 --> 00:02:39.030
+metod nomlari run , get , compare 
+yoki set fe’llaridan boshlanishi kerak.
+
+00:02:39.030 --> 00:02:40.880
+Bu kichik harf bilan boshlanadi, 
+
+00:02:40.880 --> 00:02:43.360
+agar keyin bir nechta so‘z bo‘lsa, siz katta 
+harflardan(camel case ) foydalanishingiz mumkin.
+
+00:02:43.360 --> 00:02:46.400
+Metod nomidan keyin, 
+ochilgan va yopilgan qavslar orasida 
+
+00:02:46.400 --> 00:02:50.350
+kiritiladigan(input ) 
+qiymatlari ro‘yxati bor.
+
+00:02:50.350 --> 00:02:52.670
+Siz xohlagancha ko‘p input-larga
+ega bo‘lishingiz mumkin.
+
+00:02:52.670 --> 00:02:57.010
+Agar biron-bir kiritish qiymatini 
+xohlamasangiz, qavslarni bo‘sh qoldiring.
+
+00:02:57.010 --> 00:02:59.150
+Bitta kirish qiymatingiz bo‘lsa, 
+u quyidagicha ko‘rinishga ega bo‘ladi.
+
+00:02:59.150 --> 00:03:00.730
+Agar kiritiladigan qiymatlar bir nechta bo‘lsa,
+
+00:03:00.730 --> 00:03:03.890
+unda har bir kiritish qiymatini 
+vergul bilan ajratasiz.
+
+00:03:03.890 --> 00:03:07.110
+Keling, input parametr 
+sifatida ham tanilgan bitta kirish qiymati 
+
+00:03:07.110 --> 00:03:10.070
+bo‘lgan misolni ko‘rib chiqaylik.
+
+00:03:10.070 --> 00:03:14.060
+Biz input parametr ini, 
+uning ma’lumot turini va biz 
+
+00:03:14.060 --> 00:03:16.460
+tanlagan o‘zgaruvchining nomini aniqlaymiz.
+
+00:03:16.460 --> 00:03:18.170
+Bu metod uchun kirish(input ) va 
+
+00:03:18.170 --> 00:03:22.370
+chiqish (output ) qiymatlari diagrammasidan 
+birinchi input qiymati bo‘ladi.
+
+00:03:23.560 --> 00:03:28.030
+Ushbu metodda har qanday 
+boshqa o‘zgaruvchiga o‘xshab, 
+
+00:03:28.030 --> 00:03:30.190
+ichidagi qiymatga ega bo‘lgan
+
+00:03:30.190 --> 00:03:32.930
+quantity o‘zgaruvchisiga murojaat 
+qilishingiz mumkin.
+
+00:03:32.930 --> 00:03:36.990
+Metodni birinchi marta chaqirganingizda 
+va ushbu input qiymatini 
+
+00:03:36.990 --> 00:03:38.570
+kiritganingizdagina qiymat olinadi.
+
+00:03:40.030 --> 00:03:43.850
+Agar biz metod signaturasini o‘zgartirmoqchi 
+bo‘lsak, ikkinchi input parametrini 
+
+00:03:43.850 --> 00:03:47.290
+qo‘shamiz va ikkinchi input parametrining 
+ma’lumot turini va o‘zgaruvchi nomini
+
+00:03:47.290 --> 00:03:48.980
+aniqlab olishimiz kerak.
+
+00:03:48.980 --> 00:03:52.200
+Keyin, ushbu metod doirasida muntazam 
+o‘zgaruvchi sifatida quantity 
+
+00:03:52.200 --> 00:03:55.940
+yoki priceOfOneCup o‘zgaruvchisiga 
+murojaat qilishimiz mumkin.
+
+00:03:55.940 --> 00:03:59.220
+Ushbu metodni chaqirganda, siz 
+metoddagi kutilgan input qiymatlarining
+
+00:03:59.220 --> 00:04:02.790
+to‘g‘ri sonini kiritishni yoddan 
+chiqarmasligingiz lozim, bunda input 
+
+00:04:02.790 --> 00:04:06.980
+qiymatlari to‘g‘ri ma’lumotlar turi 
+va to‘g‘ri tartibda bo‘lishi kerak.
+
+00:04:06.980 --> 00:04:08.380
+Tartibni o‘zgartirish mumkin emas, 
+
+00:04:08.380 --> 00:04:11.650
+aks holda metod ularni 
+noto‘g‘ri talqin qiladi.
+
+00:04:11.650 --> 00:04:15.210
+Barcha input qiymatlarini 
+yozib bo‘lgandan so‘ng, qavs yopiladi
+
+00:04:15.210 --> 00:04:16.980
+va katta qavs ochiladi.
+
+00:04:16.980 --> 00:04:20.640
+Bu metodingiz ichidagi barcha 
+ko‘rsatmalar ro‘yxatini boshlaydi.
+
+00:04:20.640 --> 00:04:21.660
+Bularning barchasidan keyin,
+
+00:04:21.660 --> 00:04:25.270
+metodning oxirini belgilash uchun 
+katta qavsni yoping.
+
+00:04:25.270 --> 00:04:27.060
+Dokumentatsiyaga qaytsak, 
+endi metodning 
+
+00:04:27.060 --> 00:04:30.470
+tavsifi(declaration ) yanada 
+tushunarli bo‘lganini ko‘ramiz.
+
+00:04:30.470 --> 00:04:32.760
+Avval bizda kirish modifikatori, keyin 
+
+00:04:32.760 --> 00:04:35.120
+bizda ma’lumotlarning qaytish turi, 
+usul nomi, undan keyin 
+
+00:04:35.120 --> 00:04:39.100
+barcha kiritilgan ma’lumotlar 
+ro‘yxati mavjud.
+
+00:04:39.100 --> 00:04:42.760
+Bunday holda, biz to‘rt xil 
+input parametrlari mavjud.
+
+00:04:42.760 --> 00:04:46.260
+Va ularning har biri ma’lumotlar 
+turiga va o‘zgaruvchi nomiga ega.
+
+00:04:46.260 --> 00:04:48.720
+Keyin katta qavs ochiladi 
+
+00:04:48.720 --> 00:04:50.610
+uning ichidagi barcha 
+ko‘rsatmalar ro‘yxati yoziladi,
+
+00:04:50.610 --> 00:04:51.990
+va katta qavs yopiladi.
+
+00:04:53.100 --> 00:04:54.480
+Va bu metod deklaratsiyasidir(declaration ).
+
+00:04:55.640 --> 00:04:59.060
+Ushbu testda siz metod deklaratsiyaning 
+turli qismlarini aniqlashni 
+
+00:04:59.060 --> 00:05:00.850
+mashq qilishingiz mumkin.
+
+00:05:00.850 --> 00:05:04.120
+Biz sizga biror kodni taqdim etamiz.
+
+00:05:04.120 --> 00:05:08.000
+Kod har qanday ilovada paydo bo‘lishi mumkin 
+bo‘lgan ko‘plab metodlarni o‘z ichiga oladi.
+
+00:05:08.000 --> 00:05:11.010
+Ularning har biri uchun metodning 
+nomi nimaligini ayta olasizmi?
+
+00:05:11.010 --> 00:05:12.800
+Input parametrlari ro‘yxatinichi?
+
+00:05:12.800 --> 00:05:14.010
+Va qaytarilgan ma’lumotlar turini 
+ham ayta olasizmi?
+
+00:05:15.030 --> 00:05:16.130
+Keling, birgalikda namunani tuzamiz.
+
+00:05:17.910 --> 00:05:19.710
+Mana metodning bir misoli.
+
+00:05:19.710 --> 00:05:23.520
+Maqsad, berilgan ismga 
+salom so‘z xabarni yaratishdir.
+
+00:05:23.520 --> 00:05:27.270
+Return qiymati biror matn 
+shaklida salomlashish bo‘ladi.
+
+00:05:27.270 --> 00:05:29.580
+Keling, hozircha buni izohsiz qoldiramiz.
+
+00:05:29.580 --> 00:05:32.570
+Avval, camelCase-da 
+yozilgan metod, 
+
+00:05:32.570 --> 00:05:35.130
+uning nomi createCustonGreeting.
+
+00:05:35.130 --> 00:05:37.650
+Keyin input qiymatlari 
+ro‘yxati yoziladi.
+
+00:05:37.650 --> 00:05:39.780
+Mana bu birinchi input parametri.
+
+00:05:39.780 --> 00:05:42.490
+Ma’lumot turi String , 
+o‘zgaruvchining nomi esa firstName .
+
+00:05:43.520 --> 00:05:45.570
+Keyin ikkinchi input parametr yoziladi.
+
+00:05:45.570 --> 00:05:48.390
+Bu ma’lumotlar turi 
+va o‘zgaruvchi nomi.
+
+00:05:48.390 --> 00:05:51.580
+Va bu ikkita input qiymatlari 
+vergul bilan ajratiladi va
+
+00:05:51.580 --> 00:05:55.290
+qavslar orasiga olinadi.
+
+00:05:55.290 --> 00:05:57.350
+Bu chiqish qiymatlari.
+
+00:05:57.350 --> 00:06:00.605
+Return qiymatining 
+ma’lumotlar turi - String, 
+
+00:06:00.605 --> 00:06:03.685
+chunki biz salomso‘zni qaytarishni 
+xohlaymiz, uning o‘zi esa string.
+
+00:06:03.685 --> 00:06:07.365
+To‘ldirilgan jadval 
+bunday ko‘rinishga ega.
+
+00:06:08.725 --> 00:06:11.245
+Endi qolgan uchta metod uchun 
+bo‘sh qolgan joylarni to‘ldiring.
+

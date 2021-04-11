@@ -1,0 +1,424 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.610 --> 00:00:02.650
+Tôi đã thêm đoạn code chúng ta
+đang nhìn thấy đây vào ứng dụng.
+
+00:00:02.650 --> 00:00:07.660
+Ở đây ghi orderSummaryTextView
+= findViewByld,
+
+00:00:07.660 --> 00:00:13.000
+rồi chuyển ID tài nguyên vào
+the order_summary_text_view.
+
+00:00:13.000 --> 00:00:15.910
+Nhưng có lỗi phát sinh
+trong Android Studio hàng tiếp theo.
+
+00:00:17.750 --> 00:00:21.830
+Báo lỗi là không thể xử lý
+phương thức setText.
+
+00:00:21.830 --> 00:00:24.430
+Nếu tôi thêm một dòng code ở đây.
+
+00:00:24.430 --> 00:00:27.880
+Tôi sẽ hiển thị các loại phương thức
+hợp lệ đối với biến này.
+
+00:00:28.890 --> 00:00:32.400
+Chúng ta vừa tạo
+biến orderSummaryTextView ở đây,
+
+00:00:32.400 --> 00:00:34.330
+Đó là một TypeView,
+
+00:00:34.330 --> 00:00:37.520
+trên dòng code tiếp theo,
+chúng ta có thể gọi các phương thức này.
+
+00:00:37.520 --> 00:00:40.540
+Nhưng nếu bạn nhìn vào
+các đề xuất điền tự động,
+
+00:00:40.540 --> 00:00:44.120
+chúng là phương thức hiển thị.
+
+00:00:44.120 --> 00:00:46.140
+Không có phương thức TextView cụ thể.
+
+00:00:47.200 --> 00:00:49.350
+Ví dụ, không có phương thức setText.
+
+00:00:51.320 --> 00:00:54.455
+Đó là tại sao ở đây có lỗi
+khi chúng ta gọi setText.
+
+00:00:56.020 --> 00:01:00.890
+Bạn không thể định kích thước văn bản
+màu sắc văn bản, hay các yếu tố khác.
+
+00:01:00.890 --> 00:01:02.350
+Tất cả các phương thức đó ở đâu?
+
+00:01:03.840 --> 00:01:08.700
+Vấn đề là một TextView
+là một loại hiển thị cụ thể.
+
+00:01:10.430 --> 00:01:13.240
+Nên nếu muốn gọi các phương thức
+
+00:01:13.240 --> 00:01:16.777
+trên đối tượng này cần đảm bảo rằng
+đây là một đối tượng TextView.
+
+00:01:17.820 --> 00:01:21.160
+Được rồi.
+Bây giờ biến là đối tượng TextView.
+
+00:01:21.160 --> 00:01:25.750
+Nhưng bây giờ lại có lỗi khác
+TextView không tương thích, vì TextView
+
+00:01:25.750 --> 00:01:31.090
+được yêu cầu ở bên tay phải này,
+nhưng chúng ta đang tìm hiển thị thường.
+
+00:01:31.090 --> 00:01:34.240
+Vì phương thức findViewByld
+trả về một hiển thị.
+
+00:01:34.240 --> 00:01:35.558
+Làm sao xử lý lỗi này?
+
+00:01:35.558 --> 00:01:41.720
+Vì TextView là một loại hiển thị cụ thể
+hay nói cách khác.
+
+00:01:41.720 --> 00:01:47.260
+TextView là một subclass [lớp con]của hiển
+thị chúng ta có thể casting.[ép kiểu]
+
+00:01:47.260 --> 00:01:51.970
+Casting có nghĩa là qua phương thức này
+có thể nhận được hiển thị trả về
+
+00:01:51.970 --> 00:01:54.280
+và xử lý nó như một TextView.
+
+00:01:54.280 --> 00:01:58.760
+Bây giờ phía bên phải
+là một đối tượng TextView
+
+00:01:58.760 --> 00:02:02.168
+chúng ta có thể lưu nó bên trong
+biến orderSummaryTextView này.
+
+00:02:03.460 --> 00:02:06.110
+Tôi biết thao tác này
+khá khó vì tôi vừa nói
+
+00:02:06.110 --> 00:02:07.970
+tới rất nhiều khái niệm.
+
+00:02:07.970 --> 00:02:09.210
+Tôi sẽ giải thích lại.
+
+00:02:10.229 --> 00:02:14.280
+Phương thức findViewByld trả về
+một đối tượng hiển thị nhập liệu.
+
+00:02:14.280 --> 00:02:15.820
+Bằng cách viết ký hiệu này,
+
+00:02:15.820 --> 00:02:19.690
+đóng ngoặc loại dữ liệu
+đối tượng ở giữa.
+
+00:02:19.690 --> 00:02:23.250
+Chúng ta ép kiểu hiển
+thị này vào TextView.
+
+00:02:23.250 --> 00:02:27.217
+Vì vậy cả biểu thức này
+bằng với một đối tượng TextView.
+
+00:02:28.600 --> 00:02:32.140
+Sau đó có thể lưu nó trong biến,
+ở phía bên tay trái,
+
+00:02:32.140 --> 00:02:35.790
+đó là TextView orderSummary,
+nó có một TextView nhập liệu.
+
+00:02:35.790 --> 00:02:40.740
+Ở các dòng code tiếp theo có thể gọi các
+phương thức TextView trên đối tượng này.
+
+00:02:40.740 --> 00:02:43.720
+Bạn có thấy bây giờ các phương thức
+văn bản được hiển thị ở trên đây không?
+
+00:02:44.840 --> 00:02:48.070
+SetAllCaps, setTextSize, vân vân.
+
+00:02:48.070 --> 00:02:51.660
+Tôi có thể xóa cái này đi
+vì setText đã vận hành ổn,
+
+00:02:51.660 --> 00:02:54.170
+không mắc lỗi.
+
+00:02:54.170 --> 00:02:57.100
+Nếu chúng ta muốn
+gọi các phương thức TextView,
+
+00:02:57.100 --> 00:02:59.410
+phải có một đối tượng TextView.
+
+00:02:59.410 --> 00:03:02.500
+Để có đối tượng TextView,
+Chúng ta cần gọi findViewByld,
+
+00:03:02.500 --> 00:03:06.890
+và ép kiểu đối tượng hiển thị này
+vào trong một TextView.
+
+00:03:06.890 --> 00:03:09.700
+Ép kiểu có hiệu quả vì
+
+00:03:09.700 --> 00:03:13.440
+hiển thị này ở trong
+phân cấp hiển thị là một TextView.
+
+00:03:13.440 --> 00:03:17.520
+Nếu ép kiểu nó thành dạng khác
+như thành nút chỉnh radio, sẽ không được
+
+00:03:17.520 --> 00:03:20.840
+vì orderSummaryTextView
+là một TextView
+
+00:03:20.840 --> 00:03:23.000
+nên phải ép kiểu nó vào
+loại thích hợp.
+
+00:03:24.275 --> 00:03:28.370
+Tương tự, trong displayQuantity
+gọi phương thức findViewByld
+
+00:03:28.370 --> 00:03:32.350
+chúng ta chuyển ID tài nguyên vào
+trong TextView số lượng.
+
+00:03:32.350 --> 00:03:36.090
+Nó trả về một hiển thị TextView
+chúng ta ép kiểu nó vào TextView
+
+00:03:36.090 --> 00:03:39.330
+chúng ta có thể lưu bên trong
+biến số quantity TextView.
+
+00:03:40.400 --> 00:03:43.450
+Biến này có TextView nhập liệu,
+
+00:03:43.450 --> 00:03:48.170
+trên các dòng tiếp theo, chúng ta có thể
+gọi phương thức TextView, vd. SetText.
+
+00:03:48.170 --> 00:03:51.160
+Đây là code cập nhật bởi MainActivity
+bằng cách sử dụng ép kiểu.
+
+00:03:51.160 --> 00:03:56.400
+Có thể ép kiểu các hiển thị vào TextView
+để lưu chúng trong biến
+
+00:03:56.400 --> 00:04:00.622
+có chứa TextView nhập liệu
+nên trong danh sách các biến MainActivity
+
+00:04:00.622 --> 00:04:05.090
+bây giờ quantityTextView
+là TextView nhập liệu.
+
+00:04:05.090 --> 00:04:06.820
+Có thể gọi phương thức TextView cho chúng.
+
+00:04:06.820 --> 00:04:10.810
+Chúng ta không chỉ giới hạn ở chỗ
+có thể xử lý chúng như các hiển thị.
+
+00:04:10.810 --> 00:04:15.050
+Mà còn có thể gọi
+các phương thức TextView trên các biến.
+
+00:04:15.050 --> 00:04:19.041
+Ví dụ chúng ta có thể gọi setText
+trên orderSummaryTextView,
+
+00:04:19.041 --> 00:04:21.880
+Chúng ta cũng có thể gọi setText
+trên quantityTextView.
+
+00:04:21.880 --> 00:04:22.650
+Như bạn đã thấy,
+
+00:04:22.650 --> 00:04:27.180
+bạn phải thận trọng xem
+loại dữ liệu nào dùng ở chỗ nào thì được.
+
+00:04:27.180 --> 00:04:31.290
+Tính đến bài này, khi gọi phương thức,
+chúng ta không lo lắng về giá trị trả về,
+
+00:04:31.290 --> 00:04:34.400
+vì phương thức setText
+thực sự không có giá trị trả về.
+
+00:04:34.400 --> 00:04:37.180
+Giống với
+phương thức imageView. SetlmageResource.
+
+00:04:37.180 --> 00:04:39.060
+Nó không có giá trị trả về.
+
+00:04:39.060 --> 00:04:41.540
+Nhưng các phương thức khác
+có thể có giá trị trả về.
+
+00:04:41.540 --> 00:04:45.590
+Ví dụ, trong lớp TextView
+chúng ta có phương thức getTextSize.
+
+00:04:45.590 --> 00:04:47.680
+Nó trả về một số nguyên,
+
+00:04:47.680 --> 00:04:53.410
+Có thể lưu kết quả phương thức này
+trong biến hằng nguyên kích thước loại
+
+00:04:53.410 --> 00:04:55.140
+Đây là một phương thức khác
+có giá trị trả về.
+
+00:04:55.140 --> 00:04:58.270
+Trong lớp Button bạn có thể
+gọi phương thức getHeight [lấy chiều cao]
+
+00:04:58.270 --> 00:05:03.420
+Nó trả về một giá trị số nguyên
+bạn có thể lưu nó vào biến.
+
+00:05:03.420 --> 00:05:06.450
+Nếu bạn đã lưu trữ kết quả này
+ví dụ như bên trong một chuỗi,
+
+00:05:06.450 --> 00:05:10.810
+sẽ có báo lỗi
+vì phương thức này trả về một số nguyên.
+
+00:05:10.810 --> 00:05:14.988
+Để biết loại dữ liệu
+cần được chuyển vào phương thức
+
+00:05:14.988 --> 00:05:19.290
+và loại dữ liệu trả về từ phương thức
+nên kiểm tra sưu liệu.
+
+00:05:19.290 --> 00:05:21.260
+Ví dụ, trong lớp TextView,
+
+00:05:21.260 --> 00:05:25.760
+Nếu gọi một phương thức bất kỳ trong đây
+sẽ trả về một giá trị loại int.
+
+00:05:25.760 --> 00:05:28.620
+Loại dữ liệu trả về
+nằm bên cột tay trái ở đây.
+
+00:05:28.620 --> 00:05:33.040
+Với các phương thức khác, bạn có thể nhận
+giá trị trả lại là void [rỗng], boolean.
+
+00:05:33.040 --> 00:05:38.330
+Boolean thì chúng ta chưa học tới,
+hoặc float[chấm động] hoặc kiểu số long.
+
+00:05:38.330 --> 00:05:42.790
+Trang sưu liệu này cũng hiển thị
+các loại dữ liệu cần
+
+00:05:42.790 --> 00:05:45.010
+để nhập liệu trong mỗi phương thức.
+
+00:05:45.010 --> 00:05:49.590
+Ví dụ, phương thức setTextColor
+đòi hỏi dữ liệu đầu vào là số nguyên
+
+00:05:49.590 --> 00:05:53.110
+giá trị trả về là void,
+vậy không có giá trị trả về.
+
+00:05:53.110 --> 00:05:56.010
+Hãy kiểm tra sưu liệu để biết
+cần loại dữ liệu nào.
+
+00:05:56.010 --> 00:05:58.750
+Nếu không, sẽ có báo lỗi
+từ Android Studio
+
+00:05:58.750 --> 00:06:01.070
+lỗi dữ liệu không khớp.
+
+00:06:01.070 --> 00:06:02.630
+Bây giờ đến lượt bạn thực hành.
+
+00:06:02.630 --> 00:06:05.580
+Dưới đây là 4 ví dụ code khác nhau.
+
+00:06:05.580 --> 00:06:10.100
+Một số code có thể có lỗi
+do loại dữ liệu không tương thích.
+
+00:06:10.100 --> 00:06:11.165
+Nếu bạn thấy có lỗi,
+
+00:06:11.165 --> 00:06:15.540
+hãy mô tả cách sửa lỗi
+viết ra các ô này.
+
+00:06:15.540 --> 00:06:19.948
+Ghi là "Không có lỗi"
+nếu mã hoàn toàn ổn.
+
+00:06:19.948 --> 00:06:22.545
+Bài này sẽ khó
+vì chúng ta vừa học qua
+
+00:06:22.545 --> 00:06:26.555
+quá nhiều khái niệm,
+code này vẫn còn khá mới mẻ với bạn.
+
+00:06:26.555 --> 00:06:30.105
+Hãy dành thời gian kiểm tra
+sưu liệu cho các phương thức này.
+
+00:06:30.105 --> 00:06:33.695
+Hãy đảm bảo là các giá trị đầu vào
+cũng như các giá trị trả lại chính xác
+
+00:06:33.695 --> 00:06:37.665
+để khi chúng ta khai báo biến
+chúng ta sẽ có loại dữ liệu đúng.
+
+00:06:37.665 --> 00:06:39.265
+Cũng hay tra cứu sưu liệu
+
+00:06:39.265 --> 00:06:42.375
+học cách gọi các phương thức này để
+dùng phương thức đúng cách.
+

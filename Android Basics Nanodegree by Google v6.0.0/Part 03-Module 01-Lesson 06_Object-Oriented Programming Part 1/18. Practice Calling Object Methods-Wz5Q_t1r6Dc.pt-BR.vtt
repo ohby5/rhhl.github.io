@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.460 --> 00:00:02.840
+Mais cedo eu mostrei como
+criar um novo <i>textView</i>
+
+00:00:02.840 --> 00:00:05.159
+e como chamar um método
+para mudar o texto nele.
+
+00:00:05.950 --> 00:00:08.010
+E se eu quiser mudar 
+o tamanho da fonte?
+
+00:00:08.800 --> 00:00:13.690
+Posso simplesmente chamar
+<i>textView.setTextSize</i> e apertar <i>Enter</i>.
+
+00:00:13.690 --> 00:00:18.933
+E então escolher um
+valor aleatório, como 56.
+
+00:00:19.853 --> 00:00:21.870
+E então posso rodar no meu
+dispositivo.
+
+00:00:22.530 --> 00:00:23.920
+E é assim que vai ficar.
+
+00:00:24.450 --> 00:00:25.870
+Wow, está grande.
+
+00:00:25.870 --> 00:00:27.958
+Posso mudar a cor do texto também.
+
+00:00:28.388 --> 00:00:34.040
+Posso usar o <i>textView.setTextColor</i>
+e escolher uma cor.
+
+00:00:34.040 --> 00:00:36.390
+Eu mostrei as cores possíveis
+mais cedo.
+
+00:00:37.210 --> 00:00:40.090
+Então deixe eu escolher uma,
+tipo verde.
+
+00:00:40.090 --> 00:00:43.703
+Quando rodo isso no dispositivo,
+é mostrado como verde néon.
+
+00:00:44.353 --> 00:00:46.478
+Se você olhar na documentação
+do <i>textView</i>,
+
+00:00:46.478 --> 00:00:49.550
+talvez você tenha achado
+outros métodos a serem chamados.
+
+00:00:49.550 --> 00:00:53.260
+Por exemplo, você pode chamar 
+<i>textView.setMaxLines</i>.
+
+00:00:53.260 --> 00:00:57.590
+Isso limita o número de linhas que
+o <i>TextView</i> mostra para apenas duas.
+
+00:00:57.590 --> 00:01:00.930
+Se o texto for mais longo que isso,
+então ele é cortado.
+
+00:01:00.930 --> 00:01:03.980
+Para testar isso, nós precisaremos
+de uma <i>string</i> bem longa aqui.
+
+00:01:04.349 --> 00:01:07.660
+Na verdade, para saber se isso está
+funcionando corretamente,
+
+00:01:07.660 --> 00:01:09.910
+preciso comentar essa linha primeiro.
+
+00:01:09.910 --> 00:01:13.360
+Vou rodar o aplicativo para garantir
+que essa <i>string</i> realmente seja maior
+
+00:01:13.360 --> 00:01:14.900
+que duas linhas de texto.
+
+00:01:15.650 --> 00:01:19.360
+OK, nós verificamos que ela realmente
+ocupa duas linhas e meia de texto.
+
+00:01:19.920 --> 00:01:24.180
+Assim que eu "descomentar" essa linha do
+código para limitar as linhas para duas,
+
+00:01:24.180 --> 00:01:27.680
+quando eu rodar o aplicativo ele deve
+truncar o texto para duas linhas.
+
+00:01:28.930 --> 00:01:30.880
+E é isso o que acontece, legal.
+
+00:01:30.880 --> 00:01:34.480
+Espero que você tenha praticado bem
+a chamada de métodos em um objeto,
+
+00:01:34.480 --> 00:01:36.100
+como o <i>textView</i>.
+
+00:01:36.100 --> 00:01:39.060
+É na verdade incomum chamar
+um <i>setContentView</i>
+
+00:01:39.060 --> 00:01:41.820
+e então entregar um único
+<i>view</i>, como aqui.
+
+00:01:41.820 --> 00:01:45.990
+Normalmente o <i>ContentView</i> da sua
+<i>activity</i> será bem mais complexo.
+
+00:01:45.990 --> 00:01:50.230
+Por isso normalmente deixaríamos
+como <i>setContentView</i>,
+
+00:01:50.256 --> 00:01:54.256
+entregando o <i>resource ID</i>
+de um <i>layout</i> XML.
+

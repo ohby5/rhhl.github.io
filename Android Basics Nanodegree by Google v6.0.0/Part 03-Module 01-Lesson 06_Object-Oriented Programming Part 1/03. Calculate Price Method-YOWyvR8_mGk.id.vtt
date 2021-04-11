@@ -1,0 +1,255 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.210 --> 00:00:04.370
+Sebelumnya, kita sudah bisa memasukkan
+angka ke ke dalam metode display.
+
+00:00:04.370 --> 00:00:08.350
+Mari bicarakan lebih lanjut tentang
+perbedaan input dan output dari metode.
+
+00:00:08.350 --> 00:00:11.460
+Perhatikan metode submitOrder dalam
+MainActivity sebagai contoh.
+
+00:00:12.510 --> 00:00:15.000
+Misal saja Anda punya banyak
+baris kode dalam metode itu
+
+00:00:15.000 --> 00:00:16.670
+Saat pengguna mengeklik
+tombol Order,
+
+00:00:16.670 --> 00:00:19.330
+ini akan memicu metode submitOrder
+untuk terpanggil.
+
+00:00:19.330 --> 00:00:23.200
+Perangkat Android akan mengeksekusi
+tiap instruksi ini dari atas sampai bawah,
+
+00:00:23.200 --> 00:00:26.980
+dan ketika menyentuh panggilan
+metode calculatePrice, dia akan
+
+00:00:26.980 --> 00:00:30.400
+melompat kemana metode calculatePrice
+dinyatakan.
+
+00:00:30.400 --> 00:00:33.830
+Misal, dia dinyatakan
+di bawah berkas MainActivity.
+
+00:00:33.830 --> 00:00:37.020
+Perangkat Android device akan mengeksekusi
+tiap instruksi dari atas ke bawah
+
+00:00:37.020 --> 00:00:41.270
+metode, lalu melompat kembali
+ke metode submitOrder.
+
+00:00:41.270 --> 00:00:45.268
+Dia akan lanjut mengeksekusi instruksi
+ini sampai menyentuh metode terakhir.
+
+00:00:45.268 --> 00:00:47.240
+Saat metode calculatePrice dipanggil
+
+00:00:47.240 --> 00:00:49.510
+kita bisa masukkan banyak
+sekali input, sehingga
+
+00:00:49.510 --> 00:00:53.620
+saat kita mengeksekusi baris kode ini,
+kita dapat menggunakan nilai input ini.
+
+00:00:53.620 --> 00:00:55.070
+Sebagai hasil dari metode ini,
+
+00:00:55.070 --> 00:00:58.940
+kita dapat memberikan output tunggal
+kembali ke pemanggil.
+
+00:00:58.940 --> 00:01:03.030
+Dengan cara itu, nilai output dapat
+digunakan dalam baris kode selanjutnya.
+
+00:01:03.030 --> 00:01:07.090
+Dalam Java, kita panggil input ke dalam
+metode parameter input, dan
+
+00:01:07.090 --> 00:01:09.520
+kita bisa miliki input parameter
+nol atau lebih.
+
+00:01:10.550 --> 00:01:13.370
+Dalam Java, kita panggil output 
+sebagai nilai kembalian,
+
+00:01:13.370 --> 00:01:16.470
+dan kita boleh miliki nol
+atau satu nilai kembalian.
+
+00:01:16.470 --> 00:01:20.420
+Sebuah contoh paramete input
+memberikan kuantitas
+
+00:01:20.420 --> 00:01:22.840
+kepada metode calculatePrice.
+
+00:01:22.840 --> 00:01:26.957
+Jadi, metode ini dapat menggunakan
+kuantitas untuk mengetahui harga total
+
+00:01:26.957 --> 00:01:28.130
+seluruh order.
+
+00:01:28.130 --> 00:01:31.350
+Lalu, kita dapat mengembalikan harga
+total itu sebagai nilai kembalian.
+
+00:01:31.350 --> 00:01:34.046
+Kemudian, di metode submitOrder
+bawah ini, kita bisa gunakan
+
+00:01:34.046 --> 00:01:38.253
+harga total ini untuk melakukan hal lain,
+seperti menampilkan di layar, atau
+
+00:01:38.253 --> 00:01:40.930
+membuat tanda terima, atau semacamnya.
+
+00:01:40.930 --> 00:01:43.730
+Kesimpulannya, disinilah kita
+mendefinisikan metode calculatePrice
+
+00:01:43.730 --> 00:01:45.400
+dan disinilah kita memanggilnya.
+
+00:01:45.400 --> 00:01:49.490
+Kita ingin membuat metode untuk
+menghitung harga order kopi.
+
+00:01:49.490 --> 00:01:53.410
+Saat ini, kita menghitung harga secara
+langsung dalam metode submitOrder
+
+00:01:53.410 --> 00:01:57.020
+tapi logika untuk menghitung harga
+akan menjadi sedikit rumit.
+
+00:01:57.020 --> 00:01:59.030
+Jadi, mari lanjutkan ke metodenya sendiri.
+
+00:01:59.030 --> 00:02:01.948
+Kita dapat memanggilnya sebanyak yang
+kita inginkan tanpa menyalin dan
+
+00:02:01.948 --> 00:02:04.080
+menempel kode dimana-mana.
+
+00:02:04.080 --> 00:02:07.730
+Seiring pengalaman Anda di pengembangan
+Android membaik, penilaianpun ikut membaik
+
+00:02:07.730 --> 00:02:11.850
+ketika membuat suatu
+metode baru atau tidak.
+
+00:02:11.850 --> 00:02:14.690
+Hal ini bisa diperoleh dengan
+pengalaman dan waktu.
+
+00:02:14.690 --> 00:02:17.640
+Jadi, ini adalah pertama kalinya
+kita akan membuat
+
+00:02:17.640 --> 00:02:20.800
+sebuah metode baru
+di dalam MainActivity milik kita.
+
+00:02:20.800 --> 00:02:24.575
+Daripada mulai dengan menulis dari awal,
+kita akan mulai dengan belajar untuk
+
+00:02:24.575 --> 00:02:28.460
+mengenali arti metode yang benar dengan
+membaca beberapa potongan kode.
+
+00:02:28.460 --> 00:02:31.700
+Jadi, di dalam catatan instruktur,
+kita akan sediakan tiga opsi.
+
+00:02:31.700 --> 00:02:35.830
+Baca tiga potongan kode ini
+dan tentukan mana
+
+00:02:35.830 --> 00:02:40.330
+opsi tepat yang mengimplementasikan
+metode untuk menghitung harga order.
+
+00:02:40.330 --> 00:02:42.330
+Saat Anda klik tautan
+dalam catatan instruktur,
+
+00:02:42.330 --> 00:02:46.850
+hanya tersedia kode untuk
+opsi A, B, dan C.
+
+00:02:48.380 --> 00:02:53.360
+Tujuannya, agar Anda lebih nyaman membaca
+kode yang belum pernah dilihat sebelumnya.
+
+00:02:53.360 --> 00:02:57.370
+Kita belum memutuskan aturan mana
+yang merupakan metode sah, tapi
+
+00:02:57.370 --> 00:03:01.169
+saya ingin Anda menebak pada opsi
+mana yang paling benar.
+
+00:03:02.630 --> 00:03:05.091
+Saya juga mendorong Anda untuk
+melakukan pencarian Google
+
+00:03:05.091 --> 00:03:09.140
+untuk mendapat informasi lebih tentang
+cara mendefinisikan metode Java.
+
+00:03:09.140 --> 00:03:11.450
+Saat Anda mengeklik pada
+hasil pencarian yang berbeda,
+
+00:03:11.450 --> 00:03:15.100
+Anda akan menemukan informasi dalam
+dokumentasi yang tidak Anda pahami.
+
+00:03:15.100 --> 00:03:18.290
+Tapi, saya ingin agar Anda lebih nyaman
+tanpa memahami segalanya yang ada
+
+00:03:18.290 --> 00:03:21.950
+di halaman itu, karena sangatlah normal
+untuk tidak memahami segalanya.
+
+00:03:21.950 --> 00:03:25.780
+Yang diperlukan hanyalah membaca cepat
+artikel-artikel yang Anda pahami dan
+
+00:03:25.780 --> 00:03:28.030
+yang Anda rasa relevan
+dengan masalah Anda.
+
+00:03:29.140 --> 00:03:30.610
+Lanjutkanlah dan baca kode untuk
+
+00:03:30.610 --> 00:03:34.260
+tiga opsi ini, cari informasi
+secara online, lalu buat tebakan
+
+00:03:34.260 --> 00:03:37.627
+terbaik tentang cara mendefinisikan
+metode calculatePrice dengan tepat.
+

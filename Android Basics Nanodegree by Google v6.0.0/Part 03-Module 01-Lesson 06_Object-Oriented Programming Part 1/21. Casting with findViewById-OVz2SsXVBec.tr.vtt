@@ -1,0 +1,423 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.270 --> 00:00:01.540
+1 numaraya bakalım.
+
+00:00:01.540 --> 00:00:04.470
+Cevabı açıklamadan önce,
+bu kodu kopyalayıp
+
+00:00:04.470 --> 00:00:06.700
+Android Studio'ya yapıştıracağım.
+
+00:00:06.700 --> 00:00:09.060
+Ne tür bir hata çıkacağını
+göstermek istiyorum.
+
+00:00:09.060 --> 00:00:12.090
+Bu sınavı çözerken Android
+Studio kullanmanıza gerek yoktu.
+
+00:00:12.090 --> 00:00:14.510
+Sadece burada koda bakarak
+ve cevabı yazarak
+
+00:00:14.510 --> 00:00:16.280
+bunu çözmüş olabilirdiniz.
+
+00:00:16.280 --> 00:00:19.520
+Yani, Android Studio kullanıp
+kullanmamanız benim için sorun değil.
+
+00:00:19.520 --> 00:00:22.260
+Kodun çalışmasını sağlamak için
+yeni bir proje oluşturdum ve
+
+00:00:22.260 --> 00:00:25.270
+sonra etkinlik ana düzen
+dosyasını modifiye edip
+
+00:00:25.270 --> 00:00:30.080
+başvurucağımız bu kimlikleri içeren
+bir grup görünüm olmasını sağladım.
+
+00:00:30.080 --> 00:00:31.780
+Bu düzenin nasıl görüneceğinden
+bile emin değilim ama
+
+00:00:31.780 --> 00:00:36.060
+sadece karşılık gelen kimlik adlarına
+ait görünümleri buraya koymak istedim.
+
+00:00:36.060 --> 00:00:38.210
+Bu şekilde, kodum burada çalışacak.
+
+00:00:38.210 --> 00:00:42.570
+Yani bir numara için, buraya kodu
+yapıştırdım ve bir hata görüyorum.
+
+00:00:42.570 --> 00:00:46.270
+Android Studio, setText yöntemini
+çözümleyemediğini söylüyor.
+
+00:00:46.270 --> 00:00:47.780
+Geçen videodan hatırlarsanız,
+
+00:00:47.780 --> 00:00:51.510
+setText'in bir TextView
+yöntemi olduğunu belirtmiştim.
+
+00:00:51.510 --> 00:00:55.100
+Yani bu yönteme sadece
+TextView nesnelerinde başvurabilirsiniz.
+
+00:00:55.100 --> 00:00:57.920
+Bu durumda, 
+nameTextView'e başvuruyoruz.
+
+00:00:57.920 --> 00:01:00.705
+Bir nameTextView,
+görünüm nesnesi ilan edilmiş
+
+00:01:00.705 --> 00:01:04.057
+Bunu TextView nesnesi
+olarak değiştirmemiz gerekir.
+
+00:01:05.990 --> 00:01:08.942
+Sonra uyumsuz türler olduğunu
+söyleyen bir hata alıyoruz.
+
+00:01:08.942 --> 00:01:12.390
+TextView tipi bir nesne
+olan typeTextview lazım ama
+
+00:01:12.390 --> 00:01:15.700
+bunun yerine typeview bir nesne buldu.
+
+00:01:15.700 --> 00:01:18.570
+Çünkü, kimliğe göre görünüm
+bul bir görünüm veriyor ve
+
+00:01:18.570 --> 00:01:21.950
+bu sol taraf bir
+TextView gerektiriyor.
+
+00:01:21.950 --> 00:01:24.860
+Yani findViewById tarafından verilen
+
+00:01:24.860 --> 00:01:28.730
+görünümü TextView'e dönüştürmek
+için bunu eklememiz gerek.
+
+00:01:28.730 --> 00:01:30.800
+Sonra tüm bu şeyi,
+
+00:01:30.800 --> 00:01:35.090
+yani nameTextView'yu
+sol taraftaki değişkende depolayabiliriz.
+
+00:01:35.090 --> 00:01:40.760
+Sonra hata kaybolur ve bu TextView'da
+"Laura" metnini ayarlayabiliriz.
+
+00:01:40.760 --> 00:01:44.510
+Hata 1. satırda, yani buraya
+doğru kodu yazdım.
+
+00:01:44.510 --> 00:01:49.540
+Genel açıklama, bu görüntüyü
+TextView'e çevirmeliyiz
+
+00:01:49.540 --> 00:01:53.050
+ve sonra bir nameTextView
+değişkeninde depolamalıyız.
+
+00:01:53.050 --> 00:01:56.340
+Bu şekilde buna
+nameTextView.setText diyebiliriz.
+
+00:01:56.340 --> 00:01:59.850
+Bu da kodun sonraki satırında
+yer alan TextView yöntemi.
+
+00:01:59.850 --> 00:02:00.830
+İki numaraya geçelim.
+
+00:02:00.830 --> 00:02:03.290
+Bu kodu kopyalayıp Android
+Studio'ya koyacağım.
+
+00:02:04.540 --> 00:02:06.590
+Yapıştırdığım kod bu.
+
+00:02:06.590 --> 00:02:09.620
+Kodun ilk satırı doğru gibi
+görünüyor. Hiç hata yok.
+
+00:02:09.620 --> 00:02:11.550
+Fakat ikinci satırın altı kırmızıyla
+
+00:02:11.550 --> 00:02:14.420
+çizili ve uyumsuz
+türler hatası var diyor.
+
+00:02:14.420 --> 00:02:17.990
+Bir dize gerekli ama bunun
+yerine bir int bulduğunu söylüyor.
+
+00:02:17.990 --> 00:02:19.290
+Bu daha iyi anlamak için,
+
+00:02:19.290 --> 00:02:24.250
+TextView belgeleri içindeki
+getMaxLines yöntemine bakmak gerekir.
+
+00:02:24.250 --> 00:02:26.580
+TextView belgelerinde
+
+00:02:26.580 --> 00:02:28.650
+getMaxLines yöntemini arayacağım.
+
+00:02:28.650 --> 00:02:29.770
+Ve işte burada.
+
+00:02:29.770 --> 00:02:31.120
+Hiç giriş parametresi yok
+
+00:02:31.120 --> 00:02:33.520
+ve bu yöntemin dönüş
+değeri bir tam sayı.
+
+00:02:34.758 --> 00:02:38.194
+Yani Android Studio bundan
+şikayetçiydi. Çünkü bu yöntem
+
+00:02:38.194 --> 00:02:39.911
+bir tam sayı veriyor ve biz
+
+00:02:39.911 --> 00:02:42.700
+bunu bir Dize değişkeninde
+depolamaya çalışıyorduk.
+
+00:02:42.700 --> 00:02:47.870
+Sonuç olarak, değişken veri türünü
+int olarak değiştirmem gerekir.
+
+00:02:47.870 --> 00:02:49.470
+O zaman hata kayboluyor.
+
+00:02:49.470 --> 00:02:52.620
+Yani, bu yöntemin
+verdiği değer bir tam sayı.
+
+00:02:52.620 --> 00:02:56.060
+Yani, bunun maxLines
+değişkeninde saklayabiliriz.
+
+00:02:56.060 --> 00:02:57.870
+Hala kalan bir uyarı var.
+
+00:02:57.870 --> 00:03:00.870
+maxLines değişkeninin hiç
+kullanılmamış olduğunu söylüyor.
+
+00:03:00.870 --> 00:03:02.260
+Ama bu sadece bir kod parçacığı.
+
+00:03:02.260 --> 00:03:04.760
+Bu normal bir uygulama olsaydı
+
+00:03:04.760 --> 00:03:06.740
+aslında bu değişkeni daha sonra
+kullanmak isteyeceğimizi sanıyorum.
+
+00:03:07.800 --> 00:03:11.380
+Yani, hata ikinci satırda
+ve güncellenmiş kod bu.
+
+00:03:11.380 --> 00:03:14.340
+Genel açıklama bu
+yöntemin dönüş değerinin
+
+00:03:14.340 --> 00:03:15.480
+bir tamsayı olmalı.
+
+00:03:15.480 --> 00:03:16.620
+Üç numaraya geçelim.
+
+00:03:17.980 --> 00:03:19.830
+Üç numaraya ait kod bu.
+
+00:03:19.830 --> 00:03:22.960
+Üç numara için kodu kopyalayıp
+Android Studio'ya yapıştırdım.
+
+00:03:22.960 --> 00:03:25.812
+Uyumsuz türler şeklinde
+bir hata mesajı var.
+
+00:03:25.812 --> 00:03:29.400
+Bir ImageView gerekliydi, ama
+bunun yerine bir görünüm buldu.
+
+00:03:29.400 --> 00:03:32.740
+Bu az önce TextView ile
+gördüğümüz hataya benzer.
+
+00:03:32.740 --> 00:03:34.960
+Bu yöntem bir görünüm veriyor.
+
+00:03:34.960 --> 00:03:38.270
+Sol tarafta da, bunu bir ImageView
+içinde depolamaya çalışıyoruz.
+
+00:03:38.270 --> 00:03:42.370
+Yani bu görünüm nesnesini
+ImageView'e çevirmemiz gerekir.
+
+00:03:42.370 --> 00:03:47.330
+Kimlik simgeli görünüm aslında
+bir ImageView olduğundan bu geçerli.
+
+00:03:47.330 --> 00:03:49.630
+Bu yüzden bir görüntü
+görünümüne çevirmek sorun olmaz.
+
+00:03:49.630 --> 00:03:52.560
+Şimdi sağ taraf bir
+ImageView olduğundan,
+
+00:03:52.560 --> 00:03:55.700
+bunu sol taraftaki
+değişkende depolayabiliriz.
+
+00:03:55.700 --> 00:03:59.770
+Bu değişkende ImageView
+veri tipi olduğundan her şey
+
+00:03:59.770 --> 00:04:01.430
+eşleşiyor ve hata yok oluyor.
+
+00:04:01.430 --> 00:04:04.640
+Bir sonraki tarafta, bir
+ImageView yöntemi olan
+
+00:04:04.640 --> 00:04:09.180
+SetImageResource'u bu
+IconImageView nesneye çağırabiliriz.
+
+00:04:09.180 --> 00:04:12.830
+Simge logosunu çözemediğini
+söyleyen kalan bir hata daha var.
+
+00:04:12.830 --> 00:04:17.310
+Çünkü uygulamaya isim logolu
+bir resim eklemedim.
+
+00:04:17.310 --> 00:04:21.410
+Onu eklediğimde hata kaybolacak
+yani burada kodumuz doğru.
+
+00:04:21.410 --> 00:04:25.400
+Bu görünümü bir ImageView'e
+çevirdiğim doğru kod bu.
+
+00:04:25.400 --> 00:04:27.330
+Son olarak, dört numaraya bakalım.
+
+00:04:27.330 --> 00:04:32.080
+Kodu Android Studio'ya kopyaladım
+ve şaşırtıcı şekilde hiçbir hata yok.
+
+00:04:32.080 --> 00:04:35.960
+Kod, kimlik başlığına sahip bir
+görünüm bulmaya çalışıyor ve
+
+00:04:35.960 --> 00:04:41.150
+bu da TextView denen değişkende
+depolanan bir görünüm vermeli.
+
+00:04:41.150 --> 00:04:43.900
+TextView'nun veri türü Görünümü var.
+
+00:04:43.900 --> 00:04:47.940
+Bu da sağ tarafla eşleşir, bu
+nedenle bu kod satırı tümüyle doğru.
+
+00:04:47.940 --> 00:04:51.410
+Bir sonraki satırda, bir Görünüm
+olan bu nesneyi alıyor ve
+
+00:04:51.410 --> 00:04:54.410
+bunun üzerine bir setVisibility
+yöntemi çağırıyoruz.
+
+00:04:54.410 --> 00:04:58.763
+Bu yöntem bir girdi parametresi,
+yani View.GONE'ı alır.
+
+00:04:58.763 --> 00:05:02.790
+Bunun nedenini doğrulamak
+için belgeleri kontrol edebiliriz.
+
+00:05:02.790 --> 00:05:06.050
+Görünüm sınıfı için belgelerde,
+
+00:05:06.050 --> 00:05:08.400
+setVisibility yöntemini arayabilirim.
+
+00:05:08.400 --> 00:05:11.970
+SetVisibility'nin görünüm sınıfı içinde
+bir yöntem olduğunu görebiliyorum.
+
+00:05:11.970 --> 00:05:16.310
+Bu girişi, görünürlük durumunu
+temsil eden tam sayı alıyor.
+
+00:05:16.310 --> 00:05:21.175
+Olası görünürlük değerleri
+VISIBLE, INVISIBLE ve GONE'dır.
+
+00:05:21.175 --> 00:05:24.490
+SetVisibility görünüm sınıfı
+içinde bir yöntem olduğundan,
+
+00:05:24.490 --> 00:05:26.320
+bu da geçerli bir çağrı.
+
+00:05:26.320 --> 00:05:29.280
+Bunu TextView'e
+çevirmeye gerek yok
+
+00:05:29.280 --> 00:05:33.200
+çünkü başvurduğumuz bu yöntem bir
+görünüm sınıfı yöntemi.
+
+00:05:33.200 --> 00:05:36.010
+Ama bir TextView yöntemi
+kullanmaya çalışıyor olsaydık,
+
+00:05:36.010 --> 00:05:38.860
+o zaman onu TextView'e
+çevirmemiz gerekirdi.
+
+00:05:38.860 --> 00:05:41.600
+Yani, bu soru için hata yok,
+çünkü setVisibility bir
+
+00:05:41.600 --> 00:05:45.930
+Görünüm yöntemi ve Görünüm
+nesnesi olarak bırakılabilir.
+
+00:05:45.930 --> 00:05:47.480
+Bunlar zor sorulardı.
+
+00:05:47.480 --> 00:05:48.860
+Bunları bilemeseniz de sorun değil.
+
+00:05:48.860 --> 00:05:52.080
+Bir sonraki testte, biraz daha
+pratik yapma şansına sahip olacaksınız.
+

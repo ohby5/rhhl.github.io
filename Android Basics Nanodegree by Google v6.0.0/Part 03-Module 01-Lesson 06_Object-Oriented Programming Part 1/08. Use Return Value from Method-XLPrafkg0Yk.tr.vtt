@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.340 --> 00:00:02.710
+Haydi, fiyat hesaplama metoduna geri dönelim.
+
+00:00:02.710 --> 00:00:06.440
+Bu metodu çağırdığımızda toplam sipariş fiyatına geri dönecektir.
+
+00:00:06.440 --> 00:00:10.300
+Ve bu değeri fiyat olarak adlandırdığımız değişkenin içinde depolayabiliriz.
+
+00:00:10.300 --> 00:00:11.510
+Sonra, ekranda görüntüleyebiliriz.
+
+00:00:13.080 --> 00:00:15.670
+Fiyat Hesaplama metodunu uygulamanızla birleştirmek için
+
+00:00:15.670 --> 00:00:18.180
+dönüş değerlerini kullanmamız gerekecek.
+
+00:00:18.180 --> 00:00:20.330
+Şimdi önce Sözde Kod'a bakalım.
+
+00:00:20.330 --> 00:00:24.390
+Siparişigönder metodu içinde fiyatHesapla metodunu çağırmak istiyoruz.
+
+00:00:24.390 --> 00:00:27.470
+bu siparişin toplam fiyatını hesaplayacaktır.
+
+00:00:27.470 --> 00:00:29.530
+ve sonuç olarak bunun dönüşünü verecektir.
+
+00:00:29.530 --> 00:00:33.620
+Yani, bu sonucu fiyat dediğimiz tam sayı değişkeninin içinde depolayacaktır.
+
+00:00:33.620 --> 00:00:36.800
+Daha sonra bu fiyatı alacağız, ve sonra ekranda görüntüleyeceğiz.
+
+00:00:36.800 --> 00:00:39.550
+Haydi bunun için gerçek Java koduna bakalım.
+
+00:00:39.550 --> 00:00:42.740
+siparişiGönder metodunda, bu kod satırını ekleyebilirdik.
+
+00:00:42.740 --> 00:00:45.660
+2. dersten görev işleticiyi hatırlıyor musunuz?
+
+00:00:45.660 --> 00:00:49.300
+bunu ne zaman görsem, önce sağ tarafı değerlendiririm.
+
+00:00:49.300 --> 00:00:53.260
+fiyatıHesapla metodu sipariş fiyatı olan tek değer olarak döner.
+
+00:00:53.260 --> 00:00:57.010
+Ve bu fiyat adı verilen yerel değişkenin içinde depolanmalıdır.
+
+00:00:57.010 --> 00:01:00.040
+Daha sonra başka bir metod olan fiyatı Görüntüle'yi çağırabiliriz.
+
+00:01:00.040 --> 00:01:03.530
+Ve bu metodun girdisi az önce yarattığımız
+
+00:01:03.530 --> 00:01:04.970
+fiyat değişkeni olacak.
+
+00:01:04.970 --> 00:01:07.440
+Burada bir metodun bir ifadenin parçası olarak nasıl
+
+00:01:07.440 --> 00:01:09.780
+kullanılabileceğini ilk kez görüyoruz.
+
+00:01:09.780 --> 00:01:12.360
+Örneğin, bu metodu çağırabiliriz ve
+
+00:01:12.360 --> 00:01:16.330
+buradan dönen değer başka sayılara eklenebilir ya da
+
+00:01:16.330 --> 00:01:19.700
+eğer bir dizi ise, onu diğer dizilere bağlayabiliriz.
+
+00:01:19.700 --> 00:01:23.450
+Önemli olan tek şey, sağdaki herşeyin tek bir değer olarak değerlendirilip
+
+00:01:23.450 --> 00:01:27.920
+ve sonra sol taraftaki değişken olarak depolanmasıdır.
+
+00:01:27.920 --> 00:01:31.370
+Fakat doğrudan fiyat hesaplamak ve ekranda göstermek için kullanacağımız
+
+00:01:31.370 --> 00:01:32.220
+Just Java uygulaması için.
+
+00:01:33.590 --> 00:01:37.210
+Bu kodlama görevi için fiyat hesaplama metodunun tanımlandığından ve
+
+00:01:37.210 --> 00:01:40.910
+Just Java uygulamasında düzgünce çağrıldığından emin olacaksınız.
+
+00:01:40.910 --> 00:01:43.620
+İlk olarak metodun nasıl tanımlandığına odaklanın.
+
+00:01:43.620 --> 00:01:46.980
+fiyatHesapla metodunda doğru dönüş verisini almak için değişiklik yapıp
+
+00:01:46.980 --> 00:01:48.770
+metod imzasının içine yazın.
+
+00:01:48.770 --> 00:01:50.960
+Ayrıca 0 girdi parametresinin olduğunu farz edin.
+
+00:01:52.060 --> 00:01:54.930
+sonraki adım bu metodun içinde değişiklik yapmak.
+
+00:01:54.930 --> 00:01:58.210
+toplam siperişin doğru fiyatının döndüğünden emin olun.
+
+00:01:58.210 --> 00:02:01.910
+ki bu sipariş edilen fincan miktarı her fincanın fiyatı.
+
+00:02:01.910 --> 00:02:04.890
+Her fincan kahvenin 5 Dolar tuttuğunu farz edebilirsiniz ve
+
+00:02:04.890 --> 00:02:08.038
+bu kodu doğrudan bu metodun içine gömebilirsiniz.
+
+00:02:08.038 --> 00:02:12.410
+bunların hepsi bitince, metodun nasıl çağrıldığına geçebilirsiniz.
+
+00:02:12.410 --> 00:02:15.360
+siparişigönder metodundan fiyathesapla'yı çağırın ve
+
+00:02:15.360 --> 00:02:18.000
+daha önce bahsettiğimiz kodu kullanabilirsiniz.
+
+00:02:18.000 --> 00:02:20.840
+Daha sonra, ilerleyin ve bu fiyatı ekranda görüntüleyin.
+
+00:02:20.840 --> 00:02:23.900
+Şimdi, fiyatıgörüntüle metodu kullanabilirdiniz, fakat ikinci dersin sonunda
+
+00:02:23.900 --> 00:02:27.640
+ekranda birkaç metin göstermek için de çok çalıştınız.
+
+00:02:27.640 --> 00:02:31.600
+Ayrıca, teşekkür ederim, dedi, bu yüzden bu fiyat değerini bu metinle birleştirmeye
+
+00:02:31.600 --> 00:02:34.140
+çalışmanız en ideal olanıdır.
+
+00:02:34.140 --> 00:02:35.820
+böyle birşeye benzemeli.
+
+00:02:35.820 --> 00:02:37.000
+Yani her miktarı değiştirirseniz ve
+
+00:02:37.000 --> 00:02:40.830
+siparişe basarsanız, fiyat burada metin ile birlikte görünür.
+
+00:02:42.210 --> 00:02:44.300
+Bitirdiğinizde devam etmek için bu kutucukları tıklayın.
+

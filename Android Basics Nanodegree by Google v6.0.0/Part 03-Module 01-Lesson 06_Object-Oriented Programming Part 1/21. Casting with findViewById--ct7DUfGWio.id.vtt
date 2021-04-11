@@ -1,0 +1,472 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.396 --> 00:00:03.594
+Saya menambahkan kode yang
+baru saja kita lihat ke dalam aplikasi.
+
+00:00:03.619 --> 00:00:08.009
+Dikatakan Lihat
+&lt;i&gt;orderSummaryTextView = findViewById&lt;/i&gt;,
+
+00:00:08.034 --> 00:00:12.056
+maka kita melwati sumber daya ID
+untuk &lt;i&gt;order_summary_text_view&lt;/i&gt; tersebut.
+
+00:00:12.807 --> 00:00:16.729
+Tapi ini menyebabkan galat dalam
+Android Studio pada baris berikutnya.
+
+00:00:17.534 --> 00:00:20.872
+Dia mengatakan itu tidak dapat
+menyelesaikan metode &lt;i&gt;setText&lt;/i&gt;.
+
+00:00:21.568 --> 00:00:24.259
+Jika saya menambahkan
+baris kode lain di sini,
+
+00:00:24.284 --> 00:00:28.280
+saya dapat menunjukkan jenis metode
+yang berlaku pada variabel ini.
+
+00:00:28.810 --> 00:00:32.689
+Jadi, kita baru saja membuat
+variabel &lt;i&gt;orderSummaryTextView&lt;/i&gt; di sini,
+
+00:00:32.714 --> 00:00:34.202
+dan itu adalah &lt;i&gt;TypeView&lt;/i&gt;,
+
+00:00:34.227 --> 00:00:37.418
+dan pada baris berikutnya, kita seharusnya
+bisa memanggil metode di atasnya.
+
+00:00:37.443 --> 00:00:40.411
+Tapi jika kau melihat saran &lt;i&gt;autocomplete&lt;/i&gt;,
+
+00:00:40.436 --> 00:00:43.895
+metode ini sebenarnya metode melihat.
+
+00:00:43.920 --> 00:00:46.610
+Tidak ada metode &lt;i&gt;TextView&lt;/i&gt; tertentu.
+
+00:00:47.068 --> 00:00:49.890
+Misalnya, tidak ada metode &lt;i&gt;setText&lt;/i&gt;.
+
+00:00:50.454 --> 00:00:52.906
+Benar! Itulah sebabnya kita
+mendapatkan galat di sini
+
+00:00:52.931 --> 00:00:55.122
+saat kita mencoba untuk memanggil &lt;i&gt;setText&lt;/i&gt;.
+
+00:00:55.782 --> 00:00:58.202
+Kau juga tidak dapat mengatur ukuran teks,
+
+00:00:58.227 --> 00:01:00.829
+atau mengatur warna teks,
+atau salah satu dari mereka.
+
+00:01:00.854 --> 00:01:03.065
+Jadi di mana semua metode itu?
+
+00:01:03.675 --> 00:01:09.467
+Masalahnya adalah &lt;i&gt;TextView&lt;/i&gt; adalah
+jenis &lt;i&gt;View&lt;/i&gt; yang lebih spesifik.
+
+00:01:10.286 --> 00:01:14.347
+Jadi jika kita ingin memanggil
+metode &lt;i&gt;TextView&lt;/i&gt; pada objek ini,
+
+00:01:14.372 --> 00:01:17.348
+kita perlu memastikan
+bahwa ini adalah objek &lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:17.685 --> 00:01:20.971
+Oke. Sekarang variabelnya
+adalah objek &lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:20.996 --> 00:01:24.142
+Tapi saya mendapatkan galat lain
+yang mengatakan jenis tidak kompatibel,
+
+00:01:24.167 --> 00:01:28.066
+karena TextView diperlukan di sisi kanan,
+
+00:01:28.091 --> 00:01:30.955
+tapi kita hanya menemukan tampilan biasa.
+
+00:01:30.980 --> 00:01:34.108
+Itu karena metode &lt;i&gt;findViewById&lt;/i&gt;
+mengembalikan sebuah &lt;i&gt;View&lt;/i&gt;.
+
+00:01:34.133 --> 00:01:36.557
+Jadi bagaimana kita mendamaikan ini?
+
+00:01:36.582 --> 00:01:41.637
+Karena &lt;i&gt;TextView&lt;/i&gt; adalah jenis &lt;i&gt;View&lt;/i&gt;
+yang lebih spesifik atau dengan kata lain,
+
+00:01:41.662 --> 00:01:43.628
+&lt;i&gt;TextView&lt;/i&gt; adalah bagian dari &lt;i&gt;View&lt;/i&gt;,
+
+00:01:43.653 --> 00:01:47.091
+kita dapat menggunakan
+sesuatu yang disebut &lt;i&gt;casting&lt;/i&gt; [pemilihan].
+
+00:01:47.116 --> 00:01:48.627
+&lt;i&gt;Casting&lt;/i&gt; di Java,
+
+00:01:48.652 --> 00:01:51.715
+berarti kita dapat mengambil
+&lt;i&gt;View&lt;/i&gt; dikembalikan oleh metode ini
+
+00:01:51.740 --> 00:01:54.227
+dan memperlakukannya sebagai
+sebuah &lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:54.252 --> 00:01:58.425
+Jadi sekarang sisi kanan ini
+sebenarnya objek &lt;i&gt;TextView&lt;/i&gt;,
+
+00:01:58.450 --> 00:02:02.843
+Maka kita dapat menyimpannya di dalam
+variabel &lt;i&gt;orderSummaryTextView&lt;/i&gt; ini.
+
+00:02:03.260 --> 00:02:05.264
+Saya tahu kalau ini pasti luar biasa,
+
+00:02:05.289 --> 00:02:07.756
+karena saya baru saja
+menyebutkan banyak konsep baru.
+
+00:02:07.781 --> 00:02:09.757
+Biarkan saya mencoba
+untuk menjelaskannya lagi.
+
+00:02:10.074 --> 00:02:14.138
+Metode &lt;i&gt;findViewById&lt;/i&gt;
+ternyata objek tipe &lt;i&gt;View&lt;/i&gt;.
+
+00:02:14.163 --> 00:02:15.743
+Dengan menulis notasi ini,
+
+00:02:15.768 --> 00:02:19.544
+kurung dengan jenis objek data
+yang diinginkan di tengah-tengah itu.
+
+00:02:19.569 --> 00:02:23.029
+Kami memilih &lt;i&gt;View&lt;/i&gt; ini ke &lt;i&gt;TextView&lt;/i&gt;.
+
+00:02:23.054 --> 00:02:27.781
+Jadi seluruh ekspresi di sini
+mengevaluasi ke objek TextView.
+
+00:02:28.423 --> 00:02:31.956
+Kemudian, kita dapat menyimpannya
+dalam variabel di sisi kiri,
+
+00:02:31.981 --> 00:02:35.606
+yang merupakan &lt;i&gt;orderSummary TextView&lt;/i&gt;,
+dan memiliki tipe &lt;i&gt;TextView&lt;/i&gt;.
+
+00:02:35.631 --> 00:02:40.541
+Sekarang, pada baris berikutnya, kita bisa
+memanggil metode TextView pada objek ini.
+
+00:02:40.566 --> 00:02:44.357
+Apa kau melihat sekarang bagaimana
+semua metode teks muncul di sini?
+
+00:02:44.545 --> 00:02:47.934
+&lt;i&gt;SetAllCaps, setTextSize&lt;/i&gt;, dan banyak lagi.
+
+00:02:47.959 --> 00:02:52.217
+Jadi saya bisa menghapus ini sekarang,
+karena &lt;i&gt;setText&lt;/i&gt; harus bekerja,
+
+00:02:52.242 --> 00:02:54.043
+dan tidak ada galat lagi.
+
+00:02:54.068 --> 00:02:56.964
+Jadi jika kita ingin dapat
+memanggil metode &lt;i&gt;TextView&lt;/i&gt;,
+
+00:02:56.989 --> 00:02:59.156
+kita perlu memiliki objek &lt;i&gt;TextVie&lt;/i&gt;w.
+
+00:02:59.181 --> 00:03:03.087
+Untuk dapat memiliki objek &lt;i&gt;TextView&lt;/i&gt;,
+Kita perlu memanggil &lt;i&gt;findViewById&lt;/i&gt;,
+
+00:03:03.112 --> 00:03:06.694
+dan kemudian memasukkan &lt;i&gt;View&lt;/i&gt; ini
+ke objek &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:06.719 --> 00:03:08.615
+Alasan hal ini bekerja
+
+00:03:08.640 --> 00:03:13.288
+karena tampilan dalam hirarki
+tampilan ini sebenarnya adalah TextView.
+
+00:03:13.313 --> 00:03:17.395
+Jika kita coba memasukkan sesuatu
+seperti tombol radio, itu takkan bekerja,
+
+00:03:17.420 --> 00:03:20.511
+karena &lt;i&gt;orderSummaryTextView&lt;/i&gt;
+sebenarnya &lt;i&gt;TextView&lt;/i&gt;,
+
+00:03:20.536 --> 00:03:23.594
+kita harus memasukkannya
+ke jenis yang sesuai.
+
+00:03:24.034 --> 00:03:28.295
+Sama dengan metode &lt;i&gt;displayQuantity&lt;/i&gt;,
+kita memanggil &lt;i&gt;findViewById&lt;/i&gt;
+
+00:03:28.320 --> 00:03:32.187
+dan kita melewati
+sumber ID ke kuantitas &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:32.212 --> 00:03:35.867
+Ini mengembalikan &lt;i&gt;View&lt;/i&gt;,
+dan kita memasukkannya ke &lt;i&gt;TextView&lt;/i&gt;,
+
+00:03:35.892 --> 00:03:39.879
+kita dapat menyimpan di dalam variabel
+yang disebut &lt;i&gt;quantityTextView&lt;/i&gt;.
+
+00:03:40.219 --> 00:03:42.817
+Variabel ini memiliki tipe &lt;i&gt;TextView&lt;/i&gt;,
+
+00:03:42.842 --> 00:03:46.387
+dan pada baris berikutnya, kita bisa
+memanggil &lt;i&gt;TextView&lt;/i&gt; metode di atasnya,
+
+00:03:46.412 --> 00:03:47.984
+seperti &lt;i&gt;setText&lt;/i&gt;.
+
+00:03:48.009 --> 00:03:51.509
+Ini adalah kode &lt;i&gt;MainActivity&lt;/i&gt;
+yang diperbarui menggunakan &lt;i&gt;casting&lt;/i&gt;.
+
+00:03:51.534 --> 00:03:53.989
+Kita bisa masukkan &lt;i&gt;Views&lt;/i&gt; ini ke TextViews,
+
+00:03:54.014 --> 00:03:56.375
+sehingga kita dapat
+menyimpannya dalam variabel
+
+00:03:56.400 --> 00:03:57.797
+yang memiliki jenis &lt;i&gt;TextView&lt;/i&gt;
+
+00:03:57.822 --> 00:04:00.597
+sehingga dalam daftar
+variabel &lt;i&gt;MainActivity&lt;/i&gt;,
+
+00:04:00.622 --> 00:04:04.972
+sekarang &lt;i&gt;quantityTextView&lt;/i&gt; dan
+&lt;i&gt;orderSummaryTextView&lt;/i&gt; adalah tipe &lt;i&gt;TextView&lt;/i&gt;.
+
+00:04:04.997 --> 00:04:07.159
+Kita dapat memanggil
+metode &lt;i&gt;TextView&lt;/i&gt; pada ini,
+
+00:04:07.184 --> 00:04:10.677
+dan kita tidak hanya terbatas
+untuk memperlakukan mereka sebagai &lt;i&gt;Views&lt;/i&gt;.
+
+00:04:10.702 --> 00:04:14.823
+Dan sekarang kita dapat memanggil metode
+&lt;i&gt;TextView&lt;/i&gt; tertentu pada variabel tersebut.
+
+00:04:14.848 --> 00:04:19.041
+Misalnya kita dapat memanggil &lt;i&gt;setText&lt;/i&gt;
+pada &lt;i&gt;orderSummaryTextView&lt;/i&gt;,
+
+00:04:19.065 --> 00:04:21.731
+dan kita dapat memanggil
+&lt;i&gt;setText&lt;/i&gt; pada &lt;i&gt;quantityTextView&lt;/i&gt;.
+
+00:04:21.755 --> 00:04:22.897
+Seperti yang kau lihat,
+
+00:04:22.922 --> 00:04:27.089
+kau harus berhati-hati mengenai
+tipe data yang digunakan di mana.
+
+00:04:27.114 --> 00:04:29.072
+Sejauh ini, saat kita memanggil metode,
+
+00:04:29.097 --> 00:04:31.207
+kita tidak khawatir tentang nilai kembali,
+
+00:04:31.232 --> 00:04:34.277
+karena metode &lt;i&gt;setText&lt;/i&gt;
+sebenarnya tidak memiliki nilai kembali.
+
+00:04:34.302 --> 00:04:37.141
+Sama dengan metode
+&lt;i&gt;imageView.setImageResource.&lt;/i&gt;
+
+00:04:37.166 --> 00:04:38.882
+Ini tidak memiliki nilai kembali.
+
+00:04:38.907 --> 00:04:41.356
+Tapi metode lain dapat
+mempunyai nilai kembali.
+
+00:04:41.381 --> 00:04:45.441
+Misalnya, di kelas &lt;i&gt;TextView&lt;/i&gt;
+kita memiliki metode &lt;i&gt;getTextSize&lt;/i&gt;.
+
+00:04:45.466 --> 00:04:47.338
+Ini mengembalikan bilangan bulat,
+
+00:04:47.363 --> 00:04:49.848
+kita dapat menyimpan hasil dari metode ini
+
+00:04:49.873 --> 00:04:53.277
+dalam variabel yang
+disebut ukuran tipe bilangan bulat.
+
+00:04:53.302 --> 00:04:55.801
+Ini metode lainnya
+yang memiliki nilai kembali.
+
+00:04:55.826 --> 00:04:58.565
+Di kelas Tombol, kau dapat
+memanggil metode &lt;i&gt;getHeight&lt;/i&gt;,
+
+00:04:58.590 --> 00:05:01.396
+dan ini mengembalikan
+nilai bilangan bulat,
+
+00:05:01.421 --> 00:05:03.237
+agar kau dapat
+menyimpannya di dalam variabel.
+
+00:05:03.262 --> 00:05:06.572
+Jika kau mencoba menyimpan hasilnya
+di dalam string, misalnya,
+
+00:05:06.597 --> 00:05:10.644
+kau akan mendapatkan galat, karena
+metode ini mengembalikan bilangan bulat.
+
+00:05:10.669 --> 00:05:14.252
+Untuk mengetahui jenis data
+yang perlu diteruskan ke metode
+
+00:05:14.277 --> 00:05:17.268
+dan jenis data apa yang
+kembali dari sebuah metode,
+
+00:05:17.293 --> 00:05:19.053
+kau harus memeriksa dokumentasinya.
+
+00:05:19.078 --> 00:05:21.134
+Dan misalnya, di kelas &lt;i&gt;TextView&lt;/i&gt;,
+
+00:05:21.159 --> 00:05:22.809
+jika kau memanggil salah satu metode ini,
+
+00:05:22.834 --> 00:05:25.634
+dia mengembalikan nilai
+tipe bilangan bulat.
+
+00:05:25.659 --> 00:05:28.483
+Kembalinya nilai tipe data
+ada di kolom sebelah kiri di sini.
+
+00:05:28.508 --> 00:05:32.174
+Untuk metode lain, kau mungkin mendapatkan
+kekosongan sebagai nilai kembali,
+
+00:05:32.199 --> 00:05:37.899
+atau boolean yang belum kita pelajari,
+atau mengapung atau panjang dan lain-lain.
+
+00:05:38.169 --> 00:05:40.662
+Halaman dokumentasi ini juga menunjukkan
+
+00:05:40.687 --> 00:05:44.905
+menunjukkan tipe data masukan
+yang diharapkan untuk setiap metode.
+
+00:05:44.930 --> 00:05:49.339
+Misalnya, metode &lt;i&gt;setTextColor&lt;/i&gt;
+membutuhkan bilangan bulat sebagai masukan
+
+00:05:49.364 --> 00:05:53.008
+dan nilai kembali dibatalkan,
+jadi tidak ada nilai kembali.
+
+00:05:53.033 --> 00:05:55.975
+Jadi periksalah dokumentasi untuk
+mengetahui data apa jenis diharapkan.
+
+00:05:56.000 --> 00:05:58.195
+Jika tidak, kau akan
+mendapat galat di Android Studio
+
+00:05:58.220 --> 00:06:00.817
+dan mengatakan tipe datanya tidak cocok.
+
+00:06:00.842 --> 00:06:02.535
+Sekarang giliranmu untuk berlatih.
+
+00:06:02.560 --> 00:06:05.408
+Berikut adalah empat
+contoh kode yang berbeda.
+
+00:06:05.433 --> 00:06:09.809
+Beberapa kode mungkin mengandung galat,
+berkaitan dengan tipe data tidak sesuai.
+
+00:06:09.834 --> 00:06:11.276
+Jika kau menemukan galat,
+
+00:06:11.301 --> 00:06:13.136
+jelaskan bagaimana kau akan memperbaikinya
+
+00:06:13.161 --> 00:06:15.418
+dengan menulis di kotak yang disediakan.
+
+00:06:15.443 --> 00:06:19.810
+Jika tidak, kau dapat menulis tidak ada
+galat jika kode ini baik-baik saja.
+
+00:06:19.835 --> 00:06:22.472
+Ini akan jadi kuis yang menantang
+karena kita baru saja menutupi
+
+00:06:22.497 --> 00:06:26.395
+banyak konsep dan kode ini
+masih cukup baru untukmu.
+
+00:06:26.420 --> 00:06:29.935
+Luangkan waktumu dan memeriksa
+dokumentasi untuk metode ini.
+
+00:06:29.960 --> 00:06:33.439
+Pastikan bahwa masukan
+dan nilai kembalinya memang benar.
+
+00:06:33.464 --> 00:06:35.502
+Bahwa, jika kita menyatakan variabel,
+
+00:06:35.527 --> 00:06:37.494
+dan kita memiliki jenis data
+yang benar di sini.
+
+00:06:37.519 --> 00:06:40.253
+Juga, mencari dokumentasi
+untuk metode panggilan ini,
+
+00:06:40.278 --> 00:06:42.375
+untuk memastikan kita
+memakai metode dengan benar.
+

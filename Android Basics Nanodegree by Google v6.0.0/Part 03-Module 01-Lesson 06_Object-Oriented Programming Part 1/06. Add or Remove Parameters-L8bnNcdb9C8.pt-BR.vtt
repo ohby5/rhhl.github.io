@@ -1,0 +1,376 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.420 --> 00:00:02.590
+Vou te mostrar um exemplo de método
+com um diferente
+
+00:00:02.590 --> 00:00:04.860
+número de parâmetro de entrada.
+
+00:00:04.860 --> 00:00:09.660
+Eu comecei criando um novo aplicativo no
+assistente de projeto do Android Studio,
+
+00:00:09.660 --> 00:00:12.800
+e ele não se relaciona
+com o aplicativo Java.
+
+00:00:12.800 --> 00:00:15.460
+Eu adicionei esse método
+na <i>MainActivity</i>.
+
+00:00:15.460 --> 00:00:17.420
+Com o nome de <i>createWeatherMessage.</i>
+
+00:00:17.420 --> 00:00:21.650
+Não existe parâmetro de entrada, e
+o valor de retorno é uma <i>string</i>.
+
+00:00:21.650 --> 00:00:24.890
+Esse método deve criar uma nova mensagem
+que especifica o nome da cidade e
+
+00:00:24.890 --> 00:00:26.080
+a temperatura.
+
+00:00:26.080 --> 00:00:29.590
+Você pode associar um método
+a um manual de instruções.
+
+00:00:29.590 --> 00:00:32.320
+Então eu posso fazer que a temperatura
+seja um parâmetro de entrada.
+
+00:00:33.550 --> 00:00:36.650
+E é um número então vou escrever:
+<i>inttemperature</i>.
+
+00:00:36.650 --> 00:00:40.990
+E eu posso usar isso aqui.
+
+00:00:40.990 --> 00:00:43.540
+Então isso é uma <i>string</i> literal, e
+
+00:00:43.540 --> 00:00:46.000
+então se junta com o <i>integer</i>
+da temperatura.
+
+00:00:46.000 --> 00:00:51.310
+E então se junta com outro <i>string</i>
+que diz <i>degreesFahrenheit</i>.
+
+00:00:51.310 --> 00:00:54.890
+Então agora a mensagem pode ser
+customizada baseada na temperatura, pois
+
+00:00:54.890 --> 00:00:56.380
+é um parâmetro de entrada.
+
+00:00:56.380 --> 00:00:59.874
+Eu me esqueci de mencionar antes,
+mas no método <i>onCreate</i>,
+
+00:00:59.874 --> 00:01:03.198
+da <i>MainActivity</i>, que é chamado
+quando a atividade é criada,
+
+00:01:03.198 --> 00:01:05.670
+eu chamo de <i>createWeatherMessage</i>.
+
+00:01:05.670 --> 00:01:10.040
+Antes eu falei sem nenhum argumento,
+mas agora temos um parâmetro obrigatório.
+
+00:01:10.040 --> 00:01:14.630
+Então vou colocar 77 para a temperatura.
+
+00:01:14.630 --> 00:01:18.990
+Agora o erro some,
+e a invocação do método está correta.
+
+00:01:18.990 --> 00:01:21.900
+A outra coisa que devo modificar
+é o comentário do método.
+
+00:01:22.940 --> 00:01:24.400
+Vou colocar uma linha em branco,
+
+00:01:24.400 --> 00:01:28.351
+e vou começar a descrever a entrada
+de parâmetro que é a temperatura local.
+
+00:01:28.351 --> 00:01:31.385
+Vou digitar <i>@paramtemperature</i>
+
+00:01:31.385 --> 00:01:34.265
+então eu posso adicionar uma descrição
+dizendo que é a temperatura da cidade.
+
+00:01:35.345 --> 00:01:38.555
+Algumas vezes os nomes dos parâmetros
+são difíceis de entender, então
+
+00:01:38.555 --> 00:01:39.801
+por isso a descrição é importante.
+
+00:01:41.232 --> 00:01:44.832
+Se seu método for público,
+então outras pessoas podem
+
+00:01:44.832 --> 00:01:46.212
+invocar esse método e
+
+00:01:46.212 --> 00:01:49.352
+eles podem não saber as
+instruções desse método.
+
+00:01:49.352 --> 00:01:50.642
+Então lendo esse documento Java,
+
+00:01:50.642 --> 00:01:52.952
+a descrição dos parâmetros
+pode ser bem útil para eles.
+
+00:01:54.292 --> 00:01:57.242
+Eu mencionei antes que o método
+é como um <i>template</i>.
+
+00:01:57.242 --> 00:02:01.102
+Então, se a gente quiser mudar a cidade
+para que não seja sempre São Francisco?
+
+00:02:02.130 --> 00:02:04.280
+Eu posso fazer com que a cidade
+seja um parâmetro de entrada.
+
+00:02:04.280 --> 00:02:06.260
+Então eu posso adicionar uma vírgula aqui,
+
+00:02:06.260 --> 00:02:10.889
+e como o nome da cidade é em texto,
+vou fazer um dado do tipo <i>string</i>.
+
+00:02:10.889 --> 00:02:15.740
+Então eu posso apagar San Francisco e
+colocar uma variável do nome da cidade.
+
+00:02:16.870 --> 00:02:20.009
+Lembre-se de colocar um espaço
+antes e depois também.
+
+00:02:21.390 --> 00:02:24.410
+Legal, agora esse método pode
+criar uma mensagem,
+
+00:02:24.410 --> 00:02:26.970
+que é customizada para uma
+certa cidade e temperatura.
+
+00:02:26.970 --> 00:02:30.430
+Eu também me lembrei de
+modificar o documento Java,
+
+00:02:30.430 --> 00:02:34.050
+para que tenha esse parâmetro extra
+e descrição para o nome das cidades.
+
+00:02:35.140 --> 00:02:39.100
+Como eu mudei a assinatura do método,
+apareceu um erro.
+
+00:02:39.100 --> 00:02:41.850
+O método não funciona
+mais só com um argumento.
+
+00:02:41.850 --> 00:02:44.130
+Preciso colocar dois argumentos.
+
+00:02:44.130 --> 00:02:48.230
+Então eu coloco uma vírgula, e então
+escrevo uma <i>string San Francisco</i>.
+
+00:02:49.430 --> 00:02:51.130
+E agora o erro desaparece.
+
+00:02:51.130 --> 00:02:56.140
+Quando eu invocar: <i>createWeatherMessage</i>,
+77 vai ser o valor da temperatura,
+
+00:02:56.140 --> 00:02:58.300
+e São Francisco vai ser o nome da cidade.
+
+00:02:59.390 --> 00:03:01.783
+E ele vai criar a sequência adequada.
+
+00:03:03.813 --> 00:03:06.874
+Agora, nós vamos voltar
+para o método <i>calculateprice</i>
+
+00:03:06.874 --> 00:03:09.480
+e vamos modificar
+a assinatura do método,
+
+00:03:09.480 --> 00:03:13.230
+agora tem um número diferente
+de parâmetros de entrada.
+
+00:03:13.230 --> 00:03:18.710
+Vamos definir com parâmetro de entrada 0,
+parâmetro de entrada 1,
+
+00:03:18.710 --> 00:03:22.079
+e por último tente com
+dois parâmetros de entrada.
+
+00:03:23.350 --> 00:03:26.660
+Você vai ver como mudando a
+assinatura de método para ter diferentes
+
+00:03:26.660 --> 00:03:30.720
+números de parâmetros de entrada,
+afeta o jeito como o método é invocado.
+
+00:03:30.720 --> 00:03:32.270
+Normalmente quando você está
+montando um aplicativo,
+
+00:03:32.270 --> 00:03:36.280
+você vai apenar definir de um jeito com um
+certo número de parâmetro de entrada.
+
+00:03:36.280 --> 00:03:39.360
+E normalmente esse número de parâmetro
+de entrada vai ser determinado
+
+00:03:39.360 --> 00:03:42.380
+baseado no que está acontecendo
+dentro do método.
+
+00:03:42.380 --> 00:03:45.330
+A melhor prática é de apenas
+colocar parâmetros de entrada
+
+00:03:45.330 --> 00:03:47.590
+que você realmente vai precisar
+dentro do método.
+
+00:03:47.590 --> 00:03:50.450
+Não tem necessidade de colocar mais
+informação se você não vai
+
+00:03:50.450 --> 00:03:51.240
+usar ali.
+
+00:03:51.240 --> 00:03:54.640
+Aqui estão as instruções
+para esse exercício.
+
+00:03:54.640 --> 00:03:58.568
+Primeiro defina o método <i>calculateprice</i>,
+em seu aplicativo na <i>MainActivity</i>.
+
+00:03:58.568 --> 00:04:01.470
+Veja as notas do instrutor para
+o trecho do código que você pode começar.
+
+00:04:01.470 --> 00:04:04.123
+Nós vamos modificar o método
+<i>calculatePrice</i>
+
+00:04:04.123 --> 00:04:06.690
+para que só tenha um
+parâmetro de entrada.
+
+00:04:06.690 --> 00:04:09.970
+Então no método <i>submitOrder</i>
+invoque o método <i>calculatePrice</i> e
+
+00:04:09.970 --> 00:04:12.230
+coloque a quantidade como entrada.
+
+00:04:12.230 --> 00:04:16.450
+Tente modificar o método <i>calculatePrice</i>
+para dois parâmetros de entrada.
+
+00:04:16.450 --> 00:04:21.714
+Assim, no método <i>submitOrder</i>, vai
+invocar a quantidade no <i>calculatePrice</i>,
+
+00:04:21.714 --> 00:04:26.093
+e você pode colocar o preço
+que pode ser $10 por exemplo.
+
+00:04:26.093 --> 00:04:31.150
+Por último, tente mudar <i>calculatePrice</i>
+para que não tenha parâmetros de entrada.
+
+00:04:31.150 --> 00:04:34.324
+Assim, no método <i>submitOrder</i>
+você pode apenas invocar <i>calculatePrice</i>
+
+00:04:34.324 --> 00:04:34.870
+assim.
+
+00:04:35.950 --> 00:04:38.530
+Vamos fazer o primeiro juntos
+para você entender como fazer.
+
+00:04:38.530 --> 00:04:41.729
+Vou abrir o link das notas do instrutor.
+
+00:04:41.729 --> 00:04:46.080
+Aqui nos colocamos os códigos
+para o método <i>calculatePrice</i>.
+
+00:04:46.080 --> 00:04:50.480
+Então basta selecionar tudo e copiar.
+
+00:04:50.480 --> 00:04:53.160
+Vou colar o método no Android Studio,
+
+00:04:53.160 --> 00:04:56.580
+logo abaixo do método <i>submitOrder</i>,
+
+00:04:56.580 --> 00:05:01.370
+e não se esqueça de deixar
+uma linha em branco entre cada método.
+
+00:05:01.370 --> 00:05:02.519
+Isso torna mais fácil de ler.
+
+00:05:03.650 --> 00:05:07.140
+Então posso invocar o método
+do método <i>submitOrder</i>.
+
+00:05:07.140 --> 00:05:09.530
+Vou só inserir a chamada
+no final do método.
+
+00:05:09.530 --> 00:05:12.430
+Depois vamos integrá-lo
+com esse código aqui.
+
+00:05:12.430 --> 00:05:13.640
+Mas por ora, isso está ótimo.
+
+00:05:14.940 --> 00:05:19.000
+Esqueci que temos um parâmetro de entrada,
+então preciso colocar uma quantidade.
+
+00:05:20.790 --> 00:05:21.960
+Agora faça o mesmo
+
+00:05:21.960 --> 00:05:25.400
+nos dois exercícios restantes ao
+modificar os parâmetros de entrada aqui.
+
+00:05:27.000 --> 00:05:29.740
+Para completar o exercício,
+se precisar de exemplos para referência,
+
+00:05:29.740 --> 00:05:33.761
+você pode sempre pesquisar no Google
+por métodos Java.
+

@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.610 --> 00:00:02.190
+Hagamos la primera tarea.
+
+00:00:02.190 --> 00:00:06.013
+Renombraremos el parámetro de entrada 
+<i>number</i> para tener un nombre distinto.
+
+00:00:06.573 --> 00:00:09.760
+Este es el primer 
+parámetro de entrada, <i>int number,</i>
+
+00:00:09.760 --> 00:00:12.686
+y todo lo que necesito hacer
+es cambiar el nombre de variable.
+
+00:00:12.946 --> 00:00:16.936
+Voy a cambiarlo, por ejemplo,a 
+<i>numberOfCoffees</i>.
+
+00:00:16.936 --> 00:00:18.925
+Puede ser cualquier nombre que quieras.
+
+00:00:19.335 --> 00:00:23.290
+Inmediatamente veo
+una advertencia y un error.
+
+00:00:23.290 --> 00:00:27.030
+La advertencia dice que no se usa
+el parámetro <i>numberOfCoffees</i>
+
+00:00:27.030 --> 00:00:31.530
+porque en ninguna parte del método
+uso esta variable.
+
+00:00:31.530 --> 00:00:35.090
+Luego hay un error que dice
+que no se puede resolver <i>number</i>.
+
+00:00:35.090 --> 00:00:36.800
+No hay variable llamada <i>number</i>.
+
+00:00:36.800 --> 00:00:38.730
+No hay una variable local
+llamada <i>number</i>.
+
+00:00:38.730 --> 00:00:40.580
+No hay variable global
+llamada <i>number</i>.
+
+00:00:40.580 --> 00:00:42.790
+Y tampoco está en parámetro de entrada.
+
+00:00:42.790 --> 00:00:46.820
+Necesito cambiar esto
+para llamarlo <i>numberOfCoffees.</i>
+
+00:00:46.820 --> 00:00:48.280
+Y ya está, solucionó el error.
+
+00:00:48.280 --> 00:00:50.578
+Voy a activarlo ahora en mi dispositivo.
+
+00:00:50.578 --> 00:00:51.640
+Así es como se ve.
+
+00:00:51.640 --> 00:00:54.060
+El selector de cantidad funciona
+según lo esperado.
+
+00:00:54.060 --> 00:00:56.490
+No debería haber cambios visibles
+para el usuario,
+
+00:00:56.490 --> 00:00:59.800
+porque solo cambiamos el nombre
+del parámetro de entrada.
+
+00:01:00.690 --> 00:01:04.200
+Tampoco cambiamos la forma
+en la que el método es llamado.
+
+00:01:04.200 --> 00:01:08.100
+Todavía podemos poner <i>displayQuantity</i>
+y pasar lo que queramos.
+
+00:01:08.100 --> 00:01:11.540
+No importa el nombre
+de este parámetro de entrada.
+
+00:01:12.760 --> 00:01:14.440
+La segunda tarea es cambiar
+
+00:01:14.440 --> 00:01:17.370
+el tipo de dato del parámetro de entrada
+de <i>int</i> a <i>string.</i>
+
+00:01:19.110 --> 00:01:22.600
+En el método <i>displayQuantity</i>
+voy a cambiar la entrada
+
+00:01:22.600 --> 00:01:26.970
+para tener una cadena de tipo de dato,
+en vez de un entero.
+
+00:01:29.040 --> 00:01:32.125
+Ahora hay un par de errores
+en nuestra aplicación.
+
+00:01:32.125 --> 00:01:35.495
+Cuando voy arriba, veo que hay
+un subrayado rojo
+
+00:01:35.495 --> 00:01:38.025
+en los métodos <i>increment</i> y <i>decrement</i>.
+
+00:01:38.025 --> 00:01:41.366
+El error dice que la cadena
+<i>displayQuantity</i> en <i>MainActivity</i>
+
+00:01:41.366 --> 00:01:44.130
+no puede aplicarse a "algo" <i>int</i>.
+
+00:01:45.760 --> 00:01:48.960
+Lo que dice es que ya no podemos pasar
+la variable <i>quantity</i>
+
+00:01:48.960 --> 00:01:54.120
+al método porque es un entero,
+y lo que espera es una cadena.
+
+00:01:54.710 --> 00:01:58.320
+Esta incompatibilidad en el tipo de dato
+está causando un error
+
+00:01:58.320 --> 00:02:00.950
+y la aplicación no lo ejecutará
+en nuestro dispositivo.
+
+00:02:00.950 --> 00:02:03.070
+Esto es un error de tiempo de compilación.
+
+00:02:03.070 --> 00:02:04.940
+Hay un par de formas de solucionarlo.
+
+00:02:05.430 --> 00:02:08.558
+Podemos cambiar lo que se ha pasado
+dentro del método,
+
+00:02:08.558 --> 00:02:10.494
+así que esto en realidad es una cadena.
+
+00:02:10.494 --> 00:02:14.246
+Podría poner aquí <i>"100"</i> entre comillas,
+entonces sería una cadena
+
+00:02:14.246 --> 00:02:17.210
+y aquí se combinaría
+con el tipo de entrada indicada.
+
+00:02:17.210 --> 00:02:20.080
+Pero lo que queremos
+es que <i>quantity</i> sea todavía un entero,
+
+00:02:20.080 --> 00:02:22.680
+para que aún podamos realizar
+operaciones matemáticas,
+
+00:02:22.680 --> 00:02:24.630
+para aumentarlo o reducirlo por 1.
+
+00:02:24.630 --> 00:02:26.980
+Voy a dejarlo como <i>quantity</i>.
+
+00:02:27.770 --> 00:02:30.460
+Esto debería cambiar para ser un entero.
+
+00:02:31.430 --> 00:02:33.530
+Luego nuestra aplicación
+funcionará de nuevo.
+
+00:02:34.110 --> 00:02:34.980
+Genial.
+
+00:02:34.980 --> 00:02:39.100
+Hemos visto un ejemplo de un método
+con un parámetro de entrada.
+
+00:02:39.100 --> 00:02:43.370
+Pero, ¿qué hay sobre los métodos
+con cero parámetros de entrada,
+
+00:02:43.370 --> 00:02:45.580
+o dos o más parámetros de entrada?
+

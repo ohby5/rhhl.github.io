@@ -1,0 +1,430 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.430 --> 00:00:02.969
+Keling, Just Java ilovamizning 
+asosiy faoliyatiga qaytaylik.
+
+00:00:02.969 --> 00:00:06.190
+Xususan, biz displayMessage 
+metodini ko‘rib chiqamiz va 
+
+00:00:06.190 --> 00:00:08.570
+unda sodir bo‘layotgan barcha
+narsani o‘rganamiz.
+
+00:00:08.570 --> 00:00:13.870
+Garchi, findViewByID metodi sinf
+ichida e’lon qilinmagan bo‘lsada,
+
+00:00:13.870 --> 00:00:18.740
+biz uning AppCompatActivity ichida
+superklassda ta’riflanganini bilamiz.
+
+00:00:18.740 --> 00:00:20.440
+setContentView ham shunday.
+
+00:00:20.440 --> 00:00:23.820
+Bu AppCompatActivity 
+sinfi doirasida aniqlangan.
+
+00:00:23.820 --> 00:00:26.710
+Lekin, bu metidning ichida aniq 
+nima sodir bo‘lmoqda va 
+
+00:00:26.710 --> 00:00:29.300
+nima uchun resurs ID ga o‘tishimiz kerak?
+
+00:00:29.300 --> 00:00:31.930
+Nega bu yerda qo‘shimcha qavslar bor?
+
+00:00:31.930 --> 00:00:34.410
+Bu savolga javob berish uchun, men
+shu paytgacha o‘rganganlarimizni 
+
+00:00:34.410 --> 00:00:37.720
+xulosa qilmoqchiman va bu kod nega 
+bu yerda mavjudligiga olib bormoqchiman.
+
+00:00:38.870 --> 00:00:40.350
+Bu diagramma yodingizdami?
+
+00:00:40.350 --> 00:00:44.910
+Qurilmadagi ilova belgisini bosganingizda, 
+u asosiy faoliyatni ochib beradi.
+
+00:00:44.910 --> 00:00:48.650
+Bizning kodimiz ichida tizim 
+tomonidan asosiy faoliyatning 
+
+00:00:48.650 --> 00:00:49.770
+onCreate metodi chaqiriladi.
+
+00:00:49.770 --> 00:00:53.220
+Ushbu usulda bizda resurs 
+joylshuv tartibi ID si bilan 
+
+00:00:53.220 --> 00:00:55.340
+setContentView deb nomlangan metod mavjud.
+
+00:00:55.340 --> 00:00:59.710
+Oldinroq mashqda biz setContentView 
+uchun bitta texttView berdik.
+
+00:00:59.710 --> 00:01:01.950
+Ammo biz ilovamiz uchun bittadan
+ortiq ko‘rinish xohlaymiz. 
+
+00:01:01.950 --> 00:01:04.650
+Shu sababli joylashuv tartibi 
+manba ID-sini beramiz. 
+
+00:01:04.650 --> 00:01:06.980
+Bu XML fayliga yo‘naltiradi.
+
+00:01:06.980 --> 00:01:09.560
+Tarkib ko‘rinishini o‘rnatganimizdan 
+so‘ng, faoliyat ishlaydi va XML
+
+00:01:09.560 --> 00:01:13.200
+joylashuv tartibi faylini topib,
+har bir qatorni o‘qib chiqadi.
+
+00:01:13.200 --> 00:01:18.140
+Har bir ko‘rinish uchun u Java 
+ob’ektini ochadi yoki yaratadi.
+
+00:01:18.140 --> 00:01:19.860
+U XML faylidan o‘tadi va 
+
+00:01:19.860 --> 00:01:23.040
+keyin Java ob’ektlarining ushbu
+butun ierarxiyasini yaratadi.
+
+00:01:23.040 --> 00:01:27.090
+Ushbu ko‘rinishlarning har 
+birini to‘ldirganda, u NewTextView 
+
+00:01:27.090 --> 00:01:31.600
+yoki NewLinearLayout konstruktorini 
+chaqirmoqda va uni to‘g‘ri sozlay olish
+
+00:01:31.600 --> 00:01:34.760
+mumkin bo‘lishi uchun ushbu atributlarning 
+barchasini Java ob’ektiga o‘tkazmoqda.
+
+00:01:34.760 --> 00:01:38.700
+Diqqat qiling, biz NewTextView va
+NewLinearLayout uchun kod yozishimiz va 
+
+00:01:38.700 --> 00:01:40.650
+shrift o‘lchami berishimiz shart bo‘lmadi.
+
+00:01:40.650 --> 00:01:44.540
+Bularning barchasi faoliyatning
+to‘ldirilish jarayoni bilan bog‘liq edi.
+
+00:01:44.540 --> 00:01:48.290
+Dastur ishlab turganida ushbu 
+ko‘rinishlar bilan aloqaga 
+
+00:01:48.290 --> 00:01:49.830
+kirishish va matnni yoki tugmalarni 
+
+00:01:49.830 --> 00:01:54.480
+o‘zgartirish uchun biz ushbu
+Java ob’ektlarini topishimiz kerak. 
+
+00:01:54.480 --> 00:01:58.560
+Ularni topgandan so‘ng, asosiy faoliyatda 
+ularni o‘zgaruvchilar sifatida saqlay olamiz?
+
+00:01:58.560 --> 00:02:01.360
+Esda tutingki, biz yangi 
+TextViewlarni noldan yaratmayapmiz, 
+
+00:02:01.360 --> 00:02:04.310
+biz, shunchaki, ushbu ko‘rinish 
+ierarxiyasida mavjudlarini topmoqdamiz.
+
+00:02:06.060 --> 00:02:08.639
+Bular shu paytgacha asosiy faoliyatda
+foydalangan o‘zgaruvchilarimizdir.
+
+00:02:08.639 --> 00:02:13.160
+Biz miqdor, narx va narx 
+xabari uchun o‘zgaruvchiga egamiz.
+
+00:02:13.160 --> 00:02:15.830
+Bu mahalliy va global 
+o‘zgaruvchilar aralashmasi.
+
+00:02:15.830 --> 00:02:19.520
+Views ierarxiyasida ko‘rinishlar bilan o‘zaro 
+aloqaga kirishish uchun biz ushbu o‘ziga xos 
+
+00:02:19.520 --> 00:02:21.149
+qarashlarga murojaat qiladigan o‘zgaruvchilarni yaratishimiz kerak.
+
+00:02:22.500 --> 00:02:25.765
+Masalan, biz quantityTextView 
+nomli o‘zgaruvchi yaratishimiz mumkin,
+
+00:02:25.765 --> 00:02:28.580
+u bu yerdagi TextView ga tegishli.
+
+00:02:28.580 --> 00:02:31.340
+Agar siz UI-ning ichida qo‘shish 
+yoki minus ishoralariga bossangiz, 
+
+00:02:31.340 --> 00:02:34.340
+TextView matnini boshqa raqam ko‘rsatadigan 
+qilib o‘zgartirsangiz bo‘ladi.
+
+00:02:36.220 --> 00:02:39.340
+Biz yana orderSummaryTextView 
+nomli o‘zgruvchiga ega bo‘la olamiz, 
+
+00:02:39.340 --> 00:02:41.730
+u mana bu TextView-ga ishora qiladi.
+
+00:02:41.730 --> 00:02:44.590
+Siz buyurtma qilish tugmasini 
+bosganingizda orderSummaryTextView 
+
+00:02:44.590 --> 00:02:47.660
+o‘zining matnini yangi buyurtma 
+xulosasini ko‘rsatadigan shaklga keltiradi.
+
+00:02:47.660 --> 00:02:51.680
+Demak, ushbu ko‘rinishlardan biriga 
+murojaat qiluvchi o‘zgaruvchilarning 
+
+00:02:51.680 --> 00:02:55.440
+bo‘lishi, dastur ishlab turganida UI-ni
+o‘zgartirishga foydali bo‘lishini ko‘rishingiz mumkin.
+
+00:02:55.440 --> 00:02:59.430
+Lekin, qanday qilib biz ushbu 
+o‘zgaruvchini bu TextView bilan
+
+00:02:59.430 --> 00:03:00.790
+bog‘lashni qanday amalga oshiramiz?
+
+00:03:00.790 --> 00:03:03.780
+Va qanday qilib bu yerdagi 
+orderSummaryTextView bilan TextView
+
+00:03:03.780 --> 00:03:04.495
+o‘rtasida bo‘g‘lanishni amalga oshiramiz?
+
+00:03:06.250 --> 00:03:08.139
+Orqada, XML joylashuv tartibi faylida, 
+
+00:03:08.139 --> 00:03:11.699
+biz ma’lum ko‘rinishga ko‘rish 
+ID-larini tayinlaganimizni eslaysizmi?
+
+00:03:12.953 --> 00:03:17.400
+Bu TextView uchun, biz 
+quantity.text.view ko‘rinish ID-sini berdik.
+
+00:03:17.400 --> 00:03:21.340
+Bu ko‘rinish uchun 
+order.summary.text.view ID sini berdik.
+
+00:03:21.340 --> 00:03:24.240
+Ko‘rishlar uchun ID-lar tayinlash ixtiyoriy, 
+
+00:03:24.240 --> 00:03:28.760
+agar keyinchalik ushbu ko‘rinishga murojaat qilishingiz 
+kerak bo‘lsa, siz ko‘rish ID-sini tayinlashingiz kerak.
+
+00:03:28.760 --> 00:03:33.180
+Masalan, siz har narsaga ko‘rinish 
+ID-si yarata olasiz, ammo bu keraksiz.
+
+00:03:33.180 --> 00:03:37.470
+Biz Java kodimizda ushbu ikki ko‘rinishga 
+haqiqatdan murojaat qilishimiz kerak.
+
+00:03:37.470 --> 00:03:39.860
+Shunday qilib, keling, bu ikkita 
+ko‘rinishga ID-larni tayinlaylik.
+
+00:03:40.880 --> 00:03:43.900
+Yaxshi, biz ko‘rinishlarga 
+ko‘rinish Id larini ta’sis etdik, 
+
+00:03:43.900 --> 00:03:46.700
+ularga keyinchalik Java kodida 
+murojaat qila olishimiz uchun. 
+
+00:03:46.700 --> 00:03:51.350
+Yana biz ushbu ko‘rinishlarga ishora qiladigan 
+o‘zgaruvchilar bizga zarurligini aniqladik, 
+
+00:03:51.350 --> 00:03:53.740
+shunda biz ushbu ko‘rinishlarni boshqaramiz.
+
+00:03:53.740 --> 00:03:57.680
+Lekin, hali ham bu o‘zgaruvchi 
+va ma‘lum bir Java ob’ekti 
+
+00:03:57.680 --> 00:04:01.160
+o‘rtasida bog‘lanishni 
+amalga oshirishni aniq bilmaymiz.
+
+00:04:01.160 --> 00:04:04.700
+Va bu o‘zgaruvchi va Java 
+ob’ekti uchun ham shunday.
+
+00:04:04.700 --> 00:04:08.820
+AppCompatActivity sinfida, men
+sizga aniq usulni ko‘rsatmoqchiman.
+
+00:04:08.820 --> 00:04:12.560
+U findViewById deb nomlanadi va
+kirish ma’lumotiga manba ID-sini oladi. 
+
+00:04:13.810 --> 00:04:16.290
+FindViewById metodi kirish 
+
+00:04:16.290 --> 00:04:21.220
+ma’lumoti sifatida berilgan ID 
+bilan mos keladigan ko‘rinishni topadi.
+
+00:04:21.220 --> 00:04:23.790
+Faoliyat ushbu ko‘rinishni onCreate 
+
+00:04:23.790 --> 00:04:28.890
+metodida qayta ishlangan XML 
+ko‘rinish ierarxiyasidan qidiradi.
+
+00:04:28.890 --> 00:04:30.560
+Oldinroq ta’kidlaganimday,
+
+00:04:30.560 --> 00:04:34.350
+the activity onCreate metodi ko‘rinish
+ierxiyasini sozlaydi, keyin, 
+
+00:04:34.350 --> 00:04:39.405
+findViewByID metodi ishga tushib o‘sha 
+ko‘rinish ierarxiyasidan ko‘rinishni topadi.
+
+00:04:39.405 --> 00:04:43.615
+Ushbu metodning qaytaradigan qiymati -bu,
+ko‘rinish turining ob’ektidir.
+
+00:04:43.615 --> 00:04:47.415
+Bu chap tarfdagi ustun ushbu metodlarning
+barchasining qaytaradigan qiymatini ko‘rsatadi.
+
+00:04:47.415 --> 00:04:51.815
+Bu shuni anglatadiki, faoliyat kodimiz
+ichida findViewByID ni chaqirishimiz mumkin, 
+
+00:04:51.815 --> 00:04:56.670
+biz istagan ko‘rinishga manba ID-sini 
+beramiz, keyin u ko‘rinish ob’ektini 
+
+00:04:56.670 --> 00:04:59.980
+qaytaradi va biz uni faoliyat ichida 
+o‘zgaruvchi sifatida saqlay olamiz.
+
+00:05:02.170 --> 00:05:04.300
+MainActivity Java kodi 
+quydagi ko‘rinishni oladi.
+
+00:05:05.360 --> 00:05:07.230
+Biz findViewById ni chaqiramiz va
+
+00:05:07.230 --> 00:05:12.140
+so‘ng, kirish ma’lumotiga biz 
+hoxlagan manba ID-sini kiritamiz. 
+
+00:05:12.140 --> 00:05:15.050
+Biz bu TextView-ga 
+order.summary.text.view ID sini berdik.
+
+00:05:15.050 --> 00:05:19.370
+Shu sababli bu yerda uni 
+R.id.order_summary_text_view deb keltirdik.
+
+00:05:19.370 --> 00:05:23.490
+Bu metod butun ko‘rinish ierarxiyasini 
+kezib chiqadi va ushbu 
+
+00:05:23.490 --> 00:05:24.930
+ID-ga ega ko‘rinishni topadi.
+
+00:05:26.110 --> 00:05:31.030
+Keyin u metodning qaytaruvchi qiymati 
+sifatida bu Java ob’ektini qaytaradi.
+
+00:05:31.030 --> 00:05:34.790
+Biz qaytarilgan qiymatni chap 
+tarafdagi orderSummaryTextView 
+
+00:05:34.790 --> 00:05:39.290
+nomli o‘zgaruvchiga saqlaymiz, u 
+ko‘rinish turining o;zgaruvchisi. 
+
+00:05:39.290 --> 00:05:42.610
+Demak, u ko‘rinishni qaytaradi va uni
+ko‘rinish o‘zgaruvchisi ichida saqlaymiz. 
+
+00:05:42.610 --> 00:05:47.280
+Keyinchalik, MainActivity-da findViewByID-ni
+chaqirishimiz ham mumkin va unga
+
+00:05:47.280 --> 00:05:53.120
+R.id.quantity_text_view manba ID-sini beramiz,
+u bu yerdagi TextView-ga tegishli.
+
+00:05:53.120 --> 00:05:55.610
+Bu miqdorni tanlash 
+bo‘yicha TextView.
+
+00:05:55.610 --> 00:05:58.847
+U chaqirilganda, faoliyat ko‘rinish 
+ierarxiyasi ichin qidiradi va ushbu 
+
+00:05:58.847 --> 00:06:01.460
+ID-ga mos ko‘rinishni topishga urinadi.
+
+00:06:01.460 --> 00:06:03.265
+Keyin bu ko‘rinishni qaytaradi va 
+
+00:06:03.265 --> 00:06:07.190
+biz uni quantity_text_view deb
+nomlangan o‘zgaruvchida saqlasak bo‘ladi.
+
+00:06:07.190 --> 00:06:09.490
+Bu o‘zgaruvchining 
+ma’lumot turi ham View. 
+
+00:06:10.490 --> 00:06:13.440
+Bu siz MainActivity ichida qanday 
+qilib siz quantityTextView va 
+
+00:06:13.440 --> 00:06:17.190
+orderSummaryTextView o‘zgaruvchilariga 
+ega bo‘lishingizni va bu o‘zgaruvchilar 
+
+00:06:17.190 --> 00:06:20.800
+bu ko‘rinish ierarxiyasidagi Java 
+ob’ektlariga qanday bog‘lanishini ko‘rsatadi.
+
+00:06:20.800 --> 00:06:21.396
+Aytgancha,
+
+00:06:21.396 --> 00:06:25.460
+Men chap tomondagi ustunga ushbu o‘zgaruvchilardan 
+har birida ma’lumotlar turlarini ko‘rsatib o‘tdim.
+
+00:06:26.690 --> 00:06:29.750
+Shunday qilib, bu ikki o‘zgaruvchilar 
+bu yerda e’lon qilingan View turiga ega.
+

@@ -1,0 +1,429 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.430 --> 00:00:02.969
+Trở lại hoạt động chính
+của ứng dụng Just Java.
+
+00:00:02.969 --> 00:00:06.190
+Cụ thể chúng ta xem
+phương thức DisplayMessage[hiển thị tin]
+
+00:00:06.190 --> 00:00:08.570
+Và tìm hiểu mọi yếu tố
+có mặt ở đây.
+
+00:00:08.570 --> 00:00:13.870
+Dù findViewByld [tìm hiển thị bằng ID]
+không được trình báo trong lớp này
+
+00:00:13.870 --> 00:00:18.740
+chúng ta biết rằng nó đã được định nghĩa
+trong lớp code con của AppCompatActivity.
+
+00:00:18.740 --> 00:00:20.440
+Tương tự với setContentView.
+
+00:00:20.440 --> 00:00:23.820
+Nó cũng được định nghĩa
+trong AppCompatActivity.
+
+00:00:23.820 --> 00:00:26.710
+Nhưng chính xác cái gì đang xảy ra
+trong phương thức này.
+
+00:00:26.710 --> 00:00:29.300
+Tại sao phải chuyển vào 1 ID tài nguyên?
+
+00:00:29.300 --> 00:00:31.930
+Tại sao có thêm ngoặc đơn ở đây?
+
+00:00:31.930 --> 00:00:34.410
+Để trả lời câu hỏi đó, tôi sẽ
+tóm tắt mọi thứ chúng ta đã học
+
+00:00:34.410 --> 00:00:37.720
+trong những phần trước
+và giải thích tại sao code này tồn tại.
+
+00:00:38.870 --> 00:00:40.350
+Bạn nhớ sơ đồ này không?
+
+00:00:40.350 --> 00:00:44.910
+Khi bạn click vào biểu tượng ứng dụng
+trên thiết bị, nó sẽ mở hoạt động chính.
+
+00:00:44.910 --> 00:00:48.650
+Phương thức onCreate[khởi động]
+của hoạt động chính
+
+00:00:48.650 --> 00:00:49.770
+được gọi bởi hệ thống.
+
+00:00:49.770 --> 00:00:53.220
+Trong phương thức này có một
+phương thức là setContentView
+
+00:00:53.220 --> 00:00:55.340
+Đi với ID layout tài nguyên.
+
+00:00:55.340 --> 00:00:59.710
+Trong bài tập trước chúng ta đã chuyển
+hiển thị văn bản đơn vào hiển thị gốc.
+
+00:00:59.710 --> 00:01:01.950
+Nhưng chúng ta cần nhiều hơn một hiển thị
+cho ứng dụng của chúng ta.
+
+00:01:01.950 --> 00:01:04.650
+Nên chúng ta chuyển ID layout tài nguyên.
+
+00:01:04.650 --> 00:01:06.980
+Thao tác này tương ứng một tập tin XML.
+
+00:01:06.980 --> 00:01:09.560
+Khi đã thiết lập hiển thị nội dung,
+hoạt động sẽ bắt đầu
+
+00:01:09.560 --> 00:01:13.200
+và sẽ truy tìm tập tin layout XML
+sau đó đọc qua từng dòng.
+
+00:01:13.200 --> 00:01:18.140
+Với mỗi hiển thị, nó bung ra, tức là tạo
+một đối tượng Java cho nó.
+
+00:01:18.140 --> 00:01:19.860
+Nó quét qua tập tin XML,
+
+00:01:19.860 --> 00:01:23.040
+và thiết lập toàn bộ
+hệ thống phân cấp đối tượng của Java.
+
+00:01:23.040 --> 00:01:27.090
+Khi nó bung ra những hiển thị này,
+nó gọi đến những hàm tạo,
+
+00:01:27.090 --> 00:01:31.600
+NewTextView hoặc
+NewLinearLayout rồi chuyển thuộc tính
+
+00:01:31.600 --> 00:01:34.760
+vào các đối tượng Java,
+qua đó có thể được thiết lập đúng.
+
+00:01:34.760 --> 00:01:38.700
+Hãy lưu ý không phải viết mã
+cho NewTextView hoặc NewLinearLayout
+
+00:01:38.700 --> 00:01:40.650
+để định kích thước phông chữ.
+
+00:01:40.650 --> 00:01:44.540
+Tất cả được xử lý bởi
+ánh xạ đối tượng trong hoạt động
+
+00:01:44.540 --> 00:01:48.290
+Để tương tác các hiển thị này trong khi
+ứng dụng đang chạy và để thay đổi chúng
+
+00:01:48.290 --> 00:01:49.830
+ví dụ, để thay đổi nội dung văn bản
+
+00:01:49.830 --> 00:01:54.480
+hoặc thay đổi các nút
+chúng ta cần tìm các đối tượng Java này.
+
+00:01:54.480 --> 00:01:58.560
+Khi tìm thấy chúng, có thể lưu chúng
+thành biến trong hoạt động chính.
+
+00:01:58.560 --> 00:02:01.360
+Hãy nhớ rằng chúng ta sẽ không tạo
+TextView mới từ con số không,
+
+00:02:01.360 --> 00:02:04.310
+chúng ta tìm kiếm các textview hiện có
+trong hệ phân cấp hiển thị này.
+
+00:02:06.060 --> 00:02:08.639
+Đây là các biến số mà chúng ta đã sử dụng
+từ đầu cho đến nay trong hoạt động chính.
+
+00:02:08.639 --> 00:02:13.160
+Chúng ta có một biến số về số lượng,
+giá cả, và tin nhắn giá.
+
+00:02:13.160 --> 00:02:15.830
+Đây là sự kết hợp giữa các biến cục bộ
+và biến toàn cục.
+
+00:02:15.830 --> 00:02:19.520
+Để tương tác với các hiển thị
+trong hệ phân cấp hiển thị nên tạo biến
+
+00:02:19.520 --> 00:02:21.149
+tham chiếu cho các hiển thị này.
+
+00:02:22.500 --> 00:02:25.765
+Ví dụ, có thể tạo ra một biến số
+tên là hiển thị văn bản số lượng,
+
+00:02:25.765 --> 00:02:28.580
+có liên quan tới TextView ở đây.
+
+00:02:28.580 --> 00:02:31.340
+Nếu bạn click vào nút dấu cộng
+hoặc nút trừ trong giao diện người dùng
+
+00:02:31.340 --> 00:02:34.340
+có thể hiệu đính các văn bản trong
+TextView để hiển thị một con số khác.
+
+00:02:36.220 --> 00:02:39.340
+Chúng ta có thể tạo một biến số khác
+orderSummaryTextView
+
+00:02:39.340 --> 00:02:41.730
+trỏ đến TextView này.
+
+00:02:41.730 --> 00:02:44.590
+Khi bạn click vào nút đặt hàng
+thì orderSummaryTextView
+
+00:02:44.590 --> 00:02:47.660
+sẽ thay đổi nội dung của nó
+để hiển thị nhật ký đặt hàng mới.
+
+00:02:47.660 --> 00:02:51.680
+Bạn sẽ thấy tại sao khi nắm các biến số
+và trỏ chúng đến một số hiển thị thế này
+
+00:02:51.680 --> 00:02:55.440
+sẽ giúp ích đáng kể khi thay đổi
+giao diện người dùng lúc app đang chạy.
+
+00:02:55.440 --> 00:02:59.430
+Nhưng chúng ta phải làm gì để kết nối
+biến số ở đây
+
+00:02:59.430 --> 00:03:00.790
+với TextView này?
+
+00:03:00.790 --> 00:03:03.780
+Làm cách nào để kết nối
+orderSummaryTextView, ở đây,
+
+00:03:03.780 --> 00:03:04.780
+với TextView này?
+
+00:03:06.250 --> 00:03:08.139
+Quay trở vào tập tin layout XML,
+
+00:03:08.139 --> 00:03:11.699
+Bạn có nhớ rằng chúng ta đã ấn định
+ID hiển thị tới các hiển thị nhất định?
+
+00:03:12.953 --> 00:03:17.400
+Với TextView này, đã gán cho nó
+một ID hiển thị quantity.text.view.
+
+00:03:17.400 --> 00:03:21.340
+Đối với hiển thị này đã gán cho nó một ID
+là order.summary.text.view.
+
+00:03:21.340 --> 00:03:24.240
+Việc gán ID cho hiển thị là tùy ý.
+
+00:03:24.240 --> 00:03:28.760
+Bạn nên gán chỉ một ID hiển thị
+nếu cần tham chiếu hiển thị đó sau này.
+
+00:03:28.760 --> 00:03:33.180
+Ví dụ, có thể gán ID hiển thị
+tất cả mọi thứ, nhưng không cần thiết.
+
+00:03:33.180 --> 00:03:37.470
+Chỉ thực sự cần tham chiếu tới chúng
+về sau trong code Java của chúng ta.
+
+00:03:37.470 --> 00:03:39.860
+Chúng ta hãy gán
+ID cho các hiển thị này.
+
+00:03:40.880 --> 00:03:43.900
+Được rồi, chúng ta đã xác định với nhau
+là các hiển thị sẽ có mã số ID riêng
+
+00:03:43.900 --> 00:03:46.700
+để có thể tham chiếu
+sau này trong code Java.
+
+00:03:46.700 --> 00:03:51.350
+Chúng ta cũng xác định với nhau là
+các biến trỏ đến các hiển thị này
+
+00:03:51.350 --> 00:03:53.740
+để có thể thao tác với các hiển thị đó.
+
+00:03:53.740 --> 00:03:57.680
+Nhưng chúng ta vẫn chưa biết chính xác
+cách kết nối giữa
+
+00:03:57.680 --> 00:04:01.160
+các biến này
+với đối tượng Java cụ thể này.
+
+00:04:01.160 --> 00:04:04.700
+Cũng tương tự cho biến này
+và đối tượng Java này.
+
+00:04:04.700 --> 00:04:08.820
+Trong lớp AppCompatActivity,
+tôi muốn cho bạn xem một phương thức.
+
+00:04:08.820 --> 00:04:12.560
+Có tên gọi là findViewByld
+nó nhận ID tài nguyên đầu vào.
+
+00:04:13.810 --> 00:04:16.290
+Phương thức findViewByld
+
+00:04:16.290 --> 00:04:21.220
+tìm ra một chế độ hiển thị tương thích
+với ID chuyển tới như dữ liệu đầu vào.
+
+00:04:21.220 --> 00:04:23.790
+Hoạt động tìm kiếm hiển thị này
+
+00:04:23.790 --> 00:04:28.890
+trong hệ phân cấp hiển thị từ XML
+đã được xử lý trong phương thức onCreate.
+
+00:04:28.890 --> 00:04:30.560
+Như tôi đã đề cập trước đó.
+
+00:04:30.560 --> 00:04:34.350
+Các hoạt động phương thức onCreate
+thiết lập một hệ phân cấp
+
+00:04:34.350 --> 00:04:39.405
+sau đó phương thức findViewByld đi tìm
+một hiển thị trong phân cấp hiển thị đó.
+
+00:04:39.405 --> 00:04:43.615
+Giá trị trả về của phương thức này
+là đối tượng của loại hiển thị.
+
+00:04:43.615 --> 00:04:47.415
+Cột bên tay trái hiển thị
+giá trị trả lại cho các phương thức này.
+
+00:04:47.415 --> 00:04:51.815
+Nghĩa là trong hoạt động của chúng ta
+chúng ta có thể gọi findViewByldcode,
+
+00:04:51.815 --> 00:04:56.670
+chuyển nó vào ID tài nguyên của hiển thị
+mà chúng ta cần, sau đó nó sẽ trả về
+
+00:04:56.670 --> 00:04:59.980
+một đối tượng hiển thị, sau đó lưu nó
+như một biến trong hoạt động.
+
+00:05:02.170 --> 00:05:04.300
+Mã MainActivity Java
+sẽ như thế này.
+
+00:05:05.360 --> 00:05:07.230
+Chúng ta có thể gọi findViewByld.
+
+00:05:07.230 --> 00:05:12.140
+Chuyển nó vào như ID tài nguyên đầu vào
+trong chế độ hiển thị mà chúng ta muốn.
+
+00:05:12.140 --> 00:05:15.050
+Chúng ta đã gán cho TextView này một ID
+order.summary.text.view.
+
+00:05:15.050 --> 00:05:19.370
+Ở đây chúng ta tham chiếu nó thì ra
+R.id.order_summary_text_view.
+
+00:05:19.370 --> 00:05:23.490
+Phương thức này sẽ đi qua và rà soát
+toàn hệ phân cấp hiển thị sau đó tìm kiếm
+
+00:05:23.490 --> 00:05:24.930
+chế độ hiển thị đi kèm với ID này.
+
+00:05:26.110 --> 00:05:31.030
+Hệ thống sẽ trả lại đối tượng Java này
+nó là giá trị trả về của phương thức.
+
+00:05:31.030 --> 00:05:34.790
+Có thể lưu giá trị trả về vào trong
+biến này ở bên tay trái,
+
+00:05:34.790 --> 00:05:39.290
+gọi là orderSummaryTextView,
+và đây là biến của chế độ hiển thị Type.
+
+00:05:39.290 --> 00:05:42.610
+Nó sẽ trả lại một hiển thị
+ta sẽ lưu nó bên trong một biến hiển thị.
+
+00:05:42.610 --> 00:05:47.280
+Sau này trong MainActivity, cũng có thể
+gọi findViewByld rồi sau đó chuyển nó
+
+00:05:47.280 --> 00:05:53.120
+vào ID tài nguyên, R.id.quantity_tex_view
+liên quan với chế độ hiển thị TextView.
+
+00:05:53.120 --> 00:05:55.610
+Đây là TextView
+trong nút chọn số lượng.
+
+00:05:55.610 --> 00:05:58.847
+Khi nó được gọi, hoạt động sẽ
+tìm kiếm hệ phân cấp chế độ hiển thị
+
+00:05:58.847 --> 00:06:01.460
+để tìm hiển thị đi kèm với ID này.
+
+00:06:01.460 --> 00:06:03.265
+Sau đó nó sẽ trả về chế độ hiển thị này.
+
+00:06:03.265 --> 00:06:07.190
+Chúng ta có thể lưu nó trong một biến
+có tên gọi quantity_text_view.
+
+00:06:07.190 --> 00:06:09.490
+Biến này cũng có
+loại hiển thị dữ liệu.
+
+00:06:10.490 --> 00:06:13.440
+Qua đó lý giải cách bạn có thể
+có được quantityTextView
+
+00:06:13.440 --> 00:06:17.190
+và các biến orderSummaryTextView
+trong hoạt động chính.
+
+00:06:17.190 --> 00:06:20.800
+Các biến này có thể kết nối
+với các đối tượng Java trong hệ phân cấp.
+
+00:06:20.800 --> 00:06:21.396
+Tôi chợt nhớ ra.
+
+00:06:21.396 --> 00:06:25.460
+Tôi đã liệt kê các kiểu dữ liệu ở đây
+Các biến nằm ở cột bên trái.
+
+00:06:26.690 --> 00:06:29.750
+Hai biến này có
+hiển thị Type như đã trình báo ở đây.
+

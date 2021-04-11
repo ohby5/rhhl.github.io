@@ -1,0 +1,367 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.860 --> 00:00:04.030
+Daha önce ele aldığımız ekran mesajı
+yöntemine geri dönelim.
+
+00:00:05.030 --> 00:00:07.570
+Burada tam olarak ne olduğunu
+anlamaya çalışıyorduk.
+
+00:00:08.630 --> 00:00:12.450
+Şimdiye kadar öğrendiklerimiz kadarıyla
+burada bir TextView nesnesi ve
+
+00:00:12.450 --> 00:00:15.670
+orderSummaryTextView
+adı verilen bir değişken var.
+
+00:00:15.670 --> 00:00:18.870
+Sonra gerçekten bilmediğimiz
+bir dizi kod var.
+
+00:00:18.870 --> 00:00:22.820
+Ama sonraki satırda, bu değişkeni
+orderSummaryTextView kullanıyoruz ve
+
+00:00:22.820 --> 00:00:25.030
+üzerindeki metni bu mesaj
+olarak ayarlamaya çalışıyoruz.
+
+00:00:26.250 --> 00:00:29.470
+Nesneler üzerine bunun gibi nasıl
+yöntem çağırılacağını daha fazla bakalım.
+
+00:00:31.250 --> 00:00:34.920
+Nesne üzerine yöntem çağırdığımızda
+şu formatı izlemelidir.
+
+00:00:34.920 --> 00:00:39.560
+Önce Nesne Değişken İsmini yazarız
+bu durumda titleTextView’dür.
+
+00:00:39.560 --> 00:00:41.160
+sonra bir nokta ekliyoruz.
+
+00:00:41.160 --> 00:00:45.350
+Sonra bunu yöntem ismi izler
+ki burada setText’dir.
+
+00:00:45.350 --> 00:00:49.390
+Bu yöntem TextView Java sınıfında
+tam olarak böyle tanımlanır.
+
+00:00:49.390 --> 00:00:53.250
+Yöntem bildirimi aynı zamanda bir dizinin
+girdi parametresi olduğunu belirtir.
+
+00:00:53.250 --> 00:00:58.060
+bu nedenle parantez koyarız ve sonra
+girdi olarak bir dizi gireriz.
+
+00:00:58.060 --> 00:01:00.300
+Daha sonra ifadeyi bir noktalı virgül
+ile sonlandırırız.
+
+00:01:00.920 --> 00:01:05.459
+Bu kod satırını yazdığınızda
+titleTextView nesnesini
+
+00:01:05.459 --> 00:01:08.100
+ekranda bu görünecek şekilde değiştirir.
+
+00:01:08.100 --> 00:01:10.490
+Bu nesne değişken ismini burada
+kullanmamızın sebebi,
+
+00:01:10.490 --> 00:01:13.600
+uygulamanızda birden çok TextViews
+olabilecek olmasıdır.
+
+00:01:13.600 --> 00:01:16.379
+Bu nedenle yöntem çağrılmasını
+doğru nesne örneği üzerine yapın.
+
+00:01:17.560 --> 00:01:20.980
+Giriş bağımsız değişkenlerini
+belirttiğinizde doğru değişkenleri
+
+00:01:20.980 --> 00:01:24.620
+yöntem bildirimine göre doğru sırada
+yaptığınızdan emin olun.
+
+00:01:25.660 --> 00:01:29.460
+Bu nedenle eğer girdi yoksa
+sadece boş bir parantez setiniz olur.
+
+00:01:29.460 --> 00:01:32.820
+Bir yönteme girdi sokma şeklimiz
+daha önce üçüncü derste
+
+00:01:32.820 --> 00:01:34.110
+öğrendiğimizle aynıdır.
+
+00:01:34.110 --> 00:01:36.440
+Ayrıca nesne değişken ismi ile
+yöntem ismini bir nokta ile
+
+00:01:36.440 --> 00:01:38.450
+ayırmayı unutmayın.
+
+00:01:38.450 --> 00:01:42.450
+İşte başka bir örnek,
+aynı titleTextView nesnesine,
+
+00:01:42.450 --> 00:01:45.190
+bir TextSize yöntemi çağıracağız.
+
+00:01:45.190 --> 00:01:49.220
+Bu yöntem yeni metin boyutu için
+girdi olarak bir tamsayı kullanır.
+
+00:01:49.220 --> 00:01:52.030
+Bu nedenle bu örnekte, bir sonraki
+metin boyutu olarak 18 yazıyoruz.
+
+00:01:52.980 --> 00:01:55.510
+Android cihaz bu kod satırını
+çalıştırdığında,
+
+00:01:55.510 --> 00:02:00.460
+bu titleTextView’ü daha büyük
+metin boyutu 18 olarak değiştirecektir.
+
+00:02:00.460 --> 00:02:02.260
+Bu örnekte,
+
+00:02:02.260 --> 00:02:06.540
+TextView nesnesi üzerine warningTextView
+adı verilen bir yöntem çağırıyoruz.
+
+00:02:07.580 --> 00:02:11.140
+Bu yönteme setTextColor adı verilir ve
+girdi olarak yeni bir renk kullanır.
+
+00:02:12.140 --> 00:02:16.010
+Rengin Color.RED olarak belirtildiğine
+dikkat edin.
+
+00:02:16.010 --> 00:02:18.070
+Bu nedenle renk sınıfı için dokümantasyona
+bakarsak
+
+00:02:18.070 --> 00:02:22.030
+aşağı kayıyoruz ve burada kırmızının
+tanımlandığını görüyoruz.
+
+00:02:22.030 --> 00:02:25.290
+Burada kullanabileceğiniz
+bir dizi başka renk bulunmaktadır.
+
+00:02:26.370 --> 00:02:30.850
+Bu nedenle setTextColor çağırdığınızda,
+Color.BLUE ve Color.BLACK çağırabilirsiniz
+
+00:02:30.850 --> 00:02:33.835
+Son olarak ImageView üzerine
+bir yöntem çağırma örneği.
+
+00:02:34.882 --> 00:02:39.230
+Bu ImageView nesnesinin değişken ismi
+welcomeImageView’dir ve
+
+00:02:39.230 --> 00:02:41.260
+üzerine setImageResource
+yöntemi çağırıyoruz.
+
+00:02:42.380 --> 00:02:46.135
+Bu yöntem bu ImageView üzerine
+gelecek yeni resmi girdi olarak kullanır.
+
+00:02:47.400 --> 00:02:51.580
+Yeni resmi R.drawable formatında
+bir kaynak ID olarak tanımlıyoruz.
+
+00:02:51.580 --> 00:02:53.000
+Ve bu dosya ismidir,
+
+00:02:54.100 --> 00:02:58.610
+bu Java kodda kaynak ID’nin
+başka bir kullanımıdır.
+
+00:02:58.610 --> 00:03:02.059
+TextView nesnesi üzerine çağırabileceğiniz
+yöntemlerin tam listesine ulaşmak için
+
+00:03:02.059 --> 00:03:04.867
+TextView Android dokümantasyon
+sayfasını açın.
+
+00:03:04.867 --> 00:03:08.810
+TextView Android araması yaparak ve
+tıklayarak buraya ulaşabilirsiniz.
+
+00:03:09.840 --> 00:03:12.110
+Bu zaten bildiğimiz bir sayfa ve
+
+00:03:12.110 --> 00:03:15.740
+bu sayfada listelenen XML özelliklerini
+zaten biliyoruz.
+
+00:03:16.830 --> 00:03:19.900
+Biraz daha aşağı inersem
+metin görünümü sınıfında tüm
+
+00:03:19.900 --> 00:03:21.390
+ortak yöntemlerin listesini görürüm.
+
+00:03:21.910 --> 00:03:23.170
+Eğer bir şey bulmak isterseniz,
+
+00:03:23.170 --> 00:03:27.210
+Cmd+F, veya Windows’da iseniz
+Ctrl+F (komutunu) kullanabilirsiniz.
+
+00:03:27.210 --> 00:03:29.900
+Daha önce kullandığımız setTextColor
+yöntemini arayacağım.
+
+00:03:31.200 --> 00:03:32.740
+İşte setTextColor yöntemi ve
+
+00:03:32.740 --> 00:03:35.310
+girdi parametresi olarak
+bir tamsayı renk kullanıyor.
+
+00:03:36.420 --> 00:03:40.540
+Tüm bu yöntemler TextView sınıfında
+ortak yöntemler olarak bildirilir.
+
+00:03:40.540 --> 00:03:43.170
+Bu nedenle şimdi bu
+yöntemleri çağırabiliriz.
+
+00:03:43.170 --> 00:03:44.910
+Eğer özel yöntemler olarak
+bildirilselerdi,
+
+00:03:44.910 --> 00:03:46.210
+onları burada görmezdik.
+
+00:03:47.400 --> 00:03:49.070
+Bu yöntemleri çağırdığınızda,
+
+00:03:49.070 --> 00:03:52.370
+hangi girdi paramlarını gerektirdiğini
+kontrol ettiğinizden ve girdileri
+
+00:03:52.370 --> 00:03:55.680
+doğru sırada ve doğru veri tipinde
+girdiğinizden emin olun.
+
+00:03:56.910 --> 00:03:58.040
+Koda baktığınızda bazen
+
+00:03:58.040 --> 00:04:02.130
+yöntemi çağırırken nokta
+işaretini göremeyebilirsiniz.
+
+00:04:02.130 --> 00:04:06.150
+Farklılık bir sınıfın içinde ya da
+dışında olmanıza göre önemlidir.
+
+00:04:06.150 --> 00:04:08.730
+TextView sınıfı içinde
+bir örneğe bakalım.
+
+00:04:08.730 --> 00:04:12.540
+Bazı diğer yöntemler yanı sıra
+setText yöntemini tanımlı.
+
+00:04:12.540 --> 00:04:16.589
+Diyelim setText yöntemini
+bir diğer yöntemden çağırmak istiyorsunuz.
+
+00:04:16.589 --> 00:04:21.040
+Bunu setText’i çağırarak ve sonra
+girdi paramına girerek yapabilirsiniz.
+
+00:04:21.040 --> 00:04:24.070
+Fakat nokta nerede ve
+nesne değişken ismi nerede?
+
+00:04:24.070 --> 00:04:28.800
+Bu satır aslında this.setText("Hello") için
+bir kısaltma.
+
+00:04:28.800 --> 00:04:31.360
+Bu mevcut nesne örneğine
+işaret ediyor ve
+
+00:04:31.360 --> 00:04:34.800
+sonra setText bu nesneye
+çağırılıyor.
+
+00:04:34.800 --> 00:04:38.880
+Bu nesneler üzerine yöntem çağırdığımızda
+daha aşina olduğumuz bir format.
+
+00:04:38.880 --> 00:04:42.301
+Bununla birlikte this. kısmı kastedilir
+ve opsiyoneldir.
+
+00:04:42.301 --> 00:04:47.380
+Bu nedenle kodumuzu daha öz yapmak için,
+setText("Hello) şeklinde çağırabiliriz.
+
+00:04:47.380 --> 00:04:50.670
+Bu nedenle setText’i sınıf içinde
+çağırmak ile sınıf dışında çağırmak
+
+00:04:50.670 --> 00:04:53.800
+arasındaki farka dikkat edin.
+
+00:04:53.800 --> 00:04:55.990
+Bunu düşündüğünüzde,
+bu daha anlamlı olacaktır,
+
+00:04:55.990 --> 00:04:59.380
+çünkü metni hangi TextView üzerine
+yerleştirmek istediğiniz bu sınıf içinde
+
+00:04:59.380 --> 00:05:03.380
+birden çok TextView olduğunda
+çok açık olacaktır.
+
+00:05:03.380 --> 00:05:06.280
+İşte TextView sınıfının içinde olmak ile
+TextView sınıfının dışında olmak
+
+00:05:06.280 --> 00:05:08.970
+arasındaki farkı gösteren
+diğer bir örnek.
+
+00:05:08.970 --> 00:05:12.330
+TextView sınıfının içinde,
+özel değişkenlere ve özel yöntemlere
+
+00:05:12.330 --> 00:05:14.210
+ulaşabilirsiniz.
+
+00:05:14.210 --> 00:05:16.060
+Eğer TextView sınıfının dışındaysanız,
+
+00:05:16.060 --> 00:05:21.150
+özel olan yöntemler kullanamazsınız
+ve özel değişkenlere erişemezsiniz.
+
+00:05:21.150 --> 00:05:25.100
+MainActivity sınıfı içinde,
+sadece ortak yöntemlere ve
+
+00:05:25.100 --> 00:05:27.500
+TextView sınıfı içindeki
+ortak değişkenlere erişebilirsiniz.
+

@@ -1,0 +1,210 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.340 --> 00:00:02.710
+Hãy cùng quay trở lại
+phương thức tính toán giá tiền.
+
+00:00:02.710 --> 00:00:06.440
+Khi chúng ta đã gọi phương thức đó, nó sẽ
+trả về tổng giá tiền của đơn đã đặt.
+
+00:00:06.440 --> 00:00:10.300
+Và chúng ta có thể lưu trữ giá trị đấy
+trong biến số nguyên này gọi là price
+
+00:00:10.300 --> 00:00:12.270
+Sau đó chúng ta có thể
+hiển thị nó trên màn hình.
+
+00:00:13.080 --> 00:00:15.670
+Để tích hợp phương thức
+tính giá tiền vào trong ứng dụng
+
+00:00:15.670 --> 00:00:18.180
+Chúng ta sẽ cần
+sử dụng những giá trị được trả về.
+
+00:00:18.180 --> 00:00:20.330
+Hãy cùng nhìn vào mã giả trước.
+
+00:00:20.330 --> 00:00:24.390
+Trong phương thức submitOrder, ta muốn
+gọi phương thức calculatePrice.
+
+00:00:24.390 --> 00:00:27.470
+Phương thức này sẽ tính toán
+tổng giá tiền của đơn đặt hàng.
+
+00:00:27.470 --> 00:00:29.530
+Và nó sẽ trả về
+giá trị đó ở đầu ra.
+
+00:00:29.530 --> 00:00:33.620
+Vậy chúng ta sẽ lưu giá trị đó
+trong 1 biến số nguyên gọi là price.
+
+00:00:33.620 --> 00:00:36.800
+Sau đó, chúng ta sẽ lấy biến price đấy,
+và hiển thị nó lên màn hình.
+
+00:00:36.800 --> 00:00:39.550
+Hãy cùng nhìn vào mã Java thực
+thay cho mã giả.
+
+00:00:39.550 --> 00:00:42.740
+Trong phương thức submitOrder,
+chúng ta sẽ thêm vào dòng mã này.
+
+00:00:42.740 --> 00:00:45.660
+Bạn có còn nhớ bài tập
+operator từ bài học 2 không?
+
+00:00:45.660 --> 00:00:49.300
+Bất cứ khi nào tôi thấy điều này,
+tôi sẽ tính toán phía tay phải trước.
+
+00:00:49.300 --> 00:00:53.260
+Phương thức calculatePrice này sẽ trả về
+chỉ 1 giá trị là giá tiền đơn đặt hàng.
+
+00:00:53.260 --> 00:00:57.010
+Và giá trị đó nên được lưu trữ trong
+biến số nguyên này gọi là price.
+
+00:00:57.010 --> 00:01:00.040
+Sau đó chúng ta có thể gọi
+một phương thức khác, displayPrice.
+
+00:01:00.040 --> 00:01:03.530
+Và đầu vào của phương thức này sẽ là
+biến price mà chúng ta
+
+00:01:03.530 --> 00:01:04.970
+vừa tạo ra.
+
+00:01:04.970 --> 00:01:07.440
+Đây là lần đầu tiên
+chúng ta thấy làm sao một phương thức
+
+00:01:07.440 --> 00:01:09.780
+có thể được sử dụng
+như một phần của biểu thức.
+
+00:01:09.780 --> 00:01:12.360
+Ví dụ,
+chúng ta có thể gọi phương thức này, và
+
+00:01:12.360 --> 00:01:16.330
+giá trị được trả về từ phương thức này
+có thể được cộng với một số khác, hoặc
+
+00:01:16.330 --> 00:01:19.700
+nếu nó là một chuỗi ký tự,
+thì có thể nối với các chuỗi ký tự khác.
+
+00:01:19.700 --> 00:01:23.450
+Điều quan trọng là mọi thứ
+bên phải được tính toán
+
+00:01:23.450 --> 00:01:27.920
+cho ra 1 giá trị duy nhất và sau đó
+được lưu trữ ở biến phía bên trái.
+
+00:01:27.920 --> 00:01:31.370
+Nhưng đối với ứng dụng Just Java, ta sẽ
+sử dụng calculatePrice() trực tiếp
+
+00:01:31.370 --> 00:01:32.380
+và hiển thị trên màn hình.
+
+00:01:33.590 --> 00:01:37.210
+Đối với phần lập trình này bạn sẽ phải
+chắc rằng phương thức tính toán giá tiền
+
+00:01:37.210 --> 00:01:40.910
+sẽ được định nghĩa và
+gọi chính xác trong ứng dụng Just Java.
+
+00:01:40.910 --> 00:01:43.620
+Đầu tiên hãy tập trung vào việc
+phương thức được định nghĩa thế nào.
+
+00:01:43.620 --> 00:01:46.980
+Sửa đổi phương thức calculatePrice()
+để có kiểu dữ kiện trả về đúng
+
+00:01:46.980 --> 00:01:48.770
+trong chữ ký phương thức.
+
+00:01:48.770 --> 00:01:50.960
+Cũng giả sử rằng có
+tham số đầu vào là 0.
+
+00:01:52.060 --> 00:01:54.930
+Bước tiếp theo là sửa đổi
+phần bên trong của phương thức.
+
+00:01:54.930 --> 00:01:58.210
+Hãy đảm bảo rằng nó sẽ trả về
+đúng giá tiền của tổng đơn đặt hàng,
+
+00:01:58.210 --> 00:02:01.910
+chính là số lượng cốc
+được đặt nhân với giá tiền mỗi cốc.
+
+00:02:01.910 --> 00:02:04.890
+Bạn có thể giả sử rằng mỗi
+cốc cà phê đáng giá 5$ và
+
+00:02:04.890 --> 00:02:08.038
+cứ việc hardcode
+trực tiếp vàophương thức này.
+
+00:02:08.038 --> 00:02:12.410
+Một khi tất cả đã xong, bạn có thể chuyển
+tới việc phương thức được gọi thế nào.
+
+00:02:12.410 --> 00:02:15.360
+Gọi caculatePrice từ
+phương thức submitOrder, và
+
+00:02:15.360 --> 00:02:18.000
+bạn có thể sử dụng dòng mã này mà
+chúng ta đề cập từ trước.
+
+00:02:18.000 --> 00:02:20.840
+Sau đó, tiếp tục và
+hiển thị giá trị của price ra màn hình.
+
+00:02:20.840 --> 00:02:23.900
+Bây giờ, bạn có thể sử dụng phương thức
+displayPrice, nhưng bạn cũng đã học
+
+00:02:23.900 --> 00:02:27.640
+ở phần cuối bài học 2 về cách để hiển thị 
+dòng chữ ra màn hình.
+
+00:02:27.640 --> 00:02:31.600
+Dòng chữ đó là, "Thank You", vậy nếu bạn
+có thể cố gắng tích hợp giá trị của price
+
+00:02:31.600 --> 00:02:34.140
+với dòng chữ đấy,
+điều đó sẽ là hoàn thiện nhất.
+
+00:02:34.140 --> 00:02:35.820
+Ứng dụng nên trông như thế này.
+
+00:02:35.820 --> 00:02:37.000
+Nếu bạn thay đổi số lượng và
+
+00:02:37.000 --> 00:02:40.830
+nhấn vào order, tổng giá tiền sẽ
+hiện ra cùng với dòng chữ đó.
+
+00:02:42.210 --> 00:02:44.400
+Khi bạn làm xong,
+hãy đánh dấu những ô này để tiếp tục.
+

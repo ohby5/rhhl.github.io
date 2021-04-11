@@ -1,0 +1,258 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.280 --> 00:00:03.200
+Neste quiz, você vai praticar
+a criação de um objeto <i>text view</i>
+
+00:00:03.210 --> 00:00:04.650
+e chamar métodos nele.
+
+00:00:05.130 --> 00:00:06.850
+Já que é só para praticar,
+
+00:00:06.930 --> 00:00:10.850
+vamos fazer isso em um novo aplicativo
+Android, fora do aplicativo JustJava.
+
+00:00:11.250 --> 00:00:13.590
+Dessa forma, não bagunçamos
+o aplicativo JustJava.
+
+00:00:14.370 --> 00:00:18.490
+Abra o <i>project wizard</i> no Android Studio,
+em <i>File &gt; New Project</i>.
+
+00:00:19.070 --> 00:00:21.650
+Então aceite a forma padrão em tudo aqui.
+
+00:00:21.650 --> 00:00:25.620
+Lembre-se de selecionar o template
+<i>blank activity</i>, clique em <i>Finish</i>.
+
+00:00:28.210 --> 00:00:31.190
+Uma vez que seu projeto é criado,
+rode no seu aparelho.
+
+00:00:32.380 --> 00:00:35.690
+A forma padrão é aparecer as palavras
+"Hello World" aqui em cima.
+
+00:00:36.220 --> 00:00:38.220
+Mas, agora, vamos fazer algo diferente.
+
+00:00:38.220 --> 00:00:41.890
+Na classe <i>main activity</i>, 
+vamos modificar o método <i>onCreate</i>.
+
+00:00:42.340 --> 00:00:46.600
+Ao invés de chamar <i>setContentView</i>
+nesta atividade XML,
+
+00:00:46.600 --> 00:00:49.260
+vamos criar nosso próprio <i>TextView</i>
+e defini-lo aqui .
+
+00:00:50.220 --> 00:00:51.960
+No site dos desenvolvedores Android,
+
+00:00:51.960 --> 00:00:55.500
+tem uma seção <i>Training</i> que fala sobre
+construir o seu primeiro aplicativo.
+
+00:00:56.010 --> 00:00:59.600
+Estou olhando para a parte
+<i>Display the Message</i> do tutorial.
+
+00:00:59.600 --> 00:01:02.220
+Aqui diz que na atividade, 
+do método <i>onCreate</i>,
+
+00:01:02.220 --> 00:01:03.930
+podemos criar um <i>TextView</i>.
+
+00:01:03.930 --> 00:01:07.290
+Aqui está o código que conhecemos
+antes, nesta lição.
+
+00:01:07.290 --> 00:01:08.850
+Estamos criando um novo <i>TextView</i>
+
+00:01:08.850 --> 00:01:11.410
+e estamos armazenando a variável
+chamada <i>textView</i>.
+
+00:01:11.650 --> 00:01:14.708
+Esse construtor requer um contexto
+como parâmentro de entrada.
+
+00:01:14.708 --> 00:01:18.140
+E passando <i>(this)</i> como 
+parâmetro de entrada,
+
+00:01:18.140 --> 00:01:21.270
+porque <i>(this)</i> refere-se 
+à atividade em curso.
+
+00:01:21.780 --> 00:01:24.060
+E uma atividade é também um contexto,
+
+00:01:24.060 --> 00:01:27.220
+então, isso vai criar corretamente
+um objeto <i>TextView</i> para nós.
+
+00:01:27.530 --> 00:01:30.410
+Então chamamos métodos
+neste objeto <i>TextView</i>.
+
+00:01:30.610 --> 00:01:35.330
+Lembre-se que é o nome de uma variável
+<i>textView</i>, e não uma classe <i>TextView</i>.
+
+00:01:35.330 --> 00:01:38.360
+Por isso que o t está em
+letra minúscula aqui.
+
+00:01:38.360 --> 00:01:42.550
+Podemos chamar <i>textView.setTextSize</i>,
+e <i>textView.setText</i>, por exemplo.
+
+00:01:43.830 --> 00:01:47.160
+Quando você desce, aqui diz
+para chamar <i>setContentView</i> e
+
+00:01:47.160 --> 00:01:49.540
+passar nesse <i>textView</i> como 
+parâmetro de entrada.
+
+00:01:49.850 --> 00:01:51.690
+Se descer um pouco mais,
+ele mostra
+
+00:01:51.690 --> 00:01:53.780
+um exemplo de código do método <i>onCreate</i>.
+
+00:01:54.230 --> 00:01:55.520
+Não precisamos dessa parte.
+
+00:01:55.520 --> 00:01:58.360
+Estamos focando nesta parte
+onde criamos um <i>textView</i>
+
+00:01:58.360 --> 00:02:01.520
+e então, vamos defini-lo como <i>contentView</i>
+do layout da atividade.
+
+00:02:02.220 --> 00:02:04.610
+De volta ao Android Studio 
+na classe <i>MainActivity</i>,
+
+00:02:04.610 --> 00:02:06.500
+Vou modificar o método <i>onCreate</i>.
+
+00:02:07.030 --> 00:02:09.114
+Vou inserir aqui
+algumas linhas em branco.
+
+00:02:09.535 --> 00:02:12.545
+Primeiro, vou criar um novo objeto
+<i>TextView</i> usando o construtor.
+
+00:02:13.245 --> 00:02:15.425
+Vou nomear a variável como <i>TextView</i>,
+
+00:02:15.425 --> 00:02:21.075
+mas você pode nomear como outra coisa,
+desde que descreva o que isso é.
+
+00:02:22.080 --> 00:02:24.870
+O texto que você construiu
+requer um contexto,
+
+00:02:24.870 --> 00:02:28.100
+então vou passar nisto aqui para 
+referir-se à atividade.
+
+00:02:28.100 --> 00:02:30.500
+E depois, na próxima linha de código,
+
+00:02:30.500 --> 00:02:32.930
+vou chamar o método neste objeto <i>textView</i>.
+
+00:02:33.490 --> 00:02:37.820
+Logo que pressiono "ponto", vai me mostrar
+todos os possíveis métodos que eu posso
+
+00:02:38.100 --> 00:02:40.080
+chamar, neste objeto <i>textView</i>.
+
+00:02:40.990 --> 00:02:44.610
+Se eu começar a digitar, ele vai filtrar
+todas essas opções do autocompletar.
+
+00:02:44.610 --> 00:02:47.720
+Veja que as opções 
+estão mais restringidas.
+
+00:02:47.720 --> 00:02:51.840
+Vou escolher <i>setText</i> então pressiono 
+enter para usar essa opção.
+
+00:02:53.140 --> 00:02:56.370
+Então posso por um <i>string</i>
+como argumento de entrada.
+
+00:02:56.370 --> 00:02:59.230
+O último passo é mudar 
+a linha do <i>set content view</i>.
+
+00:02:59.230 --> 00:03:04.240
+Ao invés de usar esse arquivo 
+de layout XML, vou colar em <i>textView</i>.
+
+00:03:05.030 --> 00:03:07.600
+Vou salvar isso e rodar o aplicativo.
+
+00:03:07.860 --> 00:03:11.840
+O que deve acontecer agora, 
+é que a tela vai mostrar um novo texto
+
+00:03:11.840 --> 00:03:15.030
+que diz "Wow" ao invés de "hello world".
+
+00:03:15.030 --> 00:03:15.730
+E faz.
+
+00:03:16.680 --> 00:03:17.860
+É meio decepcionante.
+
+00:03:17.860 --> 00:03:20.430
+Então, quero que você deixe
+um pouco mais interessante.
+
+00:03:20.430 --> 00:03:23.668
+Quero que você chame outros métodos,
+neste objeto <i>textView</i>,
+
+00:03:24.198 --> 00:03:26.884
+tente mudar a cor ou tamanho do texto.
+
+00:03:27.254 --> 00:03:29.294
+Se quiser se aventurar mais,
+
+00:03:29.294 --> 00:03:32.780
+tente chamar outros métodos
+neste objeto <i>textView</i>.
+
+00:03:32.780 --> 00:03:35.280
+Olhe a documentação online do <i>textView</i>.
+
+00:03:35.280 --> 00:03:37.920
+Para que você descubra 
+outros possíveis métodos.
+
+00:03:38.020 --> 00:03:40.490
+Quando terminar,
+marque essas caixas para continuar.
+

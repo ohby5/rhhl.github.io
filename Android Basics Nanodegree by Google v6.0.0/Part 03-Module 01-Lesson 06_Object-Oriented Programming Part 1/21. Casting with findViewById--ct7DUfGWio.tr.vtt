@@ -1,0 +1,429 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.610 --> 00:00:02.650
+Aradığımız kodu, uygulamamıza
+ekledim.
+
+00:00:02.650 --> 00:00:07.660
+Kod şu: siparişÖzetiMetinGörünümü
+=kimlikleGörünümBul.
+
+00:00:07.660 --> 00:00:13.000
+sipariş_özet_metin_görünümü
+kimlik kaynağını geçiriyoruz.
+
+00:00:13.000 --> 00:00:15.910
+Fakat bu, Android Studio'da başka
+bir hataya neden oluyor.
+
+00:00:17.750 --> 00:00:21.830
+MetinGir metodu çözülemiyor
+deniyor.
+
+00:00:21.830 --> 00:00:24.430
+Buraya başka bir kod satırı eklersem,
+
+00:00:24.430 --> 00:00:27.880
+Bu değişken üzerinde geçerli olan
+metot türlerini size gösterebilirim.
+
+00:00:28.890 --> 00:00:32.400
+Burada siparişÖzetiMetinGörünüm
+değişkenini ve
+
+00:00:32.400 --> 00:00:34.330
+VeriTürünü yarattım, böylece
+
+00:00:34.330 --> 00:00:37.520
+bir sonraki satırda
+metotları çağırabiliriz.
+
+00:00:37.520 --> 00:00:40.540
+Eğer otomatik tamamlama
+önerilerine bakarsanız,
+
+00:00:40.540 --> 00:00:44.120
+Bu metotların, Görünüm metotları
+olduğunu görürsünüz.
+
+00:00:44.120 --> 00:00:46.140
+MetinGörünümü'ne özgü bir metot yok.
+
+00:00:47.200 --> 00:00:49.350
+Örneğin, metinGir metodu yok.
+
+00:00:51.320 --> 00:00:54.455
+Bu, metinKur'u çağırdığımızda
+hata oluşmasının sebebidir.
+
+00:00:56.020 --> 00:01:00.890
+Metin boyutunu ya da rengini ya da
+herhangi birini giremezsiniz.
+
+00:01:00.890 --> 00:01:02.350
+Peki bu metotlar nerede?
+
+00:01:03.840 --> 00:01:08.700
+Pekala, MetinGörünümü
+daha spesifik bir Görünüm biçimidir.
+
+00:01:10.430 --> 00:01:13.240
+Bu yüzden, eğer MetinGörünümü metodunu
+
+00:01:13.240 --> 00:01:16.777
+bu nesne üzerine çağırırsam, bunun
+MetinGörünümü nesnesi o emin olmalıyım.
+
+00:01:17.820 --> 00:01:21.160
+Tamam. Değişkenimiz şimdi
+bir MetinGörünümü nesnesidir.
+
+00:01:21.160 --> 00:01:25.750
+Fakat sonra başka bir hata, uyumsuz türler
+hatasını görüyorum çünkü MetinGörünümü'nün
+
+00:01:25.750 --> 00:01:31.090
+sağ tarafta olması gerekir fakat
+görünümün değişmediğini görüyoruz.
+
+00:01:31.090 --> 00:01:34.240
+Çünkü kimlikleMetinBul metodu
+bir Görünüm döndürüyor.
+
+00:01:34.240 --> 00:01:35.558
+Bunları nasıl uzlaştırabiliriz?
+
+00:01:35.558 --> 00:01:41.720
+Pekala, MetinGörünümü daha spesifik bir
+Görünüm biçimi ya da
+
+00:01:41.720 --> 00:01:47.260
+bir altsınıf görünüm olduğu için
+döküm dediğimiz şeyi çağırabiliriz.
+
+00:01:47.260 --> 00:01:51.970
+Java'da dökümün anlamı, bu metot
+tarafından döndürülmüş görünümü alıp
+
+00:01:51.970 --> 00:01:54.280
+bir MetinGörünümü olarak muamele etmektir.
+
+00:01:54.280 --> 00:01:58.760
+Sağ taraftaki aslında bir MetinGörünümü
+nesnesidir ve
+
+00:01:58.760 --> 00:02:02.168
+siparişÖzetiMetniGörünümü değişkeni
+içinde depolayabiliriz.
+
+00:02:03.460 --> 00:02:06.110
+Bunun gerçekten göz korkutucu olduğunu
+biliyorum çünkü bir sürü kavramdan
+
+00:02:06.110 --> 00:02:07.970
+söz ettik.
+
+00:02:07.970 --> 00:02:09.210
+Tekrar açıklayayım.
+
+00:02:10.229 --> 00:02:14.280
+kimlikleGörünümBul metodu bir Görünüm
+verisi nesnesi döndürüyor.
+
+00:02:14.280 --> 00:02:15.820
+istenilen veri türü nesnesini
+
+00:02:15.820 --> 00:02:19.690
+ortada parantezler içine alarak
+yazdığım bu formülle
+
+00:02:19.690 --> 00:02:23.250
+bu görünümü MetinGörünümü
+içine döküyorum.
+
+00:02:23.250 --> 00:02:27.217
+Bu ifadenin tümü,
+MetinGörünümü nesnesinin değerini verir.
+
+00:02:28.600 --> 00:02:32.140
+Sonra, sol taraftaki bu değişken
+içinde depolayabiliriz ki,
+
+00:02:32.140 --> 00:02:35.790
+bu değişken siparişÖzetiMetinGörünümü'dür
+ve MetinGörünümü türüne sahiptir.
+
+00:02:35.790 --> 00:02:40.740
+Sonraki satırlarda, MetinGörünümü
+metotlarını bu nesne üzerine çağırabiliriz.
+
+00:02:40.740 --> 00:02:43.720
+Tüm metin metotlarının burada
+gösterildiğini görüyor musunuz?
+
+00:02:44.840 --> 00:02:48.070
+büyükHarfGir, metinBoyutuGir ve
+daha fazlası.
+
+00:02:48.070 --> 00:02:51.660
+Şimdi bunu silebilirim
+çünkü MetinGir'in çalışması gerekiyor,
+
+00:02:51.660 --> 00:02:54.170
+ve artık daha fazla görmüyoruz.
+
+00:02:54.170 --> 00:02:57.100
+MetinGörünümü metotlarını çağırabilmek
+istiyorsak,
+
+00:02:57.100 --> 00:02:59.410
+bir MetinGörünümü nesnesine
+sahip olmalıyız.
+
+00:02:59.410 --> 00:03:02.500
+Bir MetinGörünümü'ne sahip olmak için,
+KimlikleGörünümBul'u çağırmalıyız,
+
+00:03:02.500 --> 00:03:06.890
+sonra bu Görünüm nesnesini
+MetinGörünüm içine dökmeliyiz.
+
+00:03:06.890 --> 00:03:09.700
+Döküm'ün işlemesinin sebebi
+
+00:03:09.700 --> 00:03:13.440
+görünüm hiyerarşisindeki bu Görünüm'ün
+esas olarak bir MetinGörünümü olmasıdır.
+
+00:03:13.440 --> 00:03:17.520
+Radyo tuşu gibi bir şeyin içine
+dökmeye çalışırsak, çalışmayacaktır
+
+00:03:17.520 --> 00:03:20.840
+çünkü siparişÖzetiMetniGörünümü
+esasen bir Metin Görünümüdür yani
+
+00:03:20.840 --> 00:03:23.000
+uygun bir tür içine
+döküm yapmalıyız.
+
+00:03:24.275 --> 00:03:28.370
+Benzer şekilde, miktarGöster metodunda,
+kimlikleGörünümBul'u çağırıyoruz ve
+
+00:03:28.370 --> 00:03:32.350
+MetinGörünümü kaynak kimliğini
+geçiriyoruz.
+
+00:03:32.350 --> 00:03:36.090
+Bu, bir Görünüm döndürüyor ve biz de
+bunu MetinGörünümü içine döküyoruz ve
+
+00:03:36.090 --> 00:03:39.330
+böylece bunu miktarMetniGörünümü
+değişkeni içinde depolayabiliyoruz.
+
+00:03:40.400 --> 00:03:43.450
+Bu değişken Metin görünümü türüne sahip
+böylece
+
+00:03:43.450 --> 00:03:48.170
+takip eden satırlarda, metinGir gibi
+MetinGörünümü metotlarını çağırabiliriz.
+
+00:03:48.170 --> 00:03:51.160
+Burada döküm'ü kullanan güncellenmiş
+AnaAktivite kodunu görüyoruz.
+
+00:03:51.160 --> 00:03:56.400
+Bu görünüm MetinGörünümleri içine dökmek,
+MetinGörünümü türünde olan değişkenlerde
+
+00:03:56.400 --> 00:04:00.622
+depolayabiliriz böylece
+bu AnaAktivite listesindeki
+
+00:04:00.622 --> 00:04:05.090
+miktarMetinGörünümü ve siparişMetinGörünümü
+MetinGörünümü türü olur.
+
+00:04:05.090 --> 00:04:06.820
+MetinGörünümü metotlarını bunlar
+üzerine çağırabiliriz.
+
+00:04:06.820 --> 00:04:10.810
+Ayrıca kendimizi bunlara
+Görünümler olarak davranmakla sınırlamayız.
+
+00:04:10.810 --> 00:04:15.050
+Şimdi MetinGörünümü'ne özgü metotları
+bu değişkenler üzerine çağırabiliriz.
+
+00:04:15.050 --> 00:04:19.041
+Örneğin, metinGir'i sipariş
+ÖzetiMetinGörünümü üzerine çağırabiliriz,
+
+00:04:19.041 --> 00:04:21.880
+metinGir'i miktarMetinGörünümü
+üzerine de çağırabiliriz.
+
+00:04:21.880 --> 00:04:22.650
+Gördüğünüz gibi,
+
+00:04:22.650 --> 00:04:27.180
+hangi veri türünün nerede kullanıldığı
+konusunda dikkatli olmalısınız.
+
+00:04:27.180 --> 00:04:31.290
+Şimdiye kadar, metotları çağırdık ve
+döndürülen değer konusunda kaygılanmadık
+
+00:04:31.290 --> 00:04:34.400
+çünkü metinGir metodu esasen
+döndürülen bir değere sahip değildir.
+
+00:04:34.400 --> 00:04:37.180
+Bu, resimGörünümü.resimKaynağıGir
+metodu içinde geçerlidir.
+
+00:04:37.180 --> 00:04:39.060
+Döndürülen bir değer yoktur.
+
+00:04:39.060 --> 00:04:41.540
+Fakat diğer metotlar döndürülen
+değerlere sahip olabilir.
+
+00:04:41.540 --> 00:04:45.590
+Örneğin, MetinGörünümü sınıfında,
+MetinBoyutuEdin metodu vardır.
+
+00:04:45.590 --> 00:04:47.680
+Bu, bir tamsayı döndürür böylece
+
+00:04:47.680 --> 00:04:53.410
+bu metodun sonucunu, tam sayı tür boyutu
+değişkeninde depolayabiliriz.
+
+00:04:53.410 --> 00:04:55.140
+İşte döndürülen değeri olan
+başka bir metot.
+
+00:04:55.140 --> 00:04:58.270
+Tuş sınıfında, yükselikEdin
+metodunu çağırabilirsiniz,
+
+00:04:58.270 --> 00:05:03.420
+bu metot, tam sayı değeri döndürür,
+böylece bir değişkende depolayabilirsiniz.
+
+00:05:03.420 --> 00:05:06.450
+Örneğin, bu sonucu bir dizide depolamayı
+deneseydiniz,
+
+00:05:06.450 --> 00:05:10.810
+hata oluştuğunu görecektiniz,
+çünkü bu metot tam sayı döndürür.
+
+00:05:10.810 --> 00:05:14.988
+Ne tür verinin bir metoda geçirilmesi
+gerektiğini bilmek ve
+
+00:05:14.988 --> 00:05:19.290
+bir metottan ne tür verinin döndürüldüğünü
+bilmek için dokümantasyonu kontrol edin.
+
+00:05:19.290 --> 00:05:21.260
+Örneğin, MetinGörünümü sınıfında,
+
+00:05:21.260 --> 00:05:25.760
+bu metotlardan birini çağırırsanız,
+bir tamsayı değeri döndürür.
+
+00:05:25.760 --> 00:05:28.620
+Döndürülen değer veri türü
+sol taraftaki sütundadır.
+
+00:05:28.620 --> 00:05:33.040
+Diğer metotlarda, geçersiz'i, henüz
+öğrenmediğimiz booleları, reel sayıları
+
+00:05:33.040 --> 00:05:38.330
+ve diğerlerini döndürülen
+değer olarak elde edebilirsiniz.
+
+00:05:38.330 --> 00:05:42.790
+Bu dokümantasyon sayfası,
+her metotta kullanılan girdi için beklenen
+
+00:05:42.790 --> 00:05:45.010
+veri türünü gösteriyor.
+
+00:05:45.010 --> 00:05:49.590
+Örneğin, metinRengiGir metodu
+girdi olarak bir tam sayıyı gerektirir,
+
+00:05:49.590 --> 00:05:53.110
+döndürülen değer geçersiz'dir
+yani döndürülen değer yoktur.
+
+00:05:53.110 --> 00:05:56.010
+Yani, beklenen veri türünü öğrenmek için
+dokümantasyonu inceleyiniz.
+
+00:05:56.010 --> 00:05:58.750
+Aksi takdirde, veri türlerinin
+eşleşmediğini söyleyen
+
+00:05:58.750 --> 00:06:01.070
+hatalar görürsünüz.
+
+00:06:01.070 --> 00:06:02.630
+Şimdi sıra sizde.
+
+00:06:02.630 --> 00:06:05.580
+Aşağıda dört farklı kod örneği var.
+
+00:06:05.580 --> 00:06:10.100
+Bazı kodlar, veri türünün eşleşmemesi
+nedeniyle hata içeriyor olabilir.
+
+00:06:10.100 --> 00:06:11.165
+bir hata bulursanız,
+
+00:06:11.165 --> 00:06:15.540
+kutucuklara hataları nasıl
+gidereceğinizi yazınız.
+
+00:06:15.540 --> 00:06:19.948
+Kod çalışıyorsa,
+sadece Hayır yazın.
+
+00:06:19.948 --> 00:06:22.545
+Bu, zorlayıcı bir sınav olacak
+çünkü
+
+00:06:22.545 --> 00:06:26.555
+bir çok kavramdan söz ettik ve
+bu kod sizin için oldukça yeni.
+
+00:06:26.555 --> 00:06:30.105
+Bu metotlar için dokümantasyonu incelemeye
+vakit ayırın.
+
+00:06:30.105 --> 00:06:33.695
+Girdilerin ve döndürülen değerlerin doğru
+olduğundan emin olun.
+
+00:06:33.695 --> 00:06:37.665
+Böylece değişkenler bildirdiğiniz de
+doğru veri türleri elde edebilirsiniz.
+
+00:06:37.665 --> 00:06:39.265
+Metotları doğru kullandığınızdan
+
+00:06:39.265 --> 00:06:42.375
+emin olmak için de dokümantasyona
+göz atınız.
+

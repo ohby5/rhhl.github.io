@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.610 --> 00:00:02.190
+Şimdi ilk görevi yapalım.
+
+00:00:02.190 --> 00:00:05.813
+Farklı bir isim vermek için giriş
+parametresini tekrar adlandıracağız.
+
+00:00:06.733 --> 00:00:09.420
+Bu ilk giriş parametresi, tam sayı,
+
+00:00:09.420 --> 00:00:12.276
+ve tek yapmam gereken
+değişkenin ismini değiştirmek.
+
+00:00:12.276 --> 00:00:16.736
+Bunu şöyle değiştireceğim,
+örneğin, kahvelerinSayısı.
+
+00:00:16.736 --> 00:00:18.525
+İstediğiniz her isim olabilir.
+
+00:00:18.945 --> 00:00:22.900
+Şimdi hemen bir uyarı ve
+bir hata görüyorum.
+
+00:00:23.110 --> 00:00:27.030
+Bu uyarı diyor ki, kahvelerinSayısı
+parametresi daha önce hiç kullanılmadı,
+
+00:00:27.030 --> 00:00:31.530
+çünkü bu metodun içinde hiç bir yerde
+bu değişkeni kullanmadım.
+
+00:00:31.530 --> 00:00:35.090
+Sonra sembol sayısı çözümlenemiyor
+hatasını görüyorum,
+
+00:00:35.090 --> 00:00:36.890
+Şimdi, adı sayı olan hiç değişken yok.
+
+00:00:36.890 --> 00:00:38.550
+Adı sayı olan hiç yerel değişken yok,
+
+00:00:38.550 --> 00:00:40.580
+adı sayı olan hiç genel değişken yok.
+
+00:00:40.580 --> 00:00:42.790
+Ve bu bir giriş parametresi de değil.
+
+00:00:42.790 --> 00:00:46.650
+Öyleyse, bunu değiştirmem gerekiyor ki
+adı kahvelerin sayısı olsun.
+
+00:00:46.650 --> 00:00:48.330
+Ve işte hatayı onardım.
+
+00:00:48.330 --> 00:00:50.268
+Şimdi cihazımda çalıştıracağım.
+
+00:00:50.268 --> 00:00:51.640
+Ve görünüşü böyle.
+
+00:00:51.640 --> 00:00:54.060
+Adet seçici beklenildiği gibi çalışıyor.
+
+00:00:54.060 --> 00:00:56.640
+Kullanıcının görebileceği görünür bir
+değişiklik yok, çünkü az önce
+
+00:00:56.640 --> 00:00:59.510
+bir giriş parametresinin adını değiştirdik.
+
+00:01:00.690 --> 00:01:04.200
+Ayrıca, metodun çağrılma yolunu
+değiştirmemiz de gerekmedi.
+
+00:01:04.200 --> 00:01:08.100
+Hâlâ miktarı görüntüleyebilir ve
+sonra istediğimize geçebiliriz.
+
+00:01:08.100 --> 00:01:11.540
+Çağıran için bu giriş parametresinin
+adı önemli değil.
+
+00:01:12.760 --> 00:01:16.270
+İkinci görev giriş parametresinin
+veri türünü tam sayıdan
+
+00:01:16.270 --> 00:01:17.670
+diziye çevirmek.
+
+00:01:19.110 --> 00:01:22.600
+Yani miktarı görüntüle metodu içinde,
+girişi değiştireceğim böylece
+
+00:01:22.600 --> 00:01:28.500
+tam sayı verisi yerine,
+dizi veri türü bekleyecek, şu şekilde.
+
+00:01:28.710 --> 00:01:31.515
+Ve şimdi, uygulamamızda bir kaç hata var.
+
+00:01:32.125 --> 00:01:35.495
+Yukarı çıktığımda, kırmızı
+kıvrımlı bir alt çizgi görüyorum,
+
+00:01:35.495 --> 00:01:38.025
+artış metodunda ve azalma metodunda.
+
+00:01:38.025 --> 00:01:39.496
+Hata mesajı diyor ki;
+
+00:01:39.496 --> 00:01:44.130
+Ana aktivite içindeki miktarıGörüntüle
+dizisi tam sayı olan bir şeye uygulanamaz.
+
+00:01:45.760 --> 00:01:50.290
+Dediği şu ki, miktar değişkenini artık
+metoda geçiremeyiz, çünkü artık
+
+00:01:50.290 --> 00:01:53.560
+o bir tam sayı ve bir dizi bekliyor.
+
+00:01:54.710 --> 00:01:58.320
+Bu uyumsuz veri türü hataya sebep oluyor ve
+
+00:01:58.320 --> 00:02:00.810
+uygulama cihazımızda çalışmayacak bile.
+
+00:02:00.810 --> 00:02:02.340
+Bbu bir derleme zamanı hatası.
+
+00:02:03.060 --> 00:02:04.780
+Bunu çözmenin birkaç yolu var.
+
+00:02:04.780 --> 00:02:08.558
+Ya metoda geçecek olan şeyi değiştiririz ki
+
+00:02:08.558 --> 00:02:10.494
+bu aslında bir dizi olsun.
+
+00:02:10.494 --> 00:02:14.246
+Buraya 100 koyabilirim ve tırnak işareti
+içine alırım ki bir dizi olur ve
+
+00:02:14.246 --> 00:02:17.210
+bu buradaki doğru giriş türüne uyardı.
+
+00:02:17.210 --> 00:02:20.300
+Ama bizim gerçekten istediğimiz şey
+miktarın hâlâ bir tam sayı olması yani
+
+00:02:20.300 --> 00:02:24.220
+bir bir arttırmak ya da bir bir azaltmak için
+üstünde hesap yapabiliriz.
+
+00:02:24.220 --> 00:02:27.380
+Yani, bunu miktar olarak bırakacağım.
+
+00:02:27.380 --> 00:02:30.450
+Ve sonra bu bir tam sayı olacak
+şekilde değişmeli.
+
+00:02:31.550 --> 00:02:33.420
+Ve sonra uygulamamız tekrar çalışmalı.
+
+00:02:34.110 --> 00:02:34.980
+Harika, yani
+
+00:02:34.980 --> 00:02:39.100
+şimdiye dek, tek giriş parametreli
+metoda bir örnek gördük.
+
+00:02:39.100 --> 00:02:43.370
+Peki ya sıfır giriş parametreli
+metod örnekleri, ya da
+
+00:02:43.370 --> 00:02:45.600
+iki ve daha fazla giriş parametreleri?
+

@@ -1,0 +1,192 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.700 --> 00:00:02.540
+Endi Android resurslari 
+nima ekanligini 
+
+00:00:02.540 --> 00:00:05.260
+va ularni turli xil papkalarga 
+joylashtirishingiz mumkinligini bilib oldingiz.
+
+00:00:05.260 --> 00:00:08.840
+Keling, ushbu papkalarda 
+saqlangan resurslar 
+
+00:00:08.840 --> 00:00:10.580
+haqida gaplashamiz.
+
+00:00:10.580 --> 00:00:15.050
+Ilova kompilyatsiya qilinganida, Android-da 
+AAPT deb nomlangan vosita ishga tushiriladi.
+
+00:00:15.050 --> 00:00:17.610
+Va bu R class ni yaratadi.
+
+00:00:17.610 --> 00:00:21.840
+Bu shunchaki R.Java fayli 
+va men sizga bir misolni ko‘rsataman.
+
+00:00:21.840 --> 00:00:26.580
+U sizning S directory dagi barcha 
+resurslar ID sini o‘z ichiga oladi, 
+
+00:00:26.580 --> 00:00:30.790
+shuning uchun siz qo‘shgan barcha 
+resurslar uchun murojaat qiladigan id bor.
+
+00:00:30.790 --> 00:00:35.000
+ID formati resurs turiga asoslangan 
+va barcha Java grafik resurslari uchun 
+
+00:00:35.000 --> 00:00:40.640
+u R.drawable formati bo‘ladi.
+
+00:00:40.640 --> 00:00:43.805
+Barcha matnli resurslar uchun R.string, 
+nuqta, keyin satr nomi, 
+
+00:00:43.805 --> 00:00:47.850
+bizning holatda bu “hello” 
+formulasi qo‘llaniladi.
+
+00:00:49.190 --> 00:00:52.230
+E’tibor bering, resursga ikkita 
+usuli bilan kirishingiz mumkin.
+
+00:00:52.230 --> 00:00:58.720
+Java kodida bu quyidagi formatda bo‘ladi: 
+R, nuqta, resurs turi, nuqta, resurs nomi. 
+
+00:00:58.720 --> 00:01:03.820
+Ammo XML da @ belgisi ishlatiladi, 
+masalan - @, keyin resurs turi, satr, "/", 
+
+00:01:03.820 --> 00:01:08.050
+keyin resurs nomi - bizning 
+holatda bu "hello".
+
+00:01:09.320 --> 00:01:12.730
+Quyida turli resurslar va ularga 
+kirish usullariga misollar keltirilgan.
+
+00:01:13.740 --> 00:01:16.430
+Bu eng keng tarqalgan bir nechta 
+resurs turlaridir, lekin ulardan 
+
+00:01:16.430 --> 00:01:19.660
+boshqa juda ko‘plari ham mavjud.
+
+00:01:19.660 --> 00:01:21.590
+Shuni yodda tutingki, 
+Java kodi doim R, nuqta, 
+
+00:01:21.590 --> 00:01:25.180
+resurs turi, nuqta va 
+resurs nomi bilan boshlanadi.
+
+00:01:25.180 --> 00:01:27.350
+Bunda istalgan nom bersa bo‘ladi.
+
+00:01:27.350 --> 00:01:31.610
+Va XML da bu @, 
+resurs turi, "/" va 
+
+00:01:31.610 --> 00:01:32.790
+resurs nomi bo‘ladi.
+
+00:01:34.080 --> 00:01:36.640
+Keling, MainActivity.Java 
+faylida resursning 
+
+00:01:36.640 --> 00:01:38.620
+barcha ID larini topamiz.
+
+00:01:38.620 --> 00:01:41.160
+Men Android Studio-da qidirish 
+buyrug‘ini ochmoqchiman.
+
+00:01:41.160 --> 00:01:45.640
+Men Cmd + F ni ishlatmoqchiman, yoki agar 
+siz Windows-da bo‘lsangiz, Ctrl + F dan foydalanishingiz mumkin.
+
+00:01:46.970 --> 00:01:48.460
+Bu yerda qidiruv oynasi paydo bo‘ladi.
+
+00:01:48.460 --> 00:01:52.910
+Men quydagini qidirishni boshlayman - bosh 
+harfli R, nuqta, keyin faqat bosh harfli 
+
+00:01:52.910 --> 00:01:58.430
+R ni topish uchun 
+match case belgilayman.
+
+00:01:58.430 --> 00:02:03.650
+Birinchi topilgan ma‘lumot - bu 
+R.layout.activity_main havolasidir.
+
+00:02:03.650 --> 00:02:06.420
+Bu qiziq, chunki biz 
+main layout fayliga 
+
+00:02:06.420 --> 00:02:07.710
+murojaat qilmoqdamiz.
+
+00:02:07.710 --> 00:02:12.170
+Main activity XML faylini 
+yuklash kerakligini shunday tushunadi.
+
+00:02:12.170 --> 00:02:13.390
+Bu ajoyib, to‘g‘rimi?
+
+00:02:13.390 --> 00:02:14.639
+Keyingi havolani ko‘rib chiqaylik.
+
+00:02:15.640 --> 00:02:17.440
+Yaxshi. 
+DispleyQuantity metodida bizda 
+
+00:02:17.440 --> 00:02:22.360
+R.id.quantity_text_view ga 
+havola bor.
+
+00:02:22.360 --> 00:02:25.270
+Ya’ni, bu ViewId ga
+murojaat qiladi.
+
+00:02:25.270 --> 00:02:29.120
+Aniqroq aytadigan bo‘lsak - TextView ga.
+
+00:02:29.120 --> 00:02:31.660
+Umid qilamanki, jumboqning 
+savollariga javob topilayapti.
+
+00:02:31.660 --> 00:02:34.220
+Java kodidagi ushbu View ga 
+murojaat qilish orqali, numberOfCoffees ni 
+
+00:02:34.220 --> 00:02:38.550
+ko‘rsatish uchun ilova ishi 
+davomida uni yangilashimiz mumkin.
+
+00:02:38.550 --> 00:02:40.720
+Keling, keyingi holatni 
+ko‘rib chiqaylik.
+
+00:02:40.720 --> 00:02:43.520
+Shunday qilib, 
+displayMessage metodida biz 
+
+00:02:43.520 --> 00:02:47.470
+R.id.order_summary_text_view 
+havolasini ko‘ramiz.
+
+00:02:47.470 --> 00:02:51.530
+Biz bu yerda, ushbu xabar bilan yangilashimiz 
+uchun, buyurtma tarkibini aks 
+
+00:02:51.530 --> 00:02:54.210
+etadigan TextView ga 
+murojaat qilmoqchimiz.
+

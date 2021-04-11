@@ -1,0 +1,693 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.920 --> 00:00:03.409
+Quay lại ứng dụng JustJava một chút.
+
+00:00:03.410 --> 00:00:07.259
+Xem lớp MainActivity,
+phương thức displayMessage.
+
+00:00:07.260 --> 00:00:09.949
+Mọi thứ bắt đầu rõ ràng hơn
+một chút ở đây.
+
+00:00:09.950 --> 00:00:14.349
+Chúng ta thấy là đã có một biến
+tên là orderSummaryTextView.
+
+00:00:14.350 --> 00:00:16.760
+Kiểu dữ liệu của biến này là TextView.
+
+00:00:17.790 --> 00:00:19.610
+Nhưng chúng ta vẫn chưa hiểu phần này.
+
+00:00:20.740 --> 00:00:23.420
+Ở dòng tiếp theo, ta gọi một 
+Phương thức cho đối tượng TextView này.
+
+00:00:24.650 --> 00:00:28.069
+Ta dùng cùng một tên biến
+như đã khai báo trên này.
+
+00:00:28.070 --> 00:00:31.829
+Ta gọi orderSummaryTextView.setText.
+
+00:00:31.830 --> 00:00:34.290
+Rồi đặt một chuỗi làm đầu vào
+cho Phương thức này.
+
+00:00:35.300 --> 00:00:38.789
+Chuỗi thông điệp này vốn là
+một tham số đầu vào
+
+00:00:38.790 --> 00:00:40.200
+cho Phương thức displayMessage.
+
+00:00:41.720 --> 00:00:45.249
+Giờ hãy xem kỹ phần mã này,
+chỗ chúng ta còn chưa hiểu.
+
+00:00:45.250 --> 00:00:48.209
+Có vẻ findViewById
+là một lệnh gọi Phương thức.
+
+00:00:48.210 --> 00:00:53.529
+Vì nó nằm trước các ngoặc đơn này với
+tóm tắt giá trị đầu vào.
+
+00:00:53.530 --> 00:00:57.457
+Nhưng kỳ lạ là Phương thức này không
+được định nghĩa ở chỗ nào trong Lớp.
+
+00:00:57.458 --> 00:01:02.354
+Nếu tôi nhấp đôi vào tên này
+và nhấn Cmd F, hoặc
+
+00:01:02.355 --> 00:01:07.559
+Ctrl F nếu bạn dùng Windows,
+ta có thể thử tìm trong file này.
+
+00:01:07.560 --> 00:01:10.779
+Tôi chỉ thấy hai sự kiện
+có findViewById, và
+
+00:01:10.780 --> 00:01:12.789
+chúng được dùng tương tự nhau.
+
+00:01:12.790 --> 00:01:15.160
+Nhưng tôi không thấy Phương thức nào
+tên là findViewById.
+
+00:01:16.190 --> 00:01:19.639
+Nói đến chuyện này,
+trước đây trong lớp MainActivity,
+
+00:01:19.640 --> 00:01:23.449
+ta cũng thấy một lệnh gọi
+setContentView, nhưng nếu tìm kiếm
+
+00:01:23.450 --> 00:01:26.280
+trong file, thì nó cũng không được
+định nghĩa trong MainActivity.
+
+00:01:27.820 --> 00:01:29.700
+Vậy những Phương thức này
+được định nghĩa ở đâu?
+
+00:01:30.620 --> 00:01:33.609
+MainActivity thật ra là
+một file rất ngắn.
+
+00:01:33.610 --> 00:01:35.149
+Nó chỉ có khoảng 90 dòng,
+
+00:01:35.150 --> 00:01:38.789
+nhưng thật ra trong Lớp này
+còn có nhiều hơn thế.
+
+00:01:38.790 --> 00:01:42.199
+Phần mã nói rằng,
+mở rộng AppCompatActivity.
+
+00:01:42.200 --> 00:01:45.709
+Điều này tức là MainActivity
+là phần mở rộng
+
+00:01:45.710 --> 00:01:49.289
+của phần chức năng
+trong lớp AppCompatActivity.
+
+00:01:49.290 --> 00:01:52.789
+Trên máy tính, nếu bạn thấy
+ActionBarActivity ở đây thì không sao,
+
+00:01:52.790 --> 00:01:55.449
+đó chỉ là một phiên bản cũ hơn.
+
+00:01:55.450 --> 00:01:58.769
+Phiên bản mới nhất bạn nên dùng
+là AppCompatActivity.
+
+00:01:58.770 --> 00:02:02.419
+AppCompatActivity hỗ trợ
+tương thích ngược cho chúng ta
+
+00:02:02.420 --> 00:02:04.459
+trên các thiết bị Android cũ hơn.
+
+00:02:04.460 --> 00:02:07.979
+AppCompatActivity là một phần của
+thư viện hỗ trợ Android.
+
+00:02:07.980 --> 00:02:11.739
+Nó cho phép ta dùng những tính năng
+giao diện mới nhất của Android,
+
+00:02:11.740 --> 00:02:15.419
+trong khi vẫn làm việc
+trên các thiết bị Android cũ hơn.
+
+00:02:15.420 --> 00:02:17.939
+Bằng cách mở rộng
+lớp AppCompatActivity.
+
+00:02:17.940 --> 00:02:20.619
+Chúng ta có tất cả tính năng,
+tất cả trạng thái và
+
+00:02:20.620 --> 00:02:24.489
+các Phương thức trong MainActivity
+một cách miễn phí.
+
+00:02:24.490 --> 00:02:26.979
+Ta không phải sao chép và
+dán dòng mã nào từ đây.
+
+00:02:26.980 --> 00:02:28.800
+Chúng ta chỉ đơn giản là
+mở rộng Lớp này.
+
+00:02:30.090 --> 00:02:31.019
+Nếu bạn thích,
+
+00:02:31.020 --> 00:02:35.879
+có thể tìm hêm thông tin về
+AppCompatActivity bằng Google.
+
+00:02:35.880 --> 00:02:39.699
+Đây là tài liệu tham khảo
+cho lớp AppCompatActivity.
+
+00:02:39.700 --> 00:02:41.919
+Vì tôi có tiện ích mở rộng
+được cài sẵn trên Chrome,
+
+00:02:41.920 --> 00:02:43.119
+tôi có thể xem được mã nguồn.
+
+00:02:43.120 --> 00:02:47.889
+Và đây là phần mã chỗ
+lớp AppCompatActivity được định nghĩa.
+
+00:02:47.890 --> 00:02:50.359
+Bạn có thể thấy
+rất nhiều tính năng ở đây,
+
+00:02:50.360 --> 00:02:54.509
+vấn đề là bạn không cần hiểu
+chúng thực hiện như thế nào.
+
+00:02:54.510 --> 00:02:58.349
+Bạn chỉ cần biết là
+khi mở rộng AppCompatActivity,
+
+00:02:58.350 --> 00:03:01.009
+bạn có tất cả
+những tính năng này miễn phí.
+
+00:03:01.010 --> 00:03:03.579
+Ở cấp độ cao, bạn có thể
+hình tượng hóa thế này.
+
+00:03:03.580 --> 00:03:05.899
+Đây là định nghĩa Lớp
+cho MainActivity.
+
+00:03:05.900 --> 00:03:07.999
+Và có vài Phương thức
+được định nghĩa ở đây.
+
+00:03:08.000 --> 00:03:12.349
+Khi bạn mở rộng AppCompatActivity,
+ta có thể truy cập các trạng thái
+
+00:03:12.350 --> 00:03:14.199
+và các Phương thức từ AppCompatActivity.
+
+00:03:14.200 --> 00:03:17.869
+Giờ chúng chưa được tự thêm vào
+lớp MainActivity, nhưng
+
+00:03:17.870 --> 00:03:19.279
+bạn có thể hình dung là
+chúng có ở đó,
+
+00:03:19.280 --> 00:03:22.929
+vì bạn vẫn có thể tham chiếu
+các trạng thái và phương thức.
+
+00:03:22.930 --> 00:03:26.539
+Và đó là cách đoạn mã của ta có thể
+chỉ tới những thứ như setContentView
+
+00:03:26.540 --> 00:03:27.839
+hoặc findViewById.
+
+00:03:27.840 --> 00:03:32.239
+Vì thừa hưởng các Phương thức này, ta không
+thể định nghĩa chúng trong MainActivity.
+
+00:03:32.240 --> 00:03:35.109
+MainActivity được trình diễn
+trên màn hình của thiết bị, nhưng
+
+00:03:35.110 --> 00:03:39.519
+chúng ta không viết mã đó trong
+MainActivity, mà thừa hưởng chúng.
+
+00:03:39.520 --> 00:03:42.749
+Ta không có trạng thái và phương thức
+trực tiếp từ lớp AppCompatActivity,
+
+00:03:42.750 --> 00:03:46.839
+nhưng giờ ta đã biết rằng
+chúng ở đó và ta có thể chỉ dẫn đến.
+
+00:03:46.840 --> 00:03:50.259
+Nói về những thứ được thừa hưởng,
+trong việc này có cả mặt tốt và xấu.
+
+00:03:50.260 --> 00:03:52.539
+Đôi khi ta sẽ muốn
+thừa hưởng hành vi, nhưng
+
+00:03:52.540 --> 00:03:54.980
+có lần khác ta lại chỉ muốn
+chỉnh sửa một chút.
+
+00:03:55.980 --> 00:03:59.899
+Nếu bạn muốn thay đổi vài hành vi
+từ Lớp được thừa hưởng,
+
+00:03:59.900 --> 00:04:02.229
+bạn có thể ghi đè lên
+một số Phương thức nhất định.
+
+00:04:02.230 --> 00:04:07.359
+Bạn có thể thêm chữ @override ở trên cùng
+của Phương thức để máy tính biết rằng
+
+00:04:07.360 --> 00:04:12.099
+bạn không muốn dùng phiên bản của
+Phương thức từ lớp AppCompatActivity.
+
+00:04:12.100 --> 00:04:15.829
+Thay vào đó, bạn muốn
+tự định nghĩa phương thức này ở đây.
+
+00:04:15.830 --> 00:04:18.619
+Đây là một chủ đề về mẹo,
+và cần thực hành nhiều.
+
+00:04:18.620 --> 00:04:21.659
+Nhưng ta đã xem một ví dụ về
+ghi đè một Phương thức
+
+00:04:21.660 --> 00:04:23.639
+từ lớp AppCompatActivity.
+
+00:04:23.640 --> 00:04:26.379
+Và Phương thức đó là OnCreate.
+
+00:04:26.380 --> 00:04:31.169
+Bằng cách ghi đè phương thức OnCreate
+trong MainActivity, chúng ta chỉ rõ
+
+00:04:31.170 --> 00:04:35.379
+những gì cần thực hiện khi
+Phương thức đó được gọi.
+
+00:04:35.380 --> 00:04:37.179
+Đừng lo nếu bạn không hiểu chỗ này ngay.
+
+00:04:37.180 --> 00:04:40.533
+Tôi chỉ cho bạn một tóm tắt khái quát
+về các khái niệm của
+
+00:04:40.534 --> 00:04:42.349
+lập trình hướng đối tượng.
+
+00:04:42.350 --> 00:04:46.159
+Tôi cũng mong rằng các bạn
+vẫn còn nhiều câu hỏi.
+
+00:04:46.160 --> 00:04:49.369
+Và vẫn cần đọc thêm những chủ đề này
+để hiểu chúng
+
+00:04:49.370 --> 00:04:50.859
+một cách đầy đủ.
+
+00:04:50.860 --> 00:04:53.770
+Một cách khác để hình tượng hóa
+quan hệ giữa các lớp MainActivity
+
+00:04:53.771 --> 00:04:58.219
+và AppCompatActivity là vẽ
+Sơ đồ Hệ thống Lớp.
+
+00:04:58.220 --> 00:05:00.929
+Cái này khác với Sơ đồ Hệ thống Xem, vì
+
+00:05:00.930 --> 00:05:05.339
+Sơ đồ Hệ thống Xem thể hiện một cây
+những cảnh được thể hiện trên màn hình.
+
+00:05:05.340 --> 00:05:07.809
+Sơ đồ Hệ thống Lớp
+cho thấy mối quan hệ
+
+00:05:07.810 --> 00:05:09.989
+giữa các lớp Java khác nhau.
+
+00:05:09.990 --> 00:05:12.859
+Chúng ta có AppCompatActivity
+là Siêu lớp.
+
+00:05:12.860 --> 00:05:15.867
+Vì MainActivity mở rộng từ
+AppCompatActivity,
+
+00:05:15.868 --> 00:05:18.559
+nên nó là Phân lớp.
+
+00:05:18.560 --> 00:05:22.199
+Nên khi nào bạn thấy định nghĩa lớp này
+thì cái gốc mà nó mở rộng
+
+00:05:22.200 --> 00:05:23.969
+được gọi là Siêu lớp.
+
+00:05:23.970 --> 00:05:25.769
+Đây là Phân lớp.
+
+00:05:25.770 --> 00:05:29.069
+Nếu bạn tạo thêm một activity khác
+tên là DetailActivity và
+
+00:05:29.070 --> 00:05:32.339
+bạn mở rộng AppCompatActivity,
+nó sẽ là Phân lớp,
+
+00:05:32.340 --> 00:05:33.409
+và đây là Siêu lớp.
+
+00:05:34.720 --> 00:05:37.839
+Đây là một ví dụ khác
+về thừa hưởng lớp Java.
+
+00:05:37.840 --> 00:05:40.519
+Nếu bạn nghĩ về nó,
+TextView, ImageView,
+
+00:05:40.520 --> 00:05:44.459
+ButtonView, tất cả đều có
+những khía cạnh chung.
+
+00:05:44.460 --> 00:05:48.069
+Tất cả quang cảnh này đều có
+chiều rộng và cao trên màn hình.
+
+00:05:48.070 --> 00:05:51.329
+Ta vẫn chưa học chỗ này, nhưng chúng
+cũng có trạng thái thấy được.
+
+00:05:51.330 --> 00:05:54.399
+Chúng đều có thể ở trạng thái
+thấy được hoặc không thấy.
+
+00:05:54.400 --> 00:05:58.649
+Còn có vài thuộc tính khác
+giống nhau giữa chúng.
+
+00:05:58.650 --> 00:06:02.369
+Thay vì viết mã cho những thuộc tính này
+trong lớp TextView,
+
+00:06:02.370 --> 00:06:05.589
+rồi sao chép mã sang lớp
+ImageView, ButtonView,
+
+00:06:05.590 --> 00:06:07.609
+ta có thể làm thông minh hơn một chút.
+
+00:06:07.610 --> 00:06:09.979
+Ta có thể tạo ra một lớp View.
+
+00:06:09.980 --> 00:06:14.109
+Ta trích xuất những thuộc tính chung
+giữa các lớp View này rồi
+
+00:06:14.110 --> 00:06:19.729
+đặt chúng trong lớp View chung,
+như vậy chỉ cần viết mã một lần.
+
+00:06:19.730 --> 00:06:22.609
+Nhưng sau đó làm sao kết nối
+giữa lớp TextView
+
+00:06:22.610 --> 00:06:23.999
+và lớp View?
+
+00:06:24.000 --> 00:06:26.547
+Nếu bạn nghĩ đến việc thừa hưởng,
+bạn đã đúng.
+
+00:06:26.548 --> 00:06:30.079
+Trong file TextView.java, ta sẽ
+định nghĩa lớp TextView.
+
+00:06:30.080 --> 00:06:33.240
+Như thế ta sẽ thừa hưởng tất cả dữ liệu
+và Phương thức từ lớp View.
+
+00:06:34.270 --> 00:06:37.519
+Ta sẽ không phải viết nhiều mã
+trong lớp TextView
+
+00:06:37.520 --> 00:06:41.859
+vì phần tính năng đó
+đã được viết sẵn trong lớp View.
+
+00:06:41.860 --> 00:06:43.729
+Điều tương tự có thể áp dụng
+cho lớp ImageView
+
+00:06:43.730 --> 00:06:46.799
+và Button, ta không cần phải
+viết nhiều mã nữa.
+
+00:06:46.800 --> 00:06:49.689
+Trong những file này, ta chỉ cần
+viết những gì khác nhau
+
+00:06:49.690 --> 00:06:53.089
+khi so giữa ImageView và View.
+
+00:06:53.090 --> 00:06:57.719
+Tôi nghĩ có thể chỉ rõ một đoạn,
+để lớp ImageView chỉ cần
+
+00:06:57.720 --> 00:07:01.890
+chỉ ra những gì khác nhau
+giữa ImageView và View.
+
+00:07:03.840 --> 00:07:06.959
+Nếu ta không muốn thừa hưởng hành vi
+nhất định từ lớp view,
+
+00:07:06.960 --> 00:07:11.759
+ta có thể chỉ rõ hành vi cập nhật
+trong lớp ImageView,
+
+00:07:11.760 --> 00:07:13.040
+hoặc trong bất kỳ lớp nào ở đây.
+
+00:07:14.070 --> 00:07:16.679
+Để nhắc cho các bạn nhớ về thuật ngữ,
+trong trường hợp này,
+
+00:07:16.680 --> 00:07:20.039
+TextView là Phân lớp,
+và View là Siêu lớp.
+
+00:07:21.430 --> 00:07:23.279
+Nếu ta quay lại tài liệu
+
+00:07:23.280 --> 00:07:27.309
+phần về lớp TextView,
+giờ ta sẽ hiểu được phần này.
+
+00:07:27.310 --> 00:07:29.999
+Nó nói rằng TextView mở rộng cho View.
+
+00:07:30.000 --> 00:07:33.329
+Giờ ta biết rằng nó nghĩa là
+ta thừa hưởng trạng thái
+
+00:07:33.330 --> 00:07:35.279
+và các Phương thức từ lớp View.
+
+00:07:35.280 --> 00:07:38.329
+Và dưới đây là Sơ đồ Hệ thống Lớp.
+
+00:07:38.330 --> 00:07:41.884
+Nó cho thấy lớp TextView
+thừa hưởng từ lớp View.
+
+00:07:43.730 --> 00:07:46.530
+Và đến lượt mình, lớp View
+thừa hưởng từ lớp Object.
+
+00:07:47.650 --> 00:07:50.059
+Nếu bạn xem thêm xung quanh,
+bạn có thể thấy các lớp khác,
+
+00:07:50.060 --> 00:07:54.779
+như lớp EditText,
+mở rộng cho lớp TextView.
+
+00:07:54.780 --> 00:07:57.569
+Nên nó nhận những hành vi
+từ lớp TextView
+
+00:07:57.570 --> 00:08:00.120
+và thêm vào một chút
+tính năng riêng cho nó.
+
+00:08:01.290 --> 00:08:03.589
+EditText mở rộng từ TextView.
+
+00:08:03.590 --> 00:08:06.719
+TextView mở rộng từ View,
+và View mở rộng từ Object.
+
+00:08:06.720 --> 00:08:09.830
+Đây là Sơ đồ Hệ thống Lớp.
+
+00:08:11.370 --> 00:08:13.949
+Có rất nhiều điều,
+và bạn có thể xem lại trong nhiều giờ.
+
+00:08:13.950 --> 00:08:17.009
+Nhưng để tôi cho bạn xem một thứ
+trong trang tài liệu của TextView.
+
+00:08:17.010 --> 00:08:20.819
+Tôi muốn cho các bạn xem
+Phương thức SetVisibility.
+
+00:08:20.820 --> 00:08:24.349
+Đây là Phương thức Java cho
+SetVisibility trong lớp TextView.
+
+00:08:24.350 --> 00:08:26.860
+Nó sẽ thay đổi nhằm
+cho hiện hoặc không hiện cảnh.
+
+00:08:28.000 --> 00:08:33.239
+Nếu tôi nhấn vào Phương thức này,
+nó sẽ đưa tôi đến lớp View.
+
+00:08:33.240 --> 00:08:36.009
+Và nó mô tả Phương thức này làm gì.
+
+00:08:36.010 --> 00:08:39.859
+Bạn có thể thấy một đối tượng TextView
+có phương thức cho nhìn thấy hoặc không.
+
+00:08:39.860 --> 00:08:43.658
+Nhưng thật ra nó thừa hưởng
+từ lớp View.
+
+00:08:43.659 --> 00:08:47.469
+Chúng ta có tính năng này miễn phí,
+từ lớp View.
+
+00:08:47.470 --> 00:08:50.929
+Được rồi, ta vừa học
+cả tấn khái niệm mới.
+
+00:08:50.930 --> 00:08:56.039
+Thường thì những điều này sẽ rải ra trong
+một học kỳ của môn khoa học máy tính.
+
+00:08:56.040 --> 00:08:58.259
+Ta sẽ làm một chút thực hành
+
+00:08:58.260 --> 00:09:01.169
+và hy vọng là nó bắt đầu
+liên kết kiến thức lại cho các bạn.
+
+00:09:01.170 --> 00:09:03.009
+Nhưng hãy biết là
+sẽ tốn nhiều thời gian
+
+00:09:03.010 --> 00:09:06.609
+và thực hành, đến khi bạn hoàn toàn
+nắm chắc những khái niệm này.
+
+00:09:06.610 --> 00:09:09.699
+Bài tập đầu tiên, tôi muốn các bạn
+tạo một ứng dụng Android mới,
+
+00:09:09.700 --> 00:09:11.530
+vì chúng ta không muốn
+làm hỏng ứng dụng Java.
+
+00:09:13.070 --> 00:09:14.640
+Khi đã tạo xong project, hãy chạy app.
+
+00:09:15.790 --> 00:09:18.629
+Khi đã tạo xong app,
+các bạn sẽ thấy file MainActivity.
+
+00:09:18.630 --> 00:09:22.529
+File MainActivity đó sẽ là
+mở rộng từ AppCompatActivity.
+
+00:09:22.530 --> 00:09:26.059
+Trong phiên bản Android Studio của bạn,
+nếu MainActivity là mở rộng
+
+00:09:26.060 --> 00:09:28.759
+từ ActionBarActivity thì cũng không sao.
+
+00:09:28.760 --> 00:09:32.199
+Đó chỉ là phiên bản cũ của
+AppCompatActivity.
+
+00:09:32.200 --> 00:09:35.649
+Bằng cách bỏ ghi đè của Phương thức này,
+ta sẽ quay lại
+
+00:09:35.650 --> 00:09:40.279
+như cách Phương thức onCreate xuất hiện
+trong lớp AppCompatActivity.
+
+00:09:40.280 --> 00:09:44.539
+Sự hiện diện của Phương thức này cho biết
+ta muốn hành vi khác từ MainActivity
+
+00:09:44.540 --> 00:09:46.229
+cho onCreate.
+
+00:09:46.230 --> 00:09:49.539
+Nên bỏ nó đi sẽ đưa ta quay lại
+với hành vi gốc
+
+00:09:49.540 --> 00:09:52.039
+trong lớp AppCompatActivity.
+
+00:09:52.040 --> 00:09:53.379
+Khi bạn chạy ứng dụng,
+
+00:09:53.380 --> 00:09:57.249
+bạn chú ý thấy điều gì khác
+so với lần đầu chạy?
+
+00:09:57.250 --> 00:09:58.510
+Viết câu trả lời vào khung này.
+

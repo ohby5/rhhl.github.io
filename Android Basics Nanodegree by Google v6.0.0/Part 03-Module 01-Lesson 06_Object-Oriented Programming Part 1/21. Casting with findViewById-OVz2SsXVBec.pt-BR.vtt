@@ -1,0 +1,429 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.270 --> 00:00:01.540
+Vamos olhar o número 1.
+
+00:00:01.540 --> 00:00:04.470
+Antes de eu falar a resposta,
+vou copiar esse código e
+
+00:00:04.470 --> 00:00:06.700
+colar no Android Studio.
+
+00:00:06.700 --> 00:00:09.060
+Quero mostrar o tipo de erro
+que podemos ter como resposta.
+
+00:00:09.060 --> 00:00:12.090
+Agora, quando você estava fazendo o teste
+você não precisava usar o Android Studio,
+
+00:00:12.090 --> 00:00:14.510
+você poderia ter resolvido só
+olhando o código aqui e
+
+00:00:14.510 --> 00:00:16.280
+então escrito na resposta.
+
+00:00:16.280 --> 00:00:19.520
+Então, usando ou não o
+Android Studio, tudo bem.
+
+00:00:19.520 --> 00:00:22.260
+Para fazer o código funcionar,
+eu criei um novo projeto e
+
+00:00:22.260 --> 00:00:25.270
+então modifiquei o arquivo de
+layout <i>ActivityMain</i>,
+
+00:00:25.270 --> 00:00:30.080
+para que tivesse várias visualizações
+com esses ID's que vamos referenciar.
+
+00:00:30.080 --> 00:00:31.780
+Não tenho certeza como
+esse layout pareceria, mas
+
+00:00:31.780 --> 00:00:36.060
+eu só quero colocar as visualizações aqui
+com os nomes ID correspondentes.
+
+00:00:36.060 --> 00:00:38.210
+Desse jeito, meu código
+vai funcionar aqui.
+
+00:00:38.210 --> 00:00:42.570
+Então, número um, eu colei o código aqui,
+e eu percebi um erro.
+
+00:00:42.570 --> 00:00:46.270
+Adroid Studios diz que não pode
+determinar o método <i>setText</i>.
+
+00:00:46.270 --> 00:00:47.780
+Se você lembrar o último vídeo,
+
+00:00:47.780 --> 00:00:51.510
+Eu mencionei que <i>setText</i>
+é um método <i>TextView</i>.
+
+00:00:51.510 --> 00:00:55.100
+Isso significa que você só pode invocar
+esse método em objetos <i>TextView</i>.
+
+00:00:55.100 --> 00:00:57.920
+Nesse caso, vamos chamar
+chamar de <i>nameTextView</i>.
+
+00:00:57.920 --> 00:01:00.705
+Um <i>nameTextView</i>
+deve ser um objeto <i>view</i>,
+
+00:01:00.705 --> 00:01:04.057
+e precisamos mudar para
+um objeto <i>TextView</i>.
+
+00:01:05.990 --> 00:01:08.942
+Então recebemos um erro dizendo
+que não há compatibilidade.
+
+00:01:08.942 --> 00:01:12.390
+Um <i>textview</i>, um objeto tipo
+<i>TextView</i> é requerido, mas
+
+00:01:12.390 --> 00:01:15.700
+ao invés disso ele acha
+um objeto <i>typeview</i>.
+
+00:01:15.700 --> 00:01:18.570
+Isso porque <i>findviewbyID</i>
+retorna uma visualização, e
+
+00:01:18.570 --> 00:01:21.950
+esse lado esquerdo requer um <i>TextView</i>.
+
+00:01:21.950 --> 00:01:24.860
+Isso significa que precisamos
+modificar isso
+
+00:01:24.860 --> 00:01:28.730
+para receber a visualização por
+<i>findViewById</i>
+
+00:01:28.730 --> 00:01:30.800
+Então podemos armazenar tudo isso
+
+00:01:30.800 --> 00:01:35.090
+com o nome <i>nameTextView</i>
+na variável do lado esquerdo.
+
+00:01:35.090 --> 00:01:40.760
+Então o erro some, e podemos
+colocar o texto "Laura" nesse <i>TextView</i>.
+
+00:01:40.760 --> 00:01:44.510
+O erro está na linha 1,
+então eu escrevi o código certo aqui.
+
+00:01:44.510 --> 00:01:49.540
+A explicação geral é que precisamos
+lançar essa <i>view</i> em um <i>TextView</i>
+
+00:01:49.540 --> 00:01:53.050
+e então armazenar dentro
+da variável <i>nameTextView</i>.
+
+00:01:53.050 --> 00:01:56.340
+Desse jeito, nós podemos invocar
+<i>nameTextView.setText</i>
+
+00:01:56.340 --> 00:01:59.850
+que é um método <i>TextView</i>,
+na próxima linha de código.
+
+00:01:59.850 --> 00:02:00.830
+Vamos para o número dois.
+
+00:02:00.830 --> 00:02:03.290
+Vou copiar o código e colar
+no Android Studio.
+
+00:02:04.540 --> 00:02:06.590
+Esse é o código que eu copiei.
+
+00:02:06.590 --> 00:02:09.620
+A primeira linha
+parece correta, sem erros.
+
+00:02:09.620 --> 00:02:11.550
+Mas a segunda linha
+está sublinhada de vermelho e
+
+00:02:11.550 --> 00:02:14.420
+e isso quer dizer que existe
+um erro de digitação.
+
+00:02:14.420 --> 00:02:17.990
+Quer dizer que um <i>string</i>
+é necessário mas o código é <i>int</i>.
+
+00:02:17.990 --> 00:02:19.290
+Para entender melhor,
+
+00:02:19.290 --> 00:02:24.250
+temos que olhar o método <i>getMaxLines</i>
+nas instruções do <i>TextView</i>.
+
+00:02:24.250 --> 00:02:26.580
+Nas instruções, vou procurar por
+
+00:02:26.580 --> 00:02:28.650
+método <i>getMaxLines</i>.
+
+00:02:28.650 --> 00:02:29.770
+E aqui está.
+
+00:02:29.770 --> 00:02:31.120
+Não existem parâmetros de entrada,
+
+00:02:31.120 --> 00:02:33.520
+e o valor de retorno
+desse método é inteiro.
+
+00:02:34.758 --> 00:02:38.194
+Então era por isso que o Android Studio
+estava reclamando, por que esse método,
+
+00:02:38.194 --> 00:02:39.911
+se está dando como resposta um inteiro
+
+00:02:39.911 --> 00:02:42.700
+mas estamos tentando armazenar
+como uma variável <i>string</i>.
+
+00:02:42.700 --> 00:02:47.870
+Como resultado, eu preciso mudar esse tipo
+de dado da variável para uma inteira.
+
+00:02:47.870 --> 00:02:49.470
+Então o erro some.
+
+00:02:49.470 --> 00:02:52.620
+Então, o valor de retorno
+desse método é inteiro.
+
+00:02:52.620 --> 00:02:56.060
+Logo, podemos armazenar
+nessas variáveis <i>maxLines</i>.
+
+00:02:56.060 --> 00:02:57.870
+Ainda tem um aviso.
+
+00:02:57.870 --> 00:03:00.870
+Dizendo que a variável
+<i>maxLines</i> nunca foi usada.
+
+00:03:00.870 --> 00:03:02.260
+Mas isso é só um código <i>snippet</i>.
+
+00:03:02.260 --> 00:03:04.760
+Eu presumi que se isso
+fosse um aplicativo comum,
+
+00:03:04.760 --> 00:03:06.740
+iríamos usar
+essa variável depois.
+
+00:03:07.800 --> 00:03:11.380
+Então o erro está na segunda linha
+e esse é o código atualizado.
+
+00:03:11.380 --> 00:03:14.340
+A explicação é que o valor de retorno
+desse método deveria
+
+00:03:14.340 --> 00:03:15.480
+ser inteiro.
+
+00:03:15.480 --> 00:03:16.620
+Vamos para o exercício três.
+
+00:03:17.980 --> 00:03:19.830
+Esse é o código do exercício três.
+
+00:03:19.830 --> 00:03:22.960
+Eu copiei e colei o código
+no Android Studio.
+
+00:03:22.960 --> 00:03:25.812
+Aparece um erro com uma mensagem
+dizendo que os tipos são incompatíveis.
+
+00:03:25.812 --> 00:03:29.400
+Requer um <i>ImageView</i>,
+mas é um <i>view</i>.
+
+00:03:29.400 --> 00:03:32.740
+Esse erro é similar ao que acabamos
+de ver com o <i>TextView</i>.
+
+00:03:32.740 --> 00:03:34.960
+Esse método tem como
+resposta uma <i>view</i>.
+
+00:03:34.960 --> 00:03:38.270
+E do lado esquerdo, nós estamos tentando
+armazenar dentro de um <i>ImageView</i>.
+
+00:03:38.270 --> 00:03:42.370
+Então precisamos mudar esse objeto <i>view</i>
+para um <i>ImageView</i>
+
+00:03:42.370 --> 00:03:47.330
+Isso é valido por que o <i>view</i> no
+ícone ID na verdade é um <i>ImageView</i>,
+
+00:03:47.330 --> 00:03:49.630
+então tudo bem lançar isso
+num <i>imageview</i>
+
+00:03:49.630 --> 00:03:52.560
+Agora do lado direito,
+equivale a um <i>ImageView</i>,
+
+00:03:52.560 --> 00:03:55.700
+podemos armazenar dentro
+da variável do lado esquerdo.
+
+00:03:55.700 --> 00:03:59.770
+Essa variável tem um dado tipo <i>ImageView</i>
+então agora tudo combina
+
+00:03:59.770 --> 00:04:01.430
+e o erro some.
+
+00:04:01.430 --> 00:04:04.640
+No próximo lado,
+podemos invocar um método <i>ImageView</i>,
+
+00:04:04.640 --> 00:04:09.180
+<i>SetImageResource</i>,
+nesse objeto <i>IconImageView object</i>.
+
+00:04:09.180 --> 00:04:12.830
+Ainda tem um erro, dizendo
+que não aceita símbolos.
+
+00:04:12.830 --> 00:04:17.310
+Isso é porque eu não adicionei uma imagem
+no nosso aplicativo com a logo do nome.
+
+00:04:17.310 --> 00:04:21.410
+Se eu adicionar, o erro some,
+então nosso código está correto.
+
+00:04:21.410 --> 00:04:25.400
+Esse é o código correto, onde eu armazenei
+esse <i>view</i> em um <i>ImageView</i>.
+
+00:04:25.400 --> 00:04:27.330
+Por último temos o número 4.
+
+00:04:27.330 --> 00:04:32.080
+Eu colei o código no Android Studio
+e surpreendentemente não tem erros.
+
+00:04:32.080 --> 00:04:35.960
+O código está tentando achar
+uma <i>view</i> com o <i>id title</i>,
+
+00:04:35.960 --> 00:04:41.150
+e isso deve retornar um <i>view</i> como resposta
+e fica armazenado na variável <i>TextView</i>.
+
+00:04:41.150 --> 00:04:43.900
+<i>TextView</i> tem um tipo de dado <i>View</i>,
+
+00:04:43.900 --> 00:04:47.940
+então isso combina com o lado direito,
+então essa linha de código está correta.
+
+00:04:47.940 --> 00:04:51.410
+Na próxima linha, vamos pegar
+esse objeto, que é um <i>ViewAnd</i>,
+
+00:04:51.410 --> 00:04:54.410
+e vamos invocar um método
+<i>setVIsibility</i>
+
+00:04:54.410 --> 00:04:58.763
+O método usa um parâmetro de entrada
+chamado <i>View.GONE.</i>
+
+00:04:58.763 --> 00:05:02.790
+Eu posso checar as instruções
+para verificar o que significa isso.
+
+00:05:02.790 --> 00:05:06.050
+Nas instruções da classe <i>view</i>,
+eu posso procurar pelo
+
+00:05:06.050 --> 00:05:08.400
+método <i>setVisibility</i>.
+
+00:05:08.400 --> 00:05:11.970
+Eu vejo que <i>setVisibility</i>
+é um método dentro da classe <i>view</i>.
+
+00:05:11.970 --> 00:05:16.310
+É preciso de uma entrada inteira que
+represente o estado de visibilidade.
+
+00:05:16.310 --> 00:05:21.175
+Os valores possíveis da visibilidade são:
+<i>VISIBLE, INVISIBLE, e GONE</i>
+
+00:05:21.175 --> 00:05:24.490
+Como <i>setVisibility</i> é um método
+dentro da classe <i>view</i>,
+
+00:05:24.490 --> 00:05:26.320
+é uma entrada válida.
+
+00:05:26.320 --> 00:05:29.280
+Não tem necessidade de lançar
+em um <i>TextView</i>,
+
+00:05:29.280 --> 00:05:33.200
+por que o método que estamos invocando
+é um método da classe <i>view</i>.
+
+00:05:33.200 --> 00:05:36.010
+Agora, se estamos tentando
+usar o método <i>TextView</i>,
+
+00:05:36.010 --> 00:05:38.860
+então vamos precisar
+lançar em um <i>TextView</i>.
+
+00:05:38.860 --> 00:05:41.600
+Então para esse exercício,
+a resposta deve ser: sem erros,
+
+00:05:41.600 --> 00:05:45.930
+porque <i>setVisibility</i> é um método <i>view</i>
+e não tem problema deixa como objeto <i>view</i>.
+
+00:05:45.930 --> 00:05:47.480
+Essas questões foram difíceis.
+
+00:05:47.480 --> 00:05:48.860
+Tudo bem se você não acertou.
+
+00:05:48.860 --> 00:05:52.080
+No próximo teste, você vai
+poder praticar mais.
+

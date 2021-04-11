@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.660 --> 00:00:05.050
+Sipariş özeti için ücret başlığını değiştirmek olan ilk adımla
+
+00:00:05.050 --> 00:00:05.656
+başlayalım.
+
+00:00:05.656 --> 00:00:09.333
+Önce activity_mainlayout dosyasını açıyorum ve
+
+00:00:09.333 --> 00:00:12.000
+ücret başlığını kontrol eden izlemeyi bulmak için gidiyorum.
+
+00:00:12.000 --> 00:00:14.270
+Ve imlecimi buraya kouyuyorum,
+
+00:00:14.270 --> 00:00:17.240
+sonra da bu izlemenin doğru bir şekilde işaretlendiğini görüyorum.
+
+00:00:17.240 --> 00:00:20.710
+Artık devam edebilir ve buradaki diziyi düzenleyebilirim.
+
+00:00:20.710 --> 00:00:23.800
+Bunu sileceğim ve Sipariş Özeti yazacağım.
+
+00:00:23.800 --> 00:00:26.370
+Ön izleme penceresinde doğru biçimde güncellenir.
+
+00:00:26.370 --> 00:00:28.690
+Düzenleyi tüm başlıklar yerine büyük harf O ve
+
+00:00:28.690 --> 00:00:31.910
+büyük harf S ile hecelediğime dikkat edin.
+
+00:00:31.910 --> 00:00:34.390
+UI'mizi değiştirmeye karar verirsek ve
+
+00:00:34.390 --> 00:00:39.950
+tüm başlıkları yanlış olarak ayarlarsak, metnim yine doğru olacak.
+
+00:00:39.950 --> 00:00:42.360
+Ben de bunun gibi Sipariş Özeti yazmayı tercih ediyorum
+
+00:00:42.360 --> 00:00:44.850
+ve sonra da Özellik metni Tüm Başlıklar için kullanıyorum = doğru.
+
+00:00:46.170 --> 00:00:47.840
+Tamam, ilk nesne halloldu.
+
+00:00:47.840 --> 00:00:51.600
+İkinci görevimiz ücret değeri TextView'i bulmak ve
+
+00:00:51.600 --> 00:00:54.130
+bunun bir Kimliğini almak için onu değiştirmek.
+
+00:00:54.130 --> 00:00:58.050
+Sipariş özeti başlığından sonra bir sonraki TextView'a hareket edersem
+
+00:00:58.050 --> 00:01:02.830
+o zaman bu ücret değeri TextView ve burada da işaretlenmiş.
+
+00:01:02.830 --> 00:01:07.840
+İstendiği gibi, Kimliği order_summary_Text_view olarak değiştireceğim.
+
+00:01:07.840 --> 00:01:11.170
+Harika, bunlar planlamadaki XML değişiklikleri.
+
+00:01:11.170 --> 00:01:13.210
+Uygulamayı çalıştırıp hala çalıştığını göreyim.
+
+00:01:14.220 --> 00:01:15.210
+Aslında, çalışmıyor.
+
+00:01:15.210 --> 00:01:19.490
+sembol ücret text_view'i bulamadığıyla ilgili bir hata mesajı veriyor.
+
+00:01:19.490 --> 00:01:21.320
+Java dosyasının içinde.
+
+00:01:21.320 --> 00:01:24.250
+Uygulamamızın derlenebilmesi için sonraki adımları
+
+00:01:24.250 --> 00:01:25.080
+uygulamamız gerekiyor.
+
+00:01:26.850 --> 00:01:29.730
+Ana Aktivite görüntüleme mesajı metodunda,
+
+00:01:29.730 --> 00:01:34.120
+değişkenin ismini priceTextView'dan orderSummaryTextView olarak değiştirmemiz lazım.
+
+00:01:34.120 --> 00:01:37.260
+Mesajı görüntüleme metodundaki ana aktivite dosyası içinde
+
+00:01:37.260 --> 00:01:39.430
+ücret TextView'i burada buldum.
+
+00:01:39.430 --> 00:01:42.570
+Bunu sileceğim ve orderSummaryTextView yazacağım.
+
+00:01:42.570 --> 00:01:44.212
+Camel Örneği olacak ve
+
+00:01:44.212 --> 00:01:47.940
+küçük harf o ile başlayacak çünkü bir değişken ismi.
+
+00:01:47.940 --> 00:01:50.348
+Hemen bir uyarı mesajı alıyorum, değişkenin hiç kullanılmadığını söylüyor.
+
+00:01:50.348 --> 00:01:53.410
+Onu kopyalayacağım ve onu burada bir sonraki satırda kullanacağım
+
+00:01:53.410 --> 00:01:58.580
+çünkü priceTextView çözülmedi diyen bir hata mesajı var.
+
+00:01:58.580 --> 00:02:02.740
+Ve sonra bunu silin, ve yeni değişken ismini burada kullanın.
+
+00:02:02.740 --> 00:02:04.550
+Tamam, ve bu hatayı giderir.
+
+00:02:04.550 --> 00:02:07.859
+Ama burada hala başka bir hata var, ve bence bu son görevle ilgili.
+
+00:02:09.080 --> 00:02:13.598
+Buradaki son nesne R.id.price_text_view'i
+
+00:02:13.598 --> 00:02:16.035
+R.id.order_summary_text_view olarak değiştirmemi söylüyor.
+
+00:02:16.035 --> 00:02:19.652
+Bu kırmızı hataya çift tıklayacağım ve
+
+00:02:19.652 --> 00:02:24.437
+onu silip yerine order_summary_text_view yazacağım.
+
+00:02:24.437 --> 00:02:26.630
+İşte, ve hata gitti.
+
+00:02:27.780 --> 00:02:29.930
+Ve şimdi artık uygulama hatasız olarak çalışıyor.
+
+00:02:29.930 --> 00:02:31.660
+İlk planlama doğru.
+
+00:02:31.660 --> 00:02:34.340
+Ücreti söylemek yerine, şimdi sipariş özeti diyor ve
+
+00:02:34.340 --> 00:02:37.520
+miktarı değiştirip siparişe tıklarsam, özet burada görünüyor.
+
+00:02:38.660 --> 00:02:41.890
+Şimdi yapmış olabileceğiniz gözlemler hakkında konuşalım.
+
+00:02:41.890 --> 00:02:44.400
+Doğru ya da yanlış cevap olmadığını hatırlayın.
+
+00:02:44.400 --> 00:02:49.098
+Öncelikle, ücret TextView için, ona order_summary_text_view kimliği verdiğimizde
+
+00:02:49.098 --> 00:02:53.730
+aynı format yeniden çıktı
+
+00:02:53.730 --> 00:02:58.460
+Java kodunun içinde, tam da biz Görüntüleme Mesajı metodunu düzenlerken.
+
+00:02:58.460 --> 00:03:02.010
+Yine, ücreti sipariş özeti olarak değiştirerek
+
+00:03:02.010 --> 00:03:04.840
+kodun diğer kısımlarında çeşitli etkilere neden olduğunu da farketmişsinizdir.
+
+00:03:04.840 --> 00:03:09.230
+Şimdi uygulamanın yeniden çalışması için bu değişikliklerin bazıları gerekmektedir,
+
+00:03:09.230 --> 00:03:11.840
+ama diğer değişiklikler daha iyiydi
+
+00:03:11.840 --> 00:03:15.810
+ve hiç eski kalmadı bizde, referansları ücrete bağladık.
+
+00:03:17.190 --> 00:03:19.880
+Görüntüleme Mesajı metoduna daha yakından bakarak,
+
+00:03:19.880 --> 00:03:23.910
+sadece dizi mesajı adı altında tek bir girdi parametresi olduğunu fark etmiş olabilirsiniz.
+
+00:03:23.910 --> 00:03:24.980
+Ve bir dönüş değeri yok.
+
+00:03:26.100 --> 00:03:30.640
+&gt;&gt; Bu nedenle bu metodda bir şey dönüşü yapmamızı söyleyen bir satır yok.
+
+00:03:30.640 --> 00:03:34.864
+Yine TextView kelimesini, XML'de görünce fark edebiliriz ve
+
+00:03:34.864 --> 00:03:36.320
+planımıza bir metin görüntüsü ekleriz.
+
+00:03:37.500 --> 00:03:39.330
+Aynen buradaki gibi telaffuz edilir.
+
+00:03:40.480 --> 00:03:44.830
+Yine buradaki kod satırı bir değişkenin görevi gibi,
+
+00:03:44.830 --> 00:03:46.740
+orada değişken verisi türü,
+
+00:03:46.740 --> 00:03:50.674
+değişken ismi ve sonra da bir ilk değerimiz var burada.
+
+00:03:52.035 --> 00:03:55.825
+Tam sayıları ve dizileri nasıl deklare ettiğimize eşit bir durum bu.
+
+00:03:55.825 --> 00:03:59.115
+Ve eğer gerçekten yakından baktıysanız bunun
+
+00:03:59.115 --> 00:04:03.705
+bir metod çağırma gibi göründüğünü, findViewby parantezler açarak,
+
+00:04:03.705 --> 00:04:06.885
+ortaya bir şeyler yazarak, ve sonra parantezi kapattığını görürsünüz.
+
+00:04:06.885 --> 00:04:10.310
+Buna benzer olarak buradaki setText ile, bir açık parantez,
+
+00:04:10.310 --> 00:04:12.510
+ortaya yazılacak bir şeyler, ve sonra parantezin kapanmasını görürüz.
+
+00:04:12.510 --> 00:04:14.200
+Bu da bir metod çağırma olabilir.
+
+00:04:15.230 --> 00:04:18.240
+Sonraki videolarda, bu kod satırlarında neler olduğuna
+
+00:04:18.240 --> 00:04:21.230
+daha yakından bakacağız ve
+
+00:04:21.230 --> 00:04:23.350
+ne anlama geldiklerini gerçekten anlamaya başlayacağız.
+

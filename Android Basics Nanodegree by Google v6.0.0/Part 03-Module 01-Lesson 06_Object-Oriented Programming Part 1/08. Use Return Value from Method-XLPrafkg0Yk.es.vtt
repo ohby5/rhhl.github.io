@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.288 --> 00:00:02.730
+Volvamos al método <i>calculatePrice</i>
+(calcular precio).
+
+00:00:02.730 --> 00:00:06.472
+Cuando llamamos a este método
+nos devuelve el precio total del pedido
+
+00:00:06.472 --> 00:00:08.152
+y podemos guardar este valor
+
+00:00:08.152 --> 00:00:10.256
+dentro de la variable
+llamada <i>price</i> (precio).
+
+00:00:10.256 --> 00:00:11.776
+Luego lo mostramos en pantalla.
+
+00:00:13.440 --> 00:00:16.042
+Para integrar el método <i>calculatePrice</i>
+en nuestra app,
+
+00:00:16.042 --> 00:00:18.040
+vamos a necesitar usar
+valores de retorno.
+
+00:00:18.040 --> 00:00:19.572
+Veamos el pseudocódigo primero.
+
+00:00:20.330 --> 00:00:22.490
+Dentro del método<i> submitOrder</i>
+(enviar pedido)
+
+00:00:22.490 --> 00:00:24.524
+queremos llamar
+al método <i>calculatePrice</i>.
+
+00:00:24.524 --> 00:00:27.072
+Va a calcular el precio total del pedido
+
+00:00:27.470 --> 00:00:29.536
+y va devolverlo como output (salida).
+
+00:00:29.536 --> 00:00:31.590
+Así que vamos a guardar ese resultado
+
+00:00:31.590 --> 00:00:33.880
+en una variable de números enteros
+llamada <i>price</i>.
+
+00:00:33.880 --> 00:00:36.320
+Luego mostraremos ese <i>price</i> en pantalla.
+
+00:00:36.800 --> 00:00:38.992
+Veamos el código Java real.
+
+00:00:39.220 --> 00:00:42.000
+En el método <i>submitOrder</i>,
+añadiríamos esta línea de código:
+
+00:00:42.000 --> 00:00:43.620
+<i>int price = calculatePrice();</i>
+
+00:00:43.620 --> 00:00:46.114
+¿Recuerdas el operador
+de asignación de la lección 2?
+
+00:00:46.114 --> 00:00:49.448
+Siempre que tengo esto, se evalúa
+primero lo que hay a la derecha.
+
+00:00:49.448 --> 00:00:52.976
+El método <i>calculatePrice</i> devuelve
+un único valor, el precio del pedido.
+
+00:00:52.976 --> 00:00:56.228
+Y eso debería guardarse dentro
+de esta variable local llamada <i>price</i>.
+
+00:00:56.850 --> 00:00:59.664
+Luego llamamos otro método,
+<i>displayPrice</i> (mostrar precio)
+
+00:01:00.040 --> 00:01:04.224
+y la entrada en ese método va a ser
+la variable <i>price</i> que acabamos de crear.
+
+00:01:04.970 --> 00:01:07.344
+Esta es la primera vez
+que vemos cómo un método
+
+00:01:07.344 --> 00:01:09.336
+puede usarse como parte de una expresión.
+
+00:01:09.780 --> 00:01:11.824
+Por ejemplo,
+podemos llamar este método
+
+00:01:12.160 --> 00:01:15.450
+y el valor que se devuelve
+puede sumarse a otros números
+
+00:01:15.450 --> 00:01:19.168
+o, si es un string (cadena de texto),
+podemos concatenarla con otros strings.
+
+00:01:19.700 --> 00:01:22.304
+Lo que interesa es que todo
+lo que hay a la derecha
+
+00:01:22.480 --> 00:01:24.672
+se evalúa tomando un único valor
+
+00:01:24.832 --> 00:01:27.210
+que se guarda en la variable
+de la izquierda.
+
+00:01:27.920 --> 00:01:31.444
+Pero para la app Just Java solo
+vamos a usar <i>calculatePrice</i> directamente
+
+00:01:31.444 --> 00:01:32.868
+y lo mostraremos en pantalla.
+
+00:01:33.590 --> 00:01:36.160
+Para este ejercicio de codificación
+deberás asegurarte
+
+00:01:36.160 --> 00:01:38.360
+de que el método <i>calculatePrice</i>
+está definido
+
+00:01:38.360 --> 00:01:40.926
+y de que es llamado
+correctamente en la app Just Java.
+
+00:01:40.926 --> 00:01:43.314
+Primero, céntrate
+en cómo se define el método.
+
+00:01:43.568 --> 00:01:45.250
+Modifica el método <i>calculatePrice</i>
+
+00:01:45.250 --> 00:01:49.086
+para tener el tipo de devolución de datos
+correcto en la definición del método.
+
+00:01:49.086 --> 00:01:51.120
+Asume que los parámetros
+de entrada son 0.
+
+00:01:52.060 --> 00:01:54.592
+El siguiente paso es modificar
+el interior del método.
+
+00:01:54.840 --> 00:01:58.032
+Asegúrate de que devuelve
+el precio total del pedido correctamente,
+
+00:01:58.032 --> 00:02:01.464
+que es la cantidad de tazas pedidas
+multiplicada por el precio por taza.
+
+00:02:01.910 --> 00:02:04.784
+Puedes asumir
+que cada taza de café cuesta $5,
+
+00:02:04.784 --> 00:02:07.814
+así que en el método puedes poner
+un código permanente para eso.
+
+00:02:08.030 --> 00:02:11.632
+Una vez hecho todo esto, puedes ver
+cómo se está llamando al método.
+
+00:02:12.410 --> 00:02:15.040
+Llama a <i>calculatePrice</i>
+desde el método <i>submitOrder</i>.
+
+00:02:15.232 --> 00:02:17.440
+Puedes usar el código
+del que hablamos antes.
+
+00:02:18.000 --> 00:02:20.554
+Luego, simplemente muestra
+este precio en la pantalla.
+
+00:02:20.760 --> 00:02:22.920
+Ahora podrías usar el método <i>displayPrice</i>,
+
+00:02:22.920 --> 00:02:24.990
+pero ya aprendiste
+al final de la lección 2
+
+00:02:24.990 --> 00:02:27.640
+cómo mostrar texto
+en la pantalla también.
+
+00:02:27.640 --> 00:02:29.276
+El texto decía: "¡Gracias!"
+
+00:02:29.276 --> 00:02:32.396
+Si pudieras intentar integrar
+este valor de <i>price</i> con un texto,
+
+00:02:32.396 --> 00:02:33.760
+sería estupendo.
+
+00:02:34.416 --> 00:02:36.178
+Tendría un aspecto similar a este.
+
+00:02:36.178 --> 00:02:38.808
+Así, si cambias la cantidad
+y le das a <i>Order</i> (pedir),
+
+00:02:38.808 --> 00:02:40.960
+el precio se muestra aquí
+junto con el texto.
+
+00:02:42.000 --> 00:02:44.430
+Cuando acabes,
+marca estas casillas para continuar.
+

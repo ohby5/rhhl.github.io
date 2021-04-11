@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.670 --> 00:00:02.510
+¿Cómo viniste al trabajo hoy?
+
+00:00:02.760 --> 00:00:04.190
+Tengo una bici, me va bien.
+
+00:00:04.190 --> 00:00:05.280
+¿Y tú?
+
+00:00:05.280 --> 00:00:06.440
+Yo conduzco.
+
+00:00:06.440 --> 00:00:08.020
+Genial ¿qué tal con el coche?
+
+00:00:08.020 --> 00:00:08.750
+Bien.
+
+00:00:08.750 --> 00:00:10.310
+¿Sabes cómo funciona
+
+00:00:10.310 --> 00:00:11.600
+por debajo de la chapa?
+
+00:00:11.840 --> 00:00:13.090
+No, no lo necesito.
+
+00:00:13.090 --> 00:00:15.630
+Solo tengo que poner la llave y listo.
+
+00:00:15.630 --> 00:00:18.040
+Es parecido a escribir un código.
+
+00:00:18.040 --> 00:00:18.860
+¿En qué sentido?
+
+00:00:18.860 --> 00:00:21.220
+-Todo es como escribir un código.
+-Vale.
+
+00:00:21.220 --> 00:00:22.550
+Quédate conmigo un segundo.
+
+00:00:22.550 --> 00:00:25.010
+En las lecciones previas
+hablamos mucho del código.
+
+00:00:25.010 --> 00:00:28.150
+Sí, les enseñamos métodos
+como <i>display</i> y <i>price</i>.
+
+00:00:28.160 --> 00:00:30.200
+E insistimos en que no se preocuparan
+
+00:00:30.200 --> 00:00:32.070
+porque hablaríamos de eso luego.
+
+00:00:32.070 --> 00:00:33.640
+Bueno, luego quiere decir ahora.
+
+00:00:33.640 --> 00:00:34.360
+- Vale.
+- Bien.
+
+00:00:34.360 --> 00:00:36.520
+Al igual que sabes
+cómo funciona un coche
+
+00:00:36.520 --> 00:00:37.560
+y puedes usarlo,
+
+00:00:37.560 --> 00:00:39.510
+los estudiantes podrán usar este método.
+
+00:00:39.510 --> 00:00:40.245
+- Vale.
+- ¿Vale?
+
+00:00:40.245 --> 00:00:41.955
+Pero nosotros escribimos el método,
+
+00:00:41.955 --> 00:00:44.186
+fuimos los diseñadores
+del coche en ese caso.
+
+00:00:44.186 --> 00:00:46.380
+La idea es que definas
+un método de algún modo.
+
+00:00:46.380 --> 00:00:48.190
+Lo que sería como construir un coche.
+
+00:00:48.190 --> 00:00:49.900
+Para después recurrir a ese método.
+
+00:00:49.900 --> 00:00:51.480
+Eso sería como conducir el coche.
+
+00:00:51.480 --> 00:00:52.210
+Sí.
+
+00:00:52.210 --> 00:00:54.650
+- Usaremos estas ideas a continuación.
+- Suena bien.
+
+00:00:54.650 --> 00:00:56.506
+Dentro del archivo <i>MainActivity.java</i>
+
+00:00:56.506 --> 00:00:59.540
+es donde se define el método <i>display</i>.
+
+00:00:59.540 --> 00:01:02.956
+Y lo consultamos desde aquí
+dentro del método <i>increment</i>
+
+00:01:02.956 --> 00:01:04.769
+y dentro del método <i>decrement</i>.
+
+00:01:04.769 --> 00:01:08.640
+Las instrucciones del método <i>display</i>
+toman un número
+
+00:01:08.640 --> 00:01:10.550
+para mostrarlo luego en la pantalla.
+
+00:01:10.550 --> 00:01:11.730
+Como aquí a la derecha.
+
+00:01:11.730 --> 00:01:13.360
+En vez de definir un método,
+
+00:01:13.360 --> 00:01:16.360
+podemos tomar las instrucciones de dentro.
+
+00:01:16.360 --> 00:01:21.300
+Basta con copiarlas y pegarlas
+en donde consultamos ese método.
+
+00:01:21.300 --> 00:01:25.580
+Como <i>number</i> no es una variable
+aquí, lo cambiamos a <i>quantity</i>.
+
+00:01:25.580 --> 00:01:28.130
+Si quisiéramos hacer lo mismo
+con el método <i>increment</i>,
+
+00:01:28.130 --> 00:01:30.940
+copiaríamos este código
+y lo pegaríamos aquí.
+
+00:01:30.940 --> 00:01:33.740
+Así, el código funciona igual que antes,
+
+00:01:33.740 --> 00:01:35.950
+pero sin necesidad de usar
+el método <i>display</i>.
+
+00:01:35.950 --> 00:01:40.060
+Lo malo de esta implementación
+es que hemos duplicado el código
+
+00:01:40.060 --> 00:01:41.460
+en ambos métodos.
+
+00:01:41.460 --> 00:01:43.730
+Por el contrario, si definimos
+el método <i>display</i>
+
+00:01:43.730 --> 00:01:45.866
+y lo llamamos por su nombre,
+
+00:01:45.866 --> 00:01:49.513
+tendremos menos código,
+lo que es mejor para la aplicación.
+
+00:01:49.513 --> 00:01:51.990
+Quiero mostrarte algo más
+que también está muy bien.
+
+00:01:51.990 --> 00:01:55.540
+Cuando veas un método, haz clic
+en el nombre, luego clic derecho.
+
+00:01:55.540 --> 00:02:00.220
+Después vas a <i>declaration</i>
+o <i>Command + V</i> si tienes un Mac.
+
+00:02:00.640 --> 00:02:03.700
+Esto mueve el archivo
+al sitio donde se define el método.
+
+00:02:04.060 --> 00:02:07.910
+Es muy útil porque verás 
+las instrucciones actuales contenidas
+
+00:02:07.910 --> 00:02:09.393
+dentro de ese método.
+
+00:02:09.393 --> 00:02:10.576
+Para otros métodos,
+
+00:02:10.576 --> 00:02:14.340
+puedes abrir <i>declaration</i>
+en el código específico de Android.
+
+00:02:14.690 --> 00:02:18.670
+El archivo <i>TextView. java</i>
+lo escribió el equipo de Android.
+
+00:02:18.950 --> 00:02:22.250
+Lo que demuestra que nada
+es por arte de magia
+
+00:02:22.250 --> 00:02:25.070
+y siempre puedes remontarte
+hasta las líneas del código
+
+00:02:25.070 --> 00:02:29.320
+de quien lo definió, fueras tú
+o alguien del equipo de Android.
+
+00:02:29.840 --> 00:02:31.570
+Para entender la diferencia
+
+00:02:31.570 --> 00:02:33.810
+entre <i>definir</i>
+frente <i>consultar</i> un método,
+
+00:02:33.810 --> 00:02:35.930
+cambiaremos la actividad principal.
+
+00:02:36.220 --> 00:02:38.420
+Vamos a cambiar
+la manera de definir un código
+
+00:02:38.420 --> 00:02:42.570
+cambiando el nombre del
+método <i>display</i> por <i>displayQantitiy</i>.
+
+00:02:42.570 --> 00:02:47.315
+Para consultar este método
+¿hay que cambiar algo del código?
+
+00:02:47.315 --> 00:02:50.229
+Si los cambios produjeron
+algún error en la aplicación,
+
+00:02:50.229 --> 00:02:51.809
+asegúrate de revisarlo
+
+00:02:51.809 --> 00:02:53.829
+si quieres ejecutarla
+en tu móvil de nuevo.
+
+00:02:53.829 --> 00:02:55.589
+Marca estas casillas una vez hecho.
+

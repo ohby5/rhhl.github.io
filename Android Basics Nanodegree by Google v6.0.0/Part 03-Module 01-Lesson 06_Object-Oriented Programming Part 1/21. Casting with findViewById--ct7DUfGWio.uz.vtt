@@ -1,0 +1,412 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.610 --> 00:00:02.650
+Biz qarab ko‘rgan kodni ilovamizga qo‘shib qo‘ydim.
+
+00:00:02.650 --> 00:00:07.660
+Bu buyruq View orderSummaryTextView = findViewById ,
+
+00:00:07.660 --> 00:00:13.000
+keyin biz order_summary_text_view uchun ID identifikatoriga o‘tamiz.
+
+00:00:13.000 --> 00:00:15.910
+Ammo bu Android Studioda keyingi 
+qatorda xatolikka olib keladi.
+5
+S1:S2:S3,750 --&gt; ::,830
+Bu setText usulini hal qila olmaydi deydi.
+
+00:00:21.830 --> 00:00:24.430
+Agar bu erga boshqa kod qatorini qo‘shsam,
+
+00:00:24.430 --> 00:00:27.880
+Sizga bu o‘zgaruvchiga tegishli usullarning 
+turlarini ko‘rsata olaman.
+
+00:00:28.890 --> 00:00:32.400
+Shunday qilib, biz bu yerda shunchaki 
+orderSummaryTextView o‘zgaruvchisini yaratdik,
+
+00:00:32.400 --> 00:00:34.330
+va u TypeView va 
+
+00:00:34.330 --> 00:00:37.520
+keyingi qatorda biz unga usullarni 
+chaqira olishimiz kerak.
+
+00:00:37.520 --> 00:00:40.540
+Ammo avto-to‘ldirish bo‘yicha 
+takliflarni qarasangiz,
+
+00:00:40.540 --> 00:00:44.120
+bu usullar aslida View usullari.
+
+00:00:44.120 --> 00:00:46.140
+TextViewning maxsus usullari mavjud emas.
+
+00:00:47.200 --> 00:00:49.350
+Masalan, setText usuli mavjud emas.
+
+00:00:51.320 --> 00:00:54.455
+Shuning uchun biz bu yerda biz SetTextni 
+chaqirishga harakat qilganda xato qilamiz.
+
+00:00:56.020 --> 00:01:00.890
+Siz shuningdek, matn hajmini, yoki
+matn rangini yoki ulardan birini o‘rnatolmaysiz.
+
+00:01:00.890 --> 00:01:02.350
+Xo‘sh, bu usullarning barchasi qaerda?
+
+00:01:03.840 --> 00:01:08.700
+Gap shundaki, bu TextView
+Viewning o‘ziga xos turi.
+
+00:01:10.430 --> 00:01:13.240
+Agar biz TextView usullarini 
+chaqirishni xohlasak
+
+00:01:13.240 --> 00:01:16.777
+ushbu ob’ektda biz ishonch hosil qilishimiz 
+kerak bu TextView ob’ekti ekanligiga.
+
+00:01:17.820 --> 00:01:21.160
+Xo‘p.
+Endi o‘zgaruvchi TextView ob’ekti.
+
+00:01:21.160 --> 00:01:25.750
+Ammo keyin yana bitta mos kelmaydigan turlari xatosi borligini aytadi, chunki TextView
+
+00:01:25.750 --> 00:01:31.090
+o‘ng tomonda talab qilinadi,
+ammo biz oddiy ko‘rinishni topmoqdamiz.
+
+00:01:31.090 --> 00:01:34.240
+Buning sababi findViewById
+usul Viewni qaytaradi.
+
+00:01:34.240 --> 00:01:35.558
+Xo‘sh, buni qanday qilib yarashtiramiz?
+
+00:01:35.558 --> 00:01:41.720
+Xo‘sh, chunki TextView yanada aniqroq
+View turi yoki boshqa yo‘l bilan,
+
+00:01:41.720 --> 00:01:47.260
+TextView - bu Viewning quyi sinfi bo‘lgani uchun kasting 
+deb nomlangan narsadan foydalanishimiz mumkin.
+
+00:01:47.260 --> 00:01:51.970
+Java-da casting qilish ushbu usul 
+bilan qaytarilgan Viewni 
+
+00:01:51.970 --> 00:01:54.280
+TextView sifatida ko‘rishimiz 
+mumkinligini anglatadi.
+
+00:01:54.280 --> 00:01:58.760
+Endi bu o‘ng tomon
+aslida TextView ob’ekti va
+
+00:01:58.760 --> 00:02:02.168
+keyin biz uni orderSummaryTextView 
+o‘zgaruvchisi ichida saqlashimiz mumkin.
+
+00:02:03.460 --> 00:02:06.110
+Bu haqiqatan ham haddan tashqari ko‘pligini 
+bilaman men yuqorida aytib o‘tgan 
+
+00:02:06.110 --> 00:02:07.970
+bir tonna yangi tushunchalar.
+
+00:02:07.970 --> 00:02:09.210
+Yana bir bor tushuntirishga harakat qilaman.
+
+00:02:10.229 --> 00:02:14.280
+FindViewById usuli 
+View ob’ektini qaytaradi.
+
+00:02:14.280 --> 00:02:15.820
+Ushbu qaydni yozib,
+
+00:02:15.820 --> 00:02:19.690
+qavslar ichida kerakli ob’ekt ma’lumotlar turi bilan.
+
+00:02:19.690 --> 00:02:23.250
+Biz ushbu Viewni TextView-ga o‘tkazmoqdamiz.
+
+00:02:23.250 --> 00:02:27.217
+Shunday qilib, bu yerda butun ibora
+TextView ob’ektiga aylanadi.
+
+00:02:28.600 --> 00:02:32.140
+Keyin, biz uni chap tomondagi 
+o‘zgaruvchida saqlashimiz mumkin
+
+00:02:32.140 --> 00:02:35.790
+bu orderSummary TextView,
+va u TextView turiga ega.
+
+00:02:35.790 --> 00:02:40.740
+Endi keyingi qatorlarda ushbu ob’ektda 
+biz TextView usullarini chaqirishimiz mumkin.
+
+00:02:40.740 --> 00:02:43.720
+Endi qanday qilib butun matn usullari bu yerda paydo bo‘ladi ko‘ryapsizmi?
+
+00:02:44.840 --> 00:02:48.070
+setAllCaps, setTextSize va boshqalar.
+
+00:02:48.070 --> 00:02:51.660
+Men hozir buni o‘chirib tashlashim mumkin,
+chunki setText ishlashi kerak,
+
+00:02:51.660 --> 00:02:54.170
+va boshqa xatolar yo‘q.
+
+00:02:54.170 --> 00:02:57.100
+Shunday qilib, agar biz TextView usullarini 
+chaqirish imkoniyatiga ega bo‘lishni istasak,
+
+00:02:57.100 --> 00:02:59.410
+bizda TextView ob’ekti bo‘lishi kerak.
+
+00:02:59.410 --> 00:03:02.500
+TextView ob’ekti bo‘lishi uchun,
+Biz findViewById-ni chaqirishimiz kerak,
+
+00:03:02.500 --> 00:03:06.890
+keyin ushbu View ob’ektini 
+TextViewga kasting qiling.
+
+00:03:06.890 --> 00:03:09.700
+Kasting ishlashining sababi shundaki
+
+00:03:09.700 --> 00:03:13.440
+bu View bu yerda ko‘rinishlar
+ierarxiyasida aslida TextView.
+
+00:03:13.440 --> 00:03:17.520
+Agar biz uni radio tugmachasi kabi biron narsaga tashlashga harakat qilsak, u ishlamaydi,
+
+00:03:17.520 --> 00:03:20.840
+chunki orderSummaryTextView
+aslida TextView, shuning uchun
+
+00:03:20.840 --> 00:03:23.000
+biz uni tegishli turga o‘tkazib so‘ng 
+ichiga tashlashimiz kerak.
+
+00:03:24.275 --> 00:03:28.370
+Xuddi shunday, displeydaQuantity
+usulida biz findViewById-ni chaqiryapmiz
+
+00:03:28.370 --> 00:03:32.350
+biz unga quantity TextView manba 
+identifikatorini o‘tkazmoqdamiz
+
+00:03:32.350 --> 00:03:36.090
+Bu ko‘rinishni qaytaradi va
+biz uni TextView-ga kasting qildik va
+
+00:03:36.090 --> 00:03:39.330
+biz buni endi quantityTextView 
+o‘zgaruvchisida saqlashimiz mumkin.
+
+00:03:40.400 --> 00:03:43.450
+Ushbu o‘zgaruvchi TextView turda,
+
+00:03:43.450 --> 00:03:48.170
+Keyingi satrlarda biz TextView usullari, 
+masalan, setText-dan foydalana olamiz.
+
+00:03:48.170 --> 00:03:51.160
+Mana kasting yordamida yangilangan 
+MainActivity kodi.
+
+00:03:51.160 --> 00:03:56.400
+Ushbu Viewlarni TextViewlarga yuborishimiz mumkin
+shuning uchun ularni o‘zgaruvchilarda saqlashimiz mumkin
+
+00:03:56.400 --> 00:04:00.622
+shunday qilib TextView turiga ega MainActivity 
+o‘zgaruvchilarining ushbu ro‘yxatida,
+
+00:04:00.622 --> 00:04:05.090
+endi miqdorTextView va orderSummaryTextView 
+bu TextView turiga kiradi.
+
+00:04:05.090 --> 00:04:06.820
+Biz bularga TextView usullarini 
+chaqirishimiz mumkin,
+
+00:04:06.820 --> 00:04:10.810
+va biz ularga shunchaki ko‘rinish sifatida 
+qarash bilan cheklanmaganmiz.
+
+00:04:10.810 --> 00:04:15.050
+Va endi biz TextView-ni ushbu parametrlarga 
+xos usullarini chaqirishimiz mumkin.
+
+00:04:15.050 --> 00:04:19.041
+Masalan, biz SetText-ni chaqirishimiz 
+mumkin orderSummaryTextView-da,
+
+00:04:19.041 --> 00:04:21.880
+va biz SetText-ni chaqirishimiz mumkin
+quantityTextView-da.
+
+00:04:21.880 --> 00:04:22.650
+Ko‘rib turganingizdek,
+
+00:04:22.650 --> 00:04:27.180
+qanday ma’lumotlar turlari qaerda ishlatilishidan 
+ehtiyot bo‘lish kerak.
+
+00:04:27.180 --> 00:04:31.290
+Hozircha biz usullarni chaqirganda, biz
+qaytish qiymati haqida qayg‘urmaysiz,
+
+00:04:31.290 --> 00:04:34.400
+chunki setText usuli aslida hech 
+qanday qiymat qaytarmaydi.
+
+00:04:34.400 --> 00:04:37.180
+Xuddi shu imageView.setImageResource usuli.
+
+00:04:37.180 --> 00:04:39.060
+Bu hech qanday qaytish qiymatga ega emas.
+
+00:04:39.060 --> 00:04:41.540
+Ammo boshqa usullar qaytish 
+qiymatlariga ega bo‘lishi mumkin.
+
+00:04:41.540 --> 00:04:45.590
+Masalan, TextView sinfida
+bizda getTextSize usuli mavjud.
+
+00:04:45.590 --> 00:04:47.680
+Bu butun sonni qaytaradi.
+
+00:04:47.680 --> 00:04:53.410
+biz ushbu usulning natijasini int turidagi 
+o‘zgaruvchiga saqlashimiz mumkin.
+
+00:04:53.410 --> 00:04:55.140
+Mana boshqa usul bu ham 
+qaytish qiymatiga ega.
+
+00:04:55.140 --> 00:04:58.270
+Tugma sinfida getHeight usulini 
+chaqirishingiz mumkin,
+
+00:04:58.270 --> 00:05:03.420
+va bu butun sonni qaytaradi, shuning uchun
+siz uni o‘zgaruvchiga saqlashingiz mumkin.
+
+00:05:03.420 --> 00:05:06.450
+Agar siz ushbu natijani, masalan, satr 
+ichida saqlashga harakat qilsangiz,
+
+00:05:06.450 --> 00:05:10.810
+siz xato qilasiz, chunki bu usul 
+butun sonni qaytaradi.
+
+00:05:10.810 --> 00:05:14.988
+Ma’lumotlarning qaysi turini usulga uzatish kerak 
+va u qanday ma’lumotlarni qaytarishini bilish uchun
+
+00:05:14.988 --> 00:05:19.290
+usul hujjatlarini tekshirishingiz kerak.
+
+00:05:19.290 --> 00:05:21.260
+Masalan, TextView sinfida,
+
+00:05:21.260 --> 00:05:25.760
+agar siz ushbu usullardan birini chaqirsangiz,
+u int turdagi qiymatni qaytaradi.
+
+00:05:25.760 --> 00:05:28.620
+Qaytish qiymati ma’lumot turi
+chap tomondagi ustunda.
+
+00:05:28.620 --> 00:05:33.040
+Boshqa usullar uchun siz qaytish qiymati sifatida hali
+o‘rganmagan float turi olishingiz mumkin yoki booleans,
+
+00:05:33.040 --> 00:05:38.330
+long va boshqalar.
+
+00:05:38.330 --> 00:05:42.790
+Ushbu hujjat sahifasida usulning input sifatida
+kutilayotgan ma’lumotlar turlarini 
+
+00:05:42.790 --> 00:05:45.010
+ham ko‘rish mumkin.
+
+00:05:45.010 --> 00:05:49.590
+Masalan, setTextColor usuli
+inputda butun sonni talab qiladi
+
+00:05:49.590 --> 00:05:53.110
+bu void, shuning uchun qaytish qiymati yo‘q.
+
+00:05:53.110 --> 00:05:56.010
+Xullas, qanday ma’lumotlar turlari kutilmoqdaligini 
+bilish uchun hujjatlarni tekshiring.
+
+00:05:56.010 --> 00:05:58.750
+Aks holda, Android Studio-da bunday 
+xatolarga duch kelasiz
+
+00:05:58.750 --> 00:06:01.070
+ma’lumotlar turlari bir-biriga mos kelmadi kabi.
+100 ga
+00:06:01,070 --&gt; 00:06:02,630
+Endi amaliyotga navbat keldi.
+
+00:06:02.630 --> 00:06:05.580
+Quyida to‘rt xil kod namunalari keltirilgan.
+
+00:06:05.580 --> 00:06:10.100
+Kodning ba’zida xatolar bo‘lishi mumkin
+mos kelmaydigan ma’lumotlar turlariga tegishli.
+
+00:06:10.100 --> 00:06:11.165
+Agar xato topsangiz,
+
+00:06:11.165 --> 00:06:15.540
+uni taqdim etilgan qutilarga yozib qo‘yish orqali 
+qanday tuzatish kerakligini tasvirlab bering.
+
+00:06:15.540 --> 00:06:19.948
+Aks holda, siz xato "Yo‘q" deb yozishingiz mumkin
+agar kod juda yaxshi bo‘lsa.
+
+00:06:19.948 --> 00:06:22.545
+Bu test juda qiyin bo‘ladi, chunki biz hozirgina 
+
+00:06:22.545 --> 00:06:26.555
+juda ko‘p tushunchalarni qamrab oldik va
+ushbu kod hali ham siz uchun yangi.
+
+00:06:26.555 --> 00:06:30.105
+Vaqtdan bemalol foydalaning va ushbu usullar 
+uchun hujjatlarni tekshiring.
+
+00:06:30.105 --> 00:06:33.695
+Kirish va qaytish qiymatlari to‘g‘riligiga 
+va agar o‘zgaruvchilar e’lon qilsak, 
+
+00:06:33.695 --> 00:06:37.665
+bu yerda to‘g‘ri ma’lumotlar turlarini 
+ko‘rsatilganiga ishonch hosil qiling.
+
+00:06:37.665 --> 00:06:39.265
+Shuningdek, usuldan to‘g‘ri foydalanayotganingizga ishonch hosil qilish uchun
+
+00:06:39.265 --> 00:06:42.375
+usul hujjatlarini tekshiring.
+

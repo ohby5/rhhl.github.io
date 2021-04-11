@@ -1,0 +1,254 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.196 --> 00:00:02.135
+Vimos antes, que poderíamos
+passar um número
+
+00:00:02.541 --> 00:00:03.870
+para o método de exibição.
+
+00:00:04.363 --> 00:00:07.784
+Vamos falar mais sobre as diferentes
+entradas e saídas de um método.
+
+00:00:08.344 --> 00:00:11.489
+Vamos olhar o método <i>submitOrder</i>
+na<i> MainActivity </i>como exemplo.
+
+00:00:12.523 --> 00:00:14.520
+Você tem várias linhas
+de código nesse método.
+
+00:00:15.021 --> 00:00:16.443
+Quando o usuário clica em Pedido,
+
+00:00:16.793 --> 00:00:18.953
+ele irá acionar esse método <i>submitOrder</i>.
+
+00:00:19.335 --> 00:00:23.353
+O dispositivo Android irá executar cada
+uma destas instruções de cima para baixo,
+
+00:00:23.600 --> 00:00:25.840
+e quando atingir a chamada
+do método <i>calculatePrice</i>
+
+00:00:26.178 --> 00:00:29.876
+irá pular para onde o método
+<i>calculatePrice</i> está definido.
+
+00:00:30.400 --> 00:00:33.563
+Digamos que este está definido na parte
+inferior do arquivo <i>MainActivity.</i>
+
+00:00:33.864 --> 00:00:37.409
+O dispositivo Android irá executar cada
+uma dessas instruções de cima para baixo no método,
+
+00:00:37.778 --> 00:00:40.480
+em seguida, voltará para o método <i>submitOrder</i>.
+
+00:00:41.290 --> 00:00:44.880
+E continuará executando estas
+instruções até chegar ao final do método.
+
+00:00:45.286 --> 00:00:46.972
+Quando o método
+<i>calculatePrice</i> é chamado,
+
+00:00:47.255 --> 00:00:49.107
+nós podemos passar um monte
+de entradas de modo
+
+00:00:49.378 --> 00:00:51.335
+que quando executarmos
+estas linhas de código,
+
+00:00:51.618 --> 00:00:53.089
+podemos usar esses valores de entrada.
+
+00:00:53.606 --> 00:00:54.836
+Como resultado deste método,
+
+00:00:55.070 --> 00:00:58.603
+podemos passar um único valor
+de retorno para quem o chamar.
+
+00:00:58.966 --> 00:01:02.363
+Assim, o valor de saída pode ser usado
+nas linhas de código subsequentes.
+
+00:01:03.000 --> 00:01:06.670
+Em <i>Java</i>, nós chamamos as entradas
+para um método de parâmetros de entrada,
+
+00:01:07.003 --> 00:01:09.532
+podemos ter zero, ou mais,
+parâmetros de entrada.
+
+00:01:10.500 --> 00:01:13.507
+Em <i>Java</i>, chamamos
+a saída de valor de retorno,
+
+00:01:13.926 --> 00:01:15.944
+e podemos ter zero ou um valor de retorno.
+
+00:01:16.443 --> 00:01:20.184
+Um exemplo de parâmetro
+de entrada é passar a quantidade
+
+00:01:20.406 --> 00:01:22.036
+para o método <i>calculatePrice</i>.
+
+00:01:22.860 --> 00:01:24.633
+Desse modo, este método pode usar a quantidade
+
+00:01:24.880 --> 00:01:27.821
+para saber o preço total do pedido.
+
+00:01:28.406 --> 00:01:31.255
+Depois podemos repassar esse preço
+total como valor de retorno.
+
+00:01:31.483 --> 00:01:33.784
+E, então, no método <i>submitOrder</i>,
+aqui em baixo,
+
+00:01:34.040 --> 00:01:38.240
+podemos usar esse valor total para fazer
+outras coisas, como exibi-lo na tela,
+
+00:01:38.658 --> 00:01:40.615
+ou criar um recibo,
+ou qualquer coisa do tipo.
+
+00:01:40.980 --> 00:01:44.670
+Resumindo, aqui definimos o método
+<i>calculatePrice</i> e aqui o chamamos.
+
+00:01:45.427 --> 00:01:49.218
+Queremos criar um método para calcular
+o preço de um pedido de café.
+
+00:01:49.501 --> 00:01:52.726
+Atualmente, nós calculamos o preço
+diretamente no método <i>submitOrder</i>,
+
+00:01:53.236 --> 00:01:56.793
+a lógica para calcular o preço vai ficar
+um pouco mais complicada.
+
+00:01:57.080 --> 00:01:58.609
+Vamos movê-lo para seu próprio método.
+
+00:01:59.040 --> 00:02:03.304
+Podemos depois chamá-lo as vezes que quisermos, sem copiar e colar o código em todos os lugares.
+
+00:02:04.024 --> 00:02:05.870
+Quando ganha experiência com Android,
+
+00:02:06.260 --> 00:02:07.938
+você adquire melhor julgamento sobre...
+
+00:02:08.184 --> 00:02:11.421
+quando deve criar um novo método
+para algo, ou quando não precisa.
+
+00:02:11.876 --> 00:02:14.086
+Isso vai vir com mais experiência e tempo.
+
+00:02:14.707 --> 00:02:17.341
+Bom, essa é a primeira vez que vamos criar
+
+00:02:17.624 --> 00:02:20.012
+um método novo na <i>MainActivity</i>,
+por nossa conta.
+
+00:02:20.750 --> 00:02:22.615
+Em vez de começar escrevendo-o a partir do zero,
+
+00:02:23.132 --> 00:02:27.809
+vamos começar por aprender a reconhecer o que é um método correto, lendo alguns trechos de código.
+
+00:02:28.460 --> 00:02:31.138
+Assim, nas Notas do Instrutor,
+vamos fornecer três opções.
+
+00:02:31.700 --> 00:02:34.929
+Dê uma lida nesses três trechos
+de código e determine qual
+
+00:02:35.450 --> 00:02:39.396
+opção implementa corretamente
+o método de cálcular o preço do pedido.
+
+00:02:40.356 --> 00:02:42.055
+Ao clicar no <i>link </i>
+nas notas do instrutor,
+
+00:02:42.330 --> 00:02:46.966
+você verá que só tem código
+para opções A, B, e C.
+
+00:02:48.380 --> 00:02:50.344
+O objetivo aqui é fazer
+você ficar confortável
+
+00:02:50.683 --> 00:02:52.621
+com leitura de código
+que você nunca viu antes.
+
+00:02:53.360 --> 00:02:56.891
+Nós não vimos as regras exatas
+que faz um método ser válido,
+
+00:02:57.267 --> 00:03:01.156
+mas quero que dê seu melhor palpite sobre
+qual opção você acha ser mais correta.
+
+00:03:02.588 --> 00:03:05.102
+Eu também sugiro
+que pesquise no <i>Google</i>
+
+00:03:05.212 --> 00:03:08.209
+para obter mais informações sobre
+como definir métodos <i>Java.</i>
+
+00:03:09.089 --> 00:03:11.120
+Ao clicar nos diferentes
+resultados de pesquisa,
+
+00:03:11.489 --> 00:03:14.744
+você vai encontrar informações
+na documentação que você não entende.
+
+00:03:15.120 --> 00:03:18.130
+Mas eu quero que você se sinta
+confortável em não entender tudo
+
+00:03:18.166 --> 00:03:21.384
+sobre essas páginas,
+porque é normal não entender tudo.
+
+00:03:21.920 --> 00:03:25.489
+Tudo que você precisa fazer é apenas
+separar os artigos pelo que você entende
+
+00:03:25.704 --> 00:03:28.130
+acha que é relevante para
+o problema em questão.
+
+00:03:29.140 --> 00:03:30.498
+Então, vá e leia
+o código relativo
+
+00:03:30.500 --> 00:03:33.495
+essas três opções, procure
+algumas informações on-line
+
+00:03:33.690 --> 00:03:37.760
+e dê seu melhor palpite sobre como definir
+corretamente o método <i>calculatePrice</i>.
+

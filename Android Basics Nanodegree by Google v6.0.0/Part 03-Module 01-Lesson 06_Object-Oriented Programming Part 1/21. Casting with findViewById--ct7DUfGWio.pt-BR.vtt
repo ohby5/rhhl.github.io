@@ -1,0 +1,424 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.610 --> 00:00:02.650
+Adicionei o código que vimos no nosso app.
+
+00:00:03.770 --> 00:00:07.660
+Aqui diz <i>View orderSummaryTextView
+= findViewById</i>,
+
+00:00:07.660 --> 00:00:11.720
+então passamos para a ID de recurso para
+<i>order_summary_text_view</i>
+
+00:00:13.000 --> 00:00:16.190
+Mas isso causa um erro na próxima 
+linha no Android Studio.
+
+00:00:17.750 --> 00:00:20.370
+Diz "<i>cannot resolve the method setText</i>".
+
+00:00:21.830 --> 00:00:24.430
+Se eu adicionar uma nova 
+linha de código aqui,
+
+00:00:24.430 --> 00:00:27.880
+Posso mostrar os tipos de métodos 
+válidos nessa variável.
+
+00:00:28.890 --> 00:00:32.400
+Então, criamos a variável 
+<i>orderSummaryTextView</i> aqui,
+
+00:00:32.400 --> 00:00:34.330
+que é uma <i>TypeView</i>, então
+
+00:00:34.330 --> 00:00:37.520
+na próxima linha, somos capazes 
+de chamar os métodos nela.
+
+00:00:37.520 --> 00:00:40.540
+Mas se você vir as sugestões 
+do autocompletar,
+
+00:00:40.540 --> 00:00:43.460
+esses métodos, na verdade,
+são métodos <i>View</i>.
+
+00:00:44.120 --> 00:00:46.140
+Não há métodos específicos de <i>TextView</i>.
+
+00:00:47.200 --> 00:00:49.350
+Por exemplo, não há método <i>setText</i>.
+
+00:00:51.320 --> 00:00:54.555
+Por isso temos um erro aqui embaixo
+quando tentamos chamar <i>setText</i>.
+
+00:00:56.020 --> 00:01:00.890
+Você também não pode definir o tamanho
+ou a cor do texto, ou nada disso.
+
+00:01:00.890 --> 00:01:02.760
+Então, onde estão todos esses métodos?
+
+00:01:03.840 --> 00:01:08.700
+O <i>TextView</i> é um tipo mais
+específico de <i>View</i>.
+
+00:01:10.430 --> 00:01:13.240
+Então se quisermos chamar 
+métodos <i>TextView</i>
+
+00:01:13.240 --> 00:01:16.777
+neste objeto, precisamos ter certeza
+que este é um objeto <i>TextView</i>.
+
+00:01:17.820 --> 00:01:20.810
+Essa variável é um objeto <i>TextView</i>.
+
+00:01:21.160 --> 00:01:25.750
+Mas aparece outro erro que diz
+<i>incompatible types</i>, porque o <i>TextView</i>
+
+00:01:25.750 --> 00:01:31.090
+é requerido no lado direito,
+mas encontramos apenas um <i>view</i> simples.
+
+00:01:31.090 --> 00:01:34.240
+Isso porque o método <i>findViewByld</i>
+volta para <i>view</i>.
+
+00:01:34.240 --> 00:01:35.558
+Como resolvemos isso?
+
+00:01:36.898 --> 00:01:41.720
+Já que <i>TextView</i> é um tipo mais específico 
+de <i>View</i>, ou melhor,
+
+00:01:41.720 --> 00:01:47.260
+o <i>TextView</i> é uma subclasse do <i>View</i>,
+podemos usar a conversão de tipos.
+
+00:01:47.260 --> 00:01:51.970
+Conversão em Java significa que podemos
+pegar o <i>View</i> de retorno para esse método
+
+00:01:51.970 --> 00:01:54.280
+e tratá-lo como se fosse um <i>TextView</i>.
+
+00:01:54.280 --> 00:01:58.110
+Então este lado direito é um 
+objeto <i>TextView</i>,
+
+00:01:58.760 --> 00:02:02.168
+e podemos armazená-lo dentro dessa
+variável <i>orderSummaryTextView</i>.
+
+00:02:03.460 --> 00:02:06.110
+Sei que deve ser muita informação,
+porque já mencionei
+
+00:02:06.110 --> 00:02:07.970
+uma tonelada de novos conceitos.
+
+00:02:07.970 --> 00:02:09.560
+Deixe-me explicar de novo.
+
+00:02:10.229 --> 00:02:14.280
+O método <i>findViewById</i> torna-se
+um objeto do tipo <i>View</i>.
+
+00:02:14.280 --> 00:02:15.820
+Ao escrever essa notação,
+
+00:02:15.820 --> 00:02:19.690
+parênteses com os dados do objeto
+desejado no meio deles.
+
+00:02:19.690 --> 00:02:23.250
+Estamos convertendo esse <i>View</i>
+em um <i>TextView</i>.
+
+00:02:23.250 --> 00:02:27.217
+Então toda a expressão aqui vai ser
+calculado como um objeto <i>TextView</i>.
+
+00:02:28.600 --> 00:02:32.140
+Então, podemos armazenar na nossa 
+variável no lado esquerdo,
+
+00:02:32.140 --> 00:02:35.790
+onde está <i>orderSummary TextView</i>,
+e tem um tipo de <i>TextView</i>.
+
+00:02:35.790 --> 00:02:40.140
+Nas linhas subsequentes, podemos chamar
+os métodos <i>TextView</i> neste objeto.
+
+00:02:40.740 --> 00:02:44.100
+Estão vendo que agora todos os métodos
+de texto estão aqui?
+
+00:02:44.840 --> 00:02:48.070
+<i>setAllCaps</i>, <i>setTextSize</i>, e outros.
+
+00:02:48.070 --> 00:02:51.660
+Então posso apagar isso agora,
+porque <i>setText</i> deve funcionar,
+
+00:02:51.660 --> 00:02:54.170
+e não há mais erros.
+
+00:02:54.170 --> 00:02:57.100
+Então, se quisermos chamar
+os métodos <i>TextView</i>,
+
+00:02:57.100 --> 00:02:59.410
+precisamos ter um objeto <i>TextView</i>.
+
+00:02:59.410 --> 00:03:02.500
+Para termos um objeto <i>TextView</i>,
+precisamos chamar <i>findViewById</i>,
+
+00:03:02.500 --> 00:03:06.890
+e então converter esse objeto <i>View</i>
+em um <i>TextView</i>.
+
+00:03:06.890 --> 00:03:09.700
+A razão pela qual a conversão 
+funciona é porque
+
+00:03:09.700 --> 00:03:13.440
+esse <i>View</i> aqui, na hierarquia do <i>view</i>
+é um <i>TextView</i>, na verdade.
+
+00:03:13.440 --> 00:03:17.520
+Se queremos converter em algo como
+um botão de rádio, não vai funcionar,
+
+00:03:17.520 --> 00:03:20.840
+porque o <i>orderSummaryTextView</i>,
+na verdade, é um <i>TextView</i>,
+
+00:03:20.840 --> 00:03:23.370
+então temos que convertê-lo 
+no tipo apropriado.
+
+00:03:24.275 --> 00:03:28.370
+Da mesma forma, no método <i>displayQuantity</i>,
+estamos chamando <i>findViewById</i>,
+
+00:03:28.370 --> 00:03:31.810
+e estamos passando nesse recurso de ID
+para a quantidade <i>TextView</i>.
+
+00:03:32.350 --> 00:03:36.090
+Este retorna como <i>View</i>, e o convertemos
+em um <i>TextView</i>, e então,
+
+00:03:36.090 --> 00:03:39.330
+podemos armazená-lo dentro desta variável
+chamada <i>quantityTextView</i>.
+
+00:03:40.400 --> 00:03:43.450
+Essa variável é do tipo <i>TextView</i>, então,
+
+00:03:43.450 --> 00:03:47.560
+nas linhas subsequentes, podemos chamar
+métodos <i>TextView</i> nela, como o <i>setText</i>.
+
+00:03:48.170 --> 00:03:51.160
+Aqui está o código da <i>MainActivity</i>
+usando a conversão.
+
+00:03:51.160 --> 00:03:56.400
+Convertemos esses <i>Views</i> em <i>TextViews</i>,
+para que sejam armazenados nas variáveis
+
+00:03:56.400 --> 00:04:00.622
+que tenham o tipo <i>TextView</i>, então nesta
+lista das variáveis da <i>MainActivity</i>,
+
+00:04:00.622 --> 00:04:05.090
+<i>quantityTextView</i> e <i>orderSummaryTextView</i>
+são do tipo <i>TextView</i>.
+
+00:04:05.090 --> 00:04:06.820
+Podemos chamar os métodos <i>TextView</i>,
+
+00:04:06.820 --> 00:04:10.810
+e não estamos limitados a tratá-los
+como <i>Views</i>.
+
+00:04:10.810 --> 00:04:15.050
+E agora, chamamos os métodos específicos
+de <i>TextView</i> nessas variáveis.
+
+00:04:15.050 --> 00:04:19.041
+Por exemplo, podemos chamar <i>setText</i>
+no <i>orderSummaryTextView</i>,
+
+00:04:19.041 --> 00:04:21.880
+e podemos chamar <i>setText</i> no 
+<i>quantityTextView</i>.
+
+00:04:21.880 --> 00:04:22.650
+Como pode ver,
+
+00:04:22.650 --> 00:04:27.180
+você tem que ter cuidado sobre os tipos
+de dados e onde são usados.
+
+00:04:27.180 --> 00:04:31.290
+Quando chamamos métodos,
+não nos preocupamos com o valor de retorno,
+
+00:04:31.290 --> 00:04:34.400
+porque o método <i>setText</i> não tem
+valor de retorno.
+
+00:04:34.400 --> 00:04:37.180
+Mesma coisa com o método
+<i> imageView.setImageResource method</i>,
+
+00:04:37.180 --> 00:04:39.060
+que não tem valor de retorno.
+
+00:04:39.060 --> 00:04:41.540
+Mas outros métodos podem ter.
+
+00:04:41.540 --> 00:04:45.590
+Por exemplo, na classe <i>TextView</i> temos
+o método <i>getTextSize</i>.
+
+00:04:45.590 --> 00:04:47.680
+Isso retorna em uma integral, então
+
+00:04:47.680 --> 00:04:53.410
+podemos armazenar o resultado deste método
+em uma variável chamada <i>size</i> do tipo <i>int</i>.
+
+00:04:53.410 --> 00:04:55.140
+Um outro método que não tem 
+valor de retorno.
+
+00:04:55.790 --> 00:04:58.270
+Na classe <i>Button</i> você pode chamar
+o método <i>getHeight</i>,
+
+00:04:58.270 --> 00:05:03.420
+e isso retorna um valor integral,
+então pode-se armazenar na variável.
+
+00:05:03.420 --> 00:05:06.450
+Se você armazenar esse resultado 
+dentro de uma cadeia, por exemplo,
+
+00:05:06.450 --> 00:05:10.810
+vai aparecer um erro, porque esse método
+retorna em uma integral.
+
+00:05:10.810 --> 00:05:14.988
+Para saber que tipo de dados precisam
+passar em um método e que tipo
+
+00:05:14.988 --> 00:05:19.290
+de dados se obtém a partir de um método,
+cheque a documentação.
+
+00:05:19.290 --> 00:05:21.260
+Por exemplo, na classe <i>TextView</i>,
+
+00:05:21.260 --> 00:05:25.760
+Se você chamar esses métodos,
+eles retornam um valor do tipo <i>int</i>.
+
+00:05:25.760 --> 00:05:28.620
+O valor de retorno do tipo de dados estão
+na coluna esquerda.
+
+00:05:28.620 --> 00:05:33.260
+Para outros métodos, voce pode ter um
+valor de retorno inválido, ou booleanos,
+
+00:05:33.260 --> 00:05:37.520
+que ainda não aprendemos, 
+ou <i>floats</i>, ou <i>longs</i>, e etc.
+
+00:05:38.330 --> 00:05:42.790
+Essa página também mostra o que é
+esperado de cada tipo de dados
+
+00:05:42.790 --> 00:05:45.010
+para dar entrada em cada método.
+
+00:05:45.010 --> 00:05:49.590
+Por exemplo, o método <i>setTextColor</i> requer
+uma integral como <i>input</i>
+
+00:05:49.590 --> 00:05:53.110
+e o valor de retorno é inválido,
+então não há valor de retorno.
+
+00:05:53.110 --> 00:05:56.010
+Cheque o documento para saber que tipos
+de dados são exigidos.
+
+00:05:56.010 --> 00:05:58.750
+Do contrário, você terá erros no Android
+Studios que dizem
+
+00:05:58.750 --> 00:06:01.070
+que os tipos de dados não combinam.
+
+00:06:01.070 --> 00:06:02.630
+Agora é sua vez de praticar.
+
+00:06:02.630 --> 00:06:05.580
+Abaixo há quatro exemplos
+de códigos diferentes.
+
+00:06:05.580 --> 00:06:10.000
+Algum deles podem conter erros sobre
+os tipos de dados não combinarem.
+
+00:06:10.000 --> 00:06:11.215
+Se você encontrar o erro,
+
+00:06:11.215 --> 00:06:15.540
+descreva nas caixas como você consertaria.
+
+00:06:15.540 --> 00:06:19.308
+Do contrário, você escreve apenas
+<i>No error</i> se o código estiver em ordem.
+
+00:06:19.998 --> 00:06:23.555
+Esse quiz vai ser desafiador porque
+tratamos de diversos conceitos,
+
+00:06:23.795 --> 00:06:26.555
+e esse código é muito novo para você.
+
+00:06:26.555 --> 00:06:30.105
+Não tenha pressa e cheque os métodos
+na documentação.
+
+00:06:30.105 --> 00:06:33.695
+Tenha certeza que os <i>inputs</i> e os valores
+de retorno estejam corretos,
+
+00:06:33.695 --> 00:06:37.485
+e se declararmos variáveis, que elas
+estejam com os tipos de dados corretos.
+
+00:06:37.485 --> 00:06:39.255
+Também, dê uma olhada na 
+documentação
+
+00:06:39.255 --> 00:06:42.695
+sobre esses métodos para ter certeza
+que os estamos usando corretamente.
+

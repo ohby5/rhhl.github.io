@@ -1,0 +1,438 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.640 --> 00:00:04.200
+Son testte en iyi seçeneğin neden
+C olduğunu anlamak amacıyla
+
+00:00:04.200 --> 00:00:08.420
+bir metot tanımlamak için Java’da gerçek
+söz dizimi kurallarını gözden geçirelim.
+
+00:00:08.420 --> 00:00:10.820
+Bu, aynı zamanda metot imzası
+olarak da bilinir.
+
+00:00:12.090 --> 00:00:13.460
+Bu daha önce gördüğümüz
+
+00:00:13.460 --> 00:00:16.239
+fiyat hesaplama metodu için
+bir metot imzasıdır.
+
+00:00:16.239 --> 00:00:20.100
+Kelimelerin sırasının neden belirli bir
+şekilde şu merak ediyor olabilirsiniz.
+
+00:00:20.100 --> 00:00:24.470
+Evet, belirli bir biçimi takip ediyorlar ve
+bunun gibi bir şey görünüyor.
+
+00:00:24.470 --> 00:00:27.050
+Bunun gerçekten bunaltıcı bir şey
+olduğunu biliyorum, fakat merak etmeyin.
+
+00:00:27.050 --> 00:00:29.040
+Her birinin üzerinden
+teker teker gideceğiz.
+
+00:00:30.550 --> 00:00:34.250
+Bu metot imzasının ilk kısmı
+özel kelimedir.
+
+00:00:34.250 --> 00:00:36.400
+Bu, JAVA erişim niteleyicisi
+olarak bilinir.
+
+00:00:37.410 --> 00:00:41.400
+Bu yönteme (calculatePrice) kimlerin
+erişimi olduğunu belirler.
+
+00:00:41.400 --> 00:00:46.290
+Göreceğiniz en yaygın erişim niteleyicileri
+genel veya özeldir.
+
+00:00:46.290 --> 00:00:51.010
+Bu metot özel olarak işaretlenmiş,
+yani calculatePrice yöntemi
+
+00:00:51.010 --> 00:00:55.590
+sadece ana aktivitenin diğer
+metotları içinde çağrılabilir.
+
+00:00:55.590 --> 00:00:56.830
+Ana aktivitenin dışında,
+
+00:00:56.830 --> 00:01:00.750
+örneğin başka etkinliklerde,
+bu metodu çağıramayacaksınız.
+
+00:01:00.750 --> 00:01:03.340
+Sadece ana aktiviteye özeldir.
+
+00:01:03.340 --> 00:01:04.180
+Diğer taraftan,
+
+00:01:04.180 --> 00:01:09.100
+bunu bir genel metot olarak işaretlerseniz,
+o zaman herkes bu yöntemi çağırabilir,
+
+00:01:09.100 --> 00:01:12.560
+ister ana aktivitenin içinde olun,
+ister diğer aktivitelerde olun.
+
+00:01:13.710 --> 00:01:15.120
+Bu durum, şuna benzer.
+
+00:01:15.120 --> 00:01:18.530
+Eğer ünlü ve bilinen biriyseniz,
+herkes sizi tanır.
+
+00:01:18.530 --> 00:01:19.730
+Eğer özel ve
+
+00:01:19.730 --> 00:01:24.420
+her zaman evinizin içinde yaşıyorsanız,
+o zaman sadece birkaç kişi sizi bilir.
+
+00:01:24.420 --> 00:01:27.930
+Evet, fiyat hesaplama metodunu
+özel olarak tutacağız, böylece
+
+00:01:27.930 --> 00:01:30.440
+sadece ana aktivite
+içinde kullanılır.
+
+00:01:30.440 --> 00:01:33.770
+Sonra, elimizde geri dönüş
+veri türü olan “int” var.
+
+00:01:33.770 --> 00:01:35.560
+Önceki diyagramımızı
+hatırlıyor musunuz?
+
+00:01:35.560 --> 00:01:38.360
+Bir metodu çağırdığınızda
+bunu girişlere geçirip arkasından
+
+00:01:38.360 --> 00:01:39.910
+bir çıktı aldığınızdan bahsetmiştik?
+
+00:01:39.910 --> 00:01:44.140
+Peki, geri dönüş veri türü,
+çıktıda geri döndürülen bir veri türüdür.
+
+00:01:44.140 --> 00:01:48.020
+Ve şimdiye kadar öğrendiğimiz
+veri türleri Int ve
+
+00:01:48.020 --> 00:01:49.730
+son dersten String'dir.
+
+00:01:49.730 --> 00:01:52.410
+Bu aynı zamanda bir nesne veri türünü
+de geri döndürebilir.
+
+00:01:52.410 --> 00:01:54.449
+Dersin devamında nesneler hakkında
+daha fazla bilgi edineceğiz.
+
+00:01:55.700 --> 00:01:58.150
+Bizim konumuzda, bu calculatePrice metodu
+
+00:01:58.150 --> 00:02:02.030
+bir tam sayı olan siparişin
+toplam fiyatını geri döndürüyor.
+
+00:02:02.030 --> 00:02:06.540
+Bir sosyal medya uygulamasında,
+Facebook'taki arkadaşlarımın sayısını
+
+00:02:06.540 --> 00:02:11.130
+elde etmek için bir metodum olsaydı arkadaş
+sayısı bir tamsayı olarak döndürülürdü.
+
+00:02:11.130 --> 00:02:15.390
+Daha sonra, bu durumda calculatePrice
+olan metot adımız var.
+
+00:02:15.390 --> 00:02:19.730
+değişken nasıl adıyla örnek biz verebilir,
+metotlara da adıyla referans verebiliriz,
+
+00:02:19.730 --> 00:02:23.790
+böylece bu metottaki
+talimatları yürütebiliriz.
+
+00:02:23.790 --> 00:02:28.120
+Metot tanımlama hakkındaki aynı belgelerde
+alt bölüme gittiğimizde
+
+00:02:28.120 --> 00:02:30.690
+metotları adlandırma hakkındaki
+bölümü görüyoruz.
+
+00:02:30.690 --> 00:02:34.450
+Bunu daha sonra ayrıntılı olarak okumak,
+fakat temelde metot adlarının
+
+00:02:34.450 --> 00:02:39.030
+run veya get ya da compare veya set gibi
+bir fiille başlaması gerektiğini söylüyor.
+
+00:02:39.030 --> 00:02:40.880
+Küçük harfle başlar ve
+
+00:02:40.880 --> 00:02:43.360
+birden fazla sözcük varsa
+hörgüçlü yazım kullanın.
+
+00:02:43.360 --> 00:02:46.400
+Metot adından sonra
+
+00:02:46.400 --> 00:02:50.350
+açma ve kapama parantezi içinde
+gösterilen girdilerin listemiz var.
+
+00:02:50.350 --> 00:02:52.670
+İstediğiniz kadar girdiniz olabilir.
+
+00:02:52.670 --> 00:02:57.010
+Eğer herhangi bir girdi istemiyorsanız,
+parantezlerin içini boş bırakmanız yeterli.
+
+00:02:57.010 --> 00:02:59.150
+Eğer tek bir girdiniz varsa,
+bunun gibi görünür.
+
+00:02:59.150 --> 00:03:00.730
+Birden fazla girdiniz varsa,
+
+00:03:00.730 --> 00:03:03.890
+her bir girdinin arasını
+virgülle ayırmanız yeterli.
+
+00:03:03.890 --> 00:03:07.110
+Bir tane girdimiz olduğu
+duruma bakalım,
+
+00:03:07.110 --> 00:03:10.070
+bu aynı zamanda bir girdi parametresi
+olarak da bilinir.
+
+00:03:10.070 --> 00:03:14.060
+Girdi parametresinin veri türünü
+ve onun için seçtiğimiz bir değişken adını
+
+00:03:14.060 --> 00:03:16.460
+belirleyerek bir
+girdi parametresi tanımlarız.
+
+00:03:16.460 --> 00:03:18.170
+Böylece girdiler ve çıktı diyagramında,
+
+00:03:18.170 --> 00:03:22.370
+bu, metodun ilk girdisi olacaktır.
+
+00:03:23.560 --> 00:03:28.030
+Bu metotta, daha sonra
+miktar değişkenine referans verebilirsiniz.
+
+00:03:28.030 --> 00:03:30.190
+Bu, tıpkı içinde zaten bir değer olan
+
+00:03:30.190 --> 00:03:32.930
+bir başka değişken gibidir.
+
+00:03:32.930 --> 00:03:36.990
+Değer, metodu ilk çağırdığınız ve
+
+00:03:36.990 --> 00:03:38.570
+bu girdiyi geçirdiğiniz yerden gelir.
+
+00:03:40.030 --> 00:03:43.850
+Eğer ikinci bir girdi parametresi eklemek
+için metot imzasını değiştirmek istersek
+
+00:03:43.850 --> 00:03:47.290
+ikinci girdi parametresi için
+veri türünü ve değişken adını
+
+00:03:47.290 --> 00:03:48.980
+belirtmemiz gerekir.
+
+00:03:48.980 --> 00:03:52.200
+Daha sonra bu metot içinde
+tıpkı normal değişkenler gibi,
+
+00:03:52.200 --> 00:03:55.940
+bir bardağın miktar veya fiyat
+değişkenlerine referans verebiliriz.
+
+00:03:55.940 --> 00:03:59.220
+Bu metodu çağırdığınızda
+metoda beklenen doğru sayıda girdiyi
+
+00:03:59.220 --> 00:04:02.790
+geçirmeniz gerektiğini unutmamalısınız ve
+
+00:04:02.790 --> 00:04:06.980
+girdiler doğru veri türünde
+ve doğru sırada olmalıdır.
+
+00:04:06.980 --> 00:04:08.380
+Bu sırayı değiştiremezsiniz.
+
+00:04:08.380 --> 00:04:11.650
+Aksi takdirde metot,
+bunları yanlış yorumlayacaktır.
+
+00:04:11.650 --> 00:04:15.210
+Girdilerinizi listeledikten sonra
+bir kapama parantezi ve
+
+00:04:15.210 --> 00:04:16.980
+ardından bir açma parantezi ekleyin.
+
+00:04:16.980 --> 00:04:20.640
+Bu işlem, metodunuz içindeki
+tüm talimatların listesini başlatır.
+
+00:04:20.640 --> 00:04:21.660
+Tüm bunlardan sonra,
+
+00:04:21.660 --> 00:04:25.270
+metodunuzun sonunu işaretlemek için
+bir kapama parantezi eklemeniz yeterlidir.
+
+00:04:25.270 --> 00:04:27.060
+Belgemize geri dönecek olursak,
+
+00:04:27.060 --> 00:04:30.470
+artık bu metot bildirimi
+çok daha anlamlı görünecek.
+
+00:04:30.470 --> 00:04:32.760
+İlk olarak erişim niteleyicimiz var.
+
+00:04:32.760 --> 00:04:35.120
+Sonra bir geri dönüş
+veri türümüz var.
+
+00:04:35.120 --> 00:04:39.100
+Metot adından sonra
+tüm girdilerin listesi geliyor.
+
+00:04:39.100 --> 00:04:42.760
+Bu durumda, dört farklı
+girdi parametresi bulunuyor.
+
+00:04:42.760 --> 00:04:46.260
+Ve her birinin veri türü ile
+değişken adı var.
+
+00:04:46.260 --> 00:04:48.720
+Ve sonra bir açma parantezimiz var.
+
+00:04:48.720 --> 00:04:50.610
+Tüm talimatların listesi bunun içinde.
+
+00:04:50.610 --> 00:04:51.990
+Ardından bir kapama parantezi.
+
+00:04:53.100 --> 00:04:54.480
+Ve bu da bir metot bildirimi.
+
+00:04:55.640 --> 00:04:59.060
+Bu testte, metot bildiriminin
+farklı kısımlarının tanımlanmasını
+
+00:04:59.060 --> 00:05:00.850
+uygulama şansınız olacak.
+
+00:05:00.850 --> 00:05:04.120
+Size eğitmen notlarındaki
+bazı kodlar sağlayacağız.
+
+00:05:04.120 --> 00:05:08.000
+Kod, herhangi bir uygulamada ortaya
+çıkabilecek bir sürü metodu içermektedir.
+
+00:05:08.000 --> 00:05:11.010
+Her bir durum için, metot adının
+ne olduğunu söyleyebilir misiniz?
+
+00:05:11.010 --> 00:05:12.800
+Giriş parametrelerinin listesini?
+
+00:05:12.800 --> 00:05:14.010
+Ve geri dönüş veri türünü.
+
+00:05:15.030 --> 00:05:16.130
+Örneği birlikte yapalım.
+
+00:05:17.910 --> 00:05:19.710
+İşte örnek bir metot.
+
+00:05:19.710 --> 00:05:23.520
+Hedefimiz, belirtilen isim için
+özel bir tebrik mesajı oluşturmak.
+
+00:05:23.520 --> 00:05:27.270
+Dönüş değeri, metin biçiminde
+bir tebrik olacaktır.
+
+00:05:27.270 --> 00:05:29.580
+Şimdilik yorumları yok sayalım.
+
+00:05:29.580 --> 00:05:32.570
+İlk olarak, burada camelCase olan
+metot adımız var ve
+
+00:05:32.570 --> 00:05:35.130
+createCustomGreeting şeklinde.
+
+00:05:35.130 --> 00:05:37.650
+Sonra, girdi listemiz var.
+
+00:05:37.650 --> 00:05:39.780
+Bu, ilk girdi parametresi.
+
+00:05:39.780 --> 00:05:42.490
+Veri türü String ve
+değişken adı firstName.
+
+00:05:43.520 --> 00:05:45.570
+Ardından ikinci girdi parametremiz var.
+
+00:05:45.570 --> 00:05:48.390
+Bu, veri türü,
+bu da değişken adı.
+
+00:05:48.390 --> 00:05:51.580
+İki girdi tek virgülle ayrılmış ve
+
+00:05:51.580 --> 00:05:55.290
+açma ve kapama parantezleri
+içinde bulunuyorlar.
+
+00:05:55.290 --> 00:05:57.350
+Burada da çıktımız var.
+
+00:05:57.350 --> 00:06:00.605
+Geri dönüş değerinin
+veri türü String,
+
+00:06:00.605 --> 00:06:03.685
+çünkü döndürmek istediğimiz
+tebrik bir dizi
+
+00:06:03.685 --> 00:06:07.365
+ve bu tabloda doldurulduğu
+gibi görünmektedir.
+
+00:06:08.725 --> 00:06:11.245
+Şimdi devam edin ve diğer
+üç metot için de boşlukları doldurun.
+

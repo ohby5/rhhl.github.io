@@ -1,0 +1,434 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.430 --> 00:00:02.969
+Just Java uygulamamızın ana
+aktivitesine geri dönelim.
+
+00:00:02.969 --> 00:00:06.190
+Özellikle ileti görüntüleme
+metoduna bakıyorduk ve
+
+00:00:06.190 --> 00:00:08.570
+burada olan biten her şeyi
+kavramaya çalışıyorduk.
+
+00:00:08.570 --> 00:00:13.870
+KimlikleGörünümBul metodu, bu sınıf
+içinde bildirilmiş olsa da,
+
+00:00:13.870 --> 00:00:18.740
+biliyoruz ki, AppCompatActivity
+içindeki üst sınıfta tanımlı.
+
+00:00:18.740 --> 00:00:20.440
+Aynısı GörünümİçeriğiKur
+içinde geçerli.
+
+00:00:20.440 --> 00:00:23.820
+Bu da AppCombatActivity
+içinde tanımlı.
+
+00:00:23.820 --> 00:00:26.710
+Ancak bu metot içinde tam olarak
+ne oluyor? ve
+
+00:00:26.710 --> 00:00:29.300
+neden bir kimlik kaynağı geçmemiz
+gerekiyor?
+
+00:00:29.300 --> 00:00:31.930
+Neden parantezler var?
+
+00:00:31.930 --> 00:00:34.410
+Bu soruyu cevaplamak için,
+şimdiye kadar öğrendiğimiz her şeyi
+
+00:00:34.410 --> 00:00:37.720
+özetleyeceğim ve
+bu kodun neden burada olduğuna geçeceğiz.
+
+00:00:38.870 --> 00:00:40.350
+Bu diyagramı hatırladınız mı?
+
+00:00:40.350 --> 00:00:44.910
+Cihazdaki uygulama ikonuna tıkladığınızda
+ana aktivite açılır.
+
+00:00:44.910 --> 00:00:48.650
+Kodumuz içinde ana aktivitenin
+Yarat metodu sistem tarafından
+
+00:00:48.650 --> 00:00:49.770
+çağırılır.
+
+00:00:49.770 --> 00:00:53.220
+Bu metot içinde, kaynak yerleşim
+kimliğiyle birlikte GörünümİçeriğiKur
+
+00:00:53.220 --> 00:00:55.340
+adı verilen bir metot vardır.
+
+00:00:55.340 --> 00:00:59.710
+Önceki alıştırmalardan birinde,
+GörünümİçeriKur için tek bir MetinGörünümü
+
+00:00:59.710 --> 00:01:01.950
+geçtik fakat uygulamamız için
+birden fazla görünüm istiyoruz.
+
+00:01:01.950 --> 00:01:04.650
+Bir yerleşim kaynağı kimliği geçiyoruz.
+
+00:01:04.650 --> 00:01:06.980
+Bu, bir XML dosyasına eşleniyor.
+
+00:01:06.980 --> 00:01:09.560
+Görünüm içeriğini tanımladıktan sonra
+aktivite işliyor ve
+
+00:01:09.560 --> 00:01:13.200
+XML yerleşim dosyasını buluyor ve
+her bir satırı okuyor.
+
+00:01:13.200 --> 00:01:18.140
+Her bir görünüm için, bir java nesnesi
+şişiriyor ya da yaratıyor.
+
+00:01:18.140 --> 00:01:19.860
+XML dosyası gözden geçiriyor ve
+
+00:01:19.860 --> 00:01:23.040
+sonra Java nesnelerinin
+hiyerarşisini kuruyor.
+
+00:01:23.040 --> 00:01:27.090
+Görünümlerin her birini şişirirken, Yeni
+MetinGörünümü ya da YeniÇizgiselYerleşimi
+
+00:01:27.090 --> 00:01:31.600
+kurucusunu çağırır aslında ve
+tüm bu nitelikleri Java nesnesine
+
+00:01:31.600 --> 00:01:34.760
+geçirir ve böylece
+uygun biçimde kurulur.
+
+00:01:34.760 --> 00:01:38.700
+YeniMetinGörünümü ya da YeniÇizgisel
+Yerleşim'inin yazı boyutu için bir kod
+
+00:01:38.700 --> 00:01:40.650
+yazmadığımıza dikkat edin.
+
+00:01:40.650 --> 00:01:44.540
+tüm bunları idare eden aktivitenin
+şişirme süreciyle idare edilir.
+
+00:01:44.540 --> 00:01:48.290
+Uygulama yürütülürken, bu görünümleri
+etkileşime sokmak ve değiştirmek için,
+
+00:01:48.290 --> 00:01:49.830
+örneğin metni ya da
+
+00:01:49.830 --> 00:01:54.480
+tuşları değiştirmek için,
+bu Java nesnelerini bulmamız gerekiyor.
+
+00:01:54.480 --> 00:01:58.560
+Onları bulduğumuz zaman, ana aktivite
+içinde değişkenler olarak depolayabiliriz.
+
+00:01:58.560 --> 00:02:01.360
+Unutmayın, MetinGörünümünü
+boşluktan yaratmıyoruz,
+
+00:02:01.360 --> 00:02:04.310
+görünüm hiyerarşisinde
+var olanları buluyoruz.
+
+00:02:06.060 --> 00:02:08.639
+Ana aktivitede şimdiye kadar kullandığımız
+değişkenler bunlardır.
+
+00:02:08.639 --> 00:02:13.160
+Miktar, fiyat ve fiyat bildirimi
+için bir değişkenimiz var.
+
+00:02:13.160 --> 00:02:15.830
+Bu, yerel ve küresel
+değişkenlerin bir karışımıdır.
+
+00:02:15.830 --> 00:02:19.520
+Görünüm hiyerarşisindeki bu görünümlerle
+etkileşime girmek için bu spesifik
+
+00:02:19.520 --> 00:02:21.149
+görünümlere başvuran
+değişkenler yaratmalıyız.
+
+00:02:22.500 --> 00:02:25.765
+Örneğin, miktar metin görünümü
+adlı bir değişken yaratabilirim,
+
+00:02:25.765 --> 00:02:28.580
+buradaki MetinGörünümüne başvuracaktır.
+
+00:02:28.580 --> 00:02:31.340
+UI içindeki artıya ya da
+eksiye tıklarsanız,
+
+00:02:31.340 --> 00:02:34.340
+farklı bir numara göstermek için
+MetinGörünümü metinini değiştirebilirsiniz.
+
+00:02:36.220 --> 00:02:39.340
+Bu MetinGörünümüne işaret eden,
+ÖzetMetinGörünümü adıl bir değişken de
+
+00:02:39.340 --> 00:02:41.730
+var.
+
+00:02:41.730 --> 00:02:44.590
+Sipariş tuşuna tıkladığınızda,
+SiparişÖzetiMetinGörünümü
+
+00:02:44.590 --> 00:02:47.660
+yeni sipariş özetini göstermek için
+metnini değiştirecektir.
+
+00:02:47.660 --> 00:02:51.680
+Böylece, uygulama yürütülürken,
+UI'yi değiştirmek için
+
+00:02:51.680 --> 00:02:55.440
+bu görünümlere işaret eden değişkenlere
+sahip olmanın kullanışlılığı görülür.
+
+00:02:55.440 --> 00:02:59.430
+Fakat bu değişken ile bu MetinGörünümü
+arasında bir bağlantıyı nasıl
+
+00:02:59.430 --> 00:03:00.790
+kuracağız?
+
+00:03:00.790 --> 00:03:03.780
+siparişÖzetiMetinGörünümü ile bu
+MetinGörünümü arasında nasıl bir bağlantı
+
+00:03:03.780 --> 00:03:04.495
+kuracağız?
+
+00:03:06.250 --> 00:03:08.139
+Yerleşim XML dosyasında,
+
+00:03:08.139 --> 00:03:11.699
+hatırlayın, belli görünümlere
+görünüm kimlikler atadık.
+
+00:03:12.953 --> 00:03:17.400
+Bu MetinGörünümüne, miktar.metin.görünüm
+kimliğini verdik.
+
+00:03:17.400 --> 00:03:21.340
+Bu görünüme, sipariş. özet.metin.görünüm
+kimliğini verdik.
+
+00:03:21.340 --> 00:03:24.240
+Görünümlere kimlik atamak
+tercihe bağlıdır ve
+
+00:03:24.240 --> 00:03:28.760
+yalnızca o görünüme daha sonra gönderme
+yapacaksınız, bir kimlik atamanız gerekir.
+
+00:03:28.760 --> 00:03:33.180
+örneğin, her şeye kimlik atayabilirsiniz
+ama bu gereksizdir.
+
+00:03:33.180 --> 00:03:37.470
+Java kodumuzda, yalnızca bu iki görünüme
+daha sonra göndermede bulunacağız.
+
+00:03:37.470 --> 00:03:39.860
+Yalnızca bu iki görünüme
+kimlik atayalım.
+
+00:03:40.880 --> 00:03:43.900
+Pekala, görünümlere
+kimlik atadık ki,
+
+00:03:43.900 --> 00:03:46.700
+Java kodunda daha sonra
+gönderme yapabilelim.
+
+00:03:46.700 --> 00:03:51.350
+Bu görünümlere işaret eden değişkenleri de
+tesis ettik ki,
+
+00:03:51.350 --> 00:03:53.740
+bu görünümleri değiştirebilelim.
+
+00:03:53.740 --> 00:03:57.680
+Fakat hala bu değişken ile
+bu spesifik Java nesnesi arasında
+
+00:03:57.680 --> 00:04:01.160
+nasıl bağlantı kuracağımızı
+tam olarak bilmiyoruz.
+
+00:04:01.160 --> 00:04:04.700
+Aynısı bu değişken ve
+bu Java nesnesi için de geçerli.
+
+00:04:04.700 --> 00:04:08.820
+AppCompatActivity sınıfında, size
+spesifik bir metot göstermek istiyorum.
+
+00:04:08.820 --> 00:04:12.560
+KimlikleGörünümBul olarak adlandırılıyor ve
+girdiyi bir kaynak kimliği olarak alıyor.
+
+00:04:13.810 --> 00:04:16.290
+KimlikleGörünümBul metodu
+
+00:04:16.290 --> 00:04:21.220
+girdi olarak geçirilen kimliğe karşılık
+gelen bir görünüm bulur.
+
+00:04:21.220 --> 00:04:23.790
+Aktivite, Yarat metodunda işlenen
+
+00:04:23.790 --> 00:04:28.890
+XML görünüm hiyerarşisinde
+bu görünümün aramasını yapar.
+
+00:04:28.890 --> 00:04:30.560
+Daha önce de söz ettiğim gibi,
+
+00:04:30.560 --> 00:04:34.350
+Yarat Metodundaki aktivite
+bir görünüm hiyerarşisi kurar ve
+
+00:04:34.350 --> 00:04:39.405
+sonra KimlikleGörünümBul metodu
+görünüm hiyerarşisinde bir görünüm bulur.
+
+00:04:39.405 --> 00:04:43.615
+Bu metodun döndürülen değeri
+bir veri görünümü nesnesidir.
+
+00:04:43.615 --> 00:04:47.415
+Sol sütun, tüm bu metotların
+döndürülen değerini gösterir.
+
+00:04:47.415 --> 00:04:51.815
+Bu demektir ki, aktivite kodumuz içinde
+kimlikleGörünümBul'u çağırabiliriz,
+
+00:04:51.815 --> 00:04:56.670
+istediğimiz görünümün kaynak kimliğini
+geçirebiliriz ve bu daha sonra bir görünüm
+
+00:04:56.670 --> 00:04:59.980
+nesnesi döndürecektir ve bunu bir değişken
+olarak aktivite içinde depolayabiliriz.
+
+00:05:02.170 --> 00:05:04.300
+AnaAktivite Java kodu
+böyle bir şey olacaktır.
+
+00:05:05.360 --> 00:05:07.230
+kimlikleGörünümBul'u çağırabiliriz ve
+
+00:05:07.230 --> 00:05:12.140
+sonra isteğimiz görünümün kaynağını
+bir girdi olarak geçirebiliriz.
+
+00:05:12.140 --> 00:05:15.050
+Bu MetinGörünümüne, sipariş.özet.
+metin.görünüm kimliğini verdik.
+
+00:05:15.050 --> 00:05:19.370
+Bu kimliğe, R.kimlik.sipariş_özet_metin_
+görünüm olarak gönderme de bulunuyoruz.
+
+00:05:19.370 --> 00:05:23.490
+Bu metot tüm görünüm hiyerarşisinden
+geçer ve bu kimliği taşıyan görünümü
+
+00:05:23.490 --> 00:05:24.930
+arar.
+
+00:05:26.110 --> 00:05:31.030
+Sonra bu Java nesnesini, bu metodun
+döndürülen değeri olarak döndürür.
+
+00:05:31.030 --> 00:05:34.790
+Döndürülen değeri, sol taraftaki bu
+değişkenine depolayabiliriz, bu değişken
+
+00:05:34.790 --> 00:05:39.290
+siparişÖzetMetinGörünümü olarak
+adlandırılır ve Görünüm türü değişkenidir.
+
+00:05:39.290 --> 00:05:42.610
+Bu, bir görünüm döndürür ve
+bir görünüm değişkeninde depolar.
+
+00:05:42.610 --> 00:05:47.280
+AnaAktivite'de daha sonra kimlikle
+GörünümBul'u da çağırıyoruz ve bu Metin
+
+00:05:47.280 --> 00:05:53.120
+Görünüm gönderme yapan bu R.kimlik_miktar
+_metin_görünümü kaynak kimlik geçiriyoruz.
+
+00:05:53.120 --> 00:05:55.610
+Bu, miktar toplayıcının
+MetinGörünümüdür.
+
+00:05:55.610 --> 00:05:58.847
+Bu çağrıldığında, aktivite görünüm
+hiyerarşisini tarayacaktır ve
+
+00:05:58.847 --> 00:06:01.460
+bu kimliğe sahip bir görünüm bulmaya
+çalışacaktır.
+
+00:06:01.460 --> 00:06:03.265
+Sonra bu metin görünümünü döndürecek ve
+
+00:06:03.265 --> 00:06:07.190
+miktar_metin_görünüm adlı
+değişkende depolayacaktır.
+
+00:06:07.190 --> 00:06:09.490
+Bu değişken de bir Görünüm
+veri türüne sahiptir.
+
+00:06:10.490 --> 00:06:13.440
+Bu, miktarMetniGörünümü ve
+siparişÖzetMetinGörünümünü değişkenlerini
+
+00:06:13.440 --> 00:06:17.190
+AnaAktivite'de nasıl elde edeceğinizi ve
+bu değişkenleri bu Java nesnelerine
+
+00:06:17.190 --> 00:06:20.800
+nasıl bağlayacağınızı
+açıklar.
+
+00:06:20.800 --> 00:06:21.396
+Bu arada,
+
+00:06:21.396 --> 00:06:25.460
+Sol sütunda, bu değişkenlerin her birinin
+veri türlerini listeledim.
+
+00:06:26.690 --> 00:06:29.750
+Burada bildirildiği gibi, bu iki değişken
+bir Görünüm türüne sahiptir.
+

@@ -1,0 +1,131 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.460 --> 00:00:02.840
+Je vous ai montré plutôt
+comment créer un TextView pour
+
+00:00:02.840 --> 00:00:04.939
+appeler une méthode afin
+d'en changer le texte.
+
+00:00:06.260 --> 00:00:07.800
+Et si je voulais changer la taille du texte ?
+
+00:00:08.800 --> 00:00:13.400
+Je peux simplement appeler textView.setTextSize et
+presser Entrer.
+
+00:00:13.400 --> 00:00:17.803
+Pour ensuite choisir une valeur
+au hasard comme 56.
+
+00:00:17.803 --> 00:00:21.310
+Je peux ensuite l'exécuter sur mon appareil.
+
+00:00:22.750 --> 00:00:23.700
+Et voici à quoi ça ressemble.
+
+00:00:24.710 --> 00:00:25.790
+Wow, c'est gros.
+
+00:00:25.790 --> 00:00:27.498
+Je peux ensuite aussi changer
+la couleur du texte.
+
+00:00:27.498 --> 00:00:34.040
+Je peux écrire textView.settextcolor et
+le passer ensuite en couleur.
+
+00:00:34.040 --> 00:00:36.390
+Je vous ai précedemment
+montré les couleurs.
+
+00:00:36.390 --> 00:00:40.090
+Je vais donc sélectionner le vert.
+
+00:00:40.090 --> 00:00:43.223
+Quand je l'exécute sur mon appareil,
+ça apparait en néon vert.
+
+00:00:43.223 --> 00:00:46.028
+Si vous feuilletez
+la documentation TextView,
+
+00:00:46.028 --> 00:00:49.550
+vous aurez probablement trouver
+d'autres méthodes à appeler.
+
+00:00:49.550 --> 00:00:53.260
+Par exemple,vous pouvez
+appeler textView.setMaxLines.
+
+00:00:53.260 --> 00:00:57.590
+Cela limite le nombre de lignes du
+texte à deux lignes uniquement.
+
+00:00:57.590 --> 00:01:00.930
+Si le texte est plus long que ça,
+il sera alors juste coupé.
+
+00:01:00.930 --> 00:01:03.070
+Pour le tester, nous aurons
+besoin d'une chaine très longue ici.
+
+00:01:04.349 --> 00:01:07.660
+Et, de ce fait, pour savoir
+si cela fonctionne ou non,
+
+00:01:07.660 --> 00:01:09.910
+je devrais commenter la chose
+suivante en premier.
+
+00:01:09.910 --> 00:01:13.360
+Je vais exécuter l'application pour m'assurer
+que cette chaine est en fait plus longue
+
+00:01:13.360 --> 00:01:14.390
+que deux lignes de texte.
+
+00:01:15.930 --> 00:01:18.810
+Ok, nous avons vérifié que ce sont
+deux lignes et demi de texte.
+
+00:01:20.080 --> 00:01:24.180
+Une fois que je supprime cette ligne de code
+pour mettre le nombre de lignes max à 2
+
+00:01:24.180 --> 00:01:27.680
+et exécute l'application, cela devrait
+tronquer ceci à deux lignes ici.
+
+00:01:28.930 --> 00:01:30.880
+Et ça fonctionne, cool.
+
+00:01:30.880 --> 00:01:34.480
+Avec de la chance vous allez pouvoir pratiquer
+avec l'appel de méthodes sur un objet
+
+00:01:34.480 --> 00:01:36.100
+comme textView.
+
+00:01:36.100 --> 00:01:39.060
+C'est en fait rare d'appeler
+un setContentView et
+
+00:01:39.060 --> 00:01:41.820
+de passer ensuite en simple vue comme ça.
+
+00:01:41.820 --> 00:01:45.990
+Normallement la visibilité de votre contenu
+d'activité devrait être bien plus complexe.
+
+00:01:45.990 --> 00:01:50.230
+C'est pourquoi nous devrions normallement
+laisser écrit setContentView et
+
+00:01:50.230 --> 00:01:53.490
+le passer dans la ressource de
+l'ID d'un layout XML.
+

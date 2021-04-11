@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.700 --> 00:00:02.540
+Maintenant que vous savez ce que 
+sont les ressources Android ,
+
+00:00:02.540 --> 00:00:05.260
+et que vous pouvez les mettre
+dans des dossiers différents.
+
+00:00:05.260 --> 00:00:08.840
+Voyons comment vous pouvez accéder 
+aux ressources que vous avez sauvegardées
+
+00:00:08.840 --> 00:00:10.580
+dans ces dossiers.
+
+00:00:10.580 --> 00:00:15.050
+Lorsque votre application est assemblée,
+il y a un outil dans Android nommé AAPT.
+
+00:00:15.050 --> 00:00:17.610
+Et cela génère la classe R.
+
+00:00:17.610 --> 00:00:21.840
+C’est simplement un fichier R.Java, et 
+je vais vous monter un exemple après.
+
+00:00:21.840 --> 00:00:26.580
+Il contient les ID de ressource pour toutes
+les ressources dans le répertoire S, donc
+
+00:00:26.580 --> 00:00:30.790
+pour toutes les ressources que vous avez 
+ajoutées, il y a une ID qui lui fait référence.
+
+00:00:30.790 --> 00:00:35.000
+L’ID est dans un format qui se base
+sur le type de ressources, donc pour
+
+00:00:35.000 --> 00:00:40.640
+toutes les ressources Java graphiques, 
+elles suivront le format R.drawable.
+
+00:00:40.640 --> 00:00:43.805
+Pour toutes les chaînes de caractères qui 
+sont des ressources, elles suivront la formule
+
+00:00:43.805 --> 00:00:47.850
+nom du R.string.resource qui 
+est hello dans notre cas.
+
+00:00:49.190 --> 00:00:52.230
+Notez que vous pouvez accéder 
+de deux façons à une ressource.
+
+00:00:52.230 --> 00:00:58.720
+Dans le code Java elle suit le format de
+nom du R.resource type.resource en XML
+
+00:00:58.720 --> 00:01:03.820
+cependant, elle suit la notation at, donc cela 
+serait at et ensuite le type de
+
+00:01:03.820 --> 00:01:08.050
+ressource qui serait une chaîne de caractères, 
+slash, et le nom de la ressource, qui est hello.
+
+00:01:09.320 --> 00:01:12.730
+Voici d’autres exemples de différents types 
+de ressources et comment y accéder.
+
+00:01:13.740 --> 00:01:16.430
+Ce sont juste quelques types 
+de ressources courants,
+
+00:01:16.430 --> 00:01:19.660
+mais il y en a beaucoup d’autres.
+
+00:01:19.660 --> 00:01:21.590
+Vous commencez toujours avec R, dot,
+
+00:01:21.590 --> 00:01:25.180
+et ensuite le type de ressource, dot,
+et ensuite le nom de la ressource.
+
+00:01:25.180 --> 00:01:27.350
+Et le nom dépend de ce que vous 
+lui assignez.
+
+00:01:27.350 --> 00:01:31.610
+Et ensuite, dans XML vous avez @ et
+ensuite le type de ressources, slash,
+
+00:01:31.610 --> 00:01:32.790
+et ensuite le nom de la ressource.
+
+00:01:34.080 --> 00:01:36.640
+Prenons un instant pour trouver 
+toutes les ID des ressources dans
+
+00:01:36.640 --> 00:01:38.620
+notre fichier d’activité principale Java.
+
+00:01:38.620 --> 00:01:41.160
+Je vais ouvrir la commande 
+trouvée dans Android Studio.
+
+00:01:41.160 --> 00:01:45.640
+Je vais utiliser Cmd+F, ou vous pouvez 
+utiliser Ctrl+F si vous êtes sous Windows.
+
+00:01:46.970 --> 00:01:48.460
+Un champ de recherche apparait ici.
+
+00:01:48.460 --> 00:01:52.910
+Je vais chercher en R majuscule, dot, et
+
+00:01:52.910 --> 00:01:58.430
+ensuite cliquez sur le résultat correspondant, 
+ainsi on a que les résultats avec un R.
+
+00:01:58.430 --> 00:02:03.650
+La première chose qu’il trouve c’est 
+cette référence r.layout.activity_main.
+
+00:02:03.650 --> 00:02:06.420
+C’est intéressant, car on se 
+référere au layout
+
+00:02:06.420 --> 00:02:07.710
+de l’activité principale.
+
+00:02:07.710 --> 00:02:12.170
+En faite, c’est ainsi que l’activité principale 
+sait qu’elle doit télécharger ce fichier XML.
+
+00:02:12.170 --> 00:02:13.390
+C’est pas cool ça ?
+
+00:02:13.390 --> 00:02:14.639
+Regardons la référence suivante.
+
+00:02:15.640 --> 00:02:17.440
+Ok.
+Dans la méthode displayQuantity,
+
+00:02:17.440 --> 00:02:22.360
+on a une référence à
+R.id.quantity_text_view.
+
+00:02:22.360 --> 00:02:25.270
+Donc cela fait référence à une ViewId.
+
+00:02:25.270 --> 00:02:29.120
+Plus particulièrement, le TextView
+qui affiche la quantité.
+
+00:02:29.120 --> 00:02:31.660
+Heureusement que quelques pièces 
+de puzzle semblent s’ajuster.
+
+00:02:31.660 --> 00:02:34.220
+En faisant référence à cet 
+aperçu dans le code Java.
+
+00:02:34.220 --> 00:02:38.550
+On peut l’actualiser alors que l’application 
+fonctionne pour voir ce numberOfCoffees.
+
+00:02:38.550 --> 00:02:40.720
+Passons à l’occurrence suivante.
+
+00:02:40.720 --> 00:02:43.520
+OK dans la méthode de
+
+00:02:43.520 --> 00:02:47.470
+displayMessage on voit une référence à
+R.id.order_summary_text_view.
+
+00:02:47.470 --> 00:02:51.530
+Ici, il semble qu’on essaye de faire 
+référence à cette vue du texte qui affiche
+
+00:02:51.530 --> 00:02:54.210
+le résumé de la commande, afin qu’on
+puisse l’actualiser avec ce message.
+

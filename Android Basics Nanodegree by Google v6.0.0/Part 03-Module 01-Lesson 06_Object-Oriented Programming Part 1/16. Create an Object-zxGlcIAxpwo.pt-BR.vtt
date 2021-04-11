@@ -1,0 +1,144 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.790 --> 00:00:04.250
+Vamos fazer o primeiro,
+nele diz <i>TextView = new TextView</i>
+
+00:00:04.250 --> 00:00:07.861
+e então damos <i>context</i> como <i>input</i>
+para o construtor.
+
+00:00:07.861 --> 00:00:11.929
+O problema com essa linha de código
+é que estamos criando um novo objeto
+
+00:00:11.929 --> 00:00:14.660
+mas não estamos armazenando-o
+corretamente numa variável.
+
+00:00:15.250 --> 00:00:18.460
+Nós estamos dizendo que a variável
+precisa ser do tipo <i>TextView</i>,
+
+00:00:18.460 --> 00:00:21.570
+mas nós esquecemos de dá-la um nome.
+
+00:00:21.570 --> 00:00:23.910
+Então a forma correta seria algo como:
+
+00:00:23.910 --> 00:00:28.120
+<i>TextView</i> seguido de um nome 
+para a variável, igual a <i>newTextView</i>.
+
+00:00:28.790 --> 00:00:31.160
+Você pode chamar a variável
+de alguma outra coisa.
+
+00:00:31.160 --> 00:00:34.150
+Nós só escolhemos chamá-la
+de <i>textView</i>, com um T minúsculo.
+
+00:00:35.230 --> 00:00:38.440
+Então nesse caso, o erro foi
+que faltava um nome para a variável.
+
+00:00:38.440 --> 00:00:39.830
+Vamos ao próximo.
+
+00:00:39.830 --> 00:00:43.350
+Aqui diz, <i>image view img</i> é igual
+a <i>ImageView</i>.
+
+00:00:43.350 --> 00:00:47.865
+O problema aqui é que esse não
+é um tipo válido de objeto.
+
+00:00:47.865 --> 00:00:52.320
+O Android define a classe chamada 
+<i>ImageView</i> com um I e um V maiúsculos,
+
+00:00:52.320 --> 00:00:54.600
+e estão juntos numa mesma palavra.
+
+00:00:54.600 --> 00:00:56.780
+Um nome de classe válido
+não pode ter espaços.
+
+00:00:57.480 --> 00:00:59.050
+O nome da variável parece certo,
+
+00:00:59.050 --> 00:01:01.740
+e criar um novo <i>ImageView</i> 
+parece certo também.
+
+00:01:01.740 --> 00:01:04.919
+Então o único erro foi que o nome
+da classe estava errado.
+
+00:01:04.919 --> 00:01:08.070
+No terceiro caso, nós estamos tentando
+criar um novo <i>ToggleButton</i>.
+
+00:01:08.070 --> 00:01:11.640
+Aqui diz <i>ToggleButtonbutton</i>
+é igual a <i>create ToggleButton</i>.
+
+00:01:11.640 --> 00:01:13.980
+Nós estamos chamando 
+a classe <i>ToggleButton</i> aqui,
+
+00:01:13.980 --> 00:01:17.980
+então precisamos usar a palavra-chave
+<i>new</i>, do Java, e não <i>create</i>.
+
+00:01:17.980 --> 00:01:19.250
+E esse é o código correto.
+
+00:01:19.250 --> 00:01:22.145
+Agora ficou <i>ToggleButton</i>
+é igual a <i>new ToggleButton</i>.
+
+00:01:22.145 --> 00:01:25.910
+O problema aqui foi não usar
+a palavra-chave <i>new</i>.
+
+00:01:25.910 --> 00:01:30.310
+<i>New</i> é a palavra-chave que indica
+que estamos tentando criar um novo objeto.
+
+00:01:30.310 --> 00:01:32.842
+No quarto caso, estamos tentando
+criar um novo <i>Toast</i>.
+
+00:01:32.842 --> 00:01:35.740
+Você poderia ter procurado no Google
+como criar um novo <i>Toast</i>
+
+00:01:35.740 --> 00:01:37.530
+e então comparado com o código aqui.
+
+00:01:37.530 --> 00:01:40.700
+O problema aqui é que <i>Toast</i> precisa
+ser escrito com um T maiúsculo,
+
+00:01:40.700 --> 00:01:43.320
+pois é o nome da classe <i>Toast</i>.
+
+00:01:43.320 --> 00:01:46.670
+Aqui está sendo usado o <i>factory method</i>,
+como conversamos anteriormente.
+
+00:01:46.670 --> 00:01:50.400
+Isso cria um novo objeto <i>Toast</i> que
+é então armazenado nesta variável.
+
+00:01:50.400 --> 00:01:53.360
+O erro era apenas uma classe
+escrita incorretamente.
+
+00:01:53.360 --> 00:01:56.410
+Então agora que sabemos criar objetos,
+como podemos usá-los?
+

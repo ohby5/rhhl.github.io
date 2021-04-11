@@ -1,0 +1,340 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.412 --> 00:00:03.270
+En el último video, mencioné
+brevemente que un constructor
+
+00:00:03.270 --> 00:00:04.817
+se define dentro de una clase,
+
+00:00:04.818 --> 00:00:07.910
+y se usa para crear
+las instancias de objetos.
+
+00:00:07.910 --> 00:00:10.866
+Así, llamamos al constructor <i>TextView</i>
+para crear esta instancia,
+
+00:00:10.867 --> 00:00:14.220
+y volvemos a llamarlo para crear otra
+y así sucesivamente.
+
+00:00:14.220 --> 00:00:17.629
+Veamos el código para saber
+cómo llamar a un constructor.
+
+00:00:18.250 --> 00:00:22.104
+¿Recuerdas cómo creábamos
+una nueva variable numérica entera
+
+00:00:22.105 --> 00:00:24.960
+y le asignábamos un valor inicial de dos?
+
+00:00:24.960 --> 00:00:26.340
+Crear un objeto nuevo
+
+00:00:26.340 --> 00:00:29.536
+y almacenarlo en una variable
+va a resultar un formato similar.
+
+00:00:30.200 --> 00:00:32.200
+Algo parecido a esto.
+
+00:00:32.200 --> 00:00:36.150
+En vez de un tipo de dato <i>int</i>
+tenemos un tipo de dato de objeto.
+
+00:00:36.150 --> 00:00:39.633
+El tipo de dato de objeto
+es el nombre de la clase.
+
+00:00:39.634 --> 00:00:41.570
+En este caso, <i>TextView</i>.
+
+00:00:41.571 --> 00:00:42.975
+Puede ser cualquier cosa,
+
+00:00:42.976 --> 00:00:45.700
+siempre que siga las normas
+para nombres de variables.
+
+00:00:45.700 --> 00:00:47.720
+Aquí lo denominamos <i>priceTextView</i>.
+
+00:00:47.720 --> 00:00:49.600
+Luego, la hacemos igual a un nuevo objeto.
+
+00:00:49.600 --> 00:00:52.254
+Pero podemos desglosar más
+este lado derecho.
+
+00:00:52.800 --> 00:00:56.134
+El lado derecho sigue el formato de <i>new</i> ,
+
+00:00:56.135 --> 00:00:58.060
+seguido por el tipo de dato del objeto,
+
+00:00:58.060 --> 00:01:00.190
+que es <i>TextView</i> en este caso.
+
+00:01:00.190 --> 00:01:03.358
+Esto equivale a llamar al constructor
+definido en la clase <i>TextView</i>,
+
+00:01:03.359 --> 00:01:07.940
+así tenemos paréntesis con los argumentos
+de entrada al constructor.
+
+00:01:07.940 --> 00:01:10.790
+Si el constructor requiere
+un objeto de contexto,
+
+00:01:10.790 --> 00:01:13.490
+necesitamos pasarle un contexto aquí.
+
+00:01:13.490 --> 00:01:15.859
+Recuerda que el objeto de contexto
+
+00:01:15.860 --> 00:01:17.853
+te ayuda a acceder
+a los recursos de la aplicación
+
+00:01:17.854 --> 00:01:20.290
+y otras cosas sobre
+el entorno de la aplicación.
+
+00:01:20.940 --> 00:01:24.140
+Todo esto junto
+crea un nuevo objeto <i>TextView</i>
+
+00:01:24.140 --> 00:01:25.897
+llamando al constructor
+
+00:01:25.898 --> 00:01:31.200
+y luego almacena este nuevo objeto
+en una variable llamada <i>priceTextView</i>.
+
+00:01:31.200 --> 00:01:34.830
+Y esta variable solo puede mantener
+un único objeto <i>TextView</i>
+
+00:01:34.831 --> 00:01:36.552
+definido por su tipo de dato.
+
+00:01:37.210 --> 00:01:39.850
+Aquí hay otro ejemplo
+de crear un objeto <i>ImageView</i>
+
+00:01:39.850 --> 00:01:41.840
+y almacenarlo en una variable.
+
+00:01:41.840 --> 00:01:43.514
+El tipo de dato es <i>ImageView</i>,
+
+00:01:43.515 --> 00:01:45.770
+el nombre de la variable es
+<i>coffeeImageView</i>.
+
+00:01:45.770 --> 00:01:50.450
+Y luego tenemos el operador de asignación,
+seguido de <i>new ImageView</i>.
+
+00:01:50.450 --> 00:01:53.830
+Esto se escribe exactamente igual
+que el tipo de dato del objeto aquí.
+
+00:01:53.830 --> 00:01:57.320
+Como estamos llamando al constructor
+y tenemos que pasarle alguna entrada,
+
+00:01:57.320 --> 00:02:00.620
+tenemos los paréntesis
+y dentro de ellos ponemos las entradas.
+
+00:02:00.620 --> 00:02:03.295
+Aquí hay un tercer ejemplo
+que crea un objeto <i>Button</i>
+
+00:02:03.296 --> 00:02:05.700
+y lo almacena en esta variable.
+
+00:02:05.700 --> 00:02:07.017
+El tipo de dato es <i>Button</i>,
+
+00:02:07.018 --> 00:02:08.894
+el nombre de la variable es
+<i>submitOrderButton</i>,
+
+00:02:08.895 --> 00:02:12.410
+Y luego decimos, <i>new Button</i>
+para llamar al constructor.
+
+00:02:13.140 --> 00:02:15.850
+Puedes incluso definir tus propios
+tipos de datos de objetos.
+
+00:02:15.850 --> 00:02:19.820
+Digamos, por ejemplo, que he creado
+una definición de clase para <i>CatView</i>.
+
+00:02:19.820 --> 00:02:22.820
+Entonces podría usar esta línea
+para crear un nuevo <i>CatView</i>.
+
+00:02:22.820 --> 00:02:25.380
+En este caso, el constructor
+requiere un <i>string</i> de entrada
+
+00:02:25.380 --> 00:02:28.967
+para el nombre del gato,
+por eso puse <i>"Tiger"</i> entre paréntesis
+
+00:02:28.968 --> 00:02:32.280
+y lo pasé al constructor <i>CatView</i>.
+
+00:02:32.280 --> 00:02:35.394
+Para determinar qué pasar como entrada
+a estos constructores,
+
+00:02:35.410 --> 00:02:39.489
+hay que revisar
+el archivo <i>Javadoc</i> de la clase
+
+00:02:39.497 --> 00:02:41.449
+o el archivo fuente de la clase.
+
+00:02:41.450 --> 00:02:45.680
+Todos estos casos usan la palabra <i>new</i>
+para crear un nuevo objeto.
+
+00:02:45.680 --> 00:02:47.730
+Si volvemos a la lista
+de palabras clave de Java,
+
+00:02:47.730 --> 00:02:51.435
+desde luego, encontramos
+que la palabra <i>new</i> está en esa lista.
+
+00:02:52.190 --> 00:02:54.710
+A veces cuando miras la documentación,
+
+00:02:54.710 --> 00:02:58.820
+puede aconsejarte usar un método <i>factory</i>
+para crear un objeto.
+
+00:02:58.820 --> 00:03:01.510
+Es decir en lugar de un constructor.
+
+00:03:01.510 --> 00:03:02.710
+He aquí un ejemplo.
+
+00:03:02.710 --> 00:03:04.290
+Para crear un nuevo <i>MediaPlayer</i>,
+
+00:03:04.290 --> 00:03:09.040
+La documentación aconseja
+usar el método <i>MediaPlayer.create</i>.
+
+00:03:09.040 --> 00:03:13.250
+Y esto retorna un objeto <i>MediaPlayer</i>
+que se puede almacenar en esta variable.
+
+00:03:13.250 --> 00:03:16.230
+Se sigue el formato
+de tipo de dato del objeto,
+
+00:03:16.231 --> 00:03:18.477
+<i>MediaPlayer</i> con M mayúscula,
+
+00:03:18.478 --> 00:03:22.720
+punto y el nombre del método <i>factory</i>,
+que es <i>create</i> en este caso.
+
+00:03:22.720 --> 00:03:26.603
+Luego le pasas los argumentos de entrada
+para inicializar ese <i>MediaPlayer</i>.
+
+00:03:27.390 --> 00:03:29.710
+Aquí hay otro ejemplo
+de cómo crear un <i>Toast</i>.
+
+00:03:30.797 --> 00:03:31.948
+Un <i>toast</i> es un mensaje
+
+00:03:31.949 --> 00:03:34.829
+que aparece temporalmente 
+en tu aplicación y luego desaparece.
+
+00:03:35.420 --> 00:03:38.540
+Así que el código comienza con <i>Toast</i>
+con una T mayúscula,
+
+00:03:38.540 --> 00:03:40.252
+porque es el tipo de dato del objeto.
+
+00:03:40.253 --> 00:03:44.797
+Y luego tenemos un punto y luego <i>maketext</i>,
+que es el nombre del método <i>factory</i>.
+
+00:03:44.798 --> 00:03:48.536
+Y luego pasamos los argumentos de entrada
+para crear este <i>Toast</i>.
+
+00:03:48.537 --> 00:03:50.405
+Para saber cuál es el
+nombre del método <i>factory</i>
+
+00:03:50.406 --> 00:03:51.940
+y cuáles son los
+argumentos de entrada,
+
+00:03:51.941 --> 00:03:55.280
+tienes que revisar la documentación
+para la clase <i>Toast</i>.
+
+00:03:55.280 --> 00:03:58.110
+En general, para saber
+si debes crear un objeto
+
+00:03:58.111 --> 00:04:00.665
+usando un constructor
+o con un método <i>factory</i>,
+
+00:04:00.666 --> 00:04:03.640
+puedes simplemente buscar en Google,
+cómo crear ese objeto.
+
+00:04:03.640 --> 00:04:06.940
+Usar un constructor es la forma más común
+de crear un objeto nuevo.
+
+00:04:06.940 --> 00:04:09.582
+Es menos común que tengas que usar
+un método <i>factory</i>,
+
+00:04:09.583 --> 00:04:12.690
+pero para estar seguro de cuál usar,
+puedes simplemente buscar en Google
+
+00:04:12.690 --> 00:04:13.820
+cómo crear ese objeto.
+
+00:04:15.000 --> 00:04:18.180
+Aquí está la oportunidad de practicar
+la creación de objetos.
+
+00:04:18.180 --> 00:04:20.540
+En cada una de estas líneas de código,
+hay un error.
+
+00:04:21.047 --> 00:04:22.293
+Averigua cuál es el error
+
+00:04:22.294 --> 00:04:23.951
+y escribe la línea correcta de código
+
+00:04:23.952 --> 00:04:25.206
+en estas casillas de abajo.
+

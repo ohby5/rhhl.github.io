@@ -1,0 +1,384 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.420 --> 00:00:02.590
+Je vais vous guider à travers un exemple
+d'une méthode avec différent
+
+00:00:02.590 --> 00:00:04.860
+nombre de paramètres d'entrée.
+
+00:00:04.860 --> 00:00:09.660
+J'ai commencé par créer l'Assistant d'une
+nouvelle application de projet dans
+Studio Android, donc
+
+00:00:09.660 --> 00:00:12.800
+C'est complètement indépendant de
+l'application Just Java.
+
+00:00:12.800 --> 00:00:15.460
+J'ai ajouté cette méthode dans l'activité
+principale.
+
+00:00:15.460 --> 00:00:17.420
+On l'appelle créerMéssageMéteo.
+
+00:00:17.420 --> 00:00:21.650
+Il n'y a aucun paramètre d'entrée, et la
+valeur reçue est une chaîne de caractère.
+
+00:00:21.650 --> 00:00:24.890
+Cette méthode est là pour créer un nouveau
+message qui spécifie le nom de la ville et
+
+00:00:24.890 --> 00:00:26.080
+la température.
+
+00:00:26.080 --> 00:00:29.590
+Vous pouvez imaginer une méthode comme 
+étant un modèle d'instructions.
+
+00:00:29.590 --> 00:00:32.320
+Donc je peux déclarer que température 
+soit un paramètre d'entrée.
+
+00:00:33.550 --> 00:00:36.650
+Et c'est un nombre, alors je déclare,
+température type entier.
+
+00:00:36.650 --> 00:00:40.990
+Alors je peux l'utiliser ici.
+
+00:00:40.990 --> 00:00:43.540
+Donc, il s'agit d'une chaîne de caractère
+littérale, et
+
+00:00:43.540 --> 00:00:46.000
+puis il est concaténé avec l'entier
+température.
+
+00:00:46.000 --> 00:00:51.310
+De plus il est concaténé avec une autre
+chaîne qui indique les degrés Fahrenheit.
+
+00:00:51.310 --> 00:00:54.890
+Alors, le message peut être personnalisé
+basé sur la température, car il a
+
+00:00:54.890 --> 00:00:56.380
+un paramètre d'entrée.
+
+00:00:56.380 --> 00:00:59.874
+Oh oui, j'ai oublié de mentionner ceci
+plus tôt, mais dans la méthode onCréer de
+
+00:00:59.874 --> 00:01:03.198
+l'activité principale, qui est appelée
+lorsque l'activité est créée,
+
+00:01:03.198 --> 00:01:05.670
+Je peux appeler créerMéssageMéteo.
+
+00:01:05.670 --> 00:01:10.040
+Aucun argument avant que j'en passe, mais
+nous avons ici un paramètre obligatoire.
+
+00:01:10.040 --> 00:01:14.630
+Donc je vais y passer 77 pour
+la température.
+
+00:01:14.630 --> 00:01:18.990
+Qui fait maintenant l'erreur disparaît,
+et cet appel de la méthode est correct.
+
+00:01:18.990 --> 00:01:21.900
+L'autre chose que je dois modifier est
+ce commentaire sur la méthode.
+
+00:01:22.940 --> 00:01:24.400
+Je vais ajouter une ligne vide, et
+
+00:01:24.400 --> 00:01:28.351
+alors je vais commencer par décrire
+le paramètre d'entrée température ici.
+
+00:01:28.351 --> 00:01:31.385
+Je vais taper @param température, et
+
+00:01:31.385 --> 00:01:34.265
+alors je peux ajouter une description
+indiquant qu'il s'agit de la température
+de la ville.
+
+00:01:35.345 --> 00:01:38.555
+Parfois les noms de paramètres sont
+un peu difficiles à comprendre, alors
+
+00:01:38.555 --> 00:01:39.801
+C'est pourquoi la description est utile.
+
+00:01:41.232 --> 00:01:44.832
+D'autres fois si votre méthode est 
+publique alors d'autres personnes pourront
+
+00:01:44.832 --> 00:01:46.212
+faire appel à cette méthode, et
+
+00:01:46.212 --> 00:01:49.352
+sans connaître les instructions qui sont
+à l'intérieur de cette méthode.
+
+00:01:49.352 --> 00:01:50.642
+Donc lire ce doc java et
+
+00:01:50.642 --> 00:01:52.952
+la description des paramètres est vraiment
+utile pour eux.
+
+00:01:54.292 --> 00:01:57.242
+J'ai déjà mentionné qu'une méthode est
+semblable à un modèle.
+
+00:01:57.242 --> 00:02:01.102
+Alors, que se passe-t-il si l'on veut 
+changer le nom de la ville car il n'est pas
+toujours San Francisco ?
+
+00:02:02.130 --> 00:02:04.280
+Je peux faire que ville soit un paramètre.
+
+00:02:04.280 --> 00:02:06.260
+Donc, je peux ajouter une virgule ici.
+
+00:02:06.260 --> 00:02:10.889
+Et puisque le nom de la ville est texte
+je vais le changer en un type de données chaîne de caractère.
+
+00:02:10.889 --> 00:02:15.740
+Alors je peux supprimer San Francisco et
+le remplacer par un nom variable de ville.
+
+00:02:16.870 --> 00:02:20.009
+Et n'oubliez pas d'ajouter un espace avant
+et après ici aussi.
+
+00:02:21.390 --> 00:02:24.410
+Bien, donc maintenant, cette méthode peut
+créer un message
+
+00:02:24.410 --> 00:02:26.970
+C'est personnalisé à une certaine ville et
+une certaine température.
+
+00:02:26.970 --> 00:02:30.430
+J'ai aussi pensé à modifier le document
+java pour
+
+00:02:30.430 --> 00:02:34.050
+qu'il a ce paramètre supplémentaire et
+description pour un nom de ville.
+
+00:02:35.140 --> 00:02:39.100
+J'ai changé la signature de méthode,
+maintenant, j'ai une erreur ici.
+
+00:02:39.100 --> 00:02:41.850
+La méthode ne fonctionne plus
+avec un seul argument.
+
+00:02:41.850 --> 00:02:44.130
+Il me faut passer deux arguments.
+
+00:02:44.130 --> 00:02:48.230
+Donc j'ai ajouté une virgule et puis y
+transmettre la chaîne San Francisco.
+
+00:02:49.430 --> 00:02:51.130
+Maintenant l'erreur disparaît.
+
+00:02:51.130 --> 00:02:56.140
+Alors, quand j'appelle créerMéssageMéteo
+(77, ça va être la valeur de température,
+
+00:02:56.140 --> 00:02:58.300
+et San Francisco sera la valeur
+du nom de la ville.
+
+00:02:59.390 --> 00:03:01.783
+Et il créera la chaîne de caractère
+appropriée ici.
+
+00:03:03.813 --> 00:03:06.874
+Maintenant, nous allons revenir à
+la méthode calculer prix,
+
+00:03:06.874 --> 00:03:09.480
+et nous allons modifier la signature
+de la méthode afin
+
+00:03:09.480 --> 00:03:13.230
+qu'il ait un autre nombre de paramètres.
+
+00:03:13.230 --> 00:03:18.710
+Nous allons le définir avec zéro paramètres
+d'entrée, un paramètre d'entrée,
+
+00:03:18.710 --> 00:03:22.079
+et enfin, l'essayer avec deux paramètres d'entrée.
+
+00:03:23.350 --> 00:03:26.660
+Vous verrez comment changer la méthode
+signature ici pour avoir un autre
+
+00:03:26.660 --> 00:03:30.720
+nombre de paramètres d'entrée qui affecte
+la façon dont la méthode est appelée.
+
+00:03:30.720 --> 00:03:32.270
+Normalement lorsque vous générez votre 
+application,
+
+00:03:32.270 --> 00:03:36.280
+vous le définissez seulement une seule 
+façon avec un certain nombre de paramètres.
+
+00:03:36.280 --> 00:03:39.360
+Et généralement ce nombre de paramètres
+d'entrée va être déterminé
+
+00:03:39.360 --> 00:03:42.380
+basé sur ce qui se passe à l'intérieur
+de la méthode.
+
+00:03:42.380 --> 00:03:45.330
+La meilleure pratique consiste à seulement
+passer des paramètres d'entrée
+
+00:03:45.330 --> 00:03:47.590
+que vous allez effectivement avoir besoin
+à l'intérieur de cette méthode.
+
+00:03:47.590 --> 00:03:50.450
+Il n'y a aucun point en passant sur plus
+informations si vous n'allez pas
+
+00:03:50.450 --> 00:03:51.240
+l'utiliser à l'intérieur ici.
+
+00:03:51.240 --> 00:03:54.640
+Voici les instructions pour cette tâche.
+
+00:03:54.640 --> 00:03:58.568
+D'abord définir la méthode calculater prix
+à l'activité principale de votre application.
+
+00:03:58.568 --> 00:04:01.470
+Voir notes d'instructeur pour un extrait
+de code avec lequel vous pouvez commencer.
+
+00:04:01.470 --> 00:04:04.123
+Nous allons modifier la méthode
+calculerPrix afin
+
+00:04:04.123 --> 00:04:06.690
+d'avoir seulement un paramètre d'entrée.
+
+00:04:06.690 --> 00:04:09.970
+Puis dans la méthode soumettreCommande
+appelez calculerPrix et
+
+00:04:09.970 --> 00:04:12.230
+passez à quantité comme entrée.
+
+00:04:12.230 --> 00:04:16.450
+Puis essayez de modifier la méthode 
+calculerPrix pour avoir deux paramètres.
+
+00:04:16.450 --> 00:04:21.714
+De cette façon dans la méthode 
+soumettreCommande vous appellerez
+calculerPrix, quantité et
+
+00:04:21.714 --> 00:04:26.093
+vous pouvez passer à Prix 10$ par exemple.
+
+00:04:26.093 --> 00:04:31.150
+Et enfin, essayez de changer calculerPrix
+pour qu'il ait zéro paramètre d'entrée.
+
+00:04:31.150 --> 00:04:34.324
+De cette façon dans la méthode
+soumettreCommande vous appelleriez
+seulement calculerPrix
+
+00:04:34.324 --> 00:04:34.870
+like this.
+comme ça.
+
+00:04:35.950 --> 00:04:38.530
+Faisons le premier ensemble pour comprendre
+ce que je veux dire.
+
+00:04:38.530 --> 00:04:41.729
+Je vais ouvrir le lien dans les notes
+de l'instructeur.
+
+00:04:41.729 --> 00:04:46.080
+Dans ce repertoire nous fournisons le code
+pour la méthode calculerPrix.
+
+00:04:46.080 --> 00:04:50.480
+Alors aller et Sélectionner tout le
+document puis copiez-le.
+
+00:04:50.480 --> 00:04:53.160
+Dans Studio Android, Je vais le coller
+dans cette méthode.
+
+00:04:53.160 --> 00:04:56.580
+Je vais le coller dans juste en dessous
+de soumettreCommande, et
+
+00:04:56.580 --> 00:05:01.370
+Je vais m'assurer qu'il y a un ligne vide
+entre chaque méthode ici.
+
+00:05:01.370 --> 00:05:02.519
+That makes it easier to read.
+Cela le rend plus facile à lire.
+
+00:05:03.650 --> 00:05:07.140
+Ensuite, je peux appeler cette méthode à
+partir de la méthode soumettreCommande.
+
+00:05:07.140 --> 00:05:09.530
+Je vais me contenter d'insérer l'appel en
+bas de la méthode.
+
+00:05:09.530 --> 00:05:12.430
+Plus tard nous allons l'intégrer avec ce
+code ici.
+
+00:05:12.430 --> 00:05:13.640
+Mais pour l'instant, c'est bon.
+
+00:05:14.940 --> 00:05:19.000
+Oups, j'ai oublié que nous avons un seule paramètre d'entrée, donc j'ai besoin d'une quantité de pass.
+
+00:05:20.790 --> 00:05:21.960
+Maintenant faites la même chose pour
+
+00:05:21.960 --> 00:05:25.400
+les deux autres tâches en modifiant
+les paramètres d'entrée ici.
+
+00:05:27.000 --> 00:05:29.740
+Pour effectuer cette tâche, si
+vous avez besoin d'exemples de référence,
+
+00:05:29.740 --> 00:05:33.761
+vous pouvez toujours faire une recherche
+sur les méthodes Java sur Google.
+

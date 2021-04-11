@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.610 --> 00:00:02.190
+Faisons le premier exercice.
+
+00:00:02.190 --> 00:00:07.473
+Nous allons renommer le paramètre d'entrée
+nombre afin d'avoir un nom différent.
+
+00:00:07.473 --> 00:00:11.210
+C'est le premier paramètre d'entrée,
+nombre type entier,
+
+00:00:11.210 --> 00:00:15.236
+et tout ce que j'ai à faire c'est changer
+le nom de la variable.
+
+00:00:15.236 --> 00:00:16.736
+Je vais changer cela, par exemple,
+en nombreDeCafés.
+
+00:00:16.736 --> 00:00:17.735
+Il peut être n'importe quel nom souhaité.
+
+00:00:17.735 --> 00:00:23.290
+Maintenant, je vois immédiatement
+un message d'avertissement et une erreur.
+
+00:00:23.290 --> 00:00:27.030
+L'avertissement dit, le paramètre 
+nombreDeCafés n'est jamais utilisé,
+
+00:00:27.030 --> 00:00:31.530
+car nulle part dans cette méthode
+j'ai utilisé cette variable.
+
+00:00:31.530 --> 00:00:35.090
+Alors je vois qu'il y a une erreur disant,
+impossible de résoudre le symbole nombre.
+
+00:00:35.090 --> 00:00:36.890
+Maintenant, aucune variable n'est
+appelée nombre.
+
+00:00:36.890 --> 00:00:38.550
+Aucune variable locale appelée nombre.
+
+00:00:38.550 --> 00:00:40.580
+Aucune variable globale appelée nombre.
+
+00:00:40.580 --> 00:00:42.790
+Et il n'est pas un paramètre, non plus.
+
+00:00:42.790 --> 00:00:46.930
+au lieu de cela, j'ai besoin de changer
+celà afin de l'appeller nombreDeCafés.
+
+00:00:46.930 --> 00:00:48.040
+Et vous voilà, l'erreur est fixée.
+
+00:00:48.040 --> 00:00:49.248
+Donc je vais le lancer sur mon appareil.
+
+00:00:49.248 --> 00:00:51.640
+Et c'est à quoi il ressemble.
+
+00:00:51.640 --> 00:00:54.060
+Le compteur fonctionne comme prévu.
+
+00:00:54.060 --> 00:00:57.810
+Il ne devrait y avoir aucun changement
+visible à l'utilisateur parce que nous
+venons de modifier
+
+00:00:57.810 --> 00:00:59.510
+le nom du paramètre d'entrée.
+
+00:01:00.690 --> 00:01:04.200
+En outre, nous n'avions pas à changer
+la façon dont que la méthode est appelée.
+
+00:01:04.200 --> 00:01:08.100
+Nous pouvons encore dire afficherQuantité
+et d'y passez tout ce que nous voulons.
+
+00:01:08.100 --> 00:01:11.540
+Aucun problème pour l'appelant concernant
+le nom de paramètre d'entrée.
+
+00:01:12.760 --> 00:01:16.270
+La deuxième travail consiste à changer
+le type de données du paramètre d'entrée
+
+00:01:16.270 --> 00:01:17.370
+d'entier à chaîne de caractère.
+
+00:01:19.110 --> 00:01:22.600
+Ainsi, dans la méthode d'affichage de 
+quantité, je vais changer l'entrée donc
+
+00:01:22.600 --> 00:01:29.040
+au lieu d'un type de données entier,il
+s'attend à un type de données chaîne de
+caractère, comme ceci.
+
+00:01:29.040 --> 00:01:32.125
+Et maintenant, Il y a quelques erreurs
+dans notre application.
+
+00:01:32.125 --> 00:01:35.495
+En faisant défiler vers le haut, je vois
+un trait de soulignement ondulé rouge
+
+00:01:35.495 --> 00:01:38.025
+dans la méthode d'incrémentation et dans
+la méthode de décrementation.
+
+00:01:38.025 --> 00:01:39.496
+Le message d'erreur dit :
+
+00:01:39.496 --> 00:01:44.130
+AfficherQuantité une chaîne de caractère
+dans ActivitéPrincipale ne peut 
+s'appliquer à un entier.
+
+00:01:45.760 --> 00:01:48.960
+Il dit que nous ne pouvons pas passer
+la variable quantité à
+
+00:01:48.960 --> 00:01:53.560
+la méthode parce que c'est un entier et
+il attend une Chaîne de caractère.
+
+00:01:54.710 --> 00:01:58.320
+Cette disparité dans le type de données
+provoque une erreur, et
+
+00:01:58.320 --> 00:02:00.810
+l'application ne fonctionne plus
+sur notre appareil.
+
+00:02:00.810 --> 00:02:02.050
+Il s'agit d'une erreur de compilation.
+
+00:02:03.060 --> 00:02:04.780
+Il y a quelques manières de résoudre celà.
+
+00:02:04.780 --> 00:02:08.558
+Soit il faut changer ce qui s'est passé
+dans la méthode donc
+
+00:02:08.558 --> 00:02:10.494
+il s'agit en fait d'une Chaîne
+
+00:02:10.494 --> 00:02:14.246
+Je pourrais mettre 100 ici et le mettre 
+dans double quotes pour qu'il soit 
+une Chaîne de caractère, et
+
+00:02:14.246 --> 00:02:17.210
+qui correspondrait au type
+d'entrée appropriée.
+
+00:02:17.210 --> 00:02:20.300
+Mais ce que nous voulons vraiment c'est
+que quantité soit toujours un entier alors
+
+00:02:20.300 --> 00:02:24.220
+que nous pouvons faire des calculs sur lui
+pour l'augmenter d'un ou le diminuer d'un.
+
+00:02:24.220 --> 00:02:27.380
+Donc je vais le laisser comme quantité.
+
+00:02:27.380 --> 00:02:29.670
+Et puis, cela devrait être modifiée
+pour être un entier.
+
+00:02:29.670 --> 00:02:32.740
+Et puis notre application devrait
+fonctionner à nouveau.
+
+00:02:34.110 --> 00:02:34.980
+Bien. Comme ça
+
+00:02:34.980 --> 00:02:39.100
+jusqu'à maintenant, nous avons vu
+l'exemple d'une méthode avec un paramètre.
+
+00:02:39.100 --> 00:02:43.370
+Mais qu'en est-il des exemples de méthodes
+avec aucun paramètre d'entrée, ou
+
+00:02:43.370 --> 00:02:45.050
+deux paramètres entrées, ou plus ?
+

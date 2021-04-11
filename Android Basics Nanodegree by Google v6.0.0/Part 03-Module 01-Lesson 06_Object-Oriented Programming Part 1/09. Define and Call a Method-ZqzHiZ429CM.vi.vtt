@@ -1,0 +1,397 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.640 --> 00:00:03.565
+Hãy cùng nhau làm bước đầu tiên, 
+thêm một phương pháp mới vào MainActivity.
+
+00:00:04.930 --> 00:00:07.390
+Bạn có thể lấy bất kỳ chỗ nào trong 
+tệp để thêm phương pháp của bạn,
+
+00:00:07.390 --> 00:00:11.100
+miễn là nó nằm bên ngoài các 
+ngoặc nhọn của phương pháp khác.
+
+00:00:11.100 --> 00:00:14.230
+Tôi sẽ thêm nó vào ngay 
+dưới phương pháp khác đã được xác định,
+
+00:00:14.230 --> 00:00:16.300
+là calculatePrice.
+
+00:00:16.300 --> 00:00:19.530
+Tôi sẽ để chế độ riêng tư cho bộ sửa đổi 
+truy nhập, bởi vì những điều duy nhất
+
+00:00:19.530 --> 00:00:22.960
+cần truy cập phương pháp này 
+là trong hoạt động chính.
+
+00:00:24.180 --> 00:00:27.060
+Sau đó tôi sẽ nói 
+kiểu dữ liệu trả lại là chuỗi,
+
+00:00:27.060 --> 00:00:30.550
+bởi vì phương pháp 
+createOrderSummary sẽ trả lại chuỗi.
+
+00:00:30.550 --> 00:00:34.665
+Và tên của phương pháp này 
+là reateOrderSummary.
+
+00:00:36.230 --> 00:00:38.940
+Và sau đó chúng ta sẽ nhập đầu vào là 
+một mức giá, đó sẽ là một con số.
+
+00:00:40.340 --> 00:00:42.890
+Được rồi, vậy là 
+ta đã hoàn thành ký số phương pháp nhưng 
+
+00:00:47.060 --> 00:00:52.040
+Tin nhắn bắt đầu bằng một cái tên, 
+số lượng, tổng giá và sau đó là cảm ơn. 
+
+00:00:54.580 --> 00:00:56.590
+Tôi sẽ dán nó vào 
+phương pháp createOrderSummary.
+
+00:00:56.590 --> 00:01:00.120
+Giờ ta bắt đầu với một vài mã lệnh cơ sở.
+
+00:01:00.120 --> 00:01:01.150
+Mặc dù bây giờ có sự khác biệt,
+
+00:01:01.150 --> 00:01:05.090
+tóm tắt đặt hàng sẽ bắt đầu với 
+một cái tên chứ không phải tổng giá.
+
+00:01:05.090 --> 00:01:08.890
+Vậy tôi sẽ chuyển phần này sang 
+dòng tiếp theo và lưu lại cho sau này.
+
+00:01:08.890 --> 00:01:12.359
+Tôi sẽ khởi tạo biến tin nhắn 
+giá cho Name và
+
+00:01:12.359 --> 00:01:14.580
+sau đó là Kaptain Kunal.
+
+00:01:14.580 --> 00:01:17.660
+Và ở dòng tiếp theo, 
+tôi sẽ cập nhật tin nhắn giá.
+
+00:01:18.690 --> 00:01:22.025
+Tôi sẽ nối thêm vào 
+tin nhắn hiện có, vậy
+
+00:01:22.025 --> 00:01:26.485
+Tôi nói tin nhắn giá, cộng vào, 
+và sau đó văn bản tiếp theo và
+
+00:01:26.485 --> 00:01:31.115
+Tôi muốn thêm số lượng và 
+thêm biến số lượng vào.
+
+00:01:32.265 --> 00:01:34.095
+Vì số lượng là biến toàn cầu,
+
+00:01:34.095 --> 00:01:36.745
+chúng ta có thể truy cập 
+nó trong phương pháp này.
+
+00:01:36.745 --> 00:01:39.340
+Được rồi, bây giờ ta có tên và số lượng.
+
+00:01:39.340 --> 00:01:44.020
+Ở dòng tiếp theo tôi sẽ 
+cập nhật priceMessage một lần nữa và
+
+00:01:44.020 --> 00:01:45.940
+thêm một đoạn văn bản nữa.
+
+00:01:45.940 --> 00:01:48.700
+Thực tế thì văn bản này có nghĩa 
+là tổng giá, do đó
+
+00:01:48.700 --> 00:01:50.270
+Tôi chỉ sử dụng những gì ta có trước đó.
+
+00:01:51.340 --> 00:01:55.080
+Ok, sau đó trên dòng cuối cùng 
+ta cập nhật priceMessage một lần nữa.
+
+00:01:55.080 --> 00:01:58.639
+Lấy giá trị hiện có của chuỗi đó 
+và sau đó thêm, Cảm ơn!, vào đó.
+
+00:01:59.740 --> 00:02:02.210
+Tất cả trông có vẻ ổn nhưng 
+vẫn có một lỗi ở đây.
+
+00:02:02.210 --> 00:02:04.260
+Và lỗi báo là thiếu câu lệnh trả lại.
+
+00:02:04.260 --> 00:02:07.090
+Vì chúng ta đang định 
+trả lại một chuỗi tóm tắt,
+
+00:02:07.090 --> 00:02:10.370
+vậy tôi cần bổ sung một dòng 
+mã lệnh khác có nêu, trả lại.
+
+00:02:10.370 --> 00:02:12.240
+Và sau đó là giá trị trả lại.
+
+00:02:12.240 --> 00:02:15.210
+Trong trường hợp này thì giá trị 
+trả lại là priceMessage.
+
+00:02:15.210 --> 00:02:16.630
+Và tôi thêm một dấu chấm phẩy ở cuối cùng.
+
+00:02:17.660 --> 00:02:19.440
+Được rồi, bây giờ không còn lỗi đó nữa.
+
+00:02:19.440 --> 00:02:22.150
+Có vẻ như mã lệnh của chúng ta đã ổn, vậy 
+tôi sẽ chạy thử và kiểm tra nó.
+
+00:02:23.480 --> 00:02:26.300
+Ổn, vậy bây giờ nếu tôi thay đổi 
+số lượng còn ba và
+
+00:02:26.300 --> 00:02:28.930
+tôi nhấn nút đặt hàng, nó không hoạt động.
+
+00:02:30.620 --> 00:02:32.320
+Hãy cùng xem lỗi sai ở đâu nhé.
+
+00:02:32.320 --> 00:02:35.260
+Xem xét mã lệnh kỹ hơn, 
+tôi đã thấy vấn đề là gì .
+
+00:02:35.260 --> 00:02:38.660
+Có một cảnh báo ở đây nói rằng 
+phương pháp riêng createOrderSummary
+
+00:02:38.660 --> 00:02:39.730
+chưa bao giờ được sử dụng.
+
+00:02:39.730 --> 00:02:41.100
+Tôi đã quên thực hiện nó.
+
+00:02:41.100 --> 00:02:42.450
+Hãy quay lại trang câu đố.
+
+00:02:43.580 --> 00:02:46.910
+Rồi, vậy chúng ra đã thực hiện thành công 
+nhiệm vụ đầu tiên nhưng bây giờ tôi phải
+
+00:02:46.910 --> 00:02:50.010
+thực hiện phương pháp createOrderSummary 
+từ phương pháp submitOrder.
+
+00:02:51.220 --> 00:02:55.300
+Quay lại Android Studio, 
+tôi cần sửa phương pháp submitOrder.
+
+00:02:55.300 --> 00:02:57.300
+Tôi đã tính toán giá cả, 
+đã chính xác.
+
+00:02:57.300 --> 00:03:00.320
+Nhưng bây giờ tôi phải chuyển nó sang 
+phương pháp createOrderSummary.
+
+00:03:00.320 --> 00:03:03.860
+Vậy tôi sẽ thực hiện ngay 
+createOrderSummary với
+
+00:03:03.860 --> 00:03:05.690
+biến giá.
+
+00:03:05.690 --> 00:03:08.340
+Giá trị trả lại của phương pháp này 
+sẽ được lưu giữ ở
+
+00:03:08.340 --> 00:03:10.380
+biến priceMessage.
+
+00:03:10.380 --> 00:03:13.190
+Tôi không cần dòng 
+mã lệnh này nữa bởi vì “Cảm ơn
+
+00:03:13.190 --> 00:03:15.260
+bạn” đã ở trong văn bản ngay dưới đây.
+
+00:03:15.260 --> 00:03:16.680
+Vì thế tôi có thể xóa nó đi.
+
+00:03:16.680 --> 00:03:20.800
+Để cập nhật màn hình tất cả những gì tôi 
+phải làm là thực hiện displayMessage với
+
+00:03:20.800 --> 00:03:23.230
+biến priceMessage giống như trước.
+
+00:03:23.230 --> 00:03:25.410
+Và giờ hãy thử chạy ứng dụng lần nữa.
+
+00:03:25.410 --> 00:03:27.370
+Nếu tôi thay đổi số lượng xuống còn ba và
+
+00:03:27.370 --> 00:03:29.930
+tôi nhấn nút đặt hàng, 
+nó vẫn không hoạt động.
+
+00:03:31.080 --> 00:03:34.970
+Hầu hết đoạn văn bản nằm trên một dòng mà 
+đáng lẽ phải nằm trên nhiều dòng, vì vậy
+
+00:03:34.970 --> 00:03:37.210
+hãy quay lại và sửa mã lệnh của chúng ta.
+
+00:03:37.210 --> 00:03:40.650
+Xem mã lệnh tôi nhận ra rằng 
+tôi đã quên ký tự dòng mới.
+
+00:03:40.650 --> 00:03:43.950
+Tôi đã thêm nó cho 
+Cảm ơn bạn nhưng không cho các phần khác.
+
+00:03:43.950 --> 00:03:46.340
+Vậy tôi sẽ bổ sung nó 
+vào các dòng khác ngay bây giờ.
+
+00:03:47.510 --> 00:03:49.230
+Ổn rồi, hãy thử chạy lại lần nữa.
+
+00:03:50.370 --> 00:03:51.600
+Và nó đã hoạt động.
+
+00:03:51.600 --> 00:03:52.830
+Tuyệt vời.
+
+00:03:52.830 --> 00:03:56.050
+Bây giờ Kaptain Kunal có thể có 
+ba cốc cà phê cho anh ấy.
+
+00:03:56.050 --> 00:03:59.670
+Tôi muốn chỉ cho bạn một vài tối ưu hóa 
+khác mà bạn có thể làm với mã lệnh đó.
+
+00:03:59.670 --> 00:04:02.530
+Lưu ý là bạn phải thực hiện 
+phương pháp calculatePrice trong
+
+00:04:02.530 --> 00:04:07.170
+phương pháp createOrderSummary thay vì 
+chuyển nó vào như là tham số đầu vào.
+
+00:04:07.170 --> 00:04:10.420
+Vậy là bạn có thể hoàn thành 
+calculatePrice ngay ở đây.
+
+00:04:10.420 --> 00:04:12.880
+Nó cũng sẽ hoạt động.
+
+00:04:12.880 --> 00:04:16.250
+Nhưng tôi muốn chỉ cho bạn thấy bạn có thể 
+lấy kết quả đầu ra của một phương pháp và 
+
+00:04:18.370 --> 00:04:20.040
+Vậy chúng ta sẽ để nó như trước đó.
+
+00:04:21.440 --> 00:04:23.874
+Trong phương pháp createOrderSummary ,
+
+00:04:23.874 --> 00:04:27.920
+việc khác mà tôi đã 
+làm là sử dụng toán tử +=.
+
+00:04:27.920 --> 00:04:29.240
+Đây là tốc ký và
+
+00:04:29.240 --> 00:04:35.070
+nó có nghĩa tương tự với priceMessage 
+= priceMessage + tất cả điều này.
+
+00:04:35.070 --> 00:04:40.660
+Nếu tôi đổi tất cả điều này bằng +=, nó 
+sẽ tương tự với những gì ta có trước đó.
+
+00:04:40.660 --> 00:04:43.680
+Điều này chỉ yêu cầu đánh máy ít hơn nên
+mã lệnh của bạn sẽ ngắn gọn hơn.
+
+00:04:44.740 --> 00:04:46.120
+Trong phương pháp calculatePrice,
+
+00:04:46.120 --> 00:04:49.160
+việc khác mà tôi đã 
+làm chỉ là trả lại giá trị
+
+00:04:49.160 --> 00:04:54.030
+ngay lập tức thay vì lưu trữ nó trong 
+một biến địa phương rồi mới trả lại nó.
+
+00:04:56.840 --> 00:05:00.340
+Và sau đó, trong phương pháp 
+submitOrder, thay vì tạo ra tóm tắt
+
+00:05:00.340 --> 00:05:03.880
+đặt hàng và lưu nó trong một biến và 
+sử dụng nó ngay sau đó, tôi có thể 
+
+00:05:08.960 --> 00:05:11.290
+Việc này đem đến cùng một kết quả.
+
+00:05:11.290 --> 00:05:14.590
+Giá trị trả lại của phương pháp 
+createOrderSummary là một chuỗi,
+
+00:05:14.590 --> 00:05:19.190
+và sẽ được chuyển sang như là một đối số 
+đầu vào cho phương pháp displayMessage.
+
+00:05:19.190 --> 00:05:21.410
+Bạn có thể để nó như vậy nếu bạn muốn, 
+nếu nó dễ đọc hơn.
+
+00:05:23.110 --> 00:05:25.630
+Tất cả các mẹo này 
+đều dẫn đến cùng một logic.
+
+00:05:27.030 --> 00:05:30.290
+Và trước khi tôi quên thì hãy nhớ 
+thêm nhận xét Javadoc ở
+
+00:05:30.290 --> 00:05:33.680
+đầu phương pháp này để mô tả 
+nó sẽ thực hiện những gì.
+
+00:05:33.680 --> 00:05:36.821
+Về kỹ thuật, bạn không cần thêm nhận xét 
+Javadoc đối với phương pháp riêng nhưng
+
+00:05:36.821 --> 00:05:39.449
+đây chỉ là một thực hành tốt khi viết 
+mô tả phương pháp
+
+00:05:39.449 --> 00:05:42.437
+để người khác đọc 
+mã lệnh của bạn sẽ có thể hiểu
+
+00:05:42.437 --> 00:05:44.380
+bạn đang cố thực hiện cái gì.
+
+00:05:44.380 --> 00:05:48.002
+Việc mô tả phương pháp này là 
+tạo ra một tóm tắt lệnh.
+
+00:05:48.002 --> 00:05:51.560
+Tham số đầu vào mà là giá 
+đặt hàng và nó trả lại tóm tắt văn bản.
+

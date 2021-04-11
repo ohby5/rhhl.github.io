@@ -1,0 +1,374 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.470 --> 00:00:03.770
+Nous avons créé une version simplifiée
+de la classe TextView
+
+00:00:03.770 --> 00:00:06.810
+Qui serait enregistré dans le fichier
+TextView.java.
+
+00:00:06.810 --> 00:00:08.290
+Nous avons simplifié alors ça
+sera plus facile pour que
+
+00:00:08.290 --> 00:00:11.060
+vous compreniez ce à quoi
+une classe pourrait ressembler.
+
+00:00:11.060 --> 00:00:13.710
+Cela commence par
+un modificateur d'accès.
+
+00:00:13.710 --> 00:00:15.100
+il est marqué comme public
+
+00:00:15.100 --> 00:00:19.480
+D''autres choses comme l'inactivité
+peuvent utiliser cette classe de TextView.
+
+00:00:19.480 --> 00:00:21.040
+Ensuite, nous avons la classe de mot.
+
+00:00:21.040 --> 00:00:24.310
+Cela indique à Java que
+ceci est une définition de classe.
+
+00:00:24.310 --> 00:00:26.400
+Ensuite, nous avons le
+nom dans une classe.
+
+00:00:26.400 --> 00:00:30.590
+Le nom d'une classe en Java commence avec
+une lettre majuscule et est en camelcase.
+
+00:00:30.590 --> 00:00:34.360
+Il n'y a donc pas d'espaces et
+ça capitalise les mots suivants.
+
+00:00:34.360 --> 00:00:36.800
+Il y a un autre texte ici, mais
+nous verrons cela plus tard.
+
+00:00:36.800 --> 00:00:39.304
+La chose importante est que nous
+avons une accolade d'ouverture et de
+
+00:00:39.304 --> 00:00:42.354
+de fermeture en bas de la définition.
+
+00:00:42.354 --> 00:00:47.130
+Dans cette classe de TextView vous
+avez un tas de variables ici.
+
+00:00:47.130 --> 00:00:51.140
+Chacune représente un champ dans
+un TextView, nous avons donc un champ pour
+
+00:00:51.140 --> 00:00:55.700
+le texte de la TextView et un champ pour
+la couleur du texte de la TextView.
+
+00:00:55.700 --> 00:00:57.850
+Il y a d'autres domaines également,
+mais rappelez-vous,
+
+00:00:57.850 --> 00:00:59.928
+Ceci est une version simplifiée
+de la classe TextView.
+
+00:01:01.000 --> 00:01:04.239
+Vous avez également une variable
+pour stocker une référence au contexte de
+
+00:01:04.239 --> 00:01:05.740
+l'application.
+
+00:01:05.740 --> 00:01:08.750
+Vous pouvez en lire plus dans
+les notes de l'instructeur, mais
+
+00:01:08.750 --> 00:01:13.170
+c'est un moyen d'accéder aux
+informations sur l'application, comme par
+
+00:01:13.170 --> 00:01:16.670
+exemple, vous pouvez accéder à des 
+ressources en utilisant le contexte.
+
+00:01:17.870 --> 00:01:19.990
+Et ce sont les méthodes
+de la TextView.
+
+00:01:19.990 --> 00:01:23.690
+La méthode setText prend
+en entrée une chaîne de texte.
+
+00:01:23.690 --> 00:01:28.840
+Puis met à jour le mText variable globale
+pour utiliser cette nouvelle valeur.
+
+00:01:28.840 --> 00:01:32.480
+De même, le SetTextColor et
+prend en entrée une nouvelle couleur et
+
+00:01:32.480 --> 00:01:36.080
+Il met à jour l'état interne
+d'avoir cette nouvelle valeur de couleur.
+
+00:01:36.080 --> 00:01:38.045
+il y a aussi des méthodes comme getText et
+
+00:01:38.045 --> 00:01:42.920
+GetTextColor, qui renvoient à la chaîne 
+de texte interne, ou la couleur du texte.
+
+00:01:44.080 --> 00:01:48.091
+Vous avez sans doute remarqué
+que ces variables globales ici
+
+00:01:48.091 --> 00:01:49.651
+commencent toutes
+avec la minuscule m.
+
+00:01:49.651 --> 00:01:51.510
+M signifie variable de membre, et
+
+00:01:51.510 --> 00:01:55.330
+ce sont toutes les variables membres
+de cette classe de TextView.
+
+00:01:55.330 --> 00:01:58.580
+La variable de membres est juste
+un autre façon de dire champ ou
+
+00:01:58.580 --> 00:02:00.990
+l'état de la classe TextView.
+
+00:02:00.990 --> 00:02:03.380
+Voici une classe d'ImageView simplifiée.
+
+00:02:03.380 --> 00:02:05.320
+Vous le trouverez dans le fichier
+ImageView.java.
+
+00:02:06.400 --> 00:02:10.580
+Il commence avec la classe publique et
+puis ImageView est le nom de la classe.
+
+00:02:10.580 --> 00:02:13.550
+Et puis nous avons d'ouverture 
+et la clôture des accolades.
+
+00:02:13.550 --> 00:02:15.980
+Cela rend l'état de l'ImageView.
+
+00:02:15.980 --> 00:02:17.730
+Normalement, il aurait
+plus de champs que cela, mais
+
+00:02:17.730 --> 00:02:20.000
+Je veux juste vous montrer un exemple.
+
+00:02:20.000 --> 00:02:25.680
+C'est une variable entière et elle est
+appelée mImageId, m pour variable membre.
+
+00:02:25.680 --> 00:02:28.340
+Cela stocke l'identifiant 
+de ressource pour
+
+00:02:28.340 --> 00:02:31.160
+L'image qui devrait être
+montrée dans cette ImageView.
+
+00:02:31.160 --> 00:02:34.470
+Ici-bas, nous avons le constructeur
+qui est utilisé pour construire
+
+00:02:34.470 --> 00:02:36.390
+un nouvel objet ImageView.
+
+00:02:36.390 --> 00:02:38.730
+Et il prend cette entrée du contexte.
+
+00:02:38.730 --> 00:02:40.809
+Et puis il initialise ces variables.
+
+00:02:42.120 --> 00:02:43.088
+Ensuite, nous avons une méthode.
+
+00:02:43.088 --> 00:02:47.190
+Qui est appelée setImage et prend cette
+entrée, un ID de ressource, pour
+
+00:02:47.190 --> 00:02:50.500
+La nouvelle image qui devrait
+être montrée dans cette ImageView.
+
+00:02:50.500 --> 00:02:53.850
+Dans cette méthode, nous mettons à jour
+la variable interne pour l'image ID.
+
+00:02:55.100 --> 00:02:57.691
+Encore une fois, nous avons créé la
+TextView simplifié et
+
+00:02:57.691 --> 00:03:01.880
+la classes de ImageView pour vous aider à
+comprendre le concept de classes.
+
+00:03:01.880 --> 00:03:05.200
+Maintenant regardons la version réelle
+de ces classes à l'intérieur
+
+00:03:05.200 --> 00:03:06.110
+du cadre Android.
+
+00:03:07.950 --> 00:03:09.240
+Pour voir le code pour
+
+00:03:09.240 --> 00:03:13.240
+les classes Java dans Android, vous pouvez
+installer cette extension Chrome.
+
+00:03:13.240 --> 00:03:14.960
+Si vous n'utilisez 
+pas le navigateur Chrome,
+
+00:03:14.960 --> 00:03:17.989
+Vous pouvez voir l'instructeur
+pour savoir comment accéder aux fichiers.
+
+00:03:19.020 --> 00:03:19.520
+Ok.
+
+00:03:21.840 --> 00:03:26.081
+Une fois installée,
+quand je cherche, quelque chose comme
+
+00:03:26.081 --> 00:03:30.260
+TextView Android, et je vais regarder
+la doc de référence pour cette classe,
+
+00:03:30.260 --> 00:03:34.830
+Alors il va y avoir ce
+lien ici qui dit voir la source.
+
+00:03:34.830 --> 00:03:36.730
+Ceci est vraiment 
+pour les développeurs avancés.
+
+00:03:36.730 --> 00:03:41.420
+Si vous êtes curieux de connaître le code 
+utilisé pour créer cette TextView.
+
+00:03:41.420 --> 00:03:45.850
+C'est le fichier TextView.java
+défini par quelqu'un de l'équipe Android.
+
+00:03:45.850 --> 00:03:47.970
+Comme vous pouvez le voir,
+il est vraiment long et complexe.
+
+00:03:47.970 --> 00:03:49.739
+Mais il a encore les principales
+parties d'une classe.
+
+00:03:51.010 --> 00:03:55.330
+Il commence par classe publique puis
+TextView, le nom de la classe, et
+
+00:03:55.330 --> 00:03:57.280
+Alors ceci est 
+l'accolade d'ouverture et de
+
+00:03:57.280 --> 00:03:59.500
+fermeture tout au fond ici.
+
+00:04:00.930 --> 00:04:04.340
+Au sommet de la classe,
+nous voyons un tas de champs ici, et
+
+00:04:04.340 --> 00:04:07.200
+ce qui rend l'état de la classe.
+
+00:04:07.200 --> 00:04:13.470
+On voit que TextColor est un champ,
+on voit que le texte est un champ.
+
+00:04:13.470 --> 00:04:17.560
+Et voici le constructeur pour TextView
+qui prend cette entrée en contexte.
+
+00:04:17.560 --> 00:04:22.560
+En tapant Cmd + F, ou Ctrl + F sur
+Windows, alors je peux essayer de chercher
+
+00:04:22.560 --> 00:04:24.050
+SetText.
+
+00:04:24.050 --> 00:04:26.250
+Et voici la méthode de setText.
+
+00:04:26.250 --> 00:04:29.835
+Cette méthode va mettre
+la valeur de chaîne de la TextView.
+
+00:04:29.835 --> 00:04:31.205
+Et si je cherche GetText
+
+00:04:31.205 --> 00:04:35.605
+Je vois aussi cette méthode qui renvoie
+le texte que le TextView affiche.
+
+00:04:35.605 --> 00:04:38.275
+Vous avez cette idée et vous pouvez
+naviguer dans votre propre idée.
+
+00:04:39.545 --> 00:04:42.245
+Si je cherche
+la page de documentation de ImageView,
+
+00:04:42.245 --> 00:04:46.750
+je clique sur Voir la source pour voir
+tout le code pour la classe ImageView.
+
+00:04:46.750 --> 00:04:49.370
+Le fichier dit des appels 
+publics ImageView, et
+
+00:04:49.370 --> 00:04:52.460
+alors ce sont les domaines qui font
+jusqu'à l'état de l'ImageView,
+
+00:04:52.460 --> 00:04:55.810
+Et puis il ya un tas de méthodes
+à la fin du fichier.
+
+00:04:55.810 --> 00:04:57.810
+Le code de ce fichier est assez complexe
+ainsi,
+
+00:04:57.810 --> 00:05:00.360
+il a également des
+milliers de lignes de code.
+
+00:05:00.360 --> 00:05:03.060
+La meilleure partie de la
+programmation orientée objet,
+
+00:05:03.060 --> 00:05:06.500
+Cependant,vous ne devez pas
+connaître tous ces détails.
+
+00:05:06.500 --> 00:05:10.200
+En tant que développeur, on peut
+TextView et ImageView dans votre appli
+
+00:05:10.200 --> 00:05:13.630
+Sans connaître tous les détails de ce qui
+se passe à l'intérieur de celles-ci.
+

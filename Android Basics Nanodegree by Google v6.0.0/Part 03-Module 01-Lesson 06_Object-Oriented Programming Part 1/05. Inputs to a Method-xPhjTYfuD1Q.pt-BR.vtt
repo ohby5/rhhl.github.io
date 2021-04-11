@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.615 --> 00:00:01.815
+Vamos fazer a primeira tarefa.
+
+00:00:02.221 --> 00:00:05.593
+Renomear o parâmetro de entrada
+<i>number</i> para outro diferente.
+
+00:00:06.750 --> 00:00:09.255
+Este é o primeiro parâmetro de entrada, <i>int number</i>,
+
+00:00:09.600 --> 00:00:11.950
+e apenas preciso mudar o nome da variável.
+
+00:00:12.652 --> 00:00:16.763
+Vou mudar para, por exemplo,
+<i>numberOfCoffees</i>.
+
+00:00:17.033 --> 00:00:18.295
+Pode ser o&nbsp;nome que você quiser.
+
+00:00:19.304 --> 00:00:22.627
+Vejo imediatamente um aviso e um erro.
+
+00:00:23.310 --> 00:00:26.756
+O aviso diz que o parâmetro
+<i>numberOfCoffees</i> nunca é usado,
+
+00:00:27.046 --> 00:00:30.953
+porque eu não uso esta variável neste método.
+
+00:00:31.550 --> 00:00:34.547
+Então, vejo um erro que diz não ser
+possível resolver o símbolo <i>number</i>.
+
+00:00:35.083 --> 00:00:36.572
+Não há uma variável chamada <i>number</i>.
+
+00:00:36.929 --> 00:00:40.270
+Não há nenhuma variável local
+ou global chamada <i>number</i>,
+
+00:00:40.566 --> 00:00:42.264
+E, também não é um parâmetro de entrada.
+
+00:00:42.781 --> 00:00:46.264
+Em vez disso, preciso mudar isso
+para chamar-se <i>numberOfCoffees</i>.
+
+00:00:46.892 --> 00:00:48.252
+Como vê, isso concertou o erro.
+
+00:00:48.584 --> 00:00:49.876
+Vou executar em meu dispositivo.
+
+00:00:50.726 --> 00:00:53.480
+Fica desse jeito, o seletor
+de quantidade funciona como esperado.
+
+00:00:54.086 --> 00:00:55.969
+Não deve haver mudança visível para o usuário,
+
+00:00:56.184 --> 00:00:59.530
+pois apenas mudamos o nome
+de um parâmetro de entrada.
+
+00:01:00.658 --> 00:01:03.550
+Também não precisamos mudar
+como o método está sendo invocado.
+
+00:01:04.233 --> 00:01:07.452
+Ainda podemos dizer <i>displayQuantity</i>,
+e depois passar o que quisermos.
+
+00:01:08.160 --> 00:01:11.532
+Para quem invoca, não importa
+o nome desse parâmetro de entrada.
+
+00:01:12.800 --> 00:01:16.073
+A segunda tarefa é mudar
+o tipo de dado do parâmetro de entrada
+
+00:01:16.289 --> 00:01:17.415
+de <i>int</i> para <i>string</i>.
+
+00:01:19.126 --> 00:01:20.633
+No método <i>displayQuantity</i>,
+
+00:01:20.849 --> 00:01:24.295
+vou mudar a entrada para que,
+em vez de um tipo de dado inteiro,
+
+00:01:24.473 --> 00:01:28.092
+ele espere um tipo de dado
+de texto, como esse.
+
+00:01:28.824 --> 00:01:30.996
+E agora tem um par de erros no app.
+
+00:01:32.141 --> 00:01:36.440
+Ao rolar para cima, vejo uma linha
+vermelha no método de incremento
+
+00:01:36.603 --> 00:01:37.729
+e no método de decremento.
+
+00:01:38.055 --> 00:01:39.175
+A mensagem de erro diz:
+
+00:01:39.340 --> 00:01:44.246
+"a string <i>displayQuantity</i> em MainActivity não pode ser atribuída a algo que é <i>int</i>".
+
+00:01:45.747 --> 00:01:49.870
+O que está dizendo é que não podemos mais passar a variável <i>quantity</i> para o método
+
+00:01:50.209 --> 00:01:53.735
+porque isso é um inteiro,
+e o método espera uma <i>string</i>.
+
+00:01:54.738 --> 00:01:57.932
+Essa incompatibilidade no tipo de dados
+está causando um erro.
+
+00:01:58.215 --> 00:02:00.135
+E o app não vai executar no dispositivo.
+
+00:02:00.849 --> 00:02:02.141
+É um erro do tempo de compilação.
+
+00:02:03.076 --> 00:02:04.547
+Há algumas maneiras de corrigir isso.
+
+00:02:05.255 --> 00:02:08.209
+Ou mudando o que está sendo
+passado para o método
+
+00:02:08.490 --> 00:02:10.061
+para isto realmente ser uma <i>string</i>,
+
+00:02:10.633 --> 00:02:14.184
+ou colocando 100 entre aspas,
+de modo que ele seja uma <i>string</i>,
+
+00:02:14.467 --> 00:02:16.430
+o que iria coincidir com o tipo de entrada aqui.
+
+00:02:17.224 --> 00:02:20.221
+Mas o que realmente queremos,
+é que <i>quantity</i> seja um número inteiro,
+
+00:02:20.240 --> 00:02:23.772
+para podermos fazer cálculos com ele,
+e incrementá-lo ou decrementá-lo em um.
+
+00:02:24.220 --> 00:02:26.424
+Então eu vou deixar isso como "quantidade",
+
+00:02:27.858 --> 00:02:30.264
+e depois isto deve mudar-se para "inteiro".
+
+00:02:31.593 --> 00:02:32.793
+E o app deve funcionar de novo.
+
+00:02:34.135 --> 00:02:35.310
+Legal, até agora,
+
+00:02:35.550 --> 00:02:38.855
+vimos um exemplo de método
+com um parâmetro de entrada.
+
+00:02:39.120 --> 00:02:42.775
+Mas, e os métodos com zero
+parâmetros de entrada
+
+00:02:43.292 --> 00:02:45.193
+ou os de dois parâmetros
+de entrada, ou mais?
+

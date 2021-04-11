@@ -1,0 +1,444 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:00.995
+Define un método
+
+00:00:00.995 --> 00:00:04.440
+Para saber por qué la opción C era la
+mejor en el cuestionario anterior,
+
+00:00:04.440 --> 00:00:08.200
+revisemos las reglas sintácticas
+en Java para definir un método.
+
+00:00:08.200 --> 00:00:10.820
+Esto también se le conoce como
+la signatura del método.
+
+00:00:11.810 --> 00:00:13.540
+Esta es la signatura para el método
+
+00:00:13.540 --> 00:00:16.239
+<i>calculatePrice</i> que vimos antes.
+
+00:00:16.239 --> 00:00:20.100
+Puede que se pregunte por qué 
+las palabras está en cierto orden.
+
+00:00:20.100 --> 00:00:24.380
+Es porque siguen un formato específico,
+que se parece al siguiente.
+
+00:00:24.380 --> 00:00:27.050
+Sé que esto luce abrumador,
+pero no se preocupe.
+
+00:00:27.050 --> 00:00:29.040
+Veremos todos, pero uno a la vez.
+
+00:00:30.550 --> 00:00:34.150
+La primera parte de esta signatura
+de método es la palabra <i>private.</i>
+
+00:00:34.150 --> 00:00:37.020
+Esto se le conoce como
+modificador de acceso en JAVA.
+
+00:00:37.020 --> 00:00:41.400
+el cual determina quien tiene acceso 
+a este método, <i>calculatePrice.</i>
+
+00:00:41.400 --> 00:00:46.290
+Los modificadores de acceso más comunes
+que verá son <i>public</i> o <i>private</i>.
+
+00:00:46.290 --> 00:00:51.010
+Este método está marcado como <i>private</i>,
+lo que signitica que <i>calculatePrice</i>
+
+00:00:51.010 --> 00:00:55.430
+solo puede ser llamado dentro de
+otros métodos de la <i>main activity</i>.
+
+00:00:55.430 --> 00:00:57.930
+Fuera de la actividad <i>main</i>,
+como en otra actividad,
+
+00:00:57.930 --> 00:01:00.750
+no podrá llamar este método.
+
+00:01:00.750 --> 00:01:02.760
+Es <i>private</i> para la actividad <i>main</i>.
+
+00:01:02.760 --> 00:01:06.430
+Por otro lado, si marca 
+el método como <i>public</i>,
+
+00:01:06.430 --> 00:01:09.100
+entonces cualquier podría llamarlo,
+
+00:01:09.100 --> 00:01:12.560
+ya sea dentro de la actividad <i>main</i>,
+o bien en otras actividades.
+
+00:01:13.520 --> 00:01:15.120
+Es como esta comparación.
+
+00:01:15.120 --> 00:01:18.530
+Si es una celebridad pública,
+todo mundo sabe de usted.
+
+00:01:18.530 --> 00:01:20.910
+Si es privado y vive en su casa
+todo el tiempo,
+
+00:01:20.910 --> 00:01:24.420
+entonces solo algunas personas lo conocen.
+
+00:01:24.420 --> 00:01:27.930
+Para el método <i>calculate price</i>,
+vamos a mantenerlo privado,
+
+00:01:27.930 --> 00:01:30.440
+para que sólo sea usado dentro
+de la actividad <i>main</i>.
+
+00:01:30.440 --> 00:01:33.680
+Enseguida, está "int" el cual
+es el tipo de dato devuelto.
+
+00:01:33.680 --> 00:01:35.440
+¿Recuerda nuestro diagrama anterior?
+
+00:01:35.440 --> 00:01:38.520
+¿Donde dijimos que al invocar un
+método, usted pasa sus entradas
+
+00:01:38.520 --> 00:01:40.110
+y obtiene un resultado de vuelta?
+
+00:01:40.110 --> 00:01:44.140
+El tipo de dato devuelto es el tipo
+que se retorna en la salida.
+
+00:01:44.140 --> 00:01:47.400
+Los tipos de datos que hemos 
+aprendido hasta el momento
+
+00:01:47.400 --> 00:01:49.730
+son <i>String</i> e <i>Int</i> desde la lección pasada.
+
+00:01:49.730 --> 00:01:52.410
+Esto también puede devolver un 
+tipo de dato <i>object</i>.
+
+00:01:52.410 --> 00:01:55.059
+Aprenderemos más sobre 
+<i>objects</i> después en esta lección.
+
+00:01:55.700 --> 00:01:58.150
+En nuestro caso, el método <i>calculatePrice</i>
+
+00:01:58.150 --> 00:02:02.030
+está devolviendo el precio total de la
+orden, el cual es un entero <i>(int)</i>.
+
+00:02:02.030 --> 00:02:06.540
+En una <i>app</i> de medios sociales, si tuviera
+un método que me diera cuántos amigos
+
+00:02:06.540 --> 00:02:11.130
+tengo en Facebook, podría devolver 
+un entero, que es el número de amigos.
+
+00:02:11.130 --> 00:02:15.390
+Enseguida tenemos el nombre del método,
+que es <i>calculatePrice</i> en este caso.
+
+00:02:15.390 --> 00:02:18.740
+De la misma manera que nos referimos 
+a variables por su nombre,
+
+00:02:18.740 --> 00:02:23.790
+podemos referenciar métodos por su nombre
+para ejecutar sus instrucciones.
+
+00:02:23.790 --> 00:02:27.680
+En la misma documentación sobre la 
+definición de un método, si vamos al final
+
+00:02:27.680 --> 00:02:30.890
+veremos una sección sobre 
+nomenclatura de métodos.
+
+00:02:30.890 --> 00:02:34.450
+Puede leer despues al respecto con más
+detalle, pero básicamente dice que
+
+00:02:34.450 --> 00:02:37.550
+los nombres de método deben iniciar
+con un verbo como <i>run</i> o <i>get</i>,
+
+00:02:37.550 --> 00:02:39.030
+<i>compare</i> o <i>set.</i>
+
+00:02:39.030 --> 00:02:40.880
+Comienza con una letra en minúscula
+
+00:02:40.880 --> 00:02:43.360
+y luego usar <i>Camelcase</i> si hay 
+palabras múltiples.
+
+00:02:43.360 --> 00:02:46.660
+Tras el nombre de método tenemos
+la lista de entradas
+
+00:02:46.660 --> 00:02:50.190
+denotada dentro de los paréntesis.
+
+00:02:50.190 --> 00:02:52.670
+Puede tener tantas entradas como desee.
+
+00:02:52.670 --> 00:02:57.010
+Si no desea ninguna entrada,
+puede usar un par de paréntesis vacíos.
+
+00:02:57.010 --> 00:02:59.150
+Si tiene una entrada,
+se verá como esto.
+
+00:02:59.150 --> 00:03:00.730
+Si tiene múltiples entradas,
+
+00:03:00.730 --> 00:03:04.120
+puede separarlos con comas
+tras cada nueva entrada.
+
+00:03:04.120 --> 00:03:07.110
+Veamos el caso donde solo
+tenemos una entrada,
+
+00:03:07.110 --> 00:03:10.070
+la cual también es conocida
+como parámetro de entrada.
+
+00:03:10.070 --> 00:03:13.740
+Definimos un parámetro de entrada
+especificando su tipo de dato
+
+00:03:13.740 --> 00:03:16.170
+y el nombre de variable que le demos.
+
+00:03:16.170 --> 00:03:18.910
+Desde el diagrama de entradas y salida,
+
+00:03:18.910 --> 00:03:22.370
+esta va a ser la primera entrada
+para el método.
+
+00:03:23.560 --> 00:03:28.030
+Dentro del método, se puede
+referir a la variable <i>quantity.</i>
+
+00:03:28.030 --> 00:03:30.190
+Y es como cualquier otra variable,
+
+00:03:30.190 --> 00:03:32.930
+donde ya se tiene un valor asignado.
+
+00:03:32.930 --> 00:03:36.990
+El valor viene de haber llamado al método
+
+00:03:36.990 --> 00:03:38.860
+y haber pasado esa entrada.
+
+00:03:40.030 --> 00:03:43.850
+Si deseamos cambiar esta signatura de
+método para añadir un segundo parámetro,
+
+00:03:43.850 --> 00:03:47.060
+tenemos que especificar el tipo de dato 
+y el nombre de variable
+
+00:03:47.060 --> 00:03:48.980
+para ese segunda parámetro de entrada.
+
+00:03:48.980 --> 00:03:52.200
+Dentro de este método podemos
+referirnos a la cantidad
+
+00:03:52.200 --> 00:03:55.940
+o el precio de una de las variables
+como las variables regulares.
+
+00:03:55.940 --> 00:03:59.650
+Cuando invoca este método,
+debe recordar pasar el número correcto
+
+00:03:59.650 --> 00:04:02.790
+de entradas que el método
+está esperando,
+
+00:04:02.790 --> 00:04:06.740
+los cuales deben ser del tipo de dato
+correcto y en el orden correcto.
+
+00:04:06.740 --> 00:04:08.460
+No puede alterar el orden de estos.
+
+00:04:08.460 --> 00:04:11.650
+De otro modo, el método los va a
+interpretar incorrectamente.
+
+00:04:11.650 --> 00:04:14.780
+Luego de listar sus entradas,
+agregue un paréntesis cerrado
+
+00:04:14.780 --> 00:04:16.980
+y luego una llave abierta.
+
+00:04:16.980 --> 00:04:20.460
+Esto inicia la lista de todas
+las instrucciones en su método.
+
+00:04:20.460 --> 00:04:21.880
+Después de todo,
+
+00:04:21.880 --> 00:04:25.270
+agregue una llave cerrada,
+para marcar el fin del método.
+
+00:04:25.270 --> 00:04:27.060
+Regresando a nuestra documentación,
+
+00:04:27.060 --> 00:04:30.470
+ahora esta declaración de método 
+tendrá mucho más sentido.
+
+00:04:30.470 --> 00:04:32.760
+Primero tenemos el modificador de acceso,
+
+00:04:32.760 --> 00:04:35.120
+luego tenemos el tipo de datos devuelto.
+
+00:04:35.120 --> 00:04:39.100
+El nombre de método, seguido
+por la lista de todas las entradas.
+
+00:04:39.100 --> 00:04:42.760
+En este caso hay cuatro 
+distintos parámetros de entrada.
+
+00:04:42.760 --> 00:04:46.260
+Cada uno tiene un tipo de dato 
+y un nombre de variable.
+
+00:04:46.260 --> 00:04:48.470
+Y entonces tenemos una llave abierta.
+
+00:04:48.470 --> 00:04:51.000
+El listado de todas 
+las instrucciones en el interior.
+
+00:04:51.000 --> 00:04:52.450
+Y luego una llave cerrada.
+
+00:04:52.950 --> 00:04:54.980
+Esta es la declaración de un método.
+
+00:04:54.980 --> 00:04:57.760
+En este cuestionario tendrá 
+la oportunidad de practicar
+
+00:04:57.760 --> 00:05:00.950
+identificando las distintas partes
+de la declaración de un método .
+
+00:05:00.950 --> 00:05:04.120
+Vamos a darle un poco de código
+en sus notas de instructor .
+
+00:05:04.120 --> 00:05:08.000
+El código contiene muchos métodos
+que podrían aparecer en cualquier app.
+
+00:05:08.000 --> 00:05:11.010
+En cada caso, ¿puede decirme cuál
+es el nombre del método?
+
+00:05:11.010 --> 00:05:12.800
+¿La lista de parámetros de entrada?
+
+00:05:12.800 --> 00:05:14.300
+Y el tipo de dato devuelto.
+
+00:05:14.790 --> 00:05:16.420
+Hagamos juntos la muestra.
+
+00:05:17.520 --> 00:05:19.710
+Aquí hay un método de ejemplo.
+
+00:05:19.710 --> 00:05:23.520
+La meta es crear un saludo personalizado
+basado en el nombre dado.
+
+00:05:23.520 --> 00:05:27.270
+El valor devuelto va a ser el saludo
+en la forma de un texto.
+
+00:05:27.270 --> 00:05:29.580
+Por ahora ignoremos el comentario.
+
+00:05:29.580 --> 00:05:32.650
+Primero tenemos el nombre del método,
+el cual está en <i>camelCase,</i>
+
+00:05:32.650 --> 00:05:35.130
+y dice <i>createCustomGreeting</i>.
+
+00:05:35.130 --> 00:05:37.650
+Enseguida tenemos la lista de entradas.
+
+00:05:37.650 --> 00:05:39.560
+Este es el primer parámetro de entrada.
+
+00:05:39.560 --> 00:05:42.680
+El tipo de dato es <i>String</i> y el
+nombre de la variable es <i>firstName</i>.
+
+00:05:43.310 --> 00:05:45.570
+Luego tenemos el segundo 
+parámetro de entrada.
+
+00:05:45.570 --> 00:05:48.390
+Este es el tipo de dato, y este
+el nombre de la variable .
+
+00:05:48.390 --> 00:05:51.580
+Las dos entradas están separadas
+por una sola coma,
+
+00:05:51.580 --> 00:05:55.290
+y encerrados entre paréntesis.
+
+00:05:55.290 --> 00:05:57.350
+Luego tenemos la salida aquí.
+
+00:05:57.350 --> 00:06:00.295
+El tipo de dato del 
+valor devuelto es <i>String</i>,
+
+00:06:00.295 --> 00:06:03.845
+Porque deseamos devolver un saludo,
+lo cual es una cadena de texto,
+
+00:06:04.535 --> 00:06:07.955
+Así se ve cuando 
+lo llenamos en la tabla.
+
+00:06:07.955 --> 00:06:11.365
+Haga lo mismo y llene los espacios
+en blanco de los 3 métodos restantes.
+

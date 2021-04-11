@@ -1,0 +1,188 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.700 --> 00:00:02.540
+Bây giờ bạn đã biết 
+tài nguyên Android là gì,
+
+00:00:02.540 --> 00:00:05.260
+và bạn có thể lưu trữ chúng 
+trong các thư mục khác nhau.
+
+00:00:05.260 --> 00:00:08.840
+Hãy trao đổi về cách bạn có thể truy cập 
+thực sự vào tài nguyên bạn lưu trữ trong
+
+00:00:08.840 --> 00:00:10.580
+các thư mục đó.
+
+00:00:10.580 --> 00:00:15.050
+Khi ứng dụng của bạn được biên dịch, 
+có một công cụ trong Android tên là AAPT.
+
+00:00:15.050 --> 00:00:17.610
+Và công cụ đó tạo ra lớp R.
+
+00:00:17.610 --> 00:00:21.840
+Đây đơn giản chỉ là một tệp R.Java, và 
+tôi sẽ chỉ chọn bạn một ví dụ tiếp theo.
+
+00:00:21.840 --> 00:00:26.580
+Tệp này chứa ID tài nguyên cho tất cả 
+các tài nguyên trong thư mục S, nên
+
+00:00:26.580 --> 00:00:30.790
+với những tài nguyên bạn đã thêm vào, 
+sẽ có một ID để tham chiếu đến nó.
+
+00:00:30.790 --> 00:00:35.000
+ID này có định dạng 
+dựa trên loại tài nguyên, do đó với
+
+00:00:35.000 --> 00:00:40.640
+tất cả tài nguyên Java là đồ hoạ 
+thì sẽ định dạng theo R.drawable.
+
+00:00:40.640 --> 00:00:43.805
+Đối với tất cả tài nguyên chuỗi 
+thì sẽ theo định dạng
+
+00:00:43.805 --> 00:00:47.850
+tên R.string.resource mà 
+là xin chào trong trường hợp này.
+
+00:00:49.190 --> 00:00:52.230
+Lưu ý rằng có hai cách 
+để bạn truy nhập tài nguyên.
+
+00:00:52.230 --> 00:00:58.720
+Trong mã lệnh Java thì ID theo định dạng 
+R.resource type.resource có tên là In XML
+
+00:00:58.720 --> 00:01:03.820
+mặc dù, ID tuân theo ký hiệu, do đó 
+ID sẽ là @ và sau đó là kiểu tài nguyên
+
+00:01:03.820 --> 00:01:08.050
+có thể là chuỗi dấu gạch chéo, và 
+sau đó là tên tài nguyên tức xin chào.
+
+00:01:09.320 --> 00:01:12.730
+Sau đây là ví dụ nữa về kiểu tài nguyên 
+khác nhau và cách truy nhập vào chúng.
+
+00:01:13.740 --> 00:01:16.430
+Chỉ có một vài 
+kiểu tài nguyên phổ biến,
+
+00:01:16.430 --> 00:01:19.660
+nhưng còn rất nhiều kiểu khác nữa.
+
+00:01:19.660 --> 00:01:21.590
+Bạn luôn bắt đầu với chữ R, dấu chấm,
+
+00:01:21.590 --> 00:01:25.180
+kiểu tài nguyên, dấu chấm, tên tài nguyên.
+
+00:01:25.180 --> 00:01:27.350
+Tên tài nguyên là bất kể tên nào bạn gán.
+
+00:01:27.350 --> 00:01:31.610
+Và sau đó trong XML bạn có @ và sau đó
+kiểu tài nguyên, dấu gạch chéo,
+
+00:01:31.610 --> 00:01:32.790
+và sau đó là tên của tài nguyên.
+
+00:01:34.080 --> 00:01:36.640
+Hãy dành một chút thời gian để tìm 
+tất cả ID tài nguyên trong
+
+00:01:36.640 --> 00:01:38.620
+tệp Java hoạt động chính.
+
+00:01:38.620 --> 00:01:41.160
+Tôi sẽ mở lệnh 
+tìm kiếm trong Android Studio.
+
+00:01:41.160 --> 00:01:45.640
+Tôi sẽ sử dụng phím Cmd+F, hoặc 
+bạn dùng phím Ctrl+F nếu sử dụng Windows.
+
+00:01:46.970 --> 00:01:48.460
+Trường tìm kiếm bật lên ở đây.
+
+00:01:48.460 --> 00:01:52.910
+Tôi sẽ tìm chữ cái R 
+viết hoa chấm, và
+
+00:01:52.910 --> 00:01:58.430
+sau đó nhấn vào các trường hợp phù hợp, do 
+đó chỉ thấy các trường hợp chữ R viết hoa.
+
+00:01:58.430 --> 00:02:03.650
+ID đầu tiên tìm thấy là 
+tham chiếu r.layout.activity_main.
+
+00:02:03.650 --> 00:02:06.420
+Điều này rất thú vị bởi vì chúng ta 
+đang tham chiếu đến tệp layout
+
+00:02:06.420 --> 00:02:07.710
+hoạt động chính.
+
+00:02:07.710 --> 00:02:12.170
+Đây thực sự là cách mà hoạt động chính 
+tải tệp XML.
+
+00:02:12.170 --> 00:02:13.390
+Như vậy có tuyệt không chứ?
+
+00:02:13.390 --> 00:02:14.639
+Hãy xem tham chiếu tiếp theo.
+
+00:02:15.640 --> 00:02:17.440
+Được.
+Trong phương pháp displayQuantity,
+
+00:02:17.440 --> 00:02:22.360
+Chúng ta có tham chiếu đến
+R.id.quantity_text_view.
+
+00:02:22.360 --> 00:02:25.270
+Vậy ID này tham chiếu đến ViewId.
+
+00:02:25.270 --> 00:02:29.120
+Cụ thể là, TextView hiển thị số lượng.
+
+00:02:29.120 --> 00:02:31.660
+Hi vọng rằng một số câu đố này 
+sẽ liên quan đến nhau.
+
+00:02:31.660 --> 00:02:34.220
+Thông qua việc tham chiếu tới 
+dạng xem này trong mã lệnh Java.
+
+00:02:34.220 --> 00:02:38.550
+Ta có thể cập nhật dạng xem khi ứng dụng 
+đang chạy để hiển thị numberOfCoffees.
+
+00:02:38.550 --> 00:02:40.720
+Hãy xem tệp xuất hiện tiếp theo.
+
+00:02:40.720 --> 00:02:43.520
+OK, trong phương pháp displayMessage
+
+00:02:43.520 --> 00:02:47.470
+chúng ta thấy một tham chiếu tới 
+R.id.order_summary_text_view.
+
+00:02:47.470 --> 00:02:51.530
+Ở đây giống như chúng ta đang cố gắng 
+tham chiếu đến dạng xem văn bản hiển thị
+
+00:02:51.530 --> 00:02:54.210
+tóm tắt đặt hàng, do đó 
+chúng ta có thể cập nhật thông tin này.
+

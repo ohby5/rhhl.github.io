@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.790 --> 00:00:04.250
+Chúng ta cùng xem câu lệnh đầu tiên,
+trong đó TextView = new TextView, và
+
+00:00:04.250 --> 00:00:07.861
+sau đó bối cảnh là một tham số 
+đầu vào của hàm tạo.
+
+00:00:07.861 --> 00:00:11.839
+Vấn đề của dòng mã lệnh này là 
+chúng ta đang tạo một đối tượng mới nhưng
+
+00:00:11.839 --> 00:00:14.540
+không lưu trữ đối tượng này 
+chính xác trong một biến.
+
+00:00:15.590 --> 00:00:18.560
+Chúng ta nói rằng biến
+phải có kiểu dữ liệu TextView nhưng
+
+00:00:18.560 --> 00:00:21.570
+chúng ta quên đặt tên biến.
+
+00:00:21.570 --> 00:00:23.910
+Vì thế lệnh đúng phải 
+nhìn giống như thế này.
+
+00:00:23.910 --> 00:00:28.120
+TextView theo sau bởi tên biến
+và sau đó = TextView mới.
+
+00:00:29.130 --> 00:00:31.160
+Bạn có thể đặt tên biến tùy ý nhưng
+
+00:00:31.160 --> 00:00:34.150
+ở đây chúng ta chọn sử dụng textView 
+với chữ t viết thường.
+
+00:00:35.420 --> 00:00:38.310
+Như vậy trong trường hợp này, 
+lỗi sai là không đặt tên biến.
+
+00:00:38.310 --> 00:00:39.380
+Hãy xem câu tiếp theo.
+
+00:00:39.380 --> 00:00:43.350
+Trong đó, image view img = ImageView mới.
+
+00:00:43.350 --> 00:00:47.865
+Vấn đề ở đây là đây không phải
+kiểu dữ liệu đối tượng hợp lệ.
+
+00:00:47.865 --> 00:00:52.320
+Android xác định một lớp có tên ImageView 
+với chữ I viết hoa và chữ V viết hoa
+
+00:00:52.320 --> 00:00:54.600
+và ghép với nhau thành một từ.
+
+00:00:54.600 --> 00:00:56.780
+Một tên lớp hợp lệ
+không chứa dấu cách.
+
+00:00:57.780 --> 00:00:59.050
+Tên biến số nhìn có vẻ ổn,
+
+00:00:59.050 --> 00:01:01.740
+và tạo dạng xem hình ảnh
+nhìn cũng không có vấn đề gì.
+
+00:01:01.740 --> 00:01:04.919
+Vậy lỗi duy nhất là
+tên lớp không hợp lệ.
+
+00:01:04.919 --> 00:01:07.790
+Trong câu lệnh thứ ba, chúng ta thử 
+tạo một nút bật tắt mới.
+
+00:01:07.790 --> 00:01:11.640
+ToggleButton button = create ToggleButton.
+
+00:01:11.640 --> 00:01:13.890
+Ta áp dụng lớp ToggleButton ở đây,
+
+00:01:13.890 --> 00:01:18.040
+nên ta cần sử dụng từ khóa Java new, 
+chứ không phải create.
+
+00:01:18.040 --> 00:01:19.020
+Và đây là lệnh đúng.
+
+00:01:19.020 --> 00:01:22.145
+ToggleButton button = new ToggleButton.
+
+00:01:22.145 --> 00:01:25.910
+Vấn đề ở đây là không 
+sử dụng từ khóa Java mới.
+
+00:01:25.910 --> 00:01:29.800
+New là từ khóa chỉ ra rằng 
+chúng ta cố tạo một đối tượng mới.
+
+00:01:29.800 --> 00:01:32.912
+Trong câu lệnh thứ tư, chúng ta tạo
+cửa sổ thông báo (toast) mới.
+
+00:01:32.912 --> 00:01:35.920
+Bạn có thể tìm trên Google để
+biết cách tạo toast mới
+
+00:01:35.920 --> 00:01:37.520
+và sau đó so sánh với lệnh ở đây.
+
+00:01:37.520 --> 00:01:40.700
+Vấn đề ở đây là toast cần
+chữ cái T viết hoa,
+
+00:01:40.700 --> 00:01:43.320
+bởi vì đây là tên lớp của Toast.
+
+00:01:43.320 --> 00:01:46.580
+Đây dùng phương pháp trả lại đối tượng
+như chúng ta đã nói trước đây.
+
+00:01:46.580 --> 00:01:50.240
+Câu lệnh tạo đối tượng toast mới
+và lưu trữ đối tượng trong biến số này.
+
+00:01:50.240 --> 00:01:52.930
+Như vậy lỗi sai ở đây chỉ là 
+tên lớp không đúng.
+
+00:01:52.930 --> 00:01:56.410
+Bây giờ chúng ta đã biết cách tạo 
+đối tượng, ta sẽ sử dụng chúng thế nào?
+

@@ -1,0 +1,478 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.174 --> 00:00:03.230
+Acabamos de llamar a un método
+y pasarle entradas.
+
+00:00:03.231 --> 00:00:04.260
+Oh espera.
+
+00:00:04.260 --> 00:00:08.010
+¿Te refieres a haber pasado <i>quantity</i>,
+al método de <i>calculatePrice</i>?
+
+00:00:08.010 --> 00:00:09.080
+Exactamente.
+
+00:00:09.080 --> 00:00:11.424
+Y ahora queremos obtener
+un valor de retorno.
+
+00:00:11.424 --> 00:00:13.099
+Me encantan los valores de retorno.
+
+00:00:13.099 --> 00:00:15.134
+¿Qué va a ser? Creo que será...
+¿un precio?
+
+00:00:15.134 --> 00:00:16.820
+Porque es el método <i>calculatePrice</i>.
+
+00:00:16.820 --> 00:00:19.750
+Sí, el precio total de la orden
+será el valor de retorno.
+
+00:00:19.750 --> 00:00:21.210
+Está bien, ¡hagamos eso!
+
+00:00:21.211 --> 00:00:22.218
+Está bien.
+
+00:00:22.868 --> 00:00:24.027
+¿Necesitas un tenedor?
+
+00:00:25.820 --> 00:00:26.884
+¿Lo necesito?
+
+00:00:26.892 --> 00:00:31.142
+En Java, la salida de un método
+se conoce como valor de retorno.
+
+00:00:31.143 --> 00:00:33.515
+En ejemplos de código,
+es posible que hayas visto
+
+00:00:33.516 --> 00:00:35.262
+la palabra <i>return</i> dentro del método,
+
+00:00:35.262 --> 00:00:38.930
+o visto la palabra <i>return</i>
+en el comentario al principio de él.
+
+00:00:38.930 --> 00:00:42.170
+Veamos más información sobre
+los valores de retorno para los métodos.
+
+00:00:42.170 --> 00:00:46.900
+Haré una búsqueda en Google
+de <i>java method return value</i>.
+
+00:00:46.900 --> 00:00:48.780
+El primer enlace se ve bien.
+
+00:00:48.780 --> 00:00:51.720
+Este artículo habla de retornar
+un valor desde un método.
+
+00:00:52.710 --> 00:00:55.090
+Dice que un método termina de ejecutarse
+
+00:00:55.090 --> 00:00:57.323
+al completar todas 
+las sentencias del método
+
+00:00:57.324 --> 00:00:59.510
+o todas las líneas del método.
+
+00:00:59.510 --> 00:01:02.248
+O cuando alcanzamos
+la primera sentencia <i>return</i>.
+
+00:01:02.249 --> 00:01:04.319
+Lo que sea que ocurra primero.
+
+00:01:04.319 --> 00:01:08.046
+Un método también terminará
+si hemos lanzado una excepción o un error,
+
+00:01:08.047 --> 00:01:10.410
+pero no cubriremos eso en este curso.
+
+00:01:10.410 --> 00:01:13.190
+Sobre todo nos vamos a centrar
+en los dos primeros casos.
+
+00:01:14.240 --> 00:01:18.230
+En el código, es posible que veas
+algo así como <i>return</i> punto y coma.
+
+00:01:18.230 --> 00:01:20.665
+Eso significa que el método debe terminar
+
+00:01:20.666 --> 00:01:24.150
+y no se ejecutará ninguna línea de código
+que venga después de eso.
+
+00:01:25.440 --> 00:01:28.170
+Alternativamente es posible
+que veas algo como esto,
+
+00:01:28.170 --> 00:01:32.230
+<i>return</i>, luego un valor, punto y coma.
+
+00:01:32.230 --> 00:01:35.280
+Esto retorna un valor de salida
+desde el método.
+
+00:01:36.470 --> 00:01:37.900
+He aquí un ejemplo.
+
+00:01:37.900 --> 00:01:40.930
+Este es el código para el método <i>getArea</i>.
+
+00:01:40.931 --> 00:01:43.420
+Se supone que calcula
+el área de un rectángulo,
+
+00:01:43.420 --> 00:01:46.010
+que se define como ancho por altura.
+
+00:01:46.010 --> 00:01:48.705
+Así que dentro del método
+tenemos la palabra <i>return</i>
+
+00:01:48.706 --> 00:01:51.100
+seguida por el valor de retorno.
+
+00:01:51.100 --> 00:01:54.457
+El valor de retorno es la variable <i>width</i>
+por la variable <i>height</i>.
+
+00:01:54.460 --> 00:01:56.610
+Y esto es igual a un único número.
+
+00:01:56.610 --> 00:02:01.270
+Y ese número es retornado
+como el valor de salida para este método.
+
+00:02:01.270 --> 00:02:02.760
+A diferencia de las entradas,
+
+00:02:02.760 --> 00:02:05.190
+donde pueden figurar
+muchos parámetros de entrada
+
+00:02:05.190 --> 00:02:07.618
+en medio de los paréntesis
+de apertura y de cierre,
+
+00:02:07.619 --> 00:02:10.389
+solo puedes tener
+un único valor de retorno.
+
+00:02:10.389 --> 00:02:13.270
+Y el tipo de dato de ese valor de retorno
+se especifica aquí.
+
+00:02:13.270 --> 00:02:15.957
+Así que podríamos haber
+retornado cualquier otro número,
+
+00:02:15.957 --> 00:02:18.300
+siempre y cuando se trate
+de un número entero.
+
+00:02:18.300 --> 00:02:21.050
+Por ejemplo, no se puede
+retornar un <i>string</i>,
+
+00:02:21.050 --> 00:02:24.170
+ya que no coincide
+con el tipo de dato introducido.
+
+00:02:24.170 --> 00:02:26.612
+Probablemente te des 
+cuenta ahora que para Java
+
+00:02:26.612 --> 00:02:29.401
+tiene un significado especial
+la palabra <i>return</i>.
+
+00:02:29.410 --> 00:02:33.480
+No se puede usar para
+el nombre de variables o métodos.
+
+00:02:33.480 --> 00:02:35.549
+Estas se llaman "palabras clave de Java".
+
+00:02:37.052 --> 00:02:39.978
+Puedo buscar la lista
+de palabras clave de Java.
+
+00:02:41.200 --> 00:02:43.740
+Esta es la lista de todas
+las palabras clave de Java.
+
+00:02:43.740 --> 00:02:46.880
+Notarás que algunas de las palabras
+ya las hemos visto antes,
+
+00:02:46.880 --> 00:02:49.209
+como <i>int</i>, <i>public</i> y <i>private</i>.
+
+00:02:49.209 --> 00:02:50.511
+La lista es bastante corta.
+
+00:02:50.512 --> 00:02:52.906
+Todas ellas tienen 
+un significado especial en Java
+
+00:02:52.906 --> 00:02:54.486
+cuando se las pone en el código.
+
+00:02:54.487 --> 00:02:58.640
+Significa que no puedes usarlas para
+identificadores como nombres de variables,
+
+00:02:58.640 --> 00:03:00.560
+o nombres de métodos en tu aplicación.
+
+00:03:00.560 --> 00:03:04.140
+Y también notarás que <i>return</i>
+es una palabra clave especial de Java.
+
+00:03:04.140 --> 00:03:07.780
+Está reservada para cuando quieras
+retornar un valor de salida de un método.
+
+00:03:09.050 --> 00:03:12.240
+Volviendo a nuestro ejemplo anterior
+de crear un mensaje del tiempo.
+
+00:03:12.240 --> 00:03:14.098
+Podemos crear un <i>string</i>
+
+00:03:14.099 --> 00:03:17.150
+y luego regresarlo diciendo
+<i>return message</i>.
+
+00:03:17.150 --> 00:03:19.760
+El tipo de dato
+de esta variable es <i>string</i>.
+
+00:03:19.760 --> 00:03:22.078
+¿Qué pasaría si añadiera
+una línea de código
+
+00:03:22.079 --> 00:03:25.150
+después de esta sentencia <i>return</i>?
+
+00:03:25.150 --> 00:03:28.390
+Bueno, obtendría un
+error que dice "sentencia inalcanzable",
+
+00:03:28.390 --> 00:03:31.150
+porque el ordenador
+no llegará a estas líneas de código
+
+00:03:31.150 --> 00:03:32.690
+después de la sentencia <i>return</i>.
+
+00:03:32.690 --> 00:03:35.547
+ya que el método terminaría en este punto.
+
+00:03:35.555 --> 00:03:39.575
+Así que elimina todas las líneas de código
+que vienen después de la sentencia <i>return</i>.
+
+00:03:39.578 --> 00:03:43.100
+¿Qué pasa si no necesitas que el método
+retorne ningún valor de salida?
+
+00:03:43.100 --> 00:03:45.390
+Veamos un par de ejemplos
+en el <i>MainActivity</i>
+
+00:03:45.390 --> 00:03:47.295
+de la aplicación <i>JustJava</i>.
+
+00:03:47.295 --> 00:03:52.415
+Los métodos de <i>increment</i> y <i>decrement</i> son
+ejemplos donde no hay valor de retorno.
+
+00:03:52.415 --> 00:03:55.465
+Cuando se llama al método <i>decrement</i>,
+hace todo el trabajo difícil
+
+00:03:55.465 --> 00:03:58.525
+actualizando la interfaz de usuario
+en el método <i>displayQuantity</i>.
+
+00:03:58.525 --> 00:04:01.045
+No hay valor de salida para retornar.
+
+00:04:01.045 --> 00:04:04.185
+Y lo mismo con el método <i>increment</i>,
+todo el trabajo difícil se hace
+
+00:04:04.185 --> 00:04:07.455
+cuando llamas a <i>displayQuantity</i>
+y se actualiza la pantalla.
+
+00:04:07.455 --> 00:04:10.430
+Tal vez te preguntes dónde está
+la sentencia <i>return</i>, entonces.
+
+00:04:10.430 --> 00:04:12.249
+El método terminará de ejecutarse
+
+00:04:12.249 --> 00:04:15.041
+cuando todas las líneas del código
+hayan sido completadas,
+
+00:04:15.042 --> 00:04:17.089
+o cuando se llegue a la sentencia <i>return</i>.
+
+00:04:17.089 --> 00:04:20.952
+Entonces, podría haber añadido
+<i>return</i>, de esta forma.
+
+00:04:21.480 --> 00:04:24.870
+De esa manera, el método terminaría
+tan pronto como llegue a esta línea.
+
+00:04:24.870 --> 00:04:27.200
+Esto me da una
+advertencia en <i>Android Studio</i>.
+
+00:04:27.200 --> 00:04:31.570
+Dice "<i>return</i> es innecesario en
+la última sentencia de un método <i>void</i>".
+
+00:04:31.570 --> 00:04:35.750
+Como no voy a retornar nada,
+puedo eliminar esta línea de aquí.
+
+00:04:35.750 --> 00:04:38.080
+Son menos líneas de código
+y es más fácil de leer,
+
+00:04:38.080 --> 00:04:39.750
+entonces lo prefiero así.
+
+00:04:39.750 --> 00:04:42.003
+Para indicar que no hay
+ningún valor de retorno,
+
+00:04:42.004 --> 00:04:44.392
+es importante decir en la firma del método
+
+00:04:44.393 --> 00:04:46.570
+que el tipo de dato de retorno es <i>void</i>.
+
+00:04:46.570 --> 00:04:48.903
+<i>Void</i> significa
+que no hay valor de retorno.
+
+00:04:48.903 --> 00:04:51.310
+Java tiene una forma
+especial de representar esto,
+
+00:04:51.310 --> 00:04:53.750
+por eso es una palabra clave de Java.
+
+00:04:53.750 --> 00:04:56.184
+Volvamos a mirar la lista
+de palabras clave de Java
+
+00:04:56.185 --> 00:04:58.696
+y efectivamente,
+vemos que <i>void</i> está en esta lista.
+
+00:04:59.310 --> 00:05:01.310
+Entonces, si no tienes
+un valor de retorno,
+
+00:05:01.310 --> 00:05:04.130
+asegúrate de no dejarlo en blanco así.
+
+00:05:04.130 --> 00:05:07.470
+porque de lo contrario
+hay un error de sintaxis de Java.
+
+00:05:07.470 --> 00:05:09.910
+Solo tienes que escribir
+<i>void</i> con una v minúscula.
+
+00:05:10.500 --> 00:05:13.160
+Adelante, y lee este artículo tú mismo.
+
+00:05:13.161 --> 00:05:16.160
+Puedes echarle un vistazo
+a la información que entiendas,
+
+00:05:16.161 --> 00:05:18.672
+o buscar en Google
+más información en línea.
+
+00:05:18.672 --> 00:05:21.310
+Una vez que aprendiste
+un par de cosas de este artículo,
+
+00:05:21.310 --> 00:05:22.965
+puedes pasar a la tarea.
+
+00:05:22.965 --> 00:05:24.560
+Y luego revisa tus notas.
+
+00:05:24.560 --> 00:05:28.171
+Encontrarás el enlace a un código
+para cuatro métodos diferentes.
+
+00:05:28.172 --> 00:05:30.440
+Cada método contiene un error.
+
+00:05:30.440 --> 00:05:33.750
+Y la tarea es que encuentres
+el error en cada uno de esos métodos.
+
+00:05:34.650 --> 00:05:37.016
+Como hay múltiples maneras
+de arreglar el código,
+
+00:05:37.017 --> 00:05:38.539
+asume que el comentario <i>javadoc</i>
+
+00:05:38.539 --> 00:05:40.840
+en la parte superior
+de cada método es correcto.
+
+00:05:40.840 --> 00:05:43.186
+Y queremos hacer
+que el código coincida con eso.
+
+00:05:43.186 --> 00:05:44.950
+Así es como se ven los métodos.
+
+00:05:45.570 --> 00:05:48.120
+Identifica el número de línea
+donde está el error.
+
+00:05:48.120 --> 00:05:51.260
+El número de línea se encuentra en
+la columna de la izquierda aquí.
+
+00:05:51.260 --> 00:05:55.100
+Después, escribe una descripción breve
+sobre por qué esa línea tiene un error.
+
+00:05:55.100 --> 00:05:57.803
+Así el número de línea va aquí,
+y la descripción va aquí.
+
+00:05:57.809 --> 00:06:00.802
+Al terminar puedes seguir 
+con el video de la solución.
+

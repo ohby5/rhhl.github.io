@@ -1,0 +1,334 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.560 --> 00:00:04.070
+Primero vamos a modificar
+la firma del método <i>calculatePrice</i>
+
+00:00:04.070 --> 00:00:06.480
+para tener el tipo de dato
+de retorno correcto.
+
+00:00:06.480 --> 00:00:08.960
+También asumiremos que
+hay 0 parámetros de entrada.
+
+00:00:09.640 --> 00:00:12.840
+Aquí es donde se define
+el método <i>calculatePrice</i>.
+
+00:00:12.840 --> 00:00:15.930
+El propósito de este método es
+calcular el precio total del pedido
+
+00:00:15.930 --> 00:00:17.715
+y luego retornarlo.
+
+00:00:17.715 --> 00:00:19.434
+El precio debe ser un número entero
+
+00:00:19.434 --> 00:00:21.784
+así que debemos cambiar
+el tipo de dato de retorno
+
+00:00:21.784 --> 00:00:22.993
+de <i>void</i> a <i>int</i>.
+
+00:00:23.730 --> 00:00:25.520
+Esto cumple la primera tarea.
+
+00:00:25.520 --> 00:00:27.528
+El cuestionario también pedía asegurarse
+
+00:00:27.529 --> 00:00:29.304
+de que no haya parámetros de entrada,
+
+00:00:29.304 --> 00:00:30.700
+y eso es lo que tenemos aquí.
+
+00:00:31.020 --> 00:00:33.830
+Ahora, la segunda tarea es
+modificar el interior del método
+
+00:00:33.830 --> 00:00:37.364
+para asegurarse de que estamos calculando
+el precio correcto para la orden.
+
+00:00:37.364 --> 00:00:39.220
+Y suponiendo $5 por una taza de café.
+
+00:00:40.663 --> 00:00:43.880
+Dentro de este método estamos tomando
+la cantidad de tazas ordenada.
+
+00:00:43.880 --> 00:00:46.460
+Y la multiplicamos
+por $5 por cada taza de café.
+
+00:00:47.700 --> 00:00:49.650
+Esto es igual al precio total del pedido.
+
+00:00:49.651 --> 00:00:51.650
+Así que esta línea de código es correcta.
+
+00:00:52.250 --> 00:00:56.595
+Pero hay dos cuestiones que veo:
+la variable <i>price</i> nunca se utiliza
+
+00:00:56.596 --> 00:00:59.490
+y hay un error que dice
+"falta la sentencia <i>return</i>".
+
+00:00:59.490 --> 00:01:03.470
+Espera que retornemos un número entero,
+pero no estamos retornando nada.
+
+00:01:03.470 --> 00:01:07.120
+Ahora mismo nuestro código
+es lo mismo que decir esto.
+
+00:01:07.120 --> 00:01:11.770
+Necesitamos una línea que diga <i>return</i>
+y poner un valor aquí
+
+00:01:11.770 --> 00:01:13.740
+y el valor de retorno es un precio.
+
+00:01:13.740 --> 00:01:16.112
+Así que, voy a poner <i>price</i>,
+
+00:01:16.112 --> 00:01:18.220
+que es una variable
+que hemos definido aquí.
+
+00:01:18.220 --> 00:01:20.760
+Genial, ahora
+todos los errores desaparecen.
+
+00:01:20.760 --> 00:01:22.650
+También debemos modificar el <i>Javadoc</i>
+
+00:01:22.650 --> 00:01:26.867
+para especificar que estamos
+retornando el precio total.
+
+00:01:26.867 --> 00:01:28.882
+Para que cuando
+alguien llame este método
+
+00:01:28.883 --> 00:01:30.360
+sepa qué esperar.
+
+00:01:31.504 --> 00:01:35.540
+Bien, ahora terminamos todas
+las partes para definir este método.
+
+00:01:35.540 --> 00:01:38.250
+Ahora, pasemos a donde
+el método es llamado.
+
+00:01:38.250 --> 00:01:41.939
+Dentro del método <i>submitOrder</i>,
+debemos llamar al método <i>calculatePrice</i>.
+
+00:01:43.030 --> 00:01:46.120
+Actualmente <i>calculatePrice</i>,
+está flotando en el medio de la nada.
+
+00:01:46.120 --> 00:01:49.130
+Voy a copiarlo,
+y voy a pegarlo aquí.
+
+00:01:49.130 --> 00:01:52.510
+Porque antes calculábamos
+el precio de la orden en línea,
+
+00:01:52.510 --> 00:01:55.630
+en el método <i>submitOrder</i>,
+pero ahora tenemos un método para ello.
+
+00:01:55.630 --> 00:01:57.670
+Así que voy a pegar esto aquí.
+
+00:01:57.670 --> 00:01:59.910
+Ahora eliminamos el punto y coma sobrante.
+
+00:01:59.910 --> 00:02:02.814
+Notarás que <i>price</i> es una variable local
+en este método,
+
+00:02:02.815 --> 00:02:04.800
+y también en este método.
+
+00:02:04.800 --> 00:02:06.520
+Está bien si tienen el mismo nombre,
+
+00:02:06.520 --> 00:02:09.258
+porque son diferentes
+ámbitos de variables.
+
+00:02:09.258 --> 00:02:10.688
+Entonces esta variable <i>price</i>
+
+00:02:10.688 --> 00:02:13.100
+no tiene ninguna relación
+con la variable de aquí.
+
+00:02:13.100 --> 00:02:16.144
+Se actualizan y se crean
+de manera independiente.
+
+00:02:16.145 --> 00:02:17.447
+Luego de que este método
+
+00:02:17.447 --> 00:02:20.040
+termina de ejecutarse,
+esta variable <i>price</i> desaparece.
+
+00:02:20.830 --> 00:02:23.079
+Bien, volvamos al método <i>submitOrder</i>.
+
+00:02:23.080 --> 00:02:25.967
+Calculamos un precio
+y lo almacenamos en una variable,
+
+00:02:25.968 --> 00:02:29.912
+y luego podemos usarlo
+para crear el mensaje de precio.
+
+00:02:30.480 --> 00:02:33.390
+Así que, en realidad, todo este código
+puede permanecer igual.
+
+00:02:33.390 --> 00:02:35.732
+Estamos concatenando
+el número entero <i>price</i>,
+
+00:02:35.733 --> 00:02:39.490
+con el <i>string</i> "<i>Total</i>"
+con el símbolo de moneda.
+
+00:02:39.490 --> 00:02:43.680
+Luego concatenamos "<i>¡Thank you!</i>"
+y después se lo mostrará en la pantalla.
+
+00:02:43.680 --> 00:02:47.760
+Entonces borraré estas
+líneas de más en blanco, lo guardaré,
+
+00:02:47.760 --> 00:02:50.415
+y luego podemos ejecutarlo
+en nuestro dispositivo.
+
+00:02:50.415 --> 00:02:52.250
+Bien, entonces cambié la cantidad
+
+00:02:52.250 --> 00:02:55.700
+y pulsé <i>Order</i>, entonces correctamente
+muestra $25 como el precio.
+
+00:02:56.530 --> 00:02:58.071
+Impresionante, funcionó.
+
+00:02:58.594 --> 00:03:01.864
+Pero, ¿cómo me aseguro 
+de que <i>calculatePrice</i> está funcionando?
+
+00:03:01.866 --> 00:03:04.166
+porque no hay un cambio visible
+para el usuario
+
+00:03:04.167 --> 00:03:06.362
+en comparación
+con nuestra aplicación anterior.
+
+00:03:06.362 --> 00:03:08.565
+Aquí hay un par de técnicas
+que puedes realizar
+
+00:03:08.565 --> 00:03:10.644
+para comprobar la ejecución de tu código.
+
+00:03:10.644 --> 00:03:15.400
+Podría retornar un número
+disparatado, como 700.
+
+00:03:15.924 --> 00:03:18.542
+Guardar mi código y luego lo ejecuto.
+
+00:03:18.543 --> 00:03:21.272
+Ahora lo que espero ver es que 
+si cambio la cantidad
+
+00:03:21.273 --> 00:03:25.226
+y pulso el botón <i>Order</i>,
+debería ver que el precio es $700.
+
+00:03:25.630 --> 00:03:28.091
+De esa manera sabré
+que el método <i>calculatePrice</i>
+
+00:03:28.092 --> 00:03:29.623
+realmente es llamado.
+
+00:03:30.250 --> 00:03:32.052
+Y así es, genial.
+
+00:03:32.910 --> 00:03:35.040
+Ahora puedo revertir este cambio.
+
+00:03:35.040 --> 00:03:37.890
+Otra forma de comprobar
+que este método se ejecuta
+
+00:03:37.890 --> 00:03:39.931
+es añadir un punto de interrupción aquí.
+
+00:03:40.230 --> 00:03:43.201
+Así que haré clic en
+este pequeño icono <i>bug</i>
+
+00:03:43.202 --> 00:03:45.400
+y la aplicación entra 
+en modo de depuración.
+
+00:03:46.370 --> 00:03:47.530
+Si cambio la cantidad
+
+00:03:47.530 --> 00:03:51.250
+y pulso <i>Order</i>, espero que la aplicación
+se detenga en este punto.
+
+00:03:53.140 --> 00:03:54.580
+Y lo hace.
+
+00:03:54.580 --> 00:03:57.460
+Así que ahora estamos
+en el método <i>calculatePrice</i>.
+
+00:03:57.460 --> 00:03:59.883
+Hay una variable global, <i>quantity</i>.
+
+00:03:59.884 --> 00:04:03.144
+Y si paso a la siguiente línea
+
+00:04:03.145 --> 00:04:06.208
+veo que ahora hay
+una variable local, <i>price</i>,
+
+00:04:06.209 --> 00:04:12.670
+y tiene fijado $15, porque <i>quantity</i> es 3,
+y 3 por 5 es 15, perfecto.
+
+00:04:12.670 --> 00:04:15.777
+Por lo tanto, está pasando
+por el método <i>calculatePrice</i>
+
+00:04:15.777 --> 00:04:17.991
+y si pulso <i>Resume</i>,
+lo actualiza correctamente
+
+00:04:17.992 --> 00:04:19.079
+en esta pantalla.
+

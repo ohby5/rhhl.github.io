@@ -1,0 +1,305 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.330 --> 00:00:01.590
+En este examen practicarás
+
+00:00:01.590 --> 00:00:03.510
+creando un objeto de una vista de texto
+
+00:00:03.510 --> 00:00:05.130
+y luego consultando métodos en el.
+
+00:00:05.130 --> 00:00:07.150
+Puesto que esto es solo para practicar,
+
+00:00:07.150 --> 00:00:09.670
+vamos a hacer esto
+en una nueva aplicación de Android
+
+00:00:09.670 --> 00:00:11.250
+fuera de la aplicación <i>JustJava</i>.
+
+00:00:11.250 --> 00:00:13.770
+De esa manera, no desordenamos
+la aplicación <i>JustJava</i>.
+
+00:00:14.370 --> 00:00:16.490
+Abre Proyect Wizard en Android Studio,
+
+00:00:16.490 --> 00:00:19.070
+yendo a <i>Archivo &gt; Nuevo Proyecto</i>.
+
+00:00:19.070 --> 00:00:21.840
+Luego puedes aceptar
+los predeterminados para todos estos.
+
+00:00:21.840 --> 00:00:24.930
+Asegúrate de tener seleccionada
+la plantilla <i>Actividad en blanco</i>,
+
+00:00:24.930 --> 00:00:26.360
+luego haz clic en <i>Finalizar</i>.
+
+00:00:28.210 --> 00:00:29.940
+Una vez tu proyecto esté creado,
+
+00:00:29.940 --> 00:00:31.990
+ejecuta la aplicación en tu dispositivo.
+
+00:00:32.380 --> 00:00:33.660
+La función predeterminada
+
+00:00:33.660 --> 00:00:36.220
+sería ver las palabras "Hello World"
+mostradas ahí.
+
+00:00:36.220 --> 00:00:38.220
+Pero ahora vamos a hacer algo diferente.
+
+00:00:38.220 --> 00:00:41.940
+En la clase <i>MainActivity</i>,
+vamos a modificar el método <i>onCreate</i>.
+
+00:00:42.340 --> 00:00:44.340
+En vez de consultar <i>setContentView</i>
+
+00:00:44.340 --> 00:00:46.600
+en esta actividad principal
+de diseño de XML,
+
+00:00:46.600 --> 00:00:49.750
+crearemos nuestra propia vista de texto
+y la pondremos aquí.
+
+00:00:50.390 --> 00:00:52.290
+En la página de desarrollo de Android,
+
+00:00:52.290 --> 00:00:53.820
+hay una sección de entrenamiento
+
+00:00:53.820 --> 00:00:55.750
+sobre crear tu primera aplicación.
+
+00:00:56.010 --> 00:00:56.800
+Específicamente,
+
+00:00:56.800 --> 00:00:59.680
+estoy buscando la parte del tutorial
+"Visualizar el mensaje".
+
+00:00:59.680 --> 00:01:02.220
+Te dice que en la actividad
+del método <i>onCreate</i>
+
+00:01:02.220 --> 00:01:03.930
+podemos crear una vista de texto.
+
+00:01:03.930 --> 00:01:07.290
+Y este es el código que reconocemos
+de la lección pasada.
+
+00:01:07.290 --> 00:01:09.360
+Estamos creando una nueva vista de texto
+
+00:01:09.360 --> 00:01:11.900
+y estamos guardándola en la variable
+llamada <i>textView</i>.
+
+00:01:11.900 --> 00:01:13.770
+Este constructor requiere un contexto,
+
+00:01:13.770 --> 00:01:15.428
+como un parámetro de entrada.
+
+00:01:15.428 --> 00:01:18.140
+Y pasando (<i>this</i>)
+como un parámetro de entrada,
+
+00:01:18.140 --> 00:01:21.780
+porque (<i>this</i>) se refiere
+a la actividad actual.
+
+00:01:21.780 --> 00:01:24.450
+Y una actividad también es un conexto,
+
+00:01:24.450 --> 00:01:27.530
+esto creará correctamente
+un objeto <i>TextView</i> para nosotros.
+
+00:01:27.530 --> 00:01:30.610
+Luego podemos consultar métodos
+en este objeto <i>TextView</i>.
+
+00:01:30.610 --> 00:01:33.400
+Recuerda que esto es
+un nombre de variable de <i>textView</i>,
+
+00:01:33.400 --> 00:01:35.330
+no la clase <i>TextView</i>.
+
+00:01:35.330 --> 00:01:38.360
+Es por eso que la t es minúscula aquí.
+
+00:01:38.360 --> 00:01:40.710
+Podemos consultar <i>textView.setTextSize</i>
+
+00:01:40.710 --> 00:01:43.310
+y <i>textView.setText</i> como ejemplos.
+
+00:01:43.830 --> 00:01:47.160
+Cuando te desplazas abajo,
+dice consultar <i>setContentView</i>
+
+00:01:47.160 --> 00:01:49.890
+y pasar <i>textView</i>
+como parámetro de entrada.
+
+00:01:49.890 --> 00:01:51.690
+Si te desplazas más abajo, te muestra
+
+00:01:51.690 --> 00:01:53.740
+un ejemplo de código
+en el método <i>onCreate</i>.
+
+00:01:54.230 --> 00:01:55.520
+No necesitamos esta parte.
+
+00:01:55.520 --> 00:01:57.200
+Solo nos concentramos en esta parte
+
+00:01:57.200 --> 00:01:58.770
+donde creamos una vista de texto
+
+00:01:58.770 --> 00:02:01.770
+y ajustamos esto como <i>contentView</i>
+del diseño de la actividad.
+
+00:02:02.440 --> 00:02:04.830
+Devuelta a Android Studio
+en la clase <i>MainActivity</i>,
+
+00:02:04.830 --> 00:02:07.030
+voy a modificar el método <i>onCreate</i>.
+
+00:02:07.030 --> 00:02:09.104
+Voy a insertar aquí
+algunas líneas blancas.
+
+00:02:09.535 --> 00:02:12.605
+Primero, voy a crear un objeto <i>TextView</i>
+usando el constructor.
+
+00:02:13.245 --> 00:02:15.535
+Voy a darle un nombre de variable <i>textView</i>
+
+00:02:15.535 --> 00:02:17.905
+pero siéntete libre de llamarlo
+de otra forma
+
+00:02:17.905 --> 00:02:21.505
+siempre y cuando describa lo que es.
+
+00:02:22.080 --> 00:02:24.870
+El texto que construíste
+requiere un contexto,
+
+00:02:24.870 --> 00:02:28.100
+por eso voy a pasar (<i>this</i>)
+para referirme a esta actividad.
+
+00:02:28.920 --> 00:02:30.500
+Luego en la otra línea de código,
+
+00:02:30.500 --> 00:02:32.930
+voy a consultar un método
+en el objeto <i>textView</i>.
+
+00:02:33.770 --> 00:02:35.430
+Tan pronto como presiono un punto,
+
+00:02:35.430 --> 00:02:37.520
+me va a mostar todos los posibles métodos
+
+00:02:37.520 --> 00:02:40.040
+que puedo consultar
+con este objeto <i>textView</i>.
+
+00:02:40.990 --> 00:02:44.710
+Si comienzo a escribir,
+filtrará las opciones de autocompletado.
+
+00:02:45.200 --> 00:02:47.720
+Puedes ver que las opciones
+se han reducido.
+
+00:02:47.720 --> 00:02:51.810
+Voy a elegir <i>setText</i> para que
+al darle a <i>Enter</i> se autocomplete.
+
+00:02:53.140 --> 00:02:56.370
+Luego puedo poner una cadena
+como razón de entrada.
+
+00:02:56.370 --> 00:02:59.230
+Y el último paso es cambiar
+la línea <i>setContentView</i>.
+
+00:02:59.230 --> 00:03:01.740
+Así que en vez de usar
+este archivo de diseño de XML,
+
+00:03:01.740 --> 00:03:04.580
+voy solamente a pegar en <i>textView</i>.
+
+00:03:05.120 --> 00:03:07.860
+Voy a guardar esto y luego ejecutarlo
+en mi dispositivo.
+
+00:03:07.860 --> 00:03:09.610
+Lo que espero que pase ahora
+
+00:03:09.610 --> 00:03:11.920
+es que en la pantalla
+muestre una vista de texto
+
+00:03:11.920 --> 00:03:14.760
+que diga "Wow" en vez de "Hello World".
+
+00:03:15.030 --> 00:03:16.110
+Y sí lo hace.
+
+00:03:16.680 --> 00:03:18.050
+Es un poco decepcionante,
+
+00:03:18.050 --> 00:03:20.390
+por eso quiero que lo pongas
+más interesante.
+
+00:03:20.390 --> 00:03:24.198
+Quiero que consultes otro métodos,
+en este objeto <i>textView</i>,
+
+00:03:24.198 --> 00:03:27.034
+como por ejemplo cambiar el color,
+o el tamaño del texto.
+
+00:03:27.574 --> 00:03:29.294
+Si eres más aventurero,
+
+00:03:29.294 --> 00:03:32.780
+puedes consultar otros métodos
+en este objeto <i>textView</i>.
+
+00:03:32.780 --> 00:03:35.280
+Mira la documentación online
+para <i>textView</i>
+
+00:03:35.280 --> 00:03:38.370
+para ver qué otros posibles métodos hay.
+
+00:03:38.370 --> 00:03:41.180
+Cuando termines, marca estos cuadros
+para continuar.
+

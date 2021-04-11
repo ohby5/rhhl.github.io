@@ -1,0 +1,420 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.640 --> 00:00:03.565
+Keling, birgalikda birinchi qismni bajaraylik, 
+MainActivity ga yangi metodni qo‘shamiz.
+
+00:00:04.930 --> 00:00:07.390
+Siz faylning istalgan joyiga metodni 
+qo‘yishingiz mumkin, faqat uni 
+
+00:00:07.390 --> 00:00:11.100
+bo‘shqa metodning katta qavslaridan
+tashqarisiga qo‘ying.
+
+00:00:11.100 --> 00:00:14.230
+Men uni bizing 
+calculatePrice metodimiz 
+
+00:00:14.230 --> 00:00:16.300
+ostiga joylashtiraman.
+
+00:00:16.300 --> 00:00:19.530
+Kirish modifikatorini private 
+sifatida belgilayman, 
+
+00:00:19.530 --> 00:00:22.960
+chunki metod murojaat qiladigan 
+hamma narsa main activity ichida joylashgan.
+
+00:00:24.180 --> 00:00:27.060
+Endi chiqish ma’lumotlar turi uchun 
+string ni belgilayman, chunki 
+
+00:00:27.060 --> 00:00:30.550
+createOrderSummary dan 
+biz matn olishimiz kerak.
+
+00:00:30.550 --> 00:00:34.665
+Endi men metodni 
+createOrderSummary deb nomlayman.
+
+00:00:36.230 --> 00:00:38.940
+Endi input qiymatlari - bi 
+price va bu sonli qiymat.
+
+00:00:40.340 --> 00:00:42.890
+Shunday qilib, biz metodni 
+belgilab oldik, 
+
+00:00:42.890 --> 00:00:47.060
+lekin u bizga ushbu xabarni yuborishi 
+uchun, uni ishga tushirushimiz kerak.
+
+00:00:47.060 --> 00:00:52.040
+Xabar nomdan boshlanadi, so‘ngra miqdori,
+umumiy narxi va undan keyin Thank you bilan tugatiladi.
+
+00:00:52.040 --> 00:00:54.580
+Men undan nusxa olib, 
+
+00:00:54.580 --> 00:00:56.590
+createOrderSummary 
+metodiga joylashtiraman.
+
+00:00:56.590 --> 00:01:00.120
+Endi asosiy kodni yozishni 
+boshlashimiz mumkin.
+
+00:01:00.120 --> 00:01:01.150
+Ammo farq shundaki, 
+
+00:01:01.150 --> 00:01:05.090
+orderSummary umumiy narxdan emas, 
+nomdan boshlanishi kerak.
+
+00:01:05.090 --> 00:01:08.890
+Shunday qilib, men buni keyingi qatorga 
+o‘tkazaman va keyinchalik uni saqlab qo‘yaman.
+
+00:01:08.890 --> 00:01:12.359
+Men priceMessage o‘zgaruvchisiga 
+Name deb nomlayman va 
+
+00:01:12.359 --> 00:01:14.580
+Kaptain Kunalni yozaman.
+
+00:01:14.580 --> 00:01:17.660
+Keyingi qatorda, 
+priceМessage ni o‘zgartiraman.
+
+00:01:18.690 --> 00:01:22.025
+Men mavjud xabarga qo‘shimcha qo‘shaman.
+
+00:01:22.025 --> 00:01:26.485
+Bu priceMessage va 
+
+00:01:26.485 --> 00:01:31.115
+yangi matn bo‘ladi, bundan tashqari 
+miqdor va miqdor o‘zgaruvchilarni qo‘shishim kerak.
+
+00:01:32.265 --> 00:01:34.095
+quantity global o‘zgaruvchi 
+bo‘lganligi sababli, biz unga ushbu 
+
+00:01:34.095 --> 00:01:36.745
+metodda murojaat qilishimiz mumkin.
+
+00:01:36.745 --> 00:01:39.340
+Shunday qilib - bizda nom va miqdor mavjud.
+
+00:01:39.340 --> 00:01:44.020
+Keyingi qatorda priceMessage ni 
+yana yangilab, qo‘shimcha 
+
+00:01:44.020 --> 00:01:45.940
+matn qo‘shmoqchiman.
+
+00:01:45.940 --> 00:01:48.700
+Aslida ushbu matn total price 
+bo‘lishi kerak, shuning uchun 
+
+00:01:48.700 --> 00:01:50.270
+men oldingilaridan foydalanishim mumkin.
+
+00:01:51.340 --> 00:01:55.080
+OK, va oxirgi satrda 
+priceMessage ni yana yangilaymiz.
+
+00:01:55.080 --> 00:01:58.639
+Ushbu satrning mavjud qiymatini oling 
+va unga Thank you! ni qo‘shing.
+
+00:01:59.740 --> 00:02:02.210
+Hammasi yaxshi ko‘rinadi, 
+lekin xatolik bor.
+
+00:02:02.210 --> 00:02:04.260
+return operatori yo‘q.
+
+00:02:04.260 --> 00:02:07.090
+Natijada yig‘ma qatorni hosil 
+qilish uchun, kodga yana bitta 
+
+00:02:07.090 --> 00:02:10.370
+qator - retur ni va 
+uning qiymatini 
+
+00:02:10.370 --> 00:02:12.240
+qo‘shish kerak.
+
+00:02:12.240 --> 00:02:15.210
+Bu holda - priceMessage qiymatidir.
+
+00:02:15.210 --> 00:02:16.630
+Va oxirida nuqta-vergul qo‘shaman.
+
+00:02:17.660 --> 00:02:19.440
+Shunday qilib, boshqa xato yo‘q.
+
+00:02:19.440 --> 00:02:22.150
+Kod ishlashga o‘xshaydi, 
+lekin men uni ishlatib, sinovdan o‘tkazaman.
+
+00:02:23.480 --> 00:02:26.300
+Endi biz quantity ni 
+uchga o‘zgartirsak va 
+
+00:02:26.300 --> 00:02:28.930
+Order tugmasini bossak, 
+hech narsa ishlamaydi.
+
+00:02:30.620 --> 00:02:32.320
+Keling, nima noto‘g‘ri 
+ekanligini ko‘rib chiqaylik.
+
+00:02:32.320 --> 00:02:35.260
+Kodni batafsilroq ko‘rib chiqsam, 
+muammo nimada ekanligini tushunaman.
+
+00:02:35.260 --> 00:02:38.660
+Bu yerda createOrderSummary metodi 
+hech qachon ishlatilmaganligi 
+
+00:02:38.660 --> 00:02:39.730
+haqida ogohlantirish mavjud.
+
+00:02:39.730 --> 00:02:41.100
+Men uni chaqirishni unutib qo‘ydim.
+
+00:02:41.100 --> 00:02:42.450
+Keling, testga qaytaylik.
+
+00:02:43.580 --> 00:02:46.910
+Shunday qilib, birinchi vazifani 
+muvaffaqiyatli bajardik, ammo 
+
+00:02:46.910 --> 00:02:50.010
+submitOrderSummary metodidan 
+createOrderSummary metodini chaqirishimiz kerak.
+
+00:02:51.220 --> 00:02:55.300
+Android Studio-ga qaytib, sumbitOrder 
+metodini to‘g‘rilashimiz kerak.
+
+00:02:55.300 --> 00:02:57.300
+Men narxni hisoblab 
+chiqdim - va bu to‘g‘ri.
+
+00:02:57.300 --> 00:03:00.320
+Ammo hozir uni createOrderSummary 
+metodiga o‘tkazishim kerak.
+
+00:03:00.320 --> 00:03:03.860
+Shuning uchun men bu yerda 
+narx o‘zgaruvchisi bilan 
+
+00:03:03.860 --> 00:03:05.690
+createOrderSummary bajaraman.
+
+00:03:05.690 --> 00:03:08.340
+Ushbu metodning return value si 
+priceMessage o‘zgaruvchisida 
+
+00:03:08.340 --> 00:03:10.380
+saqlanishi kerak.
+
+00:03:10.380 --> 00:03:13.190
+Menga endi ushbu kod satrlari 
+kerak emas, chunki "Thank you" 
+
+00:03:13.190 --> 00:03:15.260
+allaqachon bu yerda bor.
+
+00:03:15.260 --> 00:03:16.680
+Uni o‘chirib tashlashim mumkin.
+
+00:03:16.680 --> 00:03:20.800
+Keyin ekranni yangilash uchun men 
+oldingi kabi priceMessage &gt; 
+
+00:03:20.800 --> 00:03:23.230
+o‘zgaruvchisi bilan 
+displayMessage ni chaqirishim kerak.
+
+00:03:23.230 --> 00:03:25.410
+Endi ilovani yana ishga 
+tushirishga harakat qilaylik.
+
+00:03:25.410 --> 00:03:27.370
+Agar quantity ni uchga o‘zgartirsam 
+va Order tugmasini bossam, 
+
+00:03:27.370 --> 00:03:29.930
+yana hech narsa ishlamaydi.
+
+00:03:31.080 --> 00:03:34.970
+Matnning ko‘p qismi bitta satrda, 
+ammo u bir nechta satrlarda bo‘lishi kerak, 
+
+00:03:34.970 --> 00:03:37.210
+shuning uchun buni tuzatish kerak.
+
+00:03:37.210 --> 00:03:40.650
+Ushbu kodga qarab, men yangi qator 
+belgisini qo‘yishni unutganimni tushunaman.
+
+00:03:40.650 --> 00:03:43.950
+Men buni "Thank you" uchun to‘g‘ri 
+qo‘shgan ekanman, lekin boshqalar uchun emas.
+
+00:03:43.950 --> 00:03:46.340
+Endi uni boshqa 
+qatorlarga ham qo‘shaman.
+
+00:03:47.510 --> 00:03:49.230
+Uni yana ishga tushiraylik.
+
+00:03:50.370 --> 00:03:51.600
+Hammasi ishlayapdi.
+
+00:03:51.600 --> 00:03:52.830
+Juda yaxshi.
+
+00:03:52.830 --> 00:03:56.050
+Endi Kapitan Kunal uchta chashka 
+qahvasini ichishi mumkin.
+
+00:03:56.050 --> 00:03:59.670
+Sizga kodingiz uchun ba’zi 
+optimallashtirishlarni ko‘rsatmoqchiman.
+
+00:03:59.670 --> 00:04:02.530
+E’tibor bering, siz input parametri 
+berish o‘rniga, createOrderSummary 
+
+00:04:02.530 --> 00:04:07.170
+ichidagi calculatePrice 
+metodini chaqirishingiz mumkin edi.
+
+00:04:07.170 --> 00:04:10.420
+Shuning uchun, calculatePrice ni 
+bu yerda amalga oshirilishi mumkin.
+
+00:04:10.420 --> 00:04:12.880
+Bu ham ishlaydi.
+
+00:04:12.880 --> 00:04:16.250
+Ammo men bitta metodning natijasini olib, 
+uni boshqa metodga input sifatida 
+
+00:04:16.250 --> 00:04:18.370
+o‘tkazishingiz mumkinligini 
+ko‘rsatmoqchi edim.
+
+00:04:18.370 --> 00:04:20.040
+Shunday qilib, biz uni 
+avvalgidek qoldiramiz.
+
+00:04:21.440 --> 00:04:23.874
+createOrderSummary metodida men 
++ = operatorlari yordamida 
+
+00:04:23.874 --> 00:04:27.920
+biron bir ishni qilishni xohlayman.
+
+00:04:27.920 --> 00:04:29.240
+Bu shorthand bo‘lib, 
+
+00:04:29.240 --> 00:04:35.070
+priceMessage = priceMessage + bularning 
+barchasi bilan bir xil ma‘noni anglatadi.
+
+00:04:35.070 --> 00:04:40.660
+Agar bularning barchasini + = ga 
+o‘zgartirsam, u avvalgidek qo‘ladi.
+
+00:04:40.660 --> 00:04:43.680
+Bu shunchaki kamroq yozishni talab qiladi, 
+shuning uchun kodingiz yanada aniqroq bo‘ladi.
+
+00:04:44.740 --> 00:04:46.120
+In the calculatePrice method,
+В методе calculatePrice
+calculatePrice metodida, 
+
+00:04:46.120 --> 00:04:49.160
+men bajargan boshqa narsa bu local 
+o‘zgaruvchiga saqlashni o‘rniga
+
+00:04:49.160 --> 00:04:54.030
+uni darhol qaytarishini xohlayman.
+
+00:04:54.030 --> 00:04:56.840
+Shunday qilib, kod yanada 
+aniqroq bo‘ladi.
+
+00:04:56.840 --> 00:05:00.340
+Keyin bu yerda, submitOrder metodida, 
+buyurtma xulosasini tuzib, uni o‘zgaruvchiga 
+
+00:05:00.340 --> 00:05:03.880
+saqlashning o‘rniga, va keyin 
+ishlatishni o‘rniga, 
+
+00:05:03.880 --> 00:05:08.960
+shunchaki createOrderSummary ni chaqirib, 
+undan keyin displayMessage ni ishlatishingiz mumkin.
+
+00:05:08.960 --> 00:05:11.290
+Natijasi bir xil bo‘ladi.
+
+00:05:11.290 --> 00:05:14.590
+createOrderSummary metodining 
+return value - bu esa string , 
+
+00:05:14.590 --> 00:05:19.190
+va u displayMessage metodiga 
+kirish argument i sifatida beriladi.
+
+00:05:19.190 --> 00:05:21.410
+Agar siz uchun buni o‘qish osonroq bo‘lsa, 
+uni shu kabi qoldirishingiz mumkin.
+
+00:05:23.110 --> 00:05:25.630
+Ushbu maslahatlarning barchasi 
+bir xil natijani beradi.
+
+00:05:27.030 --> 00:05:30.290
+Va unutmagunimcha, nima qilish kerakligini 
+tasvirlash uchun ushbu 
+
+00:05:30.290 --> 00:05:33.680
+metodning yuqori qismiga Javadoc 
+sharhini qo‘shishni unutmang.
+
+00:05:33.680 --> 00:05:36.821
+Texnik jihatdan, 
+buni qilish shart emas, 
+
+00:05:36.821 --> 00:05:39.449
+lekin boshqalar sizning 
+kodingizni va nima qilayotganingizni 
+
+00:05:39.449 --> 00:05:42.437
+tushunishlari uchun 
+metodning tavsifini yozish 
+
+00:05:42.437 --> 00:05:44.380
+yaxshi odatdir.
+
+00:05:44.380 --> 00:05:48.002
+Ushbu metodning tavsifi - 
+bu buyurtma xulosasini yaratadi.
+
+00:05:48.002 --> 00:05:51.560
+Input parametr qiymati buyurtma narxi 
+sifatida va u matn xulosasini qaytaradi.
+

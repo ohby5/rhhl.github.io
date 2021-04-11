@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.790 --> 00:00:04.250
+İlkini yapalım,
+TextView = new TextView yazıyor ve
+
+00:00:04.250 --> 00:00:07.861
+bağlamı giriş parametresi olarak
+yapıcıya gönderiyoruz.
+
+00:00:07.861 --> 00:00:11.929
+Bu kod satırındaki hata, yeni bir nesne
+oluşturmamız ancak bir değişkende
+
+00:00:11.929 --> 00:00:14.540
+düzgün şekilde saklamamamız.
+
+00:00:15.590 --> 00:00:18.560
+Değişkenin veri türünün TextView
+olacağını söylüyoruz ancak
+
+00:00:18.560 --> 00:00:21.570
+değişken adını çağırmayı unutuyoruz.
+
+00:00:21.570 --> 00:00:23.910
+Doğru kod şunun gibi
+bir şey olmalı.
+
+00:00:23.910 --> 00:00:28.120
+TextView, ardından değişken adı, ardından
+eşittir yeni TextView.
+
+00:00:29.130 --> 00:00:31.160
+Değişken adı olarak başka
+bir şey girebilirsiniz,
+
+00:00:31.160 --> 00:00:34.150
+ancak biz textView için
+küçük t kullanmayı tercih ettik.
+
+00:00:35.420 --> 00:00:38.440
+Bu örnekte, hata,
+değişken adının eksik olmasıydı.
+
+00:00:38.440 --> 00:00:39.250
+Sonrakine geçelim.
+
+00:00:39.250 --> 00:00:43.350
+image view img = new ImageView diyor.
+
+00:00:43.350 --> 00:00:47.865
+Buradaki sorun, bunun geçerli bir
+nesne veri türü olmaması.
+
+00:00:47.865 --> 00:00:52.320
+Android, ImageView adlı bir sınıfı
+büyük I ve büyük V ile tanımlıyor ve
+
+00:00:52.320 --> 00:00:54.600
+tek kelimeye sıkıştırıyor.
+
+00:00:54.600 --> 00:00:56.780
+Geçerli bir sınıf adında
+boşluk olamaz.
+
+00:00:57.780 --> 00:00:59.050
+Değişken adı düzgün görünüyor ve
+
+00:00:59.050 --> 00:01:01.740
+yeni görüntünün oluşturulması da
+düzgün görünüyor.
+
+00:01:01.740 --> 00:01:04.989
+Yani tek hata,
+yanlış bir sınıf adının olması.
+
+00:01:04.989 --> 00:01:07.790
+Üçüncü ifadede, yeni bir
+geçiş düğmesi oluşturmaya çalışıyoruz.
+
+00:01:07.790 --> 00:01:11.640
+ToggleButton button
+= create ToggleButton yazıyor.
+
+00:01:11.640 --> 00:01:13.890
+Burada ToggleButton
+sınıfını çağırıyoruz, bu yüzden
+
+00:01:13.890 --> 00:01:18.040
+create değil new Java anahtar
+kelimesini kullanmamız gerekiyor.
+
+00:01:18.040 --> 00:01:19.020
+Ve bu doğru kod.
+
+00:01:19.020 --> 00:01:22.145
+ToggleButton
+button = new ToggleButton diyor.
+
+00:01:22.145 --> 00:01:25.910
+Buradaki sorun, new Java anahtar
+kelimesini kullanmamız değildi.
+
+00:01:25.910 --> 00:01:30.450
+New, yeni bir nesne oluşturmak istediğimizi
+belirten anahtar kelimedir.
+
+00:01:30.450 --> 00:01:32.892
+Dördüncü ifadede, yeni bir
+toast oluşturmaya çalışıyoruz.
+
+00:01:32.892 --> 00:01:35.620
+Yeni toast oluşturmayla ilgili
+Google araması yapıp
+
+00:01:35.620 --> 00:01:37.450
+buradaki kodla karşılaştırmışsınızdır.
+
+00:01:37.450 --> 00:01:40.700
+Buradaki sorun, toast'un
+Toast sınıf adı olduğu için
+
+00:01:40.700 --> 00:01:43.320
+büyük T ile yazılması gerektiği.
+
+00:01:43.320 --> 00:01:46.670
+Bu, daha önce bahsettiğimiz gibi
+bir fabrika yöntemi kullanımıdır.
+
+00:01:46.670 --> 00:01:50.400
+Bu yeni bir toast nesnesi oluşturur
+ve bu değişkende saklar.
+
+00:01:50.400 --> 00:01:53.360
+Yani buradaki hata sadece
+hatalı bir sınıf adıydı.
+
+00:01:53.360 --> 00:01:56.410
+Nesne oluşturmayı öğrendik.
+Peki, bu nesneleri nasıl kullanacağız?
+

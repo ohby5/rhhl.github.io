@@ -1,0 +1,210 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.520 --> 00:00:03.700
+Bây giờ ta đã biết có thể tham chiếu đến 
+tài nguyên XML trong mã lệnh Java.
+
+00:00:04.710 --> 00:00:08.680
+Nhưng mối quan hệ thực sự 
+giữa tài nguyên và mã lệnh Java là gì?
+
+00:00:08.680 --> 00:00:11.380
+Làm thế nào kết nối chúng với nhau thành 
+một phần của trải nghiệm ứng dụng?
+
+00:00:12.460 --> 00:00:15.215
+Hãy bắt đầu từ thời điểm bạn 
+nhấn vào biểu tượng ứng dụng JustJava.
+
+00:00:16.335 --> 00:00:18.615
+Từ đó mở ra Hoạt Động Chính.
+
+00:00:18.615 --> 00:00:21.925
+Bây giờ bạn chưa nhận thấy điều gì 
+bởi vì ứng dụng vẫn đang khởi tạo.
+
+00:00:21.925 --> 00:00:25.835
+Thật may, rất nhiều khâu phức tạp 
+liên quan tới khởi tạo hoạt động được
+
+00:00:25.835 --> 00:00:28.565
+Android xử lý tự động 
+thay bạn.
+
+00:00:28.565 --> 00:00:31.995
+Phần quan trọng mà chúng tao thực hiện 
+đó là phần thuộc tệp Main Activity,
+
+00:00:31.995 --> 00:00:34.875
+phương pháp onCreate được 
+áp dụng một cách tự động.
+
+00:00:34.875 --> 00:00:37.590
+Đây là khi hoạt động 
+được tạo ra.
+
+00:00:37.590 --> 00:00:40.580
+Có một loạt công việc và 
+sau đó ta có các dòng quan trọng nêu
+
+00:00:40.580 --> 00:00:45.120
+setContentView và theo đó là ID 
+tài nguyên cho tệp layout.
+
+00:00:45.120 --> 00:00:47.640
+Đó là R.layout.activity_main.
+
+00:00:47.640 --> 00:00:52.280
+Điều này có nghĩa là dạng xem nội dung của 
+hoạt động cần thiết lập theo cách bố trí
+
+00:00:52.280 --> 00:00:55.720
+như quy định trong 
+tệp hoạt động chính XML .
+
+00:00:55.720 --> 00:00:59.700
+Đây là phương pháp áp dụng và 
+tham số đầu vào là ID tài nguyên này.
+
+00:00:59.700 --> 00:01:02.600
+Khi bạn thiết lập cách bố trí mà bạn 
+sẽ sử dụng làm dạng xem nội dung,
+
+00:01:02.600 --> 00:01:07.660
+thì thiết bị android có thể hoạt động và 
+phân tích cú pháp bố trí tập tin XML này.
+
+00:01:07.660 --> 00:01:09.410
+Phân tích cú pháp giống như đọc tập tin và
+
+00:01:09.410 --> 00:01:12.490
+cố gắng giải thích điều đó giống như 
+ồ đây là một cách bố trí tuyến tính.
+
+00:01:12.490 --> 00:01:13.570
+Ồ đây là dạng xem văn bản.
+
+00:01:13.570 --> 00:01:15.270
+Đây là những thuộc tính, và vv.
+
+00:01:15.270 --> 00:01:18.850
+Vậy tức là chúng ta cố gắng hiểu 
+tệp tin này chứa những gì.
+
+00:01:18.850 --> 00:01:21.960
+Thiết bị Android bắt đầu bằng cách 
+đọc từ đầu tệp tin.
+
+00:01:21.960 --> 00:01:24.670
+Thiết bị nhận ra có 
+một bố trí tuyến tính ở đây.
+
+00:01:24.670 --> 00:01:29.170
+Sau đó, thiết bị thổi phồng đối tượng Java
+để đại diện cho bố trí tuyến tính đó.
+
+00:01:29.170 --> 00:01:30.570
+Sau đó chuyển tới dòng tiếp theo và
+
+00:01:30.570 --> 00:01:36.120
+thấy rằng ta cần thêm một TextView làm 
+bố trí con cho bố trí tuyến tính, giống vậy.
+
+00:01:36.120 --> 00:01:39.865
+Điều này bắt đầu có vẻ giống như 
+phân cấp dạng xem ở bài học hai.
+
+00:01:39.865 --> 00:01:43.125
+Điều mà tôi chưa nói với bạn trước đây là 
+điều này thực sự là một sự phân cấp
+
+00:01:43.125 --> 00:01:45.265
+của các đối tượng Java.
+
+00:01:45.265 --> 00:01:47.975
+Chúng ta sẽ tìm hiểu thêm về 
+các đối tượng Java trong video tiếp theo
+
+00:01:47.975 --> 00:01:50.515
+nếu bạn chưa hoàn toàn hiểu điều này 
+thì cũng không sao.
+
+00:01:50.515 --> 00:01:53.085
+Khi chúng ta chuyển sang dòng tiếp theo, 
+chúng ta thấy rằng chúng ta cần thổi phồng
+
+00:01:53.085 --> 00:01:55.385
+đối tượng Java của bố trí tuyến tính.
+
+00:01:55.385 --> 00:01:58.855
+Đối tượng đó được thêm vào là bố trí con 
+của Bố Trí Tuyến Tính gốc.
+
+00:01:58.855 --> 00:02:00.480
+Sau đó chúng ta thấy một yếu tố Nút.
+
+00:02:00.480 --> 00:02:03.300
+Vì vậy chúng ta thêm yếu tố đó làm
+bố trí con của Bố Trí Tuyến Tính.
+
+00:02:03.300 --> 00:02:07.470
+Do đó tiếp tục tải tệp tin cho đến khi ta
+thổi phồng tất cả dạng xem ta cần cho
+
+00:02:07.470 --> 00:02:09.280
+hệ thống phân cấp dạng xem của mình.
+
+00:02:09.280 --> 00:02:13.740
+Khi có phân cấp dạng xem của đối tượng 
+Java thì ta có thể vận dụng chúng và 
+43
+
+00:02:16.570 --> 00:02:19.930
+Một đối tượng giống như TextView ở đây 
+chứa thông tin trạng thái.
+
+00:02:19.930 --> 00:02:23.070
+Ví dụ như văn bản, màu chữ, 
+kích cỡ chữ.
+
+00:02:23.070 --> 00:02:26.880
+Đối tượng cũng có các phương pháp nên 
+chúng ta có thể áp dụng phương pháp đó và
+
+00:02:26.880 --> 00:02:29.130
+thay đổi trạng thái nội bộ của chúng.
+
+00:02:29.130 --> 00:02:31.670
+Ví dụ, chúng ta có thể thay đổi 
+văn bản khi ứng dụng đang chạy.
+
+00:02:32.690 --> 00:02:36.700
+Việc tương tác với tất cả đối tượng này 
+gọi là chương trình hướng đối tượng.
+
+00:02:36.700 --> 00:02:40.220
+Chúng ta sẽ tìm hiểu chi tiết 
+hơn về điều này trong các video tiếp theo.
+
+00:02:40.220 --> 00:02:44.230
+Tóm tắt lại, trong hoạt động chính 
+khi chúng ta áp dụng setContentView cho
+
+00:02:44.230 --> 00:02:49.440
+cách bố trí này, thì ta đọc cách bố trí và 
+sau đó thổi phồng một loạt đối tượng Java.
+
+00:02:49.440 --> 00:02:53.590
+Những đối tượng Java này tạo thành 
+hệ thống phân cấp dạng xem của ứng dụng.
+
+00:02:53.590 --> 00:02:56.920
+MainActivity lưu giữ 
+hệ thống phân cấp dạng xem này, và sau đó
+
+00:02:56.920 --> 00:03:00.400
+khi bạn tương tác với MainActivity, 
+những đối tượng này sẽ được cập nhật.
+

@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.210 --> 00:00:04.370
+Nous avons vu qu'on pouvait passer sur
+un nombre dans la mÈthode d'affichage.
+
+00:00:04.370 --> 00:00:08.350
+Maintenant, parlons un peu des diffÈrentes
+entrÈes et sorties d'une mÈthode.
+
+00:00:08.350 --> 00:00:11.460
+Prenons la mÈthode submitOrder,
+dans MainActivity, comme exemple.
+
+00:00:12.510 --> 00:00:15.000
+Supposons que l'on a une sÈrie de lignes
+de codes dans cette mÈthode.
+
+00:00:15.000 --> 00:00:16.670
+Lorsque l'utilisateur clique
+sur le bouton Commander,
+
+00:00:16.670 --> 00:00:19.330
+cela enclenche et appelle
+la mÈthode submitOrder.
+
+00:00:19.330 --> 00:00:23.200
+L'appareil Android exÈcutera chacune de
+ces instructions de haut en bas,
+
+00:00:23.200 --> 00:00:26.980
+et lorsqu'il parvient ‡ l'appel de mÈthode
+calculatePrice, il
+
+00:00:26.980 --> 00:00:30.400
+ira se placer ‡ l'endroit o˘ la mÈthode
+calculatePrice est dÈfinie.
+
+00:00:30.400 --> 00:00:33.830
+Supposons qu'elle est dÈfinie en
+bas du fichier MainActivity.
+
+00:00:33.830 --> 00:00:37.020
+L'appareil Android exÈcutera chacune de
+ces instructions, du haut en bas de
+
+00:00:37.020 --> 00:00:41.270
+la mÈthode, puis il reviendra se placer
+sur la mÈthode submitOrder.
+
+00:00:41.270 --> 00:00:44.340
+Puis, il continuera ‡ exÈcuter ces
+instructions jusqu'‡ atteindre la fin
+
+00:00:44.340 --> 00:00:45.268
+de la mÈthode.
+
+00:00:45.268 --> 00:00:47.240
+Lorsque la mÈthode calculatePrice
+est appelÈe,
+
+00:00:47.240 --> 00:00:49.510
+on peut passer sur une sÈrie d'entrÈes
+
+00:00:49.510 --> 00:00:53.620
+pour que, lorsqu'on exÈcute ces lignes
+de code, on utilise ces valeurs d'entrÈe.
+
+00:00:53.620 --> 00:00:55.070
+Gr‚ce ‡ cette mÈthode,
+
+00:00:55.070 --> 00:00:58.940
+on peut ramener une valeur de sortie
+unique ‡ l'appelant.
+
+00:00:58.940 --> 00:01:03.030
+Et la valeur de sortie peut Ítre utilisÈe
+dans les lignes de codes suivantes.
+
+00:01:03.030 --> 00:01:07.090
+Dans Java, on appelle les entrÈes vers
+une mÈthode paramËtres de saisie, et
+
+00:01:07.090 --> 00:01:09.520
+on peut avoir zÈro ou
+plus paramËtres de saisie.
+
+00:01:10.550 --> 00:01:13.370
+Dans Java,
+on appelle la sortie une valeur de retour,
+
+00:01:13.370 --> 00:01:16.470
+et on peut avoir zÈro ou
+une valeur de retour.
+
+00:01:16.470 --> 00:01:20.420
+Un exemple de paramËtre de saisie
+consiste ‡ faire passer la quantitÈ
+
+00:01:20.420 --> 00:01:22.840
+vers la mÈthode calculatePrice.
+
+00:01:22.840 --> 00:01:26.957
+Ainsi, cette mÈthode peut utiliser la
+quantitÈ pour dÈterminer le prix total
+
+00:01:26.957 --> 00:01:28.130
+de la commande globale.
+
+00:01:28.130 --> 00:01:31.350
+Puis, on peut refaire passer ce prix
+total en valeur de retour.
+
+00:01:31.350 --> 00:01:34.046
+Puis, dans la mÈthode submitOrder,
+ici en bas,
+
+00:01:34.046 --> 00:01:38.253
+on peut utiliser ce prix total pour faire
+autre chose comme l'afficher sur Ècran,
+
+00:01:38.253 --> 00:01:40.930
+crÈer un ticket, entre autres choses.
+
+00:01:40.930 --> 00:01:43.730
+Pour rÈsumer, voici l'endroit o˘ on
+dÈfinit la mÈthode calculatePrice, et
+
+00:01:43.730 --> 00:01:45.400
+voici l'endroit o˘ on l'appelle.
+
+00:01:45.400 --> 00:01:49.490
+Nous voulons crÈer une mÈthode pour
+calculer le prix d'une commande de cafÈ.
+
+00:01:49.490 --> 00:01:53.410
+Actuellement, nous calculons le prix
+directement dans la mÈthode submitOrder,
+
+00:01:53.410 --> 00:01:57.020
+mais la logique de calcul du prix va
+devenir un peu plus compliquÈe.
+
+00:01:57.020 --> 00:01:59.030
+Alors, faisons-le dans sa propre mÈthode.
+
+00:01:59.030 --> 00:02:01.948
+Ensuite, nous pouvons l'appeler autant de
+fois que l'on veut sans copier et
+
+00:02:01.948 --> 00:02:04.080
+coller le code partout.
+
+00:02:04.080 --> 00:02:07.730
+En gagnant de l'expÈrience en
+dÈveloppement d'Android, vous estimerez
+
+00:02:07.730 --> 00:02:11.850
+quand crÈer une nouvelle mÈthode pour
+quelque chose ou quand c'est inutile.
+
+00:02:11.850 --> 00:02:14.690
+Cela viendra simplement avec
+l'expÈrience et le temps.
+
+00:02:14.690 --> 00:02:17.640
+C'est donc la premiËre fois
+que nous allons crÈer
+
+00:02:17.640 --> 00:02:20.800
+une nouvelle mÈthode dans
+MainActivity, par nous-mÍmes.
+
+00:02:20.800 --> 00:02:24.575
+Au lieu de dÈbuter en l'Ècrivant depuis
+le dÈbut, on veut commencer en apprenant ‡
+
+00:02:24.575 --> 00:02:28.460
+reconnaÓtre ce qu'est une mÈthode correcte
+par la lecture d'extraits de codes.
+
+00:02:28.460 --> 00:02:31.700
+Dans les notes du formateur, nous
+allons vous fournir trois options.
+
+00:02:31.700 --> 00:02:35.830
+Lisez ces trois extraits de codes et
+dÈterminez quelle
+
+00:02:35.830 --> 00:02:40.330
+option applique correctement la mÈthode
+de calcul du prix de la commande.
+
+00:02:40.330 --> 00:02:42.330
+Lorsque vous cliquez sur le lien
+dans les notes du formateur,
+
+00:02:42.330 --> 00:02:46.850
+vous voyez qu'il y a juste un code pour
+les options A, B, et C.
+
+00:02:48.380 --> 00:02:49.290
+Le but ici, pour vous, est
+
+00:02:49.290 --> 00:02:53.360
+de devenir ‡ l'aise avec la lecture
+de codes que vous n'avez jamais vus.
+
+00:02:53.360 --> 00:02:57.370
+Nous n'avons pas vu les rËgles exactes
+rendant une mÈthode valide, mais
+
+00:02:57.370 --> 00:03:01.169
+je veux que vous deviniez
+quelle option paraÓt la plus correcte.
+
+00:03:02.630 --> 00:03:05.091
+Je vous encourage Ègalement
+‡ chercher sur Google
+
+00:03:05.091 --> 00:03:09.140
+plus d'informations sur les moyens
+de dÈfinir les mÈthodes Java.
+
+00:03:09.140 --> 00:03:11.450
+Lorsque vous cliquerez sur
+les diffÈrents rÈsultats de recherche,
+
+00:03:11.450 --> 00:03:15.100
+vous dÈcouvrirez des informations
+que vous ne comprendrez pas.
+
+00:03:15.100 --> 00:03:18.290
+Mais je veux que vous soyez rassurÈ
+si vous ne comprenez pas tout dans
+
+00:03:18.290 --> 00:03:21.950
+ces pages, car c'est parfaitement
+normal de ne pas tout comprendre.
+
+00:03:21.950 --> 00:03:25.780
+Tout ce que vous devez faire, c'est lire
+les articles, ce que vous comprenez et
+
+00:03:25.780 --> 00:03:28.030
+ce que vous jugez pertinent
+pour la question qui vous intÈresse.
+
+00:03:29.140 --> 00:03:30.610
+Alors, allez-y et lisez le code pour
+
+00:03:30.610 --> 00:03:34.260
+ces trois options, cherchez de
+l'information en ligne, et puis fiez-vous
+
+00:03:34.260 --> 00:03:37.627
+‡ votre intuition pour deviner comment
+bien dÈfinir la mÈthode calculatePrice.
+

@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.369 --> 00:00:04.246
+Sekarang kita tahu bahwa kita dapat
+merujuk sumber XML dalam kode Java.
+
+00:00:04.587 --> 00:00:08.428
+Tapi apa sebenarnya hubungan
+antara sumber XML dan kode Java?
+
+00:00:08.453 --> 00:00:12.051
+Bagaimana mereka menjadi bagian
+dari pengalaman aplikasi penuh?
+
+00:00:12.350 --> 00:00:15.858
+Mari kita mulai pada titik ketika
+kau mengklik pada ikon aplikasi Just Java.
+
+00:00:16.226 --> 00:00:18.450
+Ini membuka &lt;i&gt;MainActivity.&lt;/i&gt;
+
+00:00:18.475 --> 00:00:21.805
+Sekarang kau belum bisa melihat apa-apa
+karena masih sedang diinisialisasi.
+
+00:00:21.830 --> 00:00:25.581
+Untungnya, banyak kompleksitas yang
+terlibat dalam inisialisasi kegiatan ini
+
+00:00:25.606 --> 00:00:28.386
+ditangani secara otomatis
+untukmu oleh Android.
+
+00:00:28.411 --> 00:00:31.928
+Bagian penting yang kita harus perhatikan
+adalah dalam berkas &lt;i&gt;MainActivity,&lt;/i&gt;
+
+00:00:31.953 --> 00:00:34.697
+metode &lt;i&gt;OnCreate&lt;/i&gt; dapat dipanggil
+secara otomatis.
+
+00:00:34.722 --> 00:00:37.414
+Ini adalah saat aktivitas dibuat.
+
+00:00:37.439 --> 00:00:40.482
+Ada banyak pekerjaan dan
+ada baris penting yang mengatakan
+
+00:00:40.507 --> 00:00:44.992
+&lt;i&gt;setContentView&lt;/i&gt; dan kemudian
+sumber ID untuk tata letak berkas.
+
+00:00:45.017 --> 00:00:47.434
+Ini adalah &lt;i&gt;R.layout.activity_main.&lt;/i&gt;
+
+00:00:47.459 --> 00:00:52.179
+Ini berarti bahwa tampilan konten
+aktivitas, harus ditetapkan ke tata letak
+
+00:00:52.204 --> 00:00:55.553
+sebagaimana ditentukan dalam
+aktivitas berkas XML utama.
+
+00:00:55.578 --> 00:00:59.548
+Ini adalah metode panggilan dan
+parameter input ID di sumber daya ini.
+
+00:00:59.573 --> 00:01:02.421
+Setelah kau mengatur tata letak yang
+akan digunakan untuk tampilan konten,
+
+00:01:02.446 --> 00:01:07.384
+maka perangkat android dapat melanjutkan
+dan mengurai berkas tata letak XML-nya.
+
+00:01:07.409 --> 00:01:09.378
+Mengurai kalimat adalah
+seperti membaca berkas ini dan
+
+00:01:09.403 --> 00:01:12.339
+mencoba menafsirkan bahwa ini
+seperti tata letak linear.
+
+00:01:12.364 --> 00:01:13.701
+Ini adalah tampilan teks.
+
+00:01:13.726 --> 00:01:15.296
+Ini adalah atribut dan sebagainya.
+
+00:01:15.321 --> 00:01:18.729
+Jadi mereka berusaha untuk
+memahami apa isi berkas tersebut.
+
+00:01:18.754 --> 00:01:21.742
+Perangkat Android dimulai dengan
+membaca bagian atas berkas.
+
+00:01:21.767 --> 00:01:24.484
+Dia mengakui bahwa
+ada tata letak linear sini.
+
+00:01:24.509 --> 00:01:28.926
+Kemudian mengembangkan objek Java
+untuk mewakili tata letak linear tersebut.
+
+00:01:28.951 --> 00:01:30.426
+Kemudiand ia pergi ke baris berikutnya
+
+00:01:30.451 --> 00:01:33.330
+dan melihat bahwa kita perlu menambahkan
+&lt;i&gt;TextView&lt;/i&gt; sebagai anak
+
+00:01:33.355 --> 00:01:35.886
+pada tata letak linear tersebut,
+seperti itu.
+
+00:01:35.911 --> 00:01:39.721
+Ini mulai terlihat seperti
+pandangan hirarki dari pelajaran dua.
+
+00:01:39.746 --> 00:01:41.212
+Apa yang saya tidak
+memberitahumu sebelumnya
+
+00:01:41.237 --> 00:01:44.794
+adalah bahwa ini sebenarnya
+hirarki dari sebuah objek Java.
+
+00:01:45.113 --> 00:01:47.827
+Kita akan mempelajari lebih banyak tentang
+objek Java dalam video selanjutnya
+
+00:01:47.852 --> 00:01:50.345
+jadi tidak masalah jika kau belum
+sepenuhnya memahaminya.
+
+00:01:50.370 --> 00:01:51.519
+Saat kita sampai ke baris berikutnya,
+
+00:01:51.544 --> 00:01:55.238
+kita perlu mengembangkan
+tata letak objek linear Java.
+
+00:01:55.263 --> 00:01:58.654
+Itu akan ditambahkan sebagai anak
+untuk akar &lt;i&gt;LinearLayout&lt;/i&gt; ini.
+
+00:01:58.679 --> 00:02:00.433
+Kemudian kita melihat
+elemen &lt;i&gt;Button&lt;/i&gt; [Tombol].
+
+00:02:00.458 --> 00:02:03.126
+Jadi kita menambahkannya
+sebagai anak ke &lt;i&gt;LinearLayout.&lt;/i&gt;
+
+00:02:03.151 --> 00:02:04.747
+Jadi kita terus menyusuri berkasnya
+
+00:02:04.772 --> 00:02:07.280
+sampai kita mengembangkan semua
+tampilan yang kita butuhkan
+
+00:02:07.305 --> 00:02:09.131
+untuk hirarki tampilan kita.
+
+00:02:09.156 --> 00:02:12.077
+Setelah kita memiliki
+tampilan hirarki dari objek Java
+
+00:02:12.102 --> 00:02:16.098
+maka kita dapat memanipulasi dan mengubah
+mereka sementara aplikasinya berjalan.
+
+00:02:16.439 --> 00:02:19.844
+Sebuah objek seperti &lt;i&gt;TextView&lt;/i&gt;
+berisi informasi penting.
+
+00:02:19.869 --> 00:02:22.916
+Seperti teks, warna teks, ukuran teks.
+
+00:02:22.941 --> 00:02:26.597
+Objek juga memiliki metode sehingga
+kita dapat memanggil metode-metode itu
+
+00:02:26.622 --> 00:02:28.944
+dan mengubah keadaan internal mereka.
+
+00:02:28.969 --> 00:02:32.201
+Jadi misalnya, kita dapat mengubah teks
+sementara aplikasinya berjalan.
+
+00:02:32.555 --> 00:02:36.507
+Berinteraksi dengan semua objek ini
+disebut orientasi objek pemrograman.
+
+00:02:36.532 --> 00:02:40.044
+Kami akan mencakup ini lebih rinci
+di dalam video mendatang.
+
+00:02:40.069 --> 00:02:41.236
+Jadi untuk meringkas,
+
+00:02:41.261 --> 00:02:44.826
+dalam &lt;i&gt;MainActivity&lt;/i&gt; saat kita memanggil
+&lt;i&gt;setContentView&lt;/i&gt; untuk tata letak ini,
+
+00:02:44.851 --> 00:02:49.307
+kemudian kita membaca tata letak ini dan
+mengembangkan sekelompok objek Java.
+
+00:02:49.332 --> 00:02:53.415
+Objek Java ini membuat
+tampilan hirarki aplikasi tersebut.
+
+00:02:53.440 --> 00:02:56.825
+&lt;i&gt;MainActivity&lt;/i&gt; berpegang pada
+tampilan hirarki ini, dan kemudian
+
+00:02:56.850 --> 00:02:58.794
+seperti saat kau berinteraksi
+dengan &lt;i&gt;MainActivity,&lt;/i&gt;
+
+00:02:58.819 --> 00:03:00.424
+dia dapat memperbarui objek ini.
+

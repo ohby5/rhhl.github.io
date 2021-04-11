@@ -1,0 +1,266 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.390 --> 00:00:03.210
+Bu sinovda siz TextView ob’ektini 
+yaratishni va unda metodlarni
+
+00:00:03.210 --> 00:00:05.210
+chaqirishni mashq qilasiz.
+
+00:00:05.210 --> 00:00:06.930
+Bu shunchaki mashq uchun bo‘lgani uchun,
+
+00:00:06.930 --> 00:00:11.250
+biz buni JustJava ilovasidan tashqarida 
+yangi Android ilovasida yaratamiz.
+
+00:00:11.250 --> 00:00:13.020
+Bu orqali JustJava ilovasida 
+tartibsizlik keltirib chiqarmaymiz.
+
+00:00:14.370 --> 00:00:19.070
+Android Studio-da quydagi &amp;gt; New Project 
+fayliga o‘tib Wizard proyektini oching.
+
+00:00:19.070 --> 00:00:21.650
+Keyin bularning barchasi uchun default 
+qiymatlarni qabul qilishingiz mumkin. 
+
+00:00:21.650 --> 00:00:25.620
+Bo‘sh faoliyat shablonini tanlaganingizga 
+ishonch hosil qiling, so‘ngra "Finish" ni bosing.
+
+00:00:28.210 --> 00:00:31.190
+Loyihangiz yaratilgach, qurilmangizda 
+ilovangizni ishga tushiring.
+
+00:00:32.380 --> 00:00:36.220
+default holatda "Hello World" 
+so‘zi paydo bo‘lishi kerak. 
+
+00:00:36.220 --> 00:00:38.220
+Ammo hozir biz biroz boshqacharoq 
+narsani amalga oshiramiz. 
+
+00:00:38.220 --> 00:00:42.340
+MainActivity sinfida biz 
+onCreate metodini o‘zgartiramiz. 
+
+00:00:42.340 --> 00:00:46.600
+Ushbu faoliyatning asosiy XML joylashuv 
+taribida setContentView ni chaqirish o‘rniga
+
+00:00:46.600 --> 00:00:49.080
+biz u yerda o‘zimizning TextView mizni 
+yaratamiz va sozlaymiz. 
+
+00:00:50.390 --> 00:00:51.960
+Android yaratuvchilarining saytida, 
+
+00:00:51.960 --> 00:00:56.010
+o‘quv bo‘limi mavjud va u yerda birinchi 
+ilovangizni qanday yaratish haqida so‘z ketadi. 
+
+00:00:56.010 --> 00:00:59.600
+Xususan, darslikning "Xabarlarni 
+ko‘rsatish" bo‘limiga qarayman. 
+
+00:00:59.600 --> 00:01:02.220
+Bu sizga onCreate 
+metodida TextView yaratishingiz
+
+00:01:02.220 --> 00:01:03.930
+mumkinligini aytadi
+
+00:01:03.930 --> 00:01:07.290
+Va bu yerda bu darsda avvalroq
+tanish bo‘lgan kod. 
+
+00:01:07.290 --> 00:01:08.850
+Biz yangi TextView ni yaratamiz va 
+
+00:01:08.850 --> 00:01:11.720
+uni textView deb nomlangan
+o‘zgaruvchining ichida saqlaymiz. 
+
+00:01:11.720 --> 00:01:14.708
+Bu konstruktor kirish parametri 
+sifatida kontekstni talab qiladi. 
+
+00:01:14.708 --> 00:01:18.140
+Va biz (uni) kirish parametri 
+sifatida o‘tkazmoqdamiz, 
+
+00:01:18.140 --> 00:01:21.780
+chunki (bu) joriy 
+faoliyatga tegishlidir.
+
+00:01:21.780 --> 00:01:24.450
+Va faoliyat ham
+kontekstdir, shuning uchun 
+
+00:01:24.450 --> 00:01:27.530
+u bizga TextView ob’ektini 
+to‘g‘ri shaklda yaratib beradi. 
+
+00:01:27.530 --> 00:01:30.610
+So‘ngra biz TextView ob’ektida
+metodlarni chaqirishimiz mumkin. 
+
+00:01:30.610 --> 00:01:35.330
+Esda saqlang, textView - bu, 
+o‘zgaruvchining nomi, TextView sinfi emas.
+
+00:01:35.330 --> 00:01:38.360
+Shuning uchun u kichkina harfla yozilgan. 
+
+00:01:38.360 --> 00:01:42.430
+Biz misol sifatida textView.setTextSize 
+va textView.setText ni chaqirishimiz mumin.
+
+00:01:43.830 --> 00:01:47.160
+Pastga tushamiz va bizga 
+setContentView ni chaqirishni va
+
+00:01:47.160 --> 00:01:49.890
+uni textView ga kirish parametri sifatda 
+o‘tkazishimiz mumkinligini aytmoqda.
+
+00:01:49.890 --> 00:01:51.690
+Agar yanayam pastroqqa tushsangiz,
+u yerda sizga onCreate metodi 
+
+00:01:51.690 --> 00:01:53.230
+uchun kod namunasi mavjud. 
+
+00:01:54.230 --> 00:01:55.520
+Bizga bu qismi zarur emas.
+
+00:01:55.520 --> 00:01:58.360
+Biz faqatgina bu qismiga e’tibor qaratamiz, 
+u yerda textView ni yaratamiz va 
+
+00:01:58.360 --> 00:02:01.160
+uni faoliyat contentView ning 
+joylashuv tartibi sifatida sozlaymiz. 
+
+00:02:02.440 --> 00:02:04.610
+Orqaga qaytib, Android Studio-da 
+MainActivity sinfida,
+
+00:02:04.610 --> 00:02:07.030
+men onCreate metodini o‘zgartirmoqchiman.
+
+00:02:07.030 --> 00:02:08.394
+Men bu yerda bir necha bo‘sh
+qatorlarni kiritmoqchiman. 
+
+00:02:09.535 --> 00:02:12.065
+Birinchi, konstruktordan foydalanib 
+yangi TextView ob’ektini yarataman. 
+
+00:02:13.245 --> 00:02:15.535
+Men o‘zgaruvchiga TextView 
+nomini bermoqchiman, lekin 
+
+00:02:15.535 --> 00:02:20.075
+siz istagan nomingizni qo‘llashingiz
+mumkin, toki u buning 
+
+00:02:20.075 --> 00:02:21.075
+nimaligini to‘g‘ri ifodalasin.
+
+00:02:22.080 --> 00:02:24.870
+Siz yaratgan matn o‘ziga 
+konteksni talab qiladi, shu sababli 
+
+00:02:24.870 --> 00:02:28.100
+men ushbu faoliyatga murojaat 
+qilish uchun bu narsaga o‘tmoqchiman.
+
+00:02:28.100 --> 00:02:30.500
+Va matnning keyingi qatorida, 
+
+00:02:30.500 --> 00:02:32.630
+textView ob’ektida metodni
+chaqirmoqchiman. 
+
+00:02:33.770 --> 00:02:38.100
+Nuqatani bosishim bilan, u menga 
+textView ob’ektida chaqirishim mumkin 
+
+00:02:38.100 --> 00:02:39.730
+bo‘lgan barcha metodlarni ko‘rsatadi.
+
+00:02:40.990 --> 00:02:44.340
+Agar yozishni boshlasam, u menga avtomatik 
+ravishda to‘ldiruvchi namunalarni taqdim qiladi.
+
+00:02:44.340 --> 00:02:47.720
+Ko‘rishingiz mumkinki, variantlar qisqardi. 
+
+00:02:47.720 --> 00:02:51.230
+Men ushbu avtomatik to‘ldirishni amalga 
+oshirish uchun, setText ni tanlayman. 
+
+00:02:53.140 --> 00:02:56.370
+So‘ngra, kirish argumanti sifatda
+men satr joylashim mumkin. 
+
+00:02:56.370 --> 00:02:59.230
+Va oxirga qadam, setContentView 
+qatorini sozlashimiz kerak.
+
+00:02:59.230 --> 00:03:04.240
+Bu XML joylashuv tartibi faylidan 
+foydalanish o‘rniga,shunchaki textView ga joylayman.
+
+00:03:04.240 --> 00:03:06.810
+Uni saqlayman va uni 
+qurilmada ishga tushiraman. 
+
+00:03:07.860 --> 00:03:11.840
+Men kutayotgan natijam, hozir ekranda 
+"Hello World" so‘zining o‘rniga "Wow" 
+
+00:03:11.840 --> 00:03:15.030
+deydigan yangi textView ni ko‘rsatishi kerak. 
+
+00:03:15.030 --> 00:03:15.660
+Va shunday qilyapti.
+
+00:03:16.680 --> 00:03:17.860
+Garchan bu biroz qoniqarsiz.
+
+00:03:17.860 --> 00:03:20.390
+Shu sababli men uni biroz 
+qiziqarli qilmoqchiman. 
+
+00:03:20.390 --> 00:03:24.198
+Men sizni ushbu textView ob’ektida
+boshqa metodlar bilan ishlashingizni,
+
+00:03:24.198 --> 00:03:27.254
+masalan, rangini, matn o‘lchamini 
+o‘zgartirishingizni istayman. 
+
+00:03:27.254 --> 00:03:29.294
+Agar siz yanada qiziquvchan bo‘lsangiz, 
+
+00:03:29.294 --> 00:03:32.780
+textView ob’ektida boshqa metodlarni
+ham chaqirib ko‘rishingiz mumkin. 
+
+00:03:32.780 --> 00:03:35.280
+textView uchun online hujjatlarni ko‘rib chiqing.
+
+00:03:35.280 --> 00:03:38.370
+Yana qanday metodlardan foydalanishingiz
+mumkinligini bilish uchun. 
+
+00:03:38.370 --> 00:03:40.490
+Tugatganingizdan so‘ng, davom
+etish uchun ushbu qutilarga bosing. 
+

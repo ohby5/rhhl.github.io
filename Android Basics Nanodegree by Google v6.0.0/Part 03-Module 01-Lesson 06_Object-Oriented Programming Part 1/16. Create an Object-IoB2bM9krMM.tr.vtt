@@ -1,0 +1,250 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.520 --> 00:00:03.270
+Son videoda, kısaca bir inşa edicinin sınıf içinde
+
+00:00:03.270 --> 00:00:07.910
+kısaca tanımlandığını ve nesne örnekleri oluşturmak için kullanıldığını söylemiştim.
+
+00:00:07.910 --> 00:00:10.610
+Bu örneği oluşturmak için TextView inşa ediciyi çağırıyoruz
+
+00:00:10.610 --> 00:00:14.220
+ve bir diğer örnek oluşturmak için çağırıyoruz, ve devamını.
+
+00:00:14.220 --> 00:00:17.190
+Bir inşa ediciyi nasıl çağıracağımızı görmek için koda bakalım.
+
+00:00:18.250 --> 00:00:22.280
+Miktar isimli yeni bir tamsayı değişkenini nasıl oluşturduğumuzu ve
+
+00:00:22.280 --> 00:00:24.960
+başlangıç olarak iki değer alacak şekilde ayarladığımızı hatırladınız mı?
+
+00:00:24.960 --> 00:00:26.340
+Yeni bir nesne oluşturmak ve
+
+00:00:26.340 --> 00:00:29.120
+onu bir değişkenin içine depolamak benzer bir formatı takip eder.
+
+00:00:30.200 --> 00:00:32.200
+Şunun gibi görünecek.
+
+00:00:32.200 --> 00:00:36.150
+Tamsayı veri türü yerine, nesne veri türümüz var.
+
+00:00:36.150 --> 00:00:38.770
+Nesne veri türü sınıf ismine ne dersek o.
+
+00:00:38.770 --> 00:00:41.650
+Bu örnekte, TextView.
+
+00:00:41.650 --> 00:00:45.700
+Çeşitli isimler için konvansiyonları takip ettiği sürece her şey olabilir.
+
+00:00:45.700 --> 00:00:47.720
+Onu şimdi sadece priceTextView olarak çağıracağız.
+
+00:00:47.720 --> 00:00:49.600
+Sonra onu yeni nesneyle eşitleyeceğiz.
+
+00:00:49.600 --> 00:00:51.740
+Ama bunu hemen daha ileriye sağ el kısmına doğru ayırabiliriz.
+
+00:00:52.800 --> 00:00:58.060
+Sağ el kısmı nesne veri türü tarafından takip edilen formatı,
+
+00:00:58.060 --> 00:01:00.190
+yani bu örnekteki TextView'i izler.
+
+00:01:00.190 --> 00:01:03.510
+Bu bir TextView sınıfında tanımlanan inşa ediciyi çağırmaktır
+
+00:01:03.510 --> 00:01:07.940
+böylece inşa edici girdi argümanları ile parantezlerimiz olur.
+
+00:01:07.940 --> 00:01:10.790
+Eğer inşa edici bir bağlam nesnesi isterse,
+
+00:01:10.790 --> 00:01:13.490
+o zaman bağlamı burada geçirmeliyiz.
+
+00:01:13.490 --> 00:01:18.120
+Unutmayın, bağlam nesnesi sizin uygulama kaynaklarınıza erişmenize ve
+
+00:01:18.120 --> 00:01:19.870
+uygulama çevresiyle ilgili diğer şeyleri görmenize yardımcı olur.
+
+00:01:20.940 --> 00:01:24.140
+Yani bunların tümü inşa ediciyi çağırarak yeni
+
+00:01:24.140 --> 00:01:26.060
+bir TextView nesnesi oluşturur ve
+
+00:01:26.060 --> 00:01:31.200
+sonra bu yeni nesneyi priceTextView isimli bir değişkenin içinde depolar.
+
+00:01:31.200 --> 00:01:34.830
+Ve bu değiken sadece tek bir TextView nesnesi tutabilir.
+
+00:01:34.830 --> 00:01:36.080
+bu da veri türüyle tanımlanır.
+
+00:01:37.210 --> 00:01:39.850
+Bir ImageView nesnesi oluşturup onu bi,r değişkenin
+
+00:01:39.850 --> 00:01:41.840
+içinde depolamanın diğer bir örneği de budur.
+
+00:01:41.840 --> 00:01:45.770
+Veri türü ImageView, değişken ismi cofeeImageView.
+
+00:01:45.770 --> 00:01:50.450
+Ve sonra yeni ImageView tarafından takip edilen görevlendirme operatörümüz var.
+
+00:01:50.450 --> 00:01:53.830
+Bu buradaki nesne veri türüyle aynı şekilde telaffuz edilir.
+
+00:01:53.830 --> 00:01:57.320
+İnşa ediciyi çağırdığımızdan ve girdileri geçmemiz gerektiğinden
+
+00:01:57.320 --> 00:02:00.620
+parantezlerimiz var ve girdileri buraya yazıyoruz.
+
+00:02:00.620 --> 00:02:03.420
+Bu da üçüncü örnek, bir düğme nesnesi yaratıp
+
+00:02:03.420 --> 00:02:05.700
+değişken içine depolama.
+
+00:02:05.700 --> 00:02:08.479
+VEri türü düğme, değişken ismi siparişiGönderDüğmesi
+
+00:02:08.479 --> 00:02:11.950
+ve sonra diyoruz ki, yapıcıyı çağıracak yeni Düğme
+
+00:02:13.140 --> 00:02:15.850
+kendi nesne veeri türünüzü vile tanımlayabilirsiniz.
+
+00:02:15.850 --> 00:02:19.820
+diyelim ki, öğrenğin, KediGörüşü için bir sınıf tanımlaması yarattım.
+
+00:02:19.820 --> 00:02:22.820
+Daha sonra bu satırı yeni bir KediGörüşü yaratmak için kullanabilirdim.
+
+00:02:22.820 --> 00:02:25.380
+bu durumda, yapıcı kedinin ismi için bir giriş dizisi
+
+00:02:25.380 --> 00:02:29.180
+talep eder işte bu yüzden parantez içine Kaplan koydum ve
+
+00:02:29.180 --> 00:02:32.280
+bunu KediGörüşü Yapıcıya geçirdim.
+
+00:02:32.280 --> 00:02:35.690
+yapıcıya girdi olarak neleri geçireceğinizi belirlemek için siz
+
+00:02:35.690 --> 00:02:41.450
+ya sınıfJavadöküman dosyasına ya da sınıf kaynak dosyasına bakmalısınız.
+
+00:02:41.450 --> 00:02:45.680
+tüm bu durumlarda yeni nesne yaratmak için yeni kelimesini kullanın.
+
+00:02:45.680 --> 00:02:47.730
+eğer Java anahtar sözcükler listesine geri gidersek,
+
+00:02:47.730 --> 00:02:51.040
+işte o zaman yeni kelimesini bu listede görürüz.
+
+00:02:52.190 --> 00:02:54.710
+Bazen belgelere bakarken,
+
+00:02:54.710 --> 00:02:58.820
+size fabrikametod'unu kullanarak yeni nesne yaratmanısı tavsiye edebilir.
+
+00:02:58.820 --> 00:03:01.510
+bu bir yapıcı yerinedir.
+
+00:03:01.510 --> 00:03:02.710
+İşte bir örnek.
+
+00:03:02.710 --> 00:03:04.290
+Yeni bir MedyaOynatıcı yaratmak için,
+
+00:03:04.290 --> 00:03:09.040
+belgeler size MedyaOynatıcı yarat metodunu tavsiye eder.
+
+00:03:09.040 --> 00:03:13.250
+ve bu bir medyaOynatıcı nesnesini bu değişken içinde depolanabilecek şekilde geri döndürür.
+
+00:03:13.250 --> 00:03:17.176
+nesneverisi türü fromatını takip eder, büyük M ile başlayan MedyaOynatıcısı
+
+00:03:17.176 --> 00:03:22.720
+nokta ve fabrika metodismi, ki bu durumda yaratma.
+
+00:03:22.720 --> 00:03:26.110
+daha sonra girdi bağımsız değişkenlerini bu meya oynatıcıyı başlangıç durumuna getirmek için geçersiniz.
+
+00:03:27.390 --> 00:03:29.710
+Şimdi nasıl Tost yaratacağınızı gösteren bir örnek.
+
+00:03:30.900 --> 00:03:33.700
+Tost, uygulamanızda geçici olarak beliren bir açılır pencere mesajıdır ve
+
+00:03:33.700 --> 00:03:34.389
+aniden yok olur.
+
+00:03:35.420 --> 00:03:38.540
+bu yüzden kod Tost ile başlar yani büyük T ile çünkü
+
+00:03:38.540 --> 00:03:39.800
+bu bir nesn veri türüdür.
+
+00:03:39.800 --> 00:03:44.050
+daha sonra bir noktamız var ve sonra Metinyarat ki bu fabrika metod adı.
+
+00:03:44.050 --> 00:03:48.730
+Ve daha sonra bu Tostu yaratmak için bağımsızdeğişkengirdilerini geçiyoruz.
+
+00:03:48.730 --> 00:03:51.800
+fabrika metod isminin ve girdi bağımsız değişkenlerinin ne olduklarını öğrenmek için
+
+00:03:51.800 --> 00:03:55.280
+Tost Sınıf belgelerini kontrol etmelisin.
+
+00:03:55.280 --> 00:03:58.440
+Genel olarak bilmek için ya yapıcı kullanarak ya da fabrika metodu kullanarak
+
+00:03:58.440 --> 00:04:01.780
+bir nesne yaratmalısın, bu nesneyi nasıl yaratacağınızı öğrenmek için
+
+00:04:01.780 --> 00:04:03.640
+google arama motorunu kullanabilirsiniz.
+
+00:04:03.640 --> 00:04:06.940
+yeni nesne yaratmanın en yaygın yolu yapıcı kullanmaktır.
+
+00:04:06.940 --> 00:04:10.180
+fabrika metodunu kullanma ihtiyacı hissetmeniz daha az yaygın fakat
+
+00:04:10.180 --> 00:04:12.690
+hangisini kullanacağınızdan emin olmak için bu nesnenin nasıl yaratılacağını
+
+00:04:12.690 --> 00:04:13.820
+google'da arayabilirsiniz.
+
+00:04:15.000 --> 00:04:18.180
+İşte nesne yaratma pratiği yapmanız için bir şans.
+
+00:04:18.180 --> 00:04:20.050
+bu kodun her satırında bir hata var.
+
+00:04:21.160 --> 00:04:22.380
+hatanın ne olduğunu bulun ve
+
+00:04:22.380 --> 00:04:24.770
+aşağıdaki kutulara doğru kodu yazın.
+

@@ -1,0 +1,308 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.660 --> 00:00:02.950
+Vamos começar com o primeiro 
+passo, que é mudar
+
+00:00:02.950 --> 00:00:05.266
+o cabeçalho "PREÇO" para, por exemplo,
+"RESUMO DO PEDIDO".
+
+00:00:06.836 --> 00:00:09.903
+Primeiro, abra o arquivo de layout 
+<i>activity_main</i>, e então encontre
+
+00:00:09.903 --> 00:00:12.260
+o <i>view</i> que controla o cabeçalho PREÇO.
+
+00:00:12.940 --> 00:00:14.270
+Ponho meu cursor aqui,
+
+00:00:14.270 --> 00:00:17.240
+e vejo que este <i>view</i>
+fica destacado corretamente.
+
+00:00:17.240 --> 00:00:20.710
+Então posso seguir em frente
+e modificar essa <i>string</i> aqui.
+
+00:00:20.710 --> 00:00:23.800
+Vou apagar isso e digitar <i>Order Summary</i>.
+
+00:00:23.800 --> 00:00:26.370
+A atualização é feita corretamente
+na janela anterior.
+
+00:00:26.370 --> 00:00:30.030
+Note que eu escrevi 
+com um "O" e um "S" maiúsculos
+
+00:00:30.030 --> 00:00:31.910
+em vez de tudo em caixa alta.
+
+00:00:31.910 --> 00:00:34.390
+Se em algum momento 
+quisermos mudar nossa UI
+
+00:00:34.390 --> 00:00:39.950
+e setarmos caixa alta para falso,
+então meu texto ficará correto.
+
+00:00:39.950 --> 00:00:42.360
+Então eu prefiro digitar 
+<i>Order Summary</i> dessa forma
+
+00:00:42.360 --> 00:00:44.850
+e então usar o atributo
+<i>textAllCaps=true</i>
+
+00:00:45.940 --> 00:00:47.910
+OK, então o primeiro item está completo.
+
+00:00:47.910 --> 00:00:51.600
+A segunda tarefa é achar o <i>TextView</i>
+correspondente ao valor do preço
+
+00:00:51.600 --> 00:00:54.130
+e mudar para este ID.
+
+00:00:54.130 --> 00:00:56.310
+Se eu for para baixo 
+para o próximo <i>TextView</i>
+
+00:00:56.310 --> 00:00:58.050
+após o cabeçalho do <i>Order Summary</i>
+
+00:00:58.050 --> 00:01:02.830
+encontramos o <i>TextView</i> do valor do preço,
+e está destacado aqui também.
+
+00:01:02.830 --> 00:01:07.840
+Como solicitado, mudarei o ID para, 
+digamos, <i>order_summary_text_view</i>.
+
+00:01:07.840 --> 00:01:11.170
+Legal, então essas são 
+todas as mudanças no XML do layout.
+
+00:01:11.170 --> 00:01:13.520
+Vamos rodar o aplicativo para ver
+se ainda funciona.
+
+00:01:13.790 --> 00:01:15.260
+Na verdade, ele não funciona.
+
+00:01:15.260 --> 00:01:19.490
+Recebo um erro dizendo que não consegue
+achar o símbolo <i>price_text_view</i>
+
+00:01:19.490 --> 00:01:21.320
+no arquivo Java.
+
+00:01:21.320 --> 00:01:23.880
+Parece que precisaremos ir
+para os próximos passos antes
+
+00:01:23.880 --> 00:01:25.160
+de compilar nosso aplicativo.
+
+00:01:26.850 --> 00:01:29.730
+No método <i>Main Activity displayMessage</i>,
+nós devemos
+
+00:01:29.730 --> 00:01:34.120
+mudar a variável nome de <i>priceTextView</i>
+para <i>orderSummaryTextView</i>.
+
+00:01:34.120 --> 00:01:37.260
+No arquivo <i>Main Activity</i>, 
+no método <i>displayMessage</i>,
+
+00:01:37.260 --> 00:01:39.430
+encontre o <i>priceTextView</i>.
+
+00:01:39.430 --> 00:01:42.570
+Irei apagar isso e digitar
+<i>orderSummaryTextView</i>.
+
+00:01:42.570 --> 00:01:44.212
+Será em <i>camelCase</i> e
+
+00:01:44.212 --> 00:01:47.470
+começará com um "o" minúsculo,
+pois trata-se do nome de uma variável.
+
+00:01:47.470 --> 00:01:50.678
+Imediatamente recebo o aviso
+de que a variável não está sendo usada.
+
+00:01:50.678 --> 00:01:53.830
+Então vou copiá-la, 
+e usarei na próxima linha aqui,
+
+00:01:53.830 --> 00:01:58.580
+pois há um erro dizendo
+que <i>priceTextView</i> não está definida.
+
+00:01:58.580 --> 00:02:02.490
+E então apague isso, 
+e use o novo nome da variável aqui.
+
+00:02:02.490 --> 00:02:04.550
+Legal, isso faz com que o erro desapareça.
+
+00:02:04.550 --> 00:02:08.329
+Mas ainda há outro erro aqui, e acho
+que está relacionado com a última tarefa.
+
+00:02:09.080 --> 00:02:13.338
+O último item aqui diz: 
+Mudar <i>R.id.price_text_view</i> para
+
+00:02:13.338 --> 00:02:16.035
+<i>R.id.order_summary_text_view</i>.
+
+00:02:16.735 --> 00:02:19.652
+Darei um clique duplo 
+nesse erro em vermelho,
+
+00:02:19.652 --> 00:02:24.437
+vou apagá-lo e digitar
+<i>order_summary_text_view</i>.
+
+00:02:24.437 --> 00:02:26.630
+Pronto, o erro foi resolvido.
+
+00:02:27.780 --> 00:02:29.930
+E agora o aplicativo funciona
+sem nenhum erro.
+
+00:02:29.930 --> 00:02:31.660
+O layout inicial está correto.
+
+00:02:31.660 --> 00:02:34.530
+Ao invés de dizer "preço",
+agora ele diz "resumo do pedido",
+
+00:02:34.530 --> 00:02:38.380
+se eu mudar a quantidade e apertar
+em "pedir", então o resumo é exibido aqui.
+
+00:02:38.660 --> 00:02:41.890
+Vamos falar sobre observações 
+que você talvez tenha feito.
+
+00:02:41.890 --> 00:02:44.400
+Lembre-se de que não há 
+respostas certas ou erradas.
+
+00:02:44.400 --> 00:02:49.098
+Primeiro, você deve ter notado
+que ao darmos a ID <i>order_summary_text_view</i>
+
+00:02:49.098 --> 00:02:53.730
+para o <i>TextView</i> do preço, 
+essa mesma formatação apareceu de novo
+
+00:02:53.730 --> 00:02:58.460
+no código Java quando modificamos 
+o método <i>displayMessage</i>.
+
+00:02:58.460 --> 00:03:02.130
+Você também deve ter notado que a mudança 
+de "preço" para "resumo do pedido",
+
+00:03:02.130 --> 00:03:04.930
+parece ter repercutido em 
+outras partes do código.
+
+00:03:05.710 --> 00:03:09.230
+Algumas dessas mudanças são necessárias 
+para que o aplicativo compile novamente,
+
+00:03:09.230 --> 00:03:11.840
+mas outras mudanças forem melhores,
+
+00:03:11.840 --> 00:03:15.810
+apenas por convenção, para que houvesse 
+referências obsoletas para "preço".
+
+00:03:17.190 --> 00:03:19.880
+Olhando mais de perto 
+no método <i>displayMessage</i>,
+
+00:03:19.880 --> 00:03:23.910
+você deve ter notado que só há
+um parâmetro de entrada: <i>String message</i>.
+
+00:03:23.910 --> 00:03:25.270
+E não há valor retornando.
+
+00:03:25.970 --> 00:03:30.640
+Por isso não temos uma linha de código
+nesse método que diz "retorne algo".
+
+00:03:30.640 --> 00:03:34.864
+Você deve ter reconhecido a palavra 
+<i>TextView</i>, que vimos no XML para adicionar
+
+00:03:34.864 --> 00:03:36.320
+um <i>TextView</i> para nosso layout.
+
+00:03:37.350 --> 00:03:39.570
+É escrito exatamente
+da mesma forma que aqui.
+
+00:03:40.480 --> 00:03:44.830
+Também, essa linha de código aqui
+parece ser para alocação de uma variável,
+
+00:03:44.830 --> 00:03:46.740
+onde temos o tipo da variável,
+
+00:03:46.740 --> 00:03:50.674
+o nome da variável, 
+e então o valor inicial aqui.
+
+00:03:52.035 --> 00:03:55.825
+Isso é parecido com declarar
+inteiros ou <i>strings</i>.
+
+00:03:55.825 --> 00:03:59.115
+E se você olhar de perto, 
+talvez você tenha pensado que isso é
+
+00:03:59.115 --> 00:04:03.705
+um chamado para um método, 
+<i>findViewByID</i> seguido de um parênteses,
+
+00:04:03.705 --> 00:04:06.885
+alguma coisa no meio e os 
+parênteses fechando.
+
+00:04:06.885 --> 00:04:10.310
+Parecido com o <i>setText</i> aqui,
+há um parênteses abrindo,
+
+00:04:10.310 --> 00:04:12.510
+alguma coisa no meio
+e parênteses fechando.
+
+00:04:12.510 --> 00:04:14.980
+Então isso também pode ser 
+o chamado para um método.
+
+00:04:15.230 --> 00:04:18.240
+Nos próximos vídeos,
+veremos com mais detalhes
+
+00:04:18.240 --> 00:04:21.230
+no que exatamente está acontecendo
+nessas linhas de código
+
+00:04:21.230 --> 00:04:24.060
+e começar a entender 
+o que realmente significam.
+

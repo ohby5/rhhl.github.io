@@ -1,0 +1,305 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.660 --> 00:00:05.050
+Hãy bắt đầu với bước đầu tiên là 
+thay đổi tiêu đề giá để tóm tắt
+
+00:00:05.050 --> 00:00:05.656
+đặt hàng.
+
+00:00:05.656 --> 00:00:09.333
+Trước tiên tôi mởi tệp layout 
+activity_main, sau đó tôi bắt đầu và
+
+00:00:09.333 --> 00:00:12.000
+tìm dạng xem 
+điều khiển tiêu đề giá.
+
+00:00:12.000 --> 00:00:14.270
+Và tôi đặt con trỏ của tôi ở đây,
+
+00:00:14.270 --> 00:00:17.240
+sau đó tôi thấy rằng dạng xem này 
+được làm nổi bật một cách chính xác.
+
+00:00:17.240 --> 00:00:20.710
+Nên giờ tôi có thể tiếp túc và 
+sửa đổi chuỗi này ở đây.
+
+00:00:20.710 --> 00:00:23.800
+Tôi sẽ xóa nó và 
+gõ Tóm Tắt Đặt Hàng.
+
+00:00:23.800 --> 00:00:26.370
+Lệnh đó được cập nhật chính xác
+trong cửa sổ xem trước.
+
+00:00:26.370 --> 00:00:28.690
+Hãy lưu ý rằng tôi đánh vần 
+với chữ cái O viết hoa và
+
+00:00:28.690 --> 00:00:31.910
+chữ S viết hoa thay vì viết hoa tất cả.
+
+00:00:31.910 --> 00:00:34.390
+Nếu ta từng quyết định thay đổi UI và
+
+00:00:34.390 --> 00:00:39.950
+thiết lập viết hoa tất cả chữ là sai, 
+thì chữ tôi viết vẫn đúng.
+
+00:00:39.950 --> 00:00:42.360
+Vì thế tôi thích gõ 
+Tóm Tắt Đặt Hàng như thế này và
+
+00:00:42.360 --> 00:00:44.850
+sau đó sử dụng thuộc tính 
+textAllCaps = true.
+
+00:00:46.170 --> 00:00:47.840
+Được rồi, mục đầu tiên đã hoàn thành.
+
+00:00:47.840 --> 00:00:51.600
+Nhiệm vụ thứ hai là tìm 
+giá trị giá TextView và
+
+00:00:51.600 --> 00:00:54.130
+thay đổi nó để có một ID.
+
+00:00:54.130 --> 00:00:58.050
+Nếu tôi chuyển TextView tiếp theo xuống 
+sau tiêu đề tóm tắt đặt hàng
+
+00:00:58.050 --> 00:01:02.830
+thì đây là giá trị giá TextView, 
+và giá trị này cũng được làm nổi bật ở đây.
+
+00:01:02.830 --> 00:01:07.840
+Theo yêu cầu, tôi sẽ thay đổi 
+ID để hiển thị order_summary_text_view.
+
+00:01:07.840 --> 00:01:11.170
+Tuyệt, vậy đây là toàn bộ thay đổi 
+sang XML trong cách bố trí.
+
+00:01:11.170 --> 00:01:13.210
+Tôi sẽ chạy ứng dụng để 
+đảm bảo nó vẫn hoạt động.
+
+00:01:14.220 --> 00:01:15.210
+Thực tế, ứng dụng không hoạt động.
+
+00:01:15.210 --> 00:01:19.490
+Tôi gặp lỗi báo rằng ứng dụng không thể 
+tìm thấy biểu tượng price_text_view
+
+00:01:19.490 --> 00:01:21.320
+trong tệp Java.
+
+00:01:21.320 --> 00:01:24.250
+Nhìn có vẻ như chúng ta cần thực hiện 
+các bước tiếp theo trước khi làm cho
+
+00:01:24.250 --> 00:01:25.080
+ứng dụng của chúng ta biên dịch.
+
+00:01:26.850 --> 00:01:29.730
+Trong Main Activity hiển thị 
+phương pháp thông báo, chúng ta cần phải
+
+00:01:29.730 --> 00:01:34.120
+thay đổi tên biến từ 
+priceTextView thành orderSummaryTextView.
+
+00:01:34.120 --> 00:01:37.260
+Trong tệp hoạt động chính 
+trong phương pháp hiển thị thông báo,
+
+00:01:37.260 --> 00:01:39.430
+Tôi tìm thấy priceTextView ở đây.
+
+00:01:39.430 --> 00:01:42.570
+Tôi sẽ xóa nó và 
+sau đó gõ orderSummaryTextView.
+
+00:01:42.570 --> 00:01:44.212
+Nó sẽ hiển thị trong camelCase và
+
+00:01:44.212 --> 00:01:47.940
+bắt đầu với chữ cái o viết thường 
+vì nó là một tên biến.
+
+00:01:47.940 --> 00:01:50.348
+Ngay lập tức tôi nhận được cảnh báo rằng 
+biến số chưa bao giờ được sử dụng.
+
+00:01:50.348 --> 00:01:53.410
+Vì thế tôi sẽ sao chép, và 
+thực sự sử dụng biến đó ở dòng tiếp theo
+
+00:01:53.410 --> 00:01:58.580
+ở đây bởi vì có một lỗi thông báo 
+rằng priceTextView chưa được khắc phục.
+
+00:01:58.580 --> 00:02:02.740
+Và sau đó xóa cái này, và 
+sau đó sử dụng tên biến mới ở đây.
+
+00:02:02.740 --> 00:02:04.550
+Tuyệt, và lỗi sai đã khắc phục xong.
+
+00:02:04.550 --> 00:02:07.859
+Nhưng tôi vẫn gặp một lỗi khác ở đây, và 
+tôi nghĩ lỗi đó liên quan tới nhiệm vụ cuối.
+
+00:02:09.080 --> 00:02:13.598
+Mục cuối cùng ở đây yêu cầu 
+thay đổi R.id.price_text_view thành
+
+00:02:13.598 --> 00:02:16.035
+R.id.order_summary_text_view.
+
+00:02:16.035 --> 00:02:19.652
+Tôi sẽ nhấp chuột hai lần 
+vào lỗi màu đỏ, và
+
+00:02:19.652 --> 00:02:24.437
+Tôi sẽ xóa nó đi và 
+gõ vào order_summary_text_view.
+
+00:02:24.437 --> 00:02:26.630
+Vậy đó, và giờ lỗi sai đã biến mất.
+
+00:02:27.780 --> 00:02:29.930
+Và bây giờ ứng dụng đã hoạt động 
+mà không gặp bất kỳ lỗi nào.
+
+00:02:29.930 --> 00:02:31.660
+Cách bố trí ban đầu đúng.
+
+00:02:31.660 --> 00:02:34.340
+Thay vì hiển thị giá tiền, 
+bây giờ tóm tắt đặt hàng được hiển thị, và
+
+00:02:34.340 --> 00:02:37.520
+nếu thay đổi số lượng và nhấn đặt hàng, 
+sau đó tóm tắt xuất hiện ở đây.
+
+00:02:38.660 --> 00:02:41.890
+Hãy nói về bất kỳ quan sát 
+mà bạn có thể đã thấy được.
+
+00:02:41.890 --> 00:02:44.400
+Hãy nhớ rằng không có câu trả lời đúng 
+hay sai.
+
+00:02:44.400 --> 00:02:49.098
+Trước tiên, bạn có thể thấy rằng đối với
+priceTextView, khi ta cho nó một ID của
+
+00:02:49.098 --> 00:02:53.730
+order_summary_text_view, định dạng 
+tương tự lại xuất hiện sau đó trong
+
+00:02:53.730 --> 00:02:58.460
+Mã lệnh Java khi chúng ta đang sửa đổi 
+phương pháp displayMessage.
+
+00:02:58.460 --> 00:03:02.010
+Bạn cũng có thể nhận thấy rằng bằng cách 
+thay đổi giá thành tóm tắt đặt hàng
+
+00:03:02.010 --> 00:03:04.840
+dường như gây ra một loạt các gợn 
+ảnh hưởng đến các phần khác của mã lệnh.
+
+00:03:04.840 --> 00:03:09.230
+Bây giờ một số thay đổi này là bắt buộc 
+để chạy lại ứng dụng, nhưng
+
+00:03:09.230 --> 00:03:11.840
+những thay đổi khác sẽ tốt 
+hơn chứ không chỉ nhằm
+
+00:03:11.840 --> 00:03:15.810
+quy ước để chúng ta không có bất kỳ 
+tham chiếu cũ, kéo dài đến giá cả.
+
+00:03:17.190 --> 00:03:19.880
+Khi xem xét kỹ hơn 
+phương pháp displayMessage,
+
+00:03:19.880 --> 00:03:23.910
+bạn có thể nhận thấy rằng chỉ có 
+một tham số đầu vào, chuỗi thông tin.
+
+00:03:23.910 --> 00:03:24.980
+Và không có giá trị trả lại.
+
+00:03:26.100 --> 00:03:30.640
+&gt;&gt; Đó là lý do tại sao ta không có dòng trong 
+phương pháp để nhận thông tin trả lại nào.
+
+00:03:30.640 --> 00:03:34.864
+Bạn cũng có thể nhận thấy rằng từ TextView 
+mà ta nhìn thấy trong XML là để thêm
+
+00:03:34.864 --> 00:03:36.320
+một dạng xem văn bản vào cách bố trí.
+
+00:03:37.500 --> 00:03:39.330
+Nó được đánh vần giống hệt 
+cách đánh vần ở đây.
+
+00:03:40.480 --> 00:03:44.830
+Hơn nữa, dòng mã lệnh ở đây có vẻ giống
+tác vụ về biến số,
+
+00:03:44.830 --> 00:03:46.740
+trong đó chúng ta có kiểu dữ liệu biến,
+
+00:03:46.740 --> 00:03:50.674
+tên biến số, và sau đó, 
+có giá trị ban đầu ở đây.
+
+00:03:52.035 --> 00:03:55.825
+Điều này tương tự như cách chúng ta 
+kê khai số nguyên và chuỗi.
+
+00:03:55.825 --> 00:03:59.115
+Và nếu bạn xem xét kỹ hơn nữa 
+bạn có thể nghĩ rằng điều này giống như
+
+00:03:59.115 --> 00:04:03.705
+phương pháp có tên là findViewById 
+bên trong dấu ngoặc đơn mở,
+
+00:04:03.705 --> 00:04:06.885
+một số nội dung ở giữa, và 
+sau đó là một dấu ngoặc đơn đóng.
+
+00:04:06.885 --> 00:04:10.310
+Tương tự với setText ở đây, 
+cũng có một dấu ngoại đơn mở,
+
+00:04:10.310 --> 00:04:12.510
+một số nội dung ở giữa, và 
+sau đó là một dấu ngoặc đơn đóng.
+
+00:04:12.510 --> 00:04:14.200
+Nên đây cũng là một phương pháp áp dụng.
+
+00:04:15.230 --> 00:04:18.240
+Trong các video tiếp theo, 
+chúng ta sẽ tìm hiểu kỹ hơn
+
+00:04:18.240 --> 00:04:21.230
+chính xác nhưng điều gì đang xảy ra 
+với những dòng mã lệnh này và
+
+00:04:21.230 --> 00:04:23.350
+tìm hiểu ý nghĩa thực sự của nó
+.
+

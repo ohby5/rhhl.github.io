@@ -1,0 +1,266 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.390 --> 00:00:03.210
+Bu testte bir text view nesnesi oluşturma
+ve ona yöntem çağırma
+
+00:00:03.210 --> 00:00:05.210
+pratiği yapacaksınız.
+
+00:00:05.210 --> 00:00:06.930
+Bu sadece pratik olduğundan,
+
+00:00:06.930 --> 00:00:11.250
+bunu JustJava uygulaması dışında yeni
+bir Android uygulamasında yapacağız.
+
+00:00:11.250 --> 00:00:13.320
+Bu şekilde JustJava uygulamasını
+bozmamış olacağız.
+
+00:00:14.370 --> 00:00:19.070
+Dosya &gt; Yeni Proje’ye giderek
+Android Studio’da proje sihirbazını açın.
+
+00:00:19.070 --> 00:00:21.650
+Sonra tüm bunlar için varsayılanları
+kabul edebilirsiniz.
+
+00:00:21.650 --> 00:00:25.620
+Boş aktivite şablonunun seçili
+olduğundan emin olun sonra Finish’e tıkla.
+
+00:00:28.210 --> 00:00:31.190
+Projeniz oluşturulduğunda devam edin
+ve cihazınızda uygulamayı çalıştırın.
+
+00:00:32.380 --> 00:00:36.220
+Varsayılan davranış burada Merhaba Dünya
+kelimelerinin görünmesi olmalı.
+
+00:00:36.220 --> 00:00:38.220
+Ancak şimdi biraz farklı
+bir şey yapacağız.
+
+00:00:38.220 --> 00:00:42.340
+MainActivity sınıfında onCreate
+yöntemini değiştireceğiz.
+
+00:00:42.340 --> 00:00:46.600
+setContentView’u bu activity_main
+XML düzenine çağırmak yerine,
+
+00:00:46.600 --> 00:00:49.080
+kendi text view’umuz oluşturacağız
+ve buraya tanımlayacağız.
+
+00:00:50.390 --> 00:00:51.960
+Android Geliştiriciler sitesinde,
+
+00:00:51.960 --> 00:00:56.010
+ilk uygulamanızı yapmanızdan bahseden
+bir eğitim bölümü bulunuyor.
+
+00:00:56.010 --> 00:00:59.600
+Özellikle eğitimin mesajı göster
+bölümüne bakıyorum.
+
+00:00:59.600 --> 00:01:02.220
+Size onCreate yönteminde,
+
+00:01:02.220 --> 00:01:03.930
+oluşturabileceğimizi anlatıyor.
+
+00:01:03.930 --> 00:01:07.290
+Burada daha önce bu dersten
+bildiğimiz bir kod var.
+
+00:01:07.290 --> 00:01:08.850
+Yeni bir TextView oluşturuyoruz ve
+
+00:01:08.850 --> 00:01:11.720
+textView adı verilen bir değişken
+içinde kaydediyoruz.
+
+00:01:11.720 --> 00:01:14.708
+Bu oluşturucu bir girdi parametresi
+olarak bir içerik gerektiriyor.
+
+00:01:14.708 --> 00:01:18.140
+Ve girdi parametresi olarak
+(this) yazıyoruz,
+
+00:01:18.140 --> 00:01:21.780
+çünkü (this) mevcut aktiviteye
+işaret ediyor.
+
+00:01:21.780 --> 00:01:24.450
+Bir aktivite aynı zamanda
+bir içerik bu nedenle
+
+00:01:24.450 --> 00:01:27.530
+bu bizim için doğru şekilde
+bir TextView nesnesi oluşturacaktır.
+
+00:01:27.530 --> 00:01:30.610
+Sonra bu TextView nesnesi üzerine
+yöntemler çağırabiliriz.
+
+00:01:30.610 --> 00:01:35.330
+Unutmayın bu bir textView değişkeni
+bir TextView sınıfı değil.
+
+00:01:35.330 --> 00:01:38.360
+Bu nedenle buradaki t küçük harf.
+
+00:01:38.360 --> 00:01:42.430
+Örnek olarak textView.setTextSize ve
+textView.setText çağırabiliriz.
+
+00:01:43.830 --> 00:01:47.160
+Aşağı indiğinizde
+setContentView ve
+
+00:01:47.160 --> 00:01:49.890
+bu textView’ü girdi parametresi
+olarak yazın diyor.
+
+00:01:49.890 --> 00:01:52.290
+Biraz daha aşağı indiğinizde
+size onCreate yöntemi ile ilgili
+
+00:01:52.290 --> 00:01:53.830
+bir kod örneği gösteriyor.
+
+00:01:54.230 --> 00:01:55.520
+Bu kısma ihtiyacımız yok.
+
+00:01:55.520 --> 00:01:58.360
+Sadece bir textView oluşturduğumuz
+ve sonra bunu aktivite düzeni olarak
+
+00:01:58.360 --> 00:02:01.160
+tanımladığımız bu kısma
+odaklanıyoruz.
+
+00:02:02.440 --> 00:02:04.610
+Android Studio’da
+MainActivity sınıfında,
+
+00:02:04.610 --> 00:02:07.030
+onCreate yöntemini değiştireceğim.
+
+00:02:07.030 --> 00:02:08.394
+Buraya birkaç boş satır
+ekliyorum.
+
+00:02:09.535 --> 00:02:12.565
+İlk olarak oluşturucuyu kullanarak
+yeni bir TextView nesnesi oluşturacağım.
+
+00:02:13.245 --> 00:02:15.535
+Buna TextView değişken ismi
+vereceğim ancak
+
+00:02:15.535 --> 00:02:20.075
+bunun ne olduğunu açıklayıcı
+olduğu sürece size buna
+
+00:02:20.075 --> 00:02:21.175
+başka isim verebilirsiniz.
+
+00:02:22.080 --> 00:02:24.870
+Oluşturduğunuz metin bir içerik
+gerektiriyor bu nedenle
+
+00:02:24.870 --> 00:02:28.100
+bu aktiviteye işaret etmek
+için buraya (this) yazıyorum.
+
+00:02:28.100 --> 00:02:30.500
+Bir sonraki kod satırında,
+
+00:02:30.500 --> 00:02:32.630
+textView nesnesine bir
+yöntem çağıracağım.
+
+00:02:33.770 --> 00:02:38.100
+Noktaya basar basmaz, bu textView
+nesnesine çağırabileceğim tüm olası
+
+00:02:38.100 --> 00:02:39.730
+yöntemleri gösterecektir.
+
+00:02:40.990 --> 00:02:44.340
+Yazmaya başlarsam bu otomatik
+tamamlanan seçeneklerini sunacaktır.
+
+00:02:44.340 --> 00:02:47.720
+Seçeneklerin azaldığını görebilirsiniz.
+
+00:02:47.720 --> 00:02:51.230
+setText’i seçiyorum böylece
+bu otomatik tamamlamayı kullanabilirim.
+
+00:02:53.140 --> 00:02:56.370
+Sonra bir giriş bağımsız değişkeni olarak
+bir string’i girebilirim.
+
+00:02:56.370 --> 00:02:59.230
+Son adım setContentView
+satırını değiştirmektir.
+
+00:02:59.230 --> 00:03:04.240
+Bu XML düzen dosyasını kullanmak yerine
+buraya textView yazıyorum.
+
+00:03:04.240 --> 00:03:06.810
+Bunu kaydedeceğim ve sonra
+bunu cihazda çalıştıracağım.
+
+00:03:07.860 --> 00:03:11.840
+Olmasını beklediğim şey ekranın
+yeni bir text view göstermesi
+
+00:03:11.840 --> 00:03:15.030
+Merhaba Dünya yerine Wow! demeli
+
+00:03:15.030 --> 00:03:16.060
+ve öyle diyor.
+
+00:03:16.680 --> 00:03:17.960
+Bu yine de pek etkileyici değil.
+
+00:03:17.960 --> 00:03:20.390
+Bunu biraz daha ilginç
+hale getirmek istiyorum.
+
+00:03:20.390 --> 00:03:24.198
+Bu textView nesnesi üzerine
+başka yöntemler çağırmanızı istiyorum.
+
+00:03:24.198 --> 00:03:27.254
+Rengi ya da metin boyutunu
+değiştirmek gibi.
+
+00:03:27.254 --> 00:03:29.294
+Eğer çok daha fazla maceracıysanız,
+
+00:03:29.294 --> 00:03:32.780
+textView nesnesine başka
+yöntemler çağırmayı deneyebilirsiniz.
+
+00:03:32.780 --> 00:03:35.280
+Diğer yöntemlerin ne olduğunu
+öğrenmek için
+
+00:03:35.280 --> 00:03:38.370
+textView ile ilgili online
+dokümantasyona bakın.
+
+00:03:38.370 --> 00:03:40.790
+Bunu bitirdiğinizde,
+devam etmek için bu kutuları işaretleyin
+

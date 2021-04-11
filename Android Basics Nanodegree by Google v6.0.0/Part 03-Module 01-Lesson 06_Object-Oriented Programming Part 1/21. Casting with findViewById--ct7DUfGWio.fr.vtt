@@ -1,0 +1,443 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.610 --> 00:00:02.650
+J'ai ajouté qu'on vient juste
+de voir dans notre app.
+
+00:00:02.650 --> 00:00:07.660
+Ça dit Voir <i>orderSummaryTextView
+= findViewById</i>,
+
+00:00:07.660 --> 00:00:13.000
+alors on passe la ressource ID pour
+<i>order_summary_text_view</i>.
+
+00:00:13.000 --> 00:00:15.910
+Mais ça entraîne une erreur dans
+Android Studio sur la prochain ligne.
+
+00:00:17.750 --> 00:00:21.830
+Ça dit qu'il ne peut résoudre
+la méthode <i>setText</i>.
+
+00:00:21.830 --> 00:00:24.430
+Si j'ajoute une autre 
+ligne de code ici,
+
+00:00:24.430 --> 00:00:27.880
+Je peux vous montrer les types de méthodes
+qui sont valides sur cette variable.
+
+00:00:28.890 --> 00:00:32.400
+Donc, on vient juste de créer
+la variable <i>orderSummaryTextView</i> ici,
+
+00:00:32.400 --> 00:00:34.330
+et c'est <i>TypeView</i>, 
+et donc
+
+00:00:34.330 --> 00:00:37.520
+sur la prochaine ligne, on devrait 
+être apte à appeler des méthodes sur ça.
+
+00:00:37.520 --> 00:00:40.540
+Mais si vous regardez les suggestions
+de saisie semi-automatique,
+
+00:00:40.540 --> 00:00:44.120
+ces méthodes sont en 
+fait des méthodes de vue.
+
+00:00:44.120 --> 00:00:46.140
+Il n'y a pas de méthodes 
+<i>TextView</i> spécifiques.
+
+00:00:47.200 --> 00:00:49.350
+Par exemple, il n'y a 
+pas de méthode <i>setText</i>.
+
+00:00:51.320 --> 00:00:54.455
+C'est pourquoi on a eu une erreur ici
+quand on essaye d'appeler <i>setText</i>.
+
+00:00:56.020 --> 00:01:00.890
+Vous ne pouvez pas non plus établir la taille
+du texte ou la couleur du texte ou autre.
+
+00:01:00.890 --> 00:01:02.350
+Alors où sont toutes ces méthodes?
+
+00:01:03.840 --> 00:01:08.700
+Bien, a chose est qu'un <i>TextView</i> 
+est un type de vue plus spécifique.
+
+00:01:10.430 --> 00:01:13.240
+Alors si on veut appeler les méthodes 
+<i>TextView</i>
+
+00:01:13.240 --> 00:01:16.777
+sur cet objet on doit s'assurer
+que c'est un objet <i>TextView</i>.
+
+00:01:17.820 --> 00:01:21.160
+Ok. Maintenant la variable 
+est un objet <i>TextView</i>.
+
+00:01:21.160 --> 00:01:25.750
+Mais alors, j'ai une autre erreur qui dit
+types incompatibles, car un <i>TextView</i>
+
+00:01:25.750 --> 00:01:31.090
+est requis sur le côté droit,
+mais on trouve juste une vue régulière.
+
+00:01:31.090 --> 00:01:34.240
+C'est parce que la méthode <i>findViewById</i>
+retourne une Vue.
+
+00:01:34.240 --> 00:01:35.558
+Alors, 
+comment peut-on concilier cela ?
+
+00:01:35.558 --> 00:01:41.720
+Eh bien, puisque <i>TextView</i> est un type de vue 
+plus spécifique ou met une autre façon,
+
+00:01:41.720 --> 00:01:47.260
+un <i>TextView</i> est une sous-classe de vue,
+on peut utiliser une chose appelée casting.
+
+00:01:47.260 --> 00:01:51.970
+<i>Casting</i> en Java signifie qu'on peut prendre
+une Vue retournée par cette méthode et
+
+00:01:51.970 --> 00:01:54.280
+le traite comme un <i>TextView</i>
+
+00:01:54.280 --> 00:01:58.760
+Donc maintenant ce côté droit est
+est un objet <i>TextView</i> et
+
+00:01:58.760 --> 00:02:02.168
+alors on peut le stocker dans la
+variable <i>orderSummaryTextView</i>.
+
+00:02:03.460 --> 00:02:06.110
+Je sais que ce doit être vraiment
+écrasante parce que je viens de
+
+00:02:06.110 --> 00:02:07.970
+mentionner une tonne de nouveaux
+concepts.
+
+00:02:07.970 --> 00:02:09.210
+Essayons d'expliquer 
+encore une fois.
+
+00:02:10.229 --> 00:02:14.280
+La méthode <i>findViewById</i> retourne
+un objet de type Vue.
+
+00:02:14.280 --> 00:02:15.820
+En écrivant cette notation,
+
+00:02:15.820 --> 00:02:19.690
+parenthèses avec le type de données de 
+l'objet désiré dans le milieu de celui-ci.
+
+00:02:19.690 --> 00:02:23.250
+On va mouler cette 
+Vue en un <i>TextView</i>.
+
+00:02:23.250 --> 00:02:27.217
+ALors l'entière expression ici
+évalue pour un objet <i>TextView</i>.
+
+00:02:28.600 --> 00:02:32.140
+Alors, on peut stocker ça dans la variable,
+sur le côté gauche,
+
+00:02:32.140 --> 00:02:35.790
+qui est <i>orderSummary</i>,
+et il a un type <i>TextView</i>.
+
+00:02:35.790 --> 00:02:40.740
+Maintenant, sur les lignes suivantes, on peut 
+appeler les méthodes <i>TextView</i> sur cet objet.
+
+00:02:40.740 --> 00:02:43.720
+Voyez-vous maintenant comment toutes les
+méthodes de texte font leur apparition ici?
+
+00:02:44.840 --> 00:02:48.070
+<i>setAllCaps</i>, 
+<i>setTextSize</i>, et plus.
+
+00:02:48.070 --> 00:02:51.660
+Donc je peux juste effacer ça maintenant,
+car <i>setText</i> devrait fonctionner
+
+00:02:51.660 --> 00:02:54.170
+et il n'y a plus d'erreur.
+
+00:02:54.170 --> 00:02:57.100
+Alors si on veut être apte à
+appeler les méthodes <i>TextView</i>,
+
+00:02:57.100 --> 00:02:59.410
+on doit avoir 
+un objet <i>TextView</i>.
+
+00:02:59.410 --> 00:03:02.500
+Afin d'avoir un objet <i>TextView</i>,
+on doit appeler <i>findViewById</i>,
+
+00:03:02.500 --> 00:03:06.890
+et puis mouler cet objet Vue
+en un <i>TextView</i>.
+
+00:03:06.890 --> 00:03:09.700
+La raison casting 
+fonctionne est car
+
+00:03:09.700 --> 00:03:13.440
+cette Vue ici dans la hiérarchie
+de vue est en fait un <i>TextView</i>.
+
+00:03:13.440 --> 00:03:17.520
+Si on veut le mouler en quelque chose comme 
+un bouton radio, ça ne fonctionnerait pas,
+
+00:03:17.520 --> 00:03:20.840
+car le <i>orderSummaryTextView</i>
+est en fait un <i>TextView</i>, donc
+
+00:03:20.840 --> 00:03:23.000
+on doit le mouler en
+un type approprié.
+
+00:03:24.275 --> 00:03:28.370
+Similairement, dans la méthode <i>displayQuantity</i>,
+on appelle <i>findViewById</i> et
+
+00:03:28.370 --> 00:03:32.350
+nous passons dans cette ressource ID 
+pour la quantité <i>TextView</i>.
+
+00:03:32.350 --> 00:03:36.090
+Ça retourne une Vue et on
+le moule en un <i>TextView</i> et
+
+00:03:36.090 --> 00:03:39.330
+on peut stocker ça dans cette variable
+appelée <i>quantityTextView</i>.
+
+00:03:40.400 --> 00:03:43.450
+Cette variable est de type 
+<i>TextView</i>, et alors,
+
+00:03:43.450 --> 00:03:48.170
+sur les lignes suivantes, on peut appeler les 
+méthodes <i>TextView</i> dessus, comme <i>setText</i>.
+
+00:03:48.170 --> 00:03:51.160
+Voici le code mis à jour de l'activité
+principal utilisant casting.
+
+00:03:51.160 --> 00:03:56.400
+On peut mouler ces Vues en <i>TextViews</i>
+pour qu'on puisse les stocker dans des
+
+00:03:56.400 --> 00:04:00.622
+variables de type <i>TextView</i> donc
+dans cette liste de l'activité principale,
+
+00:04:00.622 --> 00:04:05.090
+maintenant <i>quantityTextView</i> et
+<i>orderSummaryTextView</i> sont de type <i>TextView</i>.
+
+00:04:05.090 --> 00:04:06.820
+On peut appler les 
+méthodes <i>TextView</i> sur cela,
+
+00:04:06.820 --> 00:04:10.810
+et nous ne sommes pas seulement limités
+à les traiter comme des Vues.
+
+00:04:10.810 --> 00:04:15.050
+Et maintenant on peut appeler les méthodes
+<i>TextView</i> spécifiques sur ces variables.
+
+00:04:15.050 --> 00:04:19.041
+Par exemple, on peut appeler <i>setText</i>
+sur le <i>orderSummaryTextView</i>,
+
+00:04:19.041 --> 00:04:21.880
+et on peut appeler <i>setText</i>
+sur le <i>quantityTextView</i>.
+
+00:04:21.880 --> 00:04:22.650
+Comme vous pouvez voir,
+
+00:04:22.650 --> 00:04:27.180
+vous devez être prudent sur les
+types de données à être utilisés ici.
+
+00:04:27.180 --> 00:04:31.290
+Jusqu'ici, quand on a appelé des méthodes, on 
+ne s'est pas inquiété sur la valeur de retour,
+
+00:04:31.290 --> 00:04:34.400
+car la méthode <i>setText</i> 
+n'a pas de valeur de retour.
+
+00:04:34.400 --> 00:04:37.180
+Pareil avec la méthode 
+<i>imageView.setImageResource</i>.
+
+00:04:37.180 --> 00:04:39.060
+Ça n'a pas de valeur de retour.
+
+00:04:39.060 --> 00:04:41.540
+Mais d'autres méthodes peut
+avoir des valeurs de retour.
+
+00:04:41.540 --> 00:04:45.590
+Par exemple, dans la classe <i>TextView</i>
+on a une méthode <i>getTextSize</i>.
+
+00:04:45.590 --> 00:04:47.680
+Ça retourne un entier, donc
+
+00:04:47.680 --> 00:04:53.410
+on peut stocker le résultat de cette méthode
+dans une variable appelé <i>sizeOfTypeInt</i>.
+
+00:04:53.410 --> 00:04:55.140
+Voici une autre méthode
+qui a une valeur de retour.
+
+00:04:55.140 --> 00:04:58.270
+Dans la classe <i>Button</i> on peut
+appeler la méthode <i>getHeight</i>,
+
+00:04:58.270 --> 00:05:03.420
+et ça retourne une valeur entière, donc
+on peut le stocker dans une variable.
+
+00:05:03.420 --> 00:05:06.450
+Si vous essayez de stocker ce résultat
+dans une chaîne, par exemple,
+
+00:05:06.450 --> 00:05:10.810
+vous obtiendriez une erreur,
+car cette méthode retourne un entier.
+
+00:05:10.810 --> 00:05:14.988
+Afin de savoir quel type de données doit
+passer dans une méthode et quel type de
+
+00:05:14.988 --> 00:05:19.290
+données est retourné par une méthode,
+vous devriez vérifier la documentation.
+
+00:05:19.290 --> 00:05:21.260
+Et par exemple, 
+dans la classe <i>TextView</i>,
+
+00:05:21.260 --> 00:05:25.760
+si vous appelez une de ces méthodes,
+elle retourne une valeur de type int.
+
+00:05:25.760 --> 00:05:28.620
+Le type de données de valeur de retour est
+sur la colonne de gauche ici.
+
+00:05:28.620 --> 00:05:33.040
+Pour les autres méthodes, vous pourriez obtenir 
+vide comme valeur de retour, ou des booléens,
+
+00:05:33.040 --> 00:05:38.330
+ce qu'on n'a pas encore appris,
+ou flottants ou longs etc.
+
+00:05:38.330 --> 00:05:42.790
+Cette page de documentation page montre
+aussi les types de données attendus pour
+
+00:05:42.790 --> 00:05:45.010
+les entrées pour chaque méthode.
+
+00:05:45.010 --> 00:05:49.590
+Par exemple, la méthode <i>setTextColor</i>
+requiert un entier comme entrée et
+
+00:05:49.590 --> 00:05:53.110
+la valeur de retour est vide,
+donc il n'y a pas de valeur de retour.
+
+00:05:53.110 --> 00:05:56.010
+Donc vérifiez la documentation pour savoir
+quels types de données sont attendus.
+
+00:05:56.010 --> 00:05:58.750
+Autrement, vous aurez des erreurs
+dans Android Studio disant que
+
+00:05:58.750 --> 00:06:01.070
+les types de données 
+ne correspondent pas.
+
+00:06:01.070 --> 00:06:02.630
+Maintenant c'est 
+votre tour de pratiquer.
+
+00:06:02.630 --> 00:06:05.580
+En-dessous, il y a quatre différents 
+exemples de code.
+
+00:06:05.580 --> 00:06:10.100
+Certain des codes peut contenir des erreurs
+liées à la correspondance des types de données.
+
+00:06:10.100 --> 00:06:11.165
+Si vous trouvez une erreur,
+
+00:06:11.165 --> 00:06:15.540
+décrivez comment vous êtes supposé le régler
+en l'écrivant dans les cases fournies.
+
+00:06:15.540 --> 00:06:19.948
+Autrement, vous pouvez juste écrire Pas
+d'erreur si le code est bon.
+
+00:06:19.948 --> 00:06:22.545
+Ça va être un quiz difficile
+car on vient de couvrir
+
+00:06:22.545 --> 00:06:26.555
+beaucoup de concepts, et ce code 
+est toujours assez nouveau pour vous.
+
+00:06:26.555 --> 00:06:30.105
+Prenez votre temps et vérifiez
+la documentation pour ces méthodes.
+
+00:06:30.105 --> 00:06:33.695
+Assurez-vous que les entrées et les 
+valeurs de retour soient correctes et
+
+00:06:33.695 --> 00:06:37.665
+que, si on déclare des variables, qu'on
+a les types de données corrects ici.
+
+00:06:37.665 --> 00:06:39.265
+Aussi, 
+consultez la documentation pour
+
+00:06:39.265 --> 00:06:42.375
+les appels de ces méthodes pour s'assurer
+qu'on utilise les méthodes correctement.
+

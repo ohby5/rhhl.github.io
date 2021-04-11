@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.390 --> 00:00:02.426
+Hemos aprendido bastante sobre métodos.
+
+00:00:02.448 --> 00:00:04.046
+Ahora puedes tomarte un descanso,
+
+00:00:04.046 --> 00:00:05.380
+puedes hacer gimnasia,
+
+00:00:05.380 --> 00:00:09.046
+puedes salir a darte una vuelta
+o puedes abrir otra pestaña del navegador.
+
+00:00:09.370 --> 00:00:10.910
+Cuando estés listo,
+puedes volver
+
+00:00:10.910 --> 00:00:13.420
+y veremos el método
+<i>displayMessage</i> [mostrar mensaje],
+
+00:00:13.600 --> 00:00:15.072
+uno de mis métodos favoritos.
+
+00:00:15.785 --> 00:00:18.666
+En el siguiente ejercicio con códigos,
+vas a modificar la <i>app</i>
+
+00:00:18.666 --> 00:00:21.910
+para que, en vez de <i>Precio</i>,
+ponga <i>Order summary</i> [resumen del pedido].
+
+00:00:21.910 --> 00:00:25.246
+Este es un nombre mejor, porque si cambias
+la cantidad y pulsas <i>Pedir</i>,
+
+00:00:25.246 --> 00:00:28.136
+se muestra un resumen aquí,
+y te dice algo más que el precio.
+
+00:00:28.214 --> 00:00:31.292
+Este es un pequeño cambio
+en la interfaz, pero mientras lo haces,
+
+00:00:31.408 --> 00:00:33.888
+vas a modificar el método <i>displayMessage</i>,
+
+00:00:34.080 --> 00:00:37.536
+que te dimos en la lección 2
+sin explicarte lo que hace realmente.
+
+00:00:37.910 --> 00:00:40.350
+En los próximos vídeos,
+empezaremos a entender más
+
+00:00:40.448 --> 00:00:43.070
+sobre las diferentes partes
+que constituyen este método.
+
+00:00:43.250 --> 00:00:46.536
+Empezarás experimentando haciendo
+cambios en algunos de estos valores
+
+00:00:46.536 --> 00:00:47.856
+para ver qué pasa.
+
+00:00:48.150 --> 00:00:52.624
+Cuando hagas algún cambio se producirá
+un error en el método <i>displayPrice</i>,
+
+00:00:52.976 --> 00:00:55.280
+así que puedes borrar este método ahora.
+
+00:00:55.960 --> 00:00:59.216
+Hasta te sale un aviso que dice
+que este método nunca se usa.
+
+00:00:59.690 --> 00:01:00.940
+Así que vamos a borrarlo.
+
+00:01:01.910 --> 00:01:04.480
+El objetivo general es cambiar
+la sección del precio
+
+00:01:04.480 --> 00:01:06.720
+para llamarla la sección
+del resumen de pedido.
+
+00:01:06.740 --> 00:01:09.813
+Hay un par de cambios extras
+que iremos haciendo según avancemos.
+
+00:01:10.528 --> 00:01:14.030
+En el archivo de diseño <i>activity_main.xml</i>,
+cambia el encabezamiento <i>Precio</i>
+
+00:01:14.030 --> 00:01:15.472
+por, pongamos, <i>Order summary</i>.
+
+00:01:15.880 --> 00:01:18.422
+Luego encuentra la <i>TextView</i>
+para el valor del precio.
+
+00:01:18.656 --> 00:01:20.830
+No el encabezamiento,
+sino el valor de verdad.
+
+00:01:20.900 --> 00:01:23.650
+Cambia esa vista para tener
+la <i>id</i> [identidad] en pantalla.
+
+00:01:24.090 --> 00:01:26.370
+La <i>id</i> de la vista era algo
+como <i>price_text_view</i>,
+
+00:01:26.370 --> 00:01:29.500
+pero al haberla transformado
+en una sección de resumen de pedidos,
+
+00:01:29.500 --> 00:01:31.146
+vamos a actualizar la <i>id</i> también.
+
+00:01:31.500 --> 00:01:34.736
+Luego, en el archivo <i>MainActivity</i>
+del método <i>displayMessage</i>,
+
+00:01:35.008 --> 00:01:39.568
+cambia el nombre de la variable de
+<i>priceTextView</i> a <i>orderSummaryTextView</i>.
+
+00:01:40.450 --> 00:01:44.957
+Y por último, cambia la referencia
+de <i>R.id.price_text_view</i>
+
+00:01:45.200 --> 00:01:49.260
+a <i>R.id.order_summary_text_view</i>,
+con guiones bajos.
+
+00:01:50.270 --> 00:01:52.040
+Cuando acabes, marca estas casillas.
+
+00:01:52.960 --> 00:01:54.432
+Luego trata de ser objetivo
+
+00:01:54.600 --> 00:01:57.096
+y haz cualquier observación
+sobre lo que está pasando
+
+00:01:57.096 --> 00:01:58.430
+en el método <i>displayMessage</i>.
+
+00:01:59.296 --> 00:02:01.280
+¿Puedes adivinar qué está pasando
+
+00:02:01.504 --> 00:02:05.664
+o qué relación hay entre el layout
+del XML y el archivo Java?
+

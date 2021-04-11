@@ -1,0 +1,254 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.210 --> 00:00:04.370
+Avvalroq biz sonni display metodiga
+o‘tkazishni ko‘rib chiqqan edik.
+
+00:00:04.370 --> 00:00:08.350
+Keling endi turli kiritish(input ) va chiqarish(output ) 
+metodlari haqida suhbatlashamiz.
+
+00:00:08.350 --> 00:00:11.460
+MainActivity dagi submitOrder ni 
+misol tariqasida olaylik. 
+
+00:00:12.510 --> 00:00:15.000
+Metodda kodning ko‘plab 
+qatorlari bor deylik.
+
+00:00:15.000 --> 00:00:16.670
+Foydalanuvchi Order 
+tugmasiga bosganda
+
+00:00:16.670 --> 00:00:19.330
+bu submitOrder 
+metodini chaqiradi.
+
+00:00:19.330 --> 00:00:23.200
+Android qurilmasi barcha buyruqlarni 
+boshidan oxirigacha bajaradi,
+
+00:00:23.200 --> 00:00:26.980
+va calculatePrice 
+metodini chaqirganda 
+
+00:00:26.980 --> 00:00:30.400
+u calculatePrice metodi 
+aniqlangan joyga o‘tadi.
+
+00:00:30.400 --> 00:00:33.830
+Deylik u MainActivity 
+faylni tagida aniqlanggan.
+
+00:00:33.830 --> 00:00:37.020
+Android qurilmasi barcha buyruqlarni 
+boshidan oxirigacha bajaradi
+
+00:00:37.020 --> 00:00:41.270
+so‘ng submitOrder metodiga qaytadi.
+
+00:00:41.270 --> 00:00:44.340
+Va bu buyruqni yakuniga 
+yetguncha bajarishni 
+
+00:00:44.340 --> 00:00:45.268
+davom etadi.
+
+00:00:45.268 --> 00:00:47.240
+calculatePrice metodni chaqirganda 
+
+00:00:47.240 --> 00:00:49.510
+biz ko‘plab input larni 
+shunday yuboramizki,
+
+00:00:49.510 --> 00:00:53.620
+bu kod qatorlarini bajarishda, 
+bu input qiymatlarini qo‘llay olamiz.
+
+00:00:53.620 --> 00:00:55.070
+Bu metodni qo‘llash natijasida
+
+00:00:55.070 --> 00:00:58.940
+biz bitta output (chiqish) qiymatini 
+chaqiruvchiga qaytarishimiz mumkin.
+
+00:00:58.940 --> 00:01:03.030
+Shunday qilib, output qiymatini kodning 
+keyingi qatorida qo‘llasak boladi.
+
+00:01:03.030 --> 00:01:07.090
+Javada metodning kiritiladigan qiymatlarini 
+input parameters deb nomlanadi.
+
+00:01:07.090 --> 00:01:09.520
+Ular umuman bo‘lmasligi(nol) yoki 
+bir nechta bo‘lishi mumkin.
+
+00:01:10.550 --> 00:01:13.370
+Javada chiqish qimatlari 
+return value deb nomlanadi,
+
+00:01:13.370 --> 00:01:16.470
+ular ham umuman bo‘lmasligi(nol) yoki 
+bir nechta bo‘lishi mumkin.
+
+00:01:16.470 --> 00:01:20.420
+Masalan, input parameter - bu quantity 
+
+00:01:20.420 --> 00:01:22.840
+calculatePrice metodda o‘tkazilgan qiymat.
+
+00:01:22.840 --> 00:01:26.957
+Shunday qilib, bu metod quantity ni 
+butun buyurtmaning umumiy qiymatni 
+
+00:01:26.957 --> 00:01:28.130
+aniqlash uchun qo‘llashi mumkin.
+
+00:01:28.130 --> 00:01:31.350
+Keyin, umumiy qiymatni(total price ) 
+return value sifatida qaytarib berishimiz mumkin.
+
+00:01:31.350 --> 00:01:34.046
+//Va keyin submitOrder metodni pastida, 
+mana bu yerda, 
+
+00:01:34.046 --> 00:01:38.253
+//biz ushbu umumiy qiymatdan total price dan boshqa narsalarni bajarish uchun 
+foydalanishimiz mumkin, masalan uni ekranda ko‘rsatish yoki
+
+00:01:38.253 --> 00:01:40.930
+chek yaratish va hokazo.
+
+00:01:40.930 --> 00:01:43.730
+Xulosa qilib aytsak, biz bu yerda 
+calculatePrice metodni aniqlaymiz(define ), 
+
+00:01:43.730 --> 00:01:45.400
+bu yerda esa uni chaqiramiz(call ).
+
+00:01:45.400 --> 00:01:49.490
+Biz buyurilgan qahvaning narxini 
+hisoblash metodni yaratmoqchimiz.
+
+00:01:49.490 --> 00:01:53.410
+Hozir biz narxni to‘g‘ridan-to‘g‘ri 
+SubmitOrder metodida hisoblaymiz, 
+
+00:01:53.410 --> 00:01:57.020
+ammo narxni hisoblash mantig‘i 
+biroz murakkamroq bo‘ladi.
+
+00:01:57.020 --> 00:01:59.030
+Shuning uchun, alohida metodni yarataylik.
+
+00:01:59.030 --> 00:02:01.948
+Keyin biz shunda kodni nusxa ko‘chirmay va qo‘ymay,
+
+00:02:01.948 --> 00:02:04.080
+uni xohlagancha chaqirishimiz mumkin.
+
+00:02:04.080 --> 00:02:07.730
+Android-da ishlashda tajribaga orttirganingiz sayin, 
+yangi metodni qachon yaratishingiz kerakligini 
+
+00:02:07.730 --> 00:02:11.850
+va qachon kerak emasligini yaxshiroq tushunasiz.
+
+00:02:11.850 --> 00:02:14.690
+Bu ko‘nikmangiz tajriba va vaqt o‘tgan sayin ortadi.
+
+00:02:14.690 --> 00:02:17.640
+Shunday qilib, biz birinchi marta 
+mustaqil ravishda 
+
+00:02:17.640 --> 00:02:20.800
+MainActivity da 
+yangi metodni yaratamiz.
+
+00:02:20.800 --> 00:02:24.575
+Kodni yozishdan avval, 
+kodning ba’zi qismlarini 
+
+00:02:24.575 --> 00:02:28.460
+o‘qib, to‘g‘ri metodni 
+tanlashni o‘rganishmiz.
+
+00:02:28.460 --> 00:02:31.700
+Shunday qilib, eslatmalarda 
+sizga uchta variantni taqdim etamiz.
+
+00:02:31.700 --> 00:02:35.830
+Ushbu uchta kod qisimlarini ko‘rib 
+chiqing va qaysi biri buyurtma 
+
+00:02:35.830 --> 00:02:40.330
+narxini hisoblash metodini 
+to‘g‘ri bajarishini aniqlang.
+
+00:02:40.330 --> 00:02:42.330
+Eslatmalardagi havolani bosganingizda, 
+
+00:02:42.330 --> 00:02:46.850
+A, B va C variantlari 
+uchun kod mavjudligini ko‘rasiz.
+
+00:02:48.380 --> 00:02:49.290
+Maqsad - 
+
+00:02:49.290 --> 00:02:53.360
+siz ilgari hech qachon ko‘rmagan 
+kodni o‘qishni qulaylashtirishdir.
+
+00:02:53.360 --> 00:02:57.370
+Biz hali metodni yaratishning 
+barcha qoidalarni o‘rganmadik, 
+
+00:02:57.370 --> 00:03:01.169
+ammo siz qaysi variant to‘g‘ri ekanligini 
+taxmin qilishingizni so‘rardim.
+
+00:03:02.630 --> 00:03:05.091
+Java metodini aniqlash(define ) 
+bo‘yicha ma’lumot olish uchun 
+
+00:03:05.091 --> 00:03:09.140
+sizga Google qidiruvidan 
+foydalanishni tavsiya qilaman.
+
+00:03:09.140 --> 00:03:11.450
+Turli xil qidiruv natijalar orasida,
+
+00:03:11.450 --> 00:03:15.100
+siz tushunarsiz dokumentatsiyadagi 
+ma’lumotlarga duch kelasiz.
+
+00:03:15.100 --> 00:03:18.290
+Ammo siz ushbu sahifalardagi 
+hamma narsani tushunmasligingizdan 
+
+00:03:18.290 --> 00:03:21.950
+qo‘rqmaslikni istardim, chunki 
+hamma narsani tushunmaslik odatiy holdir.
+
+00:03:21.950 --> 00:03:25.780
+Siz qilishingiz kerak bo‘lgan narsa 
+bu maqolalardan tushunganingizni va 
+
+00:03:25.780 --> 00:03:28.030
+sizning muammongiz bilan bog‘liq 
+bo‘lgan narsalarni olishdir.
+
+00:03:29.140 --> 00:03:30.610
+Shunday qilib, ushbu uchta kod 
+
+00:03:30.610 --> 00:03:34.260
+variantlarini o‘qing, Internetda ba’zi 
+ma’lumotlarni qidirib toping va keyin 
+
+00:03:34.260 --> 00:03:37.627
+calculatePrice metodini qanday qilib to‘g‘ri aniqlash
+to‘g‘risida eng yaxshi taxminlarni tanlang.
+

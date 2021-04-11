@@ -1,0 +1,232 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.680 --> 00:00:02.800
+Satu parameter input sudah
+kita buat bersama.
+
+00:00:02.800 --> 00:00:05.689
+Ini adalah kode metode &lt;i&gt;calculatePrice&lt;/i&gt;
+yang sudah termasuk
+
+00:00:05.689 --> 00:00:07.110
+di catatan instruktur.
+
+00:00:07.110 --> 00:00:09.760
+Sekarang mari kita lakukan
+kasus dua parameter input.
+
+00:00:09.760 --> 00:00:14.450
+Dalam metode &lt;i&gt;submitOrder&lt;/i&gt;, kita ingin
+panggil &lt;i&gt;calculatePrice&lt;/i&gt; (&lt;i&gt;quantity&lt;/i&gt;, 10).
+
+00:00:14.450 --> 00:00:18.580
+Di mana 10
+mewakili $10 per cangkir kopi.
+
+00:00:18.580 --> 00:00:20.900
+Jadi pertama-tama kita ubah ini.
+
+00:00:20.900 --> 00:00:26.214
+Dalam metode &lt;i&gt;submitOrder&lt;/i&gt;, saya akan
+panggil &lt;i&gt;calculatePrice(quantity, 10)&lt;/i&gt;.
+
+00:00:26.214 --> 00:00:29.610
+Saya masukkan dua argumen
+untuk metode ini.
+
+00:00:29.610 --> 00:00:32.950
+Ada eror karena tidak cocok dengan
+metode &lt;i&gt;signature&lt;/i&gt; di sini.
+
+00:00:32.950 --> 00:00:35.470
+Saya akan perbarui sebentar lagi.
+
+00:00:35.470 --> 00:00:38.580
+Dalam tanda kurung
+akan saya tambahkan koma.
+
+00:00:38.580 --> 00:00:41.520
+Dan kemudian ketik &lt;i&gt;int price&lt;/i&gt;
+
+00:00:41.520 --> 00:00:47.040
+karena kita memasukkan harga sebagai
+input kedua dan itu bilangan bulat.
+
+00:00:47.040 --> 00:00:50.190
+Langsung muncul peringatan 
+ada eror karena itu tidak cocok
+
+00:00:50.190 --> 00:00:54.140
+dengan metode &lt;i&gt;signature&lt;/i&gt; di sini yang hanya
+memiliki satu parameter input.
+
+00:00:54.140 --> 00:00:57.200
+Saya akan mengubahnya sehingga
+memiliki parameter input kedua.
+
+00:00:57.200 --> 00:00:58.420
+Di dalam kurung buka dan
+
+00:00:58.420 --> 00:01:01.070
+kurung tutup ini, saya akan tambahkan
+parameter kedua.
+
+00:01:02.280 --> 00:01:05.630
+Karena ini adalah harga per cangkir kopi,
+saya akan menyebutnya
+
+00:01:05.630 --> 00:01:10.030
+harga per cangkir, dan itu adalah angka,
+maka saya tentukan tipe datanya &lt;i&gt;int&lt;/i&gt;.
+
+00:01:11.050 --> 00:01:13.420
+Nama jenis parameter bisa apa saja
+sesuka Anda.
+
+00:01:13.420 --> 00:01:16.850
+Harus menjelaskan informasi
+yang dimaksudkan.
+
+00:01:16.850 --> 00:01:20.530
+Sedangkan tipe data haruslah
+tipe data Java spesifik.
+
+00:01:20.530 --> 00:01:24.090
+Begitu juga &lt;i&gt;string int&lt;/i&gt; dan lainnya
+yang belum kita pelajari.
+
+00:01:24.090 --> 00:01:29.670
+Saya juga perbarui &lt;i&gt;doc&lt;/i&gt; Java untuk
+menjelaskan parameter input kedua ini.
+
+00:01:29.670 --> 00:01:33.070
+Saat saya amati metode ini,
+kita ambil kuantitas dan
+
+00:01:33.070 --> 00:01:36.630
+mengalikannya dengan 5
+untuk $5 untuk secangkir kopi.
+
+00:01:36.630 --> 00:01:40.130
+Tapi sekarang harga per cangkir
+telah berubah menjadi variabel.
+
+00:01:40.130 --> 00:01:43.960
+Jadi mari kita gunakan harga per cangkir
+bukan &lt;i&gt;hard coding&lt;/i&gt; dengan nilai 5.
+
+00:01:43.960 --> 00:01:46.890
+Sekarang harga total pesanan
+akan menjadi kuantitas
+
+00:01:46.890 --> 00:01:48.270
+kali harga per cangkir.
+
+00:01:48.270 --> 00:01:51.500
+Jika Anda ingat analogi pola
+yang saya bicarakan
+
+00:01:51.500 --> 00:01:55.350
+sebelumnya, sekarang kuantitas dan
+harga per cangkir dapat ditukar
+
+00:01:55.350 --> 00:01:57.929
+dengan nilai yang berbeda
+karena parameter inputnya.
+
+00:01:58.750 --> 00:02:01.700
+Anda bisa panggil &lt;i&gt;calculatePrice&lt;/i&gt;
+dengan kuantitas yang berbeda,
+
+00:02:01.700 --> 00:02:04.980
+harga per cangkir yang berbeda
+dan perhitungan ini masih berfungsi.
+
+00:02:06.030 --> 00:02:08.840
+Sekarang kita selesaikan
+kasus parameter input 0.
+
+00:02:08.840 --> 00:02:10.190
+Dalam metode &lt;i&gt;submitOrder&lt;/i&gt;,
+
+00:02:10.190 --> 00:02:13.110
+kita panggil &lt;i&gt;calculatePrice&lt;/i&gt;
+dengan kurung kosong.
+
+00:02:14.310 --> 00:02:17.200
+Dalam metode &lt;i&gt;submitOrder&lt;/i&gt;,
+saat saya panggil &lt;i&gt;calculatePrice&lt;/i&gt;,
+
+00:02:17.200 --> 00:02:18.619
+argumennya akan saya hapus.
+
+00:02:19.620 --> 00:02:21.930
+Kita tidak melewatkan
+input apapun ke metode ini.
+
+00:02:22.790 --> 00:02:25.600
+Langsung muncul garis merah
+karena ada ketidakcocokan dengan
+
+00:02:25.600 --> 00:02:28.290
+signature metode, jadi
+saya akan lanjutkan dan menghapus
+
+00:02:28.290 --> 00:02:29.900
+semua parameter input ini.
+
+00:02:31.110 --> 00:02:34.380
+Ada eror lagi karena parameter ini
+tidak ada sehingga saya dapat
+
+00:02:34.380 --> 00:02:35.820
+lanjutkan dan menghapusnya.
+
+00:02:37.330 --> 00:02:41.460
+Sekarang muncul eror yaitu tak
+dapat menghitung harga per cangkir.
+
+00:02:41.460 --> 00:02:44.720
+Ini bukan lagi variabel input,
+jadi kita perlu kembali ke
+
+00:02:44.720 --> 00:02:49.060
+nilai &lt;i&gt;hard coded&lt;/i&gt; yaitu $5
+atau Anda bisa memilih harga lainnya.
+
+00:02:50.070 --> 00:02:53.230
+Komputer tidak mengeluh tentang kuantitas
+karena itu sebenarnya
+
+00:02:53.230 --> 00:02:54.570
+variabel global, dan
+
+00:02:54.570 --> 00:02:58.790
+Anda dapat merujuk variabel kuantitas ini
+dari metode apapun dalam &lt;i&gt;main activity&lt;/i&gt;.
+
+00:02:58.790 --> 00:03:00.470
+Maaf, harusnya saya pilih nama
+
+00:03:00.470 --> 00:03:02.360
+selain kuantitas untuk parameter input.
+
+00:03:02.360 --> 00:03:05.830
+Tapi Anda mengerti maksudnya,
+tanpa parameter input,
+
+00:03:05.830 --> 00:03:08.120
+Anda hanya bisa merujuk ke
+variabel global.
+
+00:03:08.120 --> 00:03:09.820
+Anda dapat gunakan nilai &lt;i&gt;hard-coded&lt;/i&gt;
+
+00:03:09.820 --> 00:03:11.680
+atau jika Anda membuat variabel lokal,
+
+00:03:11.680 --> 00:03:12.980
+Anda dapat merujuk padanya.
+

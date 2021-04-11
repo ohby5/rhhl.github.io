@@ -1,0 +1,431 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.120 --> 00:00:01.540
+Veamos el número 1.
+
+00:00:01.540 --> 00:00:04.230
+Antes de revelar la respuesta,
+voy a copiar este código
+
+00:00:04.230 --> 00:00:06.700
+y pegarlo en <i>Android Studio</i>.
+
+00:00:06.700 --> 00:00:09.060
+Quiero mostrarle
+qué tipo de error resultaría.
+
+00:00:09.060 --> 00:00:12.090
+Para resolver este test,
+no era necesario usar <i>Android Studio</i>,
+
+00:00:12.090 --> 00:00:14.510
+se podría haber resuelto
+con solo mirar este código
+
+00:00:14.510 --> 00:00:16.280
+y luego escribir la respuesta.
+
+00:00:16.280 --> 00:00:19.520
+Por lo tanto, no importa
+si se utiliza o no <i>Android Studio</i>.
+
+00:00:19.520 --> 00:00:21.920
+Para hacer funcionar el código,
+creé un nuevo proyecto
+
+00:00:21.920 --> 00:00:24.930
+y luego modifiqué el principal archivo
+de diseño de la actividad
+
+00:00:24.940 --> 00:00:29.820
+para que tuviera muchas visualizaciones
+con las ID a las que haremos referencia.
+
+00:00:29.820 --> 00:00:31.860
+No estoy segura de qué aspecto
+tendría este diseño,
+
+00:00:31.860 --> 00:00:36.060
+pero quería poner aquí las visualizaciones
+con sus nombres de visualizar ID.
+
+00:00:36.060 --> 00:00:38.210
+De ese modo, mi código funcionará aquí.
+
+00:00:38.210 --> 00:00:42.570
+Para el número 1, pegué el código aquí,
+y veo que hay un error.
+
+00:00:42.570 --> 00:00:46.119
+<i> Android Studios</i> dice
+que no puede resolver el método <i>setText</i>.
+
+00:00:46.119 --> 00:00:47.780
+Si recuerdan el último vídeo,
+
+00:00:47.780 --> 00:00:51.510
+mencioné que <i>setText</i>
+es un método <i>TextView</i>.
+
+00:00:51.510 --> 00:00:55.100
+Eso significa que este método
+solo se puede aplicar a objetos <i>TextView</i>.
+
+00:00:55.100 --> 00:00:57.920
+En este caso,
+lo aplicamos a <i>nameTextView</i>.
+
+00:00:57.920 --> 00:01:00.805
+Un <i>nameTextView</i> está clasificado
+como un objeto de visualización.
+
+00:01:01.425 --> 00:01:04.237
+Tenemos que cambiar esto
+para que sea un objeto <i>TextView</i>.
+
+00:01:05.800 --> 00:01:08.942
+Entonces nos da un error
+que dice que hay tipos incompatibles.
+
+00:01:08.942 --> 00:01:12.210
+Un <i>TextView</i>, se necesita un objeto
+de tipo <i>TextView</i>,
+
+00:01:12.210 --> 00:01:15.570
+pero en cambio, encontró un objeto
+de tipo visualización.
+
+00:01:15.570 --> 00:01:18.570
+Eso es porque buscar visualización por ID
+nos devuelve una visualización,
+
+00:01:18.570 --> 00:01:21.950
+y esta parte de la izquierda
+requiere <i>TextView</i>.
+
+00:01:21.950 --> 00:01:23.750
+Eso significa que tenemos que añadir esto
+
+00:01:23.750 --> 00:01:28.590
+para convertir la visualización
+de <i>findViewById</i> en un <i>TextView</i>.
+
+00:01:28.590 --> 00:01:31.020
+Entonces podemos guardar todo esto,
+
+00:01:31.020 --> 00:01:35.090
+que es el <i>nameTextView</i>,
+en la variable del lado izquierdo.
+
+00:01:35.090 --> 00:01:40.760
+Entonces desaparece el error y ponemos
+el texto, "Laura" en este <i>TextView</i>.
+
+00:01:40.760 --> 00:01:44.510
+El error está en la línea 1,
+así que escribí el código correcto aquí.
+
+00:01:44.510 --> 00:01:49.540
+La explicación general es que debemos
+convertir esta visualización en <i>TextView</i>
+
+00:01:49.540 --> 00:01:53.050
+y luego guardarlo
+en una variable <i>nameTextView</i>.
+
+00:01:53.050 --> 00:01:56.340
+De ese modo, podemos llamarlo 
+<i>nameTextView.setText</i>,
+
+00:01:56.340 --> 00:01:59.620
+que es un método <i>TextView</i>,
+en la siguiente línea de código.
+
+00:01:59.620 --> 00:02:01.040
+Pasemos al número 2.
+
+00:02:01.040 --> 00:02:03.510
+Voy a copiar este código
+y ponerlo en <i>Android Studio</i>.
+
+00:02:04.540 --> 00:02:06.590
+Este es el código que pegué.
+
+00:02:06.590 --> 00:02:09.620
+La primera línea de código
+parece correcta, no hay ningún error.
+
+00:02:09.620 --> 00:02:11.550
+Pero la segunda línea
+tiene un subrayado rojo
+
+00:02:11.550 --> 00:02:14.420
+y dice que hay un error
+de tipos incompatibles.
+
+00:02:14.420 --> 00:02:17.990
+Dice, se requiere una secuencia
+pero en cambio encontró un entero.
+
+00:02:17.990 --> 00:02:19.290
+Para entenderlo mejor,
+
+00:02:19.290 --> 00:02:24.090
+debemos buscar el método <i>getMaxLines</i>
+en la documentación <i>TextView</i>.
+
+00:02:24.090 --> 00:02:26.010
+En la documentación <i>TextView</i>,
+
+00:02:26.010 --> 00:02:28.500
+buscaré el método <i>getMaxLines</i>.
+
+00:02:28.500 --> 00:02:29.770
+Y aquí está.
+
+00:02:29.770 --> 00:02:30.950
+No hay parámetros de entrada
+
+00:02:30.950 --> 00:02:33.567
+y el valor de retorno
+de este método es un entero.
+
+00:02:34.758 --> 00:02:36.914
+Así que por eso <i>Android Studio</i> se quejaba,
+
+00:02:36.914 --> 00:02:39.811
+porque este método nos da un entero,
+
+00:02:39.811 --> 00:02:42.700
+pero estábamos intentando guardarlo
+en una variable de secuencias.
+
+00:02:42.700 --> 00:02:47.780
+Por tanto, debo cambiar el tipo de datos
+de la variable para que sea un entero
+
+00:02:47.780 --> 00:02:49.470
+y el error desaparece.
+
+00:02:49.470 --> 00:02:52.620
+Por lo tanto, el valor de retorno
+de este método es un entero.
+
+00:02:52.620 --> 00:02:56.060
+Podemos guardarlo
+en esta variable <i>maxLines</i>.
+
+00:02:56.060 --> 00:02:57.870
+Todavía queda una advertencia.
+
+00:02:57.870 --> 00:03:00.780
+Dice que la variable <i>maxLines</i>
+nunca se utiliza.
+
+00:03:00.780 --> 00:03:02.340
+Pero es solo un fragmento de código.
+
+00:03:02.340 --> 00:03:04.760
+Supongo que si esto fuera
+una aplicación normal
+
+00:03:04.760 --> 00:03:06.898
+querríamos utilizar esta variable
+más adelante.
+
+00:03:07.760 --> 00:03:11.380
+El error está en la línea dos
+y este es el código actualizado.
+
+00:03:11.380 --> 00:03:14.160
+La explicación general es
+que el valor de retorno de este método
+
+00:03:14.160 --> 00:03:15.480
+debería ser un entero.
+
+00:03:15.480 --> 00:03:16.649
+Pasemos al número 3.
+
+00:03:17.980 --> 00:03:19.830
+Aquí hay un código para el número 3.
+
+00:03:19.830 --> 00:03:22.960
+He copiado y pegado el código 
+para el número 3 en <i>Android Studio</i>.
+
+00:03:22.960 --> 00:03:25.812
+Hay un mensaje de error que dice
+"tipos incompatibles".
+
+00:03:25.812 --> 00:03:29.400
+Se necesita una <i>ImageView</i>,
+pero en cambio encontró una visualización.
+
+00:03:29.400 --> 00:03:32.740
+Esto es parecido al error
+que acabamos de ver con el <i>TextView</i>.
+
+00:03:32.740 --> 00:03:34.630
+Este método nos da una visualización.
+
+00:03:34.630 --> 00:03:38.270
+Y, a la izquierda, estamos intentando
+guardarlo en un <i>ImageView</i>.
+
+00:03:38.270 --> 00:03:42.370
+Tenemos que convertir este objeto
+de visualización en un <i>ImageView</i>.
+
+00:03:42.370 --> 00:03:47.330
+Es válido porque la visualización
+con icono ID en realidad es un <i>ImageView</i>,
+
+00:03:47.330 --> 00:03:49.630
+por lo que se puede convertir
+en visualización de imagen.
+
+00:03:49.630 --> 00:03:52.460
+Ahora que el lado derecho
+equivale a un <i>ImageView</i>,
+
+00:03:52.460 --> 00:03:55.700
+podemos guardarlo en la variable
+del lado izquierdo.
+
+00:03:55.700 --> 00:03:57.630
+El tipo de datos de esta variable
+es <i>ImageView</i>,
+
+00:03:57.630 --> 00:04:00.649
+por lo que ahora todo coincide,
+y desaparece el error.
+
+00:04:01.230 --> 00:04:04.640
+En la siguiente línea,
+podemos aplicar un método <i>ImageView</i>,
+
+00:04:04.640 --> 00:04:09.180
+<i>SetImageResource</i>,
+a este objeto <i>IconImageView</i>.
+
+00:04:09.180 --> 00:04:12.880
+Aún queda un error que dice que
+no puede resolver el "logo" del símbolo.
+
+00:04:12.880 --> 00:04:17.310
+Eso es porque no agregué una imagen
+a la aplicación con el logo del nombre.
+
+00:04:17.310 --> 00:04:21.410
+Si la agrego, el error desaparece,
+así que nuestro código es correcto.
+
+00:04:21.410 --> 00:04:25.400
+Este es el código correcto para convertir
+esta visualización en un <i>ImageView</i>.
+
+00:04:25.400 --> 00:04:27.119
+Por último, tenemos el número 4.
+
+00:04:27.772 --> 00:04:32.080
+Pegué el código aquí en <i>Android Studio</i>
+y, sorprendentemente, no hay errores.
+
+00:04:32.080 --> 00:04:35.880
+El código está buscanco
+una visualización con el ID "title"
+
+00:04:35.880 --> 00:04:41.150
+y eso debería darnos una visualización,
+que se guarda en esta variable <i>TextView</i>.
+
+00:04:41.150 --> 00:04:43.740
+<i>TextView</i> tiene un tipo de datos
+de visualización,
+
+00:04:43.740 --> 00:04:47.940
+así que coincide con el lado derecho,
+y toda esta línea de código es correcta.
+
+00:04:47.940 --> 00:04:51.270
+En la siguiente línea tomamos este objeto,
+que es una visualización
+
+00:04:51.270 --> 00:04:54.410
+y aplicamos un método <i>setVisibility</i>.
+
+00:04:54.410 --> 00:04:58.763
+El método toma un parámetro de entrada
+que es <i>View.GONE</i>.
+
+00:04:58.763 --> 00:05:02.790
+Puedo comprobar la documentación
+para verificar por qué es así.
+
+00:05:02.790 --> 00:05:05.130
+En la documentación
+de la clase Visualizacion,
+
+00:05:05.130 --> 00:05:08.400
+puedo buscar el método <i>setVisibility</i>.
+
+00:05:08.400 --> 00:05:11.870
+Podemos ver que <i>setVisibility</i>
+es un método en la clase Visualización.
+
+00:05:11.870 --> 00:05:16.310
+Toma esta entrada, un entero,
+que representa el estado de visibilidad.
+
+00:05:16.310 --> 00:05:21.175
+Los posibles valores de visibilidad
+son <i>VISIBLE</i>, <i>INVISIBLE</i> y <i>GONE</i>.
+
+00:05:21.175 --> 00:05:24.490
+Dado que <i>setVisibility</i>
+es un método de la clase Visualización,
+
+00:05:24.490 --> 00:05:26.320
+es válido aplicarlo en este caso.
+
+00:05:26.320 --> 00:05:29.280
+No es necesario convertir
+esto en <i>TextView</i>,
+
+00:05:29.280 --> 00:05:33.200
+porque el método que estamos aplicando
+es un método de clase Visualización.
+
+00:05:33.200 --> 00:05:36.010
+Si estuviéramos intentando
+utilizar un método <i>TextView</i>,
+
+00:05:36.010 --> 00:05:38.860
+tendríamos que convertirlo en <i>TextView</i>.
+
+00:05:38.860 --> 00:05:41.380
+Entonces, para esta pregunta,
+deben poner "ningún error",
+
+00:05:41.380 --> 00:05:43.320
+porque <i>setVisibility</i>
+es un método Visualización,
+
+00:05:43.320 --> 00:05:45.443
+y se puede dejar
+como objeto de Visualización.
+
+00:05:45.930 --> 00:05:47.370
+Eran preguntas difíciles.
+
+00:05:47.370 --> 00:05:49.150
+No pasa nada
+si no respondió correctamente.
+
+00:05:49.150 --> 00:05:52.080
+En el siguiente test,
+podrá seguir practicando.
+

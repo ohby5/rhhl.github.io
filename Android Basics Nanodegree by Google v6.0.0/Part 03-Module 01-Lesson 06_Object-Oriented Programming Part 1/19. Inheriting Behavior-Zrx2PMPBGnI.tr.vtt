@@ -1,0 +1,678 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.920 --> 00:00:03.410
+Şimdi çok kısa JustJava
+uygulamasına dönelim.
+
+00:00:03.410 --> 00:00:07.260
+MainActivity sınıfındaki displayMessage 
+metoduna bakalım.
+
+00:00:07.260 --> 00:00:09.950
+Burada yaptıklarımızı daha
+iyi anlamaya başlayacağız.
+
+00:00:09.950 --> 00:00:14.350
+orderSummaryTextView isimli bir değişken
+yarattığımızı zaten söylemiştik.
+
+00:00:14.350 --> 00:00:16.850
+Bu değişkenin data türü TextView'du.
+
+00:00:17.790 --> 00:00:19.770
+Fakat henüz bu kısmı anlamamıştık.
+
+00:00:20.740 --> 00:00:23.490
+Alt satırda, bu metin görünümü
+nesnesini çağırıyoruz.
+
+00:00:24.650 --> 00:00:28.070
+Yukarıda belirttiğimiz değişken
+ismini kullanıyoruz.
+
+00:00:28.070 --> 00:00:31.830
+Yani orderSummaryTextView.setText'i 
+çağırıyoruz.
+
+00:00:31.830 --> 00:00:34.580
+Sonra metoda girdi olarak bir
+dizi geçiriyoruz.
+
+00:00:35.300 --> 00:00:38.790
+Bu dizi mesajı, mesaj metodunu
+görüntüleyen bir girdi parametresi
+
+00:00:38.790 --> 00:00:40.200
+olarak ortaya çıkmıştı.
+
+00:00:41.720 --> 00:00:45.250
+Şimdi de kodun henüz anlamadığımız
+kısmına geçelim.
+
+00:00:45.250 --> 00:00:48.210
+Gerçi findViewByld bir metot
+çağrısına benziyor.
+
+00:00:48.210 --> 00:00:53.530
+Çünkü parantezlerden önce girdi argümanı 
+gibi görünen bir şey geliyor.
+
+00:00:53.530 --> 00:00:57.458
+Fakat işin ilginç kısmı bu sınıfta
+bu metodun tanımlandığı bir yer yok.
+
+00:00:57.458 --> 00:01:02.355
+Bu isme çift tıkladığımda ve F
+komutuna veya Windows'taki ctrl-F
+
+00:01:02.355 --> 00:01:07.560
+tuşlarına bastığımda bu dosyada
+arama yapabiliriz.
+
+00:01:07.560 --> 00:01:10.780
+findViewByld'in geçtiği iki
+yer görebiliyorum
+
+00:01:10.780 --> 00:01:12.790
+ve ikisi de birbirine benziyor.
+
+00:01:12.790 --> 00:01:15.160
+Fakat findViewByld isimli
+bir metot göremiyorum.
+
+00:01:16.190 --> 00:01:19.640
+Bu arada, ana aktivite sınıfında
+
+00:01:19.640 --> 00:01:23.450
+bir setContentView çağrısı görmüştük
+ama bu dosyada aradığımızda
+
+00:01:23.450 --> 00:01:26.280
+ana aktivitede de tanımlanmamış.
+
+00:01:27.820 --> 00:01:29.790
+O halde bu metotlar 
+nerede tanımlanmış?
+
+00:01:30.620 --> 00:01:33.610
+MainActivity oldukça
+küçük bir dosyadır.
+
+00:01:33.610 --> 00:01:35.150
+Sadece 90 satır olsa da
+
+00:01:35.150 --> 00:01:38.790
+bu sınıfta göze çarpandan
+çok daha fazlası bulunur.
+
+00:01:38.790 --> 00:01:42.200
+Kodda "extends AppCompatActivity"
+yazıyor.
+
+00:01:42.200 --> 00:01:45.710
+Bundan ana aktivitenin
+AppCompatActivity sınıfındaki
+
+00:01:45.710 --> 00:01:49.290
+bir işlevselliğin uzantısı 
+olduğunu anlıyoruz.
+
+00:01:49.290 --> 00:01:52.790
+Eğer burada "action bar activity"
+yazdığını görüyorsanız merak etmeyin,
+
+00:01:52.790 --> 00:01:55.450
+aynısının eski sürümüdür.
+
+00:01:55.450 --> 00:01:58.770
+Kullanmanız gereken son sürümde
+AppCompatActivity yazması gerekir.
+
+00:01:58.770 --> 00:02:02.420
+AppCompatActivity, daha eski
+Android cihazları için geriye dönük
+
+00:02:02.420 --> 00:02:04.460
+uyumluluk desteği sunmamızı sağlar.
+
+00:02:04.460 --> 00:02:07.980
+AppCompatActivity, Android destek
+kitaplığının bir parçasıdır.
+
+00:02:07.980 --> 00:02:11.740
+Daha eski Android cihazlarla 
+çalışsak dahi Android'deki
+
+00:02:11.740 --> 00:02:15.420
+en yeni kullanıcı arabirim
+özelliklerini kullanmamızı sağlar,
+
+00:02:15.420 --> 00:02:17.940
+AppCompatActivity sınıfını genişleterek
+
+00:02:17.940 --> 00:02:20.620
+MainActivity'nin içindeki tüm
+işlevselliği, konumu ve
+
+00:02:20.620 --> 00:02:24.490
+metotları kolayca kullanabiliyoruz.
+
+00:02:24.490 --> 00:02:26.980
+Buradan bir kod kopyalamak
+ve yapıştırmak gerekmiyor.
+
+00:02:26.980 --> 00:02:28.800
+Sadece bu sınıfı genişletiyoruz.
+
+00:02:30.090 --> 00:02:31.020
+İlginizi çektiyse
+
+00:02:31.020 --> 00:02:35.880
+AppCompatActivity'yi Google'da aratabilir
+ve daha fazla bilgi alabilirsiniz.
+
+00:02:35.880 --> 00:02:39.700
+Bu, AppCompatActivity sınıfının
+referans dokümanı.
+
+00:02:39.700 --> 00:02:41.920
+Bende Chrome uzantısı yüklü olduğu için
+
+00:02:41.920 --> 00:02:43.120
+kaynağı da görebiliyorum.
+
+00:02:43.120 --> 00:02:47.890
+Bu da, AppCompatActivity sınıfının
+tanımlandığı kod.
+
+00:02:47.890 --> 00:02:50.360
+Burada çok işlevselliğin
+olduğunu görüyoruz ama
+
+00:02:50.360 --> 00:02:54.510
+en önemlisi bunların nasıl uygulandığını 
+anlamanıza gerek yok.
+
+00:02:54.510 --> 00:02:58.350
+Tek bilmeniz gereken, AppCompatActivity'yi
+genişlettiğiniz zaman
+
+00:02:58.350 --> 00:03:01.010
+tüm bu işlevselliğin kucağınıza düşmesi.
+
+00:03:01.010 --> 00:03:03.580
+Yüksek seviyede bunu şöyle
+görselleştirebilirsiniz.
+
+00:03:03.580 --> 00:03:05.900
+Bu, MainActivity için bir sınıf tanımı.
+
+00:03:05.900 --> 00:03:08.000
+Ve burada da tanımlanmış
+bazı metotlar var.
+
+00:03:08.000 --> 00:03:12.350
+AppCompatActivity'yi genişleterek
+konuma ve AppCompatActivity'deki
+
+00:03:12.350 --> 00:03:14.200
+metotlara ulaşabiliyoruz.
+
+00:03:14.200 --> 00:03:17.870
+Ana aktifite sınıfına fiziksel olarak
+ekli değiller ama
+
+00:03:17.870 --> 00:03:19.280
+orada olduklarını varsayın.
+
+00:03:19.280 --> 00:03:22.930
+Çünkü konumu ve metotları
+buradan da kullanabilirsiniz.
+
+00:03:22.930 --> 00:03:25.350
+Kodumuz işte bu şekilde setContentView
+
+00:03:25.350 --> 00:03:27.840
+veya findViewByld gibi 
+başka şeyleri kullanabiliyor.
+
+00:03:27.840 --> 00:03:32.240
+Bu metotları üst sınıftan aktardığımız 
+için onları MainActivity'de tanımlamadık.
+
+00:03:32.240 --> 00:03:35.110
+MainActivity aygıttaki ekran
+gibi görünür,
+
+00:03:35.110 --> 00:03:39.520
+ama bunu da MainActivity'nin koduna
+yazmadık, onu da üstten aktardık.
+
+00:03:39.520 --> 00:03:42.750
+AppCompatActivity'deki konum 
+ve metotlar görünüşte
+
+00:03:42.750 --> 00:03:46.840
+sınıfta yoklar ama orada olduklarını 
+ve kullanabileceğimizi biliyoruz.
+
+00:03:46.840 --> 00:03:50.260
+Aktarmak demişken iyi ve kötü 
+tarafları olduğunu söyleyelim.
+
+00:03:50.260 --> 00:03:52.540
+Bazen belli davranışları 
+üstten aktarmak,
+
+00:03:52.540 --> 00:03:54.980
+bazen ise ufak değişiklikler 
+yapmak isteriz.
+
+00:03:55.980 --> 00:03:59.900
+Devraldığınız sınıftaki bazı davranışları
+değiştirmek istiyorsanız
+
+00:03:59.900 --> 00:04:02.230
+belli metotları geçersiz kılabilirsiniz.
+
+00:04:02.230 --> 00:04:07.360
+Bir metodun üzerine @override
+yazdığınızda bilgisayar
+
+00:04:07.360 --> 00:04:12.100
+bu metodun AppCompatActivity'deki
+versiyonunu istemediğinizi anlayacaktır.
+
+00:04:12.100 --> 00:04:15.830
+Bunun yerine, burada tanımladığınız
+versiyonu istiyorsunuz.
+
+00:04:15.830 --> 00:04:18.620
+Bu karmaşık bir konudur ve
+bol bol pratik gerektirir.
+
+00:04:18.620 --> 00:04:21.660
+Ama metodu geçersiz kılmanın bir örneğini
+
+00:04:21.660 --> 00:04:23.640
+AppCompatActivity sınıfında görmüştük.
+
+00:04:23.640 --> 00:04:26.380
+Bu, yarat metodudur.
+
+00:04:26.380 --> 00:04:29.810
+MainActivity'deki arat metodunu 
+geçersiz kılarak
+
+00:04:29.810 --> 00:04:35.380
+bu metot çağrıldığında ne olmasını
+istediğimizi gireceğiz.
+
+00:04:35.380 --> 00:04:37.180
+Şu an anlamıyorsanız endişelenmeyin.
+
+00:04:37.180 --> 00:04:40.534
+Size sadece nesne yönelimli
+programlama kavramları hakkında
+
+00:04:40.534 --> 00:04:42.350
+genel bilgi veriyorum.
+
+00:04:42.350 --> 00:04:46.160
+Kafanızda sorular olması çok normal.
+
+00:04:46.160 --> 00:04:49.210
+Ayrıca tamamen kavramak için
+bu konular hakkında
+
+00:04:49.210 --> 00:04:50.860
+çok daha fazla okumanız gerekir.
+
+00:04:50.860 --> 00:04:53.771
+MainActivity ve AppCompatActivity
+sınıfları arasındaki bağı
+
+00:04:53.771 --> 00:04:58.220
+daha iyi göstermek için Sınıf Hiyerarşi
+Şeması çizelim.
+
+00:04:58.220 --> 00:05:00.930
+Bu Görünüm Hiyerarşi Şemasından
+farklıdır, çünkü
+
+00:05:00.930 --> 00:05:05.340
+Görünüm Hiyerarşi Şeması ekrandaki
+görüntülerin bulunduğu bir ağaçtır.
+
+00:05:05.340 --> 00:05:07.810
+Sınıf Hiyerarşi Şeması ise 
+farklı Java sınıfları
+
+00:05:07.810 --> 00:05:09.990
+arasındaki bağı gösterir.
+
+00:05:09.990 --> 00:05:12.860
+Üst sınıf olarak AppCompatActivity var.
+
+00:05:12.860 --> 00:05:15.868
+MainActivity AppCompatActivity'nin
+uzantısı olduğuna göre
+
+00:05:15.868 --> 00:05:18.560
+ona alt sınıf diyoruz.
+
+00:05:18.560 --> 00:05:22.200
+Sınıf tanımıyla karşılaştığınızda
+genişlettiğiniz sınıfın
+
+00:05:22.200 --> 00:05:23.970
+üst sınıf olduğunu anlayabilirsiniz.
+
+00:05:23.970 --> 00:05:25.770
+Bu da alt sınıf olur.
+
+00:05:25.770 --> 00:05:29.070
+Eğer detay aktivite adlı yeni
+bir aktivite oluşturursanız
+
+00:05:29.070 --> 00:05:32.340
+ve AppCompatActivity'yi genişletirseniz
+bu altı sınıf,
+
+00:05:32.340 --> 00:05:33.409
+bu da üst sınıf olur.
+
+00:05:34.720 --> 00:05:37.840
+Java sınıf aktarımına
+bir göz atalım.
+
+00:05:37.840 --> 00:05:40.520
+Düşünürseniz metin görünümü,
+resim görünümü
+
+00:05:40.520 --> 00:05:44.460
+ve buton görünümünün ortak
+bazı özellikleri vardır.
+
+00:05:44.460 --> 00:05:48.070
+Tüm bu görünümlerin ekranda
+bir genişliği ve yüksekliği vardır.
+
+00:05:48.070 --> 00:05:51.330
+Bunu daha öğrenmedik ama
+bir görünürlük konumları da vardır.
+
+00:05:51.330 --> 00:05:54.400
+Böylece görünür ve 
+görünmez yapılabilirler.
+
+00:05:54.400 --> 00:05:58.650
+Hepsinin sahip olduğu başka
+ortak özellikler de vardır.
+
+00:05:58.650 --> 00:06:02.370
+Bu özelliklerin kodunu metin 
+görünümü sınıfında yazarız
+
+00:06:02.370 --> 00:06:05.590
+ve sonra resim ve buton
+sınıflarına kopyalarız.
+
+00:06:05.590 --> 00:06:07.610
+Yapabileceğimiz daha akıllıca bir şey var.
+
+00:06:07.610 --> 00:06:09.980
+Bir görünüm sınıfı oluştururuz.
+
+00:06:09.980 --> 00:06:14.110
+Bu görünümlerin ortak özelliklerini
+çıkartıp görünüm sınıfına
+
+00:06:14.110 --> 00:06:19.730
+koyar ve böylece kodu sadece
+bir kez yazmak zorunda kalırız.
+
+00:06:19.730 --> 00:06:22.610
+Peki, metin görünüm sınıfıyla
+görünüm sınıfı arasındaki
+
+00:06:22.610 --> 00:06:24.000
+bağlantı nasıl kurulur?
+
+00:06:24.000 --> 00:06:26.548
+Eğer aktarımı düşünüyorsanız haklısınız.
+
+00:06:26.548 --> 00:06:30.080
+TextView java dosyasında 
+metin görünüm sınıfını tanımlayacağız.
+
+00:06:30.080 --> 00:06:33.240
+Böylece tüm data ve metotları
+görünüm sınıfından aktaracağız.
+
+00:06:34.270 --> 00:06:37.520
+Böylece TextView sınıfında çok
+kod yazmamız gerekmeyecek
+
+00:06:37.520 --> 00:06:41.860
+çünkü işlevselliğin bir kısmını
+zaten görünüm sınıfında yazmıştık.
+
+00:06:41.860 --> 00:06:43.730
+Aynısı ImageView ve Button sınıfları
+
+00:06:43.730 --> 00:06:46.800
+için de geçerli; çok fazla
+kod yazmamız gerekmeyecek.
+
+00:06:46.800 --> 00:06:49.690
+Bu dosyalara ImageView'un
+View sınıfından
+
+00:06:49.690 --> 00:06:53.090
+farklı olan kısımlarını
+yazmamız yeterli.
+
+00:06:53.090 --> 00:06:57.720
+Bunu sadece fark bulmak gibi düşünün,
+böylece ImageView sınıfının
+
+00:06:57.720 --> 00:07:01.890
+tek yapması gereken View sınıfından
+farklı olan kısımlarını belirtmek.
+
+00:07:03.840 --> 00:07:06.960
+Bir davranışı View sınıfından 
+aktarmak istemezsek
+
+00:07:06.960 --> 00:07:11.760
+yeni davranışı ImageView sınıfında
+veya diğer sınıfların birinde
+
+00:07:11.760 --> 00:07:12.820
+belirtebiliriz.
+
+00:07:14.070 --> 00:07:15.930
+Terminolojiyi hatırlamak istersek
+
+00:07:15.930 --> 00:07:20.039
+TextView alt sınıf,
+View ise üst sınıf olur.
+
+00:07:21.430 --> 00:07:23.280
+TextView dokümantasyonuna dönersek
+
+00:07:23.280 --> 00:07:27.310
+bu kısmı daha iyi anlayabiliriz.
+
+00:07:27.310 --> 00:07:30.000
+Burada TextView'un View'u
+genişlettiği yazıyor.
+
+00:07:30.000 --> 00:07:33.330
+Bu demektir ki View sınıfından
+
+00:07:33.330 --> 00:07:35.280
+konum ve metot aktarıyoruz.
+
+00:07:35.280 --> 00:07:38.330
+Burada ise bir sınıf hiyerarşi
+şemamız var.
+
+00:07:38.330 --> 00:07:41.884
+TextView sınıfının View sınıfından
+aktarım yaptığını gösteriyor.
+
+00:07:43.730 --> 00:07:46.880
+Buna karşılık View sınıfı da
+Object sınıfından aktarım yapıyor.
+
+00:07:47.650 --> 00:07:50.060
+Biraz bakınırsanız
+TextView sınıfından
+
+00:07:50.060 --> 00:07:54.780
+çıkan EditText sınıfı gibi
+başka örnekler görebilirsiniz.
+
+00:07:54.780 --> 00:07:57.570
+Yani, TextView sınıfından belli
+davranışları alıyor ve
+
+00:07:57.570 --> 00:08:00.330
+bazı spesifik işlevsellik
+eklemeleri yapıyor.
+
+00:08:01.290 --> 00:08:03.590
+EditText TextView'dan çıkıyor.
+
+00:08:03.590 --> 00:08:06.720
+TextView ise View sınıfından,
+View da Object'ten.
+
+00:08:06.720 --> 00:08:09.830
+Bu sınıf hiyerarşi şeması.
+
+00:08:11.370 --> 00:08:13.950
+Bakacak çok şey var
+ve saatler alabilir.
+
+00:08:13.950 --> 00:08:17.010
+Size TextView dokümantasyon
+sayfasındaki bir şeyi göstereyim.
+
+00:08:17.010 --> 00:08:20.820
+Size SetVisibility metodunu göstermiştim.
+
+00:08:20.820 --> 00:08:24.350
+Bu da SetVisibility'nin TextView
+sınıfı içindeki metodu.
+
+00:08:24.350 --> 00:08:26.860
+Görünümün görünürlüğünü değiştiriyor.
+
+00:08:28.000 --> 00:08:33.240
+Bu metoda tıkladığımda
+View sınıfına geri dönüyorum.
+
+00:08:33.240 --> 00:08:36.010
+Burada bu metodun
+ne yaptığı yazıyor.
+
+00:08:36.010 --> 00:08:39.860
+Yani bir TextView nesnesinin görünürlük 
+ayarlama metodu olduğunu anlıyoruz.
+
+00:08:39.860 --> 00:08:43.659
+Ama bu aslında View sınıfından aktarıldı.
+
+00:08:43.659 --> 00:08:47.470
+Dolayısıyla bu işlevselliği
+bedavaya View'dan aldık.
+
+00:08:47.470 --> 00:08:50.930
+Birçok yeni kavramla tanıştık.
+
+00:08:50.930 --> 00:08:56.040
+Normalde bu konular bir sömestirlik
+bilgisayar kursuna yayılırdı.
+
+00:08:56.040 --> 00:08:58.260
+Şimdi biraz pratik yapalım
+
+00:08:58.260 --> 00:09:01.170
+ve kafanızda oturmasına
+yardımcı olacağını umalım.
+
+00:09:01.170 --> 00:09:03.010
+Ama bu kavramları
+tam olarak kavramanın
+
+00:09:03.010 --> 00:09:06.610
+bolbol vakit ve pratik 
+gerektirdiğini unutmayalım.
+
+00:09:06.610 --> 00:09:09.820
+İlk alıştırmamızda yeni bir
+Andoid uygulaması açmanızı isteyeceğim,
+
+00:09:09.820 --> 00:09:11.850
+çünkü Java app'ini bozmak istemiyorum.
+
+00:09:13.070 --> 00:09:14.880
+Projeyi oluşturup 
+uygulamayı başlatın.
+
+00:09:15.790 --> 00:09:18.630
+App'i oluşturunca bir
+MainActivity dosyası göreceksiniz.
+
+00:09:18.630 --> 00:09:22.530
+MainActivity dosyası AppCompatActivity'den
+çıkıyor olacak.
+
+00:09:22.530 --> 00:09:26.060
+Android Studio'nun sizdeki
+sürümünde MainActivity
+
+00:09:26.060 --> 00:09:28.760
+ActionBarActivity'den çıkıyor olabilir,
+bunda sorun yok.
+
+00:09:28.760 --> 00:09:32.200
+AppCompatActivity'nin eski
+bir sürümü yalnızca.
+
+00:09:32.200 --> 00:09:35.650
+Bu metodun geçersizliğini
+kaldırarak AppCompatActivity'deki
+
+00:09:35.650 --> 00:09:40.280
+onCreate metoduna geri döneceğiz.
+
+00:09:40.280 --> 00:09:44.540
+Bu metodun varlığı, onCreate içinde
+MainActivity'den daha farklı bir davranış
+
+00:09:44.540 --> 00:09:46.230
+istediğimizi gösterir.
+
+00:09:46.230 --> 00:09:49.540
+Bunu kaldırmak da AppCompatActivity
+sınıfındaki orijinal davranışa
+
+00:09:49.540 --> 00:09:52.040
+geri dönmemizi sağlar.
+
+00:09:52.040 --> 00:09:53.380
+Uygulamayı çalıştırdığınızda
+
+00:09:53.380 --> 00:09:57.180
+İlk uygulamadan farklı olarak
+gözünüze çarpan nedir?
+
+00:09:57.180 --> 00:09:59.040
+Cevabınızı bu kutuya yazın.
+

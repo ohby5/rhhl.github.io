@@ -1,0 +1,364 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.860 --> 00:00:04.030
+Keling biz oldinroq ko‘rib chiqqan 
+display message metodiga qaytamiz. 
+
+00:00:05.030 --> 00:00:07.570
+Biz bu yerda nima bo‘laytganligini 
+tushunuishga harakat qilyapmiz. 
+
+00:00:08.630 --> 00:00:12.450
+Shu kungacha o‘rganganlarimizga asoslansak, 
+bu TextView ob’ektidir va
+
+00:00:12.450 --> 00:00:15.670
+o‘zgaruvchining nomi
+orderSummaryTextView .
+
+00:00:15.670 --> 00:00:18.870
+Keyin biz unchalik tushunmaydigan 
+koplab kodlar mavjud. 
+
+00:00:18.870 --> 00:00:22.820
+Lekin keyingi qatorda, biz orderSummaryTextView 
+o‘zgaruvchisidan foydalanyapmiz va
+
+00:00:22.820 --> 00:00:25.030
+undagi mantnni ushbu xabar 
+ko‘rinishiga keltirishga harakat qilyapmiz. 
+
+00:00:26.250 --> 00:00:29.470
+Keling, bunday ob’ektlarda metodlarni
+qanday chaqirishni o‘rganamiz. 
+
+00:00:31.250 --> 00:00:34.920
+Ob’ektda metodni chaqirganimizda, u 
+ushbu qolipga mos bo‘lishi kerak. 
+
+00:00:34.920 --> 00:00:39.560
+Birinchi ob’ekt o‘zgaruvchisi nomini 
+yozamiz, bizning holatimizda u titleTextView 
+
+00:00:39.560 --> 00:00:41.160
+keyin . qo‘shamiz. 
+
+00:00:41.160 --> 00:00:45.350
+Keyin metod nomi keladi,
+bizda u setText .
+
+00:00:45.350 --> 00:00:49.390
+Bu metod TextView Java sinfida aynan 
+shunday ochiqlangan. 
+
+00:00:49.390 --> 00:00:53.250
+Metodning o‘zlashtirilishi shuningdek, 
+satrning kirish parametri mavjudligini ko‘rsatadi, 
+
+00:00:53.250 --> 00:00:58.060
+shuning uchun biz qavslarni qo‘yamiz 
+va keyin kirish ma’lumoti sifatida satrga o‘tamiz.
+
+00:00:58.060 --> 00:00:59.700
+Keyin, bayonotni 
+nuqta-vergul bilan tugatamiz.
+
+00:01:00.920 --> 00:01:05.459
+Siz bu kod qatorini yozganingizda 
+u titleTextView ob’ektini ushbu 
+
+00:01:05.459 --> 00:01:08.100
+ekranda ko‘rinadigan qilib o‘zgartiradi.
+
+00:01:08.100 --> 00:01:10.490
+Bu yerda ob’ekt o‘zgaruvchisining 
+nomidan foydalanishimizning sababi, 
+
+00:01:10.490 --> 00:01:13.600
+ilovangizda turli xil
+TextView lar mavjud bo‘lishi mumkin.
+
+00:01:13.600 --> 00:01:16.379
+Shuning uchun, metodni to‘g‘ri ob’ekt misolida 
+chaqirayotganingizga ishonch hosil qiling.
+
+00:01:17.560 --> 00:01:20.980
+Kirish argumentlarini aniqlayotganda, 
+metod o‘zlashtirilishiga muvofiq 
+
+00:01:20.980 --> 00:01:24.620
+to‘g‘ri argumentlarni to‘g‘ri tartibda 
+ko‘rsatganingizga ishonch hosil qiling.
+
+00:01:25.660 --> 00:01:29.460
+Agar hech qanday kirish ma’lumoti bo‘lmasa,
+shunchaki bo‘sh qavslarni qo‘yasiz.
+
+00:01:29.460 --> 00:01:32.820
+Kirish ma’lumotlarini metodga 
+o‘tkazish xuddi 
+
+00:01:32.820 --> 00:01:34.110
+uchinchi darsda o‘rganganimizday.
+
+00:01:34.110 --> 00:01:36.140
+Va ob’ekt o‘zgaruvchisi nomi va 
+metod nomini ushbu . (nuqta) bilan 
+
+00:01:36.140 --> 00:01:38.450
+ajratishni yodingizda saqlang.
+
+00:01:38.450 --> 00:01:42.450
+Bu yerda bir xil titleTextView 
+ob’ektida yana bir boshqa misol,
+
+00:01:42.450 --> 00:01:45.190
+biz unda setTextSize 
+metodini chaqirmoqchimiz.
+
+00:01:45.190 --> 00:01:49.220
+Bu metod yangi matn shrifti o‘lchami 
+sifatida, butun sonni qabul qiladi. 
+
+00:01:49.220 --> 00:01:51.830
+Ushbu vaziyatda, biz shunchaki 
+yangi matn o‘lchami sifatida 18ni qo‘yamiz. 
+
+00:01:52.980 --> 00:01:55.510
+Android qurilmasi ushbu 
+kodni ishga tushirganda, 
+
+00:01:55.510 --> 00:02:00.460
+u titleTextView ni kattaroq 
+shrift o‘lchamiga o‘zgartiradi.
+
+00:02:00.460 --> 00:02:02.260
+Bu misolda,
+
+00:02:02.260 --> 00:02:06.540
+TextView ob’ektida warningTextView 
+deb nomlangan metodni chaqiryapmiz.
+
+00:02:07.580 --> 00:02:11.140
+metod setTextColor deb nomlanadi,
+va u yangi rang qiymatini oladi.
+
+00:02:12.140 --> 00:02:16.010
+Diqqat qiling, rang quydagicha
+ifodalangan: Color.RED .
+
+00:02:16.010 --> 00:02:17.670
+Rang sinfi uchun hujjatlarni qarasak, 
+
+00:02:17.670 --> 00:02:22.030
+biz pastga tushishimiz va qizil
+quyida ochiqlanganini ko‘rishimiz mumkin. 
+
+00:02:22.030 --> 00:02:25.290
+Bu yerda foydalanishingiz mumkin 
+bo‘lgan ko‘plab kodlar mavjud. 
+
+00:02:26.370 --> 00:02:30.850
+Demak, siz setTextColor ni chaqirganingizda, 
+shunday chaqirishingiz mumkin: Color.BLUE or Color.BLACK .
+
+00:02:30.850 --> 00:02:33.835
+So‘nggi bo‘lib, bu yerda ImageView da
+metodini qanday chaqirishga misol.
+44
+Bu ImageView ob’ekti welcomeImageView 
+nomli o‘zgaruvchiga ega va
+
+00:02:39.230 --> 00:02:41.260
+biz unda setImageResource 
+metodini chaqiramiz.
+
+00:02:42.380 --> 00:02:46.135
+Ushbu metod kirish ma’lumoti sifatida biz 
+ImageView ga o‘rnatadigan yangi rasmni oladi.
+
+00:02:47.400 --> 00:02:51.580
+Biz yangi rasmni R.drawable formatida 
+manba ID si sifatida belgilaymiz.
+
+00:02:51.580 --> 00:02:53.000
+Va bu fayl nomi,
+
+00:02:54.100 --> 00:02:58.610
+bu Java kodida resurs ID laridan 
+foydalanishning yana bir boshqa holati.
+
+00:02:58.610 --> 00:03:02.059
+TextView ob’ektida chaqirishingiz mumkin 
+bo‘lgan usullarning to‘liq ro‘yxatini olish uchun,
+
+00:03:02.059 --> 00:03:04.867
+shunchaki TextView Android 
+hujjatlar sahifasini oching.
+
+00:03:04.867 --> 00:03:08.810
+Siz unga TextView Androidni qidirish 
+va shu erni bosish orqali o‘tishingiz mumkin.
+
+00:03:09.840 --> 00:03:12.110
+Bu biz tanigan sahifadir va 
+
+00:03:12.110 --> 00:03:15.740
+biz ushbu sahifada keltirilgan XML 
+atributlari haqida allaqachon bilamiz.
+
+00:03:16.830 --> 00:03:19.900
+Agar men yanada pastga tushadigan bo‘lsam, 
+matnni ko‘rish sinfidagi barcha 
+
+00:03:19.900 --> 00:03:20.790
+public metodlarning ro‘yxatini ko‘raman.
+
+00:03:21.910 --> 00:03:22.870
+Agar nimanidir topmoqchi bo‘lsangiz,
+
+00:03:22.870 --> 00:03:27.210
+shunchaki Cmd+F, yoki
+Windows-da Ctrl+F ni bosing.
+
+00:03:27.210 --> 00:03:29.900
+Men avvalroq foydalangan setTextColor
+metodini izlamoqchiman.
+
+00:03:31.200 --> 00:03:32.740
+Mana setTextColor metodi va
+
+00:03:32.740 --> 00:03:35.310
+u qiymat sifatida butun
+qiymatni oladi. 
+
+00:03:36.420 --> 00:03:40.540
+Bu metodlarning barchasi TextView 
+sinfida public(ommaviy) metodlar deb e’lon qilindi.
+
+00:03:40.540 --> 00:03:43.170
+Shuning uchun biz ularni
+hozir chaqira olamiz.
+
+00:03:43.170 --> 00:03:44.910
+Agar ular privat (xususiy)
+metodlar iqlib belgilanganida, 
+
+00:03:44.910 --> 00:03:46.210
+biz ularni bu yerda ko‘rmagan bo‘lar edik.
+
+00:03:47.400 --> 00:03:49.070
+Siz bu metodlarni chaqirayotganda,
+
+00:03:49.070 --> 00:03:52.370
+qaysi kirish parametrlari talab qilinishini 
+
+00:03:52.370 --> 00:03:55.680
+tekshirib ko‘ring va ma’lumotlarni 
+to‘g‘ri tartibda va to‘g‘ri turdagi kiriting.
+
+00:03:56.910 --> 00:03:58.040
+Kodga qarayotganingizda,
+
+00:03:58.040 --> 00:04:02.130
+ba’zida metodlarni chaqirganda 
+nuqta belgisini ko‘rmasligingiz mumkin
+
+00:04:02.130 --> 00:04:06.150
+Farq sizning sinf ichida yoki sinfdan 
+tashqarisida ekanligingizga bog‘liq.
+
+00:04:06.150 --> 00:04:08.730
+TextView klassidagi 
+misolni ko‘rib chiqaylik.
+
+00:04:08.730 --> 00:04:12.540
+Bizda SetText metodi va boshqa 
+ba’zi metodlar mavjud.
+
+00:04:12.540 --> 00:04:16.589
+Ushbu boshqa metoddan SetText 
+metodinini chaqirishni buyuring.
+
+00:04:16.589 --> 00:04:21.040
+Buni setText ni chaqirish va so‘ngra kirish 
+parametrini kiritish orqali amalga oshirish mumkin.
+
+00:04:21.040 --> 00:04:24.070
+Ammo nuqta va ob’ekt 
+o‘zgaruvchisining nomi qayerda?
+
+00:04:24.070 --> 00:04:28.800
+Aslida bu qator this.setText ("Hello") 
+uchun tartiblangan.
+
+00:04:28.800 --> 00:04:31.360
+Bu joriy ob’ekt
+misoliga taalluqlidir va 
+
+00:04:31.360 --> 00:04:34.800
+keyin ushbu ob’ektga
+setText chaqirilmoqda.
+
+00:04:34.800 --> 00:04:38.880
+Bu biz ob’ektlarni chaqirishda 
+ko‘proq tanish bo‘lgan format.
+
+00:04:38.880 --> 00:04:42.301
+Ammo this.part tavsiya qilingan va 
+ixtiyoriydir, kodimizni yanada 
+
+00:04:42.301 --> 00:04:47.380
+aniqroq qilish uchun biz, shunchaki,
+setText ("Salom")ni chaqirishimiz mumkin.
+
+00:04:47.380 --> 00:04:50.670
+Demak, setText ni sinfning ichida chaqirish
+va tashqarisida chaqirishning 
+
+00:04:50.670 --> 00:04:53.800
+farqiga e’tibor bering.
+
+00:04:53.800 --> 00:04:55.990
+Bu haqda o‘ylaganingizda, 
+bu yanada mantiqiy bo‘ladi,
+
+00:04:55.990 --> 00:04:59.380
+chunki ushbu sinfda bir 
+nechta TextViews bo‘lsa, 
+
+00:04:59.380 --> 00:05:03.380
+matnni qaysi TextView ga 
+o‘rnatmoqchi ekanligingiz aniq.
+
+00:05:03.380 --> 00:05:06.280
+Bu yerda TextView sinfidan
+tashqarida bo‘lish va 
+
+00:05:06.280 --> 00:05:08.970
+TextView sinfidan ichida 
+bo‘lishning yana bir farqi.
+
+00:05:08.970 --> 00:05:12.330
+TextView sinfi ichida 
+siz xususiy parametrlarga va 
+
+00:05:12.330 --> 00:05:14.210
+xususiy metodlarga kirishingiz mumkin.
+
+00:05:14.210 --> 00:05:16.060
+Agar siz TextView sinfi tashqarisida bo‘lsangiz, 
+
+00:05:16.060 --> 00:05:21.150
+siz xususiy metodlardan foydalana olmaysiz 
+va shaxsiy parametrlarga kira olmaysiz.
+
+00:05:21.150 --> 00:05:25.100
+MainActivity sinfida siz faqat 
+
+00:05:25.100 --> 00:05:27.300
+TextView sinfidan ommaviy (publik) metodlarga va 
+umumiy o‘zgaruvchilarga kirishingiz mumkin.
+

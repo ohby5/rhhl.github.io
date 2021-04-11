@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.700 --> 00:00:02.780
+Şimdi Android kaynaklarının
+ne olduğunu ve onları
+
+00:00:02.780 --> 00:00:05.260
+farklı dosyaların içine
+koyabileceğinizi biliyorsunuz.
+
+00:00:05.260 --> 00:00:08.840
+Şimdi bu dosyaların içine
+kaydetmiş olduğunuz kaynaklara
+
+00:00:08.840 --> 00:00:10.580
+nasıl erişeceğinizi konuşalım.
+
+00:00:10.580 --> 00:00:15.050
+Uygulamanız derlendiğinde,
+Android'de AAPT isimli bir araç vardır.
+
+00:00:15.050 --> 00:00:17.610
+Ve bu R sınıfını oluşturur.
+
+00:00:17.610 --> 00:00:21.840
+Bu bir R.Java dosyasıdır ve
+şimdi size bir örnek göstereceğim.
+
+00:00:21.840 --> 00:00:26.250
+S rehberinizdeki tüm kaynaklar için
+kaynak kimliklerini içerir,
+
+00:00:26.260 --> 00:00:30.790
+yani eklediğiniz tüm kaynaklar için
+ona atıf yapan bir kimlik vardır.
+
+00:00:30.790 --> 00:00:34.580
+Kimlik kaynak türüne bağlı bir formattadır,
+
+00:00:34.580 --> 00:00:40.640
+yani grafik olan tüm Java kaynakları için
+R.drawable formatını takip eder.
+
+00:00:40.640 --> 00:00:42.685
+Kaynak olan tüm diziler için
+
+00:00:42.685 --> 00:00:48.150
+R.string.resource formülü ismini,
+bu örnekte merhaba şeklinde kullanacaktır.
+
+00:00:49.190 --> 00:00:52.230
+Bir kaynağa ulaşmanızın iki yolu vardır.
+
+00:00:52.230 --> 00:00:57.720
+Java kodunda R.resource
+type.resource name formatını takip ederken
+
+00:00:57.730 --> 00:01:03.820
+XML'de @ bildirimini kullanır
+yani @ ve kaynak türü de
+
+00:01:03.820 --> 00:01:08.360
+dizi bölmesidir ve sonra
+kaynak ismi, yani merhaba.
+
+00:01:09.070 --> 00:01:13.200
+Farklı kaynak türleri ve onlara
+erişim şu şekildedir.
+
+00:01:13.740 --> 00:01:16.140
+Bunlar ortak kaynak türlerinin
+sadece birkaçıdır
+
+00:01:16.140 --> 00:01:17.860
+ama çok daha fazlası da mevcuttur.
+
+00:01:17.860 --> 00:01:21.810
+Unutmayın ki Java kodunda
+her zaman R, nokta ile başlamalı
+
+00:01:21.810 --> 00:01:25.520
+ve sonra kaynak türü, nokta
+ve kaynak ismini kullanmalısınız.
+
+00:01:25.520 --> 00:01:27.870
+Ve isim de siz her ne demişseniz odur.
+
+00:01:27.870 --> 00:01:31.610
+Ve sonra XML'de @,
+sonra kaynak türü, bölü
+
+00:01:31.610 --> 00:01:33.550
+ve sonra da kaynağın ismi bulunmaktadır.
+
+00:01:34.080 --> 00:01:36.640
+Şimdi ana aktivite Java dosyamızdaki
+
+00:01:36.640 --> 00:01:38.620
+tüm kaynak kimliklerini bulalım.
+
+00:01:38.620 --> 00:01:41.580
+Android Studio'da bul komutunu açacağım.
+
+00:01:41.900 --> 00:01:45.850
+Cmd+F kullanacağım veya Windows için
+Ctrl+F kullanabilirsiniz.
+
+00:01:46.970 --> 00:01:48.980
+Burada bir arama alanı açıldı.
+
+00:01:49.480 --> 00:01:52.910
+Büyük harfle R nokta arayacağım ve
+
+00:01:52.910 --> 00:01:58.430
+sonra eşleşmeye basacağım ve o sadece
+büyük harf R ile olan olayları getirecek.
+
+00:01:58.430 --> 00:02:03.650
+İlk bulduğu r.layout.activity_main
+referansı.
+
+00:02:03.650 --> 00:02:06.420
+Bu ilginç çünkü ana aktivite
+planlama dosyasına
+
+00:02:06.420 --> 00:02:07.710
+atıf yapıyoruz.
+
+00:02:07.710 --> 00:02:12.170
+Bu, ana aktivitenin bu XML
+dosyasını yüklemeyi nasıl bildiğidir.
+
+00:02:12.170 --> 00:02:13.390
+Bu harika değil mi?
+
+00:02:13.390 --> 00:02:15.029
+Şimdi bir sonraki referansa bakalım.
+
+00:02:15.640 --> 00:02:17.440
+Tamam, miktarGörüntüle metodunda,
+
+00:02:17.440 --> 00:02:22.360
+R.id.quantity_text_view'a
+bir referansımız var.
+
+00:02:22.360 --> 00:02:25.270
+Yani bu ViewId (Kimliği Gör)'e atıf yapıyor.
+
+00:02:25.270 --> 00:02:29.120
+Özellikle, miktarı görüntüleyen TextView.
+
+00:02:29.120 --> 00:02:31.660
+Umuyorum ki yapbozun
+bazı parçaları birleşiyor.
+
+00:02:31.660 --> 00:02:34.220
+Java kodunda bu görüntüye atıf yaparak
+
+00:02:34.220 --> 00:02:38.550
+numberOfCoffees (Kahve Sayısı) göstermek için
+uygulama çalışırken onu güncelleyebiliriz.
+
+00:02:38.550 --> 00:02:40.720
+Şimdi bir sonraki duruma gidelim.
+
+00:02:40.720 --> 00:02:43.520
+displayMessage(Mesaj Görünütüle) Metodunda
+
+00:02:43.520 --> 00:02:47.470
+R.id.order_summary_text_view'a
+bir referans görüyoruz.
+
+00:02:47.470 --> 00:02:52.380
+Burada sipariş özetini gösteren metin
+görüntüsüne atıf yapmaya çalışıyor gibiyiz,
+
+00:02:52.380 --> 00:02:54.640
+böylece onu bu mesajla güncelleyebiliriz.
+

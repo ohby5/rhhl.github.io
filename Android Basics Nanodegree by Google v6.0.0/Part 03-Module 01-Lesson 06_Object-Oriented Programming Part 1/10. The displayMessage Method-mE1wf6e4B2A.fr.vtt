@@ -1,0 +1,308 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.660 --> 00:00:05.050
+Commençons par la première étape qui est 
+de changer l’en-tête de prix pour écrire résumé
+
+00:00:05.050 --> 00:00:05.656
+de commande.
+
+00:00:05.656 --> 00:00:09.333
+Tout d’abord, j’ouvre le dossier de layout 
+activity_main, et ensuite j’y vais et
+
+00:00:09.333 --> 00:00:12.000
+je cherche la vue qui 
+contrôle l’en-tête de prix.
+
+00:00:12.000 --> 00:00:14.270
+Et je mets mon curseur ici,
+
+00:00:14.270 --> 00:00:17.240
+ensuite je m’assure que cette vue 
+est correctement surlignée.
+
+00:00:17.240 --> 00:00:20.710
+Donc, maintenant je peux continuer et 
+modifier la chaîne de caractères ici.
+
+00:00:20.710 --> 00:00:23.800
+Je vais effacer ceci et 
+écrire Order Summary.
+
+00:00:23.800 --> 00:00:26.370
+Ça s’actualise correctement 
+dans la fenêtre précédente.
+
+00:00:26.370 --> 00:00:28.690
+Notez que je l’ai écrit 
+Avec un O majuscule et
+
+00:00:28.690 --> 00:00:31.910
+un S majuscule au lieu de le mettre 
+tout en majuscule.
+
+00:00:31.910 --> 00:00:34.390
+Si éventuellement nous décidons 
+de changer notre UI et
+
+00:00:34.390 --> 00:00:39.950
+de définir toutes les majuscules comme 
+fausses, ainsi mon texte restera correct.
+
+00:00:39.950 --> 00:00:42.360
+Donc je préfère écrire 
+Order Summary comme ça
+
+00:00:42.360 --> 00:00:44.850
+et ensuite utiliser la propriété 
+textAllCaps = true.
+
+00:00:46.170 --> 00:00:47.840
+Ok, donc le premier point est fait.
+
+00:00:47.840 --> 00:00:51.600
+La deuxième page consiste à trouver 
+le TextView pour la valeur de prix et
+
+00:00:51.600 --> 00:00:54.130
+de la changer pour avoir une ID de ceci.
+
+00:00:54.130 --> 00:00:58.050
+Si je descends sur le TextView suivant 
+après l’en-tête du résumé de commande
+
+00:00:58.050 --> 00:01:02.830
+ensuite c’est le TextView de la valeur de 
+prix, et c’est surligné ici aussi.
+
+00:01:02.830 --> 00:01:07.840
+Comme demandé, je vais changer l’ID pour 
+lui faire dire order_summary_text_view.
+
+00:01:07.840 --> 00:01:11.170
+Cool, donc ceux-ci sont tous les 
+changements XML de la mise en page.
+
+00:01:11.170 --> 00:01:13.210
+Exécutons l’application pour s’assurer 
+qu’elle fonctionne toujours.
+
+00:01:14.220 --> 00:01:15.210
+En faite, ça ne marche pas.
+
+00:01:15.210 --> 00:01:19.490
+J’ai une erreur qui me dit que le symbole 
+price_text_view ne peut pas être trouvé
+
+00:01:19.490 --> 00:01:21.320
+dans le fichier Java.
+
+00:01:21.320 --> 00:01:24.250
+Il semble qu’on doivent aller jusqu’aux
+étapes suivantes, avant de pouvoir
+
+00:01:24.250 --> 00:01:25.080
+assembler notre application.
+
+00:01:26.850 --> 00:01:29.730
+Dans la méthode d’affichage du message 
+de la Main Activity, on est censés
+
+00:01:29.730 --> 00:01:34.120
+changer le nom de la variable
+priceTextView pour orderSummaryTextView.
+
+00:01:34.120 --> 00:01:37.260
+À l’intérieur du fichier d’activité principale, 
+dans la méthode d’affichage du message,
+
+00:01:37.260 --> 00:01:39.430
+je trouve le TextView pour le prix ici.
+
+00:01:39.430 --> 00:01:42.570
+Je vais supprimer cela et ensuite écrire
+orderSummary dans TextView.
+
+00:01:42.570 --> 00:01:44.212
+Cela va être en camelCase et
+
+00:01:44.212 --> 00:01:47.940
+commencer avec un o minuscule
+car c’est un nom de variable .
+
+00:01:47.940 --> 00:01:50.348
+Immédiatement j’obtiens une alerte qui 
+dit que la variable n’est jamais utilisée.
+
+00:01:50.348 --> 00:01:53.410
+Donc, je vais la copier, et 
+je vais l’utiliser sur la ligne
+
+00:01:53.410 --> 00:01:58.580
+suivante ici, car il y a une erreur qui dit 
+que le priceTextView n’est pas résolu.
+
+00:01:58.580 --> 00:02:02.740
+Et ensuite on supprime ceci, et ensuite 
+on utilise le nouveau nom de variable ici.
+
+00:02:02.740 --> 00:02:04.550
+Cool, et ça fait disparaitre l’erreur.
+
+00:02:04.550 --> 00:02:07.859
+Mais, j’ai toujours une autre erreur ici, et 
+je pense que c’est lié à la dernière tâche.
+
+00:02:09.080 --> 00:02:13.598
+Le dernier élément ici dit de 
+changer R.id.price_text_view pour
+
+00:02:13.598 --> 00:02:16.035
+R.id.order_summary_text_view.
+
+00:02:16.035 --> 00:02:19.652
+Je vais double cliquer 
+sur cette erreur en rouge, et
+
+00:02:19.652 --> 00:02:24.437
+je vais l’effacer et 
+écrire order_summary_text_view.
+
+00:02:24.437 --> 00:02:26.630
+Voilà, et maintenant l’erreur disparait.
+
+00:02:27.780 --> 00:02:29.930
+Et maintenant, l’application fonctionne 
+sans aucune erreur.
+
+00:02:29.930 --> 00:02:31.660
+Le layout initial est correct.
+
+00:02:31.660 --> 00:02:34.340
+Au lieu de lire prix,maintenant 
+on lit résumé de commande, et
+
+00:02:34.340 --> 00:02:37.520
+si je change la quantité et que j’appuie sur 
+commande, ensuite le résumé apparait ici.
+
+00:02:38.660 --> 00:02:41.890
+Parlons des observations 
+que vous avez pu faire.
+
+00:02:41.890 --> 00:02:44.400
+Souvenez-vous il n’y pas de réponses 
+vraies ou fausses.
+
+00:02:44.400 --> 00:02:49.098
+D’abord, vous avez pu remarqué que pour 
+le prix TextView, quand on donne l’ID de
+
+00:02:49.098 --> 00:02:53.730
+order_summary_text_view, un format 
+similaire apparait plus tard dans
+
+00:02:53.730 --> 00:02:58.460
+le code Java quand on modifie 
+la méthode du displayMessage.
+
+00:02:58.460 --> 00:03:02.010
+Vous avez peut-être aussi remarqué qu’en 
+changeant le prix par résumé de commande
+
+00:03:02.010 --> 00:03:04.840
+il semble y avoir un tas de réajustements 
+affectant d’autres parties du code.
+
+00:03:04.840 --> 00:03:09.230
+Donc, des changements sont nécessaires 
+pour exécuter l’application à nouveau,
+
+00:03:09.230 --> 00:03:11.840
+mais d’autres changements sont plus 
+sympas à avoir juste pour
+
+00:03:11.840 --> 00:03:15.810
+les conventions donc on n’a pas d’anciennes
+références persistantes pour le prix.
+
+00:03:17.190 --> 00:03:19.880
+En regardant de plus prés la 
+méthode du displayMessage,
+
+00:03:19.880 --> 00:03:23.910
+vous avez peut-être remarqué, il n’y a qu’un 
+paramètre d’entrée, un message de chaîne de caractères.
+
+00:03:23.910 --> 00:03:24.980
+Et il n’y a pas de valeur de retour.
+
+00:03:26.100 --> 00:03:30.640
+&gt;&gt; C’est pourquoi on n’a pas de ligne dans cette 
+méthode demandant de renvoyer quelque chose.
+
+00:03:30.640 --> 00:03:34.864
+Vous avez peut-être aussi reconnu le mot 
+TextView qu’on a vu dans le XML afin d’ajouter
+
+00:03:34.864 --> 00:03:36.320
+l’affichage du texte dans notre layout.
+
+00:03:37.500 --> 00:03:39.330
+Il s’écrit exactement de 
+la même façon qu’ici.
+
+00:03:40.480 --> 00:03:44.830
+Aussi, ici, cette ligne de code ressemble
+à l’affectation d’une variable,
+
+00:03:44.830 --> 00:03:46.740
+où on a un type de données de variable,
+
+00:03:46.740 --> 00:03:50.674
+un nom de variable, et ensuite,
+on a une valeur initiale ici.
+
+00:03:52.035 --> 00:03:55.825
+C’est identique à la façon dont on déclare 
+les entiers et les chaînes de caractères.
+
+00:03:55.825 --> 00:03:59.115
+Et si vous regardiez vraiment de plus près, 
+vous pourriez pensez que cela ressemble
+
+00:03:59.115 --> 00:04:03.705
+à un appel de méthode, findViewById
+suivi par une ouverture de parenthèses,
+
+00:04:03.705 --> 00:04:06.885
+des trucs au milieu, et ensuite
+une fermeture de parenthèses.
+
+00:04:06.885 --> 00:04:10.310
+De la même façon avec setText ici,
+il y a une ouverture de parenthèses,
+
+00:04:10.310 --> 00:04:12.510
+quelque chose au milieu, et 
+ensuite une fermeture de parenthèses.
+
+00:04:12.510 --> 00:04:14.200
+Donc, cela peut-être aussi un appel 
+de méthode.
+
+00:04:15.230 --> 00:04:18.240
+Dans les vidéos suivantes,
+on va regarder plus attentivement
+
+00:04:18.240 --> 00:04:21.230
+ce qu’il se passe exactement 
+dans ces lignes de code et
+
+00:04:21.230 --> 00:04:23.350
+commencer à comprendre ce 
+qu’elles signifient exactement.
+

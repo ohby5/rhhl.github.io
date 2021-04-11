@@ -1,0 +1,432 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Set Data on Views</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Programming: Part 1</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Defining vs Calling a Method.html">02. Defining vs Calling a Method</a>
+    </li>
+    <li class="">
+      <a href="03. Calculate Price Method.html">03. Calculate Price Method</a>
+    </li>
+    <li class="">
+      <a href="04. Define a Method .html">04. Define a Method </a>
+    </li>
+    <li class="">
+      <a href="05. Inputs to a Method.html">05. Inputs to a Method</a>
+    </li>
+    <li class="">
+      <a href="06. Add or Remove Parameters.html">06. Add or Remove Parameters</a>
+    </li>
+    <li class="">
+      <a href="07. Output from a Method.html">07. Output from a Method</a>
+    </li>
+    <li class="">
+      <a href="08. Use Return Value from Method.html">08. Use Return Value from Method</a>
+    </li>
+    <li class="">
+      <a href="09. Define and Call a Method.html">09. Define and Call a Method</a>
+    </li>
+    <li class="">
+      <a href="10. The displayMessage Method.html">10. The displayMessage Method</a>
+    </li>
+    <li class="">
+      <a href="11. Resources.html">11. Resources</a>
+    </li>
+    <li class="">
+      <a href="12. Resource IDs.html">12. Resource IDs</a>
+    </li>
+    <li class="">
+      <a href="13. From XML to Java.html">13. From XML to Java</a>
+    </li>
+    <li class="">
+      <a href="14. What Are Java Objects.html">14. What Are Java Objects?</a>
+    </li>
+    <li class="">
+      <a href="15. What is a Java Class.html">15. What is a Java Class?</a>
+    </li>
+    <li class="">
+      <a href="16. Create an Object.html">16. Create an Object</a>
+    </li>
+    <li class="">
+      <a href="17. Call Methods on Object.html">17. Call Methods on Object</a>
+    </li>
+    <li class="">
+      <a href="18. Practice Calling Object Methods.html">18. Practice Calling Object Methods</a>
+    </li>
+    <li class="">
+      <a href="19. Inheriting Behavior.html">19. Inheriting Behavior</a>
+    </li>
+    <li class="">
+      <a href="20. Find View by Id.html">20. Find View by Id</a>
+    </li>
+    <li class="">
+      <a href="21. Casting with findViewById.html">21. Casting with findViewById</a>
+    </li>
+    <li class="">
+      <a href="22. Set Data on Views.html">22. Set Data on Views</a>
+    </li>
+    <li class="">
+      <a href="23. Quiz Read Data from Views.html">23. Quiz: Read Data from Views</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">22. Set Data on Views</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="set-data-on-views">Set Data on Views</h1>
+<h2 id="a-review-of-what-we-know">A Review Of What We Know</h2>
+<p>So we’ve now seen a few examples of how we can use the <code>setText</code> method to modify a view. Here’s one example we just looked at:</p>
+<pre>
+TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+orderSummaryTextView.setText(message);
+</pre>
+<p>You can break this down into two steps:</p>
+<h3 id="step-1--get-the-view-object-using-the-view-id">Step 1 : Get the view object using the view ID</h3>
+<p>The first line of code is getting the TextView and storing it in a variable named <code>orderSummaryTextView</code>. To actually get the view, we use the <code>findViewById</code> method which is a method in the <a href="http://developer.android.com/reference/android/app/Activity.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#findViewById(int)" target="_blank">Activity class</a>. The argument required is the view ID, which we supply by typing <code>R.id.IDOFVIEW</code>. In this case, the ID of the view is order_summary_text_view, as set in the XML. Note that you need to <strong>cast</strong> the object, which is what the <code>(TextView)</code> is doing. It is saying that the value findViewById is specifically a TextView and not just a generic View.</p>
+<h3 id="step-2--call-a-method-on-the-view-object">Step 2 : Call a method ON the view object</h3>
+<p>Since we are calling a method <strong>on</strong> an object, we use the dot syntax. <code>orderSummaryTextView.setText(message);</code> is equivalent to saying, take the <strong>orderSummaryTextView</strong> object which has the capability to <strong>setText</strong> (as seen in the <a href="http://developer.android.com/reference/android/widget/TextView.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#setText(java.lang.CharSequence)" target="_blank">documentation</a>), and setText to whatever string it is passed (in this case the string variable <strong>message</strong> is passed).</p>
+<h2 id="your-turn">Your Turn</h2>
+<p>You’re going to practice these steps—getting the view object, storing it in a variable, and then manipulating that view object.</p>
+<h3 id="step-1--create-a-new-project">Step 1 : Create a New Project</h3>
+<p>To start this exercise, create a new project (use the <strong>Empty</strong> Activity template on Android Studio 1.4 and newer). The application name should be <strong>Cookies</strong>. </p>
+<p>Create this new project in the same way as you have for previous projects.</p>
+<h3 id="step-2--copy-over-files">Step 2 : Copy over files</h3>
+<p>Copy over the Java and XML code into the correct files. The code is <a href="https://gist.github.com/udacityandroid/8c4604af1d6b6afe12d6" target="_blank">here</a>.</p>
+<p><strong>Add Gradle Dependency</strong></p>
+<p>Then you'll want to copy the line below into your app's build.gradle file:</p>
+<pre><code class="groovy language-groovy">compile 'com.android.support:appcompat-v7:22.1.0'</code></pre>
+<p>You can find the app gradle file inside gradle scripts in your project. Careful not to confuse it with the project gradle file!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-05-03-at-2.49.06-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You should add this line inside dependencies:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-05-03-at-2.49.39-pm.png" alt="Add the dependency including the word compile inside dependencies{...}. Don&#x27;t worry if the rest of the lines inside the dependency block don&#x27;t exactly match the screenshot above. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Add the dependency including the word compile inside dependencies{…}. Don't worry if the rest of the lines inside the dependency block don't exactly match the screenshot above. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You may need to sync your project after adding this file:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-05-03-at-2.49.48-pm.png" alt="After making modifications to the Gradle file, this notification to Sync the project should appear at the top of Android Studio. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>After making modifications to the Gradle file, this notification to Sync the project should appear at the top of Android Studio. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Android studio may suggest a newer version of the appcompat library, and you should use that one. </p>
+<p><strong>Image Files</strong></p>
+<p>Also place these two image files in the drawable folder. They can be downloaded from the <strong>Supporting Materials</strong> section at the bottom of the page:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-05-03-at-2.39.26-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-3--hook-up-the-button">Step 3 : Hook up the button</h3>
+<p>Hook up the “Eat Cookie" button so that, when it's clicked, the image and the text change as seen below.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-05-03-at-3.01.15-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>You’ll need to modify the XML to handle a button being pressed (you’ve done this in Lesson 2 and the practice set). Then you’ll need to use the skills you just learned to manipulate the image and text with the Java code. Good luck!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Set Data on Views</p></h3>
+  <div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4579850051.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 44.42558203991131%; left: 74.63372817955111%; width: 23.566084788029926%; height: 7.095343680709535%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text1" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 67.76607538802661%; left: 74.66490024937656%; width: 23.19201995012469%; height: 7.095343680709535%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text2" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 88.73683481152993%; left: 74.85972568578553%; width: 23.316708229426432%; height: 7.095343680709535%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text3" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><h2 id="set-data-on-views-solution">Set Data on Views Solution</h2>
+<p>The first part of solving this problem is using the <code>onClick</code> attribute to designate what method should be called when the button is clicked. You should use <code>eatCookie</code> since the method is provided for you already in the java code:</p>
+<pre>
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Eat cookie"
+        android:onClick="eatCookie" /&gt;
+</pre>
+<p>Next, you’ll need to actually write the Java code for <code>eatCookie</code>:</p>
+<pre>
+public void eatCookie(View view) {
+   // Find a reference to the ImageView in the layout. Change the image.
+   ImageView imageView = (ImageView) findViewById(R.id.android_cookie_image_view);
+   imageView.setImageResource(R.drawable.after_cookie);
+
+   // Find a reference to the TextView in the layout. Change the text.
+   TextView textView = (TextView) findViewById(R.id.status_text_view);
+   textView.setText("I'm so full");
+}
+</pre>
+<p>Both times you grab the View object (a TextView in one case, an ImageView in the other) using the findViewById method. You pass the id for the view, which you can find in the xml. For the ImageView, you use the <code>setImageResource</code> method and pass the id of the drawable.</p>
+<p>For the TextView, you use the <code>setText</code> method we’ve seen before.</p>
+<p>The final code can be found <a href="https://gist.github.com/udacityandroid/dbc83e6d49dd1164d2b5" target="_blank">here</a>.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="23. Quiz Read Data from Views.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('22. Set Data on Views')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

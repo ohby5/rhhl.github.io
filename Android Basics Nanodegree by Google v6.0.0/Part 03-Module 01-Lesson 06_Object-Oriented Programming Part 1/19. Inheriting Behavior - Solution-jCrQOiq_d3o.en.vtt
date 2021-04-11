@@ -1,0 +1,58 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.605
+Okay. I just created a new project in Android Studio using the Project Wizard.
+
+00:00:04.605 --> 00:00:06.345
+When I run the app on my device,
+
+00:00:06.345 --> 00:00:07.905
+it just says "Hello world".
+
+00:00:07.905 --> 00:00:11.040
+Now, I'm going to remove the onCreate method.
+
+00:00:11.040 --> 00:00:14.700
+I select the whole method from the method declaration to
+
+00:00:14.700 --> 00:00:18.960
+the opening and closing braces as well as the at override text here.
+
+00:00:18.960 --> 00:00:21.365
+Then I run the app on my device.
+
+00:00:21.365 --> 00:00:24.705
+Interesting. Now, I see that the app is blank.
+
+00:00:24.705 --> 00:00:26.670
+The "Hello world" text is gone.
+
+00:00:26.670 --> 00:00:30.600
+If I hit undo, then I can take a look at the onCreate method again.
+
+00:00:30.600 --> 00:00:33.280
+It appears that by overriding this method,
+
+00:00:33.280 --> 00:00:36.865
+we're actually causing the "Hello world" text to appear on the screen.
+
+00:00:36.865 --> 00:00:40.300
+And that makes sense because when we call setContentView,
+
+00:00:40.300 --> 00:00:46.055
+this is actually setting the activity main XML layout onto the content view of activity.
+
+00:00:46.055 --> 00:00:49.375
+So now, we're starting to see why it's useful
+
+00:00:49.375 --> 00:00:53.410
+to override the default behavior in the superclass.
+
+00:00:53.410 --> 00:00:58.715
+When we override the onCreate method then we can actually use the layout that we want.
+
+00:00:58.715 --> 00:01:02.040
+Okay, let's leave this deleted.
+

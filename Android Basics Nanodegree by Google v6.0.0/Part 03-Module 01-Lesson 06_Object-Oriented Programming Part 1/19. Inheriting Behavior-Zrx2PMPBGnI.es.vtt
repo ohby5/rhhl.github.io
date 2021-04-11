@@ -1,0 +1,705 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.410 --> 00:00:02.880
+Volvemos a la aplicación
+<i>Just Java</i> solo un momento.
+
+00:00:02.880 --> 00:00:06.270
+Vemos el método <i>displayMessage</i>
+en la clase <i>MainActivity</i>.
+
+00:00:07.160 --> 00:00:09.630
+Parece que las cosas
+empiezan a cobrar sentido aquí.
+
+00:00:09.630 --> 00:00:11.560
+Nos damos cuenta
+de que intentámos crear
+
+00:00:11.560 --> 00:00:13.900
+una variable que se llama
+<i>orderSummaryTextView.</i>
+
+00:00:13.900 --> 00:00:17.130
+El tipo de información
+de esta variable es <i>TextView</i>.
+
+00:00:17.690 --> 00:00:20.070
+Sin embargo, aún no entendemos
+esta parte de aquí.
+
+00:00:20.740 --> 00:00:24.230
+En la siguiente línea, invocamos
+un método en este objeto <i>TextView.</i>
+
+00:00:24.650 --> 00:00:27.450
+Usamos el mismo nombre
+de variable declarado aquí arriba.
+
+00:00:28.070 --> 00:00:31.130
+Lo llamamos
+<i>orderSummaryTextView.setText.</i>
+
+00:00:31.640 --> 00:00:34.290
+Luego pasamos un <i>String</i>
+como entrada para el método.
+
+00:00:35.300 --> 00:00:38.790
+Este mensaje (<i>String</i>) inicialmente
+venía como parámetro de entrada.
+
+00:00:38.790 --> 00:00:41.030
+del método <i>displayMessage</i>.
+
+00:00:41.720 --> 00:00:45.250
+Vamos a analizar esta parte
+del código que no entendemos aún.
+
+00:00:45.250 --> 00:00:48.210
+Parece que <i>findViewByld</i>
+es una invocación a un método,
+
+00:00:48.210 --> 00:00:50.540
+porque precede a estos paréntesis
+
+00:00:50.540 --> 00:00:53.220
+con lo que parece
+un argumento de entrada.
+
+00:00:53.530 --> 00:00:56.070
+Pero es extraño que no
+se defina este método
+
+00:00:56.070 --> 00:00:58.198
+en ninguna parte de la clase.
+
+00:00:58.198 --> 00:01:01.885
+si hago doble clic en el nombre
+y luego presiono el comando F
+
+00:01:02.355 --> 00:01:07.140
+o control F, en Windows,
+podemos buscar dentro del archivo.
+
+00:01:07.140 --> 00:01:10.230
+Solo veo dos coincidencias
+con <i>findVIewBYld</i>
+
+00:01:10.230 --> 00:01:12.310
+y se usan de modo parecido.
+
+00:01:12.310 --> 00:01:15.530
+Pero no veo ningún método
+que se llame <i>finViewByld.</i>
+
+00:01:16.190 --> 00:01:19.640
+A propósito, anteriormente
+en la clase <i>MainActivity</i>
+
+00:01:19.640 --> 00:01:21.920
+vimos una invocación a <i>setContentView,</i>
+
+00:01:22.600 --> 00:01:26.780
+pero al buscarlo en el archivo no
+está definido en <i>MainActiivty</i> tampoco.
+
+00:01:27.290 --> 00:01:30.360
+¿Donde se definen estos métodos?
+
+00:01:31.010 --> 00:01:33.630
+<i>MainActivity</i> es en realidad
+un archivo bastante pequeño.
+
+00:01:33.630 --> 00:01:35.790
+Solo tiene 90 líneas,
+
+00:01:35.790 --> 00:01:38.790
+pero hay más sobre esta clase
+de lo que aparenta a simple vista.
+
+00:01:38.790 --> 00:01:42.200
+El código dice, <i>extends</i>
+(extiende) <i>AppCompatActivity.</i>
+
+00:01:42.200 --> 00:01:46.860
+Lo que significa que MainActivity
+es una extensión de la funcionalidad
+
+00:01:46.860 --> 00:01:49.360
+en la clase <i>AppCompatActivity</i>.
+
+00:01:49.370 --> 00:01:52.620
+En el ordenador, si ves aquí,
+<i>ActionBarActivity</i> está bien.
+
+00:01:52.620 --> 00:01:55.820
+Es solo una versión más antigua.
+
+00:01:55.820 --> 00:01:58.810
+Deberías usar la versión más reciente
+que es <i>AppCompatActivity.</i>
+
+00:01:58.810 --> 00:02:02.310
+<i>AppCompatActivity</i> da soporte
+para compatibilizar versiones previas
+
+00:02:02.310 --> 00:02:04.470
+en los aparatos antiguos de Android.
+
+00:02:04.470 --> 00:02:07.860
+<i>AppCompatActivity</i> es parte de
+la biblioteca de soporte de Android.
+
+00:02:07.860 --> 00:02:11.440
+Nos permite usar los atributos
+UI más recientes en Android
+
+00:02:11.440 --> 00:02:15.020
+mientras que todavía funciona 
+en otros aparatos antiguos de Android.
+
+00:02:15.020 --> 00:02:17.560
+Al extender la clase <i>AppCompatActivitiy</i>
+
+00:02:17.560 --> 00:02:20.460
+conseguimos gratis
+todas las funcionalidades,
+
+00:02:20.460 --> 00:02:24.240
+metodos y estados de aqui,
+dentro de <i> MainActivity.</i>
+
+00:02:24.240 --> 00:02:26.850
+No tenemos que copiar
+y pegar ningún código desde aquí
+
+00:02:26.850 --> 00:02:29.830
+Simplemente extender esta clase.
+
+00:02:29.830 --> 00:02:34.930
+Puedes obtener más información
+en Google sobre <i>AppCompatActivity</i>.
+
+00:02:35.550 --> 00:02:39.030
+Aquí está el documento de referencia
+de la clase <i>AppCompatActivity</i>.
+
+00:02:39.030 --> 00:02:41.920
+Como tengo instalada
+la extensión de Chrome,
+
+00:02:41.920 --> 00:02:44.070
+también puedo ver la fuente.
+
+00:02:44.070 --> 00:02:47.520
+Y este es el código desde donde
+se define la clase <i>AppCompatActivity</i>.
+
+00:02:47.520 --> 00:02:50.260
+Puedes ver que hay un montón
+de funcionalidades aquí,
+
+00:02:50.260 --> 00:02:54.100
+pero la clave es que no tienes
+que entender cómo se implementa.
+
+00:02:54.100 --> 00:02:58.350
+Solo necesitas saber que cuando
+extiendes <i>AppCompatActivity</i>
+
+00:02:58.350 --> 00:03:00.780
+consigues gratis
+todas estas funcionalidades.
+
+00:03:00.780 --> 00:03:03.270
+A nivel superior. podemos
+visualizarlo de esta manera
+
+00:03:03.270 --> 00:03:05.650
+Esta es la definición
+de clase para <i>MainActivity.</i>
+
+00:03:05.650 --> 00:03:08.000
+Y digamos que hay definidos
+algunos métodos aquí.
+
+00:03:08.000 --> 00:03:12.150
+Si extendemos <i>AppCompatActivity</i>
+podemos acceder al estado
+
+00:03:12.150 --> 00:03:14.490
+y los métodos de <i>AppCompactActivity</i>.
+
+00:03:14.490 --> 00:03:17.350
+Ahora no se han añadido 
+físicamente a la clase <i>MainActivity</i>
+
+00:03:17.350 --> 00:03:19.540
+pero puedes imaginar que están allí,
+
+00:03:19.540 --> 00:03:22.730
+porque tienes aún referencia
+al estado así como a los métodos.
+
+00:03:22.730 --> 00:03:26.250
+Y así es como el código se
+refiere a cosas con <i>setContenView</i>
+
+00:03:26.250 --> 00:03:27.810
+o <i>findViewByld</i>.
+
+00:03:27.810 --> 00:03:32.040
+Porque heredamos esos métodos,
+no los definimos en MainActivitiy.
+
+00:03:32.040 --> 00:03:34.910
+<i>MainActivity</i> aparece como
+una pantalla en el aparato,
+
+00:03:34.910 --> 00:03:37.520
+pero no escribimos el código
+para eso en <i>MainActivity</i>,
+
+00:03:37.520 --> 00:03:39.450
+sino que lo heredamos también.
+
+00:03:39.450 --> 00:03:42.920
+No tenemos el estado y los métodos
+directamente de <i>AppCompatActivity</i>
+
+00:03:42.920 --> 00:03:46.440
+en la clase, pero ahora sabemos
+que están y referirnos a ellos.
+
+00:03:46.440 --> 00:03:50.240
+Hablando de heredar cosas,
+tiene ventajas y desventajas.
+
+00:03:50.240 --> 00:03:52.600
+A veces queremos heredar
+un comportamiento,
+
+00:03:52.600 --> 00:03:55.570
+pero otras, sencillamente
+modificarlo ligeramente.
+
+00:03:55.570 --> 00:03:59.890
+Para cambiar un comportamiento
+de esta clase heredada
+
+00:03:59.900 --> 00:04:02.040
+se puede <i>override</i>
+(sobreescrir) sus métodos.
+
+00:04:02.040 --> 00:04:05.870
+Basta añadir este texto
+@<i>override</i> encima del método.
+
+00:04:05.870 --> 00:04:08.750
+y así el ordenador sabe
+que no quieres la versión
+
+00:04:08.750 --> 00:04:12.100
+del método de <i>AppCompatActivity.</i>
+
+00:04:12.100 --> 00:04:15.210
+y que prefieres la versión
+que has definido aquí.
+
+00:04:15.210 --> 00:04:18.620
+Es un tema complicado
+y requiere mucha práctica.
+
+00:04:18.620 --> 00:04:21.320
+Pero hemos visto un ejemplo
+de <i>override</i> un método
+
+00:04:21.320 --> 00:04:23.640
+de la clase <i>AppCompatActivity.</i>
+
+00:04:23.640 --> 00:04:26.380
+y ese método es <i>onCreate</i>.
+
+00:04:26.380 --> 00:04:30.920
+Al <i>override</i> el método <i>onCreate</i>
+en <i>MainACtivity</i> específicamos
+
+00:04:30.920 --> 00:04:34.940
+nuestra propia implementación 
+de lo que sucederá al invocar el método.
+
+00:04:34.940 --> 00:04:37.090
+No te preocupes sino
+lo entiendes todo ahora.
+
+00:04:37.090 --> 00:04:40.084
+Es solo una breve visión
+de un montón de conceptos
+
+00:04:40.084 --> 00:04:42.190
+sobre la programación
+orientada a objetos.
+
+00:04:42.190 --> 00:04:45.850
+Es normal que todavía
+tengas un montón de preguntas
+
+00:04:45.850 --> 00:04:50.390
+y necesites leer más sobre esto
+para realmente entenderlo.
+
+00:04:50.390 --> 00:04:53.771
+Otra forma de visualizar las relaciones
+entre las clases de <i>MainActivity</i>
+
+00:04:53.771 --> 00:04:57.800
+y <i>AppCompactActivity</i> es dibujar
+un diagrama con jeraraquía de clases.
+
+00:04:57.800 --> 00:05:00.680
+Este es diferente 
+a un diagrama jerárquico de vistas.
+
+00:05:00.680 --> 00:05:05.190
+El diagrama de vistas muestra 
+un árbol con vistas en la pantalla.
+
+00:05:05.190 --> 00:05:09.610
+Y el de clases muestra las relaciones
+entre la diferentes clases de Java.
+
+00:05:09.610 --> 00:05:12.650
+Tenemos <i>AppCompatActivity</i>
+como una superclase.
+
+00:05:12.650 --> 00:05:16.008
+Dado que <i>MainActivity</i> se extiende
+desde <i>AppCompatActivity</i>,
+
+00:05:16.008 --> 00:05:18.360
+se denomina subclase.
+
+00:05:18.360 --> 00:05:20.890
+Por eso, siempre que veas
+esta definición de clase,
+
+00:05:20.890 --> 00:05:23.380
+todo lo que se extienda
+se conoce como superclase.
+
+00:05:23.740 --> 00:05:25.710
+Y esta será la subclase.
+
+00:05:25.710 --> 00:05:28.790
+Así, si creamos otra actividad
+que vamos a llamar <i>DetailActivity</i>
+
+00:05:28.790 --> 00:05:31.040
+y la extiendes desde <i>AppComptActivity</i>,
+
+00:05:31.040 --> 00:05:33.890
+está será la subclase
+y esta la superclase.
+
+00:05:34.470 --> 00:05:37.580
+Aquí hay otro ejemplo 
+de clases heredadas en Java.
+
+00:05:37.580 --> 00:05:41.280
+Si piensas en las clases <i>TextView</i>, 
+<i>ImageView</i> o <i>ButtonView</i>,
+
+00:05:41.280 --> 00:05:44.460
+todas tienen aspectos en común.
+
+00:05:44.460 --> 00:05:48.070
+Todas tienen una determinada
+altura y anchura en la pantalla.
+
+00:05:48.070 --> 00:05:51.330
+Todavía no lo vimos, pero tienen
+también un estado de visibilidad.
+
+00:05:51.330 --> 00:05:54.510
+De modo que se pueden
+definir como visibles o invisibles.
+
+00:05:54.510 --> 00:05:58.350
+Hay también un par de otras
+propiedades que comparten.
+
+00:05:58.350 --> 00:06:00.840
+En lugar de escribir el código
+para estas propiedades
+
+00:06:00.840 --> 00:06:03.760
+dentro de la clase <i>TextView</i>
+y luego copiarlo sobre las clases,
+
+00:06:03.760 --> 00:06:07.010
+<i>ImageView</i> y <i>ButtonView,</i>
+podemos hacer algo mejor.
+
+00:06:07.580 --> 00:06:09.980
+Podemos crear una clase <i>View</i>
+
+00:06:09.980 --> 00:06:13.540
+y extraer todas las propiedades
+comunes entre estas vistas
+
+00:06:13.540 --> 00:06:16.390
+para ponerlas dentro de la clase <i>View.</i>
+
+00:06:16.390 --> 00:06:19.520
+De este modo, escribiremos
+el código solo una vez.
+
+00:06:19.520 --> 00:06:23.370
+Pero entonces ¿cómo relacionamos
+las clases <i>TextView</i> y <i>View</i> ?
+
+00:06:23.370 --> 00:06:26.130
+Si piensas en "heredar," vas bien.
+
+00:06:26.130 --> 00:06:29.938
+En el archivo<i>TextView</i>de Java
+vamos a definir la clase <i>TextView.</i>
+
+00:06:29.938 --> 00:06:33.570
+Así, heredaremos los datos
+y métodos de la clase <i>View.</i>
+
+00:06:33.990 --> 00:06:37.520
+Y no tendremos tanto código
+en la clase TextView,
+
+00:06:37.520 --> 00:06:41.450
+porque parte de la funcionalidad
+ya está escrita en la clase <i>View.</i>
+
+00:06:41.450 --> 00:06:44.990
+Para las clases <i>ImageView</i>
+y <i>Button</i> se aplicaría lo mismo,
+
+00:06:44.990 --> 00:06:46.630
+no hay que escribir tanto código.
+
+00:06:46.630 --> 00:06:49.780
+En estos archivos solo tenemos 
+que escribir lo que es diferente
+
+00:06:49.780 --> 00:06:52.790
+de <i>ImageView</i> en comparación
+con la clase <i>View.</i>
+
+00:06:52.790 --> 00:06:57.090
+Es como definir una función delta,
+así, en la clase <i>ImageView</i>
+
+00:06:57.090 --> 00:07:02.250
+solo tenemos que específicar 
+lo que la diferencia de la clase <i>View.</i>
+
+00:07:03.440 --> 00:07:06.650
+Si no queremos heredar ciertos
+comportamientos de la clase <i>View</i>
+
+00:07:06.650 --> 00:07:09.670
+basta con actualizar y especificar
+un nuevo comportamiento
+
+00:07:09.670 --> 00:07:12.820
+dentro de la clase <i>ImageView</i>
+o cualquiera de estas clases.
+
+00:07:13.730 --> 00:07:16.990
+Te recuerdo la teminología,
+que en este caso sería,
+
+00:07:16.990 --> 00:07:20.519
+<i>TextView</i> la subclase
+y <i>View</i> la superclase.
+
+00:07:21.110 --> 00:07:24.230
+Si volvemos ahora
+a la documentación de <i>View Class,</i>
+
+00:07:24.230 --> 00:07:27.210
+ya entendemos esta parte.
+
+00:07:27.210 --> 00:07:30.000
+Dice que <i>TextView</i> extiende <i>View.</i>
+
+00:07:30.000 --> 00:07:33.380
+Ahora sabemos que significa
+que heredamos el estado
+
+00:07:33.380 --> 00:07:35.330
+y los métodos de la clase <i>View</i>.
+
+00:07:35.330 --> 00:07:38.246
+Y más abajo, aquí hay
+un diagrama de jerarquía.
+
+00:07:38.246 --> 00:07:42.820
+Nos muestra que la clase <i>TextView</i>
+se hereda de la clase <i>View</i>.
+
+00:07:43.310 --> 00:07:47.200
+Y a su vez, la clase <i>View</i>
+se hereda de la clase <i>Object.</i>
+
+00:07:47.200 --> 00:07:50.060
+Mira alrededor y verás otras clases,
+
+00:07:50.060 --> 00:07:54.610
+como la clase <i>EditText</i>, la cuál
+se extiende desde la clase <i>TextView.</i>
+
+00:07:54.610 --> 00:07:57.310
+Toma el comportamiento
+de la clase <i>TextView</i>
+
+00:07:57.310 --> 00:08:00.900
+para añadirle después
+funcionalidades específicas.
+
+00:08:01.290 --> 00:08:03.590
+<i>EditText</i> se extiende
+por tanto desde <i>TextView,</i>;
+
+00:08:03.590 --> 00:08:07.330
+<i>TextView</i> se extiende desde <i>View</i>;
+y <i>View</i> se extiende desde <i>Object</i>.
+
+00:08:07.330 --> 00:08:11.170
+Este es el diagrama
+jerárquico de clases.
+
+00:08:11.170 --> 00:08:13.950
+Hay un montón de cosas
+y podría llevarnos horas.
+
+00:08:13.960 --> 00:08:17.010
+Solo te mostraré una cosa 
+en la documentación de <i>TextView</i>.
+
+00:08:17.590 --> 00:08:19.990
+Es el método SetVisibility.
+
+00:08:20.820 --> 00:08:24.350
+Aqui está el método<i>SetVisibility</i>
+dentro de la clase <i>TextView</i>.
+
+00:08:24.350 --> 00:08:27.510
+Nos permite cambiar 
+si la vista es visible o invisible.
+
+00:08:27.780 --> 00:08:33.050
+Si hago clic en el método,
+me lleva a la clase <i>View</i>,
+
+00:08:33.050 --> 00:08:35.930
+donde se describe
+lo que hace el método.
+
+00:08:35.930 --> 00:08:39.860
+El objeto <i>TextView</i> vemos
+que tiene el método <i>SetVisibility,</i>
+
+00:08:39.860 --> 00:08:43.509
+aunque lo heredó de la clase <i>View</i>.
+
+00:08:43.509 --> 00:08:47.280
+Por tanto, esta funcionalidad
+es gratis por la clase <i>View</i>.
+
+00:08:47.510 --> 00:08:50.930
+Acabamos de cubrir
+una tonelada de conceptos.
+
+00:08:50.930 --> 00:08:55.720
+Lo normal, sería repartirlos en
+un curso de informática en un semestre
+
+00:08:55.820 --> 00:08:58.260
+Vamos a practicar un poco ahora
+
+00:08:58.260 --> 00:09:00.860
+y espero que empezarás
+a conectar todas las cosas.
+
+00:09:00.860 --> 00:09:03.550
+Pero sabemos que necesitarás
+mucho más tiempo y práctica
+
+00:09:03.550 --> 00:09:06.610
+para que entiendas
+totalmente estos conceptos.
+
+00:09:06.610 --> 00:09:09.450
+Primer ejercicio, crearás
+una nueva <i>app</i> para Android.
+
+00:09:09.450 --> 00:09:12.730
+porque no queremos
+estropear la <i>app</i> Just Java.
+
+00:09:13.070 --> 00:09:15.330
+Después de crear
+el proyecto, ejecuta la <i>app</i>.
+
+00:09:15.800 --> 00:09:18.630
+Una vez creada la <i>app</i>
+verás el archivo <i>MainActivity</i>.
+
+00:09:18.630 --> 00:09:22.530
+El archivo <i>MainActivity</i> se extiende
+desde <i>AppCompatActivity.</i>
+
+00:09:22.530 --> 00:09:25.700
+Si se extiende desde <i>ActionBarActivity</i>
+
+00:09:25.700 --> 00:09:28.760
+en tu versión de Android, 
+no pasa nada, esta bien.
+
+00:09:28.760 --> 00:09:32.000
+Es solo una versión anterior
+de <i>AppCompatActivity</i>.
+
+00:09:32.200 --> 00:09:35.420
+Al eliminar este método
+<i>override </i>revertiremos a la forma
+
+00:09:35.420 --> 00:09:39.970
+como aparecía <i>onCreate</i>
+en la clase <i>AppCompatActity.</i>
+
+00:09:39.970 --> 00:09:42.990
+La presencia de este método
+nos indica que queremos
+
+00:09:42.990 --> 00:09:46.170
+un comportamiento diferente
+para <i>onCreate</i> en <i>MainActivity.</i>
+
+00:09:46.170 --> 00:09:49.540
+Al eliminarlo volvemos a 
+a su comportamiento inicial
+
+00:09:49.540 --> 00:09:52.040
+en la clase <i>AppCompatActivity</i>.
+
+00:09:52.040 --> 00:09:53.480
+Cuando ejecutes la <i>app,</i>
+
+00:09:53.480 --> 00:09:56.660
+¿qué cambia en comparación
+a la primera vez que la ejecutaste?
+
+00:09:56.660 --> 00:09:58.810
+Anota la respuesta en la casilla de texto.
+

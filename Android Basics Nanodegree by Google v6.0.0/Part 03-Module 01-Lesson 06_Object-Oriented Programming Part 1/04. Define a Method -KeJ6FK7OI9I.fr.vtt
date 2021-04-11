@@ -1,0 +1,542 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.640 --> 00:00:01.640
+Pour comprendre pourquoi
+l'option C était la plus adaptée
+
+00:00:01.640 --> 00:00:04.200
+lors du dernier quiz,
+
+00:00:04.200 --> 00:00:08.420
+passons en revue les règles de syntaxe actuelles
+dans Jjava pour définir une méthode.
+
+00:00:08.420 --> 00:00:10.820
+Ceci est également connu
+comme la signature de la méthode.
+
+00:00:12.090 --> 00:00:13.460
+Il s'agit de la signature de méthode pour
+
+00:00:13.460 --> 00:00:16.239
+la méthode de prix de calculate que nous l'avons vu plus tôt.
+
+00:00:16.239 --> 00:00:20.100
+You might be wondering why the order
+of the words are a certain way.
+Vous demandez peut-être pourquoi l'ordre des mots sont de cette manière.
+
+00:00:20.100 --> 00:00:24.470
+Eh bien, ils suivent un format bien précis,
+et il ressemble à quelque chose comme ça.
+
+00:00:24.470 --> 00:00:27.050
+Je sais que cela semble vraiment immense,
+mais ne vous inquiétez pas.
+
+00:00:27.050 --> 00:00:29.040
+Nous allons passer par chacune d'elles, un à un.
+
+00:00:30.550 --> 00:00:34.250
+La première partie de la signature cette méthode est le mot privé.
+
+00:00:34.250 --> 00:00:36.400
+Ceci est connu comme le modificateur d'accès JAVA.
+
+00:00:37.410 --> 00:00:41.400
+Il détermine qui a accès à cette méthode, calculatePrice.
+
+00:00:41.400 --> 00:00:46.290
+Les plus courants modificateurs d'accès que vous allez voir sont publics ou privés.
+
+00:00:46.290 --> 00:00:51.010
+This method is marked as private,
+that means that calculatePrice
+Cette méthode est marquée comme privé, cela signifie que calculatePrice
+
+00:00:51.010 --> 00:00:55.590
+can only be called within other
+methods of the main activity.
+peut être appelée seulement dans les autres méthodes de l'activité principale.
+
+00:00:55.590 --> 00:00:56.830
+Outside of the main activity,
+En dehors de l'activité principale,
+
+00:00:56.830 --> 00:01:00.750
+like another activities,
+you won't be able to call this method.
+comme une autre activité, vous ne pourrez pas appeler cette méthode.
+
+00:01:00.750 --> 00:01:03.340
+It's private to the main activity.
+Il est privé à l'activité principale.
+
+00:01:03.340 --> 00:01:04.180
+On the other hand,
+D'un autre côté,
+
+00:01:04.180 --> 00:01:09.100
+if you mark this as a public method,
+then anyone could call this method,
+Si vous le cochez comme une méthode publique, alors n'importe qui peut appeler cette méthode,
+
+00:01:09.100 --> 00:01:12.560
+whether you're inside the main activity,
+or you're in other activities.
+Soit à l'intérieur de l'activité principale, ou que vous soyez à d'autres activités.
+
+00:01:13.710 --> 00:01:15.120
+It's kind of like this analogy.
+C'est un peu comme cette analogie.
+
+00:01:15.120 --> 00:01:18.530
+If you're celebrity and public,
+then everyone knows about you.
+Si vous êtes célèbre et public, alors tout le monde vous connaît.
+
+00:01:18.530 --> 00:01:19.730
+If your private and
+Si votre ne l'êtes pas et
+
+00:01:19.730 --> 00:01:24.420
+you live inside your house all the time,
+then only a couple people know you.
+vous vivez seulement dans votre maison tout le temps, alors très peu de gens vous connaissent.
+
+00:01:24.420 --> 00:01:27.930
+So for the calculate price method,
+we are going to keep it private, so
+Donc, pour la méthode de calcul de prix, nous le gardons privé, donc
+
+00:01:27.930 --> 00:01:30.440
+it is only used within
+the main activity.
+Il est utilisé seulement dans l'activité principale.
+
+00:01:30.440 --> 00:01:33.770
+Next we have "int" which
+is the return data type.
+Ensuite, nous avons « entier » qui est le type de données retournées.
+
+00:01:33.770 --> 00:01:35.560
+Do you remember our
+diagram from earlier?
+Vous vous souvenez de notre diagramme plus tôt ?
+
+00:01:35.560 --> 00:01:38.360
+Where we said that when you call
+a method you pass it inputs and
+Où nous avons dit que lorsque vous appelez une méthode, vous lui passez les entrées et
+
+00:01:38.360 --> 00:01:39.910
+you get an output back?
+vous obtenez un résultat ?
+
+00:01:39.910 --> 00:01:44.140
+Well the return data type is a type of
+data that is returned in the output.
+Eh bien le type de données retourné est un type de données qui sont retournées dans le résultat.
+
+00:01:44.140 --> 00:01:48.020
+And the data types we've learned
+about so far are Int and
+Et les types de données que nous avons appris jusqu'à présent sont de type Entier et
+
+00:01:48.020 --> 00:01:49.730
+String from the last lesson.
+Sting la dernière leçon.
+
+00:01:49.730 --> 00:01:52.410
+This can also return
+an object data type, and
+Cela peut aussi retourner un type de données object, et
+
+00:01:52.410 --> 00:01:54.449
+we'll learn more about
+objects later in the lesson.
+Nous apprendrons plus sur les object plus loin dans la leçon.
+
+00:01:55.700 --> 00:01:58.150
+In our case, this calculatePrice method
+Dans notre cas, cette méthode calculatePrice
+
+00:01:58.150 --> 00:02:02.030
+is returning the total price of
+the order, which is an integer.
+retourne le prix total pour l'ordre, qui est un entier.
+
+00:02:02.030 --> 00:02:06.540
+In a social media app, if I had a method
+to get the number of friends I have on
+Dans une application de média social, si j'avais une méthode pour obtenir le nombre d'amis que j'ai sur
+
+00:02:06.540 --> 00:02:11.130
+Facebook, it could return an integer,
+which is the number of friends.
+Facebook, il pourrait retourner un entier, qui est le nombre d'amis.
+
+00:02:11.130 --> 00:02:15.390
+Next we have the method name,
+which is calculatePrice in this case.
+Ensuite, nous avons le nom de la méthode, qui est calculatePrice dans ce cas.
+
+00:02:15.390 --> 00:02:19.730
+Just like how we can refer to variables
+with their name, we can refer to methods
+La façon dont nous nous référons aux variables avec leur nom, ainsi nous nous référons aux méthodes
+
+00:02:19.730 --> 00:02:23.790
+with their name so that we can execute
+the instructions in this method.
+avec leur nom afin que nous puissions exécuter les instructions de cette méthode.
+
+00:02:23.790 --> 00:02:28.120
+In the same documentation about defining
+method, we can scroll to the bottom and
+Dans la même documentation sur la définition méthode, nous pouvons faire défiler vers le bas et
+
+00:02:28.120 --> 00:02:30.690
+see a section about naming methods.
+Voir une section sur les méthodes d'affectation de noms.
+46
+
+00:02:34.450 --> 00:02:39.030
+names should begin with a verb like
+run or get, or compare or set.
+les noms de méthode devraient commencer par un verbe comme Exécutez ou obtenir, ou comparer ou définir.
+
+00:02:39.030 --> 00:02:40.880
+It starts with a lowercase letter and
+Il commence par une lettre minuscule et
+
+00:02:40.880 --> 00:02:43.360
+then use camel case if
+there's multiple words.
+puis utilisez la notation camel si Il y a plusieurs mots.
+
+00:02:43.360 --> 00:02:46.400
+After the method name we
+have the list of inputs
+Après le nom de méthode nous avons la liste des entrées
+
+00:02:46.400 --> 00:02:50.350
+which are denoted within the opening and
+closing parenthesis.
+qui sont notés par l'ouverture et la fermeture de parenthèses.
+
+00:02:50.350 --> 00:02:52.670
+You can have as many inputs as you want.
+Vous pouvez avoir autant d'entrées que vous le souhaitez.
+
+00:02:52.670 --> 00:02:57.010
+If you don't want any inputs, you just
+have an empty set of parentheses.
+Si vous ne voulez pas n'importe quelles entrées, vous avez un ensemble vide de parenthèses.
+
+00:02:57.010 --> 00:02:59.150
+If you have one input,
+it looks like this.
+Si vous avez une seule entrée, Il ressemble à ceci.
+
+00:02:59.150 --> 00:03:00.730
+If you have multiple inputs,
+Si vous avez des entrées multiples,
+
+00:03:00.730 --> 00:03:03.890
+you just separate them with
+commas in between each input.
+vous les séparez avec des virgules entre chaque entrée.
+
+00:03:03.890 --> 00:03:07.110
+Let's look at the case
+where we have one input,
+Penchons-nous sur le cas où nous avons une entrée,
+
+00:03:07.110 --> 00:03:10.070
+which is also known as
+an input parameter.
+également connu sous le nom un paramètre d'entrée.
+
+00:03:10.070 --> 00:03:14.060
+We define an input parameter by
+specifying its data type and
+Nous définissons un paramètre d'entrée en spécifiant son type de données et
+
+00:03:14.060 --> 00:03:16.460
+a variable name that we choose for it.
+nous choisissons un nom de variable pour elle.
+
+00:03:16.460 --> 00:03:18.170
+So from the diagram of inputs and
+Donc sur le schéma des entrées et
+
+00:03:18.170 --> 00:03:22.370
+output, this is going to be
+the first input to the method.
+sortie, cela va être la première entrée à la méthode.
+
+00:03:23.560 --> 00:03:28.030
+Within this method, then you can
+refer to the quantity variable.
+Dans cette méthode, vous pouvez faire référence à la variable de quantité.
+
+00:03:28.030 --> 00:03:30.190
+And it's just like any other variable,
+Et c'est comme toute autre variable,
+
+00:03:30.190 --> 00:03:32.930
+where it already has
+a value inside of it.
+où il a déjà une valeur à l'intérieur.
+
+00:03:32.930 --> 00:03:36.990
+The value comes from when you
+initially call the method and
+La valeur vient quand vous faites appel à la méthode et
+
+00:03:36.990 --> 00:03:38.570
+you pass that input in.
+vous passez l'entrée dans.
+
+00:03:40.030 --> 00:03:43.850
+If we want to modify the method
+signature to add a second input param,
+Si l'on veut modifier la signature de méthode pour ajouter un deuxième paramètre,
+
+00:03:43.850 --> 00:03:47.290
+we have to specify the data type and
+the variable name for
+Il faut préciser le type de données et le nom de variable pour
+
+00:03:47.290 --> 00:03:48.980
+that second input param.
+ce second paramètre.
+
+00:03:48.980 --> 00:03:52.200
+Then within this method we
+can refer to the quantity or
+Puis avec cette méthode nous pouvons faire référence à la quantité ou
+
+00:03:52.200 --> 00:03:55.940
+price of one cup variables just
+like the regular variables.
+le prix d'une quantite de variables comme les variables régulières.
+
+00:03:55.940 --> 00:03:59.220
+When you call this method
+you have to remember to pass
+Lorsque vous appelez cette méthode rappelez de passer
+
+00:03:59.220 --> 00:04:02.790
+the right number of inputs to
+the method that it's expecting, and
+le nombre d'entrées pour la méthode qu'il attend, et
+
+00:04:02.790 --> 00:04:06.980
+the inputs must be of the right
+data type and in the right order.
+Le type de données des entrées doivent être correct et dans le bon ordre.
+
+00:04:06.980 --> 00:04:08.380
+You can't flip the order of these.
+Vous ne pouvez pas sauter leur ordre.
+
+00:04:08.380 --> 00:04:11.650
+Otherwise, the method is going
+to interpret them incorrectly.
+Sinon, la méthode ne va pas les interpréter correctement.
+
+00:04:11.650 --> 00:04:15.210
+After you list out your inputs,
+add a closing parentheses and
+Après avoir énuméré vos entrées dehors, fermer avec une parenthèse et
+
+00:04:15.210 --> 00:04:16.980
+then an opening brace.
+puis ouvrez une accolade.
+
+00:04:16.980 --> 00:04:20.640
+This starts the list of all
+the instructions within your method.
+Celà commence avec la liste de tous les instructions dans votre méthode.
+
+00:04:20.640 --> 00:04:21.660
+After all of that,
+Après tout cela,
+
+00:04:21.660 --> 00:04:25.270
+then just add a closing brace,
+to mark the end of your method.
+ensuite il suffit de fermer avec une accolade, pour marquer la fin de votre méthode.
+
+00:04:25.270 --> 00:04:27.060
+Going back to our documentation,
+Rentrons dans notre documentation,
+
+00:04:27.060 --> 00:04:30.470
+now this method declaration
+will make a lot more sense.
+maintenant cette déclaration de méthode fera beaucoup plus de sens.
+
+00:04:30.470 --> 00:04:32.760
+First we have the access modifier.
+Tout d'abord, nous avons le modificateur d'accès.
+
+00:04:32.760 --> 00:04:35.120
+Then we have a return data type.
+Ensuite, nous avons un type de données retournées.
+
+00:04:35.120 --> 00:04:39.100
+The method name,
+followed by the list of all the inputs.
+Le nom de la méthode, suivie de toutes les entrées.
+
+00:04:39.100 --> 00:04:42.760
+In this case there are four
+different input parameters.
+Dans ce cas il y a quatre paramètres d'entrée différents.
+
+00:04:42.760 --> 00:04:46.260
+And they each have a data type and
+a variable name.
+Et ils ont chacun un type de données et un nom de variable.
+
+00:04:46.260 --> 00:04:48.720
+And then we have an opening brace.
+Et puis, nous avons une accolade ouverte.
+
+00:04:48.720 --> 00:04:50.610
+The list of all
+the instructions inside of it.
+La liste de tous les instructions à l'intérieur.
+
+00:04:50.610 --> 00:04:51.990
+And then a closing brace.
+Et il s'agit d'une déclaration de méthode.
+
+00:04:53.100 --> 00:04:54.480
+And this is a method declaration.
+Et puis une accolade fermée.
+
+00:04:55.640 --> 00:04:59.060
+In this quiz you'll have a chance to
+practice identifying the different parts
+Dans ce quiz, vous aurez une chance de pratiquer, définir les différentes parties
+
+00:04:59.060 --> 00:05:00.850
+of method declaration.
+de la méthode de déclaration.
+
+00:05:00.850 --> 00:05:04.120
+We're going to provide some code
+to you in instructor notes.
+Nous allons vous fournir un code dans les notes de l'instructeur.
+
+00:05:04.120 --> 00:05:08.000
+The code contains a bunch of methods
+that could appear in any app.
+Le code contient un ensemble de méthodes qui pourraient apparaître dans n'importe quelle application.
+
+00:05:08.000 --> 00:05:11.010
+For each case,
+can you tell me what is the method name?
+Pour chaque cas, pouvez-vous me dire quel est le nom de méthode ?
+
+00:05:11.010 --> 00:05:12.800
+The list of input parameters?
+La liste des paramètres d'entrée ?
+
+00:05:12.800 --> 00:05:14.010
+And the return data type.
+Et le type de données retournées.
+
+00:05:15.030 --> 00:05:16.130
+Let's do the sample together.
+Faisons un exemple ensemble.
+
+00:05:17.910 --> 00:05:19.710
+Here's an example method.
+Voici un exemple de méthode.
+
+00:05:19.710 --> 00:05:23.520
+The goal is to create a custom greeting
+message based on the given name.
+L'objectif est de créer un message d'acceuil personnalisé basé sur le nom donné.
+
+00:05:23.520 --> 00:05:27.270
+The return value is going to be
+a greeting in the form of some text.
+La valeur de retour est un message d'accueil sous la forme d'un texte.
+
+00:05:27.270 --> 00:05:29.580
+Now let's ignore the comment for now.
+Pour l'instant, nous allons ignorer le commentaire.
+
+00:05:29.580 --> 00:05:32.570
+First we have the method name,
+which is in camelCase here, and
+D'abord, nous avons le nom de la méthode qui est ici en camelCase, et
+
+00:05:32.570 --> 00:05:35.130
+it says createCustonGreeting.
+Il est dit createCustonGreeting.
+
+00:05:35.130 --> 00:05:37.650
+Next we have the list of inputs.
+Ensuite, nous avons la liste des entrées.
+
+00:05:37.650 --> 00:05:39.780
+This is the first input parameter.
+Ceci est le premier paramètre d'entrée.
+
+00:05:39.780 --> 00:05:42.490
+The data type is String and
+the variable name is firstName.
+Le type de données est String et le nom de la variable est firstName.
+
+00:05:43.520 --> 00:05:45.570
+Next we have the second input parameter.
+Ensuite, nous avons le deuxième paramètre d'entrée.
+
+00:05:45.570 --> 00:05:48.390
+This is the data type, and
+this is the variable name.
+Ceci est le type de données, et celà est le nom de la variable.
+
+00:05:48.390 --> 00:05:51.580
+And the two inputs are separated
+by a single comma, and
+Et les deux entrées sont séparées par une virgule, et
+
+00:05:51.580 --> 00:05:55.290
+they're enclosed within the opening and
+closing parenthesis.
+ils sont placés entre les parenthèses.
+
+00:05:55.290 --> 00:05:57.350
+Then we have the output here.
+Ensuite, nous avons ici la sortie.
+
+00:05:57.350 --> 00:06:00.605
+The data type of the return
+value is String,
+Le type de données de la valeur retournée est chaîne de caractère,
+
+00:06:00.605 --> 00:06:03.685
+because we want to return a greeting,
+which is a string,
+car nous voulons retourner un message d'accueil, qui est une chaîne de caractère,
+
+00:06:03.685 --> 00:06:07.365
+and this is what it looks
+like filled into the table.
+et c'est ce qu'il ressemble comme remplis dans la table.
+
+00:06:08.725 --> 00:06:11.245
+Now, go ahead and fill in the blanks for
+the remaining three methods.
+Maintenant, allez et remplissez les espaces vides pour les trois autres méthodes.
+

@@ -1,0 +1,334 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.357 --> 00:00:02.029
+Mari kita mulai dengan langkah pertama
+
+00:00:02.054 --> 00:00:05.631
+yang mengubah &lt;i&gt;header&lt;/i&gt; harga
+untuk mengatakan &lt;i&gt;OrderSumarry.&lt;/i&gt;
+
+00:00:06.547 --> 00:00:09.127
+Pertama saya membuka
+tata letak berkas activity_main,
+
+00:00:09.167 --> 00:00:12.775
+dan kemudian saya mencari tampilan
+yang mengontrol &lt;i&gt;header&lt;/i&gt; harga.
+
+00:00:12.800 --> 00:00:14.270
+Dan saya meletakkan kursor saya di sini,
+
+00:00:14.295 --> 00:00:17.092
+maka saya melihat bahwa
+tampilan ini disorot dengan benar.
+
+00:00:17.117 --> 00:00:20.506
+Sekarang saya bisa melanjutkan
+dan memodifikasi &lt;i&gt;string&lt;/i&gt; yang ada di sini.
+
+00:00:20.531 --> 00:00:23.593
+Saya akan menghapus ini
+dan mengetik &lt;i&gt;OrderSummary.&lt;/i&gt;
+
+00:00:23.618 --> 00:00:26.227
+Ini dengan benar memperbarui
+di jendela pratinjau.
+
+00:00:26.252 --> 00:00:29.811
+Perhatikan bahwa saya mengejanya
+dengan huruf kapital O dan S
+
+00:00:29.836 --> 00:00:31.713
+dan bukan semua dalam huruf kapital.
+
+00:00:31.738 --> 00:00:33.923
+Jika kita pernah memutuskan
+untuk mengubah UI
+
+00:00:33.948 --> 00:00:36.262
+dan mengatur semua
+huruf kapital menjadi salah,
+
+00:00:36.287 --> 00:00:39.452
+maka teks saya akan tetap baik-baik saja.
+
+00:00:39.761 --> 00:00:42.089
+Jadi saya lebih memilih mengetik
+&lt;i&gt;OrderSummary&lt;/i&gt; seperti ini
+
+00:00:42.114 --> 00:00:45.502
+dan kemudian menggunakan
+atribut &lt;i&gt;textAllCaps = true.&lt;/i&gt;
+
+00:00:45.994 --> 00:00:47.680
+Oke, jadi hal pertama sudah selesai.
+
+00:00:47.705 --> 00:00:51.372
+Tugas kedua adalah untuk
+menemukan nilai harga &lt;i&gt;TextView&lt;/i&gt;
+
+00:00:51.397 --> 00:00:53.851
+dan mengubahnya untuk
+memiliki ID seperti ini.
+
+00:00:53.876 --> 00:00:56.000
+Jika saya bergerak turun
+ke &lt;i&gt;TextView&lt;/i&gt; selanjutnya
+
+00:00:56.025 --> 00:00:57.937
+setelah &lt;i&gt;header OrderSummary,&lt;/i&gt;
+
+00:00:57.962 --> 00:01:00.845
+maka ini adalah nilai harga &lt;i&gt;TextView,&lt;/i&gt;
+
+00:01:00.870 --> 00:01:02.616
+dan disorot di sini juga.
+
+00:01:02.641 --> 00:01:05.285
+Seperti yang diminta, saya akan
+mengubah ID-nya untuk mengatakan
+
+00:01:05.310 --> 00:01:07.668
+&lt;i&gt;order_summary_text_view.&lt;/i&gt;
+
+00:01:07.693 --> 00:01:11.001
+Keren, itu semua adalah
+perubahan tata letak XML.
+
+00:01:11.026 --> 00:01:13.980
+Biarkan saya menjalankan aplikasinya
+untuk memeriksa itu masih bekerja.
+
+00:01:14.005 --> 00:01:15.470
+Sebenarnya, itu tidak bekerja.
+
+00:01:15.495 --> 00:01:18.016
+Saya mendapatkan galat yang
+mengatakan tidak dapat menemukan simbol
+
+00:01:18.041 --> 00:01:21.146
+&lt;i&gt;price_text_view&lt;/i&gt; di dalam berkas Jawa.
+
+00:01:21.171 --> 00:01:23.420
+Sepertinya kita harus
+meneruskan ke langkah selanjutnya
+
+00:01:23.445 --> 00:01:25.917
+sebelum kita bisa mendapatkan
+aplikasi kita untuk mengkompilasi.
+
+00:01:26.684 --> 00:01:30.893
+Dalam &lt;i&gt;MainActivity&lt;/i&gt; metode &lt;i&gt;displayMessage&lt;/i&gt;,
+kita seharusnya mengganti nama variabel
+
+00:01:30.918 --> 00:01:33.894
+dari &lt;i&gt;priceTextView&lt;/i&gt;
+ke &lt;i&gt;orderSummaryTextView.&lt;/i&gt;
+
+00:01:33.919 --> 00:01:37.152
+Dalam berkas &lt;i&gt;MainActivity&lt;/i&gt;
+di dalam metode &lt;i&gt;displayMessage,&lt;/i&gt;
+
+00:01:37.177 --> 00:01:39.270
+saya menemukan &lt;i&gt;priceTextView&lt;/i&gt; sini.
+
+00:01:39.295 --> 00:01:43.131
+Saya akan menghapus ini dan
+kemudian ketik &lt;i&gt;orderSummaryTextView.&lt;/i&gt;
+
+00:01:43.156 --> 00:01:46.040
+Hal ini akan berada di KataKapital
+dan mulai dengan huruf kecil o
+
+00:01:46.065 --> 00:01:47.783
+karena merupakan nama variabel.
+
+00:01:47.808 --> 00:01:50.750
+Saya segera mendapatkan peringatan yang 
+mengatakan variabel tak pernah digunakan.
+
+00:01:50.775 --> 00:01:54.138
+Jadi saya akan menyalinnya dan akan
+menggunakannya pada baris berikutnya
+
+00:01:54.163 --> 00:01:58.389
+karena ada kesalahan mengatakan
+&lt;i&gt;priceTextView&lt;/i&gt; belum terselesaikan.
+
+00:01:58.414 --> 00:02:02.589
+Saya akan menghapus ini dan
+menggunakan nama variabel baru di sini.
+
+00:02:02.614 --> 00:02:04.415
+Keren, dan itu membuat galatnya pergi.
+
+00:02:04.440 --> 00:02:06.228
+Tapi saya masih memiliki galat di sini,
+
+00:02:06.253 --> 00:02:08.911
+dan saya pikir itu terkait
+dengan tugas terakhir.
+
+00:02:08.936 --> 00:02:12.934
+Hal terakhir di sini mengatakan
+untuk mengubah &lt;i&gt;R.id.price_text_view&lt;/i&gt;
+
+00:02:12.959 --> 00:02:16.570
+ke &lt;i&gt;R.id.order_summary_text_view.&lt;/i&gt;
+
+00:02:16.595 --> 00:02:19.357
+Saya akan klik dua kali pada galat ini,
+
+00:02:19.382 --> 00:02:24.247
+saya akan menghapusnya dan
+mengetik &lt;i&gt;order_summary_text_view.&lt;/i&gt;
+
+00:02:24.272 --> 00:02:27.321
+Selesai, dan sekarang galatnya hilang.
+
+00:02:27.607 --> 00:02:29.758
+Dan sekarang aplikasinya
+bekerja tanpa ada kesalahan.
+
+00:02:29.789 --> 00:02:31.504
+Tata letak awalnya benar.
+
+00:02:31.529 --> 00:02:34.143
+Daripada mengatakan harga,
+sekarang mengatakan ringkasan &lt;i&gt;Order&lt;/i&gt;,
+
+00:02:34.168 --> 00:02:35.594
+jika saya mengubah kuantitasnya
+
+00:02:35.619 --> 00:02:38.147
+dan menekan &lt;i&gt;Order&lt;/i&gt;
+maka ringkasannya muncul di sini.
+
+00:02:38.496 --> 00:02:41.727
+Mari kita bicara tentang pengamatan
+yang mungkin telah kaulakukan.
+
+00:02:41.752 --> 00:02:44.217
+Ingat tidak ada yang benar atau salah.
+
+00:02:44.242 --> 00:02:47.565
+Pertama kau mungkin telah
+memperhatikan bahwa untuk harga TextView,
+
+00:02:47.590 --> 00:02:50.908
+ketika kita memberikannya sebuah ID
+dari &lt;i&gt;order_summary_text_view&lt;/i&gt;,
+
+00:02:50.933 --> 00:02:55.245
+format yang sama muncul lagi di kode Java
+
+00:02:55.270 --> 00:02:58.260
+saat kami memodifikasi
+metode &lt;i&gt;displayMessage.&lt;/i&gt;
+
+00:02:58.285 --> 00:03:00.390
+Kau juga mungkin telah
+memperhatikan dengan mengubah
+
+00:03:00.415 --> 00:03:01.916
+&lt;i&gt;Price&lt;/i&gt; [harga] ke &lt;i&gt;OrderSummary,&lt;/i&gt;
+
+00:03:01.941 --> 00:03:05.524
+tampaknya memiliki banyak riak yang
+mempengaruhi pada bagian kode lainnya.
+
+00:03:05.549 --> 00:03:08.876
+Beberapa dari perubahan ini diperlukan
+agar aplikasinya berkerja lagi,
+
+00:03:08.901 --> 00:03:11.461
+tapi perubahan lain yang lebih baik
+
+00:03:11.486 --> 00:03:16.613
+sebagai konvensi sehingga kita tidak
+punya referensi harga yang lama.
+
+00:03:16.939 --> 00:03:19.742
+Dalam melihat lebih dekat
+pada metode &lt;i&gt;displayMessage,&lt;/i&gt;
+
+00:03:19.767 --> 00:03:22.634
+Kau mungkin memperhatikan
+bahwa hanya ada satu parameter,
+
+00:03:22.659 --> 00:03:25.630
+pesan &lt;i&gt;string&lt;/i&gt;.
+Dan tidak ada nilai kembali.
+
+00:03:25.987 --> 00:03:28.037
+Itu sebabnya kita tidak memiliki baris
+di metode ini
+
+00:03:28.062 --> 00:03:30.433
+yang mengatakan mengembalikan sesuatu.
+
+00:03:30.458 --> 00:03:34.425
+Kau juga dapat mengenali kata
+&lt;i&gt;TextView&lt;/i&gt; yang kita lihat dalam XML
+
+00:03:34.450 --> 00:03:36.989
+untuk menambahkan
+tampilan teks untuk tata letak kita.
+
+00:03:37.266 --> 00:03:39.883
+Hal ini dieja persis sama
+seperti yang tertulis di sini.
+
+00:03:40.280 --> 00:03:44.727
+Baris kode ini juga terlihat
+seperti penugasan variabel,
+
+00:03:44.752 --> 00:03:46.961
+di mana kita memiliki variabel tipe data,
+
+00:03:46.986 --> 00:03:51.205
+nama variabel dan kemudian
+memiliki nilai awal di sini.
+
+00:03:51.842 --> 00:03:55.291
+Ini mirip dengan bagaimana kita
+menyatakan bilangan bulat dan &lt;i&gt;string.&lt;/i&gt;
+
+00:03:55.633 --> 00:03:57.269
+Dan jika kau melihat dengan benar,
+
+00:03:57.294 --> 00:04:00.133
+kau mungkin berpikir ini terlihat
+seperti panggilan metode,
+
+00:04:00.158 --> 00:04:03.581
+&lt;i&gt;findViewById&lt;/i&gt; diikuti oleh kurung membuka,
+
+00:04:03.606 --> 00:04:06.710
+beberapa hal di tengah,
+dan kemudian kurung penutup.
+
+00:04:06.735 --> 00:04:08.810
+Mirip dengan &lt;i&gt;setText&lt;/i&gt; sini,
+
+00:04:08.835 --> 00:04:12.485
+ada kurung buka, sesuatu di tengah,
+dan kemudian kurung tutup.
+
+00:04:12.510 --> 00:04:14.792
+Jadi ini mungkin juga panggilan metode.
+
+00:04:15.054 --> 00:04:18.077
+Dalam video yang akan datang,
+kita akan kita lihat lebih dekat
+
+00:04:18.103 --> 00:04:20.976
+apa yang sebenarnya terjadi
+dalam baris-baris kode ini
+
+00:04:21.000 --> 00:04:23.888
+dan mulai memahami apa
+arti mereka yang sebenarnya.
+
