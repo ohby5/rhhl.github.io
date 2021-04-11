@@ -1,0 +1,233 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.193 --> 00:00:03.076
+Kita lihat penerapan
+&lt;i&gt;ViewGroup&lt;/i&gt; bersarang pada aplikasi kita.
+
+00:00:03.076 --> 00:00:06.377
+Informasi pada aplikasi kita tampak
+tersusun dalam kolom vertikal.
+
+00:00:06.377 --> 00:00:09.000
+Jadi, kita bisa gunakan
+&lt;i&gt;LinearLayout&lt;/i&gt; vertikal untuk ini.
+
+00:00:09.000 --> 00:00:12.040
+Ini tampak bagus sejauh ini
+karena ada satu tampilan per baris
+
+00:00:12.040 --> 00:00:13.701
+pada &lt;i&gt;LinearLayout&lt;/i&gt; vertikal.
+
+00:00:14.022 --> 00:00:17.425
+Namun saat sampai pada baris ini,
+ini terdiri dari beberapa tampilan.
+
+00:00:17.425 --> 00:00:19.251
+&lt;i&gt;LinearLayout&lt;/i&gt; horizontal bisa digunakan
+
+00:00:19.251 --> 00:00:22.850
+untuk membuat baris ini yang terdiri
+dari tombol, &lt;i&gt;TextView&lt;/i&gt;, dan tombol.
+
+00:00:22.850 --> 00:00:25.378
+&lt;i&gt;LinearLayout&lt;/i&gt; ini
+akan menjadi tampilan anak kedua
+
+00:00:25.378 --> 00:00:28.176
+dalam &lt;i&gt;LinearLayout&lt;/i&gt; vertikal
+yang lebih besar.
+
+00:00:28.740 --> 00:00:31.699
+Sebentar lagi, saya akan menunjukkan
+tiga fail &lt;i&gt;layout&lt;/i&gt; XML.
+
+00:00:31.699 --> 00:00:36.708
+Saya ingin tanya mana yang membuat
+&lt;i&gt;layout&lt;/i&gt; yang kita inginkan dengan akurat.
+
+00:00:36.708 --> 00:00:40.218
+Namun tidak boleh menyalin fail ini
+dan menjalankannya di Android Studio
+
+00:00:40.218 --> 00:00:44.758
+Saya ingin Anda menebak
+dengan membaca dan memahami kode ini.
+
+00:00:45.280 --> 00:00:47.712
+Anda bisa menemukan taut ini
+dalam catatan pengajar.
+
+00:00:47.712 --> 00:00:49.437
+Ada tiga pilihan.
+
+00:00:49.437 --> 00:00:50.728
+Pilihan A,
+
+00:00:51.562 --> 00:00:52.838
+Pilihan B,
+
+00:00:53.287 --> 00:00:54.706
+dan Pilihan C.
+
+00:00:54.706 --> 00:00:58.332
+Salah satu pilihan ini membuat
+&lt;i&gt;layout&lt;/i&gt; yang kita inginkan dengan tepat.
+
+00:00:59.326 --> 00:01:02.213
+Ini akan menantang
+karena kita belum pernah menemukan
+
+00:01:02.213 --> 00:01:04.273
+XML dengan &lt;i&gt;ViewGroup&lt;/i&gt; bersarang.
+
+00:01:04.653 --> 00:01:07.013
+Kita akan membagi tantangan ini
+dalam dua kuis.
+
+00:01:07.013 --> 00:01:09.624
+Jadi, saya belum meminta Anda
+membuat keputusan.
+
+00:01:09.624 --> 00:01:13.159
+Untuk kuis pertama, saya ingin Anda buat
+sketsa diagram hierarki tampilan
+
+00:01:13.159 --> 00:01:15.396
+untuk setiap fail XML ini.
+
+00:01:15.396 --> 00:01:18.749
+Ini informasi singkat
+tentang arti hierarki tampilan.
+
+00:01:19.702 --> 00:01:23.444
+Anda akan butuh kertas dan alat tulis
+untuk membuat sketsa diagram ini.
+
+00:01:23.742 --> 00:01:28.104
+Android mengatur semua tampilan
+di layar ini dalam hierarki tampilan
+
+00:01:28.104 --> 00:01:30.480
+atau struktur pohon dari tampilan.
+
+00:01:30.480 --> 00:01:33.714
+Ini diagram
+yang mewakili hierarki tampilan.
+
+00:01:33.714 --> 00:01:37.700
+Ini menunjukkan hubungan induk dan anak
+di antara tampilan-tampilan ini.
+
+00:01:37.700 --> 00:01:40.983
+Tampilan akar dari seluruh &lt;i&gt;layout&lt;/i&gt; ini
+adalah &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:01:41.502 --> 00:01:45.504
+Ada tiga anak, &lt;i&gt;RelativeLayout&lt;/i&gt;,
+&lt;i&gt;TextView&lt;/i&gt;, dan satu &lt;i&gt;TextView&lt;/i&gt; lagi.
+
+00:01:45.504 --> 00:01:50.854
+Lalu RelativeLayout ini punya
+anak sendiri, &lt;i&gt;ImageView&lt;/i&gt; dan &lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:51.190 --> 00:01:52.962
+Untuk aplikasi Puddles the Pig,
+
+00:01:52.962 --> 00:01:56.052
+ini hierarki tampilan
+yang dihasilkan oleh Android.
+
+00:01:56.396 --> 00:01:59.825
+Tampilan akarnya adalah &lt;i&gt;RelativeLayout&lt;/i&gt;
+yang memiliki empat tampilan anak,
+
+00:01:59.825 --> 00:02:03.258
+&lt;i&gt;ImageView, &lt;/i&gt;dua &lt;i&gt;TextView&lt;/i&gt;,
+serta &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:02:03.258 --> 00:02:07.712
+&lt;i&gt;LinearLayout&lt;/i&gt; ini memiliki
+dua &lt;i&gt;ImageView&lt;/i&gt; sebagai anaknya.
+
+00:02:08.586 --> 00:02:11.355
+Sekarang Anda mengerti
+arti diagram hierarki tampilan.
+
+00:02:11.355 --> 00:02:14.578
+Dengan membuat sketsa diagram
+untuk setiap &lt;i&gt;layout&lt;/i&gt; XML ini,
+
+00:02:14.578 --> 00:02:18.312
+Anda akan lebih mengerti tampilan mana
+yang merupakan tampilan induk,
+
+00:02:18.312 --> 00:02:19.451
+apa saja anaknya,
+
+00:02:19.451 --> 00:02:22.515
+dan apakah anak-anak itu
+memiliki tampilan anak atau tidak.
+
+00:02:22.990 --> 00:02:24.625
+Jika masih butuh petunjuk,
+
+00:02:24.625 --> 00:02:27.357
+ini beberapa contoh
+cara menerjemahkan &lt;i&gt;layout&lt;/i&gt; XML
+
+00:02:27.357 --> 00:02:29.505
+menjadi diagram hierarki tampilan.
+
+00:02:29.986 --> 00:02:33.010
+Dalam &lt;i&gt;layout&lt;/i&gt; ini,
+ada &lt;i&gt;LinearLayout&lt;/i&gt; sebagai tampilan akar.
+
+00:02:33.010 --> 00:02:36.447
+Omong-omong, titik-titik ini ditambahkan
+karena kode lengkapnya tak muat.
+
+00:02:36.447 --> 00:02:40.250
+Dengan tampilan akar &lt;i&gt;LinearLayout&lt;/i&gt;,
+gambar itu di puncak pohon ini.
+
+00:02:40.650 --> 00:02:42.929
+Ini berisi dua &lt;i&gt;TextView&lt;/i&gt; anak.
+
+00:02:42.929 --> 00:02:46.433
+Jadi, gambar itu sebagai tampilan anak
+di bawahnya. Itu saja.
+
+00:02:46.839 --> 00:02:48.733
+Ini &lt;i&gt;layout&lt;/i&gt; yang lebih rumit.
+
+00:02:49.072 --> 00:02:51.123
+Ada tampilan akar
+yang berupa &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:02:51.123 --> 00:02:55.595
+Itu berisi tiga anak langsung,
+dua &lt;i&gt;TextView&lt;/i&gt; dan satu &lt;i&gt;RelativeLayout&lt;/i&gt;.
+
+00:02:55.908 --> 00:03:00.377
+Di dalam &lt;i&gt;RelativeLayout&lt;/i&gt; itu,
+ada &lt;i&gt;ImageView&lt;/i&gt; dan &lt;i&gt;TextView&lt;/i&gt; sebagai anak.
+
+00:03:00.774 --> 00:03:03.889
+Setelah diagram hierarki tampilan
+untuk setiap pilihan dibuat,
+
+00:03:03.889 --> 00:03:06.379
+centang kotak-kotak ini
+untuk melanjutkan.
+
+00:03:06.750 --> 00:03:10.480
+Dalam kuis berikutnya, saya akan
+meminta Anda memilih pilihan terbaik.
+
+00:03:10.480 --> 00:03:13.073
+Namun untuk saat ini,
+tidak perlu membuat keputusan.
+

@@ -1,0 +1,434 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.456 --> 00:00:04.225
+Os alunos aprenderam
+sobre variáveis e tipos de dados,
+
+00:00:04.258 --> 00:00:07.002
+especificamente
+sobre inteiros e strings.
+
+00:00:07.035 --> 00:00:11.594
+Há exemplos disso nos aplicativos
+nos quais vocês trabalhou?
+
+00:00:11.627 --> 00:00:13.825
+Há vários.
+
+00:00:13.858 --> 00:00:17.281
+As strings e os inteiros
+estão por toda parte.
+
+00:00:17.314 --> 00:00:18.739
+No Gmail, por exemplo,
+
+00:00:20.435 --> 00:00:25.138
+ao abrir, vemos as mensagens
+que não foram lidas,
+
+00:00:25.171 --> 00:00:27.633
+e esse é
+um número importante.
+
+00:00:27.666 --> 00:00:30.899
+Existem erros sutis,
+
+00:00:31.827 --> 00:00:36.705
+como quando o número não combina
+com a quantidade de mensagens.
+
+00:00:36.738 --> 00:00:41.220
+-Eu nunca me deparei com isso.
+-Que bom que nunca viu isso!
+
+00:00:41.253 --> 00:00:45.228
+Mas esses são problemas
+interessantes de resolver,
+
+00:00:45.261 --> 00:00:49.492
+porque, para o Gmail,
+nós sincronizamos o número primeiro,
+
+00:00:49.525 --> 00:00:54.620
+ou seja, obtemos os dados
+da nuvem para o dispositivo Android.
+
+00:00:54.653 --> 00:00:57.755
+Esse número, na verdade,
+é sincronizado separadamente
+
+00:00:57.788 --> 00:00:59.580
+do e-mail.
+
+00:00:59.613 --> 00:01:02.777
+Então pode haver
+uma perda de sincronia,
+
+00:01:02.810 --> 00:01:05.708
+e esse é um dos problemas
+mais complexos de se resolver.
+
+00:01:05.741 --> 00:01:10.253
+Estabelecemos que a quantidade
+de e-mail não lidos é uma variável
+
+00:01:10.286 --> 00:01:12.229
+e o tipo de dado seria...
+
+00:01:12.262 --> 00:01:14.203
+-Seria um inteiro.
+-Um inteiro.
+
+00:01:14.236 --> 00:01:17.323
+O valor foi calculado
+entre dispositivos
+
+00:01:17.356 --> 00:01:21.468
+e ele muda de acordo
+com o cenário do caso de uso
+
+00:01:21.501 --> 00:01:23.987
+-e da experiência do usuário.
+-Exatamente.
+
+00:01:24.020 --> 00:01:29.291
+Esse foi um exemplo de uma variável
+inteira, que pode mudar,
+
+00:01:29.324 --> 00:01:31.515
+mas outro exemplo
+é o dos IDs.
+
+00:01:31.548 --> 00:01:35.108
+Nesse caso é muito importante
+que o inteiro permaneça o mesmo.
+
+00:01:35.141 --> 00:01:37.491
+-O ID do meu e-mail?
+-Exatamente.
+
+00:01:37.524 --> 00:01:40.587
+O ID do e-mail, no servidor,
+que representa o e-mail,
+
+00:01:40.620 --> 00:01:43.564
+precisa ser exatamente
+igual ao ID do cliente,
+
+00:01:43.597 --> 00:01:48.300
+pois é assim que identificamos
+o e-mail em todos os dispositivos.
+
+00:01:48.333 --> 00:01:52.035
+Isso para um e-mail de conversa
+e não para o endereço de e-mail?
+
+00:01:52.068 --> 00:01:54.564
+Também para uma conversa.
+
+00:01:54.597 --> 00:01:56.855
+No Gmail, por exemplo,
+toda a thread,
+
+00:01:56.888 --> 00:02:00.612
+a thread de e-mail,
+que tem várias mensagens,
+
+00:02:00.645 --> 00:02:03.276
+é chamada de conversa
+
+00:02:03.309 --> 00:02:05.027
+e tem um ID de conversa.
+
+00:02:05.060 --> 00:02:08.883
+E cada mensagem
+também tem um ID único.
+
+00:02:08.916 --> 00:02:13.055
+E cada um dos IDs é armazenado
+na variável de qual tipo?
+
+00:02:13.088 --> 00:02:15.193
+-Inteiro, novamente.
+-Está bem.
+
+00:02:15.226 --> 00:02:18.472
+Quantos e-mails
+são enviados por dia?
+
+00:02:18.505 --> 00:02:21.713
+-Os números são muito grandes.
+-São. Eu não sei.
+
+00:02:23.025 --> 00:02:27.671
+Se cada mensagem
+de uma conversa é única,
+
+00:02:27.704 --> 00:02:31.559
+e cada e-mail é único
+entre todos os e-mail enviados,
+
+00:02:31.592 --> 00:02:33.615
+esse número
+deve ser muito grande.
+
+00:02:33.648 --> 00:02:36.775
+Essa é uma ótima pergunta.
+Nesse caso, em vez de int,
+
+00:02:36.808 --> 00:02:38.642
+-usamos longs.
+-Está bem.
+
+00:02:38.675 --> 00:02:40.807
+-Por ser de 64 bit.
+-Entendi.
+
+00:02:40.840 --> 00:02:43.672
+-Assim não precisamos...
+-Você terá mais espaço
+
+00:02:43.705 --> 00:02:46.743
+para usar um grande número.
+Essa é a diferença?
+
+00:02:46.776 --> 00:02:48.899
+E as strings?
+
+00:02:48.932 --> 00:02:50.301
+Strings.
+
+00:02:51.460 --> 00:02:54.255
+Imagino que o assunto
+seja uma string,
+
+00:02:54.288 --> 00:02:57.277
+-ou como isso é armazenado?
+-Isso. Tudo...
+
+00:02:57.310 --> 00:02:59.182
+O assunto é uma string.
+
+00:03:00.495 --> 00:03:05.668
+Os endereços de e-mail são strings.
+Isso também é importante.
+
+00:03:05.701 --> 00:03:08.916
+Quase tudo que vemos
+em qualquer aplicativo,
+
+00:03:08.949 --> 00:03:12.362
+virtualmente, tudo que tem texto
+é uma string.
+
+00:03:12.395 --> 00:03:15.931
+Um bom engenheiro
+não precisa saber tudo,
+
+00:03:15.964 --> 00:03:20.715
+mas precisa ser bom em descobrir
+onde a resposta está.
+
+00:03:20.748 --> 00:03:24.960
+Existem vários tutoriais
+bons por aí,
+
+00:03:24.993 --> 00:03:28.969
+só é preciso saber procurar
+pelas palavras-chave corretas.
+
+00:03:29.658 --> 00:03:34.297
+-Busque pelas palavras-chave certas.
+-E peça ajuda.
+
+00:03:34.330 --> 00:03:36.761
+Isso, na verdade,
+é muito importante.
+
+00:03:36.794 --> 00:03:40.548
+Eu sempre me arrependo
+de não ter perguntado antes.
+
+00:03:40.581 --> 00:03:46.057
+Depois de passar o dia
+tentando consertar algo, eu penso:
+
+00:03:46.090 --> 00:03:50.370
+"Eu devia ter perguntado
+para quem escreveu o componente."
+
+00:03:50.403 --> 00:03:54.962
+Creio que procurar as pessoas
+imediatamente é, com certeza,
+
+00:03:54.995 --> 00:03:57.338
+muito valioso,
+pois ganhamos muito tempo.
+
+00:03:57.371 --> 00:04:01.965
+E é preciso ter mais consciência
+dos outros projetos,
+
+00:04:01.998 --> 00:04:03.660
+tanto do Google
+
+00:04:03.693 --> 00:04:06.358
+como ao seu redor.
+
+00:04:07.558 --> 00:04:12.170
+Um bom engenheiro não se concentra
+somente no que faz.
+
+00:04:12.203 --> 00:04:13.733
+Ele... Ele...
+
+00:04:13.766 --> 00:04:16.820
+Temos o que chamamos
+de Tech Talks no trabalho.
+
+00:04:16.853 --> 00:04:19.549
+Que estão disponíveis,
+pelo menos para algumas pessoas.
+
+00:04:19.582 --> 00:04:25.176
+Verdade. Vemos quais são
+as tecnologias mais recentes
+
+00:04:25.209 --> 00:04:27.276
+nesses Tech Talks
+ou anúncios,
+
+00:04:27.309 --> 00:04:31.561
+que são enviados
+para o grupo de engenharia.
+
+00:04:31.594 --> 00:04:34.121
+Mantenha-se informado.
+
+00:04:34.154 --> 00:04:39.223
+Vamos voltar para quando
+você aprendeu sobre programação.
+
+00:04:39.256 --> 00:04:42.279
+Se pudesse conversar com a Alice
+daquele período,
+
+00:04:42.312 --> 00:04:45.174
+qual conselho
+você daria a ela hoje?
+
+00:04:45.207 --> 00:04:46.991
+Que pergunta interessante!
+
+00:04:49.463 --> 00:04:53.993
+Acho que eu devia ter
+me divertido mais com a programação.
+
+00:04:54.939 --> 00:04:59.321
+A forma como aprendi programação
+foi bem diferente de hoje em dia,
+
+00:04:59.354 --> 00:05:02.073
+pois eu sou da China.
+
+00:05:02.106 --> 00:05:04.992
+Foi algo bem acadêmico.
+
+00:05:05.025 --> 00:05:08.576
+Eu participava
+de aulas extracurriculares
+
+00:05:08.609 --> 00:05:10.825
+ministradas por um professor
+
+00:05:10.858 --> 00:05:15.600
+que dava tarefas
+para aprendermos algoritmos
+
+00:05:15.633 --> 00:05:18.090
+e resolver problemas.
+
+00:05:18.123 --> 00:05:22.080
+Acho que,
+pensando em retrospecto,
+
+00:05:22.113 --> 00:05:26.330
+eu devia ter feito projetos
+mais divertidos.
+
+00:05:27.146 --> 00:05:29.657
+-Acho que...
+-Um aplicativo de aniversário?
+
+00:05:29.690 --> 00:05:32.931
+Um aplicativo de aniversário?
+Claro!
+
+00:05:34.578 --> 00:05:38.427
+Exatamente, eu devia ter feito
+esse tipo de aplicativo,
+
+00:05:38.460 --> 00:05:40.242
+assim eu aprenderia mais,
+
+00:05:40.275 --> 00:05:44.320
+pois não haveria
+uma resposta correta.
+
+00:05:44.353 --> 00:05:47.747
+Ao criar um aplicativo assim,
+aprendemos sobre design.
+
+00:05:47.780 --> 00:05:49.732
+Se for um aplicativo
+de aniversário,
+
+00:05:49.765 --> 00:05:51.804
+sobre diferentes
+componentes de IU
+
+00:05:51.837 --> 00:05:54.948
+e não nos preocupamos
+só em enviar os dados
+
+00:05:54.981 --> 00:05:56.635
+de um lugar para o outro
+
+00:05:56.668 --> 00:05:59.028
+resolvendo tudo
+de forma mais eficiente.
+
+00:05:59.061 --> 00:06:01.052
+Creio que isso,
+
+00:06:01.085 --> 00:06:03.378
+na vida real,
+
+00:06:04.121 --> 00:06:06.314
+é o papel do engenheiro.
+
+00:06:06.347 --> 00:06:09.903
+Não devemos simplesmente
+resolver um desafio técnico,
+
+00:06:09.936 --> 00:06:12.351
+mas devemos criar
+um ótimo produto.
+
+00:06:12.384 --> 00:06:16.767
+-É como ser levado pela curiosidade.
+-Exatamente. Isso.
+
+00:06:16.800 --> 00:06:18.900
+Katherine e eu queremos
+agradecer.
+
+00:06:18.933 --> 00:06:20.212
+De nada.
+
+00:06:20.245 --> 00:06:23.742
+Os alunos aprenderão muito
+com seu ponto de vista.
+

@@ -1,0 +1,2174 @@
+{
+  "data": {
+    "lesson": {
+      "id": 323873,
+      "key": "8393b87e-4cd4-49ff-b0bc-50545990c927",
+      "title": "Making an App Interactive: Part 1",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/8393b87e-4cd4-49ff-b0bc-50545990c927/323873/1544459250098/Making+an+App+Interactive%3A+Part+1+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/8393b87e-4cd4-49ff-b0bc-50545990c927/323873/1544459224582/Making+an+App+Interactive%3A+Part+1+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 192734,
+          "key": "0bd6ff7e-ba88-4dac-8093-a5a6d561efa0",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0bd6ff7e-ba88-4dac-8093-a5a6d561efa0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 192735,
+              "key": "6022b199-8c67-4f2d-b0c5-d0848506a157",
+              "title": "Introduction",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction\n\nWelcome back! We’re excited that you want to move onto the next step of learning Android.\n\nBy the end of this course, you’ll be able to make an Android app with buttons and text fields that a user can interact with. Together we’ll make the Just Java app, which allows a user to fill out a form to order coffee. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 192736,
+              "key": "6dfcb0bf-57ad-4381-bb8a-439d25cda097",
+              "title": "Introduction",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d47a5b5_elssj6gor-hepugnnql6bdkzyis1sxqrww0hq8msdwdya8uylytgncybxoe8eh7b2vqhmeesnfarwd0nzq-s0w-1440-h-2560/elssj6gor-hepugnnql6bdkzyis1sxqrww0hq8msdwdya8uylytgncybxoe8eh7b2vqhmeesnfarwd0nzq-s0w-1440-h-2560",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6dfcb0bf-57ad-4381-bb8a-439d25cda097",
+              "caption": "Just Java App",
+              "alt": null,
+              "width": 200,
+              "height": 350,
+              "instructor_notes": null
+            },
+            {
+              "id": 192738,
+              "key": "73dff564-730a-4eb9-a150-20ceafe52f8b",
+              "title": "Introduction",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We picked this project because nearly every popular app involves accepting some type of user input and doing something with that data. For example, in a chat app, you type in a message and it gets sent to a friend. Hence, knowing how to accept user input is a critical milestone on the way to becoming an experienced app developer.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 192742,
+              "key": "1b55d2a7-2708-4dd3-9cd9-b8dd565e6258",
+              "title": "Introduction",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479e8c_-lvjdkrlkrvfbywplj5-p4icvkkkfacvfplyvdes6w-5b7jxcbhovdhhqrqcfnhf1spre5jvlcuh2wrx8f8v-s0w-281-h-500/-lvjdkrlkrvfbywplj5-p4icvkkkfacvfplyvdes6w-5b7jxcbhovdhhqrqcfnhf1spre5jvlcuh2wrx8f8v-s0w-281-h-500",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1b55d2a7-2708-4dd3-9cd9-b8dd565e6258",
+              "caption": "",
+              "alt": null,
+              "width": 200,
+              "height": 350,
+              "instructor_notes": null
+            },
+            {
+              "id": 192746,
+              "key": "1bb0ad99-a4ad-464d-8130-4648a7e756fd",
+              "title": "Introduction",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d47a5b4_yii3h7q-re67uut6j9c5zads0i1v3l9psidalsxrduc-xdh2fyft-foq1xjj8ilijk6bnrgnaazo7jmk4ci-s0w-281-h-500/yii3h7q-re67uut6j9c5zads0i1v3l9psidalsxrduc-xdh2fyft-foq1xjj8ilijk6bnrgnaazo7jmk4ci-s0w-281-h-500",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1bb0ad99-a4ad-464d-8130-4648a7e756fd",
+              "caption": "ROP Tutorial app created by student arpy_vanyan",
+              "alt": null,
+              "width": 200,
+              "height": 350,
+              "instructor_notes": null
+            },
+            {
+              "id": 192748,
+              "key": "8cd42db9-ba51-4c8e-8da3-dc48999187d6",
+              "title": "Introduction",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To build the Just Java app, we’ll introduce you to the basic fundamentals of Java and computer science, as well as how to debug and fix errors in the code. We’ll explore more of what the Android platform offers, by building more complex user interfaces, adding support for another language, and taking advantage of other apps on the device. We have a <a href=\"https://developers.google.com/android/for-all/vocab-words/?hl=en\" target=\"_blank\">vocabulary glossary</a> that accompanies this course, and if you need help, you can ask questions on the class discussion forum.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 192755,
+              "key": "d57a161d-317d-4295-9fb2-5743dc80d56a",
+              "title": "Introduction",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479e87_xqtnzllo6lpbaskfnvrk4lajamhdmdcrli96si7pcfegbee1klnpi2dnjwyht49tyfonviyf3cqtwyozqyc-s0w-876-h-469/xqtnzllo6lpbaskfnvrk4lajamhdmdcrli96si7pcfegbee1klnpi2dnjwyht49tyfonviyf3cqtwyozqyc-s0w-876-h-469",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d57a161d-317d-4295-9fb2-5743dc80d56a",
+              "caption": "To build the Just Java app, we’ll introduce you to the basic fundamentals of Java such as Intents. ",
+              "alt": null,
+              "width": 876,
+              "height": 469,
+              "instructor_notes": null
+            },
+            {
+              "id": 192757,
+              "key": "4976de25-9d29-4375-95e9-a22d83711dba",
+              "title": "Introduction",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "If you’re just joining us for the first time, note that the content presented here used to be part of a larger course (called Android for Beginners), which got broken up into 2 courses. So this course will contain Lesson 2, Practice Set 2, and Lesson 3. If you aren’t sure how to create user interface layouts in Android with XML, we recommend that you first take the Android Basics: User Interface course and then return here. You should also have <a href=\"https://developer.android.com/studio/index.html\" target=\"_blank\">Android Studio</a> already on your computer (if not, check out these installation instructions). \n\nAs a reminder, this course is intended for people with little to no programming experience. Course topics include variables, data types, methods, classes, and object-oriented programming. If you’re an experienced developer already, consider checking out the <a href=\"https://www.udacity.com/course/new-android-fundamentals--ud851\" target=\"_blank\">Developing Android Apps course</a>.\n\nWe’ll be your instructors guiding you through the course, so let’s get started!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 192758,
+              "key": "3499b002-d607-4a49-a12a-bfd79af2ac7e",
+              "title": "Introduction",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479de0_7jjd41tt3yg6ycrsxugeqw20w0ra-lf3qo6t9kmhvgo91lzwed-htsgwmx0fk7ws1vbjfyybwanz8o-stdi-s0w-838-h-243/7jjd41tt3yg6ycrsxugeqw20w0ra-lf3qo6t9kmhvgo91lzwed-htsgwmx0fk7ws1vbjfyybwanz8o-stdi-s0w-838-h-243",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3499b002-d607-4a49-a12a-bfd79af2ac7e",
+              "caption": "Katherine Kuan, Kunal Chawla, Lyla Fujiwara",
+              "alt": null,
+              "width": 900,
+              "height": 243,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 41107,
+          "key": "42963763680923",
+          "title": "Create a New Project",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42963763680923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 91263,
+              "key": "4296376368",
+              "title": "Create a New Project",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "*IMPORTANT* - The activity templates (timecode 0:48) have been updated in Android Studio Version 1.4. If you are using this version or newer, please select the \"Empty\" activity template (instead of the Blank Activity), which will generate files that match the content in this video.\n\nIf you're having trouble creating a new app, check out the <a href=\"https://docs.google.com/document/d/1w1Xn_hnSAODAAtdRDp7haYPBtEwX_l7Htpf8Wpgbu6w/pub?embedded=true\" target=\"_blank\">Troubleshooting Document</a>.",
+              "user_state": {
+                "node_key": "4296376368",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QUaRaolip-U",
+                  "china_cdn_id": "QUaRaolip-U.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Create a New Project - Quiz",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/FMktKK_IcF1__527b-h_5vhxvUBqRkwrRNMaL_Sk2yWhkBV2OI6kMgHTj54oe5pOUPy1kbPL6y6rlfRjqb0=s0#w=1300&h=800",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4296376368",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4295619886",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.050303927680798007,
+                      "y": 0.26098253880266076
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lhu2RMxl0I4",
+                  "china_cdn_id": "lhu2RMxl0I4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 246,
+          "key": "42847160070923",
+          "title": "Plan How to Build the Layout",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42847160070923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 6362,
+              "key": "4284716007",
+              "title": "Plan How to Build the Layout",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4284716007",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "3rStWxGfVNo",
+                  "china_cdn_id": "3rStWxGfVNo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Plan How to Build the Layout - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/JVzMqTZmx1Dx38uC0S-njOJkHAJl2VO9SSC2Fx4wAqgr7fAX6eELkMnybYP8IoY9NFGF0VjCzt960JPNKw=s0#w=1414&h=795",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4284716007",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4291464952",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.5910224438902744,
+                      "x": 0.05148703558486596,
+                      "y": 0.28890970910996394
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.17738359201773837,
+                      "width": 0.8553615960099751,
+                      "x": 0.04985761761368064,
+                      "y": 0.5076471231464801
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.14855875831485588,
+                      "width": 0.8591022443890274,
+                      "x": 0.0513984889460918,
+                      "y": 0.8111078977056194
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "VJeGef3u-W0",
+                  "china_cdn_id": "VJeGef3u-W0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 123403,
+          "key": "43228091250923",
+          "title": "Build Layout",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43228091250923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 78454,
+              "key": "4322809125",
+              "title": "Build Layout",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Hint**: Google search for \"button android\"\n\n**Another Hint**: Look at the <a href=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2017/July/595ab9de_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf\" target=\"_blank\">Common Views cheat sheet</a>\n\n<a href=\"https://www.jetbrains.com/idea/help/reformatting-source-code.html\" target=\"_blank\">How to reformat source code </a>  \n\n<a href=\"https://www.jetbrains.com/idea/help/rearranging-code-using-arrangement-rules.html\" target=\"_blank\">How to rearrange source code </a> \n\n<a href=\"https://developer.android.com/sdk/installing/studio-tips.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#key-commands\" target=\"_blank\">Helpful keyboard shortcuts</a> for Android Studio\n\nHex color code for black is `#000000`\n**Another Hint**: Look at the <a href=\"https://s3.amazonaws.com/video.udacity-data.com/topher/2017/July/595ab9de_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf\" target=\"_blank\">Common Views cheat sheet</a>\nHex color code for black is #000000",
+              "user_state": {
+                "node_key": "4322809125",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "9EPc1xSshQ8",
+                  "china_cdn_id": "9EPc1xSshQ8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Build Layout - Quiz",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/wrCQrZzAmSN2yRXXW0mqmUCIZQ08xpEabhqwZHSdMU9Wc-LGuN2s7Lv3eWVDoeh7ygHVLLnR0DJDwAZs1w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4322809125",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4285598587",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.1352549889135255,
+                      "width": 0.49625935162094764,
+                      "x": 0.0539843399923044,
+                      "y": 0.8160527265256894
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "XGeqgBVtC8A",
+                  "china_cdn_id": "XGeqgBVtC8A.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 41137,
+          "key": "42701795700923",
+          "title": "Do Something When the Button is Clicked",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42701795700923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 104516,
+              "key": "4270179570",
+              "title": "Do Something When the Button is Clicked",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**IMPORTANT:** Note if you copy and paste the <a href=\"https://gist.github.com/udacityandroid/83242daf8a43b743d05e98733a35b19f\" target=\"_blank\">code</a>, you must add your package at the top of the file (there's a comment about it). The package name can be found in the project's AndroidManifest.xml file.\n\nThe package name our example uses is : \n*package com.example.android.justjava; *\n\nIf after you add the package and still see a line through some of the words, just ignore it for now. The code should still work perfectly!\n\n---\n\nHere are the words we introduced in this video:\n \n- Programming language\n- Java\n- Event-driven programming\n- Activity\n- Comments\n- Package name\n- Import statements\n- Class name\n- onCreate()\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4270179570",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "nO4XBOL987c",
+                  "china_cdn_id": "nO4XBOL987c.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Do Something When the Button is Clicked",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/ko7wrK7eKWYnO9Qxc_duLwF4lipdC3HlnuVZNjrqkOmpkybiB7b-hx0vceUaWgqWDUDS_aqG9alg8QBkyoM=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4270179570",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4289766577",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.770573566084788,
+                      "x": 0.08846844223669342,
+                      "y": 0.8226982844113775
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "rXtiU3svdd8",
+                  "china_cdn_id": "rXtiU3svdd8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 75595,
+          "key": "42904654100923",
+          "title": "Modifying First Lines of Java Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42904654100923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 67130,
+              "key": "4290465410",
+              "title": "Modifying First Lines of Java Code",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- onClick\n- Execute\n- Method\n- Calling\n- Expressions\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.\n\nIf you want to learn more about programming with Java, feel free to check out our <a href=\"https://www.udacity.com/course/intro-to-java-programming--cs046\" target=\"_blank\">Java course</a>. ",
+              "user_state": {
+                "node_key": "4290465410",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "njHH3aazZ8Y",
+                  "china_cdn_id": "njHH3aazZ8Y.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Modifying First Lines of Java - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/mP-7bDhy5I4moVND7H5s2v5D_bL1uB7EjnjX4VNZc5xYMjD8FRQAIYjrkTzIZWkePfv_wmgWhBPHfFvhCGw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4290465410",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4302175420",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.051735000420092346,
+                      "y": 0.7125264271399927
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-_c0MIoCQLo",
+                  "china_cdn_id": "-_c0MIoCQLo.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 115848,
+          "key": "42855667940923",
+          "title": "Solving Math Problems",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42855667940923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 99498,
+              "key": "4285566794",
+              "title": "Solving Math Problems",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- Expressions\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4285566794",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "qMw1cdOpRUc",
+                  "china_cdn_id": "qMw1cdOpRUc.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Solving Math Problems - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/-4ZJ_M2ss9HoiFUKwGxVtz8U52Lqfvc75joYe5fRvo57qOeNvD-zpM8vcTsfdz1WohDtcw0r8UBCmL-uYlY=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4285566794",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4277100124",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.13747228381374724,
+                      "width": 0.8316708229426434,
+                      "x": 0.10086643666103297,
+                      "y": 0.8240210962401261
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "rj9_t7xgcVQ",
+                  "china_cdn_id": "rj9_t7xgcVQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 29605,
+          "key": "42760773350923",
+          "title": "Add TextViews for Price",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42760773350923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 97851,
+              "key": "4276077335",
+              "title": "Add TextViews for Price",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Correction:**The quiz image at the end shows *displayPrice(View view)*. It should be *displayPrice(int number)*.\n\nLink to code for <a href=\"https://gist.github.com/anonymous/fa134c55a4a43e8d6004\" target=\"_blank\">displayPrice method</a>\n\nMake sure Auto Import is on:\n\n* For Windows, go to File > Settings > Editor > General > Auto Import\n* For Mac, go to Android Studio > Preferences > Editor > General > Auto Import \n\nCheck all of the following options:\n\n- Show import popup\n- Optimize imports on the fly\n- Add unambiguous imports on the fly\n- Insert imports on paste → All\n\nHere are the words we introduced in this video:\n \n- Gist \n- Snippet\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4276077335",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "rjdn5URJA2E",
+                  "china_cdn_id": "rjdn5URJA2E.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Add TextViews for Price - Quiz",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/twaGE_UCu2vrN42D4TJFucFxIux8hBgW8A1MwwRIOvc2f2CN8fPcXs0lyGRb59t1UXesw62iXATGyPZYpBY=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4276077335",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4307505061",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.034519509484345776,
+                      "y": 0.15949406592121673
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.027842324273544654,
+                      "y": 0.5201509057021723
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.026691084788029926,
+                      "y": 0.7969978484769089
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "YN2LhZDR1G8",
+                  "china_cdn_id": "YN2LhZDR1G8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 40909,
+          "key": "42898655800923",
+          "title": "The Need for Variables",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42898655800923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 68625,
+              "key": "4289865580",
+              "title": "The Need for Variables",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- Variables\n- Robust\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4289865580",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "oU1CRzNL2wY",
+                  "china_cdn_id": "oU1CRzNL2wY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "The Need for Variables - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/SwnYni7B_3iPSoaIs8l94cboTpiOAPbhAWPzJw88ThLXSJpdVvpINK-59rluhvv3N7jWqzACuawbeu3s6Ss=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4289865580",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4322649497",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.5660847880299252,
+                      "x": 0.02612609102244389,
+                      "y": 0.3481845898004435
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.6296758104738155,
+                      "x": 0.02899002493765586,
+                      "y": 0.684589800443459
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.7369077306733167,
+                      "x": 0.030236907730673317,
+                      "y": 0.8905903547671841
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "IH960j7qiRs",
+                  "china_cdn_id": "IH960j7qiRs.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 13732,
+          "key": "42871286030923",
+          "title": "Add Your First Variable",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42871286030923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 109271,
+              "key": "4287128603",
+              "title": "Add Your First Variable",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- Data type\n- int\n- Variable name\n- Assignment operator\n- Initializing\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4287128603",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "nTs_QyiwVvE",
+                  "china_cdn_id": "nTs_QyiwVvE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Add Your First Variable - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/bV6qPVNz5G9N06qQvnm-fiA0w4WJZDWH5LUyumOihbviuo4nmR82Kbmcg1RDZzQZ2bPKLLZlqG78jFHWCiI=s0#w=1280&h=720",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4287128603",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4323848819",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.029399158354114715,
+                      "y": 0.13653686252771619
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.032418952618453865,
+                      "y": 0.3451011640798226
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6675498753117207,
+                      "y": 0.3372020509977827
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.03409445137157107,
+                      "y": 0.6003325942350333
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.03218516209476309,
+                      "y": 0.7990230044345898
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "UUKIVizu_Sg",
+                  "china_cdn_id": "UUKIVizu_Sg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 26060,
+          "key": "43251708040923",
+          "title": "Sometimes things don’t go as expected",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43251708040923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 91395,
+              "key": "4325170804",
+              "title": "Sometimes things don’t go as expected",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<img src=\"//lh3.googleusercontent.com/7Z488Cu0pnfYGcxyrnvHXi7qJhKtm9AZoEAt22khiGx496x687mLPJvaY_AEg96t-BzxAiWI29hbH2Mee457=s0\" width=\"130\" height=\"130\" />\n\n# First Things First\n\nAwesome job on creating your first variable! We saw that creating a new variable could be done in one line of code. If we wanted to show the value of that variable, then we were able to display it on screen in a TextView.\n\nAs we continue modifying more Java code, it’s completely normal to try something out, and have the app unexpectedly crash.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 33448,
+          "key": "42807051900923",
+          "title": "Debugging a Crash",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42807051900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 83887,
+              "key": "4280705190",
+              "title": "Debugging a Crash",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "DDMS stands for Dalvik Debug Monitor Server, and is a tool in Android to help you debug your app. For more info, click this <a href=\"http://developer.android.com/tools/debugging/ddms.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">link</a>.\n\nHere are the words we introduced in this video:\n \n- Debug\n- Crashes\n- Compile time error\n- Runtime error\n- System log\n- Stacktrace\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4280705190",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cK3XbSA2xCs",
+                  "china_cdn_id": "cK3XbSA2xCs.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Debugging a Crash - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/dl8RDIlPDqjNK7Ov_ZsN0M2_4myqv0zLji5L8FT88cGB40UDAYGK81BvD5DDcAZR6xLyvKwJkgfkeT300xI=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4280705190",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4268294549",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.09353390358332683,
+                      "y": 0.707266729316796
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": null,
+                  "china_cdn_id": "undefined.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 23843,
+          "key": "43015752020923",
+          "title": "Chatting with Google's Alice Yang, Part 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43015752020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 52113,
+              "key": "4301575202",
+              "title": "Chatting with Android Developer Part 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "AbufjL16mc8",
+                "china_cdn_id": "AbufjL16mc8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 123426,
+          "key": "42913549310923",
+          "title": "Hook Up Two Buttons",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42913549310923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 76363,
+              "key": "4291354931",
+              "title": "Hook Up Two Buttons",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Hint:**  To create the increment and decrement methods in MainActivity, copy the submitOrder method and change its name.  Then modify the code inside the method to do exactly what you need.",
+              "user_state": {
+                "node_key": "4291354931",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "meq-2lFDWpg",
+                  "china_cdn_id": "meq-2lFDWpg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Hook Up Two Buttons - Quiz",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/hcYyf2Fcqzo3tLLObcx26bugGa8gMj7sSpSdit7wpvdpOQC8lRYAqryDUHelGYEhnIO-I-vT83drWFmHb5U=s0#w=1406&h=790",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4291354931",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4273380463",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5007190466521684,
+                      "y": 0.11366782854507344
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.50349972313479,
+                      "y": 0.4602776165812084
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5050052062531659,
+                      "y": 0.7385417659108232
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "uPDCnanYY9w",
+                  "china_cdn_id": "uPDCnanYY9w.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 101213,
+          "key": "42757661730923",
+          "title": "Debug Mode in Android Studio",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42757661730923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 8891,
+              "key": "4275766173",
+              "title": "Debug Mode in Android Studio",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://developer.android.com/tools/debugging/debugging-studio.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Debugging your code in Android Studio</a>\n\nHere are the words we introduced in this video:\n \n- Debugger\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4275766173",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "xd0TTPhUI5w",
+                  "china_cdn_id": "xd0TTPhUI5w.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Debug Mode in Android Studio - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/s3eb-wbWxj2CMGoJdsd-V8PUyxXhpHmvSFHT2VBsj-tgX-dj2Q8I3e6PBM0DyRiRHyGhGnnCz1aBJ4gQfSU=s0#w=1300&h=800",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4275766173",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4300074758",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.17438824812967582,
+                      "y": 0.3259077050997783
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.17242051122194513,
+                      "y": 0.545904933481153
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.17314136533665836,
+                      "y": 0.7119595343680709
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "2t06EVpRQOk",
+                  "china_cdn_id": "2t06EVpRQOk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 123404,
+          "key": "43144396010923",
+          "title": "Update Data",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "43144396010923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 94676,
+              "key": "4314439601",
+              "title": "Update Data",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- Pseudocode\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4314439601",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "PGTfFa64OHI",
+                  "china_cdn_id": "PGTfFa64OHI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Update Data - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/KxRp5TU-5HWEj80QwYQP9BieKDh2YegYn2bJvsXhdhpSSSaUYZx3Qwr3xo8RskSERdSzGXBL_NqDXzE7kY42=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4314439601",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4289865578",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.31546134663341646,
+                      "x": 0.405490180798005,
+                      "y": 0.24338276053215077
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.31546134663341646,
+                      "x": 0.401866427680798,
+                      "y": 0.4136640798226164
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.3167082294264339,
+                      "x": 0.4019443578553616,
+                      "y": 0.5872020509977827
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.31546134663341646,
+                      "x": 0.40387312967581046,
+                      "y": 0.7584534368070953
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text5",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.2328159645232816,
+                      "width": 0.22942643391521197,
+                      "x": 0.7512645578741135,
+                      "y": 0.606260041704199
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "7wg-F6s9T98",
+                  "china_cdn_id": "7wg-F6s9T98.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 290,
+          "key": "42898655770923",
+          "title": "Update a Variable in the App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42898655770923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 55851,
+              "key": "4289865577",
+              "title": "Update a Variable in the App",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4289865577",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "AQq3aOSXf5U",
+                  "china_cdn_id": "AQq3aOSXf5U.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Update a Variable in the App - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/faZfcihLXBTz82rAOVU1J-e6SkI6EVq1GQKuIS23ZGX_fXQIx4PAdlOQD7RneNetmLas6rgs-Q7agA8P6Js=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4289865577",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4315124213",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.03418299801034523,
+                      "y": 0.25388655905713
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.035210264591207525,
+                      "y": 0.6187953230018362
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.034519509484345776,
+                      "y": 0.8216589274268986
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "v5U19dsBIwM",
+                  "china_cdn_id": "v5U19dsBIwM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 103742,
+          "key": "42970554510923",
+          "title": "Update Quantity Variable",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42970554510923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 101475,
+              "key": "4297055451",
+              "title": "Update Quantity Variable",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4297055451",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "D2zD5DvmdE8",
+                  "china_cdn_id": "D2zD5DvmdE8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Update Quantity Variable - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/aCgs1vZM9uiTqEBD1IixHLdHroeJqQyqPeMqOLW21pE6jhmq-zp2tFyMu3k88nHgvrDYgRudoWMPoPJe4F0=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4297055451",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4285668666",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.34663341645885287,
+                      "x": 0.4495791770573566,
+                      "y": 0.3589592572062084
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.34538653366583544,
+                      "x": 0.44751402743142144,
+                      "y": 0.5290327050997783
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.34538653366583544,
+                      "x": 0.44772833541147133,
+                      "y": 0.7023628048780488
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.34413965087281795,
+                      "x": 0.4514300187032419,
+                      "y": 0.8725748337028825
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric1",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.04987531172069826,
+                      "x": 0.816883572319202,
+                      "y": 0.5225886917960089
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric2",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.048628428927680795,
+                      "x": 0.8211892144638404,
+                      "y": 0.6948447893569845
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": null,
+                    "label": null,
+                    "marker": "numeric3",
+                    "model": "NumericInputWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08869179600886919,
+                      "width": 0.05112219451371571,
+                      "x": 0.823176433915212,
+                      "y": 0.8716740576496674
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ULR4Hcf8JTE",
+                  "china_cdn_id": "ULR4Hcf8JTE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 19126,
+          "key": "42759601880923",
+          "title": "Modify the increment() Method",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42759601880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 59309,
+              "key": "4275960188",
+              "title": "Modify the increment() Method",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Here are the words we introduced in this video:\n \n- Variable declaration\n\nYou can look up their definitions <a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">in the Vocab Glossary</a>.",
+              "user_state": {
+                "node_key": "4275960188",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Fkxo68MJBQ8",
+                  "china_cdn_id": "Fkxo68MJBQ8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Modify the increment() Method - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/7CIAqHZdkqt3LkQDRlyC3WSGqrg8v0n4QQWlZNLAGUQDWc6A1Wb6UHjaeHVwtyTrpOe0yOnr1xLF_zYfYQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4275960188",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4305920186",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.02727556109725686,
+                      "y": 0.2638392141811599
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.02679734455974322,
+                      "y": 0.6316141268102134
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.030091663845756702,
+                      "y": 0.8338162914876663
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fuLr3u8HMJ0",
+                  "china_cdn_id": "fuLr3u8HMJ0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 95806,
+          "key": "42748250480923",
+          "title": "Modify the decrement() Method",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42748250480923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 3917,
+              "key": "4274825048",
+              "title": "Modify the decrement() Method",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4274825048",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "NsRZ7VoW4hY",
+                  "china_cdn_id": "NsRZ7VoW4hY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Modify the decrement() Method - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/lof17DnFbSRqeMQKAiKbFlpLzRazHWeBcsmnmIFmV4v5CMVbDPF7U_q7plWh3eLxzoCsZq3eNEsFdSzS5CQ=s0#w=1406&h=790",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4274825048",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4305629577",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.027364107736031016,
+                      "y": 0.26201245631452674
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.02670877889504754,
+                      "y": 0.8026040155448829
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "OTx19neNoPw",
+                  "china_cdn_id": "OTx19neNoPw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 101205,
+          "key": "42973149020923",
+          "title": "Make the Quantity Picker Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42973149020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 75831,
+              "key": "4297314902",
+              "title": "Make the Quantity Picker Work",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://gist.github.com/anonymous/6dde8cc012ac94aaf9ea\" target=\"_blank\"> Link to MainActivity gist</a>\n\n<a href=\"https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Click here</a> and search for: \n- Variable scope\n- Local variables\n- Global variable\n- Variable declaration",
+              "user_state": {
+                "node_key": "4297314902",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "v_CcO8djJnM",
+                  "china_cdn_id": "v_CcO8djJnM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Make the Quantity Picker Work - Quiz",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/1mUnhlo3ecJdqSvPnkXa1AVwojMxos1DJHGHkDTE70N6C5oSew5z_vUdzEtjdztYwMSVTRSfGQO6ptxKlPH9=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4297314902",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4270064039",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.025681531340106763,
+                      "y": 0.2934451219512195
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.0252387410684714,
+                      "y": 0.5378199744383142
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.02702759626203047,
+                      "y": 0.8136904900459916
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "GavGaI52rmk",
+                  "china_cdn_id": "GavGaI52rmk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 115067,
+          "key": "42872653270923",
+          "title": "Fix the Order Button",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42872653270923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 110857,
+              "key": "4287265327",
+              "title": "Fix the Order Button",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "4287265327",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-7LXttgVDsE",
+                  "china_cdn_id": "-7LXttgVDsE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Fix the Order Button - Quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/nN2VY9WxPACEnNPgTjbdeAmjCWs6yUaQO72QVi2gT8Igz2y2k6ypygS5bzO2kOuSRWDtThX8mrpiJPm6eQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4287265327",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4289819551",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.1973392461197339,
+                      "width": 0.8403990024937655,
+                      "x": 0.06998129675810474,
+                      "y": 0.3527231152993348
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.47989045711526845,
+                      "y": 0.767423371782324
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "jpHOZZ7G-w0",
+                  "china_cdn_id": "jpHOZZ7G-w0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 19141,
+          "key": "42837449970923",
+          "title": "Reflection",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "42837449970923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 48980,
+              "key": "4283744997",
+              "title": "Reflection",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://macdiscussions.udacity.com \">Share your Work</a> - Share your app with a friend or family member. Then use this thread to share with us the details from that conversation.",
+              "user_state": {
+                "node_key": "4283744997",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "DW4rd-mGklk",
+                  "china_cdn_id": "DW4rd-mGklk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Reflection",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/E0BXqB5Lvys_De6USkTK9s3rGSqoLeBw0iLceJaRrIqwQELwadVX0239Vu-xXasMoMAuRWgffArX6qSyWzI=s0#w=1280&h=720",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4283744997",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "4291464937",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.40593827930174564,
+                      "y": 0.7942419623059866
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": null,
+                  "china_cdn_id": "null.mp4"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

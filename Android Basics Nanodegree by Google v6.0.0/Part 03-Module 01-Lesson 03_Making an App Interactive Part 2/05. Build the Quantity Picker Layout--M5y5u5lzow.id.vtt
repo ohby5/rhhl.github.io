@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.817 --> 00:00:03.726
+Itu konsep yang sulit,
+namun Anda mengatasinya dengan baik.
+
+00:00:04.098 --> 00:00:08.006
+Ini memberi kemampuan untuk membuat
+&lt;i&gt;layout&lt;/i&gt; yang sangat bagus di Android
+
+00:00:08.006 --> 00:00:11.182
+karena hampir semua layar terdiri
+dari semacam &lt;i&gt;layout&lt;/i&gt; bersarang
+
+00:00:11.182 --> 00:00:14.305
+yang disebutkan Correll tadi
+dalam aplikasi &lt;i&gt;Google Play&lt;/i&gt;.
+
+00:00:14.840 --> 00:00:16.479
+Setelah semua persiapan itu,
+
+00:00:16.479 --> 00:00:18.910
+kini kita siap untuk kembali
+ke Android Studio
+
+00:00:18.910 --> 00:00:22.607
+untuk menerapkan perubahan demi mendapat
+pemilih kuantitas yang lebih baik.
+
+00:00:22.607 --> 00:00:26.214
+Jika Anda bertanya, "Katherine, bagaimana
+jika saya mencoba membuat &lt;i&gt;layout&lt;/i&gt;,
+
+00:00:26.214 --> 00:00:30.279
+namun tidak muncul
+tiga pilihan &lt;i&gt;layout&lt;/i&gt; XML
+
+00:00:30.279 --> 00:00:31.870
+yang harus saya pilih?"
+
+00:00:31.870 --> 00:00:33.357
+Itu pertanyaan yang wajar.
+
+00:00:33.768 --> 00:00:36.926
+Sejauh ini, kita sudah
+berlatih membaca XML
+
+00:00:36.926 --> 00:00:39.284
+dan membuat
+diagram hierarki tampilan.
+
+00:00:39.284 --> 00:00:41.508
+Kita juga sudah berlatih
+membaca &lt;i&gt;layout&lt;/i&gt; XML
+
+00:00:41.508 --> 00:00:44.083
+dan menggambar
+sketsa tampilan layarnya.
+
+00:00:44.408 --> 00:00:48.385
+Namun ini saatnya untuk melatih
+melihat desain yang ingin kita buat
+
+00:00:48.385 --> 00:00:50.352
+dan bisa menulis XML darinya.
+
+00:00:50.682 --> 00:00:54.136
+Saya sadar saya memberi
+jawaban XML-nya pada kuis sebelumnya.
+
+00:00:54.136 --> 00:00:57.932
+Saya agak memperhatikan itu,
+namun jangan melihat jawabannya.
+
+00:00:57.932 --> 00:01:01.107
+Saya ingin Anda melatih
+kemampuan melihat cuplikan layar
+
+00:01:01.107 --> 00:01:05.821
+atau tiruan &lt;i&gt;layout&lt;/i&gt; yang ingin Anda buat,
+lalu bisa menulis XML untuk itu.
+
+00:01:06.543 --> 00:01:09.865
+Biasanya, kita mulai dengan cuplikan layar
+dari yang ingin kita buat.
+
+00:01:09.865 --> 00:01:14.266
+Anda bisa mendapat ini dari desainer
+dalam tim Anda yang merancang aplikasi.
+
+00:01:14.568 --> 00:01:18.593
+Atau jika Anda tidak memiliki desainer,
+Anda bisa membuat sketsanya sendiri.
+
+00:01:18.593 --> 00:01:21.798
+Anda akan bayangkan cara membagi ini
+menjadi tampilan dan &lt;i&gt;ViewGroup&lt;/i&gt;.
+
+00:01:22.192 --> 00:01:26.499
+Anda bisa menandainya, lalu mencoba
+membuat diagram hierarki tampilan
+
+00:01:26.499 --> 00:01:29.754
+untuk hubungan
+antara tampilan anak dan induk.
+
+00:01:30.033 --> 00:01:33.271
+Setelah selesai membuat diagram ini,
+Anda bisa mulai membuat kerangka
+
+00:01:33.271 --> 00:01:35.797
+untuk kode &lt;i&gt;layout&lt;/i&gt; XML-nya.
+
+00:01:36.176 --> 00:01:38.932
+Saya akan membiarkan bagian ini
+sebagai latihan untuk Anda.
+
+00:01:39.266 --> 00:01:42.632
+Anda akan membuat perubahan ini
+dalam fail &lt;i&gt;layout&lt;/i&gt; &lt;i&gt;activity_main.xml&lt;/i&gt;.
+
+00:01:42.899 --> 00:01:46.446
+Selain menulis XML di sini
+dan melihat pratinjaunya,
+
+00:01:46.446 --> 00:01:49.021
+Anda juga bisa mengeklik
+jendela &lt;i&gt;Design&lt;/i&gt; ini.
+
+00:01:49.021 --> 00:01:52.094
+Ini tab &lt;i&gt;Design&lt;/i&gt; dan lawannya tab&lt;i&gt; Text&lt;/i&gt;.
+
+00:01:52.094 --> 00:01:55.973
+Jendela &lt;i&gt;Design&lt;/i&gt; memungkinkan Anda
+memindahkan tampilan ke perangkat.
+
+00:01:56.494 --> 00:01:59.730
+Anda juga bisa melihat
+pohon komponen di sudut kanan atas ini.
+
+00:01:59.730 --> 00:02:03.406
+Pada dasarnya, ini adalah struktur pohon
+dari semua tampilan di hierarki Anda.
+
+00:02:03.727 --> 00:02:06.769
+Saat ini, ada &lt;i&gt;LinearLayout&lt;/i&gt; vertikal
+yang merupakan tampilan induk
+
+00:02:06.769 --> 00:02:08.884
+dan semua tampilan anak ini
+di dalamnya.
+
+00:02:08.884 --> 00:02:12.050
+Jika ada &lt;i&gt;ViewGroup&lt;/i&gt; bersarang,
+mereka juga akan muncul di sini.
+
+00:02:12.544 --> 00:02:15.208
+Buatlah &lt;i&gt;layout&lt;/i&gt; ini di Android Studio.
+
+00:02:15.498 --> 00:02:17.477
+Setelah memilih
+dan memposisikan tampilan,
+
+00:02:17.477 --> 00:02:20.068
+jangan lupa mempercantiknya
+agar tampak seperti ini.
+
+00:02:20.068 --> 00:02:22.158
+Gaya tampilannya sebagian besar sama.
+
+00:02:22.158 --> 00:02:26.124
+Namun perhatikan, ada jarak 8 dp
+di antara tombol minus (-) dan "2"
+
+00:02:26.124 --> 00:02:28.148
+dan antara "2" dan tombol plus (+).
+
+00:02:28.148 --> 00:02:32.162
+Seperti dikatakan tadi, jangan melihat
+kodenya dan coba menerapkannya sendiri.
+
+00:02:32.534 --> 00:02:35.303
+Setelah selesai, centang
+kotak ini untuk melanjutkan.
+

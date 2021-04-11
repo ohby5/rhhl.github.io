@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.193 --> 00:00:02.929
+Vamos alterar
+para quando clicar no botão Order,
+
+00:00:02.962 --> 00:00:06.857
+ele exiba "Amount Due $10",
+ou seja lá qual for o preço.
+
+00:00:06.890 --> 00:00:09.824
+Como muitas combinações
+precisam do preço,
+
+00:00:09.857 --> 00:00:13.375
+eu criarei uma variável inteira
+para armazená-lo.
+
+00:00:13.408 --> 00:00:16.075
+Perceba que int começa
+com letra minúscula,
+
+00:00:16.108 --> 00:00:18.259
+por ser um tipo
+de dado primitivo.
+
+00:00:18.292 --> 00:00:20.954
+Agora posso me referir
+à variável price
+
+00:00:20.987 --> 00:00:23.715
+sempre que precisar
+do número do preço.
+
+00:00:23.748 --> 00:00:27.267
+Preciso alterar as strings
+para dizer "Amount Due".
+
+00:00:27.300 --> 00:00:32.043
+Eu escreverei "Amount Due",
+adicionando um espaço
+
+00:00:32.076 --> 00:00:37.083
+e concatenarei isso
+com a variável price.
+
+00:00:37.116 --> 00:00:39.496
+Eu me esqueci
+do sinal de dólar,
+
+00:00:39.529 --> 00:00:42.160
+que deve fazer parte
+desta string literal.
+
+00:00:42.193 --> 00:00:47.116
+Quero que ele apareça
+depois de um espaço.
+
+00:00:47.149 --> 00:00:48.643
+Vamos executar.
+
+00:00:48.676 --> 00:00:51.387
+Ao alterar a quantidade para 3
+e clicar em Order,
+
+00:00:51.420 --> 00:00:54.386
+ele exibirá Amount Due $15.
+
+00:00:55.075 --> 00:00:57.633
+O primeiro está pronto.
+Não foi tão ruim assim.
+
+00:00:57.666 --> 00:01:01.122
+A seguir, queremos dizer
+"That would be $10 please".
+
+00:01:01.155 --> 00:01:05.193
+Vamos alterar o texto
+para começar com "That would be",
+
+00:01:05.226 --> 00:01:10.403
+com sinal de dólar,
+price, e mais algum texto.
+
+00:01:10.436 --> 00:01:14.787
+Eu devo dizer "please"
+e usar ponto final.
+
+00:01:14.820 --> 00:01:19.659
+Adicionei um espaço aqui,
+pois quero espaço depois do preço.
+
+00:01:19.692 --> 00:01:22.331
+Vejamos como ficou.
+
+00:01:22.364 --> 00:01:25.386
+Se alterar a quantidade
+para 3 e clicar no botão Order,
+
+00:01:25.419 --> 00:01:28.737
+aparece:
+That would be $15 please.
+
+00:01:28.770 --> 00:01:31.509
+O segundo está pronto.
+Pegamos o jeito.
+
+00:01:31.542 --> 00:01:34.542
+O terceiro diz:
+"You owe 10 bucks, dude!"
+
+00:01:34.575 --> 00:01:39.077
+Vou alterar o início da string
+para "You owe",
+
+00:01:39.110 --> 00:01:43.270
+vou remover o sinal de dólar,
+pois só precisamos do preço,
+
+00:01:43.303 --> 00:01:48.630
+e adicionarei
+"bucks, dude!".
+
+00:01:49.549 --> 00:01:52.043
+Parece certo.
+Vamos executar.
+
+00:01:52.076 --> 00:01:56.506
+Ao clicar no botão Order,
+aparece: You owe 15 bucks, dude!
+
+00:01:56.539 --> 00:01:58.266
+O quarto é um pouco
+mais difícil,
+
+00:01:58.299 --> 00:02:01.963
+queremos dizer "10 dollars
+for 2 cups of coffee. Pay up."
+
+00:02:01.996 --> 00:02:07.084
+Precisaremos de duas variáveis,
+a variável price e a quantity.
+
+00:02:07.909 --> 00:02:10.323
+Começaremos com a price,
+que é igual a 10,
+
+00:02:10.356 --> 00:02:13.882
+diremos " dollars for ",
+
+00:02:13.915 --> 00:02:16.611
+a variável quantity
+
+00:02:17.323 --> 00:02:21.579
+e " cups of coffee. Pay up."
+
+00:02:22.563 --> 00:02:23.955
+Vamos executar.
+
+00:02:24.619 --> 00:02:28.962
+Ao clicar, aparece: 15 dollars
+for 3 cups of coffee. Pay up.
+
+00:02:28.995 --> 00:02:30.498
+Parece muito bom.
+
+00:02:30.531 --> 00:02:32.978
+Essa foi complexa,
+pois havia duas variáveis
+
+00:02:33.011 --> 00:02:35.890
+concatenadas
+com duas strings literais.
+
+00:02:35.923 --> 00:02:38.559
+Felizmente adicionamos espaços
+nos lugares certos,
+
+00:02:38.592 --> 00:02:42.735
+para que parecesse
+uma frase normal.
+
+00:02:42.768 --> 00:02:44.063
+Essa foi a mais difícil,
+
+00:02:44.096 --> 00:02:48.287
+agora podemos fazer a última
+que diz "Total: $10".
+
+00:02:48.320 --> 00:02:53.609
+Vou apagar tudo isso
+e dizer "Total:", espaço
+
+00:02:53.642 --> 00:02:56.025
+e a variável price.
+
+00:02:56.058 --> 00:02:58.235
+Mas também
+preciso do sinal de dólar.
+
+00:02:58.268 --> 00:03:00.512
+Vou colocar isso dentro
+da string literal.
+
+00:03:00.545 --> 00:03:04.088
+Eu me esqueci do sinal de mais.
+Pronto.
+
+00:03:04.121 --> 00:03:05.671
+Vamos executar o aplicativo.
+
+00:03:05.704 --> 00:03:11.262
+Altero para 3, clico em Order,
+e ele exibe: Total: $15.
+
+00:03:11.295 --> 00:03:14.332
+Legal! Fizemos diferentes
+combinações
+
+00:03:14.365 --> 00:03:17.004
+de concatenação de string
+com variáveis.
+
+00:03:17.037 --> 00:03:21.029
+O próximo vídeo será sua última
+tarefa de codificação desta aula.
+

@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.345 --> 00:00:04.298
+Whoa, qui était un concept difficile,
+mais vous avez réagi très bien.
+
+00:00:04.298 --> 00:00:08.210
+Cela déverrouille la capacité de construire des mises en page
+vraiment génial dans Android
+
+00:00:08.210 --> 00:00:11.420
+Parce que presque tous les écrans contiennent
+un certain type de dispositions imbriqués,
+
+00:00:11.420 --> 00:00:15.080
+Qui Correll a été fait de mentionner
+plus tôt dans l'application Google Play.
+
+00:00:15.080 --> 00:00:17.980
+Après tout ce travail de préparation,
+maintenant nous sommes prêts à retourner dans
+
+00:00:17.980 --> 00:00:21.630
+Terres Android Studio pour mettre en œuvre les changements
+pour un sélecteur de quantité améliorée.
+
+00:00:22.860 --> 00:00:26.620
+Dans le cas où vous poseriez la question, Katherine,
+ce que si je suis en train de construire une mise en page et
+
+00:00:26.620 --> 00:00:29.230
+Je ne ai pas trois
+les options de mises en page XML
+
+00:00:29.230 --> 00:00:31.360
+Apparaîtra comme par magie devant moi
+que je dois choisir.
+
+00:00:31.360 --> 00:00:33.920
+Eh bien, voilà une bonne question.
+
+00:00:33.920 --> 00:00:37.390
+Jusqu'ici, nous avons pratiqué
+être capable de lire et XML
+
+00:00:37.390 --> 00:00:39.500
+Dessiner un diagramme vue hiérarchie.
+
+00:00:39.500 --> 00:00:41.708
+Nous avons également pratiqué
+mises en page et la lecture XML
+
+00:00:41.708 --> 00:00:44.600
+Dessiner un croquis de ce
+l'écran devrait ressembler.
+
+00:00:44.600 --> 00:00:48.610
+Mais maintenant il est temps de voir pratiquer
+une conception de ce que nous voulons construire et
+
+00:00:48.610 --> 00:00:50.920
+Être capable d'écrire le XML à partir d'elle.
+
+00:00:50.920 --> 00:00:54.380
+Je ne rends compte que je vous ai donné
+la solution XML dans le quiz précédent.
+
+00:00:54.380 --> 00:00:58.190
+I a été un peu attention, mais je
+ne veulent pas que vous regardiez cette solution.
+
+00:00:58.190 --> 00:01:01.550
+Je veux que vous pratiquez la compétence
+de voir une capture d'écran ou
+
+00:01:01.550 --> 00:01:05.480
+Une maquette de ce que vous voulez construire et
+ensuite être capable d'écrire le XML pour elle.
+
+00:01:06.820 --> 00:01:08.835
+Normalement, nous allions commencer
+avec la capture d'écran désiré
+
+00:01:08.835 --> 00:01:10.135
+De ce que nous voulons construire.
+
+00:01:10.135 --> 00:01:13.085
+Vous pouvez obtenir ce à partir d'un
+designer qui travaille sur votre équipe qui est
+
+00:01:13.085 --> 00:01:13.985
+Conception de l'application pour vous.
+
+00:01:13.985 --> 00:01:16.215
+Ou si vous travaillez sans un concepteur,
+
+00:01:16.215 --> 00:01:18.795
+Vous pouvez aussi esquisser
+cela sur votre propre.
+
+00:01:18.795 --> 00:01:22.367
+Alors vous imaginez comment briser
+cette baisse en points de vue et ViewGroups.
+
+00:01:22.367 --> 00:01:26.797
+Vous pouvez le marquer et ensuite essayer de tirer
+sur le schéma de vue de la hiérarchie pour
+
+00:01:26.797 --> 00:01:30.327
+La relation entre
+les enfants et les points de vue des parents.
+
+00:01:30.327 --> 00:01:33.617
+Après avoir terminé ce schéma, vous pouvez commencer à écrire
+le squelette
+
+00:01:33.617 --> 00:01:36.437
+Ce que la mise en page code
+XML devrait ressembler.
+
+00:01:36.437 --> 00:01:38.297
+Je vais laisser ces parties
+comme un exercice pour vous.
+
+00:01:38.297 --> 00:01:43.157
+Vous ferez vos modifications dans le fichier
+activity_main.xml de mise en page.
+
+00:01:43.157 --> 00:01:45.197
+En dehors de la rédaction de votre XML ici et
+
+00:01:45.197 --> 00:01:49.220
+Voir un aperçu de celui-ci, vous pouvez
+cliquez aussi sur le volet de conception ici.
+
+00:01:49.220 --> 00:01:52.240
+Ceci est l'onglet Conception comme
+opposition à l'onglet Texte.
+
+00:01:52.240 --> 00:01:56.690
+Vous Le panneau de conception permet de glisser et déposez
+vues sur le dispositif.
+
+00:01:56.690 --> 00:01:59.950
+Vous pouvez également voir l'arborescence des composants de
+dans le coin en haut à droite ici.
+
+00:01:59.950 --> 00:02:03.930
+Ceci est, essentiellement, un arbre de
+tous les points de vue de votre hiérarchie.
+
+00:02:03.930 --> 00:02:07.030
+Actuellement nous avons LinearLayout verticale,
+qui est la vue parent, et
+
+00:02:07.030 --> 00:02:09.180
+Tous ces enfants vues à l'intérieur.
+
+00:02:09.180 --> 00:02:11.420
+Si vous aviez ViewGroups imbriqués,
+ils seraient également apparaître ici.
+
+00:02:12.800 --> 00:02:15.790
+Maintenant aller de l'avant et
+construire cette disposition dans Android Studio.
+
+00:02:15.790 --> 00:02:18.870
+Après avoir sélectionné et positionné
+les vues, rappelez-vous à eux afin Style
+
+00:02:18.870 --> 00:02:20.290
+Il ressemble à ceci.
+
+00:02:20.290 --> 00:02:22.420
+Le style des vues
+est essentiellement le même,
+
+00:02:22.420 --> 00:02:25.620
+Sauf la note qu'il ya huit dp de
+espace entre le bouton moins et
+
+00:02:25.620 --> 00:02:28.330
+Les deux et entre-deux le bouton de plus deux et
+.
+
+00:02:28.330 --> 00:02:30.710
+Comme mentionné précédemment,
+éviter de regarder le code et
+
+00:02:30.710 --> 00:02:32.710
+Essayer vous-même la mise en œuvre.
+
+00:02:32.710 --> 00:02:34.410
+Lorsque vous avez terminé,
+cocher cette case pour continuer.
+

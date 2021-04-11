@@ -1,0 +1,451 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.601 --> 00:00:04.135
+Nuestros alumnos han estado aprendiendo
+sobre variables y tipos de datos.
+
+00:00:04.400 --> 00:00:06.834
+Enteros y cadenas,
+más específicamente.
+
+00:00:07.033 --> 00:00:11.066
+¿En las apps en las que has trabajado
+hay ejemplos de alguna de estas cosas?
+
+00:00:11.167 --> 00:00:13.068
+Sí, muchísimos.
+
+00:00:13.968 --> 00:00:15.902
+Las cadenas y los enteros
+están en todas partes.
+
+00:00:17.467 --> 00:00:21.701
+En Gmail, por ejemplo,
+cuando abres tu bandeja de entrada
+
+00:00:21.801 --> 00:00:25.101
+te aparece
+cuántos correos sin leer tienes.
+
+00:00:25.200 --> 00:00:27.034
+Ese es un número muy,
+muy importante,
+
+00:00:27.934 --> 00:00:30.701
+pero da un error casi imperceptible
+
+00:00:31.934 --> 00:00:36.501
+que es que dicha cifra podría no coincidir
+con la cantidad real de mensajes sin leer.
+
+00:00:36.801 --> 00:00:38.868
+-Así que...
+-Eso nunca me ha pasado, ¿y a ti?
+
+00:00:38.968 --> 00:00:40.936
+Me alegra
+que nunca te haya pasado.
+
+00:00:41.234 --> 00:00:45.202
+Pues sí. Pero estos problemas
+son muy interesantes de resolver.
+
+00:00:45.300 --> 00:00:49.333
+En el caso de Gmail,
+sincronizamos ese número primero.
+
+00:00:49.634 --> 00:00:54.335
+Sincronizar es como pasar mis datos
+de la nube a mi dispositivo Android.
+
+00:00:54.767 --> 00:00:57.635
+Entonces, esos datos, ese número,
+se sincroniza por separado,
+
+00:00:57.734 --> 00:00:59.435
+y no con tu correo.
+
+00:00:59.801 --> 00:01:02.635
+Por lo que, potencialmente,
+podrían desincronizarse.
+
+00:01:02.834 --> 00:01:05.435
+Ese sería uno de los problemas
+más difíciles de resolver.
+
+00:01:05.534 --> 00:01:10.068
+Entonces, dado que el número
+de mensajes sin leer es una variable,
+
+00:01:10.200 --> 00:01:11.755
+¿qué tipo de datos sería?
+
+00:01:12.334 --> 00:01:14.135
+-Sería un entero.
+-Un entero.
+
+00:01:14.234 --> 00:01:17.267
+Y su valor es calculado
+en todos los dispositivos
+
+00:01:17.434 --> 00:01:21.135
+y va cambiando
+según el caso de uso del escenario
+
+00:01:21.467 --> 00:01:23.600
+que esté experimentando el usuario.
+-Sí, exacto.
+
+00:01:24.200 --> 00:01:26.101
+Otro ejemplo del uso de enteros...
+
+00:01:26.200 --> 00:01:29.101
+Ese es un ejemplo de variables
+de tipo entero, podría cambiar.
+
+00:01:29.267 --> 00:01:31.201
+Otro ejemplo son las ID.
+
+00:01:31.501 --> 00:01:35.002
+En el caso de las ID,
+es muy importante que el entero no varíe.
+
+00:01:35.100 --> 00:01:37.367
+-La ID de mi correo, específicamente.
+-Exacto.
+
+00:01:37.434 --> 00:01:40.601
+La ID que representa a un correo
+en el servidor
+
+00:01:40.701 --> 00:01:43.402
+debe ser exactamente igual
+a la ID que está en el cliente,
+
+00:01:43.701 --> 00:01:48.402
+pues así es como podemos identificar
+ese correo en todos tus dispositivos.
+
+00:01:48.501 --> 00:01:51.768
+Entonces hablas de un conversación
+vía correo, no de la dirección como tal.
+
+00:01:52.067 --> 00:01:56.668
+Sí. En Gmail, por ejemplo,
+el hilo de conversación completo...
+
+00:01:56.934 --> 00:02:00.635
+Al hilo de conversación,
+que incluye varios mensajes,
+
+00:02:00.767 --> 00:02:04.601
+es a lo que llamamos una conversación,
+que tiene una ID de conversación.
+
+00:02:04.901 --> 00:02:08.335
+Y, además, cada uno de estos mensajes
+también tiene una ID propia y única.
+
+00:02:08.912 --> 00:02:12.801
+Y cada una de estas ID está almacenada
+en una variable cuyo tipo de datos es...
+
+00:02:13.167 --> 00:02:14.167
+Otro entero.
+
+00:02:14.267 --> 00:02:15.400
+-Vale.
+-Sí.
+
+00:02:15.501 --> 00:02:19.469
+¿Sabes cuántos correos se generan al día?
+Son muchísimos números.
+
+00:02:19.567 --> 00:02:23.034
+Sí... No sabría decirte
+cuántos correos son.
+
+00:02:23.133 --> 00:02:27.300
+Si cada mensaje de una conversación
+es único
+
+00:02:27.734 --> 00:02:31.068
+y cada correo es único
+entre todos los correos generados...
+
+00:02:31.167 --> 00:02:33.534
+-Sí.
+-Debe ser una cantidad enorme.
+
+00:02:33.601 --> 00:02:34.668
+Muy buena pregunta.
+
+00:02:34.767 --> 00:02:37.635
+Para esto, en vez de usar datos <i>Int</i>,
+usamos datos del tipo <i>Long</i>.
+
+00:02:37.801 --> 00:02:39.834
+-Vale.
+-Porque es de 64 bits.
+
+00:02:39.934 --> 00:02:41.967
+-Claro.
+-Así que nunca...
+
+00:02:42.067 --> 00:02:44.968
+O sea que los tipo <i>Long</i> te dan espacio
+para almacenar un número mayor.
+
+00:02:45.067 --> 00:02:47.200
+¿Esa es la diferencia
+entre <i>Int</i> y <i>Long</i>? Vale.
+
+00:02:47.400 --> 00:02:48.634
+¿Qué me dices de las cadenas?
+
+00:02:49.267 --> 00:02:50.267
+Cadenas...
+
+00:02:51.567 --> 00:02:55.435
+Yo diría que es subjetivo.
+¿Cómo se almacenan las cadenas?
+
+00:02:55.534 --> 00:02:56.768
+Sí, todo...
+
+00:02:57.334 --> 00:02:58.935
+El asunto del correo es una cadena.
+
+00:02:59.033 --> 00:03:00.066
+Vale.
+
+00:03:00.601 --> 00:03:03.335
+Las direcciones de correo
+son cadenas, obviamente...
+
+00:03:03.434 --> 00:03:05.135
+Así que también
+son muy importantes.
+
+00:03:05.567 --> 00:03:09.001
+Y prácticamente todo lo que ves
+en cualquier aplicación,
+
+00:03:09.100 --> 00:03:12.133
+todo lo que incluye texto visible,
+es una cadena.
+
+00:03:12.234 --> 00:03:15.768
+Creo que para ser buen ingeniero
+no debes saberlo todo,
+
+00:03:16.167 --> 00:03:20.401
+pero sí debes saber
+cómo llegar a la respuesta.
+
+00:03:20.868 --> 00:03:25.868
+Hay muchos tutoriales buenos por ahí
+que podrían buscar.
+
+00:03:26.067 --> 00:03:29.134
+El secreto está
+en saber buscar las palabras clave.
+
+00:03:29.734 --> 00:03:31.068
+Las palabras clave adecuadas.
+
+00:03:31.534 --> 00:03:33.934
+¿Les pides ayuda a otras personas?
+
+00:03:34.467 --> 00:03:36.600
+Sí,
+y de hecho es algo muy importante.
+
+00:03:36.701 --> 00:03:39.635
+Casi siempre me arrepiento
+de no haber pedido ayuda antes.
+
+00:03:40.501 --> 00:03:44.701
+Puedo pasar un día entero
+intentando arreglar algo
+
+00:03:44.801 --> 00:03:46.068
+y al final del día pensar:
+
+00:03:46.167 --> 00:03:49.734
+"Vale, quizá debí haberle preguntado
+al que escribió este componente".
+
+00:03:50.501 --> 00:03:55.501
+Así que sí. Pedir ayuda a otras personas
+es importante, sin lugar a dudas.
+
+00:03:55.601 --> 00:03:57.235
+Nos ahorra mucho tiempo.
+
+00:03:57.367 --> 00:03:59.801
+También es importante estar al tanto
+
+00:03:59.901 --> 00:04:02.769
+de los demás proyectos
+que se están desarrollando en Google.
+
+00:04:02.901 --> 00:04:06.135
+O a tu alrededor, en general.
+
+00:04:07.667 --> 00:04:11.667
+Creo que los mejores ingenieros
+no se centran solo en sus proyectos.
+
+00:04:11.767 --> 00:04:16.767
+En el trabajo, hacemos Tech Talks
+[charlas tecnológicas], y...
+
+00:04:16.868 --> 00:04:19.668
+Y están abiertas al público,
+al menos algunas.
+
+00:04:19.767 --> 00:04:20.800
+Sí, algunas.
+
+00:04:21.166 --> 00:04:26.334
+Así, los ingenieros están al tanto
+de las últimas tendencias en tecnología.
+
+00:04:26.434 --> 00:04:30.935
+O, también, a través de comunicados
+difundidos en todo el medio.
+
+00:04:31.634 --> 00:04:33.968
+Pues eso.
+Estar siempre a la vanguardia.
+
+00:04:34.334 --> 00:04:38.401
+Hablemos ahora
+de cuando estabas aprendiendo a programar.
+
+00:04:39.367 --> 00:04:42.001
+Si pudieras hablar
+con la Alice de entonces,
+
+00:04:42.334 --> 00:04:44.935
+¿qué consejo le darías hoy?
+
+00:04:45.367 --> 00:04:47.001
+Vaya.
+Qué pregunta tan interesante.
+
+00:04:49.534 --> 00:04:51.968
+Siento que debí haberme divertido más
+programando.
+
+00:04:52.667 --> 00:04:54.101
+Es decir...
+
+00:04:55.033 --> 00:04:56.934
+Creo que la manera
+en la que aprendí a programar
+
+00:04:57.367 --> 00:05:00.134
+es muy distinta a la actual,
+porque yo crecí...
+
+00:05:00.467 --> 00:05:01.801
+Yo vengo de China,
+
+00:05:02.234 --> 00:05:04.901
+y creo que allí
+el enfoque era muy académico.
+
+00:05:05.000 --> 00:05:10.634
+Iba a muchas clases extracurriculares
+que daba un profesor,
+
+00:05:10.734 --> 00:05:15.501
+y luego nos daba asignaciones
+que tenías que estudiar
+
+00:05:15.767 --> 00:05:17.867
+para luego resolver el problema.
+
+00:05:18.267 --> 00:05:21.934
+Y creo que...
+Ahora que lo pienso,
+
+00:05:22.067 --> 00:05:26.134
+me gustaría haber hecho proyectos
+más divertidos.
+
+00:05:26.534 --> 00:05:27.868
+Y creo que...
+
+00:05:27.968 --> 00:05:29.435
+¿Harías una app de cumpleaños?
+
+00:05:29.701 --> 00:05:31.035
+Pues... ¿De cumpleaños?
+
+00:05:31.234 --> 00:05:32.501
+¡Uh! ¡Claro!
+
+00:05:33.834 --> 00:05:35.702
+Sí, exacto.
+
+00:05:35.801 --> 00:05:40.235
+Creo que con ese tipo de apps
+pude haber aprendido mucho más,
+
+00:05:40.334 --> 00:05:44.168
+porque no se trata
+de encontrar una única solución.
+
+00:05:44.267 --> 00:05:46.367
+Haciendo una app de ese tipo
+
+00:05:46.467 --> 00:05:48.767
+podría haber aprendido sobre diseño,
+por ejemplo,
+
+00:05:49.200 --> 00:05:51.500
+o sobre los distintos componentes UI.
+
+00:05:51.701 --> 00:05:55.868
+No se trata solamente de enviar datos
+de un lugar a otro
+
+00:05:55.968 --> 00:05:58.235
+y luego resolver un problema
+de la manera más eficiente.
+
+00:05:58.334 --> 00:06:00.768
+Y creo que eso habría sido...
+
+00:06:01.133 --> 00:06:06.166
+Creo que de eso es de lo que se trata
+la ingeniería en la vida real.
+
+00:06:06.367 --> 00:06:10.001
+No se trata simplemente
+de resolver un desafío técnico,
+
+00:06:10.234 --> 00:06:12.135
+sino también de crear un gran producto.
+
+00:06:12.434 --> 00:06:14.801
+Y de dejarte llevar por tu curiosidad.
+
+00:06:14.901 --> 00:06:16.502
+Sí, claro, exactamente.
+
+00:06:16.801 --> 00:06:19.001
+Muchas gracias por tu tiempo, Katherine.
+
+00:06:19.100 --> 00:06:20.100
+No hay de qué.
+
+00:06:20.234 --> 00:06:23.301
+A nuestros alumnos les servirá de mucho
+conocer tu perspectiva.
+

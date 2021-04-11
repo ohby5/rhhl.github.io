@@ -1,0 +1,235 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.300 --> 00:00:03.260
+Hãy cùng xem các Nhóm Dạng Xem 
+lồng nhau được dùng ra sao trong ứng dụng.
+
+00:00:03.260 --> 00:00:06.540
+Thông tin trong ứng dụng nhìn giống như
+được sắp đặt theo cột dọc.
+
+00:00:06.540 --> 00:00:09.120
+Vì vậy chúng ta sử dụng Bố Trí Tuyến Tính 
+dọc để thực hiện điều này.
+
+00:00:09.120 --> 00:00:09.770
+Đến giờ cách bố trí này nhìn vẫn đẹp
+
+00:00:09.770 --> 00:00:14.140
+bởi vì chúng ta có một dạng xem 
+mỗi dòng trong Bố Trí Tuyến Tính dọc.
+
+00:00:14.140 --> 00:00:17.630
+Nhưng khi chúng ta xem dòng này, 
+nó thực sự gồm nhiều dạng xem khác nhau.
+
+00:00:17.630 --> 00:00:21.640
+Ta có thể sử dụng Bố Trí Tuyến Tính ngang 
+để xây dựng dòng này gồm một nút,
+
+00:00:21.640 --> 00:00:23.080
+một Dạng Xem Văn Bản, và một nút.
+
+00:00:23.080 --> 00:00:25.711
+Do đó Bố Trí Tuyến Tính này có thể 
+sẽ là bố trí con thứ hai trong
+
+00:00:25.711 --> 00:00:27.710
+một Bố Trí Tuyến Tính dọc lớn hơn.
+
+00:00:28.910 --> 00:00:32.030
+Chút nữa, tôi sẽ chỉ cho bạn 
+ba file layout XML khác nhau, và
+
+00:00:32.030 --> 00:00:35.050
+Tôi muốn hỏi bạn xem bạn thấy file nào 
+xây dựng chính xác
+
+00:00:35.050 --> 00:00:36.860
+cách bố trí chúng ta mong muốn.
+
+00:00:36.860 --> 00:00:38.860
+Vấn đề là tôi không muốn bạn 
+sao chép những file này và
+
+00:00:38.860 --> 00:00:40.460
+chạy trong Android Studio.
+
+00:00:40.460 --> 00:00:43.160
+Tôi muốn bạn đưa ra một suy đoán 
+tri thức dựa trên việc đọc và
+
+00:00:43.160 --> 00:00:44.239
+hiểu mã lệnh này.
+
+00:00:45.460 --> 00:00:47.940
+Bạn có thể tìm thấy liên kết 
+trong ghi chú hướng dẫn.
+
+00:00:47.940 --> 00:00:54.950
+Trong đó liệt kê ba tùy chọn, 
+Tùy chọn A, Tùy chọn B và Tùy chọn C.
+
+00:00:54.950 --> 00:00:57.960
+Một trong các tùy chọn thiết lập chính xác
+cách bố trí mà chúng ta mong muốn.
+
+00:00:59.500 --> 00:01:02.460
+Điều này sẽ khá khó khăn bởi vì 
+chúng ta chưa từng gặp
+
+00:01:02.460 --> 00:01:04.000
+XML với các Nhóm Dạng Xem lồng nhau.
+
+00:01:04.000 --> 00:01:07.440
+Chúng ta sẽ chia thử thách 
+này thành hai câu đố, vì vậy
+
+00:01:07.440 --> 00:01:09.800
+Tôi không yêu cầu bạn quyết định ngay.
+
+00:01:09.800 --> 00:01:13.390
+Trong câu đố thứ nhất, tôi muốn bạn 
+phác thảo sơ đồ phân cấp dạng xem
+
+00:01:13.390 --> 00:01:15.600
+cho từng file XML.
+
+00:01:15.600 --> 00:01:18.550
+Dưới đây là một bài nói về 
+ý nghĩa của sơ đồ phân cấp dạng xem.
+
+00:01:19.860 --> 00:01:20.720
+Bạn sẽ cần giấy và
+
+00:01:20.720 --> 00:01:23.940
+một cái gì đó để viết nhằm
+phác thảo những sơ đồ này.
+
+00:01:23.940 --> 00:01:28.340
+Cách mà Android tổ chức những 
+dạng xem trên màn hình là trong phân cấp,
+
+00:01:28.340 --> 00:01:30.650
+hoặc một cấu trúc dạng xem hình cây.
+
+00:01:30.650 --> 00:01:34.010
+Đó đơn giản là một sơ đồ 
+mô tả sự phân cấp dạng xem.
+
+00:01:34.010 --> 00:01:37.870
+Nó cho thấy mối quan hệ của bố trí chính
+và con trong các dạng xem.
+
+00:01:37.870 --> 00:01:41.720
+Dạng xem gốc của toàn bộ 
+cách bố trí này là Bố Trí Tuyến Tính.
+
+00:01:41.720 --> 00:01:45.770
+Nó gồm 3 bố trí con, 1 Bố Trí Tương Đối, 
+1 Dạng Xem Văn Bản, 1 Dạng Xem Văn Bản nữa.
+
+00:01:45.770 --> 00:01:49.842
+Và sau đó Bố Trí Tương Đối này lại 
+có bố trí con riêng, 1 Dạng Xem Hình Ảnh và
+
+00:01:49.842 --> 00:01:51.450
+một Dạng Xem Văn Bản.
+
+00:01:51.450 --> 00:01:53.170
+Đối với ứng dụng Puddles the Pig,
+
+00:01:53.170 --> 00:01:56.620
+đây là một sơ đồ phân cấp dạng xem
+được tạo ra bởi Android.
+
+00:01:56.620 --> 00:02:00.999
+Ta có Bố Trí Tương Đối là dạng xem gốc, 
+nó gồm 4 bố trí con, 1 Dạng Xem Hình Ảnh,
+
+00:02:00.999 --> 00:02:03.606
+vài Dạng Xem Văn Bản, 1 Bố Trí Tuyến Tính.
+
+00:02:03.606 --> 00:02:07.210
+Và Bố Trí Tuyến Tính này lại 
+có hai Dạng Xem Hình Ảnh là bố trí con.
+
+00:02:08.820 --> 00:02:11.540
+Bây giờ bạn đã hiểu 
+sơ đồ phân cấp dạng xem là gì.
+
+00:02:11.540 --> 00:02:14.800
+Bằng việc phác thảo sơ đồ cho 
+từng cách bố trí của những file XML,
+
+00:02:14.800 --> 00:02:19.650
+bạn sẽ hiểu rõ hơn dạng xem nào là 
+dạng xem chính, đâu là dạng xem con,
+
+00:02:19.650 --> 00:02:21.830
+aà liệu những dạng xem con đó 
+có các dạng xem con nữa hay không.
+
+00:02:23.230 --> 00:02:27.520
+Nếu cần thêm chỉ dẫn, dưới đây là một số
+ví dụ về cách chuyển từ bố trí XML
+
+00:02:27.520 --> 00:02:29.050
+để vẽ được sơ đồ dạng xem.
+
+00:02:30.200 --> 00:02:33.250
+Trong bố trí này, 
+ta có dạng xem gốc là Bố Trí Tuyến Tính.
+
+00:02:33.250 --> 00:02:34.130
+Ngoài ra, tôi thêm những
+
+00:02:34.130 --> 00:02:36.650
+dấu chấm ở đây bởi vì tôi không 
+điền vừa tất cả mã lệnh ở đó.
+
+00:02:36.650 --> 00:02:39.800
+Với dạng xem gốc như là Bố Trí Tuyến Tính, 
+hãy vẽ dạng xem đó trên cùng cấu trúc cây.
+
+00:02:40.900 --> 00:02:43.250
+Và sau đó dạng xem đó bao gồm hai
+Dạng Xem Văn Bản con, do đó
+
+00:02:43.250 --> 00:02:46.970
+bạn vẽ những dạng xem đó là dạng xem con 
+bên dưới cấu trúc cây, vậy là xong.
+
+00:02:46.970 --> 00:02:49.230
+Đây là một cách bố trí phức tạp hơn nhiều.
+
+00:02:49.230 --> 00:02:51.602
+Chúng ta có một dạng xem gốc là 
+một Bố Trí Tuyến Tính, và
+
+00:02:51.602 --> 00:02:55.636
+nó bao gồm ba dạng xem con trực thuộc, 
+2 Dạng Xem Văn Bản, 1 Bố Trí Tương Đối, và
+
+00:02:55.636 --> 00:02:59.870
+sau đó trong Bố Trí Tương Đối, ta có 
+1 Dạng Xem Hình Ảnh, 1 Dạng Xem Văn Bản.
+
+00:02:59.870 --> 00:03:03.100
+Khi bạn hoàn thành việc vẽ 
+sơ đồ phân cấp dạng xem cho
+
+00:03:03.100 --> 00:03:06.030
+từng tùy chọn, thì hãy tiếp tục và 
+đánh dấu các ô này để tiếp tục.
+
+00:03:06.030 --> 00:03:09.230
+Trong câu đố tiếp theo, 
+tôi sẽ yêu cầu bạn đưa ra lựa chọn
+
+00:03:09.230 --> 00:03:12.440
+xem tùy chọn nào tốt nhất, nhưng bây giờ, 
+bạn chưa cần đưa ra quyết định.
+

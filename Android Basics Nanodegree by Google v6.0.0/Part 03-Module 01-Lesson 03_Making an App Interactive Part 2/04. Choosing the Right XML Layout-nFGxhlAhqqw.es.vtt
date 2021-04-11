@@ -1,0 +1,278 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.960 --> 00:00:02.960
+Voy a esbozar
+las diferentes opciones que tienes.
+
+00:00:03.310 --> 00:00:06.380
+Para la opción A, tenemos
+un LinearLayout vertical como vista raíz.
+
+00:00:06.900 --> 00:00:09.180
+Voy a dibujar un rectángulo normalito.
+
+00:00:09.900 --> 00:00:11.670
+Tengo en cuenta que, como le añado vistas,
+
+00:00:11.670 --> 00:00:13.940
+debo darle la forma
+de una columna vertical.
+
+00:00:14.330 --> 00:00:16.660
+El primer hijo es una TextView
+y pone QUANTITY (cantidad).
+
+00:00:16.800 --> 00:00:18.660
+Va en mayúsculas
+porque es un encabezamiento.
+
+00:00:19.200 --> 00:00:20.360
+Lo pongo aquí.
+
+00:00:21.280 --> 00:00:23.260
+Ahora tenemos un LinearLayout horizontal.
+
+00:00:23.500 --> 00:00:26.980
+Voy a ponerlo aquí
+y añadir hijos horizontalmente.
+
+00:00:27.730 --> 00:00:31.980
+El primer hijo de este LinearLayout es
+un botón de <i>menos</i>,
+
+00:00:32.520 --> 00:00:33.900
+que colocaré aquí.
+
+00:00:34.550 --> 00:00:38.060
+El segundo hijo de este
+LinearLayout horizontal es una TextView
+
+00:00:38.240 --> 00:00:40.040
+que tiene el texto <i>2</i>.
+
+00:00:40.450 --> 00:00:43.670
+El tercer hijo es un botón <i>más</i>,
+que voy a poner aquí.
+
+00:00:44.830 --> 00:00:47.000
+Todos estos hijos
+se colocan horizontalmente
+
+00:00:47.620 --> 00:00:52.780
+y todo este LinearLayout horizontal es
+hijo de este otro LinearLayout vertical.
+
+00:00:53.740 --> 00:00:57.060
+Luego, tenemos una TextView
+que dice <i>PRECIO</i>, todo en mayúsculas.
+
+00:00:57.830 --> 00:01:00.360
+Le sigue otra que dice <i>$10</i>
+
+00:01:00.600 --> 00:01:02.920
+y, por último, tenemos un Button
+que dice <i>ORDER (PEDIR)</i>.
+
+00:01:03.460 --> 00:01:05.220
+Genial, esto se parece a lo que queremos.
+
+00:01:06.020 --> 00:01:07.680
+Pero refrenemos nuestro entusiasmo
+
+00:01:07.820 --> 00:01:10.820
+y hagamos un bosquejo
+de las otras opciones.
+
+00:01:11.650 --> 00:01:15.720
+En la opción B, la jerarquía de vistas era
+similar a la de la opción A.
+
+00:01:16.110 --> 00:01:17.540
+Pero veamos el XML con más cuidado,
+
+00:01:17.640 --> 00:01:19.860
+veamos si tiene
+el mismo aspecto en el dispositivo.
+
+00:01:20.560 --> 00:01:23.100
+Empecemos con el LinearLayout horizontal
+como vista raíz.
+
+00:01:23.850 --> 00:01:27.620
+Según añada hijos, los pondré
+horizontalmente por aquí.
+
+00:01:27.620 --> 00:01:30.840
+El primer hijo es una TextView que es
+el encabezamiento de la <i>Cantidad</i>,
+
+00:01:31.900 --> 00:01:33.000
+así que lo pongo aquí.
+
+00:01:33.960 --> 00:01:37.220
+Luego, tenemos un LinearLayout anidado
+con orientación vertical.
+
+00:01:37.940 --> 00:01:39.340
+Eso lo voy a poner justo aquí,
+
+00:01:39.500 --> 00:01:42.320
+para que venga horizontalmente
+después de la TextView de la <i>Cantidad</i>.
+
+00:01:42.970 --> 00:01:44.940
+Y como añado hijos a este LinearLayout,
+
+00:01:45.090 --> 00:01:48.220
+voy a ponerlos verticalmente
+como en una columna.
+
+00:01:48.580 --> 00:01:50.280
+El primer hijo es el botón de <i>menos</i>.
+
+00:01:50.830 --> 00:01:51.830
+Lo pongo aquí.
+
+00:01:52.960 --> 00:01:55.440
+Debajo, tenemos una TextView que dice <i>2</i>.
+
+00:01:55.940 --> 00:01:57.700
+Debajo, hay un botón de <i>más</i>.
+
+00:01:58.310 --> 00:02:00.335
+Con esto acabamos el LinearLayout anidado.
+
+00:02:01.430 --> 00:02:05.860
+También tenemos una TextView con <i>Precio</i>,
+los <i>$10</i> y el botón <i>Pedir.</i>
+
+00:02:07.350 --> 00:02:10.259
+Si nos fijamos,
+esto no se parece a lo queríamos.
+
+00:02:10.840 --> 00:02:13.900
+Así que me arriesgo a decir
+que la opción B no es la correcta.
+
+00:02:14.690 --> 00:02:16.420
+Veamos la opción C.
+
+00:02:17.750 --> 00:02:20.180
+La opción C tenía
+una jerarquía de vistas muy diferente,
+
+00:02:20.330 --> 00:02:23.660
+ya que solo tiene cuatro hijos
+bajo el LinearLayout padre.
+
+00:02:24.260 --> 00:02:26.540
+La vista padre es
+un LinearLayout vertical,
+
+00:02:26.770 --> 00:02:29.440
+por lo que los hijos
+se añadirán verticalmente uno tras otro.
+
+00:02:29.760 --> 00:02:32.120
+El primer hijo es
+un LinearLayout horizontal.
+
+00:02:32.740 --> 00:02:36.080
+por lo que tendré que añadir los hijos
+horizontalmente uno tras otro.
+
+00:02:36.840 --> 00:02:39.020
+El primer hijo es una TextView
+que dice <i>Cantidad</i>.
+
+00:02:40.160 --> 00:02:45.080
+Luego, tengo el botón <i>menos</i>,
+el texto que dice <i>2</i> y un botón <i>más</i>.
+
+00:02:46.130 --> 00:02:48.860
+Esto es un poco raro, pero continuemos.
+
+00:02:49.220 --> 00:02:53.060
+Después del botón <i>más</i> está
+la etiqueta de cierre del LinearLayout.
+
+00:02:53.420 --> 00:02:57.825
+Así que después de eso, estos hijos son
+parte del LinearLayout vertical
+
+00:02:58.870 --> 00:03:01.940
+Así que esta TextView de <i>Precio</i>
+tiene que ir verticalmente
+
+00:03:02.500 --> 00:03:04.140
+bajo este LinearLayout horizontal.
+
+00:03:05.700 --> 00:03:08.830
+La TextView de <i>Precio</i>
+y el botón <i>Pedir</i> son también parte
+
+00:03:08.830 --> 00:03:11.940
+del LinearLayout,
+así que deben ir bajo el precio.
+
+00:03:13.040 --> 00:03:14.520
+Así queda la presentación.
+
+00:03:14.780 --> 00:03:15.780
+Como puedes ver,
+
+00:03:15.850 --> 00:03:20.500
+esta TextView de<i> Cantidad</i> se ha convertido
+en hijo de este LinearLayout horizontal.
+
+00:03:20.950 --> 00:03:24.500
+Así, se muestra el colector de cantidad,
+pero también el encabezamiento <i>Cantidad</i>.
+
+00:03:25.500 --> 00:03:27.800
+La diferencia en la presentación se debe
+
+00:03:27.940 --> 00:03:30.190
+a que movimos la TextView,
+dándole un padre diferente.
+
+00:03:30.900 --> 00:03:33.200
+En la captura de pantalla
+de la presentación que queremos,
+
+00:03:33.300 --> 00:03:36.960
+tenemos el encabezamiento <i>Cantidad</i>
+sobre el colector, no uno junto al otro.
+
+00:03:37.800 --> 00:03:41.060
+Por eso, hay que mover esta TextView
+de <i>Cantidad</i> para que sea hija
+
+00:03:41.310 --> 00:03:45.940
+de este LinearLayout vertical,
+y no de este LinearLayout horizontal.
+
+00:03:47.170 --> 00:03:48.780
+Aquí están los tres bosquejos.
+
+00:03:49.250 --> 00:03:51.120
+Claramente, la opción B no es
+lo que queremos
+
+00:03:51.300 --> 00:03:53.900
+y la opción C es correcta,
+excepto por el hecho
+
+00:03:54.000 --> 00:03:57.040
+de que <i>Cantidad </i>y el colector de cantidad
+están en lugares equivocados.
+
+00:03:57.420 --> 00:03:58.840
+Deberían estar uno encima del otro.
+
+00:03:59.190 --> 00:04:02.880
+Eso nos deja la opción A,
+que sí genera la presentación deseada.
+

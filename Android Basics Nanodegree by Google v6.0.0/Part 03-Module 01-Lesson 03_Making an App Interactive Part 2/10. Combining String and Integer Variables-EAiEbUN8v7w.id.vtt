@@ -1,0 +1,260 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.540 --> 00:00:03.700
+Di video terakhir kita melihat
+bagaimana mengambil &lt;i&gt;string literal&lt;/i&gt;
+
+00:00:03.700 --> 00:00:07.250
+dan mengkombinasikannya dengan &lt;i&gt;integer
+literal&lt;/i&gt; dengan rangkaian operator.
+
+00:00:08.440 --> 00:00:13.670
+Ekspresi ini mengevaluasi &lt;i&gt;string
+I need 2 cups of coffee on Monday&lt;/i&gt;.
+
+00:00:13.670 --> 00:00:17.740
+Yang luar biasa tentang merangkai
+bagian teks yang berbeda adalah
+
+00:00:17.740 --> 00:00:21.080
+Anda bisa menukar bagian berbeda 
+kalau perlu diganti.
+
+00:00:21.080 --> 00:00:24.450
+Misalnya, jumlah &lt;i&gt;"cups of coffee"&lt;/i&gt;
+mungkin berubah maka daripada
+
+00:00:24.450 --> 00:00:27.970
+pakai nilai tetap, kita dapat mengubahnya
+ke sebuah variabel.
+
+00:00:27.970 --> 00:00:31.850
+Sekarang saya telah menghapus angka 2 dan
+menggantinya dengan variabel kuantitas,
+
+00:00:31.850 --> 00:00:33.870
+jadi waktu kita mengevaluasi ekspresi ini,
+
+00:00:33.870 --> 00:00:36.600
+kita akan selalu dapat jumlah
+kuantitas yang terbaru.
+
+00:00:36.600 --> 00:00:39.130
+Jika variabel membawa nilai 2,
+
+00:00:39.130 --> 00:00:42.780
+maka ia akan terbilang,
+&lt;i&gt;I need 2 cups of coffee on Monday&lt;/i&gt;.
+
+00:00:42.780 --> 00:00:46.260
+Bagian &lt;i&gt;string&lt;/i&gt; ini tetap konstan
+dan tidak berubah,
+
+00:00:46.260 --> 00:00:50.010
+dimana kuantitas dapat berubah secara 
+bebas dan selalu mendapat nilai terbaru.
+
+00:00:50.010 --> 00:00:52.520
+Saya akan mencobanya di Android Studio.
+
+00:00:52.520 --> 00:00:57.450
+Karena kuantitas adalah variabel yang 
+sudah kita umumkan di &lt;i&gt;MainActivity&lt;/i&gt;,
+
+00:00:57.450 --> 00:01:00.710
+saya dapat langsung menggunakannya
+di metode &lt;i&gt;submitOrder&lt;/i&gt;.
+
+00:01:00.710 --> 00:01:05.319
+Saya akan membuat &lt;i&gt;string&lt;/i&gt; seperti
+&lt;i&gt;Total Item Count&lt;/i&gt;, lalu
+
+00:01:05.319 --> 00:01:08.910
+menambahkan &lt;i&gt;quantity&lt;/i&gt;, kemudian &lt;i&gt;coffees&lt;/i&gt;.
+
+00:01:08.910 --> 00:01:10.730
+Ini tidak berkaitan dengan harga tapi
+
+00:01:10.730 --> 00:01:14.490
+saya ingin menunjukkan bahwa Anda
+bisa merangkai &lt;i&gt;string&lt;/i&gt; dengan variabel.
+
+00:01:14.490 --> 00:01:16.310
+Mari kita jalankan untuk melihatnya.
+
+00:01:16.660 --> 00:01:18.640
+Jika saya ubah kuantitas lalu klik tombol
+
+00:01:18.640 --> 00:01:23.740
+&lt;i&gt;Order&lt;/i&gt;, maka ia menampilkan jumlah
+total barang, yaitu &lt;i&gt;3 coffees&lt;/i&gt;.
+
+00:01:23.740 --> 00:01:27.600
+Saya lupa menambahkan spasi sesudah 3
+sebelum &lt;i&gt;coffees&lt;/i&gt;, jadi kita balik
+
+00:01:27.600 --> 00:01:28.610
+dan menambahkannya.
+
+00:01:28.610 --> 00:01:34.000
+Saya akan tambahkan spasi di sini maka
+ia akan muncul sesudah &lt;i&gt;quantity&lt;/i&gt;.
+
+00:01:34.000 --> 00:01:36.740
+Perhatikan bahwa &lt;i&gt;quantity&lt;/i&gt; di sini
+tidak pakai tanda kutip,
+
+00:01:36.740 --> 00:01:40.170
+jika pakai, artinya kata-kata &lt;i&gt;quantity&lt;/i&gt;
+akan tampil di layar, namun
+
+00:01:40.170 --> 00:01:43.700
+kita menginginkan nilai variabel ini maka
+kita tidak memakai tanda kutip.
+
+00:01:43.700 --> 00:01:46.580
+Sekarang sudah ada spasi di sini,
+ayo coba jalankan lagi dan
+
+00:01:46.580 --> 00:01:47.850
+pastikan sudah benar.
+
+00:01:48.490 --> 00:01:51.900
+Sekarang saya telah mengubah kuantitas 
+menjadi 3 dan klik tombol &lt;i&gt;Order&lt;/i&gt;, terbilang
+
+00:01:51.900 --> 00:01:53.340
+&lt;i&gt;Total Item Count 3 coffees&lt;/i&gt;.
+
+00:01:54.500 --> 00:01:57.420
+Sudah benar ada spasi sebelum dan 
+sesudah nilai kuantitas.
+
+00:01:57.420 --> 00:02:01.710
+Balik selangkah, waktu Anda melihat baris
+kode ini, bisa jadi sedikit memusingkan
+
+00:02:01.710 --> 00:02:06.650
+karena ada tanda kutip dimana-mana,
+dan tanda tambah dan spasi di
+
+00:02:06.650 --> 00:02:08.720
+tempat-tempat aneh.
+
+00:02:08.720 --> 00:02:11.080
+Bayangkan tanda tambah menghilang dan
+
+00:02:11.080 --> 00:02:13.470
+semua yang ada di dalam tanda kutip
+menyatu dan
+
+00:02:13.470 --> 00:02:17.150
+variabel kuantitas tergantikan oleh
+nilai nyata.
+
+00:02:17.150 --> 00:02:20.420
+Karena tidak mudah dibaca, sering
+terjadi kesalahan di sini.
+
+00:02:20.420 --> 00:02:24.480
+Anda mungkin lupa tanda kutip pembuka
+atau penutup, atau menaruh tanda tambah di
+
+00:02:24.480 --> 00:02:28.060
+tempat yang salah atau tidak sengaja
+menaruh variabel dalam tanda kutip.
+
+00:02:28.060 --> 00:02:31.730
+Bacalah kode Anda dengan teliti untuk
+memastikan ia melakukan yang diharapkan.
+
+00:02:31.730 --> 00:02:33.850
+Anda bisa juga membuat 
+ekspresi matematika.
+
+00:02:33.850 --> 00:02:37.630
+Anda bisa buat &lt;i&gt;quantity&lt;/i&gt; kali 5 dalam
+tanda kurung dan ini akan jadi sebuah
+
+00:02:37.630 --> 00:02:43.000
+nilai &lt;i&gt;integer&lt;/i&gt; tunggal yang akan
+dirangkai ke dalam &lt;i&gt;Price&lt;/i&gt;.
+
+00:02:43.000 --> 00:02:46.680
+Satu &lt;i&gt;string&lt;/i&gt; tambah &lt;i&gt;integer&lt;/i&gt; menjadi sebuah
+&lt;i&gt;string&lt;/i&gt;, dan disimpan dalam variabel
+
+00:02:46.680 --> 00:02:50.570
+&lt;i&gt;priceMessage&lt;/i&gt; yang ditampilkan di layar.
+
+00:02:50.570 --> 00:02:54.610
+Waktu saya menjalankannya di
+perangkat, muncul sebagai &lt;i&gt;Price 15&lt;/i&gt;.
+
+00:02:54.610 --> 00:02:58.140
+Jika Anda ingin ada tanda dolar atau
+simbol mata uang lainnya,
+
+00:02:58.140 --> 00:03:01.370
+Anda perlu membuatnya bagian dari
+&lt;i&gt;sting literal&lt;/i&gt;, seperti ini.
+
+00:03:01.370 --> 00:03:04.940
+&lt;i&gt;Integer&lt;/i&gt; hanya menyimpan angka, 
+bukan simbol mata uang.
+
+00:03:07.110 --> 00:03:08.718
+Jika saya jalankan di perangkat
+
+00:03:08.718 --> 00:03:11.560
+dan klik tombol &lt;i&gt;Order&lt;/i&gt;, sekarang
+ada simbol mata uang.
+
+00:03:12.190 --> 00:03:15.490
+Mengikuti pola yang saya tunjukkan pada
+Anda, silahkan mengubah metode
+
+00:03:15.490 --> 00:03:17.410
+&lt;i&gt;sumbitOrder&lt;/i&gt; jadi Anda bisa latihan
+
+00:03:17.410 --> 00:03:20.710
+menampilkan pesan berbeda pada layar.
+
+00:03:20.710 --> 00:03:23.670
+Pertama, coba tampilkan &lt;i&gt;Amount Due $10&lt;/i&gt;
+di layar waktu Anda klik
+
+00:03:23.670 --> 00:03:24.919
+tombol &lt;i&gt;Order&lt;/i&gt;.
+
+00:03:25.410 --> 00:03:27.430
+Kalau sudah bisa, ubahlah maka
+
+00:03:27.430 --> 00:03:30.350
+Anda menampilkan &lt;i&gt;string&lt;/i&gt; ini
+waktu klik tombol &lt;i&gt;Order&lt;/i&gt;.
+
+00:03:30.350 --> 00:03:32.740
+Ulangi untuk setiap &lt;i&gt;string&lt;/i&gt; yang berbeda.
+
+00:03:33.940 --> 00:03:37.610
+Anda seharusnya hanya melihat salah satu
+&lt;i&gt;string&lt;/i&gt; di layar setiap kalinya.
+
+00:03:37.610 --> 00:03:40.295
+Ingat untuk merangkai &lt;i&gt;string&lt;/i&gt; dengan
+variabel maka nilai
+
+00:03:40.295 --> 00:03:44.755
+kuantitas dan harga bisa tepat sesuai
+pemilih kuantitas.
+
+00:03:44.755 --> 00:03:48.285
+Jadi jika saya ubah ini ke 5 gelas kopi
+
+00:03:48.285 --> 00:03:51.714
+maka jumlah yang harus dibayar
+seharusnya $25.
+

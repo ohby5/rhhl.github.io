@@ -1,0 +1,299 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>String Data Type</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Making an App Interactive: Part 2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Plan Layout for Quantity Picker.html">01. Plan Layout for Quantity Picker</a>
+    </li>
+    <li class="">
+      <a href="02. Nested ViewGroups.html">02. Nested ViewGroups</a>
+    </li>
+    <li class="">
+      <a href="03. View Hierarchy Diagrams.html">03. View Hierarchy Diagrams</a>
+    </li>
+    <li class="">
+      <a href="04. Choosing the Right XML Layout.html">04. Choosing the Right XML Layout</a>
+    </li>
+    <li class="">
+      <a href="05. Build the Quantity Picker Layout.html">05. Build the Quantity Picker Layout</a>
+    </li>
+    <li class="">
+      <a href="06. String Data Type.html">06. String Data Type</a>
+    </li>
+    <li class="">
+      <a href="07. Create the String Variable.html">07. Create the String Variable</a>
+    </li>
+    <li class="">
+      <a href="08. Combining Strings Together.html">08. Combining Strings Together</a>
+    </li>
+    <li class="">
+      <a href="09. Chatting with Google&#x27;s Alice Yang, Part 2.html">09. Chatting with Google&#x27;s Alice Yang, Part 2</a>
+    </li>
+    <li class="">
+      <a href="10. Combining String and Integer Variables.html">10. Combining String and Integer Variables</a>
+    </li>
+    <li class="">
+      <a href="11. Update the String Variable.html">11. Update the String Variable</a>
+    </li>
+    <li class="">
+      <a href="12. Congrats!.html">12. Congrats!</a>
+    </li>
+    <li class="">
+      <a href="13. Learn More on Your Own.html">13. Learn More on Your Own</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. String Data Type</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>String Data Type</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="06. String Data Type-n3YMNSw-3hA.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="06. String Data Type-n3YMNSw-3hA.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="US" src="06. String Data Type-n3YMNSw-3hA.en-US.vtt" label="US">
+  <track default="true" kind="subtitles" srclang="en" src="06. String Data Type-n3YMNSw-3hA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="06. String Data Type-n3YMNSw-3hA.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="06. String Data Type-n3YMNSw-3hA.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="06. String Data Type-n3YMNSw-3hA.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="06. String Data Type-n3YMNSw-3hA.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="06. String Data Type-n3YMNSw-3hA.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="06. String Data Type-n3YMNSw-3hA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="06. String Data Type-n3YMNSw-3hA.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="06. String Data Type-n3YMNSw-3hA.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="06. String Data Type-n3YMNSw-3hA.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="06. String Data Type-n3YMNSw-3hA.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="06. String Data Type-n3YMNSw-3hA.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="06. String Data Type-n3YMNSw-3hA.zh-TW.vtt" label="TW">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4288484977.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 68.25803769401331%; left: 15.936720698254364%; width: 73.31670822942642%; height: 7.5388026607538805%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text1" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 87.85338137472284%; left: 37.6149470074813%; width: 19.201995012468828%; height: 7.095343680709535%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text2" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 86.74126940133038%; left: 81.04543329177058%; width: 11.970074812967582%; height: 7.317073170731707%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text3" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="06. String Data Type-VuZty8V2Eww.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="06. String Data Type-VuZty8V2Eww.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="06. String Data Type-VuZty8V2Eww.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="06. String Data Type-VuZty8V2Eww.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="06. String Data Type-VuZty8V2Eww.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="06. String Data Type-VuZty8V2Eww.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="06. String Data Type-VuZty8V2Eww.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="06. String Data Type-VuZty8V2Eww.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="06. String Data Type-VuZty8V2Eww.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="06. String Data Type-VuZty8V2Eww.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="06. String Data Type-VuZty8V2Eww.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="06. String Data Type-VuZty8V2Eww.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="06. String Data Type-VuZty8V2Eww.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="06. String Data Type-VuZty8V2Eww.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="06. String Data Type-VuZty8V2Eww.zh-TW.vtt" label="TW">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p><a href="https://gist.github.com/anonymous/f5feae51009b9f8bc956" target="_blank">Link to gist with displayMessage(String message) method</a></p>
+<p><a href="https://gist.github.com/anonymous/256752a04db14a3947a8" target="_blank">Link to Options A, B and C </a></p>
+<p>Here are the words we introduced in this video:</p>
+<ul>
+<li>String</li>
+</ul>
+<p>You can look up their definitions <a href="https://developers.google.com/android/for-all/vocab-words/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">in the Vocab Glossary</a>.</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Create the String Variable.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. String Data Type')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

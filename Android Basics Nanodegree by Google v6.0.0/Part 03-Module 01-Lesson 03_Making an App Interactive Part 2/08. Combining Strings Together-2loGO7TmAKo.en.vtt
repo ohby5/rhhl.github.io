@@ -1,0 +1,214 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.160
+When dealing with strings in Java,
+
+00:00:02.160 --> 00:00:05.340
+an important concept to understand is string concatenation.
+
+00:00:05.340 --> 00:00:07.890
+Now, that's a really big word but it just means
+
+00:00:07.890 --> 00:00:10.740
+we're joining character strings together end to end.
+
+00:00:10.740 --> 00:00:12.630
+If this is a string and this string,
+
+00:00:12.630 --> 00:00:16.500
+you can combine them by concatenating them to make an even longer string.
+
+00:00:16.500 --> 00:00:18.630
+To concatenate these strings together,
+
+00:00:18.630 --> 00:00:20.650
+we use the plus operator.
+
+00:00:20.650 --> 00:00:24.010
+This is the same addition symbol that we know from math,
+
+00:00:24.010 --> 00:00:26.020
+just like you can add numbers together,
+
+00:00:26.020 --> 00:00:28.845
+you can concatenate strings together.
+
+00:00:28.845 --> 00:00:30.575
+Let's look at an example.
+
+00:00:30.575 --> 00:00:33.095
+Say, I have three different strings.
+
+00:00:33.095 --> 00:00:35.185
+One string literal says, "I need",
+
+00:00:35.185 --> 00:00:37.215
+another string literal says, "Two cups of coffee",
+
+00:00:37.215 --> 00:00:39.370
+and another string literal says, "On Monday".
+
+00:00:39.370 --> 00:00:43.730
+I can use the plus symbol to concatenate all these strings together.
+
+00:00:43.730 --> 00:00:46.740
+That forms a ginormous string that says,
+
+00:00:46.740 --> 00:00:48.940
+"I need two cups of coffee on Monday."
+
+00:00:48.940 --> 00:00:50.770
+Whenever I see something like this,
+
+00:00:50.770 --> 00:00:53.590
+I imagine the plus symbols are gone and I imagine the quotes are
+
+00:00:53.590 --> 00:00:57.745
+gone and I just imagine literally squishing all of these things together.
+
+00:00:57.745 --> 00:00:59.475
+When I say squished,
+
+00:00:59.475 --> 00:01:01.395
+we are really squishing them together.
+
+00:01:01.395 --> 00:01:05.990
+There's even no extra space in between this string and this string.
+
+00:01:05.990 --> 00:01:07.925
+If you want to add a space here,
+
+00:01:07.925 --> 00:01:11.670
+you would have to explicitly add a space in this string literal,
+
+00:01:11.670 --> 00:01:16.665
+at the end of it or you add a space at the beginning of this string literal.
+
+00:01:16.665 --> 00:01:19.170
+Same with "Coffee on Monday."
+
+00:01:19.170 --> 00:01:21.570
+I want a space here, so I have to either add it at
+
+00:01:21.570 --> 00:01:24.645
+the end of this string or the beginning of this string.
+
+00:01:24.645 --> 00:01:27.220
+I added a space here and a space here,
+
+00:01:27.220 --> 00:01:29.729
+so when I concatenate all of this together,
+
+00:01:29.729 --> 00:01:34.050
+I squish them together and that sentence comes out correct like this.
+
+00:01:34.050 --> 00:01:36.630
+There's a space here and a space here.
+
+00:01:36.630 --> 00:01:39.525
+Adding spaces in the right places is a little bit tricky because
+
+00:01:39.525 --> 00:01:42.750
+you have the quotation marks everywhere and the plus symbols and there's
+
+00:01:42.750 --> 00:01:45.930
+even spaces around the plus symbol but these spaces around
+
+00:01:45.930 --> 00:01:49.380
+the plus symbol don't contribute to the overall display string.
+
+00:01:49.380 --> 00:01:52.680
+The space must be inside the double quotes.
+
+00:01:52.680 --> 00:01:55.890
+Here's an example of string concatenation in our app.
+
+00:01:55.890 --> 00:01:58.370
+I'm going to change the text so that it says,
+
+00:01:58.370 --> 00:02:02.440
+amount due plus $10.
+
+00:02:02.440 --> 00:02:06.645
+I'm concatenating this string literal with this string literal.
+
+00:02:06.645 --> 00:02:09.565
+When I run it on my device then I hit the order button,
+
+00:02:09.565 --> 00:02:12.285
+then I see amount due $10.
+
+00:02:12.285 --> 00:02:17.215
+You can also concatenate strings with integers like I have here.
+
+00:02:17.215 --> 00:02:19.395
+Before, the 10 was in quotes.
+
+00:02:19.395 --> 00:02:22.665
+So, that was a string representation of the number 10.
+
+00:02:22.665 --> 00:02:25.340
+But here, I just have 100 without quotes,
+
+00:02:25.340 --> 00:02:28.420
+so this is the integer value for 100.
+
+00:02:28.420 --> 00:02:30.740
+If I concatenate a string with
+
+00:02:30.740 --> 00:02:34.285
+an integer then it immediately turns this whole thing into a string.
+
+00:02:34.285 --> 00:02:35.695
+If I hit the order button,
+
+00:02:35.695 --> 00:02:38.040
+then I see $100 showing up on the screen.
+
+00:02:38.040 --> 00:02:42.555
+In a moment, I'll have you play around with string concatenation to try different values.
+
+00:02:42.555 --> 00:02:44.315
+You could get compile errors,
+
+00:02:44.315 --> 00:02:46.030
+so be careful of those.
+
+00:02:46.030 --> 00:02:47.780
+If I forget a closing quote,
+
+00:02:47.780 --> 00:02:49.265
+I could get an error.
+
+00:02:49.265 --> 00:02:50.980
+In a moment, I'll have you play around with
+
+00:02:50.980 --> 00:02:53.585
+string concatenation and try different values.
+
+00:02:53.585 --> 00:02:56.165
+According to Android code style guidelines,
+
+00:02:56.165 --> 00:02:58.945
+we should have a space before and after each operator
+
+00:02:58.945 --> 00:03:02.570
+and this string concatenation operator counts as an operator.
+
+00:03:02.570 --> 00:03:05.480
+Now it's your turn to practice in your app.
+
+00:03:05.480 --> 00:03:07.510
+Experiment with combining different strings using
+
+00:03:07.510 --> 00:03:12.025
+the plus operator and you can also combine it with integer literal values as well.
+
+00:03:12.025 --> 00:03:14.545
+Once you feel comfortable with string concatenation,
+
+00:03:14.545 --> 00:03:17.040
+I want you to answer these questions.
+

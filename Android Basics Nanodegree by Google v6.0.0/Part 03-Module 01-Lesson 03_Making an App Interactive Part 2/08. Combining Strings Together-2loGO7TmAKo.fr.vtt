@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.400 --> 00:00:02.300
+Quand on traite des chaînes en Java,
+
+00:00:02.300 --> 00:00:05.190
+un concept qu'il est important
+de comprendre est la concaténation.
+
+00:00:05.190 --> 00:00:07.190
+Certes, c'est un mot très long mais
+
+00:00:07.190 --> 00:00:10.980
+il veut juste dire qu'on attache
+des chaînes de caractères bout à bout.
+
+00:00:10.980 --> 00:00:12.680
+Si j'ai une chaîne ici
+et une chaîne là,
+
+00:00:12.680 --> 00:00:16.740
+on peut les combiner par concaténation
+pour créer une chaîne encore plus longue.
+
+00:00:16.740 --> 00:00:20.750
+Pour concaténer ces chaînes,
+on utilise l'opérateur <i>plus</i>.
+
+00:00:20.750 --> 00:00:24.000
+C'est le même symbole que
+pour l'addition en mathématiques.
+
+00:00:24.000 --> 00:00:29.180
+De même qu'on peut additionner des
+nombres, on peut concaténer des chaînes.
+
+00:00:29.180 --> 00:00:30.750
+Voyons un exemple.
+
+00:00:30.750 --> 00:00:35.220
+Mettons que j'ai trois chaînes,
+une chaîne de lettres « il me faut »,
+
+00:00:35.220 --> 00:00:36.940
+une chaîne de lettres,
+« 2 tasses de café »,
+
+00:00:36.940 --> 00:00:39.620
+et une dernière chaîne de lettres
+« le lundi ».
+
+00:00:39.620 --> 00:00:43.100
+Je peux utiliser le symbole <i>+</i>
+pour concaténer toutes ces chaînes.
+
+00:00:44.190 --> 00:00:49.350
+Ceci créera une énorme chaîne disant
+« Il me faut2 tasses de caféle lundi ».
+
+00:00:49.350 --> 00:00:52.590
+Quand je vois quelque chose comme ça,
+j'imagine le texte sans les symboles <i>+</i> ni
+
+00:00:52.590 --> 00:00:54.190
+les guillemets, et
+
+00:00:54.190 --> 00:00:57.140
+j'imagine que que ça ferait de juste
+compresser toutes ces chaînes en une.
+
+00:00:58.250 --> 00:01:01.650
+D'ailleurs quand je dis « compresser »,
+c'est vraiment ce qu'on fait.
+
+00:01:01.650 --> 00:01:06.420
+Il n'y a même pas d'espace
+entre cette chaîne et l'autre.
+
+00:01:06.420 --> 00:01:07.700
+Pour ajouter une espace ici,
+
+00:01:07.700 --> 00:01:13.125
+il faudrait explicitement insérer
+une espace au bout de cette chaîne-ci,
+
+00:01:13.125 --> 00:01:15.985
+ou insérer une espace
+au début de cette chaîne-là.
+
+00:01:17.125 --> 00:01:18.645
+pareil avec « cafésle lundi. ».
+
+00:01:18.645 --> 00:01:22.845
+Je veux une espace ici, donc il me faut
+l'insérer soit à la fin de cette chaîne,
+
+00:01:22.845 --> 00:01:23.995
+soit au début de celle-là.
+
+00:01:25.065 --> 00:01:27.495
+J'ajoute une espace ici et une autre là,
+comme ça
+
+00:01:27.495 --> 00:01:29.705
+quand je concatène le tout,
+
+00:01:29.705 --> 00:01:34.300
+je compresse toutes les chaînes
+et ma phrase sort correctement.
+
+00:01:34.300 --> 00:01:36.630
+Il y a une espace ici et une autre ici.
+
+00:01:36.630 --> 00:01:39.743
+Il peut être un peu dur d'ajouter des
+espaces aux bons endroits parce qu'on a
+
+00:01:39.743 --> 00:01:42.330
+des guillemets partout en plus
+des symboles <i>+</i>, sans
+
+00:01:42.330 --> 00:01:44.750
+compter les espaces
+avant et après les symboles <i>+</i>.
+
+00:01:44.750 --> 00:01:47.620
+Mais les espaces avant et après
+le symbole <i>+</i> ne comptent pas
+
+00:01:47.620 --> 00:01:50.025
+dans la chaîne globale qui s'affichera.
+
+00:01:50.025 --> 00:01:53.010
+L'espace doit être dans la partie
+entre guillemets doubles.
+
+00:01:53.010 --> 00:01:55.220
+Voilà un exemple de chaînes
+concaténées dans l'appli.
+
+00:01:55.220 --> 00:01:58.234
+Je vais changer ce texte pour
+
+00:01:58.234 --> 00:02:02.900
+qu'il dise « Montant » <i>+</i> « $10 ».
+
+00:02:02.900 --> 00:02:05.910
+Je concatène cette chaîne avec l'autre.
+
+00:02:07.190 --> 00:02:08.310
+J'exécute mon script et
+
+00:02:08.310 --> 00:02:12.770
+quand j'appuie sur le bouton 
+<i>Commander</i>, j'ai « Montant $10 ».
+
+00:02:12.770 --> 00:02:17.490
+On peut aussi concaténer
+des chaînes d'entiers comme ici.
+
+00:02:17.490 --> 00:02:19.590
+Avant, mon 10 était
+entre guillemets donc
+
+00:02:19.590 --> 00:02:22.830
+c'était une chaîne représentant
+juste le nombre dix.
+
+00:02:22.830 --> 00:02:27.530
+Ici j'ai cependant 100 sans guillemet,
+donc un vrai entier de valeur 100.
+
+00:02:27.530 --> 00:02:31.470
+Si je concatène une chaîne à un entier,
+
+00:02:31.470 --> 00:02:34.590
+Java va immédiatement transformer
+le tout en chaînes.
+
+00:02:34.590 --> 00:02:38.360
+Si je clique sur Commander,
+je vois « $100 » apparaître à l'écran.
+
+00:02:38.360 --> 00:02:41.210
+Tout à l'heure, ce sera à vous
+de jouer à concaténer des chaînes
+
+00:02:41.210 --> 00:02:42.900
+de diverses valeurs.
+
+00:02:42.900 --> 00:02:46.290
+On peut avoir des erreurs de compilation
+avec ça, donc faites attention.
+
+00:02:46.290 --> 00:02:49.580
+Si j'oublie un guillemet fermant,
+je risque d'avoir une erreur.
+
+00:02:49.580 --> 00:02:52.180
+Tout à l'heure, ce sera à vous de jouer
+à concaténer des chaînes
+
+00:02:52.180 --> 00:02:53.890
+de diverses valeurs.
+
+00:02:53.890 --> 00:02:56.280
+D'après les Recommandations
+en matière de codage d'Android,
+
+00:02:56.280 --> 00:02:59.050
+il faut une espace
+avant et après chaque opérateur.
+
+00:02:59.050 --> 00:03:01.900
+Or l'opérateur de concaténation
+de chaînes compte comme un opérateur.
+
+00:03:03.080 --> 00:03:05.480
+À votre tour de vous entraîner
+sur votre application.
+
+00:03:05.480 --> 00:03:08.710
+Tentez de combiner des chaînes
+de type différents avec l'opérateur <i>plus</i>.
+
+00:03:08.710 --> 00:03:12.420
+Vous pouvez aussi faire
+la combinaison avec des entiers.
+
+00:03:12.420 --> 00:03:14.640
+Quand vous maîtriserez
+la concaténation de chaînes,
+
+00:03:14.640 --> 00:03:16.200
+répondez à ces questions.
+

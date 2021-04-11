@@ -1,0 +1,236 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.300 --> 00:00:03.260
+Voyons comment imbriqué ViewGroups
+serait applicable à notre application.
+
+00:00:03.260 --> 00:00:06.540
+Les informations contenues dans notre application ressemble
+il est disposé dans une colonne verticale.
+
+00:00:06.540 --> 00:00:09.120
+Afin que nous puissions utiliser un
+verticale LinearLayout pour cela.
+
+00:00:09.120 --> 00:00:09.770
+Ce semble bon
+
+00:00:09.770 --> 00:00:14.140
+Loin parce que nous avons une vue par
+ligne dans la LinearLayout verticale.
+
+00:00:14.140 --> 00:00:17.630
+Mais quand nous arrivons à cette ligne,
+il est en fait composée de plusieurs vues.
+
+00:00:17.630 --> 00:00:21.640
+Nous pouvons utiliser une LinearLayout horizontale à
+construire sur cette ligne composée d'un bouton,
+
+00:00:21.640 --> 00:00:23.080
+Une TextView, et un bouton.
+
+00:00:23.080 --> 00:00:25.711
+Donc, ce serait LinearLayout
+être le deuxième enfant en
+
+00:00:25.711 --> 00:00:27.710
+L'LinearLayout verticale plus.
+
+00:00:28.910 --> 00:00:32.030
+Dans un moment, je vais vous montrer
+trois fichiers de format XML différents, et
+
+00:00:32.030 --> 00:00:35.050
+Je veux vous demander lequel
+vous pensez construit précision jusqu'à
+
+00:00:35.050 --> 00:00:36.860
+La mise en page que nous voulons.
+
+00:00:36.860 --> 00:00:38.860
+Le hic est que je ne veux pas
+de copier ces fichiers et
+
+00:00:38.860 --> 00:00:40.460
+Exécuter dans Android Studio.
+
+00:00:40.460 --> 00:00:43.160
+Je veux que vous fassiez un
+hypothèse sur la base de la lecture et de
+
+00:00:43.160 --> 00:00:44.239
+Comprendre ce code.
+
+00:00:45.460 --> 00:00:47.940
+Vous pouvez trouver ce lien
+dans les notes de l'instructeur.
+
+00:00:47.940 --> 00:00:54.950
+Il dispose de trois options énumérées,
+Option A, l'option B et l'option C.
+
+00:00:54.950 --> 00:00:57.960
+Une de ces options correctement
+construit sur la mise en page que nous voulons.
+
+00:00:59.500 --> 00:01:02.460
+Cela va être difficile parce
+nous avons pas rencontré précédemment
+
+00:01:02.460 --> 00:01:04.000
+XML avec ViewGroups imbriqués.
+
+00:01:04.000 --> 00:01:07.440
+Nous allons diviser cette
+défi à travers deux jeux-questionnaires, de sorte
+
+00:01:07.440 --> 00:01:09.800
+Je ne vais pas vous demander de faire encore une décision.
+
+00:01:09.800 --> 00:01:13.390
+Pour ce premier questionnaire, je veux que vous
+esquisser le schéma de vue de la hiérarchie
+
+00:01:13.390 --> 00:01:15.600
+Pour chacun des fichiers XML.
+
+00:01:15.600 --> 00:01:18.550
+Voici un spiel rapide sur ce
+vue signifie hiérarchie.
+
+00:01:19.860 --> 00:01:20.720
+Vous aurez besoin de papier et
+
+00:01:20.720 --> 00:01:23.940
+Quoi écrire afin
+d'esquisser ces diagrammes.
+
+00:01:23.940 --> 00:01:28.340
+La façon dont Android organise toutes ces
+vues sur écran est dans une hiérarchie de la vue,
+
+00:01:28.340 --> 00:01:30.650
+Ou une arborescence de vues.
+
+00:01:30.650 --> 00:01:34.010
+Ceci est tout simplement un diagramme qui
+représente la hiérarchie de la vue.
+
+00:01:34.010 --> 00:01:37.870
+Il montre les parents et de l'enfant
+relations entre les vues.
+
+00:01:37.870 --> 00:01:41.720
+La vue racine de ce tout
+mise en page est une LinearLayout.
+
+00:01:41.720 --> 00:01:45.770
+Il a trois enfants, un RelativeLayout,
+un TextView, et une autre TextView.
+
+00:01:45.770 --> 00:01:49.842
+Et puis cette RelativeLayout à son tour
+a ses propres enfants, un ImageView et
+
+00:01:49.842 --> 00:01:51.450
+Une TextView.
+
+00:01:51.450 --> 00:01:53.170
+Pour nos Puddles l'app Pig,
+
+00:01:53.170 --> 00:01:56.620
+Ceci est la vue hiérarchique
+qui est créé par Android.
+
+00:01:56.620 --> 00:02:00.999
+Nous avons un RelativeLayout comme une vue racine,
+et il a quatre enfants, un ImageView,
+
+00:02:00.999 --> 00:02:03.606
+Quelques TextViews,
+ainsi qu'un LinearLayout.
+
+00:02:03.606 --> 00:02:07.210
+Et ce LinearLayout, à son tour, a deux
+ImageViews que ses enfants.
+
+00:02:08.820 --> 00:02:11.540
+Maintenant, vous comprenez ce que
+une vue hiérarchie diagramme est.
+
+00:02:11.540 --> 00:02:14.800
+En esquissant le schéma pour
+chacune de ces mises en XML,
+
+00:02:14.800 --> 00:02:19.650
+Vous comprendrez mieux ce qui est vue
+la vue mère, qui les enfants sont,
+
+00:02:19.650 --> 00:02:21.830
+Et si ces enfants
+ont des enfants de vues ou non.
+
+00:02:23.230 --> 00:02:27.520
+Si vous avez encore besoin d'un soupçon, voici quelques exemples de
+comment passer de mises en page XML
+
+00:02:27.520 --> 00:02:29.050
+Pour dessiner un diagramme vue hiérarchie.
+
+00:02:30.200 --> 00:02:33.250
+Dans cette configuration,
+nous avons une vue racine d'un LinearLayout.
+
+00:02:33.250 --> 00:02:34.130
+En passant, je ajouté ces
+
+00:02:34.130 --> 00:02:36.650
+Points ici parce que je ne pouvais pas
+adapter tout le code ici.
+
+00:02:36.650 --> 00:02:39.800
+Avec une vue racine comme LinearLayout,
+vous dessinez qu'au sommet de l'arbre.
+
+00:02:40.900 --> 00:02:43.250
+Et puis il contient deux
+enfants TextViews, donc
+
+00:02:43.250 --> 00:02:46.970
+Vous dessinez ceux que les enfants
+dessous qui, et qui est elle.
+
+00:02:46.970 --> 00:02:49.230
+Ceci est un agencement plus complexe.
+
+00:02:49.230 --> 00:02:51.602
+Nous avons une vue racine qui est
+a LinearLayout, et
+
+00:02:51.602 --> 00:02:55.636
+Il contient trois enfants directs,
+deux TextViews, et un RelativeLayout, et
+
+00:02:55.636 --> 00:02:59.870
+Puis à l'intérieur que RelativeLayout, nous avons
+un ImageView et un TextView comme des enfants.
+
+00:02:59.870 --> 00:03:03.100
+Quand vous avez fini tirant
+le schéma de vue de la hiérarchie pour
+
+00:03:03.100 --> 00:03:06.030
+Chaque option, puis aller de l'avant et
+vérifier ces boîtes pour continuer.
+
+00:03:06.030 --> 00:03:09.230
+Dans le questionnaire suivant,
+Je vais vous demander de faire une sélection
+
+00:03:09.230 --> 00:03:12.440
+Sur laquelle est la meilleure option, mais pour l'instant,
+vous ne pas avoir à prendre une décision.
+

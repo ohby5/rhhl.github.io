@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.920 --> 00:00:04.470
+Görünüm sıradüzen diyagramını 
+A, B ve C seçenekleri için çizeceğim.
+
+00:00:04.470 --> 00:00:06.500
+A seçeneği ile başlayacağız.
+
+00:00:07.689 --> 00:00:09.960
+Kök görünüm olarak <i>LinearLayout</i> içerir.
+
+00:00:09.960 --> 00:00:11.098
+Bunu çizeyim.
+
+00:00:11.098 --> 00:00:14.100
+Sonra görünüm sıradüzeninin sonraki 
+katmanını bulmak istiyorum,
+
+00:00:14.100 --> 00:00:16.920
+ki bu <i>LinearLayout</i>'un 
+direkt child'ları olur.
+
+00:00:16.920 --> 00:00:19.820
+Bu <i>LinearLayout</i>'un direkt child'larını 
+bulmak için XML dosyası
+
+00:00:19.820 --> 00:00:20.825
+boyunca gideceğim.
+
+00:00:21.720 --> 00:00:26.413
+Bir <i>TextView</i>, bir <i>LinearLayout</i>,
+diğer bir <i>TextView</i>, başka bir <i>TextView</i>
+
+00:00:26.413 --> 00:00:28.230
+ve sonra bir <i>Button</i> var.
+
+00:00:28.230 --> 00:00:29.010
+Bunu çizeyim.
+
+00:00:29.980 --> 00:00:31.330
+Güzel, iyi görünüyor,
+
+00:00:31.330 --> 00:00:36.450
+ama aslında bu <i>LinearLayout</i>'la 
+ilişkili bir sürü XML'i atladık.
+
+00:00:36.450 --> 00:00:41.900
+Bu içiçe <i>LinearLayout</i>, bir <i>Button</i>, 
+bir <i>TextView</i> ve bir <i>Button</i> içeriyor.
+
+00:00:41.900 --> 00:00:42.950
+Haydi bunları çizelim.
+
+00:00:43.930 --> 00:00:46.220
+Bu A seçeneği için görünüm 
+sıradüzen diyagramı.
+
+00:00:46.220 --> 00:00:50.370
+Yüksek seviyede, kök görünüm 
+olarak parent <i>LinearLayout</i> var.
+
+00:00:50.370 --> 00:00:53.510
+Beş child görünümü içeriyor 
+ve child'larda biri aslında
+
+00:00:53.510 --> 00:00:57.090
+üç görünüm daha içeren bir <i>LinearLayout</i>.
+
+00:00:57.090 --> 00:00:59.550
+Harika, haydi seçenek B'ye gidelim.
+
+00:00:59.550 --> 00:01:03.620
+Seçenek B'de, kök görünüm olarak 
+tekrar bir parent <i>LinearLayout</i> var.
+
+00:01:03.620 --> 00:01:06.170
+Şimdi bu <i>LinearLayout</i>'un 
+direkt child'larını bulabiliriz.
+
+00:01:06.170 --> 00:01:10.745
+Bir <i>TextView</i>, bir <i>LinearLayout</i>,
+diğer bir <i>TextView</i>, başka bir <i>TextView</i>
+
+00:01:10.745 --> 00:01:12.500
+ve bir <i>Button</i> var.
+
+00:01:12.500 --> 00:01:15.660
+Bu içiçe <i>LinearLayout</i>'un da 
+daha fazla child'ı var.
+
+00:01:15.660 --> 00:01:18.820
+Bir <i>Button</i>, bir <i>TextView</i>
+ve diğer bir <i>Button</i> var.
+
+00:01:18.820 --> 00:01:23.090
+Umarım ki önce en dıştaki parent'e 
+bakarak ve sonra oradan içe doğru giderek
+
+00:01:23.090 --> 00:01:27.280
+bir XML dosyasını nasıl okuyacağınız 
+hakkında bir fikir edinmişsinizdir.
+
+00:01:27.280 --> 00:01:29.720
+Son olarak, C seçeneğimiz var.
+
+00:01:29.720 --> 00:01:31.900
+Kök görünüm tekrar <i>LinearLayout</i>.
+
+00:01:31.900 --> 00:01:34.110
+Direkt child'larına bakalım.
+
+00:01:34.110 --> 00:01:39.220
+Bir <i>LinearLayout</i>, ardından bir <i>TextView</i>, 
+bir <i>TextView</i> ve bir <i>Button</i> var.
+
+00:01:39.220 --> 00:01:42.480
+Tamam iyi, yani bu C seçeneği için 
+bir görünüm sıradüzen diyagramı.
+
+00:01:42.480 --> 00:01:45.190
+Bu diğer seçeneklerden biraz 
+daha farklı görünüyor, bu yüzden
+
+00:01:45.190 --> 00:01:46.569
+onları yan yana karşılaştıralım.
+
+00:01:47.900 --> 00:01:50.310
+İşte bütün seçenekler yan yana.
+
+00:01:50.310 --> 00:01:52.750
+A ve B'nin çok benzer görünüm 
+sıradüzenleri varken,
+
+00:01:52.750 --> 00:01:55.632
+C seçeneğinin farklı bir 
+görünüm sıradüzeni var.
+
+00:01:55.632 --> 00:01:59.790
+Diğer durumların beş child'ı 
+olmasının aksine bu <i>LinearLayout</i>'un
+
+00:01:59.790 --> 00:02:01.290
+sadece dört child'ı var.
+
+00:02:01.290 --> 00:02:04.580
+Aynı zamanda A ve B çok benzer 
+göründükleri için, ikisi arasındaki
+
+00:02:04.580 --> 00:02:08.180
+farkın ne olduğuna karar vermek için 
+XML'e daha yakından bakmamız lazım.
+
+00:02:08.180 --> 00:02:12.940
+Sonraki testte, her seçenek için 
+XML'e daha yakından bakacaksınız.
+
+00:02:12.940 --> 00:02:15.570
+Sonra oluşturmak istediğimiz 
+yerleşimi en iyi açıklayan
+
+00:02:15.570 --> 00:02:17.970
+seçeneğin hangisi olduğunu 
+düşündüğünüzü soracağım.
+

@@ -1,0 +1,270 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.365 --> 00:00:03.404
+No vídeo anterior, vimos
+como combinar strings literais
+
+00:00:03.437 --> 00:00:08.100
+com inteiros literais
+usando a operação de concatenação.
+
+00:00:08.133 --> 00:00:10.941
+Esta expressão gera a string
+
+00:00:10.974 --> 00:00:13.646
+"I need 2 cups of coffee
+on Monday".
+
+00:00:13.679 --> 00:00:17.666
+O bom de poder concatenar
+diferentes partes do texto
+
+00:00:17.699 --> 00:00:20.931
+é que podemos alterar
+partes que precisam ser mudadas.
+
+00:00:20.964 --> 00:00:24.073
+Por exemplo, a quantidade
+de xícaras de café pode mudar,
+
+00:00:24.106 --> 00:00:28.202
+assim, em vez de um valor literal,
+podemos usar uma variável.
+
+00:00:28.235 --> 00:00:31.538
+Agora eu removi o 2
+e adicionei a variável quantity,
+
+00:00:31.571 --> 00:00:36.523
+assim, ao avaliarmos a expressão,
+obteremos o valor mais recente.
+
+00:00:36.556 --> 00:00:42.468
+Se a variável contiver o valor 2,
+ela informará isso na string.
+
+00:00:42.501 --> 00:00:46.010
+Estas partes da string
+são constantes,
+
+00:00:46.043 --> 00:00:50.586
+mas quantity pode ser substituída
+pelo valor mais recente.
+
+00:00:50.619 --> 00:00:52.674
+Vamos testar
+no Android Studio.
+
+00:00:52.707 --> 00:00:57.259
+Como quantity é uma variável
+já declarada em MainActivity,
+
+00:00:57.292 --> 00:01:00.602
+podemos usá-la diretamente
+no método submitOrder.
+
+00:01:00.635 --> 00:01:04.618
+Eu criarei a string
+"Total Item Count"
+
+00:01:04.651 --> 00:01:08.858
+e adicionarei "quantity"
+e "coffees".
+
+00:01:08.891 --> 00:01:10.585
+Não há relação com o preço,
+
+00:01:10.618 --> 00:01:14.422
+mas quero mostrar que podemos
+concatenar strings com variáveis.
+
+00:01:14.455 --> 00:01:17.343
+Vamos executar
+para ver como ficou.
+
+00:01:17.376 --> 00:01:19.871
+Se alterar a quantidade
+e clicar no botão Order,
+
+00:01:19.904 --> 00:01:23.508
+ele exibirá
+Total Item Count 3coffees.
+
+00:01:23.541 --> 00:01:27.461
+Eu me esqueci de adicionar o espaço
+depois do 3 ou antes de coffees,
+
+00:01:27.494 --> 00:01:29.508
+então vamos fazer isso.
+
+00:01:29.541 --> 00:01:33.796
+Adicionarei um espaço que apareça
+antes da quantidade.
+
+00:01:33.829 --> 00:01:36.495
+Perceba que quantity
+está sem aspas,
+
+00:01:36.528 --> 00:01:40.622
+se fosse assim, a palavra
+quantity apareceria na tela,
+
+00:01:40.655 --> 00:01:44.158
+mas queremos o valor da variável,
+então não usaremos aspas.
+
+00:01:44.191 --> 00:01:48.327
+Agora, com o espaço, vamos executar
+para ver se está certo.
+
+00:01:48.360 --> 00:01:51.382
+Ao alterar a quantidade para 3
+e clicar no botão Order,
+
+00:01:51.415 --> 00:01:54.310
+ele diz
+Total Item Count 3 coffees.
+
+00:01:54.343 --> 00:01:58.240
+Agora há um espaço antes
+e depois do valor de quantidade.
+
+00:01:58.273 --> 00:02:02.304
+Observar esta linha de código
+pode ser um pouco complexo,
+
+00:02:02.337 --> 00:02:05.888
+pois há aspas por toda parte,
+sinais de adição
+
+00:02:05.921 --> 00:02:08.457
+e espaços
+em lugares estranhos.
+
+00:02:08.490 --> 00:02:10.902
+Imagine que os sinais de adição
+desaparecem,
+
+00:02:10.935 --> 00:02:13.246
+que tudo será unido
+
+00:02:13.279 --> 00:02:17.110
+e que a variável quantity
+será substituída por um valor.
+
+00:02:17.143 --> 00:02:21.212
+Como não é tão fácil de ler,
+fica fácil cometer erros aqui,
+
+00:02:21.245 --> 00:02:24.022
+como esquecer das aspas
+de início ou de encerramento,
+
+00:02:24.055 --> 00:02:27.967
+colocar o sinal no lugar errado
+ou a variável entre aspas.
+
+00:02:28.000 --> 00:02:31.671
+Basta ler atentamente o código
+para conferir se ele faz o desejado.
+
+00:02:31.704 --> 00:02:33.621
+Podemos criar
+expressões matemáticas.
+
+00:02:33.654 --> 00:02:36.455
+Podemos colocar quantity
+vezes cinco entre parênteses.
+
+00:02:36.488 --> 00:02:39.582
+Isso se tornará
+um valor inteiro único,
+
+00:02:39.615 --> 00:02:42.860
+que será concatenado
+ao preço.
+
+00:02:42.893 --> 00:02:45.688
+Uma string mais um inteiro
+se transformará em uma string,
+
+00:02:45.721 --> 00:02:48.154
+que ficará armazenada
+na variável priceMessage
+
+00:02:48.187 --> 00:02:50.414
+e que será exibida na tela.
+
+00:02:50.447 --> 00:02:55.110
+Ao executar isso no dispositivo,
+ele será exibido como Price 15.
+
+00:02:55.143 --> 00:02:58.062
+Se quiser o sinal de dólar
+ou o símbolo da moeda,
+
+00:02:58.095 --> 00:03:01.030
+ele precisa fazer parte
+da string literal.
+
+00:03:01.063 --> 00:03:05.495
+O inteiro fica com a parte
+do número, e não com a do símbolo.
+
+00:03:06.959 --> 00:03:09.886
+Ao executar no dispositivo
+e clicar no botão Order,
+
+00:03:09.919 --> 00:03:12.591
+vejo o símbolo da moeda.
+
+00:03:12.624 --> 00:03:14.879
+Seguindo o padrão
+que venho mostrando,
+
+00:03:14.912 --> 00:03:17.014
+modifique
+o método submitOrder
+
+00:03:17.047 --> 00:03:20.287
+para que exiba diferentes
+mensagens na tela.
+
+00:03:20.320 --> 00:03:25.071
+Tente exibir "Amount Due $10"
+na tela ao clicar no botão Order.
+
+00:03:25.104 --> 00:03:30.164
+Quando conseguir isso,
+tente exibir esta string.
+
+00:03:30.197 --> 00:03:33.589
+Repita o mesmo
+para cada uma dessas strings.
+
+00:03:33.622 --> 00:03:37.194
+Você só verá uma dessas strings
+na tela por vez.
+
+00:03:37.227 --> 00:03:39.918
+Lembre-se de concatenar
+as strings com variáveis,
+
+00:03:39.951 --> 00:03:42.870
+para que os valores de quantidade
+e preço sejam precisos
+
+00:03:42.903 --> 00:03:44.669
+a partir do seletor
+de quantidade.
+
+00:03:44.702 --> 00:03:48.059
+Assim, se eu alterar isto
+para 5 xícaras de café,
+
+00:03:48.092 --> 00:03:51.448
+a quantia
+deve ser igual a $25.
+

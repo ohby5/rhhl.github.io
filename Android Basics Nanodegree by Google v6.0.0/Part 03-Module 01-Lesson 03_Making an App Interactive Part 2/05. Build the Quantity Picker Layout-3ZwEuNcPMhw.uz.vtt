@@ -1,0 +1,356 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.350 --> 00:00:03.090
+Dastlab ekran rasmiga qarayman va 
+ushbu qatorda bular vertikal chiziqli 
+
+00:00:03.090 --> 00:00:06.180
+joylashuv tartibiga o‘xshaydi 
+deb qaror qilaman.
+
+00:00:06.180 --> 00:00:08.410
+Ikkinchi farzand bitta ko‘rinishga 
+o‘xshashiga qaramay, aslida 
+
+00:00:08.410 --> 00:00:11.530
+u uchta ko‘rinishdan iborat chiziqli gorizontal 
+joylashuv tartibidan iboratdir.
+
+00:00:11.530 --> 00:00:14.710
+Ko‘rinishning ierarxik diagrammasi 
+mana bunga o‘xshash bo‘ladi.
+
+00:00:14.710 --> 00:00:19.300
+Bizda o‘zida to‘rtta farzand bo‘lgan vertikal 
+chiziqli joylashuv tartibi asos hisoblanadi.
+
+00:00:20.390 --> 00:00:23.050
+Chiziqli joylashuv tartibining 
+o‘zi esa 3 ta farzanddan iborat.
+
+00:00:24.360 --> 00:00:29.700
+Bizda diagramma bor, shuning uchun
+ XML kodlar skeletini yaratish oson bo‘ladi.
+
+00:00:29.700 --> 00:00:32.009
+Ko‘rinish asosi chiziqli 
+joylashuv tartibi va u
+
+00:00:32.009 --> 00:00:36.160
+birinchi farzandi ichida tugmachasi, matn 
+ko‘rinishi va tugmachasi bo‘lgan chiziqli 
+
+00:00:36.160 --> 00:00:38.650
+joylashuv tartibiga ergashgan matn 
+ko‘rinishini o‘z ichiga oladi.
+
+00:00:38.650 --> 00:00:42.560
+Va bu chiziqli joylashuvning 
+oxirgi tegi uchun, keyin bizda 
+
+00:00:42.560 --> 00:00:45.600
+matn ko‘rinishi, boshqa matn 
+ko‘rinishi va tugmacha mavjud.
+
+00:00:45.600 --> 00:00:49.230
+Bularning barchasi ota joylashuv 
+tartibining farzandlaridir.
+
+00:00:49.230 --> 00:00:52.230
+Ushbu XML dan Android Studioga 
+o‘tamiz va mavjud joylashuv tartibini 
+
+00:00:52.230 --> 00:00:56.460
+shunga o‘xshash ko‘rinishga 
+o‘zgartirishimiz mumkin.
+
+00:00:56.460 --> 00:01:00.310
+Android Studioda asosiy sahifaning
+ XML faylini ochaman.
+
+00:01:00.310 --> 00:01:03.039
+Ushbu faylga kerakli o‘zgartirishlarni 
+kiritamiz, shunda ular 
+
+00:01:03.039 --> 00:01:06.335
+biz xohlagan joylashuv 
+tartibiga yanada mos keladi.
+
+00:01:06.335 --> 00:01:08.700
+Birinchi farzand matn ko‘rinishidir.
+
+00:01:08.700 --> 00:01:09.880
+Bizda allaqachon mavjud.
+
+00:01:09.880 --> 00:01:11.350
+Va u miqdorning sarlavhasi
+bo‘lishi ko‘zlangan.
+
+00:01:12.500 --> 00:01:15.190
+Keyin bizda uchta ko‘rinishni o‘z 
+ichiga olgan jamlangan chiziqli 
+
+00:01:15.190 --> 00:01:17.680
+joylashuv tartibi bo‘lishi kerak.
+
+00:01:17.680 --> 00:01:20.120
+Bizda bu hali ham yo‘q, 
+shuning uchun uni qo‘shamiz.
+
+00:01:20.120 --> 00:01:23.215
+Enter tugmachasini bosib LinearLayout 
+deb yoza boshlayman.
+
+00:01:24.850 --> 00:01:27.390
+Shuningdek, bunda avtomatik to‘ldirib 
+beruvchi variantni ko‘rsatadi.
+
+00:01:27.390 --> 00:01:29.020
+Mening shunchaki bosishim kifoya qiladi.
+
+00:01:29.020 --> 00:01:32.100
+Keyin men to‘ldirishim kerak bo‘lgan 
+xususiyatlarni avtomatik ravishda to‘ldiradi.
+
+00:01:32.100 --> 00:01:33.610
+Chunki kenglik va balandlik talab qilinadi.
+
+00:01:34.880 --> 00:01:38.020
+Men kenglikni match_parent qilib belgilayman, 
+
+00:01:38.020 --> 00:01:42.720
+u o‘z navbatida otaning kenglini egallaydi 
+va bu ekranning kengligiga to‘g‘ri keladi.
+
+00:01:42.720 --> 00:01:45.890
+Joylashuv tartibining balandligi 
+uchun match_parent o‘rnatmayman, 
+
+00:01:45.890 --> 00:01:49.970
+aks holda u ekranni vertikal ravishda egallab oladi 
+va boshqa ko‘rinishlarni ekrandan surib qo‘yadi.
+
+00:01:49.970 --> 00:01:51.820
+Shuning uchun bu yerga 
+ wrap_content deb yozaman.
+
+00:01:53.680 --> 00:01:56.960
+Shunday qilib, LinearLayout ikkita 
+tugmacha va uning ichidagi matn 
+
+00:01:56.960 --> 00:01:58.610
+ko‘rinishining umumiy 
+balandligichalik uzun bo‘ladi.
+
+00:01:58.610 --> 00:02:02.690
+Endi mana bu oxirgi teg 
+ LinearLayout ning barcha 
+
+00:02:02.690 --> 00:02:04.060
+farzandlari qo‘shilgandan 
+so‘ng ko‘chirilishi kerak.
+
+00:02:04.060 --> 00:02:07.160
+U mana bu yerda pastga tushadi.
+
+00:02:07.160 --> 00:02:09.320
+Agar ko‘rinish guruhida 
+farzandlaringiz bo‘lsa, 
+
+00:02:09.320 --> 00:02:12.050
+ularni to‘rtta bo‘sh joyga 
+ajratishingiz kerak bo‘ladi.
+
+00:02:12.050 --> 00:02:15.630
+Bu yerga ham bo‘sh joy qo‘shmoqchiman, 
+chunki XML ning har bir elementi 
+
+00:02:15.630 --> 00:02:17.090
+orasida bo‘sh chiziq bo‘lishini xohlayman.
+
+00:02:18.260 --> 00:02:21.440
+Biz qoldirayotgan yana bir narsa ushbu
+ LinearLayout ning yo‘nalishini belgilash kerak.
+
+00:02:23.210 --> 00:02:26.260
+Oldinroq biz LinearLayout gorizontal holatda 
+bo‘lishi kerak degandik, shuning uchun 
+
+00:02:26.260 --> 00:02:29.390
+tugmachalar va matn ko‘rinishlari 
+gorizontal holatda bo‘ladi.
+
+00:02:29.390 --> 00:02:30.979
+Ajoyib.
+Endi bu biz xohlagan narsaga mos kelmoqda.
+
+00:02:32.150 --> 00:02:37.340
+Navbatda bizning joylashuvimizga allaqachon 
+joylashgan ikkita matn ko‘rinishi va tugmacha bor.
+
+00:02:37.340 --> 00:02:39.010
+Shunday qilib biz yakunladik deb o‘ylayman.
+
+00:02:39.010 --> 00:02:41.860
+Agar siz dizayn panelini tekshirishni xohlasangiz, 
+mana, uning ko‘rinishi shunday bo‘ladi.
+
+00:02:43.470 --> 00:02:47.100
+Bizda beshta farzandli vertikal chiziqli 
+joylashuv tartibi hamda uchdan ortiq 
+
+00:02:47.100 --> 00:02:48.880
+farzandga ega mana bu chiziqli 
+joylashuv tartibi bor.
+
+00:02:48.880 --> 00:02:52.120
+Keling, buni qurilmamizda ishga tushiramiz 
+va nima sodir bo‘lishini ko‘ramiz.
+
+00:02:53.390 --> 00:02:55.740
+Bu biz xohlagan ko‘rinishga yaqin,
+lekin to‘laqonli emas.
+
+00:02:56.920 --> 00:03:00.060
+Miqdor yig‘uvchining gorizontal 
+holatda ko‘rinishi yaxshi belgi, albatta.
+
+00:03:00.060 --> 00:03:03.180
+Ammo kerakli joylashuv tartibining 
+skrinshotida biz ayirish tugmachasini 
+
+00:03:03.180 --> 00:03:08.355
+chap tomonda va qo‘shish tugmachani 
+o‘ng tomonda bo‘lishini xohlagandik.
+
+00:03:08.355 --> 00:03:11.675
+Shuningdek, mana bu tugmachalar ushbu 
+matn ko‘rinishining chetiga nisbatan mahkam siqilgan.
+
+00:03:11.675 --> 00:03:15.080
+Adashmasam, yana ushbu matn ko‘rinishining 
+chap va o‘ng tomonida 
+
+00:03:15.080 --> 00:03:17.851
+8 dp bo‘sh joy kerak edi.
+
+00:03:18.962 --> 00:03:19.832
+Keling, hozir ularni qo‘shamiz.
+
+00:03:21.252 --> 00:03:22.972
+ XML ga qaytib,
+
+00:03:22.972 --> 00:03:26.702
+qo‘shish tugmachasini matn ko‘rinishidan 
+keyin bo‘lishi uchun siljitaman.
+
+00:03:26.702 --> 00:03:32.432
+Va ayirish tugmasini esa matn ko‘rinishidan
+oldinroqqa suraman.
+
+00:03:32.432 --> 00:03:36.372
+Gorizontal qatorda bizda ayirish 
+tugmachasi, unga ergashgan ikki, 
+
+00:03:36.372 --> 00:03:38.252
+unga ergashgan qo‘shish 
+tugmachasi bo‘lishi kerak.
+
+00:03:38.252 --> 00:03:41.320
+Mana bu matn ko‘rinishining atroflaridan
+bo‘sh joy ham qoldirmoqchimiz.
+
+00:03:41.320 --> 00:03:44.380
+Ikkita yo‘limiz bor, chegara berishimiz 
+yoki joy tashlashimiz mumkin,
+
+00:03:44.380 --> 00:03:46.376
+men atrofidan bo‘sh joy beraman.
+
+00:03:46.376 --> 00:03:48.959
+Va u bo‘sh joyning qiymatini
+8 dp qilib beraman.
+
+00:03:48.959 --> 00:03:50.543
+Ajoyib.
+
+00:03:50.543 --> 00:03:53.602
+Ortiqcha oq bo‘sh joylar borligi va 
+Android stilini kodlashning 
+
+00:03:53.602 --> 00:03:56.026
+qo‘llanmasiga ko‘ra biz o‘rnatgan 
+xususiyatlar tartibi noto‘g‘ri 
+
+00:03:56.026 --> 00:03:59.310
+bo‘lishi mumkinligini ko‘nglim sezyapti.
+
+00:03:59.310 --> 00:04:02.860
+Ekraningizning yuqori qismidagi 
+menyudan kodga kiring va 
+
+00:04:02.860 --> 00:04:04.890
+kodni qayta formatlashni bosing.
+
+00:04:04.890 --> 00:04:06.980
+Shuningdek, kodni o‘zgartirish kerak.
+
+00:04:06.980 --> 00:04:09.120
+Bu hamma xususiyatlarni o‘zgartiradi 
+va avtomatik tarzda hamma 
+
+00:04:09.120 --> 00:04:11.240
+formatlarini tuzatadi.
+
+00:04:12.430 --> 00:04:13.050
+Ajoyib.
+
+00:04:13.050 --> 00:04:13.930
+Ilovani qaytadan ishga tushiramiz.
+
+00:04:15.550 --> 00:04:17.170
+Mana.
+Bu ancha yaxshi.
+
+00:04:17.170 --> 00:04:20.430
+Endi ikkining chap tomonida ayirish 
+tugmachasi va o‘ng tomonida qo‘shish 
+
+00:04:20.430 --> 00:04:22.790
+tugmachasi bilan orasida bo‘sh joy bor.
+
+00:04:22.790 --> 00:04:24.668
+[TOVUSH] bu yaxshi ko‘rinmoqda.
+
+00:04:24.668 --> 00:04:27.610
+Bu hali ham ishlayotganini
+tekshirib ko‘ramiz.
+
+00:04:27.610 --> 00:04:30.620
+Shunday qilib, men mantiqsiz ravishda
+miqdorni tanlab, keyin buyurtma beraman.
+
+00:04:30.620 --> 00:04:32.035
+Va bu to‘g‘ri ko‘rinmoqda.
+
+00:04:32.035 --> 00:04:37.890
+[TOVUSH] miqdorni yig‘uvchining ekranda 
+bu holatga kelishi uzoq sayohat bo‘ldi.
+
+00:04:37.890 --> 00:04:40.110
+Hammasi yaxshi.
+Ilova haqiqatan ham yaxshi ko‘rinyapti.
+
+00:04:40.110 --> 00:04:43.390
+Lekin hozircha men sizlarga ekranda
+faqat raqamlarni ko‘rsatdim.
+
+00:04:43.390 --> 00:04:45.370
+Agar raqamlar emas matn bo‘lganda
+nima bo‘lardi?
+
+00:04:46.470 --> 00:04:47.590
+Ko‘rishda davom eting va uni topasiz.
+

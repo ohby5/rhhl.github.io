@@ -1,0 +1,334 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.320 --> 00:00:02.448
+Hasta ahora, hemos creado
+un colector de cantidad.
+
+00:00:02.510 --> 00:00:05.936
+Exacto. Lo siguiente que considerar
+en la app es el precio.
+
+00:00:06.032 --> 00:00:06.750
+Sí.
+
+00:00:06.784 --> 00:00:07.780
+El precio justo.
+
+00:00:07.900 --> 00:00:10.992
+Hasta ahora el precio ha sido un entero,
+
+00:00:11.040 --> 00:00:13.424
+pero queremos ir más allá
+y usar strings.
+
+00:00:13.940 --> 00:00:16.064
+¿Te refieres a este tipo de strings?
+
+00:00:16.170 --> 00:00:18.320
+- No, más bien a este tipo de string.
+- Ya veo.
+
+00:00:20.010 --> 00:00:22.672
+Una string es una secuencia de caracteres.
+
+00:00:22.800 --> 00:00:25.008
+Espera. ¿Y qué tiene esto
+que ver con el precio?
+
+00:00:25.290 --> 00:00:29.345
+Pues vamos a cambiar
+la pantalla para que diga <i>Total</i>
+
+00:00:29.696 --> 00:00:30.992
+y luego, 15 $.
+
+00:00:31.392 --> 00:00:34.656
+Ya no es solo un número,
+sino que hay también un texto.
+
+00:00:34.870 --> 00:00:35.984
+Números y texto.
+
+00:00:36.032 --> 00:00:37.312
+Sí. ¿No es estupendo?
+
+00:00:37.790 --> 00:00:41.664
+Esto es de la fiesta a la que puede
+que te hayan invitado, o puede que no.
+
+00:00:42.890 --> 00:00:45.360
+En los próximos vídeos, vamos a hablar
+sobre el uso de strings
+
+00:00:45.530 --> 00:00:46.704
+en nuestra app <i>Just Java</i>.
+
+00:00:47.370 --> 00:00:50.528
+Específicamente, aprenderemos a crear
+y actualizar variables de strings.
+
+00:00:51.220 --> 00:00:55.392
+Luego cambiaremos la app, para
+que bajo el encabezamiento diga <i>Total $15</i>,
+
+00:00:55.472 --> 00:00:57.968
+o el precio que sea, basado
+en la cantidad pedida.
+
+00:00:58.672 --> 00:01:00.192
+También mostraremos el texto <i>¡Gracias!</i>,
+
+00:01:00.352 --> 00:01:02.656
+porque estamos
+muy contentos de tener clientes.
+
+00:01:03.710 --> 00:01:07.456
+Quizá te preguntes por qué no ponemos
+todo este texto dentro del layout del XML.
+
+00:01:08.450 --> 00:01:11.680
+Bueno, podríamos, pero el problema es
+que la cantidad puede cambiar
+
+00:01:11.776 --> 00:01:15.264
+y cuando le damos al botón <i>Pedir</i>,
+queremos que el precio se actualice aquí.
+
+00:01:15.990 --> 00:01:19.888
+Así que este texto necesita reflejar
+fielmente el precio, según la cantidad.
+
+00:01:20.480 --> 00:01:23.584
+Usando una variable de strings,
+podemos cambiar el valor del texto
+
+00:01:23.728 --> 00:01:25.040
+mientras la app se ejecuta,
+
+00:01:25.040 --> 00:01:27.856
+sin tener que añadirlo permanentemente
+en el layout del XML.
+
+00:01:29.440 --> 00:01:32.144
+Este es un ejemplo de una app real
+que quizá conozcas.
+
+00:01:32.620 --> 00:01:35.200
+Cuando te llaman,
+ves el nombre de la persona
+
+00:01:35.264 --> 00:01:36.672
+en la parte superior de la pantalla.
+
+00:01:37.090 --> 00:01:39.360
+No podemos poner esto
+directamente en el layout del XML,
+
+00:01:39.550 --> 00:01:41.568
+porque cambiará dependiendo
+de quién te llame,
+
+00:01:42.272 --> 00:01:44.480
+a menos que todos tus contactos
+se llamen Britta Holt.
+
+00:01:45.360 --> 00:01:48.512
+Lo mejor que podemos hacer es almacenar
+este nombre en una variable de strings.
+
+00:01:48.670 --> 00:01:51.568
+De esa manera, se puede actualizar
+dependiendo de quien llame.
+
+00:01:52.240 --> 00:01:53.552
+Y cuando mostremos esta pantalla,
+
+00:01:53.600 --> 00:01:56.976
+se verá el último nombre almacenado
+en esa variable.
+
+00:01:58.288 --> 00:02:01.568
+En la app del tiempo y las noticias, vemos
+una lista de las noticias más relevantes.
+
+00:02:02.170 --> 00:02:05.472
+Cuando creamos el layout del XML,
+no podemos fijar permanentemente
+
+00:02:05.600 --> 00:02:08.080
+estas noticias en concreto en el layout del XML.
+
+00:02:08.820 --> 00:02:10.880
+Me encanta leer
+sobre los JJ. OO. de invierno,
+
+00:02:10.970 --> 00:02:13.040
+pero también quiero ver otros artículos.
+
+00:02:13.870 --> 00:02:16.384
+Así que podemos almacenar
+la información para cada noticia,
+
+00:02:16.544 --> 00:02:19.136
+por ejemplo, el título del artículo,
+como una variable de strings,
+
+00:02:19.232 --> 00:02:20.460
+porque se puede cambiar.
+
+00:02:21.160 --> 00:02:23.808
+Para la siguiente tarea,
+voy a darte un código
+
+00:02:23.952 --> 00:02:26.032
+y vamos a conseguir
+que hagas esos cambios en la app.
+
+00:02:26.590 --> 00:02:29.264
+Luego, ejecutaremos
+la app y veremos qué pasa.
+
+00:02:29.696 --> 00:02:33.424
+Te haré preguntas, para ver
+si puedes adivinar qué está pasando.
+
+00:02:34.290 --> 00:02:36.944
+El primer cambio es modificar
+el método <i>submitOrder</i>.
+
+00:02:37.552 --> 00:02:40.960
+Puedes quitar el código situado
+entre las llaves de inicio y final
+
+00:02:41.184 --> 00:02:43.536
+y sustituirlo con estas
+dos líneas de código.
+
+00:02:44.190 --> 00:02:45.728
+Añadir este código te dará un error,
+
+00:02:45.872 --> 00:02:48.976
+así que quiero que añadas
+también el método <i>displayMessage</i>,
+
+00:02:49.280 --> 00:02:51.232
+que te ofrecemos
+en las notas del instructor.
+
+00:02:53.000 --> 00:02:56.360
+En las notas del instructor,
+encontrarás este código esencial.
+
+00:02:56.360 --> 00:02:57.744
+Por favor, selecciónalo todo,
+
+00:02:57.900 --> 00:03:00.592
+desde el comentario
+hasta la llave de cierre.
+
+00:03:01.860 --> 00:03:03.712
+Puedes tratar este método
+como algo misterioso.
+
+00:03:03.840 --> 00:03:06.192
+No tienes que preocuparte
+sobre qué pasa dentro del método,
+
+00:03:06.464 --> 00:03:10.210
+solo necesitas saber que quieres añadirlo
+a la MainActivity para que puedas usarlo.
+
+00:03:11.662 --> 00:03:12.830
+De nuevo en Android Studio,
+
+00:03:12.896 --> 00:03:16.304
+en el archivo <i>MainActivity.java</i>,
+voy a pegar este nuevo método.
+
+00:03:16.992 --> 00:03:18.944
+Puedo pegarlo en cualquier lugar
+de MainActivity,
+
+00:03:19.024 --> 00:03:22.208
+pero voy a ponerlo justo después
+del método <i>displayPrice</i>.
+
+00:03:22.870 --> 00:03:26.304
+Voy a ponerlo tras la llave de cierre
+del método <i>displayPrice</i>.
+
+00:03:27.810 --> 00:03:32.064
+Fíjate que también está dentro
+de la llave de cierre del MainActivity.
+
+00:03:32.360 --> 00:03:34.960
+MainActivity tiene
+una llave de inicio aquí,
+
+00:03:35.136 --> 00:03:37.744
+y todo lo que queda dentro
+está contenido en <i>MainActivity</i>.
+
+00:03:38.208 --> 00:03:41.008
+También tenemos una llave de cierre
+de <i>MainActivity</i> aquí.
+
+00:03:42.650 --> 00:03:44.864
+Una vez que añadimos
+el método <i>displayMessage,</i>
+
+00:03:45.040 --> 00:03:47.008
+podemos modificar el método <i>submitOrder.</i>
+
+00:03:47.632 --> 00:03:50.400
+Voy a borrar el código que ya tenemos
+dentro del método <i>submitOrder</i>.
+
+00:03:51.030 --> 00:03:54.518
+Luego, de acuerdo con la imagen
+de las preguntas, añado un nuevo código.
+
+00:03:57.456 --> 00:04:00.448
+No te daré a propósito muchos detalles
+sobre lo que acabo de hacer.
+
+00:04:01.020 --> 00:04:02.992
+Quiero que lo pruebes
+en tu versión de la app.
+
+00:04:03.312 --> 00:04:04.880
+Ejecútalo y mira qué pasa.
+
+00:04:06.040 --> 00:04:08.432
+A continuación, quiero
+que respondas a estas preguntas.
+
+00:04:08.990 --> 00:04:11.440
+¿Qué pasa ahora cuando haces clic
+en el botón <i>Pedir </i>de la app?
+
+00:04:12.260 --> 00:04:15.056
+Si miras con atención
+el código <i>submitOrder</i>,
+
+00:04:15.250 --> 00:04:17.279
+verás que hemos creado
+una variable de strings.
+
+00:04:18.160 --> 00:04:20.848
+Aunque aún no hemos tratado
+el código de variables de strings,
+
+00:04:21.055 --> 00:04:24.640
+quiero que te esfuerces
+en adivinar el nombre de esta variable.
+
+00:04:25.090 --> 00:04:26.990
+¿Y cuál crees que es
+el valor de la variable?
+
+00:04:28.656 --> 00:04:30.304
+Cuando acabes, por favor, continúa.
+

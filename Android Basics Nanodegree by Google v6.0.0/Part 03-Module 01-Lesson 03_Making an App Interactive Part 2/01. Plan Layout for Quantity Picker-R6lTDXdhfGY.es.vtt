@@ -1,0 +1,86 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.420 --> 00:00:03.590
+Para planear cómo crear este layout,
+vamos a empezar asumiendo
+
+00:00:03.648 --> 00:00:06.240
+que partimos con lo que tenemos
+en la app actualmente.
+
+00:00:06.570 --> 00:00:07.968
+No vamos a crear esto de cero.
+
+00:00:08.370 --> 00:00:09.968
+Para el paso 1,
+seleccionar las vistas,
+
+00:00:10.176 --> 00:00:12.416
+en realidad ya tenemos
+todas las vistas que necesitamos.
+
+00:00:12.790 --> 00:00:14.624
+No hace falta añadir o quitar vistas.
+
+00:00:15.010 --> 00:00:17.568
+Deberíamos tener 3 Buttons
+y 4 TextViews en nuestro layout.
+
+00:00:18.150 --> 00:00:19.728
+Para el paso 2,
+posición de las vistas,
+
+00:00:19.792 --> 00:00:21.952
+primero os voy a describir
+cómo veo el layout.
+
+00:00:22.544 --> 00:00:26.176
+Veo un encabezamiento seguido
+de una fila de Buttons y una TextView.
+
+00:00:26.560 --> 00:00:28.816
+Luego tenemos otro encabezamiento
+y otra TextView.
+
+00:00:29.580 --> 00:00:32.095
+Y por último,
+tenemos el botón <i>Pedir</i>.
+
+00:00:32.680 --> 00:00:36.288
+Viendo esto, me doy cuenta de que no puedo
+usar un LinearLayout vertical,
+
+00:00:36.590 --> 00:00:39.760
+porque este punto de aquí consta
+de más de una vista.
+
+00:00:40.800 --> 00:00:42.928
+Podríamos considerar potencialmente
+un RelativeLayout,
+
+00:00:42.992 --> 00:00:44.784
+pero voy a ponerle
+a eso una interrogación.
+
+00:00:45.540 --> 00:00:47.440
+Para el paso 3,
+le daremos estilo a las vistas.
+
+00:00:47.780 --> 00:00:50.816
+El estilo es más o menos
+el mismo que ya teníamos.
+
+00:00:51.160 --> 00:00:53.472
+Aunque me doy cuenta
+de que este valor de <i>cantidad</i>
+
+00:00:53.790 --> 00:00:56.944
+tiene un poco de espacio
+entre los botones de <i>menos</i> y <i>más</i>.
+
+00:00:57.600 --> 00:01:01.328
+Quizá queramos hacer esto con padding
+o con márgenes alrededor de esta TextView.
+

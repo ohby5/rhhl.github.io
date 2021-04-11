@@ -1,0 +1,408 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.330 --> 00:00:03.230
+Son testte görünümlerin nasıl 
+yerleştirileceği tartışılırken
+
+00:00:03.230 --> 00:00:05.410
+<i>RelativeLayout</i> kullanmaktan 
+bahsetmiş olabilirsiniz.
+
+00:00:05.410 --> 00:00:06.850
+Biliyorum öyleydi.
+
+00:00:06.850 --> 00:00:09.670
+Ama uygulamamız için daha ideal 
+olabilecek bir yerleşim oluşturacak
+
+00:00:09.670 --> 00:00:13.890
+başka bir yol göstermek istiyorum:
+İçiçe <i>ViewGroup</i> kullanarak.
+
+00:00:13.890 --> 00:00:18.120
+İçiçe <i>ViewGroup</i>, <i>ViewGroup</i>'ları diğer 
+<i>ViewGroup</i>'lar içine koymak demektir.
+
+00:00:18.120 --> 00:00:22.150
+Böylece bunun gibi daha ilginç ve 
+karmaşık yerleşimler oluşturabilirsiniz.
+
+00:00:22.150 --> 00:00:24.490
+Bu yerleşimlerden birini nasıl 
+oluşturacağınızı görelim.
+
+00:00:25.240 --> 00:00:28.620
+Diyelim ki, örneğin, biri <i>ImageView</i>
+ve ikisi <i>TextView</i> olan üç görünümden
+
+00:00:28.620 --> 00:00:30.840
+oluşan dikey bir <i>LinearLayout</i>'unuz var.
+
+00:00:30.840 --> 00:00:34.000
+Bu resmin üzerine biraz metin 
+koymak isteseniz ne olurdu?
+
+00:00:34.000 --> 00:00:36.470
+<i>LinearLayout</i>'le görünümleri 
+çakıştıramazsınız.
+
+00:00:36.470 --> 00:00:38.390
+Ama <i>RelativeLayout</i> ile yapabilirsiniz,
+
+00:00:38.390 --> 00:00:42.470
+bu yüzden bu child'ı <i>RelativeLayout</i>
+ile değiştirebiliriz.
+
+00:00:42.470 --> 00:00:45.750
+Sonra <i>ImageView</i>'i bu <i>RelativeLayout</i>
+içine koyabiliriz.
+
+00:00:45.750 --> 00:00:49.950
+Bu <i>ImageView</i> şimdi parent 
+<i>RelativeLayout</i>'un her köşesine hizalandı.
+
+00:00:49.950 --> 00:00:53.410
+Yani burada daha büyük bir <i>LinearLayout</i>
+içine konan bir <i>RelativeLayout</i>
+
+00:00:53.410 --> 00:00:54.899
+örneği görüyorsunuz.
+
+00:00:55.970 --> 00:00:59.850
+<i>ViewGroup</i>'ların diğer <i>ViewGroup</i>'lar içinde
+pek çok bileşimine sahip olabilirsiniz.
+
+00:00:59.850 --> 00:01:03.900
+Örneğin, bir uygulamada kök görünüm 
+olarak bir <i>RelativeLayout</i>'unuz olabilir.
+
+00:01:03.900 --> 00:01:07.270
+Bir <i>ImageView</i> ve iki <i>TextView</i>
+gibi birkaç görünümü içerebilir.
+
+00:01:08.350 --> 00:01:12.910
+Bu daha geniş <i>RelativeLayout</i>'un child 
+olarak bir <i>LinearLayout</i> ekleyebilirsiniz.
+
+00:01:14.100 --> 00:01:18.490
+Bu <i>LinearLayout</i>, iki <i>ImageView</i> gibi 
+başka child'lar da içerebilir.
+
+00:01:19.860 --> 00:01:23.340
+Diğer <i>ViewGroup</i>'lar içine istediğiniz 
+kadar <i>ViewGroup</i> yuvalayabilirsiniz.
+
+00:01:23.340 --> 00:01:26.540
+Ancak dikkatli olun, çünkü 
+yuvalama daha çok yapıldığında,
+
+00:01:26.540 --> 00:01:29.810
+uygulamanızın ekranında 
+yerleşimi daha pahalıya mal olur.
+
+00:01:31.040 --> 00:01:34.990
+<i>RelativeLayout</i> özellikle çok esnek bir 
+yerleşimdir, ama her bir görünümün
+
+00:01:34.990 --> 00:01:39.490
+diğerlerine göre göreceli pozisyonunu 
+hesaplamak çok karmaşık olabilir.
+
+00:01:39.490 --> 00:01:42.380
+O yüzden <i>RelativeLayout</i> içinde 
+çok fazla katman yuvalamak
+
+00:01:42.380 --> 00:01:43.510
+fazla tavsiye edilmez.
+
+00:01:45.040 --> 00:01:48.730
+Size içiçe <i>ViewGroup</i> kullanmanın faydalı 
+olduğu bazı durumları göstermek
+
+00:01:48.730 --> 00:01:51.840
+için gerçek hayattaki Google 
+uygulamalarından örnekler aldım.
+
+00:01:51.840 --> 00:01:55.060
+Google Now uygulaması, şu anki 
+durumunuza bağlı olarak,
+
+00:01:55.060 --> 00:01:59.250
+ilgili bilgi kartlarını gösteriyor, 
+mevcut zaman veya konum gibi.
+
+00:01:59.250 --> 00:02:01.310
+Eğer Red Sox gibi belli bir 
+takımı seviyorsanız,
+
+00:02:01.310 --> 00:02:04.040
+ki iyi seçim, o taktirde son oyunun 
+skorunu size gösterebiliyor.
+
+00:02:05.040 --> 00:02:08.570
+Bu karta yerleşim oluşturmak 
+için dikey bir <i>LinearLayout</i>
+
+00:02:08.570 --> 00:02:12.160
+kullanmayı düşünebilirsiniz, çünkü 
+bilgi satırlar olarak görüntüleniyor.
+
+00:02:12.160 --> 00:02:16.130
+Ancak, bu dikey <i>LinearLayout</i>'da ilk öğe 
+sadece tek bir <i>TextView</i> değildir,
+
+00:02:16.130 --> 00:02:18.380
+birden çok görünümden oluşur.
+
+00:02:19.410 --> 00:02:22.562
+Aslında bu ilk öğeyi bir <i>ImageView</i>
+ve iki <i>TextView'</i>den oluşan
+
+00:02:22.562 --> 00:02:25.325
+yatay bir <i>LinearLayout</i>
+olarak oluşturursunuz.
+
+00:02:25.325 --> 00:02:28.085
+Bu dikey <i>LinearLayout</i>'daki 
+ikinci öğe de aynı şekilde.
+
+00:02:28.085 --> 00:02:31.205
+Bir <i>ImageView</i> ve iki <i>TextView</i>
+içeren yatay bir
+
+00:02:31.205 --> 00:02:32.865
+<i>LinearLayout</i> ile oluşturursunuz.
+
+00:02:32.865 --> 00:02:35.785
+Google Now uygulamasındaki 
+diğer bir kart da ilgilenebileceğiniz
+
+00:02:35.785 --> 00:02:37.315
+uygun hisse senetlerini gösterir.
+
+00:02:37.315 --> 00:02:39.710
+Keşke Google hisse senedi hâlâ 
+bu fiyatta olsaydı.
+
+00:02:39.710 --> 00:02:43.390
+Neyse, bu yerleşimi dikey <i>LinearLayout</i>
+olarak da oluşturabilirsiniz,
+
+00:02:43.390 --> 00:02:45.740
+çünkü satırları burada düşünebilirsiniz.
+
+00:02:45.740 --> 00:02:48.410
+Ortadaki bu girişler, tek bir 
+<i>TextView</i> değil,
+
+00:02:48.410 --> 00:02:50.640
+birden çok <i>TextView</i>'den oluşmuştur.
+
+00:02:50.640 --> 00:02:53.280
+Google hisse senedine 
+ilişkin bu satır öğesi için,
+
+00:02:53.280 --> 00:02:57.340
+yatay <i>LinearLayout</i> kullanıp içini dört 
+<i>TextView</i> ile doldurabilirsiniz.
+
+00:02:57.340 --> 00:02:59.670
+Diğer hisse senedi fiyatları 
+için de aynı şekilde.
+
+00:02:59.670 --> 00:03:02.690
+Bu yatay <i>LinearLayout</i>'lar 
+daha geniş dikey <i>LinearLayout</i>'ların
+
+00:03:02.690 --> 00:03:03.620
+child'larıdır.
+
+00:03:03.620 --> 00:03:09.050
+Google Play müzik uygulamasında, 
+elbette müzik dinleyebilirsiniz.
+
+00:03:09.050 --> 00:03:11.330
+Bu oluşturmak için karmaşık 
+bir yerleşim gibi görünse de,
+
+00:03:11.330 --> 00:03:14.850
+aslında tanımak için daha küçük 
+<i>ViewGroup</i>'lara bölebilirsiniz.
+
+00:03:14.850 --> 00:03:17.530
+Bu örüntü, üç farklı child'la dikey bir
+
+00:03:17.530 --> 00:03:19.260
+<i>LinearLayout</i> gibi görünüyor.
+
+00:03:19.260 --> 00:03:22.620
+Bu ilk child <i>RelativeLayout</i>
+kullanarak oluşturulabilir,
+
+00:03:22.620 --> 00:03:24.490
+çünkü bu görünümler birbirine görecelidir.
+
+00:03:25.390 --> 00:03:28.360
+İkinci child da <i>RelativeLayout</i>
+kullanarak oluşturulabilir,
+
+00:03:28.360 --> 00:03:30.990
+çünkü görünümler birbiri üzerine biniyor.
+
+00:03:30.990 --> 00:03:34.800
+Buradaki bu üçüncü child
+beş farklı düğmeden oluşan
+
+00:03:34.800 --> 00:03:37.080
+yatay bir <i>LinearLayout</i>'a benziyor.
+
+00:03:37.080 --> 00:03:40.480
+Tekrar, bu ekranı oluşturmak için 
+içiçe <i>ViewGroup</i> kullanabiliriz.
+
+00:03:40.480 --> 00:03:42.150
+Bu yerleşimi oluşturma yollarından biri.
+
+00:03:42.150 --> 00:03:44.318
+Başka pek çok yolla da oluşturabilirsiniz.
+
+00:03:45.351 --> 00:03:48.667
+Google Maps uygulamasında, önceden 
+restoranlar gibi özel yerlerin
+
+00:03:48.667 --> 00:03:51.500
+detaylı sayfaları olduğunu gördük.
+
+00:03:51.500 --> 00:03:55.150
+Bu ekranı sadece tek bir <i>LinearLayout</i>
+veya tek bir <i>RelativeLayout</i>
+
+00:03:55.150 --> 00:03:56.420
+ile oluşturamazsınız.
+
+00:03:56.420 --> 00:03:58.740
+Birçok <i>ViewGroup</i>'u içiçe 
+yuvalamanız lazım.
+
+00:03:58.740 --> 00:03:59.690
+Daha geniş bir ölçekte
+
+00:03:59.690 --> 00:04:02.860
+bilginin neredeyse satır olarak
+düzenlenmiş olduğunu görebiliriz.
+
+00:04:02.860 --> 00:04:05.610
+Yani parent görünüm olarak dikey 
+bir <i>LinearLayout</i> kullanabiliriz.
+
+00:04:05.610 --> 00:04:07.900
+Bir child buradaki tüm yerleşim olabilir.
+
+00:04:07.900 --> 00:04:10.330
+Diğer bir child bu 
+düğme satırları olabilir.
+
+00:04:10.330 --> 00:04:12.725
+Diğer bir child bu tanım 
+ve benzeri olabilir.
+
+00:04:13.985 --> 00:04:16.894
+Ama her child'da sadece 
+tek bir görünüm yoktur.
+
+00:04:16.894 --> 00:04:18.935
+Birden çok görünümümüz var.
+
+00:04:18.935 --> 00:04:23.762
+Daha geniş <i>LinearLayout</i>'daki bu child 
+üç tekil görünümden oluşmuştur.
+
+00:04:23.762 --> 00:04:26.472
+Bu yüzden her görünüm için eşit ağırlıkta
+
+00:04:26.472 --> 00:04:30.042
+yatay <i>LinearLayout</i> kullanabilirsiniz, 
+böylece eşit dağılırlar.
+
+00:04:31.042 --> 00:04:34.662
+Daha geniş <i>LinearLayout</i>'daki 
+bu child, bir <i>ImageView</i> ve
+
+00:04:34.662 --> 00:04:37.636
+bir <i>TextView</i> ile bir yatay 
+<i>LinearLayout</i>'dan oluşturulabilir.
+
+00:04:37.636 --> 00:04:43.036
+Bu sayfayı kaydırınca, restorana ait 
+daha fazla bilgi görürsünüz.
+
+00:04:43.036 --> 00:04:47.276
+Tekrar burada bireysel bilgi 
+satırları düşünebilirim.
+
+00:04:47.276 --> 00:04:49.873
+Bütün bu bilgi için dikey <i>LinearLayout</i>
+kullanmak hâlâ uygundur
+
+00:04:49.873 --> 00:04:54.503
+ve tekrar bazı satırlar tek bir 
+<i>TextView</i>'den daha karmaşıktır.
+
+00:04:54.503 --> 00:04:58.313
+Bu satır rezervasyon yapabileceğiniz 
+birçok uygun zamanı gösterir
+
+00:04:58.313 --> 00:05:01.143
+ve yatay <i>LinearLayout</i>
+kullanarak düzenleyebileceğiniz
+
+00:05:01.143 --> 00:05:03.063
+üç farklı düğmeden oluşmuştur.
+
+00:05:03.063 --> 00:05:07.563
+Bu resim satırları yatay <i>LinearLayout</i>
+kullanarak oluşturulabilir.
+
+00:05:07.563 --> 00:05:10.383
+Aslında bu yatay <i>LinearLayout</i> içindeki
+
+00:05:10.383 --> 00:05:13.360
+bu ilk child sadece tek bir 
+<i>ImageView</i> değildir.
+
+00:05:13.360 --> 00:05:15.230
+<i>TextView</i> ile beraber bir <i>ImageView</i>'dir.
+
+00:05:15.230 --> 00:05:18.680
+Yani ilk child'ı oluşturmak için 
+<i>RelativeLayout</i> kullanabilirsiniz.
+
+00:05:18.680 --> 00:05:22.520
+Böylece nasıl <i>ViewGroup</i>'lar içinde 
+<i>ViewGroup</i>'lar, onun içinde <i>ViewGroup</i>'lar
+
+00:05:22.520 --> 00:05:24.100
+olabildiğini görüyorsunuz.
+
+00:05:24.100 --> 00:05:26.790
+Aslında yalnızca <i>RelativeLayout</i> ve 
+<i>LinearLayout</i> dışında başka
+
+00:05:26.790 --> 00:05:30.905
+<i>ViewGroup</i>'lar da var, aynı zamanda 
+<i>FrameLayout</i> ve <i>GridLayout</i> var.
+
+00:05:30.905 --> 00:05:33.705
+Bu derste bunları işlemek için 
+zamanımız olmayacak;
+
+00:05:33.705 --> 00:05:37.215
+ama kesinlikle kendi başınıza 
+öğrenmenizi tavsiye ederim,
+
+00:05:37.215 --> 00:05:39.796
+çünkü bazen <i>Relative</i> ve <i>LinearLayout</i>
+kullanmaktan daha iyidirler.
+

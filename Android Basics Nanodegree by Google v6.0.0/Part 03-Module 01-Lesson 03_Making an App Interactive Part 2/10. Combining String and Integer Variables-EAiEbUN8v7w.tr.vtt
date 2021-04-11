@@ -1,0 +1,269 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.540 --> 00:00:03.700
+Son videoda harflerden oluşan
+dizileri nasıl ele alacağımızı ve
+
+00:00:03.700 --> 00:00:07.250
+birleştirme işlemcisini kullanarak sayısal
+dizilerle nasıl birleştireceğimizi gördük.
+
+00:00:08.440 --> 00:00:13.670
+Bu ifade, Pazartesi günü iki fincan
+kahveye ihtiyacım var dizisinin değeridir.
+
+00:00:13.670 --> 00:00:17.740
+Metnin farklı kısımlarını
+birleştirmenin güçlü yanı
+
+00:00:17.740 --> 00:00:21.080
+eğer değiştirilmesi gerekiyorsa farklı
+kısımları silebilmenizdir.
+
+00:00:21.080 --> 00:00:24.450
+Örneğin, fincan sayısını
+bu şekilde değiştirerek
+
+00:00:24.450 --> 00:00:28.270
+buradaki tam değerin yerine
+bir değişken koyabiliriz.
+
+00:00:28.270 --> 00:00:31.850
+Simdi ikiyi sildim ve yerine
+bir nicel değişken yerleştirdim
+
+00:00:31.850 --> 00:00:33.680
+böylece, bu ifadeyi
+değerlendirdiğimiz zaman,
+
+00:00:33.680 --> 00:00:36.600
+her seferinde nicel değişkenin aldığı
+son değeri elde edeceğiz.
+
+00:00:36.600 --> 00:00:39.130
+Eğer değişken 2 değerine sahipse,
+
+00:00:39.130 --> 00:00:42.780
+Pazartesi iki fincan kahveye ihtiyacım var
+seklinde söylenecektir.
+
+00:00:42.780 --> 00:00:46.260
+Yani dizinin bu kısımları sabit kalır
+ve değiştirilmezken,
+
+00:00:46.260 --> 00:00:49.490
+nicelik değiştirilebilir
+ve her zaman son değeri verir.
+
+00:00:49.490 --> 00:00:52.730
+Bunu Android Studio'da deneyeceğim.
+
+00:00:52.730 --> 00:00:55.950
+MainActivity’de nicelik bir değişken
+olarak zaten belirtmiş olduğu için
+
+00:00:55.950 --> 00:01:00.710
+bunu submitOrder methodunda
+doğrudan kullanabilirim.
+
+00:01:00.710 --> 00:01:05.319
+Toplam adet sayısı dizisi oluşturacağım ve
+
+00:01:05.319 --> 00:01:08.910
+sonra niceliği ve kahveleri ekleyeceğim.
+
+00:01:08.910 --> 00:01:10.500
+Bu aslında fiyatla alakalı değildir,
+
+00:01:10.500 --> 00:01:14.490
+Benim göstermek istediğim dizilerin
+değişkenler ile birleştirilmesidir.
+
+00:01:14.490 --> 00:01:15.930
+Bunun neye benzediğini görmek için
+işlemi yürütelim.
+
+00:01:17.500 --> 00:01:18.640
+Eğer niceliği değiştirirsem
+
+00:01:18.640 --> 00:01:23.670
+ve sonra sipariş et tuşuna basarsam toplam
+adet sayısı olan üç kahveyi gösterir.
+
+00:01:23.670 --> 00:01:27.600
+3'ten sonra ve kahvelerden önce
+boşluk bırakmayı unuttum,
+
+00:01:27.600 --> 00:01:28.610
+bu nedenle geri dönmeli
+ve boslugu eklemeliyiz.
+
+00:01:28.610 --> 00:01:34.000
+Nicelikten hemen sonra görülecek şekilde
+burada bir boşluk bırakacağım.
+
+00:01:34.000 --> 00:01:36.740
+Niceliğin iki tırnak arasında olmadığına
+dikkat edin,
+
+00:01:36.740 --> 00:01:40.770
+öyle olsaydı bile nicelik ekranda
+tam olarak yine görülebilirdi,
+
+00:01:40.770 --> 00:01:43.700
+fakat biz bu değişkenin değerini istiyoruz
+bu yüzden tırnak içine yerleştirmiyoruz.
+
+00:01:43.700 --> 00:01:46.240
+Şuraya gerekli boslugu bıraktık,
+simdi işlemi yeniden yürütelim
+
+00:01:46.240 --> 00:01:47.090
+ve düzgün çalıştığından
+emin olalım.
+
+00:01:48.490 --> 00:01:51.900
+Niceliği 3 olarak değiştirdiğimde
+ve sipariş tuşuna bastığımda,
+
+00:01:51.900 --> 00:01:53.340
+Toplam Adet Sayısı 3 bildirimi
+ekranda beliriyor.
+
+00:01:54.500 --> 00:01:56.930
+Doğru bir şekilde, nicel değerden önce
+ve sonra boşluk bırakıldı.
+
+00:01:56.930 --> 00:02:01.710
+Bir adim geri giderek,
+bu kod satırına baktığınızda
+
+00:02:01.710 --> 00:02:06.650
+her yerde tırnak işaretleri
+ve artı işaretleri
+
+00:02:06.650 --> 00:02:08.720
+ve garip yerlerde boşluklar olması
+nedeniyle biraz bunaltıcı görünebilir.
+
+00:02:08.720 --> 00:02:11.080
+artı işaretlerinin kaybolduğunu ve
+
+00:02:11.080 --> 00:02:13.470
+tırnak arasındaki her şeyin
+beraberce ortadan kalktığını ve
+
+00:02:13.470 --> 00:02:17.150
+niceliksel değişkenin gerçek bir değerle
+yer değiştirdiğini düşünün.
+
+00:02:17.150 --> 00:02:20.450
+okuması o kadar kolay olmadığı için
+hata yapılması oldukça yaygındır.
+
+00:02:21.480 --> 00:02:24.050
+Açılış ya da kapanış tırnağını
+gözden kaçırabilirsiniz ya da
+
+00:02:24.050 --> 00:02:28.060
+artıyı yanlış yere ya da değişkeni
+kazayla tırnak içine koyabilirsiniz.
+
+00:02:28.060 --> 00:02:31.800
+Beklentinize uygun islediğinden
+emin olmak için kodu dikkatlice okuyun.
+
+00:02:31.800 --> 00:02:33.720
+Matematiksel ifade de kullanabilirsiniz.
+
+00:02:33.720 --> 00:02:37.630
+Parantez içinde nicelik çarpı beş
+ifadesini kullanabilirsiniz
+
+00:02:37.630 --> 00:02:43.110
+bu, tek bir tam sayı ifadesine dönüşür
+ve Fiyat ile birleşir.
+
+00:02:43.110 --> 00:02:46.470
+Bir dizi artı bir tam sayı,
+birleşik bir diziye dönüşür
+
+00:02:46.470 --> 00:02:50.570
+ve fiyatBildirimi değişkeni içinde tutulur
+ve ekranda görüntülenir.
+
+00:02:50.570 --> 00:02:54.610
+Bu işlemi kendi cihazımda yürüttüğümde
+fiyat 15 olarak görünüyor.
+
+00:02:54.610 --> 00:02:58.140
+Eğer dolar işareti ya da
+para birimi sembolü kullanmak isterseniz,
+
+00:02:58.140 --> 00:03:01.370
+harflerden oluşan dizinin bir parçası
+haline getirmeniz gerekir. İşte böyle.
+
+00:03:01.370 --> 00:03:04.940
+Tam sayı yalnızca sayısal kısmı içerir,
+para birimi sembolünü değil.
+
+00:03:07.380 --> 00:03:08.718
+Eğer bu işlemi cihazımda yürütürsem
+
+00:03:08.718 --> 00:03:11.560
+ve sonra sipariş tuşuna basarsam
+para birimi sembolünü görebilirim.
+
+00:03:12.730 --> 00:03:15.490
+Gösterdiğim örneği takip ederek
+devam edin
+
+00:03:15.490 --> 00:03:17.410
+ve submitOrder yöntemi üzerinde
+değişiklik yapın
+
+00:03:17.410 --> 00:03:20.710
+böylece ekranda farklı bildirimleri
+göstererek deneyiminizi arttırabilirsiniz.
+
+00:03:20.710 --> 00:03:23.670
+İlk olarak, sipariş tuşuna basarak
+Toplam Tutar $10 bildirimini
+
+00:03:23.670 --> 00:03:24.329
+ekranda görüntülemeye calisin.
+
+00:03:25.410 --> 00:03:27.430
+Çalıştığını gördükten sonra,
+sipariş tuşuna bastığınızda
+
+00:03:27.430 --> 00:03:30.350
+bu diziyi görmek için
+bildirimi değiştirin.
+
+00:03:30.350 --> 00:03:32.740
+Bu dizilerin her biri için
+aynısını tekrar edin.
+
+00:03:33.940 --> 00:03:37.610
+bu dizilerden her birini
+ekranda bir kere görmeniz gerekiyor.
+
+00:03:37.610 --> 00:03:40.295
+Dizleri değişkenlerle birleştirmeyi
+unutmayın ki
+
+00:03:40.295 --> 00:03:44.755
+nicelik ve fiyat, miktar toplayıcı
+tarafından doğru biçimde görüntülensin.
+
+00:03:44.755 --> 00:03:48.285
+Öyleyse, eğer miktarı
+beş fincan kahve olarak değiştirirsem,
+
+00:03:48.285 --> 00:03:51.714
+Toplam tutar $25 olmalıdır.
+

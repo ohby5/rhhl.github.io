@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.340 --> 00:00:03.600
+Vaya concepto tan complicado,
+pero te las has apañado bien.
+
+00:00:04.290 --> 00:00:07.824
+Esto te abre la posibilidad de crear
+en Android estupendos diseños,
+
+00:00:08.210 --> 00:00:11.024
+porque casi todas las pantallas contienen
+algún tipo de diseño anidado,
+
+00:00:11.420 --> 00:00:14.224
+de lo que ya nos habló antes
+Correll en la app Google Play.
+
+00:00:15.080 --> 00:00:17.696
+Después de todo ese trabajo
+de preparación, es hora de volver
+
+00:00:17.776 --> 00:00:21.760
+al terreno de Android Studio y realizar cambios
+para mejorar el colector de cantidad.
+
+00:00:22.860 --> 00:00:26.320
+Puede que te preguntes, Katherine:
+¿qué pasa si intento crear un diseño
+
+00:00:26.448 --> 00:00:29.088
+sin que tres opciones de layout para XML
+
+00:00:29.230 --> 00:00:31.856
+se me presenten por arte de magia,
+para que elija entre ellas?
+
+00:00:32.064 --> 00:00:33.344
+Esa es una pregunta razonable.
+
+00:00:33.920 --> 00:00:37.114
+Hasta ahora, hemos practicado
+cómo leer XML
+
+00:00:37.114 --> 00:00:39.300
+y cómo dibujar
+un diagrama de jerarquía de vistas.
+
+00:00:39.500 --> 00:00:41.523
+También practicamos
+la lectura de diseños de XML
+
+00:00:41.523 --> 00:00:44.032
+e hicimos un bosquejo
+de qué aspecto tendría la pantalla.
+
+00:00:44.600 --> 00:00:48.391
+Pero es hora de ver el diseño
+de lo que queremos crear
+
+00:00:48.391 --> 00:00:50.559
+y ser capaces de redactar
+el código correspondiente en XML.
+
+00:00:50.920 --> 00:00:52.960
+Me doy cuenta de que te di
+el XML con la solución
+
+00:00:52.960 --> 00:00:54.380
+en las preguntas anteriores.
+
+00:00:54.380 --> 00:00:57.920
+Si prestarle mucha atención,
+no quiero que mires esa solución.
+
+00:00:58.190 --> 00:01:01.312
+Quiero que hagamos el ejercicio
+de ver una captura de pantalla
+
+00:01:01.392 --> 00:01:05.552
+o un simulacro del diseño deseado
+y escribir el XML correspondiente.
+
+00:01:06.820 --> 00:01:08.703
+Normalmente, empezaríamos
+con la captura de pantalla deseada
+
+00:01:08.703 --> 00:01:09.979
+de lo que queremos crear.
+
+00:01:10.130 --> 00:01:12.784
+Esto puede hacértelo un diseñador
+que trabaje en el equipo
+
+00:01:12.784 --> 00:01:14.246
+que te está diseñando la app.
+
+00:01:14.736 --> 00:01:16.210
+O, si trabajas sin diseñador,
+
+00:01:16.210 --> 00:01:18.308
+puedes hacer un bosquejo tú mismo.
+
+00:01:18.790 --> 00:01:21.904
+Luego, imaginarías como fragmentarlo
+en vistas y ViewGroups (grupos de vistas).
+
+00:01:22.360 --> 00:01:26.640
+Puedes hacer un modely y dibujar
+el diagrama de jerarquía de vistas
+
+00:01:26.720 --> 00:01:29.664
+con las relaciones
+entre las vistas madre y las hijas.
+
+00:01:30.320 --> 00:01:33.520
+Cuando acabes el diagrama,
+empieza a escribir un borrador general
+
+00:01:33.610 --> 00:01:35.940
+de qué aspecto tendría
+el código del diseño en XML.
+
+00:01:36.430 --> 00:01:38.560
+Te dejo esto como deberes.
+
+00:01:39.440 --> 00:01:42.480
+Haz los cambios en el archivo
+de diseño <i>activity_main.xml</i>.
+
+00:01:43.150 --> 00:01:44.800
+Además de escribir tu XML aquí,
+
+00:01:45.024 --> 00:01:48.672
+y ver una vista previa, puedes hacer clic
+en el panel de diseño, aquí.
+
+00:01:49.220 --> 00:01:51.632
+Esta es la pestaña <i>Design</i> (diseño),
+no la pestaña <i>Text</i>.
+
+00:01:52.240 --> 00:01:55.968
+El panel de diseño te permite arrastrar
+y soltar vistas en el dispositivo.
+
+00:01:56.690 --> 00:01:59.616
+También puedes ver el <i>árbol de componentes</i>
+en la esquina superior derecha.
+
+00:01:59.950 --> 00:02:03.152
+Es, básicamente, un árbol
+de todas las vistas en tu jerarquía.
+
+00:02:03.930 --> 00:02:06.688
+Ahora tenemos un <i>LinearLayout vertical</i>,
+que es la vista madre,
+
+00:02:06.912 --> 00:02:08.800
+con todas estas vistas hijas dentro.
+
+00:02:09.180 --> 00:02:11.520
+Si tuvieras ViewGroups anidados,
+también aparecerían aquí.
+
+00:02:12.800 --> 00:02:14.960
+Ahora, lánzate a crear
+este diseño en Android Studio.
+
+00:02:15.790 --> 00:02:17.408
+Tras seleccionar y colocar las vistas,
+
+00:02:17.616 --> 00:02:19.760
+recuerda darles estilo
+para que tengan este aspecto.
+
+00:02:20.290 --> 00:02:22.128
+El estilo de las vistas
+es más o menos igual,
+
+00:02:22.420 --> 00:02:24.272
+pero date cuenta de que hay 8 espacios
+
+00:02:24.336 --> 00:02:28.030
+entre el botón <i>-</i> y el 2,
+y entre el 2 y el botón <i>+</i>.
+
+00:02:28.330 --> 00:02:32.032
+Como ya dijimos, evita mirar el código
+e intenta implementarlo tú mismo.
+
+00:02:32.650 --> 00:02:34.624
+Cuando acabes, marca
+esta casilla para continuar.
+

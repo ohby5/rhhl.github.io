@@ -1,0 +1,414 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.330 --> 00:00:03.230
+En discutant comment positionner
+vues dans le dernier questionnaire,
+
+00:00:03.230 --> 00:00:05.160
+Vous pouvez avez mentionné
+utilisant une disposition relative.
+
+00:00:05.160 --> 00:00:06.850
+Je sais que nous avons fait.
+
+00:00:06.850 --> 00:00:09.670
+Mais je tiens à vous présenter à une autre façon de
+que vous pouvez construire la disposition pour
+
+00:00:09.670 --> 00:00:13.890
+Notre application qui serait plus idéal,
+utilisant viewgroups imbriqués.
+
+00:00:13.890 --> 00:00:18.120
+Viewgroups imbriqués signifie mettre
+viewgroups l'intérieur d'autres viewgroups.
+
+00:00:18.120 --> 00:00:22.150
+De cette façon, vous pouvez construire dispositions les plus intéressantes
+et complexes comme celles-ci.
+
+00:00:22.150 --> 00:00:24.050
+Voyons comment vous voulez construire
+un de ces dispositions.
+
+00:00:25.240 --> 00:00:28.620
+Disons, par exemple, vous avez une disposition linéaire
+vertical avec trois vues,
+
+00:00:28.620 --> 00:00:30.840
+Une vue d'image et deux vues de texte.
+
+00:00:30.840 --> 00:00:34.000
+Que faire si vous voulez superposer
+un texte en haut de cette image?
+
+00:00:34.000 --> 00:00:36.470
+Eh bien, avec une disposition linéaire,
+vous ne pouvez pas chevaucher vues.
+
+00:00:36.470 --> 00:00:38.390
+Mais avec une disposition relative, vous pouvez, si
+
+00:00:38.390 --> 00:00:42.470
+Nous pouvons remplacer cet enfant avec une mise en page
+par rapport à la place.
+
+00:00:42.470 --> 00:00:45.750
+Ensuite, nous pouvons mettre l'affichage de l'image
+intérieur de cette disposition relative.
+
+00:00:45.750 --> 00:00:49.950
+Ce point de vue de l'image est maintenant aligné à chaque bord
+de la disposition relative parent.
+
+00:00:49.950 --> 00:00:53.410
+Donc, là vous voyez un exemple d'un agencement relatif
+qui est contenue dans
+
+00:00:53.410 --> 00:00:54.899
+Un agencement linéaire plus grande.
+
+00:00:55.970 --> 00:00:59.850
+Vous pouvez avoir de nombreuses combinaisons de
+groupes de vues au sein d'autres groupes de vues.
+
+00:00:59.850 --> 00:01:03.900
+Par exemple, vous pouvez avoir un
+disposition relative en vue racine pour une application.
+
+00:01:03.900 --> 00:01:07.270
+Qui peut contenir un couple de vues
+comme une vue de l'image et deux vues de texte.
+
+00:01:08.350 --> 00:01:12.910
+Vous pouvez également ajouter une disposition linéaire
+un enfant de cette mise en rapport plus large.
+
+00:01:14.100 --> 00:01:18.490
+Cette disposition linéaire lui-même peut contenir
+autres enfants comme deux points de vue de l'image.
+
+00:01:19.860 --> 00:01:23.340
+Vous pouvez emboîter autant groupes de vues
+intérieur d'autres groupes de vues que vous le souhaitez.
+
+00:01:23.340 --> 00:01:26.540
+Cependant, soyez prudent parce
+plus de nidification que vous faites,
+
+00:01:26.540 --> 00:01:29.810
+Le plus cher il sera pour
+votre application de jeter sur l'écran.
+
+00:01:31.040 --> 00:01:34.990
+La disposition relative, en particulier, est une disposition très souple
+mais il peut être très
+
+00:01:34.990 --> 00:01:39.490
+Complexe pour calculer la position de chacun de ces
+vues par rapport aux autres.
+
+00:01:39.490 --> 00:01:42.380
+Il est donc recommandé de ne pas avoir
+trop de couches de nidification
+
+00:01:42.380 --> 00:01:43.380
+Dans une disposition relative.
+
+00:01:45.040 --> 00:01:48.730
+Je tirai quelques exemples de la vie réelle
+applications Google pour vous montrer certains cas où
+
+00:01:48.730 --> 00:01:51.840
+Il serait utile à
+utilisation niché groupes de vues.
+
+00:01:51.840 --> 00:01:55.060
+L'application Google Maintenant vous montre
+cartes d'informations pertinentes
+
+00:01:55.060 --> 00:01:59.250
+En fonction de votre situation actuelle, comme
+l'heure actuelle ou emplacement actuel.
+
+00:01:59.250 --> 00:02:01.310
+Si vous aimez une certaine équipe
+comme les Red Sox,
+
+00:02:01.310 --> 00:02:04.040
+Bon choix, alors il peut vous montrer
+le score pour le dernier jeu.
+
+00:02:05.040 --> 00:02:08.570
+Pour construire sur le tracé pour cette carte, vous pouvez imaginer
+utilisant un linéaire vertical
+
+00:02:08.570 --> 00:02:12.160
+Disposition parce que l'information
+est affiché comme rangées.
+
+00:02:12.160 --> 00:02:16.130
+Cependant, le premier élément de cette mise en linéaire
+verticale est non seulement un texte unique
+
+00:02:16.130 --> 00:02:18.380
+Vue, il est constitué de plusieurs points de vue.
+
+00:02:19.410 --> 00:02:22.562
+En fait, vous voulez construire cette première
+élément comme une disposition linéaire horizontal,
+
+00:02:22.562 --> 00:02:25.325
+Constitué d'une vue de l'image et
+deux vues de texte.
+
+00:02:25.325 --> 00:02:28.085
+Idem pour le deuxième élément de cette mise en page
+linéaire vertical.
+
+00:02:28.085 --> 00:02:31.205
+Vous voulez construire avec une disposition linéaire
+horizontale contenant une vue de l'image
+
+00:02:31.205 --> 00:02:32.865
+Et deux vues de texte.
+
+00:02:32.865 --> 00:02:35.785
+Une autre carte dans l'application Google Maintenant
+montre stocks concernés que vous
+
+00:02:35.785 --> 00:02:37.315
+Peut-être intéressé par.
+
+00:02:37.315 --> 00:02:39.710
+Je souhaite que le Google de stock
+était encore à ce prix.
+
+00:02:39.710 --> 00:02:43.390
+Quoi qu'il en soit, vous pouvez aussi construire ce
+mise en page comme une disposition linéaire vertical,
+
+00:02:43.390 --> 00:02:45.740
+Parce que vous pouvez imaginer les lignes ici.
+
+00:02:45.740 --> 00:02:48.410
+Sauf ces entrées intermédiaires
+ne sont pas seulement une vue unique de texte,
+
+00:02:48.410 --> 00:02:50.640
+Ils sont constitués de plusieurs vues de texte.
+
+00:02:50.640 --> 00:02:53.280
+Pour cet article en ligne ayant trait
+au stock prix Google,
+
+00:02:53.280 --> 00:02:57.340
+Vous pouvez utiliser une disposition linéaire horizontale
+et le remplir avec quatre vues de texte.
+
+00:02:57.340 --> 00:02:59.670
+Même pour les autres prix d'achat d'actions ainsi.
+
+00:02:59.670 --> 00:03:02.690
+Ces dispositions linéaires horizontales
+sont des enfants de cette large
+
+00:03:02.690 --> 00:03:03.620
+Vertical agencement linéaire.
+
+00:03:03.620 --> 00:03:09.050
+Dans l'application Google Play de la musique,
+vous pouvez, bien sûr, écouter de la musique.
+
+00:03:09.050 --> 00:03:11.260
+Bien que cela ressemble à une mise en page
+compliqué à construire,
+
+00:03:11.260 --> 00:03:14.850
+Vous pouvez réellement le décomposer en petits groupes
+de vue que vous reconnaissez.
+
+00:03:14.850 --> 00:03:17.530
+Ce modèle se sent comme
+une disposition linéaire vertical
+
+00:03:17.530 --> 00:03:19.260
+Avec trois enfants différents.
+
+00:03:19.260 --> 00:03:22.620
+Ce premier enfant peut être construit
+utilisant une disposition relative,
+
+00:03:22.620 --> 00:03:24.200
+Parce que les points de vue sont liés les uns aux autres.
+
+00:03:25.390 --> 00:03:28.360
+Le deuxième enfant peut également être
+construit en utilisant une disposition relative,
+
+00:03:28.360 --> 00:03:30.990
+Parce que les vues
+se chevauchent les uns les autres.
+
+00:03:30.990 --> 00:03:34.800
+Et ce troisième enfant ici ressemble
+comme une disposition linéaire horizontal
+
+00:03:34.800 --> 00:03:37.080
+Composé de cinq boutons différents.
+
+00:03:37.080 --> 00:03:40.480
+Encore une fois, nous pouvons utiliser des groupes imbriqués vue de
+de construire sur cet écran.
+
+00:03:40.480 --> 00:03:41.970
+Ceci est juste une façon de construire
+sur la mise en page.
+
+00:03:41.970 --> 00:03:44.318
+Vous pouvez construire dans de nombreuses autres façons
+ainsi.
+
+00:03:45.351 --> 00:03:48.667
+Dans l'application Google Maps, plus tôt nous
+vu que il ya des pages détaillées pour
+
+00:03:48.667 --> 00:03:51.500
+Emplacements individuels, comme les restaurants.
+
+00:03:51.500 --> 00:03:55.150
+Vous ne pouvez pas construire ce
+écran avec juste une mise en page simple ou linéaire
+
+00:03:55.150 --> 00:03:56.420
+Une mise en rapport unique.
+
+00:03:56.420 --> 00:03:58.740
+Vous devez nid un tas
+de vue des groupes ensemble.
+
+00:03:58.740 --> 00:03:59.500
+Sur une large échelle,
+
+00:03:59.500 --> 00:04:02.860
+Nous pouvons voir que l'information est presque
+organisé en rangées.
+
+00:04:02.860 --> 00:04:05.400
+Donc, nous pouvons utiliser un linéaire vertical
+mise en page de la vue parent.
+
+00:04:05.400 --> 00:04:07.900
+Un enfant pourrait être
+toute cette mise ici.
+
+00:04:07.900 --> 00:04:10.330
+Un autre enfant pourrait être
+cette rangée de boutons.
+
+00:04:10.330 --> 00:04:12.725
+Un autre enfant serait ce
+description et ainsi de suite.
+
+00:04:13.985 --> 00:04:16.894
+Mais au sein de chaque enfant est
+pas seulement une seule vue.
+
+00:04:16.894 --> 00:04:18.935
+Nous avons de multiples points de vue.
+
+00:04:18.935 --> 00:04:23.762
+Cet enfant dans l'agencement linéaire
+plus large est constitué de trois points de vue individuels.
+
+00:04:23.762 --> 00:04:26.472
+Vous pouvez donc utiliser
+une disposition linéaire horizontal
+
+00:04:26.472 --> 00:04:30.042
+De poids égaux à chaque vue de manière
+qu'ils se propagent uniformément.
+
+00:04:31.042 --> 00:04:34.662
+Cet enfant dans l'agencement linéaire
+verticale plus large peut également être faite
+
+00:04:34.662 --> 00:04:37.636
+D'un linéaire disposition horizontale
+avec une vue de l'image et une vue de texte.
+
+00:04:37.636 --> 00:04:43.036
+Si vous continuez à faire défiler cette page, vous voyez
+plus d'informations sur le restaurant.
+
+00:04:43.036 --> 00:04:47.276
+Encore une fois, je peux imaginer les individuels
+lignes d'informations ici.
+
+00:04:47.276 --> 00:04:49.873
+Utilisant une disposition linéaire vertical pour
+toute cette information fonctionne toujours,
+
+00:04:49.873 --> 00:04:54.503
+Et, encore une fois, certaines lignes sont plus complexe que la simple
+une vue unique de texte.
+
+00:04:54.503 --> 00:04:58.313
+Cette ligne montre un tas de fois
+disponibles où vous pouvez faire une réservation,
+
+00:04:58.313 --> 00:05:01.143
+Et il est composé de trois boutons
+différentes que vous pouvez organiser l'aide
+
+00:05:01.143 --> 00:05:03.063
+Un agencement linéaire horizontal.
+
+00:05:03.063 --> 00:05:07.563
+Cette rangée d'images peut être construit en utilisant
+une disposition linéaire horizontal ainsi.
+
+00:05:07.563 --> 00:05:10.383
+Et effectivement,
+dans ce tracé linéaire horizontal,
+
+00:05:10.383 --> 00:05:13.360
+Ce premier enfant est pas
+simplement une vue d'une seule image.
+
+00:05:13.360 --> 00:05:15.230
+Il est une vue de l'image en vue de texte.
+
+00:05:15.230 --> 00:05:18.680
+Ainsi, vous pouvez utiliser une disposition
+rapport à construire ce premier enfant.
+
+00:05:18.680 --> 00:05:22.520
+Ainsi, vous pouvez voir comment il peut y avoir
+groupes de vues, au sein de groupes de vue,
+
+00:05:22.520 --> 00:05:24.100
+Sein de groupes de vue.
+
+00:05:24.100 --> 00:05:26.790
+Il ya en fait plusieurs groupes de vue au-delà de la mise en page
+simplement relative,
+
+00:05:26.790 --> 00:05:30.905
+Et linéaire mise en page, il ya aussi
+disposition de cadre et grille mise en page.
+
+00:05:30.905 --> 00:05:33.705
+On ne va pas avoir le temps de couvrir
+ceux dans ce cours, mais je doute
+
+00:05:33.705 --> 00:05:37.215
+Recommandez que vous sortez et apprenez
+à leur sujet sur votre propre parce que parfois
+
+00:05:37.215 --> 00:05:39.796
+Ceux serait mieux que de simplement
+l'aide d'un parent ou d'un aménagement linéaire.
+

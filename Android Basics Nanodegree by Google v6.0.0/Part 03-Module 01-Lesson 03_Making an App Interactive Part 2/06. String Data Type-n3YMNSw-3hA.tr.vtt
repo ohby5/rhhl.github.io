@@ -1,0 +1,322 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.410 --> 00:00:02.510
+Şu ana kadar bir miktar seçici yaptık.
+
+00:00:02.720 --> 00:00:06.130
+Evet, ve uygulamada 
+bir sonraki adım, ücret.
+
+00:00:06.130 --> 00:00:07.890
+Evet, doğru, ücret.
+
+00:00:07.900 --> 00:00:12.540
+Şu an için ücret bir tamsayı,
+fakat bunu aşmak ve
+
+00:00:12.540 --> 00:00:13.940
+string kullanmak istiyoruz.
+
+00:00:13.940 --> 00:00:16.170
+Böyle bir string(ip) mi?
+
+00:00:16.170 --> 00:00:18.040
+Hayır, böyle bir string.
+
+00:00:20.010 --> 00:00:22.800
+String, bir dizi karakterden oluşur.
+
+00:00:22.800 --> 00:00:25.290
+Bir dakika,
+Bunu ücret için nasıl kullanacağız ki?
+
+00:00:25.290 --> 00:00:29.345
+Ekrana toplam yazdıracağız.
+
+00:00:29.345 --> 00:00:30.809
+Sonra da $15.
+
+00:00:30.809 --> 00:00:34.870
+Yani artık sadece bir sayı değil,
+yanında bir yazı de var.
+
+00:00:34.870 --> 00:00:36.050
+Sayılar ve metin.
+
+00:00:36.050 --> 00:00:37.790
+Evet.
+Harika değil mi?
+
+00:00:37.790 --> 00:00:42.890
+Bu senin davet edilmiş ya da 
+edilmemiş olabileceğin partiden.
+
+00:00:42.890 --> 00:00:45.530
+Önümüzdeki birkaç videoda
+Just Java uygulamamızda
+
+00:00:45.530 --> 00:00:47.370
+stringlerin kullanımını göreceğiz.
+
+00:00:47.370 --> 00:00:51.220
+Özellikle string değişkenlerin nasıl
+oluşturulduğu, güncellendiğini göreceğiz.
+
+00:00:51.220 --> 00:00:55.520
+Sonra da uygulamayı fiyat başlığında
+toplam $15, ya da verilen siparişe göre
+
+00:00:55.520 --> 00:00:58.720
+fiyat ne ise onu
+gösterecek şekilde değiştireceğiz.
+
+00:00:58.720 --> 00:00:59.680
+Bunun dışında ekrana
+
+00:00:59.680 --> 00:01:03.060
+teşekkürler yazdıracağız, çünkü bir
+müşterimiz olması mutluluk verici.
+
+00:01:03.710 --> 00:01:06.350
+Bu yazıları neden 
+XML yerleşiminin içine koymadığımızı
+
+00:01:06.350 --> 00:01:07.430
+merak ediyorsunuzdur.
+
+00:01:08.450 --> 00:01:11.860
+Öyle yapabilirdik, ama sorun
+şu ki miktar değişebilir ve
+
+00:01:11.860 --> 00:01:15.990
+sipariş butonuna bastığımızda 
+fiyatın güncellenmesini istiyoruz.
+
+00:01:15.990 --> 00:01:20.480
+Yani bu yazının miktara göre
+fiyatı göstermesi gerekli.
+
+00:01:20.480 --> 00:01:24.070
+Bir string değişkeni kullanarak
+XML yerleşimine koymadan
+
+00:01:24.070 --> 00:01:27.839
+uygulama çalışırken
+yazının değerini değiştirebiliriz.
+
+00:01:29.440 --> 00:01:32.312
+Tanıyacağınız gerçek bir uygulamadan 
+bir örnek verelim.
+
+00:01:32.312 --> 00:01:35.636
+Bir çağrı aldığınızda ekranın üstünde
+
+00:01:35.636 --> 00:01:37.090
+kişinin adını görürsünüz.
+
+00:01:37.090 --> 00:01:39.550
+Bu ismi doğrudan XML yerleşimine
+koyamayız,
+
+00:01:39.550 --> 00:01:43.240
+çünkü arayan kişiye göre değişecek,
+tüm arkadaşlarınız ve ailenizin adı
+
+00:01:43.240 --> 00:01:44.400
+Britta Holt değilse.
+
+00:01:45.440 --> 00:01:48.670
+Yapılacak en iyi şey bu ismi
+bir string değişkeninde saklamak.
+
+00:01:48.670 --> 00:01:52.240
+Böylece arayan kişiye göre
+güncelleyebilirsiniz.
+
+00:01:52.240 --> 00:01:55.670
+Sonrasında bu ekranı gösterdiğimizde
+değişkende saklanan en son değeri
+
+00:01:55.670 --> 00:01:56.890
+ekrana yazdırabiliriz.
+
+00:01:58.320 --> 00:02:01.169
+Haberler ve Hava uygulamasında,
+bir önemli haberler listesi var.
+
+00:02:02.170 --> 00:02:05.600
+XML yerleşimini oluştururken
+bu belirli haberleri XML'ın içine
+
+00:02:05.600 --> 00:02:08.820
+özel olarak kodlayamayız.
+
+00:02:08.820 --> 00:02:10.970
+Kış Olimpiyatları hakkında
+okumayı ne kadar
+
+00:02:10.970 --> 00:02:13.870
+sevsem de, başka haberler de 
+okumak istiyorum.
+
+00:02:13.870 --> 00:02:16.260
+Her bir haberin bilgisini, başlığı gibi,
+
+00:02:16.260 --> 00:02:21.160
+bir string değişken olarak saklayabiliriz,
+çünkü değişebilirler.
+
+00:02:21.160 --> 00:02:23.990
+Bir sonraki görev için size bir
+kod vereceğim ve
+
+00:02:23.990 --> 00:02:26.590
+uygulamanızda bu değişiklikleri
+yapmanızı isteyeceğim.
+
+00:02:26.590 --> 00:02:28.990
+Sonra uygulamayı çalıştırıp
+olanları gözlemleyeceksiniz.
+
+00:02:28.990 --> 00:02:32.620
+Birkaç soru soracağım,
+bakalım neler olup bittiğini
+
+00:02:32.620 --> 00:02:34.290
+anlıyor musunuz.
+
+00:02:34.290 --> 00:02:36.840
+İlk değişiklik submitOrder
+metodunu değiştirmek.
+
+00:02:36.840 --> 00:02:40.020
+Halihazırda açılış ve kapanış
+parantezleri arasında bulunan kodu
+
+00:02:40.020 --> 00:02:44.190
+silip yerine bu iki satırı yerleştirin.
+
+00:02:44.190 --> 00:02:47.090
+Bu kodu eklemek bir hata verecek,
+bu yüzden eğitmen notlarında
+
+00:02:47.090 --> 00:02:51.090
+verdiğimiz displayMessage metodunu
+da eklemenizi istiyorum.
+
+00:02:53.000 --> 00:02:56.360
+Eğitmen notlarında bu kodun
+özetini bulacaksınız.
+
+00:02:56.360 --> 00:02:57.900
+Tümünü seçin,
+
+00:02:57.900 --> 00:03:00.360
+yorumdan en son kapatma parantezine kadar.
+
+00:03:01.860 --> 00:03:03.560
+Bu metodu bir kara kutu gibi
+
+00:03:03.560 --> 00:03:06.750
+düşünebilirsiniz. İçinde 
+neler olup bittiği hakkında kafa yormanıza
+
+00:03:06.750 --> 00:03:10.210
+gerek yok, sadece kullanabilmek için
+MainActivity'ye ekleyin.
+
+00:03:11.572 --> 00:03:12.830
+Android Studio'ya dönelim,
+
+00:03:12.830 --> 00:03:17.100
+MainActivity.java dosyasına 
+bu yeni metodu yapıştıracağım.
+
+00:03:17.100 --> 00:03:19.110
+MainActivity'de istediğim yere koyabilirim
+
+00:03:19.110 --> 00:03:22.870
+fakat hemen displayPrice metodunun
+sonrasına koyacağım.
+
+00:03:22.870 --> 00:03:24.120
+Ve displayPrice metodunun
+
+00:03:24.120 --> 00:03:26.247
+kapanış parantezinin sonrasına
+koyacağım.
+
+00:03:27.810 --> 00:03:32.362
+Bunun, MainActivity'nin kapanış 
+parantezinin içinde olduğuna dikkat edin.
+
+00:03:32.362 --> 00:03:34.790
+MainActivity'nin açılış parantezi
+tam burada,
+
+00:03:34.790 --> 00:03:38.260
+ve içindeki her şey MainActivity
+içerisinde tutuluyor.
+
+00:03:38.260 --> 00:03:40.898
+Burada da MainActivity'nin 
+kapanış parantezi var.
+
+00:03:42.650 --> 00:03:45.040
+displayMessage metodunu ekledikten sonra
+
+00:03:45.040 --> 00:03:46.890
+submitOrder metodunu düzenleyebiliriz.
+
+00:03:46.890 --> 00:03:49.420
+Şu anda submitOrder metodunun
+
+00:03:49.420 --> 00:03:51.030
+içinde bulunan kodu sileceğim.
+
+00:03:51.030 --> 00:03:54.518
+Sonra quiz resmine göre
+yeni bir kod ekleyeceğim.
+
+00:03:57.226 --> 00:04:01.020
+Size ne yaptığım hakkında
+bilerek fazla detay vermiyorum.
+
+00:04:01.020 --> 00:04:03.910
+Kendi başınıza, uygulamanızda
+deneyip çalıştırmanızı ve
+
+00:04:03.910 --> 00:04:05.030
+görmenizi istiyorum.
+
+00:04:06.040 --> 00:04:08.990
+Sonrasında şu sorulara 
+cevap vermenizi istiyorum.
+
+00:04:08.990 --> 00:04:11.360
+Uygulamada sipariş
+butonuna basınca ne oluyor?
+
+00:04:12.260 --> 00:04:15.250
+Sipariş verme koduna biraz daha
+yakından bakarsanız
+
+00:04:15.250 --> 00:04:17.140
+bir string değişken oluşturduk.
+
+00:04:18.160 --> 00:04:21.430
+String değişkenlerin kodlarını 
+görmedik fakat
+
+00:04:21.430 --> 00:04:25.090
+değişken adının ne olabileceğine dair
+bir tahminde bulunmanızı istiyorum.
+
+00:04:25.090 --> 00:04:26.990
+Ve sizce değişkenin değeri ne olabilir?
+
+00:04:28.538 --> 00:04:30.540
+Bitirdiğinizde devam edebilirsiniz.
+

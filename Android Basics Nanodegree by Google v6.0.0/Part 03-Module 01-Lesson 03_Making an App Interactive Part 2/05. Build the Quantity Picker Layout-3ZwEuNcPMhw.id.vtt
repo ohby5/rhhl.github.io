@@ -1,0 +1,345 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.260 --> 00:00:04.057
+Pertama, saya melihat cuplikan layar ini
+dan memutuskan karena ini berupa baris,
+
+00:00:04.057 --> 00:00:05.995
+ini tampak
+seperti &lt;i&gt;LinearLayout&lt;/i&gt; vertikal.
+
+00:00:05.995 --> 00:00:08.183
+Namun tampilan anak kedua itu
+bukan hanya satu.
+
+00:00:08.183 --> 00:00:11.322
+Itu adalah &lt;i&gt;LinearLayout&lt;/i&gt; horizontal
+yang terdiri dari tiga tampilan.
+
+00:00:11.322 --> 00:00:14.220
+Seperti inilah
+diagram hierarki tampilannya.
+
+00:00:14.547 --> 00:00:17.478
+Ada &lt;i&gt;LinearLayout&lt;/i&gt; vertikal
+sebagai tampilan akar
+
+00:00:17.478 --> 00:00:19.703
+dan lima tampilan anak di bawahnya.
+
+00:00:20.214 --> 00:00:23.531
+&lt;i&gt;LinearLayout&lt;/i&gt; itu sendiri
+juga memiliki tiga tampilan anak.
+
+00:00:24.093 --> 00:00:25.498
+Setelah ada diagramnya,
+
+00:00:25.498 --> 00:00:29.270
+mudah untuk membuat
+kerangka kode XML-nya sekarang.
+
+00:00:29.532 --> 00:00:31.669
+Tampilan akarnya adalah &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:00:31.669 --> 00:00:34.260
+Terdiri dari &lt;i&gt;TextView&lt;/i&gt;
+sebagai tampilan anak pertamanya,
+
+00:00:34.260 --> 00:00:39.318
+diikuti dengan &lt;i&gt;LinearLayout&lt;/i&gt; yang terdiri
+dari tombol, &lt;i&gt;TextView&lt;/i&gt;, dan tombol.
+
+00:00:39.318 --> 00:00:42.277
+Ini &lt;i&gt;tag&lt;/i&gt; penutup untuk &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:00:42.277 --> 00:00:45.412
+Lalu ada satu &lt;i&gt;TextView&lt;/i&gt;,
+satu &lt;i&gt;TextView&lt;/i&gt; lagi, dan satu tombol,
+
+00:00:45.412 --> 00:00:48.720
+yang merupakan tampilan anak
+dari &lt;i&gt;LinearLayout&lt;/i&gt; induk ini.
+
+00:00:49.035 --> 00:00:51.814
+Dari XML ini, kita bisa masuk
+ke Android Studio
+
+00:00:51.814 --> 00:00:55.954
+dan memodifikasi &lt;i&gt;layout&lt;/i&gt; yang ada
+agar lebih mirip dengan ini.
+
+00:00:56.211 --> 00:00:59.836
+Di Android Studio, saya membuka
+berkas &lt;i&gt;layout&lt;/i&gt; activity_mail.xml.
+
+00:01:00.150 --> 00:01:02.896
+Kita akan membuat perubahan
+dalam berkas ini
+
+00:01:02.896 --> 00:01:06.129
+agar mereka lebih mirip
+dengan &lt;i&gt;layout&lt;/i&gt; yang kita inginkan.
+
+00:01:06.129 --> 00:01:08.009
+Anak tampilan pertamanya
+adalah &lt;i&gt;TextView&lt;/i&gt;
+
+00:01:08.500 --> 00:01:11.828
+yang sudah ada,
+dan ini berupa &lt;i&gt;header "Quantity"&lt;/i&gt;.
+
+00:01:12.292 --> 00:01:17.007
+Berikutnya, ada &lt;i&gt;LinearLayout&lt;/i&gt; bersarang
+yang terdiri dari tiga tampilan.
+
+00:01:17.469 --> 00:01:19.927
+Itu belum ada. Jadi, mari kita tambahkan.
+
+00:01:19.927 --> 00:01:23.950
+Saya akan menekan &lt;i&gt;enter&lt;/i&gt;
+dan mulai menulis &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:01:24.637 --> 00:01:27.118
+Ini juga muncul sebagai salah satu
+opsi &lt;i&gt;autocomplete&lt;/i&gt;.
+
+00:01:27.118 --> 00:01:28.879
+Saya tinggal menekan tombol &lt;i&gt;enter&lt;/i&gt;.
+
+00:01:28.879 --> 00:01:31.957
+Lalu ini otomatis memuat atribut
+yang harus saya masukkan,
+
+00:01:31.957 --> 00:01:34.211
+karena lebar dan tinggi dibutuhkan.
+
+00:01:34.647 --> 00:01:36.652
+Saya membuat lebarnya
+menjadi &lt;i&gt;match_parent&lt;/i&gt;,
+
+00:01:36.652 --> 00:01:39.702
+yang pada gilirannya, akan sesuai
+dengan lebar tampilan induknya.
+
+00:01:39.702 --> 00:01:42.159
+Ini akan sesuai dengan lebar layarnya.
+
+00:01:42.522 --> 00:01:45.014
+Saya tidak mau membuat
+tingginya sebagai &lt;i&gt;match_parent&lt;/i&gt;
+
+00:01:45.014 --> 00:01:49.286
+karena akan memaksa tampilan lain
+keluar dari layar secara vertikal.
+
+00:01:49.822 --> 00:01:52.280
+Jadi, saya akan menulis
+&lt;i&gt;wrap_content&lt;/i&gt; di sini.
+
+00:01:53.469 --> 00:01:56.065
+Dengan begitu, &lt;i&gt;LinearLayout&lt;/i&gt; ini
+hanya akan setinggi
+
+00:01:56.065 --> 00:01:58.387
+kedua tombol dan &lt;i&gt;TextView&lt;/i&gt; di dalamnya.
+
+00:01:58.387 --> 00:02:00.574
+&lt;i&gt;Tag&lt;/i&gt; penutup ini harus dipindahkan
+
+00:02:00.574 --> 00:02:04.459
+setelah semua tampilan anak
+dari &lt;i&gt;LinearLayout&lt;/i&gt; ini ditambahkan.
+
+00:02:05.167 --> 00:02:06.932
+Jadi, diletakkan di sini.
+
+00:02:06.932 --> 00:02:09.087
+Saat ada tampilan anak dalam &lt;i&gt;ViewGroup&lt;/i&gt;,
+
+00:02:09.087 --> 00:02:12.404
+tampilan anaknya harus dimasukkan
+sebanyak empat spasi.
+
+00:02:12.941 --> 00:02:17.755
+Saya tambahkan spasi di sini karena ingin
+ada baris kosong antara setiap elemen XML.
+
+00:02:17.755 --> 00:02:21.948
+Satu hal lagi yang kurang adalah
+mengatur orientasi &lt;i&gt;LinearLayout&lt;/i&gt; ini.
+
+00:02:23.031 --> 00:02:25.945
+Tadi kita memutuskan
+&lt;i&gt;LinearLayout&lt;/i&gt; ini harus horizontal
+
+00:02:25.945 --> 00:02:28.842
+agar tombol dan &lt;i&gt;TextView&lt;/i&gt; ini
+tampil horizontal.
+
+00:02:29.180 --> 00:02:32.002
+Bagus. Sekarang itu cocok
+dengan yang kita inginkan.
+
+00:02:32.002 --> 00:02:34.989
+Berikutnya, ada dua &lt;i&gt;TextView&lt;/i&gt;
+dan satu tombol
+
+00:02:34.989 --> 00:02:37.121
+yang sudah ada dalam &lt;i&gt;layout&lt;/i&gt; kita.
+
+00:02:37.121 --> 00:02:38.815
+Jadi, saya rasa sudah selesai.
+
+00:02:38.815 --> 00:02:42.387
+Jika Anda ingin memeriksa jendela Design,
+seperti inilah bentuknya.
+
+00:02:43.289 --> 00:02:46.895
+Ada &lt;i&gt;LinearLayout&lt;/i&gt; vertikal
+dengan lima tampilan anak langsung,
+
+00:02:46.895 --> 00:02:49.559
+dan &lt;i&gt;LinearLayout&lt;/i&gt; ini memiliki
+tiga tampilan anak lainnya.
+
+00:02:49.988 --> 00:02:52.595
+Jalankan pada perangkat
+untuk melihat apa yang terjadi.
+
+00:02:53.268 --> 00:02:56.082
+Ini mirip dengan yang kita inginkan,
+namun tidak persis.
+
+00:02:56.719 --> 00:02:59.787
+Pemilih kuantitas ini
+tampak horizontal. Itu pertanda bagus.
+
+00:02:59.787 --> 00:03:02.257
+Namun kita ingin
+tombol minusnya ada di sebelah kiri
+
+00:03:02.257 --> 00:03:04.357
+dan tombol plus di sebelah kanan,
+
+00:03:04.357 --> 00:03:07.711
+seperti yang tampak di cuplikan layar
+dari &lt;i&gt;layout&lt;/i&gt; yang diinginkan.
+
+00:03:08.118 --> 00:03:11.982
+Juga, tombol-tombol ini sangat dekat
+dengan tepi &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:03:11.982 --> 00:03:15.516
+Jika tidak salah ingat cuplikan layarnya.
+kita juga ingin jarak 8 dps
+
+00:03:15.516 --> 00:03:18.353
+di sebelah kiri dan kanan &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:03:18.750 --> 00:03:20.356
+Mari kita tambahkan itu sekarang.
+
+00:03:21.057 --> 00:03:22.703
+Kembali ke XML,
+
+00:03:22.703 --> 00:03:27.017
+saya akan memindahkan tombol plus
+menjadi setelah &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:27.017 --> 00:03:31.199
+Lalu memindahkan tombol minus
+menjadi sebelum &lt;i&gt;TextView&lt;/i&gt;.
+
+00:03:31.931 --> 00:03:35.020
+Dalam baris horizontal,
+harus ada tombol minus,
+
+00:03:35.020 --> 00:03:38.067
+diikuti dengan "2" dan tombol plus.
+
+00:03:38.067 --> 00:03:41.069
+Kita juga ingin menambahkan &lt;i&gt;padding&lt;/i&gt;
+di sekitar &lt;i&gt;TextView&lt;/i&gt; ini.
+
+00:03:41.069 --> 00:03:43.604
+Kita bisa menambahkannya
+sebagai &lt;i&gt;margin&lt;/i&gt; atau &lt;i&gt;padding&lt;/i&gt;.
+
+00:03:43.604 --> 00:03:45.673
+Namun saya akan membuat &lt;i&gt;padding&lt;/i&gt;.
+
+00:03:46.334 --> 00:03:48.531
+Kita akan menentukan nilainya
+menjadi 8 dps.
+
+00:03:48.948 --> 00:03:50.541
+Bagus.
+
+00:03:50.541 --> 00:03:53.332
+Saya punya firasat
+ada banyak spasi kosong lebih
+
+00:03:53.332 --> 00:03:56.180
+dan urutan atributnya mungkin salah
+
+00:03:56.180 --> 00:03:58.655
+menurut pedoman gaya kode Android.
+
+00:03:59.129 --> 00:04:04.625
+Dalam menu di atas layar,
+klik &lt;i&gt;Code&lt;/i&gt;, lalu klik &lt;i&gt;Reformat Code&lt;/i&gt;.
+
+00:04:04.625 --> 00:04:06.712
+Juga &lt;i&gt;Rearrange Code&lt;/i&gt;.
+
+00:04:06.712 --> 00:04:11.698
+Itu akan mengatur ulang semua atribut
+dan otomatis memperbaiki semua format.
+
+00:04:12.205 --> 00:04:14.380
+Bagus. Kita jalankan aplikasinya lagi.
+
+00:04:15.298 --> 00:04:16.962
+Itu lebih baik.
+
+00:04:16.962 --> 00:04:18.830
+Sekarang ada jarak di sekitar "2"
+
+00:04:18.830 --> 00:04:22.612
+serta tombol minus ada di sebelah kiri
+dan tombol plus ada di sebelah kanan.
+
+00:04:23.251 --> 00:04:24.544
+Itu tampak bagus.
+
+00:04:24.544 --> 00:04:27.419
+Lalu kita juga memastikan
+ini masih berfungsi.
+
+00:04:27.419 --> 00:04:31.151
+Saya akan memilih sembarang angka,
+lalu menekan tombol Order.
+
+00:04:31.151 --> 00:04:32.676
+Itu tampak tepat.
+
+00:04:33.387 --> 00:04:37.048
+Itu perjalanan panjang untuk menampilkan
+pemilih kuantitas ini di layar.
+
+00:04:37.661 --> 00:04:39.891
+Aplikasi ini tampak sangat bagus.
+
+00:04:39.891 --> 00:04:43.221
+Namun sejauh ini, saya hanya tunjukkan
+cara menampilkan angka di layar.
+
+00:04:43.221 --> 00:04:45.736
+Bagaimana jika Anda ingin
+menampilkan teks di layar?
+
+00:04:46.236 --> 00:04:48.078
+Teruslah saksikan untuk mengetahuinya.
+

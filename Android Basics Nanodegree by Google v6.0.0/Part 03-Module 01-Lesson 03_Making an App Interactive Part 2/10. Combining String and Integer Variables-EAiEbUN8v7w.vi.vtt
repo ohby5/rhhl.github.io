@@ -1,0 +1,262 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.540 --> 00:00:03.700
+Trong video trước chúng ta đã học
+cách lấy các hằng chuỗi
+
+00:00:03.700 --> 00:00:07.250
+kết hợp chúng với hằng nguyên
+bằng thuật toán ghép chuỗi.
+
+00:00:08.440 --> 00:00:13.670
+Biểu thức này tương đương với chuỗi,
+Tôi cần 2 ly cà phê ngày thứ hai.
+
+00:00:13.670 --> 00:00:17.740
+Điểm mạnh của thuật toán ghép
+các phần khác nhau của văn bản lại
+
+00:00:17.740 --> 00:00:21.080
+là có thể tách nó thành các phần
+khác nhau nếu cần có thay đổi.
+
+00:00:21.080 --> 00:00:24.450
+Ví dụ, số lượng ly cà phê
+có thể thay đổi,
+
+00:00:24.450 --> 00:00:28.270
+nên thay vì chọn giá trị số nguyên,
+chúng ta có thể đổi nó thành biến.
+
+00:00:28.270 --> 00:00:31.850
+Bây giờ tôi bỏ số hai đi
+thay nó bằng biến quantity,
+
+00:00:31.850 --> 00:00:33.680
+khi chúng ta cân bằng biểu thức này,
+
+00:00:33.680 --> 00:00:36.600
+chúng ta luôn có giá trị
+cập nhật nhất của biến số lượng.
+
+00:00:36.600 --> 00:00:39.130
+Nếu biến có giá trị là 2
+
+00:00:39.130 --> 00:00:42.780
+thì sẽ thành câu,
+Tôi cần 2 ly cà phê vào ngày Thứ Hai.
+
+00:00:42.780 --> 00:00:46.170
+Các phần này của chuỗi vẫn
+giữ nguyên và không thay đổi,
+
+00:00:46.170 --> 00:00:49.490
+phần biến số lượng có thể biến đổi
+và luôn cập nhật giá trị mới nhất.
+
+00:00:49.490 --> 00:00:52.730
+Tôi thử thuật toán này trên
+Android Studio.
+
+00:00:52.730 --> 00:00:55.950
+Vì giá trị số lượng ở đây vô tình
+đã là một biến số mà chúng ta đã
+
+00:00:55.950 --> 00:01:00.710
+trình báo trong MainActivity, tôi có thể
+dùng nó trực tiếp trong hàm submitOrder.
+
+00:01:00.710 --> 00:01:05.319
+Tôi sẽ tạo một chuỗi
+ví dụ như Tổng Số Hàng,
+
+00:01:05.319 --> 00:01:08.680
+cộng với số lượng, cộng cà phê.
+
+00:01:08.680 --> 00:01:10.500
+Biểu thức này không liên quan tới giá,
+
+00:01:10.500 --> 00:01:14.490
+Tôi muốn cho bạn thấy có thể ghép
+các chuỗi chứa biến lại với nhau.
+
+00:01:14.490 --> 00:01:15.930
+Chạy thử xem thế nào.
+
+00:01:17.500 --> 00:01:18.640
+Nếu tôi đổi số lượng
+
+00:01:18.640 --> 00:01:23.670
+nhấn nút Đặt hàng thì nó
+hiển thị tổng số hàng bán ra, 3 cà phê.
+
+00:01:23.670 --> 00:01:27.310
+Tôi đã quên thêm khoảng trắng
+sau số 3, tức là trước chữ cà phê.
+
+00:01:27.310 --> 00:01:28.610
+Ta nên trở lại và thêm vào.
+
+00:01:28.610 --> 00:01:34.000
+Tôi sẽ thêm khoảng trắng ở đây
+để nó hiển thị ngay sau số lượng.
+
+00:01:34.000 --> 00:01:36.740
+Hãy lưu ý chữ số lượng
+không đặt trong ngoặc kép,
+
+00:01:36.740 --> 00:01:40.580
+Nếu bỏ nó vào ngoặc kép thì
+trên màn hình sẽ hiển thị chữ "số lượng"
+
+00:01:40.580 --> 00:01:43.700
+chúng ta muốn lấy giá trị của biến
+nên không đặt nó vào ngoặc kép.
+
+00:01:43.700 --> 00:01:46.230
+Bây giờ đã có một khoảng trắng,
+hãy thử chạy hàm này
+
+00:01:46.230 --> 00:01:47.240
+để chắc chắn đã đúng.
+
+00:01:48.490 --> 00:01:51.900
+Bây giờ khi đổi số lượng thành 3
+rồi nhấn Đặt hàng thì hiện ra câu,
+
+00:01:51.900 --> 00:01:53.340
+Tổng Số Hàng 3 cà phê.
+
+00:01:54.450 --> 00:01:56.930
+Thế là đúng vì có khoảng trắng
+trước và sau số lượng.
+
+00:01:56.930 --> 00:02:01.710
+Bây giờ trở lại một bước, khi nhìn vào
+hàng code này sẽ thấy hơi rối
+
+00:02:01.710 --> 00:02:06.650
+vì dấu ngoặc kép
+xuất hiện khắp nơi rồi dấu cộng rồi
+
+00:02:06.650 --> 00:02:08.720
+khoảng trắng ở chỗ lạ.
+
+00:02:08.720 --> 00:02:11.080
+Bây giờ tưởng tượng dấu cộng
+biến mất
+
+00:02:11.080 --> 00:02:13.470
+mọi thứ trong ngoặc kép
+được trộn lại với nhau
+
+00:02:13.470 --> 00:02:17.150
+biến số lượng được gán một giá trị thực.
+
+00:02:17.150 --> 00:02:20.450
+Vì chỗ này không dễ đọc
+nên rất dễ mắc lỗi ở đây.
+
+00:02:21.480 --> 00:02:24.050
+Bạn có thể thiếu dấu mở ngoặc
+hoặc đóng ngoặc
+
+00:02:24.050 --> 00:02:28.060
+hoặc bỏ dấu cộng sai chỗ hay
+sơ ý bỏ số lượng vào ngoặc kép.
+
+00:02:28.060 --> 00:02:31.800
+Hãy đọc lại code thật cẩn thận
+đảm bảo nó chạy theo ý đồ của bạn.
+
+00:02:31.800 --> 00:02:33.720
+Bạn có thể thực hiện biểu thức toán học.
+
+00:02:33.720 --> 00:02:37.630
+Bạn có thể lấy số lượng nhân năm lần
+bỏ vào ngoặc đơn thì nó sẽ
+
+00:02:37.630 --> 00:02:43.110
+trở thành hằng nguyên
+ghép vào trong Giá.
+
+00:02:43.110 --> 00:02:46.470
+Chuỗi cộng với một hằng nguyên
+tạo thành chuỗi nội hàm
+
+00:02:46.470 --> 00:02:50.570
+trong biến số priceMessage
+hiển thị trên màn hình.
+
+00:02:50.570 --> 00:02:54.610
+Khi tôi chạy trên thiết bị của tôi
+nó hiển thị mức giá 15.
+
+00:02:54.610 --> 00:02:58.140
+Nếu bạn muốn có dấu đô-la
+hay ký hiệu tiền tệ hiển thị,
+
+00:02:58.140 --> 00:03:01.370
+bạn cần thêm nó vào thành một phần
+trong hằng chuỗi, giống như vầy.
+
+00:03:01.370 --> 00:03:04.940
+Hằng nguyên chỉ chứa phần số,
+không chứa ký hiệu tiền tệ.
+
+00:03:07.090 --> 00:03:08.718
+Nếu tôi chạy hàm này trên thiết bị
+
+00:03:08.718 --> 00:03:11.560
+sau đó bấm nút Đặt hàng,
+tôi sẽ thấy ký hiệu tiền tệ.
+
+00:03:12.730 --> 00:03:15.490
+Cứ làm như tôi đã hướng dẫn,
+
+00:03:15.490 --> 00:03:17.410
+điều chỉnh hàm submitOrder.
+
+00:03:17.410 --> 00:03:20.710
+Bạn sẽ luyện được cách hiển thị
+các tin khác nhau trên màn hình.
+
+00:03:20.710 --> 00:03:23.670
+Đầu tiên, hiển thị Số tiền cần trả
+$10 trên màn hình khi bạn
+
+00:03:23.670 --> 00:03:24.670
+bấm nút Đặt hàng.
+
+00:03:25.410 --> 00:03:27.430
+Khi đã làm được rồi,
+hãy thử thay đổi nó
+
+00:03:27.430 --> 00:03:30.350
+để hiển thị chuỗi này
+khi bạn bấm nút Đặt hàng.
+
+00:03:30.350 --> 00:03:32.740
+Làm tương tự cho
+từng chuỗi tin nhắn này.
+
+00:03:33.940 --> 00:03:37.610
+Mỗi lần bạn sẽ chỉ thấy
+một chuỗi trên màn hình.
+
+00:03:37.610 --> 00:03:40.295
+Hãy nhớ ghép các chuỗi với biến
+
+00:03:40.295 --> 00:03:44.755
+để số lượng và giá tiền hiển thị
+chính xác tương ứng theo ô chọn số lượng.
+
+00:03:44.755 --> 00:03:48.285
+Nếu tôi đổi số lượng này thành
+năm ly cà phê,
+
+00:03:48.285 --> 00:03:51.714
+Số tiền cần trả phải là $25.
+

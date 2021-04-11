@@ -1,0 +1,354 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.350 --> 00:00:03.140
+Ekran resmine ilk baktığımda
+sıralı olduğu için
+
+00:00:03.140 --> 00:00:06.180
+vertical linear layout gibi
+gözüküyor.
+
+00:00:06.180 --> 00:00:08.410
+İkinci ast tek bir görüntü değil
+
+00:00:08.410 --> 00:00:11.530
+aslında üç görüntünün
+horizontal linear layout'u.
+
+00:00:11.530 --> 00:00:14.710
+Görüntü hiyeraşi şeması 
+bu şekilde.
+
+00:00:14.710 --> 00:00:19.300
+Bir root görüntüsü olarak 
+vertical linear layout ve beş astı var.
+
+00:00:20.390 --> 00:00:23.050
+Linear layout bile kendi içinde
+üç alta sahip
+
+00:00:24.360 --> 00:00:29.700
+Şema elimizde olunca
+XML kodunun iskeletini kurmak kolay.
+
+00:00:29.700 --> 00:00:32.009
+Root görüntüsü bir linear layout ve
+
+00:00:32.009 --> 00:00:35.810
+linear layout'u takip ettiği
+TextView birinci alt,
+
+00:00:35.810 --> 00:00:38.650
+Button var, TextView, 
+ve içinde bir Button daha var.
+
+00:00:38.650 --> 00:00:42.150
+Ve bu linear layout için 
+kapanış etiketi
+
+00:00:42.150 --> 00:00:45.600
+sonra TextView, daha sonra 
+tekrar TextView ve bir Button.
+
+00:00:45.600 --> 00:00:49.230
+Hepsi linear
+layout'un altı.
+
+00:00:49.230 --> 00:00:52.230
+XML'den Android Studio'ya
+geçiş yapabilir,
+
+00:00:52.230 --> 00:00:56.460
+varolan düzeni bu şekilde
+değiştirebilirsiniz.
+
+00:00:56.460 --> 00:01:00.310
+Android Studio'da activity main XML 
+layout dosyasını açıyorum.
+
+00:01:00.310 --> 00:01:03.039
+Değişiklikleri bu dosyada 
+gerçekleştireceğiz
+
+00:01:03.039 --> 00:01:06.335
+bu şekilde istediğimiz düzene 
+daha da yaklaşalım.
+
+00:01:06.335 --> 00:01:08.700
+İlk alt bir TextView.
+
+00:01:08.700 --> 00:01:09.880
+Bu zaten var.
+
+00:01:09.880 --> 00:01:11.350
+Quantity header 
+olmalı.
+
+00:01:12.500 --> 00:01:15.240
+Sonra üç görüntü dahil edilen
+
+00:01:15.240 --> 00:01:17.680
+nested linear layout var.
+
+00:01:17.680 --> 00:01:20.120
+Şimdi yok ancak ekleyelim.
+
+00:01:20.120 --> 00:01:23.215
+Enter'a basıp LinearLayout 
+yazmaya başlıyorum.
+
+00:01:24.850 --> 00:01:27.390
+Otomatik tamamla 
+seçeneği ortaya çıkıyor.
+
+00:01:27.390 --> 00:01:29.020
+Tamam deyip devam ediyorum.
+
+00:01:29.020 --> 00:01:32.100
+Sonra doldurmam gereken listeyi
+otomatik olarak getiriyor.
+
+00:01:32.100 --> 00:01:33.730
+Çünkü genişlik ve yükseklik lazım.
+
+00:01:34.880 --> 00:01:38.020
+Genişliği match_parent
+ayarlıyorum,
+
+00:01:38.020 --> 00:01:42.720
+bu genişliği üstle eşitler, ve
+bu da ekran genişliğine eşit.
+
+00:01:42.720 --> 00:01:45.890
+Yükseklik için, match_parent
+ayarlaması yapmıyorum, çünkü
+
+00:01:45.890 --> 00:01:49.970
+bu diğer görüntüleri dikey olarak
+ekran dışına itecektir.
+
+00:01:49.970 --> 00:01:51.820
+Burada wrap_content deyip
+geçiyorum.
+
+00:01:53.680 --> 00:01:56.960
+Bu şekilde LinearLayout içinde
+TextView ile yalnız
+
+00:01:56.960 --> 00:01:58.610
+iki buton uzunluğunda olacaktır.
+
+00:01:58.610 --> 00:02:02.690
+LinearLayout astları eklendikten
+sonra kapanış etiketi
+
+00:02:02.690 --> 00:02:04.060
+taşımış olamalı.
+
+00:02:04.060 --> 00:02:07.160
+Böyle aşağı inecek.
+
+00:02:07.160 --> 00:02:09.320
+Görüntü grubu içinde 
+ast oluşturuğunuzda
+
+00:02:09.320 --> 00:02:12.330
+dört boşluk 
+girintili olmalı.
+
+00:02:13.350 --> 00:02:15.630
+Buraya da bir boşluk koyacağım çünkü
+her XML elementinin arasında
+
+00:02:15.630 --> 00:02:17.090
+bir boş satır olsun istiyorum.
+
+00:02:18.260 --> 00:02:21.440
+Unuttuğumuz tek şey LinearLayout
+oryantasyonunu ayarlamak.
+
+00:02:23.210 --> 00:02:26.260
+Daha önce LinearLayout'un yatay
+olacağına karar vermiştik
+
+00:02:26.260 --> 00:02:29.390
+böylece Button'lar ve TextView
+yatay gözükükecek.
+
+00:02:29.390 --> 00:02:31.269
+Harika.
+İstediğimiz eşleşmeleri yapalım.
+
+00:02:32.150 --> 00:02:37.340
+İki TextView ve bir Button 
+çoktan düzende.
+
+00:02:37.340 --> 00:02:39.010
+Yani burada işimiz bitti.
+
+00:02:39.010 --> 00:02:41.860
+Tasarım paneline baktığımızda
+böyle gözükecektir.
+
+00:02:43.470 --> 00:02:47.100
+Beş direkt astı olan 
+bir vertical linear layout ve
+
+00:02:47.100 --> 00:02:48.880
+ve üç astı olan 
+linear layout var.
+
+00:02:48.880 --> 00:02:52.120
+Cihazımızda çalıştırıp
+ne olduğunu görelim.
+
+00:02:53.390 --> 00:02:55.920
+Bu isteğimize yakın ama
+istediğimiz şey değil.
+
+00:02:56.920 --> 00:03:00.060
+Quantity picker yatay gözüküyor,
+bu iyiye işaret.
+
+00:03:00.060 --> 00:03:03.180
+İstediğimiz düzenin ekran görüntüsünde 
+olduğu gibi
+
+00:03:03.180 --> 00:03:08.355
+eksi butonunu sol el tarafında,
+artı butonunu sağ el tarafında istiyoruz.
+
+00:03:08.355 --> 00:03:11.675
+Ayrıca butonlar TextView 
+kenarlarına sıkışmışlar.
+
+00:03:11.675 --> 00:03:15.080
+Ekran görüntüsünü doğru hatırlıyorsam,
+bu TextView'de
+
+00:03:15.080 --> 00:03:17.851
+sağ el tarafında ve sol el tarafında 
+sekiz dp olmalı.
+
+00:03:18.962 --> 00:03:20.052
+Şimdi onu ekleyelim.
+
+00:03:21.252 --> 00:03:22.972
+XML'e geri dönüyorum.
+
+00:03:22.972 --> 00:03:26.702
+Artı butonunu TextView 
+sonrasına taşıyorum.
+
+00:03:26.702 --> 00:03:32.432
+Eksi butonunu ise 
+TextView öncesine taşıyorum.
+
+00:03:32.432 --> 00:03:36.372
+Yatay sırada önce eksi tuşu
+sonra iki yazısı
+
+00:03:36.372 --> 00:03:38.252
+sonra da artı tuşu olmalı.
+
+00:03:38.252 --> 00:03:41.320
+TextView etrafına dolgu yapmak da
+istiyoruz.
+
+00:03:41.320 --> 00:03:44.380
+Bunu padding ya da margin kullanarak 
+yapabiliriz.
+
+00:03:44.380 --> 00:03:46.376
+Padding yapacağım.
+
+00:03:46.376 --> 00:03:48.959
+Ve değerini sekiz dp
+ayarlıyorum.
+
+00:03:48.959 --> 00:03:50.543
+Tamam, güzel.
+
+00:03:50.543 --> 00:03:53.572
+Birkaç ekstra boşluk
+olduğuna dair
+
+00:03:53.572 --> 00:03:56.156
+içimde bir his var, 
+ve android kod stil klavuzuna göre
+
+00:03:56.156 --> 00:03:59.310
+özelliklerin düzeni 
+doğru olmayabilir.
+
+00:03:59.310 --> 00:04:02.860
+Ekranın yukarısındaki menüde
+koda tıklıyorum ve
+
+00:04:02.860 --> 00:04:04.890
+sonra reformat code'a sonra
+
+00:04:04.890 --> 00:04:06.980
+rearrange code'a tıklıyorum.
+
+00:04:06.980 --> 00:04:09.120
+Bu tüm özellikleri 
+düzenleyecek ve
+
+00:04:09.120 --> 00:04:11.240
+otomatik olarak formatı
+onaracak.
+
+00:04:12.430 --> 00:04:13.140
+Tamam, güzel.
+
+00:04:13.140 --> 00:04:14.630
+Uygulamayı tekrar çalıştıralım.
+
+00:04:15.550 --> 00:04:17.170
+İşte.
+Böyle daha güzel.
+
+00:04:17.170 --> 00:04:20.430
+Şimdi iki etrafında, 
+sol el tarafında eksi butonu ve
+
+00:04:20.430 --> 00:04:22.790
+sağ el artı butonu etrafında 
+boşluklar var.
+
+00:04:22.790 --> 00:04:24.668
+Güzel görünüyor.
+
+00:04:24.668 --> 00:04:27.610
+Hala çalıştığından 
+emin olmalıyız.
+
+00:04:27.610 --> 00:04:30.620
+Rastgele bir miktar verip
+çalıştıracağım.
+
+00:04:30.620 --> 00:04:32.035
+Doğru gözüküyor.
+
+00:04:32.035 --> 00:04:37.890
+Quantity picker'ı ekranda 
+görmek uzun bir yolculuktu.
+
+00:04:37.890 --> 00:04:40.110
+Tamam.
+Uygulama güzel gözüküyor.
+
+00:04:40.110 --> 00:04:43.390
+Şimdiye kadar ekranda
+nasıl sayı göstereceğinizi öğrettim.
+
+00:04:43.390 --> 00:04:45.570
+Ekranda metin göstermek
+isterseniz ne olacak?
+
+00:04:46.270 --> 00:04:48.221
+Öğrenmek için izlemeye devam edin.
+

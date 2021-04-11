@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:03.251
+Vejamos como o ViewGroup aninhado
+entra no nosso aplicativo.
+
+00:00:03.284 --> 00:00:06.499
+As informações parecem estar
+em uma coluna vertical,
+
+00:00:06.532 --> 00:00:09.083
+então podemos usar
+o LinearLayout vertical.
+
+00:00:09.116 --> 00:00:12.051
+Tudo parece bom,
+pois há uma View por linha
+
+00:00:12.084 --> 00:00:13.898
+no LinearLayout vertical,
+
+00:00:13.931 --> 00:00:17.412
+mas esta linha é composta
+por várias Views.
+
+00:00:17.445 --> 00:00:20.295
+Podemos usar um LinearLayout
+horizontal para essa linha
+
+00:00:20.328 --> 00:00:22.977
+composta de um botão,
+uma TextView e outro botão.
+
+00:00:23.010 --> 00:00:28.672
+O LinearLayout seria o segundo filho
+do LinearLayout vertical maior.
+
+00:00:28.705 --> 00:00:31.648
+Eu mostrarei
+três arquivos XMLs diferentes,
+
+00:00:31.681 --> 00:00:36.624
+e quero saber qual constrói
+o layout desejado.
+
+00:00:36.657 --> 00:00:40.232
+Não copie os arquivos
+nem os execute no Android Studio.
+
+00:00:40.265 --> 00:00:45.328
+Dê um palpite a partir
+da leitura e entendimento do código.
+
+00:00:45.361 --> 00:00:47.608
+Este link está
+nas notas do instrutor.
+
+00:00:47.641 --> 00:00:50.659
+Há três opções: a opção A,
+
+00:00:51.620 --> 00:00:53.419
+a opção B
+
+00:00:53.452 --> 00:00:54.866
+e a opção C.
+
+00:00:54.899 --> 00:00:58.369
+Uma delas constrói corretamente
+o layout desejado.
+
+00:00:59.394 --> 00:01:03.019
+Isso será desafiador,
+pois não vimos ainda um XML
+
+00:01:03.052 --> 00:01:04.784
+com ViewGroups aninhados.
+
+00:01:04.817 --> 00:01:07.137
+Dividiremos esse desafio
+em dois quizzes,
+
+00:01:07.170 --> 00:01:09.697
+então não precisa
+tomar nenhuma decisão agora.
+
+00:01:09.730 --> 00:01:13.209
+Para o primeiro quiz,
+esboce o diagrama da hierarquia View
+
+00:01:13.242 --> 00:01:15.481
+para cada um
+dos arquivos XML.
+
+00:01:15.514 --> 00:01:18.858
+Explicarei o que significa
+hierarquia View.
+
+00:01:19.714 --> 00:01:23.833
+Pegue um papel e um lápis
+para desenhar os diagramas.
+
+00:01:23.866 --> 00:01:26.625
+O Android organiza
+as Views na tela
+
+00:01:26.658 --> 00:01:28.177
+de forma hierárquica
+
+00:01:28.210 --> 00:01:30.465
+em uma estrutura de árvore
+de Views.
+
+00:01:30.498 --> 00:01:33.704
+Isso é um diagrama
+que representa a hierarquia View,
+
+00:01:33.737 --> 00:01:37.688
+que mostra o pai e as relações
+dos filhos entre as Views.
+
+00:01:37.721 --> 00:01:40.946
+A RootView deste layout
+é um LinearLayout.
+
+00:01:41.553 --> 00:01:43.793
+Ela tem três filhos,
+um RelativeLayout,
+
+00:01:43.826 --> 00:01:45.713
+uma TextView
+e outra TextView.
+
+00:01:45.746 --> 00:01:48.864
+Este RelativeLayout
+possui filhas próprias,
+
+00:01:48.897 --> 00:01:51.096
+uma ImageView
+e uma TextView.
+
+00:01:51.129 --> 00:01:53.089
+Para nosso aplicativo
+Puddles the Pig,
+
+00:01:53.122 --> 00:01:56.336
+esta é a hierarquia View
+criada pelo Android.
+
+00:01:56.369 --> 00:01:59.913
+O RelativeLayout é uma RootView
+com quatro filhos,
+
+00:01:59.946 --> 00:02:03.370
+uma ImageView,
+duas TextViews e um LinearLayout,
+
+00:02:03.403 --> 00:02:07.714
+que possui, ele próprio,
+duas ImageViews como filhas.
+
+00:02:08.634 --> 00:02:11.504
+Agora entendemos o que é
+o diagrama da hierarquia View.
+
+00:02:11.537 --> 00:02:14.765
+Ao desenhar o diagrama
+para cada um dos XMLs de layout,
+
+00:02:14.798 --> 00:02:18.124
+você entenderá melhor
+qual View é o pai,
+
+00:02:18.157 --> 00:02:19.565
+quem são os filhos
+
+00:02:19.598 --> 00:02:23.068
+e se os filhos
+têm Views filhas ou não.
+
+00:02:23.101 --> 00:02:27.117
+Para ajudar, mostrarei
+como passar dos layouts do XML
+
+00:02:27.150 --> 00:02:30.013
+para o diagrama
+da hierarquia View.
+
+00:02:30.046 --> 00:02:33.196
+Neste layout, temos uma RootView
+de um LinearLayout.
+
+00:02:33.229 --> 00:02:36.580
+Eu adicionei os pontos,
+pois não coube todo o código.
+
+00:02:36.613 --> 00:02:40.763
+A RootView como LinearLayout
+ficará no topo da árvore.
+
+00:02:40.796 --> 00:02:43.010
+Ela contém
+duas TextViews filhas,
+
+00:02:43.043 --> 00:02:46.769
+então desenhamos como filhas
+abaixo dele e pronto.
+
+00:02:46.802 --> 00:02:49.001
+Este layout
+é mais complicado.
+
+00:02:49.034 --> 00:02:53.370
+A RootView como LinearLayout
+contém três filhos diretos,
+
+00:02:53.403 --> 00:02:55.809
+duas TextViews
+e um RelativeLayout.
+
+00:02:55.842 --> 00:02:59.426
+Dentro do RelativeLayout,
+há uma ImageView e uma TextView
+
+00:02:59.459 --> 00:03:00.769
+como filhas.
+
+00:03:00.802 --> 00:03:03.921
+Após desenhar o diagrama
+da hierarquia View de cada opção,
+
+00:03:03.954 --> 00:03:06.752
+marque as caixas
+para continuar.
+
+00:03:06.785 --> 00:03:10.466
+No próximo quiz, você escolherá
+qual é a melhor opção,
+
+00:03:10.499 --> 00:03:12.824
+mas, por ora, não é preciso
+tomar a decisão.
+

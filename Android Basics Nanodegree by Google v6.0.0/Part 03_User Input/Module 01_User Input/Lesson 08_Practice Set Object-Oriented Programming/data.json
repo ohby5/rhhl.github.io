@@ -1,0 +1,369 @@
+{
+  "data": {
+    "lesson": {
+      "id": 371484,
+      "key": "dc8f22de-9fe6-4e1a-b570-fe9c683909ed",
+      "title": "Practice Set: Object-Oriented Programming",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Practice using object-oriented programming to create a simple user profile app.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 385127,
+          "key": "2a3aa8e4-12b0-4c5b-baf4-88d92ff11881",
+          "title": "Introduction to the Practice Set",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2a3aa8e4-12b0-4c5b-baf4-88d92ff11881",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385129,
+              "key": "b38689b6-484c-44c0-a59b-611445abd019",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Practice Set: Object-Oriented Programming \n\nYou just learned the basic components of Object-Oriented Programming and completed the Just Java App. This Practice Set will give you the opportunity to practice those skills. \n\n\n### In this Practice Set...\n\nWe'll use our understanding of object-oriented programming to create a simple user profile that gives a basic introduction of yourself.\n\nWe see user profiles all over our digital world from social media platforms, to marketplaces to purchase goods, to gaming platforms. \n\nLet's get started!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 410586,
+              "key": "ec471c59-6153-41b1-97c5-c34e001324f2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59cbe9a9_applications-2344386-1920/applications-2344386-1920.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ec471c59-6153-41b1-97c5-c34e001324f2",
+              "caption": "",
+              "alt": "",
+              "width": 1920,
+              "height": 1920,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 385135,
+          "key": "69cd57c3-b233-45ae-8655-38878bbeff0c",
+          "title": "Layout",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "69cd57c3-b233-45ae-8655-38878bbeff0c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385136,
+              "key": "4a4731e8-23f1-4b78-8c08-a5ca628c532b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "*This Practice Set will be less structured providing you the opportunity to put what you've learned to the test. It's okay if you need to go back and review lessons to understand how to complete a task. It's part of the learning process. Remember, it's better to have tried and practiced than to never to have tried at all. Keep on learning and you'll surprise yourself with all that you know!*\n\n# Layout\n\nYou will be creating a very basic user profile to introduce yourself with information about your name, birthday, and the country where you're from.\n\nStart by creating a New Project in Android Studio. We've decided to call our Application - UserProfile:\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 440732,
+              "key": "cd488654-7e9d-45e0-8cdb-079a31b48503",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59f7b170_screen-shot-2017-10-30-at-4.10.22-pm/screen-shot-2017-10-30-at-4.10.22-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cd488654-7e9d-45e0-8cdb-079a31b48503",
+              "caption": "Android Studio \"Create New Project\" wizard\n\n*Application Name:* User Profile *Company domain:* android.example.com",
+              "alt": "",
+              "width": 2154,
+              "height": 1288,
+              "instructor_notes": null
+            },
+            {
+              "id": 410589,
+              "key": "0cd10d95-3bf1-4d10-8efb-861a49a41db2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We decided to set the Minimum SDK to be API 15: Android 4.0.3 (IceCreamSandwich):",
+              "instructor_notes": ""
+            },
+            {
+              "id": 410595,
+              "key": "0ffde826-701c-43bf-9dd1-2cd1d5401ee7",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59cbeff7_screen-shot-2017-09-27-at-11.35.26-am/screen-shot-2017-09-27-at-11.35.26-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0ffde826-701c-43bf-9dd1-2cd1d5401ee7",
+              "caption": "",
+              "alt": "",
+              "width": 1800,
+              "height": 1280,
+              "instructor_notes": null
+            },
+            {
+              "id": 410601,
+              "key": "8e01fd5a-e362-4bee-94ee-805606dfeba0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Next, choose an Empty Activity and name it MainActivity:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 410605,
+              "key": "37f4a7c4-0d68-4f3d-a429-1ae4b704e7db",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59cbf0de_screen-shot-2017-09-27-at-11.35.26-am/screen-shot-2017-09-27-at-11.35.26-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/37f4a7c4-0d68-4f3d-a429-1ae4b704e7db",
+              "caption": "",
+              "alt": "",
+              "width": 1800,
+              "height": 1280,
+              "instructor_notes": null
+            },
+            {
+              "id": 410611,
+              "key": "3051a804-b14e-439c-ad3f-962f80965a97",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59cbf10a_screen-shot-2017-09-27-at-11.41.50-am/screen-shot-2017-09-27-at-11.41.50-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3051a804-b14e-439c-ad3f-962f80965a97",
+              "caption": "",
+              "alt": "",
+              "width": 1814,
+              "height": 1276,
+              "instructor_notes": null
+            },
+            {
+              "id": 402847,
+              "key": "86cf5ced-94aa-4de5-9e0f-0a56c33ebf61",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "86cf5ced-94aa-4de5-9e0f-0a56c33ebf61",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Create one ImageView with the id \"profile_picture\" (do not add in the src just yet)",
+                "Add one TextView with the id \"name\"",
+                "Add a second TextView with the id \"birthday\"",
+                "Add a third TextView with the id \"country\""
+              ],
+              "positive_feedback": "The user profile is beginning to take form. \n\n[Here's our example solution code](https://github.com/udacity/UserProfile/tree/1.01-Solution-Layout).",
+              "video_feedback": null,
+              "description": "In res/layout/activity_main.xml, inside of a RelativeLayout..."
+            }
+          ]
+        },
+        {
+          "id": 385130,
+          "key": "13b374ea-8960-4ba6-b4ca-2671ae313448",
+          "title": "Create TextView",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "13b374ea-8960-4ba6-b4ca-2671ae313448",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385134,
+              "key": "7f4231f4-e030-4656-8f53-8e2129325c71",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Create TextView\n\nNow you'll inflate the TextViews in the XML in our Java code as well as set the text with the respective information. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402855,
+              "key": "68b90524-f80b-4782-89be-0ccd061339b2",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "68b90524-f80b-4782-89be-0ccd061339b2",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Inside the onCreate method,  create three separate TextViews using the findViewById method. The TextView \"name\" should correspond to the \"name\" text box in the activity_main layout, and so forth.",
+                "Afterwards, use \"setText\" method to set the Text to your respective information. For instance, Jessica would set her name TextView to \"Jessica\"."
+              ],
+              "positive_feedback": "Great work setting up the TextViews with proper text. \n\n[Here are the code changes in this section](https://github.com/udacity/UserProfile/compare/1.02-Solution-CreateTextView...1.01-Solution-Layout)\n\n[Here's our example solution code](https://github.com/udacity/UserProfile/tree/1.02-Solution-CreateTextView)",
+              "video_feedback": null,
+              "description": "In MainActivity.java..."
+            }
+          ]
+        },
+        {
+          "id": 385131,
+          "key": "4d995d14-12d7-4dcf-b53c-5f16a79f4e21",
+          "title": "Add ImageView",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4d995d14-12d7-4dcf-b53c-5f16a79f4e21",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385137,
+              "key": "05e11480-905a-4a42-8319-db483ba43fd6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Add ImageView\n\nLet's jazz it up by adding an image of you! \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402886,
+              "key": "0690fa55-fca0-4f68-a1a2-cebb86bb7f5b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c05394_screen-shot-2017-09-18-at-4.15.14-pm/screen-shot-2017-09-18-at-4.15.14-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0690fa55-fca0-4f68-a1a2-cebb86bb7f5b",
+              "caption": "Can you guess which one of our Instructors this is? \n(Hint: She can whip up one tasty cup of Java)",
+              "alt": "",
+              "width": 476,
+              "height": 514,
+              "instructor_notes": null
+            },
+            {
+              "id": 402896,
+              "key": "40624e82-3e9a-4205-94d9-bdfad883582d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Here are some resources to find images on the web with creative commons/free media licenses. Remember, be a good citizen and give credit where credit is due :) \n\n- [Pexels](https://www.pexels.com/)\n- [Unsplash](https://unsplash.com/)\n- [Creative Commons](https://search.creativecommons.org/)\n- [Mashable list](http://mashable.com/2013/10/03/video-assets-creative-commons/#ROSbOEWDgiq3)\n- [Sitepoint list](https://www.sitepoint.com/5-sites-fantastic-creative-commons-design-resources/)\n- [Sitepoint list 2](https://www.sitepoint.com/30-creative-commons-sources/)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402856,
+              "key": "1c39cfc4-9be8-468b-9c2b-62890d6b7f45",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "1c39cfc4-9be8-468b-9c2b-62890d6b7f45",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Create an ImageView",
+                "Use findViewById and set the image using \"setImageResource\"",
+                "Remember to copy whatever picture you want to use into the correct folder (Hint: it's under app/res)"
+              ],
+              "positive_feedback": "*High five!* You've got the basics all set up.\n\n[Here's our example solution code](https://github.com/udacity/UserProfile/tree/1.03-Solution-AddImageView)",
+              "video_feedback": null,
+              "description": "In MainActivity.java..."
+            }
+          ]
+        },
+        {
+          "id": 385138,
+          "key": "2121c280-4641-46ce-bb97-2f055f794433",
+          "title": "Make It Pretty",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "2121c280-4641-46ce-bb97-2f055f794433",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385139,
+              "key": "e4b14a84-c277-4582-bd1d-6d142cdc9fd9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Make It Pretty\n\nWith the nuts and bolts all done, now's your chance to play around with design.\n\nPlay around and make the text **bold**, *italicized*, or maybe even <span style=\"color:green\">colored</span>.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402861,
+              "key": "c9db68c3-c144-4543-93c0-37ebf912778d",
+              "title": "",
+              "semantic_type": "TaskListAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "c9db68c3-c144-4543-93c0-37ebf912778d",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "tasks": [
+                "Take some time to play around with setTextSize or setTextColor to make your TextViews fun and personal!"
+              ],
+              "positive_feedback": "Looking good! Time to show it off to your friends and family :)\n\n[Here's our example solution code](https://github.com/udacity/UserProfile/tree/1.04-Solution-MakeItPretty)",
+              "video_feedback": null,
+              "description": "Now, to make it pretty!"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

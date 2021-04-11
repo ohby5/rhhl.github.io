@@ -1,0 +1,325 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.192 --> 00:00:02.511
+Construímos
+um seletor de quantidade.
+
+00:00:02.544 --> 00:00:07.695
+-E o próximo passo é obter o preço.
+-Isso. Precisamos do preço.
+
+00:00:07.728 --> 00:00:10.897
+O preço é um inteiro
+até agora,
+
+00:00:10.930 --> 00:00:13.705
+mas queremos usar strings.
+
+00:00:13.738 --> 00:00:17.889
+-Esse tipo de string?
+-Não. Este tipo de string.
+
+00:00:19.882 --> 00:00:22.737
+A string é uma sequência
+de caracteres.
+
+00:00:22.770 --> 00:00:25.185
+E como isso funciona
+com o preço?
+
+00:00:25.218 --> 00:00:31.017
+Nós mudaremos a tela
+para dizer "Total" e "$15".
+
+00:00:31.050 --> 00:00:34.801
+Não será somente um número,
+pois terá um texto também.
+
+00:00:34.834 --> 00:00:37.768
+-Números e texto.
+-Isso. Não é legal?
+
+00:00:37.801 --> 00:00:42.065
+Isso é de uma festa para a qual
+você foi ou não convidado.
+
+00:00:42.675 --> 00:00:45.336
+Nos próximos vídeos,
+falaremos sobre as strings
+
+00:00:45.369 --> 00:00:47.201
+no aplicativo Just Java.
+
+00:00:47.234 --> 00:00:50.936
+Especificamente, veremos como criar
+e atualizar variáveis string nele.
+
+00:00:50.969 --> 00:00:53.678
+Mudaremos o aplicativo para que,
+abaixo de Price,
+
+00:00:53.711 --> 00:00:58.510
+diga "Total: $15",
+ou o preço a partir da quantidade.
+
+00:00:58.543 --> 00:01:03.470
+Também exibiremos "Thank you!",
+pois ficamos felizes pela compra.
+
+00:01:03.503 --> 00:01:08.107
+Você deve estar se perguntando
+por que isso não está no layout XML.
+
+00:01:08.140 --> 00:01:11.684
+Poderia estar, mas a quantidade
+pode ser alterada
+
+00:01:11.717 --> 00:01:15.916
+e, quando clicamos no botão Order,
+o preço deverá ser atualizado,
+
+00:01:15.949 --> 00:01:20.285
+então o texto deve refletir o preço
+a partir da quantidade.
+
+00:01:20.318 --> 00:01:23.588
+Com uma variável string,
+mudamos o valor do texto
+
+00:01:23.621 --> 00:01:25.133
+durante a execução,
+
+00:01:25.166 --> 00:01:28.376
+sem precisarmos codificar
+no layout XML.
+
+00:01:29.263 --> 00:01:32.440
+Estes são alguns exemplos
+que você deve reconhecer.
+
+00:01:32.473 --> 00:01:36.831
+Ao receber uma ligação, o nome
+da pessoa está no topo da tela.
+
+00:01:36.864 --> 00:01:39.318
+Esse nome não pode estar
+no layout XML,
+
+00:01:39.351 --> 00:01:41.903
+pois isso muda de acordo
+com quem está ligando,
+
+00:01:41.936 --> 00:01:45.359
+a menos que todos seus familiares
+e amigos se chamem Britta Holt.
+
+00:01:45.392 --> 00:01:48.543
+Devemos armazenar esse nome
+em uma variável string,
+
+00:01:48.576 --> 00:01:51.895
+assim poderemos atualizá-lo
+dependendo de quem está ligando.
+
+00:01:51.928 --> 00:01:55.479
+Então, ao exibir a tela,
+mostramos o nome mais recente
+
+00:01:55.512 --> 00:01:58.047
+armazenado na variável.
+
+00:01:58.080 --> 00:02:02.039
+No aplicativo de notícias e clima,
+há uma lista com as histórias.
+
+00:02:02.072 --> 00:02:06.816
+Ao construir o layout XML,
+não podemos codificar as histórias
+
+00:02:06.849 --> 00:02:08.614
+no layout XML.
+
+00:02:08.647 --> 00:02:10.994
+Por mais que eu ame
+as Olimpíadas de Inverno,
+
+00:02:11.027 --> 00:02:13.615
+também quero ler
+outras notícias.
+
+00:02:13.648 --> 00:02:16.399
+Podemos armazenar as informações
+de cada notícia,
+
+00:02:16.432 --> 00:02:19.182
+como o título do artigo,
+como uma variável string,
+
+00:02:19.215 --> 00:02:20.952
+pois isso pode mudar.
+
+00:02:20.985 --> 00:02:26.271
+Na próxima tarefa, você terá
+um código para alterar o aplicativo.
+
+00:02:26.304 --> 00:02:29.558
+Você deverá executar o aplicativo
+e observar o que acontece.
+
+00:02:29.591 --> 00:02:32.424
+Eu farei perguntas
+para ver se você consegue descobrir
+
+00:02:32.457 --> 00:02:34.159
+o que está acontecendo.
+
+00:02:34.192 --> 00:02:37.367
+A primeira alteração
+é modificar o método submitOrder.
+
+00:02:37.400 --> 00:02:40.858
+Você deve remover o código
+entre as chaves
+
+00:02:40.891 --> 00:02:43.921
+e substituí-lo
+por estas duas linhas de código.
+
+00:02:43.954 --> 00:02:45.706
+Esse código dará um erro,
+
+00:02:45.739 --> 00:02:49.027
+então você deve adicionar
+o método displayMessage,
+
+00:02:49.060 --> 00:02:51.675
+que foi fornecido
+nas notas do instrutor.
+
+00:02:52.827 --> 00:02:55.987
+Lá, você encontrará
+este pedaço de código.
+
+00:02:56.020 --> 00:02:57.729
+Selecione tudo,
+
+00:02:57.762 --> 00:03:01.067
+do comentário
+até a chave de encerramento.
+
+00:03:01.740 --> 00:03:03.754
+Trate este método
+como uma caixa-preta,
+
+00:03:03.787 --> 00:03:06.344
+não nos preocupamos
+com o que ocorre dentro dele,
+
+00:03:06.377 --> 00:03:09.340
+só basta saber que precisamos
+adicioná-lo ao MainActivity
+
+00:03:09.373 --> 00:03:10.900
+para poder usá-lo.
+
+00:03:11.507 --> 00:03:14.458
+De volta ao Android Studio,
+no arquivo MainActivity.java,
+
+00:03:14.491 --> 00:03:16.923
+vamos colar o novo método.
+
+00:03:16.956 --> 00:03:18.835
+Podemos colar
+em qualquer lugar,
+
+00:03:18.868 --> 00:03:22.506
+mas eu colocarei
+depois do método displayPrice.
+
+00:03:22.539 --> 00:03:26.764
+Depois da chave
+de encerramento dele.
+
+00:03:27.642 --> 00:03:31.034
+Perceba que ele está dentro
+da chave de encerramento
+
+00:03:31.067 --> 00:03:32.338
+do MainActivity.
+
+00:03:32.371 --> 00:03:35.002
+Há uma chave de abertura,
+
+00:03:35.035 --> 00:03:38.074
+e tudo dentro dela
+está dentro do MainActivity.
+
+00:03:38.107 --> 00:03:41.539
+Há uma chave de encerramento
+para MainActivity.
+
+00:03:42.371 --> 00:03:44.889
+Após adicionar
+o método displayMessage,
+
+00:03:44.922 --> 00:03:47.426
+podemos modificar
+o método submitOrder.
+
+00:03:47.459 --> 00:03:50.850
+Vou apagar o código
+dentro do método submitOrder.
+
+00:03:50.883 --> 00:03:52.722
+De acordo
+com a imagem do quiz,
+
+00:03:52.755 --> 00:03:55.005
+adicionarei o novo código.
+
+00:03:57.371 --> 00:04:00.816
+Não estou dando muitos detalhes
+sobre o que fiz,
+
+00:04:00.849 --> 00:04:03.262
+pois quero que experimente
+no seu aplicativo,
+
+00:04:03.295 --> 00:04:05.871
+execute
+e veja o que acontece.
+
+00:04:05.904 --> 00:04:08.805
+Depois disso,
+responda a estas perguntas.
+
+00:04:08.838 --> 00:04:11.969
+O que acontece quando clicamos
+no botão Order do aplicativo?
+
+00:04:12.002 --> 00:04:15.093
+Se observarmos
+o código do submitOrder,
+
+00:04:15.126 --> 00:04:17.915
+nós criamos
+uma variável string.
+
+00:04:17.948 --> 00:04:20.857
+Embora não tenhamos falado
+do código da variável string,
+
+00:04:20.890 --> 00:04:24.781
+quero que você imagine
+qual é o nome da variável
+
+00:04:24.814 --> 00:04:27.687
+e qual é o nome do valor.
+
+00:04:28.574 --> 00:04:30.430
+Ao terminar,
+basta continuar.
+

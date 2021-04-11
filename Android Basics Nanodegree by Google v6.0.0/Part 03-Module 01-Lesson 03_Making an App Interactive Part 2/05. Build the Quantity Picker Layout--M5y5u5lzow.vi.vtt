@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.345 --> 00:00:04.298
+Thật tuyệt, đó là một khái niệm khó,
+nhưng bạn đã xử lý rất tốt.
+
+00:00:04.298 --> 00:00:08.210
+Điều này mở ra khả năng xây dựng một số
+bố trí rất tuyệt vời trong Android
+
+00:00:08.210 --> 00:00:11.420
+bởi vì hầu như tất cả các màn hình đều có
+một số kiểu bố trí lồng nhau,
+
+00:00:11.420 --> 00:00:15.080
+mà đã được Correll đề cập trước đó
+trong các ứng dụng của Google Play.
+
+00:00:15.080 --> 00:00:17.980
+Sau tất cả các công việc chuẩn bị,
+bây giờ ta đã sẵn sàng để quay trở lại
+
+00:00:17.980 --> 00:00:21.630
+Android Studio để thực hiện các sửa đổi
+để có bảng chọn số lượng cải tiến.
+
+00:00:22.860 --> 00:00:26.620
+Trong trường hợp bạn thắc mắc, Katherine,
+nếu tôi đang cố xây dựng một bố cục và
+
+00:00:26.620 --> 00:00:29.230
+tôi không có ba lựa chọn bố cục XML
+
+00:00:29.230 --> 00:00:31.360
+xuất hiện thần kỳ trước mặt tôi
+để tôi có thể lựa chọn.
+
+00:00:31.360 --> 00:00:33.920
+Ồ, đó là một câu hỏi thú vị.
+
+00:00:33.920 --> 00:00:37.390
+Đến nay chúng ta đã thực hành
+khả năng đọc XML và
+
+00:00:37.390 --> 00:00:39.500
+vẽ sơ đồ phân cấp dạng xem.
+
+00:00:39.500 --> 00:00:41.708
+Chúng ta cũng thực hành
+đọc bố trí XML và
+
+00:00:41.708 --> 00:00:44.600
+vẽ phác thảo về diện mạo
+của màn hình.
+
+00:00:44.600 --> 00:00:48.610
+Nhưng bây giờ là lúc để thực hành xem
+thiết kế về thứ chúng ta muốn xây dựng và
+
+00:00:48.610 --> 00:00:50.920
+khả năng viết XML từ đó.
+
+00:00:50.920 --> 00:00:54.380
+Tôi nhận ra tôi đã đưa cho các bạn
+giải pháp XML ở các bài trước.
+
+00:00:54.380 --> 00:00:58.190
+Tôi đã phần nào chú ý, nhưng tôi
+không muốn bạn nhìn vào giải pháp đó.
+
+00:00:58.190 --> 00:01:01.550
+Tôi muốn bạn thực hành kỹ năng
+xem ảnh chụp màn hình hoặc
+
+00:01:01.550 --> 00:01:05.480
+mô hình về thứ mà bạn muốn xây dựng
+rồi sau đó có thể viết XML cho nó.
+
+00:01:06.820 --> 00:01:08.835
+Thông thường, chúng ta sẽ bắt đầu
+với ảnh chụp màn hình mong muốn
+
+00:01:08.835 --> 00:01:10.135
+về thứ chúng ta muốn xây dựng.
+
+00:01:10.135 --> 00:01:13.085
+Bạn có thể nhận thứ này từ nhà thiết kế
+cùng làm việc trong nhóm của bạn
+
+00:01:13.085 --> 00:01:13.985
+người thiết kế ứng dụng cho bạn.
+
+00:01:13.985 --> 00:01:16.215
+Hoặc nếu bạn không có nhà thiết kế,
+
+00:01:16.215 --> 00:01:18.795
+bạn cũng có thể 
+tự mình phác họa ra.
+
+00:01:18.795 --> 00:01:22.367
+Sau đó, bạn sẽ tưởng tượng cách thức để
+chia nhỏ thành các dạng xem và nhóm xem.
+
+00:01:22.367 --> 00:01:26.797
+Bạn có thể đánh dấu nó rồi thử vẽ ra
+sơ đồ phân cấp dạng xem cho
+
+00:01:26.797 --> 00:01:30.327
+mối quan hệ giữa
+dạng xem con và dạng xem mẹ.
+
+00:01:30.327 --> 00:01:33.617
+Sau khi bạn hoàn thành sơ đồ này,
+bạn có thể bắt đầu viết ra khung sườn về
+
+00:01:33.617 --> 00:01:36.437
+cách bố trí XML.
+
+00:01:36.437 --> 00:01:38.297
+Tôi sẽ để những phần này lại
+làm bài tập dành cho bạn.
+
+00:01:38.297 --> 00:01:43.157
+Bạn sẽ thay đổi trong
+tập tin bố trí activity_main.xml.
+
+00:01:43.157 --> 00:01:45.197
+Ngoài việc viết XML của mình ở đây và
+
+00:01:45.197 --> 00:01:49.220
+xem trước nó, bạn cũng có thể
+nhấp chuột vào cửa sổ thiết kế ở đây.
+
+00:01:49.220 --> 00:01:52.240
+Đây là tab Thiết kế
+trái ngược với tab Văn bản.
+
+00:01:52.240 --> 00:01:56.690
+Cửa sổ thiết kế cho phép bạn kéo và
+thả dạng xem vào thiết bị.
+
+00:01:56.690 --> 00:01:59.950
+Bạn cũng có thể xem cây thành phần
+ở góc trên bên phải ở đây.
+
+00:01:59.950 --> 00:02:03.930
+Về cơ bản, đây là cây chứa
+tất cả các dạng xem theo phân cấp.
+
+00:02:03.930 --> 00:02:07.030
+Hiện tại, chúng ta có LinearLayout dọc,
+đó là dạng xem mẹ, và
+
+00:02:07.030 --> 00:02:09.180
+tất cả các dạng xem con trong đó.
+
+00:02:09.180 --> 00:02:11.420
+Nếu bạn có ViewGroup lồng nhau,
+thì chúng cũng sẽ hiển thị tại đây.
+
+00:02:12.800 --> 00:02:15.790
+Bây giờ hãy tiếp tục và
+xây dựng bố trí này trong Android Studio.
+
+00:02:15.790 --> 00:02:18.870
+Sau khi bạn đã chọn và định vị
+dạng xem, hãy nhớ tạo kiểu cho chúng
+
+00:02:18.870 --> 00:02:20.290
+để chúng trông như này.
+
+00:02:20.290 --> 00:02:22.420
+Kiểu của các dạng xem
+hầu hết là giống nhau,
+
+00:02:22.420 --> 00:02:25.620
+ngoại trừ lưu ý rằng có tám lớp
+khoảng cách ở giữa nút trừ và
+
+00:02:25.620 --> 00:02:28.330
+số hai và ở giữa số hai và
+nút cộng.
+
+00:02:28.330 --> 00:02:30.710
+Như đã đề cập trước đó,
+tránh nhìn vào mã mà hãy
+
+00:02:30.710 --> 00:02:32.710
+cố gắng tự thực hiện nó.
+
+00:02:32.710 --> 00:02:34.410
+Khi bạn thực hiện xong,
+đánh dấu vào hộp này để tiếp tục.
+

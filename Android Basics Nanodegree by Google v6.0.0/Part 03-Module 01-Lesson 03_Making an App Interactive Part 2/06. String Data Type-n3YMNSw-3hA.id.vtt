@@ -1,0 +1,321 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.000 --> 00:00:02.310
+Sejauh ini, kita telah membuat
+pemilih kuantitas.
+
+00:00:02.310 --> 00:00:05.730
+Benar. Jenjang selanjutnya di aplikasi
+adalah harga.
+
+00:00:05.730 --> 00:00:07.740
+Ya, benar, harga. Betul sekali, harga.
+
+00:00:07.740 --> 00:00:13.490
+Selama ini harga adalah &lt;i&gt;integer&lt;/i&gt;, tapi kami
+ingin melampauinya dan menggunakan &lt;i&gt;string&lt;/i&gt;.
+
+00:00:13.940 --> 00:00:16.170
+Maksudmu, &lt;i&gt;string&lt;/i&gt; seperti ini?
+
+00:00:16.170 --> 00:00:18.250
+Bukan, maksud saya &lt;i&gt;string&lt;/i&gt;
+yang seperti ini.
+
+00:00:18.250 --> 00:00:22.570
+Jadi &lt;i&gt;string&lt;/i&gt; hanyalah sederet karakter.
+
+00:00:22.570 --> 00:00:25.290
+Tunggu. Lalu bagaimana caranya bekerja
+dengan harga?
+
+00:00:25.290 --> 00:00:29.345
+Jadi kita akan mengubah layar sehingga
+menampilkan total.
+
+00:00:29.345 --> 00:00:30.809
+Lalu $15.
+
+00:00:30.809 --> 00:00:34.870
+Jadi tidak hanya angka. Ada teks juga.
+
+00:00:34.870 --> 00:00:36.050
+Angka dan teks.
+
+00:00:36.050 --> 00:00:37.790
+Ya. Keren kan?
+
+00:00:37.790 --> 00:00:42.040
+Ini dari pesta yang kau diundang, 
+atau tidak.
+
+00:00:42.040 --> 00:00:45.530
+Pada beberapa video berikutnya kita akan
+membahas tentang pemakaian &lt;i&gt;string&lt;/i&gt;
+
+00:00:45.530 --> 00:00:47.370
+dalam aplikasi Just Java kita.
+
+00:00:47.370 --> 00:00:51.220
+Khususnya, kita belajar cara membuat dan
+memperbarui variabel &lt;i&gt;string&lt;/i&gt; di aplikasi
+
+00:00:51.220 --> 00:00:55.520
+Lalu kita akan mengubah aplikasi maka
+di bawah header harga terbilang, total $15
+
+00:00:55.520 --> 00:00:58.250
+atau harga apapun sesuai kuantitas
+yang dipesan.
+
+00:00:58.250 --> 00:01:00.470
+Kita juga akan menampilkan teks,
+Terima kasih,
+
+00:01:00.470 --> 00:01:02.950
+karena ada pelanggan saja
+sudah membuat kita gembira.
+
+00:01:02.980 --> 00:01:07.340
+Anda mungkin bertanya kenapa tidak taruh
+saja semua teks ini ke dalam XML?
+
+00:01:08.450 --> 00:01:11.860
+Kita bisa, tapi masalahnya kuantitas dapat
+berubah dan waktu kita klik
+
+00:01:11.860 --> 00:01:15.990
+tombol &lt;i&gt;Order&lt;/i&gt;, kita ingin harganya
+terperbarui di sini.
+
+00:01:15.990 --> 00:01:20.480
+Jadi teks ini harus mencerminkan harga
+secara akurat sesuai dengan kuantitas.
+
+00:01:20.480 --> 00:01:24.070
+Dengan memakai variabel &lt;i&gt;string&lt;/i&gt;, kita bisa
+mengubah nilai teks waktu aplikasi
+
+00:01:24.070 --> 00:01:27.839
+berjalan tanpa harus mengkodekannya
+ke penataan XML.
+
+00:01:29.240 --> 00:01:32.312
+Ini sebuah contoh dari aplikasi nyata
+yang mungkin Anda ketahui.
+
+00:01:32.312 --> 00:01:36.520
+Waktu Anda menerima telepon, Anda
+lihat nama muncul di bagian atas layar.
+
+00:01:36.520 --> 00:01:39.550
+Kita tidak dapat menaruh nama ini
+ke tataan XML secara langsung.
+
+00:01:39.550 --> 00:01:43.130
+Karena akan berubah tergantung
+siapa yang menelepon, kecuali
+
+00:01:43.130 --> 00:01:45.440
+semua teman dan kerabat Anda
+bernama Britta Holt.
+
+00:01:45.450 --> 00:01:49.050
+Hal terbaik yang dapat dilakukan adalah
+menyimpan nama pada variabel &lt;i&gt;string&lt;/i&gt;.
+
+00:01:49.050 --> 00:01:52.420
+Dengan begitu Anda dapat memperbaruinya
+tergantung siapa yang menelpon.
+
+00:01:52.420 --> 00:01:55.880
+Waktu kita tunjukkan layar ini kita
+bisa hanya menunjukkan nama terakhir
+
+00:01:55.880 --> 00:01:57.680
+yang disimpan di variabel tersebut.
+
+00:01:58.320 --> 00:02:01.399
+Dalam aplikasi berita dan cuaca,
+kita lihat daftar berita utama.
+
+00:02:02.110 --> 00:02:05.600
+Waktu membuat tataan XML, kita tidak
+bisa hanya mengkode berita-berita ini
+
+00:02:05.600 --> 00:02:08.250
+secara khusus ke dalam tataan XML.
+
+00:02:08.250 --> 00:02:10.930
+Sesuka-sukanya saya dengan berita
+Olimpiade Musim Dingin,
+
+00:02:10.930 --> 00:02:13.620
+saya juga ingin membaca artikel lainnya.
+
+00:02:13.620 --> 00:02:16.260
+Jadi kita dapat menyimpan informasi
+untuk setiap berita,
+
+00:02:16.260 --> 00:02:20.360
+seperti judul artikel, sebagai variabel
+&lt;i&gt;string&lt;/i&gt;, karena dapat berubah.
+
+00:02:20.360 --> 00:02:23.990
+Untuk tugas berikutnya saya akan memberi
+Anda beberapa kode dan menyuruh
+
+00:02:23.990 --> 00:02:26.340
+Anda membuat beberapa perubahan
+di dalam aplikasi.
+
+00:02:26.340 --> 00:02:29.440
+Lalu Anda dapat menjalankan aplikasi dan
+melihat apa yang terjadi.
+
+00:02:29.440 --> 00:02:33.050
+Saya akan menanyakan beberapa pertanyaan
+untuk melihat apakah Anda tahu apa
+
+00:02:33.050 --> 00:02:34.290
+yang sedang terjadi.
+
+00:02:34.290 --> 00:02:36.840
+Perubahan pertama adalah mengubah
+metode &lt;i&gt;submitOrder&lt;/i&gt;.
+
+00:02:36.840 --> 00:02:40.020
+Anda dapat menghapus kode di antara
+tanda kurung lalu
+
+00:02:40.020 --> 00:02:44.190
+menggantinya dengan dua baris kode ini.
+
+00:02:44.190 --> 00:02:47.770
+Menambahkan kode ini akan menimbulkan
+kesalahan, jadi saya ingin Anda untuk
+
+00:02:47.770 --> 00:02:51.740
+menambahkan juga metode &lt;i&gt;displayMessage&lt;/i&gt;,
+yang diberikan di catatan instruktur.
+
+00:02:53.230 --> 00:02:56.360
+Di catatan instruktur, Anda akan
+menemukan kode inti ini.
+
+00:02:56.360 --> 00:02:57.900
+Pilihlah semuanya,
+
+00:02:57.900 --> 00:03:00.360
+dari &lt;i&gt;comment&lt;/i&gt; sampai tanda kurung terakhir.
+
+00:03:00.700 --> 00:03:03.560
+Anda dapat menganggap metode ini seperti
+sebuah kotak hitam,
+
+00:03:03.560 --> 00:03:06.590
+tidak perlu khawatir tentang apa yang
+ada di dalam metode.
+
+00:03:06.590 --> 00:03:10.172
+Hanya perlu ketahui bahwa Anda ingin
+menambahkannya ke &lt;i&gt;MainActivity&lt;/i&gt; supaya
+
+00:03:10.172 --> 00:03:11.422
+dapat menggunakannya.
+
+00:03:11.422 --> 00:03:12.830
+Kembali ke Android Studio.
+
+00:03:12.830 --> 00:03:16.200
+Di fail MainActivity.java, saya akan
+menempelkan ini ke metode baru.
+
+00:03:16.200 --> 00:03:19.110
+Saya dapat menempelkannya dimana
+saja dalam &lt;i&gt;MainActivity&lt;/i&gt; tapi
+
+00:03:19.110 --> 00:03:22.650
+saya hanya akan menaruhnya
+setelah metode &lt;i&gt;displayPrice&lt;/i&gt;.
+
+00:03:22.650 --> 00:03:24.120
+Saya akan menaruhnya setelah
+
+00:03:24.120 --> 00:03:26.247
+tanda kurung penutup metode &lt;i&gt;displayPrice&lt;/i&gt;.
+
+00:03:27.810 --> 00:03:32.362
+Perhatikan dia ada di dalam tanda kurung
+penutup &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:03:32.362 --> 00:03:36.250
+&lt;i&gt;MainActivity&lt;/i&gt; punya tanda kurung buka
+di sini dan semua di dalamnya termasuk
+
+00:03:36.250 --> 00:03:38.260
+dalam &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:03:38.260 --> 00:03:41.148
+Lalu Anda punya tanda kurung tutup
+&lt;i&gt;MainActivity&lt;/i&gt; di sini.
+
+00:03:42.650 --> 00:03:45.040
+Setelah kita menambahkan metode
+&lt;i&gt;displayMessage&lt;/i&gt;,
+
+00:03:45.040 --> 00:03:46.890
+kita dapat ubah metode &lt;i&gt;submitOrder&lt;/i&gt;.
+
+00:03:46.890 --> 00:03:49.420
+Saya akan menghapus kode yang ada
+
+00:03:49.420 --> 00:03:51.030
+di dalam metode &lt;i&gt;submitOrder&lt;/i&gt;.
+
+00:03:51.030 --> 00:03:54.518
+Lalu mengikuti gambar kuis, saya
+akan menambahkan kode baru di sini.
+
+00:03:57.406 --> 00:04:01.020
+Saya sengaja tidak beri terlalu banyak
+detail tentang apa yang saya lakukan.
+
+00:04:01.020 --> 00:04:04.480
+Saya ingin Anda mencobanya di aplikasi
+versi Anda sendiri, jalankan, dan
+
+00:04:04.480 --> 00:04:05.610
+lihat apa yang terjadi.
+
+00:04:05.650 --> 00:04:08.810
+Setelah itu saya ingin Anda menjawab
+pertanyaan-pertanyaan berikut.
+
+00:04:08.810 --> 00:04:11.760
+Apa yang terjadi ketika Anda klik tombol
+&lt;i&gt;Order&lt;/i&gt; pada aplikasi?
+
+00:04:12.260 --> 00:04:15.250
+Jika Anda lihat lebih dekat
+pada kode &lt;i&gt;submit order&lt;/i&gt;,
+
+00:04:15.250 --> 00:04:17.610
+kita sebenarnya telah menciptakan
+variabel &lt;i&gt;string&lt;/i&gt;.
+
+00:04:18.000 --> 00:04:21.430
+Walaupun kita belum membahas kode
+variabel &lt;i&gt;string&lt;/i&gt;, saya ingin Anda untuk
+
+00:04:21.430 --> 00:04:25.090
+menebak, apakah nama variabelnya?
+
+00:04:25.090 --> 00:04:26.990
+Dan apakah nilai variabelnya?
+
+00:04:28.538 --> 00:04:31.110
+Kalau sudah selesai, silakan lanjutkan.
+

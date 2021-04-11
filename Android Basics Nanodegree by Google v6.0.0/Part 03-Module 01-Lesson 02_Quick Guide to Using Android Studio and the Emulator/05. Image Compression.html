@@ -1,0 +1,316 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Compression</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Quick Guide to Using Android Studio and the Emulator</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Quick Guide to Using Android Studio and the Emulator.html">01. Quick Guide to Using Android Studio and the Emulator</a>
+    </li>
+    <li class="">
+      <a href="02. The Tool Windows.html">02. The Tool Windows</a>
+    </li>
+    <li class="">
+      <a href="03. Android Studio Shortcuts.html">03. Android Studio Shortcuts</a>
+    </li>
+    <li class="">
+      <a href="04. Android Studio Updates and Understanding Release Notes.html">04. Android Studio Updates and Understanding Release Notes</a>
+    </li>
+    <li class="">
+      <a href="05. Image Compression.html">05. Image Compression</a>
+    </li>
+    <li class="">
+      <a href="06. Generating Your Own Bitmaps.html">06. Generating Your Own Bitmaps</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Image Compression</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="limited-device-memory">Limited Device Memory</h2>
+<p>If you’ve ever bought a mobile device, you’ve likely encountered the question of how much memory to get. Devices, especially mobile devices, have a limited amount of memory which dictates how many applications run at a given time.</p>
+<p>Image files can eat up a large chunk of the available memory. If your device runs out of memory, it can lead to nasty things happening such as your app crashing because there’s not enough for processes to run.</p>
+<h2 id="drawable-resources-that-use-bitmaps">Drawable Resources that Use Bitmaps</h2>
+<p>How do we balance the need to load images on our devices with the limited memory available?</p>
+<p>Let’s review and discuss how images are displayed on the screen. </p>
+<p>We saw that we can set the source of an ImageView to be a  Drawable Resource (Ex: <a href="https://github.com/drawable" rel="noopener noreferrer" target="_blank">@drawable</a>/cake)</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.37.30-pm.png" alt="Earlier, we saw that we can set the source of an ImageView to be a  Drawable Resource (Ex: @drawable/cake)." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Earlier, we saw that we can set the source of an ImageView to be a  Drawable Resource (Ex: <a href="https://github.com/drawable" rel="noopener noreferrer" target="_blank">@drawable</a>/cake).</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>A Drawable resource can be generally described as any graphic that can be drawn on screen. </p>
+<p>Every Drawable is stored as individual files in one of the <code>res/drawable</code> folders. Drawable resources come in a <a href="https://developer.android.com/guide/topics/resources/drawable-resource.html" rel="noopener noreferrer" target="_blank">variety of different graphical file types</a> but a common one is called Bitmap. </p>
+<p><strong>Bitmaps</strong> are graphic files that can have the extension <code>.png</code>, <code>.jpg</code>, or <code>.gif</code> and store images as a series of tiny squares called pixels. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.38.05-pm.png" alt="Bitmaps are stored as a series of small squares called Pixels. [Image Source](https://commons.wikimedia.org/wiki/File:Bitmap_vs_vector.svg)" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Bitmaps are stored as a series of small squares called Pixels. <a href="https://commons.wikimedia.org/wiki/File:Bitmap_vs_vector.svg" rel="noopener noreferrer" target="_blank">Image Source</a></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Earlier, Katherine discussed with us the concept of <em>Density Independent Pixels</em>  (<a href="https://classroom.udacity.com/courses/ud834/lessons/4027328704/concepts/42075886740923" rel="noopener noreferrer" target="_blank">Concept Video</a>) which allow ImageViews to scale and resize appropriately across a wide range screen sizes and pixel densities. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.38.56-pm.png" alt="Density Independent Pixels (dips) allow images to scale across different resolution devices. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Density Independent Pixels (dips) allow images to scale across different resolution devices. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Instead of using pixels, which vary in size and number across the different resolution devices, Android uses the unit <em>dips</em> so that the same bitmap of the image will appear the size no matter what device it’s displayed on.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.39.25-pm.png" alt="Android uses the unit dips so that the bitmaps size appears consistent across devices with different pixels. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Android uses the unit dips so that the bitmaps size appears consistent across devices with different pixels. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.39.31-pm.png" alt="Using dips (also dp), Android ensures an image appears the same across devices with different numbers of pixels on the screen. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Using dips (also dp), Android ensures an image appears the same across devices with different numbers of pixels on the screen. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Now if you’re wondering if this means we’ll need different sized images for each resolution then you’re correct!</p>
+<p>In order for that one 48dp x 48dp image to appear the same size across devices, we’ll need to have a number of images at different pixel size. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-25-at-3.39.38-pm.png" alt="We will need the same 48dp x 48 dp image in different pixel sizes. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We will need the same 48dp x 48 dp image in different pixel sizes. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Having several resolutions (the pixel count) of bitmaps available in your project means that when the device is running the app, only the bitmap specific to the device will be loaded. So instead of uploading the original image which could be huge and excessive, the only version of the image loaded is the lower pixel-count version of the same image re-sized in order to fit the memory limits and screen size of a mobile device.</p>
+<p>This means in our <code>res/</code> folder, the same image will have multiple dpi sizes. During run time when the image needs to be rendered, Android will determine which size is appropriate to pull up. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-30-at-2.51.49-pm.png" alt="The same image will need to be added at different dpi sizes" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>The same image will need to be added at different dpi sizes</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. Generating Your Own Bitmaps.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Image Compression')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

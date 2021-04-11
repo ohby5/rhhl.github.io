@@ -1,0 +1,164 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.670 --> 00:00:04.090
+Cảm ơn bạn đã dành thời gian để 
+phản hồi những nhiệm vụ bạn đã thực hiện.
+
+00:00:04.090 --> 00:00:07.600
+Thật tuyệt khi chỉ dạy người khác về thứ 
+bạn đã tạo ra, nhưng
+
+00:00:07.600 --> 00:00:11.550
+đó cũng là kỹ năng then chốt để 
+giao tiếp với thành viên nhóm mà bạn
+
+00:00:11.550 --> 00:00:14.080
+sẽ làm việc cùng trong một dự án phần mền.
+
+00:00:14.080 --> 00:00:16.480
+Với ý nghĩ đó, 
+hãy tiếp tục hướng về phía trước, như vậy
+
+00:00:16.480 --> 00:00:19.060
+bạn sẽ sớm gặp lại những người đó và 
+chia sẻ tiến bộ của bạn.
+
+00:00:20.340 --> 00:00:24.270
+Cho đến nay chức năng của bảng lựa chọn
+số lượng trong ứng dụng đã hoạt động tốt.
+
+00:00:24.270 --> 00:00:26.690
+Vì vậy giờ đây ta có thể dành một chút 
+thời gian cải thiện giao diện một chút,
+
+00:00:26.690 --> 00:00:27.760
+hấp dẫn hơn một chút.
+
+00:00:29.020 --> 00:00:31.190
+Chúng ta muốn hướng đến 
+gần hơn mục tiêu cuối cùng của chúng ta.
+
+00:00:31.190 --> 00:00:33.440
+Đây là những gì chúng ta hiện có, 
+và đây là những gì chúng ta mong muốn.
+
+00:00:34.590 --> 00:00:38.620
+Các nút trong ứng dụng đều hoạt động, 
+nhưng chúng không được bố trí tối ưu.
+
+00:00:38.620 --> 00:00:41.040
+Cách bố trí giúp 
+người dùng trải nghiệm ứng dụng tốt hơn,
+
+00:00:41.040 --> 00:00:44.605
+Bởi vì chúng ta sẽ thâm nhiều trường 
+nữa vào mẫu đặt hàng trong Bài 3.
+
+00:00:45.650 --> 00:00:47.170
+Với cách bố trí các nút như thế này,
+
+00:00:47.170 --> 00:00:51.460
+chúng ta dễ dàng xem qua danh sách 
+các trường trong mẫu đặt hàng nhanh chóng.
+
+00:00:51.460 --> 00:00:54.040
+Trong cách bố trí hiện tại, nếu bạn muốn 
+xem lướt nhanh mẫu đặt hàng,
+
+00:00:54.040 --> 00:00:58.120
+bạn sẽ phải đọc số lượng cộng với 
+hai trừ giá và vân vân.
+
+00:00:58.120 --> 00:01:02.200
+Vì vậy, sẽ nhanh hơn để xem lướt qua mẫu
+nếu các nút được bố trí như thế này.
+
+00:01:02.200 --> 00:01:05.820
+Cách bố trí được cập nhật này cũng tạo ra 
+nhiều không gian ngang trên
+
+00:01:05.820 --> 00:01:08.790
+màn hình, thay vì dồn 
+mọi thứ vào một cột dọc,
+
+00:01:08.790 --> 00:01:10.360
+chật hẹp.
+
+00:01:10.360 --> 00:01:13.590
+Thách thức bây giờ là xác định 
+khoảng cách giữa những gì ta hiện có và
+
+00:01:13.590 --> 00:01:14.880
+những gì ta mong muốn.
+
+00:01:14.880 --> 00:01:18.300
+Chúng ta có thể sử dụng lại các dạng xem 
+đã có trên màn hình và di chuyển chúng sang
+
+00:01:18.300 --> 00:01:23.510
+vị trí mới tạo thành bố trí mới không hoặc 
+có thể thêm hay bỏ các dạng xem hay không?
+
+00:01:23.510 --> 00:01:26.610
+Trước khi chúng ta lạc vào 
+các chi tiết của việc thay đổi XML,
+
+00:01:26.610 --> 00:01:30.570
+Tôi muốn bạn hãy lập trước kế hoạch 
+tiếp cận để xây dựng cách bố trí này.
+
+00:01:30.570 --> 00:01:33.630
+Nói theo cách riêng của bạn, hãy mô tả 
+suy nghĩ của bạn về mỗi bước chúng tôi dạy
+
+00:01:33.630 --> 00:01:35.380
+bạn về cách xây dựng cách bố trí.
+
+00:01:35.380 --> 00:01:37.290
+Bạn không cần phải viết 
+file XML vào thời điểm này.
+
+00:01:37.290 --> 00:01:39.340
+Bạn cần viết kế hoạch chiến lược của bạn.
+
+00:01:39.340 --> 00:01:42.900
+Những ghi chép này sẽ giúp bạn 
+viết mã lệnh thực sự ở mỗi bước, vì vậy
+
+00:01:42.900 --> 00:01:44.290
+hãy viết thật chi tiết như bạn muốn.
+
+00:01:44.290 --> 00:01:47.670
+Bước đầu tiên là chọn các dạng xem.
+
+00:01:47.670 --> 00:01:50.670
+Bạn cần những dạng xem nào trong 
+dạng xem văn bản, dạng xem hình ảnh,
+
+00:01:50.670 --> 00:01:52.480
+nút, vân vân?
+
+00:01:52.480 --> 00:01:54.550
+Bước thứ hai là 
+sắp xếp vị trí các dạng xem.
+
+00:01:54.550 --> 00:01:58.070
+Bạn có thể mô tả các dạng xem này 
+được sắp xếp thế nào trên màn hình không?
+
+00:01:58.070 --> 00:02:01.330
+Nhóm dạng xem nào thích hợp 
+để xây dựng cách bố trí này?
+
+00:02:01.330 --> 00:02:03.660
+Bước 3 là tạo phong cách cho các dạng xem.
+
+00:02:03.660 --> 00:02:06.520
+Còn điều gì chúng ta cần làm 
+để thay đổi diện mạo trực quan và
+
+00:02:06.520 --> 00:02:08.008
+cảm giác của từng dạng xem này không?
+

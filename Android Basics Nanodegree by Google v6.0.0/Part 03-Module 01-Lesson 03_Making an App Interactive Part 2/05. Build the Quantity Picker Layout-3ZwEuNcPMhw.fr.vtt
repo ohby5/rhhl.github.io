@@ -1,0 +1,356 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.350 --> 00:00:03.090
+Abord je regarde la capture d'écran et
+décide que, depuis le,
+
+00:00:03.090 --> 00:00:06.180
+Ceux-ci sont en rangées,
+il ressemble à une mise en page verticale linéaire.
+
+00:00:06.180 --> 00:00:08.410
+Le deuxième enfant si
+est pas une seule vue,
+
+00:00:08.410 --> 00:00:11.530
+Qui est en fait une disposition linéaire
+horizontale de trois points de vue.
+
+00:00:11.530 --> 00:00:14.710
+Ceci est ce que la hiérarchie de la vue
+schéma ressemblerait.
+
+00:00:14.710 --> 00:00:19.300
+Nous avons une disposition linéaire vertical comme une vue
+racine et cinq enfants de moins de cela.
+
+00:00:20.390 --> 00:00:23.050
+La disposition linéaire se
+a trois enfants ainsi.
+
+00:00:24.360 --> 00:00:29.700
+Une fois que nous avons le schéma il est facile de créer
+ce squelette de code XML maintenant.
+
+00:00:29.700 --> 00:00:32.009
+La vue racine est une disposition de linéaires et
+
+00:00:32.009 --> 00:00:36.160
+Il contient une vue de texte en tant que son premier enfant
+suivie par une disposition linéaire
+
+00:00:36.160 --> 00:00:38.650
+Qui dispose d'un bouton, affichage de texte,
+et bouton à l'intérieur de celui-ci.
+
+00:00:38.650 --> 00:00:42.560
+Et ceci est la balise de fermeture pour
+la disposition linéaire et
+
+00:00:42.560 --> 00:00:45.600
+Alors nous avons la vue de texte,
+autre vue de texte et un bouton.
+
+00:00:45.600 --> 00:00:49.230
+Quels sont tous les enfants de la mise en page
+parent linéaire.
+
+00:00:49.230 --> 00:00:52.230
+De ce XML nous pouvons aller
+pour Studio Android
+
+00:00:52.230 --> 00:00:56.460
+Modifier notre
+de mise en page existante à ressembler davantage à ce sujet.
+
+00:00:56.460 --> 00:01:00.310
+Dans les applications en studio je ouvrir
+fichier XML de disposition principale de l'activité.
+
+00:01:00.310 --> 00:01:03.039
+Nous allons faire les changements
+en place dans ce fichier afin
+
+00:01:03.039 --> 00:01:06.335
+Qu'ils correspondent plus étroitement
+à notre disposition souhaitée.
+
+00:01:06.335 --> 00:01:08.700
+Le premier enfant est une TextView.
+
+00:01:08.700 --> 00:01:09.880
+Que nous avons déjà.
+
+00:01:09.880 --> 00:01:11.350
+Et il est censé être
+l'en-tête de la quantité.
+
+00:01:12.500 --> 00:01:15.190
+Ensuite, nous devrions avoir une disposition linéaire
+imbriquée
+
+00:01:15.190 --> 00:01:17.680
+Qui contient trois vues à l'intérieur de celui-ci.
+
+00:01:17.680 --> 00:01:20.120
+Nous ne l'avons pas encore, alors ajoutons-le.
+
+00:01:20.120 --> 00:01:23.215
+Je vais appuyez sur Entrée et
+alors commencer juste en tapant LinearLayout.
+
+00:01:24.850 --> 00:01:27.390
+Il apparaît également comme l'un des
+les options complètes d'automobiles.
+
+00:01:27.390 --> 00:01:29.020
+Donc je peux juste frappé correct.
+
+00:01:29.020 --> 00:01:32.100
+Ensuite, il remplit automatiquement les attributs
+que je dois remplir.
+
+00:01:32.100 --> 00:01:33.610
+Comme largeur et la hauteur sont nécessaires.
+
+00:01:34.880 --> 00:01:38.020
+-Je régler la largeur à match_parent,
+qui à son tour
+
+00:01:38.020 --> 00:01:42.720
+Correspondre à la largeur de celui-ci est parent, et
+cela va correspondre à la largeur de l'écran.
+
+00:01:42.720 --> 00:01:45.890
+Pour hauteur de présentation, je ne veux pas
+ensemble match_parent, sinon,
+
+00:01:45.890 --> 00:01:49.970
+Il va pousser les autres vues
+hors de l'écran verticalement.
+
+00:01:49.970 --> 00:01:51.820
+Alors je vais juste dire
+wrap_content ici.
+
+00:01:53.680 --> 00:01:56.960
+De cette façon, l'LinearLayout ne
+être aussi grand que les deux boutons et
+
+00:01:56.960 --> 00:01:58.610
+TextView intérieur.
+
+00:01:58.610 --> 00:02:02.690
+Maintenant, cette balise de fermeture doit être déplacé après
+tous les enfants
+
+00:02:02.690 --> 00:02:04.060
+Du LinearLayout ont été ajoutés.
+
+00:02:04.060 --> 00:02:07.160
+Donc, ça va descendre ici.
+
+00:02:07.160 --> 00:02:09.320
+Quand vous avez des enfants
+l'intérieur d'un groupe de vues,
+
+00:02:09.320 --> 00:02:12.050
+Vous devriez en retrait
+les enfants en quatre espaces.
+
+00:02:12.050 --> 00:02:15.630
+Je vais ajouter un espace ici aussi
+parce que je voudrais avoir une ligne vide dans
+
+00:02:15.630 --> 00:02:17.090
+Entre chaque élément XML.
+
+00:02:18.260 --> 00:02:21.440
+Une autre chose qui nous manque est mise
+l'orientation de cette LinearLayout.
+
+00:02:23.210 --> 00:02:26.260
+Précédemment, nous avons décidé que le LinearLayout
+devrait être horizontal, de sorte
+
+00:02:26.260 --> 00:02:29.390
+Que les boutons et l'
+TextView apparaissent horizontalement.
+
+00:02:29.390 --> 00:02:30.979
+Cool.
+Maintenant que correspond à ce que nous voulions.
+
+00:02:32.150 --> 00:02:37.340
+Suivante nous avons, deux TextViews et un bouton
+que nous avons déjà dans notre mise en page.
+
+00:02:37.340 --> 00:02:39.010
+Donc je pense que nous avons terminé.
+
+00:02:39.010 --> 00:02:41.860
+Si vous voulez vérifier le panneau de conception,
+ce est ce que cela ressemblerait.
+
+00:02:43.470 --> 00:02:47.100
+Nous avons une mise en page verticale linéaire
+avec cinq enfants directs et
+
+00:02:47.100 --> 00:02:48.880
+Cette mise en linéaire a
+trois autres enfants.
+
+00:02:48.880 --> 00:02:52.120
+Lançons sur notre
+de l'appareil pour voir ce qui se passe.
+
+00:02:53.390 --> 00:02:55.740
+Donc, cela semble proche de ce que nous voulons, mais pas tout à fait
+.
+
+00:02:56.920 --> 00:03:00.060
+Le sélecteur de quantité est
+apparaît horizontalement, ce qui est un bon signe.
+
+00:03:00.060 --> 00:03:03.180
+Mais nous voulons la touche moins le
+le côté gauche et le bouton plus
+
+00:03:03.180 --> 00:03:08.355
+Pour être sur le côté de la main droite, comme le montre la capture d'écran
+Dans des aménagements souhaités.
+
+00:03:08.355 --> 00:03:11.675
+En outre, ces boutons sont étroitement serrés
+contre le bord de cette TextView.
+
+00:03:11.675 --> 00:03:15.080
+Si je me souviens bien la capture d'écran,
+nous voulons aussi huit creux de l'espace sur
+
+00:03:15.080 --> 00:03:17.851
+Le côté gauche et
+droite de cette TextView.
+
+00:03:18.962 --> 00:03:19.832
+Ajoutons donc que maintenant.
+
+00:03:21.252 --> 00:03:22.972
+Pour en revenir à l'XML,
+
+00:03:22.972 --> 00:03:26.702
+Je vais passer sur le bouton Plus de
+être après la TextView.
+
+00:03:26.702 --> 00:03:32.432
+Et puis déplacez le bouton moins
+être avant la TextView.
+
+00:03:32.432 --> 00:03:36.372
+Dans une ligne horizontale, nous devrions avoir
+la touche moins, suivie par les deux,
+
+00:03:36.372 --> 00:03:38.252
+Suivie par la touche plus.
+
+00:03:38.252 --> 00:03:41.320
+Nous voulons aussi ajouter le remplissage
+autour de cette TextView.
+
+00:03:41.320 --> 00:03:44.380
+Nous pourrions soit ajouter comme marge ou
+rembourrage, mais
+
+00:03:44.380 --> 00:03:46.376
+Je vais juste faire un rembourrage.
+
+00:03:46.376 --> 00:03:48.959
+Et nous allons mettre la valeur
+être huit trempettes.
+
+00:03:48.959 --> 00:03:50.543
+Très bien.
+
+00:03:50.543 --> 00:03:53.602
+Maintenant, je dois une intuition qu'il ya un tas de
+espaces blancs supplémentaires et
+
+00:03:53.602 --> 00:03:56.026
+L'ordre de nos attributs de
+peut être incorrect,
+
+00:03:56.026 --> 00:03:59.310
+Selon les android
+directives de style de code.
+
+00:03:59.310 --> 00:04:02.860
+Donc, dans le menu en haut de
+votre écran, cliquez sur le code et
+
+00:04:02.860 --> 00:04:04.890
+Puis cliquez sur le code de reformater.
+
+00:04:04.890 --> 00:04:06.980
+Et également réorganiser code.
+
+00:04:06.980 --> 00:04:09.120
+Et cela devrait réorganiser
+tous les attributs et
+
+00:04:09.120 --> 00:04:11.240
+Réparer tout le formatage pour
+automatiquement.
+
+00:04:12.430 --> 00:04:13.050
+Très bien.
+
+00:04:13.050 --> 00:04:13.930
+Lançons l'application à nouveau.
+
+00:04:15.550 --> 00:04:17.170
+Il.
+C'est mieux.
+
+00:04:17.170 --> 00:04:20.430
+Maintenant il ya l'espace autour de la deux et
+sur le bouton moins est sur la gauche
+
+00:04:20.430 --> 00:04:22.790
+Côté et le bouton plus
+est sur le côté droit.
+
+00:04:22.790 --> 00:04:24.668
+[SOUND] il semble bon.
+
+00:04:24.668 --> 00:04:27.610
+Et puis nous vérifions également
+qu'il fonctionne toujours.
+
+00:04:27.610 --> 00:04:30.620
+Alors, je vais choisir un arbitraire
+quantité et l'ordre.
+
+00:04:30.620 --> 00:04:32.035
+Et cela semble correct.
+
+00:04:32.035 --> 00:04:37.890
+[SOUND] qui était un long voyage pour obtenir cette quantité
+sélecteur sur l'écran.
+
+00:04:37.890 --> 00:04:40.110
+Tout droit.
+L'application est à la recherche vraiment bon.
+
+00:04:40.110 --> 00:04:43.390
+Mais jusqu'à présent, je ne vous ai montré
+comment afficher les numéros sur l'écran.
+
+00:04:43.390 --> 00:04:45.370
+Que faire si vous voulez afficher le texte de
+sur l'écran?
+
+00:04:46.470 --> 00:04:47.590
+Continuez à regarder pour le savoir.
+

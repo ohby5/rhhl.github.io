@@ -1,0 +1,449 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.068 --> 00:00:03.088
+Ao falarmos sobre posicionamento
+de Views, no último quiz,
+
+00:00:03.121 --> 00:00:05.689
+falamos
+sobre o uso do RelativeLayout.
+
+00:00:05.722 --> 00:00:06.857
+Eu sei disso,
+
+00:00:06.890 --> 00:00:10.328
+mas quero mostrar outra forma
+de construir o layout do aplicativo,
+
+00:00:10.361 --> 00:00:13.565
+que seria mais ideal,
+usando os ViewGroups aninhados.
+
+00:00:13.598 --> 00:00:18.003
+Isso significa colocar ViewGroups
+dentro de outros ViewGroups,
+
+00:00:18.036 --> 00:00:21.872
+assim, podemos construir layouts
+mais interessantes e complexos.
+
+00:00:21.905 --> 00:00:24.458
+Vejamos como construir
+um desses layouts.
+
+00:00:25.125 --> 00:00:28.494
+Imagine um LinearLayout vertical
+com três Views,
+
+00:00:28.527 --> 00:00:30.514
+uma ImageView
+e duas TextViews.
+
+00:00:30.547 --> 00:00:33.852
+E se quisermos sobrepor um texto
+em cima desta imagem?
+
+00:00:33.885 --> 00:00:36.288
+Com o LinearLayout,
+isso não é possível,
+
+00:00:36.321 --> 00:00:38.255
+mas com o Relative, sim.
+
+00:00:38.288 --> 00:00:42.359
+Podemos substituir este filho
+pelo RelativeLayout.
+
+00:00:42.392 --> 00:00:45.462
+Então colocamos a ImageView
+dentro do RelativeLayout.
+
+00:00:45.495 --> 00:00:49.733
+Esta ImageView está alinhada
+a cada limite do RelativeLayout pai.
+
+00:00:49.766 --> 00:00:52.285
+Vemos um exemplo
+de um RelativeLayout
+
+00:00:52.318 --> 00:00:55.874
+dentro
+de um LinearLayout maior.
+
+00:00:55.907 --> 00:00:59.843
+Podemos criar várias combinações
+dos ViewGroups em outros ViewGroups.
+
+00:00:59.876 --> 00:01:03.882
+Por exemplo, um RelativeLayout
+pode ser a RootView do aplicativo.
+
+00:01:03.915 --> 00:01:08.220
+Isso pode conter algumas Views,
+como uma ImageView e duas TextViews.
+
+00:01:08.253 --> 00:01:10.355
+Também podemos adicionar
+um LinearLayout
+
+00:01:10.388 --> 00:01:13.992
+como filho desse RelativeLayout
+mais amplo.
+
+00:01:14.025 --> 00:01:19.046
+O LinearLayout pode conter
+outros filhos, como duas ImageViews.
+
+00:01:19.713 --> 00:01:23.268
+Podemos aninhar quantos ViewGroups
+dentro de outros desejarmos,
+
+00:01:23.301 --> 00:01:26.338
+mas tome cuidado, porque,
+quanto mais aninhamento,
+
+00:01:26.371 --> 00:01:30.941
+mais caro será para seu aplicativo
+exibir o layout na tela.
+
+00:01:30.974 --> 00:01:34.012
+O RelativeLayout, em especial,
+é muito flexível,
+
+00:01:34.045 --> 00:01:37.997
+mas pode ser muito complexo
+calcular a posição das Views
+
+00:01:38.030 --> 00:01:39.451
+em relação às outras,
+
+00:01:39.484 --> 00:01:42.254
+então é melhor não ter
+muitas camadas de aninhamento
+
+00:01:42.287 --> 00:01:43.971
+dentro de um RelativeLayout.
+
+00:01:44.838 --> 00:01:47.424
+Eu peguei alguns aplicativos
+reais do Google
+
+00:01:47.457 --> 00:01:49.626
+para mostrar os casos
+nos quais seria útil
+
+00:01:49.659 --> 00:01:51.697
+usar ViewGroups aninhados.
+
+00:01:51.730 --> 00:01:55.064
+O aplicativo Google Now exibe
+cartões com informações relevantes
+
+00:01:55.097 --> 00:01:59.104
+a partir da situação atual,
+como a hora e a localização.
+
+00:01:59.137 --> 00:02:01.907
+Se você for fã de um time,
+como o Red Sox,
+
+00:02:01.940 --> 00:02:04.910
+ele mostrará o placar
+do último jogo.
+
+00:02:04.943 --> 00:02:06.844
+Para criarmos um layout
+desse cartão,
+
+00:02:06.877 --> 00:02:08.979
+podemos usar
+um LinearLayout vertical,
+
+00:02:09.012 --> 00:02:11.982
+porque as informações
+são exibidas em linhas.
+
+00:02:12.015 --> 00:02:16.720
+Mas o primeiro item no LinearLayout
+não é uma simples TextView,
+
+00:02:16.753 --> 00:02:19.024
+ele é composto
+de várias Views.
+
+00:02:19.057 --> 00:02:22.526
+Na verdade, construiríamos o item
+como um LinearLayout horizontal
+
+00:02:22.559 --> 00:02:25.262
+composto de uma ImageView
+de duas TextViews.
+
+00:02:25.295 --> 00:02:28.199
+O mesmo para o segundo item
+deste LinearLayout vertical.
+
+00:02:28.232 --> 00:02:29.949
+Aqui o LinearLayout
+horizontal
+
+00:02:29.982 --> 00:02:32.536
+teria uma ImageView
+e duas TextViews.
+
+00:02:32.569 --> 00:02:37.076
+Outro cartão do Google Now
+exibe cotações relevantes.
+
+00:02:37.109 --> 00:02:39.709
+Quem dera as ações do Google
+tivessem neste valor.
+
+00:02:39.742 --> 00:02:41.645
+Também podemos construir
+esse layout
+
+00:02:41.678 --> 00:02:45.549
+como um LinearLayout vertical,
+pois podemos imaginar as linhas.
+
+00:02:45.582 --> 00:02:48.285
+Mas as entradas do meio
+não são uma única TextView,
+
+00:02:48.318 --> 00:02:50.455
+mas várias.
+
+00:02:50.488 --> 00:02:53.023
+Neste item de linha
+sobre as ações do Google,
+
+00:02:53.056 --> 00:02:55.392
+podemos usar
+o LinearLayout horizontal
+
+00:02:55.425 --> 00:02:57.362
+preenchendo
+com quatro TextViews.
+
+00:02:57.395 --> 00:02:59.631
+O mesmo vale
+para as outras ações.
+
+00:02:59.664 --> 00:03:01.832
+Os LinearLayouts horizontais
+são filhos
+
+00:03:01.865 --> 00:03:04.151
+deste LinearLayout
+vertical maior.
+
+00:03:04.918 --> 00:03:08.740
+No aplicativo Google Play,
+podemos ouvir música.
+
+00:03:08.773 --> 00:03:11.208
+Embora pareça um layout
+complicado,
+
+00:03:11.241 --> 00:03:14.845
+podemos dividi-lo em ViewGroups
+menores, que podemos reconhecer.
+
+00:03:14.878 --> 00:03:17.449
+Este padrão parece
+um LinearLayout vertical
+
+00:03:17.482 --> 00:03:21.386
+com três filhos diferentes.
+O primeiro filho pode ser construído
+
+00:03:21.419 --> 00:03:25.290
+com um RelativeLayout,
+pois as Views se relacionam.
+
+00:03:25.323 --> 00:03:28.293
+O segundo filho também
+pode ser construído dessa forma,
+
+00:03:28.326 --> 00:03:30.861
+porque as Views
+estão se sobrepondo.
+
+00:03:30.894 --> 00:03:34.566
+O terceiro filho parece ser
+um LinearLayout horizontal
+
+00:03:34.599 --> 00:03:36.935
+composto por cinco botões.
+
+00:03:36.968 --> 00:03:40.405
+Podemos usar ViewGroups aninhados
+para construir essa tela.
+
+00:03:40.438 --> 00:03:42.240
+Essa é uma forma
+de criar o layout,
+
+00:03:42.273 --> 00:03:44.591
+mas existem muitas outras.
+
+00:03:45.359 --> 00:03:48.647
+No aplicativo Google Maps,
+existem páginas detalhadas
+
+00:03:48.680 --> 00:03:51.382
+de localizações individuais,
+como para restaurantes.
+
+00:03:51.415 --> 00:03:54.786
+Não podemos construir esta tela
+com um único LinearLayout
+
+00:03:54.819 --> 00:03:56.321
+ou RelativeLayout,
+
+00:03:56.354 --> 00:03:58.657
+precisamos aninhar
+muitos ViewGroups.
+
+00:03:58.690 --> 00:04:02.793
+Em escala maior, as informações
+são quase organizadas em linhas,
+
+00:04:02.826 --> 00:04:05.997
+então podemos usar o LinearLayout
+vertical como exibição pai.
+
+00:04:06.030 --> 00:04:07.831
+Um filho pode ser
+este layout,
+
+00:04:07.864 --> 00:04:10.202
+outro filho pode ser
+esta linha de botões,
+
+00:04:10.235 --> 00:04:13.872
+outro pode ser esta descrição,
+e assim por diante.
+
+00:04:13.905 --> 00:04:16.808
+Mas, em cada filho,
+não há apenas uma View,
+
+00:04:16.841 --> 00:04:18.742
+mas várias.
+
+00:04:18.775 --> 00:04:21.278
+Este filho no LinearLayout
+mais amplo
+
+00:04:21.311 --> 00:04:24.049
+é composto por três
+Views individuais.
+
+00:04:24.082 --> 00:04:26.351
+Podemos usar
+um LinearLayout horizontal
+
+00:04:26.384 --> 00:04:28.453
+com pesos iguais
+para cada View,
+
+00:04:28.486 --> 00:04:30.921
+para que sejam distribuídas
+igualmente.
+
+00:04:30.954 --> 00:04:33.458
+Este filho do LinearLayout
+vertical mais amplo
+
+00:04:33.491 --> 00:04:36.026
+pode ser composto
+de um LinearLayout horizontal
+
+00:04:36.059 --> 00:04:38.295
+com uma ImageView
+e uma TextView.
+
+00:04:38.328 --> 00:04:40.265
+Se continuarmos
+descendo na página,
+
+00:04:40.298 --> 00:04:42.833
+veremos mais informações
+sobre o restaurante.
+
+00:04:42.866 --> 00:04:47.005
+Podemos imaginar as linhas
+individuais de informações.
+
+00:04:47.038 --> 00:04:50.941
+Podemos usar um LinearLayout
+vertical para elas.
+
+00:04:50.974 --> 00:04:54.411
+Algumas linhas são mais complexas
+do que uma única TextView.
+
+00:04:54.444 --> 00:04:58.148
+Esta linha exibe os horários
+disponíveis para reserva.
+
+00:04:58.181 --> 00:05:00.986
+Ela é composta de três botões,
+que podemos organizar
+
+00:05:01.019 --> 00:05:03.021
+com um LinearLayout
+horizontal.
+
+00:05:03.054 --> 00:05:07.224
+A linha de fotos pode ser construída
+com um LinearLayout horizontal.
+
+00:05:07.257 --> 00:05:10.160
+Na verdade,
+no LinearLayout horizontal,
+
+00:05:10.193 --> 00:05:13.063
+o primeiro filho
+não é apenas uma ImageView,
+
+00:05:13.096 --> 00:05:15.099
+mas uma ImageView
+com uma TextView,
+
+00:05:15.132 --> 00:05:18.668
+então podemos usar o RelativeLayout
+para construir o primeiro filho.
+
+00:05:18.701 --> 00:05:22.407
+Vimos como pode haver ViewGroups
+dentro de ViewGroups,
+
+00:05:22.440 --> 00:05:24.074
+dentro de ViewGroups.
+
+00:05:24.107 --> 00:05:28.113
+Existem mais ViewGroups além
+do Relative e do LinearLayout,
+
+00:05:28.146 --> 00:05:30.830
+há o FrameLayout
+e o GridLayout.
+
+00:05:30.863 --> 00:05:33.018
+Não teremos tempo
+de falar sobre eles,
+
+00:05:33.051 --> 00:05:36.253
+mas eu recomendo
+que pesquise,
+
+00:05:36.286 --> 00:05:40.507
+pois eles podem ser melhores do que
+o Relative ou o LinearLayouts.
+

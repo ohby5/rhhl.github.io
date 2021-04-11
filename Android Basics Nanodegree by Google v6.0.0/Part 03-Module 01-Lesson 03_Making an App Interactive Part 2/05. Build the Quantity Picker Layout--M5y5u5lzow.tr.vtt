@@ -1,0 +1,180 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.345 --> 00:00:04.298
+Vay canına, bu zor anlaşılan bir kavramdı,
+fakat iyiydin.
+
+00:00:04.298 --> 00:00:08.210
+Bu da Android'te harika arayüzler
+tasarlayabilmemizi sağlayacak,
+
+00:00:08.210 --> 00:00:11.420
+çünkü neredeyse tüm ekranlar
+bir çeşit iç içe düzen içerir.
+
+00:00:11.420 --> 00:00:15.080
+Correll de önceden Google Play 
+uygulamasında bundan bahsediyordu.
+
+00:00:15.080 --> 00:00:17.980
+Tüm bu hazırlıktan sonra,
+Android Studio'ya dönerek
+
+00:00:17.980 --> 00:00:21.630
+geliştirilmiş bir miktar seçici için
+değişiklikler yapmaya hazırız.
+
+00:00:22.860 --> 00:00:26.620
+Eğer merak ediyorsan, Katherine,
+ya bir uygulama yapmaya çalışıyorsam
+
+00:00:26.620 --> 00:00:29.230
+ve önümde büyülü bir şekilde
+
+00:00:29.230 --> 00:00:31.360
+seçmem için üç tane XML yerleşimi
+belirmezse?
+
+00:00:31.360 --> 00:00:33.920
+İyi bir soru.
+
+00:00:33.920 --> 00:00:37.390
+Şu ana kadar, XML okuma ve
+hiyeraşi diyagramı oluşturma
+
+00:00:37.390 --> 00:00:39.500
+üzerinde çalıştık.
+
+00:00:39.500 --> 00:00:41.708
+XML yerleşimlerini okuma ve
+
+00:00:41.708 --> 00:00:44.600
+ekranda nasıl görüneceklerini
+çizme konusunda da çalıştık.
+
+00:00:44.600 --> 00:00:48.610
+Şimdi ise yapmak istediğimiz şeyin
+tasarımını görme ve
+
+00:00:48.610 --> 00:00:50.920
+XML'ini yazma zamanı.
+
+00:00:50.920 --> 00:00:54.380
+Önceki testte XML çözümünü
+verdiğimin farkındayım.
+
+00:00:54.380 --> 00:00:58.190
+Dikkat ediyordum, fakat çözüme bakmanı
+istemiyorum.
+
+00:00:58.190 --> 00:01:01.550
+Yapmak istediğin şeyin taslağını, ya da 
+bir ekran görüntüsünü görüp
+
+00:01:01.550 --> 00:01:05.480
+onun için XML yazabilme yeteneğin
+üzerine çalışmanı istiyorum.
+
+00:01:06.520 --> 00:01:09.785
+Normalde yapmak istediğimiz şeyin
+ekran görüntüsü ile başlardık
+
+00:01:10.135 --> 00:01:13.985
+Bunu, sizin için uygulamayı tasarlayan
+takımınzdaki tasarımcıdan alabilirsin.
+
+00:01:13.985 --> 00:01:16.215
+Eğer bir tasarımcınız yoksa,
+
+00:01:16.215 --> 00:01:18.795
+kendi başına da çizebilirsin.
+
+00:01:18.795 --> 00:01:22.367
+Sonra da bunu nasıl view ve ViewGroup'lara
+böleceğini düşünmen gerek.
+
+00:01:22.367 --> 00:01:26.797
+İlk önce işaretleyip sonra 
+alt ve ana objeler arasındaki ilişki için
+
+00:01:26.797 --> 00:01:30.327
+görünüm hiyeraşi diyagramını
+çizmeyi deneyebilirsin.
+
+00:01:30.327 --> 00:01:35.737
+Bu diyagramı bitirince, XML yerleşim
+kodunun temelini yazmaya başlayabilirsin
+
+00:01:36.227 --> 00:01:38.297
+Bu kısmı alıştırma olarak
+sana bırakıyorum.
+
+00:01:38.297 --> 00:01:43.157
+Değişiklikleri activity_main.xml 
+yerleşim dosyasında yapacaksın.
+
+00:01:43.157 --> 00:01:45.197
+XML'ını buraya yazıp
+
+00:01:45.197 --> 00:01:49.220
+bir önizlemesini görmek dışında, bu
+dizayn bölmesine de tıklayabilirsin.
+
+00:01:49.220 --> 00:01:52.240
+Bu Dizayn sekmesi, diğeri de
+Yazı sekmesi idi.
+
+00:01:52.240 --> 00:01:56.690
+Dizayn bölmesi görünümleri
+cihaza sürükleyip bırakmana olanak sağlar.
+
+00:01:56.690 --> 00:01:59.950
+Üst sağ köşede 
+bileşen ağacını da görebilirsin.
+
+00:01:59.950 --> 00:02:03.930
+Bu, basitçe anlatacak olursak,
+hiyeraşindeki tüm görünümlerin bir ağacı.
+
+00:02:03.930 --> 00:02:07.030
+Şu anda dikey LinearLayout'umuz var,
+ana görünüm bu, ve
+
+00:02:07.030 --> 00:02:09.180
+tüm bu alt görünümleri içine alıyor.
+
+00:02:09.180 --> 00:02:11.420
+İç içe ViewGroupların olsa idi
+onlar da burada gözükürdü.
+
+00:02:12.800 --> 00:02:15.790
+Şimdi git ve Android Studio'da
+bu görünümü oluştur.
+
+00:02:15.790 --> 00:02:17.860
+Görünümleri seçip konumlandırdıktan sonra
+
+00:02:17.860 --> 00:02:20.290
+bunun gibi görünmeleri için 
+tasarlamayı unutma.
+
+00:02:20.290 --> 00:02:22.420
+Görünümlerin tasarımları çoğunlukla aynı,
+
+00:02:22.420 --> 00:02:28.200
+iki ve eksi ve artı butonları
+arasındaki sekiz dp'lik boşluk hariç.
+
+00:02:28.330 --> 00:02:30.710
+Söylediğim gibi,
+koda bakmaktan kaçının ve
+
+00:02:30.710 --> 00:02:32.710
+kendiniz yapmaya çalışın.
+
+00:02:32.710 --> 00:02:35.220
+Bitirdiğinizde 
+kutucuğu işaretleyerek devam edin.
+

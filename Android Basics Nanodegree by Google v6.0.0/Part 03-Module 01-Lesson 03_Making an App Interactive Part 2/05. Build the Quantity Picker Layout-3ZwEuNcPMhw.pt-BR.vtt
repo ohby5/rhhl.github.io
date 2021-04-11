@@ -1,0 +1,359 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.237 --> 00:00:04.164
+Eu olho a tela para ver
+se as Views estão em linhas,
+
+00:00:04.197 --> 00:00:06.180
+e parece ser
+um LinearLayout vertical.
+
+00:00:06.213 --> 00:00:08.283
+A segunda filha
+não é uma View única,
+
+00:00:08.316 --> 00:00:11.476
+na verdade, há um LinearLayout
+horizontal com três Views.
+
+00:00:11.509 --> 00:00:14.643
+O diagrama da hierarquia View
+ficaria assim.
+
+00:00:14.676 --> 00:00:17.604
+Há um LinearLayout vertical
+como RootView
+
+00:00:17.637 --> 00:00:20.197
+e cinco filhos abaixo disso.
+
+00:00:20.230 --> 00:00:24.110
+O LinearLayout também possui
+três filhos.
+
+00:00:24.143 --> 00:00:29.461
+Com o diagrama, fica fácil
+criar o esqueleto do código XML.
+
+00:00:29.494 --> 00:00:31.727
+A RootView
+é um LinearLayout
+
+00:00:31.760 --> 00:00:34.335
+que contém uma TextView
+como primeiro filho,
+
+00:00:34.368 --> 00:00:36.095
+seguida por um LinearLayout,
+
+00:00:36.128 --> 00:00:39.344
+que tem um botão,
+uma TextView e outro botão.
+
+00:00:39.377 --> 00:00:42.288
+E esta é a tag de encerramento
+do LinearLayout.
+
+00:00:42.321 --> 00:00:45.424
+Depois, temos uma TextView,
+outra TextView e um botão,
+
+00:00:45.457 --> 00:00:49.000
+que são filhos
+do LinearLayout pai.
+
+00:00:49.033 --> 00:00:51.864
+Com este XML,
+podemos ir no Android Studio
+
+00:00:51.897 --> 00:00:56.184
+para modificar o layout existente
+para que fique parecido com isto.
+
+00:00:56.217 --> 00:01:00.248
+No Android Studio, abro o arquivo
+de layout activity_main.xml.
+
+00:01:00.281 --> 00:01:03.006
+Faremos as alterações
+neste arquivo,
+
+00:01:03.039 --> 00:01:06.198
+para que fique mais parecido
+com o layout desejado.
+
+00:01:06.231 --> 00:01:09.785
+O primeiro filho é a TextView,
+que já temos,
+
+00:01:09.818 --> 00:01:12.090
+que é o cabeçalho Quantity.
+
+00:01:12.123 --> 00:01:17.464
+Agora devemos ter um LinearLayout
+aninhado com três Views dentro.
+
+00:01:17.497 --> 00:01:20.065
+Ainda não temos isso,
+então vamos adicioná-lo.
+
+00:01:20.098 --> 00:01:24.018
+Dou Enter e começo a digitar
+LinearLayout.
+
+00:01:24.706 --> 00:01:27.312
+Vemos as opções
+de preenchimento automático,
+
+00:01:27.345 --> 00:01:28.975
+então basta selecionar.
+
+00:01:29.008 --> 00:01:31.762
+Isso gera atributos
+que devemos preencher,
+
+00:01:31.795 --> 00:01:34.553
+porque a largura
+e a altura são necessárias.
+
+00:01:34.586 --> 00:01:39.585
+A largura será match_parent,
+que seguirá a largura do pai,
+
+00:01:39.618 --> 00:01:42.466
+que seguirá a largura
+da tela.
+
+00:01:42.499 --> 00:01:45.315
+Para a altura, não quero
+fazer o mesmo,
+
+00:01:45.348 --> 00:01:49.642
+caso contrário, isso empurrará
+as Views para fora da tela.
+
+00:01:49.675 --> 00:01:52.547
+Eu deixarei
+como wrap_content.
+
+00:01:53.547 --> 00:01:55.842
+Assim, o LinearLayout será
+tão alto
+
+00:01:55.875 --> 00:01:58.507
+quanto os dois botões
+e a TextView dentro dele.
+
+00:01:58.540 --> 00:02:02.259
+A tag de encerramento deve estar
+depois de todos os filhos
+
+00:02:02.292 --> 00:02:05.179
+do LinearLayout.
+
+00:02:05.212 --> 00:02:07.075
+Isso vai aqui embaixo.
+
+00:02:07.108 --> 00:02:09.203
+Os filhos
+dentro de um ViewGroup
+
+00:02:09.236 --> 00:02:12.980
+devem ser recuados
+em quatro espaços.
+
+00:02:13.013 --> 00:02:14.460
+Adicionarei
+um espaço aqui,
+
+00:02:14.493 --> 00:02:17.889
+porque prefiro dar espaço
+entre os elementos do XML.
+
+00:02:17.922 --> 00:02:21.964
+Só falta configurar a orientação
+do LinearLayout.
+
+00:02:22.986 --> 00:02:25.906
+Nós definimos que o LinearLayout
+deveria ser horizontal,
+
+00:02:25.939 --> 00:02:29.280
+assim, os botões e as TextViews
+apareceriam horizontalmente.
+
+00:02:29.313 --> 00:02:31.855
+Agora está como desejamos.
+
+00:02:31.888 --> 00:02:35.078
+Depois, temos duas TextViews
+e um botão,
+
+00:02:35.111 --> 00:02:37.310
+que já estão
+no nosso layout.
+
+00:02:37.343 --> 00:02:38.830
+Acho que terminamos.
+
+00:02:38.863 --> 00:02:42.591
+Ao conferir o painel de design,
+ele estará assim.
+
+00:02:43.330 --> 00:02:46.935
+Temos um LinearLayout vertical
+com cinco filhos diretos,
+
+00:02:46.968 --> 00:02:49.824
+e, este LinearLayout
+tem mais três filhos.
+
+00:02:49.857 --> 00:02:52.878
+Vamos executar no dispositivo
+para ver o que acontece.
+
+00:02:52.911 --> 00:02:56.519
+Está próximo do que desejamos,
+mas ainda falta.
+
+00:02:56.552 --> 00:02:59.702
+O seletor de quantidade
+aparece horizontalmente,
+
+00:02:59.735 --> 00:03:04.477
+mas queremos o botão de subtração
+à esquerda e o de adição, à direita,
+
+00:03:04.510 --> 00:03:08.094
+como vemos na tela
+do layout desejado.
+
+00:03:08.127 --> 00:03:12.077
+E os botões estão espremidos
+no limite desta TextView.
+
+00:03:12.110 --> 00:03:15.271
+Queremos um espaço de 8dp
+
+00:03:15.304 --> 00:03:18.839
+à esquerda
+e à direita desta TextView.
+
+00:03:18.872 --> 00:03:20.383
+Vamos adicionar isso.
+
+00:03:21.128 --> 00:03:25.094
+Retornando ao XML,
+moverei o botão de adição
+
+00:03:25.127 --> 00:03:27.101
+para que esteja
+após a TextView,
+
+00:03:27.134 --> 00:03:31.176
+e o de subtração,
+antes da TextView.
+
+00:03:31.943 --> 00:03:35.118
+Na linha horizontal,
+temos o botão de subtração,
+
+00:03:35.151 --> 00:03:38.054
+seguido pelo 2
+e pelo botão de adição.
+
+00:03:38.087 --> 00:03:41.213
+Também adicionaremos preenchimento
+em volta da TextView.
+
+00:03:41.246 --> 00:03:43.735
+Isso pode ser feito
+com margem ou preenchimento,
+
+00:03:43.768 --> 00:03:46.407
+mas eu usarei
+o preenchimento.
+
+00:03:46.440 --> 00:03:48.830
+O valor será igual a 8dp.
+
+00:03:48.863 --> 00:03:50.430
+Muito bem. Ótimo.
+
+00:03:50.463 --> 00:03:53.206
+Creio que haja
+espaços em branco
+
+00:03:53.239 --> 00:03:56.189
+e que a ordem dos atributos
+esteja incorreta,
+
+00:03:56.222 --> 00:03:59.238
+de acordo com o guia de estilo
+de código do Android.
+
+00:03:59.271 --> 00:04:02.462
+No menu, no topo da tela,
+clique em código,
+
+00:04:02.495 --> 00:04:06.765
+em reformatar código
+e em reorganizar código.
+
+00:04:06.798 --> 00:04:08.967
+Isso deverá reorganizar
+os atributos
+
+00:04:09.000 --> 00:04:12.213
+e consertar a formatação
+automaticamente.
+
+00:04:12.246 --> 00:04:14.711
+Ótimo. Vamos executar
+o aplicativo novamente.
+
+00:04:15.319 --> 00:04:16.830
+Agora está melhor.
+
+00:04:16.863 --> 00:04:20.542
+Vemos o espaço em volta do 2,
+o botão de subtração está à esquerda
+
+00:04:20.575 --> 00:04:22.703
+e o de adição, à direita.
+
+00:04:22.736 --> 00:04:24.494
+Legal! Parece bom!
+
+00:04:24.527 --> 00:04:27.326
+Vamos verificar
+se continua funcionando.
+
+00:04:27.359 --> 00:04:29.725
+Usarei uma quantidade
+arbitrária
+
+00:04:29.758 --> 00:04:32.925
+e clicarei em Order.
+Parece correto.
+
+00:04:32.958 --> 00:04:37.558
+Trabalhamos muito para chegar
+neste seletor de quantidade.
+
+00:04:37.591 --> 00:04:39.974
+O aplicativo está muito bom,
+
+00:04:40.007 --> 00:04:43.076
+mas eu só mostrei como exibir
+números na tela,
+
+00:04:43.109 --> 00:04:46.260
+e se quisermos exibir texto?
+
+00:04:46.293 --> 00:04:48.118
+Continue assistindo
+para descobrir.
+

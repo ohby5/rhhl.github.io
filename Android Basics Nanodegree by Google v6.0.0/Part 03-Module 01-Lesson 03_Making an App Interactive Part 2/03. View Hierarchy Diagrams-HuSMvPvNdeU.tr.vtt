@@ -1,0 +1,236 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.300 --> 00:00:03.180
+İçiçe <i>ViewGroup</i>'ların uygulamamızda
+nasıl kullanıldığına bakalım.
+
+00:00:03.180 --> 00:00:06.540
+Uygulamamızdaki bilgi dikey sütunda 
+düzenlenmiş gibi görünüyor.
+
+00:00:06.540 --> 00:00:09.120
+Bu yüzden bunun için dikey bir 
+<i>LinearLayout</i> kullanabiliriz.
+
+00:00:09.120 --> 00:00:10.100
+Bu şimdilik iyi görünüyor,
+
+00:00:10.100 --> 00:00:14.140
+çünkü dikey <i>LinearLayout</i>'da 
+satır başına bir görünüm var.
+
+00:00:14.140 --> 00:00:17.630
+Ama bu satıra gelince, esasen
+birden çok görünümden oluşmuş.
+
+00:00:17.630 --> 00:00:21.640
+Bir <i>Button</i>, bir <i>TextView</i> ve bir 
+<i>Button</i>'dan oluşan bu satırı oluşturmak
+
+00:00:21.640 --> 00:00:23.080
+için yatay bir 
+<i>LinearLayout</i> kullanabiliriz.
+
+00:00:23.080 --> 00:00:25.711
+Yani bu LinearLayout, daha büyük 
+dikey <i>LinearLayout</i>'da
+
+00:00:25.711 --> 00:00:27.710
+ikinci child olur.
+
+00:00:28.910 --> 00:00:32.030
+Birazdan size üç farklı XML 
+yerleşim dosyası göstereceğim
+
+00:00:32.030 --> 00:00:35.050
+ve hangisinin istediğimiz 
+yerleşimi doğru olarak oluşturduğunu
+
+00:00:35.050 --> 00:00:36.860
+düşündüğünüzü size sormak istiyorum.
+
+00:00:36.860 --> 00:00:38.860
+Ancak bu dosyaları kopyalayıp 
+Android Studio'da
+
+00:00:38.860 --> 00:00:40.460
+çalıştırmanızı istemiyorum.
+
+00:00:40.460 --> 00:00:43.160
+Bu kodu okuyup anlamanıza 
+dayanarak uygun bir tahmin
+
+00:00:43.160 --> 00:00:44.239
+yapmanızı istiyorum.
+
+00:00:45.460 --> 00:00:47.940
+Bu bağlantıyı eğitmen 
+notlarında bulabilirsiniz.
+
+00:00:47.940 --> 00:00:54.950
+Üç seçenek listelenmiş, 
+A seçeneği, B seçeneği ve C seçeneği.
+
+00:00:54.950 --> 00:00:58.100
+Bu seçeneklerden biri istediğimiz 
+yerleşimi doğru olarak oluşturur.
+
+00:00:59.500 --> 00:01:02.460
+Bu zor olacak, çünkü daha önce 
+içiçe <i>ViewGroup</i> olan
+
+00:01:02.460 --> 00:01:04.000
+XML'le daha önce karşılaşmadık.
+
+00:01:04.000 --> 00:01:07.440
+Bu sorunu iki teste böleceğiz,
+
+00:01:07.440 --> 00:01:09.800
+böylece henüz sizden bir karar 
+vermenizi istemeyeceğim.
+
+00:01:09.800 --> 00:01:13.390
+İlk testte her XML dosyası için 
+görünüm sıradüzen diyagramı
+
+00:01:13.390 --> 00:01:15.600
+çizmenizi istiyorum.
+
+00:01:15.600 --> 00:01:18.740
+Görünüm sıradüzen diyagramının neye 
+benzediğiyle ilgili işte kısa bir sunum.
+
+00:01:19.860 --> 00:01:20.720
+Bu diyagramları
+
+00:01:20.720 --> 00:01:23.940
+çizmek için bir kağıt ve yazacak 
+bir şeye ihtiyacınız olacak.
+
+00:01:23.940 --> 00:01:28.340
+Android'in bu görünümleri ekranda 
+düzenleme şekli, bir görünüm sıradüzeni
+
+00:01:28.340 --> 00:01:30.650
+veya bir görünüm ağaç yapısı şeklindedir.
+
+00:01:30.650 --> 00:01:34.010
+Bu basitçe görünüm sıradüzenini 
+temsil eden bir diyagramdır.
+
+00:01:34.010 --> 00:01:37.870
+Görünümler arasında parent 
+ve child ilişkilerini gösterir.
+
+00:01:37.870 --> 00:01:41.720
+Bu tüm yerleşimin kök görünümü 
+bir <i>LinearLayout</i>'tur.
+
+00:01:41.720 --> 00:01:45.770
+Üç child'ı var, bir <i>RelativeLayout</i>,
+bir <i>TextView</i> ve diğer bir <i>TextView</i>.
+
+00:01:45.770 --> 00:01:49.842
+Sonra bu <i>RelativeLayout</i>'un kendi 
+child'ları var, bir <i>ImageView</i> ve
+
+00:01:49.842 --> 00:01:51.450
+bir <i>TextView</i>.
+
+00:01:51.450 --> 00:01:53.170
+Puddles the Pig uygulamamız için,
+
+00:01:53.170 --> 00:01:56.620
+Android tarafından 
+oluşturulan sıradüzen budur.
+
+00:01:56.620 --> 00:02:00.999
+Kök görünüm olarak bir <i>RelativeLayout</i> var 
+ve onun dört child var, bir <i>ImageView</i>,
+
+00:02:00.999 --> 00:02:03.606
+bir çift <i>TextView</i> ve de bir <i>LinearLayout</i>.
+
+00:02:03.606 --> 00:02:07.210
+Bu <i>LinearLayout</i>'a gelince, child'ları 
+olarak iki <i>ImageView</i> var.
+
+00:02:08.820 --> 00:02:11.540
+Bir görünüm sıradüzen diyagramının 
+ne olduğunu şimdi anladınız.
+
+00:02:11.540 --> 00:02:14.800
+Her XML yerleşimi için diyagram 
+çizerek, hangi görünümün
+
+00:02:14.800 --> 00:02:19.650
+parent görünüm olduğunu, child'larının 
+kim olduğunu ve bu child'ların child
+
+00:02:19.650 --> 00:02:22.000
+görünümlerinin olup olmadığını 
+daha iyi anlayacaksınız.
+
+00:02:23.230 --> 00:02:27.520
+Eğer hâlâ bir ipucuna ihtiyacınız varsa, 
+XML yerleşimlerinden görünüm sıradüzen
+
+00:02:27.520 --> 00:02:29.600
+diyagramı çizmeye giden
+bazı örnekler burada.
+
+00:02:30.200 --> 00:02:33.250
+Bu yerleşimde bir <i>LinearLayout</i>'un 
+kök görünümü var.
+
+00:02:33.250 --> 00:02:34.260
+Bu arada, bu noktaları
+
+00:02:34.260 --> 00:02:36.650
+buraya ekledim, çünkü bütün 
+kodu buraya sığdıramadım.
+
+00:02:36.650 --> 00:02:39.800
+<i>LinearLayout</i>'u bir kök görünüm olarak
+ağacın üstüne çizersiniz.
+
+00:02:40.900 --> 00:02:43.250
+Sonra iki child <i>TextView</i> barındırır,
+
+00:02:43.250 --> 00:02:46.970
+böylece altına child olarak 
+çizersiniz ve hepsi bu.
+
+00:02:46.970 --> 00:02:49.230
+Bu daha karmaşık bir yerleşim.
+
+00:02:49.230 --> 00:02:51.602
+Bir <i>LinearLayout</i> olan 
+bir kök görünümümüz var
+
+00:02:51.602 --> 00:02:55.636
+ve üç direkt child içeriyor, 
+iki <i>TextView</i> ve bir <i>RelativeLayout</i>,
+
+00:02:55.636 --> 00:02:59.870
+sonra <i>RelativeLayout</i> içinde child olarak 
+bir <i>ImageView</i> ve bir <i>TextView</i> var.
+
+00:02:59.870 --> 00:03:03.100
+Her seçenek için görünüm sıradüzen 
+diyagramını çizmeniz bitince,
+
+00:03:03.100 --> 00:03:06.030
+devam etmek için 
+bu kutuları işaretleyin.
+
+00:03:06.030 --> 00:03:10.390
+Bir sonraki testte, hangi seçeneğin 
+en iyi olduğunu soracağım,
+
+00:03:10.390 --> 00:03:12.740
+ama şimdilik bir karar vermek 
+zorunda değilsiniz.
+

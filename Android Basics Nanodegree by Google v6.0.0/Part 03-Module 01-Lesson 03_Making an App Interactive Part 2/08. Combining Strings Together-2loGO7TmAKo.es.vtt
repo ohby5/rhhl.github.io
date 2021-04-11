@@ -1,0 +1,234 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.300 --> 00:00:02.208
+Cuando trabajamos
+con strings (cadenas) en Java,
+
+00:00:02.300 --> 00:00:05.296
+hay que tener claro el concepto
+de <i>concatenación de strings</i>.
+
+00:00:05.680 --> 00:00:06.832
+Es una expresión que asusta,
+
+00:00:07.088 --> 00:00:10.448
+pero solo significa que unimos
+los extremos de cadenas de caracteres.
+
+00:00:10.943 --> 00:00:12.510
+Si esto es una string
+y esto es otra,
+
+00:00:12.680 --> 00:00:16.207
+puedes combinarlas concatenándolas
+para crear una string aún más larga.
+
+00:00:16.740 --> 00:00:20.750
+Para concatenar estas strings
+usamos el operador <i>+</i>.
+
+00:00:20.750 --> 00:00:24.000
+Es el mismo símbolo de adición
+que conocemos por las matemáticas.
+
+00:00:24.000 --> 00:00:28.384
+Igual que se pueden sumarse
+números, pueden concatenarse strings.
+
+00:00:29.180 --> 00:00:30.272
+Veamos un ejemplo.
+
+00:00:30.750 --> 00:00:34.976
+Digamos que tengo tres strings diferentes.
+Un literal de string dice <i>I need</i>,
+
+00:00:35.220 --> 00:00:37.056
+otro literal de string dice
+<i>2 cups of coffee</i>
+
+00:00:37.280 --> 00:00:39.040
+y otro literal de string dice <i>on Monday</i>.
+
+00:00:39.620 --> 00:00:43.184
+Puedo usar el símbolo <i>+</i>
+para concatenar todas estas strings.
+
+00:00:44.190 --> 00:00:48.448
+Eso forma una larguísima string:
+<i>I need2 cups of coffeeon Monday</i>.
+
+00:00:49.350 --> 00:00:52.448
+Cuando veo algo así, imagino
+que los símbolos <i>+</i> no están,
+
+00:00:52.590 --> 00:00:53.872
+y que las comillas tampoco.
+
+00:00:54.048 --> 00:00:57.296
+Imagino que apretujo literalmente
+todas estas strings unas contra otras.
+
+00:00:58.250 --> 00:01:01.040
+Y cuando digo apretujar,
+realmente quiero decir apretujar.
+
+00:01:01.650 --> 00:01:05.488
+Ni siquiera hay un espacio
+entre esta string y esta string.
+
+00:01:06.420 --> 00:01:07.792
+Si quieres añadir un espacio aquí,
+
+00:01:07.984 --> 00:01:12.800
+tendrás que dejar expresamente un espacio
+en este literal de string, al final,
+
+00:01:13.120 --> 00:01:16.224
+o añadir un espacio al principio
+de este literal de string.
+
+00:01:17.120 --> 00:01:18.800
+Y lo mismo con <i>coffeeon Monday</i>.
+
+00:01:19.440 --> 00:01:22.608
+Quiero un espacio aquí, así que tengo que,
+bien añadirlo al final de esta string,
+
+00:01:22.840 --> 00:01:24.224
+bien al principio de esta string.
+
+00:01:25.248 --> 00:01:27.184
+Añadí un espacio aquí y otro aquí,
+
+00:01:27.360 --> 00:01:29.536
+así que cuando concateno todo esto,
+
+00:01:29.700 --> 00:01:33.728
+lo apretujo todo, la frase queda
+correctamente, así.
+
+00:01:34.300 --> 00:01:36.000
+Hay un espacio aquí y un espacio aquí.
+
+00:01:36.630 --> 00:01:38.944
+Añadir espacios en el lugar correcto es
+un poco complicado.
+
+00:01:39.008 --> 00:01:42.048
+Tienes comillas por todos lados,
+y signos de <i>+</i>
+
+00:01:42.400 --> 00:01:44.464
+y hasta hay espacios
+alrededor del símbolo <i>+</i>.
+
+00:01:44.750 --> 00:01:49.440
+Pero estos espacios alrededor del <i>+</i>
+no contribuyen en la string de muestra.
+
+00:01:50.025 --> 00:01:53.010
+El espacio debe quedar dentro
+de las comillas dobles.
+
+00:01:53.010 --> 00:01:55.600
+Aquí tienes un ejemplo de concatenación
+de strings en nuestra app.
+
+00:01:56.144 --> 00:01:57.472
+Voy a cambiar el texto
+
+00:01:57.680 --> 00:02:01.824
+para que diga
+<i>"Amount Due " + "$10"</i>.
+
+00:02:02.900 --> 00:02:06.016
+Estoy concatenando este literal
+de string con este literal de string.
+
+00:02:07.190 --> 00:02:09.376
+Cuando lo ejecuto en mi dispositivo
+y le doy a <i>Pedir</i>,
+
+00:02:09.632 --> 00:02:11.760
+veo <i>Amount Due $10</i> (A pagar: $10).
+
+00:02:12.770 --> 00:02:16.768
+También puedes concatenar strings
+con enteros, como estas de aquí.
+
+00:02:17.490 --> 00:02:19.248
+Antes, el <i>10</i> estaba entre comillas,
+
+00:02:19.472 --> 00:02:22.464
+así que era una representación
+en string del número diez.
+
+00:02:22.830 --> 00:02:27.904
+Pero aquí tengo <i>100</i> sin comillas,
+así que este es el valor entero de 100.
+
+00:02:28.912 --> 00:02:31.312
+Si concateno una string con un entero,
+
+00:02:31.470 --> 00:02:33.968
+entonces se convierte todo
+en una string inmediatamente.
+
+00:02:34.590 --> 00:02:37.728
+Si le doy al botón <i>Pedir</i>, veo
+que en la pantalla se muestra <i>$100</i>.
+
+00:02:38.208 --> 00:02:40.880
+En un momento, te tendré jugueteando
+con la concatenación de strings
+
+00:02:40.960 --> 00:02:42.368
+para que pruebes diferentes valores.
+
+00:02:42.900 --> 00:02:46.290
+Puede que tengas errores
+de compilación, así que ten cuidado.
+
+00:02:46.290 --> 00:02:48.880
+Si te olvidas de unas comillas
+de cierre, te dará error.
+
+00:02:49.280 --> 00:02:51.984
+En un momento, te tendré jugueteando
+con la concatenación de strings
+
+00:02:52.080 --> 00:02:53.536
+para que pruebes diferentes valores.
+
+00:02:53.840 --> 00:02:55.980
+Según las directrices de estilo
+de códigos de Android,
+
+00:02:56.280 --> 00:02:58.768
+deberíamos tener un espacio
+antes y después de cada operador.
+
+00:02:59.050 --> 00:03:01.900
+Y este operador de concatenación
+de strings cuenta como operador.
+
+00:03:03.080 --> 00:03:04.976
+Ahora te toca a ti practicar en tu app.
+
+00:03:05.480 --> 00:03:08.352
+Experimenta combinando diferentes strings
+usando el operador <i>+</i>.
+
+00:03:08.710 --> 00:03:11.488
+Puedes también combinarlas
+con valores de literales enteros.
+
+00:03:12.420 --> 00:03:14.432
+Una vez entiendas bien
+la concatenación de strings,
+
+00:03:14.640 --> 00:03:16.200
+quiero que respondas estas preguntas.
+
