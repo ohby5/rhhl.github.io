@@ -1,0 +1,384 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.168 --> 00:00:02.168
+Jika Anda tahu jawabannya, bagus.
+
+00:00:02.168 --> 00:00:05.614
+Jika tidak, usaha Anda bagus dan terus
+saksikan untuk melihat jawabannya.
+
+00:00:06.026 --> 00:00:08.954
+Saya berada di Android Studio.
+
+00:00:08.954 --> 00:00:11.008
+Saya sedang melihat TextView.
+
+00:00:11.008 --> 00:00:13.746
+Namun saya akan gulirkan ke atas
+untuk melihat ImageView.
+
+00:00:13.746 --> 00:00:16.721
+Ini beberapa hal
+yang saya bicarakan sebelumnya.
+
+00:00:16.721 --> 00:00:19.329
+Jika saya meletakkan kursor
+di ImageView ini,
+
+00:00:19.329 --> 00:00:23.357
+akan muncul kotak biru yang menampilkan
+berapa besar ImageView ini.
+
+00:00:23.357 --> 00:00:26.595
+Ukurannya kurang lebih sama
+dengan seluruh layar ponsel ini.
+
+00:00:26.595 --> 00:00:29.080
+Saya akan menambahkan scaleType.
+
+00:00:29.080 --> 00:00:32.446
+Dua pilihan yang mungkin
+adalah &lt;i&gt;center&lt;/i&gt; atau &lt;i&gt;centerCrop&lt;/i&gt;.
+
+00:00:32.811 --> 00:00:35.223
+Nilai &lt;i&gt;center&lt;/i&gt; tidak mengubah
+skala gambar ini,
+
+00:00:35.223 --> 00:00:37.227
+tidak mengubah ukuran gambar ini.
+
+00:00:37.227 --> 00:00:40.207
+Jadi, cukup jelas
+saya harus menggunakan centerCrop.
+
+00:00:40.618 --> 00:00:43.375
+Anda akan melihat
+gambar ini kini menjadi lebih besar
+
+00:00:43.375 --> 00:00:46.408
+untuk mengisi
+seluruh ruang ImageView.
+
+00:00:46.728 --> 00:00:51.057
+Mungkin Anda melihat
+di bawah sini ada lajur putih kecil
+
+00:00:51.057 --> 00:00:53.191
+yang tidak tertutupi oleh gambar.
+
+00:00:53.583 --> 00:00:57.668
+Jika saya klik ini, yang memungkinkan saya
+memilih berbagai perangkat,
+
+00:00:57.668 --> 00:01:01.145
+dan katakanlah, saya memilih
+tablet, seperti Nexus 10,
+
+00:01:01.145 --> 00:01:04.456
+kita lihat gambar ini
+tidak menutupi seluruh ruang.
+
+00:01:04.456 --> 00:01:07.422
+Ini buruk karena ini berarti
+jika menampilkan ini di tablet,
+
+00:01:07.422 --> 00:01:11.167
+Anda akan melihat gambar kotak yang aneh
+dengan ruang putih di sekitarnya,
+
+00:01:11.558 --> 00:01:13.785
+walaupun mungkin
+tidak ada masalah di ponsel.
+
+00:01:13.785 --> 00:01:18.139
+Ini terjadi karena saya menggunakan
+&lt;i&gt;wrap_content&lt;/i&gt; alih-alih &lt;i&gt;match_parent&lt;/i&gt;.
+
+00:01:18.139 --> 00:01:20.254
+Saya akan menggantinya
+menjadi &lt;i&gt;match_parent&lt;/i&gt;.
+
+00:01:20.254 --> 00:01:22.322
+Saat saya mengubah ini
+menjadi &lt;i&gt;match_parent&lt;/i&gt;,
+
+00:01:22.322 --> 00:01:24.879
+gambar ini meluas
+untuk mengisi seluruh tampilan.
+
+00:01:24.879 --> 00:01:27.836
+Jadi, maksudnya,
+layout_width, layout_height,
+
+00:01:27.836 --> 00:01:29.969
+dan scaleType bekerja bersama-sama.
+
+00:01:29.969 --> 00:01:33.592
+Saya akan buat gambar untuk menunjukkan
+maksud saya lebih detail.
+
+00:01:33.918 --> 00:01:37.039
+Katakanlah Anda ingin tahu
+apa yang sebenarnya terjadi
+
+00:01:37.039 --> 00:01:38.945
+jika &lt;i&gt;centerCrop&lt;/i&gt; digunakan.
+
+00:01:38.945 --> 00:01:41.229
+Jika mengunjungi
+situs Android Developers,
+
+00:01:41.229 --> 00:01:43.791
+Anda akan melihat
+ini tertulis dalam dokumentasinya.
+
+00:01:43.791 --> 00:01:46.385
+centerCrop mengubah skala gambar
+dengan seragam,
+
+00:01:46.385 --> 00:01:49.270
+berarti mempertahankan
+rasio aspek gambar.
+
+00:01:49.270 --> 00:01:53.105
+Ini berarti atribut itu melakukan ini
+agar kedua dimensi,
+
+00:01:53.105 --> 00:01:56.582
+yaitu lebar dan tinggi gambarnya,
+akan sama atau lebih besar
+
+00:01:56.582 --> 00:02:00.148
+dari dimensi tampilan gambar
+yang bersangkutan (minus &lt;i&gt;padding&lt;/i&gt;).
+
+00:02:00.148 --> 00:02:03.291
+Satu hal yang bisa saya katakan
+soal mengubah skala dengan seragam.
+
+00:02:03.291 --> 00:02:06.820
+Jika Anda mencoba membuat skala gambar,
+membuat skala seragam berarti
+
+00:02:06.820 --> 00:02:11.822
+gambar tidak meregang,
+baik secara horizontal mau pun vertikal.
+
+00:02:11.822 --> 00:02:16.005
+Jadi, atribut itu mengubah skala,
+lalu membuat gambarnya cukup besar
+
+00:02:16.005 --> 00:02:20.857
+agar lebar dan tingginya akan sama
+atau lebih besar
+
+00:02:20.857 --> 00:02:23.505
+dari dimensi ImageView itu sendiri
+yang bersangkutan.
+
+00:02:23.505 --> 00:02:24.936
+Mari kita lihat sebuah gambar.
+
+00:02:24.936 --> 00:02:26.757
+Ini ponsel Anda.
+
+00:02:26.757 --> 00:02:29.030
+Di ponsel kita, ada ImageView.
+
+00:02:29.030 --> 00:02:30.857
+Ini gambar untuk ImageView itu.
+
+00:02:30.857 --> 00:02:34.742
+Ini kotak hijau yang mewakili
+ukuran ImageView itu yang sebenarnya.
+
+00:02:34.742 --> 00:02:37.434
+Yang dilakukan &lt;i&gt;centerCrop&lt;/i&gt;
+adalah memperbesar gambar ini
+
+00:02:37.434 --> 00:02:40.572
+agar gambar ini muat dalam kotak
+tanpa melengkungkannya.
+
+00:02:40.572 --> 00:02:42.281
+Tanpa mengubah dimensinya,
+
+00:02:42.281 --> 00:02:46.243
+saya sudah memperbesar gambar ini
+agar muat dalam kotak hijau ini.
+
+00:02:46.243 --> 00:02:48.666
+Karena berupa persegi empat yang panjang,
+
+00:02:48.666 --> 00:02:50.968
+gambar ini meluas ke tepi ponsel.
+
+00:02:51.367 --> 00:02:54.313
+centerCrop akan membuat gambar ini
+ada di tengah di tampilan.
+
+00:02:54.313 --> 00:02:58.229
+Lalu sesuai namanya, akan memotong
+bagian gambar yang berlebihan.
+
+00:02:58.813 --> 00:03:02.551
+Saya ingin membicarakan satu masalah lagi
+yang mungkin Anda temui.
+
+00:03:03.205 --> 00:03:06.645
+Tampilan bisa saling tumpah tindih
+seperti kartu permainan.
+
+00:03:06.645 --> 00:03:11.438
+Urutan &lt;i&gt;tag&lt;/i&gt; tampilan ini menentukan
+urutan tampilan ini ditempatkan di layar.
+
+00:03:11.438 --> 00:03:14.816
+Jadi, karena Tampilan A yang pertama,
+akan ditempatkan pertama di layar,
+
+00:03:14.816 --> 00:03:17.673
+diikuti oleh Tampilan B, lalu Tampilan C.
+
+00:03:17.673 --> 00:03:20.330
+Karena urutan yang saya
+masukkan dalam XML ini,
+
+00:03:20.330 --> 00:03:23.707
+saya tak bisa melihat teks saya
+dengan baik dalam TextView A.
+
+00:03:23.707 --> 00:03:27.283
+Mari kita coba mengubah XML
+dan melihat pengaruhnya pada layar.
+
+00:03:27.770 --> 00:03:31.548
+Saya telah mengubah urutannya.
+Sekarang, saya punya tampilan B, A, C.
+
+00:03:31.548 --> 00:03:34.026
+Ini akan menampilkan
+Tampilan B lebih dulu.
+
+00:03:34.026 --> 00:03:37.921
+Lalu akan menampilkan Tampilan A
+dan terakhir, meletakkan Tampilan C.
+
+00:03:37.921 --> 00:03:39.734
+Saya baru mengubah urutan tampilannya.
+
+00:03:39.734 --> 00:03:42.224
+Semuanya diletakkan di posisi yang sama.
+
+00:03:42.224 --> 00:03:46.074
+Namun urutan tumpukan
+tampilan-tampilan itu telah berubah.
+
+00:03:46.074 --> 00:03:48.218
+Karena itu, kini saya bisa
+melihat teks saya.
+
+00:03:48.218 --> 00:03:50.870
+Mungkin Anda mengalami
+masalah serupa dengan kartu Anda
+
+00:03:50.870 --> 00:03:54.861
+jika meletakkan kedua TextView Anda
+di sini, lalu menampilkan ImageView.
+
+00:03:54.861 --> 00:03:58.017
+Karena ini akan menampilkan
+TextView pertama, lalu TextView kedua,
+
+00:03:58.017 --> 00:04:01.619
+lalu gambarnya, yang meliputi
+seluruh layar, akan menutup keduanya.
+
+00:04:01.619 --> 00:04:04.032
+Jadi, pastikan urutannya tepat.
+
+00:04:04.534 --> 00:04:06.819
+Mari kita lihat seperti apa kodenya.
+
+00:04:06.819 --> 00:04:09.136
+Ini kode saya.
+
+00:04:09.136 --> 00:04:12.091
+Saya hanya akan tunjukkan
+yang dimaksud dengan urutan tampilan.
+
+00:04:12.091 --> 00:04:15.891
+Saat ini, yang pertama adalah ImageView,
+lalu kedua TextView saya.
+
+00:04:15.891 --> 00:04:18.349
+Kita bisa melihat teksnya
+dengan mudah di layar.
+
+00:04:18.349 --> 00:04:20.707
+Jika saya memotong ImageView ini--
+
+00:04:20.707 --> 00:04:23.635
+Saya akan gulirkan ke bawah.
+Saya akan merekatkannya di sini.
+
+00:04:23.635 --> 00:04:27.740
+Sekarang, saya punya TextView,
+TextView, ImageView.
+
+00:04:27.740 --> 00:04:30.401
+Kode ini menampilkan
+TextView "Happy Birthday, Ben!"
+
+00:04:30.401 --> 00:04:33.015
+Lalu menampilkan TextView "From, Lyla!"
+
+00:04:33.015 --> 00:04:37.136
+Lalu menampilkan gambar pesta Android
+di atas kedua TextView lainnya.
+
+00:04:37.136 --> 00:04:40.694
+Jika memilih TextView ini, saya bisa
+melihat mereka masih ada di sana.
+
+00:04:40.694 --> 00:04:42.852
+Mereka hanya tertutupi oleh ImageView.
+
+00:04:42.852 --> 00:04:44.586
+Saya akan mengembalikannya.
+
+00:04:44.586 --> 00:04:47.212
+Itu jauh lebih baik,
+TextView saya ada di atas sekarang.
+
+00:04:47.212 --> 00:04:50.111
+Seperti biasa,
+mari kita jalankan ini pada ponsel
+
+00:04:50.111 --> 00:04:54.012
+untuk memastikan semua beres
+dengan &lt;i&gt;match_parent&lt;/i&gt; dan &lt;i&gt;centerCrop&lt;/i&gt;.
+
+00:04:54.385 --> 00:04:56.616
+Bagus, ini tampak cukup bagus.
+
+00:04:56.616 --> 00:04:59.677
+Gambarnya diperbesar
+untuk mengisi seluruh tampilan.
+
+00:04:59.935 --> 00:05:01.901
+Kita bisa melihat TextView-nya.
+
+00:05:01.901 --> 00:05:05.705
+Masih ada satu masalah yang harus
+diperbaiki, namun bagus sejauh ini.
+
+00:05:05.705 --> 00:05:09.036
+Kerja Anda bagus.
+Tinggal satu atribut yang harus diubah.
+
+00:05:09.036 --> 00:05:11.588
+Lalu kartu ulang tahun kita akan jadi.
+

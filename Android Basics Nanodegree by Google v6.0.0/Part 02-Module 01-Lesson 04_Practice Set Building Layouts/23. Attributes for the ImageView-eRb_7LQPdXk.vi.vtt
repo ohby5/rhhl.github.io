@@ -1,0 +1,134 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.000 --> 00:00:03.410
+Ta đã hiển thị chính xác hình ảnh, 
+chính là ảnh bữa tiệc Android này,
+
+00:00:03.410 --> 00:00:06.790
+do đó không cần thiết phải
+thay đổi các thuộc tính nguồn.
+
+00:00:06.790 --> 00:00:09.790
+Tương tự như vậy, 
+vị trí thực sự đã chính xác rồi.
+
+00:00:09.790 --> 00:00:11.920
+Ảnh chỉ cần lớn hơn,
+
+00:00:11.920 --> 00:00:15.710
+nếu các layout này giống thuộc tính gốc, 
+ta sẽ không sử dụng chúng.
+
+00:00:15.710 --> 00:00:17.450
+Sử dụng thuộc tính id
+
+00:00:17.450 --> 00:00:20.780
+và bản thân nó không thực sự làm thay đổi
+bất cứ điều gì trong layout.
+
+00:00:20.780 --> 00:00:23.750
+Nó chỉ cho view đó một tên để bạn 
+tham chiếu đến nó sau này.
+
+00:00:23.750 --> 00:00:26.760
+Bây giờ có thực sự có một cách 
+sử dụng thuộc tính hình nền
+
+00:00:26.760 --> 00:00:28.980
+để đạt được hiệu ứng 
+ta đang cố gắng đạt được.
+
+00:00:28.980 --> 00:00:31.300
+Nhưng nó không liên quan đến view ảnh.
+
+00:00:31.300 --> 00:00:33.920
+Vậy nếu bạn đã chọn nền,
+về mặt kỹ thuật bạn đã đúng,
+
+00:00:33.920 --> 00:00:36.010
+chúng ta sẽ thực hiện
+nó theo một cách khác.
+
+00:00:36.010 --> 00:00:38.060
+Cách mà ta đã học trong bài.
+
+00:00:38.060 --> 00:00:41.400
+Chúng ta có layout_height,
+layout_width, và ScaleType.
+
+00:00:41.400 --> 00:00:44.340
+ScaleType sẽ thay đổi kích thước của
+hình ảnh trong hộp view
+
+00:00:44.340 --> 00:00:45.380
+bao quanh nó.
+
+00:00:45.380 --> 00:00:46.546
+Trong khi layout_width
+
+00:00:46.546 --> 00:00:49.940
+và layout_height 
+sẽ thay đổi kích thước của hộp view.
+
+00:00:49.940 --> 00:00:53.530
+Trong trường hợp này, hình ảnh đủ lớn
+để hộp view mở rộng ra toàn màn hình
+
+00:00:53.530 --> 00:00:56.900
+kể cả nó có bao toàn nội dung 
+hay giống view gốc.
+
+00:00:56.900 --> 00:00:59.560
+Bởi vì không quan trọng
+trong trường hợp đặc biệt này
+
+00:00:59.560 --> 00:01:01.790
+cho dù chúng ta thiết lập 
+phù hợp với view gốc
+
+00:01:01.790 --> 00:01:06.220
+hoặc bao trọn nội dung thì cũng không cần
+thay đổi các thiết lập trong lần này.
+
+00:01:06.220 --> 00:01:09.530
+Bởi vì chúng ta đang cố gắng
+để mở rộng nó ra toàn bộ màn hình,
+
+00:01:09.530 --> 00:01:13.350
+Có thể sẽ tốt nếu thiết lập những điều này
+trùng khớp rõ ràng với view gốc.
+
+00:01:13.350 --> 00:01:15.820
+Sau đó, nếu cuối cùng ta 
+sử dụng một ảnh nhỏ hơn,
+
+00:01:15.820 --> 00:01:18.260
+nó vẫn sẽ mở rộng
+lấp đầy toàn bộ màn hình.
+
+00:01:18.260 --> 00:01:21.940
+Nhưng khi chiều dài và rộng của layout
+được tùy chọn trong trường hợp này,
+
+00:01:21.940 --> 00:01:25.660
+thì ScaleType là thuộc tính thực tế 
+mà bạn luôn cần phải sử dụng
+
+00:01:25.660 --> 00:01:27.910
+để làm cho hình ảnh
+lấp đầy toàn bộ màn hình.
+
+00:01:28.140 --> 00:01:30.930
+Câu hỏi đặt ra là,
+chúng ta đã lựa chọn các thuộc tính,
+
+00:01:30.930 --> 00:01:32.900
+nhưng ta không biết giá trị
+để thiết lập.
+
+00:01:32.900 --> 00:01:36.316
+Và đó là những gì tôi muốn các bạn
+tìm kiếm trong câu hỏi tiếp theo.
+

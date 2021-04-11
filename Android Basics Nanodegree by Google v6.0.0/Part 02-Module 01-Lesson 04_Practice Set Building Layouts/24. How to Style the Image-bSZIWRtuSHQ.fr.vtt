@@ -1,0 +1,397 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.300 --> 00:00:01.940
+Ok, si vous l'avez obtenu, excellent travail.
+
+00:00:01.940 --> 00:00:04.970
+Et si vous ne l'avez pas, bon essai et
+continuer à regarder pour la réponse.
+
+00:00:06.190 --> 00:00:08.080
+Très bien, alors
+je suis ici dans Android Studio.
+
+00:00:08.080 --> 00:00:11.150
+Et je regarde les
+TextViews dès maintenant.
+
+00:00:11.150 --> 00:00:13.870
+Mais je vais faire défiler jusqu'à
+regarder la ImageView.
+
+00:00:13.870 --> 00:00:16.950
+Okay, donc un peu plus sur ce que
+je parlais avant.
+
+00:00:16.950 --> 00:00:19.635
+Si je mets mon curseur quelque part dans ce
+ImageView,
+
+00:00:19.635 --> 00:00:23.473
+Il va me donner une boîte bleue qui
+me montre l'ampleur de la ImageView est.
+
+00:00:23.473 --> 00:00:26.743
+Et il est à peu près l'ensemble de la taille de
+de cet écran de téléphone.
+
+00:00:26.743 --> 00:00:29.049
+Maintenant, je vais aller de l'avant et ajouter
+scaleType, et
+
+00:00:29.049 --> 00:00:32.950
+Les deux options que je recherche
+au centre ou sont centerCrop.
+
+00:00:32.950 --> 00:00:35.450
+Maintenant centre ne
+échelle pas réellement l'image,
+
+00:00:35.450 --> 00:00:37.380
+Elle ne change pas la taille de l'image.
+
+00:00:37.380 --> 00:00:40.800
+Donc, il fait un assez simple
+que je dois utiliser centerCrop.
+
+00:00:40.800 --> 00:00:44.892
+Accord, et vous devriez voir que l'image
+élargit maintenant remplir l'ensemble
+
+00:00:44.892 --> 00:00:46.770
+Espace ImageView.
+
+00:00:46.770 --> 00:00:50.470
+Vous pourriez remarquer ici que, à
+le fond il ya un peu de blanc
+
+00:00:50.470 --> 00:00:53.610
+Bande où l'image ne se développe pas.
+
+00:00:53.610 --> 00:00:57.860
+Si je monte ici, ce qui me laisse
+choisir entre différents appareils, et
+
+00:00:57.860 --> 00:01:01.190
+Je choisis dire une tablette comme un Nexus 10,
+
+00:01:01.190 --> 00:01:04.530
+Nous pouvons voir que cette image est
+ne remplit pas tout l'espace.
+
+00:01:04.530 --> 00:01:07.600
+Maintenant que cela est mauvais parce que cela signifie si
+Vous regardez ce sur une tablette Vous êtes
+
+00:01:07.600 --> 00:01:11.610
+Allez obtenir cette image bizarre carrée
+avec cet espace blanc autour de lui.
+
+00:01:11.610 --> 00:01:13.810
+Bien que tout cela peut paraître bien sur un téléphone.
+
+00:01:13.810 --> 00:01:14.575
+Le raisonnement
+
+00:01:14.575 --> 00:01:18.190
+Cela est parce que je l'ai mis wrap_content
+lieu de match_parent.
+
+00:01:18.190 --> 00:01:20.300
+Permettez-moi à changer ces match_parent.
+
+00:01:20.300 --> 00:01:23.680
+Maintenant, quand je modifier ces
+match_parent à l'image se dilate pour remplir
+
+00:01:23.680 --> 00:01:24.910
+Toute la vue.
+
+00:01:24.910 --> 00:01:28.235
+Donc le point que je suis en train de faire est
+que layout_width, layout_height, et
+
+00:01:28.235 --> 00:01:30.080
+ScaleType tous travailler ensemble.
+
+00:01:30.080 --> 00:01:34.080
+Permettez-moi de vous faire un dessin pour vous montrer
+un peu plus de détails sur ce que je veux dire.
+
+00:01:34.080 --> 00:01:37.460
+Bon, alors disons que vous êtes un peu curieux
+sur ce qui se passe réellement lorsque nous
+
+00:01:37.460 --> 00:01:39.060
+Utiliser centerCrop.
+
+00:01:39.060 --> 00:01:40.910
+Si vous allez à
+le site Android Developers,
+
+00:01:40.910 --> 00:01:43.763
+Vous verrez que la documentation
+dit ce qui suit.
+
+00:01:43.763 --> 00:01:46.510
+CenterCrop redimensionne l'image uniformément,
+
+00:01:46.510 --> 00:01:49.460
+Ce qui signifie qu'il maintient
+le ratio d'aspect de l'image.
+
+00:01:49.460 --> 00:01:53.980
+Et ce que cela signifie est que il le fait
+sorte que les deux dimensions, la largeur et
+
+00:01:53.980 --> 00:01:56.290
+La hauteur de l'image
+sera égale ou
+
+00:01:56.290 --> 00:02:00.340
+Plus grand que le
+de dimension correspondante de la vue de l'image (moins de rembourrage).
+
+00:02:00.340 --> 00:02:03.380
+Okay, donc une chose que je peux dire à propos
+échelle uniforme,
+
+00:02:03.380 --> 00:02:07.360
+Si vous avez déjà essayé de redimensionner l'image,
+échelle uniforme signifie qu'il
+
+00:02:07.360 --> 00:02:12.030
+Conserve l'image de se faire étiré
+faire soit horizontalement ou verticalement.
+
+00:02:12.030 --> 00:02:16.320
+Alors qu'il fait cette échelle, et
+alors il est l'image assez grande pour
+
+00:02:16.320 --> 00:02:19.380
+Que la largeur et la hauteur
+vont être égale ou
+
+00:02:19.380 --> 00:02:23.700
+Supérieures aux dimensions correspondantes de l'image
+lui-même.
+
+00:02:23.700 --> 00:02:25.070
+Regardons une image.
+
+00:02:25.070 --> 00:02:26.910
+Bon, alors voici votre téléphone.
+
+00:02:26.910 --> 00:02:29.200
+Et sur notre téléphone, nous avons une vue de l'image.
+
+00:02:29.200 --> 00:02:31.150
+Voici l'image pour
+la vue de l'image, et
+
+00:02:31.150 --> 00:02:34.860
+Voici la boîte verte représentant
+la taille réelle de la vue de l'image.
+
+00:02:34.860 --> 00:02:37.680
+Quel est centerCrop fera,
+va évoluer cette image de façon à ce
+
+00:02:37.680 --> 00:02:40.790
+Que sans déformant,
+il tient dans la boîte.
+
+00:02:40.790 --> 00:02:44.627
+Okay, donc sans modifier les dimensions
+Je l'ai mis à l'échelle de cette image jusqu'à le faire rentrer
+
+00:02:44.627 --> 00:02:46.460
+Dans cette case verte ici.
+
+00:02:46.460 --> 00:02:48.830
+Maintenant, parce que l'image est
+ce long rectangle,
+
+00:02:48.830 --> 00:02:51.545
+Il se dilate
+réellement sur le bord du téléphone.
+
+00:02:51.545 --> 00:02:54.610
+CenterCrop sera centré cette
+image dans la vue, et
+
+00:02:54.610 --> 00:02:59.000
+Puis comme son nom l'indique, il va recadrer
+hors les parties excédentaires de l'image.
+
+00:02:59.000 --> 00:03:01.940
+Accord, je veux parler d'un plus
+problème que vous pourriez avoir rencontrer.
+
+00:03:03.400 --> 00:03:06.860
+Les vues peuvent se chevaucher un peu comme
+cartes à jouer peuvent se chevaucher.
+
+00:03:06.860 --> 00:03:09.670
+Et l'ordre de ces balises vue de
+ici détermine l'ordre
+
+00:03:09.670 --> 00:03:11.610
+Que les opinions se placer sur l'écran.
+
+00:03:11.610 --> 00:03:12.910
+Donc, puisque la vue A est le premier,
+
+00:03:12.910 --> 00:03:17.810
+Il obtiendrait placé sur le premier écran,
+suivie par la vue B, puis voir C.
+
+00:03:17.810 --> 00:03:20.530
+Maintenant en raison de la commande
+que je mets dans ce XML,
+
+00:03:20.530 --> 00:03:23.890
+Je ne peux pas vraiment voir mon texte
+très bien en vue le texte A.
+
+00:03:23.890 --> 00:03:26.910
+Essayons de changer le XML et
+voir comment il réorganise mon écran.
+
+00:03:27.920 --> 00:03:31.710
+Bon, les choses donc je l'ai commutés autour de sorte que maintenant je
+ont vue B, A, C
+
+00:03:31.710 --> 00:03:34.170
+Ce sera ensuite tirer vue B en premier.
+
+00:03:34.170 --> 00:03:35.220
+Puis il tirera vue A.
+
+00:03:35.220 --> 00:03:38.140
+Et enfin il va placer vue C
+
+00:03:38.140 --> 00:03:39.950
+Je viens réorganisé les vues.
+
+00:03:39.950 --> 00:03:42.347
+Tout est placé
+dans la même position,
+
+00:03:42.347 --> 00:03:46.252
+Mais l'ordre de la façon dont les vues empilent
+sur le dessus de l'autre a changé.
+
+00:03:46.252 --> 00:03:48.330
+Et à cause de cela,
+maintenant je peux voir mon texte.
+
+00:03:48.330 --> 00:03:51.280
+Alors que vous pourriez avoir courir dans
+un problème similaire avec votre carte si
+
+00:03:51.280 --> 00:03:55.010
+Vous mettez vos deux points de vue des textes ici et
+alors vous attiré votre vue de l'image.
+
+00:03:55.010 --> 00:03:58.270
+Parce que ce serait attirer votre première vue texte
+, puis votre deuxième vue de texte, et
+
+00:03:58.270 --> 00:04:01.870
+Puis l'image, qui occupe tout l'écran de
+, aurait couvert les deux.
+
+00:04:01.870 --> 00:04:03.580
+Il suffit donc de vous assurer que vous avez
+l'ordre correct.
+
+00:04:04.750 --> 00:04:07.020
+Jetons un oeil à ce que
+qui ressemble dans le code.
+
+00:04:07.020 --> 00:04:09.330
+Bon alors voici mon code de travail.
+
+00:04:09.330 --> 00:04:12.260
+Mais je vais juste vous montrer ce que je veux dire par
+l'ordre de vues.
+
+00:04:12.260 --> 00:04:16.029
+Ce moment mon ImageView est placé en premier, puis mes deux
+TextViews.
+
+00:04:16.029 --> 00:04:18.550
+Et nous pouvons voir le texte
+facilement sur l'écran.
+
+00:04:18.550 --> 00:04:21.829
+Maintenant, si je la place, ce coupé ImageView,
+Je vais faire défiler,
+
+00:04:21.829 --> 00:04:23.420
+Je vais passé juste ici.
+
+00:04:23.420 --> 00:04:27.950
+Tout droit, et maintenant je dois TextView,
+TextView, ImageView.
+
+00:04:27.950 --> 00:04:29.140
+Eh bien, il attire le «Happy Birthday,
+
+00:04:29.140 --> 00:04:33.140
+Ben" TextView, puis il tire
+"From, Lyla!" TextView.
+
+00:04:33.140 --> 00:04:37.320
+Et puis il tire ce parti Android
+de l'image sur les deux autres TextViews.
+
+00:04:37.320 --> 00:04:40.890
+Si je sélectionne les TextViews,
+Je vois qu'ils sont toujours là,
+
+00:04:40.890 --> 00:04:43.100
+Ils sont juste étant couverts par le
+ImageView.
+
+00:04:43.100 --> 00:04:45.040
+Très bien, je vais rallumer.
+
+00:04:45.040 --> 00:04:47.350
+Qui est beaucoup mieux,
+mes TextViews sont sur le dessus maintenant.
+
+00:04:47.350 --> 00:04:50.280
+Accord, et comme nous le faisons toujours, nous allons aller de l'avant et
+exécuter sur notre téléphone,
+
+00:04:50.280 --> 00:04:53.050
+Juste pour vous assurer que tout est
+travailler avec les match_parents et
+
+00:04:53.050 --> 00:04:54.540
+L'centerCrop.
+
+00:04:54.540 --> 00:04:56.720
+Ok, génial,
+cette recherche assez grande.
+
+00:04:56.720 --> 00:05:02.070
+Nous avons notre image est étirée pour remplir toute la vue
+, nous pouvons voir nos points de vue de texte.
+
+00:05:02.070 --> 00:05:05.470
+Il ya un tout petit problème que nous devons
+encore à fixer, mais excellent travail jusqu'ici.
+
+00:05:05.470 --> 00:05:08.630
+Tout droit, vous faites un excellent travail.
+Seul plus attribut à changer,
+
+00:05:08.630 --> 00:05:10.960
+Et ensuite nous allons avoir
+notre carte d'anniversaire finale.
+

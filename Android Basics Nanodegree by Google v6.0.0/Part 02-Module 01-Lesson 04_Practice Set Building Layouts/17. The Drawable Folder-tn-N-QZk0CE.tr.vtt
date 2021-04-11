@@ -1,0 +1,246 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.640 --> 00:00:03.249
+Pekala, bu noktada bir çizimimiz
+veya düzenimiz var.
+
+00:00:03.249 --> 00:00:06.908
+Görünümleri belirledik ve
+görünüm grubumuz olarak
+
+00:00:06.908 --> 00:00:09.570
+bir RelativeLayout seçerek
+konumlama düşüncelerimize başladık.
+
+00:00:09.570 --> 00:00:11.830
+Bu kodlamaya başlamak için iyi bir zaman.
+
+00:00:11.830 --> 00:00:15.408
+Peki, burada daha önce üzerinde
+çalıştığımız kod var,
+
+00:00:15.408 --> 00:00:21.210
+düzen klasöründe bulunan
+activity_main.xml.
+
+00:00:21.210 --> 00:00:22.920
+Önce görünümler oluşturuluyor.
+
+00:00:22.920 --> 00:00:25.520
+Çalışmanın hemen hemen
+yarısı yapılmış durumda.
+
+00:00:25.520 --> 00:00:26.940
+Bir RelativeLayout var
+
+00:00:26.940 --> 00:00:30.020
+ve “Doğum günün kutlu olsun Ben”
+diyen bir TextView var.
+
+00:00:30.020 --> 00:00:33.020
+Gereken tüm görünümler için
+bir resim görünümü hazırlayın.
+
+00:00:33.020 --> 00:00:36.190
+Ayrıca bir ilave
+TextView yapacaksınız.
+
+00:00:36.190 --> 00:00:38.590
+İlave TextView eklemek
+oldukça kolay olacak.
+
+00:00:38.590 --> 00:00:41.420
+Resim görünümü biraz daha
+çalışma gerektiriyor çünkü
+
+00:00:41.420 --> 00:00:43.500
+resminizin Android kısmına 
+ihtiyacınız var.
+
+00:00:43.500 --> 00:00:46.110
+Eğitim notlarında
+indirebilmeniz için
+
+00:00:46.110 --> 00:00:47.930
+bir link dahil ettik.
+
+00:00:47.930 --> 00:00:51.750
+Peki, resmi indirdim ve
+masaüstüme kaydettim.
+
+00:00:51.750 --> 00:00:53.890
+androidparty.jpg olarak kaydettim.
+
+00:00:53.890 --> 00:00:58.870
+Hatırlıyor olabilirsiniz, daha
+önce resimleri XML’imize eklediğimizde
+
+00:00:58.870 --> 00:01:02.470
+resimleri bilgisayarda drawable adlı
+bir klasöre kaydettiğimizi söyledik.
+
+00:01:03.490 --> 00:01:07.750
+Ayrıca uygulamamızın ilişkili bir dizi
+dosya ve klasörü olduğunu anımsayın,
+
+00:01:07.750 --> 00:01:10.220
+ki bunların tümünü soldaki
+dizinde görebiliriz.
+
+00:01:10.220 --> 00:01:14.310
+Bunlar düzenleri, resimleri,
+bazen müzik vs. içeriyor.
+
+00:01:14.310 --> 00:01:18.020
+Bu tür pek çok dosya
+resources’un (kaynaklar) kısaltması
+
+00:01:18.020 --> 00:01:20.100
+olan res dizininde bulunacak.
+
+00:01:20.100 --> 00:01:23.210
+Res dizini tüm resim,
+metin, düzen ve uygulamanın
+
+00:01:23.210 --> 00:01:26.440
+ihtiyacı olabilecek
+alt-dizinleri içeriyor.
+
+00:01:26.440 --> 00:01:30.100
+Ve söylediğimiz gibi resimler için
+drawable adı verilen bir klasörümüz var.
+
+00:01:30.100 --> 00:01:33.500
+Bu uygulama için tüm resimler
+bu drawable klasörünün içine konulmalı.
+
+00:01:34.750 --> 00:01:36.740
+Resmi bu drawable
+klasörüne koyduğunuzda
+
+00:01:38.290 --> 00:01:40.740
+resim görünümünün kaynak
+özelliğini kullanabilir,
+
+00:01:40.740 --> 00:01:46.160
+ve buna @drawable değeri
+ve sonra resmin ismini verebilirsiniz.
+
+00:01:46.160 --> 00:01:49.090
+Dikkat edin, resmin ismini yazarken
+dosya uzantısını yazmanıza
+
+00:01:49.090 --> 00:01:50.710
+gerek yoktur.
+
+00:01:50.710 --> 00:01:54.760
+Pekala, şimdi size drawable klasör içine 
+nasıl resim konulduğunu göstereyim.
+
+00:01:54.850 --> 00:01:57.260
+Pekala. Bu resim Eğitim Notlarında var.
+
+00:01:57.260 --> 00:01:59.530
+Şimdi gidip resmi
+masaüstünüze indirin.
+
+00:01:59.530 --> 00:02:02.150
+Daha sonra Android Studio’yu açın.
+
+00:02:02.150 --> 00:02:06.300
+Android Studio’da buraya gelip
+Drawable klasöre sağ tıklayın.
+
+00:02:06.300 --> 00:02:10.133
+Orada “reveal in finder”
+ya da “reveal in explorer” adında
+
+00:02:10.133 --> 00:02:11.435
+bir şey göreceksiniz.
+
+00:02:12.285 --> 00:02:14.615
+Burada Drawable klasörümüz var.
+
+00:02:14.615 --> 00:02:18.055
+Şimdi androidparty.jpg’yi
+drawable klasörüne taşıyacağım
+
+00:02:18.055 --> 00:02:21.665
+ve bunu sadece resmi buraya
+sürükleyerek yapacağım.
+
+00:02:21.665 --> 00:02:24.335
+Peki doğru XML kodu ile
+başladığınızdan emin olun.
+
+00:02:24.335 --> 00:02:27.595
+Eğer doğru kodunuz yoksa
+bunu gidip eğitim notlarından
+
+00:02:27.595 --> 00:02:29.830
+kopyalayıp yapıştırabilirsiniz.
+
+00:02:29.830 --> 00:02:32.667
+Yapılması gereken ilk şey,
+androidparty.jpg’yi indirin.
+
+00:02:32.667 --> 00:02:36.900
+Sonra androidparty.jpg’yi alın
+ve drawable klasöre taşıyın.
+
+00:02:36.900 --> 00:02:39.560
+Bunu yaptıktan sonra, devam edin
+ve from ve yourname diyen
+
+00:02:39.560 --> 00:02:40.700
+TextView’ü ekleyin.
+
+00:02:40.700 --> 00:02:45.510
+Bundan sonra android kısmı için
+kaynak özelliğiyle ImageView ekleyin.
+
+00:02:45.510 --> 00:02:47.260
+Aslında çalıştığınızda
+kodda pek çok
+
+00:02:47.260 --> 00:02:48.770
+varsayılan padding bulunuyor.
+
+00:02:48.770 --> 00:02:50.670
+O yüzden bunları silebilirsiniz.
+
+00:02:50.670 --> 00:02:52.610
+Varsayılan padding ile ne kastediyorum?
+
+00:02:52.610 --> 00:02:55.240
+İşte bu paddingBottom,
+paddingLeft, paddingRight, ve
+
+00:02:55.240 --> 00:02:56.600
+paddingTop.
+
+00:02:56.600 --> 00:03:02.020
+Bunları silebilirsiniz.
+
+00:03:02.020 --> 00:03:05.130
+Son olarak uygulamayı çalıştırmak 
+için yeşil oka tıklayın.
+
+00:03:05.130 --> 00:03:09.160
+Tüm bu adımları tamamladığınızda
+uygulamanız böyle görünmelidir.
+
+00:03:09.160 --> 00:03:11.800
+Dikkat edin bu ekranda
+görmek biraz güç olabilir ama
+
+00:03:11.800 --> 00:03:14.010
+aslında metin görünümleri
+üst üste biniyor.
+
+00:03:14.010 --> 00:03:16.560
+Bu tamamen normal, bu konuyu
+daha sonra ele alacağız.
+

@@ -1,0 +1,630 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.202 --> 00:00:03.671
+Certo, seu Android Studio
+está funcionando. Parabéns.
+
+00:00:03.709 --> 00:00:07.109
+Agora, você vai fazer um app
+tradicional de programação:
+
+00:00:07.134 --> 00:00:08.709
+um app "Alô, mundo".
+
+00:00:08.734 --> 00:00:12.609
+É o primeiro passo para virar
+um desenvolvedor Android.
+
+00:00:12.634 --> 00:00:15.415
+Ao final dessa aula,
+você vai transformar esse app
+
+00:00:15.449 --> 00:00:17.599
+em um app
+de cartão de aniversário.
+
+00:00:17.624 --> 00:00:21.209
+Você deve estar pensando o que é
+um programa "Alô, mundo".
+
+00:00:21.234 --> 00:00:23.134
+Em linguagens
+de programação,
+
+00:00:23.159 --> 00:00:26.734
+uma das coisas mais fáceis
+é mostrar palavras na tela.
+
+00:00:26.759 --> 00:00:32.034
+Por isso, geralmente nossos
+primeiros programas fazem isso:
+
+00:00:32.054 --> 00:00:34.059
+mostram palavras na tela.
+
+00:00:34.084 --> 00:00:36.759
+É como estudar
+um idioma novo.
+
+00:00:36.784 --> 00:00:39.684
+Aprender a falar
+"obrigado", "por favor",
+
+00:00:39.709 --> 00:00:44.634
+ou "onde fica o banheiro?"
+é um dos primeiros passos.
+
+00:00:44.659 --> 00:00:47.234
+Bem, vamos criar este app.
+
+00:00:47.259 --> 00:00:49.084
+Apenas uma observação:
+
+00:00:49.109 --> 00:00:52.159
+Este vídeo foi gravado
+em 6 de abril de 2015.
+
+00:00:52.184 --> 00:00:56.309
+Sugiro que não faça nada
+enquanto assiste.
+
+00:00:56.334 --> 00:00:59.159
+Em vez disso,
+assista ao vídeo todo.
+
+00:00:59.184 --> 00:01:00.509
+Quando terminar,
+
+00:01:00.534 --> 00:01:03.859
+veja as instruções deixadas
+em "Notas do instrutor".
+
+00:01:03.884 --> 00:01:06.259
+De vez em quando,
+o Android Studio é atualizado,
+
+00:01:06.284 --> 00:01:10.134
+então os menus e telas
+podem ser diferentes.
+
+00:01:10.159 --> 00:01:11.859
+O vídeo pode
+ficar desatualizado,
+
+00:01:11.884 --> 00:01:15.234
+mas as instruções em texto
+são atualizadas frequentemente.
+
+00:01:15.259 --> 00:01:18.934
+Certo, caso tenha fechado,
+reabra o Android Studio.
+
+00:01:18.959 --> 00:01:20.684
+Deve aparecer esta tela.
+
+00:01:21.259 --> 00:01:26.684
+Vou clicar no botão
+"Start a new Android Studio project".
+
+00:01:26.709 --> 00:01:30.084
+Agora, deve aparecer esta tela,
+com algumas opções.
+
+00:01:30.109 --> 00:01:32.534
+A primeira é o nome do app.
+
+00:01:32.559 --> 00:01:35.559
+Ele aparece na barra do app,
+em cima,
+
+00:01:35.584 --> 00:01:38.309
+e na lista de apps
+do dispositivo.
+
+00:01:38.334 --> 00:01:41.209
+Vou dar o nome
+de "Feliz Aniversário".
+
+00:01:42.234 --> 00:01:45.209
+Logo abaixo,
+temos o domínio da empresa,
+
+00:01:45.234 --> 00:01:48.109
+que pode se parecer
+com o seu endereço Web.
+
+00:01:48.134 --> 00:01:51.259
+Se você tiver um domínio,
+digite-o aqui.
+
+00:01:51.284 --> 00:01:55.034
+Eu já tive o domínio
+"lylaujiwara.com".
+
+00:01:55.059 --> 00:01:57.409
+Então, se este app
+fosse para mim,
+
+00:01:57.434 --> 00:01:59.734
+e não uma demonstração,
+
+00:01:59.759 --> 00:02:04.744
+eu trocaria isto
+para "lylafujiwara.com".
+
+00:02:05.334 --> 00:02:06.934
+Você pode estar se perguntando
+o porquê.
+
+00:02:06.959 --> 00:02:10.883
+Bem, se eu planejasse distribuir
+meu app no Google Play,
+
+00:02:10.908 --> 00:02:13.159
+este campo de nome do pacote
+aqui embaixo
+
+00:02:13.184 --> 00:02:16.759
+é algo de que preciso
+para identificar meu app.
+
+00:02:16.784 --> 00:02:19.809
+Dentre os apps feitos
+no mundo todo,
+
+00:02:19.834 --> 00:02:22.999
+isto teria que ser
+totalmente singular.
+
+00:02:23.024 --> 00:02:25.759
+Se olharmos bem
+a estrutura disto,
+
+00:02:25.784 --> 00:02:29.709
+o nome do pacote é, na verdade,
+o nome da empresa ao contrário.
+
+00:02:29.734 --> 00:02:34.609
+Em vez de "lylafujiwara.com",
+temos "com.lylafujiwara",
+
+00:02:34.659 --> 00:02:37.859
+seguido do nome do app
+sem espaços.
+
+00:02:37.884 --> 00:02:41.584
+Podem existir muitos apps
+de feliz aniversário,
+
+00:02:41.609 --> 00:02:45.834
+mas nenhum outro desenvolvedor
+possui o domínio "lylafujiwara.com"
+
+00:02:45.859 --> 00:02:47.559
+e está fazendo o mesmo app.
+
+00:02:47.584 --> 00:02:49.634
+Da forma
+que a Internet funciona,
+
+00:02:49.659 --> 00:02:51.759
+se eu comprar
+"lylafujiwara.com",
+
+00:02:51.784 --> 00:02:54.634
+eu tenho controle total
+sobre o que aparece lá
+
+00:02:54.659 --> 00:02:56.859
+e ninguém mais pode
+comprar este domínio.
+
+00:02:56.884 --> 00:02:59.259
+Se eu sou responsável
+por ele,
+
+00:02:59.284 --> 00:03:02.634
+a singularidade do nome
+do pacote é garantida.
+
+00:03:02.659 --> 00:03:05.059
+Você ouviu falar
+de "nome do pacote",
+
+00:03:05.084 --> 00:03:06.934
+mas pode nem saber
+o que é pacote.
+
+00:03:06.959 --> 00:03:09.084
+Retornaremos a isto
+logo mais.
+
+00:03:09.109 --> 00:03:11.359
+O que você precisa
+ter em mente agora
+
+00:03:11.384 --> 00:03:13.534
+é que o nome do pacote
+precisa ser singular
+
+00:03:13.559 --> 00:03:15.298
+para o Google Play
+e o seu celular
+
+00:03:15.323 --> 00:03:18.259
+poderem identificar
+seu app.
+
+00:03:18.284 --> 00:03:21.484
+Bem, como você não é eu
+e não possui esse domínio,
+
+00:03:21.509 --> 00:03:23.470
+e já que estamos treinando
+juntos
+
+00:03:23.504 --> 00:03:26.409
+e eu quero que usemos
+os mesmos dados para este app,
+
+00:03:26.434 --> 00:03:32.209
+eu vou mudar isto
+para "android.example.com".
+
+00:03:32.234 --> 00:03:34.709
+Pode usar o mesmo endereço,
+
+00:03:34.734 --> 00:03:38.234
+pois sei que muitos
+não têm um domínio próprio.
+
+00:03:38.259 --> 00:03:40.359
+Assim, buscar no código
+será mais fácil.
+
+00:03:40.384 --> 00:03:44.409
+Se ler mais abaixo,
+diz "com.example.android",
+
+00:03:44.434 --> 00:03:47.559
+"android.example.com"
+ao contrário,
+
+00:03:47.584 --> 00:03:49.634
+e "happybirthday",
+que é "felizaniversário".
+
+00:03:49.659 --> 00:03:52.934
+Você também pode mudar
+o local do projeto.
+
+00:03:52.959 --> 00:03:55.659
+É onde todos os arquivos
+relacionados ao seu app
+
+00:03:55.684 --> 00:03:57.509
+serão salvos
+no seu computador.
+
+00:03:57.534 --> 00:04:01.859
+O Android Studio cria pastas
+para os seus projetos,
+
+00:04:01.884 --> 00:04:05.359
+e o padrão é salvar
+seu projeto nessa pasta.
+
+00:04:05.384 --> 00:04:10.084
+Veja que a pasta tem
+o mesmo nome do app.
+
+00:04:10.109 --> 00:04:13.859
+É uma boa localização,
+então clique em "Próximo",
+
+00:04:13.884 --> 00:04:16.233
+se não tiver um bom motivo
+para trocar.
+
+00:04:16.259 --> 00:04:18.009
+Esta tela é divertida.
+
+00:04:18.034 --> 00:04:22.834
+Escolha a quais dispositivos
+nosso app se destinará.
+
+00:04:22.859 --> 00:04:25.234
+Seu app é
+para celulares e tablets,
+
+00:04:25.259 --> 00:04:28.259
+não para TVs,
+relógios ou óculos,
+
+00:04:28.284 --> 00:04:30.434
+então não marcaremos
+estas caixas.
+
+00:04:30.459 --> 00:04:32.634
+Esta lista em cascata
+mostra a versão
+
+00:04:32.659 --> 00:04:36.409
+do sistema operacional Android
+que nosso app suportará.
+
+00:04:36.434 --> 00:04:38.484
+Vamos subir.
+
+00:04:38.509 --> 00:04:42.609
+A primeira versão do Android
+amplamente usada foi o Cupcake.
+
+00:04:42.634 --> 00:04:46.734
+Este lançamento convencionou
+o uso da ordem alfabética
+
+00:04:46.759 --> 00:04:50.609
+e o batismo de cada versão
+com o nome de uma guloseima.
+
+00:04:50.634 --> 00:04:53.034
+Após Cupcake,
+vieram Donut e Eclair.
+
+00:04:53.059 --> 00:04:58.384
+Por isso vemos Ice Cream,
+Honeycomb e KitKat na lista.
+
+00:04:58.409 --> 00:05:02.357
+Sob a lista há um link
+de "ajude-me a escolher".
+
+00:05:03.059 --> 00:05:05.134
+O gráfico traz
+percentagens úteis
+
+00:05:05.159 --> 00:05:07.507
+sobre quantos
+usuários de Android
+
+00:05:07.598 --> 00:05:10.059
+usam cada uma das versões
+do sistema operacional.
+
+00:05:10.084 --> 00:05:12.234
+Podemos perceber
+que a maioria,
+
+00:05:12.259 --> 00:05:13.984
+até a gravação deste vídeo,
+
+00:05:14.009 --> 00:05:16.934
+usa o que tem
+o delicioso nome KitKat.
+
+00:05:16.959 --> 00:05:21.309
+Estas são as percentagens
+de usuários do Google Play
+
+00:05:21.334 --> 00:05:22.984
+que poderão usar seu app
+
+00:05:23.009 --> 00:05:26.084
+dependendo da versão
+que escolhermos suportar.
+
+00:05:26.109 --> 00:05:28.509
+Se você escolher
+o sistema mais atual,
+
+00:05:28.534 --> 00:05:31.409
+o Lollipop,
+até o momento da gravação,
+
+00:05:31.434 --> 00:05:34.759
+só donos de celulares novos
+poderiam baixar seu app.
+
+00:05:34.784 --> 00:05:39.409
+Apenas cerca de 0,1%
+de todos os usuários
+
+00:05:39.434 --> 00:05:41.809
+poderia baixar
+o seu app.
+
+00:05:41.834 --> 00:05:47.234
+Você pensa: "Por que não fazer
+para o sistema mais antigo?"
+
+00:05:47.259 --> 00:05:50.209
+Eis o primeiro Android
+comercializado,
+
+00:05:50.234 --> 00:05:51.734
+o T-Mobile G1,
+
+00:05:51.759 --> 00:05:55.984
+conhecido fora dos EUA
+como HTC Dream.
+
+00:05:56.009 --> 00:06:00.209
+Ele foi lançado em 2008
+e rodava o Android 1.0.
+
+00:06:00.234 --> 00:06:02.609
+Obviamente,
+muito mudou desde então.
+
+00:06:02.634 --> 00:06:04.784
+Apps como o Google Wallet,
+por exemplo,
+
+00:06:04.809 --> 00:06:07.584
+que permitem pagar por compras
+com o smartphone,
+
+00:06:07.609 --> 00:06:10.159
+requerem a tecnologia
+Near Field Communication.
+
+00:06:10.184 --> 00:06:12.634
+Este recurso, o NFC,
+
+00:06:12.659 --> 00:06:17.059
+foi uma implementação física
+que só aconteceu em 2010.
+
+00:06:17.084 --> 00:06:19.534
+Então, caso seu app
+dependa do NFC,
+
+00:06:19.559 --> 00:06:22.759
+não há por que tentar
+suportar celulares antigos,
+
+00:06:22.784 --> 00:06:25.909
+que rodam versões velhas
+do Android.
+
+00:06:25.934 --> 00:06:27.784
+Enfim,
+para o seu app,
+
+00:06:27.809 --> 00:06:31.809
+quero que você use o API 15,
+o Ice Cream Sandwich.
+
+00:06:31.834 --> 00:06:35.034
+Deve funcionar
+para uns 90% dos usuários.
+
+00:06:35.059 --> 00:06:37.234
+Certo, clique em "Próximo".
+
+00:06:37.259 --> 00:06:39.734
+Vou interromper para passar
+uma atualização importante:
+
+00:06:39.759 --> 00:06:41.659
+desde a gravação
+do vídeo original,
+
+00:06:41.684 --> 00:06:44.734
+os templates de atividade
+sofreram mudanças.
+
+00:06:44.759 --> 00:06:46.834
+Por isso, sua tela
+será meio diferente
+
+00:06:46.859 --> 00:06:48.909
+do que você está vendo.
+
+00:06:48.934 --> 00:06:51.909
+Se seu Android Studio
+for 1.4 ou mais recente,
+
+00:06:51.934 --> 00:06:53.609
+é esta tela que você verá.
+
+00:06:53.634 --> 00:06:55.609
+Em vez de selecionar
+"Blank Activity",
+
+00:06:55.634 --> 00:06:58.584
+quero que selecione
+o template "Empty Activity".
+
+00:06:58.609 --> 00:07:03.159
+Isso vai gerar os arquivos certos
+para você poder seguir adiante.
+
+00:07:03.184 --> 00:07:06.309
+Aqui estão vários templates
+para você escolher
+
+00:07:06.334 --> 00:07:08.284
+de acordo
+com o que quer fazer.
+
+00:07:08.309 --> 00:07:09.859
+Escolha "Blank activity",
+
+00:07:09.884 --> 00:07:13.184
+que já está selecionado,
+por ser o mais simples
+
+00:07:13.209 --> 00:07:14.834
+e clique em "Próximo".
+
+00:07:14.859 --> 00:07:18.559
+No fim, esta tela permite
+que você nomeie arquivos
+
+00:07:18.584 --> 00:07:21.484
+gerados automaticamente
+para o seu app.
+
+00:07:21.509 --> 00:07:25.359
+Logo você verá que um app é composto
+de todos os arquivos de imagens,
+
+00:07:25.384 --> 00:07:31.134
+sons, XML, Java
+e outros arquivos necessários.
+
+00:07:31.159 --> 00:07:34.484
+Em suma, seu app
+é feito de muitos arquivos.
+
+00:07:34.509 --> 00:07:36.384
+Falaremos disso mais tarde.
+
+00:07:36.409 --> 00:07:39.309
+Agora, dê uma olhada
+no nome do layout.
+
+00:07:39.334 --> 00:07:41.834
+Você está trabalhando
+com layouts em XML,
+
+00:07:41.859 --> 00:07:45.244
+então este é o arquivo
+que logo iremos editar.
+
+00:07:45.934 --> 00:07:48.334
+Não vou alterar
+nenhum padrão.
+
+00:07:48.359 --> 00:07:50.559
+Pode clicar em "Terminar".
+
+00:07:50.584 --> 00:07:54.659
+Seu computador pode demorar
+um tempo para configurar tudo.
+
+00:07:54.684 --> 00:07:56.159
+Se você olhar aqui,
+
+00:07:56.184 --> 00:08:00.084
+vai ver que tem um círculo
+e uma barra de "carregando".
+
+00:08:00.109 --> 00:08:02.059
+Também tem um círculo aqui,
+
+00:08:02.084 --> 00:08:04.809
+então ele ainda está
+raciocinando.
+
+00:08:04.834 --> 00:08:08.259
+Dê um tempo, se espreguice
+e vá pegar um chá.
+
+00:08:08.284 --> 00:08:10.157
+Quer dizer, café.
+

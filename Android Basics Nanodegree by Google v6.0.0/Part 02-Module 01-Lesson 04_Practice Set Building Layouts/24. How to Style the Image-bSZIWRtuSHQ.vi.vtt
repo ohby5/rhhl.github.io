@@ -1,0 +1,393 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.300 --> 00:00:01.940
+Được rồi, nếu bạn hiểu, rất tốt.
+
+00:00:01.940 --> 00:00:04.970
+Nếu bạn chưa hiểu, cần nỗ lực hơn 
+và tiếp tục chờ câu trả lời.
+
+00:00:06.190 --> 00:00:08.080
+Giờ tôi đang ở trong Android Studio.
+
+00:00:08.080 --> 00:00:11.150
+Và tôi đang xem
+TextViews ngay lúc này.
+
+00:00:11.150 --> 00:00:13.870
+Nhưng tôi sẽ kéo lên
+để xem ImageView.
+
+00:00:13.870 --> 00:00:16.950
+Được rồi, do đó, một chút về những gì
+tôi đã nói từ trước.
+
+00:00:16.950 --> 00:00:19.635
+Nếu tôi đặt con trỏ của tôi ở đâu đó
+trong ImageView này,
+
+00:00:19.635 --> 00:00:23.473
+một hộp thoại màu xanh sẽ xuất hiện
+cho tôi thấy ImageView lớn như thế nào.
+
+00:00:23.473 --> 00:00:26.743
+Thông thường nó sẽ chiếm toàn bộ
+kích thước của màn hình điện thoạị.
+
+00:00:26.743 --> 00:00:29.049
+Bây giờ tôi sẽ tiếp tục 
+thêm scaleType,
+
+00:00:29.049 --> 00:00:32.950
+hai tùy chọn mà tôi đang tìm kiếm
+là center hoặc centerCrop.
+
+00:00:32.950 --> 00:00:35.450
+Giờ center không căn chỉnh
+cỡ ảnh,
+
+00:00:35.450 --> 00:00:37.380
+nó không thay đổi kích thước của hình ảnh.
+
+00:00:37.380 --> 00:00:40.800
+Vì vậy, có vẻ như chắc chắn
+là tôi cần phải sử dụng centerCrop.
+
+00:00:40.800 --> 00:00:44.892
+Được rồi, và bạn sẽ thấy rằng hình ảnh
+giờ đã được phóng to để lấp đầy toàn bộ
+
+00:00:44.892 --> 00:00:46.770
+không gian của ImageView.
+
+00:00:46.770 --> 00:00:50.470
+Ở đây bạn có thể nhận thấy là
+phía dưới có một dải nhỏ màu trắng
+
+00:00:50.470 --> 00:00:53.610
+mà hình ảnh không thể phóng to đến.
+
+00:00:53.610 --> 00:00:57.860
+Nếu tôi kéo lên đây
+để chọn các thiết bị khác,
+
+00:00:57.860 --> 00:01:01.190
+và tôi chọn một máy tính bảng 
+như Nexus 10,
+
+00:01:01.190 --> 00:01:04.530
+chúng ta có thể thấy hình ảnh này 
+không lấp đầy toàn bộ màn hình.
+
+00:01:04.530 --> 00:01:07.600
+Điều này không tốt lắm bởi vì có nghĩa là 
+nếu bạn xem trên máy tính bảng
+
+00:01:07.600 --> 00:01:11.610
+bạn sẽ nhìn thấy hình ảnh kỳ lạ 
+với dải màu trắng chạy xung quanh nó.
+
+00:01:11.610 --> 00:01:13.810
+Mặc dù nó có thể 
+trên điện thoại thì không.
+
+00:01:13.810 --> 00:01:14.575
+Lý do là
+
+00:01:14.575 --> 00:01:18.190
+bởi vì tôi đã đặt wrap_content
+thay vì match_parent.
+
+00:01:18.190 --> 00:01:20.300
+Hãy đổi sang match_parent
+
+00:01:20.300 --> 00:01:23.680
+Giờ khi tôi thay đổi sang match_parent
+hình ảnh được phóng to
+
+00:01:23.680 --> 00:01:24.910
+toàn bộ màn hình.
+
+00:01:24.910 --> 00:01:28.235
+Điều tôi đang cố gắng thực hiện 
+là layout_width, layout_height, và
+
+00:01:28.235 --> 00:01:30.080
+scaleType đều làm việc với nhau.
+
+00:01:30.080 --> 00:01:34.080
+Hãy để tôi vẽ một hình ảnh giúp bạn
+hiểu rõ hơn về những gì tôi muốn nói.
+
+00:01:34.080 --> 00:01:37.460
+Được rồi, bạn hơi tò mò
+về những gì đang thực sự xảy ra
+
+00:01:37.460 --> 00:01:39.060
+khi chúng ta sử dụng centerCrop.
+
+00:01:39.060 --> 00:01:40.910
+Nếu bạn đến trang Android Developers,
+
+00:01:40.910 --> 00:01:43.763
+bạn sẽ thấy rằng các tài liệu
+nói như sau.
+
+00:01:43.763 --> 00:01:46.510
+centerCrop cân đối hình ảnh 
+một cách thống nhất,
+
+00:01:46.510 --> 00:01:49.460
+có nghĩa là nó duy trì
+tỉ lệ của hình ảnh.
+
+00:01:49.460 --> 00:01:53.980
+Có nghĩa là nó thực hiện điều này để
+hai kích thước, chiều rộng và chiều cao
+
+00:01:53.980 --> 00:01:56.290
+của hình ảnh sẽ bằng hoặc lớn hơn
+
+00:01:56.290 --> 00:02:00.340
+so với kích thước tương ứng
+của trình xem hình ảnh (trừ padding).
+
+00:02:00.340 --> 00:02:03.380
+Được rồi, một điều tôi có thể nói
+về phóng to đồng bộ là
+
+00:02:03.380 --> 00:02:07.360
+nếu bạn đã từng thử phóng to một hình ảnh,
+phóng to đồng bộ có nghĩa là
+
+00:02:07.360 --> 00:02:12.030
+giữ các hình ảnh khỏi bị kéo căng
+ra theo chiều ngang hoặc theo chiều dọc.
+
+00:02:12.030 --> 00:02:16.320
+Vì vậy, nó thực hiện việc cân đối, 
+và nó làm cho hình ảnh đủ lớn
+
+00:02:16.320 --> 00:02:19.380
+để cả chiều rộng và chiều cao của nó
+bằng hoặc lớn hơn tương ứng
+
+00:02:19.380 --> 00:02:23.700
+kích thước của hình ảnh gốc.
+
+00:02:23.700 --> 00:02:25.070
+Chúng ta hãy nhìn vào một bức ảnh.
+
+00:02:25.070 --> 00:02:26.910
+Được rồi, đây là điện thoại của bạn.
+
+00:02:26.910 --> 00:02:29.200
+Và trên điện thoại của chúng tôi, 
+chúng tôi có một trình xem ảnh.
+
+00:02:29.200 --> 00:02:31.150
+Đây là hình ảnh để xem, 
+và đây là các hộp thoại màu xanh lá cây
+
+00:02:31.150 --> 00:02:34.860
+đại diện cho kích thước thực tế 
+của trình xem hình ảnh.
+
+00:02:34.860 --> 00:02:37.680
+Điều centerCrop sẽ làm 
+là phóng to hình ảnh này lên
+
+00:02:37.680 --> 00:02:40.790
+mà không làm nó bị cong vênh,
+và phù hợp với hộp thoại.
+
+00:02:40.790 --> 00:02:44.627
+Được rồi, không thay đổi kích thước ảnh,
+tôi đã phóng to hình ảnh này lên
+
+00:02:44.627 --> 00:02:46.460
+để làm cho nó phù hợp
+
+00:02:46.460 --> 00:02:48.830
+với hộp thoại xanh lá cây này
+
+00:02:48.830 --> 00:02:51.545
+Bây giờ, vì ảnh này là hình chữ nhật dài,
+
+00:02:51.545 --> 00:02:54.610
+nếu phóng to sẽ vượt quá
+các cạnh của điện thoại.
+
+00:02:54.610 --> 00:02:59.000
+centerCrop sẽ tập trung 
+ảnh này trong giao diện,
+
+00:02:59.000 --> 00:03:01.940
+sau đó như tên gọi của nó, 
+nó sẽ cắt các phần thừa của ảnh.
+
+00:03:03.400 --> 00:03:06.860
+Được rồi, tôi muốn thêm một vấn đề nữa
+là có thể bạn sẽ gặp phải.
+
+00:03:06.860 --> 00:03:09.670
+Thứ tự của các view tags này 
+có thể xác định
+
+00:03:09.670 --> 00:03:11.610
+thứ tự của điểm nhìn đặt trên màn hình.
+
+00:03:11.610 --> 00:03:12.910
+Vì view A xếp đầu tiên,
+
+00:03:12.910 --> 00:03:17.810
+nó sẽ xuất hiện trên màn hình đầu tiên,
+tiếp theo là view B, và view C.
+
+00:03:17.810 --> 00:03:20.530
+Bây giờ vì thứ tự 
+tôi đã đặt trong file XML này,
+
+00:03:20.530 --> 00:03:23.890
+Tôi có thể không nhìn thấy rõ chữ
+khi xem bằng view A.
+
+00:03:23.890 --> 00:03:26.910
+Hãy thử thay đổi XML và xem
+nó sắp xếp lại màn hình như thế nào.
+
+00:03:27.920 --> 00:03:31.710
+Được rồi, vậy tôi đã đổi một số thứ
+nên giờ tôi có view B, A, C.
+
+00:03:31.710 --> 00:03:34.170
+Điều này nghĩa là 
+chúng ta xem view B đầu tiên.
+
+00:03:34.170 --> 00:03:35.220
+Sau đó sẽ là view A.
+
+00:03:35.220 --> 00:03:38.140
+Và cuối cùng là view C.
+
+00:03:38.140 --> 00:03:39.950
+Tôi vừa sắp xếp lại các điểm nhìn.
+
+00:03:39.950 --> 00:03:42.347
+Tất cả mọi thứ được đặt
+trong cùng một vị trí,
+
+00:03:42.347 --> 00:03:46.252
+nhưng trật tự các view chồng lên nhau
+đã thay đổi.
+
+00:03:46.252 --> 00:03:48.330
+Và vì thế, giờ tôi có thể nhìn thấy chữ.
+
+00:03:48.330 --> 00:03:51.280
+Vậy bạn có thể gặp một vấn đề tương tự 
+với thẻ của bạn
+
+00:03:51.280 --> 00:03:55.010
+nếu bạn bạn đặt hai text views ở đây
+sau đó bạn đã vẽ view ảnh của bạn.
+
+00:03:55.010 --> 00:03:58.270
+Bởi vì đó là text view đầu tiên bạn xem,
+sau đó là text view thứ hai
+
+00:03:58.270 --> 00:04:01.870
+và sau đó là ảnh chiếm toàn bộ màn hình, 
+sẽ bao phủ cả hai.
+
+00:04:01.870 --> 00:04:03.580
+Vì vậy, chỉ cần đảm bảo rằng bạn
+sắp xếp chính xác.
+
+00:04:04.750 --> 00:04:07.020
+Hãy nhìn xem code trông như thế nào.
+
+00:04:07.020 --> 00:04:09.330
+Được rồi vậy đây là code của tôi.
+
+00:04:09.330 --> 00:04:12.260
+Nhưng tôi sẽ chỉ cho bạn thấy
+cái gọi là sự sắp xếp các điểm nhìn.
+
+00:04:12.260 --> 00:04:16.029
+Lúc này ImageView được đặt đầu tiên,
+sau đó đến TextViews.
+
+00:04:16.029 --> 00:04:18.550
+Và ta có thể thấy chúng
+rất dễ dàng trên màn hình.
+
+00:04:18.550 --> 00:04:21.829
+thay vào đó, nếu tôi cắt ImageView này,
+tôi sẽ kéo xuống,
+
+00:04:21.829 --> 00:04:23.420
+tôi sẽ đặt nó ở đây.
+
+00:04:23.420 --> 00:04:27.950
+Được rồi, giờ tôi có TextView,
+TextView, ImageView.
+
+00:04:27.950 --> 00:04:29.140
+Nó đang viết "Happy Birthday, Ben!",
+
+00:04:29.140 --> 00:04:33.140
+Và sau đó viết tiếp "Từ Lyla!".
+
+00:04:33.140 --> 00:04:37.320
+Và sau đó nó vẽ hình bữa tiệc Android này
+trong hai TextViews khác.
+
+00:04:37.320 --> 00:04:40.890
+Nếu tôi chọn TextViews đó,
+chúng vẫn còn đó,
+
+00:04:40.890 --> 00:04:43.100
+chúng chỉ được che đi
+bởi các ImageView.
+
+00:04:43.100 --> 00:04:45.040
+Được rồi, tôi sẽ đổi lại.
+
+00:04:45.040 --> 00:04:47.350
+Tốt hơn nhiều rồi,
+TextViews của tôi đã đứng đầu.
+
+00:04:47.350 --> 00:04:50.280
+Được rồi, và như ta hay làm, hãy tiếp tục
+chạy cái này trên điện thoại,
+
+00:04:50.280 --> 00:04:53.050
+để đảm bảo rằng mọi thứ
+đang làm việc với match_parents
+
+00:04:53.050 --> 00:04:54.540
+và centerCrop.
+
+00:04:54.540 --> 00:04:56.720
+Được rồi, tuyệt vời,
+trông có vẻ khá tốt.
+
+00:04:56.720 --> 00:05:02.070
+Chúng tôi phóng to ảnh để lấp đầy màn hình
+chúng ta có thể thấy text views.
+
+00:05:02.070 --> 00:05:05.470
+Có một vấn đề nhỏ mà chúng ta
+vẫn cần phải sửa chữa, nhưng hiện vẫn tốt đẹp.
+
+00:05:05.470 --> 00:05:08.630
+Được rồi, bạn đang làm rất tốt.
+Chỉ có một thuộc tính cần thay đổi,
+
+00:05:08.630 --> 00:05:10.960
+và sau đó chúng ta sẽ có
+chiếc thiệp sinh nhật cuối cùng.
+

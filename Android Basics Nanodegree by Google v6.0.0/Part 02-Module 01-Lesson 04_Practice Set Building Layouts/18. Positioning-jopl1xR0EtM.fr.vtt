@@ -1,0 +1,306 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.230 --> 00:00:02.440
+Ok, donc regardons la solution.
+
+00:00:02.440 --> 00:00:05.041
+Si vous avez rיpondu
+layout_width ou layout_height,
+
+00:00:05.041 --> 00:00:07.040
+ce ne seraient pas
+de mauvaises suppositions.
+
+00:00:07.040 --> 00:00:09.750
+Il est trטs important de choisir
+ces valeurs avec attention car elles
+
+00:00:09.750 --> 00:00:12.310
+affectent l'espace
+que vos יlיments vont prendre.
+
+00:00:12.310 --> 00:00:14.905
+Par exemple, parlons
+de layout_width.
+
+00:00:14.905 --> 00:00:17.595
+Supposons que j'ai
+un champs de texte qui dise, 'hi'.
+
+00:00:17.595 --> 00:00:20.655
+Et je dיfinis layout_width.
+comme du wrap content.
+
+00:00:20.655 --> 00:00:21.545
+Par dיfaut,
+
+00:00:21.545 --> 00:00:25.295
+חa va garder le champs de texte
+dans le coin en haut א gauche.
+
+00:00:25.295 --> 00:00:28.695
+Ensuite, si j'utilise un autre attribut
+pour le dיplacer vers la droite,
+
+00:00:28.695 --> 00:00:30.625
+le champs de texte sera ici.
+
+00:00:30.625 --> 00:00:31.315
+Si au contraire,
+
+00:00:31.315 --> 00:00:36.960
+J'utilise match parent, par dיfaut, 'hi'
+sera toujours en haut א gauche.
+
+00:00:36.960 --> 00:00:40.050
+Mais si j'essaie ensuite de dיfinir
+un attribut pour le dיplacer א droite,
+
+00:00:42.140 --> 00:00:45.520
+Mais il est dיjא le plus א droite possible
+parce qu'il est en expansion
+
+00:00:45.520 --> 00:00:48.700
+pour correspondre au parent et
+remplir le groupe de vue complet.
+
+00:00:48.700 --> 00:00:50.120
+Lorsqu'on utilise un match parent,
+
+00:00:50.120 --> 00:00:52.900
+on peut voir que le texte 'hi'
+n'a en fait pas bougי.
+
+00:00:52.900 --> 00:00:55.760
+Une chose qui, espיrons-le, est claire
+pour cet exemple, c'est que nous
+
+00:00:55.760 --> 00:00:59.680
+voulons dיfinir layout_width et
+layout_height en wrap content.
+
+00:00:59.680 --> 00:01:01.980
+Afin qu'il s'emballe exactement
+autour du contenu
+
+00:01:01.980 --> 00:01:06.160
+ainsi quand vous dites א la TextView
+d'ךtre soit א gauche, א droit, en haut,
+
+00:01:06.160 --> 00:01:10.210
+en-bas, elle va bien dיplacer
+ce texte vers cet emplacement.
+
+00:01:10.210 --> 00:01:13.650
+Ok, donc layout width et
+layout height sont importantes.
+
+00:01:13.650 --> 00:01:17.380
+TextStyle est un attribut pour
+mettre le texte en gras ou en italique, et
+
+00:01:17.380 --> 00:01:20.630
+il n'implique pas de positionnement
+ou d'espacement.
+
+00:01:20.630 --> 00:01:24.530
+Orientation est un attribut spיcifique
+pour les mises en pages linיaires,
+
+00:01:24.530 --> 00:01:27.780
+pour dיterminer si elles vont ךtre
+verticales ou horizontales.
+
+00:01:27.780 --> 00:01:31.505
+Comme on utilise une mise en page
+relative, חa n'a pas vraiment de sens.
+
+00:01:31.505 --> 00:01:35.640
+Layout_weight est trטs utile
+pour espacer les יlיments uniformיment,
+
+00:01:35.640 --> 00:01:37.900
+mais, c'est un attribut
+de mise en page linיaire.
+
+00:01:37.900 --> 00:01:40.150
+Ce qui nous laisse avec ces attributs.
+
+00:01:40.150 --> 00:01:42.920
+Tous ces attributs sont liיs
+aux mises en page relatives.
+
+00:01:43.980 --> 00:01:48.280
+Ces attributs, layout_to Right Of
+et layout_below sont totalement
+
+00:01:48.280 --> 00:01:52.980
+diffיrents de layout_alignParent
+que ce soit Bottom left ou right.
+
+00:01:52.980 --> 00:01:55.250
+Ces attributs prennent deux child views
+
+00:01:55.250 --> 00:01:57.800
+et les positionnent
+l'une par rapport א l'autre.
+
+00:01:57.800 --> 00:02:03.070
+Par exemple, on pourrait demander
+de placer 'from Lyla' א droite de et
+
+00:02:03.070 --> 00:02:05.920
+et en-dessous de la TextView
+'happy birthday Ben'.
+
+00:02:05.920 --> 00:02:07.810
+Voyons א quoi חa ressemblerait.
+
+00:02:07.810 --> 00:02:09.400
+Ok, donc si on faisait חa
+
+00:02:09.400 --> 00:02:12.920
+et qu'on regardait les deux TextViews,
+c'est le code qu'on utiliserait.
+
+00:02:12.920 --> 00:02:16.580
+Avec la TextView 'happy birthday Ben',
+j'ai crיי un ID ici.
+
+00:02:16.580 --> 00:02:21.430
+Puis je me rיfטre א cet ID par la vue
+'From Lyla' avec layout below
+
+00:02:21.430 --> 00:02:23.080
+et layout right des attributs.
+
+00:02:24.350 --> 00:02:28.530
+Voici une image de ce א quoi חa ressemble
+vraiment dans l'app, et malheureusement,
+
+00:02:28.530 --> 00:02:30.510
+חa n'a pas vraiment fait
+ce qu'on voulait.
+
+00:02:30.510 --> 00:02:33.180
+La vue 'From Lyla'
+est en fait א droite de
+
+00:02:33.180 --> 00:02:35.300
+la TextView 'Happy Birthday Ben'.
+
+00:02:35.300 --> 00:02:39.930
+Et c'est aussi en-dessous, mais
+pas dans le coin en bas א droite.
+
+00:02:39.930 --> 00:02:41.150
+Donc ceux deux-lא ne sont pas corrects.
+
+00:02:42.350 --> 00:02:45.110
+Ok, donc il reste ces trois attributs
+
+00:02:45.110 --> 00:02:47.080
+qui vont prendre ma TextView et
+
+00:02:47.080 --> 00:02:51.720
+l'aligner en relation au Parent,
+qui se trouve ךtre l'יcran entier.
+
+00:02:51.720 --> 00:02:54.720
+Maintenant je veux
+que 'From Lyla' soit ici.
+
+00:02:54.720 --> 00:02:58.310
+C'est א dire dans le coin
+en bas א droite du parent
+
+00:02:58.310 --> 00:03:02.880
+Donc je ne vais pas utiliser
+ayout_alignParentLeft, alors je
+
+00:03:02.880 --> 00:03:07.330
+vais utiliser layout_alignParentRight
+et layout_alignParentBottom.
+
+00:03:07.330 --> 00:03:09.660
+Voyons comment tout cela
+se met en place avec le code.
+
+00:03:09.660 --> 00:03:11.114
+Ok, donc la premiטre chose.
+
+00:03:11.114 --> 00:03:14.469
+Je vais trouver la TextView
+'From Lyla' et je vais m'assurer que
+
+00:03:14.469 --> 00:03:18.617
+layout width et layout height
+sont tous les deux en wrap content sinon,
+
+00:03:18.617 --> 00:03:22.910
+mךme si on place bien notre TextView
+elle pourrait ne pas bouger.
+
+00:03:22.910 --> 00:03:25.450
+Ensuite, je vais ajouter
+les attributs additionnels.
+
+00:03:25.450 --> 00:03:27.980
+Pour valeur, je mets true.
+
+00:03:27.980 --> 00:03:31.430
+Cela affirme que je veux
+que cette TextView soit alignיe
+
+00:03:31.430 --> 00:03:32.490
+א droite du parent.
+
+00:03:32.490 --> 00:03:36.080
+L'autre valeur que j'aurai pu mettre ici
+est false, mais cela signifierait
+
+00:03:36.080 --> 00:03:40.220
+qu'il est faux qu'elle s'aligne א droite
+du Parent, ce n'est pas ce que je veux.
+
+00:03:40.220 --> 00:03:42.790
+Maintenant je vais taper
+l'autre attribut א mettre en bas.
+
+00:03:43.800 --> 00:03:45.370
+Et je vais aussi le dיfinir en rיel.
+
+00:03:45.370 --> 00:03:49.310
+Bien, pour ceux qui sont א la maison
+חa pourrait ךtre un peu dur א voir
+
+00:03:49.310 --> 00:03:52.650
+mais il semblerait que nous ayons
+correctement positionnי notre vue ici.
+
+00:03:52.650 --> 00:03:55.480
+Ceci dit, voyons si cela s'affiche
+correctement sur le tיlיphone
+
+00:03:55.480 --> 00:03:57.705
+en appuyant sur le bouton vert Run.
+
+00:03:57.705 --> 00:03:59.645
+Ok, je sיlectionne mon tיlיphone
+et je clique sur OK.
+
+00:04:00.705 --> 00:04:01.665
+Ok, super.
+
+00:04:01.665 --> 00:04:05.795
+Donc lא en haut j'ai mon 'Happy Birthday,
+Ben', et en bas, j'ai 'From Lyla'.
+
+00:04:05.795 --> 00:04:07.085
+Et de cette maniטre
+
+00:04:07.085 --> 00:04:09.395
+tout a l'air plutפt bien positionnי.
+

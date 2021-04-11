@@ -1,0 +1,180 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.270 --> 00:00:03.226
+Ada dua jawaban yang tepat
+untuk pertanyaan ini,
+
+00:00:03.226 --> 00:00:07.286
+yaitu &lt;i&gt;padding&lt;/i&gt; dan &lt;i&gt;layout_margin&lt;/i&gt;.
+
+00:00:07.286 --> 00:00:10.562
+Anda bisa memilih salah satunya,
+namun tidak butuh keduanya.
+
+00:00:10.562 --> 00:00:12.152
+Akan saya tunjukkan alasannya.
+
+00:00:12.152 --> 00:00:15.243
+Praktiknya, sering kali
+tampilan yang menggunakan &lt;i&gt;padding&lt;/i&gt;
+
+00:00:15.243 --> 00:00:18.537
+tampak sangat mirip dengan tampilan
+yang menggunakan layout_margin.
+
+00:00:18.537 --> 00:00:21.210
+Saya akan membuat batas tampilannya.
+
+00:00:21.210 --> 00:00:22.662
+Setelah batas tampilan dibuat,
+
+00:00:22.662 --> 00:00:26.368
+perbedaan antara kedua situasi ini
+bisa terlihat.
+
+00:00:26.368 --> 00:00:29.375
+Jika menggunakan &lt;i&gt;padding&lt;/i&gt;,
+kita membuat tampilannya lebih besar
+
+00:00:29.375 --> 00:00:32.206
+dengan menambahkan jarak
+di dalam tampilan.
+
+00:00:32.206 --> 00:00:35.488
+Dengan layout_margin,
+kita menambah jarak di sekitar tampilan,
+
+00:00:35.488 --> 00:00:38.123
+namun tidak mengubah ukuran tampilannya.
+
+00:00:38.526 --> 00:00:41.910
+Mungkin Anda bertanya-tanya
+kapan ini berlaku?
+
+00:00:41.910 --> 00:00:44.104
+Kenapa ada dua atribut berbeda?
+
+00:00:44.104 --> 00:00:47.669
+Jika saya melakukan sesuatu
+seperti menambahkan batas atau warna latar
+
+00:00:47.669 --> 00:00:50.808
+ke kedua tampilan ini,
+mereka akan tampak cukup berbeda.
+
+00:00:50.808 --> 00:00:53.851
+Namun dalam hal ini, kita tak menambahkan
+batas atau warna latar.
+
+00:00:53.851 --> 00:00:56.831
+Jadi, Anda bisa memilih &lt;i&gt;padding&lt;/i&gt;
+atau layout_margin.
+
+00:00:56.831 --> 00:00:58.981
+Tidak masuk akal untuk memilih keduanya.
+
+00:00:58.981 --> 00:01:00.428
+Karena bisa pilih salah satu,
+
+00:01:00.428 --> 00:01:04.384
+dengan agak sembarangan,
+saya memilih untuk menambahkan &lt;i&gt;padding&lt;/i&gt;.
+
+00:01:04.384 --> 00:01:06.872
+Kita lihat seperti apa tampilannya
+di Android Studio.
+
+00:01:06.872 --> 00:01:09.730
+Kita kembali ke activity_main.
+
+00:01:09.730 --> 00:01:12.955
+Atribut &lt;i&gt;padding&lt;/i&gt; adalah sesuatu
+yang ingin kita tambahkan ke TextView
+
+00:01:12.955 --> 00:01:15.593
+untuk menjauhkannya dari sisi layar.
+
+00:01:15.593 --> 00:01:19.292
+&lt;i&gt;Padding&lt;/i&gt; dan layout_margin menambahkan
+jarak pada keempat sisi.
+
+00:01:19.292 --> 00:01:20.974
+Mari kita tambahkan.
+
+00:01:21.431 --> 00:01:24.693
+Ingat, saya ingin
+jaraknya 20 dp pada semua sisi.
+
+00:01:24.693 --> 00:01:26.834
+Jadi, itulah nilai
+yang saya masukkan ke sini.
+
+00:01:26.834 --> 00:01:29.676
+Pratinjau saya sudah diperbarui
+untuk menampilkan jaraknya.
+
+00:01:29.676 --> 00:01:31.435
+Saya akan menggulirkan ke bawah.
+
+00:01:31.435 --> 00:01:33.291
+Saya sedang merasa agak iseng.
+
+00:01:33.291 --> 00:01:37.573
+Saya akan menambahkan layout_margin
+ke TextView ini alih-alih &lt;i&gt;padding&lt;/i&gt;.
+
+00:01:37.573 --> 00:01:40.246
+Itu juga menggeser TextView ini.
+
+00:01:40.246 --> 00:01:42.905
+Namun perhatikan,
+ukuran TextView tidak bertambah
+
+00:01:42.905 --> 00:01:45.072
+saat saya mengubah layout_margin.
+
+00:01:45.072 --> 00:01:48.181
+Sementara pada TextView di atas ini,
+
+00:01:48.181 --> 00:01:50.731
+ukuran TextView telah berubah.
+
+00:01:50.731 --> 00:01:54.709
+Apa yang terjadi jika saya menambahkan
+layout_margin dan &lt;i&gt;padding&lt;/i&gt;? Kita lihat.
+
+00:01:55.208 --> 00:01:57.915
+Sekarang, teks saya berjarak
+40 dp dari dinding.
+
+00:01:57.915 --> 00:02:02.001
+Yaitu 20 dp di sini
+dan &lt;i&gt;padding&lt;/i&gt; 20 dp di sini.
+
+00:02:02.001 --> 00:02:06.209
+Namun kita tidak ingin jarak 40 dp.
+Jadi, saya akan menghapus ini.
+
+00:02:07.478 --> 00:02:10.526
+&lt;i&gt;Padding&lt;/i&gt; 20 dp pada TextView "From, Lyla"
+
+00:02:10.526 --> 00:02:13.684
+dan &lt;i&gt;padding&lt;/i&gt; 20 dp
+pada TextView "Happy Birthday, Ben".
+
+00:02:13.684 --> 00:02:15.856
+Bagus. Mari kita jalankan pada ponsel.
+
+00:02:16.211 --> 00:02:19.734
+Saya persembahkan
+aplikasi Birthday Card yang telah selesai.
+
+00:02:19.734 --> 00:02:21.410
+Ayo beri tepuk jazz.
+
+00:02:22.114 --> 00:02:25.161
+Dengan itu, kita menyelesaikan
+hal terakhir dalam daftar tugas.
+

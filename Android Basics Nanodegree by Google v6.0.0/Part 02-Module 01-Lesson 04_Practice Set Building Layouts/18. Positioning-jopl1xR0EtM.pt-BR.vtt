@@ -1,0 +1,197 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:02.440 --> 00:00:05.041
+Se você disse que quer o 
+<i>layout_width layout_height</i>,
+
+00:00:05.041 --> 00:00:07.040
+não seria um palpite ruim.
+
+00:00:07.040 --> 00:00:09.750
+É muito importante escolher
+estes valores cuidadosamente quando eles
+
+00:00:09.750 --> 00:00:12.310
+afectam o espaço que
+seu elemento ocupa.
+
+00:00:12.310 --> 00:00:14.905
+Por exemplo , vamos falar
+sobre <i>layout_width</i>.
+
+00:00:14.905 --> 00:00:17.595
+Suponha que eu tenho
+uma caixa de texto que diz:oi.
+
+00:00:17.595 --> 00:00:20.655
+E eu definir o <i>layout_width</i>
+de se contentar envoltório.
+
+00:00:20.655 --> 00:00:21.545
+Por padrão,
+
+00:00:21.545 --> 00:00:25.295
+isso vai se ater apenas que a caixa de texto
+para o canto superior esquerdo.
+
+00:00:28.695 --> 00:00:30.625
+a caixa de texto será aqui.
+
+00:00:30.625 --> 00:00:31.315
+Se em vez disso,
+
+00:00:31.315 --> 00:00:36.960
+Eu uso o jogo pai, por padrão, o oi vai
+ainda estar no canto superior esquerdo.
+
+00:00:36.960 --> 00:00:40.050
+Mas se eu, em seguida, tentar definir um atributo
+para empurrá-lo para a direita,
+
+00:00:40.050 --> 00:00:42.140
+ele vai tentar empurrar esta
+caixa de texto para a direita.
+
+00:00:42.140 --> 00:00:45.520
+Mas já está tão longe do lado direito 
+como poderia estar porque ao expandir
+
+00:00:45.520 --> 00:00:48.700
+para coincidir com o pai e
+preencher todo o grupo de exibição.
+
+00:00:48.700 --> 00:00:50.120
+No caso da utilização de fósforo pai,
+
+00:00:50.120 --> 00:00:52.900
+podemos ver que o texto oi
+não mudou realmente.
+
+00:00:55.760 --> 00:00:59.680
+pretendemos definir tanto <i>layout_width</i> e
+<i>layout_height</i> para embrulhar conteúdo.
+
+00:00:59.680 --> 00:01:01.980
+Por isso, envolve exatamente
+em torno do conteúdo e
+
+00:01:01.980 --> 00:01:06.160
+então quando você diz o <i>TextView</i> para
+para a direita, esquerda, cima ou
+
+00:01:06.160 --> 00:01:10.210
+baixo, ele vai realmente mover
+esse texto para esse local.
+
+00:01:10.210 --> 00:01:13.650
+Ok, então a largura layout e
+altura de layout são importantes.
+
+00:01:13.650 --> 00:01:17.380
+<i>Textstyle</i> é um atributo para
+negrito ou itálico texto, e
+
+00:01:17.380 --> 00:01:20.630
+ele realmente não envolve 
+posicionamento ou espaçamento.
+
+00:01:20.630 --> 00:01:24.530
+Orientação é um atributo usado
+especificamente com disposições lineares,
+
+00:01:24.530 --> 00:01:27.780
+para determinar se eles estão indo
+para ser vertical ou horizontal.
+
+00:01:31.505 --> 00:01:35.640
+<i>Layout_weight</i>
+
+00:01:35.640 --> 00:01:37.900
+este é um atributo disposição linear.
+
+00:01:37.900 --> 00:01:40.150
+O que nos deixa com esses atributos.
+
+00:01:40.150 --> 00:01:42.920
+Todos esses atributos têm
+a ver com layouts relativos.
+
+00:01:43.980 --> 00:01:48.280
+Agora, esses atributos <i>layout_to</i> direito de
+e <i>layout_below</i> são categoricamente
+
+00:01:48.280 --> 00:01:52.980
+diferentes do <i>layout_alignParent</i>
+seja inferior esquerda ou direita.
+
+00:01:52.980 --> 00:01:55.250
+Esses atributos vão tomar
+dois pontos de vista da criança e
+
+00:01:55.250 --> 00:01:57.800
+posicioná-los um em relação ao outro.
+
+00:01:57.800 --> 00:02:03.070
+Por exemplo , poderíamos dizer posição
+de <i>Lyla</i> à direita e
+
+00:02:05.920 --> 00:02:07.810
+Vamos ver o que gostaria como.
+
+00:02:07.810 --> 00:02:09.400
+Ok, então se fizéssemos isso e
+
+00:02:09.400 --> 00:02:12.920
+apenas olhou para os dois <i>TextViews</i>,
+este é o código que usaríamos.
+
+00:02:12.920 --> 00:02:16.580
+Com o <i>happy birthday Ben TextView</i>,
+eu criei uma ID aqui.
+
+00:02:16.580 --> 00:02:21.430
+E então eu me refiro a esse ID do
+de <i>Lyla TextView</i> com o layout abaixo
+
+00:02:21.430 --> 00:02:23.080
+e layout direito de atributos.
+
+00:02:24.350 --> 00:02:28.530
+Aqui está uma imagem do que que realmente
+olha como no aplicativo e, infelizmente,
+
+00:02:28.530 --> 00:02:30.510
+que realmente não fazer o que queríamos.
+
+00:02:30.510 --> 00:02:33.180
+A vista do <i>Lyla</i> é
+na verdade, à direita da
+
+00:02:35.300 --> 00:02:39.930
+E também é abaixo, mas
+não é no canto inferior direito.
+
+00:02:39.930 --> 00:02:41.150
+Então, esses dois não são corretas.
+
+00:02:42.350 --> 00:02:45.110
+Ok, então isso nos deixa com
+estes três atributos,
+
+00:02:45.110 --> 00:02:47.080
+que terá o meu <i>TextView</i> e
+
+00:02:47.080 --> 00:02:51.720
+alinhá-los em relação ao Pai,
+que passa a ser a tela inteira.
+
+00:02:51.720 --> 00:02:54.720
+Agora eu quero 
+que o <i>Lyla</i> esteja aqui.
+
+00:02:54.720 --> 00:02:58.310
+Que está no inferior direita
+canto do pai.
+

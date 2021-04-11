@@ -1,0 +1,316 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.133 --> 00:00:01.935
+Bien, vamos a ver la solución.
+
+00:00:02.302 --> 00:00:04.971
+Si seleccionaste las opciones
+<i>layout_width</i> o <i>layout_height</i>,
+
+00:00:05.272 --> 00:00:06.740
+no ibas mal encaminado.
+
+00:00:06.939 --> 00:00:09.142
+Es muy importante elegir estos valores
+con cuidado,
+
+00:00:09.376 --> 00:00:11.879
+pues afectan al espacio
+que ocupa el elemento.
+
+00:00:12.212 --> 00:00:14.515
+Por ejemplo, vamos a hablar
+de la opción <i>layout_width</i>.
+
+00:00:14.848 --> 00:00:17.184
+Imaginad que tenemos
+un cuadro de texto que dice "Hola",
+
+00:00:17.484 --> 00:00:20.153
+y selecciono como <i>layout_width</i>
+la opción <i>wrap_content</i>.
+
+00:00:20.587 --> 00:00:24.391
+Por defecto, el cuadro de texto estaría
+siempre en la esquina superior izquierda.
+
+00:00:25.192 --> 00:00:28.262
+Y si uso otro atributo
+para llevarlo a la derecha,
+
+00:00:28.629 --> 00:00:30.097
+el cuadro de texto aparecería aquí.
+
+00:00:30.497 --> 00:00:32.432
+Si en vez de eso usamos
+la opción <i>match_parent</i>,
+
+00:00:33.267 --> 00:00:36.570
+por defecto, "Hola" seguiría estando
+en la esquina superior izquierda.
+
+00:00:36.904 --> 00:00:39.506
+Pero si selecciono un atributo
+para llevarlo a la derecha,
+
+00:00:39.940 --> 00:00:41.875
+intentará llevar el cuadro de texto
+a la derecha.
+
+00:00:42.109 --> 00:00:44.077
+Pero ya no puede estar más a la derecha,
+
+00:00:44.344 --> 00:00:48.015
+porque se extiende para cumplir
+con <i>match_parent </i>y llenar el espacio.
+
+00:00:48.582 --> 00:00:52.486
+Si usamos <i>match_parent</i>,
+vemos que "Hola" no se mueve nada.
+
+00:00:52.819 --> 00:00:54.922
+Una cosa que espero
+que quede clara de este ejemplo
+
+00:00:55.122 --> 00:00:58.192
+es que debemos seleccionar
+<i>layout_width</i> y <i>layout_height</i>
+
+00:00:58.425 --> 00:00:59.580
+para ajustar el contenido.
+
+00:00:59.626 --> 00:01:01.595
+Se ajusta perfectamente al contenido,
+
+00:01:01.795 --> 00:01:05.432
+y cuando ordenas a <i>TextView</i>
+que lo mueva a la derecha o izquierda,
+
+00:01:05.632 --> 00:01:06.800
+arriba o abajo,
+
+00:01:07.034 --> 00:01:09.703
+mueve el texto hacia esa dirección.
+
+00:01:10.070 --> 00:01:13.140
+Tanto <i>layout_width</i>
+como <i>layout_height</i> son importantes.
+
+00:01:13.640 --> 00:01:16.910
+Con la opción de <i>textStyle</i>,
+el texto se pone en negrita o cursiva,
+
+00:01:17.144 --> 00:01:19.913
+no tiene nada que ver
+con la posición o el espacio.
+
+00:01:20.514 --> 00:01:24.184
+El atributo de <i>orientation</i> se usa
+sobre todo para el diseño lineal,
+
+00:01:24.518 --> 00:01:27.321
+para indicar si un texto
+será vertical u horizontal.
+
+00:01:27.721 --> 00:01:30.791
+Como usamos un diseño relativo,
+esta opción no tiene mucho sentido.
+
+00:01:31.425 --> 00:01:34.561
+La opción <i>layout_width</i> es muy útil
+para expandir de forma uniforme,
+
+00:01:34.828 --> 00:01:37.598
+pero ahora estamos hablando
+de atributos lineales.
+
+00:01:37.831 --> 00:01:39.800
+Lo que nos deja con estos atributos.
+
+00:01:40.033 --> 00:01:42.970
+Todos estos atributos tienen que ver
+con el diseño relativo.
+
+00:01:43.904 --> 00:01:47.207
+Estos dos atributos,
+<i>layout_toRightOF</i> y <i>layout_below</i>,
+
+00:01:47.441 --> 00:01:51.211
+son completamente distintos
+de <i>layout_alignParentBottom</i>,
+
+00:01:51.411 --> 00:01:52.479
+<i>Left</i> o <i>Right</i>.
+
+00:01:52.913 --> 00:01:57.050
+Estos atributos usan dos <i>child views</i>
+y las colocan de forma relativa entre sí.
+
+00:01:57.751 --> 00:02:01.522
+Por ejemplo, podríamos decir
+que coloque "De parte de Lyla"
+
+00:02:01.755 --> 00:02:05.359
+a la derecha
+y debajo del texto de "Felicidades, Ben".
+
+00:02:05.792 --> 00:02:07.261
+Veamos cómo quedaría.
+
+00:02:07.694 --> 00:02:08.961
+Si hiciésemos eso
+
+00:02:09.196 --> 00:02:12.533
+y si observáramos las dos <i>TextViews</i>,
+este sería el código que utilizaríamos.
+
+00:02:12.833 --> 00:02:16.170
+Para el <i>TextView </i>de la felicitación,
+he creado este ID de aquí.
+
+00:02:16.470 --> 00:02:19.940
+Luego hago referencia a ese ID
+con el <i>TextView</i> de "De parte de Lyla",
+
+00:02:20.174 --> 00:02:23.043
+con los atributos de
+<i>layout_below</i> y <i>layout_toRightOF</i>.
+
+00:02:24.278 --> 00:02:26.413
+En esta imagen vemos
+cómo quedaría en la app,
+
+00:02:26.713 --> 00:02:30.217
+y por desgracia no hemos conseguido
+lo que queríamos hacer.
+
+00:02:30.450 --> 00:02:34.755
+El texto de Lyla está en realidad
+a la derecha del texto de felicitación,
+
+00:02:35.189 --> 00:02:36.723
+y también está debajo.
+
+00:02:36.924 --> 00:02:39.426
+Pero no está
+en la esquina inferior derecha,
+
+00:02:39.860 --> 00:02:41.595
+por lo que estos dos son incorrectos.
+
+00:02:42.229 --> 00:02:44.698
+Entonces nos quedamos
+con estos tres atributos,
+
+00:02:45.032 --> 00:02:46.567
+que harán que el <i>TextView</i>
+
+00:02:46.834 --> 00:02:49.269
+quede alineado en relación
+con el elemento <i>Parent</i>,
+
+00:02:49.503 --> 00:02:51.305
+que resulta ser toda la pantalla.
+
+00:02:51.638 --> 00:02:54.141
+Quiero que "De parte de Lyla"
+esté aquí abajo,
+
+00:02:54.641 --> 00:02:57.644
+que es la esquina inferior derecha
+del elemento <i>Parent</i>.
+
+00:02:58.245 --> 00:03:01.715
+Así que no vamos a usar
+<i>layout_alignParentLeft</i>.
+
+00:03:01.949 --> 00:03:04.852
+De hecho,
+usaremos <i>layout_alignParentRight</i>
+
+00:03:05.052 --> 00:03:06.887
+y <i>layout_alignParentBottom</i>.
+
+00:03:07.221 --> 00:03:09.122
+Vamos a ver
+cómo se vería todo en el código.
+
+00:03:09.523 --> 00:03:11.091
+Empecemos por el principio.
+
+00:03:11.358 --> 00:03:13.327
+Voy a localizar el <i>TextView </i>de Lyla
+
+00:03:13.594 --> 00:03:16.363
+y asegurarme
+de que <i>layout_width</i> y <i>layout_height</i>
+
+00:03:16.563 --> 00:03:17.998
+tienen como atributo <i>wrap_content</i>.
+
+00:03:18.232 --> 00:03:22.436
+Si no, aunque lo coloquemos
+correctamente, podría no moverse.
+
+00:03:22.669 --> 00:03:25.005
+Después,
+añado los atributos adicionales.
+
+00:03:25.372 --> 00:03:27.708
+Para <i>value</i>,
+voy a poner <i>true</i>.
+
+00:03:27.908 --> 00:03:32.212
+Con esto me aseguro de que el <i>TextView</i>
+esté alineado a la derecha de <i>Parent</i>.
+
+00:03:32.446 --> 00:03:34.948
+El otro valor
+que podría poner aquí es <i>false</i>.
+
+00:03:35.148 --> 00:03:38.619
+Pero eso querría decir que es falso
+que se alinee a la derecha,
+
+00:03:38.650 --> 00:03:39.987
+que no es lo que quiero.
+
+00:03:40.187 --> 00:03:43.023
+Vamos con el siguiente atributo,
+<i>layout_alignParentBottom</i>,
+
+00:03:43.657 --> 00:03:45.592
+que también quiero poner como <i>true</i>.
+
+00:03:45.859 --> 00:03:49.062
+Para los que estéis en casa,
+os va a costar verlo,
+
+00:03:49.296 --> 00:03:52.266
+pero parece que hemos puesto
+correctamente que se vea abajo.
+
+00:03:52.566 --> 00:03:55.202
+Una vez dicho eso,
+veamos si se ve bien en el teléfono
+
+00:03:55.402 --> 00:03:56.937
+dándole al botón verde <i>Ejecutar</i>.
+
+00:03:57.638 --> 00:04:00.040
+Selecciono mi teléfono y le doy a <i>Aceptar</i>.
+
+00:04:00.574 --> 00:04:03.977
+Genial,
+aquí arriba tenemos "Felicidades, Ben",
+
+00:04:04.178 --> 00:04:06.113
+y aquí abajo tenemos
+"De parte de Lyla".
+
+00:04:06.380 --> 00:04:09.383
+Así parece
+que todo está en la posición correcta.
+

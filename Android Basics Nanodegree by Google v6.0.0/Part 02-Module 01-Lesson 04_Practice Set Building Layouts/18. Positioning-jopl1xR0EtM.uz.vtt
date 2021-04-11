@@ -1,0 +1,267 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.230 --> 00:00:02.440
+OK, shuning uchun yechimni ko‘rib chiqaylik.
+
+00:00:02.440 --> 00:00:05.041
+Agar siz layout_width yoki
+ layout_height desangiz,
+
+00:00:05.041 --> 00:00:07.040
+bu yomon taxmin emas.
+
+00:00:07.040 --> 00:00:09.750
+Bu atributlarni ehtiyotkorlik bilan tanlash juda muhim,
+chunki ular 
+
+00:00:09.750 --> 00:00:12.310
+element egallaydigan joyga ta’sir qiladi.
+
+00:00:12.310 --> 00:00:14.905
+Masalan layout_width haqida gaplashaylik.
+
+00:00:14.905 --> 00:00:17.595
+Aytaylik menda "Hi" degan matn bor.
+
+00:00:17.595 --> 00:00:20.655
+Va men layout_width atributini wrap content deb o‘rnatdim.
+
+00:00:20.655 --> 00:00:21.545
+Bu odatiy,
+
+00:00:21.545 --> 00:00:25.295
+bu shunchaki matn oynasini yuqori chap burchakka yopishtiradi.
+
+00:00:25.295 --> 00:00:28.695
+Keyin, agar men boshqa atributdan foydalansam
+uni o‘ng tomonga surish uchun,
+
+00:00:28.695 --> 00:00:30.625
+matn oynasi shu yerda bo‘ladi.
+
+00:00:30.625 --> 00:00:31.315
+Agar buning o‘rniga
+
+00:00:31.315 --> 00:00:36.960
+men match parent dan foydalansam, matn
+hali ham yuqori chap burchakda qoladi.
+
+00:00:36.960 --> 00:00:40.050
+Ammo, agar men bir xususiyatni o‘rnatishga harakat qilsam
+uni o‘ng tomonga itarish uchun,
+
+00:00:40.050 --> 00:00:42.140
+u bu matn oynasinio‘ng tomonda itarishga harakat qiladi.
+
+00:00:42.140 --> 00:00:45.520
+Ammo bu kengayganligi sababli allaqachon o‘ngda bo‘lishi mumkin
+
+00:00:45.520 --> 00:00:48.700
+u match parent da va butun ko‘rinishni to‘ldiradi.
+
+00:00:48.700 --> 00:00:50.120
+Agar match parent bo‘lsa,
+
+00:00:50.120 --> 00:00:52.900
+biz "Hi" matni aslida siljimaganini ko‘rishimiz mumkin.
+
+00:00:52.900 --> 00:00:55.760
+Shunday qilib, bu misolda bir narsa, umid qilamizki,
+biz uchun ravshan -
+
+00:00:55.760 --> 00:00:59.680
+ikkala layout_width va layout_height atributga wrap content qiymatini berishni xohlayiz.
+
+00:00:59.680 --> 00:01:01.980
+Shunday qilib, ular kontentni o‘raydi xolos
+
+00:01:01.980 --> 00:01:06.160
+shunda siz TextView ga o‘ngga, chapga, yuqoriga, quyiga deganingizda, 
+
+00:01:06.160 --> 00:01:10.210
+matn o‘sha joyga o‘tadi.
+
+00:01:10.210 --> 00:01:13.650
+OK, shuning uchun layout_width va layout_height atributlari muhim ahamiyatga ega.
+
+00:01:13.650 --> 00:01:17.380
+ TextStyle atributi matnni qalin shriftli yoki kursivlangan qiladi.
+
+00:01:17.380 --> 00:01:20.630
+u joylashish yoki oraliqlarni belgilashga ta’sir qilmaydi.
+
+00:01:20.630 --> 00:01:24.530
+ Orientation atributi
+xususan chiziqli tartiblar linear layout bilan ishlatiladi va
+
+00:01:24.530 --> 00:01:27.780
+vertikal yoki gorizontal tartibni belgilaydi.
+
+00:01:27.780 --> 00:01:31.505
+Biz relative layout nisbiy tartibdan foydalanganimiz uchun
+bu hozir ma’noga ega emas.
+
+00:01:31.505 --> 00:01:35.640
+ Layout_weight atributi elementlarni joylashda juda foydalidir, lekin
+
+00:01:35.640 --> 00:01:37.900
+u ham chiziqli tartiblar linear layout bilan ishlatiladi.
+
+00:01:37.900 --> 00:01:40.150
+Bu bizni ushbu atributlar bilan qoldiradi.
+
+00:01:40.150 --> 00:01:42.920
+Bu atributlarning barchasi nisbiy tartib bilan ishlatiladi.
+
+00:01:43.980 --> 00:01:48.280
+Endi bu atributlar layout_to_right_of 
+va layout_below 
+
+00:01:48.280 --> 00:01:52.980
+ layout_alignParent va Bottom left kabilardan mutlaqo farq qiladi.
+
+00:01:52.980 --> 00:01:55.250
+Bu atributlar ikkita bola ko‘rinishlarining 
+
+00:01:55.250 --> 00:01:57.800
+bir-biriga nisbatan joylashuvini beldilaydi.
+
+00:01:57.800 --> 00:02:03.070
+Masalan, "Lyladan" matnining pozitsiyasini 
+
+00:02:03.070 --> 00:02:05.920
+"Happy birthday, Ben" TextView ga nisbatan o‘ngda va pastda deb aytishimiz mumkin.
+
+00:02:05.920 --> 00:02:07.810
+Keling, buni ko‘rib chiqaylik.
+
+00:02:07.810 --> 00:02:09.400
+OK, agar biz buni shunday qilsak
+
+00:02:09.400 --> 00:02:12.920
+biz ikkita TextView ,
+bu biz ishlatadigan kod.
+
+00:02:12.920 --> 00:02:16.580
+"Happy birthday, Ben" TextView ga men ID yaratdim.
+
+00:02:16.580 --> 00:02:21.430
+Va keyin men bu "From Lyla" TextView dan bu IDga muroaat qildim.
+
+00:02:21.430 --> 00:02:23.080
+ layout below va layout right atributlari bilan.
+
+00:02:24.350 --> 00:02:28.530
+Buning ilovadagi rasmi va afsuski,
+
+00:02:28.530 --> 00:02:30.510
+u biz xohlagandek bo‘lmadi.
+
+00:02:30.510 --> 00:02:33.180
+"From Lyla" TextView aslida
+
+00:02:33.180 --> 00:02:35.300
+"Happy birthday, Ben" TextView ning o‘ng tomonida.
+
+00:02:35.300 --> 00:02:39.930
+Va u quyida, lekin
+u pastki o‘ng burchakda emas.
+
+00:02:39.930 --> 00:02:41.150
+Shunday qilib, bu ikkalasi ham to‘g‘ri emas.
+
+00:02:42.350 --> 00:02:45.110
+OK, bizda bu uchta atribut qoldi,
+
+00:02:45.110 --> 00:02:47.080
+ular mening TextView ni 
+
+00:02:47.080 --> 00:02:51.720
+ota ko‘rinishga nisbatan tekislaydi,
+bu butun ekran bo‘ladi.
+
+00:02:51.720 --> 00:02:54.720
+Endi men "From Lyla" bu yerda bo‘lishini istayman.
+
+00:02:54.720 --> 00:02:58.310
+Ya’ni ota korinishining pastki o‘ng burchagida.
+
+00:02:58.310 --> 00:03:02.880
+Shuning uchun men layout_alignParentLeft dan foydalanmoqchi emasman, aslida men
+
+00:03:02.880 --> 00:03:07.330
+ layout_alignParentRight va layout_alignParentBottom dan foydalanaman.
+
+00:03:07.330 --> 00:03:09.660
+Keling, bularning barchasi kodda qanday bo‘lishini ko‘rib chiqaylik.
+
+00:03:09.660 --> 00:03:11.114
+Xo‘sh, avval birinchi navbatda.
+
+00:03:11.114 --> 00:03:14.469
+Men "From Lyla" TextView ni topib 
+
+00:03:14.469 --> 00:03:18.617
+ layout width va layout height atributlari wrap_content deb belgilanganligiga ishonch hosil qilmoqchiman,
+
+00:03:18.617 --> 00:03:22.910
+agar biz matnni to‘g‘ri joylashtirsak ham
+u joyida qolishi mumkin.
+
+00:03:22.910 --> 00:03:25.450
+Endi men yana boshqa sifatlar qo‘shmoqchiman.
+
+00:03:25.450 --> 00:03:27.980
+Qiymatini "true" deb belgilayman.
+
+00:03:27.980 --> 00:03:31.430
+Bu men xohlayotganimdek bu TextView ni otaga nisbatan
+
+00:03:31.430 --> 00:03:32.490
+o‘ng tarafga tekislaydi.
+
+00:03:32.490 --> 00:03:36.080
+Bu erga "false" qiymat
+qo‘yishim mumkin, bu degani
+
+00:03:36.080 --> 00:03:40.220
+otaga nisbatan o‘ng tarafga tekislash yolg‘on, bu men xohlagan narsa emas.
+
+00:03:40.220 --> 00:03:42.790
+Endi men pastki qismiga qo‘yish
+uchun boshqa atribut yozaman.
+
+00:03:43.800 --> 00:03:45.370
+Men buni ham "true" deyman.
+
+00:03:45.370 --> 00:03:49.310
+Yaxshi, buni ko‘rish biroz qiyin bo‘lishi mumkin
+
+00:03:49.310 --> 00:03:52.650
+lekin bizning joylashuvimiz to‘g‘ri aniqlanganga o‘xshaydi.
+
+00:03:52.650 --> 00:03:55.480
+Keling, telefonda to‘g‘ri ko‘rsatiladimi ko‘raylik,
+
+00:03:55.480 --> 00:03:57.705
+yashil "Run" tugmasini bosib
+
+00:03:57.705 --> 00:03:59.645
+OK, men telefonimni tanladim va OK ni bosdim.
+
+00:04:00.705 --> 00:04:01.665
+Yaxshi, ajoyib.
+
+00:04:01.665 --> 00:04:05.795
+Mana mening tug‘ilgan kunim,
+Ben va pastda, menda Lyla bor.
+
+00:04:05.795 --> 00:04:07.085
+Va u bilan
+
+00:04:07.085 --> 00:04:09.395
+hammasi go‘zalga o‘xshaydi
+to‘g‘ri holatda.
+

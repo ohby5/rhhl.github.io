@@ -1,0 +1,341 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.300 --> 00:00:01.940
+Yaxshi, agar buni qilgan bo‘lsangiz - yaxshi.
+
+00:00:01.940 --> 00:00:04.970
+Va agar qilmagan bo‘lsangiz, urinib ko‘ring va
+javobni kuzatishda davom eting.
+
+00:00:06.190 --> 00:00:08.080
+Mayli, shunday men Android Studio daman.
+
+00:00:08.080 --> 00:00:11.150
+Va men ayni paytda TextView larga qarab turibman.
+
+00:00:11.150 --> 00:00:13.870
+Ammo men yuqoriga ImageView ga qarash uchun yuqoriga chiqaman.
+
+00:00:13.870 --> 00:00:16.950
+OK, men ilgari gapiganlarim haqida biroz aytmoqchiman.
+
+00:00:16.950 --> 00:00:19.635
+Agar kursorimni ushbu ImageView da biror joyga qo‘ysam,
+
+00:00:19.635 --> 00:00:23.473
+u menga ko‘k rom bilan ImageView qanchalik katta ekanligini ko‘rsatadi.
+
+00:00:23.473 --> 00:00:26.743
+Va bu ushbu telefon ekranining o‘lchamidan ancha katta.
+
+00:00:26.743 --> 00:00:29.049
+Endi men scaleType qo‘shaman
+
+00:00:29.049 --> 00:00:32.950
+menda ikkita variant bor center yoki centerCrop .
+
+00:00:32.950 --> 00:00:35.450
+Endi center haqiqatan ham
+
+00:00:35.450 --> 00:00:37.380
+tasvir hajmini o‘zgartirmadi.
+
+00:00:37.380 --> 00:00:40.800
+Demak men centerCrop dan foydalanishim kerak.
+
+00:00:40.800 --> 00:00:44.892
+Yaxshi, endi siz ko‘rishingiz kerak -
+
+00:00:44.892 --> 00:00:46.770
+tasvir butun ImageView maydonini to‘ldirish uchun kengaymoqda.
+
+00:00:46.770 --> 00:00:50.470
+Siz e’tibor bergan bo‘lishingiz mumkin bu pastki qismda
+
+00:00:50.470 --> 00:00:53.610
+rasm kengaymaydigan joyda bir oz oq chiziq bor.
+
+00:00:53.610 --> 00:00:57.860
+Agar men bu erga borsam, menga
+har xil qurilmalar o‘rtasida tanlov beriladi
+
+00:00:57.860 --> 00:01:01.190
+Men Nexus 10 kabi planshet tanlayman,
+
+00:01:01.190 --> 00:01:04.530
+biz endi ko‘rishimiz mumkin
+rasm butun maydonini to‘ldirmayapti.
+
+00:01:04.530 --> 00:01:07.600
+Bu yomon, chunki bu degani, siz buni planshetda 
+
+00:01:07.600 --> 00:01:11.610
+bu g‘alati tarzda, atrofida oq bo‘shliq bilan ko‘rasiz.
+
+00:01:11.610 --> 00:01:13.810
+Garchi bu telefonda yaxshi ko‘rinishi mumkin bo‘lsa ham.
+
+00:01:13.810 --> 00:01:14.575
+Buning sababi,
+
+00:01:14.575 --> 00:01:18.190
+men match_parent o‘rniga wrap_content qo‘yganman.
+
+00:01:18.190 --> 00:01:20.300
+Bularni match_parent ga o‘zgartirishga ijozat bering.
+
+00:01:20.300 --> 00:01:23.680
+Endi bularni o‘zgartirganimda
+ match_parent rasm
+
+00:01:23.680 --> 00:01:24.910
+butun ko‘rinishi to‘ldirish uchun kengayadi.
+
+00:01:24.910 --> 00:01:28.235
+Shunday qilib, men tushuntirishni harakat qilmoqchi bo‘lgan narsa
+bu layout_width , layout_height va
+
+00:01:28.235 --> 00:01:30.080
+ scaleType barchasi birgalikda ishlashidir.
+
+00:01:30.080 --> 00:01:34.080
+Sizga nimani nazarda tutayotganim haqida biroz ko‘proq ma’lumot berish uchun rasm chizishga ijozat bering.
+
+00:01:34.080 --> 00:01:37.460
+OK, siz biroz qiziquvchansiz deylik...
+
+00:01:37.460 --> 00:01:39.060
+ centerCrop dan foydalanganda nima sodir bo‘layotganiga.
+
+00:01:39.060 --> 00:01:40.910
+Agar Android dasturchilari veb-saytiga borsangiz,
+
+00:01:40.910 --> 00:01:43.763
+hujjatlar aytadiki,
+
+00:01:43.763 --> 00:01:46.510
+ centerCrop tasvirni bir tekisda masshtablaydi,
+
+00:01:46.510 --> 00:01:49.460
+bu degani, rasm tomonlarining nisbati saqlanadi.
+
+00:01:49.460 --> 00:01:53.980
+Va bu nimani anglatadi, bu shunday qilinadiki, rasmning ikkala o‘lchami, kenglik va
+
+00:01:53.980 --> 00:01:56.290
+balandligi image view ning (paddingsiz) 
+
+00:01:56.290 --> 00:02:00.340
+mos kattasiga nisbatan teng bo‘ladi.
+
+00:02:00.340 --> 00:02:03.380
+OK, shuning uchun bir tekisda masshtablash haqida shuni bilish kerakki,
+
+00:02:03.380 --> 00:02:07.360
+agar siz biror rasmni bir tekisda masshtablamoqchi bo‘lsangiz,
+
+00:02:07.360 --> 00:02:12.030
+u tasvirni gorizontal va vertikal o‘lchamda teng cho‘zadi
+
+00:02:12.030 --> 00:02:16.320
+Shunday qilib, agar rasm maydonining 
+
+00:02:16.320 --> 00:02:19.380
+kengligi yoki balanligi kattaroq bo‘lsa, 
+
+00:02:19.380 --> 00:02:23.700
+kichigini to‘ldiradi xolos.
+
+00:02:23.700 --> 00:02:25.070
+Keling, rasmga qaraylik.
+
+00:02:25.070 --> 00:02:26.910
+OK, mana sizning telefoningiz.
+
+00:02:26.910 --> 00:02:29.200
+Va bizning telefonimizda rasm ko‘rinishi mavjud.
+
+00:02:29.200 --> 00:02:31.150
+Mana rasm ko‘rinishi va
+
+00:02:31.150 --> 00:02:34.860
+bu rasmni ko‘rishning haqiqiy hajmini ko‘rsatuvchi yashil quti.
+
+00:02:34.860 --> 00:02:37.680
+ centerCrop nima qiladi,
+bu tasvirni shu qadar kattalashtiradi
+
+00:02:37.680 --> 00:02:40.790
+u qutiga to‘g‘ri keladi.
+
+00:02:40.790 --> 00:02:44.627
+OK, shuning uchun o‘lchamlarni o‘zgartirmasdan
+men ushbu rasmni moslashtirish uchun kattalashtirdim
+
+00:02:44.627 --> 00:02:46.460
+bu yashil maydonchada.
+
+00:02:46.460 --> 00:02:48.830
+Endi rasm bu uzun to‘rtburchak 
+
+00:02:48.830 --> 00:02:51.545
+u aslida kengayib telefonning chetidan chiqib ketadi.
+
+00:02:51.545 --> 00:02:54.610
+ centerCrop buni ko‘rinishga nisbatan markazlashtiradi
+
+00:02:54.610 --> 00:02:59.000
+keyin nomidan ko‘rinib turibdiki, u rasmning ortiqcha qismlarini kesib tashlaydi.
+
+00:02:59.000 --> 00:03:01.940
+OK, shuning uchun men yana bir narsa haqida gaplashmoqchiman,
+siz duch kelgan bo‘lishingiz mumkin bo‘lgan muammo haqida.
+
+00:03:03.400 --> 00:03:06.860
+Ko‘rinishlar o‘yin kartalaridek bir-biriga ustiga chiqishi mumkin.
+
+00:03:06.860 --> 00:03:09.670
+Va bu ko‘rinish teglari
+
+00:03:09.670 --> 00:03:11.610
+ko‘rinishlar ekranda joylashishi tartibni belgilaydi.
+
+00:03:11.610 --> 00:03:12.910
+A ko‘rinishi birinchi bo‘lgani uchun,
+
+00:03:12.910 --> 00:03:17.810
+u avval ekranga joylashadi,
+keyin B ko‘rinishi va keyin C ko‘rinishi.
+
+00:03:17.810 --> 00:03:20.530
+Endi men ushbu XMLda belgilagan tartib tufayli
+
+00:03:20.530 --> 00:03:23.890
+A matn ko‘rinishidagi matnni juda yaxshi ko‘ra olmayapman.
+
+00:03:23.890 --> 00:03:26.910
+XML-ni o‘zgartirishga harakat qilaylik va
+bunda mening ekranim qanday o‘zgarganiga qarang.
+
+00:03:27.920 --> 00:03:31.710
+OK, men narsalar o‘rnini almashtirdim, endi menda B, A, C ko‘rinishlar bor.
+
+00:03:31.710 --> 00:03:34.170
+Bu avval B ko‘rinishini chizadi.
+
+00:03:34.170 --> 00:03:35.220
+Keyin u A ko‘rinishini chizadi.
+
+00:03:35.220 --> 00:03:38.140
+Va nihoyat, C ko‘rinishini joylashtiradi.
+
+00:03:38.140 --> 00:03:39.950
+Men shunchaki ko‘rishlarni tartibladim.
+
+00:03:39.950 --> 00:03:42.347
+Hamma narsa joylashtirilgan
+xuddi shu holatda,
+
+00:03:42.347 --> 00:03:46.152
+faqat ko‘rinishlar qanday ketma-ketlikda joylashishi o‘zgargan.
+
+00:03:46.252 --> 00:03:48.330
+Va shuning uchun,
+endi men o‘z matnimni ko‘ra olaman.
+
+00:03:48.330 --> 00:03:51.280
+Xullas, siz o‘xshash muammoga duch kelgandirsiz, 
+
+00:03:51.280 --> 00:03:55.010
+agar bu yerda ikkita matn ko‘rinishini joylashtirgan
+keyin rasm ko‘rinishini chizgan bo‘lsangiz.
+
+00:03:55.010 --> 00:03:58.270
+Chunki bu birinchi matn o‘rinishini joylaydi,
+ko‘rish, keyin ikkinchi matn ko‘rinishini va
+
+00:03:58.270 --> 00:04:01.870
+keyin butun ekranni qamrab olgan rasm ko‘rinishini joylaydi va u ikkalasini orqada qoldiradi.
+
+00:04:01.870 --> 00:04:03.580
+Shunday ekan, ishonch hosil qiling
+tartib to‘g‘riligiga.
+
+00:04:04.750 --> 00:04:07.020
+Keling, buni kodida ko‘rib chiqaylik.
+
+00:04:07.020 --> 00:04:09.330
+Xo‘sh, mana bu mening kodim.
+
+00:04:09.330 --> 00:04:12.260
+Men sizga shunchaki ko‘rinishlarni tartiblash nimaniligini ko‘rsatmoqchiman.
+
+00:04:12.260 --> 00:04:16.029
+Hozir mening ImageView birinchi bo‘lib joylashtirilgan,
+keyin mening ikkita TextView larim.
+
+00:04:16.029 --> 00:04:18.550
+Va biz matnni ekranda osongina ko‘ra olamiz.
+
+00:04:18.550 --> 00:04:21.829
+Endi agar men buning o‘rniga bu ImageView ni kesib,
+pastga tushib,
+
+00:04:21.829 --> 00:04:23.420
+uni shu yerda qo‘ysam.
+
+00:04:23.420 --> 00:04:27.950
+Endi menda TextView ,
+ TextView , ImageView bor.
+
+00:04:27.950 --> 00:04:29.140
+Xo‘sh, bunda "Tug‘ilgan kun bilan, Ben!" TextView 
+
+00:04:29.140 --> 00:04:33.140
+va keyin "From, Lyla!" TextView chiziladi
+
+00:04:33.140 --> 00:04:37.320
+va keyin bu Android party rasmini chizadi,
+bu ikkita TextView ustidan.
+
+00:04:37.320 --> 00:04:40.890
+Agar men TextView larni tanlasam,
+men ular hali ham o‘sha yerda ekanliklarini ko‘raman,
+
+00:04:40.890 --> 00:04:43.100
+ular endi ImageView tagida qolgan.
+
+00:04:43.100 --> 00:04:45.040
+Mayli, joyiga qaytaray.
+
+00:04:45.040 --> 00:04:47.350
+Bu juda yaxshi, mening TextView larim eng tepada joylashgan.
+
+00:04:47.350 --> 00:04:50.280
+OK, va har doimgidek, keling
+buni bizning telefonimizda ishga tushiraylik,
+
+00:04:50.280 --> 00:04:53.050
+shunchaki match_parent va centerCrop bilan hamma narsa 
+
+00:04:53.050 --> 00:04:54.540
+joyida ekanligiga ishonch hosil qilish uchun.
+
+00:04:54.540 --> 00:04:56.720
+Yaxshi, ajoyib, bu juda ajoyib ko‘rinadi.
+
+00:04:56.720 --> 00:05:02.070
+Biz rasm to‘liq ekranni to‘ldirishi uchun uni kengaytirdik, biz ushbu matn ko‘rinishlarini ko‘rishimiz mumkin.
+
+00:05:02.070 --> 00:05:05.470
+Bizda hali ham bitta kichik muammo bor, uni tuzatish kerak, lekin hozirgacha katta ish qildik.
+
+00:05:05.470 --> 00:05:08.630
+Mayli, siz juda yaxshi ishyapsiz.
+O‘zgartirish uchun yana bitta atribut qoldi,
+
+00:05:08.630 --> 00:05:10.960
+va keyin bizning "Birthday Card" ilovamiz tayyor bo‘ladi.
+

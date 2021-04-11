@@ -1,0 +1,374 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.300 --> 00:00:01.940
+Peki, hallettiyseniz, aferin.
+
+00:00:01.940 --> 00:00:05.410
+Ama olmadıysa da iyi denemeydi
+ve cevap için izlemeye devam edin.
+
+00:00:06.190 --> 00:00:08.080
+Pekala, Android Studio'dayım.
+
+00:00:08.080 --> 00:00:11.150
+Ve TextView'lere bakıyorum.
+
+00:00:11.150 --> 00:00:13.870
+Fakat ImageView'e bakmak için
+yukarı kaydıracağım.
+
+00:00:13.870 --> 00:00:16.950
+Tamam, neden bahsettiğim
+hakkında bir iki kelime edeyim.
+
+00:00:16.950 --> 00:00:19.635
+Eğer imleci bu ImageView
+üzerinde bir yere koyarsam
+
+00:00:19.635 --> 00:00:23.473
+bana ImageView'in ne kada büyük olduğunu
+gösteren mavi bir kutu verecektir.
+
+00:00:23.473 --> 00:00:26.743
+Ve neredeyse telefonun ekranı kadar.
+
+00:00:26.743 --> 00:00:29.049
+Şimdi, devam edip scaleType ekleyeceğim ve
+
+00:00:29.049 --> 00:00:32.950
+aradığım iki seçenek
+center veya centerCrop.
+
+00:00:32.950 --> 00:00:35.450
+Aslında center resmi ölçeklemez,
+
+00:00:35.450 --> 00:00:37.380
+resmin boyutunu değiştirmez.
+
+00:00:37.380 --> 00:00:40.800
+Yani centerCrop kullanmam
+gerektiği gayet açık.
+
+00:00:40.800 --> 00:00:44.892
+Tamam, şimdi resmin tüm ImageView'i
+kaplayacak şekilde genişlediğini
+
+00:00:44.892 --> 00:00:46.770
+görüyorsunuz.
+
+00:00:46.770 --> 00:00:50.470
+En altta resmin uzamadığı
+
+00:00:50.470 --> 00:00:53.610
+beyaz bir çizgi farketmiş olabilirsiniz.
+
+00:00:53.610 --> 00:00:57.860
+Eğer buraya gidersem, farklı
+cihazlar seçebilirim ve
+
+00:00:57.860 --> 00:01:01.190
+Nexus 10 gibi bir cihaz seçtim diyelim,
+
+00:01:01.190 --> 00:01:04.530
+göreceğiz ki bu resim
+tüm boşluğu doldurmuyor.
+
+00:01:04.530 --> 00:01:07.600
+Bu kötü bir şey çünkü
+buna tablette bakıyorsanız
+
+00:01:07.600 --> 00:01:11.610
+etrafında beyaz boşluk olan,
+garip, kutulu bir resim göreceksiniz.
+
+00:01:11.610 --> 00:01:13.810
+Telefonda iyi gözüküyor olsa da.
+
+00:01:13.810 --> 00:01:14.575
+Bunun nedeni,
+
+00:01:14.575 --> 00:01:18.190
+match_parent yerine
+wrap_content kullanmış olmam.
+
+00:01:18.190 --> 00:01:20.300
+Bunu match_parent olarak değiştireyim.
+
+00:01:20.300 --> 00:01:22.480
+Şimdi bunu match_parent yaparsam
+
+00:01:22.480 --> 00:01:24.910
+resim tüm ekranı kaplar.
+
+00:01:24.910 --> 00:01:28.235
+Yani demek istediğim,
+layout_width, layout_height ve
+
+00:01:28.235 --> 00:01:30.080
+scaleType hep birlikte çalışır.
+
+00:01:30.080 --> 00:01:34.080
+Demek istediğimi bir resimle
+daha detaylı göstereyim.
+
+00:01:34.080 --> 00:01:37.460
+Tamam, diyelim ki centerCrop
+kullanırsak neler olacağını
+
+00:01:37.460 --> 00:01:39.060
+merak ediyorsunuz.
+
+00:01:39.060 --> 00:01:40.910
+Android Geliştirici websitesine giderseniz,
+
+00:01:40.910 --> 00:01:43.763
+dokümantasyonun
+şöyle dediğini göreceksiniz:
+
+00:01:43.763 --> 00:01:46.510
+centerCrop resmi eşit oranda ölçeklendirir,
+
+00:01:46.510 --> 00:01:49.460
+yani resmin en-boy oranını korur.
+
+00:01:49.460 --> 00:01:53.240
+Ve bu demektir ki,
+böyle yapınca iki boyut,
+
+00:01:53.240 --> 00:01:55.330
+resmin genişlik ve yüksekliği
+
+00:01:55.330 --> 00:02:00.340
+ImageView'e karşılık gelen boyutlardan
+eşit veya büyük olacak (boşluklar hariç).
+
+00:02:00.340 --> 00:02:03.380
+Eşit oranda ölçeklenme hakkında
+söyleyebileceğim bir şey daha var.
+
+00:02:03.380 --> 00:02:07.360
+Bir resmi ölçeklemeye çalıştığınızda,
+eşit oranda ölçeklemek demek
+
+00:02:07.360 --> 00:02:12.030
+resmin yatay veya dikey olarak
+esnememesi demektir.
+
+00:02:12.030 --> 00:02:16.320
+Yani ölçeklendirmeyi yapıyor ve
+resmi öyle bir büyütüyor ki
+
+00:02:16.320 --> 00:02:19.380
+genişlik ve yüksekliğin ikisi de eşit veya
+
+00:02:19.380 --> 00:02:23.700
+resmin boyutlarından büyük oluyor.
+
+00:02:23.700 --> 00:02:25.070
+Bir resme bakalım.
+
+00:02:25.070 --> 00:02:26.910
+Peki, işte telefonunuz.
+
+00:02:26.910 --> 00:02:29.200
+Ve telefonumuzda bir ImageView var.
+
+00:02:29.200 --> 00:02:31.150
+ImageView resmi işte bu ve
+
+00:02:31.150 --> 00:02:34.860
+bu yeşil kutu ise ImageView'in
+asıl boyutunu temsil ediyor.
+
+00:02:34.860 --> 00:02:37.680
+centerCrop'un yapacağı şey şu:
+resmi ölçeklendirerek
+
+00:02:37.680 --> 00:02:40.790
+onu sarmadan kutuya uyduracak.
+
+00:02:40.790 --> 00:02:44.627
+Evet, yani boyutlarını değiştirmeden
+resmi bu yeşil kutunun içine
+
+00:02:44.627 --> 00:02:46.460
+sığacak şekilde ölçeklendirdim.
+
+00:02:46.460 --> 00:02:48.830
+Resim bu uzun dikdörtgen olduğu için
+
+00:02:48.830 --> 00:02:51.545
+telefonun kenarlarından taşıyor.
+
+00:02:51.545 --> 00:02:54.610
+centerCrop bu resmi ortalayacak ve
+
+00:02:54.610 --> 00:02:59.000
+isminden de belli olduğu üzre
+taşan kısımlarını kırpacaktır.
+
+00:02:59.000 --> 00:03:01.940
+Peki, karşılaşabileceğiniz bir
+problemden daha bahsetmek istiyorum.
+
+00:03:03.400 --> 00:03:06.860
+Görüntüler oyun kartları gibi
+birbirinin üstüne gelebilir.
+
+00:03:06.860 --> 00:03:09.670
+Ve bu görüntü etiketlerinin sırası
+görüntünün
+
+00:03:09.670 --> 00:03:11.610
+ekrana geleceği sırayı belirler.
+
+00:03:11.610 --> 00:03:12.910
+A ilk olduğuna göre,
+
+00:03:12.910 --> 00:03:17.810
+ekranda ilk olarak o gözükecek,
+sonra B ve sonra da C.
+
+00:03:17.810 --> 00:03:20.530
+Bu XML'e koyduğum sıralama nedeniyle
+
+00:03:20.530 --> 00:03:23.890
+TextView A içindeki yazımı
+çok iyi göremiyorum.
+
+00:03:23.890 --> 00:03:26.910
+XML'i değiştirip ekranı nasıl
+değiştirdiğini görelim.
+
+00:03:27.920 --> 00:03:31.710
+Tamam, değişiklik yaptım ve şimdi
+B, A, C görüntüleri var.
+
+00:03:31.710 --> 00:03:34.170
+O zaman ilk önce B'yi çizecek.
+
+00:03:34.170 --> 00:03:35.220
+Sonra A'yı çizecek.
+
+00:03:35.220 --> 00:03:38.140
+Ve son olarak C'yi yerleştirecek.
+
+00:03:38.140 --> 00:03:39.950
+Sadece görüntülerin yerini değiştirdim.
+
+00:03:39.950 --> 00:03:42.347
+Her şey aynı pozisyonda
+
+00:03:42.347 --> 00:03:46.252
+fakat üst üste gelecek
+görüntülerin sırası değişti.
+
+00:03:46.252 --> 00:03:48.330
+Ve bu nedenle, şimdi
+yazılarımı görebiliyorum.
+
+00:03:48.330 --> 00:03:51.280
+Eğer iki TextView'inizi buraya ve
+ImageView'inizi buraya çizerseniz
+
+00:03:51.280 --> 00:03:55.010
+kendi kartınızda benzer bir
+problemle karşılaşabilirsiniz.
+
+00:03:55.010 --> 00:03:58.270
+Çünkü önce ilk TextView'i,
+sonra ikinci TextView'i ve
+
+00:03:58.270 --> 00:04:01.870
+sonra tüm ekranı kaplayan resim,
+ikisini de kaplayacaktır.
+
+00:04:01.870 --> 00:04:03.920
+Yani sıralamayı doğru
+yaptığınızdan emin olun.
+
+00:04:04.750 --> 00:04:07.020
+Kodda nasıl gözüktüğüne bir bakalım.
+
+00:04:07.020 --> 00:04:09.330
+Evet, işte çalışan kodum.
+
+00:04:09.330 --> 00:04:12.260
+Fakat size görüntü sıralaması derken
+ne demek istediğimi göstereceğim.
+
+00:04:12.260 --> 00:04:16.029
+Şimdi, ImageView ilk sırada,
+sonra iki TextView geliyor.
+
+00:04:16.029 --> 00:04:18.550
+Ve metni ekranda kolayca görebiliyoruz.
+
+00:04:18.550 --> 00:04:21.829
+Fakat bunun yerine ImageView'i kesiyorum,
+aşağı kaydıracağım,
+
+00:04:21.829 --> 00:04:23.420
+buraya yapıştıracağım.
+
+00:04:23.420 --> 00:04:27.950
+Pekala, şimdi elimde TextView,
+TextView, ImageView var.
+
+00:04:27.950 --> 00:04:30.550
+"Happy Birthday, Ben!" TextView
+
+00:04:30.550 --> 00:04:33.140
+ve sonra "From Lyla" TextView'ini çizer.
+
+00:04:33.140 --> 00:04:37.320
+Ve daha sonra diğer iki TextView
+üzerine Android parti resmini çizer.
+
+00:04:37.320 --> 00:04:40.890
+TextView'leri seçersem,
+hâlâ orada olduklarını,
+
+00:04:40.890 --> 00:04:43.100
+sadece ImageView'in onları
+örtmüş olduğunu görebilirim.
+
+00:04:43.100 --> 00:04:45.040
+Pekala, geri alıyorum.
+
+00:04:45.040 --> 00:04:47.350
+Böylesi daha iyi,
+TextView'lerim şimdi en üstte.
+
+00:04:47.350 --> 00:04:50.280
+Ve her zaman yaptığımız gibi,
+bunu telefonumuzda çalıştıralım
+
+00:04:50.280 --> 00:04:53.050
+ve her şeyin match_parent
+ve centerCrop ile
+
+00:04:53.050 --> 00:04:54.540
+düzgün çalıştığından emin olalım.
+
+00:04:54.540 --> 00:04:56.720
+Tamam, bu oldukça harika gözüküyor.
+
+00:04:56.720 --> 00:05:02.070
+Resmimizi tüm görüntüyü kaplayacak
+şekilde büyüttük, TextView'lerimizi görebiliyoruz.
+
+00:05:02.070 --> 00:05:05.470
+Düzeltmemiz gereken küçük bir
+problem var fakat buraya kadar güzel iş.
+
+00:05:05.470 --> 00:05:08.630
+Pekala, harika iş çıkarıyorsunuz.
+Bir öznitelik daha değiştireceğiz
+
+00:05:08.630 --> 00:05:11.050
+ve sonra son doğum günü
+kartımız elimizde olacak.
+

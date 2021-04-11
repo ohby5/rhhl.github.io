@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.640 --> 00:00:03.249
+OK, bizda endi rasmimiz yoki maketimiz bor.
+
+00:00:03.249 --> 00:00:06.908
+Biz ko‘rinishlarni aniqladik va ularni joylashuvi haqida o‘ylashni boshladik
+
+00:00:06.908 --> 00:00:09.570
+ko‘rinishlar guruhi sifatida RelativeLayout ni tanladik.
+
+00:00:09.570 --> 00:00:11.830
+Endi kodlashni boshlash uchun vaqt keldi.
+
+00:00:11.830 --> 00:00:15.408
+OK, bu yerda ochgan narsam
+biz ilgari ishlatgan kod,
+
+00:00:15.408 --> 00:00:21.210
+tartib jildida joylashgan 
+ activity_main.xml fayli.
+
+00:00:21.210 --> 00:00:22.920
+Endi bu birinchi ko‘rinishlarni yaratish.
+
+00:00:22.920 --> 00:00:25.520
+Bizda hozirgacha ishning yarmini bajarib bo‘ldik.
+
+00:00:25.520 --> 00:00:26.940
+Bizda nisbiy tartib mavjud va
+
+00:00:26.940 --> 00:00:30.020
+bizda bitta matn ko‘rinishi bor, u 
+ Happy Birthday Ben deydi.
+
+00:00:30.020 --> 00:00:33.020
+Sizga kerak bo‘lgan barcha ko‘rinishlarga ega bo‘lish uchun rasm ko‘rinishini ham yaratish kerak.
+
+00:00:33.020 --> 00:00:36.190
+Hamda yana bitta qo‘shimcha 
+matn ko‘rinishi ham kerak.
+
+00:00:36.190 --> 00:00:38.590
+Qo‘shimcha matn ko‘rinishni qo‘shish 
+juda oson bo‘lishi kerak.
+
+00:00:38.590 --> 00:00:41.420
+Rasm ko‘rinishini qo‘shish 
+biroz vaqt talab qiladi, 
+
+00:00:41.420 --> 00:00:43.500
+chunki bunda rasmingizning 
+ushbu Android qismi kerak.
+
+00:00:43.500 --> 00:00:46.110
+Instruktor qaydlarida biz 
+shu rasmga havolani qo‘shdik
+
+00:00:46.110 --> 00:00:47.930
+uni yuklab olishingiz mumkin.
+
+00:00:47.930 --> 00:00:51.750
+OK, men rasmni yuklab oldim va
+uni ish stolimga saqladim.
+
+00:00:51.750 --> 00:00:53.890
+U androidparty.jpg sifatida saqlandi.
+
+00:00:53.890 --> 00:00:58.870
+Endi biz rasmlarni XMLga qo‘shganda 
+qilgan amallarni eslashingiz mumkin
+
+00:00:58.870 --> 00:01:02.470
+ularni drawable jildiga saqlagan edik.
+
+00:01:03.490 --> 00:01:07.750
+Shuningdek, bizning ilovamizda u bilan bog‘liq qanchadan-qancha fayl va jildlar mavjudligini eslang,
+
+00:01:07.750 --> 00:01:10.220
+biz ularni chap tomonda joylashgan katalogda ko‘rishimiz mumkin.
+
+00:01:10.220 --> 00:01:14.310
+Bular layout maketlar, rasmlar,
+ba’zan musiqa va boshqalar.
+
+00:01:14.310 --> 00:01:18.020
+Ushbu turdagi fayllar res 
+katalogiga joylashtiriladi,
+
+00:01:18.020 --> 00:01:20.100
+ res - resurslar qisqartmasi.
+
+00:01:20.100 --> 00:01:23.210
+ res katalogi barcha kerak bo‘lgan rasm, 
+matn, maket va boshqa resurslar uchun 
+
+00:01:23.210 --> 00:01:26.440
+qism kataloglarni o‘z ichiga oladi.
+
+00:01:26.440 --> 00:01:30.100
+Va aytganimizdek, tasvirlar uchun,
+bunda drawable nomli jild bor.
+
+00:01:30.100 --> 00:01:33.500
+Ushbu ilova uchun barcha rasmlar shu 
+jildning ichiga joylashtiriladi.
+
+00:01:34.750 --> 00:01:36.740
+Rasmni shu jildga joylaganingizdan so‘ng,
+
+00:01:38.290 --> 00:01:40.740
+rasm ko‘rinishi source atributidan foylalanishingiz mumkin
+
+00:01:40.740 --> 00:01:46.160
+va unga @drawable va rasmning nomi 
+qiymatini berishingiz mumkin.
+
+00:01:46.160 --> 00:01:49.090
+E’tibor bering, rasm nomini yozayotganda
+
+00:01:49.090 --> 00:01:50.710
+fayl kengaytmasini qo‘shishingiz shart emas.
+
+00:01:50.710 --> 00:01:53.460
+Xo‘sh, endi men sizga rasmni qanday qilib 
+
+00:01:53.460 --> 00:01:54.850
+ drawable jildiga joylashni ko‘rsataman.
+
+00:01:54.850 --> 00:01:57.260
+Yaxshi. Ushbu rasmga havola instruktor qaydlarida.
+
+00:01:57.260 --> 00:01:59.530
+Uni ish stolingizga yuklab oling.
+
+00:01:59.530 --> 00:02:02.150
+Endi, Android Studio ni oching.
+
+00:02:02.150 --> 00:02:06.300
+ Android Studio da bu yerga o‘ting va drawable 
+jildi ustida sichqonchaning o‘ng tugmasini bosing.
+
+00:02:06.300 --> 00:02:10.133
+U yerdan siz reveal in finder yoki 
+
+00:02:10.133 --> 00:02:11.155
+ reveal in explorer ni ko‘rishingiz kerak.
+
+00:02:12.285 --> 00:02:14.615
+Bu yerda men drawable jildini ko‘ryapman.
+
+00:02:14.615 --> 00:02:18.055
+Shunday qilib, men endi androidparty.jpg rasmini
+
+00:02:18.055 --> 00:02:21.665
+ drawable jildiga joylayman, men shunchaki uni sudrab olib boraman.
+
+00:02:21.665 --> 00:02:24.335
+Yaxshi, endi to‘g‘ri XML kodi bilan boshlayotganingizga ishonch hosil qiling.
+
+00:02:24.335 --> 00:02:27.595
+Agar sizda to‘g‘ri kod bo‘lmasa,
+uni ham oldinga o‘tib 
+
+00:02:27.595 --> 00:02:29.830
+instruktor qaydlaridan ko‘chirib olishingiz mumkin.
+
+00:02:29.830 --> 00:02:32.667
+Mayli, birinchi navbatda
+ androidparty.jpg rasmini yuklab oling.
+51
+00:02:32,667 --&gt; 00:02:36 900
+Keyin uni drawable jildiga o‘tkazing.
+
+00:02:36.900 --> 00:02:39.560
+Bajarib bo‘lgach, yana bitta 
+ TextView qo‘shing,
+
+00:02:39.560 --> 00:02:40.700
+unga from va ismingizni yozing.
+
+00:02:40.700 --> 00:02:45.510
+Va shundan so‘ng ImageView manba atributi 
+sifatida androidparty ni belgilang.
+
+00:02:45.510 --> 00:02:47.260
+Aslida siz ishlayotgan kodda juda ko‘p narsa
+
+00:02:47.260 --> 00:02:48.770
+standart to‘ldirilgan bo‘ladi.
+
+00:02:48.770 --> 00:02:50.670
+Siz ularni o‘chirishingiz mumkin.
+
+00:02:50.670 --> 00:02:52.610
+Standart to‘ldirish deganda nimani nazarda tutyapman?
+
+00:02:52.610 --> 00:02:55.240
+Xo‘sh, bu paddingBottom,
+paddingLeft, paddingRight va 
+
+00:02:55.240 --> 00:02:56.600
+paddingTop.
+
+00:02:56.600 --> 00:03:02.070
+Siz bularni shunchaki o‘chirib tashlang.
+
+00:03:02.070 --> 00:03:04.470
+Nihoyat, ilovani telefoningizda ishga 
+tushirish uchun yashil o‘qli tugmani bosib.
+
+00:03:04.470 --> 00:03:09.160
+Ushbu barcha qadamlarni bajarganingizdan so‘ng,
+sizning ilovangiz quyidagicha ko‘rinishi kerak.
+
+00:03:09.160 --> 00:03:11.800
+E’tibor bering, buni ekranda ko‘rish biroz qiyin, lekin
+
+00:03:11.800 --> 00:03:14.010
+matn ko‘rinishlari aslida bir-biri ustida joylashgan.
+
+00:03:14.010 --> 00:03:16.560
+Bu mutlaqo normal holat,
+biz keyin bu bilan shug‘ullanamiz.
+

@@ -1,0 +1,192 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.430 --> 00:00:03.650
+Tout droit, donc en fait deux
+bonnes réponses à cette question et
+
+00:00:03.650 --> 00:00:07.580
+Rembourrage et ils étaient layout_margin.
+
+00:00:07.580 --> 00:00:10.850
+Alors vous pourriez avoir sélectionner une ou l'autre de ces
+mais vous ne devez pas les deux.
+
+00:00:10.850 --> 00:00:12.460
+Permettez-moi de vous montrer pourquoi.
+
+00:00:12.460 --> 00:00:15.030
+Dans la pratique, un grand nombre de fois,
+une vue qui utilise
+
+00:00:15.030 --> 00:00:18.830
+Rembourrage sera très similaire à
+une vue qui utilise layout_margin.
+
+00:00:18.830 --> 00:00:21.550
+Permettez-moi de fait
+dessine les frontières de vue pour vous.
+
+00:00:21.550 --> 00:00:23.148
+Une fois que vous dessinez les frontières de vue,
+
+00:00:23.148 --> 00:00:26.651
+Vous pouvez réellement voir la différence
+entre ces deux situations.
+
+00:00:26.651 --> 00:00:27.815
+Dans le cas de rembourrage,
+
+00:00:27.815 --> 00:00:31.438
+Vous faites la vue réelle plus grande
+par l'ajout d'espace à l'intérieur de la vue.
+
+00:00:32.494 --> 00:00:35.875
+Dans le cas de layout_margin,
+Vous ajoutez l'espace autour de la vue, mais
+
+00:00:35.875 --> 00:00:37.685
+Pas réellement changer
+la taille de la vue.
+
+00:00:38.835 --> 00:00:42.185
+Maintenant, vous demandez peut-être quand
+cela même entrent en jeu?
+
+00:00:42.185 --> 00:00:44.375
+Pourquoi avoir deux attributs différents?
+
+00:00:44.375 --> 00:00:47.655
+Eh bien, si je devais faire quelque chose
+comme ajouter une bordure ou un fond
+
+00:00:47.655 --> 00:00:51.080
+Couleur à ces deux points de vue, ils
+avait vraiment l'air assez différente.
+
+00:00:51.080 --> 00:00:54.190
+Dans notre cas, cependant, nous ne sommes pas ajoutons
+une couleur de bordure ou de fond, de sorte
+
+00:00:54.190 --> 00:00:57.060
+Vous pouvez choisir soit de remplissage ou
+layout_margin.
+
+00:00:57.060 --> 00:00:59.260
+Il ne serait pas juste faire
+sens de choisir les deux.
+
+00:00:59.260 --> 00:01:03.050
+Depuis nous pouvons choisir soit, je vais aller de l'avant et
+, un peu arbitrairement,
+
+00:01:03.050 --> 00:01:04.700
+Choisir d'ajouter le remplissage.
+
+00:01:04.700 --> 00:01:07.110
+Voyons ce que cela
+ressembler dans Android Studio.
+
+00:01:07.110 --> 00:01:09.990
+Tout droit,
+ici, nous sommes de retour dans activity_main.
+
+00:01:09.990 --> 00:01:12.990
+Maintenant l'attribut de remplissage est quelque chose
+que nous voulons ajouter aux TextViews
+
+00:01:12.990 --> 00:01:15.790
+Pour les déplacer plus loin
+depuis le côté de l'écran.
+
+00:01:15.790 --> 00:01:19.580
+Rembourrage et layout_margin
+ajouter de l'espace sur les quatre côtés.
+
+00:01:19.580 --> 00:01:20.680
+Très bien, allons-y et ajoutez-le.
+
+00:01:21.720 --> 00:01:25.090
+Et souviens, je l'ai dit que je voulais qu'il y ait
+20dp sur tous les côtés, de sorte
+
+00:01:25.090 --> 00:01:27.110
+Qui est ce que je suis en train
+ici comme la valeur.
+
+00:01:27.110 --> 00:01:29.990
+Mon aperçu est mis à jour
+montrer l'espace ajouté,
+
+00:01:29.990 --> 00:01:31.710
+Je vais aller de l'avant et faites défiler.
+
+00:01:31.710 --> 00:01:34.654
+Tout droit, et je me sens un peu
+ludique, donc je vais aller de l'avant et
+
+00:01:34.654 --> 00:01:37.880
+Ajouter à cette layout_margin
+TextView au lieu de rembourrage.
+
+00:01:37.880 --> 00:01:40.520
+Tout droit, et qui a également
+scooted la TextView sur.
+
+00:01:40.520 --> 00:01:41.150
+Remarquez, cependant,
+
+00:01:41.150 --> 00:01:45.370
+Que la taille de la TextView n'a pas augmenté
+quand je changé le layout_margin,
+
+00:01:45.370 --> 00:01:51.040
+Alors ici dans ce TextView, le
+taille de la TextView réelle a changé.
+
+00:01:51.040 --> 00:01:53.780
+Maintenant ce qui se passe si je ajouter deux
+layout_margin et le rembourrage.
+
+00:01:53.780 --> 00:01:54.350
+Jetons un coup d'oeil.
+
+00:01:55.410 --> 00:01:58.226
+Eh bien, maintenant, mon texte est
+40dp loin du mur.
+
+00:01:58.226 --> 00:02:02.244
+Il est 20dp ici et puis un autre
+20dp de rembourrage ici.
+
+00:02:02.244 --> 00:02:04.322
+Tout droit, mais
+nous ne voulons pas 40dp loin du mur.
+
+00:02:04.322 --> 00:02:05.822
+Alors je vais aller de l'avant et
+Supprimer cette.
+
+00:02:07.634 --> 00:02:10.780
+Okay, 20dp de rembourrage dans le De,
+Lyla TextView.
+
+00:02:10.780 --> 00:02:14.020
+Et 20dp de rembourrage et
+la vue de texte Joyeux anniversaire, Ben.
+
+00:02:14.020 --> 00:02:15.460
+Impressionnant, nous allons l'exécuter sur notre téléphone.
+
+00:02:16.510 --> 00:02:19.970
+Tout droit, et permettez-moi de vous présenter le produit fini
+application Carte d'anniversaire.
+
+00:02:19.970 --> 00:02:20.910
+Sortons quelques mains de jazz.
+
+00:02:22.410 --> 00:02:24.780
+Et avec cela, nous complétons
+la dernière chose dans notre liste de choses à faire.
+

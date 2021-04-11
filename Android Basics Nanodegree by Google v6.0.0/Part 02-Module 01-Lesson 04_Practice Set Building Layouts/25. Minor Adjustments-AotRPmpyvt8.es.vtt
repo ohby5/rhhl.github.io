@@ -1,0 +1,195 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.440 --> 00:00:03.360
+Había dos respuestas correctas
+para esta pregunta,
+
+00:00:03.520 --> 00:00:06.880
+eran: <i>padding </i>[empaquetado]
+y <i>layout_margin </i>[diseño del margen].
+
+00:00:07.560 --> 00:00:10.600
+Las dos son correctas,
+pero con seleccionar una ya vale.
+
+00:00:10.840 --> 00:00:12.200
+Déjame enseñarte por qué.
+
+00:00:12.480 --> 00:00:15.500
+En la práctica, muchas veces,
+una vista que utilice <i>padding</i>
+
+00:00:15.500 --> 00:00:18.760
+tendrá un aspecto muy parecido
+a una vista que utilice <i>layout_margin</i>.
+
+00:00:18.800 --> 00:00:21.310
+Esta vez voy a dibujar
+los bordes de la vista por ti.
+
+00:00:21.310 --> 00:00:23.080
+Con los bordes de la vista dibujados,
+
+00:00:23.160 --> 00:00:26.000
+podrás ver la diferencia
+entre estas dos situaciones.
+
+00:00:26.590 --> 00:00:27.720
+En el caso del <i>padding</i>,
+
+00:00:27.800 --> 00:00:31.600
+estás ampliando la vista actual
+añadiendo espacio dentro de la vista.
+
+00:00:31.870 --> 00:00:35.800
+En el caso del <i>layout_margin</i>, lo que haces
+es añadir espacio alrededor de la vista,
+
+00:00:35.880 --> 00:00:38.190
+pero, de hecho,
+no cambias el tamaño de la vista.
+
+00:00:38.840 --> 00:00:42.120
+Puede que te estés preguntando
+cuándo entra en juego cada una de ellas
+
+00:00:42.200 --> 00:00:44.280
+o por qué tenemos
+dos atributos diferentes.
+
+00:00:44.480 --> 00:00:48.970
+Pues si tuviera que añadir un borde
+o un color de fondo a estas vistas,
+
+00:00:48.970 --> 00:00:50.860
+tendrían un aspecto bastante diferente.
+
+00:00:50.860 --> 00:00:54.240
+En nuestro caso, como no estamos añadiendo
+un borde o un color de fondo,
+
+00:00:54.240 --> 00:00:56.620
+puedes escoger
+tanto <i>padding </i>como <i>layout_margin,</i>
+
+00:00:56.620 --> 00:00:59.120
+pero no tendría sentido
+que escogieras los dos a la vez.
+
+00:00:59.120 --> 00:01:01.790
+Ya que podemos elegir
+cualquiera de los dos, voy a continuar
+
+00:01:01.790 --> 00:01:04.239
+y, de forma un tanto arbitraria,
+añadiré <i>padding</i>.
+
+00:01:04.720 --> 00:01:06.840
+Veamos qué aspecto
+tendrá en Android Studio.
+
+00:01:07.120 --> 00:01:09.600
+De acuerdo, aquí estamos,
+de vuelta al <i>activity_main</i>.
+
+00:01:09.960 --> 00:01:12.880
+Queremos añadir el atributo <i>padding</i>
+a las <i>TextViews</i>
+
+00:01:12.960 --> 00:01:15.320
+para poder apartarlas
+de los lados de la pantalla.
+
+00:01:15.800 --> 00:01:19.160
+<i>Padding </i>y <i>layout_margin</i>
+y añade espacio a los cuatro lados.
+
+00:01:19.560 --> 00:01:21.200
+Venga, continuemos y añadámoslo.
+
+00:01:21.720 --> 00:01:24.850
+Y recuerda que dije que quería
+que todos los lados tuvieran 20dp,
+
+00:01:24.850 --> 00:01:27.070
+y eso es lo que estoy poniendo aquí
+como valor.
+
+00:01:27.070 --> 00:01:29.760
+Mi vista previa se ha actualizado
+y muestra el espacio añadido.
+
+00:01:29.760 --> 00:01:31.640
+Voy a continuar desplazándome hacia abajo.
+
+00:01:31.720 --> 00:01:33.560
+Bien, como estoy un poco juguetona,
+
+00:01:33.560 --> 00:01:37.160
+voy a continuar añadiendo <i>layout_margin</i>
+a esta <i>TextView</i> en lugar de <i>padding</i>.
+
+00:01:37.770 --> 00:01:40.160
+¡Hecho! Haciendo esto
+también cambié la <i>TextView</i>.
+
+00:01:40.380 --> 00:01:43.160
+Pero ten en cuenta que el tamaño 
+de la <i>TextView</i> no aumentó
+
+00:01:43.240 --> 00:01:44.880
+cuando cambié el <i>layout_margin</i>,
+
+00:01:45.360 --> 00:01:47.480
+mientras que aquí, en esta <i>TextView</i>,
+
+00:01:48.480 --> 00:01:50.400
+el tamaño de la <i>TextView</i> ha cambiado.
+
+00:01:50.970 --> 00:01:53.720
+Veamos qué pasa si añado
+tanto <i>layout_margin </i>como <i>padding</i>.
+
+00:01:53.800 --> 00:01:54.880
+Vamos a verlo.
+
+00:01:55.330 --> 00:01:57.920
+Bueno, ahora mi texto
+está separado del borde por 40dp.
+
+00:01:58.240 --> 00:02:01.860
+Está a 20dp aquí y luego tiene
+otros 20dp de <i>padding </i>aquí.
+
+00:02:01.860 --> 00:02:04.340
+Pero nosotros no queremos
+que esté a 40dp del borde,
+
+00:02:04.340 --> 00:02:05.920
+así que voy a eliminar esto.
+
+00:02:07.640 --> 00:02:10.650
+Bien, 20dp de <i>padding</i>
+en la <i>Textview</i> "From, Lyla".
+
+00:02:10.650 --> 00:02:13.980
+Y 20dp de <i>padding </i>en la parte
+de la <i>TextView</i> "Happy Birthday, Ben".
+
+00:02:13.980 --> 00:02:16.100
+Perfecto, ejecutémoslo 
+en nuestro teléfono.
+
+00:02:16.520 --> 00:02:19.840
+Muy bien, te presento
+la <i>app Birthday Card</i> acabada.
+
+00:02:20.000 --> 00:02:21.160
+¡Celebrémoslo!
+
+00:02:22.270 --> 00:02:25.000
+Y con esto hemos acabado
+la última tarea de nuestra lista.
+

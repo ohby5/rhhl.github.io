@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.640 --> 00:00:03.249
+Nah, sekarang kita telah mendapatkan 
+tata letak atau gambaran kita.
+
+00:00:03.249 --> 00:00:06.908
+Kita telah mengidentifikasi tampilan, dan
+akan mulai pemikiran tentang memposisikan dengan
+
+00:00:06.908 --> 00:00:09.570
+memilih tata letak yang berkaitan
+sebagai tampilan grup kita.
+
+00:00:09.570 --> 00:00:11.830
+Ini merupakan saat yang tepat untuk 
+memulai pemrograman.
+
+00:00:11.830 --> 00:00:15.408
+Nah, yang telah saya buka di sini adalah
+sandi yang pernah kita kerjakan,
+
+00:00:15.408 --> 00:00:21.210
+yaitu aktivitas_utama.xmllokasi di berkas
+tata letak.
+
+00:00:21.210 --> 00:00:22.920
+Sekarang yang pertama dilakukan adalah 
+membuat tampilannya.
+
+00:00:22.920 --> 00:00:25.520
+Kita telah mengerjakan hampir 
+setengahnya.
+
+00:00:25.520 --> 00:00:26.940
+Kita memiliki tata letak yang berkaitan dan
+
+00:00:26.940 --> 00:00:30.020
+kita memiliki satu tampilan teks yang 
+mengatakan Selamat Ulang Tahun Ben.
+
+00:00:30.020 --> 00:00:33.020
+Untuk mendapatkan semua tampilan yang anda
+butuhkan anda harus membuat tampilan gambar.
+
+00:00:33.020 --> 00:00:36.190
+Anda juga perlu membuat satu tampilan 
+teks tambahan.
+
+00:00:36.190 --> 00:00:38.590
+Menambahkan tambahan tampilan teks 
+sangatlah mudah.
+
+00:00:38.590 --> 00:00:41.420
+Tampilan gambar membutuhkan sedikit 
+pekerjaan tambahan karena anda sebenarnya
+
+00:00:41.420 --> 00:00:43.500
+membutuhkan bagian Android dari gambar 
+anda.
+
+00:00:43.500 --> 00:00:46.110
+Pada catatan instruktur, kami telah 
+mencantumkan tautan ke gambar tersebut jadi
+
+00:00:46.110 --> 00:00:47.930
+anda dapat mengunduhnya.
+
+00:00:47.930 --> 00:00:51.750
+Baiklah, saya telah mengunduh gambarnya
+dan telah menyimpannya di komputer saya.
+
+00:00:51.750 --> 00:00:53.890
+Itu tersimpan sebagai androidparty.jpg.
+
+00:00:53.890 --> 00:00:58.870
+Sekarang anda dapat menemukannya sebelum 
+kita menambahkan gambar tambahan ke XML, kita
+
+00:00:58.870 --> 00:01:02.470
+mengatakan bahwa kita telah menyimpannya di
+berkas komputer yang bernama berkas ditarik.
+
+00:01:03.490 --> 00:01:07.750
+Juga diingat bahwa aplikasi kita memiliki
+banyak fail dan berkas yang berkaitan dengannya,
+
+00:01:07.750 --> 00:01:10.220
+yang dapat kita lihat di dalam struktur 
+direktori di sebelah kiri.
+
+00:01:10.220 --> 00:01:14.310
+Ini termasuk tata letak, gambar, kadang-
+kadang musik, dan lain sebagainya.
+
+00:01:14.310 --> 00:01:18.020
+Kebanyakan tipe berkas ini disimpan di
+direktori res,
+
+00:01:18.020 --> 00:01:20.100
+yang disingkat sebagai resources/sumber.
+
+00:01:20.100 --> 00:01:23.210
+Direktori res berisi sub-direktori untuk 
+semua gambar,
+
+00:01:23.210 --> 00:01:26.440
+teks, tata letak, dan resources lainnya 
+yang mungkin dibutuhkan aplikasi.
+
+00:01:26.440 --> 00:01:30.100
+Dan seperti yang kita katakan, untuk 
+gambar, ada folder yang disebut drawable.
+
+00:01:30.100 --> 00:01:33.500
+Untuk aplikasi ini, semua gambar harus 
+diletakkan di dalam berkas drawable.
+
+00:01:34.750 --> 00:01:36.740
+Jika anda telah selesai meletakkan gambar 
+ke dalam folder drawable,
+
+00:01:38.290 --> 00:01:40.740
+anda dapat menggunakan atribut asal dari 
+tampilan gambar,
+
+00:01:40.740 --> 00:01:46.160
+dan memberikan nilai @drawable kemudian
+menamakan gambarnya.
+
+00:01:46.160 --> 00:01:49.090
+Catatan, ketika anda menulis nama gambar 
+anda tidak perlu menambahkan
+
+00:01:49.090 --> 00:01:50.710
+fail ekstension.
+
+00:01:50.710 --> 00:01:53.460
+Baiklah, saya akan menunjukkan pada anda 
+cara seharusnya meletakkan gambar ke
+
+00:01:53.460 --> 00:01:54.850
+berkas drawable.
+
+00:01:54.850 --> 00:01:57.260
+Baiklah. Gambar ini berada di dalam 
+Catatan Instruktur.
+
+00:01:57.260 --> 00:01:59.530
+Silahkan teruskan dan unduh ke dalam 
+Komputer anda.
+
+00:01:59.530 --> 00:02:02.150
+Selanjutnya, saya ingin anda membuka 
+Android Studio.
+
+00:02:02.150 --> 00:02:06.300
+Di Android Studio, anda akan menemukan 
+dan klik-Kanan berkas Drawable.
+
+00:02:06.300 --> 00:02:10.133
+Dari sana, anda bisa melihat sesuatu yang 
+mengarahkan ke penemu/finder atau
+
+00:02:10.133 --> 00:02:11.155
+mengarahkan ke penjelajah/explorer.
+
+00:02:12.285 --> 00:02:14.615
+Di sini saya dapat melihat berkas Drawable.
+
+00:02:14.615 --> 00:02:18.055
+Jadi sekarang saya akan memindahkan 
+androidparty.jpg
+
+00:02:18.055 --> 00:02:21.665
+ke dalam berkas drawable dan saya akan 
+melakukannya dengan menyeretnya.
+
+00:02:21.665 --> 00:02:24.335
+Nah pastikan anda memulainya dengan sandi 
+XML yang benar.
+
+00:02:24.335 --> 00:02:27.595
+Dan jika anda tidak memiliki sandi yang 
+benar, anda dapat melanjutkan dan menyalin
+
+00:02:27.595 --> 00:02:29.830
+dan menempelkannya dari catatan instruktur.
+
+00:02:29.830 --> 00:02:32.667
+Baiklah, lakukan hal pertama terlebih 
+dulu, unduh androidparty.jpg.
+
+00:02:32.667 --> 00:02:36.900
+Lalu ambil androidparty.jpg dan pindahkan 
+ke berkas drawable.
+
+00:02:36.900 --> 00:02:39.560
+Setelah selesai, lanjutkan dan tambahkan 
+Tampilan Teks yang mengatakan,
+
+00:02:39.560 --> 00:02:40.700
+dari dan kemudian nama anda.
+
+00:02:40.700 --> 00:02:45.510
+Setelah itu, tambahkan Tampilan Gambar 
+dengan atribut asal sebagai android party.
+
+00:02:45.510 --> 00:02:47.260
+Ada banyak blok default
+
+00:02:47.260 --> 00:02:48.770
+Di dalam sandi yang anda sedang kerjakan.
+
+00:02:48.770 --> 00:02:50.670
+Jadi anda dapat melanjutkan dan 
+menghapusnya.
+
+00:02:50.670 --> 00:02:52.610
+Apakah yang saya maksud dengan blok 
+default?
+
+00:02:52.610 --> 00:02:55.240
+Nah, itu adalah blok Bawah, blok Kiri, 
+blok Kanan, dan
+
+00:02:55.240 --> 00:02:56.600
+blok Atas.
+
+00:02:56.600 --> 00:03:02.070
+Anda dapat melanjutkan, Dan menghapusnya.
+
+00:03:02.070 --> 00:03:04.470
+Akhirnya, klik panah hijau untuk 
+menjalankan aplikasi di ponsel anda.
+
+00:03:04.470 --> 00:03:09.160
+Ketika anda telah menyelesaikan semua 
+langkah, aplikasi anda akan terlihat seperti ini.
+
+00:03:09.160 --> 00:03:11.800
+Catatan, agak sedikit sulit untuk 
+melihatnya di layar, tetapi
+
+00:03:11.800 --> 00:03:14.010
+tampilan teks sebenarnya tumpang tindih.
+
+00:03:14.010 --> 00:03:16.560
+Dan ini adalah wajar dan sesuatu yang 
+akan kita perbaiki selanjutnya.
+

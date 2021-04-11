@@ -1,0 +1,120 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.233 --> 00:00:03.870
+Já estamos exibindo a imagem correta, que é esta imagem de festa do Android,
+
+00:00:04.209 --> 00:00:06.160
+assim, não temos que mudar
+o atributo de origem.
+
+00:00:06.775 --> 00:00:09.606
+Em questão de semelhança,
+a posição não é de fato incorreta.
+
+00:00:09.790 --> 00:00:11.333
+A imagem só precisa ser maior.
+
+00:00:11.735 --> 00:00:15.120
+Todos estes atributos de <i>alignParent</i>,
+não vamos usá-los.
+
+00:00:15.670 --> 00:00:18.012
+Usar o atributo <i>id</i> em si mesmo,
+
+00:00:18.410 --> 00:00:20.529
+realmente não altera o layout.
+
+00:00:20.972 --> 00:00:23.926
+Apenas nomeia a <i>View</i> para que
+possa se referir a ela mais tarde.
+
+00:00:24.455 --> 00:00:26.800
+Há efetivamente um modo
+de usar o atributo <i>background</i>
+
+00:00:26.808 --> 00:00:28.760
+para obter o efeito que estamos tentando.
+
+00:00:28.989 --> 00:00:30.647
+Mas ele não envolve uma <i>ImageView</i>.
+
+00:00:31.267 --> 00:00:33.700
+Então se escolheu <i>background</i>,
+você está tecnicamente correto,
+
+00:00:34.058 --> 00:00:35.781
+mas vamos fazer de outro modo.
+
+00:00:36.010 --> 00:00:37.534
+Como aprendemos na lição.
+
+00:00:38.067 --> 00:00:41.010
+Isso nos deixa com <i>layout_height</i>,
+<i>layout_width</i> e <i>ScaleType</i>.
+
+00:00:41.380 --> 00:00:44.989
+<i>ScaleType</i> mudará o tamanho da imagem,
+dentro dos limites da caixa da <i>View</i>.
+
+00:00:45.390 --> 00:00:49.587
+Enquanto <i>layout_height</i> e <i>layout_width</i>
+vão, de fato, alterar o tamanho daquela <i>View</i>.
+
+00:00:49.913 --> 00:00:51.680
+Nesse caso, a imagem é grande o suficiente
+
+00:00:51.950 --> 00:00:54.572
+para a <i>View</i> expandir
+e preencher a tela inteira,
+
+00:00:57.781 --> 00:01:00.210
+pois não importa,
+neste caso particular,
+
+00:01:00.460 --> 00:01:02.676
+se nós usamos <i>match_parent</i> ou <i>wrap_content</i>,
+
+00:01:03.224 --> 00:01:05.846
+realmente não precisamos
+alterá-los, neste caso.
+
+00:01:06.220 --> 00:01:09.636
+Então, como estamos tentando expandir
+a <i>View</i> para preencher toda a tela,
+
+00:01:09.980 --> 00:01:12.861
+talvez fosse bom defini-los explicitamente como match_parent.
+
+00:01:13.316 --> 00:01:15.636
+Então, se acabarmos usando
+uma imagem menor,
+
+00:01:15.815 --> 00:01:17.910
+ela ainda vai expandir
+e preencher a tela inteira.
+
+00:01:18.298 --> 00:01:21.636
+Mas, enquanto <i>layout_height </i>
+e<i> layout_width </i>são opcionais aqui,
+
+00:01:21.913 --> 00:01:25.350
+<i>ScaleType</i> é o atributo que
+você realmente terá que usar
+
+00:01:25.660 --> 00:01:27.489
+para fazer a imagem
+preencher a tela inteira.
+
+00:01:28.480 --> 00:01:30.670
+Acontece que escolhemos o atributo,
+
+00:01:30.910 --> 00:01:33.120
+mas não sabemos o valor
+para definir o <i>TypeScale</i>.
+
+00:01:33.550 --> 00:01:35.932
+E é isso que eu quero que
+descubra na próxima questão.
+

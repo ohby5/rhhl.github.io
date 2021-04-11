@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.230 --> 00:00:03.722
+Estamos mostrando la imagen correcta,
+que es esta de Android.
+
+00:00:03.922 --> 00:00:06.790
+No es necesario cambiar
+el atributo de fuente.
+
+00:00:06.990 --> 00:00:09.790
+Asimismo, la posición no es incorrecta,
+
+00:00:09.990 --> 00:00:11.720
+sólo debería ser más grande.
+
+00:00:11.920 --> 00:00:15.710
+No usaremos estos atributos
+"<i>layout aligned parent</i>".
+
+00:00:15.910 --> 00:00:20.800
+Usar el atributo id
+intrínsecamente no modifica el layout.
+
+00:00:21.000 --> 00:00:24.080
+Sólo le da un nombre
+de referencia a la vista para después.
+
+00:00:24.280 --> 00:00:27.106
+Hay una forma de usar
+el atributo <i>background</i>
+
+00:00:27.418 --> 00:00:29.275
+para lograr el efecto deseado.
+
+00:00:29.475 --> 00:00:31.100
+Pero no incluye un ImageView.
+
+00:00:31.300 --> 00:00:34.140
+Si eliges <i>background</i>,
+técnicamente está bien,
+
+00:00:34.340 --> 00:00:37.978
+Pero lo haremos de otra forma,
+la cual aprendimos en clase.
+
+00:00:38.178 --> 00:00:41.200
+Nos queda <i>layout_height</i>,
+<i>layout_width</i>, y <i>ScaleType</i>.
+
+00:00:41.400 --> 00:00:45.180
+<i>ScaleType</i> cambiará el tamaño de una imagen
+dentro del viewBox que lo rodea.
+
+00:00:45.380 --> 00:00:49.885
+Mientras que <i>layout_width</i> y <i>layout_height</i>
+cambiarán el tamaño del viewBox.
+
+00:00:50.085 --> 00:00:53.487
+Esta imagen al ser lo bastante grande,
+el viewBox se expande
+
+00:00:53.687 --> 00:00:57.853
+para cubrir la pantalla, sin importar
+si es <i>wrapped content</i> o <i>matched parent</i>.
+
+00:00:58.053 --> 00:01:02.657
+Porque en este caso no importa
+si es <i>matched parent</i> o <i>wrapped content</i>.
+
+00:01:02.857 --> 00:01:06.020
+No es necesario
+que los cambies en este caso.
+
+00:01:06.220 --> 00:01:09.679
+Dicho esto, como queremos que la vista
+se expanda en toda la pantalla,
+
+00:01:09.879 --> 00:01:13.350
+Quizá sea conveniente
+definir estos como<i> match parent</i>.
+
+00:01:13.550 --> 00:01:15.620
+Luego,
+si usamos una imagen más pequeña,
+
+00:01:15.820 --> 00:01:18.340
+también se expandirá
+para cubrir toda la pantalla.
+
+00:01:18.540 --> 00:01:22.074
+Mientras que <i>layout height</i> y <i>layout width</i>
+son opcionales en este caso,
+
+00:01:22.274 --> 00:01:25.660
+<i>scaleType</i> es el atributo
+que definitivamente necesitarás
+
+00:01:25.860 --> 00:01:27.985
+para que la imagen
+cubra toda la pantalla
+
+00:01:28.480 --> 00:01:30.590
+Nos preguntamos,
+hemos elegido el atributo,
+
+00:01:30.790 --> 00:01:33.549
+pero no sabemos el valor
+para definir el <i>scaleType</i>.
+
+00:01:33.749 --> 00:01:36.192
+Quiero que lo resuelvan
+en la próxima pregunta.
+

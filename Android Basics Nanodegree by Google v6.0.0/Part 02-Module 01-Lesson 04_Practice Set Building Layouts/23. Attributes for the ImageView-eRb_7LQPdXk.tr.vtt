@@ -1,0 +1,130 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.230 --> 00:00:03.410
+Zaten doğru görüntüyü sergiliyoruz, 
+yani Android parti resmini,
+
+00:00:03.410 --> 00:00:06.790
+bu yüzden kaynak özelliğini 
+değiştirmek gerekmiyor.
+
+00:00:06.790 --> 00:00:09.790
+Benzer şekilde, pozisyon 
+gerçekten de yanlış değil.
+
+00:00:09.790 --> 00:00:11.920
+Sadece resmin biraz daha 
+büyük olması lazım,
+
+00:00:11.920 --> 00:00:15.710
+bu yüzden bütün bu <i>layout_alignParent</i>
+özelliklerini kullanmayacağız.
+
+00:00:15.710 --> 00:00:17.450
+<i>id</i> özelliğini bizatihi kullanmak
+
+00:00:17.450 --> 00:00:21.000
+yerleşimde aslında hiçbir 
+değişiklik yapmaz.
+
+00:00:21.000 --> 00:00:23.750
+Sadece görünüme bir ad verir
+ki sonradan ona atıf yapabilesiniz.
+
+00:00:23.750 --> 00:00:27.250
+Erişmeye çalıştığımız efekti yapmak 
+için aslında arka plan
+
+00:00:27.250 --> 00:00:28.980
+özelliğini kullanma yolu var.
+
+00:00:28.980 --> 00:00:31.300
+Ancak <i>ImageView</i> içermiyor.
+
+00:00:31.300 --> 00:00:34.140
+Eğer arka planı seçerseniz, 
+teknik olarak doğru,
+
+00:00:34.140 --> 00:00:36.010
+ama biz başka bir yoldan gideceğiz.
+
+00:00:36.010 --> 00:00:38.060
+Derste öğrendiğimiz yoldan.
+
+00:00:38.060 --> 00:00:41.400
+Böylece <i>layout_height</i>, <i>layout_width</i>
+ve <i>scaleType</i> ile kalıyoruz.
+
+00:00:41.400 --> 00:00:44.340
+<i>scaleType</i> onu çevreleyen 
+görünüm kutusu içindeki resmin
+
+00:00:44.340 --> 00:00:45.380
+büyüklüğünü değiştirir.
+
+00:00:45.380 --> 00:00:46.606
+<i>layout_width</i> ve <i>layout_height</i>
+
+00:00:46.606 --> 00:00:49.940
+aslında o görünüm kutusunun 
+büyüklüğünü değiştirir.
+
+00:00:49.940 --> 00:00:53.530
+Bu durumda, resim yeterince büyük 
+olduğundan görünüm kutusu bütün ekranı
+
+00:00:53.530 --> 00:00:57.740
+dolduracak biçimde genişler, ister
+wrap_content , isterse match_parent olsun.
+
+00:00:57.740 --> 00:01:00.430
+Çünkü bu özel durumda, 
+match_parent veya
+
+00:01:00.430 --> 00:01:01.970
+wrap_content koymamız fark etmiyor.
+
+00:01:01.970 --> 00:01:06.220
+Bu durumda bunları illa ki 
+değiştirmeniz gerekmiyor.
+
+00:01:06.220 --> 00:01:09.530
+Bununla beraber, görünümün 
+tüm ekranı kaplamasını istediğimiz için,
+
+00:01:09.530 --> 00:01:13.350
+bunları açıkça eşleşen ebeveynler 
+olarak ayarlamak iyi olur.
+
+00:01:13.350 --> 00:01:15.820
+Sonra eğer daha küçük 
+bir resim kullanırsak,
+
+00:01:15.820 --> 00:01:18.260
+yine de tüm ekranı 
+doldurmak için genişler.
+
+00:01:18.260 --> 00:01:21.940
+Ama <i>layout_height</i> ve <i>layout_width</i>
+bu durumda biraz isteğe bağlıyken,
+
+00:01:21.940 --> 00:01:25.660
+<i>scaleType</i> resmin tüm ekranı 
+kaplaması için kesinlikle
+
+00:01:25.660 --> 00:01:27.330
+ihtiyaç duyacağınız asıl özellik.
+
+00:01:28.480 --> 00:01:30.930
+Sorun, özelliği seçtiğimiz
+
+00:01:30.930 --> 00:01:33.110
+hâlde ölçek tipini ayarlamak 
+için değeri bilmememiz.
+
+00:01:33.110 --> 00:01:35.710
+Bir sonraki soruda bunu 
+bulmanızı istiyorum.
+

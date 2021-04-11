@@ -1,0 +1,305 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.230 --> 00:00:02.440
+Chúng ta hãy nhìn vào các giải pháp.
+
+00:00:02.440 --> 00:00:05.041
+Nếu bạn nói hoặc layout_width hoặc
+layout_height,
+
+00:00:05.041 --> 00:00:07.040
+chúng sẽ không phải là dự đoán tệ.
+
+00:00:07.040 --> 00:00:09.750
+Lựa chọn những giá trị này cẩn thận 
+là cực kỳ quan trọng vì chúng
+
+00:00:09.750 --> 00:00:12.310
+ảnh hưởng đến không gian
+mà phần tử của bạn chiếm.
+
+00:00:12.310 --> 00:00:14.905
+Lấy ví dụ, chúng ta hãy nói
+về layout_width.
+
+00:00:14.905 --> 00:00:17.595
+Giả sử rằng tôi có
+một hộp văn bản nói xin chào.
+
+00:00:17.595 --> 00:00:20.655
+Và tôi đặt layout_width
+chứa đủ nội dung.
+
+00:00:20.655 --> 00:00:21.545
+Theo mặc định,
+
+00:00:21.545 --> 00:00:25.295
+nó sẽ chỉ dính hộp văn bản đó
+vào góc trên bên trái.
+
+00:00:25.295 --> 00:00:28.695
+Thì nếu tôi sử dụng thuộc tính khác
+để đẩy nó qua bên phải,
+
+00:00:28.695 --> 00:00:30.625
+hộp văn bản sẽ ở đây.
+
+00:00:30.625 --> 00:00:31.315
+Nếu thay vì,
+
+00:00:31.315 --> 00:00:36.960
+Tôi dùng lớp mẹ để chứa, theo mặc định,
+xin chào sẽ vẫn ở góc trên bên trái.
+
+00:00:36.960 --> 00:00:40.050
+Nhưng nếu thử thiết lập một thuộc tính
+để đẩy nó sang bên phải,
+
+00:00:40.050 --> 00:00:42.140
+nó sẽ cố gắng để đẩy
+hộp văn bản này sang bên phải.
+
+00:00:42.140 --> 00:00:45.520
+Nhưng nó đã ở xa hết mức
+có thể bởi vì nó mở rộng
+
+00:00:45.520 --> 00:00:48.700
+để phù hợp với dạng xem mẹ và
+lấp đầy toàn bộ nhóm dạng xem.
+
+00:00:48.700 --> 00:00:50.120
+Trong trường hợp dùng lớp mẹ để chứa,
+
+00:00:50.120 --> 00:00:52.900
+chúng ta có thể thấy văn bản xin chào
+chưa thực sự chuyển.
+
+00:00:52.900 --> 00:00:55.760
+Hi vọng một điều rõ ràng cho
+ví dụ này là chúng ta sẽ
+
+00:00:55.760 --> 00:00:59.680
+muốn đặt cả layout_width và
+layout_height thành ngắt dòng nội dung.
+
+00:00:59.680 --> 00:01:01.980
+Để nó ngắt đúng
+nội dung và
+
+00:01:01.980 --> 00:01:06.160
+khi bạn muốn TextView
+hoặc là căn phải, căn trái, căn trên,
+
+00:01:06.160 --> 00:01:10.210
+căn dưới, nó thực sự sẽ di chuyển
+văn bản vào vị trí đó.
+
+00:01:10.210 --> 00:01:13.650
+Vậy nên cả chiều rộng bố trí và
+chiều cao bố trí đều rất quan trọng.
+
+00:01:13.650 --> 00:01:17.380
+là một thuộc tính để
+in đậm hoặc in nghiêng văn bản, và
+
+00:01:17.380 --> 00:01:20.630
+nó không hề liên quan đến việc định vị
+hoặc cách dòng.
+
+00:01:20.630 --> 00:01:24.530
+Định hướng là một thuộc tính được dùng
+đặc biệt với các bố trí tuyến tính,
+
+00:01:24.530 --> 00:01:27.780
+để xác định xem chúng căn chỉnh
+theo chiều dọc hay theo chiều ngang.
+
+00:01:27.780 --> 00:01:31.505
+Vì chúng ta sử dụng bố trí tương đối
+cái này cũng không có ý nghĩa gì.
+
+00:01:31.505 --> 00:01:35.640
+Layout_weight thực sự hữu ích để
+cách dòng giữa các phần tử đều nhau,
+
+00:01:35.640 --> 00:01:37.900
+đây là thuộc tính bố trí tuyến tính.
+
+00:01:37.900 --> 00:01:40.150
+Mà cho chúng ta các thuộc tính này.
+
+00:01:40.150 --> 00:01:42.920
+Tất cả những thuộc tính này phải
+làm với bố trí tương đối.
+
+00:01:43.980 --> 00:01:48.280
+Bây giờ các thuộc tính này layout_to
+bên Phải và layout_below đều dứt khoát
+
+00:01:48.280 --> 00:01:52.980
+khác với layout_alignParent
+cả căn Dưới bên trái lẫn bên phải.
+
+00:01:52.980 --> 00:01:55.250
+Những thuộc tính này lấy
+hai dạng xem con và
+
+00:01:55.250 --> 00:01:57.800
+định vị chúng tương đối với nhau.
+
+00:01:57.800 --> 00:02:03.070
+Ví dụ, chúng ta có thể nói rằng vị trí
+từ Lyla sang bên phải và
+
+00:02:03.070 --> 00:02:05.920
+dưới TextView chúc mừng sinh nhật Ben.
+
+00:02:05.920 --> 00:02:07.810
+Hãy xem trông nó như thế nào.
+
+00:02:07.810 --> 00:02:09.400
+Được rồi, nếu chúng ta đã làm điều đó và
+
+00:02:09.400 --> 00:02:12.920
+chúng ta nhìn vào hai TextView,
+đây là đoạn mã mà chúng ta sẽ sử dụng.
+
+00:02:12.920 --> 00:02:16.580
+Với TextView chúc mừng sinh nhật Ben,
+tôi đã tạo ra một ID ở đây.
+
+00:02:16.580 --> 00:02:21.430
+Sau đó tôi chỉ đến ID đó từ
+từ TextView Lyla với bố trí ở bên dưới
+
+00:02:21.430 --> 00:02:23.080
+và bố trí bên phải của thuộc tính.
+
+00:02:24.350 --> 00:02:28.530
+Dưới đây là hình ảnh trông nó thực sự
+ra sao trong ứng dụng và thật không may,
+
+00:02:28.530 --> 00:02:30.510
+nó không làm được điều ta muốn.
+
+00:02:30.510 --> 00:02:33.180
+Trên thực tế, dạng xem Từ Lyla
+là bên phải
+
+00:02:33.180 --> 00:02:35.300
+của TextView Chúc Mừng Sinh Nhật Ben.
+
+00:02:35.300 --> 00:02:39.930
+Nó cũng ở dưới, nhưng
+nó không phải ở góc dưới, bên phải.
+
+00:02:39.930 --> 00:02:41.150
+Nên hai cái này không đúng.
+
+00:02:42.350 --> 00:02:45.110
+Nó để lại cho chúng ta
+ba thuộc tính,
+
+00:02:45.110 --> 00:02:47.080
+mà sẽ lấy TextView của tôi và
+
+00:02:47.080 --> 00:02:51.720
+căn chỉnh chúng với Dạng xem mẹ,
+vốn bao trùm toàn bộ màn hình.
+
+00:02:51.720 --> 00:02:54.720
+Bây giờ tôi muốn Từ Lyla ở đây.
+
+00:02:54.720 --> 00:02:58.310
+ở góc phía dưới bên phải
+của dạng xem mẹ.
+
+00:02:58.310 --> 00:03:02.880
+Tôi sẽ không sử dụng
+layout_alignParentLeft, do đó, tôi
+
+00:03:02.880 --> 00:03:07.330
+sẽ sử dụng layout_alignParentRight
+và layout_alignParentBottom.
+
+00:03:07.330 --> 00:03:09.660
+Hãy xem những cái này kết hợp
+với nhau trong đoạn mã.
+
+00:03:09.660 --> 00:03:11.114
+Được rồi, cái đầu tiên trước.
+
+00:03:11.114 --> 00:03:14.469
+Tôi sẽ tìm TextView Từ Lyla
+và tôi sẽ đảm bảo rằng
+
+00:03:14.469 --> 00:03:18.617
+chiều rộng và chiều cao bố trí đều
+được đặt thành wrap_content nếu không,
+
+00:03:18.617 --> 00:03:22.910
+thậm chí nếu chúng ta định vị textview
+chính xác, nó có thể không dịch chuyển.
+
+00:03:22.910 --> 00:03:25.450
+Tiếp theo, tôi sẽ thêm
+các thuộc tính bổ sung.
+
+00:03:25.450 --> 00:03:27.980
+Về giá trị, tôi tiếp và đặt chính xác.
+
+00:03:27.980 --> 00:03:31.430
+Điều này khẳng định rằng tôi muốn
+TextView này phải được căn chỉnh
+
+00:03:31.430 --> 00:03:32.490
+sang Phải của dạng xem mẹ.
+
+00:03:32.490 --> 00:03:36.080
+Giá trị khác tôi có thể đặt ở đây
+là sai, nhưng điều đó có nghĩa
+
+00:03:36.080 --> 00:03:40.220
+nó căn chỉnh thành bên Phải của mẹ là sai
+vốn không phải là điều tôi muốn.
+
+00:03:40.220 --> 00:03:42.790
+Bây giờ tôi sẽ đến gõ thuộc tính khác
+để đặt ở phía dưới.
+
+00:03:43.800 --> 00:03:45.370
+Và tôi cũng thiết lập cái này thành đúng.
+
+00:03:45.370 --> 00:03:49.310
+Với các bạn đang ở nhà
+cái này có đôi chút khó xem
+
+00:03:49.310 --> 00:03:52.650
+nhưng có vẻ như chúng ta đã định vị
+dạng xem của chúng ta ở đây chính xác.
+
+00:03:52.650 --> 00:03:55.480
+Hãy xem liệu nó có
+hiển thị đúng trên điện thoại
+
+00:03:55.480 --> 00:03:57.705
+bằng cách nhấn vào nút Chạy màu xanh.
+
+00:03:57.705 --> 00:03:59.645
+Tôi chọn điện thoại của tôi và bấm OK.
+
+00:04:00.705 --> 00:04:01.665
+Tuyệt vời.
+
+00:04:01.665 --> 00:04:05.795
+Trên đây, tôi có Chúc Mừng Sinh Nhật,
+Ben, và dưới đây, tôi có Từ Lyla.
+
+00:04:05.795 --> 00:04:07.085
+Với cái đó,
+
+00:04:07.085 --> 00:04:09.395
+mọi thứ có vẻ đã vào đúng vị trí.
+

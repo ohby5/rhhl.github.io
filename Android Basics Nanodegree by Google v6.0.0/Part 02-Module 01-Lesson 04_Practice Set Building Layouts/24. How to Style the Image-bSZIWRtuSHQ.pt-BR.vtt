@@ -1,0 +1,377 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.283 --> 00:00:02.110
+Se você conseguiu,
+bom trabalho!
+
+00:00:02.307 --> 00:00:05.046
+Se não, valeu,
+e continue assistindo para a resposta.
+
+00:00:06.227 --> 00:00:08.264
+Eentão aqui estou eu no Android Studio.
+
+00:00:09.083 --> 00:00:10.701
+E estou olhando para as <i>TextViews</i> agora.
+
+00:00:11.180 --> 00:00:13.181
+Mas, vou rolar para cima
+e olhar para a <i>ImageView</i>.
+
+00:00:13.852 --> 00:00:16.406
+Ok, agora um pouquinho
+do que eu estava falando antes.
+
+00:00:16.941 --> 00:00:19.156
+Se eu colocar meu cursor
+em algum lugar desta <i>ImageView</i>,
+
+00:00:19.501 --> 00:00:22.836
+vai aparecer uma caixa azul que mostra
+o tamanho da <i>ImageView</i>.
+
+00:00:23.530 --> 00:00:26.240
+E é praticamente o tamanho
+total da tela do celular.
+
+00:00:26.836 --> 00:00:28.812
+Agora eu vou continuar
+e adicionar o <i>ScaleType</i>,
+
+00:00:29.225 --> 00:00:32.063
+e as duas opções que estou pensando
+escolher são <i>center</i> ou <i>centerCrop</i>.
+
+00:00:32.910 --> 00:00:37.003
+<i>Center</i> na verdade não dimensiona a imagem,
+não altera o tamanho da imagem.
+
+00:00:37.360 --> 00:00:40.170
+Parece óbvio que eu preciso usar <i>centerCrop</i>.
+
+00:00:40.780 --> 00:00:43.975
+E você pode ver que a imagem
+agora expande para preencher
+
+00:00:44.049 --> 00:00:45.926
+todo o espaço da <i>ImageView</i>.
+
+00:00:46.787 --> 00:00:52.836
+Pode ver aqui uma pequena faixa branca,
+para onde a imagem não expande.
+
+00:00:53.590 --> 00:00:57.316
+Se eu vier aqui, onde me permite
+escolher dispositivos diferentes,
+
+00:00:57.753 --> 00:01:00.504
+eu escolho um tablet como o Nexus 10,
+
+00:01:01.230 --> 00:01:03.864
+podemos ver que esta imagem
+não está preenchendo todo o espaço.
+
+00:01:04.535 --> 00:01:07.446
+Isso é ruim, porque significa que
+se você o está vendo em um tablet
+
+00:01:07.450 --> 00:01:10.756
+obterá essa estranha imagem quadrada,
+com este espaço em branco em torno.
+
+00:01:11.593 --> 00:01:13.064
+Embora possa ficar bem em um celular.
+
+00:01:13.852 --> 00:01:17.532
+O motivo para isso é porque eu coloquei
+<i>wrap_content</i> ao invés de <i>match_parent</i>.
+
+00:01:18.215 --> 00:01:19.507
+Deixa eu mudar para <i>match_parent</i>.
+
+00:01:20.295 --> 00:01:22.049
+Agora quando eu mudar isso para <i>match_parent</i>,
+
+00:01:22.395 --> 00:01:24.602
+a imagem se expande
+para preencher toda a <i>View</i>.
+
+00:01:24.910 --> 00:01:29.618
+O que eu quero dize é que <i>layout_width</i>,
+<i>layout_height</i> e <i>ScaleType</i> trabalham junto.
+
+00:01:30.098 --> 00:01:33.224
+Deixa eu desenhar uma imagem para mostrar,
+em detalhe, do que estou falando.
+
+00:01:34.067 --> 00:01:38.240
+Então, vamos dizer que gostaria de saber o que acontece quando usamos <i>centerCrop</i>.
+
+00:01:39.070 --> 00:01:41.070
+Se for para o site
+dos desenvolvedores Android,
+
+00:01:41.323 --> 00:01:43.569
+verá que a documentação diz o seguinte,
+
+00:01:43.907 --> 00:01:46.220
+<i>centerCrop</i> dimensiona a imagem de modo uniforme,
+
+00:01:46.510 --> 00:01:48.806
+o que significa que o formato
+da imagem se mantém.
+
+00:01:49.464 --> 00:01:53.015
+E o que isto significa é que ele faz isso
+para que ambas as dimensões,
+
+00:01:53.298 --> 00:01:59.021
+largura e altura da imagem seja igual ou maior
+do que a dimensão correspondente da <i>ImageView</i>
+
+00:01:59.100 --> 00:02:00.100
+(menos preenchimento).
+
+00:02:00.344 --> 00:02:02.843
+Uma coisa que eu posso dizer
+sobre o dimensionamento uniforme,
+
+00:02:03.384 --> 00:02:05.113
+se já tentou redimensionar uma imagem,
+
+00:02:05.200 --> 00:02:09.513
+o dimensionamento uniforme
+impede a imagem de ser esticada,
+
+00:02:09.771 --> 00:02:11.464
+seja horizontal ou verticalmente.
+
+00:02:12.024 --> 00:02:13.224
+Ele faz o dimensionamento,
+
+00:02:14.135 --> 00:02:15.895
+e então faz a imagem grande o suficiente,
+
+00:02:16.227 --> 00:02:20.369
+para a largura e altura serem iguais ou maiores
+
+00:02:21.027 --> 00:02:23.220
+que as dimensões correspondentes
+da própria imagem.
+
+00:02:23.655 --> 00:02:24.650
+Vamos ver uma imagem.
+
+00:02:25.046 --> 00:02:26.289
+Ok, então aqui está o celular.
+
+00:02:26.910 --> 00:02:28.800
+No celular temos uma <i>ImageView</i>.
+
+00:02:29.224 --> 00:02:30.652
+Aqui está imagem para a <i>ImageView</i>.
+
+00:02:31.040 --> 00:02:34.356
+Equi está a caixa verde que representa
+o tamanho real da <i>ImageView</i>.
+
+00:02:34.880 --> 00:02:37.111
+O <i>centerCrop</i> vai dimensionar
+essa imagem para cima
+
+00:02:37.550 --> 00:02:40.203
+para, sem deformá-la,
+encaixar na caixa.
+
+00:02:40.756 --> 00:02:45.760
+Sem mudar as dimensões, redimensionei
+a imagem até encaixá-la na caixa verde aqui,
+
+00:02:46.455 --> 00:02:48.609
+Como a imagem é este longo retângulo,
+
+00:02:48.800 --> 00:02:50.867
+ele acaba expandindo
+sobre a borda do celular.
+
+00:02:51.520 --> 00:02:53.600
+<i>centerCrop</i> vai centralizar
+esta imagem na <i>View</i>,
+
+00:02:54.486 --> 00:02:58.067
+e, em seguida, como o nome indica,
+ele vai cortar o excesso da imagem.
+
+00:02:58.978 --> 00:03:02.067
+Então, eu quero falar sobre mais
+um problema que você pode encontrar.
+
+00:03:03.396 --> 00:03:06.584
+<i>Views</i> podem se sobrepor,
+tal como cartas de baralho.
+
+00:03:06.867 --> 00:03:08.480
+E a ordem das tags das <i>Views</i> aqui,
+
+00:03:08.744 --> 00:03:11.292
+determina a ordem de exibição
+das <i>Views</i> na tela.
+
+00:03:11.610 --> 00:03:14.436
+Já que a View A é a primeira,
+ela ficaria na tela em primeiro lugar,
+
+00:03:14.900 --> 00:03:17.384
+depois a <i>View</i> B,
+e então a <i>View</i> C.
+
+00:03:17.809 --> 00:03:20.172
+Agora, por causa da ordem
+que eu coloquei neste XML,
+
+00:03:20.492 --> 00:03:23.489
+Não posso ver meu texto
+muito bem na <i>TextView</i> A.
+
+00:03:23.883 --> 00:03:26.990
+Vamos tentar mudar o XML,
+e ver como ele reorganiza minha tela.
+
+00:03:27.895 --> 00:03:31.249
+Ok, então eu mudei as coisas por aqui,
+e agora eu tenho <i>View</i> B, A, C.
+
+00:03:31.747 --> 00:03:33.526
+Então vai desenhar a <i>View</i> B primeiro,
+
+00:03:34.166 --> 00:03:35.538
+depois vai desenhar a <i>View</i> A.
+
+00:03:35.913 --> 00:03:37.409
+E, finalmente, a <i>View</i> C.
+
+00:03:38.080 --> 00:03:39.495
+Acabei de reordenar as <i>Views</i>.
+
+00:03:39.913 --> 00:03:41.981
+Tudo é colocado na mesma posição,
+
+00:03:42.406 --> 00:03:45.920
+mas a ordem de como as <i>Views</i>
+são empilhadas mudou.
+
+00:03:46.246 --> 00:03:48.036
+Por isso,
+agora eu posso ver meu texto.
+
+00:03:48.375 --> 00:03:50.744
+Você poderá encontrar
+um problema similar com o seu cartão
+
+00:03:51.101 --> 00:03:54.652
+se colocar suas duas <i>TextView</i> aqui
+e então desenhar sua <i>ImageView</i>.
+
+00:03:55.052 --> 00:03:57.932
+Pois desenharia primeiro a primeira <i>TextView,</i>
+depois a segunda <i>TextView</i>
+
+00:03:58.160 --> 00:04:01.513
+e então a imagem ocupando
+a tela inteira, teria coberto as duas.
+
+00:04:01.864 --> 00:04:03.692
+Basta confirmar se tem a ordem correta.
+
+00:04:04.756 --> 00:04:06.443
+Vamos ver como isso fica no código.
+
+00:04:07.009 --> 00:04:08.732
+Tenho aqui o código
+que estou trabalhando.
+
+00:04:09.350 --> 00:04:11.796
+Mas só mostrarei o que quero dizer
+com ordenação de <i>Views</i>.
+
+00:04:12.258 --> 00:04:13.969
+Agora minha <i>ImageView</i>
+está primeiro,
+
+00:04:14.350 --> 00:04:15.353
+e logo as duas <i>TextViews</i>.
+
+00:04:16.000 --> 00:04:17.981
+E podemos ver o texto
+facilmente na tela.
+
+00:04:18.560 --> 00:04:20.326
+Se eu em vez disso
+recortar esta <i>ImageView</i>,
+
+00:04:20.952 --> 00:04:21.950
+vou rolar para baixo,
+
+00:04:22.350 --> 00:04:23.563
+e vou colar ela aqui mesmo.
+
+00:04:23.913 --> 00:04:27.372
+Bem, e agora eu tenho
+<i>TextView</i>, <i>TextView</i>, <i>ImageView</i>.
+
+00:04:27.993 --> 00:04:30.000
+Ele desenha a <i>TextView</i>
+"Feliz Aniversário, Ben!"
+
+00:04:30.615 --> 00:04:32.572
+e depois desenha a TextView "De, Lyla!".
+
+00:04:33.138 --> 00:04:36.775
+Então desenha esta imagem
+do Android sobre as outras duas <i>TextViews</i>.
+
+00:04:37.310 --> 00:04:40.590
+Se eu selecionar as <i>TextViews</i>
+posso ver que elas ainda estão lá,
+
+00:04:40.916 --> 00:04:42.584
+apenas estão cobertas pela <i>ImageView</i>.
+
+00:04:43.107 --> 00:04:44.129
+Ora bem, eu vou desfazer.
+
+00:04:44.713 --> 00:04:47.033
+Bem melhor! Minhas <i>TextViews</i>
+estão no topo agora.
+
+00:04:47.353 --> 00:04:50.270
+E como sempre fazemos,
+vamos executar no celular,
+
+00:04:50.280 --> 00:04:53.680
+só para garantir que tudo está funcionando com o <i>match_parent</i> e o <i>centerCrop</i>.
+
+00:04:54.535 --> 00:04:56.418
+Impressionante,
+isto está ficando muito bom.
+
+00:04:56.750 --> 00:04:59.255
+Nossa imagem expandida
+preenche toda a View,
+
+00:05:00.098 --> 00:05:01.427
+podemos ver nossas TextViews.
+
+00:05:02.098 --> 00:05:05.501
+Há um probleminha pra corrigir,
+mas ótimo trabalho até agora.
+
+00:05:05.938 --> 00:05:07.181
+Ótimo trabalho|
+
+00:05:07.476 --> 00:05:11.083
+Falta um atributo para alterar,
+e e teremos o cartão de aniversário.
+

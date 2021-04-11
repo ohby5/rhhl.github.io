@@ -1,0 +1,186 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.430 --> 00:00:03.650
+Tamam, aslında bu sorunun 
+iki doğru cevabı vardı,
+
+00:00:03.650 --> 00:00:07.580
+bunlar <i>padding</i> [iç boşluk] ve
+<i>layout_margin</i> [yerleşim kenar boşluğu].
+
+00:00:07.580 --> 00:00:10.850
+Bunlardan birisini seçebilirdiniz, 
+ikisine de ihtiyacınız yok.
+
+00:00:10.850 --> 00:00:12.460
+Size nedenini göstereyim.
+
+00:00:12.460 --> 00:00:15.030
+Uygulamada, çoğu zaman 
+<i>padding</i> kullanan bir görünüm
+
+00:00:15.030 --> 00:00:18.830
+<i>layout_margin</i> kullanan bir 
+görünüme çok benzeyecektir.
+
+00:00:18.830 --> 00:00:21.550
+Sizin için görünüm kenarlarını çizeyim.
+
+00:00:21.550 --> 00:00:23.148
+Görünüm kenarlarını çizdikten sonra,
+
+00:00:23.148 --> 00:00:26.651
+iki durum arasında farkı 
+gerçekten de görebilirsiniz.
+
+00:00:26.651 --> 00:00:27.845
+<i>Padding</i> olması durumunda,
+
+00:00:27.845 --> 00:00:31.438
+görünümün içine boşluk ekleyerek asıl 
+görünümü daha genişletiyorsunuz.
+
+00:00:32.494 --> 00:00:35.875
+<i>layout_margin</i> olması durumunda, 
+görünümün etrafına boşluk ekliyorsunuz,
+
+00:00:35.875 --> 00:00:38.415
+ama görünümün büyüklüğünü 
+aslında değiştirmiyorsunuz.
+
+00:00:38.835 --> 00:00:42.185
+Bunların ne zaman kullanılacağını 
+merak ediyor olabilirsiniz?
+
+00:00:42.185 --> 00:00:44.375
+Neden iki ayrı özellik var?
+
+00:00:44.375 --> 00:00:47.655
+Eğer her iki görünüme kenar veya 
+zemin rengi eklemek gibi
+
+00:00:47.655 --> 00:00:51.080
+bir şey yapsaydım, 
+aslında çok farklı görünürlerdi.
+
+00:00:51.080 --> 00:00:54.190
+Bizim durumumuzda, bir kenar veya 
+zemin rengi eklemiyoruz,
+
+00:00:54.190 --> 00:00:57.060
+bu yüzden <i>padding</i> veya 
+<i>layout_margin</i> seçebilirsiniz.
+
+00:00:57.060 --> 00:00:59.260
+Her ikisini de seçmek mantıklı olmaz.
+
+00:00:59.260 --> 00:01:03.050
+İkisinden birini seçebileceğimiz için, 
+devam edip biraz da keyfi olarak
+
+00:01:03.050 --> 00:01:04.700
+<i>padding</i> eklemeyi seçiyorum.
+
+00:01:04.700 --> 00:01:07.110
+Bunun Android Studio'da nasıl 
+göründüğüne bakalım.
+
+00:01:07.110 --> 00:01:09.990
+Tamam, tekrar <i>activity_main</i>'deyiz.
+
+00:01:09.990 --> 00:01:12.990
+<i>Padding</i> özelliği, ekranın kenarından 
+uzaklaştırmak istediğimiz için
+
+00:01:12.990 --> 00:01:15.790
+<i>TextViews</i>'e eklemek istediğimiz bir şey.
+
+00:01:15.790 --> 00:01:19.580
+<i>Padding</i> ve <i>layout_margin</i> her 
+dört tarafa boşluk ekler.
+
+00:01:19.580 --> 00:01:20.920
+Tamam, devam edip ekleyelim.
+
+00:01:21.720 --> 00:01:25.090
+Hatırlayın, her kenarın 20 dp olmasını 
+istediğimi söyledim,
+
+00:01:25.090 --> 00:01:27.190
+bu yüzden değer olarak 
+buraya onu koyuyorum.
+
+00:01:27.190 --> 00:01:29.990
+Önizlemem eklenen boşluğu 
+göstermek için güncellendi,
+
+00:01:29.990 --> 00:01:31.710
+devam edip aşağıya iniyorum.
+
+00:01:31.710 --> 00:01:34.654
+Tamam, şimdi biraz eğlenmek istiyorum, 
+bu yüzden devam edip
+
+00:01:34.654 --> 00:01:37.880
+bu <i>TextView</i>'e <i>padding</i> yerine 
+<i>layout_margin</i> ekleyeceğim.
+
+00:01:37.880 --> 00:01:40.520
+Tamam, bu da <i>TextView</i>'de boşluk yarattı.
+
+00:01:40.520 --> 00:01:41.150
+<i>layout_margin</i>'i
+
+00:01:41.150 --> 00:01:45.370
+değiştirdiğimde, <i>TextView</i>'in büyüklüğünün 
+artmadığına dikkat edin,
+
+00:01:45.370 --> 00:01:51.040
+buna karşılık burada bu <i>TextView</i>'de, 
+asıl <i>TextView</i>'in büyüklüğü değişti.
+
+00:01:51.040 --> 00:01:53.780
+Eğer hem <i>layout_margin</i>, hem de 
+<i>padding</i> eklersem ne olur?
+
+00:01:53.780 --> 00:01:54.710
+Haydi buna bakalım.
+
+00:01:55.410 --> 00:01:58.226
+Şimdi metnim duvardan 40 dp uzakta.
+
+00:01:58.226 --> 00:02:02.244
+Burada 20 dp ve burada da 
+bir diğer 20 dp <i>padding</i> var.
+
+00:02:02.244 --> 00:02:04.322
+Tamam, ancak duvardan 
+40 dp uzaklık istemiyoruz.
+
+00:02:04.322 --> 00:02:06.042
+Bu yüzden devam edip bunu sileceğim.
+
+00:02:07.634 --> 00:02:10.780
+Tamam, "Lyla'dan" <i>TextView</i>'de 20 dp.
+
+00:02:10.780 --> 00:02:14.020
+20 dp <i>padding</i> ve 
+"Mutlu Yıllar, Ben!" <i>TextView</i>'i.
+
+00:02:14.020 --> 00:02:16.210
+Harika, haydi bunu 
+telefonumuzda çalıştıralım.
+
+00:02:16.510 --> 00:02:19.970
+Tamam, size bitmiş Doğum Günü Kartı 
+uygulamasını sunabilir miyim?
+
+00:02:19.970 --> 00:02:21.310
+Haydi biraz kutlama yapalım.
+
+00:02:22.410 --> 00:02:24.860
+Bununla birlikte, yapılacaklar 
+listesindeki son şeyi tamamlamış oluyoruz.
+

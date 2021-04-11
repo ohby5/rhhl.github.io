@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.430 --> 00:00:03.650
+Được rồi, vậy thực sự có hai 
+câu trả lời chính xác cho câu hỏi này
+
+00:00:03.650 --> 00:00:07.580
+là padding và layout_margin.
+
+00:00:07.580 --> 00:00:10.850
+Nên bạn có thể chọn một trong hai đáp án
+nhưng không cần cả hai.
+
+00:00:10.850 --> 00:00:12.460
+Để tôi chỉ cho bạn biết tại sao.
+
+00:00:12.460 --> 00:00:15.030
+Trong thực tế, rất nhiều lần,
+một view sử dụng padding
+
+00:00:15.030 --> 00:00:18.830
+sẽ trông rất giống với
+một view sử dụng layout_margin.
+
+00:00:18.830 --> 00:00:21.550
+Tôi sẽ vẽ ra ranh giới cho bạn.
+
+00:00:21.550 --> 00:00:23.148
+Khi bạn vẽ ranh giới giữa các view,
+
+00:00:23.148 --> 00:00:26.651
+bạn sẽ có thể thấy sự khác biệt
+giữa hai tình huống này.
+
+00:00:26.651 --> 00:00:27.815
+Trong trường hợp padding,
+
+00:00:27.815 --> 00:00:31.438
+bạn làm cho view thực tế lớn hơn
+bằng cách thêm khoảng trống quanh view.
+
+00:00:32.494 --> 00:00:35.875
+Trong trường hợp layout_margin,
+bạn thêm khoảng trống xung quanh view,
+
+00:00:35.875 --> 00:00:37.685
+nhưng không thực sự thay đổi
+kích thước của view đó.
+
+00:00:38.835 --> 00:00:42.185
+Bây giờ, bạn có thể tự hỏi rằng
+khi nào sự giống nhau này hoạt động?
+
+00:00:42.185 --> 00:00:44.375
+Tại sao có hai thuộc tính khác nhau?
+
+00:00:44.375 --> 00:00:47.655
+Vâng, nếu tôi làm điều gì đó
+như thêm một đường viền
+
+00:00:47.655 --> 00:00:51.080
+hoặc một màu nền cho cả hai view này,
+thực sự chúng sẽ trông khá khác nhau.
+
+00:00:51.080 --> 00:00:54.190
+Tuy nhiên, trong trường hợp này, 
+ta không thêm đường viền hoặc màu nền,
+
+00:00:54.190 --> 00:00:57.060
+vì vậy bạn có thể chọn một trong hai 
+padding hoặc layout_margin.
+
+00:00:57.060 --> 00:00:59.260
+Nhưng sẽ vô ích nếu chọn cả hai.
+
+00:00:59.260 --> 00:01:03.050
+Vì chúng ta có thể chọn một trong hai,
+tôi sẽ tiếp tục, một chút ngẫu hứng,
+
+00:01:03.050 --> 00:01:04.700
+chọn thêm padding.
+
+00:01:04.700 --> 00:01:07.110
+Hãy xem nó sẽ trông như thế nào
+trong Android Studio.
+
+00:01:07.110 --> 00:01:09.990
+Được rồi, ở đây 
+ta đang trở lại activity_main.
+
+00:01:09.990 --> 00:01:12.990
+Bây giờ thuộc tính padding là cái 
+ta muốn thêm vào TextViews
+
+00:01:12.990 --> 00:01:15.790
+để di chuyển chúng ra xa 
+khỏi các cạnh bên của màn hình.
+
+00:01:15.790 --> 00:01:19.580
+Padding và layout_margin
+thêm không gian trên tất cả bốn cạnh.
+
+00:01:19.580 --> 00:01:20.680
+Được rồi, hãy tiếp tục và thêm nó.
+
+00:01:21.720 --> 00:01:25.090
+Và hãy nhớ, tôi đã nói rằng tôi muốn
+20dp ở tất cả các cạnh,
+
+00:01:25.090 --> 00:01:27.110
+vậy đó là cái tôi đặt ngay ở đây - giá trị.
+
+00:01:27.110 --> 00:01:29.990
+Màn hình xem trước của tôi 
+được cập nhật hiển thị thêm không gian,
+
+00:01:29.990 --> 00:01:31.710
+Tôi sẽ tiếp tục và kéo xuống.
+
+00:01:31.710 --> 00:01:34.654
+Được rồi, tôi cảm thấy hơi vui
+nên tôi sẽ tiếp tục
+
+00:01:34.654 --> 00:01:37.880
+và thêm layout_margin 
+vào TextView này thay vì thêm padding.
+
+00:01:37.880 --> 00:01:40.520
+Được rồi,
+và điều đó cũng đẩy TextView ra ngoài.
+
+00:01:40.520 --> 00:01:41.150
+Tuy nhiên hãy lưu ý,
+
+00:01:41.150 --> 00:01:45.370
+kích thước của TextView không tăng
+khi tôi thay đổi layout_margin,
+
+00:01:45.370 --> 00:01:51.040
+trong khi đó ở đây trong TextView này,
+kích thước của TextView thực tế đã thay đổi.
+
+00:01:51.040 --> 00:01:53.780
+Bây giờ chuyện gì sẽ xảy ra
+nếu tôi thêm cả layout_margin và padding.
+
+00:01:53.780 --> 00:01:54.350
+Hãy quan sát xem.
+
+00:01:55.410 --> 00:01:58.226
+Vâng, bây giờ văn bản của tôi 
+có khoảng cách 40dp từ cạnh bên.
+
+00:01:58.226 --> 00:02:02.244
+Đó là 20dp bên này
+và 20dp padding bên này.
+
+00:02:02.244 --> 00:02:04.322
+Được rồi, nhưng chúng tôi 
+không muốn khoảng cách với cạnh là 40dp.
+
+00:02:04.322 --> 00:02:05.822
+Vì vậy, tôi sẽ tiếp tục và xóa cái này.
+
+00:02:07.634 --> 00:02:10.780
+Được rồi, 20dp padding với dòng From Lyla.
+
+00:02:10.780 --> 00:02:14.020
+Và 20dp padding với dòng
+Happy Birthday, Ben.
+
+00:02:14.020 --> 00:02:15.460
+Tuyệt, hãy chạy nó trên điện thoại.
+
+00:02:16.510 --> 00:02:19.970
+Được rồi, tôi có thể trình bày cho bạn
+ứng dụng Birthday Card hoàn chỉnh.
+
+00:02:19.970 --> 00:02:20.910
+Hãy thêm một vài bàn tay jazz vào.
+
+00:02:22.410 --> 00:02:24.780
+Và với điều đó, chúng ta đã hoàn thành
+điều cuối cùng trong danh sách việc cần làm.
+

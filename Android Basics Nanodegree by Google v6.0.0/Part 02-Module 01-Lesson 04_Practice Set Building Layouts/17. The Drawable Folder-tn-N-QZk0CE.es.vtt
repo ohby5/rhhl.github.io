@@ -1,0 +1,263 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.507 --> 00:00:03.887
+Bien, en este punto tenemos
+nuestro dibujo o diseño.
+
+00:00:03.888 --> 00:00:07.054
+Identificamos las vistas,
+y empezamos a pensar en el posicionamiento
+
+00:00:07.055 --> 00:00:09.570
+eligiendo un <i>RelativeLayout</i>
+como nuestro <i>ViewGroup</i>.
+
+00:00:09.570 --> 00:00:11.830
+Es un buen momento
+para empezar a programar.
+
+00:00:11.830 --> 00:00:15.982
+Bien, lo que abrí aquí es el código
+sobre el que estuvimos trabajando antes,
+
+00:00:15.983 --> 00:00:21.210
+que es <i>activity_main.xml</i>
+ubicado en la carpeta <i>layout</i>.
+
+00:00:21.210 --> 00:00:22.920
+Ahora lo primero es crear las vistas.
+
+00:00:22.920 --> 00:00:25.520
+Ya tenemos casi la mitad
+del trabajo hecho.
+
+00:00:25.520 --> 00:00:26.940
+Tenemos un <i>RelativeLayout</i>
+
+00:00:26.940 --> 00:00:30.020
+y una <i>TextView</i> que dice:
+"<i>Happy Birthday Ben</i>".
+
+00:00:30.020 --> 00:00:33.020
+Para obtener todas las vistas
+que necesitas harás una <i>ImageView</i>.
+
+00:00:33.020 --> 00:00:36.105
+También harás otra <i>TextView</i>.
+
+00:00:36.106 --> 00:00:38.590
+Añadir esa <i>TextView</i>
+debería ser bastante fácil.
+
+00:00:38.590 --> 00:00:40.642
+La <i>ImageView</i> demanda
+un poco más de trabajo,
+
+00:00:40.643 --> 00:00:43.500
+porque, en realidad, necesitas
+la parte <i>android</i> de la imagen.
+
+00:00:43.500 --> 00:00:46.110
+En las Notas del Instructor,
+hemos incluido un enlace a esa imagen
+
+00:00:46.110 --> 00:00:47.930
+para que puedas descargarla.
+
+00:00:47.930 --> 00:00:51.750
+Bien, he descargado la imagen
+y la he guardado en mi escritorio.
+
+00:00:51.750 --> 00:00:54.984
+La guardé como <i>androidparty.jpg</i>.
+
+00:00:54.985 --> 00:00:58.770
+Ahora recuerda que antes,
+cuando añadimos imágenes de nuestro XML,
+
+00:00:58.778 --> 00:01:00.692
+dijimos que las habíamos guardado
+
+00:01:00.693 --> 00:01:03.185
+en una carpeta del ordenador
+llamada <i>drawable</i>.
+
+00:01:03.186 --> 00:01:04.796
+También recuerda que nuestra aplicación
+
+00:01:04.797 --> 00:01:07.599
+tiene muchos archivos y carpetas
+asociados a ella,
+
+00:01:07.600 --> 00:01:10.328
+los que podemos ver en la estructura
+de directorios a la izquierda.
+
+00:01:10.329 --> 00:01:14.310
+Estos incluyen diseños, imágenes,
+a veces música y demás.
+
+00:01:14.310 --> 00:01:18.020
+Muchos de estos tipos de archivos
+se alojarán en el directorio <i>res</i>,
+
+00:01:18.020 --> 00:01:20.100
+que es la abreviatura de <i>recursos</i>.
+
+00:01:20.100 --> 00:01:23.210
+El directorio <i>res</i> contiene
+subdirectorios para imágenes,
+
+00:01:23.210 --> 00:01:26.440
+textos, diseños y otros recursos
+que la aplicación podría necesitar.
+
+00:01:26.440 --> 00:01:30.044
+Y como dijimos, para las imágenes,
+está esta carpeta llamada <i>drawable</i>.
+
+00:01:30.045 --> 00:01:32.297
+Para esta aplicación,
+todas las imágenes deben colocarse
+
+00:01:32.298 --> 00:01:34.091
+dentro de la carpeta <i>drawable</i>.
+
+00:01:34.686 --> 00:01:37.424
+Una vez que hayas puesto la imagen
+en la carpeta <i>drawable</i>,
+
+00:01:38.290 --> 00:01:41.596
+puedes utilizar el atributo <i>src</i> (fuente)
+de una <i>ImageView</i>,
+
+00:01:41.597 --> 00:01:46.160
+y darle el valor <i>@drawable</i>
+y luego el nombre de la imagen.
+
+00:01:46.160 --> 00:01:48.388
+Nota, cuando se escribe
+el nombre de la imagen
+
+00:01:48.389 --> 00:01:50.710
+no es necesario añadir
+la extensión del archivo.
+
+00:01:50.710 --> 00:01:54.850
+Bien, ahora voy a mostrarte cómo poner
+una imagen en la carpeta <i>drawable</i>.
+
+00:01:54.850 --> 00:01:57.260
+Bien. Esta imagen está
+en las Notas del Instructor.
+
+00:01:57.260 --> 00:01:59.530
+Entonces descárgala en tu escritorio.
+
+00:01:59.530 --> 00:02:02.150
+Luego, quiero que abras <i>Android Studio</i>.
+
+00:02:02.150 --> 00:02:04.356
+En <i>Android Studio</i>, puedes ir aquí
+
+00:02:04.357 --> 00:02:06.300
+y hacer clic derecho
+en la carpeta <i>drawable</i>.
+
+00:02:06.300 --> 00:02:09.964
+Ahí, deberías ver algo que dice
+<i>Reveal in Finder</i>
+
+00:02:09.965 --> 00:02:11.877
+o <i>Reveal in Explorer</i>
+(Mostrar el Buscador).
+
+00:02:12.210 --> 00:02:14.615
+Aquí puedo ver la carpeta <i>drawable</i>.
+
+00:02:14.615 --> 00:02:18.055
+Ahora voy a mover el <i>androidparty.jpg</i>
+
+00:02:18.055 --> 00:02:21.613
+a la carpeta <i>drawable</i>
+y lo hago arrastrándolo sobre ella.
+
+00:02:21.614 --> 00:02:24.675
+Bien, entonces asegúrate de comenzar
+con el código XML correcto.
+
+00:02:24.676 --> 00:02:28.105
+Y si no tienes el código correcto,
+puedes copiarlo y pegarlo
+
+00:02:28.106 --> 00:02:29.829
+de las Notas del Instructor.
+
+00:02:29.830 --> 00:02:33.184
+Muy bien, lo primero es lo primero,
+descarga el <i>androidparty.jpg</i>.
+
+00:02:33.185 --> 00:02:36.900
+Luego toma el <i>androidparty.jpg</i>
+y muévelo a la carpeta <i>drawable</i>.
+
+00:02:36.900 --> 00:02:39.560
+Una vez hecho esto,
+añade el TextView que dice:
+
+00:02:39.560 --> 00:02:41.433
+"From" y luego tu nombre.
+
+00:02:41.434 --> 00:02:45.364
+Y después de eso, añade el <i>ImageView</i>
+con el atributo <i>src</i> como parte de <i>android</i>.
+
+00:02:45.365 --> 00:02:47.260
+En realidad hay muchos
+<i>padding</i> predeterminados,
+
+00:02:47.260 --> 00:02:48.919
+en el código con el que estás trabajando.
+
+00:02:48.920 --> 00:02:50.670
+Así que puedes eliminarlos.
+
+00:02:50.670 --> 00:02:52.610
+¿Qué quiero decir
+con <i>padding</i> predeterminados?
+
+00:02:52.610 --> 00:02:55.240
+Bien, son estos <i>paddingBottom</i>,
+<i>paddingLeft</i>, <i>paddingRight</i>
+
+00:02:55.240 --> 00:02:56.600
+y <i>PaddingTop</i>.
+
+00:02:56.600 --> 00:03:01.927
+Sencillamente, puedes eliminarlos.
+
+00:03:01.928 --> 00:03:03.505
+Por último, haz clic en la flecha verde
+
+00:03:03.506 --> 00:03:05.402
+para ejecutar
+la aplicación en tu teléfono.
+
+00:03:05.403 --> 00:03:09.160
+Cuando hayas terminado todos estos pasos,
+tu aplicación debería verse así.
+
+00:03:09.160 --> 00:03:11.682
+Nota, es un poco difícil
+ver en esta pantalla,
+
+00:03:11.683 --> 00:03:14.010
+pero en realidad las <i>TextView</i>
+se están superponiendo.
+
+00:03:14.010 --> 00:03:16.560
+Eso es completamente normal
+y algo que vamos a tratar después.
+

@@ -1,0 +1,358 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Make your Own Card</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practice Set: Building Layouts</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Welcome to the Practice Set.html">01. Welcome to the Practice Set</a>
+    </li>
+    <li class="">
+      <a href="02. The Installation Process.html">02. The Installation Process</a>
+    </li>
+    <li class="">
+      <a href="03. Troubleshooting.html">03. Troubleshooting</a>
+    </li>
+    <li class="">
+      <a href="04. Install Java Windows Guide.html">04. Install Java: Windows Guide</a>
+    </li>
+    <li class="">
+      <a href="05. Install Java Mac Guide.html">05. Install Java: Mac Guide</a>
+    </li>
+    <li class="">
+      <a href="06. Install Android Studio.html">06. Install Android Studio</a>
+    </li>
+    <li class="">
+      <a href="07. Windows Guide to Install Android Studio.html">07. Windows: Guide to Install Android Studio</a>
+    </li>
+    <li class="">
+      <a href="08. Mac Guide to Install Android Studio.html">08. Mac: Guide to Install Android Studio</a>
+    </li>
+    <li class="">
+      <a href="09. Discussion about Constraint Layout.html">09. Discussion about Constraint Layout</a>
+    </li>
+    <li class="">
+      <a href="10. Hello World.html">10. Hello World</a>
+    </li>
+    <li class="">
+      <a href="11. Hello World Written Instructions.html">11. Hello World: Written Instructions</a>
+    </li>
+    <li class="">
+      <a href="12. A Quick Tour of Android Studio.html">12. A Quick Tour of Android Studio</a>
+    </li>
+    <li class="">
+      <a href="13. Running Hello World on Your Phone.html">13. Running Hello World on Your Phone</a>
+    </li>
+    <li class="">
+      <a href="14. Using the Emulator.html">14. Using the Emulator</a>
+    </li>
+    <li class="">
+      <a href="15. Create the Birthday Card App.html">15. Create the Birthday Card App</a>
+    </li>
+    <li class="">
+      <a href="16. RelativeLayout LinearLayout.html">16. RelativeLayout LinearLayout</a>
+    </li>
+    <li class="">
+      <a href="17. The Drawable Folder.html">17. The Drawable Folder</a>
+    </li>
+    <li class="">
+      <a href="18. Positioning.html">18. Positioning</a>
+    </li>
+    <li class="">
+      <a href="19. Styling.html">19. Styling</a>
+    </li>
+    <li class="">
+      <a href="20. Make the Text Larger.html">20. Make the Text Larger</a>
+    </li>
+    <li class="">
+      <a href="21. Setting the Font.html">21. Setting the Font</a>
+    </li>
+    <li class="">
+      <a href="22. Setting the Color.html">22. Setting the Color</a>
+    </li>
+    <li class="">
+      <a href="23. Attributes for the ImageView.html">23. Attributes for the ImageView</a>
+    </li>
+    <li class="">
+      <a href="24. How to Style the Image.html">24. How to Style the Image</a>
+    </li>
+    <li class="">
+      <a href="25. Minor Adjustments.html">25. Minor Adjustments</a>
+    </li>
+    <li class="">
+      <a href="26. Recap.html">26. Recap</a>
+    </li>
+    <li class="">
+      <a href="27. Make your Own Card.html">27. Make your Own Card</a>
+    </li>
+    <li class="">
+      <a href="28. Intro to Study Break Charity Miles.html">28. Intro to Study Break: Charity Miles</a>
+    </li>
+    <li class="">
+      <a href="29. Study Break Charity Miles.html">29. Study Break: Charity Miles</a>
+    </li>
+    <li class="">
+      <a href="30. Great Work!.html">30. Great Work!</a>
+    </li>
+    <li class="">
+      <a href="31. Learn More On Your Own.html">31. Learn More On Your Own</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">27. Make your Own Card</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Make your Own Card</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><h2 id="make-your-own-card">Make Your Own Card</h2>
+<p>Okay, so at this point we want to set you loose. Instead of following along with a pre-made design, you’ll now make your own card. The final practice for this lesson will have a few steps.</p>
+<h3 id="step-1-draw-your-card">Step 1: Draw your Card</h3>
+<p>Take a piece of paper. Think of someone you’d like to make a card for and sketch out a unique card design. It can be a birthday card, mother’s day card, congratulations card, just because card, halloween card, so on.</p>
+<h3 id="step-2-take-a-picture-of-the-card">Step 2: Take a Picture of the Card</h3>
+<p>Take a picture of this card. You can use your phone’s camera to do this.</p>
+<h3 id="step-3-make-your-card">Step 3: Make your Card</h3>
+<p>Then make the card, using all of the skills, views and view groups you’ve learned about in Lesson 1. Try to make your card in as simple and clear a way as possible, and to avoid using fixed widths or heights.</p>
+<h3 id="step-4-explain-your-card">Step 4: Explain your Card</h3>
+<p>Now it’s your turn to be the teacher. Take two minutes and record yourself explaining how you designed your card’s XML. You can do this with your phone’s video camera app or the free screen recording options below:</p>
+<ul>
+<li><a href="https://support.apple.com/kb/PH5882?locale=en_US&viewlocale=en_US" target="_blank">Quicktime</a> (Mac 10.x)</li>
+<li><a href="https://www.techsmith.com/jing.html" target="_blank">Jing</a> (Windows/Mac)</li>
+</ul>
+<p>Explaining and communicating your design is not only an important skill for a burgeoning app developer, such as yourself, but it will also really help solidify the concepts you’re practicing.</p>
+<h3 id="step-5-share-your-card">Step 5: Share your Card</h3>
+<p>When you’re done, post the before picture and the solution video to the <a href="http://discussions.udacity.com/categories" target="_blank">Udacity forum</a> topic entitled "Make Your Own Card" or "Showcase Your Unique Card" so that other students can practice and learn from your design.</p>
+<p>This showcase is meant to be a resource for new students to get additional practice. Feel free to like designs that are particularly cool and try coding up some of them yourself.</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4331052610.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 23.586474501108647%; left: 10.717347256857854%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 36.51261086474501%; left: 10.487453241895262%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 51.929739467849224%; left: 10.43095386533666%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check3" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 68.6529933481153%; left: 10.493298004987532%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check4" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 84.9639689578714%; left: 10.551745635910224%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check5" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="27. Make your Own Card-xKPQz0pWEMI.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="27. Make your Own Card-xKPQz0pWEMI.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="US" src="27. Make your Own Card-xKPQz0pWEMI.en-US.vtt" label="US">
+  <track default="true" kind="subtitles" srclang="en" src="27. Make your Own Card-xKPQz0pWEMI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="27. Make your Own Card-xKPQz0pWEMI.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="27. Make your Own Card-xKPQz0pWEMI.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="27. Make your Own Card-xKPQz0pWEMI.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="27. Make your Own Card-xKPQz0pWEMI.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="27. Make your Own Card-xKPQz0pWEMI.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="27. Make your Own Card-xKPQz0pWEMI.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="27. Make your Own Card-xKPQz0pWEMI.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="27. Make your Own Card-xKPQz0pWEMI.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="27. Make your Own Card-xKPQz0pWEMI.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="27. Make your Own Card-xKPQz0pWEMI.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="27. Make your Own Card-xKPQz0pWEMI.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="27. Make your Own Card-xKPQz0pWEMI.zh-TW.vtt" label="TW">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="28. Intro to Study Break Charity Miles.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('27. Make your Own Card')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

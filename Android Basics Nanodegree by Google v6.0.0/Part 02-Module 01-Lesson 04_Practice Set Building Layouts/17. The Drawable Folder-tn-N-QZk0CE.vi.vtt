@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.600 --> 00:00:03.144
+OK, vậy là lúc này chúng ta 
+đã có bản vẽ hoặc bố cục.
+
+00:00:03.505 --> 00:00:06.828
+Chúng ta đã xác định hiển thị 
+và bắt đầu nghĩ đến việc định vị
+
+00:00:06.828 --> 00:00:09.064
+bằng cách chọn một bố cục cân xứng
+làm tập hợp hiển thị.
+
+00:00:09.415 --> 00:00:11.190
+Đây là lúc thích hợp để bắt đầu viết mã.
+
+00:00:11.620 --> 00:00:15.281
+Những gì tôi mở ở đây là mã 
+mà chúng ta đang thao tác trước,
+
+00:00:15.848 --> 00:00:20.764
+có tên là <i>activity_main.xml</i>
+nằm trong thư mục <i>layout</i>.
+
+00:00:21.010 --> 00:00:22.590
+Giờ nó đang tạo hiển thị trước.
+
+00:00:22.770 --> 00:00:24.958
+Chúng ta đã hoàn thành xong
+một nửa công việc.
+
+00:00:25.240 --> 00:00:26.678
+Chúng ta có bố cục cân xứng
+
+00:00:26.678 --> 00:00:29.500
+và chúng ta có một hiển thị văn bản
+ghi "Chúc mừng sinh nhật Ben".
+
+00:00:29.830 --> 00:00:32.768
+Để lấy tất cả các hiển thị bạn cần,
+bạn sẽ tạo một hiển thị hình ảnh.
+
+00:00:33.000 --> 00:00:35.201
+Bạn cũng sẽ tạo thêm 
+một hiển thị văn bản nữa.
+
+00:00:35.652 --> 00:00:38.143
+Việc thêm hiển thị văn 
+bản nữa khá dễ.
+
+00:00:38.405 --> 00:00:40.411
+Hiển thị hình ảnh 
+yêu cầu thêm chút thao tác
+
+00:00:40.411 --> 00:00:42.937
+vì thực tế bạn cần 
+phần <i>Android</i> của bức ảnh đó.
+
+00:00:43.440 --> 00:00:45.701
+Trong hướng dẫn, chúng tôi 
+có chèn liên kết đến bức ảnh đó
+
+00:00:45.701 --> 00:00:47.075
+để bạn có thể tải xuống.
+
+00:00:47.756 --> 00:00:50.852
+Vậy là tôi đã tải bức ảnh xuống 
+và lưu nó trên màn hình nền.
+
+00:00:51.620 --> 00:00:53.825
+Nó được lưu là <i>androidparty.jpg</i>.
+
+00:00:54.828 --> 00:00:58.182
+Giờ có thể bạn nhớ lại trước đó khi
+chúng ta thêm ảnh XML,
+
+00:00:58.535 --> 00:01:02.521
+chúng ta đã lưu nó trong thư mục <i>drawable</i>.
+
+00:01:03.290 --> 00:01:07.450
+Hãy nhớ việc ứng dụng có nhiều tệp
+và thư mục liên kết với thư mục này,
+
+00:01:07.480 --> 00:01:09.970
+mà chúng ta có thể thấy trong 
+cấu trúc thư mục ở bên trái.
+
+00:01:10.070 --> 00:01:13.709
+Các tệp này bao gồm <i>layout</i>, 
+ảnh, đôi khi là nhạc...
+
+00:01:14.080 --> 00:01:17.582
+Nhiều loại tệp này sẽ được 
+chứa trong thư mục <i>res</i>,
+
+00:01:17.900 --> 00:01:19.472
+chữ viết tắt của từ tài nguyên.
+
+00:01:19.926 --> 00:01:23.060
+Thư mục <i>res</i> chứa các thư mục 
+con của tất cả các ảnh,
+
+00:01:23.060 --> 00:01:25.882
+văn bản, bố cục và các tài nguyên 
+khác mà ứng dụng có thể cần.
+
+00:01:26.180 --> 00:01:29.752
+Và như chúng tôi đã nói, đối với ảnh, 
+thư mục này có tên là <i>drawable</i>.
+
+00:01:29.930 --> 00:01:33.357
+Đối với ứng dụng này, tất cả các ảnh
+phải nằm trong thư mục <i>drawable</i>.
+
+00:01:34.677 --> 00:01:36.832
+Khi bạn chèn ảnh vào 
+trong thư mục <i>drawable</i>,
+
+00:01:38.017 --> 00:01:40.850
+bạn có thể sử dụng thuộc 
+tính nguồn của hiển thị ảnh,
+
+00:01:41.257 --> 00:01:45.400
+và cho nó giá trị <i>@drawable</i>, 
+sau đó đặt tên cho ảnh.
+
+00:01:45.959 --> 00:01:48.853
+Lưu ý, khi bạn viết tên ảnh,
+bạn không cần thêm
+
+00:01:48.853 --> 00:01:50.257
+phần mở rộng tệp.
+
+00:01:50.550 --> 00:01:54.391
+OK, vậy là giờ tôi sẽ chỉ cho bạn 
+cách chèn ảnh vào trong thư mục <i>drawable</i>.
+
+00:01:54.731 --> 00:01:56.869
+OK. Ảnh này nằm trong Hướng dẫn.
+
+00:01:57.040 --> 00:01:59.064
+Tiếp tục và tải ảnh xuống màn hình nền.
+
+00:01:59.357 --> 00:02:01.268
+Tiếp theo, tôi muốn bạn 
+mở <i>Android Studio</i>.
+
+00:02:01.737 --> 00:02:05.654
+Trong đó, bạn có thể di chuột đến đây
+và nhấp chuột phải vào thư mục <i>drawable</i>.
+
+00:02:06.158 --> 00:02:10.114
+Từ đó, bạn sẽ nhìn thấy dòng chữ
+<i>reveal in finder</i> hoặc
+
+00:02:10.133 --> 00:02:11.414
+<i>reveal in explorer</i>.
+
+00:02:12.141 --> 00:02:13.903
+Ở đây, tôi có thể thấy thư mục <i>drawable</i>.
+
+00:02:14.504 --> 00:02:17.835
+Vậy là ngay lúc này tôi sẽ di
+chuyển <i>androidparty.jpg</i>
+
+00:02:17.835 --> 00:02:21.044
+vào thư mục <i>drawable</i> và tôi chỉ cần
+làm việc này bằng cách kéo ảnh lên.
+
+00:02:21.465 --> 00:02:24.256
+OK, hãy chắc chắn bạn đang bắt đầu
+bằng mã XML thích hợp.
+
+00:02:24.256 --> 00:02:27.595
+Và nếu bạn không có mã thích hợp,
+bạn có thể tiếp tục và sao chép và
+
+00:02:27.595 --> 00:02:29.234
+dán mã từ hướng dẫn.
+
+00:02:29.610 --> 00:02:32.546
+Được rồi, hãy làm theo thứ tự,
+tải <i>androidparty.jpg</i> xuống.
+
+00:02:32.910 --> 00:02:36.396
+Sau đó chọn <i>androidparty.jpg</i> và
+di chuyển đến thư mục <i>drawable</i>.
+
+00:02:36.769 --> 00:02:39.358
+Khi đã hoàn thành, tiếp tục và
+thêm hiển thị văn bản có ghi
+
+00:02:39.450 --> 00:02:40.960
+"Từ, tên của bạn".
+
+00:02:41.311 --> 00:02:44.952
+Và sau đó, thêm hiển thị hình ảnh có
+thuộc tính nguồn là <i>android party</i>.
+
+00:02:45.288 --> 00:02:46.920
+Thực tế, có nhiều
+khoảng cách mặc định
+
+00:02:46.920 --> 00:02:48.345
+trong mã lệnh mà bạn đang thao tác.
+
+00:02:48.612 --> 00:02:50.236
+Vì vậy, bạn có thể tiếp tục và xóa nó.
+
+00:02:50.508 --> 00:02:52.157
+Khoảng cách mặc định là gì?
+
+00:02:52.450 --> 00:02:55.675
+Vâng, đó là <i>paddingBottom</i>,
+<i>paddingLeft</i>, <i>paddingRight</i> và <i>paddingTop</i>.
+
+00:02:56.045 --> 00:03:01.632
+Bạn có thể tiếp tục và chỉ cần xóa nó.
+
+00:03:01.897 --> 00:03:04.323
+Cuối cùng, nhấp mũi tên xanh lục để 
+chạy ứng dụng trên điện thoại.
+
+00:03:05.299 --> 00:03:08.336
+Khi bạn đã hoàn thành tất cả các bước này,
+ứng dụng của bạn sẽ trông như thế này.
+
+00:03:08.980 --> 00:03:11.309
+Lưu ý, có thể nó hơi khó nhìn 
+trên màn hình này
+
+00:03:11.463 --> 00:03:13.531
+nhưng thực tế các hiển thị 
+văn bản bị chồng lấp.
+
+00:03:13.800 --> 00:03:16.515
+Điều đó hoàn toàn bình thường và đó là
+phần mà chúng ta sẽ xử lý tiếp theo.
+

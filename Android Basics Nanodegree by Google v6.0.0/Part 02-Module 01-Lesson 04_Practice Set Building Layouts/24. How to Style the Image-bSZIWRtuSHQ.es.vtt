@@ -1,0 +1,345 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.300 --> 00:00:01.906
+Si lo lograste, buen trabajo.
+
+00:00:02.106 --> 00:00:05.407
+De lo contrario, buen intento.
+Sigue viendo para la respuesta.
+
+00:00:06.190 --> 00:00:08.570
+Aquí estoy en Android Studio.
+
+00:00:08.770 --> 00:00:10.950
+Estoy viendo estos TextViews.
+
+00:00:11.150 --> 00:00:13.670
+Bajaré para ver al ImageView.
+
+00:00:13.870 --> 00:00:16.950
+Como dije antes,
+
+00:00:17.150 --> 00:00:19.435
+si paso el cursor
+por encima del ImageView,
+
+00:00:19.635 --> 00:00:23.473
+me mostrará un cuadro azul
+que indica el tamaño del ImageView.
+
+00:00:23.673 --> 00:00:26.743
+De hecho,
+es del tamaño de la pantalla del teléfono
+
+00:00:26.943 --> 00:00:28.849
+Ahora, agregaré scaleType
+
+00:00:29.049 --> 00:00:32.950
+y se muestran dos opciones,
+center o centerCrop.
+
+00:00:33.150 --> 00:00:35.450
+Center no amplia la imagen,
+
+00:00:35.650 --> 00:00:37.180
+no cambia su tamaño.
+
+00:00:37.380 --> 00:00:41.036
+Entonces debo usar centerCrop.
+
+00:00:41.236 --> 00:00:46.570
+La imagen debería expandirse
+y cubrir todo el espacio del ImageView.
+
+00:00:46.770 --> 00:00:51.296
+Puedes notar que abajo
+hay una pequeña franja blanca,
+
+00:00:51.496 --> 00:00:53.410
+donde la imagen no se expandió.
+
+00:00:53.610 --> 00:00:57.860
+Aquí, puedo elegir
+entre distintos dispositivos.
+
+00:00:58.060 --> 00:01:00.990
+Digamos que selecciono
+una tablet Nexus 10,
+
+00:01:01.190 --> 00:01:04.330
+podemos ver que la imagen
+no cubre todo el espacio.
+
+00:01:04.530 --> 00:01:07.600
+Esto no está bien
+porque si lo ves en una tablet,
+
+00:01:07.800 --> 00:01:11.610
+se mostrará esta imagen extraña
+con un espacio en blanco,
+
+00:01:11.810 --> 00:01:13.810
+aunque pueda verse bien en un teléfono,
+
+00:01:14.010 --> 00:01:18.190
+Se debe a que ingrese <i>wrap_content</i>
+en lugar de<i> match_parent</i>.
+
+00:01:18.390 --> 00:01:20.100
+Lo cambiaré a <i>match_parent</i>.
+
+00:01:20.300 --> 00:01:24.710
+Cuando lo cambio a <i>match_parent</i>,
+la imagen se expande a toda la vista.
+
+00:01:24.910 --> 00:01:29.880
+Lo que quiero decir es que <i>layout_width,
+layout_height</i> y <i>scaleType</i> se combinan.
+
+00:01:30.080 --> 00:01:33.670
+Dibujare una imagen para explayarme.
+
+00:01:33.870 --> 00:01:38.860
+Si quisieras saber qué sucede
+cuando usamos centerCrop.
+
+00:01:39.060 --> 00:01:41.302
+Si vas el sitio web
+de Android Developers,
+
+00:01:41.502 --> 00:01:43.763
+verás que la documentación
+dice lo siguiente:
+
+00:01:43.963 --> 00:01:46.310
+centerCrop amplia
+la imagen uniformemente.
+
+00:01:46.510 --> 00:01:53.123
+Es decir que mantiene su ratio...
+con el fin de que las dos dimensiones,
+
+00:01:53.323 --> 00:01:56.591
+ancho y largo de la imagen sean iguales
+o más grande
+
+00:01:56.791 --> 00:02:00.382
+que la respectiva dimensión del ImageView,
+menos el <i>padding</i>.
+
+00:02:00.582 --> 00:02:03.180
+En cuanto a "escalar uniformemente",
+
+00:02:03.380 --> 00:02:09.404
+si alguna vez lo intentaste hacer,
+se evita que la imagen se estire,
+
+00:02:09.604 --> 00:02:12.030
+ya sea horizontal o verticalmente.
+
+00:02:12.230 --> 00:02:16.320
+Así logra que la imagen
+sea lo suficientemente grande
+
+00:02:16.520 --> 00:02:20.010
+para que el ancho y largo
+sean iguales o más grande
+
+00:02:20.210 --> 00:02:23.700
+que la respectiva dimensión de la imagen.
+
+00:02:23.900 --> 00:02:25.305
+Veamos la imagen.
+
+00:02:25.505 --> 00:02:28.930
+Aquí en nuestro teléfono
+tenemos un ImageView.
+
+00:02:29.130 --> 00:02:30.950
+Esta es la imagen del image view,
+
+00:02:31.150 --> 00:02:34.860
+el cuadro verde representa
+el tamaño del ImageView.
+
+00:02:35.060 --> 00:02:37.680
+El centerCrop escalará la imagen
+
+00:02:37.880 --> 00:02:40.590
+y sin deformarla
+para que cubra el cuadro.
+
+00:02:40.790 --> 00:02:44.009
+Sin cambiar las dimensiones,
+escalé la imagen
+
+00:02:44.401 --> 00:02:46.260
+para que cubra el cuadro verde.
+
+00:02:46.460 --> 00:02:48.902
+Como la imagen
+es este rectángulo grande,
+
+00:02:49.102 --> 00:02:51.756
+se expande a los extremos del teléfono.
+
+00:02:51.956 --> 00:02:54.410
+El centerCrop centrará esta vista
+
+00:02:54.610 --> 00:02:58.800
+y como su nombre indica,
+cortará las partes que sobresalen.
+
+00:02:59.000 --> 00:03:01.940
+Quiero hablar
+de otro problema que quizá tuviste.
+
+00:03:03.400 --> 00:03:06.860
+Las vistas se superponen como naipes.
+
+00:03:07.060 --> 00:03:08.934
+El orden de las etiquetas de vistas
+
+00:03:09.203 --> 00:03:11.610
+determina el orden
+de las vistas en la pantalla.
+
+00:03:11.810 --> 00:03:14.989
+La vista A es la primera,
+quedaría primera en la pantalla,
+
+00:03:15.219 --> 00:03:17.319
+luego vistas B y C.
+
+00:03:18.010 --> 00:03:20.850
+Debido al orden
+que determiné en este XML,
+
+00:03:21.050 --> 00:03:23.690
+no puedo ver bien
+mi texto en la vista A.
+
+00:03:23.890 --> 00:03:27.131
+Cambiemos el XML para ver
+cómo se redistribuye en la pantalla.
+
+00:03:27.920 --> 00:03:31.710
+Ya cambiamos los elementos.
+Ahora tengo la vista B, A, C.
+
+00:03:31.910 --> 00:03:34.170
+Se dibujará la vista B primero.
+
+00:03:34.370 --> 00:03:37.485
+Luego la vista A y finalmente C.
+
+00:03:37.685 --> 00:03:42.147
+Reordené las vistas.
+Todo está ubicado en la misma posición,
+
+00:03:42.347 --> 00:03:46.252
+pero cambió la forma
+de agrupar las vistas.
+
+00:03:46.452 --> 00:03:48.130
+Por ello, puedo ver mi texto.
+
+00:03:48.330 --> 00:03:51.046
+Te podría haber pasado
+algo similar con tu tarjeta
+
+00:03:51.280 --> 00:03:55.006
+si pusiste tus dos TextViews aquí
+y luego dibujaste la vista de tu imagen,
+
+00:03:55.206 --> 00:03:58.070
+ya que dibujara tu primer TextView,
+y luego el segundo.
+
+00:03:58.270 --> 00:04:01.870
+Y la imagen, que ocupa toda la pantalla,
+podría haber tapado a ambos.
+
+00:04:02.070 --> 00:04:03.854
+Asegúrate que el orden es correcto.
+
+00:04:04.750 --> 00:04:07.020
+Veamos cómo es en forma de código.
+
+00:04:07.220 --> 00:04:09.130
+Aquí está mi código
+en funcionamiento.
+
+00:04:09.330 --> 00:04:12.392
+Sólo mostraré a lo que me refiero
+con el orden de las vistas.
+
+00:04:12.592 --> 00:04:16.029
+Ahora mi ImageView está primero,
+luego mis dos TextViews.
+
+00:04:16.228 --> 00:04:18.350
+Podemos ver sin dificultad
+el texto en la pantalla.
+
+00:04:18.550 --> 00:04:23.220
+Y si corto este ImageView,
+bajo y lo pego aquí,
+
+00:04:23.420 --> 00:04:27.950
+el orden será TextView,
+TextView, ImageView.
+
+00:04:28.150 --> 00:04:32.940
+Dibuja el TextView "Feliz Cumpleaños, Ben"
+y luego el TextView "De, Lyla".
+
+00:04:33.140 --> 00:04:37.320
+Después, dibuja la imagen de la fiesta
+encima de los otros dos TextViews.
+
+00:04:37.520 --> 00:04:40.890
+Si selecciono los TextViews,
+puedo ver que todavía están allí,
+
+00:04:41.090 --> 00:04:43.100
+sólo que el ImageView los cubre.
+
+00:04:43.300 --> 00:04:44.840
+Lo podré como estaba antes.
+
+00:04:45.040 --> 00:04:47.448
+Así está mejor,
+mis TextViews ahora están arriba.
+
+00:04:47.648 --> 00:04:50.100
+Como siempre,
+lo probaremos en nuestro teléfono,
+
+00:04:50.300 --> 00:04:54.340
+y verificaremos que todo funciona
+con <i>match_parents</i> y <i>centerCrop</i>.
+
+00:04:54.540 --> 00:04:56.520
+¡Genial, se ve muy bien!
+
+00:04:56.720 --> 00:04:59.563
+Hemos expandido la imagen
+para cubir toda la vista.
+
+00:04:59.925 --> 00:05:01.446
+Y se ven nuestros TextViews.
+
+00:05:01.646 --> 00:05:05.470
+Aún hay un problemita por arreglar,
+pero gran trabajo hasta ahora.
+
+00:05:05.670 --> 00:05:09.382
+Estás haciendo un gran trabajo.
+Sólo falta cambiar un atributo
+
+00:05:09.582 --> 00:05:11.369
+y tendremos la tarjeta final.
+

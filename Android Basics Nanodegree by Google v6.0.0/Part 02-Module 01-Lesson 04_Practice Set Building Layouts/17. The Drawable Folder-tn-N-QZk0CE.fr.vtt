@@ -1,0 +1,262 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.640 --> 00:00:03.249
+Ok, alors à ce point on 
+a notre dessin ou disposition.
+
+00:00:03.249 --> 00:00:06.908
+On a identifié les vues et on a
+commencé nos pensées de positionnement
+
+00:00:06.908 --> 00:00:09.570
+en choisissant une disposition relative
+comme notre groupe de vue.
+
+00:00:09.570 --> 00:00:11.830
+C'est le bon moment 
+pour commencer à coder.
+
+00:00:11.830 --> 00:00:15.408
+Ok, alors ce que j'ai ouvert ici est
+un code qui a fonctionné avant,
+
+00:00:15.408 --> 00:00:21.210
+qui est <i>activity_main.xml</i>
+situé dans le fichier <i>layout</i>.
+
+00:00:21.210 --> 00:00:22.920
+Maintenant, ça crée nos vues en 
+premier.
+
+00:00:22.920 --> 00:00:25.520
+On a déjà fini à peu près
+la moitié du travail.
+
+00:00:25.520 --> 00:00:26.940
+On a une disposition 
+relative et
+
+00:00:26.940 --> 00:00:30.020
+on a une vue texte qui
+dit Joyeux anniversaire.
+
+00:00:30.020 --> 00:00:33.020
+Pour obtenir toutes les vue,
+vous devez faire une vue image.
+
+00:00:33.020 --> 00:00:36.190
+Vous allez aussi faire
+une vue texte additionnelle.
+
+00:00:36.190 --> 00:00:38.590
+Ajouter la vue texte additionnelle
+devrait être assez facile.
+
+00:00:38.590 --> 00:00:41.420
+La vue image requiert un petit peu
+plus de travail car vous avez
+
+00:00:41.420 --> 00:00:43.500
+besoin que la partie 
+Android de votre image.
+
+00:00:43.500 --> 00:00:46.110
+Dans les notes de l'instructeur,
+on a inclu un lien pour cette image pour
+
+00:00:46.110 --> 00:00:47.930
+que vous puissiez 
+le télécharger.
+
+00:00:47.930 --> 00:00:51.750
+Ok, alors j'ai télécharger l'image et
+je l'ai sauvegardé sur mon bureau.
+
+00:00:51.750 --> 00:00:53.890
+Il est sauvegardé tel 
+que <i>androidparty.jpg</i>.
+
+00:00:53.890 --> 00:00:58.870
+Maintenant vous pourriez faire un rappel que
+quand on a ajouté des images à XML, on
+
+00:00:58.870 --> 00:01:02.470
+dit qu'on les sauvegarderait dans un dossier 
+sur l'ordinateur appelé dossier étirable.
+
+00:01:03.490 --> 00:01:07.750
+Aussi rappelez-vous que notre app a un tas
+de fichiers et de dossiers associés avec ça,
+
+00:01:07.750 --> 00:01:10.220
+qu'on peut voir dans la structure
+répertoire sur la gauche.
+
+00:01:10.220 --> 00:01:14.310
+Ceux-ci incluent dispositions, images,
+parfois musique et ainsi de suite.
+
+00:01:14.310 --> 00:01:18.020
+Beaucoup de ces types de fichiers vont
+être logé dans le répertoire res,
+
+00:01:18.020 --> 00:01:20.100
+qui est à court pour les ressources.
+
+00:01:20.100 --> 00:01:23.210
+Le répertoire res contient des
+sous-répertoires pour toute l'image,
+
+00:01:23.210 --> 00:01:26.440
+texte, disposition et
+autres ressources requis pour l'app.
+
+00:01:26.440 --> 00:01:30.100
+Et comme on a dit, pour les images,
+il y a ce dossier appelé étirable.
+
+00:01:30.100 --> 00:01:33.500
+Pour cette app, toutes les images devraient 
+être placées dans le dossier étirable.
+
+00:01:34.750 --> 00:01:36.740
+Une fois qu'on a mis l'image
+dans le dossier étirable,
+
+00:01:38.290 --> 00:01:40.740
+vous pouvez utiliser l'attribut
+source pour une vue image,
+
+00:01:40.740 --> 00:01:46.160
+et lui donner la valeur <i>@drawable</i> et
+puis le nom de l'image.
+
+00:01:46.160 --> 00:01:49.090
+Notez que, quand vous écrivez le nom de
+l'image vous n'avez pas be besoin d'ajouter
+
+00:01:49.090 --> 00:01:50.710
+l'extension du fichier.
+
+00:01:50.710 --> 00:01:53.460
+Ok, donc maintenant je vais vous montrer
+comment on met une image dans
+
+00:01:53.460 --> 00:01:54.850
+le dossier étirable.
+
+00:01:54.850 --> 00:01:57.260
+Ok.Cette image est dans
+les notes de l'instructeur.
+
+00:01:57.260 --> 00:01:59.530
+Avancez et
+téléchargez-la à votre bureau.
+
+00:01:59.530 --> 00:02:02.150
+Après, je veux que vous 
+ouvriez Android Studio.
+
+00:02:02.150 --> 00:02:06.300
+Dans Android Studio, vous pouvez allez ici
+et faire un clic droit sur le dossier étirable.
+
+00:02:06.300 --> 00:02:10.133
+De là, vous devriez voir quelque chose
+qui dit dans le finder ou
+
+00:02:10.133 --> 00:02:11.155
+dans l'explorer.
+
+00:02:12.285 --> 00:02:14.615
+Ici je peux voir 
+le Dossier Étirable.
+
+00:02:14.615 --> 00:02:18.055
+Donc maintenant Je vais déplacer
+l'<i>androidparty.jpg</i>
+
+00:02:18.055 --> 00:02:21.665
+dans le dossier étirable et je vais 
+juste faire ça en la glissant dedans.
+
+00:02:21.665 --> 00:02:24.335
+Ok donc assurez-vous de commencer
+avec le code XML correct.
+
+00:02:24.335 --> 00:02:27.595
+Et si vous n'avez pas le code XML correct,
+vous pouvez avancer, le-copiez et
+
+00:02:27.595 --> 00:02:29.830
+le-collez des notes 
+de l'instructeurs.
+
+00:02:29.830 --> 00:02:32.667
+Bien, en tout premier,
+téléchargez <i>androidparty.jpg</i>.
+
+00:02:32.667 --> 00:02:36.900
+Puis prenez <i>androidparty.jpg</i> et
+déplacez-la dans le dossier étirable.
+
+00:02:36.900 --> 00:02:39.560
+Une fois que c'est fait, avancez et
+ajoutez le <i>TextView</i> qui dit,
+
+00:02:39.560 --> 00:02:40.700
+à partir et puis votre nom.
+
+00:02:40.700 --> 00:02:45.510
+Et après ça, ajoutez l'<i>ImageView</i> avec
+l'attribut source comme parti Android.
+
+00:02:45.510 --> 00:02:47.260
+Il y a en fait beaucoup 
+de <i>padding</i> par défaut
+
+00:02:47.260 --> 00:02:48.770
+dans le code avec 
+quoi vous travaillez.
+
+00:02:48.770 --> 00:02:50.670
+Alors vous pouvez avancer et les 
+effacer.
+
+00:02:50.670 --> 00:02:52.610
+Que veux-je dire par 
+<i>padding</i> par défaut?
+
+00:02:52.610 --> 00:02:55.240
+Bien, c'est ce <i>paddingBottom,
+paddingLeft, paddingRight</i> et
+
+00:02:55.240 --> 00:02:56.600
+<i>paddingTop</i>.
+
+00:02:56.600 --> 00:03:02.070
+Vous pouvez avancer 
+et le-supprimez juste.
+
+00:03:02.070 --> 00:03:04.470
+Finalement, cliquez la flèche verte
+pour exécuter l'app sur votre téléphone.
+
+00:03:04.470 --> 00:03:09.160
+Quand vous avez fini toutes ces étapes,
+votre app devrait ressembler à ça.
+
+00:03:09.160 --> 00:03:11.800
+Notez que c'est un peu difficile
+à voir sur cet écran, mais
+
+00:03:11.800 --> 00:03:14.010
+les vues texte est en 
+fait en chevauchement.
+
+00:03:14.010 --> 00:03:16.560
+C'est complètement normal et quelque chose
+que nous allons faire face à la prochaine.
+
