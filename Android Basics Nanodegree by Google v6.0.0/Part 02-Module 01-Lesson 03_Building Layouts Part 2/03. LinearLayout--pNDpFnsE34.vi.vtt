@@ -1,0 +1,318 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.330 --> 00:00:03.090
+Được rồi, chúng ta đã thấy
+layout tuyến tính này có
+
+00:00:03.090 --> 00:00:05.270
+hai text view con bên trong nó.
+
+00:00:05.270 --> 00:00:08.480
+Bằng cách này, những màu nền
+chỉ là công cụ hướng dẫn để giúp bạn
+
+00:00:08.480 --> 00:00:13.210
+hiểu rằng hai text view con
+này nằm trong view gốc.
+
+00:00:13.210 --> 00:00:15.940
+Các màu đỏ và xanh thực ra
+sẽ không hiển thị trên thiết bị
+
+00:00:15.940 --> 00:00:20.100
+trừ khi bạn cài đặt chúng
+thành màu nền của các view này.
+
+00:00:20.100 --> 00:00:23.110
+Để bạn hiểu được ý của tôi,
+ta hãy chuyển sang XML Visualizer.
+
+00:00:23.110 --> 00:00:25.270
+Nếu ta ngẫu nhiên nhâp code
+đến XML Visualizer,
+
+00:00:25.270 --> 00:00:27.570
+nó sẽ trông như thế này
+trên màn hình thiết bị.
+
+00:00:27.570 --> 00:00:30.150
+Vậy, đầu tiên chúng ta có
+một nhóm view LinearLayout,
+
+00:00:30.150 --> 00:00:33.850
+và nó trong suốt 
+vì không cài đặt màu nền.
+
+00:00:33.850 --> 00:00:36.680
+View con đầu tiên là một TextView
+có danh sách khách mời,
+
+00:00:36.680 --> 00:00:38.780
+để chiếu ở phía trên đây.
+
+00:00:38.780 --> 00:00:41.580
+View con thứ hai là một TextView
+ghi chữ Kunal
+
+00:00:41.580 --> 00:00:44.020
+xuất hiện dưới TextView đầu tiên.
+
+00:00:44.020 --> 00:00:47.540
+Bây giờ, nếu tôi sao chép TextView này 
+và dán nó bên dưới cái này,
+
+00:00:47.540 --> 00:00:49.760
+Bạn nghĩ chuyện gì sẽ xảy ra?
+
+00:00:49.760 --> 00:00:53.900
+Vâng, chúng tôi có một Kunal khác
+xuất hiện ngay bên dưới cái đầu tiên.
+
+00:00:53.900 --> 00:00:57.340
+Được rồi, vậy mô hình có vẻ như sẽ là
+nếu chúng ta thêm nhiều TextViews,
+
+00:00:57.340 --> 00:01:01.570
+ở đây, sau đó chúng sẽ hiển thị nối tiếp 
+các textview khác trong danh sách này.
+
+00:01:01.570 --> 00:01:03.570
+Bây giờ chúng ta hãy nhìn vào code kĩ hơn.
+
+00:01:03.570 --> 00:01:05.655
+Nó bắt đầu bằng việc mở một dấu ngoặc
+
+00:01:05.655 --> 00:01:08.230
+và sau đó là tên view, LinearLayout.
+
+00:01:08.230 --> 00:01:12.260
+Nó sẽ liệt kê một loạt các thuộc tính 
+và sau đó là dấu ngoặc đóng.
+
+00:01:12.260 --> 00:01:15.220
+Chú ý rằng không có dấu gạch chéo
+vì đây chỉ là thẻ đầu tiên
+
+00:01:15.220 --> 00:01:16.910
+của LinearLayout.
+
+00:01:16.910 --> 00:01:19.790
+Thẻ đóng là nằm ở dưới đây, 
+bởi vì chúng tôi.
+
+00:01:19.790 --> 00:01:24.470
+muốn chèn view con
+giữa thẻ mở và thẻ đóng.
+
+00:01:24.470 --> 00:01:28.430
+Nhưng ví dụ đối với view thử nghiệm này,
+vì không có view con trong đó,
+
+00:01:28.430 --> 00:01:31.330
+nên chúng ta chỉ có thể sử dụng
+một thẻ tự đóng cho nó
+
+00:01:31.330 --> 00:01:35.330
+Tương tự cho với text view ở đây,
+và ở đây nữa.
+
+00:01:35.330 --> 00:01:38.410
+Vì vậy, khi chúng ta muốn một nhóm view
+gồm các view con,
+
+00:01:38.410 --> 00:01:42.850
+thì chúng ta cần phải chèn view con
+vào giữa thẻ mở và thẻ đóng.
+
+00:01:42.850 --> 00:01:45.900
+Bây giờ, một điều khác bạn có thể 
+nhận thấy là thuộc tính được gọi là
+
+00:01:45.900 --> 00:01:48.670
+định hướng Android này
+theo chiều dọc.
+
+00:01:48.670 --> 00:01:50.330
+Ta chưa từng nhìn thấy điều này,
+
+00:01:50.330 --> 00:01:53.910
+vậy hãy nhìn vào những tài liệu 
+hướng dẫn Android như tôi đã chỉ cho bạn.
+
+00:01:54.680 --> 00:01:59.075
+Tôi mở một cửa sổ trình duyệt mới, 
+và Sau đó gõ android orientation.
+
+00:01:59.075 --> 00:02:01.735
+Kết quả đầu tiên là về
+một LinearLayout,
+
+00:02:01.735 --> 00:02:03.555
+và nó ở trang developer.android.com.
+
+00:02:03.555 --> 00:02:04.495
+Hãy click vào nó.
+
+00:02:04.495 --> 00:02:07.685
+Cũng giống như tài liệu TextView,
+tài liệu về orientation rất nhiều.
+
+00:02:07.685 --> 00:02:09.935
+Chúng ta có thể bỏ qua 
+hầu hết các văn bản này.
+
+00:02:09.935 --> 00:02:13.610
+Ta chỉ cần xác minh 
+đây chính là trang cho LinearLayout,
+
+00:02:13.610 --> 00:02:16.150
+sau đó ta kéo xuống 
+và nhìn vào các thuộc tính XML.
+
+00:02:17.210 --> 00:02:21.790
+Bây giờ, ta đang tìm kiếm thuộc tính
+được gọi là định hướng Android,
+
+00:02:21.790 --> 00:02:22.520
+và nó đây rồi.
+
+00:02:22.520 --> 00:02:24.390
+Hãy nhấp vào nó để xem thêm chi tiết.
+
+00:02:25.390 --> 00:02:27.960
+Các mô tả nói rằng thuộc tính này
+
+00:02:27.960 --> 00:02:31.660
+quyết định việc layout
+sẽ một cột hay một hàng.
+
+00:02:31.660 --> 00:02:34.560
+Giá trị của thuộc tính này
+sẽ nằm ngang với hàng,
+
+00:02:34.560 --> 00:02:37.330
+trong đó giá trị sẽ thẳng đứng với cột.
+
+00:02:37.330 --> 00:02:40.480
+Và sau đó nó sẽ liệt kê hai giá trị ở đây.
+
+00:02:40.480 --> 00:02:45.530
+Tuyệt, vậy code của chúng ta hiện nay 
+nói rằng định hướng android là thẳng đứng.
+
+00:02:45.530 --> 00:02:49.410
+Vậy điều này giải thích tại sao các view
+được hiển thị theo cột.
+
+00:02:49.410 --> 00:02:53.950
+Giờ để thỏa mãn sự tò mò của chúng ta,
+hãy thử các giá trị khác.
+
+00:02:53.950 --> 00:02:57.960
+Hãy thiết lập định hướng
+nằm ngang và xem chuyện gì sẽ xảy ra.
+
+00:02:57.960 --> 00:03:01.210
+Tôi sẽ đi vào các dòng code và
+xóa các giá trị theo chiều dọc.
+
+00:03:01.210 --> 00:03:05.110
+Tôi sẽ gõ horizontal, và nhìn này,
+giờ các view làm thành một hàng ngang.
+
+00:03:05.160 --> 00:03:06.810
+Tôi không biết bạn như thế nào,
+
+00:03:06.810 --> 00:03:09.920
+nhưng tôi không thích đọc 
+danh sách khách mời theo chiều ngang.
+
+00:03:09.920 --> 00:03:12.000
+Nhưng vẫn có nhiều trường hợp có ích khác
+
+00:03:12.000 --> 00:03:15.040
+khi bạn có layout tuyến tính ngang.
+
+00:03:15.040 --> 00:03:18.330
+Ví dụ, nếu bạn đang tạo một danh mục,
+có thể bạn muốn một hình ảnh
+
+00:03:18.330 --> 00:03:21.190
+nằm ở phía bên tay trái, 
+và một mô tả ở phía bên tay phải.
+
+00:03:21.190 --> 00:03:25.200
+Tôi sẽ để cho bạn tự thử nghiệm
+trong một giây,
+
+00:03:25.200 --> 00:03:28.210
+nhưng đầu tiên tôi muốn chỉ ra
+thêm dòng mã này.
+
+00:03:28.210 --> 00:03:31.260
+Đây là tên khai báo không gian XML.
+
+00:03:31.260 --> 00:03:36.020
+Ta sử dụng tên không gian này 
+để xác định rằng tất cả các thuộc tính
+
+00:03:36.020 --> 00:03:38.200
+ở đây thuộc về android.
+
+00:03:38.200 --> 00:03:40.940
+Đó là lý do tại sao chúng bắt đầu
+bằng android:.
+
+00:03:40.940 --> 00:03:45.260
+Đây là liên kết rút gọn 
+cho URL cụ thể duy nhất với android.
+
+00:03:45.260 --> 00:03:48.390
+Bạn thực sự có thể tạo ra
+các thuộc tính tùy chỉnh của riêng bạn.
+
+00:03:48.390 --> 00:03:52.840
+Để ngăn chặn xung đột về tên, 
+nơi hai thuộc tính được đặt cùng một tên.
+
+00:03:52.840 --> 00:03:57.595
+nhưng thực sự có hành vi khác nhau,
+chúng ta luôn luôn thêm tiền tố này ở đây,
+
+00:03:57.595 --> 00:04:02.430
+android:, để biểu thị rằng
+đây là những thuộc tính android.
+
+00:04:02.430 --> 00:04:06.970
+Vì vậy, về cơ bản, hãy nhớ
+thêm tên khai báo không gian XML
+
+00:04:06.970 --> 00:04:10.110
+trong thẻ mở của view gốc
+xem các tập tin XML của bạn.
+
+00:04:11.710 --> 00:04:12.910
+Bây giờ đến lượt bạn.
+
+00:04:12.910 --> 00:04:16.860
+Chúng tôi muốn bạn có thể thử nghiệm
+với code layout tuyến tính bây giờ.
+
+00:04:16.860 --> 00:04:19.690
+Thử thêm nhiều TextViews vậy
+có tiết mục trong cột này..
+
+00:04:19.690 --> 00:04:23.150
+Bạn sẽ đặt ai trong danh sách 
+khách mời độc quyền cho bữa tiệc của bạn?
+
+00:04:24.500 --> 00:04:28.130
+Cũng hãy thử thay đổi thuộc tính
+định hướng layout tuyến tính.
+
+00:04:28.130 --> 00:04:31.201
+Hãy nhớ rằng nó có thể được thiết lập
+theo chiều dọc hoặc ngang.
+

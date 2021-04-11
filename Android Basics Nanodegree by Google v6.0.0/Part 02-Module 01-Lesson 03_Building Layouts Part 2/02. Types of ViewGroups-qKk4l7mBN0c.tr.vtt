@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.430 --> 00:00:04.712
+Evet, harika, artık ViewGroup'ların
+nasıl görüntü içerdiğini biliyoruz.
+
+00:00:04.712 --> 00:00:08.050
+Her ViewGroup'da içindeki child'ları
+nasıl konumlandıracağıyla ilgili
+
+00:00:08.050 --> 00:00:09.270
+belirli kuralları var.
+
+00:00:09.270 --> 00:00:11.292
+İlk olarak LinearLayout'a bakalım.
+
+00:00:11.292 --> 00:00:15.120
+Bu ViewGroup child'ları
+bunun gibi dikey sütunda sıralayabilir.
+
+00:00:17.310 --> 00:00:20.990
+Sadece bir TextView ve bir ImageView
+ile sınırlı olmadığımıza dikkat edin.
+
+00:00:20.990 --> 00:00:25.200
+Diğer görüntü türleri de dahil
+istediğimiz kadar koyabiliriz.
+
+00:00:25.200 --> 00:00:27.220
+Bu Tommy ve bu kardeşi Timmy.
+
+00:00:27.220 --> 00:00:30.426
+Bu da Ivy ve ikiz kardeşi Irene.
+
+00:00:30.426 --> 00:00:35.780
+Veya LinearLayout alt
+görüntüleri yatayda sıralayabilir.
+
+00:00:35.780 --> 00:00:36.410
+İşte böyle.
+
+00:00:38.400 --> 00:00:41.140
+Erkekler olmasın derseniz, bana uyar.
+
+00:00:42.240 --> 00:00:45.140
+Bu Ivy, Irene ve Isabella.
+
+00:00:45.140 --> 00:00:47.630
+Tamam, bu LinearLayout için bu kadar.
+
+00:00:47.630 --> 00:00:48.880
+Oldukça anlaşılır, değil mi?
+
+00:00:48.880 --> 00:00:52.225
+Alt öğeleri dikey veya yatayda
+sıralayabilirsiniz.
+
+00:00:52.225 --> 00:00:54.847
+Ve sonra bir babamız var,
+RelativeLayout.
+
+00:00:54.847 --> 00:00:55.985
+RelativeLayout, tekrar edersek,
+
+00:00:55.985 --> 00:00:58.575
+kendi içinde child'larını konumlandırırken
+belli kurallara bağlıdır.
+
+00:00:59.575 --> 00:01:03.545
+Örneğin, alt öğeyi üst öğeye göre
+konumlandırabilir.
+
+00:01:03.545 --> 00:01:05.455
+Yani eğer bu üst ViewGroup ise,
+
+00:01:05.455 --> 00:01:09.040
+bir alt TextView'i üst öğenin
+sonuna hizalayabilir ve
+
+00:01:09.040 --> 00:01:12.270
+bir alt ImageView'i de üst öğenin
+üstüne hizalayabiliriz.
+
+00:01:12.270 --> 00:01:14.380
+Bu ayrıca üst öğenin sol ve
+sağ kenarlarının yanında
+
+00:01:14.380 --> 00:01:16.390
+ortasını hizalamak için de kullanılır.
+
+00:01:17.330 --> 00:01:19.870
+RelativeLayout'un kullanışlı olduğu
+diğer bir konu da
+
+00:01:19.870 --> 00:01:23.531
+alt öğeleri diğer alt öğelere göre
+konumlandırabilmenizdir.
+
+00:01:23.531 --> 00:01:25.960
+Yani, eğer bu üst ViewGroup ise,
+
+00:01:25.960 --> 00:01:30.310
+bir ImageView'ı üstün solunda ve
+
+00:01:30.310 --> 00:01:33.760
+alt bir TextView'i o resmin sağında
+konumlandırabilirsiniz.
+
+00:01:33.760 --> 00:01:37.780
+Ve sonra, bu alt TextView
+ImageView'in sağında
+
+00:01:37.780 --> 00:01:40.680
+ve ayrıca ilk TextView'in altında
+konumlanmış olur.
+
+00:01:40.680 --> 00:01:44.690
+Evet, alt görünümlerin üste veya
+kendilerine göre nasıl
+
+00:01:44.690 --> 00:01:46.530
+hizalandıklarını gördünüz.
+
+00:01:47.210 --> 00:01:50.990
+LinearLayout ve RelativeLayout
+farklarına hızlıca bir göz atmış olduk.
+
+00:01:50.990 --> 00:01:53.870
+Uygulamanız için istediğiniz tasarıma
+göre bunlardan birini
+
+00:01:53.870 --> 00:01:55.620
+nasıl seçeceğinizi görebilirsiniz.
+
+00:01:56.640 --> 00:02:00.190
+Şimdi bir ViewGroup'un diğer görünümleri
+nasıl içerdiğini görmek için XML'e bakalım.
+
+00:02:01.330 --> 00:02:02.050
+Bu örnekte,
+
+00:02:02.050 --> 00:02:06.060
+iki alt TextView içeren bir
+ViewGroup ile başlayacağız.
+
+00:02:07.200 --> 00:02:09.300
+Alışık olduğumuzda daha fazla
+kod var fakat
+
+00:02:09.300 --> 00:02:12.350
+bu kodla ilgili biraz gözlem
+yapmak istiyorum.
+
+00:02:12.350 --> 00:02:17.370
+İpucu olarak, üst kod kırmızı
+ve alt TextView kodu mavi renkte.
+
+00:02:17.370 --> 00:02:20.030
+Bakmanız için kodun linkini
+aşağıda verdik.
+
+00:02:20.030 --> 00:02:22.010
+Sonrasında buraya üç gözleminizi yazın.
+

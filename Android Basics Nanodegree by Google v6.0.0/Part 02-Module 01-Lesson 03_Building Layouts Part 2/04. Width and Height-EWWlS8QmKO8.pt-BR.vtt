@@ -1,0 +1,345 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.300 --> 00:00:02.264
+Estamos fazendo a
+lista de convidados da festa.
+
+00:00:02.670 --> 00:00:04.996
+Esta é a lista de convidados para
+a festa de aniversário?
+
+00:00:05.040 --> 00:00:06.092
+- Certo, Katherine?
+- Sim.
+
+00:00:06.664 --> 00:00:08.100
+Espero que eu esteja nesta lista.
+
+00:00:09.140 --> 00:00:10.470
+Bem, precisamos ver isso.
+
+00:00:10.855 --> 00:00:13.206
+Puxa, eu me sinto bem pequeno agora.
+
+00:00:13.870 --> 00:00:15.021
+Bem, falando sobre pequeno,
+
+00:00:15.209 --> 00:00:17.575
+Vamos falar sobre tamanho
+de <i>views</i> em uma tela.
+
+00:00:18.010 --> 00:00:20.000
+Nós usámos a altura escrita fixa.
+
+00:00:20.036 --> 00:00:22.849
+- Que é o dp, certo?
+- Sim, a largura e a altura.
+
+00:00:22.898 --> 00:00:24.430
+- Muito bem.
+- E poderíamos também
+
+00:00:24.440 --> 00:00:25.575
+definir <i>wrap_content</i> na <i>view</i>.
+
+00:00:25.636 --> 00:00:27.660
+Que é uma forma estranha de dizer
+
+00:00:27.686 --> 00:00:29.667
+que a <i>view</i> irá se modelar
+em torno do conteúdo.
+
+00:00:29.667 --> 00:00:31.390
+O conteúdo cresce, 
+a <i>view</i> também cresce.
+
+00:00:31.433 --> 00:00:32.707
+O conteúdo diminui,
+a <i>view</i>....
+
+00:00:32.873 --> 00:00:35.760
+Sim, tem também um terceiro,
+chamado de <i>match_parent</i>.
+
+00:00:36.621 --> 00:00:37.741
+Isso soa um pouco estranho.
+
+00:00:37.930 --> 00:00:41.563
+Soa a site amoroso para pais solteiros.
+
+00:00:41.840 --> 00:00:42.480
+Não é bem assim.
+
+00:00:42.600 --> 00:00:47.370
+<i>match_parent</i> significa que a <i>view</i> será
+tão larga ou tão alta quanto o pai.
+
+00:00:47.370 --> 00:00:48.446
+Isso faz sentido.
+
+00:00:48.440 --> 00:00:49.901
+Eu sou uma <i>view</i>, tenho um pai,
+
+00:00:50.270 --> 00:00:53.280
+e minha largura e altura
+serão como as de meu pai.
+
+00:00:53.840 --> 00:00:55.581
+- Ok.
+- Exato, resumindo,
+
+00:00:55.920 --> 00:00:59.433
+os diferentes valores que pode definir
+no tamanho de uma <i>view</i> são:
+
+00:00:59.800 --> 00:01:01.144
+<i>dp</i> fixo para a largura e altura.
+
+00:01:01.140 --> 00:01:03.209
+- Correto.
+- Também pode usar <i>wrap_content</i>.
+
+00:01:03.378 --> 00:01:05.710
+E o próximo que nós vamos
+experimentar... <i>match_parent</i>.
+
+00:01:06.780 --> 00:01:10.086
+Aqui estão alguns exemplos de como
+<i>views</i> filhas de diferentes larguras
+
+00:01:10.116 --> 00:01:13.126
+em um <i>LinearLayout</i> podem afetar a UI final.
+
+00:01:13.753 --> 00:01:18.332
+Neste exemplo, definimos cada <i>view</i> filha
+para ter uma largura fixa de 200 dp.
+
+00:01:19.052 --> 00:01:22.338
+Se o conteúdo de cada <i>view</i>
+for&nbsp;maior que 200 dp,
+
+00:01:22.609 --> 00:01:25.403
+então você corre risco de cortar
+algum conteúdo como este.
+
+00:01:26.301 --> 00:01:30.460
+Neste exemplo, definimos a largura de cada 
+<i>view</i> filha para <i>wrap_content</i>.
+
+00:01:31.587 --> 00:01:33.187
+Agora todo o conteúdo é mostrado,
+
+00:01:33.403 --> 00:01:36.978
+mas a largura de cada <i>view</i> realmente varia
+conforme o conteúdo de cada uma.
+
+00:01:38.055 --> 00:01:41.520
+Neste exemplo, definimos a largura de cada
+<i>view</i> filha para <i>match_parent</i>.
+
+00:01:41.987 --> 00:01:46.172
+Agora pode ver que a largura de cada&nbsp;filha
+é tão larga quanto o <i>ViewGroup</i> pai,
+
+00:01:46.650 --> 00:01:48.689
+independentemente de seu conteúdo.
+
+00:01:49.673 --> 00:01:53.243
+Esses mesmos valores também podem
+ser aplicados à altura de cada <i>view</i>.
+
+00:01:54.036 --> 00:01:58.596
+Neste exemplo, definimos a altura
+<i>da</i> TextView filha para 200 dp.
+
+00:01:59.224 --> 00:02:01.218
+Se o conteúdo for mais alto que isso,
+
+00:02:01.593 --> 00:02:04.270
+então corre risco de cortar 
+parte do conteúdo.
+
+00:02:05.353 --> 00:02:09.261
+Neste exemplo, definimos a altura 
+da <i>TextView</i> filha para <i>wrap_content</i>.
+
+00:02:09.931 --> 00:02:12.000
+Desse modo, todo o conteúdo
+será exibido na tela
+
+00:02:12.024 --> 00:02:15.046
+e nada será cortado porque o tamanho da <i>TextView</i>
+
+00:02:15.070 --> 00:02:16.950
+é dependente de seu conteúdo.
+
+00:02:17.889 --> 00:02:22.061
+Neste exemplo, definimos a altura da
+TextView filha para ser <i>match_parent</i>.
+
+00:02:22.790 --> 00:02:25.070
+Desse modo, a <i>view</i> filha será
+tão&nbsp;alta quanto o pai,
+
+00:02:25.323 --> 00:02:26.830
+independentemente de seu conteúdo.
+
+00:02:27.710 --> 00:02:29.600
+Vamos abrir agora o visualizador XML
+
+00:02:29.870 --> 00:02:32.670
+e entar ser mais como nossos pais, no código.
+
+00:02:32.972 --> 00:02:36.443
+Estamos fornecendo um link para o
+visualizador XML e algum código inicial
+
+00:02:36.658 --> 00:02:37.970
+nas notas do instrutor abaixo.
+
+00:02:39.027 --> 00:02:41.300
+Neste caso, o <i>LinearLayout</i> é a <i>view</i> raiz
+
+00:02:41.556 --> 00:02:44.504
+porque é a primeira <i>view</i> e a mais exterior.
+
+00:02:45.556 --> 00:02:48.760
+Se definirmos a largura e a altura
+desta <i>view</i> raiz como match_parent<i>,</i>
+
+00:02:49.273 --> 00:02:51.476
+e definirmos este como o principal
+layout do nosso app,
+
+00:02:51.895 --> 00:02:55.513
+então o <i>LinearLayout</i> aqui será tão alto e
+largo quanto a tela do dispositivo.
+
+00:02:56.824 --> 00:03:00.300
+Posso mostrar isso definindo
+o fundo do <i>LinearLayout</i>
+
+00:03:00.320 --> 00:03:03.507
+para uma cor não transparente.
+
+00:03:04.369 --> 00:03:06.756
+Se eu definir a cor cinza para
+o fundo deste <i>LinearLayout</i>
+
+00:03:06.990 --> 00:03:10.996
+então poderá ver como a cor cinza se estende
+a toda a largura e altura do dispositivo.
+
+00:03:11.655 --> 00:03:13.740
+O que acontece se eu
+tentar mudar a largura e altura
+
+00:03:13.753 --> 00:03:15.556
+destas <i>TextViews</i> para <i>match_parent</i>?
+
+00:03:16.006 --> 00:03:18.215
+Para deixar clara a delimitação de cada <i>view</i>,
+
+00:03:18.450 --> 00:03:20.732
+Vou definir uma cor de fundo
+para cada uma das <i>views</i>.
+
+00:03:21.470 --> 00:03:24.775
+Agora vou mudar a altura desta
+<i>TextView</i> para ser <i>match_parent</i>.
+
+00:03:25.643 --> 00:03:27.636
+A propósito, escreve-se "match_parent".
+
+00:03:28.283 --> 00:03:31.920
+Agora você pode ver que esta
+<i>TextView</i> ocupa toda a altura do pai.
+
+00:03:32.504 --> 00:03:34.849
+Infelizmente empurra tudo o&nbsp;resto 
+para fora da tela,
+
+00:03:35.267 --> 00:03:36.580
+e realmente nós não queremos isso.
+
+00:03:36.580 --> 00:03:38.430
+Então vamos mudar de volta para <i>wrap_content</i>.
+
+00:03:39.292 --> 00:03:42.750
+Feito, agora vamos mudar a largura para
+<i>match_parent</i> e ver o que faz.
+
+00:03:43.741 --> 00:03:47.360
+Agora a TextView é tão larga quanto o pai,
+
+00:03:47.772 --> 00:03:50.356
+que, por sua vez, é tão largo
+quanto a tela do dispositivo.
+
+00:03:51.710 --> 00:03:54.630
+Se eu também mudar as outras
+<i>TextViews</i> para <i>match_parent</i>,
+
+00:03:54.972 --> 00:03:58.646
+pode ver que também começam
+a ocupar toda a largura do pai.
+
+00:03:59.563 --> 00:04:01.070
+Gostaria de fazer mais uma observação.
+
+00:04:01.692 --> 00:04:04.424
+Cada vez que você vê um atributo
+que comece por <i>layout_</i>,
+
+00:04:04.726 --> 00:04:06.369
+como <i>layout_height</i> ou <i>layout_width</i>,
+
+00:04:07.033 --> 00:04:09.372
+na verdade está vendo parâmetros
+de layout de <i>ViewGroups</i>.
+
+00:04:10.092 --> 00:04:15.020
+Estes são usados pelo <i>ViewGroup</i> pai para
+determinar o tamanho e a posição destas <i>views</i>.
+
+00:04:16.190 --> 00:04:19.446
+Enquanto isso, os outros atributos como
+fundo, tamanho de texto, texto,
+
+00:04:19.728 --> 00:04:23.021
+são tratados pela <i>TextView</i>
+para estilizar sua própria <i>view</i>.
+
+00:04:23.643 --> 00:04:26.646
+Mas estes parâmetros de layout
+do <i>ViewGroup</i> são tratados pelo pai.
+
+00:04:27.335 --> 00:04:29.723
+Agora é sua vez de tentar
+outros valores de largura e altura.
+
+00:04:30.460 --> 00:04:33.544
+Para o link do visualizador XML
+com código inicial,
+
+00:04:33.864 --> 00:04:35.200
+ver as notas do instrutor abaixo.
+
+00:04:35.796 --> 00:04:38.418
+Tente mudar a largura e
+altura de cada <i>TextView</i>.
+
+00:04:38.970 --> 00:04:42.529
+Pode definir um valor <i>dp</i> fixo,
+<i>wrap_content</i> ou <i>match_parent</i>.
+
+00:04:43.280 --> 00:04:46.258
+Os valores de largura e altura não 
+precisam ser iguais para cada <i>view</i>,
+
+00:04:46.744 --> 00:04:48.850
+Quando terminar,
+marque esta caixa para continuar.
+

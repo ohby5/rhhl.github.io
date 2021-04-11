@@ -1,0 +1,409 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.370 --> 00:00:01.260
+Mari kita telaah.
+
+00:00:01.260 --> 00:00:06.050
+Sejauh ini kita belajar, LinearLayout bisa
+punya orientasi horizontal atau vertikal.
+
+00:00:06.760 --> 00:00:08.430
+Tapi mari pikirkan apa tampilan ini
+
+00:00:08.430 --> 00:00:11.240
+bermanfaat penuh pada
+&lt;i&gt;real estate&lt;/i&gt; layar.
+
+00:00:11.240 --> 00:00:14.390
+Ketika saya bilang &lt;i&gt;real estate&lt;/i&gt;,
+maksudnya ruang kosong pada layar.
+
+00:00:14.930 --> 00:00:16.490
+Pada ponsel Nexus 6,
+
+00:00:16.490 --> 00:00:20.740
+katakan kita punya LinearLayout vertikal
+dan tiga TextView anak di dalamnya,
+
+00:00:20.740 --> 00:00:22.420
+Tom, Tim, dan Todd.
+
+00:00:22.420 --> 00:00:25.500
+Ketika kita menggenggamnya
+berdiri seperti ini di tangan kita,
+
+00:00:25.500 --> 00:00:28.470
+maka semua TextView mengumpul
+di pojok kiri atas layar.
+
+00:00:29.380 --> 00:00:32.320
+Ada sejumlah ruang kosong tak terpakai.
+
+00:00:32.320 --> 00:00:35.480
+Sama juga, ketika kita
+memutar perangkat menjadi tidur.
+
+00:00:35.480 --> 00:00:40.050
+Maka teksnya mengumpul di pojok kiri atas
+dan ada sejumlah ruang kosong.
+
+00:00:40.050 --> 00:00:42.110
+Ini lebih jelas lagi
+pada perangkat tablet,
+
+00:00:42.110 --> 00:00:44.260
+di mana layarnya jauh lebih besar.
+
+00:00:44.260 --> 00:00:48.230
+Kita hanya menggunakan
+sedikit ruang layar dan sisanya kosong.
+
+00:00:49.060 --> 00:00:51.680
+Kita akan belajar cara
+menyebar tampilan secara merata
+
+00:00:51.680 --> 00:00:55.190
+pada layar untuk
+memanfaatkan ruang kosong.
+
+00:00:55.190 --> 00:00:57.070
+Ini berlaku juga pada tampilan lain.
+
+00:00:57.070 --> 00:01:00.640
+Gambar yang sebesar layar menciptakan
+pengalaman yang lebih baik,
+
+00:01:00.640 --> 00:01:03.460
+alih-alih kecil di pojok kiri atas.
+
+00:01:04.299 --> 00:01:05.230
+Juga dengan tombol,
+
+00:01:05.230 --> 00:01:09.785
+Anda bisa punya tombol yang lebih besar
+sehingga lebih mudah ditekan.
+
+00:01:09.785 --> 00:01:13.155
+Untuk contoh, kita akan tetap
+menggunakan TextView.
+
+00:01:13.155 --> 00:01:15.635
+Mari buka XML Visualizer
+untuk mencari tahu
+
+00:01:15.635 --> 00:01:17.305
+cara menyebar tampilan ini.
+
+00:01:18.115 --> 00:01:20.725
+Inilah kode untuk Tom, Tim, dan Todd.
+
+00:01:21.065 --> 00:01:23.975
+Saya punya tiga TextView
+di dalam LinearLayout vertikal
+
+00:01:23.975 --> 00:01:25.839
+dan inilah kelihatannya pada perangkat.
+
+00:01:26.350 --> 00:01:29.810
+Nah, saya ingin tunjukkan bagaimana
+Anda bisa menyebar tiga TextView ini.
+
+00:01:29.810 --> 00:01:31.060
+Jadi Tom di atas sini.
+
+00:01:31.060 --> 00:01:31.980
+Tim di sini.
+
+00:01:31.980 --> 00:01:33.910
+Dan Todd di bawah sini.
+
+00:01:33.910 --> 00:01:37.900
+Jelas, mengatur tinggi menjadi
+&lt;i&gt;wrap_content&lt;/i&gt; tidak akan bisa.
+
+00:01:37.900 --> 00:01:41.420
+Hal lain yang kita pelajari adalah
+mengatur nilai dp tetap untuk tingginya.
+
+00:01:41.420 --> 00:01:45.140
+Jadi saya akan atur tingginya
+menjadi, misalnya 200dp.
+
+00:01:45.760 --> 00:01:48.340
+Bagus. Itu menyisakan
+ruang lebih untuk Tom.
+
+00:01:48.340 --> 00:01:51.320
+Jika saya melakukan hal yang sama
+untuk TextView lainnya,
+
+00:01:51.320 --> 00:01:54.570
+maka mereka juga akan
+menyebar merata sepanjang layar.
+
+00:01:54.570 --> 00:01:57.920
+Tapi solusi ini cuma bisa
+untuk sisi samping perangkat.
+
+00:01:57.920 --> 00:02:00.350
+Jika saya punya tablet seperti yang tadi,
+
+00:02:00.350 --> 00:02:04.640
+maka tampilan ini masih akan
+mengumpul di pojok kiri atas.
+
+00:02:04.640 --> 00:02:08.880
+Opsi lainnya untuk mengatur tinggi adalah
+&lt;i&gt;match_parent&lt;/i&gt; yang sudah kita pelajari.
+
+00:02:08.880 --> 00:02:11.750
+Ketika Anda atur &lt;i&gt;match_parent&lt;/i&gt;
+untuk TextView Tom,
+
+00:02:11.750 --> 00:02:15.540
+itu memakan tinggi penuh induknya
+yaitu seluruh layar.
+
+00:02:15.540 --> 00:02:19.230
+Itu menyingkirkan TextView lainnya
+dari layar sehingga tak terlihat.
+
+00:02:19.230 --> 00:02:20.800
+Jadi jangan lakukan itu.
+
+00:02:20.800 --> 00:02:23.200
+Sekarang kita kehabisan akal
+karena kita sudah coba
+
+00:02:23.200 --> 00:02:26.090
+&lt;i&gt;wrap_content&lt;/i&gt; untuk tingginya,
+yang punya nilai dp tetap.
+
+00:02:26.090 --> 00:02:27.510
+Kita sudah coba &lt;i&gt;match_parent&lt;/i&gt;.
+
+00:02:27.510 --> 00:02:32.930
+Tak satupun memberikan hasil tata letak
+yang baik pada berbagai perangkat.
+
+00:02:32.930 --> 00:02:36.330
+Mari kita cari di Google
+untuk solusi masalah ini.
+
+00:02:36.330 --> 00:02:38.400
+Kita memakai kelompok
+tampilan LinearLayout.
+
+00:02:38.400 --> 00:02:40.580
+Kita mau meratakan ruang
+untuk tampilan anak.
+
+00:02:40.580 --> 00:02:42.260
+Mari kita cari.
+
+00:02:42.260 --> 00:02:44.680
+Baik, ada sejumlah hasil pencarian.
+
+00:02:44.680 --> 00:02:46.920
+Tapi mari klik yang pertama.
+
+00:02:46.920 --> 00:02:49.308
+Ini adalah tautan menuju
+situs Stackoverflow.
+
+00:02:49.308 --> 00:02:51.780
+Ini situs T&amp;amp;J di mana Anda
+bisa memposting pertanyaan
+
+00:02:51.780 --> 00:02:54.125
+dan mendapat jawaban
+dari &lt;i&gt;developer&lt;/i&gt; Android lain.
+
+00:02:54.565 --> 00:02:58.005
+Saya selalu pakai saat saya buntu
+dan butuh bantuan untuk suatu masalah.
+
+00:02:58.005 --> 00:03:00.435
+Seringnya, orang lain
+sudah pernah menanyakan
+
+00:03:00.435 --> 00:03:02.005
+pertanyaan yang akan saya ajukan.
+
+00:03:02.005 --> 00:03:05.445
+Jadi pertanyaannya di sini adalah
+bagaimana menyebar tombol dengan merata
+
+00:03:05.445 --> 00:03:07.657
+sepanjang lebar LinearLayout.
+
+00:03:07.657 --> 00:03:09.677
+Yang ini serupa dengan yang kita cari.
+
+00:03:09.677 --> 00:03:12.497
+Kecuali alih-alih tombol,
+kita mengerjakan TextView.
+
+00:03:12.497 --> 00:03:14.797
+Dan alih-alih menyebar
+pada lebar LinearLayout,
+
+00:03:14.797 --> 00:03:17.767
+kita mencoba menyebarkannya
+sepanjang tingginya.
+
+00:03:17.767 --> 00:03:20.710
+Kita bisa baca dengan seksama
+atau sepintas saja.
+
+00:03:20.710 --> 00:03:23.070
+Biasanya saya baca
+jawabannya sepintas lalu.
+
+00:03:23.070 --> 00:03:27.590
+Jadi solusi ini mendapat 88 suara
+dan ada tanda centang hijau.
+
+00:03:27.590 --> 00:03:30.840
+Ini membahas bagaimana Anda bisa
+mengatur Layout_width menjadi 0dp
+
+00:03:30.840 --> 00:03:33.490
+dan mengatur Layout_weight
+untuk setiap tombol menjadi 1dp.
+
+00:03:33.970 --> 00:03:37.149
+Itu membagi lebar
+sama rata sepanjang tombol.
+
+00:03:37.910 --> 00:03:41.170
+Anda mungkin tidak sepenuhnya
+mengerti saat ini, tapi tak mengapa.
+
+00:03:41.170 --> 00:03:44.620
+Satu kunci yang kita lihat adalah
+LinearLayour_weight ini.
+
+00:03:44.620 --> 00:03:47.950
+Kita belum tahu ini sebelumnya,
+tapi sepertinya penting untuk jawaban.
+
+00:03:47.950 --> 00:03:49.610
+Jadi mari kita cari di Google
+
+00:03:49.610 --> 00:03:52.005
+untuk lebih banyak informasi
+tentang Layout_weight.
+
+00:03:52.005 --> 00:03:55.205
+Mari kita cari tentang
+LinearLayout Layout_weight.
+
+00:03:55.205 --> 00:03:57.605
+Hasil pertama adalah
+artikel mengenai LinearLayout
+
+00:03:57.605 --> 00:04:00.515
+dan ada di situs developer.android.com,
+jadi mari kita klik.
+
+00:04:01.285 --> 00:04:03.845
+Ini adalah artikel tentang LinearLayout.
+
+00:04:03.845 --> 00:04:07.785
+Kita telah mempelajari hal-hal di atas
+tentang atribut orientasi Android.
+
+00:04:07.785 --> 00:04:11.280
+Tapi kemudian ada informasi baru
+yaitu sesuatu yang bernama Layout_weight.
+
+00:04:11.280 --> 00:04:13.370
+Juga ada contoh di bagian bawah layar
+
+00:04:13.370 --> 00:04:15.470
+dengan beberapa kode dan cuplikan layar.
+
+00:04:15.470 --> 00:04:17.289
+Saya bisa rangkum semuanya untuk Anda,
+
+00:04:17.289 --> 00:04:21.260
+tapi pertama-tama saya ingin beri Anda
+kesempatan untuk membaca dokumen ini
+
+00:04:21.260 --> 00:04:23.710
+dan coba pecahkan sendiri.
+
+00:04:23.710 --> 00:04:26.180
+Ini lebih serupa dengan
+cara Anda memecahkan masalah
+
+00:04:26.180 --> 00:04:28.220
+setelah kursus ini berakhir.
+
+00:04:28.220 --> 00:04:30.450
+Anda mencari beberapa informasi daring
+
+00:04:30.450 --> 00:04:34.270
+dan coba mencari tahu bagaimana hasilnya
+bisa digunakan untuk memecahkan masalah.
+
+00:04:34.500 --> 00:04:37.340
+Baik, beginilah tata letak
+pada perangkat kita saat ini.
+
+00:04:37.340 --> 00:04:39.120
+Dan kita mau membuatnya seperti ini.
+
+00:04:39.120 --> 00:04:42.560
+Tiga teksnya menyebar merata
+sepanjang tinggi perangkatnya.
+
+00:04:42.560 --> 00:04:43.720
+Untuk memecahkannya,
+
+00:04:43.720 --> 00:04:47.000
+saya mau Anda baca artikel LinearLayout
+yang kami tautkan di bawah.
+
+00:04:47.830 --> 00:04:48.980
+Wajar sekali jika Anda
+
+00:04:48.980 --> 00:04:52.490
+tidak mengerti semua hal
+yang ada pada artikel.
+
+00:04:52.490 --> 00:04:55.390
+Seringnya, Anda hanya perlu
+mendapat sekilas pemahaman
+
+00:04:55.390 --> 00:04:59.790
+bagaimana konsep dalam artikelnya
+mungkin dapat membantu pekerjaan Anda.
+
+00:04:59.980 --> 00:05:02.270
+Lalu saya mau Anda beri
+beberapa ide bagaimana...
+
+00:05:02.270 --> 00:05:05.020
+...membuat tata letak
+yang diinginkan ini pada XML.
+
+00:05:05.020 --> 00:05:07.560
+Anda tak perlu memberikan
+seluruh kode tata letak XML,
+
+00:05:07.560 --> 00:05:10.360
+karena kita akan menjalaninya
+bersama di video selanjutnya.
+
+00:05:10.360 --> 00:05:13.343
+Tapi di sini Anda bisa tulis
+beberapa kalimat atau poin...
+
+00:05:13.343 --> 00:05:17.280
+...bagaimana informasi pada artikel
+terkait dengan masalah Anda.
+

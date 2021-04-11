@@ -1,0 +1,237 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.920 --> 00:00:04.230
+Vậy để xây dựng layout này, 
+đầu tiên tôi sẽ nghĩ khái niệm của nó
+
+00:00:04.230 --> 00:00:08.850
+để chắc chắn có một ý niệm về những gì
+sẽ phải làm trước khi tôi bắt đầu mã hóa.
+
+00:00:08.850 --> 00:00:11.750
+Đầu tiên, ta nhận thấy 
+đó là một layout tuyến tính thẳng đứng
+
+00:00:11.750 --> 00:00:13.490
+vì các mục đang ở trong một cột dọc.
+
+00:00:13.490 --> 00:00:14.680
+Ta có ba view con.
+
+00:00:14.680 --> 00:00:17.910
+Ta có một view hình ảnh,
+một view văn bản và một view văn bản.
+
+00:00:17.910 --> 00:00:21.590
+Gợi ý đầu tiên là bạn hãy xác định 
+độ rộng của mỗi view trước tiên.
+
+00:00:22.680 --> 00:00:26.130
+Vì toàn bộ layout chiếm hết chiều rộng
+và chiều dài của thiết bị,
+
+00:00:26.130 --> 00:00:30.270
+nên layout tuyến tính dọc này 
+có chiều rộng và chiều cao match_parent.
+
+00:00:30.270 --> 00:00:33.810
+Sau đó, với view ảnh, ta cũng muốn
+nó rộng như view gốc,
+
+00:00:33.810 --> 00:00:35.920
+theo đó cũng rộng như màn hình thiết bị.
+
+00:00:35.920 --> 00:00:38.170
+Nên ta thiết lập nó thành match_parent.
+
+00:00:38.170 --> 00:00:39.670
+Tương tự đối với hai textviews.
+
+00:00:39.670 --> 00:00:43.190
+Ta muốn chúng giống chiều rộng 
+của thiết bị, nên dùng match_parent.
+
+00:00:43.190 --> 00:00:45.330
+Sau đó làm việc với 
+chiều dài của từng view.
+
+00:00:45.330 --> 00:00:49.430
+Hai textviews này khá dễ dàng 
+bởi vì chúng bao trọn nội dung bên trong.
+
+00:00:49.430 --> 00:00:52.670
+Vậy chúng tôi thiết lập wrap_content
+cho chiều dài của mỗi TextView.
+
+00:00:52.670 --> 00:00:56.600
+Ta cũng thiết lập giá trị dung lượng là 0
+vì ta không muốn các giá trị này thay đổi
+
+00:00:56.600 --> 00:01:00.400
+ngay cả nếu có không gian trống 
+trong view gốc.
+
+00:01:00.400 --> 00:01:02.800
+Bây giờ ImageView là phần khó nhất.
+
+00:01:02.800 --> 00:01:06.290
+Ta muốn chiều dài của hình ảnh 
+để mở rộng hoặc thu nhỏ tùy thuộc
+
+00:01:06.290 --> 00:01:10.229
+vào không gian có sẵn trong view gốc,
+mà phụ thuộc vào kích thước màn hình.
+
+00:01:11.250 --> 00:01:13.190
+Ta dùng dung lượng để làm điều này.
+
+00:01:13.190 --> 00:01:16.180
+Chúng ta thiết lập chiều dài của view ảnh
+bắt đầu từ 0dp
+
+00:01:16.180 --> 00:01:18.160
+nhưng dung lượng lại bắt đầu từ 1.
+
+00:01:18.160 --> 00:01:20.720
+Vì không có view con nào
+có giá trị dung lượng
+
+00:01:20.720 --> 00:01:24.350
+và tất cả không gian có sẵn trong view gốc
+sẽ được chuyển cho view ảnh này.
+
+00:01:24.350 --> 00:01:27.920
+Và lý do chúng tôi thiết lập
+chiều dài là 0 dp
+
+00:01:27.920 --> 00:01:29.840
+là bởi vì nó là layout tuyến tính dọc.
+
+00:01:29.840 --> 00:01:32.040
+Vì vậy, nó lấp đầy theo chiều dọc.
+
+00:01:32.040 --> 00:01:35.880
+Và chúng tôi không biết chiều dài của nó
+cho đến khi xác định giá trị dung lượng.
+
+00:01:35.880 --> 00:01:38.520
+Chúng tôi cung cấp liên kết này 
+trong ghi chú hướng dẫn
+
+00:01:38.520 --> 00:01:40.120
+và nó có sẵn một số mã trong đó.
+
+00:01:40.120 --> 00:01:43.550
+Nhưng việc định vị các view là 
+không chính xác, nên ta cần khắc phục nó.
+
+00:01:43.550 --> 00:01:46.650
+Hãy bắt đầu với các view văn bản này 
+trước vì chúng dễ thực hiện.
+
+00:01:46.650 --> 00:01:48.800
+Bạn có thể thấy view
+không kéo dài hết toàn bộ
+
+00:01:48.800 --> 00:01:49.770
+chiều rộng thiết bị.
+
+00:01:49.770 --> 00:01:50.980
+Vậy ta cần phải thay đổi.
+
+00:01:50.980 --> 00:01:53.410
+Chiều rộng nên được match_parent.
+
+00:01:53.410 --> 00:01:54.180
+Thế sẽ tốt hơn.
+
+00:01:54.180 --> 00:01:56.780
+Vậy bây giờ nền màu xanh lục
+
+00:01:56.780 --> 00:01:59.300
+đã trải đều toàn bộ
+chiều rộng của thiết bị.
+
+00:01:59.300 --> 00:02:02.670
+Tương tự đối với màu nền lửa trại 
+ở TextView bãi biển.
+
+00:02:02.670 --> 00:02:03.580
+Tuyệt vời.
+
+00:02:03.580 --> 00:02:05.860
+Và chiều dài là nội dung chính xác.
+
+00:02:05.860 --> 00:02:09.650
+Bây giờ ta có thêm khoảng trống 
+theo chiều dọc này trong LinearLayout.
+
+00:02:10.079 --> 00:02:12.140
+Ồ, bằng cách này, chiều rộng và chiều cao
+
+00:02:12.140 --> 00:02:15.270
+của layout tuyến tính
+được thiết lập giống view gốc
+
+00:02:15.270 --> 00:02:18.780
+cuối cùng layout sẽ mở rộng ra
+toàn chiều dài và chiều rộng của màn hình.
+
+00:02:18.780 --> 00:02:21.880
+Vì vậy, để sử dụng chiều dài bổ sung này
+trong view gốc,
+
+00:02:21.880 --> 00:02:24.880
+ta sẽ chuyển nó cho một view con
+có giá trị dung lượng.
+
+00:02:24.880 --> 00:02:28.520
+Vậy hãy thay đổi ImageView 
+để nó có một giá trị dung lượng.
+
+00:02:28.520 --> 00:02:31.300
+Đầu tiên, ta có thể thiết lập chiều rộng
+thành match_parent
+
+00:02:31.300 --> 00:02:33.980
+để nó có thể mở rộng ra toàn bộ
+chiều rộng của thiết bị.
+
+00:02:34.430 --> 00:02:38.940
+Sau đó, thiết lập chiều cao là 0dp 
+và dung lượng là 1.
+
+00:02:38.940 --> 00:02:42.200
+Và đó là màn hình mà ta mong muốn.
+
+00:02:42.200 --> 00:02:43.330
+Làm tốt lắm.
+
+00:02:43.330 --> 00:02:47.400
+Lưu ý rằng nếu tôi thay đổi giá trị 
+dung lượng thành một số lớn như 7 hay 10,
+
+00:02:47.400 --> 00:02:50.730
+thì điều đó vẫn không làm thay đổi
+màn hình xem trước trên thiết bị.
+
+00:02:51.500 --> 00:02:54.720
+Đó là bởi vì đây là view con duy nhất
+với dung lượng như vậy
+
+00:02:54.720 --> 00:02:57.980
+nên không quan trọng 
+việc nó có dung lượng cao hay thấp
+
+00:02:57.980 --> 00:03:01.530
+Tất cả các chiều dài dư ra từ view gốc
+sẽ được chuyển sang view con này.
+
+00:03:02.680 --> 00:03:04.430
+Vậy chỉ cần đổi giá trị thành một.
+
+00:03:05.500 --> 00:03:06.590
+Được rồi, làm tốt lắm.
+

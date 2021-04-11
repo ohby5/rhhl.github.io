@@ -1,0 +1,372 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.390 --> 00:00:03.707
+Até agora aprendemos que um <i>LinearLayout</i> pode ter uma orientação vertical,
+
+00:00:03.980 --> 00:00:05.476
+ou uma orientação horizontal.
+
+00:00:06.140 --> 00:00:09.076
+Também aprendemos que <i>views</i>
+individuais podem ter valores de peso
+
+00:00:09.380 --> 00:00:11.464
+para preencher o espaço extra no pai.
+
+00:00:12.695 --> 00:00:15.820
+Agora vamos dedicar um tempo ao <i>RelativeLayout</i>.
+
+00:00:16.498 --> 00:00:18.966
+Isto irá ajudá-lo a construir layouts mais flexíveis.
+
+00:00:19.956 --> 00:00:21.790
+Você lembra do Ray,
+o <i>RelativeLayout</i>?
+
+00:00:22.140 --> 00:00:24.812
+Ele é o pai e é representado
+por este grupo de <i>views</i> aqui.
+
+00:00:25.532 --> 00:00:28.787
+Ele ajuda as <i>views</i> filhas a se posicionar
+dentro deste container.
+
+00:00:29.250 --> 00:00:31.440
+Com o <i>RelativeLayout</i> você pode posicionar filhos
+
+00:00:31.667 --> 00:00:34.840
+relativamente ao pai,
+como no topo ou na base do pai.
+
+00:00:35.870 --> 00:00:40.295
+A outra opção é posicionar <i>views</i> filhas
+relativamente a outros filhos, assim.
+
+00:00:40.920 --> 00:00:45.120
+Vamos focar primeiro no caso em que as <i>views</i>
+podem ser posicionadas em relação ao pai.
+
+00:00:45.780 --> 00:00:50.220
+Neste exemplo, esse <i>RelativeLayout</i> pai está definido para ter largura de <i>match_parent</i>,
+
+00:00:50.220 --> 00:00:53.092
+e altura de <i>match_parent</i>,
+para ficar&nbsp;do tamanho do dispositivo.
+
+00:00:53.587 --> 00:00:56.380
+Os filhos dentro do <i>RelativeLayout</i>
+podem ser posicionados
+
+00:00:56.646 --> 00:01:00.660
+em relação à borda esquerda, superior,
+direita ou inferior do pai.
+
+00:01:00.890 --> 00:01:01.895
+Aqui está o código.
+
+00:01:02.369 --> 00:01:04.390
+Nos elementos XML da <i>view</i> filha,
+
+00:01:04.547 --> 00:01:08.073
+como a <i>ImageView</i> ou a<i>TextView</i>,
+você deveria adicionar estes atributos.
+
+00:01:08.540 --> 00:01:13.938
+O nome do atributo segue este formato
+<i>android:layout_alignParentTop</i>.
+
+00:01:14.440 --> 00:01:17.120
+Este atributo determina
+se&nbsp;a <i>view</i> filha
+
+00:01:17.120 --> 00:01:19.018
+será alinhada à borda superior do pai ou não.
+
+00:01:19.400 --> 00:01:21.883
+Os valores possíveis são
+<i>true</i> (verdadeiro) ou <i>false</i> (falso).
+
+00:01:22.640 --> 00:01:25.584
+Se for verdade, então a <i>view</i> deverá ser
+alinhada à borda superior do pai.
+
+00:01:25.780 --> 00:01:27.806
+Se for falso, então ela
+não deverá ser alinhada.
+
+00:01:28.540 --> 00:01:30.661
+Existem também atributos
+para&nbsp;todas as outras margens.
+
+00:01:31.033 --> 00:01:34.460
+Por exemplo, <i>alignParentBottom</i>,
+para&nbsp;alinhar à borda inferior do pai.
+
+00:01:34.800 --> 00:01:37.809
+Há <i>alignParentLeft</i> para alinhar 
+a <i>view</i> à borda esquerda do pai.
+
+00:01:38.209 --> 00:01:41.209
+E depois há <i>alignParentRight</i>,
+para alinhar à borda direita do pai.
+
+00:01:42.050 --> 00:01:45.024
+Você pode misturar, combinar e usar
+vários desses atributos de uma vez.
+
+00:01:45.980 --> 00:01:47.787
+Veja esta <i>ImageView</i> como exemplo.
+
+00:01:49.169 --> 00:01:52.196
+Nós definiríamos o atributo
+<i>alignParentTop</i>&nbsp;para ser verdade,
+
+00:01:52.418 --> 00:01:54.246
+pois está alinhada à
+borda superior do pai.
+
+00:01:54.830 --> 00:01:57.210
+Está também alinhada às&nbsp;bordas
+esquerda e direita do pai.
+
+00:01:57.513 --> 00:02:00.320
+Então deixamos a esquerda como <i>true</i>,
+e a direita como <i>true</i> também.
+
+00:02:01.255 --> 00:02:04.890
+Não está alinhada à borda inferior do pai,
+por isso, definimos como <i>false</i>.
+
+00:02:06.812 --> 00:02:08.215
+Esta <i>TextView</i> aqui,
+
+00:02:08.410 --> 00:02:11.520
+está alinhada às bordas inferior,
+direita e esquerda do pai.
+
+00:02:12.580 --> 00:02:15.926
+Então <i>alignParentBottom</i> igual a <i>true</i>,
+<i>alignParentLeft</i> igual a <i>true</i>,
+
+00:02:15.932 --> 00:02:20.049
+<i>alignParentRight</i> igual a <i>true</i>,
+mas <i>alignParentTop</i> igual a <i>false</i>.
+
+00:02:21.260 --> 00:02:24.541
+Além de posicionar um filho
+na parte superior,
+
+00:02:24.572 --> 00:02:27.920
+ou na parte inferior da tela,
+você pode também especificar cantos.
+
+00:02:28.424 --> 00:02:31.421
+Para posicionar a <i>TextView</i> "Aniversário"
+no canto superior esquerdo,
+
+00:02:31.850 --> 00:02:36.338
+definimos <i>alignParentTop</i> igual a <i>true</i>, e
+depois <i>alignParentLeft</i> igual a <i>true</i> também.
+
+00:02:37.384 --> 00:02:39.270
+Para posicionar a <i>view</i>
+no canto superior direito
+
+00:02:39.560 --> 00:02:42.590
+devemos alinhá-la às bordas
+superior e direita do pai.
+
+00:02:43.450 --> 00:02:46.461
+Logo, <i>alignParentTop</i> igual a <i>true</i>,
+<i>e alignParentRight</i> igual a <i>true</i>.
+
+00:02:47.660 --> 00:02:51.495
+Para o canto inferior esquerdo,
+alinhamos à borda esquerda e inferior do pai.
+
+00:02:52.812 --> 00:02:54.744
+Assim, <i>alignParentBottom</i> igual a <i>true</i>.
+
+00:02:54.763 --> 00:02:56.276
+e alignParentLeft igual a <i>true</i>.
+
+00:02:57.240 --> 00:03:00.307
+Estes valores são falsos,
+e são falsos por padrão,
+
+00:03:00.344 --> 00:03:02.516
+por isso, você não precisa
+incluí-los no código XML.
+
+00:03:03.353 --> 00:03:06.726
+E o último canto estará alinhado
+à borda direita e à borda inferior do pai.
+
+00:03:07.030 --> 00:03:10.233
+Então <i>alignParentBottom</i> e
+<i>alignParentRight</i> são iguais a <i>true</i>.
+
+00:03:10.940 --> 00:03:12.024
+Os outros dois são <i>false</i>,
+
+00:03:12.020 --> 00:03:13.581
+então pode deixá-los
+de fora do código.
+
+00:03:14.180 --> 00:03:16.796
+Acredite ou não, há ainda mais
+atributos que você pode definir.
+
+00:03:17.140 --> 00:03:19.593
+Também pode centralizar
+a <i>view</i> horizontalmente,
+
+00:03:20.049 --> 00:03:23.150
+para isso, você diz que o
+<i>layout_horizontal</i> é <i>true</i>.
+
+00:03:23.480 --> 00:03:27.040
+E ainda pode adicionar aos
+atributos que aprendemos antes.
+
+00:03:27.530 --> 00:03:31.550
+Então se estiver alinhado com o fundo,
+e centralizado na horizontal, ficaria assim.
+
+00:03:32.283 --> 00:03:34.566
+O último que eu vou mostrar
+é o <i>layout_centerVertical</i>.
+
+00:03:34.843 --> 00:03:38.713
+Se esse atributo estiver definido como <i>true</i>,
+centralizará a <i>view</i> verticalmente dentro do pai.
+
+00:03:39.440 --> 00:03:42.387
+A razão para esta <i>TextView</i> estar
+alinhada à borda esquerda do pai,
+
+00:03:42.646 --> 00:03:47.378
+mesmo não tendo definido este valor, 
+é que todas as views adicionadas ao <i>RelativeLayout</i>
+
+00:03:47.692 --> 00:03:50.720
+são posicionadas por padrão no canto
+superior esquerdo do <i>ViewGroup</i>.
+
+00:03:51.520 --> 00:03:54.443
+Todos esses atributos são chamados de
+parâmetros de layout do <i>ViewGroup</i>
+
+00:03:55.169 --> 00:03:57.729
+Mesmo se forem declarados
+nos elementos XML do filho,
+
+00:03:58.129 --> 00:04:01.698
+eles são usados ​​pelo <i>ViewGroup</i> pai
+para saber como posicionar os filhos.
+
+00:04:02.424 --> 00:04:04.578
+Assim todos eles começam com <i>layout_</i>.
+
+00:04:05.090 --> 00:04:07.667
+Este atributo também segue o padrão do <i>layout_width</i>,
+
+00:04:07.920 --> 00:04:10.590
+e <i>layout_height</i> que você já conhece.
+
+00:04:10.947 --> 00:04:13.729
+Estes dois atributos também são parâmetros
+de layout do <i>ViewGroup</i>,
+
+00:04:14.030 --> 00:04:18.055
+pois são usados pelo <i>ViewGroup</i> pai para
+definir a posição e tamanho dos filhos.
+
+00:04:18.732 --> 00:04:21.390
+E aqui está o XML para o
+o <i>RelativeLayout</i> e seus filhos.
+
+00:04:22.079 --> 00:04:23.741
+Você pode acompanhar no link abaixo.
+
+00:04:24.380 --> 00:04:26.436
+Temos uma tag de abertura de RelativeLayout,
+
+00:04:26.790 --> 00:04:28.393
+e uma tag de fechamento aqui,
+
+00:04:28.560 --> 00:04:30.092
+e todas as views filhas ficam no meio.
+
+00:04:30.756 --> 00:04:33.698
+A largura e a altura do <i>RelativeLayout</i>
+estão definidas para <i>match_parent</i>.
+
+00:04:34.486 --> 00:04:36.387
+Como este é o layout para todo o nosso app,
+
+00:04:36.683 --> 00:04:38.436
+ele vai ocupar a tela inteira.
+
+00:04:39.126 --> 00:04:41.686
+Há três <i>TextViews</i> filhas
+no <i>RelativeLayout</i>.
+
+00:04:42.310 --> 00:04:44.486
+A primeira é uma TextView
+que diz "Feliz".
+
+00:04:45.390 --> 00:04:47.150
+A largura e a altura são <i>wrap_content</i>,
+
+00:04:47.495 --> 00:04:49.090
+e temos esses atributos adicionais
+
+00:04:49.101 --> 00:04:52.953
+para ajudar o <i>RelativeLayout</i> a saber
+onde posicionar esta <i>TextView</i> filha.
+
+00:04:53.520 --> 00:04:55.427
+Dizemos para alinhá-la
+à borda direita do pai,
+
+00:04:55.846 --> 00:04:57.876
+e à borda superior do pai.
+
+00:04:58.290 --> 00:05:01.156
+E isso coloca a TextView "Feliz"
+no canto superior direito da tela.
+
+00:05:01.907 --> 00:05:05.220
+Para a <i>TextView</i> "Aniversário",
+a largura e altura são também <i>wrap_content</i>.
+
+00:05:05.670 --> 00:05:08.412
+Depois queremos alinhá-la
+às&nbsp;bordas inferior e esquerda do pai.
+
+00:05:09.100 --> 00:05:11.993
+As bordas esquerda e inferior
+levam a este canto aqui.
+
+00:05:12.775 --> 00:05:14.824
+Esta última TextView dizendo "Pra Você",
+
+00:05:15.027 --> 00:05:19.378
+não tem um atributo especificando
+onde é relativa ao pai.
+
+00:05:19.710 --> 00:05:22.018
+Tudo que sabemos é que largura
+e altura são <i>wrap_content</i>.
+
+00:05:22.380 --> 00:05:25.600
+Como eu mencionei antes,
+se não especificar a posição de uma <i>view</i> filha,
+
+00:05:25.895 --> 00:05:29.100
+por padrão, o pai irá posicioná-la no
+canto superior esquerdo da tela.
+

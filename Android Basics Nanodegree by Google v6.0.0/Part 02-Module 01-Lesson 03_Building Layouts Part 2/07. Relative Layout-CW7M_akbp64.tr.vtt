@@ -1,0 +1,389 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.390 --> 00:00:03.980
+Şimdiye dek <i>LinearLayout</i>'un
+dikey oryantasyonu veya
+
+00:00:03.980 --> 00:00:06.140
+yatay oryantasyonu olabileceğini öğrendik.
+
+00:00:06.140 --> 00:00:09.380
+Tekil görünümlerin parent'teki 
+ekstra boşluğu doldurmak için
+
+00:00:09.380 --> 00:00:11.350
+ağırlık değerleri olduğunu da öğrendik.
+
+00:00:12.710 --> 00:00:14.520
+Şimdi <i>RelativeLayoutViewGroup</i>'u
+
+00:00:14.520 --> 00:00:16.450
+öğrenmek için biraz zaman harcayacağız.
+
+00:00:16.450 --> 00:00:19.910
+Bu sizin daha esnek yerleşimler 
+oluşturmanızı sağlayacak.
+
+00:00:19.910 --> 00:00:22.140
+<i>RelativeLayout</i> Ray'i hatırlayın.
+
+00:00:22.140 --> 00:00:25.590
+O baba ve buradaki 
+<i>ViewGroup</i> ile temsil ediliyor.
+
+00:00:25.590 --> 00:00:29.250
+Child görünümlerin bu kapta 
+konumlanmasına yardımcı olur.
+
+00:00:29.250 --> 00:00:32.360
+<i>RelativeLayout</i> ile, child'ı parent'e 
+göreceli konumlandırabilirsiniz;
+
+00:00:32.360 --> 00:00:34.840
+örneğin, parent'in üstü veya altında.
+
+00:00:35.850 --> 00:00:39.680
+Child görünümleri diğer child'lara
+göreceli yerleştirmek diğer bir seçenek.
+
+00:00:39.680 --> 00:00:40.920
+Bunun gibi.
+
+00:00:40.920 --> 00:00:44.520
+Görünümlerin parent'e 
+göreceli konumlandığı
+
+00:00:44.520 --> 00:00:45.780
+duruma önce odaklanalım.
+
+00:00:45.780 --> 00:00:50.220
+Bu örnek için, bu parent 
+göreceli yerleşim, parent'in
+
+00:00:50.220 --> 00:00:53.550
+eni ve boyuna göre ayarlanmış, 
+yani cihaz büyüklüğünde.
+
+00:00:53.550 --> 00:00:56.660
+Bir <i>RelativeLayout</i> içindeki 
+child'lar, parent'in sol, üst,
+
+00:00:56.660 --> 00:01:00.880
+sağ ve alt köşelerine göreceli 
+konumlandırılabilir.
+
+00:01:00.880 --> 00:01:04.519
+Bu onun için kod, child
+görünümünde XML elementleri.
+
+00:01:04.519 --> 00:01:08.540
+Örneğin, emoji veya <i>TextView</i>
+için bu özellikleri ekleyeceksiniz.
+
+00:01:08.540 --> 00:01:14.440
+Özellik ismi şu formatı takip eder:
+<i>android:layout_alignParentTop</i>
+
+00:01:14.440 --> 00:01:17.120
+Bu özellik, child görünümün 
+parent'in üst kenarına
+
+00:01:17.120 --> 00:01:19.400
+hizalanıp hizalanmadığını belirler.
+
+00:01:19.400 --> 00:01:22.640
+Muhtemel değerler ise, 
+doğru veya yanlıştır.
+
+00:01:22.640 --> 00:01:25.780
+Eğer doğruysa, görünüm 
+parent'in üst kenarına hizalanır.
+
+00:01:25.780 --> 00:01:28.540
+Eğer yanlışsa, hizalanmamalıdır.
+
+00:01:28.540 --> 00:01:30.990
+Diğer bütün kenarlar 
+için de özellikler vardır.
+
+00:01:30.990 --> 00:01:34.800
+Örneğin, <i>alignParentBottom</i>
+parent'in alt kenarına hizalamak için.
+
+00:01:34.800 --> 00:01:37.460
+Parent'in sol kenarına hizalamak 
+için <i>alignParentLeft</i> var.
+
+00:01:37.460 --> 00:01:41.000
+Bir de parent'in sağ köşesine hizalamak 
+için <i>alignParentRight</i> var.
+
+00:01:42.050 --> 00:01:45.040
+Bunları birlikte ve her seferinde 
+birden çok özellik kullanabilirsiniz.
+
+00:01:45.980 --> 00:01:47.680
+Örnek olarak bu <i>ImageView</i>'i ele alalım.
+
+00:01:47.680 --> 00:01:52.370
+Özelliği <i>alignParentTop</i>
+doğru olacak şekilde ayarlarız,
+
+00:01:52.370 --> 00:01:54.850
+çünkü parent'in üst kenarına hizalı.
+
+00:01:54.850 --> 00:01:57.510
+Aynı zamanda parent'in sol 
+ve sağ kenarlarına da hizalı.
+
+00:01:57.510 --> 00:02:00.420
+Bu yüzden solu ve aynı zamanda 
+sağı doğru olacak şekilde ayarlıyoruz.
+
+00:02:01.270 --> 00:02:04.896
+Parent'in alt kenarına hizalı değil, 
+bu yüzden yanlış olarak ayarlıyoruz.
+
+00:02:04.896 --> 00:02:08.410
+Yani bu aşağıdaki <i>TextView</i>,
+
+00:02:08.410 --> 00:02:11.430
+parent'in alt kenarına, sağ kenarına
+ve sol kenarına hizalı.
+
+00:02:12.580 --> 00:02:15.910
+Yani <i>alignParentBottom</i> doğru, 
+<i>alignParentLeft</i> doğru,
+
+00:02:15.910 --> 00:02:19.809
+<i>alignParentRight</i> doğru olur, 
+ama <i>alignParentTop</i> yanlış olur.
+
+00:02:21.280 --> 00:02:24.640
+Bir child'ı ekranın 
+üst kısmına veya alt kısmına
+
+00:02:24.640 --> 00:02:28.440
+konumlandırmanın yanında, 
+belli köşelere de yapabilirsiniz.
+
+00:02:28.440 --> 00:02:31.850
+Eğer "Birthday" <i>TextView</i>'i sol üst 
+köşeye yerleştirmek istersek,
+
+00:02:31.850 --> 00:02:36.190
+<i>alignParentTop</i>'ın ve <i>alignParentLeft</i>'in 
+doğru olduğunu söyleriz.
+
+00:02:37.350 --> 00:02:39.560
+Bir görünümü sağ üst 
+köşeye yerleştirmek için,
+
+00:02:39.560 --> 00:02:43.450
+parent'in üst kenarına ve 
+sağ kenarına hizalamak isteriz.
+
+00:02:43.450 --> 00:02:46.280
+Yani <i>alignParentTop</i> doğru ve 
+<i>alignParentRight</i> doğrudur.
+
+00:02:46.280 --> 00:02:50.850
+Sol alt köşe için, 
+parent'in sol kenarı ve
+
+00:02:50.850 --> 00:02:51.830
+alt kenarına hizalarız.
+
+00:02:52.780 --> 00:02:54.490
+Yani <i>alignParentBottom</i> doğru
+
+00:02:54.490 --> 00:02:56.210
+ve <i>alignParentLeft</i> doğru deriz.
+
+00:02:57.240 --> 00:03:00.160
+Bu değerler yanlış ve 
+varsayılan hâli yanlış,
+
+00:03:00.160 --> 00:03:02.810
+yani onları XML koduna dâhil etmek 
+zorunda değilsiniz.
+
+00:03:02.810 --> 00:03:06.170
+Sonra son köşeye gelince, 
+parent'in sağ kenarına ve
+
+00:03:06.170 --> 00:03:07.030
+alt kenarına hizalı.
+
+00:03:07.030 --> 00:03:10.940
+Yani <i>alignParentBottom</i> ve 
+<i>alignParentRight</i> doğru.
+
+00:03:10.940 --> 00:03:12.210
+Diğer ikisi yanlış.
+
+00:03:12.210 --> 00:03:14.180
+Bunları kodun dışında bırakabiliriz.
+
+00:03:14.180 --> 00:03:17.140
+İster inanın, ister inanmayın ayarlamak 
+için daha pek çok özellik var.
+
+00:03:17.140 --> 00:03:20.190
+Aynı zamanda görünümü 
+yatay olarak ortalayabilirsiniz,
+
+00:03:20.190 --> 00:03:23.030
+yani android: <i>layout_centerHorizontal</i>
+doğru dediniz.
+
+00:03:23.030 --> 00:03:27.530
+Bunu aynı zamanda daha önce öğrendiğimiz 
+mevcut özelliklere ekleyebilirsiniz.
+
+00:03:27.530 --> 00:03:30.550
+Yani bu satır altta ve 
+yatay olarak ortalanmışsa,
+
+00:03:30.550 --> 00:03:32.220
+buna benzer.
+
+00:03:32.220 --> 00:03:34.870
+Son olarak <i>layout_centerVertical</i>'ı 
+göstereceğim.
+
+00:03:34.870 --> 00:03:39.445
+Eğer doğru olarak ayarlanırsa, görünümü 
+parent içinde dikey olarak ortalar.
+
+00:03:39.445 --> 00:03:43.015
+Bu <i>TextView</i>'in parent'in 
+sol kenarına hizalanma nedeni,
+
+00:03:43.015 --> 00:03:47.085
+bu değeri ayarlamasaydık bile, 
+<i>Relative Layout</i>'a eklenen tüm
+
+00:03:47.085 --> 00:03:51.550
+görünümlerin hâlihazırda <i>ViewGroup</i>'un 
+sol üst köşesine konumlandırılmasıdır.
+
+00:03:51.550 --> 00:03:54.300
+Bütün bu özelliklere <i>ViewGroup</i>
+yerleşim parametreleri denir.
+
+00:03:54.300 --> 00:03:58.100
+Child XML elementlerinde 
+beyan edilseler de, parent <i>ViewGroup</i>
+
+00:03:58.100 --> 00:04:02.440
+tarafından child'ların nasıl 
+yerleştirileceğini bilmek için kullanılır.
+
+00:04:02.440 --> 00:04:05.098
+Bu sebeple hepsi 
+<i>layout_</i> ile başlar.
+
+00:04:05.098 --> 00:04:08.050
+Bunlar <i>layout_width</i> ve <i>layout_height</i>
+örüntüsü izler,
+
+00:04:08.050 --> 00:04:10.960
+buna zaten aşinasınız.
+
+00:04:10.960 --> 00:04:14.810
+Bu iki özellik bir de <i>ViewGroup</i> yerleşim 
+parametreleridir, çünkü child'ların
+
+00:04:14.810 --> 00:04:17.920
+konumu ve büyüklüğünü ayarlamada 
+<i>ViewGroup</i> parent tarafından kullanılır.
+
+00:04:17.920 --> 00:04:22.089
+<i>RelativeLayout</i> ve child'ları 
+için işte XML burada.
+
+00:04:22.089 --> 00:04:24.450
+Aşağıdaki bağlantıdan takip edebilirsiniz.
+
+00:04:24.450 --> 00:04:28.110
+Açma <i>RelativeLayout</i> etiketimiz var 
+ve aşağıda da kapatma etiketimiz var,
+
+00:04:28.110 --> 00:04:30.740
+child'lar da arasında.
+
+00:04:30.740 --> 00:04:31.490
+<i>RelativeLayout</i>'un
+
+00:04:31.490 --> 00:04:34.490
+eni ve boyu <i>match_parent</i>
+olarak ayarlanmış.
+
+00:04:34.490 --> 00:04:35.620
+Bu bütün uygulamamız
+
+00:04:35.620 --> 00:04:39.070
+için yerleşim olacağından, 
+bütün ekranı kaplayacak.
+
+00:04:39.070 --> 00:04:42.310
+Bunlar <i>RelativeLayout</i> içinde 
+kullanılan üç child metni.
+
+00:04:42.310 --> 00:04:45.380
+İlki "Happy" yazan bir <i>TextView</i>.
+
+00:04:45.380 --> 00:04:49.090
+Genişlik ve yükseklik <i>wrap_content</i>
+ve <i>RelativeLayout</i>'a bu child <i>TextView</i>'i
+
+00:04:49.090 --> 00:04:53.520
+nereye konumlayacağına yardımcı olması 
+için ek özelliklerimiz var.
+
+00:04:53.520 --> 00:04:56.060
+Ona parent'in sağ kenarına hizalamasını
+
+00:04:56.060 --> 00:04:58.290
+ve parent'in üst kenarına 
+hizalamasını söyleriz.
+
+00:04:58.290 --> 00:05:01.900
+Böylece "Happy" <i>TextView</i>'i ekranın 
+sağ üst köşesine koyar.
+
+00:05:01.900 --> 00:05:05.670
+"Birthday" <i>TextView</i> için genişlik 
+ve yükseklik yine <i>wrap_content</i>.
+
+00:05:05.670 --> 00:05:09.100
+Sonra parent'in alt ve sol kenarlarına 
+hizalamak istiyoruz.
+
+00:05:09.100 --> 00:05:12.750
+Yani alt ve sol kenarlar bu aşağıdaki 
+köşeye denk gelir.
+
+00:05:12.750 --> 00:05:16.690
+"To You" diyen son <i>TextView</i>'in, 
+parent'e göreceli olarak
+
+00:05:16.690 --> 00:05:19.750
+nerede olduğunu belirten 
+belli özelliği yoktur.
+
+00:05:19.750 --> 00:05:22.430
+Bildiğimiz tek şey, genişlik ve 
+yüksekliğin <i>wrap_content</i> olduğu.
+
+00:05:22.430 --> 00:05:25.723
+Önceden söylediğimiz gibi, bir child 
+görünümün nereye gittiğini belirtmezseniz,
+
+00:05:25.723 --> 00:05:29.267
+varsayılan ayar olarak 
+ekranın üst sol köşesine ekler.
+

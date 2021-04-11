@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.550 --> 00:00:02.760
+Đây là XML gốc
+mà chúng tôi cung cấp cho bạn.
+
+00:00:02.760 --> 00:00:05.510
+Nó là một layout tuyến tính dọc.
+
+00:00:05.510 --> 00:00:08.090
+Và các mục đã xuất hiện
+trong một cột dọc.
+
+00:00:08.090 --> 00:00:10.220
+Dựa vào hình ảnh trong bài kiểm tra,
+
+00:00:10.220 --> 00:00:14.930
+chúng tôi muốn các mục được thiết kế 
+giống danh sách sử dụng layout tương đối.
+
+00:00:14.930 --> 00:00:16.680
+Đây là giải pháp.
+
+00:00:16.680 --> 00:00:19.460
+Chúng tôi đã thay đổi layout 
+nên bức ảnh được căn trái
+
+00:00:19.460 --> 00:00:22.020
+và ba text view được căn phải.
+
+00:00:22.020 --> 00:00:26.210
+Để xây dựng layout này 
+tôi đã đổi view gốc thành layout tương đối
+
+00:00:26.210 --> 00:00:28.180
+thay vì layout tuyến tính.
+
+00:00:28.180 --> 00:00:29.530
+Vì đây là thẻ mở,
+
+00:00:29.530 --> 00:00:32.700
+tôi cũng phải cập nhật
+thẻ đóng ở phía dưới.
+
+00:00:32.700 --> 00:00:36.610
+Giữa thẻ mở và thẻ đóng 
+chúng ta có bốn view con.
+
+00:00:36.610 --> 00:00:40.200
+Tôi cũng loại bỏ thuộc tính
+định hướng dọc.
+
+00:00:40.200 --> 00:00:42.580
+vì nó thuộc về layout tuyến tính.
+
+00:00:42.580 --> 00:00:46.240
+Không cần có thuộc tính định hướng
+trong layout tương đối.
+
+00:00:46.240 --> 00:00:48.750
+Bức ảnh đã được định vị chính xác.
+
+00:00:48.750 --> 00:00:52.400
+View con đầu tiên của một layout tương đối
+luôn được định vị mặc định
+
+00:00:52.400 --> 00:00:53.420
+ở góc trên bên trái.
+
+00:00:53.420 --> 00:00:57.440
+Đó là những gì ta muốn cho 
+danh sách mục, vậy cái này vẫn giữ nguyên.
+
+00:00:57.440 --> 00:00:59.720
+Tiếp theo chúng ta có 
+TextView Pebble Beach.
+
+00:01:00.730 --> 00:01:04.410
+Chúng tôi muốn định vị TextView này 
+bên phải của ImageView, nên ta cần phải
+
+00:01:04.410 --> 00:01:10.180
+thêm thuộc tính và layout_torightof
+sau đó tham chiếu đến ImageView.
+
+00:01:10.180 --> 00:01:13.800
+Để tham chiếu ImageView
+ta có thêm một thuộc tính ID,
+
+00:01:13.800 --> 00:01:15.400
+cho ImageView.
+
+00:01:15.400 --> 00:01:19.100
+Tôi chỉ gọi nó là bức ảnh, nhưng bạn 
+có thể gọi nó bất kỳ tên nào bạn muốn.
+
+00:01:19.100 --> 00:01:22.260
+Điều này sẽ định vị chính xác hình ảnh,
+và TextView đầu tiên.
+
+00:01:22.260 --> 00:01:25.740
+TextView tiếp theo là cho
+hiển thị dòng chữ California.
+
+00:01:25.740 --> 00:01:29.498
+Dòng chữ California này 
+phải nằm bên phải bức ảnh
+
+00:01:29.498 --> 00:01:32.110
+và dưới TextView Pebble Beach.
+
+00:01:32.110 --> 00:01:35.510
+Vậy đầu tiên chúng ta thêm thuộc tính
+layout_toRightof và
+
+00:01:35.510 --> 00:01:36.890
+tham chiếu đến bức ảnh.
+
+00:01:36.890 --> 00:01:39.620
+Sau đó chúng ta thêm một
+layout thuộc tính bên dưới
+
+00:01:39.620 --> 00:01:41.880
+rồi tham chiếu đến TextView đầu tiên.
+
+00:01:41.880 --> 00:01:46.860
+Bắt buộc phải có thêm một ID cho 
+TextView này, ta chỉ gọi nó là name.
+
+00:01:46.860 --> 00:01:50.060
+Tuyệt vời, vậy vị trí đó,
+ImageView, và hai TextViews.
+
+00:01:50.060 --> 00:01:53.622
+Cuối cùng, chúng ta có TextView 
+hiển thị khoảng cách, 10 dặm.
+
+00:01:53.622 --> 00:01:55.420
+Nó được định vị 
+bên phải của ảnh
+
+00:01:55.420 --> 00:01:56.890
+và phía dưới dòng California.
+
+00:01:57.900 --> 00:02:01.370
+Vì vậy, chúng tôi đã có thêm thuộc tính
+layout_toRightof để tham chiếu,
+
+00:02:01.370 --> 00:02:05.730
+và chúng tôi cũng đã phải
+thêm một thuộc tính cho layout bên dưới,
+
+00:02:05.730 --> 00:02:09.008
+và sau đó tham chiếu đến
+nơi lưu trữ TextView.
+
+00:02:09.008 --> 00:02:13.280
+Điều này liên quan đến việc thêm ID 
+cho nơi lưu trữ TextView.
+
+00:02:13.280 --> 00:02:15.660
+Tôi cũng đã thêm một ID 
+cho TextView distance.
+
+00:02:15.660 --> 00:02:17.990
+Mặc dù chúng tôi không
+tham chiếu nó ở bất cứ đâu,
+
+00:02:17.990 --> 00:02:20.490
+việc thêm một ID vào một view 
+cũng không tổn hại gì.
+
+00:02:20.490 --> 00:02:23.960
+Trong trường hợp bạn cần phải 
+tham chiếu đến nó sau này, thì nó đã ở đó.
+

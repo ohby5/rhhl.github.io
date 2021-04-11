@@ -1,0 +1,306 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.330 --> 00:00:03.090
+Tamam, bu <i>LinearLayout</i>'un 
+içinde nasıl iki çocuk (child)
+
+00:00:03.090 --> 00:00:05.270
+<i>TextView</i> barındırdığını gördük.
+
+00:00:05.270 --> 00:00:08.480
+Bu arada bu arkaplan renkleri, bu iki 
+çocuk <i>TextView</i>'in bu ebeveyn (parent)
+
+00:00:08.480 --> 00:00:13.210
+içinde olduklarını anlamanıza yardımcı 
+olacak öğretici araçlar.
+
+00:00:13.210 --> 00:00:15.940
+Bu görünümlerde arkaplan 
+renklerini özellikle kırmızı ve mavi
+
+00:00:15.940 --> 00:00:20.100
+olarak ayarlamadığınız taktirde 
+aslında cihazda görünmezler.
+
+00:00:20.100 --> 00:00:23.110
+Ne demek istediğimi size göstermek 
+için XML Visualizer'a gidelim.
+
+00:00:23.110 --> 00:00:25.270
+XML Visualizer'a kodu eklediğimizde,
+
+00:00:25.270 --> 00:00:27.570
+cihazda bu şekilde görünür.
+
+00:00:27.570 --> 00:00:30.020
+Yani önce <i>LinearLayout ViewGroup</i> var
+
+00:00:30.020 --> 00:00:33.850
+ve bu şeffaf, çünkü ayarlanmış 
+bir arkaplan rengi yok.
+
+00:00:33.850 --> 00:00:36.680
+İlk çocuk, konuk listesini
+gösteren bir <i>TextView</i>,
+
+00:00:36.680 --> 00:00:38.780
+işte burada üstte görünüyor.
+
+00:00:38.780 --> 00:00:41.580
+İkinci çocuk Kunal diyen bir <i>TextView</i>
+
+00:00:41.580 --> 00:00:44.020
+ve ilk <i>TextView</i>'in altında görünüyor.
+
+00:00:44.020 --> 00:00:47.540
+Şimdi eğer bu <i>TextView</i>'i kopyalayıp 
+bunun altına yapıştırırsam
+
+00:00:47.540 --> 00:00:49.760
+ne olacağını düşünüyorsunuz?
+
+00:00:49.760 --> 00:00:54.270
+Evet, ilkinin altında görünen 
+başka bir Kunal olur.
+
+00:00:54.270 --> 00:00:57.340
+Tamam, öyle görünüyor ki buraya 
+eğer daha fazla <i>TextView</i> eklersek,
+
+00:00:57.340 --> 00:01:01.570
+listede art arda görünecekler.
+
+00:01:01.570 --> 00:01:03.570
+Haydi koda daha yakından bakalım.
+
+00:01:03.570 --> 00:01:05.655
+Önce açma köşeli parantezi ile başlar
+
+00:01:05.655 --> 00:01:08.230
+ve sonra görünüm ismi, yani <i>LinearLayout</i>.
+
+00:01:08.230 --> 00:01:12.260
+Sonra bir sürü özellik listeler ve 
+ardından da kapama köşeli parantezi olur.
+
+00:01:12.260 --> 00:01:15.220
+Eğik çizgi olmadığına dikkat edin,
+çünkü bu sadece
+
+00:01:15.220 --> 00:01:17.020
+<i>LinearLayout</i>'un açma etiketi.
+
+00:01:17.020 --> 00:01:19.790
+Kapama etiketi burada aşağıda,
+
+00:01:19.790 --> 00:01:24.470
+çünkü açma ve kapama etiketleri arasına 
+çocuk elementleri koymak istiyoruz.
+
+00:01:24.470 --> 00:01:28.430
+Ama örneğin, bu <i>TextView</i> içinde 
+çocuk olmadığı için,
+
+00:01:28.430 --> 00:01:31.330
+sadece ona ait kapama 
+etiketi kullanabiliriz.
+
+00:01:31.330 --> 00:01:35.330
+Buradaki <i>TextView</i> için de öyle 
+ve buradaki bu <i>TextView</i> için de.
+
+00:01:35.330 --> 00:01:38.410
+Bir <i>ViewGroup</i>'un çocuk görünümler 
+barındırdığını söylediğimizde,
+
+00:01:38.410 --> 00:01:42.850
+onları açma ve kapama etiketleri 
+arasına koymamız lazım.
+
+00:01:42.850 --> 00:01:45.900
+Şimdi fark edebileceğiniz başka 
+bir şey de şu özellik:
+
+00:01:45.900 --> 00:01:48.670
+<i>android:orientation="vertical"</i>.
+
+00:01:48.670 --> 00:01:50.330
+Bunu daha önce görmemiştik,
+
+00:01:50.330 --> 00:01:53.500
+bu yüzden size daha önce gösterdiğim 
+gibi Android dokümantasyonuna bakalım.
+
+00:01:54.680 --> 00:01:59.075
+Yeni bir tarayıcı pencere açıyorum ve 
+sonra "android orientation" yazıyorum.
+
+00:01:59.075 --> 00:02:01.735
+İlk sonuç bir <i>LinearLayout</i> ile ilgili
+
+00:02:01.735 --> 00:02:03.555
+ve <i>developer.android.com</i> sitesinde.
+
+00:02:03.555 --> 00:02:04.555
+Haydi ona tıklayalım.
+
+00:02:04.555 --> 00:02:07.505
+Aynı <i>TextView</i> dokümanında 
+olduğu gibi, biraz karışık.
+
+00:02:07.505 --> 00:02:09.935
+Bu metnin çoğunu göz ardı edebilirsiniz.
+
+00:02:09.935 --> 00:02:13.610
+Sadece bu sayfanın gerçekten <i>LinearLayout</i>
+için olduğunu doğrulamamız lazım
+
+00:02:13.610 --> 00:02:16.150
+ve sonra aşağı inip 
+XML özelliklerine bakalım.
+
+00:02:17.210 --> 00:02:21.790
+Şimdi <i>android:orientation</i>
+denen özelliğe bakacağız
+
+00:02:21.790 --> 00:02:22.520
+ve işte burada.
+
+00:02:22.520 --> 00:02:24.360
+O hâlde tıklayıp daha detaylı bakalım.
+
+00:02:25.390 --> 00:02:27.960
+Tanımda yerleşimin sütun mu,
+
+00:02:27.960 --> 00:02:31.660
+yoksa satır mı olduğunu bu özelliğin
+belirlediğini söylüyor.
+
+00:02:31.660 --> 00:02:34.560
+Bu özelliğin değeri satır için yatay,
+
+00:02:34.560 --> 00:02:37.330
+sütun için ise dikey olmalı.
+
+00:02:37.330 --> 00:02:40.480
+Sonra burada bu iki değeri sıralıyor.
+
+00:02:40.480 --> 00:02:45.530
+Güzel, şu anda kodumuzun söylediği 
+<i>android:orientation</i>'un dikey olduğu.
+
+00:02:45.530 --> 00:02:49.410
+Bu görünümlerin neden sütun 
+olarak göründüğünü açıklar.
+
+00:02:49.410 --> 00:02:53.950
+Şimdi merakımızı gidermek için 
+diğer değeri de denemeliyiz.
+
+00:02:53.950 --> 00:02:57.960
+Yönelimi yatay olarak ayarlayalım 
+ve neler olduğunu görelim.
+
+00:02:57.960 --> 00:02:59.910
+Koda gidip dikey değeri sileceğim.
+
+00:02:59.910 --> 00:03:05.150
+Yatay yazacağım ve bakın 
+görünümler şimdi yatay bir sırada.
+
+00:03:05.150 --> 00:03:06.810
+Sizi bilmiyorum,
+
+00:03:06.810 --> 00:03:09.310
+ama konuk listemi yatay olarak 
+okumayı sevmiyorum.
+
+00:03:09.310 --> 00:03:12.000
+Ancak yatay <i>LinearLayout</i> olmasını
+
+00:03:12.000 --> 00:03:15.040
+isteyeceğiniz başka yararlı durumlar var.
+
+00:03:15.040 --> 00:03:18.490
+Örneğin, bir liste öğesi 
+yaratıyorsanız, resmin sol tarafta
+
+00:03:18.490 --> 00:03:21.190
+ve tanımın sağ tarafta 
+olmasını isteyebilirsiniz.
+
+00:03:21.190 --> 00:03:25.200
+Biraz sonra bunu kendi kendinize 
+denemenizi istiyorum,
+
+00:03:25.200 --> 00:03:28.210
+ama önce bu ek kod satırına 
+dikkat çekmek istiyorum.
+
+00:03:28.210 --> 00:03:31.260
+Bu XML ad boşluğu bildirimi.
+
+00:03:31.260 --> 00:03:36.020
+Bu ad boşluğunu bütün bu özelliklerin 
+Android'e ait olduğunu
+
+00:03:36.020 --> 00:03:38.200
+belirtmek için kullanıyoruz.
+
+00:03:38.200 --> 00:03:40.940
+Bu yüzden hepsi <i>android:</i> ile başlıyor.
+
+00:03:40.940 --> 00:03:45.580
+Bu aslında Android'e özel olan 
+bu spesifik URL için bir kısayol.
+
+00:03:45.580 --> 00:03:48.390
+Siz kendi isteğinize uyarlanmış 
+özellikler yaratabilirsiniz.
+
+00:03:48.390 --> 00:03:52.840
+İki özelliğin aynı isme sahip olduğu halde
+farklı davranışları olduğunda
+
+00:03:52.840 --> 00:03:57.595
+isim çelişkilerini önlemek için, 
+her zaman bu <i>android:</i> ön ekini
+
+00:03:57.595 --> 00:04:02.430
+buraya ekleriz; böylece Android 
+özellikleri olduğunu belirtmiş oluruz.
+
+00:04:02.430 --> 00:04:06.970
+Yani esasen her zaman bu XML ad boşluğu 
+bildirimini XML dosyanızın
+
+00:04:06.970 --> 00:04:10.110
+kök görünümünde açma etiketi 
+içine eklemeyi unutmayın.
+
+00:04:11.710 --> 00:04:12.910
+Şimdi sıra sizde.
+
+00:04:12.910 --> 00:04:16.860
+Şimdi sizin <i>LinearLayout</i> koduyla 
+deneme yapmanızı istiyoruz.
+
+00:04:16.860 --> 00:04:20.010
+Daha çok <i>TextView</i> eklemeyi deneyin
+ki bu sütunda daha fazla öğe olsun.
+
+00:04:20.010 --> 00:04:23.150
+Partiniz için seçkin bir konuk 
+listesine kimleri koyardınız?
+
+00:04:24.500 --> 00:04:28.450
+Aynı zamanda <i>LinearLayout</i> yönelim 
+özelliğini değiştirmeyi deneyin.
+
+00:04:28.450 --> 00:04:30.770
+Dikey veya yatay olarak 
+ayarlanabileceğini unutmayın.
+

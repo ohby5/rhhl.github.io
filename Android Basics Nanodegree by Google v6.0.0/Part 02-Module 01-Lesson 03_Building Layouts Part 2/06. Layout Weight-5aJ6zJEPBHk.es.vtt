@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.901 --> 00:00:04.037
+Para hacer este<i> layout</i>,
+primero hay que pensar en el concepto.
+
+00:00:04.338 --> 00:00:08.275
+De esta forma, nos aseguramos que sabemos
+lo que vamos a hacer antes de codificar.
+
+00:00:08.775 --> 00:00:10.911
+Vemos que es un LinearLayout vertical,
+
+00:00:11.111 --> 00:00:13.146
+porque los ítems están
+en una columna vertical.
+
+00:00:13.347 --> 00:00:14.781
+Tenemos tres vistas de los hijos:
+
+00:00:14.948 --> 00:00:17.050
+Vista de imagen, vista de texto
+y vista de texto.
+
+00:00:17.784 --> 00:00:21.788
+La primera pista que os di
+fue determinar la anchura de cada vista.
+
+00:00:22.556 --> 00:00:25.859
+Como el <i>layout</i> ocupa toda la anchura
+y la altura del dispositivo,
+
+00:00:26.226 --> 00:00:29.196
+este LinearLayout vertical tiene
+un <i>width</i> y un <i>weight</i> de <i>match_parent</i>.
+
+00:00:30.097 --> 00:00:33.534
+Para la vista de imagen, queremos
+que sea tan ancha como el padre,
+
+00:00:33.767 --> 00:00:36.003
+lo que significa
+que sea tan ancho como el dispositivo.
+
+00:00:36.203 --> 00:00:37.938
+Determinamos que sea <i>match_parent</i>.
+
+00:00:38.138 --> 00:00:39.706
+Lo mismo para las dos vistas de texto.
+
+00:00:39.907 --> 00:00:42.776
+Queremos que ocupen toda la anchura,
+así que determinamos <i>match_parent</i>.
+
+00:00:43.010 --> 00:00:45.179
+A continuación, trabajamos
+en la altura de cada vista.
+
+00:00:45.379 --> 00:00:48.882
+Estas dos vista de imagen son fáciles
+porque rodean el contenido que llevan.
+
+00:00:49.416 --> 00:00:52.486
+Fijamos <i>wrap_content</i>
+para la altura de cada <i>text view</i>.
+
+00:00:53.053 --> 00:00:57.090
+También fijamos los valores <i>weight </i>a cero,
+porque no queremos que cambien
+
+00:00:57.324 --> 00:00:59.593
+aunque el padre tenga espacio disponible.
+
+00:01:00.327 --> 00:01:02.029
+La parte más dura fue la vista de imagen,
+
+00:01:02.629 --> 00:01:05.232
+Queremos que la altura de la imagen
+se agrande o encoja
+
+00:01:05.432 --> 00:01:07.434
+según el espacio disponible del padre,
+
+00:01:07.768 --> 00:01:10.404
+que depende del tamaño disponible
+de la pantalla del dispositivo.
+
+00:01:11.171 --> 00:01:13.040
+Usamos <i>weights </i>para conseguirlo.
+
+00:01:13.240 --> 00:01:15.843
+Fijamos la altura de la vista de imagen
+para empezar en cero dp,
+
+00:01:16.009 --> 00:01:17.544
+pero le damos un <i>weight </i>de uno.
+
+00:01:18.145 --> 00:01:20.414
+Como ninguno de los otros hijos
+tienen valores <i>weight,</i>
+
+00:01:20.681 --> 00:01:24.518
+el espacio disponible del padre
+lo recibirá el <i>Image View. </i>
+
+00:01:25.018 --> 00:01:29.623
+Fijamos el <i>height</i> en cero dp
+porque es un LinearLayout vertical.
+
+00:01:29.857 --> 00:01:31.625
+Se rellena él mismo de forma vertical.
+
+00:01:31.959 --> 00:01:35.562
+No sabemos el <i>height</i>
+hasta que el valor <i>weight </i>lo determina.
+
+00:01:36.330 --> 00:01:38.432
+Os dimos este enlace
+en los apuntes del profesor
+
+00:01:38.565 --> 00:01:39.967
+y ya tenía algunos códigos.
+
+00:01:40.133 --> 00:01:43.237
+Sin embargo, la posición de las vistas
+es incorrecta, así que arreglemos eso.
+
+00:01:43.570 --> 00:01:45.873
+Empecemos con las vistas de texto,
+que son más fáciles.
+
+00:01:46.206 --> 00:01:49.376
+Veis que las vistas de texto no ocupan
+toda la anchura del dispositivo,
+
+00:01:49.510 --> 00:01:50.911
+así que debemos cambiarlo.
+
+00:01:51.078 --> 00:01:52.613
+<i>Widht </i>debe ser <i>match_parent.</i>
+
+00:01:52.813 --> 00:01:54.214
+Eso está mejor.
+
+00:01:54.414 --> 00:01:58.519
+Ahora el fondo verdoso-azulado
+ocupa toda la anchura del dispositivo.
+
+00:01:59.119 --> 00:02:02.155
+Hacemos lo mismo con la vista de texto
+de la fogata en la playa.
+
+00:02:02.656 --> 00:02:05.359
+Genial. El <i>height</i> es <i>wrap_content,</i>
+que es correcto.
+
+00:02:05.726 --> 00:02:09.763
+Ahora tenemos todo este espacio vertical
+en el LinearLayout vertical.
+
+00:02:10.531 --> 00:02:14.501
+Por cierto, el <i>width </i>y el <i>height</i>
+del LinearLayout deben ser <i>match_parent,</i>
+
+00:02:14.768 --> 00:02:18.238
+así que el <i>layout</i> ocupará toda la altura
+y la anchura de la pantalla.
+
+00:02:18.772 --> 00:02:21.642
+Para usar esta altura de sobra del padre,
+
+00:02:21.909 --> 00:02:24.178
+queremos dársela a un hijo
+que tenga un valor <i>weight.</i>
+
+00:02:24.845 --> 00:02:28.182
+Cambiemos la vista de imagen
+para que tenga un valor <i>weight.</i>
+
+00:02:28.782 --> 00:02:31.118
+Primero hacemos
+que el <i>width </i>sea <i>match_parent,</i>
+
+00:02:31.351 --> 00:02:33.754
+para que se extienda
+por la anchura del dispositivo.
+
+00:02:34.321 --> 00:02:36.523
+Luego fijamos el <i>height </i>en cero dp
+
+00:02:37.391 --> 00:02:39.493
+y el <i>weight </i>en uno.
+
+00:02:40.060 --> 00:02:41.828
+Esa es la captura
+de pantalla que queríamos.
+
+00:02:41.962 --> 00:02:43.363
+Buen trabajo.
+
+00:02:43.530 --> 00:02:47.901
+Fijaos que si aumento
+el valor <i>weight </i>hasta siete o diez,
+
+00:02:48.268 --> 00:02:50.571
+no cambia la vista previa del dispositivo.
+
+00:02:51.371 --> 00:02:54.341
+Eso es porque es el único hijo
+con un valor <i>weight,</i>
+
+00:02:54.575 --> 00:02:57.277
+así que no importa
+si tiene un valor alto o bajo.
+
+00:02:57.611 --> 00:03:01.648
+La altura de sobra del padre
+la recibirá este hijo.
+
+00:03:02.583 --> 00:03:04.551
+Cambiemos esto para que sea uno.
+
+00:03:05.052 --> 00:03:06.453
+Muy bien. Buen trabajo.
+

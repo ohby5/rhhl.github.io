@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.430 --> 00:00:03.937
+Então agora sabemos que <i>ViewGroups</i> podem conter <i>views</i>.
+
+00:00:04.670 --> 00:00:08.730
+Cada <i>ViewGroup</i> tem regras específicas
+sobre como posicionará suas <i>views</i> filhas.
+
+00:00:09.270 --> 00:00:10.596
+Vamos ver o <i>LinearLayout</i> primeiro.
+
+00:00:11.290 --> 00:00:14.996
+Este <i>ViewGroup</i> pode organizar as filhas
+em uma coluna vertical, assim.
+
+00:00:17.292 --> 00:00:20.529
+Observe como não estamos limitados
+a apenas uma <i>TextView</i> e uma <i>ImageView</i>.
+
+00:00:20.990 --> 00:00:24.695
+Podemos colocar aqui quantas quisermos,
+bem como outros tipos de views.
+
+00:00:25.255 --> 00:00:27.335
+Então, este é Tommy,
+e este é seu irmãozinho, Timmy.
+
+00:00:27.858 --> 00:00:30.566
+E esta é Ivy e sua irmã gêmea Irene.
+
+00:00:31.370 --> 00:00:36.393
+Ou o <i>LinearLayout</i> pode organizar suas <i>views</i> filhas em uma fileira horizontal, assim.
+
+00:00:38.375 --> 00:00:41.298
+Ei, se você quiser dizer "proibido garotos",
+por mim, tudo bem.
+
+00:00:42.300 --> 00:00:44.295
+Esta é Ivy, Irene, e Isabella.
+
+00:00:45.070 --> 00:00:48.547
+E é tudo sobre <i>LinearLayout</i>. 
+Bem simples, certo?
+
+00:00:48.880 --> 00:00:52.344
+Pode organizar <i>views</i> filhas em uma
+coluna vertical ou fileira horizontal.
+
+00:00:52.880 --> 00:00:54.455
+E então temos o pai,
+o <i>RelativeLayout</i>.
+
+00:00:54.840 --> 00:00:55.956
+O <i>RelativeLayout</i>, novamente,
+
+00:00:55.975 --> 00:00:58.680
+tem suas próprias regras para como
+posicionar suas filhas.
+
+00:00:59.556 --> 00:01:03.058
+Por exemplo, pode posicionar filhas em relação ao pai
+
+00:01:03.556 --> 00:01:04.977
+Portanto, se este é o <i>ViewGroup</i> pai,
+
+00:01:05.476 --> 00:01:08.400
+nós podemos ter uma <i>TextView</i> filha
+alinhada com a parte inferior do pai,
+
+00:01:08.910 --> 00:01:11.606
+e uma <i>ImageView</i> filha alinhada
+com a parte superior do pai.
+
+00:01:12.283 --> 00:01:14.289
+Serve ainda para alinhar à borda esquerda do pai
+
+00:01:14.295 --> 00:01:16.135
+e à borda direita,
+bem como ao centro.
+
+00:01:17.353 --> 00:01:19.870
+A outra capacidade útil do <i>RelativeLayout</i>
+
+00:01:19.870 --> 00:01:23.661
+é que você pode posicionar as filhas
+em relação a outras <i>views</i> filhas.
+
+00:01:24.276 --> 00:01:25.735
+Assim, se este é o <i>ViewGroup</i> pai,
+
+00:01:25.960 --> 00:01:29.778
+então pode posicionar uma <i>ImageView</i>
+na borda esquerda do pai
+
+00:01:30.123 --> 00:01:33.243
+e depois posicionar uma <i>TextView</i> filha
+à direita dessa imagem.
+
+00:01:33.735 --> 00:01:37.747
+E, depois, esta <i>TextView</i> filha
+é posicionada à direita da <i>ImageView</i>,
+
+00:01:37.780 --> 00:01:39.956
+mas também sob a primeira <i>TextView</i>.
+
+00:01:40.680 --> 00:01:44.160
+Então você vê como algumas <i>views</i> filhas
+estão alinhadas com relação ao pai,
+
+00:01:44.670 --> 00:01:46.129
+ou com relação a outra.
+
+00:01:47.210 --> 00:01:50.424
+Essa foi uma visão geral bem rápida
+sobre <i>LinearLayout</i> e <i>RelativeLayout</i>.
+
+00:01:50.990 --> 00:01:53.335
+Dá para perceber como escolher um ou outro,
+
+00:01:53.347 --> 00:01:55.766
+dependendo do tipo de layout
+que deseja para o seu app.
+
+00:01:56.615 --> 00:02:00.116
+Agora vamos ver o XML sobre como
+um ViewGroup contém outras views.
+
+00:02:01.290 --> 00:02:03.876
+Nesse exemplo, vamos começar
+com um <i>ViewGroup</i>
+
+00:02:03.895 --> 00:02:06.030
+que contém duas <i>TextViews</i> filhas.
+
+00:02:07.304 --> 00:02:08.940
+Não está acostumado a todo este código,
+
+00:02:09.205 --> 00:02:11.587
+mas quero que faça algumas
+observações sobre o código aqui.
+
+00:02:12.320 --> 00:02:16.744
+Uma dica: o código pai é o vermelho, 
+e o código da <i>TextView</i> filha é o azul.
+
+00:02:17.370 --> 00:02:19.593
+Linkamos o código abaixo
+para você dar uma olhada nele,
+
+00:02:19.907 --> 00:02:21.840
+e depois anote três observações aqui.
+

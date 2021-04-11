@@ -1,0 +1,663 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.834 --> 00:00:03.170
+En la última prueba, queríamos averiguar
+
+00:00:03.469 --> 00:00:06.273
+cómo las vistas
+de texto de Tom, Tim y Todd
+
+00:00:06.507 --> 00:00:07.975
+podrían tener algo más de espacio
+
+00:00:08.242 --> 00:00:10.344
+separándolas equitativamente
+y de forma vertical
+
+00:00:10.677 --> 00:00:12.479
+a lo largo de la altura del dispositivo.
+
+00:00:13.347 --> 00:00:15.482
+Intentamos definir
+un valor fijo para la dp,
+
+00:00:15.649 --> 00:00:19.520
+pero no funcionaría en un dispositivo
+más grande, como una tableta.
+
+00:00:19.853 --> 00:00:21.255
+Luego probamos con <i>match_parent</i>,
+
+00:00:21.455 --> 00:00:24.057
+pero hizo que la vista de texto de Tom
+fuera muy grande.
+
+00:00:24.324 --> 00:00:26.693
+Además, eliminó
+los otros dos textos de la pantalla.
+
+00:00:27.461 --> 00:00:29.296
+Llegados a este punto,
+empezamos a investigar
+
+00:00:29.563 --> 00:00:31.031
+sobre LinearLayout <i>weights</i>.
+
+00:00:31.398 --> 00:00:34.568
+En la documentación dice
+que en un LinearLayout vertical,
+
+00:00:34.768 --> 00:00:36.770
+si queremos separar
+equitativamente a los hijos,
+
+00:00:36.970 --> 00:00:39.406
+necesitamos definir el <i>height</i> a cero dp
+
+00:00:39.706 --> 00:00:42.342
+y el valor <i>weight </i>a uno
+para cada uno de los hijos.
+
+00:00:43.477 --> 00:00:46.180
+Asignar un valor <i>weight</i>
+a la vista de un hijo
+
+00:00:46.413 --> 00:00:48.849
+significa darle más importancia.
+
+00:00:49.449 --> 00:00:50.951
+Cuanto más alto sea el valor <i>weight,</i>
+
+00:00:51.084 --> 00:00:55.222
+más espacio podrá conseguir,
+siempre que haya espacio en el padre.
+
+00:00:56.156 --> 00:00:59.026
+Por ejemplo,
+para este LinearLayout vertical,
+
+00:00:59.259 --> 00:01:01.461
+lo rellena de forma vertical
+en este sentido.
+
+00:01:01.929 --> 00:01:04.397
+Resulta que este LinearLayout
+tiene espacio de sobra.
+
+00:01:04.565 --> 00:01:08.268
+Este espacio se repartirá entre los hijos
+que tengan un valor<i> weight.</i>
+
+00:01:08.769 --> 00:01:10.838
+Si un hijo tiene un valor<i> weight</i> muy alto,
+
+00:01:11.038 --> 00:01:13.974
+la mayor parte del espacio disponible
+será para ese hijo.
+
+00:01:14.341 --> 00:01:16.610
+Si un hijo tiene un valor<i> weight</i> muy bajo,
+
+00:01:16.877 --> 00:01:19.446
+la menor parte del espacio disponible
+será para ese hijo.
+
+00:01:19.646 --> 00:01:21.048
+Os enseñaré cómo hacerlo.
+
+00:01:21.281 --> 00:01:23.784
+Definiré el<i> height</i> de este hijo a cero dp
+
+00:01:23.951 --> 00:01:25.552
+y luego le daré un valor<i> weight</i> de uno.
+
+00:01:25.986 --> 00:01:29.623
+Primero, el LinearLayout encoge
+las vistas de Texto de Tim y Todd
+
+00:01:29.857 --> 00:01:33.660
+porque tienen un<i> height</i> establecido
+que se basa en su contenido.
+
+00:01:34.161 --> 00:01:35.829
+Aquí tenemos la vista de texto de Tom,
+
+00:01:35.996 --> 00:01:38.765
+que tiene un<i> height</i> inicial de cero dp,
+pero un valor<i> weight</i> de uno.
+
+00:01:39.066 --> 00:01:41.168
+Ninguno de los otros hijos
+tiene un valor<i> weight,</i>
+
+00:01:41.368 --> 00:01:44.571
+porque el valor<i> weight</i> por defecto es cero
+si no lo especificamos.
+
+00:01:44.872 --> 00:01:47.040
+Al ser el único hijo con un valor<i> weight,</i>
+
+00:01:47.241 --> 00:01:51.745
+el padre le da a la vista de texto de Tom
+todo el espacio disponible que sobraba.
+
+00:01:51.979 --> 00:01:54.882
+Por eso la vista
+de texto de Tom es tan grande.
+
+00:01:55.449 --> 00:01:58.418
+Lo que haré ahora será asignar
+valores<i> weight</i> a los otros hijos.
+
+00:01:58.819 --> 00:02:02.055
+Ahora cada hijo tiene
+un<i> height</i> de cero dp y un<i> weight</i> de uno.
+
+00:02:02.556 --> 00:02:05.058
+Este es el proceso
+que haría el LinearLayout.
+
+00:02:05.526 --> 00:02:07.928
+Intentaría averiguar el<i> height</i>
+de cada una de estas vistas.
+
+00:02:08.294 --> 00:02:10.631
+El<i> height</i> de estas vistas es de cero dp.
+
+00:02:10.931 --> 00:02:13.700
+Eso significa
+que el espacio disponible en el padre
+
+00:02:13.867 --> 00:02:16.036
+comprende prácticamente
+toda la altura de la pantalla.
+
+00:02:16.370 --> 00:02:20.374
+Divide el espacio de la pantalla en tres,
+que es el valor de la suma de los <i>weights.</i>
+
+00:02:20.774 --> 00:02:24.311
+Luego le da un tercio de ese espacio
+a la vista de texto de Tom,
+
+00:02:24.678 --> 00:02:26.914
+otro tercio para la vista de texto de Tim
+
+00:02:27.080 --> 00:02:29.183
+y un último tercio
+para la vista de texto de Todd.
+
+00:02:29.650 --> 00:02:32.586
+Estas vistas se separarán equitativamente
+en el espacio del dispositivo.
+
+00:02:32.786 --> 00:02:34.821
+Lo mismo ocurrirá
+en dispositivos más grandes,
+
+00:02:35.122 --> 00:02:36.690
+dado que cambiamos su valor<i> weight.</i>
+
+00:02:37.224 --> 00:02:39.760
+Si aumento el valor <i>weight,</i>
+
+00:02:40.160 --> 00:02:44.164
+el padre le dará más espacio
+a la vista de texto de Tim.
+
+00:02:44.731 --> 00:02:47.367
+Todavía puedo aumentar más
+su valor<i> weight</i>
+
+00:02:47.668 --> 00:02:50.737
+y podéis ver que sigue aprovechando
+el espacio disponible.
+
+00:02:51.238 --> 00:02:53.807
+En este caso, la vista de texto de Tim
+tiene un<i> weight</i> de ocho.
+
+00:02:54.308 --> 00:02:56.710
+Tom tiene un<i> weight</i> de uno,
+al igual que Todd.
+
+00:02:56.944 --> 00:02:59.746
+El subtotal es diez,
+
+00:03:00.314 --> 00:03:03.584
+así que el padre divide
+el espacio disponible entre diez.
+
+00:03:03.851 --> 00:03:07.020
+Una décima parte va para Tom,
+una octava parte va para Tim
+
+00:03:07.187 --> 00:03:08.856
+y otra décima parte para Todd.
+
+00:03:09.523 --> 00:03:12.726
+Para un LinearLayout vertical,
+tenemos tres vistas de texto de hijos.
+
+00:03:13.060 --> 00:03:15.162
+Fijamos el <i>height</i> a cero dp,
+
+00:03:15.395 --> 00:03:17.898
+de manera que todos llegan
+a la parte de arriba de la pantalla
+
+00:03:18.031 --> 00:03:19.433
+con un<i> height</i> de cero.
+
+00:03:19.600 --> 00:03:22.536
+Eso significa que el padre
+tiene todo esta altura disponible.
+
+00:03:23.136 --> 00:03:26.206
+Si fijo un valor<i> weight</i> de uno
+para cada vista de texto,
+
+00:03:26.640 --> 00:03:31.578
+la altura disponible del padre
+se repartirá por igual entre los hijos.
+
+00:03:32.679 --> 00:03:35.148
+Funcionaría de la misma forma
+con un LinearLayout horizontal.
+
+00:03:35.415 --> 00:03:37.251
+Tenemos tres vistas de texto de hijos.
+
+00:03:37.518 --> 00:03:39.520
+Empezamos con un<i> width</i> de cero dp.
+
+00:03:39.786 --> 00:03:42.523
+Eso significa que el padre tiene
+todo esta anchura disponible.
+
+00:03:43.223 --> 00:03:46.460
+Si asigno un valor<i> weight</i> de uno
+a cada vista de hijo,
+
+00:03:46.793 --> 00:03:49.830
+cogeremos la anchura disponible del padre
+
+00:03:50.030 --> 00:03:52.165
+y la repartiremos
+equitativamente entre cada hijo.
+
+00:03:52.633 --> 00:03:54.801
+Y repito: no tiene que tener
+un<i> weight</i> de uno.
+
+00:03:54.968 --> 00:03:57.304
+Podría ser dos, tres
+o cualquier otro valor.
+
+00:03:57.538 --> 00:03:59.540
+El<i> weight</i> podría ser incluso cero.
+
+00:03:59.806 --> 00:04:01.542
+Si una vista tiene
+un<i> </i>valor<i> weight</i> de cero,
+
+00:04:01.842 --> 00:04:06.380
+eso significa que no cambiará
+según el espacio disponible del padre.
+
+00:04:06.580 --> 00:04:09.216
+Prácticamente se quedará
+con la altura y anchura que fijéis.
+
+00:04:09.449 --> 00:04:10.851
+Hay algo que querría destacar.
+
+00:04:11.051 --> 00:04:13.620
+¿Cuándo debemos fijar el <i>height</i>
+o <i>width</i> en cero?
+
+00:04:14.221 --> 00:04:15.923
+Si tenéis un LinearLayout vertical,
+
+00:04:16.123 --> 00:04:18.458
+rellenáis el LinearLayout
+verticalmente y en este sentido.
+
+00:04:18.892 --> 00:04:20.394
+No sabéis el <i>height</i> que debería ser,
+
+00:04:20.560 --> 00:04:23.697
+así que fijáis el <i>height</i> en cero
+y definís un valor <i>weight.</i>
+
+00:04:24.531 --> 00:04:27.034
+En el LinearLayout horizontal
+actuaréis de forma parecida.
+
+00:04:27.267 --> 00:04:28.735
+Lo rellenáis horizontalmente,
+
+00:04:28.902 --> 00:04:31.538
+así que no sabéis
+el<i> width</i> de las vistas de hijo.
+
+00:04:31.939 --> 00:04:35.008
+Fijáis el <i>width</i> en cero dp
+y ponéis un valor<i> weight.</i>
+
+00:04:36.577 --> 00:04:39.713
+En definitiva, asignar
+un valor<i> weight</i> a una vista
+
+00:04:39.880 --> 00:04:44.051
+consiste en estirarlo
+según el tamaño de la vista del padre.
+
+00:04:44.852 --> 00:04:47.020
+Esto es útil para rellenar
+el espacio disponible
+
+00:04:47.221 --> 00:04:49.656
+en un dispositivo pequeño
+o en un dispositivo grande.
+
+00:04:50.390 --> 00:04:52.226
+Os traigo un par de ejemplos
+de la vida diaria
+
+00:04:52.392 --> 00:04:53.961
+donde el <i>layout weight</i> es muy útil.
+
+00:04:54.828 --> 00:04:56.597
+Esta es Hangouts, la aplicación de Google.
+
+00:04:57.197 --> 00:04:58.866
+Podéis usarla para hablar con amigos
+
+00:04:59.066 --> 00:05:01.068
+o para mandarles pingüinos dormilones.
+
+00:05:01.735 --> 00:05:04.671
+En esta parte de abajo es
+por donde se envía el mensaje.
+
+00:05:05.539 --> 00:05:07.975
+Miremos este<i> layout</i> más detenidamente.
+
+00:05:08.809 --> 00:05:10.577
+Es un LinearLayout horizontal
+
+00:05:10.811 --> 00:05:12.713
+porque se extiende de forma horizontal.
+
+00:05:13.347 --> 00:05:14.882
+Está constituido por un<i> ImageView</i>,
+
+00:05:15.048 --> 00:05:17.017
+un<i> EditText</i>,
+donde podéis poner texto,
+
+00:05:17.351 --> 00:05:18.819
+y otro <i>ImageView</i>.
+
+00:05:19.086 --> 00:05:22.356
+El<i> height</i> de cada una de estas vistas
+es<i> wrap_content</i> (rodear),
+
+00:05:22.589 --> 00:05:24.791
+porque rodea
+el contenido que tiene dentro.
+
+00:05:25.325 --> 00:05:27.995
+El<i> width</i> de estas dos vistas de imágenes
+es<i> wrap_content,</i>
+
+00:05:28.228 --> 00:05:30.531
+porque es tan ancho como lo que contiene.
+
+00:05:31.398 --> 00:05:32.866
+Le damos un<i> weight</i> de cero,
+
+00:05:33.033 --> 00:05:35.035
+porque no queremos
+que sea más grande que esto.
+
+00:05:35.402 --> 00:05:37.504
+Incluso si al padre
+le sobra mucho espacio.
+
+00:05:37.838 --> 00:05:40.541
+Fijar el <i>weight</i> en cero nos asegura
+que solo habrá<i> wrap_content</i>
+
+00:05:40.707 --> 00:05:42.910
+en<i> widht</i> y en<i> height </i>y que no cambiará.
+
+00:05:43.243 --> 00:05:44.645
+Queremos estirarla de tal forma
+
+00:05:44.778 --> 00:05:46.980
+que sea más grande
+en dispositivos con pantalla grande
+
+00:05:47.181 --> 00:05:49.883
+y queremos que encoja en dispositivos
+con una pantalla más pequeña.
+
+00:05:50.551 --> 00:05:53.954
+Para ello, fijamos el<i> width</i> en cero dp
+y el<i> weight</i> en uno.
+
+00:05:54.555 --> 00:05:56.356
+Eso significa
+que el LinearLayout del padre
+
+00:05:56.523 --> 00:05:58.258
+intentará primero colocar esta imagen
+
+00:05:58.392 --> 00:05:59.793
+y luego esta.
+
+00:05:59.993 --> 00:06:02.095
+Cualquier espacio disponible
+en el dispositivo
+
+00:06:02.329 --> 00:06:03.931
+lo recibirá esta vista.
+
+00:06:04.998 --> 00:06:06.767
+Tenéis otro ejemplo en la aplicación Maps.
+
+00:06:07.034 --> 00:06:09.102
+Esta es una página específica de un lugar.
+
+00:06:09.536 --> 00:06:11.972
+Hay tres botones aquí:
+<i>Call</i>, <i>Save</i> y <i>Website</i>.
+
+00:06:12.573 --> 00:06:14.007
+Vamos a mirarlos más detenidamente.
+
+00:06:14.374 --> 00:06:18.879
+Podéis hacerlos como vistas de texto
+con iconos unidos a ellas.
+
+00:06:19.046 --> 00:06:21.181
+Consultad los apuntes del profesor
+para más detalles.
+
+00:06:21.381 --> 00:06:23.217
+Pero eso no nos concierne ahora.
+
+00:06:23.550 --> 00:06:25.919
+Para este ejercicio, asumiremos
+que son vistas de texto.
+
+00:06:26.353 --> 00:06:29.456
+El<i> height</i> de cada vista de texto
+será<i> wrap_content</i>
+
+00:06:29.656 --> 00:06:32.192
+porque rodea todo lo que contiene.
+
+00:06:32.860 --> 00:06:34.661
+El<i> width</i> se complica en este caso.
+
+00:06:34.862 --> 00:06:37.664
+Cada una de las vistas de texto
+debe separarse equitativamente
+
+00:06:37.865 --> 00:06:39.299
+a lo largo del ancho de la pantalla
+
+00:06:39.466 --> 00:06:42.102
+sin importar si es
+un dispositivo pequeño o grande.
+
+00:06:42.402 --> 00:06:44.571
+No queremos
+las tres vistas de texto agrupadas
+
+00:06:44.771 --> 00:06:46.406
+en el lado izquierdo de la pantalla,
+
+00:06:47.140 --> 00:06:49.109
+así que para separar
+a los hijos equitativamente
+
+00:06:49.243 --> 00:06:50.744
+les damos los mismos valores<i> weight.</i>
+
+00:06:50.911 --> 00:06:53.247
+Fijamos el <i>width </i>en cero
+y el<i> weight</i> en uno para cada uno.
+
+00:06:53.947 --> 00:06:56.083
+De esta forma,
+la anchura disponible del padre
+
+00:06:56.316 --> 00:06:58.585
+se repartirá por igual
+entre los tres hijos.
+
+00:06:59.620 --> 00:07:01.722
+El último ejemplo es la aplicación Email.
+
+00:07:02.122 --> 00:07:05.492
+Es una pantalla de redacción de Gmail,
+donde podéis escribir un mensaje.
+
+00:07:06.260 --> 00:07:07.828
+Es un LinearLayout vertical,
+
+00:07:07.995 --> 00:07:09.730
+porque los apartados están en una columna.
+
+00:07:10.197 --> 00:07:12.666
+Está compuesto
+por cuatro diferentes <i>EditText.</i>
+
+00:07:13.300 --> 00:07:15.802
+El<i> width</i> de cada hijo es<i> match_parent</i>
+
+00:07:15.969 --> 00:07:18.505
+porque queremos estirarlo
+por toda la anchrura de la pantalla.
+
+00:07:18.805 --> 00:07:22.843
+El<i> height</i> debe ser<i> wrap_content</i>
+
+00:07:23.076 --> 00:07:24.945
+para que rodee el contenido.
+
+00:07:25.445 --> 00:07:29.316
+Fijamos los valores<i> weight</i> en cero
+porque no queremos aumentar el tamaño,
+
+00:07:29.449 --> 00:07:32.052
+incluso si el padre
+tiene espacio de sobra.
+
+00:07:32.553 --> 00:07:35.556
+No obstante, para este último<i> EditText,</i>
+donde escribís vuestros mensajes,
+
+00:07:35.689 --> 00:07:38.025
+queremos darle al usuario
+mucho espacio para escribir
+
+00:07:38.358 --> 00:07:40.160
+una de esas extensas cartas
+para la abuela.
+
+00:07:40.661 --> 00:07:44.131
+Fijamos el<i> height</i> en cero dp
+y le damos un valor<i> weight</i> de uno.
+
+00:07:44.765 --> 00:07:46.967
+De esta forma, si el padre
+tuviera espacio libre,
+
+00:07:47.100 --> 00:07:49.436
+sería para este hijo.
+
+00:07:49.937 --> 00:07:51.705
+En la pantalla
+de un dispositivo más grande,
+
+00:07:51.872 --> 00:07:54.474
+el campo de redacción
+sería algo más grande.
+
+00:07:54.708 --> 00:07:57.044
+En un dispositivo más pequeño,
+sería un poco más pequeño.
+
+00:07:58.478 --> 00:08:00.013
+Ahora os toca a vosotros practicar.
+
+00:08:00.180 --> 00:08:02.049
+Queremos que continuéis
+y hagáis este <i>layout</i>
+
+00:08:02.249 --> 00:08:03.650
+en el visualizador XML.
+
+00:08:03.951 --> 00:08:06.253
+Podéis empezar con el XML
+que os proporcionamos.
+
+00:08:06.653 --> 00:08:08.088
+Os dejo un par de consejos.
+
+00:08:08.422 --> 00:08:09.957
+Cuando os enfrentáis a algo así,
+
+00:08:10.157 --> 00:08:12.226
+determinad primero
+la anchura de cada vista.
+
+00:08:12.392 --> 00:08:15.095
+Luego intentad determinar
+la altura de cada vista.
+
+00:08:15.329 --> 00:08:19.533
+Aseguraos que la imagen aprovecha
+el espacio que le sobre al padre.
+
+00:08:19.666 --> 00:08:22.369
+De esta forma, en un dispositivo
+más pequeño ocupará menos espacio
+
+00:08:22.536 --> 00:08:24.638
+y en un dispositivo más grande
+ocupará más espacio.
+
+00:08:24.905 --> 00:08:26.306
+Muy bien. Adelante.
+
+00:08:26.473 --> 00:08:27.908
+Marcad esta casilla al terminar.
+

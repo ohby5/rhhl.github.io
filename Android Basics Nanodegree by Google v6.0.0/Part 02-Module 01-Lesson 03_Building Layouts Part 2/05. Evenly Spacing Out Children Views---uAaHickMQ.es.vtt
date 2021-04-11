@@ -1,0 +1,428 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.200 --> 00:00:03.200
+Vamos a hacer un repaso. Hasta ahora,
+hemos visto que la disposición lineal
+
+00:00:03.267 --> 00:00:06.267
+puede tener una orientación
+horizontal o vertical.
+
+00:00:06.700 --> 00:00:09.533
+Vamos a ver si esas vistas
+están aprovechando al máximo
+
+00:00:09.600 --> 00:00:11.167
+el espacio de la pantalla.
+
+00:00:11.233 --> 00:00:14.300
+Es decir,
+el espacio disponible en pantalla.
+
+00:00:14.933 --> 00:00:16.400
+En nuestro teléfono Nexus 6,
+
+00:00:16.467 --> 00:00:18.667
+supongamos que tenemos
+una disposición lineal vertical
+
+00:00:18.733 --> 00:00:20.300
+con tres hijos con vistas dentro.
+
+00:00:20.733 --> 00:00:22.333
+Tom, Tim y Todd.
+
+00:00:22.400 --> 00:00:25.433
+Cuando sujetamos el móvil
+con la mano en modo vertical,
+
+00:00:25.500 --> 00:00:28.900
+todo el texto se agrupa en la esquina
+superior izquierda de la pantalla.
+
+00:00:29.367 --> 00:00:31.567
+Todo este espacio en blanco
+no se utiliza.
+
+00:00:32.299 --> 00:00:35.400
+Lo mismo pasa si giramos el dispositivo
+en modo horizontal.
+
+00:00:35.467 --> 00:00:37.700
+El texto se agrupará
+en la esquina superior izquierda
+
+00:00:37.767 --> 00:00:40.033
+y quedará todo este espacio en blanco.
+
+00:00:40.100 --> 00:00:42.033
+Se puede ver aún mejor en una tablet,
+
+00:00:42.100 --> 00:00:44.167
+ya que la pantalla es mucho más grande.
+
+00:00:44.233 --> 00:00:46.967
+No ocupa mucho espacio de la pantalla
+
+00:00:47.033 --> 00:00:48.733
+y el resto se queda vacío.
+
+00:00:49.100 --> 00:00:51.600
+Ahora veremos cómo repartir
+de forma equitativa estas vistas
+
+00:00:51.667 --> 00:00:54.867
+por la pantalla y así sacar provecho
+del espacio disponible.
+
+00:00:54.967 --> 00:00:56.900
+Esto también afecta a otras vistas.
+
+00:00:56.967 --> 00:01:00.433
+Podremos tener imágenes más grandes
+en la pantalla para aprovecharlas mejor,
+
+00:01:00.500 --> 00:01:03.433
+en vez de dejarlas muy pequeñas
+en la esquina superior izquierda.
+
+00:01:03.900 --> 00:01:05.500
+Lo mismo pasa con los botones.
+
+00:01:05.567 --> 00:01:09.467
+Podemos crear botones más grandes
+para que sea más fácil tocarlos.
+
+00:01:09.767 --> 00:01:13.067
+En esta demostración,
+vamos a centrarnos en las <i>TextViews.</i>
+
+00:01:13.133 --> 00:01:17.467
+Vamos al visor XML para ver
+cómo podemos repartir estas vistas.
+
+00:01:18.100 --> 00:01:20.733
+Aquí tenemos el código
+para Tom, Tim y Todd.
+
+00:01:21.000 --> 00:01:23.900
+Tenemos las tres vistas de texto
+dentro de la disposición vertical
+
+00:01:23.967 --> 00:01:26.033
+y así aparece en el dispositivo.
+
+00:01:26.567 --> 00:01:29.733
+Ahora voy a enseñarte
+cómo distribuir las tres <i>TextViews</i>
+
+00:01:29.800 --> 00:01:32.033
+para que Tom aparezca aquí,
+Tim por aquí
+
+00:01:32.100 --> 00:01:33.833
+y Todd aquí abajo.
+
+00:01:33.900 --> 00:01:37.867
+Está claro que ajustar la altura
+a <i>wrap_content</i> no es la solución.
+
+00:01:37.933 --> 00:01:41.267
+Otra cosa que hemos aprendido es ajustar
+el valor fijo de DP para la altura.
+
+00:01:41.333 --> 00:01:44.967
+Voy a darle a la altura
+un valor de, por ejemplo, 200dp.
+
+00:01:45.767 --> 00:01:48.067
+Genial,
+ahora tenemos más espacio para Tom.
+
+00:01:48.333 --> 00:01:50.933
+Si hiciera lo mismo
+con las demás <i>TextViews,</i>
+
+00:01:51.300 --> 00:01:54.033
+se distribuirían de una forma
+más uniforme por la pantalla.
+
+00:01:54.100 --> 00:01:57.700
+Sin embargo, esta solución solo serviría
+para un dispositivo de este tamaño.
+
+00:01:57.767 --> 00:02:00.300
+Si tuviera una tablet como la de antes,
+
+00:02:00.367 --> 00:02:04.567
+estas vistas seguirían agrupándose
+en la esquina superior izquierda.
+
+00:02:04.633 --> 00:02:06.233
+Otra manera de ajustar la altura
+
+00:02:06.300 --> 00:02:08.800
+es con la opción de <i>match_parent</i>
+que ya conocemos.
+
+00:02:08.866 --> 00:02:11.667
+Si ajustamos <i>match_parent</i>
+a la <i>TextView</i> de Tom,
+
+00:02:11.733 --> 00:02:13.600
+adoptará la altura del padre,
+
+00:02:13.667 --> 00:02:15.467
+es decir,
+la de toda la pantalla.
+
+00:02:15.533 --> 00:02:17.100
+Eso hace que las demás <i>TextViews</i>
+
+00:02:17.167 --> 00:02:19.133
+se salgan de la pantalla
+y no podamos verlas.
+
+00:02:19.200 --> 00:02:20.867
+Así que no vamos a hacerlo.
+
+00:02:20.933 --> 00:02:22.167
+Ya hemos intentado todo.
+
+00:02:22.233 --> 00:02:24.367
+Hemos intentado ajustar la altura
+a <i>wrap_content,</i>
+
+00:02:24.433 --> 00:02:27.233
+así como corregir el valor de DP,
+y hemos probado el <i>match_parent.</i>
+
+00:02:27.300 --> 00:02:32.500
+Nada nos ha permitido distribuirlas bien
+entre los diferentes dispositivos.
+
+00:02:32.800 --> 00:02:35.867
+Vamos a preguntarle a Google para intentar
+buscar una solución al problema.
+
+00:02:36.300 --> 00:02:38.460
+Estamos utilizando un <i>ViewGroup</i>
+de disposición lineal
+
+00:02:38.500 --> 00:02:41.667
+y queremos que las vistas hijas
+se distribuyan bien. Vamos a buscarlo.
+
+00:02:42.233 --> 00:02:44.433
+Nos aparecen bastantes resultados.
+
+00:02:44.533 --> 00:02:46.833
+Vamos a entrar en el primero.
+
+00:02:46.900 --> 00:02:49.267
+Es un enlace
+a la página Stackoverflow.
+
+00:02:49.300 --> 00:02:51.720
+Es una página de preguntas y respuestas.
+Puedes preguntar
+
+00:02:51.767 --> 00:02:54.400
+para que te respondan
+otros desarrolladores de Android.
+
+00:02:54.467 --> 00:02:57.800
+Yo la utilizo siempre
+cuando me atasco y necesito ayuda.
+
+00:02:57.867 --> 00:03:00.433
+Puede que otros
+ya hayan preguntado lo que buscamos
+
+00:03:00.500 --> 00:03:01.900
+y tengan la solución.
+
+00:03:01.967 --> 00:03:05.333
+Alguien pregunta si se pueden distribuir
+los botones uniformemente
+
+00:03:05.400 --> 00:03:07.567
+a lo largo del ancho
+de la disposición lineal.
+
+00:03:07.633 --> 00:03:09.600
+Se parece a lo que buscamos,
+
+00:03:09.667 --> 00:03:12.567
+solo que en vez de botones,
+nosotros trabajamos con <i>TextViews.</i>
+
+00:03:12.633 --> 00:03:15.167
+Y que en vez del ancho
+de la disposición lineal,
+
+00:03:15.233 --> 00:03:17.700
+nosotros queremos
+repartirlas a lo largo de su altura.
+
+00:03:17.767 --> 00:03:20.633
+Podemos leer la pregunta
+o podemos echarle un vistazo por encima.
+
+00:03:20.700 --> 00:03:23.000
+Yo suelo pasarlo por encima
+hasta la respuesta.
+
+00:03:23.067 --> 00:03:27.500
+Esta solución tiene 88 votos
+y una marca de verificación verde.
+
+00:03:27.567 --> 00:03:30.600
+Dice que podemos
+ajustar <i>layout_width</i> a 0dp
+
+00:03:30.667 --> 00:03:33.767
+y <i>layout_weight</i> <i>disposición_relevancia</i>
+para cada uno de los botones a 1.
+
+00:03:34.167 --> 00:03:37.100
+Así, se reparte el ancho disponible
+uniformemente entre los botones.
+
+00:03:37.800 --> 00:03:41.100
+A lo mejor aún no comprendes del todo
+la respuesta, pero no pasa nada.
+
+00:03:41.167 --> 00:03:44.533
+Algo importante
+es esto de <i>layout_weight.</i>
+
+00:03:44.600 --> 00:03:47.867
+No lo habíamos visto antes, pero es
+una parte importante de la respuesta.
+
+00:03:47.933 --> 00:03:49.567
+Vamos a copiarlo y buscarlo en Google
+
+00:03:49.633 --> 00:03:51.933
+para saber más cosas
+acerca de <i>layout_weight.</i>
+
+00:03:52.000 --> 00:03:55.133
+Vamos a buscar
+"linearlayout layout_weight".
+
+00:03:55.200 --> 00:03:57.533
+Lo primero que sale es un artículo
+sobre disposición lineal
+
+00:03:57.600 --> 00:04:00.567
+de la página developer.android.com,
+así que vamos a entrar ahí.
+
+00:04:01.233 --> 00:04:03.767
+Es un artículo
+sobre la disposición lineal.
+
+00:04:03.833 --> 00:04:07.933
+Sabemos cómo funciona lo que viene arriba
+sobre atributos de orientación de Android,
+
+00:04:08.000 --> 00:04:11.133
+pero luego aparecen cosas
+sobre algo que se llama <i>Layout Weight.</i>
+
+00:04:11.200 --> 00:04:13.000
+En la parte de abajo
+tenemos un ejemplo
+
+00:04:13.067 --> 00:04:15.267
+con código y una captura de pantalla.
+
+00:04:15.633 --> 00:04:17.666
+Podría resumirte todo esto,
+
+00:04:17.733 --> 00:04:21.166
+pero antes quiero darte la oportunidad
+de leer este artículo
+
+00:04:21.233 --> 00:04:23.300
+para que puedas intentarlo tú mismo.
+
+00:04:23.367 --> 00:04:26.267
+Es una situación bastante real
+de cómo resolver estos problemas
+
+00:04:26.333 --> 00:04:28.133
+cuando se acabe este curso.
+
+00:04:28.200 --> 00:04:30.300
+Buscarás información por la red
+
+00:04:30.367 --> 00:04:33.600
+e intentarás utilizarla
+para solucionar el problema.
+
+00:04:34.400 --> 00:04:37.100
+Esta es la disposición
+que tenemos ahora en el dispositivo
+
+00:04:37.167 --> 00:04:39.033
+y esta es la que queremos tener.
+
+00:04:39.100 --> 00:04:42.700
+Los tres textos están distribuidos
+uniformemente a lo largo del dispositivo.
+
+00:04:42.767 --> 00:04:43.767
+Para solucionarlo,
+
+00:04:43.833 --> 00:04:45.867
+quiero que leas
+el artículo "LinearLayout".
+
+00:04:45.933 --> 00:04:47.533
+Encontrarás el enlace abajo.
+
+00:04:47.700 --> 00:04:48.900
+Es totalmente normal
+
+00:04:48.967 --> 00:04:52.100
+que no comprendas
+todo lo que viene en el artículo.
+
+00:04:52.333 --> 00:04:54.967
+A veces,
+solo tendrás una idea vaga
+
+00:04:55.033 --> 00:04:59.500
+de cómo te pueden ayudar en tu trabajo
+los conceptos que vienen en el artículo.
+
+00:05:00.300 --> 00:05:02.767
+Luego quiero que aportes alguna idea
+sobre cómo llevar a cabo
+
+00:05:02.833 --> 00:05:04.767
+esa disposición en XML.
+
+00:05:05.100 --> 00:05:07.467
+No tienes que tener
+el código de disposición completo
+
+00:05:07.533 --> 00:05:10.067
+porque vamos a verlo juntos
+en el próximo vídeo.
+
+00:05:10.400 --> 00:05:12.233
+Aquí podrás escribir un par de líneas
+
+00:05:12.300 --> 00:05:15.400
+o puntos importantes sobre cómo podríamos
+resolver nuestro problema
+
+00:05:15.467 --> 00:05:17.267
+a partir de la información del artículo.
+

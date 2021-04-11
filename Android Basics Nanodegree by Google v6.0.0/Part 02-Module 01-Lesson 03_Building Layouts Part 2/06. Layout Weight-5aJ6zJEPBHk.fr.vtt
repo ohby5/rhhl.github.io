@@ -1,0 +1,258 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.800 --> 00:00:04.230
+Pour créer ce modèle,
+je pense d'abord au concept,
+
+00:00:04.230 --> 00:00:08.160
+pour être sûre d'avoir une idée
+de ce que je vais faire avant de codifier.
+
+00:00:08.500 --> 00:00:09.420
+On note d'abord
+
+00:00:09.420 --> 00:00:10.910
+que c'est un <i>Linear Layout</i> vertical,
+
+00:00:10.910 --> 00:00:13.060
+car les éléments sont
+dans une colonne verticale.
+
+00:00:13.340 --> 00:00:14.590
+On a trois vues enfants :
+
+00:00:14.590 --> 00:00:16.980
+un <i>ImageView</i>, un <i>TextView</i>
+et un <i>TextView</i>.
+
+00:00:17.730 --> 00:00:21.840
+La première astuce que j'ai donnée était
+de déterminer la largeur de chaque vue.
+
+00:00:22.350 --> 00:00:24.000
+Puisque tout le <i>Layout</i> prend
+
+00:00:24.000 --> 00:00:26.050
+toute la largeur
+et la hauteur de l'appareil,
+
+00:00:26.050 --> 00:00:29.370
+ce <i>LinearLayout</i> vertical a une largeur
+et une hauteur de <i>match_parent</i>.
+
+00:00:30.110 --> 00:00:33.640
+Pour <i>ImageView</i>, il faut aussi
+qu'il soit aussi large que le parent
+
+00:00:33.640 --> 00:00:35.810
+qui, à son tour est aussi large
+que l'appareil.
+
+00:00:35.810 --> 00:00:37.630
+On le règle donc
+pour qu'il soit <i>match_parent</i>.
+
+00:00:37.630 --> 00:00:39.430
+On fait la même chose
+pour les deux <i>TextViews</i>.
+
+00:00:39.430 --> 00:00:41.440
+Ils doivent correspondre
+à la largeur de l'appareil
+
+00:00:41.440 --> 00:00:43.050
+pour être <i>match_parent</i>.
+
+00:00:43.050 --> 00:00:45.130
+On travaille alors sur la hauteur
+de chaque vue.
+
+00:00:45.330 --> 00:00:49.210
+Ces deux <i>TextViews</i> sont faciles
+car ils englobent le contenu.
+
+00:00:49.210 --> 00:00:51.360
+On règle <i>wrap_content</i>
+pour correspondre à la hauteur
+
+00:00:51.360 --> 00:00:53.010
+de chaque <i>TextView</i>.
+
+00:00:53.010 --> 00:00:54.900
+On règle aussi
+les valeurs de <i>Weight</i> à zéro
+
+00:00:54.900 --> 00:00:57.190
+car ces valeurs ne doivent pas changer
+
+00:00:57.190 --> 00:00:59.520
+même s'il y a de l'espace libre
+chez le parent.
+
+00:01:00.160 --> 00:01:02.160
+<i>ImageView</i> était la partie 
+la plus difficile.
+
+00:01:02.670 --> 00:01:05.080
+La taille de l'image
+doit grandir ou rétrécir
+
+00:01:05.080 --> 00:01:07.290
+selon l'espace disponible chez le parent,
+
+00:01:07.750 --> 00:01:10.769
+ce qui dépend de la taille
+disponible sur l'écran de l'appareil.
+
+00:01:11.160 --> 00:01:13.060
+On utilise <i>weights</i> ou poids pour le faire.
+
+00:01:13.060 --> 00:01:16.060
+On règle la hauteur de <i>ImageView</i>
+pour commencer qu'elle commence à zéro dp,
+
+00:01:16.060 --> 00:01:17.990
+mais on lui donne le poids un.
+
+00:01:17.990 --> 00:01:20.720
+Puisqu'aucun des autres enfants 
+n'a de valeur du poids
+
+00:01:20.720 --> 00:01:24.460
+alors tout espace disponible
+chez le parent sera donné à cet <i>ImageView</i>.
+
+00:01:25.020 --> 00:01:29.510
+Et on règle la hauteur à 0dp
+car c'est un <i>Linear Layout</i> vertical.
+
+00:01:29.510 --> 00:01:31.700
+Donc il se remplit verticalement.
+
+00:01:31.980 --> 00:01:35.840
+On connaît la hauteur seulement
+lorsque la valeur du poids la détermine.
+
+00:01:36.370 --> 00:01:39.900
+Ce lien était dans les notes du professeur
+et il y avait déjà du code dedans.
+
+00:01:39.900 --> 00:01:41.930
+Le positionnement des vues
+est pourtant incorrect,
+
+00:01:41.930 --> 00:01:43.120
+il faut donc régler ça.
+
+00:01:43.450 --> 00:01:45.900
+Commençons avec les <i>TextViews</i>
+car ils sont faciles.
+
+00:01:46.200 --> 00:01:49.260
+Ces <i>TextViews</i> ne s'étirent pas
+sur toute la largeur de l'appareil.
+
+00:01:49.260 --> 00:01:50.810
+Il faut donc changer ça.
+
+00:01:50.810 --> 00:01:52.610
+La largeur devrait être <i>match_parent</i>.
+
+00:01:53.100 --> 00:01:54.180
+C'est mieux.
+
+00:01:54.180 --> 00:01:56.780
+Maintenant, le fond un peu bleu-gris
+
+00:01:56.780 --> 00:01:58.660
+prend toute la largeur de l'appareil.
+
+00:01:59.200 --> 00:02:02.120
+Pareil pour le <i>TextView</i>
+du feu de camp à la plage.
+
+00:02:02.490 --> 00:02:03.500
+Cool.
+Et la hauteur
+
+00:02:03.500 --> 00:02:05.510
+est <i>wrap_content</i>, ce qui est correct.
+
+00:02:05.800 --> 00:02:09.660
+On a tout cet espace vertical en plus
+dans le <i>Linear Layout</i> vertical.
+
+00:02:10.450 --> 00:02:13.250
+Au fait, la largeur et la hauteur
+du <i>Linear Layout</i>
+
+00:02:13.250 --> 00:02:14.660
+sont réglées comme <i>match_parent</i>
+
+00:02:14.660 --> 00:02:16.500
+pour que <i>Layout</i> s'élargisse finalement
+
+00:02:16.500 --> 00:02:18.780
+pour recouvrir toute la hauteur
+et la largeur de l'écran.
+
+00:02:18.780 --> 00:02:20.730
+Pour utiliser cette hauteur supplémentaire
+
+00:02:20.730 --> 00:02:21.840
+chez le parent,
+
+00:02:21.840 --> 00:02:24.410
+il faut la donner à un enfant
+qui a une valeur de poids.
+
+00:02:24.670 --> 00:02:27.990
+Changeons donc <i>ImageView</i>
+pour qu'il ait une valeur de poids.
+
+00:02:28.540 --> 00:02:31.120
+Premièrement, on peut régler
+la largeur comme <i>match_parent</i>
+
+00:02:31.120 --> 00:02:33.780
+pour qu'elle corresponde aussi
+à la largeur de l'appareil.
+
+00:02:34.430 --> 00:02:39.410
+Puis on règle la hauteur à 0dp
+et le poids à 1.
+
+00:02:39.920 --> 00:02:41.950
+Et c'est la capture d'écran désirée.
+
+00:02:42.200 --> 00:02:43.290
+Bon travail.
+
+00:02:43.290 --> 00:02:47.700
+Notez que si j'augmente beaucoup
+le poids des valeurs à sept ou à dix,
+
+00:02:48.200 --> 00:02:50.770
+ça ne change pas vraiment 
+l'aperçu sur l'appareil.
+
+00:02:51.500 --> 00:02:54.570
+C'est parce que c'est
+le seul enfant avec un poids
+
+00:02:54.570 --> 00:02:57.420
+donc il importe peu
+que le poids soit élevé ou pas.
+
+00:02:57.420 --> 00:03:01.530
+Toute la hauteur en plus chez le parent 
+sera donnée à cet enfant.
+
+00:03:02.680 --> 00:03:04.290
+Changeons donc ceci en un.
+
+00:03:05.190 --> 00:03:06.270
+Ok, bon travail.
+

@@ -1,0 +1,441 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.420 --> 00:00:03.469
+Diğer kardeş görüntülere göre
+alt görüntüleri konumlandırırken
+
+00:00:03.469 --> 00:00:06.190
+konumlarına kısıtlama ekleyebilirsiniz.
+
+00:00:06.190 --> 00:00:09.885
+Örneğin, bir TextView diğer TextView'in
+üzerinde olması gerekir veya
+
+00:00:09.885 --> 00:00:14.090
+bir ImageView diğer TextView'in
+solunda olması gerekir gibi.
+
+00:00:14.090 --> 00:00:17.280
+Tüm bu kısıtlamalar bana akşam
+yemeği partisi için oturma çizelgesi
+
+00:00:17.280 --> 00:00:18.390
+yapmayı hatırlattı.
+
+00:00:18.910 --> 00:00:21.380
+Önümüzde bir doğumgünü kutlaması var,
+
+00:00:21.380 --> 00:00:23.540
+hadi onun oturma çizelgesine bakalım.
+
+00:00:23.540 --> 00:00:25.570
+Tüm bu insanları yemeğe davet ettik.
+
+00:00:25.570 --> 00:00:28.330
+Fakat insanların oturmak istediği
+yerlerle ilgili kısıtlamalar var.
+
+00:00:28.330 --> 00:00:30.550
+Bazı insanlar en iyi arkadaşlarının
+yanına oturmalılar.
+
+00:00:30.550 --> 00:00:33.490
+Diğerlerinin dost-düşmanları var.
+
+00:00:33.490 --> 00:00:36.120
+Yani, onlar bazı kişilerin
+yanına oturmak istemeyebilir.
+
+00:00:36.120 --> 00:00:39.860
+Yani, tüm bunları hesaba katarak
+bu önerdiğim düzeni buldum.
+
+00:00:39.860 --> 00:00:41.880
+Kunal, Ben ve Kagure burada olacak.
+
+00:00:41.880 --> 00:00:45.900
+Natalie, Lyla ve ben buradayız.
+Amy, Omoju ve Jenny ise bu köşede.
+
+00:00:45.900 --> 00:00:49.400
+Peki bu oturma düzenini XML'de
+TextView ve Relative Layout
+
+00:00:49.400 --> 00:00:51.040
+kullanarak oluşturabilir miyiz?
+
+00:00:51.040 --> 00:00:53.270
+Görüntüleri köşelere nasıl
+koyacağımızı biliyoruz.
+
+00:00:53.270 --> 00:00:57.398
+O zaman Lyla TextView'i üst görünümün
+sol alt köşesine hizalanacak.
+
+00:00:57.398 --> 00:01:01.390
+Jennie TextView'i üst görünümün
+sağ alt köşesine hizalanacak.
+
+00:01:01.390 --> 00:01:04.510
+Ben'i ise üst görünümün
+üst köşesine hizalayacağız.
+
+00:01:04.510 --> 00:01:08.320
+Bu arada, üst görünüm tam
+genişlik ve yükseklik olacağı için
+
+00:01:08.320 --> 00:01:11.360
+genişlik ve yükseliği
+match_parent ayarlıyoruz.
+
+00:01:11.360 --> 00:01:12.430
+Ben'e geri dönelim.
+
+00:01:12.430 --> 00:01:14.550
+Üst görünümün üstüne hizalı.
+
+00:01:14.550 --> 00:01:16.970
+Ayrıca onu yatay olarak
+ortalamak istiyoruz.
+
+00:01:16.970 --> 00:01:20.320
+Bu üç görünüme referans
+görünümler diyebiliriz.
+
+00:01:20.320 --> 00:01:23.750
+Çünkü diğerleri bu kişilere
+göre konumlandırılacak.
+
+00:01:23.750 --> 00:01:27.670
+Ve kim nerede oturursa otursun,
+bu kişiler hareket etmeyecek.
+
+00:01:27.670 --> 00:01:29.360
+Peki, bir kişi daha ekleyelim.
+
+00:01:29.360 --> 00:01:32.810
+Burada Kunal var,
+yeri Ben'in solunda.
+
+00:01:32.810 --> 00:01:35.259
+Bunu XML'de nasıl ifade ederiz?
+
+00:01:35.259 --> 00:01:39.552
+Bir görüntü Ben adlı görüntünün solunda
+olmalı diyebileceğimiz belirli bir
+
+00:01:39.552 --> 00:01:40.655
+öznitelik yok.
+
+00:01:40.655 --> 00:01:43.363
+Tüm Android öznitelik adları geneldir,
+
+00:01:43.363 --> 00:01:46.940
+bu yüzden istediğiniz herhangi bir
+kullanım durumunda çalışır.
+
+00:01:46.940 --> 00:01:49.410
+Kunal'ı Ben'in soluna
+koymak istiyoruz fakat
+
+00:01:49.410 --> 00:01:52.580
+bunu yapabilecek öznitelik
+isimlerinden hiçbirini bilmiyoruz.
+
+00:01:52.580 --> 00:01:53.428
+Neyse ki,
+
+00:01:53.428 --> 00:01:58.780
+RelativeLayout'un android: layout_toLeftof
+diye bir özniteliği bulunuyor.
+
+00:01:58.780 --> 00:02:03.520
+Bu demektir ki, Kunal TextView'i
+bir görüntünün solunda olmalı.
+
+00:02:03.520 --> 00:02:08.020
+Ve bunu view ID kullanarak yapıyoruz.
+
+00:02:08.020 --> 00:02:10.000
+Herhangi bir görüntüye
+view ID atayabiliriz.
+
+00:02:10.000 --> 00:02:13.110
+Özellikle RelativeLayout için
+belirtilmiş olması gerekmiyor.
+
+00:02:13.110 --> 00:02:16.275
+Bir RelativeLayout, LinearLayout
+veya herhangi bir
+
+00:02:16.275 --> 00:02:18.200
+görüntü grubu içerisinde olabilir.
+
+00:02:18.200 --> 00:02:21.710
+Yani Ben TextView'i üzerine şu
+özniteliği ekleyebiliriz, android:id.
+
+00:02:21.710 --> 00:02:23.860
+Onun değeri ise ID ismi.
+
+00:02:23.860 --> 00:02:29.500
+Format @ sembolü ile başlar, @ Android
+uygulamamızdaki bir kaynağa atıf yapar.
+
+00:02:29.500 --> 00:02:34.583
+Bu @ sembolünü uygulamamızdaki
+resimlere atıf yaparken görmüştük.
+
+00:02:34.583 --> 00:02:36.516
+Örneğin Drawable uygulaması.
+
+00:02:36.516 --> 00:02:38.950
+Sonra kaynak türünü belirleriz.
+
+00:02:38.950 --> 00:02:41.357
+Bu durumda, kaynak türü bir id.
+
+00:02:41.357 --> 00:02:44.197
+Artı işaretini de ekliyoruz çünkü
+bu id'yi ilk defa
+
+00:02:44.197 --> 00:02:45.879
+bildiriyoruz.
+
+00:02:45.879 --> 00:02:50.120
+Daha sonra bölü işareti ve
+görüntünün adını giriyoruz.
+
+00:02:50.120 --> 00:02:53.190
+Ben TextView'i için bu adı seçtik.
+
+00:02:53.190 --> 00:02:55.240
+Ben_text_view dedik.
+
+00:02:56.320 --> 00:02:59.470
+Temel gereklilik isimde
+hiç boşluk olmamasıdır.
+
+00:02:59.470 --> 00:03:01.747
+Bu nedenle alt çizgi kullanıyoruz.
+
+00:03:02.247 --> 00:03:03.633
+Bir harf ile başlamalı ve
+
+00:03:03.633 --> 00:03:06.229
+herhangi bir sembol kullanılabilir.
+
+00:03:07.250 --> 00:03:08.990
+Sayılar da kullanılabilir.
+
+00:03:08.990 --> 00:03:14.500
+Bu durumda Ben'e
+ben_text_view ID'sini verdik.
+
+00:03:14.500 --> 00:03:16.130
+Böylece daha sonra
+ona atıfta bulunabiliriz.
+
+00:03:16.130 --> 00:03:20.460
+Kunal TextView'i için
+layout_toLeftof özniteliğini ekleyip
+
+00:03:20.460 --> 00:03:22.920
+Ben TextView'inin solunda diyebiliriz.
+
+00:03:24.190 --> 00:03:28.390
+Ben TextView ID'sine @id
+kullanarak atıf yapıyoruz.
+
+00:03:28.390 --> 00:03:32.322
+Artı işareti kullanmak zorunda değiliz
+çünkü zaten o ID'yi tanımladık.
+
+00:03:32.322 --> 00:03:34.692
+Bu ID'yi ikinci kez kullanıyoruz.
+
+00:03:34.692 --> 00:03:38.910
+ID isimleriyle karşılaşırsanız
+hepsinin farklı isim olmasına dikkat edin.
+
+00:03:38.910 --> 00:03:42.550
+Genellikle, içeriğe bağlı bir
+isim seçmek yardımcı olur.
+
+00:03:42.550 --> 00:03:45.920
+Tamam, harika, işte bu şekilde
+Kunal'ı Ben'in soluna yerleştirebiliriz.
+
+00:03:45.920 --> 00:03:49.740
+Şimdi, diyelim ki, Omoju'yu
+Jennie'nin üstüne koyacağız.
+
+00:03:49.740 --> 00:03:51.760
+Jennie'ye atıfta bulunmamız gerekeceği için
+
+00:03:51.760 --> 00:03:53.980
+Jennie için ID oluşturmamız gerekli.
+
+00:03:53.980 --> 00:03:58.240
+Jennie TextView'i için, bu ismi
+belirledik ve bu değeri verdik.
+
+00:03:58.240 --> 00:04:01.880
+ID ismi jennie_text_view.
+
+00:04:01.880 --> 00:04:04.550
+Omoju TextView'i için
+bu özniteliği ekliyoruz.
+
+00:04:04.550 --> 00:04:09.680
+Diyor ki, Omoju jennie_text_view'inin
+üzerine konumlanmalı.
+
+00:04:09.680 --> 00:04:11.700
+Ve burada oluşturduğumuz ID ise bu.
+
+00:04:12.570 --> 00:04:14.240
+XML Layout'a bakalım.
+
+00:04:14.240 --> 00:04:18.010
+Elimizde bir RelativeLayout var,
+genişlik ve yüksekliği ise match_parent.
+
+00:04:18.010 --> 00:04:19.870
+Bir de lyla_text_view var.
+
+00:04:19.870 --> 00:04:22.267
+Alt sol köşeye hizalanmış durumda
+
+00:04:22.267 --> 00:04:23.910
+ve burada da öyle görüyoruz.
+
+00:04:24.770 --> 00:04:26.314
+Sonra jennie_text_view var.
+
+00:04:26.314 --> 00:04:29.010
+O da alt sağ köşede.
+
+00:04:29.010 --> 00:04:30.140
+Yani burada.
+
+00:04:31.300 --> 00:04:32.876
+Sonra ben_text_view var.
+
+00:04:32.876 --> 00:04:35.900
+O da üst köşede.
+
+00:04:35.900 --> 00:04:38.290
+Ayrıca yatayda ortalandı.
+
+00:04:38.290 --> 00:04:39.880
+Bunlarda referans görüntüler ve
+
+00:04:39.880 --> 00:04:42.460
+diğer görüntüleri onların
+etrafında konumlandırabiliriz.
+
+00:04:42.460 --> 00:04:45.720
+Dikkat edin, diğer görüntüler için
+daha önceden ID ekledim.
+
+00:04:45.720 --> 00:04:48.040
+Yani bu Ben TextView ID'si.
+
+00:04:48.040 --> 00:04:50.970
+Sonra Kunal TextView'ini
+Ben'in soluna konumlandırabiliriz.
+
+00:04:50.970 --> 00:04:56.930
+Kunal'ı en üste ve Ben TextView'in
+soluna hizalıyorum.
+
+00:04:56.930 --> 00:04:59.045
+İşte burada Ben için ID kullanıyorum.
+
+00:04:59.045 --> 00:05:02.025
+Sonra Omoju TextView'ini
+Jenny'nin üzerine konumlandırıyorum.
+
+00:05:02.025 --> 00:05:04.915
+Omoju sağ köşeye hizalı ve
+
+00:05:04.915 --> 00:05:06.775
+Jenny TextView'inin üstünde.
+
+00:05:07.505 --> 00:05:08.245
+Harika.
+
+00:05:08.245 --> 00:05:11.685
+Bu layout'ta yerleştirilecek
+daha fazla arkadaş var.
+
+00:05:12.925 --> 00:05:15.475
+Aşağıdaki ders notlarında
+sizlere başlangıç kodlarıyla birlikte
+
+00:05:15.475 --> 00:05:19.270
+XML görüntüleyici linkini paylaştık.
+
+00:05:19.270 --> 00:05:20.910
+Devam edin ve XML'i düzenleyin ve
+
+00:05:20.910 --> 00:05:24.200
+herkesin istediği yere oturmasını sağlayalım.
+
+00:05:24.200 --> 00:05:26.840
+Bazı görüntüler yanlış olarak
+konumlandırıldı, yani
+
+00:05:26.840 --> 00:05:28.440
+bunları düzeltmeniz gerekecek.
+
+00:05:29.310 --> 00:05:32.490
+Bu arada, bir sürü yeni öznitelik gösterdik.
+
+00:05:32.490 --> 00:05:34.680
+Ama bunların hepsini ezberlemeniz
+gerektiğini düşünmeyin.
+
+00:05:34.680 --> 00:05:36.446
+İstediğiniz zaman açıp bakabilirsiniz.
+
+00:05:36.446 --> 00:05:41.150
+Relativelayout, layout params
+şeklinde arama yapabilirsiniz.
+
+00:05:41.150 --> 00:05:45.260
+İlk linke tıklarsanız, ilgili
+belgelere ulaşırsınız.
+
+00:05:45.260 --> 00:05:48.870
+Alt görünümde RelativeLayout içerisine
+koyabileceğiniz tüm bu XML öznitelikleri
+
+00:05:48.870 --> 00:05:53.290
+sayesinde RelativeLayout nasıl
+düzenleyeceğini biliyor.
+
+00:05:53.290 --> 00:05:54.965
+Aşina olduklarınızdan birkaçı şöyle.
+
+00:05:54.965 --> 00:06:00.370
+Layout_above, alignParentbottom,
+alignParentright ve saire.
+
+00:06:00.370 --> 00:06:02.090
+Şunu da not edin,
+
+00:06:02.090 --> 00:06:05.510
+XML Görselleştirici tüm bu
+öznitelikleri desteklemeyebilir.
+
+00:06:05.510 --> 00:06:08.410
+Lakin, Android Studio'da
+uygulama geliştiriyorsanız
+
+00:06:08.410 --> 00:06:10.370
+bunların hepsini kullanabilmelisiniz.
+

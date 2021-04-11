@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.140 --> 00:00:01.712
+Très bien. Maintenant, nous savons
+
+00:00:01.712 --> 00:00:04.152
+comment les <i>ViewGroups</i>
+peuvent contenir des vues.
+
+00:00:04.532 --> 00:00:06.270
+Chaque <i>ViewGroup</i>
+a des règles spécifiques
+
+00:00:06.270 --> 00:00:08.860
+concernant le positionnement
+des enfants à l'intérieur.
+
+00:00:09.200 --> 00:00:10.922
+En premier, regardons <i>LinearLayout</i>.
+
+00:00:11.172 --> 00:00:14.880
+Ce <i>ViewGroup</i> peut arranger les enfants
+dans une colonne verticale comme ceci.
+
+00:00:17.070 --> 00:00:20.860
+Notez que nous ne sommes pas limités
+à un seul <i>TextView</i> et un seul <i>ImageView</i>.
+
+00:00:20.860 --> 00:00:24.830
+On peut y insérer autant de vues voulues
+ainsi que d'autres types de vues.
+
+00:00:25.060 --> 00:00:27.320
+Donc lui, c'est Tommy,
+et voici son frère Timmy.
+
+00:00:27.680 --> 00:00:30.346
+Et voici Ivy, et sa sœur jumelle Irene.
+
+00:00:31.166 --> 00:00:33.940
+Ou <i>LinearLayout</i> peut arranger
+ses vues d'enfants
+
+00:00:33.940 --> 00:00:36.200
+en rangées horizontales comme ceci.
+
+00:00:38.150 --> 00:00:41.140
+Si vous voulez l'interdire aux garçons,
+pas de problèmes.
+
+00:00:42.240 --> 00:00:44.320
+Voici Ivy, Irene et Isabella.
+
+00:00:44.970 --> 00:00:47.270
+Bien, c'est tout pour <i>LinearLayout</i>.
+
+00:00:47.410 --> 00:00:48.780
+Plutôt simple, n'est-ce pas ?
+
+00:00:48.780 --> 00:00:49.920
+On peut arranger les enfants
+
+00:00:49.920 --> 00:00:52.275
+en colonnes verticales
+ou en rangées horizontales.
+
+00:00:52.695 --> 00:00:54.467
+Et puis, on a le père, <i>RelativeLayout</i>.
+
+00:00:54.727 --> 00:00:56.715
+<i>RelativeLayout</i> a lui aussi
+ses propres règles
+
+00:00:56.715 --> 00:00:59.075
+pour positionner ses enfants
+à l'intérieur de lui-même.
+
+00:00:59.405 --> 00:01:03.065
+Par exemple, on peut positionner
+les enfants par rapport au parent.
+
+00:01:03.355 --> 00:01:05.315
+Donc, si ça, c'est le <i>ViewGroup</i> du parent,
+
+00:01:05.315 --> 00:01:08.420
+on peut avoir un <i>TextView</i> enfant aligné
+avec le bas du parent
+
+00:01:08.750 --> 00:01:11.570
+et un <i>ImageView</i> aligné
+avec le haut du parent.
+
+00:01:12.010 --> 00:01:14.380
+Cette méthode marche aussi
+si on veut aligner les enfants
+
+00:01:14.380 --> 00:01:16.610
+avec le côté gauche ou droit
+ou au centre du parent.
+
+00:01:17.280 --> 00:01:19.710
+L'autre possibilité avec <i>RelativeLayout</i>,
+
+00:01:19.710 --> 00:01:23.531
+c'est de positionner les enfants
+par rapport à d'autres vues d'enfants.
+
+00:01:24.111 --> 00:01:25.880
+Donc, si ça, c'est le <i>ViewGroup</i> du parent,
+
+00:01:25.880 --> 00:01:29.760
+on peut positionner <i>ImageView</i>
+sur le côté gauche du parent
+
+00:01:30.030 --> 00:01:33.170
+et puis, positionner un <i>TextView</i> enfant
+à droite de l'image.
+
+00:01:33.490 --> 00:01:37.610
+Et puis, ce <i>TextView</i> enfant
+est positionné à droite de <i>ImageView</i>,
+
+00:01:37.610 --> 00:01:39.900
+mais aussi sous ce premier <i>TextView</i>.
+
+00:01:40.500 --> 00:01:44.170
+Remarquez que certains de ces enfants
+sont alignés par rapport au parent,
+
+00:01:44.510 --> 00:01:46.410
+ou les uns par rapport aux autres.
+
+00:01:47.000 --> 00:01:48.320
+On vient de survoler vite fait
+
+00:01:48.320 --> 00:01:50.860
+les différences entre <i>LinearLayout</i>
+et <i>RelativeLayout</i>.
+
+00:01:50.860 --> 00:01:54.470
+Vous comprenez le choix du <i>layout</i>
+en fonction du type de mise en page
+
+00:01:54.470 --> 00:01:55.940
+qu'on veut dans l'appli.
+
+00:01:56.400 --> 00:02:00.190
+Maintenant, regardons le XML
+pour un <i>ViewGroup</i> contenant d'autres vues.
+
+00:02:01.040 --> 00:02:02.050
+Dans cet exemple,
+
+00:02:02.050 --> 00:02:05.990
+on va commencer avec un <i>ViewGroup</i>
+qui contient deux <i>TextViews</i> enfants.
+
+00:02:07.080 --> 00:02:09.080
+Nous sommes habitués
+à un peu moins de codes,
+
+00:02:09.080 --> 00:02:11.930
+mais je veux que vous fassiez
+des commentaires sur ce code.
+
+00:02:12.130 --> 00:02:14.530
+Un petit indice pour vous,
+le code du parent est en rouge,
+
+00:02:14.530 --> 00:02:16.640
+et le code du <i>TextView</i> enfant est en bleu.
+
+00:02:17.090 --> 00:02:18.470
+On vous a mis un lien en dessous,
+
+00:02:18.470 --> 00:02:19.880
+pour que vous puissiez le regarder.
+
+00:02:19.880 --> 00:02:21.740
+Et puis, écrivez trois commentaires ici.
+

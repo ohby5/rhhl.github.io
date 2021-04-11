@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.550 --> 00:00:03.320
+Ini adalah XML awal yang kami sediakan.
+
+00:00:03.320 --> 00:00:05.510
+Ini adalah &lt;i&gt;LinearLayout&lt;/i&gt; vertikal.
+
+00:00:05.510 --> 00:00:08.090
+Dan semua muncul dalam
+bentuk kolom vertikal.
+
+00:00:08.090 --> 00:00:10.110
+Menurut gambar pada kuis,
+
+00:00:10.110 --> 00:00:14.930
+kita mau muatannya terlihat seperti daftar
+dengan &lt;i&gt;RelativeLayout&lt;/i&gt;.
+
+00:00:14.930 --> 00:00:16.550
+Ini solusinya.
+
+00:00:16.550 --> 00:00:19.500
+Kami telah ubah &lt;i&gt;layout&lt;/i&gt;-nya
+sehingga fotonya ada di sebelah kiri
+
+00:00:19.500 --> 00:00:22.020
+dan tiga &lt;i&gt;TextView&lt;/i&gt;
+ada di sisi sebelah kanan.
+
+00:00:22.020 --> 00:00:26.210
+Untuk membuat &lt;i&gt;layout&lt;/i&gt; ini saya ubah
+tampilan pokok menjadi &lt;i&gt;RelativeLayout&lt;/i&gt;
+
+00:00:26.210 --> 00:00:28.080
+daripada &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:00:28.080 --> 00:00:29.530
+Karena ini &lt;i&gt;tag&lt;/i&gt; pembukanya,
+
+00:00:29.530 --> 00:00:32.700
+saya juga harus memperbarui
+&lt;i&gt;tag&lt;/i&gt; penutup di bawahnya.
+
+00:00:32.700 --> 00:00:36.610
+Di antara &lt;i&gt;tag&lt;/i&gt; pembuka dan penutup
+ada empat anak tampilan.
+
+00:00:36.610 --> 00:00:40.200
+Saya juga menyingkirkan
+atribut orientasi vertikal
+
+00:00:40.200 --> 00:00:42.580
+karena ia termasuk dalam &lt;i&gt;LinearLayout&lt;/i&gt;.
+
+00:00:42.580 --> 00:00:46.240
+Tak perlu atribut orientasi
+untuk &lt;i&gt;RelativeLayout&lt;/i&gt;.
+
+00:00:46.240 --> 00:00:48.750
+Posisi fotonya sudah betul.
+
+00:00:48.750 --> 00:00:53.900
+Posisi bawaan anak pertama
+&lt;i&gt;RelativeLayout&lt;/i&gt; selalu di pojok kiri atas,
+
+00:00:53.900 --> 00:00:57.440
+Dan itulah yang kita inginkan
+dari daftar kita, jadi tetap seperti itu.
+
+00:00:57.440 --> 00:01:00.220
+Lalu kita punya &lt;i&gt;TextView&lt;/i&gt; 'Pebble Beach.'
+
+00:01:00.480 --> 00:01:03.930
+Kita ingin memposisikan &lt;i&gt;TextView&lt;/i&gt;
+di sebelah kanan &lt;i&gt;ImageView&lt;/i&gt;,
+
+00:01:03.930 --> 00:01:07.710
+jadi kita harus tambahkan
+atribut &lt;i&gt;layout_torightof&lt;/i&gt;,
+
+00:01:07.710 --> 00:01:10.180
+kemudian merujuk pada &lt;i&gt;ImageView&lt;/i&gt;.
+
+00:01:10.180 --> 00:01:14.640
+Untuk merujuk&lt;i&gt; ImageView &lt;/i&gt;kita harus
+tambahkan atribut ID pada &lt;i&gt;ImageView&lt;/i&gt;.
+
+00:01:15.070 --> 00:01:19.100
+Saya menyebutnya foto,
+Anda boleh sebut apapun sesuka Anda.
+
+00:01:19.100 --> 00:01:22.260
+Itu memposisikan gambar
+dan &lt;i&gt;TextView&lt;/i&gt; pertama dengan benar.
+
+00:01:22.260 --> 00:01:25.740
+&lt;i&gt;TextView&lt;/i&gt; berikutnya adalah
+untuk menunjukkan teks 'California'.
+
+00:01:25.740 --> 00:01:29.298
+&lt;i&gt;TextView&lt;/i&gt; California harus diposisikan
+di sebelah kanan foto
+
+00:01:29.298 --> 00:01:32.110
+dan harus di bawah &lt;i&gt;TextView&lt;/i&gt; Pebble Beach.
+
+00:01:32.110 --> 00:01:35.510
+Jadi, pertama kita tambahkan
+atribut &lt;i&gt;layout_toRightof&lt;/i&gt;
+
+00:01:35.510 --> 00:01:36.890
+dan referensi foto.
+
+00:01:36.890 --> 00:01:39.620
+Kemudian kita tambahkan
+&lt;i&gt;layout&lt;/i&gt; atribut lain di bawahnya
+
+00:01:39.620 --> 00:01:41.880
+dan merujuk pada &lt;i&gt;TextView&lt;/i&gt; pertama.
+
+00:01:41.880 --> 00:01:45.180
+Itu juga harus ditambahkan
+suatu ID untuk &lt;i&gt;TextView&lt;/i&gt; pertama,
+
+00:01:45.180 --> 00:01:46.860
+yang baru kita beri nama.
+
+00:01:46.860 --> 00:01:50.060
+Bagus. Jadi posisi tersebut,
+&lt;i&gt;ImageView&lt;/i&gt; dan dua&lt;i&gt;TextView&lt;/i&gt;.
+
+00:01:50.060 --> 00:01:53.512
+Yang terakhir, kami punya &lt;i&gt;TextView&lt;/i&gt;
+yang menunjukkan jarak sejauh 16 km.
+
+00:01:53.512 --> 00:01:55.120
+Posisinya di sebelah kanan gambar
+
+00:01:55.120 --> 00:01:57.280
+dan di bawah &lt;i&gt;TextView &lt;/i&gt;California.
+
+00:01:57.720 --> 00:02:02.270
+Maka, kita harus tambahkan atribut
+&lt;i&gt;layout_toRightof&lt;/i&gt; dengan merujuk ke foto,
+
+00:02:02.990 --> 00:02:06.290
+dan kita juga harus tambah
+atribut &lt;i&gt;layout&lt;/i&gt; di bawah ini,
+
+00:02:06.290 --> 00:02:09.008
+dan merujuk pada lokasi &lt;i&gt;TextView&lt;/i&gt;.
+
+00:02:09.008 --> 00:02:13.280
+Ini butuh menambahkan ID
+untuk lokasi &lt;i&gt;TextView&lt;/i&gt; juga.
+
+00:02:13.280 --> 00:02:15.960
+Saya juga menambahkan
+suatu ID untuk &lt;i&gt;TextView&lt;/i&gt; jarak.
+
+00:02:15.960 --> 00:02:17.860
+Walaupun kita tak merujuk pada apapun,
+
+00:02:17.860 --> 00:02:20.340
+tak masalah untuk menambahkan ID
+pada suatu tampilan.
+
+00:02:20.340 --> 00:02:23.560
+Jika Anda harus merujuknya nanti,
+ia sudah berada di sana.
+

@@ -1,0 +1,424 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.490 --> 00:00:01.260
+Récapitulons.
+
+00:00:01.260 --> 00:00:04.080
+On a appris qu'une disposition linéaire
+pouvait être orientée soit
+
+00:00:04.080 --> 00:00:05.650
+à l'horizontale, soit à la verticale.
+
+00:00:06.890 --> 00:00:09.610
+Maintenant, est-ce que ces vues
+tirent pleinement partie de
+
+00:00:09.610 --> 00:00:11.240
+la superficie de l'écran ?
+
+00:00:11.240 --> 00:00:13.750
+Par « superficie », j'entends
+l'espace disponible sur l'écran.
+
+00:00:14.930 --> 00:00:16.490
+Pour notre Nexus 6,
+
+00:00:16.490 --> 00:00:20.740
+mettons qu'on ait une disposition linéaire
+verticale à trois <i>TextViews</i> filles.
+
+00:00:20.740 --> 00:00:22.420
+Tom, Tim et Todd.
+
+00:00:22.420 --> 00:00:25.500
+Quand on tiens l'appareil en main
+en mode portrait comme ici,
+
+00:00:25.500 --> 00:00:28.380
+toutes les <i>TextViews</i> se retrouvent
+groupées en haut à gauche de l'écran.
+
+00:00:29.380 --> 00:00:32.320
+On a tout cet espace vierge
+qui reste inutilisé.
+
+00:00:32.320 --> 00:00:35.480
+De même, si on pivote
+l'appareil en mode paysage,
+
+00:00:35.480 --> 00:00:40.120
+le texte reste en haut à gauche et
+on a tout cet espace vide inutilisé.
+
+00:00:40.120 --> 00:00:42.110
+C'est encore plus notable
+sur une tablette,
+
+00:00:42.110 --> 00:00:44.260
+dont l'écran est plus grand.
+
+00:00:44.260 --> 00:00:47.280
+On n'utilise qu'une petite partie
+de la superficie de l'écran, et
+
+00:00:47.280 --> 00:00:48.252
+tout le reste est vide.
+
+00:00:48.252 --> 00:00:51.680
+On va voir comment répartir
+plus équitablement ces vues
+
+00:00:51.680 --> 00:00:55.190
+sur l'écran pour mieux
+occuper l'espace disponible.
+
+00:00:55.190 --> 00:00:56.560
+C'est aussi valable
+pour d'autres vues.
+
+00:00:56.560 --> 00:00:59.500
+Vous pourrez avoir des images plus
+grosses, qui prennent tout l'écran pour
+
+00:00:59.500 --> 00:01:03.460
+une meilleure expérience au lieu de les
+cantonner en haut à gauche de l'écran.
+
+00:01:04.489 --> 00:01:05.180
+Et les boutons,
+
+00:01:05.180 --> 00:01:09.785
+on pourrait avec des boutons plus gros,
+pour pouvoir les tapoter plus facilement.
+
+00:01:09.785 --> 00:01:13.155
+Pour les besoins de notre exemple,
+on va se restreindre aux <i>TextViews</i>.
+
+00:01:13.155 --> 00:01:16.325
+Allons dans le visualiseur XML
+pour trouver comment on peut étendre
+
+00:01:16.325 --> 00:01:17.005
+nos vues.
+
+00:01:18.115 --> 00:01:20.545
+Alors, voilà le code pour
+Tom, Tim et Todd.
+
+00:01:20.545 --> 00:01:23.975
+J'ai trois <i>TextViews</i> dans
+une disposition linéaire verticale et
+
+00:01:23.975 --> 00:01:25.389
+voilà ce que ça rend
+sur l'appareil.
+
+00:01:26.570 --> 00:01:29.810
+D'abord, je veux vous montrer
+comment étaler ces trois <i>TextViews</i>.
+
+00:01:29.810 --> 00:01:31.060
+Pour que Tom soit là-haut.
+
+00:01:31.060 --> 00:01:31.980
+Tim ici.
+
+00:01:31.980 --> 00:01:33.910
+Et Todd ici, plus bas.
+
+00:01:33.910 --> 00:01:37.950
+Déjà, régler la hauteur <i>height</i>
+à "<i>wrap_content</i>" n'aura aucun effet.
+
+00:01:37.950 --> 00:01:41.350
+Une autre option qu'on a apprise est de
+fixer la hauteur à une valeur en dip.
+
+00:01:41.350 --> 00:01:44.510
+Je vais donc régler la hauteur à…
+mettons… 200 dp.
+
+00:01:45.760 --> 00:01:48.340
+Cool. Voilà qui laisse
+beaucoup plus d'espace à Tom.
+
+00:01:48.340 --> 00:01:51.320
+Si je fais de même
+pour les autres <i>TextViews</i>,
+
+00:01:51.320 --> 00:01:54.570
+elles devraient aussi se répartir
+de façon plus équilibrée sur l'écran.
+
+00:01:54.570 --> 00:01:57.920
+Mais cette solution ne fonctionnera
+que pour l'écran de cet appareil.
+
+00:01:57.920 --> 00:02:01.510
+Si j'avais une tablette, comme on a vu
+à l'instant, ces vues risquent d'être
+
+00:02:01.510 --> 00:02:04.640
+quand même « amassées »
+en haut à gauche de l'écran.
+
+00:02:04.640 --> 00:02:08.880
+Une autre option pour régler la hauteur
+est <i>match_parent</i>, comme tout à l'heure.
+
+00:02:08.880 --> 00:02:11.750
+Quand on met une hauteur <i>match_parent</i>
+à la <i>TextView</i> de Tom,
+
+00:02:11.750 --> 00:02:15.540
+il va prendre la même hauteur
+que sa vue parente, donc tout l'écran.
+
+00:02:15.540 --> 00:02:19.230
+Ça va pousser les autres <i>TextViews</i> hors
+de l'écran, on ne les verra même pas.
+
+00:02:19.230 --> 00:02:20.930
+Alors pas de ça.
+
+00:02:20.930 --> 00:02:23.870
+Nous voici à court d'idées puisqu'on
+a essayé une hauteur de <i>wrap_content</i>
+
+00:02:23.870 --> 00:02:25.490
+qui avait une valeur de dip fixe,
+
+00:02:25.490 --> 00:02:27.300
+et on a déjà essayé <i>match_parent</i>.
+
+00:02:27.300 --> 00:02:32.930
+Aucune de ces solutions ne permet une
+juste répartition sur tous les appareils.
+
+00:02:32.930 --> 00:02:36.420
+Cherchons sur Google s'il n'y aurait pas
+une solution à ce problème.
+
+00:02:36.420 --> 00:02:38.360
+On a un groupe de vues
+en disposition linéaire.
+
+00:02:38.360 --> 00:02:40.580
+Et on veut espacer
+équitablement les vues filles.
+
+00:02:40.580 --> 00:02:42.260
+Lançons une recherche.
+
+00:02:42.260 --> 00:02:44.680
+Ok, j'ai donc un tas de résultats, mais
+
+00:02:44.680 --> 00:02:46.920
+cliquons sur le premier pour voir.
+
+00:02:46.920 --> 00:02:49.358
+Il s'agit d'un lien vers
+le site Stackoverflow.
+
+00:02:49.358 --> 00:02:51.780
+C'est un site QR où poser
+des questions pour avoir
+
+00:02:51.780 --> 00:02:53.785
+des réponses
+d'autres développeurs Android.
+
+00:02:53.785 --> 00:02:58.005
+Je l'utilise tout le temps quand je coince
+sur un problème et que j'ai besoin d'aide.
+
+00:02:58.005 --> 00:03:00.515
+Bien souvent d'autres personnes
+auront déjà posé une question
+
+00:03:00.515 --> 00:03:01.975
+comme la mienne.
+
+00:03:01.975 --> 00:03:05.425
+La question ici demande comment
+répartir équitablement les boutons
+
+00:03:05.425 --> 00:03:07.657
+sur toute la largeur
+d'une disposition linéaire.
+
+00:03:07.657 --> 00:03:09.677
+Ça ressemble à ce qu'on cherche,
+
+00:03:09.677 --> 00:03:12.627
+sauf qu'à la place de boutons
+on travaille avec des <i>TextViews</i>,
+
+00:03:12.627 --> 00:03:15.877
+et qu'au lieu de les étendre dans la
+largeur de ma disposition linéaire, on
+
+00:03:15.877 --> 00:03:17.767
+veut la hauteur.
+
+00:03:17.767 --> 00:03:20.710
+On peut lire en détails
+la question ou la zapper.
+
+00:03:20.710 --> 00:03:23.070
+Généralement, je la zappe
+pour la réponse.
+
+00:03:23.070 --> 00:03:27.590
+Cette solution a reçu 88 votes
+et affiche une petite coche verte.
+
+00:03:27.590 --> 00:03:30.840
+Elle dit qu'on peut régler
+<i>layout_width</i> à <i>0dp</i> et
+
+00:03:30.840 --> 00:03:33.240
+régler ensuite <i>layout_weight</i>
+pour que chaque bouton pèse 1.
+
+00:03:33.240 --> 00:03:36.899
+Ceci va distribuer la largeur disponible
+à parts égales entre les boutons.
+
+00:03:37.910 --> 00:03:41.170
+Vous ne comprenez peut-être pas totalement
+la réponse à ce stade, mais c'est bon.
+
+00:03:41.170 --> 00:03:44.620
+Une expression clé qu'on repère ici,
+c'est ce <i>layout_weight</i> linéaire.
+
+00:03:44.620 --> 00:03:47.950
+On ne l'avait pas encore croisée, mais
+elle semble importante dans la réponse.
+
+00:03:47.950 --> 00:03:49.640
+Copions le terme et
+cherchons avec Google
+
+00:03:49.640 --> 00:03:52.005
+plus d'informations
+sur <i>layout_weight</i>.
+
+00:03:52.005 --> 00:03:55.205
+Cherchons
+« <i>linearlayout layout_weight</i> ».
+
+00:03:55.205 --> 00:03:57.605
+Le résultat No. 1 est un
+article sur la disposition linéaire
+
+00:03:57.605 --> 00:04:00.085
+sur le site <i>developer.android.com</i>,
+alors cliquons dessus.
+
+00:04:01.285 --> 00:04:03.845
+Il s'agit d'un article
+sur la disposition linéaire.
+
+00:04:03.845 --> 00:04:08.015
+On a déjà étudié les détails en haut
+sur l'attribut <i>orientation</i> d'Android,
+
+00:04:08.015 --> 00:04:11.230
+mais plus bas on a d'autres informations
+sur un certain « poids de disposition ».
+
+00:04:11.230 --> 00:04:14.270
+Il y a aussi un exemple
+en bas de page ici avec du code et
+
+00:04:14.270 --> 00:04:15.650
+une capture.
+
+00:04:15.650 --> 00:04:17.149
+Je pourrais vous résumer tout ça,
+
+00:04:17.149 --> 00:04:21.260
+mais je préfère vous laisser
+la chance de lire ce document
+
+00:04:21.260 --> 00:04:23.710
+et d'essayer de le comprendre vous-mêmes.
+
+00:04:23.710 --> 00:04:26.180
+Vous saurez ainsi mieux comment
+résoudre un problème
+
+00:04:26.180 --> 00:04:28.220
+quand ce cours sera terminé.
+
+00:04:28.220 --> 00:04:30.510
+On cherche des informations en ligne et
+
+00:04:30.510 --> 00:04:33.350
+on cherche à trouver comment
+les utiliser pour résoudre son problème.
+
+00:04:34.500 --> 00:04:37.340
+Bon. Voici la disposition
+qu'on a sur l'appareil,
+
+00:04:37.340 --> 00:04:39.120
+et voici la disposition
+qu'on vise à faire.
+
+00:04:39.120 --> 00:04:42.780
+Les trois <i>TextViews</i> sont étalées à parts
+égales sur toute la hauteur de l'appareil.
+
+00:04:42.780 --> 00:04:43.720
+Pour résoudre ce problème,
+
+00:04:43.720 --> 00:04:46.760
+lisez l'article sur la disposition
+linéaire à l'adresse fournie ci-dessous.
+
+00:04:47.830 --> 00:04:48.980
+Il est tout à fait normal
+que
+
+00:04:48.980 --> 00:04:52.490
+vous ne compreniez pas
+tout ce que dit l'article.
+
+00:04:52.490 --> 00:04:55.390
+Des fois, on n'a besoin que
+de comprendre vaguement
+
+00:04:55.390 --> 00:04:59.250
+en quoi les concepts d'un article
+peuvent servir et aider dans son travail.
+
+00:05:00.320 --> 00:05:03.390
+Ensuite, j'aimerais connaître vos idées
+pour peut-être créer la disposition
+
+00:05:03.390 --> 00:05:05.100
+désirée en XML.
+
+00:05:05.100 --> 00:05:07.550
+Pas besoin de me fournir
+tout le code XML de la disposition,
+
+00:05:07.550 --> 00:05:10.420
+puisqu'on va étudier ça en détail,
+ensemble, dans la prochaine vidéo.
+
+00:05:10.420 --> 00:05:12.350
+Mais ici, vous pouvez
+écrire quelques phrases ou
+
+00:05:12.350 --> 00:05:16.920
+lister en quoi les informations
+de l'article sont liées à notre problème.
+

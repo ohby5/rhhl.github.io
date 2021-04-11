@@ -1,0 +1,568 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.970 --> 00:00:03.200
+No último exercício,
+estávamos tentando saber
+
+00:00:03.410 --> 00:00:07.932
+como dar um pouco mais de espaço
+para as <i>TextViews</i> Tom, Tim, e Todd,
+
+00:00:08.227 --> 00:00:12.110
+espaçando-as igualmente na vertical,
+por toda a altura do dispositivo.
+
+00:00:13.380 --> 00:00:15.409
+Nós tentámos definir&nbsp;um&nbsp;valor de dp fixo,
+
+00:00:15.643 --> 00:00:19.460
+mas não funcionaria se usássemos
+um dispositivo maior, como um tablet.
+
+00:00:19.883 --> 00:00:24.073
+Depois tentámos usar <i>match_parent</i>,
+mas&nbsp;isso fez a <i>TextView</i> Tom muito grande,
+
+00:00:24.301 --> 00:00:26.603
+e jogou as outras duas <i>TextViews</i>
+para fora da tela.
+
+00:00:27.538 --> 00:00:30.818
+Então começámos a pesquisar
+sobre pesos de layouts lineares.
+
+00:00:31.427 --> 00:00:34.590
+Na documentação diz que,
+para um <i>LinearLayout</i> vertical,
+
+00:00:34.633 --> 00:00:36.707
+se quisermos espaçar igualmente as <i>views</i> filhas,
+
+00:00:37.033 --> 00:00:42.467
+precisamos definir a altura para 0 dp,
+e o valor de peso 1&nbsp;para cada <i>view</i> filha.
+
+00:00:43.556 --> 00:00:46.215
+Atribuir um valor de peso para uma <i>view</i> filha,
+
+00:00:46.467 --> 00:00:48.609
+é como atribuir um valor de importância.
+
+00:00:49.490 --> 00:00:50.707
+Quanto maior o valor de peso,
+
+00:00:50.947 --> 00:00:55.323
+mais espaço poderá ser obtido,
+caso haja espaço disponível à esquerda do pai.
+
+00:00:56.166 --> 00:00:58.923
+Por exemplo,
+para esse <i>LinearLayout</i> vertical,
+
+00:00:59.187 --> 00:01:01.341
+o preenchimento é vertical,
+desse jeito.
+
+00:01:01.907 --> 00:01:04.459
+Acontece que este LinearLayout
+tem bastante espaço extra,
+
+00:01:04.473 --> 00:01:08.276
+e será distribuído entre as <i>views</i> filhas
+que tiverem valores de peso.
+
+00:01:08.867 --> 00:01:10.818
+Se a <i>view</i> filha tiver um valor de peso muito alto,
+
+00:01:11.027 --> 00:01:13.963
+mais desta altura disponível
+será dada para essa filha.
+
+00:01:14.412 --> 00:01:16.609
+Se a view filha tiver um valor de peso muito pequeno,
+
+00:01:16.890 --> 00:01:19.538
+menos desta altura disponível
+será dada para essa filha.
+
+00:01:19.870 --> 00:01:21.021
+Posso mostrar como fica.
+
+00:01:21.316 --> 00:01:23.864
+Vou definir a altura desta <i>view</i> filha para 0 dp,
+
+00:01:24.092 --> 00:01:25.532
+e depois dar-lhe um peso de 1.
+
+00:01:26.024 --> 00:01:29.593
+O <i>LinearLayout</i> ajeita primeiro
+as <i>TextViews</i> Tim e Todd,
+
+00:01:29.649 --> 00:01:33.692
+pois essas <i>views</i> têm uma altura fixa
+baseada&nbsp;no conteúdo dentro delas.
+
+00:01:34.252 --> 00:01:38.683
+E depois tem essa <i>TextView</i> Tom,
+com altura inicial de 0 dp, mas 1 de peso.
+
+00:01:39.040 --> 00:01:41.083
+Nenhuma das outras filhas tem valor de peso,
+
+00:01:41.261 --> 00:01:44.572
+porque o valor de peso padrão é zero,
+caso não seja especificado.
+
+00:01:44.849 --> 00:01:46.940
+Portanto esta é a única <i>view</i>
+filha com valor de peso.
+
+00:01:47.150 --> 00:01:50.141
+Assim, o pai dá toda a altura restante da tela
+
+00:01:50.480 --> 00:01:51.716
+para a <i>TextView</i> Tom.
+
+00:01:51.895 --> 00:01:54.916
+Por isso que a <i>TextView</i>&nbsp;Tom é gigante.
+
+00:01:55.580 --> 00:01:58.387
+Vamos tentar atribuir valores de&nbsp;peso
+para as outras <i>views</i> filhas.
+
+00:01:58.810 --> 00:02:01.993
+Então agora cada <i>view</i> filha
+tem 0 dp de altura e 1 de peso.
+
+00:02:02.660 --> 00:02:04.980
+Este é o processo que o <i>LinearLayout</i> fará.
+
+00:02:05.570 --> 00:02:07.858
+Ele vai tentar descobrir a&nbsp;altura
+dessas <i>TextViews</i>.
+
+00:02:08.270 --> 00:02:10.535
+A altura dessas TextViews começa em 0 dp.
+
+00:02:10.880 --> 00:02:13.673
+Isso significa que a altura
+restante disponível no pai
+
+00:02:13.913 --> 00:02:15.526
+é basicamente a
+altura&nbsp;total da tela.
+
+00:02:16.370 --> 00:02:20.363
+Ele divide a altura total&nbsp;da tela
+pela soma dos pesos,
+
+00:02:20.855 --> 00:02:24.252
+e, então, dá um terço da altura
+disponível para a <i>TextView</i> Tom,
+
+00:02:24.670 --> 00:02:26.800
+um terço da altura para a <i>TextView</i> Tim,
+
+00:02:26.978 --> 00:02:29.060
+e um terço para a <i>TextView</i> Todd.
+
+00:02:29.667 --> 00:02:32.553
+As <i>views</i> permanecerão espaçadas
+uniformemente pela altura do dispositivo,
+
+00:02:32.800 --> 00:02:36.461
+mesmo em dispositivos com telas maiores,
+por causa desse valor peso.
+
+00:02:37.243 --> 00:02:39.747
+Se eu aumentar um&nbsp;pouco&nbsp;o valor do peso,
+
+00:02:40.130 --> 00:02:44.209
+então o pai vai dar mais&nbsp;da&nbsp;altura
+disponível à <i>TextView</i> Tim.
+
+00:02:44.855 --> 00:02:47.384
+Posso mudá-lo para um
+valor de peso ainda maior,
+
+00:02:47.409 --> 00:02:50.726
+e você verá como ela continua&nbsp;ganhando
+ainda mais da altura disponível.
+
+00:02:51.335 --> 00:02:53.740
+Neste caso, a <i>TextView</i> Tim&nbsp;tem um peso de 8,
+
+00:02:54.276 --> 00:02:56.620
+Tom tem um peso de 1, e
+Todd tem um peso de 1.
+
+00:02:56.910 --> 00:02:59.513
+Então o subtotal de peso
+é oito, nove, dez.
+
+00:03:00.340 --> 00:03:03.593
+Depois o pai divide a altura disponível por dez.
+
+00:03:03.880 --> 00:03:06.929
+Um décimo para Tom,
+oito décimos para Tim,
+
+00:03:06.947 --> 00:03:08.295
+e um décimo para Todd.
+
+00:03:09.450 --> 00:03:12.701
+Digamos que há três <i>TextViews</i> filhas,
+nesse layout linear vertical.
+
+00:03:13.020 --> 00:03:15.132
+Nós ajustámos a altura inicial para ser 0 dp,
+
+00:03:15.396 --> 00:03:18.867
+e ficaram todas empilhadas
+no topo da tela com 0 de altura
+
+00:03:19.409 --> 00:03:22.449
+Isso significa que o pai tem toda
+esta altura extra disponível.
+
+00:03:23.255 --> 00:03:26.129
+Se eu definir um peso de 1&nbsp;para cada <i>TextView</i> filha.
+
+00:03:26.689 --> 00:03:31.520
+a altura do pai será igualmente
+distribuída por cada <i>view</i> filha.
+
+00:03:32.810 --> 00:03:34.990
+O mesmo acontece com o layout linear horizontal.
+
+00:03:35.384 --> 00:03:37.190
+Digamos que temos três <i>TextViews</i> filhas.
+
+00:03:37.550 --> 00:03:39.360
+Começamos com uma largura de 0 dp.
+
+00:03:39.820 --> 00:03:42.430
+Isso significa que o pai tem toda
+esta largura extra disponível.
+
+00:03:43.261 --> 00:03:46.369
+Se eu atribuir o valor de peso&nbsp;1 para cada <i>TextView</i> filha,
+
+00:03:46.960 --> 00:03:49.753
+então pegamos a largura disponível que resta no pai,
+
+00:03:49.981 --> 00:03:52.141
+e vamos distribui-la, igualmente,
+pelas <i>views</i> filhas.
+
+00:03:52.713 --> 00:03:54.910
+Novamente, 
+o valor de peso não precisa ser 1.
+
+00:03:54.910 --> 00:03:57.396
+Pode ser 2, 3,
+ou qualquer outro valor,
+
+00:03:57.704 --> 00:03:59.378
+ou pode mesmo ser 0 de peso.
+
+00:03:59.840 --> 00:04:01.563
+Se uma view tem 0 de peso,
+
+00:04:01.932 --> 00:04:06.338
+isso significa que ela não mudará consoante o espaço disponível deixado no pai.
+
+00:04:06.650 --> 00:04:09.107
+Ela permanecerá com a largura
+e a altura que você definiu.
+
+00:04:09.560 --> 00:04:10.726
+Algo que eu quero reforçar
+
+00:04:10.960 --> 00:04:13.636
+é&nbsp;quando definir a altura como 0
+ou a largura como 0.
+
+00:04:14.356 --> 00:04:18.252
+Se você tem um layout linear vertical,
+ele é preenchido desse jeito.
+
+00:04:18.950 --> 00:04:20.214
+Você não sabe a altura,
+
+00:04:20.240 --> 00:04:23.649
+então você a define inicialmente para 0 dp
+e atribui um valor de peso.
+
+00:04:24.615 --> 00:04:28.566
+Igual com o layout linear horizontal,
+ele é preenchido desse jeito.
+
+00:04:28.760 --> 00:04:31.630
+Você ainda não sabe
+a largura&nbsp;das <i>TextViews</i> filhas.
+
+00:04:31.920 --> 00:04:34.978
+Então você define a largura como 0 dp,
+e atribui um valor de peso.
+
+00:04:36.633 --> 00:04:39.593
+Essencialmente, pense que atribuir
+um valor de peso para uma <i>TextView</i>
+
+00:04:39.784 --> 00:04:44.055
+permite esticá-la dependendo
+do tamanho da <i>view</i> pai.
+
+00:04:44.855 --> 00:04:49.526
+Isso é útil para preencher o espaço disponível
+em dispositivos pequenos ou grandes.
+
+00:04:50.578 --> 00:04:53.790
+Aqui estão alguns exemplos reais,
+onde&nbsp;pesos de layout são realmente úteis.
+
+00:04:55.003 --> 00:04:56.356
+Este é o app Google Hangouts.
+
+00:04:57.310 --> 00:05:00.886
+Você pode usá-lo para conversar com seus
+amigos ou enviar pinguins sonolentos.
+
+00:05:01.926 --> 00:05:04.812
+Aqui na parte inferior da tela&nbsp;é
+onde você envia a sua mensagem.
+
+00:05:05.620 --> 00:05:07.920
+Vamos olhar mais de perto este&nbsp;layout aqui.
+
+00:05:08.923 --> 00:05:12.578
+É um layout linear horizontal,
+pois tem o formato de uma linha horizontal.
+
+00:05:13.483 --> 00:05:14.769
+Ele é composto de uma <i>ImageView</i>,
+
+00:05:14.910 --> 00:05:17.076
+um campo <i>EditText</i>,
+onde pode inserir texto,
+
+00:05:17.366 --> 00:05:18.460
+e outra <i>ImageView</i>.
+
+00:05:19.076 --> 00:05:22.344
+A altura de cada&nbsp;uma destas&nbsp;<i>views</i>
+é na verdade <i>wrap_content</i>,
+
+00:05:22.566 --> 00:05:24.584
+porque envolve o conteúdo dentro delas.
+
+00:05:25.410 --> 00:05:28.061
+A largura dessas duas ImageViews&nbsp;é <i>wrap_content</i>,
+
+00:05:28.110 --> 00:05:30.424
+porque só são tão largas
+quanto o conteúdo dentro delas.
+
+00:05:31.460 --> 00:05:32.683
+Demos um peso de 0,
+
+00:05:32.886 --> 00:05:35.020
+pois não queremos que seja maior do que isso,
+
+00:05:35.138 --> 00:05:37.440
+mesmo se tiver muito espaço sobrando no pai.
+
+00:05:37.876 --> 00:05:42.566
+Definir o peso como 0 garante o <i>wrap_content</i> para a largura e altura e não vai mudar.
+
+00:05:43.292 --> 00:05:46.689
+Queremos que estique para&nbsp;ficar
+um pouco maior em telas maiores,
+
+00:05:47.070 --> 00:05:49.876
+e queremos&nbsp;que encolha
+em dispositivos de telas menores.
+
+00:05:50.640 --> 00:05:53.821
+Então definimos a largura
+como 0 dp e o peso como 1.
+
+00:05:54.560 --> 00:05:59.187
+Isso significa que o <i>LinearLayout</i> pai tentará
+encaixar esta imagem primeiro e depois esta.
+
+00:05:59.507 --> 00:06:03.710
+E a largura sobrando no dispositivo
+será dada a esta <i>TextView</i>.
+
+00:06:05.150 --> 00:06:06.689
+Vejamos este exemplo no&nbsp;app Maps.
+
+00:06:07.000 --> 00:06:09.040
+Esta é uma página detalhada de um local.
+
+00:06:09.570 --> 00:06:11.956
+Tem três botões aqui,
+Ligar, Salvar e Site.
+
+00:06:12.584 --> 00:06:13.716
+Vamos olhá-los mais de perto.
+
+00:06:14.450 --> 00:06:18.855
+Na verdade, você pode construí-los
+como TextViews com ícones.
+
+00:06:19.101 --> 00:06:20.923
+e ver as Notas&nbsp;do Instrutor para mais detalhes,
+
+00:06:21.378 --> 00:06:22.916
+Mas isso é apenas um ponto tangente.
+
+00:06:23.581 --> 00:06:25.901
+Para este exercício, vamos supor
+que estas são <i>TextViews</i>.
+
+00:06:26.520 --> 00:06:29.495
+A altura de cada <i>TextView</i> será <i>wrap_content</i>
+
+00:06:29.710 --> 00:06:32.252
+porque sua altura é ajustada
+conforme o que contém.
+
+00:06:33.000 --> 00:06:34.473
+Agora a largura é mais complicada.
+
+00:06:34.996 --> 00:06:39.027
+Queremos estas <i>TextViews</i> posicionadas uniformemente por toda a largura da tela,
+
+00:06:39.270 --> 00:06:42.073
+seja em um&nbsp;dispositivo pequeno
+ou em um dispositivo grande.
+
+00:06:42.498 --> 00:06:46.283
+Não queremos as três TextViews
+agrupadas à esquerda.
+
+00:06:47.446 --> 00:06:50.369
+Para espaçar igualmente <i>views</i> filhas,
+precisamos atribuir pesos iguais.
+
+00:06:50.640 --> 00:06:53.156
+Definimos uma largura de&nbsp;0
+e um peso de 1 para cada uma delas.
+
+00:06:54.050 --> 00:06:55.963
+Desse modo,
+a largura disponível no pai
+
+00:06:56.233 --> 00:06:58.547
+será distribuída igualmente
+pelas três <i>views</i> filhas.
+
+00:06:59.766 --> 00:07:01.532
+E o último exemplo é um app de e-mail.
+
+00:07:02.196 --> 00:07:05.520
+Esta é a tela de composição do Gmail,
+onde pode escrever uma nova mensagem.
+
+00:07:06.430 --> 00:07:09.224
+É um LinearLayout vertical
+porque os itens estão em uma coluna,
+
+00:07:10.203 --> 00:07:12.812
+e é composto de quatro
+campos <i>EditText</i> diferentes.
+
+00:07:13.353 --> 00:07:15.760
+A largura de cada <i>view</i> filha é <i>match_parent</i>
+
+00:07:15.796 --> 00:07:18.350
+pois queremos esticá-las
+por toda a largura do dispositivo.
+
+00:07:18.953 --> 00:07:22.818
+Para a altura, definimos este três&nbsp;campos
+de <i>EditText</i> como <i>wrap_content</i>
+
+00:07:23.126 --> 00:07:24.898
+para se modelarem ao texto que contêm.
+
+00:07:25.470 --> 00:07:29.341
+Estabelecemos o peso como 0,
+pois não queremos que aumentem de tamanho,
+
+00:07:29.378 --> 00:07:32.000
+mesmo se houver altura disponível no pai.
+
+00:07:32.627 --> 00:07:35.526
+Mas para este último campo,
+onde você escreve sua mensagem,
+
+00:07:35.556 --> 00:07:39.852
+queremos dar ao usuário muito espaço para escrever um e-mail bem longo à vovó.
+
+00:07:40.701 --> 00:07:44.070
+Então definimos a altura como 0 dp,
+e damos um peso de 1.
+
+00:07:44.870 --> 00:07:46.763
+Se estiver sobrando altura no pai,
+
+00:07:47.095 --> 00:07:49.366
+será dada a este
+campo&nbsp;<i>EditText</i> filho.
+
+00:07:50.070 --> 00:07:51.372
+Em um dispositivo de tela maior,
+
+00:07:51.716 --> 00:07:54.233
+o campo de composição do e-mail
+será um pouco maior,
+
+00:07:54.510 --> 00:07:56.947
+e em um dispositivo menor,
+ele será um pouco menor.
+
+00:07:58.603 --> 00:07:59.907
+Agora é a sua vez de praticar.
+
+00:08:00.150 --> 00:08:03.489
+Nós queremos que você vá em frente
+e construa esse layout no visualizador XML.
+
+00:08:04.012 --> 00:08:06.166
+Pode começar com o&nbsp;XML
+que fornecemos abaixo.
+
+00:08:06.646 --> 00:08:07.753
+Aqui estão algumas dicas.
+
+00:08:08.344 --> 00:08:09.858
+Quando você tentar fazer algo assim,
+
+00:08:10.135 --> 00:08:12.123
+tente primeiro determinar a largura de cada <i>view</i>.
+
+00:08:12.455 --> 00:08:15.027
+Depois tente determinar a altura de cada <i>view</i>.
+
+00:08:15.476 --> 00:08:19.532
+Confira ainda se a imagem ocupa a altura
+que sobrar no layout linear pai.
+
+00:08:19.730 --> 00:08:22.227
+Em um dispositivo de&nbsp;tela menor
+ocupará menos altura.
+
+00:08:22.529 --> 00:08:24.541
+Em um de&nbsp;tela maior
+ocupará mais altura.
+
+00:08:25.083 --> 00:08:27.513
+Pode prosseguir e marcar esta caixa
+quando você terminar.
+

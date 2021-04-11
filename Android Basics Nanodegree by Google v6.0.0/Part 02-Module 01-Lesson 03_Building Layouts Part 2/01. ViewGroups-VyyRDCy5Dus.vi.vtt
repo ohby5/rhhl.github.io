@@ -1,0 +1,346 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.560 --> 00:00:02.390
+Bạn có nhớ các dấu vết cà phê,
+Katherine?
+
+00:00:02.390 --> 00:00:03.469
+&gt;&gt; Làm sao tôi quên được?
+
+00:00:03.469 --> 00:00:04.998
+&gt;&gt; Tôi biết
+&gt;&gt; Bạn hất nó lên cả người tôi
+
+00:00:04.998 --> 00:00:06.051
+[Cười]
+&gt;&gt; [Cười] Vì vậy,
+
+00:00:06.051 --> 00:00:09.425
+chúng tôi nói chuyện về làm thế nào
+có ba phần lớn trong bài học một
+
+00:00:09.425 --> 00:00:10.925
+&gt;&gt; Mm-hm
+&gt;&gt; Và chúng tôi nói về <i>image</i> và
+
+00:00:10.925 --> 00:00:11.840
+TextView
+
+00:00:11.840 --> 00:00:13.880
+Và sau đó chúng tôi đã học cách
+để tạo kiểu cho những <i>view</i> này
+
+00:00:13.880 --> 00:00:15.510
+&gt;&gt; Có
+&gt;&gt; Chúng ta sẽ tiếp tục ở đâu?
+
+00:00:15.510 --> 00:00:16.640
+&gt;&gt; Vâng, tôi đã suy nghĩ
+
+00:00:16.640 --> 00:00:18.980
+Vì lúc này chúng ta chỉ có 
+một <i>view</i> trên màn hình
+
+00:00:18.980 --> 00:00:19.830
+&gt;&gt; Vâng
+
+00:00:19.830 --> 00:00:22.790
+&gt;&gt; Có một chút nhàm chán, vì vậy chúng ta
+nên thêm nhiều hơn một <i>view</i>
+
+00:00:22.790 --> 00:00:23.300
+&gt;&gt; Phải
+
+00:00:23.300 --> 00:00:25.790
+Và nếu bạn nghĩ về nó,tất cả các
+ứng dụng thú vị mà chúng tôi sử dụng,
+
+00:00:25.790 --> 00:00:29.750
+YouTube, OkCupid, có gì khác 
+xuất hiện trong đầu bạn không?
+
+00:00:29.750 --> 00:00:30.560
+&gt;&gt; Gmail,
+
+00:00:30.560 --> 00:00:33.180
+tất cả dường như có nhiều
+hơn một view được đóng gói
+
+00:00:33.180 --> 00:00:34.940
+rất gọn gàng trên màn 
+hình với nhau
+
+00:00:34.940 --> 00:00:35.950
+&gt;&gt; Yeah
+Và cách họ làm
+
+00:00:35.950 --> 00:00:37.205
+đó là thông qua các 
+<i>Group view</i>
+
+00:00:37.205 --> 00:00:37.790
+&gt;&gt; Mm-hm
+
+00:00:37.790 --> 00:00:39.340
+&gt;&gt; Vì vậy, 
+chúng ta sẽ tìm hiểu về nó sau
+
+00:00:39.340 --> 00:00:42.260
+Và nó mang lại cho ta sức mạnh để xem
+vị trí của các <i>view</i> trên màn hình
+
+00:00:42.260 --> 00:00:43.090
+nơi mà ta muốn đặt chúng
+
+00:00:43.090 --> 00:00:43.650
+&gt;&gt; Phải
+
+00:00:43.650 --> 00:00:45.620
+Vì vậy, cho phép nói về các nhóm 
+<i>view</i>ở phầntiếp theo
+
+00:00:47.270 --> 00:00:49.675
+&gt;&gt; Vì vậy,đến giờ chúng tôi đang 
+chỉ có một <i>TextView</i> đơn hoặc
+
+00:00:49.675 --> 00:00:51.870
+một <i>ImageView</i> duy nhất 
+trên màn hình
+
+00:00:51.870 --> 00:00:55.590
+Nếu chúng ta muốn thêm <i>view</i> khác 
+dưới đây chúng ta có thể cố gắng
+
+00:00:55.590 --> 00:00:57.320
+sao chép và dán nó vào bên dưới
+
+00:00:57.320 --> 00:00:59.010
+Nhưng sau đó chúng ta gặp một số lỗi
+
+00:00:59.010 --> 00:01:02.590
+Nó nói các tài liệu XML có
+nhiều hơn một <i>root view</i>
+
+00:01:02.590 --> 00:01:06.710
+Chỉ có một <i>root view</i>, và nó chứa
+đựng tất cả các <i>view</i> khác của bạn
+
+00:01:06.710 --> 00:01:10.100
+Nếu chúng ta muốn cả hai <i>TextViews</i>
+xuất hiện trên màn hình và
+
+00:01:10.100 --> 00:01:14.390
+không cô đơn nữa, sau đó chúng tôi cần
+phải đặt chúng trong một <i>View Group</i>
+
+00:01:14.390 --> 00:01:18.085
+Sau đó <i>View Group</i> sẽ
+<i>root view</i> duy nhất cho bố cục
+
+00:01:18.085 --> 00:01:21.460
+<i>View Group</i> cũng là <i>view</i> và
+chúng là hình chữ nhật trên màn hình
+
+00:01:21.460 --> 00:01:24.960
+Ví dụ hình chữ nhật màu đỏ và màu 
+da cam ở đây là <i>view group</i>
+
+00:01:24.960 --> 00:01:29.460
+Chúng có thể có chiều rộng, cao hoặc
+màu nền, hoặc các thuộc tính khác
+
+00:01:29.460 --> 00:01:30.680
+Màu nền ở đây là màu cam
+
+00:01:30.680 --> 00:01:32.980
+Màu cam,
+Nhưng nó cũng có thể trong suốt để
+
+00:01:32.980 --> 00:01:35.820
+<i>View Group</i> không phải là
+có thể nhìn thấy bởi người sử dụng
+
+00:01:35.820 --> 00:01:39.770
+Thay vì tổ chức một số nội dung như
+văn bản cho <i>TextView</i> hoặc hình
+
+00:01:39.770 --> 00:01:44.140
+ảnh cho <i>ImageView</i>, nội dung mà
+<i>View Group</i> nắm giữ là các view
+
+00:01:44.140 --> 00:01:47.130
+Bạn có thể nghĩ về một <i>View Group</i>
+như là một container cho <i>view</i>
+
+00:01:47.130 --> 00:01:50.790
+Khi view có chứa các view khác
+ta gọi nó là cha mẹ của những view này
+
+00:01:50.790 --> 00:01:52.030
+Vì vậy, đây là cha mẹ
+
+00:01:52.030 --> 00:01:52.780
+Đây là cha mẹ
+
+00:01:52.780 --> 00:01:54.210
+Và đây là cha mẹ
+
+00:01:54.210 --> 00:01:58.260
+Khi một view ở trong một <i>view Group</i>,
+ta gọi nó là con của <i>View GroupM</i> đó
+
+00:01:58.260 --> 00:02:01.390
+Vì vậy, đây là một con, và đây là
+một con, và đây là một con
+
+00:02:01.390 --> 00:02:05.030
+Tương tự ở đây, có hai con ở đây,
+và hai con ở đây
+
+00:02:05.030 --> 00:02:08.590
+Tiếp tục với các ngôn ngữ gia đình,
+nếu có nhiều con,
+
+00:02:08.590 --> 00:02:10.940
+sau đó mỗi người trong những con
+là anh chị em với nhau
+
+00:02:12.670 --> 00:02:14.300
+Đây là những anh chị em view, và
+đây là những anh chị em view
+
+00:02:14.300 --> 00:02:15.100
+Được rồi, có rất nhiều
+
+00:02:15.100 --> 00:02:19.550
+Để giúp bạn nhớ tất cả các thuật ngữ
+xung quanh mẹ và con và view và
+
+00:02:19.550 --> 00:02:24.005
+<i>view group</i>, tôi muốn bạn gặp
+một gia đình rất đẹp gọi là View
+
+00:02:24.005 --> 00:02:25.860
+Bạn đã gặp Tommy <i>TextView</i>
+
+00:02:25.860 --> 00:02:28.310
+Anh ấy là khá tuyệt vời 
+về hiển thị văn bản
+
+00:02:28.310 --> 00:02:33.090
+Bạn cũng biết em gái, Ivy <i>ImageView</i>,
+người hiển thị hình ảnh rất đẹp
+
+00:02:33.090 --> 00:02:35.100
+Và bây giờ chúng ta 
+đang gặp cha mẹ của họ
+
+00:02:35.100 --> 00:02:37.240
+Nó luôn luôn làm đau đớn
+để đáp ứng các bậc cha mẹ
+
+00:02:37.240 --> 00:02:41.870
+Ta có Laura là <i>LinearLayout</i>
+và Ray là <i>RelativeLayout</i>
+
+00:02:41.870 --> 00:02:43.380
+Cả hai đều là <i>view groups</i>,
+
+00:02:43.380 --> 00:02:46.220
+mà chúng tôi đã đề cập trước
+được gọi là <i>View</i> bố mẹ
+
+00:02:46.220 --> 00:02:49.860
+Sau đó, <i>View</i> con
+được định vị dựa vào cha mẹ của họ
+
+00:02:49.860 --> 00:02:51.960
+Hãy xem xét một ví dụ 
+của một cha mẹ
+
+00:02:51.960 --> 00:02:53.740
+Một cha mẹ có thể bảo 
+con em mình để ngồi hoặc
+
+00:02:53.740 --> 00:02:56.510
+đứng ở một nơi cụ thể và
+không di chuyển
+
+00:02:56.510 --> 00:02:59.030
+Hãy bỏ qua khả năng đó
+các con có thể muốn dậy
+
+00:02:59.030 --> 00:02:59.780
+và chạy xung quanh
+
+00:02:59.780 --> 00:03:01.570
+Bởi vì đó chỉ là một 
+trường hợp đặc biệt
+
+00:03:01.570 --> 00:03:05.240
+Trên một thiết bị nó có nghĩa là 
+cha mẹ đã kiểm soát định vị
+
+00:03:05.240 --> 00:03:06.380
+con của họ
+
+00:03:06.380 --> 00:03:10.310
+Ví dụ, một con <i>Text View</i>
+có thể được ở trên cùng của màn hình và
+
+00:03:10.310 --> 00:03:13.730
+sau đó một đứa con thứ hai
+<i>ImageView</i> có thể ở dưới đó
+
+00:03:13.730 --> 00:03:14.930
+Hoặc, nếu cha mẹ muốn,
+
+00:03:14.930 --> 00:03:17.278
+họ có thể sắp xếp lại các con
+theo một cách khác nhau
+
+00:03:17.278 --> 00:03:19.570
+Các <i>ImageView</i> con có thể 
+được ở bên trái, và
+
+00:03:19.570 --> 00:03:21.690
+sau đó các con <i>TextView</i>
+có thể được ở bên phải
+
+00:03:21.690 --> 00:03:25.200
+Chúng ta sẽ nói về view của các nhóm
+chi tiết hơn trong bài học này, nhưng
+
+00:03:25.200 --> 00:03:27.400
+để đảm bảo rằng bạn đã
+hiểu những gì chúng tôi nói đến mức nào
+
+00:03:27.400 --> 00:03:30.000
+xin vui lòng trả lời 
+những câu hỏi này
+
+00:03:30.000 --> 00:03:33.690
+Từ ảnh chụp màn hình trên thiết bị này,
+bạn có thể cho tôi biết bao nhiêu view?
+
+00:03:33.690 --> 00:03:36.740
+Số 2, Đối với hình ảnh núi,
+nó là con hay
+
+00:03:36.740 --> 00:03:39.100
+một cha mẹ của
+<i>group view</i> đỏ
+
+00:03:39.100 --> 00:03:44.630
+Số 3, là <i>group view</i> đỏ là con hay
+che mẹ của đi bộ <i>text view</i>
+
+00:03:44.630 --> 00:03:47.730
+Số 4, những view nào
+là anh em ruột của nhau
+
+00:03:47.730 --> 00:03:49.470
+Và bạn có thể liệt kê chúng ở đây
+

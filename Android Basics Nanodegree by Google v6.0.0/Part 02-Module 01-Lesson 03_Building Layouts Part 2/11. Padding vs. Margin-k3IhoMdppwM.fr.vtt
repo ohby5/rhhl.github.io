@@ -1,0 +1,653 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.360 --> 00:00:01.630
+Bon travail jusqu'ici.
+
+00:00:01.630 --> 00:00:04.580
+Vous êtes bien en route pour construire 
+de vraiment grandes mises en page.
+
+00:00:04.580 --> 00:00:09.360
+Toutefois, je vois un problème avec presque 
+toutes les mises en page construites.
+
+00:00:09.360 --> 00:00:12.740
+Les vues sont directement contre
+le bord du <i>ViewGroup</i> ou
+
+00:00:12.740 --> 00:00:14.300
+contre le dispositif.
+
+00:00:14.300 --> 00:00:16.490
+Pour toutes les mises en page que
+nous avons construites dans cette leçon
+
+00:00:16.490 --> 00:00:19.990
+jusqu'ici, on pourrait leur ajouter un 
+peu plus d'ongles visuelles, afin
+
+00:00:19.990 --> 00:00:23.840
+qu'elles soient plus belles en ajoutant
+un peu plus d'espace blanc.
+
+00:00:23.840 --> 00:00:26.240
+On fera ça en utilisant les concepts
+de <i>padding</i> et <i>margin</i>,
+
+00:00:26.240 --> 00:00:28.580
+qu'on couvre dans cette vidéo.
+
+00:00:28.580 --> 00:00:31.240
+Par exemple, on pourrait ajouter un
+peu plus d'espace banc ici, ici,
+
+00:00:31.240 --> 00:00:33.780
+ou même en haut, afin
+que les vues ne soient pas bondées
+
+00:00:33.780 --> 00:00:37.780
+contre le bord du parent et
+contre le bord du dispositif.
+
+00:00:37.780 --> 00:00:39.350
+C'est vraiment une décision 
+de conception,
+
+00:00:39.350 --> 00:00:41.550
+car quelque fois vous ne voulez
+qu'il aille bord à bord, comme pour
+
+00:00:41.550 --> 00:00:45.140
+l'effet complet d'image de purge dont
+je parlais plus tôt.
+
+00:00:45.140 --> 00:00:49.109
+Mais en tout cas, vous pouvez utiliser 
+l'espace blanc pour ajouter plus de marge,
+
+00:00:49.109 --> 00:00:53.130
+pour que le contenu soit un peu
+plus facile à lire et parcourir.
+
+00:00:53.130 --> 00:00:56.840
+Je vous montrerai l'effet en ajoutant
+<i>padding</i> ou <i>margin</i> à une vue.
+
+00:00:56.840 --> 00:00:59.480
+Commençon avec <i>TextView</i>
+qui dit Salut.
+
+00:00:59.480 --> 00:01:01.880
+Si on ajoute huit dips de
+<i>padding</i> à une vue,
+
+00:01:01.880 --> 00:01:05.450
+alors ça le rendrait plus grand de huit
+dips dans chaque direction.
+
+00:01:05.450 --> 00:01:08.081
+Si on ajoute un <i>margin</i> de disposition 
+de huit dips au <i>TextView</i>,
+
+00:01:08.081 --> 00:01:10.850
+alors voilà à quoi 
+ça ressemblerait.
+
+00:01:10.850 --> 00:01:13.470
+Afin d'ajouter un <i>margin</i>, vous devez
+le mettre dans un <i>ViewGroup</i>, donc
+
+00:01:13.470 --> 00:01:16.360
+c'est pourquoi je l'ai dans cette
+disposition linéaire ici.
+
+00:01:16.360 --> 00:01:19.350
+La disposition linéaire est celle
+qui prend le <i>TextView</i> original et
+
+00:01:19.350 --> 00:01:21.260
+le pousse par huit dips.
+
+00:01:21.260 --> 00:01:23.330
+De la gauche et du haut.
+
+00:01:23.330 --> 00:01:25.510
+Et aussi par les côtés.
+
+00:01:25.510 --> 00:01:27.860
+Ainsi même si vous 
+déclarez <i>padding</i> ou
+
+00:01:27.860 --> 00:01:32.780
+<i>margin</i> sur le <i>TextView</i> enfant, le <i>padding</i> 
+sera manipulé par <i>TextView</i> lui-même.
+
+00:01:32.780 --> 00:01:35.900
+Tandis que le <i>margin</i> est manipulé
+par le <i>ViewGroup</i> parent.
+
+00:01:35.900 --> 00:01:39.685
+Si deux de ceux-ci sont sur un dispositif 
+réel et vous n'avez pas d'arrière-plan pour
+
+00:01:39.685 --> 00:01:42.820
+le <i>TextView</i>, alors techniquement
+les deux se ressembleraient.
+
+00:01:42.820 --> 00:01:46.030
+Le texte commencerait à huit
+dips de la gauche et à
+
+00:01:46.030 --> 00:01:48.390
+huit dips en-dessous du haut du
+dispositif.
+
+00:01:48.390 --> 00:01:51.780
+Toutefois, si vous avez un <i>background
+color</i> pour le <i>TextView</i>,
+
+00:01:51.780 --> 00:01:54.990
+alors l'utilisateur serait apte à voir 
+que le <i>TextView</i> est si grand.
+
+00:01:54.990 --> 00:01:58.660
+Alors que, sur l'autre dispositif,
+le <i>TextView</i> serait juste si grand.
+
+00:01:58.660 --> 00:02:00.700
+Voici un code
+affichant <i>padding</i> sur une vue.
+
+00:02:02.040 --> 00:02:06.576
+Sur l'élement XML du <i>TextView</i>, vous
+déclareriez un nouvel attribut qui dit,
+
+00:02:06.576 --> 00:02:10.800
+<i>padding</i> du côlon android égal
+huit dips entre guillemets.
+
+00:02:10.800 --> 00:02:12.320
+Vous pouvez choisisr n'importe quelle
+taille pour
+
+00:02:12.320 --> 00:02:15.330
+le <i>padding</i>,
+tant que c'est une valeur dip.
+
+00:02:15.330 --> 00:02:19.080
+Quand on spécifie huit dips de 
+<i>padding</i>, il en ajoute à gauche,
+
+00:02:19.080 --> 00:02:21.410
+en haut, en bas, et
+à droite du <i>TextView</i>.
+
+00:02:22.460 --> 00:02:25.100
+Au lieu d'utiliser l'attribut général
+<i>padding</i> d'Android,
+
+00:02:25.100 --> 00:02:28.970
+vous pouvez aussi le diviser à gauche,
+à droite, en haut ou en bas.
+
+00:02:28.970 --> 00:02:32.550
+Essentiellement, ces quatres ligne de code
+fait la même chose que cette ligne unique.
+
+00:02:32.550 --> 00:02:35.820
+Toutefois, ces contrôles à grains fins
+vous permettent d'avoir des valeurs <i>padding</i>
+
+00:02:35.820 --> 00:02:39.420
+différents pour la gauche,
+la droite, le haut ou le bas.
+
+00:02:39.420 --> 00:02:43.390
+Vous n'avez pas à avoir une même valeur
+<i>padding</i> pour les quatres directions.
+
+00:02:43.390 --> 00:02:47.280
+La valeur par défaut du <i>padding</i> est zéro,
+donc si vous spécifiez gauche, droite et
+
+00:02:47.280 --> 00:02:52.110
+haut, mais pas le bas, alors ce
+sera zéro pour le <i>padding bottom</i> .
+
+00:02:52.110 --> 00:02:55.990
+Pour spécifier le <i>margin</i>, vous
+ajoutez encore un attribut à <i>TextView</i>.
+
+00:02:55.990 --> 00:03:00.206
+Le nom de l'attribut est <i>margin</i> de 
+disposition côlon de soulignement on peut
+
+00:03:00.206 --> 00:03:02.750
+lui donner une valeur égale à, par
+exemple, huit trempettes.
+
+00:03:02.750 --> 00:03:07.440
+Cela déplace le <i>TextView</i> enfant à
+huit trempettes du parent sur tous les bords.
+
+00:03:07.440 --> 00:03:11.770
+S'il y avait un autre <i>TextView</i> enfant
+ici en haut, alors avoir un <i>margin</i>
+
+00:03:11.770 --> 00:03:15.000
+pousserait ce <i>TextView</i> huit trempettes
+en-dessous de ce premier <i>TextView</i>.
+
+00:03:16.060 --> 00:03:18.820
+Vous pouvez penser à avoir un <i>margin</i> 
+comme ayant un peu de champ de force
+
+00:03:18.820 --> 00:03:20.050
+autour de cette vue.
+
+00:03:20.050 --> 00:03:23.750
+Aucune autre vue ne peut entrer ces 
+région de huit trempettes autour d'elle.
+
+00:03:23.750 --> 00:03:27.621
+Ou vous pouvez aussi diviser le <i>margin</i>
+de disposition en chacun des quatres directions,
+
+00:03:27.621 --> 00:03:31.750
+disposition <i>marginLeft</i>,
+disposition <i>marginRight, top, et bottom</i>.
+
+00:03:31.750 --> 00:03:35.780
+Si vous ne spécifiez aucune de ces
+valeurs, alors elle sera de zéro.
+
+00:03:35.780 --> 00:03:38.730
+Pour rappeler que le <i>ViewGroup</i>
+est celui qui positionne ces
+
+00:03:38.730 --> 00:03:41.930
+enfants basé sur le <i>margin</i>,
+vous pouvez voir les attributs.
+
+00:03:41.930 --> 00:03:45.130
+Ils commencent tous avec une disposition
+de soulignement pour le <i>margin</i>.
+
+00:03:45.130 --> 00:03:48.340
+De cette façon, vous savez que le <i>ViewGroup</i>
+est celui qui manipule la position
+
+00:03:48.340 --> 00:03:48.929
+de ces vues.
+
+00:03:50.160 --> 00:03:52.790
+<i>Padding</i> et <i>margin</i>
+peuvent s'appliquer à tous les vues.
+
+00:03:52.790 --> 00:03:55.960
+Mettons les attributs que nous venons 
+d'apprendre en pratique.
+
+00:03:55.960 --> 00:03:58.500
+Ici j'ai trois <i>TextViews</i>
+dans une disposition linéaire.
+
+00:03:58.500 --> 00:04:01.000
+Ils sont tous écrasés contre
+le bord gauche de l'écran, donc
+
+00:04:01.000 --> 00:04:02.259
+je veux ajouter un peu d'espace.
+
+00:04:03.390 --> 00:04:04.910
+Commençons en essayant
+d'ajouter quelque <i>margin</i>.
+
+00:04:05.910 --> 00:04:08.235
+Cool, maintenant il y a plus
+d'espace autour de ce <i>TextView</i>.
+
+00:04:09.420 --> 00:04:11.155
+Je ferais le même pour
+les deux autres <i>TextViews</i>.
+
+00:04:12.250 --> 00:04:17.029
+Interéssant, donc c'est 16 dips ici,
+mais c'est en fait 32 dips car
+
+00:04:17.029 --> 00:04:20.260
+on obtient huit dips de marge
+inférieure du premier <i>TextView</i> et
+
+00:04:20.260 --> 00:04:22.960
+huit dips de marge supérieure
+du second <i>TextView</i>.
+
+00:04:22.960 --> 00:04:24.780
+Si on veut que l'espacement 
+soit cohérent, alors
+
+00:04:24.780 --> 00:04:30.250
+c'est toujours 16 dips entre chaque vue
+alors on doit changer le <i>margin</i> ici.
+
+00:04:30.250 --> 00:04:33.100
+Je peux le casser en des
+valeurs de <i>margin</i> individuelles.
+
+00:04:33.100 --> 00:04:37.980
+Avec ce code, j'ai une marge à gauche de 
+16 dips et une marge supérieure de 16 dips.
+
+00:04:37.980 --> 00:04:40.750
+Il n'y a pas de marge inférieure
+de ce premier <i>TextView</i>, donc
+
+00:04:40.750 --> 00:04:43.290
+cet espace entre eux est
+maintenant correct à 16 dips.
+
+00:04:43.290 --> 00:04:46.970
+La même ira pour le 
+dernier <i>TextView</i>.
+
+00:04:46.970 --> 00:04:48.780
+Cool, maintenant tout l'espacement
+vertical est égal.
+
+00:04:49.900 --> 00:04:53.420
+Précédemment, quand j'ai dit qu'on ajoute
+des espaces blancs aux bords de ces vues,
+
+00:04:53.420 --> 00:04:56.240
+techniquement cet espace est 
+transparent.
+
+00:04:56.240 --> 00:04:58.690
+Vous pouvez voir à travers elle,
+pour ce qui est derrière elle.
+
+00:04:58.690 --> 00:05:02.100
+Dans ce cas, on a un arrière-plan
+gris sur le <i>ViewGroup</i>.
+
+00:05:02.100 --> 00:05:05.390
+La disposition aurait la même apparence sur
+le dispositif que nous utilisons un <i>margin</i>
+
+00:05:05.390 --> 00:05:08.785
+ou un <i>padding</i>, car dans ce cas, on n'a
+aucun <i>background color</i> sur le <i>TextView</i>.
+
+00:05:09.820 --> 00:05:12.090
+Ajoutons-le et
+voyons où les limites de chaque vue sont.
+
+00:05:13.330 --> 00:05:16.180
+Ok, maintenant il y a un background
+color sur ce premier <i>TextView</i>.
+
+00:05:16.180 --> 00:05:20.178
+Quand on a ajouté la marge à gauche et supérieure,
+on voit que le <i>ViewGroup</i> pousse juste
+
+00:05:20.178 --> 00:05:22.600
+le <i>TextView</i> à huit et l'abaisse
+de huit.
+
+00:05:22.600 --> 00:05:26.950
+On peut changer cela en <i>padding</i>, et
+maintenant on voit que <i>TextView</i> est plus grand
+
+00:05:26.950 --> 00:05:29.580
+et reprend ces 8 dips d'espace
+sur la gauche et en haut.
+
+00:05:30.700 --> 00:05:33.210
+Donc visuellement, les choses auraient
+un aspect différent sur le dispositif,
+
+00:05:33.210 --> 00:05:35.120
+qu'on a un <i>padding</i> ou un <i>margin</i>.
+
+00:05:35.120 --> 00:05:38.000
+S'il y a un <i>background
+color</i> sur ce <i>TextView</i>.
+
+00:05:38.000 --> 00:05:40.570
+On peut faire de même pour les autres
+vues donc vous voyez que c'est bon.
+
+00:05:41.830 --> 00:05:45.400
+Ajouter des valeurs <i>padding</i> et <i>margin</i>
+n'est pas juste limité à ces vues enfants,
+
+00:05:45.400 --> 00:05:47.840
+vous pouvez aussi l'ajouter 
+sur le <i>ViewGroup</i>.
+
+00:05:47.840 --> 00:05:50.520
+Si j'ajoute une valeur <i>padding</i> pour
+la disposition linéaire.
+
+00:05:50.520 --> 00:05:55.680
+Ensuite, vous pouvez voir qu'il décale la
+vue par 16 dips dans toutes les directions.
+
+00:05:55.680 --> 00:05:59.390
+J'ai mentionné que vous pouviez définir toute
+valeur pour un <i>padding</i> ou un <i>margin</i>.
+
+00:05:59.390 --> 00:06:01.380
+Mais comment savoir 
+quelle valeur choisir?
+
+00:06:01.380 --> 00:06:04.740
+Bien, les directives de conception matérielle
+vous recommande d'utiliser des incréments de
+
+00:06:04.740 --> 00:06:05.750
+huit dips.
+
+00:06:05.750 --> 00:06:09.190
+Ceci est une connaissance un peu plus
+avancée, mais essentiellement on veut que
+
+00:06:09.190 --> 00:06:13.000
+les composants s'alignent sur l'écran
+le long de cette grille carrée de huit dips.
+
+00:06:13.000 --> 00:06:15.870
+Maintenant les carrés n'apparaissent
+effectivement pas sur l'écran, mais
+
+00:06:15.870 --> 00:06:17.710
+si vous voulez positionner 
+du texte ici,
+
+00:06:17.710 --> 00:06:21.090
+Vous pourriez vouloir le déplacer
+comme deux carrés à gauche.
+
+00:06:21.090 --> 00:06:25.280
+Deux carrés sur cette grille
+égaleraient 16 dips.
+
+00:06:25.280 --> 00:06:28.980
+Sur cette écran email, toutes 
+les icône sont alignées sur cette ligne.
+
+00:06:28.980 --> 00:06:33.120
+Elles sont positionnées à 16 dips du
+bord gauche de cet écran et tout
+
+00:06:33.120 --> 00:06:38.020
+ce texte ici est positionné à 72 dips
+du bord gauche de cet écran.
+
+00:06:38.020 --> 00:06:41.280
+Ainsi, vous pouvez genre imaginer que le
+contenu commence à suivre certaines
+
+00:06:41.280 --> 00:06:42.250
+lignes ici.
+
+00:06:42.250 --> 00:06:44.440
+Voici un autre moyen de le visualiser.
+
+00:06:44.440 --> 00:06:47.160
+Dans cette capture d'écran
+de Google I/O app,
+
+00:06:47.160 --> 00:06:53.920
+on a le contenu aligné à cette ligne de 16
+dips, autant que cette ligne de 72 dips.
+
+00:06:53.920 --> 00:06:57.395
+C'est essentiellement à 72 dips 
+du bord gauche de l'écran.
+
+00:06:57.395 --> 00:06:58.855
+Et sur ce bord,
+
+00:06:58.855 --> 00:07:03.303
+le contenu s'arrête 16 dips avant
+le bord droite de l'écran.
+
+00:07:03.303 --> 00:07:05.485
+Sur la tablette,
+vous avez plus d'écran immobilier, donc
+
+00:07:05.485 --> 00:07:07.495
+vous pouvez avoir un peu plus de 
+<i>padding</i>.
+
+00:07:07.495 --> 00:07:10.635
+Ça peut être à 24 dips du bord gauche
+de l'écran, et ainsi de suite pour
+
+00:07:10.635 --> 00:07:12.175
+les autres valeurs.
+
+00:07:12.175 --> 00:07:16.645
+La raison pourquoi nous recommandons ces valeurs
+est de rendre votre contenu facile à lire.
+
+00:07:16.645 --> 00:07:20.250
+Par exemple, si ce titre était
+déplacé à un couple de pixels et
+
+00:07:20.250 --> 00:07:23.660
+le sous-texte a été déplacé vers
+le droit à un couple de pixels,
+
+00:07:23.660 --> 00:07:25.560
+il y aurait un bord dentelé ici.
+
+00:07:25.560 --> 00:07:29.780
+Et cela distraira l'utilisateur de
+lire votre contenu actuel.
+
+00:07:29.780 --> 00:07:34.540
+Alors en alignant tout, cela rend
+votre app facile à lire et à utiliser.
+
+00:07:34.540 --> 00:07:38.120
+Voici un couple d'exemples réels
+de l'utilisation du <i>padding</i> et <i>margin</i>.
+
+00:07:38.120 --> 00:07:40.190
+Dans cette capture d'écran du 
+<i>Google Calendar app</i>,
+
+00:07:40.190 --> 00:07:43.680
+on voit un peu de texte ici qui
+se déplace un peu par ici.
+
+00:07:43.680 --> 00:07:46.680
+Il y a aussi un peu d'espace
+entre ces événements du calendrier.
+
+00:07:46.680 --> 00:07:48.180
+Si on le met en œuvre à l'aide du 
+<i>padding</i>,
+
+00:07:48.180 --> 00:07:52.360
+alors ce <i>background image</i> s'étendra 
+probablement dans cet espace blanc.
+
+00:07:52.360 --> 00:07:55.920
+Au lieu de cela, si on utilise <i>margin</i>,
+alors il ajoute une petite zone autour de la vue,
+
+00:07:55.920 --> 00:07:57.820
+alors c'est probablement <i>margin</i>.
+
+00:07:57.820 --> 00:08:01.890
+Voici une autre capture de la page 
+détail pour un événement du calendrier.
+
+00:08:01.890 --> 00:08:06.160
+Il y a beaucoup de texte ici et ils
+semblent être plus large que les autres.
+
+00:08:06.160 --> 00:08:08.700
+On peut créer ces écarts plus
+large en ajoutant <i>padding</i>.
+
+00:08:08.700 --> 00:08:13.370
+Pour ajouter cet écart ici, vous pouvez
+ajouter un <i>padding bottom</i> à ce <i>TextView</i>,
+
+00:08:13.370 --> 00:08:15.130
+ou vous pouvez ajouter un <i>padding top</i> 
+à cette vue.
+
+00:08:16.140 --> 00:08:17.600
+Tous ces moyens fonctionneraient.
+
+00:08:17.600 --> 00:08:20.680
+Ou vous pourriez même le mettre en œuvre
+en utilisant un <i>margin</i> de disposition.
+
+00:08:20.680 --> 00:08:23.910
+Vous ne pouvez vraiment pas dire la différence
+entre utiliser un <i>margin</i> ou un <i>padding</i>
+
+00:08:23.910 --> 00:08:28.050
+dans ce cas, car l'arrière-plan
+du texte utilisé est transparent.
+
+00:08:28.050 --> 00:08:30.574
+Maintenant c'est votre tour de pratiquer
+avec des options différentes des valeurs
+
+00:08:30.574 --> 00:08:32.169
+de <i>margin</i> et <i>padding</i>.
+
+00:08:32.169 --> 00:08:35.090
+Nous avons fourni un certain code initial pour
+que vous commenciez en utilisant ce lien.
+
+00:08:35.090 --> 00:08:38.940
+Une fois que vous êtes à l'aise avec les valeurs
+<i>padding</i> et <i>margin</i>, avancez et
+
+00:08:38.940 --> 00:08:40.169
+essayez de construire 
+cette mise en page.
+
+00:08:41.210 --> 00:08:45.780
+Par ailleurs, ce texte se trouve
+à 16 dips des bords ici.
+
+00:08:45.780 --> 00:08:49.410
+Mais il y a seulement huit dips 
+entre les deux <i>TextViews</i>.
+
+00:08:49.410 --> 00:08:50.530
+Quand vous avez fini, 
+cochez cette case.
+

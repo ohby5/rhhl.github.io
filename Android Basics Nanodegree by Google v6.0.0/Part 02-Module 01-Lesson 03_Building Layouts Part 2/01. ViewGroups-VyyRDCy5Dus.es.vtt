@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.200 --> 00:00:02.437
+¿Te acuerdas del camino de granos de café,
+Katherine?
+
+00:00:02.477 --> 00:00:04.769
+¿Cómo me voy a olvidar?
+Me lo tiraste encima.
+
+00:00:05.590 --> 00:00:09.609
+Entonces dijimos que habría
+tres grandes partes en la lección 1.
+
+00:00:09.841 --> 00:00:11.358
+Hablamos de imagen y TextView.
+
+00:00:11.359 --> 00:00:13.777
+Después aprendimos
+cómo aplicar estilos a esas Views.
+
+00:00:13.818 --> 00:00:15.171
+¿Qué es lo siguiente que haremos?
+
+00:00:15.212 --> 00:00:19.718
+Bueno, pensaba que como solo tenemos
+una View en la pantalla ahora,
+
+00:00:19.759 --> 00:00:22.564
+es un poco aburrido,
+así que deberíamos añadir más Views.
+
+00:00:22.604 --> 00:00:25.619
+Muy bien. Y si lo piensas,
+las aplicaciones divertidas que usamos,
+
+00:00:25.660 --> 00:00:29.353
+YouTube, OkCupid...
+¿Se te ocurre alguna otra?
+
+00:00:29.394 --> 00:00:30.425
+-Gmail.
+-Gmail.
+
+00:00:30.466 --> 00:00:32.698
+Todas parecen tener diversas Views
+
+00:00:32.738 --> 00:00:34.772
+integradas juntas
+perfectamente en la pantalla.
+
+00:00:34.812 --> 00:00:37.341
+Y la manera en que lo hacen
+es mediante ViewGroups.
+
+00:00:37.384 --> 00:00:39.362
+A continuación aprenderemos sobre ello.
+
+00:00:39.403 --> 00:00:42.963
+Eso nos brinda la posibilidad de colocar
+las Views en la pantalla donde queremos.
+
+00:00:43.004 --> 00:00:45.615
+Muy bien.
+Entonces, hablemos de ViewGroups.
+
+00:00:47.213 --> 00:00:51.734
+Hasta ahora solo hemos tenido un TextView
+o una sola ImageView en la pantalla.
+
+00:00:51.775 --> 00:00:53.613
+Si queremos añadir otra View debajo,
+
+00:00:53.653 --> 00:00:56.904
+podemos probar a copiar esto
+y pegarlo debajo.
+
+00:00:57.526 --> 00:00:58.989
+Pero entonces nos aparece un error.
+
+00:00:59.030 --> 00:01:01.971
+Dice: "El documento XML
+tiene más de una View raíz.
+
+00:01:02.012 --> 00:01:06.128
+Solo puede haber una View raíz,
+que debe contener el resto de Views."
+
+00:01:06.169 --> 00:01:09.572
+Si queremos que estos dos TextViews
+aparezcan en pantalla,
+
+00:01:09.613 --> 00:01:11.426
+para que ya no esté solo,
+
+00:01:11.467 --> 00:01:14.332
+tenemos que ponerlos en un ViewGroup.
+
+00:01:14.373 --> 00:01:17.676
+El ViewGroup será
+la única View raíz del diseño.
+
+00:01:17.757 --> 00:01:21.420
+Los ViewGroups también son Views
+y son rectángulos en la pantalla.
+
+00:01:21.461 --> 00:01:24.762
+Por ejemplo, los rectángulos rojos
+y naranjas de aquí son ViewGroups.
+
+00:01:24.803 --> 00:01:29.059
+Pueden tener anchura, altura,
+color de fondo u otros atributos.
+
+00:01:29.100 --> 00:01:32.608
+El color de fondo en este es naranja,
+pero también podría ser transparente,
+
+00:01:32.649 --> 00:01:35.596
+de manera que el ViewGroup
+es invisible para el usuario.
+
+00:01:35.637 --> 00:01:37.565
+En lugar de tener contenido,
+
+00:01:37.606 --> 00:01:40.483
+como el texto en un TextView,
+o la imagen en una ImageView,
+
+00:01:40.524 --> 00:01:43.763
+un ViewGroup contiene otras Views.
+
+00:01:43.804 --> 00:01:46.990
+Podéis imaginaros un ViewGroup
+como un recipiente de Views.
+
+00:01:47.031 --> 00:01:48.595
+Cuando una View contiene otras Views,
+
+00:01:48.636 --> 00:01:50.645
+decimos que es el <i>parent</i> [padre]
+de esas Views.
+
+00:01:50.686 --> 00:01:51.761
+Así que este es el padre,
+
+00:01:51.802 --> 00:01:53.637
+este es el padre
+y este es el padre.
+
+00:01:53.678 --> 00:01:55.830
+Cuando una View
+está dentro de un ViewGroup,
+
+00:01:55.871 --> 00:01:58.001
+decimos que es
+el <i>child</i> [hijo] de ese ViewGroup.
+
+00:01:58.002 --> 00:02:00.895
+Así que esta es el hijo,
+esta es el hijo, y esta es el hijo.
+
+00:02:00.936 --> 00:02:04.359
+Y aquí igual, hay dos hijos,
+y aquí también hay dos hijos.
+
+00:02:04.661 --> 00:02:08.180
+Seguimos con el vocabulario de la familia,
+y si hay varios hijos,
+
+00:02:08.215 --> 00:02:11.399
+cada uno de ellos es
+<i>sibling</i> [hermano] de los otros.
+
+00:02:11.440 --> 00:02:14.075
+Estas Views son hermanas,
+y estas dos también.
+
+00:02:14.116 --> 00:02:15.143
+Esto ha sido mucho.
+
+00:02:15.184 --> 00:02:17.160
+Para ayudaros a recordar
+toda la terminología
+
+00:02:17.201 --> 00:02:19.950
+sobre padre, hijo, View y ViewGroup,
+
+00:02:19.991 --> 00:02:23.673
+quiero presentaros a una familia
+muy simpática, los View.
+
+00:02:23.714 --> 00:02:27.912
+Ya conocéis a Tommy TextView.
+Es bastante bueno para mostrar texto.
+
+00:02:27.953 --> 00:02:30.643
+También conocéis a su hermana,
+Ivy ImageView,
+
+00:02:30.684 --> 00:02:32.689
+que mostró imágenes preciosas.
+
+00:02:32.730 --> 00:02:34.907
+Y ahora conoceremos a sus padres.
+
+00:02:34.948 --> 00:02:37.073
+Siempre pone nervioso
+conocer a los padres.
+
+00:02:37.074 --> 00:02:41.388
+Así que tenemos a Laura LinearLayout
+y a Ray, el RelativeLayout.
+
+00:02:41.429 --> 00:02:43.215
+Ambos son ViewGroups,
+
+00:02:43.216 --> 00:02:45.815
+que, como hemos dicho,
+se llaman Parent Views [Views padres].
+
+00:02:45.856 --> 00:02:49.278
+Las Children Views [Views hijas]
+se colocan según su padre.
+
+00:02:49.756 --> 00:02:51.797
+Veamos un ejemplo de un padre.
+
+00:02:51.838 --> 00:02:53.145
+Un padre puede decir a su hijo
+
+00:02:53.186 --> 00:02:56.211
+que se siente o se quede
+en un lugar concreto y que no se mueva.
+
+00:02:56.252 --> 00:02:59.779
+Ignoremos la posibilidad de que el hijo
+se quiera levantar y corretear,
+
+00:02:59.780 --> 00:03:01.461
+porque eso es un caso extremo.
+
+00:03:01.502 --> 00:03:02.676
+En un dispositivo,
+significa
+
+00:03:02.717 --> 00:03:06.359
+que un padre tiene control
+sobre la posición de sus hijos.
+
+00:03:06.400 --> 00:03:09.972
+Por ejemplo, un hijo TextView puede estar
+en la parte superior de la pantalla,
+
+00:03:10.013 --> 00:03:13.598
+y un segundo hijo, ImageView,
+puede estar justo debajo.
+
+00:03:13.639 --> 00:03:17.217
+O, si el padre quiere, puede recolocar
+a los hijos de otra manera.
+
+00:03:17.258 --> 00:03:19.135
+La hija ImageView
+puede estar a la izquierda,
+
+00:03:19.176 --> 00:03:21.755
+y el hijo TextView
+puede estar en la derecha.
+
+00:03:22.276 --> 00:03:25.071
+Trataremos más detenidamente
+los ViewGroups en esta lección,
+
+00:03:25.112 --> 00:03:28.130
+pero para comprobar que habéis entendido
+lo que hemos visto hasta ahora,
+
+00:03:28.171 --> 00:03:29.932
+por favor, responded estas preguntas.
+
+00:03:30.000 --> 00:03:33.478
+En el pantallazo de este dispositivo,
+¿podéis decirme cuántas Views hay?
+
+00:03:33.519 --> 00:03:38.716
+Número 2. La imagen de la montaña,
+¿es hija o padre del ViewGroup rojo?
+
+00:03:38.757 --> 00:03:44.417
+Número 3. El ViewGroup rojo,
+¿es hijo o padre del TextView de "Hiking"?
+
+00:03:44.458 --> 00:03:47.903
+Número 4. ¿Cuáles de estas Views
+son hermanas?
+
+00:03:47.944 --> 00:03:49.794
+Podéis anotarlas aquí.
+

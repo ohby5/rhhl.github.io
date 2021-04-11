@@ -1,0 +1,649 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.010 --> 00:00:03.360
+Pada kuis yang lalu, kita mencoba
+membayangkan cara memberikan tampilan
+
+00:00:03.360 --> 00:00:07.970
+teks Tom, Tim, dan Todd masing-masing
+satu ruang yang lebih pribadi
+
+00:00:07.970 --> 00:00:12.010
+dengan memberi mereka jarak yang sama
+secara vertikal terhadap tinggi ponsel.
+
+00:00:13.010 --> 00:00:15.740
+Kita mencoba menetapkan nilai dp, namun
+
+00:00:15.740 --> 00:00:19.610
+itu takkan berfungsi jika memakai
+perangkat lebih tinggi seperti tablet.
+
+00:00:19.610 --> 00:00:24.300
+Lalu, kita coba match_parent, namun itu
+membuat tampilan teks Tom sangat besar.
+
+00:00:24.300 --> 00:00:27.220
+Lalu, itu membuat dua tampilan teks
+lainnya keluar dari layar.
+
+00:00:27.220 --> 00:00:31.020
+Maka kita mulai mencari tahu
+tentang bobot tata letak linear.
+
+00:00:31.020 --> 00:00:34.420
+Dalam dokumentasi ini, dikatakan bahwa
+untuk tata letak linear vertikal,
+
+00:00:34.420 --> 00:00:38.140
+bila kita ingin memberi jarak yang sama
+pada anak-anaknya, kita perlu mengatur
+
+00:00:38.140 --> 00:00:42.320
+tingginya menjadi nol dp dan
+nilai bobot satu untuk tiap anak.
+
+00:00:43.270 --> 00:00:46.480
+Mengatur nilai bobot pada anak tampilan
+
+00:00:46.480 --> 00:00:48.950
+sama seperti mengatur nilai
+yang penting padanya.
+
+00:00:48.950 --> 00:00:50.750
+Semakin tinggi nilai bobot,
+
+00:00:50.750 --> 00:00:55.040
+semakin banyak ruang yang didapat jika ada
+ruang yang tersedia di sisi kiri induk.
+
+00:00:55.850 --> 00:00:56.796
+Contohnya,
+
+00:00:56.796 --> 00:00:58.827
+untuk tata letak linear vertikal ini,
+
+00:00:58.827 --> 00:01:01.358
+ia menempati ruang vertikal
+ke bawah seperti ini.
+
+00:01:01.358 --> 00:01:04.490
+Ternyata tata letak linear ini memiliki
+banyak ruang kosong, dan
+
+00:01:04.490 --> 00:01:08.000
+itu akan dibagikan pada anak-anak
+yang punya nilai bobot.
+
+00:01:08.000 --> 00:01:10.820
+Jika satu anak punya nilai bobot
+yang sangat tinggi,
+
+00:01:10.820 --> 00:01:14.100
+maka lebih banyak tinggi yang tersedia
+untuk diberikan pada anak itu.
+
+00:01:14.100 --> 00:01:16.860
+Bila satu anak punya nilai bobot
+yang sangat kecil, maka
+
+00:01:16.860 --> 00:01:18.520
+lebih sedikit tinggi yang tersedia
+
+00:01:18.520 --> 00:01:19.890
+untuk diberikan ke anak itu.
+
+00:01:19.890 --> 00:01:21.340
+Saya bisa tunjukkan.
+
+00:01:21.340 --> 00:01:23.860
+Saya akan mengatur tinggi
+anak ini menjadi nol dp dan
+
+00:01:23.860 --> 00:01:25.840
+memberi nilai bobot satu.
+
+00:01:25.840 --> 00:01:29.642
+Tata letak ini pertama menempatkan
+tampilan gambar Tim dan Todd,
+
+00:01:29.642 --> 00:01:33.700
+karena mereka memiliki tinggi tetap
+berdasarkan isi di dalamnya.
+
+00:01:33.700 --> 00:01:37.679
+Lalu ada teks tampilan Tom ini yang punya
+tinggi awal nol dp, namun
+
+00:01:37.679 --> 00:01:38.730
+bobotnya satu.
+
+00:01:38.730 --> 00:01:41.116
+Tak ada anak-anak lain
+yang punya nilai bobot,
+
+00:01:41.116 --> 00:01:44.720
+karena nilai bobot otomatisnya
+adalah nol jika tidak ditentukan.
+
+00:01:44.720 --> 00:01:47.070
+Jadi ini anak satu-satunya yang
+punya nilai bobot.
+
+00:01:47.070 --> 00:01:50.480
+Jadi, induknya memberi semua
+tinggi yang tersisa pada layar
+
+00:01:50.480 --> 00:01:51.900
+untuk tampilan teks Tom ini.
+
+00:01:51.900 --> 00:01:55.610
+Dan itulah sebabnya Anda melihat
+tampilan teks Tom begitu besar.
+
+00:01:55.610 --> 00:01:58.650
+Sekarang saya coba tentukan nilai bobot
+untuk anak-anak lainnya.
+
+00:01:58.650 --> 00:02:02.500
+Jadi, sekarang tiap anak punya
+tinggi nol dp dan bobot satu.
+
+00:02:02.500 --> 00:02:04.980
+Ini langkah yang akan
+dilalui oleh tata letak linear.
+
+00:02:04.980 --> 00:02:07.970
+Ia akan mencoba membayangkan
+tinggi tiap tampilan ini.
+
+00:02:07.970 --> 00:02:10.699
+Tinggi tampilan-tampilan ini
+dimulai dari nol dp.
+
+00:02:10.699 --> 00:02:13.600
+Maka, itu artinya sisa tinggi
+yang tersedia dalam induk
+
+00:02:13.600 --> 00:02:16.270
+pada dasarnya adalah
+keseluruhan tinggi layar.
+
+00:02:16.270 --> 00:02:19.500
+Ia membagi keseluruhan tinggi layar
+dengan jumlah bobot,
+
+00:02:19.500 --> 00:02:20.280
+yaitu tiga.
+
+00:02:20.280 --> 00:02:24.215
+Lalu, ia memberi sepertiga dari tinggi
+yang tersedia itu untuk tampilan teks Tom,
+
+00:02:24.215 --> 00:02:27.220
+sepertiga untuk tampilan teks Tim,
+
+00:02:27.220 --> 00:02:29.680
+dan sepertiga untuk tampilan teks Todd.
+
+00:02:29.680 --> 00:02:32.360
+Mereka akan memiliki ruang
+yang sama terhadap tinggi alat
+
+00:02:32.360 --> 00:02:34.450
+bahkan pada layar alat yang lebih besar
+
+00:02:34.450 --> 00:02:36.990
+karena nilai bobot ini.
+
+00:02:36.990 --> 00:02:39.910
+Bila saya ubah nilai bobot
+menjadi lebih tinggi,
+
+00:02:39.910 --> 00:02:44.690
+maka induk akan memberi lebih banyak
+tinggi untuk tampilan teks Tim.
+
+00:02:44.690 --> 00:02:47.310
+Saya bisa mengubah nilai bobotnya
+menjadi lebih tinggi.
+
+00:02:47.310 --> 00:02:51.380
+dan Anda bisa lihat bagaimana
+ia terus mendapat tinggi.
+
+00:02:51.380 --> 00:02:54.070
+Dalam hal ini, tampilan
+teks Tim berbobot delapan.
+
+00:02:54.070 --> 00:02:56.910
+Tom berbobot satu dan Todd satu.
+
+00:02:56.910 --> 00:03:00.340
+Jadi, subtotal bobotnya adalah
+delapan, sembilan, sepuluh.
+
+00:03:00.340 --> 00:03:03.690
+Maka induk membagi tinggi
+yang tersedia dengan sepuluh.
+
+00:03:03.690 --> 00:03:05.010
+Dan sepersepuluh untuk tom,
+
+00:03:05.010 --> 00:03:06.690
+delapan per sepuluh untuk Tim,
+
+00:03:06.690 --> 00:03:08.170
+dan sepersepuluh untuk Todd.
+
+00:03:09.150 --> 00:03:10.150
+Maka untuk tata letak linear vertikal,
+
+00:03:10.150 --> 00:03:12.760
+misalkan kita punya tiga
+anak tampilan teks.
+
+00:03:12.760 --> 00:03:15.180
+Kita atur tinggi awalnya
+menjadi nol dp.
+
+00:03:15.180 --> 00:03:19.010
+Sehingga mereka tertumpuk
+di atas layar dengan tinggi nol.
+
+00:03:19.010 --> 00:03:22.670
+Itu artinya, induk punya semua
+tinggi tambahan yang tersedia.
+
+00:03:22.670 --> 00:03:27.810
+Bila saya beri nilai satu pada tiap anak
+tampilan teks, maka tinggi induk yang
+
+00:03:27.810 --> 00:03:31.420
+tersedia akan dibagikan
+merata pada tiap anak.
+
+00:03:32.330 --> 00:03:35.400
+Hal yang sama akan berfungsi
+untuk tata letak linear horizontal.
+
+00:03:35.400 --> 00:03:37.550
+Misalkan kita punya
+tiga anak tampilan teks.
+
+00:03:37.550 --> 00:03:39.820
+Kita mulai dengan lebar nol dp.
+
+00:03:39.820 --> 00:03:43.300
+Artinya induk punya semua
+tinggi yang tersedia ini.
+
+00:03:43.300 --> 00:03:46.550
+bila saya nilai bobot satu
+untuk tiap anak tampilan,
+
+00:03:46.550 --> 00:03:50.110
+maka kita akan mengambil lebar yang
+tersedia di sisi kiri induk dan
+
+00:03:50.110 --> 00:03:52.380
+membaginya sama rata pada tiap anak.
+
+00:03:52.380 --> 00:03:54.910
+Dan lagi-lagi, tak perlu
+ada nilai bobot satu.
+
+00:03:54.910 --> 00:03:57.740
+Bisa tiga atau nilai lain.
+
+00:03:57.740 --> 00:03:59.290
+Atau bahkan nol.
+
+00:03:59.290 --> 00:04:04.100
+Bila sebuah tampilan berbobot nol,
+tampilan itu takkan berubah sesuai
+
+00:04:04.100 --> 00:04:06.290
+ruang yang tersedia di dalam induk.
+
+00:04:06.290 --> 00:04:08.960
+Lebar dan tingginya akan
+tetap seperti yang anda atur.
+
+00:04:08.960 --> 00:04:10.920
+Satu hal yang saya ingin tunjukkan yaitu
+
+00:04:10.920 --> 00:04:12.710
+kapan mengatur tinggi
+menjadi nol atau
+
+00:04:12.710 --> 00:04:13.650
+lebar menjadi nol.
+
+00:04:13.650 --> 00:04:15.700
+Bila anda punya tata
+letak linear vertikal,
+
+00:04:15.700 --> 00:04:18.540
+Anda mengisinya secara
+vertikal seperti ini.
+
+00:04:18.540 --> 00:04:20.740
+Anda pun tak tahu nilai tinggi
+seharusnya, jadi
+
+00:04:20.740 --> 00:04:23.510
+Anda atur tinggi menjadi nol dp dan
+memberinya nilai bobot.
+
+00:04:24.380 --> 00:04:28.500
+Serupa untuk tata letak linear horizontal,
+Anda mengisinya secara horizontal.
+
+00:04:28.500 --> 00:04:31.650
+Jadi, Anda tak tahu lebar anak tampilan.
+
+00:04:31.650 --> 00:04:34.930
+Maka Anda atur lebarnya nol dp,
+dan memberinya nilai bobot.
+
+00:04:35.490 --> 00:04:39.540
+Intinya, Anda bisa pikirkan untuk
+mengatur nilai bobot tampilan
+
+00:04:39.540 --> 00:04:44.250
+seperti meregangkannya tergantung
+seberapa besar induk tampilannya.
+
+00:04:44.250 --> 00:04:48.060
+Ini bagus untuk mengisi ruang yang
+tersedia dalam alat yang kecil maupun
+
+00:04:48.060 --> 00:04:49.259
+yang besar.
+
+00:04:50.220 --> 00:04:53.730
+Inilah sepasang contoh nyata di mana
+bobot tata letak benar-benar berguna.
+
+00:04:54.380 --> 00:04:56.270
+Ini adalah aplikasi Google Hangout.
+
+00:04:56.270 --> 00:04:58.880
+Anda bisa memakainya untuk
+mengobrol dengan teman atau
+
+00:04:58.880 --> 00:05:01.750
+mengirim pinguin yang mengantuk ke mereka.
+
+00:05:01.750 --> 00:05:04.720
+Bagian bawah layar ini merupakan
+tempat Anda mengirim pesan.
+
+00:05:04.720 --> 00:05:08.350
+Lihatlah tata letak
+di bawah ini lebih dekat.
+
+00:05:08.350 --> 00:05:12.370
+Ini merupakan tata letak linear horizontal
+karena letaknya dalam barisan horizontal.
+
+00:05:12.370 --> 00:05:14.767
+Ia terbuat dari sebuah
+&lt;i&gt;ImageView&lt;/i&gt; (tampilan gambar),
+
+00:05:14.767 --> 00:05:18.810
+sebuah lahan &lt;i&gt;EditText&lt;/i&gt; di mana Anda bisa
+memasukkan teks, dan tampilan gambar lain.
+
+00:05:18.810 --> 00:05:22.290
+Sekarang, tinggi tiap tampilan ini
+adalah wrap_content
+
+00:05:22.290 --> 00:05:25.250
+karena ia menyelimuti isi di dalamnya.
+
+00:05:25.250 --> 00:05:28.480
+Lebar dari dua tampilan gambar ini adalah
+wrap_content karena ia
+
+00:05:28.480 --> 00:05:30.350
+hanya selebar isinya.
+
+00:05:31.180 --> 00:05:33.820
+Kita beri ia bobot nol karena
+kita tak ingin ia menjadi
+
+00:05:33.820 --> 00:05:34.980
+lebih besar dari ini,
+
+00:05:34.980 --> 00:05:37.740
+bahkan bila ada lebih banyak
+ruang yang tersisa pada induk.
+
+00:05:37.740 --> 00:05:40.270
+Mengatur bobot jadi nol
+membuatnya hanya wrap_content
+
+00:05:40.270 --> 00:05:42.500
+untuk lebar dan tinggi,
+dan itu takkan berubah.
+
+00:05:42.500 --> 00:05:44.610
+Kita ingin ia meregang agar menjadi
+
+00:05:44.610 --> 00:05:47.190
+sedikit lebih besar di layar
+yang lebih besar, dan
+
+00:05:47.190 --> 00:05:50.070
+menciutkannya di layar yang lebih kecil.
+
+00:05:50.070 --> 00:05:53.804
+Kita atur layarnya menjadi
+nol dp dan bobotnya satu.
+
+00:05:53.804 --> 00:05:56.100
+Itu artinya induk tata
+letak linear akan
+
+00:05:56.100 --> 00:05:58.050
+mencoba gambar ini terlebih dulu,
+
+00:05:58.050 --> 00:05:59.280
+lalu gambar yang ini.
+
+00:05:59.280 --> 00:06:01.280
+Lalu sisa lebar di layar akan
+
+00:06:01.280 --> 00:06:03.950
+diberikan pada tampilan ini.
+
+00:06:04.490 --> 00:06:06.650
+Inilah contohnya dalam aplikasi peta.
+
+00:06:06.650 --> 00:06:09.240
+Ini adalah halaman rincian
+untuk suatu tempat.
+
+00:06:09.240 --> 00:06:12.810
+Ada tiga tombol di sini,
+&lt;i&gt;Call, Save,&lt;/i&gt; dan &lt;i&gt;Website&lt;/i&gt;.
+
+00:06:12.810 --> 00:06:14.500
+Ayo lihat mereka lebih dekat.
+
+00:06:14.500 --> 00:06:18.510
+Anda bisa jadikan mereka tampilan gambar
+dengan melekatkan simbol pada mereka.
+
+00:06:18.510 --> 00:06:21.390
+dan Anda bisa lihat catatan
+instruktur untuk lebih rinci.
+
+00:06:21.390 --> 00:06:23.600
+Namun itu benar-benar
+merupakan titik singgung.
+
+00:06:23.600 --> 00:06:24.490
+Untuk latihan ini,
+
+00:06:24.490 --> 00:06:26.700
+mari anggap ini sebagai
+tampilan-tampilan teks.
+
+00:06:26.700 --> 00:06:29.280
+Tinggi tiap tampilan teks akan
+jadi wrap_content
+
+00:06:29.280 --> 00:06:33.180
+karena ia menyelimuti
+tinggi isi di dalamnya.
+
+00:06:33.180 --> 00:06:35.315
+Sekarang, lebarnya sedikit lebih rumit.
+
+00:06:35.315 --> 00:06:38.360
+Kita ingin tiap tampilan teks ini
+tersebar merata terhadap lebar
+
+00:06:38.360 --> 00:06:41.780
+layar ini, tergantung besarnya alat.
+
+00:06:41.780 --> 00:06:44.080
+Kita tidak ingin ketiga tampilan teks ini
+
+00:06:44.080 --> 00:06:46.820
+dikelompokkan di sisi kiri layar.
+
+00:06:46.820 --> 00:06:49.120
+Jadi, untuk membagi rata
+jarak bagi anak-anak,
+
+00:06:49.120 --> 00:06:50.918
+kita beri bobot yang sama.
+
+00:06:50.918 --> 00:06:54.060
+Kita atur lebar nol dan
+bobot satu untuk tiap anak.
+
+00:06:54.060 --> 00:06:55.750
+Sehingga, lebar yang tersedia dalam
+
+00:06:55.750 --> 00:06:58.820
+induk terbagi rata pada ketiga anak.
+
+00:06:58.820 --> 00:07:02.400
+Contoh terakhir adalah aplikasi surel.
+
+00:07:02.400 --> 00:07:06.290
+Ini merupakan layar tulis di Gmail di mana
+Anda bisa menulis pesan baru.
+
+00:07:06.290 --> 00:07:09.430
+Letaknya linear vertikal karena
+&lt;i&gt;item-item&lt;/i&gt; berada dalam satu kolom.
+
+00:07:09.430 --> 00:07:12.866
+Dan terdiri dari empat lahan
+EditText yang berbeda.
+
+00:07:12.866 --> 00:07:15.890
+Sekarang, lebar tiap anak adalah
+match_parent karena kita ingin
+
+00:07:15.890 --> 00:07:19.295
+meregangkannya selebar perangkat.
+
+00:07:19.295 --> 00:07:23.235
+Untuk tinggi, kita atur tiga lahan
+EditText ini menjadi wrap_content sehingga
+
+00:07:23.235 --> 00:07:24.995
+menyelimuti teks di dalamnya.
+
+00:07:24.995 --> 00:07:29.450
+kita atur bobot jadi nol karena kita
+tak ingin mereka bertambah ukuran meski
+
+00:07:29.450 --> 00:07:32.490
+ada tinggi yang tersedia di induk.
+
+00:07:32.490 --> 00:07:36.340
+Namun, untuk lahan EditText yang terakhir
+ini, ini tempat Anda menulis pesan, dan
+
+00:07:36.340 --> 00:07:38.780
+kita ingin memberi pengguna banyak ruang
+
+00:07:38.780 --> 00:07:40.800
+menulis surat yang panjang untuk Nenek.
+
+00:07:40.800 --> 00:07:42.900
+Maka kita atur tinggi jadi nol dp,
+
+00:07:42.900 --> 00:07:44.340
+dan kita beri bobot satu.
+
+00:07:44.340 --> 00:07:46.840
+Jadi, bila induk punya
+tinggi yang tersisa,
+
+00:07:46.840 --> 00:07:49.140
+maka itu akan diberikan pada
+lahan EditText anak.
+
+00:07:49.140 --> 00:07:51.730
+Pada alat yang lebih besar,
+
+00:07:51.730 --> 00:07:54.000
+lahan surel akan menjadi lebih tinggi,
+
+00:07:54.000 --> 00:07:56.870
+dan pada alat yang lebih kecil
+akan jadi lebih kecil.
+
+00:07:56.870 --> 00:08:00.190
+Sekarang, saatnya Anda untuk berlatih.
+
+00:08:00.190 --> 00:08:03.610
+Kami ingin Anda maju terus dan membuat
+tata letak ini di &lt;i&gt;XML Visualizer&lt;/i&gt;.
+
+00:08:03.610 --> 00:08:06.420
+Anda bisa mulai dengan &lt;i&gt;XML&lt;/i&gt; yang
+kami sediakan di bawah ini.
+
+00:08:06.420 --> 00:08:08.217
+Berikut ini adalah beberapa tips.
+
+00:08:08.217 --> 00:08:11.350
+Saat Anda menangani hal seperti
+ini, tentukan dahulu lebar dari
+
+00:08:11.350 --> 00:08:14.920
+tiap tampilan, lalu lanjutkan
+dan tentukan tinggi tiap tampilan.
+
+00:08:14.920 --> 00:08:17.630
+Serta pastikan gambarnya mengambil sisa
+
+00:08:17.630 --> 00:08:19.310
+tinggi tata letak linear induk.
+
+00:08:19.310 --> 00:08:22.660
+Jadi, pada alat dengan layar lebih kecil,
+tinggi yang terpakai sedikit.
+
+00:08:22.660 --> 00:08:24.990
+Dan sebaliknya pada alat
+dengan layar lebih besar.
+
+00:08:24.990 --> 00:08:25.900
+Oke, berlatihlah!
+
+00:08:25.930 --> 00:08:27.800
+Centang kotak ini bila telah selesai.
+

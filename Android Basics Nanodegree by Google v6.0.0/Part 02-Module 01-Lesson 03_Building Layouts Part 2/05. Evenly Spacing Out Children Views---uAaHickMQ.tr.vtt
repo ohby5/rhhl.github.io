@@ -1,0 +1,391 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.080 --> 00:00:01.290
+Haydi bir gözatalım.
+
+00:00:01.290 --> 00:00:04.300
+Bu zamana kadar linear layout'un
+yatay ya da dikey oryantasyonlu
+
+00:00:04.300 --> 00:00:05.650
+olabileceğini öğrendik.
+
+00:00:06.890 --> 00:00:09.610
+Ancak şimdi bu görüntülerin
+ekran alanından tam anlamıyla
+
+00:00:09.610 --> 00:00:11.240
+yararlanıyor mu ona bakalım.
+
+00:00:11.240 --> 00:00:13.750
+Alan derken ekrandaki
+boş alandan bahsediyorum.
+
+00:00:14.930 --> 00:00:16.490
+Nexus 6 telefonumuz için,
+
+00:00:16.490 --> 00:00:20.740
+üç child'ı olan dikey linear layout'umuz 
+olduğunu varsayalım.
+
+00:00:20.740 --> 00:00:22.420
+Tom, Tim ve Todd.
+
+00:00:22.420 --> 00:00:25.500
+Telefonu şu an tuttuğumuz gibi 
+portre modunda tuttuğumuzda
+
+00:00:25.500 --> 00:00:28.380
+tüm TextView'ler ekranın 
+sol üst köşesinde toplandı.
+
+00:00:29.380 --> 00:00:32.320
+Boş alan kullanılmadı.
+
+00:00:32.320 --> 00:00:35.480
+Benzer şekilde
+telefonu manzara moduna çevirirsek,
+
+00:00:35.480 --> 00:00:40.120
+metin sol üst köşeye toplandı
+geri kalan alan boş kaldı.
+
+00:00:40.120 --> 00:00:43.680
+Ekranın büyük olduğu
+tablet gibi cihazlarda daha da belli.
+
+00:00:44.260 --> 00:00:47.280
+Ekran alanın yalnız 
+küçük bir bölümünü kullanıyoruz,
+
+00:00:47.280 --> 00:00:48.252
+geri kalanı boş.
+
+00:00:48.252 --> 00:00:51.680
+Ekran boş kalmasın diye
+bu görüntüleri
+
+00:00:51.680 --> 00:00:54.690
+ekranda nasıl yayacağımızı
+öğreneceğiz.
+
+00:00:54.690 --> 00:00:56.560
+Bu diğer görüntüler için de geçerli.
+
+00:00:56.560 --> 00:00:59.500
+Daha iyi bir kullanıcı tecrübesi için 
+ekranın köşesinde
+
+00:00:59.500 --> 00:01:03.460
+küçük bir resimden ziyade
+daha büyük resimler olabilir.
+
+00:01:04.489 --> 00:01:05.620
+Butonlarla da aynı,
+
+00:01:05.620 --> 00:01:09.785
+büyük butonlarınız olabilir
+böylece tıklaması kolay olur.
+
+00:01:09.785 --> 00:01:13.155
+Örneğimiz için
+metinlerle devam edeceğiz.
+
+00:01:13.155 --> 00:01:17.035
+XML visualizer'a gidip bunları 
+nasıl genişleteceğimizi öğrenelim.
+
+00:01:18.115 --> 00:01:20.545
+Tom, Tim ve Todd için 
+kodumuz bu.
+
+00:01:20.545 --> 00:01:23.845
+Dikey linear layout'ta
+üç tane TextView var ve
+
+00:01:23.845 --> 00:01:25.389
+cihazda bu şekilde 
+görünecekler.
+
+00:01:26.570 --> 00:01:29.810
+Bu üç TextView'i nasıl 
+genişleteceğinizi göstereceğim
+
+00:01:29.810 --> 00:01:31.060
+Böyle Tom burada.
+
+00:01:31.060 --> 00:01:31.980
+Tim burada.
+
+00:01:31.980 --> 00:01:33.910
+Ve Todd ise burada aşağıda.
+
+00:01:33.910 --> 00:01:37.950
+Açıkcası yüksekliği wrap_content 
+olarak ayarlamak işimize yaramadı.
+
+00:01:37.950 --> 00:01:41.350
+Öğrendiğimiz diğer bir çözüm ise
+yüksekliğe belli bir dp değeri atamak.
+
+00:01:41.350 --> 00:01:44.510
+O yüzden yüksekliğe, mesela, 
+200 dp değerini vereyim.
+
+00:01:45.760 --> 00:01:48.340
+Harika.
+Tom için solda daha yerim var.
+
+00:01:48.340 --> 00:01:51.320
+Diğer TextView'ler içinde 
+aynı şeyi yaparsak,
+
+00:01:51.320 --> 00:01:54.570
+ekrana eşit 
+bir şekilde dağılacaklardır.
+
+00:01:54.570 --> 00:01:57.920
+Ancak bu çözüm yalnızca 
+cihazın bu tarafı için geçerli.
+
+00:01:57.920 --> 00:02:01.510
+Daha önce gösterdiğim gibi 
+tablet olursa bu görünümler,
+
+00:02:01.510 --> 00:02:04.640
+ekranın sol üst köşesinde toplanacaktır.
+
+00:02:04.640 --> 00:02:08.880
+Diğer çözüm de daha önce öğrendiğimiz gibi
+yüksekliği match_parent ayarlamak.
+
+00:02:08.880 --> 00:02:11.750
+Tom TextView'i için 
+match_parent yaparsak
+
+00:02:11.750 --> 00:02:15.540
+parent'in genişliğini alacaktır 
+o da tüm ekran.
+
+00:02:15.540 --> 00:02:19.230
+Diğer görünümleri ekran dışına itiyor
+göremiyoruz bile.
+
+00:02:19.230 --> 00:02:20.930
+O yüzden bunu yapmayalım.
+
+00:02:20.930 --> 00:02:23.660
+Yapacak bir şey kalmadı gibi
+çünkü wrap_content'i denedik
+
+00:02:23.660 --> 00:02:26.970
+yükseklik için belli bir dp değeri vardı,
+match_parent'i de denedik.
+
+00:02:27.300 --> 00:02:32.930
+Bunların hiçbiri 
+farklı cihazlar için çözüm sunmadı.
+
+00:02:32.930 --> 00:02:36.420
+Bu sorunun potansiyel çözümünü 
+Google'da araştıralım.
+
+00:02:36.420 --> 00:02:38.180
+Linear layout kullanıyoruz.
+
+00:02:38.180 --> 00:02:40.730
+Child görüntüler için 
+aynı alanı sağlamak istiyoruz.
+
+00:02:40.730 --> 00:02:42.260
+Onu araştıralım.
+
+00:02:42.260 --> 00:02:44.680
+Tamam, evet
+birkaç sonuç çıktı karşımıza,
+
+00:02:44.680 --> 00:02:46.920
+ilkine tıklayalım.
+
+00:02:46.920 --> 00:02:49.358
+Stackoverflow sitesine 
+bir link.
+
+00:02:49.358 --> 00:02:51.470
+Android geliştiricilere 
+soru sorup,
+
+00:02:51.470 --> 00:02:53.785
+cevap alabileceğiniz
+bir Q&amp;A(soru-cevap) sitesi.
+
+00:02:53.785 --> 00:02:58.005
+Takıldığımda ve bir problemim olduğunda,
+her zaman kullanıyorum.
+
+00:02:58.005 --> 00:03:00.515
+Çoğu zaman başkaları soracağınız 
+şeyi sormuş oluyor.
+
+00:03:01.975 --> 00:03:05.425
+Buradaki soruda linear layout'da
+ekran buton genişliklerini
+
+00:03:05.425 --> 00:03:07.657
+nasıl eşit ayarlanabileceği soruluyor.
+
+00:03:07.657 --> 00:03:09.677
+Bu aradığım cevaba yakın,
+
+00:03:09.677 --> 00:03:12.627
+buton yerine
+TextView'le çalışıyoruz.
+
+00:03:12.627 --> 00:03:17.087
+Linear layout genişiği yerine
+yüksekliği uydurmaya çalışıyoruz.
+
+00:03:17.767 --> 00:03:20.710
+Hepsini okuyabilir ya da
+şöyle bir göz gezdirebiliriz.
+
+00:03:20.710 --> 00:03:23.070
+Cevabı bulmak için göz ucuyla bakarım.
+
+00:03:23.070 --> 00:03:27.590
+Bu çözüm 88 oy almış
+yeşil tik var üstünde.
+
+00:03:27.590 --> 00:03:30.840
+layout_width'i 0 dp'ye
+layout_weight'i 1'e
+
+00:03:30.840 --> 00:03:33.240
+ayarlamanızı söylüyor.
+
+00:03:33.240 --> 00:03:36.899
+Bu müsait genişliği 
+butonlar arasında eşit şekilde bölüyor.
+
+00:03:37.910 --> 00:03:41.170
+Cevabı tam anlamıyla anlamamış
+olabilirsiniz, sorun değil.
+
+00:03:41.170 --> 00:03:44.620
+Anahtar deyim burada
+layout_weight.
+
+00:03:44.620 --> 00:03:47.950
+Bununla daha önce karşılaşmamıştık
+çözüm için önemli gözüküyor.
+
+00:03:47.950 --> 00:03:49.640
+Google'a kopyalayalım
+
+00:03:49.640 --> 00:03:52.005
+layout_weight hakkında
+daha fazla bilgi bulalım.
+
+00:03:52.005 --> 00:03:55.205
+Linear layout
+layout_weight özelliğini araştıralım.
+
+00:03:55.205 --> 00:03:57.815
+Bunun için ilk sonuç 
+developer.android.com sitesinde
+
+00:03:57.815 --> 00:04:00.085
+linear layout makalesi,
+buna tıklayalım.
+
+00:04:01.285 --> 00:04:03.845
+Linear layout hakkında
+bir makale
+
+00:04:03.845 --> 00:04:08.015
+Yukarıda Android oryantasyon özelliği
+hakkında bilgi sahibiyiz,
+
+00:04:08.015 --> 00:04:11.230
+ancak burada layout weight denilen 
+özellik için yeni bilgiler var.
+
+00:04:11.230 --> 00:04:15.090
+Ayrıca sayfanın aşağısında
+örnek kod ve ekran görüntüsü de var.
+
+00:04:15.650 --> 00:04:17.329
+Bunları sizin için 
+özetleyebilirim
+
+00:04:17.329 --> 00:04:21.260
+ancak önce size bu dokümanı
+okumanız için şans tanıyorum.
+
+00:04:21.260 --> 00:04:23.710
+Şimdi işin içinden 
+kendi başınıza çıkmaya çalışın.
+
+00:04:23.710 --> 00:04:27.490
+Bu dersten sonra problemleri
+çözmek buna benzer olacak.
+
+00:04:28.220 --> 00:04:30.510
+İnternet üzerinde 
+bilgi edinmek arayacak
+
+00:04:30.510 --> 00:04:33.350
+ve bunu probleminizi 
+çözmede kullanacaksınız.
+
+00:04:34.500 --> 00:04:37.340
+Tamam, cihaz üzerinde 
+yerleşim bu şekilde.
+
+00:04:37.340 --> 00:04:39.120
+Bu da yapmak istediğimiz.
+
+00:04:39.120 --> 00:04:42.660
+Üç görünüm cihazın boyuna göre 
+eşit şekilde yerleştirmek.
+
+00:04:42.660 --> 00:04:43.800
+Problemin çözümü için,
+
+00:04:43.800 --> 00:04:46.760
+aşağıda linkini vermiş olduğum
+linear layout makalesini okuyun.
+
+00:04:47.830 --> 00:04:52.100
+Makalede yazılmış olan her şeyi
+anlamamanız kesinlikle normal.
+
+00:04:52.490 --> 00:04:55.390
+Çoğu zaman işinizde 
+yardımcı olması için
+
+00:04:55.390 --> 00:04:59.250
+makaleyi belli belirsiz 
+anlamak istersiniz.
+
+00:05:00.320 --> 00:05:03.800
+Bu XML düzenini inşa etmek 
+için birkaç fikir vermek istiyorum.
+
+00:05:05.100 --> 00:05:07.550
+Tüm XML kodunu vermek 
+zorunda değilsiniz
+
+00:05:07.550 --> 00:05:10.420
+çünkü bir sonraki videoda
+beraber üstünden geçeceğiz.
+
+00:05:10.420 --> 00:05:13.870
+Ancak bu bilginin çözümde nasıl 
+kullacağınız dair birkaç cümle yazabilir
+
+00:05:13.870 --> 00:05:16.920
+ya da birkaç madde sıralayabilirsiniz.
+

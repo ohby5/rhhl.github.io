@@ -1,0 +1,273 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Item with RelativeLayout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Building Layouts: Part 2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. ViewGroups.html">01. ViewGroups</a>
+    </li>
+    <li class="">
+      <a href="02. Quiz Types of ViewGroups.html">02. Quiz: Types of ViewGroups</a>
+    </li>
+    <li class="">
+      <a href="03. LinearLayout.html">03. LinearLayout</a>
+    </li>
+    <li class="">
+      <a href="04. Width and Height.html">04. Width and Height</a>
+    </li>
+    <li class="">
+      <a href="05. Evenly Spacing Out Children Views.html">05. Evenly Spacing Out Children Views</a>
+    </li>
+    <li class="">
+      <a href="06. Layout Weight.html">06. Layout Weight</a>
+    </li>
+    <li class="">
+      <a href="07. Relative Layout.html">07. Relative Layout</a>
+    </li>
+    <li class="">
+      <a href="08. Relative to Parent.html">08. Relative to Parent</a>
+    </li>
+    <li class="">
+      <a href="09. Relative to Other Views.html">09. Relative to Other Views</a>
+    </li>
+    <li class="">
+      <a href="10. List Item with RelativeLayout.html">10. List Item with RelativeLayout</a>
+    </li>
+    <li class="">
+      <a href="11. Padding vs. Margin.html">11. Padding vs. Margin</a>
+    </li>
+    <li class="">
+      <a href="12. Chatting with Google&#x27;s Kirill Grouchnikov Part 2.html">12. Chatting with Google&#x27;s Kirill Grouchnikov Part 2</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. List Item with RelativeLayout</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>List Item with RelativeLayout</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="10. List Item with RelativeLayout-f-1KxkahcnA.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="10. List Item with RelativeLayout-f-1KxkahcnA.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="10. List Item with RelativeLayout-f-1KxkahcnA.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="10. List Item with RelativeLayout-f-1KxkahcnA.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="10. List Item with RelativeLayout-f-1KxkahcnA.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="10. List Item with RelativeLayout-f-1KxkahcnA.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="10. List Item with RelativeLayout-f-1KxkahcnA.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="10. List Item with RelativeLayout-f-1KxkahcnA.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="10. List Item with RelativeLayout-f-1KxkahcnA.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="10. List Item with RelativeLayout-f-1KxkahcnA.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="10. List Item with RelativeLayout-f-1KxkahcnA.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="10. List Item with RelativeLayout-f-1KxkahcnA.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="10. List Item with RelativeLayout-f-1KxkahcnA.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="10. List Item with RelativeLayout-f-1KxkahcnA.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="10. List Item with RelativeLayout-f-1KxkahcnA.zh-TW.vtt" label="TW">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/4205708633.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 24.24535983946265%; left: 6.981833974024898%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="10. List Item with RelativeLayout-QjJgAcTSeyY.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="10. List Item with RelativeLayout-QjJgAcTSeyY.ar.vtt" label="ar">
+  <track default="true" kind="subtitles" srclang="en" src="10. List Item with RelativeLayout-QjJgAcTSeyY.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="es" src="10. List Item with RelativeLayout-QjJgAcTSeyY.es.vtt" label="es">
+  <track default="false" kind="subtitles" srclang="fr" src="10. List Item with RelativeLayout-QjJgAcTSeyY.fr.vtt" label="fr">
+  <track default="false" kind="subtitles" srclang="id" src="10. List Item with RelativeLayout-QjJgAcTSeyY.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="ja" src="10. List Item with RelativeLayout-QjJgAcTSeyY.ja.vtt" label="ja">
+  <track default="false" kind="subtitles" srclang="ko" src="10. List Item with RelativeLayout-QjJgAcTSeyY.ko.vtt" label="ko">
+  <track default="false" kind="subtitles" srclang="BR" src="10. List Item with RelativeLayout-QjJgAcTSeyY.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="ru" src="10. List Item with RelativeLayout-QjJgAcTSeyY.ru.vtt" label="ru">
+  <track default="false" kind="subtitles" srclang="tr" src="10. List Item with RelativeLayout-QjJgAcTSeyY.tr.vtt" label="tr">
+  <track default="false" kind="subtitles" srclang="uz" src="10. List Item with RelativeLayout-QjJgAcTSeyY.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="vi" src="10. List Item with RelativeLayout-QjJgAcTSeyY.vi.vtt" label="vi">
+  <track default="false" kind="subtitles" srclang="CN" src="10. List Item with RelativeLayout-QjJgAcTSeyY.zh-CN.vtt" label="CN">
+  <track default="false" kind="subtitles" srclang="TW" src="10. List Item with RelativeLayout-QjJgAcTSeyY.zh-TW.vtt" label="TW">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p><a href="http://labs.udacity.com/android-visualizer/#/android/relative-layout-list-item" target="_blank">Link to the XML visualizer </a></p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Padding vs. Margin.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. List Item with RelativeLayout')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

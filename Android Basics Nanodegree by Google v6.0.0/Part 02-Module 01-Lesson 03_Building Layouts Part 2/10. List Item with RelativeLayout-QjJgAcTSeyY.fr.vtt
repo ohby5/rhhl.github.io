@@ -1,0 +1,179 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.550 --> 00:00:02.760
+Voici le fichier XML original
+qu'on vous a fourni,
+
+00:00:02.760 --> 00:00:05.510
+soit l'affichage linéaire (Linear Layout) vertical.
+
+00:00:05.510 --> 00:00:08.090
+Et les éléments qui apparaissent
+dans une colonne verticale.
+
+00:00:08.090 --> 00:00:10.220
+Selon l'image dans le quiz,
+
+00:00:10.220 --> 00:00:14.930
+l'idée est de changer l'élément en élément de liste
+en utilisant un Relative Layout.
+
+00:00:14.930 --> 00:00:16.680
+Voici la solution.
+
+00:00:16.680 --> 00:00:19.460
+Nous avons changé l'affichage de sorte
+que la photo est à gauche
+
+00:00:19.460 --> 00:00:22.020
+et les trois TextViews sont
+à droite.
+
+00:00:22.020 --> 00:00:26.210
+Afin de créer cet affichage, j'ai modifié
+la vue à la racine à Relative Layout
+
+00:00:26.210 --> 00:00:28.180
+au lieu de Linear Layout.
+
+00:00:28.180 --> 00:00:29.530
+Comme celle-ci est la balise de début,
+
+00:00:29.530 --> 00:00:32.700
+j'ai dû mettre à jour aussi
+la balise de fin en bas.
+
+00:00:32.700 --> 00:00:36.610
+Entre les balises de début
+et de fin nous avons quatre vues enfant.
+
+00:00:36.610 --> 00:00:40.200
+J'ai aussi enlevé l'attribut
+d'orientation verticale
+
+00:00:40.200 --> 00:00:42.580
+car il se rattache en réalité
+au Linear Layout.
+
+00:00:42.580 --> 00:00:46.240
+Aucun attribut d'orientation
+n'est nécessaire pour le Relative Layout.
+
+00:00:46.240 --> 00:00:48.750
+La photo était déjà positionnée adéquatement.
+
+00:00:48.750 --> 00:00:52.400
+Le premier enfant d'un Relative Layout
+est toujours positionné par défaut au
+
+00:00:52.400 --> 00:00:53.270
+coin supérieur gauche.
+
+00:00:53.270 --> 00:00:57.440
+et c'est là qu'on veut
+notre élément de liste, alors il reste tel quel.
+
+00:00:57.440 --> 00:00:59.720
+Ensuite on a la TextView
+Pebble Beach.
+
+00:01:00.730 --> 00:01:04.410
+L'idée est de positionner cette TextView
+à droite de l'ImageView,
+
+00:01:04.410 --> 00:01:10.180
+afin d'ajouter l'attribut layout_torightof, puis
+de faire référence à l'ImageView.
+
+00:01:10.180 --> 00:01:13.800
+Pour référencer l'ImageView
+nous avons dû ajouter un attribut ID,
+
+00:01:13.800 --> 00:01:15.400
+à l'ImageView.
+
+00:01:15.400 --> 00:01:19.100
+Je l'ai appelé photo simplement, mais, 
+sentez-vous libre de le désigner autrement.
+
+00:01:19.100 --> 00:01:22.260
+Cela a permis de positionner correctement l'image,
+et la première TextView.
+
+00:01:22.260 --> 00:01:25.740
+La TextView suivante
+sert à faire apparaître le mot California.
+
+00:01:25.740 --> 00:01:29.490
+La TextView California doit être positionnée
+à droite de la photo
+
+00:01:29.490 --> 00:01:32.110
+et doit être en dessous de la TextView Pebble Beach.
+
+00:01:32.110 --> 00:01:35.510
+Ainsi, il faut d'abord ajouter l'attribut
+layout_toRightof, puis
+
+00:01:35.510 --> 00:01:36.890
+référencer la photo.
+
+00:01:36.890 --> 00:01:39.620
+Ensuite, nous ajoutons un autre
+attribut layout below, puis
+
+00:01:39.620 --> 00:01:41.880
+nous référençons la première TextView.
+
+00:01:41.880 --> 00:01:46.860
+Cela a nécessité également d'ajouter un ID
+à cette TextView, simplement Name.
+
+00:01:46.860 --> 00:01:50.060
+Très bien, ça a mis en place
+l'ImageView et les deux TextViews.
+
+00:01:50.060 --> 00:01:53.620
+Finalement, nous avons la TextView qui montre
+la distance, soit 16 kilomètres loin.
+
+00:01:53.620 --> 00:01:55.420
+Elle se trouve à droite
+de l'image
+
+00:01:55.420 --> 00:01:56.890
+et en dessous de la TextView California.
+
+00:01:57.900 --> 00:02:01.370
+Ainsi, on a dû ajouter l'attribut
+layout_toRightof à l'égard
+
+00:02:01.370 --> 00:02:05.730
+de Photo, et on a aussi
+ajouté un attribut layout below,
+
+00:02:05.730 --> 00:02:09.000
+puis on a référencé
+la TextView Location.
+
+00:02:09.000 --> 00:02:13.280
+Cela a comporté aussi l'ajout de l'ID
+pour la TextView Location.
+
+00:02:13.280 --> 00:02:15.960
+J'ai aussi ajouté un ID pour la
+TextView distance.
+
+00:02:15.960 --> 00:02:18.030
+Même si nous ne le 
+référençons nulle part,
+
+00:02:18.030 --> 00:02:20.340
+ce n'est pas une mauvaise idée d'ajouter un ID à la vue.
+
+00:02:20.340 --> 00:02:23.560
+Au cas où vous aurez effectivement besoin 
+de vous y référer ultérieurement, il sera déjà là.
+

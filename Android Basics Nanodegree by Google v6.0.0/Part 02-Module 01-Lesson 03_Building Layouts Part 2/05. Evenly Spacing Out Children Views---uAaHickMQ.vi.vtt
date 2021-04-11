@@ -1,0 +1,420 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.490 --> 00:00:01.260
+Hãy cùng ôn lại.
+
+00:00:01.260 --> 00:00:04.080
+Chúng ta đã biết một linear layout
+có thể đặt hướng
+
+00:00:04.080 --> 00:00:05.650
+dọc hay ngang.
+
+00:00:06.890 --> 00:00:09.610
+Nhưng giờ hãy nghĩ tới việc
+liệu các view này có tận dụng
+
+00:00:09.610 --> 00:00:11.240
+khoảng trống màn hình được không.
+
+00:00:11.240 --> 00:00:14.730
+Khi nói khoảng trống màn hình, ý tôi là
+diện tích dùng được trên màn hình.
+
+00:00:14.930 --> 00:00:16.560
+Đối với máy Nexus 6 của chúng tôi,
+
+00:00:16.560 --> 00:00:20.740
+chúng tôi có linear layout dọc
+với ba text view con bên trong.
+
+00:00:20.740 --> 00:00:22.420
+Tom, Tim, và Todd.
+
+00:00:22.420 --> 00:00:25.500
+Khi ta đặt thiết bị theo màn hình dọc
+như thế này trong tay,
+
+00:00:25.500 --> 00:00:28.380
+thì tất cả text view được gộp
+ở mé trái bên trên màn hình.
+
+00:00:29.380 --> 00:00:32.320
+Tất cả những khoảng không bỏ trống này
+đều không được sử dụng.
+
+00:00:32.320 --> 00:00:35.480
+Tương tự, nếu ta xoay thiết bị
+sang màn hình ngang,
+
+00:00:35.480 --> 00:00:39.950
+thì đoạn văn bản ở mé trái bên trên
+và tất cả chỗ này để trống.
+
+00:00:39.950 --> 00:00:42.110
+Điều này càng dễ nhận ra
+trên thiết bị tablet,
+
+00:00:42.110 --> 00:00:44.260
+với màn hình lớn hơn nhiều.
+
+00:00:44.260 --> 00:00:47.190
+Chúng ta chỉ dùng một phần nhỏ
+của màn hình,
+
+00:00:47.190 --> 00:00:49.062
+phần còn lại để trống.
+
+00:00:49.062 --> 00:00:51.830
+Ta sẽ học cách có thể
+dàn đều những view này
+
+00:00:51.830 --> 00:00:54.860
+trên màn hình để tận dụng
+nhiều khoảng không sẵn có hơn.
+
+00:00:54.860 --> 00:00:57.180
+Điều này áp dụng được
+với cả các loại view khác.
+
+00:00:57.180 --> 00:00:59.400
+Bạn có thể có hình ảnh lớn hơn
+trên màn hình để
+
+00:00:59.400 --> 00:01:03.460
+có trải nghiệm tốt hơn, thay vì để chúng
+nhỏ xíu ở góc trái bên trên.
+
+00:01:04.289 --> 00:01:05.180
+Tương tự với nút,
+
+00:01:05.180 --> 00:01:09.785
+bạn có thể tạo nút lớn hơn
+để dễ chạm vào hơn.
+
+00:01:09.785 --> 00:01:13.155
+Vì mục đích của ví dụ này,
+ta sẽ tiếp tục với text view.
+
+00:01:13.155 --> 00:01:16.835
+Hãy dùng XML visualizer để xem
+ta có thể dàn những view này thế nào.
+
+00:01:18.115 --> 00:01:20.545
+Đây là dòng code
+cho Tom, Tim và Todd.
+
+00:01:20.545 --> 00:01:23.975
+Tôi có ba text view
+trong linear layout dọc
+
+00:01:23.975 --> 00:01:25.909
+và chúng trông như thế này
+trên thiết bị.
+
+00:01:26.570 --> 00:01:29.810
+Giờ, tôi muốn cho bạn thấy
+cách dàn ba text view này.
+
+00:01:29.810 --> 00:01:31.060
+Vậy là Tom ở trên này.
+
+00:01:31.060 --> 00:01:31.980
+Tim ở đây.
+
+00:01:31.980 --> 00:01:33.910
+Và Todd ở dưới này.
+
+00:01:33.910 --> 00:01:37.950
+Rõ ràng việc đặt độ cao
+cho wrap_content không hiệu quả.
+
+00:01:37.950 --> 00:01:41.350
+Một điều khác ta đã học được là
+đặt giá trị dp cố định cho độ cao.
+
+00:01:41.350 --> 00:01:44.510
+Vậy tôi sẽ đặt độ cao
+là 200 dp chẳng hạn.
+
+00:01:45.760 --> 00:01:48.340
+Tuyệt. Giờ đã có
+nhiều không gian hơn cho Tom.
+
+00:01:48.340 --> 00:01:51.320
+Nếu làm tương tự
+với các text view còn lại,
+
+00:01:51.320 --> 00:01:54.570
+thì chúng cũng dàn ra
+đều hơn trên màn hình.
+
+00:01:54.570 --> 00:01:57.920
+Nhưng cách này chỉ dùng
+với các cạnh của thiết bị.
+
+00:01:57.920 --> 00:02:01.510
+Nếu tôi có một tablet như lúc trước,
+thì những view này
+
+00:02:01.510 --> 00:02:04.640
+vẫn sẽ được gộp
+ở mé trái bên trên.
+
+00:02:04.640 --> 00:02:08.880
+Một lựa chọn khác để đặt độ cao
+là nối view mẹ mà ta đã học.
+
+00:02:08.880 --> 00:02:11.750
+Khi đặt nối view mẹ
+cho text view Tom
+
+00:02:11.750 --> 00:02:15.540
+nó sẽ gắn độ cao của cả view mẹ
+với toàn bộ màn hình.
+
+00:02:15.540 --> 00:02:19.230
+Điều này sẽ đẩy các text view khác
+khỏi màn hình nên bạn sẽ không thấy.
+
+00:02:19.230 --> 00:02:20.930
+Vì thế đừng làm vậy.
+
+00:02:20.930 --> 00:02:23.660
+Giờ ta đã hết ý tưởng
+vì ta đã cố gói nội dung
+
+00:02:23.660 --> 00:02:25.710
+vào một độ cao,
+với một giá trị dp cố định.
+
+00:02:25.710 --> 00:02:27.300
+Và ta đã cố nối với view mẹ.
+
+00:02:27.300 --> 00:02:32.930
+Và không cách nào cho ta khoảng dãn
+hợp lý trên các thiết bị khác nhau.
+
+00:02:32.930 --> 00:02:36.420
+Hãy search Google
+để tìm giải pháp cho vấn đề này.
+
+00:02:36.420 --> 00:02:38.360
+Ta sẽ dùng một nhóm
+view linear layout.
+
+00:02:38.360 --> 00:02:40.580
+Và ta muốn dãn
+các view con đều nhau.
+
+00:02:40.580 --> 00:02:42.260
+Vậy hãy thử tìm kiếm nào.
+
+00:02:42.260 --> 00:02:44.680
+Vậy là có một vài kết quả,
+
+00:02:44.680 --> 00:02:46.920
+hãy click vào kết quả đầu tiên.
+
+00:02:46.920 --> 00:02:49.358
+Đây là một link
+dẫn tới Stackoverflow.
+
+00:02:49.358 --> 00:02:51.700
+Nó là một trang Q&amp;A,
+nơi bạn có thể đăng câu hỏi
+
+00:02:51.700 --> 00:02:54.195
+và nhận được trả lời
+từ các nhà phát triển Android.
+
+00:02:54.195 --> 00:02:58.005
+Tôi luôn dùng trang này
+khi cần trợ giúp vấn đề nào đó.
+
+00:02:58.005 --> 00:03:00.515
+Thường thì những người khác
+đã trả lời một câu hỏi
+
+00:03:00.515 --> 00:03:01.975
+giống của tôi.
+
+00:03:01.975 --> 00:03:05.425
+Câu hỏi của chúng ta
+là làm cách nào để dãn đều các nút
+
+00:03:05.425 --> 00:03:07.657
+trên độ rộng của linear layout.
+
+00:03:07.657 --> 00:03:09.677
+Cái này giống thứ
+chúng ta đang tìm kiếm,
+
+00:03:09.677 --> 00:03:12.627
+chỉ khác là thay vì các nút
+thì ta có các text view.
+
+00:03:12.627 --> 00:03:15.877
+Và thay vì là độ rộng của linear layout
+thì ta đang cố dàn chúng
+
+00:03:15.877 --> 00:03:17.767
+theo độ cao của linear layout.
+
+00:03:17.767 --> 00:03:20.710
+Ta có thể đọc qua câu hỏi
+và lướt để lấy thông tin.
+
+00:03:20.710 --> 00:03:23.070
+Thường tôi chỉ xem câu trả lời.
+
+00:03:23.070 --> 00:03:27.590
+Vậy là câu trả lời này nhận được 88 vote
+và có một dấu tích xanh lá.
+
+00:03:27.590 --> 00:03:30.840
+Nó nói về cách bạn có thể
+đặt layout_width thành 0dp
+
+00:03:30.840 --> 00:03:33.240
+và layout_weight cho mỗi button là 1.
+
+00:03:33.240 --> 00:03:36.899
+Và nó tách độ rộng sẵn có
+bằng nhau giữa các button.
+
+00:03:37.910 --> 00:03:41.170
+Có thể bạn không hiểu kĩ
+câu trả lời lúc này, nhưng không sao.
+
+00:03:41.170 --> 00:03:44.620
+Một phần quan trọng
+là phần layout_weight này.
+
+00:03:44.620 --> 00:03:47.950
+Ta chưa gặp cái này trước đây,
+nhưng có vẻ liên quan tới câu trả lời.
+
+00:03:47.950 --> 00:03:49.640
+Vì thế hãy chép nó
+và Google search
+
+00:03:49.640 --> 00:03:52.005
+để có thêm thông tin
+về layout_weight.
+
+00:03:52.005 --> 00:03:55.205
+Vậy hãy search 
+linear layout layout_weight.
+
+00:03:55.205 --> 00:03:57.605
+Kết quả đầu tiên
+là một bài viết về linear layout
+
+00:03:57.605 --> 00:04:00.085
+ở trên trang developer.android.com,
+hãy click vào đó.
+
+00:04:01.285 --> 00:04:03.845
+Đây là một bài viết
+về Linear Layout.
+
+00:04:03.845 --> 00:04:08.015
+Ta đã học đủ những điều này ở trên
+về đặc tính định hướng trong Android,
+
+00:04:08.015 --> 00:04:11.230
+nhưng ở đây có thông tin mới
+về một thứ gọi là Layout Weight.
+
+00:04:11.230 --> 00:04:14.270
+Cũng có một ví dụ
+ở phía cuối màn hình với vài code
+
+00:04:14.270 --> 00:04:15.650
+và một ảnh chụp màn hình.
+
+00:04:15.650 --> 00:04:17.459
+Tôi có thể tóm tắt
+tất cả lại cho bạn,
+
+00:04:17.459 --> 00:04:21.260
+nhưng đầu tiên tôi muốn tạo cho bạn
+cơ hội để đọc tư liệu này.
+
+00:04:21.260 --> 00:04:23.710
+Và tự mình cố tìm hiểu nó.
+
+00:04:23.710 --> 00:04:26.180
+Đây sẽ rất giống với
+cách bạn sẽ giải quyết vấn đề
+
+00:04:26.180 --> 00:04:28.220
+sau khi khóa học này kết thúc.
+
+00:04:28.220 --> 00:04:30.510
+Hãy tìm kiếm
+thông tin trên mạng
+
+00:04:30.510 --> 00:04:33.350
+và tìm hiểu các cách có thể
+để giải quyết vấn đề của bạn.
+
+00:04:34.500 --> 00:04:37.340
+Vậy đây là layout
+mà giờ ta có trên thiết bị.
+
+00:04:37.340 --> 00:04:39.120
+Và đây là điều mà ta muốn đạt được.
+
+00:04:39.120 --> 00:04:42.490
+Ba đoạn văn bản đã được dàn đều
+theo độ cao của thiết bị.
+
+00:04:42.490 --> 00:04:43.720
+Để giải quyết vấn đề này,
+
+00:04:43.720 --> 00:04:47.060
+tôi muốn các bạn đọc bài viết
+về Linear Layout trong liên kết dưới đây.
+
+00:04:47.830 --> 00:04:48.980
+Không có gì lạ
+
+00:04:48.980 --> 00:04:52.490
+nếu như bạn không hiểu toàn bộ
+bài viết này.
+
+00:04:52.490 --> 00:04:55.390
+Thường bạn chỉ muốn
+hiểu thoáng qua
+
+00:04:55.390 --> 00:04:59.250
+những khái niệm trong bài viết
+để có thể giúp cho công việc của bạn.
+
+00:05:00.320 --> 00:05:03.390
+Sau đó tôi muốn bạn đưa ra vài ý tưởng
+về cách có thể xây dựng
+
+00:05:03.390 --> 00:05:05.100
+layout được yêu cầu trong XML.
+
+00:05:05.100 --> 00:05:07.550
+Bạn không cần đưa ra
+XML layout code đầy đủ
+
+00:05:07.550 --> 00:05:10.420
+vì chúng ta sẽ cùng nhau làm điều đó
+trong video tiếp theo.
+
+00:05:10.420 --> 00:05:12.600
+Nhưng tại đây bạn có thể viết
+một vài câu hoặc
+
+00:05:12.600 --> 00:05:16.920
+gạch đầu dòng thông tin nào trong bài viết
+liên quan tới vấn đề của chúng ta.
+

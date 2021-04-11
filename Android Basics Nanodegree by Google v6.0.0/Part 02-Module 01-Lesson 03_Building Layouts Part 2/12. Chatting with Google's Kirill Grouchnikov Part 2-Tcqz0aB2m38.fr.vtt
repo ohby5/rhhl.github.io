@@ -1,0 +1,405 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:01.884 --> 00:00:04.763
+Tu aurais un exemple de disposition
+linéaire dans ton application ?
+
+00:00:04.763 --> 00:00:10.611
+&gt;&gt; En fait, même ici, ce trio de cartes
+a une disposition horizontale
+
+00:00:10.611 --> 00:00:16.463
+avec donc trois vues filles,
+les trois cartes.
+
+00:00:16.463 --> 00:00:23.810
+On règle la largeur de disposition
+à 0 dp, le poids de disposition à 1,
+
+00:00:23.810 --> 00:00:29.569
+et en gros, ça ordonne à notre
+disposition linéaire de prendre tout
+
+00:00:29.569 --> 00:00:35.523
+le poids possible à l'exécution et de
+le répartir équitablement, vis-à-vis
+
+00:00:35.523 --> 00:00:42.100
+des poids, à parts égales donc,
+entre les vues filles du groupe.
+
+00:00:42.100 --> 00:00:43.160
+Voilà un exemple.
+
+00:00:43.160 --> 00:00:47.420
+Un autre se trouve juste ici, dans
+« Jeux : Nouveautés et mises à jour ».
+
+00:00:47.420 --> 00:00:50.110
+Le bouton <i>Plus</i> est
+un en-tête de groupe,
+
+00:00:50.110 --> 00:00:52.910
+et aussi une simple
+disposition linéaire horizontale.
+
+00:00:52.910 --> 00:00:54.980
+Quand certaines choses sont simples,
+
+00:00:54.980 --> 00:00:57.740
+il n'est pas si nécessaire de créer
+des dispositions personnalisées.
+
+00:00:57.740 --> 00:01:01.310
+N'utilisez pas la disposition relative
+n'importe comment,
+
+00:01:01.310 --> 00:01:05.980
+elle est plus versatile que
+la disposition linéaire, notamment.
+
+00:01:05.980 --> 00:01:08.700
+C'est exagéré pour
+certaines choses toutes bêtes.
+
+00:01:09.800 --> 00:01:11.748
+&gt;&gt; Quand un concepteur
+te donne une maquette,
+
+00:01:11.748 --> 00:01:15.660
+comment fais-tu pour commencer
+la création de l'application ?
+
+00:01:15.660 --> 00:01:19.660
+&gt;&gt; Normalement, à ce stade, comme
+on l'a vu, on n'a pas qu'une maquette.
+
+00:01:19.660 --> 00:01:23.640
+Plutôt deux ou trois
+qui montrent comment
+
+00:01:25.200 --> 00:01:29.880
+le modèle s'adapte
+aux petits ou grands écrans.
+
+00:01:29.880 --> 00:01:33.560
+De là, je préfère identifier
+les briques élémentaires.
+
+00:01:33.560 --> 00:01:37.680
+Quand on parle par exemple d'une carte
+qui apparaît un peu partout
+
+00:01:37.680 --> 00:01:41.000
+dans l'application,
+je ne débuterai pas forcément
+
+00:01:41.000 --> 00:01:45.740
+par la mise en place
+d'un tas de nuances de cette carte,
+
+00:01:45.740 --> 00:01:49.240
+suivant qu'elle doit afficher
+une image petite ou grande, ou
+
+00:01:49.240 --> 00:01:52.930
+encore un titre en une ligne
+au lieu de deux.
+
+00:01:52.930 --> 00:01:57.258
+J'essaie donc d'identifier ces briques
+et de les mettre en œuvre
+
+00:01:57.258 --> 00:02:02.580
+sous forme de classes et dispositions
+autonomes, et ensuite seulement je crée.
+
+00:02:02.580 --> 00:02:07.484
+On débute donc avec des classes
+<i>TextView</i> ou <i>ImageView</i>, des indicateurs
+
+00:02:07.484 --> 00:02:11.055
+et trucs du genre,
+pour créer de petites briques.
+
+00:02:11.055 --> 00:02:16.771
+Ensuite, normalement, on peut continuer
+à exploiter ces petites briques
+
+00:02:16.771 --> 00:02:22.450
+pour créer des briques plus importantes
+toujours en recyclant les briques de base.
+
+00:02:22.450 --> 00:02:26.390
+Le truc cool là-dedans est que même si
+on perd peut-être du temps au début
+
+00:02:26.390 --> 00:02:32.440
+le travail devient plus facile,
+surtout si le plan est cohérent,
+
+00:02:32.440 --> 00:02:37.280
+dans son emploi du langage pour faire
+évoluer l'appli et ajouter des fonctions.
+
+00:02:37.280 --> 00:02:41.472
+Quand un plan est cohérent
+on voit que les mêmes briques sont
+
+00:02:41.472 --> 00:02:44.461
+recyclées sur des configurations
+différentes… de façon répétée.
+
+00:02:44.461 --> 00:02:49.789
+C'est là que son investissement initial
+commence à être rentable, puisqu'on
+
+00:02:49.789 --> 00:02:55.430
+n'a pas à traiter la mise en œuvre
+d'un nouvel écran comme une nouveauté,
+
+00:02:55.430 --> 00:03:01.190
+mais peut-être que 50, 60, 70% du travail
+est déjà effectué, et donc qu'on a en fait
+
+00:03:01.190 --> 00:03:05.450
+besoin que de bricoler un peu
+la couleur ou la typographie, etc…
+
+00:03:05.450 --> 00:03:10.272
+Théoriquement, si le plan est cohérent,
+la mise en œuvre est elle aussi
+
+00:03:10.272 --> 00:03:14.098
+plus facile à adapter si
+vous vous êtes déjà préparé.
+
+00:03:14.098 --> 00:03:19.903
+La refonte graphique est aussi
+plus facile, donc au niveau visuel.
+
+00:03:19.903 --> 00:03:24.099
+Si on veut bricoler
+les couleurs, la typographie,
+
+00:03:24.099 --> 00:03:28.941
+on qu'on veut ajouter peut-être comme
+sur Lollipop cet effet d'ondulation
+
+00:03:28.941 --> 00:03:31.880
+quand on appuie sur quelque chose,
+
+00:03:31.880 --> 00:03:36.870
+si on s'arrange pour réutiliser les mêmes
+éléments, styles et dispositions,
+
+00:03:36.870 --> 00:03:42.250
+on peut faire cette actualisation
+visuelle sur moins
+
+00:03:42.250 --> 00:03:48.030
+d'éléments et en théorie, elle sera
+appliquée partout avec cohérence.
+
+00:03:48.030 --> 00:03:51.550
+Pour ma part je préfère m'assurer
+dès le début d'avoir les bonnes données,
+
+00:03:51.550 --> 00:03:57.918
+surtout si l'application récupère
+ses données auprès de sources externes.
+
+00:03:57.918 --> 00:04:02.512
+Ensuite, on se rapproche des pixels,
+on affine la partie pixels quand on a
+
+00:04:02.512 --> 00:04:07.532
+les données, donc on fait la grille, la
+typographie, les couleurs, l'animation,
+
+00:04:07.532 --> 00:04:12.575
+les transitions, etc… suivant
+le temps qu'on peut y consacrer.
+
+00:04:12.575 --> 00:04:16.338
+Ce serait sans doute pareil si on
+devait faire un genre de client Twitter.
+
+00:04:16.338 --> 00:04:21.991
+On peut commencer par parfaire
+ses dispositions avec de fausses données,
+
+00:04:21.991 --> 00:04:27.122
+et on découvre qu'on ne sait pas du tout
+comment récupérer les données de Twitter,
+
+00:04:27.122 --> 00:04:32.920
+et on passe les trois mois d'après à
+apprendre comment récupérer les données.
+
+00:04:32.920 --> 00:04:37.240
+C'est juste un exemple,
+je préfère partir des données.
+
+00:04:37.240 --> 00:04:41.880
+J'aime voir ce travail comme un iceberg :
+les beaux pixels forment quoi, 5%
+
+00:04:41.880 --> 00:04:47.640
+10% de la masse émergée ?
+Il se passe beaucoup de choses
+
+00:04:47.640 --> 00:04:50.800
+sous la surface, si je puis
+me permettre, pour soutenir tout ça.
+
+00:04:50.800 --> 00:04:53.820
+&gt;&gt; Tu dis qu'on ne voit que
+la partie émergée de l'iceberg,
+
+00:04:53.820 --> 00:04:57.210
+alors qu'est-ce qui se passe
+en fait, sous la surface ?
+
+00:04:57.210 --> 00:05:00.620
+Comment visualiserais-tu
+l'application Google play ?
+
+00:05:00.620 --> 00:05:05.940
+&gt;&gt; Alors sous la surface on va tout
+d'abord récupérer les données du réseau,
+
+00:05:05.940 --> 00:05:11.643
+donc voilà, s'authentifier auprès
+d'un serveur, récupérer ses données,
+
+00:05:11.643 --> 00:05:13.969
+éventuellement les mettre
+en cache localement pour
+
+00:05:13.969 --> 00:05:18.152
+que la prochaine fois qu'on passe
+d'une liste globale à une page précise
+
+00:05:18.152 --> 00:05:22.820
+et inversement, on puisse utiliser
+les données et images du cache,
+
+00:05:22.820 --> 00:05:26.616
+pour ne pas demander
+trop d'efforts à la source
+
+00:05:26.616 --> 00:05:30.284
+et que l'application ré-affiche
+les informations qu'elle a déjà.
+
+00:05:30.284 --> 00:05:33.830
+Ensuite, on a le support
+de comptes multiples.
+
+00:05:33.830 --> 00:05:37.660
+On a peut-être aussi des entrées perdues
+ici et là dans la base de données,
+
+00:05:38.670 --> 00:05:44.380
+ensuite on a les flux de facturation,
+là le gros du travail
+
+00:05:44.380 --> 00:05:48.840
+est effectué sur le serveur, pour
+intégrer diverses méthodes de paiement.
+
+00:05:48.840 --> 00:05:51.200
+Ensuite on a aussi
+le travail sur le client.
+
+00:05:51.200 --> 00:05:57.050
+Un autre gros travail du Play Store
+consiste à télécharger et à
+
+00:05:57.050 --> 00:05:59.660
+installer des applications et des jeux.
+
+00:05:59.660 --> 00:06:04.530
+C'est nous, du côté du Play Store,
+qui nous chargeons de télécharger,
+
+00:06:04.530 --> 00:06:06.840
+d'installer et de mettre à jour
+les applications.
+
+00:06:06.840 --> 00:06:11.556
+Voilà un autre gros morceau,
+et là encore, presque tous
+
+00:06:11.556 --> 00:06:16.052
+ces éléments ont leurs « parties
+émergées », des pixels sur un écran.
+
+00:06:16.052 --> 00:06:21.425
+Mais il y a beaucoup de travail
+qui a lieu sous la surface pour apporter
+
+00:06:21.425 --> 00:06:27.668
+l'information au bon compte,
+et à le mettre sur l'écran.
+
+00:06:27.668 --> 00:06:32.610
+&gt;&gt; Tu as travaillé sur plusieurs
+itérations de l'appli Google Play,
+
+00:06:32.610 --> 00:06:37.385
+comment fais-tu pour suivre
+les dernières informations sur Android ?
+
+00:06:37.385 --> 00:06:42.657
+&gt;&gt; Beaucoup d'infos se trouvent sur
+Google+, grâce à des développeurs
+
+00:06:42.657 --> 00:06:47.295
+Android très actifs,
+qui y postent beaucoup de tutoriaux.
+
+00:06:47.295 --> 00:06:52.322
+Sinon… grâce à
+
+00:06:52.322 --> 00:06:57.575
+divers blogs, des fois
+je ne vais pas toujours lire
+
+00:06:57.575 --> 00:07:02.732
+très en détail certaines séries sur
+le recyclage de vues ou
+
+00:07:02.732 --> 00:07:07.430
+la page d'affichage, ou la configuration
+des barres d'outils ou d'actions.
+
+00:07:07.430 --> 00:07:09.200
+J'ai tendance à essayer de l'envisager…
+
+00:07:10.270 --> 00:07:12.810
+comme si, sachant qu'il y a
+beaucoup d'infos là-dedans,
+
+00:07:12.810 --> 00:07:17.340
+quand j'ai vraiment besoin
+d'informations approfondies,
+
+00:07:17.340 --> 00:07:20.130
+alors je vais consulter ces ressources.
+
+00:07:20.130 --> 00:07:21.960
+&gt;&gt; Merci beaucoup
+d'avoir pris le temps, Kirill,
+
+00:07:21.960 --> 00:07:25.110
+je pense que nos étudiants apprécieront
+beaucoup ton point de vue sur
+
+00:07:25.110 --> 00:07:27.010
+le travail
+d'ingénieur en applications Android.
+

@@ -1,0 +1,335 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.560 --> 00:00:02.390
+Lembra da trilha de grãos de café,
+Katherine?
+
+00:00:02.390 --> 00:00:03.469
+Como posso esquecer?
+
+00:00:03.469 --> 00:00:04.998
+- Eu sei.
+- Você derramou tudo sobre mim.
+
+00:00:04.998 --> 00:00:06.051
+[Risos]
+- [Risos] Então,
+
+00:00:06.051 --> 00:00:09.425
+nós falamos sobre como haveria
+três grandes partes para a Lição 1.
+
+00:00:09.425 --> 00:00:10.925
+- Hum-hum.
+- E falamos de imagem e
+
+00:00:10.925 --> 00:00:11.840
+<i>TextView</i>.
+
+00:00:11.840 --> 00:00:13.880
+E então nós aprendemos como
+estilizar esses pontos de vista.
+
+00:00:13.880 --> 00:00:15.510
+- Sim.
+- Aonde vamos depois?
+
+00:00:15.510 --> 00:00:16.640
+- Bem, eu estava pensando.
+
+00:00:16.640 --> 00:00:18.980
+Como temos apenas um ponto de vista
+na tela agora mesmo.
+
+00:00:18.980 --> 00:00:19.830
+- Sim.
+
+00:00:19.830 --> 00:00:22.790
+- É um pouco chato, então
+devemos adicionar mais de um ponto de vista.
+
+00:00:22.790 --> 00:00:23.300
+- Certo.
+
+00:00:23.300 --> 00:00:25.790
+E se você pensar sobre isto,
+todos os aplicativos divertidos que usamos,
+
+00:00:25.790 --> 00:00:29.750
+<i>YouTube</i>, <i>OkCupid</i>,
+qual é o outro que vem à mente?
+
+00:00:29.750 --> 00:00:30.560
+- Gmail.
+- Gmail,
+
+00:00:30.560 --> 00:00:33.180
+todos eles parecem ter mais
+de um ponto de vista no pacote
+
+00:00:33.180 --> 00:00:34.940
+muito nitidamente na tela juntos.
+
+00:00:34.940 --> 00:00:35.950
+- Sim.
+E a maneira que eles fazem
+
+00:00:35.950 --> 00:00:37.205
+que é através de grupos de visão.
+
+00:00:37.205 --> 00:00:37.790
+- Hum-hum.
+
+00:00:37.790 --> 00:00:39.340
+- Então, 
+vamos aprender sobre isso a seguir.
+
+00:00:39.340 --> 00:00:42.260
+E isso nos dá o poder de
+também posicionar vistas na tela
+
+00:00:42.260 --> 00:00:43.090
+onde queremos que eles fiquem.
+
+00:00:43.090 --> 00:00:43.650
+- Certo.
+
+00:00:43.650 --> 00:00:45.620
+Então vamos falar sobre como 
+visualizar grupos depois.
+
+00:00:47.270 --> 00:00:49.675
+- Então, agora só tivemos
+um único <i>TextView</i> ou
+
+00:00:49.675 --> 00:00:51.870
+um único <i>ImageView</i> na tela.
+
+00:00:51.870 --> 00:00:55.590
+Se quisermos adicionar outro ponto de vista 
+abaixo poderíamos tentar apenas copiar este e
+
+00:00:55.590 --> 00:00:57.320
+colá-lo abaixo.
+
+00:00:57.320 --> 00:00:59.010
+Mas, então, temos um erro.
+
+00:00:59.010 --> 00:01:02.590
+Ele diz que o documento XML tem
+mais do que uma visão de raiz.
+
+00:01:02.590 --> 00:01:06.710
+Só pode haver uma visão raiz, e
+deve colocar todos os seus outros pontos de vista.
+
+00:01:06.710 --> 00:01:10.100
+Se queremos que os dois <i>TextViews</i> 
+para aparecer na tela e
+
+00:01:10.100 --> 00:01:14.390
+não ser mais solitário, então nós
+precisamos colocá-los em um View Group.
+
+00:01:14.390 --> 00:01:18.085
+View Groups será, então,
+a exibição de raiz única para o layout.
+
+00:01:18.085 --> 00:01:21.460
+View Groups também são vistas e
+eles são retângulos na tela.
+
+00:01:21.460 --> 00:01:24.960
+Por exemplo, os retângulos vermelho 
+e laranja aqui são todos View Groups.
+
+00:01:24.960 --> 00:01:29.460
+Eles podem ter uma largura, ou uma altura
+uma cor de fundo, ou outros atributos.
+
+00:01:29.460 --> 00:01:30.680
+A cor do fundo aqui é laranja.
+
+00:01:30.680 --> 00:01:32.980
+Laranja.Mas também pode 
+ser transparente,
+
+00:01:32.980 --> 00:01:35.820
+o View Group não é visível 
+nem mesmo para o usuário.
+
+00:01:35.820 --> 00:01:39.770
+Ao invés de manter algum conteúdo, como
+texto para <i>TextView</i> ou uma imagem para
+
+00:01:39.770 --> 00:01:44.140
+um <i>ImageView</i>, o conteúdo que
+um View Group detém é outros pontos de vista.
+
+00:01:44.140 --> 00:01:47.130
+Você pode pensar em um grupo de visão
+como sendo um recipiente para estas vistas.
+
+00:01:47.130 --> 00:01:50.790
+Quando uma vista contém outros pontos de vista,
+o chamamos pai destes pontos de vista.
+
+00:01:50.790 --> 00:01:52.030
+Portanto, este é o pai.
+
+00:01:52.030 --> 00:01:52.780
+Este é o pai.
+
+00:01:52.780 --> 00:01:54.210
+E este é o pai.
+
+00:01:54.210 --> 00:01:58.260
+Quando uma vista está em ViewGroup,
+o chamamos o filho deste ViewGroup.
+
+00:01:58.260 --> 00:02:01.390
+Portanto, este é um filho, e
+este é um filho, e este é um filho.
+
+00:02:01.390 --> 00:02:05.030
+Mesmo aqui, há dois filhos aqui,
+e dois filhos aqui.
+
+00:02:05.030 --> 00:02:08.590
+Continuando com a linguagem familiar,
+se houver vários filhos,
+
+00:02:08.590 --> 00:02:10.940
+então cada um desses filhos
+são irmãos entre si.
+
+00:02:12.670 --> 00:02:14.300
+Estas são visões irmãs, e
+estas são visões irmãs.
+
+00:02:14.300 --> 00:02:15.100
+Certo, isso foi muito.
+
+00:02:19.550 --> 00:02:24.005
+ViewGroup, eu quero que você conheça
+uma família muito agradável chamado Views.
+
+00:02:24.005 --> 00:02:25.860
+Você já conheceu <i>TextView</i> Tommy.
+
+00:02:25.860 --> 00:02:28.310
+Ele é muito bom em
+exibição de texto.
+
+00:02:28.310 --> 00:02:33.090
+Você também conhece sua irmã, <i>ImageView</i>,
+Ivy, que mostrou imagens muito belas.
+
+00:02:33.090 --> 00:02:35.100
+E agora vamos encontrar seus pais.
+
+00:02:35.100 --> 00:02:37.240
+É sempre irritante
+encontrar os pais.
+
+00:02:37.240 --> 00:02:41.870
+Então, temos a Laura a <i>LinearLayout</i>
+e Ray o <i>RelativeLayout</i>.
+
+00:02:41.870 --> 00:02:43.380
+Estes são os dois View Groups,
+
+00:02:43.380 --> 00:02:46.220
+que mencionamos antes
+são chamados Parent Views.
+
+00:02:46.220 --> 00:02:49.860
+Então os Children Views
+estão posicionados com base nos pais.
+
+00:02:49.860 --> 00:02:51.960
+Vejamos um exemplo de um dos pais.
+
+00:02:51.960 --> 00:02:53.740
+Um pai pode dizer a sua 
+criança para sentar-se ou
+
+00:02:53.740 --> 00:02:56.510
+ficar em um lugar específico e
+não se mover.
+
+00:02:56.510 --> 00:02:59.030
+Vamos ignorar a possibilidade de que
+a criança poderia querer se levantar
+
+00:02:59.030 --> 00:02:59.780
+e correr por aí.
+
+00:02:59.780 --> 00:03:01.570
+Porque isso é apenas um caso extremo.
+
+00:03:01.570 --> 00:03:05.240
+Em um dispositivo, isto significa que 
+um dos pais tem controle sobre
+
+00:03:05.240 --> 00:03:06.380
+onde posicionar os seus filhos.
+
+00:03:06.380 --> 00:03:10.310
+Por exemplo, uma TextView criança
+pode estar na parte superior da tela e
+
+00:03:10.310 --> 00:03:13.730
+em seguida, uma <i>ImageView</i>
+
+00:03:13.730 --> 00:03:14.930
+Ou, se o pai desejar,
+
+00:03:14.930 --> 00:03:17.278
+eles podem reorganizar as crianças
+de uma maneira diferente.
+
+00:03:17.278 --> 00:03:19.570
+O <i>ImageView</i> criança pode 
+estar à esquerda,e
+
+00:03:19.570 --> 00:03:21.690
+em seguida, o <i>TextView</i> criança
+pode estar do lado direito.
+
+00:03:21.690 --> 00:03:25.200
+Vamos falar sobre como grupos de vista
+em maior detalhe nesta lição, mas
+
+00:03:25.200 --> 00:03:27.400
+para se certificar de que você 
+entendeu o que nós abordamos até
+
+00:03:27.400 --> 00:03:30.000
+agora, por favor, 
+responda a estas perguntas.
+
+00:03:30.000 --> 00:03:33.690
+Para a captura de tela neste dispositivo, 
+pode me dizer quantas visões existem?
+
+00:03:33.690 --> 00:03:36.740
+Número 2.
+Para a imagem da montanha, é uma criança ou
+
+00:03:36.740 --> 00:03:39.100
+uma mãe do grupo de vista vermelho.
+
+00:03:39.100 --> 00:03:44.630
+Número 3, o grupo de vista vermelho 
+é uma criança ou pai da visão guia.
+
+00:03:44.630 --> 00:03:47.730
+Número 4, que pontos de vista
+são irmãos entre si.
+
+00:03:47.730 --> 00:03:49.470
+E você pode simplesmente incluí-los aqui.
+

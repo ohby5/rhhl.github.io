@@ -1,0 +1,416 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:01.444 --> 00:00:04.933
+Apakah Anda punya contoh penggunaan
+LinearLayout pada aplikasi Anda?
+
+00:00:04.933 --> 00:00:10.611
+Ya, bahkan di sini, kumpulan tiga
+kartu ini merupakan sebuah ..
+
+00:00:10.611 --> 00:00:16.463
+..LinearLayout horizontal yang hanya kami tambah
+anak-anak tampilan seperti tiga kartu.
+
+00:00:16.463 --> 00:00:23.810
+Lalu, kami atur &lt;i&gt;layout_width&lt;/i&gt; menjadi
+nol dp dan &lt;i&gt;layout_weight&lt;/i&gt; menjadi satu.
+
+00:00:23.810 --> 00:00:28.169
+Pada dasarnya, itu membuat LinearLayout mengambil sebanyak apapun
+
+00:00:28.169 --> 00:00:32.513
+bobot yang ada saat dijalankan dan
+membaginya merata berdasarkan
+
+00:00:32.513 --> 00:00:41.500
+bobot relatif yang dibagi rata untuk
+semua anak tampilan di grup tersebut.
+
+00:00:41.500 --> 00:00:43.160
+Jadi, itulah salah satu contohnya.
+
+00:00:43.160 --> 00:00:47.420
+Contoh lainnya ada di sini, Anda punya
+permainan yang baru dan yang terbaharui.
+
+00:00:47.420 --> 00:00:50.100
+Dan lebih banyak tombol yang
+merupakan sekelompok &lt;i&gt;header&lt;/i&gt;,
+
+00:00:50.110 --> 00:00:52.910
+juga merupakan LinearLayout hoizontal yang sederhana.
+
+00:00:52.910 --> 00:00:54.980
+Jadi, saat hal-hal menjadi sederhana,
+
+00:00:54.980 --> 00:00:57.330
+Anda tak perlu menulis
+&lt;i&gt;layout&lt;/i&gt; yang kompleks.
+
+00:00:57.330 --> 00:01:00.070
+Jangan gunakan RelativeLayout di semua tempat
+
+00:01:00.070 --> 00:01:04.860
+karena ia lebih fleksibel dari
+LinearLayout sebagai contoh.
+
+00:01:04.860 --> 00:01:08.700
+Itu berlebihan untuk hal-hal sederhana.
+
+00:01:09.260 --> 00:01:11.728
+Jadi, saat perancang memberi
+anda sebuah rancangan,
+
+00:01:11.728 --> 00:01:14.900
+bagaimana Anda mulai membuat aplikasi itu?
+
+00:01:14.900 --> 00:01:17.640
+Jadi, semoga pada saat itu,
+seperti yang kami bicarakan,
+
+00:01:17.640 --> 00:01:19.670
+kami tak cuma punya satu rancangan.
+
+00:01:19.670 --> 00:01:23.400
+Namun, sedikitnya dua atau tiga yang
+menunjukkan bagaimana
+
+00:01:23.400 --> 00:01:29.080
+skalanya di antara layar
+yang besar dan kecil.
+
+00:01:29.080 --> 00:01:32.950
+Lalu saya ingin
+mengidentifikasi kerangkanya.
+
+00:01:32.950 --> 00:01:37.330
+Jadi, jika kita berbicara tentang sesuatu
+seperti kartu yang muncul di banyak tempat
+
+00:01:37.330 --> 00:01:39.940
+dalam aplikasi, saya tak ingin mulai
+
+00:01:39.940 --> 00:01:45.070
+memasukkan banyak variasi
+dari kartu yang sama.
+
+00:01:45.070 --> 00:01:48.840
+Berdasarkan kebutuhan untuk
+menampilkan gambar kecil atau besar atau
+
+00:01:48.840 --> 00:01:52.510
+mungkin sebaris judul 
+daripada dua baris judul.
+
+00:01:52.510 --> 00:01:54.958
+Jadi, saya akan coba
+mengidentifikasi kerangka ini
+
+00:01:54.958 --> 00:01:57.258
+dan mengimplementasikan mereka sebagai
+
+00:01:57.258 --> 00:01:58.910
+kelas-kelas yang berdiri sendiri,
+
+00:01:58.910 --> 00:02:02.580
+tata letak yang berdiri sendiri,
+lalu mulai membuatnya.
+
+00:02:02.580 --> 00:02:07.484
+Jadi, Anda mulai dari TextView,
+ImageView, &lt;i&gt;spinner&lt;/i&gt;,
+
+00:02:07.484 --> 00:02:11.055
+dan lain-lain untuk
+membuat kerangka kecil.
+
+00:02:11.055 --> 00:02:16.771
+Lalu mudah-mudahan Anda bisa tetap
+menggunakan kerangka kecil tersebut dan
+
+00:02:16.771 --> 00:02:22.180
+membuat kerangka yang lebih besar di saat
+memakai kembali paket kerangka yang sama.
+
+00:02:22.180 --> 00:02:24.660
+Dan yang bagus tentang
+hal itu adalah meski
+
+00:02:24.660 --> 00:02:26.390
+Anda menghabiskan lebih banyak waktu
+
+00:02:26.390 --> 00:02:31.980
+di awal, itu menjadi lebih mudah terutama
+bila rancangannya konsisten
+
+00:02:31.980 --> 00:02:35.090
+dalam mengaplikasikan bahasanya
+untuk mengembangkan aplikasinya
+
+00:02:35.090 --> 00:02:36.640
+dan menambah fitur baru.
+
+00:02:36.640 --> 00:02:40.862
+bila rancangannya konsisten, maka Anda
+tetap melihat kerangka yang sama
+
+00:02:40.862 --> 00:02:44.201
+dipakai di beberapa
+konfigurasi, lagi dan lagi.
+
+00:02:44.201 --> 00:02:48.719
+Maka, itulah saat investasi
+pertama Anda berhasil, di mana
+
+00:02:48.719 --> 00:02:54.950
+Anda tak perlu mengimplementasikan
+layar baru sebagai hal yang baru.
+
+00:02:54.950 --> 00:03:00.470
+Namun, mungkin 50, 60, 70, berapa
+persen pun telah ada di sana, mungkin
+
+00:03:00.470 --> 00:03:04.830
+perlu sedikit permainan warna,
+atau tipografi, atau lainnya.
+
+00:03:04.830 --> 00:03:08.432
+Namun semoga, bila rancangannya
+konsisten, maka implementasinya
+
+00:03:08.432 --> 00:03:13.668
+juga lebih mudah untuk dilanjutkan
+bila Anda telah membuatnya.
+
+00:03:13.668 --> 00:03:18.383
+Serta menjadi lebih mudah untuk
+mengaplikasikan rancangan ulang,
+
+00:03:18.383 --> 00:03:19.903
+hanya pada level &lt;i&gt;visual&lt;/i&gt;.
+
+00:03:19.903 --> 00:03:23.079
+Bila Anda ingin memainkan
+warna, tipografi,
+
+00:03:23.079 --> 00:03:30.061
+atau mungkin seperti yang kami lakukan di
+versi &lt;i&gt;Lollipop&lt;/i&gt; di mana ada efek riak ini
+
+00:03:30.061 --> 00:03:31.570
+bila Anda menekan sesuatu.
+
+00:03:31.570 --> 00:03:36.150
+Bila Anda punya beberapa tempat yang terus
+Anda gunakan, gaya Anda, tata letak Anda,
+
+00:03:36.150 --> 00:03:41.580
+maka Anda menyegarkan tampilan itu dalam
+
+00:03:41.580 --> 00:03:46.090
+sejumlah kecil tempat dan semoga
+mereka dapat diaplikasikan secara
+
+00:03:46.090 --> 00:03:47.720
+konsisten di semua tempat.
+
+00:03:47.720 --> 00:03:51.250
+Jadi, bagi saya, saya ingin fokus di awal
+untuk mendapat data yang benar.
+
+00:03:51.250 --> 00:03:57.918
+khususnya untuk aplikasi yang mendapat
+datanya dari sumber luar.
+
+00:03:57.918 --> 00:04:04.322
+Lalu, lebih dekat dengan piksel,
+perbaiki pikselnya saat Anda memiliki data
+
+00:04:04.322 --> 00:04:08.912
+untuk mengerjakan &lt;i&gt;grid&lt;/i&gt;, tipografi, warna,
+animasi, transisi, dan lain-lain,
+
+00:04:08.912 --> 00:04:12.575
+berapa pun waktu yang Anda
+gunakan untuk hal tersebut.
+
+00:04:12.575 --> 00:04:16.338
+Dan saya pikir itu juga sama bila Anda
+punya sesuatu seperti &lt;i&gt;Twitter client&lt;/i&gt;.
+
+00:04:16.338 --> 00:04:21.991
+Anda bisa mulai dengan menyempurnakan
+piksel tata letak Anda dengan data palsu.
+
+00:04:21.991 --> 00:04:28.172
+Lalu, Anda menemukan bahwa Anda tak
+tahu apapun tentang mengambil data dari
+
+00:04:28.172 --> 00:04:32.320
+Twitter, dan membuat Anda menghabiskan
+waktu tiga bulan hanya untuk ambil data.
+
+00:04:32.320 --> 00:04:36.660
+Atau, sekedar contoh,
+saya memilih mulai dari data.
+
+00:04:36.660 --> 00:04:38.880
+Saya memikirkannya sebagai gunung es
+
+00:04:38.880 --> 00:04:42.340
+di mana Anda melihat
+piksel cantik mungkin lima persen,
+
+00:04:42.340 --> 00:04:45.280
+sepuluh persen dia atas permukaan,
+lalu ada banyak pekerjaan
+
+00:04:45.280 --> 00:04:50.390
+di bawah permukaan,
+bila Anda mau, mendukungnya.
+
+00:04:50.390 --> 00:04:53.820
+Anda menyebut puncak gunung
+es adalah yang dilihat orang.
+
+00:04:53.820 --> 00:04:57.210
+Jadi, apa yang sebenarnya terjadi
+di bawah permukaan?
+
+00:04:57.210 --> 00:05:00.620
+Bagaimana Anda melihat
+aplikasi Google Play?
+
+00:05:00.620 --> 00:05:05.940
+Jadi, yang ada di bawah permukaan yaitu
+pertama dapatkan data dari jaringan,
+
+00:05:05.940 --> 00:05:11.643
+sehingga Anda bisa verifikasi ke
+&lt;i&gt;server&lt;/i&gt; dan mendapat datanya.
+
+00:05:11.643 --> 00:05:13.969
+Lalu, mungkin menaruhnya di cache
+secara lokal agar
+
+00:05:13.969 --> 00:05:18.152
+kali berikut Anda mengerjakan dari &lt;i&gt;stream&lt;/i&gt;
+ke halaman rincian dan
+
+00:05:18.152 --> 00:05:22.820
+kembali ke &lt;i&gt;stream, kita harus pakai
+data di &lt;/i&gt;cache&lt;i&gt; , gambar di &lt;/i&gt;cache*
+
+00:05:22.820 --> 00:05:26.616
+Jadi, kita tak terlalu banyak menaruh
+tegangan pada baterai.
+
+00:05:26.616 --> 00:05:30.284
+Serta, aplikasinya telah menunjukkan
+informasi yang dimiliki.
+
+00:05:30.284 --> 00:05:33.830
+Lalu, Anda punya dukungan
+dari berbagai akun.
+
+00:05:33.830 --> 00:05:37.660
+Lalu, Anda bisa pertahankan beberapa bit
+di sana sini dalam &lt;i&gt;database&lt;/i&gt;.
+
+00:05:38.670 --> 00:05:45.640
+Lalu, kita punya punya aliran tagihan,
+yang kebanyakan diselesaikan di &lt;i&gt;server&lt;/i&gt;
+
+00:05:45.640 --> 00:05:48.370
+untuk digabung dengan cara-cara
+bayar yang berbeda.
+
+00:05:48.370 --> 00:05:51.200
+Lalu, ada pekerjaan pelanggan.
+
+00:05:51.200 --> 00:05:57.050
+Dan bagian besar lainnya dari 
+&lt;i&gt;Play store&lt;/i&gt; yaitu unduhan dan
+
+00:05:57.050 --> 00:05:59.660
+pemasangan aplikasi dan permainan.
+
+00:05:59.660 --> 00:06:04.530
+Kami, di pihak &lt;i&gt;Play store&lt;/i&gt;, kami
+bertanggung jawab dalam hal unduhan,
+
+00:06:04.530 --> 00:06:06.840
+pemasangan dan pembaharuan aplikasi.
+
+00:06:06.840 --> 00:06:11.556
+Dan itulah potongan besar lain,
+yang sekali lagi, hampir semua ini
+
+00:06:11.556 --> 00:06:16.052
+memiliki bit di permukaan,
+yaitu piksel di layar.
+
+00:06:16.052 --> 00:06:22.085
+Lalu, ada banyak pekerjaan di bawah
+permukaan yang membawa informasi
+
+00:06:22.085 --> 00:06:27.668
+untuk akun yang tepat, dan
+menaruhnya di layar.
+
+00:06:27.668 --> 00:06:32.610
+Jelas bahwa Anda telah bekerja pada
+banyak aplikasi Google Play.
+
+00:06:32.610 --> 00:06:37.025
+Bagaimana Anda tetap kekinian
+dengan berita baru Android?
+
+00:06:37.025 --> 00:06:40.737
+Ada banyak informasi di Google+ dari
+
+00:06:40.737 --> 00:06:46.805
+pembuat aplikasi Android yang sangat aktif
+yang memberi banyak panduan.
+
+00:06:46.805 --> 00:06:53.742
+Dan, dari blog-blog berbeda, dan
+
+00:06:53.742 --> 00:06:56.535
+terkadang saya tak perlu mencari dan
+
+00:06:56.535 --> 00:07:02.732
+membaca topik tertentu tentang tampilan
+daur ulang atau halaman tampilan atau
+
+00:07:02.732 --> 00:07:07.430
+hal lain atau cara konfigurasi
+bilah alat dan bilah aksi.
+
+00:07:07.430 --> 00:07:09.190
+Saya menaruhnya seperti
+
+00:07:09.190 --> 00:07:12.810
+saya tahu ada banyak informasi di sana.
+
+00:07:12.810 --> 00:07:17.340
+Lalu, saat saya perlu
+informasi yang mendalam,
+
+00:07:17.340 --> 00:07:19.700
+saya mengunjungi sumber-sumber itu.
+
+00:07:19.700 --> 00:07:21.760
+Baiklah, terimakasih, Kirill.
+
+00:07:21.760 --> 00:07:24.530
+Saya rasa murid kami akan senang
+mendengar perspektif Anda
+
+00:07:24.530 --> 00:07:27.261
+tentang menjadi insinyur
+aplikasi Android.
+

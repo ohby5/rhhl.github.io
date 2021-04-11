@@ -1,0 +1,358 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.050 --> 00:00:02.390
+Ta đang làm một danh sách khách mời 
+cho bữa tiệc.
+
+00:00:02.390 --> 00:00:05.720
+Có phải là danh sách khách mời
+cho tiệc sinh nhật phải không Catherine?
+
+00:00:05.720 --> 00:00:06.700
+Đúng vậy.
+
+00:00:06.700 --> 00:00:08.839
+Tôi hy vọng mình 
+có tên trong danh sách này.
+
+00:00:09.140 --> 00:00:10.470
+Ta sẽ xem xét điều đó sau.
+
+00:00:11.930 --> 00:00:14.010
+Tôi cảm thấy cơ hội khá nhỏ nhoi.
+
+00:00:14.010 --> 00:00:15.160
+À tiện nói về nhỏ,
+
+00:00:15.160 --> 00:00:18.010
+hãy nói về kích thước
+các view trên một màn hình.
+
+00:00:18.010 --> 00:00:21.180
+Ồ, ta đã sử dụng chiều dài văn bản
+cố định dp, phải không?
+
+00:00:21.180 --> 00:00:23.720
+Vâng, chiều rộng và chiều dài.
+
+00:00:23.720 --> 00:00:26.310
+Và ta cũng có thể thiết lập
+gói nội dung bằng các view.
+
+00:00:26.310 --> 00:00:28.275
+Phải, đó là một cách lạ để các view
+
+00:00:28.275 --> 00:00:29.224
+bao quanh nội dung.
+
+00:00:29.224 --> 00:00:30.549
+Nội dung hiển thị rộng hơn,
+
+00:00:30.549 --> 00:00:33.280
+các view lớn hơn, nội dung hiển thị nhỏ
+các view cũng nhỏ.
+
+00:00:33.280 --> 00:00:36.240
+Vâng, và thực sự chỉ có một phần ba
+trong số đó giống view gốc.
+
+00:00:36.240 --> 00:00:37.930
+Có vẻ hơi lạ nhỉ.
+
+00:00:37.930 --> 00:00:41.840
+Có vẻ giống như một trang web hẹn hò 
+dành cho các phụ huynh đơn thân.
+
+00:00:41.840 --> 00:00:42.600
+Không hẳn vậy.
+
+00:00:42.600 --> 00:00:47.370
+Giống view gốc có nghĩa là view con đó
+sẽ rộng hoặc dài giống view gốc.
+
+00:00:47.370 --> 00:00:48.446
+Ồ, tôi hiểu rồi.
+
+00:00:48.446 --> 00:00:51.400
+Tôi là một view, tôi có mẹ,
+chiều rộng và chiều dài của tôi
+
+00:00:51.400 --> 00:00:53.840
+sẽ giống như mẹ của tôi.
+
+00:00:53.840 --> 00:00:55.920
+Được rồi.
+Chính xác, vậy tóm lại là,
+
+00:00:55.920 --> 00:00:59.800
+các giá trị bạn có thể thiết lập
+cho kích thước của một view là chiều rộng.
+
+00:00:59.800 --> 00:01:01.690
+dp cố định cho chiều rộng và chiều dài.
+
+00:01:01.690 --> 00:01:03.710
+Đúng vậy,
+bạn cũng có thể làm wrap_content.
+
+00:01:03.710 --> 00:01:05.466
+Và kế tiếp chúng tôi
+sẽ thử thực hiện
+
+00:01:05.466 --> 00:01:06.780
+match_parent.
+
+00:01:06.780 --> 00:01:10.420
+Dưới đây là một số ví dụ về việc thiết lập
+độ rộng khác nhau của các view con
+
+00:01:10.420 --> 00:01:13.770
+trong một layout tuyến tính 
+ảnh hưởng đến giao diện của người dùng.
+
+00:01:13.770 --> 00:01:17.780
+Ở ví dụ này, ta thiết lập mỗi view con
+có chiều rộng cố định là 200 dp.
+
+00:01:19.070 --> 00:01:22.590
+Nếu nội dung bên trong mỗi view
+lớn hơn 200 dp.
+
+00:01:22.590 --> 00:01:26.330
+thì bạn có nguy cơ phải bỏ bớt
+một số nội dung như thế này.
+
+00:01:26.330 --> 00:01:30.460
+Trong ví dụ này, ta thiết lập mỗi view con
+với mỗi chiều rộng một wrap_content.
+
+00:01:31.600 --> 00:01:33.500
+Giờ tất cả nội dung đã được hiển thị,
+
+00:01:33.500 --> 00:01:36.930
+nhưng chiều rộng của mỗi view khác nhau
+dựa vào nội dung bên trong chúng.
+
+00:01:38.090 --> 00:01:42.020
+Ở ví dụ này, ta thiết lập chiều rộng 
+của mỗi view con giống với view gốc.
+
+00:01:42.020 --> 00:01:46.650
+Giờ bạn thấy rằng độ rộng của mỗi view con
+đã giống độ rộng view gốc.
+
+00:01:46.650 --> 00:01:48.540
+Bất kể các nội dung bên trong của nó.
+
+00:01:49.680 --> 00:01:54.070
+Giờ các giá trị giống nhau này có thể 
+áp dụng cho chiều dài của từng view.
+
+00:01:54.070 --> 00:01:59.240
+Ở ví dụ này, ta thiết lập chiều dài
+của view con này là 200 dp.
+
+00:01:59.240 --> 00:02:01.570
+Nếu nội dung bên trong
+cao hơn mức đó,
+
+00:02:01.570 --> 00:02:04.250
+thì bạn có có thể sẽ phải
+cắt bớt một số nội dung.
+
+00:02:05.400 --> 00:02:09.919
+Ở ví dụ này, ta thiết lập chiều cao 
+của view con bao toàn nội dung.
+
+00:02:09.919 --> 00:02:12.790
+Theo cách này tất cả nội dung 
+sẽ được hiển thị trên màn hình
+
+00:02:12.790 --> 00:02:15.650
+không có gì cần cắt bỏ 
+vì kích thước của text view phụ thuộc
+
+00:02:15.650 --> 00:02:16.920
+vào nội dung bên trong nó.
+
+00:02:17.940 --> 00:02:22.790
+Ở ví dụ này, chúng tôi thiết lập chiều dài
+của text view con giống view gốc.
+
+00:02:22.790 --> 00:02:25.300
+Bằng cách đó view con 
+có chiều dài giống view gốc,
+
+00:02:25.300 --> 00:02:26.720
+bất kể nội dung bên trong nó.
+
+00:02:27.730 --> 00:02:29.980
+Giờ ta hãy mở visualizer XML và
+
+00:02:29.980 --> 00:02:32.980
+cố gắng giống
+các code của view gốc.
+
+00:02:32.980 --> 00:02:36.670
+Chúng tôi cung cấp cho bạn một liên kết 
+đến XML visualizer với mã khởi động
+
+00:02:36.670 --> 00:02:38.500
+trong các ghi chú hướng dẫn dưới đây.
+
+00:02:38.790 --> 00:02:41.570
+Ở trường hợp này, LinearLayout 
+là view gốc của layout này
+
+00:02:41.570 --> 00:02:44.460
+bởi vì nó là giao diện đầu tiên 
+và ở ngoài cùng.
+
+00:02:45.040 --> 00:02:48.510
+Nếu thiết lập match_parent cho chiều rộng
+và chiều dài của view gốc này,
+
+00:02:48.510 --> 00:02:51.870
+và thiết lập này nó trở thành
+layout chính trong ứng dụng của chúng ta,
+
+00:02:51.870 --> 00:02:55.400
+thì layout tuyến tính này 
+sẽ dài và rộng như màn hình thiết bị.
+
+00:02:56.840 --> 00:03:00.300
+Tôi có thể chỉ cho bạn thấy 
+bằng cách thiết lập nền
+
+00:03:00.300 --> 00:03:04.400
+cho layout tuyến tính này
+là một màu không trong suốt.
+
+00:03:04.400 --> 00:03:07.100
+Nếu đặt một màu nền màu xám
+lên layout tuyến tính này
+
+00:03:07.100 --> 00:03:10.860
+thì bạn có thể thấy màu xám kéo dài
+chiều rộng và chiều dài của thiết bị.
+
+00:03:10.860 --> 00:03:13.370
+Bây giờ, chuyện gì sẽ xảy ra 
+nếu tôi thử thay đổi
+
+00:03:13.370 --> 00:03:16.210
+chiều rộng hoặc chiều dài của text view
+giống như view gốc?
+
+00:03:16.210 --> 00:03:18.450
+Để rõ hơn về điểm giới hạn
+của mỗi view,
+
+00:03:18.450 --> 00:03:21.510
+Tôi sẽ thiết lập một nền
+màu sắc trên mỗi một view.
+
+00:03:21.510 --> 00:03:25.660
+Bây giờ tôi sẽ thay đổi chiều dài 
+của text view này giống với view gốc.
+
+00:03:25.660 --> 00:03:28.270
+Tiện đây, bạn gõ luôn match_parent.
+
+00:03:28.270 --> 00:03:32.530
+Và giờ bạn thấy rằng text view này
+có chiều dài giống view gốc.
+
+00:03:32.530 --> 00:03:35.210
+Thật không may, nó lại đẩy mọi thứ khác
+ra khỏi màn hình,
+
+00:03:35.210 --> 00:03:36.600
+và ta không muốn điều đó.
+
+00:03:36.600 --> 00:03:38.600
+Vì vậy, hãy đổi trở lại bao toàn nội dung.
+
+00:03:39.220 --> 00:03:39.950
+Được rồi.
+
+00:03:39.950 --> 00:03:43.309
+Hãy thay đổi chiều rộng trùng với view gốc
+và xem nó làm được những gì.
+
+00:03:43.750 --> 00:03:48.580
+Bây giờ chiều rộng của TextView 
+đã giống view gốc,
+
+00:03:48.580 --> 00:03:51.100
+và cũng giống chiều rộng 
+của màn hình điện thoại.
+
+00:03:51.750 --> 00:03:54.940
+Nếu tôi thay đổi TextViews khác
+thành match_parent
+
+00:03:54.940 --> 00:03:58.610
+Bạn có thể thấy nó cũng bắt đầu
+có chiều rộng giống view gốc.
+
+00:03:58.610 --> 00:04:01.740
+Tôi cũng muốn chỉ ra một điều nữa.
+
+00:04:01.740 --> 00:04:04.860
+Mỗi khi bạn nhìn thấy một thuộc tính
+bắt đầu với đường gạch dưới,
+
+00:04:04.860 --> 00:04:10.080
+giống như chiều dài hoặc rộng layout, 
+chúng là các thông số layout nhóm.
+
+00:04:10.080 --> 00:04:13.480
+Chúng được nhóm view gốc sử dụng 
+để xác định kích thước và vị trí
+
+00:04:13.480 --> 00:04:14.849
+của các view này.
+
+00:04:16.190 --> 00:04:19.110
+Trong khi đó, các thuộc tính khác 
+như hình nền, cỡ chữ
+
+00:04:19.110 --> 00:04:23.630
+và kiểu chữ được xử lý bởi các TextView
+bằng cách tự tạo kiểu cho view của nó.
+
+00:04:23.630 --> 00:04:27.360
+Nhưng những thông số layout nhóm này 
+được xử lý bởi các view gốc.
+
+00:04:27.360 --> 00:04:30.930
+Giờ đến lượt bạn sẽ thử thay đổi 
+giá trị chiều rộng và chiều dài khác nhau.
+
+00:04:30.930 --> 00:04:33.790
+Về các liên kết để đến XML visualizer
+nơi có mã khởi tạo,
+
+00:04:33.790 --> 00:04:35.820
+bạn hãy xem các ghi chú
+hướng dẫn dưới đây.
+
+00:04:35.820 --> 00:04:38.970
+Hãy thử thay đổi giá trị chiều rộng 
+và chiều dài của mỗi TextView.
+
+00:04:38.970 --> 00:04:42.730
+Bạn có thể thiết lập giá trị dp cố định,
+wrap_content, hoặc match_parent.
+
+00:04:42.730 --> 00:04:46.730
+Nhớ rằng với từng view, giá trị chiều rộng
+và dài không nhất thiết phải giống nhau.
+
+00:04:46.730 --> 00:04:49.221
+Khi bạn thực hiện xong,
+tích vào ô này để tiếp tục.
+

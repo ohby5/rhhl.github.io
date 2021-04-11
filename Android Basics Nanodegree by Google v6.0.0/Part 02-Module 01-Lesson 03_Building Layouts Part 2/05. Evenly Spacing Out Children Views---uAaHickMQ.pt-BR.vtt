@@ -1,0 +1,357 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.400 --> 00:00:02.868
+Já vimos que o layout linear
+
+00:00:02.901 --> 00:00:06.100
+pode ter uma orientação
+horizontal ou vertical.
+
+00:00:06.667 --> 00:00:11.200
+Vamos ver se as Views aproveitam
+a propriedade da tela.
+
+00:00:11.234 --> 00:00:14.115
+A propriedade
+é o espaço disponível na tela.
+
+00:00:14.767 --> 00:00:16.567
+No próximo exemplo,
+
+00:00:16.601 --> 00:00:20.667
+temos um layout linear vertical
+com três TextViews filhas:
+
+00:00:20.701 --> 00:00:22.336
+Tom, Tim e Todd.
+
+00:00:22.370 --> 00:00:25.467
+Quando seguramos o dispositivo
+no modo retrato,
+
+00:00:25.501 --> 00:00:29.334
+as TextViews ficam
+no topo do canto esquerdo.
+
+00:00:29.367 --> 00:00:32.267
+Há muito espaço inutilizado.
+
+00:00:32.300 --> 00:00:35.801
+Se segurarmos o dispositivo
+no modo paisagem,
+
+00:00:35.834 --> 00:00:39.667
+acontece a mesma coisa.
+
+00:00:40.000 --> 00:00:44.300
+Fica mais aparente num tablet,
+que tem uma tela maior.
+
+00:00:44.334 --> 00:00:47.334
+Só usamos um pouco
+da propriedade da tela
+
+00:00:47.367 --> 00:00:49.267
+e o resto está em branco.
+
+00:00:49.300 --> 00:00:52.767
+Vamos aprender a espalhar
+as Views igualmente
+
+00:00:52.801 --> 00:00:55.036
+e cobrir o espaço
+disponível.
+
+00:00:55.070 --> 00:00:57.037
+Isso se aplica
+a outras Views.
+
+00:00:57.071 --> 00:01:00.899
+Você pode ter imagens maiores
+para uma experiência melhor,
+
+00:01:00.933 --> 00:01:03.952
+em vez de deixá-las
+pequenas.
+
+00:01:04.434 --> 00:01:07.133
+Você também pode ter
+botões maiores
+
+00:01:07.167 --> 00:01:09.868
+para ficar mais fácil
+de pressioná-los.
+
+00:01:09.901 --> 00:01:13.234
+No nosso exemplo,
+vamos falar das TextViews.
+
+00:01:13.267 --> 00:01:17.434
+Vamos para o visualizador XML
+para espalhar as Views.
+
+00:01:17.968 --> 00:01:21.167
+Aqui está o código
+para Tom, Tim e Todd.
+
+00:01:21.200 --> 00:01:25.667
+Tenho três TextViews
+no layout linear vertical.
+
+00:01:26.501 --> 00:01:29.534
+Quero mostrar como espalhar,
+
+00:01:29.568 --> 00:01:31.934
+para que Tom fique aqui,
+Tim fique aqui
+
+00:01:31.968 --> 00:01:33.901
+e Todd fique aqui embaixo.
+
+00:01:33.935 --> 00:01:37.968
+Deixar a altura
+como "wrap_content" não ajuda.
+
+00:01:38.002 --> 00:01:41.400
+Outra coisa
+é o valor fixo do DP da altura.
+
+00:01:41.434 --> 00:01:45.467
+Vou determinar a altura
+como 200dp.
+
+00:01:45.701 --> 00:01:48.267
+Agora Tom tem mais espaço.
+
+00:01:48.300 --> 00:01:51.200
+Se eu fizer o mesmo
+nas outras TextViews,
+
+00:01:51.234 --> 00:01:54.634
+elas se espalham
+de maneira mais uniforme.
+
+00:01:54.667 --> 00:01:58.267
+Mas a solução só funciona
+para este tamanho de dispositivo.
+
+00:01:58.300 --> 00:02:00.367
+Se eu tiver um tablet,
+
+00:02:00.400 --> 00:02:04.634
+as Views vão continuar
+no topo do canto esquerdo.
+
+00:02:04.667 --> 00:02:08.801
+A outra opção da altura
+é o match_parent.
+
+00:02:08.834 --> 00:02:11.734
+Ao determinar o match_parent
+para Tom,
+
+00:02:11.767 --> 00:02:15.601
+ele usa a altura do pai,
+que é a tela toda.
+
+00:02:15.634 --> 00:02:19.167
+Assim as outras TextViews
+nem aparecem.
+
+00:02:19.200 --> 00:02:20.769
+Não vamos fazer isso.
+
+00:02:20.803 --> 00:02:22.403
+Estamos sem ideias.
+
+00:02:22.437 --> 00:02:27.334
+Já usamos wrap_content,
+valor fixo do DP e match_parent.
+
+00:02:27.367 --> 00:02:30.701
+Nada disso dá
+o espaçamento certo
+
+00:02:30.734 --> 00:02:32.968
+para todos os dispositivos.
+
+00:02:33.000 --> 00:02:36.167
+Vamos procurar no Google
+uma solução.
+
+00:02:36.400 --> 00:02:38.367
+Temos um layout linear
+
+00:02:38.401 --> 00:02:40.472
+e queremos
+um espaçamento igual.
+
+00:02:40.506 --> 00:02:41.972
+Vamos buscar.
+
+00:02:42.358 --> 00:02:46.801
+Há muitos resultados,
+mas vamos clicar no primeiro.
+
+00:02:46.834 --> 00:02:49.567
+É um link
+para o site Stackoverflow.
+
+00:02:49.601 --> 00:02:54.567
+É um site de perguntas e respostas
+de desenvolvedores do Android.
+
+00:02:54.601 --> 00:02:57.934
+Uso sempre
+que preciso de ajuda.
+
+00:02:57.968 --> 00:03:01.834
+Muitas vezes já fizeram
+a pergunta que tenho.
+
+00:03:01.868 --> 00:03:04.868
+Esta dúvida
+é sobre distribuir
+
+00:03:04.901 --> 00:03:07.767
+os botões na largura
+do layout linear.
+
+00:03:07.801 --> 00:03:12.467
+É parecido com o que queremos,
+mas nós usamos TextViews.
+
+00:03:12.501 --> 00:03:17.467
+Em vez da largura do layout,
+queremos a altura.
+
+00:03:17.734 --> 00:03:20.734
+Podemos ler a pergunta
+ou pular.
+
+00:03:20.768 --> 00:03:23.235
+Geralmente vou direto
+para a resposta.
+
+00:03:23.269 --> 00:03:27.701
+Esta solução recebeu 88 votos
+e tem uma verificação verde.
+
+00:03:27.735 --> 00:03:30.734
+Você determina a largura
+para 0dp
+
+00:03:30.768 --> 00:03:34.133
+e o layout_weight
+dos botões como 1.
+
+00:03:34.167 --> 00:03:37.868
+Isso divide a largura
+igualmente entre os botões.
+
+00:03:37.901 --> 00:03:41.100
+Você pode não entender,
+mas tudo bem.
+
+00:03:41.133 --> 00:03:44.667
+Uma parte-chave
+é o layout_weight.
+
+00:03:44.701 --> 00:03:47.901
+Nunca vimos isso,
+mas parece importante.
+
+00:03:47.934 --> 00:03:51.868
+Vamos copiar
+e procurar no Google.
+
+00:03:51.902 --> 00:03:55.168
+A busca
+é "linearlayout layout_weight".
+
+00:03:55.202 --> 00:03:59.299
+O 1º resultado
+é do developer.android.com,
+
+00:03:59.333 --> 00:04:00.834
+então vamos clicar.
+
+00:04:01.133 --> 00:04:03.834
+É um artigo
+sobre o layout linear.
+
+00:04:03.868 --> 00:04:07.701
+Já sabemos
+sobre o atributo orientação.
+
+00:04:07.934 --> 00:04:11.335
+Agora temos informações novas
+sobre o Layout Weight.
+
+00:04:11.369 --> 00:04:15.634
+Há também um exemplo
+com código e imagem de tela.
+
+00:04:15.667 --> 00:04:17.934
+Eu poderia resumir
+para você,
+
+00:04:17.968 --> 00:04:23.067
+mas quero que leia
+e tente entender sozinho.
+
+00:04:23.501 --> 00:04:28.100
+É assim que deve resolver problemas
+depois do curso.
+
+00:04:28.134 --> 00:04:30.436
+Você procura as informações
+
+00:04:30.470 --> 00:04:34.067
+e tenta usá-las
+para solucionar os problemas.
+
+00:04:34.334 --> 00:04:37.367
+Este é o layout
+do nosso dispositivo
+
+00:04:37.401 --> 00:04:38.970
+e é isto que queremos.
+
+00:04:39.004 --> 00:04:42.801
+As TextViews estão
+espaçadas de maneira uniforme.
+
+00:04:42.834 --> 00:04:47.334
+Para resolver o problema,
+leia o artigo do LinearLayout.
+
+00:04:47.701 --> 00:04:51.968
+É normal não entender tudo
+que está no artigo.
+
+00:04:52.334 --> 00:04:55.501
+Você só precisa ter
+uma compreensão básica
+
+00:04:55.534 --> 00:05:00.033
+de como os conceitos no artigo
+podem ajudar você.
+
+00:05:00.267 --> 00:05:05.000
+Depois quero que dê ideias
+para criar o layout no XML.
+
+00:05:05.033 --> 00:05:10.367
+Não precisa dar o código todo
+porque vamos ver isso depois.
+
+00:05:10.401 --> 00:05:13.330
+Mas escreva frases curtas
+
+00:05:13.364 --> 00:05:17.033
+sobre como o artigo
+ajuda no nosso problema.
+

@@ -1,0 +1,470 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.420 --> 00:00:03.469
+Quand on positionne des vues filles
+les unes par rapport aux autres,
+
+00:00:03.469 --> 00:00:06.190
+on peut intégrer
+des contraintes de positionnement.
+
+00:00:06.190 --> 00:00:09.885
+Par exemple, une <i>TextView</i>
+devant être au-dessus d'une autre,
+
+00:00:09.885 --> 00:00:14.090
+ou une <i>ImageView</i> devant être
+à gauche d'une <i>TextView</i>.
+
+00:00:14.090 --> 00:00:17.280
+Toutes ces contraintes me rappellent
+quand j'ai dû placer des convives
+
+00:00:17.280 --> 00:00:17.900
+à une soirée.
+
+00:00:18.910 --> 00:00:21.380
+La fête d'anniversaire approche
+justement, alors
+
+00:00:21.380 --> 00:00:23.540
+voyons un peu l'agencement des sièges.
+
+00:00:23.540 --> 00:00:25.140
+On a invité
+toutes ces personnes,
+
+00:00:25.140 --> 00:00:28.330
+mais il y a des contraintes
+concernant les sièges des convives.
+
+00:00:28.330 --> 00:00:30.550
+Certains doivent être assis
+à côté de leur meilleur ami.
+
+00:00:30.550 --> 00:00:33.490
+D'autres sont en quelque
+sorte « meilleurs ennemis ».
+
+00:00:33.490 --> 00:00:36.120
+Donc ils préféreraient ne pas
+être près de certains convives.
+
+00:00:36.120 --> 00:00:39.860
+En prenant en compte tout ça,
+j'ai établi cette disposition possible.
+
+00:00:39.860 --> 00:00:41.880
+Kunal, Ben et Kagure sont en haut.
+
+00:00:41.880 --> 00:00:45.900
+Je suis avec Natalie et Lyla ici en bas ;
+enfin Amy, Omoju et Jennie sont par là.
+
+00:00:45.900 --> 00:00:49.400
+Peut-on recréer cet arrangement
+en XML avec des balises <i>TextView</i> et
+
+00:00:49.400 --> 00:00:51.040
+une disposition relative ?
+
+00:00:51.040 --> 00:00:53.270
+On sait comment placer
+des vues dans les angles.
+
+00:00:53.270 --> 00:00:57.398
+La <i>TextView</i> de Lyla s'alignera sur
+les bords gauche et bas de la vue parente.
+
+00:00:57.398 --> 00:01:01.390
+La <i>TextView</i> de Jennie s'alignera sur
+les bords bas et droite de la parente.
+
+00:01:01.390 --> 00:01:04.510
+Quant à Ben, on l'alignera avec
+le bord supérieur de la parente.
+
+00:01:04.510 --> 00:01:07.280
+Au passage, on présume que la vue parente
+occupe toute la largeur et
+
+00:01:07.280 --> 00:01:11.360
+toute la hauteur de l'écran, donc
+on a réglé <i>match_parent</i> pour les deux.
+
+00:01:11.360 --> 00:01:12.430
+Revenons à Ben.
+
+00:01:12.430 --> 00:01:14.550
+Il est placé près du haut de la parente.
+
+00:01:14.550 --> 00:01:16.970
+On veut aussi centrer
+sa vue horizontalement.
+
+00:01:16.970 --> 00:01:20.320
+Autrefois, on aurait appelé
+ces trois vues des vues d'ancrage.
+
+00:01:20.320 --> 00:01:23.750
+Parce que tous les autres convives
+seront placés vis-à-vis de ces trois-là.
+
+00:01:23.750 --> 00:01:27.670
+Et ces trois-là ne bougeront pas,
+où que puissent être assis les autres.
+
+00:01:27.670 --> 00:01:29.360
+Ajoutons quelqu'un d'autre.
+
+00:01:29.360 --> 00:01:32.810
+Kunal est ici, à gauche de Ben.
+
+00:01:32.810 --> 00:01:35.259
+Mais comment l'exprimer en XML ?
+
+00:01:35.259 --> 00:01:39.552
+Aucun attribut précis n'indique
+qu'une vue doit se trouver à la gauche
+
+00:01:39.552 --> 00:01:40.655
+d'une vue nommée Ben.
+
+00:01:40.655 --> 00:01:43.363
+Tous les noms d'attributs
+pour Android sont généraux,
+
+00:01:43.363 --> 00:01:46.940
+pour pouvoir fonctionner
+dans n'importe quel cas d'usage.
+
+00:01:46.940 --> 00:01:49.410
+On veut placer Kunal à gauche de Ben,
+
+00:01:49.410 --> 00:01:52.580
+mais on ne connaît aucun nom
+d'attribut existant pour faire ça.
+
+00:01:52.580 --> 00:01:53.768
+Mais par chance,
+
+00:01:53.768 --> 00:01:58.780
+en positionnement relatif, il existe
+l'attribut « <i>android:layout_toLeftof</i> ».
+
+00:01:58.780 --> 00:02:03.520
+Il veut dire que la <i>TextView</i> de Kunal
+devrait être « à gauche de » notre vue.
+
+00:02:03.520 --> 00:02:08.020
+Et il suffit pour préciser une vue
+d'utiliser des identifiants.
+
+00:02:08.020 --> 00:02:10.000
+Toute vue peut se voir attribuer
+un identifiant.
+
+00:02:10.000 --> 00:02:13.110
+Il n'est pas forcé d'être spécialement
+rattaché à une disposition relative.
+
+00:02:13.110 --> 00:02:16.275
+On peut les situer dans
+une disposition relative ou linéaire,
+
+00:02:16.275 --> 00:02:18.200
+ou n'importe quel groupe de vues.
+
+00:02:18.200 --> 00:02:21.710
+Donc sur la <i>TextView</i> de Ben,
+on peut rajouter l'attribut <i>android:id</i>.
+
+00:02:21.710 --> 00:02:23.860
+Sa valeur sera son identifiant.
+
+00:02:23.860 --> 00:02:29.500
+Il débutera par une @. L'arobase définit
+une ressource de notre appli Android.
+
+00:02:29.500 --> 00:02:34.263
+On avait déjà vu l'arobase pour faire
+appel à des images dans notre appli.
+
+00:02:34.263 --> 00:02:36.516
+Par exemple, <i>@Drawable</i>.
+
+00:02:36.516 --> 00:02:38.950
+Ensuite on précise
+le type de ressource.
+
+00:02:38.950 --> 00:02:41.017
+Dans notre cas,
+le type de ressource est un ID.
+
+00:02:41.017 --> 00:02:44.197
+On ajoute également le signe +
+parce que c'est la première fois qu'on
+
+00:02:44.197 --> 00:02:45.219
+déclare cet identifiant.
+
+00:02:45.219 --> 00:02:50.120
+Ensuite on a une barre oblique
+et enfin le nom de la vue.
+
+00:02:50.120 --> 00:02:53.190
+Voici le nom qu'on a choisi
+pour la <i>TextView</i> de Ben.
+
+00:02:53.190 --> 00:02:55.240
+On l'a nommée <i>ben_text_view</i>.
+
+00:02:56.320 --> 00:02:59.470
+Une exigence de base est
+que le nom n'ait pas d'espaces.
+
+00:02:59.470 --> 00:03:00.937
+D'où l'emploi des tirets bas ici.
+
+00:03:00.937 --> 00:03:02.883
+Il doit aussi
+débuter par une lettre et
+
+00:03:02.883 --> 00:03:06.229
+ne pas contenir
+de caractères de ponctuation.
+
+00:03:07.250 --> 00:03:08.990
+On peut utiliser des nombres, ceci étant.
+
+00:03:08.990 --> 00:03:14.500
+Dans notre cas, on identifie
+donc Ben avec <i>ben_text_view</i>.
+
+00:03:14.500 --> 00:03:16.130
+On peut ainsi
+y faire référence plus bas.
+
+00:03:16.130 --> 00:03:20.460
+Sur la <i>TextView</i> de Kunal, on peut
+insérer l'attribut <i>layout_toLeftof</i> et
+
+00:03:20.460 --> 00:03:22.920
+enfin dire qu'elle est
+« à gauche de » la <i>TextView</i> de Ben.
+
+00:03:24.190 --> 00:03:28.390
+On appelle l'identifiant
+de la <i>TextView</i> de Ben avec <i>@id</i>.
+
+00:03:28.390 --> 00:03:32.322
+Le signe + n'est plus nécessaire
+car on a déjà défini cet identifiant.
+
+00:03:32.322 --> 00:03:34.692
+C'est la deuxième fois
+qu'on l'utilise.
+
+00:03:34.692 --> 00:03:38.910
+Quand vous créez un nouvel identifiant,
+veillez bien à ce qu'il soit unique.
+
+00:03:38.910 --> 00:03:42.550
+D'habitude, il est utile de prendre
+un nom rattaché au contenu de la balise.
+
+00:03:42.550 --> 00:03:45.920
+Bien, cool, on a donc
+placé Kunal à gauche de Ben.
+
+00:03:45.920 --> 00:03:49.740
+Imaginons maintenant qu'on veuille
+placer Omoju au dessus de Jennie.
+
+00:03:49.740 --> 00:03:51.760
+Puisqu'on aura besoin
+de faire référence à Jennie,
+
+00:03:51.760 --> 00:03:53.980
+on devrait déjà créer
+un identifiant pour Jennie.
+
+00:03:53.980 --> 00:03:58.240
+Dans la <i>TextView</i> de Jennie, on ajoute
+cet attribut avec cette valeur.
+
+00:03:58.240 --> 00:04:01.880
+L'identifiant est <i>jennie_text_view</i>.
+
+00:04:01.880 --> 00:04:04.550
+Dans la <i>TextView</i> d'Omoju,
+on ajoute cet attribut.
+
+00:04:04.550 --> 00:04:09.680
+Il est dit qu'Omoju devrait être
+placé « au dessus de » <i>jennie_text_view</i>.
+
+00:04:09.680 --> 00:04:11.380
+C'est l'identifiant
+qu'on vient de créer.
+
+00:04:12.570 --> 00:04:13.850
+Voyons la disposition du XML.
+
+00:04:13.850 --> 00:04:18.010
+On a une disposition relative de largeur
+et de hauteur valant <i>match_parent</i>.
+
+00:04:18.010 --> 00:04:19.870
+Ensuite on a
+la <i>TextView</i> de Lyla.
+
+00:04:19.870 --> 00:04:22.267
+Elle est située en bas à gauche
+de la vue parente,
+
+00:04:22.267 --> 00:04:23.600
+c'est ce qu'on voit ici.
+
+00:04:24.770 --> 00:04:26.314
+Ensuite on a
+la <i>TextView</i> de Jennie.
+
+00:04:26.314 --> 00:04:29.010
+Elle est située en bas à droite
+de la vue parente.
+
+00:04:29.010 --> 00:04:29.720
+Donc juste ici.
+
+00:04:31.300 --> 00:04:32.876
+Ensuite on a
+la <i>TextView</i> de Ben.
+
+00:04:32.876 --> 00:04:35.900
+Elle est située près du bord supérieur
+de la vue parente.
+
+00:04:35.900 --> 00:04:38.290
+Elle est aussi centrée
+horizontalement.
+
+00:04:38.290 --> 00:04:39.880
+Voilà nos vues d'ancrage, et
+
+00:04:39.880 --> 00:04:42.460
+maintenant on peut placer
+les autres vues en fonction d'elles.
+
+00:04:42.460 --> 00:04:45.720
+Notez d'ailleurs que j'ai déjà pris
+de l'avance en identifiant chaque vue.
+
+00:04:45.720 --> 00:04:48.040
+On a donc l'ID <i>ben_text_view</i>.
+
+00:04:48.040 --> 00:04:50.970
+Ensuite on peut placer
+la <i>TextView</i> de Kunal à gauche de Ben.
+
+00:04:50.970 --> 00:04:56.930
+Je place Kunal près du bord supérieur,
+et « à gauche de » la <i>TextView</i> de Ben.
+
+00:04:56.930 --> 00:04:58.525
+J'utilise l'ID
+de la vue de Ben ici.
+
+00:04:58.525 --> 00:05:02.025
+Ensuite on va placer la
+<i>TextView</i> d'Omoju « au dessus de » Jennie.
+
+00:05:02.025 --> 00:05:04.915
+Omoju est situé près du bord droit
+de la vue parente, et
+
+00:05:04.915 --> 00:05:06.435
+au dessus de la <i>TextView</i> de Jennie.
+
+00:05:07.505 --> 00:05:08.245
+Ok, cool.
+
+00:05:08.245 --> 00:05:11.465
+Maintenant on a d'autres amis
+à disposer correctement.
+
+00:05:12.925 --> 00:05:15.475
+Dans les consignes ci-dessous,
+on vous a laissé un lien
+
+00:05:15.475 --> 00:05:19.270
+vers le visualisateur XML
+avec un bout de code déjà en place.
+
+00:05:19.270 --> 00:05:20.910
+À vous de jouer,
+modifiez ce XML pour
+
+00:05:20.910 --> 00:05:24.200
+parvenir à créer la disposition
+souhaitée pour tout le monde.
+
+00:05:24.200 --> 00:05:26.840
+Certaines des vues seront
+en fait mal positionnée au début, alors
+
+00:05:26.840 --> 00:05:28.060
+il faudra les corriger.
+
+00:05:29.310 --> 00:05:32.490
+Au passage, on vient d'aborder
+une tonne de nouveaux attributs.
+
+00:05:32.490 --> 00:05:34.680
+Ne vous sentez pas forcés
+de tous les retenir.
+
+00:05:34.680 --> 00:05:36.446
+Vous pourrez toujours les étudier
+plus tard.
+
+00:05:36.446 --> 00:05:40.460
+On peut déjà chercher
+« <i>relativelayout, layout params</i> ».
+
+00:05:40.460 --> 00:05:45.260
+Quand on clique sur le premier lien, ça
+renvoie sur la documentation concernée.
+
+00:05:45.260 --> 00:05:48.870
+Voilà tous les attributs XML
+qu'on peut ajouter à une vue fille de
+
+00:05:48.870 --> 00:05:53.290
+disposition relative pour que celle-ci
+sache comment appliquer la disposition.
+
+00:05:53.290 --> 00:05:54.755
+Il y en a certains
+déjà abordés.
+
+00:05:54.755 --> 00:06:00.370
+<i>Layout_above</i>, <i>alignParentBottom</i>,
+<i>alignParentRight</i> et ainsi de suite.
+
+00:06:00.370 --> 00:06:00.890
+Au fait, pour
+
+00:06:00.890 --> 00:06:05.510
+des raisons pédagogiques, le visualisateur
+ne supporte pas tous ces attributs.
+
+00:06:05.510 --> 00:06:08.630
+Toutefois, quand on développe
+une application sous Android Studio,
+
+00:06:08.630 --> 00:06:10.050
+on doit pouvoir tous les utiliser.
+

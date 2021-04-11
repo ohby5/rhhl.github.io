@@ -1,0 +1,450 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.420 --> 00:00:03.469
+Khi sắp xếp các relative con
+với những view lân cận,
+
+00:00:03.469 --> 00:00:06.190
+bạn có thể đặt giới hạn
+với vị trí của chúng.
+
+00:00:06.190 --> 00:00:09.885
+Ví dụ, một TextView
+phải ở trên một TextView khác,
+
+00:00:09.885 --> 00:00:14.090
+hay một ImageView
+phải ở bên trái một TextView.
+
+00:00:14.090 --> 00:00:18.020
+Những giới hạn này nhắc tôi tới việc
+sắp xếp bàn cho một bữa tiệc.
+
+00:00:18.910 --> 00:00:21.380
+Chúng tôi sắp có một bữa tiệc sinh nhật
+
+00:00:21.380 --> 00:00:23.540
+nên hãy nhìn vào biểu đồ các chỗ ngồi.
+
+00:00:23.540 --> 00:00:25.490
+Chúng tôi mời
+những người này tới bữa tối
+
+00:00:25.490 --> 00:00:28.330
+Nhưng có giới hạn cho việc
+mọi người muốn ngồi ở đâu.
+
+00:00:28.330 --> 00:00:30.550
+Một số người muốn
+ngồi cạnh bạn thân của họ,
+
+00:00:30.550 --> 00:00:33.490
+Một số người lại có
+những người họ không thích.
+
+00:00:33.490 --> 00:00:36.120
+Nên họ sẽ không muốn
+ngồi gần một số người.
+
+00:00:36.120 --> 00:00:39.860
+Nếu xem xét tất cả các yếu tố,
+tôi nghĩ ra một layout phù hợp.
+
+00:00:39.860 --> 00:00:41.880
+Kunal, Ben và Kagure sẽ ở đây.
+
+00:00:41.880 --> 00:00:45.900
+Natalie, Lyla và tôi sẽ ở dưới này
+và Amy, Omoju và Jenny sẽ ở trong góc này.
+
+00:00:45.900 --> 00:00:49.400
+Chúng ta có thể dựng vị trí ngồi
+trong XML, sử dụng TextView
+
+00:00:49.400 --> 00:00:51.040
+và relative layout không?
+
+00:00:51.040 --> 00:00:53.270
+Chúng ta biết cách
+sắp xếp các view trong góc.
+
+00:00:53.270 --> 00:00:57.398
+Nên TextView Lyla sẽ xếp vào
+biên parent trái và biên dưới cùng.
+
+00:00:57.398 --> 00:01:01.390
+TextView Jennie sẽ xếp vào
+biên parent phải và biên dưới cùng.
+
+00:01:01.390 --> 00:01:04.510
+Chúng ta sẽ xếp Ben vào biên
+trên cùng của parent.
+
+00:01:04.510 --> 00:01:07.780
+Tiện thể, chúng ta cho rằng parent
+có độ rộng và độ cao đầy màn hình
+
+00:01:07.780 --> 00:01:11.360
+nên chúng ta thiết lập parent
+tương ứng với độ rộng và cao.
+
+00:01:11.360 --> 00:01:12.430
+Hãy quay lại với Ben.
+
+00:01:12.430 --> 00:01:14.550
+Anh ấy được xếp vào
+trên cùng của parent.
+
+00:01:14.550 --> 00:01:17.360
+Chúng ta cũng muốn xếp anh ấy
+ở trung tâm theo chiều ngang.
+
+00:01:17.360 --> 00:01:20.320
+Và bạn có thể gọi
+3 view này là anchor view.
+
+00:01:20.320 --> 00:01:23.750
+Vì mọi người được sắp xếp
+quan hệ với những người này.
+
+00:01:23.750 --> 00:01:27.670
+Và những người này sẽ không di chuyển,
+dù vị trí của những người còn lại ra sao.
+
+00:01:27.670 --> 00:01:29.360
+Hãy thêm một người nữa.
+
+00:01:29.360 --> 00:01:32.810
+Chúng ta có Kunal ở đây -
+người ngồi bên trái Ben.
+
+00:01:32.810 --> 00:01:35.259
+Nhưng làm sao
+thể hiện điều đó trong XML?
+
+00:01:35.259 --> 00:01:39.552
+Không có thuộc tính nào thể hiện
+một view sẽ nằm bên trái
+
+00:01:39.552 --> 00:01:40.655
+một view khác tên Ben.
+
+00:01:40.655 --> 00:01:43.363
+Thuộc tính của Android là tổng quát,
+
+00:01:43.363 --> 00:01:46.940
+nên nó hiệu quả
+với mọi trường hợp bạn muốn.
+
+00:01:46.940 --> 00:01:49.410
+Chúng ta muốn xếp Kunal bên trái Ben,
+
+00:01:49.410 --> 00:01:52.580
+nhưng chúng ta không biết thuộc tính
+có sẵn nào có thể làm điều đó.
+
+00:01:52.580 --> 00:01:53.768
+May mắn thay,
+
+00:01:53.768 --> 00:01:58.780
+RelativeLayout có một thuộc tính
+android: layout_toLeftof.
+
+00:01:58.780 --> 00:02:03.520
+Nghĩa là text view Kunal
+sẽ ở bên trái một view khác.
+
+00:02:03.520 --> 00:02:08.020
+Và cách chúng ta xác định
+view là dùng view ID.
+
+00:02:08.020 --> 00:02:10.300
+Chúng ta có thể đặt
+view ID cho bất cứ view nào.
+
+00:02:10.300 --> 00:02:13.110
+Và chúng không nhất thiết
+địa chỉ đến RelativeLayout.
+
+00:02:13.110 --> 00:02:16.425
+Chúng có thể được xác định bên trong
+RelativeLayout, hay LinearLayout
+
+00:02:16.425 --> 00:02:18.330
+hay bất cứ nhóm view nào khác.
+
+00:02:18.330 --> 00:02:22.020
+Trên TextView Ben, chúng ta có thể
+thêm thuộc tính android:id.
+
+00:02:22.020 --> 00:02:23.860
+Gía trị của nó là tên ID.
+
+00:02:23.860 --> 00:02:28.550
+Format của nó bắt đầu bằng kí hiệu @ -
+tham chiếu tới tài nguyên
+
+00:02:28.550 --> 00:02:34.263
+trong ứng dụng Android. Chúng ta đã thấy
+@ tham chiếu tới hình ảnh.
+
+00:02:34.263 --> 00:02:36.516
+Ví dụ là ứng dụng Drawable.
+
+00:02:36.516 --> 00:02:38.950
+Sau đó chúng ta
+xác định dạng tài nguyên.
+
+00:02:38.950 --> 00:02:41.017
+Trong trường hợp này,
+dạng tài nguyên là id.
+
+00:02:41.017 --> 00:02:44.197
+Chúng ta cũng thêm
+dấu cộng vì đây là lần đầu
+
+00:02:44.197 --> 00:02:45.219
+chúng ta dùng id này.
+
+00:02:45.219 --> 00:02:50.120
+Sau đó là dấu / và tên của view.
+
+00:02:50.120 --> 00:02:53.190
+Đây là tên chúng ta đặt cho TextView Ben.
+
+00:02:53.190 --> 00:02:55.240
+Chúng ta gọi nó ben_text_view.
+
+00:02:56.320 --> 00:02:59.120
+Yêu cầu cơ bản là tên
+không được có khoảng trắng.
+
+00:02:59.120 --> 00:03:01.557
+Đó là lí do chúng ta dùng
+dấu xếp gạch ở đây.
+
+00:03:02.087 --> 00:03:03.383
+Nó cần bắt đầu bằng 1 kí tự
+
+00:03:03.383 --> 00:03:06.229
+và không chứa kí hiệu lạ nào.
+
+00:03:07.250 --> 00:03:08.990
+Số cũng được.
+
+00:03:08.990 --> 00:03:14.290
+Trong trường hợp này, chúng ta đã
+gán ID cho Ben là ben_text_view
+
+00:03:14.290 --> 00:03:16.130
+Như vậy chúng ta
+có thể sử dụng nó sau.
+
+00:03:16.130 --> 00:03:20.460
+Vậy với TextView Kunal, chúng ta
+có thể thêm thuộc tính layout_toLeftof
+
+00:03:20.460 --> 00:03:22.920
+và chúng ta có thể gọi
+nó ở phía trái TextView Ben.
+
+00:03:24.190 --> 00:03:28.390
+Chúng ta tham chiếu tới ID
+cho TextView Ben, sử dụng @id.
+
+00:03:28.390 --> 00:03:32.322
+Chúng ta không cần dùng dấu cộng
+vì chúng ta đã định nghĩa ID đó.
+
+00:03:32.322 --> 00:03:34.692
+Đây là lần hai chúng ta sử dụng ID.
+
+00:03:34.692 --> 00:03:38.910
+Khi chúng ta đặt tên ID mới,
+hãy đảm bảo chúng khác nhau.
+
+00:03:38.910 --> 00:03:42.550
+Thường thì chọn một tên liên quan
+đến nội dung của nó sẽ có ích.
+
+00:03:42.550 --> 00:03:45.920
+Vậy đó là cách bạn xếp Kunal bên trái Ben.
+
+00:03:45.920 --> 00:03:49.740
+Ví dụ, chúng ta muốn
+xếp Omoju cạnh Jennie.
+
+00:03:49.740 --> 00:03:51.760
+Vì chúng ta cần tham chiếu tới Jennie,
+
+00:03:51.760 --> 00:03:53.980
+chúng ta cần tạo một ID cho Jennie.
+
+00:03:53.980 --> 00:03:58.240
+Trên TextView Jennie, chúng ta xác định
+thuộc tính này và gán giá trị này vào.
+
+00:03:58.240 --> 00:04:01.880
+Tên ID là jennie_text_view.
+
+00:04:01.880 --> 00:04:04.550
+Trên TextView Omoju,
+chúng ta thêm thuộc tính này.
+
+00:04:04.550 --> 00:04:09.680
+Nó thể hiện rằng Omoju
+phải được xếp trên jennie_text_view.
+
+00:04:09.680 --> 00:04:11.380
+Vầ đây là ID chúng ta đã tạo ra.
+
+00:04:12.450 --> 00:04:13.850
+Hãy nhìn vào layout của XML.
+
+00:04:13.850 --> 00:04:18.010
+Chúng ta có một relative layout
+với chiều cao và độ rộng là match_parent.
+
+00:04:18.010 --> 00:04:19.870
+Chúng ta có lyla_text_view.
+
+00:04:19.870 --> 00:04:22.267
+Nó được xếp vào góc
+dưới cùng bên trái của parent
+
+00:04:22.267 --> 00:04:23.750
+Đó là những gì ta thấy ở dưới.
+
+00:04:24.770 --> 00:04:26.314
+Và chúng ta có jennie_text_view.
+
+00:04:26.314 --> 00:04:29.010
+Nó được xếp vào góc dưới cùng
+bên phải của các parent.
+
+00:04:29.010 --> 00:04:29.720
+Nó ở đây.
+
+00:04:31.300 --> 00:04:32.876
+Chúng ta có ben_text_view.
+
+00:04:32.876 --> 00:04:35.900
+Nó được xếp vào
+biên trên cùng của parent.
+
+00:04:35.900 --> 00:04:38.290
+Nó cũng được canh giữa
+theo chiều ngang.
+
+00:04:38.290 --> 00:04:39.880
+Đây là các anchor view
+
+00:04:39.880 --> 00:04:42.460
+và chúng ta có thể xếp
+các view khác cạnh chúng.
+
+00:04:42.460 --> 00:04:45.720
+Chú ý là với mỗi view
+tôi đã thêm một ID.
+
+00:04:45.720 --> 00:04:48.040
+Đây là ID của TextView Ben.
+
+00:04:48.040 --> 00:04:50.970
+Chúng ta có thể xếp
+TextView Kunal bên trái Ben.
+
+00:04:50.970 --> 00:04:56.930
+Tôi xếp Kunal ở trên cùng của parent,
+và bên trái TextView Ben.
+
+00:04:56.930 --> 00:04:58.525
+Tôi dùng view ID của Ben ở đây.
+
+00:04:58.525 --> 00:05:02.025
+Sau đó chúng ta xếp
+TextView Omoju ở trên Jenny.
+
+00:05:02.025 --> 00:05:04.915
+Omoju được xếp vào
+biên phải của parent
+
+00:05:04.915 --> 00:05:06.435
+và ở trên TextView Jenny.
+
+00:05:07.505 --> 00:05:08.245
+Tuyệt vời.
+
+00:05:08.245 --> 00:05:11.465
+Còn nhiều người để xếp
+trong layout này.
+
+00:05:12.925 --> 00:05:15.625
+Trong ghi chú hướng dẫn
+chúng tôi đã cho bạn một liên kết
+
+00:05:15.625 --> 00:05:19.270
+tới XML Visualizer
+với vài đoạn code sẵn có.
+
+00:05:19.270 --> 00:05:20.910
+Hãy chỉnh sửa tệp XML
+
+00:05:20.910 --> 00:05:24.200
+để tạo ra một layout mong muốn.
+
+00:05:24.200 --> 00:05:28.200
+Một số view bị xếp sai,
+bạn sẽ cần phải sửa chúng.
+
+00:05:29.310 --> 00:05:32.480
+Tiện thể, chúng tôi vừa giới thiệu
+rất nhiều thuộc tính.
+
+00:05:32.480 --> 00:05:34.680
+Nhưng đừng ép bản thân
+học thuộc hết chúng.
+
+00:05:34.680 --> 00:05:36.446
+Bạn có thể tra lại bất cứ lúc nào.
+
+00:05:36.446 --> 00:05:40.460
+Bạn chỉ cần tìm kiếm
+một relative layout, thông số layout.
+
+00:05:40.460 --> 00:05:45.260
+Nếu bạn nhấn vào liên kết đầu tiên,
+bạn sẽ có tài liệu cho nó.
+
+00:05:45.260 --> 00:05:48.870
+Tất cả những thuộc tính XML này,
+bạn có thể áp dụng vào view con
+
+00:05:48.870 --> 00:05:53.050
+ở trong RelativeLayout để
+RelativeLayout biết cách sắp xếp.
+
+00:05:53.050 --> 00:05:55.015
+Đây là một số thuộc tính bạn đã biết.
+
+00:05:55.015 --> 00:06:00.080
+Layout_above, alignParentbottom,
+alignParentright và vân vân.
+
+00:06:00.080 --> 00:06:02.040
+Chú ý rằng,
+để phục vụ mục đích dạy học,
+
+00:06:02.040 --> 00:06:05.510
+XML Visualizer có thể không hỗ trợ
+hết mọi thuộc tính.
+
+00:06:05.510 --> 00:06:08.630
+Nhưng khi bạn đang phát triển
+một ứng dụng trong Android Studio
+
+00:06:08.630 --> 00:06:10.050
+bạn sẽ dùng hết được chúng.
+

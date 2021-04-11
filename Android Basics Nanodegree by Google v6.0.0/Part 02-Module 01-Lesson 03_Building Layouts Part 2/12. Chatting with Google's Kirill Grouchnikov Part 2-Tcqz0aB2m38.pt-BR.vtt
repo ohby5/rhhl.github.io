@@ -1,0 +1,390 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.884 --> 00:00:04.763
+Você tem um exemplo de como
+usar um layout linear em seu app?
+
+00:00:04.763 --> 00:00:10.611
+&gt;&gt; Bem, até aqui, este
+conjunto de três cartas é um
+
+00:00:10.611 --> 00:00:16.463
+layout linear horizontal onde nós apenas
+adicionamos exibições de filhos como três cartas.
+
+00:00:16.463 --> 00:00:23.810
+E então definimos a largura do layout
+de zero dp e peso do layout para um.
+
+00:00:23.810 --> 00:00:29.569
+E essencialmente, ele instrui o layout
+linear para levar no entanto muito
+
+00:00:29.569 --> 00:00:35.523
+peso tem em tempo de execução e distribuí-lo
+uniformemente com base em outro parente
+
+00:00:35.523 --> 00:00:42.100
+pesos são distribuídos uniformemente entre
+todas as exibições de criança nesse grupo.
+
+00:00:42.100 --> 00:00:43.160
+Então esse é um exemplo.
+
+00:00:43.160 --> 00:00:47.420
+E outro exemplo seria por aqui,
+que você tem jogos novos e atualizados.
+
+00:00:47.420 --> 00:00:50.110
+E o botão mais que é um cabeçalho de cluster,
+
+00:00:50.110 --> 00:00:52.910
+é também um simples layout linear horizontal.
+
+00:00:52.910 --> 00:00:54.980
+Então, quando as coisas são simples,
+
+00:00:54.980 --> 00:00:57.740
+Você não necessariamente quer começar
+a escrever layouts personalizados.
+
+00:00:57.740 --> 00:01:01.310
+Só não use layouts relativos
+em todos os lugares
+
+00:01:01.310 --> 00:01:05.980
+Porque é mais versátil do que
+o layout linear, por exemplo.
+
+00:01:05.980 --> 00:01:08.700
+Isso é apenas um exagero
+para as coisas mais simples.
+
+00:01:09.800 --> 00:01:11.748
+&gt;&gt; Assim, quando um designer
+te derum mock,
+
+00:01:11.748 --> 00:01:15.660
+Como faço para você começar
+a construir esse app?
+
+00:01:15.660 --> 00:01:19.660
+&gt;&gt; Espero que nesse ponto, como falamos,
+temos não apenas um zombar.
+
+00:01:19.660 --> 00:01:23.640
+Mas em vez disso, pelo menos
+dois ou três que mostram como
+
+00:01:25.200 --> 00:01:29.880
+o projetar escalas entre
+telas pequenas e grandes.
+
+00:01:29.880 --> 00:01:33.560
+E então quero identificar
+blocos de construção.
+
+00:01:33.560 --> 00:01:37.680
+Então, se falamos em algum momento como
+um cartão que aparece em um monte de lugares
+
+00:01:37.680 --> 00:01:41.000
+no app, eu não quero
+necessariamente começar
+
+00:01:41.000 --> 00:01:45.740
+Implementando um monte de
+variantes do mesmo cartão.
+
+00:01:45.740 --> 00:01:49.240
+Baseado se precisa mostrar uma
+imagem pequena ou uma grande ou
+
+00:01:49.240 --> 00:01:52.930
+Talvez mostre um título de uma linha,
+em vez de dois títulos de linha.
+
+00:01:52.930 --> 00:01:57.258
+Então estou tentando identificar
+esses blocos e implementá-los como
+
+00:01:57.258 --> 00:02:02.580
+classes autônomas, layouts de stand-alone e
+em seguida, iniciar a construir em cima daqueles.
+
+00:02:02.580 --> 00:02:07.484
+Então você inicia a partir da exibição de texto,
+visualizador de imagens, girador,
+
+00:02:07.484 --> 00:02:11.055
+e outros enfeites para construir blocos menores.
+
+00:02:11.055 --> 00:02:16.771
+E então espero que seja capaz de continuar
+a tomar esses pequenos blocos e
+
+00:02:16.771 --> 00:02:22.450
+Construir blocos maiores enquanto reutilizando
+o mesmo conjunto básico de blocos.
+
+00:02:22.450 --> 00:02:26.390
+E o que é agradável sobre isso é que mesmo
+que você gaste um pouco mais de tempo
+
+00:02:26.390 --> 00:02:32.440
+na frente, fica mais fácil, especialmente
+se o projeto é consistente
+
+00:02:32.440 --> 00:02:37.280
+em como ele se aplica a sua linguagem
+para evoluir o app e adicionar novos recursos.
+
+00:02:37.280 --> 00:02:41.472
+Se o projeto é consistente e, em seguida,
+você continua vendo os mesmos blocos a serem
+
+00:02:41.472 --> 00:02:44.461
+utilizado em diferentes configurações
+de novo e de novo.
+
+00:02:44.461 --> 00:02:49.789
+E isso é onde o seu investimento
+inicial começa pagando onde
+
+00:02:49.789 --> 00:02:55.430
+a implementação de uma nova tela
+não se trata como uma coisa nova.
+
+00:02:55.430 --> 00:03:01.190
+Mas em vez disso, talvez 50, 60, 70, no entanto,
+muito por cento já está lá, talvez
+
+00:03:01.190 --> 00:03:05.450
+precise de um pouco de ajustes com cor,
+então talvez a tipografia ou outros enfeites.
+
+00:03:05.450 --> 00:03:10.272
+Mas espero que, se o projeto é consistente,
+então a implementação é
+
+00:03:10.272 --> 00:03:14.098
+também mais fácil de seguir em frente
+se você já construíu para isso.
+
+00:03:14.098 --> 00:03:19.903
+E também se torna mais fácil de aplicar
+o redesenho, só no nível visual.
+
+00:03:19.903 --> 00:03:24.099
+Se você quer ajustar as cores,
+se você quer ajustar a tipografia,
+
+00:03:24.099 --> 00:03:28.941
+Se você deseja adicionar, talvez, como fizemos
+no Lollipop, onde você tem esta ondinha
+
+00:03:28.941 --> 00:03:31.880
+como efeito quando você pressiona algo.
+
+00:03:31.880 --> 00:03:36.870
+Se você tem algumas peças que você mantém
+em reutilização, seus estilos, seus layouts,
+
+00:03:36.870 --> 00:03:42.250
+Então você faz essa atualização
+visual em um número
+
+00:03:42.250 --> 00:03:48.030
+de lugares a menos e então espero que eles
+sejam aplicado consistentemente por todo o lado.
+
+00:03:48.030 --> 00:03:51.550
+Então quero colocar o foco no início
+sobre como obter os dados diretamente,
+
+00:03:51.550 --> 00:03:57.918
+especialmente para um app que está
+recebendo seus dados de fontes externas.
+
+00:03:57.918 --> 00:04:02.512
+E fazer mais perto dos pixels, redefinir os pixels,
+uma vez que você tem
+
+00:04:02.512 --> 00:04:07.532
+os dados para fazer a grade, para
+fazer a tipografia, cores, animações,
+
+00:04:07.532 --> 00:04:12.575
+transições, outros enfeites e
+isso gasta muito tempo.
+
+00:04:12.575 --> 00:04:16.338
+E acho que seria o mesmo se tivesse algo
+parecido com um cliente do Twitter.
+
+00:04:16.338 --> 00:04:21.991
+Você poderia começar por pixel-aperfeiçoando
+seus layouts com alguns dados falsos.
+
+00:04:21.991 --> 00:04:27.122
+E então você descobre que você não
+sabe nada sobre buscar os dados do
+
+00:04:27.122 --> 00:04:32.920
+Twitter e isso te levará três meses
+só para buscar os dados.
+
+00:04:32.920 --> 00:04:37.240
+Ou, apenas um exemplo, eu prefiro
+começar a partir dos dados.
+
+00:04:37.240 --> 00:04:41.880
+Eu penso nisso como um iceberg onde
+você vê os pixels bonitos como talvez 5%,
+
+00:04:41.880 --> 00:04:47.640
+10% acima da superfície e depois
+disso há muito trabalho
+
+00:04:47.640 --> 00:04:50.800
+abaixo da superfície, se preferir,
+para dar suporte a isso.
+
+00:04:50.800 --> 00:04:53.820
+&gt;&gt; Mencionou que a ponta do iceberg
+é o que as pessoas veem.
+
+00:04:53.820 --> 00:04:57.210
+Então o que exatamente está
+acontecendo abaixo da superfície?
+
+00:04:57.210 --> 00:05:00.620
+Como você vê o app do Google Play?
+
+00:05:00.620 --> 00:05:05.940
+&gt;&gt; Então o que acontece abaixo da superfície
+é antes de tudo obter os dados de
+
+00:05:05.940 --> 00:05:11.643
+rede, então você pode autenticar para estar
+em um servidor e obter os dados.
+
+00:05:11.643 --> 00:05:13.969
+E talvez para cache localmente
+
+00:05:13.969 --> 00:05:18.152
+que da próxima vez que você entra no
+fluxo da página de detalhes e
+
+00:05:18.152 --> 00:05:22.820
+volta para o fluxo, devemos estar usando dados
+armazenados em cache, cache de imagens.
+
+00:05:22.820 --> 00:05:26.616
+Para não colocarmos muita pressão na bateria.
+
+00:05:26.616 --> 00:05:30.284
+E também o app já mostra as informações que tem.
+
+00:05:30.284 --> 00:05:33.830
+Então você tem o apoio de várias contas.
+
+00:05:33.830 --> 00:05:37.660
+Então você tem que persistir talvez alguns
+pedaços aqui e ali, no banco de dados.
+
+00:05:38.670 --> 00:05:44.380
+Então nós temos os fluxos de
+faturamento, que é, a maioria dos
+
+00:05:44.380 --> 00:05:48.840
+trabalhos que são feitos no servidor para integrar
+com diferentes métodos de pagamento.
+
+00:05:48.840 --> 00:05:51.200
+E depois há o trabalho do cliente também.
+
+00:05:51.200 --> 00:05:57.050
+E outra grande parte da Play Store
+é baixar e instalar
+
+00:05:57.050 --> 00:05:59.660
+apps e jogos.
+
+00:05:59.660 --> 00:06:04.530
+Estamos, do lado da Play Store,
+estamos no comando de downloads,
+
+00:06:04.530 --> 00:06:06.840
+instalações e atualização de apps.
+
+00:06:06.840 --> 00:06:11.556
+E então é mais uma grande parte
+de praticamente tudo
+
+00:06:11.556 --> 00:06:16.052
+Estes têm seus bits de superfície,
+que são os pixels na tela.
+
+00:06:16.052 --> 00:06:21.425
+E então há um monte de trabalho
+abaixo da superfície para trazer
+
+00:06:21.425 --> 00:06:27.668
+Essa informação para a conta
+certa e colocar isso na tela.
+
+00:06:27.668 --> 00:06:32.610
+&gt;&gt; É claro que você trabalhou em muitas
+diferentes iterações do app do Google Play.
+
+00:06:32.610 --> 00:06:37.385
+Como você se atualiza com as
+últimas notícias no Android?
+
+00:06:37.385 --> 00:06:42.657
+&gt;&gt; Há muita informação no Google+
+de cada desenvolvedor ativo
+
+00:06:42.657 --> 00:06:47.295
+que colocou um monte de tutoriais.
+
+00:06:47.295 --> 00:06:52.322
+E, só
+
+00:06:52.322 --> 00:06:57.575
+de blogs diferentes, e não necessariamente eu
+
+00:06:57.575 --> 00:07:02.732
+leio profundamente uma certa série sobre
+vista reciclador ou uma página de exibição ou
+
+00:07:02.732 --> 00:07:07.430
+que não ou como configurar a barra de
+ferramentas e a barra de ação.
+
+00:07:07.430 --> 00:07:09.200
+Eu meio que tento colocá-lo como
+
+00:07:10.270 --> 00:07:12.810
+que eu sei que há muita informação lá.
+
+00:07:12.810 --> 00:07:17.340
+E então, quando eu preciso desse
+nível profundo de informações,
+
+00:07:17.340 --> 00:07:20.130
+Então vou a esses recursos.
+
+00:07:20.130 --> 00:07:21.960
+&gt;&gt; Bem, obrigado por seu tempo, Cyril.
+
+00:07:21.960 --> 00:07:25.110
+Acho que nossos alunos realmente apreciarão
+em ouvir sua perspectiva em
+
+00:07:25.110 --> 00:07:27.010
+Como é ser um engenheiro de app Android.
+

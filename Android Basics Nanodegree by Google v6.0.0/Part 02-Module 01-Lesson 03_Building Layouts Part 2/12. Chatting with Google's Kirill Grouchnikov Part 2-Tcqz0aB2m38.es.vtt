@@ -1,0 +1,388 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:01.884 --> 00:00:06.147
+¿Nos darías un ejemplo
+de un layout líneal en tu aplicación?
+
+00:00:06.346 --> 00:00:10.411
+Incluso aquí, este clúster
+de tres elementos es un layout...
+
+00:00:10.611 --> 00:00:16.463
+lineal horizontal, donde se agrega
+una vista secundaria de tres elementos.
+
+00:00:16.663 --> 00:00:23.610
+Establecemos el ancho del layout
+en cero dp y su peso en uno dp.
+
+00:00:23.810 --> 00:00:29.569
+Y ordena al layout lineal a tomar
+el peso disponible en tiempo de ejecución
+
+00:00:29.769 --> 00:00:35.323
+y distribuirlo equitativamente,
+basándose en pesos relativos
+
+00:00:35.523 --> 00:00:42.100
+que se distribuyen equitativamente
+entre los ChildViews del grupo.
+
+00:00:42.300 --> 00:00:46.535
+Ese es un ejemplo. Otro sería este
+con juegos nuevos y actualizados.
+
+00:00:46.735 --> 00:00:49.722
+Y el botón "más",
+que es un clúster cabecera,
+
+00:00:49.922 --> 00:00:52.910
+representa un layout
+lineal horizontal simple.
+
+00:00:53.110 --> 00:00:54.780
+Cuando las cosas son simples,
+
+00:00:54.980 --> 00:00:57.740
+no es necesario
+escribir layouts personalizados.
+
+00:00:57.940 --> 00:01:01.110
+No uses layouts relativos en todos lados,
+
+00:01:01.310 --> 00:01:05.980
+sólo porque son más versátiles
+que los lineales, por ejemplo.
+
+00:01:06.180 --> 00:01:08.700
+Es una exageración para lo simple.
+
+00:01:09.800 --> 00:01:12.630
+Cuando un diseñador te da un boceto,
+
+00:01:12.830 --> 00:01:15.460
+¿cómo empiezas a crear esa aplicación?
+
+00:01:15.660 --> 00:01:19.660
+Para ese momento,
+esperamos tener más de un boceto.
+
+00:01:19.860 --> 00:01:23.640
+Al menos, dos o tres que muestren...
+
+00:01:25.200 --> 00:01:29.880
+cómo el diseño escala
+entre pantallas pequeñas y grandes.
+
+00:01:30.080 --> 00:01:33.360
+Luego, quiero identificar los bloques.
+
+00:01:33.560 --> 00:01:37.680
+Si hablamos de un elemento
+que aparece en muchas partes...
+
+00:01:37.880 --> 00:01:40.800
+de la aplicación,
+no quisiera empezar...
+
+00:01:41.000 --> 00:01:45.540
+a implementar muchas variantes
+del mismo elemento.
+
+00:01:45.740 --> 00:01:49.240
+Lo cual se basa en si necesita
+mostrar una imagen pequeña, grande
+
+00:01:49.440 --> 00:01:52.930
+o quizá un título de línea,
+en lugar de dos títulos de linea.
+
+00:01:53.130 --> 00:01:57.058
+Intento identificar estos bloques
+e implementarlos
+
+00:01:57.258 --> 00:02:02.580
+como un tipo o diseño independiente
+y comenzar a construir sobre ellos.
+
+00:02:02.780 --> 00:02:06.817
+Comienzas por TextViews,
+ImageView, spinner,
+
+00:02:07.017 --> 00:02:10.854
+y demás para construir
+bloques más pequeños.
+
+00:02:11.055 --> 00:02:16.571
+Luego, esperas poder continuar tomando
+esos bloques pequeños.
+
+00:02:16.771 --> 00:02:22.450
+y construir bloques más grandes,
+mientras reutilizas los mismos bloques.
+
+00:02:22.650 --> 00:02:26.731
+Y lo que me gusta es que,
+aunque quizá te tome más tiempo,
+
+00:02:26.931 --> 00:02:32.240
+resulta más fácil
+cuando el diseño es consistente
+
+00:02:32.440 --> 00:02:37.280
+en el empleo del idioma para desarrollar
+la aplicación y nuevas características.
+
+00:02:37.480 --> 00:02:41.472
+Si el diseño es consistente,
+continuarás viendo los mismos bloques
+
+00:02:41.672 --> 00:02:44.261
+utilizados muchas veces
+en diferentes configuraciones.
+
+00:02:44.461 --> 00:02:49.589
+Allí es cuando tu inversión inicial
+comienza a dar frutos
+
+00:02:49.789 --> 00:02:55.430
+y no consideras la implementación
+de una nueva pantalla como algo nuevo,
+
+00:02:55.630 --> 00:03:00.990
+sino como un 50, 60 o 70 por ciento
+que ya tenga.
+
+00:03:01.190 --> 00:03:05.450
+Quizá necesitas modificar el color,
+la tipografía, etc.
+
+00:03:05.650 --> 00:03:10.072
+Si el diseño es consistente,
+la implementación
+
+00:03:10.272 --> 00:03:14.987
+será también más fácil de ejecutar
+si ya lo preparaste.
+
+00:03:15.187 --> 00:03:19.543
+También, será más fácil
+rediseñar en el plano visual.
+
+00:03:19.743 --> 00:03:23.899
+Si quieres modificar los colores
+o la tipografía,
+
+00:03:24.099 --> 00:03:28.941
+Si quieres agregar un efecto de ondas
+como hicimos en Lollipop,
+
+00:03:29.141 --> 00:03:31.680
+que se activa al presionar algo.
+
+00:03:31.880 --> 00:03:36.870
+Si tienes algunas piezas que reciclas,
+tus estilos, layouts,
+
+00:03:37.070 --> 00:03:42.050
+entonces realizas
+esa actualización visual
+
+00:03:42.250 --> 00:03:48.030
+en pocos lugares y se aplicará
+de forma consistente en todos lados.
+
+00:03:48.230 --> 00:03:51.350
+Yo prefiero priorizar
+la obtención correcta de datos,
+
+00:03:51.550 --> 00:03:57.918
+sobre todo para una aplicación
+que recibe datos de fuentes externas.
+
+00:03:58.118 --> 00:04:02.312
+Luego, sí puedes ocuparte
+de los pixeles y perfeccionarlos
+
+00:04:02.512 --> 00:04:07.532
+al tener los datos para hacer la red,
+tipografías, colores, animaciones,
+
+00:04:07.732 --> 00:04:12.825
+transiciones, etc,
+cualquiera sea el tiempo disponible.
+
+00:04:13.025 --> 00:04:16.137
+Creo que sería lo mismo
+si tuvieras un cliente de Twitter.
+
+00:04:16.338 --> 00:04:21.991
+Podrías empezar perfeccionando los pixeles
+de tus layouts con datos falsos...
+
+00:04:22.191 --> 00:04:27.122
+y luego descubrir que no sabes nada
+de búsqueda de datos de Twitter,
+
+00:04:27.322 --> 00:04:32.181
+y te pasas los próximos tres meses
+recolectando datos.
+
+00:04:32.381 --> 00:04:37.030
+Es sólo un ejemplo,
+pero prefiero comenzar por los datos.
+
+00:04:37.230 --> 00:04:41.680
+Yo lo imagino como un iceberg,
+donde ves pixeles lindos,
+
+00:04:41.880 --> 00:04:47.640
+un cinco o diez por ciento
+sobre la superficie y hay mucho trabajo...
+
+00:04:47.840 --> 00:04:50.600
+por debajo de la superficie
+que soporta lo antedicho.
+
+00:04:50.800 --> 00:04:53.820
+Mencionaste la punta del iceberg,
+visible para las personas.
+
+00:04:54.020 --> 00:04:57.210
+¿Qué pasa exactamente
+debajo de la superficie?
+
+00:04:57.410 --> 00:05:00.420
+¿Cómo luce la aplicación Google Play?
+
+00:05:00.620 --> 00:05:06.031
+Lo primero que pasa
+es la obtención de datos desde la red,
+
+00:05:06.231 --> 00:05:11.643
+la autentificación
+para entrar al servidor y obtener datos.
+
+00:05:11.843 --> 00:05:13.769
+Y luego, entrar por caché,
+
+00:05:13.969 --> 00:05:17.952
+así la próxima vez
+que entres desde el streaming
+
+00:05:18.152 --> 00:05:22.820
+a los detalles de página y viceversa,
+usarás datos e imágenes del caché.
+
+00:05:23.020 --> 00:05:26.416
+El fin será no ejercer
+tanta presión sobre la batería.
+
+00:05:26.616 --> 00:05:30.284
+Además, la aplicación ya muestra
+la información que dispone.
+
+00:05:30.484 --> 00:05:33.630
+Tienes el soporte de múltiples cuentas.
+
+00:05:33.830 --> 00:05:37.660
+Quizá aún tengas algunos bits
+en la base de datos.
+
+00:05:38.670 --> 00:05:44.380
+Tenemos el flujo de facturación,
+que es la mayor parte del trabajo
+
+00:05:44.580 --> 00:05:48.840
+realizado en el servidor
+para integrar con los métodos de pago.
+
+00:05:49.040 --> 00:05:51.000
+Y también está el trabajo del cliente.
+
+00:05:51.200 --> 00:05:57.050
+Otra gran parte de Play Store
+es la descarga
+
+00:05:57.250 --> 00:05:59.460
+e instalación
+de aplicaciones y juegos.
+
+00:05:59.660 --> 00:06:04.530
+Estamos detrás de Play Store,
+nos encargamos de descargar,
+
+00:06:04.730 --> 00:06:06.640
+instalar y actualizar aplicaciones.
+
+00:06:06.840 --> 00:06:11.356
+Es otra gran parte...
+Casi todos estos
+
+00:06:11.556 --> 00:06:16.390
+tienen sus bits de superficie,
+que son los pixeles de la pantalla.
+
+00:06:16.590 --> 00:06:22.208
+Se realiza mucho trabajo debajo
+de la superficie para enviar información
+
+00:06:22.408 --> 00:06:27.319
+para la cuenta adecuada
+y mostrarla en pantalla.
+
+00:06:27.519 --> 00:06:32.352
+Sabemos que has trabajado
+en muchas iteraciones de Google Play.
+
+00:06:32.552 --> 00:06:35.674
+¿Cómo te mantienes actualizado
+con las últimas noticias de Android?
+
+00:06:37.585 --> 00:06:42.657
+Hay mucha información en Google+
+de desarrolladores
+
+00:06:42.857 --> 00:06:47.295
+muy activos
+que realizan muchos tutoriales.
+
+00:06:47.495 --> 00:06:52.122
+Y...
+
+00:06:52.322 --> 00:06:57.375
+de diversos blogs,
+y a veces, no necesariamente leo...
+
+00:06:57.575 --> 00:07:04.519
+tan detenidamente algún artículo
+sobre RecyclerView, ViewPager...
+
+00:07:04.719 --> 00:07:07.721
+o cómo configurar la action bar
+y la barra de herramientas.
+
+00:07:07.921 --> 00:07:12.610
+Lo que intento decir
+es que sé que hay mucha información;
+
+00:07:12.810 --> 00:07:17.340
+y cuando necesite
+ese grado de información,
+
+00:07:17.540 --> 00:07:19.930
+iré a esas fuentes.
+
+00:07:20.130 --> 00:07:22.065
+Muchas gracias por tu tiempo, Cyril.
+
+00:07:22.265 --> 00:07:25.110
+Creo que nuestros alumnos
+disfrutarán de tu perspectiva
+
+00:07:25.310 --> 00:07:27.182
+como ingeniero
+de aplicaciones de Android.
+

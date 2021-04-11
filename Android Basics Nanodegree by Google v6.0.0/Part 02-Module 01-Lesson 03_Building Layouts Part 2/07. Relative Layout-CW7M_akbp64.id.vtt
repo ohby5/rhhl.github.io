@@ -1,0 +1,387 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.240 --> 00:00:02.130
+Sejauh ini kita belajar, LinearLayout
+
+00:00:02.130 --> 00:00:05.560
+bisa berorientasi
+vertikal atau horizontal.
+
+00:00:06.010 --> 00:00:09.200
+Kita juga belajar, tampilan individual
+bisa memiliki nilai bobot
+
+00:00:09.200 --> 00:00:11.350
+untuk mengisi ruang tambahan
+pada induknya.
+
+00:00:12.530 --> 00:00:14.150
+Sekarang kita akan mempelajari
+
+00:00:14.150 --> 00:00:16.140
+ViewGroup baru yaitu RelativeLayout.
+
+00:00:16.140 --> 00:00:19.100
+Ini akan membantu Anda membuat
+&lt;i&gt;layout&lt;/i&gt; yang lebih fleksibel.
+
+00:00:19.740 --> 00:00:22.110
+Ingatlah "Ray" si RelativeLayout.
+
+00:00:22.110 --> 00:00:25.280
+Ia adalah ayahnya, dan ia diwakili
+oleh ViewGroup ini di sini.
+
+00:00:25.280 --> 00:00:28.780
+Ia membantu anak-anak tampilannya,
+ditempatkan dalam ruang ini.
+
+00:00:29.160 --> 00:00:31.890
+Dengan RelativeLayout,
+Anda bisa letakkan anak-anaknya
+
+00:00:31.890 --> 00:00:35.190
+relatif terhadap induknya,
+seperti di atas atau di bawah induknya.
+
+00:00:35.690 --> 00:00:39.590
+Opsi lain yaitu meletakkan anak tampilan
+relatif terhadap satu sama lain.
+
+00:00:39.590 --> 00:00:40.760
+Seperti ini.
+
+00:00:40.760 --> 00:00:43.820
+Ayo perhatikan kasus pertama
+di mana tampilan bisa diletakkan
+
+00:00:43.820 --> 00:00:45.350
+relatif terhadap induknya.
+
+00:00:45.350 --> 00:00:49.050
+Contohnya, induk relatif ini
+diatur untuk memiliki
+
+00:00:49.050 --> 00:00:53.290
+lebar dan tinggi yang &lt;i&gt;match_parent&lt;/i&gt;,
+sehingga ia sebesar perangkatnya.
+
+00:00:53.290 --> 00:00:55.490
+Anak di dalam RelativeLayout,
+
+00:00:55.490 --> 00:01:00.720
+bisa diletakkan relatif di tepi kiri,
+atas, kanan, atau bawah induknya.
+
+00:01:00.720 --> 00:01:02.210
+Ini adalah kode untuk itu.
+
+00:01:02.210 --> 00:01:04.249
+Di atas anak tampilan berjumlah x elemen.
+
+00:01:04.249 --> 00:01:07.900
+Contohnya, &lt;i&gt;emoji&lt;/i&gt; atau &lt;i&gt;TextView&lt;/i&gt;,
+Anda akan menambahkan atribut ini.
+
+00:01:08.530 --> 00:01:14.290
+Nama atributnya mengikuti format ini
+android:layout_alignParentTop.
+
+00:01:14.290 --> 00:01:17.510
+Atribut ini menentukan apakah
+anak tampilan sejajar
+
+00:01:17.510 --> 00:01:19.330
+dengan tepi atas induk atau tidak.
+
+00:01:19.330 --> 00:01:22.090
+Jadi, nilai yang mungkin
+adalah benar atau salah.
+
+00:01:22.580 --> 00:01:25.840
+Jika benar (&lt;i&gt;true&lt;/i&gt;), maka tampilan
+akan sejajar dengan tepi atas induk.
+
+00:01:25.840 --> 00:01:28.240
+Jika salah (&lt;i&gt;false&lt;/i&gt;), maka takkan sejajar.
+
+00:01:28.240 --> 00:01:30.790
+Ada atribut-atribut untuk semua tepi.
+
+00:01:30.790 --> 00:01:34.710
+Contohnya, alignParentBottom, untuk
+menyejajarkan dengan tepi bawah induk.
+
+00:01:34.710 --> 00:01:37.900
+Ada alignParentLeft untuk
+menyejajarkan dengan tepi kiri induk.
+
+00:01:37.900 --> 00:01:41.760
+Lalu alignParentRight untuk menyejajarkan
+dengan tepi kanan induk.
+
+00:01:41.760 --> 00:01:45.400
+Anda bisa kombinasikan dan gunakan
+berbagai atribut ini sekaligus.
+
+00:01:45.880 --> 00:01:48.090
+Ambil ImageView ini sebagai contoh.
+
+00:01:49.130 --> 00:01:52.280
+Kita akan mengatur atribut
+alignParentTop menjadi &lt;i&gt;true&lt;/i&gt;,
+
+00:01:52.280 --> 00:01:54.870
+karena ia sejajar dengan tepi atas induk.
+
+00:01:54.870 --> 00:01:57.420
+Ia juga sejajar dengan
+tepi kiri dan kanan induk.
+
+00:01:57.420 --> 00:02:00.610
+Maka kita atur
+kiri dan kanan menjadi &lt;i&gt;true&lt;/i&gt;.
+
+00:02:01.240 --> 00:02:05.186
+Ia tidak sejajar dengan tepi bawah induk,
+maka kita buat &lt;i&gt;false&lt;/i&gt;.
+
+00:02:06.746 --> 00:02:08.320
+Jadi, TextView di bawah ini,
+
+00:02:08.320 --> 00:02:12.240
+ia sejajar dengan tepi bawah,
+kanan, dan kiri induk.
+
+00:02:12.240 --> 00:02:15.740
+Jadi, alignParentBottom menjadi &lt;i&gt;true&lt;/i&gt;,
+alignParentLeft menjadi &lt;i&gt;true&lt;/i&gt;,
+
+00:02:15.740 --> 00:02:20.569
+alignParentRight menjadi &lt;i&gt;true&lt;/i&gt;,
+namun alignParentTop menjadi &lt;i&gt;false&lt;/i&gt;.
+
+00:02:21.299 --> 00:02:25.850
+Selain penempatan anak
+di bagian atas atau bawah layar,
+
+00:02:25.850 --> 00:02:27.960
+Anda juga bisa meletakkan
+di sudut tertentu.
+
+00:02:27.960 --> 00:02:31.850
+Bila kita ingin meletakkan TextView
+"birthday" di sudut kiri atas,
+
+00:02:31.850 --> 00:02:36.570
+kita katakan alignParentTop menjadi &lt;i&gt;true&lt;/i&gt;,
+dan alignParentLeft menjadi &lt;i&gt;true&lt;/i&gt;.
+
+00:02:37.410 --> 00:02:39.560
+Untuk meletakkan tampilan
+di sudut kanan atas,
+
+00:02:39.560 --> 00:02:42.970
+kita ingin menyejajarkannya
+dengan tepi atas dan kanan induk.
+
+00:02:42.970 --> 00:02:46.700
+Maka alignParentTop dan
+alignParentRight sama dengan &lt;i&gt;true&lt;/i&gt;.
+
+00:02:47.600 --> 00:02:51.510
+Untuk pojok kiri bawah, kita sejajarkan
+dengan tepi kiri dan bawah induk.
+
+00:02:52.420 --> 00:02:56.270
+Maka kita buat alignParentBottom dan
+alignParentLeft menjadi &lt;i&gt;true&lt;/i&gt;.
+
+00:02:56.800 --> 00:03:00.250
+Nilai-nilai ini &lt;i&gt;false&lt;/i&gt;, dan mereka
+juga &lt;i&gt;false&lt;/i&gt; dari sananya,
+
+00:03:00.250 --> 00:03:03.120
+sehingga Anda tidak perlu menambahkan
+mereka dalam kode &lt;i&gt;XML&lt;/i&gt;.
+
+00:03:03.120 --> 00:03:07.040
+Lalu, untuk sudut paling akhir, ia sejajar
+dengan tepi kanan dan bawah induk.
+
+00:03:07.040 --> 00:03:10.290
+Jadi alignPrentBottom dan
+alignParentRight sama dengan &lt;i&gt;true&lt;/i&gt;.
+
+00:03:10.910 --> 00:03:12.170
+Yang lainnya &lt;i&gt;false&lt;/i&gt;.
+
+00:03:12.170 --> 00:03:13.690
+Jadi kita bisa hapus dari kode.
+
+00:03:14.000 --> 00:03:16.920
+Percaya atau tidak, ada lebih
+banyak atribut yang bisa diatur.
+
+00:03:16.920 --> 00:03:19.860
+Anda juga bisa meletakkannya
+di tengah secara horizontal,
+
+00:03:19.860 --> 00:03:22.550
+jadi, Anda katakan
+android:layout_centerHorizontal
+
+00:03:22.550 --> 00:03:23.750
+sama dengan &lt;i&gt;true&lt;/i&gt;.
+
+00:03:23.750 --> 00:03:27.450
+Anda juga bisa menambahkannya ke atribut
+yang sudah kita pelajari sebelumnya.
+
+00:03:27.450 --> 00:03:30.560
+Bila ini garis ke bawah dan terletak
+di tengah secara horizontal,
+
+00:03:30.560 --> 00:03:32.040
+maka akan tampak seperti ini.
+
+00:03:32.040 --> 00:03:34.785
+Terakhir akan saya tunjukkan
+adalah layout_centerVertical.
+
+00:03:34.785 --> 00:03:39.205
+Jika ini dijadikan &lt;i&gt;true&lt;/i&gt;, maka letaknya
+di tengah secara horizontal dalam induk.
+
+00:03:39.205 --> 00:03:42.495
+Alasan mengapa TextView
+disejajarkan dengan tepi kiri induk,
+
+00:03:42.495 --> 00:03:45.860
+bahkan jika kita tidak mengatur nilai ini,
+yaitu karena semua tampilan
+
+00:03:45.860 --> 00:03:49.300
+yang ditambahkan relatif terhadap &lt;i&gt;layout&lt;/i&gt;
+akan ditempatkan otomatis
+
+00:03:49.300 --> 00:03:51.670
+di sudut kiri atas grup tampilan.
+
+00:03:51.670 --> 00:03:54.590
+Semua atribut ini disebut
+parameter &lt;i&gt;layout&lt;/i&gt; ViewGroup.
+
+00:03:55.190 --> 00:03:57.738
+Meski mereka dikatakan
+pada elemen anak &lt;i&gt;XML&lt;/i&gt;,
+
+00:03:57.738 --> 00:04:01.930
+mereka digunakan oleh grup induk
+untuk mengetahui letak anak-anaknya.
+
+00:04:02.410 --> 00:04:04.960
+Maka, mereka akan mulai
+dengan layout_ (garis bawah).
+
+00:04:04.960 --> 00:04:08.060
+Ini juga mengikuti pola dari
+layout_width, dan
+
+00:04:08.060 --> 00:04:10.800
+layout_height, yang sudah pernah
+Anda dengar sebelumnya.
+
+00:04:10.800 --> 00:04:13.819
+Dua atribut itu juga termasuk
+perimeter &lt;i&gt;layout&lt;/i&gt; ViewGroup,
+
+00:04:13.819 --> 00:04:16.090
+karena digunakan oleh ViewGroup induk,
+
+00:04:16.090 --> 00:04:18.730
+untuk mengatur letak dan ukuran anaknya.
+
+00:04:18.730 --> 00:04:21.790
+Dan ini adalah &lt;i&gt;XML&lt;/i&gt; untuk
+RelativeLayout dan anak-anaknya.
+
+00:04:21.790 --> 00:04:24.470
+Anda bisa ikuti tautan di bawah ini.
+
+00:04:24.470 --> 00:04:28.520
+Kami punya &lt;i&gt;tag&lt;/i&gt; RelativeLayout pembuka,
+dan &lt;i&gt;tag&lt;/i&gt; penutup di bagian bawah
+
+00:04:28.520 --> 00:04:30.660
+dan semua anak berada di dalamnya.
+
+00:04:30.660 --> 00:04:33.710
+Lebar dan tinggi RelativeLayout
+diatur menjadi match_parent.
+
+00:04:34.170 --> 00:04:36.600
+Karena ini adalah &lt;i&gt;layout&lt;/i&gt;
+keseluruhan aplikasi kita,
+
+00:04:36.600 --> 00:04:38.750
+maka ini akan memenuhi layar.
+
+00:04:39.190 --> 00:04:42.010
+Ada tiga anak teks di
+dalam RelativeLayout.
+
+00:04:42.010 --> 00:04:44.750
+Pertama, satu TextView
+yang bertuliskan "Happy".
+
+00:04:45.220 --> 00:04:48.890
+Lebar dan tinggi adalah wrap_content,
+dan kita punya atribut tambahan ini
+
+00:04:48.890 --> 00:04:53.340
+untuk membantu RelativeLayout
+mengetahui letak anak TextView.
+
+00:04:53.340 --> 00:04:58.060
+Kita katakan untuk menyejajarkannya
+dengan tepi kanan dan atas induk.
+
+00:04:58.060 --> 00:05:02.020
+Sehingga teks "happy'' terletak
+di sudut kanan atas layar.
+
+00:05:02.020 --> 00:05:05.510
+Untuk TextView "birthday", lebar,
+dan tingginya juga wrap_content.
+
+00:05:05.510 --> 00:05:08.940
+Lalu, kita ingin menyejajarkannya
+dengan tepi bawah dan kiri induk.
+
+00:05:08.940 --> 00:05:12.640
+Jadi, tepi bawah dan kiri
+membawanya ke sudut di bawah ini.
+
+00:05:12.640 --> 00:05:14.970
+TextView terakhir ini
+yang berkata, "To You",
+
+00:05:14.970 --> 00:05:19.588
+tak punya atribut spesifik yang menetukan
+letak relatifnya terhadap induk.
+
+00:05:19.588 --> 00:05:22.228
+Kita hanya tahu lebar dan
+tingginya harus wrap_content
+
+00:05:22.228 --> 00:05:25.839
+Seperti yang telah saya bilang, jika Anda
+tak menentukan letak anak tampilan,
+
+00:05:25.839 --> 00:05:29.281
+secara otomatis ia akan terletak
+di sudut kiri atas layar.
+

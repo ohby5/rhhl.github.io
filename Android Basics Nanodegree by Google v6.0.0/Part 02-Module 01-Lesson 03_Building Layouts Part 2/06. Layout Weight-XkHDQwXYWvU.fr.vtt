@@ -1,0 +1,622 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.970 --> 00:00:05.250
+Dans le dernier test, nous avons essayé
+de comprendre comment donner aux
+
+00:00:05.250 --> 00:00:08.240
+affichages texte de Tom, Tim et Tod
+un peu plus d'espace personnel
+
+00:00:08.240 --> 00:00:12.010
+en les espaçant verticalement à égale
+distance sur la hauteur de l'appareil.
+
+00:00:13.380 --> 00:00:15.740
+Nous avons essayé d'installer une valeur
+dp fixe, mais
+
+00:00:15.740 --> 00:00:19.900
+cela ne marche pas si nous optons pour un
+appareil plus grand, comme une tablette.
+
+00:00:19.900 --> 00:00:24.300
+Puis, on a essayé avec match_parent, mais
+l'affichage texte de Tom était très gros.
+
+00:00:24.300 --> 00:00:27.390
+Cela renvoyait les deux autres textos
+hors de l'écran.
+
+00:00:27.390 --> 00:00:31.440
+Alors, nous avons commencé à chercher
+des pondérations d'implantations linéaires.
+
+00:00:31.440 --> 00:00:34.660
+Dans la documentation, il est dit que pour
+une implantation linéaire verticale,
+
+00:00:34.660 --> 00:00:37.820
+si nous voulons espacer de façon égale
+les enfants, il faut régler
+
+00:00:37.820 --> 00:00:42.320
+la hauteur à zéro dp et une valeur de
+pondération pour chacun des enfants.
+
+00:00:43.590 --> 00:00:46.480
+Affecter une valeur de pondération à
+l'affichage d'un enfant,
+
+00:00:46.480 --> 00:00:49.490
+c'est comme lui affecter
+une valeur d'importance.
+
+00:00:49.490 --> 00:00:50.930
+Plus la valeur de pondération est élevée,
+
+00:00:50.930 --> 00:00:55.040
+plus cela offre de l'espace si il reste de
+l'espace dans le parent restant.
+
+00:00:56.280 --> 00:00:57.510
+Par exemple, pour
+
+00:00:57.510 --> 00:01:01.920
+cette implantation linéaire verticale,
+elle se remplit verticalement vers le bas.
+
+00:01:01.920 --> 00:01:04.590
+Il s'avère que cette implantation linéaire
+a beaucoup d'espace supplémentaire, et
+
+00:01:04.590 --> 00:01:08.900
+qui sera réparti vers les
+enfants ayant des valeurs de pondération.
+
+00:01:08.900 --> 00:01:11.020
+Si un enfant a une valeur de pondération
+très élevée,
+
+00:01:11.020 --> 00:01:14.450
+alors cette hauteur disponible sera
+donnée d'autant plus à cet enfant.
+
+00:01:14.450 --> 00:01:16.890
+Si un enfant a une très petite valeur de
+pondération,
+
+00:01:16.890 --> 00:01:19.900
+alors cette hauteur disponible sera
+donnée d'autant moins à cet enfant.
+
+00:01:19.900 --> 00:01:21.340
+Je peux vous montrer à quoi ça ressemble.
+
+00:01:21.340 --> 00:01:24.130
+Je vais établir la hauteur
+de cet enfant à 0dp,
+
+00:01:24.130 --> 00:01:26.020
+puis lui donner une pondération de 1.
+
+00:01:26.020 --> 00:01:29.642
+L'implantation linéaire implante d'abord
+les affichages texte de Tim et Todd,
+
+00:01:29.642 --> 00:01:33.880
+parce qu'ils ont une hauteur fixe
+basée sur leur contenu à l'intérieur.
+
+00:01:33.880 --> 00:01:38.019
+Puis, il y a l'affichage texte de Tom,
+qui a une hauteur initiale de 0dp, mais
+
+00:01:38.019 --> 00:01:38.880
+une pondération de 1.
+
+00:01:38.880 --> 00:01:41.266
+Aucun des autres enfants
+ne possède une valeur de pondération,
+
+00:01:41.266 --> 00:01:45.000
+car la valeur de pondération par défaut
+est zéro si elle n'est pas précisée.
+
+00:01:45.000 --> 00:01:47.150
+C'est donc le seul enfant
+avec une valeur de pondération.
+
+00:01:47.150 --> 00:01:50.480
+Le parent donne alors toute
+la hauteur restante de l'écran
+
+00:01:50.480 --> 00:01:51.900
+à l'affichage texte de Tom.
+
+00:01:51.900 --> 00:01:55.610
+Et c'est pourquoi on voit que l'affichage
+texte de Tom est si grand.
+
+00:01:55.610 --> 00:01:58.810
+Maintenant, laissez-moi affecter des
+valeurs de pondération aux autres enfants.
+
+00:01:58.810 --> 00:02:02.660
+Maintenant, chaque enfant possède une
+hauteur de 0dp et une pondération de 1.
+
+00:02:02.660 --> 00:02:04.980
+C'est le processus qui met en oeuvre
+l'implantation linéaire.
+
+00:02:04.980 --> 00:02:08.250
+Il essaie de déterminer
+la hauteur de chaque affichage.
+
+00:02:08.250 --> 00:02:10.889
+La hauteur de ces
+affichages débute à 0 dp.
+
+00:02:10.889 --> 00:02:13.950
+Cela signifie donc que la hauteur
+disponible restante dans le parent
+
+00:02:13.950 --> 00:02:16.410
+est à la base la hauteur totale
+de l'écran.
+
+00:02:16.410 --> 00:02:19.500
+Elle divise la hauteur totale de l'écran
+par la somme des pondérations,
+
+00:02:19.500 --> 00:02:20.280
+qui est de trois.
+
+00:02:20.280 --> 00:02:24.215
+Puis, elle donne un tiers de cette hauteur
+disponible à l'affichage texte de Tom,
+
+00:02:24.215 --> 00:02:27.220
+un tiers de la hauteur
+à l'affichage text de Tim,
+
+00:02:27.220 --> 00:02:29.680
+et un tiers à l'affichage texte de Todd.
+
+00:02:29.680 --> 00:02:32.840
+Ils resteront espacés uniformément
+sur toute la hauteur d'un appareil
+
+00:02:32.840 --> 00:02:37.250
+même sur des appareils à l'écran plus
+grand, grâce à la valeur de pondération.
+
+00:02:37.250 --> 00:02:40.130
+Si je modifie la valeur de pondération,
+pour qu'elle soit plus élevée,
+
+00:02:40.130 --> 00:02:44.920
+alors, le parent donnera plus de hauteur
+disponible à l'affichage texte de Tim.
+
+00:02:44.920 --> 00:02:47.310
+Je peux le modifier pour une valeur de
+pondération uniforme plus élevée,
+
+00:02:47.310 --> 00:02:51.380
+et on peut voir comment il continue
+à obtenir plus de hauteur disponible.
+
+00:02:51.380 --> 00:02:54.240
+Dans ce cas, l'affichage texte de Tim
+a une pondération de 8.
+
+00:02:54.240 --> 00:02:56.910
+Tom a une pondération de 1, et
+Todd a une pondération de 1.
+
+00:02:56.910 --> 00:03:00.340
+Le sous-total de pondération est huit,
+neuf, dix.
+
+00:03:00.340 --> 00:03:03.930
+Alors, le parent divise la hauteur
+disponible par dix.
+
+00:03:03.930 --> 00:03:06.710
+Et un dixième va à Tom,
+huit dixièmes vont à Tim,
+
+00:03:06.710 --> 00:03:08.170
+et un dixième va à Todd.
+
+00:03:09.450 --> 00:03:13.020
+Pour une implantation linéaire verticale,
+nous avons 3 affichages texte enfant.
+
+00:03:13.020 --> 00:03:15.410
+Nous fixons la hauteur initiale à 0 dp.
+
+00:03:15.410 --> 00:03:19.400
+Alors, ils sont tous empilés en haut de
+l'écran avec une hauteur 0.
+
+00:03:19.400 --> 00:03:23.290
+Cela signifie que le parent a toute
+cette hauteur supplémentaire disponible.
+
+00:03:23.290 --> 00:03:27.810
+Si j'établis une hauteur de 1 à chaque
+affichage texte enfant, alors la hauteur
+
+00:03:27.810 --> 00:03:31.420
+disponible du parent sera répartie
+également entre chaque enfant.
+
+00:03:32.810 --> 00:03:35.400
+La même fonctionnerait pour
+l'implantation linéaire horizontale.
+
+00:03:35.400 --> 00:03:37.550
+Nous avons ici 3 affichages texte enfant.
+
+00:03:37.550 --> 00:03:39.820
+Nous débutons avec une largeur de 0.
+
+00:03:39.820 --> 00:03:43.300
+Cela signifie que le parent a toute
+cette largeur supplémentaire disponible.
+
+00:03:43.300 --> 00:03:46.960
+Si j'affecte une valeur de pondération
+de 1 à chaque affichage enfant,
+
+00:03:46.960 --> 00:03:50.110
+alors, nous allons prendre la largeur
+disponible restante dans le parent et
+
+00:03:50.110 --> 00:03:52.740
+la répartir également parmi les enfants.
+
+00:03:52.740 --> 00:03:54.910
+Et ici encore, il n'est pas obligé
+d'avoir une pondération de 1.
+
+00:03:54.910 --> 00:03:57.740
+Elle pourrait être de trois ou toute autre
+valeur.
+
+00:03:57.740 --> 00:03:59.960
+Elle peut avoir une pondération de zéro.
+
+00:03:59.960 --> 00:04:04.440
+Si un affichage a une pondération de zéro,
+ça signifie que ça ne variera pas selon
+
+00:04:04.440 --> 00:04:06.290
+l'espace disponible restant dans le parent.
+
+00:04:06.290 --> 00:04:09.560
+Il conservera la largeur et
+la hauteur que vous lui donnez.
+
+00:04:09.560 --> 00:04:12.710
+Une chose que je veux signaler, c'est
+quand établir la hauteur à 0 ou
+
+00:04:12.710 --> 00:04:14.370
+la largeur à 0.
+
+00:04:14.370 --> 00:04:15.700
+Si on a une implantation
+linéaire verticale,
+
+00:04:15.700 --> 00:04:18.950
+vous remplissez l'implantation linéaire
+verticale de cette façon.
+
+00:04:18.950 --> 00:04:20.390
+Alors, vous ne savez pas ce que devrait
+être la hauteur, donc
+
+00:04:20.390 --> 00:04:23.510
+vous fixez la hauteur initiale à 0 dp,
+et lui donnez une valeur de pondération.
+
+00:04:24.620 --> 00:04:28.760
+Idem pour l'implantation linéaire
+horizontale, remplie horizontalement.
+
+00:04:28.760 --> 00:04:31.920
+Alors, vous ne connaissez pas encore la
+largeur des affichages enfant.
+
+00:04:31.920 --> 00:04:34.930
+Vous fixez donc la largeur à 0 dp,
+et lui donnez une valeur de pondération.
+
+00:04:36.660 --> 00:04:39.820
+Vous pouvez surtout penser affecter
+une valeur de pondération à un affichage
+
+00:04:39.820 --> 00:04:44.840
+en pouvant l'agrandir
+selon la taille de l'affichage parent.
+
+00:04:44.840 --> 00:04:48.540
+C'est bien pour remplir l'espace disponible
+dans un petit appareil ou
+
+00:04:48.540 --> 00:04:49.259
+un grand appareil.
+
+00:04:50.620 --> 00:04:53.730
+Voici 2 exemples réels où les pondérations
+d'implantation sont vraiment utiles.
+
+00:04:54.980 --> 00:04:57.210
+C'est l'application Google Hangouts.
+
+00:04:57.210 --> 00:05:01.750
+Vous pouvez l'utiliser pour chatter avec
+vos amis ou leur envoyer n'importe quoi.
+
+00:05:01.750 --> 00:05:05.620
+En bas de l'écran, se trouve le lieu
+où vous envoyez votre message.
+
+00:05:05.620 --> 00:05:08.950
+Regardons cette implantation en bas
+d'un petit peu plus près.
+
+00:05:08.950 --> 00:05:13.490
+C'est une implantation linéaire
+horizontale, car implantée sur une ligne
+
+00:05:13.490 --> 00:05:14.827
+horizontale.
+Elle est composée d'un ImageView,
+
+00:05:14.827 --> 00:05:19.090
+d'un champ EditText où vous pouvez
+entrer du texte, et un autre ImageView.
+
+00:05:19.090 --> 00:05:22.520
+Maintenant, la hauteur de chaque affichage
+est du wrap_content
+
+00:05:22.520 --> 00:05:25.410
+car il s'enroule autour
+du contenu situé à l'intérieur.
+
+00:05:25.410 --> 00:05:28.480
+La largeur de ces deux affichages image
+est du wrap_content, car c'est
+
+00:05:28.480 --> 00:05:30.350
+aussi large que
+le contenu situé à l'intérieur.
+
+00:05:31.460 --> 00:05:33.980
+Nous donnons une pondération de 0
+car nous ne voulons pas qu'elle soit
+
+00:05:33.980 --> 00:05:37.890
+plus grande que ça, même si il reste
+beaucoup d'espace dans le parent.
+
+00:05:37.890 --> 00:05:41.100
+Etablir la pondération de 0 assure que
+ce sera du wrap_content pour la largeur et
+
+00:05:41.100 --> 00:05:43.280
+la hauteur, et que ça ne changera pas.
+
+00:05:43.280 --> 00:05:46.110
+Nous voulons l'agrandir, c'est donc
+un peu plus gros sur les appareils à écran
+
+00:05:46.110 --> 00:05:50.640
+plus grand, et nous voulons la diminuer si
+c'est sur des appareils à petit écran.
+
+00:05:50.640 --> 00:05:54.250
+Alors, nous fixons la largeur à 0 dp et
+la pondération à 1.
+
+00:05:54.250 --> 00:05:58.404
+Ca signifie que l'implantation linéaire
+parent tentera l'implantation de
+
+00:05:58.404 --> 00:05:59.340
+cette image d'abord, et puis cette image.
+
+00:05:59.340 --> 00:06:05.050
+Puis, toute largeur restant dans
+l'appareil sera donnée à cet affichage.
+
+00:06:05.050 --> 00:06:07.000
+Voici un exemple dans l'application maps.
+
+00:06:07.000 --> 00:06:09.570
+C'est une page de détails pour
+un emplacement.
+
+00:06:09.570 --> 00:06:12.480
+Il y a trois boutons ici,
+Call, Save, et Website.
+
+00:06:12.480 --> 00:06:14.450
+Regardons-les de plus près.
+
+00:06:14.450 --> 00:06:18.660
+Vous pouvez réellement les construire en
+TextViews avec les icônes jointes,
+
+00:06:18.660 --> 00:06:21.370
+et vous pouvez voir les notes du formateur
+pour plus de détails.
+
+00:06:21.370 --> 00:06:23.540
+Mais c'est vraiment un point tangent.
+
+00:06:23.540 --> 00:06:26.520
+Pour cet exercice, supposons que
+ce sont des affichages texte.
+
+00:06:26.520 --> 00:06:29.710
+La hauteur de chaque TextView
+va être du wrap_content
+
+00:06:29.710 --> 00:06:33.000
+parce qu'elle s'enroule sur la hauteur
+du contenu placé à l'intérieur.
+
+00:06:33.000 --> 00:06:34.980
+Maintenant, la largeur,
+c'est un peu plus compliqué.
+
+00:06:34.980 --> 00:06:38.485
+On veut que chaque TextView soit
+déployé également sur la largeur de
+
+00:06:38.485 --> 00:06:42.470
+cet écran, selon si c'est
+un petit appareil ou un vraiment grand.
+
+00:06:42.470 --> 00:06:44.980
+Nous ne voulons pas que les trois
+affichages texte soient groupés
+
+00:06:44.980 --> 00:06:46.240
+en haut à gauche de l'écran.
+
+00:06:47.450 --> 00:06:50.640
+Pour espacer les enfants de façon égale,
+on leur donne des pondérations égales.
+
+00:06:50.640 --> 00:06:53.050
+On établit une largeur de 0 et
+une pondération de 1 pour chacun.
+
+00:06:54.058 --> 00:06:57.790
+Ainsi, la largeur disponible dans le
+parent sera répartie également
+
+00:06:57.790 --> 00:06:58.490
+entre les trois enfants.
+
+00:06:59.790 --> 00:07:02.170
+Et le dernier exemple est
+une application email.
+
+00:07:02.170 --> 00:07:05.420
+C'est un écran à composer dans Gmail
+où vous pouvez écrire un nouveau message.
+
+00:07:06.460 --> 00:07:09.160
+C'est une implantation linéaire verticale,
+car les items sont dans une colonne.
+
+00:07:10.230 --> 00:07:13.380
+Et elle est composée de quatre
+champs EditText différents.
+
+00:07:13.380 --> 00:07:16.546
+Maintenant, la largeur de chaque enfant est
+match_parent, car nous voulons
+
+00:07:16.546 --> 00:07:18.760
+l'agrandir sur toute
+la largeur de l'appareil.
+
+00:07:18.760 --> 00:07:22.845
+Pour la hauteur, on établit que ces trois
+champs EditText sont du wrap_content,
+
+00:07:22.845 --> 00:07:25.475
+donc il enroule le texte
+à l'intérieur d'eux.
+
+00:07:25.475 --> 00:07:28.185
+On établit les pondérations à 0,
+car on ne veut pas qu'ils
+
+00:07:28.185 --> 00:07:32.620
+augmentent en taille, même s'il y a
+de la hauteur disponible dans le parent.
+
+00:07:32.620 --> 00:07:35.870
+Mais pour ce dernier champ EditText field,
+c'est là où on écrit son message, et nous
+
+00:07:35.870 --> 00:07:40.710
+voulons donner à l'utilisateur beaucoup
+d'espace pour écrire à Grand-mère.
+
+00:07:40.710 --> 00:07:44.870
+Alors, on établit la hauteur à 0 dp,
+et on lui donne une pondération de 1.
+
+00:07:44.870 --> 00:07:46.700
+Alors, si le parent a encore
+de la hauteur disponible,
+
+00:07:46.700 --> 00:07:50.070
+on la donnera au
+champ EditText de cet enfant.
+
+00:07:50.070 --> 00:07:54.120
+Sur un appareil à grand écran, le champ
+de composition de l'email sera plus grand,
+
+00:07:54.120 --> 00:07:56.880
+et sur un appareil plus petit, il
+sera un peu plus petit.
+
+00:07:58.620 --> 00:08:00.150
+Maintenant, à vous de vous exercer.
+
+00:08:00.150 --> 00:08:03.840
+Nous voulons que vous construisiez cette
+implantation dans le visualiseur XML.
+
+00:08:03.840 --> 00:08:06.550
+Vous ne pouvez pas commencer avec le XML
+que nous avons fourni ci-dessous.
+
+00:08:06.550 --> 00:08:08.140
+Voici deux astuces.
+
+00:08:08.140 --> 00:08:11.517
+Quand vous essayez d'aborder ça,
+essayez d'abord de déterminer la largeur
+
+00:08:11.517 --> 00:08:15.500
+de chaque affichage, puis essayez de
+déterminer la hauteur de chaque affichage.
+
+00:08:15.500 --> 00:08:18.430
+Assurez-vous aussi que l'image
+reprend la hauteur restant dans
+
+00:08:18.430 --> 00:08:19.730
+l'implantation linéaire parent.
+
+00:08:19.730 --> 00:08:22.550
+Alors, sur un appareil à écran plus petit,
+il reprendra moins de hauteur.
+
+00:08:22.550 --> 00:08:25.110
+Sur un appareil à écran plus grand,
+il reprendra plus de hauteur.
+
+00:08:25.110 --> 00:08:26.390
+OK, allons-y.
+
+00:08:26.390 --> 00:08:27.610
+Vérifiez cette boîte quand vous aurez fini.
+

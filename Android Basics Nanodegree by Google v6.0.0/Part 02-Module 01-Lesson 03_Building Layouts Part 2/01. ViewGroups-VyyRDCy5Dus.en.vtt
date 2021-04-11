@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.400
+You remember the coffee bean trail, Catherine?
+
+00:00:02.400 --> 00:00:03.450
+How can I forget,
+
+00:00:03.450 --> 00:00:05.010
+you spilled it all over me.
+
+00:00:05.010 --> 00:00:09.540
+So we talked about how there will be three big parts to Lesson 1,
+
+00:00:09.540 --> 00:00:12.030
+and we spoke about image and text view.
+
+00:00:12.030 --> 00:00:13.830
+Then we learned how to style those views.
+
+00:00:13.830 --> 00:00:14.015
+Yes.
+
+00:00:14.015 --> 00:00:15.285
+Where are we going next?
+
+00:00:15.285 --> 00:00:16.650
+Well I was thinking,
+
+00:00:16.650 --> 00:00:20.640
+since we only have one view on the screen right now, it's a little boring.
+
+00:00:20.640 --> 00:00:22.695
+So we should add more than one view.
+
+00:00:22.695 --> 00:00:25.770
+Right, and if you think about it all of the fun apps that we use,
+
+00:00:25.770 --> 00:00:29.580
+YouTube, OkCupid, what's another one that comes to mind?
+
+00:00:29.580 --> 00:00:30.180
+Gmail.
+
+00:00:30.180 --> 00:00:31.715
+Gmail. They all seem to have
+
+00:00:31.715 --> 00:00:34.905
+more than one view is packed in very neatly on the screen together.
+
+00:00:34.905 --> 00:00:37.535
+Yeah. The way they do that is through ViewGroups.
+
+00:00:37.535 --> 00:00:39.180
+So we'll learn about that next.
+
+00:00:39.180 --> 00:00:43.325
+That gives us the power to also position views on the screen where we want them.
+
+00:00:43.325 --> 00:00:46.495
+So let's talk about ViewGroups next.
+
+00:00:46.495 --> 00:00:51.740
+So far we've only had a single TextView or a single ImageView on screen.
+
+00:00:51.740 --> 00:00:53.640
+If we want to add another view below it,
+
+00:00:53.640 --> 00:00:57.200
+we could try to just copy this and paste it below it.
+
+00:00:57.200 --> 00:00:58.880
+But then we get an error.
+
+00:00:58.880 --> 00:01:02.375
+It says the XML document has more than one root view.
+
+00:01:02.375 --> 00:01:06.380
+There can only be one root view and it should enclose all of your other views.
+
+00:01:06.380 --> 00:01:11.510
+If we want both of these TextViews to appear on screen and not be lonely anymore,
+
+00:01:11.510 --> 00:01:14.165
+then we need to put them in a ViewGroup.
+
+00:01:14.165 --> 00:01:17.815
+The ViewGroup will then be the single root view for the layout.
+
+00:01:17.815 --> 00:01:21.365
+ViewGroups are also views and they are rectangles on the screen.
+
+00:01:21.365 --> 00:01:24.890
+For example, the red and orange rectangles here are all ViewGroups.
+
+00:01:24.890 --> 00:01:26.780
+They can have a width, a height,
+
+00:01:26.780 --> 00:01:29.255
+or a background color, or other attributes.
+
+00:01:29.255 --> 00:01:30.940
+Background color here is orange,
+
+00:01:30.940 --> 00:01:32.525
+but it could also be transparent.
+
+00:01:32.525 --> 00:01:35.540
+So the ViewGroup isn't even visible to the user.
+
+00:01:35.540 --> 00:01:40.620
+Instead of holding some content like text for a TextView or image for an ImageView,
+
+00:01:40.620 --> 00:01:43.910
+the content that a ViewGroup holds is other views.
+
+00:01:43.910 --> 00:01:47.000
+You can think of a ViewGroup as being a container for views.
+
+00:01:47.000 --> 00:01:48.540
+One of view contains other views,
+
+00:01:48.540 --> 00:01:50.600
+we call it the parent of these views.
+
+00:01:50.600 --> 00:01:51.920
+So this is a parent.
+
+00:01:51.920 --> 00:01:53.905
+This is the parent, and this is parent.
+
+00:01:53.905 --> 00:01:55.920
+When a view is inside of a ViewGroup,
+
+00:01:55.920 --> 00:01:58.220
+we call it the child of that ViewGroup.
+
+00:01:58.220 --> 00:01:59.255
+So this is a child,
+
+00:01:59.255 --> 00:02:01.100
+and this is a child, and this is a child.
+
+00:02:01.100 --> 00:02:03.215
+Same here, there are two children here,
+
+00:02:03.215 --> 00:02:04.640
+and two children here.
+
+00:02:04.640 --> 00:02:06.680
+Continuing with the family language,
+
+00:02:06.680 --> 00:02:08.570
+if there are multiple children,
+
+00:02:08.570 --> 00:02:11.255
+then each of those children are siblings to each other.
+
+00:02:11.255 --> 00:02:15.105
+So these are sibling views and these are sibling views. Okay, that was a lot.
+
+00:02:15.105 --> 00:02:18.860
+To help you remember all the terminology around parent and child,
+
+00:02:18.860 --> 00:02:20.360
+and view and ViewGroup,
+
+00:02:20.360 --> 00:02:23.930
+I want you to meet a very nice family called the views.
+
+00:02:23.930 --> 00:02:25.715
+You've already met Tommy TextView.
+
+00:02:25.715 --> 00:02:28.040
+He's pretty great at displaying text.
+
+00:02:28.040 --> 00:02:30.810
+You also know his sister Ivy ImageView,
+
+00:02:30.810 --> 00:02:32.960
+who displayed very beautiful images.
+
+00:02:32.960 --> 00:02:34.970
+Now, we're meeting their parents.
+
+00:02:34.970 --> 00:02:37.115
+It's always nerve-wracking to meet the parents.
+
+00:02:37.115 --> 00:02:39.455
+So we have Laura, the Linear Layout,
+
+00:02:39.455 --> 00:02:41.630
+and Ray, the Relative Layout.
+
+00:02:41.630 --> 00:02:43.235
+These are both ViewGroups,
+
+00:02:43.235 --> 00:02:46.010
+which we mentioned before are called parent views.
+
+00:02:46.010 --> 00:02:49.580
+Then the children views are positioned based on their parent.
+
+00:02:49.580 --> 00:02:51.785
+Let's look at an example of one parent.
+
+00:02:51.785 --> 00:02:56.240
+A parent may tell their child to sit or stand in a specific place and not to move.
+
+00:02:56.240 --> 00:02:58.700
+Let's ignore the possibility that the child might want to
+
+00:02:58.700 --> 00:03:01.340
+get up and run around because that's just an edge case.
+
+00:03:01.340 --> 00:03:06.215
+On a device, this means that a parent has control over where to position its children.
+
+00:03:06.215 --> 00:03:09.960
+For example, one child TextView can be at the top of the screen,
+
+00:03:09.960 --> 00:03:13.445
+and then a second child ImageView can be below that,
+
+00:03:13.445 --> 00:03:17.120
+or if the parent wishes they can rearrange the children in a different way.
+
+00:03:17.120 --> 00:03:19.255
+The child ImageView can be on the left,
+
+00:03:19.255 --> 00:03:22.115
+and then the child TextView can be on the right.
+
+00:03:22.115 --> 00:03:24.970
+We're going to talk about ViewGroups in more detail in this lesson,
+
+00:03:24.970 --> 00:03:27.890
+but to make sure that you've understood what we've covered so far,
+
+00:03:27.890 --> 00:03:29.765
+please answer these questions.
+
+00:03:29.765 --> 00:03:31.580
+For the screenshot on this device,
+
+00:03:31.580 --> 00:03:33.520
+can you tell me how many views there are?
+
+00:03:33.520 --> 00:03:35.655
+Number 2, for the mountain image,
+
+00:03:35.655 --> 00:03:38.795
+is it a child or a parent of the red ViewGroup?
+
+00:03:38.795 --> 00:03:44.290
+Number 3, is a red ViewGroup a child or a parent of the hiking TextView.
+
+00:03:44.290 --> 00:03:48.095
+Number 4, which of these views are siblings of each other,
+
+00:03:48.095 --> 00:03:50.700
+and you can just list them here.
+

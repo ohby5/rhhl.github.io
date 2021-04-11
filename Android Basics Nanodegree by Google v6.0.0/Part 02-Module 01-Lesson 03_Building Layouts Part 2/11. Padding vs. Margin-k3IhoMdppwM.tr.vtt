@@ -1,0 +1,628 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.360 --> 00:00:01.630
+Şu ana kadar gayet iyi gidiyorsunuz.
+
+00:00:01.630 --> 00:00:04.580
+Gerçekten harika yerleşimler tasarlama
+yolunda emin adımlarla ilerliyorsunuz.
+
+00:00:04.580 --> 00:00:09.360
+Ancak, şu ana kadarki tasarladığımız
+tüm yerleşimlerde bir sorun görüyorum.
+
+00:00:09.360 --> 00:00:12.740
+Görünümler ya ViewGroup'un kenarında
+ya da cihazın
+
+00:00:12.740 --> 00:00:14.300
+karşısında yer alıyor.
+
+00:00:14.300 --> 00:00:16.490
+Şu ana kadar bu derste
+tasarladığımız bütün yerleşimler için
+
+00:00:16.490 --> 00:00:19.990
+görseli biraz daha çekici
+hale getirebilirdik, yani
+
+00:00:19.990 --> 00:00:23.840
+biraz daha beyaz alan
+ekleyince daha güzel olacaklardır.
+
+00:00:23.840 --> 00:00:26.240
+Bunu da bu videomuzda ele alacağımız
+padding ve margin
+
+00:00:26.240 --> 00:00:28.580
+kavramlarıyla yapacağız.
+
+00:00:28.580 --> 00:00:31.240
+Örneğin, buraya ve buraya
+biraz daha beyaz alan ekleyebiliriz
+
+00:00:31.240 --> 00:00:33.780
+hatta en üst kısma da,
+bu sayede görünüm üst öğrenin
+
+00:00:33.780 --> 00:00:37.780
+ve cihazın köşesinde karma
+karışık olmayacaktır.
+
+00:00:37.780 --> 00:00:39.350
+Bu daha çok bir tasarım kararı,
+
+00:00:39.350 --> 00:00:41.550
+çünkü bazen bunu köşeden
+köşeye yapmak isteyebilirsiniz,
+
+00:00:41.550 --> 00:00:45.140
+önceden bahsetttiğim, görselin ekranın
+tamamını kaplama efekti için mesela.
+
+00:00:45.140 --> 00:00:49.109
+Fakat her halükarda, daha ferah olması
+için beyaz alanı kullanabilirsiniz,
+
+00:00:49.109 --> 00:00:53.130
+bu sayede içeriği okumak ve
+taramak daha kolay bir hal alacaktır.
+
+00:00:53.130 --> 00:00:56.840
+Size, görünüme padding veya margin
+eklemenin etkisini göstereceğim.
+
+00:00:56.840 --> 00:00:59.480
+Buradaki "Hello" yazan
+TextView ile başlayalım.
+
+00:00:59.480 --> 00:01:01.880
+Eğer görünüme 8 dip padding eklersek
+
+00:01:01.880 --> 00:01:05.450
+o zaman burada her yöne sekiz
+dip olacak şekilde büyütüyor.
+
+00:01:05.450 --> 00:01:08.081
+Eğer TextView'e 8 dip
+yerleşim margini eklersek
+
+00:01:08.081 --> 00:01:10.850
+o zaman da bu şekilde görünür.
+
+00:01:10.850 --> 00:01:13.470
+Margin eklemek için bunu ViewGroup'un
+içine koymanız gerekiyor, bu yüzden
+
+00:01:13.470 --> 00:01:16.360
+buradaki çizgisel yerleşimin
+içine koydum.
+
+00:01:16.360 --> 00:01:19.350
+Orjinal TextView'i alıp 8 dip
+kaydıran şey
+
+00:01:19.350 --> 00:01:21.260
+çizgisel yerleşim.
+
+00:01:21.260 --> 00:01:23.330
+Hem soldan hem de üstten,
+
+00:01:23.330 --> 00:01:25.510
+ve ayrıca da yanlardan.
+
+00:01:25.510 --> 00:01:27.860
+Yani alt TextView'de padding
+veya margin kullansanız da
+
+00:01:27.860 --> 00:01:32.780
+burada padding TextView
+tarafından belirleniyor.
+
+00:01:32.780 --> 00:01:35.900
+Marjin de üst ViewGroup
+tarafından belirleniyor.
+
+00:01:35.900 --> 00:01:39.685
+Her ikisini de gerçek bir cihazda
+çalıştırırsanız ve TextView için
+
+00:01:39.685 --> 00:01:42.820
+bir arka planınız yoksa, o zaman teknik
+olarak her ikisi de aynı şekilde gözükür.
+
+00:01:42.820 --> 00:01:46.030
+Metin soldan 8 dip gelecek
+şekilde başlar, ve
+
+00:01:46.030 --> 00:01:48.390
+cihazın üst kısmından da 8 dip
+aşağıda olur.
+
+00:01:48.390 --> 00:01:51.780
+Ancak, TextView için renkli bir
+arka planınız varsa,
+
+00:01:51.780 --> 00:01:54.990
+bu durumda kullanıcı TextView'in
+bu büyüklükte olduğunu görecektir.
+
+00:01:54.990 --> 00:01:58.660
+Oysa diğer cihazda, TextView
+yalnızca bu büyüklükte olurdu.
+
+00:01:58.660 --> 00:02:00.700
+Görünümde padingi gösteren
+kod da şu şekilde.
+
+00:02:02.040 --> 00:02:06.576
+TextView XML Öğesinde, "8 dip"e eş olan
+
+00:02:06.576 --> 00:02:10.800
+android:padding yazan
+bir özellik atayabilirsiniz.
+
+00:02:10.800 --> 00:02:12.320
+Dip değeri olduğu sürece
+
+00:02:12.320 --> 00:02:15.330
+padding için istediğiniz
+boyutu seçebilirsiniz.
+
+00:02:15.330 --> 00:02:19.080
+8 diplik bir padding belirlediğimizde,
+TexView'in
+
+00:02:19.080 --> 00:02:21.410
+sol, yukarı, aşağı ve sağ
+kenarlarına 8 dip ekliyor.
+
+00:02:22.460 --> 00:02:25.100
+Genel android padding özelliğini
+kullanmak yerine
+
+00:02:25.100 --> 00:02:28.970
+sola, sağa, üste veya
+alta ayırabilirsiniz.
+
+00:02:28.970 --> 00:02:32.550
+Esasen, bu dört satırlık kod, bu tek
+satırlık kodla aynı işlevi görüyor.
+
+00:02:32.550 --> 00:02:35.820
+Ancak, bu ince yapılı kontroller sağ, sol
+veya üst, alt taraflar için
+
+00:02:35.820 --> 00:02:39.420
+farklı padding değerlerine sahip
+olmanıza olanak veriyor.
+
+00:02:39.420 --> 00:02:43.390
+Bütün yönler için eşit padding
+değerleri belirlemenize gerek yok.
+
+00:02:43.390 --> 00:02:47.280
+Padding için varsayılan değer sıfır,
+yani sol, sağ ve üst
+
+00:02:47.280 --> 00:02:52.110
+padding değerini belirtip, alt kısmı es
+geçerseniz o zaman orası sıfır dip olur.
+
+00:02:52.110 --> 00:02:55.990
+Margini tanımlamak için de
+gene TextView'e özellik ekliyorsunuz.
+
+00:02:55.990 --> 00:03:00.206
+Özelliğin adı android : layout_margin
+
+00:03:00.206 --> 00:03:02.750
+biz de, örneğin, 8 dipe eşitliyoruz.
+
+00:03:02.750 --> 00:03:07.440
+Bu, altı TextView'i bütün köşeler için
+üst öğeden 8 dip uzaklaştırıyor.
+
+00:03:07.440 --> 00:03:11.770
+Eğer yukarıda başka bir
+alt TextView olsaydı, margin atamamız
+
+00:03:11.770 --> 00:03:15.000
+bu TextView'i ilk TextView'in
+8 dip altına iterdi.
+
+00:03:16.060 --> 00:03:18.820
+Margin'e sahip olmanın bu görünümün
+etrafında bir güç kalkanı olması
+
+00:03:18.820 --> 00:03:20.050
+gibi bir şey olduğunu düşünebilirsiniz.
+
+00:03:20.050 --> 00:03:23.750
+Etrafındaki hiç bir görünüm
+bu 8 diplik bölgeye giremez.
+
+00:03:23.750 --> 00:03:27.621
+Ya da yerleşim marginini 4 farklı
+yöne ayırabilirsiniz.
+
+00:03:27.621 --> 00:03:31.750
+layout marginLeft,
+layout marginRight, top, ve bottom.
+
+00:03:31.750 --> 00:03:35.780
+Bu değerlerden birini belirtmezseniz
+varsayılan olarak sıfır olacaktır.
+
+00:03:35.780 --> 00:03:38.730
+Bu alt öğelere göre konumlananın
+ViewGroup olduğunu
+
+00:03:38.730 --> 00:03:41.930
+hatırlamak için özelliklere
+bakabilrisiniz.
+
+00:03:41.930 --> 00:03:45.130
+Hepsi margin için layout_ ile başlıyor.
+
+00:03:45.130 --> 00:03:48.340
+Bu şekilde, bu görünümleri belirleyenin
+ViewGroup olduğunu
+
+00:03:48.340 --> 00:03:48.929
+bilebilirsiniz.
+
+00:03:50.160 --> 00:03:52.790
+Padding ve marjin bütün
+görünümlerde kullanılabilir.
+
+00:03:52.790 --> 00:03:55.960
+Az önce öğrendiğimiz özellikleri
+uygulamaya sokalım.
+
+00:03:55.960 --> 00:03:58.500
+Burada, çizgisel yerleşimde
+üç TextView'im var.
+
+00:03:58.500 --> 00:04:01.000
+Hepsi ekranın sol kenarında
+sıkışmış durumda, bu yüzden
+
+00:04:01.000 --> 00:04:02.259
+biraz daha fazla alan
+eklemek istiyorum.
+
+00:04:03.390 --> 00:04:04.910
+Daha fazla margin ekleyerek başlayalım.
+
+00:04:05.910 --> 00:04:08.235
+Güzel, artık TextView'in
+etrafında fazla alan var.
+
+00:04:09.420 --> 00:04:11.155
+Diğer iki TextView için de
+aynısını yapacağım.
+
+00:04:12.250 --> 00:04:17.029
+İlginç, bu 16 dip yukarıda
+ama aslında 32 dipte
+
+00:04:17.029 --> 00:04:20.260
+çünkü ilk TextView'den 8 alt margin ve
+
+00:04:20.260 --> 00:04:22.960
+ikinci TextView'den de
+8 dip üst margin alıyor.
+
+00:04:22.960 --> 00:04:24.780
+Eğer alanların tutarlı
+olmasını istiyorsak
+
+00:04:24.780 --> 00:04:30.250
+daima her görünüm arasında 16 dips olmalı,
+sonra da buradaki margini değiştirmeliyiz.
+
+00:04:30.250 --> 00:04:33.100
+Her birine margin değerleri
+atayarak ayırabilirim.
+
+00:04:33.100 --> 00:04:37.980
+Bu kodda, sol margin için 16 dip ve
+üst margin için 16 dipim var.
+
+00:04:37.980 --> 00:04:40.750
+Bu ilk TextView için alt margin yok,
+bu yüzden
+
+00:04:40.750 --> 00:04:43.290
+artık aralarındaki mesafe 16 dip
+olarak doğru oluyor.
+
+00:04:43.290 --> 00:04:46.970
+Aynısı son TextView için de geçerli.
+
+00:04:46.970 --> 00:04:48.780
+Güzel, artık bütün dikey aralıklar eşit.
+
+00:04:49.900 --> 00:04:53.420
+Daha önce, bu görünümlerin kenarlarına
+beyaz alanlar ekleyeceğimi söylemiştim,
+
+00:04:53.420 --> 00:04:56.240
+teknik olarak o alan saydam.
+
+00:04:56.240 --> 00:04:58.690
+Arkasındakileri görebilirsiniz.
+
+00:04:58.690 --> 00:05:02.100
+Bu durumda, ViewGroup'ta
+gri bir arka planımız var.
+
+00:05:02.100 --> 00:05:05.390
+Margin ya da padding kullansak da
+yerleşim bu cihazda aynı görünecek
+
+00:05:05.390 --> 00:05:08.785
+çünkü şu anda TextView'in üzerinde
+herhangi bir renkli arka plan yok.
+
+00:05:09.820 --> 00:05:12.090
+O halde ekleyelim ve her bir
+görünümün sınırlarını görelim.
+
+00:05:13.330 --> 00:05:16.180
+Tamam, şimdi bu ilk TextView için
+bir arka plan rengi var.
+
+00:05:16.180 --> 00:05:20.178
+Sol ve üst margini eklediğimizde,
+ViewGroup'un TextView'i
+
+00:05:20.178 --> 00:05:22.600
+yukarı ve aşağıdan 8 dip
+kaydırdığını görüyoruz.
+
+00:05:22.600 --> 00:05:26.950
+Bu paddingi değiştirebiliriz,ve şimdi
+TextView'in daha büyük olduğunu
+
+00:05:26.950 --> 00:05:29.580
+ve sol ve üst kısımında 8 diplik
+yer kapladığını görüyoruz.
+
+00:05:30.700 --> 00:05:33.210
+Yani görsel olarak, padding veya
+margininiz olsa da olmasa da
+
+00:05:33.210 --> 00:05:35.120
+bu cihazda farklı gözükebilir.
+
+00:05:35.120 --> 00:05:38.000
+Eğer bu TextView'in bir
+arka plan rengi olsaydı.
+
+00:05:38.000 --> 00:05:40.570
+Aynısını diğer görünümler içinde
+yapabilirdik ve onları da görebilirdiniz.
+
+00:05:41.830 --> 00:05:45.400
+Padding ve marging değerleri eklemek
+sadece bu alt görünümlerle sınırlı değil
+
+00:05:45.400 --> 00:05:47.840
+ayrıca ViewGroup'a da ekleyebilirsiniz.
+
+00:05:47.840 --> 00:05:50.520
+Eğer çizgisel yerleşime
+bir padding değeri eklersem
+
+00:05:50.520 --> 00:05:55.680
+O zaman görünümün her yöne doğru
+16 dip kaydığını görebilirsiniz.
+
+00:05:55.680 --> 00:05:59.390
+Padding veya margin için herhangi bir
+değer atayabileceğinizden bahsetmiştim.
+
+00:05:59.390 --> 00:06:01.380
+Fakat hangi değeri seçeceğinizi
+nasıl bilebilirsiniz?
+
+00:06:01.380 --> 00:06:04.740
+Materyal tasarım rehberi, artan
+8 dip kullanmanızı
+
+00:06:04.740 --> 00:06:05.750
+öneriyor.
+
+00:06:05.750 --> 00:06:09.190
+Bu biraz daha gelişmiş bir bilgi,
+fakat sonuçta bileşenlerimizin
+
+00:06:09.190 --> 00:06:13.000
+ekranda 8 diplik mesafelerle
+sıralanmasını istiyoruz.
+
+00:06:13.000 --> 00:06:15.870
+Şu an ekranda kareler gözükmüyor, fakat
+
+00:06:15.870 --> 00:06:17.710
+metni buraya konumlandırmak istiyorsanız,
+
+00:06:17.710 --> 00:06:21.090
+iki kare sağa kaydırmalısınız.
+
+00:06:21.090 --> 00:06:25.280
+Bu griddeki iki kare 16 dipe eşdeğer.
+
+00:06:25.280 --> 00:06:28.980
+Bu e-posta ekranında, bütün ikonlar
+burada hizalanmış durumda.
+
+00:06:28.980 --> 00:06:33.120
+Ekranın sol köşesinden 19 dip uzaktalar, ve
+
+00:06:33.120 --> 00:06:38.020
+buradaki bütün metin de ekranın sol
+köşesinden 72 dip uzağında konumlanmış.
+
+00:06:38.020 --> 00:06:41.280
+Gördüğünüz gibi içerik burada
+belirli bir sırayı
+
+00:06:41.280 --> 00:06:42.250
+takip ediyor.
+
+00:06:42.250 --> 00:06:44.440
+Görselleştirmenin bir başka yolu da şu.
+
+00:06:44.440 --> 00:06:47.160
+Google I/O uygulamasından alınan
+bu ekran görüntüsünde,
+
+00:06:47.160 --> 00:06:53.920
+içerik bu16 dip sırasında ve buradaki
+72 dip sırasında hizalanmış durumda.
+
+00:06:53.920 --> 00:06:57.395
+Ekranın sol köşesinden
+72 dip uzaklıkta.
+
+00:06:57.395 --> 00:06:58.855
+Ve bu köşede,
+
+00:06:58.855 --> 00:07:03.303
+içerik ekranın sağ köşesinden
+16 dips ötede duruyor.
+
+00:07:03.303 --> 00:07:05.485
+Tablette daha fazla alan mevcut,
+bu sayede
+
+00:07:05.485 --> 00:07:07.495
+biraz daha fazla padding mümkün.
+
+00:07:07.495 --> 00:07:10.635
+Ekranın sol köşesinden 24 dip
+uzaklıkta olabilir,
+
+00:07:10.635 --> 00:07:12.175
+bu diğer değerler içinde geçerli.
+
+00:07:12.175 --> 00:07:16.645
+Bu değerleri tavsiye etmemizin nedeni
+okumayı daha kolay bir hale getirmek.
+
+00:07:16.645 --> 00:07:20.250
+Örneğin, bu başlık bir kaç piksel
+daha kaymış olsaydı, ve
+
+00:07:20.250 --> 00:07:23.660
+Subtext bir kaç piksel daha sağda olsa,
+
+00:07:23.660 --> 00:07:25.560
+burada sivri bir köşe olurdu.
+
+00:07:25.560 --> 00:07:29.780
+Bu da kullanıcının içeriği
+okumasını zorlaştırırdı.
+
+00:07:29.780 --> 00:07:34.540
+Bu şekilde hepsini hizaladığınızda
+uygulamanızın okunması da kolaylaşıyor.
+
+00:07:34.540 --> 00:07:38.120
+Marginde padding kullanılmasıyla
+ilgili bir kaç gerçek görnek.
+
+00:07:38.120 --> 00:07:40.190
+Bu Google Takvim uygulaması
+ekran görüntüsünde,
+
+00:07:40.190 --> 00:07:43.680
+buraya biraz kaymış bazı
+yazılar görüyüyoruz.
+
+00:07:43.680 --> 00:07:46.680
+Takvim etkinlikleri arasında da
+biraz boşluklar var.
+
+00:07:46.680 --> 00:07:48.180
+Padding kullanarak bunu uygularsak,
+
+00:07:48.180 --> 00:07:52.360
+bu arka plan görüntüsü muhtemelen
+o boş alana genişleyecek.
+
+00:07:52.360 --> 00:07:55.920
+Bunun yerine margin kullanıyoruz, sonrada
+görünümün etrafına bir tampon bölge
+
+00:07:55.920 --> 00:07:57.820
+ekliyor, yani büyük ihtimalle margin.
+
+00:07:57.820 --> 00:08:01.890
+İşte takvim etkinliği için detay
+sayfasından başka ekran görüntüsü.
+
+00:08:01.890 --> 00:08:06.160
+Burada bir sürü metin var ve diğerlerine
+göre daha fazla boşluk mevcut.
+
+00:08:06.160 --> 00:08:08.700
+Bu büyük boşlukları padding
+ekleyerek oluşturabiliriz.
+
+00:08:08.700 --> 00:08:13.370
+Buraya bu boşluğu eklemek için,
+bu TextView'ine ya alt padding ya da
+
+00:08:13.370 --> 00:08:15.130
+ya da üst padding ekleyebilrisiniz.
+
+00:08:16.140 --> 00:08:17.600
+Her halükarda işe yarayacaktır.
+
+00:08:17.600 --> 00:08:20.680
+Hatta yerleşim margini
+bile uygulayabilisiniz.
+
+00:08:20.680 --> 00:08:23.910
+Burada yerleşim margini mi yoksa padding
+mi olduğunu ayırt edemeyebilirisniz
+
+00:08:23.910 --> 00:08:28.050
+çünkü kullanılan arka plan saydam.
+
+00:08:28.050 --> 00:08:30.574
+Şimdi faklı padding ayarları ve margin
+değerleriyle pratik yapma
+
+00:08:30.574 --> 00:08:32.169
+sırası sizde.
+
+00:08:32.169 --> 00:08:35.090
+Aşağıdaki bağlantılarda, başlayabilmeniz
+için başlangıç kodlarını verdik.
+
+00:08:35.090 --> 00:08:38.940
+Padding ve margin değerlerini rahatça
+kullanacak hale geldiğinizde,
+
+00:08:38.940 --> 00:08:40.169
+durmayın ve bu yerleşimi
+tasarlamaya çalışın.
+
+00:08:41.210 --> 00:08:45.780
+Bu arada, bu metin köşelerden
+16 dip uzaklıkta yer alıyor.
+
+00:08:45.780 --> 00:08:49.410
+Fakat iki textView arasında
+sadece 8 dip var.
+
+00:08:49.410 --> 00:08:50.530
+İşiniz bittiğinde, bu kutuyu işaretleyin.
+

@@ -1,0 +1,630 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.360 --> 00:00:01.630
+Shu paytgacha hammasi yaxshi.
+
+00:00:01.630 --> 00:00:04.580
+Haqiqatda kuchli layoutlarni qurishda o‘zingizning 
+metodlaringiz bilan yaxshi harakat qilayapsiz.
+
+00:00:04.580 --> 00:00:09.360
+Ammo, men shu paytgacha qurgan bu barcha layoutlar 
+bilan sodir bo‘layotgan bitta muammoni tushundim.
+
+00:00:09.360 --> 00:00:12.740
+Bu ko‘rinishlar ViewGroup qirralariga qarama-qarshi 
+
+00:00:12.740 --> 00:00:14.300
+yoki qurilmaga qarama-qarshi.
+
+00:00:14.300 --> 00:00:16.490
+Biz shu paytgacha darsda qurgan barcha layoutlar uchun 
+
+00:00:16.490 --> 00:00:19.990
+birozgina oqroq bo‘sh joy qo‘shish orqali 
+ular yanada chiroyli bo‘lishi uchun 
+
+00:00:19.990 --> 00:00:23.840
+biz ularga birozgina vizual jilo qo‘sha olamiz.
+
+00:00:23.840 --> 00:00:26.240
+Biz buni mana shu videoda ko‘rib chiqadigan 
+ padding va margin 
+
+00:00:26.240 --> 00:00:28.580
+tushunchalaridan foydalangan holda qilamiz.
+
+00:00:28.580 --> 00:00:31.240
+Masalan, ko‘rinishlar bir-birini qoplab 
+qolmasligi uchun biz mana bu yerga 
+
+00:00:31.240 --> 00:00:33.780
+yoki hattoki yuqori qismiga otaning qirralariga yoki 
+
+00:00:33.780 --> 00:00:37.780
+qurilmaning qirralariga qarama-qarshi 
+tarzda biroz oq bo‘sh joy qo‘sha olamiz.
+
+00:00:37.780 --> 00:00:39.350
+Bu aslida dizayn uchun qaror 
+qabul qilishingizga bog‘liq,
+
+00:00:39.350 --> 00:00:41.550
+ba’zida siz uni men oldinroq aytib o‘tgan 
+to‘laqonli rasm effektiga o‘xshab 
+
+00:00:41.550 --> 00:00:45.140
+qirralari bir-biriga qo‘shilib 
+turishini xohlashingiz mumkin.
+
+00:00:45.140 --> 00:00:49.109
+Ammo, har ehtimolga qarshi siz yaxshiroq bo‘lishi 
+uchun birozgina oq bo‘sh joy qo‘shib qo‘ysangiz bo‘ladi,
+
+00:00:49.109 --> 00:00:53.130
+shunda, tarkib o‘qishga va ko‘rib 
+chiqishga biroz osonroq bo‘ladi.
+
+00:00:53.130 --> 00:00:56.840
+Men sizga view ga padding va 
+ margin qo‘shish ta’sirini ko‘rsataman.
+
+00:00:56.840 --> 00:00:59.480
+Keling, Hello deb yozilgan 
+ TextView bilan boshlaymiz.
+
+00:00:59.480 --> 00:01:01.880
+Agar biz view ga 8 dp 
+ padding qo‘shsak,
+
+00:01:01.880 --> 00:01:05.450
+unda u uning har bir yo‘nalishini 
+8 dpga kattalashtiradi.
+
+00:01:05.450 --> 00:01:08.081
+Agar biz TextView ga 8 dp 
+ margin qo‘shsak, 
+
+00:01:08.081 --> 00:01:10.850
+unda mana u nimaga o‘xshaydi.
+
+00:01:10.850 --> 00:01:13.470
+Bironta margin qo‘shish uchun siz uni 
+ ViewGroup ning ichiga qo‘yishingiz kerak, 
+
+00:01:13.470 --> 00:01:16.360
+shuning uchun men uni mana bu yerga 
+chiziqli layoutning ichiga qo‘yganman.
+
+00:01:16.360 --> 00:01:19.350
+Bu chiziqli layout asl TextView ni 
+oladiganlardan bittasi 
+
+00:01:19.350 --> 00:01:21.260
+va u uni 8 dpga surib qo‘yadi.
+
+00:01:21.260 --> 00:01:23.330
+Chap tomondan va yuqori qismidan.
+
+00:01:23.330 --> 00:01:25.510
+Va shuningdek tomonlardan ham.
+
+00:01:25.510 --> 00:01:27.860
+Demak, hattoki siz farzand TextView da margin 
+va padding ni e’lon qilgan bo‘lishingizga qaramasdan, 
+
+00:01:27.860 --> 00:01:32.780
+ padding TextView ning 
+o‘zi tomonidan nazorat qilinadi.
+
+00:01:32.780 --> 00:01:35.900
+Lekin, margin ota ViewGroup 
+tomonidan nazorat qilinadi.
+
+00:01:35.900 --> 00:01:39.685
+Agar bularning ikkalasi ham haqiqiy 
+qurilmada bo‘lib, sizda TextView 
+
+00:01:39.685 --> 00:01:42.820
+uchun fon bo‘lmasa, unda ikkalasi ham 
+texnik jihatdan bir xil ko‘rinadi.
+
+00:01:42.820 --> 00:01:46.030
+matn chapdan sakkiz dp va qurilmaning yuqori 
+
+00:01:46.030 --> 00:01:48.390
+qismidan ham sakkiz dp pastda bo‘lishi mumkin.
+
+00:01:48.390 --> 00:01:51.780
+Biroq, agar sizda TextView 
+uchun fon rangi bo‘lsa,
+
+00:01:51.780 --> 00:01:54.990
+unda foydalanuvchi textView mana 
+bu kattalikdaligini ko‘ra oladi.
+
+00:01:54.990 --> 00:01:58.660
+Ammo, boshqa qurilmada, TextView 
+faqatgina mana bu kattalikda bo‘la oladi.
+
+00:01:58.660 --> 00:02:00.700
+Bu yerda bironta view da padding ni 
+tasvirlash uchun kod berilgan.
+
+00:02:02.040 --> 00:02:06.576
+ TextView XML Element da, siz yangi atributni 
+mana bunday ifodalashingiz mumkin,
+
+00:02:06.576 --> 00:02:10.800
+ android ikki nuqta padding teng 
+qo‘shtirnoq ichida sakkiz dp.
+
+00:02:10.800 --> 00:02:12.320
+Siz padding uchun, u dp 
+qiymatda bo‘lishi bilanoq, 
+
+00:02:12.320 --> 00:02:15.330
+o‘zingiz xohlagan o‘lchamni 
+tanlashingiz mumkin.
+
+00:02:15.330 --> 00:02:19.080
+Qachonki biz padding ni sakkiz dps 
+deb belgilasak, u TextView ning chap,
+
+00:02:19.080 --> 00:02:21.410
+yuqori, pastki va o‘ng qirralariga 8 dip qo‘shadi.
+
+00:02:22.460 --> 00:02:25.100
+Umumiy android padding 
+atributini ishlatishning o‘rniga,
+
+00:02:25.100 --> 00:02:28.970
+siz uni chap, o‘ng, yuqori va pastki 
+qismlarga ajratib yubora olasiz.
+
+00:02:28.970 --> 00:02:32.550
+Ayniqsa, kodning mana bu to‘rtta qatori bu 
+bitta qator bilan bir xil vazifani bajarsa.
+
+00:02:32.550 --> 00:02:35.820
+Biroq, bu mayda boshqaruvlar 
+sizga chap, o‘ng, yuqori yoki 
+
+00:02:35.820 --> 00:02:39.420
+pastki qismlar uchun turli xil padding 
+qiymatlaridan foydalanish imkonini beradi.
+
+00:02:39.420 --> 00:02:43.390
+Sizda barcha to‘rtala yo‘nalish uchun teng 
+ padding qiymatlari bo‘lishi hsrt emas.
+
+00:02:43.390 --> 00:02:47.280
+ padding uchun o‘zi belgilab qo‘yilgan 
+qiymat 0, agar siz chap, o‘ng va 
+
+00:02:47.280 --> 00:02:52.110
+yuqori qism padding ni belgilab paski qism uchun belgilamagan 
+bo‘lsangiz unda pastki padding nol bo‘ladi.
+
+00:02:52.110 --> 00:02:55.990
+ margin ni belgilash uchun siz TextView ga yana atribut qo‘shasiz.
+
+00:02:55.990 --> 00:03:00.206
+atributning nomi android:layout_margin 
+
+00:03:00.206 --> 00:03:02.750
+biz uni misol uchun, sakkiz dpga tenglay olamiz.
+
+00:03:02.750 --> 00:03:07.440
+Bu farzand TextView ni otaning barcha 
+qirralaridan 8dpga surib qo‘yadi.
+
+00:03:07.440 --> 00:03:11.770
+Agar mana bu yerda yuqorida boshqa bir farzand 
+ TextView bo‘lganda, unda margin 
+
+00:03:11.770 --> 00:03:15.000
+qo‘yish bu TextView ni pastdagi birinchi 
+ TextView dan 8 dpga surib qo‘ygan bo‘lardi.
+
+00:03:16.060 --> 00:03:18.820
+Siz margin berishni bu ko‘rinish atrofida 
+biroz kuch maydoni paydo bo‘lish kabi 
+
+00:03:18.820 --> 00:03:20.050
+tasavvur qilishingiz mumkin.
+
+00:03:20.050 --> 00:03:23.750
+Boshqa ko‘rinish uning atrofidagi bu maydonga kira olmaydi.
+
+00:03:23.750 --> 00:03:27.621
+Yoki siz margin ning layoutini to‘rtta 
+yo‘nalish bo‘ylab ajratib tashlasangiz bo‘ladi, 
+
+00:03:27.621 --> 00:03:31.750
+ marginLeft layouti,
+ marginRight layouti, yuqori, va pastki.
+
+00:03:31.750 --> 00:03:35.780
+Agar siz bu qiymatlarning hech birini belgilamasangiz, 
+unda u avtomatik tarzda nolga teng bo‘ladi.
+
+00:03:35.780 --> 00:03:38.730
+ ViewGroup bu farzandlarni margin ga asoslanib 
+joylastiradiganlardan biri ekanligini eslash uchun 
+
+00:03:38.730 --> 00:03:41.930
+atributlarni qarab chiqsangiz bo‘ladi.
+
+00:03:41.930 --> 00:03:45.130
+Ularning hammasi layout undan keyin 
+tagchiziq bilan boshlanadi.
+
+00:03:45.130 --> 00:03:48.340
+Bu yo‘l bilan siz ViewGroup bu ko‘rinishlarning 
+joylashuvini nazorat qiluvchilardan 
+
+00:03:48.340 --> 00:03:48.929
+biri ekanligini bilishingiz mumkin.
+
+00:03:50.160 --> 00:03:52.790
+ padding va margin barcha 
+ view larda qo‘llanilishi mumkin.
+
+00:03:52.790 --> 00:03:55.960
+Keling, biz hozirgina o‘rgangan 
+atributlarimizni amalda sinab ko‘ramiz.
+
+00:03:55.960 --> 00:03:58.500
+Mana bu yerda menda chiziqli layoutda 
+uchta TextView bor.
+
+00:03:58.500 --> 00:04:01.000
+Ularning hammasi ekranning chap qirrasiga 
+qarama-qarshi qilib qo‘yilgan, 
+
+00:04:01.000 --> 00:04:02.259
+demak, men biroz bo‘sh joy qo‘shishni xohlayman.
+
+00:04:03.390 --> 00:04:04.910
+Keling, biroz margin 
+qo‘shish bilan boshlaymiz.
+
+00:04:05.910 --> 00:04:08.235
+Ajoyib, endi mana bu TextView ning 
+atrofida ko‘proq bo‘sh joy bor.
+
+00:04:09.420 --> 00:04:11.155
+Men qolgan ikkta TextView lar 
+uchun ham xuddi shnday qilaman.
+
+00:04:12.250 --> 00:04:17.029
+Qiziq, bu yerda 16 dp, ammo bu aslida 32 dp chunki 
+
+00:04:17.029 --> 00:04:20.260
+u birinchi TextView dan 
+sakkiz dp pastki margin ni va 
+
+00:04:20.260 --> 00:04:22.960
+ikkinchi TextView dan sakkiz dp 
+yuqorigi margin ni olyapti. 
+
+00:04:22.960 --> 00:04:24.780
+Agar biz qoldirilgan bo‘sh joy 
+o‘zgarmas bo‘lishini xohlasak, 
+
+00:04:24.780 --> 00:04:30.250
+ya’ni har bir view ning orasida 16 dp bo‘lishini xohlasak, 
+unda biz mana bu yerdagi margin ni o‘zgartirishimiz kerak.
+
+00:04:30.250 --> 00:04:33.100
+Men uni individual margin 
+qiymatlarga bo‘lib tashlay olaman.
+
+00:04:33.100 --> 00:04:37.980
+Mana bu kod bilan menda 16 dp chap 
+va 16 dp yuqori margin bor.
+
+00:04:37.980 --> 00:04:40.750
+Bu birinchi TextView dan 
+pastki margin yo‘q, demak, 
+
+00:04:40.750 --> 00:04:43.290
+endi ular orasida bo‘sh joy 
+to‘g‘ri bo‘ldi, 16 dp.
+
+00:04:43.290 --> 00:04:46.970
+Keyingi TextView uchun ham 
+shunaqa bir xil davom etadi.
+
+00:04:46.970 --> 00:04:48.780
+Ajoyib, endi barcha vertikal 
+bo‘sh joylar teng bo‘ldi.
+
+00:04:49.900 --> 00:04:53.420
+Oldinroq men sizga bu view larning qirralariga 
+bo‘sh joylar qo‘shmoqchi ekanligimizni aytganimda, 
+
+00:04:53.420 --> 00:04:56.240
+texnik jihatdan o‘sha 
+bo‘sh joy shaffof edi.
+
+00:04:56.240 --> 00:04:58.690
+Siz uning ortida nima ekanligini 
+ko‘rib chiqishingiz mumkin.
+
+00:04:58.690 --> 00:05:02.100
+Bu holatda, bizda ViewGroup da kulrang fon bor.
+
+00:05:02.100 --> 00:05:05.390
+Biz margin ishlatamizmi yoki padding mi 
+qurilmadagi layout bir xil ko‘rinishda turaveradi 
+
+00:05:05.390 --> 00:05:08.785
+chunki, bu holatda TextView da fon rangi mavjud emas.
+
+00:05:09.820 --> 00:05:12.090
+Keling uni qo‘shamiz va har bir view ning 
+chegarasi qayerda ekanligini ko‘ramiz.
+
+00:05:13.330 --> 00:05:16.180
+Yaxshi, hozir bu birinchi 
+ TextView da fon rangi mavjud.
+
+00:05:16.180 --> 00:05:20.178
+Biz chap va yuqori margin qo‘shganimizda, 
+ko‘ramizki, ViewGroup 
+
+00:05:20.178 --> 00:05:22.600
+ TextView ni shunchaki yon va 
+pastga 8 dp ga surib yuboradi.
+
+00:05:22.600 --> 00:05:26.950
+Biz bu padding ni o‘zgartira olamiz 
+va endi TextView kattaroq 
+
+00:05:26.950 --> 00:05:29.580
+va chap tomondan va yuqoridan 
+8 dp ni olganligini ko‘ramiz.
+
+00:05:30.700 --> 00:05:33.210
+Demak, sizda margin bo‘ladimi 
+yoki padding vizual jihatdan 
+
+00:05:33.210 --> 00:05:35.120
+qurilmada narsalar boshqacha 
+ko‘rinishi mumkin.
+
+00:05:35.120 --> 00:05:38.000
+Agar bu TextView fon rangiga ega bo‘lsa.
+
+00:05:38.000 --> 00:05:40.570
+Biz boshqa ko‘rinishlar uchun ham xuddi shunday qila olamiz 
+va siz bu yaxshi ekanligini payqashingiz mumkin.
+
+00:05:41.830 --> 00:05:45.400
+ padding va margin qiymatlarini 
+qo‘shish bu farzand ko‘rinishlar uchun cheklanmagan,
+
+00:05:45.400 --> 00:05:47.840
+siz uni ViewGroup da ham qo‘sha olasiz.
+
+00:05:47.840 --> 00:05:50.520
+Agar men chiziqli layout uchun padding qiymat qo‘shsam, 
+
+00:05:50.520 --> 00:05:55.680
+unda siz u view larni barcha yo‘nalishlar 
+bo‘yicha 16 dp ga o‘zgartirishingiz mumkin.
+
+00:05:55.680 --> 00:05:59.390
+Men siz padding va margin uchun 
+istalgan qiymat bera olishingizni aytib o‘tdim.
+
+00:05:59.390 --> 00:06:01.380
+Ammo qaysi qiymatni tanlashni qanday qilib bilasiz?
+
+00:06:01.380 --> 00:06:04.740
+Xo‘sh, material dizayn qo‘llanmasi sizga bu 
+qiymatni 8 dpga oshirib ketaverishni 
+
+00:06:04.740 --> 00:06:05.750
+tavsiya qiladi.
+
+00:06:05.750 --> 00:06:09.190
+Bu biroz chuqurroq bilim, ammo biz 
+tarkibiy qismlar ekranning kvadrat 
+
+00:06:09.190 --> 00:06:13.000
+shaklidagi chegara bo‘ylab sakkiz dpda 
+qator bo‘lib turishini xohlaymiz.
+
+00:06:13.000 --> 00:06:15.870
+Hozir kvadratlar aslida ekranda ko‘rsatilmaydi, ammo 
+
+00:06:15.870 --> 00:06:17.710
+agar siz matnni bu yerga joylashtirishni xohlasangiz,
+
+00:06:17.710 --> 00:06:21.090
+siz ularning ustidan mana bu ikkita kvadratlar 
+kabi chapga ko‘chirishingiz mumkin.
+
+00:06:21.090 --> 00:06:25.280
+Bu panjaradagi ikkita kvadrat 
+16 dp ga teng bo‘la oladi.
+
+00:06:25.280 --> 00:06:28.980
+Mana bu email ekranida, barcha ikonkalar 
+mana bu qatorga terib chiqilgan.
+
+00:06:28.980 --> 00:06:33.120
+Ular bu ekranning chap qirrasidan 
+16 dpda joylashtirilgan, va 
+
+00:06:33.120 --> 00:06:38.020
+bu yerdagi barcha matn bu ekranning chap 
+qirrasidan 72 dpda joylashtirilgan.
+
+00:06:38.020 --> 00:06:41.280
+Demak, siz qandaydir tasavvur qilishingiz 
+mumkinki, tarkib bu yerdagi aniq chiziqlarga 
+
+00:06:41.280 --> 00:06:42.250
+ergashishni boshlayapti.
+
+00:06:42.250 --> 00:06:44.440
+Bu yerda uni tasavvur qilishni 
+boshqa yo‘li ko‘rsatilgan.
+
+00:06:44.440 --> 00:06:47.160
+ Google I/O ilovasining mana bu skrinshotida,
+
+00:06:47.160 --> 00:06:53.920
+bizda mana bu 16 dp, shuningdek 72 dp chiziqlarga 
+qator qilib terilgan tarkib mavjud.
+
+00:06:53.920 --> 00:06:57.395
+U ayniqsa, ekranning chap 
+qirrasidan 72 dpda turgani.
+
+00:06:57.395 --> 00:06:58.855
+Va bu qirrada, 
+
+00:06:58.855 --> 00:07:03.303
+tarkib ekranning o‘ng qirrasidan 
+oldin 16 dpda to‘xtaydi.
+
+00:07:03.303 --> 00:07:05.485
+Planshetda, ekranning maydoni kattaroq, 
+
+00:07:05.485 --> 00:07:07.495
+demak, siz biroz kattaroq padding 
+ishlata olasiz.
+
+00:07:07.495 --> 00:07:10.635
+U ekranning chap qirrasidan 24 dpda 
+bo‘la oladi va boshqa qiymatlar 
+
+00:07:10.635 --> 00:07:12.175
+uchun ham shunga o‘xshash.
+
+00:07:12.175 --> 00:07:16.645
+Biz bu qiymatlarni tavsiya qilayotganimizning sababi sizning 
+kontentingiz o‘qishga oson bo‘lishini xohlaymiz.
+
+00:07:16.645 --> 00:07:20.250
+Misol uchun, agar mana bu sarlavha bir 
+necha piksellarga o‘zgartirilgan va 
+
+00:07:20.250 --> 00:07:23.660
+pastki matn o‘ngga bir necha piksellarga 
+o‘zgartirilgan bo‘lganda,
+
+00:07:23.660 --> 00:07:25.560
+bu yerda chetki qism qo‘pol bo‘lib qolgan bo‘lardi.
+
+00:07:25.560 --> 00:07:29.780
+Va bu foydalanuvchini sizning haqiqiy kontentingizni 
+o‘qishdan chalg‘itgan bo‘lardi.
+
+00:07:29.780 --> 00:07:34.540
+Demak, hamma narsani qator bo‘ylab joylashtrish sizning 
+ilovangizni o‘qishga va foydalanishga qulay qilib beradi.
+
+00:07:34.540 --> 00:07:38.120
+Bu yerda margin da padding ni ishlatish bo‘yicha 
+bir nechta haqiqiy hayotdan olingan misollar keltirilgan.
+
+00:07:38.120 --> 00:07:40.190
+Mana bu Google Calendar 
+ilovasining skrinshotida,
+
+00:07:40.190 --> 00:07:43.680
+mana bu yerda biroz o‘zgartirilgan 
+ba’zi matnlarni ko‘ramiz.
+
+00:07:43.680 --> 00:07:46.680
+Bu kalendar hodisalari orasida 
+ham ozgina bo‘sh joy mavjud.
+
+00:07:46.680 --> 00:07:48.180
+Agar biz uni padding dan 
+foydalanish orqali amalga oshirsak, 
+
+00:07:48.180 --> 00:07:52.360
+unda bu fon rasmi ehtimol ana u bo‘sh 
+joy bo‘ylab kengaygan bo‘lardi.
+
+00:07:52.360 --> 00:07:55.920
+Uning o‘rniga biz margin ishlatamiz, keyin u view ning 
+atrofi bo‘ylab biroz bufer hududini qo‘shadi, 
+
+00:07:55.920 --> 00:07:57.820
+shuning uchun balki margin ishlatamiz.
+
+00:07:57.820 --> 00:08:01.890
+Bu yerda kalendar hodisalari uchun batafsilroq 
+ko‘rsatilgan sahifaning skrinshoti.
+
+00:08:01.890 --> 00:08:06.160
+Buyerda juda ko‘p matn bor va bu yerda boshqalariga 
+qaraganda ko‘proq bo‘shliq bordek tuyulyapti.
+
+00:08:06.160 --> 00:08:08.700
+Biz bu kattaroq bo‘shliqlarni padding 
+qo‘shish orqali hosil qilishingiz mumkin.
+
+00:08:08.700 --> 00:08:13.370
+Bu bo‘shliqni mana bu yerga qo‘shish uchun siz yoki bu 
+ TextView ga pastki padding qo‘sha olasiz yoki
+
+00:08:13.370 --> 00:08:15.130
+siz mana bu view ga yuqori 
+ padding qo‘sha olasiz.
+
+00:08:16.140 --> 00:08:17.600
+Ikkala yo‘l ham ishlaydi.
+
+00:08:17.600 --> 00:08:20.680
+Yoki siz uni hattoki margin layoutini 
+ishlatib ham amalga oshirishingiz mumkin.
+
+00:08:20.680 --> 00:08:23.910
+Bu holatda siz rostdan ham margin va 
+ padding o‘rtasidagi farqni ayta olmaysiz, 
+
+00:08:23.910 --> 00:08:28.050
+chunki, matnning fonida shaffof rang ishlatilyapti.
+
+00:08:28.050 --> 00:08:30.574
+Endi siz uchun turli xil padding 
+va margin qiymatlarini 
+
+00:08:30.574 --> 00:08:32.169
+amalda sinab ko‘rish vaqti keldi.
+
+00:08:32.169 --> 00:08:35.090
+Boshlab olishingiz uchun quyidagi havola orqali 
+ba’zi boshlang‘ich kodlarni berganmiz.
+
+00:08:35.090 --> 00:08:38.940
+ padding va margin ga moslashib 
+olganingizdan keyin davom eting va 
+
+00:08:38.940 --> 00:08:40.169
+mana bu joylashuv tartibini qurib 
+bitirishga harakat qiling.
+
+00:08:41.210 --> 00:08:45.780
+Aytgancha, mana bu matn bu yerdagi 
+qirralardan 16 dpda joylashgan.
+
+00:08:45.780 --> 00:08:49.410
+Ammo bu ikkita TextView ning har 
+biridan faqatgina 8 dpda bo‘ladi.
+
+00:08:49.410 --> 00:08:50.530
+Qilib bo‘lganizdan keyin 
+mana bu qutini tekshiring.
+

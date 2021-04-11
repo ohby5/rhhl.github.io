@@ -1,0 +1,398 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.390 --> 00:00:03.980
+On a appris qu'une disposition
+linéaire pouvait s'orienter soit
+
+00:00:03.980 --> 00:00:06.140
+à la verticale, soit à l'horizontale.
+
+00:00:06.140 --> 00:00:09.380
+On a aussi vu que chaque vue peut avoir
+une valeur de pondération
+
+00:00:09.380 --> 00:00:11.350
+pour remplir tout l'espace
+de la vue parente.
+
+00:00:12.710 --> 00:00:14.520
+On va maintenant prendre
+un moment pour parler
+
+00:00:14.520 --> 00:00:16.450
+du groupe de vues
+<i>RelativeLayout</i>.
+
+00:00:16.450 --> 00:00:19.910
+Il vous servira à créer
+des dispositions encore plus souples.
+
+00:00:19.910 --> 00:00:22.140
+Vous vous souvenez de Ray,
+la disposition relative ?
+
+00:00:22.140 --> 00:00:25.590
+C'est le père, et il est représenté
+par ce groupe de vues.
+
+00:00:25.590 --> 00:00:29.250
+Il aide les vues filles
+à se placer dans ce conteneur.
+
+00:00:29.250 --> 00:00:32.360
+Avec <i>RelativeLayout</i>, on peut
+placer une vue fille en fonction de
+
+00:00:32.360 --> 00:00:34.840
+la vue parente, par exemple
+en haut ou en bas de la parente.
+
+00:00:35.850 --> 00:00:39.680
+On peut sinon placer les vues filles
+par rapport à d'autres vues filles.
+
+00:00:39.680 --> 00:00:40.920
+Comme ça.
+
+00:00:40.920 --> 00:00:44.520
+Voyons d'abord le cas où les vues
+sont placées en fonction de leur
+
+00:00:44.520 --> 00:00:45.780
+vue parente.
+
+00:00:45.780 --> 00:00:50.220
+Dans notre cas, cette disposition parente
+a une largeur qui vaut <i>match_parent</i>,
+
+00:00:50.220 --> 00:00:53.550
+et une hauteur qui vaut <i>match_parent</i>,
+donc elle prend tout l'écran.
+
+00:00:53.550 --> 00:00:56.660
+Les enfants d'une disposition
+relative peuvent être placés
+
+00:00:56.660 --> 00:01:00.880
+en fonction des bords gauche, haut,
+droit et bas de la parente.
+
+00:01:00.880 --> 00:01:04.519
+Voici le code à utiliser.
+Dans la vue fille de l'élément XML,
+
+00:01:04.519 --> 00:01:08.540
+par exemple une <i>ImageView</i> ou
+une <i>TextView</i>, on ajoute ces attributs.
+
+00:01:08.540 --> 00:01:14.440
+Le nom de l'attribut a la forme suivante :
+« <i>android:layout_alignParentTop</i> ».
+
+00:01:14.440 --> 00:01:17.120
+Cet attribut indique
+si oui ou non la vue fille
+
+00:01:17.120 --> 00:01:19.400
+touche le bord du haut de
+la vue parente.
+
+00:01:19.400 --> 00:01:22.640
+Il peut donc valoir
+soit <i>true</i> (vrai) soit <i>false</i> (faux).
+
+00:01:22.640 --> 00:01:25.780
+Avec <i>true</i>, la vue devrait jouxter
+le bord supérieur de la parente.
+
+00:01:25.780 --> 00:01:28.540
+Sinon, elle ne devrait pas le toucher.
+
+00:01:28.540 --> 00:01:30.990
+Il existe aussi des attributs
+pour chacun des autres bords.
+
+00:01:30.990 --> 00:01:34.800
+Par exemple, <i>alignParentBottom</i>, pour
+toucher le bord inférieur de la parente.
+
+00:01:34.800 --> 00:01:37.460
+Il y a <i>alignParentLeft</i>, pour longer
+le bord gauche de la parente.
+
+00:01:37.460 --> 00:01:41.000
+Puis on a <i>alignParentRight</i>, pour toucher
+le bord de droite de la parente.
+
+00:01:42.050 --> 00:01:44.970
+On peut tout mélanger et utiliser
+plusieurs attributs en même temps.
+
+00:01:45.980 --> 00:01:47.680
+Prenons cette <i>ImageView</i> comme exemple.
+
+00:01:47.680 --> 00:01:52.370
+On veut que
+l'attribut <i>alignParentTop</i> soit actif,
+
+00:01:52.370 --> 00:01:54.850
+parce qu'elle touche
+le bord supérieur de la parente.
+
+00:01:54.850 --> 00:01:57.510
+Elle touche également
+les bords gauche et droite de la parente.
+
+00:01:57.510 --> 00:02:00.220
+Donc on passera les attributs <i>left</i>
+et <i>right</i> à <i>true</i> également.
+
+00:02:01.270 --> 00:02:04.896
+La vue ne touche pas le bas de la parente,
+donc on dit que <i>bottom</i> vaut <i>false</i>.
+
+00:02:04.896 --> 00:02:08.410
+Quant à cette <i>TextView</i> en bas,
+
+00:02:08.410 --> 00:02:11.430
+elle jouxte
+les bords inférieur, droit et gauche.
+
+00:02:12.580 --> 00:02:15.910
+Donc <i>alignParentBottom</i> vaudra <i>true</i>,
+<i>alignParentLeft</i> vaudra <i>true</i>,
+
+00:02:15.910 --> 00:02:19.809
+<i>alignParentRight</i> vaudra <i>true</i>,
+mais <i>alignParentTop</i> vaudra <i>false</i>.
+
+00:02:21.280 --> 00:02:24.640
+En plus de placer
+une vue fille en haut ou en bas
+
+00:02:24.640 --> 00:02:28.440
+de l'écran, on peut aussi
+la placer sur des coins précis.
+
+00:02:28.440 --> 00:02:31.850
+Si on veut placer la <i>TextView</i>
+« <i>Birthday</i> » en haut à gauche,
+
+00:02:31.850 --> 00:02:36.190
+on va dire qu'<i>alignParentTop</i> vaut <i>true</i>…
+et qu'<i>alignParentLeft</i> aussi.
+
+00:02:37.350 --> 00:02:39.560
+Pour placer une vue en haut à droite,
+
+00:02:39.560 --> 00:02:43.450
+on veut la faire toucher les bords
+supérieur et droit de la parente.
+
+00:02:43.450 --> 00:02:46.280
+Donc <i>alignParentTop</i> vaut <i>true</i>
+et <i>alignParentRight</i> aussi.
+
+00:02:46.280 --> 00:02:50.850
+Pour l'angle en bas à gauche,
+on touche les bords gauche
+
+00:02:50.850 --> 00:02:51.430
+et inférieur.
+
+00:02:52.780 --> 00:02:54.490
+Donc on dit
+qu'<i>alignParentBottom</i> vaut <i>true</i>,
+
+00:02:54.490 --> 00:02:56.210
+et qu'<i>alignParentLeft</i> aussi.
+
+00:02:57.240 --> 00:03:00.480
+Ces valeurs-ci valent <i>false</i> (faux),
+et c'est aussi leur valeur par défaut,
+
+00:03:00.480 --> 00:03:02.240
+donc inutile de les mettre
+dans le code XML.
+
+00:03:02.240 --> 00:03:06.170
+Enfin pour le tout dernier angle,
+on touchera les bords droit et inférieur
+
+00:03:06.170 --> 00:03:07.030
+de la parente, donc
+
+00:03:07.030 --> 00:03:10.940
+<i>alignParentBottom</i> et <i>alignParentRight</i>
+valent tous les deux <i>true</i>.
+
+00:03:10.940 --> 00:03:12.210
+Les deux autres valent <i>false</i>
+
+00:03:12.210 --> 00:03:14.180
+donc on ne les précisera pas
+dans le code.
+
+00:03:14.180 --> 00:03:17.140
+Croyez-le ou non,
+il existe d'autres attributs réglables.
+
+00:03:17.140 --> 00:03:20.190
+On peut centrer
+une vue horizontalement, donc
+
+00:03:20.190 --> 00:03:23.030
+Pour ça, on dit que « <i>android
+layout_centerHorizontal</i> » vaut <i>true</i>.
+
+00:03:23.030 --> 00:03:27.530
+On peut aussi le combiner aux autres
+attributs qu'on vient d'apprendre,
+
+00:03:27.530 --> 00:03:30.550
+donc si la vue touche le bord inférieur
+et est centrée horizontalement,
+
+00:03:30.550 --> 00:03:32.220
+on aurait ceci.
+
+00:03:32.220 --> 00:03:34.870
+Dernier attribut que je veux vous
+montrer, <i>layout_centerVertical</i>.
+
+00:03:34.870 --> 00:03:39.445
+Quand il vaut <i>true</i>, il centre la vue
+à mi-hauteur dans la parente.
+
+00:03:39.445 --> 00:03:43.015
+Notez que cette <i>TextView</i> touche le bord
+de gauche de la vue parente, alors que
+
+00:03:43.015 --> 00:03:47.085
+sa valeur n'a pas été donnée. C'est parce
+que toute vue ajoutée à une disposition
+
+00:03:47.085 --> 00:03:51.550
+relative est placée par défaut
+en haut à gauche du groupe de vues.
+
+00:03:51.550 --> 00:03:54.300
+On appelle ces attributs des paramètres
+de disposition de groupes.
+
+00:03:54.300 --> 00:03:58.100
+Bien qu'ils soit déclarés dans
+les éléments XML filles d'un groupe,
+
+00:03:58.100 --> 00:04:02.440
+ces attributs sont utilisés par le groupe
+parent pour placer les vues filles.
+
+00:04:02.440 --> 00:04:05.098
+Ils débutent donc tous par « <i>layout_</i> ».
+
+00:04:05.098 --> 00:04:08.050
+On les écrits donc de la même façon que
+<i>layout_width</i> et <i>layout_height</i>
+
+00:04:08.050 --> 00:04:10.960
+que vous connaissez déjà.
+
+00:04:10.960 --> 00:04:14.810
+Ces deux attributs sont aussi des
+paramètres de disposition de groupe, car
+
+00:04:14.810 --> 00:04:17.920
+le groupe parent s'en sert pour
+placer et dimensionner les vues filles.
+
+00:04:17.920 --> 00:04:22.089
+Voici le code XML de <i>RelativeLayout</i>
+et ses vues filles.
+
+00:04:22.089 --> 00:04:24.450
+Vous pouvez le voir
+avec le lien ci-dessous.
+
+00:04:24.450 --> 00:04:28.110
+On a une balise ouvrante <i>RelativeLayout</i>
+ici, et une balise fermante tout en bas
+
+00:04:28.110 --> 00:04:30.740
+et toutes les vues filles entre les deux.
+
+00:04:30.740 --> 00:04:31.250
+La largeur
+
+00:04:31.250 --> 00:04:34.490
+et la hauteur de la <i>RelativeLayout</i>
+valent <i>match_parent</i>.
+
+00:04:34.490 --> 00:04:35.620
+Comme c'est la disposition
+
+00:04:35.620 --> 00:04:39.070
+de toute notre application,
+elle prendra tout l'écran.
+
+00:04:39.070 --> 00:04:42.310
+La disposition relative contient
+trois <i>TextViews</i> filles.
+
+00:04:42.310 --> 00:04:45.380
+La première est une <i>TextView</i>
+qui dit « <i>Happy</i> ».
+
+00:04:45.380 --> 00:04:49.090
+Largeur et hauteur valent <i>wrap_content</i>
+et on a ici les attributs supplémentaires
+
+00:04:49.090 --> 00:04:53.520
+pour aider la <i>RelativeLayout</i>
+à savoir où placer cette <i>TextView</i> fille.
+
+00:04:53.520 --> 00:04:56.060
+On lui dit de toucher
+le bord droit de la parente, et
+
+00:04:56.060 --> 00:04:58.290
+de toucher le bord supérieur aussi.
+
+00:04:58.290 --> 00:05:01.900
+Ça positionne la <i>TextView</i> « <i>Happy</i> »
+en haut à droite de l'écran.
+
+00:05:01.900 --> 00:05:05.670
+Pour la <i>TextView</i> « <i>Birthday</i> »,
+on a aussi <i>wrap_content</i> en dimensions.
+
+00:05:05.670 --> 00:05:09.100
+On veut qu'elle touche les bords
+inférieur et gauche de la parente.
+
+00:05:09.100 --> 00:05:12.750
+Et nos bords inférieur et de gauche
+se rejoignent à cet angle ici.
+
+00:05:12.750 --> 00:05:16.690
+Cette dernière <i>TextView</i> qui dit
+« <i>To You</i> » n'a aucun attribut
+
+00:05:16.690 --> 00:05:19.750
+particulier pour dire où elle est
+vis-à-vis de sa parente.
+
+00:05:19.750 --> 00:05:22.410
+Tout ce qu'on sait, c'est que
+ses dimensions valent <i>wrap_content</i>.
+
+00:05:22.410 --> 00:05:25.703
+Comme je l'ai dit, si on ne précise pas
+où une vue fille devrait se trouver,
+
+00:05:25.703 --> 00:05:29.267
+par défaut, la disposition relative
+la placera en haut à gauche de l'écran.
+

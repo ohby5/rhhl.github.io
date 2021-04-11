@@ -1,0 +1,194 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.400 --> 00:00:03.003
+Este es el XML original que os dimos.
+
+00:00:03.469 --> 00:00:05.272
+Era un LinearLayout vertical
+
+00:00:05.471 --> 00:00:07.508
+y los ítems aparecían
+en una columna vertical.
+
+00:00:07.975 --> 00:00:09.776
+Según la imagen del examen,
+
+00:00:10.143 --> 00:00:12.779
+queremos que el ítem
+se parezca más a una lista de ítems
+
+00:00:12.946 --> 00:00:14.448
+utilizando un RelativeLayout.
+
+00:00:14.715 --> 00:00:16.315
+Aquí está la solución.
+
+00:00:16.517 --> 00:00:19.019
+Cambiamos el <i>layout </i>de manera
+que la foto quede a la izquierda
+
+00:00:19.386 --> 00:00:21.488
+y las tres vistas de texto
+vayan al lado derecho.
+
+00:00:21.788 --> 00:00:24.925
+Para hace este<i> layout</i>,
+cambié la vista raíz
+
+00:00:25.125 --> 00:00:27.528
+a un RelativeLayout
+en vez de un LinearLayout.
+
+00:00:27.995 --> 00:00:29.530
+Como esta es la etiqueta de apertura,
+
+00:00:29.696 --> 00:00:31.965
+tuve que actualizar
+la etiqueta de cierre del final.
+
+00:00:32.665 --> 00:00:35.669
+Entre las etiquetas de apertura y cierre,
+tenemos cuatro vistas de hijo.
+
+00:00:36.470 --> 00:00:40.073
+También eliminé
+la orientación vertical del atributo,
+
+00:00:40.240 --> 00:00:42.176
+porque pertenecía al LinearLayout.
+
+00:00:42.509 --> 00:00:45.712
+El RelativeLayout no necesita
+ningún atributo de orientación.
+
+00:00:46.113 --> 00:00:48.248
+La foto ya estaba colocada correctamente.
+
+00:00:48.715 --> 00:00:52.419
+El primer hijo de un RelativeLayout
+siempre va por defecto
+
+00:00:52.586 --> 00:00:53.987
+en la esquina superior izquierda.
+
+00:00:54.154 --> 00:00:55.656
+Esto queremos
+para la lista de ítems,
+
+00:00:55.856 --> 00:00:57.257
+así que esto se queda igual.
+
+00:00:57.457 --> 00:01:00.327
+Nos encontramos con la vista de texto
+que dice "guijarros de la playa".
+
+00:01:00.627 --> 00:01:03.664
+Queremos colocar esta imagen
+a la derecha de la vista de imagen,
+
+00:01:03.864 --> 00:01:07.434
+así que necesitamos añadir
+el atributo <i>layout_torightof</i>
+
+00:01:07.734 --> 00:01:09.736
+y luego mencionar la vista de imagen.
+
+00:01:10.070 --> 00:01:11.638
+Para mencionar la vista de imagen,
+
+00:01:11.772 --> 00:01:14.675
+tenemos que añadir un atributo ID
+a la vista de imagen.
+
+00:01:15.242 --> 00:01:18.111
+Yo lo llamé "foto",
+pero podéis llamarlo como queráis.
+
+00:01:18.946 --> 00:01:21.815
+Eso posicionó la imagen correctamente
+y la primera vista de texto.
+
+00:01:22.216 --> 00:01:25.052
+La siguiente vista de texto
+muestra el texto "California".
+
+00:01:25.686 --> 00:01:28.956
+La vista de texto "California"
+a la derecha de la foto
+
+00:01:29.256 --> 00:01:31.859
+y debajo de la vista
+de texto "Playa de guijarros".
+
+00:01:32.192 --> 00:01:35.095
+Primero añadimos
+el atributo<i> layout_toRightof</i>
+
+00:01:35.362 --> 00:01:36.763
+y mencionamos la foto.
+
+00:01:36.930 --> 00:01:39.233
+Luego añadimos otro atributo <i>layout </i>debajo
+
+00:01:39.533 --> 00:01:41.435
+y mencionado la primera vista de texto.
+
+00:01:41.768 --> 00:01:44.972
+Esto requirió también añadir una ID
+para la primera vista de texto.
+
+00:01:45.205 --> 00:01:46.640
+La llamamos simplemente "nombre".
+
+00:01:46.874 --> 00:01:49.576
+Tenemos la posición, la vista de imagen
+y las dos vistas de texto.
+
+00:01:49.776 --> 00:01:52.312
+Por último, tenemos la vista de texto
+que muestra la distancia.
+
+00:01:52.479 --> 00:01:53.881
+Dieciséis kilómetros de distancia.
+
+00:01:54.081 --> 00:01:57.050
+Aparece a la derecha de la imagen
+y debajo la vista de texto "California".
+
+00:01:57.751 --> 00:02:01.021
+Por consiguiente, añadimos
+el atributo <i>layout_toRightof</i>
+
+00:02:01.188 --> 00:02:02.723
+con respecto a la foto.
+
+00:02:03.056 --> 00:02:05.959
+Además, tuvimos que añadir un atributo
+para el <i>layout</i> de abajo
+
+00:02:06.293 --> 00:02:08.262
+y mencionar la ubicación
+de la vista de texto.
+
+00:02:08.829 --> 00:02:12.699
+Esto significa añadir la ID
+para la ubicación del lugar.
+
+00:02:13.133 --> 00:02:15.702
+También incluí una ID
+para la distancia de la vista de texto.
+
+00:02:15.903 --> 00:02:17.804
+Aunque no la mencionemos
+en ninguna parte,
+
+00:02:18.005 --> 00:02:20.007
+no hace daño a nadie
+añadir una ID a una vista.
+
+00:02:20.274 --> 00:02:23.710
+Si necesitáis mencionarla más tarde,
+ya la tenéis ahí.
+

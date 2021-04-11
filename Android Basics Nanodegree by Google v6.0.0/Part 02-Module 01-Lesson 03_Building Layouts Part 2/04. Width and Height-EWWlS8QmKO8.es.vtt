@@ -1,0 +1,379 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.100 --> 00:00:02.700
+Hasta ahora, hemos creado
+una lista de invitados para la fiesta.
+
+00:00:02.767 --> 00:00:05.500
+¿La lista de invitados
+para la fiesta de cumpleaños?
+
+00:00:05.567 --> 00:00:06.567
+Sí.
+
+00:00:06.633 --> 00:00:08.500
+Espero estar en esa lista.
+
+00:00:09.133 --> 00:00:10.800
+Bueno, ya veremos...
+
+00:00:10.867 --> 00:00:13.533
+Vaya... Ahora me siento
+como si fuera un niño pequeño.
+
+00:00:13.833 --> 00:00:15.067
+Hablando de cosas pequeñas,
+
+00:00:15.133 --> 00:00:17.867
+vamos a hablar del tamaño
+de las vistas en pantalla.
+
+00:00:18.000 --> 00:00:21.100
+Hemos utilizado
+la altura corregida, el DP, ¿verdad?
+
+00:00:21.167 --> 00:00:23.233
+Sí, la anchura y la altura.
+
+00:00:23.633 --> 00:00:26.467
+También podemos configurar
+cómo se coloca el contenido con la vista.
+
+00:00:26.533 --> 00:00:29.767
+Es una forma rara de decir que la vista
+va a entrar dentro del contenido.
+
+00:00:29.833 --> 00:00:32.800
+Si el contenido aumenta, la vista crece.
+Y si disminuye, la vista se ajusta.
+
+00:00:32.867 --> 00:00:34.167
+Y hay una tercera opción,
+
+00:00:34.233 --> 00:00:35.919
+que es lo que llamamos <i>match_parent</i>.
+
+00:00:36.633 --> 00:00:37.800
+Qué extraño...
+
+00:00:37.933 --> 00:00:41.500
+Suena como si te metieras en una página
+para ligar con padres solteros.
+
+00:00:41.567 --> 00:00:42.567
+No tiene nada que ver.
+
+00:00:42.633 --> 00:00:45.400
+"match_parent" significa
+que la vista será
+
+00:00:45.467 --> 00:00:47.300
+igual de ancha o alta
+que la de su padre.
+
+00:00:47.367 --> 00:00:48.367
+Tiene sentido.
+
+00:00:48.433 --> 00:00:49.967
+Yo soy una vista y tengo un padre.
+
+00:00:50.033 --> 00:00:53.533
+Yo seré igual de ancho
+y largo que mi padre.
+
+00:00:53.800 --> 00:00:55.833
+Sí, eso es.
+Así que vamos a resumir.
+
+00:00:55.900 --> 00:00:59.567
+Los valores que se pueden ajustar
+en una vista son la anchura,
+
+00:00:59.700 --> 00:01:01.367
+corregir DP para la anchura y la altura...
+
+00:01:01.433 --> 00:01:03.267
+También puedes usar <i>wrap_content.</i>
+
+00:01:03.333 --> 00:01:06.300
+Y lo siguiente que vamos a probar
+es <i>match_parent.</i>
+
+00:01:06.567 --> 00:01:10.067
+Veamos unos ejemplos de cómo al ajustar
+la anchura de las diferentes vistas hijas
+
+00:01:10.133 --> 00:01:13.467
+en una disposición lineal podemos alterar
+la interfaz de usuario final.
+
+00:01:13.667 --> 00:01:18.500
+En este ejemplo, hemos fijado
+el ancho de cada vista en 200dp.
+
+00:01:19.000 --> 00:01:22.433
+Si el contenido que está
+dentro de cada vista se pasa de 200dp,
+
+00:01:22.500 --> 00:01:25.833
+correremos el riesgo
+de que el contenido se corte, como aquí.
+
+00:01:26.167 --> 00:01:28.833
+En este ejemplo,
+hemos configurado cada vista hija
+
+00:01:28.900 --> 00:01:31.533
+para que tenga un ancho
+que se ajuste al contenido <i>wrap_content</i>.
+
+00:01:31.600 --> 00:01:33.433
+Ahora se muestra todo el contenido,
+
+00:01:33.500 --> 00:01:37.533
+pero el ancho de cada vista varía mucho
+dependiendo de lo que haya dentro de ella.
+
+00:01:37.900 --> 00:01:40.467
+En este ejemplo, hemos configurado
+el ancho de cada vista hija
+
+00:01:40.533 --> 00:01:41.933
+para que coincida con el del padre.
+
+00:01:42.000 --> 00:01:43.867
+Puedes ver que el ancho de cada hijo
+
+00:01:43.967 --> 00:01:46.567
+es igual
+que el del <i>ViewGroups</i>, el padre.
+
+00:01:46.633 --> 00:01:49.033
+Independientemente del contenido
+que haya en ellas.
+
+00:01:49.667 --> 00:01:53.700
+Esos valores pueden aplicarse también
+a la altura de cada vista.
+
+00:01:53.933 --> 00:01:58.733
+En este ejemplo, hemos fijado
+la altura de la <i>TextView</i> hija a 200dp.
+
+00:01:59.233 --> 00:02:01.333
+Si el contenido es más alto,
+
+00:02:01.567 --> 00:02:04.233
+correremos el riesgo
+de que el contenido aparezca cortado.
+
+00:02:05.433 --> 00:02:08.067
+En este ejemplo,
+hemos configurado la <i>TextView</i> hija
+
+00:02:08.100 --> 00:02:09.870
+para que se ajuste
+al contenido <i>wrap_content</i>.
+
+00:02:09.910 --> 00:02:11.967
+Así, se mostrará
+todo el contenido en pantalla
+
+00:02:12.033 --> 00:02:15.000
+y no habrá ninguna parte cortada,
+porque el tamaño de la <i>TextView</i>
+
+00:02:15.067 --> 00:02:17.167
+depende del contenido que haya en ella.
+
+00:02:17.567 --> 00:02:20.400
+En este ejemplo, hemos configurado
+la altura de cada vista hija
+
+00:02:20.467 --> 00:02:22.700
+para que coincida
+con la del padre <i>match_parent</i>.
+
+00:02:22.767 --> 00:02:25.233
+Así, la vista hija
+es igual de alta que la de su padre,
+
+00:02:25.300 --> 00:02:27.400
+independientemente
+del contenido que haya en ella.
+
+00:02:27.700 --> 00:02:29.700
+Vamos a abrir el visor XML
+
+00:02:29.767 --> 00:02:32.900
+para intentar ser
+como nuestros padres en el código.
+
+00:02:32.967 --> 00:02:36.433
+Encontrarás un enlace
+al visor XML con el código base
+
+00:02:36.500 --> 00:02:38.367
+en las notas del formador, abajo.
+
+00:02:39.000 --> 00:02:41.500
+En este caso,
+tenemos la <i>LinearLayout</i> en vista <i>root</i>
+
+00:02:41.567 --> 00:02:44.433
+de esta disposición porque
+es la primera vista y la más exterior.
+
+00:02:45.567 --> 00:02:49.033
+Si configuramos el ancho y la altura
+a <i>match_parent</i> en esta vista <i>root,</i>
+
+00:02:49.100 --> 00:02:51.800
+y la configuramos como
+la disposición principal de nuestra app,
+
+00:02:51.867 --> 00:02:55.600
+esta <i>LinearLayout</i> será tan alta
+y ancha como la pantalla del dispositivo.
+
+00:02:56.700 --> 00:03:00.233
+Puedo enseñarte cómo configurar
+el fondo de esta <i>LinearLayout</i>
+
+00:03:00.300 --> 00:03:03.767
+para que tenga un color no transparente.
+
+00:03:04.400 --> 00:03:07.033
+Si pongo un gris de color de fondo
+en esta <i>LinearLayout,</i>
+
+00:03:07.100 --> 00:03:11.367
+verás que el gris se extiende
+a lo largo y ancho del dispositivo.
+
+00:03:11.633 --> 00:03:13.720
+¿Qué pasaría si trato de cambiar
+el ancho o la altura
+
+00:03:13.767 --> 00:03:15.900
+de estas <i>TextViews</i> a <i>match_parent?</i>
+
+00:03:15.967 --> 00:03:18.367
+Para dejar claros
+los extremos de cada vista,
+
+00:03:18.433 --> 00:03:20.933
+voy a poner un color de fondo
+para cada una de ellas.
+
+00:03:21.467 --> 00:03:25.067
+Voy a cambiar la altura
+de esta <i>TextView</i> a <i>match_parent.</i>
+
+00:03:25.367 --> 00:03:28.200
+Recuerda que entre las dos palabras
+hay una barra baja <i>match_parent</i>.
+
+00:03:28.267 --> 00:03:32.233
+Ahora verás que la <i>TextView</i>
+ocupa toda la altura del padre.
+
+00:03:32.433 --> 00:03:35.133
+Por desgracia,
+saca todo fuera de la pantalla,
+
+00:03:35.200 --> 00:03:36.500
+así que no es lo que queremos.
+
+00:03:36.567 --> 00:03:38.633
+Vamos a volver a poner <i>wrap_content.</i>
+
+00:03:38.933 --> 00:03:39.933
+Bien.
+
+00:03:40.000 --> 00:03:43.200
+Vamos a cambiar el ancho
+a <i>match_parent</i> para ver lo que pasa.
+
+00:03:43.600 --> 00:03:47.667
+El ancho de la <i>TextView</i>
+es igual que el del padre.
+
+00:03:47.733 --> 00:03:50.733
+Y este, a su vez,
+es igual que el del dispositivo.
+
+00:03:51.733 --> 00:03:54.867
+Si cambio también
+las otras <i>TextViews</i> a <i>match_parent,</i>
+
+00:03:54.933 --> 00:03:58.867
+verás que empiezan a ocupar
+todo el ancho que ocupa su padre.
+
+00:03:59.467 --> 00:04:01.533
+Quiero destacar otra cosa.
+
+00:04:01.733 --> 00:04:04.467
+Cada vez que veas un atributo
+que empieza por <i>layout</i> con algo más,
+
+00:04:04.533 --> 00:04:06.596
+como <i>layout_height</i> o <i>layout_width</i>,
+
+00:04:06.997 --> 00:04:10.000
+en realidad son <i>ViewGroups</i>
+con ajustes de disposición.
+
+00:04:10.067 --> 00:04:12.000
+Se utilizan por el <i>ViewGroup</i> padre
+
+00:04:12.067 --> 00:04:15.233
+para determinar el tamaño
+y la posición de las vistas.
+
+00:04:16.166 --> 00:04:18.433
+Los demás atributos,
+como el de <i>background</i>,
+
+00:04:18.500 --> 00:04:21.100
+<i>textSize</i> o <i>text</i>,
+dependen de la <i>TextView</i>
+
+00:04:21.166 --> 00:04:23.200
+como estilo de la propia vista.
+
+00:04:23.633 --> 00:04:27.067
+Pero estos parámetros de disposición
+del <i>GroupView</i> dependen del padre.
+
+00:04:27.333 --> 00:04:30.367
+Ahora te toca a ti probar con diferentes
+valores de anchura y altura.
+
+00:04:30.433 --> 00:04:33.800
+Para acceder al enlace del visor XML
+con el código base,
+
+00:04:33.867 --> 00:04:35.733
+mira las instrucciones
+del formador, abajo.
+
+00:04:35.800 --> 00:04:38.900
+Cambia los valores
+de anchura y altura de cada <i>TextView.</i>
+
+00:04:38.967 --> 00:04:42.933
+Puedes seleccionar un valor fijo de DP,
+<i>wrap_content</i> o <i>match_parent.</i>
+
+00:04:43.267 --> 00:04:46.667
+Recuerda que para cada vista, la anchura
+y la altura no tienen que coincidir.
+
+00:04:46.733 --> 00:04:49.100
+Cuando estés,
+marca este recuadro para continuar.
+

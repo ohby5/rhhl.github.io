@@ -1,0 +1,322 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.233 --> 00:00:02.800
+Ya hemos visto
+que esta disposición lineal contiene
+
+00:00:02.867 --> 00:00:05.067
+dos <i>TextViews</i> hijos dentro.
+
+00:00:05.267 --> 00:00:08.400
+Por cierto, los colores escogidos
+para el fondo solo son para ayudarte
+
+00:00:08.467 --> 00:00:13.133
+a comprender que estas dos <i>TextViews</i>
+son hijos y que lo de fuera es su padre.
+
+00:00:13.200 --> 00:00:15.867
+El rojo y el azul
+no aparecerán en el dispositivo
+
+00:00:15.933 --> 00:00:20.033
+a no ser que se ajusten específicamente
+como colores de fondo para estas vistas.
+
+00:00:20.100 --> 00:00:23.033
+Voy a enseñártelo en el visor de XML.
+
+00:00:23.100 --> 00:00:25.200
+Si entramos en el código
+en el visor de XML,
+
+00:00:25.267 --> 00:00:27.133
+así es como aparecería en el dispositivo.
+
+00:00:27.200 --> 00:00:30.133
+Primero tenemos el <i>ViewGroup
+LinearLayout</i> [DisposiciónLineal].
+
+00:00:30.200 --> 00:00:33.400
+Es transparente porque no hemos escogido
+ningún color de fondo.
+
+00:00:33.467 --> 00:00:36.600
+El primer hijo es una <i>TextView</i> que pone
+"Guest List" [Lista de invitados].
+
+00:00:36.667 --> 00:00:38.700
+Aparece aquí arriba.
+
+00:00:38.767 --> 00:00:41.300
+El segundo hijo es una <i>TextView</i>
+que dice "Kunal".
+
+00:00:41.367 --> 00:00:43.733
+Aparece aquí,
+debajo de la primera <i>TextView.</i>
+
+00:00:43.833 --> 00:00:47.467
+Si copio esta <i>TextView</i>
+y la pego debajo de esta,
+
+00:00:47.533 --> 00:00:49.267
+¿qué crees que pasará?
+
+00:00:49.633 --> 00:00:53.867
+Sí, tenemos otro "Kunal"
+justo debajo del primero.
+
+00:00:54.167 --> 00:00:57.800
+Parece que el patrón dice
+que si añadimos más <i>TextViews</i> aquí,
+
+00:00:57.867 --> 00:01:01.133
+aparecerán una tras otra en esta lista.
+
+00:01:01.567 --> 00:01:03.500
+Vamos a fijarnos bien en el código.
+
+00:01:03.567 --> 00:01:05.433
+Comienza
+con un corchete angular de apertura
+
+00:01:05.500 --> 00:01:08.133
+seguido del nombre de la vista,
+que en este caso es <i>LinearLayout.</i>
+
+00:01:08.200 --> 00:01:10.000
+Luego aparecen una lista de atributos
+
+00:01:10.067 --> 00:01:12.167
+y al final está
+el corchete angular de cierre.
+
+00:01:12.233 --> 00:01:13.800
+No hay ninguna barra
+
+00:01:13.867 --> 00:01:16.833
+porque esta es la etiqueta de apertura
+de <i>LinearLayout.</i>
+
+00:01:16.900 --> 00:01:19.200
+La etiqueta de cierre
+está abajo del todo
+
+00:01:19.267 --> 00:01:21.767
+porque queremos añadir elementos
+como si fueran hijos
+
+00:01:21.833 --> 00:01:24.400
+entre las etiquetas
+de apertura y de cierre.
+
+00:01:24.467 --> 00:01:28.367
+Pero en esta vista de prueba,
+como no contiene ningún hijo,
+
+00:01:28.433 --> 00:01:31.267
+podemos utilizar
+una etiqueta propia de cierre para ello.
+
+00:01:31.333 --> 00:01:34.900
+Lo mismo pasa con esta <i>TextView</i> de aquí
+y con esta de aquí.
+
+00:01:35.333 --> 00:01:38.333
+Cuando vemos que un <i>ViewGroup</i>
+contiene varios hijos,
+
+00:01:38.400 --> 00:01:42.767
+tenemos que ponerlos entre las etiquetas
+de apertura y de cierre.
+
+00:01:42.833 --> 00:01:45.233
+Otra cosa que habrás visto
+es que hay un atributo llamado
+
+00:01:45.300 --> 00:01:48.200
+<i>android:orientation="vertical".</i>
+
+00:01:48.667 --> 00:01:50.267
+Nunca lo habíamos visto,
+
+00:01:50.333 --> 00:01:53.767
+así que vamos a buscarlo en los documentos
+de Android que os enseñé antes.
+
+00:01:54.567 --> 00:01:58.400
+Abro una nueva ventana
+y escribo "android orientation".
+
+00:01:59.067 --> 00:02:01.233
+El primer resultado
+habla de <i>LinearLayout</i>
+
+00:02:01.300 --> 00:02:04.433
+y está en la página developer.android.com,
+así que hacemos clic.
+
+00:02:04.500 --> 00:02:07.433
+Al igual que con la <i>TextView,</i>
+la información que hay es apabullante.
+
+00:02:07.500 --> 00:02:09.866
+Podemos obviar la mayor parte del texto.
+
+00:02:09.933 --> 00:02:13.400
+Solo tenemos que confirmar
+que la página va sobre <i>LinearLayout,</i>
+
+00:02:13.467 --> 00:02:16.133
+y luego bajamos
+y buscamos en los atributos XML.
+
+00:02:17.100 --> 00:02:22.333
+Vamos a buscar el atributo que se llama
+<i>android:orientation.</i> Aquí está.
+
+00:02:22.433 --> 00:02:24.200
+Vamos a entrar para ver qué dice.
+
+00:02:25.367 --> 00:02:27.900
+En la descripción pone que este atributo
+
+00:02:27.967 --> 00:02:31.400
+determina si la disposición
+debe hacerse en columna o en línea.
+
+00:02:31.667 --> 00:02:35.267
+El valor del atributo puede ser
+"horizontal" para ponerse en línea,
+
+00:02:35.333 --> 00:02:37.667
+o "vertical" para ponerse en columna.
+
+00:02:38.000 --> 00:02:39.933
+Luego pone los dos valores aquí.
+
+00:02:40.333 --> 00:02:45.467
+Vale, entonces nuestro código dice
+que <i>android:orientation</i> es vertical.
+
+00:02:45.533 --> 00:02:49.000
+Ahora sabemos
+por qué las vistas se ven en una columna.
+
+00:02:49.400 --> 00:02:53.600
+Para satisfacer nuestra curiosidad,
+vamos a cambiar el valor.
+
+00:02:53.867 --> 00:02:57.567
+Vamos a poner que la orientación
+es horizontal para ver qué pasa.
+
+00:02:57.933 --> 00:03:00.267
+Voy al código
+y borro el valor "vertical".
+
+00:03:00.467 --> 00:03:05.533
+Voy a escribir "horizontal" y mira,
+las vistas están en una línea horizontal.
+
+00:03:05.967 --> 00:03:09.567
+No sé tú, pero a mí no me gustaría leer
+la lista de invitados en horizontal.
+
+00:03:09.900 --> 00:03:12.500
+Aunque habrá muchas ocasiones
+
+00:03:12.567 --> 00:03:14.967
+donde prefieras utilizar
+la disposición lineal horizontal.
+
+00:03:15.033 --> 00:03:17.400
+Por ejemplo, si estás creando
+una lista de elemento,
+
+00:03:17.467 --> 00:03:19.600
+puede que quieras poner
+una imagen al lado izquierdo
+
+00:03:19.667 --> 00:03:21.833
+y luego una descripción a la derecha.
+
+00:03:22.033 --> 00:03:25.000
+Voy a dejar que lo pruebes
+por ti mismo en un momento,
+
+00:03:25.067 --> 00:03:28.133
+pero antes quiero señalar
+esta otra línea del código.
+
+00:03:28.200 --> 00:03:31.167
+Aquí va el <i>namespace</i> [Espacio de nombre]
+del XML.
+
+00:03:31.233 --> 00:03:34.400
+Lo utilizamos para poder especificar
+
+00:03:34.500 --> 00:03:38.133
+que todos estos atributos
+pertenecen a Android.
+
+00:03:38.200 --> 00:03:40.867
+Por eso todos comienzan por <i>android:</i>.
+
+00:03:40.933 --> 00:03:43.733
+Es una nota básica
+para esta URL específica,
+
+00:03:43.800 --> 00:03:45.400
+solo válida para Android.
+
+00:03:45.567 --> 00:03:48.167
+Puedes crear
+tus propios atributos personalizados.
+
+00:03:48.367 --> 00:03:52.767
+Para evitar conflictos con el nombre,
+donde dos atributos no se llaman igual
+
+00:03:52.833 --> 00:03:57.533
+pero se comportan de forma diferente,
+añadimos siempre este prefijo:
+
+00:03:57.600 --> 00:04:01.867
+<i>android:</i>, para señalar
+que son atributos para Android.
+
+00:04:02.433 --> 00:04:06.900
+Lo que no puedes olvidar
+es añadir un <i>namespace</i> al XML
+
+00:04:06.967 --> 00:04:10.100
+en la etiqueta de apertura
+de la vista <i>root</i> de tu archivo XML.
+
+00:04:11.700 --> 00:04:12.833
+Ahora te toca a ti.
+
+00:04:12.900 --> 00:04:16.800
+Queremos que experimentes
+con el código de la disposición lineal.
+
+00:04:16.867 --> 00:04:20.000
+Añade más <i>TextViews</i> para que haya
+más elementos en esta columna.
+
+00:04:20.466 --> 00:04:23.867
+¿A quién incluirás en esta lista exclusiva
+de invitados para tu fiesta?
+
+00:04:24.433 --> 00:04:28.367
+También tienes que cambiar la orientación
+del atributo <i>LinearLayout.</i>
+
+00:04:28.433 --> 00:04:31.100
+Recuerda que se puede poner
+en vertical u horizontal.
+

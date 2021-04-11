@@ -1,0 +1,173 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.550 --> 00:00:02.760
+Bu size verdiğimiz orijinal XML.
+
+00:00:02.760 --> 00:00:05.510
+Dikey <i>LinearLayout</i>.
+
+00:00:05.510 --> 00:00:08.090
+Öğeler dikey sütunda çıkıyordu.
+
+00:00:08.090 --> 00:00:10.220
+Testteki resme göre,
+
+00:00:10.220 --> 00:00:14.930
+öğenin daha çok <i>RelativeLayout</i> kullanan 
+bir öğe listesine benzemesini istiyoruz.
+
+00:00:14.930 --> 00:00:16.680
+İşte çözüm.
+
+00:00:16.680 --> 00:00:19.460
+Yerleşimi fotoğraf solda ve üç metin 
+görünümü sağ tarafta
+
+00:00:19.460 --> 00:00:22.020
+olacak şekilde değiştirdik.
+
+00:00:22.020 --> 00:00:26.210
+Bu yerleşimi oluşturmak için kök görünümü 
+<i>LinearLayout</i> yerine <i>RelativeLayout</i>
+
+00:00:26.210 --> 00:00:28.180
+olacak şekilde değiştirdim.
+
+00:00:28.180 --> 00:00:29.530
+Açma etiketi olduğu için,
+
+00:00:29.530 --> 00:00:32.700
+aşağıdaki kapatma etiketini 
+de güncellemem lazımdı.
+
+00:00:32.700 --> 00:00:36.610
+Açma ve kapatma etiketleri arasında 
+dört child görünümümüz var.
+
+00:00:36.610 --> 00:00:40.200
+Aynı zamanda dikey yönelim 
+özelliğini kaldırdım,
+
+00:00:40.200 --> 00:00:42.580
+çünkü o <i>LinearLayout</i>'a ait.
+
+00:00:42.580 --> 00:00:46.240
+<i>RelativeLayout</i> için yönelim 
+özelliğine ihtiyaç yok.
+
+00:00:46.240 --> 00:00:48.750
+Resim zaten doğru konumlanmıştı.
+
+00:00:48.750 --> 00:00:52.400
+<i>RelativeLayout</i>'un ilk child'ı her zaman 
+varsayılan ayar olarak sol üst
+
+00:00:52.400 --> 00:00:53.270
+köşede konumlanır.
+
+00:00:53.270 --> 00:00:57.440
+Liste öğemiz için istediğimiz şey bu, 
+bu yüzden aynı kalıyor.
+
+00:00:57.440 --> 00:00:59.720
+Sonra "Pebble Beach" 
+diyen <i>TextView</i>'imiz var.
+
+00:01:00.730 --> 00:01:04.410
+Bu <i>TextView</i>'i <i>ImageView</i>'in sağ tarafına 
+konumlamak istiyoruz, bu yüzden
+
+00:01:04.410 --> 00:01:10.180
+<i>layout_torightof</i> özelliğini eklemeli, 
+sonra da <i>ImageView</i>'e atıf vermeliyiz.
+
+00:01:10.180 --> 00:01:13.800
+<i>ImageView</i>'e atıf vermek için, 
+<i>ImageView</i>'e
+
+00:01:13.800 --> 00:01:15.400
+ID özelliği eklemeliyiz.
+
+00:01:15.400 --> 00:01:19.100
+Ona "fotoğraf" adını verdim, ama 
+isterseniz başka bir şey diyebilirsiniz.
+
+00:01:19.100 --> 00:01:22.260
+Bu resmi ve ilk <i>TextView</i>'i 
+doğru konumladı.
+
+00:01:22.260 --> 00:01:25.740
+Sonraki <i>TextView</i> "California"
+metnini göstermek için.
+
+00:01:25.740 --> 00:01:29.498
+"California" <i>TextView</i>'i resmin sağına ve
+
+00:01:29.498 --> 00:01:32.110
+"Pebble Beach" <i>TextView</i>'in 
+altına konumlanmalı.
+
+00:01:32.110 --> 00:01:35.510
+Bu yüzden, ilk olarak <i>layout_toRightof</i>
+özelliğini ekleyerek
+
+00:01:35.510 --> 00:01:36.890
+fotoğrafa atıf yaparız.
+
+00:01:36.890 --> 00:01:39.620
+Sonra altına diğer bir 
+yerleşim özelliği ekleriz
+
+00:01:39.620 --> 00:01:41.880
+ve sonra ilk <i>TextView</i>'e atıf veririz.
+
+00:01:41.880 --> 00:01:46.860
+Bu aynı zamanda bu ilk <i>TextView</i> için bir 
+ID eklemeyi gerektirdi ve buna "ad" dedik.
+
+00:01:46.860 --> 00:01:50.060
+Güzel, bu pozisyon, <i>ImageView</i>
+ve iki <i>TextView</i>.
+
+00:01:50.060 --> 00:01:53.622
+Son olarak, mesafeyi, 10 mil uzaklığı 
+gösteren <i>TextView</i> var.
+
+00:01:53.622 --> 00:01:55.420
+Resmin sağında ve 
+"California" <i>TextView</i>'in
+
+00:01:55.420 --> 00:01:56.890
+altında konumlanmış.
+
+00:01:57.900 --> 00:02:01.370
+Bu yüzden, resme atıf olsun diye 
+<i>layout_toRightof</i> özelliğini
+
+00:02:01.370 --> 00:02:05.730
+eklemeliyiz ve aynı zamanda aşağıdaki 
+yerleşim için bir özellik eklemeli
+
+00:02:05.730 --> 00:02:09.008
+ve sonra yer <i>TextView</i>'e atıf vermeliyiz.
+
+00:02:09.008 --> 00:02:13.280
+Bu yer <i>TextView</i> için ID
+eklemeyi içerdi.
+
+00:02:13.280 --> 00:02:15.960
+Aynı zamanda mesafe 
+<i>TextView</i> için ID ekledim.
+
+00:02:15.960 --> 00:02:18.030
+Hiçbir yerde atıf vermediğimiz hâlde,
+
+00:02:18.030 --> 00:02:20.340
+bir görünüme ID vermek sorun olmaz.
+
+00:02:20.340 --> 00:02:23.560
+Sonradan atıfta bulunmak 
+isterseniz, zaten orada olur.
+

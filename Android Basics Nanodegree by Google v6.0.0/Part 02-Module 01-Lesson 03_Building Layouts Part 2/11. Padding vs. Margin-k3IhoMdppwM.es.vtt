@@ -1,0 +1,702 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.360 --> 00:00:01.630
+Buen trabajo hasta ahora.
+
+00:00:01.630 --> 00:00:04.580
+Vas bien en el camino
+de construir diseños geniales.
+
+00:00:04.580 --> 00:00:09.360
+Pero veo un problema con casi todos
+los diseños creados hasta ahora.
+
+00:00:09.360 --> 00:00:12.420
+Las vistas están contra el borde
+del <i>ViewGroup</i>
+
+00:00:12.421 --> 00:00:14.300
+o arriba contra el dispositivo.
+
+00:00:14.300 --> 00:00:17.228
+Para los diseños construidos
+en esta lección hasta ahora
+
+00:00:17.236 --> 00:00:19.990
+podríamos añadirles
+un poco más de pulimento visual,
+
+00:00:19.990 --> 00:00:23.840
+así serán más bonitos añadiéndoles
+un poco más de espacio en blanco.
+
+00:00:23.840 --> 00:00:26.428
+Lo haremos usando
+los conceptos de relleno y margen,
+
+00:00:26.429 --> 00:00:28.453
+que abarcaremos en este video.
+
+00:00:28.454 --> 00:00:31.240
+Por ejemplo, podríamos añadir un poco
+más de espacio blanco aquí, aquí
+
+00:00:31.240 --> 00:00:33.780
+o incluso arriba,
+para que las vistas no se amontonen
+
+00:00:33.780 --> 00:00:37.780
+contra el borde del grupo padre
+ni contra el borde del dispositivo.
+
+00:00:37.780 --> 00:00:39.350
+Es una decisión de diseño,
+
+00:00:39.350 --> 00:00:41.870
+porque a veces quieres que vaya
+de borde a borde,
+
+00:00:41.870 --> 00:00:45.039
+para dar el efecto de imagen sin bordes
+del que hablé antes.
+
+00:00:45.040 --> 00:00:48.750
+Pero puedes usar espacio en blanco
+para añadir espacio vital,
+
+00:00:48.751 --> 00:00:53.130
+para que el contenido sea
+un poco más fácil de leer y escanear.
+
+00:00:53.130 --> 00:00:56.840
+Te mostraré el efecto de añadir
+relleno o margen a tu vista.
+
+00:00:56.840 --> 00:00:59.480
+Empecemos con una TextView
+que diga <i>¡Hola!</i>.
+
+00:00:59.480 --> 00:01:01.880
+Si añadimos 8 dips
+de relleno a la vista,
+
+00:01:01.880 --> 00:01:05.450
+se hace 8 dips más grande
+en cada dirección.
+
+00:01:05.450 --> 00:01:08.615
+Si añadimos 8 dips de margen
+al diseño de la TextView,
+
+00:01:08.616 --> 00:01:10.850
+se vería así.
+
+00:01:10.850 --> 00:01:13.470
+Para añadir un margen,
+necesitas ponerlo dentro un <i>ViewGroup</i>
+
+00:01:13.470 --> 00:01:16.360
+por eso lo tengo dentro de
+este <i>LinearLayout</i> aquí.
+
+00:01:16.361 --> 00:01:19.377
+El <i>LinearLayout</i>
+toma la vista de texto original
+
+00:01:19.378 --> 00:01:21.260
+y le pone un margen de 8 dips.
+
+00:01:21.260 --> 00:01:23.330
+A la izquierda y arriba.
+
+00:01:23.330 --> 00:01:25.510
+Y también a los lados.
+
+00:01:25.510 --> 00:01:28.441
+Aunque declares relleno o margen,
+
+00:01:28.442 --> 00:01:30.434
+en una <i>TextView </i> hija,
+
+00:01:30.435 --> 00:01:32.780
+el relleno es manejado
+por la propia <i>TextView</i>,
+
+00:01:32.780 --> 00:01:35.900
+mientras que el margen es manejado
+por el <i>ViewGroup</i> padre.
+
+00:01:35.900 --> 00:01:38.106
+Si ejecutaras ambos en
+un dispositivo real,
+
+00:01:38.107 --> 00:01:40.377
+y no tuvieras un fondo
+para la <i>TextView</i>
+
+00:01:40.378 --> 00:01:42.820
+técnicamente los dos lucirían igual.
+
+00:01:42.820 --> 00:01:45.798
+El texto empezaría a 8 dips
+desde la izquierda,
+
+00:01:45.799 --> 00:01:48.390
+y 8 dips por debajo
+del tope del dispositivo.
+
+00:01:48.390 --> 00:01:51.780
+Sin embargo, si tienes un color de fondo
+para la <i>TextView</i>,
+
+00:01:51.780 --> 00:01:54.990
+el usuario podría ver
+que la TextView es así de grande,
+
+00:01:54.990 --> 00:01:58.660
+mientras que en el otro dispositivo
+solo se vería de este tamaño.
+
+00:01:58.660 --> 00:02:01.407
+Aquí hay un código para visualizar
+relleno en una vista.
+
+00:02:01.968 --> 00:02:05.701
+En el elemento XML <i>TextView</i>,
+declaras un nuevo atributo que diga,
+
+00:02:05.702 --> 00:02:10.800
+<i>android:padding = "8 dp"</i>
+
+00:02:10.800 --> 00:02:12.967
+Puedes elegir el tamaño
+que quieras para el relleno
+
+00:02:12.968 --> 00:02:15.330
+siempre que sea un valor dip.
+
+00:02:15.330 --> 00:02:19.080
+Cuando especificamos 8 dips de relleno,
+añade 8 dips a los bordes
+
+00:02:19.080 --> 00:02:21.861
+superior, inferior, izquierdo y derecho
+de la <i>TextView</i>.
+
+00:02:22.460 --> 00:02:25.100
+En vez de usar el atributo de relleno
+general de android,
+
+00:02:25.100 --> 00:02:28.970
+puedes también separarlo en
+izquierda, derecha, arriba o abajo.
+
+00:02:28.970 --> 00:02:32.550
+En esencia, estas cuatro líneas de código
+hacen lo mismo que esta línea.
+
+00:02:32.550 --> 00:02:34.089
+Pero estos controles más específicos
+
+00:02:34.090 --> 00:02:36.739
+te permiten tener diferentes
+valores de relleno
+
+00:02:36.740 --> 00:02:39.420
+para la izquierda, la derecha,
+arriba o abajo.
+
+00:02:39.420 --> 00:02:41.482
+No es necesario tener
+un mismo valor de relleno
+
+00:02:41.483 --> 00:02:43.390
+para las cuatro direcciones.
+
+00:02:43.390 --> 00:02:45.680
+El valor por defecto del relleno es 0,
+
+00:02:45.681 --> 00:02:48.086
+así que si especificas relleno
+a izquierda, derecha y arriba
+
+00:02:48.094 --> 00:02:52.110
+pero no abajo, el relleno será
+de cero dips en la parte inferior.
+
+00:02:52.110 --> 00:02:55.990
+Para especificar el margen,
+añades un atributo de nuevo a la <i>TextView</i>.
+
+00:02:55.990 --> 00:02:59.274
+El nombre del atributo es
+<i>android:layout_margin</i>,
+
+00:02:59.275 --> 00:03:02.750
+podemos hacerlo igual,
+por ejemplo, a 8 dips.
+
+00:03:02.750 --> 00:03:07.440
+Esto coloca a la <i>TextView</i> hija
+a 8 dips desde todos los bordes del padre.
+
+00:03:07.440 --> 00:03:11.770
+Si hubiese otra <i>TextView</i> hija aquí arriba,
+dejar un margen podría ponerla
+
+00:03:11.770 --> 00:03:15.270
+a 8 dips por debajo
+de la primera <i>TextView</i>.
+
+00:03:16.060 --> 00:03:18.820
+Puedes pensar del margen
+como un pequeño campo de fuerza
+
+00:03:18.820 --> 00:03:20.050
+alrededor de esta vista.
+
+00:03:20.050 --> 00:03:23.750
+Ninguna otra vista puede penetrar
+esta región de 8 dips alrededor.
+
+00:03:23.750 --> 00:03:25.797
+O puedes también diferenciar
+el margen del diseño
+
+00:03:25.798 --> 00:03:27.858
+en cualquiera de las cuatro direcciones,
+
+00:03:27.859 --> 00:03:31.750
+margen izquierdo del diseño,
+margen derecho del diseño, arriba y abajo.
+
+00:03:31.750 --> 00:03:33.544
+Si no especificas
+ninguno de estos valores,
+
+00:03:33.545 --> 00:03:35.810
+serán cero por defecto.
+
+00:03:35.810 --> 00:03:39.202
+Para recordar que el <i>ViewGroup</i>
+posiciona a estos hijos
+
+00:03:39.203 --> 00:03:41.930
+en base a los márgenes,
+puedes mirar los atributos.
+
+00:03:41.930 --> 00:03:45.130
+Todos empiezan con <i>layout_margin</i>.
+
+00:03:45.130 --> 00:03:48.272
+De ese modo sabes que el <i>ViewGroup</i>
+es el que maneja la posición
+
+00:03:48.273 --> 00:03:49.459
+de estas vistas.
+
+00:03:50.160 --> 00:03:52.733
+El relleno y el margen
+se pueden aplicar a todas las vistas.
+
+00:03:52.734 --> 00:03:55.960
+Pongamos en práctica
+los atributos que hemos aprendido.
+
+00:03:55.960 --> 00:03:58.404
+Aquí tenemos tres <i>TextView</i>
+en un <i>LinearLayout</i>.
+
+00:03:58.405 --> 00:04:00.903
+Todas están apretadas
+hacia el borde izquierdo de la pantalla,
+
+00:04:00.904 --> 00:04:02.935
+así que quiero añadir
+un poco más de espacio.
+
+00:04:03.390 --> 00:04:05.268
+Probemos de añadir algo de margen.
+
+00:04:05.910 --> 00:04:08.235
+Genial, ahora hay más espacio
+alrededor de esta <i>TextView</i>.
+
+00:04:09.420 --> 00:04:11.356
+Haré lo mismo con las otras dos <i>TextView</i>.
+
+00:04:12.174 --> 00:04:16.728
+Interesante, entonces aquí hay 16 dips,
+pero en realidad son 32 dips
+
+00:04:16.730 --> 00:04:20.260
+porque hay 8 dips en el margen inferior
+de la primera TextView
+
+00:04:20.260 --> 00:04:22.960
+y 8 dips en el margen superior
+de la segunda <i>TextView</i>.
+
+00:04:22.960 --> 00:04:24.780
+Si queremos que el espaciado
+sea consistente,
+
+00:04:24.780 --> 00:04:27.450
+para que siempre haya
+16 dips entre cada vista,
+
+00:04:27.451 --> 00:04:30.172
+tenemos que cambiar el margen aquí.
+
+00:04:30.173 --> 00:04:33.100
+Puedo diferenciar
+los valores individuales de margen.
+
+00:04:33.100 --> 00:04:35.512
+Con este código, tengo
+un margen izquierdo de 16 dips
+
+00:04:35.513 --> 00:04:37.980
+y un margen superior de 16 dips.
+
+00:04:37.980 --> 00:04:40.627
+No hay margen inferior
+para esta primera <i>TextView</i>,
+
+00:04:40.628 --> 00:04:43.897
+así que este espacio intermedio
+ahora es de 16 dips.
+
+00:04:44.445 --> 00:04:46.970
+Lo mismo para la última <i>TextView</i>.
+
+00:04:46.970 --> 00:04:49.540
+Genial, ahora todo
+el espaciado vertical es igual.
+
+00:04:49.669 --> 00:04:51.081
+Antes cuando dije que añadiríamos
+
+00:04:51.082 --> 00:04:53.420
+espacio blanco a los bordes
+de estas vistas,
+
+00:04:53.420 --> 00:04:56.240
+técnicamente ese espacio es trasparente.
+
+00:04:56.240 --> 00:04:58.690
+Puedes ver qué hay detrás.
+
+00:04:58.690 --> 00:05:02.100
+En este caso tenemos
+un fondo gris del <i>ViewGroup</i>.
+
+00:05:02.100 --> 00:05:05.390
+El diseño se verá igual en el dispositivo
+tanto si usamos margen o relleno
+
+00:05:05.390 --> 00:05:08.785
+porque en este caso no tenemos
+color de fondo en la <i>TextView</i>.
+
+00:05:09.820 --> 00:05:12.468
+Añadámoslo y veamos donde están
+los límites de cada vista.
+
+00:05:13.330 --> 00:05:16.006
+Bien, ahora hay un color de fondo
+en la primera <i>TextView</i>.
+
+00:05:16.007 --> 00:05:17.998
+Cuando añadimos los márgenes
+izquierdo y superior,
+
+00:05:17.999 --> 00:05:19.189
+vemos que el <i>ViewGroup</i>
+
+00:05:19.190 --> 00:05:22.600
+empuja a la <i>TextView</i>
+a 8 por encima y 8 por debajo.
+
+00:05:22.600 --> 00:05:24.377
+Podemos cambiar esto al relleno,
+
+00:05:24.378 --> 00:05:26.790
+y ahora vemos que la <i>TextView</i>
+es más grande
+
+00:05:26.791 --> 00:05:29.925
+y ocupa esos 8 dips de espacio
+a la izquierda y arriba.
+
+00:05:30.453 --> 00:05:33.210
+Visualmente, las cosas podrían
+aparecer distintas en el dispositivo,
+
+00:05:33.210 --> 00:05:35.120
+ya sea que tengas relleno o margen.
+
+00:05:35.120 --> 00:05:37.920
+si hay un color de fondo en la <i>TextView</i>.
+
+00:05:37.921 --> 00:05:39.618
+Podemos hacer lo mismo
+con las otras vistas
+
+00:05:39.619 --> 00:05:40.984
+para que veas que está bien.
+
+00:05:41.830 --> 00:05:45.400
+Añadir valores de relleno y margen
+no está restringido a estas vistas hijas,
+
+00:05:45.400 --> 00:05:47.840
+también puedes añadirlo al <i>ViewGroup</i>.
+
+00:05:47.840 --> 00:05:50.520
+Si añado un valor de relleno
+al <i>LinearLayout</i>.
+
+00:05:50.520 --> 00:05:55.463
+Puedes ver que desplaza las vistas
+en 16 dips en todas direcciones.
+
+00:05:55.464 --> 00:05:56.724
+Mencioné que podrías establecer
+
+00:05:56.725 --> 00:05:59.390
+cualquier valor
+para un relleno o margen.
+
+00:05:59.390 --> 00:06:01.380
+Pero, ¿cómo saber qué valor escoger?
+
+00:06:01.380 --> 00:06:05.750
+Las normas de diseño recomiendan
+que uses incrementos de 8 dips.
+
+00:06:05.750 --> 00:06:07.933
+Esto es conocimiento un poco más avanzado,
+
+00:06:07.934 --> 00:06:09.709
+pero en esencia queremos
+que los componentes
+
+00:06:09.710 --> 00:06:13.404
+se alineen en la pantalla
+a lo largo de esta cuadrícula de 8 dips.
+
+00:06:13.405 --> 00:06:15.776
+Los cuadrados no aparecen
+en realidad en la pantalla,
+
+00:06:15.777 --> 00:06:17.710
+pero si quieres posicionar el texto aquí,
+
+00:06:17.710 --> 00:06:21.090
+podrías moverlo
+dos cuadrados a la izquierda.
+
+00:06:21.090 --> 00:06:25.280
+Dos cuadrados en esta cuadrícula
+es igual a 16 dips.
+
+00:06:25.280 --> 00:06:26.454
+En esta pantalla de email,
+
+00:06:26.455 --> 00:06:28.980
+todos los iconos están
+alineados en esta columna.
+
+00:06:28.980 --> 00:06:32.939
+Están posicionados a 16 dips
+del borde izquierdo de la pantalla,
+
+00:06:32.940 --> 00:06:34.789
+y todo el texto de aquí está posicionado
+
+00:06:34.790 --> 00:06:38.020
+a 72 dips del borde
+izquierdo de la pantalla.
+
+00:06:38.020 --> 00:06:42.250
+Puedes imaginarte que el contenido
+sigue ciertas líneas aquí.
+
+00:06:42.250 --> 00:06:44.440
+Este es otro modo de visualizarlo.
+
+00:06:44.440 --> 00:06:47.160
+En esta captura de pantalla
+de la aplicación <i>Google I/O</i>,
+
+00:06:47.160 --> 00:06:50.920
+tenemos el contenido
+alineado con esta columna a 16 dips,
+
+00:06:50.920 --> 00:06:53.920
+así como con esta columna a 72 dips.
+
+00:06:53.920 --> 00:06:57.395
+Son 72 dips desde
+el borde izquierdo de la pantalla.
+
+00:06:57.395 --> 00:06:58.855
+Y en este borde,
+
+00:06:58.855 --> 00:07:03.303
+el contenido termina a 16 dips
+antes del borde derecho de la pantalla.
+
+00:07:03.303 --> 00:07:05.286
+En la tablet, tienes
+más espacio en pantalla,
+
+00:07:05.287 --> 00:07:07.064
+así que puedes tener
+un poco más de relleno.
+
+00:07:07.065 --> 00:07:09.961
+Podrías tener 24 dips
+desde el borde izquierdo de la pantalla,
+
+00:07:09.962 --> 00:07:12.000
+y así para los otros valores.
+
+00:07:12.001 --> 00:07:13.817
+La razón por la que
+recomendamos esos valores
+
+00:07:13.818 --> 00:07:16.645
+es que el contenido sea fácil de leer.
+
+00:07:16.645 --> 00:07:20.250
+Por ejemplo, si este título
+se desplazara un par de píxeles,
+
+00:07:20.250 --> 00:07:23.660
+y el subtexto se moviera a la derecha
+un par de píxeles,
+
+00:07:23.660 --> 00:07:25.560
+habría un borde dentado aquí.
+
+00:07:25.560 --> 00:07:29.780
+Y distraería al usuario
+de leer el contenido.
+
+00:07:29.780 --> 00:07:34.540
+Así, alinear todo hace que tu aplicación
+sea más fácil de leer y usar.
+
+00:07:34.540 --> 00:07:37.881
+He aquí un par de ejemplos de la vida real
+sobre el uso de relleno y margen.
+
+00:07:37.882 --> 00:07:40.309
+En esta captura de pantalla
+de la aplicación <i>Google Calendar</i>
+
+00:07:40.310 --> 00:07:43.680
+vemos texto que está desplazado
+un poco desde aquí.
+
+00:07:43.680 --> 00:07:46.568
+Hay también un poco de espacio
+entre los eventos de ese calendario.
+
+00:07:46.569 --> 00:07:48.180
+Si lo implementamos usando el relleno,
+
+00:07:48.180 --> 00:07:52.360
+esta imagen de fondo probablemente
+se extendería sobre el espacio blanco.
+
+00:07:52.360 --> 00:07:53.784
+En vez si usamos márgenes,
+
+00:07:53.785 --> 00:07:55.920
+hay una pequeña zona
+alrededor de la vista.
+
+00:07:55.920 --> 00:07:57.820
+Así que probablemente sea margen.
+
+00:07:57.820 --> 00:07:59.161
+Aquí hay otra captura de pantalla
+
+00:07:59.162 --> 00:08:01.890
+de la página detallada
+para un evento del calendario.
+
+00:08:01.890 --> 00:08:06.160
+Hay mucho texto aquí y parece
+haber espaciados mayores que otros.
+
+00:08:06.160 --> 00:08:08.700
+Podemos crear ese espaciado mayor
+añadiendo relleno.
+
+00:08:08.700 --> 00:08:10.151
+Para espaciar esto,
+
+00:08:10.152 --> 00:08:13.199
+puedes añadir relleno
+abajo de esta TextView,
+
+00:08:13.200 --> 00:08:15.450
+o puedes añadir relleno
+arriba de esta vista.
+
+00:08:15.998 --> 00:08:17.600
+Ambos podrían funcionar.
+
+00:08:17.600 --> 00:08:20.585
+O podrías incluso implementarlo
+usando diseño de margen.
+
+00:08:20.586 --> 00:08:21.910
+No puedes notar la diferencia
+
+00:08:21.911 --> 00:08:24.768
+entre usar diseño de margen
+o de relleno en este caso
+
+00:08:24.769 --> 00:08:28.050
+porque el fondo del texto usado
+es transparente.
+
+00:08:28.050 --> 00:08:29.327
+Ahora es tu turno de practicar
+
+00:08:29.328 --> 00:08:32.025
+configurando diferentes valores
+de relleno y margen.
+
+00:08:32.027 --> 00:08:33.534
+Hemos proporcionado un código inicial
+
+00:08:33.534 --> 00:08:35.921
+para que empieces,
+usando el enlace debajo.
+
+00:08:35.922 --> 00:08:38.501
+Cuando te familiarices con los valores
+de relleno y margen,
+
+00:08:38.503 --> 00:08:40.461
+avanza y trata de construir este diseño.
+
+00:08:41.210 --> 00:08:45.780
+Por cierto, este texto está situado
+a 16 dips de estas esquinas.
+
+00:08:45.780 --> 00:08:49.410
+Pero hay solo 8 dips
+entre las dos <i>TextViews</i>.
+
+00:08:49.410 --> 00:08:51.261
+Cuando termines, marca esta casilla
+

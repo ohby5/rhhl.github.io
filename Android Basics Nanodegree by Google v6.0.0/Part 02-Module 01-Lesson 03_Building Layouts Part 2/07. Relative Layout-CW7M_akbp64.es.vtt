@@ -1,0 +1,408 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.267 --> 00:00:02.602
+De momento hemos aprendido
+que un LinearLayout puede tener
+
+00:00:02.803 --> 00:00:05.305
+una orientación vertical u horizontal.
+
+00:00:05.973 --> 00:00:08.074
+También hemos aprendido
+que las vistas individuales
+
+00:00:08.208 --> 00:00:11.378
+pueden tener valores <i>weight</i>
+para rellenar el espacio del padre.
+
+00:00:12.446 --> 00:00:14.915
+Ahora pasaremos un tiempo
+aprendiendo sobre la vista de grupo
+
+00:00:15.082 --> 00:00:16.483
+del RelativeLayout.
+
+00:00:16.683 --> 00:00:18.886
+Esto os ayudará a hacer
+<i>layouts</i> todavía más flexibles.
+
+00:00:19.786 --> 00:00:21.855
+¿Recordáis a Ray, el RelativeLayout?
+
+00:00:22.089 --> 00:00:24.858
+Él es el papá y está representado
+por esta vista de grupo de aquí.
+
+00:00:25.459 --> 00:00:28.795
+Ayuda a que la vista de los hijos
+estén dentro de este hueco.
+
+00:00:29.229 --> 00:00:32.999
+Con el RelativeLayout, podéis posicionar
+a los hijos con su padre.
+
+00:00:33.200 --> 00:00:35.068
+como arriba del padre o abajo del padre.
+
+00:00:35.769 --> 00:00:38.071
+La otra opción es posicionar
+la vista de los hijos
+
+00:00:38.238 --> 00:00:40.207
+con otros hijos, como esto.
+
+00:00:40.741 --> 00:00:42.809
+Centrémonos primero en el caso
+
+00:00:42.976 --> 00:00:45.279
+donde las vistas
+se posicionan con el padre.
+
+00:00:45.579 --> 00:00:50.184
+En este ejemplo, el padre está determinado
+a tener un <i>width batch_parent</i>
+
+00:00:50.384 --> 00:00:52.953
+y <i>height match_parent,</i>
+para que sea como el dispositivo.
+
+00:00:53.453 --> 00:00:58.358
+Los hijos dentro de un RelativeLayout
+se posicionan a la izquierda del padre,
+
+00:00:58.659 --> 00:01:00.594
+arriba, a la derecha o abajo.
+
+00:01:00.861 --> 00:01:04.397
+Este es el código para hacerlo
+en la vista de los hijos.
+
+00:01:04.598 --> 00:01:06.466
+Por ejemplo, para el <i>emoji</i>
+o la vista de texto
+
+00:01:06.700 --> 00:01:08.168
+añadiríais estos atributos.
+
+00:01:08.602 --> 00:01:10.437
+El nombre del atributo sigue este formato.
+
+00:01:10.804 --> 00:01:13.907
+<i>android:layout_alignParentTop</i>
+
+00:01:14.308 --> 00:01:19.112
+El atributo determina si la vista del hijo
+se alinea arriba o abajo de los padres.
+
+00:01:19.413 --> 00:01:21.815
+Los posibles valores
+son "verdadero" o "falso".
+
+00:01:22.416 --> 00:01:25.519
+Si es "verdadero", la vista
+debería alinearse arriba del padre.
+
+00:01:25.886 --> 00:01:27.855
+Si es "falso", no debería alinearse.
+
+00:01:28.422 --> 00:01:30.490
+Hay atributos para los demás bordes.
+
+00:01:30.958 --> 00:01:34.361
+Por ejemplo, <i>alignParentBottom</i>
+para alinearse abajo del padre.
+
+00:01:34.728 --> 00:01:37.831
+Hay otro atributo para alinearse
+cpn el borde izquierdo del padre.
+
+00:01:38.098 --> 00:01:41.068
+Y finalmente un atributo para alinearse
+con el borde derecho del padre.
+
+00:01:41.969 --> 00:01:45.105
+Podéis mezclarlos y combinarlos
+y usar varios atributos a la vez.
+
+00:01:45.839 --> 00:01:47.808
+Tomad esta vista de imagen como ejemplo.
+
+00:01:48.909 --> 00:01:52.212
+Fijaremos el atributo<i> align parent top</i>
+para que sea verdadero,
+
+00:01:52.346 --> 00:01:54.515
+porque está alineado
+con el borde superior del padre.
+
+00:01:54.648 --> 00:01:57.351
+También está alineado con los bordes
+izquierdo y derecho del padre.
+
+00:01:57.551 --> 00:02:00.487
+Fijamos <i>left</i> para que sea "verdadero".
+Lo mismo hacemos con <i>right.</i>
+
+00:02:01.121 --> 00:02:04.958
+No está alineado con el borde inferior,
+así que lo marcamos como "falso".
+
+00:02:06.560 --> 00:02:08.294
+Y en lo que respecta
+a esta vista de texto,
+
+00:02:08.461 --> 00:02:11.698
+está alineada con el borde inferior,
+izquierdo y derecho.
+
+00:02:12.432 --> 00:02:14.434
+De esta forma <i>alignParentBottom</i>
+sería "verdadero",
+
+00:02:14.768 --> 00:02:17.404
+<i>alignParentLeft </i>sería "verdadero"
+y <i>alignParentRight</i> también,
+
+00:02:18.172 --> 00:02:20.140
+pero <i>alignParentTop</i> sería "falso".
+
+00:02:21.108 --> 00:02:25.913
+Además de posicionar el hijo en la parte
+superior o inferior de la pantalla,
+
+00:02:26.180 --> 00:02:27.981
+también podéis crear esquinas específicas.
+
+00:02:28.315 --> 00:02:31.518
+Si queremos colocar esta vista de texto
+en la esquina superior izquierda,
+
+00:02:31.852 --> 00:02:33.987
+definimos <i>alignParentTop</i>
+para que sea "verdadero"
+
+00:02:34.154 --> 00:02:36.557
+y luego <i>alignParentLeft</i>
+también para que sea "verdadero".
+
+00:02:37.191 --> 00:02:39.326
+Para colocar una vista
+en la esquina superior derecha
+
+00:02:39.526 --> 00:02:42.496
+queremos alinearla con el borde superior
+y con el borde derecho.
+
+00:02:43.230 --> 00:02:46.600
+Marcamos <i>alignParentTop </i>como "verdadero"
+y <i>alignParentRight </i>como "verdadero".
+
+00:02:47.401 --> 00:02:48.902
+Para la esquina inferior izquierda,
+
+00:02:49.169 --> 00:02:51.438
+lo alineamos
+con el borde izquierdo e inferior.
+
+00:02:52.739 --> 00:02:54.641
+Marcamos <i>alignParentBottom</i>
+como "verdadero"
+
+00:02:54.875 --> 00:02:56.610
+Lo mismo hacemos con <i>alignParentLeft.</i>
+
+00:02:57.144 --> 00:03:00.347
+Estos valores son falsos
+y lo son por defecto,
+
+00:03:00.514 --> 00:03:02.549
+así que no necesitáis incluirlos
+en el código XML.
+
+00:03:03.283 --> 00:03:06.887
+Para la última esquina, se alinea
+con el borde superior e inferior.
+
+00:03:07.087 --> 00:03:10.457
+Marcamos <i>alignParentBottom</i>
+y <i>alignParentRight </i> como "verdaderos".
+
+00:03:10.858 --> 00:03:13.627
+Los otros dos son falsos,
+así que podemos excluirlos del código.
+
+00:03:14.027 --> 00:03:16.830
+Aunque os parezca mentira,
+todavía podéis incluir más atributos.
+
+00:03:17.197 --> 00:03:19.666
+También podéis centrar la vista
+de forma horizontal.
+
+00:03:19.967 --> 00:03:23.237
+Marcamos <i>layout center horizontal</i>
+como "verdadero".
+
+00:03:23.504 --> 00:03:27.107
+Podéis añadirlo a los atributos
+que aprendimos anteriormente.
+
+00:03:27.374 --> 00:03:30.511
+Si está alineado con la parte superior
+y centrado de forma horizontal,
+
+00:03:30.677 --> 00:03:32.145
+sería así.
+
+00:03:32.312 --> 00:03:34.615
+El último que voy a mostraros es
+<i>layout_centerVertical.</i>
+
+00:03:34.848 --> 00:03:38.819
+Si es "verdadero", centra la vista
+de forma vertical dentro del padre.
+
+00:03:39.386 --> 00:03:42.422
+Esta vista de texto está alineada
+con el borde izquierdo,
+
+00:03:42.589 --> 00:03:44.458
+aunque no hayamos marcado este valor,
+
+00:03:44.691 --> 00:03:47.494
+porque todas las vistas añadidas
+al RelativeLayout
+
+00:03:47.661 --> 00:03:50.864
+se colocan por defecto en la esquina
+superior izquierda de la vista de grupo.
+
+00:03:51.298 --> 00:03:54.535
+Todos estos atributos se llaman
+"parámetros de vista de grupo".
+
+00:03:55.102 --> 00:03:57.738
+Aunque son elementos XML del hijo,
+
+00:03:58.071 --> 00:03:59.907
+son utilizados por la vista
+de grupo del padre
+
+00:04:00.073 --> 00:04:02.042
+para saber cómo posicionar a los hijos.
+
+00:04:02.276 --> 00:04:04.711
+De este modo, todos empiezan
+con <i>layout underscore</i>.
+
+00:04:05.078 --> 00:04:09.183
+Sigue el patrón <i>layout underscore width</i>
+y <i>layout underscore height,</i>
+
+00:04:09.349 --> 00:04:10.817
+con los que ya estás familiarizado.
+
+00:04:10.984 --> 00:04:13.820
+Estos atributos también son
+parámetros de vista de grupo,
+
+00:04:14.054 --> 00:04:15.989
+porque la vista de grupo
+del padre los utiliza
+
+00:04:16.123 --> 00:04:18.257
+para colocar y aumentar
+el tamaño de los hijos.
+
+00:04:18.625 --> 00:04:21.495
+Aquí tenéis un XML
+para un RelativeLayout y sus hijos.
+
+00:04:21.995 --> 00:04:23.897
+Puedes seguirlo en el siguiente enlace.
+
+00:04:24.298 --> 00:04:26.567
+Tenemos una etiqueta
+RelativeLayout de apertura
+
+00:04:26.767 --> 00:04:28.535
+y tenemos una etiqueta
+de cierre aquí abajo.
+
+00:04:28.702 --> 00:04:30.404
+Los hijos están en medio.
+
+00:04:30.671 --> 00:04:33.907
+El <i>width</i> y el <i>height</i> del RelativeLayout
+debe ser <i>match_parent.</i>
+
+00:04:34.341 --> 00:04:36.476
+Como este es el<i> layout</i>
+de nuestra aplicación,
+
+00:04:36.710 --> 00:04:38.712
+ocupará toda la pantalla.
+
+00:04:39.079 --> 00:04:41.849
+Hay tres textos hijo utilizados
+dentro del RelativeLayout.
+
+00:04:42.216 --> 00:04:44.651
+El primero es una vista de texto
+que dice "feliz".
+
+00:04:45.118 --> 00:04:47.254
+El <i>width </i>y el <i>height</i> son <i>wrap_content</i>
+
+00:04:47.487 --> 00:04:49.289
+y tenemos estos atributos adicionales
+
+00:04:49.456 --> 00:04:53.026
+para ayudar al RelativeLayout a posicionar
+la vista de texto del hijo.
+
+00:04:53.360 --> 00:04:57.931
+Lo alinearemos con el borde derecho
+y el borde superior del padre.
+
+00:04:58.232 --> 00:04:59.833
+Esto pone la vista de texto "feliz"
+
+00:05:00.000 --> 00:05:01.802
+en la esquina superior
+derecha de la pantalla
+
+00:05:01.969 --> 00:05:05.205
+Para la vista de texto de "cumpleaños",
+el <i>width</i> y el <i>height</i> son <i>wrap_content.</i>
+
+00:05:05.639 --> 00:05:08.509
+Ahora queremos alinearlo con los bordes
+inferior e izquierdo.
+
+00:05:09.076 --> 00:05:12.112
+Los bordes inferior e izquierdo
+terminan en esta esquina.
+
+00:05:12.779 --> 00:05:17.184
+Esta última vista de texto que dice
+"para ti" no tiene ningún atributo
+
+00:05:17.351 --> 00:05:19.419
+que diga dónde
+debe alinearse con el padre.
+
+00:05:19.586 --> 00:05:22.155
+Solo sabemos que el <i>width</i> y el <i>height</i>
+deberían ser <i>wrap_content</i>.
+
+00:05:22.289 --> 00:05:25.626
+Como mencioné antes, si no se especifica
+dónde debería ir la vista del hijo,
+
+00:05:25.826 --> 00:05:28.795
+el RelativeLayout por defecto la colocará
+en la esquina superior derecha.
+

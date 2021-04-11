@@ -1,0 +1,396 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.390 --> 00:00:03.980
+Đến lúc này chúng ta đã biết 
+một layout tuyến tính có thể
+
+00:00:03.980 --> 00:00:06.140
+có phương thẳng đứng,
+hoặc phương nằm ngang.
+
+00:00:06.140 --> 00:00:09.380
+Chúng ta cũng đã biết các view riêng lẻ
+cũng có giá trị dung lượng
+
+00:00:09.380 --> 00:00:11.350
+để lấp đầy không gian 
+trong view gốc.
+
+00:00:12.710 --> 00:00:14.520
+Bây giờ chúng ta sẽ học về
+
+00:00:14.520 --> 00:00:16.450
+nhóm layout tương đối.
+
+00:00:16.450 --> 00:00:19.910
+Nó sẽ giúp bạn xây dựng
+được những layout linh hoạt hơn.
+
+00:00:19.910 --> 00:00:22.140
+Hãy nhớ lại layout tương đối Ray.
+
+00:00:22.140 --> 00:00:25.590
+Anh ấy là người cha, và anh được đại diện
+bởi nhóm view này.
+
+00:00:25.590 --> 00:00:29.250
+Anh ấy đã giúp các view con,
+được bố trí trong hộp thoại này.
+
+00:00:29.250 --> 00:00:32.360
+Với layout tương đối, bạn có thể 
+xếp view con tương đối với
+
+00:00:32.360 --> 00:00:34.840
+view gốc, chẳng hạn như 
+ở cạnh trên hoặc cạnh dưới.
+
+00:00:35.850 --> 00:00:39.680
+Các tùy chọn khác là điều chỉnh view con
+tương quan với các view con khác.
+
+00:00:39.680 --> 00:00:40.920
+Như thế này.
+
+00:00:40.920 --> 00:00:44.520
+Đầu tiên hãy tập trung vào trường hợp
+các view con được định vị tương đối
+
+00:00:44.520 --> 00:00:45.780
+với view gốc.
+
+00:00:45.780 --> 00:00:50.080
+Ví dụ, view gốc tương đối này
+được thiết lập cùng một loại,
+
+00:00:50.080 --> 00:00:53.550
+và chiều dài giống các view gốc khác,
+nên nó có kích thước như thiết bị.
+
+00:00:53.550 --> 00:00:56.660
+Những view con 
+bên trong một layout tương đối,
+
+00:00:56.660 --> 00:01:00.880
+có thể được định vị tương đối bên trái,
+bên trên, bên phải hoặc ở dưới view gốc.
+
+00:01:00.880 --> 00:01:04.519
+Đây là code của nó, dựa trên 
+tích view con và số lượng thành tố.
+
+00:01:04.519 --> 00:01:08.540
+Ví dụ, với biểu tượng cảm xúc hay 
+TextView, bạn sẽ thêm các thuộc tính này.
+
+00:01:08.540 --> 00:01:14.440
+Tên thuộc tính theo định dạng 
+android như sau: layout_alignParentTop.
+
+00:01:14.440 --> 00:01:17.120
+Thuộc tính này xác định
+cho dù liệu view con
+
+00:01:17.120 --> 00:01:19.400
+có đươc xếp phía trên view gốc hay không.
+
+00:01:19.400 --> 00:01:22.640
+Vì vậy, các giá trị 
+có thể là đúng hoặc sai.
+
+00:01:22.640 --> 00:01:25.780
+Nếu là đúng, thì view con cần được sắp xếp
+ở cạnh trên view gốc.
+
+00:01:25.780 --> 00:01:28.540
+Nếu nó sai, thì nó không cần sắp xếp.
+
+00:01:28.540 --> 00:01:30.990
+Đây là những thuộc tính 
+cho tất cả các cạnh khác.
+
+00:01:30.990 --> 00:01:34.620
+Ví dụ alignParentBottom, sắp xếp 
+view con dưới cạnh đáy của view gốc.
+
+00:01:34.620 --> 00:01:37.460
+alignParentLeft sắp xếp view con 
+ở cạnh trái của view gốc.
+
+00:01:37.460 --> 00:01:41.000
+Và sau đó là alignParentRight sắp xếp
+view con đến cạnh phải view gốc.
+
+00:01:42.050 --> 00:01:44.970
+Bạn có thể kết hợp và sử dụng
+nhiều thuộc tính cùng lúc.
+
+00:01:45.980 --> 00:01:47.680
+Hãy lấy hình ảnh này làm một ví dụ.
+
+00:01:47.680 --> 00:01:52.370
+Chúng tôi sẽ thiết lập thuộc tính
+alignParentTop là đúng,
+
+00:01:52.370 --> 00:01:54.730
+bởi vì nó phù hợp với
+cạnh trên của view gốc.
+
+00:01:54.730 --> 00:01:58.000
+Nó cũng phù hợp để 
+cạnh trái và phải của view gốc.
+
+00:01:58.000 --> 00:02:00.930
+Vì vậy, ta thiết lập bên trái là đúng,
+và bên phải cũng đúng.
+
+00:02:01.270 --> 00:02:04.896
+Cạnh đáy của view gốc không phù hợp, 
+vì vậy ta cho thuộc tính này là sai.
+
+00:02:04.896 --> 00:02:08.410
+Do đó text view ở dưới này,
+
+00:02:08.410 --> 00:02:11.430
+được sắp xếp ở cạnh đáy,
+cạnh phải và cạnh trái của view gốc.
+
+00:02:12.580 --> 00:02:15.910
+Vì vậy alignParentBottom sẽ là đúng,
+alignParentLeft đúng,
+
+00:02:15.910 --> 00:02:19.809
+alignParentRight đúng,
+nhưng alignParentTop lại là sai.
+
+00:02:21.280 --> 00:02:24.640
+Ngoài việc điều chỉnh vị trí
+view con ở phần trên,
+
+00:02:24.640 --> 00:02:28.440
+hoặc phần dưới của màn hình,
+bạn cũng có thể làm với những góc cụ thể.
+
+00:02:28.440 --> 00:02:31.850
+Nếu muốn căn chỉnh text view của
+từ “birthday” ở góc trên bên trái,
+
+00:02:31.850 --> 00:02:36.190
+ta thiết lập alignParentTop là đúng, 
+sau đó thiết lập alignParentLeft là đúng.
+
+00:02:37.350 --> 00:02:39.560
+Để định vị một view 
+ở góc trên bên phải,
+
+00:02:39.560 --> 00:02:43.450
+chúng ta muốn sắp xếp nó 
+ở cạnh trên và cạnh phải view gốc
+
+00:02:43.450 --> 00:02:46.280
+Vậy alignParentTop đúng,
+và alignParentRight cũng đúng.
+
+00:02:46.280 --> 00:02:50.850
+Đối với góc trái bên dưới, 
+ta liên kết để cạnh trái của view gốc.
+
+00:02:50.850 --> 00:02:51.430
+và cạnh đáy.
+
+00:02:52.780 --> 00:02:54.490
+Vậy alignParentBottom là đúng.
+
+00:02:54.490 --> 00:02:56.210
+Đúng, và alignParentLeft cũng đúng.
+
+00:02:57.240 --> 00:03:00.480
+Những giá trị này sai, và
+chúng sai mặc định,
+
+00:03:00.480 --> 00:03:02.240
+vì vậy bạn không cần phải 
+ghi chúng trong trong các mã XML
+
+00:03:02.240 --> 00:03:06.170
+Và ở góc cuối cùng, 
+nó được sắp xếp ở cạnh phải và cạnh đáy
+
+00:03:06.170 --> 00:03:07.030
+của view gốc.
+
+00:03:07.030 --> 00:03:10.940
+Vì vậy, alignParentBottom là đúng 
+và alignParentRight là đúng.
+
+00:03:10.940 --> 00:03:12.210
+Hai thuộc tính còn lại đều sai.
+
+00:03:12.210 --> 00:03:14.180
+Vì vậy, ta có thể bỏ chúng ra khỏi code.
+
+00:03:14.180 --> 00:03:17.140
+Bạn có thể không tin nhưng mà còn rất nhiều
+thuộc tính khác bạn có thể thiết lập.
+
+00:03:17.140 --> 00:03:20.190
+Bạn cũng có thể căn giữa
+view theo chiều ngang,
+
+00:03:20.190 --> 00:03:23.030
+vậy, thiết lập layout_centerHorizontal 
+là đúng.
+
+00:03:23.030 --> 00:03:27.530
+Cũng có thể thêm nó vào các thuộc tính 
+sẵn có mà chúng ta đã học trước đó.
+
+00:03:27.530 --> 00:03:30.550
+Nếu đây là một đường kẻ xuống dưới,
+và được căn giữa theo chiều ngang,
+
+00:03:30.550 --> 00:03:32.220
+nó sẽ trông như thế này.
+
+00:03:32.220 --> 00:03:34.870
+Cuối cùng tôi sẽ chỉ cho bạn
+thuộc tính layout_centerVertical.
+
+00:03:34.870 --> 00:03:39.445
+Nếu được thiết lập là đúng, nó sẽ căn giữa
+view theo chiều dọc trong view gốc.
+
+00:03:39.445 --> 00:03:43.015
+Lý do tại sao TextView này được sắp xếp
+ở cạnh trái view gốc, ngay cả khi
+
+00:03:43.015 --> 00:03:47.085
+chúng ta không thiết lập giá trị này, 
+là bởi vì tất cả các view được thêm vào
+
+00:03:47.085 --> 00:03:50.880
+layout tương đối, được định vị mặc định 
+ở góc trên bên trái của nhóm view.
+
+00:03:50.880 --> 00:03:54.300
+Tất cả các thuộc tính này được gọi là
+thông số nhóm view trong layout.
+
+00:03:54.300 --> 00:03:58.100
+Mặc dù chúng được khai báo
+bằng các yếu tố XML con,
+
+00:03:58.100 --> 00:04:02.440
+nhưng chúng được sử dụng bởi nhóm view
+gốc để biết cách định vị view con.
+
+00:04:02.440 --> 00:04:05.098
+Do đó, chúng bắt đầu
+với layout đường gạch dưới.
+
+00:04:05.098 --> 00:04:08.050
+Nó cũng theo mô hình
+layout gạch dưới chiều rộng,
+
+00:04:08.050 --> 00:04:10.960
+và gạch dưới chiều dài,
+mà bạn đã quen thuộc.
+
+00:04:10.960 --> 00:04:14.810
+Hai thuộc tính này cũng là chu vi layout 
+của nhóm view, bởi vì chúng được sử dụng
+
+00:04:14.810 --> 00:04:17.920
+bởi nhóm view gốc, để định vị 
+và thay đổi kích thước view con.
+
+00:04:17.920 --> 00:04:22.089
+Và đây là XML cho layout tương đối 
+và các view con của nó.
+
+00:04:22.089 --> 00:04:24.450
+Bạn có thể làm theo 
+các liên kết dưới đây.
+
+00:04:24.450 --> 00:04:28.110
+Chúng ta đã mở một thẻ layout tương đối,
+và ta có một thẻ đóng ở phía dưới
+
+00:04:28.110 --> 00:04:30.510
+ở đây, và
+tất cả các view con ở giữa.
+
+00:04:30.510 --> 00:04:31.260
+Chiều rộng
+
+00:04:31.260 --> 00:04:34.490
+và chiều dài của RelativeLayout
+được thiết lập thành match_parent.
+
+00:04:34.490 --> 00:04:35.620
+Vì đây là layout cho
+
+00:04:35.620 --> 00:04:39.070
+toàn bộ ứng dụng của chúng ta,
+nó sẽ chiếm toàn bộ màn hình.
+
+00:04:39.070 --> 00:04:42.310
+Có ba đoạn text con
+được sử dụng bên trong RelativeLayout.
+
+00:04:42.310 --> 00:04:45.380
+Đầu tiên là một TextView
+ghi chữ Happy.
+
+00:04:45.380 --> 00:04:49.090
+Chiều rộng và chiều dài là wrap_content,
+và chúng ta có các thuộc tính bổ sung
+
+00:04:49.090 --> 00:04:53.520
+để giúp đỡ layout tương đối
+biết cách định vị text con này.
+
+00:04:53.520 --> 00:04:56.060
+Sắp xếp text này ở cạnh phải
+
+00:04:56.060 --> 00:04:58.290
+và ở cạnh trên view gốc.
+
+00:04:58.290 --> 00:05:01.900
+Vậy chúng ta đã đặt chữ Happy
+ở góc trên bên phải của màn hình.
+
+00:05:01.900 --> 00:05:05.500
+Với từ “Birthday”, chiều rộng
+và chiều dài cũng là wrap_content.
+
+00:05:05.500 --> 00:05:09.100
+Sau đó, chúng ta muốn nó được sắp xếp
+ở cạnh đáy và cạnh trái của view gốc.
+
+00:05:09.100 --> 00:05:12.750
+Vì vậy, đáy và các cạnh trái
+tạo ra góc này ở dưới đây.
+
+00:05:12.750 --> 00:05:16.690
+Dòng text cuối cùng To You, 
+không có bất kỳ thuộc tính cụ thể
+
+00:05:16.690 --> 00:05:18.840
+để xác định vị trí tương đối
+với view gốc.
+
+00:05:18.840 --> 00:05:22.060
+Tất cả chúng ta đều biết là chiều rộng và
+chiều dài là wrap_content.
+
+00:05:22.060 --> 00:05:25.873
+Như tôi đã đề cập trước đó, nếu bạn không
+xác định được vị trí của một view con,
+
+00:05:25.873 --> 00:05:29.329
+thì mặc định, layout sẽ thêm nó 
+vào góc trên bên trái của màn hình.
+

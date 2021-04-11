@@ -1,0 +1,239 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.920 --> 00:00:04.230
+Shunday qilib, bu joylashuv tartibini qurib bitirish 
+uchun, kod yozishni boshlashdan oldin 
+
+00:00:04.230 --> 00:00:08.850
+nima qilmoqchiligiz haqida fikrga egaman
+deb ongli ravishda amin bo‘lishingizni xohlardim.
+
+00:00:08.850 --> 00:00:11.890
+Birinchi, eslatib o‘taman, elementlar 
+vertikal ustunlarda joylashganligi uchun 
+
+00:00:11.890 --> 00:00:13.010
+u vertikal chiziqli layoutdir.
+
+00:00:13.010 --> 00:00:14.680
+Bizda uchta farzand view lari bor.
+
+00:00:14.680 --> 00:00:17.910
+Bizda bitta rasm view , matn view 
+va yana bitta matn view bor.
+
+00:00:17.910 --> 00:00:21.590
+Men sizga bergan birinchi ishora har bir 
+ view ning enini aniqlab olish edi.
+
+00:00:22.680 --> 00:00:26.130
+butun layout qurilmaning to‘liq kengligi 
+va balandligini egallagani sababli, 
+
+00:00:26.130 --> 00:00:30.270
+bu vertikal chiziqli layoutning eni va bo‘yi 
+ match_parent qilib qo‘yilgan.
+
+00:00:30.270 --> 00:00:33.810
+Undan so‘ng rasm view si uchun biz 
+uni ham otadek keng bo‘lishini xohlaymiz, 
+
+00:00:33.810 --> 00:00:35.920
+qaysiki o‘z navbatida qurilmadek ham.
+
+00:00:35.920 --> 00:00:38.170
+Shuning uchun biz uni ham 
+ match_parent qilib qo‘yamiz.
+
+00:00:38.170 --> 00:00:39.670
+Bu ikkala TextView lar 
+uchun ham xuddi shunday.
+
+00:00:39.670 --> 00:00:43.190
+Biz uni qurilmaning to‘liq eniga mos tushishini 
+xohlaymiz, demak u match_parent .
+
+00:00:43.190 --> 00:00:45.330
+Undan keyin biz har bir view ning 
+balandligi ustida ishlaymiz.
+
+00:00:45.330 --> 00:00:49.430
+Mana bu TextView lar oson chunki ular 
+o‘zlarining ichidagi tarkibni qamrab olishadi.
+
+00:00:49.430 --> 00:00:53.080
+Demak, biz har bir TextView ning bo‘yi 
+uchun wrap_content qiymatini ishlatamiz.
+
+00:00:53.080 --> 00:00:56.540
+Biz yana vazn uchun qiymatlarni 
+0 ga tenglaymiz chunki, 
+
+00:00:56.540 --> 00:01:00.400
+biz bu qiymatlarni o‘zgarishini xohlamaymiz, 
+hattoki otada yaroqli joy bo‘lsa ham.
+
+00:01:00.400 --> 00:01:02.800
+Endi bu ImageView eng qiyin qism.
+
+00:01:02.800 --> 00:01:06.290
+Biz rasmning bo‘yi otadagi yaroqli 
+
+00:01:06.290 --> 00:01:10.229
+joyga bog‘liq holda o‘sishi yoki 
+qisqarishini xohlaymiz.
+
+00:01:11.250 --> 00:01:13.190
+Buni uddalash uchun vazndan foydalanamiz.
+
+00:01:13.190 --> 00:01:16.180
+Biz rasm view sining bo‘yiga 
+0 dp dan boshlab qiymat beramiz 
+
+00:01:16.180 --> 00:01:18.160
+ammo vazn uchun bir beramiz.
+
+00:01:18.160 --> 00:01:20.720
+Boshqa farzandlarning hech birida vazn 
+uchun qiymat berilmaganligi sababli 
+
+00:01:20.720 --> 00:01:24.350
+bu rasm view ga otada bor bo‘lgan 
+istalgan yaroqli joy beriladi.
+
+00:01:24.350 --> 00:01:27.920
+Va biz bo‘yiga 0 dp qiymat 
+berishimizning sababi 
+
+00:01:27.920 --> 00:01:29.840
+chunki u vertikal chiziqli layout.
+
+00:01:29.840 --> 00:01:32.040
+Shunday qilib u o‘zini o‘zi 
+vertikal ravishda to‘ldiradi.
+
+00:01:32.040 --> 00:01:35.400
+Va biz vaznning qiymati aniqlab 
+bermagunicha balandlikni bila olmaymiz.
+
+00:01:36.530 --> 00:01:38.280
+Biz sizga instruktor qaydlarida 
+bu havolani berib o‘tganmiz va 
+
+00:01:38.280 --> 00:01:39.940
+uning ichida allaqachon ba’zi 
+kodlar ko‘rsatilgan.
+
+00:01:39.940 --> 00:01:43.590
+ view larning joylashtirilishi noto‘g‘ri, 
+shunga qaramasdan keling uni moslashtirib chiqamiz.
+
+00:01:43.590 --> 00:01:46.200
+Osonroq bo‘lgani uchun keling, birinchi 
+matn ko‘rinishlari bilan boshlaymiz.
+
+00:01:46.200 --> 00:01:48.740
+Siz bu matn ko‘rinishlari qurilmaning 
+butun kengligi bo‘ylab 
+
+00:01:48.740 --> 00:01:49.400
+cho‘zilmasligini ko‘rishingiz mumkin.
+
+00:01:49.400 --> 00:01:50.810
+Demak, biz buni o‘zgartirishmiz kerak.
+
+00:01:50.810 --> 00:01:53.410
+Kenglik match_parent bo‘lishi kerak.
+
+00:01:53.410 --> 00:01:54.180
+Shunisi yaxshiroq.
+
+00:01:54.180 --> 00:01:56.780
+Shunday qilib, hozir yashil-ko‘kish fon 
+
+00:01:56.780 --> 00:01:59.300
+qurilmaning butun eni bo‘ylab boradi.
+
+00:01:59.300 --> 00:02:02.670
+ TextView ning qirg‘og‘idagi 
+gulxan uchun ham shunaqa.
+
+00:02:02.670 --> 00:02:03.580
+Ajoyib.
+Va bu balandlik 
+
+00:02:03.580 --> 00:02:05.860
+to‘g‘ri bo‘lgan o‘sha tarkib.
+
+00:02:05.860 --> 00:02:09.650
+Hozir bizda vertikal chiziqli layoutdagi 
+mana bu vertikal joyning hammasi ortiqcha.
+
+00:02:10.669 --> 00:02:12.140
+Oh, aytgancha, chiziqli layoutning eni 
+
+00:02:12.140 --> 00:02:15.270
+va bo‘yi match parent qilib olinadi, 
+
+00:02:15.270 --> 00:02:18.780
+shunday qilib layout nihoyat ekranning 
+eni va bo‘yini kengaytiradi.
+
+00:02:18.780 --> 00:02:21.880
+Demak, otadagi bu ortiqcha 
+balandlikdan foydalanish uchun 
+
+00:02:21.880 --> 00:02:24.880
+biz uni bironta vazn qiymatiga ega 
+farzandga berishni xohlaymiz.
+
+00:02:24.880 --> 00:02:28.820
+Shunday qilib, vazn qiymatiga ega bo‘la olishi 
+uchun ImageView ni o‘zgartiramiz.
+
+00:02:28.820 --> 00:02:31.300
+Birinchi, biz enini match_parent qilib qo‘ya olamiz, 
+
+00:02:31.300 --> 00:02:33.390
+shunda u ham qurilmaning 
+eni bo‘ylab kengayadi.
+
+00:02:34.430 --> 00:02:38.940
+Undan so‘ng bo‘yining qiymatini 0 dp 
+ga va vaznni 1 ga tenglaymiz.
+
+00:02:38.940 --> 00:02:42.200
+Va mana bu biz xohlagan skrinshot.
+
+00:02:42.200 --> 00:02:43.330
+Yaxshi ish.
+
+00:02:43.330 --> 00:02:47.400
+Esda saqlang, agar men vazn qiymatlarini juda 
+katta yetti yoki o‘n kabi sonlarga o‘zgartirsam, 
+
+00:02:47.400 --> 00:02:50.410
+u rostdan ham qurilmaning 
+ko‘rinishini o‘zgartirmaydi.
+
+00:02:51.500 --> 00:02:54.720
+Bu u vaznga ega bo‘lgan yagona 
+farzandligi tufayli, demak, 
+
+00:02:54.720 --> 00:02:57.980
+juda yuqori yoki juda past vaznning 
+bo‘lishining ahamiyati yo‘q
+
+00:02:57.980 --> 00:03:01.530
+otadagi barcha ortiqcha balandlik 
+mana shu farzand uchun beriladi.
+
+00:03:02.680 --> 00:03:04.290
+Demak, keling buni bir bo‘ladigan 
+qilib o‘zgartirib qo‘yamiz.
+
+00:03:05.500 --> 00:03:06.270
+Yaxshi, ajoyib ish bo‘ldi.
+

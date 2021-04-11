@@ -1,0 +1,304 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:05.267
+Vimos como o layout linear
+contém duas TextViews filhas.
+
+00:00:05.301 --> 00:00:09.531
+As cores são ferramentas
+para ajudar você a entender
+
+00:00:09.565 --> 00:00:13.200
+que as duas TextViews filhas
+estão dentro do pai.
+
+00:00:13.234 --> 00:00:15.868
+As cores não aparecem
+no dispositivo,
+
+00:00:15.901 --> 00:00:19.968
+a não ser que você
+as configure especificamente.
+
+00:00:20.000 --> 00:00:23.000
+Vamos
+para o visualizador XML.
+
+00:00:23.034 --> 00:00:27.501
+O código do visualizador XML
+fica assim no dispositivo.
+
+00:00:27.535 --> 00:00:30.035
+Temos um ViewGroup
+do layout linear.
+
+00:00:30.069 --> 00:00:33.769
+Está transparente
+porque não há cores configuradas.
+
+00:00:33.803 --> 00:00:36.701
+O 1º filho é uma TextView
+que diz "Guest List".
+
+00:00:36.735 --> 00:00:38.834
+Está aqui em cima.
+
+00:00:38.868 --> 00:00:41.567
+O 2º filho é uma TextView
+que diz "Kunal",
+
+00:00:41.601 --> 00:00:44.100
+que está logo abaixo.
+
+00:00:44.133 --> 00:00:49.167
+Se eu copiar e colar a TextView,
+o que acha que acontece?
+
+00:00:49.601 --> 00:00:54.167
+Outro "Kunal" aparece
+embaixo do primeiro.
+
+00:00:54.200 --> 00:00:57.834
+Então, se adicionarmos
+mais TextViews aqui,
+
+00:00:57.868 --> 00:01:01.434
+eles vão aparecer
+um embaixo do outro.
+
+00:01:01.467 --> 00:01:03.667
+Vamos ver o código de perto.
+
+00:01:03.701 --> 00:01:06.767
+Começa com um &lt;
+e o nome da View,
+
+00:01:06.801 --> 00:01:08.467
+que é LinearLayout.
+
+00:01:08.501 --> 00:01:12.267
+Depois há vários atributos
+e um &gt;.
+
+00:01:12.300 --> 00:01:16.834
+Não tem barra inclinada
+porque é uma tag de abertura.
+
+00:01:16.868 --> 00:01:19.400
+A tag de encerramento
+está aqui embaixo
+
+00:01:19.434 --> 00:01:24.467
+porque queremos inserir
+elementos filhos.
+
+00:01:24.501 --> 00:01:28.334
+Como não há filhos
+nesta TextView,
+
+00:01:28.368 --> 00:01:31.501
+podemos usar uma tag
+que se encerra.
+
+00:01:31.535 --> 00:01:35.434
+O mesmo vale
+para as outras TextViews.
+
+00:01:35.468 --> 00:01:38.404
+Se um ViewGroup
+tem Views filhas,
+
+00:01:38.438 --> 00:01:42.901
+precisamos inseri-las
+entre as tags.
+
+00:01:42.935 --> 00:01:45.334
+Outra coisa é o atributo
+
+00:01:45.368 --> 00:01:48.634
+android:orientation
+="vertical".
+
+00:01:48.667 --> 00:01:50.534
+Não vimos isso antes,
+
+00:01:50.567 --> 00:01:54.033
+então vamos dar uma olhada
+na documentação.
+
+00:01:54.534 --> 00:01:58.901
+Abro o navegador
+e digito "android orientation".
+
+00:01:59.133 --> 00:02:03.430
+O 1º resultado é
+do site developer.android.com.
+
+00:02:03.464 --> 00:02:04.567
+Vamos clicar nele.
+
+00:02:04.601 --> 00:02:07.670
+Como a documentação da TextView,
+é um pouco demais,
+
+00:02:07.704 --> 00:02:10.037
+mas você pode ignorar
+a maior parte.
+
+00:02:10.071 --> 00:02:13.934
+Só precisamos verificar
+se é a página do LinearLayout
+
+00:02:13.968 --> 00:02:16.667
+e vamos
+para os atributos XML.
+
+00:02:16.968 --> 00:02:21.534
+Estamos atrás do atributo
+"android orientation".
+
+00:02:21.567 --> 00:02:24.834
+Vamos clicar nele
+para ver detalhes.
+
+00:02:25.300 --> 00:02:28.334
+A descrição diz que o atributo
+determina
+
+00:02:28.367 --> 00:02:31.701
+se o layout é uma coluna
+ou uma linha.
+
+00:02:31.734 --> 00:02:35.434
+O valor do atributo dever ser
+"horizontal" para a linha
+
+00:02:35.467 --> 00:02:37.968
+e "vertical" para a coluna.
+
+00:02:38.000 --> 00:02:40.434
+Os dois valores estão aqui.
+
+00:02:40.468 --> 00:02:42.863
+No nosso código,
+
+00:02:42.897 --> 00:02:45.634
+o android orientation
+é vertical.
+
+00:02:45.667 --> 00:02:49.400
+Isso explica
+as Views como colunas.
+
+00:02:49.434 --> 00:02:53.934
+Para satisfazer nossa curiosidade,
+podemos ver o outro valor.
+
+00:02:53.968 --> 00:02:57.934
+Vamos configurar
+como horizontal para ver.
+
+00:02:57.968 --> 00:03:02.334
+Vou apagar o valor "vertical"
+e digitar "horizontal".
+
+00:03:02.368 --> 00:03:06.067
+Agora as Views estão
+numa linha horizontal.
+
+00:03:06.100 --> 00:03:09.801
+Não sei você,
+mas não gosto de ler assim.
+
+00:03:09.834 --> 00:03:14.934
+Mas há casos para você usar
+o layout linear horizontal.
+
+00:03:14.968 --> 00:03:17.400
+Se criou um item de lista,
+
+00:03:17.434 --> 00:03:22.133
+pode querer uma imagem na esquerda
+e uma descrição na direita.
+
+00:03:22.167 --> 00:03:25.133
+Já vou deixar
+você experimentar,
+
+00:03:25.167 --> 00:03:28.300
+mas antes quero falar
+desta linha de código.
+
+00:03:28.334 --> 00:03:31.234
+É a declaração
+NameSpace XML.
+
+00:03:31.268 --> 00:03:36.463
+Usamos o NameSpace
+para especificar que os atributos
+
+00:03:36.497 --> 00:03:38.234
+sejam do Android.
+
+00:03:38.268 --> 00:03:40.901
+Por isso começam
+com "android:".
+
+00:03:40.935 --> 00:03:45.567
+É uma abreviatura do URL
+específico do Android.
+
+00:03:45.601 --> 00:03:48.400
+Você pode criar
+os seus atributos.
+
+00:03:48.434 --> 00:03:50.570
+Para evitar
+os conflitos de nome,
+
+00:03:50.604 --> 00:03:53.200
+onde dois atributos
+têm o mesmo nome,
+
+00:03:53.234 --> 00:03:55.868
+mas têm comportamentos
+diferentes,
+
+00:03:55.901 --> 00:03:59.033
+sempre usamos o prefixo
+"android:"
+
+00:03:59.067 --> 00:04:02.567
+para indicar
+que são atributos Android.
+
+00:04:02.601 --> 00:04:06.834
+Lembre-se de adicionar
+a declaração NameSpace XML
+
+00:04:06.868 --> 00:04:10.868
+na tag de abertura da rootView
+do arquivo XML.
+
+00:04:11.567 --> 00:04:16.634
+Agora é a sua vez.
+Faça experiências com o código.
+
+00:04:16.834 --> 00:04:20.400
+Tente adicionar
+mais TextViews.
+
+00:04:20.434 --> 00:04:23.767
+Quem você incluiria
+na lista da sua festa?
+
+00:04:24.234 --> 00:04:28.400
+Também tente modificar
+o atributo orientação.
+
+00:04:28.434 --> 00:04:30.868
+Pode ser vertical
+ou horizontal.
+

@@ -1,0 +1,636 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.360 --> 00:00:01.630
+Nãy giờ chúng ta làm tốt.
+
+00:00:01.630 --> 00:00:04.580
+Bạn đang làm đúng thao tác
+thiết lập các layout hiệu quả.
+
+00:00:04.580 --> 00:00:09.360
+Nhưng tôi thấy có vấn đề vướng mắc
+trong các layout chúng ta đã làm.
+
+00:00:09.360 --> 00:00:12.740
+Các hiển thị nằm quá sát với
+rìa ViewGroup [Nhóm hiển thị]
+
+00:00:12.740 --> 00:00:14.300
+Hoặc quá sát rìa thiết bị.
+
+00:00:14.300 --> 00:00:16.490
+Với tất cả các layout
+chúng ta đã làm trong bài
+
+00:00:16.490 --> 00:00:19.990
+chúng ta có thể
+chăm chút yếu tố thẩm mỹ một tí
+
+00:00:19.990 --> 00:00:23.840
+để chúng đẹp hơn bằng cách
+thêm một chút khoảng trắng.
+
+00:00:23.840 --> 00:00:26.240
+Chúng ta sẽ làm điều này
+bằng các khái niệm khoảng đệm và lề
+
+00:00:26.240 --> 00:00:28.580
+sẽ giới thiệu trong video
+
+00:00:28.580 --> 00:00:31.240
+chúng ta có thể thêm một chút
+khoảng trắng ở đây, ở đây
+
+00:00:31.240 --> 00:00:33.780
+hoặc thậm chí phía trên
+để các hiển thị không chen khít
+
+00:00:33.780 --> 00:00:37.780
+lấn lên rìa của layout mẹ
+hoặc lấn lên rìa thiết bị.
+
+00:00:37.780 --> 00:00:39.350
+Đây là một quyết định thiết kế,
+
+00:00:39.350 --> 00:00:41.550
+bởi vì đôi khi bạn cũng muốn
+nó tiếp giáp rìa, giống như
+
+00:00:41.550 --> 00:00:45.140
+trong hiệu ứng hình ảnh in tràn mép giấy
+tôi có nói qua lúc trước.
+
+00:00:45.140 --> 00:00:49.109
+Ở đây bạn có thể sử dụng khoảng trắng
+để tạo không gian thoáng đạt, dễ "thở",
+
+00:00:49.109 --> 00:00:53.130
+làm sao cho nội dung
+dễ đọc và dễ quét hơn.
+
+00:00:53.130 --> 00:00:56.840
+Tôi sẽ cho bạn thấy hiệu quả
+khi chèn khoảng đệm hoặc lề cho hiển thị.
+
+00:00:56.840 --> 00:00:59.480
+Bắt đầu với TextView[hiển thị văn bản]
+ghi chữ “Xin chào”.
+
+00:00:59.480 --> 00:01:01.880
+Nếu chúng ta chèn 8 dp
+khoảng đệm vào hiển thị
+
+00:01:01.880 --> 00:01:05.450
+chữ "xin chào" sẽ trông lớn hơn 8 dp
+từ tất cả các hướng.
+
+00:01:05.450 --> 00:01:08.081
+Nếu chèn thêm cho lề layout
+8 dp trong TextView,
+
+00:01:08.081 --> 00:01:10.850
+thì nó sẽ như thế này.
+
+00:01:10.850 --> 00:01:13.470
+Để chèn lề, bạn cần
+bỏ nó vào trong ViewGroup
+
+00:01:13.470 --> 00:01:16.360
+Đó là lý do tôi đưa nó vào
+bài trí tuyến tính này.
+
+00:01:16.360 --> 00:01:19.350
+Bài trí tuyến tính là yếu tố
+chứa TextView gốc
+
+00:01:19.350 --> 00:01:21.260
+nó kéo giãn TextView ra 8 dp.
+
+00:01:21.260 --> 00:01:23.330
+Từ bên trái và từ trên.
+
+00:01:23.330 --> 00:01:25.510
+Và từ cả hai cạnh bên nữa.
+
+00:01:25.510 --> 00:01:27.860
+Ngay khi bạn trình báo giá trị khoảng đệm
+
+00:01:27.860 --> 00:01:32.780
+hay giá trị lề cho TextView con,
+khoảng đệm vẫn được xử lý bởi Textview.
+
+00:01:32.780 --> 00:01:35.900
+Trong khi đó các lề được xử lý
+bởi ViewGroup mẹ.
+
+00:01:35.900 --> 00:01:39.685
+Nếu cả hai cái này nằm trên thiết bị,
+và bạn không có nền
+
+00:01:39.685 --> 00:01:42.820
+cho TextView, thì về mặt kỹ thuật
+cả hai vẫn sẽ giống nhau.
+
+00:01:42.820 --> 00:01:46.030
+Văn bản sẽ định vị cách lề trái
+tám dp, ở dưới rìa trên thiết bị
+
+00:01:46.030 --> 00:01:48.390
+cũng 8 dp.
+
+00:01:48.390 --> 00:01:51.780
+Tuy nhiên, nếu bạn có màu nền
+cho TextView
+
+00:01:51.780 --> 00:01:54.990
+người dùng có thể thấy
+TextView sẽ lớn cỡ này.
+
+00:01:54.990 --> 00:01:58.660
+Nhưng nếu chuyển qua thiết bị khác,
+TextView sẽ chỉ lớn cỡ này thôi.
+
+00:01:58.660 --> 00:02:00.700
+Đây là code
+hiển thị khoảng đệm trên hiển thị.
+
+00:02:02.040 --> 00:02:06.576
+Trên TextView XML Element
+bạn sẽ phải trình báo một thuộc tính,
+
+00:02:06.576 --> 00:02:10.800
+cú pháp android: padding=8 dp
+để trong ngoặc kép.
+
+00:02:10.800 --> 00:02:12.320
+Bạn có thể chọn
+bất kỳ kích thước nào muốn
+
+00:02:12.320 --> 00:02:15.330
+thiết lập cho khoảng đệm
+miễn sao đó là giá trị dp.
+
+00:02:15.330 --> 00:02:19.080
+Khi đặt giá trị 8 dp khoảng đệm,
+nó sẽ chèn 8 dp vào bên trái,
+
+00:02:19.080 --> 00:02:21.410
+trên, dưới
+và rìa phải của TextView.
+
+00:02:22.460 --> 00:02:25.100
+Thay vì sử dụng thuộc tính
+android padding một cách đồng nhất,
+
+00:02:25.100 --> 00:02:28.970
+bạn có thể chia ra cho từng hướng
+trái, phải, trên và dưới
+
+00:02:28.970 --> 00:02:32.550
+quan trọng là bốn dòng code này
+có chức năng giống như dòng code mẹ này.
+
+00:02:32.550 --> 00:02:35.820
+Các dòng code điều khiển đơn lẻ này
+giúp bạn lập nhiều giá trị khoảng đệm
+
+00:02:35.820 --> 00:02:39.420
+cho phần bên trái
+bên phải, bên trên, bên dưới.
+
+00:02:39.420 --> 00:02:43.390
+Bạn không cần thiết lập
+khoảng đệm bằng nhau cho bốn hướng.
+
+00:02:43.390 --> 00:02:47.280
+Giá trị mặc định cho nó là zero,
+nên nếu bạn cấu hình đệm trái, phải, trên
+
+00:02:47.280 --> 00:02:52.110
+nhưng không xác định có đệm dưới
+thì chỉ số đệm dưới sẽ là sẽ là 0 dp.
+
+00:02:52.110 --> 00:02:55.990
+Để lập giá trị lề, chèn thêm
+thuộc tính này một lần nữa cho TextView.
+
+00:02:55.990 --> 00:03:00.206
+Cú pháp thuộc tính android: layout_margin
+chúng ta có thể
+
+00:03:00.206 --> 00:03:02.750
+đặt giá trị thuộc tính bằng 8 dp
+chẳng hạn như vậy.
+
+00:03:02.750 --> 00:03:07.440
+Hệ thống sẽ dịch chuyển TextView con
+cách mọi rìa TextView mẹ 8 dp đồng đều.
+
+00:03:07.440 --> 00:03:11.770
+Nếu có TextView con khác ở rìa trên này
+và bạn đặt lề hoặc đặt khoảng đệm cho nó
+
+00:03:11.770 --> 00:03:15.000
+thì TextView mới này sẽ bị đẩy
+xuống dưới 8 dp so với TextView đầu tiên.
+
+00:03:16.060 --> 00:03:18.820
+Bạn có thể hình dung việc đặt lề
+giống đặt một từ trường đẩy xung quanh
+
+00:03:18.820 --> 00:03:20.050
+chế độ hiển thị.
+
+00:03:20.050 --> 00:03:23.750
+Không hiển thị nào có thể xâm nhập
+vào khu vực 8 dp quanh nó.
+
+00:03:23.750 --> 00:03:27.621
+Hoặc cũng có thể chia nhỏ lề layout
+thành bốn hướng,
+
+00:03:27.621 --> 00:03:31.750
+layout marginLeft [lề layout trái],
+layout marginRight, top và bottom.
+
+00:03:31.750 --> 00:03:35.780
+Nếu bạn không thiết lập bất kỳ
+giá trị nào, giá trị mặc định sẽ là 0.
+
+00:03:35.780 --> 00:03:38.730
+Hãy nhớ rằng ViewGroup
+là yếu tố định vị
+
+00:03:38.730 --> 00:03:41.930
+các TextView con theo lề,
+bạn có thể nhìn vào thuộc tính.
+
+00:03:41.930 --> 00:03:45.130
+Tất cả đều bắt đầu bằng cú pháp
+layout_margin.
+
+00:03:45.130 --> 00:03:48.340
+Nhìn đây có thể hiểu ViewGroup
+là yếu tố xử lý định vị.
+
+00:03:48.340 --> 00:03:49.340
+Cho các hiển thị.
+
+00:03:50.160 --> 00:03:52.790
+Yếu tố khoảng đệm
+và lề áp dụng cho mọi hiển thị.
+
+00:03:52.790 --> 00:03:55.960
+Hãy tập ứng dụng các thuộc tính
+vừa học vào thực tế nhé
+
+00:03:55.960 --> 00:03:58.500
+Ở đây tôi có ba TextView
+trong một bài trí tuyến tính.
+
+00:03:58.500 --> 00:04:01.000
+Tất cả đều bị dồn ép
+sát rìa trái màn hình
+
+00:04:01.000 --> 00:04:02.259
+tôi cần chèn khoảng trắng
+
+00:04:03.390 --> 00:04:04.910
+bắt đầu bằng việc thêm lề.
+
+00:04:05.910 --> 00:04:08.235
+Tốt, bây giờ cần thêm
+khoảng trắng quanh TextView.
+
+00:04:09.420 --> 00:04:11.260
+Tôi sẽ thao tác tương tự
+cho hai TextView khác.
+
+00:04:12.250 --> 00:04:17.029
+Hay quá, khoảng cách trên là 16 dp,
+nhưng thực sự ở chỗ này lại là 32 dp
+
+00:04:17.029 --> 00:04:20.260
+vì nó nhận 8 dp lề dưới
+của TextView đầu tiên
+
+00:04:20.260 --> 00:04:22.960
+cộng 8 dp của lề trên
+TextView thứ hai.
+
+00:04:22.960 --> 00:04:24.780
+Muốn khoảng trắng đều, sao cho
+
+00:04:24.780 --> 00:04:30.250
+luôn có 16 dp giữa các hiển thị,
+phải canh lại lề ở đây.
+
+00:04:30.250 --> 00:04:33.100
+Tôi có thể tách nó ra
+thành nhiều giá trị lề riêng.
+
+00:04:33.100 --> 00:04:37.980
+Với đoạn code này, tôi có lề trái
+16 dp còn lề trên cũng 16 dp.
+
+00:04:37.980 --> 00:04:40.750
+Không có lề dưới
+của TextView đầu tiên
+
+00:04:40.750 --> 00:04:43.290
+nên khoảng trắng giữa hai chữ
+bây giờ chính xác là 16 dp.
+
+00:04:43.290 --> 00:04:46.970
+TextView cuối sẽ thao tác giống vậy.
+
+00:04:46.970 --> 00:04:48.780
+Tốt, mọi khoảng trắng đứng
+đã bằng nhau.
+
+00:04:49.900 --> 00:04:53.420
+Lúc nãy tôi có nói chèn khoảng trắng
+cho rìa của các hiển thị,
+
+00:04:53.420 --> 00:04:56.240
+khoảng trắng này có tính xuyên thấu.
+
+00:04:56.240 --> 00:04:58.690
+Nên nhìn xuyên qua được,
+thấy ở phía sau.
+
+00:04:58.690 --> 00:05:02.100
+Trong trường hợp này chúng ta
+đặt nền màu xám cho ViewGroup.
+
+00:05:02.100 --> 00:05:05.390
+Nên layout sẽ giống nhau
+trên thiết bị dù sử dụng
+
+00:05:05.390 --> 00:05:08.785
+canh lề hay khoảng đệm, vì lúc này
+không có màu nền trên TextView.
+
+00:05:09.820 --> 00:05:12.090
+Hãy chèn nó vào
+rồi xem ranh giới từng hiển thị ở đâu.
+
+00:05:13.330 --> 00:05:16.180
+Được rồi, bây giờ có màu nền
+trên TextView đầu tiên này.
+
+00:05:16.180 --> 00:05:20.178
+Khi chèn lề trái và lề trên,
+chúng ta thấy rằng nó sẽ đẩy.
+
+00:05:20.178 --> 00:05:22.600
+TextView lên ở đây 8 dp
+và đẩy nó xuống ở đây 8 dp.
+
+00:05:22.600 --> 00:05:26.950
+Có thể thay đổi cái này thành khoảng đệm
+chúng ta thấy textview lớn hơn
+
+00:05:26.950 --> 00:05:29.580
+chiếm 8 dp khoảng trắng
+lề trái và phải.
+
+00:05:30.700 --> 00:05:33.210
+Những gì mắt thấy được
+không có gì khác trên thiết bị,
+
+00:05:33.210 --> 00:05:35.120
+Dù bạn dùng khoảng đệm hoặc lề.
+
+00:05:35.120 --> 00:05:38.000
+Nếu có một màu nền
+trên TextView này.
+
+00:05:38.000 --> 00:05:40.570
+Có thể thao tác tương tự
+với hiển thị khác sẽ thấy hiệu quả.
+
+00:05:41.830 --> 00:05:45.400
+Chèn giá trị khoảng đệm và lề
+không giới hạn chỉ trong hiển thị con,
+
+00:05:45.400 --> 00:05:47.840
+Có thể chèn giá trị này cho ViewGroup.
+
+00:05:47.840 --> 00:05:50.520
+Nếu tôi thêm giá trị khoảng đệm
+cho bài trí tuyến tính.
+
+00:05:50.520 --> 00:05:55.680
+Bạn sẽ thấy nó dịch chuyển
+chế độ hiển thị vào 16 dp mọi hướng.
+
+00:05:55.680 --> 00:05:59.390
+Tôi có nói bạn có thể đặt
+mọi giá trị cho khoảng đệm hoặc lề.
+
+00:05:59.390 --> 00:06:01.380
+Nhưng biết chọn giá trị nào bây giờ?
+
+00:06:01.380 --> 00:06:04.740
+Vâng, tài liệu này có bộ hướng dẫn
+đề xuất bạn nên sử dụng bội số
+
+00:06:04.740 --> 00:06:05.750
+của 8 dp.
+
+00:06:05.750 --> 00:06:09.190
+Kiến thức này hơi nâng cao
+nhưng về cơ bản chúng tôi muốn
+
+00:06:09.190 --> 00:06:13.000
+các phần hiển thị ngăn nắp trên màn hình
+dọc theo đường lưới vuông 8 dp này.
+
+00:06:13.000 --> 00:06:15.870
+Bây giờ các đường lưới vuông
+chưa hiện trên màn hình,
+
+00:06:15.870 --> 00:06:17.710
+Nếu bạn muốn định vị văn bản ở đây,
+
+00:06:17.710 --> 00:06:21.090
+bạn sẽ di chuyển nó
+qua trái chừng hai ô vuông.
+
+00:06:21.090 --> 00:06:25.280
+Hai ô vuông trên lưới
+sẽ tương đương 16 dp.
+
+00:06:25.280 --> 00:06:28.980
+Trên màn hình email này
+mọi biểu tượng xếp dọc theo đường lưới.
+
+00:06:28.980 --> 00:06:33.120
+Chúng được định vị cách 16 dp
+so với rìa trái màn hình.
+
+00:06:33.120 --> 00:06:38.020
+Văn bản ở đây được định vị cách 72 dp
+so với rìa trái của màn hình.
+
+00:06:38.020 --> 00:06:41.280
+Bạn có thể hình dung
+là nội dung sẽ được định vị trong
+
+00:06:41.280 --> 00:06:42.250
+giới hạn các đường kẻ.
+
+00:06:42.250 --> 00:06:44.440
+Một cách khác dễ hình dung.
+
+00:06:44.440 --> 00:06:47.160
+Trong ảnh chụp màn hình này
+từ ứng dụng Google I/O,
+
+00:06:47.160 --> 00:06:53.920
+nội dung xếp thẳng theo đường 16 dp này
+ngoài ra còn có đường 72 dp này.
+
+00:06:53.920 --> 00:06:57.395
+Tức là cách 72 dp
+so với rìa trái của màn hình.
+
+00:06:57.395 --> 00:06:58.855
+Và rìa phải này,
+
+00:06:58.855 --> 00:07:03.303
+nội dung dừng ở đường lưới cách 16 dp
+phía trước rìa phải của màn hình.
+
+00:07:03.303 --> 00:07:05.485
+Trên máy tính bảng,
+diện tích màn hình thoáng hơn
+
+00:07:05.485 --> 00:07:07.495
+nên bạn có thể có tăng khoảng đệm.
+
+00:07:07.495 --> 00:07:10.635
+Có thể cho nó cách 24 dp
+rìa trái màn hình và cứ thiết lập như vậy
+
+00:07:10.635 --> 00:07:12.175
+cho các giá trị khác.
+
+00:07:12.175 --> 00:07:16.645
+Chúng tôi đề xuất các giá trị này
+vì như thế nội dung sẽ dễ đọc.
+
+00:07:16.645 --> 00:07:20.250
+Ví dụ, nếu hàng tiêu đề lớn này
+dịch chuyển qua trái vài pixel,
+
+00:07:20.250 --> 00:07:23.660
+Nội dung tiêu đề con này dịch chuyển
+qua bên phải vài pixel,
+
+00:07:23.660 --> 00:07:25.560
+sẽ có hiệu ứng lởm chởm xuất hiện ở đây.
+
+00:07:25.560 --> 00:07:29.780
+Nó khiến người dùng mất tập trung
+và không đọc nội dung thực của bạn.
+
+00:07:29.780 --> 00:07:34.540
+Cho nên khi chúng ta sắp xếp ngăn nắp
+ứng dụng của bạn sẽ dễ đọc và dễ sử dụng.
+
+00:07:34.540 --> 00:07:38.120
+Dưới đây là một vài ví dụ thực tế
+về sử dụng khoảng đệm trong lề.
+
+00:07:38.120 --> 00:07:40.190
+Ảnh màn hình Google Calendar[Google Lịch]
+
+00:07:40.190 --> 00:07:43.680
+Chúng ta thấy văn bản
+đã được dịch chuyển vào một khoảng ở đây.
+
+00:07:43.680 --> 00:07:46.680
+Có chút kẽ hở
+giữa các sự kiện lịch.
+
+00:07:46.680 --> 00:07:48.180
+Nếu chúng ta xử lý nó bằng khoảng đệm,
+
+00:07:48.180 --> 00:07:52.360
+thì hình nền này
+kéo giãn và tràn ra kẽ màu trắng này
+
+00:07:52.360 --> 00:07:55.920
+ngược lại, nếu chúng ta sử dụng lề,
+sẽ có vùng đệm nhỏ quanh chế độ hiển thị,
+
+00:07:55.920 --> 00:07:57.820
+có thể ở đây sử dụng canh lề.
+
+00:07:57.820 --> 00:08:01.890
+Đây là ảnh chụp màn hình
+trang lịch chi tiết cho sự kiện.
+
+00:08:01.890 --> 00:08:06.160
+Có rất nhiều nội dung khắp trang này
+khoảng cách các phần phân bố không đều.
+
+00:08:06.160 --> 00:08:08.700
+Có thể tạo khoảng trắng lớn hơn
+bằng cách thêm khoảng đệm.
+
+00:08:08.700 --> 00:08:13.370
+Để chèn thêm khoảng trắng ở đây, có thể
+chèn khoảng đệm dưới cho TextView này,
+
+00:08:13.370 --> 00:08:15.130
+hoặc có thể chèn đệm trên cho TextView.
+
+00:08:16.140 --> 00:08:17.600
+Cách nào cũng được.
+
+00:08:17.600 --> 00:08:20.680
+Bạn cũng có thể xử lý
+bằng canh lề layout.
+
+00:08:20.680 --> 00:08:23.910
+Thực sự không thể nhìn ra khác biệt
+giữa sử dụng lề layout với khoảng đệm
+
+00:08:23.910 --> 00:08:28.050
+vì trong trường hợp này, nền văn bản
+ở dạng xuyên thấu.
+
+00:08:28.050 --> 00:08:30.574
+Tới lượt bạn thực hành
+thiết lập các giá trị
+
+00:08:30.574 --> 00:08:32.169
+khoảng đệm và giá trị lề khác nhau.
+
+00:08:32.169 --> 00:08:35.090
+Chúng tôi đã cho bạn code đầu bài
+hãy bắt đầu bằng liên kết bên dưới.
+
+00:08:35.090 --> 00:08:38.940
+Khi đã thành thạo canh chỉnh
+vùng đệm và lề, hãy tiếp tục
+
+00:08:38.940 --> 00:08:40.169
+thử thiết lập layout này.
+
+00:08:41.210 --> 00:08:45.780
+Hình này, văn bản được định vị
+cách các rìa 16 dp.
+
+00:08:45.780 --> 00:08:49.410
+Nhưng thực sự chỉ có 8 dp
+giữa hai TextView này mà thôi.
+
+00:08:49.410 --> 00:08:50.890
+Làm xong bài tập, đánh dấu vào ô này.
+

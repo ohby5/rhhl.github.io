@@ -1,0 +1,398 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:01.884 --> 00:00:04.763
+Uygulamanızda çizgisel yerleşim 
+kullandığınız bir örnek var mı?
+
+00:00:04.763 --> 00:00:10.611
+Burada bile, bu üç kartlık küme
+yatay bir çizgisel yerleşim,
+
+00:00:10.611 --> 00:00:16.463
+buraya sadece üç kart gibi 
+alt görünümler ekledik.
+
+00:00:16.463 --> 00:00:23.810
+Sonra yerleşim genişliğini sıfır dp ve 
+yerleşim ağırlığını bir olarak ayarladık.
+
+00:00:23.810 --> 00:00:29.569
+Bu esasen çizgisel yerleşime,
+yürütüm süresinde alabildiği ağırlığı alıp
+
+00:00:29.569 --> 00:00:35.523
+diğer göreceli ağırlıklara göre eşit 
+olarak dağıtması ve o gruptaki
+
+00:00:35.523 --> 00:00:42.100
+bütün alt görünümler arasında 
+eşit olarak dağıtması talimatını veriyor.
+
+00:00:42.100 --> 00:00:43.160
+Bu bir örnek.
+
+00:00:43.160 --> 00:00:47.420
+Diğer bir örnekse buradaki, 
+yeni ve güncel oyunlarınız var.
+
+00:00:47.420 --> 00:00:50.110
+Küme bağlantısı olan daha 
+çok düğme olduğunda da
+
+00:00:50.110 --> 00:00:52.910
+basit bir yatay çizgisel yerleşimdir.
+
+00:00:52.910 --> 00:00:54.980
+Yani bunlar daha basitken,
+
+00:00:54.980 --> 00:00:57.740
+özel yerleşimler yazmaya 
+gerek yoktur.
+
+00:00:57.740 --> 00:01:01.310
+Göreceli yerleşimi, 
+çizgisel yerleşimden sırf
+
+00:01:01.310 --> 00:01:05.980
+daha çok yönlü olması sebebiyle 
+her yerde kullanmayın.
+
+00:01:05.980 --> 00:01:08.700
+Bu daha basit şeyler için 
+gereğinden fazladır.
+
+00:01:09.800 --> 00:01:11.748
+Bir tasarımcı size bir model verdiğinde,
+
+00:01:11.748 --> 00:01:15.660
+o uygulamayı nasıl 
+inşa etmeye girişirsiniz?
+
+00:01:15.660 --> 00:01:19.660
+Umarım o noktada, konuştuğumuz gibi, 
+sadece bir modelimiz yoktur.
+
+00:01:19.660 --> 00:01:23.640
+Tercihen küçük ekranlar ve büyük ekranlar 
+arasında tasarımın nasıl ölçeklendiğini
+
+00:01:25.200 --> 00:01:29.880
+gösteren iki ya da üç tane olmalı.
+
+00:01:29.880 --> 00:01:33.560
+Sonra yapı taşlarını tanımlamak istiyorum.
+
+00:01:33.560 --> 00:01:37.680
+Uygulamada pek çok yerde beliren 
+kart gibi bir şey hakkında konuşursak,
+
+00:01:37.680 --> 00:01:41.000
+ille de aynı kartın bir sürü 
+farklı türünü uygulamaya
+
+00:01:41.000 --> 00:01:45.740
+başlamak istemezdim,
+
+00:01:45.740 --> 00:01:49.240
+küçük bir resim veya büyük bir resim 
+veya belki de iki satırlık yerine
+
+00:01:49.240 --> 00:01:52.930
+bir satırlık başlık göstermesi 
+gerekliliğine bağlı olarak.
+
+00:01:52.930 --> 00:01:57.258
+Bu yüzden, bu blokları belirlemeye 
+ve bağımsız sınıflar, bağımsız yerleşimler
+
+00:01:57.258 --> 00:02:02.580
+olarak uygulamaya ve sonra bunların 
+üzerine inşa etmeye çalışıyorum.
+
+00:02:02.580 --> 00:02:07.484
+Önce küçük bloklar inşa etmek 
+için <i>TextView</i>,
+
+00:02:07.484 --> 00:02:11.055
+<i>ImageView</i>, <i>Spinner</i>
+ve benzeri şeylerden başlarsınız.
+
+00:02:11.055 --> 00:02:16.771
+Sonra umarım aynı basit blok setini 
+kullanarak, küçük blokları alıp
+
+00:02:16.771 --> 00:02:22.450
+büyük bloklar inşa etmeye 
+devam edebilirsiniz.
+
+00:02:22.450 --> 00:02:26.390
+Bununla ilgili güzel olan şey, önceden 
+belki biraz fazla zaman harcasanız da,
+
+00:02:26.390 --> 00:02:32.440
+özellikle eğer tasarım uygulamayı 
+geliştirme ve yeni özellikler eklemede
+
+00:02:32.440 --> 00:02:37.280
+dilini nasıl uyguladığı konusunda 
+tutarlı ise daha kolay olur.
+
+00:02:37.280 --> 00:02:41.472
+Eğer tasarım tutarlıysa, 
+aynı blokların farklı konfigürasyonlarda
+
+00:02:41.472 --> 00:02:44.461
+tekrar tekrar kullanıldığını 
+görmeye devam edersiniz.
+
+00:02:44.461 --> 00:02:49.789
+Sonra işte burada ilk yatırımınız 
+karşılığını vermeye başlar,
+
+00:02:49.789 --> 00:02:55.430
+yeni bir ekranın uygulamasına 
+yeni bir şey olarak bakmazsınız.
+
+00:02:55.430 --> 00:03:01.190
+Daha ziyade belki 50, 60, 70, ne kadar 
+oran hâlihazırda orada mevcutsa,
+
+00:03:01.190 --> 00:03:05.450
+belki renkte, belki tipografi ve benzeri 
+şeylerde biraz oynamaya ihtiyacı olabilir.
+
+00:03:05.450 --> 00:03:10.272
+Ama umarım, eğer tasarım tutarlıysa, 
+uygulamanın da ona bağlı olarak
+
+00:03:10.272 --> 00:03:14.098
+ilerlemesi kolay olur, 
+eğer ona göre inşa ettiyseniz.
+
+00:03:14.098 --> 00:03:19.903
+Aynı zamanda tekrar tasarım yapmak da 
+daha kolay olur, sadece görsel düzeyde,
+
+00:03:19.903 --> 00:03:24.099
+eğer renklerle oynamak isterseniz, 
+eğer tipografiyle oynamak isterseniz,
+
+00:03:24.099 --> 00:03:28.941
+eğer belki Lollipop'ta yaptığımız gibi 
+bir şeye bastığınızda bu dalgalanma
+
+00:03:28.941 --> 00:03:31.880
+efektine sahip olmayı eklemek isterseniz.
+
+00:03:31.880 --> 00:03:36.870
+Eğer tekrar kullanıp durduğunuz birkaç 
+parçanız, stiliniz, yerleşiminiz varsa,
+
+00:03:36.870 --> 00:03:42.250
+o zaman bu görsel yinelemeyi 
+daha az yerde yaparsınız
+
+00:03:42.250 --> 00:03:48.030
+ve sonra umarım her yerde 
+tutarlı olarak uygulanır.
+
+00:03:48.030 --> 00:03:51.550
+Yani ben başlangıçta veriyi 
+doğru almaya odaklanıyorum,
+
+00:03:51.550 --> 00:03:57.918
+özellikle de veriyi dış kaynaklardan 
+alan bir uygulama için.
+
+00:03:57.918 --> 00:04:02.512
+Sonra örgüyü kurmak için, tipografi, 
+renkler, animasyon, geçişler ve benzeri
+
+00:04:02.512 --> 00:04:07.532
+zamanınızın elverdiği şeyler 
+için veriniz olunca,
+
+00:04:07.532 --> 00:04:12.575
+pikselleri yakından çalışın, 
+pikselleri düzeltin.
+
+00:04:12.575 --> 00:04:16.338
+Bence bir Twitter müşteriniz 
+olsaydı da aynı şey olurdu.
+
+00:04:16.338 --> 00:04:18.991
+Bazı sahte verilerle 
+yerleşimlerinizin piksellerini
+
+00:04:18.991 --> 00:04:22.321
+mükemmelleştirmeye başlayabilirsiniz.
+
+00:04:22.321 --> 00:04:29.732
+Sonra Twitter'dan veri çekmekle ilgili 
+hiçbir şey bilmediğinizi fark edersiniz
+
+00:04:29.732 --> 00:04:32.920
+ve sadece veriyi çekmek üç ayınızı alır.
+
+00:04:32.920 --> 00:04:37.240
+Sadece bir örnek olarak, ben
+veriden başlamayı tercih ederim.
+
+00:04:37.240 --> 00:04:41.880
+Ben bunu bir buz dağı gibi 
+düşünüyorum, yüzeyin üstünde
+
+00:04:41.880 --> 00:04:47.640
+belki %5-10 güzel pikseller görürsünüz 
+ve sonra yüzeyin altında ise
+
+00:04:47.640 --> 00:04:50.800
+bunu desteklemek için 
+bir sürü çalışma gerçekleşir.
+
+00:04:50.800 --> 00:04:53.820
+Buz dağının tepesinin insanların 
+gördüğü şeyler olduğunu belirttiniz.
+
+00:04:53.820 --> 00:04:57.210
+Peki yüzeyin altında tam 
+olarak neler oluyor?
+
+00:04:57.210 --> 00:05:00.620
+Google Play uygulamasını 
+nasıl görüyorsunuz?
+
+00:05:00.620 --> 00:05:05.940
+Yüzeyin üstünde olan şey, 
+ilk önce ağdan veriyi almak için
+
+00:05:05.940 --> 00:05:11.643
+sunucuda olduğunuzu doğrulayabilir 
+ve veriyi alabilirsiniz.
+
+00:05:11.643 --> 00:05:13.979
+Sonra belki yerel olarak 
+önbelleğe alabilirsiniz,
+
+00:05:13.979 --> 00:05:18.152
+böylece bir daha akıştan detaylar 
+sayfasına ve oradan tekrar
+
+00:05:18.152 --> 00:05:22.820
+akışa gittiğinizde, önbellekteki veriyi, 
+önbellekteki görüntüleri kullanırız.
+
+00:05:22.820 --> 00:05:26.616
+Böylece aküyü fazla zorlamamış oluruz.
+
+00:05:26.616 --> 00:05:30.284
+Aynı zamanda uygulama da 
+hâlihazırda olan bilgiyi gösterir.
+
+00:05:30.284 --> 00:05:33.830
+Böylece birden çok hesaptan 
+desteğiniz olur.
+
+00:05:33.830 --> 00:05:37.660
+Böylece belki veri tabanında 
+orada burada birkaç bit devam eder.
+
+00:05:38.670 --> 00:05:44.380
+Sonra faturalandırma 
+akışlarımız var, bu işin çoğu
+
+00:05:44.380 --> 00:05:48.840
+sunucuda farklı ödeme metotlarını 
+entegre etmek için yapılır.
+
+00:05:48.840 --> 00:05:51.200
+Sonra istemcide de işimiz var.
+
+00:05:51.200 --> 00:05:57.050
+Play mağazasının diğer bir büyük 
+kısmı ise, uygulama ve oyunları
+
+00:05:57.050 --> 00:05:59.660
+indirme ve kurma.
+
+00:05:59.660 --> 00:06:04.530
+Biz Play mağazası tarafındayız, 
+uygulamaları indirme, kurma,
+
+00:06:04.530 --> 00:06:06.840
+güncellemeden sorumluyuz.
+
+00:06:06.840 --> 00:06:11.556
+Bu da bir diğer büyük iş, tekrar 
+ediyorum, bütün bunların çoğunun
+
+00:06:11.556 --> 00:06:16.052
+yüzey bitleri var, 
+bunlar ekrandaki pikseller.
+
+00:06:16.052 --> 00:06:21.425
+Sonra yüzeyin altında o bilgiyi 
+doğru hesaba getirmek ve
+
+00:06:21.425 --> 00:06:27.668
+onu ekrana koymak için 
+bir sürü çalışma oluyor.
+
+00:06:27.668 --> 00:06:32.610
+Belli ki Google Play uygulamasının 
+pek çok farklı iterasyonunda çalıştınız.
+
+00:06:32.610 --> 00:06:36.355
+Android'dek son gelişmelerden 
+nasıl haberdar oluyorsunuz?
+
+00:06:36.355 --> 00:06:42.657
+Google+'da pek çok, 
+eğitim veren çok aktif
+
+00:06:42.657 --> 00:06:47.295
+Android geliştiricilerden 
+bir sürü bilgi alınıyor.
+
+00:06:47.295 --> 00:06:54.012
+Ve sadece farklı bloglardan
+
+00:06:54.012 --> 00:06:57.575
+ve bazen ille de gidip 
+<i>RecyclerView</i> veya <i>ViewPager</i>
+
+00:06:57.575 --> 00:07:02.732
+veya benzeri şeyler veya araç çubuğu ve 
+işlem çubuğunun nasıl konfigüre edileceği
+
+00:07:02.732 --> 00:07:07.430
+hakkında belli serileri 
+derinlemesine okumuyorum.
+
+00:07:07.430 --> 00:07:09.270
+Biraz da şöyle düşünüyorum,
+
+00:07:10.270 --> 00:07:12.810
+biliyorum ki orada bir sürü bilgi var.
+
+00:07:12.810 --> 00:07:17.340
+Ne zaman o derinlikteki 
+seviyede bilgiye ihtiyacım olursa,
+
+00:07:17.340 --> 00:07:20.130
+o zaman o kaynaklara giderim.
+
+00:07:20.130 --> 00:07:21.960
+Zamanını ayırdığın için
+çok teşekkürler, Kirill.
+
+00:07:21.960 --> 00:07:25.110
+Öğrencilerimizin bir Android uygulama
+mühendisinin nasıl bir şey olduğuyla
+
+00:07:25.110 --> 00:07:27.010
+ilgili bakış açını duymaktan gerçekten 
+hoşlanacağını düşünüyorum.
+

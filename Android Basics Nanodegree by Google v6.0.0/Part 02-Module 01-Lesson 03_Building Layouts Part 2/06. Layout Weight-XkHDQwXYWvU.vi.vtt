@@ -1,0 +1,610 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.970 --> 00:00:05.250
+Trong bài kiểm tra cuối cùng, ta đã thử 
+tìm hiểu cách làm cho text view
+
+00:00:05.250 --> 00:00:08.240
+Tom, Tim, và Tod 
+có không gian cá nhân
+
+00:00:08.240 --> 00:00:12.010
+bằng cách tách chúng ra đều nhau 
+theo chiều dọc của thiết bị.
+
+00:00:13.380 --> 00:00:15.740
+Ta thử thiết lập giá trị dp cố định,
+
+00:00:15.740 --> 00:00:19.900
+nhưng nó sẽ không làm việc nếu đổi sang 
+một thiết bị dài hơn như máy tính bảng.
+
+00:00:19.900 --> 00:00:24.300
+Chúng ta đã thử thiết lập match_parent,
+nhưng nó làm chữ Tom trông rất lớn.
+
+00:00:24.300 --> 00:00:27.390
+Và đẩy hai chữ còn lại ra khỏi màn hình.
+
+00:00:27.390 --> 00:00:31.440
+Vậy thì ta bắt đầu nghiên cứu
+về dung lượng của layout tuyến tính.,
+
+00:00:31.440 --> 00:00:34.660
+Tài liệu nói rằng đối với layout 
+tuyến tính theo chiều dọc,
+
+00:00:34.660 --> 00:00:37.820
+nếu chúng ta muốn cách đều các view con,
+ta cần phải thiết lập
+
+00:00:37.820 --> 00:00:42.320
+giá trị chiều dài là 0 dp và
+giá trị dung lượng là 1 cho mỗi view con.
+
+00:00:43.590 --> 00:00:46.480
+Gán một giá trị dung lượng 
+cho một view con
+
+00:00:46.480 --> 00:00:49.490
+giống như trao một tầm quan trọng cho nó.
+
+00:00:49.490 --> 00:00:50.930
+Giá trị dung lượng càng cao,
+
+00:00:50.930 --> 00:00:55.040
+càng nhiều không gian nó có thể nhận được 
+nếu có sẵn không gian trống ở view gốc.
+
+00:00:56.280 --> 00:00:57.510
+Ví dụ, đối với
+
+00:00:57.510 --> 00:01:01.920
+layout tuyến tính dọc này, nó sẽ lấp đầy 
+xuống theo chiều dọc như thế này.
+
+00:01:01.920 --> 00:01:04.590
+Layout tuyến tính này
+sẽ có nhiều không gian hơn,
+
+00:01:04.590 --> 00:01:08.900
+và sẽ được phân bố cho các view con
+có giá trị dung lượng.
+
+00:01:08.900 --> 00:01:11.020
+Nếu một view con 
+có giá trị dụng lượng lớn,
+
+00:01:11.020 --> 00:01:14.450
+thì giá trị chiều dài có sẵn này 
+sẽ được trao cho view con đó nhiều hơn.
+
+00:01:14.450 --> 00:01:16.740
+Nếu một view con 
+có giá trị dung lượng rất nhỏ,
+
+00:01:16.740 --> 00:01:19.900
+thì giá trị chiều dài có sẵn này
+được trao cho view con đó ít hơn.
+
+00:01:19.900 --> 00:01:21.340
+Tôi sẽ cho bạn thấy.
+
+00:01:21.340 --> 00:01:24.130
+Tôi sẽ thiết lập chiều dài
+của view con này là 0dp
+
+00:01:24.130 --> 00:01:26.020
+và sau đó thiết lập dung lượng là 1.
+
+00:01:26.020 --> 00:01:29.642
+Đầu tiên layout tuyến tính xuất ra 
+hai TextViews Tim và Todd,
+
+00:01:29.642 --> 00:01:33.880
+bởi vì chúng có một chiều dài cố định 
+dựa vào nội dung bên trong nó.
+
+00:01:33.880 --> 00:01:38.019
+Và sau đó có Tom TextView 
+với một chiều dài ban đầu là 0dp,
+
+00:01:38.019 --> 00:01:38.880
+dung lượng là 1.
+
+00:01:38.880 --> 00:01:41.266
+Không một view con nào khác
+có giá trị dung lượng,
+
+00:01:41.266 --> 00:01:45.000
+bởi vì giá trị dung lượng mặc định
+là 0 nếu không được chỉ định.
+
+00:01:45.000 --> 00:01:47.710
+Vì vậy, đây là view con duy nhất
+có giá trị dung lượng.
+
+00:01:47.710 --> 00:01:50.480
+Vậy view gốc cho Text ViewTom này
+tất cả chiều dài còn lại
+
+00:01:50.480 --> 00:01:51.900
+của màn hình.
+
+00:01:51.900 --> 00:01:55.610
+Đó là lý do tại sao bạn thấy
+chữ Tom rất to.
+
+00:01:55.610 --> 00:01:58.810
+Giờ tôi sẽ thử gán các giá trị dung lượng
+cho các view con khác.
+
+00:01:58.810 --> 00:02:02.660
+Vậy mỗi view con có chiều là 0dp
+và dung lượng là 1.
+
+00:02:02.660 --> 00:02:04.980
+Đây là quá trình layout tuyến tính
+sẽ thực hiện.
+
+00:02:04.980 --> 00:02:08.250
+Nó sẽ cố gắng tìm ra
+chiều dài của các view con khác.
+
+00:02:08.250 --> 00:02:10.889
+Chiều dài của các view này
+bắt đầu từ 0 dp.
+
+00:02:10.889 --> 00:02:13.950
+Vậy có nghĩa là có sẵn
+chiều dài còn lại trong view gốc
+
+00:02:13.950 --> 00:02:16.410
+về cơ bản là toàn bộ
+chiều dài của màn hình.
+
+00:02:16.410 --> 00:02:19.500
+Nó chia toàn bộ chiều dài của màn hình
+bằng tổng dung lượng
+
+00:02:19.500 --> 00:02:20.280
+là 3.
+
+00:02:20.280 --> 00:02:24.215
+Và sau đó nó đưa một phần ba 
+chiều dài có sẵn đó cho TextView Tom,
+
+00:02:24.215 --> 00:02:27.220
+một phần ba chiều dài cho chữ Tim,
+
+00:02:27.220 --> 00:02:29.680
+và một phần ba cho chữ Todd.
+
+00:02:29.680 --> 00:02:32.840
+Chúng sẽ được giãn cách đều
+theo chiều dài của thiết bị
+
+00:02:32.840 --> 00:02:37.250
+thậm chí trên thiết bị màn hình lớn hơn 
+bởi giá trị dung lượng này.
+
+00:02:37.250 --> 00:02:40.130
+Nếu tôi thay đổi 
+giá trị dung lượng cao hơn,
+
+00:02:40.130 --> 00:02:44.920
+thì view gốc sẽ cung cấp thêm
+chiều dài có sẵn cho TextView Tim.
+
+00:02:44.920 --> 00:02:47.310
+Thậm chí tôi có thể đổi nó 
+thành giá trị cao hơn,
+
+00:02:47.310 --> 00:02:51.380
+và bạn có thể thấy nó đang tiếp tục
+nhận được nhiều hơn chiều dài vốn có.
+
+00:02:51.380 --> 00:02:54.240
+Trong trường hợp này,
+TextView Tim có dung lượng 8.
+
+00:02:54.240 --> 00:02:56.910
+Tom có một dung lượng 1, 
+và Todd có dung lượng 1.
+
+00:02:56.910 --> 00:03:00.340
+Vì vậy, tổng số dung lượng là 8, 9, 10.
+
+00:03:00.340 --> 00:03:03.930
+Vì vậy, view gốc chia 
+chiều dài có sẵn cho mười.
+
+00:03:03.930 --> 00:03:06.710
+Và một phần mười cho chữ Tom,
+tám phần mười cho chữ Tim,
+
+00:03:06.710 --> 00:03:08.170
+và một phần mười cho Todd.
+
+00:03:09.450 --> 00:03:13.020
+Vậy với một layout tuyến tính dọc,
+ta có 3 TextView con.
+
+00:03:13.020 --> 00:03:15.410
+Ta thiết lập chiều dài ban đầu là 0 dp.
+
+00:03:15.410 --> 00:03:19.400
+Vậy tất cả chúng đang xếp chồng lên nhau 
+ở đầu màn hình với chiều dài là 0.
+
+00:03:19.400 --> 00:03:23.290
+Có nghĩa là view gốc có tất cả
+chiều cao thêm vào này.
+
+00:03:23.290 --> 00:03:27.810
+Nếu tôi thiết lập dung lượng là 1 
+với mỗi TextView con,
+
+00:03:27.810 --> 00:03:31.420
+thì chiều dài có sẵn của view gốc
+sẽ được chia đều giữa các view con.
+
+00:03:32.810 --> 00:03:35.400
+Tương tự layout tuyến tính ngang
+cũng như vậy.
+
+00:03:35.400 --> 00:03:37.550
+Ví dụ ta có 3 Textview con.
+
+00:03:37.550 --> 00:03:39.820
+Ta bắt đầu với chiều rộng từ 0 dp.
+
+00:03:39.820 --> 00:03:43.300
+Có nghĩa là view gốc có tất cả
+chiều rộng thêm vào này.
+
+00:03:43.300 --> 00:03:46.960
+Nếu tôi chỉ định giá trị dung lượng là 1
+cho mỗi một view con,
+
+00:03:46.960 --> 00:03:50.110
+thì ta sẽ lấy chiều rộng có sẵn
+còn lại trong view gốc
+
+00:03:50.110 --> 00:03:52.740
+và chia đều cho mỗi view con.
+
+00:03:52.740 --> 00:03:54.910
+Một lần nữa,
+nó lại không có dung lượng là 1.
+
+00:03:54.910 --> 00:03:57.740
+Có thể là 3 hoặc bất kỳ giá trị nào khác.
+
+00:03:57.740 --> 00:03:59.960
+Hoặc thậm chí bằng không.
+
+00:03:59.960 --> 00:04:04.440
+Nếu một view có dung lượng bằng 0, 
+nghĩa là nó không thay đổi tùy thuộc vào
+
+00:04:04.440 --> 00:04:06.290
+không gian còn lại trong view gốc.
+
+00:04:06.290 --> 00:04:09.560
+Về cơ bản nó sẽ giữ nguyên
+chiều rộng và chiều dài được thiết lập.
+
+00:04:09.560 --> 00:04:12.710
+Tôi muốn chỉ ra một điều là
+khi nào cần thiết lập chiều dài là 0
+
+00:04:12.710 --> 00:04:14.370
+hoặc chiều rộng là 0.
+
+00:04:14.370 --> 00:04:15.700
+Nếu bạn có một layout tuyến tính dọc,
+
+00:04:15.700 --> 00:04:18.950
+bạn làm đầy các layout tuyến tính dọc 
+theo cách này.
+
+00:04:18.950 --> 00:04:21.080
+Bạn sẽ không biết độ dài
+nên là bao nhiêu,
+
+00:04:21.080 --> 00:04:24.710
+nên đầu tiên thiết lập chiều dài là 0 dp, 
+rồi cho nó một giá trị dung lượng.
+
+00:04:24.710 --> 00:04:28.760
+Tương tự với layout tuyến tính ngang,
+bạn đang làm đầy nó theo chiều ngang.
+
+00:04:28.760 --> 00:04:31.920
+Bạn cũng không biết chiều rộng 
+của các view con.
+
+00:04:31.920 --> 00:04:34.930
+Bạn thiết lập chiều rộng là 0 dp, 
+và cho nó giá trị dung lượng.
+
+00:04:36.660 --> 00:04:39.820
+Về cơ bản, bạn có thể nghĩ
+việc gán giá trị dung lượng cho một view
+
+00:04:39.820 --> 00:04:44.840
+giống như có thể kéo dài nó ra
+tùy thuộc vào độ lớn của view gốc.
+
+00:04:44.840 --> 00:04:48.540
+Điều này tốt cho việc lấp đầy không gian 
+trong một thiết bị nhỏ
+
+00:04:48.540 --> 00:04:49.259
+hay lớn.
+
+00:04:50.620 --> 00:04:53.730
+Đây là một vài ví dụ trong thực tế 
+về ứng dụng của dung lượng layout.
+
+00:04:54.980 --> 00:04:57.210
+Đây là ứng dụng Google Hangouts.
+
+00:04:57.210 --> 00:05:01.750
+Bạn có thể sử dụng để chat với bạn bè 
+hoặc gửi hình chim cánh cụt cho họ.
+
+00:05:01.750 --> 00:05:05.620
+Ở phần dưới cùng của màn hình
+đây là nơi bạn gửi tin nhắn.
+
+00:05:05.620 --> 00:05:08.950
+Chúng ta hãy nhìn vào layout dưới này
+kĩ hơn một chút.
+
+00:05:08.950 --> 00:05:13.490
+Đây là một layout tuyến tính ngang 
+vì nó được bố trí trong một hàng ngang.
+
+00:05:13.490 --> 00:05:15.347
+Nó được tạo thành từ một ImageView,
+
+00:05:15.347 --> 00:05:19.090
+một trường EditText nơi bạn có thể
+nhập văn bản, và một ImageView khác.
+
+00:05:19.090 --> 00:05:22.520
+Bây giờ chiều dài của mỗi
+view này thực sự là wrap_content
+
+00:05:22.520 --> 00:05:25.410
+bởi vì nó gói gọn 
+toàn bộ nội dung bên trong.
+
+00:05:25.410 --> 00:05:28.480
+Chiều rộng của hai quan điểm view ảnh
+được wrap_content
+
+00:05:28.480 --> 00:05:30.710
+vì nó chỉ rộng vừa khớp với
+nội dung bên trong.
+
+00:05:30.710 --> 00:05:34.140
+Chúng ta thiết lập dung lượng là 0
+bởi vì ta không muốn lớn hơn thế này,
+
+00:05:34.140 --> 00:05:37.890
+thậm chí kể cả nếu có nhiều không gian 
+còn lại trong view gốc.
+
+00:05:37.890 --> 00:05:41.700
+Thiết lập dung lượng bằng 0 đảm bảo rằng 
+chỉ chiều rộng và dài được wrap_content
+
+00:05:41.700 --> 00:05:43.280
+và nó sẽ không thay đổi.
+
+00:05:43.280 --> 00:05:46.310
+Ta muốn nó dài để nhìn lớn hơn
+trên màn hình của thiết bị lớn,
+
+00:05:46.330 --> 00:05:50.640
+và muốn nó thu nhỏ để hiển thị
+trên các thiết bị có màn hình nhỏ hơn.
+
+00:05:50.640 --> 00:05:54.250
+Vậy ta thiết lập chiều rộng là 0 dp 
+và trọng lượng là 1.
+
+00:05:54.250 --> 00:05:58.404
+Có nghĩa là layout tuyến tính gốc
+sẽ thử bố cục lại ảnh này trước
+
+00:05:58.404 --> 00:05:59.340
+rồi đến ảnh này.
+
+00:05:59.340 --> 00:06:05.050
+Sau đó độ rộng còn dư trên thiết bị 
+sẽ được trao cho view này.
+
+00:06:05.050 --> 00:06:07.000
+Đây là một ví dụ trong ứng dụng bản đồ.
+
+00:06:07.000 --> 00:06:09.570
+Đây là một trang chi tiết về một địa điểm.
+
+00:06:09.570 --> 00:06:12.480
+Có ba nút ở đây,
+Call, Save, và Website.
+
+00:06:12.480 --> 00:06:14.450
+Chúng ta hãy nhìn vào chúng kĩ hơn.
+
+00:06:14.450 --> 00:06:18.660
+Thực ra bạn có thể xây dựng chúng 
+như là TextViews và gắn các biểu tượng,
+
+00:06:18.660 --> 00:06:21.700
+và bạn có thể xem các ghi chú hướng dẫn 
+để biết thêm chi tiết.
+
+00:06:21.700 --> 00:06:23.540
+Nhưng đó thực sự là một điểm tiếp xúc.
+
+00:06:23.540 --> 00:06:26.520
+Đối với bài tập này, ta hãy giả định 
+đây là những textview.
+
+00:06:26.520 --> 00:06:29.710
+Chiều rộng của mỗi TextView
+sẽ được wrap_content
+
+00:06:29.710 --> 00:06:33.000
+bởi vì nó vừa với chiều dài
+của nội dung bên trong nó.
+
+00:06:33.000 --> 00:06:34.980
+Chiều rộng phức tạp hơn một chút.
+
+00:06:34.980 --> 00:06:38.485
+Chúng ta muốn mỗi một TextViews này 
+được dàn đều theo chiều ngang
+
+00:06:38.485 --> 00:06:42.470
+của màn hình này, tùy thuộc vào 
+kích cỡ của thiết bị đó.
+
+00:06:42.470 --> 00:06:44.980
+Ta không muốn cả ba text view
+bị chia thành các nhóm
+
+00:06:44.980 --> 00:06:46.420
+phía bên trái của màn hình.
+
+00:06:47.060 --> 00:06:50.640
+Vì vậy, để căn đều các view con,
+ta gán cho chúng dung lượng bằng nhau.
+
+00:06:50.640 --> 00:06:54.000
+Ta thiết lập chiều rộng là 0 
+và dung lượng 1 cho mỗi một view con đó.
+
+00:06:54.058 --> 00:06:57.790
+Bằng cách đó độ rộng có sẵn trong view gốc
+sẽ được phân bố đều
+
+00:06:57.790 --> 00:06:58.810
+giữa 3 view con.
+
+00:06:59.790 --> 00:07:02.170
+Và ví dụ cuối cùng là một ứng dụng email.
+
+00:07:02.170 --> 00:07:05.720
+Đây là một màn hình soạn thư trong Gmail
+nơi bạn có thể viết một thư mới.
+
+00:07:05.810 --> 00:07:09.160
+Đó là một layout tuyến tính dọc,
+vì các ký tự đều nằm trong một cột.
+
+00:07:10.230 --> 00:07:13.380
+Và nó được tạo thành
+từ bốn trường EditText khác nhau.
+
+00:07:13.380 --> 00:07:16.546
+Bây giờ, chiều rộng của mỗi view con 
+được match_parent
+
+00:07:16.546 --> 00:07:18.990
+vì ta muốn nó bao trọn 
+chiều rộng của thiết bị.
+
+00:07:18.990 --> 00:07:22.845
+Đối với chiều cao, ta đặt 
+3 trường EditText trong wrap_content
+
+00:07:22.845 --> 00:07:25.475
+để nó bao trọn văn bản bên trong.
+
+00:07:25.475 --> 00:07:28.185
+Chúng ta đặt dung lượng là 0
+vì ta không muốn
+
+00:07:28.185 --> 00:07:32.620
+chúng tăng kích thước 
+ngay cả nếu còn chiều dài ở view gốc.
+
+00:07:32.620 --> 00:07:35.870
+Nhưng với trường EditText cuối cùng này, 
+nơi bạn viết email,
+
+00:07:35.870 --> 00:07:40.710
+ta muốn cho người dùng nhiều khoảng trống
+để viết một lá thư rất dài cho bà ngoại
+
+00:07:40.710 --> 00:07:44.870
+vậy, ta sẽ thiết lập chiều dài là 0 dp,
+và dung lượng là 1.
+
+00:07:44.870 --> 00:07:46.700
+Vậy nếu view gốc có 
+thừa độ dài,
+
+00:07:46.700 --> 00:07:50.070
+nó sẽ được chuyển cho
+trường EditText con này.
+
+00:07:50.070 --> 00:07:54.120
+Trên một thiết bị có màn hình lớn hơn,
+trường soạn thảo email sẽ dài hơn,
+
+00:07:54.120 --> 00:07:56.880
+và trên một thiết bị nhỏ hơn 
+nó sẽ nhỏ hơn một chút.
+
+00:07:58.620 --> 00:08:00.150
+Bây giờ đến lượt bạn.
+
+00:08:00.150 --> 00:08:03.440
+Chúng tôi muốn bạn tiếp tục
+xây dựng layout này trong XML visualizer.
+
+00:08:03.440 --> 00:08:06.550
+Bạn có thể bắt đầu với mã XML
+mà chúng tôi đã cung cấp dưới đây.
+
+00:08:06.550 --> 00:08:08.140
+Sau đây là một vài lời khuyên.
+
+00:08:08.140 --> 00:08:11.517
+Khi bạn cố giải quyết cái gì đó như này,
+đầu tiên hãy cố gắng xác định
+
+00:08:11.517 --> 00:08:15.500
+chiều rộng của từng view, sau đó
+tiếp tục thử xác định chiều dài của nó.
+
+00:08:15.500 --> 00:08:18.430
+Ngoài ra hãy chắc chắn hình ảnh
+chiếm toàn bộ chiều cao dư ra
+
+00:08:18.430 --> 00:08:19.980
+trong layout tuyến tính gốc.
+
+00:08:19.980 --> 00:08:22.730
+Vì vậy, trên màn hình nhỏ hơn,
+nó sẽ chiếm ít độ dài hơn.
+
+00:08:22.730 --> 00:08:25.110
+Trên màn hình lớn hơn,
+nó chiếm nhiều độ dài hơn.
+
+00:08:25.110 --> 00:08:26.390
+Nào hãy bắt đầu thực hiện.
+
+00:08:26.390 --> 00:08:28.381
+Đánh dấu vào ô này khi bạn làm xong.
+

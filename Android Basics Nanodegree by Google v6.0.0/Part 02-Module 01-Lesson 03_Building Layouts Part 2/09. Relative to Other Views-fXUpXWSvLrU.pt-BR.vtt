@@ -1,0 +1,462 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.420 --> 00:00:03.469
+Quando se posiciona filhos em relação
+a outros modos de exibição de irmão,
+
+00:00:03.469 --> 00:00:06.190
+Você pode adicionar restrições
+na sua posição.
+
+00:00:06.190 --> 00:00:09.885
+Por exemplo, que um TextView deve
+estar acima de outro TextView,
+
+00:00:09.885 --> 00:00:14.090
+ou um ImageView deve estar à
+esquerda do outro TextView.
+
+00:00:14.090 --> 00:00:17.280
+Todas essas restrições lembram-me
+de fazer um mapa de assentos
+
+00:00:17.280 --> 00:00:17.900
+Para um jantar de uma festa.
+
+00:00:18.910 --> 00:00:21.380
+Nós temos nossa festa de
+aniversário chegando, então
+
+00:00:21.380 --> 00:00:23.540
+Vamos olhar para o mapa
+de assentos para isso.
+
+00:00:23.540 --> 00:00:25.140
+Nós convidamos todas essas pessoas para
+
+00:00:25.140 --> 00:00:28.330
+o jantar, mas há restrições sobre onde
+as pessoas querem se sentar.
+
+00:00:28.330 --> 00:00:30.550
+Algumas pessoas devem se sentar
+ao lado de seu melhor amigo.
+
+00:00:30.550 --> 00:00:33.490
+Outras pessoas têm que se
+pode chamar de frenemies.
+
+00:00:33.490 --> 00:00:36.120
+Então, talvez não queiram se
+sentar ao lado de certas pessoas.
+
+00:00:36.120 --> 00:00:39.860
+Então, tendo em conta tudo isso,
+eu vim com esse layout proposto.
+
+00:00:39.860 --> 00:00:41.880
+Kunal, Ben e Kagure estão aqui em cima.
+
+00:00:41.880 --> 00:00:45.900
+Natalie, Lyla e eu estamos aqui.
+Amy, Omoju e Jenny neste canto.
+
+00:00:45.900 --> 00:00:49.400
+Então nós poderíamos construir esta disposição
+de assentos no XML usando TextViews e
+
+00:00:49.400 --> 00:00:51.040
+um layout relativo?
+
+00:00:51.040 --> 00:00:53.270
+Sabemos como posicionar vistas nos cantos.
+
+00:00:53.270 --> 00:00:57.398
+Então a Lyla TextView iria ser alinhado com a
+borda esquerda do pai e a borda inferior.
+
+00:00:57.398 --> 00:01:01.390
+A Jennie TextView iria ser alinhado com
+a borda direita e borda inferior do pai.
+
+00:01:01.390 --> 00:01:04.510
+Para Ben poderia alinhá-lo
+a borda superior do pai.
+
+00:01:04.510 --> 00:01:07.280
+A propósito, presumimos que
+o pai é a largura total e
+
+00:01:07.280 --> 00:01:11.360
+altura da tela, Então marcamos o
+pai para largura e altura.
+
+00:01:11.360 --> 00:01:12.430
+Então, de volta ao Ben.
+
+00:01:12.430 --> 00:01:14.550
+Ele é alinhado à parte superior do pai.
+
+00:01:14.550 --> 00:01:16.970
+Nós também queremos centralizar
+ele horizontalmente.
+
+00:01:16.970 --> 00:01:20.320
+E, anteriormente, você pode chamar esses
+três pontos de vista como vistas de âncora.
+
+00:01:20.320 --> 00:01:23.750
+Porque todo mundo está posicionado
+em relação a essas pessoas.
+
+00:01:23.750 --> 00:01:27.670
+E essas pessoas não se mexem,
+independentemente de onde toda a gente está sentada.
+
+00:01:27.670 --> 00:01:29.360
+Então vamos adicionar outra pessoa.
+
+00:01:29.360 --> 00:01:32.810
+Temos Kunal aqui, que está localizado
+à esquerda do Ben.
+
+00:01:32.810 --> 00:01:35.259
+Mas como que expressamos em XML?
+
+00:01:35.259 --> 00:01:39.552
+Bem, não há nenhum atributo específico
+que diz que um modo de exibição deve ser para a esquerda
+
+00:01:39.552 --> 00:01:40.655
+de um modo de exibição chamado Ben.
+
+00:01:40.655 --> 00:01:43.363
+Todos os nomes de atributo
+Android são gerais então
+
+00:01:43.363 --> 00:01:46.940
+ele funciona para qualquer
+caso de uso que você iria querer.
+
+00:01:46.940 --> 00:01:49.410
+Queremos posicionar Kunal
+à esquerda do Ben, mas
+
+00:01:49.410 --> 00:01:52.580
+Nós não sabemos qualquer existente de
+nomes de atributos que podem fazer isso.
+
+00:01:52.580 --> 00:01:53.768
+Por sorte,
+
+00:01:53.768 --> 00:01:58.780
+RelativeLayout tem um atributo
+que diz android: layout_toLeftof.
+
+00:01:58.780 --> 00:02:03.520
+Isso significa que o modo de exibição de
+texto Kunal deve ser à esquerda da vista.
+
+00:02:03.520 --> 00:02:08.020
+E a maneira que especificamos
+algumas vista é usar vista IDs.
+
+00:02:08.020 --> 00:02:10.000
+Nós pode atribuir nomes de exibição ID
+para qualquer modo de exibição.
+
+00:02:10.000 --> 00:02:13.110
+Não têm de ser especificamente
+dirigida para o RelativeLayout.
+
+00:02:13.110 --> 00:02:16.275
+Podem estar localizados dentro de um
+RelativeLayout, ou um LinearLayout, ou
+
+00:02:16.275 --> 00:02:18.200
+qualquer outro grupo de exibição.
+
+00:02:18.200 --> 00:02:21.710
+Então sobre o Ben TextView,
+podemos adicionar esse atributo, android: id.
+
+00:02:21.710 --> 00:02:23.860
+O valor do mesmo é o nome de ID.
+
+00:02:23.860 --> 00:02:29.500
+O formato começa com o símbolo @ que refere-se
+a um recurso em nosso app Android.
+
+00:02:29.500 --> 00:02:34.263
+Também vimos o símbolo @ para referirmos
+as imagens em nosso aplicativo.
+
+00:02:34.263 --> 00:02:36.516
+Por exemplo o app Drawable.
+
+00:02:36.516 --> 00:02:38.950
+Em seguida, especificamos o tipo de recurso.
+
+00:02:38.950 --> 00:02:41.017
+Neste caso, o tipo de recurso
+é uma identificação.
+
+00:02:41.017 --> 00:02:44.197
+Nós também adicionamos o símbolo de adição,
+porque esta é a primeira vez que estamos
+
+00:02:44.197 --> 00:02:45.219
+declarando essa identificação.
+
+00:02:45.219 --> 00:02:50.120
+Então temos uma barra e em seguida
+temos o nome da exibição.
+
+00:02:50.120 --> 00:02:53.190
+Este é o nome que escolhemos
+para o Ben TextView.
+
+00:02:53.190 --> 00:02:55.240
+Chamamos de ben_text_view.
+
+00:02:56.320 --> 00:02:59.470
+Os requisitos básicos é que o nome
+não pode ter quaisquer espaços.
+
+00:02:59.470 --> 00:03:00.937
+É por isso que usamos
+símbolos sublinhado aqui.
+
+00:03:00.937 --> 00:03:02.883
+Ele precisa começar com uma letra e
+
+00:03:02.883 --> 00:03:06.229
+Não pode conter qualquer um dos
+símbolos de Pontuação estranho.
+
+00:03:07.250 --> 00:03:08.990
+Os números estão bem.
+
+00:03:08.990 --> 00:03:14.500
+Então neste caso damos Ben
+o ID do ben_text_view.
+
+00:03:14.500 --> 00:03:16.130
+Desta forma é que nós iremos
+nos referir a ele mais tarde.
+
+00:03:16.130 --> 00:03:20.460
+Então sobre o Kunal TextView podemos
+adicionar o atributo layout_toLeftof e
+
+00:03:20.460 --> 00:03:22.920
+Podemos dizer que é para a
+esquerda do Ben TextView.
+
+00:03:24.190 --> 00:03:28.390
+Nos referimos a ID para o
+Ben TextView usando @id.
+
+00:03:28.390 --> 00:03:32.322
+Não precisamos de usar o símbolo de adição
+porque já definimos essa identificação.
+
+00:03:32.322 --> 00:03:34.692
+Esta é a segunda vez que
+estamos usando o ID.
+
+00:03:34.692 --> 00:03:38.910
+Quando você aparecer com os nomes de exibição ID,
+certifique-se de que eles são todos nomes originais.
+
+00:03:38.910 --> 00:03:42.550
+Geralmente, escolher algo relacionado com
+algo dentro do conteúdo é bem útil.
+
+00:03:42.550 --> 00:03:45.920
+Pronto, é assim que você posiciona
+Kunal à esquerda do Ben.
+
+00:03:45.920 --> 00:03:49.740
+Agora, dizer, por exemplo,
+que queremos posicionar Omoju acima de Jennie.
+
+00:03:49.740 --> 00:03:51.760
+Já que vamos precisar se referir a Jennie,
+
+00:03:51.760 --> 00:03:53.980
+Devemos criar uma ID de Jennie.
+
+00:03:53.980 --> 00:03:58.240
+No Jennie TextView,
+podemos especificar esse atributo e dar-lhe este valor.
+
+00:03:58.240 --> 00:04:01.880
+O nome de ID é jennie_text_view.
+
+00:04:01.880 --> 00:04:04.550
+Sobre o Omoju TextView,
+acrescentamos a esse atributo.
+
+00:04:04.550 --> 00:04:09.680
+Aqui diz que o Omoju deve ser
+posicionado acima do jennie_text_view.
+
+00:04:09.680 --> 00:04:11.380
+E esta é a identificação que criamos aqui.
+
+00:04:12.570 --> 00:04:13.850
+Vamos olhar o layout XML.
+
+00:04:13.850 --> 00:04:18.010
+Temos um layout relativo onde a largura
+e altura são match_parent.
+
+00:04:18.010 --> 00:04:19.870
+Em seguida temos o lyla_text_view.
+
+00:04:19.870 --> 00:04:22.267
+Ele é alinhado ao canto inferior
+esquerdo do pai, e
+
+00:04:22.267 --> 00:04:23.600
+Isso é o que vemos aqui.
+
+00:04:24.770 --> 00:04:26.314
+Em seguida temos o jennie_text_view.
+
+00:04:26.314 --> 00:04:29.010
+Ele é alinhado ao canto
+direito inferior dos pais.
+
+00:04:29.010 --> 00:04:29.720
+Então é por aqui.
+
+00:04:31.300 --> 00:04:32.876
+Em seguida temos o ben_text_view.
+
+00:04:32.876 --> 00:04:35.900
+E ele está alinhado à
+borda superior do pai.
+
+00:04:35.900 --> 00:04:38.290
+Ele também é centralizado horizontalmente.
+
+00:04:38.290 --> 00:04:39.880
+Estas são as vistas de âncora e
+
+00:04:39.880 --> 00:04:42.460
+Agora podemos posicionar os outros
+pontos de vista em torno deles.
+
+00:04:42.460 --> 00:04:45.720
+Observe que para cada um dos pontos de vista
+já fui em frente e acrescentei uma identificação.
+
+00:04:45.720 --> 00:04:48.040
+Então esta é a identificação
+de Ben TextView.
+
+00:04:48.040 --> 00:04:50.970
+Então podemos posicionar o Kunal
+TextView à esquerda do Ben.
+
+00:04:50.970 --> 00:04:56.930
+Eu alinho Kunal para o topo do pai e
+para a esquerda do Ben TextView.
+
+00:04:56.930 --> 00:04:58.525
+Eu uso a vista ID para Ben bem aqui.
+
+00:04:58.525 --> 00:05:02.025
+Então colocamos o Omoju TextView
+acima de Jenny.
+
+00:05:02.025 --> 00:05:04.915
+Omoju está alinhado à
+borda direita do pai, e
+
+00:05:04.915 --> 00:05:06.435
+acima o Jenny TextView.
+
+00:05:07.505 --> 00:05:08.245
+Pronto, legal.
+
+00:05:08.245 --> 00:05:11.465
+Então não há mais amigos para
+posicionar corretamente neste layout.
+
+00:05:12.925 --> 00:05:15.475
+Nas notas de instrução abaixo
+você forneceu um link
+
+00:05:15.475 --> 00:05:19.270
+para o Visualizador de XML com algum
+código inicial já lá dentro.
+
+00:05:19.270 --> 00:05:20.910
+Vá em frente e modifique o XML então
+
+00:05:20.910 --> 00:05:24.200
+que podemos alcançar este
+layout desejado para todos.
+
+00:05:24.200 --> 00:05:26.840
+Algumas das visões já estão
+posicionadas incorretamente, então
+
+00:05:26.840 --> 00:05:28.060
+Você precisará corrigi-las.
+
+00:05:29.310 --> 00:05:32.490
+A propósito, nós apenas introduzimos
+uma tonelada de novos atributos.
+
+00:05:32.490 --> 00:05:34.680
+Mas não sinto que você tenha
+que memorizar todos eles.
+
+00:05:34.680 --> 00:05:36.446
+Você pode sempre os procurar
+a qualquer momento.
+
+00:05:36.446 --> 00:05:40.460
+Você pode apenas procurar um relativelayout,
+layout params.
+
+00:05:40.460 --> 00:05:45.260
+Se você clicar no primeiro link,
+você será direcionado para a documentação.
+
+00:05:45.260 --> 00:05:48.870
+Então, esses são todos os atributos XML
+que você pode colocar em uma visão de criança
+
+00:05:48.870 --> 00:05:53.290
+dentro de um RelativeLayout para que o
+RelativeLayout saiba como colocá-lo.
+
+00:05:53.290 --> 00:05:54.755
+Aqui estão algumas que
+você já está familiarizado.
+
+00:05:54.755 --> 00:06:00.370
+Layout_above, alignParentbottom,
+alignParentright e assim por diante.
+
+00:06:00.370 --> 00:06:00.890
+Note que para
+
+00:06:00.890 --> 00:06:05.510
+fins pedagógicos,
+o visualizador XML pode não suportar todos esses atributos.
+
+00:06:05.510 --> 00:06:08.630
+No entanto, quando você está desenvolvendo
+um aplicativo no Android Studio você
+
+00:06:08.630 --> 00:06:10.050
+deve ser capaz de usar todos esses.
+

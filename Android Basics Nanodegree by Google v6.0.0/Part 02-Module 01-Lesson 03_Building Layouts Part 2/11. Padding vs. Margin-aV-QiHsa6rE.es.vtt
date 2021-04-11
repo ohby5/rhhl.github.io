@@ -1,0 +1,164 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.550 --> 00:00:02.930
+Este es el XML original que te dimos.
+
+00:00:03.130 --> 00:00:05.310
+Era una disposición lineal vertical.
+
+00:00:05.510 --> 00:00:08.090
+Y los artículos aparecían
+en una columna vertical.
+
+00:00:08.290 --> 00:00:10.217
+De acuerdo con la imagen de la práctica,
+
+00:00:10.417 --> 00:00:14.930
+queremos que el elemento se vea
+como una lista usando un RelativeLayout.
+
+00:00:15.130 --> 00:00:16.480
+Aquí está la solución.
+
+00:00:16.680 --> 00:00:19.614
+Cambiamos el layout
+para que la foto esté en la izquierda
+
+00:00:19.814 --> 00:00:21.820
+y los tres TextViews en el lado derecho.
+
+00:00:22.020 --> 00:00:26.210
+Para crear este layout, cambié el RootView
+para que sea RelativeLayout,
+
+00:00:26.410 --> 00:00:27.751
+en lugar de LinearLayout.
+
+00:00:28.004 --> 00:00:32.002
+Como esta es la etiqueta de apertura,
+tuve que actualizar la etiqueta de cierre.
+
+00:00:33.057 --> 00:00:36.610
+Entre dichas etiquetas,
+tenemos cuatro ChildViews,
+
+00:00:36.810 --> 00:00:39.595
+También eliminé el atributo
+de orientación vertical,
+
+00:00:39.795 --> 00:00:42.380
+ya que pertenecía al LinearLayout.
+
+00:00:42.580 --> 00:00:46.240
+No se requiere atributos
+de orientación para el RelativeLayout.
+
+00:00:46.440 --> 00:00:48.550
+La foto ya estaba bien ubicada.
+
+00:00:48.750 --> 00:00:50.626
+El primer elemento del RelativeLayout
+
+00:00:50.895 --> 00:00:53.667
+se ubica por defecto
+en el extremo superior izquierdo.
+
+00:00:53.867 --> 00:00:57.398
+Eso queremos para el elemento de la lista
+para que esto continúe igual.
+
+00:00:57.741 --> 00:01:00.310
+Luego, tenemos el TextView
+que dice "Pebble Beach".
+
+00:01:00.730 --> 00:01:03.864
+Queremos posicionar este TextView
+a la derecha de la ImageView,
+
+00:01:04.066 --> 00:01:07.479
+por eso necesitamos añadir
+el atributo <i>layout_torightof</i>
+
+00:01:07.679 --> 00:01:09.743
+y luego hacer referencia al ImageView.
+
+00:01:10.380 --> 00:01:14.622
+Para ello, tuvimos que agregar
+un atributo ID al ImageView.
+
+00:01:15.400 --> 00:01:18.412
+Lo nombré "photo",
+pero puedes ponerle el nombre que quieras.
+
+00:01:19.222 --> 00:01:22.419
+Así la imagen y la primera TextView
+se ubicarán correctamente.
+
+00:01:22.619 --> 00:01:25.539
+El próximo TextView
+es para mostrar el texto de California.
+
+00:01:25.739 --> 00:01:29.498
+El TextView de California
+se debe ubicar a la derecha de la foto
+
+00:01:29.698 --> 00:01:31.910
+y por debajo del TextView Pebble Beach.
+
+00:01:32.110 --> 00:01:36.690
+Primero agregamos los atributos
+<i>layout_toRightof</i> y referencia a la foto.
+
+00:01:36.890 --> 00:01:39.285
+Luego otro atributo <i>layout_below</i>
+
+00:01:39.485 --> 00:01:41.680
+y hacemos referencia el primer TextView.
+
+00:01:41.880 --> 00:01:46.860
+Hay que agregar un ID al primer TextView,
+lo llamaremos<i> name</i>.
+
+00:01:47.060 --> 00:01:49.860
+Tenemos la posición,
+el ImageView y los dos TextViews.
+
+00:01:50.060 --> 00:01:53.622
+Tenemos el TextView que indica distancia,
+"10 millas de distancia".
+
+00:01:53.822 --> 00:01:57.572
+Está ubicado a la derecha de la imagen
+y por debajo del TextView California.
+
+00:01:57.900 --> 00:02:02.241
+Tuvimos que agregar el atributo
+<i>layout_toRightof </i>y referencia a la foto.
+
+00:02:02.441 --> 00:02:05.730
+También otro atributo para layout_below
+
+00:02:05.930 --> 00:02:08.808
+y la referencia al TextView de ubicación.
+
+00:02:09.008 --> 00:02:13.280
+Implicó agregar un ID
+para el TextView de ubicación.
+
+00:02:13.480 --> 00:02:15.992
+Además. agregué un ID
+para el TextView de distancia.
+
+00:02:16.192 --> 00:02:18.030
+Aunque no ingresamos una referencia,
+
+00:02:18.230 --> 00:02:20.302
+Estaría bien agregar
+un ID para una vista.
+
+00:02:20.502 --> 00:02:23.805
+Y si necesitas hacerlo después,
+ya estará allí.
+

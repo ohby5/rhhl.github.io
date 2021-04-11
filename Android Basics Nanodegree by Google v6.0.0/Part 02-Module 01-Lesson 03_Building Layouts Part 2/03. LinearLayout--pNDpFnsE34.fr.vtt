@@ -1,0 +1,324 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.330 --> 00:00:03.090
+Bien. On a vu que
+cette disposition linéaire contient
+
+00:00:03.090 --> 00:00:05.270
+deux <i>TextViews</i> filles.
+
+00:00:05.270 --> 00:00:08.480
+Au passage, ces fonds colorés ne sont
+qu'un outil pédagogique destiné à aider
+
+00:00:08.480 --> 00:00:13.210
+à comprendre que les deux <i>TextView</i> filles
+sont dans la vue parente.
+
+00:00:13.210 --> 00:00:15.940
+Ces couleurs rouge et bleu
+n'apparaîtront donc pas sur l'appareil
+
+00:00:15.940 --> 00:00:20.100
+à moins de spécifier
+les couleurs de fond de ces vues.
+
+00:00:20.100 --> 00:00:23.110
+Pour illustrer mon propos,
+allons sur le Visualiseur XML.
+
+00:00:23.110 --> 00:00:25.270
+Si on passe ce code
+sur le Visualiseur XML,
+
+00:00:25.270 --> 00:00:27.570
+voici ce qui apparaît
+sur l'appareil.
+
+00:00:27.570 --> 00:00:30.020
+On a d'abord un groupe de vues
+<i>LinearLayout</i>,
+
+00:00:30.020 --> 00:00:33.850
+celui-ci est transparent parce qu'on
+ne lui a pas donné de couleur de fond.
+
+00:00:33.850 --> 00:00:36.680
+La première fille est la <i>TextView</i>
+« <i>Guest List</i> » (liste d'invités),
+
+00:00:36.680 --> 00:00:38.780
+et elle apparaît en haut ici.
+
+00:00:38.780 --> 00:00:41.580
+La deuxième vue fille est
+une <i>TextView</i> qui dit « Kunal » et
+
+00:00:41.580 --> 00:00:44.020
+elle apparaît
+sous la première <i>TextView</i>.
+
+00:00:44.020 --> 00:00:47.540
+Si je copie cette <i>TextView</i>
+pour la coller un peu plus bas,
+
+00:00:47.540 --> 00:00:49.760
+qu'arrivera-t-il, selon vous ?
+
+00:00:49.760 --> 00:00:54.270
+Eh oui, on aura une autre vue « Kunal »
+qui apparaîtra juste sous la première.
+
+00:00:54.270 --> 00:00:57.340
+Ok. Il semble donc qu'en ajoutant
+plus de <i>TextViews</i> ici,
+
+00:00:57.340 --> 00:01:01.570
+elles apparaîtront l'une après l'autre
+dans cette liste.
+
+00:01:01.570 --> 00:01:03.570
+Étudions le code plus attentivement.
+
+00:01:03.570 --> 00:01:05.655
+Il débute par le signe <i>inférieur à</i>
+suivi
+
+00:01:05.655 --> 00:01:08.230
+du nom de la vue, ici LinearLayout.
+
+00:01:08.230 --> 00:01:12.260
+Ensuite on a une liste d'attributs
+et le signe <i>supérieur à</i>.
+
+00:01:12.260 --> 00:01:15.220
+Remarquez l'absence de barre oblique
+car ce n'est que la balise ouvrante
+
+00:01:15.220 --> 00:01:16.910
+de <i>LinearLayout</i>.
+
+00:01:16.910 --> 00:01:19.790
+La balise fermante est
+tout en bas, ici, parce qu'on
+
+00:01:19.790 --> 00:01:24.470
+veut insérer des éléments filles
+entre les balises ouvrante et fermante.
+
+00:01:24.470 --> 00:01:28.430
+Mais par exemple, dans cette <i>TextView</i>,
+puisqu'il n'y a aucune fille dedans,
+
+00:01:28.430 --> 00:01:31.330
+on peut directement
+rendre la balise orpheline.
+
+00:01:31.330 --> 00:01:35.330
+Pareil avec cette <i>TextView</i>,
+et cette autre plus bas.
+
+00:01:35.330 --> 00:01:38.410
+Donc quand on dit qu'un groupe
+de vues contient des vues filles,
+
+00:01:38.410 --> 00:01:42.850
+il est impératif de les insérer
+entre les balises entrante et sortante.
+
+00:01:42.850 --> 00:01:45.900
+Une autre chose que vous aurez
+peut-être remarquée est cet attribut,
+
+00:01:45.900 --> 00:01:48.670
+« <i>android:orientation = "vertical"</i> ».
+
+00:01:48.670 --> 00:01:50.330
+On ne l'avait encore jamais vu, alors
+
+00:01:50.330 --> 00:01:53.310
+allons lire la documentation Android
+comme je vous l'avais montré.
+
+00:01:54.680 --> 00:01:59.075
+J'ouvre une nouvelle fenêtre du navigateur
+et j'entre « <i>android orientation</i> ».
+
+00:01:59.075 --> 00:02:01.735
+Le premier résultat parle de
+<i>LinearLayout</i>, et
+
+00:02:01.735 --> 00:02:03.555
+se trouve sur le site
+<i>developer.android.com</i>,
+
+00:02:03.555 --> 00:02:04.495
+cliquons là-dessus.
+
+00:02:04.495 --> 00:02:07.505
+Tout comme la documentation
+de <i>TextView</i> qui était un peu effrayante,
+
+00:02:07.505 --> 00:02:09.935
+on peut ignorer la majorité de ce texte.
+
+00:02:09.935 --> 00:02:13.610
+On doit juste vérifier qu'on est
+réellement sur la page de <i>LinearLayout</i>,
+
+00:02:13.610 --> 00:02:16.150
+puis faire défiler la page
+pour voir les attributs XML.
+
+00:02:17.210 --> 00:02:21.790
+Alors, on cherche l'attribut
+nommé <i>android:orientation</i>…
+
+00:02:21.790 --> 00:02:22.390
+Le voilà.
+
+00:02:22.390 --> 00:02:24.230
+Cliquons dessus
+pour afficher plus de détails.
+
+00:02:25.390 --> 00:02:27.960
+La description nous dit que cet attribut
+
+00:02:27.960 --> 00:02:31.660
+détermine si notre disposition
+sera en ligne ou en colonne.
+
+00:02:31.660 --> 00:02:34.560
+L'attribut peut avoir
+pour valeur "horizontal" pour
+
+00:02:34.560 --> 00:02:37.330
+une disposition en ligne,
+ou "vertical" pour une colonne.
+
+00:02:37.330 --> 00:02:40.480
+On a ensuite une liste
+des deux valeurs, ici.
+
+00:02:40.480 --> 00:02:45.530
+Cool, donc notre code dit en ce moment
+qu'<i>android:orientation</i> vaut « vertical ».
+
+00:02:45.530 --> 00:02:49.410
+Voilà pourquoi
+nos vues s'affichent en colonne.
+
+00:02:49.410 --> 00:02:53.950
+Pour satisfaire notre curiosité,
+on devrait essayer l'autre valeur.
+
+00:02:53.950 --> 00:02:57.960
+Passons l'orientation en « horizontal »
+et voyons ce qui se passe.
+
+00:02:57.960 --> 00:02:59.910
+De retour dans mon code,
+j'efface « vertical ».
+
+00:02:59.910 --> 00:03:05.150
+Je tape « horizontal ». Regardez,
+nos vues sont sur une ligne horizontale.
+
+00:03:05.150 --> 00:03:06.810
+Je ne sais pas pour vous, mais
+
+00:03:06.810 --> 00:03:09.310
+je n'aime pas trop lire
+ma liste d'invités à l'horizontale.
+
+00:03:09.310 --> 00:03:12.000
+Mais il y a beaucoup
+d'autres cas très utilisés
+
+00:03:12.000 --> 00:03:15.040
+où on aurait plutôt besoin
+d'une disposition linéaire horizontale.
+
+00:03:15.040 --> 00:03:18.490
+Par exemple, si on crée un élément
+de liste, on peut vouloir avoir une image
+
+00:03:18.490 --> 00:03:21.190
+à gauche et une description à droite.
+
+00:03:21.190 --> 00:03:25.200
+Je vous laisse essayer
+par vous-mêmes dans une seconde, mais
+
+00:03:25.200 --> 00:03:28.210
+avant j'aimerais souligner
+cette autre ligne de code.
+
+00:03:28.210 --> 00:03:31.260
+C'est la déclaration
+de nom d'espace de XML.
+
+00:03:31.260 --> 00:03:36.020
+On utilise ce nom d'espace
+pour préciser que tous ces attributs
+
+00:03:36.020 --> 00:03:38.200
+font partie d'Android.
+
+00:03:38.200 --> 00:03:40.940
+Voilà pourquoi ils débutent tous par
+« <i>android:</i> ».
+
+00:03:40.940 --> 00:03:45.580
+Elle sert à indiquer que la référence est
+à cette adresse propre à Android.
+
+00:03:45.580 --> 00:03:48.390
+On peut en pratique
+se forger ses propres attributs.
+
+00:03:48.390 --> 00:03:52.840
+Mais pour empêcher des conflits de noms,
+avec deux attributs de même nom mais
+
+00:03:52.840 --> 00:03:57.595
+des comportement différents, en pratique,
+on ajoute toujours ce préfixe,
+
+00:03:57.595 --> 00:04:02.430
+« <i>android:</i> », pour dire que
+l'attribut est propre à Android.
+
+00:04:02.430 --> 00:04:06.970
+En résumé, n'oubliez jamais d'ajouter
+cette déclaration d'espace de nom XML
+
+00:04:06.970 --> 00:04:10.110
+dans la balise ouvrante
+de la vue racine de votre fichier XML.
+
+00:04:11.710 --> 00:04:12.910
+À vous maintenant.
+
+00:04:12.910 --> 00:04:16.860
+On aimerait que vous testiez en pratique
+le code de disposition linéaire.
+
+00:04:16.860 --> 00:04:19.690
+Ajoutez plus de <i>TextViews</i> pour avoir
+plus d'objets dans cette colonne.
+
+00:04:19.690 --> 00:04:23.150
+Qui listeriez-vous comme
+invités VIP à votre fête ?
+
+00:04:24.500 --> 00:04:28.450
+Essayez aussi de changer
+l'attribut d'orientation de <i>LinearLayout</i>.
+
+00:04:28.450 --> 00:04:30.770
+N'oubliez pas qu'il vaut
+« vertical » ou « horizontal ».
+
