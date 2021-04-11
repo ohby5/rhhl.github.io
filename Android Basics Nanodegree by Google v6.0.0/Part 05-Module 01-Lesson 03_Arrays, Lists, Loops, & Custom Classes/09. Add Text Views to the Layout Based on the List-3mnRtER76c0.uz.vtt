@@ -1,0 +1,508 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.740 --> 00:00:01.839
+Hozir biz juda ko‘p kod yozib tashladik,
+
+00:00:01.839 --> 00:00:06.000
+Siz ekranda chiqishni boshlagan so‘zlarni 
+ko‘rib havotirga tushgan bo‘lsangiz kerak.
+
+00:00:06.000 --> 00:00:08.580
+Bu yerda uni qo‘lda amalga oshirish
+ uslubini ko‘rishingiz mumkin.
+
+00:00:08.580 --> 00:00:11.430
+Biz bir necha bor takrorlaganimiz kabi, 
+ilovangizda har bir XML da yozgan narsangizni
+
+00:00:11.430 --> 00:00:15.225
+ biz Java kodidan foydalanib
+ ham amalga oshira olamiz.
+
+00:00:15.225 --> 00:00:19.415
+Shunday qilib, men TextView ob’ektini 
+ro‘yxatdagi har bir element uchun yaratib uni 
+
+00:00:19.415 --> 00:00:22.225
+ child view sifatida 
+ hozirgi layout ga qo‘shishim kerak.
+
+00:00:22.225 --> 00:00:23.155
+Keling shu uslubni qo‘llab ko‘ramiz.
+
+00:00:24.385 --> 00:00:26.895
+Birinchi navbatda, men layout ni 
+tekshirishdan boshlayman.
+
+00:00:26.895 --> 00:00:28.903
+Xo‘sh, NumbersActivity ga kelsak,
+
+00:00:28.903 --> 00:00:33.570
+tartib activity_numbers nomi ostida 
+XML faylida belgilangan.
+
+00:00:35.080 --> 00:00:36.684
+Va men ushbu faylni ochaman, 
+
+00:00:36.684 --> 00:00:40.060
+va shu RelativeLayout ni
+ LinearLayout ga almashtiraman.
+
+00:00:40.060 --> 00:00:44.633
+Shunday qilib, men unga qo‘shgan 
+har bir child view 
+
+00:00:44.633 --> 00:00:45.942
+ketma ket bir ustunda keladi. 
+
+00:00:45.942 --> 00:00:49.327
+Qo‘shimchasiga, men orientation atributini 
+vertikal bo‘lishini qo‘shib qo‘yaman. 
+
+00:00:49.327 --> 00:00:52.825
+Endi esa, child view larni dinamik 
+ravishda Java kodiga qo‘shaman.
+
+00:00:52.825 --> 00:00:56.013
+va keyinchalik murojaat qila olishim uchun
+
+00:00:56.013 --> 00:00:58.590
+LinearLayout ga id beraman.
+
+00:01:00.250 --> 00:01:02.020
+va men u id ni rootView deb nomlayman.
+
+00:01:03.100 --> 00:01:04.485
+Endi esa NumbersActivity ga qaytamiz.
+
+00:01:06.538 --> 00:01:10.770
+Men kod satrlarini onCreate usulini 
+oxiriga, so‘zlar ro‘yxatini ekranga 
+
+00:01:10.770 --> 00:01:12.320
+chiqarish uchun qo‘shaman.
+
+00:01:12.320 --> 00:01:15.810
+Buni men ArrayList ni yaratgach amalga oshiraman. 
+
+00:01:15.810 --> 00:01:19.400
+Men davom etishim va mana bu log 
+ xatlarini o‘chirib tashlashim mumkin
+
+00:01:19.400 --> 00:01:22.700
+chunki mening ro‘yxatim to‘g‘ri 
+tuzilganini bilaman.
+
+00:01:22.700 --> 00:01:25.680
+Xo‘sh men yon tarafdagi loyiha 
+panelini kodni yaxshiroq 
+
+00:01:25.680 --> 00:01:26.850
+ko‘rish uchun yopaman.
+
+00:01:27.850 --> 00:01:30.650
+Men Javada birinchi qiladigan ishim bu,
+LinearLayout ni, ya’ni men rootView deb 
+
+00:01:30.650 --> 00:01:34.670
+nomlaganimni topib o‘zgaruvchida saqlashdir. 
+
+00:01:35.810 --> 00:01:40.370
+Keyin men TextView larni yaratib, mana 
+ shu LinearLayout ga qo‘shishim mumkin.
+
+00:01:40.370 --> 00:01:45.010
+Buni qilishim uchun, men findViewById usulidan foydalanib 
+
+00:01:45.010 --> 00:01:47.285
+rootView id sini topishim kerak bo‘ladi.
+
+00:01:48.550 --> 00:01:50.190
+Va bu menga view ni qaytaradi.
+
+00:01:51.430 --> 00:01:55.420
+Lekin men uni aynan LinearLayout ma’lumot 
+turiga o‘tkazishim kerak.
+
+00:01:55.420 --> 00:01:57.999
+Va buni shunday qilishim kerakki, unga 
+child views ni ham qo‘shsa bo‘lishi kerak.
+
+00:01:59.080 --> 00:02:03.290
+Endi men buni rootView o‘zgaruvchisiga 
+saqlayman, keyinroq ishlatishim uchun.
+
+00:02:04.410 --> 00:02:06.404
+Ikki nuqta bilan tugatishni ham 
+yodingizdan chiqarmang.
+
+00:02:06.404 --> 00:02:08.014
+[AUDIO YO‘Q]
+
+00:02:08.014 --> 00:02:08.850
+Yaxshi.
+
+00:02:08.850 --> 00:02:13.364
+Xo‘sh, eslab qoling, bu satr menga rootView nomli
+LinearLayout ni topishga yordam beradi.
+
+00:02:13.364 --> 00:02:16.380
+Va men uni mana shu rootView nomi 
+ostidagi o‘zgaruvchiga saqlamoqchiman.
+
+00:02:16.380 --> 00:02:17.217
+ va yana
+
+00:02:17.217 --> 00:02:20.230
+men TextViews ni yaratib uni mana bu 
+hozirgina yaratgan LinearLayout ga qo‘shishim kerak.
+
+00:02:21.720 --> 00:02:23.650
+Ishni TextView ob’ektini yaratishdan boshlayman.
+
+00:02:24.858 --> 00:02:26.930
+Shunday qilib, men mana shu kiritish 
+sifatida kontekstni talab qiluvchi 
+
+00:02:26.930 --> 00:02:28.770
+konstruktorni ishlataman,
+
+00:02:29.850 --> 00:02:33.170
+Yodda tuting, biz qaysi konstruktor 
+ishlatish kerak ekanligini bilish uchun
+ 
+49
+00:02:33,170 --&gt; 00:02:35,170
+hujjatni tekshirishimiz kifoya.
+
+00:02:35.170 --> 00:02:37.720
+Xo‘sh, mana bu yerda TextView sinfining hujjati.
+
+00:02:37.720 --> 00:02:40.320
+Va men public konstruktorlar 
+bo‘limiga tushaman.
+
+00:02:41.670 --> 00:02:44.822
+Xo‘sh biz bu yerda foydalanishimiz mumkin 
+bo‘lgan konstruktorlarni ham 
+
+00:02:44.822 --> 00:02:45.405
+ko‘rishimiz mumkin.
+
+00:02:45.405 --> 00:02:49.224
+Va ularning har biri har xil 
+kiritish sonlariga egadir. 
+
+00:02:49.224 --> 00:02:51.963
+Lekin men davom etaman va birinchisini,
+kiritish sifatida bir dona kontekstni 
+
+00:02:51.963 --> 00:02:54.880
+qabul qiladiganini ishlataman,
+
+00:02:54.880 --> 00:02:57.010
+Eslab qoling, har safar siz Java kodida view yaratganingizda 
+
+00:02:57.010 --> 00:03:00.770
+siz uni kontekstini yuborishingiz 
+kerak, view mavzu va boshqa 
+
+00:03:00.770 --> 00:03:04.130
+u ko‘rsatiladigan ilova haqidagi
+ ma’lumotlarga ega bo‘lishi uchun
+
+00:03:04.130 --> 00:03:06.710
+Va u atrofida nima bo‘lyatganligi
+ haqida ma’lumot beradi.
+
+00:03:08.140 --> 00:03:13.974
+Xo‘sh, bu yerda, biz "this" ni konstruktorga 
+kiritish qilib yubordik 
+
+00:03:13.974 --> 00:03:17.210
+Bu sinf NumbersActivity sinfi
+ bo‘lgani uchun 
+
+00:03:17.210 --> 00:03:19.130
+’this’ ham kontekst bo‘ladi.
+
+00:03:20.820 --> 00:03:24.660
+Bu kod satri menga wordView nomi 
+ostidagi o‘zgaruvchida saqlab qo‘yilgan,
+
+00:03:24.660 --> 00:03:29.640
+ma’lumot turi TextView bo‘lgan, TextView 
+ob’ektini yaratishga yordam berdi. 
+
+00:03:30.780 --> 00:03:33.550
+Ekranda ko‘rsatiladigan matnni 
+o‘zgartirish uchun,
+
+00:03:33.550 --> 00:03:37.320
+setText usulini wordView 
+ob’ektida chaqiraman.
+
+00:03:37.320 --> 00:03:40.820
+Va men bir kiritish kiritaman,
+va u biz xohlagan matn.
+
+00:03:40.820 --> 00:03:43.390
+Bu holatda, men TextView ’words’ 
+ro‘yxatining 0-indeksida 
+
+00:03:43.390 --> 00:03:46.190
+saqlangan satrni 
+ko‘rsatishini xohlayman.
+
+00:03:47.480 --> 00:03:51.050
+Bu esa bizga one(bir) so‘ziga 
+olib kelishi kerak.
+
+00:03:51.050 --> 00:03:54.122
+Hozir bizda WordView ob’ekti,
+ ichidagi to‘g‘ri matn bilan mavjud,
+
+00:03:54.122 --> 00:03:59.020
+va men view ni rootView ostidagi
+ parent view ga child view qilib saqlamoqchiman.
+
+00:04:00.210 --> 00:04:02.460
+Mana bu bizni child view imiz - wordView .
+
+00:04:02.460 --> 00:04:06.840
+bu esa parent view imiz - rootView .
+
+00:04:06.840 --> 00:04:10.241
+Xo‘sh, men child view , wordView ni
+ .addView usulini ishlatib parent view , 
+
+00:04:10.241 --> 00:04:14.970
+rootView ga qo‘shaman.
+
+00:04:17.130 --> 00:04:20.420
+Yaxshi, keling endi bu kodni ishga tushirib, 
+qanday ishlashini tekshirib ko‘ramiz.
+
+00:04:20.420 --> 00:04:24.850
+Xo‘sh, NumbersActivity ga kirganimizda,
+
+00:04:24.850 --> 00:04:26.620
+Biz bir so‘zini ko‘ramiz.
+
+00:04:26.620 --> 00:04:30.560
+U esa word massivi ro‘yxatining 
+0-elementi edi.
+
+00:04:30.560 --> 00:04:35.020
+Shunday qilib, biz bu yerda dinamik
+ ravishda Java kodida array list dagi
+
+00:04:35.020 --> 00:04:38.330
+ birinchi elementga asoslanib
+ TextView ni yaratdik.
+
+00:04:38.330 --> 00:04:38.920
+Shu nuqtada, siz 
+
+00:04:38.920 --> 00:04:41.920
+boshqa imkoniyatlar haqida
+o‘ylayotgan bo‘lishingiz mumkin.
+
+00:04:41.920 --> 00:04:46.360
+Masalan, bir xil kodni ro‘yxatdagi 
+hamma element uchun ishlatsak?
+
+00:04:46.360 --> 00:04:48.300
+Shunda biz ekranda so‘zlar
+ ro‘yxatini ko‘rar edik.
+
+00:04:50.240 --> 00:04:52.678
+Keling bir nechta view lar bilan 
+buni sinab ko‘ramiz.
+
+00:04:52.678 --> 00:04:55.040
+Xo‘sh, men mana shu kodning 
+bizga bir so‘zi uchun TextView 
+
+00:04:55.040 --> 00:04:58.300
+yaratishga yordam bergan 
+3ta qatorini ’copy’ qilaman 
+
+00:04:58.300 --> 00:05:02.315
+Va pastda ’paste’ qilib uni bizga 
+ikki so‘zi uchun TextView yaratishga 
+
+00:05:02.315 --> 00:05:03.340
+yordam beradigan qilib o‘zgartiraman.
+
+00:05:03.340 --> 00:05:05.600
+Bu yerda xatolikka yo‘l
+ qo‘yganga o‘xshayman.
+
+00:05:05.600 --> 00:05:09.670
+Va u o‘zgaruvchi doirada mavjud
+ ekanligini aytyapti.
+
+00:05:09.670 --> 00:05:13.490
+bu esa, siz bir doira ichida faqat
+ bir martta bir xil nomli mahalliy 
+
+00:05:13.490 --> 00:05:14.560
+o‘zgaruvchini ishlatishingiz 
+mumkinlidan dalolatdir.
+
+00:05:15.600 --> 00:05:19.220
+bu yerga tegishli doira esa bu usul.
+
+00:05:19.220 --> 00:05:22.580
+Tushunarliroq bo‘lishi uchun men 
+boshqa nom beraman va uni wordView2 deb atayman.
+
+00:05:23.590 --> 00:05:26.680
+Va pastdagi kodni uni aks
+ ettirishi uchun yangilayman.
+
+00:05:26.680 --> 00:05:30.385
+Juda yaxshi, endi bizda boshqa 
+TextView yaratuvchi kod bor.
+
+00:05:30.385 --> 00:05:35.015
+va u wordView2 deb nomlanadi, so‘ng biz bu 
+TextView ni parent viewi bo‘lgan rootViewga qo‘shib qo‘yamiz. 
+
+00:05:36.420 --> 00:05:37.230
+To‘xtang,
+
+00:05:37.230 --> 00:05:42.380
+men bu ikkinchi TextView keyingi 1chi
+ indeks ostidagi so‘zni ko‘rsatishini xohlayman
+
+00:05:42.380 --> 00:05:46.405
+ words.get(0) ni men words.get(1) ga
+ almashtiraman, ro‘yxatdagi
+
+00:05:46.405 --> 00:05:51.565
+ 1-indeks ostidagi satrga
+ ega bo‘lish uchun.
+
+00:05:52.725 --> 00:05:54.882
+Endi keling biz shu bo‘limni 
+copy paste qilib 
+
+00:05:54.882 --> 00:05:57.830
+ro‘yxatdagi uchinchi so‘zni ko‘rsatishi
+ uchun o‘zgartirishlar kiritamiz.
+
+00:05:57.830 --> 00:05:59.230
+[AUDIO YO‘Q]
+
+00:05:59.230 --> 00:06:01.735
+Yaxshi, keling endi tekshirib 
+nima chiqishini ko‘ramiz.
+
+00:06:01.735 --> 00:06:06.305
+Ilovani ishga tushirib Numbers ni bossak,
+yaxshi.
+
+00:06:06.305 --> 00:06:10.110
+Shunday qilib, NumbersActivity da ,
+biz array list imizning 
+
+00:06:10.110 --> 00:06:13.270
+boshidagi uchta elementlari 
+bir, ikki va uchlarni chiqaramiz.
+
+00:06:14.410 --> 00:06:18.010
+Shu tarzda biz copy va paste qilib
+
+00:06:18.010 --> 00:06:22.938
+boshqa indekslar uchun ham o‘zgarishlar 
+kiritishimiz mumkin.
+
+00:06:22.938 --> 00:06:25.410
+Lekin bu juda zerikarli bo‘lib
+ ketadi, uni ustiga 
+
+00:06:25.410 --> 00:06:28.150
+biz TextView larni uslubini yaxshiroq 
+ko‘rinishi uchun o‘zgartirishimiz kerak 
+
+00:06:28.150 --> 00:06:30.405
+Hozircha bu oddiy matn.
+
+00:06:30.405 --> 00:06:33.690
+Biz buni XML da ham amalga oshirishimiz,
+va elementlarni qayta-qayta copy paste 
+
+00:06:33.690 --> 00:06:36.970
+qilishimiz ham mumkin edi.
+
+00:06:36.970 --> 00:06:38.970
+Bir daqiqa,
+
+00:06:38.970 --> 00:06:41.850
+biz bu Java kodida qandaydir 
+namuna ko‘ryapmiz.
+
+00:06:43.020 --> 00:06:47.150
+Ahamiyat bering, har bir kod bloklari 
+juda o‘xshash.
+
+00:06:48.400 --> 00:06:52.034
+Va asosiy farqi shundaki, indeks
+ joylashuvi birinchi blokdan 
+
+00:06:52.034 --> 00:06:53.025
+ikkinchisiga o‘zgaryapti. 
+
+00:06:53.025 --> 00:06:58.002
+Qarang, biz indeksni 0 dan 
+1, 2 ,3 va shu tarzda 
+
+00:06:58.002 --> 00:07:00.800
+ko‘tarib boryapmiz.
+
+00:07:00.800 --> 00:07:03.030
+va men kodni biz ko‘rgan namunaga
+ asoslanib qayta yozganman.
+
+00:07:04.060 --> 00:07:07.696
+Agar biz indeks joylashuvini kuzatib
+ boradigan energiya o‘zgaruvchisini 
+
+00:07:07.696 --> 00:07:10.790
+almashtirib, uni har safar 
+bittaga oshirsakchi? 
+
+00:07:11.910 --> 00:07:15.940
+E’tibor bering, bu kod bloklari borgan 
+sari bir xil bo‘lib boryapti,
+
+00:07:15.940 --> 00:07:20.970
+ularning hammasi words.get ni chaqirib 
+indeksni kiritish sifatida kiritishyapti.
+
+00:07:20.970 --> 00:07:24.510
+Va bizda bittaga oshirib borayotgan
+ ortiqcha kod mavjud.
+
+00:07:24.510 --> 00:07:27.390
+Va men sizga ajoyib dasturlash 
+tushunchasi, sikllarni, 
+
+00:07:27.390 --> 00:07:28.690
+taqdim etmoqchiman.
+
+00:07:28.690 --> 00:07:31.950
+Siz sikllar haqida o‘rganib olganingizdan 
+so‘ng mana shu kodni qayta yozishingizni so‘rayman
+
+00:07:31.950 --> 00:07:35.730
+shu tarzda siz har bir so‘zni ekranda 
+chiqarish uchun copy paste qilib bir 
+
+00:07:35.730 --> 00:07:39.260
+xil kod bloklarini yozishdan qutilasiz.
+

@@ -1,0 +1,198 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.234
+Vamos ver
+a interação de alto nível
+
+00:00:02.300 --> 00:00:05.200
+entre a ListView
+e o ArrayAdapter.
+
+00:00:05.000 --> 00:00:08.033
+No próximo vídeo,
+vamos examinar o código.
+
+00:00:08.067 --> 00:00:13.100
+Imagine a ListView sendo
+energizada pelo ArrayAdapter.
+
+00:00:13.133 --> 00:00:17.167
+Sem o ArrayAdapter, a ListView
+é um recipiente vazio.
+
+00:00:17.200 --> 00:00:19.200
+Quando eu digo "energizada",
+
+00:00:19.000 --> 00:00:22.767
+é porque o ArrayAdapter
+guarda os dados
+
+00:00:22.801 --> 00:00:25.033
+que devem ser
+mostrados na tela.
+
+00:00:25.067 --> 00:00:29.934
+Por exemplo, pode ser um vetor
+ou mesmo uma lista de dados.
+
+00:00:29.968 --> 00:00:34.000
+O ArrayAdapter sabe
+traduzir estes dados,
+
+00:00:34.033 --> 00:00:35.601
+ou adaptá-los,
+
+00:00:35.634 --> 00:00:37.167
+para um item da ListView,
+
+00:00:37.200 --> 00:00:40.000
+que será exibido
+na ListView.
+
+00:00:40.033 --> 00:00:43.167
+Vamos ver os detalhes
+de como isto funciona.
+
+00:00:43.200 --> 00:00:46.868
+Quando você associa um adaptador
+a uma ListView,
+
+00:00:46.934 --> 00:00:50.400
+a ListView pergunta
+quantos itens vai mostrar.
+
+00:00:50.467 --> 00:00:53.200
+O ArrayAdapter
+tem esta informação.
+
+00:00:53.000 --> 00:00:56.133
+A ListView chama
+um método do ArrayAdapter.
+
+00:00:56.167 --> 00:01:00.968
+Neste método, ele passa
+a posição atual da lista
+
+00:01:01.000 --> 00:01:03.000
+que o usuário
+está visualizando.
+
+00:01:03.033 --> 00:01:05.801
+Neste caso,
+passa a posição zero,
+
+00:01:05.834 --> 00:01:08.634
+mas o usuário pode estar
+na primeira posição,
+
+00:01:08.667 --> 00:01:10.767
+ou na posição 100.
+
+00:01:10.801 --> 00:01:12.334
+Sabendo esta informação,
+
+00:01:12.367 --> 00:01:16.200
+o ArrayAdapter confere
+a fonte interna dos dados.
+
+00:01:16.000 --> 00:01:18.968
+Neste caso,
+ele confere o vetor.
+
+00:01:19.000 --> 00:01:22.501
+Também pode ser uma lista,
+se esta for a fonte dos dados.
+
+00:01:22.534 --> 00:01:24.167
+Ele obtém a informação
+
+00:01:24.200 --> 00:01:28.334
+e ele tem instruções para
+criar o item da exibição de lista
+
+00:01:28.367 --> 00:01:31.133
+que ele vai devolver
+para a ListView.
+
+00:01:31.167 --> 00:01:36.801
+Quando a tela está cheia,
+a ListView para de pedir itens.
+
+00:01:36.834 --> 00:01:40.834
+Os itens só são criados
+quando se tornam necessários.
+
+00:01:40.868 --> 00:01:45.033
+Quando eles saem da tela,
+entram na pilha de descarte.
+
+00:01:45.100 --> 00:01:46.701
+Neste exemplo específico,
+
+00:01:46.767 --> 00:01:50.133
+Jane e Karl,
+os primeiros itens da lista,
+
+00:01:50.167 --> 00:01:53.601
+não estão mais visíveis,
+foram para a pilha de descarte.
+
+00:01:53.634 --> 00:01:55.701
+Podemos reutilizar
+estes itens
+
+00:01:55.767 --> 00:01:58.133
+passando-os de volta
+ao ArrayAdapter
+
+00:01:58.167 --> 00:02:00.501
+quando pedirmos
+um novo item da lista.
+
+00:02:00.534 --> 00:02:05.100
+A ListView pede o item da lista
+para uma certa posição da lista
+
+00:02:05.133 --> 00:02:09.200
+e também passa uma exibição
+que foi usada antes.
+
+00:02:09.000 --> 00:02:14.801
+Neste exemplo, a ListView
+está pedindo o item na posição 6
+
+00:02:14.834 --> 00:02:19.601
+e está passando a exibição de antes
+para o ArrayAdapter.
+
+00:02:19.634 --> 00:02:22.767
+O ArrayAdapter pode usar
+a exibição reciclada
+
+00:02:22.801 --> 00:02:25.200
+substituindo os dados nela,
+
+00:02:25.000 --> 00:02:28.400
+por exemplo, usando
+o método setText,
+
+00:02:28.467 --> 00:02:30.033
+para mudar este nome.
+
+00:02:30.100 --> 00:02:32.334
+Agora ele parece
+um novo item da lista
+
+00:02:32.367 --> 00:02:34.200
+que devolvemos
+para a ListView
+
+00:02:34.234 --> 00:02:36.601
+para ser colocada
+na nova hierarquia
+
+00:02:36.634 --> 00:02:37.868
+e mostrada na tela.
+

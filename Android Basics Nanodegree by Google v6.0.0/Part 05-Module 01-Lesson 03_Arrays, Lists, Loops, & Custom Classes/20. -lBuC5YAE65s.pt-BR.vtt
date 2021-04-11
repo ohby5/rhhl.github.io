@@ -1,0 +1,161 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.767
+Primeiro vou modificar
+o arquivo activity_numbers.xml
+
+00:00:03.801 --> 00:00:06.467
+para conter um elemento XML
+de GridView.
+
+00:00:06.501 --> 00:00:10.434
+Vou trocar esta ListView
+por uma GridView.
+
+00:00:10.467 --> 00:00:12.968
+Vou precisar adicionar
+um novo atributo
+
+00:00:13.000 --> 00:00:15.300
+chamado android:numColumns,
+
+00:00:15.334 --> 00:00:18.667
+onde posso especificar
+o número de colunas da tabela.
+
+00:00:18.701 --> 00:00:21.501
+Neste exemplo,
+vou escolher 2.
+
+00:00:22.167 --> 00:00:24.200
+Veja na janela de preview
+
+00:00:24.234 --> 00:00:28.567
+que o AndroidStudio tenta mostrar
+uma previsão de como vai ficar.
+
+00:00:28.601 --> 00:00:31.100
+Ela não mostra dados reais
+do nosso app,
+
+00:00:31.133 --> 00:00:34.167
+e não é o layout
+que estamos usando,
+
+00:00:34.200 --> 00:00:37.734
+mas é só para mostrar que vai ter
+duas colunas na tabela,
+
+00:00:37.767 --> 00:00:39.267
+e está bonito.
+
+00:00:39.300 --> 00:00:42.601
+Vamos voltar para
+NumbersActivity.java.
+
+00:00:42.634 --> 00:00:45.167
+Estou vendo
+que tem um erro.
+
+00:00:45.200 --> 00:00:49.501
+A mensagem diz que foi inesperado
+converter para ListView
+
+00:00:49.534 --> 00:00:52.634
+porque o arquivo de layout
+diz que é um GridView.
+
+00:00:52.667 --> 00:00:54.400
+Como mudamos para GridView,
+
+00:00:54.434 --> 00:00:58.367
+ao encontrar a exibição no layout,
+devemos tratar como GridView,
+
+00:00:58.400 --> 00:01:01.367
+e colocar em uma variável
+do tipo GridView.
+
+00:01:01.400 --> 00:01:03.434
+Vamos fazer essa mudança.
+
+00:01:05.100 --> 00:01:06.934
+Agora não tem mais erros.
+
+00:01:06.968 --> 00:01:08.901
+Todo o código está bom.
+
+00:01:08.934 --> 00:01:11.334
+Vamos criar uma lista
+como de costume,
+
+00:01:11.367 --> 00:01:14.467
+e um ArrayAdapter
+com a lista de palavras.
+
+00:01:14.501 --> 00:01:17.400
+Depois, vamos colocar
+o adaptador no GridView.
+
+00:01:17.434 --> 00:01:20.834
+Vamos rodar o app no aparelho
+e ver o que acontece.
+
+00:01:20.868 --> 00:01:23.000
+Clicando na atividade
+dos números,
+
+00:01:23.033 --> 00:01:25.501
+estamos vendo
+duas colunas de palavras.
+
+00:01:25.534 --> 00:01:28.434
+Cada item está usando
+o mesmo layout de antes.
+
+00:01:28.467 --> 00:01:30.400
+Temos um layout
+linear vertical
+
+00:01:30.434 --> 00:01:33.634
+com a palavra miwok no topo
+e em inglês embaixo.
+
+00:01:33.667 --> 00:01:38.067
+A única diferença é que cada item
+não ocupa toda a largura da tela,
+
+00:01:38.100 --> 00:01:40.767
+mas ocupa
+metade da largura,
+
+00:01:40.801 --> 00:01:43.934
+porque pedimos uma tabela
+com duas colunas.
+
+00:01:43.968 --> 00:01:47.267
+Vemos que a lógica do ArrayAdapter
+continua a mesma,
+
+00:01:47.300 --> 00:01:50.300
+sendo com uma ListView
+ou com uma GridView.
+
+00:01:50.334 --> 00:01:54.467
+O adaptador produz exibições
+com o conteúdo das palavras
+
+00:01:54.501 --> 00:01:58.868
+e a ListView ou GridView
+os coloca na tela.
+
+00:01:58.901 --> 00:02:02.968
+Tomara que o exercício tenha ajudado
+a entender os adaptadores.
+
+00:02:03.000 --> 00:02:06.334
+Eu vou desfazer as mudanças
+e voltar para a ListView.
+

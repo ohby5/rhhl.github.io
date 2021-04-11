@@ -1,0 +1,112 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.520
+Now, in Android. There are different types of
+
+00:00:02.520 --> 00:00:05.850
+views that can recycle views besides the ListView.
+
+00:00:05.850 --> 00:00:09.105
+So this includes GridView or RecyclerView.
+
+00:00:09.105 --> 00:00:10.845
+But now in the next few slides,
+
+00:00:10.845 --> 00:00:15.495
+I'm going to point out to you some cases where the developer should be reusing views,
+
+00:00:15.495 --> 00:00:18.810
+and other example cases where they didn't need to worry
+
+00:00:18.810 --> 00:00:22.770
+about reusing views because maybe there were just a small number of views anyway.
+
+00:00:22.770 --> 00:00:25.710
+So in the Twitter app, there are millions of tweets.
+
+00:00:25.710 --> 00:00:30.075
+You can keep scrolling but chances are you won't be scrolling for hours on straight.
+
+00:00:30.075 --> 00:00:32.400
+So that's why it's a smart decision to just create
+
+00:00:32.400 --> 00:00:35.430
+the views on demand when the user scrolls to them,
+
+00:00:35.430 --> 00:00:37.898
+which means we can recycle our views.
+
+00:00:37.898 --> 00:00:41.745
+The Google Fit app gives users insight into their daily fitness.
+
+00:00:41.745 --> 00:00:46.620
+A user can track information about their daily activity such as an afternoon time run.
+
+00:00:46.620 --> 00:00:50.367
+And the app presents a summary page listing the active time,
+
+00:00:50.367 --> 00:00:53.235
+total time, estimated distance,
+
+00:00:53.235 --> 00:00:57.450
+steps, and calories for that specific activity.
+
+00:00:57.450 --> 00:01:00.780
+Now, because there's a fixed number of metrics that the app displays,
+
+00:01:00.780 --> 00:01:02.625
+there is no need to recycle views.
+
+00:01:02.625 --> 00:01:05.715
+This portion of the app can just use a vertical LinearLayout.
+
+00:01:05.715 --> 00:01:07.785
+Now for those interested in Finance,
+
+00:01:07.785 --> 00:01:11.460
+the Stocks real time stock quotes app allows users to
+
+00:01:11.460 --> 00:01:15.765
+track and add stocks that they're interested in into their portfolio.
+
+00:01:15.765 --> 00:01:19.920
+And it's quite common for users to have a lot of companies that they're interested in,
+
+00:01:19.920 --> 00:01:21.810
+so the list could get really long.
+
+00:01:21.810 --> 00:01:24.930
+The app could efficiently display all this information about
+
+00:01:24.930 --> 00:01:29.820
+these companies by recycling views as the user is scrolling through the list.
+
+00:01:29.820 --> 00:01:31.725
+Now for this exercise,
+
+00:01:31.725 --> 00:01:34.440
+I'd like you to take some time to explore either apps on
+
+00:01:34.440 --> 00:01:38.970
+your device or maybe other popular Android apps and find two examples.
+
+00:01:38.970 --> 00:01:42.120
+So the first example is one where using
+
+00:01:42.120 --> 00:01:45.465
+a vertical LinearLayout for all the list items is a good idea.
+
+00:01:45.465 --> 00:01:47.120
+And for the second example,
+
+00:01:47.120 --> 00:01:51.300
+to find an app that should recycle views using something like a ListView.
+
+00:01:51.300 --> 00:01:53.370
+And then, I'd like you to share your answers in
+
+00:01:53.370 --> 00:01:57.080
+the discussion forums to get some conversation started with other students.
+

@@ -1,0 +1,431 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.230 --> 00:00:02.660
+Mungkin Anda bisa menerapkan pendekatan
+yang sama dengan yang terakhir kali.
+
+00:00:02.660 --> 00:00:06.860
+Sebelumnya, kita memiliki list kata
+Inggris yang ingin kita simpan dalam urutan
+
+00:00:06.860 --> 00:00:11.802
+tertentu dari satu hingga sepuluh, dan sekarang
+kita memiliki list sepuluh kata Miwok yang
+
+00:00:11.802 --> 00:00:15.990
+ingin kita simpan, dan mungkin harus Anda
+simpan juga di ArrayList.
+
+00:00:15.990 --> 00:00:17.850
+Tampaknya semua akan
+berfungsi dengan baik.
+
+00:00:17.850 --> 00:00:21.140
+Kita hanya perlu memastikan bahwa
+constructor ArrayAdapter
+
+00:00:21.140 --> 00:00:24.150
+mengizinkan kita memasukkan dua list.
+
+00:00:24.150 --> 00:00:28.320
+Yang satu adalah list untuk kata Inggris
+dan satu lagi untuk kata Miwok.
+
+00:00:28.320 --> 00:00:31.600
+Kita berada di dalam
+NumbersActivity, jadi mari
+
+00:00:31.600 --> 00:00:34.168
+kita melangkah mundur sejenak dan
+memikirkan strategi kita.
+
+00:00:34.168 --> 00:00:37.960
+Kita ingin memasukkan tata letak baru kita
+ke dalam ArrayAdapter, maka
+
+00:00:37.960 --> 00:00:43.260
+bukan android.R.layout.simple_list_item, tapi
+android.R.layout.simple_list_item_1 I'm
+
+00:00:43.260 --> 00:00:47.600
+saya hanya akan menggantikannya dengan
+tata letak yang kita buat, ListItemLayout.
+
+00:00:48.870 --> 00:00:50.530
+Jadi, input ketiga adalah salah.
+
+00:00:50.530 --> 00:00:54.340
+Jadi, kita memasukkan kata tapi kata itu
+hanya terdiri dari kata Inggris
+
+00:00:54.340 --> 00:00:56.960
+padahal kita juga ingin memasukkan kata
+Miwok yang berkaitan juga sehingga
+
+00:00:56.960 --> 00:00:59.800
+tiap item list
+menampilkan kedua terjemahan tersebut.
+
+00:00:59.800 --> 00:01:01.440
+Mari kembali ke
+dokumentasi untuk
+
+00:01:01.440 --> 00:01:04.550
+ArrayAdapter lalu turun ke
+bagian public constructor.
+
+00:01:04.550 --> 00:01:07.915
+Dan kita lihat lagi cara-cara untuk
+membuat ArrayAdapter baru.
+
+00:01:09.180 --> 00:01:13.720
+Kita telah menggunakan constructor yang
+kedua hingga terakhir, di mana kita memasukkan
+
+00:01:13.720 --> 00:01:18.720
+context yang merujuk ke NumbersActivity,
+file tata letak, dan list objek.
+
+00:01:18.720 --> 00:01:21.730
+Tapi sepertinya tidak ada
+constructor lain di sini yang
+
+00:01:21.730 --> 00:01:23.580
+memiliki list sebagai inputnya.
+
+00:01:23.580 --> 00:01:25.620
+Yang ini hanya mengambil satu list.
+
+00:01:25.620 --> 00:01:27.320
+Jadi, sama juga dengan
+constructor ini.
+
+00:01:27.320 --> 00:01:30.800
+Ini hanya mengambil satu
+list sebagai input terakhir.
+
+00:01:32.530 --> 00:01:34.660
+Ingat apa yang kita bahas tentang generik?
+
+00:01:34.660 --> 00:01:36.790
+Tipe data objek
+ditandai dengan T.
+
+00:01:36.790 --> 00:01:40.090
+Tapi ini hanya placeholder yang dapat
+Anda ganti dengan
+
+00:01:40.090 --> 00:01:41.970
+objek apa pun dari tipe apa pun.
+
+00:01:41.970 --> 00:01:45.520
+Saat ini kita mengganti T dengan
+tipe data string dan
+
+00:01:45.520 --> 00:01:48.375
+kita memasukkan ArrayList berisi
+string ke ArrayAdapter.
+
+00:01:49.490 --> 00:01:54.010
+Constructor di atas ini
+meminta array berisi objek dan
+
+00:01:54.010 --> 00:01:58.230
+T di sini adalah placeholder untuk
+tipe data objek apa pun sesuka Anda.
+
+00:01:58.230 --> 00:02:01.440
+Sejauh ini kita tidak beruntung
+tidak menemukan constructor
+
+00:02:01.440 --> 00:02:04.960
+yang mengizinkan kita memasukkan
+list untuk membuat ArrayAdapter.
+
+00:02:04.960 --> 00:02:08.610
+Tapi kita bisa mengambil keuntungan dari
+fakta bahwa ArrayAdapter bisa mengambil list
+
+00:02:08.610 --> 00:02:10.400
+berisi tipe objek apa pun.
+
+00:02:10.400 --> 00:02:13.140
+Jadi, daripada memasukkan
+list string, bagaimana jika
+
+00:02:13.140 --> 00:02:14.920
+kita membuat sendiri tipe objek sendiri?
+
+00:02:14.920 --> 00:02:16.290
+Misalnya, objek Word.
+
+00:02:17.300 --> 00:02:21.510
+Kita bisa mendefinisikan kelas Word sendiri
+dan membuat objek kata darinya, lalu
+
+00:02:21.510 --> 00:02:24.570
+kita bisa membuat seluruh list
+objek Word.
+
+00:02:24.570 --> 00:02:26.385
+Ingatlah dalam kursus terakhir,
+
+00:02:26.385 --> 00:02:30.660
+bahwa definisi kelas berisi
+baik status maupun metode.
+
+00:02:30.660 --> 00:02:32.142
+Dalam kuis berikut,
+
+00:02:32.142 --> 00:02:35.230
+saya akan bertanya kepada Anda cara
+mendefinisikan kelas Word.
+
+00:02:35.230 --> 00:02:37.650
+Status dan metode apa yang harus dibawanya?
+
+00:02:37.650 --> 00:02:39.870
+Sebelum melompat ke kelas Word,
+
+00:02:39.870 --> 00:02:44.280
+saya akan menunjukkan beberapa aplikasi lain
+yang menggunakan kelas buatan sendiri.
+
+00:02:44.280 --> 00:02:47.210
+Ini adalah screenshot dari aplikasi
+pemesanan pesawat populer,
+
+00:02:47.210 --> 00:02:47.840
+bernama Kayak.
+
+00:02:49.080 --> 00:02:52.898
+Pengguna memilih kota keberangkatan dan
+kedatangan, serta
+
+00:02:52.898 --> 00:02:56.970
+tanggalnya, dan aplikasi menyajikan
+list berisi pilihan potensial.
+
+00:02:56.970 --> 00:02:59.627
+Perhatikan bahwa informasi disajikan
+dalam view list.
+
+00:02:59.627 --> 00:03:01.459
+Dan tiap item list berisi penerbangan dan
+
+00:03:01.459 --> 00:03:05.425
+informasi ini selalu disajikan
+dengan pola yang sama.
+
+00:03:05.425 --> 00:03:10.410
+Kayak sepertinya telah membuat kelas penerbangan
+buatan sendiri dan tiap item list
+
+00:03:10.410 --> 00:03:15.130
+merepresentasikan informasi tentang satu objek
+penerbangan dari kelas tersebut.
+
+00:03:15.130 --> 00:03:18.400
+Jadi, menggunakan analogi kotak,
+kita bisa merepresentasikan
+
+00:03:18.400 --> 00:03:22.320
+tiap objek penerbangan ini sebagai
+kotak besar yang memegang status.
+
+00:03:22.320 --> 00:03:26.500
+Dalam hal ini, status terbuat dari bidang yang
+berbeda-beda seperti maskapai,
+
+00:03:26.500 --> 00:03:30.261
+waktu keberangkatan, waktu kedatangan, biaya,
+dan lama penerbangan.
+
+00:03:31.340 --> 00:03:34.030
+Kita bisa juga menambahkan metode
+ke kelas ini dan
+
+00:03:34.030 --> 00:03:37.000
+bagian lain dalam aplikasi bisa
+memanggil metode ini.
+
+00:03:37.000 --> 00:03:40.460
+Semua ini disebut
+enkapsulasi karena
+
+00:03:40.460 --> 00:03:45.310
+semua logika disatukan atau
+dikombinasikan ke dalam kelas ini.
+
+00:03:45.310 --> 00:03:49.580
+Bagian-bagian lain dalam aplikasi dapat
+mengetahui bahwa objek penerbangan ada dan
+
+00:03:49.580 --> 00:03:54.015
+dimungkinkan untuk memanggil metode-metode
+ini, seperti membatalkan objek tersebut.
+
+00:03:54.015 --> 00:03:57.530
+Tapi pemanggil luar tidak
+perlu memikirkan tentang
+
+00:03:57.530 --> 00:04:01.180
+perincian internal tentang
+cara kerja metode-metode ini.
+
+00:04:01.180 --> 00:04:03.250
+Pemanggil hanya tahu tentang kontak, tapi
+
+00:04:03.250 --> 00:04:07.080
+dapat mengharapkan bahwa penerbangan
+dibatalkan saat metode dipanggil.
+
+00:04:07.080 --> 00:04:10.980
+Mereka tak perlu memikirkan bagaimana
+hal ini dilakukan di balik layar.
+
+00:04:10.980 --> 00:04:14.930
+Konsep ini disebut mengabstrakkan
+perincian tentang apa yang terjadi
+
+00:04:14.930 --> 00:04:16.510
+di dalam kelas.
+
+00:04:16.510 --> 00:04:18.100
+Mari kita lihat
+contoh lain.
+
+00:04:19.110 --> 00:04:22.800
+Ini adalah aplikasi musik bernama SoundCloud
+yang mengizinkan pengguna menyimpan
+
+00:04:22.800 --> 00:04:25.490
+rekaman musik favorit dalam list putar.
+
+00:04:25.490 --> 00:04:28.060
+Rekaman itu ditampilkan dalam suatu list dan
+
+00:04:28.060 --> 00:04:31.590
+tiap rekaman merupakan item list yang
+menampilkan informasi yang sama.
+
+00:04:31.590 --> 00:04:36.170
+Jadi ada nama album, seni album, judul
+lagu, panjang lagu,
+
+00:04:36.170 --> 00:04:39.659
+jumlah disimak, dan semua ini selalu
+disajikan dengan pola yang sama.
+
+00:04:41.220 --> 00:04:44.470
+Semua informasi dapat disimpan
+sebagai bidang
+
+00:04:44.470 --> 00:04:46.910
+dalam status untuk kelas lagu buatan sendiri.
+
+00:04:47.910 --> 00:04:51.020
+Selain status tersebut, kita dapat
+mengenkapsulasi metode ke dalam
+
+00:04:51.020 --> 00:04:52.710
+kelas ini juga.
+
+00:04:52.710 --> 00:04:57.960
+Maka objek lagu ini dapat memiliki metode
+yang berbeda-beda, seperti getSongTitle atau
+
+00:04:57.960 --> 00:04:59.370
+getAlbumName.
+
+00:04:59.370 --> 00:05:00.680
+Mirip dengan kelas penerbangan,
+
+00:05:00.680 --> 00:05:03.860
+di sini mengabstraksikan
+perincian kelas sehingga
+
+00:05:03.860 --> 00:05:08.310
+pemanggil luar dapat menggunakan metode
+tanpa mengetahui perinciannya.
+
+00:05:08.310 --> 00:05:13.140
+Anda bisa mengetahui dari contoh-contoh ini,
+ada beberapa keunggulan dalam mengenkapsulasi
+
+00:05:13.140 --> 00:05:16.770
+atau mengelompokkan informasi ke dalam
+kelas-kelas yang telah didefinisikan.
+
+00:05:16.770 --> 00:05:19.460
+Sekarang giliran Anda untuk memikirkan
+tentang masalah yang ada saat ini.
+
+00:05:20.590 --> 00:05:24.750
+Saya ingin Anda menunjukkan kata-kata Inggris
+dan Miwok dalam list dan
+
+00:05:24.750 --> 00:05:25.940
+bagaimana Anda mengolah data tersebut?
+
+00:05:27.190 --> 00:05:30.510
+Ini adalah pertanyaan tentang struktur data
+karena Anda harus memikirkan bagaimana cara
+
+00:05:30.510 --> 00:05:32.250
+untuk menstruktur data di dalam aplikasi Anda.
+
+00:05:32.250 --> 00:05:36.100
+Jika semua informasi tersebut disimpan sebagai
+variabel global individual di aplikasi,
+
+00:05:36.100 --> 00:05:38.560
+akan menjadi sangat sulit untuk dikelola.
+
+00:05:38.560 --> 00:05:42.660
+Justru, kita ingin mengorganisasi data itu
+sehingga lebih mudah didapatkan
+
+00:05:42.660 --> 00:05:44.600
+dan ditampilkan di layar.
+
+00:05:44.600 --> 00:05:49.070
+Anda telah mulai melakukan ini,
+dan menjadi akrab dengan struktur data.
+
+00:05:49.070 --> 00:05:52.645
+Misalnya, menempatkan list kata-kata
+Inggris ke dalam array atau
+
+00:05:52.645 --> 00:05:56.030
+ArrayList merupakan contoh
+menyusun struktur data
+
+00:05:56.030 --> 00:05:59.040
+untuk mengorganisasi informasi dengan
+lebih baik dalam list urut.
+
+00:06:00.988 --> 00:06:02.900
+Sekarang kita akan maju selangkah
+lagi dan
+
+00:06:02.900 --> 00:06:04.758
+membuat struktur data sendiri untuk kata-kata.
+
+00:06:04.758 --> 00:06:10.128
+Karena solusi bawaan untuk Java
+tidak memadai untuk kebutuhan kita,
+
+00:06:10.128 --> 00:06:13.580
+maka kami akan memberi petunjuk, yaitu
+Anda bisa membuat kelas Word.
+
+00:06:13.580 --> 00:06:17.000
+Kami akan menyerahkannya kepada Anda
+untuk menentukan apa status
+
+00:06:17.000 --> 00:06:18.050
+dan metode yang harus dibawanya.
+

@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.470 --> 00:00:03.480
+Mari kita lihat bagaimana cara
+membuat kelas Word buatan sendiri.
+
+00:00:03.480 --> 00:00:06.560
+Objek Word harus merepresentasikan
+satu kosakata tunggal
+
+00:00:06.560 --> 00:00:08.300
+yang kita ingin agar dipelajari pengguna.
+
+00:00:08.300 --> 00:00:12.200
+Ini harus berisi bahasa Inggris dan
+terjemahan Miwok untuk kata yang sama.
+
+00:00:12.200 --> 00:00:16.379
+Tiap terjemahan ini dapat disimpan
+sebagai variabel string dalam
+
+00:00:16.379 --> 00:00:17.420
+kelas tersebut.
+
+00:00:17.420 --> 00:00:21.190
+Sebagai ringkasan jawaban untuk pertanyaan
+status apa yang harus dikandung oleh
+
+00:00:21.190 --> 00:00:25.000
+objek Word dan apa tipe data
+untuk tiap variabel,
+
+00:00:25.000 --> 00:00:29.000
+objek Word harus berisi dua variabel
+string, satu untuk terjemahan bahasa Inggris
+
+00:00:29.000 --> 00:00:33.410
+tentangkata itu, dan satu lagi untuk terjemahan
+Miwok untuk kata yang sama.
+
+00:00:33.410 --> 00:00:35.730
+Begini tampilannya
+dalam diagram.
+
+00:00:35.730 --> 00:00:36.960
+Untuk objek Word,
+
+00:00:36.960 --> 00:00:41.420
+ada terjemahan Inggris dan
+terjemahan teks Miwok.
+
+00:00:41.420 --> 00:00:44.020
+Karena kita tahu bahwa kursus ini
+digunakan oleh para pelajar
+
+00:00:44.020 --> 00:00:47.160
+yang tidak mesti berbicara dengan
+bahasa Inggris sebagai bahasa utama,
+
+00:00:47.160 --> 00:00:50.490
+kita tidak ingin menamai variabel ini
+terjemahan Inggris.
+
+00:00:50.490 --> 00:00:53.650
+Justru, kita memilih istilah
+defaultTranslation
+
+00:00:53.650 --> 00:00:57.310
+untuk merepresentasikan terjemahan
+yang merupakan bahasa utama Anda.
+
+00:00:57.310 --> 00:01:00.120
+Jadi, untuk menjawab pertanyaan
+metode apa yang harus kita miliki?
+
+00:01:00.120 --> 00:01:03.110
+Harus ada metode untuk mendapatkan
+terjemahan Inggris dan
+
+00:01:03.110 --> 00:01:05.640
+metode untuk mengambil terjemahan Miwok.
+
+00:01:05.640 --> 00:01:07.050
+Dan inilah tampilannya
+secara visual.
+
+00:01:08.370 --> 00:01:10.590
+Untuk metodenya, mungkin
+akan cukup rumit.
+
+00:01:10.590 --> 00:01:14.260
+Kelas Word kita adalah wadah
+yang memiliki dua variabel.
+
+00:01:14.260 --> 00:01:17.950
+Tidak ada logika kompleks untuk
+membuat hal ini lebih simple di dalam kelas Word.
+
+00:01:17.950 --> 00:01:22.840
+Kita hanya akan membuka dua metode
+di mana warna sisi luar dapat mengambil
+
+00:01:22.840 --> 00:01:25.390
+terjemahan Inggris dan Miwok.
+
+00:01:25.390 --> 00:01:28.760
+Daripada menamai metode ini
+getEnglishTranslation,
+
+00:01:28.760 --> 00:01:31.180
+kita putuskan untuk menggunakan
+getDefaultTranslation.
+

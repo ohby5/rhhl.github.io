@@ -1,0 +1,254 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.420 --> 00:00:03.190
+Banyak sumber daya dalam
+hidup kita, seperti waktu
+
+00:00:03.190 --> 00:00:04.520
+dan uang, yang terbatas.
+
+00:00:04.520 --> 00:00:07.380
+Sehingga kita harus efisien dalam
+menggunakannya.
+
+00:00:07.380 --> 00:00:10.280
+Misalnya, hanya ada
+24 jam dalam sehari.
+
+00:00:10.280 --> 00:00:13.980
+Jika kita habiskan satu jamnya
+menonton drama TV terbaru,
+
+00:00:13.980 --> 00:00:17.129
+jam itu sudah tak dapat
+dipakai untuk kegiatan lainnya seperti, masak dengan teman.
+
+00:00:18.320 --> 00:00:19.720
+Berarti
+kita harus berhati-hati
+
+00:00:19.720 --> 00:00:21.250
+dengan keputusan kita
+menggunakan sumber daya itu.
+
+00:00:22.510 --> 00:00:26.080
+Sama halnya dengan memori
+manusia, yang juga terbatas.
+
+00:00:26.080 --> 00:00:28.670
+Kita tak dapat menampung
+semua hal di kepala kita, kan?
+
+00:00:28.670 --> 00:00:29.910
+Misalnya, di sebuah pesta,
+
+00:00:29.910 --> 00:00:32.750
+kita hanya dapat mengingat
+sedikit nama orang.
+
+00:00:32.750 --> 00:00:34.920
+Perangkat mobile
+punya memori digital,
+
+00:00:34.920 --> 00:00:37.060
+dan memori itu sifatnya tetap dan
+
+00:00:37.060 --> 00:00:42.060
+sangat terbatas dibandingkan dengan
+laptop biasa atau komputer.
+
+00:00:42.060 --> 00:00:45.330
+Memori perangkat mobile dipakai
+untuk menyimpan segala hal, seperti
+
+00:00:45.330 --> 00:00:49.610
+musik, pesan teks,
+foto, dan sebagainya.
+
+00:00:49.610 --> 00:00:52.780
+Selain itu,
+jumlah memori yang terbatas itu pun
+
+00:00:52.780 --> 00:00:56.400
+juga harus dibagi dengan
+sistem operasi Android
+
+00:00:56.400 --> 00:01:00.440
+untuk aplikasi lain yang kita pakai,
+termasuk aplikasi ini juga.
+
+00:01:00.440 --> 00:01:03.277
+Jika salah satu aplikasi akhirnya
+memakan banyak memori,
+
+00:01:03.277 --> 00:01:06.686
+itu akan berdampak besar
+saat menjalankan aplikasi lain.
+
+00:01:06.686 --> 00:01:10.135
+Yang lebih parah, akan berdampak
+negatif pada pengalaman
+
+00:01:10.135 --> 00:01:14.466
+keseluruhan perangkat, yang nantinya akan
+menyebabkan user experience yang mengecewakan.
+
+00:01:14.466 --> 00:01:16.210
+Inti dari diskusi ini
+
+00:01:16.210 --> 00:01:20.240
+sebagai developer kita harus ingat
+bahwa memori itu terbatas, dan
+
+00:01:20.240 --> 00:01:23.390
+kita harus buat aplikasi yang
+efisien dalam pemakaian memorinya.
+
+00:01:23.390 --> 00:01:25.670
+Coba pikirkan aplikasi daftar kontak.
+
+00:01:25.670 --> 00:01:29.095
+Pengguna mungkin punya
+seribu nama dan nomor telepon.
+
+00:01:29.095 --> 00:01:30.476
+[BLANK_AUDIO]
+
+00:01:30.476 --> 00:01:34.732
+Jika tiap kontak disimpan sebagai
+TextView di tata letak linier, handphone
+
+00:01:34.732 --> 00:01:39.867
+akan menghabiskan banyak memori
+dalam membuat, menyimpan, menampilkan 1000 TextView.
+
+00:01:39.867 --> 00:01:44.740
+Walaupun mungkin tak semuanya tampil
+di layar secara bersamaan.
+
+00:01:44.740 --> 00:01:48.319
+Jika kebanyakan memori sistem
+dipakai untuk membuat dan menyimpan 1.000 kontak,
+
+00:01:48.319 --> 00:01:51.820
+tak banyak memori tersisa
+untuk menjalankan fungsi lain di handphone tersebut.
+
+00:01:51.820 --> 00:01:55.322
+Ini mengakibatkan aplikasi lain
+macet atau bahkan tak berjalan sama sekali.
+
+00:01:55.322 --> 00:01:58.110
+Kita harus cerdas dalam
+menggunakan memori agar
+
+00:01:58.110 --> 00:02:00.370
+aplikasi kita berjalan seimbang
+dengan program lain di perangkat.
+
+00:02:01.450 --> 00:02:05.250
+Dengan simpelnya aplikasi kontak,
+saat pengguna melihat
+
+00:02:05.250 --> 00:02:08.949
+daftar di ponsel, mereka hanya
+lihat lima kontak di satu waktu.
+
+00:02:10.150 --> 00:02:13.800
+Yang di atas dan bawah daftar
+yang sedang ditampilkan
+
+00:02:13.800 --> 00:02:17.620
+tak perlu ada, karena itu hanya
+menghabiskan memori.
+
+00:02:17.620 --> 00:02:22.410
+Tak perlu membuat 1.000
+TextView dan menghamburkan memori,
+
+00:02:22.410 --> 00:02:26.430
+terutama karena pengguna
+tak mungkin meng-scroll seluruh list.
+
+00:02:26.430 --> 00:02:29.733
+Untuk itu, kita dapat daur ulang
+view, karena hanya ada lima
+
+00:02:29.733 --> 00:02:33.058
+sampai tujuh kontak yang
+tampil di layar di satu waktu.
+
+00:02:33.058 --> 00:02:37.110
+Bujur sangkar biru ini
+mewakili layar perangkat.
+
+00:02:37.110 --> 00:02:41.156
+Perhatikan, semua kontak
+yang harus tampil
+
+00:02:41.156 --> 00:02:43.519
+hanya tinggal memakai tampilan yang telah dibuat sebelumnya.
+
+00:02:44.520 --> 00:02:47.410
+Jika kontak tak lagi
+tampak di layar,
+
+00:02:47.410 --> 00:02:50.590
+tampilan dapat dipakai untuk
+menampilkan informasi kontak lain.
+
+00:02:51.690 --> 00:02:54.080
+Strategi ini namanya
+view recycling.
+
+00:02:55.080 --> 00:03:00.130
+Kita dapat melakukannya
+dengan gabungan ListView dan Adapter.
+
+00:03:00.130 --> 00:03:03.870
+Kita akan bahas lagi rincian
+proses daur ulang tampilan ini
+
+00:03:00.130 --> 00:03:03.870
+dengan lebih detil di video selanjutnya.
+
+00:03:06.180 --> 00:03:09.400
+Pelajarannya, ingatlah,
+jangan sia-siakan memori perangkatmu.
+
+00:03:09.400 --> 00:03:12.500
+Ingat, aplikasi kita ada di perangkat
+dengan jumlah memori
+
+00:03:12.500 --> 00:03:15.250
+yang harus dibagi dengan
+aplikasi dan fungsi lain.
+
+00:03:15.250 --> 00:03:18.865
+Jika perangkat menjalankan
+beberapa aplikasi sekaligus dan
+
+00:03:18.865 --> 00:03:22.095
+kehabisan memori, mungkin
+aplikasi Anda penyebabnya.
+
+00:03:22.095 --> 00:03:24.825
+Perangkat harus berhenti
+jalankan aplikasi lain agar
+
+00:03:24.825 --> 00:03:26.225
+dapat menyisakan memori.
+
+00:03:26.225 --> 00:03:27.835
+Dengan pengetahuan ini,
+
+00:03:27.835 --> 00:03:31.445
+kita bisa jadi warga yang baik
+saat membuat aplikasi Android
+
+00:03:31.445 --> 00:03:34.425
+dengan memastikan aplikasinya efisien dalam menghemat jumlah
+pemakaian memori.
+

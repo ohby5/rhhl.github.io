@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.435
+All right. Welcome back, and good job with the first two tests.
+
+00:00:03.435 --> 00:00:05.535
+So, to answer the third question,
+
+00:00:05.535 --> 00:00:08.175
+the ViewGroup we used was the LinearLayout.
+
+00:00:08.175 --> 00:00:12.750
+And now, let's take a look into the code of how we accomplish steps one and two.
+
+00:00:12.750 --> 00:00:15.420
+So, here we are in the list_item layout file.
+
+00:00:15.420 --> 00:00:16.965
+So to match our code,
+
+00:00:16.965 --> 00:00:19.140
+we'll need to add a view ID of
+
+00:00:19.140 --> 00:00:26.040
+miwok_text_view and have this text_view have an ID of default_text_view.
+
+00:00:26.450 --> 00:00:29.160
+Now to test it out,
+
+00:00:29.160 --> 00:00:33.175
+I'm going to show you a cool trick using something called the tools namespace.
+
+00:00:33.175 --> 00:00:38.140
+In XML, a namespace provides a way so the elements don't have name conflicts.
+
+00:00:38.140 --> 00:00:41.500
+This is similar to having a very unique family name so that no one
+
+00:00:41.500 --> 00:00:45.295
+else will ever share the same name as you even if they might have the same first name.
+
+00:00:45.295 --> 00:00:49.510
+So, xmlns stands for XML namespace.
+
+00:00:49.510 --> 00:00:52.330
+And if you notice here, we've been using another namespace in
+
+00:00:52.330 --> 00:00:56.380
+our code all along, xmlnes:android.
+
+00:00:56.380 --> 00:00:58.975
+So, we've been using an Android already,
+
+00:00:58.975 --> 00:01:02.880
+such as Android layout width or Android layout height,
+
+00:01:02.880 --> 00:01:05.250
+all start with Android semicolon.
+
+00:01:05.250 --> 00:01:07.785
+And these are already part of the Android namespace.
+
+00:01:07.785 --> 00:01:11.235
+So I'm going to add a namespace here called the tools namespace.
+
+00:01:11.235 --> 00:01:18.335
+So this line here maps the tools prefix to this namespace, schemas.android.com/tools.
+
+00:01:18.335 --> 00:01:21.390
+And this means that any element or attribute whose name starts with
+
+00:01:21.390 --> 00:01:24.615
+the prefix tools is part of the tools namespace.
+
+00:01:24.615 --> 00:01:26.550
+So, for each of these two text_views,
+
+00:01:26.550 --> 00:01:31.230
+I'm going to add two attributes using the tools namespace.
+
+00:01:31.230 --> 00:01:34.300
+So, you may be wondering where I found out about
+
+00:01:34.300 --> 00:01:37.345
+this text attribute from the tools namespace.
+
+00:01:37.345 --> 00:01:39.610
+So, the tools namespace was created by
+
+00:01:39.610 --> 00:01:41.935
+the Androids tools team and has a bunch of
+
+00:01:41.935 --> 00:01:44.830
+attributes that can help you out with writing your layouts.
+
+00:01:44.830 --> 00:01:48.715
+So we can see what attributes were created by checking out their documentation online.
+
+00:01:48.715 --> 00:01:52.930
+And I just searched up Android tools namespace.
+
+00:01:52.930 --> 00:01:56.320
+So, on this page, we could see a whole list of different attributes.
+
+00:01:56.320 --> 00:01:57.805
+So, when we scroll down to the bottom,
+
+00:01:57.805 --> 00:02:00.910
+we see a section about design time attributes.
+
+00:02:00.910 --> 00:02:04.135
+So, design time attributes help us when we're developing our code,
+
+00:02:04.135 --> 00:02:05.755
+but we'll actually show about runtime.
+
+00:02:05.755 --> 00:02:08.335
+So, let's take a look and see more of them here.
+
+00:02:08.335 --> 00:02:12.700
+For example, if we add the tools text attribute on a text_view,
+
+00:02:12.700 --> 00:02:14.875
+then in the design preview in Android Studio,
+
+00:02:14.875 --> 00:02:16.210
+it'll show this text.
+
+00:02:16.210 --> 00:02:19.765
+However, this text will show up when the app is actually running, which is good,
+
+00:02:19.765 --> 00:02:21.700
+because we don't want all the text_views to always
+
+00:02:21.700 --> 00:02:24.350
+have this particular texts that we've set in.
+
+00:02:24.350 --> 00:02:27.640
+So you can think of this as a placeholder text to help us as developers
+
+00:02:27.640 --> 00:02:31.360
+make sure the codebooks are right when we're testing it in Android Studio.
+
+00:02:31.360 --> 00:02:33.355
+So let's switch back to the code.
+
+00:02:33.355 --> 00:02:36.955
+And notice here that I've added two text attributes,
+
+00:02:36.955 --> 00:02:39.970
+one for lutti, and one for one.
+
+00:02:39.970 --> 00:02:43.630
+And so, making sure that these don't show up at runtime is really important
+
+00:02:43.630 --> 00:02:48.095
+because the list of items will be created dynamically on the spot when needed.
+
+00:02:48.095 --> 00:02:51.970
+So we'll set the text of the English and miwok code in the Java code instead of
+
+00:02:51.970 --> 00:02:56.005
+just hard coding them and specifying them directly in XML layout file.
+
+00:02:56.005 --> 00:02:58.675
+And since the texts in these text_views will change dynamically,
+
+00:02:58.675 --> 00:03:01.435
+we won't need to add the Android text attribute,
+
+00:03:01.435 --> 00:03:06.715
+just to help us see what it looks like but not actually see it at runtime.
+
+00:03:06.715 --> 00:03:10.240
+So I'm going to switch back into the design pane.
+
+00:03:10.240 --> 00:03:11.650
+And from the design preview,
+
+00:03:11.650 --> 00:03:15.445
+you'll notice that the text is right up against the edges on the left and top sides.
+
+00:03:15.445 --> 00:03:16.960
+So we'll need to add some padding.
+
+00:03:16.960 --> 00:03:20.635
+So let's go back to the text pane and add some padding here.
+
+00:03:20.635 --> 00:03:23.860
+So let's take a look at what that looks like in the design pane now.
+
+00:03:23.860 --> 00:03:27.280
+Nice. So this is what the list item layout looks after those changes.
+
+00:03:27.280 --> 00:03:30.435
+Well, this is not the final look and feel of the list item in our app.
+
+00:03:30.435 --> 00:03:33.720
+It's good enough, continue working on displaying the list of numbers in our app.
+

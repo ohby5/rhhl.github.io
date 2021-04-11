@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.210 --> 00:00:04.070
+Baik, mari kita bahas tentang
+interaksi tingkat tinggi antara ListView
+
+00:00:04.070 --> 00:00:05.045
+dan ArrayAdapter.
+
+00:00:05.045 --> 00:00:07.360
+Lalu kita akan masuk ke
+dalam kode di video berikutnya.
+
+00:00:08.610 --> 00:00:13.100
+Anda bisa membayangkan ListView diberi
+tenaga oleh ArrayAdapter.
+
+00:00:13.100 --> 00:00:17.185
+Tanpa adapter, ListView
+hanyalah wadah kosong.
+
+00:00:17.185 --> 00:00:21.688
+Dan saat saya bilang diberi tenaga, artinya
+bahwa ArrayAdapter memegang rangkaian
+
+00:00:21.688 --> 00:00:24.060
+data yang harus ditunjukkan di layar.
+
+00:00:25.170 --> 00:00:29.860
+Misalnya, dia dapat memegang array
+atau bahkan suatu list berisi data.
+
+00:00:29.860 --> 00:00:34.420
+Maka ArrayAdapter tahu cara
+menerjemahkan data ini, atau
+
+00:00:34.420 --> 00:00:40.030
+mengadaptasinya, menjadi ListItemView yang
+akan ditampilkan di ListView.
+
+00:00:40.030 --> 00:00:43.430
+Mari kita lihat perincian
+cara kerjanya.
+
+00:00:43.430 --> 00:00:48.180
+Saat Anda pertama kali mengaitkan adapter
+dengan ListView, ListView akan bertanya,
+
+00:00:48.180 --> 00:00:50.580
+berapa banyak item yang
+ingin Anda tampilkan?
+
+00:00:50.580 --> 00:00:53.180
+Dan ArrayAdapter
+mengetahui informasi ini.
+
+00:00:53.180 --> 00:00:56.140
+Maka ListView memanggil
+metode di ArrayAdapter.
+
+00:00:56.140 --> 00:00:59.110
+Dan di metode ini,
+dimasukkan sebuah input,
+
+00:00:59.110 --> 00:01:02.770
+yaitu posisi saat ini dalam
+list yang pengguna sedang lihat.
+
+00:01:02.770 --> 00:01:07.650
+Dalam hal ini, dimasukkan posisi
+0, tapi pengguna mungkin
+
+00:01:07.650 --> 00:01:10.740
+di posisi ke-1, atau bahkan di
+posisi ke-100 dalam list.
+
+00:01:10.740 --> 00:01:12.410
+Mengetahui informasi ini,
+
+00:01:12.410 --> 00:01:16.090
+ArrayAdapter memeriksa
+sumber data internal.
+
+00:01:16.090 --> 00:01:18.968
+Misalnya case ini, dia memeriksa array.
+
+00:01:18.968 --> 00:01:22.460
+Dia mungkin juga memeriksa list
+jika list itu merupakan sumber data,
+
+00:01:22.460 --> 00:01:24.350
+dan memperoleh informasi dari sana.
+
+00:01:24.350 --> 00:01:27.411
+Dia juga memiliki instruksi
+untuk memberi tahu cara membuat
+
+00:01:27.411 --> 00:01:30.873
+ListItemView yang akan dikembalikan
+olehnya ke ListView.
+
+00:01:30.873 --> 00:01:34.469
+Saat layar penuh, ListView
+akan berhenti meminta
+
+00:01:34.469 --> 00:01:36.860
+item list baru dari ArrayAdapter.
+
+00:01:36.860 --> 00:01:40.880
+Maka ListItemView hanya dibuat
+berdasarkan permintaan saat dibutuhkan.
+
+00:01:40.880 --> 00:01:42.740
+Jadi, saat kita scroll turun
+sehingga views tak tampak lagi di layar,
+
+00:01:42.740 --> 00:01:45.020
+ingatlah bahwa view ditambahkan
+ke scrap pile ini.
+
+00:01:45.020 --> 00:01:48.529
+Dalam contoh spesifik ini,
+ingatlah bahwa Jane dan Karl,
+
+00:01:48.529 --> 00:01:51.483
+dua item list pertama,
+tidak lagi terlihat.
+
+00:01:51.483 --> 00:01:53.453
+Maka keduanya akan berakhir di scrap file.
+
+00:01:53.453 --> 00:01:56.840
+Lalu kita bisa menggunakan ulang
+view-view itu dengan masuk kembali ke
+
+00:01:56.840 --> 00:02:00.350
+ArrayAdapter saat kita meminta
+item list baru.
+
+00:02:00.350 --> 00:02:04.170
+Maka ListView akan meminta ListItemView
+untuk posisi tertentu di
+
+00:02:04.170 --> 00:02:09.139
+list, dan juga memasukkan view yang
+pernah digunakan sebelumnya.
+
+00:02:09.139 --> 00:02:14.860
+Dalam contoh ini, ListView meminta
+item di posisi 6,
+
+00:02:14.860 --> 00:02:19.700
+dan memasukkan view yang dapat digunakan
+lagi dari sebelumnya ke ArrayAdapter.
+
+00:02:19.700 --> 00:02:22.712
+Sekarang, ArrayAdapter bisa
+menggunakan recycledView
+
+00:02:22.712 --> 00:02:25.074
+hanya dengan menempatkan data di dalamnya.
+
+00:02:25.074 --> 00:02:29.857
+Misalnya, dengan memanggil metode setText
+textView untuk mengubah nama di sini.
+
+00:02:29.857 --> 00:02:34.015
+Dan sekarang ini tampak seperti item list
+yang benar-benar baru yang bisa kita kembalikan
+
+00:02:34.015 --> 00:02:37.250
+ke ListView untuk ditambahkan ke hierarki baru
+dan ditampilkan di layar.
+

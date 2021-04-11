@@ -1,0 +1,248 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.500 --> 00:00:03.560
+Baik, selamat datang kembali, dan
+kerja bagus dengan dua tes pertama.
+
+00:00:03.560 --> 00:00:08.350
+Untuk menjawab pertanyaan ketiga, ViewGroup
+yang kita pakai adalah LinearLayout.
+
+00:00:08.350 --> 00:00:11.390
+Sekarang mari kita lihat kode
+untuk cara melaksanakan
+
+00:00:11.390 --> 00:00:13.110
+langkah dua dan tiga.
+
+00:00:13.110 --> 00:00:15.580
+Kita berada di dalam file
+list item layout.
+
+00:00:15.580 --> 00:00:20.240
+Untuk mencocokkan dengan kode kita,
+kita perlu menambahkan ID view untuk TextView.
+
+00:00:21.610 --> 00:00:25.030
+Dan di text view ini,
+ada id default text view.
+
+00:00:28.280 --> 00:00:29.050
+Untuk mengujinya,
+
+00:00:29.050 --> 00:00:32.439
+saya akan menunjukkan trik keren menggunakan
+sesuatu yang bernama tools namespace.
+
+00:00:33.600 --> 00:00:38.240
+Dalam XML, namespace menyediakan cara agar
+nama-nama elemen tidak berkonflik.
+
+00:00:38.240 --> 00:00:40.850
+Ini mirip dengan memiliki
+nama keluarga yang sangat unik.
+
+00:00:40.850 --> 00:00:43.400
+Jadi tidak ada orang lain yang akan
+punya nama sama dengan Anda,
+
+00:00:43.400 --> 00:00:49.660
+walaupun mungkin punya nama depan yang sama,
+jadi XMLNS singkatan dari XML NameSpace.
+
+00:00:49.660 --> 00:00:53.760
+Jika Anda perhatikan, di sini kita telah
+menggunakan namespace lain dalam
+
+00:00:53.760 --> 00:00:56.380
+kode untuk XMLNS:android.
+
+00:00:56.380 --> 00:01:00.020
+Jadi atribut yang telah kita
+gunakan di Android
+
+00:01:00.020 --> 00:01:04.635
+seperti android:layout _width atau android:layout_
+height, semua diawali dengan Android; dan
+
+00:01:04.635 --> 00:01:07.890
+ini semua merupakan bagian dari
+namespace Android.
+
+00:01:07.890 --> 00:01:11.340
+Jadi saya ingin menambahkan namespace
+di sini dengan nama tools namespace.
+
+00:01:11.340 --> 00:01:15.255
+Jadi baris ini merujuk ke tools
+yang diawali dengan namespace
+
+00:01:15.255 --> 00:01:20.600
+schemas.Android.com/tools dan
+ini berarti tiap elemen atau atribut
+
+00:01:20.600 --> 00:01:24.770
+yang namanya diawali dengan prefiks
+tools adalah bagian dari tools namespace.
+
+00:01:24.770 --> 00:01:27.670
+Jadi untuk masing-masing dari kedua
+text view ini saya akan menambahkan
+
+00:01:27.670 --> 00:01:30.320
+dua atribut menggunakan
+tools namespace.
+
+00:01:32.010 --> 00:01:35.730
+Mungkin Anda bertanya-tanya dari mana saya
+tahu tentang atribut teks
+
+00:01:35.730 --> 00:01:37.590
+dari tools namespace ini.
+
+00:01:37.590 --> 00:01:41.350
+Tools namespace diciptakan oleh tim
+tools Android dan
+
+00:01:41.350 --> 00:01:45.000
+memiliki banyak sekali atribut yang dapat
+membantu Anda menulis tata letak Anda.
+
+00:01:45.000 --> 00:01:47.463
+Kita bisa melihat atribut-atribut yang
+diciptakan tersebut dengan memeriksa
+
+00:01:47.463 --> 00:01:53.350
+dokumentasinya secara online dan saya tinggal
+mencari namespace Android Tools.
+
+00:01:53.350 --> 00:01:56.400
+Di halaman ini kita melihat seluruh
+list berbagai atribut yang berbeda.
+
+00:01:56.400 --> 00:01:57.850
+Saat kita scroll turun ke bawah,
+
+00:01:57.850 --> 00:02:01.180
+kita lihat sebuah bagian tentang
+Designtime Attributes.
+
+00:02:01.180 --> 00:02:04.450
+Designtime Attributes membantu kita saat
+kita mengembangkan kode, tapi tidak akan
+
+00:02:04.450 --> 00:02:08.660
+benar-benar tampak saat runtime, jadi mari
+kita lihat lebih lanjut di sini.
+
+00:02:08.660 --> 00:02:12.670
+Misalnya, jika kita tambahkan atribut
+tools:text pada text view.
+
+00:02:12.670 --> 00:02:16.280
+Maka pratinjau desain di Android
+Studio akan menunjukkan teks ini.
+
+00:02:16.280 --> 00:02:18.910
+Tapi, teks ini tidak akan muncul saat
+aplikasi benar-benar berjalan,
+
+00:02:18.910 --> 00:02:19.820
+yang tentu saja bagus.
+
+00:02:19.820 --> 00:02:22.420
+Karena kita tidak ingin semua text view
+selalu berisi
+
+00:02:22.420 --> 00:02:24.400
+teks khusus yang telah kita atur ini.
+
+00:02:24.400 --> 00:02:27.090
+Jadi Anda bisa membayangkannya sebagai sebuah
+teks placeholder untuk membantu kita sebagai
+
+00:02:27.090 --> 00:02:30.120
+pengembang memastikan bahwa kodenya
+baik-baik saja saat mengujinya
+
+00:02:30.120 --> 00:02:31.650
+di Android Studio.
+
+00:02:31.650 --> 00:02:35.800
+Mari kita kembali ke kode, dan perhatikan
+bahwa di sini saya telah menambahkan
+
+00:02:35.800 --> 00:02:40.190
+atribut teks, satu untuk lutti
+dan satu lagi untuk satu.
+
+00:02:40.190 --> 00:02:43.910
+Sangat penting untuk memastikan keduanya
+tidak tampak pada saat runtime.
+
+00:02:43.910 --> 00:02:46.800
+Karena list item akan dibuat
+secara dinamis
+
+00:02:46.800 --> 00:02:48.170
+di tempat saat diperlukan.
+
+00:02:48.170 --> 00:02:52.070
+Mari kita atur teks English dan kata-kata
+dalam kode Java, bukan menuliskan
+
+00:02:52.070 --> 00:02:56.060
+kode mentahnya dan menentukannya
+secara langsung dalam file XML layout.
+
+00:02:56.060 --> 00:02:58.690
+Karena teks dalam text view ini
+akan berubah secara dinamis,
+
+00:02:58.690 --> 00:03:01.750
+kita tidak akan perlu menambahkan
+text attribute view Android,
+
+00:03:01.750 --> 00:03:05.600
+hanya untuk membantu kita melihat tampilannya
+saja, tapi tidak melihatnya saat runtime.
+
+00:03:07.668 --> 00:03:11.670
+Jadi saya akan kembali ke bingkai desain
+dan dari pratinjau desain
+
+00:03:11.670 --> 00:03:14.626
+Anda perhatikan bahwa teks terletak
+tepat di tepi kiri dan
+
+00:03:14.626 --> 00:03:15.550
+sisi atas.
+
+00:03:15.550 --> 00:03:17.020
+Jadi kita perlu menambahkan padding.
+
+00:03:17.020 --> 00:03:19.810
+Mari kembali ke bingkai teks dan
+tambahkan padding di sini.
+
+00:03:19.810 --> 00:03:24.140
+Baik, sekarang mari kita lihat
+tampilannya di bingkai desain.
+
+00:03:24.140 --> 00:03:27.340
+Bagus, inilah tata letak item list
+setelah dilakukan perubahan.
+
+00:03:27.340 --> 00:03:28.760
+Walaupun bukan tampilan dan
+
+00:03:28.760 --> 00:03:31.930
+rasa akhir item list di aplikasi kita,
+cukup bagus untuk terus mengerjakan
+
+00:03:31.930 --> 00:03:33.470
+tampilan list angka
+di aplikasi kita.
+

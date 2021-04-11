@@ -1,0 +1,495 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.620 --> 00:00:05.020
+Di tabel perbandingan yang ditampilkan,
+kita katakan bahwa ArrayList adalah kelas
+
+00:00:05.020 --> 00:00:08.600
+dan Anda perlu memanggil metode untuk
+mengakses dan memodifikasi elemen list.
+
+00:00:08.600 --> 00:00:11.490
+Mari kita bahas lebih lanjut
+tentang kelas ArrayList dan
+
+00:00:11.490 --> 00:00:12.810
+cara Anda berinteraksi dengannya dalam kode.
+
+00:00:13.940 --> 00:00:17.660
+Kita mulai dengan membuka halaman
+dokumentasi untuk ArrayList,
+
+00:00:17.660 --> 00:00:23.090
+dan di bagian atas disebutkan bahwa kelas
+public ArrayList merentangkan AbstractList.
+
+00:00:23.090 --> 00:00:26.360
+Kata kunci "extends" (merentangkan) ini berarti
+bahwa kita mewarisi banyak sekali perilaku
+
+00:00:26.360 --> 00:00:28.760
+dari kelas AbstractList dengan gratis.
+
+00:00:28.760 --> 00:00:31.620
+Mari kita klik untuk membuka
+kelas ArrayList.
+
+00:00:31.620 --> 00:00:36.030
+Halaman ini mengatakan bahwa kelas
+AbstractList adalah kelas abstrak.
+
+00:00:36.030 --> 00:00:39.620
+Ingat, kelas abstrak diimplementasikan
+sebagian, artinya bahwa beberapa
+
+00:00:39.620 --> 00:00:43.380
+metodenya diimplementasikan dan
+sebagian metode dibiarkan saja.
+
+00:00:43.380 --> 00:00:46.810
+Melihat definisi kelas lebih dalam, kita
+lihat bahwa kelas ini merentangkan kelas lain.
+
+00:00:46.810 --> 00:00:49.480
+Di sini dikatakan,
+merentangkan AbstractCollection.
+
+00:00:49.480 --> 00:00:51.380
+Tapi kita tidak akan membahasnya sekarang.
+
+00:00:51.380 --> 00:00:54.140
+Yang ingin saya tekankan adalah bahwa
+AbstractList mengimplementasikan
+
+00:00:54.140 --> 00:00:55.112
+antarmuka list ini.
+
+00:00:55.112 --> 00:00:59.010
+Saya akan mengeklik tautan tersebut
+untuk membuka antarmuka list.
+
+00:00:59.010 --> 00:01:02.840
+Jadi, melalui rantai panjang pewarisan ini
+saya ingin Anda mengetahui bahwa
+
+00:01:02.840 --> 00:01:07.870
+ArrayList awal sebenarnya
+mengimplementasikan antarmuka list.
+
+00:01:07.870 --> 00:01:13.200
+Antarmuka list ini didefinisikan di Java
+sebagai perilaku umum tentang list.
+
+00:01:13.200 --> 00:01:16.710
+Deskripsi mengatakan bahwa List
+adalah kumpulan elemen
+
+00:01:16.710 --> 00:01:18.094
+yang mempertahankan urutan.
+
+00:01:19.160 --> 00:01:20.750
+Tiap elemen memiliki indeks, sehingga
+
+00:01:20.750 --> 00:01:22.750
+Anda dapat mengakses elemen
+berdasarkan posisi indeks.
+
+00:01:24.090 --> 00:01:27.790
+Di kelas terakhir, kita bicara tentang
+antarmuka, dan cara menggunakannya untuk
+
+00:01:27.790 --> 00:01:34.140
+menemukan kontak dengan metode, input,
+nilai kembali, dan nama metode yang diharapkan.
+
+00:01:34.140 --> 00:01:38.436
+Tapi, antarmuka tidak menetapkan bagaimana
+tiap metode harus diimplementasikan.
+
+00:01:38.436 --> 00:01:40.760
+Jadi, antarmuka List memiliki
+metode abstrak,
+
+00:01:40.760 --> 00:01:46.520
+seperti metode add, metode get untuk
+mengakses elemen pada indeks tertentu.
+
+00:01:46.520 --> 00:01:50.530
+Metode ini juga memiliki metode remove
+dan banyak lagi Anda lihat di sini.
+
+00:01:51.710 --> 00:01:54.655
+Karena kelas ArrayList mengimplementasikan
+antarmuka List ini,
+
+00:01:54.655 --> 00:01:57.825
+maka harus menyediakan implementasi untuk
+tiap metode.
+
+00:01:57.825 --> 00:01:59.375
+Seperti akan Anda lihat nanti,
+
+00:01:59.375 --> 00:02:03.425
+Anda bisa memanggil metode-metode
+ini di objek ArrayList.
+
+00:02:03.425 --> 00:02:06.285
+Alasan kenapa List harus merupakan
+antarmuka adalah
+
+00:02:06.285 --> 00:02:09.133
+karena ada banyak tipe List
+lain di Java.
+
+00:02:09.133 --> 00:02:11.415
+Kita tidak akan membahas semuanya
+dalam kursus ini, tapi
+
+00:02:11.415 --> 00:02:18.080
+untuk menyebut beberapa, ada linkedList,
+stack, vector, dan lain-lain.
+
+00:02:18.080 --> 00:02:19.680
+Jadi, ada tujuannya jika kita
+
+00:02:19.680 --> 00:02:23.030
+memiliki kontrak yang terdefinisikan sebelumnya
+dalam antarmuka List.
+
+00:02:23.030 --> 00:02:26.210
+Untuk mengingat lagi apa yang baru saja
+kita bahas, ini adalah versi terbarukan
+
+00:02:26.210 --> 00:02:32.190
+untuk diagram dengan kelas ArrayList,
+kelas abstract, dan antarmuka List.
+
+00:02:32.190 --> 00:02:34.330
+List di sini adalah antarmuka dan
+
+00:02:34.330 --> 00:02:37.765
+tidak ada implementasi apa pun
+dari metodenya.
+
+00:02:37.765 --> 00:02:43.490
+AbstractList adalah kelas abstrak dan beberapa
+metodenya diimplementasikan sebagian.
+
+00:02:43.490 --> 00:02:46.840
+ArrayList adalah kelas konkret dan
+
+00:02:46.840 --> 00:02:51.110
+memiliki status dan implementasi untuk
+semua metodenya.
+
+00:02:51.110 --> 00:02:55.120
+Kita dapat membuat contoh objek
+ArrayList dan memakainya di aplikasi kita.
+
+00:02:55.120 --> 00:02:58.070
+Tapi, kita tidak dapat membuat contoh
+kelas abstrak atau
+
+00:02:58.070 --> 00:03:01.060
+antarmuka karena semua itu merupakan
+kelas konkret sejati.
+
+00:03:02.170 --> 00:03:05.390
+Saat menggunakan apa pun yang
+mengimplementasikan antarmuka List
+
+00:03:05.390 --> 00:03:09.040
+seperti kelas ArrayList, Anda perhatikan
+sesuatu tentang signature metode.
+
+00:03:09.040 --> 00:03:11.640
+Kita scroll kebawah dan
+melihatnya di sini.
+
+00:03:11.640 --> 00:03:15.203
+Misalnya, dalam metode add, Anda akan
+melihat panggilan untuk yang bernama E,
+
+00:03:15.203 --> 00:03:20.155
+untuk metode add ArrayList, dikatakan bahwa
+input harus berupa objek dengan tipe E.
+
+00:03:20.155 --> 00:03:23.105
+Jika Anda melihat metode
+get, kita lihat bahwa
+
+00:03:23.105 --> 00:03:27.215
+metode ini mengakses elemen list
+pada posisi indeks tertentu, dan
+
+00:03:27.215 --> 00:03:30.515
+ini mengembalikan nilai
+objek tipe E.
+
+00:03:30.515 --> 00:03:32.825
+Jadi, E ini merujuk pada apa?
+
+00:03:32.825 --> 00:03:36.465
+Ini membawa kita ke topik
+generik dan tipe generik di Java.
+
+00:03:37.620 --> 00:03:39.590
+E hanyalah placeholder.
+
+00:03:39.590 --> 00:03:42.680
+Secara resmi, E disebut parameter tipe.
+
+00:03:42.680 --> 00:03:46.100
+Artinya, saat kita membuat contoh
+ArrayList, dan
+
+00:03:46.100 --> 00:03:50.540
+memanggil metode, misalnya add atau
+get untuk objek itu,
+
+00:03:50.540 --> 00:03:53.890
+kita dapat menggantikan E dengan
+tipe data tertentu.
+
+00:03:53.890 --> 00:03:56.030
+Ini akan memberi pengembang
+informasi lebih banyak,
+
+00:03:56.030 --> 00:03:59.060
+daripada jika kita menggunakan tanda
+tanya untuk menggantikan E.
+
+00:03:59.060 --> 00:04:02.210
+Dalam hal ini, E adalah
+singkatan untuk elemen, dan
+
+00:04:02.210 --> 00:04:04.030
+dari mana kata elemen ini muncul?
+
+00:04:04.030 --> 00:04:06.980
+Bagian-bagian individual himpunan ini
+disebut elemen.
+
+00:04:06.980 --> 00:04:09.566
+Karena metode-metode seperti get dan
+
+00:04:09.566 --> 00:04:12.320
+add berhubungan dengan elemen
+dalam himpunan data.
+
+00:04:12.320 --> 00:04:13.988
+Ini adalah substitusi yang cocok.
+
+00:04:13.988 --> 00:04:18.070
+E ini dapat digantikan oleh tipe data
+non-primitif apa pun yang Anda suka.
+
+00:04:18.070 --> 00:04:23.436
+Daripada membuat ArrayList, Anda bisa
+membuat ArrayList tanda kurung siku,
+
+00:04:23.436 --> 00:04:25.769
+E tanda kurung siku, dengan tipe tertentu.
+
+00:04:25.769 --> 00:04:29.450
+Misalnya, Anda tidak bisa membuat
+ArrayList untuk string,
+
+00:04:29.450 --> 00:04:32.550
+yang artinya di mana pun Anda lihat
+E di dalam dokumentasi.
+
+00:04:32.550 --> 00:04:36.070
+Dalam kasus Anda, ini akan diganti
+dengan tipe data objek String.
+
+00:04:36.070 --> 00:04:39.060
+Jika Anda memanggil metode add
+pada ArayList string,
+
+00:04:39.060 --> 00:04:41.165
+dia mengharapkan string sebagai input.
+
+00:04:41.165 --> 00:04:43.985
+Jika Anda memanggil metode get di
+ArrayList, dia
+
+00:04:43.985 --> 00:04:45.995
+akan mengembalikan tipe data string.
+
+00:04:45.995 --> 00:04:49.635
+Hasilnya, kelas ArrayList
+adalah kelas generik,
+
+00:04:49.635 --> 00:04:53.445
+di mana tempat yang memiliki E yang
+ditentukan dapat diganti dengan tipe data
+
+00:04:53.445 --> 00:04:57.830
+objek tertentu, saat Anda benar-benar
+membuat contoh ArrayList.
+
+00:04:57.830 --> 00:05:01.210
+Ada banyak parameter tipe umum
+lain seperti T, N, dan V.
+
+00:05:01.210 --> 00:05:03.210
+Untuk melihat lebih lanjut,
+silakan periksa di bawah.
+
+00:05:03.210 --> 00:05:06.970
+Baik, saya tahu kita telah membahas
+banyak teori tentang bagaimana dan
+
+00:05:06.970 --> 00:05:08.770
+mengapa ArrayList muncul.
+
+00:05:08.770 --> 00:05:10.900
+Sekarang kita menuju informasi
+praktis yang relevan.
+
+00:05:11.930 --> 00:05:14.830
+Kita telah menempatkan list panggilan
+metode ArayList yang diringkas
+
+00:05:14.830 --> 00:05:17.050
+yang dapat Anda pakai, dan
+
+00:05:17.050 --> 00:05:21.160
+kita menampilkan contoh di mana kita
+menggunakan string sebagai tipe parameter.
+
+00:05:21.160 --> 00:05:23.380
+Di mana saja Anda menemukan
+string dalam contoh ini,
+
+00:05:23.380 --> 00:05:26.680
+kemungkinan besar Anda bisa menggantinya
+dengan tipe objek yang berbeda.
+
+00:05:26.680 --> 00:05:29.640
+Perhatikan, perbedaannya dibandingkan
+dengan membuat Array adalah saat Anda
+
+00:05:29.640 --> 00:05:33.350
+membuat ArrayList baru, Anda tidak perlu
+menentukan tautan ke list.
+
+00:05:33.350 --> 00:05:36.830
+Untuk menambahkan dan membuang elemen
+ArrayList, kita menggunakan metode
+
+00:05:36.830 --> 00:05:38.380
+add dan remove.
+
+00:05:39.440 --> 00:05:43.180
+Sekarang, perhatikan perbedaan cara
+mengambil informasi dari ArrayList.
+
+00:05:43.180 --> 00:05:46.770
+ArrayList tidak menggunakan notasi tanda
+kurung yang kita gunakan dalam array,
+
+00:05:46.770 --> 00:05:51.040
+tapi justru memakai metode get dan
+indeks yang kita minati.
+
+00:05:51.040 --> 00:05:54.109
+Ingat, untuk array, kita menggunakan array.length
+untuk memperoleh informasi tentang
+
+00:05:54.109 --> 00:05:56.000
+atribut panjang array tersebut.
+
+00:05:56.000 --> 00:05:59.510
+Tapi, untuk objek ArrayList, kita
+perlu menggunakan metode size.
+
+00:05:59.510 --> 00:06:03.940
+Perhatikan bahwa tidak ada parameter input,
+maka hanya menggunakan tanda kurung kosong,
+
+00:06:03.940 --> 00:06:07.040
+dan nilai kembalinya akan berupa
+nomor elemen dalam list.
+
+00:06:07.040 --> 00:06:11.290
+Di latihan berikut, saya ingin Anda membaca
+cermat tiap baris komentar dan
+
+00:06:11.290 --> 00:06:14.460
+menulis kode yang akan digunakan baik
+untuk membuat ArrayList maupun
+
+00:06:14.460 --> 00:06:16.500
+memodifikasi ArrayList sesuai
+dengan komentar.
+
+00:06:17.630 --> 00:06:20.610
+Ini adalah latihan untuk membantu Anda
+memahami bagaimana cara bekerja lebih
+
+00:06:20.610 --> 00:06:21.790
+baik dengan ArrayList.
+
+00:06:21.790 --> 00:06:24.600
+Asumsikan bahwa baris-baris kode ini
+aktif di dalam aplikasi restoran di mana
+
+00:06:24.600 --> 00:06:27.620
+pengguna bisa mempertahankan list
+restoran yang ingin dicobanya.
+
+00:06:27.620 --> 00:06:30.070
+Jadi, tuliskan statemen kode yang benar
+di bawah tiap komentar.
+
+00:06:31.260 --> 00:06:33.952
+Komentar pertama meminta untuk
+membuat objek ArrayList baru bernama
+
+00:06:33.952 --> 00:06:34.880
+restaurantsToTry.
+
+00:06:34.880 --> 00:06:38.220
+Ini akan berisi list String.
+
+00:06:38.220 --> 00:06:41.280
+Komentar berikutnya adalah menambahkan
+restoran bernama Morning Café
+
+00:06:41.280 --> 00:06:42.740
+ke dalam ArrayList yang Anda buat di atas.
+
+00:06:43.960 --> 00:06:46.660
+Komentar ketiga adalah menambahkan
+restoran lain bernama
+
+00:06:46.660 --> 00:06:48.850
+Barbecue Time ke ArrayList.
+
+00:06:48.850 --> 00:06:52.400
+Komentar keempat adalah bahwa pengguna
+baru saja mencoba restoran Morning Café,
+
+00:06:52.400 --> 00:06:55.570
+tapi ingin agar Anda membuang restoran
+itu dari ArrayList.
+
+00:06:55.570 --> 00:06:59.000
+Komentar kelima mengatakan, ambil
+panjang ArrayList, dan
+
+00:06:59.000 --> 00:07:02.670
+kemudian simpan sebagai variabel integer
+bernama numbersOfRestaurants.
+
+00:07:02.670 --> 00:07:04.010
+Baik, silakan lanjut dan
+mencobanya.
+
+00:07:04.010 --> 00:07:05.520
+Sampai jumpa di ruang kelas.
+

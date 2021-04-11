@@ -1,0 +1,723 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.410 --> 00:00:03.260
+Mari kita rangkum perubahan besar
+yang sudah kita lakukan terhadap aplikasi kita
+
+00:00:03.260 --> 00:00:06.800
+Pertama, dari loop untuk
+mengisi tata letak linier vertikal
+
+00:00:06.800 --> 00:00:09.140
+untuk memajang daftar kata,
+
+00:00:09.140 --> 00:00:13.620
+ke penggunaan kombinasi
+ListView dan ArrayAdapter.
+
+00:00:13.620 --> 00:00:16.730
+Lalu, kita buat tata letak list item
+berisi dua TextView.
+
+00:00:18.070 --> 00:00:20.950
+Lalu, kita buat satu daftar obyek
+yang dapat dimasukkan ke
+
+00:00:20.950 --> 00:00:22.050
+ArrayAdapter.
+
+00:00:22.050 --> 00:00:25.200
+Kita buat kelas kerja khusus
+berisi kata Inggris dan Miwok
+
+00:00:25.200 --> 00:00:27.180
+untuk satu kata.
+
+00:00:27.180 --> 00:00:30.253
+Kita dapat memakai ArrayList
+obyek kata yang dimasukkan
+
+00:00:30.253 --> 00:00:31.095
+pada array adapter.
+
+00:00:31.095 --> 00:00:33.620
+Mari pindah ke
+numbers activity.
+
+00:00:33.620 --> 00:00:38.020
+Kita perlu mengubah ArrayList
+string menjadi ArrayList kata.
+
+00:00:38.020 --> 00:00:40.920
+Kita harus perbarui parameter
+tipe dasar, apa isi tanda kurung
+
+00:00:40.920 --> 00:00:46.540
+dan membuat ArrayList di mana
+tiap elemennya adalah obyek kata.
+
+00:00:46.540 --> 00:00:48.740
+Anda mungkin dapat dua
+saran autocomplete.
+
+00:00:48.740 --> 00:00:51.700
+Itu karena kata kelas sudah ada
+di kerangka Android
+
+00:00:51.700 --> 00:00:53.710
+dengan package name berbeda.
+
+00:00:53.710 --> 00:00:56.240
+Di sini, Anda lihat
+namanya di bawah UserDictionary.
+
+00:00:56.240 --> 00:00:59.800
+Ini kata yang dapat ditambahkan
+ke kamus autocomplete.
+
+00:00:59.800 --> 00:01:01.650
+Misal ketika kirim SMS ke teman.
+
+00:01:01.650 --> 00:01:05.010
+Pastikan memilih opsi yang tepat
+untuk kelas kata,
+
+00:01:05.010 --> 00:01:08.958
+agar nama di package-nya
+com.example.android.miwok.
+
+00:01:08.958 --> 00:01:13.170
+Sekarang, kita sudah perbarui ArrayList
+sehingga berisi obyek kata
+
+00:01:13.170 --> 00:01:14.210
+bukan obyek string.
+
+00:01:14.210 --> 00:01:18.060
+Ingat, saya menjelaskan kata
+sebagai parameter ArrayList, yang artinya
+
+00:01:18.060 --> 00:01:23.240
+saat elemen ditambahkan,
+kita perlu obyek dari data tipe kata.
+
+00:01:23.240 --> 00:01:26.500
+Jika kita akan panggil metode get,
+yaitu untuk mengambil elemen
+
+00:01:26.500 --> 00:01:30.950
+di posisi tertentu dalam daftar
+akan menerima obyek kata tipe data.
+
+00:01:30.950 --> 00:01:34.476
+Sekarang semua metode add, atau
+menambah obyek string ke
+
+00:01:34.476 --> 00:01:38.257
+daftar kata. Itulah mengapa
+kita dapat pesan error.
+
+00:01:38.257 --> 00:01:42.725
+Kita perlu perbarui tiap baris
+untuk memasukkan obyek kata.
+
+00:01:42.725 --> 00:01:44.814
+Mari kita fokus pada
+elemen yang pertama di sini.
+
+00:01:44.814 --> 00:01:46.525
+Saya akan memberikan komentar di sini
+
+00:01:46.525 --> 00:01:50.081
+Di bawahnya, saya akan tulis
+versi kode di mana kita menambah
+
+00:01:50.081 --> 00:01:51.894
+obyek kata baru ke daftar kata.
+
+00:01:53.740 --> 00:01:56.390
+Ini cara yang biasa ditempuh.
+
+00:01:56.390 --> 00:02:01.423
+Kita bisa buat obyek kata baru,
+menyimpannya di variabel bernama w dan
+
+00:02:01.423 --> 00:02:04.257
+lalu tambahkan variabel itu
+ke daftar kata kita.
+
+00:02:04.257 --> 00:02:06.668
+Ini adalah satu yang kita buat, obyek
+kata yang baru,
+
+00:02:06.668 --> 00:02:09.660
+kita masukkan dua input baru
+ke dalam konstruktor.
+
+00:02:09.660 --> 00:02:11.490
+Kata Bahasa Inggris dan Miwok.
+
+00:02:11.490 --> 00:02:14.963
+Kita hanya perlu mengacu
+variabel w setelah di sini.
+
+00:02:14.963 --> 00:02:19.060
+Ada cara lebih ringkas
+untuk menulis dua baris kode ini.
+
+00:02:19.060 --> 00:02:22.260
+Metode membuat obyek kata
+dan menambahnya ke daftar,
+
+00:02:22.260 --> 00:02:25.770
+memang berhasil, tapi ada cara
+lebih ringkas untuk itu.
+
+00:02:25.770 --> 00:02:28.870
+Anda lihat, kita hanya mengacu
+variabel w ini 
+
+00:02:28.870 --> 00:02:30.540
+satu kali di bawah ini.
+
+00:02:30.540 --> 00:02:34.160
+Sehingga kita dapat langsung memotong
+substansiasi obyek kata
+
+00:02:34.160 --> 00:02:36.240
+dan langsung menempelnya
+ke metode add.
+
+00:02:36.240 --> 00:02:40.176
+Dengan begini, kita tak perlu
+langkah tambahan untuk membuat
+
+00:02:40.176 --> 00:02:45.110
+obyek kata baru di baris kode lain,
+lalu disimpan ke variabel sementara.
+
+00:02:45.110 --> 00:02:47.540
+Kita dapat langsung saja
+hilangkan semua baris ini.
+
+00:02:48.830 --> 00:02:52.840
+Kita langsung menambahkan
+obyek kata baru ke daftar.
+
+00:02:52.840 --> 00:02:57.041
+Ringkasnya, input ke daftar ini
+adalah obyek kata baru yang
+
+00:02:57.041 --> 00:02:59.830
+dibuat dalam baris dengan
+memakai kata kunci baru.
+
+00:02:59.830 --> 00:03:01.048
+Saya akan
+
+00:03:01.048 --> 00:03:04.134
+selesaikan mengisi ArrayList
+dengan obyek kata.
+
+00:03:04.134 --> 00:03:06.064
+Jika sudah selesai,
+ini adalah kode yang dihasilkan
+
+00:03:06.064 --> 00:03:08.780
+dalam membuat ArrayList
+dari kata.
+
+00:03:08.780 --> 00:03:11.368
+Mari pindah ke bawah sini,
+untuk memasukkan 
+
+00:03:11.368 --> 00:03:13.121
+ArrayList ke adapter.
+
+00:03:13.121 --> 00:03:17.370
+Kita harus perbarui tipe generik
+ini dari string menjadi kata.
+
+00:03:17.370 --> 00:03:20.220
+Perubahan ini menyiratkan bahwa
+ArrayAdapter kini berisi daftar kata
+
+00:03:20.220 --> 00:03:23.400
+sebagai sumber status,
+bukan string.
+
+00:03:23.400 --> 00:03:27.420
+Kita juga harus perbarui tata letak resource
+menjadi tata letak list item yang baru.
+
+00:03:27.420 --> 00:03:31.460
+Daripada begitu,
+buat saja R.layout.List_item.
+
+00:03:31.460 --> 00:03:34.260
+Tak ada kesalahan di kodenya,
+jadi saya akan
+
+00:03:34.260 --> 00:03:36.120
+jalankan aplikasi di perangkat.
+
+00:03:36.120 --> 00:03:38.396
+Berikut emulator yang
+menjalankan versi aplikasi ini.
+
+00:03:38.396 --> 00:03:40.784
+Mari kita cek ke
+numbers activity.
+
+00:03:40.784 --> 00:03:44.325
+Wah, baru saja crash.
+Ada apa kiranya?
+
+00:03:44.325 --> 00:03:47.490
+Mari lihat monitor Android dan
+cek log Android.
+
+00:03:47.490 --> 00:03:51.649
+Di bagian teratas pesan log,
+ada tulisan
+
+00:03:51.649 --> 00:03:56.588
+Java.Lang.IllegalStateException
+ArrayAdapter mengharuskan
+
+00:03:56.588 --> 00:03:57.916
+resource ID-nya menjadi text view.
+
+00:03:57.916 --> 00:04:01.564
+Saya tak paham apa arti
+kesalahan ini, saya harus ke
+
+00:04:01.564 --> 00:04:05.445
+dokumentasi untuk mencari
+penyebabnya.
+
+00:04:05.445 --> 00:04:08.650
+Ini adalah dokumentasi developer
+untuk ArrayAdapter.
+
+00:04:08.650 --> 00:04:10.790
+Mari kita baca
+Class Overview.
+
+00:04:10.790 --> 00:04:13.610
+Atau, Anda dapat juga menghentikan
+sejenak video jika Anda
+
+00:04:13.610 --> 00:04:14.480
+ingin baca secara menyeluruh.
+
+00:04:15.820 --> 00:04:20.658
+Yang saya pelajari dari beberapa paragraf ini adalah
+asalnya, kelas ingin
+
+00:04:20.658 --> 00:04:25.132
+agar resource id yang diberikan
+mengacu pada satu text view.
+
+00:04:25.132 --> 00:04:29.689
+Mungkin karena itulah tata letak daftar item
+kerangka Android bisa berfungsi
+
+00:04:29.689 --> 00:04:32.891
+karena seluruh tata letak
+terdiri atas satu TextView.
+
+00:04:32.891 --> 00:04:36.577
+Di paragraf selanjutnya,
+kita dapat tambahkan daftar
+
+00:04:36.577 --> 00:04:38.288
+atau array obyek khusus.
+
+00:04:38.288 --> 00:04:41.800
+Sempurna bagi kita, untuk
+menampilkan obyek kata khusus.
+
+00:04:41.800 --> 00:04:45.233
+Ini masuk akal sebab, ingat,
+ArrayAdapter menggunakan
+
+00:04:45.233 --> 00:04:46.240
+perintah generik.
+
+00:04:46.240 --> 00:04:50.590
+Artinya, kita dapat ganti tipe data
+obyek apapun untuk tim ini.
+
+00:04:50.590 --> 00:04:53.840
+Berlanjut ke paragraf ketiga,
+untuk menampilkan daftar item
+
+00:04:53.840 --> 00:04:57.940
+yang rumit, yang dapat
+menampung lebih dari satu text view
+
+00:04:57.940 --> 00:05:01.870
+kita harus ganti metode getView()
+dengan implementasi kita sendiri.
+
+00:05:01.870 --> 00:05:05.869
+ListView menyebabkan metode
+adaptors getView() jika ia perlu tampilan baru
+
+00:05:05.869 --> 00:05:06.715
+di layar.
+
+00:05:06.715 --> 00:05:10.845
+Salah satu argumen input ke
+metode adalah elemen yang
+
+00:05:10.845 --> 00:05:12.410
+diinginkan dalam daftar.
+
+00:05:12.410 --> 00:05:15.100
+Dalam hal ini, kita punya
+posisi 0 yang kita perlu.
+
+00:05:16.240 --> 00:05:20.922
+Dengan informasi ini, adapter
+mengembalikan tampilan ke ListView
+
+00:05:20.922 --> 00:05:25.003
+yang berisi informasi
+dari posisi 0.
+
+00:05:25.003 --> 00:05:29.911
+Bayangkan hubungan antara
+ListView dan getView, seperti halnya
+
+00:05:29.911 --> 00:05:35.270
+antara dokter bedah dan asisten
+bedah di ruang operasi.
+
+00:05:35.270 --> 00:05:40.300
+Dengan analogi ini, asisten bedah,
+adalah getView
+
+00:05:40.300 --> 00:05:42.770
+menyerahkan ListView pada dokter bedah
+
+00:05:42.770 --> 00:05:46.480
+terkait instrumen yang tepat, tampilan yang tepat,
+pada waktu yang tepat.
+
+00:05:46.480 --> 00:05:51.610
+ListView atau dokter
+meminta tampilan atau gunting, misalnya dalam kasus ini.
+
+00:05:51.610 --> 00:05:55.370
+getView punya yang dibutuhkan,
+yaitu tampilannya, atau misal
+
+00:05:55.370 --> 00:05:59.560
+dalam kasus ini adalah guntingnya, dan
+ia serahkan pada dokter bedah.
+
+00:05:59.560 --> 00:06:00.530
+Secara baku/default
+
+00:06:00.530 --> 00:06:04.670
+kelas ArrayAdapter ingin
+menempati satu TextView.
+
+00:06:04.670 --> 00:06:09.060
+Karena tata letak list item yang akan
+diisi lebih rumit, maka
+
+00:06:09.060 --> 00:06:13.360
+ia punya dua TextView, dan akhirnya
+akan ada image view.
+
+00:06:14.710 --> 00:06:18.273
+Kita perlu ganti metode getView
+dengan custom behavior.
+
+00:06:18.273 --> 00:06:22.120
+Untuk itu, kita perlu
+subkelaskan kelas ArrayAdapter.
+
+00:06:23.300 --> 00:06:26.962
+Lebih jelasnya, kita perlu buat
+kelas Java baru.
+
+00:06:26.962 --> 00:06:32.690
+Kita namai kelas WordAdapter
+dan gunakan untuk mengembangkan kelas ArrayAdapter.
+
+00:06:32.690 --> 00:06:34.376
+Akan saya tunjukkan
+cara melakukannya.
+
+00:06:34.376 --> 00:06:36.440
+Mari kita beralih
+ke project view.
+
+00:06:37.700 --> 00:06:42.860
+Pilih package-nya.
+right-click, New &gt; Java Class.
+
+00:06:42.860 --> 00:06:44.960
+Kita namai arsip ini
+WordAdapter.
+
+00:06:46.030 --> 00:06:49.510
+Kita perlu ubah arsip
+auto-generated dari Android Studio.
+
+00:06:49.510 --> 00:06:54.230
+Pernyataan kelas ini harus spesifik,
+bahwa WordAdapter menjadi berkembang
+
+00:06:54.230 --> 00:06:57.350
+atau mewariskan sifat
+kelas ArrayAdapter.
+
+00:06:57.350 --> 00:07:00.700
+Untuk menampilkan metode
+mengganti dari kelas ArrayAdapter
+
+00:07:00.700 --> 00:07:03.660
+kursor kita harus berada
+di antara tanda kurung.
+
+00:07:03.660 --> 00:07:06.860
+Kita pencet 'Code', lalu
+ganti metode.
+
+00:07:06.860 --> 00:07:11.714
+Atau, pintasan papan ketik yaitu
+Ctrl+O, lalu di daftar ini
+
+00:07:11.714 --> 00:07:14.779
+carilah getView dan
+lalu klik enter.
+
+00:07:14.779 --> 00:07:18.060
+Metode ini muncul sendiri
+secara baku.
+
+00:07:18.060 --> 00:07:21.310
+Saya akan mundur, Anda
+selesaikan langkah yang dibutuhkan
+
+00:07:21.310 --> 00:07:23.813
+agar aplikasi
+menampilkan daftar kosakata
+
+00:07:23.813 --> 00:07:24.892
+untuk numbers activity.
+
+00:07:24.892 --> 00:07:28.493
+Langkahnya termasuk menyelesaikan
+implementasi metode getView.
+
+00:07:28.493 --> 00:07:32.100
+Jika Anda selesai mengerjakan kuis ini,
+aplikasinya harusnya jadi seperti ini.
+
+00:07:32.100 --> 00:07:35.050
+Tiap daftar item harus menampilkan
+kata Miwok di atas kata
+
+00:07:35.050 --> 00:07:36.780
+terjemahan bahasa Inggrisnya.
+
+00:07:36.780 --> 00:07:39.408
+Untuk mengecek pekerjaan Anda,
+akan saya beri
+
+00:07:39.408 --> 00:07:42.389
+perubahan kode yang diperlukan
+di numbers activity.
+
+00:07:42.389 --> 00:07:46.615
+Kita tidak akan memakai ArrayAdapter,
+tapi WordAdapter.
+
+00:07:47.650 --> 00:07:51.328
+Konstruktor WordAdapter
+mengambil dua input.
+
+00:07:51.328 --> 00:07:53.818
+Hanya konteks dan
+daftar kata.
+
+00:07:53.818 --> 00:07:58.195
+Ingat, perbarui variabel
+adapter di sini.
+
+00:07:58.195 --> 00:08:01.285
+Pastikan kelas WordAdapter
+cocok dengan perubahan number activity
+
+00:08:01.285 --> 00:08:05.255
+jika tidak, Anda harus kembali
+memperbaiki kelas WordAdapter.
+
+00:08:05.255 --> 00:08:08.300
+Saya tahu latihan ini akan
+menantang, sebab Anda tak pernah
+
+00:08:08.300 --> 00:08:12.520
+membuat ArrayAdapter khusus,
+atau bahkan mengganti metode getView.
+
+00:08:12.520 --> 00:08:16.270
+Tugas ini banyak langkahnya, tapi
+saya yakin Anda sudah siap.
+
+00:08:16.270 --> 00:08:17.760
+Anda harus bersabar,
+
+00:08:17.760 --> 00:08:20.620
+sebab tugas ini membutuhkan
+waktu lebih banyak.
+
+00:08:20.620 --> 00:08:21.940
+Sebagai petunjuk lainnya
+
+00:08:21.940 --> 00:08:25.360
+saya tunjukkan aplikasi contoh
+dengan ciri yang hampir mirip.
+
+00:08:25.360 --> 00:08:30.090
+Proyek ini dibuat di GitHub
+sebagai proyek open source dan
+
+00:08:30.090 --> 00:08:33.429
+artinya, kode boleh dilihat
+oleh siapapun.
+
+00:08:33.429 --> 00:08:36.490
+Harus diketahui, ada berbagai
+lisensi untuk proyek open source.
+
+00:08:37.510 --> 00:08:39.465
+Ingat, cek dulu lisensi
+
+00:08:39.465 --> 00:08:42.971
+pembatasan, apakah kode bisa
+diubah atau didistribusikan lagi.
+
+00:08:42.971 --> 00:08:45.320
+Jika Anda mendapati proyek
+open source tertentu
+
+00:08:46.390 --> 00:08:50.260
+dalam hal ini, aplikasi ini
+dibuat di Udacity, jadi
+
+00:08:50.260 --> 00:08:52.300
+Anda bebas menggunakannya
+dan diubah sekehendak hati.
+
+00:08:53.670 --> 00:08:58.680
+Aplikasi Customer Adapter Sample kami
+bernama Aplikasi Android Flavors, dan
+
+00:08:58.680 --> 00:09:01.820
+aplikasi tersebut menampilkan daftar semua
+rilisan Android.
+
+00:09:01.820 --> 00:09:05.240
+Tiap rilisan diwakili dalam
+sebuah daftar item, dan tiap
+
+00:09:05.240 --> 00:09:09.660
+daftar item dapat berisi gambar,
+judul, dan nomor versinya.
+
+00:09:11.140 --> 00:09:15.070
+Aplikasi ini menggunakan
+ArrayAdapter pelanggan, mereka
+
+00:09:15.070 --> 00:09:19.302
+panggil FlavorAdapter untuk
+menampilkan daftar item view berisi
+
+00:09:19.302 --> 00:09:21.131
+gambar yang dua kali dipakai.
+
+00:09:21.131 --> 00:09:25.183
+Coba praktikkan keahlian
+membaca kode Anda dari aplikasi lain dan
+
+00:09:25.183 --> 00:09:28.770
+pikirkan cara menyesuaikannya
+ke aplikasi army lock.
+
+00:09:28.770 --> 00:09:33.370
+So as a developer, you often looked at
+tutorials or other open source for apps.
+
+00:09:33.370 --> 00:09:35.979
+And try to apply those skills
+aplikasi Anda sendiri.
+
+00:09:36.980 --> 00:09:40.780
+Anda dapat mulai mencari kode aplikasi Android Flavor dengan
+Android Flavor dengan mengklik
+
+00:09:40.780 --> 00:09:41.896
+tombol Download Zip.
+
+00:09:41.896 --> 00:09:45.865
+Setelah mengunduh semua kode,
+lalu mengimpornya ke Android Studio
+
+00:09:45.865 --> 00:09:50.700
+sebagai proyek kini, atau ramban
+arsip langsung di peramban web.
+
+00:09:50.700 --> 00:09:54.859
+So for example, I can click here,
+app &gt; source/main
+
+00:09:54.859 --> 00:09:58.470
+lalu mencari berbagai arsip
+Java atau arsip lainnya.
+
+00:09:59.580 --> 00:10:04.690
+Salah satu pintasan GitHub yang keren lagi, yaitu dengan
+ketik T di keyboard.
+
+00:10:04.690 --> 00:10:08.130
+Saya klik T dan hal itu
+mengaktifkan pencari arsip.
+
+00:10:08.130 --> 00:10:11.858
+Ini memungkinkan saya lebih mudah mencari
+arsip proyek saya.
+
+00:10:11.858 --> 00:10:15.656
+Jika ingin melihat aktivitas
+utama, saya ketik "activity".
+
+00:10:15.656 --> 00:10:17.959
+mainActivity.java akan muncul.
+
+00:10:17.959 --> 00:10:20.908
+Jika saya ingin cari
+FlavorAdapter yang saya sebut tadi
+
+00:10:20.908 --> 00:10:22.830
+saya dapat dengan mudah menemukannya di sini.
+
+00:10:22.830 --> 00:10:26.890
+Semoga contoh ini membantu
+dalam latihan coding berikutnya.
+
+00:10:26.890 --> 00:10:30.830
+Lihatlah bagian kuis untuk
+tahu instruksi mengawalinya.
+
+00:10:30.830 --> 00:10:31.340
+Semoga sukses.
+

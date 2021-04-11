@@ -1,0 +1,346 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.450 --> 00:00:04.370
+Sejauh ini Anda telah berlatih membuat
+array dan menginisialisasi Array.
+
+00:00:04.370 --> 00:00:07.270
+Sekarang Anda akan praktik menulis kode
+untuk mengakses elemen array.
+
+00:00:07.270 --> 00:00:08.480
+Dengan demikian,
+
+00:00:08.480 --> 00:00:12.650
+Anda dapat menggunakan nilai indeks array
+untuk mengatur teks di TextView.
+
+00:00:12.650 --> 00:00:15.700
+Untuk sekarang, Anda akan
+mengakses elemen array
+
+00:00:15.700 --> 00:00:18.140
+dengan mencetak nilai
+untuk log Android.
+
+00:00:18.140 --> 00:00:22.240
+Ingat, Anda bisa mengakses logcat
+manager dari tombol ini.
+
+00:00:22.240 --> 00:00:26.700
+Dengan kode yang kita miliki sekarang,
+belum ada yang tampil di layar.
+
+00:00:26.700 --> 00:00:28.920
+Ingat, kami memperkenalkan logging
+back di kursus
+
+00:00:28.920 --> 00:00:30.100
+Android untuk Pemula.
+
+00:00:30.100 --> 00:00:32.840
+Di sana kita mempelajari bahwa Android
+menyimpan log sistem untuk apa saja
+
+00:00:32.840 --> 00:00:34.310
+terjadi di perangkat.
+
+00:00:34.310 --> 00:00:36.730
+Ini adalah pesan log yang berjalan
+dari sistem.
+
+00:00:36.730 --> 00:00:40.420
+Anda bisa membayangkannya sebagai diary
+yang mencakup saat sesuatu terjadi dan
+
+00:00:40.420 --> 00:00:41.765
+deskripsi tentang apa yang terjadi.
+
+00:00:41.765 --> 00:00:43.220
+Pesan sistem ini berguna untuk
+
+00:00:43.220 --> 00:00:46.140
+debug dan kita bisa memeriksa
+log ke belakang
+
+00:00:46.140 --> 00:00:49.570
+untuk memahami apa yang terjadi di
+perangkat sebelum masalah terjadi.
+
+00:00:49.570 --> 00:00:52.350
+Anda menyaksikannya pertama kali saat
+kita membangun aplikasi Just Java
+
+00:00:52.350 --> 00:00:54.370
+di kursus Android
+untuk Pemula.
+
+00:00:54.370 --> 00:00:55.600
+Saat aplikasi dibuat,
+
+00:00:55.600 --> 00:00:59.540
+kita bisa melihat pesan kesalahan di
+log untuk membantu debug masalah.
+
+00:00:59.540 --> 00:01:03.886
+Ingat, di Android Studio, pesan
+muncul di jendela logcat.
+
+00:01:03.886 --> 00:01:06.526
+Selain menggunakan kesalahan
+log view,
+
+00:01:06.526 --> 00:01:09.432
+kita sebagai pengembang juga bisa
+menulis pesan ke log.
+
+00:01:09.432 --> 00:01:12.680
+Dan kita sebut proses ini
+menulis log, atau logging.
+
+00:01:12.680 --> 00:01:14.400
+Ini bisa membantu kita untuk men-debug
+aplikasi untuk sementara atau
+
+00:01:14.400 --> 00:01:17.640
+memeriksa kembali status aplikasi
+kita saat berjalan.
+
+00:01:17.640 --> 00:01:20.710
+Ini sama dengan menggunakan tool
+debug di mana kita bisa tambahkan breakpoint
+
+00:01:20.710 --> 00:01:23.140
+untuk memeriksa status variabel yang
+berbeda-beda di aplikasi kita dan
+
+00:01:23.140 --> 00:01:26.590
+ini memungkinkan kita untuk menulis nilai
+variabel tertentu ke log.
+
+00:01:26.590 --> 00:01:29.480
+Secara personal, saya suka menggunakan
+statemen logging karena lebih cepat.
+
+00:01:29.480 --> 00:01:32.350
+Daripada meneliti secara manual setiap
+baris kode di aplikasi,
+
+00:01:32.350 --> 00:01:36.640
+sebaiknya Anda biarkan aplikasi berjalan normal dan
+pesan log dicetak selama itu.
+
+00:01:36.640 --> 00:01:39.490
+Ini adalah artikel yang berguna tentang
+cara menulis pesan log.
+
+00:01:39.490 --> 00:01:42.860
+Anda hanya membutuhkan satu baris
+kode untuk satu pesan log.
+
+00:01:42.860 --> 00:01:46.280
+Perhatikan bahwa ada lima kategori
+pesan log yang berbeda-beda
+
+00:01:46.280 --> 00:01:49.412
+berdasarkan seberapa parah
+atau penting pesan tersebut.
+
+00:01:49.412 --> 00:01:51.170
+Dimulai dari pesan verbose,
+
+00:01:51.170 --> 00:01:55.250
+yang merupakan pesan yang cukup
+diketahui saja, hingga pesan error, yang
+
+00:01:55.250 --> 00:01:59.640
+berarti masalah parah seperti saat aplikasi
+Anda melakukan perilaku tak diharapkan.
+
+00:01:59.640 --> 00:02:03.360
+Untuk sekarang, kita hanya akan berlatih
+menulis pesan log verbose
+
+00:02:03.360 --> 00:02:05.950
+untuk membantu kita memeriksa status
+variabel tertentu dalam aplikasi.
+
+00:02:05.950 --> 00:02:10.900
+Perhatikan bahwa semua pesan log
+membutuhkan dua string sebagai input.
+
+00:02:10.900 --> 00:02:13.710
+Saat mengeklik metode Log.v ini,
+
+00:02:13.710 --> 00:02:17.005
+kita lihat bahwa parameter input pertama
+adalah nama tag.
+
+00:02:17.005 --> 00:02:20.665
+Siapa saja bisa mencetak log,
+sistem Android atau aplikasi lain.
+
+00:02:20.665 --> 00:02:24.305
+Kita gunakan tag ini untuk mengidentifikasi
+dari mana pesan berasal.
+
+00:02:24.305 --> 00:02:27.205
+Untuk tag, sering kali kita
+hanya memiliki nama activity atau
+
+00:02:27.205 --> 00:02:29.235
+kelas tempat statemen logging ditemukan.
+
+00:02:29.235 --> 00:02:31.995
+Misalnya, kita bisa memiliki statemen log
+di NumbersActivity dan
+
+00:02:31.995 --> 00:02:34.885
+kita bisa membuat tag-nya hanya
+string NumbersActivity.
+
+00:02:34.885 --> 00:02:37.135
+Parameter kedua adalah pesan, dan
+
+00:02:37.135 --> 00:02:39.840
+ini adalah pesan yang kita lihat
+tampil di log.
+
+00:02:39.840 --> 00:02:42.970
+Dan parameter kedua adalah pesan
+dan inilah pesan yang kita lihat
+
+00:02:42.970 --> 00:02:46.790
+tampil di log, da ini bisa berupa apa
+saya yang ingin Anda log-kan.
+
+00:02:46.790 --> 00:02:50.641
+Kembal ke artikel utama, kita
+contoh di bawah sini.
+
+00:02:50.641 --> 00:02:56.354
+Ini adalah panggilan metode Log.I, yang
+dari sini kita tahu merupakan log informasi.
+
+00:02:56.354 --> 00:03:01.350
+Kita lihat di sini bahwa nama tag-nya adalah
+MainActivity dan pesannya di sini.
+
+00:03:01.350 --> 00:03:06.290
+Dalam parameter pesan, kita menggunakan
+operator plus untuk menggabungkan string.
+
+00:03:06.290 --> 00:03:09.793
+Penggabungan string adalah ungkapan yang
+menarik daripada tambahan string.
+
+00:03:09.793 --> 00:03:11.969
+Sama dengan cara menambahkan angka,
+
+00:03:11.969 --> 00:03:14.407
+kita dapat meleburkan string
+dengan operator plus.
+
+00:03:14.407 --> 00:03:18.701
+Dalam hal ini, kita meleburkan string
+dengan variabel posisi untuk membuat
+
+00:03:18.701 --> 00:03:20.490
+string yang lebih panjang.
+
+00:03:20.490 --> 00:03:24.100
+Dalam logcat, Anda akan lihat
+MyActivity sebagai nama tag.
+
+00:03:24.100 --> 00:03:29.270
+Lalu pesan
+MyClass.View- get item number 1.
+
+00:03:29.270 --> 00:03:33.010
+Ini dengan mengasumsikan bahwa nilai
+posisi variabel adalah 1.
+
+00:03:33.010 --> 00:03:35.650
+Ini adalah contoh dalam
+NumbersActivity.
+
+00:03:35.650 --> 00:03:40.568
+Saya menambahkan kedua pesan log ini
+di dasar metode onCreate.
+
+00:03:40.568 --> 00:03:42.326
+Sekarang saya akan menjalankan
+aplikasi di perangkat.
+
+00:03:42.326 --> 00:03:44.128
+[BLANK_AUDIO]
+
+00:03:44.128 --> 00:03:47.931
+Dengan aplikasi berjalan, saya akan
+masuk ke NumbersActivity dan
+
+00:03:47.931 --> 00:03:50.890
+perhatikan bahwa kedua pesan dalam
+output log ini muncul.
+
+00:03:52.090 --> 00:03:56.165
+Jadi ada statemen dengan kata
+di indeks 0 adalah satu dan
+
+00:03:56.165 --> 00:03:58.310
+kata di indeks 1 adalah dua.
+
+00:03:58.310 --> 00:03:59.310
+Perhatikan dua hal ini.
+
+00:04:00.340 --> 00:04:04.250
+Pertama, kita perlu menambahkan spasi
+penyangga setelah koma, sehingga
+
+00:04:04.250 --> 00:04:07.440
+semua teks ini tidak
+menjadi satu.
+
+00:04:07.440 --> 00:04:10.215
+Kedua, kita tidak meletakkan
+
+00:04:10.215 --> 00:04:15.010
+kata [0] dalam tanda kutip karena
+
+00:04:15.010 --> 00:04:20.010
+kita ingin nilai pada indeks ini, bukan
+string harfiah dengan tanda kurung.
+
+00:04:20.010 --> 00:04:23.200
+Sebagai ringkasan, mencetak pesan log
+adalah cara yang cukup berguna
+
+00:04:23.200 --> 00:04:26.360
+untuk memastikan bahwa variabel memiliki
+nilai yang Anda harapkan.
+
+00:04:27.470 --> 00:04:31.900
+Pesan log ini hanya sementara dan
+akan membuangnya nanti.
+
+00:04:31.900 --> 00:04:34.590
+Sekarang mari kita berlatih logging
+di aplikasi Miwok Anda.
+
+00:04:34.590 --> 00:04:37.330
+Luangkan waktu untuk me-log
+pesan di kode Anda sehingga
+
+00:04:37.330 --> 00:04:40.360
+Anda dapat melihat nilai tiap
+elemen di array Words.
+
+00:04:40.360 --> 00:04:43.500
+Ini adalah output yang diharapkan di log
+dan silakan lanjutkan dan
+
+00:04:43.500 --> 00:04:44.970
+centang kotak ini setelah Anda selesai.
+

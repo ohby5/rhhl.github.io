@@ -1,0 +1,461 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.750 --> 00:00:03.700
+Baik, jadi dua tugas pertama dalam
+latihan ini berarti Anda memahami
+
+00:00:03.700 --> 00:00:06.540
+kode kita setelah Anda
+melihat saya melakukan perubahan
+
+00:00:06.540 --> 00:00:07.850
+dalam video sebelumnya.
+
+00:00:07.850 --> 00:00:12.300
+Dalam tugas pertama, kita diminta untuk
+menghapus blok pesan log ini, jadi
+
+00:00:12.300 --> 00:00:13.450
+saya akan lanjut dan
+melakukannya sekarang.
+
+00:00:14.650 --> 00:00:16.020
+Bagus.
+Mudah.
+
+00:00:16.020 --> 00:00:21.530
+Tugas berikutnya adalah memodifikasi
+activity_numbers.xml untuk mengubahnya,
+
+00:00:21.530 --> 00:00:24.910
+untuk menggunakan tata letak secara linar
+dan bukan secara relative
+
+00:00:24.910 --> 00:00:27.150
+serta perubahan orientasi
+ke vertikal.
+
+00:00:27.150 --> 00:00:30.052
+[BLANK_AUDIO]
+
+00:00:30.052 --> 00:00:34.340
+Lalu juga menambahkan ID view
+yang ingin saya namai review.
+
+00:00:36.560 --> 00:00:38.670
+Bagus, itulah kedua tugas pertama.
+
+00:00:38.670 --> 00:00:39.950
+Untuk tugas ketiga,
+
+00:00:39.950 --> 00:00:42.456
+kita perlu memodifikasi metode
+onCreate di NumebrsActivity.
+
+00:00:42.456 --> 00:00:45.800
+Kita perlu memodifikasinya sehingga metode
+ini menggunakan whileLoop untuk membuat
+
+00:00:45.800 --> 00:00:49.200
+text view untuk list kata lalu menampilkan
+text view di layar.
+
+00:00:50.510 --> 00:00:53.730
+Inilah versi NumbersActivity.java
+yang telah kami
+
+00:00:53.730 --> 00:00:55.240
+poskan daring.
+
+00:00:55.240 --> 00:00:58.420
+Kode yang digunakannya di sini
+untuk membuat tiga text view
+
+00:00:58.420 --> 00:01:02.000
+punya pendekatan menu dan bukannya
+menggunakan pendekatan while loop.
+
+00:01:02.000 --> 00:01:03.350
+Setelah memulai kode ini dan
+
+00:01:03.350 --> 00:01:06.860
+memahami cara kerjanya, kita
+akan terbantu saat menulis while loop.
+
+00:01:06.860 --> 00:01:10.764
+Sebelum kita mulai menulis while loop,
+mari kita tinjau ketiga pertanyaan
+
+00:01:10.764 --> 00:01:14.060
+panduan yang kita bahas tadi
+dalam topik while loop.
+
+00:01:14.060 --> 00:01:17.311
+Baik, sekarang kita bahas cara menambahkan
+text view ke layar menggunakan
+
+00:01:17.311 --> 00:01:18.700
+while loop lebih dalam.
+
+00:01:18.700 --> 00:01:20.850
+Dan ingat, ini adalah
+struktur umum untuk kita
+
+00:01:20.850 --> 00:01:22.632
+dalam menulis
+while loop dan
+
+00:01:22.632 --> 00:01:26.001
+ketiga pertanyaan yang akan kita bahas
+akan membantu kita mengisi kotak-kotak ini.
+
+00:01:26.001 --> 00:01:28.560
+Jadi, tugas apa yang ingin lakukan?
+
+00:01:28.560 --> 00:01:32.250
+Dari kode NumbersActivity, tampaknya
+kita harus membuat text view
+
+00:01:32.250 --> 00:01:35.680
+yang baru, lalu mengatur text view itu
+ke satu kata tunggal dalam list, lalu
+
+00:01:35.680 --> 00:01:37.710
+menambahkan text view ke review.
+
+00:01:37.710 --> 00:01:40.650
+Kedua, berapa kali kita
+harus mengulangi loop ini?
+
+00:01:40.650 --> 00:01:42.950
+Dalam contoh ini, kita
+perlu mengulanginya sepuluh kali.
+
+00:01:42.950 --> 00:01:45.420
+Jadi, satu pengulangan per kata dalam list.
+
+00:01:45.420 --> 00:01:47.490
+Ada sepuluh kata
+dalam list ini sekarang.
+
+00:01:47.490 --> 00:01:50.120
+Pertanyaan ketiga adalah,
+apa kondisinya?
+
+00:01:50.120 --> 00:01:53.660
+Kita ingin terus mengulang isi seluruh
+list hingga akhir list.
+
+00:01:53.660 --> 00:01:56.290
+Jika kita membuat variabel
+indeks untuk melacak
+
+00:01:56.290 --> 00:01:58.970
+posisi indeks kita saat ini,
+kondisi kita
+
+00:01:58.970 --> 00:02:02.480
+dapat terus me-loop hingga variabel
+indeks kurang dari sepuluh,
+
+00:02:02.480 --> 00:02:04.730
+yang saat ini merupakan panjang
+dari list kata-kata.
+
+00:02:04.730 --> 00:02:07.420
+Asumsikan bahwa variabel indeks
+dimulai dari nol dan
+
+00:02:07.420 --> 00:02:08.680
+bertambah satu demi satu.
+
+00:02:08.680 --> 00:02:11.770
+Saya kembali ke
+NumbersActivity.java.
+
+00:02:11.770 --> 00:02:15.958
+Yaitu versi yang kita buat text view-nya
+dengan cara manual.
+
+00:02:15.958 --> 00:02:19.520
+Saya akan menyalin dan menempel blok
+kode yang memungkinkan kita melakukannya.
+
+00:02:19.520 --> 00:02:22.580
+Di Android Studio, di
+NumbersActivity.java,
+
+00:02:22.580 --> 00:02:25.930
+di metode onCreate, saya akan
+menambahkan blok kode tersebut.
+
+00:02:25.930 --> 00:02:28.830
+Ingatlah bahwa yang kita lakukan pertama kali
+adalah mencari root view untuk
+
+00:02:28.830 --> 00:02:31.550
+seluruh tata letak, lalu membuat
+variabel untuk melacak
+
+00:02:31.550 --> 00:02:34.720
+posisi indeks saat ini
+dalam words array list.
+
+00:02:34.720 --> 00:02:38.740
+Lalu kita membuat text view baru untuk
+menampilkan tiap kata dan
+
+00:02:38.740 --> 00:02:41.560
+menambahkan text view tersebut ke
+root view untuk ditampilkan.
+
+00:02:41.560 --> 00:02:43.590
+Tapi pendekatan ini cukup berat.
+
+00:02:43.590 --> 00:02:46.000
+Mari kita lihat cara mengubahnya
+dengan while loop.
+
+00:02:46.000 --> 00:02:48.390
+Dimulai dengan baris pertama
+mencari review untuk
+
+00:02:48.390 --> 00:02:50.460
+seluruh tata letak,
+kita perlu menyimpannya.
+
+00:02:50.460 --> 00:02:53.000
+Saya tetap di sini bahkan
+saat menggunakan loop.
+
+00:02:53.000 --> 00:02:57.010
+Berikutnya, muncul bagian while
+loop, jadi akan saya tulis di sini.
+
+00:02:57.010 --> 00:03:00.490
+Ingatlah bahwa while loop mewajibkan
+pengaturan variabel penghitung, lalu
+
+00:03:00.490 --> 00:03:04.695
+diikuti kata kunci while dan di dalam
+kondisi, disusul tanda kurung dan
+
+00:03:04.695 --> 00:03:06.800
+di dalam tanda-tanda kurung ini
+berisi instruksi atau
+
+00:03:06.800 --> 00:03:09.440
+tugas serta pembaruan
+variabel penghitung.
+
+00:03:09.440 --> 00:03:11.020
+Inilah pengaturan untuk while loop kita.
+
+00:03:11.020 --> 00:03:14.310
+Hal pertama yang harus kita lakukan
+adalah mengatur variabel penghitung dan
+
+00:03:14.310 --> 00:03:16.160
+tampaknya kita sudah melakukannya
+di bawah sini.
+
+00:03:16.160 --> 00:03:19.640
+Saya akan ambil potongan kode ini
+dan menggantikannya di sini.
+
+00:03:19.640 --> 00:03:23.080
+Berikutnya, ada ada kata kunci while
+diikuti dengan tanda kurung dan
+
+00:03:23.080 --> 00:03:24.980
+di dalamnya ada kondisi tes.
+
+00:03:24.980 --> 00:03:28.060
+Dan kita tahu bahwa kondisi tes kita
+adalah harus variabel indeks
+
+00:03:28.060 --> 00:03:30.980
+kurang dari sepuluh agar
+bisa terus melanjutkan while loop ini.
+
+00:03:30.980 --> 00:03:32.850
+Tapi, daripada
+menggunakan sepuluh secara eksplisit,
+
+00:03:32.850 --> 00:03:35.570
+saya ingin menggunakan metode words.size.
+
+00:03:35.570 --> 00:03:37.478
+Dengan begitu, jika list kata
+memang berubah,
+
+00:03:37.478 --> 00:03:39.652
+kita tidak perlu memperbarui
+kondisi tes ini.
+
+00:03:39.652 --> 00:03:42.253
+Ini akan secara otomatis membawa
+kita ke akhir list,
+
+00:03:42.253 --> 00:03:43.770
+tak peduli berapa pun panjangnya.
+
+00:03:43.770 --> 00:03:47.262
+Baik, walaupun kondisi ini true,
+kita perlu membuat text view
+
+00:03:47.262 --> 00:03:50.840
+dan mengatur teks menjadi kata di
+indeks saat ini dalam list kata.
+
+00:03:50.840 --> 00:03:53.560
+Lalu kita perlu menampilkan
+text view di layar.
+
+00:03:53.560 --> 00:03:54.770
+Karena saya sudah punya kode untuk
+
+00:03:54.770 --> 00:03:57.200
+ini, mari pindahkan ke
+statemen while.
+
+00:03:57.200 --> 00:03:59.140
+Ini akan menggantikan
+tempat instruksi.
+
+00:04:01.490 --> 00:04:03.641
+Bagus, sepertinya kita hampir
+selesai dengan while loop.
+
+00:04:03.641 --> 00:04:06.960
+Hal terakhir yang perlu kita lakukan
+adalah memperbarui variabel penghitung.
+
+00:04:06.960 --> 00:04:09.832
+Ingatlah bahwa kita perlu memperbarui
+variabel penghitung di akhir tiap
+
+00:04:09.832 --> 00:04:13.168
+pengulangan sehingga kita bisa keluar
+dari loop saat kita mencapai akhir list.
+
+00:04:13.168 --> 00:04:18.125
+Dengan menggunakan pintasan yang kita
+pelajari dulu, saya akan mengetikkan index++.
+
+00:04:18.125 --> 00:04:23.640
+Ingat, ini adalah pintasan yang
+setara dengan index = index +1.
+
+00:04:23.640 --> 00:04:25.960
+Saya akan membuat komentar
+di pinggir
+
+00:04:25.960 --> 00:04:26.970
+untuk membantu Anda mengingat.
+
+00:04:27.990 --> 00:04:31.200
+Sekarang saya lanjut dan membuang
+selainnya yang tak saya butuhkan lagi
+
+00:04:31.200 --> 00:04:32.580
+karena while loop yang melakukan semua itu.
+
+00:04:32.580 --> 00:04:35.630
+Kita baru saja membuat sejumlah
+perubahan untuk kode kita dan
+
+00:04:35.630 --> 00:04:37.740
+mengimplementasikan konsep
+baru, yaitu while loop.
+
+00:04:37.740 --> 00:04:39.650
+Untuk mengulang apa yang telah kita lakukan,
+
+00:04:39.650 --> 00:04:43.840
+ingatlah bahwa kita membuang pesan log
+dalam metode onCreate NumbersActivity.
+
+00:04:43.840 --> 00:04:47.350
+Kita juga memodifikasi activity_numbers.xml,
+
+00:04:47.350 --> 00:04:50.870
+dengan mengubahnya menggunakan linear
+layout dan bukannya relative layout.
+
+00:04:50.870 --> 00:04:52.970
+Kita mengatur orientasi
+menjadi vertikal dan
+
+00:04:52.970 --> 00:04:55.536
+kemudian menambahkan ID view
+yang disebut root view.
+
+00:04:55.536 --> 00:04:58.450
+Terakhir, di metode onCreate dalam
+NumbersActivity,
+
+00:04:58.450 --> 00:05:01.830
+kita menggunakan tiga pertanyaan panduan
+untuk membantu menulis while loop untuk
+
+00:05:01.830 --> 00:05:05.040
+membuat dan menampilkan text view untuk
+tiap elemen dalam list kata.
+
+00:05:05.040 --> 00:05:08.070
+Baik, tadi kita telah bicara sedikit tentang
+pintasan dan
+
+00:05:08.070 --> 00:05:12.550
+yang paling sering kita lihat adalah
+index++ yang kita gunakan dalam while loop.
+
+00:05:12.550 --> 00:05:16.790
+Dan saya ungkapkan juga bahwa ini adalah
+pintasan untuk index = index +1.
+
+00:05:16.790 --> 00:05:19.280
+Ada banyak pintasan
+matematis lain semacam ini.
+
+00:05:19.280 --> 00:05:23.120
+Misalnya, sebuah variabel, mungkin
+seperti j plus atau
+
+00:05:23.120 --> 00:05:26.200
+sama dengan angka, misalnya dalam hal ini 3.
+
+00:05:26.200 --> 00:05:31.480
+Dan pintasan untuk variabel itu
+ditugaskan berupa variabel plus angka tersebut.
+
+00:05:31.480 --> 00:05:35.340
+Selain itu, kita juga punya pintasan
+pengurangan seperti mengambil variabel
+
+00:05:35.340 --> 00:05:41.470
+lalu menambahkan minus dan
+ini adalah pintasan untuk i = i -1.
+
+00:05:41.470 --> 00:05:45.450
+Ingat bahwa dalam semua kasus tersebut,
+kita dapat mengganti variabel yang berbeda dan
+
+00:05:45.450 --> 00:05:46.590
+angka yang berbeda.
+
+00:05:46.590 --> 00:05:51.970
+Penting untuk diperhatikan bahwa
+i++ bukan hanya sama dengan
+
+00:05:51.970 --> 00:05:57.210
+I + 1, tapi sama dengan
+seluruh ekspresi i = i + 1.
+
+00:05:57.210 --> 00:06:01.440
+Artinya, melakukan kalkulasi lalu
+menugaskannya lagi kepada variabel tersebut.
+

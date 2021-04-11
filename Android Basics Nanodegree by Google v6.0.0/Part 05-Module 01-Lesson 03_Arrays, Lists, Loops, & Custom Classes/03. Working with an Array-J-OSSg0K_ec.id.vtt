@@ -1,0 +1,373 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.470 --> 00:00:01.290
+Baik.
+
+00:00:01.290 --> 00:00:04.830
+Saya pikir kita punya gagasan lebih baik
+tentang kapan kita harus dan
+
+00:00:04.830 --> 00:00:06.400
+tidak harus menggunakan array.
+
+00:00:06.400 --> 00:00:07.600
+&gt;&gt; Ya.
+Tapi kita belum membahas cara
+
+00:00:07.600 --> 00:00:08.410
+menggunakan array dalam kode.
+
+00:00:08.410 --> 00:00:11.100
+Misalnya, apakah masing-masing pemikiran
+ini punya nama variabel?
+
+00:00:11.100 --> 00:00:12.050
+&gt;&gt; Bukan begitu.
+
+00:00:12.050 --> 00:00:14.570
+Seluruh array itu sendiri
+punya satu nama.
+
+00:00:14.570 --> 00:00:18.170
+Misalnya, kita menyebut array ini
+misalnya sebagai Words.
+
+00:00:18.170 --> 00:00:20.000
+&gt;&gt; Oke.
+Jadi seluruh array ini bernama Words.
+
+00:00:20.000 --> 00:00:22.820
+Tai bagaimana saya memperoleh akses
+ke string dalam tiap slot?
+
+00:00:22.820 --> 00:00:26.110
+&gt;&gt; Tiap slot disebut elemen array dan
+kita bisa mengakses tiap
+
+00:00:26.110 --> 00:00:29.919
+elemen dengan merujuk ke posisi numeriknya
+atau indeks di dalam array.
+
+00:00:29.919 --> 00:00:31.130
+&gt;&gt; Tunggu, indeks?
+
+00:00:31.130 --> 00:00:34.250
+&gt;&gt; Ya, jadi tiap posisi diberi nomor,
+indeks
+
+00:00:34.250 --> 00:00:38.240
+mulai dengan nol lalu berlanjut
+ke satu, dua, dan seterusnya
+
+00:00:38.240 --> 00:00:40.290
+hingga akhir array.
+
+00:00:40.290 --> 00:00:44.070
+&gt;&gt; Oke, untuk array sepanjang tujuh,
+kita mulai dari indeks 0, dan
+
+00:00:44.070 --> 00:00:45.080
+kita akhiri di indeks enam.
+
+00:00:45.080 --> 00:00:46.400
+&gt;&gt; Ya, tepat sekali.
+
+00:00:46.400 --> 00:00:49.230
+Dan semua nomor ini disebut
+indices (indeks).
+
+00:00:49.230 --> 00:00:51.130
+&gt;&gt; Karena kata jamak untuk
+index adalah indices.
+
+00:00:52.390 --> 00:00:53.540
+Oke, masuk akal.
+
+00:00:53.540 --> 00:00:57.380
+Pertanyaan saya, bagaimana cara kita
+memasukkan nilai ke dalam array?
+
+00:00:57.380 --> 00:00:58.980
+&gt;&gt; Hal yang mirip.
+
+00:00:58.980 --> 00:01:03.030
+Kita merujuk pada indeks spesifik dalam array
+dengan menggunakan tanda sama dengan
+
+00:01:03.030 --> 00:01:07.500
+yang merupakan operator penugasan dan
+kita masukkan nilai itu ke posisi tersebut.
+
+00:01:07.500 --> 00:01:10.110
+&gt;&gt; Tunggu, saya pikir saya perlu melihat
+hal ini ditulis. Bisakah saya
+
+00:01:10.110 --> 00:01:11.280
+melihat kodenya?
+
+00:01:11.280 --> 00:01:11.880
+&gt;&gt; Ya, tentu.
+
+00:01:11.880 --> 00:01:13.280
+Apa pun untukmu, Kay.
+
+00:01:13.280 --> 00:01:15.530
+Saya akan memandu Anda mencermati
+sampel kode yang sama dan
+
+00:01:15.530 --> 00:01:18.730
+saya tak akan memberikan solusi
+untuk aplikasi Miwok.
+
+00:01:18.730 --> 00:01:20.590
+Saya akan menggunakan contoh
+yang berbeda.
+
+00:01:20.590 --> 00:01:23.520
+Misalnya, kita punya aplikasi di mana
+pengguna membeli sepatu secara online dan
+
+00:01:23.520 --> 00:01:26.770
+aplikasi kita harus melacak tipe sepatu
+apa yang masih tersedia.
+
+00:01:26.770 --> 00:01:29.790
+Satu tipe sepatu benar-benar
+populer tapi
+
+00:01:29.790 --> 00:01:31.640
+tinggal tiga ukuran yang tersisa.
+
+00:01:31.640 --> 00:01:33.210
+Bagaimana cara menyimpan informasi itu?
+
+00:01:33.210 --> 00:01:36.020
+Karena ini semua berkaitan dengan
+informasi tentang sepatu
+
+00:01:36.020 --> 00:01:37.300
+yang sama,
+
+00:01:37.300 --> 00:01:38.930
+kita harus menyimpannya dalam array.
+
+00:01:38.930 --> 00:01:42.220
+Nantinya, ini memudahkan untuk
+membayangkan ukuran apa yang tersedia
+
+00:01:42.220 --> 00:01:44.920
+karena kita bisa merujuk pada
+variabel array tunggal
+
+00:01:44.920 --> 00:01:47.380
+dan bukannya memeriksa banyak
+sekali variabel yang berbeda.
+
+00:01:47.380 --> 00:01:50.240
+Pertama-tama, kita mulai
+dengan membuat array.
+
+00:01:50.240 --> 00:01:55.010
+Karena tersisa tiga ukuran, kita akan
+membuat array integer dengan panjang tiga.
+
+00:01:55.010 --> 00:01:59.420
+Tiap elemen array akan merupakan
+satu ukuran sepatu yang tersedia dan
+
+00:01:59.420 --> 00:02:01.480
+ukuran sepatu berupa integer.
+
+00:02:01.480 --> 00:02:04.430
+Saya tahu sintaksisnya akan cukup
+rumit, mungkin terlalu
+
+00:02:04.430 --> 00:02:09.410
+sulit karena ada tanda kurung dan
+spasi di semua tempat yang aneh, tapi
+
+00:02:09.410 --> 00:02:13.060
+membuat variabel array ini mirip
+dengan cara membuat variabel integer
+
+00:02:13.060 --> 00:02:14.760
+dan string dulu.
+
+00:02:14.760 --> 00:02:16.940
+Di sisi kiri ini, ada tipe data.
+
+00:02:16.940 --> 00:02:19.260
+Yang dalam hal ini adalah array integer.
+
+00:02:19.260 --> 00:02:23.730
+ini adalah nama tipe data, yaitu
+kata int, disusul tanda kurung
+
+00:02:23.730 --> 00:02:24.820
+buka dan tutup.
+
+00:02:24.820 --> 00:02:27.190
+Lalu, ada nama
+untuk variabel array,
+
+00:02:27.190 --> 00:02:31.940
+yaitu ukuran sepatu yang tersedia, disusul
+tanda sama dengan, lalu kata kunci baru
+
+00:02:31.940 --> 00:02:34.240
+disusul tipe data
+array lagi.
+
+00:02:34.240 --> 00:02:36.950
+Int, dengan tanda kurung buka
+dan tutup lagi.
+
+00:02:36.950 --> 00:02:41.220
+Tapi kali ini, perhatikan bahwa kita memasukkan
+panjang array di dalam tanda kurung.
+
+00:02:41.220 --> 00:02:43.620
+Sekarang kita punya array
+dengan panjang tiga.
+
+00:02:43.620 --> 00:02:47.020
+Jika Anda ingin mengubah
+tipe data dalam array ini,
+
+00:02:47.020 --> 00:02:49.990
+misalnya memerintahkannya untuk menyimpan
+Boolean hingga menjadi array Boolean,
+
+00:02:49.990 --> 00:02:53.680
+maka Anda letakkan Boolean di sini
+dan di sini.
+
+00:02:53.680 --> 00:02:56.480
+Sekarang kita bisa memberikan nilai pada
+tiap elemen array
+
+00:02:56.480 --> 00:02:58.270
+berdasarkan posisi indeks.
+
+00:02:58.270 --> 00:03:01.960
+Untuk array ini, untuk memanggil
+ukuran sepatu yang tersedia di sini,
+
+00:03:01.960 --> 00:03:06.420
+kita memakai tanda kurung buka dan tutup,
+dengan nomor indeks di tengah.
+
+00:03:06.420 --> 00:03:10.360
+Dalam contoh pertama ini, kita
+masukkan angka
+
+00:03:10.360 --> 00:03:15.040
+5 ke slot indeks 0 array
+dengan memakai tanda sama dengan
+
+00:03:15.040 --> 00:03:18.055
+sehingga tanda sama dengan di sini
+merupakan operator penugasan.
+
+00:03:18.055 --> 00:03:22.720
+Perhatikan bahwa tidak ada spasi di antara
+nama array dan tanda kurung.
+
+00:03:22.720 --> 00:03:27.090
+Jadi ketika ketiga statemen ini telah
+dieksekusi, array tampak seperti ini.
+
+00:03:27.090 --> 00:03:31.070
+Nantinya, jika Anda ingin mengambil atau
+mengakses elemen array, gunakan nama
+
+00:03:31.070 --> 00:03:35.090
+variabel array ini disusul dengan tanda kurung
+dan indeks di tengah.
+
+00:03:35.090 --> 00:03:38.630
+Jadi, baris kode ini akan mengambil
+elemen pertama dalam array.
+
+00:03:38.630 --> 00:03:40.830
+Dan hasil dari panggilan ini adalah 5.
+
+00:03:40.830 --> 00:03:45.200
+Ingat, indices dimulai dari 0 dan
+bertambah secara berturut-turut.
+
+00:03:45.200 --> 00:03:48.650
+Jadi, indeks ini nol, satu, dan dua.
+
+00:03:48.650 --> 00:03:52.810
+Demikian juga hasil dari baris
+kode berikutnya adalah 7, dan
+
+00:03:52.810 --> 00:03:54.330
+berikutnya adalah 10.
+
+00:03:54.330 --> 00:03:56.950
+Jika Anda perlu mengambil ukuran array,
+
+00:03:56.950 --> 00:04:00.620
+tuliskan nama variabel array lalu
+panggil .length.
+
+00:04:00.620 --> 00:04:03.740
+Dalam hal ini, ekspresi ini menghasilkan
+angka tiga untuk
+
+00:04:03.740 --> 00:04:05.090
+ketiga slot dalam array.
+
+00:04:06.220 --> 00:04:07.990
+Berikut ini latihan cara
+menggunakan array.
+
+00:04:07.990 --> 00:04:12.290
+Ada banyak hal dari dunia nyata
+yang dapat direpresentasikan dalam array.
+
+00:04:12.290 --> 00:04:15.055
+Misalnya, bayangkan sebuah tim
+sepak bola dengan 11 pemain,
+
+00:04:15.055 --> 00:04:18.240
+di mana tiap anggota memiliki
+nomor seragam yang berbeda.
+
+00:04:18.240 --> 00:04:20.910
+Kita ingin menugaskan angka seragam
+sepak bola pada tiap
+
+00:04:20.910 --> 00:04:22.170
+tempat dalam array integer ini.
+
+00:04:23.200 --> 00:04:26.500
+Asumsikan bahwa kita telah memilih
+empat pemain untuk percobaan.
+
+00:04:26.500 --> 00:04:29.000
+Kita bisa menyimpan angka seragam
+keempat pemain ini di
+
+00:04:29.000 --> 00:04:30.820
+empat indices array yang berbeda.
+
+00:04:30.820 --> 00:04:32.920
+Untuk latihan ini,
+
+00:04:32.920 --> 00:04:36.070
+kita akan menempatkan angka seragam
+di spot acak dalam array.
+
+00:04:36.070 --> 00:04:39.340
+Perhatikan berbagai pilihan kode yang
+berbeda di petunjuk yang tersedia dan
+
+00:04:39.340 --> 00:04:42.460
+pilihlah pilihan yang berisi kode yang
+akan membuat array di atas.
+

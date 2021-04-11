@@ -1,0 +1,618 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.260 --> 00:00:03.280
+Baik, jadi kita telah mengerti bahwa
+sangat penting membuat aplikasi yang cerdas
+
+00:00:03.280 --> 00:00:06.040
+dalam menggunakan resources memori perangkat.
+
+00:00:06.040 --> 00:00:09.390
+Sekarang mari kita bahas satu cara untuk melakukan ini
+dengan mengimplementasikan strategi memori
+
+00:00:09.390 --> 00:00:14.755
+yang efisien untuk menampilkan data list panjang
+yang perlu dilakukan banyak aplikasi seluler.
+
+00:00:14.755 --> 00:00:17.455
+Strategi ini
+disebut View Recycling (Daur Ulang View)
+
+00:00:17.455 --> 00:00:21.675
+yang berarti menggunakan kembali view yang tidak
+lagi tampak di layar.
+
+00:00:21.675 --> 00:00:26.265
+Ngomong-ngomong, saat saya bilang "view", maksud
+saya adalah seluruh tata letak untuk satu deret.
+
+00:00:26.265 --> 00:00:29.035
+Tata letak untuk satu deret mungkin
+dibuat dengan satu view group.
+
+00:00:29.035 --> 00:00:30.445
+Jadi, mirip dengan linear layout atau
+
+00:00:30.445 --> 00:00:33.640
+layout relative yang dapat
+berisi beberapa view.
+
+00:00:33.640 --> 00:00:37.070
+Tapi, view group
+adalah view itu sendiri.
+
+00:00:37.070 --> 00:00:41.330
+Mungkin Anda mendengar kami merujuk tata letak
+satu deret tunggal sebagai view.
+
+00:00:41.330 --> 00:00:43.660
+Nah, bahasa Miwok ini sangat besar.
+
+00:00:43.660 --> 00:00:46.590
+Dan salah satu hal penting dalam membuat
+aplikasi ini adalah kita dapat membuat
+
+00:00:46.590 --> 00:00:50.600
+puluhan ribu list item dan menambahkannya
+ke sisi vertikal di tata letak Anda.
+
+00:00:50.600 --> 00:00:52.530
+Tapi, jika ada banyak
+sekali kosakata seperti itu,
+
+00:00:52.530 --> 00:00:55.380
+menggulir seluruh list
+akan menjadi sangat lambat.
+
+00:00:55.380 --> 00:00:58.090
+Dan perangkat akan macet karena
+tidak dapat memegang seluruh list
+
+00:00:58.090 --> 00:00:59.200
+list ini dalam memori.
+
+00:00:59.200 --> 00:01:02.160
+Ingat, memori
+merupakan resources yang terbatas.
+
+00:01:02.160 --> 00:01:03.250
+Sistem Android
+
+00:01:03.250 --> 00:01:06.560
+dan aplikasi lain membutuhkan memori
+agar dapat berjalan dengan baik.
+
+00:01:06.560 --> 00:01:08.580
+Ada cara yang lebih efisien
+untuk melakukannya.
+
+00:01:08.580 --> 00:01:13.210
+Dengan menggunakan ListView dan ArrayAdapter,
+kita bisa membuat view yang cukup,
+
+00:01:13.210 --> 00:01:17.770
+artinya deretan list item, berdasarkan
+apa yang perlu kita isikan ke layar.
+
+00:01:17.770 --> 00:01:19.950
+Ini berarti kita menggulir ke atas.
+
+00:01:19.950 --> 00:01:23.250
+Kita tidak perlu lagi melihat view
+di dasar layar.
+
+00:01:23.250 --> 00:01:26.440
+Mari fokus pada struktur
+ListView dan ArrayAdapter.
+
+00:01:26.440 --> 00:01:29.250
+Selanjutnya, kita dapat mendaur ulang view.
+
+00:01:29.250 --> 00:01:32.270
+Artinya, jika sebuah view tidak lagi
+tampak di layar,
+31
+kita bisa menggunakannya lagi
+dengan mengubah data.
+
+00:01:34.960 --> 00:01:39.210
+Jadi, mengubah data di dalam view
+seperti teks dalam textView,
+
+00:01:39.210 --> 00:01:41.400
+mengubah gambar dalam imageView.
+
+00:01:41.400 --> 00:01:45.350
+Dan kita tidak perlu membuang waktu dengan
+membuat seluruh view dari nol lagi.
+
+00:01:45.350 --> 00:01:47.440
+Kita membuat view ekstra ini dan
+
+00:01:47.440 --> 00:01:51.130
+meletakkannya di scrap pile yang
+dapat didaur ulang dan digunakan kembali.
+
+00:01:51.130 --> 00:01:55.150
+Istilah lain yang mungkin Anda dengar
+untuk merujuknya adalah scrap views.
+
+00:01:55.150 --> 00:01:58.760
+Jadi, kita menyimpan scrap pile, yang
+merupakan banyak sekali view yang saat ini
+
+00:01:58.760 --> 00:02:02.770
+tidak ditampilkan di layar, tapi
+tersedia untuk digunakan kembali nanti.
+
+00:02:02.770 --> 00:02:03.970
+Jadi, mendaur ulang.
+
+00:02:03.970 --> 00:02:07.480
+Untuk lebih terperinci tentang
+cara kerja daur ulang,
+
+00:02:07.480 --> 00:02:10.550
+misalnya pengguna
+menggulir layar.
+
+00:02:10.550 --> 00:02:14.140
+Dia ingin naik ke puncak list
+untuk melihat tweet baru terakhir atau
+
+00:02:14.140 --> 00:02:15.638
+teks umpan berita.
+
+00:02:15.638 --> 00:02:20.150
+ListView menyadari bahwa dia perlu
+membuat list item lebih banyak dengan cepat.
+
+00:02:20.150 --> 00:02:23.680
+Maka saat pengguna menggulir, terlihat
+seperti list item
+
+00:02:23.680 --> 00:02:25.050
+selalu ada di sana.
+
+00:02:25.050 --> 00:02:27.425
+Daripada membuat list items
+baru dari awal,
+
+00:02:27.425 --> 00:02:30.070
+dia dapat menggunakannya kembali
+dari scrap pile.
+
+00:02:30.070 --> 00:02:31.530
+Jika ada.
+
+00:02:31.530 --> 00:02:32.370
+Ringkasnya,
+
+00:02:32.370 --> 00:02:36.680
+kita membuat deret lebih berdasar permintaan
+dengan menggunakan kembali view dari scrap pile.
+
+00:02:36.680 --> 00:02:40.530
+Lalu tinggal masalah mengubah
+data di dalam view
+
+00:02:40.530 --> 00:02:43.288
+agar menunjukkan informasi
+yang benar untuk list item itu.
+
+00:02:43.288 --> 00:02:47.380
+ListView juga cukup cerdas untuk tahu
+bahwa view yang ada
+
+00:02:47.380 --> 00:02:50.520
+di dasar layar telah
+digulir keluar dari layar.
+
+00:02:50.520 --> 00:02:53.190
+Dan view ini tidak lagi
+terlihat oleh pengguna, sehingga
+
+00:02:53.190 --> 00:02:54.990
+dapat ditambahkan saja
+ke scrap pile.
+
+00:02:54.990 --> 00:02:57.580
+Saat pengguna menggulir list
+jauh lebih ke atas,
+
+00:02:57.580 --> 00:03:00.680
+kita dapat memakai deret list item
+yang digunakan di dasar layar.
+
+00:03:01.970 --> 00:03:04.970
+Di puncak layar,
+
+00:03:04.970 --> 00:03:09.750
+tujuan dari semua ini adalah untuk
+membuat sesedikit mungkin list item.
+
+00:03:09.750 --> 00:03:14.960
+Karena mahal sekali kalau mengubah
+view dari XML ke objek Java.
+
+00:03:14.960 --> 00:03:19.250
+Untuk membuktikan kepada anda bahwa view
+mendaur ulang meminimalkan penggunaan memori,
+
+00:03:19.250 --> 00:03:21.370
+saya telah siapkan dua versi aplikasi.
+
+00:03:21.370 --> 00:03:23.370
+Versi pertama adalah status aplikasi saat ini,
+
+00:03:23.370 --> 00:03:27.500
+yang menggunakan vertical linear layout
+dengan satu text view per list item.
+
+00:03:27.500 --> 00:03:31.270
+Versi kedua adalah aplikasi yang menggunakan
+ListView dan ArrayAdapter.
+
+00:03:32.310 --> 00:03:35.190
+Tool pemantau memori
+disertakan dalam Android Studio
+
+00:03:35.190 --> 00:03:38.330
+untuk membantu Anda melihat jumlah
+resources yang digunakan aplikasi Anda.
+
+00:03:38.330 --> 00:03:41.960
+Pengembang profesional menggunakan
+tool ini untuk membantu mengidentifikasi
+
+00:03:41.960 --> 00:03:45.260
+cara-cara untuk dapat meminimalkan
+penggunaan resource di aplikasi.
+
+00:03:45.260 --> 00:03:48.260
+Perbedaan dalam penggunaan memori
+antara menggunakan linear layout dan
+
+00:03:48.260 --> 00:03:50.880
+ListView ArrayAdapter
+menjadi tampak jelas
+
+00:03:50.880 --> 00:03:53.550
+saat jumlah list items bertambah.
+
+00:03:53.550 --> 00:03:55.820
+Saya akan menjalankan demo kedua contoh ini
+
+00:03:55.820 --> 00:03:59.180
+yang masing-masing menampilkan
+list berisi 1000 kata.
+
+00:03:59.180 --> 00:04:02.215
+Sekarang saya berada di Android Studio,
+sedang melihat aplikasi versi
+
+00:04:02.215 --> 00:04:03.685
+linear layout.
+
+00:04:03.685 --> 00:04:08.505
+Perhatikan NumbersActivity menampilkan
+list berisi 1000 kata dan
+
+00:04:08.505 --> 00:04:11.345
+inilah tampilan aplikasi
+saat kita menjalankan di perangkat.
+
+00:04:11.345 --> 00:04:16.115
+Mengklik NumbersActivity akan
+menampilkan list panjang kata-kata.
+
+00:04:16.115 --> 00:04:18.204
+Dengan perangkat
+terhubung ke komputer,
+
+00:04:18.204 --> 00:04:21.745
+kita dapat menjalankan pemantau monitor untuk
+memeriksa penggunaan memori oleh aplikasi ini.
+
+00:04:21.745 --> 00:04:27.340
+Tapi sebelum menjalankan, saya perlu
+masuk ke tools &amp;gt; Android dan
+
+00:04:27.340 --> 00:04:29.650
+mengaktifkan integrasi ADB.
+
+00:04:29.650 --> 00:04:32.690
+ADB adalah singkatan dari
+Android debug bridge.
+
+00:04:32.690 --> 00:04:35.360
+Artinya, koneksi antara perangkat
+dengan Android Studio.
+
+00:04:36.850 --> 00:04:40.830
+Setelah diaktifkan, kita turun ke
+pemantau Android di jendela runtime.
+
+00:04:42.000 --> 00:04:44.700
+Klik agar terbuka lalu
+saya akan tarik ke atas, lalu
+
+00:04:44.700 --> 00:04:46.169
+mengeklik tab memori ini.
+
+00:04:47.740 --> 00:04:51.960
+Layar ini memungkinkan saya untuk melihat
+penggunaan aplikasi memori dari waktu ke waktu.
+
+00:04:51.960 --> 00:04:55.336
+Saya akan lanjut dan
+menjalankan aplikasi di perangkat.
+
+00:04:55.336 --> 00:04:57.264
+Baik, jadi
+dengan perangkat yang terhubung,
+
+00:04:57.264 --> 00:04:58.796
+kita lihat pemantau memori bekerja.
+
+00:04:58.796 --> 00:05:02.895
+Kita dapat melihat jumlah alokasi memori
+yang digunakan hanya untuk menampilkan
+
+00:05:02.895 --> 00:05:03.816
+list kategori.
+
+00:05:03.816 --> 00:05:06.385
+Saya selesai dengan tampilan di layar
+di perangkat kita dan sekarang
+
+00:05:06.385 --> 00:05:08.700
+kita lihat apa yang terjadi di emulator.
+
+00:05:08.700 --> 00:05:10.805
+Saat saya meng-klik NumbersActivity,
+
+00:05:10.805 --> 00:05:15.005
+[BLANK_AUDIO]
+
+00:05:15.005 --> 00:05:17.070
+Wow, perhatikan lonjatan ini.
+
+00:05:17.070 --> 00:05:20.049
+Jadi, berubah dari sekitar dua megabita
+menjadi 14 megabita.
+
+00:05:21.100 --> 00:05:25.300
+Apakah peningkatan ini, lompatan ini, dalam
+alokasi memori dianggap baik
+
+00:05:25.300 --> 00:05:26.550
+atau tidak baik?
+
+00:05:27.730 --> 00:05:31.050
+Cara terbaik untuk memeriksanya adalah dengan
+menjalankan versi kode yang berbeda
+
+00:05:31.050 --> 00:05:32.580
+di perangkat yang sama.
+
+00:05:32.580 --> 00:05:35.340
+Kita akan menjalankannya di
+perangkat yang sama karena
+
+00:05:35.340 --> 00:05:37.480
+memiliki set resources yang terkendali.
+
+00:05:37.480 --> 00:05:41.602
+Untuk itu, saya akan melompat ke
+versi kode yang baru yang
+
+00:05:41.602 --> 00:05:46.444
+menggunakan ListView dan ArrayAdapter
+untuk menampilkan list 1000 kata yang sama.
+
+00:05:46.444 --> 00:05:50.414
+Di sini saya melihat kode versi ListView
+dan ArrayAdapter dan
+
+00:05:50.414 --> 00:05:53.485
+juga menampilkan list
+1000 kata yang sama.
+
+00:05:53.485 --> 00:05:56.204
+Mari kita lihat seperti apa
+tampilannya saat kita jalankan kode ini
+
+00:05:56.204 --> 00:05:56.739
+di perangkat kita.
+
+00:05:57.830 --> 00:05:59.920
+Nah, Layar kategori tampak sama.
+
+00:05:59.920 --> 00:06:02.380
+Tapi saat kita meng-klik
+NumbersActivity,
+
+00:06:02.380 --> 00:06:06.650
+perhatikan list 1000 kata yang muncul
+tapi dengan pembagi.
+
+00:06:06.650 --> 00:06:10.110
+Kita akan bahas bagaimana dan
+kenapa demikian nanti.
+
+00:06:10.110 --> 00:06:11.325
+Sekarang kembali ke Android Studio.
+
+00:06:11.325 --> 00:06:14.405
+Saya akan meluncurkan pemantau
+memori seperti tadi.
+
+00:06:14.405 --> 00:06:19.130
+Turun ke Pemantau Android, tarik ke atas,
+lalu masuk ke tab Memori.
+
+00:06:19.130 --> 00:06:23.540
+Perhatikan bahwa pemantau memori berjalan
+setelah perangkat saya terhubung karena
+
+00:06:23.540 --> 00:06:25.570
+ADB diaktifkan.
+
+00:06:25.570 --> 00:06:28.115
+Dan jumlah alokasi memori
+tetap konstan
+
+00:06:28.115 --> 00:06:30.535
+saat saya di layar kategori.
+
+00:06:30.535 --> 00:06:33.239
+Perhatikan apa yang terjadi saat saya
+mengklik NumbersActivity.
+
+00:06:33.239 --> 00:06:36.740
+[BLANK_AUDIO]
+
+00:06:36.740 --> 00:06:38.565
+Perhatikan lonjatan kecil ini.
+
+00:06:38.565 --> 00:06:42.880
+Angkanya berubah dari
+sekitar 12,71 menjadi sekitar 12,84.
+
+00:06:42.880 --> 00:06:47.149
+Peningkatan kurang dari 0,1 megabita
+dalam memori yang terjadi
+
+00:06:47.149 --> 00:06:51.310
+dari layar kategori ke
+NumbersActivity.
+
+00:06:51.310 --> 00:06:54.520
+Ini kali, jumlah memori yang
+digunakan untuk menampilkan list angka
+
+00:06:54.520 --> 00:06:58.840
+jauh lebih kecil daripada saat kita menggunakan
+versi kode linear layout.
+
+00:06:58.840 --> 00:07:02.900
+dan karena kita menggunakan jumlah memori yang
+lebih sedikit, versi kode yang
+
+00:07:02.900 --> 00:07:06.890
+menggunakan ListView dan ArrayAdapter ini akan
+berjalan lebih lancar di perangkat yang lebih rendah.
+
+00:07:07.900 --> 00:07:11.330
+Mari kita lihat lebih dekat
+pada pemantau memori ini.
+
+00:07:11.330 --> 00:07:13.530
+Sebenarnya dia menunjukkan dua hal.
+
+00:07:13.530 --> 00:07:16.300
+Bagian biru gelap
+adalah memori teralokasi
+
+00:07:16.300 --> 00:07:19.080
+yang merupakan memori yang digunakan
+perangkat kita pada waktu tertentu.
+
+00:07:20.430 --> 00:07:23.420
+Bagian biru muda ini
+adalah memori kosong.
+
+00:07:23.420 --> 00:07:26.040
+Itulah memori yang
+tersedia di perangkat.
+
+00:07:26.040 --> 00:07:29.210
+Walaupun sangat menggoda untuk memakai
+semua memori kosong di perangkat Anda
+
+00:07:29.210 --> 00:07:30.910
+untuk membuat aplikasi lebih keren,
+
+00:07:30.910 --> 00:07:34.390
+ingatlah bahwa aplikasi Anda bukan satu-satunya
+yang diinstal di perangkat pengguna.
+
+00:07:34.390 --> 00:07:38.450
+Sangat penting untuk menyisakan sebanyak
+mungkin resources untuk aplikasi lain.
+
+00:07:38.450 --> 00:07:41.390
+Sekarang, ada dua screenshot dari pemantau
+memori untuk
+
+00:07:41.390 --> 00:07:43.210
+kedua versi aplikasi kita.
+
+00:07:43.210 --> 00:07:48.010
+Sisi kiri adalah versi satu yang
+menggunakan linear layout.
+
+00:07:48.010 --> 00:07:51.881
+Dan sisi kanan adalah versi kedua
+yang menggunakan ListView dan
+
+00:07:51.881 --> 00:07:53.120
+ArrayAdapter.
+
+00:07:53.120 --> 00:07:56.800
+Ingatlah bahwa memori teralokasi
+ditunjukkan dengan bagian biru gelap dan
+
+00:07:56.800 --> 00:07:58.700
+memori bebas ditunjukkan
+dengan bagian biru muda.
+
+00:07:59.810 --> 00:08:04.180
+Perhatikan bahwa pada kedua kasus itu,
+lompatan memori teralokasi terjadi saat pengguna
+
+00:08:04.180 --> 00:08:07.500
+mengeklik kategori numbers untuk
+menavigasi list kata-kata angka itu.
+
+00:08:08.590 --> 00:08:11.760
+Kita perbesar ke aplikasi
+versi linear layout, dan
+
+00:08:11.760 --> 00:08:16.910
+kita lihat lompatannya terjadi dari sekitar
+11 megabita menjadi sekitar 14 megabita.
+
+00:08:16.910 --> 00:08:21.025
+Jadi penggunaan memori sekitar tiga
+megabita untuk menampilkan list
+
+00:08:21.025 --> 00:08:21.870
+1000 kata tersebut.
+
+00:08:23.070 --> 00:08:26.450
+Bandingkan dengan saat kita memakai
+ListView dan ArrayAdapter.
+
+00:08:26.450 --> 00:08:31.400
+Hanya menggunakan kurang dari 0,5 megabita
+untuk menampilkan seluruh list 1000 kata.
+
+00:08:32.520 --> 00:08:34.174
+Setelah melihat kedua contoh ini,
+
+00:08:34.174 --> 00:08:36.799
+saya ingin Anda memeriksa tautan
+di bawah untuk belajar lebih lanjut
+
+00:08:36.799 --> 00:08:38.659
+tentang menggunakan tool pemantau memori
+
+00:08:38.659 --> 00:08:40.900
+dan cara-cara lain untuk meningkatkan
+kinerja aplikasi Anda.
+

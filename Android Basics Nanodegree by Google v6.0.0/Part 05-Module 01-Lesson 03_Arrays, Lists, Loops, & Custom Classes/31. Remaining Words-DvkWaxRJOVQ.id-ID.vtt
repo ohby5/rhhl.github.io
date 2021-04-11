@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.420 --> 00:00:02.610
+Untuk membuat kata-kata muncul
+pada aktifitas lain,
+
+00:00:02.610 --> 00:00:04.780
+kita dapat mengikuti petunjuk
+pertama, yaitu menyalin dan
+
+00:00:04.780 --> 00:00:08.310
+menempelkan kode yang telah ada
+di NumbersActivity.
+
+00:00:08.310 --> 00:00:10.570
+Mari kita salin kode ini
+dari NumbersActivity,
+
+00:00:12.590 --> 00:00:14.380
+Lalu pertama-tama kita akan menempelkannya
+di ColorsActivity.
+
+00:00:16.410 --> 00:00:20.806
+Sebelum saya menempelkan kode-kode ini,
+ColorsActivity telah menggunakan aktifitas
+
+00:00:20.806 --> 00:00:23.446
+dari dokumen tata letak colors.xml.
+
+00:00:23.446 --> 00:00:25.250
+sebagai contentView, maka
+
+00:00:25.250 --> 00:00:28.760
+kita dapat mengubah colorsActivity
+agar merujuk ke dokumen tata letak ini lagi.
+
+00:00:29.760 --> 00:00:33.460
+Tapi, kita juga perlu mengubah dokumen tata letak
+agar memiliki list dari
+
+00:00:33.460 --> 00:00:36.700
+ListView.xml bukan malah
+tata letak yang relative.
+
+00:00:36.700 --> 00:00:39.000
+Di kuis, kami memberi Anda petunjuk nomor dua,
+
+00:00:39.000 --> 00:00:42.200
+yaitu bahwa semua aktifitas dapat
+menggunakan dokumen dengan tata letak yang sama,
+
+00:00:42.200 --> 00:00:47.037
+yang memiliki elemen ListItem di dalamnya
+karena activity_numbers.XML telah
+
+00:00:47.037 --> 00:00:49.420
+memiliki tata letak yang benar.
+
+00:00:49.420 --> 00:00:51.300
+Mari lanjut dan gunakan hal itu.
+
+00:00:51.300 --> 00:00:53.690
+Hapus atribut tools:context ini,
+
+00:00:53.690 --> 00:00:57.140
+yang mengatakan di dokumen mana
+tata letak harus digunakan.
+
+00:00:57.140 --> 00:01:00.940
+Karena sekarang tata letak ini akan digunakan
+untuk empat aktifitas yang berbeda.
+
+00:01:00.940 --> 00:01:04.620
+Berikutnya, kita namai ulang dokumen ini sehingga
+hal ini tidak bernormor secara spesifik.
+
+00:01:04.620 --> 00:01:09.790
+Untuk itu, kita klik kanan,
+menuju ke Refactor, lalu Rename.
+
+00:01:11.190 --> 00:01:12.850
+Jadi bagaimana kalau seperti ini:
+
+00:01:12.850 --> 00:01:15.370
+Word, garis bawah, list, dot, XML.
+
+00:01:16.370 --> 00:01:19.560
+Refactoring ini akan memperbarui
+semua lokasi dalam kode
+
+00:01:19.560 --> 00:01:21.360
+yang merujuk pada nama yang lama,
+
+00:01:21.360 --> 00:01:23.680
+dan memperbaruinya dengan nama yang baru.
+
+00:01:23.680 --> 00:01:25.280
+Kembali ke NumbersActivity.
+
+00:01:25.280 --> 00:01:29.600
+Kita merujuk pada aktifitas garus bawah tata letak 
+numbers tetapi 
+
+00:01:29.600 --> 00:01:35.900
+sekarang ini merujuk pada file words_List.XML
+yang merupakan nama baru untuk file tersebut.
+
+00:01:35.900 --> 00:01:40.220
+Lalu kita pindah ke colorsActivity,
+kita juga dapat mengatur contentView
+
+00:01:40.220 --> 00:01:44.670
+menjadi file word_List.XML
+yang berisi ListItemView.
+
+00:01:44.670 --> 00:01:47.770
+Jadi, di dalam colorsActivity kita dapat
+mengatur contentView
+
+00:01:47.770 --> 00:01:52.730
+agar menjadi file word_List.XML,
+yang berisi elemen ListView.
+
+00:01:52.730 --> 00:01:55.960
+Baik, mari pastikan semua kode Anda
+dalam colorsActivity merujuk
+
+00:01:55.960 --> 00:01:57.630
+kategori warna
+yang benar,
+
+00:01:57.630 --> 00:02:00.680
+dan tidak ada yang tersisa untuk
+menyimpan angka-angka pertama.
+
+00:02:00.680 --> 00:02:04.611
+Yang paling jelas di sini adalah
+Inggris dan terjemahan Miwok.
+
+00:02:04.611 --> 00:02:07.110
+Mari kita memperbaruinya agar
+mencerminkan kata-kata warna kata.
+
+00:02:08.840 --> 00:02:11.730
+Kode lainnya di metode
+onCreate tampak sudah benar.
+
+00:02:11.730 --> 00:02:14.930
+Maka kita membuat WordAdapter dari
+list warna kata.
+
+00:02:14.930 --> 00:02:19.850
+Lalu kita mencari ListView dengan
+viewIDList di tata letak words_list.xml,
+
+00:02:19.850 --> 00:02:23.930
+dan terakhir kita mengatur adapter
+ke ListView ini.
+
+00:02:23.930 --> 00:02:25.760
+Sekarang tidak ada kesalahan dalam kode kita.
+
+00:02:25.760 --> 00:02:27.842
+Mari jalankan aplikasi di perangkat.
+
+00:02:27.842 --> 00:02:31.170
+Saat aplikasi diluncurkan dan
+saya mengklik kategori warna,
+
+00:02:31.170 --> 00:02:34.200
+kita lihat list kata-kata warna.
+Bagus, sudah berfungsi.
+
+00:02:34.200 --> 00:02:37.140
+Warna mihwa di atas dan
+kata dalam bahasa Inggris di bawahnya.
+
+00:02:38.190 --> 00:02:40.920
+Kita akan mengulangi hal ini
+untuk FamilyActivity.
+
+00:02:40.920 --> 00:02:43.505
+Saya salin file dari
+ColorsActivity lalu
+
+00:02:43.505 --> 00:02:47.245
+memperbarui list kata-kata keluarga
+dari dokumen kamus yang disediakan.
+
+00:02:47.245 --> 00:02:50.495
+Lalu saya jalankan aplikasi di perangkat,
+dan hasilnya seperti ini.
+
+00:02:50.495 --> 00:02:51.735
+Luar biasa.
+
+00:02:51.735 --> 00:02:54.275
+Semua kategori menampilkan dengan
+benar terjemahan Miwok dan
+
+00:02:54.275 --> 00:02:55.545
+Inggris untuk tiap kata.
+
+00:02:55.545 --> 00:02:58.595
+Ada satu langkah pembersihan terakhir
+yang bisa kita lakukan yang
+
+00:02:58.595 --> 00:03:00.455
+membantu membenahi kode kita.
+
+00:03:00.455 --> 00:03:02.695
+Karena kita hanya menggunakan
+satu file tata letak,
+
+00:03:02.695 --> 00:03:05.320
+yaitu word_list.xml,
+
+00:03:05.320 --> 00:03:08.990
+untuk keempat activity, kita dapat
+menghapus dokumen tata letak yang tak terpakai.
+
+00:03:08.990 --> 00:03:13.050
+Saya akan lanjut dan menghapus file
+tata letak untuk colors, family, dan
+
+00:03:13.050 --> 00:03:14.070
+phrases.
+
+00:03:14.070 --> 00:03:16.640
+Tiap kali menghapus kode, Anda harus menguji
+aplikasi sekali lagi untuk memastikan
+
+00:03:16.640 --> 00:03:20.190
+aplikasi masih berfungsi dan Anda tidak
+menghapus apa pun yang akan digunakan.
+
+00:03:20.190 --> 00:03:24.060
+Setelah menjalankan aplikasi di perangkat,
+tampaknya aplikasi tetap bekerja.
+
+00:03:24.060 --> 00:03:26.410
+Silakan melangkah mundur
+dan ucapkan selamat untuk Anda sendiri.
+
+00:03:26.410 --> 00:03:28.870
+Anda baru saja menyelesaikan tugas
+pengodean di pelajaran dua.
+
+00:03:28.870 --> 00:03:30.034
+Ini adalah tonggak penting.
+

@@ -1,0 +1,506 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.634 --> 00:00:05.000
+Na tabela comparativa que mostramos,
+dissemos que ArrayList é uma classe
+
+00:00:05.033 --> 00:00:08.567
+e você precisa acionar métodos
+para acessar e modificar elementos da lista.
+
+00:00:08.601 --> 00:00:11.467
+Agora vamos discutir a classe ArrayList
+mais detalhadamente
+
+00:00:11.501 --> 00:00:12.801
+e como interagir com ela
+no código.
+
+00:00:13.934 --> 00:00:17.634
+Começamos abrindo a página
+da documentação para a ArrayList,
+
+00:00:17.667 --> 00:00:23.067
+e no topo ela diz "a classe pública
+ArrayList estende AbstractList".
+
+00:00:23.100 --> 00:00:26.334
+Essas palavras-chave de extensão
+significam que herdamos comportamento
+
+00:00:26.367 --> 00:00:28.734
+da classe AbstractList
+gratuitamente.
+
+00:00:28.767 --> 00:00:31.601
+Então vamos clicar
+em "abrir classe AbstractList".
+
+00:00:31.634 --> 00:00:36.000
+Esta página diz que a classe
+AbstractList é uma classe abstrata.
+
+00:00:36.033 --> 00:00:39.601
+Lembre-se, uma classe abstrata
+é implementada parcialmente, ou seja,
+
+00:00:39.634 --> 00:00:43.334
+ela tem alguns métodos implementados
+e alguns deixados em branco.
+
+00:00:43.367 --> 00:00:46.767
+Mais à frente na definição da classe,
+vemos que ela estende outra classe.
+
+00:00:46.801 --> 00:00:49.434
+Aqui diz,
+"estende AbstractCollection".
+
+00:00:49.467 --> 00:00:51.334
+Mas não vamos entrar
+nesses detalhes agora.
+
+00:00:51.367 --> 00:00:55.067
+O que quero mostrar é que AbstractList
+implementa a interface da lista.
+
+00:00:55.100 --> 00:00:58.968
+Vou clicar no link
+para abrir a interface da lista.
+
+00:00:59.000 --> 00:01:02.801
+Através dessa longa corrente
+de sucessões, quero que saiba
+
+00:01:02.834 --> 00:01:07.834
+que a ArrayList inicial na verdade
+implementa a interface da lista.
+
+00:01:07.868 --> 00:01:13.167
+A interface da lista foi definida em Java
+como um comportamento geral sobre listas.
+
+00:01:13.200 --> 00:01:16.667
+Lendo a descrição, ela diz que uma lista
+é uma coleção de elementos
+
+00:01:16.701 --> 00:01:18.100
+que mantém
+uma ordem entre eles.
+
+00:01:19.167 --> 00:01:20.701
+Cada elemento
+tem um índice,
+
+00:01:20.734 --> 00:01:22.734
+então você pode acessar o elemento
+baseado na posição do índice.
+
+00:01:24.100 --> 00:01:27.767
+Na classe passada, falamos sobre interfaces
+e como elas podem ser usadas
+
+00:01:27.801 --> 00:01:34.100
+para achar um contrato com métodos esperados,
+entradas, valores de retorno e nomes de métodos.
+
+00:01:34.133 --> 00:01:38.400
+Mas a interface não especifica
+como cada método deve ser implementado.
+
+00:01:38.434 --> 00:01:40.734
+Então a interface List
+tem métodos abstratos,
+
+00:01:40.767 --> 00:01:46.501
+como "adicionar" e "obter" para acessar
+elementos em índices específicos.
+
+00:01:46.534 --> 00:01:50.534
+Ela também tem o método "remover"
+e muitos outros que você vê aqui.
+
+00:01:51.701 --> 00:01:54.634
+Já que a classe ArrayList implementa
+esta interface de lista,
+
+00:01:54.667 --> 00:01:57.801
+ela precisa fornecer uma implementação
+para cada um desses métodos.
+
+00:01:57.834 --> 00:01:59.334
+Como verá daqui a pouco,
+
+00:01:59.367 --> 00:02:03.400
+você pode acionar todos
+esses métodos em um objeto da ArrayList.
+
+00:02:03.434 --> 00:02:06.267
+A razão por que é útil
+para uma lista ser uma interface
+
+00:02:06.300 --> 00:02:09.100
+é porque há muitos outros
+tipos de lista em Java.
+
+00:02:09.133 --> 00:02:11.367
+Não vamos cobrir
+todas neste curso,
+
+00:02:11.400 --> 00:02:18.033
+mas para nomear algumas,
+há listas ligadas, stacks, vetores e outras.
+
+00:02:18.067 --> 00:02:19.634
+Por isso há um propósito
+
+00:02:19.667 --> 00:02:23.000
+em ter um contrato predefinido
+na interface da lista.
+
+00:02:23.033 --> 00:02:26.167
+Para mapear o que acabamos de falar,
+aqui vai uma versão atualizada
+
+00:02:26.200 --> 00:02:32.167
+do diagrama com a classe ArrayList,
+classe abstrata e interface da lista.
+
+00:02:32.200 --> 00:02:34.300
+Então List é uma interface
+
+00:02:34.334 --> 00:02:37.734
+e não há implementação
+de nenhum de seus métodos.
+
+00:02:37.767 --> 00:02:43.467
+AbstractList é uma classe abstrata e tem
+alguns métodos parcialmente implementados.
+
+00:02:43.501 --> 00:02:46.801
+ArrayList
+é uma classe concreta
+
+00:02:46.834 --> 00:02:51.067
+e tem declaração e implementação
+para todos os seus métodos.
+
+00:02:51.100 --> 00:02:55.100
+Então podemos criar uma instância de objeto
+da ArrayList e usá-la em nosso app.
+
+00:02:55.133 --> 00:02:58.033
+Porém, não podemos criar instâncias
+da classe abstrata
+
+00:02:58.067 --> 00:03:01.067
+ou da interface, porque essas
+são classes completas.
+
+00:03:02.167 --> 00:03:05.367
+Quando usamos algo que implementa
+a interface de lista,
+
+00:03:05.400 --> 00:03:09.000
+como a classe ArrayList, notará
+algo sobre as assinaturas do método.
+
+00:03:09.033 --> 00:03:11.601
+Vamos rolar a página
+e dar uma olhada.
+
+00:03:11.634 --> 00:03:15.167
+Por exemplo, no método adicionar,
+verá uma ação para algo chamado E,
+
+00:03:15.200 --> 00:03:20.133
+pois método adicionar da ArrayList diz
+que a entrada deve ser um objeto tipo E.
+
+00:03:20.167 --> 00:03:23.067
+E se olhar o método obter,
+
+00:03:23.100 --> 00:03:27.167
+verá que ele acessa um elemento da lista
+em uma dada posição do índice,
+
+00:03:27.200 --> 00:03:30.467
+e retorna o valor
+de um objeto tipo E.
+
+00:03:30.501 --> 00:03:32.801
+Então, ao que E se refere?
+
+00:03:32.834 --> 00:03:36.467
+Bom, isso nos leva ao tópico
+de generics e tipos genéricos em Java.
+
+00:03:37.634 --> 00:03:39.567
+O E é apenas
+um alocador de espaço.
+
+00:03:39.601 --> 00:03:42.634
+Oficialmente, E é chamado
+de um tipo de parâmetro,
+
+00:03:42.667 --> 00:03:46.067
+o que significa que quando criamos
+uma instância da ArrayList
+
+00:03:46.100 --> 00:03:50.501
+e acionamos esses métodos, digamos
+adicionar ou obter nesse objeto,
+
+00:03:50.534 --> 00:03:53.868
+podemos substituir o E
+por um tipo particular de dados.
+
+00:03:53.901 --> 00:03:56.000
+Então isso daria
+aos desenvolvedores mais informações
+
+00:03:56.033 --> 00:03:59.033
+do que se apenas usássemos
+uma interrogação no lugar do E.
+
+00:03:59.067 --> 00:04:02.167
+Neste caso, E é a abreviação
+de "elemento"
+
+00:04:02.200 --> 00:04:04.000
+e de onde vem
+a palavra "elemento"?
+
+00:04:04.033 --> 00:04:06.934
+Bom, partes individuais da coleção
+são chamadas elementos.
+
+00:04:06.968 --> 00:04:09.534
+Já que esses métodos
+como obter e adicionar
+
+00:04:09.567 --> 00:04:12.300
+lidam com elementos
+em uma coleção de dados,
+
+00:04:12.334 --> 00:04:13.968
+esta é uma substituição
+apropriada.
+
+00:04:14.000 --> 00:04:18.033
+Este E pode ser substituído por qualquer tipo
+de dados não primitivo que você quiser.
+
+00:04:18.067 --> 00:04:23.400
+Então em vez de criar uma ArrayList,
+você pode criar um ArrayList,
+
+00:04:23.434 --> 00:04:25.734
+E entre sinais de maior e menor
+de um certo tipo.
+
+00:04:25.767 --> 00:04:29.400
+Por exemplo, você não poderia criar
+uma ArrayList de string,
+
+00:04:29.434 --> 00:04:32.501
+o que significa que sempre
+que você vir E na documentação,
+
+00:04:32.534 --> 00:04:36.033
+em seu caso ele será substituído
+pelo tipo de dados de objeto String.
+
+00:04:36.067 --> 00:04:39.033
+Então se acionar o método add
+em uma ArrayList string,
+
+00:04:39.067 --> 00:04:41.133
+ele espera que a string
+seja uma entrada.
+
+00:04:41.167 --> 00:04:43.968
+Se acionar o método get
+em uma ArrayList de string,
+
+00:04:44.000 --> 00:04:45.968
+ele vai retornar
+um tipo de dados string.
+
+00:04:46.000 --> 00:04:49.601
+Como resultado, a classe ArrayList
+é uma classe genérica,
+
+00:04:49.634 --> 00:04:53.400
+onde os locais que têm E especificado
+podem ser trocados
+
+00:04:53.434 --> 00:04:57.801
+por um tipo de dados de objeto,
+quando você cria uma instância da ArrayList.
+
+00:04:57.834 --> 00:05:01.167
+Há outros tipos comuns de parâmetros
+como T, N e V.
+
+00:05:01.200 --> 00:05:03.167
+Para ver mais,
+olhe o texto abaixo.
+
+00:05:03.200 --> 00:05:06.934
+Certo, sei que cobrimos muita teoria
+sobre como e por que
+
+00:05:06.968 --> 00:05:08.734
+a ArrayList existe.
+
+00:05:08.767 --> 00:05:10.901
+Agora vem a informação
+prática relevante.
+
+00:05:11.934 --> 00:05:14.801
+Fizemos uma lista condensada
+de métodos de ação ArrayList
+
+00:05:14.834 --> 00:05:17.000
+que podem ser úteis,
+
+00:05:17.033 --> 00:05:21.133
+e mostramos um exemplo onde usamos
+string como um tipo parametrizado.
+
+00:05:21.167 --> 00:05:23.334
+Então onde vir uma string
+neste exemplo,
+
+00:05:23.367 --> 00:05:26.634
+você pode potencialmente substituí-la
+com um tipo de objeto diferente.
+
+00:05:26.667 --> 00:05:29.601
+Note que a diferença em comparação
+com criar um array é que quando você
+
+00:05:29.634 --> 00:05:33.300
+cria uma nova ArrayList, não precisa
+especificar o link para a lista.
+
+00:05:33.334 --> 00:05:36.801
+Para adicionar e remover elementos
+da ArrayList, usamos os métodos add
+
+00:05:36.834 --> 00:05:38.367
+e remove respectivamente.
+
+00:05:39.434 --> 00:05:43.133
+Agora note a diferença de como recuperar
+informação de uma ArrayList.
+
+00:05:43.167 --> 00:05:46.734
+A ArrayList não usa a notação
+em colchete que usamos nos arrays,
+
+00:05:46.767 --> 00:05:51.000
+em vez disso usa o método get e o índice
+que em que estamos interessados.
+
+00:05:51.033 --> 00:05:54.067
+Lembre-se que para arrays usamos
+array.length para recuperar informação
+
+00:05:54.100 --> 00:05:55.968
+sobre o atributo
+do comprimento do array.
+
+00:05:56.000 --> 00:05:59.467
+Porém, para objetos da ArrayList
+precisamos usar o método size.
+
+00:05:59.501 --> 00:06:03.901
+Note que não há parâmetros de entrada,
+então ele só usa parênteses vazios,
+
+00:06:03.934 --> 00:06:07.000
+o valor de retorno para isto será
+o número de elementos na lista.
+
+00:06:07.033 --> 00:06:11.267
+Para o próximo exercício, quero que leia
+cada linha de comentário
+
+00:06:11.300 --> 00:06:14.434
+e escreva o código que seria
+usado para criar a ArrayList
+
+00:06:14.467 --> 00:06:16.501
+ou modificar a ArrayList
+de acordo com o comentário.
+
+00:06:17.634 --> 00:06:20.567
+Este exercício vai ajudá-lo a entender
+como trabalhar melhor
+
+00:06:20.601 --> 00:06:21.767
+com uma ArrayList.
+
+00:06:21.801 --> 00:06:24.567
+Suponha que estas linhas de código
+estão em um app de restaurante
+
+00:06:24.601 --> 00:06:27.601
+onde cada usuário pode mandar uma lista
+de restaurantes que querem experimentar.
+
+00:06:27.634 --> 00:06:30.067
+Escreva o código correto
+de declarações sob cada comentário.
+
+00:06:31.267 --> 00:06:34.834
+O 1º comentário pede para criar um novo objeto
+da ArrayList chamado restaurantsToTry.
+
+00:06:34.868 --> 00:06:38.200
+Ele conterá
+uma lista de strings.
+
+00:06:38.234 --> 00:06:41.234
+O próximo comentário é para adicionar
+um restaurante chamado Morning Cafe
+
+00:06:41.267 --> 00:06:42.734
+à ArrayList
+que você criou acima.
+
+00:06:43.968 --> 00:06:46.634
+O 3º comentário é para adicionar
+outro restaurante
+
+00:06:46.667 --> 00:06:48.801
+chamado Barbecue Time
+à ArrayList.
+
+00:06:48.834 --> 00:06:52.367
+4º comentário: o usuário experimentou
+o restaurante Morning Cafe,
+
+00:06:52.400 --> 00:06:55.534
+mas queremos que remova
+esse restaurante da ArrayList.
+
+00:06:55.567 --> 00:06:58.968
+E o 5º comentário diz "obtenha
+o comprimento da ArrayList
+
+00:06:59.000 --> 00:07:02.634
+e armazene como uma variável integer
+chamada numbersOfRestaurants.
+
+00:07:02.667 --> 00:07:03.968
+Certo, agora tente
+resolver essas questões.
+
+00:07:04.000 --> 00:07:05.534
+Te vejo na sala de aula.
+

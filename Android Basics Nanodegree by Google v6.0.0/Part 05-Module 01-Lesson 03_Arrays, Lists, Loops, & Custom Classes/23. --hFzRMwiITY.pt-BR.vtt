@@ -1,0 +1,243 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.567
+Bem-vindos, e parabéns
+pelos dois primeiros testes.
+
+00:00:03.601 --> 00:00:06.901
+Para responder a 3ª pergunta,
+o ViewGroup que usamos
+
+00:00:06.934 --> 00:00:08.534
+foi o layout linear.
+
+00:00:08.567 --> 00:00:12.634
+Vamos ver o código
+de como executamos os passos 1 e 2.
+
+00:00:12.667 --> 00:00:15.634
+Estamos no arquivo de layout
+de itens de lista.
+
+00:00:15.667 --> 00:00:17.234
+Para ficar como o nosso,
+
+00:00:17.267 --> 00:00:21.300
+acresceremos um ID de exibição
+do TextView Miwok,
+
+00:00:21.334 --> 00:00:26.534
+para que ele tenha
+um ID default_text_view.
+
+00:00:28.133 --> 00:00:30.267
+Para testar, um bom truque,
+
+00:00:30.300 --> 00:00:33.634
+usando algo chamado
+Namespace tools.
+
+00:00:33.667 --> 00:00:38.467
+Um Namespace possibilita que elementos
+não tenham nomes conflitantes.
+
+00:00:38.501 --> 00:00:40.968
+É como ter um sobrenome
+muito singular.
+
+00:00:41.000 --> 00:00:45.501
+Ninguém mais terá esse seu nome,
+mesmo que tenham o mesmo 1º nome.
+
+00:00:45.534 --> 00:00:49.667
+XMLNS representa
+o Namespace XML.
+
+00:00:49.701 --> 00:00:53.634
+Estamos usando outro Namespace
+no nosso código o tempo todo.
+
+00:00:53.667 --> 00:00:56.234
+XMLNS: Android.
+
+00:00:56.267 --> 00:00:59.033
+Os atributos que já usamos
+no Android,
+
+00:00:59.067 --> 00:01:02.868
+como android:layout_width,
+ou android:layout_height,
+
+00:01:02.901 --> 00:01:05.200
+começam com android:
+
+00:01:05.234 --> 00:01:07.934
+e já são parte
+do Namespace android.
+
+00:01:07.968 --> 00:01:11.467
+Acrescentarei um Namespace aqui,
+chamado tools.
+
+00:01:11.501 --> 00:01:15.767
+Esta linha mapeia os prefixos
+das ferramentas a este Namespace.
+
+00:01:15.801 --> 00:01:18.067
+schemas.android.com/tools.
+
+00:01:18.100 --> 00:01:22.634
+Então cada elemento ou atributo
+cujo nome começa com o prefixo tools
+
+00:01:22.667 --> 00:01:24.734
+é parte do Namespace tools.
+
+00:01:24.767 --> 00:01:28.968
+Para cada um desses dois TextViews
+acrescentarei dois atributos
+
+00:01:29.000 --> 00:01:31.667
+usando o Namespace tools.
+
+00:01:31.701 --> 00:01:35.767
+Podem se perguntar onde descobri
+este atributo text
+
+00:01:35.801 --> 00:01:37.734
+do Namespace tools.
+
+00:01:37.767 --> 00:01:41.234
+Ele foi criado pela equipe
+de ferramentas Android
+
+00:01:41.267 --> 00:01:45.300
+e tem vários atributos que podem
+ajudá-los a escrever layouts.
+
+00:01:45.334 --> 00:01:48.868
+Vemos onde foram criados
+na sua documentação online.
+
+00:01:48.901 --> 00:01:53.200
+Pesquisei Namespace
+tools Android.
+
+00:01:53.234 --> 00:01:56.634
+Nesta página, vemos
+vários atributos diferentes.
+
+00:01:56.667 --> 00:01:57.868
+Indo para o final,
+
+00:01:57.901 --> 00:02:01.200
+vemos uma seção sobre
+atributos de desenvolvimento.
+
+00:02:01.234 --> 00:02:04.334
+Eles nos ajudam
+ao desenvolvermos o nosso código,
+
+00:02:04.367 --> 00:02:08.100
+mas não aparecem na hora de rodar.
+Vejamos mais deles aqui.
+
+00:02:08.133 --> 00:02:12.534
+Por exemplo, acrescentando o atributo
+tools:text a um TextView,
+
+00:02:12.567 --> 00:02:15.033
+na prévia do design
+no Android Studio
+
+00:02:15.067 --> 00:02:16.434
+aparecerá este texto,
+
+00:02:16.467 --> 00:02:19.934
+que não aparece quando
+o app está rodando, o que é bom.
+
+00:02:19.968 --> 00:02:24.334
+Não queremos que todos os TextViews
+tenham este texto específico.
+
+00:02:24.367 --> 00:02:28.100
+Pensem nisso como um texto marcador
+que ajuda programadores
+
+00:02:28.133 --> 00:02:31.934
+a garantir que está tudo bem
+ao testarmos no Android Studio.
+
+00:02:31.968 --> 00:02:33.434
+Voltemos ao código.
+
+00:02:33.467 --> 00:02:37.000
+Notem que acrescentei
+dois atributos text,
+
+00:02:37.033 --> 00:02:40.000
+um para "lutti"
+e um para "one".
+
+00:02:40.033 --> 00:02:43.701
+É importante
+que não apareçam ao rodar,
+
+00:02:43.734 --> 00:02:48.100
+pois a lista de itens será criada
+dinamicamente, quando necessária.
+
+00:02:48.133 --> 00:02:51.367
+Poremos o texto em inglês e em Miwok
+no código Java
+
+00:02:51.400 --> 00:02:55.968
+em vez de fixar um valor no código
+diretamente no arquivo de layout XML.
+
+00:02:56.000 --> 00:02:58.334
+Como o texto
+vai mudar dinamicamente,
+
+00:02:58.367 --> 00:03:01.968
+não precisamos
+do android:text.
+
+00:03:02.000 --> 00:03:06.901
+Só para ver como está,
+mas não na hora de rodar.
+
+00:03:07.567 --> 00:03:11.801
+Vou voltar ao painel de design,
+e da prévia do design
+
+00:03:11.834 --> 00:03:15.300
+notarão que o texto
+está aqui à esquerda, acima.
+
+00:03:15.334 --> 00:03:17.200
+Precisamos dar espaço.
+
+00:03:17.234 --> 00:03:21.067
+Voltemos ao painel de texto
+para acrescentar espaço aqui.
+
+00:03:21.100 --> 00:03:23.968
+Vejamos como está
+no painel de design agora.
+
+00:03:24.000 --> 00:03:27.467
+O layout da lista de itens
+fica assim após as mudanças.
+
+00:03:27.501 --> 00:03:30.467
+Embora não seja
+a aparência final no nosso app,
+
+00:03:30.501 --> 00:03:33.634
+serve para continuarmos
+trabalhando na lista de números.
+

@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.400 --> 00:00:01.550
+Salom, Jess.
+Ularga ma’lumotlar tuzilmalari bilan yordam berib 
+
+00:00:01.550 --> 00:00:03.060
+juda yaxshi ish qilibsan.
+
+00:00:03.060 --> 00:00:06.100
+Ha, hozir biz aynan bir so‘zning Inglizcha va
+Miwok tarjimasi uchun word class ini 
+
+00:00:06.100 --> 00:00:09.070
+yaratmoqchi edik.
+
+00:00:09.070 --> 00:00:10.710
+Va bu o‘tgan kurslarimizdagi kabi
+
+00:00:10.710 --> 00:00:12.900
+"uy loyihasi"ga qiyoslasak ham bo‘ladi.
+
+00:00:12.900 --> 00:00:14.574
+ Ha, xuddi shunday.
+ Va yana o‘sha bir xil asosiy rejadan boshlab,
+
+00:00:14.574 --> 00:00:16.452
+juda ham ko‘p va har xil 
+"so‘z" ob’ektlarini yaratishimiz mumkin. 
+
+00:00:16.452 --> 00:00:17.160
+To‘gri.
+
+00:00:17.160 --> 00:00:18.518
+Xuddi mana bu kabi.
+
+00:00:18.518 --> 00:00:22.310
+ Bu "so‘z" object bir raqamini 
+ anglatadi.
+
+00:00:22.310 --> 00:00:24.890
+ Va "so‘z" ob’ektining ichida bizda
+ ikkita satr o‘zgaruvchi mavjud.
+
+00:00:24.890 --> 00:00:29.363
+Miwok tarjimasi uchun satr o‘zgaruvchi lutti bo‘lsa, 
+Inglizcha tarjimasi uchun satr o‘zgaruvchi
+
+00:00:29.363 --> 00:00:31.580
+one bo‘ladi.
+
+00:00:31.580 --> 00:00:33.855
+ Va bu "so‘z" ob’ekti "so‘z" klassidan
+ yaratilgani uchun,
+
+00:00:33.855 --> 00:00:36.020
+ uning mana bu ikkita uslublari bo‘ladi.
+
+00:00:36.020 --> 00:00:37.525
+ Mana bu getMiwokTranslation method 
+
+00:00:37.525 --> 00:00:38.836
+ bu satrni tarjima qiladi.
+
+00:00:38.836 --> 00:00:40.333
+ Va getDefaultTranslation method 
+
+00:00:40.333 --> 00:00:41.644
+ mana bu satrni tarjima qiladi.
+
+00:00:41.644 --> 00:00:42.888
+ Ajoyib.
+
+00:00:42.888 --> 00:00:44.490
+ Hammasi yaxshi.
+
+00:00:44.490 --> 00:00:48.380
+ Demak, yana o‘sha asosiy rejadan biz
+ tobora ko‘proq so‘zlar 
+
+00:00:48.380 --> 00:00:49.850
+ yaratishimiz mumkin.
+
+00:00:49.850 --> 00:00:54.760
+ "Ikki" va "Uch" so‘zlari uchun
+
+00:00:54.760 --> 00:00:57.420
+ Voy Hudoyim, bu yerda ob’ektlar qancha-ku.
+
+00:00:57.420 --> 00:00:58.699
+ Demak, keyingi klassda
+
+00:00:58.699 --> 00:01:01.138
+ mana shu klassning izohini qanday
+ yozish kerak ekanligini ko‘rib chiqamiz.
+
+00:01:01.138 --> 00:01:02.760
+ Shubhasiz.
+
+00:01:02.760 --> 00:01:06.040
+ Yoki agar sizga yordam kerak bo‘lib qolsa,
+ siz avvalgi kursda biz sizga ko‘rsatgan 
+
+00:01:06.040 --> 00:01:07.825
+ TextView class ining soddalashtirilgan 
+ versiyasiga murojaat qilishingiz mumkin.
+
+00:01:07.825 --> 00:01:12.030
+ Shunday qilib, shuni esda tutingki, biz 
+ word class uchun constructor ishlatishimiz kerak.
+
+00:01:12.030 --> 00:01:15.730
+ Va constructor ni yaratish usuli uslub yaratish usuliga
+ o‘xshaydi, lekin uslubning ismi 
+
+00:01:15.730 --> 00:01:20.710
+ klassning ismi bilan bir xil bo‘lishi
+ kerak, harflarning katta yoki kichikligi va hammasi.
+
+00:01:20.710 --> 00:01:25.570
+ Bu yerda, bizda text so‘zi uchun katta "T" harfi
+ va view uchun esa katta "V" harfi 
+
+00:01:25.570 --> 00:01:30.490
+ishlatiladi, bu yerda ikki so‘z orasida hech qanday joy tashlanmaydi
+shu sababli bu klassning ismi TextView bilan bir xil bo‘lishi kerak.
+
+00:01:30.490 --> 00:01:33.370
+Yana shu narsaga e’tibor beringki 
+constructor da return type yo‘q.
+
+00:01:33.370 --> 00:01:36.929
+TextView klassidagi konstruktorga 
+yanada yaqinroq nazar solar ekanmiz,
+
+00:01:36.929 --> 00:01:38.902
+shuni ko‘rishimiz mumkinki, bu yerda 
+public kalit so‘zi bor.
+
+00:01:38.902 --> 00:01:42.291
+Va bu public kalit so‘zi shuni anglatadiki,
+bundan tashqaridagi klass bu constructor ga 
+
+00:01:42.291 --> 00:01:43.730
+murojaat qila oladi.
+
+00:01:43.730 --> 00:01:47.230
+Masalan, tashqaridagi
+MainActivity kabi rang
+
+00:01:47.230 --> 00:01:50.660
+bu constructor ni yangi kalit 
+so‘zini ishlatish orqali chaqirishi mumkin va
+
+00:01:50.660 --> 00:01:55.440
+bu input parametrni TextView 
+ob’ektini yaratish uchun ishlatishi mumkin.
+
+00:01:55.440 --> 00:01:57.950
+ Shuni yodda tutingki, siz har xil input 
+ parametrli klasslaringiz uchun
+
+00:01:57.950 --> 00:02:01.280
+ bir nechta har xil constructor larni
+ yaratishingiz mumkin.
+
+00:02:01.280 --> 00:02:05.320
+ Shu yo‘lda, har qanday tashqaridagi rang 
+ TextView ob’ektini bir nechta har xil
+
+00:02:05.320 --> 00:02:08.910
+ yo‘lda yaratishi mumkin, albatta, qanday input 
+ parametrlarini yaratib berishiga tayangan holda.
+
+00:02:08.910 --> 00:02:09.884
+ Endi, keyingi darsimizda,
+
+00:02:09.884 --> 00:02:13.850
+ birinchi bo‘lib, siz qanday qilib klass uchun
+ bir nechta constructor larni yaratish mumkinligini ko‘rasiz.
+
+00:02:13.850 --> 00:02:16.960
+ Shunday qilib, avvalroq ta’kidlab o‘tganimizdek,
+ bu private va public so‘zlar 
+
+00:02:16.960 --> 00:02:20.330
+ access modifikatorlari deb ataladi.
+
+00:02:20.330 --> 00:02:23.290
+ Bular haqida biz birinchi marta
+ o‘tgan kursimizda o‘rgangan edik.
+
+00:02:23.290 --> 00:02:27.859
+ Shunday qilib, ular kim mana shu uslublar yoki
+ constructor larga yoki umumiy klassga
+
+00:02:27.859 --> 00:02:30.260
+ murojaat qilishi mumkinligini 
+
+00:02:30.260 --> 00:02:31.770
+ Agar uslub private deb belgilangan bo‘lsa,
+
+00:02:31.770 --> 00:02:34.880
+ unday holda, bu uslub uni o‘rab turgan
+ klassni ichidagina chaqirilishi mumkin.
+
+00:02:34.880 --> 00:02:39.870
+ Lekin agar, biron narsa public deb belgilangan bo‘lsa,
+ u klassdan tashqarida ham foydalinilishi mumkin.
+
+00:02:39.870 --> 00:02:43.380
+ Agar MainActivity yangi matn ob’ektini 
+ yaratmoqchi bo‘lsa, unda u buni bemalol amalga oshirishi mumkin.
+
+00:02:43.380 --> 00:02:45.830
+ Chunki bu klass public deb 
+ belgilangan.
+
+00:02:47.410 --> 00:02:49.120
+Va unda public constructor ham mavjud.
+
+00:02:50.120 --> 00:02:53.629
+ Va agar bu yerdagi har qanday o‘zgaruvchilar yoki
+ uslublar public bo‘lsa, 
+
+00:02:53.629 --> 00:02:56.639
+ bunday holda ham MainActivity ularni
+chaqirishi mumkin.
+
+00:02:56.639 --> 00:02:59.750
+ Demak, o‘tgan kursimizda ko‘rgan diagrammaga
+ e’tiborimizni qaratsak.
+
+00:03:01.150 --> 00:03:03.870
+ Agar TextView uslubi public deb 
+ belgilangan bo‘lsa, 
+
+00:03:03.870 --> 00:03:09.660
+ biz uni TextView klassining ichidan yoki
+ tashqarisidan foydalanishimiz mumkin.
+
+00:03:09.660 --> 00:03:12.440
+ Shunday qilib, MainActivity undan
+ bemalol foydalanishi mumkin.
+
+00:03:14.490 --> 00:03:17.320
+ Umuman olganda, ilovadagi ob’ekt holatini
+ boshqara oladigan o‘zgaruvchilarni 
+
+00:03:17.320 --> 00:03:20.510
+ private qilgan yaxshiroq.
+
+00:03:20.510 --> 00:03:23.750
+ Shu yo‘l orqali siz bu o‘zgaruvchilardan foydalana
+ oladigan yoki o‘zgartira oladigan public 
+
+00:03:23.750 --> 00:03:25.400
+ uslublarga ta’sir qilishingiz mumkin.
+
+00:03:25.400 --> 00:03:27.889
+ Shunday qilib, bu uslublar getter va 
+ setter uslublar deb ataladi.
+
+00:03:29.160 --> 00:03:32.600
+ Va ular sizga bu o‘zgaruvchilarni 
+ o‘zgartirish yoki foydalanish tartibini
+
+00:03:32.600 --> 00:03:33.380
+ nazorat qilish imkoniyatini beradi. 
+
+00:03:33.380 --> 00:03:37.410
+ Misol uchun, agar bu state variable lar 
+ public deb belgilangan bo‘lsa,
+
+00:03:37.410 --> 00:03:41.250
+ kimdir unga TextView da noto‘g‘ri rang qiymatini
+ berishi mumkin.
+
+00:03:41.250 --> 00:03:44.240
+ Va bu sizning klassingizda kutilmagan 
+ jarayonni keltirib chiqarishi mumkin va 
+
+00:03:44.240 --> 00:03:45.740
+ sizning ilovangiz crash bo‘lishi mumkin.
+
+00:03:47.030 --> 00:03:48.260
+ Boshqa tarafdan olib qarasak, agar sizda 
+
+00:03:48.260 --> 00:03:52.780
+ private rang o‘zgaruvchi
+ public setter method bilan bo‘lsa,
+
+00:03:52.780 --> 00:03:57.110
+ siz bu kelayotgan rang to‘griligini 
+ uning holatni yangilashdan oldin ham tekshirishingiz mumkin.
+
+00:03:57.110 --> 00:04:00.660
+ Endi, siz kursimizni o‘rganishda davom eting va 
+ keyingi testga o‘ting va word class yarating. 
+

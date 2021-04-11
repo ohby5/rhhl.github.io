@@ -1,0 +1,503 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.501
+Podemos usar
+a mesma abordagem de antes.
+
+00:00:02.534 --> 00:00:05.501
+Antes, tínhamos uma lista
+de palavras em inglês
+
+00:00:05.534 --> 00:00:08.901
+que queríamos guardar
+em uma sequência de 1 a 10.
+
+00:00:08.934 --> 00:00:11.567
+Agora temos uma lista
+de 10 palavras miwok
+
+00:00:11.601 --> 00:00:12.968
+que queremos guardar,
+
+00:00:13.000 --> 00:00:15.767
+e podemos usar
+um ArrayList também.
+
+00:00:15.801 --> 00:00:17.701
+Parece que vai
+funcionar bem.
+
+00:00:17.734 --> 00:00:20.834
+Agora precisamos que
+o construtor do ArrayAdapter
+
+00:00:20.868 --> 00:00:23.767
+permita que passemos
+duas listas.
+
+00:00:23.801 --> 00:00:26.067
+Uma lista para
+as palavras em inglês
+
+00:00:26.100 --> 00:00:28.100
+e uma para
+as palavras em miwok.
+
+00:00:28.133 --> 00:00:30.767
+Estamos em NumbersActivity.
+
+00:00:30.801 --> 00:00:34.100
+Vamos dar um passo para trás
+e pensar na estratégia.
+
+00:00:34.133 --> 00:00:37.601
+Queremos passar nosso layout
+para o ArrayAdapter.
+
+00:00:37.634 --> 00:00:42.934
+Em vez de android.R.layout.
+simple_list_item1,
+
+00:00:42.968 --> 00:00:46.567
+vou substituir isso
+pelo layout que criamos,
+
+00:00:46.601 --> 00:00:48.033
+o layout list_item.
+
+00:00:48.067 --> 00:00:50.334
+Este terceiro parâmetro
+está errado.
+
+00:00:50.367 --> 00:00:52.033
+Estamos passando palavras,
+
+00:00:52.067 --> 00:00:54.467
+mas a lista só tem
+palavras em inglês.
+
+00:00:54.501 --> 00:00:56.501
+Queremos passar
+também em miwok,
+
+00:00:56.534 --> 00:00:59.701
+para cada item da lista
+mostrar as duas traduções.
+
+00:00:59.734 --> 00:01:02.501
+Vamos voltar à documentação
+do ArrayAdapter
+
+00:01:02.534 --> 00:01:05.234
+e descer até a parte
+do construtor público.
+
+00:01:05.267 --> 00:01:08.834
+São formas de criar
+um novo ArrayAdapter.
+
+00:01:08.868 --> 00:01:11.701
+Temos usado
+o penúltimo construtor,
+
+00:01:11.734 --> 00:01:15.534
+onde passamos um contexto
+que se refere a NumbersActivity,
+
+00:01:15.567 --> 00:01:18.534
+o arquivo de layout,
+e uma lista de objetos.
+
+00:01:18.567 --> 00:01:23.367
+Mas não tem nenhum construtor
+que receba duas listas.
+
+00:01:23.400 --> 00:01:25.300
+Este só recebe uma lista.
+
+00:01:25.334 --> 00:01:27.534
+A mesma coisa
+para este construtor.
+
+00:01:27.567 --> 00:01:31.334
+Ele só recebe uma lista
+como último parâmetro.
+
+00:01:32.100 --> 00:01:34.601
+Lembra que falamos
+de classes genéricas?
+
+00:01:34.634 --> 00:01:36.767
+O tipo de dados dos objetos
+é T,
+
+00:01:36.801 --> 00:01:39.834
+mas isso é só um marcador
+que podemos substituir
+
+00:01:39.868 --> 00:01:42.000
+por qualquer outro
+tipo de objeto.
+
+00:01:42.033 --> 00:01:45.100
+Estamos substituindo T
+pelo tipo string,
+
+00:01:45.133 --> 00:01:49.100
+passando um ArrayList de strings
+para o ArrayAdapter.
+
+00:01:49.133 --> 00:01:53.601
+O construtor aqui de cima
+requer um vetor de objetos,
+
+00:01:53.634 --> 00:01:58.067
+e o T é um marcador para
+o tipo de dados que quisermos.
+
+00:01:58.100 --> 00:01:59.767
+Ainda não tivemos sorte,
+
+00:01:59.801 --> 00:02:03.167
+não encontramos um construtor
+que receba duas listas
+
+00:02:03.200 --> 00:02:04.934
+para criar um ArrayAdapter.
+
+00:02:04.968 --> 00:02:08.701
+Mas podemos usar o fato
+de o ArrayAdapter receber uma lista
+
+00:02:08.734 --> 00:02:10.467
+de qualquer tipo de objeto.
+
+00:02:10.501 --> 00:02:12.901
+Em vez de passar
+uma lista de strings,
+
+00:02:12.934 --> 00:02:15.634
+que tal criar nosso próprio
+tipo de objeto?
+
+00:02:15.667 --> 00:02:17.033
+Um objeto palavra.
+
+00:02:17.067 --> 00:02:21.100
+Podemos definir a classe Word
+e criar objetos dela,
+
+00:02:21.133 --> 00:02:24.200
+e então criar uma lista
+de objetos deste tipo.
+
+00:02:24.234 --> 00:02:27.634
+Lembre do curso anterior
+que a definição de uma classe
+
+00:02:27.667 --> 00:02:30.400
+contém estados e métodos.
+
+00:02:30.434 --> 00:02:31.634
+No quiz a seguir,
+
+00:02:31.667 --> 00:02:35.067
+vou perguntar como devemos
+definir uma classe palavra.
+
+00:02:35.100 --> 00:02:37.501
+Que estados e métodos
+ela deve conter?
+
+00:02:37.534 --> 00:02:39.567
+Antes de passar
+para a classe,
+
+00:02:39.601 --> 00:02:43.834
+vou mostrar outros apps
+que usaram classes customizadas.
+
+00:02:43.868 --> 00:02:46.968
+Este é um app popular
+de compra de passagens.
+
+00:02:47.000 --> 00:02:48.634
+O Kayak.
+
+00:02:48.667 --> 00:02:52.567
+O usuário seleciona as cidades
+de origem e de destino
+
+00:02:52.601 --> 00:02:54.100
+e a data,
+
+00:02:54.133 --> 00:02:56.901
+e o app apresenta
+uma lista de opções.
+
+00:02:56.934 --> 00:02:59.634
+A informação é mostrada
+em um ListView.
+
+00:02:59.667 --> 00:03:01.667
+Cada item tem um voo,
+
+00:03:01.701 --> 00:03:05.167
+e a informação sempre está
+no mesmo padrão.
+
+00:03:05.200 --> 00:03:08.300
+O Kayak deve ter criado
+uma classe voo,
+
+00:03:08.334 --> 00:03:10.200
+e cada um destes itens
+
+00:03:10.234 --> 00:03:14.868
+representa a informação
+de um objeto desta classe.
+
+00:03:14.901 --> 00:03:17.033
+Usando a analogia da caixa,
+
+00:03:17.067 --> 00:03:19.601
+podemos representar
+cada objeto voo
+
+00:03:19.634 --> 00:03:22.267
+como uma grande caixa
+que guarda o estado.
+
+00:03:22.300 --> 00:03:24.934
+Neste caso, o estado
+tem vários campos,
+
+00:03:24.968 --> 00:03:27.467
+como a companhia aérea,
+hora de partida,
+
+00:03:27.501 --> 00:03:30.901
+hora de chegada, preço
+e a duração do voo.
+
+00:03:30.934 --> 00:03:33.701
+Também podemos colocar
+métodos nesta classe.
+
+00:03:33.734 --> 00:03:36.767
+Outras partes do app
+podem chamar estes métodos.
+
+00:03:36.801 --> 00:03:39.801
+Isso se chama
+encapsulamento,
+
+00:03:39.834 --> 00:03:43.300
+porque toda a lógica
+fica encapsulada, ou combinada,
+
+00:03:43.334 --> 00:03:45.000
+nesta classe.
+
+00:03:45.033 --> 00:03:49.067
+Outras partes do app podem saber
+que existe o objeto voo
+
+00:03:49.100 --> 00:03:51.601
+e que é possível
+chamar estes métodos,
+
+00:03:51.634 --> 00:03:54.367
+como "cancel",
+naquele objeto.
+
+00:03:54.400 --> 00:03:58.601
+Mas as chamadas de fora não precisam
+saber dos detalhes internos
+
+00:03:58.634 --> 00:04:00.734
+de como estes métodos
+funcionam.
+
+00:04:00.767 --> 00:04:02.834
+Quem chama
+só conhece o contrato,
+
+00:04:02.868 --> 00:04:05.434
+mas pode esperar
+que o voo seja cancelado
+
+00:04:05.467 --> 00:04:07.133
+quando o método é chamado.
+
+00:04:07.167 --> 00:04:10.701
+Não precisam se importar
+com como se faz isso lá dentro.
+
+00:04:10.734 --> 00:04:14.133
+Este é o conceito
+de abstrair os detalhes
+
+00:04:14.167 --> 00:04:16.367
+de o que acontece
+dentro da classe.
+
+00:04:16.400 --> 00:04:18.467
+Vamos ver outro exemplo.
+
+00:04:18.501 --> 00:04:20.968
+Este app de música,
+chamado SoundCloud,
+
+00:04:21.000 --> 00:04:24.033
+permite ao usuário
+salvar suas músicas favoritas
+
+00:04:24.067 --> 00:04:25.234
+em uma playlist.
+
+00:04:25.267 --> 00:04:27.601
+As músicas são mostradas
+em uma lista
+
+00:04:27.634 --> 00:04:31.334
+e cada uma é um item
+mostrando a mesma informação.
+
+00:04:31.367 --> 00:04:33.767
+Temos o nome do disco,
+a foto da capa,
+
+00:04:33.801 --> 00:04:37.200
+o nome da música, a duração,
+quantas vezes foi ouvida,
+
+00:04:37.234 --> 00:04:40.400
+e tudo sempre apresentado
+seguindo o mesmo padrão.
+
+00:04:41.067 --> 00:04:44.133
+Toda a informação pode ser
+guardada como campos
+
+00:04:44.167 --> 00:04:47.467
+do estado de uma classe
+customizada de música.
+
+00:04:47.501 --> 00:04:52.467
+Além dos estados, também podemos
+encapsular métodos nesta classe.
+
+00:04:52.501 --> 00:04:56.334
+O objeto música
+pode ter métodos,
+
+00:04:56.367 --> 00:04:58.934
+como getSongTitle,
+ou getAlbumName.
+
+00:04:58.968 --> 00:05:00.667
+Assim como na classe voo,
+
+00:05:00.701 --> 00:05:03.267
+estamos abstraindo
+os detalhes da classe
+
+00:05:03.300 --> 00:05:05.934
+para as chamadas de fora
+usarem os métodos
+
+00:05:05.968 --> 00:05:08.067
+sem conhecer seus detalhes.
+
+00:05:08.100 --> 00:05:10.467
+Como você pode ver
+nestes exemplos,
+
+00:05:10.501 --> 00:05:12.701
+encapsular tem vantagens,
+
+00:05:12.734 --> 00:05:16.634
+agrupar a informação
+nas classes que você define.
+
+00:05:16.667 --> 00:05:20.267
+Agora é sua vez
+de pensar no nosso problema.
+
+00:05:20.300 --> 00:05:24.367
+Quero que mostre as palavras
+em miwok e em inglês em uma lista.
+
+00:05:24.400 --> 00:05:26.467
+Como podemos
+modelar estes dados?
+
+00:05:26.501 --> 00:05:29.334
+Esta é uma pergunta
+sobre estrutura de dados.
+
+00:05:29.367 --> 00:05:32.133
+Você decide como
+estruturar os dados no app.
+
+00:05:32.167 --> 00:05:36.200
+Se toda a informação fossem
+variáveis globais no app,
+
+00:05:36.234 --> 00:05:38.567
+ficaria muito difícil
+de administrar.
+
+00:05:38.601 --> 00:05:42.467
+Queremos organizar os dados,
+para serem mais fáceis de buscar
+
+00:05:42.501 --> 00:05:44.334
+e de mostrar na tela.
+
+00:05:44.367 --> 00:05:46.400
+Você já começou
+a fazer isso,
+
+00:05:46.434 --> 00:05:49.067
+a se familiarizar
+com estruturas de dados.
+
+00:05:49.100 --> 00:05:53.067
+Por exemplo, colocar palavras
+em um vetor ou em um ArrayList
+
+00:05:53.100 --> 00:05:56.067
+foi um exemplo de escolha
+de estrutura de dados
+
+00:05:56.100 --> 00:05:59.567
+para organizar melhor os dados
+em uma lista sequencial.
+
+00:06:00.767 --> 00:06:02.634
+Agora vamos dar
+mais um passo
+
+00:06:02.667 --> 00:06:05.501
+e criar a nossa estrutura
+para palavras.
+
+00:06:05.534 --> 00:06:09.968
+As soluções embutidas no Java
+não suprem nossas necessidades.
+
+00:06:10.000 --> 00:06:13.434
+Vamos dar uma dica
+de que crie uma classe palavra.
+
+00:06:13.467 --> 00:06:17.200
+Você deve determinar
+que estado e métodos
+
+00:06:17.234 --> 00:06:18.267
+ela deve conter.
+

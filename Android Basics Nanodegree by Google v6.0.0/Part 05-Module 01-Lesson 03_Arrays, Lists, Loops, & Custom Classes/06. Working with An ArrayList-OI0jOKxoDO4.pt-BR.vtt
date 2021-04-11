@@ -1,0 +1,318 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:04.434
+Catherine, na verdade os arrays
+têm uma limitação.
+
+00:00:04.467 --> 00:00:07.734
+O que quer dizer? É o que você pediu
+para usarmos. Qual é o problema?
+
+00:00:07.767 --> 00:00:11.267
+Bom, estive pensando, e há
+uma estrutura de dados melhor
+
+00:00:11.300 --> 00:00:14.400
+para armazenarmos essas palavras, no caso
+de querermos adicionar mais no futuro.
+
+00:00:14.434 --> 00:00:15.934
+Que estrutura é essa?
+
+00:00:15.968 --> 00:00:22.200
+É algo chamado ArrayList, e podemos usar
+essas caixas como uma analogia.
+
+00:00:22.234 --> 00:00:26.133
+Por exemplo, se quisermos que a arrayList
+diminua de tamanho,
+
+00:00:26.167 --> 00:00:28.200
+apenas removemos elementos dela.
+
+00:00:28.234 --> 00:00:31.567
+e se quisermos que ela cresça, podemos
+simplesmente adicionar elementos a ela.
+
+00:00:32.167 --> 00:00:34.667
+O quão grande ela pode ficar?
+
+00:00:34.701 --> 00:00:38.501
+Bom, não há um limite de quão grande
+a arrayList pode ficar,
+
+00:00:38.534 --> 00:00:42.167
+enquanto o array, uma vez criado,
+fica do mesmo tamanho.
+
+00:00:42.801 --> 00:00:43.901
+Então onde coloco isso?
+
+00:00:43.934 --> 00:00:47.767
+Porque quero colocar as strings
+um, dois e três aqui.
+
+00:00:47.801 --> 00:00:49.968
+A 1ª palavra pode ficar
+no 1º elemento.
+
+00:00:50.567 --> 00:00:52.334
+A 2ª, no 2º elemento.
+
+00:00:52.367 --> 00:00:53.734
+-OK.
+-E a 3ª,
+
+00:00:53.767 --> 00:00:55.067
+no 3º elemento.
+
+00:00:55.701 --> 00:00:58.267
+Posso colocar qualquer coisa
+em um elemento de uma arrayList?
+
+00:00:58.300 --> 00:01:00.100
+Não podemos colocar qualquer coisa.
+
+00:01:00.133 --> 00:01:02.667
+Uma arrayList
+só comporta tipos de dados de objetos.
+
+00:01:02.701 --> 00:01:03.868
+Em vez de...
+
+00:01:03.901 --> 00:01:08.267
+Tipos primitivos de dados.
+Coisas como integers, booleanos e floats.
+
+00:01:08.300 --> 00:01:10.767
+Mas e se eu quiser armazenar
+um integer em um elemento?
+
+00:01:10.801 --> 00:01:14.133
+Bom, é meio difícil. Mas em Java
+temos algo chamado object grabbers.
+
+00:01:14.167 --> 00:01:15.801
+Eles envolvem tipos primitivos de dados
+
+00:01:15.834 --> 00:01:17.968
+e os ajudam a se tornarem tipos de dados
+de objeto.
+
+00:01:18.000 --> 00:01:20.701
+Por exemplo, podemos armazenar
+o integer com I maiúsculo.
+
+00:01:20.734 --> 00:01:23.434
+Mas não podemos armazenar
+o integer com I minúsculo.
+
+00:01:23.467 --> 00:01:24.000
+OK. Entendi.
+
+00:01:24.033 --> 00:01:28.367
+Então uma arrayList comporta tipos
+de dados de objetos, mas não tipos primitivos.
+
+00:01:28.400 --> 00:01:31.033
+Parece que uma arrayList
+é bem mais flexível,
+
+00:01:31.067 --> 00:01:34.400
+pois não há espaços desperdiçados
+em comparação com um array,
+
+00:01:34.434 --> 00:01:36.167
+que pode ter espaços em branco.
+
+00:01:36.200 --> 00:01:39.467
+-Então por que não usar sempre uma arrayList?
+-Que bom que perguntou.
+
+00:01:39.501 --> 00:01:42.501
+Tenho esse ótimo gráfico de comparação
+que responderá todas as suas dúvidas.
+
+00:01:42.534 --> 00:01:43.567
+OK, vamos dar uma olhada.
+
+00:01:44.634 --> 00:01:49.234
+Aqui está a tabela que compara
+e contrasta o Array e a ArrayList.
+
+00:01:49.267 --> 00:01:54.100
+Como mencionamos antes, um Array
+não pode mudar de tamanho depois de criado,
+
+00:01:54.133 --> 00:01:56.834
+enquanto uma ArrayList
+pode mudar de tamanho.
+
+00:01:56.868 --> 00:02:01.167
+Quanto à questão, "é uma classe?",
+um Array não é uma classe.
+
+00:02:01.200 --> 00:02:03.901
+Ela não tem métodos para acessar
+e modificar elementos.
+
+00:02:03.934 --> 00:02:07.334
+Por outro lado, uma arrayList
+tem uma lista de definição de classes.
+
+00:02:07.367 --> 00:02:10.434
+Isso significa que toda instância
+de uma arrayList é um objeto
+
+00:02:10.467 --> 00:02:15.834
+cujos métodos podemos usar para acessar
+e modificar os dados, então isso fica claro aqui.
+
+00:02:15.868 --> 00:02:18.033
+E o que cada estrutura de dados
+pode armazenar também é diferente.
+
+00:02:19.067 --> 00:02:21.901
+Um array pode conter tipos
+primitivos e tipos de objetos de dados.
+
+00:02:21.934 --> 00:02:25.667
+Porém, uma arrayList só pode conter
+tipos de dados de objetos.
+
+00:02:25.701 --> 00:02:29.100
+Para ficar mais claro, vamos ver
+alguns cenários de exemplo
+
+00:02:29.133 --> 00:02:31.834
+em apps reais de Android.
+No app de configurações,
+
+00:02:31.868 --> 00:02:36.400
+temos uma tela de Wi-Fi que mostra uma lista
+das redes Wi-Fi disponíveis perto de você.
+
+00:02:36.434 --> 00:02:40.367
+Neste caso, podemos querer armazenar
+esta informação em uma arrayList,
+
+00:02:40.400 --> 00:02:43.734
+isto porque a lista de redes Wi-Fi
+disponíveis pode crescer
+
+00:02:43.767 --> 00:02:46.601
+e diminuir, dependendo
+de onde você estiver.
+
+00:02:46.634 --> 00:02:50.667
+Às vezes, não há redes Wi-Fi
+perto de você, e outras vezes pode haver
+
+00:02:50.701 --> 00:02:54.667
+diversas. Neste caso, não faz sentido
+ter um array de tamanho fixo.
+
+00:02:55.701 --> 00:02:58.567
+No app YouTube app, há uma função
+que pode te permitir criar uma playlist
+
+00:02:58.601 --> 00:03:00.300
+de vídeos para assistir
+mais tarde.
+
+00:03:00.334 --> 00:03:01.701
+E esta é uma situação ideal
+
+00:03:01.734 --> 00:03:05.701
+para uma arrayList, porque continuaremos
+a adicionar vídeos que queremos ver
+
+00:03:05.734 --> 00:03:09.501
+e remover aqueles que já vimos,
+e já que precisamos que a estrutura de dados
+
+00:03:09.534 --> 00:03:13.334
+mude de tamanho dinamicamente,
+devemos usar uma arrayList.
+
+00:03:13.367 --> 00:03:17.834
+Por outro lado, em um app de alarme
+temos um caso em potencial de usar um array.
+
+00:03:17.868 --> 00:03:20.701
+Quando especifica um alarme,
+você especifica em que dia da semana
+
+00:03:20.734 --> 00:03:22.367
+o alarme deve repetir.
+
+00:03:22.400 --> 00:03:26.167
+Isso poderia ser um array booleano,
+que seria verdadeiro se o alarme deve soar
+
+00:03:26.200 --> 00:03:30.067
+naquele dia, e falso se o alarme
+não deve soar naquele dia.
+
+00:03:30.100 --> 00:03:33.033
+Então sempre só há
+7 dias na semana,
+
+00:03:33.067 --> 00:03:36.334
+então o tamanho do nosso array booleano
+não precisa mudar com o tempo.
+
+00:03:36.367 --> 00:03:37.634
+Por isso, podemos usar
+um array.
+
+00:03:38.834 --> 00:03:41.434
+Outro possível caso de uso de array
+é o app Google Play store.
+
+00:03:42.501 --> 00:03:45.200
+Quando procura um app, você pode
+ver uma lista de categorias,
+
+00:03:45.234 --> 00:03:51.133
+que inclui apps de negócios,
+comunicação, educação e mais.
+
+00:03:51.167 --> 00:03:52.200
+Se rolar para cima
+e para baixo,
+
+00:03:52.234 --> 00:03:56.200
+o número de categorias
+na Play Store ficará fixado.
+
+00:03:56.234 --> 00:03:58.801
+Neste caso, usamos um array
+para armazenar essa informação.
+
+00:04:00.267 --> 00:04:04.667
+Resumindo, array e arrayList
+são dois tipos diferentes
+
+00:04:04.701 --> 00:04:08.234
+de estruturas de dados que são
+ideais para diferentes casos de usos.
+
+00:04:08.267 --> 00:04:12.801
+Arrays têm um tamanho fixo,
+enquanto arrayLists têm tamanho variável.
+
+00:04:12.834 --> 00:04:16.033
+Você pode armazenar objetos
+e primitivos em um array,
+
+00:04:16.067 --> 00:04:19.133
+enquanto só pode armazenar
+tipos de objetos em uma arrayList.
+
+00:04:19.167 --> 00:04:22.200
+A seguir, nos aprofundaremos em como
+escrever código para criar uma arrayList.
+

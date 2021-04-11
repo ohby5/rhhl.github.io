@@ -1,0 +1,518 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.740 --> 00:00:01.839
+Kita sudah menulis banyak kode.
+
+00:00:01.839 --> 00:00:06.000
+Anda pasti ingin segera lihat
+daftar kata untuk muncul di layar.
+
+00:00:06.000 --> 00:00:08.580
+Ini adalah cara manual
+untuk memunculkannya.
+
+00:00:08.580 --> 00:00:11.430
+Beberapa kali saya sebut bahwa
+apapun yang Anda ditulis di bagian XML dari
+
+00:00:11.430 --> 00:00:15.225
+aplikasi Anda, dapat kita lakukan
+dengan kode Java juga
+
+00:00:15.225 --> 00:00:19.415
+Misalnya saya dapat membuat obyek TextView
+untuk tiap elemen,
+
+00:00:19.415 --> 00:00:22.225
+kemudian menambahkannya sebagai child view
+pada tata letak yang ada.
+
+00:00:22.225 --> 00:00:23.155
+Mari kita coba.
+
+00:00:24.385 --> 00:00:26.895
+Pertama, mulai dengan
+melihat tata letaknya.
+
+00:00:26.895 --> 00:00:28.903
+Untuk NumbersActivity
+
+00:00:28.903 --> 00:00:33.570
+tata letak didefinisikan
+di dokumen XML activity_numbers.
+
+00:00:35.080 --> 00:00:36.684
+Saya akan buka dokumen itu, 
+
+00:00:36.684 --> 00:00:40.060
+lalu mengubah RelativeLayout
+menjadi LinearLayout.
+
+00:00:36.684 --> 00:00:40.060
+Tiap child view yang ditambahkan
+akan muncul satu persatu
+
+00:00:44.633 --> 00:00:45.942
+di satu kolom.
+
+00:00:45.942 --> 00:00:49.327
+Sebagai tambahan, saya buat
+atribut orientasi menjadi vertikal.
+
+00:00:49.327 --> 00:00:52.825
+Saya tambahkan child view
+secara dinamis di kode Java.
+
+00:00:52.825 --> 00:00:56.013
+Karena itu, LinearLayout ini
+harus diberi identitas tampilan.
+
+00:00:56.013 --> 00:00:58.590
+Agar dapat dirujuk saat
+mengerjakan kode Java nanti.
+
+00:01:00.250 --> 00:01:02.020
+Namakan saja rootView.
+
+00:01:03.100 --> 00:01:04.485
+Kembali ke
+NumbersActivity.
+
+00:01:06.538 --> 00:01:10.770
+Tambahkan baris kode
+untuk menampilkan daftar kata
+
+00:01:10.770 --> 00:01:12.320
+di akhir metode onCreate.
+
+00:01:12.320 --> 00:01:15.810
+Akan saya lakukan setelah
+membuat ArrayList.
+
+00:01:15.810 --> 00:01:19.400
+Langsung saja
+hapus pesan log ini.
+
+00:01:19.400 --> 00:01:22.700
+Saya sudah tahu daftar saya
+sudah dibuat dengan tepat.
+
+00:01:22.700 --> 00:01:25.680
+Tutup panel proyek
+di samping, agar kita
+
+00:01:25.680 --> 00:01:26.850
+dapat lebih jelas melihat kode.
+
+00:01:27.850 --> 00:01:30.650
+Yang dilakukan di kode Java,
+pertama, harus temukan
+
+00:01:30.650 --> 00:01:34.670
+LinearLayout yang bernama
+rootView, dan simpan ke variabel.
+
+00:01:35.810 --> 00:01:40.370
+Lalu mulai buat dan tambahkan
+TextView ke LinearLayout ini.
+
+00:01:40.370 --> 00:01:45.010
+Untuk itu, gunakan dulu
+metode findViewByld.
+
+00:01:45.010 --> 00:01:47.285
+untuk mencari tampilan bernama rootView.
+
+00:01:48.550 --> 00:01:50.190
+Satu tampilan akan kembali muncul.
+
+00:01:51.430 --> 00:01:55.420
+Tapi harus diubah menjadi
+tipe data LinearLayout.
+
+00:01:55.420 --> 00:01:57.999
+Sudah saya lakukan.
+sehingga saya dapat menambahkan child views di sini
+
+00:01:59.080 --> 00:02:03.290
+Tampilan ini disimpan di variabel rootView
+agar dapat dipakai nanti.
+
+00:02:04.410 --> 00:02:06.404
+Ingat, akhiri dengan titik koma.
+
+00:02:06.404 --> 00:02:08.014
+[BLANK_AUDIO]
+
+00:02:08.014 --> 00:02:08.850
+Bagus.
+
+00:02:08.850 --> 00:02:13.364
+Ingat, baris ini membantu menemukan
+LinearLayout bernama rootView.
+
+00:02:13.364 --> 00:02:16.380
+Akan saya simpan
+di variabel bernama rootView.
+
+00:02:16.380 --> 00:02:17.217
+Ingat, selanjutnya,
+
+00:02:17.217 --> 00:02:20.230
+saya harus buat dan tambahkan
+TextView ke LinearLayout tadi.
+
+00:02:21.720 --> 00:02:23.650
+Awalnya, buatlah
+obyek TextView.
+
+00:02:24.858 --> 00:02:26.930
+Saya pakai konstruktor ini
+
+00:02:26.930 --> 00:02:28.770
+yang memerlukan konteks
+sebagai satu-satunya masukan.
+
+00:02:29.850 --> 00:02:33.170
+Untuk mengetahui
+konstruktor mana yang dapat digunakan,
+
+00:02:33.170 --> 00:02:35.170
+kita dapat cek dokumentasi.
+
+00:02:35.170 --> 00:02:37.720
+Inilah dokumentasi untuk
+kelas TextView.
+
+00:02:37.720 --> 00:02:40.320
+Scroll ke bawah, ke bagian
+tentang konstruktor umum.
+
+00:02:41.670 --> 00:02:44.822
+Di sini ada beberapa
+konstruktor yang
+
+00:02:44.822 --> 00:02:45.405
+dapat kita pakai.
+
+00:02:45.405 --> 00:02:49.224
+Masing-masing memiliki
+jumlah input berbeda.
+
+00:02:49.224 --> 00:02:51.963
+Pertama-tama, saya akan menggunakan
+yang ini.
+
+00:02:51.963 --> 00:02:54.880
+yang hanya memerlukan satu konteks masukan
+
+00:02:54.880 --> 00:02:57.010
+Ingat, tiap kali kita
+membuat tampilan dengan kode Java
+
+00:02:57.010 --> 00:03:00.770
+harus ada konteksnya,
+agar tampilan tersebut mengetahui temanya
+
+00:03:00.770 --> 00:03:04.130
+juga informasi lain tentang aplikasi
+yang akan ditampilkan
+
+00:03:04.130 --> 00:03:06.710
+jadi, konteks diberikan, sesuai
+apapun yang terjadi di sekitarnya.
+
+00:03:08.140 --> 00:03:13.974
+Di sini, kita masukkan konteks
+sebagai masukan untuk konstruktor ini.
+
+00:03:13.974 --> 00:03:17.210
+Karena ini adalah
+kelas NumbersActivity
+
+00:03:17.210 --> 00:03:19.130
+kelas ini juga jadi konteksnya.
+
+00:03:20.820 --> 00:03:24.660
+Baris kode ini
+membantu membuat obyek TextView
+
+00:03:24.660 --> 00:03:29.640
+yang tersimpan di variabel
+bernama wordView, bertipe data TextView.
+
+00:03:30.780 --> 00:03:33.550
+Untuk mengubah teks
+yang tampak di layar…
+
+00:03:33.550 --> 00:03:37.320
+saya panggil metode setText
+di obyek wordView.
+
+00:03:37.320 --> 00:03:40.820
+Saya masukkan input "satu",
+yaitu teks yang diinginkan.
+
+00:03:40.820 --> 00:03:43.390
+Kali ini, saya ingin TextView
+menampilkan string
+
+00:03:43.390 --> 00:03:46.190
+yang tersimpan di daftar kata
+pada indeks ke-nol.
+
+00:03:47.480 --> 00:03:51.050
+Ini akan membantu kita
+memetakan kata "satu."
+
+00:03:51.050 --> 00:03:54.122
+Setelah membuat obyek wordView
+dengan teks yang benar di dalamnya
+
+00:03:54.122 --> 00:03:59.020
+saya akan menambahkan satu child view
+pada parent view bernama rootView.
+
+00:04:00.210 --> 00:04:02.460
+Inilah child view-nya,wordView.
+
+00:04:02.460 --> 00:04:06.840
+Ini parent view-nya, rootView.
+
+00:04:06.840 --> 00:04:10.241
+Satu child view lagi,wordView
+
+00:04:10.241 --> 00:04:14.970
+dengan metode .addView
+ke parent view-nya, rootView.
+
+00:04:17.130 --> 00:04:20.420
+Mari jalankan kode ini
+di aplikasi dan lihat hasilnya.
+
+00:04:20.420 --> 00:04:24.850
+Ketika memasuki NumbersActivity,
+hasilnya bagus.
+
+00:04:24.850 --> 00:04:26.620
+Tampak kata "satu."
+
+00:04:26.620 --> 00:04:30.560
+Elemen ke-nol
+dari daftar kata kita.
+
+00:04:30.560 --> 00:04:35.020
+Di sini kita secara dinamis
+membuat TextView di kode Java
+
+00:04:35.020 --> 00:04:38.330
+berdasarkan elemen pertama
+di array list.
+
+00:04:38.330 --> 00:04:38.920
+Saat ini
+
+00:04:38.920 --> 00:04:41.920
+mungkin Anda memikirkan
+kemungkinan lain.
+
+00:04:41.920 --> 00:04:46.360
+Bagaimana jika kode diulangi
+untuk semua elemen dalam daftar?
+
+00:04:46.360 --> 00:04:48.300
+Jadi daftar kata dapat tampil
+di layar.
+
+00:04:50.240 --> 00:04:52.678
+Mari kita coba
+dengan beberapa tampilan lagi.
+
+00:04:52.678 --> 00:04:55.040
+Akan saya salin
+tiga baris kode ini.
+
+00:04:55.040 --> 00:04:58.300
+Membantu kita membuat
+TextView kata "satu".
+
+00:04:58.300 --> 00:05:02.315
+Tempel di bawahnya, modifikasi,
+agar menjadi TextView
+
+00:05:02.315 --> 00:05:03.340
+untuk kata "dua".
+
+00:05:03.340 --> 00:05:05.600
+Sepertinya ada
+error.
+
+00:05:05.600 --> 00:05:09.670
+Tertulis, variabel wordView
+sudah tersedia di scope ini.
+
+00:05:09.670 --> 00:05:13.490
+Artinya, kita hanya bisa
+masukkan satu variabel lokal
+
+00:05:13.490 --> 00:05:14.560
+bernama sama di satu scope.
+
+00:05:15.600 --> 00:05:19.220
+Scope yang dijadian acuan di sini
+adalah metodenya.
+
+00:05:19.220 --> 00:05:22.580
+Untuk mendukungnya,
+saya buat nama yang berbeda yaitu, wordView2.
+
+00:05:23.590 --> 00:05:26.680
+Akan saya perbarui
+kode di bawahnya agar sesuai.
+
+00:05:26.680 --> 00:05:30.385
+Bagus. Inilah kode
+yang menciptakan satu TextView lagi
+
+00:05:30.385 --> 00:05:35.015
+bernama wordView2, lalu
+tambahkan ke parent view rootView.
+
+00:05:36.420 --> 00:05:37.230
+Tunggu dulu.
+
+00:05:37.230 --> 00:05:42.380
+Saya ingin TextView kedua ini
+di tampilkan setelah kata di indeks pertama.
+
+00:05:42.380 --> 00:05:46.405
+Jadi yng awalnya words.get(0),
+diubah jadi words.get(1)
+
+00:05:46.405 --> 00:05:51.565
+agar string terletak
+di indeks 1 dalam daftar.
+
+00:05:52.725 --> 00:05:54.882
+Kita salin dan tempel
+bagian itu, lalu
+
+00:05:54.882 --> 00:05:57.830
+memodifikasinya, agar
+kata ketiga muncul dalam daftar.
+
+00:05:57.830 --> 00:05:59.230
+[BLANK_AUDIO]
+
+00:05:59.230 --> 00:06:01.735
+Mari kita uji
+dan lihat hasilnya.
+
+00:06:01.735 --> 00:06:06.305
+Saat aplikasi berjalan di perangkat
+dan muncul hit, bagus.
+
+00:06:06.305 --> 00:06:10.110
+Di NumbersActivity,
+kita taruh angka "satu", "dua"
+
+00:06:10.110 --> 00:06:13.270
+dan "tiga", yaitu
+tiga elemen pertama array list.
+
+00:06:14.410 --> 00:06:18.010
+Kita lanjutkan metode
+salin tempel ini.
+
+00:06:18.010 --> 00:06:22.938
+Memodifikasi teks Anda
+dan juga indeksnya.
+
+00:06:22.938 --> 00:06:25.410
+Tapi ini akan menjadi membosankan
+
+00:06:25.410 --> 00:06:28.150
+dan kita juga perlu
+mempercantik TextView ini.
+
+00:06:28.150 --> 00:06:30.405
+Sekarang, masih teks biasa.
+
+00:06:30.405 --> 00:06:33.690
+Sebenarnya dapat juga
+memakai XML, lalu
+
+00:06:33.690 --> 00:06:36.970
+salin-tempel elemen XML
+terus menerus.
+
+00:06:36.970 --> 00:06:38.970
+Tapi, tunggu dulu.
+
+00:06:38.970 --> 00:06:41.850
+Dalam menulis kode Java,
+kita lihat ada pola.
+
+00:06:43.020 --> 00:06:47.150
+Lihat, tiap blok kode
+di tiap TextView serupa.
+
+00:06:48.400 --> 00:06:52.034
+Bedanya, posisi indeks
+berubah dari satu blok
+
+00:06:52.034 --> 00:06:53.025
+ke blok lain.
+
+00:06:53.025 --> 00:06:58.002
+Perhatikan, kita naikkan
+indeksnya dari 0,
+
+00:06:58.002 --> 00:07:00.800
+1, 2, dan selanjutnya.
+
+00:07:00.800 --> 00:07:03.030
+Kodenya saya tulis ulang
+berdasarkan pola itu.
+
+00:07:04.060 --> 00:07:07.696
+Bagaimana jika variabel energi
+yang melacak indeks ini
+
+00:07:07.696 --> 00:07:10.790
+kita pindah posisinya, dan
+diperbarui satu-satu?
+
+00:07:11.910 --> 00:07:15.940
+Lihat, blok kode ini
+semakin tampak serupa.
+
+00:07:15.940 --> 00:07:20.970
+Semua bernama words.get,
+dan masuk di indeks sebagai masukan.
+
+00:07:20.970 --> 00:07:24.510
+Ada kode ekstra yang
+menambahkan nilai indeks sebanyak satu.
+
+00:07:24.510 --> 00:07:27.390
+Akan saya perkenalkan
+konsep pemrograman baru yang keren.
+
+00:07:27.390 --> 00:07:28.690
+Namanya loops.
+
+00:07:28.690 --> 00:07:31.950
+Jika Anda sudah paham loops,
+saya minta Anda perbaiki kode ini.
+
+00:07:31.950 --> 00:07:35.730
+Jadi semua kata dapat tampil
+di layar tanpa harus
+
+00:07:35.730 --> 00:07:39.260
+salin tempel blok kode ini
+terus menerus sepuluh kali.
+

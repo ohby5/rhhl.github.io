@@ -1,0 +1,576 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.410 --> 00:00:03.510
+Baiklah, jadi kamu sudah paham
+cara kerja contoh aplikasi dengan
+
+00:00:03.510 --> 00:00:05.340
+daftar tampilan dan custom array adapter.
+
+00:00:05.340 --> 00:00:06.510
+Itu awal yang bagus untuk
+
+00:00:06.510 --> 00:00:09.790
+memahami cara membuat
+perubahan di aplikasi kita.
+
+00:00:09.790 --> 00:00:14.580
+Aplikasi Android Flavor dilengkapi
+dua text view dan satu image view per list item.
+
+00:00:14.580 --> 00:00:18.320
+Untuk aplikasi Miwok ini,
+dibutuhkan dua text view.
+
+00:00:18.320 --> 00:00:21.080
+Karena itu, kita perlu 
+membuat custom array adapter baru.
+
+00:00:21.080 --> 00:00:24.740
+Karena array adapter default
+hanya punya satu text view.
+
+00:00:24.740 --> 00:00:26.878
+Kita mulai dengan
+langkah pertama.
+
+00:00:26.878 --> 00:00:30.700
+Pertama, buatlah daftar
+obyek kata. Ini kode untuk
+
+00:00:30.700 --> 00:00:32.530
+obyek kata ArrayList.
+
+00:00:32.530 --> 00:00:36.880
+Perhatikan, tiap obyek kata
+adalah pasangan Bahasa Inggris dan Miwok.
+
+00:00:36.880 --> 00:00:39.740
+Pastikan urutan inputnya
+diawali kata Bahasa Inggris, lalu
+
+00:00:39.740 --> 00:00:41.000
+kata dalam Bahasa Miwok.
+
+00:00:41.000 --> 00:00:44.750
+Ingat itu, sebab begitulah
+urutan yang kita bentuk di konstruktor kata.
+
+00:00:44.750 --> 00:00:47.680
+Kembali ke NumbersActivity.
+Kami minta kamu untuk memodifikasi
+
+00:00:47.680 --> 00:00:51.290
+cara pembuatan adapter-nya
+dan aturlah di list view.
+
+00:00:51.290 --> 00:00:54.170
+Kami berikan kode yang 
+dapat ditambahkan ke NumbersActivity
+
+00:00:54.170 --> 00:00:56.940
+untuk memastikan adapter kata
+dibuat dengan tepat.
+
+00:00:56.940 --> 00:00:59.530
+Anda sudah mengganti kode
+ArrayAdapter yang lama
+
+00:00:59.530 --> 00:01:02.310
+dan metode onCreate-nya
+akan tampak seperti ini.
+
+00:01:02.310 --> 00:01:05.019
+Di sini, kita membuat obyek WordAdapter
+yang baru dan menyimpannya
+
+00:01:05.019 --> 00:01:07.340
+di variabel bernama adapter.
+
+00:01:07.340 --> 00:01:09.650
+Kita memanggil konstruktornya
+dan memasukkan konteks.
+
+00:01:09.650 --> 00:01:13.329
+Inilah acuannya.
+Mengacu pada NumbersActivity
+
+00:01:13.329 --> 00:01:16.480
+lalu masukkan array list
+obyek katanya.
+
+00:01:16.480 --> 00:01:20.570
+Di situ, ada list view di tata letak
+dengan ID bernama lists.
+
+00:01:20.570 --> 00:01:22.850
+Lalu atur adapter di situ.
+
+00:01:22.850 --> 00:01:26.990
+Langkah ketiga, buatlah
+kelas adapter kata yang baru.
+
+00:01:26.990 --> 00:01:29.720
+Kami sudah tunjukkan instruksi
+caranya di video yang lalu.
+
+00:01:29.720 --> 00:01:33.620
+Keempat, kita ubah
+pernyataan kelas agar
+
+00:01:33.620 --> 00:01:37.940
+adapter kata berkembang atau
+mewarisi sifat kelas array adapter.
+
+00:01:37.940 --> 00:01:41.391
+Dengan menjelaskan kelas kata
+sebagai parameter dasarnya
+
+00:01:41.391 --> 00:01:46.040
+kita harapkan sumber data
+ArrayAdapter menjadi daftar obyek kata.
+
+00:01:46.040 --> 00:01:49.730
+Kelima, gantilah
+metode getView
+
+00:01:49.730 --> 00:01:52.540
+dan berikan implementasi
+metode Anda sendiri.
+
+00:01:52.540 --> 00:01:55.360
+Kode ini
+dibuat oleh Android Studio.
+
+00:01:55.360 --> 00:02:00.570
+Anda bisa gunakan shortcut keyboard,
+Ctrl+O atau ke atas sini.
+
+00:02:00.570 --> 00:02:04.210
+Untuk membuat code, Override Method dan
+memilih getView Method.
+
+00:02:04.210 --> 00:02:07.930
+Langkah keenam, lengkapi
+metode ini dengan implementasi
+
+00:02:07.930 --> 00:02:12.180
+Anda sendiri dan jadikan
+aplikasi AndroidFlavor sebagai contoh.
+
+00:02:12.180 --> 00:02:14.110
+Saya akan buka aplikasi AndroidFlavor.
+
+00:02:14.110 --> 00:02:14.850
+Ini kode untuk
+
+00:02:14.850 --> 00:02:18.890
+AndroidFlavor adapter dalam
+contoh array adaptor pelanggan.
+
+00:02:18.890 --> 00:02:21.410
+Di sini metode getView-nya.
+
+00:02:21.410 --> 00:02:25.045
+Karena logikanya sama dengan
+metode getView untuk aplikasi Miwok,
+
+00:02:25.045 --> 00:02:27.664
+Kita salin dan tempel saja
+bagian ini ke kode kita.
+
+00:02:34.172 --> 00:02:37.210
+Sudah saya tempel kodenya
+ke kelas WordAdapter.
+
+00:02:37.210 --> 00:02:39.980
+Pertama, pastikan kita punya
+list item view walaupun
+
+00:02:39.980 --> 00:02:41.420
+datanya belum benar.
+
+00:02:41.420 --> 00:02:45.030
+Kita dapat coba tampilan daur ulang
+yang juga jadi parameter input.
+
+00:02:45.030 --> 00:02:48.350
+Namun, mungkin juga menjadi nol,
+artinya tak ada tampilan
+
+00:02:48.350 --> 00:02:49.310
+yang bisa digunakan kembali.
+
+00:02:49.310 --> 00:02:52.720
+Jika begitu, kita harus kembangkan
+dari tata letak list item, dari awal.
+
+00:02:52.720 --> 00:02:56.040
+Kita dapat memakai LayoutInflator
+dari Android, dan panggil metode inflate.
+
+00:02:56.040 --> 00:03:00.490
+Masukkan ID layout resource,
+parent view, yaitu list view-nya.
+
+00:03:00.490 --> 00:03:03.490
+Dan false, karena kita tidak ingin melampirkan
+list item view ke
+
+00:03:03.490 --> 00:03:05.100
+parent list view-nya dulu.
+
+00:03:05.100 --> 00:03:08.470
+Selanjutnya, temukan obyek kata
+di posisi yang
+
+00:03:08.470 --> 00:03:09.032
+diminta, agar kita dapat
+
+00:03:09.032 --> 00:03:12.940
+mengatur data yang tepat
+ke tampilan yang ada di tata letak.
+
+00:03:12.940 --> 00:03:16.960
+Kita panggil metode getItem yang
+bersumber dari superkelas
+
+00:03:16.960 --> 00:03:20.840
+array adapter, dan posisi yang
+diinginkan sebagai inputnya.
+
+00:03:20.840 --> 00:03:24.600
+Nah, daripada kita kembali ke obyek Android
+Flavor. Kita buat saja getItem
+
+00:03:24.600 --> 00:03:28.400
+mengembalikan obyek kata, sebab
+pernyataan kelas diturunkan
+
+00:03:28.400 --> 00:03:33.370
+dari array adapter, di mana kata adalah
+tipe return metode getItem.
+
+00:03:33.370 --> 00:03:37.090
+Mari, kita lihat dokumentasi
+metode get item.
+
+00:03:37.090 --> 00:03:41.280
+Ini dokumentasi metode 
+get item dari kelas ArrayAdapter.
+
+00:03:41.280 --> 00:03:44.390
+Di sini, kita dapat ganti
+tipe data kata setiap kali
+
+00:03:44.390 --> 00:03:46.370
+kita melihat
+parameter dasar T.
+
+00:03:46.370 --> 00:03:49.070
+Mari kembali ke kode.
+
+00:03:49.070 --> 00:03:51.120
+Untuk tiga bagian berikutnya
+
+00:03:51.120 --> 00:03:53.670
+kita belum punya tampilan gambar
+di tata letak kita.
+
+00:03:53.670 --> 00:03:56.720
+Jadi, kita dapat menghapus baris kode yang
+berkaitan dengan pengaturan
+
+00:03:56.720 --> 00:03:58.270
+gambar di ImageView.
+
+00:03:58.270 --> 00:04:01.340
+Kita arahkan ke tata letak
+listItem XML.
+
+00:04:01.340 --> 00:04:05.185
+Ingat, kita punya dua TextView,
+satu ber-view id miwok_text_view
+
+00:04:05.185 --> 00:04:10.000
+dan satu lagi view id-nya
+default_text_view.
+
+00:04:10.000 --> 00:04:12.868
+Akan beda hasilnya di kode
+jika Anda memutuskan pakai
+
+00:04:12.868 --> 00:04:14.060
+nama yang berbeda.
+
+00:04:14.060 --> 00:04:18.720
+Artinya, di kelas word adapter,
+variabel list item view
+
+00:04:18.720 --> 00:04:22.740
+sedang mengacu pada tata letak
+linier dasar untuk tata letak list item.
+
+00:04:22.740 --> 00:04:27.110
+Jika memanggil metode find view by ID
+di list item view
+
+00:04:27.110 --> 00:04:30.820
+kita akan menemukan text view
+Miwok. Jika sudah,
+
+00:04:30.820 --> 00:04:34.364
+kita dapat bentuk view-nya
+menjadi text view, sebagaimana harusnya.
+
+00:04:34.364 --> 00:04:38.570
+Lalu kita simpan di
+variabel text view Miwok.
+
+00:04:38.570 --> 00:04:42.700
+Lalu kita panggil metode
+set text pada text view.
+
+00:04:42.700 --> 00:04:45.370
+Masukkan teks baru
+yang harus ditampilkan.
+
+00:04:45.370 --> 00:04:48.701
+Inilah string terjemahan Miwok
+dari obyek kata yang terkini.
+
+00:04:53.242 --> 00:04:55.998
+Membaca baris kode ini
+memang rumit.
+
+00:04:55.998 --> 00:04:59.425
+Tapi mari kita baca dulu
+pernyataan dalam tanda kurung.
+
+00:04:59.425 --> 00:05:04.130
+Di obyek kata yang ini,
+kita panggil metode getMiwokTranslation.
+
+00:05:04.130 --> 00:05:07.703
+Ini mengembalikan string, yaitu
+kata Miwok, dan itu menjadi input
+
+00:05:07.703 --> 00:05:11.200
+bagi metode set text yang dipanggil pada
+obyek TextView Miwok.
+
+00:05:11.200 --> 00:05:13.895
+Sekarang TextView Miwok
+akan menampilkan kata Miwok.
+
+00:05:13.895 --> 00:05:17.475
+Kita ulangi langkah yang sama
+untuk TextView default.
+
+00:05:17.475 --> 00:05:21.015
+ListItemView mengarah pada
+layout linier di list_item.
+
+00:05:21.015 --> 00:05:24.935
+Kita panggil findViewByld
+untuk mencari children view.
+
+00:05:24.935 --> 00:05:29.079
+Kita temukan view dengan ID
+default text view dan taruh ke text view
+
+00:05:29.079 --> 00:05:32.817
+lalu kita simpan ke variabel
+bernama defaultTextView.
+
+00:05:34.157 --> 00:05:38.657
+Setelah itu, di obyek currentWord
+kita panggil metode terjemahan getDefault
+
+00:05:38.657 --> 00:05:42.207
+untuk mendapatkan
+string terjemahan Bahasa Inggris.
+
+00:05:42.207 --> 00:05:45.177
+Ini menjadi input 
+pemanggilan metode setText
+
+00:05:45.177 --> 00:05:47.137
+pada obyek defaultTextView.
+
+00:05:47.137 --> 00:05:50.720
+DefaultTextView harusnya
+sudah dapat menampilkan kata Bahasa Inggris.
+
+00:05:50.720 --> 00:05:51.950
+Setelah semua selesai
+
+00:05:51.950 --> 00:05:55.380
+kita perlu kembali ke list item view
+sebagai return value.
+
+00:05:55.380 --> 00:06:00.270
+List view akan mengambil return value
+dan menambahkannya sebagai child sendiri.
+
+00:06:00.270 --> 00:06:01.880
+Wah!
+Itu sangat menantang, tapi
+
+00:06:01.880 --> 00:06:03.330
+terima kasih telah bertahan.
+
+00:06:03.330 --> 00:06:04.770
+Intinya
+
+00:06:04.770 --> 00:06:08.830
+di metode getView, kita pertama
+mengambil list item view yang dapat dipakai.
+
+00:06:08.830 --> 00:06:11.510
+Entah memakai lagi tampilan
+yang sudah ada, atau
+
+00:06:11.510 --> 00:06:13.940
+mengembangkan sendiri
+dari awal.
+
+00:06:13.940 --> 00:06:16.650
+Lalu membuat obyek kata
+di posisi tertentu, dan
+
+00:06:16.650 --> 00:06:19.850
+setelahnya, kita dapat mencari
+tampilan di daftar tata letak dan
+
+00:06:19.850 --> 00:06:22.480
+mengatur data di situ
+dari obyek kata.
+
+00:06:22.480 --> 00:06:25.880
+Terakhir, kita kembalikan
+LIstItemView yang terbaru.
+
+00:06:25.880 --> 00:06:27.900
+Mari jalankan kodenya.
+
+00:06:27.900 --> 00:06:30.170
+Sepertinya ada error di
+numbers activity.
+
+00:06:30.170 --> 00:06:33.450
+Tertulis, ada error
+saat membuat word adapter.
+
+00:06:34.750 --> 00:06:37.870
+Itu karena kita lupa membuat
+konstruktor di word adapter.
+
+00:06:37.870 --> 00:06:41.370
+Ingat, dibutuhkan dua input,
+kontak dan daftar kata.
+
+00:06:41.370 --> 00:06:42.490
+Ayo kita lakukan.
+
+00:06:43.530 --> 00:06:46.290
+Kita lihat contoh
+di aplikasi Flavor Adapter.
+
+00:06:46.290 --> 00:06:49.040
+Sudah diuraikan tentang
+konstruktor di video lalu.
+
+00:06:49.040 --> 00:06:50.720
+Anda bisa lihat kembali
+jika perlu.
+
+00:06:51.990 --> 00:06:55.510
+Saya melihat kembali
+contoh di aplikasi Flavor.
+
+00:06:55.510 --> 00:06:58.600
+Sudah diuraikan tentang
+konstruktor di video lalu.
+
+00:06:58.600 --> 00:07:00.750
+Anda bisa lihat kembali jika perlu.
+
+00:07:00.750 --> 00:07:04.190
+Kita perlu hal yang serupa
+dengan ini untuk adapter kata.
+
+00:07:04.190 --> 00:07:06.847
+Saya akan salin dan tempel
+konstruktor ini, dan ubah sedikit.
+
+00:07:06.847 --> 00:07:09.122
+[BLANK_AUDIO]
+
+00:07:09.122 --> 00:07:12.670
+Di atas kelas word adapter
+saya akan tempel konstruktor
+
+00:07:12.670 --> 00:07:13.920
+yang kita salin.
+
+00:07:13.920 --> 00:07:18.050
+Saat ini, kita tidak membutuhkan adapter Flavor Android,
+tapi kita butuh word adapter.
+
+00:07:18.050 --> 00:07:21.700
+Sebab, ingat, nama konstruktor
+harus sesuai dengan nama kelasnya.
+
+00:07:21.700 --> 00:07:24.860
+Juga di dalam daftar ini,
+alih-alih daftar Android Flavors,
+
+00:07:24.860 --> 00:07:26.740
+kita butuh daftar kata.
+
+00:07:26.740 --> 00:07:30.810
+Terakhir, di dalam konstruktor ini,
+kita panggil superkelas
+
+00:07:30.810 --> 00:07:35.070
+konstruktor adaptor Android dengan
+memasukkan konteks, ID layout resource
+
+00:07:35.070 --> 00:07:36.480
+lalu daftar obyek.
+
+00:07:36.480 --> 00:07:38.800
+Oleh karena itu, kita perlu perbarui 
+ini juga.
+
+00:07:38.800 --> 00:07:41.760
+Ingat, kita bisa masukkan nol
+untuk ID resource layout.
+
+00:07:41.760 --> 00:07:45.520
+Sebab kita harus kembangkan
+layout sendiri di metode get view.
+
+00:07:45.520 --> 00:07:47.550
+Inilah hasil aplikasinya
+di perangkat kita.
+
+00:07:47.550 --> 00:07:50.280
+Kita beralih ke numbers activity.
+
+00:07:50.280 --> 00:07:50.980
+Terlihat bagus.
+
+00:07:50.980 --> 00:07:53.980
+Daftarnya saat ini menampilkan
+kata dalam bahasa Miwok dan Inggris.
+
+00:07:53.980 --> 00:07:55.370
+Selamat!
+
+00:07:55.370 --> 00:07:56.070
+Kerja yang bagus.
+

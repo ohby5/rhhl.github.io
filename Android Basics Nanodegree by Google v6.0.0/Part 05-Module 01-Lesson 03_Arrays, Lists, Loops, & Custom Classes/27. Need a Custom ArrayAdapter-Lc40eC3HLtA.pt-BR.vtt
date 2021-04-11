@@ -1,0 +1,704 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.200
+Vamos rever as mudanças
+que fizemos no app de miwok.
+
+00:00:03.233 --> 00:00:06.400
+Saímos de um loop para encher
+um layout vertical linear
+
+00:00:06.433 --> 00:00:08.333
+que exibia uma lista de palavras
+
+00:00:08.367 --> 00:00:13.200
+para uma combinação eficaz de
+exibição de lista e ArrayAdapter.
+
+00:00:13.233 --> 00:00:16.767
+Criamos um layout de itens de lista
+com dois TextViews.
+
+00:00:17.767 --> 00:00:21.600
+Vamos criar agora uma lista
+de objetos para o ArrayAdapter.
+
+00:00:21.633 --> 00:00:23.700
+Criamos uma classe de palavras
+
+00:00:23.733 --> 00:00:27.067
+que contém as versões em inglês
+e em miwok da palavra.
+
+00:00:27.100 --> 00:00:30.600
+Assim temos uma ArrayList
+de objetos de palavra.
+
+00:00:30.633 --> 00:00:33.133
+Vamos ao NumbersActivity.
+
+00:00:33.167 --> 00:00:35.767
+Temos que mudar
+a ArrayList de strings
+
+00:00:35.800 --> 00:00:37.533
+para um ArrayList de palavras.
+
+00:00:37.567 --> 00:00:41.467
+Vamos atualizar o tipo genérico
+dentro dos símbolos
+
+00:00:41.500 --> 00:00:44.567
+e criar uma ArrayList de palavras
+como elementos.
+
+00:00:44.600 --> 00:00:48.367
+Talvez duas opções de preenchimento
+automático surjam aqui.
+
+00:00:48.400 --> 00:00:51.367
+Esta classe de palavras
+existe no framework Android
+
+00:00:51.400 --> 00:00:53.233
+sob outro nome de pacote.
+
+00:00:53.267 --> 00:00:55.700
+Este é o dicionário
+do usuário.
+
+00:00:55.733 --> 00:00:58.967
+São palavras do dicionário
+de preenchimento automático,
+
+00:00:59.000 --> 00:01:01.367
+como aquelas
+que você usa em mensagens.
+
+00:01:01.400 --> 00:01:03.833
+Escolha a opção certa
+para esta classe.
+
+00:01:03.867 --> 00:01:08.733
+Queremos as palavras
+do nosso exemplo.
+
+00:01:09.433 --> 00:01:11.267
+Atualizamos a ArrayList
+
+00:01:11.300 --> 00:01:14.067
+para conter objetos de palavra
+e não de string.
+
+00:01:14.100 --> 00:01:17.500
+Especifiquei "palavra"
+como o parâmetro da ArrayList.
+
+00:01:17.533 --> 00:01:19.833
+Quando adicionarmos
+elementos à lista,
+
+00:01:19.867 --> 00:01:23.033
+temos que colocar objetos
+do tipo de dados "palavra".
+
+00:01:23.067 --> 00:01:24.933
+Se chamarmos o método get,
+
+00:01:24.967 --> 00:01:27.967
+que serve para pegar
+elementos na lista,
+
+00:01:28.000 --> 00:01:30.900
+vamos receber um objeto
+do tipo de dados "palavra".
+
+00:01:30.933 --> 00:01:36.133
+Todos estes métodos add
+adicionam um objeto string.
+
+00:01:36.167 --> 00:01:38.133
+Essa é a causa destes erros.
+
+00:01:38.167 --> 00:01:42.067
+Temos que mudar essas linhas
+para passar um objeto de palavra.
+
+00:01:42.100 --> 00:01:46.200
+Vamos ver este 1º elemento
+e mudá-lo para um comentário.
+
+00:01:46.233 --> 00:01:51.833
+Abaixo, vamos escrever o código
+para adicionar um objeto de palavra.
+
+00:01:54.233 --> 00:01:56.167
+Essa é a forma comum.
+
+00:01:56.200 --> 00:02:00.933
+Criamos um novo objeto de palavra,
+o armazenamos aqui na variável "w"
+
+00:02:00.967 --> 00:02:04.233
+e o adicionamos a variável
+à lista de palavras.
+
+00:02:04.267 --> 00:02:09.167
+Notem que colocamos dois inputs
+no construtor,
+
+00:02:09.200 --> 00:02:11.400
+as palavras em inglês e miwok.
+
+00:02:11.433 --> 00:02:14.900
+Já que temos que mencionar
+a variável "w" apenas uma vez,
+
+00:02:14.933 --> 00:02:18.533
+há uma forma mais resumida
+de escrever essas duas linhas.
+
+00:02:18.567 --> 00:02:22.600
+Esta forma de criar e adicionar
+um objeto de palavra funciona,
+
+00:02:22.633 --> 00:02:25.633
+mas tem uma forma mais curta.
+
+00:02:25.667 --> 00:02:30.233
+Referimos a variável "w"
+apenas uma vez, aqui.
+
+00:02:30.267 --> 00:02:33.900
+Podemos cortar esta parte
+do objeto de palavra
+
+00:02:33.933 --> 00:02:36.300
+e colá-lo diretamente
+no método "add".
+
+00:02:36.333 --> 00:02:39.267
+Dessa forma, não precisamos
+deste passo acima
+
+00:02:39.300 --> 00:02:42.267
+para criar um objeto
+numa linha separada de código
+
+00:02:42.300 --> 00:02:44.667
+e armazená-lo
+numa variável temporária.
+
+00:02:44.700 --> 00:02:47.600
+Podemos deletar esta linha.
+
+00:02:48.467 --> 00:02:52.467
+Inserimos nosso objeto de palavra
+diretamente na lista.
+
+00:02:52.500 --> 00:02:56.267
+Resumindo, o input na lista
+é um novo objeto de palavra,
+
+00:02:56.300 --> 00:03:00.233
+que criamos
+com palavra-chave "new".
+
+00:03:00.267 --> 00:03:04.167
+Vamos preencher a lista
+com os objetos de palavra.
+
+00:03:04.200 --> 00:03:08.267
+Vejam como fica o código
+da ArrayList de palavras.
+
+00:03:08.300 --> 00:03:12.967
+Vamos ver como passamos
+a ArrayList para o Adapter.
+
+00:03:13.000 --> 00:03:17.267
+Temos que mudar este tipo genérico
+de string para palavras.
+
+00:03:17.300 --> 00:03:20.467
+Agora o ArrayAdapter
+contém uma lista de palavras
+
+00:03:20.500 --> 00:03:22.967
+ao invés de strings
+como fonte de dado.
+
+00:03:23.000 --> 00:03:27.067
+Trocamos o recurso de layout
+para ser o novo layout da lista.
+
+00:03:27.100 --> 00:03:31.667
+Vamos colocar o novo código.
+
+00:03:31.700 --> 00:03:35.500
+Não há erros no código
+então vou rodar o app no aparelho.
+
+00:03:35.533 --> 00:03:38.233
+O emulador
+roda a nova versão do app.
+
+00:03:38.267 --> 00:03:40.500
+Vamos ao NumbersActivity.
+
+00:03:40.533 --> 00:03:44.000
+O app travou.
+O que será que foi?
+
+00:03:44.033 --> 00:03:46.967
+Checamos o monitor do Android
+e os logs.
+
+00:03:47.000 --> 00:03:50.967
+No topo do log,
+vemos uma mensagem:
+
+00:03:51.000 --> 00:03:54.133
+java.lang.IllegalStateException:
+
+00:03:54.167 --> 00:03:57.733
+O ArrayAdapter precisa que o ID
+de recurso seja um TextView.
+
+00:03:57.767 --> 00:04:00.900
+Não sabemos
+que isso significa.
+
+00:04:00.933 --> 00:04:05.167
+Vamos ter que pesquisar
+a documentação.
+
+00:04:05.200 --> 00:04:07.933
+Este é o artigo
+sobre ArrayAdapter.
+
+00:04:07.967 --> 00:04:10.533
+Vamos ler a visão geral
+dessa classe.
+
+00:04:10.567 --> 00:04:14.700
+Você pode pausar o vídeo
+se quiser ler o artigo.
+
+00:04:15.500 --> 00:04:18.467
+Aprendemos que, por padrão,
+
+00:04:18.500 --> 00:04:23.667
+a classe exige que o ID de recurso
+se refira a apenas um TextView.
+
+00:04:25.167 --> 00:04:29.233
+O layout de lista do framework
+do Android funcionou
+
+00:04:29.267 --> 00:04:32.733
+porque ele é composto
+por apenas um TextView.
+
+00:04:32.767 --> 00:04:36.167
+O parágrafo seguinte diz
+que dá para adicionar listas
+
+00:04:36.200 --> 00:04:38.167
+ou Arrays
+de objetos customizados.
+
+00:04:38.200 --> 00:04:41.567
+Podemos exibir nossos objetos
+de palavra customizados.
+
+00:04:41.600 --> 00:04:46.033
+Faz sentido porque o ArrayAdapter
+usa tipos genéricos.
+
+00:04:46.067 --> 00:04:50.267
+Então podemos substituir este "T"
+por qualquer tipo de dado.
+
+00:04:50.300 --> 00:04:52.300
+Veja o 3º parágrafo.
+
+00:04:52.333 --> 00:04:54.667
+Para exibir itens de lista
+mais complexos
+
+00:04:54.700 --> 00:04:57.167
+que contêm
+mais de um TextView,
+
+00:04:57.200 --> 00:05:01.333
+temos que fazer um override
+e fornecer um novo getView.
+
+00:05:01.367 --> 00:05:04.033
+O ListView chama
+o método getView
+
+00:05:04.067 --> 00:05:06.667
+quando precisa
+de um novo view na tela.
+
+00:05:06.700 --> 00:05:09.567
+Um dos argumentos de input
+no método
+
+00:05:09.600 --> 00:05:12.067
+é o elemento alvo da lista.
+
+00:05:12.100 --> 00:05:15.367
+Neste caso,
+precisamos da posição 0.
+
+00:05:16.033 --> 00:05:20.467
+Com essa informação, o Adapter
+retorna o View para o ListView
+
+00:05:21.400 --> 00:05:24.700
+que contém os dados
+da posição 0.
+
+00:05:25.600 --> 00:05:29.300
+Pense na relação entre
+o ListView e o getView
+
+00:05:29.333 --> 00:05:34.900
+como se fossem um cirurgião
+e um instrumentador numa operação.
+
+00:05:34.933 --> 00:05:39.233
+Nesta analogia, o instrumentador
+como o getView,
+
+00:05:39.267 --> 00:05:43.633
+dá os instrumentos certos
+para o cirurgião, o ListView,
+
+00:05:43.667 --> 00:05:45.933
+e surge o view certo.
+
+00:05:45.967 --> 00:05:51.133
+O ListView pede o view,
+neste caso, a tesoura.
+
+00:05:51.167 --> 00:05:53.500
+O getView pega
+o que foi requisitado,
+
+00:05:53.533 --> 00:05:56.233
+neste caso, a tesoura,
+
+00:05:56.267 --> 00:05:58.667
+e o entrega para o cirurgião.
+
+00:05:59.367 --> 00:06:04.300
+Por padrão, a classe ArrayAdapter
+espera compor apenas um TextView.
+
+00:06:04.333 --> 00:06:08.600
+Como o layout de lista
+que estamos compondo é complexo
+
+00:06:08.633 --> 00:06:13.800
+e tem dois TextViews
+e, em breve, um ImageView,
+
+00:06:14.467 --> 00:06:18.500
+temos que anular o getView
+com um comportamento customizado.
+
+00:06:18.533 --> 00:06:22.267
+Para fazer isso, temos que colocar
+o ArrayAdapter numa subclasse.
+
+00:06:22.933 --> 00:06:26.800
+Para elaborar, temos que criar
+outra classe de Java.
+
+00:06:26.833 --> 00:06:29.167
+Vamos chamar esta classe
+de WordAdapter
+
+00:06:29.200 --> 00:06:32.200
+e ela vai estender
+a classe ArrayAdapter.
+
+00:06:32.233 --> 00:06:34.433
+Vamos ver como se faz isso.
+
+00:06:34.467 --> 00:06:36.500
+Vamos ao ProjectView.
+
+00:06:37.400 --> 00:06:38.833
+Selecionamos o pacote,
+
+00:06:38.867 --> 00:06:42.533
+clicamos com o botão direito,
+em depois em "New", "Java Class".
+
+00:06:42.567 --> 00:06:45.433
+Este arquivo vai se chamar
+"WordAdapter".
+
+00:06:45.467 --> 00:06:49.333
+Temos que modificar este arquivo
+gerado pelo Android Studio.
+
+00:06:49.367 --> 00:06:52.900
+Queremos que esta declaração
+estabeleça que o WordAdapter
+
+00:06:52.933 --> 00:06:57.167
+se estende para ou herda
+o comportamento do ArrayAdapter.
+
+00:06:57.200 --> 00:07:00.467
+Vamos ver os métodos
+para anular a classe ArrayAdapter,
+
+00:07:00.500 --> 00:07:02.967
+o curso tem que estar
+entre as chaves.
+
+00:07:03.000 --> 00:07:06.233
+Clicamos em "Code"
+e depois "Override Methods".
+
+00:07:06.267 --> 00:07:09.533
+O atalho é CTRL+O.
+
+00:07:09.567 --> 00:07:13.133
+Nesta lista, vamos até getView
+
+00:07:13.167 --> 00:07:14.700
+e clicamos em "OK".
+
+00:07:14.733 --> 00:07:17.467
+Este método é gerado
+automaticamente.
+
+00:07:17.500 --> 00:07:20.833
+Termine sozinho
+os passos necessários
+
+00:07:20.867 --> 00:07:24.633
+para que este app mostre a lista
+de palavras no NumbersActivity.
+
+00:07:24.667 --> 00:07:28.433
+Os passos incluem a implementação
+do método getView.
+
+00:07:28.467 --> 00:07:31.900
+Quando tiver terminado este quiz,
+o app deve parecer assim.
+
+00:07:31.933 --> 00:07:36.333
+Cada item deve conter uma palavra
+miwok sobre a tradução em inglês.
+
+00:07:36.367 --> 00:07:38.500
+Para que você não se perca,
+
+00:07:38.533 --> 00:07:42.567
+exibirei algumas mudanças de código
+necessárias no NumbersActivity.
+
+00:07:42.600 --> 00:07:44.667
+Ao invés do ArrayAdapter,
+
+00:07:44.700 --> 00:07:46.867
+vamos usar um WordAdapter.
+
+00:07:46.900 --> 00:07:50.967
+O construtor da classe WordAdapter
+recebe dois inputs,
+
+00:07:51.000 --> 00:07:54.267
+o contexto
+e esta lista de palavras.
+
+00:07:54.300 --> 00:07:57.500
+Lembre-se de atualizar
+a variável do Adapter aqui.
+
+00:07:57.533 --> 00:08:01.967
+Veja se a sua classe WordAdapter
+funciona com essas mudanças.
+
+00:08:02.000 --> 00:08:05.100
+Se der errado,
+conserte a classe WordAdapter.
+
+00:08:05.133 --> 00:08:07.200
+Sei que o exercício
+é desafiador
+
+00:08:07.233 --> 00:08:10.200
+porque você nunca criou
+um ArrayAdapter customizado
+
+00:08:10.233 --> 00:08:12.167
+ou anulou o método getView.
+
+00:08:12.200 --> 00:08:15.867
+Esta tarefa tem vários passos,
+mas você está pronto.
+
+00:08:15.900 --> 00:08:19.700
+Tenha paciência
+porque esta tarefa requer tempo.
+
+00:08:19.733 --> 00:08:21.367
+Outra dica.
+
+00:08:21.400 --> 00:08:24.900
+Veja este app que tem
+um caso de uso parecido.
+
+00:08:24.933 --> 00:08:29.467
+Este projeto está no gethub
+como uma fonte opensource.
+
+00:08:29.500 --> 00:08:33.067
+Todos podem visualizar
+este código.
+
+00:08:33.100 --> 00:08:36.967
+Há uma licença diferente
+para cada projeto opensource.
+
+00:08:37.000 --> 00:08:40.100
+Veja se há limitações
+de modificação
+
+00:08:40.133 --> 00:08:42.433
+ou distribuição do código
+
+00:08:42.467 --> 00:08:45.967
+caso esteja pesquisando
+um projeto opensource.
+
+00:08:46.000 --> 00:08:49.500
+Este app foi criado na Udacity
+
+00:08:49.533 --> 00:08:52.500
+então você pode usá-la
+e adaptá-la como quiser.
+
+00:08:53.200 --> 00:08:57.900
+Nosso app de Adapter customizado
+chama-se "Android Flavors"
+
+00:08:57.933 --> 00:09:01.400
+e exibe uma lista
+de todas as versões do Android.
+
+00:09:01.433 --> 00:09:04.567
+Cada lista é representada
+por um item de lista.
+
+00:09:04.600 --> 00:09:07.133
+Cada item de lista
+contém uma imagem,
+
+00:09:07.167 --> 00:09:09.967
+um título
+e o número da versão.
+
+00:09:10.633 --> 00:09:13.333
+Este app usa
+um ArrayAdapter customizado
+
+00:09:13.367 --> 00:09:17.633
+chamado FlavorAdapter para
+exibir um item view customizado
+
+00:09:17.667 --> 00:09:21.333
+que contém uma imagem
+e dois TextViews.
+
+00:09:21.367 --> 00:09:25.000
+Você vai praticar a leitura
+de código de outros apps
+
+00:09:25.033 --> 00:09:28.500
+e descobrir como adaptá-lo
+para o nosso app de miwok.
+
+00:09:28.533 --> 00:09:32.933
+Um desenvolvedor sempre vê tutoriais
+ou apps opensource
+
+00:09:32.967 --> 00:09:36.500
+e tenta implementar essas técnicas
+em suas próprias apps.
+
+00:09:36.533 --> 00:09:39.367
+Você pode examinar
+o código deste app
+
+00:09:39.400 --> 00:09:43.333
+clicando no botão "Download ZIP"
+para baixar o código
+
+00:09:43.367 --> 00:09:46.967
+e importá-lo no Android Studio
+como um projeto existente.
+
+00:09:47.000 --> 00:09:50.333
+Você também pode ver o código
+no navegador.
+
+00:09:50.367 --> 00:09:54.267
+Por exemplo, posso clicar em "app",
+"source/main"
+
+00:09:54.933 --> 00:09:58.733
+e navegar
+pelos arquivos Java ou res.
+
+00:09:59.433 --> 00:10:04.333
+Outro atalho bacana do gethub
+é apertar "t" no teclado.
+
+00:10:04.367 --> 00:10:07.567
+Apertei "t" e ativei
+o buscador de arquivos.
+
+00:10:07.600 --> 00:10:11.733
+Posso navegar facilmente
+pelos arquivos no meu projeto.
+
+00:10:11.767 --> 00:10:15.300
+Se quero o "main activity",
+posso digitar "activity",
+
+00:10:15.333 --> 00:10:17.933
+e ele traz o arquivo
+MainActivity.java.
+
+00:10:17.967 --> 00:10:20.633
+Se quero o FlavorAdapter
+que mencionei antes,
+
+00:10:20.667 --> 00:10:22.500
+posso achá-lo aqui.
+
+00:10:22.533 --> 00:10:26.467
+Espero que este exemplo
+o ajude no próximo exercício.
+
+00:10:26.500 --> 00:10:30.233
+O quiz traz instruções específicas
+sobre como começar.
+
+00:10:30.267 --> 00:10:31.467
+Boa sorte.
+

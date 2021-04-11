@@ -1,0 +1,207 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.667
+Seguindo as instruções no teste,
+terão criado a classe Word.
+
+00:00:04.701 --> 00:00:08.634
+O Android Studio nos ajudou
+autogerando um código para nós.
+
+00:00:08.667 --> 00:00:12.667
+Primeiro, na nossa classe,
+a declaramos publicamente acessível.
+
+00:00:12.701 --> 00:00:15.467
+Assim, outras classes,
+como NumbersActivity,
+
+00:00:15.501 --> 00:00:17.234
+poderão acessá-la e usá-la.
+
+00:00:17.267 --> 00:00:21.200
+Também acrescentei o comentário
+acima de declaração de classe,
+
+00:00:21.234 --> 00:00:25.100
+para explicar como a classe
+deve representar uma palavra.
+
+00:00:25.133 --> 00:00:28.567
+Notem que contém uma tradução
+default em inglês,
+
+00:00:28.601 --> 00:00:31.067
+e uma tradução Miwok
+para cada palavra.
+
+00:00:31.100 --> 00:00:35.334
+Portanto, precisaremos de 2 campos
+para o estado do objeto palavra.
+
+00:00:35.367 --> 00:00:37.167
+mDefaultTranslation,
+
+00:00:37.200 --> 00:00:40.767
+que é a palavra numa língua
+que os usuários já conhecem,
+
+00:00:40.801 --> 00:00:42.300
+por exemplo, inglês,
+
+00:00:42.334 --> 00:00:44.767
+e mMiwokTranslation,
+
+00:00:44.801 --> 00:00:47.767
+que é uma palavra
+na língua Miwok.
+
+00:00:47.801 --> 00:00:50.033
+Essas duas aqui
+são privadas,
+
+00:00:50.067 --> 00:00:53.868
+pois só precisamos que sejam
+acessíveis de dentro da classe.
+
+00:00:53.901 --> 00:00:57.167
+Por convenção,
+como são variáveis privadas,
+
+00:00:57.200 --> 00:01:00.234
+acrescentamos um M minúsculo
+para indicar isso,
+
+00:01:00.267 --> 00:01:03.601
+e o M é acrescentado ao início
+de cada nome variável.
+
+00:01:03.634 --> 00:01:08.767
+Precisamos criar o construtor
+que recebe dois parâmetros string.
+
+00:01:08.801 --> 00:01:12.133
+O defaultTranslation
+e o miwokTranslation.
+
+00:01:12.167 --> 00:01:15.601
+Vamos pôr esses valores
+para os nossos dois campos.
+
+00:01:15.634 --> 00:01:17.968
+Para criar
+um novo objeto palavra,
+
+00:01:18.000 --> 00:01:21.567
+a chamada deve passar
+esses dois parâmetros.
+
+00:01:21.601 --> 00:01:25.000
+O construtor deve ficar
+como uma declaração de método.
+
+00:01:25.033 --> 00:01:28.200
+O nome deve bater exatamente
+com o nome de classe,
+
+00:01:28.234 --> 00:01:30.133
+neste caso, Word.
+
+00:01:30.167 --> 00:01:33.400
+E, lembrem-se,
+não tem tipo de retorno.
+
+00:01:33.434 --> 00:01:36.901
+Acrescentaremos dois métodos
+marcados como públicos,
+
+00:01:36.934 --> 00:01:40.701
+para as classes fora da Word
+acessarem estes métodos.
+
+00:01:40.734 --> 00:01:44.234
+Primeiro,
+o método getDefaultTranslation,
+
+00:01:44.267 --> 00:01:46.934
+que dará a tradução
+default da palavra
+
+00:01:46.968 --> 00:01:48.968
+cujo tipo de retorno
+é string.
+
+00:01:49.000 --> 00:01:52.467
+Não aceitará nenhum parâmetro,
+pois seu único propósito
+
+00:01:52.501 --> 00:01:54.400
+é devolver informação.
+
+00:01:54.434 --> 00:01:57.701
+O 2º método
+é o getMiwokTranslation,
+
+00:01:57.734 --> 00:02:00.067
+e vou seguir
+um formato similar.
+
+00:02:00.100 --> 00:02:03.067
+Ele devolve a tradução
+de uma palavra em Miwok,
+
+00:02:03.100 --> 00:02:04.968
+que é
+do tipo de dados string.
+
+00:02:05.000 --> 00:02:07.400
+Coloquem comentários
+acima dos métodos
+
+00:02:07.434 --> 00:02:11.767
+para que as pessoas entendam melhor
+o que esperar de cada um.
+
+00:02:11.801 --> 00:02:14.434
+Podíamos ter acrescentado
+dois métodos
+
+00:02:14.467 --> 00:02:17.501
+para mudar as duas strings
+por chamadas de fora.
+
+00:02:17.534 --> 00:02:20.868
+Mas para o propósito deste app,
+ao criarmos o objeto,
+
+00:02:20.901 --> 00:02:24.567
+não esperamos que as palavras
+em inglês ou em Miwok mudem.
+
+00:02:24.601 --> 00:02:28.200
+Assim, não teremos métodos
+para mudar o estado do objeto.
+
+00:02:28.234 --> 00:02:30.033
+Quando você cria uma classe,
+
+00:02:30.067 --> 00:02:34.400
+você decide que métodos
+quer expor às classes de fora.
+
+00:02:34.434 --> 00:02:35.767
+Aqui está.
+
+00:02:35.801 --> 00:02:40.601
+A classe Word definida totalmente,
+com a declaração, estado,
+
+00:02:40.634 --> 00:02:43.434
+construtor e métodos.
+
+00:02:43.467 --> 00:02:46.567
+Bom trabalho em definir
+sua primeira classe.
+

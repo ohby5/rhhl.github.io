@@ -1,0 +1,333 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.450 --> 00:00:04.370
+Hozirga qadar siz massiv yaratish va 
+uni initsializatsiya qilishni mashq qildingiz.
+
+00:00:04.370 --> 00:00:07.270
+Endi siz massivning elementlariga 
+murojaat qilishni mashq qilishga o‘tasiz.
+
+00:00:07.270 --> 00:00:08.480
+Buni bilgan holda, siz 
+
+00:00:08.480 --> 00:00:12.650
+massiv indeksi qiyamtini text view da
+ matn chiqarishga ishlatishingiz mumkin.
+ 
+5
+00:00:12,650 --&gt; 00:00:15,700
+Ho‘sh,hozircha
+siz massiv elementlariga murojaat qilib
+
+00:00:15.700 --> 00:00:18.140
+qiymatni Android log lariga 
+chiqarasiz.
+
+00:00:18.140 --> 00:00:22.240
+Eslab qoling, siz logcat manager da
+ mana shu tugma orqali foydalanish huquqiga ega bo‘lasiz.
+
+00:00:22.240 --> 00:00:26.700
+Bizga shu kodni o‘zi berilgan, va 
+hozircha u ekranda hech narsani ko‘rsatmayapti.
+
+00:00:26.700 --> 00:00:28.920
+Aytgancha, yodingizda bo‘lsa biz orqaga 
+qaytishni Boshlang‘ichlar uchun Android 
+
+00:00:28.920 --> 00:00:30.100
+kursida o‘rgangan edik. 
+
+00:00:30.100 --> 00:00:32.840
+Shunday qilib, u yerda biz Android qurilmasida nima
+ sodir bo‘lyatganligi haqidagi ma’lumotga ega 
+
+00:00:32.840 --> 00:00:34.310
+log sistemasini ham muhokama qilgan edik.
+
+00:00:34.310 --> 00:00:36.730
+Bu ishlayotgan log 
+tizimdan keladigan xabarlar.
+
+00:00:36.730 --> 00:00:40.420
+Siz buni, bo‘lgan hodisalarning sanasini va
+ tavsilotlarini saqlaydigan kundalik sifatida 
+
+00:00:40.420 --> 00:00:41.765
+qabul qilsangiz bo‘ladi.
+
+00:00:41.765 --> 00:00:43.220
+Bunday xatlar sistemasi nosozliklarni 
+tuzatish uchun juda foydali bo‘lib, 
+
+00:00:43.220 --> 00:00:46.140
+orqaga qaytib nosozlik bo‘lgunga 
+qadar qurilmada nimalar bo‘lganini 
+
+00:00:46.140 --> 00:00:49.570
+bilishimizga ham imkon yaratadi.
+
+00:00:49.570 --> 00:00:52.350
+Siz bunga o‘z-o‘zidan biz birinchi martta
+ Java ilovasini Android uchun Boshlang‘ichlar 
+
+00:00:52.350 --> 00:00:54.370
+kursida yaratganimizda guvoh
+bo‘lgansiz.
+
+00:00:54.370 --> 00:00:55.600
+Ilova ishdan chiqqanida,
+
+00:00:55.600 --> 00:00:59.540
+biz log da tuzatish uchun kerak bo‘ladigan 
+xato xabarlarini ko‘rishimiz mumkin edi. 
+
+00:00:59.540 --> 00:01:03.886
+Android Studioning logcat oynasida
+xatlar chiqgani yodingizdami? 
+
+00:01:03.886 --> 00:01:06.526
+Endi log nafaqat xatolarni ko‘rishimiz, 
+
+00:01:06.526 --> 00:01:09.432
+balki dasturchi sifatida unga 
+habar ham yozsak bo‘ladi.
+
+00:01:09.432 --> 00:01:12.680
+Biz bu jurnalga yozish jarayonini,
+ logging deb ataymiz.
+
+00:01:12.680 --> 00:01:14.400
+Bu bizga ilovamizni vaqtincha tuzatishga,
+yoki uning holatini ishga tushgan vaqtida 
+
+00:01:14.400 --> 00:01:17.640
+qayta tekshirishga yordam beradi.
+
+00:01:17.640 --> 00:01:20.710
+Shunday qilib, bu uzulish nuqtalarini qo‘shib
+ har hil o‘zgaruvchilarning ilovadagi holatini 
+30
+00:01:20,710 --&gt; 00:01:23,140
+tekshiradigan tuzatish vositasiga
+o‘xshar ekan, va bizga ayrim bir o‘zgaruvchilarni
+
+00:01:23.140 --> 00:01:26.590
+qiymatini log ga yozib qo‘yishga yordam beradi.
+
+00:01:26.590 --> 00:01:29.480
+Ammo, men ko‘proq qayd yozuvlarini ishlatishni 
+yaxshi ko‘raman,chunki ular tezroq ishlaydi.
+
+00:01:29.480 --> 00:01:32.350
+Shunday qilib, siz ilovadagi har bir kod satrlarini
+ qo‘lda tekshirib o‘tirish o‘rniga 
+
+00:01:32.350 --> 00:01:36.640
+ilovani o‘z holicha ishga tushishiga qo‘yib berib,
+log habarlarini yo‘l davomida bosib chiqarishiga guvoh bo‘lasiz.
+
+00:01:36.640 --> 00:01:39.490
+Ho‘sh, bu qanday qilib jurnal habarlarini
+ yozish haqidagi juda foydali maqola.
+
+00:01:39.490 --> 00:01:42.860
+Jurnal xabari uchun faqat bir
+ satr kod kerak bo‘ladi.
+
+00:01:42.860 --> 00:01:46.280
+Qarang, jurnal xabarlarining 5ta har xil
+ kategoriyasi mavjud bo‘lib,
+
+00:01:46.280 --> 00:01:49.412
+xabar qanchalik shoshilinch va 
+muhimliga qarab asoslanadilar.
+
+00:01:49.412 --> 00:01:51.170
+Ho‘sh u oddiy, yani sрunchaki bilib qo‘yish
+
+00:01:51.170 --> 00:01:55.250
+yaxshi bo‘lgan xabarlardan, 
+xato, og‘ir muammolarga, ilova kutilmagan xatti-harakatlar
+
+00:01:55.250 --> 00:01:59.640
+ qilishiga olib keluvchi xabarlar bilan farqlanadi.
+
+00:01:59.640 --> 00:02:03.360
+Hozircha, biz oddiy, ayrim o‘zgaruchilar
+ holatini tekshirishga yordam beruvchi 
+
+00:02:03.360 --> 00:02:05.950
+jurnal hatlari bilan ishlaymiz.
+
+00:02:05.950 --> 00:02:10.900
+Diqqat qiling, hamma jurnal habarlari uchun 
+biz kirituvchi sifatida ikki satrdan foydalanamiz 
+
+00:02:10.900 --> 00:02:13.710
+Ho‘sh birinchi bo‘lib shu Log.v usuliga bosib,
+
+00:02:13.710 --> 00:02:17.005
+birinchi kirituvchi parametritag nomi
+ ekanligini ko‘rishimiz mumkin.
+
+00:02:17.005 --> 00:02:20.665
+Shunday qilib, har kim jurnallarga, Android 
+tizimlariga, va boshqa ilovalarga chiqarishi mumkin.
+
+00:02:20.665 --> 00:02:24.305
+Biz bu tag ni xat qayerdan kelganini
+ bilish uchun ishlatamiz.
+
+00:02:24.305 --> 00:02:27.205
+Ko‘pincha, tag uchun biz harakat yoki 
+ro‘yxatga olish bayonoti topilgan 
+
+00:02:27.205 --> 00:02:29.235
+sinf nomini ishlatamiz.
+
+00:02:29.235 --> 00:02:31.995
+Masalan, raqamlar faoliyatida bayonot jurnali bo‘lsa,
+
+00:02:31.995 --> 00:02:34.885
+tag nomini raqamlar faoliyati satri 
+ostida saqlab qo‘ysak bo‘ladi.
+
+00:02:34.885 --> 00:02:37.135
+Ikkinchi parametr bu xabar,va 
+
+00:02:37.135 --> 00:02:39.840
+bu faqat jurnalda ko‘rinadigan xabardir.
+
+00:02:39.840 --> 00:02:42.970
+Va ikkinchi parametr bu xabar, va bu xabarni biz 
+
+00:02:42.970 --> 00:02:46.790
+faqatgina jurnalda ko‘ramiz, va 
+bu siz xohlagan qayd bo‘lishi mumkin. 
+
+00:02:46.790 --> 00:02:50.641
+Asosiy maqolaga qaytadigan bo‘lsak, biz 
+bu yerda misolni ko‘rishimiz mumkin.
+
+00:02:50.641 --> 00:02:56.354
+Bu Log.I usul chaqiruvi, yani mana 
+bu yerdan bilishimiz bo‘yicha ma‘lumot jurnali. 
+
+00:02:56.354 --> 00:03:01.350
+Ko‘rishimiz mumkinki, bu yerda tag nomi asosiy 
+faoliyat nomi va xabar mana bu yerda. 
+
+00:03:01.350 --> 00:03:06.290
+Bizning xabar parametrimizda, qo‘shuv 
+operatorini satrga o‘zaro bog‘lash uchun ishlatamiz.
+
+00:03:06.290 --> 00:03:09.793
+Satr bog‘lanishini, biz satr qo‘shuvi
+ deb atasak ham bo‘ladi.
+
+00:03:09.793 --> 00:03:11.969
+Xuddi raqamlarni qo‘shganimiz kabi,
+
+00:03:11.969 --> 00:03:14.407
+biz satrlarni ham qo‘shuv operatori 
+bilan bog‘lashimiz mumkin.
+
+00:03:14.407 --> 00:03:18.701
+Ushbu holatda, biz bu starni shu
+ holatdagi o‘zgaruvchi bilan uzunroq
+
+00:03:18.701 --> 00:03:20.490
+satr yaratish maqsadida bog‘layapmiz.
+
+00:03:20.490 --> 00:03:24.100
+Ho‘sh, logcat da, siz MyActivity ni 
+tag nomida sifatida ko‘rishingiz mumkin.
+
+00:03:24.100 --> 00:03:29.270
+Va MyClass.View xabari 1 sonli elementni oladi.
+
+00:03:29.270 --> 00:03:33.010
+Bu usha joylashuvdagi o‘zgaruvchining
+ qiymati birligini hisobga olgan holda. 
+
+00:03:33.010 --> 00:03:35.650
+Mana sizga NumbersActivity mizdagi misol.
+
+00:03:35.650 --> 00:03:40.568
+Men shu ikkita jurnal xabarlarini 
+onCreate usuli tagiga qo‘shdim
+
+00:03:40.568 --> 00:03:42.326
+Endi esa ilovani qurilmamda ishga tushiraman. 
+
+00:03:42.326 --> 00:03:44.128
+[AUDIO YO‘Q]
+
+00:03:44.128 --> 00:03:47.931
+Endi, ilova ishga tushayotganida men raqamlar 
+faoliyatiga navigatsiya qilaman 
+
+00:03:47.931 --> 00:03:50.890
+va e’tibor bering, shu ikkita 
+habar jurnal chiqishida paydo bo‘ldi.
+
+00:03:52.090 --> 00:03:56.165
+Shunday qilib, biz 0chi indeks so‘zi bir va 
+
+00:03:56.165 --> 00:03:58.310
+birinchi indeksda ikki ekanligiga guvoh bo‘lamiz.
+
+00:03:58.310 --> 00:03:59.310
+Endi bu yerdagi ikkita narsaga ahamiyat bering. 
+
+00:04:00.340 --> 00:04:04.250
+Birinchi bo‘lib, biz ikki nuqtadan so‘ng 
+bufer joy tashlab ketishimiz kerak,
+
+00:04:04.250 --> 00:04:07.440
+butun matn birlashib ketmasligini 
+oldini olish uchun.
+
+00:04:07.440 --> 00:04:10.215
+Ikkinchidan esa, bu yerda biz words[0] 
+ni qavsga olmadik 
+
+00:04:10.215 --> 00:04:15.010
+chunki bizga bu indeksdagi qiymat kerak,
+
+00:04:15.010 --> 00:04:20.010
+tom ma’nodagi qavsdagi satr emas. 
+
+00:04:20.010 --> 00:04:23.200
+Umumlashtiradigan bo‘lsak, jurnal habarini 
+ekranga chiqarish o‘zgaruvchini qiymati 
+
+00:04:23.200 --> 00:04:26.360
+siz kutayotgan qiymatda ekanligiga amin 
+bo‘lishga yordam beradigan juda foydali yo‘l
+
+00:04:27.470 --> 00:04:31.900
+Shunday qilib, bu jurnal xabarlari vaqtincha bo‘ladi,
+ keyinroq biz ularni olib tashlaymiz.
+
+00:04:31.900 --> 00:04:34.590
+Endi esa qayd etishni Miwok ilovasida sinab ko‘ramiz.
+
+00:04:34.590 --> 00:04:37.330
+Koddagi xabarlarni qayd qilish uchun vaqt ajrating,
+
+00:04:37.330 --> 00:04:40.360
+va matn massivining har bir elementining 
+qiymatini ko‘rib chiqing.
+
+00:04:40.360 --> 00:04:43.500
+Shunday qilib, bu biz kutgan natija,
+endi esa davom eting 
+
+00:04:43.500 --> 00:04:44.970
+va tugagach shu qutini tekshiring.
+

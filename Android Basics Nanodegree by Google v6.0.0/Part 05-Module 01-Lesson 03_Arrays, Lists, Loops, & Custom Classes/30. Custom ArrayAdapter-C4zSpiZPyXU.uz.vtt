@@ -1,0 +1,581 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.410 --> 00:00:03.510
+Demak, mana endi siz ro‘yxat ko‘rinishi va 
+custom array adapter ga ega na’munaviy ilova 
+
+00:00:03.510 --> 00:00:05.340
+qanday ishlashini tushunib oldingiz.
+
+00:00:05.340 --> 00:00:06.510
+Bu o‘zimizning ilovamizda keyinchalik qanday qilib 
+
+00:00:06.510 --> 00:00:09.790
+mos ravishdagi o‘zgartirishlarni amalga oshirishni
+tushunish uchun ajoyib boshlanish.
+
+00:00:09.790 --> 00:00:14.580
+Haligi Android Flavor ilovasi ikkita matn ko‘rinishga 
+va har bitta ro‘yxatdagi narsa uchun rasmga ega edi.
+
+00:00:14.580 --> 00:00:18.320
+Miwok ilovasida esa, bizga 
+ikkita matn ko‘rinishi kerak bo‘ladi.
+
+00:00:18.320 --> 00:00:21.080
+Shuning uchun biz custom array adapter ini
+yaratishimiz kerak bo‘ladi.
+
+00:00:21.080 --> 00:00:24.740
+chunki default adapter faqatgina 
+bittagina matn ko‘rinishi bilan ishlay oladi.
+
+00:00:24.740 --> 00:00:26.878
+Demak, testning birinchi sharti bilan 
+boshlasak.
+
+00:00:26.878 --> 00:00:30.700
+Birinchidan, biz sizdan word object lar ro‘yxatini 
+yaratishni so‘ragan edik va endi word object larining
+
+00:00:30.700 --> 00:00:32.530
+ArrayList uchun qilingan kodiga nazar tashlasak.
+
+00:00:32.530 --> 00:00:36.880
+Shunga e’tibor beringki, har bitta yaratilgan word object 
+Inglizcha va "Miwok" tarjimali juftlikka ega.
+
+00:00:36.880 --> 00:00:39.740
+Shuning uchun kiritilayotgan input larning tartibiga ya’ni 
+birinchi Inglizcha so‘z va keyin "Miwok" so‘z
+
+00:00:39.740 --> 00:00:41.000
+kiritilishiga e’tibor bering, chunki
+
+00:00:41.000 --> 00:00:44.750
+bunday qilishimizga sabab biz "word constructor"ni 
+shu tarzda tuzgan edik.
+
+00:00:44.750 --> 00:00:47.680
+Demak, avvalgi NumbersActivity da 
+sizdan adapter ning yaratilish yo‘lini 
+
+00:00:47.680 --> 00:00:51.290
+takomillashtirishni va uni ro‘yxat ko‘rinishida ifodalashni
+so‘ragan edik.
+
+00:00:51.290 --> 00:00:54.170
+Shu sababli, biz sizga kodning ba’zi bir qismini ko‘rsatgan edik.
+Siz shu kodni word adapter 
+
+00:00:54.170 --> 00:00:56.940
+to‘g‘ri ishlashi uchun NumberActivity ga
+qo‘shishingiz mumkin edi.
+
+00:00:56.940 --> 00:00:59.530
+Biz sizdan eski ArrayAdapter kodini o‘chirib
+tashlashni so‘radik va 
+
+00:00:59.530 --> 00:01:02.310
+undan so‘ng onCreate method mana bu
+kabi ko‘rinishga ega bo‘lishi kerak.
+
+00:01:02.310 --> 00:01:05.019
+Bu yerda biz yana yangi 
+WordAdapter object ini yaratyapmiz va 
+
+00:01:05.019 --> 00:01:07.340
+uni adapter nomli o‘zgaruvchiga saqlayapmiz.
+
+00:01:07.340 --> 00:01:09.650
+Biz constructor chaqiryapmiz va 
+konteksga o‘tkazyapmiz. 
+
+00:01:09.650 --> 00:01:13.329
+Mana bu aynan shuni anglatadi,
+ya’ni bu NumbersActivity ni anglatadi va
+
+00:01:13.329 --> 00:01:16.480
+keyin word object larni 
+array ga o‘tkazadi.
+
+00:01:16.480 --> 00:01:20.570
+Keyin u yerda biz lists IDli layout dagi 
+ro‘yxat ko‘rinishini topishimiz mumkin.
+ 
+28
+00:01:20,570 --&gt; 00:01:22,850
+Va adapter ni unga joylashtiramiz.
+
+00:01:22.850 --> 00:01:26.990
+Keyin uchinchi qadamda esa, biz sizdan yangi
+word adapter klassini yaratishni so‘ragan edik.
+
+00:01:26.990 --> 00:01:29.720
+Va sizga buni qanday bajarilishi kerak ekanligi haqida 
+oldinroq videoda ko‘rsatib o‘tgan edik.
+
+00:01:29.720 --> 00:01:33.620
+To‘rtinchi bosqichda esa, biz class declaration ni
+takomillashtirdik va bunga sabab esa word adapter 
+
+00:01:33.620 --> 00:01:37.940
+extend bo‘lishi uchun yoki array adapter class dan 
+nasl qila olishi uchun edi.
+
+00:01:37.940 --> 00:01:41.391
+Demak, bu yerda word class ni generic parameter deb 	
+aniqlashtirar ekanmiz, biz shuni kutamizki, 
+
+00:01:41.391 --> 00:01:46.040
+ArrayAdapter ning ma’lumotlar manbasi 
+word object larining ro‘yxatiga kirishi kerak bo‘ladi.
+
+00:01:46.040 --> 00:01:49.730
+Endi, beshinchi bosqichda esa, biz sizdan 
+uslub uchun yangi qo‘llanish yo‘lini 
+
+00:01:49.730 --> 00:01:52.540
+ko‘rsatish uchun getView metodni
+qayta yozishni so‘ragan edik. 
+
+00:01:52.540 --> 00:01:55.360
+Shu sababli, bu yerdagi kod 
+Android Studio tomonidan yozilgan edi. 
+
+00:01:55.360 --> 00:02:00.570
+Siz yoki klaviatura yorlig‘ini ishlatishingiz, ya’ni
+Control + o ni bosishingiz yoki bu yerga o‘tishingiz kerak edi.
+
+00:02:00.570 --> 00:02:04.210
+Kod yozish uchun, tanlangan getView 
+uslubni Override - qayta yozing. 
+
+00:02:04.210 --> 00:02:07.930
+Oltinchi qadam uchun esa, biz sizdan bu uslubni
+o‘zingiz xohlagan tarzda ishlatishni so‘radik va 
+
+00:02:07.930 --> 00:02:12.180
+AndroidFlavor ilovasini misol 
+tariqasida keltirgan edik.
+
+00:02:12.180 --> 00:02:14.110
+Shuning uchun, keling AndroidFlavor 
+ilovasini ochaylik.
+
+00:02:14.110 --> 00:02:14.850
+Mana bu yerda 
+
+00:02:14.850 --> 00:02:18.890
+customer array adapter misolidagi 
+AndroidFlavor adapter uchun yozilgan kodni ko‘rishimiz mumkin. 
+
+00:02:18.890 --> 00:02:21.410
+Pastroqda esa, bu yerda uning getView metodi
+
+00:02:21.410 --> 00:02:25.045
+sezganingizdek bu yerdagi mantiq, Miwok ilovasiga 
+kerak bo‘lgan getView metodning mantig‘iga o‘xshab ketadi. 
+
+00:02:25.045 --> 00:02:27.664
+Shuning uchun, shu qismdan nusxa olaylikda, 
+o‘zimizning kodimizga ko‘chirib tashlaylik.
+
+00:02:27.664 --> 00:02:34.172
+[Biroz sukunat]
+
+00:02:34.172 --> 00:02:37.210
+Demak, men kodni WordAdapter class iga 
+nusxa qilib tashladim. 
+
+00:02:37.210 --> 00:02:39.980
+Avvalo, biz shunga ishonch hosil qilishimiz kerakki, 
+to‘g‘ri ma’lumotga ega bo‘lmasak ham, ro‘yxatli band
+
+00:02:39.980 --> 00:02:41.420
+ko‘rinishga ega bo‘lishimiz kerak.
+
+00:02:41.420 --> 00:02:45.030
+Shu sababli oldin kirish parametri bo‘lib 
+ishlatilgan ko‘rinishni ishlatishga harakat qilib ko‘rishimiz mumkin.
+
+00:02:45.030 --> 00:02:48.350
+Ammo, bu narsa nolga teng ham bo‘lib qolishi mumkin va 
+bu shuni anglatadiki, bu yerda qayta ishlatgani 
+
+00:02:48.350 --> 00:02:49.310
+ko‘rinish bo‘lmasligi mumkin.
+
+00:02:49.310 --> 00:02:52.720
+Bu holatda esa, biz ro‘yxat bandi layout idan 
+boshidan boshlab inflate qilishimizga to‘g‘ri keladi.
+
+00:02:52.720 --> 00:02:56.040
+Biz Android dan LayoutInflator ni ishlata olamiz,
+va inflate metodini chaqiramiz 
+
+00:02:56.040 --> 00:03:00.490
+layout resursi IDisini kirgizamiz, so‘ngra ota ko‘rinishni.
+U ro‘yxat ko‘rinish va false ni o‘z ichiga oladi.
+
+00:03:00.490 --> 00:03:03.490
+Chunki biz list item view ini parent item view iga 
+
+00:03:03.490 --> 00:03:05.100
+biriktirib qo‘ymasligimiz kerak hozircha.
+
+00:03:05.100 --> 00:03:08.470
+Keyingi bosqichda biz word object ni so‘ralgan
+holatida topib berishimiz kerak bo‘ladi 
+
+00:03:08.470 --> 00:03:09.032
+shundan keyin biz
+
+00:03:09.032 --> 00:03:12.940
+o‘sha layout dagi ko‘rinishlarga
+mos keladigan ma’lumotni joylashtira olamiz.
+
+00:03:12.940 --> 00:03:16.960
+Shunday qilib, superclass array adapter idan keladigan 
+getItem metodini chaqiramiz
+
+00:03:16.960 --> 00:03:20.840
+va u kiritilgan ma’lumotni o‘zi 
+xohlagan holatda qabul qiladi.
+
+00:03:20.840 --> 00:03:24.600
+Endi biz getItem dan Android flavor object ni
+qaytarishni o‘rniga word object ni qaytarishini 
+
+00:03:24.600 --> 00:03:28.400
+talab qilamiz va bunga sabab bizning class declaration imizda 
+array adapter dan nasl qilishimiz kerak deyilgan
+
+00:03:28.400 --> 00:03:33.370
+va bu yerda getItem metodining 
+qaytarish turi so‘z bo‘lishi kerak.
+
+00:03:33.370 --> 00:03:37.090
+Endi get item metodining 
+hujjatlariga nazar tashlasak.
+
+00:03:37.090 --> 00:03:41.280
+Va mana bu yerda ArrayAdapter class idagi
+get item method idning hujjatlari.
+
+00:03:41.280 --> 00:03:44.390
+Bu yerda biz qayerda generic parameter T ni
+ko‘rsak uni 
+
+00:03:44.390 --> 00:03:46.370
+datatype so‘zi bilan 
+almashtirishimiz mumkin.
+
+00:03:46.370 --> 00:03:49.070
+Endi kodimizga qaytsak ... 
+
+00:03:49.070 --> 00:03:51.120
+Mana bu yerdagi keyingi uchta qism uchun
+
+00:03:51.120 --> 00:03:53.670
+bizning layout hech qanday 
+rasm ko‘rinishiga ega emas hozircha.
+
+00:03:53.670 --> 00:03:56.720
+Shuning uchun ImageView ga rasm 
+qo‘yilishi uchun yozilgan mana bu
+
+00:03:56.720 --> 00:03:58.270
+kodlar qatorini o‘chirib tashlasak ham bo‘ladi.
+
+00:03:58.270 --> 00:04:01.340
+Endi listItem XML layout iga 
+o‘tsak. 
+
+00:04:01.340 --> 00:04:05.185
+Yodingizda bo‘lsa bu yerda bizda 
+ikkita TextView lar bor,
+
+00:04:05.185 --> 00:04:10.000
+birinchisi miwok_text_view IDisi bilan nomlangan
+va ikkinchisi default_text_view IDisi bilan nomlangan. 
+
+00:04:10.000 --> 00:04:12.868
+Va shunga ham e’tibor beringki, agar siz bularni 
+boshqacha nomlashga qaror qilgan bo‘lsangiz 
+ 
+81
+00:04:12,868 --&gt; 00:04:14,060
+sizda ular boshqacha nomlangan bo‘lishi ham mumkin.
+
+00:04:14.060 --> 00:04:18.720
+Bu shuni anglatadiki ortdagi word adapter class ida
+list item view o‘zgaruvchi hozir
+
+00:04:18.720 --> 00:04:22.740
+list item layout uchun 
+ildiz joylashuv tartibiga a’loqador bo‘lyapti.
+
+00:04:22.740 --> 00:04:27.110
+Shu sababli agar find view ni 
+list item view dan IDisi bilan chaqirsak,
+
+00:04:27.110 --> 00:04:30.820
+biz Miwok text view ini topishimiz mumkin va 
+uni topganimizdan keyin 
+
+00:04:30.820 --> 00:04:34.364
+biz ko‘rinishni text view ga o‘tkazishimiz mumkin, chunki bu text view da.
+
+00:04:34.364 --> 00:04:38.570
+Demak, endi uni Miwok text view o‘zgaruvchiga
+saqlang. 
+
+00:04:38.570 --> 00:04:42.700
+Undan keyin text view ga 
+text method ni qo‘yib chaqirishimiz mumkin va
+
+00:04:42.700 --> 00:04:45.370
+keyin ekranga chiqishi kerak bo‘lgan 
+yangi matnni kiriting. 
+
+00:04:45.370 --> 00:04:48.701
+Va shunday qilamiz, Miwok satr
+tarjimasini hozirgi word object dan olamiz.
+
+00:04:48.701 --> 00:04:53.242
+[Bir oz Sukunat] 
+
+00:04:53.242 --> 00:04:55.998
+Shu sababli bu yerdagi kodlar qatorini o‘qish 
+sal qiyinroq bo‘lishi mumkin.
+
+00:04:55.998 --> 00:04:59.425
+Lekin keling avval qavslar ichidagi 
+ifodani o‘qish bilan boshlasak. 
+
+00:04:59.425 --> 00:05:04.130
+Hozirgi word object da
+biz getMiwokTranslation metodni chaqiramiz. 
+
+00:05:04.130 --> 00:05:07.703
+Va bu Miwok so‘zli satrni 
+qaytaradi va u text method 
+
+00:05:07.703 --> 00:05:11.200
+Miwok TextView object 
+uchun kirish bo‘lib qoladi.
+
+00:05:11.200 --> 00:05:13.895
+Demak hozir Miwok TextView 
+Miwok so‘zini ekranda ko‘rsatishi kerak.
+
+00:05:13.895 --> 00:05:17.475
+Va so‘ngra biz aynan shu bosqichlarni 
+default TextView uchun ham qaytaramiz.
+
+00:05:17.475 --> 00:05:21.015
+Shunday ekan listItemView list_item layout dagi 
+chiziqli joylashuv tartibiga yo‘naltiradi.
+
+00:05:21.015 --> 00:05:24.935
+Shunda biz findViewById ini chaqiramiz 
+uning barcha kichik funksiyalarini (farzandlarini) topish uchun. 
+
+00:05:24.935 --> 00:05:29.079
+Biz view ni default text view IDisi 
+bilan topamiz va uni matn ko‘rinishiga o‘tkazamiz 
+
+00:05:29.079 --> 00:05:32.817
+va uni defaultTextView nomli o‘zgaruvchiga 
+saqlaymiz.
+
+00:05:34.157 --> 00:05:38.657
+Undan so‘ng biz currentWord object dagi 
+getDefault tarjima qiladigan uslubni
+
+00:05:38.657 --> 00:05:42.207
+chaqiramiz va bu bizga Ingliz tilidagi 
+satrni chiqarishda yordam beradi. 
+
+00:05:42.207 --> 00:05:45.177
+Endi bu defaultTextView dagi 
+setText metod uchun 
+
+00:05:45.177 --> 00:05:47.137
+input ga aylanadi.
+
+00:05:47.137 --> 00:05:50.720
+Hozir endi defaultTextView 
+Inglizcha so‘zni ekranda ko‘rsatishi kerak.
+
+00:05:50.720 --> 00:05:51.950
+Shularning barchasi bajarilgandan so‘ng, 
+
+00:05:51.950 --> 00:05:55.380
+bu list item view ni qaytaradigan qilishimiz kerak. 
+
+00:05:55.380 --> 00:06:00.270
+Shu orqali list view o‘zining qaytarish qiymatini 
+o‘ziga oladi va uni o‘zi uchun kichik funksiya (farzand) qilib qo‘shib oladi.
+
+00:06:00.270 --> 00:06:01.880
+Huuuhh...!
+Bu juda mashaqqatli bo‘ldi, lekin
+
+00:06:01.880 --> 00:06:03.330
+biz bilan bo‘lganingiz uchun rahmat.
+
+00:06:03.330 --> 00:06:04.770
+Xulosa qiladigan bo‘lsak,
+
+00:06:04.770 --> 00:06:08.830
+bizning getView metodimizda
+biz birinchi bo‘lib list item view ni olamiz.
+
+00:06:08.830 --> 00:06:11.510
+Bunda biz bizga oldindan berilganini ishlatishimiz 
+yoki yangisini boshidan 
+
+00:06:11.510 --> 00:06:13.940
+yaratib ishlatishimiz mumkin.
+
+00:06:13.940 --> 00:06:16.650
+Keyin biz berilgan holatdan 
+word object ni olamiz va
+
+00:06:16.650 --> 00:06:19.850
+undan keyin list item layout dagi
+ko‘rinishlarni qidirishni boshlaymiz va 
+
+00:06:19.850 --> 00:06:22.480
+word object dan olingan 
+ma’lumotlarni ularga kiritamiz.
+
+00:06:22.480 --> 00:06:25.880
+Va nihoyat, biz yangilangan 
+ListItemView ni qaytarishimiz mumkin.
+
+00:06:25.880 --> 00:06:27.900
+Endi kodni ishga tushirib ko‘rsak.
+
+00:06:27.900 --> 00:06:30.170
+Hm, numbers activity da 
+xato yuzaga kelganga o‘xshaydi.
+
+00:06:30.170 --> 00:06:33.450
+Word Adapter ni yaratishda 
+xato yuzaga kelgan deyapti.
+
+00:06:34.750 --> 00:06:37.870
+Buning sababi biz word adaptor da
+konstruktor yaratishni esimizdan chiqardik.
+
+00:06:37.870 --> 00:06:41.370
+Shuni esda tutingki, u ikkita input oladi -
+kontaktlar va so‘zlarning ro‘yxati. 
+
+00:06:41.370 --> 00:06:42.490
+Endi shuni hozir amalga oshirsak.
+
+00:06:43.530 --> 00:06:46.290
+FlavorAdapter ilovani
+misol tariqasida ko‘rsak.
+
+00:06:46.290 --> 00:06:49.040
+Oldingi videoda konstrukrorni
+tasvirlagan edik.
+
+00:06:49.040 --> 00:06:50.720
+Agar sizga kerak bo‘lsa 
+o‘sha videoga murojat qilishingiz mumkin.
+
+00:06:51.990 --> 00:06:55.510
+Mana biz yana Flavor ilovani
+misol qilib ko‘rsak bo‘ladi.
+
+00:06:55.510 --> 00:06:58.600
+Oldingi videoda konstruktorni
+tasvirlagan edik.
+
+00:06:58.600 --> 00:07:00.750
+o‘sha videoga murojat qilishingiz mumkin.
+
+00:07:00.750 --> 00:07:04.190
+Biz Word Adapter imiz uchun 
+shunga o‘xshagan narsa kerak bo‘ladi.
+
+00:07:04.190 --> 00:07:06.847
+Shuning uchun bu konstruktorni 	
+mana bu yerga nusxa qilib tashlayman va uni ishlatishni boshlayman.
+
+00:07:06.847 --> 00:07:09.122
+[Biroz Sukunat] 
+
+00:07:09.122 --> 00:07:12.670
+Word Adapter class ning teppasiga
+avvalroq ko‘chirib olgan konstruktorni
+
+00:07:12.670 --> 00:07:13.920
+tashlayman.
+
+00:07:13.920 --> 00:07:18.050
+Endi Android Flavout adapter ning o‘rniga 
+bizga word adapter kerak
+
+00:07:18.050 --> 00:07:21.700
+chunki konstruktor nomi 
+klass nomi bilan bir xil bo‘lishi kerak.
+
+00:07:21.700 --> 00:07:24.860
+Shuningdek, mana bu yerdagi ro‘yxatning o‘rniga 
+Android Flavors ro‘yxatining o‘rniga 
+
+00:07:24.860 --> 00:07:26.740
+bizga so‘zlar ro‘yxati kerak. 
+
+00:07:26.740 --> 00:07:30.810
+Va nihoyat konstruktorning ichida,
+biz superclass Android adaptors konstruktorni 
+
+00:07:30.810 --> 00:07:35.070
+chaqirishimiz mumkin va bunda biz kontekstni, 
+layout manbaning IDisini, va ob’ektlar
+
+00:07:35.070 --> 00:07:36.480
+ro‘yxatini kiritishimiz kerak.
+
+00:07:36.480 --> 00:07:38.800
+Shu sababli, biz buni 
+baravariga yangilab borishimiz kerak bo‘ladi.
+
+00:07:38.800 --> 00:07:41.760
+Shuni esda tutingki, layout resource IDisi
+uchun nolni kiritishimiz mumkin 
+
+00:07:41.760 --> 00:07:45.520
+chunki layout ni biz 
+get view metod ichida o‘zimiz yaratganmiz. 
+
+00:07:45.520 --> 00:07:47.550
+Ilovaning o‘zi mobil qurilmada 
+mana bunday ko‘rinishga ega. 
+
+00:07:47.550 --> 00:07:50.280
+Number activity ga o‘tar ekanmiz.
+
+00:07:50.280 --> 00:07:50.980
+Yaxshi.
+
+00:07:50.980 --> 00:07:53.980
+Bu yerda Miwok va Inglizcha so‘zlar 
+ro‘yxatini ko‘rishimiz mumkin.
+
+00:07:53.980 --> 00:07:55.370
+Demak, tabriklaymiz.
+153
+00:07:55,370 --&gt; 00:07:56,070 	
+Rostdanam zo‘r chiqdi.
+

@@ -1,0 +1,574 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.334
+Agora sabem
+como funciona um app
+
+00:00:02.367 --> 00:00:05.534
+com uma Listview
+e ArrayAdapter customizado.
+
+00:00:05.567 --> 00:00:09.801
+Um bom começo para entender como
+fazer as mudanças correspondentes.
+
+00:00:09.834 --> 00:00:14.567
+O Android Flavor tinha dois TextViews
+e um ImageView por item de lista.
+
+00:00:14.601 --> 00:00:18.133
+No app Miwok,
+queremos dois TextViews.
+
+00:00:18.167 --> 00:00:21.133
+Por isso criaremos
+um ArrayAdapter customizado,
+
+00:00:21.167 --> 00:00:24.601
+porque o default só funciona
+com um TextView.
+
+00:00:24.634 --> 00:00:26.734
+Vamos ao 1º passo do teste.
+
+00:00:26.767 --> 00:00:29.334
+Devem criar uma lista
+de objetos palavra
+
+00:00:29.367 --> 00:00:32.534
+e aqui está o código
+para o ArrayList de palavras.
+
+00:00:32.567 --> 00:00:36.767
+Cada objeto criado
+tem um par em inglês e em Miwok.
+
+00:00:36.801 --> 00:00:39.767
+A ordem deve ser
+a palavra em inglês primeiro,
+
+00:00:39.801 --> 00:00:44.567
+e depois em Miwok, pois é como está
+no construtor de palavras.
+
+00:00:44.601 --> 00:00:47.367
+Em NumbersActivity,
+pedimos que modificassem
+
+00:00:47.400 --> 00:00:51.567
+a forma com que o adaptador é criado
+e pô-lo na exibição de lista.
+
+00:00:51.601 --> 00:00:53.767
+Demos um código
+para acrescentarem
+
+00:00:53.801 --> 00:00:56.367
+para a construção correta
+do WordAdapter.
+
+00:00:56.400 --> 00:00:59.567
+Pedimos que removessem
+o velho código ArrayAdapter
+
+00:00:59.601 --> 00:01:02.200
+e o método onCreate
+seria assim.
+
+00:01:02.234 --> 00:01:04.701
+Aqui criamos
+um novo objeto WordAdapter
+
+00:01:04.734 --> 00:01:07.501
+e o armazenamos
+na variável chamada adapter.
+
+00:01:07.534 --> 00:01:10.367
+Chamamos o construtor
+e passamos um contexto.
+
+00:01:10.400 --> 00:01:13.434
+E "this" se refere a isso,
+à NumbersActivity,
+
+00:01:13.467 --> 00:01:16.501
+e passamos o ArrayList
+de objetos palavra.
+
+00:01:16.534 --> 00:01:20.400
+Achamos uma ListView no layout,
+com o ID list,
+
+00:01:20.434 --> 00:01:22.834
+e colocamos o adaptador aí.
+
+00:01:22.868 --> 00:01:26.767
+O 3º passo será criar
+uma nova classe WordAdapter.
+
+00:01:26.801 --> 00:01:30.501
+Mostramos as instruções
+de como fazê-lo no vídeo anterior.
+
+00:01:30.534 --> 00:01:33.534
+No 4º passo, modificamos
+a declaração de classe
+
+00:01:33.567 --> 00:01:37.901
+para que o WordAdapter estenda
+ou herde da classe do ArrayAdapter.
+
+00:01:37.934 --> 00:01:41.734
+Especificando a classe Word
+como um parâmetro genérico aqui,
+
+00:01:41.767 --> 00:01:45.901
+a fonte de dados do ArrayAdapter
+será a lista de objetos palavra.
+
+00:01:45.934 --> 00:01:49.501
+No 5º passo, pedimos
+que substituíssem o método getView
+
+00:01:49.534 --> 00:01:52.534
+para darem sua própria
+implementação do método.
+
+00:01:52.567 --> 00:01:55.400
+Este código foi gerado
+pelo Android Studio.
+
+00:01:55.434 --> 00:02:00.434
+Podiam ter usado
+o atalho Control+O ou ir aqui.
+
+00:02:00.467 --> 00:02:04.367
+Para Código, substituir método,
+e selecionar Método getView.
+
+00:02:04.400 --> 00:02:08.667
+O 6º passo era completar o método
+com sua própria implementação.
+
+00:02:08.701 --> 00:02:12.434
+Chamamos sua atenção para
+o app AndroidFlavor como exemplo.
+
+00:02:12.467 --> 00:02:13.701
+Vou abri-lo.
+
+00:02:13.734 --> 00:02:16.767
+Aqui está o código
+do adaptador do AndroidFlavor
+
+00:02:16.801 --> 00:02:19.267
+no exemplo de ArrayAdapter
+customizado.
+
+00:02:19.300 --> 00:02:21.367
+Aqui embaixo,
+seu método getView.
+
+00:02:21.400 --> 00:02:25.334
+A lógica é parecida com o getView
+que precisamos no app Miwok.
+
+00:02:25.367 --> 00:02:28.901
+Vamos copiar e colar
+esta seção no nosso código.
+
+00:02:34.200 --> 00:02:37.033
+Colei o código
+na classe WordAdapter.
+
+00:02:37.067 --> 00:02:39.534
+Primeiro vemos se temos
+um listItemView
+
+00:02:39.567 --> 00:02:41.267
+mesmo sem os dados certos.
+
+00:02:41.300 --> 00:02:45.267
+Vamos usar esta exibição reciclada
+do parâmetro de entrada.
+
+00:02:45.300 --> 00:02:48.968
+Isto pode ser nulo, ou seja,
+sem exibição para reusar.
+
+00:02:49.000 --> 00:02:52.334
+Neste caso, inflaremos um
+do layout do item de lista.
+
+00:02:52.367 --> 00:02:56.367
+Podemos usar o LayoutInflator
+do Android, com o método inflate,
+
+00:02:56.400 --> 00:02:57.834
+passando o recurso ID,
+
+00:02:57.868 --> 00:03:00.567
+a exibição pai,
+que é a exibição de lista,
+
+00:03:00.601 --> 00:03:05.267
+e false aqui, ainda não queremos
+ligar o item à de exibição pai.
+
+00:03:05.300 --> 00:03:08.968
+A seguir, devemos achar
+o objeto palavra na posição pedida
+
+00:03:09.000 --> 00:03:13.234
+para começarmos a pôr os dados
+apropriados nas exibições do layout.
+
+00:03:13.267 --> 00:03:17.667
+Chamamos o método getItem, que vem
+da superclasse ArrayAdapter,
+
+00:03:17.701 --> 00:03:20.501
+e ele recebe
+a posição desejada.
+
+00:03:20.534 --> 00:03:23.234
+Em vez de retornar
+um objeto AndroidFlavor,
+
+00:03:23.267 --> 00:03:26.367
+queremos que o getItem
+retorne um objeto palavra,
+
+00:03:26.400 --> 00:03:29.801
+porque a classe
+herda do ArrayAdapter,
+
+00:03:29.834 --> 00:03:33.133
+com Word como
+tipo de retorno do getItem.
+
+00:03:33.167 --> 00:03:36.901
+Vejamos a documentação
+do método getItem.
+
+00:03:36.934 --> 00:03:41.267
+Aqui está a documentação do método
+getItem da classe ArrayAdapter.
+
+00:03:41.300 --> 00:03:44.667
+Aqui, podemos substituir
+o tipo de dados palavra
+
+00:03:44.701 --> 00:03:47.367
+onde virmos
+o parâmetro genérico T.
+
+00:03:47.400 --> 00:03:48.901
+Voltemos ao código.
+
+00:03:48.934 --> 00:03:53.200
+Para as próximas 3 seções,
+ainda não temos ImageView no layout.
+
+00:03:53.234 --> 00:03:58.067
+Podemos deletar essas linhas
+que colocam imagens no ImageView.
+
+00:03:58.100 --> 00:04:01.267
+Vamos navegar
+ao layout XML do item de lista.
+
+00:04:01.300 --> 00:04:03.767
+Temos dois TextViews aqui,
+
+00:04:03.801 --> 00:04:06.667
+um com ID de exibição
+chamada Miwok#text_view
+
+00:04:06.701 --> 00:04:09.868
+e um com ID de exibição
+chamada default_text_view.
+
+00:04:09.901 --> 00:04:14.067
+Pode ser diferente no seu código,
+se nomeá-los de forma diferente.
+
+00:04:14.100 --> 00:04:16.367
+Ou seja,
+na classe WordAdapter,
+
+00:04:16.400 --> 00:04:18.834
+a variável listItemView
+
+00:04:18.868 --> 00:04:22.934
+referencia o layout linear raiz
+do layout do item da lista.
+
+00:04:22.968 --> 00:04:26.934
+Se chamarmos o método findViewById
+no listItemView,
+
+00:04:26.968 --> 00:04:29.534
+encontramos
+o TextView Miwok.
+
+00:04:29.567 --> 00:04:32.934
+Com isso, podemos colocar
+em um TextView,
+
+00:04:32.968 --> 00:04:34.501
+pois é um TextView,
+
+00:04:34.534 --> 00:04:38.400
+e, então, armazená-lo
+numa variável miwokTextView.
+
+00:04:38.434 --> 00:04:42.367
+Depois, chamamos
+o método setText no TextView
+
+00:04:42.400 --> 00:04:45.467
+e passamos o novo texto
+a ser mostrado.
+
+00:04:45.501 --> 00:04:50.200
+Isto seria a tradução Miwok
+do objeto palavra atual.
+
+00:04:53.133 --> 00:04:56.167
+Ler esta linha de código
+pode ser complexo.
+
+00:04:56.200 --> 00:04:59.601
+Comecemos lendo a expressão
+entre parênteses primeiro.
+
+00:04:59.634 --> 00:05:01.501
+No objeto palavra atual,
+
+00:05:01.534 --> 00:05:04.300
+chamamos o método
+getMiwokTranslation.
+
+00:05:04.334 --> 00:05:06.534
+Isso nos traz
+uma palavra Miwok,
+
+00:05:06.567 --> 00:05:09.167
+e se torna entrada
+para o método setText
+
+00:05:09.200 --> 00:05:11.200
+no objeto miwokTextView.
+
+00:05:11.234 --> 00:05:14.267
+O miwokTextView deve mostrar
+a palavra em Miwok.
+
+00:05:14.300 --> 00:05:17.601
+Repetiremos os mesmos passos
+para o defaultTextView.
+
+00:05:17.634 --> 00:05:21.501
+A ListItemView aponta para
+o layout linear no layout do item.
+
+00:05:21.534 --> 00:05:25.267
+Chamaremos findViewById
+para procurar todos os seus filhos.
+
+00:05:25.300 --> 00:05:28.200
+Achamos a exibição
+com o ID default_text_view,
+
+00:05:28.234 --> 00:05:30.033
+a lançamos em um TextView,
+
+00:05:30.067 --> 00:05:34.000
+e armazenamos numa variável
+chamada defaultTextView.
+
+00:05:34.033 --> 00:05:36.234
+Aí, no objeto palavra atual,
+
+00:05:36.267 --> 00:05:39.601
+chamamos o método
+getDefaultTranslation,
+
+00:05:39.634 --> 00:05:42.234
+que nos ajuda a ter
+a tradução em inglês.
+
+00:05:42.267 --> 00:05:47.100
+Isto se torna entrada para o método
+setText no objeto defaultTextView.
+
+00:05:47.133 --> 00:05:50.801
+Agora, o defaultTextView
+deve mostrar a palavra em inglês.
+
+00:05:50.834 --> 00:05:51.934
+Isso feito,
+
+00:05:51.968 --> 00:05:55.334
+é só retornar o ListItemView
+como valor de retorno.
+
+00:05:55.367 --> 00:05:58.067
+A ListView
+pegará seu valor de retorno
+
+00:05:58.100 --> 00:06:00.434
+e acrescentar a si mesmo
+como filho.
+
+00:06:00.467 --> 00:06:03.567
+Isso foi um desafio,
+mas obrigada por ficarem aí.
+
+00:06:03.601 --> 00:06:05.667
+Revendo,
+no nosso método getView,
+
+00:06:05.701 --> 00:06:08.934
+primeiro obtemos um listItemView
+que possamos usar.
+
+00:06:08.968 --> 00:06:13.834
+Ou reusando uma que nos foi dada
+ou inflando uma do nada.
+
+00:06:13.868 --> 00:06:16.434
+Pegamos o objeto palavra
+na posição dada,
+
+00:06:16.467 --> 00:06:19.501
+achamos as exibições
+no layout de item de lista,
+
+00:06:19.534 --> 00:06:22.601
+e colocamos dados nelas,
+a partir do objeto palavra.
+
+00:06:22.634 --> 00:06:25.834
+Por fim, retornamos
+o listItemView atualizado.
+
+00:06:25.868 --> 00:06:27.901
+Vamos rodar o código.
+
+00:06:27.934 --> 00:06:30.767
+Parece haver um erro
+em NumbersActivity.
+
+00:06:30.801 --> 00:06:34.267
+Diz haver um erro
+na criação do WordAdapter.
+
+00:06:34.300 --> 00:06:37.634
+Esquecemos de criar
+o construtor no WordAdapter.
+
+00:06:37.667 --> 00:06:41.601
+Precisamos de duas entradas,
+o contexto e a lista de palavras.
+
+00:06:41.634 --> 00:06:43.367
+Vamos fazer isso agora.
+
+00:06:43.400 --> 00:06:46.267
+Vejamos o exemplo
+no app FlavorAdapter.
+
+00:06:46.300 --> 00:06:49.000
+Descrevemos o construtor
+no vídeo anterior.
+
+00:06:49.033 --> 00:06:51.868
+Podem voltar lá,
+se quiserem.
+
+00:06:51.901 --> 00:06:55.434
+Estou vendo o app Flavor
+de exemplo.
+
+00:06:55.467 --> 00:06:58.434
+Descrevemos este construtor
+no vídeo anterior.
+
+00:06:58.467 --> 00:07:00.634
+Podem voltar lá,
+se quiserem.
+
+00:07:00.667 --> 00:07:04.234
+Precisaremos de algo parecido
+para o nosso WordAdapter.
+
+00:07:04.267 --> 00:07:08.334
+Vou copiar e colar este construtor
+e ajustá-lo.
+
+00:07:09.300 --> 00:07:13.767
+No topo da classe WordAdapter,
+vou colar este construtor.
+
+00:07:13.801 --> 00:07:18.200
+Em vez de AndroidFlavorAdapter,
+queremos que seja WordAdapter.
+
+00:07:18.234 --> 00:07:21.868
+O nome do construtor
+deve bater com o nome da classe.
+
+00:07:21.901 --> 00:07:24.901
+E nesta lista aqui,
+em vez de AndroidFlavors,
+
+00:07:24.934 --> 00:07:26.868
+queremos
+uma lista de palavras.
+
+00:07:26.901 --> 00:07:28.567
+Por fim, neste construtor,
+
+00:07:28.601 --> 00:07:32.200
+podemos chamar o construtor
+da superclasse AndroidAdapter
+
+00:07:32.234 --> 00:07:35.000
+passando o contexto,
+o ID do recurso layout,
+
+00:07:35.033 --> 00:07:36.667
+e a lista de objetos.
+
+00:07:36.701 --> 00:07:38.567
+Também devemos
+atualizar isto.
+
+00:07:38.601 --> 00:07:41.767
+Podemos passar zero
+como ID do layout,
+
+00:07:41.801 --> 00:07:45.167
+pois inflamos o layout
+no método getView.
+
+00:07:45.200 --> 00:07:47.667
+O app ficou assim
+no nosso dispositivo.
+
+00:07:47.701 --> 00:07:50.167
+Vou navegar
+para NumbersActivity.
+
+00:07:50.200 --> 00:07:54.167
+Muito bom. A lista mostra
+as palavras em Miwok e em inglês.
+
+00:07:54.200 --> 00:07:56.267
+Parabéns!
+Ótimo trabalho.
+

@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.210 --> 00:00:04.070
+Xo‘sh, keling ListView va ArrayAdapter
+ orasidagi yuqori darajadagi o‘zaro 
+
+00:00:04.070 --> 00:00:05.045
+ta’siri haqida gaplashamiz. 
+
+00:00:05.045 --> 00:00:07.360
+So‘ng kodning ichiga keyingi videoda sho‘ng‘iymiz.
+
+00:00:08.610 --> 00:00:13.100
+Shunday qilib, ListView ArrayAdapter tomonidan 
+qo‘llab-quvvatlanadi deb o‘ylashingiz mumkin.
+
+00:00:13.100 --> 00:00:17.185
+Adaptersiz Listview bu bo‘sh idish kabi narsa.
+
+00:00:17.185 --> 00:00:21.688
+Va men qo‘llab-quvvatlaydi deganimda,
+ArrayAdapter ekranda ko‘rsatilishi kerak bo‘lgan
+
+00:00:21.688 --> 00:00:24.060
+ma’lumotlar to‘plamiga egaligini nazarda tutdim.
+
+00:00:25.170 --> 00:00:29.860
+Mana masalan, u massivni yoki hatto ma’lumotlar 
+ro‘yxatini o‘zida saqlashi mumkin.
+
+00:00:29.860 --> 00:00:34.420
+Va ArrayAdapter bu ListViewda ko‘rsatiladigan 
+ma’lumotni qanday qilib ro‘yxat elementlari 
+
+00:00:34.420 --> 00:00:40.030
+ko‘rinishiga tarjima qilishni yoki
+ moslashtirishni biladi.
+
+00:00:40.030 --> 00:00:43.430
+Keling bularni qanday ishlashini 
+yaqinroqdan kuzatamiz.
+
+00:00:43.430 --> 00:00:48.180
+Siz birinchi adapterni ListViewga
+ulaganingizda, sizdan necha marta 
+
+00:00:48.180 --> 00:00:50.580
+ekranda chiqishini 
+xohlashingizni so‘raydi.
+
+00:00:50.580 --> 00:00:53.180
+Va ArrayAdapter
+bu ma’lumotni biladi.
+
+00:00:53.180 --> 00:00:56.140
+Va ListView usulni ArrayAdapterda 
+chaqiradi.
+
+00:00:56.140 --> 00:00:59.110
+Va bu usulda u kiritish kiritadi,
+
+00:00:59.110 --> 00:01:02.770
+ya’ni foydalanuvchi ko‘rayotgan 
+ro‘yxatdagi joriy joylashuvni.
+
+00:01:02.770 --> 00:01:07.650
+Bu holda u 0 joylashuvini kiritadi,
+ammo foydalanuvchi ro‘yxatdagi 1 chi yoki 100 chi 
+
+00:01:07.650 --> 00:01:10.740
+joylashuvda bo‘lishi mumkin.
+
+00:01:10.740 --> 00:01:12.410
+Bu ma’lumotga ega bo‘lib,
+
+00:01:12.410 --> 00:01:16.090
+ArrayAdapter ichki ma’lumot
+ manbasini tekshiradi. 
+
+00:01:16.090 --> 00:01:18.968
+Bizning holatimizda, u massivni tekshiradi.
+
+00:01:18.968 --> 00:01:22.460
+U ro‘yxatni ham tekshirishi mumkin,
+ agar u ma’lumot manbasi bo‘lsa.
+
+00:01:22.460 --> 00:01:24.350
+Va u ma’lumotni oladi.
+
+00:01:24.350 --> 00:01:27.411
+Unda esa qanday qilib ro‘yxat elementlari
+ view ni yaratib, u ListViewni 
+
+00:01:27.411 --> 00:01:30.873
+qaytaradigan bo‘lishini ta’minlaydigan
+ ko‘rsatmalar mavjud.
+
+00:01:30.873 --> 00:01:34.469
+Hozir, ekran to‘la bo‘lgani uchun 
+ListView ro‘yxat elementlarini 
+
+00:01:34.469 --> 00:01:36.860
+ArrayAdapterdan so‘rashdan to‘xtaydi.
+
+00:01:36.860 --> 00:01:40.880
+Shu tarzda, ro‘yxat elementlari view 
+ faqat kerak bo‘lgandagina yaratiladi.
+
+00:01:40.880 --> 00:01:42.740
+View lar ekrandan pastga tushganda,
+
+00:01:42.740 --> 00:01:45.020
+eslab qoling, mana shu 
+scrap pile ga qo‘shiladilar.
+
+00:01:45.020 --> 00:01:48.529
+Mana bu misolda, Jane va Karl 
+ro‘yxatdagi birinchi elementlar, 
+
+00:01:48.529 --> 00:01:51.483
+ endi ko‘rinmaydilar.
+
+00:01:51.483 --> 00:01:53.453
+Va ular scrap pile ichida qolishadi.
+
+00:01:53.453 --> 00:01:56.840
+Va biz mana shu view larni yangi 
+ro‘yxat elementi uchun talab bo‘lganda
+
+00:01:56.840 --> 00:02:00.350
+ArrayAdaptorga qaytarib,
+ qayta ishlatishimiz mumkin.
+
+00:02:00.350 --> 00:02:04.170
+Shunday qilib, listView ma’lum 
+bir joylashuvdagi ro‘yxat elementi 
+
+00:02:04.170 --> 00:02:09.139
+view ga so‘rov berib,
+ oldin ishlatilgan view bo‘ylab o‘tadi. 
+
+00:02:09.139 --> 00:02:14.860
+Bu holatda, ListView 6 chi joylashuvga 
+ega elementga so‘rov beryapti va ArrayAdapterdan 
+
+00:02:14.860 --> 00:02:19.700
+qayta ishlatiladigan view larni o‘tkazyapti.
+
+00:02:19.700 --> 00:02:22.712
+Endi, ArrayAdapter qayta ishlangan view ni
+ shunchaki ichiga ma’lumotni joylashtirish
+
+00:02:22.712 --> 00:02:25.074
+orqali ishlatishi mumkin. 
+
+00:02:25.074 --> 00:02:29.857
+Masalan, TextView ning setText usulini chaqirgan 
+holda mana bu yerdagi nomini o‘zgartirish uchun.
+
+00:02:29.857 --> 00:02:34.015
+Endi u yangi elementlar ro‘yxatiga
+ o‘xshash ko‘rinishga ega va biz uni
+
+00:02:34.015 --> 00:02:37.250
+ListView qaytarib, ierarxiyaga
+ ekranda ko‘rinishi uchun qo‘shamiz.
+

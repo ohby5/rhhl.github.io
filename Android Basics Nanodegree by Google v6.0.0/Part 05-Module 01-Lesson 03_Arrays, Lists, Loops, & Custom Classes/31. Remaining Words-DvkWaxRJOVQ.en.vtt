@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.640
+To make the words appear in the other activities,
+
+00:00:02.640 --> 00:00:05.100
+we can follow the first hint which was to copy and paste
+
+00:00:05.100 --> 00:00:07.935
+the code the way we already have in the numbers activity.
+
+00:00:07.935 --> 00:00:11.700
+So let's copy all this code here from the numbers activity.
+
+00:00:11.700 --> 00:00:15.465
+And then first, we'll paste it into the colors activity.
+
+00:00:15.465 --> 00:00:18.090
+Before I paste this block of code in,
+
+00:00:18.090 --> 00:00:24.750
+the colors activity was using the activity_colors.xml file as a content view.
+
+00:00:24.750 --> 00:00:29.355
+So we could change the colors activity to refer to this layout file again.
+
+00:00:29.355 --> 00:00:32.460
+However, we would also need to change the layout file to have
+
+00:00:32.460 --> 00:00:36.345
+a list_view XML layout instead of a relative layout.
+
+00:00:36.345 --> 00:00:38.760
+In the quiz, we give you hint number two,
+
+00:00:38.760 --> 00:00:40.680
+which is all the activities can use
+
+00:00:40.680 --> 00:00:44.235
+the same layout file which has a list item element in it.
+
+00:00:44.235 --> 00:00:49.140
+Since activity_numbers.xml already has a correct layout,
+
+00:00:49.140 --> 00:00:50.955
+let's just go ahead and use that.
+
+00:00:50.955 --> 00:00:53.475
+Delete this tools:context attribute,
+
+00:00:53.475 --> 00:00:56.775
+which says which file the layout should be used in,
+
+00:00:56.775 --> 00:01:00.270
+because now, this layout will be used for four different activities.
+
+00:01:00.270 --> 00:01:04.230
+Next, we'll want to rename this file so that it's not number specific.
+
+00:01:04.230 --> 00:01:06.765
+So to do that, we'll right-click,
+
+00:01:06.765 --> 00:01:10.605
+head to refactor, and then rename.
+
+00:01:10.605 --> 00:01:15.960
+So how about something like word_list.xml.
+
+00:01:15.960 --> 00:01:19.490
+So refactoring here we'll update all locations in the code
+
+00:01:19.490 --> 00:01:23.330
+that refer to the old name and update it with the new name now.
+
+00:01:23.330 --> 00:01:25.120
+Back in the numbers activity,
+
+00:01:25.120 --> 00:01:28.215
+we referred to the activity_numbers layout.
+
+00:01:28.215 --> 00:01:30.990
+But notice here, it now refers to the
+
+00:01:30.990 --> 00:01:35.540
+words_list.xml file which is the new name for the same file.
+
+00:01:35.540 --> 00:01:38.540
+And then when we move over to the colors activity,
+
+00:01:38.540 --> 00:01:40.670
+we can set the content view to also be
+
+00:01:40.670 --> 00:01:44.375
+the words list excel file which contains a list item view.
+
+00:01:44.375 --> 00:01:46.520
+So then in the colors activity,
+
+00:01:46.520 --> 00:01:48.470
+we can set the content view to also be the
+
+00:01:48.470 --> 00:01:52.425
+word_list.xml file which contains a ListView element.
+
+00:01:52.425 --> 00:01:54.840
+All right, so let's make sure all the code in
+
+00:01:54.840 --> 00:01:56.850
+the colors activity's correctly referring to
+
+00:01:56.850 --> 00:02:01.245
+the colors category and we don't have anything left over that still refers to numbers.
+
+00:02:01.245 --> 00:02:04.485
+So the most apparent one here is the English and miwok translations.
+
+00:02:04.485 --> 00:02:08.040
+Let's update that to reflect the color words.
+
+00:02:08.040 --> 00:02:11.520
+So the remaining code in onCreate method looks correct
+
+00:02:11.520 --> 00:02:14.790
+so we created a word adapter from this list of word colors.
+
+00:02:14.790 --> 00:02:20.560
+Then we find the ListView with the view ID list in the words_list.xml layout.
+
+00:02:20.560 --> 00:02:23.540
+And lastly, we set the adapter onto this ListView.
+
+00:02:23.540 --> 00:02:25.695
+So now, there's no errors in our code,
+
+00:02:25.695 --> 00:02:27.500
+so let's run the app on a device.
+
+00:02:27.500 --> 00:02:30.870
+So when the app launches and I click on the colors category,
+
+00:02:30.870 --> 00:02:33.920
+we see the list of color words. Nice, it's working.
+
+00:02:33.920 --> 00:02:37.770
+So the miwok color's on top and the English word is below it.
+
+00:02:37.770 --> 00:02:40.560
+Now, we will repeat the same thing with family activity.
+
+00:02:40.560 --> 00:02:43.575
+I copied over the file from the colors activity and
+
+00:02:43.575 --> 00:02:46.890
+updated the list of family words from the provided dictionary document.
+
+00:02:46.890 --> 00:02:50.250
+And when I run the app on my device, it looks like this.
+
+00:02:50.250 --> 00:02:52.800
+Now, excellent job. All the categories are
+
+00:02:52.800 --> 00:02:55.800
+properly displaying the miwok and English translations for each word.
+
+00:02:55.800 --> 00:03:00.225
+Now, there's one last clean up step we could do that would be nice to fix our code.
+
+00:03:00.225 --> 00:03:02.640
+Since we're just using a single layout file,
+
+00:03:02.640 --> 00:03:05.155
+our wordless XML file,
+
+00:03:05.155 --> 00:03:06.924
+for all four activities,
+
+00:03:06.924 --> 00:03:09.100
+we can delete the unused layout files.
+
+00:03:09.100 --> 00:03:13.870
+I'm going to go ahead and delete the layout files for the colors, family, and phrases.
+
+00:03:13.870 --> 00:03:16.810
+Whenever you delete files, you should test the app one more time to make sure it's
+
+00:03:16.810 --> 00:03:19.900
+still working and you didn't delete anything you actually might need.
+
+00:03:19.900 --> 00:03:21.950
+So after running the app on my device,
+
+00:03:21.950 --> 00:03:23.710
+it looks like it's still working.
+
+00:03:23.710 --> 00:03:26.360
+So take a step back and congratulate yourself.
+
+00:03:26.360 --> 00:03:28.770
+You just finished the coding test in lesson two.
+
+00:03:28.770 --> 00:03:30.880
+That's a really big milestone.
+

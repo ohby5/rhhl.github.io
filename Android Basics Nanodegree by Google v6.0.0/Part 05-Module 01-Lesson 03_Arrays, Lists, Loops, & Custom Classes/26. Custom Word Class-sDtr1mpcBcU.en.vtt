@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.190
+So if you follow the instructions in the quiz,
+
+00:00:02.190 --> 00:00:04.275
+you would've created the Word class.
+
+00:00:04.275 --> 00:00:08.700
+And Android Studio helped us out by auto generating some code for us already. All right.
+
+00:00:08.700 --> 00:00:10.050
+So first in our Word class,
+
+00:00:10.050 --> 00:00:12.565
+we declare as publicly accessible.
+
+00:00:12.565 --> 00:00:16.855
+That way other classes like the numbers activity would be able to access and use it.
+
+00:00:16.855 --> 00:00:19.870
+Also here, I've added the Java doc comment already above
+
+00:00:19.870 --> 00:00:22.180
+the class declaration to explain how
+
+00:00:22.180 --> 00:00:24.845
+the Word class is meant to represent a vocabulary word.
+
+00:00:24.845 --> 00:00:26.380
+So notice that it contains
+
+00:00:26.380 --> 00:00:31.120
+it English default translation and a Miwok translation for each word.
+
+00:00:31.120 --> 00:00:34.870
+Hence we'll need two fields for the state of the word object.
+
+00:00:34.870 --> 00:00:37.075
+mDefaultTranslation,
+
+00:00:37.075 --> 00:00:40.410
+which is the word in a language that the users are already familiar with.
+
+00:00:40.410 --> 00:00:43.270
+So for example, English, and secondly,
+
+00:00:43.270 --> 00:00:47.345
+mMiwokTranslation, which is a word in the Miwok language.
+
+00:00:47.345 --> 00:00:50.700
+So both of these here notice are private because
+
+00:00:50.700 --> 00:00:53.610
+we only need them to be accessible from inside the class.
+
+00:00:53.610 --> 00:00:57.180
+So by convention since they are private member variables of the class,
+
+00:00:57.180 --> 00:00:59.940
+we add a lowercase "m" to indicate that.
+
+00:00:59.940 --> 00:01:03.225
+And the "m" is added to the start of each variable name.
+
+00:01:03.225 --> 00:01:08.400
+So next we need to create the constructor which takes in two string parameters.
+
+00:01:08.400 --> 00:01:12.030
+The defaultTranslation and miwokTranslation.
+
+00:01:12.030 --> 00:01:15.195
+And then set these values for our two fields.
+
+00:01:15.195 --> 00:01:17.820
+So in order to create a new word object,
+
+00:01:17.820 --> 00:01:21.360
+the caller has to parse in these two required inputs.
+
+00:01:21.360 --> 00:01:24.870
+Remember that the constructor has to look like a method declaration.
+
+00:01:24.870 --> 00:01:27.690
+But the name has to match the class name exactly,
+
+00:01:27.690 --> 00:01:29.925
+which in this case is Word.
+
+00:01:29.925 --> 00:01:33.105
+And remember that it has no return type.
+
+00:01:33.105 --> 00:01:36.730
+So lastly, we'll add two methods which will be marked as public
+
+00:01:36.730 --> 00:01:40.260
+so the classes outside of the Word class can access these methods.
+
+00:01:40.260 --> 00:01:44.010
+So first, is the getDefaultTranslation method,
+
+00:01:44.010 --> 00:01:48.900
+which will return the default translation of the word whose return type is string.
+
+00:01:48.900 --> 00:01:54.240
+So we won't accept any parameters because its sole purpose is just to return information.
+
+00:01:54.240 --> 00:01:57.450
+Our second method is getMiwokTranslation,
+
+00:01:57.450 --> 00:01:59.775
+and we'll follow a similar format.
+
+00:01:59.775 --> 00:02:02.850
+So notice that it returns the Miwok translation of a word,
+
+00:02:02.850 --> 00:02:04.620
+which is a string data type.
+
+00:02:04.620 --> 00:02:07.890
+Now remember to add comments above each method help people who are
+
+00:02:07.890 --> 00:02:11.565
+reading your code to better understand what to expect from each method.
+
+00:02:11.565 --> 00:02:14.460
+So we could have added two setter methods to
+
+00:02:14.460 --> 00:02:17.425
+allow the two strings to be changed by an outside caller.
+
+00:02:17.425 --> 00:02:19.425
+However, for the purpose of this app,
+
+00:02:19.425 --> 00:02:21.015
+once we create the Word object,
+
+00:02:21.015 --> 00:02:23.970
+we don't expect the English or Miwok words to change.
+
+00:02:23.970 --> 00:02:28.110
+Hence, we won't provide setter methods to modify the state of the Word object.
+
+00:02:28.110 --> 00:02:29.610
+So when you create a class,
+
+00:02:29.610 --> 00:02:33.735
+it's entirely up to you to decide what methods you want to expose to the outside classes.
+
+00:02:33.735 --> 00:02:35.595
+All right. So there we have it.
+
+00:02:35.595 --> 00:02:39.365
+Here is the Word class defined in its entirety with the declaration,
+
+00:02:39.365 --> 00:02:43.050
+state, constructor and methods.
+
+00:02:43.050 --> 00:02:46.700
+Now, great work on defining your first custom class.
+

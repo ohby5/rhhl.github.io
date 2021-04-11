@@ -1,0 +1,612 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.260 --> 00:00:03.280
+Xo‘sh, biz qurilmaning xotira manbasidan
+ to‘g‘ri foydalana oladigan ilovalar 
+
+00:00:03.280 --> 00:00:06.040
+yaratishimiz kerakligini tushunib yetdik.
+
+00:00:06.040 --> 00:00:09.390
+Keling endi buni mobil ilovalarda kerak 
+bo‘ladigan uzun ma’lumot ro‘yxatini ekranda 
+4
+00:00:09,390 --&gt; 00:00:14,755
+hotirani samarali ravishda ishlatib 
+ chiqarish haqida gaplashamiz. 
+
+00:00:14.755 --> 00:00:17.455
+Va bu strategiya view Recycling
+deb nomlanadi,
+
+00:00:17.455 --> 00:00:21.675
+ya’ni ekranda boshqa ko‘rinmayotgan 
+views larni qayta ishlatish.
+
+00:00:21.675 --> 00:00:26.265
+Ha aytgancha, men view deganda birgina 
+qator uchun butun layoutni nazarda tutyapman. 
+
+00:00:26.265 --> 00:00:29.035
+Bir qator uchun layout 
+ View group dan yaratilsa kerak.
+
+00:00:29.035 --> 00:00:30.445
+Linear yoki relative layoutga 
+o‘xshab bir nechta view ni
+
+00:00:30.445 --> 00:00:33.640
+ o‘z ichiga oladigan bo‘lsa kerak. 
+
+00:00:33.640 --> 00:00:37.070
+Ammo a view group, bu view ning o‘zi.
+
+00:00:37.070 --> 00:00:41.330
+Va siz bizni bir qator layoutga view ga 
+murojaat qilgandek murojaat qilishimizni 
+ko‘rishingiz mumkin.
+
+00:00:41.330 --> 00:00:43.660
+Miwok tili juda katta.
+
+00:00:43.660 --> 00:00:46.590
+Va ilova yaratishning bir usuli 
+bu minglab so‘zlardan iborat
+
+00:00:46.590 --> 00:00:50.600
+ ro‘yxatni tuzib layoutingizga 
+ vertikal qilib qo‘shish.
+
+00:00:50.600 --> 00:00:52.530
+Va sizda ko‘p so‘zlardan iborat 
+lug‘at bo‘lsa pastga aylantirish 
+
+00:00:52.530 --> 00:00:55.380
+juda sekin bo‘lishi mumkin. 
+
+00:00:55.380 --> 00:00:58.090
+Va qurilma bu uzun ro‘yxatni xotirasida
+ ko‘tara olmasdan halokatga 
+
+00:00:58.090 --> 00:00:59.200
+uchrashi mumkin.
+
+00:00:59.200 --> 00:01:02.160
+Endi eslab qoling, xotira bu 
+cheklangan manba.
+
+00:01:02.160 --> 00:01:03.250
+Android sistemasi va boshqa 
+ilovalar ham ishlashi uchun 
+
+00:01:03.250 --> 00:01:06.560
+joy talab qilishadi. 
+
+00:01:06.560 --> 00:01:08.580
+Endi buni samaraliroq usuli ham mavjud.
+
+00:01:08.580 --> 00:01:13.210
+ListView va ArrayAdapter ishlatgan holda,
+biz yetarli view larni yaratishimiz mumkin, 
+
+00:01:13.210 --> 00:01:17.770
+yani elementlar qatorini, ekranni nima bilan 
+to‘ldirishimiz kerakligiga qarab. 
+
+00:01:17.770 --> 00:01:19.950
+Bu degani, agar biz tepaga aylantirsak,
+
+00:01:19.950 --> 00:01:23.250
+pastdaki view larni ko‘rishga 
+umuman hojat qolmaydi.
+
+00:01:23.250 --> 00:01:26.440
+Shunday qilib, keling ListView va ArrayAdapter 
+strukturasiga urg‘u beramiz. 
+
+00:01:26.440 --> 00:01:29.250
+Endi biz yana view larni recycle 
+qilishimiz mumkin.
+
+00:01:29.250 --> 00:01:32.270
+Ya’ni, agar view ekranda ko‘rinmayatgan bo‘lsa
+
+00:01:32.270 --> 00:01:34.960
+biz uning ma’lumotini o‘zgartirib qayta
+ ishlatishimiz mumkin.
+
+00:01:34.960 --> 00:01:39.210
+Masalan, view ning ichidadi 
+matnni TextView da, yoki rasmni
+
+00:01:39.210 --> 00:01:41.400
+ imageview da o‘zgartirgan holda.
+
+00:01:41.400 --> 00:01:45.350
+Va bu bilan biz view ni boshidan 
+yaratishga vaqt sarflamaymiz.
+
+00:01:45.350 --> 00:01:47.440
+Endi biz ikkita qo‘shimcha viewlarni olib 
+
+00:01:47.440 --> 00:01:51.130
+Scraplar to‘dasiga qoyamiz,
+qayta ishlatish uchun.
+
+00:01:51.130 --> 00:01:55.150
+Boshqalar scrap view deb atashlarini 
+ham guvohi bo‘lishingiz mumkin.
+
+00:01:55.150 --> 00:01:58.760
+Shunday qilib, biz scrap to‘dasini 
+saqlab turamiz, chunki u hozircha 
+
+00:01:58.760 --> 00:02:02.770
+ekranda ko‘rinmaydigan lekin keyinroq 
+qayta ishlatiladigan viewlar.
+
+00:02:02.770 --> 00:02:03.970
+Xo‘sh, recycling .
+
+00:02:03.970 --> 00:02:07.480
+Recycling qanday ishlashini 
+tafsilotlariga o‘tsak,
+
+00:02:07.480 --> 00:02:10.550
+masalan foydalanuvchi 
+ekranni pastiga aylantiryapti.
+
+00:02:10.550 --> 00:02:14.140
+Shunday qilib, ular yuqoriga chiqib 
+yangi tvitlar yoki yangiliklar
+
+00:02:14.140 --> 00:02:15.638
+ tasmasini ko‘rmoqchi bo‘lishi mumkin.
+
+00:02:15.638 --> 00:02:20.150
+Va ListView tezroq ro‘yxat elementlari 
+qatorlarini yaratish kerak ekanligini anglaydi. 
+
+00:02:20.150 --> 00:02:23.680
+Shunday qilib, foydalanuvchi ro‘yxatni
+ aylantirib ko‘rayotganda, Xuddi qatordagi 
+
+00:02:23.680 --> 00:02:25.050
+elementlarni hammasi bo‘lgandek 
+taassurotda bo‘ladi.
+
+00:02:25.050 --> 00:02:27.425
+Hozir boshidan ro‘yxat elementini 
+yaratish o‘rniga uni scrap pile dan 
+
+00:02:27.425 --> 00:02:30.070
+olib qayta ishlatishi mumkin.
+
+00:02:30.070 --> 00:02:31.530
+Agar ular mavjud bo‘lsa.
+
+00:02:31.530 --> 00:02:32.370
+Xulosa keltirsak,
+
+00:02:32.370 --> 00:02:36.680
+biz keragidan ortiq qatorlarni scrap pile dagi 
+viewlarni qayta ishlatgan holda yaratdik 
+
+00:02:36.680 --> 00:02:40.530
+Va bizga faqat view ichidagi ma’lumotni
+ o‘zgartirish qoldi xolos.
+
+00:02:40.530 --> 00:02:43.288
+U berilgan ro‘yxat elementlarini to‘g‘ri
+ ma’lumotini ko‘rsatishi uchun.
+
+00:02:43.288 --> 00:02:47.380
+ListView ham ekran pastida turgan 
+view lar ekrandan tashqariga 
+
+00:02:47.380 --> 00:02:50.520
+chiqqanini bilishga yetarlicha sezgir.
+
+00:02:50.520 --> 00:02:53.190
+Va bu view lar foydalanuvchiga boshqa 
+ko‘rinmaydi, shunday qilib
+
+00:02:53.190 --> 00:02:54.990
+ular scrap pile ga qo‘shib 
+qo‘yilsa bo‘ladi.
+
+00:02:54.990 --> 00:02:57.580
+Va foydalanuchi ro‘yxatdan tepaga 
+chiqib ketsa,
+
+00:02:57.580 --> 00:03:00.680
+biz ekranning pasida ishlatilgan 
+ro‘yxat elementlari qatorini ishlatsak bo‘ladi.
+
+00:03:01.970 --> 00:03:04.970
+Endi tepa qismiga o‘tsak,
+
+00:03:04.970 --> 00:03:09.750
+shunday qilib, bularning hammasini
+ qilishdan maqsad, ro‘yxat elementlari sonini kamaytirishdir.
+
+00:03:09.750 --> 00:03:14.960
+Chunki view larni XML dan Java
+ ob’ektlariga o‘tkazish qimmatga tushadi.
+
+00:03:14.960 --> 00:03:19.250
+Xo‘sh, sizga recycling xotirani foydalanishini
+ pasaytirishini isbotlashga,
+
+00:03:19.250 --> 00:03:21.370
+men ikki xil turdagi ilovalarni 
+tayyorlab qo‘yganman.
+
+00:03:21.370 --> 00:03:23.370
+Birinchi hozirgi ilova holatida,
+
+00:03:23.370 --> 00:03:27.500
+ya’ni vertikal linear layout ni 
+har bir ro‘yxat elementiga bitta text view bilan ishlatish.
+
+00:03:27.500 --> 00:03:31.270
+Ilovaning ikkinchi versiyasi esa,
+ListView va ArrayAdapter ni ishlatish.
+
+00:03:32.310 --> 00:03:35.190
+Shunday qilib, memory monitor vositasi 
+Android Studiosida o‘rnatilgan bo‘lib
+
+00:03:35.190 --> 00:03:38.330
+sizning ilovangiz ishlatayotgan manbalar
+ sonini aniqlashga yordam beradi.
+
+00:03:38.330 --> 00:03:41.960
+Shu tarzda, professional dasturchilar
+bu vositani ilova resurslaridan foydalanishni 
+
+00:03:41.960 --> 00:03:45.260
+minimallashtirish usullarini 
+aniqlashda yordam beradi.
+
+00:03:45.260 --> 00:03:48.260
+Xotiradan foydalanishdagi Linear layout 
+va ListView Adapter dan foydalanish 
+
+00:03:48.260 --> 00:03:50.880
+o‘rtasidagi farq ro‘yxat 
+elementlari soni oshib borishi 
+
+00:03:50.880 --> 00:03:53.550
+bilan yanada sezilarli bo‘ladi.
+
+00:03:53.550 --> 00:03:55.820
+Hozir men ikki misolni har biri 
+1000 so‘zdan iborat ro‘yxatni 
+
+00:03:55.820 --> 00:03:59.180
+ekranda chiqarishi 
+demosini ko‘rsataman. 
+
+00:03:59.180 --> 00:04:02.215
+Hozir men Android studioda 
+Linear layout ishlatilgan
+
+00:04:02.215 --> 00:04:03.685
+versiyasini qarayapman.
+
+00:04:03.685 --> 00:04:08.505
+Ahamiyat bering, NumbersActivity 1000 so‘zdan
+ iborat ro‘yxatni ko‘rsatyapti va 
+
+00:04:08.505 --> 00:04:11.345
+bu ilova uni ishga tushirganimizdan 
+keyingi ko‘rinishga kelish holati.
+
+00:04:11.345 --> 00:04:16.115
+NumbersActivity ni bosadigan bo‘lsak,
+u bizning uzun so‘zlar ro‘yxatini ko‘rsatadi. 
+
+00:04:16.115 --> 00:04:18.204
+Endi kompyuterga ulangan 
+qurilmamiz bilan
+
+00:04:18.204 --> 00:04:21.745
+memory monitor ni ishga tushirib bu ilova
+ qancha xotira sarflayotganini tekshiramiz. 
+
+00:04:21.745 --> 00:04:27.340
+Buni bajarishdan oldin mana bu 
+yerdagi tools &gt; Androidga borib 
+
+00:04:27.340 --> 00:04:29.650
+ ADB integration ni yoqishim kerak.
+
+00:04:29.650 --> 00:04:32.690
+ADB bu Android debug bridge ni anglatadi.
+
+00:04:32.690 --> 00:04:35.360
+Ya’ni bizning qurilma va Android Studio 
+o‘rtasidagi aloqa. 
+
+00:04:36.850 --> 00:04:40.830
+U yoqilgach, runtime window dagi 
+Android Monitorga boring.
+
+00:04:42.000 --> 00:04:44.700
+Uni ochish uchun bosing, 
+va hozir men buni tepaga ko‘taraman 
+
+00:04:44.700 --> 00:04:46.169
+Xo‘sh, endi Memory yorlig‘iga bosing.
+
+00:04:47.740 --> 00:04:51.960
+Shunday qilib, bu ekranda mening ilovam
+ xotira sarfini ko‘rishim mumkin.
+
+00:04:51.960 --> 00:04:55.336
+Endi davom etib, ilovani 
+ishga tushirmoqchiman.
+
+00:04:55.336 --> 00:04:57.264
+Xo‘sh, bizning qurilma ulanganida 
+
+00:04:57.264 --> 00:04:58.796
+biz Memory monitori ishlayotganini
+ ko‘rishimiz mumkin. 
+
+00:04:58.796 --> 00:05:02.895
+Va kategoriyalar ro‘yxatini
+ko‘rsatish uchun ajratilgan 
+
+00:05:02.895 --> 00:05:03.816
+xotira hajmini ko‘ramiz.
+
+00:05:03.816 --> 00:05:06.385
+Xo‘sh, men ekran qurilmada 
+qanday ko‘rinishini qo‘ydim. 
+
+00:05:06.385 --> 00:05:08.700
+Keling endi emulyatorga 
+nima qilishini ko‘ramiz.
+
+00:05:08.700 --> 00:05:10.805
+Men NumbersActivity ga bosganimda.
+
+00:05:10.805 --> 00:05:15.005
+[AUDIO YO‘Q]
+
+00:05:15.005 --> 00:05:17.070
+Qoyil, bu yerdagi sakrashga ahamiyat bering. 
+
+00:05:17.070 --> 00:05:20.049
+U 4 megabaytdan 14 megabaytga o‘tdi.
+
+00:05:21.100 --> 00:05:25.300
+Xo‘sh, bu o‘sish, 
+bu ajratilgan xotira yaxshimi 
+
+00:05:25.300 --> 00:05:26.550
+yoki yaxshi emasmi?
+
+00:05:27.730 --> 00:05:31.050
+Eng yaxshi yo‘li bu kodni 
+boshqa versiyasini bir xil 
+
+00:05:31.050 --> 00:05:32.580
+qurilmada ishlatib ko‘rish.
+
+00:05:32.580 --> 00:05:35.340
+Xo‘sh, biz buni bir xil qurilmada 
+ishga tushiramiz chunki unda 
+
+00:05:35.340 --> 00:05:37.480
+bir qator manbalar to‘plami bor. 
+
+00:05:37.480 --> 00:05:41.602
+Buni qilish uchun kodning yangi 
+bir xil 1000 ta so‘zdan iborat ro‘yxatni 
+
+00:05:41.602 --> 00:05:46.444
+ko‘rsatish uchun ListView va ArrayAdapter ni
+ ishlatadigan versiyasiga o‘taman.
+
+00:05:46.444 --> 00:05:50.414
+Hozir men ListView va 
+ArrayAdapter ishlatilgan kod versiyani ko‘ryapman 
+
+00:05:50.414 --> 00:05:53.485
+va u ham bir xil 1000 ta so‘zdan
+ iborat ro‘yxatni ko‘rsatyapti.
+
+00:05:53.485 --> 00:05:56.204
+Endi keling bu kodni ishga
+ tushirganimizda nima bo‘lishini 
+
+00:05:56.204 --> 00:05:56.739
+kuzatamiz.
+
+00:05:57.830 --> 00:05:59.920
+Kategoriyalar ekrani bir xil ko‘rinishga ega.
+
+00:05:59.920 --> 00:06:02.380
+Ammo numbersActivity ga bosgach,
+
+00:06:02.380 --> 00:06:06.650
+ahamiyat bering, 1000 so‘zlar
+ ro‘yxati ko‘rinadi lekin bo‘luvchilar bilan.
+
+00:06:06.650 --> 00:06:10.110
+Xo‘sh, biz qanday va nega bunday 
+ishlashini keyinroq muhokama qilamiz.
+
+00:06:10.110 --> 00:06:11.325
+Endi Android Studioga qaytsak.
+
+00:06:11.325 --> 00:06:14.405
+Avvalroq qilganim kabi memory monitor ni 
+ishga tushiraman.
+
+00:06:14.405 --> 00:06:19.130
+Xo‘sh, Android Monitor bu yerda keyin esa 
+Memory yorlig‘iga boramiz.
+
+00:06:19.130 --> 00:06:23.540
+Ahamiyat bering, memory monitor 
+mening qurilmam ulanganidan 
+
+00:06:23.540 --> 00:06:25.570
+keyin ishga tushdi, chunki men ADBni yoqdim.
+
+00:06:25.570 --> 00:06:28.115
+Va ajratilgan xotira hajmi 
+kategoriyalar ekranida bo‘lganimda 
+
+00:06:28.115 --> 00:06:30.535
+doimiy bo‘lib qoladi.
+
+00:06:30.535 --> 00:06:33.239
+Endi numbers activity ni bosganimda 
+nima bo‘lishini kuzating.
+
+00:06:33.239 --> 00:06:36.740
+[AUDIO YO‘Q]
+
+00:06:36.740 --> 00:06:38.565
+Va bu yerdagi kichik sakrashga ahamiyat bering.
+
+00:06:38.565 --> 00:06:42.880
+Raqam 12.71 dan taxminan 12.84 ga ko‘tarildi. 
+
+00:06:42.880 --> 00:06:47.149
+Va bu arang 0.1 megabaytni, 
+kategoriyalar ekranidan numbersActivity ga 
+
+00:06:47.149 --> 00:06:51.310
+o‘tganidagi xotira o‘sishini tashkil qiladi
+
+00:06:51.310 --> 00:06:54.520
+Bu safar sonlar ro‘yxatini ko‘rsatishga
+ ishlatilgan xotira hajmi ancha kamroq, 
+
+00:06:54.520 --> 00:06:58.840
+linear layout ni ishlatgan
+ kod versiyasiga qaraganda. 
+
+00:06:58.840 --> 00:07:02.900
+Biz xotirani kam ishlatyatganimiz sababli,
+ ListView va ArrayAdapterni kichik xotiraga
+
+00:07:02.900 --> 00:07:06.890
+ega qurilmalarda qo‘llash 
+o‘rinli bo‘ladi.
+
+00:07:07.900 --> 00:07:11.330
+Endi keling Memory monitor ga
+ yaqinroqdan nazar solaylik.
+
+00:07:11.330 --> 00:07:13.530
+Bu aslida ikki narsani ko‘rsatyapti.
+
+00:07:13.530 --> 00:07:16.300
+To‘q ko‘k bo‘lim bu ajratilgan xotira,
+
+00:07:16.300 --> 00:07:19.080
+ya’ni qurilmamiz xohlagan 
+paytda ishlatadigan xotira.
+
+00:07:20.430 --> 00:07:23.420
+Och ko‘k bo‘lim esa xotiradagi bo‘sh joy.
+
+00:07:23.420 --> 00:07:26.040
+Ya’ni, qurilmadagi mavjud xotira.
+
+00:07:26.040 --> 00:07:29.210
+Hamma bo‘sh joyni ilovangiz 
+uchun ishlatish yoqimli 
+
+00:07:29.210 --> 00:07:30.910
+ko‘rinsa ham,
+
+00:07:30.910 --> 00:07:34.390
+yodingizda tuting, sizning ilovangiz 
+foydalanuvchining qurilmasidagi yagona ilova emas.
+
+00:07:34.390 --> 00:07:38.450
+Va boshqa ilovalarga joy qoldirish juda muhim.
+
+00:07:38.450 --> 00:07:41.390
+Bu yerda Memory monitor ining 
+ilovamizning ikkita versiyasining 
+
+00:07:41.390 --> 00:07:43.210
+ikkita skrinshoti -
+
+00:07:43.210 --> 00:07:48.010
+Chap tarafdagisi, Linear layout 
+ishlatgan versiyamiz.
+
+00:07:48.010 --> 00:07:51.881
+O‘n tarafdagisi esa ListView 
+va ArrayAdapter ishlatgan ikkinchi
+ 
+
+00:07:51.881 --> 00:07:53.120
+ versiyamiz.
+
+00:07:53.120 --> 00:07:56.800
+Yodingizda tuting, ajratilgan xotira 
+to‘q ko‘kda ko‘rsatilgan
+
+00:07:56.800 --> 00:07:58.700
+bo‘sh joy esa och ko‘kda.
+
+00:07:59.810 --> 00:08:04.180
+Ahamiyat bering, ikkala holatda ham 
+ajratilgan xotiradagi sakrash, 
+
+00:08:04.180 --> 00:08:07.500
+foydalanuvchi Numbers kategoriyasini,
+so‘zlar ro‘yxatini chiqarish uchun bosganida kuzatilgan.
+
+00:08:08.590 --> 00:08:11.760
+Keling ilovaning Linear layout li
+ versiyasini yaqinlashtiramiz va
+
+00:08:11.760 --> 00:08:16.910
+sakrash 11 megabaytdan 14 megabaytga 
+bo‘lganiga guvoh bo‘lamiz. 
+
+00:08:16.910 --> 00:08:21.025
+Shunday qilib, bu ushbu 1000 ta
+ so‘zdan iborat ro‘yxatni namoyish etish 
+
+00:08:21.025 --> 00:08:21.870
+uchun xotira foydalanishinida
+ egallaydigan 3 megabayt.
+
+00:08:23.070 --> 00:08:26.450
+Endi buni ListView va ArrayAdapter ni
+ ishlatishimizga taqqoslang.
+
+00:08:26.450 --> 00:08:31.400
+Bu zo‘rg‘a 0.5 megabaytni 1000 ta so‘zdan
+ iborat ro‘yxatni ko‘rsatishga ishlatyati.
+162
+00:08:32,520 --&gt; 00:08:34,174
+Shu ikkita misolni ko‘rgach,
+
+00:08:34.174 --> 00:08:36.799
+Xotirani boshqarish vositasidan
+ foydalanish haqida ko‘proq 
+
+00:08:36.799 --> 00:08:38.659
+ma’lumot olish uchun quyidagi 
+havolalarni ko‘rib chiqishingizni xohlardim.
+
+00:08:38.659 --> 00:08:40.900
+Hamda ilovangiz ishlashini yaxshilaydigan
+ boshqa yo‘llarni ham.
+

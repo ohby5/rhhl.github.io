@@ -1,0 +1,467 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.734 --> 00:00:03.667
+As duas primeiras tarefas do exercício
+são para você se inteirar
+
+00:00:03.701 --> 00:00:07.801
+do estado do código depois que você me viu
+fazendo aquelas mudanças no vídeo anterior.
+
+00:00:07.834 --> 00:00:12.267
+Na nossa 1ª tarefa, temos que deletar
+esse bloco de mensagens de log,
+
+00:00:12.300 --> 00:00:13.434
+então vou fazer isso agora.
+
+00:00:14.634 --> 00:00:16.000
+Legal. Fácil.
+
+00:00:16.033 --> 00:00:21.501
+Nossa próxima tarefa é modificar
+o activity_numbers.xml para que ele use
+
+00:00:21.534 --> 00:00:24.868
+um LinearLayout,
+em vez de RelativeLayout,
+
+00:00:24.901 --> 00:00:27.133
+assim como mudar a orientação
+para vertical.
+
+00:00:30.067 --> 00:00:34.334
+Também adicionamos uma ID de view
+que vou chamar de rootView.
+
+00:00:36.567 --> 00:00:38.634
+Ótimo, essas são
+as duas primeiras tarefas.
+
+00:00:38.667 --> 00:00:39.901
+Para a 3ª tarefa,
+
+00:00:39.934 --> 00:00:42.434
+precisamos modificar o método onCreate
+na atividade Números.
+
+00:00:42.467 --> 00:00:45.767
+Precisamos modificá-la para que use
+o loop while para criar uma text view
+
+00:00:45.801 --> 00:00:49.200
+para cada elemento na lista de palavras
+e depois exibir a textView na tela.
+
+00:00:50.501 --> 00:00:53.701
+Aqui está nossa versão
+do NumbersActivity.java
+
+00:00:53.734 --> 00:00:55.200
+que postamos online
+
+00:00:55.234 --> 00:00:58.400
+e o código que ele usa aqui
+para criar 3 textViews
+
+00:00:58.434 --> 00:01:01.968
+tem mais uma abordagem de menu
+do que usar do loop while.
+
+00:01:02.000 --> 00:01:03.300
+Então depois de começar
+este código
+
+00:01:03.334 --> 00:01:06.834
+e entender como ele funciona,
+ele vai nos ajudar a escrever o loop while.
+
+00:01:06.868 --> 00:01:10.734
+Antes de começarmos a escrever
+o loop while, vamos revisar as 3 questões
+
+00:01:10.767 --> 00:01:14.033
+que discutimos mais cedo
+na aula do loop while.
+
+00:01:14.067 --> 00:01:17.267
+Vamos discutir como adicionar
+textViews à tela
+
+00:01:17.300 --> 00:01:18.667
+usando o loop while
+mais profundamente.
+
+00:01:18.701 --> 00:01:20.801
+Esta é a estrutura geral
+
+00:01:20.834 --> 00:01:22.601
+de como vamos escrever
+nosso loop while
+
+00:01:22.634 --> 00:01:25.968
+e as 3 questões que vamos discutir
+nos ajudarão a preencher esses espaços.
+
+00:01:26.000 --> 00:01:28.534
+Então, que tarefa
+devemos fazer toda vez?
+
+00:01:28.567 --> 00:01:32.200
+Bom, pelo código da atividade Números,
+parece que queremos criar uma nova textView,
+
+00:01:32.234 --> 00:01:35.634
+depois configurá-la para uma única
+palavra na lista,
+
+00:01:35.667 --> 00:01:37.667
+depois adicionar
+a textView à rootView.
+
+00:01:37.701 --> 00:01:40.601
+2º, quantas vezes
+queremos repetir este loop?
+
+00:01:40.634 --> 00:01:42.901
+Neste exemplo,
+queremos repeti-lo 10 vezes.
+
+00:01:42.934 --> 00:01:45.400
+Então uma iteração
+por palavra na lista.
+
+00:01:45.434 --> 00:01:47.467
+E aqui temos 10 palavras
+nesta lista agora.
+
+00:01:47.501 --> 00:01:50.100
+A 3ª questão é,
+qual é a condição?
+
+00:01:50.133 --> 00:01:53.634
+Bom, queremos continuar repetindo
+pela lista até alcançarmos seu fim.
+
+00:01:53.667 --> 00:01:56.267
+Então se criarmos uma variável
+de índice para rastrear
+
+00:01:56.300 --> 00:01:58.934
+nossa posição atual do índice,
+nossa condição pode continuar
+
+00:01:58.968 --> 00:02:02.434
+se repetindo enquanto a variável
+do índice for menor que 10,
+
+00:02:02.467 --> 00:02:04.701
+que atualmente é o comprimento
+da lista das palavras.
+
+00:02:04.734 --> 00:02:07.400
+Então isso supõe que a variável
+do índice começa em 0
+
+00:02:07.434 --> 00:02:08.634
+e aumenta em 1 de cada vez.
+
+00:02:08.667 --> 00:02:11.734
+Então voltamos
+ao NumbersActivity.java,
+
+00:02:11.767 --> 00:02:15.934
+a versão onde criamos
+textViews manualmente.
+
+00:02:15.968 --> 00:02:19.501
+Então vou copiar e colar este bloco
+de código que nos permite fazer isso.
+
+00:02:19.534 --> 00:02:22.534
+Agora no Android Studio,
+no NumbersActivity.java,
+
+00:02:22.567 --> 00:02:25.901
+no método onCreate,
+vou adicionar esse bloco de código.
+
+00:02:25.934 --> 00:02:28.801
+O que fizemos aqui foi primeiro
+achar o rootView
+
+00:02:28.834 --> 00:02:31.501
+para o layout todo, depois criar
+uma variável para acompanhar
+
+00:02:31.534 --> 00:02:34.701
+a posição atual do índice
+na arrayList das palavras.
+
+00:02:34.734 --> 00:02:38.701
+Depois criamos novas textViews
+para mostrar cada uma dessas palavras
+
+00:02:38.734 --> 00:02:41.534
+e adicionei essas textViews
+à nossa rootView para serem exibidas.
+
+00:02:41.567 --> 00:02:43.567
+Mas essa foi
+uma abordagem manual.
+
+00:02:43.601 --> 00:02:45.968
+Vamos ver como mudá-la
+com um loop while.
+
+00:02:46.000 --> 00:02:48.367
+Começando com esta 1ª linha
+para achar a rootView
+
+00:02:48.400 --> 00:02:50.434
+para o layout.
+Queremos manter isso.
+
+00:02:50.467 --> 00:02:52.968
+Ela vai ficar aqui
+mesmo com o loop while.
+
+00:02:53.000 --> 00:02:56.968
+Agora vêm as partes do loop while,
+então vou escrever isso aqui.
+
+00:02:57.000 --> 00:03:00.467
+O loop while requer
+configurar a variável counter,
+
+00:03:00.501 --> 00:03:04.667
+depois vem a palavra-chave while e dentro
+vem a condição seguida por chaves,
+
+00:03:04.701 --> 00:03:06.767
+e dentro das chaves,
+instruções
+
+00:03:06.801 --> 00:03:09.400
+ou tarefas, como atualizar
+a variável counter.
+
+00:03:09.434 --> 00:03:11.000
+Aqui está a configuração
+do nosso loop while.
+
+00:03:11.033 --> 00:03:14.267
+Então a 1ª coisa que precisamos fazer
+é configurar a variável counter,
+
+00:03:14.300 --> 00:03:16.133
+e parece que fizemos
+isso aqui.
+
+00:03:16.167 --> 00:03:19.601
+Então vou pegar essa parte do código
+e substituí-la aqui.
+
+00:03:19.634 --> 00:03:23.033
+Agora teremos a palavra-chave "while"
+seguida de parênteses
+
+00:03:23.067 --> 00:03:24.934
+e dentro temos a condição.
+
+00:03:24.968 --> 00:03:28.033
+A nossa condição
+é que a variável do índice
+
+00:03:28.067 --> 00:03:30.934
+seja menor que 10
+para que o loop while continue.
+
+00:03:30.968 --> 00:03:32.801
+Porém, em vez de usar 10
+explicitamente,
+
+00:03:32.834 --> 00:03:35.534
+Quero usar o método
+words.size.
+
+00:03:35.567 --> 00:03:37.434
+Assim, se a lista
+de palavras mudar,
+
+00:03:37.467 --> 00:03:39.634
+não precisaremos atualizar
+a condição aqui.
+
+00:03:39.667 --> 00:03:42.234
+Isso nos permitirá a chegar
+ao fim da lista automaticamente,
+
+00:03:42.267 --> 00:03:43.734
+não importando
+quão longa ela seja.
+
+00:03:43.767 --> 00:03:47.234
+Certo, enquanto essa condição
+for verdadeira, queremos criar uma textView
+
+00:03:47.267 --> 00:03:50.801
+e deixar o texto como a palavra
+no índice atual na lista de palavras.
+
+00:03:50.834 --> 00:03:53.534
+E depois precisamos exibir
+a textViews na tela.
+
+00:03:53.567 --> 00:03:54.734
+Então, como já tenho
+o código para isto,
+
+00:03:54.767 --> 00:03:57.167
+vamos levá-lo
+para a declaração while.
+
+00:03:57.200 --> 00:03:59.133
+Isto vai ficar no lugar
+das instruções.
+
+00:04:01.501 --> 00:04:03.601
+Legal, parece que estamos
+quase terminando o loop while.
+
+00:04:03.634 --> 00:04:06.934
+A última coisa que precisamos fazer aqui
+é atualizar a variável counter.
+
+00:04:06.968 --> 00:04:09.801
+Precisamos atualizar a variável counter
+ao fim de cada iteração,
+
+00:04:09.834 --> 00:04:13.133
+assim podemos sair do loop
+quando chegarmos ao fim da lista.
+
+00:04:13.167 --> 00:04:18.100
+Então, usando a abreviação que aprendemos
+antes, vou digitar "index++".
+
+00:04:18.133 --> 00:04:23.601
+Lembre-se, esta abreviação
+equivale a index = index +1.
+
+00:04:23.634 --> 00:04:25.934
+Então vou deixar
+um comentário na lateral
+
+00:04:25.968 --> 00:04:26.968
+para ajudar vocês
+a se lembrarem disso.
+
+00:04:28.000 --> 00:04:31.167
+Agora vou remover todo o resto.
+Não preciso mais,
+
+00:04:31.200 --> 00:04:32.534
+já que o loop
+faz tudo isso.
+
+00:04:32.567 --> 00:04:35.601
+Então acabamos de fazer várias
+alterações no nosso código
+
+00:04:35.634 --> 00:04:37.701
+e implementamos
+um novo conceito, o loop while.
+
+00:04:37.734 --> 00:04:39.601
+Para recapitular
+o que fizemos,
+
+00:04:39.634 --> 00:04:43.801
+removemos as mensagens de log
+no método onCreate na NumbersActivity.
+
+00:04:43.834 --> 00:04:47.300
+Também modificamos
+o activity_numbers.xml,
+
+00:04:47.334 --> 00:04:50.834
+o alteramos para usar um LinearLayout,
+em vez de um LayoutRelativo.
+
+00:04:50.868 --> 00:04:52.934
+Mudamos a orientação
+para vertical
+
+00:04:52.968 --> 00:04:55.501
+e depois adicionamos uma ID de view
+chamada rootView.
+
+00:04:55.534 --> 00:04:58.400
+Por fim, no método onCreate
+da NumbersActivity,
+
+00:04:58.434 --> 00:05:01.801
+usamos as 3 questões-guia para nos ajudar
+a escrever um loop while para criar
+
+00:05:01.834 --> 00:05:05.000
+e mostrar uma textView
+para cada elemento na lista de palavras.
+
+00:05:05.033 --> 00:05:08.033
+Certo, mais cedo falamos
+um pouco sobre tipos de abreviações
+
+00:05:08.067 --> 00:05:12.501
+e uma comum que vimos foi a index++
+que usamos no loop while.
+
+00:05:12.534 --> 00:05:16.767
+Mencionei que era a abreviação
+para index = index +1.
+
+00:05:16.801 --> 00:05:19.234
+Há várias outras
+abreviações similares.
+
+00:05:19.267 --> 00:05:23.100
+Por exemplo, uma variável
+
+00:05:23.133 --> 00:05:26.167
+como j+= um número,
+nesse caso, 3.
+
+00:05:26.200 --> 00:05:31.434
+Essa é uma abreviação para essa variável
+= àquela variável + aquele número.
+
+00:05:31.467 --> 00:05:35.300
+Podemos também ter abreviações
+para subtrações, como pegar uma variável
+
+00:05:35.334 --> 00:05:41.434
+e adicionar "menos menos"
+e esta é a abreviação de i = i- 1.
+
+00:05:41.467 --> 00:05:45.400
+Em todos esses casos, podemos
+substituir diferentes variáveis
+
+00:05:45.434 --> 00:05:46.567
+e diferentes números.
+
+00:05:46.601 --> 00:05:51.934
+É também muito importante
+notar que i++ não é apenas igual
+
+00:05:51.968 --> 00:05:57.167
+à parte i + 1, mas é igual
+à expressão i = i + 1 inteira.
+
+00:05:57.200 --> 00:06:01.434
+Então, faz o cálculo e iguala
+de volta àquela variável.
+

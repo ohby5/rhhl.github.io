@@ -1,0 +1,694 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.450 --> 00:00:04.040
+Sekarang mari kita lihat kode yang telah
+Anda tambahkan di latihan terakhir,
+
+00:00:04.040 --> 00:00:07.030
+ada banyak hal terjadi dalam
+ketiga baris kode ini saja.
+
+00:00:07.030 --> 00:00:09.970
+Pada tingkat tinggi, kita
+membuat ArrayAdapter
+
+00:00:09.970 --> 00:00:12.550
+yang berisi list string
+sebagai sumber datanya.
+
+00:00:13.730 --> 00:00:16.040
+Lalu kita mencari melalui
+hierarki view untuk
+
+00:00:16.040 --> 00:00:19.580
+ListView yang didefinisikan
+dalam tata letak XML kita.
+
+00:00:19.580 --> 00:00:22.050
+Lalu kita mengaitkan ArrayAdapter
+dengan ListView.
+
+00:00:23.130 --> 00:00:25.470
+Untuk penjelasan lebih terperinci
+tentang apa yang terjadi,
+
+00:00:25.470 --> 00:00:27.620
+mari kita lihat satu baris demi satu baris.
+
+00:00:27.620 --> 00:00:32.080
+Pertama, kita membuat objek ArrayAdapter
+menggunakan kata kunci baru dan
+
+00:00:32.080 --> 00:00:33.650
+constructor dengan tiga input.
+
+00:00:35.260 --> 00:00:39.430
+Kita menyimpannya dalam variabel baru,
+lalu memanggil ulang adapter item
+
+00:00:39.430 --> 00:00:42.440
+di mana ArrayAdapter adalah tipe datanya.
+
+00:00:42.440 --> 00:00:45.250
+Bagaimana kita memasukkan
+ketiga input ini?
+
+00:00:45.250 --> 00:00:47.300
+Mari kita lihat
+dokumentasi.
+
+00:00:47.300 --> 00:00:51.070
+Di sini, di dalam dokumentasi pengembang
+untuk ArrayAdapter dan
+
+00:00:51.070 --> 00:00:56.000
+jika Anda mencari daring untuk ArrayAdapter
+Android, Anda bisa menemukan halaman ini.
+
+00:00:56.000 --> 00:00:59.620
+Kita scroll turun ke bagian
+bernama Public Constructors.
+
+00:00:59.620 --> 00:01:02.420
+Ini memberi tahu kita cara-cara yang berbeda
+untuk membuat ArrayAdapter baru.
+
+00:01:03.720 --> 00:01:06.580
+Tiap constructor meminta
+input yang berbeda.
+
+00:01:06.580 --> 00:01:08.670
+Kita telah menggunakan constructor
+kedua hingga terakhir di sini,
+
+00:01:10.240 --> 00:01:14.070
+dan inilah kode yang telah kita gunakan
+dalam dokumen NumbersActivity.
+
+00:01:15.360 --> 00:01:21.010
+Perhatikan bahwa kita memasukkan context
+yang merujuk pada NumbersActivity,
+
+00:01:21.010 --> 00:01:23.810
+yaitu dokumen tata letak dan list objek.
+
+00:01:25.230 --> 00:01:28.790
+Alasan lain kenapa kita butuh context adalah
+karena kita membuat view.
+
+00:01:28.790 --> 00:01:31.490
+Karena NumbersActivity adalah context,
+
+00:01:31.490 --> 00:01:35.010
+kita masukkan kata "this" untuk
+merujuk NumbersActivity.
+
+00:01:35.010 --> 00:01:37.500
+Parameter kedua adalah dokumen
+tata letak item list.
+
+00:01:38.680 --> 00:01:43.580
+Normalnya, kita merujuk dokumen tata
+letak dalam bentuk R.layout untuk
+
+00:01:43.580 --> 00:01:46.640
+tata letak yang telah kita definisikan, disusul
+oleh nama dokumen tata letak.
+
+00:01:47.800 --> 00:01:53.280
+Dalam hal ini, kita menentukan
+android.R.layout karena framework
+
+00:01:53.280 --> 00:01:59.460
+Android telah mendefinisikan dokumen tata
+letak XML, yaitu simple_list_item_1.
+
+00:01:59.460 --> 00:02:03.240
+Dan kita bisa menggunakan yang telah
+didefinisikan oleh Android untuk kita.
+
+00:02:03.240 --> 00:02:07.630
+Pencetak terakhir adalah list objek
+yang akan menjadi sumber data untuk
+
+00:02:07.630 --> 00:02:09.360
+ArrayAdapter.
+
+00:02:09.360 --> 00:02:11.600
+Dalam hal ini, yaitu Words.
+
+00:02:11.600 --> 00:02:14.800
+Di pelajaran ini tadi kita
+telah membahas generik
+
+00:02:14.800 --> 00:02:17.720
+saat kita membuat ArrayList string.
+
+00:02:17.720 --> 00:02:21.088
+Ingat, fokus pada ArrayList ini dan
+bukan pada ArrayAdapter.
+
+00:02:21.088 --> 00:02:25.240
+Karena ArrayList adalah kelas generik,
+kita bisa menulisnya ulang
+
+00:02:25.240 --> 00:02:27.230
+menjadi ArrayList dan
+
+00:02:27.230 --> 00:02:31.760
+memasukkan E di dalam tanda kurung siku
+untuk menunjukkan ini adalah kelas generik.
+
+00:02:31.760 --> 00:02:34.280
+Ingat bahwa E adalah parameter tipe atau
+
+00:02:34.280 --> 00:02:38.210
+placeholder yang dapat diganti
+dengan tipe objek spesifik
+
+00:02:38.210 --> 00:02:42.040
+seperti string saat kita membuat
+contoh ArrayList.
+
+00:02:42.040 --> 00:02:46.080
+Membuat kelas generik ONE
+memungkinkan kita untuk memutuskan
+
+00:02:46.080 --> 00:02:50.730
+tipe data yang akan disimpannya nanti,
+daripada harus membuat
+
+00:02:50.730 --> 00:02:55.415
+banyak kelas spesifik seperti
+kelas StringList, kelas Integer,
+
+00:02:55.415 --> 00:02:59.780
+kelas Boolean, atau kelas
+list tipe objek lainnya.
+
+00:02:59.780 --> 00:03:03.570
+Kembali ke pembahasan kita
+tentang ArrayAdapter.
+
+00:03:03.570 --> 00:03:07.330
+Ini adalah dokumentasi untuk
+ArrayAdapter.
+
+00:03:07.330 --> 00:03:11.710
+Kita lihat di sini bahwa ArrayAdapter
+memiliki tanda kurung siku sintaksis
+
+00:03:11.710 --> 00:03:15.520
+T yang menunjukkan bahwa ini
+juga merupakan kelas generik.
+
+00:03:15.520 --> 00:03:19.780
+T, seperti E, adalah parameter tipe
+yang dapat diganti dengan
+
+00:03:19.780 --> 00:03:22.200
+tipe objek data spesifik.
+
+00:03:22.200 --> 00:03:24.870
+Secara khusus, T adalah singkatan untuk
+
+00:03:24.870 --> 00:03:29.870
+tipe data karena saat Anda mengatakan
+tipe data apa yang ada di array dan
+
+00:03:29.870 --> 00:03:34.660
+terutama dalam hal ini, kita punya
+array berisi tiap data string.
+
+00:03:34.660 --> 00:03:39.810
+Kita membuat ArrayAdapter yang
+secara khusus mengambil string dan
+
+00:03:39.810 --> 00:03:44.230
+akan membuat view item list untuk
+masing-masing elemen string ini.
+
+00:03:44.230 --> 00:03:48.340
+Kembali ke tabel perbandingan yang
+menunjukkan mengapa akan lebih baik
+
+00:03:48.340 --> 00:03:53.630
+membuat satu kelas generik daripada
+membuat kelas untuk tipe list.
+
+00:03:53.630 --> 00:03:55.120
+Di sini, kita lihat bahwa untuk
+
+00:03:55.120 --> 00:04:00.190
+ArrayAdapter, kita bisa mengganti T
+dengan tipe data objek lain.
+
+00:04:00.190 --> 00:04:04.120
+Dalam hal ini, kita akan mengganti
+T dengan tipe data string.
+
+00:04:05.338 --> 00:04:08.330
+Baik, ada banyak hal terjadi dalam
+baris kode tersebut.
+
+00:04:08.330 --> 00:04:10.350
+Mari pindah ke baris kedua.
+
+00:04:10.350 --> 00:04:12.430
+Di sini, kita melihat pada
+hierarki view untuk
+
+00:04:12.430 --> 00:04:17.550
+view dengan ID nameList dan metode
+findViewById mengembalikan view dan
+
+00:04:17.550 --> 00:04:20.890
+kita memasukkannya ke
+tipe data view list.
+
+00:04:20.890 --> 00:04:24.920
+Pemasangan ini akan berhasil jika kita
+menemukan textView atau imageView.
+
+00:04:24.920 --> 00:04:28.930
+Dalam hal ini, pemasangan berhasil karena
+kita memang menemukan ListView
+
+00:04:28.930 --> 00:04:29.950
+di tata letak.
+
+00:04:29.950 --> 00:04:33.730
+Kita simpan ListView ini ke dalam
+variabel bernama ListView.
+
+00:04:33.730 --> 00:04:35.150
+Lalu kita bisa memanggil metode dengannya
+
+00:04:35.150 --> 00:04:37.130
+dan berinteraksi dengannya sementara
+aplikasi berjalan.
+
+00:04:37.130 --> 00:04:38.300
+Kembali ke baris kode.
+
+00:04:38.300 --> 00:04:41.210
+Di sini disebutkan listView.setAdapter dan
+
+00:04:41.210 --> 00:04:44.260
+ini mengambil itemsAdapter
+sebagai parameternya.
+
+00:04:44.260 --> 00:04:48.010
+Kita memanggil metode setAdapter di
+objek ListView yang kita definisikan
+
+00:04:48.010 --> 00:04:49.660
+di baris sebelumnya.
+
+00:04:49.660 --> 00:04:55.140
+Jika kita masuk ke dokumentasi
+ListView dan mencari setAdapter,
+
+00:04:55.140 --> 00:04:58.230
+kita lihat bahwa metode ini
+mengambil parameter input satu.
+
+00:04:58.230 --> 00:05:01.860
+Ini meminta objek dengan tipe
+ArrayList, tapi
+
+00:05:01.860 --> 00:05:06.160
+dalam kode, kita hanya punya
+ArrayAdapter, bukan ListAdapter.
+
+00:05:06.160 --> 00:05:09.270
+Mari kita klik ListAdapter untuk
+mencari tahu lebih banyak.
+
+00:05:09.270 --> 00:05:12.890
+Baik, sekarang kita berada di dalam dokumentasi
+ListAdapter, dan jika kita scroll turun
+
+00:05:12.890 --> 00:05:17.250
+sedikit ke metode public, kita lihat bahwa
+ini juga merupakan metode abstrak.
+
+00:05:17.250 --> 00:05:21.640
+Jika kita melihat bagian atas dokumen,
+disebutkan bahwa adapter ini adalah antarmuka
+
+00:05:21.640 --> 00:05:24.440
+dan, ingat, kita belajar tentang antarmuka
+di pelajaran terakhir, dan
+
+00:05:24.440 --> 00:05:27.180
+bahwa onClickListener adalah antarmuka.
+
+00:05:27.180 --> 00:05:31.110
+Tapi kita perlu menyediakan implementasi
+untuk metode, yang berarti bahwa kita
+
+00:05:31.110 --> 00:05:34.590
+perlu membuat kelas yang
+mengimplementasikan antarmuka ListAdapter
+
+00:05:34.590 --> 00:05:38.710
+sehingga kita bisa mengatur adapter
+dengan benar di ListView.
+
+00:05:38.710 --> 00:05:42.320
+Untungnya, tim Android telah melakukan
+hal ini untuk kita, dan
+
+00:05:42.320 --> 00:05:46.250
+kita boleh membuat kelas sendiri yang
+mengimplementasikan antarmuka ListAdapter,
+
+00:05:46.250 --> 00:05:48.820
+tapi ArrayAdapter cocok untuk kebutuhan kita.
+
+00:05:48.820 --> 00:05:52.780
+Mari kita lihat kembali ke
+halaman dokumentasi ArrayAdapter, dan
+
+00:05:52.780 --> 00:05:55.360
+kita bisa melihat diagram
+hierarki kelas.
+
+00:05:55.360 --> 00:05:58.670
+ArrayAdapter merentang dari
+BaseAdapter.
+
+00:05:58.670 --> 00:06:00.490
+Jadi, mari kita periksa.
+
+00:06:00.490 --> 00:06:03.890
+Dikatakan bahwa BaseAdapter
+adalah kelas abstrak.
+
+00:06:03.890 --> 00:06:06.370
+Dan lihat, ini mengimplementasikan
+antarmuka ListAdapter.
+
+00:06:07.520 --> 00:06:12.760
+Ini berarti bahwa BaseAdapter dapat digunakan
+tiap kali ListAdapter diperlukan.
+
+00:06:12.760 --> 00:06:16.200
+ArrayAdapter dapat digunakan
+tiap kali ListAdapter diperlukan.
+
+00:06:16.200 --> 00:06:20.510
+Baik, saya tahu ada banyak tautan yang
+harus diikuti dan
+
+00:06:20.510 --> 00:06:21.730
+mungkin ini membingungkan.
+
+00:06:21.730 --> 00:06:23.098
+Jadi, terima kasih karena tetap mengikuti
+
+00:06:23.098 --> 00:06:27.640
+dan saya akan meringkas semua informasi
+yang baru saja kita bicarakan.
+
+00:06:27.640 --> 00:06:31.960
+Dalam grafis yang menunjukkan perbedaan
+antara kelas konkret,
+
+00:06:31.960 --> 00:06:35.020
+kelas abstrak, dan antarmuka,
+kita akan membahas bagaimana
+
+00:06:35.020 --> 00:06:38.630
+adapter diterapkan untuk masing-masing
+dari ketiga kategori ini.
+
+00:06:38.630 --> 00:06:44.250
+ListView mengatur metode adapter
+untuk meminta ListAdapter sebagai input
+
+00:06:44.250 --> 00:06:46.920
+sehingga ListAdapter adalah antarmuka.
+
+00:06:46.920 --> 00:06:49.580
+Ini berarti bahwa tidak ada status
+yang diimplementasikan dan
+
+00:06:49.580 --> 00:06:51.530
+semua metode adalah abstrak.
+
+00:06:51.530 --> 00:06:56.800
+Ternyata tim Android juga telah
+membuat kelas BaseAdapter,
+
+00:06:56.800 --> 00:07:00.080
+yang merupakan kelas abstrak yang
+menyediakan implementasi untuk
+
+00:07:00.080 --> 00:07:02.910
+sebagian dari metode ListAdapter.
+
+00:07:02.910 --> 00:07:06.190
+Tapi juga tetap membiarkan
+metode lain sebagai abstrak.
+
+00:07:06.190 --> 00:07:08.692
+Di sinilah ArrayAdapter
+masuk.
+
+00:07:08.692 --> 00:07:13.780
+ArrayAdapter adalah kelas konkret yang
+metodenya diimplementasikan.
+
+00:07:13.780 --> 00:07:16.380
+Jadi tidak ada metode yang tetap abstrak, dan
+
+00:07:16.380 --> 00:07:21.480
+kita bisa buat contoh objek ArrayAdapter
+dan menggunakannya dalam aplikasi kita.
+
+00:07:21.480 --> 00:07:25.010
+Karena kita memverifikasi bahwa
+ArrayAdapter adalah ListAdapter,
+
+00:07:25.010 --> 00:07:28.570
+kita bisa memasukkan variabel
+itemsAdapter sebagai input
+
+00:07:28.570 --> 00:07:32.110
+panggilan metode list view dot
+set adapter.
+
+00:07:32.110 --> 00:07:32.990
+Kerja luar biasa.
+
+00:07:32.990 --> 00:07:35.560
+Sekarang Anda tahu betapa kuatnya ketiga
+baris kode ini.
+
+00:07:36.720 --> 00:07:39.500
+Saya tahu banyak informasi yang harus
+dimasukkan sekaligus tapi
+
+00:07:39.500 --> 00:07:42.720
+seimbang dengan waktu yang diluangkan
+untuk memahami semuanya.
+
+00:07:42.720 --> 00:07:45.490
+Karena, adapter adalah pola yang
+benar-benar umum di Android.
+
+00:07:46.770 --> 00:07:51.850
+Karena, adapter tahu tentang sumber data
+apakah array atau list.
+
+00:07:51.850 --> 00:07:54.850
+Dan adapter juga tahu cara menyajikan
+tiap item sebagai view.
+
+00:07:54.850 --> 00:07:58.460
+Sementara itu, ListView menangani
+penampilan view ini di layar,
+
+00:07:58.460 --> 00:08:00.840
+mendeteksi gerakan sentuhan pengguna, dan
+
+00:08:00.840 --> 00:08:05.460
+mengelola status pengguna
+di dalam seluruh list.
+
+00:08:05.460 --> 00:08:08.390
+Dan inilah ketiga baris kode yang
+meringkas
+
+00:08:08.390 --> 00:08:11.440
+interaksi antara ListView
+dan ArrayAdapter ini.
+
+00:08:11.440 --> 00:08:13.240
+Kita akan membahasnya lebih dalam nanti.
+
+00:08:13.240 --> 00:08:17.010
+Untuk saat ini, Anda bisa membayangkannya
+sebagai pemisahan antara antarmuka pengguna
+
+00:08:17.010 --> 00:08:17.850
+dan model data.
+
+00:08:19.220 --> 00:08:21.710
+Ini bukan pemisahan yang tegas
+
+00:08:21.710 --> 00:08:25.070
+karena ArrayAdapter berkaitan
+dengan view, tapi
+
+00:08:25.070 --> 00:08:28.890
+terutama ListView bertanggung jawab
+atas detail antarmuka pengguna.
+
+00:08:28.890 --> 00:08:31.390
+Sementara adapter bertanggung jawab
+dengan data.
+
+00:08:31.390 --> 00:08:35.570
+Karena terpisah, Anda bisa
+saling menggantinya.
+
+00:08:35.570 --> 00:08:40.010
+Misalnya, Anda bisa memasang ArrayAdapter
+yang sama untuk GridView.
+
+00:08:40.010 --> 00:08:43.200
+ArrayAdapter tetap
+sama persis dan
+
+00:08:43.200 --> 00:08:48.830
+daripada menunjukkan deret ListItem, GridView
+sekarang meminta view item grid.
+
+00:08:48.830 --> 00:08:52.160
+Ini menjadi posisi 0, posisi 1,
+
+00:08:52.160 --> 00:08:53.680
+dan seterusnya.
+
+00:08:53.680 --> 00:08:57.300
+Dan adapter masih tetap
+menyediakan view-view ini.
+
+00:08:57.300 --> 00:09:00.090
+Anda sudah melihat menu
+tarik turun di Android?
+
+00:09:00.090 --> 00:09:03.100
+Dalam istilah Android, ini
+disebut spinner.
+
+00:09:03.100 --> 00:09:04.190
+Coba tebak.
+
+00:09:04.190 --> 00:09:08.380
+Untuk mempopulasi tiap item dalam menu
+tarik turun, kita pasang adapter di sini.
+
+00:09:08.380 --> 00:09:12.600
+Jadi tiap item dalam menu berasal dari
+item dalam sumber data.
+
+00:09:12.600 --> 00:09:15.560
+Seperti Anda lihat, Anda bisa menjumpai
+pola adapter saat Anda membangun
+
+00:09:15.560 --> 00:09:16.860
+aplikasi Android.
+
+00:09:16.860 --> 00:09:19.510
+Jadi, sangat penting bahwa Anda
+telah mengetahuinya sekarang.
+
+00:09:19.510 --> 00:09:24.080
+Sebentar lagi kita akan melihat pola
+ini lagi di pelajaran lima.
+
+00:09:24.080 --> 00:09:28.990
+Untuk tugas berikutnya, cobalah memodifikasi
+sebagian dari kode ListViewAdapter dan
+
+00:09:28.990 --> 00:09:29.739
+lihat apa yang terjadi.
+
+00:09:30.740 --> 00:09:34.040
+Lalu cobalah menggunakan GridView
+dan bukannya ListView.
+
+00:09:34.040 --> 00:09:37.130
+GridView juga mendaur ulang view dan
+
+00:09:37.130 --> 00:09:39.360
+butuh adapter untuk tahu
+informasi apa yang harus ditampilkan.
+
+00:09:39.360 --> 00:09:42.370
+Ini semua untuk tujuan
+eksperimen saja.
+
+00:09:42.370 --> 00:09:44.880
+Di akhir tugas, saya
+akan meminta Anda untuk kembali dan
+
+00:09:44.880 --> 00:09:46.709
+membalik kode Anda untuk memakai ListView.
+
+00:09:47.740 --> 00:09:50.120
+Berikut ini perincian
+latihannya.
+
+00:09:50.120 --> 00:09:51.920
+Daripada menggunakan ListView,
+
+00:09:51.920 --> 00:09:55.840
+cobalah menggunakan GridView untuk
+menampilkan kata-kata dalam NumbersActivity.
+
+00:09:55.840 --> 00:09:58.140
+Anda bisa menggunakan adapter yang sama
+yang telah kita buat tadi.
+
+00:09:58.140 --> 00:10:00.180
+Dan jika Anda butuh bantuan,
+
+00:10:00.180 --> 00:10:04.128
+Anda bisa merujuk artikel yang telah saya
+tautkan di bawah, yang membahas GridView.
+
+00:10:04.128 --> 00:10:08.140
+Tapi saya ingin Anda tahu, sebelum Anda
+berjalan lebih jauh di lubang kelinci dan
+
+00:10:08.140 --> 00:10:11.490
+mulai menyalin dan menempelkan
+kode dari artikel tersebut,
+
+00:10:11.490 --> 00:10:16.860
+Anda harus menyadari bahwa tugas
+mengubah ListView ke GridView ini
+
+00:10:16.860 --> 00:10:21.230
+dapat dilakukan di aplikasi Miwok hanya
+dengan mengubah beberapa baris kode.
+
+00:10:21.230 --> 00:10:24.430
+Setelah Anda mencoba tugas ini,
+silakan kembali dan
+
+00:10:24.430 --> 00:10:26.990
+ubah kode Anda sehingga
+menggunakan ListView lagi.
+
+00:10:26.990 --> 00:10:29.180
+Baik, semoga berhasil dan
+selamat bereksperimen.
+

@@ -1,0 +1,830 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.400
+Sei que o exercício
+tem muitos passos,
+
+00:00:02.434 --> 00:00:04.234
+é muita coisa
+para processar.
+
+00:00:04.267 --> 00:00:06.801
+Vamos começar
+com o app AndroidFlavor,
+
+00:00:06.834 --> 00:00:09.167
+para entender primeiro
+o código dele.
+
+00:00:09.200 --> 00:00:11.834
+Ele tem todas as partes
+funcionando juntas
+
+00:00:11.868 --> 00:00:13.167
+em um único projeto.
+
+00:00:13.200 --> 00:00:16.100
+Você pode baixar
+uma versão zipada do projeto,
+
+00:00:16.133 --> 00:00:18.234
+importar o app
+no Android Studio,
+
+00:00:18.267 --> 00:00:21.133
+e vai ser mais fácil
+ver todos os arquivos.
+
+00:00:21.167 --> 00:00:23.667
+Indo para baixo,
+vemos o ReadMe,
+
+00:00:23.701 --> 00:00:26.467
+que é uma explicação
+de o que é este app.
+
+00:00:26.501 --> 00:00:28.801
+Este exemplo usa
+uma exibição de lista
+
+00:00:28.834 --> 00:00:32.167
+e um ArrayAdapter customizado,
+chamado FlavorAdapter,
+
+00:00:32.200 --> 00:00:34.901
+para mostrar
+uma exibição de lista customizada
+
+00:00:34.934 --> 00:00:38.601
+que contém uma imagem
+e dois textos.
+
+00:00:38.634 --> 00:00:42.501
+Esta informação é usada
+para mostrar o nome dos sabores
+
+00:00:42.534 --> 00:00:43.901
+e o nome das versões.
+
+00:00:43.934 --> 00:00:47.033
+Este padrão de exibição
+e o adaptador customizado
+
+00:00:47.067 --> 00:00:50.334
+são parecidos com o que
+queremos para o app miwok.
+
+00:00:50.367 --> 00:00:53.901
+Sempre que os comentários
+falarem da visão do adaptador,
+
+00:00:53.934 --> 00:00:56.901
+estão falando da exibição de lista
+ou do grid
+
+00:00:56.934 --> 00:00:59.133
+que são exibições comuns
+do adaptador.
+
+00:00:59.167 --> 00:01:01.701
+Estamos de volta
+ao Android Studio.
+
+00:01:01.734 --> 00:01:07.534
+Eu baixei o projeto
+e abri para explorar mais.
+
+00:01:07.567 --> 00:01:09.367
+Para ver como é o projeto,
+
+00:01:09.400 --> 00:01:12.033
+primeiro vamos explorar
+os arquivos Java.
+
+00:01:12.067 --> 00:01:15.567
+Abrindo, vemos que tem
+3 arquivos Java.
+
+00:01:15.601 --> 00:01:18.534
+O primeiro que quero olhar
+é o MainActivity.
+
+00:01:18.567 --> 00:01:22.234
+Com este nome, deve ser
+a tela principal do app.
+
+00:01:22.267 --> 00:01:27.234
+Ao abrir o app, o MainActivity
+é criado pelo método onCreate.
+
+00:01:28.033 --> 00:01:32.634
+Então fazemos a visão de conteúdo
+ser activity_mainlayout.
+
+00:01:32.667 --> 00:01:35.567
+Depois disso,
+temos uma Arraylist
+
+00:01:35.601 --> 00:01:37.400
+chamado androidFlavors,
+
+00:01:37.434 --> 00:01:40.901
+que contém objetos
+do tipo AndroidFlavor.
+
+00:01:40.934 --> 00:01:44.234
+AndroidFlavor não parece ser
+uma classe tradicional.
+
+00:01:44.267 --> 00:01:46.267
+Deve ser
+uma classe customizada.
+
+00:01:46.300 --> 00:01:50.467
+Para verificar, vamos usar
+a declaração da função no Android.
+
+00:01:50.501 --> 00:01:54.467
+Para usar isso, vou clicar
+com a direita no nome da classe,
+
+00:01:54.501 --> 00:01:58.334
+e ir para
+a declaração da função.
+
+00:01:58.367 --> 00:02:02.801
+Ele nos levou para
+a classe AndroidFlavor.
+
+00:02:02.834 --> 00:02:07.501
+AndroidFlavor.java é uma classe
+customizada que nós criamos.
+
+00:02:07.534 --> 00:02:11.734
+Veja que os objetos desta classe
+têm 3 propriedades:
+
+00:02:11.767 --> 00:02:16.634
+VersionName, VersionNumber,
+e ImageResourceID.
+
+00:02:16.667 --> 00:02:20.000
+Os valores deles são
+definidos no construtor,
+
+00:02:20.033 --> 00:02:22.200
+que encontramos
+aqui embaixo.
+
+00:02:22.901 --> 00:02:26.067
+Esta classe também contém
+alguns métodos de busca.
+
+00:02:26.100 --> 00:02:31.367
+O que fizemos foi criar um vetor
+contendo objetos AndroidFlavor.
+
+00:02:31.400 --> 00:02:34.567
+Aqui temos um exemplo
+de um único objeto,
+
+00:02:34.601 --> 00:02:37.767
+com a analogia da caixa
+e os estados dentro dela.
+
+00:02:37.801 --> 00:02:43.033
+Pegamos cada um dos objetos
+e colocamos dentro de um vetor.
+
+00:02:43.067 --> 00:02:47.200
+Muitos objetos AndroidFlavor
+estão no vetor androidFlavors.
+
+00:02:47.234 --> 00:02:49.801
+Vamos voltar
+ao MainActivity.
+
+00:02:50.567 --> 00:02:53.968
+Aqui estamos vendo
+a Arraylist sendo criada.
+
+00:02:54.000 --> 00:02:58.467
+A seguir, temos as chamadas
+do ArrayAdapter.
+
+00:02:58.501 --> 00:03:01.968
+Nesta linha, instanciamos
+um adaptador customizado
+
+00:03:02.000 --> 00:03:05.434
+que é guardado em uma variável
+chamada flavorAdapter.
+
+00:03:05.467 --> 00:03:10.000
+Para criar esta variável,
+
+00:03:10.033 --> 00:03:15.367
+chamamos o construtor
+e passamos dois parâmetros.
+
+00:03:15.400 --> 00:03:18.200
+O primeiro deve
+se referir ao contexto,
+
+00:03:18.234 --> 00:03:23.467
+e o segundo, androidFlavors,
+é o nosso vetor.
+
+00:03:23.501 --> 00:03:26.133
+Vamos ver mais
+como o adaptador é definido
+
+00:03:26.167 --> 00:03:29.334
+indo para a definição
+do AndroidFlavorAdapter.
+
+00:03:29.367 --> 00:03:33.300
+Clicando com a direita,
+vamos para a declaração.
+
+00:03:33.334 --> 00:03:36.434
+Aqui está o arquivo Java
+do AndroidFlavorAdapter.
+
+00:03:36.467 --> 00:03:40.501
+Repare aqui em cima que ele
+estende o ArrayAdapter,
+
+00:03:40.534 --> 00:03:43.801
+ou seja, ele herda
+do ArrayAdapter.
+
+00:03:43.834 --> 00:03:46.601
+ArrayAdapter
+é uma superclasse,
+
+00:03:46.634 --> 00:03:50.033
+e AndroidFlavorAdapter
+é uma subclasse.
+
+00:03:50.067 --> 00:03:53.400
+Além de herdar
+de ArrayAdapter,
+
+00:03:53.434 --> 00:03:56.434
+também customizamos
+nossa classe de adaptador
+
+00:03:56.467 --> 00:04:01.100
+para esperar que os dados venham de
+uma lista de objetos AndroidFlavor.
+
+00:04:01.734 --> 00:04:04.234
+Vamos ver o construtor.
+
+00:04:04.267 --> 00:04:08.400
+Veja que chamamos
+o construtor da superclasse,
+
+00:04:08.434 --> 00:04:12.968
+o construtor do ArrayAdapter,
+passando 3 parâmetros.
+
+00:04:13.000 --> 00:04:16.334
+Lembrando da nossa conversa
+sobre herança,
+
+00:04:16.367 --> 00:04:20.234
+como o AndroidFlavorAdapter
+estende o ArrayAdapter,
+
+00:04:20.267 --> 00:04:22.901
+podemos usar o construtor
+do ArrayAdapter
+
+00:04:22.934 --> 00:04:27.200
+para ganhar toda a lógica
+para inicializar seu estado,
+
+00:04:27.234 --> 00:04:29.601
+sem ter que escrever isso
+nós mesmos.
+
+00:04:29.634 --> 00:04:33.434
+Podemos ler a documentação
+do ArrayAdapter
+
+00:04:33.467 --> 00:04:36.167
+para saber mais
+sobre este construtor.
+
+00:04:36.200 --> 00:04:41.067
+Estou na documentação
+do ArrayAdapter.
+
+00:04:41.100 --> 00:04:44.234
+Vou descer até
+a seção do construtor.
+
+00:04:44.267 --> 00:04:47.367
+De todos estes construtores,
+
+00:04:47.400 --> 00:04:52.334
+estamos usando o penúltimo
+na classe AndroidFlavorAdapter.
+
+00:04:52.367 --> 00:04:55.133
+Quando chamamos o construtor
+da superclasse,
+
+00:04:55.167 --> 00:04:58.734
+ou seja, o construtor
+do ArrayAdapter,
+
+00:04:58.767 --> 00:05:01.300
+temos que passar
+3 parâmetros:
+
+00:05:01.334 --> 00:05:05.567
+o contexto, o recurso
+do layout dos itens da lista,
+
+00:05:05.601 --> 00:05:08.601
+e a lista de objetos
+AndroidFlavor.
+
+00:05:08.634 --> 00:05:10.734
+Vou copiar este código
+
+00:05:11.801 --> 00:05:13.033
+e colar aqui,
+
+00:05:13.067 --> 00:05:18.200
+para podermos nos referir a ele
+quando olharmos nosso código.
+
+00:05:18.234 --> 00:05:20.467
+Estamos de volta
+ao AndroidStudio,
+
+00:05:20.501 --> 00:05:23.200
+lendo o código
+do AndroidFlavorAdapter.
+
+00:05:23.234 --> 00:05:26.334
+Aqui está o código
+do construtor do ArrayAdapter,
+
+00:05:26.367 --> 00:05:28.400
+que neste caso
+é a superclasse.
+
+00:05:28.434 --> 00:05:32.834
+Veja que estamos passando zero
+como recurso para o layout,
+
+00:05:32.868 --> 00:05:35.701
+porque não precisamos
+depender da superclasse
+
+00:05:35.734 --> 00:05:39.667
+para que infle ou crie
+uma exibição do item da lista.
+
+00:05:39.701 --> 00:05:41.834
+Em vez disto,
+nosso método getView
+
+00:05:41.868 --> 00:05:44.501
+vai lidar manualmente
+com inflar o layout,
+
+00:05:44.534 --> 00:05:46.701
+usando o recurso do layout.
+
+00:05:46.734 --> 00:05:48.901
+Descendo um pouco mais,
+
+00:05:48.934 --> 00:05:51.934
+podemos ver
+do que eu estava falando.
+
+00:05:51.968 --> 00:05:55.200
+Temos aqui
+o método getView,
+
+00:05:55.234 --> 00:05:58.968
+que está substituindo
+o método getView da superclasse
+
+00:05:59.000 --> 00:06:03.300
+com nossa própria lógica
+para um caso de uso específico.
+
+00:06:03.334 --> 00:06:07.934
+O comentário diz que getView
+fornece uma exibição de item
+
+00:06:07.968 --> 00:06:10.467
+para algum tipo
+de AdapterView.
+
+00:06:10.501 --> 00:06:15.334
+Como mencionamos antes, isso pode
+ser uma exibição de lista, ou tabela,
+
+00:06:15.367 --> 00:06:18.200
+ou algum outro tipo
+de AdapterView.
+
+00:06:18.234 --> 00:06:21.634
+O método getView
+recebe 3 parâmetros.
+
+00:06:21.667 --> 00:06:23.300
+O primeiro é a posição,
+
+00:06:23.334 --> 00:06:27.133
+a posição na lista que
+este layout deve representar;
+
+00:06:27.167 --> 00:06:31.334
+convertView, a exibição reciclada
+que precisa ser repovoada;
+
+00:06:31.367 --> 00:06:33.434
+e o ViewGroup pai.
+
+00:06:33.467 --> 00:06:38.200
+Os itens da lista serão adicionados
+como filhos a este grupo.
+
+00:06:38.234 --> 00:06:42.567
+O primeiro passo do método getView
+é o método getItem,
+
+00:06:42.601 --> 00:06:46.767
+que é definido
+na superclasse ArrayAdapter.
+
+00:06:46.801 --> 00:06:51.601
+Este método retorna o item da lista
+na posição dada pelo índice.
+
+00:06:51.634 --> 00:06:57.067
+Note que o método retorna
+um objeto AndroidFlavor.
+
+00:06:57.100 --> 00:06:59.968
+Isso porque
+na definição da classe
+
+00:07:00.067 --> 00:07:06.501
+especificamos um ArrayAdapter que
+espera uma lista de AndroidFlavor.
+
+00:07:06.534 --> 00:07:09.167
+A exibição de lista
+chama o método getView
+
+00:07:09.200 --> 00:07:11.200
+com diferentes
+posições da lista
+
+00:07:11.234 --> 00:07:14.434
+e o adaptador busca
+os itens nessas posições
+
+00:07:14.467 --> 00:07:16.734
+na lista de objetos
+AndroidFlavor.
+
+00:07:16.767 --> 00:07:20.868
+Este objeto contém a informação
+que vai povoar o item da lista,
+
+00:07:20.901 --> 00:07:23.400
+e já vamos ler os dados.
+
+00:07:23.434 --> 00:07:27.033
+O segundo parâmetro
+do método getView
+
+00:07:27.067 --> 00:07:29.000
+é um convertView,
+
+00:07:29.033 --> 00:07:33.501
+que é uma exibição existente
+que podemos reutilizar.
+
+00:07:33.534 --> 00:07:36.968
+Mas às vezes
+a exibição será nula,
+
+00:07:37.000 --> 00:07:40.133
+porque não há exibição
+que podemos reutilizar.
+
+00:07:40.167 --> 00:07:44.434
+A exibição ser nula é comum
+quando abrimos a atividade,
+
+00:07:44.467 --> 00:07:48.033
+e criamos os itens da lista
+pela primeira vez na tela.
+
+00:07:48.067 --> 00:07:49.934
+Uma vez que a tela
+está cheia,
+
+00:07:49.968 --> 00:07:53.200
+deve haver uma exibição válida
+que podemos reutilizar.
+
+00:07:53.234 --> 00:07:57.234
+No nosso caso, como sabemos que
+trabalhamos com itens de lista,
+
+00:07:57.267 --> 00:07:59.801
+vou colocar o convertView
+na listView,
+
+00:07:59.834 --> 00:08:02.801
+para deixar claro
+que tipo de exibição temos.
+
+00:08:02.834 --> 00:08:07.234
+Primeiro vemos se existe uma exibição
+para reutilizar, através deste if.
+
+00:08:07.267 --> 00:08:12.567
+Se o listItemView for nula,
+executamos este código no if,
+
+00:08:12.601 --> 00:08:16.601
+que infla uma nova listItemView
+do arquivo XML de layout
+
+00:08:16.634 --> 00:08:18.367
+chamado listItem.
+
+00:08:18.400 --> 00:08:21.367
+Na verdade, estamos usando
+LayoutInflater,
+
+00:08:21.400 --> 00:08:25.000
+que traduz o arquivo XML
+em uma exibição de verdade.
+
+00:08:25.033 --> 00:08:27.501
+Estamos inflando a exibição
+manualmente,
+
+00:08:27.534 --> 00:08:31.300
+por isso não precisamos passar
+o layout para a superclasse
+
+00:08:31.334 --> 00:08:32.801
+no construtor.
+
+00:08:32.834 --> 00:08:35.067
+Lembra que passamos zero?
+
+00:08:35.100 --> 00:08:37.934
+Quando já sabemos
+que o listItemView é válido
+
+00:08:37.968 --> 00:08:39.133
+e não é nulo,
+
+00:08:39.167 --> 00:08:43.167
+podemos começar a atualizar
+os textos e imagens do item
+
+00:08:43.200 --> 00:08:45.367
+com base no objeto
+AndroidFlavor.
+
+00:08:45.400 --> 00:08:48.200
+Veja que usamos
+chamadas a findViewById
+
+00:08:48.234 --> 00:08:52.234
+para encontrar a exibição
+em list_item_icon
+
+00:08:52.267 --> 00:08:56.334
+ou em list_item_name
+ou em list_item_number.
+
+00:08:56.367 --> 00:08:59.968
+Depois de encontrar
+a exibição da imagem e dos textos,
+
+00:09:00.067 --> 00:09:05.434
+podemos chamar os métodos
+setImageResource ou setText
+
+00:09:05.467 --> 00:09:08.901
+passando os valores
+do objeto AndroidFlavor
+
+00:09:08.934 --> 00:09:12.167
+para mudar os dados que são
+exibidos nestas exibições.
+
+00:09:12.200 --> 00:09:15.534
+Em resumo,
+do objeto currentAndroidFlavor
+
+00:09:15.567 --> 00:09:17.901
+podemos conseguir
+os estados dele,
+
+00:09:17.934 --> 00:09:20.567
+como o nome da versão,
+o número da versão,
+
+00:09:20.601 --> 00:09:22.334
+e o ID
+do recurso de imagem.
+
+00:09:22.367 --> 00:09:25.868
+Com esta informação
+do objeto AndroidFlavor específico,
+
+00:09:25.901 --> 00:09:30.801
+podemos atualizar o valor
+na exibição de imagem ou de texto
+
+00:09:30.834 --> 00:09:34.567
+sendo a informação que tiramos
+do objeto AndroidFlavor.
+
+00:09:34.601 --> 00:09:37.000
+No fim, retornamos
+a ListItemView,
+
+00:09:37.033 --> 00:09:42.868
+que tem as informações atualizadas
+do objeto currentAndroidFlavor.
+
+00:09:42.901 --> 00:09:47.767
+O ListItemView será colocado
+como filho do AdapterView.
+
+00:09:47.801 --> 00:09:52.400
+Esta foi uma ideia geral
+do AndroidFlavorAdapter,
+
+00:09:52.434 --> 00:09:54.300
+que é um adaptador
+customizado
+
+00:09:54.334 --> 00:09:58.801
+que recebe uma lista
+de objetos AndroidFlavor.
+
+00:09:58.834 --> 00:10:02.000
+Quando precisamos de uma
+lista de exibições de itens,
+
+00:10:02.033 --> 00:10:07.200
+o AndroidFlavorAdapter encontra
+o AndroidView na posição correta
+
+00:10:07.234 --> 00:10:10.267
+e cria ou reutiliza
+um layout de item de lista.
+
+00:10:10.300 --> 00:10:13.200
+As exibições serão atualizadas
+com as informações
+
+00:10:13.234 --> 00:10:14.934
+no objeto AndroidFlavor,
+
+00:10:14.968 --> 00:10:18.133
+e o ListItemView
+retorna para o ListView.
+
+00:10:18.167 --> 00:10:20.100
+De volta
+à atividade principal.
+
+00:10:20.133 --> 00:10:23.534
+As duas últimas linhas
+implementam a exibição de lista
+
+00:10:23.567 --> 00:10:25.067
+e o ArrayAdapter,
+
+00:10:25.100 --> 00:10:27.934
+como vimos ao modificar
+o app miwok.
+
+00:10:27.968 --> 00:10:30.434
+Aqui, temos uma referência
+ao ListView,
+
+00:10:30.467 --> 00:10:32.767
+e a chamamos de listView,
+
+00:10:32.801 --> 00:10:36.801
+conectando o FlavorAdapter
+ao listView,
+
+00:10:36.834 --> 00:10:38.701
+para poder povoá-lo
+com dados.
+
+00:10:38.734 --> 00:10:41.767
+Acabamos de examinar
+uma estrutura bem complexa.
+
+00:10:41.801 --> 00:10:43.400
+Vamos recapitular.
+
+00:10:43.434 --> 00:10:47.934
+Primeiro, criamos uma forma
+de guardar objetos customizados.
+
+00:10:47.968 --> 00:10:52.167
+Neste caso, usamos o vetor
+androidFlavors,
+
+00:10:52.200 --> 00:10:55.300
+que contém objetos
+AndroidFlavor.
+
+00:10:55.334 --> 00:10:57.901
+Depois, criamos
+um adaptador customizado,
+
+00:10:57.934 --> 00:11:00.334
+que se estende do ArrayAdapter
+
+00:11:00.367 --> 00:11:02.801
+e recebe
+um objeto customizado.
+
+00:11:02.834 --> 00:11:08.534
+Criamos o AndroidFlavorAdapter,
+que se estende do ArrayAdapter.
+
+00:11:08.567 --> 00:11:12.434
+Ele recebe o objeto
+customizado AndroidFlavor.
+
+00:11:12.467 --> 00:11:16.567
+O último passo foi modificar
+o método getView do adaptador
+
+00:11:16.601 --> 00:11:20.000
+para fornecer uma exibição de lista
+para a sua ListView.
+
+00:11:20.033 --> 00:11:23.634
+Modificamos o método
+para buscar objetos AndroidFlavor
+
+00:11:23.667 --> 00:11:27.601
+no ArrayAdapter,
+na posição adequada,
+
+00:11:27.634 --> 00:11:31.300
+e usar essa informação
+para povoar uma exibição reciclada
+
+00:11:31.334 --> 00:11:33.601
+ou uma recém-criada.
+
+00:11:33.634 --> 00:11:37.100
+Recomendo fortemente que você
+examine o projeto sozinho
+
+00:11:37.133 --> 00:11:40.734
+e veja se consegue ver como
+todos os pedaços se encaixam.
+
+00:11:40.767 --> 00:11:42.133
+Está bem documentado.
+
+00:11:42.167 --> 00:11:45.234
+Se você se perder,
+volte para os passos acima.
+
+00:11:45.267 --> 00:11:48.601
+Se ajudar, desenhe
+um diagrama das conexões.
+
+00:11:48.634 --> 00:11:50.968
+O padrão
+do ArrayAdapter customizado
+
+00:11:51.000 --> 00:11:54.434
+é um conceito poderoso
+para mostrar listas no Android.
+

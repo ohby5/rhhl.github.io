@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.410 --> 00:00:03.560
+Hozirgi ro‘yxatimiz bilan muammo shundaki,
+ u faqat inglizcha so‘zlar ro‘yxatini ko‘rsatyapti. 
+
+00:00:03.560 --> 00:00:06.440
+Ammo biz Miwok tarjimasi ham 
+chiqishini xohlaymiz.
+
+00:00:06.440 --> 00:00:08.409
+Xo‘sh hozir men numbersActivity daman
+
+00:00:08.409 --> 00:00:11.821
+va hozirga qadar biz Android frameworkki tomonidan
+ ta’minlangan layout ni ishlatayotgan edik. 
+
+00:00:11.821 --> 00:00:20.280
+Va u simple_list_item_1.xml 
+fayli ichida belgilangan.
+
+00:00:20.280 --> 00:00:25.280
+Shunday qilib eslab qoling, 
+simple_list_item_1 Android 
+
+00:00:25.280 --> 00:00:29.100
+jamoasi tomonidan yaratilgan ko‘plab 
+layout lardan biri.
+
+00:00:29.100 --> 00:00:30.890
+Va Android frameworkning qismi sanaladi, shunday qilib
+
+00:00:30.890 --> 00:00:33.410
+layout larning ro‘yxatini
+ Android frameworkda ko‘rish uchun 
+
+00:00:33.410 --> 00:00:37.660
+ Android developer’s guide dagi
+ R.layout sahifasini tekshiring. 
+
+00:00:37.660 --> 00:00:38.600
+Xo‘sh pastga tushirsak,
+
+00:00:38.600 --> 00:00:41.310
+bizga kerakli item layoutni
+ ko‘rishimiz mumkin.
+
+00:00:41.310 --> 00:00:43.660
+Xo‘sh, bu layout haqida ko‘proq o‘rganish uchun,
+
+00:00:43.660 --> 00:00:45.900
+men aslida Google qidiruvini o‘tkazmoqchiman.
+
+00:00:45.900 --> 00:00:48.670
+Shunday qilib, bu Android jamoasi
+ tomonidan aynan shu layout ni 
+
+00:00:48.670 --> 00:00:50.720
+ishlab chiqish uchun yaratilgan kod.
+
+00:00:50.720 --> 00:00:54.840
+Va ko‘rib turganingizdek, bu 
+faqatgina TextView dan iborat.
+
+00:00:54.840 --> 00:00:57.920
+Va bizga hozir bittadan ko‘proq 
+TextView ga ega ro‘yxat elementi kerak bo‘ladi.
+
+00:00:57.920 --> 00:01:00.660
+Xo‘sh, keling endi o‘zimizning ikkita
+ TextView dan iborat layout imizni yaratamiz.
+
+00:01:00.660 --> 00:01:04.310
+So‘ng biz view ID larini TextView larga 
+tenglashtirishimiz kerak bo‘ladi, 
+
+00:01:04.310 --> 00:01:07.110
+chunki biz kechroq Java kodidagi 
+bu view larga qaytishimiz kerak bo‘ladi.
+
+00:01:07.110 --> 00:01:07.850
+Mazkur holatda,
+
+00:01:07.850 --> 00:01:11.210
+biz elementlar ro‘yxati layoutining ko‘rinishi
+ tafsilotlari haqida qayg‘urmayapmiz.
+
+00:01:11.210 --> 00:01:14.448
+Biz, shunchaki, to‘g‘ri ma’lumotni 
+ekranda chiqarishni xohlayapmiz,
+
+00:01:14.448 --> 00:01:15.827
+bizning kod mantiqi to‘g‘ri 
+ishlayotganiga amin bo‘lish uchun.
+
+00:01:15.827 --> 00:01:20.170
+Va keyinroq, biz elementlar ro‘yxatining 
+tashqi ko‘rinishini yaxshiroq qilishimiz mumkin.
+
+00:01:20.170 --> 00:01:23.570
+Endi eslang, adapter bu ro‘yxat 
+elementini ro‘yxatdagi bitta 
+
+00:01:23.570 --> 00:01:25.800
+so‘z uchun qanday joylashni biladi. 
+
+00:01:25.800 --> 00:01:27.570
+Shuning uchun, biz faqatgina bir
+ dona element uchun layoutga
+
+00:01:27.570 --> 00:01:31.870
+ muhtojmiz xolos, chunki bir xil 
+ uslub qayta ishlataveriladi.
+
+00:01:31.870 --> 00:01:35.770
+Va bu mashqda, sizdan yangi layout 
+ faylini yagona ro‘yxat elementi
+ 
+32
+00:01:35,770 --&gt; 00:01:37,960
+qanday ko‘rinishi kerakligini 
+yaratishingizni xohlayman.
+
+00:01:37.960 --> 00:01:39.150
+Va bu yerda uning namunasini ko‘rishingiz mumkin.
+
+00:01:40.240 --> 00:01:44.810
+Ahamiyat bering, 16dp namunasi tepa 
+va chap tarafga tegishli.
+
+00:01:44.810 --> 00:01:48.680
+E’tibor bering Miwok so‘zi ingliz 
+so‘zining tepasida yozilgan, chunki biz 
+
+00:01:48.680 --> 00:01:51.390
+foydalanuvchilarni Miwok so‘ziga ko‘proq 
+e’tibor qaratishlarini xohlaymiz.
+
+00:01:52.440 --> 00:01:54.815
+Kechroq Lesson 3 ning 
+visual sayqallash bo‘limida,
+
+00:01:54.815 --> 00:01:58.780
+biz Miwok so‘zini ushlab turish 
+orqali yanada atoqli qilamiz.
+
+00:01:58.780 --> 00:02:01.710
+So‘ng, view ID larni biz Java kodida keyin ham 
+
+00:02:01.710 --> 00:02:04.510
+murojaat qila oladigan qilib TextView ga tenglashtiring. 
+
+00:02:04.510 --> 00:02:08.301
+Bularni qilib bo‘lgach, men sizdan 
+savolimga javob berishingizni xohlayman.
+
+00:02:08.301 --> 00:02:11.440
+Qaysi ViewGroup ni rootview sifatida 
+shu layout da ishlatdingiz?
+

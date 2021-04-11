@@ -1,0 +1,360 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.000
+*PART 1*
+
+00:00:00.000 --> 00:00:01.699
+*JOTTA JR - 270816 - C22+C05+C08*
+
+00:00:00.501 --> 00:00:04.334
+Até agora você praticou
+criar um array e inicializá-lo.
+
+00:00:04.367 --> 00:00:07.234
+Agora você praticará escrever códigos
+para acessar elementos do array.
+
+00:00:07.267 --> 00:00:08.434
+Sabendo isto,
+
+00:00:08.467 --> 00:00:12.601
+você pode usar o valor de um índice array
+para configurar o texto em textView.
+
+00:00:12.634 --> 00:00:15.667
+Então por ora você acessará
+elementos de um array
+
+00:00:15.701 --> 00:00:18.100
+exibindo o valor
+nos logs do Android.
+
+00:00:18.133 --> 00:00:22.200
+Lembre-se, você pode acessar
+o administrador logcat com este botão.
+
+00:00:22.234 --> 00:00:26.667
+Com o código que temos agora,
+nada aparece na tela ainda.
+
+00:00:26.701 --> 00:00:28.901
+Nós apresentamos o conceito
+de logging no curso
+
+00:00:28.934 --> 00:00:30.067
+Android para iniciantes.
+
+00:00:30.100 --> 00:00:32.801
+Lá, aprendemos que o Android
+mantém um registro de sistema
+
+00:00:32.834 --> 00:00:34.267
+do que está acontecendo
+no dispositivo.
+
+00:00:34.300 --> 00:00:36.701
+É um log em execução
+de mensagens do sistema.
+
+00:00:36.734 --> 00:00:40.400
+Você pode pensar nele como um diário
+que inclui o horário em que algo aconteceu
+
+00:00:40.434 --> 00:00:41.734
+e a descrição
+do que aconteceu.
+
+00:00:41.767 --> 00:00:43.200
+Essas mensagens
+do sistema são úteis
+
+00:00:43.234 --> 00:00:46.100
+para depurar erros, e podemos checar
+os logs para voltar no tempo
+
+00:00:46.133 --> 00:00:49.534
+e entender o que está acontecendo
+no dispositivo antes do problema ocorrer.
+
+00:00:49.567 --> 00:00:52.300
+Você viu isso em primeira mão
+quando construímos o app Just Java
+
+00:00:52.334 --> 00:00:54.334
+no curso Android
+para Iniciantes.
+
+00:00:54.367 --> 00:00:55.567
+Quando o app falhou,
+
+00:00:55.601 --> 00:00:59.501
+pudemos ver as mensagens de erro nos logs
+para nos ajudar a depurar os problemas.
+
+00:00:59.534 --> 00:01:03.868
+No Android Studio as mensagens
+aparecem na janela logcat.
+
+00:01:03.901 --> 00:01:06.501
+Além de usar o log
+para visualizar erros,
+
+00:01:06.534 --> 00:01:09.400
+nós, como desenvolvedores, também
+podemos escrever mensagens no log.
+
+00:01:09.434 --> 00:01:12.634
+E chamamos esse processo
+de escrever um log de "logging".
+
+00:01:12.667 --> 00:01:14.367
+Isto pode nos ajudar temporariamente
+a depurar nosso app
+
+00:01:14.400 --> 00:01:17.601
+ou apenas fazer uma checagem dupla
+do estado do nosso app enquanto ele é executado.
+
+00:01:17.634 --> 00:01:20.667
+É semelhante a usar a ferramenta debug
+onde podemos adicionar pontos de interrupção
+
+00:01:20.701 --> 00:01:23.100
+para checar o estado de diferentes
+variáveis em nosso app
+
+00:01:23.133 --> 00:01:26.567
+e isto nos permite a escrever o valor
+de certas variáveis nos logs.
+
+00:01:26.601 --> 00:01:29.434
+Eu, particularmente, gosto de usar instruções
+de logging, pois são mais rápidas.
+
+00:01:29.467 --> 00:01:32.300
+Então em vez de ir de linha por linha
+de código no app,
+
+00:01:32.334 --> 00:01:36.601
+você apenas deixa o app executar normalmente
+e as mensagens de log vão sendo publicadas.
+
+00:01:36.634 --> 00:01:39.467
+Este é um artigo útil sobre
+como escrever mensagens log.
+
+00:01:39.501 --> 00:01:42.834
+Você só precisa de uma linha de código
+para uma mensagem log.
+
+00:01:42.868 --> 00:01:46.234
+Note que há 5 categorias diferentes
+de mensagens log
+
+00:01:46.267 --> 00:01:49.367
+baseadas no quão grave
+ou urgente a mensagem é.
+
+00:01:49.400 --> 00:01:51.133
+Então vai de mensagens
+prolixas,
+
+00:01:51.167 --> 00:01:55.200
+que são mensagens boas de saber,
+até mensagens de erro,
+
+00:01:55.234 --> 00:01:59.601
+que significam problemas graves, como quando
+seu app executa de forma inesperada.
+
+00:01:59.634 --> 00:02:03.334
+Então por ora, vamos apenas praticar
+escrever essas mensagens log prolixas
+
+00:02:03.367 --> 00:02:05.901
+para nos ajudar a checar o estado
+de certas variáveis em nosso app.
+
+00:02:05.934 --> 00:02:10.868
+Note que para todas essas mensagens log
+foram necessárias duas strings como entradas.
+
+00:02:10.901 --> 00:02:13.667
+Clicando neste primeiro
+método Log.v,
+
+00:02:13.701 --> 00:02:16.968
+vemos que o primeiro parâmetro
+de entrada é um nome de tag.
+
+00:02:17.000 --> 00:02:20.634
+Então qualquer pessoa pode escrever nos logs,
+sistemas do Android ou outros apps.
+
+00:02:20.667 --> 00:02:24.267
+Então usamos esta tag para identificar
+de onde vem a mensagem.
+
+00:02:24.300 --> 00:02:27.167
+Muitas vezes, para a tag, usamos
+apenas o nome da classe da atividade
+
+00:02:27.200 --> 00:02:29.200
+onde fica a declaração
+do logging.
+
+00:02:29.234 --> 00:02:31.968
+Por exemplo, podemos ter uma declaração
+de log na atividade Números
+
+00:02:32.000 --> 00:02:34.868
+e podemos fazer a tag ser apenas
+a string da atividade Números.
+
+00:02:34.901 --> 00:02:37.100
+O 2º parâmetro é mensagem,
+
+00:02:37.133 --> 00:02:39.801
+que é apenas a mensagem
+que veríamos aparecer nos logs.
+
+00:02:39.834 --> 00:02:42.934
+O 2º parâmetro é mensagem,
+que é apenas a mensagem
+
+00:02:42.968 --> 00:02:46.767
+que veríamos aparecer nos logs, e pode ser
+o que você quiser que fique registrado.
+
+00:02:46.801 --> 00:02:50.601
+Então, voltando àquele artigo principal,
+vemos um exemplo aqui abaixo.
+
+00:02:50.634 --> 00:02:56.334
+É uma chamada do método Log.I,
+que sabemos que é um log de informação.
+
+00:02:56.367 --> 00:03:01.300
+Vemos que o nome da tag aqui é "main activity"
+e a mensagem está aqui.
+
+00:03:01.334 --> 00:03:06.267
+Então em nosso parâmetro de mensagem
+usamos o operador + para concatenar strings.
+
+00:03:06.300 --> 00:03:09.767
+"Concatenar strings" é uma maneira sofisticada
+de dizer "adicionar strings".
+
+00:03:09.801 --> 00:03:11.934
+De forma similar
+a como somamos números,
+
+00:03:11.968 --> 00:03:14.367
+podemos fundir strings
+com o operador +.
+
+00:03:14.400 --> 00:03:18.667
+Neste caso, estamos fundindo esta string
+com esta variável de posição para criar
+
+00:03:18.701 --> 00:03:20.467
+uma string bem maior.
+
+00:03:20.501 --> 00:03:24.067
+Então no logcat você verá MyActivity
+como o nome da tag,
+
+00:03:24.100 --> 00:03:29.234
+depois a mensagem
+"MyClass.View - get item number 1".
+
+00:03:29.267 --> 00:03:32.968
+Isto é sob a suposição de que o valor
+da variável de posição é 1.
+
+00:03:33.000 --> 00:03:35.601
+Aqui temos um exemplo
+na nossa NumbersActivity.
+
+00:03:35.634 --> 00:03:40.534
+Eu adicionei essas duas mensagens
+de logo ao fim do nosso método onCreate.
+
+00:03:40.567 --> 00:03:42.300
+Agora vou executar
+o app em meu dispositivo.
+
+00:03:44.133 --> 00:03:47.901
+Agora com o app em execução,
+vou navegar para a atividade Números
+
+00:03:47.934 --> 00:03:50.901
+e vemos essas duas mensagens
+no log de saída aparecer.
+
+00:03:52.100 --> 00:03:56.133
+Então temos as declarações
+"a palavra no índice 0 é um"
+
+00:03:56.167 --> 00:03:58.267
+e "a palavra
+no índice 1 é dois".
+
+00:03:58.300 --> 00:03:59.300
+Observe duas coisas aqui.
+
+00:04:00.334 --> 00:04:04.200
+1º, precisamos adicionar um espaço
+em buffer depois da vírgula
+
+00:04:04.234 --> 00:04:07.400
+para que todo este texto
+não fique todo junto.
+
+00:04:07.434 --> 00:04:10.167
+Depois, não colocamos
+
+00:04:10.200 --> 00:04:14.968
+words0 dentro de aspas
+
+00:04:15.000 --> 00:04:19.968
+porque queremos o valor neste índice,
+não a string literal com os colchetes.
+
+00:04:20.000 --> 00:04:23.167
+Resumindo, escrever a mensagem
+de log é um jeito muito útil
+
+00:04:23.200 --> 00:04:26.367
+de nos certificarmos que a variável
+tenha o valor que você espera que tenha.
+
+00:04:27.467 --> 00:04:31.868
+Então essas mensagens log serão
+temporárias e vamos removê-las depois.
+
+00:04:31.901 --> 00:04:34.567
+Agora vamos praticar
+fazer logging no seu app Miwok.
+
+00:04:34.601 --> 00:04:37.300
+Se dedique a escrever
+mensagens no seu código
+
+00:04:37.334 --> 00:04:40.334
+para que possa ver o valor
+de cada elemento no array de palavras.
+
+00:04:40.367 --> 00:04:42.467
+Esta é a saída esperada nos logs.
+
+00:04:42.501 --> 00:04:44.934
+Faça isso e marque este espaço
+quando tiver terminado.
+
+00:04:44.968 --> 00:04:45.968
+*END*
+

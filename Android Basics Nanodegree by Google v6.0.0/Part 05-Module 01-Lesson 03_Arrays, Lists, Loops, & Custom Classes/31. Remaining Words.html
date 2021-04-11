@@ -1,0 +1,352 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remaining Words</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Arrays, Lists, Loops, &amp; Custom Classes</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson 2 Course Map.html">01. Lesson 2 Course Map</a>
+    </li>
+    <li class="">
+      <a href="02. When to Use Arrays.html">02. When to Use Arrays</a>
+    </li>
+    <li class="">
+      <a href="03. Working with an Array.html">03. Working with an Array</a>
+    </li>
+    <li class="">
+      <a href="04. Add Words to NumbersActivity.html">04. Add Words to NumbersActivity</a>
+    </li>
+    <li class="">
+      <a href="05. Verify Array Elements with Log Messages.html">05. Verify Array Elements with Log Messages</a>
+    </li>
+    <li class="">
+      <a href="06. Working with An ArrayList.html">06. Working with An ArrayList</a>
+    </li>
+    <li class="">
+      <a href="07. Working with an ArrayList Quiz.html">07. Working with an ArrayList Quiz</a>
+    </li>
+    <li class="">
+      <a href="08. Switch from Array to ArrayList.html">08. Switch from Array to ArrayList</a>
+    </li>
+    <li class="">
+      <a href="09. Add Text Views to the Layout Based on the List.html">09. Add Text Views to the Layout Based on the List</a>
+    </li>
+    <li class="">
+      <a href="10. Intro to Loops.html">10. Intro to Loops</a>
+    </li>
+    <li class="">
+      <a href="11. Add TextViews to Layout with While Loop.html">11. Add TextViews to Layout with While Loop</a>
+    </li>
+    <li class="">
+      <a href="12. Use the For Loop.html">12. Use the For Loop</a>
+    </li>
+    <li class="">
+      <a href="13. Review of Loops.html">13. Review of Loops</a>
+    </li>
+    <li class="">
+      <a href="14. Memory is a Limited Resource.html">14. Memory is a Limited Resource</a>
+    </li>
+    <li class="">
+      <a href="15. View Recycling.html">15. View Recycling</a>
+    </li>
+    <li class="">
+      <a href="16. Analogy for ListView.html">16. Analogy for ListView</a>
+    </li>
+    <li class="">
+      <a href="17. Switch to Using ListView and ArrayAdapter.html">17. Switch to Using ListView and ArrayAdapter</a>
+    </li>
+    <li class="">
+      <a href="18. Switch to Using a ListView and Adapter Quiz.html">18. Switch to Using a ListView and Adapter Quiz</a>
+    </li>
+    <li class="">
+      <a href="19. ListView and ArrayAdapter.html">19. ListView and ArrayAdapter</a>
+    </li>
+    <li class="">
+      <a href="20. ListView and ArrayAdapter Code.html">20. ListView and ArrayAdapter Code</a>
+    </li>
+    <li class="">
+      <a href="21. Andrea Interview.html">21. Andrea Interview</a>
+    </li>
+    <li class="">
+      <a href="22. Build List Item Layout.html">22. Build List Item Layout</a>
+    </li>
+    <li class="">
+      <a href="23. Build List Item Layout Quiz.html">23. Build List Item Layout Quiz</a>
+    </li>
+    <li class="">
+      <a href="24. When to Create a Custom Class.html">24. When to Create a Custom Class</a>
+    </li>
+    <li class="">
+      <a href="25. Custom Word Class.html">25. Custom Word Class</a>
+    </li>
+    <li class="">
+      <a href="26. Custom Word Class Quiz.html">26. Custom Word Class Quiz</a>
+    </li>
+    <li class="">
+      <a href="27. Need a Custom ArrayAdapter.html">27. Need a Custom ArrayAdapter</a>
+    </li>
+    <li class="">
+      <a href="28. Need a Custom ArrayAdapter Exercise.html">28. Need a Custom ArrayAdapter Exercise</a>
+    </li>
+    <li class="">
+      <a href="29. Example App with Custom ArrayAdapter.html">29. Example App with Custom ArrayAdapter</a>
+    </li>
+    <li class="">
+      <a href="30. Custom ArrayAdapter.html">30. Custom ArrayAdapter</a>
+    </li>
+    <li class="">
+      <a href="31. Remaining Words.html">31. Remaining Words</a>
+    </li>
+    <li class="">
+      <a href="32. Eric Gonzalez Interview.html">32. Eric Gonzalez Interview</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">31. Remaining Words</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Remaining Words</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><h1 id="adding-the-remaining-words">Adding the Remaining Words</h1>
+<p>You’ve successfully added a ListView and a custom ArrayAdapter to your app to display the English and Miwok words for the Numbers category.</p>
+<h2 id="step-1">Step 1:</h2>
+<p>Finish modifying the ColorsActivity, FamilyActivity, and PhrasesActivity so we see the English and Miwok translations for all words in the app. See the <a href="https://docs.google.com/document/d/16sQ-0r5zMrdRXUwOaYbTLNXADasuSYFpy7K0Bn8oVfg/pub?embedded=true" rel="noopener noreferrer" target="_blank">Miwok Dictionary</a> document for the list of the other words.</p>
+<p>We don’t have images yet, but that will come in the next step.</p>
+<hr />
+<p><strong>Hint #1:</strong> To get started with the ColorsActivity, instead of writing all the list code again from scratch, start off by copying the NumbersActivity code over to the ColorsActivity file. We’ll use this as a base and then modify as needed. Rename the class to be called ColorsActivity (so it matches the name of the file).</p>
+<hr />
+<h2 id="step-2">Step: 2</h2>
+<p>Run it on the device to make sure the ColorsActivity is displaying something - even though it’s still the wrong vocab words. We can switch them later.</p>
+<h2 id="step-3">Step: 3</h2>
+<p>Ok, we know the code works, we just need to swap out the numbers with the color words. You can repeat the copy/pasting for the other activities as well. Run your app again to make sure everything worked.</p>
+<hr />
+<p><strong>Hint #2:</strong> To save yourself some extra work, we can reuse the activity_numbers.xml for all 4 activities, instead of updating activity_colors.xml, activity_family.xml, and activity_phrases.xml to also have a ListView XML element. The activity_numbers.xml has nothing specific to numbers in it because all the words are added to the list dynamically when the app is running via Java code.</p>
+<p><strong>activity_numbers.xml file</strong></p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;ListView xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:id="@+id/list"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ tools:context="com.example.android.miwok.NumbersActivity"/&gt;</code></pre>
+<p>Remember the tools attribute is Numbers-specific, so we can remove that.</p>
+<hr />
+<p>Let’s just pick a better name for the activity_numbers.xml file to make it more general to all the categories (not just the Numbers category). How about renaming the file to word_list.xml?</p>
+<p>Select activity_numbers.xml -&gt; Refactor -&gt; Rename:<br />
+<img src="media/unnamed-96433-0.gif" alt="Remaining_Words_Rename" /></p>
+<p>Rename to word_list.xml:</p>
+<p><img src="media/unnamed-96433-1.gif" alt="Remaining_Words_Rename_Dialog" /></p>
+<p>Then click the “Do Refactor” button. All occurrences of activity_numbers will be replaced with the new name: word_list:</p>
+<h2 id="remaining_words_refactorhttpslh3googleusercontentcombsqter_bou_p_bppqprionmjrrnmfhloj_pdgtoc8rxpoysni2iq0x4n2onnaontihg9ithsdwzo0n38rous0w1179h518"><img src="media/unnamed-96433-2.gif" alt="Remaining_Words_Refactor" /></h2>
+<h2 id="step-4">Step: 4</h2>
+<p>Now we can set the content view of each activity to be word_list layout.</p>
+<p><em>Example:</em></p>
+<pre><code>public class ColorsActivity extends AppCompatActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+   super.onCreate(savedInstanceState);
+   setContentView(R.layout.word_list);</code></pre>
+<p>Be sure to delete any unused layout files such as activity_colors.xml, activity_phrases.xml, and activity_family.xml.</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8163673209.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 16.255543237250556%; left: 6.125311720698255%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+        <video controls>
+  <source src="31. Remaining Words-DvkWaxRJOVQ.mp4" type="video/mp4">
+
+  <track default="false" kind="subtitles" srclang="ar" src="31. Remaining Words-DvkWaxRJOVQ.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="US" src="31. Remaining Words-DvkWaxRJOVQ.en-US.vtt" label="US">
+  <track default="true" kind="subtitles" srclang="en" src="31. Remaining Words-DvkWaxRJOVQ.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="ID" src="31. Remaining Words-DvkWaxRJOVQ.id-ID.vtt" label="ID">
+  <track default="false" kind="subtitles" srclang="id" src="31. Remaining Words-DvkWaxRJOVQ.id.vtt" label="id">
+  <track default="false" kind="subtitles" srclang="BR" src="31. Remaining Words-DvkWaxRJOVQ.pt-BR.vtt" label="BR">
+  <track default="false" kind="subtitles" srclang="uz" src="31. Remaining Words-DvkWaxRJOVQ.uz.vtt" label="uz">
+  <track default="false" kind="subtitles" srclang="CN" src="31. Remaining Words-DvkWaxRJOVQ.zh-CN.vtt" label="CN">
+</video>
+
+
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <h4 id="note">Note</h4>
+<p>See the <a href="https://docs.google.com/document/d/16sQ-0r5zMrdRXUwOaYbTLNXADasuSYFpy7K0Bn8oVfg/pub?embedded=true" target="_blank">Miwok Dictionary </a> for the lists of words for colors, family members, and phrases.</p>
+<hr />
+<p><a href="https://github.com/udacity/ud839_Miwok/commit/534b9a382dc0aaab47a87a808e101b3bdc8073c3" target="_blank">These are the changes needed to complete the quiz.</a></p>
+<p><a href="https://github.com/udacity/ud839_Miwok/tree/534b9a382dc0aaab47a87a808e101b3bdc8073c3" target="_blank">This is the state of the code after completing the quiz.</a></p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="32. Eric Gonzalez Interview.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('31. Remaining Words')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

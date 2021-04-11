@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.330 --> 00:00:04.165
+Pertama-tama, saya akan memodifikasi
+file activity_numbers.xml
+
+00:00:04.165 --> 00:00:06.428
+agar berisi elemen GridView.xml.
+
+00:00:06.428 --> 00:00:10.638
+Artinya, mengubah ListView ini
+menjadi GridView.
+
+00:00:10.638 --> 00:00:14.922
+Sekarang, saya perlu menambahkan atribut
+baru bernama android numbers column,
+
+00:00:14.922 --> 00:00:18.798
+dan di sini Anda bisa menentukan berapa
+kolom untuk Grid tersebut, sebagai
+
+00:00:18.798 --> 00:00:20.570
+contoh saya akan memilih 2.
+
+00:00:22.450 --> 00:00:24.370
+Perhatikan di panel Pratinjau,
+
+00:00:24.370 --> 00:00:28.290
+Android Studio mencoba menunjukkan
+pratinjau tampilannya.
+
+00:00:28.290 --> 00:00:31.290
+Ingat, ini tidak menunjukkan data
+sebenarnya dari aplikasi kita, dan
+
+00:00:31.290 --> 00:00:34.490
+bukan tata letak item list sebenarnya
+yang kita gunakan.
+
+00:00:34.490 --> 00:00:37.853
+Tapi intinya adalah hanya menunjukkan
+bahwa akan ada dua kolom di
+
+00:00:37.853 --> 00:00:39.488
+grid, dan ini tampak bagus.
+
+00:00:39.488 --> 00:00:43.356
+Baik, mari kembali ke
+NumbersActivity.java, dan
+
+00:00:43.356 --> 00:00:45.338
+saya lihat ada kesalahan di sini.
+
+00:00:45.338 --> 00:00:49.430
+Pesan kesalahan mengatakan bahwa ada
+rujukan tak terduga ke ListView
+
+00:00:49.430 --> 00:00:52.828
+karena tag dalam file tata letak
+mengatakan GridView.
+
+00:00:52.828 --> 00:00:57.215
+Karena kita beralih ke GridView, saat
+kita menjumpai View dalam tata letak,
+
+00:00:57.215 --> 00:01:01.348
+kita perlu mencetaknya ke GridView dan
+menyimpannya dalam variabel bertipe GridView.
+
+00:01:01.348 --> 00:01:02.768
+Mari kita ubah sekarang.
+
+00:01:02.768 --> 00:01:05.001
+[BLANK_AUDIO]
+[BLANK_AUDIO]
+21
+00:01:05,001 --&gt; 00:01:07,638
+Baik, sekarang tidak ada lagi
+kesalahan dan semua kode
+
+00:01:07.638 --> 00:01:09.240
+dan activity tampak bagus.
+
+00:01:09.240 --> 00:01:11.452
+Kita bisa membuat ArrayList
+seperti biasa, dan
+
+00:01:11.452 --> 00:01:14.750
+kita bisa membuat ArrayAdapter
+dari list kata.
+
+00:01:14.750 --> 00:01:17.710
+Lalu kita dapat mengatur adapter
+menjadi GridView.
+
+00:01:17.710 --> 00:01:21.098
+Mari kita bangun aplikasi dan menjalankannya
+di perangkat dan lihat apa yang terjadi.
+
+00:01:21.098 --> 00:01:23.270
+Mengetuk NumbersActivity,
+
+00:01:23.270 --> 00:01:25.580
+jelas kita lihat
+dua kolom kata-kata.
+
+00:01:25.580 --> 00:01:28.730
+Tiap item menggunakan
+tata letak yang sama seperti sebelumnya.
+
+00:01:28.730 --> 00:01:32.360
+Jadi, ada vertical linear layout,
+dengan kata Miwok di atas dan
+
+00:01:32.360 --> 00:01:33.900
+kata Inggris di bawah.
+
+00:01:33.900 --> 00:01:37.150
+Satu-satunya perbedaan adalah, daripada
+tiap item mengambil seluruh lebar
+
+00:01:37.150 --> 00:01:41.030
+layar, tiap item sekarang hanya
+mengambil separuh dari lebar layar.
+
+00:01:41.030 --> 00:01:44.260
+Karena, seperti tadi kita katakan,
+kita ingin grid dengan dua kolom.
+
+00:01:44.260 --> 00:01:47.500
+Seperti kita lihat, logika untuk
+ArrayAdapter dapat tetap sama,
+
+00:01:47.500 --> 00:01:50.540
+apakah dilampirkan pada ListView
+atau GridView.
+
+00:01:50.540 --> 00:01:54.220
+Adapter dapat menghasilkan view item
+dengan konten yang benar dari list kata,
+
+00:01:54.220 --> 00:01:59.365
+dan ListView dan GridView
+memasukkannya ke dalam layar.
+
+00:01:59.365 --> 00:02:03.125
+Diharapkan, latihan ini berguna untuk
+memahami AdapterView dengan lebih baik.
+
+00:02:03.125 --> 00:02:06.315
+Sekarang saya akan membatalkan perubahan
+GridView saya dan kembali memakai ListView.
+

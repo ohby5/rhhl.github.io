@@ -1,0 +1,279 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.467
+Para colocar palavras
+nas outras atividades,
+
+00:00:02.501 --> 00:00:05.534
+podemos seguir a dica
+de copiar e colar o código
+
+00:00:05.567 --> 00:00:08.000
+que já temos na atividade
+dos números.
+
+00:00:08.033 --> 00:00:11.267
+Vamos copiar tudo isso
+de NumbersActivity.
+
+00:00:12.400 --> 00:00:15.167
+Primeiro vamos colar
+em ColorsActivity.
+
+00:00:16.200 --> 00:00:17.901
+Antes de colar o código,
+
+00:00:17.934 --> 00:00:23.300
+ColorsActivity estava usando
+o arquivo activity_colors.xml
+
+00:00:23.334 --> 00:00:24.868
+como visão de conteúdo.
+
+00:00:24.901 --> 00:00:29.567
+Poderíamos mudar ColorsActivity
+para usar este layout de novo.
+
+00:00:29.601 --> 00:00:32.067
+Mas também precisaríamos
+mudar o layout
+
+00:00:32.100 --> 00:00:34.801
+para ter um layout XML
+de ListView
+
+00:00:34.834 --> 00:00:36.634
+em vez de um
+layout relativo.
+
+00:00:36.667 --> 00:00:38.801
+No quiz,
+demos a segunda dica:
+
+00:00:38.834 --> 00:00:42.033
+todas as atividades
+podem usar o mesmo layout,
+
+00:00:42.067 --> 00:00:44.334
+que tem
+um elemento ListItem.
+
+00:00:44.367 --> 00:00:49.133
+Como activity_numbers.xml
+já tem o layout correto,
+
+00:00:49.167 --> 00:00:51.100
+vamos usar este.
+
+00:00:51.133 --> 00:00:53.534
+Remova este
+atributo de contexto
+
+00:00:53.567 --> 00:00:56.868
+que diz em que arquivo
+o layout deve ser usado,
+
+00:00:56.901 --> 00:01:00.767
+porque agora o layout será usado
+em 4 atividades diferentes.
+
+00:01:00.801 --> 00:01:04.467
+Vamos mudar o nome do arquivo
+para não ser sobre números.
+
+00:01:04.501 --> 00:01:07.000
+Para fazer isso,
+clicamos com a direita,
+
+00:01:07.033 --> 00:01:10.734
+vamos para Refactor,
+e depois Rename.
+
+00:01:10.767 --> 00:01:16.067
+Que tal algo
+como word_list.xml?
+
+00:01:16.100 --> 00:01:19.400
+A refatoração aqui afeta
+todos os lugares no código
+
+00:01:19.434 --> 00:01:21.234
+que usam o nome antigo.
+
+00:01:21.267 --> 00:01:23.467
+Agora estão usando
+o nome novo.
+
+00:01:23.501 --> 00:01:25.033
+Em NumbersActivity,
+
+00:01:25.067 --> 00:01:28.167
+usávamos o layout
+activity_numbers,
+
+00:01:28.200 --> 00:01:33.100
+mas veja que agora
+ele usa word_list.xml,
+
+00:01:33.133 --> 00:01:35.634
+que é o novo nome
+do mesmo arquivo.
+
+00:01:35.667 --> 00:01:38.467
+Quando vamos
+para ColorsActivity,
+
+00:01:38.501 --> 00:01:42.367
+podemos fazer a exibição de conteúdo
+também ser o word_list.xml,
+
+00:01:42.400 --> 00:01:44.501
+que contém um ListItemView.
+
+00:01:44.534 --> 00:01:47.567
+Na ColorsActivity,
+definimos a exibição de conteúdo
+
+00:01:47.601 --> 00:01:50.100
+para também ser
+o arquivo word_list.xml,
+
+00:01:50.133 --> 00:01:52.501
+que contém um elemento
+ListView.
+
+00:01:52.534 --> 00:01:55.567
+Vamos ver se o resto do código
+em ColorsActivity
+
+00:01:55.601 --> 00:01:58.300
+se refere corretamente
+à categoria de cores
+
+00:01:58.334 --> 00:02:01.334
+e não sobrou nada
+que se refira a números.
+
+00:02:01.367 --> 00:02:04.467
+A coisa mais aparente
+é a tradução das palavras.
+
+00:02:04.501 --> 00:02:07.801
+Vamos atualizar isto
+com as palavras de cores.
+
+00:02:08.567 --> 00:02:11.601
+O resto do método onCreate
+parece estar correto.
+
+00:02:11.634 --> 00:02:14.734
+Criamos um wordAdapter
+com esta lista de cores.
+
+00:02:14.767 --> 00:02:17.434
+Encontramos uma ListView
+com o ID list
+
+00:02:17.467 --> 00:02:20.601
+no layout words_list.xml.
+
+00:02:20.634 --> 00:02:23.767
+Finalmente, definimos o adaptador
+nesta ListView.
+
+00:02:23.801 --> 00:02:27.634
+Agora o código não tem erros.
+Vamos rodar no aparelho.
+
+00:02:27.667 --> 00:02:30.934
+Quando o app abre,
+e eu clico nas cores,
+
+00:02:30.968 --> 00:02:32.534
+vemos a lista de cores.
+
+00:02:32.567 --> 00:02:34.100
+Legal!
+Está funcionando.
+
+00:02:34.133 --> 00:02:37.934
+A cor em miwok está em cima
+e em inglês está embaixo.
+
+00:02:37.968 --> 00:02:40.667
+Vamos repetir a mesma coisa
+com a família.
+
+00:02:40.701 --> 00:02:43.167
+Copiei o arquivo
+de ColorsActivity
+
+00:02:43.200 --> 00:02:47.000
+e atualizei a lista de palavras
+do documento de dicionário.
+
+00:02:47.033 --> 00:02:50.234
+Quando rodo o app,
+fica assim.
+
+00:02:50.267 --> 00:02:51.334
+Ótimo trabalho!
+
+00:02:51.367 --> 00:02:53.534
+Todas as categorias
+mostram corretamente
+
+00:02:53.567 --> 00:02:56.133
+as traduções miwok e inglês
+de cada palavra.
+
+00:02:56.167 --> 00:03:00.367
+Tem mais uma coisa que podemos
+fazer para arrumar o código.
+
+00:03:00.400 --> 00:03:02.667
+Como usamos só um
+arquivo de layout,
+
+00:03:02.701 --> 00:03:06.834
+o word_list.xml,
+para todas as 4 atividades,
+
+00:03:06.868 --> 00:03:09.434
+podemos apagar os layouts
+que não usamos.
+
+00:03:09.467 --> 00:03:13.367
+Vou apagar os arquivos
+de cores, família, e frases.
+
+00:03:13.400 --> 00:03:14.901
+Quando apagar arquivos,
+
+00:03:14.934 --> 00:03:17.701
+rode o app de novo
+para ver se ainda funciona
+
+00:03:17.734 --> 00:03:19.934
+e não apagou nada
+de que você precise.
+
+00:03:19.968 --> 00:03:21.834
+Depois de rodar o app,
+
+00:03:21.868 --> 00:03:23.601
+parece que ainda funciona.
+
+00:03:23.634 --> 00:03:26.467
+Dê um passo para trás
+e parabenize a si mesmo.
+
+00:03:26.501 --> 00:03:28.734
+Você terminou a tarefa
+da aula 2.
+
+00:03:28.767 --> 00:03:30.334
+É um grande marco!
+

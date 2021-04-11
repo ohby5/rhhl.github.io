@@ -1,0 +1,152 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.330 --> 00:00:04.165
+Birinchi bo‘lib activity_numbers.xml 
+faylini o‘zgartiraman,
+
+00:00:04.165 --> 00:00:06.428
+GridView XML elementini saqlash uchun.
+
+00:00:06.428 --> 00:00:10.638
+Ya’ni ListView ni GridView ga o‘zgartiraman.
+
+00:00:10.638 --> 00:00:14.922
+Hozir men, yangi android numbers column 
+nomli atributni qo‘shishim kerak,
+
+00:00:14.922 --> 00:00:18.798
+va bu yerda grid nechta ustunga ega 
+bo‘lishini aniqlashingiz mumkin,
+
+00:00:18.798 --> 00:00:20.570
+masalan, men 2 ni tanlayman.
+
+00:00:22.450 --> 00:00:24.370
+E’tibor bering, oldindan ko‘rish panelida,
+
+00:00:24.370 --> 00:00:28.290
+Android Studio bu qanday ko‘rinishga 
+kelishini ko‘rsatishga harakat qiladi.
+
+00:00:28.290 --> 00:00:31.290
+Yana bir bor qaytarib o‘taman,
+ bu bizning ilovamizning ma’lumotlarini
+
+00:00:31.290 --> 00:00:34.490
+ ko‘rsatmaydi, va biz ishlatayotgan 
+ elementlar ro‘yxati ham emas.
+
+00:00:34.490 --> 00:00:37.853
+Buning yagona maqsadi, grid da 
+ikkita ustun bo‘lishini va qanchalik 
+
+00:00:37.853 --> 00:00:39.488
+yaxshi ko‘rinishga ega 
+bo‘lishini ko‘rsatish.
+
+00:00:39.488 --> 00:00:43.356
+Yaxshi, keling NumbersActivity.java ga
+ qaytamiz va
+
+00:00:43.356 --> 00:00:45.338
+men hozir bu yerda xato ko‘ryapman.
+
+00:00:45.338 --> 00:00:49.430
+Xato xabar unexpected cast 
+ListView da borligini aytyapti, 
+
+00:00:49.430 --> 00:00:52.828
+chunkitag layout faylida
+ GriedView deb nomlangan. 
+
+00:00:52.828 --> 00:00:57.215
+Biz, GriedViewga o‘tganimiz uchun,
+Layout da view ni topib 
+
+00:00:57.215 --> 00:01:01.348
+uni GridView ga otib, o‘zgaruvchida 
+GridView turi ostida saqlab qo‘yishimiz kerak. 
+
+00:01:01.348 --> 00:01:02.768
+Keling shu o‘zgarishni hozir kiritamiz.
+
+00:01:02.768 --> 00:01:05.001
+[AUDIO YO‘Q]
+
+00:01:05.001 --> 00:01:07.638
+Yaxshi, endi xatoliklar yo‘q, va butun
+ kod va uning faoliyati ham
+
+00:01:07.638 --> 00:01:09.240
+ yaxshi ko‘rinyapti.
+
+00:01:09.240 --> 00:01:11.452
+Va biz array list ni 
+odatdagidek yaratishimiz mumkin va
+
+00:01:11.452 --> 00:01:14.750
+ArrayAdapter ni so‘zlar ro‘yxatidan 
+yaratishimiz ham mumkin.
+
+00:01:14.750 --> 00:01:17.710
+So‘ng adapterni GridView ga 
+o‘rnatishimiz mumkin.
+
+00:01:17.710 --> 00:01:21.098
+Keling endi ilovani ishga tushirib, qanday ko‘rinishga kelishini kuzatamiz.
+
+00:01:21.098 --> 00:01:23.270
+Xo‘sh, endi Numbers activity ni bosgach,
+
+00:01:23.270 --> 00:01:25.580
+biz ikkita so‘zlardan iborat ustunlarni 
+ko‘rishimiz mumkin. 
+
+00:01:25.580 --> 00:01:28.730
+Shunday qilib, har bir element
+ avvalgidek bir xil layout ni ishlatyapti.
+
+00:01:28.730 --> 00:01:32.360
+Bizda vertikal linear layout bor, va 
+ Miwok so‘zi tepada, 
+
+00:01:32.360 --> 00:01:33.900
+Inglizcha so‘z esa pastda.
+
+00:01:33.900 --> 00:01:37.150
+Farqi faqat shundaki, butun ekran
+ kengligini egallash o‘rniga,
+
+00:01:37.150 --> 00:01:41.030
+har bir element faqat ekranning yarmini oladi.
+
+00:01:41.030 --> 00:01:44.260
+chunki, aytganimizdek, biz ikkita 
+ustunli grid xohlagan edik.
+
+00:01:44.260 --> 00:01:47.500
+Ko‘rishimiz mumkinki, ArrayAdapter ning
+ mantiqi bir xil bo‘lib qolaveradi,
+
+00:01:47.500 --> 00:01:50.540
+u ListView yoki GridView ga
+ biriktirilgan bo‘lsa ham.
+
+00:01:50.540 --> 00:01:54.220
+Adapter elementlar view larini so‘zlar ro‘yxatini 
+to‘g‘ri tarkibi bilan yaratishi mumkin 
+
+00:01:54.220 --> 00:01:59.365
+va ListView yoki GridView ularni 
+ekranga joylashtiradi.
+
+00:01:59.365 --> 00:02:03.125
+Umid qilamanki, mana shu mashqlar adapter ko‘rinishlarni 
+yaxshiroq tushunishga yordam berdi.
+
+00:02:03.125 --> 00:02:06.315
+Endi men GridView da kiritgan o‘zgarishlarni
+bekor qilib, listView ishlatishga qaytaman.
+

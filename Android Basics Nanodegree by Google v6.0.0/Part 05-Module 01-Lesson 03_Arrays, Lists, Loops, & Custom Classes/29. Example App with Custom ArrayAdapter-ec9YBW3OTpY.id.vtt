@@ -1,0 +1,743 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.122 --> 00:00:04.170
+Saya tahu ada banyak langkah di dalam kuis
+dan prosesnya juga banyak.
+
+00:00:04.170 --> 00:00:07.340
+Mari kita mulai dengan melihat
+aplikasi flavor Android dan
+
+00:00:07.340 --> 00:00:10.350
+memahami basis kode itu dulu
+karena aplikasi ini
+
+00:00:10.350 --> 00:00:13.310
+menyatukan semua kepingan yang
+bekerja sama dalam satu proyek.
+
+00:00:13.310 --> 00:00:16.700
+Ingat, Anda akan selalu bisa mengunduh versi
+versi simpel dari proyek ini, import
+
+00:00:16.700 --> 00:00:21.360
+aplikasi, dan masuk studio, dan akan
+lebih mudah untuk menavigasi file-file ini.
+
+00:00:21.360 --> 00:00:22.860
+Jika Anda scroll turun,
+
+00:00:22.860 --> 00:00:26.630
+kita lihat ReadMe yang merupakan
+penjelasan tentang aplikasi ini.
+
+00:00:26.630 --> 00:00:29.330
+Contoh ini menggunakan ListView dan
+
+00:00:29.330 --> 00:00:33.970
+susunan adapter buatan sendiri bernama FlavorAdapter
+untuk menampilkan ListItemView
+
+00:00:33.970 --> 00:00:38.780
+buatan sendiri yang berisi gambar dan
+dua textView.
+
+00:00:38.780 --> 00:00:42.930
+Semua informasi ini digunakan untuk
+menampilkan nama Android Flavor dan
+
+00:00:42.930 --> 00:00:44.300
+nama versinya.
+
+00:00:44.300 --> 00:00:45.900
+pola tata letak item dan
+
+00:00:45.900 --> 00:00:49.360
+adapter buatan sendiri ini terdengar sangat mirip
+dengan yang kita butuhkan untuk aplikasi Miwok.
+
+00:00:49.360 --> 00:00:53.910
+Sebagai catatan, tiap kali komentar di dalam
+aplikasi merujuk ke AdapterView,
+
+00:00:53.910 --> 00:00:57.100
+artinya adalah view seperti ListView
+atau GridView,
+
+00:00:57.100 --> 00:00:59.230
+yang merupakan adapterView umum.
+
+00:00:59.230 --> 00:01:01.780
+Kita kembali lagi ke Android Studio.
+
+00:01:01.780 --> 00:01:04.720
+Saya telah mengunduh versi zip
+dalam proyek ini dan
+
+00:01:04.720 --> 00:01:07.650
+membukanya di Android Studio ini
+untuk eksplorasi lebih lanjut.
+
+00:01:07.650 --> 00:01:11.340
+Untuk melihat tampilan proyek ini,
+pertama-tama kita eksplorasi file-file Java.
+
+00:01:12.580 --> 00:01:15.840
+Saat dibuka, kita lihat ada
+tiga file Java di sini.
+
+00:01:15.840 --> 00:01:18.720
+Yang pertama terlihat adalah
+MainActivity.
+
+00:01:18.720 --> 00:01:22.043
+Menurut namanya, mungkin ini
+merupakan layar utama aplikasi.
+
+00:01:22.043 --> 00:01:27.472
+Saat kita pertama kali membuka aplikasi,
+MainActivity dibuat dengan metode onCreate
+
+00:01:27.472 --> 00:01:32.736
+lalu kita mengatur contentView
+menjadi activity_mainlayout.
+
+00:01:32.736 --> 00:01:37.600
+Setelah itu, kita lihat terdapat
+list susunan bernama Android Flavors yang
+
+00:01:37.600 --> 00:01:41.440
+berisi objek-objek dengan
+tipe Android Flavor.
+
+00:01:41.440 --> 00:01:44.160
+Android Flavor tidak terdengar
+seperti kelas standar.
+
+00:01:44.160 --> 00:01:46.420
+Kemungkinan besar, ini adalah kelas buatan sendiri.
+
+00:01:46.420 --> 00:01:50.670
+Untuk memeriksanya, kita akan menggunakan
+fungsi deklarasi di Android.
+
+00:01:50.670 --> 00:01:54.750
+Untuk menggunakannya, saya akan mengeklik
+kanan pada nama kelas,
+
+00:01:54.750 --> 00:01:58.570
+lalu masuk ke Go To lalu Declaration.
+
+00:01:58.570 --> 00:02:02.428
+Bagus, perhatikan lompatan ke
+kelas Android flavor.
+
+00:02:02.428 --> 00:02:06.530
+Jadi, AndroidFlavor.java adalah kelas
+buatan sendiri yang kita buat.
+
+00:02:08.080 --> 00:02:11.356
+Perhatikan bahwa objek kelas
+ini punya tiga properti,
+
+00:02:11.356 --> 00:02:16.880
+version name, version number,
+dan imageResourceID.
+
+00:02:16.880 --> 00:02:20.845
+Nilai untuk ketiganya diberikan dalam
+constructor yang kita lihat di bawah
+
+00:02:20.845 --> 00:02:26.250
+dan kelas ini juga berisi
+beberapa metode getter.
+
+00:02:26.250 --> 00:02:28.750
+Yang kita lakukan adalah
+membuat susunan
+
+00:02:28.750 --> 00:02:31.580
+yang berisi objek-objek AndroidFlavor ini.
+
+00:02:31.580 --> 00:02:34.770
+Di sini ada contoh satu
+objek AndroidFlavor.
+
+00:02:34.770 --> 00:02:38.150
+Jadi, dengan mengetahui kotak,
+status, dan tanda, kita
+
+00:02:38.150 --> 00:02:43.220
+mengambil tiap objek ini dan
+memasukkannya ke dalam susunan AndroidFlavor.
+
+00:02:43.220 --> 00:02:47.460
+Banyak objek AndroidFlavor yang
+disimpan dalam susunan AndroidFlavors.
+
+00:02:47.460 --> 00:02:48.900
+Kembali ke MainActivity.
+
+00:02:50.820 --> 00:02:54.360
+Kita baru saja melihat arrayList
+dibuat di sini.
+
+00:02:54.360 --> 00:02:57.840
+Selanjutnya adalah panggilan arrayAdapter.
+
+00:02:58.880 --> 00:03:02.190
+Ini adalah baris di mana kita
+mengawali adapter buatan sendiri yang
+
+00:03:02.190 --> 00:03:04.510
+disimpan dalam variabel
+yang bernama flavorAdapter.
+
+00:03:05.980 --> 00:03:10.026
+Untuk membuat AndroidFlavorAdapter ini,
+
+00:03:10.026 --> 00:03:14.410
+kita memanggil constructor dan
+memasukkan dua input.
+
+00:03:15.850 --> 00:03:20.500
+Yang ini merujuk pada context dan
+yang kedua merujuk pada AndroidFlavors.
+
+00:03:20.500 --> 00:03:24.480
+Sepertinya kita sudah memasukkan
+array AndroidFlavors, jadi kita cari
+
+00:03:24.480 --> 00:03:29.490
+adapter host dengan masuk ke tempat
+di mana terdapat AndroidFlavorAdapters.
+
+00:03:29.490 --> 00:03:33.620
+Klik kanan, masuk ke Declaration.
+
+00:03:33.620 --> 00:03:36.540
+Inilah dokumen
+AndroidFlavorAdapter.java.
+
+00:03:36.540 --> 00:03:39.440
+Perhatikan, di bagian atas,
+AndroidFlavorAdapter memperpanjang
+
+00:03:39.440 --> 00:03:42.880
+ArrayAdapter, yang berarti mewarisi
+dari ArrayAdapter.
+
+00:03:44.130 --> 00:03:50.280
+ArrayAdapter adalah superkelas dan
+AndroidFlavorAdapter adalah subkelas.
+
+00:03:50.280 --> 00:03:55.260
+Selain mewarisi dari ArrayAdapter,
+kita juga membuat kelas
+
+00:03:55.260 --> 00:03:59.960
+adapter kita untuk memperkirakan sumber
+datanya sebagai objek AndroidFlavor.
+
+00:04:01.910 --> 00:04:03.280
+Mari lihat constructor-nya.
+
+00:04:04.470 --> 00:04:08.650
+Perhatikan di sini kita memanggil
+constructor superkelas, sehingga
+
+00:04:08.650 --> 00:04:11.230
+kita memanggil constructor
+ArrayAdapter di sini,
+
+00:04:11.230 --> 00:04:13.190
+dan memasukkan tiga input.
+
+00:04:13.190 --> 00:04:16.704
+Jika Anda ingat kembali
+pembahasan tentang pewarisan,
+
+00:04:16.704 --> 00:04:20.480
+karena AndroidFlavorAdapter
+merentangkan ArrayAdapter,
+
+00:04:20.480 --> 00:04:23.270
+kita dapat menggunakan constructor
+dari ArrayAdapter sehingga
+
+00:04:23.270 --> 00:04:27.039
+kita mengambil semua logika untuk
+menginisialisasi status ArrayAdapter
+
+00:04:27.039 --> 00:04:29.640
+dengan gratis tanpa harus
+menulisnya sendiri.
+
+00:04:29.640 --> 00:04:33.710
+Ini berarti kita bisa memeriksa
+dokumentasi ArrayAdapter
+
+00:04:33.710 --> 00:04:35.260
+untuk mencari tahu tentang constructor-nya.
+
+00:04:36.530 --> 00:04:40.760
+Saya kembali ke dokumentasi
+pengembang ArrayAdapter.
+
+00:04:40.760 --> 00:04:43.410
+Saya akan scroll turun ke
+bagian public constructor.
+
+00:04:44.600 --> 00:04:48.720
+Dari semua public constructor ini,
+dari yang kedua hingga terakhir adalah
+
+00:04:48.720 --> 00:04:52.480
+yang kita pakai untuk
+AndroidFlavorAdapter.
+
+00:04:52.480 --> 00:04:56.306
+Sehingga untuk memanggil constructor kelas
+supercross, atau contractor
+
+00:04:56.306 --> 00:05:01.440
+ArrayAdapters, kita perlu
+memasukkan tiga input.
+
+00:05:01.440 --> 00:05:05.920
+Yaitu context, layoutResourceID
+ListItem, dan
+
+00:05:05.920 --> 00:05:08.760
+list objek AndroidFlavor.
+
+00:05:08.760 --> 00:05:13.130
+Saya akan menyalin kode ini dan
+menempelkannya di sini
+
+00:05:13.130 --> 00:05:16.930
+sehingga kita bisa membuatnya merujuk
+ke saat kita memeriksa kembali kode kita.
+
+00:05:18.750 --> 00:05:21.440
+Sekarang kita kembali ke Android
+Studio, dan melihat kode untuk
+
+00:05:21.440 --> 00:05:25.230
+AndroidFlavorAdapter dan
+inilah kode constructor untuk
+
+00:05:25.230 --> 00:05:28.600
+ArrayAdapter, yang dalam
+hal ini adalah superkelas.
+
+00:05:28.600 --> 00:05:33.110
+Perhatikan bahwa kita memasukkan nol
+sebagai layoutResourceID
+
+00:05:33.110 --> 00:05:37.150
+karena kita tidak perlu mengandalkan
+superkelas ArrayAdapter untuk menambah
+
+00:05:37.150 --> 00:05:39.960
+atau membuat ListItemView.
+
+00:05:39.960 --> 00:05:43.630
+Justru, metode getView kita akan
+secara mental menangani penambahan
+
+00:05:43.630 --> 00:05:46.920
+tata letak dari layoutResourceID
+kita sendiri.
+
+00:05:46.920 --> 00:05:48.290
+Turun ke bawah sedikit,
+
+00:05:49.750 --> 00:05:52.190
+kita akan lihat lebih banyak
+tentang apa yang saya bicarakan.
+
+00:05:52.190 --> 00:05:57.310
+DI sini, ada metodegetView,
+dan kita mengesampingkan metode
+
+00:05:57.310 --> 00:06:02.360
+getView dari superkelas dan menambahkan
+logika kita sendiri untuk penggunaan khusus.
+
+00:06:03.750 --> 00:06:08.220
+Komentar di atas menyebutkan bahwa
+getView menyediakan ListItemView untuk
+
+00:06:08.220 --> 00:06:09.499
+semacam AdapterView.
+
+00:06:10.640 --> 00:06:14.410
+AdapterView yang kami ungkapkan sebelumnya
+bisa berupa ListView atau
+
+00:06:14.410 --> 00:06:17.220
+GridView atau
+tipe AdapterView lain.
+
+00:06:18.350 --> 00:06:21.820
+Jadi, metode getView harus
+mengambil tiga parameter.
+
+00:06:21.820 --> 00:06:24.750
+Yang pertama adalah posisi yang
+merupakan posisi dalam list
+
+00:06:24.750 --> 00:06:28.470
+data yang harus direpresentasikan tata
+letak ini, convertView yang
+
+00:06:28.470 --> 00:06:33.620
+merupakan RecycleView yang perlu
+dipopulasikan, dan ViewGroup parent.
+
+00:06:33.620 --> 00:06:38.450
+ListItem akan ditambahkan ke
+ViewGroup parent ini sebagai children.
+
+00:06:38.450 --> 00:06:42.800
+Langkah pertama dalam metode GetView
+adalah metode getItem
+
+00:06:42.800 --> 00:06:46.980
+yang awalnya didefinisikan dalam
+superkelas ArrayAdapter.
+
+00:06:46.980 --> 00:06:51.631
+Metode ini mengembalikan item dalam list
+di posisi indeks tertentu dan
+
+00:06:51.631 --> 00:06:56.130
+perhatikan bahwa nilai kembali metode ini
+adalah objek dengan tipe data
+
+00:06:56.130 --> 00:06:57.287
+AndroidFlavor.
+
+00:06:57.287 --> 00:07:00.779
+Hal ini karena dalam
+kelas deklarasi,
+
+00:07:00.779 --> 00:07:06.520
+we specified an ArrayAdapter will
+kita menentukan bahwa ArrayAdapter akan
+mengharapkan list objek AndroidFlavor.
+113
+00:07:06,520 --&gt; 00:07:08,766
+Maka ListView memanggil
+metode GetView
+
+00:07:08.766 --> 00:07:11.210
+untuk posisi yang berbeda dalam list.
+
+00:07:11.210 --> 00:07:14.550
+Adapter akan mengambil item
+di posisi yang berbeda,
+
+00:07:14.550 --> 00:07:16.878
+di list objek AndroidFlavor.
+
+00:07:16.878 --> 00:07:20.560
+Objek AndroidFlavor ini berisi
+informasi untuk mempopulasi item
+
+00:07:20.560 --> 00:07:22.720
+list dan kemudian membaca
+data dari situ.
+
+00:07:23.730 --> 00:07:28.140
+Parameter input kedua metode
+getView adalah convertView,
+
+00:07:29.230 --> 00:07:33.710
+yang sudah kita bahas tadi, yaitu
+view yang telah ada dan bisa kita pakai lagi.
+
+00:07:33.710 --> 00:07:36.310
+Tapi, kadang view ini
+akan sama dengan null.
+
+00:07:37.310 --> 00:07:39.240
+Artinya, tidak ada view
+yang dapat digunakan lagi.
+
+00:07:40.340 --> 00:07:44.800
+View null umum terjadi saat Anda
+pertama kali membuka activity, dan
+
+00:07:44.800 --> 00:07:47.590
+Anda membuat item dalam list untuk
+pertama kalinya untuk mengisi layar.
+
+00:07:48.610 --> 00:07:50.090
+Karena layar telah terisi,
+
+00:07:50.090 --> 00:07:53.510
+kemungkinan besar akan ada
+view valid yang dapat kita gunakan lagi.
+
+00:07:53.510 --> 00:07:54.400
+Dalam kasus kita,
+
+00:07:54.400 --> 00:07:59.060
+karena kita tahu bahwa kita bekerja dengan
+list items, saya memberikan convertView
+
+00:07:59.060 --> 00:08:01.960
+ke ListItemView untuk menjelaskan
+tipe view apa yang sedang kita kerjakan.
+
+00:08:02.960 --> 00:08:05.490
+Pertama-tama, kita periksa apakah ada
+view yang telah ada yang bisa kita pakai lagi
+
+00:08:05.490 --> 00:08:06.310
+menggunakan statemen if ini.
+
+00:08:07.390 --> 00:08:09.050
+Jika list item view null,
+
+00:08:09.050 --> 00:08:13.800
+maka kita mengeksekusi baris kode di dalam
+statemen if ini dan ini menambah
+
+00:08:13.800 --> 00:08:17.810
+list item view yang baru dari
+file tata letak XML yang bernama ListItem.
+
+00:08:17.810 --> 00:08:22.030
+Jika Anda bertanya-tanya, kita sedang
+menggunakan LayoutInflater yang mengubah
+
+00:08:22.030 --> 00:08:25.190
+file taat letak XML menjadi objek
+actual view.
+
+00:08:25.190 --> 00:08:29.270
+Kita secara manual menambahkan view,
+sehingga kita tidak perlu memasukkan
+
+00:08:29.270 --> 00:08:32.789
+layoutResourceID ke
+superkelas dalam constructor
+
+00:08:32.789 --> 00:08:35.440
+karena di sini kita memasukkan nol.
+
+00:08:35.440 --> 00:08:38.150
+Setelah kita tahu bahwa
+ListItemView valid dan
+
+00:08:38.150 --> 00:08:41.840
+bukan null, maka kita mulai memperbarui
+textView dan
+
+00:08:41.840 --> 00:08:45.480
+imageView di dalam ListItem
+berdasarkan objek AndroidFlavor.
+
+00:08:45.480 --> 00:08:49.380
+Perhatikan bahwa kita menggunakan fineView
+dengan panggilan ID untuk mencari view
+
+00:08:49.380 --> 00:08:56.580
+di dalam ID list_item_icon atau
+list_item_name atau list_item_number.
+
+00:08:56.580 --> 00:09:01.530
+Setelah kita menemukan imageView dan
+TextView, kita bisa memanggil metode
+
+00:09:01.530 --> 00:09:07.112
+seperti setImageResource atau setText dan
+memasukkan nilai dari objek AndroidFlavor
+
+00:09:07.112 --> 00:09:11.984
+untuk mengubah data yang ditampilkan
+oleh view-view ini.
+
+00:09:11.984 --> 00:09:15.534
+Sebagai ringkasan, dari
+objek AndroidFlavor saat ini,
+
+00:09:15.534 --> 00:09:19.368
+kita bisa memperoleh status yang berbeda
+darinya seperti nama versi,
+
+00:09:19.368 --> 00:09:22.074
+nomor versi, dan
+ImageResourceID.
+
+00:09:22.074 --> 00:09:26.776
+Dengan informasi dari
+objek AndroidFlavor yang spesifik,
+
+00:09:26.776 --> 00:09:29.828
+kita bisa mengatur gambar atau
+text view,
+
+00:09:29.828 --> 00:09:34.720
+menjadi informasi yang kita peroleh
+dari objek AndroidFlavor.
+
+00:09:34.720 --> 00:09:37.190
+Jadi pada akhirnya kita
+mengembalikan ListItemView,
+
+00:09:37.190 --> 00:09:40.250
+yaitu ListItemView yang
+berisi informasi terbaru
+
+00:09:40.250 --> 00:09:41.870
+dari objek AndroidFlavor saat ini.
+
+00:09:43.070 --> 00:09:46.760
+ListItemView ini akan ditambahkan
+sebagai child ke AdapterView.
+
+00:09:46.760 --> 00:09:52.520
+Baik, itu tadi garis besar bagaimana
+AndroidFlavorAdapter
+
+00:09:52.520 --> 00:09:59.310
+merupakan adapter yang mengambil input
+berupa list objek AndroidFlavor.
+
+00:09:59.310 --> 00:10:01.900
+Saat list item diminta,
+
+00:10:01.900 --> 00:10:07.450
+AndroidFlavorAdapter akan mencari
+Android view di posisi yang benar lalu
+
+00:10:07.450 --> 00:10:10.590
+membuat atau memakai ulang tata letak ListItem.
+
+00:10:10.590 --> 00:10:14.540
+View akan diperbarui berdasarkan
+informasi dalam objek AndroidFlavor
+
+00:10:14.540 --> 00:10:18.450
+lalu ListItemView
+dikembalikan ke ListView.
+
+00:10:18.450 --> 00:10:19.460
+Kembali ke MainActivity.
+
+00:10:19.460 --> 00:10:23.899
+Dua baris terakhir berkaitan dengan
+implementasi ListView dan
+
+00:10:23.899 --> 00:10:25.370
+arrayAdapter.
+
+00:10:25.370 --> 00:10:28.110
+Yaitu yang kita lihat saat
+memodifikasi aplikasi Miwok.
+
+00:10:28.110 --> 00:10:30.520
+Di sini kita lihat
+referensi ke ListView dan
+
+00:10:30.520 --> 00:10:32.025
+kita panggil referensi ListView itu.
+
+00:10:33.500 --> 00:10:37.163
+Terakhir, kita menempelkan
+flavorAdapter ke ListView sehingga
+
+00:10:37.163 --> 00:10:38.900
+kita dapat mempopulasinya dengan data.
+
+00:10:38.900 --> 00:10:41.760
+Baik, kita baru saja membongkar
+struktur yang cukup kompleks.
+
+00:10:41.760 --> 00:10:42.840
+Mari kita ulang sebentar.
+
+00:10:43.990 --> 00:10:47.540
+Pertama-tama, kita membuat cara
+untuk menyimpan objek buatan sendiri.
+
+00:10:48.580 --> 00:10:52.550
+Dalam hal ini, kita menggunakan
+array AndroidFlavors
+
+00:10:52.550 --> 00:10:55.630
+yang berisi objek AndroidFlavor.
+
+00:10:55.630 --> 00:11:00.740
+Lalu kita buat adapter buatan sendiri yang
+merentang dari ArrayAdapter dan
+
+00:11:00.740 --> 00:11:03.000
+mengambil objek buatan sendiri.
+
+00:11:03.000 --> 00:11:03.600
+Dalam hal ini,
+
+00:11:03.600 --> 00:11:07.610
+kita membuat AndroidFlavorAdapter yang
+merentang dari ArrayAdapter.
+
+00:11:09.280 --> 00:11:12.660
+Lalu memasukkan objek buatan
+sendiri untuk AndroidFlavor.
+
+00:11:12.660 --> 00:11:15.650
+Untuk langkah terakhir, kita juga
+memodifikasi metode getView
+
+00:11:15.650 --> 00:11:19.110
+dalam adapter buatan sendiri untuk menyediakan
+listItem untuk ListView Anda.
+
+00:11:20.220 --> 00:11:23.790
+Jadi, kita memodifikasi metode getView
+untuk mengambil objek AndroidFlavor
+
+00:11:23.790 --> 00:11:25.500
+dari ArrayAdapter.
+
+00:11:25.500 --> 00:11:30.020
+Jadi, yang ada di posisi yang benar dan
+menggunakan informasi tersebut untuk
+
+00:11:30.020 --> 00:11:33.990
+menempati entah RecycledView atau
+view yang baru saja dibuat.
+
+00:11:33.990 --> 00:11:37.600
+Saya sangat menganjurkan Anda untuk
+mencermati proyek ini sendiri dan
+
+00:11:37.600 --> 00:11:40.770
+melihat apakah Anda dapat memahami
+bagaimana semua kepingan ini dapat menyatu.
+
+00:11:40.770 --> 00:11:42.350
+Ini terdokumentasi dengan baik.
+
+00:11:42.350 --> 00:11:45.520
+Jika Anda bingung, silakan
+merujuk kembali ke proses di atas.
+
+00:11:45.520 --> 00:11:48.790
+Jika membantu, gambarlah
+diagram untuk berbagai hubungan.
+
+00:11:48.790 --> 00:11:51.870
+Pahamilah bahwa pola ArrayAdapter buatan
+sendiri merupakan konsep yang sangat
+195
+kuat untuk menampilkan list di Android.
+concept for displaying list in Android.
+

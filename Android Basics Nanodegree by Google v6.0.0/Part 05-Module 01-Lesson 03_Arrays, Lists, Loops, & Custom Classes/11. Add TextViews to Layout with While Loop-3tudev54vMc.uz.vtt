@@ -1,0 +1,442 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.750 --> 00:00:03.700
+Shunday qilib, vazifaning boshidagi
+ ikkita topshiriqlari men oxirgi 
+
+00:00:03.700 --> 00:00:06.540
+videoda kiritgan o‘zgarishlarni
+ yaxshiroq tushunishingiz uchun 
+
+00:00:06.540 --> 00:00:07.850
+berilgan edi.
+
+00:00:07.850 --> 00:00:12.300
+Xo‘sh, birinchi topshiriqda biz bu 
+log xatlarni blokini o‘chirishimiz so‘ralgan edi
+
+00:00:12.300 --> 00:00:13.450
+va hozir men shu ishni qilmoqchiman.
+
+00:00:14.650 --> 00:00:16.020
+Yaxshi.
+Bu oson.
+
+00:00:16.020 --> 00:00:21.530
+Bizning keyingi topshiriq,
+the activity_numbers.xml ni o‘zgartirib, 
+
+00:00:21.530 --> 00:00:24.910
+uni relative layout o‘rniga 
+linear layout ishlatadigan qilish.
+
+00:00:24.910 --> 00:00:27.150
+Va bu yo‘naltirishni vertikal 
+qilishimiz kerak.
+
+00:00:27.150 --> 00:00:30.052
+[AUDIO YO‘Q]
+
+00:00:30.052 --> 00:00:34.340
+Va yana view ID ni qo‘shishimiz kerak 
+va men uni ’review’ deb atamoqchiman.
+
+00:00:36.560 --> 00:00:38.670
+Yaxshi, shunday qilib bu boshidagi 
+ikkita topshiriqlar edi.
+
+00:00:38.670 --> 00:00:39.950
+Uchinchi topshiriqqa kelsak,
+
+00:00:39.950 --> 00:00:42.456
+bizdan numbers activity dagi OnCreate 
+ usulini o‘zgartirish talab qilingan. 
+
+00:00:42.456 --> 00:00:45.800
+Biz uni while siklini words list dagi
+ har bir element uchun TextView 
+
+00:00:45.800 --> 00:00:49.200
+yaratishga va keyin uni ekranga chiqarishga
+ ishlatadigan qilib o‘zgartirishimiz kerak
+
+00:00:50.510 --> 00:00:53.730
+Bu yerda esa biz onlayn joylagan 
+
+00:00:53.730 --> 00:00:55.240
+NumbersActivity.java versiyamiz.
+
+00:00:55.240 --> 00:00:58.420
+Va bu uchta TextView yaratadigan 
+kod while siklini ishlatishdan 
+
+00:00:58.420 --> 00:01:02.000
+ko‘ra menyuga yondashilgan 
+
+00:01:02.000 --> 00:01:03.350
+bu kodni boshlab qanday 
+ishlashini tushungach, u bizga 
+
+00:01:03.350 --> 00:01:06.860
+while siklini yozishga yordam beradi.
+
+00:01:06.860 --> 00:01:10.764
+While siklini yozishdan oldin, 
+keling while sikli darsida o‘tgan 
+
+00:01:10.764 --> 00:01:14.060
+uchta yetakchi savollarni
+ qaytarib olamiz.
+
+00:01:14.060 --> 00:01:17.311
+Yaxshi, keling endi while siklini 
+ishlatib text view larni ekranga 
+
+00:01:17.311 --> 00:01:18.700
+qo‘shishni batafsil muhokama qilamiz.
+
+00:01:18.700 --> 00:01:20.850
+Yodda tuting, bu biz while sikli uchun
+ yozmoqchi bo‘lgan kodning umumiy tuzilishidir,
+
+00:01:20.850 --> 00:01:22.632
+va biz muhokama qiladigan 
+3ta savollar mana shu bo‘sh
+
+00:01:22.632 --> 00:01:26.001
+joylarni to‘ldirishga 
+yordam beradi.
+
+00:01:26.001 --> 00:01:28.560
+Xo‘sh, har safar qanday vazifani bajarishimiz kerak?
+
+00:01:28.560 --> 00:01:32.250
+Numbers_activity kodiga qaraganda,
+biz yangi text view yaratib uni
+ 
+32
+00:01:32,250 --&gt; 00:01:35,680
+words list dagi bir dona
+ so‘zga tenglashtirib,
+
+00:01:35.680 --> 00:01:37.710
+rootView ga qo‘shishimiz kerak.
+
+00:01:37.710 --> 00:01:40.650
+Ikkinchisi, biz siklni necha 
+marta qaytarmoqchimiz?
+
+00:01:40.650 --> 00:01:42.950
+Bu misolda, biz uni 10 
+marta qaytarmoqchimiz.
+
+00:01:42.950 --> 00:01:45.420
+Har bir so‘zni bir marta takrorlash kerak.
+
+00:01:45.420 --> 00:01:47.490
+Va ro‘yxatda 10 ta so‘z mavjud.
+
+00:01:47.490 --> 00:01:50.120
+Uchinchi savol esa, sikl sharti qanday?
+
+00:01:50.120 --> 00:01:53.660
+Biz ro‘yxat oxiriga yetguncha 
+takrorlashni istaymiz.
+
+00:01:53.660 --> 00:01:56.290
+Shunday qilib, indeks o‘zgaruvchisini 
+yaratsak joriy indeks joylashuvini 
+
+00:01:56.290 --> 00:01:58.970
+kuzatishimiz mumkin, va bizning 
+vazifa indeks 10 dan kam 
+
+00:01:58.970 --> 00:02:02.480
+bo‘lgunigacha uni kuzatish hisoblanadi.
+
+00:02:02.480 --> 00:02:04.730
+Va bu hozircha words list ning uzunligi.
+
+00:02:04.730 --> 00:02:07.420
+Bu indeks o‘zgaruvchisini 0 deb 
+hisoblab, uni har safar bittaga 
+
+00:02:07.420 --> 00:02:08.680
+ko‘tarib boradi.
+
+00:02:08.680 --> 00:02:11.770
+Xo‘sh, men yana 
+NumbersActivity.java ga qaytdim .
+
+00:02:11.770 --> 00:02:15.958
+Biz hammasini qo‘lda qilgan versiya.
+
+00:02:15.958 --> 00:02:19.520
+hozir men shu kod blokini
+ copy paste qilaman.
+
+00:02:19.520 --> 00:02:22.580
+Va hozir Android Studiodagi,
+NumbersActivity.java ning,
+
+00:02:22.580 --> 00:02:25.930
+ onCreate usuliga men 
+ shu kod blokini qo‘shaman.
+
+00:02:25.930 --> 00:02:28.830
+Endi esa eslang, biz birinchi bo‘lib 
+rootView ni butun layout uchun topib,
+
+00:02:28.830 --> 00:02:31.550
+o‘zgaruvchini words list dagi
+ joriy indeks joylashuvini 
+
+00:02:31.550 --> 00:02:34.720
+kuzatishga yaratgan edik. 
+
+00:02:34.720 --> 00:02:38.740
+va keyin biz har bir so‘zni ekranga
+ chiqarish uchun text view larni 
+
+00:02:38.740 --> 00:02:41.560
+yaratgan edik va o‘sha text view larni rootView da
+ chiqarish uchun unga qo‘shgan edik
+
+00:02:41.560 --> 00:02:43.590
+Lekin bu qo‘lda qiladigan yondashuv edi.
+
+00:02:43.590 --> 00:02:46.000
+Endi uni while sikliga 
+almashtirish yo‘lini ko‘ramiz.
+
+00:02:46.000 --> 00:02:48.390
+Birinchi bo‘lib butun 
+layout uchun rootView ni 
+
+00:02:48.390 --> 00:02:50.460
+qidirib, uni saqlab qo‘ymoqchimiz.
+
+00:02:50.460 --> 00:02:53.000
+Va u biz sikl ishlatganda 
+ham shu yerda turadi.
+
+00:02:53.000 --> 00:02:57.010
+Keyin esa while siklining qismi keladi, 
+va men bu yerga shuni yozib qo‘yaman.
+
+00:02:57.010 --> 00:03:00.490
+While sikliga takrorlash sanagichi o‘zgaruvchisi
+ kerak bo‘lishini yodda tutish uchun. 
+
+00:03:00.490 --> 00:03:04.695
+Keyin while kalit so‘zi keladi,
+ichida esa sharti
+
+00:03:04.695 --> 00:03:06.800
+ketidan kelgan qavslar ichida
+ ko‘rsatmalar yoki vazifalar,
+
+00:03:06.800 --> 00:03:09.440
+hamda yangilanadigan sanagich 
+o‘zgaruvchisi bo‘ladi.
+
+00:03:09.440 --> 00:03:11.020
+Xo‘sh, bu yerda bizning while siklining
+sozlanilishini ko‘rishingiz mumkin.
+
+00:03:11.020 --> 00:03:14.310
+Birinchi bo‘lib sanagich o‘zgaruvchisini 
+yaratish talab qilinadi, va
+
+00:03:14.310 --> 00:03:16.160
+biz bu yerda uni yaratganga o‘xshayapmiz.
+
+00:03:16.160 --> 00:03:19.640
+Xo‘sh, men shu yerdagi kod qismini 
+olib shu yerga qo‘yaman.
+
+00:03:19.640 --> 00:03:23.080
+Keyin bizda while sikli keladi 
+
+00:03:23.080 --> 00:03:24.980
+qavslar ichidagi sharti bilan.
+
+00:03:24.980 --> 00:03:28.060
+Bu siklni davom etish uchun 
+bizning indeks o‘zgaruvchimiz 
+
+00:03:28.060 --> 00:03:30.980
+10 dan kam bo‘lish kerakligi
+ haqida xabarimiz bor.
+
+00:03:30.980 --> 00:03:32.850
+Ammo, 10 ni aniq qilib ishlatish o‘rniga, men 
+
+00:03:32.850 --> 00:03:35.570
+words.size usulini qo‘llashni istadim.
+
+00:03:35.570 --> 00:03:37.478
+Agar so‘zlar ro‘yxati qachondir o‘zgarsa, 
+
+00:03:37.478 --> 00:03:39.652
+biz bu yerdagi shartni 
+o‘zgartirishimiz kerak bo‘lmaydi.
+
+00:03:39.652 --> 00:03:42.253
+Bu avtomatik ravishda ro‘yxatni oxiriga
+ borishga imkoniyat yaratadi,
+
+00:03:42.253 --> 00:03:43.770
+qanday uzunlikga ega bo‘lishiga qaramasdan.
+
+00:03:43.770 --> 00:03:47.262
+Yaxshi, shu shart to‘g‘ri bo‘lgunga qadar,
+biz text view yaratishimiz
+
+00:03:47.262 --> 00:03:50.840
+va uni joriy indeks joylashuviga ega 
+so‘zga tenglashtirishimiz kerak.
+
+00:03:50.840 --> 00:03:53.560
+So‘ng biz TextView ni ekranda 
+chiqarishimiz talab qilinadi.
+
+00:03:53.560 --> 00:03:54.770
+Menda buni qilish uchun kod bor va 
+
+00:03:54.770 --> 00:03:57.200
+keling uni while bayonotiga ko‘chiramiz. 
+
+00:03:57.200 --> 00:03:59.140
+Va bu ko‘rsatmalar o‘rnini bosadi.
+
+00:04:01.490 --> 00:04:03.641
+Yaxshi, fikrimcha biz butun while
+ siklini tugatyapmiz.
+
+00:04:03.641 --> 00:04:06.960
+Biz oxirgi qilishimiz kerak bo‘lgan ish,
+ sanagich o‘zgaruvchisini yangilashdir.
+
+00:04:06.960 --> 00:04:09.832
+Yodingizda tuting, biz sanagich o‘zgaruvchisini 
+siklni takrorlash oxirida yangilashimiz kerak,
+
+00:04:09.832 --> 00:04:13.168
+ro‘yxat oxiriga yetgach siklni tark etish uchun.
+
+00:04:13.168 --> 00:04:18.125
+Xo‘sh, biz oldinroq o‘rgangan shorthand ni 
+ishlatgan holda, men index++ deb yozaman.
+
+00:04:18.125 --> 00:04:23.640
+Eslab qoling, bu shorthand va u 
+ index = index +1 uchun qisqartirishdir.
+
+00:04:23.640 --> 00:04:25.960
+Va shu yerga sizning esingizda qolishi 
+
+00:04:25.960 --> 00:04:26.970
+uchun sharh qoldirib ketaman.
+
+00:04:27.990 --> 00:04:31.200
+Endi men davom etib qolgan kodni olib 
+tashlayman, chunki while sikli 
+
+00:04:31.200 --> 00:04:32.580
+barchasini o‘zi bajaradi
+
+00:04:32.580 --> 00:04:35.630
+Shunday qilib, biz bir-ikkita 
+o‘zgartirishlar kiritib yangi 
+
+00:04:35.630 --> 00:04:37.740
+while sikli tushunchasi bilan 
+kod yaratdik.
+
+00:04:37.740 --> 00:04:39.650
+Xo‘sh, hozir qilganlarimizni qaytarsak.
+
+00:04:39.650 --> 00:04:43.840
+Biz NumbersActivity dagi onCreate usulidan
+log xatlarini olib tashladik.
+
+00:04:43.840 --> 00:04:47.350
+va activity_numbers.xml ni
+ relative layout dan 
+
+00:04:47.350 --> 00:04:50.870
+linear layout ga o‘zgartirdik,
+
+00:04:50.870 --> 00:04:52.970
+va yo‘nalishni vertikal qildik.
+
+00:04:52.970 --> 00:04:55.536
+Keyin rootView deb nomlangan 
+view ID ni qo‘shdik 
+
+00:04:55.536 --> 00:04:58.450
+Va oxirida, NumbersActivity ning 
+onCreate usuliga kelgach 
+
+00:04:58.450 --> 00:05:01.830
+uchta bizga while siklini yaratishga
+ yo‘naltiruvchi savollarni ishlatdik, 
+
+00:05:01.830 --> 00:05:05.040
+va TextView ni har bir words list dagi 
+element uchun ekranga chiqardik.
+
+00:05:05.040 --> 00:05:08.070
+Yaxshi, sal oldinroq biz counter shorthands 
+haqida gaplashgan edik 
+
+00:05:08.070 --> 00:05:12.550
+va biz ko‘rgan umumiy misol bu 
+while siklidagi index++ .
+
+00:05:12.550 --> 00:05:16.790
+Va men bu index = index +1 ning qisqacha 
+yozilishi ekanligini ta’kidlab o‘tgan edim.
+
+00:05:16.790 --> 00:05:19.280
+Shunga o‘xshash matematik 
+shorthands lar yana mavjud.
+
+00:05:19.280 --> 00:05:23.120
+Masalan, o‘zgaruvchi j qo‘shuv 
+va teng 3 
+
+00:05:23.120 --> 00:05:26.200
+bo‘lishi mumkin.
+
+00:05:26.200 --> 00:05:31.480
+Va u o‘zgaruvchi uchun shorthand o‘zgaruvchi qo‘shuv berilgan songa teng bo‘ladi.
+
+00:05:31.480 --> 00:05:35.340
+Qo‘shimchasiga, biz ayiruv shorthands lariga
+ ham guvoh bo‘lishimiz mumkin, ular o‘zgaruvchini olib 
+
+00:05:35.340 --> 00:05:41.470
+yoniga -- qo‘yib yoziladi, va bu i = i - 1 ning qisqachasi hisoblanadi.
+
+00:05:41.470 --> 00:05:45.450
+Yodingizda tuting, shu hamma
+ holatlarda biz hamma o‘zgaruvchilarni 
+
+00:05:45.450 --> 00:05:46.590
+va sonlarni o‘rnini bosishimiz mumkin. 
+
+00:05:46.590 --> 00:05:51.970
+Shuni eslatib o‘tish kerakki, i++ shunchaki 
+
+00:05:51.970 --> 00:05:57.210
+ i + 1 qismiga emas, balki butun bir ifoda 
+ i = i + 1 ga tengdir.
+
+00:05:57.210 --> 00:06:01.440
+Hisoblab, chiqqan natijani 
+o‘zgaruvchiga qayta tenglaydi.
+

@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:02.640
+Bu so‘zlarni boshqa mashg‘ulotlarda 
+ham ishlata olishimiz uchun
+
+00:00:02.640 --> 00:00:05.100
+birinchi maslahatga amal qilishimiz kerak, 
+ya’ni nusxalash va joylashtirish usuliga
+
+00:00:05.100 --> 00:00:07.935
+Numbers avtivityda bor so‘zlarni olamiz 
+va ularni boshqa joyga nusxalashtiramiz.
+
+00:00:07.935 --> 00:00:11.700
+Keling bu yerdagi barcha kodlarni nusxalaymiz va
+
+00:00:11.700 --> 00:00:15.465
+Colors activityga joylashtiramiz.
+
+00:00:15.465 --> 00:00:18.090
+Bu kodlarni bu yerga joylashtirishimdan oldin
+
+00:00:18.090 --> 00:00:24.750
+Colors activity kontent ko‘rinishi uchun activity_colorsni ishlatayotgan edik.
+
+00:00:24.750 --> 00:00:29.355
+Mana bu layout fayliga yana qayta murojaat qilish 
+uchun biz Colors activity ni o‘zgartiramiz.
+
+00:00:29.355 --> 00:00:32.460
+Relative layout fayli o‘rniga list_view XML layout fayliga ega bo‘lish uchun 
+
+00:00:32.460 --> 00:00:36.345
+mana bu yerdagi layout fayllarni 
+o‘zgartirishimizga to‘g‘ri keladi.
+
+00:00:36.345 --> 00:00:38.760
+Testda biz sizlarga 2-yordamni beramiz.
+
+00:00:38.760 --> 00:00:40.680
+Bu yordam - har bir activity 
+bir xil layout faylini
+
+00:00:40.680 --> 00:00:44.235
+ishlata oladi.
+
+00:00:44.235 --> 00:00:49.140
+Bilganingizdek bizda allaqachon 
+activity_numbers.xml bor.
+
+00:00:49.140 --> 00:00:50.955
+Shuning uchun keling shuni ishlata qolamiz.
+
+00:00:50.955 --> 00:00:53.475
+Mana bu tools:context atributini o‘chirib tashlaymiz.
+
+00:00:53.475 --> 00:00:56.775
+chunki bu faylda qaysi layout fayli ishlatilga bo‘lsa,
+
+00:00:56.775 --> 00:01:00.270
+ana o‘sha layout fayli 4 xil activitylar uchun ishlatilinishi kerak deb yozilgan.
+
+00:01:00.270 --> 00:01:04.230
+Keyin esa mana bu faylni nomini o‘zgartiramiz.
+
+00:01:04.230 --> 00:01:06.765
+Buni qlish uchun sichqonchani o‘ng tarafini bosamiz
+
+00:01:06.765 --> 00:01:10.605
+refactorga olib boramiz va boshqa nom kiritamiz.
+
+00:01:10.605 --> 00:01:15.960
+word_list.xml deb nomlasak qanday bo‘lar ekan!
+
+00:01:15.960 --> 00:01:19.490
+Refactor tugmasini bosish orqali kodimizning barcha joylarini yangilaymiz.
+
+00:01:19.490 --> 00:01:23.330
+Bu eski ismga murojaat qiladi 
+va uni yangi nom bilan yangilaydi.
+
+00:01:23.330 --> 00:01:25.120
+Numbers activityga qaytadigan bo‘lsak,
+
+00:01:25.120 --> 00:01:28.215
+biz activity_numbers layoutga murojaat qilar edik.
+
+00:01:28.215 --> 00:01:30.990
+Lekin hozir sezgan bo‘lsangiz u 
+word_list.xml ga murojaat qilmoqda.
+
+00:01:30.990 --> 00:01:35.540
+Bu esa bir xil fayl uchun yangi nom degani.
+
+00:01:35.540 --> 00:01:38.540
+Endi colors activity ga keladigan bo‘lsak,
+
+00:01:38.540 --> 00:01:40.670
+kontent ko‘rinishini word listga joylashtirsak bo‘ladi.
+
+00:01:40.670 --> 00:01:44.375
+Chunki unda ro‘yxat elementlari ko‘rinishi mavjud.
+
+00:01:44.375 --> 00:01:46.520
+colors activityda 
+
+00:01:46.520 --> 00:01:48.470
+kontent ko‘rinishini word_list.xmlga ham
+
+00:01:48.470 --> 00:01:52.425
+joylashtirsak bo‘ladi.
+
+00:01:52.425 --> 00:01:54.840
+Keling endi colors activitydagi hamma kodlarimiz 
+
+00:01:54.840 --> 00:01:56.850
+ranglar kategoriyasiga to‘g‘ri kelayotganini 
+
+00:01:56.850 --> 00:02:01.245
+va hech bir narsa orada tushib 
+qolmayotganini tekshiramiz
+
+00:02:01.245 --> 00:02:04.485
+Bu yerda ravshan ko‘rinayotgani bu - 
+Ingliz va Miwok tarjimalari.
+
+00:02:04.485 --> 00:02:08.040
+Rangli so‘zlarni aks ettirish 
+uchun buni yana yangilaylik.
+
+00:02:08.040 --> 00:02:11.520
+onCreateda qolgan kodlar 
+to‘g‘riga o‘xshab ko‘rinmoqda
+
+00:02:11.520 --> 00:02:14.790
+Shuning uchun biz bu so‘zlar uchun so‘z adapterini yaratdik
+
+00:02:14.790 --> 00:02:20.560
+Keyin words_list.xml layout faylida ID ro‘yxat bilan birgalikda ListeViewni topdik.
+
+00:02:20.560 --> 00:02:23.540
+So‘ngra adapterni ListViewga joylashtirdik.
+
+00:02:23.540 --> 00:02:25.695
+Demak, kodimizda xatolarga yo‘l qo‘yilmagan.
+
+00:02:25.695 --> 00:02:27.500
+Ilovani uskunada ishlatsak!
+
+00:02:27.500 --> 00:02:30.870
+Ilova ishlashni boshlagandan so‘ng 
+ranglar kategoriyasini bosamiz.
+
+00:02:30.870 --> 00:02:33.920
+Ko‘rib turganingizdek ranglar chiqdi 
+va ilova yaxshi ishlamoqda.
+
+00:02:33.920 --> 00:02:37.770
+Miwok ranglar tepada, Ingliz tilidagi so‘zlar esa uning pastida joylashtirilgan.
+
+00:02:37.770 --> 00:02:40.560
+Endi esa Xuddi shu narsalarni 
+family activity bilan qaytaramiz.
+
+00:02:40.560 --> 00:02:43.575
+colors activity dan fayllarni 
+nusxalashtirib oldim va
+
+00:02:43.575 --> 00:02:46.890
+taqdim etilgan lug‘at hujjatidan 
+family wordsni yangiladim.
+
+00:02:46.890 --> 00:02:50.250
+Ilovani uskunamda ishlatganimda 
+u shunday ko‘rinishga keladi.
+
+00:02:50.250 --> 00:02:52.800
+Ajoyib!!! Barcha kategoriyalar 
+Miwok va Ingliz tillaridagi tarjimani
+
+00:02:52.800 --> 00:02:55.800
+xatosiz ko‘rsatmoqda.
+
+00:02:55.800 --> 00:03:00.225
+Endi, kodimizni yana ham mustahkam qiladigan 
+va tozalaydigan yana bitta qadam bor.
+
+00:03:00.225 --> 00:03:02.640
+Yagona layout faylini ishlatib turganimiz uchun
+
+00:03:02.640 --> 00:03:05.155
+bizning so‘zsiz XML faylimiz
+
+00:03:05.155 --> 00:03:06.924
+qolgan barcha ishlamay turgan,
+
+00:03:06.924 --> 00:03:09.100
+keraksiz layout fayllarni o‘chirib tashlaydi.
+
+00:03:09.100 --> 00:03:13.870
+Men hozir colors, family va phrasesning 
+layout fayllarini o‘chirib tashlamoqchiman.
+
+00:03:13.870 --> 00:03:16.810
+Fayllarni o‘chirib tashlaganingizdan so‘ng, 
+ilovamizni yana bir bor tekshirib ko‘rishimiz kerak.
+
+00:03:16.810 --> 00:03:19.900
+Agar ilova ishlasa hammasi joyida, ishlamasa -
+biz biror bir kerakli faylni o‘chirib tashlagan bo‘lamiz.
+
+00:03:19.900 --> 00:03:21.950
+Ilovani uskunamda ishga tushirganimdan so‘ng
+
+00:03:21.950 --> 00:03:23.710
+o‘zingiz ko‘rib turibsiz, u yaxshi ishlamoqda.
+
+00:03:23.710 --> 00:03:26.360
+Aytkancha bu uchun o‘zingizni tabriklashni unutmang!!!
+
+00:03:26.360 --> 00:03:28.770
+Siz ikkinchi darsda kodlashni tugatdingiz.
+
+00:03:28.770 --> 00:03:30.880
+Bu juda ham katta qadamlar bo‘ldi.
+

@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.380 --> 00:00:02.190
+Jika Anda mengikuti
+instruksi kuis,
+
+00:00:02.190 --> 00:00:03.690
+Anda tentu telah membuat kelas Word.
+
+00:00:04.700 --> 00:00:08.440
+Android Studio membantu kita dengan
+menghasilkan kode untuk kita.
+
+00:00:08.440 --> 00:00:12.960
+Baik, di dalam kelas Word, kita nyatakan
+sebagai data yang dapat diakses publik.
+
+00:00:12.960 --> 00:00:16.300
+Dengan begitu, kelas lain seperti
+NumbersActivity dapat mengakses
+
+00:00:16.300 --> 00:00:17.090
+dan menggunakannya.
+
+00:00:17.090 --> 00:00:21.100
+Saya juga telah menambahkan komentar Java
+di sini, di atas deklarasi kelas
+
+00:00:21.100 --> 00:00:25.250
+untuk menjelaskan bagaimana kelas Word
+dimaksudkan untuk merepresentasi kosakata,
+
+00:00:25.250 --> 00:00:28.608
+perhatikan bahwa ini berisi terjemahan
+default Inggris, dan
+
+00:00:28.608 --> 00:00:30.390
+terjemahan Miwok untuk tiap kata.
+
+00:00:31.750 --> 00:00:34.070
+Maka kita membutuhkan dua bidang untuk
+status objek Word
+
+00:00:35.415 --> 00:00:39.440
+mDefaultTranslation, yaitu kata dalam
+bahasa yang telah akrab dengan
+
+00:00:39.440 --> 00:00:44.870
+pengguna, dalam hal ini Inggris, dan
+kedua, mMiwokTranslation,
+
+00:00:44.870 --> 00:00:46.580
+yaitu kata dalam bahasa Miwok.
+
+00:00:47.970 --> 00:00:49.280
+Perhatikan bahwa keduanya
+
+00:00:49.280 --> 00:00:53.900
+adalah privat karena kita hanya ingin keduanya
+dapat diakses dari dalam kelas.
+
+00:00:53.900 --> 00:00:57.310
+Sesuai dengan konvensi, karena mereka merupakan variabel
+anggota private dalam kelas,
+
+00:00:57.310 --> 00:01:00.680
+kita tambahkan huruf kecil "m" yang
+menunjukkan hal ini, dan
+
+00:01:00.680 --> 00:01:03.540
+m ditambahkan di awal
+tiap nama variabel.
+
+00:01:03.540 --> 00:01:06.070
+Berikutnya, kita perlu membuat
+constructor yang
+
+00:01:06.070 --> 00:01:08.660
+mengambil dua parameter string.
+
+00:01:08.660 --> 00:01:12.550
+Yaitu defaultTranslation dan
+miwokTranslation, dan
+
+00:01:12.550 --> 00:01:14.530
+mengatur nilai-nilai ini
+untuk kedua bidang.
+
+00:01:15.790 --> 00:01:19.290
+Untuk membuat objek kata baru,
+kelas harus dimasukkan ke dalam
+
+00:01:19.290 --> 00:01:21.810
+kedua input yang diperlukan ini.
+
+00:01:21.810 --> 00:01:25.373
+Ingat bahwa constructor harus tampak
+seperti metode declaration.
+
+00:01:25.373 --> 00:01:29.090
+Tapi namanya harus sama persis
+dengan nama kelas, yang dalam hal ini Word.
+
+00:01:30.610 --> 00:01:32.470
+Ingat bahwa ini tidak punya tipe kembali.
+
+00:01:33.630 --> 00:01:36.990
+Terakhir, kita akan menambahkan dua metode
+yang akan ditandai sebagai public, sehingga
+
+00:01:36.990 --> 00:01:40.620
+kelas di luar kelas Word
+dapat mengakses metode ini.
+
+00:01:40.620 --> 00:01:45.480
+Yang pertama adalah metode
+getDefaultTranslation, yang akan mengembalikan
+
+00:01:45.480 --> 00:01:49.190
+terjemahan default kata yang
+tipe kembalinya adalah String.
+
+00:01:49.190 --> 00:01:51.110
+Jadi, ini tidak akan menerima parameter
+
+00:01:51.110 --> 00:01:54.530
+apapun karena tujuan satu-satunya adalah
+hanya mengembalikan informasi.
+
+00:01:54.530 --> 00:01:56.800
+Metode kedua adalah
+getMiwokTranslation,
+
+00:01:56.800 --> 00:01:59.110
+dan saya akan memakai format yang serupa.
+
+00:02:00.200 --> 00:02:03.110
+Perhatikan bahwa ini mengembalikan
+terjemahan Miwok untuk kata
+
+00:02:03.110 --> 00:02:04.770
+yang berupa tipe data string.
+
+00:02:04.770 --> 00:02:07.780
+Ingatlah untuk menambahkan komentar di atas
+tiap metode untuk membantu siapa saja yang
+
+00:02:07.780 --> 00:02:11.910
+membaca kode Anda untuk memahami lebih
+baik tentang apa yang diharapkan dari tiap metode.
+
+00:02:11.910 --> 00:02:16.120
+Kita dapat menambahkan dua metode setter
+untuk memungkinkan kedua string diubah
+
+00:02:16.120 --> 00:02:17.750
+oleh kelas di bagian dalam.
+
+00:02:17.750 --> 00:02:21.040
+Tapi, untuk tujuan aplikasi ini, setelah
+kita membuat objek Word,
+
+00:02:21.040 --> 00:02:24.298
+kita tidak mengharapkan kata-kata Inggris
+maupun Miwok berubah.
+
+00:02:24.298 --> 00:02:28.370
+Perhatikan bahwa kita tidak menyediakan
+metode setter untuk memodifikasi objek Word.
+
+00:02:28.370 --> 00:02:31.740
+Saat Anda membuat kelas, terserah Anda
+untuk memutuskan metode yang Anda
+
+00:02:31.740 --> 00:02:33.970
+ingin agar dibuka untuk kelas dari luar.
+
+00:02:33.970 --> 00:02:35.770
+Baik, sudah ada.
+
+00:02:35.770 --> 00:02:40.700
+Ini adalah kelas Word yang didefinisikan
+secara utuh dengan deklarasi, status,
+
+00:02:40.700 --> 00:02:42.350
+constructor, dan metode.
+
+00:02:43.720 --> 00:02:45.960
+Kerja bagus dalam mendefinisikan
+kelas buatan Anda sendiri yang pertama.
+

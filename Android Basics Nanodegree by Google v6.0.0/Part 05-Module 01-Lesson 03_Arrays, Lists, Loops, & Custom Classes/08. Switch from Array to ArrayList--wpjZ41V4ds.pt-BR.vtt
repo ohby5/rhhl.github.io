@@ -1,0 +1,164 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.601
+Aqui estão as alterações
+que fizemos à NumbersActivity
+
+00:00:03.634 --> 00:00:05.400
+para usar uma arrayList
+em vez de um array.
+
+00:00:06.601 --> 00:00:09.801
+Começamos com um array
+de palavras,
+
+00:00:09.834 --> 00:00:14.067
+mas para mudar para uma arrayList,
+mudarei o tipo de dados aqui
+
+00:00:14.100 --> 00:00:17.534
+e colocar String
+entre sinais de maior e menor.
+
+00:00:17.567 --> 00:00:21.167
+Note que o A e o L
+em ArrayList são maiúsculos
+
+00:00:21.200 --> 00:00:24.300
+porque estamos usando
+o mesmo nome da classe.
+
+00:00:24.334 --> 00:00:28.234
+E lembre-se de deixar o S em string
+maiúsculo, porque string
+
+00:00:28.267 --> 00:00:31.767
+é um tipo de dados de objeto
+e não um tipo primitivo de dados.
+
+00:00:31.801 --> 00:00:36.767
+Então vamos manter a variável palavras
+e para iniciar a esta ArrayList,
+
+00:00:36.801 --> 00:00:40.868
+também usamos a nova palavra-chave,
+mas vamos modificar esta parte.
+
+00:00:42.033 --> 00:00:47.100
+Então temos ArrayList
+que armazena
+
+00:00:47.133 --> 00:00:52.868
+tipos de dados de objetos String,
+e terminamos com dois parênteses.
+
+00:00:52.901 --> 00:00:55.601
+Note que estes são parênteses
+vazios, porque não há entrada
+
+00:00:55.634 --> 00:00:56.834
+para este construtor.
+
+00:00:56.868 --> 00:00:59.901
+Já que mudamos o tipo de dados
+da variável palavras,
+
+00:00:59.934 --> 00:01:02.567
+o Android Studio reclama
+com vários erros.
+
+00:01:02.601 --> 00:01:04.434
+Vamos ver como consertar
+esses erros.
+
+00:01:05.534 --> 00:01:10.100
+Para adicionar um elemento a uma ArrayList,
+precisamos acionar o método add
+
+00:01:10.133 --> 00:01:11.234
+e passar o novo elemento.
+
+00:01:12.534 --> 00:01:16.234
+Então em vez de usar o operador
+de atribuição, como fizemos para o array,
+
+00:01:16.267 --> 00:01:18.334
+é assim que ficaria
+na ArrayList.
+
+00:01:20.334 --> 00:01:21.734
+Agora vou deletar
+a parte do array.
+
+00:01:21.767 --> 00:01:26.200
+E quando tivermos terminado de adicionar
+todas as palavras ao array palavras,
+
+00:01:26.234 --> 00:01:27.601
+é assim que a solução
+deve ficar.
+
+00:01:29.000 --> 00:01:32.801
+E agora parece que temos
+vários erros nas mensagens de log.
+
+00:01:32.834 --> 00:01:34.934
+Vamos ver
+como atualizar isso.
+
+00:01:34.968 --> 00:01:38.267
+Em vez de acessar o elemento
+de array com o nome "palavras",
+
+00:01:38.300 --> 00:01:40.534
+seguido pelo índice de posição
+entre colchetes,
+
+00:01:41.667 --> 00:01:46.033
+vamos acessar cada elemento na ArrayList
+acionando o método get no objeto palavras.
+
+00:01:46.067 --> 00:01:48.300
+Então é assim que deve ficar.
+
+00:01:50.000 --> 00:01:54.167
+Aqui estamos passando uma entrada,
+que é o índice de posição.
+
+00:01:54.200 --> 00:01:58.567
+Coloquei 0, porque quero
+o elemento no índice 0.
+
+00:01:58.601 --> 00:02:02.834
+Certo, terminei de digitar
+o resto do logs
+
+00:02:02.868 --> 00:02:05.701
+e modifiquei os comentários para refletir
+que estamos usando uma arrayList agora.
+
+00:02:06.934 --> 00:02:08.334
+E ótimo, os erros se foram.
+
+00:02:10.133 --> 00:02:12.534
+Agora vamos abrir o app no dispositivo
+para nos certificarmos que tudo ainda funciona.
+
+00:02:13.801 --> 00:02:17.567
+Então, quando abrimos a atividade Números,
+a tela está em branco como esperado.
+
+00:02:17.601 --> 00:02:22.400
+Quando olhamos o Android LogCat,
+vemos mensagens no log.
+
+00:02:22.434 --> 00:02:24.334
+Então a saída deve ser
+a mesma da última vez,
+
+00:02:24.367 --> 00:02:27.734
+mas desta vez conseguimos os resultados
+com uma ArrayList, em vez de um array.
+

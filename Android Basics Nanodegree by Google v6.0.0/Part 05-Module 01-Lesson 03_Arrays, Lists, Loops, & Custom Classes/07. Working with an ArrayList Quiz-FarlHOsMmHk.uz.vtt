@@ -1,0 +1,480 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.620 --> 00:00:05.020
+Ko‘rsatgan qiyoslash jadvalimizda, biz ArrayList 
+bu sinf degan edik, va siz ro‘yxatdagi 
+
+00:00:05.020 --> 00:00:08.600
+elementlarga murojaat qilish yoki o‘zgartirish uchun
+ usullardan foydalanishigizni ta’kidlab o‘tgan edik.
+
+00:00:08.600 --> 00:00:11.490
+Endi esa ArrayList sinfiga 
+yaqinroqdan qarasak va kod 
+
+00:00:11.490 --> 00:00:12.810
+bilan o‘zaro ta’sirini o‘rgansak.
+
+00:00:13.940 --> 00:00:17.660
+Xo‘p, biz ArrayList ni hujjatlar 
+sahifasidan boshlaymiz, tepasida
+
+00:00:17.660 --> 00:00:23.090
+ArrayList ning public sinfi 
+AbstractList ini kengaytiradi deb yozilgan
+
+00:00:23.090 --> 00:00:26.360
+Bu extends kalit so‘zi biz 
+AbstractList ning ko‘plab xususiyatlarini 
+
+00:00:26.360 --> 00:00:28.760
+meros qilib oladi degani.
+
+00:00:28.760 --> 00:00:31.620
+Keling AbstractList sinfini bosamiz .
+
+00:00:31.620 --> 00:00:36.030
+Bu sahifa AbstractList 
+sinfi abstrakt sinf deyapti.
+
+00:00:36.030 --> 00:00:39.620
+Yodingizda tuting abstrakt sinf 
+qisman bajariladi,
+
+00:00:39.620 --> 00:00:43.380
+bu esa bir xil usullar bajariladi 
+qolganlari esa bo‘sh qoladi degani.
+
+00:00:43.380 --> 00:00:46.810
+Sinf tavsifiga qarasak, u boshqa sinfni 
+kengaytirishini ko‘ramiz.
+
+00:00:46.810 --> 00:00:49.480
+Bu yerda, AbstractCollection ni 
+kengaytiradi deb yozilgan.
+
+00:00:49.480 --> 00:00:51.380
+Lekin biz tafsilotlarga hozircha berilmaymiz.
+
+00:00:51.380 --> 00:00:54.140
+Men alohida e’tibor qaratmoqchi bo‘lgan narsa,
+ bu AbstractList ning List 
+
+00:00:54.140 --> 00:00:55.112
+interfeysini bajarishidir.
+
+00:00:55.112 --> 00:00:59.010
+Men Link havolasini Link interfeysiga 
+o‘tish uchun bosaman 
+
+00:00:59.010 --> 00:01:02.840
+Xo‘sh, bu uzoq meros zanjiridan
+men sizni, boshlang‘ich ArrayList 
+
+00:01:02.840 --> 00:01:07.870
+List interfeyisini bajarishini 
+bilishingizni xohlayman.
+
+00:01:07.870 --> 00:01:13.200
+Javada List interfeysi ro‘yxatlarning umumiy 
+hatti-harakatlari kabi hisoblanadi.
+
+00:01:13.200 --> 00:01:16.710
+Uning tavsifiga qarasak, List bu
+ elementlar to‘plami bo‘lib,
+
+00:01:16.710 --> 00:01:18.094
+ ular orasidagi tartibni saqlaydi deyilgan.
+
+00:01:19.160 --> 00:01:20.750
+Har bir element o‘z indeksiga ega, shunday qilib
+
+00:01:20.750 --> 00:01:22.750
+siz indeks joylashuviga asoslanib u 
+indeksga murojaat qilishingiz mumkin.
+
+00:01:24.090 --> 00:01:27.790
+Oxirgi darsimizda, biz interfeyslar haqida 
+va ular qanday qilib usullar, kiritishlar,
+
+00:01:27.790 --> 00:01:34.140
+qaytarish qiymatlari va usul nomlari 
+bilan bitim topishini gaplashgan edik.
+
+00:01:34.140 --> 00:01:38.436
+Lekin interfeys har bir usul qanday 
+qo‘llanilishini belgilamaydi.
+
+00:01:38.436 --> 00:01:40.760
+Shunday qilib, List interfeysi abstrakt
+ usullarga ega,
+
+00:01:40.760 --> 00:01:46.520
+add usuli, get usuli ma’lum bir indeksdagi elementga
+ murojaat qilish uchun ishlatiladigan usullar kabi.
+
+00:01:46.520 --> 00:01:50.530
+Unda remove usuli va ko‘plab bu yerda 
+ko‘rib turgan usullar mavjud. 
+
+00:01:51.710 --> 00:01:54.655
+ArrayList sinfi shu list interfeysini 
+amalga oshirarkan,
+
+00:01:54.655 --> 00:01:57.825
+u har bir usulning bajarilishini 
+ta’minlashi kerak.
+
+00:01:57.825 --> 00:01:59.375
+Va siz qisqacha ko‘rgach,
+
+00:01:59.375 --> 00:02:03.425
+siz bu usullarni ArrayList ob’ektida 
+chaqirishingiz mumkin.
+
+00:02:03.425 --> 00:02:06.285
+ List interfeys bo‘lishi foydali ekanligini sababi 
+
+00:02:06.285 --> 00:02:09.134
+Javada boshqa ko‘p turdagi
+ ro‘yxatlar mavjudligi.
+
+00:02:09.134 --> 00:02:11.415
+Biz ularni hammasini bu kursda 
+o‘tmaymiz, lekin 
+
+00:02:11.415 --> 00:02:18.080
+nomini aytib o‘tadigan bo‘lsam, 
+linked lists, stacks, vectors va boshqalari bor.
+
+00:02:18.080 --> 00:02:19.680
+Oldindan aniqlangan shartnomani 
+List interfeysida bo‘lishining 
+
+00:02:19.680 --> 00:02:23.030
+ maqsadi bor 
+
+00:02:23.030 --> 00:02:26.210
+Biz muhokama qilganlarimizni ko‘rish
+ uchun, bu yerda yangilangan versiyadagi 
+
+00:02:26.210 --> 00:02:32.190
+ArrayList sinfi, abstract sinfi va List 
+ interfeysining diagrammasini ko‘rishimiz mumkin. 
+
+00:02:32.190 --> 00:02:34.330
+Xo‘sh, bu yerdagi List bu interfeys va uning 
+
+00:02:34.330 --> 00:02:37.765
+hech qanday usuli amalga oshirilmagan.
+
+00:02:37.765 --> 00:02:43.490
+AbstractList bu abstrakt sinf va unda 
+qisman bajarilgan usullar mavjud. 
+
+00:02:43.490 --> 00:02:46.840
+ArrayList bu Concrete sinf va 
+
+00:02:46.840 --> 00:02:51.110
+va unda state hamda hamma usullari 
+amalga oshirilishi mavjud.
+
+00:02:51.110 --> 00:02:55.120
+Shunday qilib, biz ArrayList dagi namuna ob’ektini
+ yaratib uni ilovamizda ishlatsak bo‘ladi.
+
+00:02:55.120 --> 00:02:58.070
+Lekin abstrakt sinflarida yoki interfeysda biz namunalar yaratolmaymiz 
+
+00:02:58.070 --> 00:03:01.060
+chunki ular munosib to‘liq sinflardir.
+
+00:03:02.170 --> 00:03:05.390
+List interfeysini amalga oshiradigan,
+masalan, ArrayList sinfini ishlatayotganda 
+
+00:03:05.390 --> 00:03:09.040
+siz usul imzolariga ko‘zingiz
+ tushishi mumkin.
+
+00:03:09.040 --> 00:03:11.640
+Keling pastga tushib, bittasiga qaraylik.
+
+00:03:11.640 --> 00:03:15.203
+Masalan, add usulida siz E degan
+ bir narsani chaqirasiz,
+
+00:03:15.203 --> 00:03:20.155
+ArrayList uchun add usuli uchun kiritish 
+E turdagi ob’ekt bo‘lishi kerak degani. 
+
+00:03:20.155 --> 00:03:23.105
+agar siz get usuliga nazar solsangiz, 
+ko‘rishimiz mumkinki 
+
+00:03:23.105 --> 00:03:27.215
+u List ning berilgan joylashuvidagi elementlariga murojaat qilish imkoniyatini beradi va 
+
+00:03:27.215 --> 00:03:30.515
+E turdagi ob’ekt qiymatini qaytaradi. 
+
+00:03:30.515 --> 00:03:32.825
+Xo‘sh, E deganda nima nazarda tutiladi?
+
+00:03:32.825 --> 00:03:36.465
+Bu bizni Javadagi generiklar yoki generiklar 
+turi mavzusiga olib keladi. 
+
+00:03:37.620 --> 00:03:39.590
+E esa to‘ldiruvchi xolos.
+
+00:03:39.590 --> 00:03:42.680
+Rasmiy ravishda E parametr turi deb nomlanadi.
+
+00:03:42.680 --> 00:03:46.100
+Bu esa biz haqiqatdan ham ArrayList 
+ namunasini yaratishimizni, va add 
+
+00:03:46.100 --> 00:03:50.540
+yoki get usullarni ushbu ob’ektga 
+chaqirishimizni anglatadi
+
+00:03:50.540 --> 00:03:53.890
+Biz E ni ma’lum bir ma’lumot turiga 
+almashtirishimiz mumkin. 
+
+00:03:53.890 --> 00:03:56.030
+Va bu o‘z navbatida, dasturchilarga 
+ko‘proq ma’lumot beradi
+
+00:03:56.030 --> 00:03:59.060
+E ni o‘rniga so‘roq belgisini 
+ishlatganga qaraganda
+
+00:03:59.060 --> 00:04:02.210
+bu holatda, E element uchun qisqa,
+
+00:04:02.210 --> 00:04:04.030
+unda word elementi qayerdan keladi?
+
+00:04:04.030 --> 00:04:06.980
+To‘plamning individual qismlari 
+elementlar deb ataladi. 
+
+00:04:06.980 --> 00:04:09.566
+Bu get va add usullari ma’lumot 
+to‘plamidagi elementlari bilan 
+
+00:04:09.566 --> 00:04:12.320
+ish ko‘rgani uchun 
+
+00:04:12.320 --> 00:04:13.988
+bu o‘rinli almashtiruv.
+
+00:04:13.988 --> 00:04:18.070
+Bu E siz xohlagan boshlang‘ich bo‘lmagan ma’lumot 
+turlari bilan almashishi mumkin.
+
+00:04:18.070 --> 00:04:23.436
+Shunday qilib, ArrayList yaratish 
+o‘rniga siz Arraylist burchakli qavs,
+
+00:04:23.436 --> 00:04:25.769
+E va ma’lum turning burchakli qavsini yaratasiz.
+
+00:04:25.769 --> 00:04:29.450
+Masalan, siz satrlar ArrayList ini 
+yarata olmadingiz.
+
+00:04:29.450 --> 00:04:32.550
+Va har safar siz E ni hujjatda 
+ko‘rganingizda 
+
+00:04:32.550 --> 00:04:36.070
+aynan sizning holatingizda, u String 
+ob’ekti ma’lumot turiga almashadi.
+
+00:04:36.070 --> 00:04:39.060
+Shunday qilib, siz add usulini string
+ Arraylistida chaqirganingizda,
+
+00:04:39.060 --> 00:04:41.165
+u kiritish sifatida satrni kutadi.
+
+00:04:41.165 --> 00:04:43.985
+Agar siz get usulini string 
+ArrayList ida chaqirsangiz,
+
+00:04:43.985 --> 00:04:45.995
+u sizga satr ma’lumot 
+turini qaytaradi 
+
+00:04:45.995 --> 00:04:49.635
+Natijada ArrayList sinfi generik sinf bo‘lib,
+
+00:04:49.635 --> 00:04:53.445
+E bor joylar, ma’lum bir ob’ekt
+ ma’lumot turiga, siz aslida 
+
+00:04:53.445 --> 00:04:57.830
+ArrayList ning namunasini yaratganingizda 
+almashtirilishi mumkin
+
+00:04:57.830 --> 00:05:01.210
+Boshqa umumiy T,N va V parametr turlari mavjud.
+
+00:05:01.210 --> 00:05:03.210
+Ko‘proq ko‘rish uchun esa 
+pastdagi matnga qarang.
+
+00:05:03.210 --> 00:05:06.970
+Bilaman, men juda ham ko‘p qanday 
+va nima uchun arrayList paydo 
+
+00:05:06.970 --> 00:05:08.770
+bo‘lishi nazariyasini o‘tib yubordim. 
+
+00:05:08.770 --> 00:05:10.900
+Endi esa tegishli amaliy
+ ma’lumotga o‘tamiz.
+
+00:05:11.930 --> 00:05:14.830
+Biz zichlangan va ko‘p ishlatiladigan
+
+00:05:14.830 --> 00:05:17.050
+chaqiruv ArrayList ini yig‘dik, va 
+
+00:05:17.050 --> 00:05:21.160
+string parametrashtirilgan turni qayerda 
+ishlatish kerakligini ko‘rsatamiz.
+
+00:05:21.160 --> 00:05:23.380
+Xo‘sh, bu misolda, qayerda string 
+ko‘rishingizga qaramay ularni 
+
+00:05:23.380 --> 00:05:26.680
+boshqa ob’ekt turiga 
+almashtirishingiz mumkin.
+
+00:05:26.680 --> 00:05:29.640
+Massiv yaratishga taqqoslaganda, 
+bir jihatga e’tibor bering, yangi 
+
+00:05:29.640 --> 00:05:33.350
+ArrayList yaratyotganingizda siz ro‘yxat 
+havolasini aniqlashingiz shart emas.
+
+00:05:33.350 --> 00:05:36.830
+ArrayLIst elementlarini qo‘shish va
+ o‘chirish uchun biz add va remove 
+
+00:05:36.830 --> 00:05:38.380
+usullarini ishlatamiz.
+
+00:05:39.440 --> 00:05:43.180
+Endi ArrayList dan ma’lumotni tiklashni farqiga qarang.
+
+00:05:43.180 --> 00:05:46.770
+ArrayList massivga o‘xshab
+ qavslarni ishlatmaydi.
+
+00:05:46.770 --> 00:05:51.040
+uning o‘rniga u get usulini va 
+biz xohlagan indeksni ishlatadi.
+
+00:05:51.040 --> 00:05:54.109
+Eslab qoling, massivlarda biz massiv 
+uzunligi haqidagi ma’lumotni olish uchun 
+
+00:05:54.109 --> 00:05:56.000
+ array.length ni ishlatgan edik.
+
+00:05:56.000 --> 00:05:59.510
+Ammo, ArrayList ob’ektlari uchun biz
+ size usulini ishlatishimiz kerak.
+
+00:05:59.510 --> 00:06:03.940
+E’tibor bering, bu yerda kiritish parametrlari
+ yo‘q va u bo‘sh qavslarni o‘zini ishlatadi 
+
+00:06:03.940 --> 00:06:07.040
+va qaytargan qiymati ro‘yxatdagi
+ elementlar soni bo‘ladi.
+
+00:06:07.040 --> 00:06:11.290
+Endi, keyingi mashqda men sizni 
+har bir qatordagi sharhni o‘qib ArrayList 
+
+00:06:11.290 --> 00:06:14.460
+yaratadigan yoki o‘zgartirish 
+
+00:06:14.460 --> 00:06:16.500
+kiritadigan kodni yozishingizni xohlayman.
+
+00:06:17.630 --> 00:06:20.610
+Bu yerda siz ArrayList bilan 
+yaxshiroq ishlashingiz uchun 
+
+00:06:20.610 --> 00:06:21.790
+mashqlar tayyorlab qo‘ydik.
+
+00:06:21.790 --> 00:06:24.600
+Faraz qiling, mana bu kod satrlari Restoran
+ ilovasiga tegishli va har bir foydalanuvchi 
+
+00:06:24.600 --> 00:06:27.620
+o‘zi borib ko‘rmoqchi bo‘lgan restoranlar 
+ro‘yxatini saqlay olishi kerak.
+
+00:06:27.620 --> 00:06:30.070
+Shunday qilib, to‘g‘ri kodni har bir sharh
+ tagiga yozib qoldiring.
+
+00:06:31.260 --> 00:06:33.952
+Birinchi sharhda yangi ArrayList 
+yaratilishi so‘ralgan, restaurantsToTry 
+
+00:06:33.952 --> 00:06:34.880
+ nomli ob’ekti bilan.
+
+00:06:34.880 --> 00:06:38.220
+va u Strings ro‘yxatidan tashkil topadi.
+
+00:06:38.220 --> 00:06:41.280
+Keyingi sharh - Morning Cafe 
+nomli restoranni tepada yaratgan 
+
+00:06:41.280 --> 00:06:42.740
+ArrayList ga qo‘shish.
+
+00:06:43.960 --> 00:06:46.660
+Uchinchi sharh - Barbecue Time 
+ nomli restoranni ArrayList ga 
+
+00:06:46.660 --> 00:06:48.850
+qo‘shish.
+
+00:06:48.850 --> 00:06:52.400
+To‘rtinchi sharhga kelsak, 
+foydalanuvchi Morning cafesiga borib ko‘rdi, 
+
+00:06:52.400 --> 00:06:55.570
+ammo biz uni ArrayList dan olib 
+tashlashimiz so‘ralyapti.
+
+00:06:55.570 --> 00:06:59.000
+Beshinchi sharh esa - ArrayList ni 
+uzunligini olib butun son o‘zgaruvchisi 
+
+00:06:59.000 --> 00:07:02.670
+numbersOfRestaurants da saqlashimizni
+ so‘rayapti.
+
+00:07:02.670 --> 00:07:04.010
+endi esa davom eting va buni qilib ko‘ring. 
+
+00:07:04.010 --> 00:07:05.520
+Keyingi darsda ko‘rishguncha.
+

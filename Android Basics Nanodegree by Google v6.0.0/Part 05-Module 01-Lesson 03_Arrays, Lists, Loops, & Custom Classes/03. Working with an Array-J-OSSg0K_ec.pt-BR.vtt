@@ -1,0 +1,375 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.267
+Certo.
+
+00:00:01.300 --> 00:00:04.801
+Acho que temos uma ideia melhor
+agora de quando devemos
+
+00:00:04.834 --> 00:00:06.367
+e não devemos usar arrays.
+
+00:00:06.400 --> 00:00:08.367
+É. Mas não falamos ainda
+sobre como usar arrays em código.
+
+00:00:08.400 --> 00:00:11.067
+Cada um desses espaços
+tem um nome de variável?
+
+00:00:11.100 --> 00:00:14.534
+Não exatamente.
+O array inteiro tem um único nome.
+
+00:00:14.567 --> 00:00:18.133
+Então, por exemplo, podemos chamar
+este array de algo como "palavras".
+
+00:00:18.167 --> 00:00:19.968
+OK. O array inteiro
+se chama palavras.
+
+00:00:20.000 --> 00:00:22.801
+Mas como eu acesso a string
+em cada espaço?
+
+00:00:22.834 --> 00:00:26.067
+Bom, cada espaço é chamado elemento
+do array e podemos acessar
+
+00:00:26.100 --> 00:00:29.901
+cada elemento se referindo à sua posição
+numérica ou índice no array.
+
+00:00:29.934 --> 00:00:31.100
+Espere, índice?
+
+00:00:31.133 --> 00:00:34.200
+É, cada posição é numerada.
+É meio estranho,
+
+00:00:34.234 --> 00:00:38.200
+mas começamos com o índice 0,
+e seguimos para 1, 2,
+
+00:00:38.234 --> 00:00:40.267
+e assim por diante, até chegarmos
+ao fim do array.
+
+00:00:40.300 --> 00:00:44.033
+Tá, então para um array de comprimento 7,
+começamos pelo índice 0
+
+00:00:44.067 --> 00:00:45.033
+e terminamos no índice 6.
+
+00:00:45.067 --> 00:00:46.367
+Isso, exatamente.
+
+00:00:46.400 --> 00:00:49.200
+E todos estes números juntos
+se chamam índices.
+
+00:00:49.234 --> 00:00:51.133
+Porque o plural de índice
+é índices.
+
+00:00:52.400 --> 00:00:53.501
+Tá, faz sentido.
+
+00:00:53.534 --> 00:00:57.334
+Minha pergunta é: como colocamos
+valores no array?
+
+00:00:57.367 --> 00:00:58.934
+Bom, é parecido.
+
+00:00:58.968 --> 00:01:03.000
+Nos referimos a um índice específico
+do array usando o sinal de igual
+
+00:01:03.033 --> 00:01:07.467
+que é o operador de atribuição,
+e indicamos o valor dessa posição.
+
+00:01:07.501 --> 00:01:10.067
+Espera, acho que preciso ver
+isso escrito.
+
+00:01:10.100 --> 00:01:11.834
+-Posso ver esse código?
+-Claro.
+
+00:01:11.868 --> 00:01:13.234
+Tudo por você, Cat.
+
+00:01:13.267 --> 00:01:15.501
+Vou te mostrar
+algumas amostras de código
+
+00:01:15.534 --> 00:01:18.701
+e não quero dar a solução
+para o app Miwok,
+
+00:01:18.734 --> 00:01:20.567
+então usarei
+um exemplo diferente.
+
+00:01:20.601 --> 00:01:23.501
+Digamos que temos um app onde
+usuários podem comprar sapatos online
+
+00:01:23.534 --> 00:01:26.734
+e nosso app precisa saber que tipos
+de sapatos ainda estão em estoque.
+
+00:01:26.767 --> 00:01:29.767
+Então um tipo de sapato
+é bastante popular,
+
+00:01:29.801 --> 00:01:31.601
+mas só temos
+3 tamanhos restantes.
+
+00:01:31.634 --> 00:01:33.167
+Como devemos armazenar
+essa informação?
+
+00:01:33.200 --> 00:01:36.000
+Bom, já que todas
+são informações
+
+00:01:36.033 --> 00:01:37.267
+sobre o mesmo
+par de sapatos,
+
+00:01:37.300 --> 00:01:38.901
+devemos deixá-las
+em um array.
+
+00:01:38.934 --> 00:01:42.200
+Depois, isso fará mais fácil descobrir
+quais números estão disponíveis
+
+00:01:42.234 --> 00:01:44.901
+porque podemos nos referir
+à única variável array,
+
+00:01:44.934 --> 00:01:47.334
+em vez de checar várias
+variáveis separadas.
+
+00:01:47.367 --> 00:01:50.200
+1º, começamos criando
+o array.
+
+00:01:50.234 --> 00:01:54.968
+Já que há 3 tamanhos restantes, vamos criar
+um array integer de comprimento 3.
+
+00:01:55.000 --> 00:01:59.400
+Cada elemento do array será
+um tamanho de sapato disponível
+
+00:01:59.434 --> 00:02:01.434
+e o tamanho do sapato
+é um integer.
+
+00:02:01.467 --> 00:02:04.400
+Sei que a sintaxe pode ser
+meio difícil, pode parecer coisa demais,
+
+00:02:04.434 --> 00:02:09.367
+porque há colchetes e espaços
+em lugares estranhos,
+
+00:02:09.400 --> 00:02:13.033
+mas criar essa variável array
+é parecido com como criamos variáveis
+
+00:02:13.067 --> 00:02:14.734
+integer e strings
+no passado.
+
+00:02:14.767 --> 00:02:16.901
+À esquerda, temos
+o tipo de dados,
+
+00:02:16.934 --> 00:02:19.234
+que neste caso
+é um array integer.
+
+00:02:19.267 --> 00:02:23.701
+É o nome do tipo de dados,
+a palavra int, seguida do colchete
+
+00:02:23.734 --> 00:02:24.801
+aberto e fechado.
+
+00:02:24.834 --> 00:02:27.167
+Depois, temos o nome
+da variável array,
+
+00:02:27.200 --> 00:02:31.901
+que é "tamanhos disponíveis", seguido
+de um sinal de igual e a palavra-chave "new"
+
+00:02:31.934 --> 00:02:34.200
+seguida pelo tipo de dados
+do array novamente,
+
+00:02:34.234 --> 00:02:36.901
+int, com o colchete aberto
+e fechado novamente.
+
+00:02:36.934 --> 00:02:41.200
+Mas desta vez, note que pusemos
+o comprimento do array dentro dos colchetes.
+
+00:02:41.234 --> 00:02:43.601
+Agora temos um array vazio
+de comprimento 3.
+
+00:02:43.634 --> 00:02:47.000
+Se quiser mudar o tipo de dados
+neste array,
+
+00:02:47.033 --> 00:02:49.968
+como armazenar booleanas
+para ser um array booleano,
+
+00:02:50.000 --> 00:02:53.634
+você deve colocar "boolean" aqui
+e aqui.
+
+00:02:53.667 --> 00:02:56.434
+Podemos atribuir valores
+para cada elemento do array
+
+00:02:56.467 --> 00:02:58.234
+baseado na posição
+do índice.
+
+00:02:58.267 --> 00:03:01.934
+Para este array, os números
+disponíveis estão aqui.
+
+00:03:01.968 --> 00:03:06.400
+Usamos os colchetes abertos e fechados
+com o índice no meio.
+
+00:03:06.434 --> 00:03:10.334
+Neste 1º exemplo atribuímos
+o número 5
+
+00:03:10.367 --> 00:03:15.000
+ao índice 0 do array
+usando o sinal de igual.
+
+00:03:15.033 --> 00:03:18.033
+Neste caso, o sinal de igual
+é o operador de atribuição.
+
+00:03:18.067 --> 00:03:22.701
+Note que não há espaço
+entre o nome do array e os colchetes.
+
+00:03:22.734 --> 00:03:27.067
+Então quando essas 3 instruções
+forem executadas, o array ficará assim.
+
+00:03:27.100 --> 00:03:31.033
+Depois, se precisar recuperar ou acessar
+elementos do array, use o nome
+
+00:03:31.067 --> 00:03:35.067
+da variável array seguido de colchetes
+e o índice no meio.
+
+00:03:35.100 --> 00:03:38.601
+Então esta linha de código aqui
+vai recuperar o 1º elemento do array.
+
+00:03:38.634 --> 00:03:40.801
+E o resultado da busca é 5.
+
+00:03:40.834 --> 00:03:45.167
+Lembre-se que índices começam em 0
+e aumentam consecutivamente.
+
+00:03:45.200 --> 00:03:48.601
+Então estes são os índices
+0, 1 e 2.
+
+00:03:48.634 --> 00:03:52.767
+De modo parecido, o resultado
+da próxima linha de código é 7
+
+00:03:52.801 --> 00:03:54.300
+e a próxima, 10.
+
+00:03:54.334 --> 00:03:56.901
+Se precisa saber o tamanho
+do array,
+
+00:03:56.934 --> 00:04:00.601
+escreva o nome da variável array
+e depois chame .length.
+
+00:04:00.634 --> 00:04:03.701
+Neste caso, essa expressão
+fornece o número 3,
+
+00:04:03.734 --> 00:04:05.100
+para os 3 espaços no array.
+
+00:04:06.234 --> 00:04:07.968
+Aqui temos uma prática
+de como usar um array.
+
+00:04:08.000 --> 00:04:12.267
+Há muitas coisas do mundo real
+que podem ser representadas como array.
+
+00:04:12.300 --> 00:04:15.033
+Por exemplo, pense em um time
+de futebol com 11 jogadores,
+
+00:04:15.067 --> 00:04:18.200
+onde cada membro tem um número
+de camisa diferente.
+
+00:04:18.234 --> 00:04:22.167
+Queremos atribuir o número de suas camisas
+a cada lugar nesse array integer.
+
+00:04:23.200 --> 00:04:26.467
+Digamos que já escolhemos
+4 jogadores para a lista.
+
+00:04:26.501 --> 00:04:28.968
+Podemos armazenar os números
+das camisas desses 4 jogadores
+
+00:04:29.000 --> 00:04:30.801
+em 4 índices de array
+diferentes.
+
+00:04:30.834 --> 00:04:32.901
+Então, para este exercício,
+
+00:04:32.934 --> 00:04:36.033
+colocaremos os números das camisas
+em lugares aleatórios do array.
+
+00:04:36.067 --> 00:04:39.300
+Olhe as opções diferentes do código
+na diretiva fornecida
+
+00:04:39.334 --> 00:04:42.467
+e escolha a opção que contém o código
+que criaria o array acima.
+

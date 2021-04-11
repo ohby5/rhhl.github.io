@@ -1,0 +1,384 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:02.601
+Ei, bom trabalho
+com o loop while!
+
+00:00:02.634 --> 00:00:04.968
+Como pode ver,
+ele facilita muito a vida.
+
+00:00:05.000 --> 00:00:08.067
+Assim, não precisamos reescrever
+a mesma linha de código várias vezes.
+
+00:00:08.100 --> 00:00:11.601
+Mas deixe-me dizer,
+tenho notícias ainda melhores,
+
+00:00:11.634 --> 00:00:15.133
+porque vou te mostrar outro tipo
+de loop em Java, o loop for.
+
+00:00:15.167 --> 00:00:18.367
+Podemos usá-lo para reescrever o while
+para que fique menor e mais compacto.
+
+00:00:19.467 --> 00:00:21.834
+Aqui está a estrutura geral
+de um loop while
+
+00:00:21.868 --> 00:00:25.601
+e um loop for para nos ajudar a entender
+as semelhanças e diferenças.
+
+00:00:25.634 --> 00:00:30.067
+Note que o loop for condensa partes do while
+em apenas uma linha.
+
+00:00:30.100 --> 00:00:33.267
+No loop for, começamos com a
+configuração inicial da variável counter,
+
+00:00:33.300 --> 00:00:36.067
+a condição que determina
+quando saímos do loop
+
+00:00:36.100 --> 00:00:37.868
+e depois um espaço que atualiza
+a variável counter.
+
+00:00:37.901 --> 00:00:41.000
+Tendemos a usar loops while
+quando queremos repetir uma tarefa
+
+00:00:41.033 --> 00:00:44.067
+até que algo aconteça
+e a condição não seja mais verdadeira.
+
+00:00:44.100 --> 00:00:47.334
+Então loops while podem ter
+um número indefinido de iterações.
+
+00:00:47.367 --> 00:00:50.300
+Um exemplo do mundo real de um
+loop while é continuar abrindo
+
+00:00:50.334 --> 00:00:54.133
+todos os arquivos de uma pasta
+enquanto ainda há arquivos a serem abertos.
+
+00:00:54.167 --> 00:00:57.033
+Então não importa quantos arquivos
+há na pasta,
+
+00:00:57.067 --> 00:00:59.767
+continuamos abrindo
+enquanto há arquivos.
+
+00:00:59.801 --> 00:01:00.834
+Tendemos a usar loops for
+
+00:01:00.868 --> 00:01:05.167
+quando queremos repetir uma tarefa
+um determinado número de vezes.
+
+00:01:05.200 --> 00:01:09.901
+Um exemplo de um loop for é abrir
+os primeiros 5 arquivos em uma pasta.
+
+00:01:09.934 --> 00:01:12.901
+Então mesmo que haja
+outros arquivos na pasta,
+
+00:01:12.934 --> 00:01:15.801
+só queremos fazer isso
+4 ou 5 vezes.
+
+00:01:15.834 --> 00:01:18.901
+Aqui estão alguns exemplos de códigos
+desses dois tipos de loops.
+
+00:01:18.934 --> 00:01:22.100
+Você já conhece esse código
+à esquerda, do loop while,
+
+00:01:22.133 --> 00:01:24.934
+mas esta é a 1ª vez
+que vê um loop for.
+
+00:01:24.968 --> 00:01:29.000
+Ambos os blocos de código fazem a mesma coisa,
+publicam uma declaração de log
+
+00:01:29.033 --> 00:01:30.934
+para cada elemento
+da lista de palavras.
+
+00:01:30.968 --> 00:01:34.300
+Agora vamos ver mais de perto
+esses dois tipos de loops
+
+00:01:34.334 --> 00:01:37.100
+e depois vou mostrar partes
+que você conhece no loop while
+
+00:01:37.133 --> 00:01:39.234
+e mostrar onde elas estão
+no loop for.
+
+00:01:39.267 --> 00:01:42.300
+Antes, no loop while, nós configuramos
+a variável do índice para ser 0.
+
+00:01:42.334 --> 00:01:46.300
+No loop for também podemos
+configurar a variável counter
+
+00:01:46.334 --> 00:01:48.334
+e configuramos
+como 0 aqui também.
+
+00:01:48.367 --> 00:01:51.501
+No loop for, a configuração
+vem na 1ª parte
+
+00:01:51.534 --> 00:01:55.534
+entre esses dois parênteses,
+antes do primeiro ponto e vírgula.
+
+00:01:55.567 --> 00:01:59.234
+Isto no loop for se chama
+declaração de inicialização
+
+00:01:59.267 --> 00:02:03.000
+e só vai ser executada uma vez
+antes do loop começar.
+
+00:02:03.033 --> 00:02:04.400
+No loop while
+
+00:02:04.434 --> 00:02:07.968
+temos a condição que fica
+dentro dos parênteses.
+
+00:02:08.000 --> 00:02:11.434
+Então o loop vai se repetir
+até que essa condição seja falsa.
+
+00:02:11.467 --> 00:02:12.434
+Neste caso,
+
+00:02:12.467 --> 00:02:16.334
+quando a variável do índice não for mais
+menor que o tamanho da lista de palavras.
+
+00:02:16.367 --> 00:02:21.934
+De forma parecida, no loop for
+a condição segue a declaração de inicialização
+
+00:02:21.968 --> 00:02:25.367
+e é separada por ponto e vírgula
+antes depois dela.
+
+00:02:25.400 --> 00:02:26.701
+O corpo dentro do loop for
+
+00:02:26.734 --> 00:02:31.501
+continuará sendo executado
+até que a condição seja falsa.
+
+00:02:31.534 --> 00:02:34.701
+No fim do nosso loop while
+temos essa declaração de atualização,
+
+00:02:34.734 --> 00:02:36.734
+para aumentar a variável
+do índice em um.
+
+00:02:36.767 --> 00:02:40.133
+Isso nos ajuda a nos certificarmos
+que a condição por fim se tornará falsa.
+
+00:02:40.167 --> 00:02:41.334
+Da mesma forma, no loop for
+
+00:02:41.367 --> 00:02:45.234
+podemos escrever a declaração
+de atualização logo depois da condição.
+
+00:02:45.267 --> 00:02:47.767
+Então ela vem após
+o 2º ponto e vírgula.
+
+00:02:47.801 --> 00:02:50.767
+Esta declaração de atualização
+será executada
+
+00:02:50.801 --> 00:02:53.100
+depois de cada iteração
+do loop,
+
+00:02:53.133 --> 00:02:56.133
+ou seja, executamos
+todo o código neste bloco
+
+00:02:56.167 --> 00:02:57.767
+e depois executamos
+a declaração de atualização,
+
+00:02:57.801 --> 00:02:59.400
+depois checamos a condição.
+
+00:02:59.434 --> 00:03:03.100
+Se for verdadeira, temos que pegar
+o loop repetidas vezes
+
+00:03:03.133 --> 00:03:06.501
+e checar a declaração
+e checar a condição de novo.
+
+00:03:06.534 --> 00:03:08.501
+O loop for funciona assim.
+
+00:03:08.534 --> 00:03:10.133
+Entramos no loop for.
+
+00:03:10.167 --> 00:03:13.901
+Configuramos a variável counter
+e fazemos isso apenas uma vez.
+
+00:03:13.934 --> 00:03:18.133
+Depois checamos a condição e,
+se for verdadeira, entramos no corpo
+
+00:03:18.167 --> 00:03:21.234
+do loop for de executamos
+qualquer que seja o código lá dentro.
+
+00:03:21.267 --> 00:03:24.267
+Depois, vamos aqui
+e atualizamos a variável counter.
+
+00:03:24.300 --> 00:03:28.200
+Depois, checamos a condição,
+e se for verdadeira, entramos no corpo
+
+00:03:28.234 --> 00:03:29.701
+e executamos
+estas instruções.
+
+00:03:29.734 --> 00:03:32.200
+Vamos aqui, atualizamos
+a variável counter,
+
+00:03:32.234 --> 00:03:33.434
+voltamos à condição,
+
+00:03:33.467 --> 00:03:36.033
+checamos se é verdadeira. Se for,
+completamos isto novamente.
+
+00:03:36.067 --> 00:03:37.400
+Depois voltamos aqui
+
+00:03:37.434 --> 00:03:39.234
+e atualizamos a variável
+counter novamente.
+
+00:03:39.267 --> 00:03:41.868
+Depois disso, quando voltarmos
+à condição,
+
+00:03:41.901 --> 00:03:45.300
+se for falsa, saímos
+completamente do loop.
+
+00:03:45.334 --> 00:03:47.801
+Lembre-se, o index++
+é uma abreviação
+
+00:03:47.834 --> 00:03:49.901
+de index = index + 1.
+
+00:03:49.934 --> 00:03:52.767
+Isto aumenta o valor
+do índice em um.
+
+00:03:52.801 --> 00:03:54.901
+Resumindo, a sintaxe
+de um loop for
+
+00:03:54.934 --> 00:04:00.367
+combina 3 partes de um loop em uma
+única linha entre esses parênteses.
+
+00:04:00.400 --> 00:04:02.234
+Cada parte é separada
+por ponto e vírgula.
+
+00:04:02.267 --> 00:04:05.400
+A 1ª parte é a declaração
+de inicialização,
+
+00:04:05.434 --> 00:04:08.501
+que só é executada uma vez
+antes do loop começar.
+
+00:04:08.534 --> 00:04:10.634
+A 2ª parte é uma condição
+
+00:04:10.667 --> 00:04:13.033
+que é checada antes de fazermos
+outra iteração do loop.
+
+00:04:13.067 --> 00:04:15.234
+E a 3ª parte é a declaração
+de atualização,
+
+00:04:15.267 --> 00:04:18.601
+que é executada ao fim
+de cada iteração do loop.
+
+00:04:18.634 --> 00:04:21.834
+Então agora que já viu um exemplo
+do loop for, tente praticar escrever
+
+00:04:21.868 --> 00:04:23.000
+um loop for no seu
+app Miwok.
+
+00:04:23.033 --> 00:04:27.467
+Neste exercício, gostaria que você
+substitua um loop while
+
+00:04:27.501 --> 00:04:30.634
+pelo loop for. Isso deixará
+seu código mais conciso.
+
+00:04:30.667 --> 00:04:33.434
+O loop deve se comportar
+da mesma maneira, quero dizer,
+
+00:04:33.467 --> 00:04:36.868
+adicionar uma nova textView ao layout
+para cada elemento na lista de palavras.
+
+00:04:36.901 --> 00:04:39.000
+A saída também
+deve parecer a mesma.
+
+00:04:39.033 --> 00:04:41.534
+Aqui vai um printscreen
+da atividade Números.
+
+00:04:41.567 --> 00:04:46.067
+Como uma dica, incluí um exemplo do loop for
+no texto abaixo.
+
+00:04:46.100 --> 00:04:48.234
+Vá em frente e marque este espaço
+quando tiver terminado.
+

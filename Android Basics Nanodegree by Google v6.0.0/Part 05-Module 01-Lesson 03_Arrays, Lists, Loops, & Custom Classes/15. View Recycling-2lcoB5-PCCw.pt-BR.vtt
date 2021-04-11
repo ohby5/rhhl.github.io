@@ -1,0 +1,574 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.200 --> 00:00:05.934
+É importante criar aplicativos
+que façam uso inteligente da memória.
+
+00:00:05.968 --> 00:00:10.133
+Vamos fazer isso implementando
+uma estratégia de memória eficiente
+
+00:00:10.167 --> 00:00:14.801
+para exibir uma lista de dados,
+algo necessário a vários aplicativos.
+
+00:00:14.834 --> 00:00:17.467
+A estratégia se chama
+reciclagem de vistas,
+
+00:00:17.501 --> 00:00:21.567
+e consiste em reutilizar vistas
+que não estão mais na tela.
+
+00:00:21.601 --> 00:00:26.234
+Com "vista", quero dizer
+todo o layout de uma linha única,
+
+00:00:26.267 --> 00:00:29.000
+que provavelmente é criado
+por um ViewGroup.
+
+00:00:29.033 --> 00:00:31.567
+É algo como um layout
+linear ou relativo
+
+00:00:31.601 --> 00:00:33.501
+que pode conter
+várias vistas.
+
+00:00:33.534 --> 00:00:36.934
+Porém, um ViewGroup
+é apenas uma vista.
+
+00:00:36.968 --> 00:00:41.267
+Às vezes nos referimos ao layout
+de uma linha única como vista.
+
+00:00:41.300 --> 00:00:43.567
+O idioma Miwok
+é muito extenso.
+
+00:00:43.601 --> 00:00:48.334
+Um jeito de criar o aplicativo seria
+criar milhares de itens de lista
+
+00:00:48.367 --> 00:00:52.667
+em um layout linear vertical. Mas,
+com tantas palavras no vocabulário,
+
+00:00:52.701 --> 00:00:55.234
+pode ser muito lento
+navegar pela lista.
+
+00:00:55.267 --> 00:00:59.400
+O dispositivo pode travar, pois
+a memória não aguenta tantos itens.
+
+00:00:59.434 --> 00:01:02.033
+A memória
+é um recurso limitado,
+
+00:01:02.067 --> 00:01:06.467
+e o sistema Android e outros
+aplicativos também precisam dela.
+
+00:01:06.501 --> 00:01:08.567
+Há uma alternativa
+mais eficiente.
+
+00:01:08.601 --> 00:01:13.100
+Usando o ListView e o ArrayAdapter,
+podemos criar apenas vistas,
+
+00:01:13.133 --> 00:01:17.701
+ou linhas de itens de lista,
+suficientes para preencher a tela.
+
+00:01:17.734 --> 00:01:19.934
+Ou seja,
+ao rolar a tela para cima,
+
+00:01:19.968 --> 00:01:23.200
+não precisamos das vistas
+da parte inferior da tela.
+
+00:01:23.234 --> 00:01:26.534
+Vamos analisar a estrutura
+do ListView e ArrayAdapter.
+
+00:01:26.567 --> 00:01:29.200
+Além disso,
+podemos reciclar vistas.
+
+00:01:29.234 --> 00:01:32.267
+Ou seja, se uma vista
+não está mais visível,
+
+00:01:32.300 --> 00:01:34.968
+podemos reutilizá-la
+alterando os dados.
+
+00:01:35.000 --> 00:01:39.133
+Alteramos os dados da vista,
+como o texto no TextView,
+
+00:01:39.167 --> 00:01:41.234
+e a imagem no ImageView.
+
+00:01:41.267 --> 00:01:45.234
+E não precisamos perder tempo
+recriando a vista do zero.
+
+00:01:45.267 --> 00:01:47.300
+Vamos pegar as vistas extras
+
+00:01:47.334 --> 00:01:51.000
+e colocá-las em uma pilha de sucata
+que pode ser reciclada.
+
+00:01:51.033 --> 00:01:55.033
+Outro termo usado para se referir
+a elas é vistas de sucata.
+
+00:01:55.067 --> 00:01:56.934
+Vamos manter
+a pilha de sucata,
+
+00:01:56.968 --> 00:02:00.634
+que contém várias vistas
+que não estão aparecendo na tela,
+
+00:02:00.667 --> 00:02:04.033
+para reutilizar depois.
+Ou seja, reciclar.
+
+00:02:04.067 --> 00:02:07.200
+Para detalhar mais
+como funciona a reciclagem,
+
+00:02:07.234 --> 00:02:10.400
+digamos que o usuário
+esteja rolando a tela.
+
+00:02:10.434 --> 00:02:13.901
+Ele quer ir para o topo da lista
+ver os últimos tweets
+
+00:02:13.934 --> 00:02:15.601
+ou notícias do feed.
+
+00:02:15.634 --> 00:02:20.100
+O ListView começa a criar mais linhas
+de itens de lista rapidamente.
+
+00:02:20.133 --> 00:02:24.968
+Ao rolar a tela, a impressão é
+que os itens da lista já estavam lá.
+
+00:02:25.000 --> 00:02:27.701
+Em vez de criar
+um novo item do zero,
+
+00:02:27.734 --> 00:02:31.467
+ele pode reutilizar os da pilha
+de sucata, caso existam.
+
+00:02:31.501 --> 00:02:34.167
+Resumindo, criamos
+mais linhas sob demanda
+
+00:02:34.200 --> 00:02:36.601
+reutilizando vistas
+da pilha de sucata.
+
+00:02:36.634 --> 00:02:40.367
+Depois, é só alterar os dados
+dentro das vistas
+
+00:02:40.400 --> 00:02:43.901
+para exibir as informações
+corretas do item de lista.
+
+00:02:43.934 --> 00:02:48.868
+O ListView é inteligente o suficiente
+para saber que as vistas inferiores
+
+00:02:48.901 --> 00:02:52.901
+rolaram para fora da tela
+e não estão visíveis para o usuário,
+
+00:02:52.934 --> 00:02:57.534
+então vão para a pilha de sucata.
+Quando o usuário sobe mais a tela,
+
+00:02:57.567 --> 00:03:01.801
+podemos usar a linha do item de lista
+que estava na parte inferior da tela,
+
+00:03:01.834 --> 00:03:04.834
+agora no topo da tela.
+
+00:03:04.868 --> 00:03:09.634
+O objetivo de tudo isto é criar
+o mínimo possível de itens de lista,
+
+00:03:09.667 --> 00:03:14.868
+porque é caro inflar vistas
+de objetos XML para Java.
+
+00:03:14.901 --> 00:03:19.067
+Para provar que a reciclagem
+de vistas minimiza o uso de memória,
+
+00:03:19.100 --> 00:03:23.300
+preparei duas versões do aplicativo.
+Uma no estado atual,
+
+00:03:23.334 --> 00:03:27.400
+usando um layout linear vertical
+com 1 TextView por item de lista,
+
+00:03:27.434 --> 00:03:32.200
+e uma 2ª versão do aplicativo,
+usando o ListView e o ArrayAdapter.
+
+00:03:32.234 --> 00:03:35.100
+O monitor de memória
+vem com o Android Studio
+
+00:03:35.133 --> 00:03:38.234
+para você acompanhar
+o consumo de recursos.
+
+00:03:38.267 --> 00:03:42.167
+Desenvolvedores profissionais o usam
+para identificar maneiras
+
+00:03:42.200 --> 00:03:45.167
+de minimizar o uso
+de recursos do aplicativo.
+
+00:03:45.200 --> 00:03:49.501
+A diferença no uso de memória
+entre o layout linear e o ListView
+
+00:03:49.534 --> 00:03:53.467
+fica mais perceptível quando
+o número de itens de lista aumenta.
+
+00:03:53.501 --> 00:03:55.634
+Vou demonstrar
+estes 2 exemplos,
+
+00:03:55.667 --> 00:03:59.033
+de modo que cada um exiba
+uma lista de 1.000 palavras.
+
+00:03:59.067 --> 00:04:03.534
+Estou no Android Studio,
+e esta é a versão com layout linear.
+
+00:04:03.567 --> 00:04:08.267
+Observe que o NumbersActivity
+exibe uma lista de 1.000 palavras.
+
+00:04:08.300 --> 00:04:11.434
+Esta é a visualização
+do aplicativo no dispositivo.
+
+00:04:11.467 --> 00:04:16.000
+Tocar no NumbersActivity exibe
+a longa lista de palavras.
+
+00:04:16.033 --> 00:04:18.434
+Conecte o dispostivo
+ao computador
+
+00:04:18.467 --> 00:04:22.000
+e execute o monitor de memória
+para verificar o consumo.
+
+00:04:22.033 --> 00:04:26.834
+Mas, antes de executá-lo,
+vá em Ferramentas, Android
+
+00:04:26.868 --> 00:04:29.567
+e Habilitar Integração ADB.
+
+00:04:29.601 --> 00:04:32.634
+ADB significa
+Android Debug Bridge.
+
+00:04:32.667 --> 00:04:36.701
+É a conexão entre o dispositivo
+e o Android Studio.
+
+00:04:36.734 --> 00:04:41.434
+Após habilitar, vá no monitor
+do Android, na janela de execução,
+
+00:04:41.901 --> 00:04:44.467
+clique para abrir, expanda
+
+00:04:44.501 --> 00:04:47.067
+e clique na aba Memória.
+
+00:04:47.634 --> 00:04:51.934
+Nesta tela, podemos acompanhar
+o uso de memória do aplicativo.
+
+00:04:51.968 --> 00:04:55.434
+Vou executar o aplicativo
+no dispositivo.
+
+00:04:55.467 --> 00:04:58.968
+Com o dispositivo conectado,
+o monitor de memória roda,
+
+00:04:59.000 --> 00:05:01.434
+mostrando a quantidade
+de memória usada
+
+00:05:01.467 --> 00:05:03.968
+apenas para exibir
+a lista de categorias.
+
+00:05:04.000 --> 00:05:06.567
+Esta é a tela
+do dispositivo agora.
+
+00:05:06.601 --> 00:05:09.000
+Vamos ver o que acontece
+com o emulador
+
+00:05:09.033 --> 00:05:11.334
+ao tocarmos
+em NumbersActivity.
+
+00:05:15.100 --> 00:05:17.067
+Observe o salto.
+
+00:05:17.100 --> 00:05:21.100
+Foi de 2 megabytes
+para 14 megabytes.
+
+00:05:21.133 --> 00:05:24.968
+Esse aumento da memória
+alocada é considerado bom
+
+00:05:25.000 --> 00:05:29.200
+ou nem tanto?
+A melhor maneira de verificar
+
+00:05:29.234 --> 00:05:32.767
+é executando outra versão
+do código no mesmo dispositivo.
+
+00:05:32.801 --> 00:05:37.434
+É no mesmo dispositivo porque ele tem
+um conjunto de recursos controlado.
+
+00:05:37.467 --> 00:05:40.934
+Para fazer isso, vou executar
+uma nova versão do código
+
+00:05:40.968 --> 00:05:43.367
+que usa o ListView
+e o ArrayAdapter
+
+00:05:43.400 --> 00:05:46.534
+para exibir a mesma
+lista de 1.000 palavras.
+
+00:05:46.567 --> 00:05:50.300
+Esta é a versão do código
+com ListView e ArrayAdapter,
+
+00:05:50.334 --> 00:05:53.634
+e ela também está exibindo
+a lista de 1.000 palavras.
+
+00:05:53.667 --> 00:05:57.701
+Vamos ver o que acontece ao executar
+este código no dispositivo.
+
+00:05:57.734 --> 00:05:59.834
+A tela de categorias
+fica igual,
+
+00:05:59.868 --> 00:06:02.300
+mas ao tocarmos
+em NumbersActivity,
+
+00:06:02.334 --> 00:06:06.534
+observe que a lista de 1.000 palavras
+aparece, mas com divisórias.
+
+00:06:06.567 --> 00:06:10.033
+Vamos falar mais sobre
+como isso funciona mais tarde.
+
+00:06:10.067 --> 00:06:14.567
+No Android Studio, vou executar
+o monitor de memória, como fiz antes.
+
+00:06:14.601 --> 00:06:19.033
+Vá no monitor do Android,
+expanda e vá para a aba Memória.
+
+00:06:19.067 --> 00:06:23.000
+O monitor foi executado depois
+que o dispositivo foi conectado,
+
+00:06:23.033 --> 00:06:25.434
+pois o ADB estava
+habilitado.
+
+00:06:25.467 --> 00:06:30.434
+A quantidade de memória alocada
+fica constante na tela de categorias.
+
+00:06:30.467 --> 00:06:34.133
+Veja o que acontece
+quando toco em NumbersActivity.
+
+00:06:36.868 --> 00:06:38.634
+Observe o salto sutil.
+
+00:06:38.667 --> 00:06:43.634
+O número passou de 12,71
+para 12,84.
+
+00:06:43.667 --> 00:06:47.334
+Foi um aumento de quase
+0,1 megabyte de memória
+
+00:06:47.367 --> 00:06:51.200
+ao passar da tela de categorias
+para o NumbersActivity.
+
+00:06:51.234 --> 00:06:54.467
+A quantidade de memória usada
+para exibir a lista
+
+00:06:54.501 --> 00:06:58.701
+foi bem menor do que quando
+usamos o código com layout linear.
+
+00:06:58.734 --> 00:07:01.167
+E como estamos usando
+pouca memória,
+
+00:07:01.200 --> 00:07:04.434
+a versão do código
+com ListView e ArrayAdapter
+
+00:07:04.467 --> 00:07:07.767
+vai funcionar melhor
+em dispositivos mais modestos.
+
+00:07:07.801 --> 00:07:11.200
+Vamos analisar
+o monitor de memória.
+
+00:07:11.234 --> 00:07:13.467
+Ele nos mostra duas coisas.
+
+00:07:13.501 --> 00:07:16.200
+A parte em azul escuro
+é a memória alocada,
+
+00:07:16.234 --> 00:07:20.334
+que é a memória que o dispositivo
+usa a qualquer momento.
+
+00:07:20.367 --> 00:07:23.334
+A parte em azul claro
+é a memória livre.
+
+00:07:23.367 --> 00:07:26.000
+É a memória disponível
+no dispositivo.
+
+00:07:26.033 --> 00:07:29.033
+Apesar de ser tentador
+usar toda a memória livre
+
+00:07:29.067 --> 00:07:30.901
+para incrementar
+o aplicativo,
+
+00:07:30.934 --> 00:07:34.701
+lembre-se de que seu aplicativo
+não é o único no dispositivo.
+
+00:07:34.734 --> 00:07:38.367
+É importante liberar recursos
+para outros aplicativos.
+
+00:07:38.400 --> 00:07:43.133
+Veja 2 capturas de tela do monitor de
+memória das 2 versões do aplicativo.
+
+00:07:43.167 --> 00:07:47.901
+A da esquerda é a versão 1
+do aplicativo, com layout linear.
+
+00:07:47.934 --> 00:07:53.000
+A da direita é a versão 2,
+com ListView e ArrayAdapter.
+
+00:07:53.033 --> 00:07:56.567
+A memória alocada é a parte
+em azul escuro,
+
+00:07:56.601 --> 00:07:59.667
+e a memória livre é a parte
+em azul claro.
+
+00:07:59.701 --> 00:08:03.167
+Observe que, nos 2 casos,
+o salto da memória alocada
+
+00:08:03.200 --> 00:08:05.534
+ocorre ao clicar
+na categoria números
+
+00:08:05.567 --> 00:08:08.501
+para navegar até a lista
+de números e palavras.
+
+00:08:08.534 --> 00:08:11.534
+Ao dar zoom na versão
+do layout linear,
+
+00:08:11.567 --> 00:08:16.767
+vemos que o salto ocorre
+de 11 megabytes para 14 megabytes.
+
+00:08:16.801 --> 00:08:19.801
+É um consumo de 3 megabytes
+de memória
+
+00:08:19.834 --> 00:08:22.968
+para exibir a lista
+de 1.000 palavras.
+
+00:08:23.000 --> 00:08:26.300
+Agora, compare
+com o ListView e ArrayAdapter.
+
+00:08:26.334 --> 00:08:31.400
+Ele mal usa 0,5 megabytes para exibir
+uma lista de 1.000 palavras.
+
+00:08:32.400 --> 00:08:36.167
+Após ver esses 2 exemplos,
+visite os links abaixo,
+
+00:08:36.200 --> 00:08:41.200
+sobre o monitor de memória e outras
+maneiras de aprimorar o aplicativo.
+

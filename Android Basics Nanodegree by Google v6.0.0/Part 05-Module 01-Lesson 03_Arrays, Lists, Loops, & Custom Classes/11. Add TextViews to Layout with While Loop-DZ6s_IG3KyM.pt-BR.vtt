@@ -1,0 +1,516 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.801 --> 00:00:03.167
+Certo, há muitos
+tipos diferentes de loops,
+
+00:00:03.200 --> 00:00:05.868
+e o 1º que vamos aprender
+é o loop while.
+
+00:00:05.901 --> 00:00:09.434
+No próximo exercício, você escreverá
+o código para o loop while.
+
+00:00:09.467 --> 00:00:11.968
+O loop while nos ajudará a criar
+textViews
+
+00:00:12.000 --> 00:00:15.501
+para cada elemento da lista
+de palavras e adicioná-las ao layout.
+
+00:00:15.534 --> 00:00:19.601
+Ao fim dessa tarefa de codificação,
+seu app estará assim.
+
+00:00:19.634 --> 00:00:21.834
+While é uma palavra-chave
+especial em Java.
+
+00:00:21.868 --> 00:00:24.601
+Significa que devemos continuar
+executando um bloco de declarações
+
+00:00:24.634 --> 00:00:28.767
+denotadas por instruções neste diagrama,
+enquanto uma certa condição for verdadeira.
+
+00:00:29.767 --> 00:00:33.000
+Então continuamos executando
+o conjunto de instruções,
+
+00:00:33.033 --> 00:00:35.300
+enquanto a condição
+é verdadeira,
+
+00:00:35.334 --> 00:00:36.934
+e basicamente passamos
+por isso em loop.
+
+00:00:38.334 --> 00:00:39.567
+Vendo mais detalhadamente,
+
+00:00:40.567 --> 00:00:44.968
+enquanto a condição
+entre parênteses for verdadeira,
+
+00:00:45.000 --> 00:00:49.501
+executamos todas as instruções neste bloco
+de código que está entre essas duas chaves.
+
+00:00:49.534 --> 00:00:52.801
+Depois, voltamos
+à condição e checamos
+
+00:00:52.834 --> 00:00:57.767
+se é verdade e, se for, executamos
+esse conjunto de instruções novamente,
+
+00:00:57.801 --> 00:01:00.133
+Depois voltamos à condição,
+
+00:01:00.167 --> 00:01:04.534
+checamos se é verdadeira e, se for,
+executamos o conjunto de instruções novamente
+
+00:01:04.567 --> 00:01:06.601
+e depois voltamos
+à condição.
+
+00:01:06.634 --> 00:01:11.734
+A qualquer momento em que seja falsa,
+pulamos esse conjunto de instruções
+
+00:01:11.767 --> 00:01:15.467
+e saímos do loop e continuamos
+com o resto do código que vem depois dele.
+
+00:01:16.534 --> 00:01:19.234
+Esta condição determina
+quantas vezes o código
+
+00:01:19.267 --> 00:01:21.767
+dentro deste bloco while
+será executado.
+
+00:01:21.801 --> 00:01:25.267
+Muitas vezes a condição
+testará o estado da variável.
+
+00:01:25.300 --> 00:01:29.033
+Então podemos configurar uma variável counter
+antes de começarmos o loop,
+
+00:01:29.067 --> 00:01:34.100
+e no fim de cada iteração, o movimento no loop,
+podemos atualizar essa variável.
+
+00:01:34.133 --> 00:01:37.534
+Em um momento vamos atualizar
+a variável de modo que a condição
+
+00:01:37.567 --> 00:01:41.100
+será falsa e isso nos leva
+a sair do loop.
+
+00:01:41.133 --> 00:01:43.667
+Aqui temos um exemplo
+do loop while
+
+00:01:43.701 --> 00:01:46.734
+que corresponde com o exemplo playSound
+que mencionamos mais cedo.
+
+00:01:47.968 --> 00:01:50.367
+Como chegamos
+a esse código?
+
+00:01:50.400 --> 00:01:53.667
+Quando estamos debatendo se devemos
+escrever um loop ou não,
+
+00:01:53.701 --> 00:01:55.801
+podemos nos fazer
+3 perguntas.
+
+00:01:55.834 --> 00:01:57.601
+Que testes vamos
+tentar fazer a cada vez?
+
+00:01:57.634 --> 00:01:59.634
+Quantas vezes precisamos
+repetir o loop?
+
+00:01:59.667 --> 00:02:02.467
+E como resultado,
+qual a condição do loop?
+
+00:02:02.501 --> 00:02:03.701
+Então neste caso,
+
+00:02:03.734 --> 00:02:08.567
+a 1ª questão, qual tarefa faremos
+toda vez? Precisamos tocar um som.
+
+00:02:08.601 --> 00:02:12.033
+Para saber a condição,
+nos perguntamos a 2ª questão.
+
+00:02:12.067 --> 00:02:14.133
+Quantas vezes
+repetimos o loop?
+
+00:02:14.167 --> 00:02:17.334
+Por exemplo, digamos
+que queremos repeti-lo 3 vezes.
+
+00:02:17.367 --> 00:02:18.334
+Se for esse o caso,
+
+00:02:18.367 --> 00:02:21.400
+podemos fazer a condição ser que a variável
+count deve ser menor que 3.
+
+00:02:21.434 --> 00:02:25.434
+Então presumindo que a variável
+count começa em 0
+
+00:02:25.467 --> 00:02:27.234
+e é atualizada toda vez.
+
+00:02:27.267 --> 00:02:29.601
+Então veja como esse loop
+é executado.
+
+00:02:29.634 --> 00:02:31.868
+Vamos observar
+nossa variável count.
+
+00:02:31.901 --> 00:02:35.968
+A 1ª variável count
+começa em 0,
+
+00:02:36.000 --> 00:02:37.834
+depois entramos
+no loop while.
+
+00:02:37.868 --> 00:02:41.367
+Agora determinamos se a condição
+é verdadeira ou falsa,
+
+00:02:41.400 --> 00:02:44.601
+e esta condição diz que count
+precisa ser menor que 3.
+
+00:02:44.634 --> 00:02:47.968
+No nosso caso, 0 é menor que 3,
+então a condição é verdadeira.
+
+00:02:49.100 --> 00:02:51.534
+Isso quer dizer que podemos
+continuar no bloco while
+
+00:02:51.567 --> 00:02:53.234
+e executar
+essas linhas de código.
+
+00:02:53.267 --> 00:02:55.901
+Então chamamos
+o método playSound.
+
+00:02:55.934 --> 00:02:59.267
+Imagine playSound como um
+método válido definido em outro lugar
+
+00:02:59.300 --> 00:03:01.300
+e toca um som
+no dispositivo.
+
+00:03:01.334 --> 00:03:05.234
+Depois de aumentarmos
+a variável count em 1,
+
+00:03:05.267 --> 00:03:10.701
+agora count tem um valor
+de 1 e voltamos à condição.
+
+00:03:10.734 --> 00:03:12.701
+Então checamos
+nossa condição de teste
+
+00:03:12.734 --> 00:03:15.567
+e se a variável count
+ainda é menor que 3.
+
+00:03:15.601 --> 00:03:19.501
+Bom, 1 é menor que 3,
+então podemos seguir,
+
+00:03:19.534 --> 00:03:21.868
+e continuamos
+voltando ao loop while.
+
+00:03:21.901 --> 00:03:26.434
+Executamos esse conjunto de instruções
+novamente, tocamos o som, ding!,
+
+00:03:27.501 --> 00:03:30.534
+e depois aumentamos
+a variável count para 2.
+
+00:03:30.567 --> 00:03:34.467
+agora a condição ainda é verdadeira,
+porque 2 é menor que 3.
+
+00:03:34.501 --> 00:03:37.701
+Então tocamos o som novamente,
+aumentamos a variável para 3,
+
+00:03:37.734 --> 00:03:41.934
+e quando voltarmos à condição,
+desta vez ela falha,
+
+00:03:41.968 --> 00:03:44.934
+porque 3 não é menor que 3.
+
+00:03:44.968 --> 00:03:48.367
+Então quando a condição é falsa,
+saímos do loop
+
+00:03:48.400 --> 00:03:50.434
+e continuamos com o código
+que vem depois dele.
+
+00:03:50.467 --> 00:03:55.834
+Resumindo, executamos o código
+dentro do loop 3 vezes,
+
+00:03:55.868 --> 00:03:59.167
+o que significa que tocamos o som
+3 vezes em nosso dispositivo.
+
+00:03:59.200 --> 00:04:03.667
+Então como pode ver, um loop permite repetir
+um comportamento com um número conciso
+
+00:04:03.701 --> 00:04:08.267
+de linhas sem copiar e colar
+o mesmo código várias vezes.
+
+00:04:08.300 --> 00:04:11.701
+Aqui temos mais um exemplo de loops
+while antes de eu te mandar escrever o seu.
+
+00:04:12.701 --> 00:04:15.968
+Suponha que o código
+de que falaremos será executado
+
+00:04:16.000 --> 00:04:19.501
+dentro da atividade Números depois de você
+ter criado a lista de palavras.
+
+00:04:19.534 --> 00:04:23.567
+Então montamos um cenário de exemplo
+onde a tarefa que quero repetir é exibir
+
+00:04:23.601 --> 00:04:28.267
+uma longa declaração para um item específico
+da lista, baseada em uma variável do índice.
+
+00:04:29.400 --> 00:04:31.667
+Digamos que quero
+repetir o loop 4 vezes
+
+00:04:31.701 --> 00:04:34.367
+para que a condição seja
+que continuemos repetindo o loop
+
+00:04:34.400 --> 00:04:37.467
+enquanto a variável do índice
+seja menor que 4.
+
+00:04:37.501 --> 00:04:39.734
+Supondo que a variável
+do índice começa em 0
+
+00:04:39.767 --> 00:04:42.334
+e depois aumente
+em um a cada vez.
+
+00:04:42.367 --> 00:04:46.167
+Então escrevemos este código,
+criamos a variável do índice primeiro
+
+00:04:46.200 --> 00:04:47.834
+e iniciamos em 0.
+
+00:04:47.868 --> 00:04:50.701
+Então esta linha de código
+ficará fora do loop.
+
+00:04:50.734 --> 00:04:54.767
+Quando iniciarmos a declaração while,
+precisamos usar o while que usaríamos em Java
+
+00:04:54.801 --> 00:04:57.701
+seguido de parênteses
+para a condição.
+
+00:04:57.734 --> 00:05:00.901
+Então a condição é que a variável
+do índice deve ser menor que 4.
+
+00:05:00.934 --> 00:05:03.200
+E se quisermos
+que repita 4 vezes,
+
+00:05:03.234 --> 00:05:08.200
+ela deve repetir uma vez no índice 0,
+de novo no 1, de novo no 2,
+
+00:05:08.234 --> 00:05:12.334
+e por fim no índice 3,
+antes de sair do loop.
+
+00:05:12.367 --> 00:05:15.767
+Agora dentro do loop, podemos
+escrever instruções para a tarefa.
+
+00:05:15.801 --> 00:05:17.400
+Queremos exibir
+uma declaração em log
+
+00:05:17.434 --> 00:05:20.567
+para um item específico na lista
+baseada no valor do índice.
+
+00:05:20.601 --> 00:05:23.267
+Essa declaração
+tem a tag NumbersActivity
+
+00:05:23.300 --> 00:05:28.834
+e o índice das mensagens, seguido
+da variável do índice e do valor.
+
+00:05:28.868 --> 00:05:32.701
+Depois vem o valor da string
+na posição na lista de palavras.
+
+00:05:32.734 --> 00:05:34.701
+Essas são todas as instruções
+que precisamos para essa tarefa.
+
+00:05:35.767 --> 00:05:38.334
+Certo, por fim, no corpo
+desse loop while,
+
+00:05:38.367 --> 00:05:40.601
+precisamos aumentar
+a variável do índice em um.
+
+00:05:40.634 --> 00:05:45.167
+Ainda não vimos
+essa sintaxe de index++,
+
+00:05:45.200 --> 00:05:50.033
+mas é uma notação que significa
+a mesma coisa que configurar a variável
+
+00:05:50.067 --> 00:05:54.734
+do índice para ser
+index = index + 1.
+
+00:05:54.767 --> 00:05:58.868
+Certo, agora você conhece intimamente
+como escrever um loop em Java.
+
+00:05:58.901 --> 00:06:02.200
+Aplique o que aprendeu para consertar
+o código do app Miwok,
+
+00:06:02.234 --> 00:06:04.234
+criando e exibindo
+uma textView
+
+00:06:04.267 --> 00:06:06.167
+para cada elemento na lista
+de palavras usando um loop while.
+
+00:06:07.834 --> 00:06:11.434
+Continue onde paramos na atividade
+Números onde criamos manualmente
+
+00:06:11.467 --> 00:06:15.868
+3 textViews e as adicionamos
+manualmente ao código sem um loop,
+
+00:06:15.901 --> 00:06:17.834
+e o modifique para usar
+um while loop em vez disso.
+
+00:06:19.033 --> 00:06:22.267
+Agora vamos atualizar
+o app Miwok para usar o loop while.
+
+00:06:22.300 --> 00:06:27.000
+Para a 1ª tarefa, remova o log de mensagens
+na atividade Números e no onCreateMethod.
+
+00:06:28.167 --> 00:06:32.534
+Na 2ª tarefa,
+modifique activity_numbers
+
+00:06:32.567 --> 00:06:35.033
+para mudar o RelativeLayout
+para LinearLayout.
+
+00:06:36.267 --> 00:06:39.801
+Depois configure a orientação
+do LinearLayout para vertical,
+
+00:06:39.834 --> 00:06:41.534
+depois adicione uma ID
+de view chamada rootview.
+
+00:06:43.067 --> 00:06:46.801
+Por fim, modifique o método onCreate
+da atividade Números
+
+00:06:46.834 --> 00:06:50.267
+para o código usar um loop while
+para criar e mostrar uma textview
+
+00:06:50.300 --> 00:06:52.300
+para cada elemento
+na lista de palavras.
+
+00:06:52.334 --> 00:06:54.968
+Você pode começar onde paramos
+com o código da atividade Números,
+
+00:06:55.000 --> 00:06:59.501
+que cria 3 textViews
+manualmente, sem usar um loop.
+
+00:07:00.601 --> 00:07:03.133
+Depois de completar
+as etapas de 1 a 3,
+
+00:07:03.167 --> 00:07:05.200
+a atividade Números
+em seu app deve ficar assim.
+
+00:07:06.400 --> 00:07:08.033
+Então, se precisar
+de uma dica,
+
+00:07:08.067 --> 00:07:13.467
+coloquei um exemplo do loop while abaixo
+e há um exemplo do output também.
+
+00:07:13.501 --> 00:07:14.467
+Então, boa sorte.
+

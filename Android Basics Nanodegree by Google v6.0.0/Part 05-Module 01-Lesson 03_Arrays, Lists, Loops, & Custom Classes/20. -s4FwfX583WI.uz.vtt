@@ -1,0 +1,669 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.450 --> 00:00:04.040
+Keling endi oldingi safargi kod yozish mashqida 
+qo‘shgan kodingizga nazar solsak,
+
+00:00:04.040 --> 00:00:07.030
+mana bu 3 qatorda juda ko‘p
+ o‘zgarishlar yuz bergan. 
+
+00:00:07.030 --> 00:00:09.970
+Xo‘sh, yuqori bosqichda, biz
+ma’lumotlar manbai sifatida 
+
+00:00:09.970 --> 00:00:12.550
+satrlar ro‘yxatini o‘z ichiga 
+oladigan ArrayAdapter ni yaratayotgan edik.
+
+00:00:13.730 --> 00:00:16.040
+So‘ng view ierarxiyasi orqali 
+XML layout ida belgilangan 
+
+00:00:16.040 --> 00:00:19.580
+ListView ni qidirayotgan edik.
+
+00:00:19.580 --> 00:00:22.050
+Va ArrayAdapterni ListView 
+bilan bog‘layotgan edik.
+
+00:00:23.130 --> 00:00:25.470
+Nima bo‘layotganini batafsil tushunish uchun,
+
+00:00:25.470 --> 00:00:27.620
+keling bir satrga bir vaqtning o‘zida qaraymiz.
+
+00:00:27.620 --> 00:00:32.080
+Birinchi bo‘lib, biz ArrayAdapter 
+ob’ektini new kalit so‘zini 
+
+00:00:32.080 --> 00:00:33.650
+ va uchta kiritishli konstruktorni 
+ ishlatgan holda yaratamiz.
+
+00:00:35.260 --> 00:00:39.430
+Biz uni yangi o‘zgaruvchiga 
+saqlab, itemsAdapter deb nomlaymiz.
+
+00:00:39.430 --> 00:00:42.440
+Va bu yerda ArrayAdapter uning ma’lumot turi.
+
+00:00:42.440 --> 00:00:45.250
+Xo‘sh, biz mana shu uch kiritishni
+ qanday qilib kiritishni qayerdan bilamiz. 
+
+00:00:45.250 --> 00:00:47.300
+Keling hujjatlarga nazar solamiz.
+
+00:00:47.300 --> 00:00:51.070
+Xo‘sh, bu yerda dasturchining array Adapter ga 
+tegishli to‘liq hujjatlari,
+
+00:00:51.070 --> 00:00:56.000
+agar siz ArrayAdapter Android deb onlayn qidirishga bersangiz, 
+mana bu sahifani ko‘rishingiz mumkin.
+
+00:00:56.000 --> 00:00:59.620
+Keling public constructors 
+ bo‘limiga tushamiz.
+
+00:00:59.620 --> 00:01:02.420
+Va u bizga yangi Array adapterni 
+yaratish yo‘llarini o‘rgatadi.
+
+00:01:03.720 --> 00:01:06.580
+Har bir konstruktor har 
+xil kiritishlarni talab qiladi.
+
+00:01:06.580 --> 00:01:08.670
+Va biz oxirgi konstruktor uchun 
+ikkinchisini ishlatayotgan edik.
+
+00:01:10.240 --> 00:01:14.070
+va bu biz numbers activity 
+ faylida ishlatayotgan kodimiz.
+
+00:01:15.360 --> 00:01:21.010
+ahamiyat bering biz numbers activity , 
+layout fayli va ob’ektlar 
+
+00:01:21.010 --> 00:01:23.810
+ro‘yxatiga tegishli kontekstni kirityapmiz.
+
+00:01:25.230 --> 00:01:28.790
+Bizga kontekst kerakligini boshqa sababi,
+ bu biz view lar yaratishimizdir.
+
+00:01:28.790 --> 00:01:31.490
+numbers activity kontekst bo‘lgani sababli,
+
+00:01:31.490 --> 00:01:35.010
+biz this so‘zini numbers activity ga 
+tegishli ekanini bildirish uchun belgilaymiz.
+
+00:01:35.010 --> 00:01:37.500
+Ikkinchi parametr esa
+ ListItem layout fayli.
+
+00:01:38.680 --> 00:01:43.580
+Odatda biz layout fayllariga R.layout 
+ shaklida, va layout fayli nomidan 
+
+00:01:43.580 --> 00:01:46.640
+so‘ng keladigan, biz aniqlagan 
+joylashuv tartibiga murojaat qilamiz.
+
+00:01:47.800 --> 00:01:53.280
+Bu holatda, biz android.R.layout 
+deb aniqroq yozamiz, chunki 
+
+00:01:53.280 --> 00:01:59.460
+Android Framework ida XML layout fayli,
+ya’ni simple_list_item_1 ni oldindan belgilab qo‘yilgan.
+
+00:01:59.460 --> 00:02:03.240
+Va biz Android oldindan belgilab qo‘yganini ishlatishimiz mumkin.
+
+00:02:03.240 --> 00:02:07.630
+So‘nggi parametr, ob’ektlar ro‘yxati
+ bo‘lib array adapterlari uchun 
+
+00:02:07.630 --> 00:02:09.360
+ma’lumot manbasi bo‘ladi.
+
+00:02:09.360 --> 00:02:11.600
+Bizning holda bu so‘zlar.
+
+00:02:11.600 --> 00:02:14.800
+Xo‘sh, avvalroq shu darsda biz
+ string ArrayList yaratganimizda 
+
+00:02:14.800 --> 00:02:17.720
+generics lar haqida gaplashgan edik.
+
+00:02:17.720 --> 00:02:21.088
+Yodda tuting, bu ArrayList , ArrayAdapter emas.
+
+00:02:21.088 --> 00:02:25.240
+Eslasangiz, biz ArrayList generic 
+sinf bo‘lgani uchun uni ArrayList 
+
+00:02:25.240 --> 00:02:27.230
+va burchakli qavslar ichiga E deb
+
+00:02:27.230 --> 00:02:31.760
+ uni generic ekanligini bildirish 
+ uchun yozishimiz mumkin edi.
+
+00:02:31.760 --> 00:02:34.280
+Endi esa eslab qoling, E bu parametr turi yoki 
+
+00:02:34.280 --> 00:02:38.210
+muayyan ob’ekt turiga almashtirsa
+ bo‘ladigan to‘ldiruvchi, 
+
+00:02:38.210 --> 00:02:42.040
+masalan, biz ArrayList ning namunasini
+ yaratgan paytda satrga o‘zgartirish mumkin.
+
+00:02:42.040 --> 00:02:46.080
+Xo‘sh, bir Generic sinfini yaratish 
+bizga ma’lumot turini keyinroq aniqlashga,
+
+00:02:46.080 --> 00:02:50.730
+ va ko‘plab sinflar - StringList, integer,
+ Boolean sinflarini yoki boshqa ob’ekt 
+
+00:02:50.730 --> 00:02:55.415
+turi ro‘yxati sinfini yaratmaslikga 
+
+00:02:55.415 --> 00:02:59.780
+imkon yaratadi.
+
+00:02:59.780 --> 00:03:03.570
+Xo‘sh, bizning ArrayAdapterlar haqidagi
+ muhokamaga qaytsak,
+
+00:03:03.570 --> 00:03:07.330
+bu yerda arrayAdapterlar hujjatlari.
+
+00:03:07.330 --> 00:03:11.710
+Va ko‘rishimiz mumkinki ArrayAdapter
+ burchakli qavslar ichida T sintaksisiga ega,
+
+00:03:11.710 --> 00:03:15.520
+bu esa, u ham generic sinf 
+ekanligini anglatadi.
+
+00:03:15.520 --> 00:03:19.780
+T Xuddi E ga o‘xshab parametr turiga kiradi, va 
+
+00:03:19.780 --> 00:03:22.200
+boshqa ma’lumot ob’ekt turiga almashtirilsa bo‘ladi.
+
+00:03:22.200 --> 00:03:24.870
+ T aynan ma’lumot turiga kiradi,
+ chunki siz massivda qanday ma’lumot 
+
+00:03:24.870 --> 00:03:29.870
+turlari borligiga qiziqasiz,
+va bizning holatda bu string 
+
+00:03:29.870 --> 00:03:34.660
+ma’lumot turi.
+
+00:03:34.660 --> 00:03:39.810
+Hozir biz ArrayAdapterni aynan stringni 
+kiritish sifatida oladigan qilib yaratyapmiz
+
+00:03:39.810 --> 00:03:44.230
+ va har bir string elementlariga biz 
+ ro‘yxat elementlari ko‘rinishini yaratamiz. 
+
+00:03:44.230 --> 00:03:48.340
+Xo‘sh, mana bu taqqoslash jadvaliga,
+ya’ni bitta generic sinf yoki har bir 
+
+00:03:48.340 --> 00:03:53.630
+ tur uchun alohida sinf yaratish 
+ yaxshi ekanligini qiyoslashga qaytsak.
+
+00:03:53.630 --> 00:03:55.120
+Bu yerda, biz ArrayAdapterni
+ xohlagan ma’lumot turiga 
+
+00:03:55.120 --> 00:04:00.190
+almashtirishimiz mumkin.
+
+00:04:00.190 --> 00:04:04.120
+Bizning holda, biz T ni string 
+ma’lumot turiga almashtirmoqchimiz.
+
+00:04:05.338 --> 00:04:08.330
+Xo‘sh, shu bir satr bilan kodda juda 
+ko‘p o‘zgarishlar yuz bermoqda.
+
+00:04:08.330 --> 00:04:10.350
+Endi keling ikkinchi qatorga o‘tamiz.
+
+00:04:10.350 --> 00:04:12.430
+Xo‘sh, bu yerda biz view ierarxiyasida
+ name list ostidagi view ID sini qidiryapmiz,
+
+00:04:12.430 --> 00:04:17.550
+va findViewById usuli bizga view
+ qiymatini qaytaradi va so‘ng biz uni 
+
+00:04:17.550 --> 00:04:20.890
+list view ma’lumot turiga biriktiramiz.
+
+00:04:20.890 --> 00:04:24.920
+Biriktirish faqat biz TextView yoki
+ imageView topgachgina ishlaydi.
+
+00:04:24.920 --> 00:04:28.930
+Bu holatda biriktirish biz
+ layoutda list view ni topganimiz 
+
+00:04:28.930 --> 00:04:29.950
+uchun ishlaydi.
+
+00:04:29.950 --> 00:04:33.730
+Va biz list view ni ListView nomli
+ o‘zgaruvchiga saqlab qo‘yamiz.
+
+00:04:33.730 --> 00:04:35.150
+Va biz usullarni chaqirib u bilan 
+ilovani ishga tushirish mobaynida 
+
+00:04:35.150 --> 00:04:37.130
+o‘zaro ta’sir o‘tkazishimiz mumkin.
+
+00:04:37.130 --> 00:04:38.300
+Endi oxirgi kod satriga kelsak.
+
+00:04:38.300 --> 00:04:41.210
+Bu yerda listView.setAdapter and
+
+00:04:41.210 --> 00:04:44.260
+o‘z parametri sifatida itemsAdapter ni oladi.
+
+00:04:44.260 --> 00:04:48.010
+Shunday qilib biz setAdapter usulini 
+hozirgina aniqlagan ListView 
+
+00:04:48.010 --> 00:04:49.660
+ob’ektida chaqiramiz.
+
+00:04:49.660 --> 00:04:55.140
+Hozir agar ListView hujjatlariga 
+qaytib setAdapterni qidirsak,
+
+00:04:55.140 --> 00:04:58.230
+biz bu usul kiritish sifatida bir
+ dona parametr olishini ko‘rishimiz mumkin.
+
+00:04:58.230 --> 00:05:01.860
+Ular ListAdapter turidagi ob’ektni
+ talab qiladilar, lekin
+
+00:05:01.860 --> 00:05:06.160
+bizning kodda faqat ArrayAdapter 
+mavjud, ListAdapter emas.
+
+00:05:06.160 --> 00:05:09.270
+Xo‘sh, keling list adapterga bosamiz 
+va ko‘proq ma’lumotga ega bo‘lamiz. 
+
+00:05:09.270 --> 00:05:12.890
+Xo‘sh, biz endi list adapter hujjatlaridamiz 
+va pastga tushib Public usuliga qarasak,
+
+00:05:12.890 --> 00:05:17.250
+abstrakt usuli yo‘qligini ko‘rishimiz mumkin. 
+
+00:05:17.250 --> 00:05:21.640
+Agar tepa qismga qarasak, u bu 
+adapter interfeys ekanligini aytyapti va
+
+00:05:21.640 --> 00:05:24.440
+eslasangiz biz oxirgi darsda interfeyslar
+ haqida o‘rgangan edik
+
+00:05:24.440 --> 00:05:27.180
+va click listener bizning interfeysda ekanligini ham. 
+
+00:05:27.180 --> 00:05:31.110
+Ammo biz usullarni qo‘llashni ta’minlashimiz
+ kerak, ya’ni biz faqatgina
+
+00:05:31.110 --> 00:05:34.590
+ListAdapter interfeysini bajaradigan 
+sinf yaratishimiz kerak,
+
+00:05:34.590 --> 00:05:38.710
+shunda biz adapterni ListViewda
+ to‘g‘ri o‘rnata olamiz. 
+
+00:05:38.710 --> 00:05:42.320
+Bizning baxtimizga, Android jamoasi bu ishni 
+biz uchun allaqachon bajarib bo‘lgan.
+
+00:05:42.320 --> 00:05:46.250
+va biz xohlagan ListAdapterni bajaradigan 
+sinf yaratishimiz mumkin.
+
+00:05:46.250 --> 00:05:48.820
+ammo ArrayAdapter bizning ehtiyojlarimizga 
+mos kelishi kerak.
+
+00:05:48.820 --> 00:05:52.780
+Keling endi ArrayAdapter hujjatlari 
+sahifasiga qaytib 
+
+00:05:52.780 --> 00:05:55.360
+sinf ierarxiyasiga nazar solamiz.
+
+00:05:55.360 --> 00:05:58.670
+Shunday qilib, ArrayAdapter 
+BaseAdapter dan davom etadi.
+
+00:05:58.670 --> 00:06:00.490
+Buni tekshirib ko‘rishingiz mumkin.
+
+00:06:00.490 --> 00:06:03.890
+Va bu yerda BaseAdapter abstrakt 
+sinfi deb aytilgan.
+
+00:06:03.890 --> 00:06:06.370
+Va ahamiyat bersangiz, u ListAdapter 
+interfeysini bajaradi.
+
+00:06:07.520 --> 00:06:12.760
+Bu esa BaseAdapter ListAdapteri talab
+ qilingan paytda ishlatilishi mumkin. 
+
+00:06:12.760 --> 00:06:16.200
+ArrayAdapter esa ListAdapter talab
+ qilingan paytda ishlatilishi mumkinligini anglatadi.
+
+00:06:16.200 --> 00:06:20.510
+Bilaman, havolalar juda ham ko‘p
+ bo‘lib ketdi, va u labirint 
+
+00:06:20.510 --> 00:06:21.730
+kabi ko‘rinishi mumkin.
+
+00:06:21.730 --> 00:06:23.098
+Shu yergacha kuzatib kelganingiz uchun raxmat,
+
+00:06:23.098 --> 00:06:27.640
+endi men biz hozir o‘tgan ma’lumotni 
+umumlashtirishga harakat qilaman.
+
+00:06:27.640 --> 00:06:31.960
+Mana bu diagrammaga kelsak, u 
+concrete sinfi, abstrakt sinfi 
+
+00:06:31.960 --> 00:06:35.020
+va interfeyslarning biz qanday
+ qilib adapterni shu uchta 
+
+00:06:35.020 --> 00:06:38.630
+sinflarga qo‘llashimizni 
+farqlarini ko‘rsatyapti.
+
+00:06:38.630 --> 00:06:44.250
+Shunday qilib, ListView adapter usuli List adapterni 
+o‘z kiritishi sifatida talab qiladi.
+
+00:06:44.250 --> 00:06:46.920
+ListAdapter esa interfeys.
+
+00:06:46.920 --> 00:06:49.580
+Bu esa hech qanday izohlar bajarilmaydi 
+
+00:06:49.580 --> 00:06:51.530
+va hamma usullar abstrakt degani.
+
+00:06:51.530 --> 00:06:56.800
+Va bundan kelib chiqyaptiki, Android 
+jamoasi Base adapter sinfini, ya’ni 
+
+00:06:56.800 --> 00:07:00.080
+abstrakt sinfni yaratgan, va u
+ ba’zi ListAdapter usullarini 
+
+00:07:00.080 --> 00:07:02.910
+bajarilishini ta’minlaydi.
+
+00:07:02.910 --> 00:07:06.190
+Ammo bu boshqa usullarni ham 
+abstrakt holatda tashlab ketadi.
+
+00:07:06.190 --> 00:07:08.692
+Xo‘sh, mana bu yerda ArrayAdapter 
+kirib keladi.
+
+00:07:08.692 --> 00:07:13.780
+ArrayAdapter bu concrete sinf, va
+ u amalga oshirilgan usullarga ega.
+
+00:07:13.780 --> 00:07:16.380
+Shunday qilib, hech qanday sinf 
+abstrakt bo‘lib qolmaydi.
+
+00:07:16.380 --> 00:07:21.480
+va biz ArrayAdapter namuna ob’ektini 
+yaratib uni ilovamizda ishlatishimiz mumkin.
+
+00:07:21.480 --> 00:07:25.010
+Biz ArrayAdapter bu ListAdapterligini
+ tasdiqlaganimiz uchun 
+
+00:07:25.010 --> 00:07:28.570
+ itemsAdapter o‘zgaruvchisini kiritish
+ sifatida ListView.setAdapter usuli 
+
+00:07:28.570 --> 00:07:32.110
+chaqiruvi orqali kiritsak bo‘ladi.
+
+00:07:32.110 --> 00:07:32.990
+Juda zo‘r.
+
+00:07:32.990 --> 00:07:35.560
+Endi siz mana shu uch kod satrlari 
+qanday qudratli ekanligini bilasiz.
+
+00:07:36.720 --> 00:07:39.500
+Bilaman, bittada hammasini qabul 
+qilish qiyin, ammo
+
+00:07:39.500 --> 00:07:42.720
+bu narsaga vaqt ajratib tushunishga 
+arziydi, chunki Adapter juda ham
+
+00:07:42.720 --> 00:07:45.490
+ ko‘p uchraydigan tushunchadir.
+
+00:07:46.770 --> 00:07:51.850
+Shunday qilib, adapter ma’lumot manbai 
+massiv yoki ro‘yxat ekanligini biladi.
+
+00:07:51.850 --> 00:07:54.850
+Va ushbu elementlarning har birini 
+viewga qanday taqdim etishni ham biladi.
+
+00:07:54.850 --> 00:07:58.460
+Bu orada ListView bu viewlarni ekranda ko‘rsatib,
+
+00:07:58.460 --> 00:08:00.840
+foydalanuvchi harakatlarini aniqlab,
+
+00:08:00.840 --> 00:08:05.460
+butun ro‘yxat ichida joylashgan
+ holatini saqlab turadi.
+
+00:08:05.460 --> 00:08:08.390
+Va bu yerda ListView va ArrayAdapter
+ o‘rtasidagi o‘zaro ta’sirini 
+
+00:08:08.390 --> 00:08:11.440
+umumlashtiradigan 3 qator kod.
+
+00:08:11.440 --> 00:08:13.240
+Biz unga kechroq yaxshiroq 
+nazar tashlaymiz.
+
+00:08:13.240 --> 00:08:17.010
+Hozircha siz uni foydalanuvchi
+ interfeysi va ma’lumotlar modeli 
+
+00:08:17.010 --> 00:08:17.850
+o‘rtasidagi ajratish kabi 
+o‘ylashingiz mumkin.
+
+00:08:19.220 --> 00:08:21.710
+Bu aynan ajralish emas,
+
+00:08:21.710 --> 00:08:25.070
+chunki array adapter view lar 
+bilan ish yuritadi,
+
+00:08:25.070 --> 00:08:28.890
+ammo birinchi navvatda, listView foydalanuvchi 
+interfeysi tafsilotlariga javobgardir.
+
+00:08:28.890 --> 00:08:31.390
+Ma’lumotlar esa adapter zimmasida.
+
+00:08:31.390 --> 00:08:35.570
+Bu ajralgani tufayli, siz bir qismini 
+boshqasiga almashtirishingiz mumkin.
+
+00:08:35.570 --> 00:08:40.010
+Masalan, bir xil adapterni grid viewga 
+ilib qo‘yishingiz mumkin.
+
+00:08:40.010 --> 00:08:43.200
+Array adapter o‘z holatida qoladi,
+
+00:08:43.200 --> 00:08:48.830
+va ro‘yxat elementlarining qatorda ko‘rsatish o‘rniga GridView Grid 
+ko‘rinish elementlarni sorayapti. 
+
+00:08:48.830 --> 00:08:52.160
+Shunday qilib, bu 0-holat, 1-
+
+00:08:52.160 --> 00:08:53.680
+va hokazo va hokazo.
+
+00:08:53.680 --> 00:08:57.300
+Va adapter ushbu viewlarning 
+har birini taqdim etadi.
+
+00:08:57.300 --> 00:09:00.090
+Siz Androiddagi drop-down menyusini ko‘rdingizmi?
+
+00:09:00.090 --> 00:09:03.100
+Androidda bular spinners deb ataladi.
+
+00:09:03.100 --> 00:09:04.190
+Topingchi nima?
+
+00:09:04.190 --> 00:09:08.380
+Har bir elementni drop-down ga joylash uchun 
+biz adapterni unga biriktirib qo‘yamiz.
+
+00:09:08.380 --> 00:09:12.600
+Shu tarzda, menyudagi har bir element ma’lumot manbasidagi elementdan keladi. 
+
+00:09:12.600 --> 00:09:15.560
+Shunday qilib, aytishimiz mumkinki 
+ Android ilovalarini yaratayotganimizda biz 
+
+00:09:15.560 --> 00:09:16.860
+Adapter Patternga yuzlanamiz.
+
+00:09:16.860 --> 00:09:19.510
+Buni tushunishingiz juda muhim.
+
+00:09:19.510 --> 00:09:24.080
+Biz bunga 5-darsda yana qaytib kelamiz. 
+
+00:09:24.080 --> 00:09:28.990
+Keyingi mashq uchun, biron bir listView adapter 
+ kodini o‘zgartirishga harakat qilib ko‘ring va
+
+00:09:28.990 --> 00:09:29.739
+nima yuz berishini kuzating.
+
+00:09:30.740 --> 00:09:34.040
+Va so‘ng ListView o‘rniga GridView 
+ishlatib ko‘ring.
+
+00:09:34.040 --> 00:09:37.130
+GridView ham viewlarni qayta ishlata oladi va 
+
+00:09:37.130 --> 00:09:39.360
+u qanday ma’lumotni ekranga chiqarishni 
+bilish uchun adapterga muhtoj.
+
+00:09:39.360 --> 00:09:42.370
+Bularning hammasi tajriba maqsadida qilinyapti.
+
+00:09:42.370 --> 00:09:44.880
+Va mashqning oxirida men sizdan ortga qaytib 
+
+00:09:44.880 --> 00:09:46.709
+kodingizni ListView ishlatadigan qilishga o‘zgartirishingizni so‘rayman.
+
+00:09:47.740 --> 00:09:50.120
+Bular amaliyotning o‘ziga hos xususiyatlari.
+
+00:09:50.120 --> 00:09:51.920
+ListView ishlatish o‘rniga 
+
+00:09:51.920 --> 00:09:55.840
+ NumbersActivity dagi so‘zlarni ko‘rsatishga 
+ GridViewni ishlatishga harakat qiling.
+
+00:09:55.840 --> 00:09:58.140
+Siz biz avvalroq yaratgan adapterni 
+ishlatishingiz mumkin.
+
+00:09:58.140 --> 00:10:00.180
+Agar sizga yordam kerak bo‘lsa,
+
+00:10:00.180 --> 00:10:04.128
+siz pastda havola etilgan gridView 
+muhokamasiga o‘tishingiz mumkin.
+
+00:10:04.128 --> 00:10:08.140
+Ammo siz butunlay kodni o‘zgartirib, 
+maqoladagi kodni
+
+00:10:08.140 --> 00:10:11.490
+ko‘chirib tashlamasingizdan bir narsani 
+eslatib qo‘ymoqchiman.
+
+00:10:11.490 --> 00:10:16.860
+Siz mana shu ListViewdan GridViewga o‘tkazish mashqi 
+eWalk ilovasi yordamida bir-ikkita kod satrlarini
+
+00:10:16.860 --> 00:10:21.230
+ o‘zgartirgan holda amalga oshirilishi 
+ mumkinligidan xabardor bo‘lishingiz kerak.
+
+00:10:21.230 --> 00:10:24.430
+Bu mashqni qilib bo‘lgach orqaga qayting 
+
+00:10:24.430 --> 00:10:26.990
+va kodingizni ListView ishlatgan 
+holda yana o‘zgartiring.
+
+00:10:26.990 --> 00:10:29.180
+Juda yaxshi, sizga omad tilayman.
+

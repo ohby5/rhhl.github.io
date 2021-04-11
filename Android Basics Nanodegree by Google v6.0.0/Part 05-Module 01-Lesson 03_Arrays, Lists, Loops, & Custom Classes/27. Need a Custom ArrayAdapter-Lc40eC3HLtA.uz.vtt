@@ -1,0 +1,634 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.410 --> 00:00:03.260
+Keling bir ilovamizda qilingan o‘zgarishlarni qayta ko‘rib chiqaylik
+
+00:00:03.260 --> 00:00:06.800
+Biz loop ishlatishni o‘rniga, vertikal chiziqli layout ishlatyapmiz.
+
+00:00:06.800 --> 00:00:09.140
+Bunday qilishdan maqsad so‘zlar ro‘yxatini ko‘rsatish
+
+00:00:09.140 --> 00:00:13.620
+va ListView + ArrayAdapter kombinatsiyasini 
+yaxshiroq tarzda o‘rganish.
+
+00:00:13.620 --> 00:00:16.730
+Keyin esa ikkita TextViews qatnashgan 
+item layout ro‘yxatini tuzamiz.
+
+00:00:18.070 --> 00:00:20.950
+Undan keyin biz ArrayAdapter ga 
+o‘tkazsa bo‘ladigan 
+
+00:00:20.950 --> 00:00:22.050
+yagona ob’ektlar ro‘yxatini tuzamiz.
+
+00:00:22.050 --> 00:00:25.200
+Ko‘rib turganingizdek, Ingliz tili so‘zlari va 
+Miwok tarjimalari qatnashgan 
+
+00:00:25.200 --> 00:00:27.180
+odatiy Work Class tuzdik.
+
+00:00:27.180 --> 00:00:30.253
+Agar shunday qilmaganimizda ArrayAdapter ga 
+ArrayList ni 
+
+00:00:30.253 --> 00:00:31.095
+o‘tkaza olmas edik.
+
+00:00:31.095 --> 00:00:33.620
+Endi numbers activity ga yuzlansak.
+
+00:00:33.620 --> 00:00:38.020
+Bu yerda ArrayList ning qatorini 
+ArrayList so‘zlariga o‘zgartirishimiz kerak.
+
+00:00:38.020 --> 00:00:40.920
+Qavslar ichida joylashgan generic type 
+parameterini yangilashimiz kerak
+
+00:00:40.920 --> 00:00:46.540
+va har bitta elementi so‘z ob’ekti bo‘lgan 
+ArrayList yaratamiz
+
+00:00:46.540 --> 00:00:48.740
+Siz ikkita automatik to‘liq taklifni olishingiz mumkin.
+
+00:00:48.740 --> 00:00:51.700
+Buning sababi Android framework da har doim, 
+har xil package nomlari ostida
+
+00:00:51.700 --> 00:00:53.710
+word class bo‘lishi kerak.
+
+00:00:53.710 --> 00:00:56.240
+Bu yerda u UserDictionary 
+nomi ostida ko‘rsatilgan.
+
+00:00:56.240 --> 00:00:59.800
+Bu yerda siz do‘stingiz bilan suhbatlashib turgan holingizda o‘zingizning automatik tarzda ishlaydigan lu’gatingizga 
+
+00:00:59.800 --> 00:01:01.650
+qo‘shishingiz kerak bo‘lgan so‘zlar mavjud.
+
+00:01:01.650 --> 00:01:05.010
+Word Class uchun muqobil tanlov 
+tanlaganingizga ishonchingiz komil bo‘lsin.
+
+00:01:05.010 --> 00:01:08.958
+o‘zimizning paketimizda biz 
+com.example.android.miwok ni xohlaymiz.
+
+00:01:08.958 --> 00:01:13.170
+Demak, ArrayList imizni so‘z ob’ektlari 
+qatnashgan ro‘yxatga almashtirdik
+
+00:01:13.170 --> 00:01:14.210
+string ob’ekt boriga emas.
+
+00:01:14.210 --> 00:01:18.060
+Men hozir so‘zni ArrayList ning parametri deb hisoblayapman.
+
+00:01:18.060 --> 00:01:23.240
+Bu degani, ro‘yxatga qandaydir bir element qo‘shsak, 
+bizga ma’lumot turi so‘zning ob’ekti ham kerak bo‘ladi.
+
+00:01:23.240 --> 00:01:26.500
+Agar biz ma’lum bir pozitsiyada joylashgan elementni 
+get metod orqali chaqiradigan bo‘lsak,
+
+00:01:26.500 --> 00:01:30.950
+biz data type bilan birgalikda 
+uning ob’ektini ham qabul qilamiz.
+
+00:01:30.950 --> 00:01:34.476
+Hozirda bu add metodlarning barchasi bitta satr 
+ob’ektlarini so‘zlar ro‘yxatiga qo‘shish orqali
+
+00:01:34.476 --> 00:01:38.257
+qo‘shish orqali barcha xatolar kelib chiqmoqda.
+
+00:01:38.257 --> 00:01:42.725
+Shuning uchun word ob’ektiga o‘tkazish 
+uchun bu qatorlarni hammasini yangilashimiz kerak.
+
+00:01:42.725 --> 00:01:44.814
+Keling endi birinchi elementga e’tibor qarataylik.
+
+00:01:44.814 --> 00:01:46.525
+Men hozir bunga izoh qoldirmoqchiman.
+
+00:01:46.525 --> 00:01:50.081
+Pastroqda barchasini kod versiyasida yozmoqchiman. 
+
+00:01:50.081 --> 00:01:51.894
+Bu bilan so‘z ro‘yxatiga yangi so‘z qo‘shamiz.
+
+00:01:51.894 --> 00:01:53.740
+sukunat 
+
+00:01:53.740 --> 00:01:56.390
+Buni bajarishning odatiy yo‘li bor.
+
+00:01:56.390 --> 00:02:01.423
+Birinchi yangi Word ob’ektini yaratamiz, 
+keyin esa uni W deb nomlangan
+
+00:02:01.423 --> 00:02:04.257
+o‘zgaruvchiga saqlaymiz va so‘z ro‘yxatiga qo‘shamiz.
+
+00:02:04.257 --> 00:02:06.668
+Mana bu yerda biz yaratgan yangi Word ob’ekti
+
+00:02:06.668 --> 00:02:09.660
+Biz uning konstruktoriga ikkita yangi input kirityapmiz.
+
+00:02:09.660 --> 00:02:11.490
+Bular English va Miwok so‘zlar 
+
+00:02:11.490 --> 00:02:14.963
+Biz W o‘zgaruvchidan mana bu yerda ifodalashimiz kerak.
+
+00:02:14.963 --> 00:02:19.060
+Ochig‘ini aytsak, bu ikki qator kodni yozishning qisqacha yo‘li bor.
+
+00:02:19.060 --> 00:02:22.260
+Bu so‘zlarning yaratish ob’ekti va ro‘yxatga qo‘shish 
+uslubi orqali ham buni bajarsak bo‘ladi
+
+00:02:22.260 --> 00:02:25.770
+Lekin buning juda ham oson yo‘li bor.
+
+00:02:25.770 --> 00:02:28.870
+Shuningdek, biz W o‘zgaruvchini faqatgina
+49
+00:02:28,870 --&gt; 00:02:30,540
+pastroqda ifodalayapmiz.
+
+00:02:30.540 --> 00:02:34.160
+Endi davom etamiz va substantiation ni kesib tashlaymiz.
+
+00:02:34.160 --> 00:02:36.240
+So‘ngra, uni uslubga to‘g‘ridan-to‘g‘ri qo‘shamiz.
+
+00:02:36.240 --> 00:02:40.176
+Shunday qilish bilan birgalikda bizga yangi Word ob’ektini yaratish uchun yangi kodlar bo‘limida ortiqcha harakatlar kerak bo‘lmaydi.
+
+00:02:40.176 --> 00:02:45.110
+Shundan so‘ng biz barchasini temporary variable ga joylaymiz.
+
+00:02:45.110 --> 00:02:47.540
+Keling mana bu qatorni butunlay o‘chirib tashlaymiz.
+
+00:02:48.830 --> 00:02:52.840
+Undan so‘ng o‘zimiznign yangi Word ob’ektimizni qo‘shamiz.
+
+00:02:52.840 --> 00:02:57.041
+Xulosa qilgan holda shuni aytishimiz mumkinki, mana bu ro‘yxatga kiritilga input bu yangi Word ob’ekti hisoblanadi.
+
+00:02:57.041 --> 00:02:59.830
+Bu ob’ekt yangi keyword ishlatilgan holda tuzilgan.
+
+00:02:59.830 --> 00:03:01.048
+Men hozir mana bu ArrayList ni
+
+00:03:01.048 --> 00:03:04.134
+tugatib qo‘ymoqchiman.
+
+00:03:04.134 --> 00:03:06.064
+Barchasini tugatib bo‘lganingizdan so‘ng, 
+ArrayList dagi so‘zlar
+
+00:03:06.064 --> 00:03:08.780
+mana shunday ko‘rinishga ega bo‘ladi.
+
+00:03:08.780 --> 00:03:11.368
+ArrayList dan Adapter ga
+
+00:03:11.368 --> 00:03:13.121
+o‘tayotgan qismga o‘tsak.
+
+00:03:13.121 --> 00:03:17.370
+Biz mana bu generic typeni string dan so‘zlarga o‘zgartirishimiz kerak.
+
+00:03:17.370 --> 00:03:20.220
+Bu o‘zgarish ArrayAdapter da yangi 
+so‘zlar ro‘yxati borligini aks ettiradi.
+
+00:03:20.220 --> 00:03:23.400
+Bu string so‘zlar emas status source hisoblanadi.
+
+00:03:23.400 --> 00:03:27.420
+Biz yana layout ni ham o‘zimizning yangi ro‘yxatimizga qo‘shish uchun yangilashishimizga to‘g‘ri keladi.
+
+00:03:27.420 --> 00:03:31.460
+Buning o‘rniga keling R.layout.List_item ni ishlatamiz.
+
+00:03:31.460 --> 00:03:34.260
+Ana endi kodimizda xatoliklar yo‘q
+
+00:03:34.260 --> 00:03:36.120
+Men endi ilovani yurg‘izmoqchiman.
+
+00:03:36.120 --> 00:03:38.396
+Mana bu emulator , bizning ilovamizning ishlashini ta’minlab beradi.
+
+00:03:38.396 --> 00:03:40.784
+Endi esa numbers activity ga yuzlansak.
+
+00:03:40.784 --> 00:03:44.325
+Negadir ishlamay qoldi. Nima bo‘ldi ekan?
+
+00:03:44.325 --> 00:03:47.490
+Android monitor va loglarni tekshirib ko‘raylikchi.
+
+00:03:47.490 --> 00:03:51.649
+log message ning teppasida Java.Lang.IllegalStateException
+ArrayAdapter requires the resource 
+
+00:03:51.649 --> 00:03:56.588
+deb yozib qo‘yilgan.
+
+00:03:56.588 --> 00:03:57.916
+ID buyerda matn ko‘rinishiniki.
+
+00:03:57.916 --> 00:04:01.564
+To‘g‘risi bu xato qayerdan kelib chiqayotganini bilmayman. 
+Shuning uchun men hozir
+
+00:04:01.564 --> 00:04:05.445
+documentation ga kirib biror nima topa olarmikanman? 
+Qani urinib ko‘raylik.
+
+00:04:05.445 --> 00:04:08.650
+Mana bu yerda ArrayAdapter uchun 
+foydalanuvchilarga hujjatlar.
+
+00:04:08.650 --> 00:04:10.790
+Class Overview ni ko‘rib chiqaylikchi.
+
+00:04:10.790 --> 00:04:13.610
+Shu bilan birgalikda siz ham videoni 
+to‘xtatib qo‘yishingiz mumkin, 
+
+00:04:13.610 --> 00:04:14.480
+agar to‘liq o‘qib chiqishni xohlasangiz.
+
+00:04:15.820 --> 00:04:20.658
+Men bu ikkita paragrafda o‘rgangan 
+narsam shundan iboratki, ByDefault ,
+
+00:04:20.658 --> 00:04:25.132
+klass yagona ko‘rinishda ta’minlanadi.
+
+00:04:25.132 --> 00:04:29.689
+Menimcha aynan mana shu sababli Android framework yaxshi ishlamoqda.
+
+00:04:29.689 --> 00:04:32.891
+Chunki butun boshli layout faqatgina TextView dan tashkil topgan.
+
+00:04:32.891 --> 00:04:36.577
+Mana bu paragrafda biz custom objects ga ro‘yxat qo‘shish
+
+00:04:36.577 --> 00:04:38.288
+yoki array qo‘shishni o‘rganamiz.
+
+00:04:38.288 --> 00:04:41.800
+Bu holat bizga mos tushadi.
+
+00:04:41.800 --> 00:04:45.233
+ArrayAdapter generiklar ishlatgani 
+uchun hammasi bizga juda ham
+
+00:04:45.233 --> 00:04:46.240
+oson bo‘ladi.
+
+00:04:46.240 --> 00:04:50.590
+Bu yerda biz xohlagan ma’lumot turini o‘zgartira olamiz.
+
+00:04:50.590 --> 00:04:53.840
+Endi esa uchinchi paragrafga o‘tadigan bo‘lsak, 
+
+00:04:53.840 --> 00:04:57.940
+matn ko‘rinishidagi narsalardan ortiqrog‘ini 
+ko‘rsatuvchi class uchun
+
+00:04:57.940 --> 00:05:01.870
+Biz o‘zimizning getView() 
+uslubini yaratishimiz kerak.
+
+00:05:01.870 --> 00:05:05.869
+ListView getView ni adaptorga moslashtirishga yordam beradi
+
+00:05:05.869 --> 00:05:06.715
+ekranda yangi ko‘rinish kerak bo‘lganda.
+
+00:05:06.715 --> 00:05:10.845
+Uslubning bitta input argumenti ro‘yxatning
+
+00:05:10.845 --> 00:05:12.410
+istalgan elementi deb hisoblanadi.
+
+00:05:12.410 --> 00:05:15.100
+Bu holatda bizda holat 
+0 va bu aynan bizga kerak.
+
+00:05:16.240 --> 00:05:20.922
+Bu ma’lumotni bilgan holda, adapter ListView ning ko‘rinishini qaytaradi.
+
+00:05:20.922 --> 00:05:25.003
+Bu esa 0 pozitsiyadagi 
+ma’lumot bilan to‘ldiriladi.
+
+00:05:25.003 --> 00:05:29.911
+Keling endi bir ListView va getView 
+o‘rtasidagi bog‘liqlikga nazar tashlaylik.
+
+00:05:29.911 --> 00:05:35.270
+Bu holat Xuddi operatsiya jarayonida jarroh 
+va uning yordamchisi o‘rasidagi vaziyatga o‘xshaydi.
+
+00:05:35.270 --> 00:05:40.300
+Bunday qiyoslashni tahlil qiladigan bo‘lsak, yordamchi jarroh getView ni oladi va 
+
+00:05:40.300 --> 00:05:42.770
+asosiy jarroh ListView ga yordamlashadi.
+
+00:05:42.770 --> 00:05:46.480
+kerakli narsalarni beradi.
+
+00:05:46.480 --> 00:05:51.610
+Masalan, jarroh ya’ni ListView 
+qaychini yoki view ni so‘rashi mumkin.
+
+00:05:51.610 --> 00:05:55.370
+getView kerakli narsani oladi
+
+00:05:55.370 --> 00:05:59.560
+so‘ralgan buyumni beradi.
+
+00:05:59.560 --> 00:06:00.530
+ArrayAdaptor bu bitta TextView dan ko‘payishini
+
+00:06:00.530 --> 00:06:04.670
+oldindan biladi.
+
+00:06:04.670 --> 00:06:09.060
+Chunki biz ko‘paytirayotgan List item layout 
+juda ham murakkab.
+
+00:06:09.060 --> 00:06:13.360
+Unda ikkita TextView mavjud va ularning 
+rasm ko‘rinishi ham paydo bo‘ladi.
+
+00:06:14.710 --> 00:06:18.273
+Biz o‘zimizning yo‘limiz bilan getView ni 
+bekor qilishimiz kerak.
+
+00:06:18.273 --> 00:06:22.120
+Buni bajarish uchun bizga ArrayAdapter ning 
+yordamchi klassi kerak bo‘ladi.
+
+00:06:23.300 --> 00:06:26.962
+Xulosa qilib aytsak, bizga yangi Java klass kerak bo‘ladi.
+
+00:06:26.962 --> 00:06:32.690
+Keling uni WordAdapter class deb 
+nomlaymiz va ArrayAdapter sinfidan foydalanamiz.
+
+00:06:32.690 --> 00:06:34.376
+Men sizga uni qanday qilishni ko‘rsataman.
+
+00:06:34.376 --> 00:06:36.440
+Bu yerdagi loyiha ko‘rinishini tahlil qilsak.
+
+00:06:37.700 --> 00:06:42.860
+package ni tanlang, sichqonchaning o‘ng tarafini bosing, New ni bosing, so‘ngra Java Class ni bosing.
+
+00:06:42.860 --> 00:06:44.960
+Men bu faylni WordAdapter deb nomlamoqchiman.
+
+00:06:46.030 --> 00:06:49.510
+Biz bu avtomatik tarzda paydo bo‘ladigan faylni o‘zgartirishimiz kerak.
+
+00:06:49.510 --> 00:06:54.230
+Endi esa mana bu class declaration WordAdapter ArrayAdapter dan
+
+00:06:54.230 --> 00:06:57.350
+kelib chiqqanini isbotlab berishi kerak.
+
+00:06:57.350 --> 00:07:00.700
+ArrayAdapter ni bekor qilishning 
+mavjud usullarini topish uchun
+
+00:07:00.700 --> 00:07:03.660
+kursorimiz mana bu ikkita qavsning 
+ichida bo‘lishi kerak.
+
+00:07:03.660 --> 00:07:06.860
+Code ni bosamiz va methodni tanlaymiz.
+
+00:07:06.860 --> 00:07:11.714
+Bundan tashqari, Ctrl+0 
+ham bossangiz bo‘ladi.
+
+00:07:11.714 --> 00:07:14.779
+Endi mana bu ro‘yxatdan getView ni 
+toping va bosing.
+
+00:07:14.779 --> 00:07:18.060
+Bu method ilova tomonidan avtomatik 
+ravishda yaratilgan.
+
+00:07:18.060 --> 00:07:21.310
+Endi men shu joyida to‘xtab, qolganini 
+sizlarga qoldirmoqchiman. 
+
+00:07:21.310 --> 00:07:23.813
+Siz kerakli ishlarni bajaring va bu 
+so‘zlar ro‘yxatini ekranga chiqaring.
+
+00:07:23.813 --> 00:07:24.892
+numbers activity uchun
+
+00:07:24.892 --> 00:07:28.493
+Siz qilmoqchi bo‘lgan ish getView ni 
+joriy etishni tugatishni ham o‘z ichiga oladi.
+
+00:07:28.493 --> 00:07:32.100
+Barchasini bajarib bo‘lganizdan keyin 
+ilova mana shunday ko‘rinishga ega bo‘ladi.
+
+00:07:32.100 --> 00:07:35.050
+Har bitta ro‘yxat Ingliz tilidagi 
+so‘zning teppasida 
+
+00:07:35.050 --> 00:07:36.780
+Miwok so‘zlarni ko‘rsatishi kerak.
+
+00:07:36.780 --> 00:07:39.408
+Endi o‘zingizning shaxsiy track ingizni ko‘rsatish uchun,
+
+00:07:39.408 --> 00:07:42.389
+numbers activity da kerak bo‘ladigan bir nechta o‘zgarishlarni ko‘rsatib beraman.
+
+00:07:42.389 --> 00:07:46.615
+ArrayAdapter o‘rniga WordAdapter ni ishlatamiz.
+
+00:07:47.650 --> 00:07:51.328
+WordAdapter ning konstruktori ikkita input ni o‘z ichiga oladi.
+
+00:07:51.328 --> 00:07:53.818
+context , so‘zlarning ro‘yxati va asosiysi mana bu yerdagi adapter o‘zgaruvchini yangilashni yodingizdan chiqarmang.
+
+00:07:53.818 --> 00:07:58.195
+mana bu yerdagi adapter o‘zgaruvchini 
+yangilashni yodingizdan chiqarmang.
+
+00:07:58.195 --> 00:08:01.285
+WordAdapter number activity bilan 
+birga ishlab turganiga ishonch hosil qiling, 
+
+00:08:01.285 --> 00:08:05.255
+bo‘lmasa ortingizga qaytib WordAdapter ni 
+boshqatdan sozlashga to‘g‘ri keladi.
+
+00:08:05.255 --> 00:08:08.300
+Siz avval hech ham bunda ArrayAdapter 
+yaratmaganingiz uchun yoki 
+
+00:08:08.300 --> 00:08:12.520
+getView ni oldin ishlatib ko‘rmaganingiz uchun bu mashq mashaqqatli bo‘lishi mumkin.
+
+00:08:12.520 --> 00:08:16.270
+To‘g‘ri bu mashqni bajarish uchun ko‘p bilim kerak bo‘ladi, lekin ishonchim komilki sizlar buning uchun tayyorsizlar.
+
+00:08:16.270 --> 00:08:17.760
+Endi esa sizga sabrli bo‘lishni tavsiya qilaman.
+
+00:08:17.760 --> 00:08:20.620
+Chunki bu mashq oz-moz vaqtni oladi.
+
+00:08:20.620 --> 00:08:21.940
+Yana bir yordam
+
+00:08:21.940 --> 00:08:25.360
+Men sizlarga shunga o‘xshash ishni 
+bajaradigan yana bir ilova ko‘rsatmoqchiman.
+
+00:08:25.360 --> 00:08:30.090
+Mana bu loyiha GitHub da joylangan. 
+
+00:08:30.090 --> 00:08:33.429
+GitHub bu siz yozgan kodni 
+hamma ko‘rishi va foydalanishi uchun imkon beradi.
+
+00:08:33.429 --> 00:08:36.490
+Har bitta loyihaning litsenziyasi har xil. 
+
+00:08:37.510 --> 00:08:39.465
+Shuning uchun kodni keyinchalik yana yoza olishingiz yoki
+
+00:08:39.465 --> 00:08:42.971
+tarqatishingiz uchun litsenziyani tekshirishni unutmang.
+
+00:08:42.971 --> 00:08:45.320
+Yana bir shunga o‘xshash loyiha qidirib ko‘ring.
+
+00:08:46.390 --> 00:08:50.260
+Bu ilova Udacity tomonidan yaratilgan.
+
+00:08:50.260 --> 00:08:52.300
+Siz uni bemalol ishlatishingiz va 
+o‘zingizga moslashtirishingiz mumkin.
+
+00:08:53.670 --> 00:08:58.680
+Xo‘sh, Customer Adapter Sample ilovasi Android Flavors deb ataladi va
+
+00:08:58.680 --> 00:09:01.820
+barcha Android versiyalar ro‘yxatini ko‘rsatadi.
+
+00:09:01.820 --> 00:09:05.240
+Shunday qilib har bir nashr ro‘yxat 
+elementi sifatida nashr etiladi va 
+
+00:09:05.240 --> 00:09:09.660
+har bitta elementda o‘zining sur’ati, 
+sarlavhasi va versiya nomeriga ega bo‘ladi.
+
+00:09:11.140 --> 00:09:15.070
+Bu ilova ArrayAdapter ni ishlatmoqda va 
+
+00:09:15.070 --> 00:09:19.302
+ular rasm qatnashgan ro‘yxat elementlarini 
+
+00:09:19.302 --> 00:09:21.131
+FlavorAdapter yordamida chaqirishmoqda
+
+00:09:21.131 --> 00:09:25.183
+Siz endi boshqa ilovalarning kodini 
+o‘qishni o‘rganib oldingiz
+
+00:09:25.183 --> 00:09:28.770
+va u kodlarni qanday qilib o‘zingizga 
+moslashtirishni ham o‘rgandingiz.
+
+00:09:28.770 --> 00:09:33.370
+Dasturchi sifatida siz ilova tayyorlash uchun har xil internetda video ko‘rib ham tayyorlashingiz mumkin yoki boshqa manbalarni ham ishlatishingiz mumkin.
+
+00:09:33.370 --> 00:09:35.979
+Ana o‘sha o‘rgangan narsalaringizni o‘zingizning ilovangizda ishlatishga harakat qiling.
+
+00:09:36.980 --> 00:09:40.780
+Siz mana bu Android Flavor ning kodini Download Zip tugmasini bosish orqali 
+
+00:09:40.780 --> 00:09:41.896
+yuklab olishingiz mumkin.
+
+00:09:41.896 --> 00:09:45.865
+Yuklab bo‘lganingizdan so‘ng, siz ularni Android Studioga import qilishingiz
+
+00:09:45.865 --> 00:09:50.700
+yoki web browser ning o‘zidayoq ishlatishingiz mumkin.
+
+00:09:50.700 --> 00:09:54.859
+Misol uchun men mana bu yerni bosaman, so‘ng app/ source/main ga bosaman
+
+00:09:54.859 --> 00:09:58.470
+so‘ngra esa Java fayllari orqali ishlataman.
+
+00:09:59.580 --> 00:10:04.690
+Yana bir ajoyib GitHub yorlig‘i bu T harfini qo‘yish.
+
+00:10:04.690 --> 00:10:08.130
+Mana bu yerga T deb yozaman, keyin esa finder faylini faollashtiraman.
+
+00:10:08.130 --> 00:10:11.858
+Bu o‘zimning loyihamdagi fayllarni osonlik bilan topishimga yordam beradi.
+
+00:10:11.858 --> 00:10:15.656
+Agar men main activity ni topmoqchi bo‘lsam, activity deb yozaman
+
+00:10:15.656 --> 00:10:17.959
+va ilova menga mainActivity.java ni topib beradi.
+
+00:10:17.959 --> 00:10:20.908
+Yo bo‘lmasa, FlavorAdapter ni topmoqchi bo‘lsam
+
+00:10:20.908 --> 00:10:22.830
+uni mana bu yerda topa olaman.
+
+00:10:22.830 --> 00:10:26.890
+Umid qilamanki bu namuna sizga keyingi 
+kodlash mashqlaringizda asqotadi.
+
+00:10:26.890 --> 00:10:30.830
+Qanday qilib boshlash haqidagi testni tekshirib chiqing.
+
+00:10:30.830 --> 00:10:31.340
+OMAD!!!
+

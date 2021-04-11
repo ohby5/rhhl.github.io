@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:03.435
+Yana bir bor xush kelibsiz. Sizlarni qayta ko‘rib turganimizdan mamnunmiz. Sizlar birinchi ikkita testni yaxshi bajardilaring.
+
+00:00:03.435 --> 00:00:05.535
+Endi uchinchi savolning javobiga to‘xtaladigan bo‘lsak
+
+00:00:05.535 --> 00:00:08.175
+biz ishlatgan ViewGroup bu LinearLayout edi
+
+00:00:08.175 --> 00:00:12.750
+Endi esa e’tiborimizni birinchi va ikkinchi bosqichlarni qanday bajarishimiz haqidagi kodga qaratamiz.
+
+00:00:12.750 --> 00:00:15.420
+Shunday qilib, bu yerda biz list_item layout faylidamiz.
+
+00:00:15.420 --> 00:00:16.965
+Buni o‘zimizning kodimizga moslashtirish uchun
+
+00:00:16.965 --> 00:00:19.140
+miwok_text_view ko‘rinish ID sini qo‘shishimiz kerak.
+
+00:00:19.140 --> 00:00:26.040
+Qo‘shganimizdan so‘ng biz text_view , default_text_view IDsiga ega bo‘lamiz.
+
+00:00:26.450 --> 00:00:29.160
+Endi esa uni sinab ko‘rish uchun,
+
+00:00:29.160 --> 00:00:33.175
+men sizlarga tools namespace yordamida ajoyib bir narsa ko‘rsatmoqchiman.
+
+00:00:33.175 --> 00:00:38.140
+XML da namespace bizga elementlarning nomida hosil bo‘luvchi o‘zaro chalkashmovchilikni oldini olish vazifasini bajaradi.
+
+00:00:38.140 --> 00:00:41.500
+Bu Xuddi bitta oilada bitta familiya bo‘lishiga o‘xshaydi.
+
+00:00:41.500 --> 00:00:45.295
+Sizning ismingiz boshqalarniki bilan bir xil bo‘lishi mumkin, lekin familiyangiz bir xil bo‘lmaydi
+
+00:00:45.295 --> 00:00:49.510
+xmls XML namespace ma’nosini bildiradi.
+
+00:00:49.510 --> 00:00:52.330
+Agar sezgan bo‘lsangiz biz kodimizda boshqa namespace ni ishlatyapmiz. 
+
+00:00:52.330 --> 00:00:56.380
+Bu xmlnes:android .
+
+00:00:56.380 --> 00:00:58.975
+Biz Androidni ishlatyapmiz 
+
+00:00:58.975 --> 00:01:02.880
+bunday Android layout_width yoki layout_height larning barchasi mana bunday
+
+00:01:02.880 --> 00:01:05.250
+ikki nuqta(:) bilan boshlanadi.
+
+00:01:05.250 --> 00:01:07.785
+Yuqorida ko‘rsatilganlarning hammasi Android namespace ning bir bo‘lagi hisoblanadi.
+
+00:01:07.785 --> 00:01:11.235
+Men hozir bu yerga tools namespace nomli namespace yozmoqchiman.
+
+00:01:11.235 --> 00:01:18.335
+Mana bu qator namespace schemas.android.com/tools ga yo‘naltirilgan uskunalar panelini ko‘rsatadi.
+
+00:01:18.335 --> 00:01:21.390
+Bundan kelib chiqadigan ma’no - uskunalar prefiksi bilan boshlanadigan har bitta element
+
+00:01:21.390 --> 00:01:24.615
+tools namespace ning bir qismi hisoblanadi
+
+00:01:24.615 --> 00:01:26.550
+Demak, har bitta text_views 
+uchun men tools namespace yordamida
+
+00:01:26.550 --> 00:01:31.230
+2 ta atribut kiritmoqchiman.
+
+00:01:31.230 --> 00:01:34.300
+Tools namespace dan olinayotgan 
+atributlarni qayerdan kelib
+
+00:01:34.300 --> 00:01:37.345
+chiqayotganiga hayron bo‘layotgan 
+bo‘lishingiz mumkin!
+
+00:01:37.345 --> 00:01:39.610
+Tools namespace bu Android 
+tizimi tomonidan yaratilgan va
+
+00:01:39.610 --> 00:01:41.935
+uning layout larni yozishga yordam beradigan
+
+00:01:41.935 --> 00:01:44.830
+bir nechta atributlari bor.
+
+00:01:44.830 --> 00:01:48.715
+Shunday qilib, internetda hujjatlarini tekshirish orqali qanday atributlar yaratilganini ko‘rishingiz mumkin.
+
+00:01:48.715 --> 00:01:52.930
+Shunchaki Android tools namespace tekshiring.
+
+00:01:52.930 --> 00:01:56.320
+Mana bu sahifada biz har xil atributlarni 
+ro‘yxatini ko‘rishimiz mumkin.
+
+00:01:56.320 --> 00:01:57.805
+Agar pastga tushiradigan bo‘lsak,
+
+00:01:57.805 --> 00:02:00.910
+dizaynlashtirish atributlari 
+haqidagi bo‘limga duch kelamiz.
+
+00:02:00.910 --> 00:02:04.135
+Dizaynlashtirish atributlari bizga 
+kodimizni yozib turganimizda yordam beradi,
+
+00:02:04.135 --> 00:02:05.755
+lekin biz runtime ni ko‘rsatishimiz kerak.
+
+00:02:05.755 --> 00:02:08.335
+Endi esa e’tiborimizni yana bir nechta 
+dizaynlashtirish atributlariga qaratsak.
+
+00:02:08.335 --> 00:02:12.700
+Misol uchun, agar biz uskunalarning matn atributini text_view ga qo‘shadigan bo‘lsak,
+
+00:02:12.700 --> 00:02:14.875
+Android Studio dizaynlashtirish oynasida
+
+00:02:14.875 --> 00:02:16.210
+mana bunday tekst paydo bo‘ladi.
+
+00:02:16.210 --> 00:02:19.765
+Shuni aytib o‘tishimiz joizki, bu matn 
+faqat dastur ishlab turgan paytda ko‘rinadi.
+
+00:02:19.765 --> 00:02:21.700
+Chunki biz har doim ham biz o‘rnatgan 
+barcha text_view maxsus matnlar
+
+00:02:21.700 --> 00:02:24.350
+to‘satdan chiqib qolishini xohlamaymiz.
+
+00:02:24.350 --> 00:02:27.640
+Siz buni to‘ldiruvchi matn deb ko‘rishingiz mumkin. 
+Bu xuddi dasturchilar o‘zlarining dasturlarini to‘g‘riligini 
+
+00:02:27.640 --> 00:02:31.360
+Android Studio dasturida tekshirishlariga o‘xshaydi.
+
+00:02:31.360 --> 00:02:33.355
+Endi o‘zimizning kodimizga qaytadigan bo‘lsak.
+
+00:02:33.355 --> 00:02:36.955
+Mana bu yerda ikkita matn atributlarini 
+qo‘shganimni sezgan bo‘lsangiz kerak.
+
+00:02:36.955 --> 00:02:39.970
+Birinchisi lutti , ikkinchisi esa one .
+
+00:02:39.970 --> 00:02:43.630
+Bu ikki qo‘shimcha programma ishlayotgan 
+paytda ko‘rinmasligi muhim,
+
+00:02:43.630 --> 00:02:48.095
+chunki elementlar ro‘yxati kerak bo‘lgan 
+paytda dinamik ravishda paydo bo‘ladi.
+
+00:02:48.095 --> 00:02:51.970
+Biz ingliz tilidagi matnlarni va miwok 
+kodlarni Java kodiga o‘rnatamiz
+
+00:02:51.970 --> 00:02:56.005
+va ularni XML layout fayli orqali aniqlab olamiz.
+
+00:02:56.005 --> 00:02:58.675
+text_views ichidagi matnlar 
+dinamik ravishda o‘zgargani sababli,
+
+00:02:58.675 --> 00:03:01.435
+Android matn atributini qo‘shishimizning hojati qolmaydi,
+
+00:03:01.435 --> 00:03:06.715
+shunchaki u qanday ko‘rinishga ega 
+bo‘lishini bilishimizga yordam beradi.
+
+00:03:06.715 --> 00:03:10.240
+Men hozir dizayn paneliga qaytmoqchiman. 
+
+00:03:10.240 --> 00:03:11.650
+Dizaynda esa siz 
+
+00:03:11.650 --> 00:03:15.445
+matn chap va yuqori tomonlarga nisbatan 
+yuqoriga qarab turganini ko‘rasiz
+
+00:03:15.445 --> 00:03:16.960
+Ozgina surishimiz kerak.
+
+00:03:16.960 --> 00:03:20.635
+Matnlar paneliga qaytib borib biroz suramiz.
+
+00:03:20.635 --> 00:03:23.860
+Endi esa bu o‘zgarish dizayn panelida 
+qanday ko‘rinishga ega bo‘lishini ko‘ramiz.
+
+00:03:23.860 --> 00:03:27.280
+Juda ham yaxshi. Barcha o‘zgarishlardan so‘ng 
+list item layout mana shunday ko‘rinishga keladi.
+
+00:03:27.280 --> 00:03:30.435
+Xo‘sh, bu bizning ilovamizdagi ro‘yxat elementing so‘nggi ko‘rinishi emas.
+
+00:03:30.435 --> 00:03:33.720
+Juda ham yaxshi. bizning ilovamizda raqamlar 
+ro‘yxatini ko‘rsatishda davom eting.
+

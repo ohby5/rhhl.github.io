@@ -1,0 +1,393 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.230 --> 00:00:02.660
+Bu safar ham o‘tgan safar ishlatgan 
+usulni ishlatsak ham bo‘ladi.
+
+00:00:02.660 --> 00:00:06.860
+o‘tgan safar bizda bir nechta ingliz tilidagi 
+so‘zlarning ro‘yxati bor edi va biz ularni
+
+00:00:06.860 --> 00:00:11.802
+ma’lum bir ketma-ketlikda ya’ni 1 dan 10 gacha xotiraga 
+saqlashimiz kerak edi. Hozir esa bizda 10 ta Miwok tilidagi
+
+00:00:11.802 --> 00:00:15.990
+so‘zlar ro‘yxati bor. Biz ularni xotiraga 
+hamda ArrayListga saqlashimiz kerak.
+
+00:00:15.990 --> 00:00:17.850
+Demak, hammasi yaxshi ketib turganga o‘xshaydi.
+
+00:00:17.850 --> 00:00:21.140
+Hozirgi paytda biz qilishimiz kerak bo‘lgan 
+yagona ish bu - ArrayAdapterning konstruktori
+
+00:00:21.140 --> 00:00:24.150
+bizni ikki ro‘yxatga yozishimizga 
+ruxsat berishini aniqlash.
+
+00:00:24.150 --> 00:00:28.320
+Birinchi ro‘yxat ingliz tilidagi so‘zlar uchun, 
+yana biri esa Miwok so‘zlari uchun.
+
+00:00:28.320 --> 00:00:31.600
+Biz hozir numbers activitydamiz.
+
+00:00:31.600 --> 00:00:34.168
+Keling boshlashdan avval bir qanday strategiya 
+ishlatishimiz haqida o‘ylab ko‘rsak.
+
+00:00:34.168 --> 00:00:37.960
+Biz o‘zimizning yangi layoutmizni 
+ArrayAdapterga o‘tkazishni xohlaymiz.
+
+00:00:37.960 --> 00:00:43.260
+Shuning uchun android.R.layout.simple_list_item_1 o‘rniga
+
+00:00:43.260 --> 00:00:47.600
+men hozir uni o‘zimiz yaratgan ro‘yxatlar 
+layouti bilan almashtirmoqchiman.
+
+00:00:48.870 --> 00:00:50.530
+Mana bu uchinchi input noto‘g‘ri.
+
+00:00:50.530 --> 00:00:54.340
+Biz so‘zlarni o‘tkazyapmiz, lekin ro‘yxat 
+ingliz tilidagi so‘zlardan tashkil topgan.
+
+00:00:54.340 --> 00:00:56.960
+Uning ustiga biz Miwok tilidagi 
+so‘zlarni ham o‘tkazmoqchimiz.
+
+00:00:56.960 --> 00:00:59.800
+Ikkalasini ham o‘tkazganimizdan so‘ng har bitta 
+ro‘yxat ikkalasining ham tarjimasini ko‘rsatadi.
+
+00:00:59.800 --> 00:01:01.440
+Keling birinchi ArrayAdapterning 
+hujjatlariga qaytib boraylik,
+
+00:01:01.440 --> 00:01:04.550
+undan so‘ng esa public 
+konstruktor bo‘limiga qaytamiz.
+
+00:01:04.550 --> 00:01:07.915
+Ko‘rib turganingizdek bu yangi ArrayAdapter 
+yaratishning bir usuli hisoblanadi.
+
+00:01:09.180 --> 00:01:13.720
+Biz ikkinchi konstruktorni ishlatyapmiz. 
+
+00:01:13.720 --> 00:01:18.720
+Bu konstruktor numbers activity, layout 
+va obyektlar ro‘yxatini anglatadi.
+
+00:01:18.720 --> 00:01:21.730
+Lekin bu yerda boshqa konstruktor 
+borga o‘xshamayapti
+
+00:01:21.730 --> 00:01:23.580
+kirishlarni ro‘yxati uchun.
+
+00:01:23.580 --> 00:01:25.620
+Mana bu faqat bitta ro‘yxatga oladi, xolos,
+
+00:01:25.620 --> 00:01:27.320
+va bu holat ham konstruktor bilan bir xil.
+
+00:01:27.320 --> 00:01:30.800
+Bu input sifatida 
+faqat bitta ro‘yxatni oladi.
+
+00:01:32.530 --> 00:01:34.660
+Generics haqida 
+suhbatlashganimiz yodingizdami?
+
+00:01:34.660 --> 00:01:36.790
+Obyektning ma’lumot turi T harfi bilan belgilanadi
+
+00:01:36.790 --> 00:01:40.090
+lekin bu shunchaki siz boshqa obyektlarning 
+turlari bilan almashtirishingiz
+
+00:01:40.090 --> 00:01:41.970
+mumkin bo‘lgan place holder xolos.
+
+00:01:41.970 --> 00:01:45.520
+Hozir biz Tni string data type bilan almashtiryapmiz
+
+00:01:45.520 --> 00:01:48.375
+va stringning ArrayListini 
+ArrayAdapterga jo‘natyapmiz.
+
+00:01:49.490 --> 00:01:54.010
+Bu yerda konstruktorga obyektlarning 
+massivi kerak bo‘ladi.
+
+00:01:54.010 --> 00:01:58.230
+T esa shunchaki barcha ma’lumot turlari 
+uchun placeholder vazifasini bajaradi.
+
+00:01:58.230 --> 00:02:01.440
+Essiz, shuncha paytdan beri ArrayAdapterga 
+ro‘yxatni o‘tkazib beradigan
+
+00:02:01.440 --> 00:02:04.960
+konstruktor topa olmasak.
+
+00:02:04.960 --> 00:02:08.610
+Lekin ArrayAdapterning barcha 
+ma’lumot turlarini qabul qilish
+
+00:02:08.610 --> 00:02:10.400
+qobilyati bizga asqotadi.
+
+00:02:10.400 --> 00:02:13.140
+stringning ro‘yxatiga 
+o‘tkazishni o‘rniga o‘zimizning
+
+00:02:13.140 --> 00:02:14.920
+obyekt turimizni yaratsak nima deysiz?
+
+00:02:14.920 --> 00:02:16.290
+Word obyekti.
+
+00:02:17.300 --> 00:02:21.510
+Endi esa o‘zimizning Word classimizni ta’riflay olamiz. Qolaversa, undan xohlaganimizcha obyekt olishimiz
+
+00:02:21.510 --> 00:02:24.570
+va Word obyektining butun boshli ro‘yxatini tuzishimiz mumkin.
+
+00:02:24.570 --> 00:02:26.385
+Yana bir o‘tgan darslarimizdan eslatma!!!
+
+00:02:26.385 --> 00:02:30.660
+Har bitta klassda state va uslublar bo‘ladi.
+
+00:02:30.660 --> 00:02:32.142
+Yaqinlashib kelayotgan testimizda
+
+00:02:32.142 --> 00:02:35.230
+Men sizlardan Word class ni ta’riflab berishingizni so‘rayman.
+
+00:02:35.230 --> 00:02:37.650
+Qaysi state va uslub qatnashadi?
+
+00:02:37.650 --> 00:02:39.870
+Shuning uchun Word class ga o‘tishimizda oldin
+
+00:02:39.870 --> 00:02:44.280
+Men sizlarga shunday klass ishlatadigan bir nechta boshqa ilova ko‘rsatmoqchiman.
+
+00:02:44.280 --> 00:02:47.210
+Mana bu mashhur uchishni belgilovchi ilovadan screenshot.
+
+00:02:47.210 --> 00:02:47.840
+Uning ismi Kayak.
+
+00:02:49.080 --> 00:02:52.898
+Foydalanuvchi o‘zining ketish va qo‘nish vaqtlarini tanlaydi,
+
+00:02:52.898 --> 00:02:56.970
+ilova esa tanlanganlarga qarab o‘z tanlovlarini ko‘rsatadi
+
+00:02:56.970 --> 00:02:59.627
+Sezgan bo‘lsangiz ma’lumot ro‘yxat ko‘rinishida ko‘rsatilgan
+
+00:02:59.627 --> 00:03:01.459
+Har bitta ro‘yxatda uchish bor,
+
+00:03:01.459 --> 00:03:05.425
+ma’lumot ham bir xil ko‘rinishda ko‘rsatilgan
+
+00:03:05.425 --> 00:03:10.410
+Kayak custom flight classni yaratdi va uning ro‘yxatidagi har bitta narsa
+
+00:03:10.410 --> 00:03:15.130
+yagona uchish haqida ma’lumot ko‘rsatib turadi
+
+00:03:15.130 --> 00:03:18.400
+Xo‘sh, o‘zimizning box analogyni ishlatgan holda
+
+00:03:18.400 --> 00:03:22.320
+biz har bitta uchish obyektini ko‘rsata olamiz.
+
+00:03:22.320 --> 00:03:26.500
+state ushbu holatda 4 xil narsalardan tashkil topgan.
+
+00:03:26.500 --> 00:03:30.261
+Ular samolyot, uchish vaqti, qo‘nish vaqti va uchish davomiyligi.
+
+00:03:31.340 --> 00:03:34.030
+Biz bu klassga yangi uslub qo‘sha olamiz
+
+00:03:34.030 --> 00:03:37.000
+Bu orqali ilovaning boshqa bo‘limlari ham yangi uslubni ishlata oladi.
+
+00:03:37.000 --> 00:03:40.460
+Yuqorida bajarilgan ishlar encapsulation deb nomlanadi.
+
+00:03:40.460 --> 00:03:45.310
+Chunki bu yerda barcha mantiq incapsulatsiya qilinayapti yoki klassga qo‘shilmoqda.
+
+00:03:45.310 --> 00:03:49.580
+Hozir trial upning boshqa bo‘limlari flat object borligidan xabardor.
+
+00:03:49.580 --> 00:03:54.015
+Shuni hisobga olgan holda biz yangi 
+uslubni chaqirishimiz yoki bekor qilishimiz mumkin.
+71
+00:03:54,015 --&gt; 00:03:57,530
+Lekin outside callers bu 
+uslublarni ichki qismlari qanday ishlashi haqida
+
+00:03:57.530 --> 00:04:01.180
+xavotirga tushishi shart emas.
+
+00:04:01.180 --> 00:04:03.250
+Chaqiruvchi faqat shartnoma haqida ma’lumotga ega,
+
+00:04:03.250 --> 00:04:07.080
+ular agar uslub chaqirilganda, uchish 
+bekor qilinishini bilishadi.
+
+00:04:07.080 --> 00:04:10.980
+Ular bularning barchasiga qanday 
+erishilganligi haqida kamroq bosh qotiradilar.
+
+00:04:10.980 --> 00:04:14.930
+Bu tushuncha klassning ichidagi 
+detallarni mavhumlashtirish ya’ni
+
+00:04:14.930 --> 00:04:16.510
+abstracting deb ataladi.
+
+00:04:16.510 --> 00:04:18.100
+Endi esa keyingi na’munaga keladigan bo‘lsak,
+
+00:04:19.110 --> 00:04:22.800
+bu yerda SoundCloud deb nomlangan musiqa ilovasi bor.
+
+00:04:22.800 --> 00:04:25.490
+Bu ilova foydalanuvchilarning 
+sevimli musiqalarini saqlab qo‘yadi.
+
+00:04:25.490 --> 00:04:28.060
+Tracklar ro‘yxat ko‘rinishida hosil bo‘ladi.
+
+00:04:28.060 --> 00:04:31.590
+Har bitta track bir xil 
+ma’lumot beradigan ro‘yxatdagi narsa.
+
+00:04:31.590 --> 00:04:36.170
+Bu yerda bizda albomning nomi, 
+qo‘shiqning nomi, qo‘shiqning davomiyligi,
+
+00:04:36.170 --> 00:04:39.659
+bitta qo‘shiq necha marta tinglangani va, 
+eng muhumi, bularning barchasi bittada ko‘rsatiladi.
+
+00:04:41.220 --> 00:04:44.470
+Har bitta ma’lumot maxsus qo‘shiq klassida
+
+00:04:44.470 --> 00:04:46.910
+field sifatida saqlab olinadi.
+
+00:04:47.910 --> 00:04:51.020
+Yana bir narsani qo‘shimcha 
+qilish kerakki, uslublarni
+
+00:04:51.020 --> 00:04:52.710
+mana bu klass ichida ham 
+bayon etib bersak bo‘ladi.
+
+00:04:52.710 --> 00:04:57.960
+Bu qo‘shiqning obyekti har xil 
+uslublarni ishlatishi mumkin.
+
+00:04:57.960 --> 00:04:59.370
+Masalan, getSongTitle 
+yoki getAlbumName
+
+00:04:59.370 --> 00:05:00.680
+flight class ga o‘xshagan holda
+
+00:05:00.680 --> 00:05:03.860
+klassning detallarini mavhumlashtiryapmiz.
+
+00:05:03.860 --> 00:05:08.310
+klassning tashqarisida turib chaqiruvchilar klassning detallarini bilmagan holda ishlatishadi.
+
+00:05:08.310 --> 00:05:13.140
+Bulardan kelib chiqqan holda shuni aytishimiz mumkinki, incapsulatsiyaning ham o‘ziga yarasha yaxshi taraflari bor.
+
+00:05:13.140 --> 00:05:16.770
+Qolaversa, ma’lumotlarni klassning ichiga guruhlashtirish ham bunga bir misol bo‘la oladi.
+
+00:05:16.770 --> 00:05:19.460
+Endi esa muammolarni o‘ylash sizning qo‘lingizda.
+
+00:05:20.590 --> 00:05:24.750
+Men sizlarga Ingliz va Miwok so‘zlarni 
+ro‘yxat ko‘rinishda ko‘rsatmoqchiman.
+
+00:05:24.750 --> 00:05:25.940
+Qanday qilib bularni 
+modellashtirish mumkin?
+
+00:05:27.190 --> 00:05:30.510
+Xavotir olmang, bu ma’lumotlar tuzilmasiga bo‘gliq savol. Tashvishlanishga hojat yo‘q.
+
+00:05:30.510 --> 00:05:32.250
+Bunda siz ilovangizdagi ma’lumotlarni qanday tuzishni hal qilishingiz kerak.
+
+00:05:32.250 --> 00:05:36.100
+Agar har bitta ma’lumot, bitta global 
+variable o‘zgaruvchi sifatida ilovaga saqlansa,
+
+00:05:36.100 --> 00:05:38.560
+barcha ma’lumotni boshqarish qiyinlashib ketadi.
+
+00:05:38.560 --> 00:05:42.660
+Buning o‘rniga ma’lumotlarni tashkil qilamiz. 
+Bu degani qaytarib olish va
+
+00:05:42.660 --> 00:05:44.600
+ekranga chiqarish oson bo‘ladi.
+
+00:05:44.600 --> 00:05:49.070
+Siz ma’lumotlar tuzilmasi bilan tanish bo‘lgan holda, 
+buni bajarishni boshladingiz.
+
+00:05:49.070 --> 00:05:52.645
+Masalan, Ingliz tilidagi so‘zlar 
+ro‘yxatini massovga joylashtirish
+
+00:05:52.645 --> 00:05:56.030
+yoki ArrayListni ma’lumotlar tuzilmasi orqali ifodalashning
+
+00:05:56.030 --> 00:05:59.040
+yaxshiroq va ketma-ket hisoblash usuli hisoblanadi.
+
+00:06:00.988 --> 00:06:02.900
+Yana bitta qadam tashlaylik.
+
+00:06:02.900 --> 00:06:04.758
+Keling hozir so‘zlar uchun o‘zimiznng ma’lumotlar tuzilmamizni yaratamiz.
+
+00:06:04.758 --> 00:06:10.128
+Chunki Java uchun built-in yechim bizning ehtiyojlarimiz uchun yetarli emas.
+
+00:06:10.128 --> 00:06:13.580
+Men hozir sizlarga Word Class yaratish uchun ozgina yordam bermoqchiman.
+
+00:06:13.580 --> 00:06:17.000
+Endi qolganini sizlarga topshiramiz. 
+Siz qanday state
+
+00:06:17.000 --> 00:06:18.050
+va uslub qatnashishini topishingiz kerak.
+
