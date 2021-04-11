@@ -1,0 +1,419 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:01.280 --> 00:00:04.640
+O primeiro passo é modificar o
+<i>activity_main.XML</i> de modo que
+
+00:00:04.640 --> 00:00:07.300
+o aplicativo fique parecido com isso.
+
+00:00:07.300 --> 00:00:10.099
+Vamos entrar no Android Studio
+e ver aquele arquivo.
+
+00:00:10.099 --> 00:00:12.802
+Aqui está o nosso arquivo
+de layout <i>activity_main.XML</i>.
+
+00:00:12.802 --> 00:00:16.540
+E temos o preview no aparelho
+aparecendo aqui do lado direito.
+
+00:00:16.540 --> 00:00:20.390
+Eu posso clicar nesta lupa
+para dar um zoom no aparelho.
+
+00:00:20.390 --> 00:00:21.270
+Assim está melhor.
+
+00:00:22.350 --> 00:00:25.550
+Para se construir o layout desejado
+quero primeiro colocar um botão <i>mais</i>
+
+00:00:25.550 --> 00:00:28.650
+entre o cabeçalho <i>Quantidade</i> e
+o valor numérico.
+
+00:00:28.650 --> 00:00:32.790
+Já temos um botão no nosso layout
+para <i>comprar</i> aqui embaixo.
+
+00:00:32.790 --> 00:00:36.330
+Assim eu posso apenas copiar 
+este código e depois colá-lo
+
+00:00:36.330 --> 00:00:39.880
+entre o cabeçalho <i>Quantidade</i>
+e o valor numérico.
+
+00:00:39.880 --> 00:00:42.450
+Agora eu vejo o botão aparecendo
+no lugar certo, mas
+
+00:00:42.450 --> 00:00:45.470
+preciso mudar o texto de modo que
+seja <i>mais</i> ao invés de <i>comprar</i>.
+
+00:00:47.010 --> 00:00:48.660
+Legal!
+E vou também remover
+
+00:00:48.660 --> 00:00:52.790
+o <i>marginTop</i> pois já
+temos 16 dps de margem da parte
+
+00:00:52.790 --> 00:00:54.310
+inferior deste campo de texto.
+
+00:00:54.310 --> 00:00:56.300
+Portanto vá em frente e apague isto.
+
+00:00:56.300 --> 00:00:59.940
+O botão é bem grande e no teste
+pedimos para mudar seu tamanho
+
+00:00:59.940 --> 00:01:02.880
+para 48 dps de altura 
+e 48 dps de largura.
+
+00:01:02.880 --> 00:01:04.660
+Portanto vou editar
+o botão XML aqui.
+
+00:01:06.010 --> 00:01:08.100
+Bom.
+Agora ele tem o tamanho certo.
+
+00:01:08.100 --> 00:01:12.030
+Agora posso copiar este XML
+e colá-lo abaixo do valor numérico
+
+00:01:12.030 --> 00:01:13.980
+para termos o botão <i>menos</i>.
+
+00:01:13.980 --> 00:01:17.430
+Eu apaguei o espaço em branco
+pois de acordo com as orientações
+
+00:01:17.430 --> 00:01:20.690
+de estilo de codificação Android, não
+se deixam espaços extras no código.
+
+00:01:20.690 --> 00:01:25.050
+Agora vou mudar o texto deste
+botão para <i>menos</i>.
+
+00:01:26.070 --> 00:01:29.210
+Ele já tem 48 dps de altura e largura.
+
+00:01:29.210 --> 00:01:31.010
+Agora os botões <i>mais</i> e <i>menos</i>
+estão posicionados.
+
+00:01:32.320 --> 00:01:35.990
+Mencionamos antes que queremos
+que a quantidade inicial seja 2 e
+
+00:01:35.990 --> 00:01:38.280
+que o preço inicial seja $10.
+
+00:01:38.280 --> 00:01:39.380
+Façamos esta mudança agora.
+
+00:01:40.410 --> 00:01:42.620
+Até agora é assim que
+se parece o nosso layout.
+
+00:01:42.620 --> 00:01:46.170
+Vamos voltar à imagem do teste
+para verificar nosso progresso.
+
+00:01:46.170 --> 00:01:49.430
+Alteramos com sucesso o layout,
+mas também precisamos mudar
+
+00:01:49.430 --> 00:01:52.610
+O botão <i>mais</i> para que ele invoque
+o método de incremento no clique.
+
+00:01:52.610 --> 00:01:55.720
+E clicando-se o botão <i>menos</i> deve-se
+invocar o método de decremento.
+
+00:01:56.830 --> 00:02:00.530
+De volta ao Andoid Studio, vou
+modificar o botão <i>mais</i> de modo
+
+00:02:00.530 --> 00:02:04.390
+que o valor do atributo
+Android <i>onClick</i> seja <i>increment</i>.
+
+00:02:04.390 --> 00:02:07.060
+Assim quando clicado o botão <i>mais</i>
+ele invocará um método
+
+00:02:07.060 --> 00:02:09.430
+chamado <i>increment</i> no <i>MainActivity</i>.
+
+00:02:09.430 --> 00:02:12.883
+Semelhantemente para o botão <i>menos</i>, 
+modificarei os atributos <i>onClick</i>
+
+00:02:12.883 --> 00:02:14.376
+para que o valor seja <i>decrement</i>
+
+00:02:16.477 --> 00:02:19.350
+Vou salvar isso, e então
+rodar isso no aparelho.
+
+00:02:20.780 --> 00:02:25.420
+O layout parece bom, mas se 
+toco o botão <i>mais</i>, ele falha.
+
+00:02:25.420 --> 00:02:27.560
+Você se lembra de que mostrei
+a você como procurar nos logs pelo
+
+00:02:27.560 --> 00:02:29.310
+rastreamento de pilha do erro?
+
+00:02:29.310 --> 00:02:32.560
+O log está aberto por padrão, assim 
+vamos arrastar esta seta para cima
+
+00:02:32.560 --> 00:02:35.320
+para que vejamos mais da mensagem.
+
+00:02:35.320 --> 00:02:38.020
+Se rolarmos para cima vemos 
+que este é nosso erro.
+
+00:02:39.300 --> 00:02:42.550
+Este é nosso aplicativo <i>justjava</i>
+e ele diz <i>IllegalStateException</i>.
+
+00:02:43.790 --> 00:02:47.040
+Rolando para a direita posso 
+ver mais da mensagem de erro.
+
+00:02:47.040 --> 00:02:50.750
+A mensagem diz: Não foi possível
+encontrar o método <i>increment</i>
+
+00:02:50.750 --> 00:02:52.150
+na atividade <i>MainActivity</i>.
+
+00:02:52.150 --> 00:02:55.940
+Isto é muito semelhante ao erro
+que tivemos no último vídeo.
+
+00:02:55.940 --> 00:02:58.850
+Basicamente, não há o método
+<i>increment</i> no <i>MainActivity</i>.
+
+00:02:58.850 --> 00:03:01.765
+E isso era de se esperar, pois
+não fizemos essa mudança ainda.
+
+00:03:02.820 --> 00:03:03.760
+Para o segundo passo,
+
+00:03:03.760 --> 00:03:07.150
+devemos adicionar um método
+<i>increment</i> ao <i>MainActivity</i>, criar
+
+00:03:07.150 --> 00:03:12.230
+uma variável numérica que se inicie
+em 3, e então também exibir o valor
+
+00:03:12.230 --> 00:03:15.100
+Para fazer isso, eu abro o
+arquivo Java <i>MainActivity</i>.
+
+00:03:15.100 --> 00:03:18.160
+Montar o comportamento do
+botão <i>mais</i> será muito parecido
+
+00:03:18.160 --> 00:03:20.900
+com o jeito que montamos o com-
+portamento do botão <i>comprar</i>.
+
+00:03:20.900 --> 00:03:23.490
+Assim, vamos copiar este método
+que lida com o botão <i>comprar</i>.
+
+00:03:25.030 --> 00:03:28.406
+Imediatamente tenho um erro que
+diz que <i>submitOrder</i> está pronto
+
+00:03:28.406 --> 00:03:29.600
+para ser encontrado no <i>MainActivity</i>.
+
+00:03:29.600 --> 00:03:32.980
+Não se pode ter dois métodos
+exatamente iguais no <i>MainActivity</i>.
+
+00:03:32.980 --> 00:03:34.350
+Mas tudo bem,
+
+00:03:34.350 --> 00:03:36.779
+pois eu vou mudar isso para
+ser o método de incremento.
+
+00:03:37.860 --> 00:03:38.790
+E agora o erro se vai.
+
+00:03:39.820 --> 00:03:42.912
+Vou modificar o comentário pois 
+este agora é um novo método.
+
+00:03:42.912 --> 00:03:45.610
+Vou atualizar o comentário para
+que se refira ao botão <i>mais</i>
+
+00:03:45.610 --> 00:03:47.590
+ao invés do botão <i>comprar</i>.
+
+00:03:47.590 --> 00:03:51.192
+No método de incremento, criarei
+uma variável numérica integral.
+
+00:03:51.192 --> 00:03:56.180
+Eu vou iniciá-la com um valor 3,
+como o teste pedia.
+
+00:03:56.180 --> 00:03:59.030
+Então posso exibir este
+valor na tela.
+
+00:03:59.030 --> 00:04:00.820
+Não preciso atualizar o
+preço neste método, então
+
+00:04:00.820 --> 00:04:03.110
+posso apagar esta linha de código.
+
+00:04:03.110 --> 00:04:04.690
+Parece bom, então testemos agora.
+
+00:04:06.030 --> 00:04:10.020
+Agora, quando clico o botão <i>mais</i>
+ele de fato atualiza para 3.
+
+00:04:10.020 --> 00:04:11.670
+Isso é bem legal.
+
+00:04:11.670 --> 00:04:14.240
+Mas se toco o botão <i>menos</i>, 
+então ele falha.
+
+00:04:15.740 --> 00:04:19.072
+Vamos verificar os logs. Eu vou
+rolar para baixo para pegar os
+
+00:04:19.072 --> 00:04:22.010
+logs mais recentes, e então rolar
+para cima para ver o último erro.
+
+00:04:23.070 --> 00:04:23.690
+Para nosso aplicativo,
+
+00:04:23.690 --> 00:04:26.330
+havia um <i>IllegalStateException</i>
+porque ele não pode encontrar o
+
+00:04:26.330 --> 00:04:28.610
+método <i>decrement</i> na atividade.
+
+00:04:28.610 --> 00:04:32.580
+Esperamos isto também pois ainda
+não criamos o método <i>decrement</i>.
+
+00:04:32.580 --> 00:04:33.600
+Vamos em frente e façamos isso.
+
+00:04:35.052 --> 00:04:37.790
+Vou copiar este método e 
+colá-lo abaixo dele.
+
+00:04:38.980 --> 00:04:40.610
+Vou renomeá-lo como <i>decrement</i>.
+
+00:04:42.110 --> 00:04:43.980
+Agora este comentário precisa
+ser atualizado.
+
+00:04:43.980 --> 00:04:46.730
+Este método é invocado quando
+o botão <i>menos</i>é clicado.
+
+00:04:48.180 --> 00:04:50.190
+Para entender o que devemos 
+fazer neste método,
+
+00:04:50.190 --> 00:04:52.100
+voltemos ao teste.
+
+00:04:52.100 --> 00:04:54.190
+Terminamos dois passos até agora.
+
+00:04:54.190 --> 00:04:57.215
+O último passo é para o método de 
+decremento no <i>MainActivity</i>.
+
+00:04:57.215 --> 00:04:59.705
+Queremos criar uma variável 
+numérica e iniciá-la em 1.
+
+00:05:00.920 --> 00:05:02.840
+Então vamos exibi-la na tela.
+
+00:05:04.140 --> 00:05:06.990
+No método de decremento nós
+criamos uma variável numérica.
+
+00:05:06.990 --> 00:05:09.160
+Vou iniciá-la em 1 e
+
+00:05:09.160 --> 00:05:11.340
+então exibi-la na tela.
+
+00:05:12.870 --> 00:05:13.940
+Vamos agora rodar no nosso aparelho.
+
+00:05:15.570 --> 00:05:18.790
+Ok, torça para que ele
+não falhe desta vez.
+
+00:05:18.790 --> 00:05:22.350
+Se eu toco o botão <i>menos</i>, então,
+<i>yeah</i>, ele diminui para 1.
+
+00:05:22.350 --> 00:05:25.250
+Se eu toco o botão <i>mais</i>,
+ele aumenta para 3.
+
+00:05:25.250 --> 00:05:27.970
+Então, estes botões funcionam
+como esperado, ao menos para
+
+00:05:27.970 --> 00:05:29.670
+este estágio de nosso aplicativo.
+
+00:05:29.670 --> 00:05:34.063
+Idealmente, como mencionado,
+queremos que aumente para 4, 5, 6,
+
+00:05:34.063 --> 00:05:36.620
+e queremos que 
+diminua para 2, 1, 0.
+
+00:05:36.620 --> 00:05:39.510
+Mas isso virá num estágio
+posterior na aula.
+
+00:05:39.510 --> 00:05:40.250
+Bom trabalho até agora.
+

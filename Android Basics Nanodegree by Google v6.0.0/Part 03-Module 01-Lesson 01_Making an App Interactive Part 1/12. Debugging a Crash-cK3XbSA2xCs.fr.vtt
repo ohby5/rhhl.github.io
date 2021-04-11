@@ -1,0 +1,465 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.430 --> 00:00:03.250
+Le crash d'une application se produit
+lorsqu'elle s'arrête inopinément et
+
+00:00:03.250 --> 00:00:05.880
+affiche un message de dialogue disant
+que l'application vient de s'arrêter.
+
+00:00:07.160 --> 00:00:10.320
+Cela arrive aux développeurs d'Android,
+de nombreuses fois par jour.
+
+00:00:10.320 --> 00:00:11.990
+Même les plus aguerris.
+
+00:00:11.990 --> 00:00:16.400
+Parfois, le problème, c'est une coquille
+dans leur code ou une erreur idiote.
+
+00:00:16.400 --> 00:00:20.250
+D'autres fois, ça peut être dû à une
+incompréhension majeure
+
+00:00:20.250 --> 00:00:23.010
+sur la manière d'écrire le code pour
+une caractéristique donnée.
+
+00:00:23.010 --> 00:00:26.910
+Même si votre réaction peut être la
+panique, la voix de la raison
+
+00:00:26.910 --> 00:00:30.200
+devrait vous dire d'avancer et
+essayer de débugger l'application.
+
+00:00:30.200 --> 00:00:33.900
+Dans cette vidéo, on va apprendre comment
+débugger les crashs d'application Android.
+
+00:00:33.900 --> 00:00:38.910
+Débugger signifie identifier et corriger
+les bugs ou erreurs de votre application.
+
+00:00:38.910 --> 00:00:42.050
+Si c'est une erreur vraiment évidente,
+comme une erreur de syntaxe java,
+
+00:00:42.050 --> 00:00:44.660
+alors le DU Android peut faire ça pour
+vous et
+
+00:00:44.660 --> 00:00:48.870
+afficher une erreur avant d'installer
+l'application sur votre téléphone.
+
+00:00:48.870 --> 00:00:52.480
+On l'appelle erreur de compilation
+car il échoue à créer une application et
+
+00:00:52.480 --> 00:00:53.860
+à l'installer.
+
+00:00:55.170 --> 00:00:58.690
+Si vous voulez créer une erreur
+de compilation, allez-y et supprimez
+
+00:00:58.690 --> 00:01:02.140
+ces parenthèses ou semi-colonnes et
+vous verrez alors la fenêtre d'erreur.
+
+00:01:03.370 --> 00:01:07.710
+C'est comme dans la leçon un, quand on a
+essayé de créer une erreur XML.
+
+00:01:07.710 --> 00:01:10.760
+Puis, nous lisons le message d'erreur et
+nous désactivons la modification.
+
+00:01:11.810 --> 00:01:15.700
+D'autres erreurs potentielles arrivent si
+j'essaie de supprimer l'accolade ouverte,
+
+00:01:15.700 --> 00:01:20.220
+et j'obtiendrai une erreur, ou si j'oublie
+l'accolade fermée, j'aurais une erreur.
+
+00:01:21.390 --> 00:01:25.140
+Mais parfois, l'erreur survient seulement
+lorsqu'on utilise l'application.
+
+00:01:25.140 --> 00:01:28.270
+Ca s'appelle une erreur d'exécution, car
+ça arrive quand l'application s'exécute.
+
+00:01:29.370 --> 00:01:31.940
+Créons volontairement
+un crash dans l'application et
+
+00:01:31.940 --> 00:01:35.390
+comprenons les étapes pour le résoudre,
+pour que, en cas de crash réel,
+
+00:01:35.390 --> 00:01:37.510
+vous saurez comment
+le régler seul.
+
+00:01:37.510 --> 00:01:41.330
+C'est basé sur un crash
+réel que j'ai rencontré chez un étudiant.
+
+00:01:41.330 --> 00:01:43.520
+Alors, cela peut sûrement arriver
+à des débutants.
+
+00:01:43.520 --> 00:01:45.410
+Je vais d'abord vous accompagner
+dans toutes les étapes et
+
+00:01:45.410 --> 00:01:46.849
+puis, vous aurez une chance
+de le faire vous-même.
+
+00:01:47.990 --> 00:01:50.450
+Pour créer volontairement
+un crash dans l'application,
+
+00:01:50.450 --> 00:01:52.500
+je vais modifier
+le dossier MainActivity Java.
+
+00:01:52.500 --> 00:01:58.090
+Je modifierai le nom de cette méthode
+en submitOrders, avec un s.
+
+00:01:58.090 --> 00:02:00.070
+Puis, je vais l'exécuter sur l'appareil.
+
+00:02:00.070 --> 00:02:02.130
+Tout semble fonctionner au début, mais
+
+00:02:02.130 --> 00:02:04.800
+lorsque je clique sur le bouton
+COMMANDER, il y a un crash.
+
+00:02:06.000 --> 00:02:10.500
+Je reçois le message, malheureusement,
+l'application Just Java s'est arrêtée.
+
+00:02:10.500 --> 00:02:13.110
+Et ma seule option est de cliquer
+sur OK pour sortir de l'application.
+
+00:02:14.840 --> 00:02:18.190
+Mais, on peut utiliser Android Studio
+pour comprendre ce qui s'est passé.
+
+00:02:19.660 --> 00:02:21.330
+Quand vous exécutez l'application sur
+votre appareil,
+
+00:02:21.330 --> 00:02:25.860
+vous pouvez voir cette fenêtre Android
+DDMS en bas de l'écran.
+
+00:02:25.860 --> 00:02:28.990
+Cela affiche les informations afin de
+piloter votre appareil Android,
+
+00:02:28.990 --> 00:02:32.980
+toute l'activité existant derrière les
+scènes que les utilisateurs ne voient pas.
+
+00:02:32.980 --> 00:02:36.230
+Si ce n'est pas ouvert, vous cliquez
+sur cet onglet ici indiquant Android,
+
+00:02:36.230 --> 00:02:38.970
+et cela va ouvrir Android DDMS
+pour vous.
+
+00:02:38.970 --> 00:02:41.930
+Vous pouvez régler la hauteur de cette
+fenêtre en étirant cette flèche.
+
+00:02:42.938 --> 00:02:44.480
+Si vous étirez cette flèche vers
+la droite,
+
+00:02:44.480 --> 00:02:47.450
+vous verrez une liste d'appareils
+qui sont connectés à l'ordinateur.
+
+00:02:47.450 --> 00:02:49.460
+Pour l'instant, seul
+mon Nexus 6 est connecté.
+
+00:02:49.460 --> 00:02:53.940
+J'ai ouvert l'application Just Java,
+c'est pourquoi elle est listée ici.
+
+00:02:55.190 --> 00:02:58.565
+Je l'étire à nouveau vers la gauche, pour
+avoir plus d'espace pour voir les pages.
+
+00:02:58.565 --> 00:03:02.850
+Ce côté droit est l'endroit où
+les messages de journal sont affichés.
+
+00:03:02.850 --> 00:03:05.380
+Si vous cliquez sur cette liste déroulante 
+et que dites ''pas de filtres'',
+
+00:03:05.380 --> 00:03:08.750
+cela vous affiche les messages du
+système entier et des autres applications.
+
+00:03:10.440 --> 00:03:14.850
+Cela parle de sujets comme
+le gestionnaire d'activités, audio, son,
+
+00:03:14.850 --> 00:03:17.470
+microphone, et tous ces thèmes.
+
+00:03:17.470 --> 00:03:20.710
+Un journal système est comme un journal
+permettant à votre téléphone de conserver
+
+00:03:20.710 --> 00:03:21.789
+l'activité de l'appareil.
+
+00:03:22.850 --> 00:03:25.150
+On l'appelle également logcat.
+
+00:03:25.150 --> 00:03:25.780
+Si on cherche sur Google
+
+00:03:25.780 --> 00:03:30.840
+le logcat, une fenêtre de définition
+sort de la webpage Android Developers.
+
+00:03:30.840 --> 00:03:33.380
+Cela parle du fait que logcat est
+le système de journal d'Android,
+
+00:03:33.380 --> 00:03:36.200
+où on peut collecter et
+visualiser la sortie de débogage.
+
+00:03:37.480 --> 00:03:42.170
+Pour revenir aux journaux, les évènements
+les plus récents sont indiqués ici, en bas.
+
+00:03:42.170 --> 00:03:43.790
+Si vous voulez,
+
+00:03:43.790 --> 00:03:46.940
+vous pouvez remonter dans le temps pour
+voir ce que vous recherchez.
+
+00:03:46.940 --> 00:03:51.660
+Modifions le filtre pour revenir à notre
+application Just Java.
+
+00:03:51.660 --> 00:03:55.140
+Cela limite de manière significative
+le nombre de messages journal
+
+00:03:55.140 --> 00:03:56.850
+pour notre application.
+
+00:03:56.850 --> 00:03:58.430
+Cela facilite beaucoup la lecture.
+
+00:03:59.480 --> 00:04:01.260
+Lorsqu'un crash se produit
+dans l'appareil,
+
+00:04:01.260 --> 00:04:05.720
+la description de ce que le téléphone
+tentait de faire reste dans les journaux.
+
+00:04:05.720 --> 00:04:07.410
+Voici le crash, dans le texte en rouge.
+
+00:04:08.480 --> 00:04:10.140
+On le voit en regardant
+l'état de la pile,
+
+00:04:10.140 --> 00:04:13.840
+car elle remonte à l'endroit d'où
+provient l'erreur d'origine.
+
+00:04:13.840 --> 00:04:16.550
+Nous savons que c'est notre application,
+car c'est notre processus,
+
+00:04:16.550 --> 00:04:19.560
+qui est com.example.android.justjava.
+
+00:04:19.560 --> 00:04:22.730
+Le nom de processus de notre application
+correspond au nom du paquet, mais
+
+00:04:22.730 --> 00:04:24.440
+cela n'est pas systématique.
+
+00:04:24.440 --> 00:04:26.560
+Nous n'avons pas vraiment
+appris sur les processus,
+
+00:04:26.560 --> 00:04:30.730
+mais, pour l'essentiel, il s'agit juste
+d'identifier que c'est notre application.
+
+00:04:30.730 --> 00:04:32.640
+Maintenant, il y a beaucoup de
+texte dans cette pile de données.
+
+00:04:32.640 --> 00:04:34.488
+Et vous n'avez pas besoin de tout lire.
+
+00:04:34.488 --> 00:04:35.400
+On veut juste examiner
+
+00:04:35.400 --> 00:04:39.170
+les informations pertinentes pour
+nous aider à résoudre notre problème.
+
+00:04:39.170 --> 00:04:42.410
+On doit examiner dans la pile de
+données tout ce qui traite,
+
+00:04:42.410 --> 00:04:45.710
+soit des méthodes, soit des fichiers
+sur lesquels nous travaillons.
+
+00:04:45.710 --> 00:04:48.580
+On conservera une veille sur le
+nom de dossier, l'activité principale.
+
+00:04:49.660 --> 00:04:51.700
+Alors, commençons à lire
+le message d'erreur.
+
+00:04:51.700 --> 00:04:52.890
+Je passe sur la partie et
+
+00:04:52.890 --> 00:04:57.120
+je lis simplement IllegalStateException,
+je n'ai pas vu la méthode submitOrder.
+
+00:04:58.490 --> 00:05:02.720
+Le message d'erreur explique davantage
+pourquoi il était dans un état invalide.
+
+00:05:03.830 --> 00:05:06.942
+Et la raison est qu'il ne trouvait pas
+la méthode submitOrder dans
+
+00:05:06.942 --> 00:05:09.950
+l'activité, MainActivity, pour
+
+00:05:09.950 --> 00:05:13.760
+le gestionnaire onClick, sur le bouton
+catégorie d'affichage.
+
+00:05:13.760 --> 00:05:17.830
+Il y a beaucoup de mots dans cette phrase
+et tout n'a peut-être pas de sens.
+
+00:05:17.830 --> 00:05:19.910
+Mais il y a quelques bons indices ici.
+
+00:05:19.910 --> 00:05:22.920
+Il est fait mention du bouton et
+il y a un seul bouton dans l'application,
+
+00:05:22.920 --> 00:05:26.610
+alors nous supposons que c'est sûrement
+lié à ce bouton.
+
+00:05:26.610 --> 00:05:29.530
+Puis, cela traite du fait de ne pas
+être capable de trouver une méthode
+
+00:05:29.530 --> 00:05:31.930
+submitOrder, dans l'activité.
+
+00:05:31.930 --> 00:05:36.500
+En revenant à notre code bouton, nous
+avons précisé que lorsque le bouton était
+
+00:05:36.500 --> 00:05:38.850
+cliqué, il devait déclencher une méthode
+appelée submitOrder.
+
+00:05:38.850 --> 00:05:39.710
+Maintenant, regardons ça.
+
+00:05:39.710 --> 00:05:43.415
+Je vais étirer ceci,
+la fenêtre DDMS vers le bas et
+
+00:05:43.415 --> 00:05:46.315
+ouvrir notre fichier activity_main.xml.
+
+00:05:46.315 --> 00:05:48.955
+Alors, voici l'élément XML bouton.
+
+00:05:48.955 --> 00:05:54.215
+Et nous avons dit que android:onClick
+devait déclencher la méthode submitOrder.
+
+00:05:54.215 --> 00:05:56.395
+Si je retourne dans l'activité principale,
+
+00:05:56.395 --> 00:06:00.090
+alors, je vois que submitOrder n'est
+plus une méthode, au lieu de cela,
+
+00:06:00.090 --> 00:06:04.240
+nous l'avons modifié en submitOrders,
+c'est pourquoi le problème survient.
+
+00:06:04.240 --> 00:06:08.330
+Si j'efface le s supplémentaire,
+il y a maintenant une méthode submitOrder
+
+00:06:08.330 --> 00:06:11.950
+dans l'activité principale, et
+l'application fonctionnera à nouveau.
+
+00:06:11.950 --> 00:06:13.113
+Lorsque j'exécute à nouveau l'application
+
+00:06:13.113 --> 00:06:16.380
+et que j'appuie sur le bouton commande,
+l'application ne crashe plus, youpi !
+
+00:06:16.380 --> 00:06:19.790
+Continuons et essayons
+de créer ce crash dans votre application
+
+00:06:19.790 --> 00:06:21.800
+en modifiant le nom de
+la méthode submitOrder.
+
+00:06:23.000 --> 00:06:25.390
+Puis, vérifiez les journaux pour
+la pile de données, et puis,
+
+00:06:25.390 --> 00:06:26.950
+lisez attentivement le message d'erreur.
+
+00:06:28.000 --> 00:06:31.390
+Puis, corrigez l'erreur, afin que votre
+application marche à nouveau.
+
+00:06:31.390 --> 00:06:32.610
+Enfin, vérifiez la boîte.
+

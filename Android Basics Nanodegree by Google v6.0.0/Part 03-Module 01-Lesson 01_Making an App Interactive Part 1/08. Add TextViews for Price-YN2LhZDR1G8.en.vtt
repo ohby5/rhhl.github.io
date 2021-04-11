@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.880
+First, we need to modify the activity main lay
+
+00:00:02.880 --> 00:00:06.475
+out so that we can add the TextViews for price.
+
+00:00:06.475 --> 00:00:08.750
+If the device preview isn't showing ready,
+
+00:00:08.750 --> 00:00:12.945
+you can click on this link here that says preview in order to make it appear.
+
+00:00:12.945 --> 00:00:14.637
+Now when we change the XML,
+
+00:00:14.637 --> 00:00:17.520
+we can just see it update automatically here.
+
+00:00:17.520 --> 00:00:19.540
+In the screenshot we provided to you,
+
+00:00:19.540 --> 00:00:23.535
+the price was presented in a similar way to the quantity.
+
+00:00:23.535 --> 00:00:26.910
+We have a header as well as a TextView to show the value,
+
+00:00:26.910 --> 00:00:32.310
+so we can just copy over these two TextView elements and then paste it beneath it.
+
+00:00:32.310 --> 00:00:35.250
+Now we just need to tweak the values to fit our scenario.
+
+00:00:35.250 --> 00:00:37.290
+Instead of quantity, it should say
+
+00:00:37.290 --> 00:00:43.860
+price and we should also change the ID to be price TextView.
+
+00:00:43.860 --> 00:00:46.910
+You can have two views with the same ID.
+
+00:00:46.910 --> 00:00:48.190
+But anyways, in the quiz,
+
+00:00:48.190 --> 00:00:52.112
+we told you to change this to be price TextView so it would match our code.
+
+00:00:52.112 --> 00:00:54.125
+There, and that makes the error go away.
+
+00:00:54.125 --> 00:00:55.470
+Looking at the preview,
+
+00:00:55.470 --> 00:00:59.020
+we have the price header and zero beneath it.
+
+00:00:59.020 --> 00:01:01.405
+We also want to just change this to be zero dollars,
+
+00:01:01.405 --> 00:01:03.930
+and you can use your own currency symbol if you want.
+
+00:01:03.930 --> 00:01:07.410
+The header is in all caps and the actual price value has
+
+00:01:07.410 --> 00:01:10.990
+a tech size of 16sp and a black text color.
+
+00:01:10.990 --> 00:01:12.490
+That looks good so far,
+
+00:01:12.490 --> 00:01:14.260
+except I do notice that there needs to be
+
+00:01:14.260 --> 00:01:18.825
+a little more vertical space between the price header and the quantity value.
+
+00:01:18.825 --> 00:01:23.320
+I'm just going to change all the views so that they have a margin top value of 16dp.
+
+00:01:23.320 --> 00:01:26.080
+And then instead of margin bottom here,
+
+00:01:26.080 --> 00:01:29.455
+I'm just going to do margin top 16,
+
+00:01:29.455 --> 00:01:32.000
+and that actually fixes it.
+
+00:01:32.000 --> 00:01:34.865
+Cool! Now all the views are evenly spaced apart.
+
+00:01:34.865 --> 00:01:37.563
+Once you think the XML is in a good state,
+
+00:01:37.563 --> 00:01:39.660
+then you can just run on your device.
+
+00:01:39.660 --> 00:01:42.265
+Cool! And that looks good.
+
+00:01:42.265 --> 00:01:44.749
+Let's work on the main activity file now.
+
+00:01:44.749 --> 00:01:47.020
+If this Android DDMS window pops up,
+
+00:01:47.020 --> 00:01:49.280
+you can just collapse it using this arrow.
+
+00:01:49.280 --> 00:01:51.910
+In the main activity, we asked you to copy and
+
+00:01:51.910 --> 00:01:55.195
+paste the display price method that we gave you.
+
+00:01:55.195 --> 00:01:57.010
+Hopefully, you also modified
+
+00:01:57.010 --> 00:01:59.050
+your Android studio preferences to
+
+00:01:59.050 --> 00:02:02.125
+automatically import things if there were an ambiguous.
+
+00:02:02.125 --> 00:02:06.295
+That would help resolve the problem of it not knowing what number format referred to.
+
+00:02:06.295 --> 00:02:08.005
+But now with the import statement,
+
+00:02:08.005 --> 00:02:10.765
+the app knows that number format is something that's provided
+
+00:02:10.765 --> 00:02:13.895
+automatically by Java to help format numbers.
+
+00:02:13.895 --> 00:02:17.530
+Then for the last step, we modify the Submit order method so that when
+
+00:02:17.530 --> 00:02:22.000
+the button is clicked we display the quantity and also display the price.
+

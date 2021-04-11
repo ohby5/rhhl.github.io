@@ -1,0 +1,419 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:01.280 --> 00:00:04.640
+La première étape consiste à modifier la disposition
+XML activity_main si
+
+00:00:04.640 --> 00:00:07.300
+Que l'application ressemble à quelque chose comme ça.
+
+00:00:07.300 --> 00:00:10.099
+Allons dans Android et Studio
+Regardons ce fichier.
+
+00:00:10.099 --> 00:00:12.802
+Voici notre fichier de format XML activity_main de
+.
+
+00:00:12.802 --> 00:00:16.540
+Et nous avons l'aperçu sur le dispositif
+apparaître sur la droite ici.
+
+00:00:16.540 --> 00:00:20.390
+Je peux cliquer sur cette loupe de
+pour zoomer sur l'appareil.
+
+00:00:20.390 --> 00:00:21.270
+Il qui est mieux maintenant.
+
+00:00:22.350 --> 00:00:25.550
+Pour construire la disposition souhaitée je
+tiens d'abord à ajouter une touche plus
+
+00:00:25.550 --> 00:00:28.650
+Entre dans l'en-tête de la quantité et de la valeur de
+quantité.
+
+00:00:28.650 --> 00:00:32.790
+Nous avons déjà un bouton dans notre mise en page
+qui est pour le bouton de commande ici.
+
+00:00:32.790 --> 00:00:36.330
+Donc, je peux vous suffit de copier ce code et
+alors je vais le coller
+
+00:00:36.330 --> 00:00:39.880
+Entre dans l'en-tête de la quantité et de la valeur de
+quantité.
+
+00:00:39.880 --> 00:00:42.450
+Maintenant, je vois le bouton apparaissant
+au bon endroit, mais
+
+00:00:42.450 --> 00:00:45.470
+Je dois changer le texte afin
+qu'il dit, plus la place de l'ordre.
+
+00:00:47.010 --> 00:00:48.660
+Cool!
+Et je vais aussi supprimer
+
+00:00:48.660 --> 00:00:52.790
+Le haut de la marge, car nous avons déjà
+ont 16 dps de la marge du bas
+
+00:00:52.790 --> 00:00:54.310
+De ce champ de texte.
+
+00:00:54.310 --> 00:00:56.300
+Alors allez-y et supprimer cela.
+
+00:00:56.300 --> 00:00:59.940
+Le bouton est assez grand et dans le quiz
+nous vous avons demandé de changer la taille
+
+00:00:59.940 --> 00:01:02.880
+De celui-ci à 48 dps de haut et 48 de large dps.
+
+00:01:02.880 --> 00:01:04.660
+Donc, je vais modifier
+le bouton XML ici.
+
+00:01:06.010 --> 00:01:08.100
+Nice.
+Maintenant, il est à la bonne taille.
+
+00:01:08.100 --> 00:01:12.030
+Maintenant, je peux copier ce XML et
+coller en dessous de la valeur de la quantité de sorte
+
+00:01:12.030 --> 00:01:13.980
+Que nous avons sur la touche moins.
+
+00:01:13.980 --> 00:01:17.430
+Je supprimé l'espace blanc parce
+selon le code de style Android
+
+00:01:17.430 --> 00:01:20.690
+Directives, vous ne devraient pas avoir
+espaces blancs supplémentaires dans votre code.
+
+00:01:20.690 --> 00:01:25.050
+Maintenant, je vais changer le texte de
+ce bouton de sorte qu'il dit moins.
+
+00:01:26.070 --> 00:01:29.210
+Il a déjà 48 dps largeur et la hauteur.
+
+00:01:29.210 --> 00:01:31.010
+Maintenant les boutons plus et moins
+sont en place.
+
+00:01:32.320 --> 00:01:35.990
+Nous avons déjà mentionné que nous
+voulons également la quantité initiale à 2 et
+
+00:01:35.990 --> 00:01:38.280
+Le prix initial sera de 10 $.
+
+00:01:38.280 --> 00:01:39.380
+Donc, nous allons faire ce changement maintenant.
+
+00:01:40.410 --> 00:01:42.620
+Ceci est ce que notre mise en page ressemble donc
+loin.
+
+00:01:42.620 --> 00:01:46.170
+Revenons à l'image quiz
+pour vérifier notre progrès.
+
+00:01:46.170 --> 00:01:49.430
+Nous avons réussi à changer la mise en page,
+mais nous devons aussi modifier
+
+00:01:49.430 --> 00:01:52.610
+Le bouton plus de sorte que quand il est cliqué
+il appelle la méthode d'incrémentation.
+
+00:01:52.610 --> 00:01:55.720
+Et lorsque le bouton est cliqué moins
+nous devons appeler la méthode de décroissance.
+
+00:01:56.830 --> 00:02:00.530
+Retour dans Android en studio,
+Je vais modifier le bouton plus afin
+
+00:02:00.530 --> 00:02:04.390
+Que la valeur de l'attribut Android
+onClick est minimum.
+
+00:02:04.390 --> 00:02:07.060
+Cette façon, lorsque le bouton plus est
+cliqué sur il va appeler une méthode
+
+00:02:07.060 --> 00:02:09.430
+Appelé incrément de l'activité principale.
+
+00:02:09.430 --> 00:02:12.883
+De même pour le bouton moins, je
+va modifier le onClick attributs
+
+00:02:12.883 --> 00:02:14.376
+Sorte que la valeur est décrément.
+
+00:02:16.477 --> 00:02:19.350
+Je vais enregistrer ce,
+et ensuite l'exécuter sur l'appareil.
+
+00:02:20.780 --> 00:02:25.420
+La disposition semble bon, mais si je frappe
+le bouton +, puis il se bloque.
+
+00:02:25.420 --> 00:02:27.560
+Vous souvenez-vous comment je l'ai montré
+vous regardez les journaux pour
+
+00:02:27.560 --> 00:02:29.310
+La trace de la pile de l'erreur?
+
+00:02:29.310 --> 00:02:32.560
+Le journal déjà ouvert par défaut,
+nous allons donc faites glisser cette flèche vers le haut de façon
+
+00:02:32.560 --> 00:02:35.320
+Que nous pouvons voir la suite du message.
+
+00:02:35.320 --> 00:02:38.020
+Si nous défiler vers le haut, nous voyons que ce
+est notre erreur.
+
+00:02:39.300 --> 00:02:42.550
+Ceci est notre application justjava et
+il dit exception d'Etat illégale.
+
+00:02:43.790 --> 00:02:47.040
+Si je défiler vers la droite je peux
+voir la suite du message d'erreur.
+
+00:02:47.040 --> 00:02:50.750
+Le message d'erreur indique ne pouvait pas trouver une méthode
+augmentation de l'activité,
+
+00:02:50.750 --> 00:02:52.150
+MainActivity.
+
+00:02:52.150 --> 00:02:55.940
+Cela ressemble très similaire à la
+d'erreur que nous avions dans la vidéo précédente.
+
+00:02:55.940 --> 00:02:58.850
+Fondamentalement, il n'y a pas de méthode appelée
+augmentation de l'activité principale.
+
+00:02:58.850 --> 00:03:01.765
+Et qui est réellement attendu parce
+nous ne faisions pas encore ce changement.
+
+00:03:02.820 --> 00:03:03.760
+Pour la deuxième étape,
+
+00:03:03.760 --> 00:03:07.150
+Nous sommes censés ajouter un incrément
+méthode pour l'activité principale, créons
+
+00:03:07.150 --> 00:03:12.230
+Une quantité variable qui est initialisée
+à 3, puis aussi afficher la quantité.
+
+00:03:12.230 --> 00:03:15.100
+Pour ce faire,
+Je ouvre le fichier principal de l'activité Java.
+
+00:03:15.100 --> 00:03:18.160
+Accrocher le comportement du bouton, plus de
+va être très similaire à
+
+00:03:18.160 --> 00:03:20.900
+Comment nous accroché le comportement pour
+le bouton de commande.
+
+00:03:20.900 --> 00:03:23.490
+Donc, nous allons copier cette méthode ici
+qui gère le bouton de commande.
+
+00:03:25.030 --> 00:03:28.406
+Immédiatement, je reçois une erreur qui dit
+soumettre commande est prête à trouver
+
+00:03:28.406 --> 00:03:29.600
+Dans l'activité principale.
+
+00:03:29.600 --> 00:03:32.980
+Vous ne pouvez pas avoir deux méthodes qui sont
+exactement le même dans l'activité principale.
+
+00:03:32.980 --> 00:03:34.350
+Mais cela est correct,
+
+00:03:34.350 --> 00:03:36.779
+Parce que je vais changer cela
+soit la méthode d'incrémentation de toute façon.
+
+00:03:37.860 --> 00:03:38.790
+Et maintenant l'erreur disparaît.
+
+00:03:39.820 --> 00:03:42.912
+Je vais modifier le commentaire
+parce que maintenant cela est une nouvelle méthode.
+
+00:03:42.912 --> 00:03:45.610
+Je vais mettre à jour le commentaire
+de se référer à la touche plus
+
+00:03:45.610 --> 00:03:47.590
+Au lieu du bouton de commande.
+
+00:03:47.590 --> 00:03:51.192
+Dans la méthode d'incrémentation, je vais
+pour créer une variable de quantité entier.
+
+00:03:51.192 --> 00:03:56.180
+Je vais pour l'initialiser à
+une valeur de 3, comme le quiz demandé.
+
+00:03:56.180 --> 00:03:59.030
+Alors je peux afficher cette quantité de
+à l'écran.
+
+00:03:59.030 --> 00:04:00.820
+Je ne dois mettre à jour
+prix dans cette méthode de façon
+
+00:04:00.820 --> 00:04:03.110
+Je peux supprimer cette ligne de code.
+
+00:04:03.110 --> 00:04:04.690
+Qui ressemble bien si nous allons tester maintenant.
+
+00:04:06.030 --> 00:04:10.020
+Maintenant, quand je clique sur le bouton de
+de plus, il met à jour effectivement à 3.
+
+00:04:10.020 --> 00:04:11.670
+Cela est assez cool.
+
+00:04:11.670 --> 00:04:14.240
+Mais si je frappe la touche moins,
+puis il se bloque.
+
+00:04:15.740 --> 00:04:19.072
+Voyons les journaux, je vais
+défiler vers le bas pour obtenir le maximum
+
+00:04:19.072 --> 00:04:22.010
+Journaux récents, puis faites défiler vers le haut pour voir
+la dernière erreur.
+
+00:04:23.070 --> 00:04:23.690
+Pour notre application,
+
+00:04:23.690 --> 00:04:26.330
+Il y avait une IllegalStateException
+parce qu'il ne pouvait pas trouver la méthode
+
+00:04:26.330 --> 00:04:28.610
+Diminution dans notre activité.
+
+00:04:28.610 --> 00:04:32.580
+Ceci est également prévu parce que nous
+ne ajoutons la méthode de diminution encore.
+
+00:04:32.580 --> 00:04:33.600
+Allons de l'avant et de le faire maintenant.
+
+00:04:35.052 --> 00:04:37.790
+Je vais copier cette méthode et
+puis collez-dessous.
+
+00:04:38.980 --> 00:04:40.610
+Je vais renommer ce pour diminuer.
+
+00:04:42.110 --> 00:04:43.980
+Maintenant ce commentaire doit être mis à jour.
+
+00:04:43.980 --> 00:04:46.730
+Cette méthode est appelée lorsque
+sur le bouton moins est cliqué.
+
+00:04:48.180 --> 00:04:50.190
+Pour comprendre ce que nous sommes suppose
+à faire dans cette méthode,
+
+00:04:50.190 --> 00:04:52.100
+Revenons au quiz.
+
+00:04:52.100 --> 00:04:54.190
+Nous avons terminé deux étapes jusqu'ici.
+
+00:04:54.190 --> 00:04:57.215
+La dernière étape est pour la méthode diminution de
+de l'activité principale.
+
+00:04:57.215 --> 00:04:59.705
+Nous voulons créer une quantité
+variable et l'initialiser à 1.
+
+00:05:00.920 --> 00:05:02.840
+Puis nous allons afficher
+la quantité à l'écran.
+
+00:05:04.140 --> 00:05:06.990
+Dans le procédé de décrémentation, nous avons créé une variable d'
+quantité entier.
+
+00:05:06.990 --> 00:05:09.160
+Je vais initialiser
+à une valeur de 1 et
+
+00:05:09.160 --> 00:05:11.340
+Afficher alors que la quantité de
+à l'écran.
+
+00:05:12.870 --> 00:05:13.940
+Maintenant, nous allons l'exécuter sur notre dispositif.
+
+00:05:15.570 --> 00:05:18.790
+Okay, croiser les doigts que
+il ne plante pas cette fois.
+
+00:05:18.790 --> 00:05:22.350
+Si je frappe la touche moins,
+puis, oui, il diminue à 1.
+
+00:05:22.350 --> 00:05:25.250
+Si je frappe la touche plus,
+il augmente à 3.
+
+00:05:25.250 --> 00:05:27.970
+Donc, ces boutons fonctionnent
+comme prévu, au moins pour
+
+00:05:27.970 --> 00:05:29.670
+Ce stade de notre application.
+
+00:05:29.670 --> 00:05:34.063
+Idéalement, comme je l'ai mentionné plus tôt, nous voulons que ce
+pour augmenter à 4, 5, 6,
+
+00:05:34.063 --> 00:05:36.620
+Et nous voulons que cela diminue à 2, 1, 0.
+
+00:05:36.620 --> 00:05:39.510
+Mais cela viendra au
+un stade ultérieur de la leçon.
+
+00:05:39.510 --> 00:05:40.250
+Grande travail jusqu'ici.
+

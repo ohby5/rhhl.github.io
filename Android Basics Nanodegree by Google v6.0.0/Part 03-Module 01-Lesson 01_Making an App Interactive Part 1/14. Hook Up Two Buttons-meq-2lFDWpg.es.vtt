@@ -1,0 +1,234 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.558 --> 00:00:03.320
+Creo que estás preparado para desarrollar
+el selector de cantidades.
+
+00:00:04.480 --> 00:00:07.391
+En nuestro formulario de pedido,
+vamos a añadir un signo de más y de menos
+
+00:00:07.457 --> 00:00:10.346
+para poder aumentar y disminuir
+el número de cafés pedidos.
+
+00:00:11.420 --> 00:00:14.500
+Cuando pulses el signo más,
+aumentará en uno la cantidad de cafés.
+
+00:00:14.700 --> 00:00:17.934
+Cuando pulses el signo menos,
+disminuirá en uno la cantidad de cafés.
+
+00:00:18.920 --> 00:00:20.170
+Si luego pulsas la tecla Pedir
+
+00:00:20.280 --> 00:00:23.213
+actualizará el precio
+según el último valor de cantidad.
+
+00:00:24.580 --> 00:00:28.406
+Para desarrollar bien esta propiedad
+habrá que dar diferentes pasos.
+
+00:00:28.920 --> 00:00:32.686
+En primer lugar, vamos a añadir
+los signos de más y menos al diseño.
+
+00:00:33.000 --> 00:00:36.286
+También conectaremos los signos
+para que actualicen la pantalla.
+
+00:00:37.280 --> 00:00:39.926
+Más adelante en esta lección,
+vamos a ajustar la tecla Pedir
+
+00:00:40.040 --> 00:00:41.858
+para que el precio
+se actualice correctamente.
+
+00:00:42.759 --> 00:00:43.840
+Para desarrollar este diseño
+
+00:00:43.920 --> 00:00:46.897
+modifica
+el archivo de diseño XML <i>activity-main</i>.
+
+00:00:48.506 --> 00:00:49.640
+Vas a añadir los dos signos
+
+00:00:49.700 --> 00:00:53.320
+y también a cambiar
+el valor inicial de la cantidad a 2
+
+00:00:53.503 --> 00:00:55.392
+y el precio inicial a 10$.
+
+00:00:55.633 --> 00:00:57.740
+También puedes\ cambiarlo en el XML.
+
+00:00:59.050 --> 00:01:01.912
+Si es necesario,
+puedes ajustar tu moneda local.
+
+00:01:02.566 --> 00:01:04.739
+La razón de escoger 2 como cantidad
+
+00:01:04.910 --> 00:01:07.380
+es que no se convertirá en negativo
+al pulsar el signo menos.
+
+00:01:08.310 --> 00:01:09.746
+Cuando añadas estos signos al diseño
+
+00:01:09.820 --> 00:01:13.156
+verás que aparecen un poco más grandes
+que lo que se ve aquí.
+
+00:01:14.060 --> 00:01:17.561
+Para que tengan esta apariencia
+ajusta el ancho y la altura a 48 dps.
+
+00:01:18.510 --> 00:01:20.100
+Luego conecta el comportamiento de clic.
+
+00:01:20.360 --> 00:01:24.201
+Cuando se pulsa el signo +
+llama al método <i>increment</i> en <i>MainActivity</i>.
+
+00:01:24.510 --> 00:01:28.138
+Cuando se pulsa el signo -
+llama al método <i>decrement</i> en <i>MainActivity</i>.
+
+00:01:28.790 --> 00:01:31.508
+Añade un método <i>increment</i> en <i>MainActivity</i>.
+
+00:01:32.190 --> 00:01:34.845
+Crea una variable <i>quantity</i>
+dentro de ese método.
+
+00:01:35.020 --> 00:01:37.000
+Inicialízala al valor 3.
+
+00:01:37.920 --> 00:01:42.586
+Con inicializar quiero decir
+fija el valor inicial de la variable en 3.
+
+00:01:43.353 --> 00:01:45.822
+A continuación
+muestra la cantidad en la pantalla.
+
+00:01:47.057 --> 00:01:48.058
+Para el tercer paso
+
+00:01:48.240 --> 00:01:50.520
+añade un método <i>decrement</i>
+en la <i>MainActivity</i>
+
+00:01:50.760 --> 00:01:53.964
+luego crea una variable <i>quantity</i>
+con un valor inicial de 1.
+
+00:01:55.180 --> 00:01:57.334
+A continuación
+muestra la cantidad en la pantalla.
+
+00:01:58.450 --> 00:02:00.313
+Tas haber completado todos estos pasos
+
+00:02:00.520 --> 00:02:02.400
+debería aparecer así en el dispositivo.
+
+00:02:03.130 --> 00:02:07.010
+Cuando abres la app debería aparecer
+una cantidad de 2 y un precio de 10$.
+
+00:02:08.195 --> 00:02:11.515
+Si pulsas el signo más,
+aumenta la cantidad a 3.
+
+00:02:12.260 --> 00:02:15.540
+Si pulsas el signo menos,
+reduce la cantidad a 1.
+
+00:02:16.460 --> 00:02:18.421
+Técnicamente
+este comportamiento es incorrecto
+
+00:02:18.586 --> 00:02:20.086
+porque debería haber descendido a 2.
+
+00:02:20.367 --> 00:02:23.927
+Pero por ahora,
+haz solo que con el signo más cambie a 3
+
+00:02:24.073 --> 00:02:25.860
+y con el menos a 1.
+
+00:02:26.120 --> 00:02:28.298
+En una tarea de codificación posterior
+lo arreglaremos.
+
+00:02:28.533 --> 00:02:33.103
+de manera que cuando pulses el signo más
+aumente de uno en uno.
+
+00:02:33.626 --> 00:02:35.113
+Y lo mismo con el signo menos.
+
+00:02:36.497 --> 00:02:39.109
+Por ahora puedes dejar
+las teclas Pedir y la de precio así.
+
+00:02:39.590 --> 00:02:43.647
+Ahora mismo, mi versión actualiza
+la cantidad a cinco y el precio a 25$.
+
+00:02:43.880 --> 00:02:45.920
+Pero tú puedes dejarla
+tal y como la tenías antes.
+
+00:02:46.610 --> 00:02:48.185
+Después arreglaremos esto también.
+
+00:02:48.650 --> 00:02:50.553
+Un consejo.
+Si quieres volver a la app
+
+00:02:50.626 --> 00:02:54.424
+tal y como estaba cuando se lanzó
+siempre puedes matarla.
+
+00:02:55.200 --> 00:02:56.993
+En la barra de navegación del sistema
+
+00:02:57.220 --> 00:03:01.053
+encontrarás las teclas
+volver, inicio y tareas recientes.
+
+00:03:01.520 --> 00:03:03.233
+Si pulsas tareas recientes
+
+00:03:03.300 --> 00:03:05.902
+te muestra todas las tareas recientes
+realizadas en tu teléfono.
+
+00:03:06.993 --> 00:03:09.220
+Arrastrando a la derecha o a la izquierda,
+matas tu app.
+
+00:03:09.426 --> 00:03:10.993
+Es decir, deja de ejecutarse.
+
+00:03:11.640 --> 00:03:13.326
+Si vas a la pantalla de apps
+
+00:03:13.360 --> 00:03:15.212
+y haces clic en tu app
+para volver a ejecutarla
+
+00:03:15.380 --> 00:03:16.960
+te mostrará el estado inicial de la app.
+

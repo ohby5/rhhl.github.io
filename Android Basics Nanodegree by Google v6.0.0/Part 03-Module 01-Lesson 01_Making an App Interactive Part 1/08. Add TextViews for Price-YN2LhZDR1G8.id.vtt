@@ -1,0 +1,167 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.340 --> 00:00:03.040
+Pertama, kita perlu memodifikasi 
+aktifitas &lt;i&gt;layout&lt;/i&gt; utama,
+
+00:00:03.040 --> 00:00:05.350
+sehingga kita bisa menambah
+&lt;i&gt;TextView&lt;/i&gt; untuk harga.
+
+00:00:06.440 --> 00:00:08.460
+Jika tampilan pada perangkat tidak muncul,
+
+00:00:08.460 --> 00:00:12.270
+Anda bisa klik pada tautan yang bernama 
+&lt;i&gt;Preview&lt;/i&gt; untuk memunculkannya.
+
+00:00:13.235 --> 00:00:17.075
+Sekarang, saat kita ganti XML, kita bisa
+lihat ia diperbarui otomatis di sini.
+
+00:00:17.075 --> 00:00:18.875
+Pada layar yang kami sediakan ini,
+
+00:00:18.875 --> 00:00:22.445
+harga ditampilkan dengan cara 
+yang sama dengan jumlahnya.
+
+00:00:23.675 --> 00:00:26.855
+Kita punya &lt;i&gt;header&lt;/i&gt;, juga &lt;i&gt;TextView&lt;/i&gt;, 
+untuk menunjukkan nilai.
+
+00:00:26.855 --> 00:00:29.725
+Jadi kita bisa menyalin 
+kedua elemen &lt;i&gt;TextView&lt;/i&gt; ini
+
+00:00:29.725 --> 00:00:31.295
+dan merekatkannya di bawahnya.
+
+00:00:32.305 --> 00:00:35.275
+Sekarang kita hanya perlu mengubah 
+nilai sesuai skenario kita.
+
+00:00:35.700 --> 00:00:37.920
+Alih-alih jumlah, 
+seharusnya menyebut harga.
+
+00:00:40.140 --> 00:00:43.980
+Dan kita seharusnya mengubah ID 
+menjadi &lt;i&gt;TextView&lt;/i&gt; harga.
+
+00:00:43.980 --> 00:00:46.280
+Anda bisa mempunyai dua tampilan
+dengan ID sama.
+
+00:00:46.990 --> 00:00:50.730
+Tapi dalam kuis, Anda diminta
+mengubahnya menjadi &lt;i&gt;TextView&lt;/i&gt; harga.
+
+00:00:50.730 --> 00:00:52.430
+Jadi, akan sesuai dengan kode kami.
+
+00:00:52.430 --> 00:00:54.270
+Begitu. Dan erornya akan hilang.
+
+00:00:54.270 --> 00:00:59.030
+Baik, melihat pada tampilan, kita punya 
+&lt;i&gt;header&lt;/i&gt; harga, dan nol di bawahnya.
+
+00:00:59.030 --> 00:01:01.560
+Kita juga ingin mengubahnya 
+menjadi nol dolar.
+
+00:01:01.560 --> 00:01:04.470
+Dan Anda bisa memakai simbol 
+mata uang sendiri jika Anda mau.
+
+00:01:04.470 --> 00:01:05.835
+&lt;i&gt;Header&lt;/i&gt; dalam huruf besar
+
+00:01:05.835 --> 00:01:11.210
+dan nilai harga sebenarnya memakai
+ukuran teks 16 sp dan warna teks hitam.
+
+00:01:11.210 --> 00:01:14.490
+Sejauh ini kelihatan bagus,
+kecuali saya lihat perlu sedikit
+
+00:01:14.490 --> 00:01:19.018
+jarak vertikal antara &lt;i&gt;header&lt;/i&gt; harga
+dan nilai jumlahnya.
+
+00:01:19.018 --> 00:01:20.630
+Saya akan mengubah 
+semua tampilan
+
+00:01:20.630 --> 00:01:23.140
+supaya ada margin atas bernilai 16 dp.
+
+00:01:23.140 --> 00:01:28.110
+Dan alih-alih margin bawah di sini,
+saya akan memakai margin atas,
+
+00:01:28.110 --> 00:01:31.230
+16, dan memperbaikinya.
+
+00:01:31.230 --> 00:01:32.260
+Bagus.
+
+00:01:32.260 --> 00:01:34.110
+Sekarang semua tampilan berjarak sama.
+
+00:01:35.510 --> 00:01:37.370
+Saat Anda berpikir XML-nya sudah baik,
+
+00:01:37.370 --> 00:01:39.759
+maka Anda bisa menjalankannya
+pada perangkat Anda.
+
+00:01:40.190 --> 00:01:41.560
+Bagus, dan kelihatan baik.
+
+00:01:42.580 --> 00:01:44.760
+Mari kerjakan berkas &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:01:44.760 --> 00:01:49.670
+Jika jendela Android DDMS ini muncul,
+Anda bisa tutup dengan panah ini.
+
+00:01:49.670 --> 00:01:51.900
+Pada &lt;i&gt;MainActivity&lt;/i&gt;, 
+Anda diminta menyalin
+
+00:01:51.900 --> 00:01:54.460
+dan merekat metode &lt;i&gt;displayPrice&lt;/i&gt;
+yang kami berikan.
+
+00:01:55.510 --> 00:01:58.910
+Kami harap, Anda juga memodifikasi
+pilihan Android Studio Anda
+
+00:01:58.910 --> 00:02:02.260
+menjadi mengimpor barang otomatis
+jika tidak jelas.
+
+00:02:02.260 --> 00:02:06.130
+Itu akan membantu menyelesaikan masalah
+tidak tahu format angka apa yang disebut.
+
+00:02:06.130 --> 00:02:09.850
+Tapi sekarang dengan pernyataan impor, 
+aplikasi tahu bahwa format angka adalah
+
+00:02:09.850 --> 00:02:13.890
+sesuatu yang disediakan otomatis oleh Java
+untuk membantu memformat angka.
+
+00:02:13.890 --> 00:02:17.490
+Dan untuk langkah terakhir,
+kita memodifikasi metode &lt;i&gt;Submit Order&lt;/i&gt;.
+
+00:02:17.490 --> 00:02:21.290
+Jadi saat tombolnya ditekan, 
+kita menampilkan jumlah dan harga.
+

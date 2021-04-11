@@ -1,0 +1,285 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.440 --> 00:00:01.940
+Tôi nghĩ bạn đã sẵn sàng cho
+
+00:00:02.000 --> 00:00:03.780
+việc xây dựng chức năng chọn số lượng.
+
+00:00:04.280 --> 00:00:05.580
+Trong đơn đặt hàng của chúng ta,
+
+00:00:05.680 --> 00:00:07.520
+chúng ta thêm vào nút cộng và nút trừ để
+
+00:00:07.520 --> 00:00:10.270
+chúng ta có thể tăng và
+giảm số tách cà phê được đặt hàng.
+
+00:00:10.270 --> 00:00:12.250
+Mỗi lần bạn nhấn và nút cộng,
+
+00:00:12.250 --> 00:00:14.900
+chức năng này sẽ tăng số tách cà phê lên
+thêm một số.
+
+00:00:14.930 --> 00:00:16.040
+Và mỗi lần bạn nhấn nút trừ,
+
+00:00:16.230 --> 00:00:17.780
+nó sẽ giảm số tách cà phê xuống một số.
+
+00:00:18.380 --> 00:00:20.040
+Sau đó, khi bạn nhấn vào nút đặt hàng,
+
+00:00:20.060 --> 00:00:23.120
+nó sẽ cập nhật giá theo
+giá trị của số lượng sau cùng.
+
+00:00:24.700 --> 00:00:26.800
+Việc xây dựng tất cả chức năng này
+một cách chính xác
+
+00:00:26.800 --> 00:00:28.920
+sẽ phải qua nhiều bước.
+
+00:00:28.920 --> 00:00:31.290
+Bước đầu tiên chúng ta sẽ thêm nút cộng và
+
+00:00:31.290 --> 00:00:32.780
+nút trừ vào bố cục.
+
+00:00:32.880 --> 00:00:34.280
+Và chúng ta cũng sẽ liên kết các nút
+
+00:00:34.280 --> 00:00:36.920
+vì thế, chúng thực sự cập nhật
+một số thứ trên màn hình.
+
+00:00:36.940 --> 00:00:38.380
+Và ngay cả sau đây trong bài học,
+
+00:00:38.540 --> 00:00:40.260
+chúng ta sẽ ấn định nút đặt hàng để cho
+
+00:00:40.260 --> 00:00:41.700
+giá bán cập nhật một cách thích hợp.
+
+00:00:42.420 --> 00:00:44.560
+Đầu tiên, xây dựng bố cục này
+bằng cách thay đổi
+
+00:00:44.700 --> 00:00:46.580
+thành phần ứng dụng –
+tập tin XML bố cục chính.
+
+00:00:48.580 --> 00:00:52.040
+Bạn cũng thêm hai nút và
+cũng thay đổi giá trị ban đầu
+
+00:00:52.360 --> 00:00:55.180
+của số lượng là 2 và
+của giá ban đầu là 10$.
+
+00:00:55.200 --> 00:00:57.560
+Bạn cũng có thể tạo những thay đổi này
+trong tập tin XML.
+
+00:00:58.820 --> 00:00:59.840
+Bạn có thể điều chỉnh theo
+
+00:00:59.840 --> 00:01:02.600
+đồng tiền tại chỗ của bạn khi cần áp dụng.
+
+00:01:02.600 --> 00:01:04.970
+Lý do tại sao tôi chọn hai làm số lượng
+là để cho
+
+00:01:04.970 --> 00:01:07.220
+khi bạn chạm vào nút trừ thì
+nó không trở thành âm.
+
+00:01:07.780 --> 00:01:09.740
+Khi bạn thêm những nút này
+vào bố cục của bạn thì
+
+00:01:09.740 --> 00:01:11.130
+thì bạn sẽ nhận thấy là chúng có vẻ
+
+00:01:11.130 --> 00:01:13.050
+hơi lớn hơn những gì chúng hiển thị ở đây.
+
+00:01:13.540 --> 00:01:15.300
+Bạn có thể đạt được
+diện mạo này bằng cách
+
+00:01:15.300 --> 00:01:17.220
+cài đặt độ rộng và độ cao 48dps.
+
+00:01:17.920 --> 00:01:19.140
+Sau đó liên kết với
+
+00:01:19.160 --> 00:01:20.360
+cách chạy khi được nhấp vào.
+
+00:01:20.360 --> 00:01:21.600
+Khi nút + được nhấp vào,
+
+00:01:21.620 --> 00:01:24.510
+gọi ra phương pháp gia số
+trong thành phần ứng dụng chính.
+
+00:01:24.510 --> 00:01:25.560
+Khi nút – được nhấp vào,
+
+00:01:25.620 --> 00:01:28.790
+gọi ra phương pháp giảm số
+trong thành phần ứng dụng chính.
+
+00:01:28.790 --> 00:01:32.190
+Trong thành phần ứng dụng chính
+bạn thêm vào một phương pháp gia số.
+
+00:01:32.190 --> 00:01:35.170
+Bên trong hệ thống đó
+bạn tạo nên một biến số về số lượng và
+
+00:01:35.170 --> 00:01:37.290
+bắt đầu nó với giá trị là 3.
+
+00:01:37.290 --> 00:01:42.780
+Khi tôi nói bắt đầu có nghĩa là
+cài đặt giá trị ban đầu của biến số là 3
+
+00:01:42.970 --> 00:01:44.100
+Sau đó tiếp tục và
+
+00:01:44.100 --> 00:01:45.770
+hiển thị số lượng này trên màn hình.
+
+00:01:47.090 --> 00:01:49.100
+Với bước thứ ba trong
+thành phần ứng dụng chính
+
+00:01:49.100 --> 00:01:50.970
+bạn cũng thêm vào
+một phương pháp giảm số và
+
+00:01:50.970 --> 00:01:53.970
+tạo một biến số về số lượng được
+bắt đầu với giá trị bằng 1.
+
+00:01:54.840 --> 00:01:57.210
+Sau đó tiếp tục và
+hiển thị số lượng này trên màn hình.
+
+00:01:57.240 --> 00:02:00.160
+Sau khi bạn đã
+hoàn thành tất cả các bước trên thì
+
+00:02:00.440 --> 00:02:02.100
+đây là những gì sẽ hiển thị trên màn hình.
+
+00:02:03.130 --> 00:02:08.190
+Khi bạn mở ứng dụng thì nó sẽ hiển thị
+số lượng là 2 và giá là 10$.
+
+00:02:08.190 --> 00:02:11.780
+Nếu bạn nhấn vào nút cộng,
+nó tăng số lượng lên thành 3.
+
+00:02:11.780 --> 00:02:16.170
+Nếu bạn nhấn vào nút trừ,
+khi đó nó giảm số lượng thành 1.
+
+00:02:16.170 --> 00:02:18.140
+Về mặt kỹ thuật,
+cách xử lý đó là không đúng
+
+00:02:18.140 --> 00:02:20.360
+vì lẽ ra nó phải xuống thành 2.
+
+00:02:20.360 --> 00:02:24.140
+Nhưng với hiện nay, bạn chỉ cần làm cho
+nút cộng này luôn đổi thành 3 và
+
+00:02:24.140 --> 00:02:25.690
+và nút trừ luôn đổi thành 1.
+
+00:02:25.690 --> 00:02:28.660
+Trong lần viết code sau,
+chúng ta sẽ sửa lại để cho
+
+00:02:28.660 --> 00:02:32.920
+mỗi lần bạn nhấn vào nút cộng,
+nó sẽ tiếp tục tăng tới 4, 5, 6, vv...
+
+00:02:33.160 --> 00:02:34.830
+và tương tự với nút trừ.
+
+00:02:35.860 --> 00:02:37.300
+Đối với hiện nay, bạn có thể để cho
+
+00:02:37.320 --> 00:02:39.140
+nút giá và nút đặt hàng như thế.
+
+00:02:39.160 --> 00:02:40.920
+Ngay bây giờ,
+phiên bản của tôi vừa cập nhật
+
+00:02:40.940 --> 00:02:44.000
+số lượng tới 5 và giá tới 25$, nhưng
+
+00:02:44.000 --> 00:02:46.610
+bạn có thể để mặc nó
+như những gì bạn có nãy giờ.
+
+00:02:46.610 --> 00:02:48.400
+Chúng ta sẽ sửa chữa điều này sau.
+
+00:02:48.400 --> 00:02:49.480
+Một lời mách nước hữu ích,
+
+00:02:49.480 --> 00:02:51.580
+nếu khi nào bạn muốn
+đưa ứng dụng về lại từ đầu
+
+00:02:51.610 --> 00:02:55.200
+bạn luôn có thể đóng ứng dụng lại.
+
+00:02:55.200 --> 00:02:57.220
+Trong thanh điều hướng của hệ thống,
+
+00:02:57.220 --> 00:03:00.260
+có một số các nút thi hành như
+back, home, và recent
+
+00:03:01.520 --> 00:03:03.180
+Nếu bạn nhấn vào nút thi hành recent,
+
+00:03:03.200 --> 00:03:04.500
+nó sẽ hiển thị tất cả các cửa sổ
+
+00:03:04.520 --> 00:03:06.160
+bạn đang thao tác trên điện thoại của bạn.
+
+00:03:06.480 --> 00:03:09.260
+Nếu bạn vuốt trái hay vuốt phải
+nó sẽ đóng ứng dụng của bạn,
+
+00:03:09.460 --> 00:03:11.640
+có nghĩa là
+nó sẽ ngưng hoạt động của ứng dụng.
+
+00:03:11.660 --> 00:03:14.370
+Nếu bạn vào màn hình chính và
+nhấp vào ứng dụng để
+
+00:03:14.370 --> 00:03:15.940
+khởi động trở lại, nó sẽ hiển thị
+
+00:03:15.980 --> 00:03:17.240
+trạng thái ban đầu của ứng dụng.
+

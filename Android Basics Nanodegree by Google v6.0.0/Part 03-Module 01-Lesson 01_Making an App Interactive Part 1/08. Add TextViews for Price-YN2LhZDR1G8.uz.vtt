@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.630 --> 00:00:03.290
+Avvalo, biz narxga matnli tasvirlarni 
+qo‘shishimiz uchun 
+
+00:00:03.290 --> 00:00:05.350
+ activity main tartibini 
+o‘zgartirishimiz kerak.
+
+00:00:06.680 --> 00:00:08.460
+Agar qurilmani previewi 
+hali ko‘rinmasa, 
+
+00:00:08.460 --> 00:00:12.270
+paydo bo‘lishi uchun preview so‘zi 
+bilan ushbu havolani bosishingiz mumkin.
+
+00:00:13.555 --> 00:00:16.315
+Endi biz XML ni o‘zgartirayotganda, 
+avtomatik ravishda yangilanishini ko‘ramiz.
+
+00:00:16.315 --> 00:00:18.875
+Sizga taqdim etgan ushbu skrinshotda 
+
+00:00:18.875 --> 00:00:22.445
+narx miqdorga o‘xshash 
+tarzda taqdim etildi.
+
+00:00:23.675 --> 00:00:26.855
+Qiymatni ko‘rsatish uchun bizda 
+sarlavha va matn ko‘rinishi mavjud.
+
+00:00:26.855 --> 00:00:29.995
+Natijada, biz matn ko‘rinishining 
+ushbu ikki elementini nusxalay olamiz 
+
+00:00:29.995 --> 00:00:31.295
+va keyin uning ostiga joylashtiramiz.
+
+00:00:32.305 --> 00:00:34.675
+Endi biz jarayonga mos keladigan qiymatlarni 
+harakatlantirishimiz kerak.
+
+00:00:35.700 --> 00:00:37.590
+Miqdor o‘rniga, 
+narxni ko‘rsatish kerak.
+
+00:00:40.140 --> 00:00:43.980
+Va identifikatorni narx matnida ko‘rinadigan 
+qilib o‘zgartirishimiz kerak.
+
+00:00:43.980 --> 00:00:46.100
+Siz bir xil identifikatorli ikkita ko‘rinishga 
+ega bo‘lishingiz mumkin.
+
+00:00:47.110 --> 00:00:50.240
+Har qanday holatda, quizda buni 
+narxning matnli ko‘rinishiga o‘zgartiring
+
+00:00:50.240 --> 00:00:52.050
+Bu kodimizga mos keladi.
+
+00:00:52.050 --> 00:00:54.270
+Bu yerda.
+Va bu xatoni tuzatadi.
+
+00:00:54.270 --> 00:00:59.030
+Yaxshi, oldindan qaraganda, bizda 
+narx sarlavhasi va ostida nol bor.
+
+00:00:59.030 --> 00:01:01.560
+Bundan tashqari, biz qiymatsiz 
+dollar olish uchun buni o‘zgartiramiz.
+
+00:01:01.560 --> 00:01:04.230
+Agar xohlasangiz valyuta 
+belgingizdan foydalana olasiz.
+
+00:01:04.230 --> 00:01:05.765
+Sarlavha katta harflarda, 
+
+00:01:05.765 --> 00:01:11.210
+narxning qiymati 16 spli matn o‘lchamiga 
+va qora rangdagi matnga ega bo‘ladi.
+
+00:01:11.210 --> 00:01:14.490
+Hozircha bu yaxshi, men narx 
+sarlavhasi va miqdoriy qiymat 
+
+00:01:14.490 --> 00:01:19.018
+o‘rtasida biroz vertikal bo‘shliq 
+bo‘lishi kerakligini angladim.
+
+00:01:19.018 --> 00:01:20.400
+Men shunchaki barcha ko‘rinishlarni 
+o‘zgartiraman, shunda ular 
+
+00:01:20.400 --> 00:01:23.140
+yuqori chegaraga ega, 
+qiymati 16dpli bo‘ladi.
+
+00:01:23.140 --> 00:01:28.110
+Va pastki chegaraning o‘rniga, 
+eng yuqori 16 darajaga 
+
+00:01:28.110 --> 00:01:31.230
+chiqmoqchiman va bu uni tuzatadi.
+
+00:01:31.230 --> 00:01:32.260
+Ajoyib
+
+00:01:32.260 --> 00:01:34.110
+Endi barcha ko‘rinishlar 
+teng masofada joylashdi.
+
+00:01:35.590 --> 00:01:37.550
+Agar XML yaxshi holatda 
+deb o‘ylasangiz, 
+
+00:01:37.550 --> 00:01:38.929
+uni qurilmangizda ishga tushiring.
+
+00:01:40.190 --> 00:01:41.260
+Ajoyib, bu yaxshi ko‘rinadi.
+
+00:01:42.580 --> 00:01:44.760
+Keling MainActivity faylida ishlaymiz.
+
+00:01:44.760 --> 00:01:49.670
+Agar Android DDMS oynasi paydo bo‘lsa, 
+uni ushbu belgi yordamida olib tashlashingiz mumkin.
+
+00:01:49.670 --> 00:01:51.900
+ MainActivity da sizdan nusxa 
+ko‘chirishingizni
+
+00:01:51.900 --> 00:01:54.460
+biz bergan displayPrice 
+metodini joylashtirishni so‘radik.
+
+00:01:55.510 --> 00:01:58.910
+Umid qilamanki, Android Studio ning 
+sozlamalarini avtomatik ravishda 
+
+00:01:58.910 --> 00:02:02.260
+import mahsulotlari aniq 
+bo‘lgan bo‘lsa o‘zgartirgansiz.
+
+00:02:02.260 --> 00:02:05.260
+Bu muammoning qaysi formatida 
+aytilishini bilmasdan turib 
+
+00:02:05.260 --> 00:02:06.340
+hal qilishga yordam beradi.
+
+00:02:06.340 --> 00:02:09.850
+Ammo endi, import g‘oyasi bilan 
+ilova raqam formati- bu Java raqamlarni 
+
+00:02:09.850 --> 00:02:13.890
+formatlash uchun avtomatik ravishda 
+taqdim etadigan narsa ekanligini biladi.
+
+00:02:13.890 --> 00:02:17.490
+So‘nggi qadamda biz submit order 
+metodini o‘zgartiramiz, 
+
+00:02:17.490 --> 00:02:21.290
+shunda tugma bosilganda miqdori 
+hamda narxni ham ko‘rsatamiz.
+

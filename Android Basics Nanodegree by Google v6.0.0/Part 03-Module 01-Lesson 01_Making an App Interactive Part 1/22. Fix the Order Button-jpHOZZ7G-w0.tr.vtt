@@ -1,0 +1,267 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.240 --> 00:00:02.680
+Bu sorunun tek bir
+doğru cevabı yok.
+
+00:00:02.680 --> 00:00:06.151
+Doğru uygulama davranışı ve
+yanlış uygulama davranışı arasındaki
+
+00:00:06.151 --> 00:00:10.105
+farkı nasıl en kolay bir şekilde
+anlayacağınıza göre değişir.
+
+00:00:10.105 --> 00:00:12.640
+Benim fark ettiklerim mesela şunlar:
+
+00:00:12.640 --> 00:00:15.990
+Yanlış davranışta sipariş
+tuşuna bastığımda,
+
+00:00:15.990 --> 00:00:19.990
+miktar her seferinde aynı değer
+çıkıyor, ama bu olmamalı.
+
+00:00:19.990 --> 00:00:22.370
+Aynı zamanda fiyatın bu miktar
+için doğru olduğunu,
+
+00:00:22.370 --> 00:00:25.010
+ama adet seçicideki seçili 
+son miktara göre
+
+00:00:25.010 --> 00:00:28.310
+değişmesi gerektiğini de görüyorum.
+
+00:00:28.310 --> 00:00:31.570
+Bu hata da miktarın aynı kalması
+gerekmesinden kaynaklanıyor.
+
+00:00:31.570 --> 00:00:34.470
+Bunun neden olduğunu anlamak
+için mevcut kodumuza bir bakalım.
+
+00:00:35.390 --> 00:00:39.320
+activity_main düzenleme dosyasında
+Order (Sipariş) butonumuz şurada.
+
+00:00:39.320 --> 00:00:40.576
+Order butonuna tıklayınca
+
+00:00:40.576 --> 00:00:43.102
+MainActivity'den submitOrder
+adlı metodu çağırıyorum.
+
+00:00:43.102 --> 00:00:47.890
+MainActivity.java dosyasında
+submitOrder metodu şurada.
+
+00:00:47.890 --> 00:00:51.030
+Bu henüz değiştirmediğimiz
+eski kodlardan biri.
+
+00:00:51.030 --> 00:00:54.570
+Biz de bir tam sayı miktar değişkeni
+belirliyor ve bunu ilk 5 seçiyoruz.
+
+00:00:54.570 --> 00:00:56.300
+Bunu ekranda görüntülüyoruz.
+
+00:00:56.300 --> 00:01:00.610
+Fiyatı da kahve sayısı çarpı
+5$ olarak görüntülüyoruz.
+
+00:01:00.610 --> 00:01:03.700
+Bu kod çok mantıklı gelmiyor,
+çünkü siparişi girerken
+
+00:01:03.700 --> 00:01:06.530
+bir yandan miktarı 
+güncellemeye çalışıyoruz.
+
+00:01:06.530 --> 00:01:09.411
+Diğer problem ise, bir tam sayı
+miktar değişkeni yaratıyoruz,
+
+00:01:09.411 --> 00:01:12.078
+oysa zaten kahve sayısını 
+hesap etmek için kullandığımız
+
+00:01:12.078 --> 00:01:14.757
+genel bir miktar değişkenimiz var.
+
+00:01:14.757 --> 00:01:18.026
+MainActivity'de zaten genel bir 
+miktar değişkenimiz vardı,
+
+00:01:18.026 --> 00:01:22.520
+dolayısıyla buradaki her metot
+bu miktar değişkenine işaret edebilir.
+
+00:01:22.520 --> 00:01:27.060
+Ama submitOrder metodu içinde yeni
+bir yerel miktar değişkeni yaratıyoruz.
+
+00:01:27.060 --> 00:01:30.410
+Teknik olarak genel değişkenle
+aynı adı taşıyan bir yerel değişken
+
+00:01:30.410 --> 00:01:32.200
+olması mümkündür.
+
+00:01:32.200 --> 00:01:34.812
+Bu sadece, bu metot özelinde
+
+00:01:34.812 --> 00:01:38.581
+bu değişken bildirildikten sonra
+miktardan bahsedilirken
+
+00:01:38.581 --> 00:01:41.985
+genel miktar değişkeni olan 2'ye değil,
+yerel miktar değişkeni olan
+
+00:01:41.985 --> 00:01:45.726
+5 değerli değişkene işaret
+edildiği anlamına gelir.
+
+00:01:45.726 --> 00:01:47.340
+Yani display(quantity) ve
+
+00:01:47.340 --> 00:01:51.500
+displayPrice(quantity*5)
+bu miktar değerine işaret eder.
+
+00:01:51.500 --> 00:01:54.080
+Bu yerel değişkenin kapsamı budur.
+
+00:01:54.080 --> 00:01:55.490
+Bu kapsamın dışında
+
+00:01:55.490 --> 00:01:59.510
+ne zaman miktardan bahsedilse
+kastedilen genel miktar değişkenidir.
+
+00:01:59.510 --> 00:02:00.370
+Eğer düşünürseniz,
+
+00:02:00.370 --> 00:02:03.430
+siparişinizi girdikten sonra
+yeni bir miktar yaratıp
+
+00:02:03.430 --> 00:02:07.040
+ekranda onu görüntülemek
+çok mantıklı değil.
+
+00:02:07.040 --> 00:02:10.370
+İstediğimiz, kahve sayısını 
+artırıp azaltırken
+
+00:02:10.370 --> 00:02:14.900
+takip ettiğimiz miktarı 
+kullanmaya devam etmek.
+
+00:02:14.900 --> 00:02:18.040
+Fiyatımızı bu şekilde hesaplamalıyız.
+
+00:02:18.040 --> 00:02:22.070
+Kodu düzeltmek içinse yerel bir 
+miktar değişkeni bildirmemeli,
+
+00:02:22.070 --> 00:02:25.130
+onun yerine genel miktar değişkenini
+kullanmaya devam etmeliyiz.
+
+00:02:25.130 --> 00:02:28.550
+Ekranımızdaki miktarı güncellemeye
+çalışmaktan da vazgeçmeliyiz.
+
+00:02:28.550 --> 00:02:31.270
+Artı ve eksi butonları ekranı
+doğru miktar değerleriyle
+
+00:02:31.270 --> 00:02:33.520
+zaten güncelliyor.
+
+00:02:33.520 --> 00:02:37.570
+Fakat submitOrder butonuyla hâlen
+fiyatı güncellemek istiyoruz.
+
+00:02:37.570 --> 00:02:41.600
+Ama bu sefer fiyatı miktar * 5
+olarak hesaplayacağız
+
+00:02:41.600 --> 00:02:43.990
+ve genel miktar değişkenini kullanacağız.
+
+00:02:43.990 --> 00:02:47.720
+Kodu, konuştuklarımız 
+uyarınca düzeltiyorum.
+
+00:02:47.720 --> 00:02:50.860
+Bakın miktar değişkeni
+nasıl mor renge dönüştü.
+
+00:02:50.860 --> 00:02:54.380
+Bu MainActivity'deki genel miktar
+değişkenini kullandığımızı gösterir.
+
+00:02:54.380 --> 00:02:57.940
+Bu butona basılması submitOrder
+metodunu etkinleştirir.
+
+00:02:57.940 --> 00:02:59.580
+Bu, ekranda fiyatı gösterir.
+
+00:02:59.580 --> 00:03:03.934
+Fiyat da genel miktar değişkeni
+çarpı 5 olarak hesaplanır.
+
+00:03:04.970 --> 00:03:07.040
+Doğru gözüküyor, hadi
+cihazda deneyelim.
+
+00:03:07.680 --> 00:03:09.530
+Şimdi de son test.
+
+00:03:09.530 --> 00:03:13.120
+Miktarı 6 yapıp Order 
+butonuna basacağım.
+
+00:03:13.120 --> 00:03:14.510
+Yaşasın 30$.
+
+00:03:14.510 --> 00:03:17.630
+Başka değerler de girelim de
+tesadüf olmadığına emin olalım.
+
+00:03:17.630 --> 00:03:20.398
+Doğru görünüyor.
+Bu da öyle.
+
+00:03:20.398 --> 00:03:22.600
+Harika, çalışıyor!
+
+00:03:22.600 --> 00:03:24.310
+İlk hata düzeltmenizi yaptınız.
+
+00:03:24.310 --> 00:03:26.400
+Gerçekten çok iyiydiniz.
+
+00:03:26.400 --> 00:03:28.970
+Uygulamamızın işlevsellik
+kısmı çok iyi çalışıyor.
+
+00:03:28.970 --> 00:03:32.280
+Ama itiraf etmeliyim ki
+kullanıcı arabirimi birazcık çirkin.
+
+00:03:32.280 --> 00:03:35.800
+Özellikle bu adet seçicinin biraz 
+arabirim bakımına ihtiyacı var.
+
+00:03:35.800 --> 00:03:37.090
+Şimdi de onu yapalım.
+

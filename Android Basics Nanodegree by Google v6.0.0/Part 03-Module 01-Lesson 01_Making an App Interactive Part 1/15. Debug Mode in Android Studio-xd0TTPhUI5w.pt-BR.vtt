@@ -1,0 +1,367 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.235 --> 00:00:02.469
+Estamos indo muito bem.
+
+00:00:02.501 --> 00:00:05.626
+À medida que criamos
+coisas mais elaboradas no app,
+
+00:00:05.651 --> 00:00:08.601
+teremos que aprimorar
+nossa depuração.
+
+00:00:08.626 --> 00:00:12.301
+Neste vídeo,
+aprenderemos a usar o depurador.
+
+00:00:12.326 --> 00:00:15.101
+Acessaremos o depurador
+usando o Android Studio.
+
+00:00:15.126 --> 00:00:19.426
+Ele nos ajudará a identificar
+e consertar erros no nosso código.
+
+00:00:19.451 --> 00:00:22.308
+O legal do depurador
+é que podemos pausar o app
+
+00:00:22.366 --> 00:00:23.901
+em determinada altura
+
+00:00:23.926 --> 00:00:27.626
+e inspecionar o estado do app
+mais detalhadamente.
+
+00:00:27.651 --> 00:00:30.026
+Normalmente, com o app
+rodando no dispositivo,
+
+00:00:30.051 --> 00:00:32.750
+todo o código
+é executado muito rápido.
+
+00:00:32.776 --> 00:00:35.626
+Em questão de milissegundos,
+ele responde a cliques,
+
+00:00:35.651 --> 00:00:39.176
+atualiza a tela,
+calcula o preço, etc.
+
+00:00:39.201 --> 00:00:43.201
+No depurador, podemos pausar
+numa linha de código específica
+
+00:00:43.226 --> 00:00:45.576
+e passar, uma por uma,
+pelas linhas do código,
+
+00:00:45.601 --> 00:00:48.001
+na velocidade que quisermos.
+
+00:00:48.501 --> 00:00:52.326
+Se quiser aprender mais técnicas
+de depuração no Android Studio,
+
+00:00:52.351 --> 00:00:57.226
+pesquise "depurar Android Studio".
+O primeiro é um bom link.
+
+00:00:57.251 --> 00:01:02.501
+É uma página developer.android.com,
+com diversas técnicas de depuração.
+
+00:01:02.526 --> 00:01:05.200
+Juntos, aprenderemos
+a usar pontos de parada.
+
+00:01:05.226 --> 00:01:07.501
+Você sempre poderá
+voltar a esta página
+
+00:01:07.526 --> 00:01:09.233
+para refrescar sua memória.
+
+00:01:09.601 --> 00:01:12.126
+Neste exercício,
+quero mostrar que seu Android
+
+00:01:12.151 --> 00:01:16.851
+executa uma linha por vez,
+de cabo a rabo, dentro de um método.
+
+00:01:16.876 --> 00:01:20.651
+Também veremos que clicar em "+"
+aciona o método increment(),
+
+00:01:20.676 --> 00:01:24.083
+e clicar em "-" aciona
+o método decrement().
+
+00:01:24.526 --> 00:01:26.876
+Primeiro,
+adicione um ponto de parada.
+
+00:01:26.901 --> 00:01:29.701
+Pontos de parada determinam
+uma linha de código
+
+00:01:29.726 --> 00:01:32.676
+onde o depurador deve parar
+ao atingi-la.
+
+00:01:32.701 --> 00:01:35.926
+O círculo vermelho indica
+que há um ponto nesta linha,
+
+00:01:35.951 --> 00:01:39.126
+a 25ª do nosso arquivo
+MainActivity.
+
+00:01:39.151 --> 00:01:43.076
+Você pode adicionar
+quantos pontos de parada quiser.
+
+00:01:43.101 --> 00:01:47.876
+Por agora, só adicionarei um,
+na 1ª linha do método increment().
+
+00:01:47.901 --> 00:01:51.951
+Então, eu clico no ícone do bug,
+executando o depurador.
+
+00:01:51.976 --> 00:01:56.251
+O app só respeitará os pontos de parada
+se estiver em modo depuração.
+
+00:01:56.276 --> 00:01:58.851
+Se executá-lo clicando
+no botão verde de "play",
+
+00:01:58.876 --> 00:02:01.601
+ele não irá parar
+nos pontos.
+
+00:02:01.626 --> 00:02:03.901
+Você pode ter visto,
+no dispositivo,
+
+00:02:03.926 --> 00:02:06.401
+uma caixa de diálogo
+de "aguardando depurador".
+
+00:02:06.426 --> 00:02:09.525
+Também há um botão pra finalizar o app,
+mas não clique nele.
+
+00:02:09.550 --> 00:02:13.375
+Espere o depurador anexar
+e a mensagem desaparecerá.
+
+00:02:13.400 --> 00:02:16.650
+O aplicativo rodará normalmente
+e você poderá interagir com ele.
+
+00:02:16.675 --> 00:02:19.125
+Em modo de depuração,
+esta janela aparecerá
+
+00:02:19.150 --> 00:02:21.525
+e exibirá o status
+do depurador.
+
+00:02:21.550 --> 00:02:25.257
+Se você não a vir,
+clique na aba chamada "debug".
+
+00:02:25.568 --> 00:02:27.425
+Se eu clicar em "+",
+
+00:02:27.450 --> 00:02:30.100
+é para o método increment()
+ser acionado
+
+00:02:30.125 --> 00:02:33.025
+e para o app parar
+neste ponto de parada.
+
+00:02:33.050 --> 00:02:34.800
+Vejamos o que acontece.
+
+00:02:34.825 --> 00:02:36.251
+Legal, ele para aqui.
+
+00:02:36.276 --> 00:02:40.001
+No painel do depurador,
+vemos uma lista de variáveis.
+
+00:02:40.026 --> 00:02:43.151
+Isto reflete o estado do app
+no momento da pausa.
+
+00:02:43.176 --> 00:02:45.326
+Não vemos a variável
+"quantity" ainda,
+
+00:02:45.351 --> 00:02:48.701
+pois esta linha de código
+ainda não foi executada.
+
+00:02:48.726 --> 00:02:51.526
+Há diversas formas
+de proceder com a depuração.
+
+00:02:51.551 --> 00:02:54.701
+Eu vou clicar
+na opção "pular etapa".
+
+00:02:54.726 --> 00:02:58.326
+Isto pulará da linha atual
+para a próxima linha do código.
+
+00:02:58.351 --> 00:03:01.426
+Agora, o app está pausado
+na linha 26.
+
+00:03:01.451 --> 00:03:03.976
+Terminamos de executar
+a linha 25,
+
+00:03:04.001 --> 00:03:07.416
+por isso vemos a variável
+"quantity" listada aqui.
+
+00:03:07.768 --> 00:03:11.976
+Esta lista mostra, também,
+o valor atual de cada variável.
+
+00:03:12.001 --> 00:03:15.733
+Podemos ver que o valor
+da variável "quantity" é 3,
+
+00:03:15.758 --> 00:03:17.433
+atribuído aqui em cima.
+
+00:03:17.826 --> 00:03:20.676
+Sabemos que o app está
+pausado neste ponto,
+
+00:03:20.701 --> 00:03:22.726
+porque, normalmente,
+ao clicar em "+",
+
+00:03:22.751 --> 00:03:26.026
+a quantidade seria
+atualizada para 3.
+
+00:03:26.051 --> 00:03:27.776
+Como ela continua sendo 2,
+
+00:03:27.801 --> 00:03:31.526
+sabemos que o método increment()
+não terminou de ser executado.
+
+00:03:31.551 --> 00:03:35.751
+Vamos pular para a linha seguinte.
+Agora, o método terminou.
+
+00:03:35.776 --> 00:03:39.376
+Como o processo de atualização
+da tela não nos interessa,
+
+00:03:39.401 --> 00:03:41.601
+vamos clicar
+em "resume program".
+
+00:03:41.626 --> 00:03:44.526
+Só nos interessa
+que a tela seja atualizada.
+
+00:03:44.551 --> 00:03:46.976
+Você pode usar
+estas outras opções
+
+00:03:47.001 --> 00:03:50.701
+para ver mais detalhes
+sobre a atualização da tela.
+
+00:03:50.726 --> 00:03:52.801
+O app está sendo
+executado normalmente,
+
+00:03:52.826 --> 00:03:54.651
+mas com o depurador
+ainda anexado.
+
+00:03:54.676 --> 00:03:56.351
+Se eu clicar
+em "+" de novo,
+
+00:03:56.376 --> 00:03:58.626
+ele irá parar
+neste ponto de parada.
+
+00:03:58.651 --> 00:04:00.626
+Se eu quiser desanexar
+o depurador
+
+00:04:00.651 --> 00:04:03.726
+para ele deixar de parar aqui
+quando eu acionar o "+",
+
+00:04:03.751 --> 00:04:06.257
+é só clicar em "parar",
+este botão vermelho.
+
+00:04:06.825 --> 00:04:08.351
+Agora, quando clico em "+",
+
+00:04:08.376 --> 00:04:11.751
+ele responde de imediato
+e atualiza o valor para 3.
+
+00:04:12.251 --> 00:04:14.576
+É hora de você tentar
+no seu computador.
+
+00:04:14.601 --> 00:04:16.125
+Adicione um ponto de parada
+
+00:04:16.151 --> 00:04:18.426
+nos métodos increment()
+e decrement().
+
+00:04:18.451 --> 00:04:20.226
+Depois rode o app
+em modo de depuração
+
+00:04:20.250 --> 00:04:24.076
+e tente acionar os pontos
+de parada no dispositivo.
+
+00:04:24.101 --> 00:04:25.801
+Depois verifique todas as linhas
+
+00:04:25.826 --> 00:04:27.868
+se assegurando de que
+a variável "quantity"
+
+00:04:27.901 --> 00:04:30.851
+aparece com o valor certo
+na lista de variáveis.
+
+00:04:30.851 --> 00:04:33.751
+Clique no botão de "play"
+para executar o app
+
+00:04:33.776 --> 00:04:35.551
+de modo convencional
+
+00:04:35.576 --> 00:04:38.875
+ou clique em "parar"
+e desanexe o depurador.
+

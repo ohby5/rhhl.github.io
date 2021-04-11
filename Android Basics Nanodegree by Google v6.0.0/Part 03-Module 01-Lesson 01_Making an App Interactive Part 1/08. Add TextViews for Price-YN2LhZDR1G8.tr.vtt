@@ -1,0 +1,168 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.630 --> 00:00:03.290
+Önce <i>MainActivity</i> yerleşimini 
+değiştirmemiz gerek,
+
+00:00:03.290 --> 00:00:05.350
+böylece fiyat için 
+<i>TextViews</i> ekleyebiliriz.
+
+00:00:06.680 --> 00:00:08.460
+Eğer cihaz önizleme
+hâlihazırda göstermiyorsa,
+
+00:00:08.460 --> 00:00:12.270
+ortaya çıkması için "Önizleme" yazan 
+buradaki bağlantıya tıklayabilirsiniz.
+
+00:00:13.555 --> 00:00:16.555
+XML'i değiştirdiğimizde, burada 
+otomatikman güncellendiğini görebiliriz.
+
+00:00:16.555 --> 00:00:18.875
+Size sağladığımız bu ekran görüntüsünde,
+
+00:00:18.875 --> 00:00:22.445
+fiyat miktara benzer şekilde sunulmuştu.
+
+00:00:23.675 --> 00:00:26.855
+Değeri göstermek için bir başlığımız 
+ve bir <i>TextView</i> var.
+
+00:00:26.855 --> 00:00:29.995
+Bu yüzden, bu iki <i>TextView</i>
+elementini kopyalayıp
+
+00:00:29.995 --> 00:00:31.425
+sonra altına yapıştırabiliriz.
+
+00:00:32.305 --> 00:00:34.745
+Şimdi senaryomuza uyması için 
+değerleri düzeltmeliyiz.
+
+00:00:35.700 --> 00:00:37.590
+Miktar yerine, fiyat demeli.
+
+00:00:40.140 --> 00:00:43.980
+Aynı zamanda ID'yi fiyat <i>TextView</i>
+olarak değiştirmeliyiz.
+
+00:00:43.980 --> 00:00:46.100
+Aynı ID ile iki görünüm olabilir.
+
+00:00:47.110 --> 00:00:50.370
+Her neyse, testte sizden bunu fiyat 
+<i>TextView</i> olarak değiştirmenizi istemiştik.
+
+00:00:50.370 --> 00:00:52.050
+Böylece kodumuza uyar.
+
+00:00:52.050 --> 00:00:54.270
+İşte. Böylece hata gider.
+
+00:00:54.270 --> 00:00:59.030
+Tamam, önizlemeye bakınca 
+fiyat başlığı ve altında sıfır var.
+
+00:00:59.030 --> 00:01:01.560
+Bunu sıfır dolar olarak da 
+değiştirmek istiyoruz.
+
+00:01:01.560 --> 00:01:04.230
+Eğer isterseniz kendi 
+para biriminizi kullanabilirsiniz.
+
+00:01:04.230 --> 00:01:05.765
+Başlık hep büyük harf ve
+
+00:01:05.765 --> 00:01:11.210
+asıl fiyat değerinin metin büyüklüğü 
+16sp ve siyah metin renginde.
+
+00:01:11.210 --> 00:01:14.490
+Şu ana dek iyi görünüyor, bir tek 
+fiyat başlığı ve miktar değeri
+
+00:01:14.490 --> 00:01:19.018
+arasında biraz daha fazla dikey boşluk 
+olması gerektiğini fark ettim.
+
+00:01:19.018 --> 00:01:20.400
+Bütün görünümleri değiştireceğim,
+
+00:01:20.400 --> 00:01:23.140
+böylece kenar boşluğu değeri 16 dp olur.
+
+00:01:23.140 --> 00:01:28.110
+Sonra burada alt kenar boşluğu yerine, 
+üst kenar boşluğunu 16 yapacağım
+
+00:01:28.110 --> 00:01:31.230
+ve bu aslında onu düzeltir.
+
+00:01:31.230 --> 00:01:32.260
+Güzel.
+
+00:01:32.260 --> 00:01:34.210
+Şimdi bütün görünümler 
+eşit aralıklarla ayrı.
+
+00:01:35.590 --> 00:01:37.550
+XML'in iyi durumda 
+olduğunu düşünüyorsanız,
+
+00:01:37.550 --> 00:01:38.999
+o zaman cihanızda çalıştırın.
+
+00:01:40.190 --> 00:01:41.490
+Güzel ve bu harika görünüyor.
+
+00:01:42.580 --> 00:01:44.760
+Şimdi <i>MainActivity</i> dosyasında çalışalım.
+
+00:01:44.760 --> 00:01:49.670
+Eğer bu Android DDMS penceresi çıkarsa, 
+bu oku kullanarak kapatabilirsiniz.
+
+00:01:49.670 --> 00:01:51.900
+<i>MainActivity</i>'de size 
+verdiğimiz <i>displayPrice</i>
+
+00:01:51.900 --> 00:01:54.460
+metodunu kopyalayıp 
+yapıştırmanızı istedik.
+
+00:01:55.510 --> 00:01:58.910
+Umarım kesin olan şeyleri 
+otomatikman içe aktarmak için
+
+00:01:58.910 --> 00:02:02.260
+Android Studio 
+tercihlerinizi değiştirdiniz.
+
+00:02:02.260 --> 00:02:05.260
+Bu hangi sayı formatı kastedildiğini
+bilmeme sorununu
+
+00:02:05.260 --> 00:02:06.340
+çözmeye yardımcı olur.
+
+00:02:06.340 --> 00:02:09.850
+Uygulama şimdi içe aktarma komutuyla, 
+sayı formatının Java'nın sayıların
+
+00:02:09.850 --> 00:02:13.890
+biçimlendirilmesini sağlamak için otomatik
+olarak sunduğu bir şey olduğunu biliyor.
+
+00:02:13.890 --> 00:02:17.490
+Son adım olarak, <i>submitOrder</i>
+metodunu değiştiriyoruz,
+
+00:02:17.490 --> 00:02:21.290
+böylece düğmeye basıldığında, hem miktar, 
+hem de fiyatı görüntüleriz.
+

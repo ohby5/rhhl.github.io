@@ -1,0 +1,203 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.250 --> 00:00:02.827
+Maintenant que nous avons soigneusement planifié ce
+sortir, aller de l'avant et
+
+00:00:02.827 --> 00:00:05.140
+Construire cette mise en page dans votre application.
+
+00:00:05.140 --> 00:00:09.481
+Vous aurez besoin de trouver et
+modifier le fichier activity_main.xml.
+
+00:00:09.481 --> 00:00:12.860
+Le fichier activity_main.xml de
+devrait déjà être
+
+00:00:12.860 --> 00:00:15.040
+Ouvrir lorsque vous créez votre projet.
+
+00:00:15.040 --> 00:00:18.710
+Si il est pas déjà ouvert, vous pouvez trouver
+ce fichier dans le dossier de mise en page.
+
+00:00:18.710 --> 00:00:22.420
+Sous res en vertu de l'application dans
+la vue du projet de votre application,
+
+00:00:22.420 --> 00:00:24.680
+Qui répertorie tous les fichiers dans votre application.
+
+00:00:24.680 --> 00:00:27.490
+Le volet de conception est ouvert par défaut,
+où vous pouvez glisser et
+
+00:00:27.490 --> 00:00:31.240
+Widgets d'abandon de cette palette
+ici plus sur l'application.
+
+00:00:31.240 --> 00:00:34.900
+Cependant, je veux que vous utilisez le volet texte
+de sorte que vous pouvez écrire votre XML ici.
+
+00:00:34.900 --> 00:00:38.970
+A tout moment, lorsque vous modifiez votre XML,
+vous pouvez toujours sélectionner ce contenu et
+
+00:00:38.970 --> 00:00:40.330
+Reformater.
+
+00:00:40.330 --> 00:00:43.840
+Dans la partie supérieure d'Android Studio vous
+devriez voir un tas d'éléments de menu.
+
+00:00:43.840 --> 00:00:47.695
+Cliquez sur le Code, et alors vous aurez
+trouver une option reformater Code.
+
+00:00:47.695 --> 00:00:50.504
+Et voici le raccourci clavier
+Si vous êtes sur Mac.
+
+00:00:50.504 --> 00:00:53.460
+Vous pouvez reformater le code et
+texte sélectionné est bien.
+
+00:00:53.460 --> 00:00:54.330
+Juste cliquez sur Exécuter et
+
+00:00:54.330 --> 00:00:58.700
+Alors il reformate automatiquement votre code
+de fixer l'espacement et les onglets.
+
+00:00:58.700 --> 00:01:01.090
+Vous pouvez également sélectionner le code Réorganiser.
+
+00:01:01.090 --> 00:01:04.519
+Il modifie l'ordre des attributs
+ici de sorte qu'il est dans l'ordre préféré
+
+00:01:04.519 --> 00:01:07.180
+Selon les Android
+directives de style de code.
+
+00:01:07.180 --> 00:01:09.810
+Et maintenant, le code est beaucoup plus facile à lire
+dans ce format.
+
+00:01:09.810 --> 00:01:11.900
+Si vous voulez un aperçu de ce que ce code
+ressemble,
+
+00:01:11.900 --> 00:01:13.424
+Vous pouvez cliquer sur le bouton Aperçu
+ici.
+
+00:01:14.515 --> 00:01:16.705
+Et cela montre ce qu'il
+ressembler sur un périphérique.
+
+00:01:16.705 --> 00:01:19.195
+Mais ce ne sont pas un substitut pour
+faire fonctionner sur votre appareil, de sorte
+
+00:01:19.195 --> 00:01:21.385
+Vous devez toujours exécuter sur
+votre appareil périodiquement.
+
+00:01:22.535 --> 00:01:26.555
+Une fois que vous construisez sur ce tracé,
+s'il vous plaît également attribuer un nom de vue ID
+
+00:01:26.555 --> 00:01:29.715
+Sur ce deuxième TextView
+ici qui affiche un 0.
+
+00:01:29.715 --> 00:01:35.410
+Donnez-lui un nom de vue d'ID
+@ + id / quantity_text_view.
+
+00:01:35.410 --> 00:01:39.040
+Utilisez ce nom exact afin
+qu'il corresponde notre code plus tard.
+
+00:01:39.040 --> 00:01:42.770
+Rappelez-vous que nous avons appris à assigner les ID
+à vue dans la première leçon.
+
+00:01:42.770 --> 00:01:46.770
+Cet exemple a été pour la disposition relative,
+où nous avons eu un dîner pour
+
+00:01:46.770 --> 00:01:49.010
+Nos meilleurs amis et nos frenemies.
+
+00:01:49.010 --> 00:01:51.590
+En outre, la raison pour laquelle nous
+donner ce point de vue, mais un ID
+
+00:01:51.590 --> 00:01:55.620
+Pas les autres parce que nous voudrons
+se référer plus tard à cette sorte TextView
+
+00:01:55.620 --> 00:01:58.100
+Que nous pouvons mettre à jour pour augmenter ou diminuer la quantité
+.
+
+00:01:59.370 --> 00:02:01.890
+Pour coiffer les vues,
+Il ya quelques petits changements.
+
+00:02:01.890 --> 00:02:07.490
+Cette TextView ici devrait avoir un texte
+taille de 16sp et utiliser une couleur de police noire.
+
+00:02:07.490 --> 00:02:11.118
+Vous pouvez utiliser la couleur de police du système noir
+comme nous vous avons montré dans la leçon une ou
+
+00:02:11.118 --> 00:02:14.340
+Vous pouvez utiliser la couleur noire hexagonale,
+qui nous avons inclus ci-dessous.
+
+00:02:14.340 --> 00:02:18.060
+Il ya aussi 16 dp de l'espace dans
+entre chacune de ces vues.
+
+00:02:18.060 --> 00:02:20.880
+Je sais que cela est la première fois que
+vous allez être l'ajout d'un bouton pour
+
+00:02:20.880 --> 00:02:22.260
+Votre mise en page XML.
+
+00:02:22.260 --> 00:02:25.080
+Ceci est une très grande opportunité pour
+vous de pratiquer votre recherche Google
+
+00:02:25.080 --> 00:02:28.400
+Compétences afin de comprendre comment
+pour ajouter un bouton à votre disposition.
+
+00:02:28.400 --> 00:02:31.390
+Si vous obtenez vraiment coincé, vous pouvez vérifier
+l'indice dans les notes de l'instructeur.
+
+00:02:31.390 --> 00:02:32.470
+Comme vous construire cette place,
+
+00:02:32.470 --> 00:02:36.300
+Lancer périodiquement l'application sur votre
+de l'appareil pour vérifier qu'il fonctionne comme prévu.
+
+00:02:36.300 --> 00:02:39.290
+Lorsque vous avez terminé avec tout cela,
+répondre à cette question.
+
+00:02:39.290 --> 00:02:40.730
+Qu'est-ce qui se passe quand vous
+cliquez sur ce bouton?
+

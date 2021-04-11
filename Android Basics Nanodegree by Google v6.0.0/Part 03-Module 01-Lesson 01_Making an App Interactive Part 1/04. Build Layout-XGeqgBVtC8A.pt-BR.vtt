@@ -1,0 +1,320 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.205 --> 00:00:03.862
+Para construir este layout,
+preciso abrir o arquivo <i>activity_main.xml</i>.
+
+00:00:04.660 --> 00:00:06.467
+Sei que preciso de um LinearLayout vertical
+
+00:00:06.640 --> 00:00:08.707
+para colocar essas <i>Views</i>
+em uma coluna vertical.
+
+00:00:09.340 --> 00:00:12.245
+Primeiro vou mudar o RelativeLayout
+em um <i>LinearLayout</i>.
+
+00:00:12.840 --> 00:00:16.387
+Imediatamente, ele mostra um erro
+na tag de abertura
+
+00:00:16.540 --> 00:00:20.547
+que não coincide com a tag de fechamento,
+assim, copio daqui para colar aqui.
+
+00:00:20.840 --> 00:00:21.874
+Agora as tags coincidem.
+
+00:00:22.085 --> 00:00:23.520
+Em seguida, vou adicionar as <i>Views</i>.
+
+00:00:23.930 --> 00:00:25.720
+Primeiro, tenho o <i>TextView</i> de Quantidade.
+
+00:00:25.720 --> 00:00:29.353
+Vou aproveitar este <i>TextView</i>
+e alterar seu texto para Quantidade.
+
+00:00:29.821 --> 00:00:31.690
+O próximo é o <i>TextView</i> com o valor zero.
+
+00:00:31.960 --> 00:00:34.594
+Posso copiar o primeiro <i>TextView</i>
+e colar aqui abaixo deste.
+
+00:00:34.971 --> 00:00:37.965
+Vou alterar o texto para o texto do valor 0
+coincidir com a imagem da tela.
+
+00:00:38.430 --> 00:00:40.977
+O último filho neste LinearLayout é o botão.
+
+00:00:41.500 --> 00:00:44.491
+Ainda não adicionamos botão no layout,
+então vamos buscar no Google.
+
+00:00:44.994 --> 00:00:47.920
+Ao abrir navegador,
+procure por "botão Android."
+
+00:00:48.160 --> 00:00:51.708
+Este primeiro link parece bom,
+é um site developer.android.com.
+
+00:00:52.540 --> 00:00:54.043
+Aqui está a documentação para o botão.
+
+00:00:54.215 --> 00:00:55.920
+Podemos ignorar a maior parte do texto.
+
+00:00:56.700 --> 00:00:58.697
+Vamos rolar a tela para ler
+o resumo da Classe.
+
+00:00:59.211 --> 00:01:02.188
+O texto trata de um código Java,
+que ainda não aprendemos.
+
+00:01:02.880 --> 00:01:05.651
+Mas aqui, temos arquivos
+em XML para um botão.
+
+00:01:06.300 --> 00:01:08.457
+Podemos copiar isto
+e ver faz em nosso código.
+
+00:01:09.257 --> 00:01:12.420
+Em nosso layout vou adicionar o botão
+abaixo dessas duas <i>TextViews</i>.
+
+00:01:12.748 --> 00:01:15.377
+E colar o código da documentação
+neste local do nosso código.
+
+00:01:16.011 --> 00:01:18.137
+E agora, em vez da <i>string</i>
+de "autodestruição",
+
+00:01:18.154 --> 00:01:21.480
+vamos para algo mais amigável,
+​​como o nosso Pedido.
+
+00:01:22.280 --> 00:01:24.245
+Não precisamos do resto,
+podemos apagar a linha.
+
+00:01:24.900 --> 00:01:27.034
+Legal, você agora tem uma <i>TextView</i> de Quantidade,
+
+00:01:27.125 --> 00:01:29.371
+uma <i>TextView</i> que diz 0,
+e um botão de Pedido.
+
+00:01:30.320 --> 00:01:32.220
+Vamos executar no app,
+e ver como se parece,
+
+00:01:32.220 --> 00:01:33.685
+apertando o botão verde Play.
+
+00:01:34.461 --> 00:01:36.461
+Vemos aqui embaixo
+ele sendo construído.
+
+00:01:37.058 --> 00:01:38.886
+Opa, não é isso que queremos.
+
+00:01:39.180 --> 00:01:43.150
+Parece que o LinearLayout
+é horizontal ao invés de vertical.
+
+00:01:43.434 --> 00:01:46.571
+Então, vamos garantir que adicionamos
+o atributo de orientação.
+
+00:01:47.794 --> 00:01:51.245
+Vamos mudar para o texto
+android;orientation=vertical.
+
+00:01:52.020 --> 00:01:53.218
+Isso deve resolver o problema.
+
+00:01:53.550 --> 00:01:54.640
+Vamos executar novamente.
+
+00:01:55.495 --> 00:01:56.620
+Ok, agora está melhor.
+
+00:01:57.010 --> 00:01:59.815
+Os três elementos filhos exibidos
+em uma coluna vertical.
+
+00:02:00.240 --> 00:02:01.680
+Só falta customizar esses campos
+
+00:02:01.690 --> 00:02:04.246
+para que fiquem parecidos
+com o nosso modelo de tela.
+
+00:02:05.230 --> 00:02:08.596
+Na tela vemos a <i>TextView</i> 
+de Quantidade em maiúscula.
+
+00:02:09.570 --> 00:02:13.513
+Na Lição 1, conhecemos o atributo
+chamado android:textAllCaps.
+
+00:02:13.930 --> 00:02:15.612
+E ele aparece aqui
+no autocompletar.
+
+00:02:16.178 --> 00:02:18.110
+Se aparecer isso,
+basta apertar Enter.
+
+00:02:18.274 --> 00:02:20.457
+E será automaticamente adicionado ao código.
+
+00:02:21.400 --> 00:02:24.148
+Definimos esse valor como <i>true</i>,
+porque queremos tudo em maiúsculas.
+
+00:02:25.009 --> 00:02:28.270
+O motivo de usar esse atributo
+para capitalizar o texto,
+
+00:02:28.560 --> 00:02:30.628
+é para se quisermos mudar
+a interface do usuário,
+
+00:02:30.810 --> 00:02:33.097
+e mostrar QUANTIDADE
+em letras minúsculas, como aqui,
+
+00:02:33.298 --> 00:02:37.370
+tudo o que precisaremos fazer
+é remover este atributo sem alterar o texto.
+
+00:02:38.000 --> 00:02:39.820
+Para a <i>TextView</i> que exibe o valor "0",
+
+00:02:40.190 --> 00:02:42.664
+devemos usar o texto com tamanho 16 sp.
+
+00:02:42.849 --> 00:02:43.850
+Vou adicionar agora,
+
+00:02:43.895 --> 00:02:46.760
+a sugestão surge no autocompletar,
+e então aperto Enter.
+
+00:02:47.194 --> 00:02:50.251
+Vou escolher então 16 sp para o valor.
+
+00:02:50.651 --> 00:02:52.588
+Também queremos fonte de cor preta.
+
+00:02:53.113 --> 00:02:55.050
+Vou usar o sistema de cores Android para o preto,
+
+00:02:55.255 --> 00:02:56.953
+com esta referência aqui.
+
+00:02:57.380 --> 00:03:00.558
+Legal, assim concluímos as <i>TextViews</i>
+de Quantidade e do valor "0".
+
+00:03:00.845 --> 00:03:02.434
+O botão de Pedido está bem sim,
+
+00:03:02.738 --> 00:03:06.116
+ele capitalizará automaticamente texto em um botão,
+
+00:03:06.554 --> 00:03:08.382
+e a largura e altura de wrap_content.
+
+00:03:08.820 --> 00:03:11.502
+Precisamos corrigir o espaço vertical aqui.
+
+00:03:11.820 --> 00:03:16.960
+Queremos 16 dp de padding ou margem
+entre <i>TextViews</i> de Quantidade e "0".
+
+00:03:17.190 --> 00:03:21.083
+Também queremos distância de 16 dp
+entre o "0" e o botão de Pedido.
+
+00:03:21.396 --> 00:03:23.409
+Você pode implementar isso
+de maneiras diferentes,
+
+00:03:23.900 --> 00:03:27.969
+Para este botão vou adicionar como <i>layout_marginTop</i>,
+
+00:03:31.377 --> 00:03:34.645
+E como <i>layout_marginBottom</i>
+para a <i>TextView</i> Quantidade.
+
+00:03:37.810 --> 00:03:40.228
+Fique à vontade para usar outro modo,
+desde que fique assim.
+
+00:03:40.810 --> 00:03:43.384
+Escolhi fazer uma margem inferior
+e uma margem superior
+
+00:03:43.409 --> 00:03:46.516
+é porque sei que esta área central
+irá mudar mais tarde.
+
+00:03:47.040 --> 00:03:50.356
+Será alterado para seletor de quantidade
+com um botões de somar e subtrair.
+
+00:03:50.578 --> 00:03:53.270
+e eu ainda quero ter 16 dp de espaço
+
+00:03:53.531 --> 00:03:56.257
+entre o título Quantidade e o seletor.
+
+00:03:56.720 --> 00:03:57.765
+O mesmo vale para o botão.
+
+00:03:58.577 --> 00:04:00.737
+Ok, vamos executá-lo novamente
+em nosso dispositivo.
+
+00:04:01.280 --> 00:04:02.851
+Legal, ficou exatamente como queríamos.
+
+00:04:03.350 --> 00:04:05.257
+O TextView QUANTIDADE
+está em maiúsculas,
+
+00:04:05.852 --> 00:04:11.420
+a TextView "0" tem fonte preta,
+16 de tamanho, e o botão de Pedido aqui.
+
+00:04:11.710 --> 00:04:14.540
+Temos também 16 dp de espaço entre as <i>Views</i>
+
+00:04:15.760 --> 00:04:17.944
+Bom trabalho! Opa, e eu quase esqueci.
+
+00:04:18.240 --> 00:04:21.011
+O questionário também pergunta
+o que ocorre quando você aperta o botão.
+
+00:04:21.560 --> 00:04:24.104
+Bem, na verdade, ele não faz nada,
+
+00:04:24.449 --> 00:04:25.704
+pelo menos no momento.
+
+00:04:25.889 --> 00:04:27.735
+Assista para descobrir
+o que acontece a seguir.
+

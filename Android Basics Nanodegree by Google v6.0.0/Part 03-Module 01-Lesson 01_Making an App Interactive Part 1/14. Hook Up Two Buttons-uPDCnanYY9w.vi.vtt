@@ -1,0 +1,416 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:01.280 --> 00:00:04.640
+Bước đầu tiên là sửa đổi
+bố cục activity_main ở tập tin XML
+
+00:00:04.640 --> 00:00:07.300
+để ứng dụng trông giống như thế này.
+
+00:00:07.300 --> 00:00:10.090
+Hãy cùng vào Android Studio và
+nhìn vào tập tin này.
+
+00:00:10.090 --> 00:00:12.800
+Đây là tập tin mang bố cục activity_main
+XML của chúng ta.
+
+00:00:12.800 --> 00:00:16.540
+Và chúng ta sự duyệt trước trên thiết bị
+xuất hiện trên phía bên tay phải.
+
+00:00:16.540 --> 00:00:20.390
+Tôi có thể nhấp vào cái kính lúp này 
+để phóng to trong thiết bị này.
+
+00:00:20.390 --> 00:00:21.270
+Giờ tốt hơn rồi đấy.
+
+00:00:22.350 --> 00:00:25.550
+Để xây dựng bố cục như mong muốn, 
+tôi muốn thêm vào một nút cộng đầu tiên.
+
+00:00:25.550 --> 00:00:28.650
+vào giữa đầu dòng của số lượng và
+giá trị của số lượng
+
+00:00:28.650 --> 00:00:32.790
+Chúng ta đã có một nút trong bố cục
+của chúng ta,
+để mà sử dụng cho nút order dưới đây.
+
+00:00:32.790 --> 00:00:36.330
+Để tôi có thể sao chép dòng mã này và
+sau đó tôi sẽ dán nó lại
+
+00:00:36.330 --> 00:00:39.880
+vào giữa đầu dòng của số lượng và
+giá trị của số lượng.
+
+00:00:39.880 --> 00:00:42.450
+Giờ thì, tôi thấy nút kia xuất hiện 
+ở nơi chuẩn xác, nhưng
+
+00:00:42.450 --> 00:00:45.470
+Tôi cần thay đổi thông tin
+để nó nói về cộng thay vì order.
+
+00:00:47.010 --> 00:00:48.660
+Hay đấy!
+Và giờ tôi cũng sẽ loại bỏ
+
+00:00:48.660 --> 00:00:52.790
+lề trên cùng vì chúng ta đã có 
+lề 16 dps từ phía dưới cùng
+
+00:00:52.790 --> 00:00:54.310
+của khung văn bản này.
+
+00:00:54.310 --> 00:00:56.300
+Nên là tiếp tục và xóa cái đó đi.
+
+00:00:56.300 --> 00:00:59.940
+Nút này khá to và trong bài hỏi đáp
+chúng tôi đã bảo bạn thay đổi kích cỡ
+
+00:00:59.940 --> 00:01:02.880
+của nó thành 48 dps cao và 48 dps rộng.
+
+00:01:02.880 --> 00:01:04.800
+Vậy nên tôi sẽ tiếp tục chỉnh sửa
+nút XML ở đây.
+
+00:01:06.010 --> 00:01:08.100
+Tốt rồi.
+Giờ nó có kích cỡ chuẩn rồi.
+
+00:01:08.100 --> 00:01:12.030
+Giờ tôi có thể sao chép XML này và
+dán nó dưới giá trị củasố lượng
+
+00:01:12.030 --> 00:01:13.980
+để chúng ta có nút trừ.
+
+00:01:13.980 --> 00:01:17.430
+Tôi đã xóa khoảng trắng vì
+dựa vào hướng dẫn 
+phong cách lập trình Android,
+
+00:01:17.430 --> 00:01:20.690
+bạn không nên có
+những khoảng trắng thừa trong mã của bạn.
+
+00:01:20.690 --> 00:01:25.050
+Giờ tôi sẽ thay đổi thông tin của
+nút này thành trừ.
+
+00:01:26.070 --> 00:01:29.210
+Nó đã có chiều rộng và chiều cao 48 dps.
+
+00:01:29.210 --> 00:01:31.010
+Bây giờ, nút cộng và nút trừ
+đã xuất hiện.
+
+00:01:32.320 --> 00:01:35.990
+Chúng ta đã đề cập khi trước rằng 
+chúng ta cũng muốn giá trị ban đầu là 2 và
+
+00:01:35.990 --> 00:01:38.280
+giá tiền ban đầu là 10$.
+
+00:01:38.280 --> 00:01:39.450
+Vậy giờ hãy thực hiện điều đó.
+
+00:01:40.410 --> 00:01:42.620
+Đây là bố cục của chúng ta cho tới thời điểm này.
+
+00:01:42.620 --> 00:01:46.170
+Hãy quay trờ lại hình ảnh của bài hỏi đáp
+để kiểm tra quá trình của chúng ta.
+
+00:01:46.170 --> 00:01:49.430
+Chúng ta đã thay đổi bổ cục thành công,
+nhưng chúng ta cũng cần thay đổi
+
+00:01:49.430 --> 00:01:52.610
+nút cộng sao cho khi 
+nó được nhập, nó sẽ chạy phương thức tăng.
+
+00:01:52.610 --> 00:01:55.720
+Và khi nút trừ được nhấp vào,
+chúng ta cần chạy phương thức giảm.
+
+00:01:56.830 --> 00:02:00.530
+Quay trở lại Android Studio,
+tôi sẽ thay đổi nút cộng để
+
+00:02:00.530 --> 00:02:04.390
+giá trị của thuộc tính Android 
+khi bị nhấp là tăng.
+
+00:02:04.390 --> 00:02:07.060
+Điều này có nghĩa là khi nút cộng
+được nhấp, sẽ chạy một phương thức
+
+00:02:07.060 --> 00:02:09.430
+gọi là tăng trong main activity.
+
+00:02:09.430 --> 00:02:12.880
+Giống với nút trừ, tôi sẽ
+thay đổi thuộc tính khi bị nhấp
+
+00:02:12.880 --> 00:02:14.370
+để giá trị là giảm.
+
+00:02:16.470 --> 00:02:19.350
+Tôi sẽ lưu lại, và
+sau đó chạy trên thiết bị này.
+
+00:02:20.780 --> 00:02:25.420
+Bố cục nhìn ổn đấy, nhưng nếu tôi ấn
+nút cộng, nó bị đóng và tắt.
+
+00:02:25.420 --> 00:02:27.560
+Bạn vẫn nhớ tôi đã cho bạn thấy 
+những ghi chép lại
+
+00:02:27.560 --> 00:02:29.310
+tập hợp các dấu vết của lỗi chứ?
+
+00:02:29.310 --> 00:02:32.560
+Những ghi chép này đã được mở ngầm sẵn,
+nên hãy kéo mũi tên này lên,
+
+00:02:32.560 --> 00:02:35.320
+để chúng ta có thể nhìn rõ hơn thông báo này.
+
+00:02:35.320 --> 00:02:38.020
+Nếu chúng ta cuộn lên, chúng tay sẽ thấy
+đây là lỗi của chúng ta.
+
+00:02:39.300 --> 00:02:42.550
+Đây là ứng dụng của chúng ta, justjava và
+nó thông báo lỗi illegal state exception.
+
+00:02:43.790 --> 00:02:47.040
+Nếu tôi cuộn sang phải, tôi có thể
+nhìn thấy thông báo nhiều hơn.
+
+00:02:47.040 --> 00:02:50.750
+Thông báo lỗi báo rằng không thể tìn thấy
+phương thức tăng trong activity.
+
+00:02:50.750 --> 00:02:52.150
+MainActivity.
+
+00:02:52.150 --> 00:02:55.940
+Lỗi này giống với lỗi
+mà chúng ta đã dính trong video trước
+
+00:02:55.940 --> 00:02:58.850
+Về cơ bản, không có phương thức nào 
+gọi là tăng trong main activity.
+
+00:02:58.850 --> 00:03:01.760
+Và điều đó đã được biết trước 
+vì chúng ta chưa thực hiện thay đổi đó.
+
+00:03:02.820 --> 00:03:03.760
+Ở bước 2,
+
+00:03:03.760 --> 00:03:07.150
+chúng ta phải thêm vào một phương thức 
+tăng vào main activity, và tạo ra
+
+00:03:07.150 --> 00:03:12.230
+một biến số lượng được khởi tạo
+bằng 3, sau đó hiển thị số lượng luôn.
+
+00:03:12.230 --> 00:03:15.100
+Để làm được điều này,
+tôi sẽ mở tập tin Java main activity.
+
+00:03:15.100 --> 00:03:18.160
+Cài đặt trạng thái xử lý cho nút cộng 
+sẽ rất giống với
+
+00:03:18.160 --> 00:03:20.900
+cách mà chũng ta cài đặt trạng thái xử lý 
+cho nút order.
+
+00:03:20.900 --> 00:03:23.490
+Vậy hãy cùng sao chép phương thức
+xử lý cho nút order.
+
+00:03:25.030 --> 00:03:28.400
+Ngay lập tức, tôi có một lỗi thông báo rằng submit order is ready to find
+
+00:03:28.400 --> 00:03:29.600
+trong main activity.
+
+00:03:29.600 --> 00:03:32.980
+Bạn không thể có hai phương thức 
+giống y hệt nhau trong main activity.
+
+00:03:32.980 --> 00:03:34.350
+Nhưng điều đó không sao cả.
+
+00:03:34.350 --> 00:03:36.770
+vì dù sao, tôi sẽ thay đổi cái này 
+thành phương thức tăng.
+
+00:03:37.860 --> 00:03:38.790
+giờ thì, không còn lỗi.
+
+00:03:39.820 --> 00:03:42.910
+Tôi sẽ sửa đổi chú thích
+vì giờ là phương thức mới.
+
+00:03:42.910 --> 00:03:45.610
+Tôi sẽ cập nhật chú thích
+về nút cộng
+
+00:03:45.610 --> 00:03:47.590
+thay vì nút order.
+
+00:03:47.590 --> 00:03:51.190
+Trong phương thức tăng, tôi sẽ
+tạo ra một biến số lượng số nguyên.
+
+00:03:51.190 --> 00:03:56.180
+Tôi sẽ khởi tạo nó với giá trị = 3, như bài hỏi đáp đã yêu cầu.
+
+00:03:56.180 --> 00:03:59.030
+Sau đó, tôi sẽ hiển thị số lượng này 
+ra màn hình.
+
+00:03:59.030 --> 00:04:00.820
+Tôi không cần cập nhật giá ở phương thức này,
+
+00:04:00.820 --> 00:04:03.110
+nên tôi có thể xóa đi dòng mã này.
+
+00:04:03.110 --> 00:04:04.690
+Trông ổn đấy, nên hãy kiểm tra nào.
+
+00:04:06.030 --> 00:04:10.020
+Giờ khi mà tôi nhấp vào nút cộng
+, số lượng thực sự tăng thành 3.
+
+00:04:10.020 --> 00:04:11.670
+Nhìn ổn đấy.
+
+00:04:11.670 --> 00:04:14.240
+Nhưng nếu mà tôi ấn nút trừ,
+ứng dụng liền bị đóng và tắt
+
+00:04:15.740 --> 00:04:19.070
+Hãy cùng kiểm tra những ghi chép, tôi sẽ 
+cuốn tới dưới cùng để kiểm tra hết.
+
+00:04:19.070 --> 00:04:22.010
+những ghi chép gần đây, và cuốn lên 
+để coi những lỗi cuối cùng.
+
+00:04:22.600 --> 00:04:23.690
+Với ứng dụng của ta,
+
+00:04:23.690 --> 00:04:26.330
+có một lỗi IllegalStateException
+vì nó không thể tìm thấy
+
+00:04:26.330 --> 00:04:28.610
+việc giảm trong activity của chúng ta.
+
+00:04:28.610 --> 00:04:32.580
+Cái đó cũng được biết trước vì chúng ta đã
+không thêm vào phương thức giảm.
+
+00:04:32.580 --> 00:04:33.600
+Hãy tiếp tục làm điều này.
+
+00:04:35.050 --> 00:04:37.790
+Tôi sẽ sao chép phương thức này và
+dán nó dưới đây.
+
+00:04:38.980 --> 00:04:40.610
+Tôi sẽ thay đổi tên thành giảm.
+
+00:04:42.110 --> 00:04:43.980
+Giờ, lời chú thích này cần đc cập nhật.
+
+00:04:43.980 --> 00:04:46.730
+Phương thức này được kích hoạt khi 
+mà nút trừ được nhấp vào.
+
+00:04:48.100 --> 00:04:50.190
+Để rõ hơn, chúng ta 
+cần làm trong phương thức này,
+
+00:04:50.190 --> 00:04:52.100
+hãy quay trở lại bài hỏi đáp.
+
+00:04:52.100 --> 00:04:54.190
+Chúng ta đã xong được 2 bước cho tới bây giờ.
+
+00:04:54.190 --> 00:04:57.210
+Bước này là bước cuối dành cho phương thức giảm trong main activity.
+
+00:04:57.210 --> 00:04:59.700
+Chúng ta tạo ra một biến 
+số lượng và khởi tạo giá trị thành 1.
+
+00:05:00.920 --> 00:05:02.840
+Sau đó chúng ta hiển thị
+số lượng lên màn hình.
+
+00:05:04.140 --> 00:05:06.990
+Trong phương thức giảm, chúng ta tạo ra 
+một biến số lượng số nguyên.
+
+00:05:06.990 --> 00:05:09.160
+Tôi sẽ khởi tạo
+nó với giá trị 1 và
+
+00:05:09.160 --> 00:05:11.340
+sau đó hiển thị số lượng ra màn hình.
+
+00:05:12.870 --> 00:05:14.650
+Giờ hãy chạy ứng dụng 
+trên thiết bị của ta.
+
+00:05:15.570 --> 00:05:18.790
+Okay, dùng ngón tay của bạn 
+và giờ ứng dụng không còn bị đóng và tắt.
+
+00:05:18.790 --> 00:05:22.350
+Nếu tôi ấn vào nút trừ,
+số giảm đi thành 1.
+
+00:05:22.350 --> 00:05:25.250
+Nếu tôi ấn vào nút cộng,
+số lượng tăng thành 3.
+
+00:05:25.250 --> 00:05:27.970
+Vậy thì, những nút này đã hoạt động 
+như ta mong muốn, ít nhất là
+
+00:05:27.970 --> 00:05:29.670
+cho tới giai đoạn này của ứng dụng.
+
+00:05:29.670 --> 00:05:34.060
+Theo lý tưởng, như tôi đề cập trước đó,
+chúng ta muốn số lượng tặng lên 4, 5, ,6.
+
+00:05:34.060 --> 00:05:36.620
+và chúng ta muốn giảm xuống 2, 1, 0.
+
+00:05:36.620 --> 00:05:39.510
+Nhưng điều đó sẽ 
+tới vào giai đoạn sau của bài học.
+
+00:05:39.510 --> 00:05:41.150
+Cho đến giờ, bạn đã làm việc rất tốt đấy.
+

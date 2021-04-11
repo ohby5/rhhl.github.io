@@ -1,0 +1,453 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.750
+Travar o aplicativo é quando ele
+inesperadamente para de funcionar e
+
+00:00:02.950 --> 00:00:05.980
+mostra uma mensagem avisando
+que o aplicativo parou.
+
+00:00:06.660 --> 00:00:09.820
+Acontece com programadores de Android
+várias vezes ao dia.
+
+00:00:10.020 --> 00:00:11.490
+Até mesmo os mais experientes.
+
+00:00:11.690 --> 00:00:15.900
+Às vezes o problema é devido a um erro de
+digitação no código, ou um erro bobo.
+
+00:00:16.100 --> 00:00:19.750
+Outras vezes pode ser devido
+a um desentendimento fundamental
+
+00:00:19.950 --> 00:00:22.510
+de como escrever o código
+para um determinado recurso.
+
+00:00:22.710 --> 00:00:26.410
+Enquanto sua reação pode ser o pânico,
+a voz da razão dentro da sua cabeça
+
+00:00:26.610 --> 00:00:29.700
+deve dizer para seguir em frente
+e tentar desbugar o aplicativo.
+
+00:00:29.900 --> 00:00:33.400
+Nesse vídeo vamos aprender como
+desbugar um aplicativo de Android travado.
+
+00:00:33.600 --> 00:00:38.410
+Desbugar significa identificar e consertar
+bugs e erros no aplicativo.
+
+00:00:38.610 --> 00:00:41.550
+Se for um erro muito óbvio,
+como um erro de sintaxe do Java,
+
+00:00:41.750 --> 00:00:44.160
+então o diretório do usuário
+no Android acha pra você
+
+00:00:44.360 --> 00:00:48.370
+e mostra o erro em vermelho antes de
+tentar instalar o aplicativo no telefone.
+
+00:00:48.570 --> 00:00:52.280
+Ele é chamado de erro em tempo de
+compilação pois vai falhar em fazer que
+
+00:00:52.480 --> 00:00:53.960
+o aplicativo seja criado e instalado
+no seu dispositivo.
+
+00:00:54.670 --> 00:00:58.190
+Se você quiser tentar criar um erro em
+tempo de compilação e basta deletar
+
+00:00:58.390 --> 00:01:01.640
+esses parênteses ou esse ponto e vírgula
+e então você vai ver o erro aparecer.
+
+00:01:02.870 --> 00:01:07.210
+É como na aula um quando tentamos
+criar um erro de <i>XML</i> de propósito.
+
+00:01:07.410 --> 00:01:10.260
+E então quando lermos a mensagem de erro
+e desfazemos a mudança.
+
+00:01:11.310 --> 00:01:15.200
+Outros erros potenciais acontecem
+se eu tentar deletar esse colchete,
+
+00:01:15.400 --> 00:01:19.720
+então tenho um erro, ou se eu esquecer de
+fechar as chaves, também vou ter um erro.
+
+00:01:20.890 --> 00:01:24.640
+Mas às vezes, o erro apenas acontece
+quando você começa a usar o aplicativo.
+
+00:01:24.840 --> 00:01:28.170
+É chamado de erro de execução pois acontece
+quando tentamos executar o aplicativo.
+
+00:01:28.870 --> 00:01:31.440
+Vamos criar esse erro no aplicativo e
+
+00:01:31.640 --> 00:01:34.890
+entender os passos de como resolver isso
+para que quando tenha um erro,
+
+00:01:35.090 --> 00:01:37.010
+você saiba como resolver sozinho.
+
+00:01:37.210 --> 00:01:40.830
+Isso é baseado na verdade em um erro real,
+que eu vi um estudante encontrar.
+
+00:01:41.030 --> 00:01:43.020
+Então é bem provável
+que aconteça com iniciantes.
+
+00:01:43.220 --> 00:01:45.110
+Primeiro vou repassar todos os passos,
+
+00:01:45.310 --> 00:01:47.049
+e então você pode fazer sozinho.
+
+00:01:47.890 --> 00:01:49.950
+Para causar um erro
+intencionalmente no aplicativo,
+
+00:01:50.150 --> 00:01:52.500
+vou modificar o arquivo
+Java <i>MainActivity</i>.
+
+00:01:53.600 --> 00:01:57.590
+Vou mudar o nome desse método
+para <i>submitOrders</i> com "s" no final.
+
+00:01:57.790 --> 00:01:59.570
+Então, vou rodar o aplicativo.
+
+00:01:59.770 --> 00:02:01.630
+Tudo parece certo a primeira vista,
+
+00:02:01.830 --> 00:02:04.300
+mas quando eu clico no botão do pedido,
+ele para de funcionar.
+
+00:02:05.500 --> 00:02:10.000
+Aparece a mensagem: "Infelizmente, 'o
+nome do aplicativo', parou de funcionar."
+
+00:02:10.199 --> 00:02:12.610
+Então a única opção que eu tenho
+é clicar em OK e sair do aplicativo.
+
+00:02:14.340 --> 00:02:17.690
+Por sorte, podemos usar o Android Studio
+para entender o que realmente aconteceu.
+
+00:02:19.160 --> 00:02:20.830
+Quando você rodar
+o aplicativo no dispositivo,
+
+00:02:21.030 --> 00:02:25.360
+você pode ver essa tela do Android DDMS
+aparecendo na parte de baixo da tela.
+
+00:02:25.560 --> 00:02:28.490
+Isso mostra a informação para
+monitorar seu dispositivo Android.
+
+00:02:28.690 --> 00:02:32.480
+Tudo o que acontece "atrás das cortinas"
+que usuários não veem.
+
+00:02:32.680 --> 00:02:35.930
+Se não está aberto, você pode clicar
+nessa aba aqui embaixo que diz: "Android",
+
+00:02:36.130 --> 00:02:38.470
+e isso deve abrir o
+Android DDMS para você.
+
+00:02:38.670 --> 00:02:41.430
+Você pode ajustar a altura da página,
+arrastando essa seta.
+
+00:02:42.438 --> 00:02:43.980
+Se você arrastar essa seta para a direita,
+
+00:02:44.180 --> 00:02:46.950
+você vai ver uma lista com os
+dispositivos conectados ao computador.
+
+00:02:47.150 --> 00:02:48.960
+Agora, eu só tenho meu Nexus 6 conectado.
+
+00:02:49.160 --> 00:02:53.440
+Eu também abri o aplicativo Java de novo,
+por isso está aparecendo aqui.
+
+00:02:54.690 --> 00:02:58.065
+Vou arrastar para a esquerdar de novo para
+ter mais espaço para ver os logs.
+
+00:02:58.265 --> 00:03:02.350
+Esse lado direito é onde
+os logs aparecem.
+
+00:03:02.550 --> 00:03:04.880
+Se você clicar nesse menu suspenso,
+e colocar sem filtros,
+
+00:03:05.080 --> 00:03:08.250
+então mostra você os <i>logs</i>
+para todo o sistema e outros aplicativos.
+
+00:03:09.940 --> 00:03:14.350
+Tem coisas como gerência
+de atividade, áudio, som,
+
+00:03:14.550 --> 00:03:16.970
+microfone, e todas essas coisas.
+
+00:03:17.170 --> 00:03:20.210
+Um log de sistema é como um diário
+que seu telefone guarda sobre
+
+00:03:20.410 --> 00:03:21.589
+o que aconteceu no dispositivo.
+
+00:03:22.350 --> 00:03:24.650
+Nós também podemos chamar de <i>logcat</i>.
+
+00:03:24.850 --> 00:03:25.880
+Se pesquisar no Google,
+
+00:03:26.080 --> 00:03:30.340
+a definição de <i>logcat</i>, a definição da
+página de programadores do Android aparece.
+
+00:03:30.540 --> 00:03:32.880
+Fala sobre como <i>logcat</i> é
+o sistema de login do Android,
+
+00:03:33.080 --> 00:03:35.700
+onde você pode visualizar
+o resultado do desbugue.
+
+00:03:36.980 --> 00:03:41.670
+Voltando aos <i>logs</i>, os eventos
+mais recentes aparecem no final.
+
+00:03:41.870 --> 00:03:43.590
+Então se quiser olhar pelo tempo,
+
+00:03:43.790 --> 00:03:46.440
+você deve rolar até achar
+o que você está procurando.
+
+00:03:46.640 --> 00:03:51.160
+Vamos mudar o filtro de volta
+para o aplicativo <i>justjava</i>.
+
+00:03:51.360 --> 00:03:54.640
+Isso aqui narra a quantidade
+de mensagem de erros
+
+00:03:54.840 --> 00:03:56.350
+que são significativas
+para nosso aplicativo.
+
+00:03:56.550 --> 00:03:58.430
+Isso tonar bem mais fácil de ler.
+
+00:03:59.280 --> 00:04:00.760
+Quando um erro acontece,
+
+00:04:00.960 --> 00:04:05.220
+a descrição do que o telefone tentava
+fazer, aparece escrito nos <i>logs</i>
+
+00:04:05.420 --> 00:04:07.610
+Aqui está nosso erro,
+no texto de cor vermelha.
+
+00:04:08.080 --> 00:04:09.840
+Isso é conhecido como:
+olhando para o rastro,
+
+00:04:10.040 --> 00:04:13.340
+porque ele leva até
+onde o erro começou.
+
+00:04:13.540 --> 00:04:16.050
+Sabemos que é nosso aplicativo
+porque é nosso processo,
+
+00:04:16.250 --> 00:04:19.060
+que é <i> com.example.android.justjava.</i>
+
+00:04:19.260 --> 00:04:22.230
+No nosso aplicativo, o nome do processo
+é igual o nome do pacote, mas
+
+00:04:22.430 --> 00:04:23.940
+nem sempre precisa ser igual.
+
+00:04:24.140 --> 00:04:26.060
+Nós ainda não aprendemos sobre processos,
+
+00:04:26.260 --> 00:04:30.230
+mas, essencialmente, é só a identificação
+que esse é o nosso aplicativo.
+
+00:04:30.430 --> 00:04:33.988
+Tem bastante texto nesse rastreamento,
+e você não precisar ler tudo.
+
+00:04:34.188 --> 00:04:35.200
+Nós só queremos achar
+
+00:04:35.400 --> 00:04:38.670
+a informação que vai ser relevante
+para nos ajudar a resolver o problema.
+
+00:04:38.870 --> 00:04:41.910
+Devemos procurar por qualquer coisa
+no rastreamento que fala sobre
+
+00:04:42.110 --> 00:04:45.210
+os métodos ou os arquivos
+que não estão funcionando.
+
+00:04:45.410 --> 00:04:48.080
+Então vamos procurar pelo
+nome do arquivo <i>MainActivity</i>.
+
+00:04:49.160 --> 00:04:51.200
+Vamos começar a ler a mensagem de erro.
+
+00:04:51.400 --> 00:04:52.690
+Eu pulo essa parte e
+
+00:04:52.890 --> 00:04:57.120
+penas leio <i>IllegalStateException</i>,
+não conseguiu achar o método <i>submitOrder</i>.
+
+00:04:57.990 --> 00:05:02.220
+A mensagem de erro explica
+porque é um dado inválido.
+
+00:05:03.330 --> 00:05:06.442
+E o motivo é por que não achou
+o método <i>submitOrder</i>
+
+00:05:06.642 --> 00:05:09.450
+na atividade <i>MainActivity</i>, para
+
+00:05:09.650 --> 00:05:13.260
+para o operador <i>onClick</i>
+no botão da classe de visualização
+
+00:05:13.460 --> 00:05:17.330
+Tem várias palavras nessa frase
+e podem não fazer nenhum sentido.
+
+00:05:17.530 --> 00:05:19.410
+Mas tem pistas boas aqui.
+
+00:05:19.610 --> 00:05:22.420
+Mencionou o botão e
+nós só temos um botão no aplicativo,
+
+00:05:22.620 --> 00:05:26.110
+então podemos assumir que
+provavelmente se refere a ele.
+
+00:05:26.310 --> 00:05:29.030
+Depois fala sobre não
+ter encontrar o método
+
+00:05:29.230 --> 00:05:31.430
+<i>submitOrder</i>, na atividade.
+
+00:05:31.630 --> 00:05:36.000
+Olhando o botão de código, especificamos
+que quando o botão é pressionado,
+
+00:05:36.200 --> 00:05:38.350
+deve iniciar o método chamado
+<i>submitOrder</i>.
+
+00:05:38.550 --> 00:05:39.610
+Vamos ver isso agora.
+
+00:05:39.810 --> 00:05:42.915
+Vou fechar a janela DDMS e
+
+00:05:43.115 --> 00:05:45.815
+abrir nosso arquivo <i>activity_main.xml</i>.
+
+00:05:46.015 --> 00:05:48.455
+Esse é o botão do elemento <i>xml</i>.
+
+00:05:48.655 --> 00:05:53.715
+E de fato dissemos: <i>"android:onClick"</i>
+deve iniciar o método <i>submitOrder</i>.
+
+00:05:53.915 --> 00:05:55.895
+Se eu voltar na <i>MainActivity</i>,
+
+00:05:56.095 --> 00:05:59.590
+eu vejo que <i>submitOrder</i>
+não é mais um método, ao invés disso,
+
+00:05:59.790 --> 00:06:03.740
+nós mudamos para <i>submitOrders</i>,
+então é por isso que o problema ocorre.
+
+00:06:03.940 --> 00:06:07.830
+Se eu for adiante e deletar esse "s" extra,
+agora temos um método <i>submitOrder</i>
+
+00:06:08.030 --> 00:06:11.450
+na <i>MainActivity</i>, e o aplicativo
+deve funcionar de novo.
+
+00:06:11.650 --> 00:06:12.913
+Quando eu rodo o aplicativo de novo,
+
+00:06:13.113 --> 00:06:16.080
+e clico no botão do pedido,
+então o aplicativo funciona normalmente.
+
+00:06:17.180 --> 00:06:19.290
+Agora tente criar esse
+erro no seu aplicativo
+
+00:06:19.490 --> 00:06:21.800
+mudando o nome do método <i>submitOrder</i>.
+
+00:06:22.700 --> 00:06:24.890
+Então procure nos <i>logs</i> pelo rastro e
+
+00:06:25.090 --> 00:06:26.950
+leia a mensagem de texto com cuidado.
+
+00:06:27.500 --> 00:06:30.890
+Continue e conserte o erro para que
+o aplicativo funcione normalmente.
+
+00:06:31.090 --> 00:06:32.510
+Cheque essa caixa quando terminar.
+

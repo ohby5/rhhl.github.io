@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.880 --> 00:00:03.800
+¡Hurra! Acabas de hacer que tu app
+sea interactiva para el usuario.
+
+00:00:03.880 --> 00:00:06.560
+Antes, cuando pulsaste el botón,
+no pasó nada.
+
+00:00:06.880 --> 00:00:09.600
+Pero ahora, con algunos cambios
+en el código, cuando le das al botón,
+
+00:00:09.640 --> 00:00:12.440
+lo que hace es que actualiza algo
+en la pantalla. ¡Buen trabajo!
+
+00:00:13.320 --> 00:00:15.920
+Vamos a ver con profundidad
+qué es lo que acabas de conseguir.
+
+00:00:16.560 --> 00:00:20.760
+Primero añadiste un nuevo atributo
+<i>android:onClick= </i>en el elemento "Botón".
+
+00:00:21.120 --> 00:00:23.120
+Eso hace que,
+cuando se pulsa el botón,
+
+00:00:23.720 --> 00:00:27.840
+intente realizar, o ejecutar,
+como decimos en Java,
+
+00:00:27.920 --> 00:00:31.160
+unas instrucciones que hemos llamado
+<i>submitOrder </i>[enviar pedido].
+
+00:00:32.080 --> 00:00:35.040
+Bien. Volvamos al archivo <i>MainActivity</i>
+que te dimos.
+
+00:00:35.280 --> 00:00:38.120
+Sé que hay un montón de símbolos raros
+y palabras en esta pantalla.
+
+00:00:38.320 --> 00:00:40.840
+Pero todo lo que necesitas saber ahora
+es que esto es un método
+
+00:00:40.920 --> 00:00:42.800
+y que su nombre es <i>submitOrder</i>.
+
+00:00:42.920 --> 00:00:45.520
+Un método puede contener
+varias líneas de código Java,
+
+00:00:45.640 --> 00:00:48.120
+que representan una serie de instrucciones
+
+00:00:48.200 --> 00:00:50.520
+que el dispositivo entiende
+y lleva a cabo.
+
+00:00:51.040 --> 00:00:53.520
+Si un método consta
+de diversas líneas de código,
+
+00:00:53.720 --> 00:00:57.520
+el dispositivo empezará a ejecutarlo
+por la primera línea, después la segunda,
+
+00:00:57.600 --> 00:00:59.800
+y así sucesivamente
+hasta llegar al final del método.
+
+00:01:00.080 --> 00:01:03.800
+A los métodos les damos un nombre
+para que sea fácil consultarlos después.
+
+00:01:03.920 --> 00:01:08.120
+Por ejemplo, en el XML podemos consultar
+ahora mismo el método <i>submitOrder</i>.
+
+00:01:08.200 --> 00:01:10.400
+De la misma forma que yo tengo un nombre,
+tú tienes otro
+
+00:01:10.480 --> 00:01:12.480
+y si tuvieras una mascota
+también le darías uno
+
+00:01:12.560 --> 00:01:14.120
+para poder llamarlo fácilmente.
+
+00:01:14.680 --> 00:01:18.280
+En programación, si tenemos
+unas sentencias que queramos ordenar,
+
+00:01:18.360 --> 00:01:21.480
+las ponemos dentro de un método
+y después le damos un nombre al método.
+
+00:01:21.560 --> 00:01:26.320
+En la lección uno te contamos que el XML
+tiene unas reglas de sintaxis específicas
+
+00:01:26.680 --> 00:01:29.720
+que determinan
+si algo es válido en XML o no.
+
+00:01:30.040 --> 00:01:34.280
+Pues Java sigue unas reglas similares
+para determinar qué es código Java válido.
+
+00:01:34.720 --> 00:01:37.240
+Las sentencias que contienen los métodos
+
+00:01:37.320 --> 00:01:41.960
+deben estar comprendidas dentro de llaves
+de apertura y de cierre como estas.
+
+00:01:42.440 --> 00:01:45.200
+Aquí arriba, tenemos otro método,
+llamado <i>onCreate</i>.
+
+00:01:45.640 --> 00:01:48.520
+Las sentencias de este método
+están recogidas aquí,
+
+00:01:48.600 --> 00:01:51.120
+entre la llave de apertura y la de cierre.
+
+00:01:51.760 --> 00:01:54.600
+Para acabar tenemos este método,
+llamado <i>display</i>.
+
+00:01:54.840 --> 00:01:59.480
+Las sentencias que contiene
+vienen señaladas por estas dos llaves.
+
+00:01:59.920 --> 00:02:04.040
+Fíjate en que también
+hay dos llaves para la <i>MainActivity</i>.
+
+00:02:04.560 --> 00:02:09.360
+Toda la funcionalidad de la <i>MainActivity</i>
+está definida dentro de estas dos llaves.
+
+00:02:10.240 --> 00:02:13.440
+Hasta ahora, la <i>MainActivity</i>
+consta de tres métodos.
+
+00:02:13.920 --> 00:02:17.040
+Así que después de declarar un método,
+lo que significa definir el método,
+
+00:02:17.280 --> 00:02:19.400
+el método ya está listo para su uso.
+
+00:02:19.520 --> 00:02:22.200
+En este ejemplo,
+declaramos el método <i>display</i>
+
+00:02:22.320 --> 00:02:25.720
+y lo usamos en esta línea de código,
+donde lo llamamos por su nombre.
+
+00:02:25.800 --> 00:02:29.560
+Esto de aquí es donde declaramos el método
+y aquí es donde le ponemos el nombre.
+
+00:02:29.640 --> 00:02:32.400
+Resumiendo,
+cuando pulsamos el botón en la UI,
+
+00:02:32.480 --> 00:02:34.880
+se activa el llamamiento
+del método <i>submitOrder.</i>
+
+00:02:34.960 --> 00:02:38.560
+Después ejecutamos cada una de las líneas
+de código del método submitOrder,
+
+00:02:38.640 --> 00:02:40.800
+siguiendo el orden de arriba a abajo.
+
+00:02:40.880 --> 00:02:44.240
+En este caso únicamente hay una sentencia,
+así que solo ejecutamos esto.
+
+00:02:44.680 --> 00:02:48.200
+Bien, veamos ahora esta línea de código
+en la que pone <i>display (1) </i>[visualiza 1].
+
+00:02:48.360 --> 00:02:50.240
+He escogido esta línea de código
+
+00:02:50.400 --> 00:02:53.800
+porque parece que el número
+que hay entre paréntesis
+
+00:02:53.880 --> 00:02:56.080
+es el mismo que nos muestra la pantalla.
+
+00:02:56.960 --> 00:02:59.800
+Así que, cuando pulso
+el botón de Pedido de la UI,
+
+00:02:59.880 --> 00:03:03.480
+se activa el método <i>submitOrder</i>
+para que haga su parte en la <i>MainActivity</i>.
+
+00:03:03.560 --> 00:03:07.280
+Después se ejecuta esta línea de código
+en la que pone <i>display (1</i>)
+
+00:03:07.360 --> 00:03:09.920
+y eso actualiza la pantalla
+para que aquí ponga un 1.
+
+00:03:10.280 --> 00:03:13.520
+Entonces, si cambio esto de aquí
+para que ponga un 2, ¿qué pasará?
+
+00:03:13.720 --> 00:03:15.360
+Ejecutemos la app para averiguarlo.
+
+00:03:15.960 --> 00:03:18.640
+Y ahora, cuando pulso este botón,
+me sale un 2.
+
+00:03:19.280 --> 00:03:22.640
+Al pulsar el botón de Pedido,
+se activa el método <i>submitOrder</i>
+
+00:03:22.920 --> 00:03:25.840
+y se pone en funcionamiento
+esta línea que lleva escrito <i>display (2)</i>.
+
+00:03:26.120 --> 00:03:28.560
+Todo esto hace que la pantalla
+se actualice y muestre un 2.
+
+00:03:28.840 --> 00:03:33.040
+Ahora te toca a ti, intenta cambiar
+este número entre paréntesis por otro.
+
+00:03:33.160 --> 00:03:36.640
+Puedes elegir otro número mayor,
+menor o incluso uno negativo.
+
+00:03:37.120 --> 00:03:40.080
+Cuando hayas acabado de practicar
+con esta línea de la MainActivity,
+
+00:03:40.240 --> 00:03:41.800
+no te olvides de marcar este recuadro.
+

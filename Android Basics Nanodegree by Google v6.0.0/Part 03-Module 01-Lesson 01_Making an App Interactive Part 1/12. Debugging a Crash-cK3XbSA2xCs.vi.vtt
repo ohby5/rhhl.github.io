@@ -1,0 +1,461 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.430 --> 00:00:03.250
+Một sự cố hỏng ứng dụng là khi
+ứng dụng đó bất ngờ ngừng hoạt động và
+
+00:00:03.250 --> 00:00:05.880
+hiển thị một thông báo tương tác cho biết
+ứng dụng vừa ngừng hoạt động.
+
+00:00:07.160 --> 00:00:10.320
+Điều đó xảy đến với các lập trình viên
+Android rất nhiều lần mỗi ngày.
+
+00:00:10.320 --> 00:00:11.990
+Ngay cả với những người
+giàu kinh nghiệm nhất.
+
+00:00:11.990 --> 00:00:16.400
+Đôi khi vấn đề là do lỗi đánh máy trong
+mã của họ hay một sai sót ngớ ngẩn.
+
+00:00:16.400 --> 00:00:20.250
+Những lần khác, nó có thể là do
+một hiểu lầm căn bản
+
+00:00:20.250 --> 00:00:23.010
+về cách viết mã
+cho một tính năng nhất định.
+
+00:00:23.010 --> 00:00:26.910
+Trong khi bạn có thể hốt hoảng,
+tiếng nói lý trí trong đầu bạn
+
+00:00:26.910 --> 00:00:30.200
+sẽ giục bạn tiến tới và
+cố gắng sửa lỗi cho ứng dụng.
+
+00:00:30.200 --> 00:00:33.900
+Trong video này, chúng ta sẽ học cách
+sửa lỗi sự cố hỏng ứng dụng Android.
+
+00:00:33.900 --> 00:00:38.910
+Sửa lỗi nghĩa là xác định và
+sửa các lỗi hay sai sót trong ứng dụng.
+
+00:00:38.910 --> 00:00:42.050
+Nếu đó là một sai sót thực sự hiển nhiên
+như một lỗi cú pháp java,
+
+00:00:42.050 --> 00:00:44.660
+Thì DU của Android có thể phát hiện
+lỗi đó cho bạn và
+
+00:00:44.660 --> 00:00:48.870
+hiển thị lỗi màu đỏ trước khi cố gắng
+cài đặt ứng dụng lên điện thoại của bạn.
+
+00:00:48.870 --> 00:00:52.480
+Lỗi này gọi là lỗi biên dịch, vì nó sẽ
+không thể tạo ra bất kỳ ứng dụng nào
+
+00:00:52.480 --> 00:00:53.860
+thậm chí là để cài đặt
+lên thiết bị của bạn.
+
+00:00:55.170 --> 00:00:58.690
+Nếu bạn muốn thử tạo một lỗi biên dịch,
+hãy cứ tiếp tục và chỉ cần xóa
+
+00:00:58.690 --> 00:01:02.140
+dấu ngoặc đơn hoặc dấu chấm phẩy này và
+khi đó bạn sẽ thấy thông báo lỗi hiện ra.
+
+00:01:03.370 --> 00:01:07.710
+Điều này giống như trong bài học một
+khi ta cố tình tạo ra một lỗi XML.
+
+00:01:07.710 --> 00:01:10.760
+Và khi đó chúng ta đọc thông báo lỗi và
+rồi chúng ta hoàn tác việc thay đổi.
+
+00:01:11.810 --> 00:01:15.700
+Các lỗi tiềm ẩn khác là nếu tôi cố gắng
+xóa dấu mở ngoặc này, khi đó tôi sẽ gặp
+
+00:01:15.700 --> 00:01:20.220
+một lỗi, hoặc nếu tôi quên
+dấu đóng ngoặc này thì cũng bị một lỗi.
+
+00:01:21.390 --> 00:01:25.140
+Nhưng đôi khi lỗi chỉ xảy ra
+khi bạn bắt đầu sử dụng ứng dụng.
+
+00:01:25.140 --> 00:01:28.270
+Đó gọi là lỗi chạy chương trình, vì
+nó xảy ra khi ứng dụng đang hoạt động.
+
+00:01:29.370 --> 00:01:31.940
+Ta hãy cùng cố tình tạo ra
+một sự cố hỏng trong ứng dụng và
+
+00:01:31.940 --> 00:01:35.390
+tìm ra các bước của biện pháp khắc phục,
+để khi bạn gặp một sự cố hỏng thực sự,
+
+00:01:35.390 --> 00:01:37.510
+bạn sẽ biết cách tự xử lý.
+
+00:01:37.510 --> 00:01:41.330
+Điều này thực ra là dựa trên vụ hỏng thật
+mà tôi thấy một sinh viên gặp phải.
+
+00:01:41.330 --> 00:01:43.520
+Do đó nó rất có thể sẽ xảy ra
+với những người mới bắt đầu.
+
+00:01:43.520 --> 00:01:45.410
+Trước tiên tôi sẽ hướng dẫn bạn
+qua toàn bộ các bước và
+
+00:01:45.410 --> 00:01:46.849
+Sau đó bạn sẽ có một cơ hội
+tự thực hiện.
+
+00:01:47.990 --> 00:01:50.450
+Để cố tình tạo ra
+một sự cố hỏng trong ứng dụng,
+
+00:01:50.450 --> 00:01:52.500
+tôi sẽ sửa đổi
+tệp tin Java MainActivity.
+
+00:01:52.500 --> 00:01:58.090
+Tôi sẽ thay đổi tên của phương thức này
+thành submitOrders với một chữ s.
+
+00:01:58.090 --> 00:02:00.070
+Sau đó tôi sẽ chạy nó trên thiết bị này.
+
+00:02:00.070 --> 00:02:02.130
+Ban đầu mọi thứ có vẻ ổn thỏa, nhưng
+
+00:02:02.130 --> 00:02:04.800
+sau đó khi tôi nhấp vào nút ORDER,
+thì nó ngừng hoạt động.
+
+00:02:06.000 --> 00:02:10.500
+Nó hiện ra thông báo: rất tiếc,
+ứng dụng Just Java đã ngừng hoạt động.
+
+00:02:10.500 --> 00:02:13.110
+Và lựa chọn duy nhất mà tôi có
+là nhấn OK để thoát khỏi ứng dụng.
+
+00:02:14.840 --> 00:02:18.190
+May là ta có thể sử dụng Android Studio
+để tìm hiểu thực ra điều gì đã xảy ra.
+
+00:02:19.660 --> 00:02:21.330
+Khi bạn chạy ứng dụng trên thiết bị,
+
+00:02:21.330 --> 00:02:25.860
+bạn có thể thấy cửa sổ Android DDMS này
+hiện ra ở phía dưới màn hình.
+
+00:02:25.860 --> 00:02:28.990
+Nó hiển thị cho bạn các thông tin giúp
+quản lý thiết bị Android của bạn.
+
+00:02:28.990 --> 00:02:32.980
+Tất cả những thứ diễn ra ở nền màn hình
+mà người dùng không nhìn thấy.
+
+00:02:32.980 --> 00:02:36.230
+Nếu nó chưa mở, bạn có thể nhấp vào
+tab phía dưới này nhắc đến Android,
+
+00:02:36.230 --> 00:02:38.970
+và thao đó sẽ mở ra
+Android DDMS cho bạn.
+
+00:02:38.970 --> 00:02:41.930
+Bạn có thể chỉnh sửa chiều cao của
+cửa sổ này bằng cách kéo mũi tên này.
+
+00:02:42.938 --> 00:02:44.480
+Nếu bạn kéo mũi tên này sang phải,
+
+00:02:44.480 --> 00:02:47.450
+bạn sẽ thấy một danh sách các thiết bị
+được kết nối với máy tính này.
+
+00:02:47.450 --> 00:02:49.460
+Ngay bây giờ chỉ có chiếc
+Nexus 6 của tôi được kết nối.
+
+00:02:49.460 --> 00:02:53.940
+Và tôi cũng đã mở lại ứng dụng Just Java,
+do vậy nên nó được liệt kê ở đây.
+
+00:02:55.190 --> 00:02:58.565
+Tôi sẽ lại kéo mũi tên sang trái để
+có chỗ rộng hơn để xem nhật ký hoạt động.
+
+00:02:58.565 --> 00:03:02.850
+Phía bên phải này là nơi hiển thị
+các thông báo trong nhật ký.
+
+00:03:02.850 --> 00:03:05.380
+Nếu bạn nhấp vào menu thả xuống này và
+chọn “no filters” (không dùng bộ lọc),
+
+00:03:05.380 --> 00:03:08.750
+thì bạn sẽ thấy các thông báo nhật ký
+cho toàn bộ hệ thống và các ứng dụng khác.
+
+00:03:10.440 --> 00:03:14.850
+Đó là thông tin về những thứ như
+quản lý hoạt động, âm thanh, tiếng,
+
+00:03:14.850 --> 00:03:17.470
+micro, và tất cả những thứ khác ở đây.
+
+00:03:17.470 --> 00:03:20.710
+Một nhật ký hệ thống cũng giống như
+nhật ký mà điện thoại của bạn lưu giữ
+
+00:03:20.710 --> 00:03:21.789
+về những điều đang xảy ra trên thiết bị.
+
+00:03:22.850 --> 00:03:25.150
+Chúng ta cũng gọi đó là logcat.
+
+00:03:25.150 --> 00:03:25.780
+Nếu bạn tìm trên Google xem
+
+00:03:25.780 --> 00:03:30.840
+logcat là gì, thì sẽ có một định nghĩa
+hiện ra từ trang web Android Developers.
+
+00:03:30.840 --> 00:03:33.380
+Nó nói về việc logcat là hệ thống ghi
+dữ liệu Android như thế nào,
+
+00:03:33.380 --> 00:03:36.200
+là nơi bạn có thể thu thập và xem
+kết quả Sửa lỗi.
+
+00:03:37.480 --> 00:03:42.170
+Quay lại với bản nhật ký, các sự kiện
+gần nhất diễn ra ở tận cùng dưới này.
+
+00:03:42.170 --> 00:03:43.790
+Do đó nếu bạn muốn xem lại theo thời gian,
+
+00:03:43.790 --> 00:03:46.940
+Bạn có thể phải cuộn trang lên để xem
+những thứ bạn đang tìm kiếm.
+
+00:03:46.940 --> 00:03:51.660
+Bây giờ hãy chuyển bộ lọc quay lại
+ứng dụng của chúng ta, Just Java.
+
+00:03:51.660 --> 00:03:55.140
+Việc này rút gọn đáng kể lượng
+thông báo nhật ký
+
+00:03:55.140 --> 00:03:56.850
+chỉ liên quan đến ứng dụng của chúng ta.
+
+00:03:56.850 --> 00:03:58.430
+Điều này giúp chúng ta dễ đọc hơn nhiều.
+
+00:03:59.480 --> 00:04:01.260
+Khi một sự cố hỏng xảy ra trên thiết bị,
+
+00:04:01.260 --> 00:04:05.720
+mô tả về điều mà điện thoại cố gắng làm
+sẽ được in vào bản nhật ký.
+
+00:04:05.720 --> 00:04:07.410
+Đây là sự cố hỏng của chúng ta
+với màu chữ đỏ.
+
+00:04:08.480 --> 00:04:10.140
+Việc này gọi là xem lần ngược ngăn xếp,
+
+00:04:10.140 --> 00:04:13.840
+vì nó lần ngược lại
+nơi khởi nguồn của lỗi.
+
+00:04:13.840 --> 00:04:16.550
+Ta biết rằng đó là ứng dụng của chúng ta
+vì đó là quy trình của chúng ta,
+
+00:04:16.550 --> 00:04:19.560
+là com.example.android.justjava.
+
+00:04:19.560 --> 00:04:22.730
+Với ứng dụng của chúng ta, tên
+quy trình khớp với tên gói tin, nhưng
+
+00:04:22.730 --> 00:04:24.440
+không phải lúc nào nó cũng phải khớp.
+
+00:04:24.440 --> 00:04:26.560
+Chúng ta chưa thực sự học
+về các quy trình,
+
+00:04:26.560 --> 00:04:30.730
+nhưng cơ bản là, việc này chỉ xác định
+rằng đây là ứng dụng của chúng ta.
+
+00:04:30.730 --> 00:04:32.640
+Bây giờ, có rất nhiều chữ trong bộ
+lần ngược ngăn xếp này.
+
+00:04:32.640 --> 00:04:34.488
+Và bạn không phải đọc toàn bộ.
+
+00:04:34.488 --> 00:04:35.400
+Chúng ta chỉ nên đọc lướt để tìm
+
+00:04:35.400 --> 00:04:39.170
+những thông tin liên quan
+giúp chúng ta xử lý vấn đề của mình.
+
+00:04:39.170 --> 00:04:42.410
+Chúng ta nên tìm bất kỳ thứ gì
+trong bộ lần ngược ngăn xếp có nói về
+
+00:04:42.410 --> 00:04:45.710
+các phương thức hay các tệp tin
+mà chúng ta đang làm việc cùng.
+
+00:04:45.710 --> 00:04:48.580
+Do đó chúng ta sẽ để ý tìm tên tệp,
+hoạt động chính.
+
+00:04:49.660 --> 00:04:51.700
+Vậy hãy bắt đầu đọc thông báo lỗi.
+
+00:04:51.700 --> 00:04:52.890
+Tôi bỏ qua phần này và
+
+00:04:52.890 --> 00:04:57.120
+chỉ đọc IllegalStateException,
+Không thể tìm thấy phương thức submitOrder.
+
+00:04:58.490 --> 00:05:02.720
+Thông báo lỗi tiếp tục giải thích tại
+sao nó lại có trạng thái không hợp lệ.
+
+00:05:03.830 --> 00:05:06.942
+Và lý do là vì nó không thể tìm thấy
+phương thức submitOrder
+
+00:05:06.942 --> 00:05:09.950
+trong hoạt động MainActivity, đối với
+
+00:05:09.950 --> 00:05:13.760
+trình xử lý onClick trên
+nút view class.
+
+00:05:13.760 --> 00:05:17.830
+Trong câu đó có rất nhiều từ
+và có thể nó không có nhiều ý nghĩa.
+
+00:05:17.830 --> 00:05:19.910
+Nhưng ở đây có một vài đầu mối hữu ích.
+
+00:05:19.910 --> 00:05:22.920
+Nó nhắc đến nút và
+trong ứng dụng của ta chỉ có một nút,do vậy
+
+00:05:22.920 --> 00:05:26.610
+ta có thể giả định rằng có thể
+nó liên quan đến nút đó.
+
+00:05:26.610 --> 00:05:29.530
+Sau đó nó nói về việc
+không thể tìm thấy một phương thức,
+
+00:05:29.530 --> 00:05:31.930
+submitOrder, trong hoạt động.
+
+00:05:31.930 --> 00:05:36.500
+Xem lại mã nút của chúng ta, ta đã
+nêu rõ rằng khi nút này được nhấn,
+
+00:05:36.500 --> 00:05:38.850
+nó sẽ kích hoạt một phương thức
+gọi là submitOrder.
+
+00:05:38.850 --> 00:05:39.710
+Vậy bây giờ ta hãy xem lại điều đó.
+
+00:05:39.710 --> 00:05:43.415
+Tôi sẽ kéo cửa sổ DDMS này xuống và
+
+00:05:43.415 --> 00:05:46.315
+mở ra tệp activity_main.xml.
+
+00:05:46.315 --> 00:05:48.955
+Vậy đây là thành tố XML của nút.
+
+00:05:48.955 --> 00:05:54.215
+Chúng ta thực sự đã nói android:onClick
+sẽ kích hoạt phương thức submitOrder.
+
+00:05:54.215 --> 00:05:56.395
+Nếu tôi quay lại hoạt động chính,
+
+00:05:56.395 --> 00:06:00.090
+ta sẽ thấy rằng submitOrder không còn là
+một phương thức, mà thay vào đó,
+
+00:06:00.090 --> 00:06:04.240
+chúng ta đã đổi nó thành submitOrders,
+đó là lý do tại sao vấn đề lại xảy ra.
+
+00:06:04.240 --> 00:06:08.330
+Nếu tôi tiếp tục xóa chữ s thừa này,
+sẽ có một phương thức submitOrder
+
+00:06:08.330 --> 00:06:11.950
+trong hoạt động chính, và
+ứng dụng sẽ hoạt động trở lại.
+
+00:06:11.950 --> 00:06:13.113
+Khi tôi chạy lại ứng dụng và
+
+00:06:13.113 --> 00:06:16.380
+tôi nhấn vào nút Order, thì
+ứng dụng không còn hỏng nữa, tuyệt.
+
+00:06:16.380 --> 00:06:19.790
+Hãy tiếp tục và cố tạo ra
+lỗi hỏng này trong ứng dụng của bạn
+
+00:06:19.790 --> 00:06:21.800
+bằng cách đổi tên phương thức
+submitOrder.
+
+00:06:23.000 --> 00:06:25.390
+Sau đó hãy kiểm tra bản nhật ký xem
+bộ lần ngược ngăn xếp, và
+
+00:06:25.390 --> 00:06:26.950
+tiếp theo là đọc kỹ thông báo lỗi.
+
+00:06:28.000 --> 00:06:31.390
+Sau đó tiếp tục và sửa lỗi
+để ứng dụng của bạn hoạt động trở lại.
+
+00:06:31.390 --> 00:06:32.610
+Hãy đánh dấu ô này khi bạn hoàn tất.
+

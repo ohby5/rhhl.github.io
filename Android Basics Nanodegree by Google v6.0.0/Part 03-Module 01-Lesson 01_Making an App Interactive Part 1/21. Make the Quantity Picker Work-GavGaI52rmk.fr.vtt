@@ -1,0 +1,272 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.270 --> 00:00:03.630
+Nous venons de passer les deux
+premières étapes dans la dernière vidéo.
+
+00:00:03.630 --> 00:00:06.670
+Maintenant, je vais vous montrer
+des petites choses à expérimenter.
+
+00:00:06.670 --> 00:00:10.040
+J'aimerais changer
+ma valeur initiale pour la quantité
+
+00:00:10.040 --> 00:00:13.690
+pour avoir zéro au lieu de deux
+quand je lance l'application.
+
+00:00:13.690 --> 00:00:17.030
+Je peux faire ceci en changeant
+cette variable globale, <i>quantity</i>,
+
+00:00:17.030 --> 00:00:19.400
+pour avoir zéro
+comme valeur initiale.
+
+00:00:19.400 --> 00:00:22.930
+Ensuite, les méthodes pour incrémenter
+ou diminuer la valeur devraient suffire.
+
+00:00:22.930 --> 00:00:24.390
+À l'appel de la méthode
+<i>increment</i>,
+
+00:00:24.390 --> 00:00:26.570
+celle-ci ajoutera 1 à la dernière
+valeur de <i>quantity</i>.
+
+00:00:26.570 --> 00:00:31.140
+À l'appel de la méthode <i>decrement</i>,
+elle diminuera <i>quantity</i> de 1.
+
+00:00:31.140 --> 00:00:33.250
+Alors poursuivons et essayons voir.
+
+00:00:33.250 --> 00:00:34.040
+Ça c'est bizarre.
+
+00:00:34.040 --> 00:00:35.490
+Je voulais afficher 0
+au lancement.
+
+00:00:35.490 --> 00:00:39.700
+Si je clique sur le bouton <i>plus</i>,
+bizarrement on descend à 1,
+
+00:00:39.700 --> 00:00:43.850
+donc apparemment on baisse,
+mais ensuite la valeur remonte.
+
+00:00:43.850 --> 00:00:46.110
+On dirait donc que
+les boutons fonctionnent, mais
+
+00:00:46.110 --> 00:00:49.120
+pour je ne sais quelle raison,
+la valeur initiale était erronée.
+
+00:00:49.120 --> 00:00:52.350
+Oh, j'ai oublié de modifier le fichier
+de disposition <i>activity_main</i>.
+
+00:00:52.350 --> 00:00:55.050
+Dans cette disposition on a
+une <i>TextView</i> qui dit qu'au lancement
+
+00:00:55.050 --> 00:00:56.860
+<i>quantity</i> vaut deux.
+
+00:00:56.860 --> 00:01:01.290
+Ça devrait régler le problème du deux
+affiché au lancement de l'application.
+
+00:01:01.290 --> 00:01:02.570
+Cool.
+Maintenant elle affiche
+
+00:01:02.570 --> 00:01:04.660
+une quantité initiale de zéro.
+
+00:01:04.660 --> 00:01:07.310
+Et si je fais <i>ajouter</i>,
+la valeur croît correctement.
+
+00:01:07.310 --> 00:01:09.340
+Si je fais <i>moins</i>,
+elle diminue aussi correctement.
+
+00:01:10.500 --> 00:01:13.630
+On voit qu'il peut être un peu
+délicat d'avoir une quantité initiale
+
+00:01:13.630 --> 00:01:15.900
+définie à deux endroits.
+
+00:01:15.900 --> 00:01:19.660
+Avoir deux points du code
+pour représenter la même chose
+
+00:01:19.660 --> 00:01:24.080
+peut vite devenir une source de bogues,
+comme on vient de le voir.
+
+00:01:24.080 --> 00:01:28.150
+Une méthode experte pour résoudre le
+problème est de faire que <i>main_activity</i>
+
+00:01:28.150 --> 00:01:31.990
+affiche zéro pour <i>quantity</i>
+dès le lancement de l'application
+
+00:01:31.990 --> 00:01:35.040
+au lieu de s'appuyer sur la disposition
+pour déclarer la valeur initiale.
+
+00:01:35.040 --> 00:01:37.890
+Ainsi, notre seule source d'information
+serait cette variable globale.
+
+00:01:37.890 --> 00:01:39.260
+Mais ne vous creusez pas la tête,
+
+00:01:39.260 --> 00:01:43.280
+c'est plus une technique d'expert
+qu'on verra après la leçon 3.
+
+00:01:43.280 --> 00:01:47.060
+Une autre expérience à essayer dans
+le code est de faire que le bouton <i>plus</i>
+
+00:01:47.060 --> 00:01:49.510
+double la quantité de cafés
+commandée à chaque appui et
+
+00:01:49.510 --> 00:01:53.450
+que le bouton moins divise
+cette quantité à chaque appui.
+
+00:01:53.450 --> 00:01:55.360
+On débute avec deux
+en quantité initiale, ainsi
+
+00:01:55.360 --> 00:01:59.110
+même si on appuie sur <i>moins</i>
+en premier, le code marchera une fois.
+
+00:02:00.140 --> 00:02:01.730
+À l'appel de la méthode <i>increment</i>,
+
+00:02:01.730 --> 00:02:04.110
+on veut doubler
+la quantité de cafés commandée.
+
+00:02:04.110 --> 00:02:07.900
+On doit prendre la valeur actuelle
+de <i>quantity</i> et la multiplier par deux.
+
+00:02:07.900 --> 00:02:10.288
+La méthode met à jour
+la valeur de <i>quantity</i> et
+
+00:02:10.288 --> 00:02:12.550
+ensuite, on l'affiche à l'écran.
+
+00:02:12.550 --> 00:02:14.900
+Ensuite, on a
+la méthode <i>decrement</i>.
+
+00:02:14.900 --> 00:02:19.090
+Pour la méthode <i>decrement</i>, on veut 
+réduire de moitié la <i>quantity</i> de cafés.
+
+00:02:19.090 --> 00:02:21.720
+On va donc récupérer la quantité
+actuelle et la diviser par deux…
+
+00:02:22.960 --> 00:02:24.470
+on en tire ainsi la nouvelle valeur
+
+00:02:24.470 --> 00:02:26.360
+et on affiche ça à l'écran.
+
+00:02:26.360 --> 00:02:26.910
+Essayons.
+
+00:02:28.060 --> 00:02:30.660
+On voit en quoi il peut y avoir
+des erreurs chaque fois qu'on veut
+
+00:02:30.660 --> 00:02:32.000
+changer la valeur initiale de <i>quantity</i>.
+
+00:02:32.000 --> 00:02:34.250
+Il faut la changer en deux endroits.
+
+00:02:34.250 --> 00:02:35.105
+On lance l'appli.
+
+00:02:35.105 --> 00:02:36.460
+Ok.
+
+00:02:36.460 --> 00:02:38.650
+Elle commence par régler
+la valeur de quantity à deux.
+
+00:02:38.650 --> 00:02:41.660
+Si j'appuie sur <i>plus</i>, on devrait
+doubler la quantité à chaque fois.
+
+00:02:41.660 --> 00:02:43.070
+Cool.
+Et ça marche.
+
+00:02:43.070 --> 00:02:44.350
+Si j'appuie sur le bouton <i>moins</i>,
+
+00:02:44.350 --> 00:02:46.820
+on doit réduire la quantité de cafés
+commandée de moitié.
+
+00:02:46.820 --> 00:02:49.530
+Et ça marche.
+
+00:02:49.530 --> 00:02:54.260
+Si je lance le débogueur à côté, on voit
+ici que l'appli met à jour les variables.
+
+00:02:54.260 --> 00:02:57.358
+La valeur de <i>quantity</i> débute à deux,
+puis passe à quatre.
+
+00:02:57.358 --> 00:03:01.830
+Du coup la quantité
+débute à quatre, et
+
+00:03:01.830 --> 00:03:05.050
+je la monte à huit,
+et ainsi de suite.
+
+00:03:06.870 --> 00:03:09.960
+Je suis sûre que vous trouverez
+une tonne d'utilisations créatives à ce
+
+00:03:09.960 --> 00:03:11.300
+sélecteur de quantité.
+
+00:03:11.300 --> 00:03:15.420
+J'espère que ceci vous aura aidé à mieux
+cerner l'emploi des variables globales.
+
+00:03:15.420 --> 00:03:19.020
+Si j'appuie sur le bouton <i>Commander</i>,
+l'application ne m'affiche pas le prix
+
+00:03:19.020 --> 00:03:21.200
+pour la quantité de cafés commandée.
+
+00:03:21.200 --> 00:03:22.430
+C'est pour la vidéo suivante !
+

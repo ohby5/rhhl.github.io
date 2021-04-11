@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.558 --> 00:00:03.190
+Ok l'étape suivante est
+de construire le sélecteur de quantité.
+
+00:00:04.480 --> 00:00:07.520
+Dans notre formulaire de commande, on va
+ajouter un bouton + et -, ainsi on
+
+00:00:07.520 --> 00:00:10.270
+pourra augmenter et
+diminuer le nombre de cafés commandés.
+
+00:00:10.270 --> 00:00:12.255
+Chaque fois que vous 
+touchez le bouton +,
+
+00:00:12.255 --> 00:00:14.934
+Cela va augmenter le 
+nombre de cafés de un.
+
+00:00:14.934 --> 00:00:16.235
+Et chaque fois que 
+vous cliquez sur le bouton moins,
+
+00:00:16.235 --> 00:00:17.780
+Cela diminue le nombre de cafés
+par un.
+
+00:00:18.920 --> 00:00:20.040
+Ensuite, lorsque vous
+appuyez sur le bouton de commande,
+
+00:00:20.040 --> 00:00:23.110
+cela mettra à jour le prix selon
+la dernière valeur de la quantité.
+
+00:00:24.580 --> 00:00:28.920
+Il va falloir plusieurs étapes pour
+faire ça correctement.
+
+00:00:28.920 --> 00:00:31.290
+Nous allons d'abord
+ajouter le bouton plus et
+
+00:00:31.290 --> 00:00:33.000
+le boutons de moins à la mise en page.
+
+00:00:33.000 --> 00:00:34.366
+Et nous allons aussi 
+brancher les boutons de sorte
+
+00:00:34.366 --> 00:00:36.140
+qu'ils mettent à jour
+quelque chose sur l'écran.
+
+00:00:37.310 --> 00:00:40.260
+Ensuite on 
+va fixer le bouton de commande de sorte
+
+00:00:40.260 --> 00:00:41.620
+que le prix soit mis
+à jour correctement.
+
+00:00:42.820 --> 00:00:46.580
+On fait ce layout en modifiant le fichier
+activity-main layout XML.
+
+00:00:48.580 --> 00:00:52.363
+Vous allez ajouter les 2 boutons et
+changer la valeur initiale de
+
+00:00:52.363 --> 00:00:55.392
+la quantité à 2 et
+le prix initial sera de 10 $.
+
+00:00:55.392 --> 00:00:57.560
+Vous pouvez effectuer ces modifications
+dans le XML ainsi.
+
+00:00:59.050 --> 00:01:02.600
+Vous pouvez régler votre monnaie locale
+le cas échéant.
+
+00:01:02.600 --> 00:01:04.977
+La raison pour laquelle je choisis
+2 comme une quantité est si
+
+00:01:04.977 --> 00:01:07.220
+vous appuyez sur le bouton moins,
+il ne va pas être négatif.
+
+00:01:08.310 --> 00:01:11.130
+Quand vous ajoutez ces boutons à votre
+layout vous remarquerez qu'ils semblent
+
+00:01:11.130 --> 00:01:13.050
+être plus grand que
+ce qui est montré ici.
+
+00:01:14.060 --> 00:01:17.229
+Vous pouvez obtenir cet aspect en mettant
+la largeur et la hauteur à 48 dps.
+
+00:01:18.510 --> 00:01:20.360
+Puis branchez le comportement du clic.
+
+00:01:20.360 --> 00:01:24.510
+Quand le bouton + est cliqué, appelez la
+méthode incrément dans activité principal.
+
+00:01:24.510 --> 00:01:28.790
+Quand le bouton - est cliqué, appelez la
+méthode decrement dans activité principal.
+
+00:01:28.790 --> 00:01:32.190
+Dans l'activité principale
+ajoutez une méthode d'incrémentation.
+
+00:01:32.190 --> 00:01:35.170
+L'intérieur de cette méthode de création
+est une variable de quantité et
+
+00:01:35.170 --> 00:01:37.290
+initialisez à la valeur 3.
+
+00:01:37.290 --> 00:01:42.190
+Quand je dis initialiser cela signifie
+définir la valeur initiale de la variable
+
+00:01:42.190 --> 00:01:42.970
+à 3.
+
+00:01:42.970 --> 00:01:45.770
+Aller ensuite de l'avant et
+afficher la quantité à l'écran.
+
+00:01:47.090 --> 00:01:50.970
+Ensuite ajoutez également 
+une méthode de diminution et
+
+00:01:50.970 --> 00:01:53.974
+créez une variable de quantité 
+qui est initialisée à la valeur 1.
+
+00:01:55.180 --> 00:01:57.210
+Puis affichez la quantité à l'écran.
+
+00:01:58.480 --> 00:02:01.540
+Après avoir terminé toutes ces étapes
+ça devrait ressembler à ça
+
+00:02:01.540 --> 00:02:02.130
+sur le dispositif.
+
+00:02:03.130 --> 00:02:08.195
+Dans l'application, il devrait avoir
+une quantité de 2 et un prix de 10 $.
+
+00:02:08.195 --> 00:02:11.785
+Si vous cliquez la touche plus,
+ça augmente la quantité à 3.
+
+00:02:11.785 --> 00:02:16.175
+Si vous cliquez la touche moins,
+ça diminue la quantité à 1.
+
+00:02:16.175 --> 00:02:20.367
+Techniquement, ce comportement est
+incorrect car ça aurait du être 2.
+
+00:02:20.367 --> 00:02:23.497
+Mais le bouton + doit
+toujours changer à 3 et
+
+00:02:23.497 --> 00:02:25.697
+la touche moins
+toujours changer à 1.
+
+00:02:25.697 --> 00:02:28.667
+Dans une tâche de codage plus tard,
+nous allons résoudre ce problème de façon
+
+00:02:28.667 --> 00:02:32.697
+à ce qu'à chaque fois cela
+continue à augmenter à 4, 5,
+
+00:02:32.697 --> 00:02:34.837
+6, etc., et pareil
+pour la touche moins.
+
+00:02:36.497 --> 00:02:39.590
+Vous pouvez laisser le prix et
+le bouton de commande comme il est.
+
+00:02:39.590 --> 00:02:44.000
+Ma version met simplement à jour la 
+quantité à 5 et le prix à 25 $, mais
+
+00:02:44.000 --> 00:02:46.610
+Vous pouvez le laisser comme avant.
+
+00:02:46.610 --> 00:02:48.650
+Nous allons également 
+corriger ça plus tard.
+
+00:02:48.650 --> 00:02:51.610
+Si jamais vous voulez
+revenir à la façon dont l'application
+
+00:02:51.610 --> 00:02:55.200
+était au début. vous pouvez
+toujours tuer votre application.
+
+00:02:55.200 --> 00:02:59.970
+Dans la barre de navigation du 
+système, il y a des boutons,
+
+00:02:59.970 --> 00:03:01.520
+Retour, Accueil et Tâches récentes.
+
+00:03:01.520 --> 00:03:03.270
+Si vous cliquez sur
+cette touchedes tâches récentes,
+
+00:03:03.270 --> 00:03:05.860
+ça montre toutes les tâches récentes
+que vous faites sur votre téléphone.
+
+00:03:07.130 --> 00:03:08.030
+Si vous glissez vers la gauche ou
+
+00:03:08.030 --> 00:03:11.640
+la droite, ça tue votre application,
+ce qui signifie qu'il arrête de marcher.
+
+00:03:11.640 --> 00:03:14.370
+Allez dans l'écran toutes les appli
+et puis cliquez sur votre appli pour
+
+00:03:14.370 --> 00:03:16.930
+lancez à nouveau, puis ça montrera
+l'état initial de l'application
+

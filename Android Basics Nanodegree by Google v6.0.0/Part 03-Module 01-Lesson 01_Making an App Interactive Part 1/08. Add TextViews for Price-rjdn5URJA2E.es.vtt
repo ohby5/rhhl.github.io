@@ -1,0 +1,483 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.410 --> 00:00:02.360
+Quiero que desarrolles
+este diseño tú solo.
+
+00:00:03.080 --> 00:00:05.650
+Vas a añadir una vista de texto aquí
+para la cabecera del precio
+
+00:00:05.880 --> 00:00:08.390
+además de otra vista de texto aquí
+que muestre cero dólares.
+
+00:00:09.310 --> 00:00:11.590
+Asígnale también
+a esta segunda vista de texto
+
+00:00:11.720 --> 00:00:15.530
+un ID de vista de <i>price_text_view</i>
+[precio_texto_vista].
+
+00:00:15.650 --> 00:00:17.460
+La razón de pedirte que añadas un ID
+
+00:00:17.630 --> 00:00:19.790
+es que vamos a tener que
+referenciar esta vista después
+
+00:00:19.830 --> 00:00:21.100
+para poder actualizar el precio.
+
+00:00:21.640 --> 00:00:22.640
+Y ya que estás
+
+00:00:22.690 --> 00:00:24.990
+ajusta el estilo
+de estas dos vistas de texto
+
+00:00:25.040 --> 00:00:27.240
+para que sea igual
+que las vistas de texto de cantidad.
+
+00:00:27.760 --> 00:00:29.170
+En cuanto al espaciado vertical
+
+00:00:29.340 --> 00:00:32.040
+también tenemos 16 dp entre estas vistas.
+
+00:00:32.439 --> 00:00:34.180
+Para que se actualice el campo del precio
+
+00:00:34.250 --> 00:00:37.380
+vamos a tener que modificar
+el archivo <i>MainActivity.java</i>.
+
+00:00:37.800 --> 00:00:39.320
+Te ayudaremos con eso.
+
+00:00:39.730 --> 00:00:41.520
+Vamos a proporcionarte un nuevo método
+
+00:00:41.580 --> 00:00:43.760
+para añadiral archivo <i>MainActivity.java</i>.
+
+00:00:44.260 --> 00:00:47.260
+Abre el <i>gist</i> con el link
+que aparece en las notas técnicas.
+
+00:00:47.400 --> 00:00:48.400
+Por cierto
+
+00:00:48.570 --> 00:00:52.800
+un <i>gist</i> es un pequeño fragmento
+de código reusable
+
+00:00:52.900 --> 00:00:54.240
+que quieres compartir con otros.
+
+00:00:54.530 --> 00:00:58.060
+En este caso,
+hemos ido a la página web GitHub Gist
+
+00:00:58.160 --> 00:00:59.860
+donde hemos creado un gist nuevo
+
+00:01:00.240 --> 00:01:02.040
+con este código que te quiero dar.
+
+00:01:02.290 --> 00:01:05.110
+Ahora podemos compartir este link contigo
+y tendrás el código.
+
+00:01:05.780 --> 00:01:08.480
+Seleccionamos el fragmento y lo copiamos.
+
+00:01:09.140 --> 00:01:10.880
+No olvides incluir este comentario
+
+00:01:11.050 --> 00:01:12.220
+la nota técnica
+
+00:01:12.520 --> 00:01:14.090
+y este corchete de cierre de aquí abajo.
+
+00:01:14.790 --> 00:01:17.270
+Ahora lo pegamos
+en el archivo <i>MainActivity</i>.
+
+00:01:17.770 --> 00:01:18.850
+Me encanta el código libre.
+
+00:01:19.740 --> 00:01:22.590
+Asegúrate de que los corchetes
+siguen alineados después de pegarlo.
+
+00:01:22.940 --> 00:01:26.430
+Los corchetes son un incordio,
+estén donde estén.
+
+00:01:26.900 --> 00:01:29.290
+Te dará muchos errores
+si no están alineados.
+
+00:01:30.040 --> 00:01:33.570
+Por ejemplo,
+si pego este bloque de código aquí abajo
+
+00:01:33.850 --> 00:01:37.170
+me da un error que dice
+que se espera clase o interfaz.
+
+00:01:37.740 --> 00:01:40.560
+La razón es que el método
+está colgado en medio de la nada.
+
+00:01:40.880 --> 00:01:43.500
+En realidad queremos
+que esté dentro de <i>MainActivity</i>,
+
+00:01:43.960 --> 00:01:47.260
+entre los corchetes de apertura y cierre
+de <i>MainActivity</i>.
+
+00:01:47.380 --> 00:01:48.420
+Así que copia esto
+
+00:01:48.590 --> 00:01:51.990
+para ponerlo antes del corchete de cierre
+de <i>MainActivity</i>.
+
+00:01:52.500 --> 00:01:53.500
+Así mejor.
+
+00:01:53.910 --> 00:01:57.960
+Otro error potencial puede ser
+que olvides copiar el corchete de cierre
+
+00:01:58.450 --> 00:02:00.680
+si solo coges esta parte del método.
+
+00:02:00.870 --> 00:02:04.840
+En ese caso te dará otro error que dice
+que se espera el corchete de cierre.
+
+00:02:05.540 --> 00:02:07.070
+Así que tendrás que añadirlo.
+
+00:02:07.170 --> 00:02:11.440
+Otro error potencial que podrías cometer
+es añadir el método aquí por error.
+
+00:02:12.050 --> 00:02:14.980
+Es decir, antes del corchete de cierre
+del método de visualización.
+
+00:02:15.940 --> 00:02:18.720
+Ahora
+está dentro del método de visualización
+
+00:02:18.800 --> 00:02:19.900
+que no es lo que queremos.
+
+00:02:20.290 --> 00:02:22.540
+Queremos que esté al lado
+del método de visualización.
+
+00:02:22.910 --> 00:02:23.910
+Justo aquí.
+
+00:02:25.420 --> 00:02:27.740
+Como ves hay un millón de combinaciones.
+
+00:02:27.940 --> 00:02:30.300
+Solamente asegúrate
+de que los corchetes estén alineados.
+
+00:02:30.730 --> 00:02:33.800
+Otra forma de comprobarlo es,
+si pones el cursor aquí
+
+00:02:33.900 --> 00:02:35.290
+después del corchete de apertura
+
+00:02:35.550 --> 00:02:38.650
+verás que señala el corchete de cierre
+que le corresponde.
+
+00:02:39.000 --> 00:02:40.270
+Aquí igual, si hago clic aquí
+
+00:02:40.340 --> 00:02:42.860
+le corresponde este corchete de cierre.
+
+00:02:44.120 --> 00:02:45.900
+Lo mismo para el método <i>submitOrder</i>
+
+00:02:46.410 --> 00:02:47.740
+el método <i>onCreate</i>
+
+00:02:47.940 --> 00:02:49.940
+e incluso la <i>MainActivity</i>.
+
+00:02:50.440 --> 00:02:52.380
+Este
+es el corchete de apertura de <i>MainActivity</i>
+
+00:02:52.450 --> 00:02:55.020
+el corchete de cierre
+está marcado en azul aquí abajo.
+
+00:02:55.370 --> 00:02:57.820
+Desgraciadamente tenemos otro error aquí.
+
+00:02:58.620 --> 00:03:00.660
+Fíjate en la barra lateral.
+
+00:03:00.730 --> 00:03:02.770
+No se puede resolver
+el símbolo "Formato de número".
+
+00:03:03.160 --> 00:03:05.700
+El formato de número
+es algo que Android proporciona
+
+00:03:05.910 --> 00:03:07.510
+para ayudar a dar formato a los números.
+
+00:03:07.620 --> 00:03:10.540
+En este caso, el número
+al que queremos dar formato es el precio
+
+00:03:10.630 --> 00:03:14.390
+que tiene un símbolo de dólar
+o de cualquier otra moneda que uses.
+
+00:03:14.700 --> 00:03:16.680
+Hay que añadir
+una declaración de importación.
+
+00:03:16.750 --> 00:03:20.350
+En estos momentos,
+Android Studio no puede reconocerla.
+
+00:03:21.100 --> 00:03:23.850
+Para resolverlo os voy a enseñar
+a activar la importación automática.
+
+00:03:24.410 --> 00:03:26.510
+En el menú superior del Android Studio
+
+00:03:26.790 --> 00:03:28.750
+haz clic en <i>Android Studio &gt; Preferencias</i>.
+
+00:03:29.390 --> 00:03:31.800
+De este modo se abren
+las preferencias de Android Studio.
+
+00:03:32.260 --> 00:03:34.570
+Hay un millón de preferencias
+que nunca he cambiado
+
+00:03:34.910 --> 00:03:37.940
+pero si alguna vez necesitas algo,
+yo suelo usar la caja de búsqueda.
+
+00:03:38.310 --> 00:03:40.230
+Voy a escribir Importación automática.
+
+00:03:40.510 --> 00:03:44.100
+Muestra los ajustes para importar
+en XML y Java automáticamente.
+
+00:03:44.470 --> 00:03:48.640
+Quiero ver esto: "añadir importaciones
+no ambiguas sobre la marcha".
+
+00:03:48.820 --> 00:03:51.220
+Puede que esta frase
+no te diga nada, pero no pasa nada..
+
+00:03:51.850 --> 00:03:53.870
+Probablemente suena muy confusa.
+
+00:03:54.920 --> 00:03:56.920
+Lo único que hace
+es decirle a Android Studio
+
+00:03:57.060 --> 00:03:59.200
+que puede añadir automáticamente
+
+00:03:59.370 --> 00:04:01.150
+líneas de código adicionales en la app
+
+00:04:01.410 --> 00:04:03.360
+concretamente declaraciones de importación
+
+00:04:03.790 --> 00:04:05.560
+si sabe qué estamos referenciando.
+
+00:04:05.900 --> 00:04:06.900
+Déjame que te muestre.
+
+00:04:07.700 --> 00:04:09.430
+En realidad, ya lo hizo por nosotros.
+
+00:04:09.930 --> 00:04:11.900
+Ha asumido que,
+cuando dijimos formato de número,
+
+00:04:12.000 --> 00:04:13.660
+nos referíamos a este y así era.
+
+00:04:13.930 --> 00:04:15.730
+Ha resuelto el problema automáticamente.
+
+00:04:15.880 --> 00:04:16.880
+Lo cual es genial.
+
+00:04:17.170 --> 00:04:18.940
+Vale. Ahora, si ejecutas la app
+
+00:04:19.140 --> 00:04:20.640
+cuando pulsas la tecla Pedir
+
+00:04:20.880 --> 00:04:23.290
+cambia la cantidad pero no el precio.
+
+00:04:23.710 --> 00:04:25.710
+Tenemos que modificar
+el método de envío de pedido
+
+00:04:25.980 --> 00:04:28.890
+de manera que actualice
+tanto la cantidad como el precio.
+
+00:04:29.570 --> 00:04:31.150
+Así que añadamos otra línea de código.
+
+00:04:32.830 --> 00:04:35.150
+Voy a abrir
+el método de visualización del precio
+
+00:04:35.460 --> 00:04:41.560
+y le voy a decir que el precio
+es dos tazas de café por 5$ cada una.
+
+00:04:42.040 --> 00:04:43.960
+La razón de que nuestro café cueste 5$
+
+00:04:44.100 --> 00:04:47.070
+es que es grano arábico
+importado de Etiopía.
+
+00:04:47.460 --> 00:04:50.570
+De cualquier modo, vamos a dejar
+que el dispositivo haga el cálculo
+
+00:04:50.660 --> 00:04:53.240
+porque tenemos dos tazas de café
+de 5$ cada una.
+
+00:04:54.040 --> 00:04:56.130
+Por cierto,
+cuando me refiero a dólares,
+
+00:04:56.240 --> 00:04:58.510
+podéis convertirlo a vuestra moneda local.
+
+00:04:58.610 --> 00:05:00.960
+El símbolo del dólar no aparece
+en la fórmula matemática
+
+00:05:01.280 --> 00:05:03.900
+se añade más tarde,
+en el método de visualización del precio.
+
+00:05:04.420 --> 00:05:06.920
+Pero no te preocupes
+por el método de visualización de precio,
+
+00:05:07.110 --> 00:05:08.950
+lo veremos en la lección tres.
+
+00:05:09.840 --> 00:05:13.790
+Ahora concéntrate en la fórmula matemática
+que vas a usar para clacular el precio.
+
+00:05:14.540 --> 00:05:17.100
+Recuerda también el punto y coma
+al final de cada declaración.
+
+00:05:17.480 --> 00:05:21.500
+Si no vendrá el monstruo del punto y coma
+y te pondrá un error rojo.
+
+00:05:22.160 --> 00:05:24.440
+Por ejemplo,
+cuando eliminas el punto y coma
+
+00:05:24.540 --> 00:05:27.340
+te sale un error que dice
+que se espera un punto y coma.
+
+00:05:28.160 --> 00:05:30.240
+Para ser muy muy clara,
+
+00:05:30.410 --> 00:05:32.680
+la tecla de punto y coma es esta de aquí.
+
+00:05:33.000 --> 00:05:34.980
+No es la coma, es el punto y coma.
+
+00:05:35.490 --> 00:05:37.060
+Vale, cuando hayas acabado,
+
+00:05:37.190 --> 00:05:40.420
+hay dos visualizaciones de texto más
+para el precio.
+
+00:05:41.000 --> 00:05:44.220
+Haber modificado <i>MainActivity</i>
+para incluir el método que te hemos dado.
+
+00:05:44.480 --> 00:05:46.990
+Haber modificado también
+el método submitOrder
+
+00:05:47.060 --> 00:05:49.390
+para añadir una línea de código
+para mostrar el precio.
+
+00:05:50.240 --> 00:05:52.760
+Cuando la ejecutas en tu dispositivo
+debe ser más o menos así.
+
+00:05:53.030 --> 00:05:55.500
+Empieza con la cantidad de 0$.
+
+00:05:55.830 --> 00:05:59.070
+Y cuando lo tocas, aparece el pedido
+de dos tazas de café por 10$.
+
+00:06:00.070 --> 00:06:03.310
+Experimenta con diferentes valores
+para la cantidad o el precio.
+
+00:06:04.010 --> 00:06:06.710
+Si quieres cargar 10$
+por una taza de café, hazlo.
+
+00:06:06.890 --> 00:06:09.880
+Asegúrate de volver a cambiarlo
+a dos tazas de 5$ cada una
+
+00:06:10.160 --> 00:06:11.980
+para que coincida con nuestro código.
+
+00:06:12.680 --> 00:06:14.340
+Marca estas casillas cuando hayas acabado.
+

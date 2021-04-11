@@ -1,0 +1,273 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.240 --> 00:00:02.680
+Il n'y a pas un seul
+manière correcte de répondre à cette question.
+
+00:00:02.680 --> 00:00:06.151
+Cela dépend vraiment de ce qui est le plus utile
+pour vous d'identifier la différence
+
+00:00:06.151 --> 00:00:09.245
+Entre le comportement de l'application incorrecte et
+le comportement de l'application correcte.
+
+00:00:09.245 --> 00:00:12.640
+Voici quelques-unes des
+la chose que je remarqué.
+
+00:00:12.640 --> 00:00:15.990
+Dans le comportement de l'application incorrecte,
+lorsque vous cliquez sur le bouton de commande
+
+00:00:15.990 --> 00:00:19.990
+La quantité change à la même valeur
+chaque fois et il ne devrait pas changer.
+
+00:00:19.990 --> 00:00:22.320
+Ensuite, je remarque aussi que
+le prix était correct pour
+
+00:00:22.320 --> 00:00:25.010
+Cette valeur de quantité, mais
+vraiment le prix devrait être pour
+
+00:00:25.010 --> 00:00:28.310
+La dernière quantité qui a été
+sélectionnée dans le sélecteur de quantité.
+
+00:00:28.310 --> 00:00:31.570
+Encore une fois, ceci est lié au fait que
+quantité ne devrait pas changer.
+
+00:00:31.570 --> 00:00:34.230
+Regardons le code existant pour
+pourquoi cela se passe.
+
+00:00:35.390 --> 00:00:39.320
+Dans le fichier activity_main de mise en page,
+Nous avons le bouton de commande a déclaré ici.
+
+00:00:39.320 --> 00:00:40.576
+Lorsque le bouton de commande est cliqué,
+
+00:00:40.576 --> 00:00:43.102
+Nous allons appeler une méthode dans
+l'activité principale appelée submitOrder.
+
+00:00:43.102 --> 00:00:47.890
+Dans le fichier de MainActivity.java,
+voici la méthode de submitOrder.
+
+00:00:47.890 --> 00:00:51.030
+Ceci est ancien code depuis un certain temps
+il ya que nous avons pas encore changé.
+
+00:00:51.030 --> 00:00:54.570
+Mais nous créons une quantité entier
+variable et l'initialiser à 5.
+
+00:00:54.570 --> 00:00:56.300
+Nous affichons qui à l'écran.
+
+00:00:56.300 --> 00:01:00.610
+Nous affichons également le prix que le nombre de tasses de
+fois de café 5 $ chacun.
+
+00:01:00.610 --> 00:01:03.700
+Déjà ce code ne fait pas beaucoup de sens
+, parce que nous essayons de présenter
+
+00:01:03.700 --> 00:01:06.530
+L'ordre que nous essayons de mettre à jour
+la quantité.
+
+00:01:06.530 --> 00:01:09.411
+Et un autre problème est que nous sommes
+créer une quantité variable entier
+
+00:01:09.411 --> 00:01:12.478
+Quand nous avons déjà une quantité globale
+variable qui est censé garder une trace
+
+00:01:12.478 --> 00:01:13.747
+Du nombre de tasses de café.
+
+00:01:13.747 --> 00:01:18.026
+Dans le MainActivity nous avons déjà
+avons une variable globale de la quantité,
+
+00:01:18.026 --> 00:01:22.520
+Sorte que toute méthode à l'intérieur ici peut
+référer à cette variable de quantité.
+
+00:01:22.520 --> 00:01:27.060
+Cependant, dans la méthode de submitOrder nous
+création d'une nouvelle quantité variable locale.
+
+00:01:27.060 --> 00:01:30.410
+Techniquement, vous pouvez avoir une variable locale
+appelé du même nom
+
+00:01:30.410 --> 00:01:32.200
+Comme une variable globale.
+
+00:01:32.200 --> 00:01:34.812
+Cela signifie simplement que, dans le contexte
+de ce procédé,
+
+00:01:34.812 --> 00:01:38.581
+Après cette variable a été déclarée,
+lorsque vous vous référez à la quantité,
+
+00:01:38.581 --> 00:01:41.985
+Il fait référence à cette variable de la quantité d'
+locale avec la valeur 5,
+
+00:01:41.985 --> 00:01:44.396
+Pas la quantité globale
+variable de valeur 2.
+
+00:01:44.396 --> 00:01:46.310
+Alors affichage (quantité) et
+
+00:01:46.310 --> 00:01:51.500
+DisplayPrice (quantité * 5) fois
+référer à cette valeur de la quantité.
+
+00:01:51.500 --> 00:01:54.080
+Ceci est la portée de cette variable
+local.
+
+00:01:54.080 --> 00:01:55.490
+En dehors de ce périmètre,
+
+00:01:55.490 --> 00:01:59.490
+Chaque fois que vous faites référence à la quantité qu'il
+signifie cette quantité variable globale.
+
+00:01:59.490 --> 00:02:00.330
+Si vous pensez cela,
+
+00:02:00.330 --> 00:02:03.430
+Cependant, il n'a pas vraiment de sens
+que lorsque vous soumettez votre commande,
+
+00:02:03.430 --> 00:02:07.040
+Vous souhaitez créer une nouvelle quantité et
+afficher alors que sur l'écran.
+
+00:02:07.040 --> 00:02:10.370
+Qu'est-ce que vous voulez vraiment faire est de simplement utiliser
+la quantité que nous avons été gardant
+
+00:02:10.370 --> 00:02:14.900
+Piste comme nous avons augmenté et
+diminuant le nombre de tasses de café.
+
+00:02:14.900 --> 00:02:18.040
+Voilà donc ce que nous devrions
+calculer notre prix hors de.
+
+00:02:18.040 --> 00:02:22.070
+Pour fixer notre code, nous ne devrions pas
+déclarer une quantité variable locale.
+
+00:02:22.070 --> 00:02:25.130
+Au lieu de cela, nous devrions simplement utiliser
+cette variable globale de la quantité.
+
+00:02:25.130 --> 00:02:28.550
+Nous devrions également cesser d'essayer de mettre à jour la quantité
+sur l'écran.
+
+00:02:28.550 --> 00:02:31.270
+Le boutons plus et moins déjà
+gérer la mise à jour de l'écran
+
+00:02:31.270 --> 00:02:33.520
+Avec la valeur appropriée de la quantité.
+
+00:02:33.520 --> 00:02:37.570
+Nous, cependant, nous voulons le bouton submitOrder de
+de mettre à jour encore le prix.
+
+00:02:37.570 --> 00:02:41.600
+Mais cette fois nous allons
+calculer le prix que la quantité * 5
+
+00:02:41.600 --> 00:02:43.990
+Utilisant la variable globale de la quantité.
+
+00:02:43.990 --> 00:02:47.720
+Je vais mettre à jour le code de sorte que
+il reflète ce que nous venons de parler.
+
+00:02:47.720 --> 00:02:50.860
+Notez que la variable de la quantité
+a transformé en une couleur de police pourpre,
+
+00:02:50.860 --> 00:02:54.030
+Qui signifie que nous utilisons la variable globale de la quantité de
+dans le MainActivity.
+
+00:02:54.030 --> 00:02:57.940
+Lorsque le bouton est pressé il
+déclencher la méthode de submitOrder.
+
+00:02:57.940 --> 00:02:59.580
+Cela permet d'afficher
+le prix sur l'écran,
+
+00:02:59.580 --> 00:03:03.934
+Où le prix est calculé comme
+la quantité globale des durées variables 5.
+
+00:03:04.970 --> 00:03:06.670
+Ce semble correct, donc
+exécutons sur notre dispositif.
+
+00:03:07.680 --> 00:03:09.530
+Bon, maintenant pour le test ultime.
+
+00:03:09.530 --> 00:03:13.660
+Je vais modifier la quantité à 6
+puis cliquez sur le bouton de commande, et
+
+00:03:13.660 --> 00:03:14.510
+Yay, il est de 30 $.
+
+00:03:14.510 --> 00:03:17.630
+Je vais essayer d'autres valeurs, si bien que
+Je sais qu'il est pas un hasard.
+
+00:03:17.630 --> 00:03:18.958
+Cela semble correcte.
+Cela semble correcte.
+
+00:03:18.958 --> 00:03:22.600
+Cool, ça marche!
+
+00:03:22.600 --> 00:03:24.310
+Vous venez fixe votre premier bug.
+
+00:03:24.310 --> 00:03:26.400
+Vous avez vraiment bien sur cette tâche.
+
+00:03:26.400 --> 00:03:28.970
+La fonctionnalité de notre application de
+travaille vraiment bien.
+
+00:03:28.970 --> 00:03:32.280
+Mais je dois admettre que,
+l'interface utilisateur est un peu laid.
+
+00:03:32.280 --> 00:03:35.800
+En particulier, la quantité
+sélecteur pourrait utiliser un peu d'amour de l'interface utilisateur, de sorte
+
+00:03:35.800 --> 00:03:36.740
+Nous allons travailler sur ce côté.
+

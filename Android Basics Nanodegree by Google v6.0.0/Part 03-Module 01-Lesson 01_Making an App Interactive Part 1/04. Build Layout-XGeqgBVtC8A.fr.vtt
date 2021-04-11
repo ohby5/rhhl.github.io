@@ -1,0 +1,326 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.180 --> 00:00:04.710
+Pour créer cette disposition,
+j'ouvre le fichier activity_main.xml.
+
+00:00:04.710 --> 00:00:07.670
+J'aurai besoin d'une disposition
+linéaire verticale pour placer chaque vue
+
+00:00:07.670 --> 00:00:09.340
+dans une colonne verticale.
+
+00:00:09.340 --> 00:00:12.870
+Je vais donc d'abord changer
+la disposition de relative à linéaire.
+
+00:00:12.870 --> 00:00:17.110
+L'éditeur me signale directement
+que la balise ouvrante est différente de
+
+00:00:17.110 --> 00:00:20.840
+la fermante, donc je vais copier
+ceci pour le coller ici, en bas ;
+
+00:00:20.840 --> 00:00:22.100
+balises identiques, voilà.
+
+00:00:22.100 --> 00:00:23.930
+Ensuite, je peux ajouter les vues.
+
+00:00:23.930 --> 00:00:25.720
+D'abord, j'ai une TextView « quantité ».
+
+00:00:25.720 --> 00:00:29.880
+Je vais donc prendre cette TextView et
+changer le texte affiché en « quantité ».
+
+00:00:29.880 --> 00:00:31.960
+Ensuite, j'ai une TextView qui dit « 0 ».
+
+00:00:31.960 --> 00:00:34.460
+Je peux donc copier la première
+TextView et la coller plus bas.
+
+00:00:34.460 --> 00:00:38.430
+Je change sa valeur pour que le texte
+dise « 0 » comme dans ma capture.
+
+00:00:38.430 --> 00:00:41.500
+Le dernier enfant de
+cette disposition linéaire est un bouton.
+
+00:00:41.500 --> 00:00:45.020
+On n'avait jamais ajouté de bouton dans
+nos dispositions avant, alors voyons ça.
+
+00:00:45.020 --> 00:00:48.160
+En ouvrant un navigateur,
+on peut chercher "Button Android".
+
+00:00:48.160 --> 00:00:51.500
+Ce premier lien a l'air bon,
+le site est en developer.android.com.
+
+00:00:52.570 --> 00:00:56.700
+Et voici la documentation pour Button,
+on peut passer la majorité de ce texte.
+
+00:00:56.700 --> 00:00:59.250
+On fait défiler pour pouvoir
+lire le survol de cette classe.
+
+00:00:59.250 --> 00:01:03.000
+Il parle un peu de code JAVA,
+on n'en a pas encore appris, mais
+
+00:01:03.000 --> 00:01:06.300
+plus bas, ici, on a
+du code XML pour un bouton.
+
+00:01:06.300 --> 00:01:09.280
+On peut copier ceci et
+voir ses effets dans notre code.
+
+00:01:09.280 --> 00:01:12.420
+Dans notre disposition, j'ajoute
+un bouton sous les deux TextViews.
+
+00:01:12.420 --> 00:01:16.030
+Je colle mon code pris
+dans la documentation ici.
+
+00:01:16.030 --> 00:01:18.900
+Ensuite, au lieu de la chaîne
+self_destruct, je vais plutôt
+
+00:01:18.900 --> 00:01:22.280
+afficher une chose plus
+sympathique comme Commander.
+
+00:01:22.280 --> 00:01:24.900
+On peut aussi effacer la dernière
+ligne, on n'en aura pas besoin.
+
+00:01:24.900 --> 00:01:28.580
+Cool. On a donc une TextView "quantité",
+une autre qui affiche "0", et un bouton
+
+00:01:28.580 --> 00:01:29.270
+"Commander".
+
+00:01:30.320 --> 00:01:32.220
+Exécutons ce script,
+pour voir ce que ça donne,
+
+00:01:32.220 --> 00:01:33.540
+avec ce bouton vert Lecture.
+
+00:01:33.540 --> 00:01:36.290
+On voit en bas
+que la machine compile le code.
+
+00:01:37.690 --> 00:01:38.660
+Oh, ce n'est pas ce qu'on veut.
+
+00:01:38.660 --> 00:01:43.470
+Il semble que notre disposition linéaire
+soit en fait horizontale, pas verticale.
+
+00:01:43.470 --> 00:01:47.586
+Veillons donc à ajouter
+l'attribut "orientation".
+
+00:01:47.586 --> 00:01:52.020
+On va le changer à, mettons…
+« android:orientation="vertical" ».
+
+00:01:52.020 --> 00:01:53.570
+Ça devrait régler le problème.
+
+00:01:53.570 --> 00:01:54.490
+Refaisons Exécuter.
+
+00:01:55.520 --> 00:01:57.010
+Ok, c'est déjà mieux.
+
+00:01:57.010 --> 00:02:00.270
+Les trois enfants s'affichent
+dans une colonne verticale.
+
+00:02:00.270 --> 00:02:01.810
+Il ne reste qu'à
+styliser ces vues pour
+
+00:02:01.810 --> 00:02:04.160
+qu'ils ressemblent plus
+à la capture qu'on nous a donnée.
+
+00:02:05.280 --> 00:02:08.460
+Sur la capture on voit que la TextView
+"quantité" est écrire en majuscules.
+
+00:02:09.600 --> 00:02:13.950
+Dans la leçon 1, on a vu qu'il existe
+un attribut « android:textAllCaps ».
+
+00:02:13.950 --> 00:02:16.230
+Il apparaît ici dans l'auto-complétion.
+
+00:02:16.230 --> 00:02:18.310
+S'il apparaît comme ici,
+il suffit de faire Entrée
+
+00:02:18.310 --> 00:02:20.390
+et l'éditeur l'insérera
+automatiquement dans le code.
+
+00:02:21.400 --> 00:02:24.970
+On place la valeur à "true"
+parce qu'on veut le texte en majuscules.
+
+00:02:24.970 --> 00:02:28.580
+S'il vaut mieux utiliser cet attribut
+pour mettre les lettres en majuscules,
+
+00:02:28.580 --> 00:02:32.620
+c'est parce que si on modifie l'interface
+pour passer "quantité" en minuscules,
+
+00:02:32.620 --> 00:02:35.650
+comme ici, il suffira
+de retirer l'attribut
+
+00:02:35.650 --> 00:02:38.020
+au lieu de chercher
+à changer le texte.
+
+00:02:38.020 --> 00:02:41.840
+Ensuite, pour la TextView qui dit "0",
+il faut une taille de police de 16 sp.
+
+00:02:41.840 --> 00:02:45.970
+Je vais l'ajouter, l'attribut apparaît
+dans les auto-complétions possibles alors
+
+00:02:45.970 --> 00:02:50.000
+je fais juste Entrée et
+j'indique 16 sp en valeur.
+
+00:02:50.000 --> 00:02:52.450
+On veut aussi que
+la police soit de couleur noire.
+
+00:02:52.450 --> 00:02:54.700
+J'utilise le système
+de couleurs d'Android pour le
+
+00:02:54.700 --> 00:02:57.380
+noir, qu'on appelle comme ceci.
+
+00:02:57.380 --> 00:03:00.558
+Cool. On s'est ainsi occupé
+des TextViews "quantité" et "0".
+
+00:03:00.558 --> 00:03:05.011
+Le bouton Commander est bien ainsi,
+le texte est toujours mis en majuscules
+
+00:03:05.011 --> 00:03:08.820
+dans les boutons, avec une hauteur
+et une largeur en "wrap_content".
+
+00:03:08.820 --> 00:03:11.898
+On doit cependant s'occuper
+de cet espace vertical.
+
+00:03:11.898 --> 00:03:15.810
+On veut 16 dp de marge intérieure
+ou extérieure entre les TextViews
+
+00:03:15.810 --> 00:03:17.190
+"quantité" et "0".
+
+00:03:17.190 --> 00:03:20.027
+On veut aussi 16 dp de marge intérieure
+entre le "0" et
+
+00:03:20.027 --> 00:03:21.430
+le bouton Commander.
+
+00:03:21.430 --> 00:03:23.960
+On peut l'implémenter
+de bien des façons,
+
+00:03:23.960 --> 00:03:27.650
+Je préfère juste l'ajouter comme
+marge supérieure pour le bouton ;
+
+00:03:31.410 --> 00:03:34.490
+puis comme marge inférieure
+pour la TextView "quantité".
+
+00:03:37.810 --> 00:03:40.810
+N'hésitez pas à faire autre chose
+tant que l'aspect final est le même.
+
+00:03:40.810 --> 00:03:44.000
+J'ai préféré placer des marges
+supérieures et inférieures parce que je
+
+00:03:44.000 --> 00:03:47.040
+sais que cette zone au milieu
+changera plus tard.
+
+00:03:47.040 --> 00:03:49.670
+On la changera pour en faire
+un sélecteur de quantité avec des
+
+00:03:49.670 --> 00:03:54.620
+boutons plus et moins, et je tiens
+à avoir 16 dp d'espace entre le titre
+
+00:03:54.620 --> 00:03:56.830
+"quantité" et le sélectionneur.
+
+00:03:56.830 --> 00:03:57.560
+Pareil pour le bouton.
+
+00:03:58.610 --> 00:04:01.280
+Ok, relançons le code
+sur notre appareil.
+
+00:04:01.280 --> 00:04:03.350
+Cool, l'écran est pile comme on voulait.
+
+00:04:03.350 --> 00:04:07.150
+La TextView "quantité" est
+tout en majuscules, la TextView "0"
+
+00:04:07.150 --> 00:04:11.710
+a une police noire de 16 sp, et on a
+le bouton Commander ici.
+
+00:04:11.710 --> 00:04:14.540
+On a aussi un espace
+de 16 dp entre ces vues.
+
+00:04:15.760 --> 00:04:18.240
+Beau travail.
+Oh, j'avais oublié.
+
+00:04:18.240 --> 00:04:21.560
+Le quiz demande aussi ce qui se passe
+quand on appuie sur ce bouton.
+
+00:04:21.560 --> 00:04:25.950
+Ben… En fait, il ne fait rien.
+Pour le moment, du moins.
+
+00:04:25.950 --> 00:04:27.660
+Restez attentifs pour
+connaître la suite.
+

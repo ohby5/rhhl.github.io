@@ -1,0 +1,270 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.240 --> 00:00:02.680
+Không phải chỉ có một cách 
+chính xác để trả lời câu hỏi này.
+
+00:00:02.680 --> 00:00:06.151
+Điều đó phụ thuộc vào thứ hữu ích nhất
+giúp bạn xác định sự khác biệt
+
+00:00:06.151 --> 00:00:09.245
+giữa hoạt động không chính xác của ứng dụng
+và hoạt động chính xác của ứng dụng.
+
+00:00:09.245 --> 00:00:12.640
+Dưới đây là một số điều mà tôi nhận thấy.
+
+00:00:12.640 --> 00:00:15.990
+Trong hoạt động không chính xác, 
+khi bạn nhấp chuột vào nút đặt hàng
+
+00:00:15.990 --> 00:00:19.990
+Số lượng thay đổi giá trị tương tự 
+mỗi lần và giá trị đó không nên thay đổi.
+
+00:00:19.990 --> 00:00:22.320
+Tiếp theo tôi cũng thấy giá là đúng đối với
+
+00:00:22.320 --> 00:00:25.010
+giá trị số lượng này, nhưng 
+thực sự giá đó phải được áp dụng cho
+
+00:00:25.010 --> 00:00:28.310
+số lượng cuối cùng được 
+lựa chọn trong bảng lựa chọn số lượng.
+
+00:00:28.310 --> 00:00:31.570
+Một lần nữa điều này liên quan đến thực tế
+rằng số lượng không nên thay đổi.
+
+00:00:31.570 --> 00:00:34.230
+Hãy nhìn vào các mã lệnh hiện có để
+biết lý do tại sao điều này xảy ra.
+
+00:00:35.390 --> 00:00:39.320
+Trong file layout activity_main, 
+Ta có nút Đặt Hàng trình bày sau đây.
+
+00:00:39.320 --> 00:00:40.576
+Khi nhấn vào nút Đặt Hàng,
+
+00:00:40.576 --> 00:00:43.102
+chúng ta thực hiện một phương pháp trong
+hoạt động chính được gọi là submitOrder.
+
+00:00:43.102 --> 00:00:47.890
+Trong file MainActivity.java, 
+đây được gọi là phương pháp submitOrder.
+
+00:00:47.890 --> 00:00:51.030
+Đây là một mã lệnh cũ từ rất 
+lâu mà chúng ta chưa thay đổi.
+
+00:00:51.030 --> 00:00:54.570
+Nhưng chúng ta tạo ra một biến 
+số lượng nguyên và khởi tạo bằng 5.
+
+00:00:54.570 --> 00:00:56.300
+Chúng ta hiển thị biến đó trên màn hình.
+
+00:00:56.300 --> 00:01:00.610
+Chúng ta cũng hiển thị giá theo số 
+cốc cà phê mỗi lần là 5$.
+
+00:01:00.610 --> 00:01:03.700
+Mã lệnh này đã không còn sử dụng được
+bởi vì chúng ta đang cố gắng nhập
+
+00:01:03.700 --> 00:01:06.530
+đơn hàng khi ta đang cập nhật số lượng.
+
+00:01:06.530 --> 00:01:09.411
+Và một vấn đề khác nữa là chúng ta
+đang tạo ra một biến số lượng nguyên
+
+00:01:09.411 --> 00:01:12.478
+khi chúng ta đã có một biến 
+số lượng toàn cầu có vai trò theo dõi
+
+00:01:12.478 --> 00:01:13.747
+số cốc cà phê.
+
+00:01:13.747 --> 00:01:18.026
+Trong MainActivity chúng ta đã 
+có biến số lượng toàn cầu,
+
+00:01:18.026 --> 00:01:22.520
+nên bất kỳ phương pháp nào ở đây cũng
+tham chiếu đến biến số lượng này.
+
+00:01:22.520 --> 00:01:27.060
+Tuy nhiên, trong phương pháp submitOrder ta
+đang tạo một biến số lượng địa phương mới.
+
+00:01:27.060 --> 00:01:30.410
+Về mặt kỹ thuật bạn có thể tạo một biến
+địa phương có cùng tên
+
+00:01:30.410 --> 00:01:32.200
+giống như biến toàn cầu.
+
+00:01:32.200 --> 00:01:34.812
+Điều này chỉ có nghĩa rằng trong
+bối cảnh phương pháp này,
+
+00:01:34.812 --> 00:01:38.581
+sau khi biến này được trình bày, 
+bất cứ khi nào tham chiếu tới số lượng,
+
+00:01:38.581 --> 00:01:41.985
+thì có nghĩa là bạn tham chiếu tới biến
+số lượng địa phương này có giá trị bằng 5,
+
+00:01:41.985 --> 00:01:44.396
+chứ không phải biến 
+số lượng toàn cầu có giá trị bằng 2.
+
+00:01:44.396 --> 00:01:46.310
+Do đó hiển thị(số lượng) và
+
+00:01:46.310 --> 00:01:51.500
+hiển thị Giá(số lượng *5) đều 
+tham chiếu đến giá trị số lượng này.
+
+00:01:51.500 --> 00:01:54.080
+Đây là phạm vi của 
+biến địa phương này.
+
+00:01:54.080 --> 00:01:55.490
+Ngoài phạm vi này,
+
+00:01:55.490 --> 00:01:59.490
+bất cứ khi nào bạn tham chiếu tới số lượng
+có nghĩa là số lượng của biến toàn cầu này.
+
+00:01:59.490 --> 00:02:00.330
+Cho dù bạn băn khoăn về điều này,
+
+00:02:00.330 --> 00:02:03.430
+thì điều đó vẫn không hợp lý 
+khi bạn nhập đặt hàng,
+
+00:02:03.430 --> 00:02:07.040
+bạn vẫn có thể tạo số lượng mới và 
+sau đó hiển thị nó trên màn hình.
+
+00:02:07.040 --> 00:02:10.370
+Điều bạn thực sự muốn làm chỉ là sử dụng 
+số lượng chúng ta đã
+
+00:02:10.370 --> 00:02:14.900
+theo dõi bởi chúng ta đã tăng 
+và giảm số cốc cà phê.
+
+00:02:14.900 --> 00:02:18.040
+Vì vậy đó là cơ sở chúng ta cần
+tính giá.
+
+00:02:18.040 --> 00:02:22.070
+Để khắc phục mã lệnh, chúng ta không nên
+khai báo một biến số lượng địa phương.
+
+00:02:22.070 --> 00:02:25.130
+Thay vào đó chúng ta chỉ nên sử dụng 
+biến số lượng toàn cầu này.
+
+00:02:25.130 --> 00:02:28.550
+Chúng ta cũng nên dừng cố gắng 
+cập nhật số lượng trên màn hình.
+
+00:02:28.550 --> 00:02:31.270
+Các nút cộng và trừ đã 
+có thể cập nhật màn hình
+
+00:02:31.270 --> 00:02:33.520
+với giá trị số lượng thích hợp.
+
+00:02:33.520 --> 00:02:37.570
+Tuy nhiên, ta thực sự muốn sử dụng nút 
+submitOrder để cập nhật giá.
+
+00:02:37.570 --> 00:02:41.600
+Nhưng lúc này chúng ta sẽ 
+tính giá bằng số lượng * 5
+
+00:02:41.600 --> 00:02:43.990
+sử dụng biến số lượng toàn cầu.
+
+00:02:43.990 --> 00:02:47.720
+Tôi sẽ cập nhật mã lệnh để 
+nó phản ánh điều chúng ta vừa thảo luận.
+
+00:02:47.720 --> 00:02:50.860
+Chú ý rằng biến số lượng 
+đã chuyển sang chữ màu tím,
+
+00:02:50.860 --> 00:02:54.030
+có nghĩa là chúng ta sử dụng biến số lượng
+toàn cầu trong MainActivity.
+
+00:02:54.030 --> 00:02:57.940
+Khi nhấn nút chúng ta sẽ 
+kích hoạt phương pháp submitOrder.
+
+00:02:57.940 --> 00:02:59.580
+Điều này sẽ hiển thị 
+giá trên màn hình,
+
+00:02:59.580 --> 00:03:03.934
+khi đó giá được tính bằng 
+biến số lượng toàn cầu nhân với 5.
+
+00:03:04.970 --> 00:03:06.670
+Điều này có vẻ đúng, vì vậy 
+hãy chạy nó trên thiết bị của chúng ta.
+
+00:03:07.680 --> 00:03:09.530
+Được rồi, bây giờ là thử nghiệm cuối cùng.
+
+00:03:09.530 --> 00:03:13.660
+Tôi sẽ thay đổi số lượng thành 6 
+rồi sau đó nhấp vào nút Order, và
+
+00:03:13.660 --> 00:03:14.510
+Kết quả là 30$.
+
+00:03:14.510 --> 00:03:17.630
+Để tôi thử với các giá trị khác như vậy 
+tôi sẽ biết kết quả không phải do ăn may.
+
+00:03:17.630 --> 00:03:18.958
+Điều đó có vẻ đúng. 
+Điều đó có vẻ đúng.
+
+00:03:18.958 --> 00:03:22.600
+Tuyệt vời, phương pháp này chính xác!
+
+00:03:22.600 --> 00:03:24.310
+Bạn đã sửa được lỗi đầu tiên của mình.
+
+00:03:24.310 --> 00:03:26.400
+Bạn thực hiện nhiệm vụ rất tốt.
+
+00:03:26.400 --> 00:03:28.970
+Chức năng của ứng dụng 
+của chúng ta đang hoạt động rất tốt.
+
+00:03:28.970 --> 00:03:32.280
+Nhưng tôi phải thừa nhận rằng 
+UI không được đẹp lắm.
+
+00:03:32.280 --> 00:03:35.800
+Đặc biệt là bảng lựa chọn 
+số lượng nên sử dụng UI đáng yêu, do đó
+
+00:03:35.800 --> 00:03:36.740
+tiếp theo chúng ta sẽ xem xét điều đó.
+

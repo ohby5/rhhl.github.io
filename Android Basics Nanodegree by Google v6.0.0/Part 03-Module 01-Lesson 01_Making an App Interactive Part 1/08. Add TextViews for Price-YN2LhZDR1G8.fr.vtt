@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.630 --> 00:00:03.290
+Premièrement, nous devons modifier la mise en page
+principale activité afin
+
+00:00:03.290 --> 00:00:05.350
+Que nous pouvons ajouter les vues de texte pour
+prix.
+
+00:00:06.680 --> 00:00:08.460
+Si l'aperçu de l'appareil
+ne montre pas déjà,
+
+00:00:08.460 --> 00:00:12.270
+Vous pouvez cliquer sur ce lien ici que
+dit Aperçu afin de le faire apparaître.
+
+00:00:13.555 --> 00:00:16.315
+Maintenant, quand nous changeons le XML, nous pouvons
+juste voir ce jour automatiquement, ici.
+
+00:00:16.315 --> 00:00:18.875
+Dans cette capture d'écran, nous avons fourni pour
+
+00:00:18.875 --> 00:00:22.445
+Vous, le prix a été présenté en
+une manière similaire à la quantité.
+
+00:00:23.675 --> 00:00:26.855
+Nous avons un en-tête, ainsi que
+une vue de texte, de montrer la valeur.
+
+00:00:26.855 --> 00:00:29.995
+Nous pouvons donc vous contenter de copier ces
+deux éléments d'affichage de texte et
+
+00:00:29.995 --> 00:00:31.295
+Puis collez-dessous.
+
+00:00:32.305 --> 00:00:34.675
+Maintenant, nous avons juste besoin de peaufiner
+les valeurs à adapter notre scénario.
+
+00:00:35.700 --> 00:00:37.590
+Au lieu de la quantité, il devrait dire
+prix.
+
+00:00:40.140 --> 00:00:43.980
+Et, nous devons aussi changer l'ID
+être prix texte vue.
+
+00:00:43.980 --> 00:00:46.100
+Vous pouvez avoir deux points de vue avec le même ID.
+
+00:00:47.110 --> 00:00:50.240
+Mais, de toute façon, dans le questionnaire, nous vous avons dit
+Pour modifier ce texte pour être vue prix.
+
+00:00:50.240 --> 00:00:52.050
+Ainsi, il serait correspondre à notre code.
+
+00:00:52.050 --> 00:00:54.270
+Il.
+Et cela fait l'erreur disparaître.
+
+00:00:54.270 --> 00:00:59.030
+Okay, en regardant l'aperçu, nous avons
+l'en-tête des prix, et à zéro en dessous.
+
+00:00:59.030 --> 00:01:01.560
+Nous voulons aussi changer juste
+cela juste pour être de zéro dollars.
+
+00:01:01.560 --> 00:01:04.230
+Et vous pouvez utiliser votre propre
+symbole de la monnaie si vous voulez.
+
+00:01:04.230 --> 00:01:05.765
+L'en-tête est dans tous les bouchons et
+
+00:01:05.765 --> 00:01:11.210
+La valeur réelle des prix a la taille de
+de texte de 16 sp et une couleur de texte noir.
+
+00:01:11.210 --> 00:01:14.490
+Qui semble bon jusqu'ici, sauf que je ne
+avis il doit être un peu
+
+00:01:14.490 --> 00:01:19.018
+Plus d'espace vertical entre l'en-tête de
+prix et la valeur de la quantité.
+
+00:01:19.018 --> 00:01:20.400
+Je vais juste
+changer tous les points de vue afin
+
+00:01:20.400 --> 00:01:23.140
+Qu'ils ont une marge dessus,
+valeur de 16dp.
+
+00:01:23.140 --> 00:01:28.110
+Et puis au lieu de la marge du bas ici,
+Je vais juste faire, marge dessus,
+
+00:01:28.110 --> 00:01:31.230
+16, et qui corrige réellement.
+
+00:01:31.230 --> 00:01:32.260
+Cool.
+
+00:01:32.260 --> 00:01:34.110
+Maintenant, tous les points de vue
+sont régulièrement espacés.
+
+00:01:35.590 --> 00:01:37.550
+Une fois que vous pensez que le
+XML est dans un bon état,
+
+00:01:37.550 --> 00:01:38.929
+Alors vous pouvez juste exécuter sur votre appareil.
+
+00:01:40.190 --> 00:01:41.260
+Cool, et qui semble bon.
+
+00:01:42.580 --> 00:01:44.760
+Nous allons travailler sur le fichier de MainActivity maintenant.
+
+00:01:44.760 --> 00:01:49.670
+Si cette fenêtre Android DDMS apparaît, vous pouvez simplement
+le réduire en utilisant cette flèche.
+
+00:01:49.670 --> 00:01:51.900
+Dans le MainActivity,
+nous vous avons demandé de copier et de
+
+00:01:51.900 --> 00:01:54.460
+Coller la méthode de displayPrice
+que nous vous avons donné.
+
+00:01:55.510 --> 00:01:58.910
+Vos préférences Heureusement, vous également modifié Android Studio
+
+00:01:58.910 --> 00:02:02.260
+Pour importer automatiquement les choses
+si elles étaient sans ambiguïté.
+
+00:02:02.260 --> 00:02:05.260
+Cela aiderait à résoudre le problème
+de lui ne sachant pas ce format de numéro
+
+00:02:05.260 --> 00:02:06.340
+Visé.
+
+00:02:06.340 --> 00:02:09.850
+Mais maintenant, avec la déclaration d'importation,
+l'application sait que le format de numéro est
+
+00:02:09.850 --> 00:02:13.890
+Quelque chose qui est fourni automatiquement
+par Java pour aider numéros de format.
+
+00:02:13.890 --> 00:02:17.490
+Alors, pour la dernière étape, nous modifions
+la méthode afin de soumettre, de sorte que lorsque
+
+00:02:17.490 --> 00:02:21.290
+Clic sur le bouton, nous affichons
+la quantité et afficher également le prix.
+

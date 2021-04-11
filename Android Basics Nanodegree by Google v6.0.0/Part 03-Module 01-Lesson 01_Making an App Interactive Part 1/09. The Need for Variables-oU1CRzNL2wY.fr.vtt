@@ -1,0 +1,720 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.620 --> 00:00:04.780
+Bien Katherine, notre appli avance bien,
+mais il y a un gros problème.
+
+00:00:04.780 --> 00:00:05.920
+Quel problème ?
+
+00:00:05.920 --> 00:00:08.029
+On ne peut que commander
+deux tasses de café.
+
+00:00:08.029 --> 00:00:09.750
+Et le problème avec deux tasses... ?
+
+00:00:09.750 --> 00:00:11.960
+Trois est mieux que deux,
+quatre encore mieux,
+
+00:00:11.960 --> 00:00:13.980
+- parfois j'ai besoin de plus.
+- D'accord.
+
+00:00:13.980 --> 00:00:16.220
+Donc ce que je peux faire,
+c'est changer le code
+
+00:00:16.220 --> 00:00:18.440
+pour qu'au lieu de deux,
+ce soit trois.
+
+00:00:18.440 --> 00:00:21.120
+Donc dans notre code ici,
+il va falloir changer
+
+00:00:21.470 --> 00:00:22.820
+le nombre de tasses de café.
+
+00:00:23.190 --> 00:00:23.930
+Ici
+
+00:00:24.190 --> 00:00:25.360
+- et ici.
+- Oui.
+
+00:00:25.580 --> 00:00:28.810
+Et si je voulais dix tasses
+pour moi et mes amis, plus tard ?
+
+00:00:29.320 --> 00:00:30.585
+Tu as autant d'amis ?
+
+00:00:31.225 --> 00:00:33.340
+Ben on a besoin d'autre chose alors.
+
+00:00:33.490 --> 00:00:34.810
+Oui, une meilleur solution.
+
+00:00:34.810 --> 00:00:37.090
+Ah je sais, et si
+on utilisait des variables ?
+
+00:00:37.770 --> 00:00:38.820
+Des variables ?
+
+00:00:38.820 --> 00:00:40.460
+C'est quelque chose qui varie ?
+
+00:00:40.460 --> 00:00:42.610
+Ouais, une variable
+n'a pas de valeur fixe.
+
+00:00:42.610 --> 00:00:45.001
+On se représente une variable 
+comme une boîte,
+
+00:00:45.951 --> 00:00:47.021
+comme ça.
+
+00:00:47.921 --> 00:00:48.700
+D'accord.
+
+00:00:48.700 --> 00:00:49.950
+Donc voici une variable.
+
+00:00:49.950 --> 00:00:52.430
+C'est une boîte
+et on peut mettre une valeur dedans.
+
+00:00:52.430 --> 00:00:53.770
+Il y a <i>int</i> dessus.
+
+00:00:53.770 --> 00:00:55.440
+<i>int</i> signifie un nombre entier.
+
+00:00:55.440 --> 00:00:58.460
+Donc on peut mettre un <i>int</i>,
+un nombre entier dans cette boîte.
+
+00:00:58.460 --> 00:00:59.170
+Exactement !
+
+00:00:59.170 --> 00:01:00.850
+Et on peut même lui donner un nom.
+
+00:01:00.850 --> 00:01:02.670
+Appelons-la numberOfCoffeesOrdered
+
+00:01:02.670 --> 00:01:04.910
+ou nombre de tasses de café commandées.
+
+00:01:04.910 --> 00:01:05.680
+D'accord.
+
+00:01:06.930 --> 00:01:08.996
+Tu étais obligé
+de choisir un nom si long ?
+
+00:01:09.346 --> 00:01:10.346
+Commandées.
+
+00:01:10.906 --> 00:01:12.666
+- Il y a juste assez de place.
+- Bon.
+
+00:01:12.666 --> 00:01:13.400
+Bon.
+
+00:01:13.550 --> 00:01:17.260
+Donc maintenant on peut faire référence
+à cette variable en utilisant ce nom
+
+00:01:17.260 --> 00:01:19.580
+dans un code au lieu de mettre
+la valeur de deux.
+
+00:01:19.580 --> 00:01:20.290
+D'accord.
+
+00:01:20.580 --> 00:01:22.890
+Plus tard on peut le changer si on veut.
+
+00:01:22.890 --> 00:01:24.980
+Mettons la valeur
+à l'intérieur maintenant.
+
+00:01:25.000 --> 00:01:26.300
+Comment va-t-on faire ça ?
+
+00:01:26.300 --> 00:01:27.924
+Ben j'ai des Post-Its.
+
+00:01:29.584 --> 00:01:31.440
+Ils viennent d'où ces Post-Its ?
+
+00:01:31.440 --> 00:01:35.180
+Appelons le nombre de tasses de café
+à commander, deux.
+
+00:01:35.180 --> 00:01:36.710
+Pourquoi seulement deux ?
+
+00:01:36.710 --> 00:01:39.204
+Une pour moi
+et une pour mon amie Katherine.
+
+00:01:40.664 --> 00:01:41.580
+Merci.
+
+00:01:42.390 --> 00:01:45.980
+Donc maintenant on a une variable appelée
+numberOfCoffeesOrdered
+
+00:01:45.980 --> 00:01:47.760
+avec une valeur de deux.
+
+00:01:48.120 --> 00:01:50.110
+Appliquons tout ça à notre code.
+
+00:01:50.260 --> 00:01:52.590
+Avant, on utilisait une valeur littérale
+
+00:01:52.590 --> 00:01:55.050
+pour représenter
+la quantité de café commandée.
+
+00:01:55.840 --> 00:01:58.740
+Une littérale signifie une valeur fixe,
+comme le chiffre deux.
+
+00:01:59.330 --> 00:02:02.822
+Techniquement, ce cinq et ce deux
+sont aussi des valeurs littérales
+
+00:02:02.822 --> 00:02:06.466
+mais ici on fait référence à l'utilisation
+de littérales pour des quantités.
+
+00:02:07.126 --> 00:02:10.030
+Donc si on dit que la quantité
+est de deux tasses commandées,
+
+00:02:10.470 --> 00:02:13.550
+alors quand on calcule le prix,
+on doit faire deux fois cinq,
+
+00:02:14.070 --> 00:02:15.480
+car chaque tasse coûte 5$.
+
+00:02:15.780 --> 00:02:18.820
+Si on veut faire payer le client
+pour un gobelet en papier
+
+00:02:18.820 --> 00:02:21.830
+car il n'a pas apporté le sien
+et il veut gaspiller les arbres,
+
+00:02:21.830 --> 00:02:23.720
+alors on lui fait payer 2$ le gobelet.
+
+00:02:24.290 --> 00:02:26.830
+Donc c'est deux gobelets
+fois deux dollars.
+
+00:02:26.830 --> 00:02:29.440
+Quand on utilise une littérale,
+ce n'est pas l'idéal
+
+00:02:29.440 --> 00:02:33.000
+car on doit répéter 
+la quantité à chaque fois.
+
+00:02:33.330 --> 00:02:34.970
+D'un autre côté, on peut utiliser
+
+00:02:34.970 --> 00:02:38.340
+une variable pour représenter
+la quantité de tasses commandées.
+
+00:02:39.200 --> 00:02:42.750
+Donc si on dit que la quantité
+est cette variable appelée numberOfCoffees
+
+00:02:43.250 --> 00:02:46.585
+quand on calcule le prix
+on peut utiliser le nom de la variable,
+
+00:02:47.005 --> 00:02:50.030
+numberOfCoffees, et on le multiplie
+par 5$ le gobelet.
+
+00:02:50.520 --> 00:02:54.315
+Pour calculer le prix avec le gobelet,
+on reprend le nom de la variable,
+
+00:02:54.315 --> 00:02:57.930
+numberOfCoffees, et on le multiplie
+simplement par deux, pour deux dollars.
+
+00:02:58.190 --> 00:02:59.870
+Donc la différence entre les deux,
+
+00:02:59.870 --> 00:03:02.290
+c'est qu'au lieu
+d'utiliser la valeur littérale,
+
+00:03:02.290 --> 00:03:03.780
+on utilise une variable.
+
+00:03:03.780 --> 00:03:06.070
+Et puis la valeur de cette variable
+
+00:03:06.500 --> 00:03:09.710
+sera remplacée
+quand on évalue cette expression.
+
+00:03:10.490 --> 00:03:12.330
+Alors quand on calcule le prix,
+
+00:03:12.330 --> 00:03:15.640
+on doit vérifier quelle était la valeur
+avant de multiplier par cinq.
+
+00:03:16.100 --> 00:03:19.150
+L'étape additionnelle 
+quand on utilise une variable
+
+00:03:19.150 --> 00:03:20.570
+c'est, au début,
+
+00:03:20.570 --> 00:03:24.830
+de déterminer une valeur initiale
+à la variable, numberOfCoffees.
+
+00:03:25.360 --> 00:03:29.360
+Ici, on a fixé la valeur initiale à deux,
+qui est aussi une littérale.
+
+00:03:29.760 --> 00:03:33.530
+Cette fois, on utilise la littérale
+dans un seul endroit, et non plusieurs.
+
+00:03:33.970 --> 00:03:36.010
+Le résultat final sera le même,
+
+00:03:36.010 --> 00:03:38.730
+parce que numberOfCoffees
+deviendra la valeur deux.
+
+00:03:38.890 --> 00:03:41.860
+Donc la quantité restera deux,
+le prix sera toujours dix,
+
+00:03:41.860 --> 00:03:44.310
+et le prix des gobelets
+sera toujours quatre.
+
+00:03:44.900 --> 00:03:46.510
+L'avantage de cette méthode
+
+00:03:46.510 --> 00:03:50.190
+c'est qu'on peut changer la valeur
+de la variable à n'importe quel moment.
+
+00:03:50.190 --> 00:03:53.120
+Par exemple, si je voulais changer
+numberOfCoffees à trois,
+
+00:03:53.120 --> 00:03:55.760
+je n'ai besoin de le changer qu'ici,
+à un seul endroit,
+
+00:03:55.760 --> 00:03:57.320
+et le reste sera toujours juste.
+
+00:03:57.880 --> 00:04:00.080
+La quantité est toujours numberOfCoffees,
+
+00:04:00.080 --> 00:04:02.080
+qui a maintenant une valeur de trois.
+
+00:04:02.080 --> 00:04:04.475
+Le prix est maintenant
+numberOfCoffees fois cinq.
+
+00:04:04.475 --> 00:04:06.653
+Et la valeur est trois fois cinq,
+
+00:04:07.243 --> 00:04:10.543
+et le prix des gobelets est
+toujours numberOfCoffees fois deux,
+
+00:04:10.543 --> 00:04:12.524
+ce qui est maintenant trois fois deux.
+
+00:04:12.744 --> 00:04:14.239
+Si on utilisait une littérale,
+
+00:04:14.239 --> 00:04:16.485
+il aurait fallu
+changer la quantité ici à trois.
+
+00:04:16.545 --> 00:04:19.795
+Il aurait fallu mettre à jour
+le calcul du prix avec trois fois cinq.
+
+00:04:19.795 --> 00:04:22.305
+Et le prix des gobelets
+devrait être trois fois deux.
+
+00:04:22.305 --> 00:04:24.125
+Donc quand on utilise une variable,
+
+00:04:24.125 --> 00:04:27.500
+on n'a pas besoin de faire référence
+à la valeur précise à chaque fois.
+
+00:04:27.500 --> 00:04:29.660
+Il faut juste mentionner
+le nom de la variable
+
+00:04:29.660 --> 00:04:32.520
+et on aura automatiquement
+la dernière valeur de la variable.
+
+00:04:33.640 --> 00:04:36.870
+On va regarder plus précisément
+à quoi ressemble le code en question
+
+00:04:36.870 --> 00:04:39.270
+pour la création
+et l'utilisation d'une variable.
+
+00:04:39.370 --> 00:04:43.650
+Pour créer la variable, on dit
+que int numberOfCoffees est égal à deux.
+
+00:04:43.890 --> 00:04:48.170
+Une variable est créée de cette façon-là
+avec le nom numberOfCoffees
+
+00:04:48.170 --> 00:04:51.370
+et la valeur de deux est insérée
+dans la boîte de variables.
+
+00:04:51.990 --> 00:04:56.190
+Ces deux prochaines lignes utilisent
+la variable créée sur la première ligne
+
+00:04:56.740 --> 00:04:58.840
+pour mettre à jour cet écran.
+
+00:04:58.840 --> 00:05:02.690
+On peut afficher le nombre de tasses,
+ce qui implique de regarder la variable
+
+00:05:03.040 --> 00:05:05.670
+et de vérifier sa valeur à l'intérieur,
+ce qui est deux.
+
+00:05:05.720 --> 00:05:07.070
+Donc on met deux ici.
+
+00:05:07.070 --> 00:05:08.840
+Pour afficher le prix,
+
+00:05:09.330 --> 00:05:13.760
+on regarde la valeur de la variable,
+numberOfCoffees, où il y a un deux.
+
+00:05:14.180 --> 00:05:17.970
+Donc, deux fois cinq est égal à dix,
+donc le prix est de dix dollars.
+
+00:05:19.270 --> 00:05:20.947
+Je peux facilement changer le code,
+
+00:05:20.947 --> 00:05:24.190
+pour que numberOfCoffees
+ait la valeur de trois et non deux.
+
+00:05:24.190 --> 00:05:27.040
+Pour la boîte qui représente la variable,
+numberOfCoffees,
+
+00:05:27.570 --> 00:05:30.700
+maintenant on met trois
+comme valeur initiale dans cette variable.
+
+00:05:30.700 --> 00:05:33.160
+Ces deux lignes de code
+n'ont pas besoin de changer,
+
+00:05:33.160 --> 00:05:35.030
+car on utilise le nom de la variable.
+
+00:05:35.710 --> 00:05:38.030
+Quand on a utilisé
+display(numberOfCoffees),
+
+00:05:38.460 --> 00:05:40.500
+la valeur dans cette variable
+est de trois.
+
+00:05:40.930 --> 00:05:42.535
+Donc ça met la quantité à trois.
+
+00:05:43.600 --> 00:05:47.920
+Pour afficher le prix, on regarde
+la valeur pour numberOfCoffees : trois.
+
+00:05:48.260 --> 00:05:51.070
+Et on le multiplie par cinq,
+donc on obtient 15$.
+
+00:05:52.840 --> 00:05:56.160
+Voici à quoi ressemblerait
+le changement du code dans Android Studio.
+
+00:05:56.640 --> 00:06:00.040
+Présentement, la valeur littérale de deux
+est utilisée pour la quantité.
+
+00:06:00.540 --> 00:06:06.608
+Créons plutôt une variable,
+je vais écrire int numberOfCoffees 2.
+
+00:06:07.840 --> 00:06:10.340
+Donc maintenant,
+j'ai une variable de valeur deux.
+
+00:06:10.740 --> 00:06:14.310
+Ce texte est grisé et il est écrit
+que la variable pour le nombre de tasses
+
+00:06:14.310 --> 00:06:17.480
+n'est jamais utilisée
+car je n'y fait jamais référence après,
+
+00:06:17.480 --> 00:06:19.580
+Mais je vais l'utiliser maintenant.
+
+00:06:19.580 --> 00:06:21.810
+Au lieu d'afficher
+la valeur littérale de deux,
+
+00:06:21.810 --> 00:06:24.010
+je vais le remplacer
+par le nom de la variable.
+
+00:06:24.010 --> 00:06:26.760
+Il apparaît en tant qu'option
+complètement automatique,
+
+00:06:26.760 --> 00:06:28.050
+donc appuyez sur Entrée
+
+00:06:28.050 --> 00:06:29.950
+et c'est complété automatiquement.
+
+00:06:29.950 --> 00:06:32.000
+Et puis, ce nom de variable
+n'est plus gris,
+
+00:06:32.000 --> 00:06:34.730
+car on l'a utilisé
+dans un autre endroit.
+
+00:06:34.730 --> 00:06:37.080
+Je peux faire la même chose
+avec displayPrice.
+
+00:06:37.080 --> 00:06:39.360
+Au lieu d'utiliser
+la valeur littérale de deux,
+
+00:06:39.360 --> 00:06:42.120
+je vais changer
+pour que ce soit numberOfCoffees,
+
+00:06:42.320 --> 00:06:44.960
+et j'appuie sur Entrée
+pour le mettre automatiquement.
+
+00:06:44.960 --> 00:06:48.220
+Je pourrais aussi créer une variable
+pour la valeur du prix de cinq.
+
+00:06:48.630 --> 00:06:50.690
+Mais elle apparaît
+dans seulement un endroit
+
+00:06:50.690 --> 00:06:53.050
+donc je vais la laisser
+en tant que littérale.
+
+00:06:53.050 --> 00:06:55.950
+Maintenant, sauvegardons le code
+et lançons-le sur l'appareil.
+
+00:06:55.950 --> 00:06:58.040
+Et voici à quoi ça ressemble
+sur l'appareil.
+
+00:06:58.040 --> 00:07:01.860
+Quand on appuie sur Order ou Commander,
+la quantité est de 2, et le prix de $10.
+
+00:07:01.860 --> 00:07:06.500
+C'est le même comportement qu'avant,
+mais notre code est plus robuste.
+
+00:07:06.500 --> 00:07:09.160
+Robuste signifie qu'il y aura
+moins de chances d'erreurs
+
+00:07:09.160 --> 00:07:10.620
+avec le code plus tard.
+
+00:07:10.620 --> 00:07:13.480
+Par exemple, si quelqu'un d'autre
+essaye de changer le code,
+
+00:07:13.480 --> 00:07:16.810
+et veut utiliser la quantité
+dans beaucoup d'autres endroits,
+
+00:07:16.810 --> 00:07:20.020
+il devra changer le deux
+plusieurs fois.
+
+00:07:20.670 --> 00:07:23.380
+Au contraire, si on utilise
+la variable, numberOfCoffees,
+
+00:07:23.380 --> 00:07:25.410
+il faut la changer dans un seul endroit
+
+00:07:25.410 --> 00:07:27.730
+et puis le reste sera
+mis à jour automatiquement.
+
+00:07:28.210 --> 00:07:30.980
+De cette façon,
+on n'oubliera pas une ligne de code
+
+00:07:30.980 --> 00:07:34.150
+qui a besoin d'avoir la dernière valeur
+pour les tasses commandées.
+
+00:07:34.150 --> 00:07:36.170
+On doit seulement
+le modifier à un endroit.
+
+00:07:37.290 --> 00:07:39.590
+Alors avant de le faire
+dans Android Studio,
+
+00:07:39.590 --> 00:07:42.780
+je veux que vous vous entraîniez
+à le faire dans ce petit test.
+
+00:07:42.780 --> 00:07:46.140
+Allez-y et écrivez
+cette ligne de code juste en-dessous.
+
+00:07:46.370 --> 00:07:49.440
+Cette ligne de code créera
+une nouvelle variable en nombre entier
+
+00:07:49.450 --> 00:07:52.780
+et ces deux lignes utiliseront
+la variable.
+
+00:07:53.330 --> 00:07:55.170
+Je veux que vous vous entraîniez avant
+
+00:07:55.170 --> 00:07:58.480
+car vous pouvez faire attention
+à chaque caractère que vous tapez.
+
+00:07:58.750 --> 00:08:00.180
+Si vous manquez un caractère,
+
+00:08:00.180 --> 00:08:02.690
+il y aura surement une erreur
+dans Android Studio,
+
+00:08:02.690 --> 00:08:05.540
+et vous aurez peut-être des problèmes
+pour lire le message.
+
+00:08:05.540 --> 00:08:08.100
+Donc allez-y et écrivez exactement
+ce que vous voyez.
+
+00:08:08.100 --> 00:08:11.190
+Ça vous aide à prendre conscience
+de chaque caractère ici,
+
+00:08:11.190 --> 00:08:13.390
+que ce soit une majuscule
+ou une minuscule,
+
+00:08:13.390 --> 00:08:15.890
+ou si il y a un espace, ou pas.
+
+00:08:16.310 --> 00:08:19.090
+Vous allez aussi commencer
+à vous habituer aux règles Java
+
+00:08:19.090 --> 00:08:21.650
+pour créer une variable
+ou utiliser une variable,
+
+00:08:22.290 --> 00:08:24.100
+et comme vous avez déjà appris,
+
+00:08:24.100 --> 00:08:26.880
+chaque ligne de code Java
+doit finir avec un point-virgule.
+
+00:08:26.910 --> 00:08:30.030
+Si vous faites une erreur,
+par exemple avec le nom de la variable,
+
+00:08:30.030 --> 00:08:31.690
+vous aurez une erreur Java.
+
+00:08:32.200 --> 00:08:35.260
+Mais d'autres aspects sont
+de bonnes habitudes conventionnelles.
+
+00:08:35.580 --> 00:08:39.500
+Par exemple, mettre un espace
+avant et après les opérateurs comme ça.
+
+00:08:39.690 --> 00:08:43.220
+Si vous ne suivez pas l'espacement,
+il n'y aurait pas d'erreur explicite,
+
+00:08:43.220 --> 00:08:45.660
+mais c'est une meilleure habitude
+quand on programme
+
+00:08:45.660 --> 00:08:47.970
+de suivre ces usages stylistiques
+pour les codes.
+
+00:08:47.970 --> 00:08:50.150
+Comme ça, c'est plus facile
+pour lire le code.
+
+00:08:50.150 --> 00:08:53.020
+Quand vous avez fini de taper,
+regardez la prochaine vidéo.
+

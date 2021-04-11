@@ -1,0 +1,457 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.410 --> 00:00:03.080
+Bu yerleşimi kendi başınıza 
+oluşturmanızı istiyorum.
+
+00:00:03.080 --> 00:00:06.060
+Buraya fiyat başlığı için bir <i>TextView</i>
+
+00:00:06.060 --> 00:00:09.310
+ve sıfır doları göstermek 
+için de diğer bir <i>TextView</i> ekleyin.
+
+00:00:09.310 --> 00:00:15.650
+İkinci <i>TextView</i>'e görünüm ID olarak 
+<i>price_text_view</i> atayın.
+
+00:00:15.650 --> 00:00:18.580
+ID eklemenizi istememin sebebi,
+fiyatı güncelleyebilmek için
+
+00:00:18.580 --> 00:00:21.780
+sonradan bu görünüme atıf
+yapmamız gerekecek.
+
+00:00:21.780 --> 00:00:25.860
+Hazır buradayken, bu iki <i>TextView</i>'in 
+stilini miktar <i>TextView</i>'e
+
+00:00:25.860 --> 00:00:27.760
+benzer yapın.
+
+00:00:27.760 --> 00:00:31.630
+Dikey boşluk koymaya gelince, 
+bu görünümler arasında 16 dp var.
+
+00:00:31.630 --> 00:00:34.210
+Fiyat alanının güncellenmesi için de,
+
+00:00:34.210 --> 00:00:37.690
+<i>MainActivity.java</i> dosyasında 
+bazı değişikler yapmamız lazım.
+
+00:00:37.690 --> 00:00:39.730
+Bu konuda daha fazla 
+yardım sağlayacağız.
+
+00:00:39.730 --> 00:00:42.540
+<i>MainActivity.java</i>
+dosyasına ekleyebileceğiniz
+
+00:00:42.540 --> 00:00:44.260
+yeni bir metot sağlayacağız.
+
+00:00:44.260 --> 00:00:47.640
+Eğitmen notlarındaki 
+bağlantıda verilen gist (özet)'i açın.
+
+00:00:47.640 --> 00:00:50.790
+Bu arada, gist başkalarıyla paylaşmak 
+istediğiniz bir kesit veya
+
+00:00:50.790 --> 00:00:54.530
+tekrar kullanılabilen koddan 
+kısa bir bölümdür.
+
+00:00:54.530 --> 00:00:58.390
+Bu durumda, GitHub Gist 
+internet sitesine gittik
+
+00:00:58.390 --> 00:01:02.290
+ve bu kodla size vermek 
+istediğimiz yeni bir gist yarattık.
+
+00:01:02.290 --> 00:01:05.780
+Şimdi sizinle sadece bu bağlantıyı 
+paylaşınca, siz de kodu alabilirsiniz.
+
+00:01:05.780 --> 00:01:09.140
+Bu bölüm için her şeyi seçeceğiz 
+ve sonra kopyalayacağız.
+
+00:01:09.140 --> 00:01:11.050
+Okuyuculara bir not olan buradaki yorumu
+
+00:01:11.050 --> 00:01:13.852
+ve buradaki kapatma ayracını 
+dâhil etmeyi unutmayın.
+
+00:01:13.852 --> 00:01:17.890
+Şimdi <i>MainActivity.java</i>
+dosyasında bunu yapıştıracağız.
+
+00:01:17.890 --> 00:01:19.020
+Bedava kodu seviyorum.
+
+00:01:19.740 --> 00:01:23.090
+Yapıştırdıktan sonra parantezlerin hâlâ
+aynı hizada olduğuna emin olun.
+
+00:01:23.090 --> 00:01:26.180
+Uygulamanızda olsun, 
+dişinizde olsun, ayraçlar can sıkıcı.
+
+00:01:26.180 --> 00:01:30.040
+Eğer ayraçlarınız hizalanmazsa,
+tonlarca hata alırsınız.
+
+00:01:30.040 --> 00:01:33.850
+Örneğin, eğer bu kod bloğunu 
+aşağıya yapıştırırsam
+
+00:01:33.850 --> 00:01:37.740
+o zaman sınıf veya arayüz 
+beklendiğine dair bir hata alırım.
+
+00:01:37.740 --> 00:01:40.880
+Çünkü bu metot alakasız bir yerde duruyor.
+
+00:01:40.880 --> 00:01:45.380
+Gerçekte, <i>MainActivity</i> içinde, 
+<i>MainActivity</i>'nin açma ve kapatma
+
+00:01:45.380 --> 00:01:47.380
+ayraçları içinde olmasını istiyoruz,
+
+00:01:47.380 --> 00:01:51.780
+Haydi bunu kopyalayıp <i>MainActivity</i>'nin 
+kapatma ayracından önce koyalım.
+
+00:01:51.780 --> 00:01:53.910
+Bu daha iyi.
+
+00:01:53.910 --> 00:01:58.360
+Diğer bir muhtemel hata ise,
+kapatma ayracını kopyalamayı unutur
+
+00:01:58.360 --> 00:02:00.710
+ve metodun sadece bu 
+üst kısmını alırsanız olur.
+
+00:02:00.710 --> 00:02:01.530
+Bu durumda,
+
+00:02:01.530 --> 00:02:05.540
+kapatma ayracı beklendiğini
+belirten başka bir hata alırsınız.
+
+00:02:05.540 --> 00:02:07.170
+Bu yüzden onu da eklemeniz lazım.
+
+00:02:07.170 --> 00:02:10.038
+Karşılaşacağınız diğer bir hata ise, 
+eğer metodu yanlışlıkla
+
+00:02:10.038 --> 00:02:12.050
+buraya eklerseniz olur.
+
+00:02:12.050 --> 00:02:15.940
+Bu <i>display</i> metodunun 
+kapatma ayracından öncedir.
+
+00:02:15.940 --> 00:02:18.760
+Şimdi her şey <i>display</i> metodunun içinde,
+
+00:02:18.760 --> 00:02:20.290
+ki bu istediğimiz şey değil.
+
+00:02:20.290 --> 00:02:23.710
+Onun <i>display</i> metodunun yanında 
+olmasını istiyoruz, tam burada.
+
+00:02:25.420 --> 00:02:27.540
+Bir fikriniz oldu, milyonlarca 
+farklı türevi var.
+
+00:02:27.540 --> 00:02:30.730
+Sadece dikkatli olmanız ve ayraçlarınızın 
+hizalandığına emin olmanız gerek.
+
+00:02:30.730 --> 00:02:33.730
+Kontrol etmenin diğer bir yolu da, 
+eğer imlecinizi buraya,
+
+00:02:33.730 --> 00:02:37.850
+açma ayracından hemen sonra 
+koyarsanız, onunla eşleşen
+
+00:02:37.850 --> 00:02:39.050
+kapatma ayracını vurgular.
+
+00:02:39.050 --> 00:02:40.640
+Burada da öyle, eğer buna tıklarsanız
+
+00:02:40.640 --> 00:02:42.860
+bununla eşleşen kapatma 
+ayracı tam buradadır.
+
+00:02:44.130 --> 00:02:49.430
+<i>submitOrder</i> ve <i>onCreate</i> metodu 
+ile <i>MainActivity</i> için de öyledir.
+
+00:02:50.440 --> 00:02:52.450
+Bu <i>MainActivity</i> için açma ayracı ve
+
+00:02:52.450 --> 00:02:55.370
+kapatma ayracı maviyle vurgulanmış 
+olarak en aşağıda.
+
+00:02:55.370 --> 00:02:58.650
+Ne yazık ki hâlâ başka bir hata var.
+
+00:02:58.650 --> 00:03:03.160
+Buradaki yan çubuğa bakınca, "Sembol 
+<i>NumberFormat</i>'ı çözümleyemiyorum", diyor.
+
+00:03:03.160 --> 00:03:05.910
+<i>NumberFormat</i> aslında 
+sayıları biçimlendirmek için
+
+00:03:05.910 --> 00:03:07.620
+Android tarafından sağlanan bir şey.
+
+00:03:07.620 --> 00:03:10.630
+Bu durumda, dolar işareti veya 
+kullandığınız yerel para birimine
+
+00:03:10.630 --> 00:03:14.690
+sahip olması için fiyat olan sayıyı 
+biçimlendirmeye çalışıyoruz.
+
+00:03:14.690 --> 00:03:16.620
+Bunun için içe aktarma 
+komutu eklememiz lazım,
+
+00:03:16.620 --> 00:03:21.100
+çünkü mevcut durumda Android Studio 
+ne olduğunu tanımlayamıyor.
+
+00:03:21.100 --> 00:03:24.410
+Bunu çözümlemek için otomatik içe 
+aktarmayı nasıl açacağımızı göstereceğim.
+
+00:03:24.410 --> 00:03:26.790
+Android Studio'nun tepesindeki menüde,
+
+00:03:26.790 --> 00:03:29.390
+Android Studio &gt; Tercihler'e tıklayın.
+
+00:03:29.390 --> 00:03:32.260
+Bu Android Studio için "Tercihler"i açar.
+
+00:03:32.260 --> 00:03:35.030
+Hiç değiştirmediğim tonlarca tercih var,
+
+00:03:35.030 --> 00:03:38.310
+ama ihtiyacınız olduğunda, bu arama 
+kutucuğu kullanılarak aranabilir.
+
+00:03:38.310 --> 00:03:40.510
+Bundan dolayı "Otomatik 
+İçe Aktarma" yazıyorum.
+
+00:03:40.510 --> 00:03:41.670
+Şimdi XML ve Java'da
+
+00:03:41.670 --> 00:03:44.470
+bir şeyi otomatik içe aktarmak 
+için ayarları gösteriyor.
+
+00:03:44.470 --> 00:03:48.820
+Şu ifadeyi söyleyen kutuyu işaretliyorum: 
+"Kesin İçe Aktarmaları Anında Ekle".
+
+00:03:48.820 --> 00:03:51.850
+Bu ibare size bir anlam ifade 
+etmeyebilir, ama bu normal.
+
+00:03:51.850 --> 00:03:53.730
+Bu ifade muhtemelen kafa karıştırıcı.
+
+00:03:54.920 --> 00:03:59.420
+Android Studio'ya tüm söylediği şey, 
+uygulamamıza otomatik olarak bazı
+
+00:03:59.420 --> 00:04:01.410
+ek kod satırları eklemenin uygun olduğu.
+
+00:04:01.410 --> 00:04:06.050
+Özellikle içe aktarma komutlarını, 
+eğer neyi ifade ettiğimizi biliyorsa.
+
+00:04:06.050 --> 00:04:07.120
+Bunu size göstereyim.
+
+00:04:07.700 --> 00:04:09.880
+Aslında bizim için zaten bunu yaptı.
+
+00:04:09.880 --> 00:04:12.930
+Sayı formatı dediğimizde bunu 
+istediğimizi farz etti ve
+
+00:04:12.930 --> 00:04:13.930
+bu doğru.
+
+00:04:13.930 --> 00:04:15.970
+Yani sorunu bizim için otomatikman çözdü.
+
+00:04:15.970 --> 00:04:17.170
+Bu harika.
+
+00:04:17.170 --> 00:04:19.300
+Tamam. Bu noktada, eğer 
+uygulamayı çalıştırırsanız
+
+00:04:19.300 --> 00:04:22.410
+"Sipariş" düğmesine 
+bastığınızda miktar değişir,
+
+00:04:22.410 --> 00:04:23.710
+ama fiyat değişmez.
+
+00:04:23.710 --> 00:04:26.140
+<i>SubmitOrder</i> metodunu değiştirmemiz lazım,
+
+00:04:26.140 --> 00:04:29.670
+böylece miktarla beraber fiyat da değişir.
+
+00:04:29.670 --> 00:04:31.560
+Haydi başka bir kod satırı daha ekleyelim.
+
+00:04:32.910 --> 00:04:36.980
+<i>displayPrice</i> metodunu yazacağım ve
+
+00:04:36.980 --> 00:04:41.716
+fiyatın iki bardak kahve çarpı bardak 
+başına 5$ olduğunu söyleyeceğim.
+
+00:04:41.716 --> 00:04:44.780
+Bardak başına 5$ olmasının nedeni,
+
+00:04:44.780 --> 00:04:47.460
+Arabika çekirdeklerini 
+Etiyopya'dan ithal etmemiz.
+
+00:04:47.460 --> 00:04:50.260
+Her neyse, hesaplama işini 
+cihaza bırakacağız,
+
+00:04:50.260 --> 00:04:53.742
+çünkü bardağı 5$ olan 
+iki bardak kahvemiz var.
+
+00:04:53.742 --> 00:04:56.130
+Bu arada, bu derste 
+dolardan bahsettiğimde,
+
+00:04:56.130 --> 00:04:58.610
+kendi yerel para biriminize
+değiştirmekte serbestsiniz.
+
+00:04:58.610 --> 00:05:01.310
+Bu matematiksel ifadede dolar işareti yok.
+
+00:05:01.310 --> 00:05:04.420
+Daha sonra <i>displayPrice</i>
+metodunda ekleniyor.
+
+00:05:04.420 --> 00:05:07.110
+Ancak <i>displayPrice</i> metodunun 
+detayları konusunda endişelenmeyin,
+
+00:05:07.110 --> 00:05:08.790
+onun üzerinden üçüncü derste geçeceğiz.
+
+00:05:09.840 --> 00:05:12.360
+Şimdilik sadece fiyatı 
+hesaplamak için kullanacağınız
+
+00:05:12.360 --> 00:05:14.540
+matematiksel ifadeye odaklanın.
+
+00:05:14.540 --> 00:05:18.030
+Her komutun sonuna noktalı virgül 
+koymayı unutmayın,
+
+00:05:18.030 --> 00:05:22.160
+aksi hâlde noktalı virgül canavarı gelip 
+sizi yer ve size kırmızı hata verir.
+
+00:05:22.160 --> 00:05:25.570
+Örneğin, eğer noktalı virgülü 
+kaldırırsanız, noktalı virgülün
+
+00:05:25.570 --> 00:05:27.130
+beklendiğine dair bir hata alırsınız.
+
+00:05:28.160 --> 00:05:33.030
+İyice açıklamak adına, noktalı virgül 
+işareti işte buradaki.
+
+00:05:33.030 --> 00:05:34.720
+İki nokta değil, noktalı virgül.
+
+00:05:34.720 --> 00:05:37.190
+Tamam, her şeyi bitirdiğinizde,
+
+00:05:37.190 --> 00:05:40.190
+buradaki fiyat için eklenmiş olan iki 
+<i>TextView</i>'inizin daha olması lazım.
+
+00:05:40.190 --> 00:05:42.810
+Size verdiğimiz yeni metodu 
+içerecek şekilde <i>MainActivity</i>'yi
+
+00:05:42.810 --> 00:05:44.480
+değiştirmiş olmanız lazım.
+
+00:05:44.480 --> 00:05:47.040
+Fiyatı göstermek için yeni bir 
+kod satırı ekleyerek
+
+00:05:47.040 --> 00:05:49.150
+<i>submitOrder</i> metodunu da 
+değiştirmiş olmanız lazım.
+
+00:05:50.240 --> 00:05:53.060
+Bunu cihazınızda çalıştırdığınızda, 
+bunun gibi görünmeli.
+
+00:05:53.060 --> 00:05:55.237
+Sıfır miktar için 0$ ile başlar.
+
+00:05:55.237 --> 00:05:58.904
+Tıkladığınızda ise iki kahve 
+10$'a sipariş ediliyor.
+
+00:06:00.070 --> 00:06:04.010
+Miktar ve fiyat için farklı 
+değerleri deneyebilirsiniz.
+
+00:06:04.010 --> 00:06:06.890
+Bir bardak kahve için 10$ almak 
+isterseniz, devam edin.
+
+00:06:06.890 --> 00:06:10.160
+Tekrar bardağı 5$'dan iki bardak kahve 
+olarak değiştirmeyi unutmayın,
+
+00:06:10.160 --> 00:06:12.770
+böylece ileride kodumuzla eşleşir.
+
+00:06:12.770 --> 00:06:14.460
+İşiniz bitince bu kutuları işaretleyin.
+

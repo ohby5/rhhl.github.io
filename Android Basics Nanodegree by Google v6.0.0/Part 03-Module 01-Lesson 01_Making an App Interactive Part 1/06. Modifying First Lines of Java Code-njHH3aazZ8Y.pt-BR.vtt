@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.870 --> 00:00:03.403
+Nossa! Você acabou de fazer seu app
+interativo para o usuário.
+
+00:00:03.889 --> 00:00:06.369
+Quando apertava antes o botão,
+ele não fazia nada.
+
+00:00:06.930 --> 00:00:09.433
+Mas com algumas mudanças no código,
+quando aperta o botão,
+
+00:00:09.618 --> 00:00:12.301
+ele realmente atualiza algo na tela,
+bom trabalho!
+
+00:00:13.340 --> 00:00:15.661
+Vamos tentar aprofundar
+o que você acabou de realizar.
+
+00:00:16.603 --> 00:00:20.670
+Primeiro, você adicionou o novo atributo
+<i>android:onClick</i> no elemento <i>Button</i> do XML.
+
+00:00:21.144 --> 00:00:23.021
+Isto significa que quando
+o botão é apertado,
+
+00:00:23.692 --> 00:00:27.620
+ele vai tentar rodar, ou executar, 
+como dizemos em Java,
+
+00:00:27.960 --> 00:00:30.929
+um conjunto de instruções
+nomeadas <i>submitOrder</i>.
+
+00:00:32.020 --> 00:00:34.873
+Indo para o arquivo <i>MainActivity</i> fornecido,
+
+00:00:35.251 --> 00:00:37.942
+eu sei que há símbolos
+e palavras estranhas aqui.
+
+00:00:38.250 --> 00:00:40.560
+Mas agora só precisa saber
+que isto é um método
+
+00:00:40.800 --> 00:00:42.098
+e é chamado <i>submitOrder.</i>
+
+00:00:42.890 --> 00:00:45.304
+Um método pode ter várias
+linhas de código java.
+
+00:00:45.620 --> 00:00:48.036
+E isso se traduz em um
+conjunto de instruções
+
+00:00:48.252 --> 00:00:50.246
+que o dispositivo entende e executa.
+
+00:00:51.020 --> 00:00:53.286
+Se o método tiver várias linhas de código
+
+00:00:53.720 --> 00:00:56.055
+o dispositivo vai primeiro executar a primeira linha,
+
+00:00:56.400 --> 00:00:59.630
+depois a segunda, e assim por diante,
+até ao final do método.
+
+00:01:00.120 --> 00:01:01.735
+A razão para darmos
+um nome ao método,
+
+00:01:01.753 --> 00:01:03.483
+é facilitar a referência a ele, mais tarde.
+
+00:01:03.932 --> 00:01:07.833
+Por exemplo, no XML podemos chamar o
+método <i>submitOrder</i> agora.
+
+00:01:08.178 --> 00:01:10.221
+É como eu ter nome,
+você ter nome,
+
+00:01:10.380 --> 00:01:12.289
+se tiver um "pet",
+ele também vai ter nome,
+
+00:01:12.470 --> 00:01:13.920
+para ser chamado facilmente.
+
+00:01:14.676 --> 00:01:18.166
+Assim, em código, se nós temos várias
+instruções que queremos referenciar,
+
+00:01:18.350 --> 00:01:20.953
+podemos colocá-las dentro de um método,
+e dar ao método um nome.
+
+00:01:21.550 --> 00:01:26.233
+Lembra da Lição 1,
+sobre XML ter regras de sintaxe específicas
+
+00:01:26.720 --> 00:01:29.544
+que determinam se o XML é válido ou não?
+
+00:01:30.100 --> 00:01:34.061
+Bem, Java tem regras semelhantes,
+para determinar um código Java válido.
+
+00:01:34.700 --> 00:01:37.120
+As instruções que os métodos contêm
+
+00:01:37.267 --> 00:01:41.846
+devem estar entre a chave de abertura aqui
+e a chave de fechamento aqui.
+
+00:01:42.485 --> 00:01:44.914
+Aqui também é um método,
+chamado <i>onCreate</i>.
+
+00:01:45.667 --> 00:01:47.540
+As instruções dentro deste método
+
+00:01:47.840 --> 00:01:50.904
+estão entre esta chave de abertura
+e esta chave de fechamento.
+
+00:01:51.730 --> 00:01:54.338
+Por fim, há este método,
+que é chamado <i>display</i>
+
+00:01:54.843 --> 00:01:56.320
+As instruções de código dentro dele
+
+00:01:56.578 --> 00:01:59.310
+são marcadas com esta chave de abertura
+e esta chave de fechamento.
+
+00:01:59.930 --> 00:02:03.840
+Observe que há também uma chave
+de abertura e fechamento para a <i>MainActivity</i>.
+
+00:02:04.498 --> 00:02:06.412
+Toda a funcionalidade da <i>MainActivity</i>
+
+00:02:06.565 --> 00:02:09.394
+é definida entre estas chaves
+de abertura e fechamento.
+
+00:02:10.209 --> 00:02:13.230
+Esta <i>MainActivity</i> contém
+três métodos até ao momento.
+
+00:02:13.850 --> 00:02:16.898
+Depois de declarar um método,
+ou seja, definir um método,
+
+00:02:17.243 --> 00:02:19.169
+então pode realmente usar esse método.
+
+00:02:19.470 --> 00:02:22.055
+Neste exemplo, vamos declarar
+o método de exibição,
+
+00:02:22.280 --> 00:02:25.612
+e vamos usá-lo nesta linha de código,
+que vamos chamar pelo nome.
+
+00:02:25.846 --> 00:02:29.101
+Então, é aqui que declaramos o método,
+e é aqui que chamamos o método.
+
+00:02:29.680 --> 00:02:32.246
+Resumindo, quando o botão é apertado na UI,
+
+00:02:32.510 --> 00:02:34.900
+ele invoca o método <i>submitOrder</i>.
+
+00:02:35.021 --> 00:02:38.381
+Executamos, em seguida,
+o código no método <i>submitOrder</i>
+
+00:02:38.683 --> 00:02:40.615
+do topo do método
+até a base do método.
+
+00:02:40.890 --> 00:02:44.006
+Só há uma instrução de código aqui,
+assim, apenas executamos essa.
+
+00:02:44.670 --> 00:02:47.858
+Ok, vamos ver esta linha de código
+aqui que diz "exibir (1)."
+
+00:02:48.406 --> 00:02:51.649
+Escolhi esta linha de código
+porque parece que
+
+00:02:52.012 --> 00:02:55.827
+o número entre parênteses
+é o que aparece na tela aqui.
+
+00:02:56.970 --> 00:02:59.661
+Então, quando aperto Pedido aqui,
+
+00:02:59.907 --> 00:03:03.095
+ele aciona o método <i>submitOrder</i>
+a ser chamado na <i>MainActivity</i>.
+
+00:03:03.593 --> 00:03:06.836
+Depois executamos esta linha de código que diz "exibir (1)."
+
+00:03:07.630 --> 00:03:09.710
+E isso atualiza a tela para mostrar 1 aqui.
+
+00:03:10.270 --> 00:03:13.218
+Se eu mudar isso aqui para 2,
+o que você acha que vai acontecer?
+
+00:03:13.730 --> 00:03:14.978
+Vamos executar o app para saber.
+
+00:03:15.981 --> 00:03:18.455
+Agora mostra 2 quando aperto o botão.
+
+00:03:19.251 --> 00:03:22.565
+Apertar o botão Pedido
+invoca o método <i>submitOrder</i>.
+
+00:03:22.916 --> 00:03:25.643
+E, depois, executamos esta
+linha de código que diz "exibir (2)."
+
+00:03:26.153 --> 00:03:27.987
+É isso que atualiza a tela para mostrar 2.
+
+00:03:28.930 --> 00:03:32.012
+Agora é sua vez de tentar mudar
+o número entre parênteses
+
+00:03:32.086 --> 00:03:34.450
+para outro diferente,
+pode escolher um número menor,
+
+00:03:34.467 --> 00:03:36.387
+um número maior,
+ou até um valor negativo.
+
+00:03:37.100 --> 00:03:39.956
+Após testar esta linha de código na <i>MainActivity</i>,
+
+00:03:40.170 --> 00:03:41.645
+marque esta caixa ao terminar.
+

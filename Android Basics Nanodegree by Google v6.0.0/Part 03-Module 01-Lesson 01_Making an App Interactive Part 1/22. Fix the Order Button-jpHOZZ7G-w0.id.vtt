@@ -1,0 +1,259 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.156 --> 00:00:03.012
+Ada banyak cara yang tepat
+untuk menjawab pertanyaan ini.
+
+00:00:03.012 --> 00:00:06.521
+Itu tergantung apa yang paling berguna
+bagi Anda untuk mengenali perbedaan
+
+00:00:06.521 --> 00:00:10.341
+antara perilaku aplikasi yang salah
+dan yang tepat.
+
+00:00:10.341 --> 00:00:12.425
+Ini beberapa hal yang saya perhatikan.
+
+00:00:12.425 --> 00:00:15.881
+Pada perilaku aplikasi yang salah,
+saat tombol Order diklik,
+
+00:00:15.881 --> 00:00:19.798
+&lt;i&gt;quantity&lt;/i&gt; selalu berubah ke nilai
+yang sama, padahal seharusnya tidak.
+
+00:00:19.798 --> 00:00:23.391
+Berikutnya, saya juga perhatikan
+harganya tepat untuk nilai &lt;i&gt;quantity&lt;/i&gt; ini.
+
+00:00:23.391 --> 00:00:25.678
+Namun seharusnya harganya
+untuk &lt;i&gt;quantity&lt;/i&gt; terakhir
+
+00:00:25.678 --> 00:00:28.071
+yang dipilih dalam pemilih kuantitas.
+
+00:00:28.071 --> 00:00:31.374
+Ini terkait dengan fakta
+bahwa &lt;i&gt;quantity&lt;/i&gt; seharusnya tidak berubah.
+
+00:00:31.374 --> 00:00:34.791
+Mari kita lihat kode yang ada
+untuk melihat penyebab ini terjadi.
+
+00:00:35.221 --> 00:00:39.159
+Dalam fail &lt;i&gt;layout&lt;/i&gt; activity_main,
+tombol Order dinyatakan di sini.
+
+00:00:39.159 --> 00:00:40.649
+Saat tombol Order diklik,
+
+00:00:40.649 --> 00:00:44.215
+kita akan menggunakan metode
+dalam MainActivity, disebut submitOrder.
+
+00:00:44.215 --> 00:00:47.780
+Dalam fail MainActivity.java,
+ini metode submitOrder.
+
+00:00:47.780 --> 00:00:50.846
+Ini kode lama yang belum kita ubah.
+
+00:00:50.846 --> 00:00:54.459
+Namun kita buat variabel &lt;i&gt;integer quantity&lt;/i&gt;
+dan memberinya nilai awal 5.
+
+00:00:54.459 --> 00:00:56.156
+Kita menampilkannya di layar.
+
+00:00:56.156 --> 00:01:00.370
+Kita juga menampilkan harga
+sebagai jumlah cangkir kopi kali 5 dolar.
+
+00:01:00.370 --> 00:01:02.171
+Kode ini sudah kurang masuk akal
+
+00:01:02.171 --> 00:01:06.296
+karena saat mencoba memasukkan pesanan,
+kita mencoba memperbarui &lt;i&gt;quantity&lt;/i&gt;.
+
+00:01:06.296 --> 00:01:09.671
+Masalah lainnya adalah kita membuat
+variabel &lt;i&gt;integer quantity&lt;/i&gt;
+
+00:01:09.671 --> 00:01:14.905
+padahal sudah ada variabel &lt;i&gt;quantity&lt;/i&gt; global
+yang memantau jumlah cangkir kopi.
+
+00:01:14.905 --> 00:01:17.986
+Dalam MainActivity,
+sudah ada variabel &lt;i&gt;quantity&lt;/i&gt; global.
+
+00:01:17.986 --> 00:01:22.416
+Jadi, metode apa pun di dalam sini
+bisa mengacu pada variabel &lt;i&gt;quantity&lt;/i&gt; ini.
+
+00:01:22.416 --> 00:01:26.950
+Namun dalam metode submitOrder,
+kita membuat variabel &lt;i&gt;quantity&lt;/i&gt; lokal baru.
+
+00:01:26.950 --> 00:01:29.186
+Secara teknis, kita bisa
+memiliki variabel lokal
+
+00:01:29.186 --> 00:01:32.069
+yang namanya sama
+dengan variabel global.
+
+00:01:32.069 --> 00:01:34.602
+Ini hanya berarti
+dalam konteks metode ini,
+
+00:01:34.602 --> 00:01:38.208
+setelah variabel ini dinyatakan,
+setiap kali mengacu pada &lt;i&gt;quantity&lt;/i&gt;,
+
+00:01:38.208 --> 00:01:42.478
+sebenarnya mengacu pada variabel &lt;i&gt;quantity&lt;/i&gt;
+lokal dengan nilai 5 ini,
+
+00:01:42.478 --> 00:01:45.392
+bukan variabel &lt;i&gt;quantity&lt;/i&gt; global
+yang bernilai 2.
+
+00:01:45.876 --> 00:01:49.061
+Jadi, display(quantity)
+dan displayPrice(quantity*5)
+
+00:01:49.061 --> 00:01:51.310
+mengacu pada nilai &lt;i&gt;quantity&lt;/i&gt; ini.
+
+00:01:51.310 --> 00:01:53.810
+Ini cakupan variabel lokal ini.
+
+00:01:53.810 --> 00:01:55.321
+Di luar cakupan ini,
+
+00:01:55.321 --> 00:01:59.302
+setiap kali mengacu pada &lt;i&gt;quantity,&lt;/i&gt;
+berarti variabel &lt;i&gt;quantity&lt;/i&gt; global ini.
+
+00:01:59.302 --> 00:02:00.514
+Namun jika dipikir-pikir,
+
+00:02:00.514 --> 00:02:03.246
+tidak begitu masuk akal
+jika saat kita memasukkan pesanan,
+
+00:02:03.246 --> 00:02:06.877
+kita membuat &lt;i&gt;quantity&lt;/i&gt; baru,
+lalu menampilkannya di layar.
+
+00:02:06.877 --> 00:02:11.063
+Yang kita ingin lakukan hanyalah
+menggunakan &lt;i&gt;quantity&lt;/i&gt; yang kita pantau
+
+00:02:11.063 --> 00:02:14.753
+saat menambah dan mengurangi
+jumlah cangkir kopi.
+
+00:02:14.753 --> 00:02:17.911
+Jadi, dari sanalah kita harus
+menghitung harganya.
+
+00:02:17.911 --> 00:02:21.856
+Untuk memperbaiki kode, sebaiknya
+jangan menyatakan variabel &lt;i&gt;quantity&lt;/i&gt; lokal.
+
+00:02:21.856 --> 00:02:24.974
+Sebaiknya kita menggunakan
+variabel &lt;i&gt;quantity&lt;/i&gt; global ini saja.
+
+00:02:24.974 --> 00:02:28.362
+Sebaiknya kita juga berhenti
+memperbarui &lt;i&gt;quantity&lt;/i&gt; di layar.
+
+00:02:28.362 --> 00:02:33.410
+Tombol plus dan minus sudah memperbarui
+layar dengan nilai &lt;i&gt;quantity&lt;/i&gt; yang tepat.
+
+00:02:33.410 --> 00:02:37.402
+Namun kita ingin tombol submitOrder tetap
+memperbarui harganya.
+
+00:02:37.402 --> 00:02:41.386
+Namun kali ini, kita akan menghitung
+harganya sebagai &lt;i&gt;quantity&lt;/i&gt; * 5
+
+00:02:41.386 --> 00:02:43.897
+dengan variabel &lt;i&gt;quantity&lt;/i&gt; global.
+
+00:02:43.897 --> 00:02:47.474
+Saya akan memperbarui kode ini
+agar mencerminkan yang kita bicarakan.
+
+00:02:47.474 --> 00:02:50.764
+Perhatikan, variabel &lt;i&gt;quantity&lt;/i&gt; telah
+berubah menjadi ungu.
+
+00:02:50.764 --> 00:02:54.625
+Berarti kita menggunakan variabel &lt;i&gt;quantity&lt;/i&gt;
+global dalam MainActivity.
+
+00:02:54.625 --> 00:02:57.734
+Saat tombol ditekan,
+metode submitOrder akan terpicu.
+
+00:02:57.734 --> 00:02:59.857
+Ini akan menampilkan harga pada layar
+
+00:02:59.857 --> 00:03:04.331
+yang dihitung
+sebagai variabel &lt;i&gt;quantity&lt;/i&gt; global kali 5.
+
+00:03:04.881 --> 00:03:07.489
+Ini tampak tepat.
+Mari jalankan pada perangkat kita.
+
+00:03:07.489 --> 00:03:09.434
+Sekarang tes terakhirnya.
+
+00:03:09.434 --> 00:03:12.651
+Saya akan mengubah &lt;i&gt;quantity&lt;/i&gt; menjadi 6,
+lalu mengklik tombol Order.
+
+00:03:12.651 --> 00:03:14.358
+Hore, hasilnya 30 dolar!
+
+00:03:14.358 --> 00:03:17.520
+Biar saya coba nilai lain juga
+agar saya tahu ini bukan kebetulan.
+
+00:03:17.520 --> 00:03:20.235
+Itu tampak tepat.
+
+00:03:20.608 --> 00:03:22.436
+Bagus, berhasil.
+
+00:03:22.436 --> 00:03:26.265
+Anda baru memperbaiki &lt;i&gt;bug&lt;/i&gt; pertama Anda.
+Kerja Anda sangat bagus pada tugas itu.
+
+00:03:26.265 --> 00:03:28.793
+Fungsi aplikasi kita bekerja
+dengan sangat baik.
+
+00:03:28.793 --> 00:03:32.044
+Namun harus saya akui,
+antarmuka penggunanya agak jelek.
+
+00:03:32.044 --> 00:03:35.612
+Terutama, pemilih kuantitasnya butuh
+sentuhan antarmuka pengguna.
+
+00:03:35.612 --> 00:03:37.548
+Mari kita mengerjakan itu berikutnya.
+

@@ -1,0 +1,676 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.670 --> 00:00:02.680
+Bueno, Katherine,
+nuestra app está lista
+
+00:00:02.960 --> 00:00:05.000
+pero tiene un problema muy grande.
+
+00:00:05.090 --> 00:00:06.090
+¿Cuál es el problema?
+
+00:00:06.150 --> 00:00:07.930
+Solo pide dos tazas de café.
+
+00:00:08.000 --> 00:00:09.490
+¿Cuál es el problema con dos cafés?
+
+00:00:09.560 --> 00:00:12.660
+Tres mejor que dos,
+cuatro mejor que tres, a veces quiero más.
+
+00:00:12.720 --> 00:00:14.200
+Vale, lo pillo,
+necesitas más café.
+
+00:00:14.390 --> 00:00:16.440
+Lo que puedo hacer
+es simplemente cambiar el código
+
+00:00:16.560 --> 00:00:17.960
+para que diga tres en lugar de dos.
+
+00:00:18.230 --> 00:00:20.100
+Entonces en nuestro código aquí
+
+00:00:20.260 --> 00:00:23.070
+tenemos que cambiar
+el número de tazas de café
+
+00:00:23.320 --> 00:00:24.890
+aquí y aquí.
+
+00:00:25.620 --> 00:00:29.010
+¿Qué pasa si después quiero
+diez cafés para mí y mis amigos?
+
+00:00:29.150 --> 00:00:30.370
+¿Tienes tantos amigos?
+
+00:00:30.960 --> 00:00:33.200
+Bueno,
+entonces necesitamos otra cosa.
+
+00:00:33.580 --> 00:00:34.710
+Sí, una solución mejor.
+
+00:00:34.810 --> 00:00:37.310
+¿Qué tal si...?
+Ya sé, podemos usar variables.
+
+00:00:37.670 --> 00:00:38.670
+¿Variables?
+
+00:00:38.890 --> 00:00:40.210
+¿Como algo que varía?
+
+00:00:40.350 --> 00:00:42.520
+Sí,
+una variable no tiene un valor fijo.
+
+00:00:42.710 --> 00:00:44.960
+Piensa en una variable
+como si fuera una caja.
+
+00:00:45.360 --> 00:00:46.890
+Como esta.
+
+00:00:47.640 --> 00:00:48.640
+Vale.
+
+00:00:48.760 --> 00:00:50.020
+Sí, esto es una variable.
+
+00:00:50.220 --> 00:00:52.320
+Una caja en la que puedes poner un valor.
+
+00:00:52.420 --> 00:00:53.450
+Pone <i>int</i>.
+
+00:00:53.770 --> 00:00:55.470
+Sí, <i>int</i> significa integer [entero].
+
+00:00:55.530 --> 00:00:58.700
+Vale, entonces puedes poner
+un entero o un número en esta caja.
+
+00:00:58.780 --> 00:01:00.510
+¡Exacto!
+Puedes ponerle incluso un nombre.
+
+00:01:00.740 --> 00:01:04.819
+Llamémosle
+número de tazas de café pedidas.
+
+00:01:04.879 --> 00:01:05.880
+De acuerdo.
+
+00:01:06.880 --> 00:01:08.450
+Tenías que escoger un nombre largo.
+
+00:01:09.280 --> 00:01:12.040
+...pedidas. Casi no cabe.
+
+00:01:12.140 --> 00:01:13.080
+-¿Vale?
+-Vale.
+
+00:01:13.770 --> 00:01:16.320
+Ahora podemos
+referirnos a esta variable
+
+00:01:16.370 --> 00:01:19.390
+usando este nombre en un código
+en lugar de usar el valor dos.
+
+00:01:19.470 --> 00:01:20.470
+Vale.
+
+00:01:20.580 --> 00:01:22.640
+Después
+podemos actualizarlo si queremos.
+
+00:01:23.040 --> 00:01:25.160
+Ahora pongamos el valor dentro.
+
+00:01:25.230 --> 00:01:26.060
+¿Cómo lo hacemos?
+
+00:01:26.370 --> 00:01:28.000
+Bueno, tengo post-its.
+
+00:01:29.850 --> 00:01:31.270
+¿De dónde han salido?
+
+00:01:31.440 --> 00:01:34.970
+Llamemos
+al número de cafés pedidos, dos.
+
+00:01:35.380 --> 00:01:36.380
+¿Por qué solo dos?
+
+00:01:36.710 --> 00:01:39.140
+Uno para mí
+y uno para mi amiga Katherine.
+
+00:01:40.940 --> 00:01:42.410
+Gracias.
+
+00:01:42.560 --> 00:01:46.040
+Tenemos la variable <i>numberOfCoffeesOrdered</i>
+[numeroDeCafesPedidos]
+
+00:01:46.130 --> 00:01:47.790
+que tiene el valor 2.
+
+00:01:48.160 --> 00:01:49.680
+Vamos a implementarlo en el código.
+
+00:01:50.260 --> 00:01:52.460
+Antes estábamos usando un valor literal
+
+00:01:52.520 --> 00:01:55.230
+para representar la cantidad
+de cafés pedidos.
+
+00:01:55.790 --> 00:01:58.800
+Un valor literal significa
+un valor fijo, como el número 2.
+
+00:01:59.430 --> 00:02:02.600
+Técnicamente el 5 y este 2
+también son valores literales
+
+00:02:02.820 --> 00:02:05.840
+pero ahora solo estamos hablando
+de usar valores literales en <i>quantity</i>.
+
+00:02:07.120 --> 00:02:10.009
+Así que si decimos que la cantidad
+es 2 tazas de café pedidas
+
+00:02:10.470 --> 00:02:11.980
+podemos calcular el precio.
+
+00:02:12.160 --> 00:02:15.610
+Tenemos que hacer 2 por 5,
+ya que cada una cuesta 5$.
+
+00:02:16.000 --> 00:02:18.480
+Si queremos cargarle al cliente
+un vaso de papel
+
+00:02:18.880 --> 00:02:21.640
+porque no trajo el suyo propio
+y le gusta despilfarrar árboles
+
+00:02:21.980 --> 00:02:23.800
+le cargamos 2$ por taza.
+
+00:02:24.440 --> 00:02:26.360
+Es decir 2 tazas por 2$.
+
+00:02:26.830 --> 00:02:29.520
+Como ves,
+usar un valor literal no es lo ideal
+
+00:02:29.590 --> 00:02:33.080
+porque hay que repetir
+el número de <i>quantity</i> una y otra vez.
+
+00:02:33.520 --> 00:02:34.520
+Por otro lado
+
+00:02:34.560 --> 00:02:38.370
+podemos usar una variable para representar
+la cantidad de cafés pedidos.
+
+00:02:39.200 --> 00:02:42.770
+Si decimos que la cantidad
+es esta variable llamada <i>numberOfCoffees</i>
+
+00:02:43.250 --> 00:02:44.640
+cuando calculamos el precio
+
+00:02:44.960 --> 00:02:50.120
+podemos usar la variable, <i>numberOfCoffees</i>,
+y multiplcarla por 5$ por taza.
+
+00:02:50.520 --> 00:02:52.450
+Para calcular el recargo
+por el vaso de papel
+
+00:02:52.850 --> 00:02:55.390
+volvemos a usar
+el nombre de la variable <i>numberOfCoffees</i>
+
+00:02:55.580 --> 00:02:58.060
+y la multiplicamos por 2, por los 2$.
+
+00:02:58.440 --> 00:03:02.100
+La diferencia entre estas dos
+es que en lugar de valor literal
+
+00:03:02.400 --> 00:03:03.440
+usamos una variable.
+
+00:03:03.780 --> 00:03:06.260
+Después, el valor de esa variable
+
+00:03:06.500 --> 00:03:09.940
+se sustituirá
+cuando evaluemos esta expresión.
+
+00:03:10.490 --> 00:03:12.070
+Cuando calculemos el precio
+
+00:03:12.330 --> 00:03:15.640
+tenemos que comprobar qué valor es este
+antes de multiplicarlo por cinco.
+
+00:03:16.160 --> 00:03:19.220
+El paso adicional que tienes que hacer
+cuando usas una variable
+
+00:03:19.470 --> 00:03:23.480
+es configurar al principio
+la variable <i>numberOfCoffees</i>
+
+00:03:23.590 --> 00:03:25.050
+para que tenga un valor inicial.
+
+00:03:25.370 --> 00:03:29.590
+Aquí le dimos un valor inicial de 2,
+que también es un valor literal.
+
+00:03:29.760 --> 00:03:33.730
+Pero esta vez usamos el valor literal
+en un solo sitio, en lugar de en varios.
+
+00:03:33.970 --> 00:03:35.800
+El resultado final
+va a seguir siendo el mismo
+
+00:03:36.010 --> 00:03:39.020
+porque <i>numberOfCoffees</i>
+mapeará al valor 2.
+
+00:03:39.160 --> 00:03:42.100
+De este modo la cantidad será 2,
+el precio seguirá siendo10
+
+00:03:42.200 --> 00:03:44.210
+y el recargo por el vaso de papel
+seguirá siendo 4.
+
+00:03:44.930 --> 00:03:46.420
+La ventaja real de este modelo
+
+00:03:46.580 --> 00:03:49.430
+es que puedes cambiar
+el valor de la variable cuando quieras.
+
+00:03:50.190 --> 00:03:52.640
+Digamos que quiero cambiar
+el número de cafés a 3.
+
+00:03:53.260 --> 00:03:57.250
+Solo tengo que cambiarlo aquí
+y el resto sigue siendo correcto.
+
+00:03:57.880 --> 00:03:59.830
+La cantidad sigue siendo <i>numberOfCoffees</i>
+
+00:04:00.080 --> 00:04:01.690
+que ahora tiene un valor de 3.
+
+00:04:02.080 --> 00:04:04.720
+El precio es ahora <i>numberOfCoffees</i> por 5.
+
+00:04:04.980 --> 00:04:06.650
+El valor es 3 por 5.
+
+00:04:07.430 --> 00:04:10.430
+El vaso de papel
+sigue siendo <i>numberOfCoffees</i> por 2
+
+00:04:10.540 --> 00:04:12.830
+que ahora 3 por 2.
+
+00:04:13.070 --> 00:04:14.470
+Si usáramos un valor literal
+
+00:04:14.660 --> 00:04:16.899
+tendríamos que cambiar
+la cantidad a 3 aquí.
+
+00:04:17.100 --> 00:04:19.750
+Tendríamos que actualizar
+el cálculo del precio a 3 por 5.
+
+00:04:20.019 --> 00:04:21.980
+Y el recargo por el vaso de papel
+sería 3 por 2.
+
+00:04:22.430 --> 00:04:23.870
+Cuando usamos una variable
+
+00:04:24.120 --> 00:04:27.130
+no tenemos que referenciar
+el valor específico cada vez.
+
+00:04:27.390 --> 00:04:29.160
+Podemos referenciar
+el nombre del valor
+
+00:04:29.390 --> 00:04:32.620
+lo que nos dará automáticamente
+el último valor de esa variable.
+
+00:04:33.730 --> 00:04:36.490
+Podemos ver más detenidamente
+cómo sería el código
+
+00:04:36.960 --> 00:04:38.660
+para crear y usar una variable.
+
+00:04:39.370 --> 00:04:43.860
+Para crear la variable,
+decimos <i>int numberOfCoffees = 2.</i>
+
+00:04:44.100 --> 00:04:47.980
+Esto crea una variable
+con el nombre <i>numberOfCoffees</i>
+
+00:04:48.260 --> 00:04:51.400
+y pone el valor 2
+dentro de la caja de la variable.
+
+00:04:51.990 --> 00:04:56.270
+Las dos líneas siguientes usan la variable
+que creamos en la primera línea
+
+00:04:56.740 --> 00:04:58.360
+para actualizar la pantalla.
+
+00:04:58.880 --> 00:05:00.780
+Podemos mostrar el número de cafés
+
+00:05:01.050 --> 00:05:02.820
+lo que implica ver esta variable
+
+00:05:03.010 --> 00:05:05.510
+para ver qué número hay dentro, que es 2.
+
+00:05:05.720 --> 00:05:06.920
+De este modo, mostramos 2 aquí.
+
+00:05:07.360 --> 00:05:08.920
+Para mostrar el precio
+
+00:05:09.330 --> 00:05:13.930
+vemos el valor de la variable,
+<i>numberOfCoffees</i>, que tiene un 2 dentro.
+
+00:05:14.260 --> 00:05:18.160
+Así que decimos 2 por 5 igual a 10,
+y así el precio es de 10$.
+
+00:05:19.310 --> 00:05:20.890
+Puedo cambiar fácilmente este código
+
+00:05:21.080 --> 00:05:23.840
+para que el número de cafés pedidos
+sea 3 en lugar de 2.
+
+00:05:24.400 --> 00:05:27.190
+En la caja que representa
+nuestra variable, <i>numberOfCoffees</i>,
+
+00:05:27.570 --> 00:05:30.680
+ponemos ahora 3 como valor inicial
+dentro de esta variable.
+
+00:05:31.300 --> 00:05:33.080
+Estas dos líneas de código no cambian
+
+00:05:33.160 --> 00:05:34.760
+porque usamos el nombre de la variable.
+
+00:05:35.710 --> 00:05:38.030
+Si llamamos a <i>display</i> <i>numberOfCoffees</i>
+
+00:05:38.460 --> 00:05:40.670
+el valor en esta variable es 3.
+
+00:05:40.930 --> 00:05:42.470
+Se muestra la cantidad 3.
+
+00:05:43.600 --> 00:05:44.860
+Para mostrar el precio
+
+00:05:45.330 --> 00:05:48.190
+tenemos que ver el valor
+de <i>numberOfCoffees</i>, que es 3.
+
+00:05:48.320 --> 00:05:51.260
+Si lo multiplicamos por 5 nos da15$.
+
+00:05:53.090 --> 00:05:55.620
+Así se haría
+el cambio de código en Android Studio.
+
+00:05:56.700 --> 00:06:00.370
+Ahora mismo está usando
+el valor literal 2 para la cantidad.
+
+00:06:00.690 --> 00:06:02.570
+En su lugar vamos a crear una variable.
+
+00:06:03.020 --> 00:06:06.740
+Voy a escribir <i>int numberOfCoffees 2</i>.
+
+00:06:07.840 --> 00:06:10.420
+Ahora tengo una variable con el valor 2.
+
+00:06:10.740 --> 00:06:12.590
+Por cierto, este texto aparece en gris
+
+00:06:12.660 --> 00:06:15.340
+y dice que la variable número de cafés
+nunca se ha usado
+
+00:06:15.780 --> 00:06:19.150
+porque nunca la referencié,
+pero lo voy a hacer ahora.
+
+00:06:19.580 --> 00:06:21.660
+En vez de mostrar el valor literal 2
+
+00:06:21.900 --> 00:06:24.000
+voy a cambiarlo
+por el nombre de la variable.
+
+00:06:24.140 --> 00:06:27.720
+Aparece como opción de autcompletar,
+así que simplemente pulsa <i>Enter</i>.
+
+00:06:27.940 --> 00:06:29.580
+Se rellena automáticamente.
+
+00:06:29.940 --> 00:06:31.860
+El nombre de la variable
+ya no aparecerá en gris
+
+00:06:32.100 --> 00:06:34.340
+porque lo hemos usado
+por lo menos una vez.
+
+00:06:34.730 --> 00:06:36.730
+Puedo hacer lo mismo con <i>displayPrice</i>.
+
+00:06:37.140 --> 00:06:39.300
+En lugar de usar el valor literal 2
+
+00:06:39.520 --> 00:06:42.250
+lo voy a cambiar
+por la variable <i>numberOfCoffees</i>.
+
+00:06:42.600 --> 00:06:44.450
+Pulso <i>Enter</i> para que se autocomplete.
+
+00:06:44.820 --> 00:06:48.390
+Técnicamente también podría crear un valor
+para el valor de precio 5.
+
+00:06:48.650 --> 00:06:50.460
+Sin embargo, solo se usa una vez
+
+00:06:50.780 --> 00:06:52.880
+por eso puedo dejarla como valor literal.
+
+00:06:53.260 --> 00:06:55.800
+Ahora vamos a guardar el código
+y a ejecutarlo en el dispositivo.
+
+00:06:56.080 --> 00:06:57.830
+Así es como aparece en el dispositivo.
+
+00:06:57.860 --> 00:07:01.170
+Cuando pulsas Pedir,
+la cantidad es 2 y el precio 10$.
+
+00:07:01.570 --> 00:07:03.790
+Funciona exactamente igual que antes
+
+00:07:04.100 --> 00:07:06.270
+pero ahora nuestro código es más robusto.
+
+00:07:06.500 --> 00:07:08.040
+Robusto significa que el código
+
+00:07:08.290 --> 00:07:10.300
+será menos propenso
+a dar errores en el futuro.
+
+00:07:10.620 --> 00:07:13.220
+Por ejemplo,
+si alguien intenta cambiar el código
+
+00:07:13.340 --> 00:07:16.150
+e intenta usar la cantidad
+en muchos otros lugares
+
+00:07:16.400 --> 00:07:20.350
+tendrá que cambiar
+el número 2 en muchos lugares.
+
+00:07:20.790 --> 00:07:23.300
+Pero si usamos la variable <i>numberOfCoffees</i>
+
+00:07:23.480 --> 00:07:27.390
+solo tendremos que cargarlo en un sitio
+y se actualizará todo automáticamente.
+
+00:07:28.160 --> 00:07:31.200
+De esta manera, nadie que necesite saber
+el último número de cafés pedidos
+
+00:07:31.330 --> 00:07:33.480
+se olvidará
+por error de una línea de código.
+
+00:07:34.060 --> 00:07:36.340
+Solo tendrá que cambiarlo en un lugar.
+
+00:07:37.260 --> 00:07:39.570
+Antes de que continúes
+y lo intentes en Android Studio
+
+00:07:39.730 --> 00:07:42.470
+quiero que lo practiques en esta prueba.
+
+00:07:42.780 --> 00:07:46.140
+Escribe esta línea de código aquí debajo.
+
+00:07:46.580 --> 00:07:48.990
+Esta línea de código
+creará una variable entera
+
+00:07:49.410 --> 00:07:52.660
+y estas dos líneas
+crearán una variable entera.
+
+00:07:53.330 --> 00:07:55.080
+La razón para que practiques primero
+
+00:07:55.260 --> 00:07:58.460
+es que así puedes fijarte
+en cada carácter cuando lo escribes.
+
+00:07:59.180 --> 00:08:02.490
+Por otro lado, si olvidas un carácter,
+el Android Studio te devolverá un error
+
+00:08:02.630 --> 00:08:04.560
+y puede ser duro leer el mensaje de error.
+
+00:08:04.790 --> 00:08:07.600
+Así que continúa
+y escríbelo exactamente igual.
+
+00:08:07.840 --> 00:08:11.100
+Esto te ayudará
+a fijarte en cada carácter de aquí.
+
+00:08:11.190 --> 00:08:13.370
+Si hay una mayúscula o una minúscula.
+
+00:08:13.450 --> 00:08:15.800
+Si no hay ningún espacio
+o si hay un espacio.
+
+00:08:16.520 --> 00:08:18.880
+Te acostumbrarás a las reglas de Java
+
+00:08:18.940 --> 00:08:21.900
+para crear una variable
+o para usar una variable.
+
+00:08:22.400 --> 00:08:26.780
+Como ya hemos visto, cada línea de código
+tiene que acabar con un punto y coma.
+
+00:08:27.140 --> 00:08:30.020
+Si escribes esto mal
+por ejemplo, el nombre de la variable
+
+00:08:30.230 --> 00:08:31.860
+te dará un error en Java.
+
+00:08:32.200 --> 00:08:35.289
+Sin embargo,
+otras cosas son más convencionales.
+
+00:08:35.580 --> 00:08:39.730
+Como añadir un espacio antes y después
+de operadores como este.
+
+00:08:40.090 --> 00:08:43.070
+Si no respetas estos espacios,
+no te dará un error explícito
+
+00:08:43.360 --> 00:08:47.580
+pero mantener estas convenciones de estilo
+supone una mejor práctica de programación.
+
+00:08:47.940 --> 00:08:49.720
+Así es más fácil leer tu código.
+
+00:08:50.020 --> 00:08:53.240
+Cuando acabes de escribir esto,
+continúa con el próximo vídeo.
+

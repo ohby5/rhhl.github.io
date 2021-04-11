@@ -1,0 +1,201 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.250 --> 00:00:02.827
+Artık bunu tümüyle planladığımıza 
+göre, devam edip
+
+00:00:02.827 --> 00:00:05.140
+bu yerleşimi uygulamanızda 
+oluşturabilirsiniz.
+
+00:00:05.140 --> 00:00:09.481
+<i>activity_main.xml</i> dosyasını 
+bulup değiştirmeniz gerekecek.
+
+00:00:09.481 --> 00:00:12.860
+<i>activity_main.xml</i> dosyası 
+projenizi ilk yarattığınızda
+
+00:00:12.860 --> 00:00:15.040
+zaten açık olmalı.
+
+00:00:15.040 --> 00:00:18.710
+Eğer hâlihazırda açık değilse, bu dosyayı 
+uygulamanızdaki bütün dosyaları listeleyen
+
+00:00:18.710 --> 00:00:22.420
+uygulamanızın proje görünümünde,
+<i>app</i>'in altındaki, <i>res</i>'in altındaki,
+
+00:00:22.420 --> 00:00:24.680
+yerleşim klasörü altında bulabilirsiniz.
+
+00:00:24.680 --> 00:00:27.490
+Tasarım çerçevesi hazırda 
+açıktır, buradaki paletten
+
+00:00:27.490 --> 00:00:31.240
+görsel bileşenleri sürükleyip 
+uygulama üzerine bırakabilirsiniz.
+
+00:00:31.240 --> 00:00:34.900
+Ancak metin çerçevesini kullanmanızı 
+istiyorum ki XML'yi buraya yazabilesiniz.
+
+00:00:34.900 --> 00:00:38.970
+Bir noktada, XML'yi değiştirdiğinizde, 
+her zaman bu içeriği seçip
+
+00:00:38.970 --> 00:00:40.330
+tekrar biçimlendirebilirsiniz.
+
+00:00:40.330 --> 00:00:43.840
+Android Studio'nun tepesinde, 
+bir sürü menü kalemi göreceksiniz.
+
+00:00:43.840 --> 00:00:47.695
+"Kod"a tıklayın ve sonra "Kodu Yeniden 
+Biçimlendirme" seçeneğini bulun.
+
+00:00:47.695 --> 00:00:50.504
+Eğer Mac'te iseniz, işte klavye kısayolu.
+
+00:00:50.504 --> 00:00:53.460
+"Kodu Yeniden Biçimlendirme" 
+ve "Seçilen Metin" uygun.
+
+00:00:53.460 --> 00:00:54.330
+Sadece "Çalıştır"a basın,
+
+00:00:54.330 --> 00:00:58.700
+böylece boşluk ve sekme noktaları tamiri 
+için kodunuz otomatikman biçimlendirilir.
+
+00:00:58.700 --> 00:01:01.090
+Aynı zamanda, "Kodu Yeniden 
+Düzenle"yi seçebilirsiniz.
+
+00:01:01.090 --> 00:01:04.519
+Özelliklerin sırasını değiştirir, 
+böylece Android kod stili rehberine
+
+00:01:04.519 --> 00:01:07.180
+göre tercih edilen sırada olur.
+
+00:01:07.180 --> 00:01:09.810
+Şimdi kod bu biçimde 
+çok daha kolay okunuyor.
+
+00:01:09.810 --> 00:01:11.900
+Eğer kodun neye benzediğinin 
+öngörünümünü istiyorsanız,
+
+00:01:11.900 --> 00:01:13.574
+buradaki "Önizleme" düğmesine basın.
+
+00:01:14.515 --> 00:01:16.705
+Bu bir cihazda nasıl 
+görüneceğini gösterir.
+
+00:01:16.705 --> 00:01:19.195
+Ancak bu cihazınızda 
+çalıştırmanın yerine geçmez,
+
+00:01:19.195 --> 00:01:21.905
+bu yüzden her zaman cihanızda 
+periyodik olarak çalıştırmalısınız.
+
+00:01:22.535 --> 00:01:26.555
+Bu yerleşimi oluşturduğunuzda, 
+lütfen sıfır gösteren
+
+00:01:26.555 --> 00:01:29.715
+bu ikinci <i>TextView</i>'de 
+görünüm ID ismi atayın.
+
+00:01:29.715 --> 00:01:35.410
+Ona <i>@+id/quantity_text_view</i>
+görünüm ID ismini verin.
+
+00:01:35.410 --> 00:01:39.040
+Aynen bu ismi kullanın ki sonradan 
+bizim kodumuza uysun.
+
+00:01:39.040 --> 00:01:42.770
+1. derste görünümlere nasıl ID 
+atanacağını öğrendiğimizi hatırlayın.
+
+00:01:42.770 --> 00:01:46.770
+Bu örnek <i>RelativeLayout</i> içindi, 
+burada en iyi dostlarımız ve dost görünen
+
+00:01:46.770 --> 00:01:49.010
+düşmanlarımız için bir akşam 
+yemeği partisi yaptık.
+
+00:01:49.010 --> 00:01:51.590
+Bu görünüme ID verip diğerlerine 
+vermememizin nedeni,
+
+00:01:51.590 --> 00:01:55.620
+miktarı artırmak veya azaltmak için
+
+00:01:55.620 --> 00:01:58.100
+bu <i>TextView</i>'e sonradan 
+atfedecek olmamız.
+
+00:01:59.370 --> 00:02:01.890
+Görünümleri biçimlendirmek için, 
+birkaç küçük değişim var.
+
+00:02:01.890 --> 00:02:07.490
+Buradaki <i>TextView</i> metin boyutu 16 sp 
+ve rengi siyah yazı tipi olmalı.
+
+00:02:07.490 --> 00:02:11.118
+Size 1. derste gösterdiğimiz gibi 
+siyah sistem yazı tipi rengi veya
+
+00:02:11.118 --> 00:02:14.340
+aşağıda verdiğimiz gibi siyah 
+heksadesimal rengi kullanabilirsiniz.
+
+00:02:14.340 --> 00:02:18.060
+Bu görünümler arasında 
+16 dp boşluk da var.
+
+00:02:18.060 --> 00:02:20.880
+Biliyorum ki XML yerleşiminize 
+ilk kez bir düğme
+
+00:02:20.880 --> 00:02:22.260
+ekleyeceksiniz.
+
+00:02:22.260 --> 00:02:25.080
+Yerleşiminize nasıl düğme ekleneceğini 
+bulmak üzere Google arama
+
+00:02:25.080 --> 00:02:28.400
+yetenekleriniz üzerinde çalışmak için 
+bu gerçekten iyi bir fırsat.
+
+00:02:28.400 --> 00:02:31.350
+Eğer gerçekten zorlanırsanız, eğitmen 
+notlarındaki ipucuna bakabilirsiniz.
+
+00:02:31.350 --> 00:02:32.800
+Bunu oluştururken, umulan şekilde
+
+00:02:32.800 --> 00:02:36.270
+çalıştığını kontrol amacıyla uygulamanızı 
+cihazınızda belli aralıklarla çalıştırın.
+
+00:02:36.270 --> 00:02:39.270
+Hepsini bitirince, 
+bu soruyu cevaplandırın.
+
+00:02:39.270 --> 00:02:40.830
+Bu düğmeye basınca ne olur?
+

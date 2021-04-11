@@ -1,0 +1,648 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.670 --> 00:00:04.780
+Tamam Katherine, uygulamamız bitmek 
+üzere, ama büyük bir sorun var.
+
+00:00:04.780 --> 00:00:06.150
+Sorun nedir?
+
+00:00:06.150 --> 00:00:08.029
+Sadece iki bardak kahve sipariş ediyor.
+
+00:00:08.029 --> 00:00:09.560
+İki bardak kahvede ne sorun var?
+
+00:00:09.560 --> 00:00:11.630
+Üç ikiden daha iyi, dört üçten daha iyi,
+
+00:00:11.630 --> 00:00:12.760
+bazen daha fazla gerekiyor.
+
+00:00:12.760 --> 00:00:14.370
+Tamam anladım, sana daha 
+çok kahve lazım.
+
+00:00:14.370 --> 00:00:16.560
+O zaman yapabileceğim şey, 
+kodu değiştirmek,
+
+00:00:16.560 --> 00:00:18.230
+yani iki yerine üç diyecek.
+
+00:00:18.230 --> 00:00:21.470
+Tamam, buradaki kodumuzda, 
+kahve bardağı sayısını
+
+00:00:21.470 --> 00:00:25.620
+değiştirmemiz lazım. 
+Burada ve burada.
+
+00:00:25.620 --> 00:00:28.810
+Sonradan kendim ve arkadaşlarım için 
+on bardak kahve istersem ne olur?
+
+00:00:28.810 --> 00:00:30.835
+O kadar arkadaşın var mı?
+
+00:00:30.835 --> 00:00:33.580
+O zaman başka bir şeye ihtiyacımız var.
+
+00:00:33.580 --> 00:00:34.890
+Evet, daha iyi bir çözüm gerek.
+
+00:00:34.890 --> 00:00:37.770
+Değişken kullansak nasıl olur?
+
+00:00:37.770 --> 00:00:38.890
+Değişkenler?
+
+00:00:38.890 --> 00:00:40.460
+Yani değişen bir şey?
+
+00:00:40.460 --> 00:00:42.340
+Evet, bir değişkenin 
+sabit bir değeri yoktur.
+
+00:00:42.340 --> 00:00:48.001
+Bir değişkeni bunun gibi bir kutu 
+olarak düşünebilirsiniz.
+
+00:00:48.001 --> 00:00:48.760
+Tamam.
+
+00:00:48.760 --> 00:00:50.220
+Evet, yani bu bir değişken.
+
+00:00:50.220 --> 00:00:52.420
+Bu bir kutu ve içine bir 
+değer koyabilirsiniz.
+
+00:00:52.420 --> 00:00:53.770
+<i>int</i> yazıyor.
+
+00:00:53.770 --> 00:00:55.520
+Evet, tam sayı demek.
+
+00:00:55.520 --> 00:00:58.490
+Tamam, o zaman bu kutunun içine bir 
+tam sayı veya sayı koyabilirsiniz.
+
+00:00:58.490 --> 00:00:59.170
+Kesinlikle!
+
+00:00:59.170 --> 00:01:00.740
+Ona bir isim de verebilirsiniz.
+
+00:01:00.740 --> 00:01:04.910
+Şöyle diyelim, <i>numberOfCoffeesOrdered</i>
+[Sipariş edilen kahve sayısı].
+
+00:01:04.910 --> 00:01:05.550
+Tamam.
+
+00:01:07.020 --> 00:01:10.086
+Uzun bir isim seçmek zorundaydın.
+
+00:01:10.086 --> 00:01:11.836
+Sipariş edilen... zorla sığdı.
+
+00:01:11.836 --> 00:01:13.770
+- Tamam.
+- Tamam.
+
+00:01:13.770 --> 00:01:17.260
+Artık bir kodda iki değerini 
+koymak yerine,
+
+00:01:17.260 --> 00:01:19.600
+bu değişkene bu ismi kullanarak 
+atıfta bulunacağız.
+
+00:01:19.600 --> 00:01:20.580
+Tamam.
+
+00:01:20.580 --> 00:01:23.440
+Sonra istersek güncelleyebiliriz.
+
+00:01:23.440 --> 00:01:24.850
+Haydi şimdi içine değer koyalım.
+
+00:01:24.850 --> 00:01:26.370
+Bunu nasıl yapacağız?
+
+00:01:26.370 --> 00:01:29.584
+Biraz yapışkanlı kağıdım var.
+
+00:01:29.584 --> 00:01:31.440
+Bunlar nereden geldi?
+
+00:01:31.440 --> 00:01:34.660
+Sipariş edilen kahve sayısına 2 diyelim.
+
+00:01:34.660 --> 00:01:36.710
+Neden sadece 2?
+
+00:01:36.710 --> 00:01:40.834
+Biri benim için, diğeri de 
+arkadaşım Katherine için.
+
+00:01:40.834 --> 00:01:41.750
+Teşekkürler.
+
+00:01:41.750 --> 00:01:46.620
+Şimdi <i>numberOfCoffeesOrdered</i> adında 
+bir değişkenimiz var
+
+00:01:46.620 --> 00:01:48.120
+ve 2 değerine sahip.
+
+00:01:48.120 --> 00:01:50.260
+Haydi bunu kodumuza uygulayalım.
+
+00:01:50.260 --> 00:01:53.180
+Önceden sipariş edilen 
+kahve sayısını temsil eden
+
+00:01:53.180 --> 00:01:55.840
+literal (değişmez) değer kullanıyorduk.
+
+00:01:55.840 --> 00:01:59.330
+Literal, değişmez değer 
+anlamındadır, 2 sayısı gibi.
+
+00:01:59.330 --> 00:02:02.822
+Teknik olarak, 5 ve 2 de literal değerler;
+
+00:02:02.822 --> 00:02:07.126
+ama şu anda sadece miktar için literal 
+değer kullanmaktan bahsediyoruz.
+
+00:02:07.126 --> 00:02:10.470
+Eğer sipariş edilen 
+kahve adetine 2 dersek,
+
+00:02:10.470 --> 00:02:15.000
+fiyatı hesaplarken, 2 çarpı 5 deriz, 
+çünkü her bardak 5$.
+
+00:02:15.000 --> 00:02:19.550
+Eğer müşterilerden kendi bardaklarını 
+getirmedikleri ve boşa ağaç kestirdikleri
+
+00:02:19.550 --> 00:02:23.540
+için kağıt bardak parası almak istersek, 
+o zaman bardak başına 2$ alırız.
+
+00:02:23.540 --> 00:02:26.830
+Yani 2 çarpı 2$.
+
+00:02:26.830 --> 00:02:30.320
+Literal kullandığımızda, bunun ideal 
+olmadığını görürüz, çünkü kaç adet
+
+00:02:30.320 --> 00:02:33.640
+olduğunu durmadan tekrarlamak 
+zorunda kalırız.
+
+00:02:33.640 --> 00:02:34.560
+Diğer yandan,
+
+00:02:34.560 --> 00:02:39.200
+sipariş edilen kahve sayısını temsilen 
+bir değişken kullanabiliriz.
+
+00:02:39.200 --> 00:02:43.250
+Yani eğer miktarın <i>numberOfCoffees</i> adı 
+verilen değişken olduğunu söylersek,
+
+00:02:43.250 --> 00:02:46.755
+fiyatı hesapladığımızda, <i>numberOfCoffees</i>
+değişken adını kullanabiliriz
+
+00:02:46.755 --> 00:02:50.520
+ve onu bardak başına 5$ ile çarparız.
+
+00:02:50.520 --> 00:02:54.315
+Kağıt bardak için fiyatı hesaplarken yine
+<i>numberOfCoffees</i> değişken adını alırız
+
+00:02:54.315 --> 00:02:58.190
+ve 2$ olduğu için 2 ile çarparız.
+
+00:02:58.190 --> 00:03:01.590
+Yani bu ikisi arasındaki fark, 
+asıl literal değer yerine
+
+00:03:01.590 --> 00:03:03.780
+değişken kullanıyoruz.
+
+00:03:03.780 --> 00:03:06.500
+Sonra o değişkenin değeri,
+
+00:03:06.500 --> 00:03:10.490
+bu ifadeyi değerlendirince yerine konacak.
+
+00:03:10.490 --> 00:03:12.330
+Yani fiyatı hesaplarken,
+
+00:03:12.330 --> 00:03:15.740
+5'le çarpmadan önce bu değerin ne 
+olduğunu kontrol etmemiz gerekiyor.
+
+00:03:15.740 --> 00:03:19.900
+Değişken kullandığınızda yapmanız 
+gereken ek bir adım ise,
+
+00:03:19.900 --> 00:03:20.570
+başlangıçta
+
+00:03:20.570 --> 00:03:25.370
+<i>numberOfCoffees</i> değişkenine 
+bir başlangıç değeri koymak.
+
+00:03:25.370 --> 00:03:29.760
+Bu durumda başlangıç değeri olarak 
+2 koyduk, bu da literal bir değer.
+
+00:03:29.760 --> 00:03:33.970
+Ancak bu sefer literal birden 
+çok değil, tek bir yerde kullanıldı.
+
+00:03:33.970 --> 00:03:36.010
+Sonuç değeri hâlâ aynı olacak,
+
+00:03:36.010 --> 00:03:38.730
+çünkü <i>numberOfCoffees</i>
+2 değeriyle eşleşecek.
+
+00:03:38.730 --> 00:03:41.860
+Yani miktar hâlâ 2 olacak,
+fiyat da hâlâ 10 olacak
+
+00:03:41.860 --> 00:03:44.310
+ve kağıt bardak fiyatı hâlâ 4 olacak.
+
+00:03:44.310 --> 00:03:47.270
+Bu yaklaşımın gerçek avantajı, 
+değişken değerinin
+
+00:03:47.270 --> 00:03:50.190
+ne zaman istenirse değiştirilebilmesi.
+
+00:03:50.190 --> 00:03:53.300
+Diyelim ki <i>numberOfCoffees</i>'i 3 olarak 
+değiştirmek istiyorum.
+
+00:03:53.300 --> 00:03:55.430
+Sadece burada bir yerde 
+değiştirmem gerek ve
+
+00:03:55.430 --> 00:03:57.880
+sonra her şey hâlâ doğru olur.
+
+00:03:57.880 --> 00:04:00.080
+Miktar hâlâ <i>numberOfCoffees</i>,
+
+00:04:00.080 --> 00:04:02.080
+şimdi ise değeri 3.
+
+00:04:02.080 --> 00:04:04.475
+Fiyat şimdi <i>numberOfCoffees</i> çarpı 5.
+
+00:04:04.475 --> 00:04:06.653
+Değer ise 3 çarpı 5 ve
+
+00:04:06.653 --> 00:04:10.543
+kağıt bardak fiyatı hâlâ
+<i>numberOfCoffees</i> çarpı 2.
+
+00:04:10.543 --> 00:04:12.834
+Yani şimdi 3 çarpı 2.
+
+00:04:12.834 --> 00:04:14.119
+Eğer literal kullanmış olsaydık,
+
+00:04:14.119 --> 00:04:16.555
+o zaman miktarı burada 3 olarak 
+değiştirmemiz gerekirdi.
+
+00:04:16.555 --> 00:04:19.625
+Fiyat hesabını 3 çarpı 5 olarak 
+güncellememiz gerekirdi.
+
+00:04:19.625 --> 00:04:22.105
+Kağıt bardak fiyatını ise 
+3 çarpı 2 olarak.
+
+00:04:22.105 --> 00:04:24.125
+Yani bir değişken kullanıldığında,
+
+00:04:24.125 --> 00:04:27.390
+her seferinde belli bir değere 
+atıfta bulunmamız gerekmiyor.
+
+00:04:27.390 --> 00:04:29.390
+Sadece değişken adına 
+atıfta bulunabiliriz
+
+00:04:29.390 --> 00:04:32.520
+ve bu da bize o değişkendeki 
+son değeri otomatikman getirir.
+
+00:04:33.730 --> 00:04:37.120
+Değişken yaratınca ve kullanınca 
+asıl kodun neye benzeyeceğine
+
+00:04:37.120 --> 00:04:39.370
+daha yakından bakabiliriz.
+
+00:04:39.370 --> 00:04:43.720
+Değişkeni yaratmak için, 
+<i>int numberOfCoffees = 2</i> deriz.
+
+00:04:43.720 --> 00:04:48.410
+Bu <i>numberOfCoffees</i> adında 
+bir değişken yaratır ve
+
+00:04:48.410 --> 00:04:51.990
+değişken kutusunun içine 2 değerini koyar.
+
+00:04:51.990 --> 00:04:56.740
+Bu sonraki iki satır, bu ekranı 
+güncellemek için ilk satırda
+
+00:04:56.740 --> 00:04:59.000
+yarattığımız değişkeni kullanır.
+
+00:04:59.000 --> 00:05:03.040
+Kahve sayısı görüntülenebilir, 
+ki bu o değişkene bakıp içindeki değeri
+
+00:05:03.040 --> 00:05:05.720
+kontrol etmeyi gerektirir, yani 2'yi.
+
+00:05:05.720 --> 00:05:07.650
+Bu şekilde burada 2 gösteriyoruz.
+
+00:05:07.650 --> 00:05:09.330
+Fiyatı göstermek için,
+
+00:05:09.330 --> 00:05:14.360
+<i>numberOfCoffees</i> değişkeni değerine 
+bakıyoruz, ki içerisinde 2 var.
+
+00:05:14.360 --> 00:05:18.170
+Böylece 2 x 5 eşittir 10 
+diyoruz ve böylece fiyat 10$.
+
+00:05:19.310 --> 00:05:20.947
+Bu kodu kolayca değiştirebilirim,
+
+00:05:20.947 --> 00:05:23.650
+böylece <i>numberOfCoffees</i>
+2 yerine 3 olur.
+
+00:05:23.650 --> 00:05:27.570
+<i>numberOfCoffees</i> değişkenimizi 
+temsil eden kutuya,
+
+00:05:27.570 --> 00:05:31.300
+bu değişkenin içine şimdi 
+başlangıç değeri olarak 3 koyuyoruz.
+
+00:05:31.300 --> 00:05:33.160
+Ancak bu iki kod satırı 
+değişmek zorunda değil,
+
+00:05:33.160 --> 00:05:34.710
+çünkü değişken adını kullanıyoruz.
+
+00:05:35.710 --> 00:05:38.460
+<i>display(numberOfCoffees)</i> çağrıldığında,
+
+00:05:38.460 --> 00:05:40.930
+bu değişkenin değeri 3.
+
+00:05:40.930 --> 00:05:42.475
+Bu yüzden 3 sayısını gösteriyoruz.
+
+00:05:43.600 --> 00:05:48.260
+Fiyatı göstermek için <i>numberOfCoffees</i>
+için değere bakıyoruz, yani 3.
+
+00:05:48.260 --> 00:05:51.070
+Onu 5'le çarpıyoruz, böylece 
+bize 15$ değerini veriyor.
+
+00:05:51.070 --> 00:05:55.480
+Android Studio'da kod 
+değişikliği böyle görünür.
+
+00:05:56.700 --> 00:06:00.690
+Şu anda miktar için literal değer 
+2'yi kullanıyor.
+
+00:06:00.690 --> 00:06:06.608
+Onun yerine bir değişken yaratalım, 
+<i>int numberOfCoffees 2</i> yazacağım.
+
+00:06:07.840 --> 00:06:10.740
+Şimdi 2 değerinde bir değişkenim var.
+
+00:06:10.740 --> 00:06:14.640
+Bu arada, bu metin griye dönmüş 
+ve ona tekrar atıfta bulunmadığım için,
+
+00:06:14.640 --> 00:06:19.580
+değişken <i>numberOfCoffees</i> hiç kullanılmadı 
+yazıyor, ama onu şimdi kullanacağım.
+
+00:06:19.580 --> 00:06:21.430
+Literal değer 2'yi kullanmak yerine,
+
+00:06:21.430 --> 00:06:24.140
+değişken adını kullanacağım.
+
+00:06:24.140 --> 00:06:28.140
+Otomatik tamamlama opsiyonu çıkıyor, 
+yani sadece "Giriş"e basabilirsiniz
+
+00:06:28.140 --> 00:06:29.940
+ve sizin için otomatikman tamamlar.
+
+00:06:29.940 --> 00:06:33.180
+Sonra bu değişken adı artık 
+gri olmuyor, çünkü en azından
+
+00:06:33.180 --> 00:06:34.730
+bir yerde kullandık.
+
+00:06:34.730 --> 00:06:37.180
+Aynı şeyi <i>displayPrice</i>
+için de yapabilirim.
+
+00:06:37.180 --> 00:06:40.140
+Literal değer 2 kullanmak yerine, 
+<i>numberOfCoffees</i> değişkeni
+
+00:06:40.140 --> 00:06:44.820
+olarak değiştiriyorum ve otomatik 
+tamamlaması için "Giriş"e basıyorum.
+
+00:06:44.820 --> 00:06:48.630
+Teknik olarak, fiyat değeri 5 
+için de bir değişken yaratabilirim.
+
+00:06:48.630 --> 00:06:50.880
+Ancak sadece bir yerde kullanılıyor,
+
+00:06:50.880 --> 00:06:53.360
+bu yüzden sadece literal değer 
+olarak bırakabilirim.
+
+00:06:53.360 --> 00:06:56.100
+Tamam, şimdi kodu kaydedelim 
+ve cihazda çalıştıralım.
+
+00:06:56.100 --> 00:06:57.830
+Cihazda bu şekilde görünüyor.
+
+00:06:57.830 --> 00:07:00.800
+"Sipariş Et"e bastığınızda, 
+miktar 2 ve fiyat 10,00$.
+
+00:07:00.800 --> 00:07:06.500
+Bu tamamen aynı şekilde çalışsa da, 
+kodumuz daha sağlam.
+
+00:07:06.500 --> 00:07:10.620
+Sağlam demek, gelecekte hatalara 
+karşı daha az meyilli olmaktır.
+
+00:07:10.620 --> 00:07:13.020
+Örneğin, başka biri bu kodu 
+değiştirmek isterse
+
+00:07:13.020 --> 00:07:16.400
+ve miktarı başka yerlerde 
+kullanmak isterse,
+
+00:07:16.400 --> 00:07:20.840
+2 sayısını bir sürü yerde değiştirmek 
+zorunda kalacaktır.
+
+00:07:20.840 --> 00:07:24.200
+Onun yerine <i>numberOfCoffees</i> değişkenini 
+kullansaydık, o zaman sadece bir yerde
+
+00:07:24.200 --> 00:07:28.210
+değiştirmek zorunda kalırdık ve 
+her şey otomatikman güncellenirdi.
+
+00:07:28.210 --> 00:07:31.330
+Böylece kimse son sipariş edilen
+kahve sayısı olması gereken
+
+00:07:31.330 --> 00:07:34.060
+bir kod satırını yanlışlıkla kaçırmaz.
+
+00:07:34.060 --> 00:07:36.060
+Sadece bir tek yerde 
+değiştirmeleri lazım.
+
+00:07:37.290 --> 00:07:39.300
+Şimdi bunu gidip Android Studio'da 
+yapmadan evvel,
+
+00:07:39.300 --> 00:07:42.780
+bu testle alıştırma 
+yapmanızı istiyorum.
+
+00:07:42.780 --> 00:07:46.620
+Haydi devam edip bu kod 
+satırını tam altına yazın.
+
+00:07:46.620 --> 00:07:49.790
+Bu kod satırı yeni bir tam sayı 
+değişkeni yaratacak
+
+00:07:49.790 --> 00:07:53.330
+ve bu iki satır tam sayı 
+değişkenini kullanacak.
+
+00:07:53.330 --> 00:07:56.110
+İlk önce bunu alıştırma olarak 
+yapmanızı isteme sebebim,
+
+00:07:56.110 --> 00:07:59.220
+yazdığınızda her bir karaktere 
+dikkat edebilirsiniz.
+
+00:07:59.220 --> 00:08:02.340
+Öbür türlü, bir karakteri unutursanız, 
+Android Studio'da hata alabilirsiniz
+
+00:08:02.340 --> 00:08:04.790
+ve hata mesajını okumak zor olabilir.
+
+00:08:04.790 --> 00:08:07.840
+Bu yüzden devam edip 
+gördüğünüz şekilde yazın.
+
+00:08:07.840 --> 00:08:11.190
+Bu şekilde buradaki her karakterin 
+farkına varmanıza yardımcı olur,
+
+00:08:11.190 --> 00:08:14.850
+büyük harfli veya küçük harfli olsun, 
+arasında boşluk olsun
+
+00:08:14.850 --> 00:08:16.550
+veya olmasın.
+
+00:08:16.550 --> 00:08:19.090
+Bir değişken yaratma veya 
+bir değişken kullanma açısından
+
+00:08:19.090 --> 00:08:24.100
+Java kurallarına aşina olmaya 
+başlayacaksınız ve daha önce
+
+00:08:24.100 --> 00:08:27.140
+öğrendiğiniz gibi her Java kodu komutu 
+bir noktalı virgülle bitmeli.
+
+00:08:27.140 --> 00:08:29.230
+Eğer bunu yanlış yazarsanız, örneğin
+
+00:08:29.230 --> 00:08:32.200
+değişken adını, 
+bu size Java'da hata verir.
+
+00:08:32.200 --> 00:08:35.580
+Ancak diğer şeyler daha klasik 
+şeyler ve iyi uygulamalar.
+
+00:08:35.580 --> 00:08:40.090
+Örneğin, bunun gibi operatörlerden 
+önce ve sonra boşluk eklemek.
+
+00:08:40.090 --> 00:08:43.690
+Eğer boşluk bırakmazsanız, 
+size belli bir hata vermez;
+
+00:08:43.690 --> 00:08:47.940
+ancak bu kod stili kuralını takip etmek 
+daha iyi bir programlama pratiğidir.
+
+00:08:47.940 --> 00:08:50.020
+Bu şekilde kodunuzu okumak 
+daha kolay olur,
+
+00:08:50.020 --> 00:08:53.020
+bunu yazmayı bitirince, devam edip 
+bir sonraki videoya geçin.
+

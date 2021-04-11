@@ -1,0 +1,234 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:01.400 --> 00:00:02.420
+- Merhaba.
+- Merhaba.
+
+00:00:02.420 --> 00:00:04.390
+- Nasıl gidiyor?
+- Biraz bekle.
+
+00:00:04.442 --> 00:00:05.920
+- Tamam.
+- Tamam.
+
+00:00:05.920 --> 00:00:08.730
+Biliyorsun ki uygulamamızda 
+<i>NumberOfCoffeesOrdered</i> adında
+
+00:00:08.730 --> 00:00:09.860
+bir değişkenimiz var.
+
+00:00:09.860 --> 00:00:10.840
+Bu kutu. Evet.
+
+00:00:10.840 --> 00:00:11.942
+İçinde iki değeri var.
+
+00:00:11.942 --> 00:00:14.600
+- Doğru.
+- Şimdi uygulamada
+
+00:00:14.600 --> 00:00:16.180
+artı işaretine basarsam
+
+00:00:16.180 --> 00:00:17.500
+o zaman
+
+00:00:17.500 --> 00:00:19.440
+kaç bardak kahvemiz olur?
+
+00:00:19.440 --> 00:00:24.160
+Bir artış olur, o zaman 
+yeni değer üç olmalı.
+
+00:00:24.160 --> 00:00:25.230
+Evet. O zaman,
+
+00:00:25.230 --> 00:00:28.105
+bu eski değeri atıp yenisini koyacağım.
+
+00:00:28.105 --> 00:00:29.720
+- Tamam.
+- Tekrar artı değerine
+
+00:00:29.720 --> 00:00:31.530
+basarsam,
+
+00:00:31.530 --> 00:00:33.420
+o zaman kaç bardağım olur?
+
+00:00:33.420 --> 00:00:36.630
+Şimdi dörde çıkaracağız.
+
+00:00:36.630 --> 00:00:39.528
+- Evet. Yani bunu atıp dördü koy.
+- Tamam.
+
+00:00:39.530 --> 00:00:42.090
+Şimdi, eğer eksi değerine basarsam,
+
+00:00:42.090 --> 00:00:42.950
+o zaman
+
+00:00:42.950 --> 00:00:44.320
+kaç bardak kahvem olur?
+
+00:00:44.320 --> 00:00:46.556
+Ama Katherine, matematik 
+yapmayacağız demiştin.
+
+00:00:46.556 --> 00:00:47.848
+Cevap bir.
+
+00:00:47.848 --> 00:00:49.520
+Bunu yaz.
+
+00:00:49.520 --> 00:00:50.590
+- Teşekkürler.
+- Tamam.
+
+00:00:50.590 --> 00:00:51.830
+- İşte burada. Bir.
+- Evet.
+
+00:00:51.830 --> 00:00:52.740
+Bunu sana vereyim.
+
+00:00:52.740 --> 00:00:53.820
+Teşekkürler.
+
+00:00:53.820 --> 00:00:56.420
+Şimdi bunların hepsini 
+uygulamamıza ekleyelim
+
+00:00:56.420 --> 00:01:00.680
+ve matematiğinle sonra uğraşacağız. 
+Taslak koda bakarak, uygulamada
+
+00:01:00.680 --> 00:01:05.000
+artı butonuna basmanın sipariş edilen 
+kahve adedini nasıl artırdığını anlayalım.
+
+00:01:05.000 --> 00:01:07.950
+Taslak kod, uygulamanın 
+yapacağı şeylerin adımlarını
+
+00:01:07.950 --> 00:01:10.180
+açıklayan üst seviyede bir tanımlama.
+
+00:01:10.180 --> 00:01:12.650
+Onu birine açıklıyormuş 
+gibi yazabilirsiniz,
+
+00:01:12.650 --> 00:01:15.810
+çünkü bilgisayarların değil, 
+insanların okuması için.
+
+00:01:15.810 --> 00:01:19.270
+Bu bize olması gerekenleri adım adım 
+düşüncelerimizden doğrusal
+
+00:01:19.270 --> 00:01:21.350
+bir akışa doğru koymamıza yardımcı olur.
+
+00:01:21.350 --> 00:01:24.910
+Taslak kod yazarken, belli bir yapı veya 
+düzeni takip etmemiz gerekmez,
+
+00:01:24.910 --> 00:01:28.090
+sadece daha sonra kodu 
+yazmamıza yardımcı olacak
+
+00:01:28.090 --> 00:01:29.880
+yararlı detayları dâhil etmeliyiz.
+
+00:01:30.180 --> 00:01:33.450
+Senaryomuzda, sipariş edilen 
+kahve adedini takip edecek
+
+00:01:33.450 --> 00:01:38.080
+bir <i>quantity</i> değişkeni yaratıp başlangıç 
+değerine iki kahve diyeceğiz.
+
+00:01:38.080 --> 00:01:41.550
+Eğer artı butonuna basılırsa, 
+miktar değişkeni üç olarak güncellenir.
+
+00:01:42.550 --> 00:01:45.090
+Eğer artı değişkenine birkaç 
+defa daha basarsak,
+
+00:01:45.090 --> 00:01:46.850
+miktarı dört ve beşe çıkarabiliriz.
+
+00:01:48.090 --> 00:01:51.780
+Kafamızda kodun ne yapacağına dair 
+kavramsal bir fikrimiz olduğunda,
+
+00:01:51.780 --> 00:01:54.600
+asıl Java kodunu yazmaya odaklanabiliriz.
+
+00:01:54.600 --> 00:01:58.508
+Bu noktada, Java kodu yazmak için,
+Java sözdizimi, büyük harfe çevirme,
+
+00:01:58.508 --> 00:02:00.100
+semboller, boşluk bırakma
+
+00:02:00.100 --> 00:02:03.160
+ve diğer özel kurallarla uğraşarabiliriz.
+
+00:02:03.380 --> 00:02:10.993
+gerçek kod şuna benzer, <i>int
+quantity = 2</i> ardından noktalı virgül.
+
+00:02:10.993 --> 00:02:13.370
+Son videoda bundan bahsettik.
+
+00:02:13.370 --> 00:02:16.327
+Miktar değişkenini 3'e çıkarmak için 
+önce <i>quantity = 3</i>,
+
+00:02:16.327 --> 00:02:19.050
+ardından noktalı virgül yazıyoruz.
+
+00:02:19.050 --> 00:02:22.670
+Eğer miktarı 4 ve 5 olarak 
+değiştirirsek, kod şuna benzer.
+
+00:02:24.160 --> 00:02:27.570
+Bu testte, bu kod satırlarını verilen 
+metin alanlarına yazarak
+
+00:02:27.570 --> 00:02:29.590
+alıştırma yapmanızı istiyorum.
+
+00:02:29.590 --> 00:02:32.530
+Böylece tam sayı değişkeni yaratma 
+ve bunu Java'da güncelleme
+
+00:02:32.530 --> 00:02:34.230
+konusunda alıştırma yapacağız.
+
+00:02:34.230 --> 00:02:38.630
+Bunu yazarken her karaktere 
+ve sembole çok dikkat edin.
+
+00:02:38.630 --> 00:02:41.540
+İşiniz bittiğinde, yazdığınız 
+bu kodun biçimine dair
+
+00:02:41.540 --> 00:02:43.360
+bir gözleminiz var mı?
+
+00:02:43.360 --> 00:02:45.950
+Örneğin, herhangi bir 
+örüntü fark ettiniz mi?
+
+00:02:45.950 --> 00:02:48.320
+Gözlemlerinizi buradaki 
+metin alanına yazın.
+

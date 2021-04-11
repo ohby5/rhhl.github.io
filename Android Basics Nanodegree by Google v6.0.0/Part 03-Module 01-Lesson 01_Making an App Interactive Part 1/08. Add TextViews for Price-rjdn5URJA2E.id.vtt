@@ -1,0 +1,488 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.000 --> 00:00:02.900
+Saya ingin Anda membuat
+sendiri tata letak ini.
+
+00:00:02.900 --> 00:00:06.000
+Anda akan tambahkan satu tampilan
+teks untuk &lt;i&gt;header&lt;/i&gt; harga di sini
+
+00:00:06.000 --> 00:00:09.160
+lalu tampilan teks lain yang
+menunjukkan nol dolar.
+
+00:00:09.160 --> 00:00:15.330
+Juga memberi tampilan teks yang kedua ini,
+sebuah &lt;i&gt;ID&lt;/i&gt; tampilan yaitu &lt;i&gt;price_text_view&lt;/i&gt;.
+
+00:00:15.330 --> 00:00:18.310
+Saya meminta Anda menambahkan
+sebuah &lt;i&gt;ID&lt;/i&gt; karena kita akan perlu
+
+00:00:18.310 --> 00:00:21.700
+merujuk tampilan ini nanti, sehingga
+kita bisa memperbarui harganya.
+
+00:00:21.700 --> 00:00:25.170
+Dan saat Anda mengerjakannya, buatlah
+juga gaya dari dua tampilan teks ini
+
+00:00:25.170 --> 00:00:27.680
+serupa dengan tampilan teks &lt;i&gt;quantity&lt;/i&gt;.
+
+00:00:27.680 --> 00:00:31.630
+Dalam hal jarak vertikal, kita juga
+punya 16dp di antara tampilan ini.
+
+00:00:31.630 --> 00:00:34.060
+Agar lahan harga juga terbarui,
+
+00:00:34.060 --> 00:00:37.500
+kita akan perlu membuat beberapa perubahan
+pada berkas &lt;i&gt;MainActivity.java&lt;/i&gt;
+
+00:00:37.500 --> 00:00:39.720
+Kami akan sedikit membantu
+Anda dengan hal itu.
+
+00:00:39.720 --> 00:00:42.540
+Kami akan sediakan metode baru
+yang bisa Anda tambahkan pada
+
+00:00:42.540 --> 00:00:44.260
+berkas &lt;i&gt;MainActivity.java&lt;/i&gt;.
+
+00:00:44.260 --> 00:00:47.640
+Bukalah &lt;i&gt;gist&lt;/i&gt; di tautan yang
+ada di catatan instruktur.
+
+00:00:47.640 --> 00:00:50.190
+Omong-omong, &lt;i&gt;gist&lt;/i&gt; artinya potongan atau
+
+00:00:50.190 --> 00:00:52.510
+daerah pendek dari kode
+yang bisa dipakai lagi
+
+00:00:52.510 --> 00:00:54.530
+yang bisa Anda bagikan
+dengan orang lain.
+
+00:00:54.530 --> 00:00:58.390
+Dalam hal ini, kita kunjungi
+halaman situs &lt;i&gt;GistHub Gist&lt;/i&gt;, dan
+
+00:00:58.390 --> 00:01:01.850
+kami membuat &lt;i&gt;Gist&lt;/i&gt; baru dengan kode
+yang ingin kami berikan ini pada Anda.
+
+00:01:01.850 --> 00:01:05.780
+Dan sekarang kita bisa membagi tautan ini
+dengan Anda, dan Anda mendapat kodenya.
+
+00:01:05.780 --> 00:01:09.140
+Untuk potongan ini, kita akan pilih
+semua ini, dan menyalinnya.
+
+00:01:09.140 --> 00:01:11.050
+Ingatlah untuk memasukkan komentar ini,
+
+00:01:11.050 --> 00:01:12.650
+sebagai catatan untuk pembaca dan
+
+00:01:12.650 --> 00:01:14.522
+tanda tutup kurung
+kurawal di bawah ini.
+
+00:01:14.522 --> 00:01:17.730
+Sekarang kita akan menempelkannya
+di berkas &lt;i&gt;MainActivity.java&lt;/i&gt;
+
+00:01:17.730 --> 00:01:19.070
+Saya suka kode gratis.
+
+00:01:19.280 --> 00:01:22.940
+Pastikan tanda kurung kurawal tersebut
+tetap ada setelah Anda menempelnya.
+
+00:01:22.940 --> 00:01:26.260
+Tanda kurung kurawal sangat penting.
+
+00:01:26.290 --> 00:01:29.560
+Aplikasi Anda akan punya
+banyak kesalahan bila tanpanya...
+
+00:01:29.560 --> 00:01:33.310
+Contohnya, jika saya tempelkan
+salinan kode ini di bawah sini,
+
+00:01:33.310 --> 00:01:35.680
+maka terjadi kesalahan yang
+menyatakan kelas atau
+
+00:01:35.680 --> 00:01:37.330
+antar muka yang diharapkan.
+
+00:01:37.330 --> 00:01:40.300
+Sebab metode ini menggantung
+di tempat antah berantah.
+
+00:01:40.300 --> 00:01:44.510
+Sungguh, kita menginginkannya berada
+di dalam &lt;i&gt;MainActivity&lt;/i&gt; di antara
+
+00:01:44.510 --> 00:01:47.040
+tanda kurawal pembuka dan
+penutup dari &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:01:47.040 --> 00:01:51.810
+Ayo salin ini dan letakkan sebelum tanda
+kurung kurawal penutup &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:01:51.810 --> 00:01:53.100
+Dan itu lebih baik.
+
+00:01:53.100 --> 00:01:55.600
+Kesalahan lain yang mungkin terjadi yaitu
+
+00:01:55.600 --> 00:01:58.420
+bila Anda lupa menyalin tanda
+kurung kurawal penutup, dan
+
+00:01:58.420 --> 00:02:00.450
+Anda hanya menyalin
+bagian atas metode ini.
+
+00:02:00.450 --> 00:02:01.510
+Pada kasus tersebut,
+
+00:02:01.510 --> 00:02:05.548
+akan ada kesalahan yang menyatakan
+perlunya tanda kurung kurawal penutup.
+
+00:02:05.548 --> 00:02:07.020
+Jadi Anda akan menambahkannya.
+
+00:02:07.020 --> 00:02:09.100
+Kemungkinan lain yaitu
+bila Anda tak sengaja
+
+00:02:09.100 --> 00:02:11.430
+menambahkan metode itu di sini,
+
+00:02:11.430 --> 00:02:15.130
+sebelum tanda tutup kurung
+kurawal di metode &lt;i&gt;display&lt;/i&gt;,
+
+00:02:15.130 --> 00:02:18.000
+maka sekarang semuanya ada
+di dalam metode &lt;i&gt;display&lt;/i&gt;,
+
+00:02:18.000 --> 00:02:19.850
+kita tak menginginkan hal itu.
+
+00:02:19.850 --> 00:02:23.710
+Kita menginginkannya di sebelah
+metode &lt;i&gt;display&lt;/i&gt;, di luar sini.
+
+00:02:25.060 --> 00:02:27.500
+Anda tahu, ada sejuta kombinasi.
+
+00:02:27.500 --> 00:02:30.290
+Anda harus hati-hati dan pastikan
+ada tanda kurung kurawal.
+
+00:02:30.290 --> 00:02:33.220
+Cara lain memeriksa yaitu
+letakkan kursor di sini,
+
+00:02:33.220 --> 00:02:36.000
+setelah tanda buka kurung
+kurawal, sehingga Anda bisa lihat
+
+00:02:36.000 --> 00:02:38.760
+tanda tutup kurung kurawal
+pasangannya akan tersorot.
+
+00:02:38.760 --> 00:02:40.620
+Sama halnya disini,
+bila saya klik ini,
+
+00:02:40.620 --> 00:02:43.430
+tanda tutup kurung kurawal
+pasangannya ada di sini.
+
+00:02:43.430 --> 00:02:49.090
+Serupa dengan metode &lt;i&gt;submitOrder&lt;/i&gt;, dan
+&lt;i&gt;OnCreate,&lt;/i&gt; dan bahkan &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:02:49.500 --> 00:02:52.370
+Ini adalah tanda buka kurung
+kurawal untuk &lt;i&gt;MainActivity&lt;/i&gt;, dan
+
+00:02:52.370 --> 00:02:54.800
+tanda tutup kurung kurawalnya
+berwarna biru di sini.
+
+00:02:54.800 --> 00:02:57.450
+Sayangnya, kita masih punya
+kesalahan lain di sini.
+
+00:02:57.450 --> 00:03:01.570
+Bila saya lihat bilah samping di sini,
+dikatakan bahwa tak bisa menyelesaikan
+
+00:03:01.570 --> 00:03:02.760
+format simbol angka.
+
+00:03:02.760 --> 00:03:07.190
+Format angka disediakan Android
+untuk memformat angka.
+
+00:03:07.190 --> 00:03:10.130
+Dalam hal ini kita coba memformat
+angka yang merupakan harga
+
+00:03:10.130 --> 00:03:14.180
+agar bertanda dolar, atau
+mata uang lain yang Anda pakai.
+
+00:03:14.180 --> 00:03:19.070
+Kita perlu menambahkan pernyataan untuk
+ini, karena saat ini &lt;i&gt;Android Studio&lt;/i&gt; tak
+
+00:03:19.070 --> 00:03:20.250
+bisa mengenali ini.
+
+00:03:20.250 --> 00:03:22.770
+Untuk menyelesaikannya, saya akan
+tunjukkan pada Anda
+
+00:03:22.770 --> 00:03:24.270
+cara mengaktifkan &lt;i&gt;auto import&lt;/i&gt;.
+
+00:03:24.270 --> 00:03:26.610
+Pada menu di atas &lt;i&gt;Android Studio&lt;/i&gt;,
+
+00:03:26.610 --> 00:03:28.550
+klik &lt;i&gt;Android Studio &amp;gt; Preferences&lt;/i&gt;.
+
+00:03:28.550 --> 00:03:31.790
+Ini membuka pilihan untuk &lt;i&gt;Android Studio&lt;/i&gt;.
+
+00:03:31.790 --> 00:03:34.480
+Ada banyak pilihan yang
+belum saya ubah, namun
+
+00:03:34.480 --> 00:03:37.820
+bila memerlukan sesuatu, saya
+menggunakan kotak pencarian ini.
+
+00:03:37.820 --> 00:03:39.810
+Jadi, saya akan ketikkan &lt;i&gt;Auto Import&lt;/i&gt;.
+
+00:03:39.810 --> 00:03:41.600
+Ia menunjukkan pengaturan untuk
+
+00:03:41.600 --> 00:03:44.140
+masukan otomatis di &lt;i&gt;XML&lt;/i&gt; dan &lt;i&gt;Java&lt;/i&gt;.
+
+00:03:44.140 --> 00:03:46.530
+Saya ingin centangi
+kotak ini, yang mengatakan
+
+00:03:46.530 --> 00:03:48.530
+"Tambahkan impor yang jelas dengan cepat".
+
+00:03:48.550 --> 00:03:51.560
+Kalimat ini mungkin tak bermakna
+bagi Anda, namun tak apa-apa.
+
+00:03:51.560 --> 00:03:53.550
+Kalimat ini mungkin membingungkan.
+
+00:03:53.550 --> 00:03:59.220
+Namun berguna untuk memberi tahu &lt;i&gt;Android 
+Studio&lt;/i&gt;, bahwa tak apa-apa menambahkan
+
+00:03:59.220 --> 00:04:01.430
+beberapa baris kode
+di aplikasi kita.
+
+00:04:01.430 --> 00:04:05.290
+Khususnya mengimpor pernyataan,
+bila diketahui apa rujukan kita.
+
+00:04:05.290 --> 00:04:06.690
+Mari saya tunjukkan.
+
+00:04:06.690 --> 00:04:09.300
+Sebenarnya, ia telah
+melakukannya untuk kita.
+
+00:04:09.300 --> 00:04:12.350
+Ia berasumsi bila kita berkata format
+angka, maksud kita yaitu
+
+00:04:12.350 --> 00:04:13.510
+yang ini, dan itu benar.
+
+00:04:13.510 --> 00:04:15.650
+Jadi, ia mengatasi masalah
+secara otomatis.
+
+00:04:15.650 --> 00:04:16.500
+Itu bagus.
+
+00:04:16.500 --> 00:04:19.360
+Baiklah, saat ini bila Anda
+jalankan aplikasinya, maka
+
+00:04:19.360 --> 00:04:21.900
+saat anda klik tombol ORDER,
+kuantitas berubah, namun
+
+00:04:21.900 --> 00:04:22.980
+harganya tidak.
+
+00:04:22.980 --> 00:04:25.900
+Kita perlu mengubah
+metode masukan ORDER
+
+00:04:25.900 --> 00:04:28.566
+untuk memperbarui kuantitas dan harga.
+
+00:04:28.566 --> 00:04:30.990
+Mari tambahkan kode.
+
+00:04:30.990 --> 00:04:35.030
+Saya akan panggil metode &lt;i&gt;display&lt;/i&gt; harga
+
+00:04:35.030 --> 00:04:41.460
+dan mengatakan harga dua
+cangkir kopi dikali lima dolar.
+
+00:04:41.460 --> 00:04:46.942
+Harga kopi kita lima dolar,
+karena diimpor dari Etiopia.
+
+00:04:46.942 --> 00:04:50.280
+Kita akan membiarkan alat melakukan
+perhitungannya untuk kita,
+
+00:04:50.280 --> 00:04:52.800
+karena kita punya kopi
+seharga lima dolar per cangkir.
+
+00:04:53.080 --> 00:04:56.740
+Saat saya merujuk dolar dalam
+pelajaran ini, silahkan menggantinya
+
+00:04:56.740 --> 00:04:58.570
+dengan mata uang lokal 
+di negara Anda.
+
+00:04:58.570 --> 00:05:00.870
+Tak ada simbol dolar
+di pernyataan matematis ini.
+
+00:05:00.870 --> 00:05:04.270
+Ia akan ditambahkan di
+metode &lt;i&gt;display&lt;/i&gt; harga,
+
+00:05:04.270 --> 00:05:06.830
+Jangan khawatir tentang
+rincian metode tampilan harga.
+
+00:05:06.840 --> 00:05:09.150
+kita akan mempelajarinya
+di pelajaran ke tiga.
+
+00:05:09.160 --> 00:05:12.280
+Sekarang, fokuslah pada pernyataan
+matematis yang akan Anda
+
+00:05:12.280 --> 00:05:13.820
+gunakan untuk menghitung harga.
+
+00:05:13.820 --> 00:05:16.970
+Ingatlah tanda titik koma
+di akhir tiap pernyataan,
+
+00:05:16.970 --> 00:05:21.410
+jika tidak, maka akan ada kesalahan.
+
+00:05:22.050 --> 00:05:25.610
+Contohnya, saat Anda menyingkirkan
+titik koma, akan ada kesalahan yang
+
+00:05:25.610 --> 00:05:27.220
+menyatakan perlunya titik koma.
+
+00:05:27.220 --> 00:05:32.446
+Oh, supaya lebih jelas,
+tanda titik koma adalah yang ini.
+
+00:05:32.446 --> 00:05:34.763
+Bukan titik dua, melainkan titik koma.
+
+00:05:34.763 --> 00:05:36.930
+Baiklah, saat Anda
+menyelesaikan semuanya,
+
+00:05:36.930 --> 00:05:40.310
+Anda harus tambahkan dua tampilan
+teks lagi untuk harga di sini.
+
+00:05:40.310 --> 00:05:42.550
+Anda harus ubah &lt;i&gt;Main Activity&lt;/i&gt;
+untuk menambahkan
+
+00:05:42.550 --> 00:05:44.430
+metode baru yang kami
+berikan pada Anda.
+
+00:05:44.430 --> 00:05:46.970
+Dan Anda juga akan
+ubah metode &lt;i&gt;submitOrder&lt;/i&gt;
+
+00:05:46.970 --> 00:05:49.300
+untuk menambah kode
+baru untuk menampilkan harga.
+
+00:05:49.300 --> 00:05:52.510
+Saat ia dijalankan di alat,
+tampilan seharusnya seperti ini.
+
+00:05:52.510 --> 00:05:55.430
+Mulai dari kuantitas nol untuk nol dolar.
+
+00:05:55.430 --> 00:05:58.867
+Dan saat Anda menekannya, ada dua kopi
+yang dipesan untuk sepuluh dolar.
+
+00:05:58.867 --> 00:06:02.960
+Cobalah dengan jumlah dan
+harga yang berbeda.
+
+00:06:02.960 --> 00:06:05.230
+Bila Anda ingin memberi
+harga sepuluh dolar
+
+00:06:05.230 --> 00:06:07.346
+untuk secangkir kopi,
+Anda bisa melakukannya.
+
+00:06:07.346 --> 00:06:10.440
+Pastikan Anda mengubahnya lagi
+menjadi lima dolar per cangkir agar
+
+00:06:10.440 --> 00:06:12.610
+sesuai kode kita sebelumnya
+untuk melanjutkan.
+
+00:06:12.610 --> 00:06:14.600
+Centang kotak ini bila telah selesai.
+

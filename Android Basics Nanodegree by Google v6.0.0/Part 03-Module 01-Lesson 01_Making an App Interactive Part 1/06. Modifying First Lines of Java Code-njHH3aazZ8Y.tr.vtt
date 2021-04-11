@@ -1,0 +1,256 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.860 --> 00:00:01.440
+Oley!
+
+00:00:01.440 --> 00:00:03.870
+Uygulamanızı kullanıcılar için
+interaktif hale getirdiniz.
+
+00:00:03.870 --> 00:00:06.930
+Daha önce düğmeye basıldığında
+hiçbir şey olmuyordu.
+
+00:00:06.930 --> 00:00:08.410
+Ama şimdi, bazı kod değişikliğinden sonra
+
+00:00:08.410 --> 00:00:11.680
+düğmeye bastığınızda, ekranda
+bir şeyleri güncelliyor.
+
+00:00:11.680 --> 00:00:12.180
+Harika!
+
+00:00:13.340 --> 00:00:16.400
+Şimdi başardığınız işin
+daha derinine inelim.
+
+00:00:16.400 --> 00:00:21.120
+İlk olarak Button XML elementine
+android:onClick özniteliği eklediniz.
+
+00:00:21.120 --> 00:00:22.800
+Bu demek oluyor ki
+düğme tıklandığında,
+
+00:00:22.800 --> 00:00:27.960
+submitOrder isimli
+bir dizi komutu çalıştıracak
+
+00:00:27.960 --> 00:00:30.900
+veya Java'da dediğimiz gibi yürütecek.
+
+00:00:32.060 --> 00:00:33.480
+Tamam.
+Size verdiğimiz
+
+00:00:33.480 --> 00:00:35.300
+MainActivity dosyasına giriyoruz.
+
+00:00:35.300 --> 00:00:37.830
+Biliyorum, ekranda bir sürü
+garip sembol ve kelimeler var.
+
+00:00:37.830 --> 00:00:40.930
+Fakat şu an bilmeniz gereken şey
+bunun bir metod olduğu
+
+00:00:40.930 --> 00:00:42.930
+ve ismi de submitOrder.
+
+00:00:42.930 --> 00:00:45.620
+Bir metod çoklu java kod satırı içerebilir.
+
+00:00:45.620 --> 00:00:51.060
+Ve bu, cihazın anlayıp işleyebileceği
+bir dizi komuta çevirir.
+
+00:00:51.060 --> 00:00:53.720
+Eğer bu metotta çok kod satırı varsa
+
+00:00:53.720 --> 00:00:57.830
+cihaz ilk olarak ilk satırı işler
+ve sonra ikinci satırı ve
+
+00:00:57.830 --> 00:00:59.850
+böylece son satıra kadar gider.
+
+00:00:59.850 --> 00:01:03.890
+Metotlara isim vermemizin nedeni
+daha sonra atıf yapabilmektir.
+
+00:01:03.890 --> 00:01:08.200
+Örneğin, şimdi XML'de submitOrder
+metoduna atıf yapabiliriz.
+
+00:01:08.200 --> 00:01:10.380
+Bu sizin ve benim bir adımızın olması gibi.
+
+00:01:10.380 --> 00:01:12.560
+Bir hayvanınız varsa
+ona da isim verirsiniz ki
+
+00:01:12.560 --> 00:01:14.670
+onu çağırabilesiniz.
+
+00:01:14.670 --> 00:01:18.350
+Yani kodda, atıf yapmak istediğimiz
+bir sürü ifade varsa
+
+00:01:18.350 --> 00:01:21.570
+onu bir metod içerisine koyabilir
+ve bu metoda bir isim veririz.
+
+00:01:21.570 --> 00:01:25.850
+Hatırlayın, ilk derste XML'in
+geçerli olup olmadığını belirlediği
+
+00:01:25.850 --> 00:01:30.100
+belirli sözdizimi kuralları
+olduğunu anlatmıştık.
+
+00:01:30.100 --> 00:01:34.700
+Java da geçerli kodları belirlemek için
+aynı şekilde benzer kurallara sahiptir.
+
+00:01:34.700 --> 00:01:38.800
+Metodlar için, içindeki ifadeler
+
+00:01:38.800 --> 00:01:42.510
+bu açık ve kapalı çengelli
+parantez arasında olmalı.
+
+00:01:42.510 --> 00:01:45.650
+Yukarıda, onCreate denen
+bir metod daha var.
+
+00:01:45.650 --> 00:01:51.770
+Bu metod içindeki ifadeler
+bu açık ve kapalı parantez içindedir.
+
+00:01:51.770 --> 00:01:54.800
+Ve son olarak, adı display olan
+bir metod daha var.
+
+00:01:54.800 --> 00:01:59.920
+İçindeki kod ifadeleri
+bu açık ve kapalı parantezle işaretli.
+
+00:01:59.930 --> 00:02:03.820
+MainActivity için de açık ve kapalı
+parantez olduğuna dikkat edin.
+
+00:02:03.822 --> 00:02:06.600
+MainActivity'nin tüm fonksiyonelliği
+
+00:02:06.600 --> 00:02:10.199
+bu açık ve kapalı parantez içinde tanımlı.
+
+00:02:10.199 --> 00:02:13.165
+Buraya kadar, MainActivity içinde
+üç metod bulunuyor.
+
+00:02:13.165 --> 00:02:15.340
+Yani bir metodu bildirdikten sonra
+
+00:02:15.340 --> 00:02:19.500
+yani metodu tanımladıktan sonra
+o metodu kullanabilirsiniz.
+
+00:02:19.500 --> 00:02:22.430
+Bu örnekte, display metodunu bildiriyoruz
+
+00:02:22.430 --> 00:02:25.805
+ve sonra onu bu kod satırında
+ismini çağırarak kullanıyoruz.
+
+00:02:25.805 --> 00:02:29.655
+Yani bu metodu bildirdiğimiz ve
+bu da metodu çağırdığımız yer.
+
+00:02:29.655 --> 00:02:32.495
+Özetlersek, arayüzde düğmeye basıldığında,
+
+00:02:32.495 --> 00:02:34.995
+submitOrder metodunu
+çağırılması için tetikler.
+
+00:02:34.995 --> 00:02:38.635
+Sonra submitOrder metodundaki
+her kod satırını çalıştırıyoruz.
+
+00:02:38.635 --> 00:02:40.895
+İlk metoddan son metoda kadar.
+
+00:02:40.895 --> 00:02:44.690
+Bu durumda, orada bir kod ifadesi var,
+bu yüzden sadece onu koşuyoruz.
+
+00:02:44.690 --> 00:02:48.370
+Tamam, şimdi display(1) diyen
+bu kod satırına bakalım.
+
+00:02:48.370 --> 00:02:50.300
+Bu satırı seçmemin nedeni
+
+00:02:50.300 --> 00:02:55.800
+parantez içindeki sayının ekranda
+gözüken sayı gibi durması.
+
+00:02:56.980 --> 00:02:59.870
+Kullanıcı arayüzündeki Sipariş
+düğmesine tıkladığımda
+
+00:02:59.870 --> 00:03:03.570
+submitOrder metodunu
+MainActivity'de çağırılması için tetikler.
+
+00:03:03.570 --> 00:03:07.377
+Sonra display(1) kod satırını yürütüyoruz.
+
+00:03:07.377 --> 00:03:10.270
+Ve bu da ekranı 1'i
+göstermesi için güncelliyor.
+
+00:03:10.270 --> 00:03:13.730
+Yani eğer bunu 2 olması için değiştirirsem,
+ne olacağını düşünüyorsunuz?
+
+00:03:13.730 --> 00:03:15.990
+Bulmak için uygulamayı çalıştıralım.
+
+00:03:15.990 --> 00:03:18.880
+Ve şimdi düğmeye tıkladığımda
+2'yi gösteriyor.
+
+00:03:18.880 --> 00:03:22.709
+Sipariş düğmesine tıklamak submitOrder
+metodunu çağırılması için tetikliyor.
+
+00:03:22.709 --> 00:03:25.918
+Sonra display(2) kod satırını yürütüyoruz.
+
+00:03:25.918 --> 00:03:28.670
+Ve bu da ekranı 2'yi
+göstermesi için güncelliyor.
+
+00:03:28.670 --> 00:03:29.630
+Şimdi sıra sizde.
+
+00:03:29.630 --> 00:03:33.150
+Parantezler içindeki bu sayıyı
+farklı sayılarla değiştirebilir misiniz?
+
+00:03:33.150 --> 00:03:37.130
+Daha küçük, daha büyük veya
+negatif bir sayı bile seçebilirsiniz.
+
+00:03:37.130 --> 00:03:40.170
+Bu kod satırlarıyla MainActivity'de
+deneme yaptıysanız ve
+
+00:03:40.170 --> 00:03:42.020
+işiniz bittiğinde kutuyu işaretleyin.
+

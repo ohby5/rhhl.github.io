@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.240 --> 00:00:02.280
+Ahora que ya lo hemos planeado
+concienzudamente,
+
+00:00:02.360 --> 00:00:04.640
+continúa adelante
+y crea este diseño en tu app.
+
+00:00:05.160 --> 00:00:09.480
+Tienes que encontrar y modificar
+el archivo <i>activity_main.xml</i>.
+
+00:00:10.080 --> 00:00:13.160
+El archivo <i>activity_main.xml</i>
+debería estar ya abierto
+
+00:00:13.240 --> 00:00:14.960
+desde que empezaste a crear tu proyecto.
+
+00:00:15.040 --> 00:00:18.640
+Si no está abierto, lo puedes encontrar
+bajo la carpeta <i>layout</i>,
+
+00:00:18.720 --> 00:00:22.320
+bajo <i>res, </i>bajo <i>app,</i>
+dentro de la vista del proyecto de tu app,
+
+00:00:22.400 --> 00:00:24.600
+donde hay una lista
+con todos los archivos de tu app.
+
+00:00:24.680 --> 00:00:26.600
+El panel de diseño
+está abierto por defecto.
+
+00:00:26.680 --> 00:00:31.000
+Puedes arrastrar y soltar herramientas
+de esta paleta de aquí a tu app.
+
+00:00:31.240 --> 00:00:34.520
+Pero quiero que utilices el panel de texto
+y que escribas con él tu XML aquí.
+
+00:00:34.800 --> 00:00:37.080
+En cualquier momento,
+mientras estés modificando tu XML,
+
+00:00:37.160 --> 00:00:40.080
+siempre puedes seleccionar
+este contenido y darle formato.
+
+00:00:40.320 --> 00:00:43.600
+En la parte superior de Android Studio
+verás que hay un menú.
+
+00:00:43.840 --> 00:00:47.600
+Haz clic en <i>Código</i> y encontrarás
+la opción <i>Formatear Código</i>.
+
+00:00:47.840 --> 00:00:50.480
+Este es el método abreviado
+para el teclado, si utilizas un Mac.
+
+00:00:50.640 --> 00:00:53.400
+En <i>Formatear Código</i>,
+marca la opción <i>Texto Seleccionado</i>.
+
+00:00:53.480 --> 00:00:56.680
+Cuando hagas clic en <i>Ejecutar</i>,
+tu código se formateará automáticamente
+
+00:00:56.760 --> 00:00:58.640
+para reparar
+el espaciado y las tabulaciones.
+
+00:00:58.720 --> 00:01:01.000
+También puedes seleccionar
+<i>Reorganizar Código</i>.
+
+00:01:01.080 --> 00:01:04.440
+Así modificas el orden de los atributos
+para ponerlos en el orden preferido
+
+00:01:04.519 --> 00:01:06.880
+según las directrices de estilo
+para el código de Android.
+
+00:01:07.080 --> 00:01:09.720
+Ahora, en este formato,
+el código es mucho más fácil de leer.
+
+00:01:09.800 --> 00:01:11.800
+Si quieres una vista previa del código,
+
+00:01:11.880 --> 00:01:14.000
+haz clic en el botón <i>Vista Previa</i> de aquí.
+
+00:01:14.480 --> 00:01:16.600
+Aquí se muestra
+cómo se vería en el dispositivo.
+
+00:01:16.760 --> 00:01:19.240
+Esto no implica lo mismo
+que ejecutarlo en tu dispositivo.
+
+00:01:19.320 --> 00:01:21.920
+Recuerda que debes ejecutarlo
+en tu dispositivo periódicamente.
+
+00:01:22.480 --> 00:01:26.480
+Una vez que hayas creado este diseño,
+asígnale un nombre a la ID de la vista,
+
+00:01:26.560 --> 00:01:29.640
+en este segundo TextView de aquí,
+en el que pone un 0.
+
+00:01:30.000 --> 00:01:35.040
+Ponle el siguiente nombre:
+<i>@+id/quantity_text_view</i>.
+
+00:01:35.400 --> 00:01:38.960
+Usa este nombre preciso para que coincida
+con nuestro código más adelante.
+
+00:01:39.040 --> 00:01:42.600
+En la lección uno aprendimos
+cómo asignar ID a las vistas.
+
+00:01:42.800 --> 00:01:45.120
+Este ejemplo era para un RelativeLayout,
+
+00:01:45.240 --> 00:01:48.440
+en el que dimos una cena
+a nuestros mejores amigos y conocidos.
+
+00:01:49.000 --> 00:01:52.360
+La razón por la que le damos a esta vista
+una ID, pero no a las demás,
+
+00:01:52.640 --> 00:01:55.560
+es porque más adelante
+volveremos a esta TextView
+
+00:01:55.640 --> 00:01:58.560
+y la actualizaremos
+para aumentar o disminuir la cantidad.
+
+00:01:59.400 --> 00:02:01.880
+Para diseñar las vistas,
+tenemos que hacer un par de cambios.
+
+00:02:01.960 --> 00:02:05.720
+Esta TextView de aquí debería tener
+un tamaño de texto de 16sp
+
+00:02:05.800 --> 00:02:07.440
+y contar con una fuente de color negro.
+
+00:02:07.520 --> 00:02:11.039
+Puedes utilizar la fuente de color negra
+que te enseñamos en la lección uno
+
+00:02:11.120 --> 00:02:14.240
+o la otra fuente en negro
+que hemos incluido más abajo.
+
+00:02:14.560 --> 00:02:18.000
+También hay 16 dp de espacio
+entre cada una de estas vistas.
+
+00:02:18.080 --> 00:02:22.000
+Sé que esta es la primera vez
+que añades un botón a tu diseño XML.
+
+00:02:22.280 --> 00:02:25.640
+Esta es una buena oportunidad para ti
+para que practiques buscando en Google
+
+00:02:25.720 --> 00:02:28.280
+para saber qué tienes que hacer
+para añadir un botón a tu diseño.
+
+00:02:28.360 --> 00:02:31.320
+Si te quedas encallado, consulta la pista
+en los apuntes del instructor.
+
+00:02:31.400 --> 00:02:32.400
+A medida que crees esto,
+
+00:02:32.480 --> 00:02:36.240
+ve ejecutando la app en tu dispositivo
+para comprobar que funciona como debería.
+
+00:02:36.320 --> 00:02:39.200
+Cuando termines con todo esto,
+contesta a esta pregunta:
+
+00:02:39.280 --> 00:02:41.040
+¿qué pasa cuando pulso este botón?
+

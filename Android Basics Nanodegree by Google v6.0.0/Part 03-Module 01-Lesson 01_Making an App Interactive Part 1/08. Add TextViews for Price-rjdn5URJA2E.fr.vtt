@@ -1,0 +1,478 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.410 --> 00:00:03.080
+Vous devriez pouvoir créer
+cette disposition tous seuls.
+
+00:00:03.080 --> 00:00:06.060
+On ajoute une TextView
+pour l'en-tête du prix ici, et
+
+00:00:06.060 --> 00:00:09.310
+une autre TextView pour afficher
+« 0 dollar ».
+
+00:00:09.310 --> 00:00:15.650
+Attribuez aussi à cette autre TextView
+l'identifiant "price_text_view".
+
+00:00:15.650 --> 00:00:18.580
+Je demande à ajouter ici un identifiant
+parce qu'on aura besoin de
+
+00:00:18.580 --> 00:00:21.780
+faire appel à cette vue plus tard
+pour mettre à jour le prix.
+
+00:00:21.780 --> 00:00:25.860
+Tant qu'on y est, stylisez aussi ces deux
+TextViews pour qu'elles ressemblent aux
+
+00:00:25.860 --> 00:00:27.760
+TextViews de quantité.
+
+00:00:27.760 --> 00:00:31.630
+Concernant l'espacement vertical,
+on a aussi 16 dp entre ces deux vues.
+
+00:00:31.630 --> 00:00:34.210
+Toujours pour mettre à jour
+le champ Prix,
+
+00:00:34.210 --> 00:00:37.800
+il nous faudra aussi modifier un peu
+le fichier Java "MainActivity".
+
+00:00:37.800 --> 00:00:39.730
+On vous aidera un peu à ce niveau-là.
+
+00:00:39.730 --> 00:00:42.540
+On vous fournira une nouvelle méthode
+à intégrer dans le fichier
+
+00:00:42.540 --> 00:00:44.260
+Java "MainActivity".
+
+00:00:44.260 --> 00:00:47.640
+Rendez-vous sur Gist grâce au lien
+fourni dans les consignes.
+
+00:00:47.640 --> 00:00:50.790
+Au passage, Gist (« essentiel »)
+désigne un extrait ou un bout
+
+00:00:50.790 --> 00:00:54.530
+de code réutilisable
+qu'on voudrait partager avec d'autres.
+
+00:00:54.530 --> 00:00:58.390
+Dans notre cas, on est allés
+sur la page internet GitHub Gist et
+
+00:00:58.390 --> 00:01:02.290
+on a créé un nouveau Gist
+avec ce code qu'on voulait vous donner,
+
+00:01:02.290 --> 00:01:05.780
+il suffisait ensuite de partager
+ce lien avec vous pour donner le code.
+
+00:01:05.780 --> 00:01:09.140
+Dans la page de l'extrait, on sélectionne
+l'ensemble des lignes et on les copie.
+
+00:01:09.140 --> 00:01:11.050
+N'oubliez pas d'inclure ce commentaire,
+
+00:01:11.050 --> 00:01:13.852
+une information pour le lecteur,
+et cette accolade fermante, en bas.
+
+00:01:13.852 --> 00:01:17.960
+On va maintenant coller ce code
+dans le fichier Java "MainActivity".
+
+00:01:17.960 --> 00:01:18.740
+J'adore le libre.
+
+00:01:19.740 --> 00:01:22.940
+Veillez à bien indenter
+les accolades après collage.
+
+00:01:22.940 --> 00:01:26.180
+Les accolades posent toujours problème,
+en application comme dans la vraie vie.
+
+00:01:26.180 --> 00:01:30.040
+On peut avoir une tonne d'erreurs
+pour des accolades mal indentées.
+
+00:01:30.040 --> 00:01:33.850
+Par exemple, si je colle
+mon bloc de code juste ici,
+
+00:01:33.850 --> 00:01:37.740
+j'ai une erreur qui dit :
+« Classe ou interface attendue. »
+
+00:01:37.740 --> 00:01:40.880
+C'est parce que ma méthode flotte
+dans le code au milieu de nulle part.
+
+00:01:40.880 --> 00:01:45.380
+On veut qu'elle soit dans mon activité
+principale, entre les accolades ouvrantes
+
+00:01:45.380 --> 00:01:47.380
+et fermantes de l'activité principale.
+
+00:01:47.380 --> 00:01:51.780
+On placera donc le bloc avant l'accolade
+fermante de l'activité principale.
+
+00:01:51.780 --> 00:01:53.910
+C'est déjà mieux.
+
+00:01:53.910 --> 00:01:58.590
+Autre erreur possible, si
+on oublie de copier l'accolade fermante,
+
+00:01:58.590 --> 00:02:00.870
+et qu'on ne prend que
+la partie supérieure de la méthode,
+
+00:02:00.870 --> 00:02:01.530
+dans ce cas-ci,
+
+00:02:01.530 --> 00:02:05.540
+on aura une autre erreur disant
+qu'il manque une accolade fermante.
+
+00:02:05.540 --> 00:02:07.170
+Donc il faudra la rajouter.
+
+00:02:07.170 --> 00:02:10.038
+Une autre erreur potentielle est
+quand on insère malencontreusement
+
+00:02:10.038 --> 00:02:12.050
+la méthode à cet endroit-ci.
+
+00:02:12.050 --> 00:02:15.940
+On se trouve avant l'accolade fermante
+de la méthode "display".
+
+00:02:15.940 --> 00:02:18.760
+Maintenant tout notre code est contenu
+dans la méthode "display",
+
+00:02:18.760 --> 00:02:20.290
+ce qui n'est pas ce qu'on veut.
+
+00:02:20.290 --> 00:02:23.710
+On veut qu'elle soit au même niveau
+que la méthode "display", juste ici.
+
+00:02:25.420 --> 00:02:27.540
+Vous comprenez, on a
+un million de combinaisons.
+
+00:02:27.540 --> 00:02:30.730
+Il faut juste faire attention et
+veiller à bien positionner ses accolades.
+
+00:02:30.730 --> 00:02:33.730
+Une autre bonne méthode pour vérifier
+est de placer son curseur juste ici,
+
+00:02:33.730 --> 00:02:37.850
+juste après l'accolade ouvrante, on voit
+que l'accolade fermante est mise en gras
+
+00:02:37.850 --> 00:02:39.000
+et qu'elles se fond écho.
+
+00:02:39.000 --> 00:02:40.320
+Pareil ici, si je clique sur ça,
+
+00:02:40.320 --> 00:02:42.860
+l'accolade fermante
+qui lui correspond est juste ici.
+
+00:02:44.130 --> 00:02:49.430
+Pareil pour les méthodes submitOrder
+ou onCreate, et même pour MainActivity.
+
+00:02:50.440 --> 00:02:52.450
+Voici l'accolade ouvrante
+de MainActivity, et
+
+00:02:52.450 --> 00:02:55.370
+son accolade fermante est
+en gras de couleur bleue tout en bas.
+
+00:02:55.370 --> 00:02:58.650
+Malheureusement, nous avons ici
+encore une autre erreur.
+
+00:02:58.650 --> 00:03:03.160
+Dans la barre latérale, il est écrit
+« Exécution de NumberFormat impossible ».
+
+00:03:03.160 --> 00:03:05.910
+NumberFormat est en fait
+une méthode fournie par Android
+
+00:03:05.910 --> 00:03:07.620
+pour aider
+à mettre en forme des nombres.
+
+00:03:07.620 --> 00:03:10.630
+Dans notre cas, on essaie
+de mettre en forme ce nombre, le prix,
+
+00:03:10.630 --> 00:03:14.690
+pour avoir un symbole de dollar
+ou je ne sais quelle devise locale.
+
+00:03:14.690 --> 00:03:16.370
+Il faut
+une déclaration d'importation ici,
+
+00:03:16.370 --> 00:03:21.100
+parce qu'actuellement, Android Studio
+n'arrive pas à la reconnaître.
+
+00:03:21.100 --> 00:03:24.410
+Pour résoudre ce problème, nous allons
+activer l'importation automatique.
+
+00:03:24.410 --> 00:03:26.790
+Dans le menu en haut
+d'Android Studio,
+
+00:03:26.790 --> 00:03:29.390
+Cliquez sur Android Studio &gt; Préférences.
+
+00:03:29.390 --> 00:03:32.260
+Ceci affichera vos préférences pour
+Android Studio.
+
+00:03:32.260 --> 00:03:35.030
+Il y a une tonne de préférences
+que je n'ai jamais changées, mais
+
+00:03:35.030 --> 00:03:38.310
+en cas de besoin, il suffit de lancer
+une recherche avec ce champ de texte.
+
+00:03:38.310 --> 00:03:40.510
+Je vais taper « Auto Import ».
+
+00:03:40.510 --> 00:03:41.670
+J'ai ainsi
+les paramètres pour
+
+00:03:41.670 --> 00:03:44.470
+importer automatiquement 
+des choses en XML et en JAVA.
+
+00:03:44.470 --> 00:03:48.820
+Je vais cocher la case « Lancer
+les imports non équivoques à la volée ».
+
+00:03:48.820 --> 00:03:51.850
+Cette expression n'a peut-être
+aucun sens pour vous, mais tout va bien.
+
+00:03:51.850 --> 00:03:53.730
+Cette proposition est
+sans doute perturbante.
+
+00:03:54.920 --> 00:03:59.420
+Elle ne sert qu'à dire à Android Studio
+qu'il peut ajouter automatiquement
+
+00:03:59.420 --> 00:04:01.410
+des lignes de code
+à notre application.
+
+00:04:01.410 --> 00:04:06.050
+Notamment des déclarations d'importation
+s'il voit qu'on en a besoin.
+
+00:04:06.050 --> 00:04:06.560
+Je vous montre.
+
+00:04:07.700 --> 00:04:09.930
+Ah bon, en fait,
+c'est déjà réglé.
+
+00:04:09.930 --> 00:04:12.930
+Il a présumé que notre NumberFormat
+faisait référence à celui-ci, et
+
+00:04:12.930 --> 00:04:13.930
+il avait raison.
+
+00:04:13.930 --> 00:04:15.970
+Il a donc résolu automatiquement
+notre problème.
+
+00:04:15.970 --> 00:04:17.170
+C'est bien.
+
+00:04:17.170 --> 00:04:19.140
+Ok. À ce stade,
+si on lance l'application,
+
+00:04:19.140 --> 00:04:22.410
+quand on clique sur le bouton Commander,
+la quantité change, mais
+
+00:04:22.410 --> 00:04:23.710
+pas le prix.
+
+00:04:23.710 --> 00:04:26.140
+On a besoin de modifier
+la méthode submitOrder pour
+
+00:04:26.140 --> 00:04:29.670
+mettre à jour la quantité
+en même temps que le prix.
+
+00:04:29.670 --> 00:04:31.100
+Insérons une autre ligne de code.
+
+00:04:32.910 --> 00:04:36.980
+Je vais appeler
+la méthode displayPrice, et
+
+00:04:36.980 --> 00:04:41.716
+dire que le prix vaut deux tasses
+de café à 5 dollars de chaque.
+
+00:04:41.716 --> 00:04:44.780
+Si notre café coûte 5 dollars la tasse,
+c'est parce qu'on
+
+00:04:44.780 --> 00:04:47.460
+a importé nos grains d'arabica
+d'Éthiopie.
+
+00:04:47.460 --> 00:04:50.260
+Quoi qu'il en soit,
+on laisse l'appareil faire le calcul pour
+
+00:04:50.260 --> 00:04:53.742
+nous, parce qu'on aura 2 tasses
+de café à 5 dollars.
+
+00:04:53.742 --> 00:04:56.130
+Au fait, je parle de dollars
+dans ce cours,
+
+00:04:56.130 --> 00:04:58.610
+mais n'hésitez pas à la remplacer
+par votre devise locale.
+
+00:04:58.610 --> 00:05:01.310
+Cette expression mathématique
+n'a pas de symbole de dollar,
+
+00:05:01.310 --> 00:05:04.420
+il sera ajouté plus tard,
+dans la méthode displayPrice.
+
+00:05:04.420 --> 00:05:07.110
+Mais pas besoin d'étudier
+en détail la méthode displayPrice,
+
+00:05:07.110 --> 00:05:08.790
+on abordera ça dans la leçon No. 3.
+
+00:05:09.840 --> 00:05:12.360
+Pour le moment, retenez bien
+l'expression mathématique que vous
+
+00:05:12.360 --> 00:05:14.540
+utiliserez pour calculer le prix.
+
+00:05:14.540 --> 00:05:18.030
+Retenez aussi le point-virgule qui
+termine chaque déclaration, car sinon
+
+00:05:18.030 --> 00:05:22.160
+le monstre des points-virgules viendra
+vous afficher une erreur en rouge.
+
+00:05:22.160 --> 00:05:25.570
+Par exemple, en retirant ce
+point-virgule, on a une erreur qui dit
+
+00:05:25.570 --> 00:05:27.130
+qu'on a besoin du point-virgule.
+
+00:05:28.160 --> 00:05:33.030
+Oh, par souci de clarté, rappelons que
+la touche point-virgule est celle-ci ;
+
+00:05:33.030 --> 00:05:34.720
+donc pas les deux points,
+le point-virgule.
+
+00:05:34.720 --> 00:05:37.190
+Alors, quand vous aurez tout fini,
+
+00:05:37.190 --> 00:05:39.910
+vous devriez avoir deux nouvelles
+TextViews pour le prix juste ici.
+
+00:05:39.910 --> 00:05:42.810
+Vous devez avoir modifié MainActivity
+pour y inclure
+
+00:05:42.810 --> 00:05:44.480
+la nouvelle méthode qu'on vous a donnée.
+
+00:05:44.480 --> 00:05:47.040
+Vous aurez aussi modifié
+la méthode submitOrder
+
+00:05:47.040 --> 00:05:49.150
+pour y ajouter une ligne
+qui affichera le prix.
+
+00:05:50.240 --> 00:05:53.060
+Quand on exécute le script sur
+l'appareil, on devrait afficher ceci.
+
+00:05:53.060 --> 00:05:55.237
+On a d'abord une quantité nulle
+pour 0 dollar.
+
+00:05:55.237 --> 00:05:58.904
+Quand on appuie sur le bouton, on aura
+2 cafés commandés pour 10 dollars.
+
+00:06:00.070 --> 00:06:04.010
+N'hésitez pas à faire des tests avec
+d'autres valeurs de quantité et de prix.
+
+00:06:04.010 --> 00:06:06.890
+Si vous voulez facturer 10 dollars
+le café, c'est parfaitement possible.
+
+00:06:06.890 --> 00:06:10.160
+N'oubliez pas de repasser plus tard
+à 2 tasses de café à 5 dollar pour
+
+00:06:10.160 --> 00:06:12.770
+que votre code soit
+comme le nôtre pour la suite.
+
+00:06:12.770 --> 00:06:14.100
+Cochez ces cases à la fin.
+

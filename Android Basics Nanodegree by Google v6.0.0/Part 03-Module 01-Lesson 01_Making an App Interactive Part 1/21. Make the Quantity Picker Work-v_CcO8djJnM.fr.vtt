@@ -1,0 +1,732 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.008 --> 00:00:00.986
+Ok Katherine.
+
+00:00:00.986 --> 00:00:02.645
+On a cliqué sur le signe « + »,
+
+00:00:02.645 --> 00:00:05.439
+et le nombre de tasses de café
+a grimpé de deux à trois.
+
+00:00:05.439 --> 00:00:07.005
+Et on a continué à cliquer.
+
+00:00:07.005 --> 00:00:08.629
+Encore. Et encore.
+
+00:00:08.629 --> 00:00:13.043
+Et le nombre de tasses de café est
+resté sur deux, il ne grimpe pas.
+
+00:00:13.043 --> 00:00:16.244
+Ok, je pense que c'est parce qu'il
+nous manque un concept,
+
+00:00:16.244 --> 00:00:17.990
+et c'est la portée des variables.
+
+00:00:17.990 --> 00:00:19.470
+- La portée des la variables ?
+- Oui.
+
+00:00:19.470 --> 00:00:20.640
+Tu peux expliquer ?
+
+00:00:20.640 --> 00:00:22.140
+La portée des la variables signifie que
+
+00:00:22.140 --> 00:00:23.860
+lorsque une variable
+est déclarée dans une méthode,
+
+00:00:23.860 --> 00:00:26.088
+elle peut être utilisée que
+dans la portée de cette méthode.
+
+00:00:26.088 --> 00:00:27.040
+Sois attentif.
+
+00:00:27.040 --> 00:00:28.060
+Katherine.
+
+00:00:28.060 --> 00:00:29.290
+- Oui.
+- Tu baragouines.
+
+00:00:29.290 --> 00:00:31.330
+Il faut qu'on donne aux élèves de ce cours
+
+00:00:31.330 --> 00:00:33.190
+une médaille pour
+avoir été aussi loin.
+
+00:00:33.190 --> 00:00:35.140
+Va moins vite et
+explique clairement.
+
+00:00:35.140 --> 00:00:36.305
+Pardon. Je peux expliquer.
+
+00:00:36.305 --> 00:00:37.955
+Ok, alors on a cliqué sur le signe « + ».
+
+00:00:37.955 --> 00:00:39.540
+Et la méthode d'augmentation
+
+00:00:39.540 --> 00:00:40.910
+à l'intérieur du code
+est appelée.
+
+00:00:40.910 --> 00:00:42.050
+Et que se passe-t-il ?
+
+00:00:42.050 --> 00:00:43.670
+On crée une
+variable de quantité.
+
+00:00:43.670 --> 00:00:45.610
+C'est initialisé sur la
+valeur deux.
+
+00:00:45.610 --> 00:00:47.980
+Et on a mis à jour jusqu'à
+trois tasses de café.
+
+00:00:47.980 --> 00:00:51.470
+Et quand la méthode d'augmentation
+se finit, que se passe-t-il ?
+
+00:00:51.470 --> 00:00:53.165
+Eh bien, la variable est détruite.
+
+00:00:53.165 --> 00:00:54.742
+Ok, alors quand
+
+00:00:54.742 --> 00:00:58.059
+je clique de nouveau sur le signe « + »,
+la méthode d'augmentation se
+
+00:00:58.059 --> 00:00:59.466
+fait appeler dans le code...
+
+00:00:59.466 --> 00:01:01.810
+Et ensuite on créé une
+variable de quantité.
+
+00:01:01.810 --> 00:01:03.220
+Une nouvelle
+vient d'apparaître par magie.
+
+00:01:03.220 --> 00:01:04.385
+Oui, une toute nouvelle.
+
+00:01:04.385 --> 00:01:05.160
+OK.
+
+00:01:05.170 --> 00:01:07.550
+Et elle s'initialise sur deux,
+et on la met à trois.
+
+00:01:07.550 --> 00:01:10.700
+Et la méthode d'augmentation s'arrête
+de nouveau, et que se passe-t-il ?
+
+00:01:10.700 --> 00:01:11.955
+La variable est détruite.
+
+00:01:11.955 --> 00:01:15.462
+On a vraiment besoin
+d'une variable globale.
+
+00:01:15.462 --> 00:01:16.250
+Ouais.
+
+00:01:16.250 --> 00:01:18.030
+Une variable à laquelle on aura accès
+
+00:01:18.030 --> 00:01:20.630
+depuis n'importe quelle
+partie de code de l'app.
+
+00:01:20.630 --> 00:01:22.820
+Oui, n'importe laquelle,
+la méthode d'augmentation
+
+00:01:22.820 --> 00:01:24.075
+ou de réduction.
+
+00:01:24.075 --> 00:01:26.590
+Alors on créé une variable
+globale de ce genre.
+
+00:01:26.590 --> 00:01:28.750
+C'est encore la variable de quantité.
+
+00:01:28.750 --> 00:01:30.275
+Maintenant elle est globale.
+
+00:01:30.275 --> 00:01:33.020
+Donc une fois que la méthode
+a fini de s'exécuter,
+
+00:01:33.020 --> 00:01:34.590
+elle n'est pas détruite.
+
+00:01:34.590 --> 00:01:36.640
+Ok, alors utilisons ça
+dans notre code.
+
+00:01:36.640 --> 00:01:40.570
+Le problème dans notre app c'est qu'en
+cliquant sur le bouton + plusieurs fois,
+
+00:01:40.570 --> 00:01:43.270
+le nombre de tasses de café
+ne dépasse jamais 3.
+
+00:01:43.270 --> 00:01:47.880
+La raison c'est que le signe « + »
+enclenche la méthode d'augmentation.
+
+00:01:47.880 --> 00:01:50.910
+Dans cette méthode, on créé toujours
+une nouvelle variable de quantité,
+
+00:01:50.910 --> 00:01:52.300
+et on l'initialise à deux.
+
+00:01:52.300 --> 00:01:55.730
+Donc quand on met à jour
+la quantité, elle revient toujours à 3.
+
+00:01:55.730 --> 00:01:59.650
+Cette méthode n'a aucune mémoire du fait
+que je l'ai déjà convoquée,
+
+00:01:59.650 --> 00:02:04.050
+en cliquant sur le signe « + », et que
+j'ai déjà 3 tasses affichées.
+
+00:02:04.050 --> 00:02:06.310
+Elle ne sait pas que j'en
+veux 4 maintenant.
+
+00:02:06.310 --> 00:02:10.512
+Dans l'ancien code, on avait déclaré
+une variable locale pour la quantité
+
+00:02:10.512 --> 00:02:12.070
+dans la méthode d'augmentation
+
+00:02:12.070 --> 00:02:14.960
+et une variable locale pour la quantité
+dans la méthode de réduction.
+
+00:02:14.960 --> 00:02:17.040
+La raison pour laquelle
+on peut déclarer une variable
+
+00:02:17.040 --> 00:02:18.760
+avec le même nom deux fois de suite,
+
+00:02:18.760 --> 00:02:21.480
+est qu'on utilise deux
+portées de variables différentes.
+
+00:02:21.490 --> 00:02:24.290
+Voici la portée dans
+la variable de quantité
+
+00:02:24.290 --> 00:02:26.310
+déclarée dans la méthode d'augmentation.
+
+00:02:26.310 --> 00:02:30.100
+Dans ces limites, on peut se référer à
+la quantité et mettre à jour la quantité,
+
+00:02:30.100 --> 00:02:31.463
+mais en dehors des limites,
+
+00:02:31.463 --> 00:02:34.770
+les autres méthodes n'ont pas connaissance
+de cette variable de quantité.
+
+00:02:34.770 --> 00:02:37.790
+Vous verrez un symbole d'erreur
+non résolue
+
+00:02:37.790 --> 00:02:40.850
+parce que les autres méthodes
+ne connaissent pas cette variable.
+
+00:02:40.860 --> 00:02:43.660
+Similairement, voici la portée
+de la variable pour
+
+00:02:43.660 --> 00:02:47.000
+la variable de quantité locale
+déclarée dans la méthode de réduction.
+
+00:02:47.000 --> 00:02:50.770
+Dans cette méthode, on peut afficher la
+variable et la mettre à jour,
+
+00:02:50.770 --> 00:02:54.690
+mais en dehors des limites de portée,
+on ne peut pas s'y référer.
+
+00:02:54.690 --> 00:02:57.170
+Dans le code mis à jour
+avec la variable globale,
+
+00:02:57.170 --> 00:02:58.680
+ça ressemblerait à ça.
+
+00:02:58.680 --> 00:03:01.920
+Au lieu de déclarer la quantité de
+variable dans la méthode de réduction
+
+00:03:01.920 --> 00:03:05.530
+on l'a retiré pour la déclarer en
+haut de <i>MainActivity</i>.
+
+00:03:05.530 --> 00:03:07.720
+C'est déclaré au-dedans des crochets
+
+00:03:07.720 --> 00:03:09.540
+des limites de <i>MainActivity</i>.
+
+00:03:09.540 --> 00:03:11.920
+Donc tout ce qui est à
+l'intérieur de <i>MainActivity</i>
+
+00:03:11.920 --> 00:03:14.150
+saura pour la variable de quantité.
+
+00:03:14.150 --> 00:03:18.055
+C'est la portée de variable pour la
+variable de quantité globale.
+
+00:03:18.055 --> 00:03:20.700
+Toutes les méthodes et les
+autres variables de <i>MainActivity</i>
+
+00:03:20.700 --> 00:03:24.430
+peuvent maintenant se référer à cette
+quantité, et la mettre à jour.
+
+00:03:24.430 --> 00:03:27.380
+Donc la méthode d'augmentation met à
+jour la variable quantité,
+
+00:03:27.380 --> 00:03:28.300
+et l'affiche aussi.
+
+00:03:28.300 --> 00:03:32.330
+Et la méthode de réduction met aussi à
+jour et affiche la quantité,
+
+00:03:32.330 --> 00:03:35.950
+et la quantité se réfère toujours à la
+variable globale ici.
+
+00:03:35.950 --> 00:03:39.860
+L'avantage de retirer ceci dans une
+simple variable globale c'est qu'à présent
+
+00:03:39.860 --> 00:03:41.390
+on a une seule source de vérité
+
+00:03:41.390 --> 00:03:44.130
+pour le nombre de café
+que l'utilisateur souhaite.
+
+00:03:44.130 --> 00:03:47.100
+Même si on augmente le nombre
+de café plusieurs fois,
+
+00:03:47.100 --> 00:03:49.280
+et qu'on diminue le nombre
+de cafés,
+
+00:03:49.280 --> 00:03:52.520
+ça n'utilisera que la dernière valeur
+connue de la quantité.
+
+00:03:52.520 --> 00:03:55.890
+Avant, c'était bizarre d'avoir deux
+variables de quantité, parce que
+
+00:03:55.890 --> 00:03:57.880
+ces 2 variables pouvaient
+être désynchronisées,
+
+00:03:57.880 --> 00:04:00.770
+et l'utilisateur final ne
+voyait qu'une seule valeur.
+
+00:04:00.770 --> 00:04:03.990
+Alors c'est logique d'avoir
+une seule source de vérité,
+
+00:04:03.990 --> 00:04:07.340
+une variable globale qui garde une trace
+du nombre de cafés commandé.
+
+00:04:07.340 --> 00:04:10.010
+Vous pouvez vous demander pourquoi on
+n'intègre pas tout
+
+00:04:10.010 --> 00:04:12.780
+dans une variable globale pour
+résoudre tous nos problèmes.
+
+00:04:12.780 --> 00:04:17.040
+On préfère ne pas rendre une variable
+globale à moins d'avoir besoin que
+
+00:04:17.040 --> 00:04:21.060
+d'autres choses dans <i>MainActivity</i>
+aient besoin de s'y référer.
+
+00:04:21.060 --> 00:04:24.770
+Si vous utilisez une méthode seulement
+dans le contexte de cette simple méthode
+
+00:04:24.770 --> 00:04:26.820
+il vaut mieux garder
+cette variable locale.
+
+00:04:26.820 --> 00:04:28.600
+C'est un peu comme
+d'avoir un secret.
+
+00:04:28.600 --> 00:04:31.705
+Vous ne dîtes aux
+gens que les bases.
+
+00:04:31.705 --> 00:04:34.475
+Similairement, on ne révèle que
+les variables
+
+00:04:34.475 --> 00:04:38.045
+que les gens ont absolument besoin de
+connaître pour qu'elle fonctionne.
+
+00:04:38.995 --> 00:04:41.615
+Dans la <i>MainActivity</i> dans 
+la méthode d'augmentation,
+
+00:04:41.615 --> 00:04:45.269
+je vais copier cette ligne de code
+qui déclare une variable de quantité.
+
+00:04:46.160 --> 00:04:50.070
+Je viens de taper «Command+X»,
+ou bien « Ctrl+X » pour couper.
+
+00:04:50.070 --> 00:04:54.300
+Et ensuite en haut de la catégorie
+de <i>MainActivity</i>, je vais le copier.
+
+00:04:54.300 --> 00:04:58.610
+Ce sera copié juste après les
+crochets d'ouverture de <i>MainActivity</i>.
+
+00:04:58.610 --> 00:05:01.880
+Remarquez que ça reste
+en dehors des limites des autres méthodes.
+
+00:05:02.960 --> 00:05:05.310
+Sinon, si c'était dans les limites
+d'une méthode,
+
+00:05:05.310 --> 00:05:07.830
+on considérerait ça
+comme une variable locale.
+
+00:05:07.830 --> 00:05:11.580
+<i>Quantity</i> est maintenant une variable
+globale dans la catégorie de <i>MainActivity</i>.
+
+00:05:11.580 --> 00:05:14.192
+On parlera plus des catégories
+dans la prochaine leçon.
+
+00:05:14.192 --> 00:05:18.800
+<i>MainActivity</i> est une catégorie qui
+contient des méthodes et des variables.
+
+00:05:18.800 --> 00:05:20.450
+Chaque méthode dans <i>MainActivity</i>
+
+00:05:20.450 --> 00:05:23.130
+peut maintenant se référer
+à cette variable de quantité.
+
+00:05:23.130 --> 00:05:27.670
+Donc cette méthode d'augmentation met
+juste à jour la quantité et l'affiche.
+
+00:05:27.670 --> 00:05:29.470
+Remarquez qu'une variable globale a
+
+00:05:29.470 --> 00:05:32.350
+la même couleur de police violette
+que le nom de variable.
+
+00:05:32.350 --> 00:05:35.950
+S'il s'agit d'une variable locale, la
+couleur de police est noire.
+
+00:05:35.950 --> 00:05:38.260
+Voilà comment on peut faire
+la différence
+
+00:05:38.260 --> 00:05:40.330
+entre des variables globales et locales.
+
+00:05:40.330 --> 00:05:41.920
+En parlant de variables locales,
+
+00:05:41.920 --> 00:05:44.960
+on veut se débarrasser de cette variable
+locale dans la méthode de réduction,
+
+00:05:44.960 --> 00:05:48.240
+parce qu'on veut utiliser
+la variable de quantité globale.
+
+00:05:48.240 --> 00:05:53.120
+Le nom de variable dans ces méthodes doit
+correspondre au nom de variable globale.
+
+00:05:53.120 --> 00:05:56.080
+Si c'est écrit quantités ici, ça
+nous dira erreur
+
+00:05:56.080 --> 00:05:59.530
+parce quantités n'est défini comme
+variable locale ou globale nulle part.
+
+00:06:00.690 --> 00:06:03.360
+Donc je vais annuler ça
+pour que ça marche de nouveau.
+
+00:06:03.700 --> 00:06:06.150
+Si je lance l'app,
+voyons ce qu'il se passe.
+
+00:06:06.150 --> 00:06:08.470
+L'app commence à la quantité de 2.
+
+00:06:08.470 --> 00:06:11.800
+Si je clique sur le bouton +,
+ça augmente.
+
+00:06:11.800 --> 00:06:14.470
+Si je clique sur le bouton -,
+ça diminue.
+
+00:06:14.470 --> 00:06:15.800
+C'est plutôt génial.
+
+00:06:15.800 --> 00:06:18.620
+On a réussi à construire
+notre sélectionneur de quantité.
+
+00:06:18.620 --> 00:06:23.000
+Je veux que vous soyez capables de
+construire ça dans votre téléphone pour
+
+00:06:23.000 --> 00:06:26.730
+l'augmenter ou le diminuer autant
+que vous le souhaitez.
+
+00:06:26.730 --> 00:06:29.060
+On a inclus un lien dans le code
+de <i>MainaActivity</i>
+
+00:06:29.060 --> 00:06:30.960
+pour que vous puissiez vous y référer.
+
+00:06:30.960 --> 00:06:34.260
+J'aimerais plutôt que vous tapiez ça
+vous-mêmes en suivant cette vidéo
+
+00:06:34.260 --> 00:06:36.520
+plutôt qu'en copiant/collant ce code.
+
+00:06:36.520 --> 00:06:39.250
+Ainsi, vous serez capables de
+créer des variables globales
+
+00:06:39.250 --> 00:06:40.870
+par vous-mêmes dans le futur.
+
+00:06:40.870 --> 00:06:42.290
+Je vais ajouter
+le débogueur
+
+00:06:42.290 --> 00:06:45.920
+pour que l'on puisse bien voir ce
+qu'il se passe avec la variable <i>quantity</i>.
+
+00:06:45.920 --> 00:06:48.855
+Je vais ajouter des points d'arrêt
+dans les méthodes d'augmentation
+
+00:06:48.855 --> 00:06:50.890
+et de diminution puis
+lancer le débogueur.
+
+00:06:50.890 --> 00:06:54.270
+Quand je clique sur le bouton +,
+alors ce point d'arrêt s'enclenche.
+
+00:06:54.270 --> 00:06:56.720
+Avant que cette ligne de code ne
+soit exécutée,
+
+00:06:56.720 --> 00:06:59.840
+on voit que la variable globale
+de quantité existe déjà avec
+
+00:06:59.840 --> 00:07:03.280
+une valeur de 2 à cause de cette
+ligne de code ici.
+
+00:07:03.280 --> 00:07:06.910
+Si je le place à la prochaine ligne, alors
+cette ligne finit de s'exécuter,
+
+00:07:06.910 --> 00:07:09.640
+et on a augmenté la quantité de 3.
+
+00:07:09.640 --> 00:07:12.910
+Je peux appuyer sur reprendre
+pour que l'app se mette à jour sur 3.
+
+00:07:12.910 --> 00:07:17.360
+Si j'appuie sur + de nouveau, alors avant
+que j'ai exécuté cette ligne de code,
+
+00:07:17.360 --> 00:07:21.310
+on a déjà la variable globale de quantité
+sur une valeur de 3.
+
+00:07:21.310 --> 00:07:24.750
+C'était la dernière valeur connue de
+quantité, et il s'en rappelle.
+
+00:07:25.750 --> 00:07:27.640
+Si j'augmente de 1,
+
+00:07:27.640 --> 00:07:30.610
+alors la variable globale de quantité
+a une valeur de 4.
+
+00:07:30.610 --> 00:07:33.405
+J'appuie sur reprendre
+pour mettre à jour sur 4.
+
+00:07:33.850 --> 00:07:37.390
+On voit qu'à chaque fois qu'on appelle
+cette méthode d'augmentation,
+
+00:07:37.390 --> 00:07:41.990
+on peut en fait continuer sur
+la valeur de quantité existante.
+
+00:07:41.990 --> 00:07:44.840
+Voyons comment ça interagit
+avec la méthode de réduction.
+
+00:07:44.840 --> 00:07:48.020
+Si j'appuie sur le signe -,
+alors ce point d'arrêt s'enclenche.
+
+00:07:48.020 --> 00:07:50.720
+La variable globale de quantité
+est sur une valeur de 4,
+
+00:07:50.720 --> 00:07:52.870
+telle qu'on l'avait laissée.
+
+00:07:52.870 --> 00:07:57.950
+Si je diminue la quantité de 1,
+ça descend à 3 tasses de café.
+
+00:07:57.950 --> 00:08:01.720
+Et je peux l'afficher sur l'écran et
+ça change à 3.
+
+00:08:01.720 --> 00:08:05.160
+Avec une seule variable globale pour
+la quantité,
+
+00:08:05.160 --> 00:08:08.590
+les méthodes d'augmentation et de
+réduction peuvent augmenter et diminuer
+
+00:08:08.590 --> 00:08:12.190
+les nombres de cafés par 1 selon
+la dernière valeur de quantité.
+
+00:08:13.340 --> 00:08:14.930
+Maintenant, à votre tour.
+
+00:08:14.930 --> 00:08:18.420
+Remplacez les 2 variables locales
+par cette variable globale.
+
+00:08:18.420 --> 00:08:21.560
+Ensuite, utilisez le débogueur pour
+vérifier que la variable de quantité
+
+00:08:21.560 --> 00:08:23.480
+se met bien à jour comme souhaité.
+
+00:08:23.480 --> 00:08:27.420
+Une fois que le sélectionneur de quantité
+fonctionne, vous pouvez danser un peu.
+
+00:08:27.420 --> 00:08:30.640
+Et puis vous pourrez expérimenter
+un peu plus.
+
+00:08:30.640 --> 00:08:34.245
+Que se passe-t-il avec une valeur
+de quantité initiale différente, 0 ?
+
+00:08:34.245 --> 00:08:37.475
+Ou essayez de doubler la quantité chaque
+fois qu'on appuie sur +.
+
+00:08:37.475 --> 00:08:41.225
+Ou de réduire de moitié la quantité
+à chaque fois qu'on appuie sur -.
+
+00:08:41.225 --> 00:08:44.525
+Expérimentez à votre guise
+selon votre curiosité.
+
+00:08:44.525 --> 00:08:47.615
+Si vous vous demandiez que 
+se passera-t-il si ceci ou cela,
+
+00:08:47.615 --> 00:08:49.820
+voilà les meilleurs moments
+de l'apprentissage,
+
+00:08:49.820 --> 00:08:51.120
+car ils sont inattendus.
+
+00:08:52.200 --> 00:08:54.850
+Une fois que vous avez cochez
+ces cases, puis continuez.
+

@@ -1,0 +1,325 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.180 --> 00:00:04.710
+Để xây dựng layout này,
+Tôi mở file activity_main.xml.
+
+00:00:04.710 --> 00:00:07.670
+Tôi biết là cần một layout tuyến tính dọc
+để đưa các view này
+
+00:00:07.670 --> 00:00:09.340
+thành một cột dọc.
+
+00:00:09.340 --> 00:00:12.870
+Vì vậy, đầu tiên tôi sẽ thay đổi
+layout tương đối thành layout tuyến tính.
+
+00:00:12.870 --> 00:00:17.110
+Ngay lập tức, nó xuất hiện một lỗi 
+thông báo các thẻ mở không phù hợp
+
+00:00:17.110 --> 00:00:20.740
+với thẻ đóng, nên tôi chỉ có thể sao chép
+sau đó dán nó xuống ở đây.
+
+00:00:20.740 --> 00:00:22.100
+Bây giờ các thẻ đã phù hợp.
+
+00:00:22.100 --> 00:00:23.930
+Tiếp theo, có thể thêm vào các view.
+
+00:00:23.930 --> 00:00:25.720
+Đầu tiên, tôi có text view quantity.
+
+00:00:25.720 --> 00:00:29.880
+Vậy tôi sẽ đi lấy text view này, sau đó 
+thay đổi text bên trong nó thành quantity.
+
+00:00:29.880 --> 00:00:31.960
+Tiếp theo, tôi có một text view ghi zero.
+
+00:00:31.960 --> 00:00:34.590
+Vậy tôi có thể sao chép chữ zero 
+và dán ngay bên dưới.
+
+00:00:34.590 --> 00:00:38.430
+Tôi sẽ thay đổi nó để chữ zero 
+phù hợp với ảnh chụp màn hình ở đây.
+
+00:00:38.430 --> 00:00:41.500
+View con cuối cùng trong layout 
+tuyến tính này là một nút.
+
+00:00:41.500 --> 00:00:45.020
+Ta đã không thêm nút vào layout trước đó,
+vì vậy hãy Google Search nó.
+
+00:00:45.020 --> 00:00:48.160
+Nếu bạn mở một trình duyệt
+bạn có thể tìm kiếm nút android.
+
+00:00:48.160 --> 00:00:51.500
+Liên kết đầu tiên này có vẻ tốt,
+đó là trang developer.android.com.
+
+00:00:52.570 --> 00:00:56.700
+Và đây là tài liệu về nút android,
+ta có thể bỏ qua hầu hết văn bản ở đây.
+
+00:00:56.700 --> 00:00:59.250
+Chúng ta kéo xuống để đọc
+tổng quan về lớp.
+
+00:00:59.250 --> 00:01:03.000
+Nó nói một chút về một số code Java,
+mà chúng ta chưa được học,
+
+00:01:03.000 --> 00:01:06.130
+nhưng dưới này 
+ta có một số mã xml cho nút.
+
+00:01:06.130 --> 00:01:09.280
+Ta có thể sao chép mã này 
+xem chúng sẽ làm gì trong code của ta.
+
+00:01:09.280 --> 00:01:12.420
+Trong layout của chúng ta, thêm
+một nút bên dưới hai text view này.
+
+00:01:12.420 --> 00:01:16.030
+Tôi sẽ dán code
+từ tài liệu ở đây.
+
+00:01:16.030 --> 00:01:18.900
+Bây giờ thay vì chuỗi tự hủy,
+tôi sẽ đi chọn một chút gì đó
+
+00:01:18.900 --> 00:01:21.120
+thân thiện như order.
+
+00:01:21.120 --> 00:01:24.900
+Dòng cuối cùng này cũng có thể
+xóa đi bởi vì chúng ta không cần đến nó.
+
+00:01:24.900 --> 00:01:28.580
+Tuyệt, vậy bây giờ bạn có
+text view quantity, text view zero,
+
+00:01:28.580 --> 00:01:29.490
+và một nút lệnh.
+
+00:01:29.910 --> 00:01:32.220
+Hãy chạy nó trong ứng dụng,
+để xem sẽ thế nào,
+
+00:01:32.220 --> 00:01:34.320
+bằng cách nhấn vào 
+nút play màu xanh lá cây.
+
+00:01:34.320 --> 00:01:36.800
+Chúng ta có thể thấy ở dưới này
+nó vẫn đang xây dựng.
+
+00:01:36.950 --> 00:01:38.660
+Ồ, không phải là cái chúng ta muốn.
+
+00:01:38.660 --> 00:01:43.470
+Có vẻ như layout tuyến tính của chúng ta
+thực sự nằm ngang thay vì nằm dọc.
+
+00:01:43.470 --> 00:01:47.586
+Vì vậy, hãy chắc chắn rằng ta đã thêm
+thuộc tính định hướng.
+
+00:01:47.586 --> 00:01:52.020
+Chúng ta sẽ thay đổi nó thành
+android:orientation= "vertical".
+
+00:01:52.020 --> 00:01:53.570
+Điều đó sẽ khắc phục vấn đề.
+
+00:01:53.570 --> 00:01:54.970
+Vậy hãy nhấn run một lần nữa.
+
+00:01:55.520 --> 00:01:57.010
+Được rồi, tốt hơn rồi đấy.
+
+00:01:57.010 --> 00:02:00.270
+Ba view con xuất hiện
+trong một cột dọc.
+
+00:02:00.270 --> 00:02:01.810
+Giờ chỉ cần định dạng các trường
+
+00:02:01.810 --> 00:02:04.160
+để giống với các màn hình, 
+mà ta được cho trước.
+
+00:02:05.280 --> 00:02:08.460
+Từ màn hình này ta thấy 
+text view quantity được viết hoa tất cả.
+
+00:02:09.600 --> 00:02:13.950
+Trong bài một chúng ta đã học về
+thuộc tính tên là android: textAllCaps,
+
+00:02:13.950 --> 00:02:16.230
+và nó hiển thị ở đây
+sau khi tự động hoàn tất.
+
+00:02:16.230 --> 00:02:18.630
+Nếu nó hiển thị như thế này,
+bạn chỉ cần nhấn Enter
+
+00:02:18.630 --> 00:02:20.640
+và nó sẽ tự động thêm vào
+trong code ở đây.
+
+00:02:21.400 --> 00:02:24.970
+Chúng ta thiết lập giá trị đó là đúng
+vì ta muốn nó được viết hoa tất cả.
+
+00:02:24.970 --> 00:02:28.580
+Lý do tại sao nên sử dụng thuộc tính này 
+để viết hoa toàn văn bản
+
+00:02:28.580 --> 00:02:32.380
+là bởi nếu chúng ta muốn thay đổi
+giao diện người dùng
+
+00:02:32.380 --> 00:02:35.650
+cho quantity viết chữ thường như thế này,
+tất cả những gì ta cần làm
+
+00:02:35.650 --> 00:02:38.410
+chỉ là loại bỏ thuộc tính này
+thay vì thay đổi dòng chữ đó.
+
+00:02:38.410 --> 00:02:41.840
+Tiếp theo, với dòng zero này,
+chúng ta nên sử dụng cỡ chữ 16sp.
+
+00:02:41.840 --> 00:02:45.970
+Tôi sẽ dùng cỡ đó và nó hiển thị 
+trong các đề xuất tự động hoàn tất
+
+00:02:45.970 --> 00:02:50.000
+nên tôi chỉ cần nhấn Enter 
+và sau đó chọn 16sp cho giá trị.
+
+00:02:50.000 --> 00:02:52.450
+Chúng tôi cũng muốn font chữ màu đen.
+
+00:02:52.450 --> 00:02:54.700
+Tôi sẽ sử dụng màu đen
+trong bảng màu Android,
+
+00:02:54.700 --> 00:02:57.380
+được gọi như thế này.
+
+00:02:57.380 --> 00:03:00.558
+Tuyệt vời, màu này sẽ là của 
+cả hai text view quantity và zero.
+
+00:03:00.558 --> 00:03:05.011
+Nút order được rồi, nó tự động viết hoa 
+cho bạn trong một nút với
+
+00:03:05.011 --> 00:03:08.820
+chiều cao và chiều rộng 
+nằm trong phần nội dung.
+
+00:03:08.820 --> 00:03:11.898
+Chúng ta cần phải giải quyết
+không gian dọc này ở đây.
+
+00:03:11.898 --> 00:03:14.880
+Ta muốn cỡ 16dp lót hoặc lề 
+ở giữa text view quantity và zero.
+
+00:03:14.880 --> 00:03:18.090
+Ta cũng muốn cũng muốn cỡ 16dp lót hoăc lề
+ở giữa zero và nút order.
+
+00:03:18.090 --> 00:03:20.187
+Ta cũng muốn cũng muốn cỡ 16dp lót hoăc lề
+
+00:03:20.187 --> 00:03:21.430
+ở giữa zero và nút order.
+
+00:03:21.430 --> 00:03:23.960
+Bạn có thể thực hiện 
+bằng nhiều cách khác nhau,
+
+00:03:23.960 --> 00:03:27.650
+Tôi sẽ thêm nó 
+như là lề trên của layout cho nút này.
+
+00:03:31.410 --> 00:03:34.740
+Tôi sẽ thêm nó như là lề dưới của layout 
+cho text view quantity này.
+
+00:03:37.810 --> 00:03:40.810
+Hãy thoải mái thử những cách khác
+miễn là nó trông giống nhau.
+
+00:03:40.810 --> 00:03:44.000
+Lý do tại sao tôi đã chọn 
+để lề dưới và lề trên
+
+00:03:44.000 --> 00:03:47.040
+là vì biết khu vực ở giữa này
+sau đó sẽ thay đổi.
+
+00:03:47.040 --> 00:03:49.670
+Chúng tôi sẽ thay đổi nó thành
+một bảng chọn số lượng
+
+00:03:49.670 --> 00:03:54.620
+với nút + và nút -, 
+và tôi vẫn muốn có 16dp không gian
+
+00:03:54.620 --> 00:03:56.830
+giữa dòng quantity và bảng chọn.
+
+00:03:56.830 --> 00:03:58.080
+Tương tự với nút cũng vậy.
+
+00:03:58.610 --> 00:04:01.280
+Được rồi, ta hãy chạy lại một lần nữa
+trên thiết bị.
+
+00:04:01.280 --> 00:04:03.580
+Tuyệt, và nó đã 
+giống như ý muốn của chúng ta.
+
+00:04:03.580 --> 00:04:07.150
+Text view quantity đã được viết hoa,
+
+00:04:07.150 --> 00:04:11.710
+text view zero đã có font chữ màu đen,
+kích thước 16sp, và ta có nút order ở đây.
+
+00:04:11.710 --> 00:04:14.540
+Ta cũng có 16dp không gian
+giữa các dòng.
+
+00:04:15.760 --> 00:04:18.240
+Làm tốt lắm.
+Ồ, suýt thì tôi quên mất.
+
+00:04:18.240 --> 00:04:21.560
+Bài kiểm tra cũng sẽ hỏi đến
+chuyện gì sẽ xảy ra khi bạn bấm nút này.
+
+00:04:21.560 --> 00:04:25.950
+À, thực sự thì chẳng có gì cả,
+ít nhất là lúc này.
+
+00:04:25.950 --> 00:04:28.562
+Hãy tiếp tục quan sát
+xem chuyện gì xảy ra tiếp theo.
+

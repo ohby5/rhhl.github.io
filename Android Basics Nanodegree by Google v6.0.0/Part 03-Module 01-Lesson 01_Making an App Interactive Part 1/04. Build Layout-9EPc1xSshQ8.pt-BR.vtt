@@ -1,0 +1,202 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.211 --> 00:00:01.937
+Agora que já planejamos cuidadosamente,
+
+00:00:02.314 --> 00:00:04.525
+prossiga e construa esse layout
+em seu app.
+
+00:00:05.140 --> 00:00:09.388
+Você precisa encontrar e modificar
+o arquivo <i>activity_main.xml</i>.
+
+00:00:10.114 --> 00:00:12.234
+O <i>activity_main.xml</i>
+
+00:00:12.251 --> 00:00:14.742
+é o arquivo que foi aberto
+quando você criou seu projeto.
+
+00:00:15.040 --> 00:00:18.400
+Se ainda não estiver aberto,
+você pode encontrá-lo na pasta <i>layout</i>.
+
+00:00:18.710 --> 00:00:22.326
+Sob <i>res</i> e sob <i>app</i>
+na aba do projeto do seu app.
+
+00:00:22.420 --> 00:00:24.222
+que lista todos os arquivos
+em seu app.
+
+00:00:24.680 --> 00:00:26.461
+O painel de design é aberto por padrão,
+
+00:00:26.652 --> 00:00:30.740
+e você pode arrastar e soltar os widgets
+desta paleta para o seu app.
+
+00:00:31.200 --> 00:00:34.380
+Mas prefiro que use o painel de texto,
+assim pode escrever seu XML aqui.
+
+00:00:34.885 --> 00:00:36.828
+Em qualquer ponto,
+ao modificar seu XML,
+
+00:00:37.085 --> 00:00:39.805
+você pode selecionar o conteúdo
+e reformatá-lo.
+
+00:00:40.302 --> 00:00:43.508
+Na parte superior do Android Studio
+você pode ver vários itens de menu.
+
+00:00:43.840 --> 00:00:47.571
+Aperte <i>Code</i> e você a opção
+para reformatar o código.
+
+00:00:47.846 --> 00:00:50.160
+E aqui fica o atalho de teclado,
+caso você esteja no Mac.
+
+00:00:50.627 --> 00:00:53.190
+Você pode reformatar o código
+e o texto selecionado.
+
+00:00:53.409 --> 00:00:54.203
+Aperte Run,
+
+00:00:54.360 --> 00:00:56.485
+e ele reformata automaticamente seu código
+
+00:00:56.700 --> 00:00:58.572
+para corrigir o espaçamento e a identação.
+
+00:00:58.689 --> 00:01:00.640
+Você também pode selecionar
+a opção <i>Reorder Code</i>.
+
+00:01:01.060 --> 00:01:04.626
+Ele modifica a ordem preferida dos atributos,
+
+00:01:04.640 --> 00:01:06.689
+conforme as diretrizes de estilo
+de código Android.
+
+00:01:07.154 --> 00:01:09.617
+E agora o código é mais fácil
+de ser lido neste formato.
+
+00:01:09.800 --> 00:01:11.907
+Se você quiser uma prévia
+de como o código se parece,
+
+00:01:11.926 --> 00:01:13.850
+aperte o botão <i>Preview</i>, à direita.
+
+00:01:14.510 --> 00:01:16.542
+E ele mostra como ficaria no dispositivo.
+
+00:01:16.720 --> 00:01:18.910
+Mas não é um substituto
+para executá-lo no dispositivo.
+
+00:01:19.190 --> 00:01:21.445
+Você deve rodá-lo no dispositivo,
+periodicamente.
+
+00:01:22.492 --> 00:01:26.280
+Depois de construir este layout,
+por favor, atribua um nome a<i> View ID</i>
+
+00:01:26.550 --> 00:01:29.280
+nesta segunda <i>TextView</i> aqui
+que exibe um 0.
+
+00:01:29.994 --> 00:01:34.971
+Dê-lhe um nome de <i>View ID</i>
+@+id/quantity_text_view.
+
+00:01:35.394 --> 00:01:38.337
+Use este nome exato para que seja igual
+ao nosso código mais tarde.
+
+00:01:39.017 --> 00:01:42.468
+Lembra que aprendemos
+como atribuir <i>View</i> IDs na Lição 1.
+
+00:01:42.794 --> 00:01:46.605
+Este exemplo foi para o <i>RelativeLayout</i>,
+onde demos uma festa de jantar
+
+00:01:46.640 --> 00:01:48.406
+para os melhores amigos e "inimigos".
+
+00:01:48.980 --> 00:01:52.375
+A propósito, a razão para darmos um ID
+a essa <i>View</i> e não às outras,
+
+00:01:52.615 --> 00:01:55.370
+é porque vamos nos referir
+a essa <i>TextView</i> mais tarde.
+
+00:01:55.520 --> 00:01:58.301
+Para podermos atualizar,
+e aumentar ou diminuir a Quantidade.
+
+00:01:59.405 --> 00:02:01.697
+Para customizar as <i>Views</i>,
+há pequenas mudanças.
+
+00:02:01.890 --> 00:02:05.628
+Este <i>TextView</i> aqui deve ter texto de 16 sp,
+
+00:02:05.766 --> 00:02:07.107
+e usar uma fonte de cor preta.
+
+00:02:07.451 --> 00:02:10.817
+Você pode usar a fonte preta do sistema
+como mostramos na Lição 1,
+
+00:02:11.180 --> 00:02:14.036
+ou pode usar o código hexadecimal
+para preto, que incluímos abaixo.
+
+00:02:14.531 --> 00:02:18.060
+Há também 16 dp de espaço
+entre cada um dessas <i>Views</i>.
+
+00:02:18.060 --> 00:02:21.901
+Sei que é a primeira vez
+que adiciona um botão em seu layout XML.
+
+00:02:22.260 --> 00:02:25.544
+É uma boa oportunidade de praticar
+sua hablidade de busca no Google,
+
+00:02:25.771 --> 00:02:28.040
+e descobrir como adicionar
+um botão ao seu layout.
+
+00:02:28.388 --> 00:02:31.051
+Se ficar travado, confira as dicas
+nas Notas do Instrutor.
+
+00:02:31.370 --> 00:02:32.418
+Ao construir este projeto,
+
+00:02:32.470 --> 00:02:36.165
+execute o app regularmente no dispositivo
+para checar se funciona como esperado.
+
+00:02:36.300 --> 00:02:38.763
+Quando você tiver feito tudo isso,
+responda esta pergunta.
+
+00:02:39.290 --> 00:02:40.929
+O que acontece se você clicar no botão?
+

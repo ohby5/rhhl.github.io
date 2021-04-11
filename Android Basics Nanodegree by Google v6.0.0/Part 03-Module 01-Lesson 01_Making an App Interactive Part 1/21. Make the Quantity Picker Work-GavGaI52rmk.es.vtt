@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.270 --> 00:00:03.280
+Ya tratamos los dos primeros pasos
+en el video anterior.
+
+00:00:03.630 --> 00:00:06.670
+Ahora te mostraré un par de cosas
+con las que podrías haber experimentado.
+
+00:00:07.600 --> 00:00:09.808
+Quiero cambiar el valor inicial
+de la cantidad,
+
+00:00:10.040 --> 00:00:12.864
+para que cuando la app se lance
+muestre 0 en vez de 2.
+
+00:00:13.690 --> 00:00:16.848
+Puedo hacerlo modificando
+esta variable global de cantidad
+
+00:00:17.030 --> 00:00:18.704
+para que empiece desde 0.
+
+00:00:19.400 --> 00:00:22.272
+Entonces, los métodos incremento
+y decremento deberían funcionar bien.
+
+00:00:22.930 --> 00:00:24.448
+Al invocar el método incremento,
+
+00:00:24.720 --> 00:00:26.896
+se usa el valor más reciente
+y se le añade 1.
+
+00:00:27.168 --> 00:00:30.496
+Cuando se invoque el método decremento,
+se reducirá la cantidad en 1.
+
+00:00:31.140 --> 00:00:32.479
+Vamos a probar todo esto ahora.
+
+00:00:33.300 --> 00:00:35.620
+Qué raro, quería que mostrara 0.
+
+00:00:36.016 --> 00:00:39.280
+Si hago clic en el <i>más</i>,
+qué raro, se pone en 1,
+
+00:00:39.700 --> 00:00:43.376
+lo que parece suponer una reducción,
+pero ahora empieza a subir.
+
+00:00:43.850 --> 00:00:45.720
+Así que los botones
+parecen estar funcionando,
+
+00:00:45.860 --> 00:00:48.304
+pero por alguna razón
+el valor inicial estaba mal.
+
+00:00:49.120 --> 00:00:51.760
+Vaya, se nos olvidó cambiar el archivo
+de layout activity_main.xml.
+
+00:00:52.350 --> 00:00:53.920
+En este layout hay una TextView
+
+00:00:54.064 --> 00:00:56.496
+que dice que el valor inicial
+de la cantidad es 2.
+
+00:00:56.860 --> 00:01:00.448
+Eso arregla el problema de que ponga
+2 cuando se lanza la aplicación.
+
+00:01:01.290 --> 00:01:04.111
+Bien. Ahora nos muestra 0
+como cantidad inicial.
+
+00:01:04.660 --> 00:01:07.184
+Así que si le doy al <i>más</i>,
+se actualiza correctamente.
+
+00:01:07.310 --> 00:01:09.340
+Si le doy al <i>menos</i>,
+también se actualiza bien.
+
+00:01:10.500 --> 00:01:12.336
+Hay que tener mucho cuidado,
+
+00:01:12.480 --> 00:01:15.088
+porque tenemos el valor inicial
+de la cantidad en dos lugares.
+
+00:01:15.900 --> 00:01:19.472
+Tener dos lugares en el código
+que representan la misma cosa
+
+00:01:19.660 --> 00:01:23.424
+puede ser fuente de errores en el futuro,
+como acabamos de ver.
+
+00:01:24.080 --> 00:01:27.648
+Una forma de solucionar esto es
+hacer que <i>MainActivity.java</i>
+
+00:01:27.728 --> 00:01:31.680
+muestre de verdad la cantidad <i>0</i>
+inmediatamente al lanzarse la app,
+
+00:01:31.990 --> 00:01:34.432
+en lugar de confiar en el layout
+para tener un valor inicial.
+
+00:01:35.040 --> 00:01:38.064
+Así, la única fuente fiable
+será esta variable global.
+
+00:01:38.304 --> 00:01:39.392
+Pero no te preocupes,
+
+00:01:39.440 --> 00:01:42.640
+eso es algo avanzado que podrás
+hacer tras la lección 3.
+
+00:01:43.280 --> 00:01:46.896
+La otra manera de experimentar
+con el código es que el signo <i>más</i>
+
+00:01:47.060 --> 00:01:49.200
+doble el número de cafés pedidos cada vez
+
+00:01:49.510 --> 00:01:52.784
+y que el <i>menos</i> reduzca a la mitad
+el número de cafés cada vez.
+
+00:01:53.450 --> 00:01:55.168
+Empecemos con la cantidad inicial de 2,
+
+00:01:55.280 --> 00:01:59.110
+así que si le damos al <i>menos</i> primero,
+podamos reducirlo a la mitad una vez.
+
+00:02:00.140 --> 00:02:01.664
+Cuando se invoca el método incremento,
+
+00:02:01.730 --> 00:02:03.680
+queremos doblar
+el número de cafés pedidos.
+
+00:02:04.110 --> 00:02:07.376
+Deberíamos tomar la cantidad actual
+y multiplicarla por 2.
+
+00:02:07.900 --> 00:02:10.192
+Eso se convertirá
+en el nuevo valor de la cantidad
+
+00:02:10.280 --> 00:02:11.824
+y lo mostraremos en la pantalla.
+
+00:02:12.550 --> 00:02:14.304
+Por otro lado,
+tenemos el método decremento.
+
+00:02:14.900 --> 00:02:18.688
+Para el método decremento, queremos
+reducir los cafés pedidos a la mitad,
+
+00:02:19.090 --> 00:02:21.840
+así que tomamos la cantidad actual
+y la dividimos entre 2.
+
+00:02:22.960 --> 00:02:25.776
+Ese será el nuevo valor de la cantidad
+y lo mostraremos en la pantalla.
+
+00:02:26.360 --> 00:02:27.360
+Probémoslo.
+
+00:02:28.060 --> 00:02:29.720
+Verás que puede ser fuente de errores.
+
+00:02:29.800 --> 00:02:32.000
+Si quieres cambiar
+el valor inicial de la cantidad,
+
+00:02:32.000 --> 00:02:33.696
+tienes que cambiarlo en ambos sitios.
+
+00:02:34.250 --> 00:02:35.250
+Ejecutemos la app ahora.
+
+00:02:36.340 --> 00:02:38.464
+Bien. Empieza
+con la cantidad inicial de 2.
+
+00:02:38.650 --> 00:02:41.040
+Si le doy al <i>más</i>,
+la cantidad debería doblarse cada vez.
+
+00:02:41.660 --> 00:02:42.752
+Bien. Lo hace.
+
+00:02:43.070 --> 00:02:44.240
+Si le doy al <i>menos</i>,
+
+00:02:44.350 --> 00:02:46.980
+debería reducir a la mitad
+el número de cafés pedidos cada vez.
+
+00:02:47.880 --> 00:02:48.880
+Y funciona.
+
+00:02:49.530 --> 00:02:53.840
+Si la ejecuto en el depurador,
+vemos que las variables se actualizan.
+
+00:02:54.260 --> 00:02:57.520
+El valor de la cantidad empieza en 0
+y luego se actualiza a 4.
+
+00:02:58.512 --> 00:03:01.152
+Y luego la cantidad empieza en 4
+
+00:03:01.632 --> 00:03:05.280
+y se actualiza a 8, etc.
+
+00:03:06.870 --> 00:03:09.632
+Seguro que se te ocurren
+maneras más creativas de jugar
+
+00:03:09.712 --> 00:03:10.880
+con el colector de cantidad.
+
+00:03:11.300 --> 00:03:14.592
+Esperamos haberte ayudado a entender
+mejor el uso de las variables globales.
+
+00:03:15.420 --> 00:03:19.020
+Pero si le doy al botón de <i>Pedir</i>,
+no me muestra el precio
+
+00:03:19.020 --> 00:03:20.688
+del número de cafés pedidos.
+
+00:03:21.168 --> 00:03:22.640
+Arreglémoslo en el siguiente video.
+

@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.174 --> 00:00:04.928
+Setelah merencanakan dengan menyeluruh,
+buatlah &lt;i&gt;layout&lt;/i&gt; ini pada aplikasi Anda.
+
+00:00:04.928 --> 00:00:09.879
+Anda harus menemukan
+dan memodifikasi fail &lt;i&gt;activity_main.xml&lt;/i&gt;.
+
+00:00:09.879 --> 00:00:14.823
+Fail &lt;i&gt;activity_main.xml&lt;/i&gt; harus sudah dibuka
+saat pertama kali Anda membuat proyek.
+
+00:00:14.823 --> 00:00:17.069
+Jika belum dibuka,
+Anda bisa menemukan fail ini
+
+00:00:17.069 --> 00:00:20.183
+dalam folder app &amp;gt; res &amp;gt; layout
+
+00:00:20.183 --> 00:00:22.277
+dalam tampilan Project
+pada aplikasi Anda
+
+00:00:22.277 --> 00:00:24.535
+yang memuat daftar semua fail
+dalam aplikasi.
+
+00:00:24.535 --> 00:00:28.055
+Jendela Design dibuka secara &lt;i&gt;default&lt;/i&gt;,
+tempat Anda bisa meletakkan widget
+
+00:00:28.055 --> 00:00:31.010
+dari &lt;i&gt;Palette&lt;/i&gt; ke aplikasi.
+
+00:00:31.010 --> 00:00:34.647
+Namun saya ingin Anda menggunakan
+jendela Text agar bisa menulis XML.
+
+00:00:34.647 --> 00:00:36.906
+Kapan pun saat memodifikasi XML,
+
+00:00:36.906 --> 00:00:40.093
+Anda selalu bisa memilih konten ini
+dan memformat ulang.
+
+00:00:40.093 --> 00:00:43.682
+Di bagian atas Android Studio,
+Anda bisa melihat banyak butir menu.
+
+00:00:43.682 --> 00:00:47.688
+Klik &lt;i&gt;Code&lt;/i&gt;, lalu Anda akan
+menemukan opsi &lt;i&gt;Reformat Code&lt;/i&gt;.
+
+00:00:47.688 --> 00:00:50.428
+Ini tombol pintasnya
+jika Anda menggunakan Mac.
+
+00:00:50.428 --> 00:00:53.281
+Anda bisa memformat ulang kode ini
+dan memilih &lt;i&gt;Selected text&lt;/i&gt;.
+
+00:00:53.281 --> 00:00:56.485
+Klik Run dan ini akan memformat ulang
+kode Anda secara otomatis
+
+00:00:56.485 --> 00:00:58.521
+untuk memperbaiki
+jarak dan tabulasinya.
+
+00:00:58.521 --> 00:01:00.863
+Anda juga bisa memilih &lt;i&gt;Rearrange Code&lt;/i&gt;.
+
+00:01:00.863 --> 00:01:04.322
+Ini mengubah urutan atribut ini
+agar menjadi urutan yang lebih disukai
+
+00:01:04.322 --> 00:01:06.923
+menurut panduan gaya kode Android.
+
+00:01:06.923 --> 00:01:09.587
+Kode ini jauh lebih mudah
+untuk dibaca dalam format ini.
+
+00:01:09.587 --> 00:01:11.645
+Jika Anda ingin
+melihat pratinjau kode ini,
+
+00:01:11.645 --> 00:01:14.303
+Anda bisa mengeklik tombol PREVIEW ini.
+
+00:01:14.303 --> 00:01:16.464
+Ini menunjukkan tampilannya
+pada perangkat.
+
+00:01:16.464 --> 00:01:18.701
+Ini bukan pengganti
+menjalankannya di perangkat.
+
+00:01:18.701 --> 00:01:21.724
+Anda harus selalu menjalankannya
+di perangkat secara berkala.
+
+00:01:22.343 --> 00:01:26.331
+Setelah membuat &lt;i&gt;layout&lt;/i&gt; ini,
+beri nama ID tampilan
+
+00:01:26.331 --> 00:01:29.757
+pada &lt;i&gt;TextView&lt;/i&gt; kedua ini
+yang menampilkan nilai nol.
+
+00:01:29.757 --> 00:01:35.198
+Beri nama ID tampilan
+&lt;i&gt;@+id/quantity_text_view&lt;/i&gt;.
+
+00:01:35.198 --> 00:01:38.511
+Gunakan persis sama nama ini
+agar cocok dengan kode kita nantinya.
+
+00:01:38.867 --> 00:01:42.576
+Ingat, kita belajar cara memberi ID
+pada tampilan di Pelajaran 1.
+
+00:01:42.576 --> 00:01:45.000
+Contoh ini adalah untuk &lt;i&gt;RelativeLayout&lt;/i&gt;
+
+00:01:45.000 --> 00:01:48.846
+di mana kita mengadakan pesta makan malam
+untuk teman baik dan Teman Tapi Musuh.
+
+00:01:48.846 --> 00:01:52.356
+Juga, penyebab tampilan ini diberi ID,
+namun yang lainnya tidak
+
+00:01:52.356 --> 00:01:55.373
+adalah karena kita ingin mengacu
+pada &lt;i&gt;TextView&lt;/i&gt; ini nanti
+
+00:01:55.373 --> 00:01:58.805
+agar kita bisa memperbaruinya
+untuk menambah atau mengurangi kuantitas.
+
+00:01:59.187 --> 00:02:01.719
+Untuk percantik tampilan ini,
+ada beberapa perubahan.
+
+00:02:01.719 --> 00:02:05.583
+&lt;i&gt;TextView&lt;/i&gt; ini harus memiliki
+ukuran teks 16 sp
+
+00:02:05.583 --> 00:02:07.283
+dan menggunakan warna fon hitam.
+
+00:02:07.283 --> 00:02:11.013
+Anda bisa gunakan warna fon sistem hitam
+seperti yang diajarkan di Pelajaran 1.
+
+00:02:11.013 --> 00:02:14.383
+Atau Anda bisa menggunakan warna hex hitam
+yang kami sertakan di bawah.
+
+00:02:14.383 --> 00:02:17.885
+Juga ada jarak 16 dp
+di antara setiap tampilan ini.
+
+00:02:17.885 --> 00:02:22.045
+Saya tahu ini pertama kalinya Anda akan
+menambahkan tombol ke &lt;i&gt;layout&lt;/i&gt; XML.
+
+00:02:22.045 --> 00:02:25.576
+Ini kesempatan yang sangat bagus
+untuk melatih keahlian mencari di Google
+
+00:02:25.576 --> 00:02:28.241
+untuk mencari tahu
+cara menambahkan tombol ke &lt;i&gt;layout&lt;/i&gt;.
+
+00:02:28.241 --> 00:02:31.090
+Jika menemukan hambatan,
+lihat petunjuk di catatan pengajar.
+
+00:02:31.090 --> 00:02:34.037
+Saat membuat ini, jalankan aplikasi
+di perangkat secara berkala
+
+00:02:34.037 --> 00:02:36.236
+untuk memeriksa
+apa ini bekerja sesuai harapan.
+
+00:02:36.236 --> 00:02:39.076
+Setelah selesai dengan semua ini,
+jawab pertanyaan ini.
+
+00:02:39.076 --> 00:02:41.617
+Apa yang terjadi saat tombol ini diklik?
+

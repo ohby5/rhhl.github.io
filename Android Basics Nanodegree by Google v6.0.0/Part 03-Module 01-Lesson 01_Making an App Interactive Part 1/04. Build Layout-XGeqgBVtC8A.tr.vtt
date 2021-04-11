@@ -1,0 +1,319 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.180 --> 00:00:04.710
+Bu yerleşimi oluşturmak için, 
+<i>activity_main.xml</i> dosyasını açıyorum.
+
+00:00:04.710 --> 00:00:07.670
+Biliyorum ki bu görünümlerin her birini 
+dikey bir sütuna koymak için
+
+00:00:07.670 --> 00:00:09.340
+dikey çizgisel yerleşim gerekiyor.
+
+00:00:09.340 --> 00:00:12.870
+Bu yüzden önce <i>RelativeLayout</i>'u 
+<i>LinearLayout</i>'a değiştirmem gerek.
+
+00:00:12.870 --> 00:00:17.110
+Hemen açma etiketinin kapatma 
+etiketine uymadığını söyleyen
+
+00:00:17.110 --> 00:00:20.840
+bir hata gösteriyor, böylece bunu 
+kopyalayıp buraya yapıştırabiliyorum.
+
+00:00:20.840 --> 00:00:22.100
+Şimdi etiketler uyuyor.
+
+00:00:22.100 --> 00:00:23.930
+Sonra görünümleri ekleyebilirim.
+
+00:00:23.930 --> 00:00:25.720
+Önce, miktar <i>TextView</i>'im var.
+
+00:00:25.720 --> 00:00:29.880
+Bu yüzden bu <i>TextView</i>'i alıp içindeki 
+metni miktar yapacağım.
+
+00:00:29.880 --> 00:00:31.960
+Sonra, sıfır yazan bir <i>TextView</i>'im var.
+
+00:00:31.960 --> 00:00:34.460
+Bu yüzden ilk <i>TextView</i>'i kopyalayıp 
+altına yapıştırabilirim.
+
+00:00:34.460 --> 00:00:38.430
+Metni buradaki ekran görüntüsüne 
+uyması için sıfır olarak değiştireceğim.
+
+00:00:38.430 --> 00:00:41.500
+Bu <i>LinearLayout</i>'daki son 
+alt görünüm bir düğme.
+
+00:00:41.500 --> 00:00:45.020
+Daha önce yerleşimimize düğme eklemedik, 
+bu yüzden bunu Google'da arayalım.
+
+00:00:45.020 --> 00:00:48.160
+Bir tarayıcı açarsanız, 
+Android düğmesi arayabilirsiniz.
+
+00:00:48.160 --> 00:00:51.500
+İlk bağlantı iyi görünüyor, 
+<i>developer.android.com</i> sitesi.
+
+00:00:52.570 --> 00:00:56.700
+Düğme için dokümantasyon burada, buradaki 
+metnin büyük bir kısmını göz ardı edin.
+
+00:00:56.700 --> 00:00:59.250
+Sınıf tanıtımını okumak 
+için aşağı iniyoruz.
+
+00:00:59.250 --> 00:01:03.000
+Daha öğrenmediğimiz bazı Java 
+kodlarından bahsediyor;
+
+00:01:03.000 --> 00:01:06.300
+ama aşağıda düğme için 
+bazı XML kodları var.
+
+00:01:06.300 --> 00:01:09.280
+Bunu kopyalayıp kodumuza 
+neler yaptığına bakalım.
+
+00:01:09.280 --> 00:01:12.420
+Yerleşimimizde bu iki <i>TextView</i>
+altına bir düğme ekleyeceğim.
+
+00:01:12.420 --> 00:01:16.030
+Kodu buradaki dokümantasyondan 
+yapıştıracağım.
+
+00:01:16.030 --> 00:01:18.900
+Şimdi kendini yıkan bir 
+dizgi yerine, "Order"(Sipariş) gibi
+
+00:01:18.900 --> 00:01:22.280
+daha dostane bir şey kullanacağım.
+
+00:01:22.280 --> 00:01:24.900
+Son satırı da silebiliriz, 
+çünkü ihtiyacımız yok.
+
+00:01:24.900 --> 00:01:28.580
+Güzel, şimdi bir miktar <i>TextView</i>'i, 
+sıfır diyen bir <i>TextView</i> ve
+
+00:01:28.580 --> 00:01:29.510
+sipariş düğmemiz var.
+
+00:01:30.320 --> 00:01:32.380
+Nasıl olduğunu görmek için 
+buradaki yeşil oynat
+
+00:01:32.380 --> 00:01:34.400
+düğmesine basarak 
+uygulamamızda çalıştıralım.
+
+00:01:34.400 --> 00:01:36.830
+Burada hâlâ oluştuğunu görebiliriz.
+
+00:01:37.690 --> 00:01:38.830
+Bu istediğimiz şey değildi.
+
+00:01:38.830 --> 00:01:43.470
+<i>LinearLayout</i> aslında dikey olmak 
+yerine yatay olarak görünüyor.
+
+00:01:43.470 --> 00:01:47.586
+O yüzden oryantasyon özelliğini
+eklediğimize emin olalım.
+
+00:01:47.586 --> 00:01:52.020
+Bunu <i>android;orientation="vertical"</i>
+diyecek şekilde değiştiriyoruz.
+
+00:01:52.020 --> 00:01:53.570
+Bu sorunu çözmeli.
+
+00:01:53.570 --> 00:01:54.970
+Haydi tekrar "Run"(Çalıştır)'a basalım.
+
+00:01:55.520 --> 00:01:57.010
+Tamam, şimdi daha iyi.
+
+00:01:57.010 --> 00:02:00.270
+Üç alt görünüm dikey sütunda görünüyor.
+
+00:02:00.270 --> 00:02:02.000
+Şimdi bu alanları biçimlendirmemiz gerek,
+
+00:02:02.000 --> 00:02:04.370
+böylece bize verilen ekran 
+görüntüsüne biraz daha benzerler.
+
+00:02:05.280 --> 00:02:08.660
+Bu ekran görüntüsünde miktar <i>TextView</i>'in 
+büyük harf olduğunu görüyoruz.
+
+00:02:09.600 --> 00:02:13.950
+1. derste <i>android:textAllCaps</i>
+adında bir özellik öğrendik
+
+00:02:13.950 --> 00:02:16.230
+ve burada otomatik 
+tamamlamada görünüyor.
+
+00:02:16.230 --> 00:02:18.400
+Eğer böyle görünürse, 
+sadece "Giriş"e basabilirsiniz
+
+00:02:18.400 --> 00:02:20.390
+ve sizin için buraya otomatikman ekler.
+
+00:02:21.400 --> 00:02:24.970
+Değeri <i>true</i> olarak ayarlıyoruz, 
+çünkü hepsini büyük harf istiyoruz.
+
+00:02:24.970 --> 00:02:28.580
+Metni büyük harfe çevirmede bu özelliği 
+kullanmanın daha iyi olmasının nedeni,
+
+00:02:28.580 --> 00:02:32.620
+eğer kullanıcı arabirimini değiştirmek 
+için miktarı küçük harf yapmak istersek,
+
+00:02:32.620 --> 00:02:35.650
+bunun gibi, gidip bu metni 
+değiştirmek yerine yapmamız
+
+00:02:35.650 --> 00:02:38.020
+gereken tek şey, bu özelliği kaldırmak.
+
+00:02:38.020 --> 00:02:41.840
+Sonra, burada sıfır diyen metin için 
+metin büyüklüğü olarak 16sp kullanmalıyız.
+
+00:02:41.840 --> 00:02:45.970
+Bunu şimdi ekleyeyim ki otomatik 
+tamamlama önerilerinde çıksın,
+
+00:02:45.970 --> 00:02:50.000
+böylece "Giriş"e basıyorum ve 
+sonra değer için 16sp seçiyorum.
+
+00:02:50.000 --> 00:02:52.450
+Aynı zamanda siyah yazı tipi 
+rengi olmasını istiyoruz.
+
+00:02:52.450 --> 00:02:54.700
+Siyah için Android sistem 
+rengini kullanacağım,
+
+00:02:54.700 --> 00:02:57.380
+ki bu şekilde atıf yapılıyor.
+
+00:02:57.380 --> 00:03:00.558
+Güzel, bu hem miktar, hem de 
+sıfır <i>TextView</i>'leri halletti.
+
+00:03:00.558 --> 00:03:05.011
+"Sipariş" düğmesi bu şekilde iyi, metni 
+otomatik olarak bir düğmede
+
+00:03:05.011 --> 00:03:08.820
+büyük harfe çevirecek ve 
+yükseklikle genişlik ise içerik sarmalı.
+
+00:03:08.820 --> 00:03:11.898
+Buradaki bu dikey aralığı 
+çözümlemek durumundayız.
+
+00:03:11.898 --> 00:03:15.810
+Miktar ve sıfır <i>TextView</i> arasında 
+16dp iç boşluk veya
+
+00:03:15.810 --> 00:03:17.190
+kenar boşluğu istiyoruz.
+
+00:03:17.190 --> 00:03:20.027
+Aynı zamanda sıfır ve "Sipariş" 
+düğmesi arasında 16dp
+
+00:03:20.027 --> 00:03:21.430
+iç boşluk istiyoruz.
+
+00:03:21.430 --> 00:03:23.960
+Bunu farklı yollarla uygulayabilirsiniz.
+
+00:03:23.960 --> 00:03:27.650
+Bu düğme için yerleşim üst kenar 
+boşluğu olarak ekleyeceğim.
+
+00:03:31.410 --> 00:03:34.490
+Bu miktar <i>TextView</i> için alt kenar 
+boşluğu olarak ekleyeceğim.
+
+00:03:37.810 --> 00:03:40.810
+Aynı göründüğü sürece farklı 
+yolla yapmakta serbestsiniz.
+
+00:03:40.810 --> 00:03:44.000
+Alt ve üst kenar boşluğu olarak 
+yapmayı seçmemin sebebi,
+
+00:03:44.000 --> 00:03:47.040
+bu ortadaki alanın sonra 
+değişeceğini bilmem.
+
+00:03:47.040 --> 00:03:49.670
+Artı ve eksi düğmeleriyle onu 
+bir adet seçiciye dönüştüreceğiz,
+
+00:03:49.670 --> 00:03:54.620
+hâlâ miktar başlığı ve 
+seçici arasında 16dp alan
+
+00:03:54.620 --> 00:03:56.830
+olmasını istiyorum.
+
+00:03:56.830 --> 00:03:57.750
+Düğme için de aynı.
+
+00:03:58.610 --> 00:04:01.280
+Tamam, şimdi tekrar 
+kendi cihazımızda çalıştıralım.
+
+00:04:01.280 --> 00:04:03.350
+Güzel ve tam istediğimiz gibi görünüyor.
+
+00:04:03.350 --> 00:04:07.150
+Miktar <i>TextView</i> hep büyük harfli, 
+sıfır <i>TextView</i> siyah yazı tipi renginde,
+
+00:04:07.150 --> 00:04:11.710
+16sp büyüklüğünde ve 
+burada "Order" düğmemiz var.
+
+00:04:11.710 --> 00:04:14.540
+Bu görünümler arasında 
+16dp aralığımız var.
+
+00:04:15.760 --> 00:04:18.240
+İyi iş çıkardınız. Az kalsın unutuyordum.
+
+00:04:18.240 --> 00:04:21.560
+Test bu düğmeye bastığınızda 
+ne olacağını da soruyor.
+
+00:04:21.560 --> 00:04:25.950
+Aslında şimdilik bir şey yapmıyor.
+
+00:04:25.950 --> 00:04:27.770
+Neler olduğunu görmek 
+için seyretmeye devam edin.
+

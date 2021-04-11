@@ -1,0 +1,445 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.381 --> 00:00:02.326
+Eu quero que você construa este layout.
+
+00:00:03.080 --> 00:00:05.588
+Você vai adicionar uma <i>TextView</i>
+para o cabeçalho Preço aqui,
+
+00:00:05.910 --> 00:00:08.369
+e depois, uma outra <i>TextView</i>
+para mostrar 0 dólares.
+
+00:00:09.297 --> 00:00:15.377
+Atribua também o View ID <i>price_text_view</i>
+para esta segunda <i>TextView</i> aqui.
+
+00:00:15.650 --> 00:00:17.428
+A razão porque eu pedi para adicionar um ID,
+
+00:00:17.630 --> 00:00:19.772
+é porque precisamos referenciar esta <i>view</i> depois,
+
+00:00:19.790 --> 00:00:21.052
+para podermos atualizar o preço.
+
+00:00:21.760 --> 00:00:25.156
+E enquanto faz isso, estilize também
+estas duas <i>TextViews</i>
+
+00:00:25.175 --> 00:00:27.230
+como a TextView Quantidade.
+
+00:00:27.750 --> 00:00:29.083
+Quanto ao espaçamento vertical,
+
+00:00:29.360 --> 00:00:32.009
+também temos 16 dp entre estas duas <i>TextViews</i>.
+
+00:00:32.485 --> 00:00:34.210
+Para o campo de preço atualizar,
+
+00:00:34.252 --> 00:00:37.340
+precisamos fazer algumas alterações
+no arquivo <i>MainActivity.java</i>.
+
+00:00:37.840 --> 00:00:39.230
+Ajudaremos um pouco mais com isso.
+
+00:00:39.730 --> 00:00:41.554
+Vamos fornecer um novo método
+
+00:00:41.569 --> 00:00:43.735
+que poderá adicionar no arquivo <i>MainActivity.java</i>.
+
+00:00:44.252 --> 00:00:47.350
+Abra o <i>gist</i> no link fornecido
+nas notas do instrutor.
+
+00:00:47.661 --> 00:00:50.406
+A propósito, <i>gist</i> é um <i>snippet</i>,
+
+00:00:50.657 --> 00:00:54.240
+ou pequena parte de código reutilizável
+que deseja compartilhar com outros.
+
+00:00:54.504 --> 00:00:58.073
+Fomos até ao site <i>GitHub Gist </i> neste caso,
+
+00:00:58.153 --> 00:01:02.006
+e criámos um novo <i>gist</i> com o 
+código que queríamos dar para você.
+
+00:01:02.260 --> 00:01:05.052
+E agora podemos compartilhar o link,
+e você pode obter o código.
+
+00:01:05.780 --> 00:01:08.473
+Vamos selecionar o snippet e depois copiá-lo.
+
+00:01:09.156 --> 00:01:10.850
+Lembre de incluir o comentário aqui,
+
+00:01:11.076 --> 00:01:14.000
+que é uma nota para o leitor,
+e esta chave de fechamento aqui.
+
+00:01:14.780 --> 00:01:18.769
+Agora colamos no arquivo <i>MainActivity.java</i>,
+eu amo código livre.
+
+00:01:19.766 --> 00:01:22.547
+Certifique-se de que as chaves
+estão corretas depois de colar.
+
+00:01:22.960 --> 00:01:26.307
+Chaves são uma verdadeira dor de cabeça.
+
+00:01:26.892 --> 00:01:29.286
+Poderá obter um monte de erros
+se não estiverem corretas.
+
+00:01:30.043 --> 00:01:33.593
+Por exemplo, se eu colar este bloco
+de código bem aqui embaixo,
+
+00:01:33.883 --> 00:01:37.144
+então eu recebo um erro
+dizendo "classe ou interface esperado".
+
+00:01:37.766 --> 00:01:40.560
+A razão é porque este método está
+no meio do nada.
+
+00:01:40.880 --> 00:01:43.483
+Realmente, nós queremos que esteja
+dentro da <i>MainActivity</i>,
+
+00:01:44.012 --> 00:01:47.236
+entre as chaves de abertura
+e de fechamento da <i>MainActivity</i>.
+
+00:01:47.380 --> 00:01:49.987
+Vamos copiar isto e colocar antes
+
+00:01:50.190 --> 00:01:53.273
+da chave de fechamento da <i>MainActivity</i>,
+e está melhor desse jeito.
+
+00:01:53.895 --> 00:01:58.036
+Outro erro potencial é você esquecer
+de copiar a chave de fechamento,
+
+00:01:58.486 --> 00:02:00.603
+e apenas pegar esta parte superior do método.
+
+00:02:00.850 --> 00:02:04.793
+Nesse caso, teria um outro erro dizendo
+que a chave de fechamento é esperada.
+
+00:02:05.540 --> 00:02:07.003
+e você teria que acrescentá-la.
+
+00:02:07.193 --> 00:02:08.972
+O outro erro potencial que poderá encontrar,
+
+00:02:08.984 --> 00:02:11.360
+é se você, acidentalmente,
+adicionar o método aqui,
+
+00:02:12.067 --> 00:02:15.033
+antes da chave de fechamento o método de <i>display</i>.
+
+00:02:15.940 --> 00:02:18.572
+Agora tudo isto está dentro
+do método,
+
+00:02:18.800 --> 00:02:19.913
+e não é o que queremos.
+
+00:02:20.295 --> 00:02:23.710
+Nós queremos que fique ao lado
+do método, bem aqui.
+
+00:02:25.420 --> 00:02:27.716
+Você entende a idéia,
+há milhões de combinações.
+
+00:02:27.938 --> 00:02:30.283
+Preste atenção e confirme
+se as chaves se alinham.
+
+00:02:30.710 --> 00:02:33.741
+Outra boa maneira de verificar
+é colocando o cursor aqui,
+
+00:02:33.760 --> 00:02:35.243
+logo após a chave de abertura.
+
+00:02:35.556 --> 00:02:38.658
+você pode ver que destaca a chave
+de fechamento correspondente.
+
+00:02:39.021 --> 00:02:40.320
+Igual se eu clicar nesta aqui,
+
+00:02:40.344 --> 00:02:42.860
+a chave de fechamento correspondente
+esta está bem aqui.
+
+00:02:44.130 --> 00:02:45.876
+O mesmo para o método <i>submitOrder</i>,
+
+00:02:46.418 --> 00:02:49.421
+e para o método <i>onCreate,
+ </i>e até para a <i>MainActivity</i>.
+
+00:02:50.455 --> 00:02:52.370
+Esta é a chave de abertura
+para a <i>MainActivity,</i>
+
+00:02:52.370 --> 00:02:54.947
+e a chave de fechamento
+está destacada em azul&nbsp;aqui.
+
+00:02:55.370 --> 00:02:57.698
+Agora, infelizmente,
+ainda temos outro erro aqui.
+
+00:02:58.650 --> 00:02:59.975
+Se olhar na barra lateral aqui,
+
+00:03:00.000 --> 00:03:02.646
+diz que não é possível resolver
+o símbolo <i>NumberFormat</i>.
+
+00:03:03.148 --> 00:03:05.657
+NumberFormat é, de fato,
+algo fornecido pelo <i>Android</i>
+
+00:03:05.890 --> 00:03:07.495
+para ajudar a formatar números.
+
+00:03:07.610 --> 00:03:10.461
+Neste caso, estamos tentando
+formatar o preço
+
+00:03:10.510 --> 00:03:14.375
+para ter o símbolo do dólar "$",
+ou de qualquer outra moeda.
+
+00:03:14.695 --> 00:03:16.740
+Precisamos adicionar uma instrução de importação,
+
+00:03:16.750 --> 00:03:20.449
+porque o Android Studio
+não consegue reconhecer isto.
+
+00:03:21.120 --> 00:03:23.784
+Para resolver isto, vou mostrar 
+como ligar a importação automática.
+
+00:03:24.410 --> 00:03:26.491
+No menu na parte superior
+do <i>Android Studio,</i>
+
+00:03:26.806 --> 00:03:28.713
+clique em <i>Android Studio</i> &gt; Preferências.
+
+00:03:29.409 --> 00:03:31.780
+Isso abre as preferências
+para o<i> Android Studio.</i>
+
+00:03:32.276 --> 00:03:34.560
+Há uma tonelada de preferências
+que eu nunca mudei,
+
+00:03:34.923 --> 00:03:37.926
+mas quando eu preciso de algo,
+simplesmente uso esta caixa de busca.
+
+00:03:38.310 --> 00:03:40.203
+Então eu vou digitar <i>auto import.</i>
+
+00:03:40.516 --> 00:03:44.067
+Agora mostra as definições para importar
+automaticamente XML e Java.
+
+00:03:44.450 --> 00:03:48.424
+Eu quero marcar esta opção que diz:
+"Adicionar importações não ambíguas".
+
+00:03:48.849 --> 00:03:51.210
+Esta frase pode não significar nada
+para você, mas tudo bem.
+
+00:03:51.850 --> 00:03:53.868
+Esta frase provavelmente
+soa muito confusa.
+
+00:03:54.900 --> 00:03:59.156
+Tudo o que faz é dizer ao <i>Android Studio</i>
+que pode adicionar automaticamente
+
+00:03:59.415 --> 00:04:01.095
+algumas linhas de código extras no app.
+
+00:04:01.390 --> 00:04:03.347
+Especificamente instruções de importação,
+
+00:04:03.846 --> 00:04:06.640
+se ele souber o que estamos referindo,
+deixe eu mostrar.
+
+00:04:07.700 --> 00:04:09.417
+Bem, na verdade,
+ele já fez isso por nós.
+
+00:04:09.920 --> 00:04:11.809
+Ele assumiu que,
+quando dissemos <i>NumberFormat</i>,
+
+00:04:12.024 --> 00:04:13.630
+nós queríamos dizer este,
+e está certo.
+
+00:04:13.913 --> 00:04:16.596
+Portanto, resolveu o problema
+automaticamente, o que é ótimo.
+
+00:04:17.140 --> 00:04:18.817
+Neste ponto,
+se executar o aplicativo,
+
+00:04:19.149 --> 00:04:20.535
+ao apertar o botão Pedido,
+
+00:04:20.935 --> 00:04:23.280
+a quantidade muda, mas o preço não.
+
+00:04:23.741 --> 00:04:25.660
+Precisamos modificar o método <i>submitOrder</i>
+
+00:04:25.990 --> 00:04:28.855
+para atualizar a quantidade e o preço.
+
+00:04:29.667 --> 00:04:31.107
+Vou adicionar outra linha de código.
+
+00:04:32.880 --> 00:04:35.058
+Invoco o método <i>displayPrice</i>
+
+00:04:35.483 --> 00:04:41.526
+e digo que o preço é
+2 xícaras de café vezes $5 cada.
+
+00:04:42.061 --> 00:04:47.076
+Cada xícara do nosso café custa $5, 
+porque importamos grãos arábicos da Etiópia.
+
+00:04:47.430 --> 00:04:50.443
+Mas vamos deixar o dispositivo
+fazer o cálculo para nós,
+
+00:04:50.658 --> 00:04:53.212
+porque temos duas
+xícaras de café a $5 cada.
+
+00:04:54.073 --> 00:04:56.130
+Aliás, quando eu falo em dólares na lição,
+
+00:04:56.130 --> 00:04:58.461
+fique à vontade para trocar
+pela sua própria moeda local.
+
+00:04:58.633 --> 00:05:00.950
+Não há qualquer sinal de dólar
+nesta expressão matemática.
+
+00:05:01.310 --> 00:05:03.883
+Ele é adicionado mais tarde
+no método <i>displayPrice</i>.
+
+00:05:04.443 --> 00:05:06.855
+Mas não se preocupe com detalhes
+do método <i>displayPrice</i>,
+
+00:05:07.126 --> 00:05:08.843
+vamos conferir isso na lição três.
+
+00:05:09.821 --> 00:05:13.790
+Agora o foco é nas expressões matemáticas que você irá usar para calcular o preço.
+
+00:05:14.510 --> 00:05:17.083
+Lembre também do ponto e vírgula
+no final de cada instrução,
+
+00:05:17.490 --> 00:05:21.323
+senão o monstro do ponto e vírgula
+aparece para dar um erro bem vermelho.
+
+00:05:22.196 --> 00:05:24.313
+Por exemplo, quando 
+remove o ponto e vírgula,
+
+00:05:24.560 --> 00:05:27.200
+você recebe um erro que diz
+que o ponto e vírgula é esperado.
+
+00:05:28.140 --> 00:05:32.627
+Oh, e para ser extra, extra claro,
+o ponto e vírgula é este aqui.
+
+00:05:33.010 --> 00:05:34.886
+Não é dois pontos, é o ponto e vírgula.
+
+00:05:35.507 --> 00:05:36.929
+Quando terminar,
+
+00:05:37.190 --> 00:05:40.417
+deverá adicionar mais duas <i>TextViews</i>
+para o preço aqui.
+
+00:05:41.000 --> 00:05:44.080
+Deverá modificar a MainActivity para
+incluir o novo método que nós demos.
+
+00:05:44.467 --> 00:05:46.793
+E também deverá modificar o método <i>submitOrder</i>
+
+00:05:47.058 --> 00:05:49.335
+e adicionar uma nova linha
+de código para exibir o preço.
+
+00:05:50.264 --> 00:05:52.695
+Quando executá-lo em seu app
+deverá ficar algo assim.
+
+00:05:53.040 --> 00:05:55.470
+Começa com 0 quantidade, 
+e 0 dólares.
+
+00:05:55.852 --> 00:05:59.080
+E ao apertar Pedido,
+agora temos dois cafés por $10.
+
+00:06:00.092 --> 00:06:03.261
+Sinta-se livre para experimentar
+outros valores para a quantidade e preço.
+
+00:06:04.012 --> 00:06:06.695
+Se quiser pode cobrar $10 por uma xícara de café.
+
+00:06:06.890 --> 00:06:09.932
+Lembre de mudar de volta
+para duas xícaras de café por $5,
+
+00:06:10.141 --> 00:06:11.889
+para corresponder com o nosso código adiante.
+
+00:06:12.769 --> 00:06:14.184
+Marque estas caixas quando terminar.
+

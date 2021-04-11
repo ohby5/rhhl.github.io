@@ -1,0 +1,403 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:01.103 --> 00:00:04.276
+Langkah pertama adalah mengubah
+&lt;i&gt;layout&lt;/i&gt; &lt;i&gt;activity_main.xml&lt;/i&gt;
+
+00:00:04.276 --> 00:00:06.684
+agar aplikasi tampak seperti ini.
+
+00:00:07.139 --> 00:00:09.851
+Mari kita buka Android Studio
+dan melihat fail tersebut.
+
+00:00:10.145 --> 00:00:12.925
+Ini fail &lt;i&gt;layout&lt;/i&gt; &lt;i&gt;activity_main.xml&lt;/i&gt;.
+
+00:00:12.925 --> 00:00:16.261
+Ada pratinjau pada perangkat
+di sebelah kanan ini.
+
+00:00:16.261 --> 00:00:19.811
+Saya bisa mengeklik kaca pembesar ini
+untuk memperbesar tampilan perangkat.
+
+00:00:20.177 --> 00:00:21.679
+Itu lebih baik.
+
+00:00:22.131 --> 00:00:25.425
+Untuk membuat &lt;i&gt;layout&lt;/i&gt; yang diinginkan,
+saya mau menambah tombol plus(+)
+
+00:00:25.425 --> 00:00:28.559
+di antara &lt;i&gt;header quantity&lt;/i&gt;
+dan nilai &lt;i&gt;quantity&lt;/i&gt;.
+
+00:00:28.559 --> 00:00:32.600
+Sudah ada tombol di &lt;i&gt;layout&lt;/i&gt; kita,
+yaitu untuk tombol ORDER di bawah sini.
+
+00:00:32.600 --> 00:00:36.115
+Saya bisa menyalin kode ini,
+lalu saya akan merekatkannya
+
+00:00:36.115 --> 00:00:39.700
+di antara &lt;i&gt;header quantity&lt;/i&gt;
+dan nilai &lt;i&gt;quantity&lt;/i&gt;.
+
+00:00:39.700 --> 00:00:42.135
+Saya melihat tombol ini
+muncul di tempat yang tepat.
+
+00:00:42.135 --> 00:00:45.974
+Namun saya harus mengubah teksnya
+agar tertulis "+", bukan "Order".
+
+00:00:46.846 --> 00:00:49.512
+Bagus. Saya juga akan
+menghapus &lt;i&gt;marginTop&lt;/i&gt;
+
+00:00:49.512 --> 00:00:54.145
+karena sudah ada &lt;i&gt;margin&lt;/i&gt; 16 dps
+dari &lt;i&gt;TextView&lt;/i&gt; bawah ini.
+
+00:00:54.145 --> 00:00:55.713
+Jadi, hapus ini.
+
+00:00:56.171 --> 00:00:59.724
+Tombol ini cukup besar dan dalam kuis,
+kami meminta Anda mengubah ukurannya
+
+00:00:59.724 --> 00:01:02.633
+menjadi tinggi 48 dps dan lebar 48 dps.
+
+00:01:02.633 --> 00:01:05.132
+Saya akan mengedit XML tombol ini.
+
+00:01:05.814 --> 00:01:07.861
+Bagus. Sekarang ukurannya tepat.
+
+00:01:07.861 --> 00:01:11.620
+Sekarang saya bisa menyalin XML ini
+dan merekatkannya di bawah nilai &lt;i&gt;quantity&lt;/i&gt;
+
+00:01:11.620 --> 00:01:13.705
+agar kita memiliki tombol minus (-).
+
+00:01:13.705 --> 00:01:18.144
+Saya menghapus spasi kosong itu
+karena menurut panduan gaya kode Android,
+
+00:01:18.144 --> 00:01:21.216
+tidak boleh ada spasi kosong ekstra
+dalam kode.
+
+00:01:21.728 --> 00:01:25.292
+Sekarang saya akan mengubah teks
+pada tombol ini agar tertulis "-".
+
+00:01:25.951 --> 00:01:29.015
+Tinggi dan lebarnya sudah 48 dps.
+
+00:01:29.015 --> 00:01:31.643
+Sekarang tombol plus
+dan minus sudah diletakkan.
+
+00:01:32.209 --> 00:01:38.107
+Kami menyebutkan tadi kami juga ingin
+&lt;i&gt;quantity&lt;/i&gt; awalnya 2 dan harga awalnya $10.
+
+00:01:38.107 --> 00:01:39.823
+Mari kita ubah itu sekarang.
+
+00:01:40.226 --> 00:01:42.404
+Seperti inilah &lt;i&gt;layout&lt;/i&gt; kita sejauh ini.
+
+00:01:42.404 --> 00:01:45.638
+Mari kita kembali ke gambar kuis
+untuk melihat perkembangan kita.
+
+00:01:45.971 --> 00:01:48.001
+Kita berhasil mengubah &lt;i&gt;layout&lt;/i&gt;-nya.
+
+00:01:48.001 --> 00:01:50.278
+Namun kita juga perlu
+mengubah tombol plus
+
+00:01:50.278 --> 00:01:52.931
+agar saat diklik, 
+memicu metode &lt;i&gt;increment&lt;/i&gt;.
+
+00:01:52.931 --> 00:01:56.182
+Saat tombol minus diklik,
+kita harus memicu metode &lt;i&gt;decrement&lt;/i&gt;.
+
+00:01:56.666 --> 00:02:00.330
+Kembali ke Android Studio,
+saya akan memodifikasi tombol plus
+
+00:02:00.330 --> 00:02:04.153
+agar nilai atribut &lt;i&gt;android:onClick&lt;/i&gt;
+adalah &lt;i&gt;increment&lt;/i&gt;.
+
+00:02:04.153 --> 00:02:06.056
+Dengan begitu, saat tombol plus diklik,
+
+00:02:06.056 --> 00:02:09.282
+akan menggunakan metode yang disebut
+&lt;i&gt;increment&lt;/i&gt; di &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:02:09.282 --> 00:02:12.565
+Begitu pula untuk tombol minus,
+saya akan memodifikasi atribut &lt;i&gt;onClick&lt;/i&gt;
+
+00:02:12.565 --> 00:02:14.852
+agar nilainya adalah &lt;i&gt;decrement&lt;/i&gt;.
+
+00:02:16.577 --> 00:02:20.130
+Saya akan menyimpan ini,
+lalu menjalankannya pada perangkat.
+
+00:02:20.627 --> 00:02:22.169
+&lt;i&gt;Layout&lt;/i&gt; ini tampak bagus.
+
+00:02:22.169 --> 00:02:25.219
+Namun jika tombol plus diklik,
+aplikasi menjadi rusak.
+
+00:02:25.219 --> 00:02:29.194
+Ingat saya menunjukkan cara melihat &lt;i&gt;log&lt;/i&gt;
+untuk menelusuri kesalahan metode?
+
+00:02:29.194 --> 00:02:30.892
+&lt;i&gt;Log&lt;/i&gt; sudah dibuka secara &lt;i&gt;default&lt;/i&gt;.
+
+00:02:30.892 --> 00:02:34.621
+Mari kita tarik panah ini ke atas
+agar kita bisa melihat pesan lainnya.
+
+00:02:35.152 --> 00:02:38.611
+Jika kita gulirkan ke atas,
+kita lihat inilah kesalahannya.
+
+00:02:39.174 --> 00:02:43.145
+Ini aplikasi kita, &lt;i&gt;Just Java&lt;/i&gt;, dan di sini
+tertulis &lt;i&gt;IllegalStateException&lt;/i&gt;.
+
+00:02:43.603 --> 00:02:46.932
+Jika saya gulirkan ke kanan, saya bisa
+melihat pesan kesalahan lainnya.
+
+00:02:46.932 --> 00:02:49.750
+Pesan kesalahannya, "Tidak dapat
+menemukan metode &lt;i&gt;increment&lt;/i&gt;
+
+00:02:49.750 --> 00:02:51.999
+dalam aktivitas &lt;i&gt;MainActivity&lt;/i&gt;."
+
+00:02:51.999 --> 00:02:55.324
+Ini sangat mirip dengan kesalahan
+yang ada dalam video sebelumnya.
+
+00:02:55.766 --> 00:02:59.306
+Intinya, tidak ada metode
+bernama &lt;i&gt;increment&lt;/i&gt; dalam &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:02:59.306 --> 00:03:02.297
+Itu bisa diharapkan karena kita belum
+membuat perubahan itu.
+
+00:03:02.683 --> 00:03:06.699
+Untuk langkah kedua, kita harus tambahkan
+metode &lt;i&gt;increment&lt;/i&gt; ke &lt;i&gt;MainActivity&lt;/i&gt;,
+
+00:03:06.699 --> 00:03:09.768
+membuat variabel &lt;i&gt;quantity&lt;/i&gt;
+dengan nilai awal 3,
+
+00:03:09.768 --> 00:03:11.798
+lalu juga menampilkan &lt;i&gt;quantity&lt;/i&gt; itu.
+
+00:03:12.141 --> 00:03:14.874
+Untuk melakukannya,
+saya membuka fail &lt;i&gt;MainActivity.java&lt;/i&gt;.
+
+00:03:14.874 --> 00:03:17.856
+Mengatur perilaku untuk tombol plus
+akan sangat mirip
+
+00:03:17.856 --> 00:03:20.761
+dengan cara mengatur
+perilaku untuk tombol ORDER.
+
+00:03:20.761 --> 00:03:24.158
+Mari kita salin metode ini
+yang mengatur tombol ORDER.
+
+00:03:24.874 --> 00:03:26.430
+Langsung ada kesalahan
+
+00:03:26.430 --> 00:03:29.293
+bahwa &lt;i&gt;submitOrder&lt;/i&gt; telah
+didefinisikan dalam &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:03:29.814 --> 00:03:33.358
+Tidak boleh ada dua metode
+yang sama persis dalam &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:03:33.764 --> 00:03:37.186
+Namun tidak masalah karena ini akan
+diubah menjadi metode &lt;i&gt;increment&lt;/i&gt;.
+
+00:03:37.663 --> 00:03:39.633
+Sekarang pesan kesalahannya hilang.
+
+00:03:39.633 --> 00:03:42.714
+Saya akan mengubah komentarnya
+karena ini adalah metode baru.
+
+00:03:42.714 --> 00:03:44.122
+Saya akan perbarui komentar
+
+00:03:44.122 --> 00:03:47.007
+untuk mengacu pada tombol plus
+dari pada tombol ORDER.
+
+00:03:47.401 --> 00:03:51.535
+Dalam metode &lt;i&gt;increment&lt;/i&gt;, saya akan
+membuat variabel &lt;i&gt;integer quantity&lt;/i&gt;.
+
+00:03:51.535 --> 00:03:55.971
+Saya akan memasukkan nilai awal 3
+seperti yang diminta dalam kuis.
+
+00:03:55.971 --> 00:03:58.477
+Lalu saya bisa menampilkan
+&lt;i&gt;quantity&lt;/i&gt; ini pada layar.
+
+00:03:58.810 --> 00:04:02.563
+Dalam metode ini, harga tidak perlu
+diperbarui, jadi hapus saja baris kodenya.
+
+00:04:02.972 --> 00:04:05.353
+Itu tampak bagus. 
+Mari kita tes sekarang.
+
+00:04:05.907 --> 00:04:09.862
+Sekarang, saat tombol plus diklik,
+nilainya akan diperbarui menjadi 3.
+
+00:04:09.862 --> 00:04:11.123
+Itu cukup bagus.
+
+00:04:11.533 --> 00:04:14.838
+Namun jika tombol minus diklik,
+aplikasi akan rusak.
+
+00:04:15.666 --> 00:04:17.148
+Mari kita periksa &lt;i&gt;log&lt;/i&gt;-nya.
+
+00:04:17.693 --> 00:04:19.761
+Gulirkan ke bawah
+untuk melihat &lt;i&gt;log&lt;/i&gt; terbaru.
+
+00:04:19.761 --> 00:04:22.416
+Lalu gulirkan ke atas
+untuk melihat kesalahan terakhir.
+
+00:04:22.870 --> 00:04:25.026
+Untuk aplikasi kita,
+ada &lt;i&gt;IllegalStateException&lt;/i&gt;
+
+00:04:25.026 --> 00:04:28.459
+karena tidak dapat menemukan
+metode &lt;i&gt;decrement&lt;/i&gt; dalam aktivitas kita.
+
+00:04:28.459 --> 00:04:32.477
+Ini juga bisa diduga karena kita belum
+menambahkan metode &lt;i&gt;decrement&lt;/i&gt;.
+
+00:04:32.477 --> 00:04:34.198
+Mari kita lakukan itu sekarang.
+
+00:04:34.903 --> 00:04:38.285
+Saya akan menyalin metode ini,
+lalu merekatkan di bawahnya.
+
+00:04:38.826 --> 00:04:41.280
+Saya akan mengubah namanya
+menjadi &lt;i&gt;decrement&lt;/i&gt;.
+
+00:04:42.038 --> 00:04:44.116
+Sekarang, komentar ini harus diperbarui.
+
+00:04:44.116 --> 00:04:47.323
+Metode ini digunakan
+saat tombol minus diklik.
+
+00:04:48.030 --> 00:04:51.695
+Untuk mengetahui yang harus dilakukan
+dalam metode ini, kita kembali ke kuis.
+
+00:04:51.928 --> 00:04:54.032
+Kita sudah selesaikan
+dua langkah sejauh ini.
+
+00:04:54.032 --> 00:04:57.030
+Yang terakhir adalah membuat
+metode &lt;i&gt;decrement&lt;/i&gt; di &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:04:57.030 --> 00:05:00.312
+Kita ingin membuat variabel &lt;i&gt;quantity&lt;/i&gt;
+dan memberinya nilai awal 1.
+
+00:05:00.798 --> 00:05:03.424
+Lalu kita akan menampilkan
+&lt;i&gt;quantity&lt;/i&gt; di layar.
+
+00:05:03.925 --> 00:05:07.410
+Dalam metode &lt;i&gt;decrement&lt;/i&gt;, kita sudah
+membuat variabel &lt;i&gt;integer quantity&lt;/i&gt;.
+
+00:05:07.410 --> 00:05:11.855
+Saya akan memberinya nilai awal 1,
+lalu menampilkan &lt;i&gt;quantity&lt;/i&gt; itu di layar.
+
+00:05:12.644 --> 00:05:14.504
+Mari kita jalankan pada perangkat.
+
+00:05:15.365 --> 00:05:18.054
+Berdoa saja semoga tidak rusak kali ini.
+
+00:05:18.469 --> 00:05:21.947
+JIka tombol minus diklik,
+nilainya akan berkurang menjadi 1.
+
+00:05:22.201 --> 00:05:24.776
+Jika tombol plus diklik,
+akan bertambah menjadi 3.
+
+00:05:25.076 --> 00:05:27.359
+Tombol-tombol ini bekerja
+sesuai dengan harapan.
+
+00:05:27.359 --> 00:05:29.470
+Setidaknya untuk tahap ini.
+
+00:05:29.470 --> 00:05:34.153
+Idealnya, seperti saya katakan sebelumnya,
+kita ingin ini bertambah menjadi 4, 5, 6,
+
+00:05:34.153 --> 00:05:36.864
+dan kita ingin ini berkurang
+menjadi 2, 1, 0.
+
+00:05:36.864 --> 00:05:39.333
+Namun itu akan dibahas
+dalam pelajaran mendatang.
+
+00:05:39.333 --> 00:05:41.240
+Bagus sejauh ini.
+

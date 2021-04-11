@@ -1,0 +1,222 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.304 --> 00:00:03.882
+Saya rasa Anda siap untuk langkah membuat
+pemilih kuantitas yang berikutnya.
+
+00:00:04.277 --> 00:00:07.497
+Di formulir pesanan, kita akan
+tambahkan tombol plus(+) dan minus(-)
+
+00:00:07.497 --> 00:00:10.787
+agar kita bisa menambahkan
+atau mengurangi jumlah kopi yang dipesan.
+
+00:00:11.293 --> 00:00:14.528
+Setiap kali tombol plus ditekan,
+jumlah kopi akan bertambah satu.
+
+00:00:14.528 --> 00:00:17.967
+Setiap kali tombol minus ditekan,
+jumlah kopi akan berkurang satu.
+
+00:00:18.725 --> 00:00:20.055
+Saat tombol ORDER ditekan,
+
+00:00:20.055 --> 00:00:23.654
+harga akan diperbarui
+berdasarkan nilai &lt;i&gt;quantity&lt;/i&gt; terakhir.
+
+00:00:24.430 --> 00:00:28.698
+Membuat semua fungsi ini dengan tepat
+akan membutuhkan beberapa langkah.
+
+00:00:28.698 --> 00:00:29.962
+Untuk tugas pertama,
+
+00:00:29.962 --> 00:00:32.727
+kita akan menambahkan tombol plus
+dan minus ke &lt;i&gt;layout&lt;/i&gt; ini.
+
+00:00:32.727 --> 00:00:36.631
+Kita juga akan hubungkan tombol-tombol ini
+agar memperbarui sesuatu di layar ini.
+
+00:00:37.117 --> 00:00:39.906
+Bahkan nanti, kita akan
+memperbaiki tombol ORDER
+
+00:00:39.906 --> 00:00:42.137
+agar harganya diperbarui dengan tepat.
+
+00:00:42.610 --> 00:00:47.205
+Pertama, buat tata letak ini dengan
+mengubah fail XML &lt;i&gt;layout&lt;/i&gt; &lt;i&gt;activity_main&lt;/i&gt;.
+
+00:00:48.475 --> 00:00:52.421
+Anda harus menambahkan kedua tombol ini
+serta mengubah nilai awal &lt;i&gt;quantity&lt;/i&gt;
+
+00:00:52.421 --> 00:00:55.426
+menjadi 2 dan 
+harga awal menjadi $10.
+
+00:00:55.426 --> 00:00:58.123
+Perubahan ini juga bisa dibuat
+dalam fail XML itu.
+
+00:00:58.820 --> 00:01:02.356
+Anda bisa mengubahnya menjadi
+mata uang lokal jika memungkinkan.
+
+00:01:02.356 --> 00:01:04.757
+Saya memilih 2 sebagai &lt;i&gt;quantity&lt;/i&gt;
+
+00:01:04.757 --> 00:01:07.707
+agar saat tombol minus ditekan,
+nilainya tidak menjadi negatif.
+
+00:01:08.085 --> 00:01:09.769
+Saat tombol-tombol ini ditambahkan,
+
+00:01:09.769 --> 00:01:13.510
+Anda akan melihat mereka tampak
+agak lebih besar dari yang tampil di sini.
+
+00:01:13.899 --> 00:01:17.844
+Tampilan ini bisa didapat dengan mengatur
+tinggi dan lebarnya menjadi 48 dps.
+
+00:01:18.308 --> 00:01:20.279
+Lalu buat perilaku &lt;i&gt;onClick&lt;/i&gt;.
+
+00:01:20.279 --> 00:01:24.320
+Saat tombol plus diklik, gunakan
+metode &lt;i&gt;increment&lt;/i&gt; di &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:01:24.320 --> 00:01:28.246
+Saat tombol minus diklik, gunakan
+metode &lt;i&gt;decrement&lt;/i&gt; di &lt;i&gt;MainActivity&lt;/i&gt;.
+
+00:01:28.623 --> 00:01:31.970
+Dalam &lt;i&gt;MainActivity&lt;/i&gt;,
+tambahkan metode &lt;i&gt;increment&lt;/i&gt;.
+
+00:01:31.970 --> 00:01:37.378
+Di dalam metode itu, buat
+variabel &lt;i&gt;quantity&lt;/i&gt; dan awali dengan 3.
+
+00:01:37.783 --> 00:01:42.719
+Saat saya mengatakan "awali", itu berarti
+menentukan nilai awal variabelnya jadi 3.
+
+00:01:43.129 --> 00:01:46.350
+Lalu tampilkan &lt;i&gt;quantity&lt;/i&gt; itu ke layar.
+
+00:01:46.940 --> 00:01:50.531
+Untuk langkah ketiga, di &lt;i&gt;MainActivity&lt;/i&gt;,
+juga tambahkan metode &lt;i&gt;decrement&lt;/i&gt;
+
+00:01:50.531 --> 00:01:54.407
+dan buat variabel &lt;i&gt;quantity&lt;/i&gt;
+yang memiliki nilai awal 1.
+
+00:01:55.002 --> 00:01:57.874
+Lalu tampilkan &lt;i&gt;quantity&lt;/i&gt; itu ke layar.
+
+00:01:58.283 --> 00:02:02.561
+Setelah menyelesaikan semua langkah itu,
+seperti inilah tampilan pada perangkat.
+
+00:02:02.982 --> 00:02:07.225
+Saat aplikasi dibuka,
+kuantitasnya harus 2 dan harganya $10.
+
+00:02:07.998 --> 00:02:11.702
+Jika tombol plus ditekan,
+kuantitas akan bertambah menjadi 3.
+
+00:02:12.127 --> 00:02:15.782
+Jika tombol minus ditekan,
+kuantitas akan berkurang menjadi 1.
+
+00:02:16.312 --> 00:02:20.113
+Secara teknis, perilaku itu tidak tepat
+karena seharusnya berkurang menjadi 2.
+
+00:02:20.113 --> 00:02:23.892
+Namun untuk sekarang, buat saja
+tombol plus selalu mengubah menjadi 3
+
+00:02:23.892 --> 00:02:26.021
+dan tombol minus selalu
+mengubah menjadi 1.
+
+00:02:26.021 --> 00:02:28.323
+Dalam tugas pengodean lain,
+kita akan perbaiki
+
+00:02:28.323 --> 00:02:30.117
+agar setiap kali
+tombol plus ditekan,
+
+00:02:30.117 --> 00:02:33.445
+akan terus bertambah
+menjadi 4, 5, 6, dan sebagainya.
+
+00:02:33.445 --> 00:02:35.564
+Begitu pula dengan tombol minus.
+
+00:02:36.295 --> 00:02:39.447
+Untuk saat ini, biarkan saja harga
+dan tombol ORDER ini apa adanya.
+
+00:02:39.447 --> 00:02:43.629
+Saat ini, aplikasi saya baru memperbarui
+kuantitas menjadi 5 dan harga menjadi $25.
+
+00:02:43.629 --> 00:02:46.110
+Namun Anda bisa membiarkannya
+seperti sebelumnya.
+
+00:02:46.417 --> 00:02:48.464
+Kita juga akan memperbaiki ini nanti.
+
+00:02:48.464 --> 00:02:52.995
+Sedikit kiat, jika Anda ingin kembali
+ke aplikasi seperti saat pertama dibuka,
+
+00:02:52.995 --> 00:02:55.052
+Anda selalu bisa mematikan aplikasi Anda.
+
+00:02:55.052 --> 00:02:58.478
+Di bilah navigasi sistem,
+ada beberapa tombol.
+
+00:02:58.478 --> 00:03:01.333
+&lt;i&gt;Back&lt;/i&gt;, &lt;i&gt;Home&lt;/i&gt;, dan &lt;i&gt;Recent Tasks&lt;/i&gt;.
+
+00:03:01.333 --> 00:03:03.017
+Jika tombol &lt;i&gt;Recent Tasks&lt;/i&gt; ditekan,
+
+00:03:03.017 --> 00:03:06.409
+ini akan menampilkan semua hal terkini
+yang Anda lakukan di ponsel.
+
+00:03:06.917 --> 00:03:09.362
+Jika digeser ke kiri atau kanan,
+aplikasi akan mati.
+
+00:03:09.362 --> 00:03:11.406
+Itu berarti menghentikannya.
+
+00:03:11.406 --> 00:03:14.086
+Jika masuk ke layar semua aplikasi
+dan mengeklik aplikasi
+
+00:03:14.086 --> 00:03:17.602
+untuk membukanya lagi,
+akan tampil keadaan awal aplikasi ini.
+

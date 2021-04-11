@@ -1,0 +1,170 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.630 --> 00:00:03.290
+Trước tiên ta cần phải chỉnh sửa
+layout hoạt động chính
+
+00:00:03.290 --> 00:00:05.350
+để ta có thể thêm các text view cho giá.
+
+00:00:06.680 --> 00:00:08.460
+Nếu màn hình xem trước chưa hiển thị,
+
+00:00:08.460 --> 00:00:12.270
+bạn có thể nhấp vào liên kết ở đây
+Preview in order to make it appear.
+
+00:00:13.265 --> 00:00:16.315
+Giờ khi ta thay đổi mã XML, 
+ta thấy nó cập nhật tự động ở đây.
+
+00:00:16.315 --> 00:00:18.875
+Trong màn hình 
+mà chúng tôi cung cấp cho bạn,
+
+00:00:18.875 --> 00:00:22.445
+giá đã được trình bày 
+tương tự như số lượng.
+
+00:00:23.675 --> 00:00:26.855
+Ta có một tiêu đề, cũng là một text view
+để hiển thị giá trị.
+
+00:00:26.855 --> 00:00:29.995
+Vậy ta chỉ cần sao chép 
+hai text views này
+
+00:00:29.995 --> 00:00:31.295
+và sau đó dán bên dưới.
+
+00:00:31.685 --> 00:00:34.675
+Giờ ta chỉ cần tinh chỉnh
+các giá trị để phù hợp với kịch bản.
+
+00:00:35.700 --> 00:00:37.590
+Thay vì quantity,
+sẽ là price.
+
+00:00:40.140 --> 00:00:43.980
+Và, chúng ta cũng nên thay đổi
+ID thành text view price.
+
+00:00:43.980 --> 00:00:46.100
+Bạn có thể có hai view với cùng một ID.
+
+00:00:46.450 --> 00:00:50.240
+Nhưng, dù sao, trong bài kiểm tra, 
+bạn cần đổi cái này thành text view price.
+
+00:00:50.240 --> 00:00:52.050
+Để nó sẽ phù hợp với mã của chúng tôi.
+
+00:00:52.050 --> 00:00:54.270
+Vâng.
+Và điều đó sẽ giúp sửa các lỗi.
+
+00:00:54.270 --> 00:00:59.030
+Được rồi, nhìn vào màn hình xem trước, 
+ta có tiêu đề price, và giá trị 0 bên dưới
+
+00:00:59.030 --> 00:01:01.560
+Chúng tôi chỉ muốn thay đổi cái này
+thành 0 USD.
+
+00:01:01.560 --> 00:01:04.230
+Và bạn có thể sử dụng ký hiệu tiền tệ 
+riêng nếu muốn.
+
+00:01:04.230 --> 00:01:05.765
+Tiêu đề được viết in hoa tất cả
+
+00:01:05.765 --> 00:01:10.860
+và giá trị thưc tế của giá 
+có cỡ chữ 16 sp và phông chữ màu đen.
+
+00:01:10.860 --> 00:01:14.490
+Có vẻ cho đến lúc này thì vẫn ổn,
+ngoại trừ việc tôi nhận thấy cần phải thêm
+
+00:01:14.490 --> 00:01:18.888
+một chút không gian chiều dọc 
+giữa tiêu đề và giá trị số lượng.
+
+00:01:18.888 --> 00:01:20.400
+Tôi sẽ thay đổi tất cả các view
+
+00:01:20.400 --> 00:01:23.140
+để chúng có lề trên 16dp.
+
+00:01:23.140 --> 00:01:28.110
+Và sau đó thay vì căn lề dưới ở đây,
+Tôi chỉ cần căn lề trên 16,
+
+00:01:28.110 --> 00:01:31.230
+là đã sửa được lỗi này.
+
+00:01:31.230 --> 00:01:32.260
+Tuyệt vời.
+
+00:01:32.260 --> 00:01:34.410
+Bây giờ tất cả các view
+đã được cách đều nhau.
+
+00:01:34.930 --> 00:01:37.550
+Khi bạn nghĩ rằng XML đã ổn rồi,
+thì bạn chỉ cần chạy nó
+
+00:01:37.550 --> 00:01:38.929
+trên thiết bị của bạn.
+
+00:01:40.190 --> 00:01:41.260
+Tuyệt thật, có vẻ tốt.
+
+00:01:42.580 --> 00:01:44.760
+Giờ hãy làm việc trên tập MainActivity.
+
+00:01:44.760 --> 00:01:49.650
+Nếu cửa sổ Android DDMS này bật lên, 
+bạn có thể đi bằng cách dùng mũi tên này.
+
+00:01:49.650 --> 00:01:51.900
+Trong MainActivity, 
+chúng tôi muốn bạn sao chép
+
+00:01:51.900 --> 00:01:55.020
+và dán phương pháp displayPrice
+mà chúng tôi đã cung cấp cho bạn.
+
+00:01:55.510 --> 00:01:58.910
+Hy vọng rằng, bạn cũng đã sửa đổi
+tùy chọn ưu tiên trong Android Studio
+
+00:01:58.910 --> 00:02:02.060
+để tự động nhập vào 
+những giá trị đã rõ ràng
+
+00:02:02.060 --> 00:02:05.260
+Điều đó sẽ giúp giải quyết vấn đề
+không nhận biết được định dạng số
+
+00:02:05.260 --> 00:02:06.340
+được tham chiếu.
+
+00:02:06.340 --> 00:02:09.950
+Nhưng lúc này với câu lệnh nhập giá trị,
+ứng dụng này biết rằng định dạng số
+
+00:02:09.950 --> 00:02:13.890
+được Java cung cấp tự động
+để giúp định dạng các con số.
+
+00:02:13.890 --> 00:02:17.490
+Sau đó ở bước cuối cùng, 
+ta sửa đổi phương pháp submit order,
+
+00:02:17.490 --> 00:02:21.290
+để khi nhấn nút sẽ hiển thị
+số lượng và cũng hiển thị giá.
+

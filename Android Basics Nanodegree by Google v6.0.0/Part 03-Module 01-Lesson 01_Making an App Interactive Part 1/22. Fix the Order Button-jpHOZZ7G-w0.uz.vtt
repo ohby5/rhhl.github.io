@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.240 --> 00:00:02.680
+Bu savolga javob beradigan 
+aniq bir yo‘l yo‘q.
+
+00:00:02.680 --> 00:00:06.151
+Xato ilova holati va 
+to‘g‘ri ilova holati 
+
+00:00:06.151 --> 00:00:09.245
+o‘rtasidagi farqni aniqlash siz 
+uchun eng foydali narsaga bog‘liq.
+
+00:00:09.245 --> 00:00:12.640
+Mana men aytib o‘tmoqchi 
+bo‘lgan narsalar.
+
+00:00:12.640 --> 00:00:15.990
+Ilovaning xato ko‘rinishida, 
+ Order tugmachasini bosganingizda, 
+
+00:00:15.990 --> 00:00:19.990
+miqdor har safar bir xil qiymatga o‘zgaradi, 
+ammo o‘zgarmasligi kerak.
+
+00:00:19.990 --> 00:00:22.320
+Keyin, narx ham ushbu 
+miqdorga to‘g‘ri keldi, 
+
+00:00:22.320 --> 00:00:25.010
+ammo aslida, narx Quantity picker da
+
+00:00:25.010 --> 00:00:28.310
+tanlangan oxirgi miqdor 
+uchun bo‘lishi kerak.
+
+00:00:28.310 --> 00:00:31.570
+Yana, bu miqdor o‘zgarmasligi kerak.
+
+00:00:31.570 --> 00:00:34.230
+Keling, mavjud bo‘lgan kodni 
+holatini ko‘rib chiqaylik.
+
+00:00:35.390 --> 00:00:39.320
+Activity_main layout faylida bizda 
+ Order tugmachasi mavjud.
+
+00:00:39.320 --> 00:00:40.576
+Buyurtma tugmachasi bosilganda, 
+
+00:00:40.576 --> 00:00:43.102
+biz main activity dagi Submitorder 
+deb nomlangan metodni chaqiramiz.
+
+00:00:43.102 --> 00:00:47.890
+ MainActivity.java faylida 
+ SubmitOrder usuli mavjud.
+
+00:00:47.890 --> 00:00:51.030
+Bu, biz hali o‘zgartirmagan avvalgi kod .
+
+00:00:51.030 --> 00:00:54.570
+Biroq, biz butun son o‘zgaruvchisini yaratamiz 
+va uni 5 bilan boshlaymiz.
+
+00:00:54.570 --> 00:00:56.300
+Biz uni ekranda ko‘rsatamiz.
+
+00:00:56.300 --> 00:01:00.610
+Shuningdek, narxni har bir stakan qahva miqdorini 
+5 dollarga ko‘paytirgan holda ko‘rsatamiz.
+
+00:01:00.610 --> 00:01:03.700
+Ushbu kod bizga kerak emas, 
+chunki buyurtma yuborayotganimizda 
+
+00:01:03.700 --> 00:01:06.530
+miqdorni yangilashga 
+harakat qilamiz.
+
+00:01:06.530 --> 00:01:09.411
+Yana bir muammomiz 
+stakanlar sonini 
+
+00:01:09.411 --> 00:01:12.478
+kuzatib boradigan umumiy miqdordagi 
+o‘zgaruvchi bo‘lganda 
+
+00:01:12.478 --> 00:01:13.747
+integer o‘zgaruvchisini yaratishimiz.
+
+00:01:13.747 --> 00:01:18.026
+ MainActivity da biz allaqachon
+umumiy miqdor o‘zgaruvchisiga egamiz,
+
+00:01:18.026 --> 00:01:22.520
+natijada har qanday metod 
+bu o‘zgaruvchiga murojaat etishi mumkin.
+
+00:01:22.520 --> 00:01:27.060
+Ammo, SubmitOrder metodida biz yangi 
+ local miqdor o‘zgaruvchisini yaratamiz.
+
+00:01:27.060 --> 00:01:30.410
+Texnik jihatdan siz global 
+o‘zgaruvchi bilan bir xil nomlangan 
+
+00:01:30.410 --> 00:01:32.200
+ local o‘zgaruvchiga ega bo‘lishingiz mumkin.
+
+00:01:32.200 --> 00:01:34.812
+Bundan shu ko‘rinadiki,
+
+00:01:34.812 --> 00:01:38.581
+ushbu o‘zgaruvchini e’lon qilgach, 
+miqdorga murojaat qilganingizda
+
+00:01:38.581 --> 00:01:41.985
+u aslida 2 ga teng global miqdorga emas, 
+balki 5 ga teng bo‘lgan
+
+00:01:41.985 --> 00:01:44.396
+ local miqdor o‘zgaruvchisiga 
+ishora qiladi.
+
+00:01:44.396 --> 00:01:46.310
+Shunday qilib, display(quantity) va 
+
+00:01:46.310 --> 00:01:51.500
+ displayPrice(quantity *5) 
+ushbu miqdoriy qiymatga tegishlidir.
+
+00:01:51.500 --> 00:01:54.080
+Bu local o‘zgaruvchining 
+faoliyat doirasi.
+
+00:01:54.080 --> 00:01:55.490
+Ushbu doiradan tashqarida,
+
+00:01:55.490 --> 00:01:59.490
+har qachon miqdorga murojaat qilsangiz, 
+bu global miqdor o‘zgaruvchisini anglatadi.
+
+00:01:59.490 --> 00:02:00.330
+Agar siz bu haqda o‘ylasangiz,
+
+00:02:00.330 --> 00:02:03.430
+buyrug‘ingizni kiritish paytida 
+siz yangi miqdor yaratib,
+
+00:02:03.430 --> 00:02:07.040
+keyin uni ekranda ko‘rsatishingiz 
+ma’noga ega emas.
+
+00:02:07.040 --> 00:02:10.370
+Siz chindan ham xohlagan jarayon biz hisoblangan 
+
+00:02:10.370 --> 00:02:14.900
+miqdordan foydalanib, kofe 
+sonini ko‘paytirib va kamaytiramiz.
+
+00:02:14.900 --> 00:02:18.040
+So‘ngra, o‘z narximizni hisoblashimiz kerak.
+
+00:02:18.040 --> 00:02:22.070
+Kodni tuzatish uchun biz local miqdor 
+o‘zgaruvchisini e’lon qilmaymiz.
+
+00:02:22.070 --> 00:02:25.130
+o‘rniga biz global 
+miqdor o‘zgaruvchisidan foydalanishimiz kerak.
+
+00:02:25.130 --> 00:02:28.550
+Ekrandagi miqdorni yangilashga 
+urinishni to‘xtatamiz
+
+00:02:28.550 --> 00:02:31.270
+Plyus va minus tugmachalari 
+tegishli miqdordagi qiymat bilan
+
+00:02:31.270 --> 00:02:33.520
+ekranni yangilash bilan shug‘ullanadi.
+
+00:02:33.520 --> 00:02:37.570
+Ammo biz SubmitOrder tugmasi 
+narxni yangilashini xohlaymiz.
+
+00:02:37.570 --> 00:02:41.600
+Biroq bu safar biz narxni 
+ global o‘zgaruvchidan foydalanib
+
+00:02:41.600 --> 00:02:43.990
+* 5 miqdorida hisoblaymiz.
+
+00:02:43.990 --> 00:02:47.720
+Men kodni yangilayman, shunda 
+u biz aytganlarni ko‘rsatadi.
+
+00:02:47.720 --> 00:02:50.860
+E’tibor bering, miqdor o‘zgaruvchisi 
+binafsha rangida ko‘rsatilgan,
+
+00:02:50.860 --> 00:02:54.030
+bu MainActivity da global miqdor 
+o‘zgaruvchisidan foydalanayotganimizni anglatadi.
+
+00:02:54.030 --> 00:02:57.940
+Tugma bosilganda, SubmitOrder 
+metodi ishga tushadi.
+
+00:02:57.940 --> 00:02:59.580
+narxni global 
+miqdor o‘zgaruvchisidek 
+
+00:02:59.580 --> 00:03:03.934
+5 martagacha hisoblanadigan 
+ekranda ko‘rsatadi.
+
+00:03:04.970 --> 00:03:06.670
+Bu to‘g‘riga o‘xshaydi, shuning uchun 
+keling qurilmamizda ishga tushiramiz.
+
+00:03:07.680 --> 00:03:09.530
+Yaxshi, endi yakuniy sinov uchun.
+
+00:03:09.530 --> 00:03:13.660
+Men miqdorni 6 ga o‘zgartiraman, 
+va Order tugmasini bosaman, 
+
+00:03:13.660 --> 00:03:14.510
+shunda miqdor 30 dollarni tashkil etadi.
+
+00:03:14.510 --> 00:03:17.630
+Bu tasodifiy emasligini bilish uchun 
+boshqa qiymatlarni sinab ko‘raman.
+
+00:03:17.630 --> 00:03:18.958
+To‘g‘ri ko‘rinadi.
+
+00:03:18.958 --> 00:03:22.600
+Ajoyib!
+
+00:03:22.600 --> 00:03:24.310
+Siz birinchi xatoyingizni to‘g‘riladingiz.
+
+00:03:24.310 --> 00:03:26.400
+Siz vazifani juda yaxshi bajardingiz.
+
+00:03:26.400 --> 00:03:28.970
+Ilovamizning funksionalligi 
+juda yaxshi ishlaydi.
+
+00:03:28.970 --> 00:03:32.280
+Biroq tan olish kerak, UI biroz chalkash.
+
+00:03:32.280 --> 00:03:35.800
+Xususan, the quantity picker ba’zi bir 
+foydalanuvchi interfeysidan foydalanishi mumkin, 
+
+00:03:35.800 --> 00:03:36.740
+shuning uchun keling undan keyin foydalanamiz.
+

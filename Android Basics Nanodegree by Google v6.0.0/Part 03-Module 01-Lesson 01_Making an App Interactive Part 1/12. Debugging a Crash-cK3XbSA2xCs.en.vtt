@@ -1,0 +1,382 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.330
+Crashing an app is when it unexpectedly quits and
+
+00:00:03.330 --> 00:00:06.650
+shows the dialogue message saying that the app has just stopped.
+
+00:00:06.650 --> 00:00:09.000
+It happens to Android developers many,
+
+00:00:09.000 --> 00:00:10.170
+many times a day,
+
+00:00:10.170 --> 00:00:11.880
+even the most experienced ones.
+
+00:00:11.880 --> 00:00:16.260
+Sometimes the problem is due to a typo in their code or a silly mistake.
+
+00:00:16.260 --> 00:00:18.285
+Other times, it can be due to
+
+00:00:18.285 --> 00:00:22.755
+a fundamental misunderstanding of how to write the code for a certain feature.
+
+00:00:22.755 --> 00:00:24.880
+While your reaction may be to panic,
+
+00:00:24.880 --> 00:00:27.150
+the voice of reason inside your head should
+
+00:00:27.150 --> 00:00:29.835
+tell you to go ahead and try to debug the app.
+
+00:00:29.835 --> 00:00:33.720
+In this video, we're going to learn how to debug Android app crashes.
+
+00:00:33.720 --> 00:00:38.670
+To debug means to identify and fix bugs or errors in your app.
+
+00:00:38.670 --> 00:00:41.970
+If it's a really obvious error like a Java syntax error,
+
+00:00:41.970 --> 00:00:45.030
+then Android Studio can catch that for you and show
+
+00:00:45.030 --> 00:00:48.660
+a red error before it tries to install the app on your phone.
+
+00:00:48.660 --> 00:00:51.540
+This is called a compile time error because it will fail
+
+00:00:51.540 --> 00:00:54.660
+to create any app to even install on your device.
+
+00:00:54.660 --> 00:00:57.390
+If you want to try and creating a compile time error,
+
+00:00:57.390 --> 00:00:59.820
+go ahead and delete this parentheses or
+
+00:00:59.820 --> 00:01:02.940
+the semicolon and then you'll see the error pop-up.
+
+00:01:02.940 --> 00:01:06.640
+This is like in lesson one when we tried to create an XML error
+
+00:01:06.640 --> 00:01:11.365
+intentionally and then we read the error message and then we undid that change.
+
+00:01:11.365 --> 00:01:15.265
+Other potential errors are if I try to delete this opening brace,
+
+00:01:15.265 --> 00:01:20.920
+then I'll get an error, or if I forget this closing brace then I also get an error.
+
+00:01:20.920 --> 00:01:24.790
+But sometimes the error only happens when you start using the app.
+
+00:01:24.790 --> 00:01:28.885
+This is called a runtime error because it happens when your app is running.
+
+00:01:28.885 --> 00:01:31.150
+Let's intentionally create a crash in
+
+00:01:31.150 --> 00:01:33.775
+the app and figure out the steps of how to solve it,
+
+00:01:33.775 --> 00:01:35.335
+so when you have a real crash,
+
+00:01:35.335 --> 00:01:37.270
+you'll know how to tackle it on your own.
+
+00:01:37.270 --> 00:01:41.230
+This is actually based off of a real crash that I saw a student encounter,
+
+00:01:41.230 --> 00:01:43.400
+so it's very likely to happen to beginners.
+
+00:01:43.400 --> 00:01:45.245
+I'll first walk you through all the steps
+
+00:01:45.245 --> 00:01:47.630
+and then you'll have a chance to do it yourself.
+
+00:01:47.630 --> 00:01:50.345
+To intentionally create a crash in the app,
+
+00:01:50.345 --> 00:01:53.270
+I'm going to modify the MainActivity. Java file.
+
+00:01:53.270 --> 00:01:57.815
+I'll change the name of this method to be submit orders with a s,
+
+00:01:57.815 --> 00:01:59.915
+then I'm going to run it on the device.
+
+00:01:59.915 --> 00:02:05.480
+Everything looks fine first but then when I click on the Order button, it crashes.
+
+00:02:05.480 --> 00:02:08.780
+It gives me the message, Unfortunately, the app name,
+
+00:02:08.780 --> 00:02:10.430
+Just Java has stopped,
+
+00:02:10.430 --> 00:02:14.135
+and the only option that I have is to hit okay to exit the app.
+
+00:02:14.135 --> 00:02:19.015
+Fortunately, we can use Android Studio to figure out what actually happened.
+
+00:02:19.015 --> 00:02:21.265
+When you run the app on your device,
+
+00:02:21.265 --> 00:02:25.605
+you may see this Android DDMS window pop up at the bottom of the screen.
+
+00:02:25.605 --> 00:02:28.810
+This shows you information to monitor your Android device,
+
+00:02:28.810 --> 00:02:31.120
+all the stuff that goes on behind the scenes,
+
+00:02:31.120 --> 00:02:32.650
+that users don't see.
+
+00:02:32.650 --> 00:02:34.000
+If it's not already open,
+
+00:02:34.000 --> 00:02:36.130
+you can click on this tab down here that says Android,
+
+00:02:36.130 --> 00:02:38.600
+and that should open up Android DDMS for you.
+
+00:02:38.600 --> 00:02:42.535
+You can adjust the height of this window by dragging this arrow.
+
+00:02:42.535 --> 00:02:44.425
+If you drag this arrow to the right,
+
+00:02:44.425 --> 00:02:47.350
+then you'll see a list of devices that are connected to the computer.
+
+00:02:47.350 --> 00:02:50.095
+Right now I only have my Nexus 6 connected.
+
+00:02:50.095 --> 00:02:52.810
+And I also opened up the Just Java app again,
+
+00:02:52.810 --> 00:02:54.670
+so that's why it's listed here.
+
+00:02:54.670 --> 00:02:56.800
+Let me drag this to the left again,
+
+00:02:56.800 --> 00:02:59.110
+so I have more space to see the logs.
+
+00:02:59.110 --> 00:03:02.620
+This right hand side is where the log messages are shown.
+
+00:03:02.620 --> 00:03:05.410
+If you click on this drop down and say no filters,
+
+00:03:05.410 --> 00:03:09.655
+then it shows you the log messages for the whole system and other apps.
+
+00:03:09.655 --> 00:03:12.820
+It talks about things like activity manager,
+
+00:03:12.820 --> 00:03:17.245
+audio, sound, microphone and all these other things.
+
+00:03:17.245 --> 00:03:22.480
+A system log is like a diary that your phone keeps about what's happening on the device.
+
+00:03:22.480 --> 00:03:24.730
+We also call it Logcat.
+
+00:03:24.730 --> 00:03:26.815
+If you Google for what is Logcat,
+
+00:03:26.815 --> 00:03:30.670
+then a definition pops up from the Android developers webpage.
+
+00:03:30.670 --> 00:03:32.710
+It talks about how Logcat is Android
+
+00:03:32.710 --> 00:03:36.955
+logging system where you can collect and view debug output.
+
+00:03:36.955 --> 00:03:41.800
+Going back to the logs, the most recent events happen at the very bottom here.
+
+00:03:41.800 --> 00:03:43.840
+So, if you want to look back in time,
+
+00:03:43.840 --> 00:03:46.700
+you may have to scroll up to see what you're looking for.
+
+00:03:46.700 --> 00:03:51.340
+Let's change the filter back to our app Just Java.
+
+00:03:51.340 --> 00:03:54.100
+This significantly narrows down the amount of
+
+00:03:54.100 --> 00:03:56.890
+log messages that are just relevant to our app,
+
+00:03:56.890 --> 00:03:59.080
+this makes it a lot easier to read.
+
+00:03:59.080 --> 00:04:01.210
+When a crash happens on the device,
+
+00:04:01.210 --> 00:04:05.470
+the description of what the phone was trying to do gets printed to the logs.
+
+00:04:05.470 --> 00:04:08.095
+Here's our crash in the red text color.
+
+00:04:08.095 --> 00:04:10.090
+This is known as looking at the stack trace,
+
+00:04:10.090 --> 00:04:13.450
+because it traces back to where the error originated from.
+
+00:04:13.450 --> 00:04:16.420
+We know that it's our app because it's our process,
+
+00:04:16.420 --> 00:04:19.435
+which is com.example.android.just.java.
+
+00:04:19.435 --> 00:04:22.570
+For our app, the process name matches the package name,
+
+00:04:22.570 --> 00:04:24.130
+but it doesn't always have to match.
+
+00:04:24.130 --> 00:04:26.555
+We haven't really learned about processes,
+
+00:04:26.555 --> 00:04:30.650
+but essentially this is just identifying that this is our app.
+
+00:04:30.650 --> 00:04:34.385
+Now, there's a lot of text in this stack trace and you don't have to read all of it.
+
+00:04:34.385 --> 00:04:36.410
+We just want to scan for the information that
+
+00:04:36.410 --> 00:04:38.810
+would be relevant to help us solve our problem.
+
+00:04:38.810 --> 00:04:41.780
+We should look for anything in the stack trace that's talking
+
+00:04:41.780 --> 00:04:45.410
+about either the methods or the files that we're working on.
+
+00:04:45.410 --> 00:04:49.250
+So, we'll keep a lookout for the file name MainActivity.
+
+00:04:49.250 --> 00:04:51.740
+So, let's start reading the error message.
+
+00:04:51.740 --> 00:04:53.615
+I skip over this part and just read
+
+00:04:53.615 --> 00:04:57.920
+IllegalStateException could not find a method SubmitOrder.
+
+00:04:57.920 --> 00:05:03.380
+The error message goes on to further explain why it wasn't an invalid state.
+
+00:05:03.380 --> 00:05:08.325
+And the reason is because it could not find a method SubmitOrder in the activity
+
+00:05:08.325 --> 00:05:13.465
+MainActivity for the onClick handler on the view class button.
+
+00:05:13.465 --> 00:05:17.545
+There's a lot of words in that sentence and it may not make a lot of sense,
+
+00:05:17.545 --> 00:05:19.735
+but there's a couple of good clues here.
+
+00:05:19.735 --> 00:05:22.780
+Inventions button and we only have one button in our app,
+
+00:05:22.780 --> 00:05:26.275
+so we can assume that it's probably related to that button.
+
+00:05:26.275 --> 00:05:31.839
+Then it talks about not being able to find a method SubmitOrder in the activity.
+
+00:05:31.839 --> 00:05:33.640
+Looking back at our button code,
+
+00:05:33.640 --> 00:05:36.489
+we did specify that when the button is pressed,
+
+00:05:36.489 --> 00:05:38.710
+it should trigger a method called SubmitOrder,
+
+00:05:38.710 --> 00:05:40.055
+so let's look at that now.
+
+00:05:40.055 --> 00:05:46.005
+I'm going to drag the DDMS window down and open up our activity_main.xml file.
+
+00:05:46.005 --> 00:05:48.705
+So here is the button XML element,
+
+00:05:48.705 --> 00:05:54.015
+and indeed we said android:onClick should trigger the methods submitOrder.
+
+00:05:54.015 --> 00:05:56.280
+If I go back into the main activity,
+
+00:05:56.280 --> 00:05:59.535
+then I see that submitOrder is no longer a method,
+
+00:05:59.535 --> 00:06:01.800
+instead we changed it to submitOrders,
+
+00:06:01.800 --> 00:06:03.915
+so that's why the problem is happening.
+
+00:06:03.915 --> 00:06:06.555
+If I go ahead and erase that extra s,
+
+00:06:06.555 --> 00:06:11.670
+now there's a submitOrder method in the main activity and the app should work again.
+
+00:06:11.670 --> 00:06:14.370
+When I run the app again and I hit the Order button,
+
+00:06:14.370 --> 00:06:16.605
+then the app doesn't crash anymore.
+
+00:06:16.605 --> 00:06:19.200
+Go ahead and try to create this crash in
+
+00:06:19.200 --> 00:06:22.485
+your app by changing the name of the submitOrder method,
+
+00:06:22.485 --> 00:06:27.570
+then check the logs for the stack trace and then read the error message carefully.
+
+00:06:27.570 --> 00:06:31.170
+Then go ahead and fix the errors that your app works again.
+
+00:06:31.170 --> 00:06:33.640
+Check this box when you're done
+

@@ -1,0 +1,332 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.150 --> 00:00:04.000
+Untuk membuat &lt;i&gt;layout&lt;/i&gt; ini,
+saya membuka fail activity_main.xml.
+
+00:00:04.433 --> 00:00:06.475
+Saya tahu saya butuh
+LinearLayout vertikal
+
+00:00:06.475 --> 00:00:09.219
+untuk meletakkan setiap tampilan ini
+dalam kolom vertikal.
+
+00:00:09.219 --> 00:00:12.615
+Pertama, saya akan mengubah
+RelativeLayout menjadi LinearLayout.
+
+00:00:12.615 --> 00:00:14.227
+Ini segera menampilkan kesalahan
+
+00:00:14.227 --> 00:00:17.747
+bahwa &lt;i&gt;tag&lt;/i&gt; pembuka tidak cocok
+dengan &lt;i&gt;tag&lt;/i&gt; penutup.
+
+00:00:17.747 --> 00:00:20.655
+Saya bisa menyalin ini
+dan merekatkannya di bawah sini.
+
+00:00:20.655 --> 00:00:21.950
+Sekarang &lt;i&gt;tag&lt;/i&gt;-nya cocok.
+
+00:00:21.950 --> 00:00:23.764
+Lalu saya bisa
+menambahkan tampilannya.
+
+00:00:23.774 --> 00:00:25.513
+Pertama, ada TextView "Quantity".
+
+00:00:25.513 --> 00:00:29.587
+Saya akan mengambil TextView ini
+dan mengganti teksnya menjadi "Quantity".
+
+00:00:29.587 --> 00:00:31.752
+Berikutnya, ada TextView
+yang bertuliskan "0".
+
+00:00:31.752 --> 00:00:34.840
+Saya bisa menyalin TextView pertama
+dan merekatkannya di bawahnya.
+
+00:00:34.840 --> 00:00:38.268
+Saya akan ganti teksnya menjadi "0"
+agar cocok dengan cuplikan layar ini.
+
+00:00:38.268 --> 00:00:41.302
+Anak terakhir dalam LinearLayout ini
+adalah tombol.
+
+00:00:41.302 --> 00:00:44.730
+Kita belum pernah menambahkan tombol
+dalam &lt;i&gt;layout&lt;/i&gt;. Mari cari di Google.
+
+00:00:44.730 --> 00:00:47.967
+Jika membuka peramban,
+Anda bisa mencari "button android".
+
+00:00:47.967 --> 00:00:51.786
+Taut pertama ini tampak bagus.
+Ini situs developer.android.com.
+
+00:00:52.376 --> 00:00:56.493
+Ini dokumentasi untuk tombol. Kita bisa
+mengabaikan mayoritas teks di sini.
+
+00:00:56.493 --> 00:00:59.013
+Kita gulirkan ke bawah
+untuk membaca Class Overview.
+
+00:00:59.013 --> 00:01:02.691
+Ini membahas sedikit tentang kode Java
+yang belum kita pelajari.
+
+00:01:02.691 --> 00:01:06.122
+Namun di bawah sini, ada XML untuk tombol.
+
+00:01:06.122 --> 00:01:09.014
+Kita bisa menyalin ini dan melihat
+pengaruhnya pada kode.
+
+00:01:09.014 --> 00:01:12.589
+Dalam &lt;i&gt;layout&lt;/i&gt;, saya akan menambahkan
+tombol di bawah kedua TextView ini.
+
+00:01:12.589 --> 00:01:15.773
+Saya akan merekatkan kode
+dari dokumentasi tadi di sini.
+
+00:01:15.773 --> 00:01:18.008
+Sekarang, alih-alih &lt;i&gt;string&lt;/i&gt; self_destruct,
+
+00:01:18.008 --> 00:01:22.094
+saya akan memilih
+yang lebih bersahabat, seperti "Order".
+
+00:01:22.094 --> 00:01:24.734
+Baris terakhir ini juga bisa dihapus
+karena tidak perlu.
+
+00:01:24.734 --> 00:01:29.630
+Bagus, sekarang Anda punya TextView "0"
+dan "Quantity" serta tombol Order.
+
+00:01:30.129 --> 00:01:32.078
+Jalankan di aplikasi
+untuk lihat hasilnya
+
+00:01:32.078 --> 00:01:34.365
+dengan mengeklik
+tombol putar berwarna hijau ini.
+
+00:01:34.365 --> 00:01:37.035
+Di bawah, kita bisa melihat
+aplikasinya sedang dibuat.
+
+00:01:37.624 --> 00:01:38.970
+Bukan ini yang kita mau.
+
+00:01:38.970 --> 00:01:43.311
+Tampaknya, LinearLayout kita
+adalah horizontal, bukan vertikal.
+
+00:01:43.311 --> 00:01:46.994
+Jadi, pastikan kita menambahkan
+atribut orientasi.
+
+00:01:47.696 --> 00:01:51.890
+Kita akan mengubah ini
+dengan android:orientation="vertical".
+
+00:01:51.890 --> 00:01:53.433
+Itu akan memecahkan masalah ini.
+
+00:01:53.433 --> 00:01:55.000
+Kita klik Run lagi.
+
+00:01:55.325 --> 00:01:56.868
+Itu lebih baik.
+
+00:01:56.868 --> 00:02:00.054
+Ketiga anak ini ditampilkan
+dalam kolom vertikal.
+
+00:02:00.054 --> 00:02:01.583
+Sekarang tinggal mempercantiknya
+
+00:02:01.583 --> 00:02:04.676
+agar lebih mirip
+dengan cuplikan layar yang tersedia.
+
+00:02:05.087 --> 00:02:08.919
+Dari cuplikan layar ini, kita melihat
+TextView "Quantity" berhuruf besar.
+
+00:02:09.428 --> 00:02:13.689
+Di Pelajaran 1, kita mempelajari atribut
+yang disebut android:textAllCaps.
+
+00:02:13.689 --> 00:02:16.049
+Atribut itu muncul
+dalam &lt;i&gt;autocomplete&lt;/i&gt; ini.
+
+00:02:16.049 --> 00:02:18.095
+Jika muncul seperti ini,
+tinggal tekan &lt;i&gt;enter&lt;/i&gt;
+
+00:02:18.095 --> 00:02:20.771
+dan ini akan otomatis
+ditambahkan pada kode.
+
+00:02:21.223 --> 00:02:24.798
+Kita buat nilainya "&lt;i&gt;true&lt;/i&gt;"
+karena kita ingin huruf besar semua.
+
+00:02:24.798 --> 00:02:28.424
+Lebih baik menggunakan atribut ini
+untuk menulis teks dengan huruf besar
+
+00:02:28.424 --> 00:02:30.581
+karena antarmuka pengguna ingin diubah
+
+00:02:30.581 --> 00:02:33.166
+agar "Quantity" ditulis
+dengan huruf kecil seperti ini,
+
+00:02:33.166 --> 00:02:37.806
+kita tinggal menghapus atribut ini
+alih-alih mengubah teksnya.
+
+00:02:37.806 --> 00:02:42.696
+Berikutnya, untuk teks "0", kita harus
+menggunakan ukuran teks 16 sp.
+
+00:02:42.696 --> 00:02:45.721
+Saya tambahkan sekarang.
+Ini muncul di saran &lt;i&gt;autocomplete&lt;/i&gt;.
+
+00:02:45.721 --> 00:02:50.444
+Jadi, saya tekan &lt;i&gt;enter&lt;/i&gt; saja,
+lalu saya memilih 16 sp untuk nilainya.
+
+00:02:50.444 --> 00:02:53.002
+Kita juga ingin warna hurufnya hitam.
+
+00:02:53.002 --> 00:02:57.156
+Saya akan menggunakan warna sistem Android
+untuk hitam yang ditulis seperti ini.
+
+00:02:57.156 --> 00:03:00.665
+Bagus, itu menyelesaikan
+TextView "Quantity" dan "0".
+
+00:03:00.665 --> 00:03:02.619
+Tombol Order-nya sudah bagus.
+
+00:03:02.619 --> 00:03:06.352
+Ini akan otomatis membuat
+teks dalam tombolnya berhuruf besar.
+
+00:03:06.352 --> 00:03:08.661
+Tinggi dan lebarnya &lt;i&gt;wrap_content&lt;/i&gt;.
+
+00:03:08.661 --> 00:03:11.653
+Namun kita harus menyelesaikan
+ruang vertikal ini.
+
+00:03:11.653 --> 00:03:14.341
+Kita menginginkan &lt;i&gt;padding&lt;/i&gt;
+atau &lt;i&gt;margin&lt;/i&gt; sebesar 16dp
+
+00:03:14.341 --> 00:03:17.030
+antara TextView "Quantity" dan "0".
+
+00:03:17.030 --> 00:03:21.297
+Kita juga menginginkan &lt;i&gt;padding&lt;/i&gt; 16 dp
+antara "0" dan tombol Order.
+
+00:03:21.297 --> 00:03:23.678
+Anda dapat menerapkan ini
+dalam berbagai cara.
+
+00:03:23.678 --> 00:03:25.985
+Saya hanya akan menambahkannya
+
+00:03:25.985 --> 00:03:28.605
+sebagai &lt;i&gt;layout margin&lt;/i&gt; atas
+untuk tombol ini.
+
+00:03:31.195 --> 00:03:35.353
+Saya akan tambahkan sebagai &lt;i&gt;margin&lt;/i&gt; bawah
+untuk TextView "Quantity" ini.
+
+00:03:37.583 --> 00:03:40.595
+Silakan melakukannya dengan cara lain
+selama tampilannya sama.
+
+00:03:40.595 --> 00:03:43.092
+Penyebab saya memilih
+&lt;i&gt;margin&lt;/i&gt; bawah dan &lt;i&gt;margin&lt;/i&gt; atas
+
+00:03:43.092 --> 00:03:46.874
+adalah karena saya tahu
+area tengah ini akan berubah nantinya.
+
+00:03:46.874 --> 00:03:50.364
+Kita akan menjadikannya pemilih kuantitas
+dengan tombol plus dan minus.
+
+00:03:50.364 --> 00:03:53.338
+Saya juga masih
+menginginkan jarak 16 dp
+
+00:03:53.338 --> 00:03:56.503
+antara "Quantity", judul,
+dan pemilih kuantitas.
+
+00:03:56.503 --> 00:03:58.410
+Begitu pula dengan tombol ini.
+
+00:03:58.410 --> 00:04:01.054
+Mari kita jalankan lagi sekarang
+pada perangkat kita.
+
+00:04:01.054 --> 00:04:03.192
+Bagus, dan ini persis
+seperti yang kita mau.
+
+00:04:03.192 --> 00:04:05.616
+TextView "Quantity" ditulis
+dengan huruf besar,
+
+00:04:05.616 --> 00:04:09.999
+TextView "0" menggunakan
+huruf 16 sp berwarna hitam,
+
+00:04:09.999 --> 00:04:11.501
+dan ada tombol Order di sini.
+
+00:04:11.501 --> 00:04:15.085
+Juga ada jarak 16 dp
+antara tampilan-tampilan ini.
+
+00:04:15.577 --> 00:04:16.796
+Bagus.
+
+00:04:16.796 --> 00:04:19.171
+Saya hampir lupa.
+Dalam kuis juga ada pertanyaan,
+
+00:04:19.171 --> 00:04:21.439
+apa yang terjadi saat tombol ini diklik?
+
+00:04:21.439 --> 00:04:25.650
+Tidak terjadi apa-apa,
+setidaknya untuk sekarang.
+
+00:04:25.650 --> 00:04:28.515
+Terus saksikan untuk ketahui
+apa yang terjadi berikutnya
+

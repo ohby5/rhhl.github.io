@@ -1,0 +1,436 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.430 --> 00:00:03.250
+Çökme, bir uygulamanın beklenmeyen
+bir anda kapanması ve
+
+00:00:03.250 --> 00:00:06.260
+uygulama durdu şeklinde
+bir mesaj göstermesidir.
+
+00:00:06.960 --> 00:00:10.320
+Android geliştiriciler gün içinde
+defalarca bununla karşılaşır.
+
+00:00:10.320 --> 00:00:11.990
+En deneyimli olanları bile.
+
+00:00:11.990 --> 00:00:16.400
+Bazen problem kodlarındaki bir yazım hatasından
+veya aptalca bir hatadan kaynaklanır.
+
+00:00:16.400 --> 00:00:20.250
+Diğer zamanlarda ise bunun nedeni
+belirli bir özelliğin kodunun
+
+00:00:20.250 --> 00:00:23.010
+nasıl yazılacağının
+yanlış anlaşılması olabiliyor.
+
+00:00:23.010 --> 00:00:26.910
+Panik bir tepki verebilirsiniz
+ama mantığınız size
+
+00:00:26.910 --> 00:00:30.200
+hata ayıklama yapmanızı söylemelidir.
+
+00:00:30.200 --> 00:00:33.900
+Bu videoda, Android uygulaması çökmelerine
+nasıl hata ayıklama yapılacağını öğreneceğiz.
+
+00:00:33.900 --> 00:00:38.910
+Hata ayıklama demek, uygulamadaki hataları
+tanımlama ve onarmak demektir.
+
+00:00:38.910 --> 00:00:42.050
+Eğer java sözdizimi hatası gibi
+çok aşikar bir hataysa
+
+00:00:42.050 --> 00:00:44.660
+Android Studio bunu yakalar ve
+
+00:00:44.660 --> 00:00:48.870
+uygulama telefonunuza
+yüklenmeden önce kırmızı bir hata verir.
+
+00:00:48.870 --> 00:00:52.480
+Buna derleme zamanı hatası denir
+çünkü uygulama oluşturmayı,
+
+00:00:52.480 --> 00:00:54.580
+hatta cihazınıza yüklemeyi bile başaramaz.
+
+00:00:55.170 --> 00:00:58.140
+Eğer derleme zamanı hatası
+oluşturmak istiyorsanız
+
+00:00:58.140 --> 00:01:02.380
+bu parantezleri veya bu noktalı virgülü
+silin ve sonra hatayı göreceksiniz.
+
+00:01:03.370 --> 00:01:07.710
+Bu, ilk derste bilerek XML hatası
+yaratmaya çalışmamız gibi.
+
+00:01:07.710 --> 00:01:10.760
+Sonra hata mesajını okuyup
+değişikliği geri almıştık.
+
+00:01:11.810 --> 00:01:15.700
+Eğer bu açık çengelli parantezi
+silersem hata alırım
+
+00:01:15.700 --> 00:01:20.220
+veya eğer parantezi kapamayı
+unutsam da hata alırım.
+
+00:01:21.390 --> 00:01:25.140
+Fakat bazen hata sadece uygulamayı
+kullanmaya başlayınca meydana gelir.
+
+00:01:25.140 --> 00:01:28.270
+Buna "Run Time Error" denir çünkü
+uygulamanız çalışırken meydana gelir.
+
+00:01:29.370 --> 00:01:31.940
+Uygulamada kasti bir çökme oluşturalım ve
+
+00:01:31.940 --> 00:01:35.390
+çözüm basamaklarını düşünelim ki
+gerçek bir çökme ile karşılaştığınızda
+
+00:01:35.390 --> 00:01:37.510
+kendi başınıza nasıl halledeceğinizi bilin.
+
+00:01:37.510 --> 00:01:41.330
+Bu aslında bir öğrencinin karşılaştığı
+bir çökme temel alınarak yapıldı.
+
+00:01:41.330 --> 00:01:43.520
+Yani yeni başlayanlar
+bununla karşılaşabilir.
+
+00:01:43.520 --> 00:01:45.410
+İlk önce ben adım adım göstereceğim ve
+
+00:01:45.410 --> 00:01:47.159
+sonra size yapma fırsatı vereceğim.
+
+00:01:47.990 --> 00:01:50.450
+Uygulamada kasti bir hata oluşturmak için
+
+00:01:50.450 --> 00:01:53.470
+MainActivity java dosyasını değiştireceğim.
+
+00:01:53.470 --> 00:01:58.090
+Bu metodun ismini s ekleyerek
+submitOrders olarak değiştireceğim.
+
+00:01:58.090 --> 00:02:00.070
+Sonra cihazda çalıştıracağım.
+
+00:02:00.070 --> 00:02:02.130
+İlk bakışta her şey iyi gözüküyor fakat
+
+00:02:02.130 --> 00:02:04.800
+Sipariş düğmesine tıkladığımda, çöküyor.
+
+00:02:06.000 --> 00:02:10.500
+Şöyle bir mesaj veriyor:
+Uygulama adı Just Java durdu.
+
+00:02:10.500 --> 00:02:13.110
+Tek seçeneğim Tamam diyerek çıkmak.
+
+00:02:14.840 --> 00:02:18.190
+Neyse ki, Android Studio kullanarak
+ne olduğunu bulabiliriz.
+
+00:02:19.660 --> 00:02:21.330
+Uygulamayı cihazınızda çalıştırdığınızda
+
+00:02:21.330 --> 00:02:25.860
+en alttan Android DDMS penceresinin
+çıktığını görebilirsiniz.
+
+00:02:25.860 --> 00:02:28.990
+Bu size Android cihazınızı izlemeniz için
+bilgiler gösteriyor.
+
+00:02:28.990 --> 00:02:32.980
+Yani kullanıcıların görmediği ve
+sahne arasında olan biten her şeyi.
+
+00:02:32.980 --> 00:02:36.230
+Eğer açık değilse, Android yazan
+bu sekmeye tıklarsanız
+
+00:02:36.230 --> 00:02:38.970
+sizin için Android DDMS'i açacaktır.
+
+00:02:38.970 --> 00:02:41.930
+Bu oku sürükleyerek pencere
+yüksekliğini ayarlayabilirsiniz.
+
+00:02:42.938 --> 00:02:44.480
+Eğer oku sağa sürüklerseniz
+
+00:02:44.480 --> 00:02:47.450
+bilgisayarınıza bağlı olan
+cihazların listesi göreceksiniz.
+
+00:02:47.450 --> 00:02:49.460
+Şu anda sadece Nexus 6 bağlı.
+
+00:02:49.460 --> 00:02:53.940
+Ve ayrıca Just Java uygulamasını tekrar
+açtığım için o da listede gözüküyor.
+
+00:02:55.190 --> 00:02:59.185
+Bunu tekrar sola sürükleyeyim ki
+logları görebilecek yer açılsın.
+
+00:02:59.185 --> 00:03:02.850
+Sağ tarafta log mesajları gösteriliyor.
+
+00:03:02.850 --> 00:03:05.380
+Bu açılır menüye tıklar ve
+filtre yok seçerseniz
+
+00:03:05.380 --> 00:03:08.750
+tüm sistem ve diğer uygulamalara ait
+log mesajlarını gösterecektir.
+
+00:03:10.440 --> 00:03:14.850
+Aktivite yönetici, ses, mikrofon
+
+00:03:14.850 --> 00:03:17.470
+ve diğer şeylerden bahseder.
+
+00:03:17.470 --> 00:03:22.050
+Sistem logu bir nevi telefonun cihazda
+meydana gelen şeyleri tuttuğu bir günlük.
+
+00:03:22.850 --> 00:03:25.150
+Buna logcat de diyoruz.
+
+00:03:25.150 --> 00:03:27.070
+Eğer Google'da logcat araması yaparsanız
+
+00:03:27.070 --> 00:03:30.840
+Android Geliştiricileri websitesinde
+bir tanım karşınıza çıkar.
+
+00:03:30.840 --> 00:03:33.380
+Logcat'in nasıl Android log
+sistemi olduğundan,
+
+00:03:33.380 --> 00:03:36.840
+hata ayıklama çıktısını nerede biriktirip
+görebileceğinizden bahsediyor.
+
+00:03:37.480 --> 00:03:42.170
+Loglara dönersek, en son olaylar
+bu en altta meydana gelir.
+
+00:03:42.170 --> 00:03:43.790
+Eğer zamanda geri gitmek isterseniz
+
+00:03:43.790 --> 00:03:46.940
+aradığınıza bakmak için
+yukarı kaydırmanız gerekebilir.
+
+00:03:46.940 --> 00:03:51.660
+Filtreyi uygulamamıza getirelim, Just Java.
+
+00:03:51.660 --> 00:03:55.140
+Bu, uygulamamızla ilgili
+log mesajları miktarını
+
+00:03:55.140 --> 00:03:56.850
+önemli ölçüde azaltıyor.
+
+00:03:56.850 --> 00:03:58.430
+Okumayı daha da kolaylaştırır.
+
+00:03:59.480 --> 00:04:01.260
+Cihazda bir çökme meydana geldiğinde
+
+00:04:01.260 --> 00:04:05.720
+telefonun yapmaya çalıştığı açıklama
+loglara basılır.
+
+00:04:05.720 --> 00:04:07.410
+İşte çökmemiz kırmızı renkte görünüyor.
+
+00:04:08.480 --> 00:04:10.140
+Bu yığın izlemeye bakmak
+olarak bilinir
+
+00:04:10.140 --> 00:04:13.840
+çünkü hatanın neden kaynaklandığını
+başından beri takip eder.
+
+00:04:13.840 --> 00:04:16.550
+Bizim uygulamamız olduğunu biliyoruz
+çünkü bizim işlemimiz,
+
+00:04:16.550 --> 00:04:19.560
+com.example.android.justjava.
+
+00:04:19.560 --> 00:04:22.730
+Uygulamamız için, işlem adı ile
+paket adı eşleşiyor fakat
+
+00:04:22.730 --> 00:04:24.440
+her zaman böyle olmak zorunda değil.
+
+00:04:24.440 --> 00:04:26.560
+İşlemler hakkında bir şey öğrenmedik
+
+00:04:26.560 --> 00:04:30.730
+fakat özet olarak, bunun bizim
+uygulamamız olduğunu tanımlıyor.
+
+00:04:30.730 --> 00:04:32.640
+Şimdi, yığın izlemede
+birçok yazı var
+
+00:04:32.640 --> 00:04:34.488
+ve hepsini okumak zorunda değilsiniz.
+
+00:04:34.488 --> 00:04:36.230
+Biz sadece problemimizi
+
+00:04:36.230 --> 00:04:39.170
+çözmemize yardımcı olacak
+ilintili bilgiyi taramak istiyoruz.
+
+00:04:39.170 --> 00:04:42.410
+Yığın izlemede üzerinde
+çalıştığımız metodlar veya
+
+00:04:42.410 --> 00:04:45.710
+dosyalardan bahseden her şeye bakmalıyız.
+
+00:04:45.710 --> 00:04:48.850
+Yani MainActivity dosya adını
+aramaya devam edeceğiz.
+
+00:04:49.660 --> 00:04:51.700
+Şimdi hata mesajını okuyalım.
+
+00:04:51.700 --> 00:04:52.890
+Bu kısmı atlıyorum ve
+
+00:04:52.890 --> 00:04:57.120
+şurayı okuyorum IllegalStateException,
+submitOrder metodu bulunamıyor.
+
+00:04:58.490 --> 00:05:02.720
+Hata mesajı devam ederek bunun neden
+geçersiz bir durum olduğunu açıklıyor.
+
+00:05:03.830 --> 00:05:06.942
+Ve bunun nedeni de MainActivity içerisinde
+
+00:05:06.942 --> 00:05:09.950
+gösterim sınıfı düğmesi üzerindeki
+
+00:05:09.950 --> 00:05:13.760
+onClick işletici için submitOrder
+metodunu bulamaması.
+
+00:05:13.760 --> 00:05:17.830
+Bu cümlede çok kelime var
+ve pek mantıklı gelmeyebilir.
+
+00:05:17.830 --> 00:05:19.910
+Fakat burada birkaç iyi ipucu var.
+
+00:05:19.910 --> 00:05:22.920
+Düğmeden bahsediyor ve uygulamada
+sadece bir tane düğme var, yani
+
+00:05:22.920 --> 00:05:26.610
+bunun düğme ile ilintili olduğunu
+varsayabiliriz.
+
+00:05:26.610 --> 00:05:31.920
+Sonra aktivitede submitOrder metodunu
+bulamadığından bahsediyor.
+
+00:05:31.930 --> 00:05:36.100
+Tekrar alttaki koda bakarsak,
+düğmeye basıldığında
+
+00:05:36.100 --> 00:05:38.850
+submitOrder metodunu
+tetiklemesi gerektiğini belirttik.
+
+00:05:38.850 --> 00:05:40.100
+Şimdi ona bakalım.
+
+00:05:40.100 --> 00:05:43.415
+DDMS penceresini aşağı sürüklüyorum ve
+
+00:05:43.415 --> 00:05:46.315
+activity_main.xml dosyasını açıyorum.
+
+00:05:46.315 --> 00:05:48.955
+Button XML elementi burada.
+
+00:05:48.955 --> 00:05:54.215
+Ve dedik ki android:onClick
+submitOrder metodunu tetiklemeli.
+
+00:05:54.215 --> 00:05:56.395
+Eğer MainActivity'e geri dönersem,
+
+00:05:56.395 --> 00:06:00.090
+görüyorum ki submitOrder artık
+bir metod değil, çünkü
+
+00:06:00.090 --> 00:06:04.240
+onu submitOrders olarak değiştirdik,
+problem de bu yüzden meydana geliyor.
+
+00:06:04.240 --> 00:06:08.330
+Eğer fazla s'yi silersem
+MainActivity'de submitOrder
+
+00:06:08.330 --> 00:06:11.950
+metodu oluşur ve uygulama
+tekrar çalışmalıdır.
+
+00:06:11.950 --> 00:06:13.113
+Uygulamayı tekrar çalıştırıyorum ve
+
+00:06:13.113 --> 00:06:17.020
+sipariş düğmesine basıyorum ve
+uygulama artık çökmüyor, yaşasın.
+
+00:06:17.020 --> 00:06:19.790
+Devam edin ve uygulamanızda
+bu çökmeyi oluşturmaya çalışın,
+
+00:06:19.790 --> 00:06:22.690
+Bunun için submitOrder metodunun
+ismini değiştirmeyi deneyin.
+
+00:06:23.000 --> 00:06:25.390
+Sonra yığın izleme için logları
+kontrol edin
+
+00:06:25.390 --> 00:06:26.950
+ve hatayı dikkatlice okuyun.
+
+00:06:28.000 --> 00:06:31.390
+Devam edin ve hatayı düzeltin
+ki uygulamanız tekrar çalışsın.
+
+00:06:31.390 --> 00:06:33.310
+İşiniz bittiğinde bu kutuyu işaretleyin.
+

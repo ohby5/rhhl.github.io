@@ -1,0 +1,233 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.558 --> 00:00:03.220
+Bence adet seçiciyi oluşturmak için 
+sonraki adımlara hazırsınız.
+
+00:00:04.480 --> 00:00:07.520
+Sipariş formumuza artı ve eksi 
+düğmeleri ekleyeceğiz,
+
+00:00:07.520 --> 00:00:10.270
+böylece sipariş edilen kahve 
+sayısını artırıp azaltabiliriz.
+
+00:00:10.270 --> 00:00:12.255
+Artı düğmesine her bastığınızda,
+
+00:00:12.255 --> 00:00:14.934
+kahve sayısını bir artıracak.
+
+00:00:14.934 --> 00:00:16.265
+Eksi düğmesine her bastığınızda,
+
+00:00:16.265 --> 00:00:17.780
+kahve sayısını bir azaltacak.
+
+00:00:18.920 --> 00:00:20.330
+Sonra "Sipariş" düğmesine basınca,
+
+00:00:20.330 --> 00:00:23.110
+fiyatı son miktar değerine 
+göre güncelleyecek.
+
+00:00:24.580 --> 00:00:28.920
+Tüm bu işlevselliği gereğince oluşturmak 
+birden fazla basamak gerektirecek.
+
+00:00:28.920 --> 00:00:31.290
+İlk görev olarak artı ve eksi düğmelerini
+
+00:00:31.290 --> 00:00:33.000
+yerleşime ekleyeceğiz.
+
+00:00:33.000 --> 00:00:34.366
+Düğmeleri de çalıştıracağız,
+
+00:00:34.366 --> 00:00:36.510
+ki ekranda gerçekten
+bir şeyler güncelleyebilsinler.
+
+00:00:37.310 --> 00:00:40.260
+Dersin ilerleyen zamanlarında, 
+"Sipariş" düğmesini düzelteceğiz,
+
+00:00:40.260 --> 00:00:41.620
+ki fiyat düzgünce güncellensin.
+
+00:00:42.820 --> 00:00:46.580
+Önce <i>activity_main</i> yerleşim XML dosyasını 
+değiştirerek bu yerleşimi oluşturun.
+
+00:00:48.580 --> 00:00:52.363
+İki düğmeyi ekleyeceksiniz ve 
+başlangıç değerini miktar için 2 ve
+
+00:00:52.363 --> 00:00:55.392
+fiyat için 10$ olarak lütfen değiştirin.
+
+00:00:55.392 --> 00:00:57.560
+Bu değişiklikleri XML'de 
+de yapabilirsiniz.
+
+00:00:59.050 --> 00:01:02.600
+Uygunsa yerel para 
+biriminize ayarlayabilirsiniz.
+
+00:01:02.600 --> 00:01:04.977
+Miktar olarak 2 seçmemin nedeni,
+
+00:01:04.977 --> 00:01:07.220
+eksi düğmesine bastığınızda, 
+negatif olmaz.
+
+00:01:08.310 --> 00:01:11.130
+Yerleşiminize bu düğmeleri 
+eklediğinizde, burada görünenden
+
+00:01:11.130 --> 00:01:13.050
+biraz daha büyük gözüktüğünü 
+fark edeceksiniz.
+
+00:01:14.060 --> 00:01:17.229
+Bu görünüme genişlik ve yüksekliği 
+48 dp olarak ayarlayarak ulaşabilirsiniz.
+
+00:01:18.510 --> 00:01:20.360
+Sonra tıklama davranışını oluşturun.
+
+00:01:20.360 --> 00:01:24.510
++ düğmesine basılınca, <i>MainActivity</i>'de 
+artım metodunu çağırın.
+
+00:01:24.510 --> 00:01:28.790
+- düğmesine basılınca, <i>MainActivity</i>'de 
+azalım metodunu çağırın.
+
+00:01:28.790 --> 00:01:32.190
+<i>MainActivity</i>'de artım metodu ekleyin.
+
+00:01:32.190 --> 00:01:35.170
+O metodun içinde bir 
+miktar değişkeni yaratıp
+
+00:01:35.170 --> 00:01:37.290
+3 değeri ile başlatın.
+
+00:01:37.290 --> 00:01:42.190
+Başlatın dediğimde, değişkenin 
+başlangıç değerini 3 olarak
+
+00:01:42.190 --> 00:01:43.070
+atayın anlamındadır.
+
+00:01:43.070 --> 00:01:45.770
+Sonra devam edip miktarı ekranda gösterin.
+
+00:01:47.090 --> 00:01:50.970
+Üçüncü adım olarak, <i>MainActivity</i>'de 
+azalım metodu da ekleyin ve
+
+00:01:50.970 --> 00:01:53.974
+1 değeri ile başlayan bir 
+miktar değişkeni yaratın.
+
+00:01:55.180 --> 00:01:57.210
+Sonra devam edip miktarı ekranda gösterin.
+
+00:01:58.480 --> 00:02:01.540
+Bütün bu adımları 
+tamamladığınızda, cihazda
+
+00:02:01.540 --> 00:02:02.480
+bu şekilde görünmeli.
+
+00:02:03.130 --> 00:02:08.195
+Uygulamayı açtığınızda, miktar olarak 2 
+ve fiyat olarak 10$ olmalı.
+
+00:02:08.195 --> 00:02:11.785
+Artı düğmesine bastığınızda, 
+miktar 3'e çıkar.
+
+00:02:11.785 --> 00:02:16.175
+Eksi düğmesine bastığınızda, 
+miktar 1'e iner.
+
+00:02:16.175 --> 00:02:20.367
+Teknik olarak bu davranış yanlış, 
+çünkü 2'ye inmeliydi.
+
+00:02:20.367 --> 00:02:23.497
+Ama şimdilik artı düğmesini 
+hep 3'e değişir
+
+00:02:23.497 --> 00:02:25.697
+ve eksi düğmesini hep 1'e değişir yapın.
+
+00:02:25.697 --> 00:02:28.667
+Sonraki kodlama görevinde, 
+bunu düzelteceğiz,
+
+00:02:28.667 --> 00:02:32.697
+böylece her artı düğmesine bastığınızda, 
+4, 5, 6, vb. artışa devam edecek
+
+00:02:32.697 --> 00:02:34.837
+ve eksi düğmesi için 
+de aynı şekilde olacak.
+
+00:02:36.497 --> 00:02:39.590
+Şimdilik fiyat ve "Sipariş" düğmesini 
+olduğu gibi bırakabilirsiniz.
+
+00:02:39.590 --> 00:02:44.000
+Şimdi benim versiyonum miktarı 5 
+ve fiyatı 25$ olarak güncelledi,
+
+00:02:44.000 --> 00:02:46.610
+ama siz daha önce nasılsa 
+öyle bırakabilirsiniz.
+
+00:02:46.610 --> 00:02:48.650
+Sonra bunu da düzelteceğiz.
+
+00:02:48.650 --> 00:02:51.610
+Yardımcı bir ipucu olarak, 
+başlangıçta uygulamanın
+
+00:02:51.610 --> 00:02:55.200
+olduğu şekle gitmek isterseniz, her zaman 
+için uygulamanızı sonlandırabilirsiniz.
+
+00:02:55.200 --> 00:02:59.970
+Sistem gezinim çubuğunda, 
+birkaç düğme, geri, ana sayfa
+
+00:02:59.970 --> 00:03:01.520
+ve son görevler var.
+
+00:03:01.520 --> 00:03:03.270
+Son görevler düğmesine basarsanız,
+
+00:03:03.270 --> 00:03:05.860
+telefonunuzda yaptığınız 
+son görevlerin tümünü gösterir.
+
+00:03:07.130 --> 00:03:08.030
+Sola veya sağa
+
+00:03:08.030 --> 00:03:11.640
+kaydırırsanız, uygulamanızı 
+sonlandırır, yani çalıştırmasını durdurur.
+
+00:03:11.640 --> 00:03:14.370
+Eğer tüm uygulamalar ekranına gidip 
+sonra tekrar başlatmak için
+
+00:03:14.370 --> 00:03:16.930
+uygulamanıza basarsanız, 
+uygulamanın ilk durumunu gösterir.
+

@@ -1,0 +1,258 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.270 --> 00:00:03.630
+Son videoda ilk iki adımın
+üzerinden geçmiştik.
+
+00:00:03.630 --> 00:00:06.670
+Şimdi de deneme şansınızın olduğu
+başka yöntemleri göstereceğim.
+
+00:00:06.670 --> 00:00:10.040
+Başlangıç değerini değiştireceğim,
+
+00:00:10.040 --> 00:00:13.690
+uygulama açıldığında iki yerine
+sıfır olarak gözüksün.
+
+00:00:13.690 --> 00:00:17.030
+Bunu da global miktar değişkenini
+başlangıçta sıfır olacak şekilde
+
+00:00:17.030 --> 00:00:19.400
+değiştirerek yapabilirim.
+
+00:00:19.400 --> 00:00:22.930
+Arttırma ve eksiltme metodları
+olması gerektiği gibi çalışmalı.
+
+00:00:22.930 --> 00:00:24.390
+Arttırma metodu çağrıldığında,
+
+00:00:24.390 --> 00:00:26.570
+en son değeri alacak ve
+bir ekleyecek.
+
+00:00:26.570 --> 00:00:31.140
+Eksiltme metodu çağırıldığında da,
+miktarı bir eksiltecek.
+
+00:00:31.140 --> 00:00:33.250
+Hadi, deneyelim.
+
+00:00:33.250 --> 00:00:34.040
+Tuhaf duruyor.
+
+00:00:34.040 --> 00:00:35.490
+Sıfır olmasını istiyordum.
+
+00:00:35.490 --> 00:00:39.700
+Artı butonuna tıklarsam, tuhaf,
+bir oluyor
+
+00:00:39.700 --> 00:00:43.850
+azalmış oluyor, ama şimdi de artıyor.
+
+00:00:43.850 --> 00:00:46.110
+Yani butonlar çalışıyor gibi
+gözüküyor, fakat
+
+00:00:46.110 --> 00:00:49.120
+bir nedenden dolayı başlangıç değeri
+doğru değil.
+
+00:00:49.120 --> 00:00:52.350
+Activity main dosyasını 
+değiştirmeyi unuttuk.
+
+00:00:52.350 --> 00:00:56.780
+Bu yerleşimde başlangıç metin değeri
+iki olan bir bir text view'ümüz var.
+
+00:00:56.860 --> 00:01:01.290
+Bu, uygulama başladığında
+iki gözükmesi sorunumuzun çözümü olabilir.
+
+00:01:01.290 --> 00:01:02.760
+Güzel.
+Artık başlangıç değeri
+
+00:01:02.760 --> 00:01:04.660
+sıfır olarak gözüküyor.
+
+00:01:04.660 --> 00:01:07.310
+Sonra da arttırırsam,
+düzgün bir şekilde güncelleniyor.
+
+00:01:07.310 --> 00:01:10.070
+Azaltırsam, yine
+düzgün bir şekilde güncelleniyor.
+
+00:01:10.500 --> 00:01:13.630
+İki yerde birden başlangıç değeri
+olmasının biraz kafa karıştırıcı
+
+00:01:13.630 --> 00:01:15.900
+olduğunu görüyorsunuz.
+
+00:01:15.900 --> 00:01:19.660
+Kodun içinde, aynı şeyi temsil eden
+iki farklı yerin olması
+
+00:01:19.660 --> 00:01:24.080
+gelecekte bir bug kaynağı olabilir,
+az önce de gördüğümüz gibi.
+
+00:01:24.080 --> 00:01:28.150
+Bunu çözmenin gelişmiş bir yöntemi de
+ana aktivitenin
+
+00:01:28.150 --> 00:01:31.990
+uygulama açılır açılmaz 
+sıfır miktarını göstermesi,
+
+00:01:31.990 --> 00:01:35.040
+başlangıç değerlerine 
+bağlı olmaması olurdu.
+
+00:01:35.040 --> 00:01:37.890
+O zaman tek kaynak bu değişken olurdu.
+
+00:01:37.890 --> 00:01:39.380
+Ama şimdilik bunu düşünmeyin.
+
+00:01:39.380 --> 00:01:43.280
+Bu ders 3'ten sonra yapabileceğiniz,
+biraz daha ileri seviye bir şey.
+
+00:01:43.280 --> 00:01:47.020
+Koda yapabileceğimiz
+bir diğer şey ise artı butonunun
+
+00:01:47.020 --> 00:01:49.700
+sipariş edilen kahveleri
+her seferinde ikiye katlaması,
+
+00:01:49.700 --> 00:01:53.450
+ve eksi butonunun her seferinde
+kahve sayısını ikiye bölmesi olabilir.
+
+00:01:53.450 --> 00:01:55.360
+Başlangıç değeri olarak ikiyi alalım,
+
+00:01:55.360 --> 00:01:59.110
+ilk önce eksi butonuna basarsak
+en azından bir kere ikiye bölebilelim.
+
+00:02:00.140 --> 00:02:01.730
+Arttırma metodu çağrıldığında,
+
+00:02:01.730 --> 00:02:04.110
+sipariş edilen kahve sayısını
+ikiye katlayacağız.
+
+00:02:04.110 --> 00:02:07.900
+Şu anki miktarı almalı, ve
+iki ile çarpmalıyız.
+
+00:02:07.900 --> 00:02:10.288
+Sonuç yeni miktar değeri
+olarak güncellenir ve
+
+00:02:10.288 --> 00:02:12.550
+ekranda gösteririz.
+
+00:02:12.550 --> 00:02:14.900
+Diğer tarafta ise,
+azaltma metodumuz var.
+
+00:02:14.900 --> 00:02:19.090
+Azaltma metodunda, sipariş edilen kahve 
+sayısını yarı yarıya azaltmak istiyoruz.
+
+00:02:19.090 --> 00:02:21.720
+Şu anki miktarı alıp ikiye bölebiliriz.
+
+00:02:22.780 --> 00:02:24.470
+Bu da yeni miktar değerimiz olur.
+
+00:02:24.470 --> 00:02:26.360
+Sonra da ekrana yazdırırız.
+
+00:02:26.360 --> 00:02:27.250
+Deneyelim.
+
+00:02:28.060 --> 00:02:30.300
+Başlangıç değerini değiştirmenin 
+her seferinde
+
+00:02:30.300 --> 00:02:32.290
+nasıl sorun yaratacağını görebilirsiniz.
+
+00:02:32.290 --> 00:02:34.250
+İki yerde de değiştirmelisiniz.
+
+00:02:34.250 --> 00:02:35.485
+Uygulamayı çalıştıralım.
+
+00:02:35.485 --> 00:02:36.460
+Tamam.
+
+00:02:36.460 --> 00:02:38.650
+İki değeri ile başlıyor.
+
+00:02:38.650 --> 00:02:41.660
+Artıya basarsam,
+miktarı her seferinde ikiye katlamalı.
+
+00:02:41.660 --> 00:02:43.070
+Güzel.
+Çalışıyor.
+
+00:02:43.070 --> 00:02:44.350
+Eksiye basarsam,
+
+00:02:44.350 --> 00:02:46.820
+kahve sayısını
+her seferinde yarı yarıya azaltmalı.
+
+00:02:46.820 --> 00:02:49.530
+Ve çalışıyor.
+
+00:02:49.530 --> 00:02:54.260
+Debugger'da çalıştırırsam, değişkenin her
+seferinde güncellendiğini görebilirsin.
+
+00:02:54.260 --> 00:02:57.358
+Miktar değeri ikide başlıyor,
+sonra dörde güncelleniyor.
+
+00:02:57.358 --> 00:03:01.830
+Sonra da miktar dörtte başlıyor,
+
+00:03:01.830 --> 00:03:05.050
+sekize güncelleniyor, böyle gidiyor.
+
+00:03:06.870 --> 00:03:09.960
+Miktar seçiciyle uğraşmak için
+çok daha yaratıcı fikirleriniz
+
+00:03:09.960 --> 00:03:11.300
+olduğuna eminim.
+
+00:03:11.300 --> 00:03:15.420
+Umarım bu global değişkenleri
+daha iyi anlamanıza yardımcı oldu.
+
+00:03:15.420 --> 00:03:19.020
+Ama sipariş butonuna basarsak,
+sipariş edilen kahvelerin
+
+00:03:19.020 --> 00:03:21.200
+fiyatını göstermiyor.
+
+00:03:21.200 --> 00:03:22.941
+Bir sonraki videoda bunu düzeltelim.
+

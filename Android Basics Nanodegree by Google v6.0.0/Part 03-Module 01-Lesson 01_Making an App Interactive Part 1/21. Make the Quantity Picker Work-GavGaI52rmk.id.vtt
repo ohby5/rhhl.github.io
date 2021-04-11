@@ -1,0 +1,269 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.270 --> 00:00:03.630
+Kita sudah melewati dua langkah pertama
+di video terakhir.
+
+00:00:03.630 --> 00:00:06.670
+Kini aku akan tunjukkan beberapa hal
+yang bisa kau uji coba.
+
+00:00:06.670 --> 00:00:10.040
+Aku ingin mengganti nilai jumlah awal,
+
+00:00:10.040 --> 00:00:13.690
+agar saat aplikasi menjalankannya,
+nilainya muncul sebagai nol, bukan dua.
+
+00:00:13.690 --> 00:00:17.030
+Caraku bisa melakukannya
+yaitu mengubah variabel jumlah global
+
+00:00:17.030 --> 00:00:19.400
+untuk diawali dengan nol.
+
+00:00:19.400 --> 00:00:22.300
+Lalu, &lt;i&gt;increment dan decrement method&lt;/i&gt;
+akan berjalan lancar.
+
+00:00:22.300 --> 00:00:24.050
+Saat &lt;i&gt;increment method&lt;/i&gt; dipanggil,
+
+00:00:24.050 --> 00:00:27.010
+metode itu akan memakai nilai jumlah
+terbaru dan menambah satu.
+
+00:00:27.010 --> 00:00:31.140
+Saat &lt;i&gt;decrement method&lt;/i&gt; dipanggil,
+hanya akan mengurangi satu angka.
+
+00:00:31.140 --> 00:00:33.150
+Mari kita mencobanya.
+
+00:00:33.150 --> 00:00:34.040
+Itu tampak aneh.
+
+00:00:34.040 --> 00:00:35.490
+Aku mau itu menampilkan nol.
+
+00:00:35.490 --> 00:00:39.700
+Bila aku mengklik tanda tambah,
+aneh, akan menjadi angka 1,
+
+00:00:39.700 --> 00:00:43.850
+yang tampaknya telah menguranginya
+tapi kini mulai bertambah.
+
+00:00:43.850 --> 00:00:46.110
+Jadi sepertinya tombol ini bekerja,
+
+00:00:46.110 --> 00:00:49.120
+tapi untuk beberapa alasan,
+nilai awalnya salah.
+
+00:00:49.120 --> 00:00:52.350
+Kita lupa mengganti
+fail susunan MainActivity
+
+00:00:52.350 --> 00:00:55.050
+Di susunan ini, ada tampilan teks
+yang menunjukkan
+
+00:00:55.050 --> 00:00:56.860
+jumlah teks awal adalah dua.
+
+00:00:56.860 --> 00:01:01.290
+Harusnya itu memperbaiki masalah
+munculnya angka dua saat aplikasi jalan.
+
+00:01:01.290 --> 00:01:02.570
+Bagus.
+Kini muncul
+
+00:01:02.570 --> 00:01:04.660
+nol sebagai jumlah awal.
+
+00:01:04.660 --> 00:01:07.430
+Lalu, bila kutekan tombol tambah,
+pembaruannya akan sesuai.
+
+00:01:07.430 --> 00:01:09.780
+Bila kutekan tombol kurang,
+pembaruan juga sesuai.
+
+00:01:10.500 --> 00:01:13.630
+Bisa terlihat, agak menyulitkan
+bila kita punya nilai jumlah awal
+
+00:01:13.630 --> 00:01:15.900
+di dua tempat.
+
+00:01:15.900 --> 00:01:19.660
+Memiliki dua tempat kode
+yang mewakili satu hal
+
+00:01:19.660 --> 00:01:24.080
+bisa menjadi sumber kesalahan nantinya,
+seperti yang baru kita lihat.
+
+00:01:24.080 --> 00:01:28.150
+Cara lanjut memecahkan masalah ini
+yaitu membuat MainActivity
+
+00:01:28.150 --> 00:01:31.990
+segera menampilkan jumlah angka nol
+saat aplikasi dijalankan
+
+00:01:31.990 --> 00:01:34.580
+bukan mengandalkan susunan
+untuk mendapat nilai awal.
+
+00:01:34.580 --> 00:01:37.920
+Dengan begitu, sumber kebenaran utama
+akan menjadi variabel global ini.
+
+00:01:37.920 --> 00:01:39.510
+Tapi jangan mengkhawatirkannya.
+
+00:01:39.510 --> 00:01:43.280
+Itu hal lanjut yang akan
+kamu lakukan setelah Pembelajaran 3.
+
+00:01:43.280 --> 00:01:47.060
+Cara lain kita bisa bereksperimen
+dengan kode yaitu membuat tanda tambah
+
+00:01:47.060 --> 00:01:49.660
+melipatgandakan jumlah kopi
+yang dipesan setiap kalinya
+
+00:01:49.660 --> 00:01:53.450
+dan membuat tanda kurang
+membagi dua kopi setiap kalinya.
+
+00:01:53.450 --> 00:01:55.360
+Mari mulai dengan jumlah awal
+sebesar 2.
+
+00:01:55.360 --> 00:01:59.110
+Bila pertama kita tekan tanda kurang,
+setidaknya bisa sekali bagi dua nilainya.
+
+00:02:00.140 --> 00:02:01.730
+Saat &lt;i&gt;increment method&lt;/i&gt; dipanggil,
+
+00:02:01.730 --> 00:02:04.110
+kita mau melipatgandakan
+jumlah kopi yang dipesan.
+
+00:02:04.110 --> 00:02:07.900
+Kita harus mengambil jumlah saat ini
+dan mengalikannya dengan 2.
+
+00:02:07.900 --> 00:02:10.288
+Lalu diperbarui menjadi
+nilai jumlah yang baru
+
+00:02:10.288 --> 00:02:12.550
+dan kita tampilkan itu di layar.
+
+00:02:12.550 --> 00:02:14.900
+Di sisi lain,
+kita punya &lt;i&gt;decrement method&lt;/i&gt;.
+
+00:02:14.900 --> 00:02:19.090
+Untuk metode itu, kita ingin membagi dua
+jumlah pesanan kopinya.
+
+00:02:19.090 --> 00:02:21.810
+Jadi, kita ambil jumlah saat ini
+dan kemudian membagi dua.
+
+00:02:22.790 --> 00:02:24.470
+Itu akan menjadi nilai jumlah baru.
+
+00:02:24.470 --> 00:02:26.360
+Dan kita tampilkan itu di layar.
+
+00:02:26.360 --> 00:02:27.230
+Mari mencobanya.
+
+00:02:28.060 --> 00:02:30.090
+Bisa terlihat itu
+bisa menjadi sumber galat
+
+00:02:30.090 --> 00:02:32.000
+setiap kali jumlah 
+nilai awal diubah.
+
+00:02:32.000 --> 00:02:33.820
+Kau harus mengubahnya
+di kedua tempat.
+
+00:02:33.820 --> 00:02:35.475
+Mari jalankan aplikasi.
+
+00:02:35.475 --> 00:02:36.460
+Baiklah.
+
+00:02:36.460 --> 00:02:38.650
+Dimulai dengan jumlah awal
+sama dengan 2.
+
+00:02:38.650 --> 00:02:41.660
+Bila kutekan tanda tambah,
+jumlahnya akan terus dua kali lipat.
+
+00:02:41.660 --> 00:02:43.070
+Bagus.
+
+00:02:43.070 --> 00:02:44.350
+Bila kutekan tanda kurang,
+
+00:02:44.350 --> 00:02:46.820
+jumlah pesanan kopi
+akan terus terbagi dua.
+
+00:02:46.820 --> 00:02:49.530
+Dan itu bekerja.
+
+00:02:49.530 --> 00:02:54.260
+Bila aku jalankan &lt;i&gt;debugger&lt;/i&gt;, tampak
+variable terus-menerus diperbarui.
+
+00:02:54.260 --> 00:02:57.358
+Nilai jumlah dimulai dengan 2,
+lalu diperbarui menjadi 4.
+
+00:02:57.358 --> 00:03:01.830
+Kemudian jumlahnya 
+dimulai dari 4,
+
+00:03:01.830 --> 00:03:05.050
+dan diperbarui menjadi 8
+dan seterusnya.
+
+00:03:06.870 --> 00:03:09.000
+Aku yakin kau punya cara
+yang lebih kreatif
+
+00:03:09.000 --> 00:03:10.740
+dengan &lt;i&gt;quantity picker&lt;/i&gt; ini.
+
+00:03:10.740 --> 00:03:14.320
+Semoga itu membuatmu lebih memahami
+penggunaan variabel global.
+
+00:03:15.170 --> 00:03:18.420
+Tapi bila kutekan tombol pemesanan,
+tidak tampil harga
+
+00:03:18.420 --> 00:03:20.081
+untuk jumlah kopi yang dipesan.
+
+00:03:20.081 --> 00:03:22.151
+Mari perbaiki hal itu 
+pada video berikutya.
+

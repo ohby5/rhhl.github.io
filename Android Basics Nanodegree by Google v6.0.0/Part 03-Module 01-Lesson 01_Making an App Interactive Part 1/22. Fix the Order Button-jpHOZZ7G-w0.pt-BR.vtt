@@ -1,0 +1,270 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.258 --> 00:00:02.790
+Não há apenas uma maneira certa
+de responder esta pergunta.
+
+00:00:03.090 --> 00:00:06.289
+Realmente depende do que você
+considerar mais útil para identificar
+
+00:00:06.295 --> 00:00:10.130
+a diferença entre o comportamento incorreto
+e o comportamento correto do app.
+
+00:00:10.547 --> 00:00:12.000
+Aqui algumas das coisas que eu notei.
+
+00:00:12.633 --> 00:00:15.784
+No comportamento incorreto do app,
+quando você aperta o botão Pedido,
+
+00:00:16.000 --> 00:00:19.421
+a quantidade muda para o mesmo valor,
+e não deveria mudar.
+
+00:00:19.990 --> 00:00:22.110
+Eu também notei
+que o preço estava correto
+
+00:00:22.196 --> 00:00:24.890
+para este valor de quantidade,
+mas o preço deveria ser
+
+00:00:24.904 --> 00:00:27.513
+a última quantidade que foi&nbsp;selecionada
+no seletor de quantidade.
+
+00:00:28.280 --> 00:00:30.941
+A quantidade não devia mudar,
+e isto está relacionado com esse fato.
+
+00:00:31.570 --> 00:00:34.270
+Vamos olhar o código existente
+e saber por que isso está acontecendo.
+
+00:00:35.353 --> 00:00:38.916
+No arquivo de layout <i>activity_main</i>,
+temos o botão Pedido declarado aqui.
+
+00:00:39.320 --> 00:00:40.627
+Quando o botão Pedido é clicado,
+
+00:00:40.810 --> 00:00:43.655
+invocamos um método na <i>MainActivity</i>
+chamado <i>submitOrder</i>.
+
+00:00:44.381 --> 00:00:47.501
+No arquivo<i> MainActivity.java</i>,
+o método <i>submitOrder</i> está aqui.
+
+00:00:47.890 --> 00:00:50.691
+Isto é um código antigo,
+que ainda não alterámos.
+
+00:00:51.030 --> 00:00:54.153
+Mas criámos a variável integral&nbsp;<i>Quantity</i>
+e a inicializamos com 5.
+
+00:00:54.590 --> 00:00:55.940
+Exibimos isso na tela,
+
+00:00:56.295 --> 00:01:00.153
+e também exibimos o <i>displayPrice</i> 
+como o&nbsp;número de xícaras de café x $5 .
+
+00:01:00.578 --> 00:01:02.375
+Este código já não faz muito sentido,
+
+00:01:02.387 --> 00:01:04.153
+porque enquanto tentamos o <i>submitOrder</i>,
+
+00:01:04.498 --> 00:01:05.969
+estamos tentando atualizar o <i>Quantity</i>.
+
+00:01:06.440 --> 00:01:09.587
+Outro problema é que estamos&nbsp;criando
+uma variável integral chamada <i>Quantity</i>,
+
+00:01:09.860 --> 00:01:12.027
+quando já temos a variável global <i>Quantity</i>
+
+00:01:12.049 --> 00:01:14.418
+que é suposta monitorar
+o número de xícaras de café.
+
+00:01:15.010 --> 00:01:17.827
+Na <i>MainActivity</i> já temos
+uma&nbsp;variável de quantidade global,
+
+00:01:18.092 --> 00:01:22.200
+e qualquer método aqui dentro pode
+se referir a esta variável quantidade.
+
+00:01:22.460 --> 00:01:24.276
+No entanto,
+no método <i>submitOrder</i>,
+
+00:01:24.520 --> 00:01:26.516
+criámos uma nova variável de quantidade local.
+
+00:01:27.089 --> 00:01:29.370
+É tecnicamente possível ter uma variável&nbsp;local
+
+00:01:29.380 --> 00:01:31.587
+com o mesmo nome de uma variável global.
+
+00:01:32.215 --> 00:01:34.590
+Isto significa apenas que,
+no&nbsp;contexto deste método,
+
+00:01:34.810 --> 00:01:38.227
+após essa variável ser declarada,
+sempre que você se referir a quantidade,
+
+00:01:38.387 --> 00:01:42.110
+na verdade estará se referindo à
+variável de quantidade local com o valor 5,
+
+00:01:42.580 --> 00:01:45.033
+e não à variável de quantidade
+global com o valor 2.
+
+00:01:46.012 --> 00:01:48.947
+Então <i>display (quantity)</i>
+e <i>displayPrice (quantity*5)</i>
+
+00:01:49.200 --> 00:01:51.076
+ambos se referem ao valor de quantidade aqui.
+
+00:01:51.526 --> 00:01:53.409
+Este é o escopo desta variável local.
+
+00:01:54.024 --> 00:01:55.160
+Fora deste escopo,
+
+00:01:55.490 --> 00:01:58.845
+sempre que você se referir a quantidade,
+será esta variável de quantidade global.
+
+00:01:59.490 --> 00:02:00.674
+Se você pensar sobre isso,
+
+00:02:00.690 --> 00:02:03.138
+não faz muito sentido,
+sempre que faz um pedido,
+
+00:02:03.433 --> 00:02:06.609
+criar uma nova quantidade
+e exibi-la na tela.
+
+00:02:07.040 --> 00:02:10.929
+O que você realmente deve fazer
+é usar apenas a quantidade que temos utilizado
+
+00:02:11.267 --> 00:02:14.387
+para aumentar e diminuir
+o número de xícaras de café.
+
+00:02:14.900 --> 00:02:17.280
+É sobre essa que devemos
+calcular nosso preço.
+
+00:02:18.067 --> 00:02:21.360
+Para corrigir o nosso código,
+não declaramos a variável de quantidade local.
+
+00:02:22.036 --> 00:02:24.460
+Em vez disso, devemos
+usar a variável global aqui.
+
+00:02:25.138 --> 00:02:27.956
+Também devemos parar de tentar
+atualizar a quantidade na tela.
+
+00:02:28.570 --> 00:02:32.892
+Os botões de mais e menos já atualizam a tela com o valor correto da quantidade.
+
+00:02:33.544 --> 00:02:36.873
+Porém, ainda queremos que o
+botão Pedido atualize o preço,
+
+00:02:37.570 --> 00:02:41.182
+mas, dessa vez, vamos&nbsp;calcular
+o preço como <i>(quantity*5)</i>
+
+00:02:41.569 --> 00:02:43.280
+usando a variável de quantidade global.
+
+00:02:44.006 --> 00:02:46.812
+Atualizarei o código para refletir
+o que nós acabámos de falar.
+
+00:02:47.673 --> 00:02:50.449
+Note que a variável de quantidade
+agora tem a cor roxa,
+
+00:02:50.867 --> 00:02:54.153
+o que significa que estamos usando
+a variável <i>Quantity</i> na <i>MainActivity.</i>
+
+00:02:54.800 --> 00:02:57.353
+Quando o botão é apertado,
+ele acionará o método <i>submitOrder.</i>
+
+00:02:57.975 --> 00:02:59.772
+Isso irá exibir o preço na tela,
+
+00:03:00.030 --> 00:03:04.073
+onde o preço é calculado como
+a variável quantidade global vezes 5.
+
+00:03:05.009 --> 00:03:06.935
+Parece estar correto,
+então vamos executá-lo.
+
+00:03:07.640 --> 00:03:09.335
+Agora o teste final.
+
+00:03:09.594 --> 00:03:12.548
+Vou mudar a quantidade para 6
+e depois apertar o botão Pedido.
+
+00:03:12.849 --> 00:03:14.400
+Oba!!!
+O valor é $30.
+
+00:03:14.615 --> 00:03:17.046
+Deixe eu testar outros valores
+para&nbsp;confirmar que não é acaso.
+
+00:03:17.640 --> 00:03:19.920
+Esse está correto,
+esse também.
+
+00:03:20.775 --> 00:03:21.990
+Maneiro, funciona!
+
+00:03:22.590 --> 00:03:23.815
+Você corrigiu seu primeiro <i>bug.</i>
+
+00:03:24.310 --> 00:03:25.920
+Você fez um ótimo trabalho nessa tarefa.
+
+00:03:26.430 --> 00:03:28.553
+A funcionalidade do nosso app
+está funcionando bem.
+
+00:03:28.970 --> 00:03:31.821
+Mas devo admitir que a&nbsp;UI
+está um pouco feia.
+
+00:03:32.258 --> 00:03:35.249
+Em particular, o seletor de quantidade,
+poderia receber um pouco de amor.
+
+00:03:35.723 --> 00:03:36.836
+Vamos trabalhar isso depois.
+

@@ -1,0 +1,689 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.901
+Certo, Catherine,
+nós apertamos o "+"...
+
+00:00:02.934 --> 00:00:05.334
+e o número de cafés
+sobe de 2 para 3.
+
+00:00:05.367 --> 00:00:09.200
+Mas continuamos apertando,
+repetidamente...
+
+00:00:09.234 --> 00:00:13.000
+e o número de cafés
+não passa de 2.
+
+00:00:13.033 --> 00:00:16.033
+Bem, estamos deixando
+um conceito passar:
+
+00:00:16.067 --> 00:00:18.701
+-escopo de variáveis.
+-Escopo de variáveis?
+
+00:00:18.734 --> 00:00:20.434
+-Sim.
+-Pode explicar?
+
+00:00:20.467 --> 00:00:23.400
+Significa que quando a variável
+é declarada num método,
+
+00:00:23.434 --> 00:00:26.000
+ela só pode ser usada
+no escopo de tal método.
+
+00:00:26.033 --> 00:00:27.033
+Preste atenção!
+
+00:00:27.067 --> 00:00:29.300
+Catherine,
+estamos falando Grego.
+
+00:00:29.334 --> 00:00:31.501
+Os alunos dessa turma
+merecem uma medalha
+
+00:00:31.534 --> 00:00:33.200
+por terem chegado tão longe.
+
+00:00:33.234 --> 00:00:36.200
+-Vamos explicar direito.
+-Tudo bem, posso explicar.
+
+00:00:36.234 --> 00:00:37.934
+Nós apertamos "+"...
+
+00:00:37.968 --> 00:00:41.267
+e o método increment()
+é chamado. E depois?
+
+00:00:41.300 --> 00:00:43.667
+-Criamos a variável quantity...
+-Certo.
+
+00:00:43.701 --> 00:00:45.901
+-a inicializamos em 2...
+-Certo.
+
+00:00:45.934 --> 00:00:47.734
+e a atualizamos
+para 3 cafés.
+
+00:00:47.767 --> 00:00:50.434
+E quando acaba
+o método increment()...
+
+00:00:50.467 --> 00:00:53.334
+-o que acontece?
+-A variável é destruída.
+
+00:00:54.300 --> 00:00:56.834
+Certo.
+Então ao apertar "+" de novo...
+
+00:00:56.868 --> 00:00:58.667
+o método increment()
+é chamado.
+
+00:00:58.701 --> 00:01:01.133
+E criamos a variável quantity.
+
+00:01:01.167 --> 00:01:03.300
+Nossa, surgiu outra
+num passe de mágica!
+
+00:01:03.334 --> 00:01:05.868
+Novinha em folha.
+Ela é inicializada em 2,
+
+00:01:05.901 --> 00:01:07.467
+e nós a atualizamos para 3.
+
+00:01:07.501 --> 00:01:10.534
+E quando o método increment()
+acaba de novo, o que acontece?
+
+00:01:10.567 --> 00:01:11.934
+A variável é destruída.
+
+00:01:12.834 --> 00:01:15.400
+Nós precisamos
+de uma variável global.
+
+00:01:15.434 --> 00:01:20.434
+É, uma variável acessível
+por qualquer código no app.
+
+00:01:20.467 --> 00:01:23.968
+Exato, por todo método,
+increment() ou decrement().
+
+00:01:24.000 --> 00:01:27.133
+Então, nós criamos
+uma variável global assim.
+
+00:01:27.167 --> 00:01:29.901
+Continua sendo quantity,
+mas agora é global.
+
+00:01:29.934 --> 00:01:33.000
+Depois que um método
+termina de ser executado,
+
+00:01:33.033 --> 00:01:34.400
+ela não é destruída.
+
+00:01:34.434 --> 00:01:36.734
+Certo, vamos usar isso
+no nosso código.
+
+00:01:36.767 --> 00:01:40.300
+O problema do app é que,
+mesmo apertando "+",
+
+00:01:40.334 --> 00:01:43.467
+o número de cafés
+nunca passa de 3.
+
+00:01:43.501 --> 00:01:47.601
+É porque o botão "+"
+aciona o método increment().
+
+00:01:47.634 --> 00:01:50.534
+Neste método, sempre criamos
+uma nova variável quantity,
+
+00:01:50.567 --> 00:01:52.601
+inicializada em 2.
+
+00:01:52.634 --> 00:01:55.701
+Então o valor de quantity
+sempre é atualizado para 3.
+
+00:01:55.734 --> 00:01:59.400
+Este método não lembra
+que eu já o chamei antes,
+
+00:01:59.434 --> 00:02:00.834
+clicando no botão "+",
+
+00:02:00.868 --> 00:02:03.801
+e que 3 já é
+o valor exibido.
+
+00:02:03.834 --> 00:02:07.133
+Ele não sabe
+que eu quero 4 agora.
+
+00:02:07.167 --> 00:02:10.467
+No código antigo, declaramos
+uma variável local para quantity
+
+00:02:10.501 --> 00:02:11.667
+no método increment()
+
+00:02:11.701 --> 00:02:14.634
+e outra variável local quantity
+no método decrement().
+
+00:02:14.667 --> 00:02:18.367
+As variáveis diferentes
+podem ter o mesmo nome
+
+00:02:18.400 --> 00:02:21.033
+porque estão
+em escopos diferentes.
+
+00:02:21.667 --> 00:02:24.133
+Este é o escopo
+da variável quantity
+
+00:02:24.167 --> 00:02:26.200
+declarada
+no método increment().
+
+00:02:26.234 --> 00:02:29.701
+Aqui dentro, podemos nos referir
+à quantidade e atualizá-la.
+
+00:02:29.734 --> 00:02:31.400
+Mas, fora daqui,
+
+00:02:31.434 --> 00:02:34.501
+outros métodos não conhecem
+esta variável quantity.
+
+00:02:34.534 --> 00:02:37.467
+Você veria uma mensagem
+de "símbolos não resolvidos"
+
+00:02:37.501 --> 00:02:40.968
+pois outros métodos
+não conhecem esta variável.
+
+00:02:41.000 --> 00:02:43.200
+Da mesma forma,
+este é o escopo...
+
+00:02:43.234 --> 00:02:46.934
+da variável local quantity
+declarada no método decrement().
+
+00:02:46.968 --> 00:02:50.367
+Aqui dentro, dá para exibir
+e atualizar a variável,
+
+00:02:50.400 --> 00:02:54.400
+mas, fora deste escopo,
+não dá para referenciá-la.
+
+00:02:54.434 --> 00:02:56.934
+O código atualizado,
+com uma variável global,
+
+00:02:56.968 --> 00:02:58.501
+seria assim.
+
+00:02:58.534 --> 00:03:01.734
+Em vez de declarar a variável
+no método increment(),
+
+00:03:01.767 --> 00:03:05.567
+nós a retiramos e pusemos
+no topo da MainActivity.
+
+00:03:05.601 --> 00:03:09.334
+Como ela está declarada
+entre as chaves da MainActivity,
+
+00:03:09.367 --> 00:03:13.901
+tudo dentro da MainActivity
+conhece a variável quantity.
+
+00:03:13.934 --> 00:03:17.701
+Este é o escopo de variáveis
+da variável global quantity.
+
+00:03:17.734 --> 00:03:20.467
+Todo método e variável
+da MainActivity
+
+00:03:20.501 --> 00:03:24.200
+agora podem se referir
+a quantity e atualizá-la.
+
+00:03:24.234 --> 00:03:28.033
+O método increment()
+atualiza a variável e a exibe
+
+00:03:28.067 --> 00:03:32.000
+e o método decrement()
+também a atualiza e exibe.
+
+00:03:32.033 --> 00:03:35.734
+Quantity sempre se refere
+a esta variável global aqui.
+
+00:03:35.767 --> 00:03:38.901
+A vantagem de criar
+uma única variável global
+
+00:03:38.934 --> 00:03:41.067
+é que agora só há
+uma fonte de verdade
+
+00:03:41.100 --> 00:03:43.834
+sobre quantos cafés
+o usuário quer.
+
+00:03:43.868 --> 00:03:49.033
+Aumentando ou diminuindo
+o número de cafés,
+
+00:03:49.067 --> 00:03:52.300
+o último valor de quantity
+será considerado.
+
+00:03:52.334 --> 00:03:54.968
+Era estranho termos
+duas variáveis quantity,
+
+00:03:55.000 --> 00:03:57.667
+pois elas podiam
+se dessincronizar
+
+00:03:57.701 --> 00:04:00.567
+e o usuário acabaria
+vendo um valor só.
+
+00:04:00.601 --> 00:04:03.701
+Então faz sentido ter
+uma só fonte de verdade,
+
+00:04:03.734 --> 00:04:07.200
+uma variável global
+para registrar os cafés pedidos.
+
+00:04:07.234 --> 00:04:10.534
+Talvez você se pergunte por que
+não usamos só variáveis globais
+
+00:04:10.567 --> 00:04:12.567
+e resolvemos
+todos os nossos problemas.
+
+00:04:12.601 --> 00:04:15.200
+Não é aconselhável
+usar uma variável global
+
+00:04:15.234 --> 00:04:16.901
+a menos que haja
+uma necessidade
+
+00:04:16.934 --> 00:04:20.834
+de outras coisas na MainActivity
+fazerem referência a ela.
+
+00:04:20.868 --> 00:04:24.567
+Se você só utiliza a variável
+no contexto de um método,
+
+00:04:24.601 --> 00:04:26.534
+é melhor mantê-la
+uma variável local.
+
+00:04:26.567 --> 00:04:28.400
+É como ter um segredo.
+
+00:04:28.434 --> 00:04:31.501
+Você só deve contá-lo
+a quem precisa saber.
+
+00:04:31.534 --> 00:04:34.267
+Da mesma forma,
+você só revela variáveis
+
+00:04:34.300 --> 00:04:36.801
+de que as pessoas
+precisam muito saber
+
+00:04:36.834 --> 00:04:38.501
+para o app funcionar.
+
+00:04:39.067 --> 00:04:41.200
+No método increment()
+da MainActivity,
+
+00:04:41.234 --> 00:04:45.133
+vou copiar esta linha de código
+que declara a variável quantity.
+
+00:04:46.033 --> 00:04:50.100
+Eu apertei Cmd+X,
+ou Ctrl+X, para recortar...
+
+00:04:50.133 --> 00:04:54.267
+e vou colar no topo
+da classe MainActivity.
+
+00:04:54.300 --> 00:04:58.400
+Ficará logo abaixo da chave
+de abertura da MainActivity.
+
+00:04:58.434 --> 00:05:02.734
+Perceba que fica para fora
+das chaves de outros métodos.
+
+00:05:02.767 --> 00:05:05.334
+Se ficasse para dentro,
+
+00:05:05.367 --> 00:05:07.634
+seria considerada
+uma variável local.
+
+00:05:07.667 --> 00:05:11.367
+Quantity virou variável global
+da classe MainActivity.
+
+00:05:11.400 --> 00:05:13.901
+Aprenderemos mais
+sobre classes na sequência,
+
+00:05:13.934 --> 00:05:18.534
+mas MainActivity é uma classe
+que contém métodos e variáveis.
+
+00:05:18.567 --> 00:05:22.868
+Todo método da classe pode
+se referir à variável quantity,
+
+00:05:22.901 --> 00:05:27.601
+então este método increment()
+apenas a atualiza e exibe.
+
+00:05:27.634 --> 00:05:32.100
+Veja que a fonte do nome
+de uma variável global é roxa.
+
+00:05:32.133 --> 00:05:36.501
+O nome de uma variável local
+é em fonte preta.
+
+00:05:36.534 --> 00:05:40.100
+É assim que você distingue
+variáveis locais e globais.
+
+00:05:40.133 --> 00:05:44.501
+Falando em variáveis locais,
+apague a do método decrement(),
+
+00:05:44.534 --> 00:05:47.334
+pois agora usaremos
+a variável quantity global.
+
+00:05:48.234 --> 00:05:50.133
+O nome da variável
+nestes métodos
+
+00:05:50.167 --> 00:05:52.901
+precisa ser idêntico
+ao nome da variável global.
+
+00:05:52.934 --> 00:05:55.267
+Se eu escrevesse "quantities",
+daria erro,
+
+00:05:55.300 --> 00:05:59.934
+pois não há variável definida
+com esse nome em lugar nenhum.
+
+00:06:00.834 --> 00:06:03.501
+Vou desfazer isto
+para voltar a funcionar.
+
+00:06:03.534 --> 00:06:05.934
+Se eu executar o app,
+vejamos o que acontece.
+
+00:06:05.968 --> 00:06:08.234
+O app inicia
+com 2 de quantidade.
+
+00:06:08.267 --> 00:06:11.501
+Se eu apertar o "+",
+está aumentando.
+
+00:06:11.534 --> 00:06:14.267
+Se apertar o "-",
+está diminuindo.
+
+00:06:14.300 --> 00:06:15.934
+Que demais!
+
+00:06:15.968 --> 00:06:18.400
+Conseguimos fazer
+nosso seletor de quantidade.
+
+00:06:18.434 --> 00:06:21.501
+Agora, quero que você consiga
+fazer isso no seu celular
+
+00:06:21.534 --> 00:06:26.501
+para aumentar e diminuir
+o quanto bem entender.
+
+00:06:26.534 --> 00:06:29.100
+Incluímos um link
+para o código MainActivity
+
+00:06:29.133 --> 00:06:30.701
+para você se guiar.
+
+00:06:30.734 --> 00:06:33.901
+Prefiro que você digite
+conforme vê o vídeo
+
+00:06:33.934 --> 00:06:36.300
+em vez de copiar
+e colar o código.
+
+00:06:36.334 --> 00:06:40.801
+Assim, poderá começar a criar
+suas próprias variáveis globais.
+
+00:06:40.834 --> 00:06:43.067
+Vou anexar o depurador
+para vermos atentamente
+
+00:06:43.100 --> 00:06:45.467
+o que acontece
+com a variável quantity.
+
+00:06:46.133 --> 00:06:48.834
+Vou adicionar paradas
+nos dois métodos
+
+00:06:48.868 --> 00:06:50.634
+e executar o depurador.
+
+00:06:50.667 --> 00:06:54.000
+Quando eu aperto "+",
+aciono esta parada.
+
+00:06:54.033 --> 00:06:56.467
+Antes mesmo desta linha
+ser executada,
+
+00:06:56.501 --> 00:07:00.801
+a variável quantity global
+já existe, com o valor 2,
+
+00:07:00.834 --> 00:07:03.100
+graças a esta linha aqui.
+
+00:07:03.133 --> 00:07:06.534
+Se eu pular de linha,
+esta já foi executada
+
+00:07:06.567 --> 00:07:09.400
+e a quantidade
+aumentou para 3.
+
+00:07:09.434 --> 00:07:12.701
+Eu clico em "Resume"
+para a tela atualizar para 3.
+
+00:07:12.734 --> 00:07:14.434
+Se eu apertar "+" de novo,
+
+00:07:14.467 --> 00:07:17.100
+antes mesmo de executar
+esta linha de código
+
+00:07:17.133 --> 00:07:21.100
+a variável global quantity
+já está definida como 3.
+
+00:07:21.133 --> 00:07:23.601
+É a quantidade
+selecionada por último
+
+00:07:23.634 --> 00:07:25.200
+e o código ainda se lembra.
+
+00:07:25.734 --> 00:07:27.501
+Se eu aumentar
+a quantidade em 1,
+
+00:07:27.534 --> 00:07:30.334
+a variável global quantity
+sobe para 4.
+
+00:07:30.367 --> 00:07:33.667
+Eu clico em "Resume"
+para atualizar a tela com 4.
+
+00:07:33.701 --> 00:07:36.834
+Sempre que chamamos
+o método increment(),
+
+00:07:36.868 --> 00:07:41.734
+há um acréscimo no valor
+já existente de quantity.
+
+00:07:41.767 --> 00:07:44.601
+Vejamos como se dá
+com o método decrement().
+
+00:07:44.634 --> 00:07:47.934
+Se eu apertar "-",
+essa parada é acionada.
+
+00:07:47.968 --> 00:07:50.400
+A variável global quantity
+tem o valor 4,
+
+00:07:50.434 --> 00:07:52.767
+que é como a deixamos
+da última vez.
+
+00:07:52.801 --> 00:07:55.200
+Se eu subtraio 1
+de quantity,
+
+00:07:55.234 --> 00:07:57.734
+seu valor diminui
+para 3 cafés.
+
+00:07:57.767 --> 00:08:01.501
+Atualizando a tela,
+muda para 3.
+
+00:08:02.234 --> 00:08:04.701
+Com uma única
+variável global quantity,
+
+00:08:04.734 --> 00:08:10.067
+increment() e decrement()
+adicionam ou subtraem 1 café
+
+00:08:10.100 --> 00:08:12.734
+com base no último valor
+de quantity.
+
+00:08:13.367 --> 00:08:14.434
+É sua vez.
+
+00:08:14.467 --> 00:08:18.200
+Substitua as variáveis locais
+pela variável global.
+
+00:08:18.234 --> 00:08:19.934
+Depois,
+cheque com o depurador
+
+00:08:19.968 --> 00:08:23.167
+se a variável quantity
+está se atualizando direito.
+
+00:08:23.200 --> 00:08:27.133
+Quando seu seletor funcionar,
+faça uma dancinha da vitória
+
+00:08:27.167 --> 00:08:30.400
+e tente explorar um pouco.
+
+00:08:30.434 --> 00:08:34.299
+E se o valor inicial de quantity
+for diferente, como 0?
+
+00:08:34.333 --> 00:08:37.467
+Ou tente dobrar a quantidade
+quando "+" for pressionado
+
+00:08:37.501 --> 00:08:41.200
+e mear a quantidade
+quando "-" for pressionado.
+
+00:08:41.234 --> 00:08:44.534
+Experimente com o que quer
+que desperte sua curiosidade.
+
+00:08:44.567 --> 00:08:47.634
+Se já pensou:
+"E se eu fizer tal coisa?"
+
+00:08:47.667 --> 00:08:51.434
+Esses momentos inesperados
+são proveitosos para aprender.
+
+00:08:52.367 --> 00:08:55.133
+Quando terminar,
+marque as caixas para continuar.
+

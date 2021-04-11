@@ -1,0 +1,102 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.370 --> 00:00:05.010
+Bu ekran görüntüsüne yakından bakınca
+iki <i>TextViews</i> ve bir düğme var.
+
+00:00:05.010 --> 00:00:07.850
+İki <i>TextViews</i> olduğunu 
+söylememin nedeni, ikisi biraz
+
+00:00:07.850 --> 00:00:09.390
+farklı biçimlendirilmiş.
+
+00:00:09.390 --> 00:00:12.920
+Örneğin, metin rengi her birinde farklı.
+
+00:00:12.920 --> 00:00:15.330
+İlk adım olarak bunu dolduralım.
+
+00:00:15.330 --> 00:00:18.030
+İkinci adım, bu görünümleri yerleştirmek.
+
+00:00:18.030 --> 00:00:21.040
+Soruda hangi <i>ViewGroup</i>'un 
+kök görünüm olacağı soruluyor.
+
+00:00:21.040 --> 00:00:24.160
+Bu ekran görüntüsünden, 
+görünümlerin dikey sütunda
+
+00:00:24.160 --> 00:00:27.290
+olduğu görülüyor, bu şekilde.
+
+00:00:27.290 --> 00:00:29.060
+Birinci derste öğrendiğimiz kadarıyla
+
+00:00:29.060 --> 00:00:31.280
+dikey çizgisel yerleşim 
+akıllıca bir seçim olur.
+
+00:00:31.280 --> 00:00:34.950
+Bu yüzden, üç alt görünümle beraber 
+bir üst <i>ViewGroup</i> olarak
+
+00:00:34.950 --> 00:00:38.730
+<i>LinearLayout</i>'a ihtiyaç
+olduğunu yazdım.
+
+00:00:38.730 --> 00:00:41.310
+Burada <i>RelativeLayout</i>
+dediyseniz o da tamam.
+
+00:00:41.310 --> 00:00:42.740
+O da olur, ama bunların
+
+00:00:42.740 --> 00:00:46.180
+her biri için görünüm ID'leri 
+tanımlamak ve sonra bunları
+
+00:00:46.180 --> 00:00:49.700
+birbirine göreceli olarak yerleştirmek 
+çok daha fazla kod gerektirir.
+
+00:00:49.700 --> 00:00:52.510
+Bu yüzden kullanım durumumuza 
+göre, dikey çizgisel yerleşim
+
+00:00:52.510 --> 00:00:55.720
+daha kısa ve kullanımı daha kolay olur.
+
+00:00:55.720 --> 00:00:58.930
+Son olarak, 3. adımda görünümleri 
+biçimlendirmek istiyoruz.
+
+00:00:58.930 --> 00:01:01.220
+Çoğunlukla bu görünümler 
+oldukça standarttır;
+
+00:01:01.220 --> 00:01:03.070
+ancak ufak ayarlamalar yapabiliriz.
+
+00:01:03.070 --> 00:01:07.080
+Örneğin, burada miktar başlığının 
+büyük harfli olduğuna dikkat ediyoruz.
+
+00:01:07.080 --> 00:01:10.060
+Burada miktar rakamı, varsayılan 
+gri renk ayarına nazaran
+
+00:01:10.060 --> 00:01:12.590
+siyah renkte yazı tipine sahip.
+
+00:01:13.640 --> 00:01:16.850
+Aynı zamanda bu görünümler arasında 
+biraz aralık olduğunu da fark ediyoruz,
+
+00:01:16.850 --> 00:01:19.220
+ki bunlar iç boşluk veya 
+kenar boşluğuyla yapılabilir.
+

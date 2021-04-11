@@ -1,0 +1,274 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.240 --> 00:00:02.800
+No hay una sola forma correcta
+de responder a esta pregunta.
+
+00:00:03.080 --> 00:00:06.680
+Depende de lo que te sea más útil
+para ver la diferencia
+
+00:00:06.760 --> 00:00:10.180
+entre el funcionamiento correcto
+de la app y el incorrecto.
+
+00:00:10.540 --> 00:00:12.200
+Voy a decirte algunas cosas que he notado.
+
+00:00:12.640 --> 00:00:15.880
+En el funcionamiento incorrecto,
+cuando haces clic en el botón de <i>Pedir</i>,
+
+00:00:15.990 --> 00:00:19.560
+la cantidad cambia al mismo valor
+cada vez, pero no debería cambiar.
+
+00:00:19.990 --> 00:00:22.080
+Luego he visto que el precio era correcto
+
+00:00:22.160 --> 00:00:24.920
+para este valor de cantidad,
+pero el precio debería ser
+
+00:00:25.010 --> 00:00:27.580
+la última cantidad seleccionada
+en el colector de cantidad.
+
+00:00:28.310 --> 00:00:31.180
+De nuevo, esto tiene que ver
+con que la cantidad no debería cambiar.
+
+00:00:31.570 --> 00:00:34.230
+Miremos al código existente
+para ver por qué pasa esto.
+
+00:00:35.390 --> 00:00:38.940
+El Button de <i>Pedir</i> está en el archivo
+del layout principal de la actividad
+
+00:00:39.320 --> 00:00:40.570
+Cuando hacemos clic en <i>Pedir</i>,
+
+00:00:40.780 --> 00:00:44.020
+invocamos un método en la main activity
+(actividad principal) llamado <i>submitOrder</i>.
+
+00:00:44.360 --> 00:00:47.540
+En el archivo <i>MainActivity.java</i>,
+aquí está el método <i>submitOrder</i>.
+
+00:00:47.890 --> 00:00:51.030
+Este es un código ya muy viejo
+que no hemos cambiado aún,
+
+00:00:51.030 --> 00:00:54.200
+pero creamos una variable
+de cantidad entera y la iniciamos en 5.
+
+00:00:54.570 --> 00:00:56.140
+La mostramos en pantalla.
+
+00:00:56.300 --> 00:01:00.260
+También mostramos el precio
+como el número de cafés a 5 $ cada uno.
+
+00:01:00.610 --> 00:01:04.400
+Ahora, este código no tiene mucho sentido,
+porque, como intentamos <i>submitOrder</i>,
+
+00:01:04.500 --> 00:01:06.040
+intentamos actualizar la cantidad.
+
+00:01:06.420 --> 00:01:09.600
+Y otro problema es que estamos creando
+una variable de cantidad entera,
+
+00:01:09.860 --> 00:01:12.040
+cuando ya tenemos
+una variable de cantidad global
+
+00:01:12.180 --> 00:01:14.520
+que se supone lleva la cuenta
+del número de tazas de café.
+
+00:01:14.980 --> 00:01:17.960
+En la <i>MainActivity</i> ya tenemos
+una variable de cantidad global,
+
+00:01:18.020 --> 00:01:22.200
+así que cualquier método de aquí puede
+referirse a esta variable de cantidad.
+
+00:01:22.440 --> 00:01:26.560
+Pero en<i> submitOrder</i>, estamos creando
+una nueva variable de cantidad local.
+
+00:01:27.060 --> 00:01:29.360
+Tecnicamente, puede haber
+una variable local
+
+00:01:29.480 --> 00:01:31.740
+llamada igual que una variable global.
+
+00:01:32.200 --> 00:01:34.640
+Esto solo significa que,
+en el contexto de este método,
+
+00:01:34.810 --> 00:01:38.240
+después de declarar esta variable,
+cada vez que te refieres a cantidad,
+
+00:01:38.380 --> 00:01:42.120
+te refieres en realidad a esta variable
+de cantidad local con valor 5,
+
+00:01:42.540 --> 00:01:45.100
+no a la variable
+de cantidad global con valor 2.
+
+00:01:45.980 --> 00:01:47.460
+Por eso, <i>display </i>[mostrar]<i>(quantity)</i>
+
+00:01:47.540 --> 00:01:51.100
+y <i>displayPrice(quantity *5)</i> se refieren
+ambas a este valor de cantidad.
+
+00:01:51.500 --> 00:01:53.520
+Este es el ámbito de esta variable local.
+
+00:01:53.980 --> 00:01:55.320
+Fuera de este ámbito,
+
+00:01:55.490 --> 00:01:58.880
+si te refieres a cantidad, te refieres
+a esta variable de cantidad global.
+
+00:01:59.320 --> 00:02:00.620
+Aunque si lo piensas,
+
+00:02:00.700 --> 00:02:03.240
+no tiene mucho sentido que,
+cuando mandas tu orden (<i>submitOrder</i>),
+
+00:02:03.390 --> 00:02:06.620
+crees una nueva cantidad
+y la muestres en pantalla.
+
+00:02:07.040 --> 00:02:08.400
+Lo que queremos hacer es
+
+00:02:08.460 --> 00:02:11.000
+usar la cantidad de la que hemos ido
+llevando la cuenta
+
+00:02:11.230 --> 00:02:14.520
+según aumentábamos o reducíamos
+el número de tazas de café.
+
+00:02:14.900 --> 00:02:17.370
+De eso es de lo que deberíamos
+calcular el precio.
+
+00:02:18.040 --> 00:02:21.390
+Para arreglar nuestro código, no debemos
+declarar una variable de cantidad local.
+
+00:02:22.070 --> 00:02:24.520
+En su lugar, deberíamos usar
+esta variable de cantidad global.
+
+00:02:25.130 --> 00:02:28.060
+También deberíamos dejar
+de actualizar la cantidad en la pantalla.
+
+00:02:28.550 --> 00:02:31.260
+Los botones de <i>más</i> y <i>menos</i>
+ya se ocupan de actualizar la pantalla
+
+00:02:31.290 --> 00:02:32.940
+con el valor de la cantidad correcto.
+
+00:02:33.520 --> 00:02:36.940
+Pero sí que queremos que el Button
+<i>submitOrder</i> siga actualizando el precio.
+
+00:02:37.570 --> 00:02:41.230
+Pero esta vez vamos a calcular
+la cantidad como <i>quantity </i>(cantidad)<i> * 5</i>,
+
+00:02:41.550 --> 00:02:43.360
+usando la variable de cantidad global.
+
+00:02:43.990 --> 00:02:46.890
+Voy a actualizar el código
+para que refleje lo que he mencionado.
+
+00:02:47.720 --> 00:02:50.510
+Fíjate que la variable de cantidad
+ha adoptado una fuente violeta,
+
+00:02:50.730 --> 00:02:54.090
+lo que significa que usamos la variable
+de cantidad global en la MainActivity.
+
+00:02:54.730 --> 00:02:57.390
+Cuando se presione el botón,
+se disparará el método <i>submitOrder</i>.
+
+00:02:57.940 --> 00:02:59.790
+Esto mostrará el precio en la pantalla,
+
+00:03:00.030 --> 00:03:04.080
+donde el precio se calcula
+como la variable de cantidad global por 5.
+
+00:03:04.870 --> 00:03:07.020
+Parece correcto, ejecutémoslo
+en nuestro dispositivo.
+
+00:03:07.580 --> 00:03:09.360
+Y ahora la prueba definitiva.
+
+00:03:09.560 --> 00:03:12.540
+Voy a cambiar la cantidad a 6
+y hacer clic en <i>Pedir</i>...
+
+00:03:12.810 --> 00:03:14.430
+¡Y sí, son $30!
+
+00:03:14.560 --> 00:03:17.340
+Voy a ver con otros valores,
+para comprobar que no ha sido casualidad.
+
+00:03:17.630 --> 00:03:18.950
+Parece correcto.
+
+00:03:19.050 --> 00:03:20.060
+Parece correcto.
+
+00:03:20.700 --> 00:03:22.030
+¡Perfecto, funciona!
+
+00:03:22.520 --> 00:03:24.040
+Has arreglado un error por primera vez.
+
+00:03:24.310 --> 00:03:25.960
+Lo has hecho muy bien.
+
+00:03:26.400 --> 00:03:28.680
+La funcionalidad de nuestra app
+está funcionando muy bien.
+
+00:03:28.970 --> 00:03:31.880
+Pero, admitámoslo, la interfaz del usuario
+es un poco sosa.
+
+00:03:32.280 --> 00:03:35.260
+En particular, podríamos tratar mejor
+al colector de cantidad
+
+00:03:35.680 --> 00:03:36.920
+Esto lo haremos a continuación.
+

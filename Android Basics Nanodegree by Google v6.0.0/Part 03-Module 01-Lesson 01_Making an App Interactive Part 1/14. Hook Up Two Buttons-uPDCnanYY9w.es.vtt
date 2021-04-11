@@ -1,0 +1,415 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:01.280 --> 00:00:04.390
+El primer paso es modificar
+el diseño XML <i>activity_main</i>
+
+00:00:04.450 --> 00:00:06.450
+para que la app aparezca así.
+
+00:00:07.250 --> 00:00:09.410
+Vamos a entrar en Android Studio
+para ver ese archivo.
+
+00:00:10.340 --> 00:00:12.760
+Aquí está
+el archivo de diseño XML <i>activity_main</i>.
+
+00:00:13.100 --> 00:00:16.160
+A la derecha tenemos
+la previsualización del dispositivo.
+
+00:00:16.460 --> 00:00:19.700
+Puedo hacer cilc en esta lupa
+para aumentar el dispositivo.
+
+00:00:20.390 --> 00:00:21.570
+Así está mejor.
+
+00:00:22.350 --> 00:00:25.440
+Para desarrollar el diseño deseado,
+primero quiero añadir una tecla de más
+
+00:00:25.540 --> 00:00:28.260
+entre el encabezado de <i>quantity</i>
+y el valor de cantidad.
+
+00:00:28.650 --> 00:00:30.320
+Ya tenemos una tecla en nuestro diseño
+
+00:00:30.420 --> 00:00:32.140
+esta de aquí.
+
+00:00:32.790 --> 00:00:34.210
+Así que puedo copiar este código
+
+00:00:34.810 --> 00:00:36.090
+y lo voy a pegar
+
+00:00:36.330 --> 00:00:39.550
+entre el encabezado de <i>quantity</i>
+y el valor de cantidad.
+
+00:00:39.880 --> 00:00:42.150
+Ahora veo que la tecla
+aparece en el lugar correcto.
+
+00:00:42.330 --> 00:00:45.690
+Pero tengo que cambiar el texto
+para que diga más en lugar de pedir.
+
+00:00:47.010 --> 00:00:49.580
+¡Bien!
+También voy a eliminar el margen superior
+
+00:00:49.690 --> 00:00:53.870
+ya tenemos 16 dps de margen inferior
+de este campo de texto.
+
+00:00:54.310 --> 00:00:55.640
+Elimina esto.
+
+00:00:56.200 --> 00:00:57.300
+La tecla es bastante grande.
+
+00:00:57.370 --> 00:00:59.680
+En la prueba te pedimos
+que le cambiaras el tamaño
+
+00:00:59.870 --> 00:01:02.500
+a 48 dps de altura y 48 dps de ancho.
+
+00:01:02.880 --> 00:01:04.890
+Voy a editar la tecla XML aquí.
+
+00:01:06.010 --> 00:01:07.580
+Ahora tiene el tamaño perfecto.
+
+00:01:08.100 --> 00:01:11.720
+Ahora puedo copiar este XML
+y pegarlo debajo del valor de <i>quantity</i>
+
+00:01:11.850 --> 00:01:13.480
+el signo menos.
+
+00:01:13.880 --> 00:01:15.090
+Eliminé el espacio en blanco
+
+00:01:15.160 --> 00:01:18.090
+porque según las directirces
+de estilo de códigos de Android
+
+00:01:18.390 --> 00:01:20.920
+no debería haber
+espacios en blanco en el código.
+
+00:01:21.920 --> 00:01:25.070
+Voy a cambiar el texto de esta tecla
+para que diga menos.
+
+00:01:26.100 --> 00:01:28.520
+Ya tiene 48 dps de altura y de ancho.
+
+00:01:29.080 --> 00:01:31.420
+Ahora los signos de más y menos
+están en el lugar correcto.
+
+00:01:32.320 --> 00:01:35.810
+Antes dijimos que queríamos
+que la cantidad inicial fuera 2
+
+00:01:35.990 --> 00:01:37.810
+y el precio inicial 10 $.
+
+00:01:38.280 --> 00:01:39.640
+Vamos a hacer ese cambio ahora.
+
+00:01:40.410 --> 00:01:42.260
+Este es el diseño hasta ahora.
+
+00:01:42.620 --> 00:01:45.450
+Volvamos a la imagen de la prueba
+para comprobar nuestro progreso.
+
+00:01:46.170 --> 00:01:47.730
+Hemos modificado el estilo correctamente
+
+00:01:48.160 --> 00:01:50.260
+pero tenemos que modificar
+también el signo más
+
+00:01:50.460 --> 00:01:52.780
+para que, al pulsarlo,
+llame al método <i>increment</i>.
+
+00:01:53.100 --> 00:01:55.880
+Y cuando hacemos clic en el signo menos,
+llamemos al método <i>decrement</i>.
+
+00:01:56.830 --> 00:01:58.230
+De vuelta al Android Studio
+
+00:01:58.450 --> 00:02:00.230
+voy a modificar el signo más
+
+00:02:00.530 --> 00:02:04.390
+para que el valor
+del atributo <i>onClick</i> sea <i>increment</i>.
+
+00:02:04.390 --> 00:02:06.140
+De este modo al hacer clic en el signo más
+
+00:02:06.220 --> 00:02:08.810
+llamará a un método llamado <i>increment</i>
+en <i>MainActivity</i>.
+
+00:02:09.430 --> 00:02:10.900
+Hago lo mismo con el signo menos.
+
+00:02:10.970 --> 00:02:14.390
+Voy a modificar el atributo <i>onClick</i>
+para que el valor sea <i>decrement</i>.
+
+00:02:16.680 --> 00:02:19.580
+Voy a guardar esto
+y a ejecutarlo en el dispositivo.
+
+00:02:20.780 --> 00:02:25.090
+El diseño está bien,
+pero si pulso el signo más, se para.
+
+00:02:25.420 --> 00:02:29.060
+¿Recuerdas como te enseñé
+a ver los registros para rastra un error?
+
+00:02:29.310 --> 00:02:30.930
+El registro está abierto por defecto.
+
+00:02:30.990 --> 00:02:34.420
+Vamos a mover esta flecha hacia arriba
+para ver mejor los mensajes.
+
+00:02:35.230 --> 00:02:38.140
+Si nos desplazamos hacia arriba,
+vemos que este es nuestro error.
+
+00:02:39.300 --> 00:02:42.630
+Esta es nuestra app, Just Java,
+y dice <i>IllegalStateException</i>.
+
+00:02:43.790 --> 00:02:46.440
+Si me desplazo hacia la derecha
+puedo ver más del mensaje de error.
+
+00:02:46.940 --> 00:02:48.010
+El mensaje de error dice
+
+00:02:48.070 --> 00:02:51.600
+No se encontró ningún método <i>increment</i>
+en la actividad <i>MainActivity</i>.
+
+00:02:52.150 --> 00:02:55.120
+Se parece mucho
+al error que tuvimos en el vídeo anterior.
+
+00:02:55.940 --> 00:02:58.960
+Básicamente no hay ningún método
+llamado <i>increment</i> en <i>MainActivity</i>.
+
+00:02:59.420 --> 00:03:01.930
+Eso lo que esperaba
+porque todavía no hemos hecho ese cambio.
+
+00:03:02.820 --> 00:03:06.360
+En el segundo paso tenemos que añadir
+el método <i>increment</i> en <u>MainActivity</u>.
+
+00:03:06.860 --> 00:03:09.570
+Crear una variable <i>quantity</i>
+con un valor inicial de 3
+
+00:03:09.880 --> 00:03:11.400
+que también muestra la cantidad.
+
+00:03:12.230 --> 00:03:14.810
+Para hacerlo abro
+el archivo <i>MainActivity.java</i>.
+
+00:03:15.100 --> 00:03:18.060
+Conectar el comportamiento del signo más
+va a ser muy similar
+
+00:03:18.140 --> 00:03:20.900
+a como conectamos
+el comportamiento de la tecla Pedir.
+
+00:03:20.980 --> 00:03:23.680
+Así que copia este método de aquí
+que controla la tecla Pedir.
+
+00:03:25.030 --> 00:03:26.540
+Inmediatamente me da un error que dice
+
+00:03:26.620 --> 00:03:29.040
+que <i>submitOrder</i>
+ya se encuentra en <i>MainActivity</i>.
+
+00:03:29.940 --> 00:03:33.080
+No puedes tener
+dos métodos idénticos en <i>MainActivity</i>.
+
+00:03:33.840 --> 00:03:36.900
+No pasa nada porque voy a cambiar este
+para que sea el método <i>increment</i>.
+
+00:03:37.700 --> 00:03:39.070
+Ahora el error desaparece.
+
+00:03:39.820 --> 00:03:42.720
+Voy a modificar el comentario
+porque ahora este es un nuevo método.
+
+00:03:42.910 --> 00:03:44.110
+Voy a actualizar el comentario
+
+00:03:44.290 --> 00:03:46.780
+para referenciar al signo más
+y no a la tecla Pedir.
+
+00:03:47.590 --> 00:03:51.280
+Dentro del método <i>increment</i>, voy a crear
+una varaible de número entero <i>quantity</i>.
+
+00:03:51.720 --> 00:03:55.780
+Voy a darle un valor inicial de 3
+tal y como se pedía en la prueba.
+
+00:03:56.180 --> 00:03:58.320
+Luego puedo mostrar
+esta cantidad en la pantalla.
+
+00:03:59.030 --> 00:04:00.670
+No tengo que actualizar el método <i>price</i>
+
+00:04:00.740 --> 00:04:02.280
+así que puedo eliminar esta línea.
+
+00:04:03.110 --> 00:04:04.860
+Tiene buena pinta, vamos a probarlo..
+
+00:04:06.030 --> 00:04:09.090
+Si hago clic
+en el signo más, actualiza a 3.
+
+00:04:09.940 --> 00:04:10.930
+Está muy bien.
+
+00:04:11.670 --> 00:04:14.400
+Pero si pulso el signo menos, se para.
+
+00:04:15.740 --> 00:04:16.899
+Veamos los registros.
+
+00:04:17.839 --> 00:04:19.920
+Voy a bajar
+para ver los registros más recientes.
+
+00:04:19.980 --> 00:04:22.160
+A continuación subo
+para ver el último error.
+
+00:04:23.070 --> 00:04:25.100
+Para nuestra app
+hay una <i>IllegalStateException</i>
+
+00:04:25.200 --> 00:04:27.890
+porque no pudo encontrar
+el método <i>decrement</i> en nuestra actividad.
+
+00:04:28.610 --> 00:04:32.220
+Esperaba esto porque aun no hemos añadido
+el método <i>decrement</i>.
+
+00:04:32.500 --> 00:04:33.770
+Hagámoslo ahora.
+
+00:04:35.050 --> 00:04:37.790
+Voy a copiar este método
+y a pegarlo debajo.
+
+00:04:38.930 --> 00:04:40.960
+Voy a cambiar
+el nombre a esto por <i>decrement</i>.
+
+00:04:42.110 --> 00:04:43.610
+Hay que actualizar este comentario.
+
+00:04:44.230 --> 00:04:47.000
+Este método se llama
+cuando se pulsa la tecla menos.
+
+00:04:48.180 --> 00:04:50.140
+Para saber
+qué tenemos que hacer con este método
+
+00:04:50.190 --> 00:04:51.420
+volvamos a la prueba.
+
+00:04:52.100 --> 00:04:53.660
+Ya hemos hecho estos dos pasos.
+
+00:04:54.190 --> 00:04:56.840
+El último paso se refiere
+al método <i>decrement</i> en <i>MainActivity</i>.
+
+00:04:57.160 --> 00:04:59.840
+Queremos crear una variable <i>quantity</i>
+y darle un valor inicial de 1.
+
+00:05:00.920 --> 00:05:03.060
+Después mostraremos
+la cantidad en la pantalla.
+
+00:05:04.140 --> 00:05:07.130
+En el método <i>decrement</i> hemos creado
+una variable entera <i>quantity</i>.
+
+00:05:07.560 --> 00:05:11.520
+Voy a darle un valor inicial de 1
+y a mostrar esta cantidad en la pantalla.
+
+00:05:12.790 --> 00:05:14.420
+Vamos a ejecutarla en el dispositivo.
+
+00:05:15.570 --> 00:05:17.800
+Cruza los dedos
+para que no se pare esta vez.
+
+00:05:18.600 --> 00:05:21.800
+Si pulso la tecla más,
+¡sí, desciende a 1!
+
+00:05:22.350 --> 00:05:24.600
+Si pulso la tecla más, asciende a 3.
+
+00:05:25.250 --> 00:05:27.250
+Estas teclas funcionan como esperábamos
+
+00:05:27.470 --> 00:05:29.220
+por lo menos para este estado de la app.
+
+00:05:29.670 --> 00:05:34.050
+Lo ideal, como he dicho antes,
+sería poder ascender 4, 5, 6
+
+00:05:34.340 --> 00:05:36.780
+y aquí descender 2, 1, 0.
+
+00:05:36.990 --> 00:05:38.850
+Pero esto lo veremos más adelante.
+
+00:05:39.510 --> 00:05:40.590
+Hasta ahora, buen trabajo.
+

@@ -1,0 +1,474 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.410 --> 00:00:03.080
+Tôi muốn bạn tự
+tạo bố cục này.
+
+00:00:03.080 --> 00:00:06.060
+Bạn sẽ thêm văn bản hiển thị
+cho đầu mục giá tiền ở đây và
+
+00:00:06.060 --> 00:00:09.310
+sau đó một văn bản hiển thị
+khác để hiển thị 0 đô.
+
+00:00:09.310 --> 00:00:15.650
+Đồng thời gán cho văn bản hiển thị
+thứ 2 này ID price_text_view.
+
+00:00:15.650 --> 00:00:18.580
+Lý do tôi yêu cầu bạn thêm ID
+là vì ta sẽ cần
+
+00:00:18.580 --> 00:00:21.780
+tham chiếu đến nó để
+cập nhật giá.
+
+00:00:21.780 --> 00:00:25.860
+Và trong lúc này, bạn cũng nên tạo
+kiểu 2 văn bản hiển thị này giống
+
+00:00:25.860 --> 00:00:27.760
+với văn bản hiển thị số lượng.
+
+00:00:27.760 --> 00:00:31.630
+Về khoảng cách dọc, ta cũng có
+16 dp giữa những khung xem này.
+
+00:00:31.630 --> 00:00:34.210
+Để trường giá tiền
+cũng được cập nhật,
+
+00:00:34.210 --> 00:00:37.800
+ta phải thực hiện một vài thay đổi
+trên tệp Java hoạt động chính.
+
+00:00:37.800 --> 00:00:39.730
+Chúng tôi sẽ giúp đỡ bạn
+một chút về thao tác này.
+
+00:00:39.730 --> 00:00:42.540
+Chúng tôi sẽ cung cấp phương thức 
+mới để bạn có thể thêm vào tệp
+
+00:00:42.540 --> 00:00:44.260
+Java hoạt động chính.
+
+00:00:44.260 --> 00:00:47.640
+Mở phần chính trong liên kết trong
+ghi chú của người hướng dẫn.
+
+00:00:47.640 --> 00:00:50.790
+Đồng thời, phần chính là đoạn
+
+00:00:50.790 --> 00:00:54.530
+hay vùng ngắn của mã sử dụng
+nhiều lần mà bạn muốn chia sẻ.
+
+00:00:54.530 --> 00:00:58.390
+Trong trường hợp này,
+ta tới trang GitHub Gist và
+
+00:00:58.390 --> 00:01:02.290
+tạo Phần chính mới bằng
+mã mà tôi đã chia sẻ với bạn.
+
+00:01:02.290 --> 00:01:05.780
+Và giờ tôi có thể chia sẻ liên kết
+này cho bạn và bạn có thể nhận mã.
+
+00:01:05.780 --> 00:01:09.140
+Với đoạn này, ta sẽ chọn toàn bộ
+và sau đó sao chép nó.
+
+00:01:09.140 --> 00:01:11.050
+Nhớ bao gồm cả nhận xét trên đây,
+
+00:01:11.050 --> 00:01:13.852
+hay là chú ý cho người đọc và
+dấu ngoặc ôm đóng ở đây.
+
+00:01:13.852 --> 00:01:17.960
+Giờ ta sẽ dán nó vào
+tệp Java hoạt động chính.
+
+00:01:17.960 --> 00:01:18.740
+Tôi thích mã miễn phí.
+
+00:01:19.740 --> 00:01:22.940
+Đảm bảo rằng dấu ngoặc ôm vẫn
+đúng vị trí sau khi bạn dán nó.
+
+00:01:22.940 --> 00:01:26.180
+Dấu ngoặc ôm là thứ khá phiền toán
+trong ứng dụng của bạn.
+
+00:01:26.180 --> 00:01:30.040
+Bạn có thể gặp phải vô số lỗi
+nếu dấu ngoặc ôm không thẳng hàng.
+
+00:01:30.040 --> 00:01:33.850
+Ví dụ, nếu tôi dán
+khối mã này ngay dưới đây,
+
+00:01:33.850 --> 00:01:37.740
+thì tôi sẽ nhận được lỗi
+về lớp hoặc giao diện.
+
+00:01:37.740 --> 00:01:40.880
+Lý do là vì phương thức này
+được thực hiện ở điểm không cố định.
+
+00:01:40.880 --> 00:01:45.380
+Thực sự, chúng tôi muốn nó nằm trong
+hoạt động chính, giữa dấu ngoặc ôm
+
+00:01:45.380 --> 00:01:47.380
+đóng và mở của hoạt động chính.
+
+00:01:47.380 --> 00:01:51.780
+Vậy, hãy sao chép và đặt nó phía trước
+dấu ngoặc ôm đóng của hoạt động chính.
+
+00:01:51.780 --> 00:01:53.910
+Sẽ tốt hơn.
+
+00:01:53.910 --> 00:01:58.590
+Lỗi có khả năng xảy ra khác là nếu
+bạn quên copy dấu ngoặc ôm đóng, và
+
+00:01:58.590 --> 00:02:00.870
+bạn chỉ copy phần trên
+của phương thức này.
+
+00:02:00.870 --> 00:02:01.530
+Trong trường hợp đó,
+
+00:02:01.530 --> 00:02:05.540
+bạn sẽ gặp lỗi khác về
+thiếu dấu ngoặc ôm đóng.
+
+00:02:05.540 --> 00:02:07.170
+Vậy bạn phải thêm dấu sau đó.
+
+00:02:07.170 --> 00:02:10.038
+Lỗi có thể xảy ra khác mà bạn
+sẽ gặp phải nếu bạn vô tình
+
+00:02:10.038 --> 00:02:12.050
+thêm phương thức vào đây.
+
+00:02:12.050 --> 00:02:15.940
+Ở đây là phía trước dấu ngoặc ôm
+đóng của phương thức hiển thị.
+
+00:02:15.940 --> 00:02:18.760
+Vậy giờ toàn bộ chỗ này là
+bên trong phương thức hiển thị,
+
+00:02:18.760 --> 00:02:20.290
+đó không phải là thứ ta cần.
+
+00:02:20.290 --> 00:02:23.710
+Chúng ta muốn nó nằm bên cạnh
+phương thức hiển thị, ngay đây.
+
+00:02:25.420 --> 00:02:27.540
+Bạn có ý tưởng,
+hàng triệu sự kết hợp.
+
+00:02:27.540 --> 00:02:30.730
+Bạn chỉ muốn cẩn thận và
+đảm bảo dấu ngoặc ôm đầy đủ.
+
+00:02:30.730 --> 00:02:33.730
+Cách kiểm tra hay khác là nếu
+bạn đặt con trỏ vào ngay đây,
+
+00:02:33.730 --> 00:02:37.850
+ngay sau dấu ngoặc ôm mở, bạn sẽ
+thấy rằng nó tô đậm dấu ngoặc ôm đóng
+
+00:02:37.850 --> 00:02:39.000
+trong cặp với nó.
+
+00:02:39.000 --> 00:02:40.320
+Cũng như vậy ở đây, nếu tôi bấm vào,
+
+00:02:40.320 --> 00:02:42.860
+dấu ngoặc đóng cùng cặp
+với nó ở ngay đây.
+
+00:02:44.130 --> 00:02:49.430
+Phương thức SubmitOrder và onCreate
+và MainActivity đều như vậy.
+
+00:02:50.440 --> 00:02:52.450
+Đây là dấu ngoặc ôm mở cho
+MainActivity, và
+
+00:02:52.450 --> 00:02:55.370
+dấu ngoặc ôm đóng được tô đậm
+màu xanh xuống tới tận đây.
+
+00:02:55.370 --> 00:02:58.650
+Bây giờ, không may là
+ta vẫn còn lỗi khác ở đây.
+
+00:02:58.650 --> 00:03:03.160
+Nếu tôi nhìn vào sọc lề ở đây, nó nói
+không thể xử lý định dạng số biểu tượng.
+
+00:03:03.160 --> 00:03:05.910
+Định dạng số thực tế
+do Android cung cấp
+
+00:03:05.910 --> 00:03:07.620
+để giúp định dạng số.
+
+00:03:07.620 --> 00:03:10.630
+Trong trường hợp này, ta phải
+định dạng số là giá tiền, vì thế
+
+00:03:10.630 --> 00:03:14.690
+nó có biểu tượng đô-la, hoặc
+tiền tệ địa phương khác mà bạn dùng.
+
+00:03:14.690 --> 00:03:16.370
+Ta cần thêm lệnh nhập cho nó
+
+00:03:16.370 --> 00:03:21.100
+vì Android Studio hiện tại
+không nhận dạng được nó.
+
+00:03:21.100 --> 00:03:24.410
+Để giải quyết đều này, tôi sẽ cho bạn
+thấy cách bật nhập tự động.
+
+00:03:24.410 --> 00:03:26.790
+Trong menu trên đầu
+Android Studio,
+
+00:03:26.790 --> 00:03:29.390
+bấm vào Android Studio &gt; Ưa thích.
+
+00:03:29.390 --> 00:03:32.260
+Nó sẽ mở mục ưa thích của
+Android Studio.
+
+00:03:32.260 --> 00:03:35.030
+Có vô số các ưa thích
+mà tôi không bao giờ thay đổi, nhưng
+
+00:03:35.030 --> 00:03:38.310
+nếu bạn muốn điều gì, tôi chỉ cần
+tìm kiễm nó bằng ô tìm kiếm ở đây.
+
+00:03:38.310 --> 00:03:40.510
+Vì vậy, tôi sẽ gõ Nhập Tự động.
+
+00:03:40.510 --> 00:03:41.670
+Bây giờ, nó hiển thị thiết đặt cho
+
+00:03:41.670 --> 00:03:44.470
+các mục nhập tự động
+trong XMl và Java.
+
+00:03:44.470 --> 00:03:48.820
+Tôi muốn xem hộp này ở đây,
+Thêm Unambiguous Imports on the fly.
+
+00:03:48.820 --> 00:03:51.850
+Cụm từ này có thể không có
+ý nghĩa gì với bạn, nhưng ok.
+
+00:03:51.850 --> 00:03:53.730
+Cụm từ này nghe có vẻ
+khá khó hiểu.
+
+00:03:54.920 --> 00:03:59.420
+Ý của nó là nói về Android Studio
+nghĩa là thêm tự động một vài
+
+00:03:59.420 --> 00:04:01.410
+dòng mã vào ứng dụng của chúng ta
+không có vấn đề gì.
+
+00:04:01.410 --> 00:04:06.050
+Đặc biệt là với các lệnh nhập,
+nếu nó biết ta tham chiếu tới đâu.
+
+00:04:06.050 --> 00:04:06.560
+Để tôi cho bạn thấy.
+
+00:04:07.700 --> 00:04:09.930
+Ồ, thực tế thì nó thực sự
+phục vụ chúng ta.
+
+00:04:09.930 --> 00:04:12.930
+Giả định rằng khi ta nói định dạng
+số, ta nhắc đến chính là thứ này và
+
+00:04:12.930 --> 00:04:13.930
+nó là chính xác.
+
+00:04:13.930 --> 00:04:15.970
+Vậy nên nó giải quyết vấn đề
+của chúng ta tự động.
+
+00:04:15.970 --> 00:04:17.170
+Điều đó thật tuyệt vời.
+
+00:04:17.170 --> 00:04:19.140
+Ok.
+Ở điểm này, nếu bạn chạy ứng dụng,
+
+00:04:19.140 --> 00:04:22.410
+sau đó bấm vào nút Đặt hàng
+thì số lượng sẽ thay đổi
+
+00:04:22.410 --> 00:04:23.710
+nhưng giá tiền không thay đổi.
+
+00:04:23.710 --> 00:04:26.140
+Chúng ta cần điều chỉnh phương thức
+gửi đơn hàng để
+
+00:04:26.140 --> 00:04:29.670
+nó cập nhật số lượng
+cũng như số tiền.
+
+00:04:29.670 --> 00:04:31.100
+Vậy hãy thêm một dòng mã khác.
+
+00:04:32.910 --> 00:04:36.980
+Tôi sẽ gọi là phương thức
+giá công khai và tôi sẽ
+
+00:04:36.980 --> 00:04:41.716
+nói rằng giá 2 ly cà phê
+nhân 5 đô.
+
+00:04:41.716 --> 00:04:44.780
+Lý do 1 ly cà phê của chúng ta có giá
+5 đô là vì ta đã nhập khẩi
+
+00:04:44.780 --> 00:04:47.460
+hạt Arabica từ Ethiopia.
+
+00:04:47.460 --> 00:04:50.260
+Nhưng dù sao, ta cũng sẽ để cho
+thiết bị thực hiện tính toán
+
+00:04:50.260 --> 00:04:53.742
+cho chúng ta vì chúng ta có
+2 ly cà phê giá 5 đô/ly.
+
+00:04:53.742 --> 00:04:56.130
+Đồng thời,
+khi tôi nói đô trong bài học này,
+
+00:04:56.130 --> 00:04:58.610
+hãy thoải mái chuyển đổi về
+tiền tệ địa phương bạn.
+
+00:04:58.610 --> 00:05:01.310
+Không hề có biểu tượng đô-la trong
+toán tử này,
+
+00:05:01.310 --> 00:05:04.420
+Nó được thêm vào sau này trong
+phương thức giá công khai.
+
+00:05:04.420 --> 00:05:07.110
+Nhưng đừng lo về chi tiết
+phương thức giá công khai.
+
+00:05:07.110 --> 00:05:08.790
+Ta sẽ nói về nó
+trong bài học số 3.
+
+00:05:09.840 --> 00:05:12.360
+Từ giờ chỉ tập trung vào biểu thức
+toán tử mà bạn sẽ sử dụng để
+
+00:05:12.360 --> 00:05:14.540
+tính giá tiền.
+
+00:05:14.540 --> 00:05:18.030
+Nhớ rằng dấu chấm phẩy phải ở cuối
+mỗi lệnh, nếu không,
+
+00:05:18.030 --> 00:05:22.160
+bạn sẽ gặp phải lỗi
+và lỗi này được tô màu đỏ
+
+00:05:22.160 --> 00:05:25.570
+Ví dụ, khi xóa dấu chấm phẩy,
+bạn sẽ nhận được lỗi nói rằng
+
+00:05:25.570 --> 00:05:27.130
+phải có dấu chấm phẩy.
+
+00:05:28.160 --> 00:05:33.030
+Ổ, và để rõ ràng hơn,
+phím chấm phẩy là cái nằm ngay đây.
+
+00:05:33.030 --> 00:05:34.720
+Nó không phải là dấu hai chấm,
+mà là dấu chấm phẩy.
+
+00:05:34.720 --> 00:05:37.190
+Được rồi, vậy
+khi bạn hoàn thành mọi thứ,
+
+00:05:37.190 --> 00:05:39.910
+bạn sẽ có hơn 2 văn bản hiển thị
+được hiển thị có giá tiền ở đây.
+
+00:05:39.910 --> 00:05:42.810
+Bạn đã phải chỉnh sửa
+hoạt động chính về chứa được
+
+00:05:42.810 --> 00:05:44.480
+menu mới tôi đã đưa cho bạn.
+
+00:05:44.480 --> 00:05:47.040
+Và bạn không phải chỉnh sửa
+phương thức SubmitOrder
+
+00:05:47.040 --> 00:05:49.150
+để thêm dòng mã mới
+để hiển thị giá tiền.
+
+00:05:50.240 --> 00:05:53.060
+Khi bạn chạy nó trên thiết bị
+nó sẽ trông giống thế này.
+
+00:05:53.060 --> 00:05:55.237
+Nó bắt đầu với số lượng là 0 với $0.
+
+00:05:55.237 --> 00:05:58.904
+Và khi bấm vào, nó sẽ thể hiện là
+2 ly cà phê được đặt với số tiền 10 đô.
+
+00:06:00.070 --> 00:06:04.010
+Hãy thoải mái thử nhiều
+giá trị số lượng và số tiền khác nhau.
+
+00:06:04.010 --> 00:06:06.890
+Nếu muốn tính 10 đô cho 1 cốc cà phê,
+bạn có thể thực hiện ngay.
+
+00:06:06.890 --> 00:06:10.160
+Hãy đảm bảo là bạn đã bật lại về
+2 ly cà phê với đơn giá 5 đô
+
+00:06:10.160 --> 00:06:12.770
+để nó khớp với mã của chúng ta.
+
+00:06:12.770 --> 00:06:14.100
+Đánh dấu ô này khi hoàn thành.
+

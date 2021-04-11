@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.630 --> 00:00:03.240
+Primero tenemos que modificar
+el diseño principal de la actividad
+
+00:00:03.240 --> 00:00:05.450
+para poder añadir
+las vistas de texto para el precio.
+
+00:00:06.620 --> 00:00:08.700
+Si no se muestra
+la previsualización del dispositivo,
+
+00:00:08.700 --> 00:00:12.350
+puedes hacer clic en este link,
+<i>Previsualización</i>, para que aparezca.
+
+00:00:13.550 --> 00:00:16.600
+Ahora, cuando cambiamos el XML,
+podemos ver la actualización aquí.
+
+00:00:17.380 --> 00:00:19.280
+En la captura de pantalla
+que te proporcionamos
+
+00:00:19.740 --> 00:00:22.630
+el precio se presentaba
+igual que la cantidad.
+
+00:00:23.670 --> 00:00:26.570
+Tenemos un encabezado
+y una vista de texto para el valor,
+
+00:00:26.800 --> 00:00:29.610
+de manera que podemos copiar
+estas dos vistas de texto
+
+00:00:29.840 --> 00:00:31.420
+para luego pegarlas debajo.
+
+00:00:32.299 --> 00:00:34.910
+Ahora tenemos que modificar el valor
+y adaptarlo según queramos.
+
+00:00:35.620 --> 00:00:38.090
+En lugar de <i>Quantity</i>,
+debería decir <i>Price</i>.
+
+00:00:40.140 --> 00:00:44.140
+También tenemos que cambiar el ID
+a <i>price_text_view</i>.
+
+00:00:44.440 --> 00:00:46.470
+Puedes tener dos vistas con el mismo ID.
+
+00:00:47.110 --> 00:00:50.280
+En el test te dijimos que lo cambiaras
+a <i>price_text_view</i>
+
+00:00:50.320 --> 00:00:51.760
+para que coincida con nuestro código.
+
+00:00:52.050 --> 00:00:53.500
+Ahí. El error desaparece.
+
+00:00:54.270 --> 00:00:56.740
+En la previsualización tenemos
+el encabezado del precio
+
+00:00:57.120 --> 00:00:58.340
+con un cero debajo.
+
+00:00:58.980 --> 00:01:01.200
+También queremos
+cambiar esto a cero dólares.
+
+00:01:01.560 --> 00:01:03.640
+Puedes usar
+el símbolo de tu moneda, si quieres.
+
+00:01:04.230 --> 00:01:05.590
+El encabezado está en mayúsculas.
+
+00:01:05.590 --> 00:01:09.150
+<i>actual_price_value</i>
+tiene un tamaño de 16 sp
+
+00:01:09.400 --> 00:01:10.810
+y el color de la fuente es negro.
+
+00:01:11.210 --> 00:01:12.440
+Hasta aquí todo bien
+
+00:01:12.440 --> 00:01:15.320
+excepto que acabo de ver
+que hace falta más espacio vertical
+
+00:01:15.320 --> 00:01:18.390
+entre el encabezado del precio
+y el valor de la cantidad.
+
+00:01:18.940 --> 00:01:20.360
+Voy a cambiar todas las vistas
+
+00:01:20.430 --> 00:01:23.900
+para que tengan un margen superior
+y un valor de 16 dp.
+
+00:01:24.240 --> 00:01:29.300
+Aquí en lugar de margen inferior,
+voy a poner margen superior, 16.
+
+00:01:29.610 --> 00:01:30.760
+Así se arregla.
+
+00:01:31.100 --> 00:01:32.100
+Bien.
+
+00:01:32.220 --> 00:01:34.200
+Así todas las vistas están equidistantes.
+
+00:01:35.500 --> 00:01:39.080
+Cuando creas que el XML está bien,
+puedes ejecutarlo en tu dispositivo.
+
+00:01:40.130 --> 00:01:41.360
+Parece que está bien.
+
+00:01:42.580 --> 00:01:44.460
+Veamos ahora el archivo <i>MainActivity</i>.
+
+00:01:44.760 --> 00:01:49.050
+Si aparece esta ventana de Android DDMS
+puedes cerrarla usando esta flecha.
+
+00:01:49.670 --> 00:01:52.260
+En la <i>MainActivity</i> te pedimos
+que copiaras y pegaras
+
+00:01:52.260 --> 00:01:54.410
+el método de vista de precio que te dimos.
+
+00:01:55.510 --> 00:01:58.763
+Espero que también hayas modificado
+las preferencias del Android Studio
+
+00:01:58.763 --> 00:02:01.930
+para importar automáticamente
+las cosas que no sean ambiguas.
+
+00:02:02.100 --> 00:02:03.630
+Eso ayudará a resolver el problema
+
+00:02:03.630 --> 00:02:06.000
+de no identificar a <i>Number_Format</i>.
+
+00:02:06.340 --> 00:02:07.849
+Ahora con la declaración de importación,
+
+00:02:07.849 --> 00:02:09.850
+la app sabe que <i>Number_Format</i>
+
+00:02:09.850 --> 00:02:13.290
+lo proporciona Java automáticamente
+para ayudar a dar formato a los números.
+
+00:02:13.890 --> 00:02:14.969
+Para el último paso
+
+00:02:14.969 --> 00:02:16.850
+modificamos el método de envío de pedido
+
+00:02:17.000 --> 00:02:18.590
+de modo que cuando pulsamos la tecla
+
+00:02:18.590 --> 00:02:21.610
+mostramos la cantidad y también el precio.
+

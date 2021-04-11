@@ -1,0 +1,411 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:01.280 --> 00:00:04.640
+İlk adım <i>activity_main</i> 
+yerleşimini değiştirmek,
+
+00:00:04.640 --> 00:00:07.300
+böylece uygulama şu şekilde görünür.
+
+00:00:07.300 --> 00:00:10.099
+Haydi Android Studio'ya 
+gidip o dosyaya bakalım.
+
+00:00:10.099 --> 00:00:12.802
+İşte <i>activity_main</i>
+XML yerleşim dosyamız.
+
+00:00:12.802 --> 00:00:16.540
+Burada cihaz üstünde sağ tarafta 
+görünen önizlememiz var.
+
+00:00:16.540 --> 00:00:20.390
+Cihaza yakınlaşmak için 
+bu büyüteçe tıklayabilirim.
+
+00:00:20.390 --> 00:00:21.270
+İşte bu daha iyi.
+
+00:00:22.350 --> 00:00:25.550
+İstenen yerleşimi oluşturmak için, 
+öncelikle miktar başlığı
+
+00:00:25.550 --> 00:00:28.650
+ve miktar değeri arasına bir artı 
+düğmesi eklemek istiyorum.
+
+00:00:28.650 --> 00:00:32.790
+"Sipariş" düğmesi için zaten 
+bu aşağıda bir yerleşimimiz var.
+
+00:00:32.790 --> 00:00:36.330
+Yani sadece bu kodu kopyalayıp 
+sonra da miktar başlığı ve
+
+00:00:36.330 --> 00:00:39.880
+miktar değeri arasına yapıştıracağım.
+
+00:00:39.880 --> 00:00:42.450
+Şimdi düğmenin doğru yerde 
+çıktığını görüyorum,
+
+00:00:42.450 --> 00:00:45.470
+ama sipariş yerine artı demesi için 
+metni değiştirmem lazım.
+
+00:00:47.010 --> 00:00:48.660
+Güzel! Bir de üst kenar
+
+00:00:48.660 --> 00:00:52.790
+boşluğunu kaldıracağız, 
+çünkü bu metin alanının altında zaten
+
+00:00:52.790 --> 00:00:54.310
+16 dp kenar boşluğumuz var.
+
+00:00:54.310 --> 00:00:56.300
+Bu yüzden devam edip bunu silin.
+
+00:00:56.300 --> 00:00:59.940
+Düğme oldukça büyük ve testte 
+büyüklüğünü 48 dp uzunluk ve
+
+00:00:59.940 --> 00:01:02.880
+48 dp genişlik olarak 
+değiştirmenizi istedik.
+
+00:01:02.880 --> 00:01:04.660
+Bu yüzden düğme XML'i 
+burada değiştireceğim.
+
+00:01:06.010 --> 00:01:08.100
+Güzel. Şimdi doğru büyüklükte.
+
+00:01:08.100 --> 00:01:12.030
+Şimdi bu XML'i kopyalayıp miktar 
+değerinin altına yapıştırabilirim,
+
+00:01:12.030 --> 00:01:13.980
+böylece eksi düğmemiz olur.
+
+00:01:13.980 --> 00:01:17.430
+Beyaz alanı sildim, çünkü 
+Android kod stili rehberine göre,
+
+00:01:17.430 --> 00:01:20.690
+kodunuzda ekstra beyaz 
+boşluklarınız olmamalı.
+
+00:01:20.690 --> 00:01:25.050
+Şimdi bu düğmenin metnini değiştireceğim, 
+böylece eksi diyecek.
+
+00:01:26.070 --> 00:01:29.210
+Zaten 48 dp genişliği ve yüksekliği var.
+
+00:01:29.210 --> 00:01:31.010
+Şimdi artı ve eksi düğmeleri yerinde.
+
+00:01:32.320 --> 00:01:35.990
+Önceden bahsettiğimiz gibi, 
+başlangıç değerinin 2 ve
+
+00:01:35.990 --> 00:01:38.280
+başlangıç fiyatının 10$ 
+olmasını istiyoruz.
+
+00:01:38.280 --> 00:01:39.820
+O zaman şimdi bu değişikliği yapalım.
+
+00:01:40.410 --> 00:01:42.620
+Yerleşim şimdilik buna benziyor.
+
+00:01:42.620 --> 00:01:46.170
+İlerleyişimizi görmek için 
+test görünümüne dönelim.
+
+00:01:46.170 --> 00:01:49.430
+Yerleşimi başarılı bir şekilde 
+değiştirdik, ama artı düğmesini de
+
+00:01:49.430 --> 00:01:52.610
+değiştirmemiz lazım, böylece 
+tıklandığında artım metodunu çağırır.
+
+00:01:52.610 --> 00:01:55.720
+Eksi düğmesine basıldığında, 
+azalım metodunu çağırmamız lazım.
+
+00:01:56.830 --> 00:02:00.530
+Android Studio'ya geri dönüp, 
+artı düğmesini değiştireceğim,
+
+00:02:00.530 --> 00:02:04.390
+böylece Android <i>onClick</i> 
+özelliği değeri artım olur.
+
+00:02:04.390 --> 00:02:07.060
+Bu şekilde artı düğmesine 
+basıldığında, <i>MainActivity</i>'de
+
+00:02:07.060 --> 00:02:09.430
+artım adındaki metodu çağıracaktır.
+
+00:02:09.430 --> 00:02:12.883
+Benzer şekilde eksi değeri için, 
+<i>onClick</i> özelliklerini değiştireceğim,
+
+00:02:12.883 --> 00:02:14.376
+böylece değer azalım olur.
+
+00:02:16.477 --> 00:02:19.350
+Bunu kaydedeceğim ve 
+sonra cihazda çalıştıracağım.
+
+00:02:20.780 --> 00:02:25.420
+Yerleşim iyi görünüyor, ama eğer 
+artı değerine basarsam çöker.
+
+00:02:25.420 --> 00:02:27.560
+Hatırladınız mi size 
+hatanın yığın izi için
+
+00:02:27.560 --> 00:02:29.310
+günlüklere bakmayı göstermiştim?
+
+00:02:29.310 --> 00:02:32.560
+Günlük hazırda zaten açık, 
+bu yüzden bu oku yukarı
+
+00:02:32.560 --> 00:02:35.320
+taşıyalım ki mesajın 
+daha fazlasını görelim.
+
+00:02:35.320 --> 00:02:38.090
+Eğer yukarı çıkarsak, bunun kendi
+hatamız olduğunu görürüz.
+
+00:02:39.300 --> 00:02:42.550
+Bu uygulamamız justjava ve 
+kural dışı durum istisnası diyor.
+
+00:02:43.790 --> 00:02:47.040
+Eğer sağa gidersem, hata mesajını 
+daha fazla görebilirim.
+
+00:02:47.040 --> 00:02:50.750
+Hata mesajı, aktivitede artım metodunu 
+bulamadığını söylüyor.
+
+00:02:50.750 --> 00:02:52.150
+<i>MainActivity</i>.
+
+00:02:52.150 --> 00:02:55.940
+Daha önceki videodaki hata 
+mesajına çok benzer görünüyor.
+
+00:02:55.940 --> 00:02:58.850
+Aslında <i>MainActivity</i>'de artım 
+adında bir metot bulunmuyor.
+
+00:02:58.850 --> 00:03:01.765
+Esasen bu bekleniyor, çünkü 
+o değişikliği henüz yapmadık.
+
+00:03:02.820 --> 00:03:03.760
+İkinci adım olarak,
+
+00:03:03.760 --> 00:03:07.150
+<i>MainActivity</i>'ye artım metodu 
+eklememiz, 3'le başlayan
+
+00:03:07.150 --> 00:03:12.230
+bir miktar değişkeni yaratmamız, 
+sonra miktarı göstermemiz lazım.
+
+00:03:12.230 --> 00:03:15.100
+Bunu yapmak için, <i>MainActivity</i> 
+Java dosyasını açıyorum.
+
+00:03:15.100 --> 00:03:18.160
+Artı düğmesi için davranış oluşturma,
+sipariş düğmesi için
+
+00:03:18.160 --> 00:03:20.900
+davranış oluşturmaya çok benzer olacak.
+
+00:03:20.900 --> 00:03:23.720
+Bu yüzden sipariş düşmesini ele alan 
+bu metodu buraya kopyalayalım.
+
+00:03:25.030 --> 00:03:28.406
+Hemen "Siparişi sunma <i>MainActivity</i>'de 
+zaten tanımlı" diyen
+
+00:03:28.406 --> 00:03:29.600
+bir hata aldım.
+
+00:03:29.600 --> 00:03:32.980
+<i>MainActivity</i>'de tam olarak 
+aynı olan iki metodunuz olamaz.
+
+00:03:32.980 --> 00:03:34.350
+Ama bu tamam,
+
+00:03:34.350 --> 00:03:36.779
+çünkü zaten bunu artım 
+metoduna değiştireceğim.
+
+00:03:37.860 --> 00:03:38.790
+Şimdi hata gidiyor.
+
+00:03:39.820 --> 00:03:42.912
+Yorumu değiştireceğim, 
+çünkü şimdi bu yeni bir metot.
+
+00:03:42.912 --> 00:03:45.610
+Sipariş düğmesi yerine 
+artı düğmesine atıf yapmak
+
+00:03:45.610 --> 00:03:47.590
+için yorumu güncelleyeceğim.
+
+00:03:47.590 --> 00:03:51.192
+Artım metodu içinde, tam sayı 
+miktar değişkeni oluşturacağım.
+
+00:03:51.192 --> 00:03:56.180
+Testte istendiği gibi, 
+3 değeri ile başlatacağım.
+
+00:03:56.180 --> 00:03:59.030
+Sonra bu değeri ekranda göstereceğim.
+
+00:03:59.030 --> 00:04:00.820
+Bu metodda fiyatı 
+güncellemem gerekmez,
+
+00:04:00.820 --> 00:04:03.110
+bu yüzden bu kod satırını silebilirim.
+
+00:04:03.110 --> 00:04:05.030
+Bu iyi görünüyor, haydi
+şimdi bunu test edelim.
+
+00:04:06.030 --> 00:04:10.020
+Şimdi artı düğmesine bastığımda, 
+gerçekten 3'e değiştiriyor.
+
+00:04:10.020 --> 00:04:11.670
+Bu gerçekten harika.
+
+00:04:11.670 --> 00:04:14.240
+Ama eksi düğmesine bastığım zaman çöküyor.
+
+00:04:15.740 --> 00:04:19.072
+Haydi günlüklere bakalım, 
+en güncel günlükleri almak için
+
+00:04:19.072 --> 00:04:22.010
+aşağıya ineceğim ve son 
+hatayı görmek için yukarı çıkacağım.
+
+00:04:23.070 --> 00:04:23.690
+Uygulamamız için,
+
+00:04:23.690 --> 00:04:26.330
+<i>IllegalStateException</i> vardı, 
+çünkü aktivitemizde
+
+00:04:26.330 --> 00:04:28.610
+azalım metodunu bulamadı.
+
+00:04:28.610 --> 00:04:32.580
+Bu bekleniyordu da, çünkü 
+daha azalım metodunu eklemedik.
+
+00:04:32.580 --> 00:04:34.050
+Haydi şimdi gidip bunu yapalım.
+
+00:04:35.052 --> 00:04:37.790
+Bu metodu kopyalayıp sonra 
+aşağısına yapıştıracağım.
+
+00:04:38.980 --> 00:04:40.610
+Buna azalım ismini vereceğim.
+
+00:04:42.110 --> 00:04:43.980
+Şimdi bu yorumun güncellenmesi gerek.
+
+00:04:43.980 --> 00:04:46.730
+Bu metot, eksi düğmesine 
+basıldığında gelir.
+
+00:04:48.180 --> 00:04:50.190
+Bu metot içinde ne 
+yapacağımızı bulmak için
+
+00:04:50.190 --> 00:04:52.100
+haydi tekrar teste gidelim.
+
+00:04:52.100 --> 00:04:54.190
+Şimdiye dek iki adım bitirdik.
+
+00:04:54.190 --> 00:04:57.215
+Son adım, <i>MainActivity</i>'deki 
+azalım metodu için.
+
+00:04:57.215 --> 00:04:59.705
+Miktar değişkenini oluşturup 
+1'le başlatmak istiyoruz.
+
+00:05:00.920 --> 00:05:02.840
+Sonra miktarı ekranda göstereceğiz.
+
+00:05:04.140 --> 00:05:06.990
+Azalım metodunda, tam sayı miktar 
+değişkeni oluşturduk.
+
+00:05:06.990 --> 00:05:09.160
+Onu 1 değeri ile başlatıp
+
+00:05:09.160 --> 00:05:11.340
+sonra miktarı ekranda göstereceğim.
+
+00:05:12.870 --> 00:05:14.450
+Şimdi cihazımızda çalıştıralım.
+
+00:05:15.570 --> 00:05:18.790
+Tamam, şans dileyin ki 
+bu sefer çökmesin.
+
+00:05:18.790 --> 00:05:22.350
+Eğer eksi düğmesine basarsam, 
+o zaman, evet, 1'e düşer.
+
+00:05:22.350 --> 00:05:25.250
+Eğer artı düğmesine 
+basarsam, 3'e çıkar.
+
+00:05:25.250 --> 00:05:27.970
+Yani bu düğmeler beklendiği 
+gibi çalışıyor, en azından
+
+00:05:27.970 --> 00:05:29.670
+uygulamanın bu safhasında.
+
+00:05:29.670 --> 00:05:34.063
+İdeal olarak, önceden bahsettiğim 
+gibi, 4, 5, 6'ya yükselmesini ve
+
+00:05:34.063 --> 00:05:36.620
+2, 1, 0'a düşmesini istiyoruz.
+
+00:05:36.620 --> 00:05:39.510
+Ama bu sonradan derste işlenecek.
+
+00:05:39.510 --> 00:05:40.750
+Şimdilik çok iyi iş çıkardınız.
+

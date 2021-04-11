@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.283 --> 00:00:03.230
+Já conferimos os dois primeiros
+pontos no último vídeo.
+
+00:00:03.630 --> 00:00:06.726
+Agora mostrarei algumas coisas
+que&nbsp;você poderá experimentar.
+
+00:00:07.620 --> 00:00:09.766
+Eu gostaria de mudar o valor
+inicial de quantidade
+
+00:00:09.971 --> 00:00:12.834
+para que quando o aplicativo lançar,
+apareça 0 em vez de 2.
+
+00:00:13.690 --> 00:00:16.834
+Posso fazer isso modificando
+
+00:00:17.058 --> 00:00:18.670
+para inicializar com o valor 0.
+
+00:00:19.427 --> 00:00:22.250
+Então os métodos de incremento
+e decremento devem funcionar.
+
+00:00:22.960 --> 00:00:24.460
+Ao chamar o método de incremento,
+
+00:00:24.713 --> 00:00:26.904
+ele usará o valor mais recente
+de quantidade e somar 1.
+
+00:00:27.163 --> 00:00:30.480
+Ao chamar o método de decremento,
+irá apenas diminuir a quantidade por 1.
+
+00:00:31.144 --> 00:00:32.473
+Vamos então testar isso agora.
+
+00:00:33.273 --> 00:00:35.610
+Isso é muito estranho, 
+eu queria que mostrasse 0.
+
+00:00:36.017 --> 00:00:39.268
+Se eu apertar botão de mais,
+estranho, ele mostra 1,
+
+00:00:39.753 --> 00:00:43.292
+parece ter diminuído,
+mas agora começa a aumentar.
+
+00:00:43.850 --> 00:00:45.612
+Parece que os botões estão funcionando,
+
+00:00:45.840 --> 00:00:48.264
+mas por alguma razão,
+o valor inicial estava errado.
+
+00:00:49.089 --> 00:00:51.507
+Puxa! Esquecemos de mudar
+o arquivo de layout.
+
+00:00:52.320 --> 00:00:53.925
+Neste layout temos uma <i>TextView</i>
+
+00:00:54.057 --> 00:00:56.462
+com um valor inicial de quantidade de 2.
+
+00:00:56.886 --> 00:01:00.406
+Isso deve resolver o problema do&nbsp;2
+aparecendo quando o <i>app </i>é lançado.
+
+00:01:01.300 --> 00:01:04.086
+Legal, agora a quantidade inicial
+aparece como 0.
+
+00:01:04.700 --> 00:01:07.040
+Se eu apertar o botão de mais,
+ele atualiza corretamente.
+
+00:01:07.310 --> 00:01:09.403
+Se apertar o de menos,
+também atualiza corretamente.
+
+00:01:10.500 --> 00:01:11.987
+Você pode ver que é um pouco confuso
+
+00:01:12.006 --> 00:01:15.083
+o valor inicial de quantidade
+estar em dois lugares.
+
+00:01:15.860 --> 00:01:19.390
+Ter dois lugares no código
+que representam a mesma coisa
+
+00:01:19.660 --> 00:01:23.353
+pode ser uma fonte de erros no futuro,
+como acabamos de ver.
+
+00:01:24.050 --> 00:01:25.772
+Um modo avançado de resolver esse problema
+
+00:01:26.060 --> 00:01:31.655
+é a <i>MainActivity</i> indicar a quantidade 0,
+assim que o aplicativo é lançado,
+
+00:01:31.969 --> 00:01:34.307
+em vez de confiar no layout
+para ter um valor inicial.
+
+00:01:35.058 --> 00:01:38.010
+Dessa forma, a única fonte
+de certeza seria essa variável global.
+
+00:01:38.338 --> 00:01:39.366
+Mas não pense nisso agora.
+
+00:01:39.390 --> 00:01:42.590
+Isso é algo mais avançado que
+você poderá fazer após a lição 3.
+
+00:01:43.304 --> 00:01:45.180
+Outro jeito de experimentar com o código,
+
+00:01:45.476 --> 00:01:49.138
+é levar o botão de mais a sempre dobrar
+o número de cafés pedidos
+
+00:01:49.538 --> 00:01:52.720
+e levar o botão de menos a sempre
+dividir o número de cafés.
+
+00:01:53.446 --> 00:01:55.140
+Vamos começar com a
+quantidade inicial de 2
+
+00:01:55.187 --> 00:01:56.904
+pois se apertarmos o botão de menos primeiro
+
+00:01:57.230 --> 00:01:59.089
+podemos dividi-lo ao meio,
+pelo menos uma vez.
+
+00:02:00.160 --> 00:02:03.655
+Quando o método de incremento é chamado,
+dobraremos o número de cafés pedidos.
+
+00:02:04.129 --> 00:02:07.310
+Devemos pegar a quantidade atual e,
+em seguida, multiplicá-la por dois.
+
+00:02:07.907 --> 00:02:10.130
+Isso será atualizado como 
+o novo valor de quantidade,
+
+00:02:10.306 --> 00:02:11.778
+e então é exibido na tela.
+
+00:02:12.516 --> 00:02:14.250
+Por outro lado temos
+o método de decremento.
+
+00:02:14.929 --> 00:02:18.676
+Para o método de decremento reduziremos
+o número de cafés pedidos pela metade.
+
+00:02:19.090 --> 00:02:21.815
+Pegamos então a quantidade atual
+e a dividimos por dois.
+
+00:02:22.960 --> 00:02:24.470
+Esse será o novo valor de quantidade,
+
+00:02:24.470 --> 00:02:26.953
+e o exibimos na tela,
+vamos testar.
+
+00:02:28.060 --> 00:02:29.747
+Como vê, isso pode ser uma fonte de erros,
+
+00:02:29.766 --> 00:02:33.581
+sempre que você alterar o valor inicial,
+terá que alterá-lo em ambos os lugares.
+
+00:02:34.258 --> 00:02:38.332
+Vamos executar o aplicativo agora,
+e começa com a&nbsp;quantidade inicial de 2.
+
+00:02:38.650 --> 00:02:42.516
+Se eu apertar o botão de mais,
+ele&nbsp;deveria dobrar o valor, legal, e dobra.
+
+00:02:43.095 --> 00:02:44.135
+Se apertar o botão de menos
+
+00:02:44.350 --> 00:02:48.683
+ele deveria dividir o número de cafés
+pedidos pela metade, e funciona.
+
+00:02:49.580 --> 00:02:50.603
+Se executar no depurador,
+
+00:02:50.658 --> 00:02:53.820
+você verá como ele sempre
+atualiza as variáveis.
+
+00:02:54.301 --> 00:02:57.501
+O valor de quantidade começa em 2
+e depois atualiza para 4.
+
+00:02:58.584 --> 00:03:01.160
+Então a quantidade começa em 4,
+
+00:03:01.660 --> 00:03:05.304
+e depois atualizada para 8,
+e assim por diante.
+
+00:03:06.860 --> 00:03:08.830
+Certamente você pensou em
+modos mais criativos
+
+00:03:08.855 --> 00:03:10.740
+de brincar com esse seletor de quantidade.
+
+00:03:11.300 --> 00:03:14.664
+Esperamos que isso tenha ajudado
+a melhor entender as variáveis globais.
+
+00:03:15.458 --> 00:03:16.707
+Se eu apertar o botão Pedido,
+
+00:03:17.594 --> 00:03:20.611
+não mostra o preço do número de cafés pedidos.
+
+00:03:21.200 --> 00:03:22.560
+Corrigiremos isso no próximo vídeo.
+

@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.674 --> 00:00:03.142
+Primeiro precisamos modificar
+o layout da atividade principal
+
+00:00:03.154 --> 00:00:05.428
+para que possamos acrescentar
+as <i>TextViews</i> para o preço.
+
+00:00:06.683 --> 00:00:08.590
+Se o dispositivo não está mostrando,
+
+00:00:08.867 --> 00:00:12.289
+você pode clicar neste l<i>ink </i>aqui
+que diz Preview, para fazê-lo aparecer.
+
+00:00:13.532 --> 00:00:16.504
+Agora, quando mudamos o <i>XML</i>, podemos
+ver atualizar automaticamente, aqui.
+
+00:00:17.460 --> 00:00:19.175
+Nesta captura de tela que the mostramos
+
+00:00:19.753 --> 00:00:22.520
+o preço foi apresentado
+de uma maneira semelhante à quantidade.
+
+00:00:23.670 --> 00:00:26.436
+Temos um cabeçalho, bem como
+uma <i>TextView</i>, para mostrar o valor.
+
+00:00:26.840 --> 00:00:29.643
+Assim podemos simplesmente copiar
+estes dois elementos de <i>TextView</i>
+
+00:00:29.889 --> 00:00:31.304
+e em seguida, colá-lo abaixo.
+
+00:00:32.295 --> 00:00:34.836
+Agora precisamos ajustar os valores
+para combinar com o cenário.
+
+00:00:35.661 --> 00:00:37.907
+Em vez de Quantidade,
+ele deve dizer Preço.
+
+00:00:40.129 --> 00:00:44.060
+E, também devemos alterar o <i>ID</i>
+para ser <i>price_text_view</i>.
+
+00:00:44.449 --> 00:00:46.393
+Você pode ter duas visualizações
+com o mesmo ID.
+
+00:00:47.120 --> 00:00:48.550
+Pórem, no questionário
+dissemos-lhe
+
+00:00:48.550 --> 00:00:51.495
+para mudar isso para <i>price_text_view</i>
+pare que combine com o código.
+
+00:00:52.073 --> 00:00:53.500
+E isso faz com que
+o erro vá embora.
+
+00:00:54.252 --> 00:00:58.270
+Ok, olhando a pré-visualização, temos
+o cabeçalho do preço e zero por baixo.
+
+00:00:59.030 --> 00:01:01.131
+Nós também queremos mudar
+isso para ser zero dólares.
+
+00:01:01.587 --> 00:01:03.560
+E você pode usar a sua própria
+moeda se quiser.
+
+00:01:04.263 --> 00:01:06.980
+O cabeçalho está em maiúsculo
+e o valor real dos preços
+
+00:01:07.210 --> 00:01:10.701
+tem o tamanho de texto de 16sp,
+e uma cor de texto preta.
+
+00:01:11.236 --> 00:01:12.360
+Isso parece bom até agora,
+
+00:01:12.590 --> 00:01:15.464
+a não ser que eu noto que precisa
+haver um mais de espaço vertical
+
+00:01:15.526 --> 00:01:18.258
+entre o cabeçalho do preço
+e o valor de quantidade.
+
+00:01:18.996 --> 00:01:20.370
+Eu só vou mudar todos as <i>Views</i>
+
+00:01:20.370 --> 00:01:23.741
+para terem margem superior,
+o valor de 16dp.
+
+00:01:24.252 --> 00:01:27.070
+E, então, em vez de margem
+inferior aqui, eu vou fazer,
+
+00:01:27.476 --> 00:01:30.640
+margem do topo 16,
+e isso resolve o problema.
+
+00:01:31.260 --> 00:01:34.116
+Legal! Agora todas as <i>Views</i>
+estão igualmente espaçadas.
+
+00:01:35.556 --> 00:01:37.538
+Uma vez que achar que o XML
+está em um bom estado,
+
+00:01:37.569 --> 00:01:39.156
+então pode executá-lo
+no dispositivo.
+
+00:01:40.209 --> 00:01:41.267
+Legal, parece bom!
+
+00:01:42.584 --> 00:01:44.320
+Agora trabalhamos
+no arquivo <i>MainActivity </i>.
+
+00:01:44.744 --> 00:01:46.947
+Se esta janela <i>DDMS</i> do Android aparecer,
+
+00:01:46.984 --> 00:01:48.855
+você pode apenas recolhê-la
+usando esta seta.
+
+00:01:49.670 --> 00:01:51.900
+Na <i>MainActivity</i>,
+pedimos que você copie
+
+00:01:51.993 --> 00:01:54.467
+e cole o método <i>displayPrice</i>
+que nós demos.
+
+00:01:55.510 --> 00:01:58.627
+Espero que você tenha modificado
+as preferências do seu Android Studio
+
+00:01:58.929 --> 00:02:01.963
+para importar automaticamente
+coisas não ambíguas.
+
+00:02:02.276 --> 00:02:03.581
+Isso iria resolver o problema
+
+00:02:03.606 --> 00:02:05.963
+de não saber o formato
+de número referente.
+
+00:02:06.369 --> 00:02:09.539
+Mas agora, com a declaração de importação,
+o app sabe que o formato do número
+
+00:02:09.592 --> 00:02:13.480
+é algo que é fornecida automaticamente
+pelo Java para ajudar a formatar números.
+
+00:02:13.900 --> 00:02:16.880
+Então, para a última etapa modificamos
+o método de submeter pedidos,
+
+00:02:17.058 --> 00:02:18.380
+para que quando o botão é clicado,
+
+00:02:18.750 --> 00:02:21.563
+exibimos a quantidade
+e também exibimos o preço.
+

@@ -1,0 +1,475 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.410 --> 00:00:03.080
+Ushbu tartibni o‘zingiz 
+yaratishingizni xohlayman.
+
+00:00:03.080 --> 00:00:06.060
+Bu yerda narxlar sarlavhasi uchun 
+bitta matn ko‘rinishi, so‘ngra 
+
+00:00:06.060 --> 00:00:09.310
+zero dollarni ko‘rsatish uchun 
+boshqa matn ko‘rinishini qo‘shasiz.
+
+00:00:09.310 --> 00:00:15.650
+Ikkinchi matn ko‘rinishini price_text_view 
+ning ko‘rinish identifikatorini tayinlang.
+
+00:00:15.650 --> 00:00:18.580
+Identifikator qo‘shishingizni 
+so‘rashimning boisi, 
+
+00:00:18.580 --> 00:00:21.780
+keyinroq narxni yangilash uchun 
+ushbu ko‘rinishga murojaat qilishimiz kerak.
+
+00:00:21.780 --> 00:00:25.860
+Va buni amalga oshirayotganda, 
+ushbu ikkita matnli tasvirlarning uslubini 
+
+00:00:25.860 --> 00:00:27.760
+miqdoriy matn 
+ko‘rinishiga o‘xshating.
+
+00:00:27.760 --> 00:00:31.630
+Vertikal masofaga kelsak, bizda 
+ko‘rinishlar orasida 16dp mavjud.
+
+00:00:31.630 --> 00:00:34.210
+Narxlar maydoni ham 
+yangilanishi uchun 
+
+00:00:34.210 --> 00:00:37.800
+ main Java activity fayliga 
+ba’zi o‘zgartirishlar kiriting.
+
+00:00:37.800 --> 00:00:39.730
+Bu borada sizga biroz 
+ko‘proq yordam beramiz.
+
+00:00:39.730 --> 00:00:42.540
+Sizga main Java activity 
+fayliga qo‘shishingiz mumkin bo‘lgan 
+
+00:00:42.540 --> 00:00:44.260
+yangi metodni taqdim etamiz.
+
+00:00:44.260 --> 00:00:47.640
+eslatmalarda taqdim 
+etilgan havolani oching.
+
+00:00:47.640 --> 00:00:50.790
+Ma’no- bu qism yoki boshqalar bilan 
+
+00:00:50.790 --> 00:00:54.530
+baham ko‘rmoqchi bo‘lgan kodning
+qisqa ko‘rinishini anglatadi.
+
+00:00:54.530 --> 00:00:58.390
+Bunday holda, biz GitHub Gist 
+vebsahifasiga o‘tib , 
+
+00:00:58.390 --> 00:01:02.290
+taqdim etmoqchi bo‘lgan ushbu
+kod bilan yangi Gist yaratamiz.
+
+00:01:02.290 --> 00:01:05.780
+Va endi ushbu havolani bo‘lishamiz 
+va siz kodni olishingiz mumkin.
+
+00:01:05.780 --> 00:01:09.140
+Ushbu parcha uchun biz tanlaymiz
+bularning barchasini keyin nusxa ko‘chiring.
+
+00:01:09.140 --> 00:01:11.050
+o‘quvchi uchun eslatma bo‘lgan sharhni va 
+
+00:01:11.050 --> 00:01:13.852
+va bu yerda yopiladigan qismni 
+qo‘shishni unutmang.
+
+00:01:13.852 --> 00:01:17.960
+Endi biz uni ichiga joylashtiramiz
+ main Java activity fayli.
+
+00:01:17.960 --> 00:01:18.740
+Men free code ni yaxshi bilaman.
+
+00:01:19.740 --> 00:01:22.940
+Qavslar hali ham joylashtirganiga
+ishonch hosil qiling.
+
+00:01:22.940 --> 00:01:26.180
+Qavslar og‘riqli nuqta sanaladi 
+xoh ilova bo‘lsin, xoh tishingizda.
+
+00:01:26.180 --> 00:01:30.040
+Qavslar to‘g‘ri joylashtirilmaganda 
+millionlab xatolarni keltirib chiqaradi.
+
+00:01:30.040 --> 00:01:33.850
+Masalan, agar men ushbu kod 
+blokini shu yerga joylashtirsam, 
+
+00:01:33.850 --> 00:01:37.740
+men kutilgan sinf yoki 
+interfeys haqida xato xabar olaman.
+
+00:01:37.740 --> 00:01:40.880
+Buning sababi shundaki, bu metod 
+hech qayerda uchramaydi.
+
+00:01:40.880 --> 00:01:45.380
+Aslida, biz uni asosiy faoliyatning 
+ochilish va yopilish qavslari 
+
+00:01:45.380 --> 00:01:47.380
+orasidagi main activity 
+ichida bo‘lishini istaymiz.
+
+00:01:47.380 --> 00:01:51.780
+Keling, bundan nusxa olib, asosiy faoliyatning 
+yopiladigan qismini boshiga keltiring. 
+
+00:01:51.780 --> 00:01:53.910
+Bu yaxshiroq.
+
+00:01:53.910 --> 00:01:58.590
+Boshqa mumkin bo‘lgan xato, agar 
+yopiladigan qavsdan nusxa olishni unutsangiz, 
+
+00:01:58.590 --> 00:02:00.870
+shunchaki metodning 
+yuqori qismini bajarasiz.
+
+00:02:00.870 --> 00:02:01.530
+Bu holatda siz 
+
+00:02:01.530 --> 00:02:05.540
+qavs yopilishi kerak 
+degan xato olasiz.
+
+00:02:05.540 --> 00:02:07.170
+Shunday qilib, siz buni 
+yana qo‘shishingiz kerak.
+
+00:02:07.170 --> 00:02:10.038
+Siz duch kelishi mumkin 
+bo‘lgan yana bir xato bu yerga 
+
+00:02:10.038 --> 00:02:12.050
+tasodifan metod qo‘shib qo‘yishdir.
+
+00:02:12.050 --> 00:02:15.940
+Bu display metod ning yopilidigan
+qavsidan oldingi narsa.
+
+00:02:15.940 --> 00:02:18.760
+Endi bularning barchasi 
+ display metod da 
+
+00:02:18.760 --> 00:02:20.290
+joylashgan va bu bizga kerak emas.
+
+00:02:20.290 --> 00:02:23.710
+Buni display metod 
+yoniga joylashtiramiz. 
+
+00:02:25.420 --> 00:02:27.540
+Millionlab kombinatsiyasilar 
+borligini angladingizmi? 
+
+00:02:27.540 --> 00:02:30.730
+Siz shunchaki ehtiyot bo‘lib, 
+qavslar qo‘yilganligiga ishonch hosil qiling.
+
+00:02:30.730 --> 00:02:33.730
+Kursorni shu yerda yoki yo‘qligini 
+tekshirishning yana bir yaxshi usuli, 
+
+00:02:33.730 --> 00:02:37.850
+ochilish qavsidan so‘ng, 
+siz unga mos keladigan yopiladigan qavsni 
+
+00:02:37.850 --> 00:02:39.000
+ta’kidlayotganini ko‘rasiz.
+
+00:02:39.000 --> 00:02:40.320
+Xuddi shu narsa, agar men uni bossam, 
+
+00:02:40.320 --> 00:02:42.860
+mos keladigan yopiladigan qavs
+mana shu yerda bo‘ladi.
+
+00:02:44.130 --> 00:02:49.430
+ SubmitOrder va onCreate va hatto 
+ MainActivity uchun ham xuddi shunday metod.
+
+00:02:50.440 --> 00:02:52.450
+Bu MainActivity uchun 
+ochiladigan qavs va 
+
+00:02:52.450 --> 00:02:55.370
+bu yerda yopiladigan 
+qavs ko‘k rang bilan ajratilgan.
+
+00:02:55.370 --> 00:02:58.650
+Afsuski hozir
+yana bitta xato bor.
+
+00:02:58.650 --> 00:03:03.160
+Agar bu yerda yon panelni ko‘rsam,
+u raqamlar formatini bajara olmasligini aytadi.
+
+00:03:03.160 --> 00:03:05.910
+Raqam formati aslida 
+ Android raqamlarni 
+
+00:03:05.910 --> 00:03:07.620
+formatlashga yordam beradi.
+
+00:03:07.620 --> 00:03:10.630
+Biz raqamni, ya’ni uning narxini 
+belgilashga harakat qilamiz, 
+
+00:03:10.630 --> 00:03:14.690
+shunda u dollar belgisi yoki siz foydalanadigan
+har qanday mahalliy valyutaga ega bo‘ladi.
+
+00:03:14.690 --> 00:03:16.370
+Buning uchun biz import haqida 
+
+00:03:16.370 --> 00:03:21.100
+ma’lumotni qo‘shishimiz kerak, 
+chunki Android Studio uni bilmaydi.
+
+00:03:21.100 --> 00:03:24.410
+Buni hal qilish uchun auto import ni 
+qanday yoqishini ko‘rsatmoqchiman.
+
+00:03:24.410 --> 00:03:26.790
+ Android Studio ning 
+yuqori qismidagi menyuda 
+
+00:03:26.790 --> 00:03:29.390
+ Android Studio va 
+ Sozlamalar ni tanlang.
+
+00:03:29.390 --> 00:03:32.260
+ Android Studio ga 
+afzalliklar ochiladi.
+
+00:03:32.260 --> 00:03:35.030
+Hech qachon o‘zgartirmagan 
+bir qancha imtiyozlar bor, 
+
+00:03:35.030 --> 00:03:38.310
+lekin sizga kerak bo‘lsa, ushbu qidiruv 
+maydonchasidan foydalanib qidiraman.
+
+00:03:38.310 --> 00:03:40.510
+Shunda, men auto import ni yozaman.
+
+00:03:40.510 --> 00:03:41.670
+Endi u avtomatik import qilish parametrlarini 
+
+00:03:41.670 --> 00:03:44.470
+ XML va Java dagilarni ko‘rsatadi. 
+
+00:03:44.470 --> 00:03:48.820
+Men bu maydonni tekshirmoqchiman va u
+ Tezda bir xil importni qo‘shing deb aytadi.
+
+00:03:48.820 --> 00:03:51.850
+Ushbu ibora siz uchun hech qanday ma’noga 
+ega bo‘lmasligi mumkin, ammo bu yaxshi.
+
+00:03:51.850 --> 00:03:53.730
+Bu ibora, ehtimol 
+xatolik keltirib chiqaradi.
+
+00:03:54.920 --> 00:03:59.420
+Bularning barchasi Android Studio da
+ilovamizga qo‘shimcha kodlar satrlarini 
+
+00:03:59.420 --> 00:04:01.410
+avtomatik ravishda qo‘shish
+yaxshi ekanligini aytmoqda.
+
+00:04:01.410 --> 00:04:06.050
+Ayniqsa import bayonotlari, agar 
+u nimaga murojaat qilayotganimizni bilsa.
+
+00:04:06.050 --> 00:04:06.560
+Sizga ko‘rsatay.
+
+00:04:07.700 --> 00:04:09.930
+Aslida, u buni biz uchun
+allaqachon bajargan.
+
+00:04:09.930 --> 00:04:12.930
+Raqam formatini aytganda,
+biz buni nazarda tutdik 
+
+00:04:12.930 --> 00:04:13.930
+va bu to‘g‘ri.
+
+00:04:13.930 --> 00:04:15.970
+Shunday qilib, u muammoni 
+avtomatik ravishda hal qildi.
+
+00:04:15.970 --> 00:04:17.170
+Qaysi biri ajoyib.
+
+00:04:17.170 --> 00:04:19.140
+Ushbu bosqichda, 
+agar siz ilovani ishlatsangiz, 
+
+00:04:19.140 --> 00:04:22.410
+u holda Order tugmachasini 
+bosganingizda, ularning miqdori o‘zgaradi, 
+
+00:04:22.410 --> 00:04:23.710
+lekin narx emas.
+
+00:04:23.710 --> 00:04:26.140
+Buyurtmani yangilash uchun 
+
+00:04:26.140 --> 00:04:29.670
+ submit order metodini o‘zgartirishimiz
+kerak shuningdek narxni ham.
+
+00:04:29.670 --> 00:04:31.100
+Keling, bir kod qatorini qo‘shaylik.
+
+00:04:32.910 --> 00:04:36.980
+Men narxni ko‘rsatish usulini chaqirib, 
+narx har biri 
+
+00:04:36.980 --> 00:04:41.716
+5 dollarga ko‘paytiriladigan 
+ikki stakan qahva ekanligini aytaman.
+
+00:04:41.716 --> 00:04:44.780
+Bizning qahva nega 5 dollar turadi, 
+chunki biz 
+
+00:04:44.780 --> 00:04:47.460
+Efiopiyadan Arabistonga import qildik.
+
+00:04:47.460 --> 00:04:50.260
+Ammo biz qurilmaning hisoblashiga 
+ruxsat bermoqchimiz, 
+
+00:04:50.260 --> 00:04:53.742
+chunki har birida 5 dollardan 
+ikki stakan kofe bor.
+
+00:04:53.742 --> 00:04:56.130
+Men ushbu darsda dollar 
+haqida gapirganimda, 
+
+00:04:56.130 --> 00:04:58.610
+ularni mahalliy valyutangizga 
+almashtirishingiz mumkin.
+
+00:04:58.610 --> 00:05:01.310
+Dollar belgisi yo‘q
+bu matematik ifodada .
+
+00:05:01.310 --> 00:05:04.420
+Bu narxlarni ko‘rsatish 
+metodiga keyinroq qo‘shiladi.
+
+00:05:04.420 --> 00:05:07.110
+Ammo narxlarni ko‘rsatish usulining 
+tafsilotlari haqida tashvishlanmang, 
+
+00:05:07.110 --> 00:05:08.790
+biz buni uchinchi 
+darsda ko‘rib chiqamiz.
+
+00:05:09.840 --> 00:05:12.360
+Hozircha, narxni hisoblashda 
+foydalanadigan matematik 
+
+00:05:12.360 --> 00:05:14.540
+ifoda haqida o‘ylash kifoya.
+
+00:05:14.540 --> 00:05:18.030
+Shuningdek, har bir mulohazaning 
+oxiriga nuqtali vergul qo‘yishni unutmang, 
+
+00:05:18.030 --> 00:05:22.160
+aks holda nuqtali vergul 
+sizga qizil xato chiqarib beradi.
+
+00:05:22.160 --> 00:05:25.570
+Masalan, nuqtali vergulni o‘chirsangiz, 
+nuqtali vergul kutilmoqda, 
+
+00:05:25.570 --> 00:05:27.130
+degan xato paydo bo‘ladi.
+
+00:05:28.160 --> 00:05:33.030
+Yaxshiroq tushunarli bo‘lishi 
+uchun nuqtali vergul shu yerda.
+
+00:05:33.030 --> 00:05:34.720
+Bu ikki nuqta emas, 
+nuqtali vergul.
+
+00:05:34.720 --> 00:05:37.190
+Tugatganingizdan keyin sizda yana 
+
+00:05:37.190 --> 00:05:39.910
+narx qo‘shilgan ikkita matnga
+ega bo‘lishingiz kerak.
+
+00:05:39.910 --> 00:05:42.810
+Biz sizga bergan yangi metodni 
+kiritish uchun asosiy faoliyatni 
+
+00:05:42.810 --> 00:05:44.480
+o‘zgartirishingiz kerak edi.
+
+00:05:44.480 --> 00:05:47.040
+Shuningdek, siz narxni ko‘rsatish 
+uchun kodning yangi qatorini 
+
+00:05:47.040 --> 00:05:49.150
+qo‘shish uchun SubmitOrder 
+metodini o‘zgartiring.
+
+00:05:50.240 --> 00:05:53.060
+Uni qurilmangizda ishga tushirsangiz
+shunga o‘xshab ko‘rinishi kerak.
+
+00:05:53.060 --> 00:05:55.237
+U 0 dollar uchun noldan boshlanadi.
+
+00:05:55.237 --> 00:05:58.904
+Va uni bosganingizda, 
+endi ikkita kofe 10 dollarda berildi.
+
+00:06:00.070 --> 00:06:04.010
+Miqdor va narx uchun turli 
+qiymatlarni qiymatlar sinab ko‘ring.
+
+00:06:04.010 --> 00:06:06.890
+Agar bir chashka qahva uchun 10 dollar 
+to‘lamoqchi bo‘lsangiz, oldinda bora olasiz.
+
+00:06:06.890 --> 00:06:10.160
+Uni yana ikki stakan qahvaga har birining
+narxini 5 dollarga o‘tkazganingizni tekshiring.
+
+00:06:10.160 --> 00:06:12.770
+shunda u bizning kodimizga mos keladi.
+
+00:06:12.770 --> 00:06:14.100
+Tayyor bo‘lgach katakchalarni belgilang.
+
