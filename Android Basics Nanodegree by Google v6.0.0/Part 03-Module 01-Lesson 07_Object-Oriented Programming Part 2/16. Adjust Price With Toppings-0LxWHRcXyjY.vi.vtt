@@ -1,0 +1,442 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.250 --> 00:00:02.250
+Để tính toán giá tiền chính xác
+
+00:00:02.250 --> 00:00:05.230
+cho nhật ký đặt hàng,
+cần phải chuyển thông tin
+
+00:00:05.230 --> 00:00:09.500
+về các loại nhân phủ người dùng đã chọn
+vào calculatePrice [tính toán giá cả].
+
+00:00:09.500 --> 00:00:12.820
+Tôi đang chọn con đường làm chuyện
+nặng nhọc là tính toán
+
+00:00:12.820 --> 00:00:18.340
+trong phương thức calculatePrice,
+cái này hội tụ mọi logic toán học.
+
+00:00:18.340 --> 00:00:22.040
+Bằng cách tổng hợp tất cả mọi thứ
+trong phương thức này, nếu có vấn đề
+
+00:00:22.040 --> 00:00:25.620
+với cách tính toán giá tiền
+Có thể kiểm tra code ở một chỗ riêng.
+
+00:00:26.620 --> 00:00:28.340
+Làm như vậy dễ quản lý hơn nhiều.
+
+00:00:28.340 --> 00:00:29.880
+Trong phương thức này.
+
+00:00:29.880 --> 00:00:33.450
+Chúng ta tính toán
+giá gốc của một ly cafe.
+
+00:00:33.450 --> 00:00:35.510
+Điều này tương tự như những gì tôi
+đã giới thiệu với bạn trước đó.
+
+00:00:35.510 --> 00:00:38.110
+Nếu cà phê có kem sữa béo
+thì giá tiền sẽ thêm một đồng đô-la.
+
+00:00:38.110 --> 00:00:41.000
+Nếu cà phê có sô-cô-la
+thì thêm $2
+
+00:00:41.000 --> 00:00:43.630
+chúng ta lấy giá gốc
+của một ly cafe
+
+00:00:43.630 --> 00:00:47.860
+nhân với số lượng đặt hàng
+để xác định tổng giá trị hóa đơn.
+
+00:00:47.860 --> 00:00:50.550
+Đầu tiên chúng ta hãy chuyển thông tin
+về kem sữa béo
+
+00:00:50.550 --> 00:00:54.302
+và thông tin về sô-cô-la để kiểm tra các ô
+đánh dấu trong phương thức calculatePrice.
+
+00:00:54.302 --> 00:00:56.480
+Tôi sẽ chuyển vào đây các
+biến boolean hasWhippedCream
+
+00:00:56.505 --> 00:00:58.380
+[có kem sữa béo] và
+hasChocolate [có sô-cô-la].
+
+00:00:58.380 --> 00:01:02.570
+Sẽ là không cần thiết nếu bạn muốn chuyển
+vào trực tiếp các đối tượng ô đánh dấu
+
+00:01:02.570 --> 00:01:06.430
+bởi vì chúng ta chỉ cần quan tâm các giá
+trị boolean để tính giá tiền mà thôi.
+
+00:01:06.430 --> 00:01:09.560
+Adroid Studio cho tôi biết
+đã có lỗi vì chữ ký phương thức
+
+00:01:09.560 --> 00:01:10.530
+không khớp.
+
+00:01:10.530 --> 00:01:13.530
+Tôi đang cố gắng gọi một phương thức
+đã được định nghĩa
+
+00:01:13.530 --> 00:01:15.390
+để đặt thêm tham số đầu vào zero.
+
+00:01:15.390 --> 00:01:18.820
+Hãy kéo xuống tới chỗ phương thức
+calculatePrice được định nghĩa.
+
+00:01:18.820 --> 00:01:20.700
+Tôi sẽ thay đổi
+chữ ký phương thức
+
+00:01:20.700 --> 00:01:23.239
+để nó chấp nhận hai tham
+số đầu vào một boolean
+
+00:01:23.264 --> 00:01:25.620
+có tên là addWhippedCream
+[thêm kem sữa béo]
+
+00:01:25.620 --> 00:01:27.730
+Và một boolean khác
+addChocolate [thêm sô-cô-la].
+
+00:01:27.730 --> 00:01:30.850
+Bạn có thể gọi các tham số đầu vào
+bằng bất cứ tên gì bạn muốn.
+
+00:01:30.850 --> 00:01:34.220
+Tôi sử dụng tên khác
+so với tên đã chuyển vào,
+
+00:01:34.220 --> 00:01:36.900
+để cho bạn thấy rõ là những tên
+này nhất thiết phải trùng khớp.
+
+00:01:36.900 --> 00:01:40.580
+Tôi cũng đã cập nhật Javadoc để mô tả
+hai tham số đầu vào mới.
+
+00:01:40.580 --> 00:01:43.570
+Bằng cách này một người gọi phương thức sẽ
+biết mình cần phải chuyển vào yếu tố nào.
+
+00:01:43.570 --> 00:01:45.530
+Tiếp theo, trong phương
+thức calculatePrice
+
+00:01:45.555 --> 00:01:47.580
+tôi phải xử lý toàn bộ
+logic về việc thay đổi
+
+00:01:47.580 --> 00:01:49.930
+giá tiền theo loại nhân phủ.
+
+00:01:49.930 --> 00:01:52.130
+Đầu tiên, tôi sẽ tính giá gốc.
+
+00:01:52.130 --> 00:01:54.720
+Tôi sẽ tạo ra một biến nguyên
+là basePrice [giá gốc].
+
+00:01:54.720 --> 00:01:58.500
+Tôi sẽ bắt đầu với giá trị là 5
+vì một ly cafe có giá $5.
+
+00:01:58.500 --> 00:02:00.930
+Sau đó tôi sẽ
+tạo ra một mệnh đề Nếu.
+
+00:02:00.930 --> 00:02:05.600
+Nếu boolean addWhippedCream là đúng,
+người dùng muốn có kem. Sữa béo
+
+00:02:05.600 --> 00:02:09.720
+Điều đó có nghĩa là chúng ta nên cộng
+thêm $1 vào giá gốc của ly cafe.
+
+00:02:09.720 --> 00:02:11.920
+Được rồi, cái này sẽ xử lý
+trường hợp kem sữa béo đây.
+
+00:02:11.920 --> 00:02:13.740
+Bây giờ, chúng ta hãy chuyển
+sang trường hợp sô-cô-la.
+
+00:02:13.740 --> 00:02:16.110
+Tôi sẽ tạo ra
+một mệnh đề Nếu khác.
+
+00:02:16.110 --> 00:02:19.000
+Tôi không cần thêm một đoạn code
+cho mệnh đề Trường hợp khác bởi lẽ.
+
+00:02:19.000 --> 00:02:21.000
+Nếu người dùng không
+muốn dùng kem sữa béo,
+
+00:02:21.025 --> 00:02:23.000
+Tôi không cần phải làm
+bất cứ điều gì khác.
+
+00:02:23.000 --> 00:02:26.550
+Thực ra, nếu tôi muốn nhập chữ "trường hợp
+khác" vào đây thì nó sẽ ra giống như vầy.
+
+00:02:26.550 --> 00:02:29.990
+Hệ thống nhận xét một câu thôi
+"không làm gì cả."
+
+00:02:29.990 --> 00:02:31.960
+Android studio thông minh lắm,
+mặc dù
+
+00:02:31.960 --> 00:02:35.010
+nó thấy mệnh đề còn lại
+đang rỗng.
+
+00:02:35.010 --> 00:02:38.040
+Nó đưa ra lời khuyên này có nghĩa là
+nó thấy code này khó hiểu với nó
+
+00:02:38.040 --> 00:02:39.930
+có thể đó là do đánh máy lỗi.
+
+00:02:39.930 --> 00:02:41.800
+Các dòng code bổ sung này
+cũng không cần thiết
+
+00:02:41.800 --> 00:02:43.660
+vậy chúng ta chỉ cần xóa
+mệnh đề Trường hợp khác.
+
+00:02:43.660 --> 00:02:45.930
+Bây giờ chúng ta có thể chuyển sang
+trường hợp sô-cô-la.
+
+00:02:45.930 --> 00:02:48.610
+Nhân phủ Sô-cô-la
+với nhân phủ kem sữa béo.
+
+00:02:48.610 --> 00:02:49.800
+Là hai loại riêng rẽ.
+
+00:02:49.800 --> 00:02:51.880
+Người dùng chọn cái nào
+không quan trọng,
+
+00:02:51.880 --> 00:02:53.540
+hai cái này không có liên hệ phụ thuộc.
+
+00:02:53.540 --> 00:02:57.060
+Vì vậy tôi phải tạo ra
+một trường hợp Nếu khác.
+
+00:02:57.060 --> 00:02:59.480
+Nếu người dùng muốn sô-cô-la,
+
+00:02:59.480 --> 00:03:04.010
+Chúng ta cần phải chỉnh sửa giá gốc
+là basePrice + 2.
+
+00:03:04.010 --> 00:03:06.347
+Một lần nữa, chúng ta có thể
+sẽ gán giá trị cho đoạn mã
+
+00:03:06.372 --> 00:03:08.810
+mệnh đề Trường hợp khác nhưng
+nó sẽ báo "không làm gì cả".
+
+00:03:08.810 --> 00:03:12.690
+Nếu người dùng không muốn sô-cô-la,
+chúng ta không cần phải điều chỉnh giá,
+
+00:03:12.690 --> 00:03:15.530
+chúng ta chỉ cần xóa đoạn code này đi.
+Vì nó không cần thiết.
+
+00:03:15.530 --> 00:03:20.450
+Đọc qua bản code, chúng ta có
+giá gốc là $5 một ly cafe.
+
+00:03:20.450 --> 00:03:24.945
+Nếu người dùng muốn kem sữa béo, chúng ta
+cần phải cộng 1$ vào giá gốc.
+
+00:03:24.945 --> 00:03:27.610
+Nếu người dùng muốn sô-cô-la,
+
+00:03:27.610 --> 00:03:29.703
+chúng ta phải cộng vào giá gốc $2
+$2.
+
+00:03:29.703 --> 00:03:32.290
+Sau đó, để tính tổng giá trị đơn hàng,
+
+00:03:32.290 --> 00:03:35.835
+chúng ta cần phải nhân số lượng
+với giá một ly cà phê.
+
+00:03:35.835 --> 00:03:38.735
+Được rồi, code này
+chắc sẽ chạy tốt đây.
+
+00:03:38.735 --> 00:03:41.935
+Tôi chèn dòng nhật xét vào trong từng hàng
+ở trên mỗi đoạn code
+
+00:03:41.935 --> 00:03:45.695
+để khi chúng ta trở lại với đoạn code này
+chúng ta sẽ nhớ những gì mình đã thao tác.
+
+00:03:45.695 --> 00:03:48.005
+Bây giờ, chúng ta hãy chạy ứng dụng
+để kiểm tra xem nó hoạt động tốt chưa.
+
+00:03:48.005 --> 00:03:51.085
+Được rồi, chúng ta hãy kiểm tra các trường
+hợp mà chúng ta đã xem qua lúc nãy.
+
+00:03:51.965 --> 00:03:55.319
+Nếu chúng ta chọn lớp nhân phủ kem sữa béo
+và số lượng là 3
+
+00:03:55.319 --> 00:03:56.906
+thì mỗi ly giá sẽ là $6.
+
+00:03:56.906 --> 00:04:01.450
+$ 6 x 3 = $18
+vị chi là 18. Tốt rồi.
+
+00:04:01.450 --> 00:04:07.679
+Nếu tôi thêm nhân phủ Sô-cô-la,
+thì mỗi ly cà phê sẽ có giá là $8.
+
+00:04:07.679 --> 00:04:11.650
+Nếu có số lượng là 2 ly cà phê
+thì tổng giá trị hóa đơn sẽ là $16.
+
+00:04:11.650 --> 00:04:15.700
+Chúng ta chỉ sử dụng nhân phủ kem sữa béo
+và chúng ta đã được câu trả lời đúng.
+
+00:04:15.700 --> 00:04:18.510
+Chúng tôi đã thử một trường hợp
+có cả kem sữa béo và số-cô-la
+
+00:04:18.510 --> 00:04:21.350
+kết quả là
+chúng tôi đã nhận được câu trả lời đúng.
+
+00:04:21.350 --> 00:04:23.760
+Bây giờ, chúng ta hãy chọn
+nhân phủ sô-cô-la.
+
+00:04:23.760 --> 00:04:27.290
+Tôi sẽ thay đổi số lượng là 1
+và sau đó nhấn nút Đặt hàng.
+
+00:04:27.290 --> 00:04:31.810
+Có vẻ đúng rồi đấy
+$5 một ly cafe cộng với $2
+
+00:04:31.810 --> 00:04:34.840
+cho nhân phủ sô-cô-la, tổng cộng là $7.
+
+00:04:34.840 --> 00:04:37.864
+Nếu tôi muốn thay đổi
+số lượng lên 4, tổng số
+
+00:04:37.889 --> 00:04:41.150
+tiền được cập nhật, giả
+sử là $7 cho một ly cafe.
+
+00:04:41.150 --> 00:04:42.150
+Hay quá.
+
+00:04:42.910 --> 00:04:44.550
+Có vẻ tốt rồi.
+
+00:04:44.550 --> 00:04:47.650
+Tôi đã đi qua các trường hợp thử nghiệm
+khá nhanh chóng.
+
+00:04:47.650 --> 00:04:48.660
+Những gì tôi làm,
+
+00:04:48.660 --> 00:04:53.160
+làm đảm bảo rằng, tất cả các đường
+dẫn code đều chạy thông suốt.
+
+00:04:53.160 --> 00:04:56.823
+Ví dụ, nếu chúng ta chạy ứng dụng này, mà
+lại không cần ô đánh dấu chọn kem sữa béo
+
+00:04:56.823 --> 00:05:00.490
+chúng ta sẽ không cần kiểm tra
+xem code ở đây có chạy ổn không.
+
+00:05:00.490 --> 00:05:03.133
+Vì vậy chúng ta cần chọn
+lựa điều kiện sao cho
+
+00:05:03.158 --> 00:05:05.720
+toàn bộ các phần trong
+bản code đều thực thi.
+
+00:05:05.720 --> 00:05:09.180
+Chúng ta đã chọn nhân phủ kem sữa béo
+và cũng chọn nhân phủ sô-cô-la
+
+00:05:09.180 --> 00:05:12.550
+để đảm bảo rằng
+code này cũng được thực thi.
+
+00:05:12.550 --> 00:05:14.320
+Để chạy code thông suốt hơn
+chúng ta nên kiểm tra
+
+00:05:14.320 --> 00:05:17.450
+tất cả các kiểu kết hợp khả dĩ
+của cả hai biến boolean.
+
+00:05:17.450 --> 00:05:21.580
+Tất cả những kết hợp đó sẽ dẫn tới
+hành vi khác nhau trong phương thức này
+
+00:05:21.580 --> 00:05:24.870
+chúng ta muốn đảm bảo rằng
+code chạy ổn trong mọi trường hợp.
+
+00:05:24.870 --> 00:05:29.080
+Vì giá gốc đang được tính toán
+khi chúng ta đang làm việc
+
+00:05:29.080 --> 00:05:34.000
+nên sử dụng tin log để đảm bảo rằng
+nó đang tính đúng như mong đợi.
+
+00:05:34.000 --> 00:05:37.910
+Đây là một số nhắc nhở
+các bạn cần nhớ khi viết các đoạn code
+
+00:05:37.910 --> 00:05:40.760
+phức tạp hơn
+khi có các mệnh đề luồng điều khiển.
+

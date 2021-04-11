@@ -1,0 +1,562 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.450 --> 00:00:03.560
+Buyurtma tugmasi bosilganda,
+psevdokod boshlanadi. 
+
+00:00:03.560 --> 00:00:07.020
+Ushbu psevdokod buyurtmani qabul qilish 
+metodiga o‘zimizni kodimizni qo‘shishimiz kerakligini anglatadi.
+
+00:00:08.180 --> 00:00:11.280
+Undan keyin, "checkbox"dan 
+belgilangan holatni olishimiz kerak. 
+
+00:00:11.280 --> 00:00:14.990
+Har qanday ko‘rinishga(view) 
+metod chaqrishimiz uchun
+
+00:00:14.990 --> 00:00:17.570
+birinchi bo‘lib ko‘rinishni(view) "id"sini topishimiz kerak.
+
+00:00:17.570 --> 00:00:21.560
+Birinchi bo‘lib, ushbu "check box" 
+ko‘rinishiga "id" tayinlashim kerak.
+
+00:00:22.770 --> 00:00:25.920
+"Android studio"ning "activity main" 
+ko‘rinishida belgilash katakchasi 
+
+00:00:25.920 --> 00:00:27.420
+ko‘rinishini topaman.
+
+00:00:27.420 --> 00:00:31.690
+Ko‘rsatkichlarim bu yerda bo‘lganligi sababli, 
+oldindan ko‘rish oynasida ushbu ko‘rinishni ajratib ko‘rsatadi.
+
+00:00:31.690 --> 00:00:34.600
+So‘ngra ushbu ko‘rinishga "ID" 
+yuborish uchun chiziq qo‘shaman.
+
+00:00:35.750 --> 00:00:39.140
+Endi esa, "Java" kodida, ushbu ko‘rinishga 
+murojaat qilishim va uning holati 
+
+00:00:39.140 --> 00:00:42.140
+haqida ma‘lumot olishim mumkin.
+
+00:00:42.140 --> 00:00:43.410
+"Main activity"ga o‘taylik.
+
+00:00:43.410 --> 00:00:46.410
+Kodni buyurtma berish 
+metodiga joylashtiraman.
+
+00:00:47.700 --> 00:00:51.250
+Ko‘rish ierarxiyasida CheckBox
+Java ob‘yektini topish kerak bo‘ladi.
+
+00:00:52.270 --> 00:00:55.650
+Ishni CheckBox ma‘lumotlar turiga ega bo‘lgan, 
+"whippedCreamCheckBox" nomli 
+
+00:00:55.650 --> 00:00:57.810
+o‘zgaruvchi yaratishdan boshlayman.
+
+00:00:57.810 --> 00:01:01.380
+Keyin ushbu faoliyat ichida "findViewById" 
+metodini chaqirishim mumkin.
+
+00:01:01.380 --> 00:01:03.950
+Berilgan "ID" asosida 
+ko‘rinishni topadi.
+
+00:01:03.950 --> 00:01:09.080
+Boshqa ko‘rinish fayliga 
+bundan avval belgilagan
+
+00:01:09.080 --> 00:01:12.060
+"ID"ni (R.id.whipped_cream_checkbox)
+o‘tkazib yuboraman.
+
+00:01:12.060 --> 00:01:16.070
+Bu darhol xato keltirib chiqaradi, 
+sababi talab qilingan tur CheckBox edi,
+
+00:01:16.070 --> 00:01:19.020
+va yana boshqa sababi chap tomondagi 
+o‘zgaruvchi bo‘lganligidadir.
+
+00:01:19.020 --> 00:01:22.230
+Shu bilan birga, ushbu metodning 
+qaytish qiymati tur ko‘rinishida bo‘ladi.
+
+00:01:22.230 --> 00:01:23.330
+Shunday qilib, ilgari bilib 
+
+00:01:23.330 --> 00:01:25.710
+olganimizdek, ushbu usulning 
+qaytish qiymatini tashlashimiz kerak.
+
+00:01:25.710 --> 00:01:29.380
+Ushbu meetodni CheckBox ob‘yekti
+sifatida yuboraman.
+
+00:01:29.380 --> 00:01:33.720
+Ushbu ob‘yektni yubora olishimning sababi, 
+CheckBox "View"ning kichik sinfi hisoblanadi
+
+00:01:34.910 --> 00:01:37.480
+Ho‘p, endi bizda foydalanuvchi 
+interfeysidagi belgilash katakchasini 
+
+00:01:37.480 --> 00:01:40.450
+bildiradigan CheckBox Java ob‘yekti bor.
+
+00:01:40.450 --> 00:01:42.570
+Katakcha belgilangan 
+yoki yo‘qligini 
+
+00:01:42.570 --> 00:01:45.760
+aniqlash uchun ob‘yektga 
+metodni chaqirishim kerak.
+
+00:01:45.760 --> 00:01:48.360
+CheckBox ob‘yektiga qaysi metodni 
+chaqirishni bilmasligingiz mumkin.
+
+00:01:48.360 --> 00:01:49.790
+Buni hech yomon tomoni yoq.
+
+00:01:49.790 --> 00:01:52.000
+Qaysi metodni chaqirishni "Google" orqali qidirib topishingiz mumkin.
+
+00:01:52.000 --> 00:01:55.520
+"CheckBox Android" deb qidiring 
+va birinchi chiqqan havolaga bosing.
+
+00:01:56.940 --> 00:02:01.560
+Oldin ta‘kidlab o‘tganimdek, 
+belgilash katakchasi "view" obyektini kichik sinfi hisoblanadi.
+
+00:02:01.560 --> 00:02:03.080
+O‘rtada boshqa "view" obyektlari ham mavjud,
+
+00:02:03.080 --> 00:02:04.820
+lekin belgilash katakchasi aynan 
+"view" obyektining kichik sinfi hisoblanadi.
+
+00:02:06.050 --> 00:02:09.120
+Ushbu sinf haqida qisqacha 
+ma‘lumot qiziqarli, chunki unda 
+
+00:02:09.120 --> 00:02:10.780
+bir nechta "Java" kodlari mavjud.
+
+00:02:10.780 --> 00:02:13.730
+Dasturimizda ushbu kod oldindan mavjud, 
+biz bajarayotgan amalimiz "id" bo‘yicha 
+
+00:02:13.730 --> 00:02:19.530
+ko‘rinishni topadi va so‘ngra 
+belgilash katakchasini bo‘g‘laydi .
+
+00:02:19.530 --> 00:02:21.560
+Ushbu keyingi qatordagi kod undanda qiziq.
+
+00:02:21.560 --> 00:02:26.630
+Unda belgilash katakchasi aytilgan, 
+bu katakcha o‘zgaruvchi nomi bo‘lib, nuqta belgilangan.
+
+00:02:26.630 --> 00:02:29.510
+Ushbu jarayon ma‘lumotlar qabul qilmaydigan 
+metod chaqirishga o‘xshab ketadi.
+
+00:02:29.510 --> 00:02:33.450
+Shunda u orqali katakchasni belgilangan yoki 
+belgilanmaganligini hamda to‘g‘ri yoki noto‘g‘ri 
+
+00:02:33.450 --> 00:02:37.580
+qiymat qaytganini bilib olsak bo‘ladi. 
+Shunday bo‘lsa ham, hujjatlarda keltirilgan ma‘lumotlarni ko‘rib chiqaylik. 
+
+00:02:37.580 --> 00:02:42.740
+Ko‘rib chiqayotganimizda, belgilash 
+katakchasiga(checkbox) doir "xml" kodni 
+
+00:02:42.740 --> 00:02:44.770
+va bir nechta "Java" kodni ko‘rishimiz mumkin 
+
+00:02:45.910 --> 00:02:49.910
+Ushbu metod tasdiqlash tugmachasi 
+bosilganda chaqiriladiganga o‘xshaydi.
+
+00:02:49.910 --> 00:02:53.840
+Ushbu usul nomi "xml"da ko‘rsatilgan
+metod nomiga mos keladi.
+
+00:02:53.840 --> 00:02:58.530
+Yuborilgan ko‘rinish(view) belgilash katakchasi(check box) ko‘rinishi deb taxmin qilmoqdaman.
+
+00:02:58.530 --> 00:03:00.800
+Va buni CheckBoxga yuboramiz 
+va bu "IsChecked" deb ham nomlanadi 
+
+00:03:00.800 --> 00:03:05.360
+va uning qaytish qiymati 
+mantiqiy(boolean) bo‘ladi.
+
+00:03:05.360 --> 00:03:09.380
+Sharhda bu qiymat batafsilroq tasvirlangan va u yerda aytilishi bo‘yicha ko‘rinish(view) belgilanganmi?
+
+00:03:09.380 --> 00:03:11.880
+Shunday qilib bizga aynan shu kerak.
+
+00:03:11.880 --> 00:03:13.520
+Keling, "IsChecked" usulidan foydalanib ko‘raylik.
+
+00:03:14.640 --> 00:03:18.010
+Avval biz CheckBox ob‘yektining 
+o‘zgaruvchi nomini yozamiz.
+
+00:03:18.010 --> 00:03:20.210
+Uning nomi "whippedCreamCheckBox".
+
+00:03:20.210 --> 00:03:23.020
+Keyin unga usulni chaqirish uchun nuqta qo‘shaman.
+
+00:03:23.020 --> 00:03:26.290
+"isChecked" o‘zgaruvchi nomini terishni boshlashim bilan, 
+ushbu o‘zgaruvchi borligi taklif etiladi.
+
+00:03:26.290 --> 00:03:29.400
+Ushbu taklifni ishlatishim uchun 
+"Enter" tugmasini bosishim kifoya. 
+
+00:03:29.400 --> 00:03:33.150
+Bu yerda o‘ng tomonda, bu usulning qaytish 
+qiymati nima ekanligini va bu mantiqiy 
+
+00:03:33.150 --> 00:03:35.150
+qiymatni qaytarganligini aytib turadi.
+
+00:03:35.150 --> 00:03:39.330
+Shuning uchun ushbu taklifni "Enter" tugamachasini 
+bosib qabul qilganimdan so‘ng, bu usul 
+
+00:03:39.330 --> 00:03:44.110
+chaqirilishining chap tomoniga o‘taman 
+va keyin bu natijani "boolean" o‘zgaruvchisiga saqlayman.
+
+00:03:44.110 --> 00:03:48.260
+Ushbu "boolean" o‘zgaruvchiga hasWhippedCream 
+deb nom beraman va "Enter" tugmachasini bosaman.
+
+00:03:48.260 --> 00:03:52.860
+Takrorlab olishimiz uchun, metodga 
+"whippedCreamCheckbox" Java ob‘yektini chaqirmoqdamiz 
+
+00:03:52.860 --> 00:03:54.690
+va ushbu metod "isChecked" deb nomlanadi.
+
+00:03:54.690 --> 00:03:56.750
+U mantiqiy qiymatga 
+
+00:03:56.750 --> 00:03:59.210
+ega va chap 
+tomonda saqlanadi.
+
+00:03:59.210 --> 00:04:01.970
+Ya‘ni, "HasWhippedCream" deb nomlangan ushbu o‘zgaruvchida saqlanadi.
+
+00:04:01.970 --> 00:04:03.220
+Shu bilan birinchi vazifa yakunlandi.
+
+00:04:03.220 --> 00:04:06.530
+To‘g‘ri yo‘ldan ketayotganingizga ishonch 
+hosil qilish uchun ushbu o‘zgaruvchini 
+
+00:04:06.530 --> 00:04:09.130
+qiymatini konsolda qayd etishingiz 
+mumkinligini ham aytib o‘tgandim. 
+77
+00:04:09,130 ??--&gt; 00:04:10,870
+Shunday qilib, keyingi qatorda,
+konsolga xabar yuboraman.
+
+00:04:12.050 --> 00:04:14.150
+Birinchi qiymat teg nomi hisoblanadi.
+
+00:04:14.150 --> 00:04:17.100
+Bu yerda shunchaki sinfimizning nomi 
+ishlatiladi, ya‘ni "MainActivity".
+
+00:04:17.100 --> 00:04:19.810
+Keyin esa xabarimni joylashtiraman.
+
+00:04:19.810 --> 00:04:22.058
+Habar nomi "Has whipped cream" bo‘ladi.
+
+00:04:22.058 --> 00:04:26.660
+Va so‘ngra boolean o‘zgaruvchisini qo‘shasiz.
+
+00:04:26.660 --> 00:04:30.930
+Ushbu matnni(string) "boolean" 
+o‘zgaruvchisiga qo‘shganda, 
+
+00:04:30.930 --> 00:04:34.560
+bunda mantiqiy(boolean) 
+qiymatni ham matnga(string) aylantiradi.
+
+00:04:34.560 --> 00:04:38.319
+Shunday qilib, matnda "has whipped cream" 
+to‘g‘ri yoki noto‘g‘riligini aytiladi.
+
+00:04:39.400 --> 00:04:41.330
+Endi dasturni qurilmamizda ishga tushiramiz 
+
+00:04:41.330 --> 00:04:43.780
+va haqiqatan ham to‘g‘ri konsol xabarlarini 
+chop etayotganligini tekshiramiz.
+
+00:04:44.810 --> 00:04:48.170
+Bu yerdagi boshqaruv tugmasi yordamida 
+log oynasining kattalashtirdim.
+
+00:04:48.170 --> 00:04:50.030
+Endi "whipped cream" belgilash katagiga 
+hamda buyurtma tugmachasini bosganimda,
+
+00:04:50.030 --> 00:04:53.850
+bu yerda "whipped cream" 
+to‘g‘ri yoki noto‘g‘riligi 
+
+00:04:53.850 --> 00:04:56.319
+aytilgan xabarni ko‘rish mumkin.
+
+00:04:57.360 --> 00:04:59.770
+Haqiqiy xabarni ko‘rishim uchun pastroqga tushamiz.
+
+00:05:00.790 --> 00:05:03.540
+Endi buni ishlashi yoki ishlamasligini tekshiraylik.
+
+00:05:03.540 --> 00:05:06.210
+Men ushbu katakchani belgilayman va 
+keyin buyurtma tugmasini bosaman.
+
+00:05:06.210 --> 00:05:10.101
+Xo‘p, menimcha yangi xabar chop etildi 
+va unda "Main Activity" deb yozilde.
+
+00:05:10.101 --> 00:05:12.335
+Endilikda "has whipped cream" qiymati to‘g‘riga teng bo‘ldi.
+
+00:05:12.335 --> 00:05:15.215
+Natijamiz to‘g‘ri, chunki belgilash 
+katakchasi belgilangan.
+
+00:05:15.215 --> 00:05:20.645
+Agar men ushbu katakchani olib tashlasam 
+va buyurtma tugmasini bosgan bo‘lsam, u noto‘g‘ri deb aytishini kutaman.
+
+00:05:20.645 --> 00:05:24.825
+So‘ngra o‘ng tomonga o‘tamiz va
+u yerda "whipped cream" noto‘g‘ri qiymatga tenglini ko‘ramiz.
+
+00:05:24.825 --> 00:05:28.475
+Hozircha tasdiqlash katakchasi 
+ko‘rinishini topish va 
+
+00:05:28.475 --> 00:05:32.195
+tasdiq holatini olish uchun 
+kodimiz to‘g‘ri ekanligi ko‘ramiz.
+
+00:05:32.195 --> 00:05:33.945
+Endi ikkinchi vazifaga o‘tamiz.
+
+00:05:35.410 --> 00:05:40.000
+Xo‘sh, endi bu mantiqiy(boolean) o‘zgaruvchini 
+buyurtma hisoboti usuliga o‘tkazishimiz kerak.
+
+00:05:40.000 --> 00:05:43.580
+Agar boshqa argumentni "createOrderSummary" 
+usuliga o‘tkazmoqchi bo‘lsam,
+
+00:05:43.580 --> 00:05:48.410
+Bu yerda faqat vergul qo‘shaman, 
+so‘ngra hasWhippedCream o‘zgaruvchisiga o‘taman.
+
+00:05:49.820 --> 00:05:53.680
+Shu zahotiyoq xatoga duch kelamiz, 
+uni "createOrderSummary" usuliga 
+
+00:05:53.680 --> 00:05:58.730
+qo‘llash mumkin emas, chunki bu metod 
+qiymatga butun son parametrini qabul qiladi.
+
+00:05:58.730 --> 00:06:02.050
+Shunday qilib, "createOrderSummary" 
+e‘lon qilingan joyga o‘tamiz.
+
+00:06:03.310 --> 00:06:05.590
+Endi "createOrderSummary" 
+usulining imzosini 
+
+00:06:05.590 --> 00:06:07.900
+o‘zgartirishim kerak.
+
+00:06:07.900 --> 00:06:10.440
+Ushbu usul bitta kirish parametrini 
+olish o‘rniga, ikkitasini olish kerak bo‘ladi.
+
+00:06:10.440 --> 00:06:15.430
+Shuning uchun vergul qo‘shib, 
+keyin ikkinchi parametrni aniqlaymiz.
+
+00:06:15.430 --> 00:06:20.810
+Ma‘lumotlar turi mantiqiy(boolean) bo‘lishi kerak 
+va uni "addwhippedCream" deb nomlaymiz.
+
+00:06:20.810 --> 00:06:23.850
+Siz kirish parametrini xohlagan nom bilan 
+atashingiz mumkin, lekin ushbu nomni bu
+
+00:06:23.850 --> 00:06:27.430
+yerdagi nomga mos kelishi 
+shartmasligini ko‘rsatmoqchiman.
+
+00:06:28.490 --> 00:06:32.580
+Bu yerda usulning imzosini o‘zgartirgandan so‘ng, 
+ushbu kirish parametrining nima 
+
+00:06:32.580 --> 00:06:35.440
+ekanligini aniqlash uchun 
+"Java dock"ni yangilashimiz kerak.
+
+00:06:36.510 --> 00:06:38.140
+Shu bilan ikkinchi vazifani tugaydi.
+
+00:06:39.600 --> 00:06:42.850
+Uchinchi vazifa - foydalanuvchi qahvasiga 
+krem xohlash yoki xohlamasligini o‘z 
+
+00:06:42.850 --> 00:06:44.450
+ichiga olgan buyurtma hisoboti 
+matnini o‘zgartirishdan iborat.
+
+00:06:45.800 --> 00:06:49.490
+Aslida buyurtma hisoboti xabarini 
+o‘zgartirish uchun bu kirish parametridan 
+
+00:06:49.490 --> 00:06:52.410
+foydalanishimiz kerakligini anglatadi.
+
+00:06:52.410 --> 00:06:56.260
+Ekrandagi rasmda qahvaga krem 
+qo‘shish chizig‘i paydo bo‘ldi.
+
+00:06:56.260 --> 00:06:58.030
+Shunday qilib, bu yerda yangi qator qo‘shamiz.
+
+00:06:58.030 --> 00:07:01.450
+Men mavjud narxlar to‘g‘risidagi xabarni 
+o‘zgartirish uchun narx xabarini yozib 
+
+00:07:01.450 --> 00:07:03.950
+qo‘yaman va unga tenglashtiraman.
+
+00:07:03.950 --> 00:07:06.720
+Va keyin qahvaga krem qo‘shish chizig‘ini qo‘shamiz.
+
+00:07:06.720 --> 00:07:10.520
+Bo‘sh joy va keyin mantiqiy(boolean) o‘zgaruvchisini qo‘shaman.
+
+00:07:10.520 --> 00:07:14.060
+Yana bir bor matnli(string) o‘zgaruvchini 
+mantiqiy(boolean) matn qiymati bilan 
+
+00:07:14.060 --> 00:07:16.770
+qo‘shaman va bu jarayon 
+barchasini satrga aylantiradi.
+
+00:07:16.770 --> 00:07:18.100
+Yaxshi, endi buni qurilmamizda sinab ko‘ramiz.
+
+00:07:19.230 --> 00:07:20.770
+Agar men ushbu katakchani va undan 
+keyin buyurtma tugmasini bosganimda
+
+00:07:20.770 --> 00:07:24.720
+"add whip cream topping" qiymatini 
+to‘g‘ri deb ko‘rsatishi kerak.
+
+00:07:24.720 --> 00:07:28.480
+Va shunday ham bo‘ladi, lekin yangi 
+chiziq belgilarini unutgan ko‘rinaman, 
+
+00:07:28.480 --> 00:07:29.410
+shuning uchun hozir o‘zgartirish kirataman.
+
+00:07:29.410 --> 00:07:32.590
+Bu yerga kelganimdan foydalanib boshqa 
+masalani ham tekshirib chiqaman.
+
+00:07:32.590 --> 00:07:34.680
+Shuning uchun belgilangan katakchadan belgini olib tashlab,
+buyurtma tugmasini bosaman.
+
+00:07:34.680 --> 00:07:36.640
+Va qiymat noto‘g‘riga teng bo‘lib qoladi.
+
+00:07:36.640 --> 00:07:40.310
+Shunday qilib, u belgilangan katakchaning 
+holatini to‘g‘ri aks ettiradi.
+
+00:07:40.310 --> 00:07:43.800
+Endi yangi chiziq belgilarini qo‘shamiz 
+va dasturni yana ishga tushiramiz.
+
+00:07:43.800 --> 00:07:46.590
+Agar bayroqchani bosib, buyurtma tugmachasini bosgan bo‘lsam, u to‘g‘ri deydi.
+
+00:07:46.590 --> 00:07:49.480
+Agar belgilangan katakchadagi belgini olib tashlab, 
+buyurtmani bossam, qiymat noto‘g‘riga teng bo‘lib qoladi.
+
+00:07:50.610 --> 00:07:51.550
+Ajoyib.
+
+00:07:51.550 --> 00:07:52.810
+Bu bilan ikkala masalalarni ham yechishni uddaladik.
+
+00:07:54.550 --> 00:07:56.750
+Ushbu vazifaning keyingi
+qismlari osonroq bo‘ldi.
+
+00:07:56.750 --> 00:08:00.610
+Biz konsol xabarida to‘g‘ri belgilanganlik 
+holatiga ega ekanligimizni tekshirganimizdan 
+
+00:08:00.610 --> 00:08:04.200
+so‘ng, buni faqat ekranda 
+ko‘rsatilishi kutishimiz qolgandi.
+
+00:08:04.200 --> 00:08:06.000
+Hozir ilovadagi jarayonlar ishlab 
+turganligi sababli, konsol 
+
+00:08:06.000 --> 00:08:08.660
+xabarlarini o‘chirib tashlashim mumkin
+chunki endi bu kerak emas.
+
+00:08:08.660 --> 00:08:11.810
+So‘ngra dasturni oxirgi marta ishga tushiramiz.
+
+00:08:11.810 --> 00:08:12.830
+Yaxshi, ajoyib natijaga erishdik.
+
+00:08:12.830 --> 00:08:14.260
+Keyingi vazifaga o‘tamiz.
+

@@ -1,0 +1,327 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.410 --> 00:00:02.570
+Busquemos en Google cómo hacer esto.
+
+00:00:02.570 --> 00:00:05.280
+Voy a escribir
+<i>how to scroll in an android app</i>.
+
+00:00:06.394 --> 00:00:08.240
+Veamos el primer resultado.
+
+00:00:08.240 --> 00:00:11.220
+La pregunta es, ¿cómo hacer
+que mi diseño se desplace hacia abajo?
+
+00:00:11.228 --> 00:00:13.431
+Eso es bastante similar a lo que queremos.
+
+00:00:13.431 --> 00:00:15.112
+Fui directamente
+a la parte de respuestas
+
+00:00:15.113 --> 00:00:17.946
+y esta tiene una marca de verificación
+verde y muchos votos de apoyo.
+
+00:00:17.947 --> 00:00:20.285
+Así que esta podría ser
+una buena respuesta.
+
+00:00:20.285 --> 00:00:23.207
+Dice, envuelve todo esto
+dentro de un <i>ScrollView</i>.
+
+00:00:23.659 --> 00:00:26.127
+Y luego da un ejemplo de <i>ScrollView</i>,
+
+00:00:26.128 --> 00:00:28.695
+y luego especifica 
+el espacio de nombres que dice,
+
+00:00:28.695 --> 00:00:33.454
+<i>fill_parent</i> para la anchura y la altura,
+y luego hay una etiqueta de cierre aquí,
+
+00:00:33.455 --> 00:00:38.570
+y en este comentario dice,
+"poner aquí el resto de la vista actual".
+
+00:00:39.387 --> 00:00:40.474
+Como antecedente,
+
+00:00:40.475 --> 00:00:42.710
+<i>fill_parent</i> es en realidad
+lo mismo que <i>match_parent</i>.
+
+00:00:42.710 --> 00:00:45.860
+Es solo una versión anterior,
+pero significan lo mismo.
+
+00:00:45.860 --> 00:00:50.590
+En esta línea dice que <i>ScrollView</i>
+puede contener un solo elemento.
+
+00:00:50.590 --> 00:00:52.856
+Parece que este era
+el diseño original de alguien,
+
+00:00:52.856 --> 00:00:54.968
+y entonces para ponerlo
+dentro del ScrollView
+
+00:00:54.969 --> 00:00:59.991
+hicieron que <i>ScrollView</i> sea la vista padre
+y <i>LinearLayout</i> la vista hija.
+
+00:00:59.992 --> 00:01:02.520
+Bien, fue una respuesta útil
+así que volvamos
+
+00:01:02.520 --> 00:01:04.250
+y veamos si hay otras soluciones.
+
+00:01:07.020 --> 00:01:09.160
+Esta persona está describiendo lo mismo.
+
+00:01:09.160 --> 00:01:14.450
+Tienen el diseño XML
+y creo que quieren hacer que se desplace.
+
+00:01:14.450 --> 00:01:16.865
+Por lo general, no leo
+la pregunta completa en detalle.
+
+00:01:16.865 --> 00:01:18.660
+Solo voy a la parte de la respuesta.
+
+00:01:18.660 --> 00:01:19.930
+Esta persona dice,
+
+00:01:19.930 --> 00:01:23.340
+"¿Probaste incluir todo tu XML
+en un padre <i>ScrollView</i>?"
+
+00:01:23.340 --> 00:01:25.713
+Y luego dan un ejemplo de <i>ScrollView</i>
+
+00:01:25.714 --> 00:01:28.370
+y el hijo es un <i>RelativeLayout</i>.
+
+00:01:28.370 --> 00:01:31.430
+Y luego tienen una etiqueta
+de cierre de <i>ScrollView</i>.
+
+00:01:31.430 --> 00:01:34.030
+Eso es todo lo que tienen en este hilo.
+
+00:01:34.030 --> 00:01:36.546
+Pero parece que los dos
+resultados de la búsqueda
+
+00:01:36.547 --> 00:01:39.190
+dan el mismo consejo
+de usar un <i>ScrollView</i>.
+
+00:01:39.190 --> 00:01:44.110
+Entonces cambiemos nuestra búsqueda
+para consultar por <i>scrollview android</i>.
+
+00:01:44.110 --> 00:01:47.111
+Impresionante.
+Así que es una vista en Android.
+
+00:01:47.112 --> 00:01:50.480
+Y hay una descripción aquí.
+
+00:01:50.480 --> 00:01:53.180
+Hay mucho texto aquí,
+entonces no lo leeré,
+
+00:01:53.180 --> 00:01:54.883
+pero si quieres echarle
+un vistazo, puedes.
+
+00:01:54.884 --> 00:01:56.511
+Entonces voy a volver atrás.
+
+00:01:56.512 --> 00:01:58.860
+Prefiero buscar un ejemplo de código.
+
+00:01:58.860 --> 00:02:01.981
+Así, los ejemplos de código que
+teníamos antes eran buenos,
+
+00:02:01.982 --> 00:02:03.847
+y este es bueno también.
+
+00:02:03.848 --> 00:02:05.720
+Entonces volvamos a Android Studio.
+
+00:02:06.270 --> 00:02:09.880
+Todos esos ejemplos XML
+comenzaban con <i>ScrollView</i>.
+
+00:02:09.880 --> 00:02:12.740
+Inmediatamente hay un error que dice
+No tengo los atributos requeridos
+
+00:02:12.740 --> 00:02:13.990
+anchura y altura de la vista.
+
+00:02:13.990 --> 00:02:18.032
+Entonces, los he añadido
+y especifiqué que sean <i>match_parent</i>.
+
+00:02:18.780 --> 00:02:20.474
+Si añado un corchete de cierre,
+
+00:02:20.475 --> 00:02:22.390
+tengo inmediatamente
+la etiqueta de cierre aquí.
+
+00:02:22.390 --> 00:02:23.817
+Entonces la copiaré
+
+00:02:23.818 --> 00:02:30.280
+y luego la pego
+al final de este archivo, aquí.
+
+00:02:31.372 --> 00:02:34.016
+Eso significa que
+el <i>LinearLayout</i> existente
+
+00:02:34.017 --> 00:02:36.558
+es ahora un hijo de
+esta <i>ScrollView</i>.
+
+00:02:37.145 --> 00:02:40.979
+Seleccionaré todo esto
+y lo indentaré con cuatro espacios,
+
+00:02:40.980 --> 00:02:43.624
+para que sea más fácil de leer
+como hijo de esta <i>ScrollView</i>.
+
+00:02:44.790 --> 00:02:46.768
+En <i>Android Studio</i>,
+si hago clic en el menú <i>Edit</i>,
+
+00:02:46.769 --> 00:02:48.850
+puedo ir a <i>Indent Selection</i>,
+
+00:02:48.850 --> 00:02:51.830
+y lo indentaré con cuatro espacios.
+
+00:02:51.830 --> 00:02:53.775
+Ahí está.
+Ahora se ve mejor.
+
+00:02:54.084 --> 00:02:55.956
+Ah, pero todavía tengo un error aquí.
+
+00:02:55.957 --> 00:02:58.989
+Dice que el espacio de nombres 'android'
+no está acotado.
+
+00:02:58.990 --> 00:03:00.885
+Puedo hacer clic
+para obtener más información.
+
+00:03:00.886 --> 00:03:02.622
+Dice: esta inspección comprueba
+
+00:03:02.623 --> 00:03:06.150
+prefijos de nombres de espacio
+no acotados en XML.
+
+00:03:06.150 --> 00:03:08.315
+Si recuerdas volviendo a la lección uno,
+
+00:03:08.315 --> 00:03:12.421
+dije que <i>android:</i> viene
+de este espacio de nombres de aquí.
+
+00:03:12.422 --> 00:03:17.516
+Así que creo que tenemos que copiar esto
+y luego ponerlo aquí.
+
+00:03:17.517 --> 00:03:20.940
+También debes mover
+el espacio de nombres <i>tools</i> aquí.
+
+00:03:20.940 --> 00:03:22.957
+El espacio de nombres <i>tools</i>
+es para proporcionar
+
+00:03:22.958 --> 00:03:24.569
+atributos adicionales
+que puedas agregar
+
+00:03:24.569 --> 00:03:28.014
+a tu XML para ayudarte a depurar
+y construir tu aplicación.
+
+00:03:28.015 --> 00:03:30.530
+Bien, voy a ejecutar esto
+en mi dispositivo ahora.
+
+00:03:30.530 --> 00:03:34.755
+Bien, no hay ninguna diferencia visible
+en la aplicación porque no hay suficiente
+
+00:03:34.755 --> 00:03:38.342
+contenido en el formulario de pedido
+para que haya necesidad de desplazarlo.
+
+00:03:38.343 --> 00:03:42.302
+Para probar esto,
+tengo que añadir más vistas a este diseño.
+
+00:03:42.303 --> 00:03:43.992
+Haré el mismo truco que antes.
+
+00:03:43.993 --> 00:03:47.390
+Copiaré todas estas vistas
+y las pegaré en el diseño
+
+00:03:47.390 --> 00:03:49.495
+para tener un formulario
+de pedido muy largo.
+
+00:03:50.040 --> 00:03:54.050
+Bien, ahora el formulario de pedido
+es muy largo y se desplaza.
+
+00:03:54.050 --> 00:03:55.810
+Es emocionante.
+
+00:03:55.810 --> 00:03:59.826
+Si puedo rotar el dispositivo,
+también se desplaza.
+
+00:04:00.564 --> 00:04:02.503
+Ahora puedo deshacer esos cambios
+
+00:04:02.504 --> 00:04:04.789
+y volver a nuestro formulario
+de pedido original.
+
+00:04:05.280 --> 00:04:06.910
+Pero voy dejar la <i>ScrollView</i>,
+
+00:04:06.910 --> 00:04:09.924
+porque nuestra aplicación funcionará
+mejor en todos los dispositivos.
+
+00:04:10.540 --> 00:04:13.230
+Los usuarios con dispositivos
+más pequeños que este,
+
+00:04:13.230 --> 00:04:15.880
+todavía podrán desplazar
+y ver todos los campos.
+

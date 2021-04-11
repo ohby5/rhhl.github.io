@@ -1,0 +1,270 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.240 --> 00:00:03.240
+A próxima coisa a se fazer
+no aplicativo é mudar o preço do café
+
+00:00:03.240 --> 00:00:06.880
+no caso de alguém pedir uma cobertura,
+como chantilly ou chocolate.
+
+00:00:06.880 --> 00:00:08.160
+É uma boa ideia.
+
+00:00:08.160 --> 00:00:12.170
+Se eles pedirem chantilly,
+vamos apenas cobrar US$1.
+
+00:00:12.170 --> 00:00:14.840
+Se eles pedirem chocolate,
+então cobraremos US$2.
+
+00:00:14.840 --> 00:00:15.560
+Certo.
+
+00:00:15.560 --> 00:00:17.500
+Vamos entender
+como fazer isso no aplicativo.
+
+00:00:18.340 --> 00:00:20.970
+Eis alguns exemplos
+em outros aplicativos da Google,
+
+00:00:20.970 --> 00:00:24.390
+onde o comportamento pode mudar
+baseado em certas condições.
+
+00:00:24.390 --> 00:00:28.630
+No aplicativo <i>Inbox</i> do Gmail, temos
+uma captura de tela da lista de emails.
+
+00:00:28.630 --> 00:00:31.590
+Para um único email,
+se há um lembrete anexado a ele,
+
+00:00:31.590 --> 00:00:36.260
+então o aplicativo mostra este ícone,
+este marcador e o texto do lembrete.
+
+00:00:36.260 --> 00:00:38.310
+Se um email tem anexos de imagem,
+
+00:00:38.310 --> 00:00:41.110
+então o aplicativo mostra
+essas imagens alinhadas aqui.
+
+00:00:41.110 --> 00:00:43.040
+Se um email menciona uma viagem,
+
+00:00:43.040 --> 00:00:46.510
+então um cartão de viagem aparece
+com a informação do vôo.
+
+00:00:46.510 --> 00:00:49.380
+No aplicativo <i>Google Now Launcher</i>,
+temos mais exemplos
+
+00:00:49.380 --> 00:00:52.610
+de como o comportamento do <i>app</i>
+muda de acordo com as condições.
+
+00:00:52.610 --> 00:00:56.130
+Por exemplo, se o preço das ações
+está aumentando, então o delta,
+
+00:00:56.130 --> 00:01:00.160
+ou o aumento no preço,
+será mostrado aqui em verde.
+
+00:01:00.160 --> 00:01:02.120
+Se o preço das ações está em queda,
+
+00:01:02.120 --> 00:01:05.250
+então a diferença
+será mostrada aqui em vermelho.
+
+00:01:05.250 --> 00:01:08.140
+Para este cartão de clima,
+se a temperatura está boa
+
+00:01:08.140 --> 00:01:11.260
+e o tempo ensolarado,
+mostramos um ícone de sol.
+
+00:01:11.260 --> 00:01:15.120
+Se o tempo está com vento
+ou nublado, mostramos ícones diferentes.
+
+00:01:15.120 --> 00:01:16.850
+Logo modificaremos nosso aplicativo
+
+00:01:16.850 --> 00:01:19.950
+de forma que o preço mude
+baseado nas coberturas pedidas,
+
+00:01:19.950 --> 00:01:23.100
+mas primeiro quero que você
+se familiarize com o fluxo de controle.
+
+00:01:23.100 --> 00:01:26.620
+Normalmente, o código em nossos métodos
+é executado de cima para baixo,
+
+00:01:26.620 --> 00:01:29.820
+linha a linha, mas com instruções 
+de fluxo de controle,
+
+00:01:29.820 --> 00:01:32.900
+você pode mudar a ordem
+em que as instruções são executadas.
+
+00:01:32.900 --> 00:01:33.690
+Por exemplo,
+
+00:01:33.690 --> 00:01:38.130
+você pode pular algumas instruções
+dentro de certas condições.
+
+00:01:38.130 --> 00:01:40.444
+Vamos fazer isso 
+aprendendo a lógica de <i>if/else</i>.
+
+00:01:41.580 --> 00:01:44.190
+Você ainda não viu código
+para instruções <i>if/else</i>,
+
+00:01:44.190 --> 00:01:46.550
+mas vou jogá-lo numa fria
+e ver como você se sai.
+
+00:01:47.250 --> 00:01:51.080
+Nos próximos desafios, você vai ler 
+alguns <i>snippets</i> de código sozinho,
+
+00:01:51.080 --> 00:01:54.000
+e eles estão lincados
+nas notas do instrutor.
+
+00:01:54.000 --> 00:01:56.640
+Então você vai tentar adivinhar
+o que cada código faz
+
+00:01:56.640 --> 00:01:58.550
+e tentar determinar o resultado.
+
+00:01:58.550 --> 00:02:00.200
+Você terá várias opções,
+
+00:02:00.200 --> 00:02:03.120
+então você pode escolher
+a que mais combina com este código.
+
+00:02:03.120 --> 00:02:04.390
+Quando digo resultado,
+
+00:02:04.390 --> 00:02:08.008
+me refiro às instruções de <i>log</i>
+que são impressas no <i>log cat</i>.
+
+00:02:08.008 --> 00:02:11.510
+Lembre-se que você pode acessar o <i>log cat</i>
+desta aba Android bem aqui,
+
+00:02:11.510 --> 00:02:15.070
+e ela mostra todas as mensagens 
+do sistema, e de nossos aplicativos.
+
+00:02:15.070 --> 00:02:18.380
+Os <i>snippets</i> de código que lhe fornecemos
+vão escrever mensagens
+
+00:02:18.380 --> 00:02:19.510
+no <i>log</i>.
+
+00:02:19.510 --> 00:02:21.830
+Vamos fazer uma pergunta teste juntos.
+
+00:02:21.830 --> 00:02:24.310
+Você pode encontrar este <i>link</i>
+nas notas do instrutor.
+
+00:02:24.310 --> 00:02:28.230
+Presuma que este é um <i>snippet</i> de código
+de um arquivo WeatherActivity.java
+
+00:02:28.230 --> 00:02:29.830
+dentro de um aplicativo de clima.
+
+00:02:29.830 --> 00:02:33.850
+A primeira linha de código cria 
+uma variável booleana chamada isRaining
+
+00:02:33.850 --> 00:02:35.910
+e o valor inicial é <i>true</i>.
+
+00:02:35.910 --> 00:02:38.500
+Então temos esta instrução <i>if/else</i>.
+
+00:02:38.500 --> 00:02:43.150
+Se isRaining é <i>true</i>,
+então escrevemos isto nos <i>logs</i>.
+
+00:02:43.150 --> 00:02:46.330
+Ele diz, "Está chovendo,
+melhor trazer um guarda-chuva."
+
+00:02:46.330 --> 00:02:50.910
+Se isRaining é <i>false</i>, então vamos
+neste caso <i>else</i> e escrevemos
+
+00:02:50.910 --> 00:02:53.230
+esta mensagem, "É improvável que chova."
+
+00:02:53.230 --> 00:02:57.270
+Já que isRaining é <i>true</i>,
+então caímos neste caso
+
+00:02:57.270 --> 00:03:00.210
+e escrevemos, "Está chovendo,
+melhor trazer um guarda-chuva."
+
+00:03:00.210 --> 00:03:03.440
+Por cairmos neste caso,
+podemos pular o bloco <i>else</i>.
+
+00:03:03.440 --> 00:03:06.800
+Esta linha de código mora 
+fora da instrução <i>else</i>.
+
+00:03:06.800 --> 00:03:08.620
+então é sempre executada.
+
+00:03:08.620 --> 00:03:11.670
+Ela diz, "Obrigado por usar
+o aplicativo <i>WhetherWeather</i>."
+
+00:03:11.670 --> 00:03:14.200
+Vamos procurar uma opção
+no questionário que mostre,
+
+00:03:14.200 --> 00:03:17.040
+"Está chovendo, melhor trazer 
+um guarda-chuva" seguido por
+
+00:03:17.040 --> 00:03:19.660
+"Obrigado por usar
+o <i>app WhetherWeather</i>."
+
+00:03:19.660 --> 00:03:21.550
+Esta é exatamente a opção B.
+
+00:03:21.550 --> 00:03:24.030
+Agora, eis um problema 
+diferente para você tentar.
+
+00:03:24.030 --> 00:03:26.760
+Veja as notas para o <i>snippet</i> de código
+e faça sua seleção.
+

@@ -1,0 +1,451 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.000 --> 00:00:02.920
+Para calcular el precio correcto
+del resumen del pedido
+
+00:00:02.920 --> 00:00:05.320
+debemos pasar la información
+
+00:00:05.320 --> 00:00:09.500
+de las coberturas que el usuario
+seleccionó al método <i>calculatePrice</i>.
+
+00:00:09.500 --> 00:00:12.820
+Elijo hacer todo el trabajo
+pesado y el cálculo
+
+00:00:12.820 --> 00:00:14.670
+dentro del método <i>calculatePrice</i>,
+
+00:00:14.671 --> 00:00:18.340
+para centralizar
+toda esta lógica relacionada.
+
+00:00:18.340 --> 00:00:20.769
+Al consolidar todo en este método,
+
+00:00:20.770 --> 00:00:23.507
+si hay un problema en la forma
+de calcular el precio,
+
+00:00:23.508 --> 00:00:26.531
+podemos verificar el código
+en un solo lugar.
+
+00:00:26.531 --> 00:00:28.340
+Es mucho más manejable.
+
+00:00:28.340 --> 00:00:29.880
+Entonces, dentro de este método,
+
+00:00:29.880 --> 00:00:33.450
+vamos a averiguar el precio base
+de una taza de café.
+
+00:00:33.450 --> 00:00:35.510
+Esto es igual a lo que te mostré antes.
+
+00:00:35.510 --> 00:00:38.110
+Si el café lleva crema batida,
+añado 1 dólar.
+
+00:00:38.110 --> 00:00:41.000
+Si el café tiene chocolate,
+añado 2 dólares.
+
+00:00:41.000 --> 00:00:43.474
+Luego se toma el precio base
+de una taza de café
+
+00:00:43.475 --> 00:00:45.505
+y se multiplica por la cantidad pedida
+
+00:00:45.506 --> 00:00:47.860
+para determinar
+el precio total del pedido.
+
+00:00:47.860 --> 00:00:49.432
+Primero pasaremos la información
+
+00:00:49.432 --> 00:00:51.964
+de los <i>CheckBoxes</i>
+de crema batida y chocolate
+
+00:00:51.965 --> 00:00:54.302
+al método <i>calculatePrice</i>.
+
+00:00:54.302 --> 00:00:58.380
+Pasaré los booleanos
+<i>hasWhippedCream</i> y <i>hasChocolate</i>.
+
+00:00:58.380 --> 00:01:01.943
+No tiene sentido pasarle
+los objetos reales <i>CheckBox</i>,
+
+00:01:01.944 --> 00:01:03.577
+porque todo lo que nos preocupa
+
+00:01:03.577 --> 00:01:06.430
+son estos valores booleanos para
+calcular el precio.
+
+00:01:06.430 --> 00:01:08.480
+<i>Android Studio</i> me dice que hay un error
+
+00:01:08.481 --> 00:01:10.530
+porque la firma del método no coincide.
+
+00:01:10.530 --> 00:01:13.530
+Estoy tratando de llamar a un método
+para el que se ha definido
+
+00:01:13.530 --> 00:01:15.390
+que no tenga parámetros de entrada.
+
+00:01:15.390 --> 00:01:18.820
+Vayamos a donde se define
+el método <i>calculatePrice</i>.
+
+00:01:18.820 --> 00:01:20.700
+Cambiaré la firma del método
+
+00:01:20.700 --> 00:01:25.473
+para que tome dos parámetros de entrada,
+un booleano llamado <i>addWhippedCream</i>
+
+00:01:25.474 --> 00:01:27.547
+y un booleano llamado <i>addChocolate</i>.
+
+00:01:27.548 --> 00:01:30.742
+Puedes llamarlos 
+con el nombre que quieras.
+
+00:01:30.742 --> 00:01:33.900
+Elegí utilizar un nombre diferente
+al que se le pasa,
+
+00:01:33.900 --> 00:01:36.700
+para mostrar que estos nombres
+no tienen por qué coincidir.
+
+00:01:36.700 --> 00:01:38.044
+También actualicé el <i>Javadoc</i>
+
+00:01:38.044 --> 00:01:40.580
+para describir estos dos nuevos
+parámetros de entrada.
+
+00:01:40.580 --> 00:01:43.890
+De esa manera alguien que llame al método
+sabrá qué tiene que pasarle.
+
+00:01:43.890 --> 00:01:47.390
+Luego, dentro del método <i>calculatePrice</i>
+tengo que hacer toda la lógica
+
+00:01:47.390 --> 00:01:49.930
+para cambiar el precio
+en base a estos ingredientes.
+
+00:01:49.930 --> 00:01:52.025
+En primer lugar,
+calcularé el precio base,
+
+00:01:52.026 --> 00:01:55.016
+entonces crearé una variable entera
+llamada <i>basePrice</i>.
+
+00:01:55.016 --> 00:01:59.146
+Inicializo el valor en 5
+porque una taza de café cuesta $5.
+
+00:01:59.147 --> 00:02:00.930
+Luego crearé una sentencia <i>if</i>.
+
+00:02:00.930 --> 00:02:05.600
+Si el booleano <i>addWhippedCream</i> es <i>true</i>,
+el usuario quiere crema batida.
+
+00:02:05.600 --> 00:02:09.360
+Eso significa que hay que añadir $1
+al precio base de una taza de café.
+
+00:02:09.360 --> 00:02:11.940
+Bien, eso debería manejar
+el caso de la crema batida.
+
+00:02:11.940 --> 00:02:13.740
+Ahora, pasemos al caso del chocolate.
+
+00:02:13.740 --> 00:02:16.110
+Crearé otra sentencia <i>if</i>.
+
+00:02:16.110 --> 00:02:17.949
+No necesito un bloque <i>else</i> de código,
+
+00:02:17.950 --> 00:02:20.866
+porque si el usuario
+no quiere crema batida,
+
+00:02:20.866 --> 00:02:23.000
+no tengo que hacer nada en absoluto.
+
+00:02:23.000 --> 00:02:26.997
+De hecho, si quisiera escribir
+un caso <i>else</i>, se vería así.
+
+00:02:27.005 --> 00:02:29.321
+Solo hay un comentario que dice:
+"no hacer nada".
+
+00:02:29.321 --> 00:02:31.664
+Aunque <i>Android Studio</i>
+es más inteligente que eso,
+
+00:02:31.665 --> 00:02:35.010
+y nota que la sentencia <i>else</i>
+tiene un cuerpo vacío.
+
+00:02:35.010 --> 00:02:37.550
+Su consejo es que este tipo
+de código es confuso
+
+00:02:37.551 --> 00:02:39.852
+y puede ser el resultado
+de un error tipográfico.
+
+00:02:39.852 --> 00:02:42.248
+Como son líneas extra
+de código que no necesitamos,
+
+00:02:42.248 --> 00:02:43.660
+borremos el bloque <i>else</i>.
+
+00:02:43.660 --> 00:02:45.930
+Ahora podemos pasar al caso del chocolate.
+
+00:02:45.930 --> 00:02:49.800
+La cobertura de chocolate es completamente
+independiente del de la crema batida.
+
+00:02:49.800 --> 00:02:51.880
+No importa si el usuario
+elige uno u otro,
+
+00:02:51.880 --> 00:02:54.370
+no dependen el uno del otro.
+
+00:02:54.371 --> 00:02:56.972
+Así que crearé un caso <i>if</i> aparte.
+
+00:02:56.973 --> 00:02:59.480
+"Si el usuario quiere chocolate,
+
+00:02:59.480 --> 00:03:04.344
+tenemos que modificar <i>basePrice</i>
+para que sea <i>basePrice</i> + 2."
+
+00:03:04.345 --> 00:03:05.606
+De nuevo, podríamos tener
+
+00:03:05.607 --> 00:03:08.810
+un bloque <i>else</i> de código,
+pero no haría nada.
+
+00:03:08.810 --> 00:03:10.511
+Si el usuario no quiere chocolate,
+
+00:03:10.512 --> 00:03:12.689
+no tenemos que ajustar
+el precio en absoluto,
+
+00:03:12.689 --> 00:03:15.529
+entonces eliminemos este código
+porque es innecesario.
+
+00:03:15.530 --> 00:03:16.911
+Leyendo nuestro código,
+
+00:03:16.912 --> 00:03:20.450
+tenemos un precio base de $5
+por cada taza de café.
+
+00:03:20.450 --> 00:03:26.079
+Si el usuario quiere crema batida,
+necesitamos aumentar el precio base en $1.
+
+00:03:26.080 --> 00:03:27.610
+Si el usuario quiere chocolate,
+
+00:03:27.610 --> 00:03:30.008
+tenemos que aumentar
+el precio base en $2.
+
+00:03:30.008 --> 00:03:32.290
+Luego, para calcular
+el precio total del pedido,
+
+00:03:32.290 --> 00:03:36.495
+necesitamos multiplicar la cantidad
+por el precio de una taza de café.
+
+00:03:36.496 --> 00:03:38.705
+Bien, parece que este
+código debería funcionar.
+
+00:03:38.705 --> 00:03:41.875
+También añadí comentarios en línea
+encima de cada bloque de código,
+
+00:03:41.875 --> 00:03:45.359
+para que cuando volvamos a este código,
+recordemos lo que hicimos.
+
+00:03:45.359 --> 00:03:48.285
+Ahora, ejecutemos la aplicación
+para comprobar que funcione.
+
+00:03:48.285 --> 00:03:51.210
+Bien, probemos los casos
+que hicimos juntos antes.
+
+00:03:51.965 --> 00:03:55.106
+Si elegimos la crema batida
+y una cantidad de 3,
+
+00:03:55.114 --> 00:03:58.295
+cada taza costará $6.
+
+00:03:58.296 --> 00:04:03.485
+$6 por 3 son $18,
+y calcula 18, bien.
+
+00:04:03.486 --> 00:04:07.873
+Si añado el chocolate,
+cada taza de café cuesta $8.
+
+00:04:07.874 --> 00:04:11.913
+Si tengo una cantidad de 2,
+el precio total será de $16.
+
+00:04:11.914 --> 00:04:15.700
+Probamos un caso con crema batida
+y obtuvimos la respuesta correcta.
+
+00:04:15.700 --> 00:04:18.510
+Probamos un caso con crema y batida
+
+00:04:18.510 --> 00:04:21.230
+y chocolate, y tenemos
+la respuesta correcta.
+
+00:04:21.230 --> 00:04:23.890
+Ahora probemos elegir
+solo la cobertura de chocolate.
+
+00:04:23.890 --> 00:04:27.290
+Cambio la cantidad a 1,
+y hago clic en <i>Order</i>.
+
+00:04:27.290 --> 00:04:31.810
+Esto parece correcto, porque
+son $5 por una taza de café, más $2
+
+00:04:31.810 --> 00:04:34.840
+por el chocolate, lo que nos da a $7.
+
+00:04:34.840 --> 00:04:40.981
+Si cambio esto a 4, el total se actualiza,
+asumiendo $7 por cada taza de café.
+
+00:04:40.982 --> 00:04:42.156
+Impresionante.
+
+00:04:42.734 --> 00:04:44.820
+Parece que funciona.
+
+00:04:44.821 --> 00:04:47.450
+Pasé por estos casos de prueba
+con bastante rapidez.
+
+00:04:47.450 --> 00:04:48.920
+Pero lo que intentaba hacer,
+
+00:04:48.920 --> 00:04:52.858
+es asegurarme de que se recorrieran
+todas las posibles rutas del código.
+
+00:04:52.858 --> 00:04:54.941
+Por ejemplo, si ejecutamos la aplicación,
+
+00:04:54.941 --> 00:04:57.346
+y nunca seleccionamos
+el <i>CheckBox</i> de crema batida,
+
+00:04:57.346 --> 00:05:00.490
+nunca podríamos probar
+si este código de aquí funciona.
+
+00:05:00.490 --> 00:05:03.318
+Así que tenemos que elegir
+las condiciones que causen
+
+00:05:03.318 --> 00:05:05.767
+que todas las partes
+de nuestro código se ejecuten.
+
+00:05:05.767 --> 00:05:08.263
+Entonces seleccionamos
+la cobertura de crema batida
+
+00:05:08.263 --> 00:05:09.520
+y también la de chocolate
+
+00:05:09.520 --> 00:05:12.380
+para asegurarnos que este código
+también sea ejecutado.
+
+00:05:12.380 --> 00:05:14.510
+Para ser aún más cuidadosos
+deberíamos probar
+
+00:05:14.510 --> 00:05:17.370
+todas las combinaciones
+de estas dos variables booleanas.
+
+00:05:17.370 --> 00:05:19.292
+Todas estas combinaciones se traducirán
+
+00:05:19.292 --> 00:05:21.563
+en un comportamiento
+diferente de este método,
+
+00:05:21.563 --> 00:05:22.970
+así que queremos asegurarnos
+
+00:05:22.970 --> 00:05:25.320
+de que nuestro código funcione
+en todos los casos.
+
+00:05:25.320 --> 00:05:27.995
+Como el precio de base
+se calcula a medida que avanzamos
+
+00:05:27.995 --> 00:05:30.443
+también podemos usar mensajes de registro
+
+00:05:30.444 --> 00:05:34.000
+para asegurarnos que se calcula
+como se esperaba.
+
+00:05:34.000 --> 00:05:37.380
+Bien, estas son solo cosas
+a tener en cuenta al escribir el código
+
+00:05:37.381 --> 00:05:40.768
+que se vuelve más complejo
+con estas sentencia de control de flujo.
+

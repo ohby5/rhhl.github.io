@@ -1,0 +1,381 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.750 --> 00:00:04.031
+Para construir este diseño, vamos a pensar
+primero en las vistas necesarias.
+
+00:00:04.031 --> 00:00:07.420
+Voy a asumir que todo esto ya se ha
+hecho y que solo hablaremos
+
+00:00:07.420 --> 00:00:10.910
+de las nuevas cosas que necesitamos
+añadir a nuestro diseño.
+
+00:00:10.910 --> 00:00:15.030
+Las dos vistas que necesitamos agregar 
+son una vista de texto para <i>Toppings</i>
+
+00:00:15.030 --> 00:00:18.090
+y una vista <i>CheckBox</i> para
+el item <i>Whipped cream</i>.
+
+00:00:18.090 --> 00:00:21.470
+Quizá no sabía que esta vista
+existía en Android, pero a lo mejor
+
+00:00:21.470 --> 00:00:24.460
+buscándola en Google le ayude
+a encontrar esta respuesta.
+
+00:00:25.380 --> 00:00:28.300
+En el Paso 2, necesitamos
+posicionar las vistas.
+
+00:00:28.300 --> 00:00:30.820
+Suponiendo que las vistas ya están
+en su posición correcta, solo necesitamos
+
+00:00:30.820 --> 00:00:34.970
+agregar <i>Toppings</i> y <i>Whipped cream</i>,
+verticalmente, en la misma hilera.
+
+00:00:35.470 --> 00:00:37.470
+Ya que la vista raíz es un 
+diseño lineal vertical,
+
+00:00:37.470 --> 00:00:39.990
+podemos añadir estas dos vistas 
+encima de la misma.
+
+00:00:40.990 --> 00:00:43.580
+Para el tercer paso,
+necesitamos dar estilo a las vistas.
+
+00:00:43.580 --> 00:00:46.620
+El estilo en el encabezado de <i>Toppings</i>
+es el mismo que los de <i>Quantity</i>
+
+00:00:46.620 --> 00:00:51.260
+y <i>Order Summary</i>, entonces podemos copiar
+y pegar los encabezados existentes.
+
+00:00:51.434 --> 00:00:54.920
+La vista <i>CheckBox</i> es nueva y por eso
+necesitamos darle el estilo adecuado.
+
+00:00:54.920 --> 00:00:59.176
+Debiéramos permitir 24 pd de espacio
+entre la caja y el texto,
+
+00:00:59.176 --> 00:01:04.054
+y debemos cambiar el tamaño de fuente
+de <i>Whipped cream</i> a 16 sp.
+
+00:01:04.054 --> 00:01:06.150
+Hagamos esos cambios ahora a nuestra <i>app</i>.
+
+00:01:07.180 --> 00:01:10.400
+Para agregar un encabezado a <i>Toppings</i> que
+se vea como el de <i>Quantity</i>,
+
+00:01:10.400 --> 00:01:12.730
+puedo copiar y pegar este código.
+
+00:01:12.730 --> 00:01:17.135
+Lo copio y luego lo añado encima de
+este <i>LinearLayout</i> vertical.
+
+00:01:18.080 --> 00:01:20.170
+Ok, ahora dice aqui <i>Quantity</i> dos veces.
+
+00:01:20.170 --> 00:01:22.960
+Voy a cambiar el texto para 
+que diga <i>Toppings</i>.
+
+00:01:22.960 --> 00:01:25.380
+También copié el margen inferior
+
+00:01:25.380 --> 00:01:28.790
+para que haya un espacio entre este
+encabezado y el contenido debajo.
+
+00:01:30.260 --> 00:01:32.660
+Aún no hemos agregado un <i>CheckBox</i>
+a nuestra <i>app</i> de antes,
+
+00:01:32.660 --> 00:01:33.990
+así que buscaré en Google cómo hacerlo.
+
+00:01:33.990 --> 00:01:37.720
+Voy a buscar sobre 
+un <i>checkbox</i> en Android.
+
+00:01:37.720 --> 00:01:40.840
+Recuerde agregar Android porque 
+podría haber <i>checkboxes</i>
+
+00:01:40.840 --> 00:01:44.850
+para otras plataformas, como por ejemplo
+la web u otras plataformas móviles,
+
+00:01:44.850 --> 00:01:48.090
+Esto ayudará a obtener un resultado
+específico para Android.
+
+00:01:48.090 --> 00:01:49.760
+Veamos el primer enlace.
+
+00:01:49.760 --> 00:01:52.900
+Esta es la documentación de referencia 
+para la clase <i>CheckBox</i>.
+
+00:01:52.900 --> 00:01:56.420
+Si me desplazo por el texto veré
+un resumen de la clase
+
+00:01:56.420 --> 00:01:58.960
+y luego va directo a los atributos <i>XML</i>.
+
+00:01:58.960 --> 00:02:02.880
+Lo que me gustaría es ver un ejemplo 
+de <i>XML</i> para <i>CheckBox</i>.
+
+00:02:02.880 --> 00:02:05.100
+Así que regresemos a los
+resultados de la búsqueda.
+
+00:02:05.100 --> 00:02:07.070
+Veamos el segundo enlace.
+
+00:02:07.070 --> 00:02:10.440
+Bien, ahora me muestra algunas
+figuras de <i>Checkboxes</i>.
+
+00:02:10.440 --> 00:02:12.040
+Y aquí hay un poco de <i>XML</i>.
+
+00:02:12.040 --> 00:02:13.180
+Esto luce muy bien.
+
+00:02:13.180 --> 00:02:16.140
+Tiene dos <i>CheckBoxes</i>
+dentro de un <i>LinearLayout</i>.
+
+00:02:16.140 --> 00:02:20.530
+Voy a copiar la primera <i>CheckBox</i>,
+y luego la voy a pegar en nuestra <i>app</i>.
+
+00:02:21.590 --> 00:02:25.702
+De vuelta en nuestra <i>app</i>, voy a pegarlo
+luego del texto de <i>Toppings</i>,
+
+00:02:25.702 --> 00:02:28.750
+pero antes del texto de 
+<i>Quantity</i>, justo aquí.
+
+00:02:28.753 --> 00:02:33.040
+Voy a moditicar el <i>XML</i>, porque no se
+ajusta exactamente a nuestro caso.
+
+00:02:33.040 --> 00:02:36.710
+Voy a remover el <i>id</i> y 
+tambien el texto aquí.
+
+00:02:36.710 --> 00:02:39.750
+En lugar de carne, porque nuestra
+cafetería no vende carne,
+
+00:02:39.750 --> 00:02:41.950
+voy a escribir, <i>Whipped cream</i>.
+
+00:02:43.030 --> 00:02:45.940
+Por cierto, lo que vimos antes,
+<i>@string/meat</i>,
+
+00:02:45.940 --> 00:02:50.410
+se refería a una cadena de recursos,
+en el archivo <i>strings.xml</i>.
+
+00:02:50.410 --> 00:02:52.690
+Ya hablaremos de eso más adelante,
+pero por ahora,
+
+00:02:52.690 --> 00:02:55.550
+puede escribir la cadena de texto
+aquí directamente y mire,
+
+00:02:55.550 --> 00:02:59.350
+la vista previa se actualiza, así que
+ahora en la <i>Checkbox</i> dice <i>Whipped cream</i>.
+
+00:02:59.350 --> 00:03:03.380
+Lo que es bueno de la vista <i>Checkbox</i>,
+es que proporciona una caja,
+
+00:03:03.380 --> 00:03:08.100
+así como un texto, para que no tenga
+que agregar otra vista de texto aquí.
+
+00:03:08.100 --> 00:03:10.850
+Tampoco necesitamos esta linea aquí
+que habla de <i>onClick</i>.
+
+00:03:12.089 --> 00:03:16.500
+Todo lo que nos importa en esta tarea
+es hacer que la <i>CheckBox</i> aparezca aquí.
+
+00:03:16.500 --> 00:03:20.260
+Otra forma de llegar a este <i>XML</i> es
+chequear la hoja de trucos comunes
+
+00:03:20.260 --> 00:03:21.640
+para vistas en Android.
+
+00:03:22.540 --> 00:03:25.410
+Esta hoja de trucos enumera varias
+vistas comunes en Android
+
+00:03:25.410 --> 00:03:27.460
+y contiene ejemplos del <i>XML</i> también.
+
+00:03:28.480 --> 00:03:30.139
+Aquí está la vista <i>CheckBox</i>,
+
+00:03:30.139 --> 00:03:34.125
+y aquí hay un ejemplo de cómo se vería
+el respectivo <i>XML</i>.
+
+00:03:34.125 --> 00:03:37.270
+Podría haber copiado el <i>XML</i> desde aquí
+y pegarlo en la <i>app</i>.
+
+00:03:38.340 --> 00:03:41.230
+Regresando a Android Studio vamos a
+correr la <i>app</i> para ver cómo luce.
+
+00:03:42.480 --> 00:03:44.020
+Aquí está.
+Se ve muy bien.
+
+00:03:44.050 --> 00:03:46.865
+Tenemos el encabezado <i>Toppings</i> y
+una <i>CheckBox Whipped cream</i>.
+
+00:03:47.750 --> 00:03:50.730
+Tambień tenemos esta animación
+genial cuando chequeamos la caja.
+
+00:03:51.360 --> 00:03:54.790
+El único problema que veo, sin embargo,
+es que falta el espaciado.
+
+00:03:54.790 --> 00:03:58.020
+Por ejemplo, está muy ajustado entre
+el encabezado <i>Quantity</i> y el <i>CheckBox</i>
+
+00:03:58.020 --> 00:04:01.680
+de <i>Whipped cream</i> y tampoco hay
+suficiente espacio aquí en el medio.
+
+00:04:02.410 --> 00:04:04.580
+Regresando a las líneas rojas
+que fueron provistas,
+
+00:04:04.580 --> 00:04:09.370
+deberíamos agregar 24 pd de espacio aquí,
+y cambiar el tamaño de fuente a 16 sp.
+
+00:04:10.830 --> 00:04:12.960
+Primero voy a cambiar el tamaño de fuente.
+
+00:04:12.960 --> 00:04:18.110
+Voy a escribir <i>android:textSize</i>
+y luego poner 16 sp.
+
+00:04:18.110 --> 00:04:22.043
+Voy a abrir la vista previa aquí, para
+revisar que en realidad aumentó el tamaño
+
+00:04:22.043 --> 00:04:23.690
+de la fuente y así es.
+
+00:04:23.690 --> 00:04:26.470
+Si no está seguro si se actualizó,
+siempre puede dar clic en este botón.
+
+00:04:26.470 --> 00:04:27.430
+OK.
+
+00:04:27.430 --> 00:04:29.950
+Ahora para averiguar el espaciado,
+lo hice funcionar
+
+00:04:29.950 --> 00:04:32.240
+después de mucho ensayo y error.
+
+00:04:32.240 --> 00:04:34.370
+Intenté fijar los valores de margen
+
+00:04:34.370 --> 00:04:38.340
+y luego los valores de relleno,
+y resultó que el valor izquierdo
+
+00:04:38.340 --> 00:04:42.520
+controla el espaciado entre
+la caja y el texto aquí.
+
+00:04:42.520 --> 00:04:43.695
+Agreguemos el relleno ahora.
+
+00:04:44.900 --> 00:04:46.960
+Bien, el texto se movió.
+
+00:04:46.960 --> 00:04:49.040
+Sin embargo, aún veo otro problema.
+
+00:04:49.040 --> 00:04:53.090
+Hay suficiente espacio vertical ahí,
+pero no hay suficiente espacio aquí.
+
+00:04:53.090 --> 00:04:57.350
+Necesito agregar relleno de fondo, o
+un margen inferior a esta vista <i>CheckBox</i>,
+
+00:04:57.350 --> 00:05:01.720
+o necesito agregar relleno arriba, o
+un margen superior al encabezado <i>Quantity</i>.
+
+00:05:01.720 --> 00:05:03.030
+De cualquier forma funcionaría.
+
+00:05:03.030 --> 00:05:07.110
+Voy a agregar un margen superior
+al encabezado <i>Quantity</i>.
+
+00:05:07.110 --> 00:05:08.880
+¡Ahora se ve mejor!
+
+00:05:08.880 --> 00:05:10.990
+Ahora las cosas se ven mejor espaciadas.
+
+00:05:10.990 --> 00:05:13.080
+Voy a correr esta <i>app</i> en mi dispositivo.
+
+00:05:14.210 --> 00:05:16.320
+Y aquí está la <i>app</i>.
+En verdad luce bien.
+
+00:05:16.320 --> 00:05:17.460
+Buen trabajo.
+
+00:05:17.460 --> 00:05:20.810
+Cuando necesite agregar mas cambios a
+la interfaz de su <i>app</i>, puede seguir este
+
+00:05:20.810 --> 00:05:25.360
+patrón de buscar en Google la información
+en línea y luego aplicarla a la <i>app</i>.
+

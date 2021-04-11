@@ -1,0 +1,339 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.767
+Agora precisamos enviar
+nosso pedido por email
+
+00:00:02.801 --> 00:00:05.067
+para recebermos nosso café.
+
+00:00:05.100 --> 00:00:07.434
+Isto é o que acontece
+clicando em "Order":
+
+00:00:07.467 --> 00:00:09.400
+abre-se o app de email
+do dispositivo
+
+00:00:09.434 --> 00:00:12.200
+numa mensagem já preenchida
+com a encomenda de cafés
+
+00:00:12.234 --> 00:00:14.067
+e um assunto personalizado.
+
+00:00:14.100 --> 00:00:15.501
+Para fazer isso,
+
+00:00:15.534 --> 00:00:18.901
+precisamos entender um tópico
+do Android chamado "Intent".
+
+00:00:19.400 --> 00:00:23.334
+Um intent é uma mensagem
+que requer uma ação
+
+00:00:23.367 --> 00:00:26.901
+de outro aplicativo,
+como uma atividade.
+
+00:00:26.934 --> 00:00:29.367
+É uma parte poderosa
+do framework Android,
+
+00:00:29.400 --> 00:00:33.133
+pois nosso app pode utilizar
+funcionalidades de outros apps,
+
+00:00:33.167 --> 00:00:37.033
+como mandar um email,
+abrir a câmera ou ver um mapa.
+
+00:00:37.634 --> 00:00:40.000
+Permite que sejamos
+desenvolvedores eficientes,
+
+00:00:40.033 --> 00:00:43.534
+pois não temos que reinventar
+o que outros apps já fazem bem.
+
+00:00:43.567 --> 00:00:46.501
+Enviar intents é como passar
+uma bola para alguém.
+
+00:00:46.534 --> 00:00:50.033
+Da mesma forma que uma pessoa
+pode passar uma bola para outra,
+
+00:00:50.067 --> 00:00:53.567
+um app pode enviar um intent
+para outro.
+
+00:00:53.601 --> 00:00:56.567
+Aqui vão exemplos
+que talvez você reconheça:
+
+00:00:56.601 --> 00:00:58.501
+No aplicativo de notas
+Google Keep,
+
+00:00:58.534 --> 00:01:01.400
+o usuário pode clicar na câmera
+para tirar uma foto.
+
+00:01:01.434 --> 00:01:05.701
+Em vez de a equipe do Keep
+programar uma nova câmera,
+
+00:01:05.734 --> 00:01:08.534
+eles usam outra de graça
+enviando um intent
+
+00:01:08.567 --> 00:01:10.834
+para abrir o app de câmera
+do dispositivo.
+
+00:01:10.868 --> 00:01:12.734
+Igualmente, no app Yelp,
+
+00:01:12.767 --> 00:01:15.033
+clicar na localização
+de uma empresa
+
+00:01:15.067 --> 00:01:18.534
+envia um intent
+para abrir o app de mapa
+
+00:01:18.567 --> 00:01:22.033
+e fornecer instruções
+de rota para o usuário.
+
+00:01:22.534 --> 00:01:24.601
+Por último,
+na página de um restaurante
+
+00:01:24.634 --> 00:01:26.067
+no app Google Maps,
+
+00:01:26.100 --> 00:01:28.400
+clicar no botão de "Ligar"
+envia um intent
+
+00:01:28.434 --> 00:01:29.968
+que inicia
+o app de discagem
+
+00:01:30.000 --> 00:01:32.734
+e permite ao usuário
+ligar para o restaurante.
+
+00:01:32.767 --> 00:01:36.501
+O legal de enviar um intent
+é não precisar determinar
+
+00:01:36.534 --> 00:01:39.400
+qual aplicativo o suportará.
+
+00:01:39.434 --> 00:01:42.767
+Diversos apps instalados
+podem suportá-lo,
+
+00:01:42.801 --> 00:01:45.400
+mas só um precisa.
+
+00:01:45.434 --> 00:01:47.934
+Usando nossa analogia,
+ao jogar a bola
+
+00:01:47.968 --> 00:01:50.000
+você não precisa saber
+quem irá pegá-la.
+
+00:01:50.033 --> 00:01:53.300
+Basta que alguém a pegue.
+Deixe-me demonstrar.
+
+00:01:53.334 --> 00:01:55.834
+Na página de um restaurante
+no app do Google Maps,
+
+00:01:55.868 --> 00:01:59.934
+clicar em "Website" envia
+um intent para abrir o site.
+
+00:01:59.968 --> 00:02:05.200
+Para o app do Maps,
+tanto faz o navegador.
+
+00:02:05.234 --> 00:02:08.767
+Se o usuário só tiver um
+instalado no dispositivo,
+
+00:02:08.801 --> 00:02:11.701
+é esse que interpretará
+a solicitação.
+
+00:02:11.734 --> 00:02:15.467
+No entanto, se o usuário
+tiver 4 navegadores,
+
+00:02:15.501 --> 00:02:20.534
+o framework Android pedirá
+para o usuário escolher um.
+
+00:02:20.567 --> 00:02:22.400
+É assim que acontece.
+
+00:02:22.434 --> 00:02:25.934
+Esta janela pop-up é conhecida
+como "diálogo de desambiguação".
+
+00:02:25.968 --> 00:02:27.701
+Após o usuário escolher,
+
+00:02:27.734 --> 00:02:30.868
+o sistema envia um intent
+ao app selecionado
+
+00:02:30.901 --> 00:02:32.167
+para interpretar a ação.
+
+00:02:32.200 --> 00:02:35.067
+Neste caso,
+o site do restaurante é exibido.
+
+00:02:35.100 --> 00:02:38.701
+Agora vamos falar
+sobre o que há dentro da bola
+
+00:02:38.734 --> 00:02:40.234
+que representa um intent.
+
+00:02:40.267 --> 00:02:42.501
+Pense num intent
+como uma mensagem
+
+00:02:42.534 --> 00:02:45.300
+que especifica uma ação
+a ser tomada.
+
+00:02:45.334 --> 00:02:47.801
+Ela contém
+duas coisas essenciais:
+
+00:02:47.834 --> 00:02:50.801
+a ação necessária
+e um dado sobre o qual tomá-la.
+
+00:02:50.834 --> 00:02:53.167
+Você também pode
+especificar informações
+
+00:02:53.200 --> 00:02:56.200
+como categoria,
+componente e extra,
+
+00:02:56.234 --> 00:02:58.334
+que são, literalmente,
+informações extra.
+
+00:02:58.367 --> 00:03:00.300
+Tudo isso é usado
+pelo Android
+
+00:03:00.334 --> 00:03:03.834
+para determinar qual app
+deve tomar conta do intent.
+
+00:03:03.868 --> 00:03:08.801
+Por exemplo, um intent de mapa
+conteria a ação ACTION_VIEW,
+
+00:03:08.834 --> 00:03:11.434
+e os dados seriam
+as coordenadas
+
+00:03:11.467 --> 00:03:13.601
+do lugar
+que quiséssemos ver.
+
+00:03:13.634 --> 00:03:15.400
+Os demais campos
+não interessam.
+
+00:03:15.434 --> 00:03:19.667
+Depois, apps capazes
+de exibir coordenadas
+
+00:03:19.701 --> 00:03:21.801
+poderiam ser usados
+para assumir a ação,
+
+00:03:21.834 --> 00:03:23.901
+ou seja, provavelmente
+todo app de mapa.
+
+00:03:23.934 --> 00:03:27.000
+Outro exemplo é usar intent
+para discar um número.
+
+00:03:27.033 --> 00:03:31.901
+Você teria que criar um intent
+cuja ação seria ACTION_DIAL
+
+00:03:31.934 --> 00:03:34.634
+e cujo dado correspondente
+seria um número de telefone.
+
+00:03:34.667 --> 00:03:39.300
+O formato é "tel:"
+seguido do número.
+
+00:03:39.334 --> 00:03:41.901
+Esta string formatada
+chama-se URI,
+
+00:03:41.934 --> 00:03:44.868
+sigla para Identificador
+Uniforme de Recurso.
+
+00:03:44.901 --> 00:03:47.234
+É um padrão
+de estruturação de dados
+
+00:03:47.267 --> 00:03:50.267
+para correto processamento
+pelo receptor.
+
+00:03:50.300 --> 00:03:52.200
+É como o endereço
+numa correspondência,
+
+00:03:52.234 --> 00:03:55.100
+que segue uma estrutura
+para garantir a entrega.
+
+00:03:55.133 --> 00:03:57.000
+No caso
+do envio de um intent,
+
+00:03:57.033 --> 00:03:59.934
+um URI é necessário
+para o dado ser passado
+
+00:03:59.968 --> 00:04:01.934
+ao app recipiente.
+
+00:04:01.968 --> 00:04:04.234
+Dependendo do dado
+codificado no intent,
+
+00:04:04.267 --> 00:04:05.701
+o esquema pode mudar,
+
+00:04:05.734 --> 00:04:09.367
+como neste caso
+ou no das coordenadas.
+

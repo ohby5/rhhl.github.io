@@ -1,0 +1,300 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.510 --> 00:00:02.570
+Şimdi bunun nasıl yapacağımızı
+Google'da arayalım.
+
+00:00:02.570 --> 00:00:05.280
+Android uygulamada kaydırma
+nasıl yapılır diye yazacağım.
+
+00:00:06.450 --> 00:00:08.240
+İlk sonuca bakalım.
+
+00:00:08.240 --> 00:00:11.220
+Soru, düzenimi nasıl aşağı
+kaydırılabilir yapacağım?
+
+00:00:11.220 --> 00:00:13.570
+Bu bizim istediğimize oldukça benziyor.
+
+00:00:13.570 --> 00:00:16.425
+Cevap kısmına iniyorum ve
+bunda yeşil bir onay işareti var ve
+
+00:00:16.425 --> 00:00:17.825
+çok sayıda pozitif oy almış.
+
+00:00:17.825 --> 00:00:20.285
+Yani bu iyi bir cevap olabilir.
+
+00:00:20.285 --> 00:00:22.901
+Sadece tümünü bir ScrollView
+içine sarmalayın diyor.
+
+00:00:22.901 --> 00:00:26.045
+Sonra, ScrollView örneği var
+
+00:00:26.045 --> 00:00:28.695
+ve daha sonra adı alanı
+belirtir ve sonra diyor ki:
+
+00:00:28.695 --> 00:00:33.720
+Genişlik ve yükseklik için
+Fill_parent ve burada son etiketi.
+
+00:00:33.720 --> 00:00:38.570
+Diyor ki, geçerli görünümün geri
+kalanını bunun içine koyun.
+
+00:00:39.580 --> 00:00:42.710
+Arka plan bilgisi için fill_parent
+aslında match_parent ile aynı.
+
+00:00:42.710 --> 00:00:45.860
+Sadece daha eski bir sürümü,
+ama aynı şeyi kastediyorlar.
+
+00:00:45.860 --> 00:00:50.590
+Bu bir sonraki satırda ScrollView
+sadece bir öğe içerebilir diyor.
+
+00:00:50.590 --> 00:00:53.150
+Öyle görünüyor ki bu
+birinin orijinal düzeniymiş
+
+00:00:53.150 --> 00:00:55.740
+ve bunu ScrollView içine koymak
+için tek yapmaları gereken
+
+00:00:55.740 --> 00:01:00.060
+bunun ana görünümü ve lineer
+düzenin alt görünüm olmasını sağlamak.
+
+00:01:00.060 --> 00:01:02.520
+Peki bu yararlı bir yanıttı.
+Bu yüzden geri dönelim ve
+
+00:01:02.520 --> 00:01:04.250
+başka çözümler var mı bakalım.
+
+00:01:07.020 --> 00:01:09.160
+Bu kişi de aynı şeyi anlatıyor.
+
+00:01:09.160 --> 00:01:14.450
+XML düzeni var ve galiba
+buna kaydırma yapmak istiyorlar.
+
+00:01:14.450 --> 00:01:16.865
+Genellikle, tüm soruyu ayrıntılı
+olarak okumuyorum.
+
+00:01:16.865 --> 00:01:18.660
+Hemen cevap kısmına geçiyorum.
+
+00:01:18.660 --> 00:01:19.930
+Bu kişi, diyor ki:
+
+00:01:19.930 --> 00:01:23.340
+Tüm XML'i bir üst ScrollView
+içine dahil etmeyi denediniz mi?
+
+00:01:23.340 --> 00:01:25.880
+Sonra ScrollView'ya bir
+örnek veriyorlar ve
+
+00:01:25.880 --> 00:01:28.370
+alt görünüm de bir RelativeLayout.
+
+00:01:28.370 --> 00:01:31.430
+Sonra da ScrollView
+için bir kapanış etiketi var.
+
+00:01:31.430 --> 00:01:34.030
+Bu konuda anlatılanların hepsi bu.
+
+00:01:34.030 --> 00:01:37.850
+Ama görünüşe bakılırsa, her
+iki arama sonucu da aynı tavsiyeyi,
+
+00:01:37.850 --> 00:01:39.190
+ScrollView'yu önerdi.
+
+00:01:39.190 --> 00:01:44.110
+Şimdi arama sorgusunu değiştirip
+"ScrollView Android" aratalım.
+
+00:01:44.110 --> 00:01:47.500
+Harika.
+Yani bu Android'de bir görünüm.
+
+00:01:47.500 --> 00:01:50.480
+Burada da bir açıklama var.
+
+00:01:50.480 --> 00:01:53.180
+Burada bir sürü şey yazılı
+ve hepsini okumayacağım,
+
+00:01:53.180 --> 00:01:54.405
+istiyorsanız siz de bunu yapabilirsiniz.
+
+00:01:54.405 --> 00:01:56.570
+Sonra Geri'ye tıklıyorum.
+
+00:01:56.570 --> 00:01:58.860
+Bir kod örneği bulmak isterim.
+
+00:01:58.860 --> 00:02:01.590
+Yani, az önce verilen
+kod örnekleri iyiydi
+
+00:02:01.590 --> 00:02:03.950
+ve bu da öyle.
+
+00:02:03.950 --> 00:02:05.240
+Android Studio'ya geri dönelim.
+
+00:02:06.270 --> 00:02:09.880
+Tüm bu XML örnekleri
+ScrollView ile başladı.
+
+00:02:09.880 --> 00:02:12.740
+Hemen görünüm için gerekli
+genişlik ve yükseklik
+
+00:02:12.740 --> 00:02:13.990
+yok şeklinde bir hata var.
+
+00:02:13.990 --> 00:02:17.705
+Yani, ben de bunları ekliyor ve
+match_parent olmalarını belirtiyorum.
+
+00:02:18.780 --> 00:02:22.390
+Bir kapanış parantezi eklersem,
+kapanış etiketi hemen burada.
+
+00:02:22.390 --> 00:02:23.974
+Yani, bunu kopyalayıp
+
+00:02:23.974 --> 00:02:29.860
+sonra buradaki dosyanın
+altına yapıştırıyorum.
+
+00:02:31.372 --> 00:02:36.240
+Yani mevcut lineer düzen
+şimdi bu ScrollView'nun alt öğesi.
+
+00:02:36.240 --> 00:02:41.250
+Bu yüzden, bunu seçip
+dört boşluk girinti vereceğim.
+
+00:02:41.250 --> 00:02:43.624
+Böylece ScrollView alt öğesi
+olarak okumak daha kolay.
+
+00:02:44.790 --> 00:02:48.850
+Android Studio'da Düzen menüsüne
+tıklayıp Girinti Seçimi'ne gidiyor
+
+00:02:48.850 --> 00:02:51.830
+ve dört boşluk girinti veriyorum.
+
+00:02:51.830 --> 00:02:53.270
+İşte. Şimdi daha iyi görünüyor.
+
+00:02:54.280 --> 00:02:55.350
+Ama burada hala bir hata var.
+
+00:02:55.350 --> 00:02:59.090
+'android' ad alanı bağlı değil diyor.
+
+00:02:59.090 --> 00:03:00.280
+Daha fazla bilgi için tıklayabilirim.
+
+00:03:00.280 --> 00:03:06.150
+Bu özellik XML ilişkisiz ad alanı
+öneklerini denetler, diyor.
+
+00:03:06.150 --> 00:03:08.315
+Birinci dersten de hatırlarsanız,
+
+00:03:08.315 --> 00:03:11.866
+Android sütununun bu alan
+adından geldiğini söylemiştim.
+
+00:03:11.866 --> 00:03:16.040
+Yani bunu kopyalayıp
+buraya koymak gerek sanırım.
+
+00:03:16.040 --> 00:03:20.940
+Ayrıca buradaki araçlar ad alanını
+da hareket ettirmelisiniz.
+
+00:03:20.940 --> 00:03:24.570
+Araçlar ad alanı, hata ayıklama ve
+uygulamayı geliştirmek için
+
+00:03:24.570 --> 00:03:28.110
+XML'e eklenebilen
+ek özellikler sağlamaktır.
+
+00:03:28.110 --> 00:03:30.530
+Tamam, şimdi bunu cihazımda
+çalıştıracağım.
+
+00:03:30.530 --> 00:03:34.755
+Peki, uygulama görünümünde
+hiçbir fark yok çünkü emir
+
+00:03:34.755 --> 00:03:37.950
+formunda içeriğin kaydırılabilir olması
+için yeterli içerik yok.
+
+00:03:37.950 --> 00:03:41.321
+Bunu gerçekten test etmek için,
+bu düzeni daha çok görünüm eklemeliyiz.
+
+00:03:41.321 --> 00:03:43.740
+Bir önceki numaranın
+aynısını yapacağım.
+
+00:03:43.740 --> 00:03:47.390
+Tüm bu görünümleri kopyalayıp
+bu düzene yapıştıracağım
+
+00:03:47.390 --> 00:03:49.020
+böylece gerçekten uzun
+bir emir formu olacak.
+
+00:03:50.040 --> 00:03:54.050
+Tamam, şimdi emir formu
+gerçekten uzun ve kayıyor.
+
+00:03:54.050 --> 00:03:55.810
+Bu heyecan verici.
+
+00:03:55.810 --> 00:03:59.280
+Cihazın yönünü değiştirince de kayıyor.
+
+00:04:00.650 --> 00:04:04.270
+Şimdi bu değişiklikleri geri alıp
+orijinal emir formuna geri dönebilirim.
+
+00:04:05.280 --> 00:04:06.910
+Ama ScrollView'yu yine
+içeride bırakacağım
+
+00:04:06.910 --> 00:04:09.480
+çünkü uygulamamız tüm
+cihazlarda daha iyi çalışacak.
+
+00:04:10.540 --> 00:04:13.230
+Bundan daha kısa
+cihazları olan kullanıcılar da
+
+00:04:13.230 --> 00:04:15.730
+yine ekranı kaydırabilir ve tüm
+alanları görebilir.
+

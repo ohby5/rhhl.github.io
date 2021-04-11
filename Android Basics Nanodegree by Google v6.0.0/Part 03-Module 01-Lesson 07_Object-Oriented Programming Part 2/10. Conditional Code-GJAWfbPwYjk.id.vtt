@@ -1,0 +1,265 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.253 --> 00:00:03.215
+Hal yang perlu dilakukan selanjutnya
+di aplikasi yaitu mengatur harga kopi
+
+00:00:03.240 --> 00:00:06.452
+dalam hal seseorang memesan lapisan atas,
+seperti krim kocok atau cokelat.
+
+00:00:06.477 --> 00:00:07.939
+Ide yang bagus.
+
+00:00:07.964 --> 00:00:12.026
+Jika mereka memesan krim kocok,
+maka kita hanya cukup mematok harga $1.
+
+00:00:12.051 --> 00:00:14.921
+Jika mereka memesan cokelat,
+maka kita hanya cukup mematok harga $2.
+
+00:00:14.946 --> 00:00:17.643
+Benar. Mari kita ketahui bagaimana
+melakukan ini di dalam aplikasi.
+
+00:00:18.190 --> 00:00:20.877
+Ini beberapa contoh
+dalam aplikasi Google yang lain,
+
+00:00:20.902 --> 00:00:24.258
+di mana perilaku bisa berubah
+berdasarkan keadaan tertentu.
+
+00:00:24.283 --> 00:00:28.468
+Dalam aplikasi Inbox dari Gmail,
+ini adalah tangkapan layar daftar surel.
+
+00:00:28.493 --> 00:00:31.453
+Untuk satu surel,
+jika ada peringatan terlampir padanya,
+
+00:00:31.478 --> 00:00:36.088
+maka aplikasi tahu untuk menampilkan ikon,
+label dan teks peringatan ini.
+
+00:00:36.113 --> 00:00:38.215
+Jika surel mempunyai lampiran gambar,
+
+00:00:38.240 --> 00:00:40.968
+maka aplikasi akan menampilkan
+gambar tersebut pada baris ini.
+
+00:00:40.993 --> 00:00:42.923
+Jika surel menyebutkan sebuah perjalanan,
+
+00:00:42.948 --> 00:00:46.355
+maka kartu perjalanan muncul
+dengan informasi penerbangan.
+
+00:00:46.380 --> 00:00:49.829
+Dalam aplikasi Google Now Launcher, kita
+mempunyai contoh lebih tentang bagaimana
+
+00:00:49.854 --> 00:00:52.533
+perilaku aplikasi berubah
+berdasarkan keadaan tertentu.
+
+00:00:52.558 --> 00:00:55.042
+Contohnya, jika harga stok bertambah,
+
+00:00:55.067 --> 00:00:57.572
+maka delta atau pertambahan harga
+
+00:00:57.597 --> 00:00:59.993
+akan ditampilkan di sini
+dengan huruf berwarna hijau.
+
+00:01:00.018 --> 00:01:01.985
+Jika harga stok berkurang,
+
+00:01:02.010 --> 00:01:05.140
+maka selisihnya akan ditampilkan
+di sini dengan huruf berwarna merah.
+
+00:01:05.165 --> 00:01:09.215
+Untuk kartu cuaca ini,
+jika suhunya baik dan cuacanya cerah,
+
+00:01:09.240 --> 00:01:11.137
+maka kami menampilkan ikon matahari.
+
+00:01:11.162 --> 00:01:14.906
+Jika cuacanya berangin atau mendung,
+maka kami menampilkan ikon berbeda.
+
+00:01:14.931 --> 00:01:16.755
+Kami akan memodifikasi aplikasinya
+
+00:01:16.780 --> 00:01:19.850
+agar harga diatur berdasarkan
+lapisan atas yang dipesan
+
+00:01:19.875 --> 00:01:22.976
+tapi pertama-tama,
+saya ingin kau mengenal arus kontrol.
+
+00:01:23.001 --> 00:01:26.515
+Secara normal, kode dalam metode kami
+dijalankan dari atas ke bawah,
+
+00:01:26.540 --> 00:01:29.740
+baris ke baris tetapi
+dengan pernyataan arus kontrol,
+
+00:01:29.765 --> 00:01:32.826
+kau bisa mengganti bahwa
+instruksinya dijalankan.
+
+00:01:32.851 --> 00:01:35.751
+Contohnya,
+kau bisa melewati instruksi tertentu
+
+00:01:35.776 --> 00:01:38.045
+jika persyaratan tertentu terpenuhi.
+
+00:01:38.070 --> 00:01:40.997
+Kita akan melakukan ini
+dengan mempelajari logika &lt;i&gt;if/else.&lt;/i&gt;
+
+00:01:41.416 --> 00:01:44.249
+Kau belum tahu kode pernyataan
+&lt;i&gt;if/else&lt;/i&gt; sebelumnya
+
+00:01:44.274 --> 00:01:47.280
+tapi saya akan membiarkanmu
+untuk memahaminya.
+
+00:01:47.305 --> 00:01:51.451
+Dalam beberapa tantangan berikutnya,
+kau akan membaca potongan kodemu sendiri
+
+00:01:51.476 --> 00:01:53.802
+dan ini adalah tautan
+dalam catatan instruktur.
+
+00:01:53.827 --> 00:01:56.456
+Lalu kau akan mencoba untuk
+menebak kode ini untuk apa dan
+
+00:01:56.481 --> 00:01:58.418
+cobalah tentukan pengeluarannya.
+
+00:01:58.443 --> 00:02:00.175
+Kau punya beberapa pilihan,
+
+00:02:00.200 --> 00:02:02.953
+kau bisa memilih yang terbaik
+yang cocok dengan kode ini.
+
+00:02:02.978 --> 00:02:04.318
+Saat saya berkata pengeluaran,
+
+00:02:04.343 --> 00:02:07.881
+saya merujuk pada pernyataan &lt;i&gt;log&lt;/i&gt;
+yang tercetak ke &lt;i&gt;log cat&lt;/i&gt;.
+
+00:02:07.906 --> 00:02:11.778
+Ingatlah bahwa kau bisa mengakses
+&lt;i&gt;log cat&lt;/i&gt; dari tablet Android tepat di sini,
+
+00:02:11.803 --> 00:02:15.014
+dan ini menampilkan semua pesan
+dari sistem dan dari aplikasi kami.
+
+00:02:15.039 --> 00:02:17.016
+Potongan kode yang kami sediakan untukmu
+
+00:02:17.041 --> 00:02:19.358
+akan menulis pesan ke &lt;i&gt;log&lt;/i&gt; di sini.
+
+00:02:19.383 --> 00:02:21.668
+Mari kita membuat contoh
+pertanyaan bersama-sama.
+
+00:02:21.693 --> 00:02:24.128
+Kau bisa menemukan tautan ini
+dalam catatan instruktur.
+
+00:02:24.153 --> 00:02:28.113
+Anggaplah bahwa ini potongan kode
+dari berkas &lt;i&gt;WeatherActivity.java&lt;/i&gt;
+
+00:02:28.138 --> 00:02:29.698
+di dalam aplikasi cuaca.
+
+00:02:29.723 --> 00:02:33.701
+Kode di baris pertama menciptakan
+variabel &lt;i&gt;boolean&lt;/i&gt; yang disebut &lt;i&gt;isRaining&lt;/i&gt;
+
+00:02:33.726 --> 00:02:35.749
+dan nilai inisialnya benar.
+
+00:02:35.774 --> 00:02:38.162
+Lalu kita memiliki pernyataan &lt;i&gt;if/else&lt;/i&gt; ini.
+
+00:02:38.187 --> 00:02:42.990
+Jika &lt;i&gt;is raining&lt;/i&gt; benar,
+maka kita menulisnya di &lt;i&gt;log&lt;/i&gt;.
+
+00:02:43.015 --> 00:02:46.125
+Dia berkata, ini hujan,
+lebih baik membawa payung.
+
+00:02:46.150 --> 00:02:50.795
+Jika &lt;i&gt;is raining&lt;/i&gt; salah, maka kita
+mengarah ke kas &lt;i&gt;else&lt;/i&gt; dan kita tulis,
+
+00:02:50.820 --> 00:02:53.078
+pesan ini, sepertinya tidak akan hujan.
+
+00:02:53.103 --> 00:02:57.401
+Karena &lt;i&gt;is raining&lt;/i&gt; benar,
+maka kita mengarah ke kasus ini
+
+00:02:57.426 --> 00:03:00.043
+dan kita tulis, ini hujan,
+lebih baik membawa payung.
+
+00:03:00.068 --> 00:03:04.691
+Karena kita berada di kasus ini, kita bisa
+melewati blok &lt;i&gt;else&lt;/i&gt;, baris kode ini
+
+00:03:04.716 --> 00:03:08.464
+berada di luar pernyataan
+&lt;i&gt;if/else&lt;/i&gt; jadi ini selalu dijalankan.
+
+00:03:08.489 --> 00:03:11.468
+Dia berkata, Terima kasih telah
+menggunakan &lt;i&gt;WhetherWeather App&lt;/i&gt;.
+
+00:03:11.493 --> 00:03:14.079
+Mari kita cari pilihan
+dalam kuis yang menampilkan,
+
+00:03:14.104 --> 00:03:17.182
+ini hujan, lebih baik membawa payung,
+langsung diikuti dengan,
+
+00:03:17.207 --> 00:03:19.507
+Terima kasih telah menggunakan
+&lt;i&gt;WhetherWeather App&lt;/i&gt;.
+
+00:03:19.532 --> 00:03:21.396
+Itu tepatnya pilihan B.
+
+00:03:21.421 --> 00:03:23.547
+Ini masalah berbeda
+untuk kau coba sekarang.
+
+00:03:23.572 --> 00:03:27.103
+Periksalah catatan untuk
+potongan kode dan tentukan pilihanmu.
+

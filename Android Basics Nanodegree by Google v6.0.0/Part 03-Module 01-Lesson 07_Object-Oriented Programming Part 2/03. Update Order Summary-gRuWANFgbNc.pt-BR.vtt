@@ -1,0 +1,571 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.450 --> 00:00:03.560
+O pseudocódigo começa quando
+o botão de pedido é clicado.
+
+00:00:03.560 --> 00:00:07.020
+Isso indica que devemos adicionar nosso
+código no método de envio do pedido.
+
+00:00:08.180 --> 00:00:11.280
+Então, precisamos obter a verificação
+da caixa de seleção.
+
+00:00:11.280 --> 00:00:14.990
+A fim de determinar qualquer método
+em uma visão na hierarquia de exibição,
+
+00:00:14.990 --> 00:00:17.570
+precisamos primeiro achar a visão por id.
+
+00:00:17.570 --> 00:00:21.560
+A primeira coisa que preciso fazer é
+atribuir a visão id para caixa de checagem.
+
+00:00:22.770 --> 00:00:25.920
+No android estúdio, na aba atividade
+principal de layout, vou procurar
+
+00:00:25.920 --> 00:00:27.420
+o layout da caixa de checagem.
+
+00:00:27.420 --> 00:00:31.690
+Como meu cursor está destacado,
+isso aparece na pré-visualização.
+
+00:00:31.690 --> 00:00:34.600
+Então vou adicionar uma linha para enviar
+uma visão de ID para este <i>view</i>.
+
+00:00:35.750 --> 00:00:39.140
+Agora no código Java, posso
+referir a esse <i>view</i>,
+
+00:00:39.140 --> 00:00:42.140
+e então tentar extrair a condição dele.
+
+00:00:42.140 --> 00:00:43.410
+Vamos para a <i>MainActivity</i>
+
+00:00:43.410 --> 00:00:46.410
+Vou colocar o código no método
+de envio do pedido.
+
+00:00:47.700 --> 00:00:51.250
+Eu sei que preciso achar a caixa
+de seleção Java na visão hierárquica.
+
+00:00:52.270 --> 00:00:55.650
+Eu comecei criando uma variável,
+<i>whippedCreamCheckBox</i>,
+
+00:00:55.650 --> 00:00:57.810
+com o tipo de dado <i>CheckBox</i>
+
+00:00:57.810 --> 00:01:01.380
+Então eu coloco o método de
+<i>findViewById</i> nessa atividade.
+
+00:01:01.380 --> 00:01:03.950
+Assim vai achar a <i>view</i>
+baseado no ID escrito.
+
+00:01:03.950 --> 00:01:09.080
+Vou colocar a ID
+<i> (R.id.whipped_cream_checkbox)</i>,
+
+00:01:09.080 --> 00:01:12.060
+que eu acabei de atribuir
+no outro arquivo de layout.
+
+00:01:12.060 --> 00:01:16.070
+Isso ocasiona imediatamente um erro
+pois o padrão é <i>CheckBox</i>
+
+00:01:16.070 --> 00:01:19.020
+que é a variável escrita
+do lado esquerdo.
+
+00:01:19.020 --> 00:01:22.230
+Entretanto, o valor retornado do método
+é de <i>type view</i>
+
+00:01:22.230 --> 00:01:23.330
+Então conforme aprendemos antes,
+
+00:01:23.330 --> 00:01:25.710
+nós precisamos reverter o valor
+de retorno desse método.
+
+00:01:25.710 --> 00:01:29.380
+Vou converter para um
+objeto de <i>CheckBox</i>.
+
+00:01:29.380 --> 00:01:33.720
+E eu consigo converter pois <i>CheckBox</i>
+é uma visão de subclasse.
+
+00:01:34.910 --> 00:01:37.480
+Certo, agora eu tenho um objeto
+<i>CheckBox Java</i>,
+
+00:01:37.480 --> 00:01:40.450
+que representa a caixa de checagem
+na Interface do Usuário.
+
+00:01:40.450 --> 00:01:42.570
+Para saber se a caixa está marcada ou não,
+
+00:01:42.570 --> 00:01:45.760
+eu preciso marcar
+um método no objeto.
+
+00:01:45.760 --> 00:01:48.360
+Você pode não saber qual método
+colocar na caixa de checagem.
+
+00:01:48.360 --> 00:01:49.790
+E tudo bem.
+
+00:01:49.790 --> 00:01:52.000
+Então você pode pesquisar.
+
+00:01:52.000 --> 00:01:55.520
+Pesquise por <i>CheckBox Android</i>
+e então clique no primeiro link.
+
+00:01:56.940 --> 00:02:01.560
+E para fixar o que disse antes, <i>checkbox</i>
+é uma subclasse <i>view</i>.
+
+00:02:01.560 --> 00:02:03.080
+Tem outros <i>views</i> no caminho, mas,
+
+00:02:03.080 --> 00:02:04.820
+ultimamente ainda é uma subclasse <i>view</i>.
+
+00:02:06.050 --> 00:02:09.120
+Essa visão geral da classe
+é interessante pois tem algum
+
+00:02:09.120 --> 00:02:10.780
+código JAVA aqui.
+
+00:02:10.780 --> 00:02:13.730
+Tem essa linha de código que nós
+já temos no nosso aplicativo,
+
+00:02:13.730 --> 00:02:19.530
+nós estamos usando o <i>findviewbyid</i>, através
+de um id, e vendo uma caixa de checagem.
+
+00:02:19.530 --> 00:02:21.560
+Essa próxima linha é
+ainda mais interessante.
+
+00:02:21.560 --> 00:02:26.630
+Ela diz caixa de seleção, que é
+o nome da variável, que está selecionada.
+
+00:02:26.630 --> 00:02:29.510
+Isso parece com chamar um método
+sem argumentos de entrada.
+
+00:02:29.510 --> 00:02:33.450
+Isso está nos avisando se a caixa está
+marcada ou não, e retornando
+
+00:02:33.450 --> 00:02:37.580
+um valor verdadeiro ou falso, mas vamos
+checar a caixa para ter certeza.
+
+00:02:37.580 --> 00:02:42.740
+Vamos procurar aqui um código <i>xml</i>
+para a caixa de checagem,
+
+00:02:42.740 --> 00:02:44.770
+e algum código Java.
+
+00:02:45.910 --> 00:02:49.910
+Esse método parece aparecer
+quando a caixa está marcada.
+
+00:02:49.910 --> 00:02:53.840
+O nome desse método combina com o
+nome do método especificado no <i>xml</i>.
+
+00:02:53.840 --> 00:02:58.530
+Estou assumindo que o <i>view</i> que
+está passando é o da caixa de checagem.
+
+00:02:58.530 --> 00:03:00.800
+Convertemos para <i>CheckBox</i>, e
+
+00:03:00.800 --> 00:03:05.360
+nós também chamamos <i>IsChecked</i>,
+e o retorno do valor é um <i>boolean</i>.
+
+00:03:05.360 --> 00:03:09.380
+O comentário ainda o descreve e diz:
+"Agora o <i>view</i> está marcado?"
+
+00:03:09.380 --> 00:03:11.880
+Então eu acho que é exatamente
+o que a gente precisa.
+
+00:03:11.880 --> 00:03:13.520
+Vamos tentar usar o método <i>IsChecked</i>.
+
+00:03:14.640 --> 00:03:18.010
+Primeiro nós digitamos o nome da variável
+no objeto <i>CheckBox</i>.
+
+00:03:18.010 --> 00:03:20.210
+É <i>whippedCreamCheckBox</i>.
+
+00:03:20.210 --> 00:03:23.020
+Então eu adiciono um ponto
+para colocar um método nele.
+
+00:03:23.020 --> 00:03:26.290
+Eu posso começar a digitar
+<i>isChecked</i>, e aparece aqui.
+
+00:03:26.290 --> 00:03:29.400
+Então basta clicar no Enter
+para usar a sugestão.
+
+00:03:29.400 --> 00:03:33.150
+Do lado direito, aparece qual o
+valor de retorno desse método,
+
+00:03:33.150 --> 00:03:35.150
+e diz que retornou como <i>boolean</i>
+
+00:03:35.150 --> 00:03:39.330
+Então, depois de usar a sugestão,
+eu vou do lado esquerdo da
+
+00:03:39.330 --> 00:03:44.110
+chamada do método e vou guardar esse
+resultado com uma variável <i>boolean</i>.
+
+00:03:44.110 --> 00:03:48.260
+Vou chamar essa variável <i>boolean</i> de:
+<i>hasWhippedCream</i>, e clicar enter.
+
+00:03:48.260 --> 00:03:52.860
+Recapitulando, nós vamos chamar um método
+no objeto Java <i>whippedCreamCheckbox</i> e,
+
+00:03:52.860 --> 00:03:54.690
+esse método é chamado <i>isChecked</i>.
+
+00:03:54.690 --> 00:03:56.750
+Esse tem um valor de retorno de <i>boolean</i> e
+
+00:03:56.750 --> 00:03:59.210
+está armazenado no lado esquerdo aqui.
+
+00:03:59.210 --> 00:04:01.970
+Nessa variável chamada <i>hasWhippedCream</i>.
+
+00:04:01.970 --> 00:04:03.220
+Isso completa a primeira tarefa.
+
+00:04:03.220 --> 00:04:06.530
+Eu também mencionei que você
+pode registrar essa variável
+
+00:04:06.530 --> 00:04:09.130
+então você pode verificar que
+você está no caminho certo.
+
+00:04:09.130 --> 00:04:10.870
+Então, na próxima linha,
+eu vou adicionar uma mensagem de log.
+
+00:04:12.050 --> 00:04:14.150
+O primeiro argumento
+é um nome de marca.
+
+00:04:14.150 --> 00:04:17.100
+E eu vou usar o nome da nossa aula,
+que é: <i>MainActivity</i>
+
+00:04:17.100 --> 00:04:19.810
+Vou colocar minha mensagem.
+
+00:04:19.810 --> 00:04:22.058
+Vou escrever: <i>getwhippedcream</i>
+
+00:04:22.058 --> 00:04:26.660
+E então adicionar uma variável <i>boolean</i>.
+
+00:04:26.660 --> 00:04:30.930
+Construindo essa sequência
+com a variável <i>boolean</i>,
+
+00:04:30.930 --> 00:04:34.560
+vai transformar o valor dessa variável
+em uma sequência.
+
+00:04:34.560 --> 00:04:38.319
+E então o texto vai dizer: "<i>GetWhippedcream</i>:
+positivo ou <i>GetWhippedCream</i>: negativo."
+
+00:04:39.400 --> 00:04:41.330
+Agora vamos rodar o aplicativo
+no nosso dispositivo,
+
+00:04:41.330 --> 00:04:43.780
+e checar se essa é realmente
+a mensagem escrita no log.
+
+00:04:44.810 --> 00:04:48.170
+Eu aumentei a janela do log
+usando esse controle.
+
+00:04:48.170 --> 00:04:50.030
+Agora, quando eu clico
+na caixa de confirmação do Chantilly,
+
+00:04:50.030 --> 00:04:53.850
+e aperto o botão de pedido, espero ver uma
+mensagem aqui que diz:
+
+00:04:53.850 --> 00:04:56.319
+<i>Has whipped cream: true or false. </i>
+
+00:04:57.360 --> 00:04:59.770
+Eu vou rolar para baixo, para que
+você vejam a mensagem atual.
+
+00:05:00.790 --> 00:05:03.540
+Certo, vamos ver se funciona.
+
+00:05:03.540 --> 00:05:06.210
+Vou clicar na caixa e apertar
+o botão de pedido.
+
+00:05:06.210 --> 00:05:10.101
+Certo, acho que uma nova mensagem
+apareceu e está escrito <i>MainActivity</i>.
+
+00:05:10.101 --> 00:05:12.335
+true.
+
+00:05:12.335 --> 00:05:15.215
+Está certo por que a
+caixa de checagem está marcada.
+
+00:05:15.215 --> 00:05:20.645
+Se eu desmarcar essa caixa e clicar no
+botão de pedido, tem que dizer falso.
+
+00:05:20.645 --> 00:05:24.825
+Vou rolar de novo, e diz:
+<i>has whipped cream: false</i>.
+
+00:05:24.825 --> 00:05:28.475
+Então parece que nosso código
+está correto até agora,
+
+00:05:28.475 --> 00:05:32.195
+em achar a caixa de checagem e
+mostrar o status da marcação.
+
+00:05:32.195 --> 00:05:33.945
+Agora vamos continuar
+para a segunda tarefa.
+
+00:05:35.410 --> 00:05:40.000
+Agora precisamos passar essa variável
+<i>boolean</i> para o método de ordem sumária.
+
+00:05:40.000 --> 00:05:43.580
+Se eu quiser passar outro argumento
+para o método <i>createordersummary</i>
+
+00:05:43.580 --> 00:05:48.410
+Eu vou só adicionar uma vírgula aqui, e
+então passar a variável <i>hasWhippedCream</i>.
+
+00:05:49.820 --> 00:05:53.680
+Imediatamente eu recebo um erro
+que diz que não pode ser aplicado
+
+00:05:53.680 --> 00:05:58.730
+ao método <i>hasWhippedCream</i>,
+por que ele espera um parâmetro inteiro.
+
+00:05:58.730 --> 00:06:02.050
+Então vamos voltar até onde
+<i>createOrderSummary</i> está escrito.
+
+00:06:03.310 --> 00:06:05.590
+Agora eu preciso modificar
+o método de assinatura
+
+00:06:05.590 --> 00:06:07.900
+do método <i>createOrderSummary</i>.
+
+00:06:07.900 --> 00:06:10.440
+Ao invés de ter um parâmetro
+de entrada, precisa de dois.
+
+00:06:10.440 --> 00:06:15.430
+Então eu vou adicionar uma vírgula e
+então especificar o segundo parâmetro.
+
+00:06:15.430 --> 00:06:20.810
+O tipo de dado deve ser um <i>boolean</i>,
+e eu vou chamar de <i>addwhippedCream</i>.
+
+00:06:20.810 --> 00:06:23.850
+Você pode chamar o parâmetro de entrada
+do nome que quiser, mas
+
+00:06:23.850 --> 00:06:27.430
+eu só quero mostrar que esse nome
+não tem que combinar com esse aqui.
+
+00:06:28.490 --> 00:06:32.580
+Como modificamos o método de assinatura
+aqui, temos que atualizar a plataforma Java
+
+00:06:32.580 --> 00:06:35.440
+assim como especificar sobre
+o que é esse parâmetro de entrada.
+
+00:06:36.510 --> 00:06:38.140
+Certo, isso completa a segunda tarefa.
+
+00:06:39.600 --> 00:06:42.850
+A terceira tarefa é mudar a ordem
+do texto sumário para incluir
+
+00:06:42.850 --> 00:06:44.450
+se o usuário quer ou não chantilly.
+
+00:06:45.800 --> 00:06:49.490
+Isso significa que precisamos
+usar esse parâmetro de entrada aqui,
+
+00:06:49.490 --> 00:06:52.410
+para modificar nossa
+ordem de mensagem sumária.
+
+00:06:52.410 --> 00:06:56.260
+Na tela, a cobertura de chantilly
+aparece embaixo do nome.
+
+00:06:56.260 --> 00:06:58.030
+Então vamos adicionar uma nova linha aqui.
+
+00:06:58.030 --> 00:07:01.450
+Vou digitar <i>priceMessage +=</i>
+
+00:07:01.450 --> 00:07:03.950
+para alterar a mensagem
+de preço existente.
+
+00:07:03.950 --> 00:07:06.720
+E então vou adicionar uma
+linha: <i>Addwhippedcream?</i>
+
+00:07:06.720 --> 00:07:10.520
+Adiciono um espaço,
+e então adiciono a variável <i>boolean</i>
+
+00:07:10.520 --> 00:07:14.060
+De novo eu posso construir uma
+sequência literal com um valor <i>boolean</i>,
+
+00:07:14.060 --> 00:07:16.770
+e isso vai mudar tudo
+para um <i>string</i>.
+
+00:07:16.770 --> 00:07:18.100
+Legal, agora vamos testar
+no nosso dispositivo.
+
+00:07:19.230 --> 00:07:20.770
+Se eu clicar nessa caixa,
+
+00:07:20.770 --> 00:07:24.720
+e então clicar no botão de pedido,
+deve dizer: <i>Add whipped cream? true</i>
+
+00:07:24.720 --> 00:07:28.480
+E dá certo, exceto que de novo, eu
+esqueci a nova linha do caractere,
+
+00:07:28.480 --> 00:07:29.410
+então eu preciso modificar agora.
+
+00:07:29.410 --> 00:07:32.590
+Bem, já que estou aqui
+vou verificar o outro caso.
+
+00:07:32.590 --> 00:07:34.680
+Então eu vou desmarcar essa caixa
+e clicar no botão do pedido.
+
+00:07:34.680 --> 00:07:36.640
+E diz <i>false</i>.
+
+00:07:36.640 --> 00:07:40.310
+Então está mostrando corretamente
+a marcação da caixa.
+
+00:07:40.310 --> 00:07:43.800
+Agora vamos adicionar a nova linha
+de caractere rodar o aplicativo de novo.
+
+00:07:43.800 --> 00:07:46.590
+Se eu marco a caixa e clico no botão
+do pedido, ele diz: <i>true</i>
+
+00:07:46.590 --> 00:07:49.480
+Se eu desmarcar a caixa e clicar
+no botão de pedido, diz: <i>false</i>.
+
+00:07:50.610 --> 00:07:51.550
+Maravilha.
+
+00:07:51.550 --> 00:07:52.810
+Funciona nos dois casos.
+
+00:07:54.550 --> 00:07:56.750
+As últimas partes dessa
+tarefa foram fácies.
+
+00:07:56.750 --> 00:08:00.610
+Uma vez que verificamos nos logs que
+estávamos conseguindo a marcação correta,
+
+00:08:00.610 --> 00:08:04.200
+era só uma questão de mostrar na tela.
+
+00:08:04.200 --> 00:08:06.000
+Como as coisas estão
+funcionando no aplicativo agora,
+
+00:08:06.000 --> 00:08:08.660
+Eu posso remover a mensagem de log
+pois não é mais necessária.
+
+00:08:08.660 --> 00:08:11.810
+E então rodar o aplicativo
+só mais uma vez.
+
+00:08:11.810 --> 00:08:12.830
+Ótimo trabalho!
+
+00:08:12.830 --> 00:08:14.260
+Vamos para a próxima tarefa!
+

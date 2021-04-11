@@ -1,0 +1,523 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.530 --> 00:00:03.719
+Umid qilamanki, "Common Intents" qo‘llanmasidagi 
+turli "intent" ob‘yektlardan foydalanib 
+
+00:00:03.719 --> 00:00:06.110
+tajriba o‘tkazish imkoniga ega bo‘ldingiz.
+
+00:00:06.110 --> 00:00:10.090
+Misol uchun, men avvalroq "sendDownloadDrder"
+usulini o‘zgartirganligimni ko‘rsatdim.
+
+00:00:10.090 --> 00:00:15.000
+Mavjud barcha kodlarni sharhlab berdim, 
+so‘ngra xaritalarning "intent" kodini kiritdim.
+
+00:00:15.000 --> 00:00:19.000
+Xaritani qurilmamda ishlatsam, buyurtma 
+hisobotini yuklashning o‘rniga 
+
+00:00:19.000 --> 00:00:23.510
+buyurtma tugmachasini bosganimda, 
+u xaritalar ilovasiga "intent" ob‘yektini yuboradi.
+
+00:00:23.510 --> 00:00:28.250
+"Google Maps" ilovasi "intent" ob‘yektini 
+qabul qiladi va keyin xaritada 
+
+00:00:28.250 --> 00:00:31.270
+biz so‘ragan manzilni 
+ko‘rsatish uchun yangilaydi.
+
+00:00:31.270 --> 00:00:34.700
+Agar ushbu "intent" ob‘yektidan foydalanish 
+kofe buyurtma qilish dasturimizning 
+
+00:00:34.700 --> 00:00:38.795
+mazmunida ahamiyatsiz bo‘lsa ham, bu "intent"
+ob‘yektlarni yaratish uchun mashq qilish uchun yaxshi joy.
+
+00:00:38.795 --> 00:00:41.765
+Keling, ushbu o‘zgarishni bekor 
+qilaylik va keyin haqiqiy vazifalarimizga qaytaylik.
+
+00:00:42.765 --> 00:00:44.645
+Ushbu xususiyatni ilovaga qo‘shish 
+uchun buyurtma hisobotini 
+
+00:00:44.645 --> 00:00:48.495
+elektron pochta ilovasiga 
+yuborishimiz kerak.
+
+00:00:48.495 --> 00:00:52.445
+Agar buni qanday amalga oshirishni bilmasangiz, 
+internet orqali qidirib topishingiz mumkin..
+
+00:00:52.445 --> 00:00:55.345
+"Android"ning elektron pochta 
+"intent" ob‘yektini qidirdim.
+
+00:00:55.345 --> 00:00:59.500
+"Stack Overflow" posti va darslar kabi 
+bir nechta foydali havolalarga duch kelamiz .
+
+00:00:59.500 --> 00:01:02.550
+Ammo umumiy "intent" ob‘yektlari
+bo‘yicha ko‘rsatma paydo bo‘ladi 
+
+00:01:02.550 --> 00:01:05.349
+va u rasmily "Android" hujjatlaridan 
+ekanligini ko‘rsatib turadi. 
+
+00:01:05.349 --> 00:01:08.870
+Elektron pochtani "intent" ob‘yektini yaratish 
+yaratish bo‘yicha havolaga duch kelamiz,
+
+00:01:08.870 --> 00:01:11.560
+ushbu havolani bosamiz, bu bizga qo‘shimcha 
+ma‘lumotlar bilan elektron 
+
+00:01:11.560 --> 00:01:14.900
+pochta xabarini qanday 
+yuborishni ko‘rsatib beradi.
+
+00:01:14.900 --> 00:01:18.140
+Hujjatlarni ko‘rib chiqishda 
+ikkita kod namunasi mavjud.
+
+00:01:18.140 --> 00:01:22.230
+Ushbu sharhni o‘qib chiqqach, 
+ushbu ikkinchi kod namunasini olamiz.
+
+00:01:22.230 --> 00:01:25.750
+Buning sababi, bizning maqsadimiz matnli xabarlar 
+yoki ijtimoiy media ilovalari bilan emas,
+
+00:01:25.750 --> 00:01:28.760
+balki elektron pochta ilovasi tomonidan 
+ko‘rib chiqilishini xohlaymiz.
+
+00:01:28.760 --> 00:01:30.550
+Keling, ushbu kodni tanlaymiz 
+va nusxa olamiz va keyin 
+
+00:01:30.550 --> 00:01:32.390
+uni bizning ilovamizga joylashtiramiz.
+
+00:01:33.570 --> 00:01:34.520
+Bizning Java dasturimiz uchun 
+kodni ko‘rib chiqsak, 
+
+00:01:34.520 --> 00:01:38.505
+ushbu parchani aslida 
+qayerga qo‘yishimiz kerak?
+
+00:01:38.505 --> 00:01:42.005
+Xo‘sh, to‘liq buyurtma hisobotini 
+olishimiz bilanoq, elektron pochta 
+
+00:01:42.005 --> 00:01:44.695
+ilovasiga buyurtma hisobitini 
+yuborishni istaymiz.
+
+00:01:44.695 --> 00:01:48.175
+Bizda to‘liq buyurtma hisoboti bor joy 
+bu yerda ushbu kod satridan 
+
+00:01:48.175 --> 00:01:49.965
+keyin buyurtma xulosasini yaratadi 
+va keyin uni "priceMessage" 
+
+00:01:49.965 --> 00:01:53.060
+deb nomlangan satr o‘zgaruvchisida saqlaydi.
+
+00:01:53.060 --> 00:01:56.880
+Shuning uchun bu yerda yangi qator 
+qo‘shmoqchiman va keyin kodni kiritamiz.
+
+00:01:57.890 --> 00:02:00.420
+Yangi "intent" ob‘yektini qanday 
+yaratayotganimizga e‘tibor bering.
+
+00:02:00.420 --> 00:02:03.680
+"Java"da yangi kalit so‘z bilan 
+konstruktordan foydalanish.
+
+00:02:03.680 --> 00:02:07.090
+Ushbu "intent" ob‘yektini 
+ishga tushirish uchun 
+
+00:02:07.090 --> 00:02:09.470
+biz konstruktorga kirish sifatida 
+bitta argumentni yubormoqdamiz.
+
+00:02:09.470 --> 00:02:14.710
+Argument - bu ushbu "Intent.ACTION_SENDTO"
+deb nomlangan qiymati o‘zgarmas o‘zgaruvchi. 
+
+00:02:14.710 --> 00:02:18.510
+Eslatma shuni anglatadiki, "Java"ning barcha 
+harflarida biron bir narsani ko‘rsangiz,
+
+00:02:18.510 --> 00:02:20.140
+bu doimiy degan ma‘noni anglatadi.
+
+00:02:20.140 --> 00:02:24.750
+Doimiylik o‘zgaruvchi tarkibidagi 
+ma‘lumotlar hech qachon o‘zgartirilmasligi kerak.
+
+00:02:24.750 --> 00:02:27.220
+Bunday holda biz o‘z "intent" 
+ob‘yektimizni yaratishda rasmiy 
+
+00:02:27.220 --> 00:02:29.370
+"intent" harakatlardan foydalanamiz.
+
+00:02:29.370 --> 00:02:34.460
+"Intent" sinfida "ACTION_SENDTO" qiymati 
+o‘zgarmas o‘zgaruvchi sifatida belgilangan.
+
+00:02:34.460 --> 00:02:38.080
+Keyin biz yangi yaratilgan "intent" ob‘yekti 
+ustida ba‘zi usullarni chaqiramiz.
+
+00:02:38.080 --> 00:02:40.650
+Biz ma‘lumotlarni ushbu formatdagi 
+"mailto:" URI sifatida joylashtirdik, 
+
+00:02:40.650 --> 00:02:46.010
+barcha elektron pochta ilovalari ushbu 
+"intent" ob‘yekti orqali bajaradi.
+
+00:02:46.010 --> 00:02:49.120
+Keyin biz maqsadga ba‘zi qo‘shimcha ma‘lumotlarni qo‘shamiz.
+
+00:02:49.120 --> 00:02:52.700
+Ushbu elektron pochtaning ikkita
+maydonini ko‘rsatishga hojat yo‘q,
+
+00:02:52.700 --> 00:02:55.000
+shuning uchun shunchaki ushbu satrni 
+o‘chirib tashlayman.
+
+00:02:55.000 --> 00:02:58.800
+Ammo, elektron pochta xabarining 
+mavzusini aniqlashimiz kerak.
+
+00:02:58.800 --> 00:03:01.680
+Shuning uchun buni haqiqiy mavzu 
+qatoriga almashtirmoqchiman.
+
+00:03:03.240 --> 00:03:08.440
+"Just Java"ilovasi tartibini va 
+so‘ngra odamning ismlarini qo‘shamiz.
+
+00:03:09.440 --> 00:03:12.950
+Keyingi bir nechta qator kod ushbu 
+"intent" ob‘yektini boshqarish 
+
+00:03:12.950 --> 00:03:15.140
+uchun qurilma ishlab 
+turganini tekshiradi.
+
+00:03:16.210 --> 00:03:18.980
+Agar shunday bo‘lsa, "intent" ob‘yektini
+yuborish va ushbu maqsaddan foydalangan 
+
+00:03:18.980 --> 00:03:22.400
+holda boshlash faoliyatini 
+eslash xavfsiz bo‘lishi mumkin.
+
+00:03:22.400 --> 00:03:25.330
+Agar qurilmada "intent" ob‘yektini 
+bajarish uchun hech qanday harakat 
+
+00:03:25.330 --> 00:03:28.970
+bo‘lmasa, biz ushbu kod blokini hamda 
+"intent" ob‘yektini yuborishni o‘tkazib yuboramiz.
+
+00:03:30.660 --> 00:03:31.900
+Endi dasturni qurilmamizda 
+ishga tushiramiz.
+
+00:03:33.310 --> 00:03:34.890
+Hozir esa buyurtma tugmachasini bosganimda,
+u qurilmadagi elektron 
+
+00:03:34.890 --> 00:03:38.190
+pochta ilovasiga "intent"
+ob‘yektini yuboradi.
+
+00:03:38.190 --> 00:03:42.060
+Odatiy tarzda, "Gmail" ilovasi ushbu 
+"intent" ob‘yektini amalga oshiradi.
+
+00:03:42.060 --> 00:03:46.620
+Maxsus mavzular qatorini ko‘rsatganimdan beri,
+kod bu yerda "Kaptain Kanal" uchun 
+
+00:03:46.620 --> 00:03:51.900
+"Java"ning tartibi sifatida ko‘rinadi, 
+men dasturga kiritgan nom.
+
+00:03:51.900 --> 00:03:55.850
+Viktorinaning asl nusxasi bizdan 
+elektron pochta mavzusi qatorini,
+
+00:03:55.850 --> 00:03:58.490
+shuningdek buyurtma xulosasi bilan
+xabarning asosiy qismini to‘ldirishni so‘radi.
+
+00:03:58.490 --> 00:04:00.350
+Xo‘sh, endi bu vazafani bajaraylik.
+
+00:04:00.350 --> 00:04:02.090
+Elektron pochta maqsadi 
+uchun hujjatlarni ko‘rib chiqib,
+
+00:04:02.090 --> 00:04:06.330
+"intent" qo‘shimchalarni ko‘rib chiqish 
+uchun yuqoriga qarab o‘tamiz.
+
+00:04:07.570 --> 00:04:09.520
+Elektron pochta haqida ma‘lumot 
+berishni istagan har bir qo‘shimcha 
+
+00:04:09.520 --> 00:04:12.930
+ma‘lumot uchun biz qo‘shimcha 
+"intent" ob‘yektini qo‘shishimiz kerak.
+
+00:04:12.930 --> 00:04:17.709
+Masalan, elektron pochta xabarlarini
+oluvchilar haqida qo‘shimcha ma‘lumotga 
+
+00:04:17.709 --> 00:04:20.820
+ega bo‘lishimiz mumkin va biz elektron pochta xabarlari mavzusi haqida "Intent.EXTRA"ga ega bo‘lishimiz mumkin.
+
+00:04:21.820 --> 00:04:23.350
+Lekin bu aynan biz istagan yechim.
+
+00:04:23.350 --> 00:04:28.200
+Elektron pochta tarkibini aniqlash 
+uchun "Intent.EXTRA" ob‘yektini qo‘shmoqchimiz.
+
+00:04:28.200 --> 00:04:34.320
+Shunga qaramay, "Intent.EXTRA_TEXT" "intent" 
+"java" klassida belgilangan doimiy qiymatga ega o‘zgaruvchidir.
+
+00:04:34.320 --> 00:04:36.050
+Agar uni bossek, ko‘proq 
+ma‘lumotni ko‘ra olamiz.
+
+00:04:37.170 --> 00:04:40.730
+Bu "intent" sinfidagi satr
+sifatida aniqlangan.
+
+00:04:40.730 --> 00:04:43.480
+Va doimiy qiymat bu 
+yerda joylashgan satr.
+
+00:04:44.600 --> 00:04:48.670
+"Just Java" dasturida o‘z "intent" 
+ob‘yektini yaratganimizda va elektron 
+
+00:04:48.670 --> 00:04:52.540
+pochta xabarining asosiy qismini o‘z
+ichiga olgan ushbu qo‘shimcha ma‘lumotni ko‘paytiramiz.
+
+00:04:52.540 --> 00:04:55.740
+Elektron pochta ilovasi "intent" ob‘yektini 
+qabul qilgandan so‘ng, ular elektron pochta manzilini 
+
+00:04:55.740 --> 00:05:00.410
+topish uchun ushbu "intent" ob‘yektini qo‘shimcha ravishda tekshirish kerakligini bilib olishadi va keyin ular buni to‘ldirishlari mumkin.
+
+00:05:00.410 --> 00:05:02.440
+Endi foydalanuvchi interfeysiga o‘tamiz.
+
+00:05:02.440 --> 00:05:03.650
+Keling, yo‘zgan kodimzni o‘zgartiraylik.
+
+00:05:03.650 --> 00:05:06.540
+Elektron pochta mavzusiga
+qo‘shimcha ravishda qo‘shimcha 
+
+00:05:06.540 --> 00:05:11.440
+kiritadigan ushbu kod 
+satrini tanlamoqchiman.
+
+00:05:11.440 --> 00:05:13.870
+Keyingi qatorda 
+kodni joylashtiraman.
+
+00:05:13.870 --> 00:05:16.870
+Endi "intent" ob‘yektini ikkinchi 
+qo‘shimcha kiritamiz.
+
+00:05:18.160 --> 00:05:25.530
+Qo‘shimcha ma‘lumot "Intent.EXTRA_TEXT"ga 
+to‘g‘ri keladi, shunda bu elektron 
+
+00:05:25.530 --> 00:05:28.810
+pochta tarkibiga tegishli 
+ekanligini bilamiz.
+
+00:05:28.810 --> 00:05:32.360
+Ushbu usulning ikkinchi 
+dalili elektron pochtaning 
+
+00:05:32.360 --> 00:05:33.490
+haqiqiy tanasi bo‘ladi.
+
+00:05:35.120 --> 00:05:37.780
+Elektron pochtada shunchaki buyurtma 
+hisoboti bo‘lishi kerak va ular narx 
+
+00:05:37.780 --> 00:05:42.190
+xabarida saralanadi, shuning uchun men ushbu 
+o‘zgaruvchini bu yerga ko‘chirishim mumkin.
+
+00:05:44.930 --> 00:05:45.980
+Rejalashtirish uchun, "intent" ob‘yekti 
+uchun biz "putExtra" usulini, 
+100 ga
+00:05:45,980 --&gt; 00:05:50,890
+elektron pochta mavzusiga 
+tegishli deb nomlaymiz.
+
+00:05:52.380 --> 00:05:55.890
+Xuddi shu "intent" ob‘yektda biz elektron 
+pochtaning asosiy qismini aniqlash uchun 
+
+00:05:55.890 --> 00:05:57.720
+yana "put extra" usulini ishlatmoqdamiz.
+
+00:05:57.720 --> 00:06:01.490
+Elektron pochtaning asosiy qismi 
+buyurtma hisobotidan iboratdir.
+
+00:06:01.490 --> 00:06:02.670
+Endi dasturni qurilmamizda 
+ishga tushiramiz.
+
+00:06:04.080 --> 00:06:07.610
+Buyurtmani bajarganimdan so‘ng,
+"Submit" tugmasini bosaman.
+
+00:06:07.610 --> 00:06:11.190
+Elektron pochta dasturiga elektron 
+pochta mavzusi joylashtirilgan holda 
+
+00:06:11.190 --> 00:06:12.270
+"intent" ob‘yektini yuboramiz 
+va shundan keyin hisobot ko‘rinadi.
+
+00:06:12.270 --> 00:06:13.380
+Gap yoq!
+
+00:06:14.760 --> 00:06:18.110
+Ushbu vazifaning uchinchi bosqichida 
+"Just Java" ilovasida buyurtma hisoboti 
+
+00:06:18.110 --> 00:06:20.760
+ko‘rsatadigan kodni olib tashlaymiz, 
+chunki endi u elektron 
+
+00:06:20.760 --> 00:06:23.070
+pochta ilovasida paydo bo‘ladi.
+
+00:06:23.070 --> 00:06:26.604
+Buyurtmaning qisqacha matn 
+ko‘rinishini olib tashlash 
+
+00:06:26.604 --> 00:06:28.510
+uchun faoliyatning asosiy tartibini 
+o‘zgartirish bilan boshlayman.
+
+00:06:28.510 --> 00:06:31.360
+Qatlamning pastki qismida buyurtma 
+sarlavhasini ko‘rsatadigan sarlavhani 
+
+00:06:31.360 --> 00:06:33.970
+va "TextView"ni o‘chirib tashlamoqchiman.
+
+00:06:33.970 --> 00:06:36.760
+Men buni saqlab, 
+"Java" fayliga o‘taman.
+
+00:06:37.820 --> 00:06:42.276
+Asosiy faoliyat "Java" faylida 
+endi ushbu displeyli xabarlar usuliga 
+
+00:06:42.276 --> 00:06:46.463
+ehtiyoj sezmayman, buyurtma hisoboti matn 
+ko‘rinishini yangilaydi, chunki bu "ID"
+
+00:06:46.463 --> 00:06:48.101
+bunday ko‘rinish endi mavjud emas.
+
+00:06:52.323 --> 00:06:55.970
+Men displey xabarlarini yuborish usulini 
+o‘chirib tashlaganim sababli, "Android Studio" platformasi 
+
+00:06:55.970 --> 00:06:59.870
+endi bu usul mavjud emasligi haqida xato beradi,
+shuning uchun uni o‘chirib tashlayman.
+
+00:07:01.130 --> 00:07:04.100
+Bizning kodimizga nazar tashlasak, 
+bu mantiqiy ahamiyatga ega, chunki 
+
+00:07:04.100 --> 00:07:06.680
+buyurtma tugmasini bosganimizda, u 
+buyurtmani yuborish usulini chaqiradi,
+
+00:07:06.680 --> 00:07:11.610
+ushbu kodning barchasini bajaramiz, u ham elektron 
+pochta dasturiga yuboriladi.
+
+00:07:11.610 --> 00:07:16.030
+Endi bizning ilovamizda buyurtma hisoboti 
+boshqa ko‘rsatishning hojati yo‘q.
+
+00:07:16.030 --> 00:07:18.400
+Ilova hali ham ishlayotganligini 
+tekshiramiz.
+
+00:07:18.400 --> 00:07:20.090
+Katta hajmdagi kodni o‘chirib tashlaganingizda,
+uni keyinroq topishga harakat 
+
+00:07:20.090 --> 00:07:22.710
+qilishning o‘rniga, xato bo‘lsa,
+uning ishlashini darhol tekshirish va 
+
+00:07:22.710 --> 00:07:26.480
+o‘zgarishlarni bekor qilish osonroq bo‘ladi.
+
+00:07:29.120 --> 00:07:30.890
+Va ilova hali ham ishlaydi.
+
+00:07:30.890 --> 00:07:31.810
+Yaxshi ish.
+
+00:07:31.810 --> 00:07:34.880
+Shunchaki "Java" dasturiga 
+"intent" ob‘yektini qo‘shamiz.
+
+00:07:34.880 --> 00:07:38.560
+"Intent"lar "Android"ning asosiy qismlaridan biri,
+ammo yana yaxshi tarkibiy qismlarni yaratishga 
+
+00:07:38.560 --> 00:07:41.250
+yordam beradigan "Android"ning 
+ko‘plab boshqa qismlari mavjud.
+
+00:07:41.250 --> 00:07:44.570
+Ushbu kursni tugatganingizdan so‘ng ularni 
+o‘zingiz mustaqil tekshirib ko‘rishingizni maslahat beraman.
+

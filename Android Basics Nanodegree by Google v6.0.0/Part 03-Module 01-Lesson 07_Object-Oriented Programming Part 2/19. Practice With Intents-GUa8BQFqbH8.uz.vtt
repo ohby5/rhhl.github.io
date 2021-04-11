@@ -1,0 +1,261 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.530 --> 00:00:01.490
+Ushbu kodlash vazifasida elektron pochta ilovasiga buyurtma 
+haqida qisqacha ma‘lumot yuborish 
+
+00:00:01.490 --> 00:00:04.980
+uchun "intent" ob‘yektidan
+foydalanishingizni xohlayman.
+
+00:00:04.980 --> 00:00:07.960
+Birinchidan, "Common Intents" qo‘llanmasida 
+keltirilgan turli xil "intent" ob‘yektlari uchun kod yozish 
+
+00:00:07.960 --> 00:00:11.450
+bilan tajriba o‘tkazishga biroz vaqt ajrating.
+
+00:00:11.450 --> 00:00:13.180
+Havola uchun o‘qituvchi 
+eslatmalariga qarang.
+
+00:00:13.180 --> 00:00:15.830
+Shuningdek umumiy "intent" ob‘yektlari uchun veb-qidiruvni 
+amalga oshirishingiz mumkin va 
+
+00:00:15.830 --> 00:00:17.250
+paydo bo‘lgan birinchi havolani
+ko‘rib chiqishingiz mumkin.
+
+00:00:17.250 --> 00:00:20.050
+"Android" imkoniyatlarini bilib
+olish uchun foydali maqoladan
+
+00:00:20.050 --> 00:00:21.800
+foydalanishingiz mumkin.
+
+00:00:21.800 --> 00:00:24.900
+Amaliy maqsadlar uchun, "intent" 
+xaritalari ob‘yektini yaratishga harakat qilaylik.
+
+00:00:24.900 --> 00:00:28.100
+Hujjatlarda xaritalar "intent" ob‘yekti 
+uchun foydalanishingiz kerak bo‘lgan
+
+00:00:28.100 --> 00:00:31.740
+harakatlar va URI sxemasi haqida 
+ba‘zi foydali ma‘lumotlar mavjud edi.
+
+00:00:31.740 --> 00:00:35.440
+"geo:Latitude:Longitude"ni yana ko‘rsatmoqda.
+
+00:00:35.440 --> 00:00:37.530
+Pastga yo‘nalsangiz bir necha kod
+misollarini ko‘rishingiz mumkin.
+
+00:00:38.650 --> 00:00:40.680
+Ushbu misolni tanlab, undan nuxsa olaman.
+
+00:00:40.680 --> 00:00:44.250
+Endi ushbu kodni ishga tushirish uchun 
+uni "Just Java" ilovasi ichiga joylashtiramiz.
+
+00:00:44.250 --> 00:00:47.336
+Kodlarni joylashtirish uchun yangi 
+dastur yaratib, uni o‘sha yerda 
+
+00:00:47.336 --> 00:00:50.750
+ishlatishimiz mumkin, lekin "Just Java" 
+allaqachon ishlayotgan ekan, shundan foydalanamiz.
+
+00:00:50.750 --> 00:00:53.508
+Ushbu usulda barcha kodlarni ajratib 
+
+00:00:53.508 --> 00:00:55.530
+ko‘rsataman va ularga vaqtincha sharh beraman.
+
+00:00:55.530 --> 00:01:02.050
+Buni "Mac" tizimida Cmd + / tugmasi 
+orqali amalga oshiraman va 
+
+00:01:02.050 --> 00:01:04.379
+"Windows" tizimida bu Ctrl + / bo‘ladi.
+Endi ushbu kodning hech biri bajarilmaydi.
+
+00:01:04.379 --> 00:01:07.980
+Buyurtma tugmachasi bosilganda 
+xaritalarni "intent" ob‘yektini yuboraman.
+
+00:01:07.980 --> 00:01:09.100
+Ushbu kod satrida "Java"dagi 
+yangi kalit so‘z yordamida yangi 
+
+00:01:09.100 --> 00:01:12.850
+"Intent" ob‘yektini yaratmoqdamiz.
+
+00:01:12.850 --> 00:01:16.543
+Biz "Intent" konstruktorini chaqiramiz 
+va uni ACTION_VIEW orqali o‘tamiz. Shuni esda tutingki,
+
+00:01:16.543 --> 00:01:21.140
+"Java"ning barcha harflarida biror narsa ko‘rsangiz,
+bu doimiy degan ma‘noni anglatadi.
+
+00:01:21.140 --> 00:01:25.680
+"Constant" bu qiymati o‘zgarmaydigan o‘zgaruvchi hisoblanadi,
+uning tarkibi bir marta o‘rnatiladi va hech qachon o‘zgarmaydi.
+
+00:01:25.680 --> 00:01:30.115
+Bunday holda, "intent" ob‘yektini tuzishda 
+rasmiy "intent" harakatlaridan foydalanamiz, 
+
+00:01:30.115 --> 00:01:32.538
+masalan "ACT_VIEW" yoki 
+"ACTION_SEND", ular "Intent" klassi 
+
+00:01:32.538 --> 00:01:36.950
+ichidagi "constant" sifatida belgilangan.
+
+00:01:37.950 --> 00:01:42.043
+Xulosa qilish uchun ushbu kod satri 
+"Intent" nomli yangi ob‘yekt namunasini yaratadi.
+
+00:01:42.043 --> 00:01:47.043
+Keyin "Intent" ob‘yektida "setData" 
+kabi turli xil usullarni chaqirishimiz mumkin.
+
+00:01:47.043 --> 00:01:50.191
+Biz URI ma‘lumotlarini ma‘lum
+bir kenglik va uzunlik
+
+00:01:50.191 --> 00:01:51.940
+koordinatalari to‘plamiga 
+o‘rnatmoqchimiz.
+
+00:01:51.940 --> 00:01:55.570
+Ayni paytda bu o‘zgaruvchi ilovamizda aniqlanmagan,
+shuning uchun uni almashtiraman.
+
+00:01:55.570 --> 00:01:59.720
+Kodning bu qismi shu 
+satrdan URI yaratadi.
+
+00:01:59.720 --> 00:02:05.140
+So‘ngra ushbu URI "Intent" ob‘yektidagi 
+ma‘lumotlar maydoni sifatida o‘rnatiladi.
+
+00:02:05.140 --> 00:02:07.430
+Endi xaritalarimizning "intent" 
+ob‘yektini yaratdik.
+
+00:02:07.430 --> 00:02:10.620
+Bu yerda bir oz chalkash ko‘rinadigan 
+ba‘zi bir kod mavjud.
+
+00:02:10.620 --> 00:02:13.490
+Bu yerda juda ko‘p jarayonlar ketmoqda, 
+lekin aslida "intent" bajarilishi mumkinligini 
+
+00:02:13.490 --> 00:02:17.140
+tekshirish orqali ilovani ishdan 
+chiqishini oldini olamiz.
+
+00:02:17.140 --> 00:02:20.817
+To‘p analogiyamizdan keb chiqqan holda, 
+agar to‘pni ushlab olish uchun hech kim topilmasa,
+
+00:02:20.817 --> 00:02:24.213
+to‘p tushadi va portlaydi [SOUND].
+
+00:02:24.213 --> 00:02:26.553
+Tizim bundan keyin nima 
+qilish kerakligini bilmaydi 
+
+00:02:26.553 --> 00:02:29.340
+va shuning uchun bu yerda 
+ushbu qatorga biz uchun kerak.
+
+00:02:29.340 --> 00:02:32.300
+Qurilmamizda ushbu "intent" 
+ob‘yektini bajara oladigan 
+
+00:02:32.300 --> 00:02:33.840
+kamida bitta komponent mavjudligini 
+tekshirishamiz.
+
+00:02:33.840 --> 00:02:36.650
+Agar shunday bo‘lsa, u holda "if"
+bayonoti sharti to‘g‘ri 
+
+00:02:36.650 --> 00:02:39.960
+va keyin bu qavs ichidagi 
+kod satrini bajaramiz.
+
+00:02:41.380 --> 00:02:44.860
+Biz oldinga intilib, o‘z faoliyatini 
+ushbu "intent" ob‘yekti bilan boshlaymiz.
+
+00:02:44.860 --> 00:02:47.925
+Agar ushbu "intent" ob‘yektini bajara oladigan 
+qurilmada biron bir dastur komponenti bo‘lmasa,
+
+00:02:47.925 --> 00:02:50.310
+unda ushbu sinov sharti noto‘g‘ri hisoblanadi.
+
+00:02:50.310 --> 00:02:53.840
+Ushbu kod blokini o‘tkazib yuboramiz va
+"intent" ob‘yektini yubormaymiz.
+
+00:02:53.840 --> 00:02:57.000
+"Intents" ob‘yektlari bilan tajriba o‘tkazgandan so‘ng,
+ushbu funksiyaga ega 
+
+00:02:57.000 --> 00:02:59.590
+bo‘lish uchun 
+ilovangizni kengaytiring.
+
+00:02:59.590 --> 00:03:03.043
+Elektron pochta ilovasiga buyurtma 
+hisobotini yuborish "intent" ob‘yektidan foydalanamiz.
+
+00:03:03.043 --> 00:03:06.388
+Keyin elektron pochta 
+xabarini ushbu 
+
+00:03:06.388 --> 00:03:07.880
+matn va mavzu qatori 
+bilan to‘ldiramiz.
+
+00:03:07.880 --> 00:03:11.050
+"Just Java" ilovasida buyurtma 
+hisoboti aks ettiruvchi kodni 
+
+00:03:11.050 --> 00:03:12.260
+ham olib tashlaganingizga 
+ishonch hosil qiling.
+
+00:03:12.260 --> 00:03:15.810
+Elektron pochta ilovasida paydo bo‘lgandan so‘ng,
+ilovamizda endi bunga hojat yo‘q.
+
+00:03:15.810 --> 00:03:18.150
+Eslatma sifatida, ilova 
+quyidagicha ko‘rinishi kerak.
+
+00:03:18.150 --> 00:03:20.520
+Boshqa buyurtma sarlavhasi 
+maydoni endi mavjud emas.
+
+00:03:20.520 --> 00:03:23.830
+"Buyurtma" tugmachasini bosganimda, to‘g‘ridan-to‘g‘ri
+elektron pochta ilovasiga o‘tamiz.
+
+00:03:23.830 --> 00:03:26.520
+Endi foydalanuvchi bajarishi kerak bo‘lgan 
+amaliyot "To" maydonini to‘ldirishdir 
+
+00:03:26.520 --> 00:03:27.660
+va so‘ngra xabarni yuborishlari mumkin bo‘ladi
+

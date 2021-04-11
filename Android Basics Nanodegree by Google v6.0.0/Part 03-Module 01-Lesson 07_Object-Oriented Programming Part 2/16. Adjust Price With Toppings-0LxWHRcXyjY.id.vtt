@@ -1,0 +1,325 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.250 --> 00:00:02.250
+Untuk menghitung harga yang tepat untuk
+
+00:00:02.250 --> 00:00:05.230
+merangkum pesanan, kita harus memberikan informasi
+
+00:00:05.230 --> 00:00:09.500
+mengenai tambahan yang dipilih pelanggan ke dalam metode hitungHarga/calculatePrice.
+
+00:00:09.500 --> 00:00:12.820
+Saya memilih untuk mengerjakan semua pekerjaan sulit dan penghitungan
+
+00:00:12.820 --> 00:00:18.340
+ke dalam metode hitungHarga, untuk memusatkan semua logika terkait.
+
+00:00:18.340 --> 00:00:22.040
+Dengan menggabungkan semuanya ke dalam metode ini, jika ada masalah mengenai cara
+
+00:00:22.040 --> 00:00:25.620
+harga dikalkulasikan, maka kita dapat memeriksa sandinya dalam tempat tunggal.
+
+00:00:26.620 --> 00:00:28.340
+Ini menjadi lebih mudah untuk dikelola.
+
+00:00:28.340 --> 00:00:29.880
+Selanjutnya, di dalam metode ini,
+
+00:00:29.880 --> 00:00:33.450
+kita akan menghitung harga dasar dari satu cangkir kopi.
+
+00:00:33.450 --> 00:00:35.510
+Ini sama seperti yang telah saya tunjukkan sebelumnya.
+
+00:00:35.510 --> 00:00:38.110
+Jika kopi harus memakai krim, maka tambahkan satu dolar.
+
+00:00:38.110 --> 00:00:41.000
+Jika kopi harus memakai coklat, maka tambahkan $2.
+
+00:00:41.000 --> 00:00:43.630
+Lalu ambil harga dasar secangkir kopi dan
+
+00:00:43.630 --> 00:00:47.860
+kalikan dengan jumlah pesanan untuk menentukan keseluruhan harga pesanan.
+
+00:00:47.860 --> 00:00:50.550
+Mula-mula berikan informasi mengenai krim dan
+
+00:00:50.550 --> 00:00:54.302
+kotak centang coklat ke dalam metode hitungHarga.
+
+00:00:54.302 --> 00:00:58.380
+Saya akan melewati boolean memakaiKrim dan memakaiCoklat.
+
+00:00:58.380 --> 00:01:02.570
+Tidak ada gunanya melewati kotak centang aktual, karena yang kita semua
+
+00:01:02.570 --> 00:01:06.430
+harus perhatikan adalah nilai boolean untuk menghitung harga.
+
+00:01:06.430 --> 00:01:09.560
+Android Studio memberitahukan saya bahwa ada eror karena metode tanda tangan
+
+00:01:09.560 --> 00:01:10.530
+tidak cocok.
+
+00:01:10.530 --> 00:01:13.530
+Saya mencoba untuk mencari metode yang telah ditetapkan untuk memiliki
+
+00:01:13.530 --> 00:01:15.390
+parameter input nol.
+
+00:01:15.390 --> 00:01:18.820
+Mari kita geser ke bawah di mana metode hitungHarga telah ditetapkan.
+
+00:01:18.820 --> 00:01:20.700
+Saya akan mengubah metode tanda tangan sehingga
+
+00:01:20.700 --> 00:01:25.620
+dapat mengambil dua parameter input, boolean yang bernama tambahKrim dan
+
+00:01:25.620 --> 00:01:27.730
+boolean bernama tambahCoklat.
+
+00:01:27.730 --> 00:01:30.850
+Anda dapat menyebut parameter input ini dengan nama yang anda inginkan.
+
+00:01:30.850 --> 00:01:34.220
+Saya hanya memilih untuk menggunakan nama yang berbeda dengan yang telah diberikan,
+
+00:01:34.220 --> 00:01:36.900
+hanya untuk menunjukkan anda bahwa nama tersebut tidak perlu harus cocok.
+
+00:01:36.900 --> 00:01:40.580
+Saya juga telah memperbaharui Javadoc ke jelaskan dua parameter input baru.
+
+00:01:40.580 --> 00:01:43.570
+Dengan demikian mereka yang memanggil metode ini akan mengetahui apa yang dilewatinya.
+
+00:01:43.570 --> 00:01:47.580
+Selanjutnya, di dalam metode hitungHarga saya harus mengerjakan semua logika mengenai perubahan
+
+00:01:47.580 --> 00:01:49.930
+harga berdasarkan tambahan tersebut.
+
+00:01:49.930 --> 00:01:52.130
+Pertama, saya akan menghitung harga dasar, jadi
+
+00:01:52.130 --> 00:01:54.720
+Saya akan menciptakan bilangan bulat variabel yang bernama HargaDasar.
+
+00:01:54.720 --> 00:01:58.500
+Saya akan memulai harganya 5 karena secangkir kopi harganya $5.
+
+00:01:58.500 --> 00:02:00.930
+Kemudian saya akan membuat pernyataan.
+
+00:02:00.930 --> 00:02:05.600
+Jika boolean tambahKrim adalah benar, maka pengguna menginginkan krim.
+
+00:02:05.600 --> 00:02:09.720
+Ini berarti kita harus menambahkan $1 ke dalam harga dasar secangkir kopi.
+
+00:02:09.720 --> 00:02:11.920
+Baiklah, ini seharusnya dapat menyelesaikan masalah krim.
+
+00:02:11.920 --> 00:02:13.740
+Sekarang, mari lanjut ke kasus coklat.
+
+00:02:13.740 --> 00:02:16.110
+Saya akan membuat pernyataan lainnya.
+
+00:02:16.110 --> 00:02:19.000
+Saya tidak memerlukan blok sandi lainnya, karena
+
+00:02:19.000 --> 00:02:23.000
+jika pengguna tidak menginginkan krim, saya tidak perlu membuat apapun.
+
+00:02:23.000 --> 00:02:26.550
+Kenyataannya, jika saya menginginkan kasus lainnya, maka akan terlihat seperti ini.
+
+00:02:26.550 --> 00:02:29.990
+Saya akan berkomentar yang mengatakan, tidak melakukan apapun.
+
+00:02:29.990 --> 00:02:31.960
+Android studio lebih pintar dari itu, dan
+
+00:02:31.960 --> 00:02:35.010
+memperhatikan bahwa pernyataan lainnya memiliki bodi kosong.
+
+00:02:35.010 --> 00:02:38.040
+Saran mereka adalah tipe sandi tersebut membingungkan, dan
+
+00:02:38.040 --> 00:02:39.930
+mungkin disebabkan oleh kesalahan ketik.
+
+00:02:39.930 --> 00:02:41.800
+Ada pula tambahan baris sandi yang kita tidak perlukan, jadi
+
+00:02:41.800 --> 00:02:43.660
+silahkan dihapus dari blok lainnya.
+
+00:02:43.660 --> 00:02:45.930
+Sekarang kita bisa berpindah ke kasus coklat.
+
+00:02:45.930 --> 00:02:48.610
+Tambahan coklat merupakan hal yang terpisah dari
+
+00:02:48.610 --> 00:02:49.800
+tambahan krim.
+
+00:02:49.800 --> 00:02:51.880
+Tidak peduli apakah pelanggan memilih satu atau yang lainnya,
+
+00:02:51.880 --> 00:02:53.540
+mereka tidak saling berkaitan satu sama lain.
+
+00:02:53.540 --> 00:02:57.060
+Jadi saya akan membuatnya sebagai kasus terpisah.
+
+00:02:57.060 --> 00:02:59.480
+Jika pengguna menginginkan coklat,
+
+00:02:59.480 --> 00:03:04.010
+maka kita perlu memodifikasi harga dasar menjadi HargaDasar + 2.
+
+00:03:04.010 --> 00:03:08.810
+Lagi-lagi kita bisa memiliki blok sandi lainnya, tetapi tidak berfungsi apa-apa.
+
+00:03:08.810 --> 00:03:12.690
+Jika pengguna tidak menginginkan coklat, kita tidak perlu menyesuaikan harganya,
+
+00:03:12.690 --> 00:03:15.530
+jadi hapus saja sandi tersebut karena tidak diperlukan.
+
+00:03:15.530 --> 00:03:20.450
+Dengan membaca sandi kita, kita memiliki harga dasar $5 per cangkir kopi.
+
+00:03:20.450 --> 00:03:24.945
+Jika pengguna menginginkan krim, maka kita perlu menambah harga dasar sebesar $1.
+
+00:03:24.945 --> 00:03:27.610
+Kemudian jika pengguna menginginkan coklat,
+
+00:03:27.610 --> 00:03:29.703
+maka kita perlu menambah harga dasar sebesar $2.
+
+00:03:29.703 --> 00:03:32.290
+Kemudian hitung jumlah harga pesanan,
+
+00:03:32.290 --> 00:03:35.835
+kita perlu mengalikan jumlah dengan harga secangkir kopi.
+
+00:03:35.835 --> 00:03:38.735
+Baiklah, sandi ini sepertinya dapat digunakan.
+
+00:03:38.735 --> 00:03:41.935
+Saya juga menambahkan baris komentar di atas setiap blok sandi, supaya
+
+00:03:41.935 --> 00:03:45.695
+ketika kita kembali ke sandi ini nanti, kita akan ingat pada apa yang telah kita lakukan.
+
+00:03:45.695 --> 00:03:48.005
+Sekarang, mari jalankan aplikasi untuk memeriksa apakah dapat berfungsi.
+
+00:03:48.005 --> 00:03:50.635
+Mari kita uji kasus yang telah kita bahas bersama sebelumnya.
+
+00:03:51.965 --> 00:03:55.319
+Jika kita memilih tambahan krim dan berjumlah 3,
+
+00:03:55.319 --> 00:03:56.906
+Kemudian setiap cangkir berharga $6.
+
+00:03:56.906 --> 00:04:01.450
+$6 dikalikan 3 menjadi $18, dan menghitung 18, cocok.
+
+00:04:01.450 --> 00:04:07.679
+Jika saya menambahkan tambahan coklat, kemudian tiap cangkir kopi berharga $8.
+
+00:04:07.679 --> 00:04:11.650
+Jika saya memiliki jumlah 2, maka total harga menjadi $16.
+
+00:04:11.650 --> 00:04:15.700
+Kita mencoba untuk hanya menggunakan tambahan krim dan mendapatkan jawaban yang benar.
+
+00:04:15.700 --> 00:04:18.510
+Kita mencoba kasus dengan tambahan krim dan
+
+00:04:18.510 --> 00:04:21.350
+coklat, dan kita mendapatkan jawaban yang benar.
+
+00:04:21.350 --> 00:04:23.760
+Sekarang mari mencoba untuk hanya memilih tambahan coklat.
+
+00:04:23.760 --> 00:04:27.290
+Saya akan mengubah jumlah menjadi 1, dan tekan Pesan.
+
+00:04:27.290 --> 00:04:31.810
+Tampaknya benar, karena kita memiliki $5 untuk secangkir kopi ditambah $2 untuk
+
+00:04:31.810 --> 00:04:34.840
+coklat, sehingga menjadi $7.
+
+00:04:34.840 --> 00:04:41.150
+Jika saya mengubahnya menjadi 4, maka total perubahan, asumsi $7 per cangkir kopi.
+
+00:04:41.150 --> 00:04:41.650
+Hebat.
+
+00:04:42.910 --> 00:04:44.550
+Kelihatannya berfungsi baik.
+
+00:04:44.550 --> 00:04:47.650
+Saya menjalankannya untuk uji kasus tersebut dengan cepat.
+
+00:04:47.650 --> 00:04:48.660
+Yang saya lakukan adalah,
+
+00:04:48.660 --> 00:04:53.160
+memastikan semua kemungkinan keterkaitan sandi dilaksanakan.
+
+00:04:53.160 --> 00:04:56.823
+Contohnya, jika kita menjalan aplikasi, dan kita tidak pernah memilih kotak centang krim
+
+00:04:56.823 --> 00:05:00.490
+maka kita tidak akan pernah menguji apakah sandi ini dapat berfungsi.
+
+00:05:00.490 --> 00:05:05.720
+Jadi kita perlu memilih kondisi yang dapat menyebabkan semua bagian kode kita dilaksanakan.
+
+00:05:05.720 --> 00:05:09.180
+Jadi kita memilih tambahan krim dan kita juga memilih tambahan coklat
+
+00:05:09.180 --> 00:05:12.550
+untuk meyakinkan bahwa sandi tersebut juga dilaksanakan.
+
+00:05:12.550 --> 00:05:14.320
+Untuk lebih rinci kita bahkan harus menguji untuk
+
+00:05:14.320 --> 00:05:17.450
+semua kombinasi dari dua variabel boolean.
+
+00:05:17.450 --> 00:05:21.580
+Semua kombinasi tersebut akan menghasilkan perilaku yang berbeda dalam metode ini, jadi
+
+00:05:21.580 --> 00:05:24.870
+kita ingin memastikan bahwa sandi kita berfungsi untuk semua kasus.
+
+00:05:24.870 --> 00:05:29.080
+Karena harga dasar dikalkulasi pada saat kita mengujinya, kita juga dapat
+
+00:05:29.080 --> 00:05:34.000
+menggunakan pesan log untuk memastikan bahwa hal itu telah dikalkukasi sesuai perkiraan.
+
+00:05:34.000 --> 00:05:37.910
+Bagaimanapun, semua ini hanya untuk diingat ketika anda menuliskan sandi yang lebih
+
+00:05:37.910 --> 00:05:40.760
+rumit daripada laporan arus kontrol ini.
+

@@ -1,0 +1,259 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:03.100
+Se apertarmos o botão "-"
+no nosso app repetidamente,
+
+00:00:03.133 --> 00:00:05.734
+um número negativo
+de cafés é retornado.
+
+00:00:05.767 --> 00:00:08.501
+Isso é um problema,
+pois não faz sentido.
+
+00:00:08.534 --> 00:00:11.133
+Não deveríamos permitir
+que isso acontecesse.
+
+00:00:11.167 --> 00:00:13.601
+O quanto antes
+corrigirmos isso,
+
+00:00:13.634 --> 00:00:16.367
+menos dor de cabeça teremos
+mais para frente.
+
+00:00:16.400 --> 00:00:20.033
+Por exemplo, não queremos enviar
+um monte de pedidos à cafeteria
+
+00:00:20.067 --> 00:00:22.534
+com um número negativo
+de cafés.
+
+00:00:22.567 --> 00:00:24.467
+E, no outro extremo
+do espectro,
+
+00:00:24.501 --> 00:00:27.133
+deveria haver
+um máximo de cafés
+
+00:00:27.167 --> 00:00:29.968
+para o usuário pedir
+numa mesma ocasião.
+
+00:00:30.000 --> 00:00:33.300
+Não podemos servir
+10 mil cafés de uma vez.
+
+00:00:33.334 --> 00:00:35.534
+Identificado o problema,
+vamos decidir
+
+00:00:35.567 --> 00:00:38.133
+um comportamento melhor
+para o nosso app.
+
+00:00:38.167 --> 00:00:43.400
+Que tal se só permitíssemos
+pedidos entre 1 e 100 cafés?
+
+00:00:43.434 --> 00:00:48.601
+Quando o usuário aperta "-"
+e o número exibido já é 1,
+
+00:00:48.634 --> 00:00:50.868
+a quantidade
+não deveria diminuir.
+
+00:00:51.601 --> 00:00:54.267
+Da mesma forma,
+se o número de cafés é 100
+
+00:00:54.300 --> 00:00:56.701
+e o usuário continua
+apertando "+",
+
+00:00:56.734 --> 00:00:59.367
+a quantidade
+deveria permanecer 100.
+
+00:00:59.400 --> 00:01:02.334
+Isso é possível usando
+verificação de entrada.
+
+00:01:02.934 --> 00:01:05.434
+Verificando os dados
+enviados pelo usuário,
+
+00:01:05.467 --> 00:01:08.601
+podemos reconhecer
+dados ruins na hora
+
+00:01:08.634 --> 00:01:12.400
+e evitar que o app continue
+rodando como normalmente.
+
+00:01:12.434 --> 00:01:15.501
+Para este quiz,
+faça esta mudança no seu app:
+
+00:01:15.534 --> 00:01:19.534
+presuma que o app sempre é
+inicializado em 2 cafés.
+
+00:01:19.567 --> 00:01:22.000
+Para encontrar o ponto
+a ser alterado,
+
+00:01:22.033 --> 00:01:24.400
+pense quando o problema
+ocorre primeiro.
+
+00:01:24.434 --> 00:01:28.767
+Que botão o usuário aperta
+e que código é acionado?
+
+00:01:28.801 --> 00:01:30.334
+Como o comportamento do app
+
+00:01:30.367 --> 00:01:33.467
+depende da validade
+do número de cafés,
+
+00:01:33.501 --> 00:01:35.901
+considere usar uma instrução
+de controle de fluxo
+
+00:01:35.934 --> 00:01:37.400
+como um If/Else Statement.
+
+00:01:37.434 --> 00:01:41.634
+Assim, a lógica no app variará
+conforme determinada condição.
+
+00:01:41.667 --> 00:01:45.701
+Se o usuário tentar pedir
+um número além dos limites,
+
+00:01:45.734 --> 00:01:48.534
+dê um jeito de impedir
+que o app continue.
+
+00:01:48.567 --> 00:01:51.868
+Quando efetuar as mudanças,
+responda às perguntas:
+
+00:01:51.901 --> 00:01:56.701
+Que método você mudou
+para a quantia mínima ser 1?
+
+00:01:56.734 --> 00:01:58.567
+Responda nesta caixa.
+
+00:01:58.601 --> 00:02:00.501
+Depois,
+que método você alterou
+
+00:02:00.534 --> 00:02:03.300
+para a quantidade
+não passar de 100?
+
+00:02:03.334 --> 00:02:05.300
+Responda nesta caixa.
+
+00:02:05.334 --> 00:02:09.434
+Dica: você pode adicionar
+uma instrução de retorno
+
+00:02:09.467 --> 00:02:11.000
+em qualquer
+lugar de um método
+
+00:02:11.033 --> 00:02:13.634
+para sair dele
+antecipadamente.
+
+00:02:13.667 --> 00:02:16.334
+O que vier depois dela
+será ignorado.
+
+00:02:16.367 --> 00:02:18.434
+Veja mais detalhes
+nas notas.
+
+00:02:18.467 --> 00:02:19.501
+Como desafio,
+
+00:02:19.534 --> 00:02:22.267
+faça o app exibir
+uma mensagem Toast
+
+00:02:22.300 --> 00:02:25.367
+que explique ao usuário
+o congelamento da quantia
+
+00:02:25.400 --> 00:02:27.367
+quando atingido um limite.
+
+00:02:27.400 --> 00:02:29.801
+É assim que ficaria no app
+a mensagem Toast
+
+00:02:29.834 --> 00:02:31.601
+de limite mínimo atingido.
+
+00:02:31.634 --> 00:02:35.133
+Se eu ficar apertando "-"
+para tentar passar de 0,
+
+00:02:35.167 --> 00:02:36.834
+esta é a mensagem:
+
+00:02:36.868 --> 00:02:39.100
+"Você não pode
+pedir menos de 1 café."
+
+00:02:39.133 --> 00:02:42.200
+A propósito, para testar
+se o limite máximo funciona,
+
+00:02:42.234 --> 00:02:45.100
+em vez de apertar o "+"
+99 vezes,
+
+00:02:45.133 --> 00:02:47.634
+faça uma mudança temporária
+no código.
+
+00:02:48.200 --> 00:02:51.901
+Mude a variável quantity inicial
+no arquivo Java
+
+00:02:51.934 --> 00:02:55.000
+e o valor inicial de quantity
+no XML
+
+00:02:55.033 --> 00:02:59.300
+para que comecem em 99
+em vez de só 2.
+
+00:02:59.334 --> 00:03:04.334
+Bastará alguns cliques em "+"
+para passar de 100 cafés.
+
+00:03:04.367 --> 00:03:08.067
+Faça isso para garantir
+que seu código funciona direito
+
+00:03:08.100 --> 00:03:09.234
+para o limite máximo.
+
+00:03:09.267 --> 00:03:12.100
+Quando terminar tudo,
+continue.
+

@@ -1,0 +1,197 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.060 --> 00:00:03.820
+Sabemos que podemos usar una barra
+para representar el estado de verificación
+
+00:00:03.820 --> 00:00:04.820
+de esta casilla.
+
+00:00:04.820 --> 00:00:07.290
+Ahora vamos a modificar
+el resumen del pedido
+
+00:00:07.290 --> 00:00:10.830
+para que refleje si queremos o no
+el ingrediente de nata montada.
+
+00:00:10.830 --> 00:00:14.500
+Si digo que lo quiero y hago clic
+en el botón de pedido,
+
+00:00:14.500 --> 00:00:17.110
+debería añadir una línea
+a la orden del pedido
+
+00:00:17.110 --> 00:00:19.500
+que diga si quiero o no ese ingrediente.
+
+00:00:19.800 --> 00:00:23.740
+Dice "verdadero" si marco la casilla
+para añadir el ingrediente.
+
+00:00:23.740 --> 00:00:28.600
+Y si desmarco la casilla y hago clic
+en el pedido, debería decir <i>falso</i>.
+
+00:00:28.900 --> 00:00:30.990
+Android ya marca esta casilla.
+
+00:00:30.990 --> 00:00:33.590
+Y nosotros ya tenemos un código
+en nuestra aplicación
+
+00:00:33.590 --> 00:00:37.650
+para hacer clic en el botón de pedido
+y crear un resumen inicial del pedido.
+
+00:00:37.650 --> 00:00:41.320
+Lo que tenemos que hacer
+es añadir esta línea de texto que dice:
+
+00:00:41.320 --> 00:00:42.940
+"añadir nata montada",
+
+00:00:42.940 --> 00:00:44.700
+y lo ponemos en el valor correcto,
+
+00:00:44.700 --> 00:00:47.880
+basado en si esta casilla 
+está marcada o no.
+
+00:00:47.880 --> 00:00:52.020
+Antes de empezar a bucear en el código,
+pensemos primero en el pseudocódigo
+
+00:00:52.020 --> 00:00:56.100
+para solidificar las principales ideas
+de lo que queremos que el código haga.
+
+00:00:56.100 --> 00:00:59.520
+Cuando se hace clic en el botón de pedido,
+debemos seguir estos pasos.
+
+00:00:59.520 --> 00:01:03.390
+El primero es obtener
+el estado de verificación de la casilla
+
+00:01:03.390 --> 00:01:05.140
+y almacenarlo en una variable.
+
+00:01:05.140 --> 00:01:06.910
+Este es el estado verificado.
+
+00:01:07.160 --> 00:01:10.230
+Una vez que el dispositivo Android
+sabe si está verificado o no,
+
+00:01:10.230 --> 00:01:13.410
+podemos pasar esta información
+al método <i>resumen de pedido,</i>
+
+00:01:13.410 --> 00:01:15.710
+esto es, el método que crea este texto.
+
+00:01:15.710 --> 00:01:19.520
+Como tercer paso, podemos cambiar
+este texto para incluir aquí esta línea
+
+00:01:19.520 --> 00:01:22.960
+sobre si el ingrediente de nata montada
+debe incluirse o no.
+
+00:01:22.960 --> 00:01:24.930
+Hay un par de pasos entre medias.
+
+00:01:24.930 --> 00:01:26.710
+Para asegurarte de que vas bien,
+
+00:01:26.710 --> 00:01:29.710
+puedes registrar aquí este valor 
+de variable,
+
+00:01:29.710 --> 00:01:32.740
+para asegurar que muestra
+el estado de verificación actual.
+
+00:01:33.220 --> 00:01:36.190
+Antes introducimos <i>log</i> (registro),
+pero aquí hay otro ejemplo.
+
+00:01:36.990 --> 00:01:42.510
+Puedes escribir <i>log.v</i> y usar
+el nombre de clase <i>MainActivity</i>,
+
+00:01:42.510 --> 00:01:46.160
+y luego poner una cadena de mensaje
+para que la imprimas a los registros.
+
+00:01:47.200 --> 00:01:50.890
+Al imprimir el precio, verificamos
+que después del primer paso,
+
+00:01:50.890 --> 00:01:54.630
+el método <i>calculatePrice</i> devuelve
+el precio esperado.
+
+00:01:54.630 --> 00:01:56.670
+Al activar la aplicación
+en tu dispositivo,
+
+00:01:56.670 --> 00:02:00.970
+debes comprobar los registros
+con esta barra para ver el mensaje.
+
+00:02:00.970 --> 00:02:04.610
+Suelo registrar mensajes 
+cuando hay un problema
+
+00:02:04.610 --> 00:02:08.360
+y no estoy segura
+de qué línea de código lo tiene.
+
+00:02:08.360 --> 00:02:11.830
+Después de descubrir el problema,
+y que todo funcione bien,
+
+00:02:11.830 --> 00:02:14.410
+borro el registro del mensaje.
+
+00:02:14.410 --> 00:02:17.070
+Eventualmente, si quieres añadir
+un registro de mensaje
+
+00:02:17.070 --> 00:02:19.490
+para imprimir el estado verificado,
+puedes hacerlo.
+
+00:02:19.490 --> 00:02:22.655
+La razón por la que borro el registro
+cuando ya no lo necesito,
+
+00:02:22.655 --> 00:02:24.930
+es porque el registro
+es de tamaño limitado.
+
+00:02:24.930 --> 00:02:27.540
+Si lo llenas con un montón
+de mensajes innecesarios,
+
+00:02:27.540 --> 00:02:31.530
+causarás que desaparezcan
+muchos errores y mensajes importantes.
+
+00:02:32.118 --> 00:02:35.390
+Una vez que el estado verificado
+aparezca en el resumen de pedido
+
+00:02:35.390 --> 00:02:39.410
+en el dispositivo, ya no necesitarás
+el registro de mensajes.
+
+00:02:39.410 --> 00:02:41.780
+Cuando acabes, marca esta casilla
+para continuar.
+

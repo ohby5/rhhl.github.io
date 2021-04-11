@@ -1,0 +1,263 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relational Operators</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Programming: Part 2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Adding a CheckBox.html">01. Adding a CheckBox</a>
+    </li>
+    <li class="">
+      <a href="02. Boolean Data Type.html">02. Boolean Data Type</a>
+    </li>
+    <li class="">
+      <a href="03. Update Order Summary.html">03. Update Order Summary</a>
+    </li>
+    <li class="">
+      <a href="04. Scrolling Along.html">04. Scrolling Along</a>
+    </li>
+    <li class="">
+      <a href="05. Add Chocolate Topping.html">05. Add Chocolate Topping</a>
+    </li>
+    <li class="">
+      <a href="06. Add the Chocolate Topping CheckBox.html">06. Add the Chocolate Topping CheckBox</a>
+    </li>
+    <li class="">
+      <a href="07. Intro to Imposter Syndrome.html">07. Intro to Imposter Syndrome</a>
+    </li>
+    <li class="">
+      <a href="08. Googlers&#x27; Montage.html">08. Googlers&#x27; Montage</a>
+    </li>
+    <li class="">
+      <a href="09. What&#x27;s Your Name.html">09. What&#x27;s Your Name?</a>
+    </li>
+    <li class="">
+      <a href="10. Conditional Code.html">10. Conditional Code</a>
+    </li>
+    <li class="">
+      <a href="11. Conditional Code (Email).html">11. Conditional Code (Email)</a>
+    </li>
+    <li class="">
+      <a href="12. Conditional Code (Smoothie).html">12. Conditional Code (Smoothie)</a>
+    </li>
+    <li class="">
+      <a href="13. Introduction to IfElse.html">13. Introduction to If/Else</a>
+    </li>
+    <li class="">
+      <a href="14. Syntax of IfElse.html">14. Syntax of If/Else</a>
+    </li>
+    <li class="">
+      <a href="15. Relational Operators.html">15. Relational Operators</a>
+    </li>
+    <li class="">
+      <a href="16. Adjust Price With Toppings.html">16. Adjust Price With Toppings</a>
+    </li>
+    <li class="">
+      <a href="17. Negative Cups of Coffee.html">17. Negative Cups of Coffee</a>
+    </li>
+    <li class="">
+      <a href="18. Let Someone Else Do the Hard Work.html">18. Let Someone Else Do the Hard Work</a>
+    </li>
+    <li class="">
+      <a href="19. Practice With Intents.html">19. Practice With Intents</a>
+    </li>
+    <li class="">
+      <a href="20. Localization (OPTIONAL).html">20. Localization (OPTIONAL)</a>
+    </li>
+    <li class="">
+      <a href="21. Styles.html">21. Styles</a>
+    </li>
+    <li class="">
+      <a href="22. Styles.html">22. Styles</a>
+    </li>
+    <li class="">
+      <a href="23. Themes.html">23. Themes</a>
+    </li>
+    <li class="">
+      <a href="24. Reflect on What You&#x27;ve Accomplished.html">24. Reflect on What You&#x27;ve Accomplished</a>
+    </li>
+    <li class="">
+      <a href="25. Intro to Study Break Peek Vision.html">25. Intro to Study Break: Peek Vision</a>
+    </li>
+    <li class="">
+      <a href="26. Study Break Peek Vision.html">26. Study Break: Peek Vision</a>
+    </li>
+    <li class="">
+      <a href="27. You&#x27;re (Almost) Done!.html">27. You&#x27;re (Almost) Done!</a>
+    </li>
+    <li class="">
+      <a href="28. Congratulations!.html">28. Congratulations!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">15. Relational Operators</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Relational Operators</p></h3>
+  <div>
+  <h2 id="equality-and-relational-operators">Equality and Relational Operators</h2>
+<p>We’ve used some symbols like &lt; =&gt; and == in our examples. These are known as <strong>Equality and Relational Operators</strong>. These operators work a lot like the math or arithmetic operators we’re used to (+ - / *). Arithmetic operators take two numbers and evaluate to another number. For example 5 + 3 evaluates to 8.</p>
+<p>Equality and Relational Operators take two values (these are usually but not always numbers) and compare the values. They then evaluate to a boolean. They look like symbols that you might have used in math class to talk about comparing numbers. </p>
+<h3 id="the-equality-and-relational-operators-in-java">The Equality and Relational Operators in Java</h3>
+<ul>
+<li>==       &nbsp;&nbsp;Equal to (note that it is not a single = sign because this is the <strong>assignment</strong> operator)</li>
+<li>!=         &nbsp;&nbsp;&nbsp;Not equal to</li>
+<li>&gt;     &nbsp;&nbsp;&nbsp;&nbsp;Greater than</li>
+<li>&gt;=   &nbsp;&nbsp;Greater than or equal to</li>
+<li>&lt;      &nbsp;&nbsp;&nbsp;&nbsp; Less than</li>
+<li>&lt;=    &nbsp;&nbsp;&nbsp;Less than or equal to</li>
+</ul>
+<h3 id="example">Example</h3>
+<p>Here's an example of how expressions using relational operators work: </p>
+<p><code>5 &lt; 10</code> is an expression meaning 5 is less than 10. This evaluates to the value <strong>true</strong>, because 5 is less than 10.</p>
+<p><code>5 == 5</code> evaluates to true.</p>
+<p><code>5 != 5</code> evaluates to false. This is because it is false that five is not equal to five.</p>
+<p>Much more could be said about relational and equality operators. There is a lot of good information out on the web about these concepts. A good place to start is the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html" target="_blank">Oracle Java tutorial about operators</a> and <a href="http://www.tutorialspoint.com/java/java_basic_operators.htm" target="_blank">Java basic operators</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="16. Adjust Price With Toppings.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('15. Relational Operators')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

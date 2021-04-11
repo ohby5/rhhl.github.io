@@ -1,0 +1,267 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.510 --> 00:00:03.240
+Uygulamamızda yapacağımız sonraki şey
+kahvenin fiyatını değiştirmek
+
+00:00:03.240 --> 00:00:06.880
+birisi ek malzeme sipariş edebilir,
+krema ya da çikolata gibi.
+
+00:00:06.880 --> 00:00:08.160
+Bu iyi fikir.
+
+00:00:08.160 --> 00:00:12.170
+Eğer krema sipariş ederlerse,
+1$ ödeme alıyoruz.
+
+00:00:12.170 --> 00:00:15.000
+Eğer çikolata sipariş ederlerse,
+2$ ödeme alıyoruz.
+
+00:00:15.000 --> 00:00:15.620
+&gt;&gt; Doğru.
+
+00:00:15.620 --> 00:00:17.370
+Bunun uygulamada nasıl
+yapıldığına bakalım.
+
+00:00:18.340 --> 00:00:20.970
+İşte diğer Google uygulamalarında
+davranışın belirli durumlara
+
+00:00:20.970 --> 00:00:24.390
+bağlı olarak değişebildiği
+birkaç örnek.
+
+00:00:24.390 --> 00:00:28.630
+Gmail’in Gelen Kutusu uygulamasında,
+eposta listesi ekran görüntüsü.
+
+00:00:28.630 --> 00:00:31.590
+Tek bir eposta için,
+eğer bir anımsatıcı iliştirilmişse,
+
+00:00:31.590 --> 00:00:36.260
+uygulama bu simgeyi, bu etiketi
+ve bu anımsatıcıyı gösterir.
+
+00:00:36.260 --> 00:00:38.310
+Eğer epostanın resim ekleri varsa,
+
+00:00:38.310 --> 00:00:41.110
+uygulama bu resimleri
+burada sıralı olarak gösterir.
+
+00:00:41.110 --> 00:00:43.040
+Eğer eposta bir seyahatten bahsediyorsa,
+
+00:00:43.040 --> 00:00:46.510
+o zaman uçuş bilgileriyle
+bir seyahat kartı görülür.
+
+00:00:46.510 --> 00:00:49.910
+Google Now Launcher uygulamasında,
+uygulamanın belirli şartlarda
+
+00:00:49.910 --> 00:00:52.610
+uygulama davranışının nasıl değiştiğine
+dair başka örneklerimiz var.
+
+00:00:52.610 --> 00:00:56.130
+Örneğin, eğer hisse bedeli artıyorsa
+o zaman delta ya da
+
+00:00:56.130 --> 00:01:00.160
+fiyattaki artış burada
+yeşil renkte gösterilecektir.
+
+00:01:00.160 --> 00:01:02.120
+Eğer hisse bedeli düşüyorsa,
+
+00:01:02.120 --> 00:01:05.250
+o zaman fark burada kırmızı
+font renginde gösterilecektir.
+
+00:01:05.250 --> 00:01:08.140
+Bu hava kartı için,
+Eğer sıcaklık iyiyse ve
+
+00:01:08.140 --> 00:01:11.260
+hava güneşliyse o zaman,
+bir güneş simgesi gösteriyoruz.
+
+00:01:11.260 --> 00:01:15.120
+Eğer hava rüzgarlı ya da bulutluysa,
+o zaman farklı simgeler gösteririz.
+
+00:01:15.120 --> 00:01:16.850
+Uygulamamızı biradan değiştireceğiz
+
+00:01:16.850 --> 00:01:20.180
+böylece malzemeye göre
+fiyat değişecektir ancak
+
+00:01:20.180 --> 00:01:23.100
+ilk olarak denetim akışına
+aşina olmanızı istiyorum.
+
+00:01:23.100 --> 00:01:26.620
+Normal olarak yöntemlerimizde kodlar
+yukarıdan aşağı çalıştırılır,
+
+00:01:26.620 --> 00:01:29.820
+satır satır olarak ama
+denetim akışı ifadelerinde,
+
+00:01:29.820 --> 00:01:33.030
+Yönergelerin çalıştırıldığı
+sıralamayı değiştirebilirsiniz.
+
+00:01:33.030 --> 00:01:33.690
+Örneğin,
+
+00:01:33.690 --> 00:01:38.130
+eğer belirli şartlar uyuyorsa,
+belirli yönergeleri atlayabilirsiniz.
+
+00:01:38.130 --> 00:01:40.444
+Bunu if/else mantığını
+öğrenerek yapacağız.
+
+00:01:41.580 --> 00:01:44.400
+Eğer if/else ifadeleri için
+daha önce kod görmediyseniz,
+
+00:01:44.400 --> 00:01:46.670
+Sizi tam derine atacağım
+ve nasıl yaptığınıza bakacağım.
+
+00:01:46.670 --> 00:01:51.080
+Sonraki birkaç örnekte,
+bazı kod parçacıklarını kendi kendinize
+
+00:01:51.080 --> 00:01:54.000
+okuyacaksınız ve bunlar
+eğitim notlarıyla bağlantılıdır.
+
+00:01:54.000 --> 00:01:56.640
+Sonra bu kodun ne yaptığını
+tahmin edeceksiniz ve
+
+00:01:56.640 --> 00:01:58.550
+çıktıyı belirlemeye çalışacaksınız.
+
+00:01:58.550 --> 00:02:00.700
+Arasından seçim yapacağınız
+birkaç şık olacak böylece
+
+00:02:00.700 --> 00:02:03.420
+bu kodla uyum içinde olan
+en iyi seçeneği seçebileceksiniz.
+
+00:02:03.420 --> 00:02:04.490
+Çıktı dediğimde,
+
+00:02:04.490 --> 00:02:08.008
+log kategorisine yazdırılan
+log ifadelerini kastediyorum.
+
+00:02:08.008 --> 00:02:11.510
+log kategorisine bu Android
+sekmeden erişebildiğinizi hatırlayın,
+
+00:02:11.510 --> 00:02:15.070
+sistemdeki ve uygulamamızdaki
+tüm mesajlar burada görülmektedir.
+
+00:02:15.070 --> 00:02:18.380
+Size verdiğimiz kod parçacıkları
+buradaki günlüğe mesajlar
+
+00:02:18.380 --> 00:02:19.510
+yazacaklardır.
+
+00:02:19.510 --> 00:02:21.830
+Birlikte bir örnek soru yapalım.
+
+00:02:21.830 --> 00:02:24.310
+Bu linki eğitim notlarında
+bulabilirsiniz.
+
+00:02:24.310 --> 00:02:28.270
+Bunun bir hava uygulamasının
+WeatherActivity.java dosyasından
+
+00:02:28.270 --> 00:02:29.830
+kod parçacığı olduğunu farz edin.
+
+00:02:29.830 --> 00:02:33.850
+İlk kod satırı isRaining (yağmur yağıyor)
+adı verilen bir boole değişkendir ve
+
+00:02:33.850 --> 00:02:35.910
+il değer true’dur.
+
+00:02:35.910 --> 00:02:38.500
+Sonra bu if/else ifadesi var.
+
+00:02:38.500 --> 00:02:43.150
+Eğer isRaining true ise
+o zaman bu günlüğü yazıyoruz.
+
+00:02:43.150 --> 00:02:46.330
+“Yağmur yağıyor, yanına
+şemsiye alsan iyi olur” diyor.
+
+00:02:46.330 --> 00:02:50.910
+Eğer isRaining false ise,
+o zaman else durumuna geliriz ve
+
+00:02:50.910 --> 00:02:53.230
+“yağmur yağması olası değil” yazıyoruz.
+
+00:02:53.230 --> 00:02:57.730
+isRaining türe olduğundan
+bu duruma geliyoruz ve
+
+00:02:57.730 --> 00:03:00.210
+“Yağmur yağıyor, yanına
+şemsiye alsan iyi olur” yazıyoruz.
+
+00:03:00.210 --> 00:03:04.780
+Bu duruma geldiğimiz için,
+diğer kısmı atlayabiliriz, bu kod satırı
+
+00:03:04.780 --> 00:03:08.620
+if/else ifadesinin dışında kalır
+böylece her zaman çalışır.
+
+00:03:08.620 --> 00:03:11.670
+“Wheatherweather uygulamasını kullandığınız
+için teşekkür ederiz” diyor.
+
+00:03:11.670 --> 00:03:14.520
+Testte “Yağmur yağıyor, yanına
+şemsiye alsan iyi olur” diyen
+
+00:03:14.520 --> 00:03:17.690
+ve bunu “Wheatherweather uygulamasını
+kullandığınız için teşekkür ederiz”
+
+00:03:17.690 --> 00:03:19.660
+izleyen bir seçenek arayalım.
+
+00:03:19.660 --> 00:03:21.550
+Bu kesinlikle B şıkkı.
+
+00:03:21.550 --> 00:03:23.870
+Şimdi denemeniz için
+farklı bir problem.
+
+00:03:23.870 --> 00:03:26.510
+Kod parçacığı için notları kontrol edin
+sonra seçiminizi yapın.
+

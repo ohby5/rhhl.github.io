@@ -1,0 +1,315 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.510 --> 00:00:02.570
+Cherchons sur Google 
+comment on fait ça.
+
+00:00:02.570 --> 00:00:05.280
+Je vais taper comment
+défiler dans une app android.
+
+00:00:06.450 --> 00:00:08.240
+Consultons le premier résultat.
+
+00:00:08.240 --> 00:00:11.220
+La question est, comment rendre
+ma disposition apte à défiler en bas?
+
+00:00:11.220 --> 00:00:13.570
+C'est assez similaire 
+à ce qu'on veut.
+
+00:00:13.570 --> 00:00:16.425
+J'ignore jusqu'à la partie réponse et
+ce qui a une coche verte et
+
+00:00:16.425 --> 00:00:17.825
+beaucoup de votes <i>up</i>.
+
+00:00:17.825 --> 00:00:20.285
+Donc ça pourrait être 
+une bonne réponse.
+
+00:00:20.285 --> 00:00:22.901
+Ça dit, enveloppez tout ça à 
+l'intérieur d'un <i>ScrollView</i>.
+
+00:00:22.901 --> 00:00:26.045
+Et puis il a un exemple, 
+<i>ScrollView</i>,
+
+00:00:26.045 --> 00:00:28.695
+puis il spécifie l'espace de 
+noms et alors il dit.
+
+00:00:28.695 --> 00:00:33.720
+<i>Fill_parent</i> pour largeur et hauteur, et
+puis il a une balise de fin ici, et
+
+00:00:33.720 --> 00:00:38.570
+dans ce commentaire, ça dit, mettre le reste
+de votre vue actuelle dans celui-ci.
+
+00:00:39.580 --> 00:00:42.710
+Pour connaissance de base, <i>fill_parent</i>
+est en fait le même que <i>match_parent</i>.
+
+00:00:42.710 --> 00:00:45.860
+C'est juste une vieille version de celui-ci,
+mais ils signifient la même chose.
+
+00:00:45.860 --> 00:00:50.590
+Sur cette ligne suivante ça dit que
+<i>ScrollView</i> peut contenir un seul article.
+
+00:00:50.590 --> 00:00:53.150
+Il semble que c'était une
+disposition originale de quelqu'un, et
+
+00:00:53.150 --> 00:00:55.740
+puis mettre à l'intérieur de
+<i>scroll view</i> alors ils
+
+00:00:55.740 --> 00:01:00.060
+rendent <i>scroll view</i> la vue parente et
+la disposition linéaire la vue enfant.
+
+00:01:00.060 --> 00:01:02.520
+Ok c'était une réponse utile donc
+revenons et voyons
+
+00:01:02.520 --> 00:01:04.250
+s'il y a d'autres solutions.
+
+00:01:07.020 --> 00:01:09.160
+Cette personne décrit
+la même chose.
+
+00:01:09.160 --> 00:01:14.450
+Ils ont une disposition <i>XML</i> et
+je pense qu'ils veulent le faire défiler.
+
+00:01:14.450 --> 00:01:16.865
+Habituellement, je ne lis pas
+toute la question en detail.
+
+00:01:16.865 --> 00:01:18.660
+Je me rend juste à la partie réponse.
+
+00:01:18.660 --> 00:01:19.930
+Cette personne dit,
+
+00:01:19.930 --> 00:01:23.340
+avez-vous essayé d'inclure tout votre 
+<i>XML</i> dans un <i>ScrollView</i> parent?
+
+00:01:23.340 --> 00:01:25.880
+Et puis ils donnent un exemple
+de <i>ScrollView</i>, et
+
+00:01:25.880 --> 00:01:28.370
+alors l'enfant est un 
+<i>RelativeLayout</i>.
+
+00:01:28.370 --> 00:01:31.430
+Et alors ils ont une balise fermée pour
+<i>ScrollView</i>.
+
+00:01:31.430 --> 00:01:34.030
+C'est tout ce qu'ils 
+ont dans ce fil.
+
+00:01:34.030 --> 00:01:37.850
+Mais il semble que les deux résultats
+ici donnent le même conseil d'utiliser
+
+00:01:37.850 --> 00:01:39.190
+un <i>ScrollView</i>.
+
+00:01:39.190 --> 00:01:44.110
+Changeons notre recherche
+pour chercher ScrollView android.
+
+00:01:44.110 --> 00:01:47.500
+Génial.
+Donc c'est une vue dans Android.
+
+00:01:47.500 --> 00:01:50.480
+Et il y a une description ici.
+
+00:01:50.480 --> 00:01:53.180
+Il y a beaucoup de textes ici, donc
+je vais sauter la lecture, mais
+
+00:01:53.180 --> 00:01:54.405
+si vous voulez le lire, 
+vous pouvez.
+
+00:01:54.405 --> 00:01:56.570
+Puis je vais taper retour.
+
+00:01:56.570 --> 00:01:58.860
+Je préfère chercher 
+un exemple de code.
+
+00:01:58.860 --> 00:02:01.590
+Donc, les exemples de code que nous
+avions précédemment étaient bons,
+
+00:02:01.590 --> 00:02:03.950
+et celui-ci est aussi bon.
+
+00:02:03.950 --> 00:02:05.240
+Donc revenons à Android Studio.
+
+00:02:06.270 --> 00:02:09.880
+Tous ces exemples <i>XML</i> ont
+commencé avec <i>ScrollView</i>.
+
+00:02:09.880 --> 00:02:12.740
+Immediatement, il y a une erreur qui dit 
+que je n'ai pas la largeur et la hauteur
+
+00:02:12.740 --> 00:02:13.990
+requises de la vue.
+
+00:02:13.990 --> 00:02:17.705
+Donc, je viens d'ajouter ceux-ci et
+spécifié qu'ils soient <i>match_parent</i>.
+
+00:02:18.780 --> 00:02:22.390
+Si j'ajoute une parenthèse, alors j'obtient
+immediatement une balise fermée ici.
+
+00:02:22.390 --> 00:02:23.974
+Donc, je vais copier ça et
+
+00:02:23.974 --> 00:02:29.860
+puis le coller en-dessous de
+ce fichier tout en bas.
+
+00:02:31.372 --> 00:02:36.240
+Cela signifie que la disposition linéaire
+existante est un enfant de ce <i>ScrollView</i>.
+
+00:02:36.240 --> 00:02:41.250
+Je vais sélectionner tout ça et
+puis essayez de séparer par quatre espaces, donc
+
+00:02:41.250 --> 00:02:43.624
+c'est plus facile de lire comme
+un enfant de ce <i>ScrollView</i>.
+
+00:02:44.790 --> 00:02:48.850
+Dans Android Studio, si je clique sur
+<i>Edit menu</i>,je peux aller à <i>Indent Selection</i>,
+
+00:02:48.850 --> 00:02:51.830
+et cela les séparera 
+par quatre espaces.
+
+00:02:51.830 --> 00:02:53.270
+Là.
+Maintenant ça semble meilleur.
+
+00:02:54.280 --> 00:02:55.350
+Oh, mais j'ai toujours 
+une erreur ici.
+
+00:02:55.350 --> 00:02:59.090
+Ça dit, l'espace de noms
+<i>'android'</i> n'est pas lié.
+
+00:02:59.090 --> 00:03:00.280
+Je peux cliquer pour 
+plus d'informations.
+
+00:03:00.280 --> 00:03:06.150
+Ça dit, Cette inspection vérifie les
+préfixes d'espace de noms non liés en XML.
+
+00:03:06.150 --> 00:03:08.315
+Si vous vous souvenez 
+la leçon un,
+
+00:03:08.315 --> 00:03:11.866
+Je disais que le côlon Android vient
+à partir de cet espace de noms ici.
+
+00:03:11.866 --> 00:03:16.040
+Donc je pense nous devons le copier et
+puis mettez-le ici.
+
+00:03:16.040 --> 00:03:20.940
+Vous devriez également déplacer
+des outils espace de nom ici.
+
+00:03:20.940 --> 00:03:24.570
+Les outils espace de nom est de fournir
+des attributs additionnels que vous pouvez
+
+00:03:24.570 --> 00:03:28.110
+ajouter à votre XML pour vous aider à déboguer 
+et construire votre app.
+
+00:03:28.110 --> 00:03:30.530
+Ok, je vais exécuter cela
+sur mon périphérique maintenant.
+
+00:03:30.530 --> 00:03:34.755
+Ok, il n'y a pas de différence visible
+à l'app car il n'y a pas assez de
+
+00:03:34.755 --> 00:03:37.950
+contenu dans le formulaire de commande
+pour le rendre défilable.
+
+00:03:37.950 --> 00:03:41.321
+Pour vraiment tester cela, je dois ajouter 
+plus de vues à cette disposition.
+
+00:03:41.321 --> 00:03:43.740
+Je vais faire la même 
+astuce qu'avant.
+
+00:03:43.740 --> 00:03:47.390
+Je vais copier toutes ces vues et
+puis les coller dans la disposition de
+
+00:03:47.390 --> 00:03:49.020
+qu'on ait un vraiment long 
+formulaire de commande.
+
+00:03:50.040 --> 00:03:54.050
+Ok, maintenant le formulaire de commande
+est vraiment long et ça défile.
+
+00:03:54.050 --> 00:03:55.810
+C'est excitant.
+
+00:03:55.810 --> 00:03:59.280
+Si je tourne le dispositif,
+puis il défile aussi.
+
+00:04:00.650 --> 00:04:04.270
+Maintenant, je peux annuler les changements
+pour revenir à notre formulaire de commande.
+
+00:04:05.280 --> 00:04:06.910
+Je vais toujours laisser
+le ScrollView dedans, bien que,
+
+00:04:06.910 --> 00:04:09.480
+car notre app fonctionnera 
+mieux sur tous les appareils.
+
+00:04:10.540 --> 00:04:13.230
+Pour les utilisateurs de dispositifs 
+qui sont plus courtes que cela,
+
+00:04:13.230 --> 00:04:15.730
+ils sont toujours apte à défiler
+et voir toute la page.
+

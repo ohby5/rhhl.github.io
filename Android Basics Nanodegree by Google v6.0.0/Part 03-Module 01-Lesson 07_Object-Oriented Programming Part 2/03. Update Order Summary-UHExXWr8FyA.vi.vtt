@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.420 --> 00:00:03.820
+Giờ khi ta biết có thể dùng
+bullion để thể hiện tình trạng
+
+00:00:03.820 --> 00:00:07.290
+của ô đánh dấu này,
+hãy thử thay đổi đơn hàng để
+
+00:00:07.290 --> 00:00:10.830
+nó thể hiện xem chúng ta có muốn
+mua kem phủ đánh sẵn hay không.
+
+00:00:10.830 --> 00:00:13.860
+Nếu tôi nói rằng tôi muốn mua kem phủ
+đánh sẵn, và tôi bấm vào nút Order,
+
+00:00:13.860 --> 00:00:17.870
+nó sẽ thêm một dòng vào Tóm tắt đơn hàng
+thể hiện việc tôi có muốn
+
+00:00:17.870 --> 00:00:19.800
+mua kem phủ đánh sẵn hay không.
+
+00:00:19.800 --> 00:00:24.080
+Nó sẽ thể hiện True nếu tôi chọn
+tick vào ô vuông để thêm kem phủ.
+
+00:00:24.080 --> 00:00:29.120
+Và nếu tôi bỏ chọn ô vuông rồi bấm Order,
+nó sẽ trả về giá trị False
+
+00:00:29.120 --> 00:00:33.590
+Android đã có sẵn lựa chọn ô vuông này
+và chúng ta đã có sẵn code trong ứng dụng
+
+00:00:33.590 --> 00:00:37.650
+đảm nhiệm việc tạo một tóm tắt đơn hàng
+khi bấm vào nút Order.
+
+00:00:37.650 --> 00:00:41.320
+Việc chúng ta cần phải làm bây giờ
+là thêm vào một dòng chữ ở đây,
+
+00:00:41.320 --> 00:00:42.940
+nói rằng Thêm kem phủ? và
+
+00:00:42.940 --> 00:00:48.010
+chúng ta phải thêm giá trị đúng vào đây
+tùy xem ô vuông có được chọn hay không.
+
+00:00:48.010 --> 00:00:52.210
+Trước khi bắt đầu đi sâu vào code,
+hãy nghĩ đến mã giả trước
+
+00:00:52.210 --> 00:00:56.280
+để củng cố lại ý tưởng về chức năng
+chúng ta muốn code này thực hiện.
+
+00:00:56.280 --> 00:00:59.520
+Khi nút Order được bấm, ta phải
+thực hiện những bước sau.
+
+00:00:59.520 --> 00:01:03.390
+Bước đầu tiên là kiểm tra trạng thái
+chọn hay không chọn của ô vuông.
+
+00:01:03.390 --> 00:01:05.140
+và lưu trữ đó trong một biến.
+
+00:01:05.140 --> 00:01:06.300
+Đó là về trạng thái chọn.
+
+00:01:07.300 --> 00:01:09.590
+Khi ứng dụng Android đã biết
+ô vuông có được chọn hay không,
+
+00:01:09.590 --> 00:01:13.410
+ta có thể chuyển thông tin này
+qua phương thức tóm tắt đơn hàng.
+
+00:01:13.410 --> 00:01:15.710
+phương thức để tạo nên những dòng chữ này.
+
+00:01:15.710 --> 00:01:19.520
+Bước thứ ba, chúng ta có thể thay đổi
+và thêm một dòng chữ
+
+00:01:19.520 --> 00:01:22.960
+về việc có cần thêm kem phủ 
+đánh sẵn vào đây hay không.
+
+00:01:22.960 --> 00:01:25.120
+Cần phải thực hiện
+một vài bước ở đây.
+
+00:01:25.120 --> 00:01:28.010
+Để đảm bảo là mình đang đi 
+đúng hướng, bạn có thể log
+
+00:01:28.010 --> 00:01:32.220
+giá trị biến này để đảm bảo nó
+phản ánh đúng trạng thái chọn.
+
+00:01:33.220 --> 00:01:35.830
+Chúng tôi đã từng giới thiệu về log, nhưng
+đây là một ví dụ khác dành cho bạn.
+
+00:01:36.990 --> 00:01:42.510
+Bạn có thể viết log.v, và sử dụng tên nhóm
+ở đây là MainActivity, và
+
+00:01:42.510 --> 00:01:46.160
+thêm một chuỗi ký tự mà
+bạn muốn in ra trên log.
+
+00:01:47.200 --> 00:01:50.890
+Bằng việc in giá ra đây, bạn đang
+xác nhận rằng sau bước một,
+
+00:01:50.890 --> 00:01:54.880
+thuật toán calculatePrice sẽ
+trả lại giá chúng ta cần.
+
+00:01:54.880 --> 00:01:56.150
+Khi bạn chạy ứng dụng trên thiết bị,
+
+00:01:56.150 --> 00:02:00.970
+bạn sẽ có thể kiểm tra log bằng tab này
+nếu bạn muốn xem lại chuỗi ký tự.
+
+00:02:00.970 --> 00:02:04.610
+Tôi sử dụng kỹ thuật log tin nhắn này
+khá thường xuyên khi xảy ra vấn đề
+
+00:02:04.610 --> 00:02:08.360
+và tôi không biết chính xác
+ở dòng nào của code.
+
+00:02:08.360 --> 00:02:11.830
+Và sau khi tôi tìm ra được vấn đề,
+và mọi thứ hoạt động bình thường trở lại,
+
+00:02:11.830 --> 00:02:14.520
+tôi chỉ cần xóa tin nhắn log đi.
+
+00:02:14.520 --> 00:02:15.520
+Vì vậy, giải pháp tạm thời,
+
+00:02:15.520 --> 00:02:19.240
+nếu bạn muốn thêm một tin nhắn log
+để in ra trạng thái chọn, bạn có thể.
+
+00:02:19.240 --> 00:02:22.055
+Lý do tôi xóa tin nhắn log
+sau khi tôi không cần đến chúng nữa
+
+00:02:22.055 --> 00:02:24.820
+là vì log bị giới hạn về độ dài.
+
+00:02:24.820 --> 00:02:27.540
+Nếu bạn lấp đầy nó với toàn
+những tin nhắn không cần thiết,
+
+00:02:27.540 --> 00:02:31.100
+nó sẽ khiến những tin nhắn quan trọng
+và các lỗi hiển thị bị trôi đi nhanh hơn.
+
+00:02:32.118 --> 00:02:35.390
+Khi thông tin về trạng thái chọn
+đã hiển thị trong tóm tắt đơn hàng
+
+00:02:35.390 --> 00:02:39.410
+trên ứng dụng, thì bạn không cần
+đến những tin nhắn log nữa.
+
+00:02:39.410 --> 00:02:41.240
+Khi bạn đã làm xong,
+chọn ô này để tiếp tục.
+

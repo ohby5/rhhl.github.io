@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.410 --> 00:00:02.233
+Agora que sabemos que
+podemos usar um booleano
+
+00:00:02.516 --> 00:00:04.880
+para representar o estado
+desta caixa de seleção,
+
+00:00:05.427 --> 00:00:07.000
+vamos modificar o Resumo do Pedido,
+
+00:00:07.224 --> 00:00:10.086
+para que ele reflita se queremos
+cobertura de chantiliy, ou não.
+
+00:00:10.806 --> 00:00:14.289
+Se eu disser que quero cobertura
+de chantilly, e apertar o botão Pedido,
+
+00:00:14.664 --> 00:00:16.843
+ele deve adicionar uma linha
+ao Resumo do Pedido
+
+00:00:17.070 --> 00:00:18.953
+que diz se eu quero,
+ou não, cobertura.
+
+00:00:19.864 --> 00:00:23.433
+Diz "verdadeiro" se eu selecionar
+a opção adicionar cobertura.
+
+00:00:24.020 --> 00:00:28.184
+e se eu desmarcar e apertar Pedido, então ele deve dizer "falso".
+
+00:00:29.080 --> 00:00:33.335
+Android já cuida de marcar essa opção,
+e nós já temos código em nosso aplicativo
+
+00:00:33.606 --> 00:00:37.003
+que trata o clique no botão Pedido
+para criar um resumo do pedido inicial.
+
+00:00:37.667 --> 00:00:41.261
+A parte que falta implementar
+é adicionar esta linha de texto aqui,
+
+00:00:41.347 --> 00:00:42.467
+que diz "Adicionar chantilly"
+
+00:00:42.787 --> 00:00:47.163
+e precisamos colocar o valor correto,
+dependendo se a caixa está marcada.
+
+00:00:48.036 --> 00:00:51.975
+Antes de mergulhar no código,
+vamos pensar no pseudocódigo primeiro,
+
+00:00:52.233 --> 00:00:55.433
+para ajudar solidificar idéias principais
+do que queremos que nosso código faça.
+
+00:00:56.301 --> 00:00:58.990
+Quando o botão Pedido for apertado,
+devemos seguir estes passos:
+
+00:00:59.532 --> 00:01:03.076
+O primeiro passo é pegar
+o estado da caixa de seleção,
+
+00:01:03.323 --> 00:01:04.424
+e guardá-lo em uma variável.
+
+00:01:05.000 --> 00:01:06.307
+Bem, esse é o estado selecionado.
+
+00:01:07.267 --> 00:01:09.770
+Uma vez que o Android sabe
+se a caixa de seleção está marcada
+
+00:01:09.987 --> 00:01:13.027
+podemos passar essa informação
+para o método de resumo do pedido,
+
+00:01:13.427 --> 00:01:14.990
+o método que cria este texto.
+
+00:01:15.661 --> 00:01:19.500
+Como terceiro passo, podemos mudar
+este texto para incluir esta linha aqui,
+
+00:01:19.513 --> 00:01:22.024
+sobre se a cobertura do chantiliy
+deve ser adicionada ou não.
+
+00:01:22.966 --> 00:01:24.584
+São muitos passos ao longo do caminho.
+
+00:01:25.150 --> 00:01:27.800
+Para certificar-se de que está
+no caminho certo, você pode entrar
+
+00:01:27.810 --> 00:01:32.221
+o valor desta variável para se certificar
+que reflete o estado real verificado.
+
+00:01:33.220 --> 00:01:35.864
+Falámos sobre <i>logging</i> antes,
+mas aqui vai outro exemplo pra você.
+
+00:01:36.867 --> 00:01:42.260
+Você pode escrever <i>Log.v</i> e depois usar
+o nome da classe, que é <i>MainActivity</i>,
+
+00:01:42.535 --> 00:01:46.116
+e, em seguida, colocar em uma mensagem
+de texto que você deseja mostrar nos <i>logs.</i>
+
+00:01:47.200 --> 00:01:50.707
+Ao entrar o preço aqui,
+verifcamos que após o passo um,
+
+00:01:50.910 --> 00:01:54.086
+o método <i>calculatePrice</i>
+retorna o preço esperado.
+
+00:01:54.886 --> 00:01:56.424
+Quando executar
+o app no dispositivo,
+
+00:01:56.460 --> 00:02:00.301
+você vai poder verificar os <i>logs</i>
+nesta guia para ver essa mensagem.
+
+00:02:00.935 --> 00:02:04.523
+Eu uso a técnica de entrar mensagens,
+frequentemente, quando há um problema
+
+00:02:04.541 --> 00:02:07.649
+e não tenho certeza em qual linha
+de código está o problema.
+
+00:02:08.344 --> 00:02:11.870
+E depois que eu descubro o problema,
+e tudo funciona como esperado,
+
+00:02:11.889 --> 00:02:13.747
+então eu simplesmente
+deleto a mensagem de <i>log.</i>
+
+00:02:14.578 --> 00:02:18.664
+Se quiser adicionar um <i>log</i> temporário
+para mostrar o estado escolhido, você pode.
+
+00:02:19.212 --> 00:02:22.055
+Eu apago as mensagens de l<i>og </i>
+depois que eu não preciso mais delas,
+
+00:02:22.307 --> 00:02:24.221
+é porque o <i>log</i> tem comprimento limitado.
+
+00:02:24.800 --> 00:02:27.255
+Se você preenchê-lo com um monte
+de mensagens desnecessárias,
+
+00:02:27.575 --> 00:02:31.150
+ele fará com que mensagens e erros
+importantes desapareçam mais cedo.
+
+00:02:32.098 --> 00:02:36.135
+Uma vez que a informação de seleção
+está aparecendo no resumo do pedido
+
+00:02:36.443 --> 00:02:38.615
+você não precisa
+mais das mensagens de <i>log.</i>
+
+00:02:39.410 --> 00:02:41.360
+Quando terminar,
+marque aqui para continuar.
+

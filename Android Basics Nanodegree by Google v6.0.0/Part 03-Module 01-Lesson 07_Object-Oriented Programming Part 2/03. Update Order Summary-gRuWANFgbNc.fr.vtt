@@ -1,0 +1,568 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.450 --> 00:00:03.560
+Le pseudocode démarre quand on clique
+sur le bouton de commande.
+
+00:00:03.560 --> 00:00:07.020
+Il faut donc ajouter notre code
+à la méthode de soumission de commande.
+
+00:00:08.180 --> 00:00:11.280
+Nous devons ensuite connaître l'état
+de la Checkbox (case à cocher).
+
+00:00:11.280 --> 00:00:14.990
+Pour pouvoir appeler une méthode
+dans une vue, dans la hiérarchie des vues,
+
+00:00:14.990 --> 00:00:17.570
+nous devons d'abord
+trouver son identifiant.
+
+00:00:17.570 --> 00:00:21.560
+Je commencer par affecter un id de vue
+à la vue Checkbox.
+
+00:00:22.770 --> 00:00:25.920
+Dans l'environnement Android Studio,
+je regarde dans le fichier Main Activity,
+
+00:00:25.920 --> 00:00:27.420
+la vue Checkbox.
+
+00:00:27.420 --> 00:00:31.690
+Mon curseur surlignant la vue, elle est
+dans la fenêtre de prévisualisation.
+
+00:00:31.690 --> 00:00:34.600
+Ensuite j'ajoute une ligne pour attribuer
+un identifiant à cette vue.
+
+00:00:35.750 --> 00:00:39.140
+Maintenant à l'aide du code Java,
+je vais utiliser les données de cette vue
+
+00:00:39.140 --> 00:00:42.140
+pour en extraire l'état.
+
+00:00:42.140 --> 00:00:43.410
+Allons dans Main Activity.
+
+00:00:43.410 --> 00:00:46.410
+Je vais inscrire mon code dans la méthode
+de soumission de commande.
+
+00:00:47.700 --> 00:00:51.250
+Je sais que je dois trouver l'objet Java
+Checkbox dans la hiérachie des vues
+
+00:00:52.270 --> 00:00:55.650
+Je commence par créer une variable
+whippedCreamCheckBox
+
+00:00:55.650 --> 00:00:57.810
+avec CheckBox comme type de données.
+
+00:00:57.810 --> 00:01:01.380
+À présent je peux appeler la méthode
+findViewById dans cette activité
+
+00:01:01.380 --> 00:01:03.950
+De cette façon on peut trouver une vue
+à partir de son ID.
+
+00:01:03.950 --> 00:01:09.080
+Je vais mettre cet ID
+(R.id.whipped_cream_checkbox),
+
+00:01:09.080 --> 00:01:12.060
+que je viens d'attribuer
+dans l'autre fichier layout.
+
+00:01:12.060 --> 00:01:16.070
+Un message d'erreur s'affiche
+parce que le type requis est CheckBox,
+
+00:01:16.070 --> 00:01:19.020
+puisque c'est la variable
+telle qu'on voit ici à gauche.
+
+00:01:19.020 --> 00:01:22.230
+Mais la valeur de retour de cette méthode
+est de type View.
+
+00:01:22.230 --> 00:01:23.330
+Donc, comme nous l'avons vu,
+
+00:01:23.330 --> 00:01:25.710
+nous devons modifier la valeur
+de retour de cette méthode.
+
+00:01:25.710 --> 00:01:29.380
+Je vais en faire un objet CheckBox.
+
+00:01:29.380 --> 00:01:33.720
+Je peux le faire cette parce que Checkbox
+est une sous-classe de View.
+
+00:01:34.910 --> 00:01:37.480
+OK, j'ai à présent
+l'objet Java CheckBox
+
+00:01:37.480 --> 00:01:40.450
+qui représente la case à cocher
+de l'interface utilisateur.
+
+00:01:40.450 --> 00:01:42.570
+Pour savoir si la case
+a été cochée
+
+00:01:42.570 --> 00:01:45.760
+ou non, je dois appeler
+une méthode sur l'objet.
+
+00:01:45.760 --> 00:01:48.360
+Si vous ne savez pas quelle méthode
+appeler sur l'objet CheckBox.
+
+00:01:48.360 --> 00:01:49.790
+Ne vous inquiétez pas.
+
+00:01:49.790 --> 00:01:52.000
+Il vous suffit de rechercher sur Google.
+
+00:01:52.000 --> 00:01:55.520
+Recherchez CheckBox Android
+et cliquez sur le premier résultat.
+
+00:01:56.940 --> 00:02:01.560
+J'insiste sur ce que je viens de dire :
+checkbox est une sous-classe de View.
+
+00:02:01.560 --> 00:02:03.080
+D'autres vues sont intercalées,
+
+00:02:03.080 --> 00:02:05.420
+mais au final, ça reste
+une sous-classe de vue.
+
+00:02:06.050 --> 00:02:09.120
+Cette présentation des classes
+est assez intéressante dans la mesure où
+
+00:02:09.120 --> 00:02:10.780
+vous avez des codes en Java.
+
+00:02:10.780 --> 00:02:13.730
+Vous avez cette ligne de code,
+que nous avons déjà dans notre appli.
+
+00:02:13.730 --> 00:02:19.530
+Nous avons find view by id, l'id
+pour désigner une case à cocher.
+
+00:02:19.530 --> 00:02:21.560
+La ligne suivante est encore
+plus intéressante.
+
+00:02:21.560 --> 00:02:26.630
+On lit check box qui est le nom
+de cette variable, point est cochée.
+
+00:02:26.630 --> 00:02:29.510
+On dirait un appel de méthode
+sans arguments d'entrée.
+
+00:02:29.510 --> 00:02:33.450
+On pourrait croire que ça nous indique
+si la case est cochée ou non en renvoyant
+
+00:02:33.450 --> 00:02:37.580
+une valeur vraie ou fausse mais consultons
+le Checkboxes guide pour en être sûrs.
+
+00:02:37.580 --> 00:02:42.740
+En faisant défiler, nous voyons
+du code xml checkbox,
+
+00:02:42.740 --> 00:02:44.770
+et du code Java.
+
+00:02:45.910 --> 00:02:49.910
+On dirait que cette méthode est appelée
+quand on clique sur la case à cocher.
+
+00:02:49.910 --> 00:02:53.840
+Le nom de la méthode correspond
+au nom spécifié dans le xml.
+
+00:02:53.840 --> 00:02:58.530
+Je suppose que la vue qui est utilisée
+est la vue Checkbox.
+
+00:02:58.530 --> 00:03:00.800
+Nous l'avons renommée CheckBox
+
+00:03:00.800 --> 00:03:05.360
+en ajoutant IsChecked (est cochée).
+La valeur de retour est booléenne.
+
+00:03:05.360 --> 00:03:09.380
+Le commentaire donne encore plus d'infos
+et demande si la vue est cochée à présent.
+
+00:03:09.380 --> 00:03:11.880
+C'est exactement ce qu'il nous faut !
+
+00:03:11.880 --> 00:03:13.520
+Essayons d'utiliser la méthode IsChecked.
+
+00:03:14.640 --> 00:03:18.010
+Commençons par écrire le nom
+de la variable de l'objet CheckBox.
+
+00:03:18.010 --> 00:03:20.210
+C'est whippedCreamCheckBox.
+
+00:03:20.210 --> 00:03:23.020
+Puis j'ajoute un point pour pouvoir
+appeler une méthode.
+
+00:03:23.020 --> 00:03:26.290
+Je peux commencer à écrire isChecked,
+et une suggestion apparaît ici.
+
+00:03:26.290 --> 00:03:29.400
+Je peux valider avec la touche Entrée.
+
+00:03:29.400 --> 00:03:33.150
+Ici, à droite, on voit la valeur de retour
+de cette méthode.
+
+00:03:33.150 --> 00:03:35.150
+On voit que c'est une valeur booléenne.
+
+00:03:35.150 --> 00:03:39.330
+Donc, après avoir entré la suggestion,
+je me place ici à gauche
+
+00:03:39.330 --> 00:03:44.110
+de l'appel de méthode et je vais classer
+ce résultat dans une variable booléenne.
+
+00:03:44.110 --> 00:03:48.260
+Je nomme cette variable booléenne
+hasWhippedCream et j'appuie sur Entrée.
+
+00:03:48.260 --> 00:03:52.860
+En résumé, nous appelons une méthode
+sur l'objet Java whippedCreamCheckbox.
+
+00:03:52.860 --> 00:03:54.690
+Cette méthode s'appelle isChecked.
+
+00:03:54.690 --> 00:03:56.750
+Sa valeur de retour est de type booléen.
+
+00:03:56.750 --> 00:03:59.210
+Elle est conservée ici,
+à gauche.
+
+00:03:59.210 --> 00:04:01.970
+Dans la variable dénommée hasWhippedCream.
+
+00:04:01.970 --> 00:04:03.220
+La première phase est terminée.
+
+00:04:03.220 --> 00:04:06.530
+Je vous ai déjà dit que vous pouviez
+loguer cette variable
+
+00:04:06.530 --> 00:04:09.130
+pour vérifier que vous êtes
+sur le bon chemin.
+
+00:04:09.130 --> 00:04:11.870
+Donc, sur la ligne suivante, je vais
+ajouter un message de log.
+
+00:04:12.050 --> 00:04:14.150
+Le premier paramètre est un nom de balise.
+
+00:04:14.150 --> 00:04:17.100
+Je vais utiliser le nom
+de notre classe qui est MainActivity.
+
+00:04:17.100 --> 00:04:19.810
+Ensuite je saisis mon propre message.
+
+00:04:19.810 --> 00:04:22.050
+Je tape Has whipped cream.
+
+00:04:22.050 --> 00:04:26.660
+Et j'ajoute la variable booléenne.
+
+00:04:26.660 --> 00:04:30.930
+En concaténant cette chaîne
+avec la variable booléenne,
+
+00:04:30.930 --> 00:04:34.560
+cette valeur booléenne
+devient aussi une chaîne.
+
+00:04:34.560 --> 00:04:38.710
+Le texte dira alors :"has whipped cream"
+est vrai ou has whipped cream est faux.
+
+00:04:39.400 --> 00:04:41.330
+Exécutons l'appli sur notre appareil.
+
+00:04:41.330 --> 00:04:43.780
+Vérifions que le bon message
+s'affiche à l'écran.
+
+00:04:44.810 --> 00:04:48.170
+J'ai agrandi la fenêtre de log
+grâce à cette commande.
+
+00:04:48.170 --> 00:04:50.030
+Quand je coche la case
+Whipped Cream
+
+00:04:50.030 --> 00:04:53.850
+et que j'appuie sur "commander", j'espère
+voir ici un message disant :
+
+00:04:53.850 --> 00:04:56.310
+"has whipped cream" vrai ou faux
+
+00:04:57.360 --> 00:04:59.770
+Je fais défiler jusqu'à voir
+le message qui m'intéresse.
+
+00:05:00.790 --> 00:05:03.540
+Ok, voyons si ça marche.
+
+00:05:03.540 --> 00:05:06.210
+Je coche la case et j'appuie
+sur "commander".
+
+00:05:06.210 --> 00:05:10.100
+OK, je pense qu'un nouveau message
+va s'afficher et dire Main Activity.
+
+00:05:10.100 --> 00:05:12.330
+Has whipped cream: vrai.
+
+00:05:12.330 --> 00:05:15.210
+C'est vrai puisque la case
+est cochée.
+
+00:05:15.210 --> 00:05:20.640
+Si je décoche la case et que j'appuie
+sur "commander", faux devrait apparaître.
+
+00:05:20.640 --> 00:05:24.820
+Faisons défiler vers la droite à nouveau,
+on lit, has whipped cream: faux.
+
+00:05:24.820 --> 00:05:28.470
+OK, notre code a l'air
+de fonctionner pour l'instant.
+
+00:05:28.470 --> 00:05:32.190
+On a trouvé la checkbox view
+et on peut vérifier son état.
+
+00:05:32.190 --> 00:05:33.940
+Nous pouvons passer à la deuxième étape.
+
+00:05:35.410 --> 00:05:40.000
+Mettons cette variable booléenne dans
+la méthode du récapitulatif de commande.
+
+00:05:40.000 --> 00:05:43.580
+Si vous voulez placer un nouvel argument
+dans la méthode createOrderSummary,
+
+00:05:43.580 --> 00:05:48.410
+il suffit que j'ajoute une virgule ici
+puis je mets la variable hasWhippedCream.
+
+00:05:49.820 --> 00:05:53.680
+Un message d'erreur s'affiche aussitôt
+indiquant ça ne s'applique pas
+
+00:05:53.680 --> 00:05:58.730
+à la méthode createOrderSummary car c'est
+un paramètre d'intégration qui est attendu
+
+00:05:58.730 --> 00:06:02.050
+Bien, faisons défiler vers le bas
+pour trouver createOrderSummary.
+
+00:06:03.310 --> 00:06:05.590
+Maintenant je dois modifier
+la signature de la méthode
+
+00:06:05.590 --> 00:06:07.900
+de la méthode createOrderSummary.
+
+00:06:07.900 --> 00:06:10.440
+Au lieu d'avoir un seul paramètre
+d'entrée, il en faut deux.
+
+00:06:10.440 --> 00:06:15.430
+J'ajoute une virgule et je saisis
+le deuxième paramètre.
+
+00:06:15.430 --> 00:06:20.810
+Le type de données doit être booléen,
+je vais l'appeler : addwhippedCream.
+
+00:06:20.810 --> 00:06:23.850
+Vous pouvez donner n'importe quel nom
+à ce paramètre d'entrée, mais retenez
+
+00:06:23.850 --> 00:06:27.430
+que ce nom ne doit pas obligatoirement
+être le même que celui-ci.
+
+00:06:28.490 --> 00:06:32.580
+Ayant changé la méthode de la signature
+il faut actualiser le dock Java.
+
+00:06:32.580 --> 00:06:35.440
+pour bien spécifier l'usage
+de ce paramètre d'entrée.
+
+00:06:36.510 --> 00:06:38.140
+Et voilà la deuxième étape est terminée.
+
+00:06:39.600 --> 00:06:42.850
+Pour la troisième étape, il faut changer
+le texte récapitulatif pour y inclure
+
+00:06:42.850 --> 00:06:45.050
+si l'utilisateur veut ou non
+de la crème chantilly.
+
+00:06:45.800 --> 00:06:49.490
+En clair, nous devons saisir
+un paramètre d'entrée ici.
+
+00:06:49.490 --> 00:06:52.410
+pour modifier le message récapitulatif
+de la commande.
+
+00:06:52.410 --> 00:06:56.260
+Sur cette copie d'écran, la ligne
+pour la chantilly apparaît sous le nom.
+
+00:06:56.260 --> 00:06:58.030
+Alors, ajoutons une nouvelle ligne ici.
+
+00:06:58.030 --> 00:07:01.450
+Je vais taper
+message prix plus égal
+
+00:07:01.450 --> 00:07:03.950
+pour modifier le message actuel sur le prix.
+
+00:07:03.950 --> 00:07:06.720
+Ensuite j'ajoute la ligne Add whipped cream.
+
+00:07:06.720 --> 00:07:10.520
+Je mets un espace avant
+d'ajouter une variable booléenne.
+
+00:07:10.520 --> 00:07:14.060
+Ici, je peux aussi concaténer la chaîne
+de caractères avec une valeur booléenne.
+
+00:07:14.060 --> 00:07:16.770
+Et l'ensemble va tenir
+dans une chaîne de caractères.
+
+00:07:16.770 --> 00:07:18.100
+Allez, faisons le test !
+
+00:07:19.230 --> 00:07:20.770
+Si je coche cette case
+
+00:07:20.770 --> 00:07:24.720
+puis que je clique sur "commander",
+ajouter de la chantilly doit être vrai.
+
+00:07:24.720 --> 00:07:28.480
+Et ça marche ! Sauf que j'ai oublié,
+le saut de ligne.
+
+00:07:28.480 --> 00:07:29.410
+Je dois changer ça !.
+
+00:07:29.410 --> 00:07:32.590
+Mais bon, puisque nous sommes là
+vérifions l'autre cas.
+
+00:07:32.590 --> 00:07:34.680
+Je décoche cette case
+et je clique sur "commander".
+
+00:07:34.680 --> 00:07:36.640
+Et faux apparaît !
+
+00:07:36.640 --> 00:07:40.310
+L'état de la case à cocher
+s'affiche convenablement.
+
+00:07:40.310 --> 00:07:43.800
+Maintenant, insérons le saut de ligne
+et relançons l'appli.
+
+00:07:43.800 --> 00:07:46.590
+Si je coche la case et que j'appuie
+sur "commander", vrai apparaît.
+
+00:07:46.590 --> 00:07:49.480
+Si je décoche et que je clique
+sur "commander", faux apparaît.
+
+00:07:50.610 --> 00:07:51.550
+Génial !
+
+00:07:51.550 --> 00:07:52.810
+Ça marche dans les deux sens.
+
+00:07:54.550 --> 00:07:56.750
+Les dernières étapes étaient
+plus faciles.
+
+00:07:56.750 --> 00:08:00.610
+Parce qu'une fois que nous avons vérifié
+l'état de la case dans les logs,
+
+00:08:00.610 --> 00:08:04.200
+il ne restait plus qu'à le faire
+apparaître à l'écran.
+
+00:08:04.200 --> 00:08:06.000
+Comme le programme fonctionne
+dans l'appli,
+
+00:08:06.000 --> 00:08:08.660
+je peux enlever le message de log
+car il est inutile maintenant.
+
+00:08:08.660 --> 00:08:11.810
+Et je lance l'appli une dernière fois.
+
+00:08:11.810 --> 00:08:12.830
+Ça marche, bon travail !
+
+00:08:12.830 --> 00:08:14.260
+Passons à l'activité suivante.
+

@@ -1,0 +1,323 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.834
+Começaremos analisando
+o limite mínimo.
+
+00:00:02.868 --> 00:00:06.634
+A única forma de fazermos
+o app ir para menos de 1
+
+00:00:06.667 --> 00:00:10.200
+é apertando o "-"
+quando há 1 café.
+
+00:00:10.234 --> 00:00:13.200
+Lembre-se que o "-"
+aciona o método decrement()
+
+00:00:13.234 --> 00:00:14.501
+no arquivo Java,
+
+00:00:14.534 --> 00:00:17.167
+então temos que modificar
+o método decrement()
+
+00:00:17.200 --> 00:00:20.200
+para evitar que o app atualize
+a quantidade na tela.
+
+00:00:20.234 --> 00:00:23.567
+Eu abri o código de decrement()
+no arquivo Java.
+
+00:00:23.601 --> 00:00:25.434
+Aqui dentro do método,
+
+00:00:25.467 --> 00:00:27.634
+não queremos que esta linha
+seja executada
+
+00:00:27.667 --> 00:00:30.167
+quando a quantidade
+já é 1.
+
+00:00:30.200 --> 00:00:34.334
+Senão, esta linha de código
+mudará a quantidade para 0.
+
+00:00:34.367 --> 00:00:36.968
+Vou inserir um código
+no começo do método.
+
+00:00:37.000 --> 00:00:38.200
+Criarei um If Statement,
+
+00:00:38.234 --> 00:00:40.634
+pois só quero
+executar esta lógica
+
+00:00:40.667 --> 00:00:42.667
+se a quantidade for 1.
+
+00:00:42.701 --> 00:00:46.601
+Em Java, para verificar
+se dois valores são iguais,
+
+00:00:46.634 --> 00:00:48.901
+usamos o sinal "==".
+
+00:00:49.400 --> 00:00:52.734
+Um só "=" significa outra coisa.
+Voltando ao código:
+
+00:00:52.767 --> 00:00:57.200
+se a quantidade não for 1,
+pularemos este bloco todo
+
+00:00:57.234 --> 00:00:59.901
+e continuaremos atualizando
+a quantidade.
+
+00:00:59.934 --> 00:01:04.200
+Dentro deste If Statement,
+porei uma instrução de retorno.
+
+00:01:04.234 --> 00:01:07.567
+Eu dei essa dica antes,
+no quiz.
+
+00:01:07.601 --> 00:01:09.601
+Se o retorno do método
+for "void",
+
+00:01:09.634 --> 00:01:13.567
+você pode dizer "return;",
+sem valor de retorno.
+
+00:01:13.601 --> 00:01:16.000
+Isso quer dizer
+para sairmos do método
+
+00:01:16.033 --> 00:01:18.400
+sem executar
+as linhas seguintes,
+
+00:01:18.434 --> 00:01:22.534
+deixando de atualizar
+e de exibir a variável.
+
+00:01:22.567 --> 00:01:26.434
+Se a quantidade não for 1 -
+digamos que seja 10 -
+
+00:01:26.467 --> 00:01:30.300
+a condição de teste é falsa
+e nós ignoramos este bloco,
+
+00:01:30.334 --> 00:01:33.000
+continuando
+a partir desta linha.
+
+00:01:33.033 --> 00:01:35.400
+Agora,
+vejamos o limite máximo.
+
+00:01:35.434 --> 00:01:38.434
+A única forma de superar 100
+é clicando em "+"
+
+00:01:38.467 --> 00:01:40.834
+quando já há 100 cafés.
+
+00:01:40.868 --> 00:01:43.300
+O botão "+" aciona
+o método increment(),
+
+00:01:43.334 --> 00:01:45.801
+então temos que modificá-lo
+para evitar que o app
+
+00:01:45.834 --> 00:01:49.501
+atualize a quantidade
+para 101 cafés.
+
+00:01:49.534 --> 00:01:52.200
+Dentro de increment(),
+adicionaremos uma lógica,
+
+00:01:52.234 --> 00:01:54.434
+como fizemos
+com decrement().
+
+00:01:54.467 --> 00:01:57.000
+Se a variável quantity
+estiver em 100,
+
+00:01:57.033 --> 00:01:59.133
+devemos sair do método
+antecipadamente.
+
+00:01:59.167 --> 00:02:02.133
+Senão, devemos continuar
+aumentando a quantidade,
+
+00:02:02.167 --> 00:02:05.334
+de um café em um,
+e exibindo-a na tela.
+
+00:02:05.367 --> 00:02:07.934
+Vejamos como fica
+no meu dispositivo.
+
+00:02:07.968 --> 00:02:10.367
+Se eu apertar "-"
+algumas vezes,
+
+00:02:10.400 --> 00:02:13.801
+não passa de 1 café.
+Que bom.
+
+00:02:13.834 --> 00:02:15.734
+Para testar
+o limite máximo,
+
+00:02:15.767 --> 00:02:18.634
+vou mudar o valor inicial
+de quantity no arquivo Java
+
+00:02:18.667 --> 00:02:20.734
+para 99 cafés.
+
+00:02:21.534 --> 00:02:23.968
+Farei uma mudança similar
+no XML.
+
+00:02:24.000 --> 00:02:27.300
+99 cafés são US$ 195.
+
+00:02:27.334 --> 00:02:29.200
+Agora,
+vou rodar no dispositivo.
+
+00:02:29.234 --> 00:02:31.067
+Clicando no "+"
+algumas vezes,
+
+00:02:31.100 --> 00:02:34.167
+veja que continua
+em 100 cafés.
+
+00:02:34.200 --> 00:02:36.501
+Legal,
+nosso código funciona!
+
+00:02:36.534 --> 00:02:38.367
+Se você escolheu
+fazer o desafio,
+
+00:02:38.400 --> 00:02:39.868
+eis a solução:
+
+00:02:39.901 --> 00:02:41.400
+No método increment(),
+
+00:02:41.434 --> 00:02:44.267
+se a quantidade já é
+100 cafés,
+
+00:02:44.300 --> 00:02:46.434
+mostramos
+esta mensagem Toast
+
+00:02:46.467 --> 00:02:48.767
+antes de sairmos
+antecipadamente.
+
+00:02:48.801 --> 00:02:52.267
+Para criar uma mensagem Toast,
+chame "Toast.makeText"
+
+00:02:52.300 --> 00:02:55.434
+e passe três argumentos
+de entrada diferentes.
+
+00:02:55.467 --> 00:02:59.000
+(1) Um contexto,
+que é esta atividade;
+
+00:02:59.033 --> 00:03:01.067
+(2) uma mensagem, que é:
+
+00:03:01.100 --> 00:03:03.033
+"Impossível pedir
+mais de 100 cafés",
+
+00:03:03.067 --> 00:03:04.300
+neste caso;
+
+00:03:04.334 --> 00:03:07.167
+(3) e o tempo de exibição
+da mensagem na tela.
+
+00:03:07.200 --> 00:03:11.534
+É para dizer que a mensagem
+deve aparecer por pouco tempo.
+
+00:03:11.567 --> 00:03:14.234
+Todo este código
+cria um objeto Toast
+
+00:03:14.267 --> 00:03:17.567
+sobre o qual chamamos
+um método show().
+
+00:03:17.601 --> 00:03:19.868
+Da mesma maneira,
+no método decrement(),
+
+00:03:19.901 --> 00:03:22.267
+se a quantidade
+já for 1 café,
+
+00:03:22.300 --> 00:03:26.200
+mostraremos uma mensagem de erro
+logo antes de sairmos do método.
+
+00:03:26.234 --> 00:03:28.968
+Esta instrução também
+cria um objeto Toast,
+
+00:03:29.000 --> 00:03:30.167
+com esta mensagem,
+
+00:03:30.200 --> 00:03:32.634
+e nós chamamos sobre ele
+um método show().
+
+00:03:33.200 --> 00:03:36.267
+Nós usamos este site
+para descobrir como exibir
+
+00:03:36.300 --> 00:03:38.234
+uma mensagem Toast
+no nosso app.
+
+00:03:39.167 --> 00:03:41.801
+Aqui tem um exemplo
+que você poderia ter copiado.
+
+00:03:41.834 --> 00:03:45.267
+Normalmente, é bom avisar
+o usuário do que está havendo,
+
+00:03:45.300 --> 00:03:48.901
+seja com uma mensagem de erro
+ou com outro sinal na interface.
+
+00:03:48.934 --> 00:03:53.534
+Senão, pode parecer
+que o app parou de funcionar.
+

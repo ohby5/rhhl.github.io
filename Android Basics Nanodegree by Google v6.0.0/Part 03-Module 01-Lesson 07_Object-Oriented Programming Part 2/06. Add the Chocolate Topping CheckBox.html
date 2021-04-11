@@ -1,0 +1,395 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add the Chocolate Topping CheckBox</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Object-Oriented Programming: Part 2</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Adding a CheckBox.html">01. Adding a CheckBox</a>
+    </li>
+    <li class="">
+      <a href="02. Boolean Data Type.html">02. Boolean Data Type</a>
+    </li>
+    <li class="">
+      <a href="03. Update Order Summary.html">03. Update Order Summary</a>
+    </li>
+    <li class="">
+      <a href="04. Scrolling Along.html">04. Scrolling Along</a>
+    </li>
+    <li class="">
+      <a href="05. Add Chocolate Topping.html">05. Add Chocolate Topping</a>
+    </li>
+    <li class="">
+      <a href="06. Add the Chocolate Topping CheckBox.html">06. Add the Chocolate Topping CheckBox</a>
+    </li>
+    <li class="">
+      <a href="07. Intro to Imposter Syndrome.html">07. Intro to Imposter Syndrome</a>
+    </li>
+    <li class="">
+      <a href="08. Googlers&#x27; Montage.html">08. Googlers&#x27; Montage</a>
+    </li>
+    <li class="">
+      <a href="09. What&#x27;s Your Name.html">09. What&#x27;s Your Name?</a>
+    </li>
+    <li class="">
+      <a href="10. Conditional Code.html">10. Conditional Code</a>
+    </li>
+    <li class="">
+      <a href="11. Conditional Code (Email).html">11. Conditional Code (Email)</a>
+    </li>
+    <li class="">
+      <a href="12. Conditional Code (Smoothie).html">12. Conditional Code (Smoothie)</a>
+    </li>
+    <li class="">
+      <a href="13. Introduction to IfElse.html">13. Introduction to If/Else</a>
+    </li>
+    <li class="">
+      <a href="14. Syntax of IfElse.html">14. Syntax of If/Else</a>
+    </li>
+    <li class="">
+      <a href="15. Relational Operators.html">15. Relational Operators</a>
+    </li>
+    <li class="">
+      <a href="16. Adjust Price With Toppings.html">16. Adjust Price With Toppings</a>
+    </li>
+    <li class="">
+      <a href="17. Negative Cups of Coffee.html">17. Negative Cups of Coffee</a>
+    </li>
+    <li class="">
+      <a href="18. Let Someone Else Do the Hard Work.html">18. Let Someone Else Do the Hard Work</a>
+    </li>
+    <li class="">
+      <a href="19. Practice With Intents.html">19. Practice With Intents</a>
+    </li>
+    <li class="">
+      <a href="20. Localization (OPTIONAL).html">20. Localization (OPTIONAL)</a>
+    </li>
+    <li class="">
+      <a href="21. Styles.html">21. Styles</a>
+    </li>
+    <li class="">
+      <a href="22. Styles.html">22. Styles</a>
+    </li>
+    <li class="">
+      <a href="23. Themes.html">23. Themes</a>
+    </li>
+    <li class="">
+      <a href="24. Reflect on What You&#x27;ve Accomplished.html">24. Reflect on What You&#x27;ve Accomplished</a>
+    </li>
+    <li class="">
+      <a href="25. Intro to Study Break Peek Vision.html">25. Intro to Study Break: Peek Vision</a>
+    </li>
+    <li class="">
+      <a href="26. Study Break Peek Vision.html">26. Study Break: Peek Vision</a>
+    </li>
+    <li class="">
+      <a href="27. You&#x27;re (Almost) Done!.html">27. You&#x27;re (Almost) Done!</a>
+    </li>
+    <li class="">
+      <a href="28. Congratulations!.html">28. Congratulations!</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. Add the Chocolate Topping CheckBox</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="add-the-chocolate-topping-checkbox">Add the Chocolate Topping Checkbox</h2>
+<p>Things are getting tougher! We’re offering less hand-holding, and letting you come up with the code yourself. In this task, you will implement a whole feature on your own.</p>
+<h3 id="your-goal">Your Goal</h3>
+<p>Your goal is to add a chocolate topping checkbox in the Just Java app. </p>
+<p>This will be similar to the whipped cream topping checkbox. This is what the app should look like when you’re finished.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/justjava.png" alt="Add a checkbox with the label &quot;Chocolate&quot;" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Add a checkbox with the label "Chocolate"</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/justjava2.png" alt="Users can click on the checkbox to decide whether or not they want to add chocolate. The order summary will detail if chocolate was chosen. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Users can click on the checkbox to decide whether or not they want to add chocolate. The order summary will detail if chocolate was chosen. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="how-to-start">How to Start</h2>
+<p>In the real world, you’ll get requirements about what the app should do, and you will have to come up with all the steps to make the app reach that goal. To start, plan out the steps for how you will need to modify the code. </p>
+<p>If you need help, go back and watch how we added the <a href="https://classroom.udacity.com/courses/ud836/lessons/4584545214/concepts/45790952210923?contentVersion=1.0.0&contentLocale=en-us" target="_blank">whipped cream checkbox</a> to the app.</p>
+<p>Every time you make a change to the code, stop and make sure your app still runs on your device and does what you expect. If you run your app after every change and you ever find an unexpected problem, it’s obvious what change caused the bug. If you've made twenty changes since you last ran your app, you'll have a very hard time finding the source of any problems.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Checkbox for Chocolate</p></h3>
+  <div>
+  <div>
+    <p><strong>QUESTION:</strong> <p>Plan what you will do to add a functioning chocolate checkbox. What <strong>files</strong> will you change?</p></p>
+    <div class="" form-group">
+      <label for="answer"><strong>ANSWER:</strong></label>
+      <textarea class="form-control" id="answer"></textarea>
+    </div>
+  </div>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <p><i>These answers need to be solved by yourself, I believe you can do it</i></p>
+
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="add-the-chocolate-topping-checkbox-solution">Add the Chocolate Topping Checkbox Solution</h2>
+<p><em>Make sure you try planning on your own before diving into the solution. Thinking through solutions to problems on you own will help you retain the skills you're learning and help you become an even better developer.</em></p>
+<h3 id="step-1--change-the-xml">Step 1 : Change the XML</h3>
+<p>First, let’s update the XML. We want to add a checkbox in the LinearLayout. That can be done with the code <a href="https://gist.github.com/udacityandroid/273e1273286e5169c87d" target="_blank">here</a>.</p>
+<p>Specifically, we add the following lines:</p>
+<pre>
+   &#60;CheckBox
+       android:id="@+id/chocolate_checkbox"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:paddingLeft="24dp"
+       android:text="Chocolate"
+       android:textSize="16sp" /&#62;
+</pre>
+<h3 id="step-2--the-plan-for-the-java-changes">Step 2 : The Plan for the Java Changes</h3>
+<p>Given the new checkbox, what should happen when the submit button is clicked? Let’s think about the final pseudocode for what will happen when the submit order button is clicked.</p>
+<p><strong>When the submit order button is clicked</strong></p>
+<ol>
+<li>Set hasWhippedCream to the value of the checked state in the whipped cream CheckBox.</li>
+<li><strong>Set hasChocolate to the value of the checked state in the chocolate CheckBox</strong>.</li>
+<li>Calculate the price and store this value in the price variable.</li>
+<li><em>Create the order summary</em> and store this String in the message variable.</li>
+<li>Display message on the screen. </li>
+</ol>
+<p><strong>Creating the order summary</strong></p>
+<ol>
+<li>Set priceMessage to the name.</li>
+<li>Append to priceMessage "Add whipped cream?" and the value of whether the coffee has whipped cream.</li>
+<li><strong>Append to priceMessage "Add chocolate?" and the value of whether the coffee has chocolate.</strong></li>
+<li>Append to priceMessage "Quantity:" and the quantity.</li>
+<li>Append to priceMessage "Total: $" and the total price.</li>
+<li>Append to priceMessage "Thank you!"</li>
+<li>Return the priceMessage</li>
+</ol>
+<p>The steps in bold are the ones that need to be implemented or fully implemented given that you’re adding this new checkbox.</p>
+<h3 id="step-3--change-the-java">Step 3 : Change the Java</h3>
+<p><strong>Set hasChocolate to the value of the chocolate CheckBox</strong></p>
+<p>In <code>submitOrder</code> method, we need to get the checked state from the chocolate CheckBox. Here are the steps for doing that: </p>
+<ol>
+<li><p>You don’t have a reference to that object, so you’ll need to get the CheckBox object using <code>findViewById</code>. You’ll need to pass the chocolate checkbox id. <pre> findViewById(R.id.chocolate_checkbox);</pre></p></li>
+<li><p>You can then store the returned value in a Checkbox object.<pre> CheckBox chocolateCheckBox = findViewById(R.id.chocolate_checkbox); </pre></p></li>
+<li><p>Because findViewById returns a generic View, you’ll need to cast it to a CheckBox.<pre> CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox); </pre></p></li>
+<li><p>Now you’ll need to call a method on the object. In the <a href="http://developer.android.com/reference/android/widget/CompoundButton.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#isChecked()" target="_blank" >documentation</a> you’ll see there is a method called <code>isChecked</code>.</p></li>
+<li><p>Save what is returned from <code>isChecked</code> in a boolean variable.<pre>boolean hasChocolate = chocolateCheckBox.isChecked(); </pre></p></li>
+</ol>
+<p>The final code for getting the value of the checkbox and storing it in a variable is:</p>
+<pre>
+// Figure out if the user wants chocolate topping
+CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
+boolean hasChocolate = chocolateCheckBox.isChecked();
+</pre>
+<p><strong>Creating the order summary</strong></p>
+<p>The only issue here is that you need access to the boolean you just retrieved in the <code>createOrderSummary</code> method. We’ll need to pass the boolean to createOrderSummary method as an input parameter.</p>
+<ol>
+<li><p>Here is the code when you <strong>call</strong> the createOrderSummary method that passes in the hasChocolate boolean:<pre>createOrderSummary(price, hasWhippedCream, hasChocolate);</pre></p></li>
+<li><p>This will produce an error in Android Studio because the method call does not match the method definition (the number of parameters is different). Therefore, you also need to change where the method is <strong>defined</strong> so that it has this new parameter. <pre>private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate)</pre> </p></li>
+<li><p>Update the javadoc comment as well to document this new input parameter addChocolate.<pre>
+/&#42;&#42;
+&#42; Create summary of the order.
+&#42;
+&#42; <a href="https://github.com/param" rel="noopener noreferrer" target="_blank">@param</a> addWhippedCream is whether or not the user wants whipped cream topping
+&#42; <a href="https://github.com/param" rel="noopener noreferrer" target="_blank">@param</a> addChocolate is whether or not the user wants chocolate topping
+&#42; <a href="https://github.com/param" rel="noopener noreferrer" target="_blank">@param</a> price of the order
+&#42; <a href="https://github.com/return" rel="noopener noreferrer" target="_blank">@return</a> text summary
+&#42;/
+</pre></p></li>
+</ol>
+<p><strong>Append to priceMessage "Add chocolate?" and the value of whether the coffee has chocolate.</strong></p>
+<p>Okay, now you need to change the message that is displayed to show whether the customer ordered chocolate or not. The string to do that is below:</p>
+<pre>"Add chocolate?" + addChocolate </pre>
+<p>The final code for create order summary that appends this string is:</p>
+<pre>
+private String createOrderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
+   String priceMessage = "Name: Lyla the Labyrinth";
+   priceMessage += "\nAdd whipped cream? " + addWhippedCream;
+   priceMessage += "\nAdd chocolate? " + addChocolate;
+   priceMessage += "\nQuantity: " + quantity;
+   priceMessage += "\nTotal: $" + price;
+   priceMessage += "\nThank you!";
+   return priceMessage;
+}
+</pre>
+<h3 id="the-final-code">The Final Code</h3>
+<p>The final java code can be found <a href="https://gist.github.com/udacityandroid/609dbb5370ba0665955a" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Intro to Imposter Syndrome.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. Add the Chocolate Topping CheckBox')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

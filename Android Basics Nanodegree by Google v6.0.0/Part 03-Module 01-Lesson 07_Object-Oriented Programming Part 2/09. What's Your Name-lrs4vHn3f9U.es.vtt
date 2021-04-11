@@ -1,0 +1,941 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.452 --> 00:00:03.620
+Bien, esta tarea ha sido 
+todo un reto de codificación.
+
+00:00:03.620 --> 00:00:08.150
+Tenía muchas partes e involucró
+una vista que no se había usado antes.
+
+00:00:08.150 --> 00:00:10.650
+Veamos la solución paso a paso.
+
+00:00:10.650 --> 00:00:13.840
+Primero, les pedí que planificasen
+los pasos que había que dar.
+
+00:00:13.840 --> 00:00:16.160
+El primer paso era añadir 
+este campo de texto
+
+00:00:16.160 --> 00:00:18.520
+para que el usuario pudiese 
+introducir su nombre.
+
+00:00:18.520 --> 00:00:20.880
+Segundo, cuando se hace clic
+en el botón de pedido
+
+00:00:20.880 --> 00:00:23.050
+queremos obtener el nombre 
+del campo de texto
+
+00:00:23.050 --> 00:00:24.630
+y almacenarlo en una variable.
+
+00:00:24.630 --> 00:00:27.080
+El tercer paso es actualizar
+el resumen del pedido
+
+00:00:27.080 --> 00:00:28.580
+para que muestre ese nombre.
+
+00:00:29.240 --> 00:00:30.980
+Veamos el primer paso.
+
+00:00:31.500 --> 00:00:34.800
+Nunca habíamos añadido
+un campo de inserción de texto en la app,
+
+00:00:34.800 --> 00:00:36.750
+así que busquemos en Google
+cómo hacerlo.
+
+00:00:37.130 --> 00:00:39.650
+Ya que deseamos que el usuario
+introduzca la entrada,
+
+00:00:39.650 --> 00:00:42.165
+vamos a buscar "entrada usuario android".
+
+00:00:42.165 --> 00:00:45.635
+El primer resultado es una página
+developer.android.com, que pinta bien.
+
+00:00:46.295 --> 00:00:49.765
+Esta página describe buenas prácticas 
+para entradas de usuario.
+
+00:00:49.765 --> 00:00:53.305
+Habla sobre gestos táctiles, 
+entradas de teclado
+
+00:00:53.305 --> 00:00:55.265
+y controladores de juegos.
+
+00:00:55.265 --> 00:00:59.455
+La entrada de teclado es lo que queremos,
+así que hacemos clic en el primer enlace.
+
+00:00:59.455 --> 00:01:02.045
+Empiezo desplazándome
+por la página rápidamente.
+
+00:01:02.045 --> 00:01:05.150
+Veo un montón de ejemplos de XML,
+que podrían ser útiles.
+
+00:01:05.150 --> 00:01:07.870
+Me doy cuenta de que hay
+una comilla angular abierta
+
+00:01:07.870 --> 00:01:09.500
+y luego está el nombre de vista.
+
+00:01:09.500 --> 00:01:12.400
+En este caso el nombre de vista
+parece ser EditText.
+
+00:01:12.610 --> 00:01:17.260
+Si me desplazo por los otros ejemplos,
+también veo que es una vista de EditText.
+
+00:01:17.260 --> 00:01:22.330
+Parece que la vista que toma
+la entrada del teclado se llama EditText.
+
+00:01:22.330 --> 00:01:26.049
+Alternativamente, se usa la hoja de trucos
+de vistas comunes de Android.
+
+00:01:26.330 --> 00:01:29.000
+El EditText también aparece
+en esta lista de vistas
+
+00:01:29.000 --> 00:01:33.410
+y el ejemplo de la descripción del álbum
+se parece al campo nombre de nuestra app.
+
+00:01:33.730 --> 00:01:36.600
+Copiemos esta XML y añadámosla 
+a nuestra aplicación.
+
+00:01:36.750 --> 00:01:39.840
+Queremos el campo de nombre
+en la parte de arriba del formulario,
+
+00:01:39.840 --> 00:01:42.830
+encima del encabezado <i>ingredientes</i>,
+así que lo añadimos aquí.
+
+00:01:42.830 --> 00:01:45.510
+Inmediatamente, nos da error
+y dice que no puede resolver
+
+00:01:45.510 --> 00:01:46.809
+este símbolo para <i>hint</i>.
+
+00:01:47.240 --> 00:01:49.970
+Aquí se hace referencia
+a la descripción de álbum de texto
+
+00:01:49.970 --> 00:01:51.740
+pero eso estaba en la hoja de trucos.
+
+00:01:51.740 --> 00:01:55.530
+Vamos a borrarlo y reemplazarlo 
+con nuestra propia <i>hint</i>, que es <i>name</i>.
+
+00:01:55.530 --> 00:01:58.640
+Como queremos el campo nombre
+en la parte de arriba del formulario
+
+00:01:58.640 --> 00:02:01.910
+por encima del encabezado <i>ingredientes</i>,
+lo pegamos aquí mismo.
+
+00:02:01.910 --> 00:02:05.150
+Este será el primer hijo
+del bloque de código que se ve aquí.
+
+00:02:05.150 --> 00:02:08.859
+Asegurémonos ahora de que los atributos
+se han establecido como queremos.
+
+00:02:09.120 --> 00:02:12.670
+Primero, tenemos la vista ID,
+que se llama <i>album_description_view</i>
+
+00:02:13.350 --> 00:02:15.590
+Esto se refiere al ejemplo
+de la hoja de trucos,
+
+00:02:15.590 --> 00:02:18.000
+así que le damos un nombre más adecuado.
+
+00:02:19.020 --> 00:02:21.200
+Llamémoslo <i>name_field</i>.
+
+00:02:21.840 --> 00:02:25.279
+Luego tenemos <i>width</i> y <i>height</i>,
+que son atributos conocidos.
+
+00:02:25.870 --> 00:02:29.052
+Ahora, la anchura del campo de texto
+está ajustado a <i>match_parent</i>.
+
+00:02:29.052 --> 00:02:33.620
+Esto significa que el campo será tan ancho
+como el del nodo madre.
+
+00:02:33.620 --> 00:02:34.960
+Luego tenemos la altura.
+
+00:02:34.960 --> 00:02:37.210
+La altura se ha configurado 
+a <i>wrap_content</i>,
+
+00:02:37.210 --> 00:02:39.380
+así que será tan alta como su contenido.
+
+00:02:39.380 --> 00:02:42.630
+Estos dos valores parecen razonables,
+así que los dejaremos así.
+
+00:02:42.630 --> 00:02:44.230
+Después viene <i>hint</i>.
+
+00:02:44.230 --> 00:02:46.450
+Este atributo no lo hemos visto antes
+
+00:02:46.450 --> 00:02:49.800
+y sale un error que nos dice
+que no puede resolver esta cadena.
+
+00:02:49.800 --> 00:02:52.440
+Consultemos la documentación
+de <i>EditText_android</i>
+
+00:02:52.440 --> 00:02:55.300
+para entender qué significa este atributo.
+
+00:02:56.020 --> 00:03:00.220
+Buscando <i>EditText_android</i>
+encontramos la página de documentación.
+
+00:03:00.220 --> 00:03:05.040
+Aparece una vista de clase rápida
+y luego una lista de atributos de XML.
+
+00:03:05.040 --> 00:03:08.900
+Resulta que la clase EditText
+hereda de TextView y de View,
+
+00:03:08.900 --> 00:03:12.250
+de ahí que aparezcan
+atributos XML heredados.
+
+00:03:12.250 --> 00:03:15.590
+Una vez expandidos,
+ya podemos buscar <i>android hint</i>.
+
+00:03:15.860 --> 00:03:18.230
+Bien, este es el atributo
+que andábamos buscando.
+
+00:03:18.230 --> 00:03:20.190
+Si nos desplazamos hacia la derecha,
+
+00:03:20.190 --> 00:03:24.400
+dice que el texto <i>hint</i> se muestra
+cuando el campo de texto está vacío.
+
+00:03:24.710 --> 00:03:27.590
+Esto ayuda al usuario a saber
+qué debe escribir en ese campo.
+
+00:03:27.590 --> 00:03:31.580
+En mi demostración con la app,
+el texto <i>hint</i> decía <i>name</i>.
+
+00:03:31.580 --> 00:03:35.840
+De modo que borramos esta cadena
+de nuestro código y escribimos <i>name</i>
+
+00:03:36.500 --> 00:03:38.520
+Después viene el tipo de entrada.
+
+00:03:38.520 --> 00:03:41.980
+Este también es un atributo nuevo,
+por eso consultamos la documentación.
+
+00:03:42.570 --> 00:03:44.790
+Busco <i>android input type</i>.
+
+00:03:44.790 --> 00:03:46.150
+Aparece en este listado
+
+00:03:46.150 --> 00:03:50.830
+y se describe como el tipo de dato
+que se introduce en el campo de texto.
+
+00:03:50.830 --> 00:03:54.980
+Se usa para ayudar al método de entrada
+a decidir qué puede escribir el usuario.
+
+00:03:54.980 --> 00:03:56.830
+La descripción es algo vaga
+
+00:03:56.830 --> 00:03:59.610
+así que hacemos clic en el atributo
+para saber más.
+
+00:03:59.610 --> 00:04:02.760
+Esta es la descripción completa
+de InputType.
+
+00:04:02.760 --> 00:04:05.780
+Estos son los posibles valores 
+que podemos establecer.
+
+00:04:05.780 --> 00:04:09.470
+En el ejemplo de la hoja de trucos,
+el XML dice textMultiLine.
+
+00:04:09.750 --> 00:04:14.120
+Esto quiere decir que el campo de texto
+puede contener varias líneas.
+
+00:04:14.120 --> 00:04:16.650
+No esperamos que el nombre
+de alguien sea muy largo,
+
+00:04:16.650 --> 00:04:19.550
+así que una línea de texto debería bastar.
+
+00:04:19.550 --> 00:04:21.959
+Usemos <i>text</i> como texto de entrada.
+
+00:04:21.959 --> 00:04:25.010
+Si borro textMultiline
+y empiezo a escribir text,
+
+00:04:25.010 --> 00:04:29.710
+aparece una lista de opciones
+como sugerencias de autocompletar.
+
+00:04:29.710 --> 00:04:31.550
+Elijo text y pulso <i>enter</i>.
+
+00:04:31.910 --> 00:04:35.610
+Ahora ejecuto la app en el dispositivo
+para comprobar que aparece EditText.
+
+00:04:36.180 --> 00:04:38.490
+Al ejecutar la app, veo el campo <i>name</i>.
+
+00:04:38.490 --> 00:04:39.410
+Genial.
+
+00:04:39.410 --> 00:04:41.455
+Y también puedo escribir en él.
+
+00:04:41.455 --> 00:04:43.620
+Pero, en realidad, empieza en minúsculas.
+
+00:04:43.620 --> 00:04:47.040
+Cuando escriba, 
+quiero que empiece con mayúscula.
+
+00:04:47.260 --> 00:04:50.750
+Para arreglarlo,
+puedo cambiar el tipo de entrada.
+
+00:04:51.030 --> 00:04:52.940
+Veamos las otras opciones.
+
+00:04:53.390 --> 00:04:57.713
+Hay textCapcharacters, textCapwords,
+textCapsentences...
+
+00:04:57.713 --> 00:04:59.820
+Un montón de cosas.
+
+00:05:00.210 --> 00:05:02.990
+Pueden interesarnos los que tratan
+del uso de mayúsculas.
+
+00:05:03.690 --> 00:05:05.530
+Tras leer estas descripciones,
+
+00:05:05.530 --> 00:05:08.500
+textCapwords parece la mejor opción.
+
+00:05:08.500 --> 00:05:10.630
+Vamos a copiarlo y usarlo.
+
+00:05:11.040 --> 00:05:14.129
+En lugar de text, usamos textCapwords.
+
+00:05:14.750 --> 00:05:16.510
+Volvamos a ejecutar la app.
+
+00:05:16.510 --> 00:05:19.415
+Bien, ahora el teclado comienza
+con mayúsculas.
+
+00:05:19.415 --> 00:05:23.016
+Empezamos a escribir el nombre
+y si añadimos un espacio
+
+00:05:23.016 --> 00:05:25.208
+la siguiente palabra está en mayúsculas.
+
+00:05:25.208 --> 00:05:26.260
+Genial.
+
+00:05:26.520 --> 00:05:29.270
+También me doy cuenta
+de que falta algo de espacio
+
+00:05:29.270 --> 00:05:31.945
+entre el campo de nombre
+y el encabezado <i>ingredientes</i>.
+
+00:05:31.945 --> 00:05:35.800
+Hemos añadido 16 dp de espacio vertical.
+Aquí hacemos lo mismo.
+
+00:05:36.010 --> 00:05:38.846
+Podría añadirlo como margen inferior
+en el campo EditText,
+
+00:05:38.846 --> 00:05:42.800
+pero lo voy a poner como margen superior
+en el encabezado <i>ingredientes</i>.
+
+00:05:42.800 --> 00:05:46.000
+Vale, el espaciado está bien
+y el campo de nombre ya es correcto.
+
+00:05:46.730 --> 00:05:49.650
+Con esto terminan los cambios de XML 
+para el primer paso.
+
+00:05:49.650 --> 00:05:51.970
+Ahora hay que modificar el código Java.
+
+00:05:51.970 --> 00:05:54.690
+Para el segundo paso,
+al hacer clic en el botón de pedido
+
+00:05:54.690 --> 00:05:58.260
+queremos saber el nombre del campo texto
+y almacenarlo en una variable.
+
+00:05:58.730 --> 00:06:02.530
+Para el ojo humano es fácil ver el nombre
+en este campo de aquí
+
+00:06:02.530 --> 00:06:05.900
+pero la app de Android no sabe
+que queremos poner el nombre
+
+00:06:05.900 --> 00:06:07.850
+en el resumen del pedido.
+
+00:06:08.070 --> 00:06:10.840
+Aún está usando la codificación de Lyla.
+
+00:06:10.840 --> 00:06:13.190
+Hay que hacer un cambio y usar este nombre
+
+00:06:13.190 --> 00:06:16.720
+que es lo mismo que hubo que averiguar
+para seleccionar las opciones
+
+00:06:16.720 --> 00:06:19.300
+para actualizar el resumen del pedido.
+
+00:06:19.560 --> 00:06:22.560
+No sabemos cómo se lee el texto
+del campo EditText,
+
+00:06:22.560 --> 00:06:24.240
+así que lo buscamos en Google.
+
+00:06:24.680 --> 00:06:28.850
+Busco "cómo obtener texto
+de campo editext android".
+
+00:06:28.850 --> 00:06:30.580
+El primer resultado pinta bien.
+
+00:06:30.580 --> 00:06:32.720
+Es una pregunta de desbordamiento de pila.
+
+00:06:32.720 --> 00:06:35.880
+Puedo leer la pregunta,
+pero lo que quiero es la respuesta.
+
+00:06:35.880 --> 00:06:39.820
+Puedo echar un vistazo rápido
+para ver si la página me es útil.
+
+00:06:39.820 --> 00:06:43.510
+Esta respuesta tiene el visto bueno
+y tiene muchos votos positivos,
+
+00:06:43.510 --> 00:06:45.610
+así que la leo con más detenimiento.
+
+00:06:45.610 --> 00:06:47.550
+Empiezo con el fragmento de código.
+
+00:06:47.550 --> 00:06:50.920
+Parece que este código puede ir 
+directamente a una clase de actividad,
+
+00:06:50.920 --> 00:06:53.420
+porque se llama al método FindViewByld.
+
+00:06:53.710 --> 00:06:57.740
+Estamos tratando de buscar
+la jerarquía de vista para este ID.
+
+00:06:57.900 --> 00:07:01.910
+Una vez encontremos esta vista,
+lo convertimos en vista de EditText
+
+00:07:01.910 --> 00:07:05.210
+y lo almacenaremos en una variable
+que se llame text.
+
+00:07:05.210 --> 00:07:09.020
+En la segunda línea intentamos declarar
+una variable tipo string con nombre <i>value</i>
+
+00:07:09.020 --> 00:07:10.750
+y almacenarlo dentro de ella.
+
+00:07:10.750 --> 00:07:16.011
+Aparecen muchos paréntesis, puntos
+y palabras, pero quizá puedas ver
+
+00:07:16.011 --> 00:07:19.460
+que estamos intentando sacar el texto
+fuera del campo EditText.
+
+00:07:19.810 --> 00:07:23.180
+Y estamos intentando almacenarlo
+dentro de la variable string <i>value</i>.
+
+00:07:23.180 --> 00:07:26.840
+Vamos a copiar y pegar este código
+en nuestra app para ver si funciona.
+
+00:07:27.120 --> 00:07:31.140
+En la clase MainActivity voy a añadir
+el código en el método submitOrder.
+
+00:07:31.480 --> 00:07:34.940
+Elijo este método porque es aquí
+donde se hace clic en el botón de pedido
+
+00:07:34.940 --> 00:07:37.420
+y es donde queremos leer el campo <i>name</i>.
+
+00:07:38.230 --> 00:07:41.050
+Voy a pegar el código 
+del desbordamiento de pila
+
+00:07:41.050 --> 00:07:42.720
+en la parte de arriba del método.
+
+00:07:43.110 --> 00:07:46.610
+De inmediato hay un error que dice que
+no se puede resolver este símbolo.
+
+00:07:46.610 --> 00:07:50.340
+Necesitamos reemplazarlo
+por el Viewld para el nombre de campo.
+
+00:07:50.340 --> 00:07:52.440
+Volviendo a nuestro layout.xml,
+
+00:07:52.440 --> 00:07:56.588
+dimos al campo EditText 
+una vista ID de <i>name_field</i>,
+
+00:07:56.588 --> 00:08:01.410
+en el archivo Java, lo cambio
+a <i>R.id.name_field</i>.
+
+00:08:01.410 --> 00:08:04.530
+No hay más errores,
+así que trato de ejecutar la app.
+
+00:08:04.530 --> 00:08:07.400
+¿Cómo sabré si el código funciona o no?
+
+00:08:07.940 --> 00:08:09.670
+Podría añadir un mensaje de registro
+
+00:08:09.670 --> 00:08:13.970
+para verificar que <i>value</i>
+llama a <i>name</i> en este campo.
+
+00:08:14.200 --> 00:08:16.720
+Y aquí está el código 
+para el mensaje de registro.
+
+00:08:16.730 --> 00:08:20.560
+Figura Name, dos puntos
+y luego el string <i>value</i>.
+
+00:08:20.920 --> 00:08:23.020
+<i>Value</i> es un nombre confuso
+para esta variable
+
+00:08:23.020 --> 00:08:25.260
+así que lo voy a llamar <i>name</i>.
+
+00:08:25.260 --> 00:08:28.460
+Así es algo más descriptivo.
+
+00:08:28.460 --> 00:08:33.525
+A propósito, voy a cambiar de nombre
+a EditText para que sea <i>namefield</i>.
+
+00:08:33.760 --> 00:08:36.880
+El nombre text podría confundirnos
+entre todo el resto del código.
+
+00:08:37.070 --> 00:08:40.169
+Vamos a ejecutar la aplicación
+y revisar este mensaje de registro.
+
+00:08:40.169 --> 00:08:40.970
+Bien.
+
+00:08:40.970 --> 00:08:43.860
+Completo el formulario de pedido
+y pulso el botón de pedido
+
+00:08:43.860 --> 00:08:46.450
+para después comprobar el registro.
+
+00:08:46.810 --> 00:08:51.210
+Veo un nuevo mensaje de MainActivity
+que dice Name: Antigravity Anthony.
+
+00:08:51.210 --> 00:08:52.680
+Así que ha funcionado.
+
+00:08:52.680 --> 00:08:56.360
+Este código ha tomado <i>name</i> de este campo.
+
+00:08:56.360 --> 00:08:57.530
+Genial.
+
+00:08:57.930 --> 00:09:00.770
+Ahora tenemos el nombre de usuario
+y una variable
+
+00:09:00.770 --> 00:09:04.060
+y hemos verificado en el registro 
+que es el nombre correcto,
+
+00:09:04.060 --> 00:09:06.930
+podemos actualizar el resumen de pedido
+para ver ese nombre.
+
+00:09:07.380 --> 00:09:10.280
+Para que el resumen del pedido
+muestre el nombre correcto,
+
+00:09:10.280 --> 00:09:13.610
+necesitamos incluirlo como 
+parámetro de entrada para ese método.
+
+00:09:13.610 --> 00:09:16.820
+Entonces, cuando llamamos al método
+createOrderSummary
+
+00:09:16.820 --> 00:09:20.450
+hay que incluir el nombre de la variable
+como un argumento de entrada.
+
+00:09:20.450 --> 00:09:22.410
+Vamos a hacer ese cambio primero.
+
+00:09:22.410 --> 00:09:24.840
+Si añado <i>name</i> como argumento de entrada,
+
+00:09:24.840 --> 00:09:29.440
+habrá un error porque el método llamado 
+no coincide con la signatura del método.
+
+00:09:29.600 --> 00:09:32.360
+Desplazándonos hacia abajo 
+hasta la definición de método,
+
+00:09:32.360 --> 00:09:35.270
+se puede añadir String name
+como parámetro de entrada.
+
+00:09:35.670 --> 00:09:38.410
+También actualizo el documento de Java.
+
+00:09:38.410 --> 00:09:41.930
+Dentro del método createOrderSummary
+se puede usar esta variable.
+
+00:09:42.460 --> 00:09:46.930
+Voy a borrar el nombre codificado
+y luego concatenar esta variable <i>name</i>.
+
+00:09:47.670 --> 00:09:51.360
+Recapitulando, recibimos el nombre
+desde el campo <i>name</i>
+
+00:09:51.360 --> 00:09:55.280
+incluyéndolo como entrada
+en el método createOrderSummary.
+
+00:09:55.520 --> 00:09:59.320
+Dentro de este método,
+se puede añadir <i>name</i> a OrderSummary.
+
+00:09:59.620 --> 00:10:01.720
+Ejecutamos la app 
+para comprobar el código.
+
+00:10:01.720 --> 00:10:06.290
+Tras ejecutar la app, elijo el nombre,
+añado ingredientes y cambio la cantidad.
+
+00:10:06.790 --> 00:10:08.600
+Luego puedo pulsar el botón de pedido.
+
+00:10:08.600 --> 00:10:11.850
+Ahora veo que el resumen de pedido
+contiene el nombre que escribí.
+
+00:10:12.000 --> 00:10:13.258
+¡Yupi!
+
+00:10:13.458 --> 00:10:16.730
+Si cambio el nombre y pulso <i>pedir</i>,
+se vuelve a actualizar.
+
+00:10:17.020 --> 00:10:18.240
+Emocionante.
+
+00:10:18.620 --> 00:10:22.440
+Ahora que en la app funciona todo
+puedo quitar el mensaje de registro.
+
+00:10:22.440 --> 00:10:25.620
+Vuelvo a ejecutar la app
+para cerciorarme de que funciona.
+
+00:10:26.000 --> 00:10:28.640
+Volvamos atrás y respondamos 
+estas preguntas breves.
+
+00:10:28.640 --> 00:10:31.700
+La vista que añadimos a nuestra
+aplicación se llama EditText.
+
+00:10:31.700 --> 00:10:33.390
+La segunda pregunta dice
+
+00:10:33.390 --> 00:10:37.270
+¿qué método Java recupera el texto
+que introdujo el usuario?
+
+00:10:38.120 --> 00:10:40.910
+Podemos responder
+si volvemos a nuestro código.
+
+00:10:40.910 --> 00:10:42.755
+Buscamos en la jerarquía de vista
+
+00:10:42.755 --> 00:10:46.710
+el objeto EditText de Java
+que representaba el campo de nombre.
+
+00:10:46.710 --> 00:10:49.570
+Almacenamos todo en la variable nameField
+
+00:10:49.570 --> 00:10:52.310
+y en ese objeto llamamos al método.
+
+00:10:52.310 --> 00:10:56.060
+Llamamos al método getText,
+que no toma argumentos de entrada
+
+00:10:56.060 --> 00:10:58.800
+y tiene a un objeto por valor de retorno.
+
+00:10:59.510 --> 00:11:01.460
+Eso nos lleva a nuestra tercera pregunta.
+
+00:11:01.460 --> 00:11:04.460
+¿Cuál es el tipo de retorno de datos
+del método getText?
+
+00:11:04.790 --> 00:11:06.330
+La respuesta es <i>editable</i>
+
+00:11:06.330 --> 00:11:09.540
+y lo descubrí al consultar
+la documentación de Android.
+
+00:11:09.540 --> 00:11:12.050
+Para la clase EditText, 
+moviéndose hacia abajo
+
+00:11:12.050 --> 00:11:14.320
+se pueden ver todos los métodos públicos
+
+00:11:14.320 --> 00:11:17.330
+GetText está listado como un método
+que devuelve el texto
+
+00:11:17.330 --> 00:11:19.350
+que aparece en la vista de texto.
+
+00:11:19.350 --> 00:11:21.960
+El tipo de dato de retorno es <i>editable</i>.
+
+00:11:21.960 --> 00:11:27.280
+Esto devuelve un objeto editable,
+y podemos llamar otro método en el objeto
+
+00:11:27.280 --> 00:11:30.750
+añadiendo la notación punto
+y luego el nombre del método.
+
+00:11:30.750 --> 00:11:35.730
+En este caso estaremos llamando 
+al método toString en el objeto editable,
+
+00:11:35.730 --> 00:11:38.790
+y el método toString devuelve un string
+
+00:11:38.790 --> 00:11:41.440
+para guardarlo en la variable <i>name</i>.
+
+00:11:42.080 --> 00:11:43.710
+Este es un concepto más avanzado
+
+00:11:43.710 --> 00:11:45.920
+que se llama 
+encadenado de llamadas de método,
+
+00:11:45.920 --> 00:11:49.340
+porque se llama a un método,
+se obtiene el valor de retorno
+
+00:11:49.340 --> 00:11:52.800
+y luego llamando a otro método
+y si este devuelve un objeto,
+
+00:11:52.800 --> 00:11:54.450
+se puede llamar a otro método.
+
+00:11:54.450 --> 00:11:57.690
+Y se puede seguir llamando
+a métodos uno detrás de otro.
+
+00:11:57.690 --> 00:12:02.560
+La razón para encadenar llamadas a métodos
+es que getText devuelve objetos editables.
+
+00:12:02.560 --> 00:12:05.920
+Un objeto editable no puede guardarse
+dentro de una variable string
+
+00:12:05.920 --> 00:12:09.980
+como muestra este error de Android Studio
+que habla de tipos incompatibles.
+
+00:12:09.980 --> 00:12:14.800
+Si añadimos el método toString,
+el valor de retorno es un string
+
+00:12:14.800 --> 00:12:17.790
+y puede guardarse en una variable <i>name</i>.
+
+00:12:17.790 --> 00:12:20.550
+Puede verificarse 
+revisando la documentación.
+
+00:12:20.550 --> 00:12:23.160
+El método getText
+devuelve un objeto editable
+
+00:12:23.160 --> 00:12:24.400
+y si hago clic aquí,
+
+00:12:24.400 --> 00:12:27.760
+en la clase editable aparece un método
+que se llama toString.
+
+00:12:27.760 --> 00:12:29.080
+Desplazándonos hacia abajo,
+
+00:12:29.080 --> 00:12:32.830
+en la sección de métodos públicos, 
+no veo toString en la lista.
+
+00:12:32.830 --> 00:12:34.670
+Pero hay métodos heredados.
+
+00:12:34.670 --> 00:12:38.520
+Si abrimos el desplegable, 
+veremos que toString es un método
+
+00:12:38.520 --> 00:12:40.930
+y el valor retorno es string.
+
+00:12:40.930 --> 00:12:45.340
+Reiterándonos en lo dicho, 
+esta llamada devuelve un objeto editable
+
+00:12:45.340 --> 00:12:48.000
+y luego podemos llamar al método toString.
+
+00:12:48.000 --> 00:12:50.290
+El método toString devuelve un string
+
+00:12:50.290 --> 00:12:54.160
+y toda esta parte de la derecha
+también devuelve un string
+
+00:12:54.160 --> 00:12:57.480
+que se puede almacenar 
+en la variable de string tipo <i>name</i>.
+
+00:12:58.270 --> 00:13:00.620
+¡Vaya tarea de codificación tan larga!
+
+00:13:01.330 --> 00:13:03.470
+Tómese un descanso y vuelva
+
+00:13:03.470 --> 00:13:05.750
+porque hay que resolver
+cómo cambiar los precios
+
+00:13:05.750 --> 00:13:07.620
+en función de lo que pida el usuario.
+
+00:13:07.620 --> 00:13:10.080
+Vamos a hacerlo
+gracias a los flujos de control.
+

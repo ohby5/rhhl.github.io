@@ -1,0 +1,407 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.250 --> 00:00:02.250
+Sipariş özetinin fiyatını
+doğru hesaplamak için
+
+00:00:02.250 --> 00:00:05.230
+kullanıcının hangi malzemeleri
+seçtiğine dair bilgiyi
+
+00:00:05.230 --> 00:00:09.500
+fiyatHesapla'ya
+geçmemiz gerekiyor.
+
+00:00:09.500 --> 00:00:12.820
+Tüm ağır yükleri seçiyorum ve
+fiyatHesapla metodu içinde hesaplıyorum
+
+00:00:12.820 --> 00:00:18.340
+böylece metod tüm
+bu bağlı mantığı merkezileştirir.
+
+00:00:18.340 --> 00:00:22.040
+Her şeyi bu metot içinde birleştirerek,
+eğer fiyatın hesaplanmasıyla ilgili
+
+00:00:22.040 --> 00:00:25.620
+bir sorun olursa,
+kodu tek bir yerde kontrol edebiliriz.
+
+00:00:26.620 --> 00:00:28.340
+Daha yönetilebilir bir yöntem.
+
+00:00:28.340 --> 00:00:29.880
+Bu metot içinde
+
+00:00:29.880 --> 00:00:33.450
+bir fincan kahvenin liste fiyatını
+hesaplayacağız.
+
+00:00:33.450 --> 00:00:35.510
+Size daha önce gösterdiğim gibi.
+
+00:00:35.510 --> 00:00:38.110
+Eğer kahvede köpük krema
+bir dolar ekleyin.
+
+00:00:38.110 --> 00:00:41.000
+Eğer kahvede çikolata varsa,
+iki dolar ekleyin.
+
+00:00:41.000 --> 00:00:43.630
+Sonra kahvenin liste fiyatını
+sipariş edilen sayı ile
+
+00:00:43.630 --> 00:00:47.860
+çarpıp, toplam sipariş
+fiyatını belirleyin.
+
+00:00:47.860 --> 00:00:50.550
+İlk olarak, köpük krema ve
+çikolata kutucukları
+
+00:00:50.550 --> 00:00:54.302
+hakkındaki bilgileri
+fiyatHesapla'ya geçirelim.
+
+00:00:54.302 --> 00:00:58.380
+Bilgileri boole değerleri, hasKöpükKrema ve
+hasÇikolata olarak geçireceğim.
+
+00:00:58.380 --> 00:01:02.570
+Verili OnayKutucuğu nesnelerini
+geçirmeye gerek yok çünkü
+
+00:01:02.570 --> 00:01:06.430
+hesaplama için önemli olan
+boole değerleridir.
+
+00:01:06.430 --> 00:01:09.560
+Android Studio, metot imzası
+eşleşmediği için bir hata
+
+00:01:09.560 --> 00:01:10.530
+veriyor.
+
+00:01:10.530 --> 00:01:13.530
+Sıfır girdi parametresi olacak
+şekilde tanımlanmış bir metot çağırmaya
+
+00:01:13.530 --> 00:01:15.390
+çalışıyorum.
+
+00:01:15.390 --> 00:01:18.820
+fiyatHesapla metodunun
+tanımlandığı yere gidelim.
+
+00:01:18.820 --> 00:01:20.700
+Metot imzasını
+değiştireceğim ki
+
+00:01:20.700 --> 00:01:25.620
+köpükKremaEkle ve çikolataEkle girdi
+parametrelerini alabilmesi için
+
+00:01:25.620 --> 00:01:27.730
+metot imzasını değiştireceğim.
+
+00:01:27.730 --> 00:01:30.850
+Bu girdi parametrelerine
+istediğiniz ismi verebilirsiniz.
+
+00:01:30.850 --> 00:01:34.220
+Geçirme işlemi sırasında
+kullanılandan farklı bir isim seçicem,
+
+00:01:34.220 --> 00:01:36.900
+böylece size isimlerin eşleşmek
+zorunda olmadığını göstereceğim.
+
+00:01:36.900 --> 00:01:40.580
+Bu iki girdi parametresini tanımlamak
+için Javadoc'u da güncelledim.
+
+00:01:40.580 --> 00:01:43.570
+Bu yol ile, metodu çağıran kişi
+neyi geçireceğini bilecektir.
+
+00:01:43.570 --> 00:01:47.580
+Sonra, fiyatHesapla metodu içinde
+bu malzemeler temelinde tüm mantığı
+
+00:01:47.580 --> 00:01:49.930
+gerçekleştirmek zorundayım.
+
+00:01:49.930 --> 00:01:52.130
+İlk olarak, liste fiyatını
+hesaplayacağım, bunun için
+
+00:01:52.130 --> 00:01:54.720
+listeFiyatı adında bir
+tam sayı değişkeni yaratacağım.
+
+00:01:54.720 --> 00:01:58.500
+Bir fincan kahve $5 olduğundan
+5 değeri ile başlayacağım.
+
+00:01:58.500 --> 00:02:00.930
+Daha sonra bir Eğer ifadesi
+yaracağım.
+
+00:02:00.930 --> 00:02:05.600
+eğer KöpükKrema boole değeri doğru ise
+kullanıcı köpük krema istiyordur.
+
+00:02:05.600 --> 00:02:09.720
+Demek ki bir kahve fincanın liste fiyatına
+bir dolar eklemeliyiz.
+
+00:02:09.720 --> 00:02:11.920
+Pekala, bu köpük krem meselesini
+halletmeli.
+
+00:02:11.920 --> 00:02:13.740
+Şimdi çikolata meselesine bakalım.
+
+00:02:13.740 --> 00:02:16.110
+Başka bir Eğer ifadesi yaratacağım.
+
+00:02:16.110 --> 00:02:19.000
+Başka bir kod bloğuna gerek yok
+çünkü
+
+00:02:19.000 --> 00:02:23.000
+eğer kullanıcı köpük krema istemezse
+hiçbir şey yapmak zorunda değilim.
+
+00:02:23.000 --> 00:02:26.550
+Eğer başka bir örnek girseydim,
+görüntü şöyle olacaktı.
+
+00:02:26.550 --> 00:02:29.990
+bir şey yapma yorumu
+görüntülenecekti.
+
+00:02:29.990 --> 00:02:31.960
+Android Studio bundan
+daha akıllı ve
+
+00:02:31.960 --> 00:02:35.010
+başka bir ifadenin
+boş bir birim olacağını fark edecektir.
+
+00:02:35.010 --> 00:02:38.040
+Buradaki tavsiye, bu tür bir kodun
+kafa karıştırıcı ya da
+
+00:02:38.040 --> 00:02:39.930
+yazım hatası olduğudur.
+
+00:02:39.930 --> 00:02:41.800
+Burada ihtiyacımız olmayan
+ilave kod satırları var,
+
+00:02:41.800 --> 00:02:43.660
+bunları silelim.
+
+00:02:43.660 --> 00:02:45.930
+Çikolata meselesine devam edelim.
+
+00:02:45.930 --> 00:02:48.610
+Çikolata malzemesi, köpük krema
+malzemesinden tamamen
+
+00:02:48.610 --> 00:02:49.800
+bağımsızdır.
+
+00:02:49.800 --> 00:02:51.880
+Kullanıcının birini ya da
+diğerini seçmesi sorun değildir,
+
+00:02:51.880 --> 00:02:53.540
+çünkü biri diğerine bağlı değildir.
+
+00:02:53.540 --> 00:02:57.060
+Ayrı bir Eğer durumu
+yaratacağım.
+
+00:02:57.060 --> 00:02:59.480
+Eğer kullanıcı çikolata isterse,
+
+00:02:59.480 --> 00:03:04.010
+liste fiyatını, listeFiyatı+2
+olarak değiştirmek gerekecek.
+
+00:03:04.010 --> 00:03:08.810
+Bir başka kod bloğu ekleyebilirdik ama
+hiçbir işe yaramayacaktır.
+
+00:03:08.810 --> 00:03:12.690
+Eğer kullanıcı çikolata istemezse,
+fiyatı değiştirmemiz gerekmez
+
+00:03:12.690 --> 00:03:15.530
+bu yüzden gereksiz olduğu için
+silelim.
+
+00:03:15.530 --> 00:03:20.450
+Kodumuzu okurken, bir fincan kahvenin
+beş dolar olduğunu görüyoruz.
+
+00:03:20.450 --> 00:03:24.945
+Eğer kullanıcı köpük krema isterse,
+liste fiyatına bir dolar eklemeliyiz.
+
+00:03:24.945 --> 00:03:27.610
+Eğer kullanıcı çikolata isterse,
+
+00:03:27.610 --> 00:03:29.703
+liste fiyatına 2 dolar eklemeliyiz.
+
+00:03:29.703 --> 00:03:32.290
+Toplam fiyatı hesaplamak için ise
+
+00:03:32.290 --> 00:03:35.835
+bir fincan kahve fiyatını
+sipariş edilen sayı ile çarpmamız gerek.
+
+00:03:35.835 --> 00:03:38.735
+pekala, bu kod çalışacak
+gibi duruyor.
+
+00:03:38.735 --> 00:03:41.935
+Her bir kod bloğunun üzerine
+satır için yorumlar da ekledim
+
+00:03:41.935 --> 00:03:45.695
+böylece bu koda geri geldiğimiz de
+ne yaptığımızı hatırlayacağız.
+
+00:03:45.695 --> 00:03:48.005
+Çalıştığını kontrol etmek için
+uygulamamızda yürütelim.
+
+00:03:48.005 --> 00:03:50.635
+Pekala, daha önce beraber üzerinden
+geçtiğimiz durumları test edelim.
+
+00:03:51.965 --> 00:03:55.319
+Eğer köpük krema malzemesini ve 3
+niteliğini seçersem,
+
+00:03:55.319 --> 00:03:56.906
+Her bir fincan altı dolar olacaktır.
+
+00:03:56.906 --> 00:04:01.450
+$6 çarpı 3 eşittir $18,
+$18 olarak hesapladı, harika.
+
+00:04:01.450 --> 00:04:07.679
+Eğer çikolata malzemesi de eklersem
+her bir fincan sekiz dolara mal olur.
+
+00:04:07.679 --> 00:04:11.650
+Eğer miktar 2 ise,
+toplam fiyat 16 dolar olacaktır.
+
+00:04:11.650 --> 00:04:15.700
+Köpük kremasını denedik ve
+doğru cevabı elde ettik.
+
+00:04:15.700 --> 00:04:18.510
+hem köpük kreması hem de çikolata
+malzemesini denedik
+
+00:04:18.510 --> 00:04:21.350
+ve yine doğru cevabı aldık.
+
+00:04:21.350 --> 00:04:23.760
+Sadece çikolata malzemesi ile
+deneyelim.
+
+00:04:23.760 --> 00:04:27.290
+Miktarı 1 olarak değiştirdim
+ve sipariş tuşuna bastım.
+
+00:04:27.290 --> 00:04:31.810
+Doğru görünüyor çünkü
+5$ bir fincan kahve fiyatı, buna 2$
+
+00:04:31.810 --> 00:04:34.840
+eklediğimiz de 7$ yapar.
+
+00:04:34.840 --> 00:04:41.150
+Bunu 4 olarak değiştirirsem, fincan başına
+7$ olduğunu varsayarak, toplam güncellenir.
+
+00:04:41.150 --> 00:04:41.650
+Harika.
+
+00:04:42.910 --> 00:04:44.550
+Çalışıyor gibi görünüyor.
+
+00:04:44.550 --> 00:04:47.650
+Bu sınamaları hızlıca
+gözden geçirdim.
+
+00:04:47.650 --> 00:04:48.660
+Yapmaya çalıştığım,
+
+00:04:48.660 --> 00:04:53.160
+tüm mümkün kod izlerinin
+çalıştığından emin olmaktı.
+
+00:04:53.160 --> 00:04:56.823
+Örneğin, eğer uygulamayı yürütürsek ve
+köpük krema kutucuğunu seçmezsek
+
+00:04:56.823 --> 00:05:00.490
+bu kodun çalışıp çalışmadığını
+asla sınayamayız.
+
+00:05:00.490 --> 00:05:05.720
+Kodun tüm parçalarının çalışmasını sağlayan
+koşulları seçmemiz gerekiyor.
+
+00:05:05.720 --> 00:05:09.180
+Bu kodun da çalıştığından emin olmak
+için hem köpük krema
+
+00:05:09.180 --> 00:05:12.550
+hem de çikolata
+malzemesini seçtik.
+
+00:05:12.550 --> 00:05:14.320
+Bu iki boole değişkeninin
+tüm kombinasyonlarını sınamamız
+
+00:05:14.320 --> 00:05:17.450
+daha eksiksiz bir deneyim
+sağlayacaktır.
+
+00:05:17.450 --> 00:05:21.580
+Bu kombinasyonların hepsi bu metot içinde
+farklı davranışlarla sonuçlanacaktır,
+
+00:05:21.580 --> 00:05:24.870
+tüm bu durumlarda kodumuzun
+çalıştığından emin olmak istiyoruz.
+
+00:05:24.870 --> 00:05:29.080
+Liste fiyatının beklendiği
+gibi hesaplandığından
+
+00:05:29.080 --> 00:05:34.000
+emin olmak için
+kayıt mesajlarını kullanabiliriz.
+
+00:05:34.000 --> 00:05:37.910
+Neyse, bunlar sadece, kontrol akış ifadeleri
+ile daha karmaşık hale gelen kodu yazarken
+
+00:05:37.910 --> 00:05:40.760
+aklınızda tutmanız gereken şeyler.
+

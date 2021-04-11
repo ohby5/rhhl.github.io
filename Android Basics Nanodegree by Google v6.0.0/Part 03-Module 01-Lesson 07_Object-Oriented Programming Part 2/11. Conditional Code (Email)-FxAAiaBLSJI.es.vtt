@@ -1,0 +1,213 @@
+WEBVTT
+Kind: captions
+Language: es
+
+00:00:00.260 --> 00:00:04.120
+Asume que este es un segmento de código
+de un archivo <i>InboxActivity.java</i>
+
+00:00:04.120 --> 00:00:05.840
+dentro de una <i>app</i> de correo.
+
+00:00:05.840 --> 00:00:08.830
+El código tiene muchos conceptos
+que aún no conoces.
+
+00:00:08.830 --> 00:00:10.880
+Está bien si no aciertas con esta.
+
+00:00:10.880 --> 00:00:12.220
+Revisémoslo conjuntamente.
+
+00:00:12.220 --> 00:00:14.699
+Primero creamos una variable 
+de tipo entero llamada,
+
+00:00:14.699 --> 00:00:16.150
+<i>numberOfEmailsInInbox</i>.
+
+00:00:16.150 --> 00:00:19.010
+Establecemos la variable con valor de 0.
+
+00:00:19.010 --> 00:00:22.660
+Luego creamos otra variable entera,
+llamada <i>"numberOfDraftEmails"</i>.
+
+00:00:22.660 --> 00:00:25.600
+La establecemos con valor de 2.
+
+00:00:25.600 --> 00:00:28.860
+Ahora creamos una variable <i>string</i> 
+llamada <i>"emailMessage"</i>,
+
+00:00:28.860 --> 00:00:32.430
+cuyo valor es "Usted tiene correos en __",
+
+00:00:32.430 --> 00:00:37.210
+donde "__" es una variable que refiere a
+<i>numberOfEmailsInInbox</i>.
+
+00:00:37.210 --> 00:00:40.980
+Esto equivale a "usted tiene 0 correos".
+
+00:00:40.980 --> 00:00:43.420
+Porque esta variable tiene un valor de 0.
+
+00:00:43.420 --> 00:00:46.640
+Ahora tenemos una variable <i>string</i>
+llamada <i>draftMessage</i>.
+
+00:00:46.640 --> 00:00:50.570
+Su valor es "Usted tiene __ borradores"
+
+00:00:50.570 --> 00:00:53.670
+De hecho, "__" se refiere 
+al número de borradores.
+
+00:00:53.670 --> 00:00:55.610
+y tiene un valor de 2.
+
+00:00:55.610 --> 00:01:00.370
+Por lo que este lado derecho equivale a
+"Usted tiene 2 borradores".
+
+00:01:00.370 --> 00:01:04.410
+Hasta ahora tenemos cuatro variables
+y aún nada se ha escrito en el log.
+
+00:01:04.410 --> 00:01:06.150
+Ahora bien, tenemos una sentencia <i>if</i>.
+
+00:01:06.150 --> 00:01:10.100
+No existe un bloque de código <i>else</i>
+aquí abajo, lo cual está muy bien.
+
+00:01:10.100 --> 00:01:14.985
+Esta sentencia se lee:
+"*if numberOfEmailsInInbox=0,
+
+00:01:14.985 --> 00:01:18.780
+entonces lleva a cabo el código dentro 
+de estas llaves abiertas y cerradas."
+
+00:01:18.780 --> 00:01:22.470
+Recordemos que
+<i>numberOfEmailsInInbox</i> es igual a 0,
+
+00:01:22.470 --> 00:01:27.780
+por lo que el código dentro de las llaves
+abiertas y cerradas se ejecutará.
+
+00:01:27.780 --> 00:01:30.700
+Tan sólo actualiza la variable 
+del mensaje de correo
+
+00:01:30.700 --> 00:01:32.970
+para que diga:
+"Usted no tiene mensajes nuevos".
+
+00:01:32.970 --> 00:01:36.920
+BIen, ahora sabemos 
+que el último valor del mensaje de correo
+
+00:01:36.920 --> 00:01:38.690
+es: "Usted no tiene mensajes nuevos"
+
+00:01:38.690 --> 00:01:41.040
+y que el último valor 
+del borrador de mensaje es:
+
+00:01:41.040 --> 00:01:43.350
+"Usted tiene 2 borradores".
+
+00:01:43.350 --> 00:01:44.870
+Sigamos leyendo.
+
+00:01:44.870 --> 00:01:46.550
+Hay otra sentencia <i>if</i> aquí abajo.
+
+00:01:46.550 --> 00:01:50.678
+"Si el <i>numberOfDraftEmails</i> equivale a 0,
+entonces lleva a cabo el código
+
+00:01:50.678 --> 00:01:52.870
+dentro de las llaves abiertas y cerradas.
+
+00:01:52.870 --> 00:01:56.420
+Pero <i>numberOfDraftEmails</i>
+tiene un valor de 2.
+
+00:01:56.420 --> 00:02:01.890
+Esto siginifica que la condición es falsa,
+y podemos omitir este bloque de cógido.
+
+00:02:01.890 --> 00:02:05.360
+Por lo tanto, la variable
+<i>draftMessage</i> mantiene el valor de
+
+00:02:05.360 --> 00:02:07.480
+"Usted tiene 2 borradores",
+
+00:02:07.480 --> 00:02:10.010
+y no cambiará a este nuevo mensaje.
+
+00:02:10.010 --> 00:02:13.810
+Finalmente, tenemos un flujo 
+de ejecución normal del método.
+
+00:02:13.810 --> 00:02:16.320
+No hay más sentencias <i>if</i>
+y podemos ejecutar
+
+00:02:16.320 --> 00:02:18.850
+esta línea de código 
+que imprime en los <i>logs</i>.
+
+00:02:18.850 --> 00:02:21.670
+Imprime <i>emailMessage</i> en los <i>logs</i>,
+
+00:02:21.670 --> 00:02:24.810
+luego imprime *draftMessage" en los logs.
+
+00:02:24.810 --> 00:02:30.200
+En este punto, <i>emailMessage</i> dice
+"Usted no tiene mensajes nuevos",
+
+00:02:30.200 --> 00:02:33.670
+y <i>draftMessages</i> dice
+"Usted tiene dos borradores".
+
+00:02:33.670 --> 00:02:37.679
+Si vemos nuestras opciones,
+la opción C es la que queremos.
+
+00:02:37.679 --> 00:02:40.570
+La opción A es incorrecta 
+porque no imprimimos el mensaje
+
+00:02:40.570 --> 00:02:42.300
+en cualquier momento.
+
+00:02:42.300 --> 00:02:45.490
+Sólo tenemos dos líneas de código 
+que imprime en los <i>logs</i>.
+
+00:02:45.490 --> 00:02:48.830
+La opción B es incorrecta 
+porque la cadena <i>emailMessage</i>
+
+00:02:48.830 --> 00:02:50.970
+se actualiza dentro de la sentencia <i>if</i>.
+
+00:02:50.970 --> 00:02:55.450
+De hecho hay dos borradores,
+no cero borradores,
+
+00:02:55.450 --> 00:02:58.310
+por lo que la segunda sentencia <i>log</i>
+también es incorrecta.
+
+00:02:58.310 --> 00:03:00.770
+Eso nos deja con la opción C,
+la cual es correcta.
+

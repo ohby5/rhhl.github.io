@@ -1,0 +1,180 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.420 --> 00:00:03.820
+Şimdi bu işaretleme kutucuğunun
+durumunu işaretlemek için
+
+00:00:03.820 --> 00:00:07.290
+bir külçe kullanabileceğimizi bildiğimize
+göre, şimdi sipariş özetini düzenleyelim
+
+00:00:07.290 --> 00:00:10.830
+ve bize krem şanti üst süslemesini
+isteyip istemediğimizi sorsun.
+
+00:00:10.830 --> 00:00:13.860
+Krem şanti süslemesini istediğimi
+söylersem ve sonra sipariş
+
+00:00:13.860 --> 00:00:17.870
+düğmesine basarsam, sipariş özetine
+üst süsleme isteyip istemediğimi söyleyen
+
+00:00:17.870 --> 00:00:19.800
+bir satır ekler.
+
+00:00:19.800 --> 00:00:24.080
+Süslemeyi eklemek için kutuyu
+işaretlersem doğru diyecek.
+
+00:00:24.080 --> 00:00:28.650
+Ve eğer kutunun işaretlemesini kaldırıp
+siparişe tıklarsam o zaman yanlış der.
+
+00:00:29.120 --> 00:00:33.270
+Android zaten kendisi bu kutucuğu
+işaretliyor ve bizim uygulamamızda
+
+00:00:33.270 --> 00:00:37.650
+ilk sipariş özetini oluşturmak
+için sipariş düğmesine basma kodumuz var.
+
+00:00:37.650 --> 00:00:41.320
+Burada bizim yapmamız için
+kalan kısım krem şanti ekle diyen
+
+00:00:41.320 --> 00:00:42.940
+metin satırını eklemek ve
+
+00:00:42.940 --> 00:00:48.010
+bu kutunun işaretli olup olmadığına bağlı
+olarak doğru değeri koymamız gerekiyor.
+
+00:00:48.010 --> 00:00:52.210
+Koda giriş yapmaya başlamadan önce,
+sözde kodu düşünelim
+
+00:00:52.210 --> 00:00:56.280
+ve kodumuzun ne yapmasını istediğimizle
+ilgili ana fikirleri sağlamlaştıralım.
+
+00:00:56.280 --> 00:00:59.520
+Sipariş düğmesine tıklandığında,
+şu adımları yapmalıyız.
+
+00:00:59.520 --> 00:01:03.390
+İlk adım işaretleme kutusundan
+işaretlenme durumunu almak ve
+
+00:01:03.390 --> 00:01:05.140
+sonra onu bir değişkenin içinde depolamak.
+
+00:01:05.140 --> 00:01:06.730
+İşte bu işaretli durum.
+
+00:01:07.300 --> 00:01:09.810
+Android cihazı bunun işaretlenip
+işaretlenmediğini bildiği zaman,
+
+00:01:09.810 --> 00:01:13.410
+bu bilgiyi bu metni oluşturan sipariş özeti
+
+00:01:13.410 --> 00:01:15.710
+metoduna geçirebiliriz.
+
+00:01:15.710 --> 00:01:19.520
+Üçüncü adım olarak, krem şantinin
+eklenip eklenmemesi ile ilgili
+
+00:01:19.520 --> 00:01:22.960
+bu satırı koyarak metni değiştirebiliriz.
+
+00:01:22.960 --> 00:01:25.120
+Burada takip edilmesi gereken
+bir kaç adım var.
+
+00:01:25.120 --> 00:01:28.260
+Doğru yolda olduğunuzdan
+emin olmak için, bu değişken değerini
+
+00:01:28.260 --> 00:01:32.490
+gerçek işaretli durumu yansıttığından
+emin olmak için buraya kaydedebilirsiniz.
+
+00:01:33.220 --> 00:01:36.450
+Giriş yapmayı size daha önce tanıttık, ama
+şimdi sizin için başka bir örnek daha var.
+
+00:01:37.040 --> 00:01:42.510
+Log.v yazıp sonra sınıf ismi olan
+MainActivity virgül ve sonra
+
+00:01:42.510 --> 00:01:46.360
+çıktısını almak istediğiniz
+dizi mesajını kayıtlara yazabilirsiniz.
+
+00:01:47.200 --> 00:01:50.890
+Buraya ücretin çıktısını alarak,
+birinci adımdan sonra
+
+00:01:50.890 --> 00:01:54.880
+ücretiHesapla metodunun beklenen
+ücrete döndüğünü onaylıyoruz.
+
+00:01:54.880 --> 00:01:56.360
+Uygulamayı cihazınızda çalıştırdığınızda
+
+00:01:56.360 --> 00:02:00.970
+bu mesajı görmek için bu sekmeyi kullanarak
+kayıtları da kontrol edebilmelisiniz.
+
+00:02:00.970 --> 00:02:04.610
+Bir problem olduğunda hangi kod
+satırında bu problemin mevcut olduğunu
+
+00:02:04.610 --> 00:02:08.360
+bilmediğimde mesajların kaydını
+tutma tekniğini sıkça kullanırım.
+
+00:02:08.360 --> 00:02:11.830
+Ve sonrasında problemi anladığımda
+ve her şey beklendiği gibi gittiğinde
+
+00:02:11.830 --> 00:02:14.410
+kayıt mesajını siliyorum.
+
+00:02:14.410 --> 00:02:15.370
+Yani, geçici olarak,
+
+00:02:15.370 --> 00:02:19.240
+işaretlenmiş duruma bir kayıt mesajı
+eklemek isterseniz, yapabilirsiniz.
+
+00:02:19.240 --> 00:02:22.555
+Kayıt mesajlarını artık onlara
+ihtiyacım olmadığı için silmemin nedeni
+
+00:02:22.555 --> 00:02:24.820
+kayıtın sınırlı bir uzunluğu olması.
+
+00:02:24.820 --> 00:02:27.540
+Onu gereksiz bir sürü mesajla
+doldurursanız
+
+00:02:27.540 --> 00:02:31.330
+sonra önemli mesaj ve hataların daha
+erken ortadan kaybolmasına neden olur.
+
+00:02:32.118 --> 00:02:36.310
+İşaretlenmiş durum bilgisi cihazdaki
+sipariş özetinde gösterildiğinde,
+
+00:02:36.310 --> 00:02:39.280
+artık mesajları kaydetmeniz gerekmez.
+
+00:02:39.280 --> 00:02:41.841
+İşiniz bittiğinde, devam etmek için
+bu kutuyu işaretleyin.
+

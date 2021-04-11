@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.420 --> 00:00:03.820
+Nous pouvons donc utiliser un booléen
+pour représenter l'état de la case
+
+00:00:03.820 --> 00:00:07.290
+à cocher. Modifions l'état
+de synthèse pour faire
+
+00:00:07.290 --> 00:00:10.830
+apparaître si nous voulons
+de la chantilly ou non.
+
+00:00:10.830 --> 00:00:13.860
+Si je veux de la chantilly et que j'appuie
+sur le bouton order (commander)
+
+00:00:13.860 --> 00:00:17.870
+une ligne doit s'ajouter dans l'état
+de synthèse indiquant
+
+00:00:17.870 --> 00:00:19.800
+si je veux ou non ce supplément.
+
+00:00:19.800 --> 00:00:24.080
+True apparaît si je clique sur la case
+d'ajout de chantilly.
+
+00:00:24.080 --> 00:00:29.120
+Si je décoche la case et que je clique
+sur order, false doit apparaître.
+
+00:00:29.120 --> 00:00:33.590
+Android gère les clics sur cette case
+et le code de notre appli
+
+00:00:33.590 --> 00:00:37.650
+gère les clics sur le bouton de commande
+pour créer un état de synthèse initial.
+
+00:00:37.650 --> 00:00:41.320
+Il ne nous reste plus qu'à ajouter
+cette ligne de texte ici.
+
+00:00:41.320 --> 00:00:42.940
+Celle qui dit :
+ajouter de la chantilly.
+
+00:00:42.940 --> 00:00:48.010
+Nous devons intégrer la bonne valeur
+selon que la case est cochée ou non.
+
+00:00:48.010 --> 00:00:52.210
+Avant de nous plonger dans le code,
+commençons par réfléchir au pseudocode
+
+00:00:52.210 --> 00:00:56.280
+pour bien définir les idées principales
+que notre code doit appliquer.
+
+00:00:56.280 --> 00:00:59.520
+En cliquant sur le bouton order,
+nous devons suivre ces étapes.
+
+00:00:59.520 --> 00:01:03.390
+La première étape est de connaître
+l'état de la case à cocher
+
+00:01:03.390 --> 00:01:05.140
+puis de l'enregistrer dans une variable.
+
+00:01:05.140 --> 00:01:06.300
+C'est l'état de cette case-ci.
+
+00:01:07.300 --> 00:01:09.590
+Dès que l'appareil Android
+sait si c'est coché ou non,
+
+00:01:09.590 --> 00:01:13.410
+nous pouvons transmettre cette information
+à la méthode d'état de synthèse.
+
+00:01:13.410 --> 00:01:15.710
+C'est la méthode qui crée ce texte.
+
+00:01:15.710 --> 00:01:19.520
+Troisièmement, nous pouvons changer
+ce texte pour inclure cette ligne
+
+00:01:19.520 --> 00:01:22.960
+qui indique si la chantilly
+doit être ajoutée ou non.
+
+00:01:22.960 --> 00:01:25.120
+Il y a plusieurs étapes
+à passer.
+
+00:01:25.120 --> 00:01:28.010
+Pour être sûr que vous êtes
+sur la bonne route, vous pouvez tracer
+
+00:01:28.010 --> 00:01:32.220
+cette valeur de variable pour vérifier
+qu'elle exprime l'état de la case actuel.
+
+00:01:33.220 --> 00:01:35.830
+Nous avons déjà évoqué le logging.
+En voici un nouvel exemple.
+
+00:01:36.990 --> 00:01:42.510
+Écrivez log.v, puis utilisez le nom
+de classe, soit MainActivity.
+
+00:01:42.510 --> 00:01:46.160
+Intégrez le message que vous voulez
+imprimer dans les logs.
+
+00:01:47.200 --> 00:01:50.890
+En imprimant le prix qui est ici,
+ce qu'on vérifie après la première étape,
+
+00:01:50.890 --> 00:01:54.880
+la méthode calculatePrice renvoie
+le prix attendu.
+
+00:01:54.880 --> 00:01:56.150
+Quand vous lancez l'appli,
+
+00:01:56.150 --> 00:02:00.970
+il faut être capable de vérifier les logs
+grâce à cet onglet pour voir ce message.
+
+00:02:00.970 --> 00:02:04.610
+Je me réfère souvent aux messages
+de logging quand j'ai un problème.
+
+00:02:04.610 --> 00:02:08.360
+Je ne sais pas quelle ligne de code
+est concernée par le problème.
+
+00:02:08.360 --> 00:02:11.830
+Quand je corrige l'erreur
+et que tout marche comme prévu,
+
+00:02:11.830 --> 00:02:14.520
+je supprime le message de log.
+
+00:02:14.520 --> 00:02:15.260
+Donc, vous pouvez
+
+00:02:15.260 --> 00:02:19.240
+ajouter un message de log provisoire
+pour imprimer l'état de la case.
+
+00:02:19.240 --> 00:02:22.055
+La raison pour laquelle je supprime
+les messages de log,
+
+00:02:22.055 --> 00:02:24.820
+c'est parce que le log
+a une taille limitée.
+
+00:02:24.820 --> 00:02:27.540
+Si vous le remplissez
+de messages inutiles,
+
+00:02:27.540 --> 00:02:31.100
+alors, les messages importants
+et les erreurs disparaissent plus vite.
+
+00:02:32.118 --> 00:02:35.390
+Dès que l'état de la case
+apparaît dans l'état de synthèse
+
+00:02:35.390 --> 00:02:39.410
+sur l'appareil, vous n'avez plus besoin
+des messages de log.
+
+00:02:39.410 --> 00:02:41.240
+Quand vous aurez fini,
+cliquez ici.
+

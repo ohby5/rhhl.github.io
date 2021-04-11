@@ -1,0 +1,404 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.640 --> 00:00:03.856
+Untuk membuat penataan seperti ini
+mari pertama memikirkan tentang tampilan yang kita butuhkan
+
+00:00:04.000 --> 00:00:07.420
+Saya akan mengasumsikan bahwa semua ini
+telah terbentuk, dan kita hanya akan
+
+00:00:07.420 --> 00:00:10.910
+berbicara mengenai hal-hal baru
+yang perlu kita tambahkan dalam penataannya.
+
+00:00:10.910 --> 00:00:15.030
+Dua tampilan baru yang perlu
+kita tambahkan adalah TextView untuk Toppings dan
+
+00:00:15.030 --> 00:00:18.090
+tampilan kotak centang untuk
+pilihan Whipped cream
+
+00:00:18.090 --> 00:00:21.470
+Anda mungkin tidak pernah mengetahui
+bahwa tampilan ini ada di Android, tetapi
+
+00:00:21.470 --> 00:00:24.210
+semoga dengan melakukan pencarian Google
+membantu anda mendapatkan jawaban ini.
+
+00:00:25.380 --> 00:00:28.300
+Berlanjut ke langkah ke 2,
+kita perlu menempatkan tampilannya.
+
+00:00:28.300 --> 00:00:30.820
+Dengan berasumsi bahwa tampilan ini
+sudah berada di posisi yang benar,
+
+00:00:30.820 --> 00:00:35.470
+kita hanya perlu menambahkan Toppings dan
+Whipped cream, secara vertikal, dalam baris yang sama.
+
+00:00:35.470 --> 00:00:37.000
+Berhubung tampilan dasarnya adalah vertikal,
+
+00:00:37.000 --> 00:00:39.990
+tata letak linear, kita dapat menambahkan
+dua tampilan ini di atasnya.
+
+00:00:40.990 --> 00:00:43.580
+Untuk langkah ketiga, kita perlu 
+memberi gaya pada tampilan-tampilannya.
+
+00:00:43.580 --> 00:00:46.260
+Gaya pada header bagian Toppings
+adalah sama dengan Quantity dan
+
+00:00:46.260 --> 00:00:49.030
+header bagian Order Summary, jadi
+kita hanya cukup menyalin dan
+
+00:00:49.030 --> 00:00:51.434
+menempelkan header-headernya yang telah ada.
+
+00:00:51.434 --> 00:00:54.920
+Tampilan kotak centang baru, walaupun demikian
+kita perlu memberi gaya dengan penyesuaian.
+
+00:00:54.920 --> 00:00:59.176
+Kita harus dapat memberikan 24 dp ruang
+diantara kotak dan tulisan,
+
+00:00:59.176 --> 00:01:04.054
+dan kita harus merubah ukuran fon
+dari Whipped cream menjadi ukuran fon 16 sp.
+
+00:01:04.050 --> 00:01:06.496
+Mari membuat perubahan-perubahan ini
+pada aplikasi kita sekarang.
+
+00:01:06.860 --> 00:01:09.968
+Untuk menambahkan sebuah
+header Toppings yang menyerupai header Quantity,
+
+00:01:10.000 --> 00:01:12.730
+Saya dapat hanya menyalin
+dan menempelkan kode ini.
+
+00:01:12.730 --> 00:01:16.775
+Saya menyalinnya dan kemudian menambahkannya
+ke bagian atas dari penataan vertikal linear ini.
+
+00:01:18.080 --> 00:01:20.170
+Oke, jadi sekarang
+itu akan tertulis Quantity dua kali disini.
+
+00:01:20.170 --> 00:01:22.960
+Saya akan merubah teksnya jadi
+akan tertulis Toppings.
+
+00:01:22.960 --> 00:01:25.380
+Saya juga menyalin melebihi pias bawah jadi
+
+00:01:25.380 --> 00:01:28.790
+nantinya akan ada sebagian ruang diantara
+header yang ini dan konten di bawahnya.
+
+00:01:29.888 --> 00:01:32.410
+Sekarang kita belum menambahkan sebuah
+kotak centang ke aplikasi kita, jadi
+
+00:01:32.430 --> 00:01:34.816
+Saya akan melakukan pencarian Google
+tentang bagaimana melakukannya.
+
+00:01:34.896 --> 00:01:37.720
+Saya akan mencari untuk
+android kotak centang.
+
+00:01:37.720 --> 00:01:40.840
+Ingat untuk menambahkan android karena
+akan ada kotak centang untuk
+
+00:01:40.840 --> 00:01:44.850
+platform-platform lain, seperti untuk
+web dan platform mobile lainnya,
+
+00:01:44.850 --> 00:01:48.090
+ini dapat membantu anda mendapatkan
+hasil yang spesifik untuk Android.
+
+00:01:48.090 --> 00:01:49.760
+Mari kita coba tautan yang pertama.
+
+00:01:49.760 --> 00:01:52.900
+Ini mereferensikan dokumentasi
+untuk kelas kotak centang.
+
+00:01:52.900 --> 00:01:56.420
+Saya akan menyelusurinya dan
+dapat melihat ikhtisar kelas yang bagus dan
+
+00:01:56.420 --> 00:01:58.960
+itu akan langsung menuju
+ke atribut XML.
+
+00:01:58.960 --> 00:02:02.880
+Hal yang tetap saya sukai adalah
+contoh dari beberapa XML untuk kotak centang.
+
+00:02:02.880 --> 00:02:05.100
+Jadi mari kembali ke hasil pencarian.
+
+00:02:05.100 --> 00:02:07.070
+Mari kita klik pada tautan yang kedua.
+
+00:02:07.070 --> 00:02:10.440
+Keren, sekarang ini menampilkan beberapa
+gambar-gambar dari kotak centang.
+
+00:02:10.440 --> 00:02:12.040
+Dan ini beberapa XML.
+
+00:02:12.040 --> 00:02:13.180
+Yang ini kelihatannya cukup bagus.
+
+00:02:13.180 --> 00:02:16.140
+Ada dua kotak centang diantara
+sebuah LinearLayout.
+
+00:02:16.140 --> 00:02:19.070
+Saya hanya akan menyalin
+kotak centang pertama ini, dan
+
+00:02:19.070 --> 00:02:21.008
+kemudian Saya akan
+menempelkannya di aplikasi kita
+
+00:02:21.590 --> 00:02:25.912
+Kembali ke aplikasi kita, Saya akan
+menempelkannya setelah teks Toppings, tetapi
+
+00:02:25.912 --> 00:02:28.753
+sebelum teks Quantity, jadi tepat disini.
+
+00:02:28.753 --> 00:02:33.040
+Saya akan memodifikasi XMLnya karena itu tidak 
+cukup sesuai dengan kasus yang kita gunakan
+
+00:02:33.040 --> 00:02:36.710
+Saya akan menghilangkan identitasnya
+dan juga teks yang disini.
+
+00:02:36.710 --> 00:02:39.750
+Melainkan daging, karena kedai kopi kita
+tidak menjual daging,
+
+00:02:39.750 --> 00:02:41.660
+Saya akan mengetik Whipped cream.
+
+00:02:43.030 --> 00:02:45.940
+Omong-omong, apa yang anda lihat sebelumnya
+@untai/meat
+
+00:02:45.940 --> 00:02:50.410
+adalah mereferensikan ke sumber untai
+di file strings.xml.
+
+00:02:50.410 --> 00:02:52.690
+Kita akan membicarakan hal tersebut nanti,
+namun untuk sekarang,
+
+00:02:52.690 --> 00:02:54.992
+anda dapat hanya mengetik untaiannya
+langsung disini.
+
+00:02:55.020 --> 00:02:56.736
+Dan lihat, update pratinjau,
+
+00:02:56.730 --> 00:02:59.280
+sekarang kita memiliki sebuah 
+kotak centang yang bertuliskan Whipped cream.
+
+00:02:59.350 --> 00:03:03.380
+Hal yang keren tentang tampilan kotak centang
+adalah memberi anda sebuah kotak,
+
+00:03:03.380 --> 00:03:08.100
+dan juga beberapa teks, jadi anda tidak perlu
+menambahkan tampilan teks lainnya disini.
+
+00:03:08.100 --> 00:03:10.850
+Kita juga tidak membutuhkan garis ini
+disini yang berkata tentang onClick.
+
+00:03:11.984 --> 00:03:13.960
+Yang kita perhatikan mengenai 
+tugas pengodean ini
+
+00:03:13.984 --> 00:03:16.112
+adalah membuat kotak centang terlihat disini.
+
+00:03:16.500 --> 00:03:20.260
+Cara lainnya anda dapat saja tiba di XML ini
+dengan memeriksa
+
+00:03:20.260 --> 00:03:21.460
+contekan tampilan biasa Android.
+
+00:03:22.540 --> 00:03:25.410
+Daftar contekan ini berisi setumpuk
+tampilan biasa Android dan
+
+00:03:25.410 --> 00:03:27.460
+juga memiliki contoh-contoh untuk XML juga.
+
+00:03:28.480 --> 00:03:32.739
+Ini tampilan kotak centang dan ini adalah
+contoh dari bagaimana akan terlihat dan
+
+00:03:32.739 --> 00:03:34.125
+berkorespondensi dengan XML.
+
+00:03:34.125 --> 00:03:37.270
+Anda mungkin sudah menyalin XML dari sini
+dan menempelkannya di aplikasi.
+
+00:03:37.980 --> 00:03:39.568
+Kembali ke Studio Android,
+
+00:03:39.560 --> 00:03:41.792
+mari jalankan aplikasinya 
+untuk melihat bagaimana tampilannya.
+
+00:03:42.110 --> 00:03:43.216
+Dan inilah dia.
+
+00:03:43.232 --> 00:03:44.256
+Terlihat cukup bagus.
+
+00:03:44.288 --> 00:03:46.690
+Kita memiliki header Toppings
+dan kotak centang Whipped Cream
+
+00:03:47.750 --> 00:03:50.330
+Kita juga mendapatkan animasi keren
+ketika kita memeriksa kotaknya.
+
+00:03:51.360 --> 00:03:54.790
+Satu-satunya masalah yang saya lihat adalah
+spasinya tidak ada.
+
+00:03:54.790 --> 00:03:57.840
+Sebagai contoh, ini terlalu rapat diantara
+header Quantity dan
+
+00:03:57.840 --> 00:04:01.390
+kotak centang Whipped cream, dan
+juga tidak cukup spasi diantaranya disini.
+
+00:04:02.410 --> 00:04:04.480
+Mari kembali ke garis merah
+yang telah tersedia,
+
+00:04:04.480 --> 00:04:09.370
+kita harus menambahkan spasi 24 dp disini,
+dan mengganti ukuran fonnya ke 16 sp.
+
+00:04:10.830 --> 00:04:12.960
+Pertama-tama saya akan mengganti ukuran fonnya.
+
+00:04:12.960 --> 00:04:18.110
+Saya akan mengetik android:textSize
+dan akan memasukkan 16 sp
+
+00:04:18.110 --> 00:04:21.408
+Saya akan membuka pratinjau disini
+untuk memeriksa apakah itu benar-benar menaikkan
+
+00:04:21.399 --> 00:04:23.104
+ukuran fonnya, dan ya benar.
+
+00:04:23.104 --> 00:04:26.400
+Jika anda tidak yakin apakah itu sudah terbaharui
+atau belum anda dapat selalu menekan tombol ini.
+
+00:04:26.400 --> 00:04:27.430
+Oke.
+
+00:04:27.430 --> 00:04:29.950
+Sekarang untuk mengetahui jaraknya,
+sebenarnya gunakanlah
+
+00:04:29.950 --> 00:04:32.240
+untuk mengerjakan 
+sekelompok percobaan dan kesalahan.
+
+00:04:32.240 --> 00:04:34.370
+Saya mencoba menetapkan tampilan pias dan
+
+00:04:34.370 --> 00:04:38.340
+kemudian Saya mencoba tampilan blok,
+dan ternyata bahwa paddingLeft
+
+00:04:38.340 --> 00:04:42.520
+memang mengontrol jarak diantara
+kotak dan teks disini.
+
+00:04:42.528 --> 00:04:43.824
+Mari kita tambahkan bloknya sekarang.
+
+00:04:44.900 --> 00:04:46.960
+Keren, teksnya berpindah.
+
+00:04:46.960 --> 00:04:49.040
+Saya masih melihat satu lagi masalah.
+
+00:04:49.040 --> 00:04:53.090
+Terdapat spasi vertikal yang cukup disini, tetapi
+tidak terdapat spasi vertikal yang cukup disini.
+
+00:04:53.090 --> 00:04:57.760
+Saya juga perlu menambahkan blok bawah, atau
+pias bawah pada tampilan kotak centang, atau
+
+00:04:57.760 --> 00:05:01.200
+Saya perlu menambahkan blok atas, atau
+pias atas pada header Quantity ini.
+
+00:05:01.232 --> 00:05:02.620
+Yang mana saja tetap akan bekerja,
+
+00:05:02.620 --> 00:05:07.110
+Saya hanya perlu menambahkan sebuah
+pias atas pada header Quantity ini.
+
+00:05:07.110 --> 00:05:08.880
+Lihat, ini terlihat lebih baik!
+
+00:05:08.880 --> 00:05:10.990
+Sekarang hal-hal ini terlihat lebih sama spasinya.
+
+00:05:10.990 --> 00:05:12.790
+Saya akan menjalankan aplikasi ini pada alat saya.
+
+00:05:13.888 --> 00:05:15.170
+Dan inilah aplikasinya.
+
+00:05:15.170 --> 00:05:16.320
+Terlihat cukup bagus.
+
+00:05:16.320 --> 00:05:17.460
+Kerja yang bagus.
+
+00:05:17.460 --> 00:05:21.250
+Ketika anda butuh menambahkan perubahan UI
+pada aplikasi anda, anda dapat mengikuti pola ini
+
+00:05:21.250 --> 00:05:25.360
+dari pencarian Google untuk informasi online dan
+kemudian aplikasikan pada aplikasi anda.
+

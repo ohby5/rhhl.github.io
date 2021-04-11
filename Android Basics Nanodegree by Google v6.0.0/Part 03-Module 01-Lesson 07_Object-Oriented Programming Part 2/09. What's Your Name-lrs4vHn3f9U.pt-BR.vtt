@@ -1,0 +1,950 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.252 --> 00:00:03.310
+Esta foi uma tarefa de codificação
+realmente desafiante.
+
+00:00:03.620 --> 00:00:07.520
+Teve muitas partes e envolveu 
+um <i>View</i> que você nunca tinha usado.
+
+00:00:08.020 --> 00:00:10.230
+Vamos ver a solução juntos.
+
+00:00:10.650 --> 00:00:13.840
+Para iniciar, pedi que planejasse
+os passos que você precisa dar.
+
+00:00:13.840 --> 00:00:16.160
+O primeiro passo é adicionar 
+este campo de texto
+
+00:00:16.160 --> 00:00:18.250
+para que o usuário possa inserir
+o nome dele.
+
+00:00:18.250 --> 00:00:20.880
+O segundo passo é aquele quando
+clicamos no botão de pedido,
+
+00:00:20.880 --> 00:00:24.410
+queremos obter o nome do campo de texto
+e o armazenar em uma variável.
+
+00:00:24.410 --> 00:00:26.740
+O terceiro passo é atualizar 
+o resumo do pedido
+
+00:00:26.740 --> 00:00:28.050
+para que exiba o nome.
+
+00:00:28.910 --> 00:00:30.760
+Vamos nos aprofundar neste primeiro passo.
+
+00:00:31.500 --> 00:00:34.570
+Não adicionamos um campo de entrada
+de texto no nosso aplicativo antes,
+
+00:00:34.570 --> 00:00:36.250
+então vamos ver no Google
+como fazer.
+
+00:00:36.930 --> 00:00:38.850
+Como estamos querendo obter 
+entrada do usuário,
+
+00:00:38.850 --> 00:00:41.995
+vou buscar "entrada do usuário Android".
+
+00:00:41.995 --> 00:00:45.275
+O resultado é um site 
+<i>developer.android.com</i>, então parece bom.
+
+00:00:46.295 --> 00:00:49.565
+Esta página descreve as melhores práticas
+para entrada do usuário.
+
+00:00:49.565 --> 00:00:53.445
+Ela fala sobre gestos de toque, 
+além de entrada de teclado
+
+00:00:53.445 --> 00:00:55.235
+e controladores de jogos.
+
+00:00:55.235 --> 00:00:59.215
+Entrada de teclado é o que queremos,
+então vamos clicar no primeiro <i>link</i>.
+
+00:00:59.215 --> 00:01:01.805
+Começo percorrendo a página
+rapidamente.
+
+00:01:01.805 --> 00:01:04.980
+Vejo vários exemplos XML,
+o que será útil.
+
+00:01:04.980 --> 00:01:08.710
+Percebo que há um sinal de "menor que"
+e o nome do <i>View</i>.
+
+00:01:08.710 --> 00:01:11.550
+Neste caso, o nome do <i>View</i> 
+parece ser <i>EditText</i>.
+
+00:01:12.610 --> 00:01:16.620
+Se percorrer os outros exemplos,
+também vejo que é um <i>View</i> <i>EditText</i>.
+
+00:01:16.620 --> 00:01:22.230
+Então parece que este <i>View</i>, que admite
+entrada de teclado, chama-se <i>EditText</i>.
+
+00:01:22.230 --> 00:01:25.269
+Outra abordagem é usar a folha de dicas
+de <i>Views</i> comuns do Android.
+
+00:01:26.330 --> 00:01:28.590
+O <i>EditText</i> também está 
+nesta lista de <i>Views</i>
+
+00:01:28.590 --> 00:01:30.730
+e este exemplo de descrição de álbum
+
+00:01:30.730 --> 00:01:33.550
+é semelhante ao campo de nome
+do nosso aplicativo.
+
+00:01:33.730 --> 00:01:35.680
+Vamos copiar este XML
+e adicioná-lo ao nosso app.
+
+00:01:36.620 --> 00:01:39.740
+Queremos o campo de nome bem no topo
+de nosso formulário de pedido,
+
+00:01:39.740 --> 00:01:42.730
+acima do cabeçalho ingredientes,
+então vamos adicioná-lo aqui.
+
+00:01:42.910 --> 00:01:45.210
+Há um erro imediato dizendo 
+que não pode resolver
+
+00:01:45.210 --> 00:01:46.519
+este símbolo para <i>hint</i> [dica].
+
+00:01:47.490 --> 00:01:51.430
+Isso faz referência à descrição de álbum
+de texto, mas foi para a folha de dicas.
+
+00:01:51.430 --> 00:01:55.640
+Vamos apagar isto e substituir 
+por nossa própria <i>hint</i>, que é <i>Name</i>.
+
+00:01:55.640 --> 00:01:58.640
+Como queremos o campo de nome
+no topo de nosso formulário de pedido,
+
+00:01:58.640 --> 00:02:01.620
+acima do cabeçalho ingredientes,
+vamos colar isso bem aqui.
+
+00:02:01.620 --> 00:02:04.450
+Este será o primeiro filho
+neste plano linear vertical.
+
+00:02:04.920 --> 00:02:08.109
+Agora, vamos nos certificar que todos 
+os atributos estão postos como queremos.
+
+00:02:08.740 --> 00:02:10.220
+Primeiro, temos a <i>View</i> ID.
+
+00:02:10.220 --> 00:02:12.970
+E chama-se <i>album_description_view</i>.
+
+00:02:13.250 --> 00:02:15.590
+Ela se refere ao exemplo
+da folha de dicas,
+
+00:02:15.590 --> 00:02:18.000
+então vamos mudar 
+para um nome mais apropriado.
+
+00:02:18.840 --> 00:02:20.290
+Vamos chamar de <i>name_field</i>.
+
+00:02:21.270 --> 00:02:23.360
+A seguir, temos <i>width</i> [largura] 
+e <i>height</i> [altura],
+
+00:02:23.360 --> 00:02:25.140
+que são atributos conhecidos.
+
+00:02:25.840 --> 00:02:29.052
+Agora, a <i>width</i> do campo <i>EditText</i>
+está configurada para <i>match_parent</i>.
+
+00:02:29.052 --> 00:02:33.250
+Isto significa que o campo será tão largo
+quanto o plano linear <i>parent</i>
+
+00:02:33.350 --> 00:02:34.860
+Em seguida, temos <i>height</i>.
+
+00:02:34.860 --> 00:02:36.740
+<i>Height</i> está configurada 
+para ser <i>wrap_content</i>,
+
+00:02:36.740 --> 00:02:39.270
+então será tão alta quanto o seu conteúdo.
+
+00:02:39.270 --> 00:02:42.250
+Estes dois valores parecem razoáveis,
+então vamos deixá-los assim.
+
+00:02:42.250 --> 00:02:44.040
+A seguir, temos <i>hint</i>.
+
+00:02:44.040 --> 00:02:46.110
+Não trabalhamos com este atributo antes,
+
+00:02:46.110 --> 00:02:49.490
+e há um erro dizendo que não pode
+resolver esta <i>string</i> [série].
+
+00:02:49.490 --> 00:02:52.280
+Vamos olhar a documentação
+para <i>EditText_android</i>,
+
+00:02:52.280 --> 00:02:55.020
+para descobrir o que significa
+este atributo.
+
+00:02:55.880 --> 00:02:59.650
+Ao buscar <i> EditText_android</i>,
+encontramos a página de documentação.
+
+00:03:00.220 --> 00:03:04.670
+Há uma síntese rápida de classe
+e uma lista de atributos de XML.
+
+00:03:05.040 --> 00:03:08.660
+Resulta que a classe <i>EditText</i> herda 
+de <i>TextView</i> e de <i>View</i>.
+
+00:03:08.900 --> 00:03:11.860
+É por isso que temos 
+estes atributos XML herdados.
+
+00:03:11.860 --> 00:03:14.720
+Uma vez expandidos, podemos buscar 
+por <i>android hint</i>.
+
+00:03:15.660 --> 00:03:18.060
+Bom, este era o atributo 
+que estávamos procurando.
+
+00:03:18.060 --> 00:03:22.400
+Se rolarmos para a direita,
+vemos que este é o texto <i>hint</i>
+
+00:03:22.400 --> 00:03:24.550
+a ser exibido quando o texto está vazio.
+
+00:03:24.550 --> 00:03:27.640
+Isso ajuda o usuário a saber
+o que deve digitar naquele campo.
+
+00:03:27.640 --> 00:03:31.480
+Naquele app que demonstrei a você,
+o texto <i>hint</i> dizia <i>Name</i>.
+
+00:03:31.480 --> 00:03:35.520
+Então, no nosso código, devemos apagar
+esta <i>string</i> e digitar <i>Name</i>.
+
+00:03:36.060 --> 00:03:38.000
+Em seguida, temos a entrada <i>Type</i>.
+
+00:03:38.040 --> 00:03:41.690
+Este também é um novo atributo,
+então olhemos a documentação.
+
+00:03:41.690 --> 00:03:44.290
+Agora, vou buscar <i>Android input type</i>.
+
+00:03:44.290 --> 00:03:48.570
+Está listado aqui e a descrição diz
+que este é o tipo de dado
+
+00:03:48.570 --> 00:03:50.640
+colocado no campo de texto.
+
+00:03:50.640 --> 00:03:54.450
+Usa-se para ajudar o método de entrada
+a decidir como o usuário entra o texto.
+
+00:03:54.980 --> 00:03:58.240
+É uma descrição um pouco vaga,
+então vamos clicar neste atributo
+
+00:03:58.240 --> 00:03:59.610
+para ter mais informação.
+
+00:03:59.610 --> 00:04:02.470
+Aqui está a descrição completa
+de <i>InputType</i>.
+
+00:04:02.470 --> 00:04:05.330
+Estes são os valores possíveis
+que podemos atribuir.
+
+00:04:05.330 --> 00:04:09.270
+Nos exemplos da folha de dicas,
+o XML disse <i>textMultiLine</i>.
+
+00:04:09.820 --> 00:04:13.670
+Parece que o campo <i>EditText</i>
+pode aceitar múltiplas linhas de texto.
+
+00:04:13.670 --> 00:04:16.470
+Não esperamos que um nome
+seja muito longo,
+
+00:04:16.470 --> 00:04:19.250
+então, uma linha de texto 
+deve ser bom o suficiente.
+
+00:04:19.250 --> 00:04:21.669
+Vamos usar <i>text</i> como <i>input type</i>.
+
+00:04:21.669 --> 00:04:24.860
+Se apagar <i>textMultiline</i>
+e começar a digitar <i>text</i>,
+
+00:04:24.860 --> 00:04:29.500
+tenho uma lista de todas as opções
+como dicas de preenchimento automático.
+
+00:04:29.500 --> 00:04:31.910
+Vou selecionar <i>text</i> e digitar <i>Enter</i>.
+
+00:04:31.910 --> 00:04:34.100
+Agora, executo o app no dispositivo
+
+00:04:34.100 --> 00:04:36.100
+para verificar se aparece 
+o campo <i>EditText</i>
+
+00:04:36.100 --> 00:04:38.320
+Ao executar o app, vejo o campo <i>Name</i>.
+
+00:04:38.320 --> 00:04:39.260
+Ótimo.
+
+00:04:39.260 --> 00:04:40.915
+E também posso digitar nele.
+
+00:04:40.915 --> 00:04:43.370
+Mas, na verdade, 
+ele começa com uma letra minúscula.
+
+00:04:43.370 --> 00:04:47.100
+Quando digito, quero que comece 
+com uma letra maiúscula.
+
+00:04:47.100 --> 00:04:50.530
+Para consertar isso,
+posso mudar o tipo de entrada aqui.
+
+00:04:50.530 --> 00:04:52.350
+Vamos ver as outras opções aqui.
+
+00:04:53.390 --> 00:04:57.713
+Temos <i>textCapcharacters</i>, <i>textCapwords</i>,
+<i>textCapsentences</i>...
+
+00:04:57.713 --> 00:04:59.670
+e muitas outras coisas.
+
+00:04:59.670 --> 00:05:02.350
+As opções para maiúscula 
+parecem promissoras.
+
+00:05:03.690 --> 00:05:05.530
+Após ler essas descrições,
+
+00:05:05.530 --> 00:05:08.500
+Acho que <i>textCapwords </i>
+seria uma boa opção.
+
+00:05:08.500 --> 00:05:10.000
+Então, vamos copiá-la e usá-la.
+
+00:05:11.040 --> 00:05:13.699
+Assim, no lugar de <i>text</i>, 
+usarei <i>textCapwords</i>.
+
+00:05:14.740 --> 00:05:16.230
+Vamos executar o app novamente.
+
+00:05:16.360 --> 00:05:19.305
+Ok, agora o teclado inicia 
+com letras maiúsculas,
+
+00:05:19.305 --> 00:05:21.576
+então posso começar a digitar o nome,
+
+00:05:21.576 --> 00:05:24.688
+e se adicionar um espaço,
+a próxima palavra será com maiúscula.
+
+00:05:24.688 --> 00:05:25.730
+Fantástico!
+
+00:05:25.860 --> 00:05:29.220
+Acabo de perceber que precisamos
+de um pouco de espaço
+
+00:05:29.220 --> 00:05:31.715
+entre este campo de nome 
+e o cabeçalho ingredientes.
+
+00:05:31.715 --> 00:05:35.680
+Adicionamos 16 dp de espaço vertical,
+faremos o mesmo aqui.
+
+00:05:35.680 --> 00:05:38.586
+Poderia adicioná-lo como margem inferior
+no campo <i>EditText</i>,
+
+00:05:38.586 --> 00:05:42.630
+mas vou só adicioná-lo como margem
+superior no cabeçalho ingredientes.
+
+00:05:42.630 --> 00:05:45.700
+Ok, o espaço parece bom 
+e o campo de nome está correto.
+
+00:05:46.500 --> 00:05:49.410
+Isso cuidou de todas as mudanças
+de XML para o primeiro passo.
+
+00:05:49.410 --> 00:05:51.970
+Agora, precisamos modificar o código Java.
+
+00:05:51.970 --> 00:05:54.420
+Para o segundo passo,
+quando clicamos no botão de pedido,
+
+00:05:54.420 --> 00:05:57.690
+queremos pegar o nome do campo de texto
+e armazená-lo em uma variável.
+
+00:05:58.730 --> 00:06:02.250
+É fácil para nossos olhos ver o nome
+neste campo,
+
+00:06:02.250 --> 00:06:06.980
+mas o app Android não sabe que queremos
+pôr este nome aqui, no resumo de pedido.
+
+00:06:08.070 --> 00:06:10.520
+Ele ainda está usando 
+o nome codificado Lyla.
+
+00:06:10.520 --> 00:06:12.890
+Precisamos mudar para usar este nome.
+
+00:06:12.890 --> 00:06:16.740
+É como fizemos para descobrir se as caixas
+de verificação estavam marcadas ou não
+
+00:06:16.740 --> 00:06:19.230
+para atualizar o resumo do pedido.
+
+00:06:19.230 --> 00:06:22.430
+Não aprendemos a ler o texto
+do campo <i>EditText</i>,
+
+00:06:22.430 --> 00:06:23.910
+então vamos buscar no Google.
+
+00:06:24.270 --> 00:06:28.530
+Vou procurar por "como obter texto
+do campo editext android".
+
+00:06:28.750 --> 00:06:30.390
+O primeiro resultado parece bom.
+
+00:06:30.390 --> 00:06:32.720
+É uma pergunta de estouro de pilha.
+
+00:06:32.720 --> 00:06:35.880
+Posso ler a questão, mas estou procurando
+mais pela resposta.
+
+00:06:35.880 --> 00:06:40.050
+Posso olhar rapidamente 
+e ver se esta página é útil ou não.
+
+00:06:40.050 --> 00:06:43.510
+Esta resposta tem uma marca de seleção
+verde e muitos votos positivos,
+
+00:06:43.510 --> 00:06:45.610
+então posso ler com mais atenção.
+
+00:06:45.610 --> 00:06:47.810
+Começo com o fragmento de código.
+
+00:06:47.810 --> 00:06:50.550
+Parece que este código entraria 
+numa classe de atividade,
+
+00:06:50.550 --> 00:06:53.100
+porque estamos chamando 
+de método <i>FindViewById</i>.
+
+00:06:53.250 --> 00:06:57.590
+Estamos buscando a hierarquia de <i>Views</i>
+para um <i>View</i> com esta ID.
+
+00:06:57.590 --> 00:07:01.450
+Assim que encontrarmos este <i>View</i>,
+o converteremos em um <i>View</i> <i>EditText</i>
+
+00:07:01.450 --> 00:07:04.890
+e armazenamos em uma variável
+chamada <i>text</i>.
+
+00:07:04.890 --> 00:07:08.460
+Na segunda linha, tentamos declarar 
+uma variável <i>string</i> chamada <i>value</i>.
+
+00:07:08.460 --> 00:07:10.750
+E armazená-la dentro disso.
+
+00:07:10.750 --> 00:07:15.921
+Há muitos parênteses, pontos 
+e palavras, mas talvez você saiba
+
+00:07:15.921 --> 00:07:19.650
+que estamos tentando tirar o texto
+de dentro deste campo de <i>EditText</i>.
+
+00:07:19.670 --> 00:07:23.260
+E tentando armazená-lo dentro 
+de uma variável de <i>string</i> chamada <i>value</i>.
+
+00:07:23.260 --> 00:07:27.120
+Vamos copiar e colar este código 
+em nosso app e ver se funciona.
+
+00:07:27.120 --> 00:07:31.480
+Na classe <i>MainActivity</i>, vou adicionar
+o código no método <i>submitOrder</i>.
+
+00:07:31.480 --> 00:07:34.600
+Escolhi este método porque é nele
+que clicamos no botão de pedido
+
+00:07:34.600 --> 00:07:37.170
+e é aí que queremos ler 
+a partir do campo de nome.
+
+00:07:38.230 --> 00:07:41.260
+Vou colar o código do estouro de pilha
+
+00:07:41.260 --> 00:07:42.220
+no topo do método.
+
+00:07:43.110 --> 00:07:46.610
+Há um erro imediato dizendo 
+que não pode resolver este símbolo.
+
+00:07:46.610 --> 00:07:50.340
+Temos que substituí-lo pelo <i>Viewld</i>
+para o campo de nome.
+
+00:07:50.340 --> 00:07:52.440
+Voltando para o nosso <i>layout.xml</i>,
+
+00:07:52.440 --> 00:07:56.588
+demos ao campo <i>EditText</i>
+um <i>View</i> ID de <i>name_field</i>,
+
+00:07:56.588 --> 00:08:01.410
+então, no arquivo Java, 
+mudo para <i>R.id.name_field</i>.
+
+00:08:01.410 --> 00:08:04.530
+Não há mais erros, então posso tentar
+executar o app,
+
+00:08:04.530 --> 00:08:07.400
+mas como saber se este código
+está funcionando ou não?
+
+00:08:07.400 --> 00:08:10.240
+Poderia adicionar uma mensagem
+de registro aqui
+
+00:08:10.240 --> 00:08:14.300
+para verificar se <i>value</i> mantém 
+o <i>name</i> neste campo.
+
+00:08:14.300 --> 00:08:16.760
+E aqui está o código 
+para a mensagem de registro.
+
+00:08:16.760 --> 00:08:20.110
+Aparece <i>Name</i>, dois pontos
+e a <i>stringvalue</i>.
+
+00:08:21.110 --> 00:08:23.150
+<i>Value</i> é um nome vago para esta variável,
+
+00:08:23.150 --> 00:08:25.260
+então vou mudar para <i>name</i>.
+
+00:08:25.260 --> 00:08:28.290
+Seria um nome mais descritivo para isso.
+
+00:08:28.290 --> 00:08:31.005
+A propósito, vou mudar 
+o nome da variável para <i>EditText</i>,
+
+00:08:31.005 --> 00:08:33.760
+para que também seja <i>namefield</i>.
+
+00:08:33.760 --> 00:08:36.821
+"Texto" poderia nos confundir 
+com outras coisas no nosso código.
+
+00:08:37.070 --> 00:08:39.969
+Vamos executar o app e verificar
+a mensagem de registro.
+
+00:08:39.969 --> 00:08:40.720
+Ok.
+
+00:08:40.720 --> 00:08:42.270
+Se eu preencher o formulário de pedido
+
+00:08:42.270 --> 00:08:45.790
+e clicar no botão de pedido,
+posso verificar os registros aqui.
+
+00:08:46.810 --> 00:08:51.210
+Vejo uma nova mensagem de <i>MainActivity</i>
+que diz <i>Name: Antigravity Anthony</i>.
+
+00:08:51.210 --> 00:08:52.680
+Então, funcionou.
+
+00:08:52.680 --> 00:08:56.240
+Este código realmente pegou 
+o nome deste campo.
+
+00:08:56.240 --> 00:08:57.260
+Legal!
+
+00:08:58.110 --> 00:09:00.530
+Agora que temos o nome do usuário 
+e uma variável,
+
+00:09:00.530 --> 00:09:03.670
+e verificamos no registro, 
+que é o nome certo,
+
+00:09:03.670 --> 00:09:06.350
+então podemos atualizar o resumo
+de pedido para mostrar este nome.
+
+00:09:07.060 --> 00:09:09.910
+Para que o resumo de pedido
+mostre o nome correto,
+
+00:09:09.910 --> 00:09:13.090
+precisamos passá-lo como um parâmetro
+de entrada para este método.
+
+00:09:13.470 --> 00:09:16.480
+Isso significa que quando chamamos 
+o método <i>createOrderSummary</i>,
+
+00:09:16.480 --> 00:09:20.110
+temos que passar esta variável de nome
+como um argumento de entrada.
+
+00:09:20.180 --> 00:09:22.420
+Vamos fazer primeiro esta mudança.
+
+00:09:22.420 --> 00:09:24.790
+Se eu adicionar <i>name</i>
+como um argumento de entrada,
+
+00:09:24.790 --> 00:09:28.870
+obtenho um erro porque a chamada 
+do método não iguala a sua assinatura.
+
+00:09:29.430 --> 00:09:31.930
+Rolando para a definição do método abaixo,
+
+00:09:31.950 --> 00:09:35.470
+posso adicionar <i>String name</i>
+como parâmetro de entrada.
+
+00:09:35.470 --> 00:09:38.410
+Também vou atualizar o documento de Java.
+
+00:09:38.410 --> 00:09:41.600
+Dentro do método <i>createOrderSummary</i>,
+posso usar esta variável.
+
+00:09:41.790 --> 00:09:46.630
+Vou apagar o nome codificado e, depois,
+concatenar esta variável <i>name</i>.
+
+00:09:47.930 --> 00:09:51.360
+Então, para recapitular, pegamos
+o nome do <i>name_field</i>
+
+00:09:51.360 --> 00:09:55.590
+e aí passamos como uma entrada 
+para o método <i>createOrderSummary</i>.
+
+00:09:55.590 --> 00:09:59.620
+Neste método, podemos anexar 
+o nome ao resumo de pedido.
+
+00:09:59.620 --> 00:10:01.720
+Vamos executar o app 
+para verificar nosso código.
+
+00:10:01.720 --> 00:10:05.200
+Quando executado, posso digitar um nome,
+selecionar alguns ingredientes,
+
+00:10:05.200 --> 00:10:06.790
+e, depois, mudar a quantidade.
+
+00:10:06.790 --> 00:10:08.600
+Aí posso clicar no botão de pedido.
+
+00:10:08.650 --> 00:10:11.850
+Vejo agora que o resumo de pedido
+contém o nome que digitei antes.
+
+00:10:11.850 --> 00:10:13.048
+Oba!
+
+00:10:13.048 --> 00:10:16.770
+Se mudar o nome e clicar em pedido,
+ele se atualiza novamente.
+
+00:10:16.770 --> 00:10:18.050
+Isso é empolgante.
+
+00:10:18.170 --> 00:10:22.320
+Agora que tudo no app funciona, 
+posso remover esta mensagem de registro.
+
+00:10:22.320 --> 00:10:24.900
+Posso executar o app novamente, 
+e ter certeza que tudo funciona.
+
+00:10:25.810 --> 00:10:28.640
+Agora, vamos voltar e responder
+estas perguntas do teste.
+
+00:10:28.640 --> 00:10:31.700
+O <i>View</i> que adicionamos ao nosso app
+se chama <i>EditText</i>.
+
+00:10:31.700 --> 00:10:37.190
+A segunda pergunta é: "Que método Java
+usamos para obter o texto deste <i>View</i>?"
+
+00:10:38.120 --> 00:10:40.910
+Podemos responder voltando 
+ao nosso código.
+
+00:10:40.910 --> 00:10:44.595
+Buscamos a hierarquia de <i>Views</i>
+para o objeto <i>EditText</i> de Java
+
+00:10:44.595 --> 00:10:46.710
+que representava o campo de nome.
+
+00:10:46.710 --> 00:10:49.570
+Armazenamos numa variável
+chamada <i>nameField</i>.
+
+00:10:49.570 --> 00:10:52.310
+E, nesse objeto, chamamos o método.
+
+00:10:52.310 --> 00:10:56.310
+Chamamos o método <i>getText</i>,
+que não toma argumentos de entrada
+
+00:10:56.310 --> 00:10:58.500
+e tem um valor de retorno de outro objeto.
+
+00:10:59.510 --> 00:11:01.460
+Isso nos leva a nossa terceira pergunta.
+
+00:11:01.460 --> 00:11:04.790
+Qual é o tipo de retorno de dados
+do método <i>getText</i>?
+
+00:11:04.790 --> 00:11:06.330
+A resposta é <i>editable</i>
+
+00:11:06.330 --> 00:11:09.540
+e descobri isso consultando 
+a documentação do Android.
+
+00:11:09.540 --> 00:11:14.320
+Para a classe <i>EditText</i>, indo para baixo, 
+podemos ver todos os métodos públicos.
+
+00:11:14.320 --> 00:11:17.370
+<i>GetText</i> é listado como um método
+que devolve o texto,
+
+00:11:17.370 --> 00:11:19.350
+exibido no <i>TextView</i>.
+
+00:11:19.350 --> 00:11:21.960
+O tipo de dado de retorno é <i>editable</i>
+
+00:11:21.960 --> 00:11:27.280
+Isso retorna um objeto editável, e podemos
+chamar um outro método neste objeto,
+
+00:11:27.280 --> 00:11:30.750
+adicionando a notação ponto
+e, depois, o nome do método.
+
+00:11:30.750 --> 00:11:35.730
+Neste caso estaremos chamando 
+o método <i>toString</i>, no objeto editável,
+
+00:11:35.730 --> 00:11:38.790
+e o método <i>toString</i> retorna uma <i>string</i>,
+
+00:11:38.790 --> 00:11:41.050
+que pode ser armazenada na variável <i>name</i>.
+
+00:11:42.080 --> 00:11:45.880
+É um conceito mais avançado e chama-se
+<i>encadeamento de chamadas de método</i>.
+
+00:11:45.880 --> 00:11:49.500
+Por estarmos chamando um método,
+recebendo o valor de retorno
+
+00:11:49.500 --> 00:11:52.580
+e, depois chamando outro método 
+e se isso retorna um objeto,
+
+00:11:52.580 --> 00:11:54.230
+você pode chamar outro método nele.
+
+00:11:54.230 --> 00:11:57.690
+E podemos continuar chamando métodos,
+um após o outro.
+
+00:11:57.690 --> 00:12:01.230
+A razão para encadear chamadas a métodos
+é por que o método <i>getText</i>
+
+00:12:01.230 --> 00:12:02.650
+retorna um objeto editável.
+
+00:12:02.650 --> 00:12:05.920
+Um objeto editável não pode ser armazenado
+em uma variável <i>string</i>,
+
+00:12:05.920 --> 00:12:09.980
+como vimos neste error do Android Studio,
+falando de tipos incompatíveis.
+
+00:12:09.980 --> 00:12:14.410
+Se adicionarmos o método <i>toString</i>, 
+o valor de retorno de tudo é uma <i>string</i>,
+
+00:12:14.410 --> 00:12:17.790
+e pode ser armazenado na variável <i>name</i>.
+
+00:12:17.790 --> 00:12:20.550
+Podemos verificar vendo a documentação.
+
+00:12:20.550 --> 00:12:23.160
+O método <i>getText</i> retorna 
+um objeto editável.
+
+00:12:23.160 --> 00:12:25.660
+Se clico nele,
+na classe <i>editable</i>,
+
+00:12:25.660 --> 00:12:27.770
+aparece um método chamado <i>toString</i>.
+
+00:12:27.770 --> 00:12:28.740
+Rolando para baixo,
+
+00:12:28.740 --> 00:12:32.830
+na seção de método público,
+não vejo <i>toString</i> listado aqui.
+
+00:12:32.830 --> 00:12:34.670
+Mas vejo métodos herdados.
+
+00:12:34.670 --> 00:12:38.520
+Então, se abro esta lista,
+vejo que <i>toString</i> é um método.
+
+00:12:38.520 --> 00:12:40.930
+E que o valor de retorno é <i>string</i>.
+
+00:12:40.930 --> 00:12:45.610
+Então, relembrando, este método
+retorna um objeto editável,
+
+00:12:45.610 --> 00:12:48.000
+e, depois, podemos chamar
+o método <i>toString</i> nele.
+
+00:12:48.000 --> 00:12:50.670
+O método <i>toString</i> devolve uma <i>string</i>,
+
+00:12:50.670 --> 00:12:53.680
+então, tudo isso aqui à direita,
+retorna uma <i>string</i>.
+
+00:12:53.680 --> 00:12:57.150
+E ela pode ser armazenada na variável
+<i>string</i> chamada <i>name</i>.
+
+00:12:57.940 --> 00:13:00.400
+Nossa, esta foi uma tarefa
+de codificação realmente longa.
+
+00:13:01.210 --> 00:13:04.070
+Você pode fazer uma pausa rápida agora
+e depois voltar, pois precisamos
+
+00:13:04.070 --> 00:13:07.620
+descobrir como mudar o preço, 
+baseando-se no que o usuário pediu.
+
+00:13:07.620 --> 00:13:09.740
+Faremos isso ao aprender 
+sobre fluxo de controle.
+

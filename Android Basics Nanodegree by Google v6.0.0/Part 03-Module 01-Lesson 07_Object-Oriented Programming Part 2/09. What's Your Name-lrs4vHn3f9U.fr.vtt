@@ -1,0 +1,975 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.452 --> 00:00:03.620
+Bien, c'était vraiment une 
+tache difficile de codage
+
+00:00:03.620 --> 00:00:08.150
+Il y eut plusieurs parties qui
+implique une vue jamais utilisé.
+
+00:00:08.150 --> 00:00:10.650
+Passons en revue
+la solution ensemble.
+
+00:00:10.650 --> 00:00:13.840
+Au début, vous devez planifier
+les étapes à faire.
+
+00:00:13.840 --> 00:00:16.160
+La première étape devrait être
+d'ajouter ce champ de texte pour que
+
+00:00:16.160 --> 00:00:18.250
+l'utilisateur puisse 
+y entrer leur nom.
+
+00:00:18.250 --> 00:00:20.880
+La seconde étape est que quand
+le bouton de commande est cliqué,
+
+00:00:20.880 --> 00:00:24.630
+nous voulons obtenir le nom du champ de
+texte et le stocker dans une variable.
+
+00:00:24.630 --> 00:00:27.270
+Puis la troisième étape est d'actualiser
+le récapitulatif de la commande pour
+
+00:00:27.270 --> 00:00:27.880
+en fait afficher ce nom.
+
+00:00:29.240 --> 00:00:30.460
+Plongeons dans ce premier étape.
+
+00:00:31.500 --> 00:00:34.800
+Nous n'avons pas ajouté de champ de 
+saisie texte dans notre app avant,
+
+00:00:34.800 --> 00:00:36.250
+donc cherchons sur 
+google comment faire.
+
+00:00:37.270 --> 00:00:38.850
+Puisque nous essayons d'obtenir
+des entrées de l'utilisateur,
+
+00:00:38.850 --> 00:00:42.165
+Je vais rechercher des 
+entrées utilisateur d'android.
+
+00:00:42.165 --> 00:00:45.275
+Le résultat est developer.android.com, 
+alors cela semble bon.
+
+00:00:46.295 --> 00:00:49.765
+Cette page décrit les meilleurs 
+pour des entrées utilisateur.
+
+00:00:49.765 --> 00:00:55.455
+Ça parle de gestes tactiles, autant que
+de saisie clavier et contrôleurs de jeu.
+
+00:00:55.455 --> 00:00:59.455
+Le saisie clavier est ce que nous voulons,
+donc cliquons sur le premier lien.
+
+00:00:59.455 --> 00:01:02.045
+Je commence par faire défiler 
+rapidement la page.
+
+00:01:02.045 --> 00:01:05.150
+Je vois un paquet d'exemples <i>XML</i>
+qui seront utiles.
+
+00:01:05.150 --> 00:01:08.710
+Je remarque qu'il y a un crochet à
+chevron ouvert et puis le nom de la vue.
+
+00:01:08.710 --> 00:01:11.550
+Dans ce cas, le nom de la vue
+semble être <i>EditText</i>.
+
+00:01:12.610 --> 00:01:17.260
+Si je fais défiler les autres exemples,
+je vois aussi que c'est une vue <i>EditText</i>.
+
+00:01:17.260 --> 00:01:22.330
+Donc, il semble que cette vue qui prend
+la saisie texte est appelée <i>EditText</i>.
+
+00:01:22.330 --> 00:01:25.269
+Une autre approche est d'utiliser la feuille
+de triche des vues communes d'Android.
+
+00:01:26.330 --> 00:01:29.360
+<i>EditText</i> est aussi dans
+cette liste de vues et
+
+00:01:29.360 --> 00:01:32.670
+Cet exemple d'album description est
+similaire au champ de nom dans notre app.
+
+00:01:33.730 --> 00:01:35.680
+Copions ce <i>XML</i> et
+ajoutons-le dans notre app.
+
+00:01:36.850 --> 00:01:39.790
+Nous voulons le champ de nom tout
+en haut de notre formulaire de commande,
+
+00:01:39.790 --> 00:01:42.910
+au-dessus de l'en-tête de garnitures,
+donc ajoutons-le ici.
+
+00:01:42.910 --> 00:01:45.440
+Immediatement, il y a une erreur
+en disant qu'il ne peut pas résoudre
+
+00:01:45.440 --> 00:01:46.449
+ce symbole pour indice.
+
+00:01:47.600 --> 00:01:51.430
+Il réference le texte de l'album description, 
+mais cela a été pour la feuille de triche
+
+00:01:51.430 --> 00:01:55.640
+Effaçons cela et remplaçons-le 
+par notre propre indice, qui est <i>Name</i>.
+
+00:01:55.640 --> 00:01:58.640
+Puisque nous voulons le champ de nom
+en haut de notre formulaire de commande,
+
+00:01:58.640 --> 00:02:01.910
+au-dessus de l'en-tête de garniture,
+collons-le juste ici.
+
+00:02:01.910 --> 00:02:05.150
+Ce sera le premier enfant dans
+cette disposition linéaire vertical.
+
+00:02:05.150 --> 00:02:08.109
+Maintenant assurons-nous que tous les
+attributs sont fixés de la manière voulue.
+
+00:02:09.120 --> 00:02:10.220
+Premièrement, nous avons la vue <i>ID</i>.
+
+00:02:10.220 --> 00:02:13.350
+et elle est appelée 
+<i>album_description_view</i>.
+
+00:02:13.350 --> 00:02:15.590
+Cela fait réference à l'exemple
+de feuille de triche, donc
+
+00:02:15.590 --> 00:02:18.000
+changeons cela en un
+nom plus appoprié.
+
+00:02:19.020 --> 00:02:20.470
+Appelons cela le champ de nom.
+
+00:02:21.840 --> 00:02:24.419
+Après, nous avons <i>width</i> et
+height qui sont attributs familiers.
+
+00:02:26.000 --> 00:02:29.052
+Actuellement, le <i>width</i> du champ d'édition
+texte est mis pour correspondre le parent.
+
+00:02:29.052 --> 00:02:33.620
+Cela signifie que le champ sera aussi
+large que la disposition linéaire parente.
+
+00:02:33.620 --> 00:02:34.960
+Puis, nous avons <i>height</i>.
+
+00:02:34.960 --> 00:02:36.820
+<i>Height</i> est mis pour 
+l'habillage du contenu,
+
+00:02:36.820 --> 00:02:39.380
+donc, il sera aussi grand que
+le contenu à l'intérieur de celui-ci.
+
+00:02:39.380 --> 00:02:42.630
+Ces deux valeurs semblent raisonnable,
+alors laissons-les comme ils sont.
+
+00:02:42.630 --> 00:02:44.230
+Après, nous avons <i>hint</i>.
+
+00:02:44.230 --> 00:02:46.450
+Nous n'avons pas travaillé avec
+cet attribut avant et
+
+00:02:46.450 --> 00:02:49.800
+il y a une erreur en disant qu'il
+ne peut pas résoudre cette chaîne.
+
+00:02:49.800 --> 00:02:51.580
+Cherchons la documentation pour
+
+00:02:51.580 --> 00:02:55.020
+l'android <i>EditText</i> pour découvrir
+ce que cet attribut signifie.
+
+00:02:56.020 --> 00:03:00.220
+en recherchant edittext android, nous
+pouvons trouver la page de documentation.
+
+00:03:00.220 --> 00:03:05.040
+Il y a une présentation rapide des class
+et puis une liste des attributs <i>XML</i>.
+
+00:03:05.040 --> 00:03:08.900
+Il se trouve que la classe modification de 
+texte hérite de vue de texte et vue.
+
+00:03:08.900 --> 00:03:12.250
+Donc, c'est pourquoi on a ces
+attributs <i>XML</i> hérités.
+
+00:03:12.250 --> 00:03:14.720
+Une fois qu'ils sont étendus, nous 
+pouvons rechercher pour android hint.
+
+00:03:15.990 --> 00:03:18.230
+Bien, c'était l'attribut
+que nous recherchions.
+
+00:03:18.230 --> 00:03:21.270
+Si nous défilons vers
+la droite, il est dit que
+
+00:03:21.270 --> 00:03:24.860
+c'est l'indice texte à
+afficher quand le texte est vide.
+
+00:03:24.860 --> 00:03:27.850
+Cela aide l'utilisateur à savoir ce
+qu'il devrait entrer dans ce champ.
+
+00:03:27.850 --> 00:03:31.870
+Dans cette app que je vous ai montré,
+l'indice texte dit <i>name</i>.
+
+00:03:31.870 --> 00:03:35.440
+Donc, dans notre code, nous montrons 
+effacer cette chaîne et entrer le nom.
+
+00:03:36.500 --> 00:03:37.750
+Puis, nous avons <i>inputType</i>.
+
+00:03:37.750 --> 00:03:41.690
+C'est aussi un nouvel attribut, donc
+regardons la documentation.
+
+00:03:41.690 --> 00:03:44.790
+Maintenant je vais rechercher pour
+Android input type.
+
+00:03:44.790 --> 00:03:46.100
+C'est listé ici et
+
+00:03:46.100 --> 00:03:50.830
+la description dit que c'est le type de 
+donnée étant placé dans le champ de texte.
+
+00:03:50.830 --> 00:03:54.980
+Il est usé pour aider une méthode d'entrée à
+décider comment l'utilisateur entre le texte.
+
+00:03:54.980 --> 00:03:58.240
+C'est un peu une vague description,
+alors cliquons sur cet attribut pour
+
+00:03:58.240 --> 00:03:59.610
+plus d'informations.
+
+00:03:59.610 --> 00:04:02.760
+Voici la complète
+description de <i>InputType</i>.
+
+00:04:02.760 --> 00:04:05.780
+Ces sont les valeurs
+possibles que nous pouvons régler.
+
+00:04:05.780 --> 00:04:09.750
+Dans l'exemple de la feuille de triche, 
+le <i>XML</i> dit <i>textMultiLine</i>.
+
+00:04:09.750 --> 00:04:14.120
+Apparemment, cela signifie que le champ
+<i>text</i> peut permettre du texte multi-lignes.
+
+00:04:14.120 --> 00:04:16.470
+Nous ne nous attendons pas que le nom
+de quelqu'un soit trop long,
+
+00:04:16.470 --> 00:04:19.550
+donc, une ligne de texte
+devrait être suffisant.
+
+00:04:19.550 --> 00:04:21.959
+Utilisons juste text 
+comme type d'entrée.
+
+00:04:21.959 --> 00:04:25.010
+Si j'efface <i>textMultiline</i> et
+commence à taper un texte,
+
+00:04:25.010 --> 00:04:29.710
+alors, j'obtiens une liste de toutes les
+options comme auto suggestions complètes.
+
+00:04:29.710 --> 00:04:31.910
+Je sélectionnerai juste 
+<i>text</i> et taper entrer.
+
+00:04:31.910 --> 00:04:34.660
+Maintenant, je vais exécuter l'app sur
+le périphérique pour vérifier si le champ
+
+00:04:34.660 --> 00:04:36.180
+<i>EditText</i> apparait.
+
+00:04:36.180 --> 00:04:38.490
+Quand l'app est lancée,
+je vois le champ de nom.
+
+00:04:38.490 --> 00:04:39.410
+Génial.
+
+00:04:39.410 --> 00:04:40.055
+Et je peux aussi taper dedans.
+
+00:04:40.055 --> 00:04:42.540
+Mais en fait,
+il commence par une lettre minuscule.
+
+00:04:42.540 --> 00:04:47.260
+Quand je tape, je veux 
+qu'il commence par une lettre majuscule.
+
+00:04:47.260 --> 00:04:51.030
+Pour régler cela, je peux 
+modifier le type d'entrée ici.
+
+00:04:51.030 --> 00:04:52.350
+Regardons les autres options ici.
+
+00:04:53.390 --> 00:04:57.713
+Il y a <i>textCapcharacters</i>,
+<i>textCapwords</i>,
+
+00:04:57.713 --> 00:05:00.210
+<i>textCapsentences</i> et
+tout un paquet de choses.
+
+00:05:00.210 --> 00:05:02.350
+Ceux concernant la capitalisation
+semblent prometteurs.
+
+00:05:03.690 --> 00:05:05.530
+Après la lecture de
+ces descriptions,
+
+00:05:05.530 --> 00:05:08.500
+je pense que <i>textCapwords</i> pourrait
+être une bonne option à essayer.
+
+00:05:08.500 --> 00:05:10.000
+Donc, copions cela 
+et utilisons-le.
+
+00:05:11.040 --> 00:05:13.699
+Et donc, au lieu de text je vais
+utiliser <i>textCapwords</i>.
+
+00:05:14.930 --> 00:05:16.170
+Exécutons l'app une nouvelle fois.
+
+00:05:16.170 --> 00:05:19.415
+Ok, maintenant la saisie commence
+avec les lettres majuscules, donc
+
+00:05:19.415 --> 00:05:22.306
+alors je peux juste commencer à taper 
+le nom, et si j'ajoute un espace,
+
+00:05:22.306 --> 00:05:24.088
+alors le prochain mot 
+est en majuscule.
+
+00:05:24.088 --> 00:05:25.380
+Génial.
+
+00:05:25.380 --> 00:05:29.220
+La dernière chose que j'ai remarqué est
+que nous avons besoin d'un peu d'espace
+
+00:05:29.220 --> 00:05:31.645
+entre ce champ de nom et
+l'en-tête de garniture.
+
+00:05:31.645 --> 00:05:36.010
+Nous avons ajouté 16 dp d'espace
+vertical, alors faisons pareil ici.
+
+00:05:36.010 --> 00:05:38.816
+Je pourrais l'ajouter comme marge inférieur
+dans le champ <i>EditText</i>, mais
+
+00:05:38.816 --> 00:05:42.800
+Je vais juste choisir de l'ajouter comme
+marge supérieur sur l'en-tête de garniture.
+
+00:05:42.800 --> 00:05:45.700
+Ok, maintenant l'espacement semble correct 
+et le champ de nom est déjà correct.
+
+00:05:46.730 --> 00:05:49.650
+Cela a pris soin de tous 
+les changements <i>XML</i> pour l'étape un.
+
+00:05:49.650 --> 00:05:51.970
+Maintenant, nous avons besoin de modifier 
+le code java.
+
+00:05:51.970 --> 00:05:54.340
+Pour l'étape deux,
+quand le bouton de commande est cliqué,
+
+00:05:54.340 --> 00:05:57.650
+nous voulons obtenir le nom du champ de
+texte et le stocker dans une variable.
+
+00:05:58.730 --> 00:06:03.140
+C'est facile pour nos yeux humains de voir
+le nom dans ce champ, mais l'app android
+
+00:06:03.140 --> 00:06:06.980
+ne sait pas nous voulons mettre ce nom 
+dans le récapitulatif de commande ici.
+
+00:06:08.070 --> 00:06:10.840
+Il utilise toujours le nom de Lyla 
+durement codé.
+
+00:06:10.840 --> 00:06:13.190
+Nous avons besoin de changer cela 
+pour utiliser ce nom.
+
+00:06:13.190 --> 00:06:16.540
+Il est juste comme la façon dont nous avons
+eu à découvrir si la case est cochée ou
+122
+
+00:06:19.560 --> 00:06:22.560
+Nous avons pas appris à lire du
+texte du champ <i>EditText</i>, donc
+
+00:06:22.560 --> 00:06:23.570
+donc recherchons sur google.
+
+00:06:23.570 --> 00:06:29.190
+Je vais chercher comment j'obtiens du 
+texte du champ <i>EditText</i> d'Android.
+
+00:06:29.190 --> 00:06:30.390
+Le premier résultat semble bien.
+
+00:06:30.390 --> 00:06:32.720
+C'est une question de débordement 
+de pile.
+
+00:06:32.720 --> 00:06:35.880
+Je peux lire la question mais
+Je recherche surtout de la réponse.
+
+00:06:35.880 --> 00:06:40.050
+Je peux parcourir rapidement pour voir
+si cette page est utile ou non.
+
+00:06:40.050 --> 00:06:43.510
+Cette réponse a une coche verte
+par elle et a beaucoup d'upvotes, donc
+
+00:06:43.510 --> 00:06:45.610
+Je peux la lire plus prudemment.
+
+00:06:45.610 --> 00:06:47.810
+Je commence avec un 
+fragment de code.
+
+00:06:47.810 --> 00:06:51.820
+Il semble que ce code irait à l'intérieur
+d'une classe d'activité parce que nous
+
+00:06:51.820 --> 00:06:53.030
+appelons la méthode <i>FindViewById</i>.
+
+00:06:53.030 --> 00:06:57.970
+Nous essayons de chercher la hiérarchie
+de vue pour une vue avec cet ID.
+
+00:06:57.970 --> 00:07:01.910
+Une fois qu'on trouve cette vue,
+Nous le lançons à une vue <i>EditText</i> et
+
+00:07:01.910 --> 00:07:05.250
+le stockant ensuite dans 
+une variable appelée <i>text</i>.
+
+00:07:05.250 --> 00:07:09.100
+Sur la seconde ligne, nous essayons de
+déclarer une chaîne de variable <i>value</i>
+
+00:07:09.100 --> 00:07:10.330
+en la stockant aussi à l'intérieur.
+
+00:07:10.330 --> 00:07:14.751
+Maintenant, il a beaucoup de parenthèses, de
+points et de mots, mais vous pourriez être apte
+
+00:07:14.751 --> 00:07:18.780
+à deviner que nous essayons d'obtenir
+le texte en dehors du champ EditText.
+
+00:07:18.780 --> 00:07:23.260
+Et nous essayons de le stocker à l'intérieur
+d'une chaîne de variable appelée <i>value</i>.
+
+00:07:23.260 --> 00:07:27.120
+Copions et collons ce code dans
+notre app pour voir si ça fonctionne.
+
+00:07:27.120 --> 00:07:31.480
+Dans la classe <i>MainActivity</i> je vais 
+ajouter le code dans une méthode <i>submitOrder</i>.
+
+00:07:31.480 --> 00:07:34.400
+Je choisis cette méthode parce que c'est là
+que le bouton de commande sera
+
+00:07:34.400 --> 00:07:37.170
+cliqué et c'est là que nous
+voulons lire du champ de nom.
+
+00:07:38.230 --> 00:07:41.260
+Je vais coller le code du
+post de débordement de pile
+
+00:07:41.260 --> 00:07:41.820
+en haut de la méthode.
+
+00:07:43.110 --> 00:07:46.610
+Immediatement, il y a une erreur qui
+dit qu'il ne peut pas résoudre ce symbole.
+
+00:07:46.610 --> 00:07:50.340
+Nous avons besoin de remplacer cela avec
+le <i>ViewId</i> pour le champ de nom.
+
+00:07:50.340 --> 00:07:52.440
+Commutant en arrière à 
+notre <i>layout.xml</i>,
+
+00:07:52.440 --> 00:07:56.588
+nous avons donné au champ <i>EditText</i>
+une vue id de <i>name_field</i>,
+.
+153
+
+00:08:01.410 --> 00:08:04.530
+Il n'y a pas plus d'erreur, donc
+je peux essayer d'exécuter l'app, mais
+
+00:08:04.530 --> 00:08:07.400
+comment je saurais si ce code
+fonctionne actuellement ou non ?
+
+00:08:07.400 --> 00:08:10.520
+Je pourrais ajouter un message de 
+journal ici pour vérifier
+
+00:08:10.520 --> 00:08:14.300
+que la valeur contient en fait
+le nom dans ce champ.
+
+00:08:14.300 --> 00:08:16.760
+Et voici le code pour le message
+de journal.
+
+00:08:16.760 --> 00:08:20.110
+J'imprime les deux-points de nom et
+ensuite la chaîne de valeur.
+
+00:08:21.110 --> 00:08:23.150
+<i>Value</i> est un nom vague pour
+cette variable donc
+
+00:08:23.150 --> 00:08:25.260
+Je vais changer cela
+pour être appelé <i>name</i>.
+
+00:08:25.260 --> 00:08:28.460
+Ce serait un nom un peu plus
+descriptif pour cela.
+
+00:08:28.460 --> 00:08:31.005
+En parlant de cela, je vais
+changer le nom de la variable pour
+
+00:08:31.005 --> 00:08:33.760
+<i>EditText</i> pour être aussi un champ
+de nom.
+
+00:08:33.760 --> 00:08:37.070
+<i>Text</i> pourrait être confondu avec
+d'autres choses au sein de notre code.
+
+00:08:37.070 --> 00:08:40.299
+Maintenant, exécutons l'app et
+vérifions ce message de journal.
+
+00:08:40.299 --> 00:08:40.840
+Ok.
+
+00:08:40.840 --> 00:08:42.190
+Si je remplis le 
+formulaire de commande et
+
+00:08:42.190 --> 00:08:45.790
+puis taper le bouton de commande,
+alors je peux vérifier les journaux ici.
+
+00:08:46.810 --> 00:08:51.210
+Je vois un nouveau message pour <i>MainActivity</i>
+qui dit Name: Antigravity Anthony.
+
+00:08:51.210 --> 00:08:52.680
+Donc, ça foncionnait.
+
+00:08:52.680 --> 00:08:56.360
+Ce code en fait a vraiment extrait
+le nom du champs.
+
+00:08:56.360 --> 00:08:59.620
+Maintenant que nous avons le 
+nom de l'utilisateur dans
+
+00:08:59.620 --> 00:09:04.060
+une variable et nous avons vérifié avec
+l'enregistrement, que c'est le nom correct,
+
+00:09:04.060 --> 00:09:06.330
+alors nous pouvons actualiser le récapitulatif 
+des commandes pour montrer ce nom.
+
+00:09:07.380 --> 00:09:10.280
+Pour le récapitulatif des commandes
+pour montrer le nom correct,
+
+00:09:10.280 --> 00:09:13.860
+nous avons besoin de le passer comme
+un paramètre d'entrée à cette méthode.
+
+00:09:13.860 --> 00:09:16.610
+Cela dit, quand nous appelons la méthode 
+de création du récapitulatif des commandes,
+
+00:09:16.610 --> 00:09:20.450
+nous devons passer cette variable <i>name</i> 
+comme un argument d'entrée.
+
+00:09:20.450 --> 00:09:22.410
+Effectuons les changements en premier.
+
+00:09:22.410 --> 00:09:24.840
+Si j'ajoute name comme un argument 
+d'entrée,
+
+00:09:24.840 --> 00:09:29.660
+j'obtient une erreur car l'appel de la méthode 
+ne correspond pas à la signature de la méthode.
+
+00:09:29.660 --> 00:09:31.950
+En défilant en bas vers la définition 
+de la méthode,
+
+00:09:31.950 --> 00:09:35.670
+je peux ajouter le nom <i>String</i>
+comme un paramètre d'entrée.
+
+00:09:35.670 --> 00:09:38.410
+j'actualiserai aussi le doc Java.
+
+00:09:38.410 --> 00:09:41.600
+Maintenant, à l'intérieur de la méthode 
+createOrderSummary, je peux user cette variable.
+
+00:09:41.600 --> 00:09:46.630
+Je vais effacer le nom durement codé
+et puis enchaîner cette variable nom.
+
+00:09:47.930 --> 00:09:51.360
+Donc, pour récapituler, nous obtenons
+le nom de <i>name_field</i> et
+
+00:09:51.360 --> 00:09:55.590
+puis le passer comme une entrée à
+la méthode <i>createOrderSummary</i>.
+
+00:09:55.590 --> 00:09:59.620
+À l'intérieur de cette méthode, nous pouvons
+ajouter le nom au récapitulatif des commandes.
+
+00:09:59.620 --> 00:10:01.720
+Exécutons l'app pour vérifier notre code.
+
+00:10:01.720 --> 00:10:05.200
+Une fois que l'app s'exécute, je peux taper
+le nom, sélectionner quelques garnitures et
+
+00:10:05.200 --> 00:10:06.790
+puis changer la quantité.
+
+00:10:06.790 --> 00:10:08.600
+Alors je peux entrer le bouton de 
+commande.
+
+00:10:08.600 --> 00:10:11.190
+Maintenant, je vois que le récapitulatif des
+commandes contient le nom que j'ai tapé
+
+00:10:11.190 --> 00:10:12.160
+précédemment.
+
+00:10:12.160 --> 00:10:13.458
+Woohoo!
+
+00:10:13.458 --> 00:10:17.140
+Si je change le nom et puis
+entrer Commander, alors ça s'actualise encore.
+
+00:10:17.140 --> 00:10:17.800
+C'est excitant.
+
+00:10:17.800 --> 00:10:22.440
+Maintenant que tout fonctionne dans l'
+app, je peux supprimer le message de journal.
+
+00:10:22.440 --> 00:10:24.900
+Je peux encore exécuter l'app pour 
+s'assurer que les choses fonctionnent.
+
+00:10:26.000 --> 00:10:28.640
+Maintenant, revenons en arrière et
+répondons à ces questions test.
+
+00:10:28.640 --> 00:10:31.700
+La vue que nous avons ajoutée à
+notre app est appelée <i>EditText</i>.
+
+00:10:31.700 --> 00:10:35.260
+La seconde question demande
+quelle méthode Java nous avons appelé
+
+00:10:35.260 --> 00:10:37.010
+pour obtenir le texte de cette vue.
+
+00:10:38.120 --> 00:10:40.910
+Nous pouvons répondre à cela en
+revenons à notre code.
+
+00:10:40.910 --> 00:10:42.885
+Nous cherchons la hiérarchie de vue 
+pour
+
+00:10:42.885 --> 00:10:46.710
+l'objet Java <i>EditText</i> qui a 
+représenté le champ de nom.
+
+00:10:46.710 --> 00:10:49.570
+Nous stockons cela dans une variable
+appelée <i>nameField</i>.
+
+00:10:49.570 --> 00:10:52.310
+Et sur cet objet, nous avons appelé 
+la méthode.
+
+00:10:52.310 --> 00:10:56.310
+Nous avons appelé la méthode <i>getText</i>,
+qui ne prend aucun arguement d'entrée et
+
+00:10:56.310 --> 00:10:58.500
+il a un retour de valeur d'un autre objet.
+
+00:10:59.510 --> 00:11:01.460
+Cela nous mène à notre troisième 
+question.
+
+00:11:01.460 --> 00:11:04.790
+Quel est le type de donnée de retour
+de la méthode <i>getText</i>
+
+00:11:04.790 --> 00:11:06.330
+La réponse est modifiable et
+
+00:11:06.330 --> 00:11:09.540
+Je l'ai découvert en regardant
+la documenttaion d'Android.
+
+00:11:09.540 --> 00:11:14.320
+Pour la classe <i>EditText</i>, si vous défilez en 
+bas, vous verrez les méthodes publiques.
+
+00:11:14.320 --> 00:11:17.970
+<i>GetText</i> est listé comme une méthode tel que
+retournant le texte que la vue texte est
+
+00:11:17.970 --> 00:11:19.350
+en train de s'afficher.
+
+00:11:19.350 --> 00:11:21.960
+Le type de données de retour est 
+modifiable.
+
+00:11:21.960 --> 00:11:27.280
+Il retourne un objet modifiable, et nous
+pouvons appeler une autre méthode sur
+
+00:11:27.280 --> 00:11:30.750
+cet objet en ajoutant la notation dot et
+puis le nom de la méthode.
+
+00:11:30.750 --> 00:11:35.730
+Donc, dans ce cas, nous appelons la 
+méthode <i>toString</i> sur l'objet modifiable,
+
+00:11:35.730 --> 00:11:38.790
+et la méthode <i>toString</i> 
+retourne une chaîne, donc
+
+00:11:38.790 --> 00:11:41.050
+cela peut être stocké dans la variable 
+<i>name</i>.
+
+00:11:42.080 --> 00:11:45.880
+C'est un concept plus avancé et il 
+est appelé appels de méthode de chaînage.
+
+00:11:45.880 --> 00:11:49.560
+Parce que nous appelons une méthode,
+obtenons la valeur de retour et
+
+00:11:49.560 --> 00:11:52.800
+puis appelons une autre méthode et
+s'il retourne un objet,
+
+00:11:52.800 --> 00:11:53.980
+vous pouvez appeler une autre méthode.
+
+00:11:53.980 --> 00:11:57.690
+Et vous pouvez continuer d'appeler
+des méthodes l'une après l'autre.
+
+00:11:57.690 --> 00:12:01.230
+La raison pourquoi nous enchaînons les appels 
+de méthode est car la méthode <i>getText</i>
+
+00:12:01.230 --> 00:12:02.650
+retourne un objet modifiable.
+
+00:12:02.650 --> 00:12:05.920
+Un objet modifiable ne peut pas être
+stocké dans la chaîne de variable,
+
+00:12:05.920 --> 00:12:09.980
+comme on le voit par ce Studio Android,
+l'erreur dit des types incompatibles.
+
+00:12:09.980 --> 00:12:14.410
+Donc, si nous ajoutons une méthode <i>toString</i>, 
+alors la valeur de retour de tout cela est
+
+00:12:14.410 --> 00:12:17.790
+une chaîne et cela 
+peut être stocké dans la variable <i>name</i>.
+
+00:12:17.790 --> 00:12:20.550
+Nous pouvons vérifier cela en
+vérifiant la documentation.
+
+00:12:20.550 --> 00:12:23.160
+La méthode <i>getText</i> retourne
+un objet modifiable.
+
+00:12:23.160 --> 00:12:25.660
+Si je clique dessus,
+dans la classe modifiable,
+
+00:12:25.660 --> 00:12:27.880
+nous devrions trouver une méthode
+appelée <i>toString</i>.
+
+00:12:27.880 --> 00:12:28.600
+En défilant en bas,
+
+00:12:28.600 --> 00:12:32.830
+dans la section des méthodes publiques,
+je ne vois pas <i>toString</i> listée ici.
+
+00:12:32.830 --> 00:12:34.670
+Mais il y a des méthodes héritées.
+
+00:12:34.670 --> 00:12:38.520
+Donc, si j'ouvre cette liste déroulante,
+alors je vois que <i>toString</i> est une méthode.
+
+00:12:38.520 --> 00:12:40.930
+Et la valeur de 
+retour est <i>string</i>.
+
+00:12:40.930 --> 00:12:44.850
+Alors, pour y insister encore une fois,
+cet appel de méthode retourne un objet
+
+00:12:44.850 --> 00:12:48.000
+modifiable et alors nous pouvons appeler
+la méthode <i>toString</i> dessus.
+
+00:12:48.000 --> 00:12:50.670
+La méthode <i>toString</i> 
+retourne une chaîne et alors
+
+00:12:50.670 --> 00:12:53.680
+cette chose toute entière sur le côté 
+droit, retourne une chaîne.
+
+00:12:53.680 --> 00:12:57.150
+Et cela peut être stocké dans
+la chaîne de variable appelée <i>name</i>.
+
+00:12:58.270 --> 00:13:00.180
+Wow, c'était vraiment une longue 
+tache de codage.
+
+00:13:01.330 --> 00:13:04.070
+Vous pouvez faire une pause rapide 
+et puis revenez car nous avons besoin de
+
+00:13:04.070 --> 00:13:07.620
+découvrir comment changer le prix
+basé sur ce que l'utilisateur commande.
+
+00:13:07.620 --> 00:13:09.740
+Nous allons le faire en
+apprenant le flux de contrôle.
+

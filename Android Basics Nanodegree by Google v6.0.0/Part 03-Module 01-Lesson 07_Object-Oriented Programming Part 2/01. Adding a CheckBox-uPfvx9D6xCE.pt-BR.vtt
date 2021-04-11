@@ -1,0 +1,402 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.490 --> 00:00:03.550
+Ao construir este layout,
+pensemos nas visualizações necessárias.
+
+00:00:04.110 --> 00:00:07.500
+Vou partir do princípio que tudo isso
+já está construído, e nós só vamos
+
+00:00:07.500 --> 00:00:10.480
+falar sobre as coisas novas
+que precisamos adicionar ao layout.
+
+00:00:10.770 --> 00:00:13.240
+As duas novas visualizações
+que precisamos adicionar
+
+00:00:13.240 --> 00:00:15.030
+são um TextView para coberturas
+
+00:00:15.030 --> 00:00:18.090
+e uma visualização CheckBox 
+para o chantilly.
+
+00:00:18.090 --> 00:00:21.180
+Você talvez não soubesse
+que esta visualização existia no Android,
+
+00:00:21.180 --> 00:00:24.680
+mas com sorte, uma busca no Google
+ajudou você a encontrar esta resposta.
+
+00:00:25.240 --> 00:00:28.270
+Seguindo para o passo 2,
+precisamos posicionar as visualizações.
+
+00:00:28.270 --> 00:00:30.860
+Se estas visualizações
+já estiverem na posição correta,
+
+00:00:30.860 --> 00:00:35.250
+só precisamos adicionar Coberturas
+e Chantilly verticalmente em uma coluna.
+
+00:00:35.250 --> 00:00:38.060
+Como a visualização de raiz
+é um layout vertical e linear,
+
+00:00:38.060 --> 00:00:40.490
+podemos só acrescentar
+estas visualizações no topo.
+
+00:00:40.990 --> 00:00:43.440
+No terceiro passo,
+vamos estilizar as visualizações.
+
+00:00:43.440 --> 00:00:46.350
+O estilo no cabeçalho Coberturas
+é o mesmo dos cabeçalhos
+
+00:00:46.350 --> 00:00:49.030
+Quantidade e Resumo do Pedido,
+então podemos simplesmente
+
+00:00:49.030 --> 00:00:51.434
+copiar e colar os cabeçalhos
+que já existem.
+
+00:00:51.434 --> 00:00:54.920
+Já a visualização CheckBox é nova,
+então precisamos estilizá-la de acordo.
+
+00:00:54.920 --> 00:00:59.176
+Devemos dar 24dp de espaço
+entre a caixa e o texto,
+
+00:00:59.176 --> 00:01:04.054
+e devemos mudar o tamanho da fonte
+de Chantilly para 16sp.
+
+00:01:04.054 --> 00:01:06.060
+Vamos fazer essas alterações
+no nosso aplicativo.
+
+00:01:07.180 --> 00:01:10.700
+Para acrescentar um cabeçalho Coberturas
+que pareça o cabeçalho Quantidade,
+
+00:01:10.700 --> 00:01:12.730
+basta copiar e colar o código.
+
+00:01:12.730 --> 00:01:16.775
+Copio e então o acrescento ao topo
+deste LinearLayout vertical.
+
+00:01:17.910 --> 00:01:20.240
+Certo, então agora aqui diz
+Quantidade duas vezes.
+
+00:01:20.240 --> 00:01:22.960
+Vou mudar o texto,
+para que diga Coberturas.
+
+00:01:22.960 --> 00:01:25.380
+Também copiei a margem do fundo,
+
+00:01:25.380 --> 00:01:28.790
+de forma que há algum espaço
+entre este cabeçalho e o conteúdo abaixo.
+
+00:01:30.070 --> 00:01:32.640
+Agora, não acrescentamos um CheckBox
+ao aplicativo antes,
+
+00:01:32.640 --> 00:01:34.360
+então vou ver no Google como fazer isso.
+
+00:01:34.360 --> 00:01:37.720
+Vou buscar por caixa de marcação android.
+
+00:01:37.720 --> 00:01:41.030
+Lembre-se de acrescentar Android,
+pois podem haver caixas de marcação
+
+00:01:41.030 --> 00:01:44.850
+para outras plataformas, como para a web
+ou outras plataformas móveis.
+
+00:01:44.850 --> 00:01:48.090
+Isso ajudará a conseguir
+um resultado específico para Android.
+
+00:01:48.090 --> 00:01:49.760
+Vamos tentar o primeiro link.
+
+00:01:49.760 --> 00:01:52.900
+Esta é a documentação de referência
+para a classe CheckBox.
+
+00:01:52.900 --> 00:01:56.420
+Percorro o documento
+e vejo uma bela visão geral de classe
+
+00:01:56.420 --> 00:01:58.960
+e então ela vai diretamente
+para os atributos XML.
+
+00:01:58.960 --> 00:02:02.880
+Eu realmente gostaria, no entanto,
+de um exemplo de XML para CheckBox.
+
+00:02:02.880 --> 00:02:05.100
+Então, voltemos aos resultados de busca.
+
+00:02:05.100 --> 00:02:07.070
+Vamos clicar no segundo link.
+
+00:02:07.070 --> 00:02:10.440
+Legal, agora mostra
+algumas figuras de caixas de marcação.
+
+00:02:10.440 --> 00:02:12.040
+E aqui está um pouco de XML.
+
+00:02:12.040 --> 00:02:13.180
+Parece muito bom.
+
+00:02:13.180 --> 00:02:16.140
+Tem duas CheckBoxes
+dentro de um LinearLayout.
+
+00:02:16.140 --> 00:02:18.740
+Vou copiar a primeira CheckBox,
+
+00:02:18.740 --> 00:02:20.600
+e então vou colar em nosso aplicativo.
+
+00:02:21.590 --> 00:02:25.182
+De volta ao aplicativo, vou colar isto
+depois do texto Coberturas,
+
+00:02:25.182 --> 00:02:28.753
+mas antes do texto Quantidade,
+então, bem aqui.
+
+00:02:28.753 --> 00:02:33.040
+Vou modificar o XML 
+porque ele não encaixa em nosso caso.
+
+00:02:33.040 --> 00:02:36.710
+Vou remover o id e também o texto aqui.
+
+00:02:36.710 --> 00:02:39.750
+Em vez de carne, 
+porque nosso café não vende carne,
+
+00:02:39.750 --> 00:02:41.660
+vou digitar Chantilly.
+
+00:02:43.030 --> 00:02:45.940
+Por sinal, o que você viu antes,
+@string/meat,
+
+00:02:45.940 --> 00:02:50.410
+referia-se a uma resource string
+no arquivo strings.xml.
+
+00:02:50.410 --> 00:02:52.740
+Vamos falar sobre isso depois,
+mas, por enquanto,
+
+00:02:52.740 --> 00:02:55.550
+você pode só digitar a string
+diretamente aqui.
+
+00:02:55.550 --> 00:02:59.350
+E veja, o preview atualizou,
+então temos uma caixa que diz Chantilly.
+
+00:02:59.350 --> 00:03:03.380
+O bom da visualização de caixa de marcação
+é que ele dá uma caixa,
+
+00:03:03.380 --> 00:03:05.900
+assim como texto, 
+então você não precisa adicionar
+
+00:03:05.900 --> 00:03:08.100
+outra visualização de texto aqui.
+
+00:03:08.100 --> 00:03:10.850
+Também não precisamos desta linha
+que fala sobre onClick.
+
+00:03:12.089 --> 00:03:16.500
+Só o que nos importa para esta tarefa
+é fazer a CheckBox aparecer aqui.
+
+00:03:16.500 --> 00:03:19.040
+A outra forma como você
+poderia ter chegado a este XML
+
+00:03:19.040 --> 00:03:21.840
+seria olhando a tabela
+de visualizações comuns de Android.
+
+00:03:22.430 --> 00:03:25.410
+Esta tabela lista algumas
+visualizações comuns de Android
+
+00:03:25.410 --> 00:03:27.460
+e tem exemplos de XML também.
+
+00:03:28.480 --> 00:03:32.269
+Aqui está a visualização de CheckBox
+e eis um exemplo de como ficaria
+
+00:03:32.269 --> 00:03:34.125
+e o XML correspondente.
+
+00:03:34.125 --> 00:03:37.270
+Você poderia ter copiado o XML daqui
+e colado no aplicativo.
+
+00:03:38.230 --> 00:03:41.300
+Voltando ao Android Studio,
+vamos rodar o aplicativo para vê-lo.
+
+00:03:42.480 --> 00:03:43.320
+E aqui está.
+
+00:03:43.320 --> 00:03:44.180
+Está muito bom.
+
+00:03:44.180 --> 00:03:46.945
+Temos o cabeçalho Coberturas
+e uma CheckBox de Chantilly.
+
+00:03:47.750 --> 00:03:50.330
+Também tem uma animação legal
+quando marcamos a caixa.
+
+00:03:51.360 --> 00:03:54.790
+O único problema que vejo
+é que o espaçamento está errado.
+
+00:03:54.790 --> 00:03:57.840
+Por exemplo, está muito apertado
+entre o cabeçalho Quantidade
+
+00:03:57.840 --> 00:04:01.390
+e a CheckBox Chantilly, e também
+não há espaço suficiente por aqui.
+
+00:04:02.410 --> 00:04:04.480
+Voltando às linhas vermelhas 
+que nos deram,
+
+00:04:04.480 --> 00:04:09.370
+deveríamos adicionar 24dp de espaço aqui,
+e mudar o tamanho da fonte para 16sp.
+
+00:04:10.830 --> 00:04:12.960
+Primeiro, vou mudar o tamanho da fonte.
+
+00:04:12.960 --> 00:04:18.110
+Vou digitar android:textSize
+e depois colocar 16sp.
+
+00:04:18.110 --> 00:04:22.043
+Vou abrir o preview aqui
+para confirmar que a fonte aumentou,
+
+00:04:22.043 --> 00:04:23.670
+e aumentou mesmo.
+
+00:04:23.670 --> 00:04:26.600
+Se você não sabe se atualizou,
+você pode apertar este botão.
+
+00:04:26.600 --> 00:04:27.430
+Certo.
+
+00:04:27.430 --> 00:04:30.050
+Com relação ao espaçamento,
+eu consegui fazer funcionar
+
+00:04:30.050 --> 00:04:32.240
+na base de muita tentativa e erro.
+
+00:04:32.240 --> 00:04:34.370
+Tentei definir os valores de margem
+
+00:04:34.370 --> 00:04:38.340
+e então tentei definir o padding,
+e acabou que paddingLeft
+
+00:04:38.340 --> 00:04:41.860
+controla o espaçamento 
+entre a caixa e o texto aqui.
+
+00:04:41.860 --> 00:04:43.505
+Vamos acrescentar o padding agora.
+
+00:04:44.900 --> 00:04:46.960
+Legal, o texto se mexeu.
+
+00:04:46.960 --> 00:04:49.040
+Ainda vejo mais um problema.
+
+00:04:49.040 --> 00:04:53.090
+Tem espaço vertical suficiente aqui,
+mas aqui não tem.
+
+00:04:53.090 --> 00:04:57.760
+Preciso ou acrescentar padding embaixo,
+ou margem embaixo nesta visualização,
+
+00:04:57.760 --> 00:05:01.280
+ou preciso acrescentar padding no topo,
+ou margem no topo neste cabeçalho.
+
+00:05:01.280 --> 00:05:02.880
+Qualquer um dos dois funcionaria,
+
+00:05:02.880 --> 00:05:07.110
+então vou adicionar uma margem ao topo
+neste cabeçalho de Quantidade.
+
+00:05:07.110 --> 00:05:08.880
+Pronto, ficou melhor!
+
+00:05:08.880 --> 00:05:11.430
+Agora as coisas parecem
+ter um espaçamento mais igual.
+
+00:05:11.430 --> 00:05:13.230
+Vou rodar este aplicativo no meu aparelho.
+
+00:05:14.210 --> 00:05:15.170
+E aqui está o app.
+
+00:05:15.170 --> 00:05:16.320
+Ficou muito bom.
+
+00:05:16.320 --> 00:05:17.460
+Bom trabalho.
+
+00:05:17.460 --> 00:05:20.234
+Quando precisar mudar 
+mais a UI do seu aplicativo,
+
+00:05:20.234 --> 00:05:23.585
+você pode seguir este padrão
+de buscar a informação no Google
+
+00:05:23.585 --> 00:05:25.335
+e depois aplicar ao aplicativo.
+

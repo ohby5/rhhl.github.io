@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.420 --> 00:00:03.820
+Sekarang kita tahu &lt;i&gt;bullion&lt;/i&gt; dapat dipakai
+untuk mewakili status centang
+
+00:00:03.820 --> 00:00:05.270
+dari kotak centang ini.
+
+00:00:05.270 --> 00:00:07.290
+Mari kita modifikasi &lt;i&gt;Order Summary&lt;/i&gt;
+
+00:00:07.290 --> 00:00:10.830
+agar mencerminkan apakah kita mau
+tambahan &lt;i&gt;whipped cream&lt;/i&gt; atau tidak.
+
+00:00:10.830 --> 00:00:14.070
+Jika saya mau tambahan &lt;i&gt;whipped cream&lt;/i&gt;,
+lalu saya klik tombol &lt;i&gt;Order&lt;/i&gt;,
+
+00:00:14.070 --> 00:00:17.090
+maka akan menambah baris
+ke &lt;i&gt;Order Summary&lt;/i&gt;
+
+00:00:17.090 --> 00:00:19.290
+kalau saya mau
+tambahan atau tidak.
+
+00:00:19.290 --> 00:00:24.080
+&lt;i&gt;True&lt;/i&gt; jika saya centang kotak
+untuk menambah &lt;i&gt;topping&lt;/i&gt;.
+
+00:00:24.080 --> 00:00:29.120
+Dan jika saya tidak mencentang kotak
+lalu klik &lt;i&gt;Order&lt;/i&gt;, maka itu &lt;i&gt;false&lt;/i&gt;.
+
+00:00:29.120 --> 00:00:31.210
+Android sudah mencentang kotak ini
+
+00:00:31.210 --> 00:00:33.590
+dan kita sudah punya kode dalam aplikasi
+
+00:00:33.590 --> 00:00:37.650
+untuk mengklik tombol &lt;i&gt;Order&lt;/i&gt;
+dan membuat &lt;i&gt;Order Summary&lt;/i&gt; pertama.
+
+00:00:37.650 --> 00:00:41.320
+Bagian yang belum kita terapkan
+yaitu menambah baris teks ini di sini
+
+00:00:41.320 --> 00:00:42.940
+yang tertulis &lt;i&gt;Add whipped cream&lt;/i&gt;
+
+00:00:42.940 --> 00:00:45.266
+dan kita perlu masukkan nilai yang tepat
+
+00:00:45.291 --> 00:00:48.010
+berdasarkan kotak yang dicentang
+atau tidak.
+
+00:00:48.010 --> 00:00:52.210
+Sebelum menyelami kode,
+pikirkan sejenak tentang kode &lt;i&gt;pseudo&lt;/i&gt;
+
+00:00:52.210 --> 00:00:56.280
+untuk memperkuat ide pokok tentang
+apa yang akan dilakukan kode itu.
+
+00:00:56.280 --> 00:00:59.520
+Saat tombol &lt;i&gt;Order&lt;/i&gt; diklik,
+kita harus lakukan langkah ini.
+
+00:00:59.520 --> 00:01:03.390
+Langkah pertama memeriksa
+status dari kotak centang,
+
+00:01:03.390 --> 00:01:05.140
+lalu menyimpannya dalam variabel.
+
+00:01:05.140 --> 00:01:06.300
+Itulah status periksa.
+
+00:01:07.300 --> 00:01:09.960
+Setelah perangkat Android tahu
+ini dicentang atau tidak,
+
+00:01:09.960 --> 00:01:13.410
+kita bisa berikan informasi
+ini ke dalam metode &lt;i&gt;Order Summary&lt;/i&gt;,
+
+00:01:13.410 --> 00:01:15.710
+metode yang memunculkan teks ini.
+
+00:01:15.710 --> 00:01:19.520
+Langkah ketiga, kita dapat ubah
+teks ini untuk menyertakan baris ini
+
+00:01:19.520 --> 00:01:22.960
+tentang tambahan &lt;i&gt;whipped cream&lt;/i&gt;
+perlu ditambah atau tidak.
+
+00:01:22.960 --> 00:01:25.120
+Ada beberapa langkah di sini.
+
+00:01:25.120 --> 00:01:28.950
+Untuk memastikan langkahnya benar,
+Anda dapat &lt;i&gt;log&lt;/i&gt; variabel ini
+
+00:01:28.950 --> 00:01:32.220
+untuk memastikan dia mencerminkan
+status centang sebenarnya.
+
+00:01:33.220 --> 00:01:36.420
+Kita sudah membahas &lt;i&gt;logging&lt;/i&gt; di awal,
+tapi ini adalah contoh lainnya.
+
+00:01:36.990 --> 00:01:42.510
+Anda bisa tulis &lt;i&gt;log.v&lt;/i&gt;, lalu gunakan
+nama kelas, yaitu &lt;i&gt;MainActivity&lt;/i&gt;,
+
+00:01:42.510 --> 00:01:46.160
+dan masukkan pesan &lt;i&gt;string&lt;/i&gt;
+yang ingin Anda cetak ke &lt;i&gt;log&lt;/i&gt;.
+
+00:01:47.200 --> 00:01:50.890
+Dengan mencetak harga di sini, kita
+memverifikasinya setelah langkah pertama,
+
+00:01:50.890 --> 00:01:54.880
+metode &lt;i&gt;calculatePrice&lt;/i&gt; mengembalikan
+harga yang diharapkan.
+
+00:01:54.880 --> 00:01:57.660
+Saat aplikasi berjalan di ponsel,
+Anda akan dapat memeriksa
+
+00:01:57.660 --> 00:02:00.970
+&lt;i&gt;log&lt;/i&gt; dengan &lt;i&gt;tab&lt;/i&gt; ini
+untuk melihat pesan ini.
+
+00:02:00.970 --> 00:02:04.610
+Saya sering menggunakan teknik
+pesan &lt;i&gt;logging&lt;/i&gt; saat menemukan masalah
+
+00:02:04.610 --> 00:02:08.360
+dan saya tidak yakin baris kode
+mana yang bermasalah.
+
+00:02:08.360 --> 00:02:10.130
+Setelah saya temukan masalahnya,
+
+00:02:10.130 --> 00:02:11.830
+dan semua berjalan sesuai harapan.
+
+00:02:11.830 --> 00:02:14.520
+Lalu saya hapus pesan &lt;i&gt;log&lt;/i&gt;.
+
+00:02:14.520 --> 00:02:16.130
+Anda juga bisa menambah pesan &lt;i&gt;log&lt;/i&gt;
+
+00:02:16.130 --> 00:02:18.540
+untuk mencetak status centang,
+untuk sementara.
+
+00:02:18.540 --> 00:02:22.055
+Alasan saya menghapus pesan &lt;i&gt;log&lt;/i&gt;
+setelah tidak membutuhkannya lagi
+
+00:02:22.055 --> 00:02:24.820
+adalah karena &lt;i&gt;log&lt;/i&gt; memiliki batas.
+
+00:02:24.820 --> 00:02:27.540
+Jika Anda mengisinya dengan
+banyak pesan tidak penting,
+
+00:02:27.540 --> 00:02:31.100
+maka akan menyebabkan
+pesan penting dan eror cepat hilang.
+
+00:02:32.118 --> 00:02:35.390
+Setelah status informasi yang tercentang
+muncul dalam &lt;i&gt;Order Summary&lt;/i&gt;
+
+00:02:35.390 --> 00:02:39.290
+pada perangkat, maka Anda
+tidak membutuhkan pesan &lt;i&gt;log&lt;/i&gt; lagi.
+
+00:02:39.290 --> 00:02:41.821
+Setelah selesai, centang kotak ini
+untuk melanjutkan.
+

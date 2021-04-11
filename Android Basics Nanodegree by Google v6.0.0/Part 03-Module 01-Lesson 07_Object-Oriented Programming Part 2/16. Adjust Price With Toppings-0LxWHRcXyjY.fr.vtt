@@ -1,0 +1,420 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.250 --> 00:00:02.250
+Afin de calculer
+le juste prix pour
+
+00:00:02.250 --> 00:00:05.230
+le récapitulatif de la commande,
+nous devrions passer l'information
+
+00:00:05.230 --> 00:00:09.500
+sur quelle garniture l'utilisateur a
+selectionné dans la méthode <i>calculatePrice</i>.
+
+00:00:09.500 --> 00:00:12.820
+Je choisis de faire tout le lourd
+levage et calcul
+
+00:00:12.820 --> 00:00:18.340
+dans la méthode <i>calculatePrice</i>, de sorte 
+qu'il centralise toute cette logique reliée.
+
+00:00:18.340 --> 00:00:22.040
+En consolidant le tout dans cette méthode,
+s'il ya un problème avec la façon dont
+
+00:00:22.040 --> 00:00:25.620
+le prix is calculé, nous pouvons 
+vérifier le code à un endroit unique.
+
+00:00:26.620 --> 00:00:28.340
+C'est beaucoup plus gérable.
+
+00:00:28.340 --> 00:00:29.880
+Alors, dans cette méthode,
+
+00:00:29.880 --> 00:00:33.450
+nous allons découvrir le prix
+de base d'une tasse de café.
+
+00:00:33.450 --> 00:00:35.510
+C'est comme je vous ai 
+montré précédemment.
+
+00:00:35.510 --> 00:00:38.110
+Si le café devrait avoir une crème fouettée,
+alors ajoutez un dollar.
+
+00:00:38.110 --> 00:00:41.000
+Si le café devrait avoir du chocolat,
+alors ajoutez $2.
+
+00:00:41.000 --> 00:00:43.630
+Puis prenez le prix de base
+d'une tasse de café et
+
+00:00:43.630 --> 00:00:47.860
+multipliez-le par la quantité commandée
+pour déterminer le prix total de la commande.
+
+00:00:47.860 --> 00:00:50.550
+D'abord, passons dans l'information 
+sur les cases à cocher crème
+
+00:00:50.550 --> 00:00:54.302
+fouettée et chocolat au sein de la
+méthode <i>calculatePrice</i>.
+
+00:00:54.302 --> 00:00:58.380
+Je vais passer dans le booléens
+<i>hasWhippedCream</i> et <i>hasChocolate</i>.
+
+00:00:58.380 --> 00:01:02.570
+Il n'y a aucune raison de passer dans les
+Objets Case à cocher actuels, car tout ce
+
+00:01:02.570 --> 00:01:06.430
+qui nous importe sont ces valeurs 
+booléennes pour le calcul du prix.
+
+00:01:06.430 --> 00:01:09.560
+Android Studio me dit qu'il y a une
+erreur car la signature de la méthode
+
+00:01:09.560 --> 00:01:10.530
+ne correspond pas.
+
+00:01:10.530 --> 00:01:13.530
+J'essaye d'appeler une méthode
+qui a été définie pour avoir
+
+00:01:13.530 --> 00:01:15.390
+zero paramètres d'entrée.
+
+00:01:15.390 --> 00:01:18.820
+Allons à l'endroit où la
+méthode <i>calculatePrice</i>a été définie.
+
+00:01:18.820 --> 00:01:20.700
+Je vais changer
+la signature de la méthode de
+
+00:01:20.700 --> 00:01:25.620
+qu'il prenne deux paramètres d'entrée,
+un booléen appelé <i>addWhippedCream</i> et
+
+00:01:25.620 --> 00:01:27.730
+un booléen appelé 
+<i>addChocolate</i>.
+
+00:01:27.730 --> 00:01:30.850
+Vous pouvez appeler ces paramètres
+d'entrer par le nom que vous voulez.
+
+00:01:30.850 --> 00:01:34.220
+J'ai juste choisi d'utiliser un nom
+différent de ce qui a été adopté,
+
+00:01:34.220 --> 00:01:36.900
+juste pour vous montrer que ces
+noms doivent pas avoir à correspondre.
+
+00:01:36.900 --> 00:01:40.580
+J'ai aussi actualisé le Javadoc pour 
+décrire ces deux nouveaux paramètres d'entrée.
+
+00:01:40.580 --> 00:01:43.570
+De cette façon, quelqu'un qui appelle 
+la méthode saura quoi adopter.
+
+00:01:43.570 --> 00:01:47.580
+Après, dans la méthode <i>calculatePrice</i>je dois 
+faire toute la logique sur le changement
+
+00:01:47.580 --> 00:01:49.930
+du prix basé sur ces garnitures.
+
+00:01:49.930 --> 00:01:52.130
+En premier, Je vais
+calculer le prix de base, donc
+
+00:01:52.130 --> 00:01:54.720
+je vais créer une variable 
+entière appelée <i>basePrice</i>.
+
+00:01:54.720 --> 00:01:58.500
+Je vais commencer la valeur par 5
+car une tasse de café coûte $5.
+
+00:01:58.500 --> 00:02:00.930
+Puis, je vais
+créer une déclaration <i>if</i>.
+
+00:02:00.930 --> 00:02:05.600
+Si le booléen <i>addWhippedCream</i> est vrai,
+alors l'utilisateur veut de la crème fouettée.
+
+00:02:05.600 --> 00:02:09.720
+Cela signifie que nous devrions ajouter $1 
+sur le prix de base d'une tasse de café.
+
+00:02:09.720 --> 00:02:11.920
+Ok, cela devrait gérer
+le cas de la crème fouettée.
+
+00:02:11.920 --> 00:02:13.740
+Maintenat, voyons le 
+cas du chocolat.
+
+00:02:13.740 --> 00:02:16.110
+Je vais créer une 
+autre déclaration <i>if</i>.
+
+00:02:16.110 --> 00:02:19.000
+Je n'ai pas besoin d'un 
+autre bloc de code, car
+
+00:02:19.000 --> 00:02:23.000
+si l'utilisateur ne veut pas de crème
+fouettée, je n'ai rien à faire.
+
+00:02:23.000 --> 00:02:26.550
+En fait, si j'ai voulu taper un autre
+cas, voilà à quoi cela ressemblerait.
+
+00:02:26.550 --> 00:02:29.990
+J'aurais juste un 
+commentaire qui dit, ne fais rien.
+
+00:02:29.990 --> 00:02:31.960
+Android studio est plus 
+intelligent que ça, cependant, et
+
+00:02:31.960 --> 00:02:35.010
+remarque que la délaration <i>else</i>
+a un corps vide.
+
+00:02:35.010 --> 00:02:38.040
+Leur conseil est que ce type de 
+code est embrouillant, et
+
+00:02:38.040 --> 00:02:39.930
+peut être le résultat d'un typo.
+
+00:02:39.930 --> 00:02:41.800
+Il y a aussi des lignes extras de
+code dont nous n'avons pas besoin, donc
+
+00:02:41.800 --> 00:02:43.660
+effaçons le bloc <i>else</i>.
+
+00:02:43.660 --> 00:02:45.930
+Maintenat, nous pouvons passer
+au cas du chocolat.
+
+00:02:45.930 --> 00:02:48.610
+La garniture chocolat est complètement
+independant de la garniture crème
+
+00:02:48.610 --> 00:02:49.800
+fouettée.
+
+00:02:49.800 --> 00:02:51.880
+Cela importe peu si l'utilisateur
+choisit l'un ou l'autre,
+
+00:02:51.880 --> 00:02:53.540
+ils ne dépendent 
+pas l'un de l'autre.
+
+00:02:53.540 --> 00:02:57.060
+Donc, je vais crée un 
+cas <i>if</i> séparé.
+
+00:02:57.060 --> 00:02:59.480
+Si l'utilisateur 
+veut du chocolat,
+
+00:02:59.480 --> 00:03:04.010
+alors nous avons besoin de modifier
+le prix de base à <i>basePrice + 2</i>.
+
+00:03:04.010 --> 00:03:08.810
+À nouveau, nous pourrions avoir un bloc de 
+code <i>else</i>, mais ça ne servirait à rien.
+
+00:03:08.810 --> 00:03:12.690
+Si l'utilisateur ne veut pas de chocolat,
+nous n'avons pas du tout à ajuster le prix,
+
+00:03:12.690 --> 00:03:15.530
+donc, supprimons juste ce code
+car il n'est pas nécessaire.
+
+00:03:15.530 --> 00:03:20.450
+En lisant notre code, nous avons
+un prix de base $5 par tasse de café.
+
+00:03:20.450 --> 00:03:24.945
+Si l'utilisateur veut de la crème fouettée,
+nous devons augmenter le prix de base de $1.
+
+00:03:24.945 --> 00:03:27.610
+Alors si l'utilisateur 
+veut du chocolat,
+
+00:03:27.610 --> 00:03:29.703
+nous devons augmenter 
+le prix de base de $2.
+
+00:03:29.703 --> 00:03:32.290
+Alors pour calculer le 
+prix total de la commande,
+
+00:03:32.290 --> 00:03:35.835
+nous devons multiplier la quantité de fois
+du prix d'une tasse de café.
+
+00:03:35.835 --> 00:03:38.735
+Ok, ce code semble
+devoir fonctionner.
+
+00:03:38.735 --> 00:03:41.935
+J'ai aussi ajouté des commentaires <i>inline</i>
+au-dessus de chaque bloc de code, de
+
+00:03:41.935 --> 00:03:45.695
+sorte que lorsque nous reviendrons à ce 
+code, on se souviendra de ce qu'on a fait.
+
+00:03:45.695 --> 00:03:48.005
+Maintenant, exécutons l'app
+pour vérifier ça fonctionne.
+
+00:03:48.005 --> 00:03:50.635
+Ok, testons les cas que nous
+venons de voir ensemble précédemment.
+
+00:03:51.965 --> 00:03:55.319
+Si on choisit la garniture crème 
+fouettée et une quantité de 3,
+
+00:03:55.319 --> 00:03:56.906
+alors, chaque tasse sera de $6.
+
+00:03:56.906 --> 00:04:01.450
+$6 fois 3 égal $18 et
+il calcule 18, bien.
+
+00:04:01.450 --> 00:04:07.679
+Si j'ajoute la garniture chocolat,
+alors chaque tasse coûtera $8.
+
+00:04:07.679 --> 00:04:11.650
+Si j'ai une quantité de 2,
+alors le prix total sera de $16.
+
+00:04:11.650 --> 00:04:15.700
+On essaye juste d'utiliser la garniture
+crème fouettée et on a eu la réponse correcte.
+
+00:04:15.700 --> 00:04:18.510
+On a essayé le cas avec 
+les garnitures crème fouettée et
+
+00:04:18.510 --> 00:04:21.350
+chocolat et on
+a eu la bonne réponse.
+
+00:04:21.350 --> 00:04:23.760
+Maintenant, essayons juste de choisir
+la garniture chocolat.
+
+00:04:23.760 --> 00:04:27.290
+Je changerais la quantité à 1,
+et puis appuyer Commander.
+
+00:04:27.290 --> 00:04:31.810
+Cela semble correct, car on a
+$5 pour une tasse de café plus $2 pour
+
+00:04:31.810 --> 00:04:34.840
+le chocolat, 
+et cela nous amène à $7.
+
+00:04:34.840 --> 00:04:41.150
+Si je change cela à 4, alors la mise à 
+jour total, en supposant $7 par tasse de café.
+
+00:04:41.150 --> 00:04:41.650
+Génial.
+
+00:04:42.910 --> 00:04:44.550
+Il semble que ça fonctionne.
+
+00:04:44.550 --> 00:04:47.650
+J'ai exécuté ces tests
+de cas assez rapidement.
+
+00:04:47.650 --> 00:04:48.660
+Ce que j'essayais de faire,
+
+00:04:48.660 --> 00:04:53.160
+cependant, est de m'assurer que tous
+les chemins possibles de code soient exécutés.
+
+00:04:53.160 --> 00:04:56.823
+Par exemple, si on exécute l'app et on
+ne sélectionne jamais la case crème fouettée,
+
+00:04:56.823 --> 00:05:00.490
+alors, on n'aurait jamais testé
+si ce code fonctionne.
+
+00:05:00.490 --> 00:05:05.720
+Nous devons donc prendre des conditions qui
+causent toute notre code à exécuter.
+
+00:05:05.720 --> 00:05:09.180
+Donc, on a sélectionné la garniture crème
+fouettée et aussi le chocolat
+
+00:05:09.180 --> 00:05:12.550
+pour s'assurer que le
+code s'exécutait.
+
+00:05:12.550 --> 00:05:14.320
+Pour aller plus profond
+on devrait tester pour
+
+00:05:14.320 --> 00:05:17.450
+toutes les combinaisons de
+ces deux variables booléennes.
+
+00:05:17.450 --> 00:05:21.580
+Toutes ces combinaisons résulteront en un 
+comportement différent dans cette méthode,
+
+00:05:21.580 --> 00:05:24.870
+donc on veut s'assurer que notre
+code fonctionne dans tous ces cas.
+
+00:05:24.870 --> 00:05:29.080
+Puisque le prix de base est calculé 
+autant qu'on avance, on peut aussi
+
+00:05:29.080 --> 00:05:34.000
+utiliser les message du journal pour 
+s'assurer c'est calculé comme on l'attend.
+
+00:05:34.000 --> 00:05:37.910
+Quoi qu'il en soit, ce sont des choses à garder
+en tête que vous écrivez du code qui obtient
+
+00:05:37.910 --> 00:05:40.760
+plus complexe avec ceux-ci
+les déclarations des flux de contrôle.
+

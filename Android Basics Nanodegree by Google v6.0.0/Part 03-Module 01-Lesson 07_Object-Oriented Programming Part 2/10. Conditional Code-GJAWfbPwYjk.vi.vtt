@@ -1,0 +1,259 @@
+WEBVTT
+Kind: captions
+Language: vi
+
+00:00:00.510 --> 00:00:03.580
+Việc phải làm tiếp theo là thay đổi
+giá của cà phê trong trường hợp
+
+00:00:03.580 --> 00:00:06.880
+khách hàng gọi các loại lớp phủ 
+khác nhau,như kem tươi hay sô cô la.
+
+00:00:06.880 --> 00:00:08.160
+Ý kiến hay đó.
+
+00:00:08.160 --> 00:00:12.170
+Nếu họ gọi kem tươi,
+chúng ta sẽ tính tiền 1 đô la.
+
+00:00:12.170 --> 00:00:15.620
+-Nếu họ gọi sô cô la, giá tiền sẽ là 2 đô.
+-Đúng vậy.
+
+00:00:15.620 --> 00:00:17.870
+Hãy cùng tìm hiểu cách làm điều đó
+trong ứng dụng này.
+
+00:00:18.340 --> 00:00:20.970
+Đây là một vài ví dụ trong
+những ứng dụng của Google khác,
+
+00:00:20.970 --> 00:00:24.390
+trong đó ứng dụng sẽ thay đổi
+hành vi trong những điều kiện nhất định.
+
+00:00:24.390 --> 00:00:28.630
+Trong ứng dụng nhắn tin từ Gmail, đây là
+màn hình chụp lại danh sách thư điện tử.
+
+00:00:28.630 --> 00:00:31.590
+Mỗi thư điện tử sẽ có một lời nhắc
+gắn với nó.
+
+00:00:31.590 --> 00:00:36.260
+nhờ đó ứng dụng sẽ hiển thị biểu tượng,
+nhãn và lời nhắc tương ứng.
+
+00:00:36.260 --> 00:00:38.310
+Nếu thư điện tử có đính kèm hình ảnh,
+
+00:00:38.310 --> 00:00:41.110
+ứng dụng sẽ hiển thị những hình ảnh đó
+trên dòng này.
+
+00:00:41.110 --> 00:00:43.040
+Nếu thư điện tử nhắc đến
+một chuyến du lịch,
+
+00:00:43.040 --> 00:00:46.510
+một thẻ du lịch sẽ được hiển thị cùng với
+thông tin chuyến bay.
+
+00:00:46.510 --> 00:00:49.910
+Trong ứng dụng Google Now Launcher,
+chúng ta có thêm nhiều ví dụ về cách
+
+00:00:49.910 --> 00:00:52.610
+ứng dụng thay đổi hành vi trong
+những điều kiện nhất định.
+
+00:00:52.610 --> 00:00:56.130
+Ví dụ, khi giá cổ phiếu tăng, thì
+hệ số delta hay
+
+00:00:56.130 --> 00:01:00.160
+mức tăng của giá sẽ được hiển thị
+bằng số màu xanh lá cây.
+
+00:01:00.160 --> 00:01:02.120
+Nếu giá cổ phiếu giảm,
+
+00:01:02.120 --> 00:01:05.250
+mức giảm sẽ được hiển thị bằng số màu đỏ.
+
+00:01:05.250 --> 00:01:08.140
+Với thẻ thời tiết này,
+nếu nhiệt độ vừa phải và
+
+00:01:08.140 --> 00:01:11.260
+trời nắng, một biểu tượng
+mặt trời nhỏ sẽ được hiển thị.
+
+00:01:11.260 --> 00:01:14.500
+Nếu trời có gió hay có mây, ứng dụng
+sẽ cho thấy những biểu tượng khác nhau.
+
+00:01:14.500 --> 00:01:16.690
+Chúng ta sẽ thay đổi ứng dụng này
+ngay bây giờ
+
+00:01:16.690 --> 00:01:20.180
+để giá có thể thay đổi tùy theo loại
+lớp phủ được khách hàng gọi.
+
+00:01:20.180 --> 00:01:22.950
+Nhưng trước hết tôi muốn các bạn
+làm quen với việc điều khiển trình tự.
+
+00:01:22.950 --> 00:01:25.440
+Thông thường, mã trong phương pháp 
+của chúng ta được thực hiện
+
+00:01:25.440 --> 00:01:26.620
+từ trên xuống dưới,
+
+00:01:26.620 --> 00:01:29.820
+hết dòng này đến dòng kia, nhưng
+với những câu lệnh điều khiển trình tự,
+
+00:01:29.820 --> 00:01:33.030
+bạn có thể thay đổi trình tự mà
+mã được thực hiện.
+
+00:01:33.030 --> 00:01:38.130
+Ví dụ, bạn có thể bỏ qua một vài dòng mã
+nếu một vài điều kiện được đảm bảo.
+
+00:01:38.130 --> 00:01:40.440
+Trước hết chúng ta sẽ học về
+câu lệnh logic nếu/nếu không.
+
+00:01:41.580 --> 00:01:44.300
+Các bạn chưa học câu lệnh nếu/nếu không,
+
+00:01:44.300 --> 00:01:46.770
+nhưng tôi sẽ cho các bạn thực hành luôn
+với những ví dụ khó.
+
+00:01:46.770 --> 00:01:51.080
+Trong một vài thử thách tiếp theo,
+bạn sẽ tự đọc vài đoạn mã
+
+00:01:51.080 --> 00:01:54.000
+và những đoạn mã này sẽ có liên quan
+đến ghi chú của giáo viên.
+
+00:01:54.000 --> 00:01:56.640
+Sau đó bạn sẽ thử đoán xem
+đoạn mã này sẽ làm gì
+
+00:01:56.640 --> 00:01:58.550
+và kết quả mà đoạn mã này tạo ra.
+
+00:01:58.550 --> 00:02:00.200
+Bạn sẽ có một vài phương án để lựa chọn
+
+00:02:00.200 --> 00:02:03.120
+từ đó bạn có thể chọn ra kết quả
+đúng nhất với đoạn mã đó.
+
+00:02:03.120 --> 00:02:04.390
+Khi nhắc đến kết quả,
+
+00:02:04.390 --> 00:02:08.000
+tôi đang nói đến
+những câu lệnh sẽ được in ra bản ghi.
+
+00:02:08.000 --> 00:02:11.510
+Nhớ rằng bạn có thể vào
+bản ghi từ thẻ Android ở đây,
+
+00:02:11.510 --> 00:02:15.070
+tất cả tin nhắn từ hệ thống và từ ứng dụng
+của chúng ta sẽ được hiển thị ở đó.
+
+00:02:15.070 --> 00:02:18.380
+Những đoạn mã mà chúng tôi cung cấp
+cho bạn sẽ là những tin nhắn được viết ra.
+
+00:02:18.380 --> 00:02:19.510
+đến bản ghi ở đây.
+
+00:02:19.510 --> 00:02:21.830
+Hãy cùng làm thử một câu hỏi.
+
+00:02:21.830 --> 00:02:24.310
+Bạn có thể tìm được đường dẫn
+đến ghi chú của giáo viên.
+
+00:02:24.310 --> 00:02:28.270
+Giả sử rằng đây là một đoạn mã
+từ tệp WeatherActivity.java
+
+00:02:28.270 --> 00:02:29.830
+trong một ứng dụng thời tiết.
+
+00:02:29.830 --> 00:02:33.850
+Dòng đầu tiên của đoạn mã tạo ra
+một biến logic gọi là Raining và
+
+00:02:33.850 --> 00:02:35.910
+giá trị ban đầu là đúng.
+
+00:02:35.910 --> 00:02:38.500
+Sau đó chúng ta sẽ có
+câu lệnh nếu/nếu không.
+
+00:02:38.500 --> 00:02:43.150
+Nếu trời mưa, thì chúng ta
+sẽ viết như vậy vào bản ghi.
+
+00:02:43.150 --> 00:02:46.330
+Nó sẽ hiện ra là, "Trời mưa,
+nên mang theo ô".
+
+00:02:46.330 --> 00:02:50.040
+Nếu trời không mưa, đây sẽ là
+trường hợp nếu không
+
+00:02:50.040 --> 00:02:53.230
+và chúng ta sẽ viết "Trời sẽ không mưa".
+
+00:02:53.230 --> 00:02:57.730
+Nếu trời mưa, chúng ta sẽ rơi vào
+trường hợp này và
+
+00:02:57.730 --> 00:03:00.210
+ta viết, "Trời mưa, nên mang theo ô".
+
+00:03:00.210 --> 00:03:03.420
+Vì chúng ta đang ở trường hợp này,
+ta có thể bỏ qua đoạn mã nếu không,
+
+00:03:03.420 --> 00:03:08.620
+dòng mã tiếp theo nằm ngoài câu lệnh
+nếu/nếu không nên nó luôn được thực hiện.
+
+00:03:08.620 --> 00:03:11.670
+Đó là dòng "Cảm ơn bạn
+đã sử dụng ứng dụng Whetherweather".
+
+00:03:11.670 --> 00:03:15.400
+Giờ bạn hãy tìm phương án hiển thị
+"Trời mưa, nên mang theo ô"
+
+00:03:15.400 --> 00:03:19.460
+và ngay sau đó là "Cảm ơn bạn đã sử dụng
+ứng dụng Whetherweather".
+
+00:03:19.660 --> 00:03:21.550
+Đó chính là phương án B.
+
+00:03:21.550 --> 00:03:23.870
+Giờ tôi sẽ cho bạn một đề bài khác.
+
+00:03:23.870 --> 00:03:26.610
+Bạn hãy đọc đoạn mã trong
+ghi chú của giáo viên và chọn đáp án đúng.
+

@@ -1,0 +1,388 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.750 --> 00:00:03.360
+Ushbu layout - ko‘rinishlar tartibini yaratishimiz uchun
+birinchi bizga kerakli ko‘rinishlarni (views) ko‘rib chiqaylik.
+
+00:00:03.360 --> 00:00:07.420
+O‘ylaymanki, bularning barchasi
+yaratilib bo‘lgan va
+
+00:00:07.420 --> 00:00:10.910
+biz layoutga kiritish kerak bo‘lgan
+yangi mavzu va tushunchalar to‘g‘risida suhbat quramiz.
+
+00:00:10.910 --> 00:00:15.030
+Ilovamizga 2 ta yangi ko‘rinishlar(views), ya’ni
+"Toppings" elementiga TextView ko‘rinishini 
+
+00:00:15.030 --> 00:00:18.090
+va "Whipped cream" elementiga Checkbox ko‘rinishini qo‘shishimiz kerak.
+
+00:00:18.090 --> 00:00:21.470
+Balkim bu ko‘rinishni(view) "Android"da mavjudligidan
+xabaringiz bo‘lmagan bo‘lishi mumkin
+
+00:00:21.470 --> 00:00:24.210
+lekin, umid qilamizki, "Google" orqali qidirib,
+ushbu javobni topgansiz.
+
+00:00:25.380 --> 00:00:28.300
+2-qadamga o‘tayotganimizda, 
+ko‘rinishlarni(views) joylashtirib olishimiz kerak.
+
+00:00:28.300 --> 00:00:30.820
+Bu ko‘rinishlar(views) to‘g‘ri 
+joylashtirgan deb hisoblab,
+
+00:00:30.820 --> 00:00:35.470
+"Toppings" va "Whipped cream" elementlarini 
+bir xil qatorga vertikal ravishda qo‘shishimiz kerak.
+
+00:00:35.470 --> 00:00:37.000
+ildiz ko‘rinishi vertikal holatda bo‘lganligi sababli, 
+
+00:00:37.000 --> 00:00:39.990
+linear layout ko‘rinishining eng yuqori qismiga,
+mana bu 2 ta ko‘rinishlarni qo‘shib qo‘yishimiz mumkin.
+
+00:00:40.990 --> 00:00:43.580
+3-qadam uchun esa, ko‘rinishlarga uslublar qo‘llashimiz kerak.
+
+00:00:43.580 --> 00:00:46.260
+Toppings sarlavhasidagi uslub
+Quantity va Order Summary
+
+00:00:46.260 --> 00:00:49.030
+sarlavhalari bilan bir xil, shuning uchun
+ulardan nusxa olib,
+
+00:00:49.030 --> 00:00:51.434
+nusxasini kerakli joyga qo‘shib qoyamiz. 
+
+00:00:51.434 --> 00:00:54.920
+CheckBox ko‘rinishi yangi, shuning uchun
+unga mos ravishda ko‘rinish berishimiz kerak. 
+
+00:00:54.920 --> 00:00:59.176
+Quticha bilan matn orasida 24 dp o‘lchamidagi
+joy qoldirishimiz kerak
+
+00:00:59.176 --> 00:01:04.054
+va Whipped cream shrift hajmini 16 sp
+o‘lchoviga o‘zgartirishimiz kerak.
+
+00:01:04.054 --> 00:01:05.910
+Endi esa ushbu o‘zgarishlarni ilovamizga kiritaylik.
+
+00:01:07.180 --> 00:01:11.020
+Toppings sarlavhasini qo‘shish hamda
+uni Quantity sarlavhasiga o‘xshatish uchun
+
+00:01:11.020 --> 00:01:12.730
+ushbu koddan nusxa olib qo‘shing.
+
+00:01:12.730 --> 00:01:16.775
+Undan nusxa olib, vertikal LinearLaout ko‘rinishi tepasiga qo‘shib qoyaman.
+
+00:01:18.080 --> 00:01:20.170
+Ho‘sh, endi Quantity sarlavhasi 2 ta
+bo‘lib qolgan.
+
+00:01:20.170 --> 00:01:22.960
+Shuning uchun, sarlavha matnini Toppings 
+matniga o‘zgartiraman.
+
+00:01:22.960 --> 00:01:25.380
+Bundan tashqari margin bottom xossasidan ham nusxa oldim
+
+00:01:25.380 --> 00:01:28.790
+sarlavha bilan qolgan matnlar orasida 
+bir oz joy qoldirish uchun.
+
+00:01:30.260 --> 00:01:32.660
+CheckBoxni ilovamizga hali beri 
+qo‘shmaganligimiz bois, 
+
+00:01:32.660 --> 00:01:33.990
+uni qanday qilib qo‘shishni bilib olish uchun
+"Google" qidiruv xizmatidan foydalanaman.
+
+00:01:33.990 --> 00:01:37.720
+"Checkbox android" kalit so‘zi orqali
+"Google"dan qidiraman.
+
+00:01:37.720 --> 00:01:40.840
+Qidirmoqchi bo‘lganingizda "android" kalit so‘zini
+qo‘shib qo‘yish esingizdan chiqmasin, chunki
+
+00:01:40.840 --> 00:01:44.850
+"checkbox" boshqa veb yoki mobil kabi 
+platformalarda ham bo‘ladi.
+
+00:01:44.850 --> 00:01:48.090
+Bu tarzda qidiruvingiz sizga aynan
+"Android" uchun natija topadi.
+
+00:01:48.090 --> 00:01:49.760
+Qidiriv taqdim etgan birinchi havolani ko‘rib chiqaylik.
+
+00:01:49.760 --> 00:01:52.900
+Bu Checkbox klassiga doir ma’lumotlar bilan 
+tanishish uchun hujjatlardir.
+
+00:01:52.900 --> 00:01:56.420
+Ushbu ma‘lumotlarni ko‘zdan kechiraman
+va klassi to‘g‘risida keltirilgan qisqacha ta‘rifni ko‘raman
+
+00:01:56.420 --> 00:01:58.960
+va shundan so‘ngra, hujjatlardagi ma‘lumotlar
+to‘g‘ri XML xossalariga oid axborotlarga o‘tib ketadi.
+
+00:01:58.960 --> 00:02:02.880
+Biz uchun eng kerakli ma‘lumot esa
+CheckBox uchun bir nechta XML misollardir.
+
+00:02:02.880 --> 00:02:05.100
+Shuning uchun, natijalarni qidirishga qaytaylik.
+
+00:02:05.100 --> 00:02:07.070
+Ikkinchi havolani ko‘rib chiqamiz.
+
+00:02:07.070 --> 00:02:10.440
+Yaxshi, havola bizlarga Checkboxlarga oid bir 
+nechta rasmlarni ko‘rsatmoqda.
+
+00:02:10.440 --> 00:02:12.040
+"XML"ga doir misollar ham bu yerda.
+
+00:02:12.040 --> 00:02:13.180
+"XML" misoli ko‘rinishi chakki emas.
+
+00:02:13.180 --> 00:02:16.140
+Unda "LinearLayout" doirasida
+2 ta belgilash katakchalari mavjud.
+
+00:02:16.140 --> 00:02:19.070
+Birinchi belgilash katakchasidan
+nusxa olaman va
+
+00:02:19.070 --> 00:02:20.330
+so‘ngra uni ilovamizga joylashtiraman.
+
+00:02:21.590 --> 00:02:25.912
+Ilovamizga qaytib, nusxa olingan belgilash katakchasini(CheckBox)
+"Toppings" matnidan keyin, lekin 
+
+00:02:25.912 --> 00:02:28.753
+"Quantity" matnidan oldin, aynan mana bu yerga joylashtiraman.
+
+00:02:28.753 --> 00:02:33.040
+"XML" fayliga esa o‘zgartirishlar kiritaman
+chunki uni tarkibi bizni maqsadimizga to‘liq to‘g‘ri kelmaydi.
+
+00:02:33.040 --> 00:02:36.710
+Bu yerdagi "id"ni va matnni 
+o‘chirib tashlayman.
+
+00:02:36.710 --> 00:02:39.750
+Go‘sht(meat) so‘zini o‘rniga Kofe(coffee) so‘zini qo‘yaman,
+chunki kofe do‘koni go‘sht sotmaydi. 
+
+00:02:39.750 --> 00:02:41.660
+"Whipped cream" deb teraman.
+
+00:02:43.030 --> 00:02:45.940
+Aytgancha, oldin guvoh bo‘lganingizdek, ya‘ni
+@string/meat ifodasi
+
+00:02:45.940 --> 00:02:50.410
+strings.xml faylidagi ma‘lumotni
+nazarda tutayotgan edi. 
+
+00:02:50.410 --> 00:02:52.690
+Bu haqda bir ozdan keyin suhbatlashamiz, 
+lekin hozircha
+
+00:02:52.690 --> 00:02:55.550
+matnni to‘g‘ridan to‘g‘ri shu 
+yerga kiritsangiz bo‘ladi.
+
+00:02:55.550 --> 00:02:59.350
+va oldindan ko‘rish oynasiga e‘tiboringizni qarating,
+u yerda belgilash katakchasi(CheckBox) matnini "Whipped cream"ga o‘zgarganiga guvoh bo‘lasiz.
+
+00:02:59.350 --> 00:03:03.380
+Checkbox ko‘rinishining yaxshi tomoni shundaki
+bu yerga boshqa ko‘rinish qo‘shmasligiz uchun 
+
+00:03:03.380 --> 00:03:08.100
+u sizga katakcha hamda
+bir oz matn taqdim etadi. 
+
+00:03:08.100 --> 00:03:10.850
+"onClick" funksiyasi haqidagi kod 
+qatoriga ham ehtiyojimiz yoq.
+
+00:03:12.089 --> 00:03:16.500
+Bu kod vazifasini bajarish uchun birgina
+belgilash katakchasini bu yerda paydo qilsak bo‘lgani.
+
+00:03:16.500 --> 00:03:20.260
+Ushbu "XML" misoldagi kodlarni yana
+"Android views" to‘g‘risidagi qisqacha 
+
+00:03:20.260 --> 00:03:21.460
+ma‘lumotlarni ko‘rib chiqib topishingiz mumkin edi.
+
+00:03:22.540 --> 00:03:25.410
+Bu qisqa ma‘lumotlar ommabop "Android view"
+ro‘yxatlarini taqdim etadi va
+
+00:03:25.410 --> 00:03:27.460
+"XML" ga doir ham misollarga ega.
+
+00:03:28.480 --> 00:03:32.739
+Bu esa belgilash CheckBox ko‘rinishi va
+qanday ko‘rinishga ega bo‘lishi mumkinligi to‘g‘risida misol
+
+00:03:32.739 --> 00:03:34.125
+hamda shunga mos "XML" fayl.
+
+00:03:34.125 --> 00:03:37.270
+"XML" fayldan bu yerdan nusxa olib
+ilovaga qo‘shishingiz mumkin edi.
+
+00:03:38.340 --> 00:03:41.010
+"Android Studio"ga qaytib, ilovani yuklaylik va
+qanday ko‘rinishga ega bo‘lganiga guvoh bo‘laylik.
+
+00:03:42.480 --> 00:03:43.320
+Mana bu esa erishgan natijamiz. 
+
+00:03:43.320 --> 00:03:44.050
+Ko‘rinishi yomon emas.
+
+00:03:44.050 --> 00:03:46.695
+"Toppings" sarlavhasi va "Whipped cream" belgilash
+katakchasiga egamiz.
+
+00:03:47.750 --> 00:03:50.330
+Bundan tashqari, katakchani(box) belgilaganimizda
+ajoyib animatsiyaga guvoh bo‘lamiz.
+
+00:03:51.360 --> 00:03:54.790
+Shunga qaramay, ko‘zimga tashlangan yagona
+muammo - bu joylashuv bir oz to‘g‘ri emas.
+
+00:03:54.790 --> 00:03:57.840
+Misol uchun, "Quantity" sarlavhasi va
+"Whipped cream" belgilash katakchasi(CheckBox) orasi judayam tor
+
+00:03:57.840 --> 00:04:01.390
+va bu yerda ham yetarlicha
+joy mavjud emas.
+
+00:04:02.410 --> 00:04:04.480
+Bundan oldin berilgan qizil 
+chiqizlarga qaytsak, 
+
+00:04:04.480 --> 00:04:09.370
+bu yerga 24 dp o‘lchamida joy hajmini belgilashimiz 
+hamda shrift hajmini 16 sp o‘lchamiga keltirishimiz kerak.
+
+00:04:10.830 --> 00:04:12.960
+Birinchi bo‘lib, shrift hajmini o‘zgatiraman.
+
+00:04:12.960 --> 00:04:18.110
+android:textSize deb teraman va qiymatiga
+16sp deb yozaman.
+
+00:04:18.110 --> 00:04:22.043
+Haqiqatdan ham shrift hajmi kattalashganini tekshirish uchun
+bu yerda preview oynasini ochaman
+
+00:04:22.043 --> 00:04:23.690
+va guvoh bo‘lganingizdek, u kattalashgan.
+
+00:04:23.690 --> 00:04:26.600
+Yangilangan yoki yangilanmaganiga ishonchingiz komil bo‘lmasa,
+har doim ushbu tugmani bosishingiz mumkin.
+
+00:04:26.600 --> 00:04:27.430
+Yaxshi.
+
+00:04:27.430 --> 00:04:29.950
+To‘g‘ri joylashuvni tushunib olishim hamda 
+ishlatishim uchun ko‘p harakat qildim va
+
+00:04:29.950 --> 00:04:32.240
+ko‘p xatolar ustida bosh qotirdim.
+
+00:04:32.240 --> 00:04:34.370
+Birinchi Margin qiymatilarini, so‘ngra
+
+00:04:34.370 --> 00:04:38.340
+padding qiymatlarini bir nech marta o‘zgartirdim va
+shundan so‘ng paddingLeft atributi
+
+00:04:38.340 --> 00:04:42.520
+bu yerda quti bilan matn o‘rtasidagi 
+joylashuvni boshqarishini bilib oldim.
+
+00:04:42.520 --> 00:04:43.285
+Endi esa padding qo‘shaylik.
+
+00:04:44.900 --> 00:04:46.960
+Yaxshi, matn boshqa joyga ko‘chdi.
+
+00:04:46.960 --> 00:04:49.040
+Shunga qaramay, bitta muammoni ko‘ryapman. 
+
+00:04:49.040 --> 00:04:53.090
+Bu yerda yetarlicha vertikal joy bor, lekin
+mana bu yerda esa bu joy yertarli emas.
+
+00:04:53.090 --> 00:04:57.760
+Yo bottom padding qiymatini ko‘paytirishim kerak, yoki
+ushbu CheckBox ko‘rinishiga bottom margin qiymati qo‘shishim kerak, yoki
+
+00:04:57.760 --> 00:05:01.720
+yoki "Quantity" sarlavhasiga top padding yoki 
+top margin qo‘shishim kerak. 
+
+00:05:01.720 --> 00:05:02.620
+Har qaysi yechim ham ish beradi.
+
+00:05:02.620 --> 00:05:07.110
+Ushbu "Quantity" sarlavhasiga top margin
+qiymatini qo‘shib qo‘yaman.
+
+00:05:07.110 --> 00:05:08.880
+Mana, ko‘rib turganingizdek, ko‘rinishi oldingidan yaxshiroq!
+
+00:05:08.880 --> 00:05:10.990
+Elementlarni orasidagi joy teng taqsimlangan ko‘rinmoqda.
+
+00:05:10.990 --> 00:05:12.790
+Ushbu ilovani qurilmamda yuklayman.
+
+00:05:14.210 --> 00:05:15.170
+Mana bu biz kutgan ilova.
+
+00:05:15.170 --> 00:05:16.320
+Ko‘rinishi ajoyib.
+
+00:05:16.320 --> 00:05:17.460
+Ajoyib natija.
+
+00:05:17.460 --> 00:05:21.250
+Ilovangizni foydalanuvchi interfeysiga (UI) yana boshqa o‘zgartirishlar 
+kiritmoqchi bo‘lsangiz, "Google" qidiruv xizmatidan
+
+00:05:21.250 --> 00:05:25.360
+yuqorida qidirganimizdek kerakli ma‘lumotlarni
+topib, ularni ilovangizga moslashtirib qo‘llashingiz mumkin. 
+

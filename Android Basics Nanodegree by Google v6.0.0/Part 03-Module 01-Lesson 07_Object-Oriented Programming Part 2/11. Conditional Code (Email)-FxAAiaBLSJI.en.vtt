@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.340
+Assume that this a Code snippet from an InboxActivity.java file within an email app.
+
+00:00:05.340 --> 00:00:08.610
+Now, there's a lot of code here with concepts you haven't learned before.
+
+00:00:08.610 --> 00:00:10.740
+So, it's okay if you didn't get this one correct,
+
+00:00:10.740 --> 00:00:12.090
+let's walk through it together.
+
+00:00:12.090 --> 00:00:16.290
+First, we create an integer variable called numberOfEmailsInInbox.
+
+00:00:16.290 --> 00:00:19.065
+We initialize the variable to have a value of zero.
+
+00:00:19.065 --> 00:00:23.110
+Then we create another integer variable called the numberOfDraftEmails,
+
+00:00:23.110 --> 00:00:25.800
+and we initialize that to have a value of two.
+
+00:00:25.800 --> 00:00:30.750
+Next, we create a string variable called emailMessage, and the value is,
+
+00:00:30.750 --> 00:00:32.550
+"You have blank emails.",
+
+00:00:32.550 --> 00:00:37.240
+where blank is actually a variable referring to a numberOfEmailsInInbox.
+
+00:00:37.240 --> 00:00:39.105
+So this evaluates to,
+
+00:00:39.105 --> 00:00:41.385
+"You have zero emails",
+
+00:00:41.385 --> 00:00:43.320
+because this variable has a value of zero.
+
+00:00:43.320 --> 00:00:46.785
+Next, we have another string variable called draftMessage.
+
+00:00:46.785 --> 00:00:50.970
+The value is, "You have blank email drafts."
+
+00:00:50.970 --> 00:00:53.835
+Blank actually refers to a number of draft emails,
+
+00:00:53.835 --> 00:00:55.740
+and this has a value of two.
+
+00:00:55.740 --> 00:00:58.290
+So this right hand side maps to,
+
+00:00:58.290 --> 00:01:00.495
+"You have 2 email drafts."
+
+00:01:00.495 --> 00:01:02.280
+So far, we have four variables,
+
+00:01:02.280 --> 00:01:04.560
+and nothing has been printed to the logs yet.
+
+00:01:04.560 --> 00:01:06.375
+Now we have an 'if' statement.
+
+00:01:06.375 --> 00:01:10.035
+There is no Else block of code down here and that's perfectly fine.
+
+00:01:10.035 --> 00:01:15.195
+This statement reads, If the number of emails in inbox equals zero,
+
+00:01:15.195 --> 00:01:18.875
+then perform the code within these opening and closing braces.
+
+00:01:18.875 --> 00:01:22.905
+We remember that numberOfEmailsInInbox is equal to zero,
+
+00:01:22.905 --> 00:01:27.810
+so this code in the opening and closing braces would get executed.
+
+00:01:27.810 --> 00:01:31.440
+It simply updates the emailMessage variable to say,
+
+00:01:31.440 --> 00:01:33.075
+"You have no new messages."
+
+00:01:33.075 --> 00:01:37.380
+Okay, so we know that the latest value of emailMessage is,
+
+00:01:37.380 --> 00:01:38.730
+"You have no new messages",
+
+00:01:38.730 --> 00:01:41.970
+and the latest value of draftMessage is up here,
+
+00:01:41.970 --> 00:01:43.605
+"You have 2 email drafts."
+
+00:01:43.605 --> 00:01:46.845
+Let's continue reading. There's another 'if' statement down here.
+
+00:01:46.845 --> 00:01:49.800
+If the number of draftEmails equals zero,
+
+00:01:49.800 --> 00:01:52.785
+then perform the code within the opening and closing braces.
+
+00:01:52.785 --> 00:01:56.595
+However, number of draft emails has a value of two.
+
+00:01:56.595 --> 00:02:00.030
+That means this condition here is false,
+
+00:02:00.030 --> 00:02:02.355
+and we can skip this block of code.
+
+00:02:02.355 --> 00:02:05.805
+Therefore, the draftMessage variable stays at the value of,
+
+00:02:05.805 --> 00:02:07.620
+"You have 2 email drafts."
+
+00:02:07.620 --> 00:02:10.140
+It does not update to this new message.
+
+00:02:10.140 --> 00:02:14.025
+Finally, we're back in the regular execution flow of the method.
+
+00:02:14.025 --> 00:02:15.945
+There's no more if statements,
+
+00:02:15.945 --> 00:02:17.820
+and we can run this line of code,
+
+00:02:17.820 --> 00:02:19.410
+which prints to the logs.
+
+00:02:19.410 --> 00:02:22.170
+It prints the email message to the logs,
+
+00:02:22.170 --> 00:02:25.500
+and then next, it prints the draftMessage to the logs.
+
+00:02:25.500 --> 00:02:28.845
+At this point in time, emailMessage says,
+
+00:02:28.845 --> 00:02:30.420
+"You have no new messages",
+
+00:02:30.420 --> 00:02:34.120
+and draftMessage says, "You have 2 email drafts."
+
+00:02:34.120 --> 00:02:35.600
+Looking at our choices,
+
+00:02:35.600 --> 00:02:37.650
+option C is what we want.
+
+00:02:37.650 --> 00:02:42.270
+Option A is incorrect because we don't print out the message at every point in time.
+
+00:02:42.270 --> 00:02:45.555
+We only have two lines of code that print to the logs.
+
+00:02:45.555 --> 00:02:47.145
+Option B is incorrect,
+
+00:02:47.145 --> 00:02:51.420
+because the email message string gets updated within the 'if' statement,
+
+00:02:51.420 --> 00:02:55.560
+and there's actually two email drafts not zero email drafts.
+
+00:02:55.560 --> 00:02:58.140
+So the second log statement is also incorrect.
+
+00:02:58.140 --> 00:03:01.480
+That leaves the remaining correct choice option C.
+

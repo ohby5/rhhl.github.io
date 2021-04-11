@@ -1,0 +1,309 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.570
+Vamos fazer uma busca no Google
+sobre como fazer isso.
+
+00:00:02.570 --> 00:00:05.280
+Vou digitar "como fazer a rolagem
+num app de android".
+
+00:00:06.450 --> 00:00:08.240
+Vamos ver o primeiro resultado.
+
+00:00:08.240 --> 00:00:11.220
+A questão é "como fazer com que
+meu layout possa ter rolagem?"
+
+00:00:11.220 --> 00:00:13.510
+Isso é bem próximo do que queremos.
+
+00:00:13.510 --> 00:00:16.525
+Descemos até a parte da resposta,
+e aqui tem um sinal de visto verde e
+
+00:00:16.525 --> 00:00:18.025
+muitas qualificações positivas.
+
+00:00:18.025 --> 00:00:20.285
+Então deve ser uma boa resposta.
+
+00:00:20.285 --> 00:00:22.901
+Ela diz "só junte tudo isso
+dentro de um <i>ScrollView</i>.
+
+00:00:22.901 --> 00:00:26.045
+E então tem um exemplo,
+<i>ScrollView</i>,
+
+00:00:26.045 --> 00:00:28.695
+então é especificado o <i>namespace</i>
+e então ele diz:
+
+00:00:28.695 --> 00:00:32.597
+<i>Fill_parent</i> para largura e altura, e
+então tem uma <i>tag</i> de fechamento aqui,
+
+00:00:33.720 --> 00:00:38.570
+e nesse comentário é dito "bote o resto
+do seu <i>current view</i> aqui dentro".
+
+00:00:39.580 --> 00:00:42.710
+Para complementar, <i>fill_parent</i>
+é a mesma coisa que <i>match_parent</i>.
+
+00:00:42.710 --> 00:00:45.860
+É apenas uma versão mais antiga dele,
+mas significam a mesma coisa.
+
+00:00:45.860 --> 00:00:50.590
+Nessa próxima linha é dito que o
+<i>ScrollView</i> só pode conter um item.
+
+00:00:50.590 --> 00:00:53.060
+Parece que esse era o <i>layout</i>
+original de alguém, e
+
+00:00:53.060 --> 00:00:55.980
+então para botarem dentro de um
+<i>ScrollView</i>, só fizeram com que
+
+00:00:55.980 --> 00:01:00.060
+o <i>ScrollView</i> fosse o <i>parent view</i>,
+e o <i>layout</i> linear o <i>child view</i>.
+
+00:01:00.060 --> 00:01:02.520
+OK, essa foi uma resposta útil,
+então vamos voltar
+
+00:01:02.520 --> 00:01:04.250
+e ver se existem outras soluções.
+
+00:01:07.020 --> 00:01:09.160
+Essa pessoa está descrevendo
+a mesma coisa.
+
+00:01:09.160 --> 00:01:14.420
+Eles tem um <i>layout</i> XML e
+acho que querem adicionar rolagem.
+
+00:01:14.420 --> 00:01:16.865
+Geralmente, não leio a pergunta
+inteira em detalhes.
+
+00:01:16.865 --> 00:01:18.660
+Vou direto para a resposta.
+
+00:01:18.660 --> 00:01:19.930
+Essa pessoa diz:
+
+00:01:19.930 --> 00:01:23.340
+"Já tentou incluir todo seu XML
+num <i>parent ScrollView</i>?"
+
+00:01:23.340 --> 00:01:25.880
+E então eles dão um exemplo
+de <i>ScrollView</i>, e
+
+00:01:25.880 --> 00:01:28.370
+o <i>child</i> é o <i>RelativeLayout</i>.
+
+00:01:28.370 --> 00:01:31.430
+e então fecham o <i>ScrollView</i>
+com uma <i>tag</i>.
+
+00:01:31.430 --> 00:01:34.030
+É tudo o que tem neste tópico.
+
+00:01:34.030 --> 00:01:37.850
+Mas parece que os dois resultados
+da busca deram o mesmo conselho
+
+00:01:37.850 --> 00:01:39.190
+sobre o uso do <i>ScrollView</i>.
+
+00:01:39.190 --> 00:01:44.110
+Então vamos mudar nossa busca
+para "<i>ScrollView android</i>".
+
+00:01:44.110 --> 00:01:47.500
+Muito bom.
+Então ele é um <i>view</i> do Android.
+
+00:01:47.500 --> 00:01:50.480
+E aqui tem uma descrição.
+
+00:01:50.480 --> 00:01:53.180
+Tem bastante texto aqui, então
+vou pular a leitura, mas
+
+00:01:53.180 --> 00:01:55.275
+se você quiser dar uma 
+olhada, tudo bem.
+
+00:01:55.275 --> 00:01:56.570
+Então vou voltar.
+
+00:01:56.570 --> 00:01:58.860
+Prefiro ver um exemplo em código.
+
+00:01:58.860 --> 00:02:01.590
+Então, os exemplos de código
+que vimos antes eram bons,
+
+00:02:01.590 --> 00:02:03.950
+e este também é bom.
+
+00:02:03.950 --> 00:02:05.240
+Então vamos voltar 
+para o <i>Android Studio</i>.
+
+00:02:06.270 --> 00:02:09.880
+Todos aqueles exemplos de XML
+começaram com o <i>ScrollView</i>.
+
+00:02:09.880 --> 00:02:12.740
+Imediatamente aparece um erro
+dizendo que não tenho a largura
+
+00:02:12.740 --> 00:02:13.990
+nem a altura do <i>view</i>.
+
+00:02:13.990 --> 00:02:17.705
+Então só os adicionei e especifiquei
+pra que eles sejam <i>match_parent</i>.
+
+00:02:18.780 --> 00:02:22.390
+Se eu adicionar uma chave pra fechar,
+então a <i>tag</i> de fechamento aparece.
+
+00:02:22.390 --> 00:02:23.974
+Então, vou copiar isso
+
+00:02:23.974 --> 00:02:29.860
+e colar no final do arquivo aqui.
+
+00:02:31.372 --> 00:02:36.240
+Isso significa que o <i>layout</i> linear
+existente agora é um <i>child</i> do <i>ScrollView</i>.
+
+00:02:36.240 --> 00:02:41.250
+Vou selecionar tudo isso e tentar
+fazer a indentação com quatro espaços,
+
+00:02:41.250 --> 00:02:44.064
+pra que fique mais fácil de ler
+como um <i>child</i> do <i>ScrollView</i>.
+
+00:02:44.790 --> 00:02:48.850
+No <i>Android Studio</i>, se eu clicar
+no menu <i>Edit</i>, vou no <i>Indent Selection</i>,
+
+00:02:48.850 --> 00:02:51.830
+e o programa fará a indentação
+com quatro espaços.
+
+00:02:51.830 --> 00:02:53.270
+Pronto.
+Agora parece melhor.
+
+00:02:54.070 --> 00:02:55.350
+Oh, mas tem um erro aqui.
+
+00:02:55.350 --> 00:02:58.890
+Ele diz: "o <i>namespace</i> 'android' não
+está vinculado."
+
+00:02:58.890 --> 00:03:00.460
+Posso clicar para mais detalhes.
+
+00:03:00.460 --> 00:03:03.150
+Ele diz: "Essa inspeção serve 
+para checar prefixos
+
+00:03:03.150 --> 00:03:06.150
+de <i>namespace</i> sem vínculo no XML.
+
+00:03:06.150 --> 00:03:08.315
+Se você lembrar lá trás 
+na primeira aula,
+
+00:03:08.315 --> 00:03:11.866
+eu disse que o <i>android:</i> vem
+desse <i>namespace</i> aqui.
+
+00:03:11.866 --> 00:03:17.830
+Então eu acho que precisamos 
+copiar isso e botar aqui.
+
+00:03:17.830 --> 00:03:20.940
+Você deve também mover 
+o <i>tools namespace</i> pra cá.
+
+00:03:20.940 --> 00:03:24.570
+O <i>tools namespace</i> serve para fornecer
+atributos adicionais que você pode ter
+
+00:03:24.570 --> 00:03:28.110
+no seu XML para ajudar no <i>debug</i> e
+construção do seu app.
+
+00:03:28.110 --> 00:03:30.530
+OK, agora irei rodar isso
+no meu dispositivo agora.
+
+00:03:30.530 --> 00:03:34.755
+OK, não há diferença visível
+no app pois não há conteúdo suficiente
+
+00:03:34.755 --> 00:03:37.950
+no formulário de pedidos
+para que precise da barra de rolagem.
+
+00:03:37.950 --> 00:03:41.321
+Para testar isso de fato,
+preciso adicionar mais <i>views</i> nesse <i>layout</i>.
+
+00:03:41.991 --> 00:03:43.740
+Farei o mesmo truque de antes.
+
+00:03:43.740 --> 00:03:47.390
+Vou copiar todos esses <i>views</i> e colar
+no <i>layout</i> pra que tenhamos
+
+00:03:47.390 --> 00:03:49.020
+um formulário de pedidos longo.
+
+00:03:50.040 --> 00:03:54.050
+OK, agora o formulário
+está bem longo e tem rolagem.
+
+00:03:54.050 --> 00:03:55.810
+Isso é empolgante!
+
+00:03:55.810 --> 00:03:59.280
+Se eu rotacionar o dispositivo, 
+a rolagem continua.
+
+00:04:00.650 --> 00:04:04.270
+Agora posso desfazer essas mudanças
+e ir de volta ao meu formulário original.
+
+00:04:05.280 --> 00:04:06.910
+Mas vou deixar 
+o <i>ScrollView</i> lá,
+
+00:04:06.910 --> 00:04:09.810
+pois nosso app funcionará melhor
+em todos os dispositivos.
+
+00:04:10.540 --> 00:04:13.080
+Para usuários com dispositivos
+menores que esse,
+
+00:04:13.080 --> 00:04:15.730
+ainda será possível rolar 
+e visualizar todos os campos.
+

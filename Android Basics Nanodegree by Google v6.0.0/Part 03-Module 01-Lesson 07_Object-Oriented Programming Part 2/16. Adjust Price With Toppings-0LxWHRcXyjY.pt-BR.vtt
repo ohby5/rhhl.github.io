@@ -1,0 +1,390 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.250 --> 00:00:02.150
+Para calcular o preço correto
+
+00:00:02.150 --> 00:00:05.230
+para o sumário do pedido,
+devemos passar a informação
+
+00:00:05.230 --> 00:00:09.380
+sobre quais coberturas o usuário 
+selecionou no método <i>calculatePrice</i>.
+
+00:00:09.500 --> 00:00:12.820
+Estou escolhendo fazer todo 
+o trabalho pesado e cálculo
+
+00:00:12.820 --> 00:00:17.780
+dentro do método <i>calculatePrice</i>, para
+centralizar toda a lógica relacionada.
+
+00:00:18.220 --> 00:00:21.920
+Ao consolidar tudo dentro deste método,
+se acontecer algum problema
+
+00:00:22.040 --> 00:00:25.620
+em como o preço está sendo calculado,
+checamos o código em um único lugar.
+
+00:00:26.620 --> 00:00:28.340
+É bem mais prático.
+
+00:00:28.340 --> 00:00:29.880
+Então, dentro deste método,
+
+00:00:29.880 --> 00:00:32.880
+vamos saber qual o preço base
+de uma xícara de café.
+
+00:00:33.450 --> 00:00:35.510
+É como mostrei a você antes.
+
+00:00:35.510 --> 00:00:38.110
+Se o café tiver chantilly, 
+então some 1 dólar.
+
+00:00:38.110 --> 00:00:40.650
+Se o café tiver chocolate, some 2.
+
+00:00:41.000 --> 00:00:43.630
+Então pegue o preço base 
+de uma xícara de café,
+
+00:00:43.630 --> 00:00:47.360
+e multiplique pela quantidade pedida,
+para determinar o preço final.
+
+00:00:47.690 --> 00:00:50.550
+Primeiro, vamos passar a informação
+sobre as caixas de marcar
+
+00:00:50.550 --> 00:00:53.632
+do chantilly e do chocolate dentro
+do método <i>calculatePrice</i>.
+
+00:00:54.302 --> 00:00:57.750
+Vou passar as booleans <i>hasWhippedCream</i>
+e a <i>hasChocolate</i>.
+
+00:00:58.380 --> 00:01:02.570
+Não tem sentido passá-las nos objetos
+<i>CheckBox</i>, porque o que importa
+
+00:01:02.570 --> 00:01:06.230
+são esses valores boolean 
+para calcular o preço.
+
+00:01:06.230 --> 00:01:10.290
+O Android Studios me diz que há um erro,
+porque a assinatura de método não combina.
+
+00:01:10.530 --> 00:01:13.530
+Estou tentando chamar um método,
+que foi definido para ter
+
+00:01:13.530 --> 00:01:15.390
+zero parâmetro de entrada.
+
+00:01:15.390 --> 00:01:18.820
+Vamos descer para onde o método
+<i>calculatePrice</i> está sendo definido.
+
+00:01:18.820 --> 00:01:20.700
+Vou mudar a assinatura de método,
+
+00:01:20.700 --> 00:01:25.620
+para que tenha dois parâmetros de entrada,
+uma boolean chamada <i>addWhippedCream</i>,
+
+00:01:25.620 --> 00:01:27.730
+e outra chamada <i>addChocolate</i>.
+
+00:01:27.730 --> 00:01:30.850
+Você pode nomear esses parâmetros 
+de entrada com o que quiser.
+
+00:01:30.850 --> 00:01:34.220
+Escolhi usar um nome diferente,
+do que foi passado,
+
+00:01:34.220 --> 00:01:37.030
+apenas para mostrar que esses nomes
+não precisam ser iguais.
+
+00:01:37.030 --> 00:01:40.580
+Atualizei o <i>Javadoc</i> para descrever
+esses dois novos parâmetros de entrada.
+
+00:01:40.590 --> 00:01:43.650
+Dessa forma, alguém que for chamar
+o método saberá como passá-lo.
+
+00:01:43.650 --> 00:01:47.020
+Depois, dentro do <i>calculatePrice</i>,
+tive que fazer toda a lógica
+
+00:01:47.020 --> 00:01:49.600
+sobre como mudar o preço baseado 
+nessas coberturas.
+
+00:01:49.930 --> 00:01:52.130
+Primeiro, vou calcular o preço base,
+
+00:01:52.130 --> 00:01:54.720
+então, vou criar uma variável
+integral chamada <i>basePrice</i>.
+
+00:01:54.720 --> 00:01:58.500
+Vou começar com o valor 5,
+porque uma xícara custa US$5.
+
+00:01:58.500 --> 00:02:00.930
+Então vou criar uma declaração <i>if</i>.
+
+00:02:00.930 --> 00:02:05.600
+Se a boolean <i>addWhippedCream</i> for <i>true</i>,
+o usuário quer chantilly.
+
+00:02:05.600 --> 00:02:09.720
+Isso significa que devemos somar US$1 
+nesse preço base de uma xícara.
+
+00:02:09.720 --> 00:02:11.920
+Isso dá conta do <i>case</i> do chantilly.
+
+00:02:11.920 --> 00:02:13.740
+Agora, vamos para o <i>case</i> do chocolate.
+
+00:02:13.740 --> 00:02:16.110
+Vou criar outra declaração <i>if</i>.
+
+00:02:16.110 --> 00:02:19.000
+Não preciso de outro bloco de códigos,
+
+00:02:19.000 --> 00:02:22.430
+porque se o usuário não quer chantilly,
+eu não preciso fazer nada.
+
+00:02:23.000 --> 00:02:26.550
+Na verdade, se eu quisesse digitar um <i>case
+else</i>, é assim que pareceria.
+
+00:02:26.550 --> 00:02:29.440
+Eu teria apenas um comentário
+que diz, <i>do nothing</i>.
+
+00:02:29.990 --> 00:02:31.960
+O Android Studio é mais esperto que isso,
+
+00:02:31.960 --> 00:02:35.010
+então, ele nota que a declaração 
+<i>else</i> está vazia.
+
+00:02:35.010 --> 00:02:37.940
+O conselho deles é 
+que esse tipo de código é confuso,
+
+00:02:37.940 --> 00:02:39.850
+e pode resultar em um erro de digitação.
+
+00:02:39.850 --> 00:02:41.990
+E, são linhas de código extra
+que não precisamos.
+
+00:02:41.990 --> 00:02:43.710
+Então, vamos apagar esse bloco <i>else</i>.
+
+00:02:43.940 --> 00:02:45.930
+Agora podemos tratar do <i>case</i>
+do chocolate.
+
+00:02:45.930 --> 00:02:49.410
+A cobertura de chocolate independe
+completamente da cobertura de chantilly.
+
+00:02:49.800 --> 00:02:51.880
+Não importa se o usuário 
+escolha um ou outro,
+
+00:02:51.880 --> 00:02:53.540
+elas não dependem uma da outra.
+
+00:02:53.540 --> 00:02:57.060
+Então, vou criar um <i>case</i> de <i>if</i> separado.
+
+00:02:57.060 --> 00:02:59.480
+Se o usuário quer chocolate,
+
+00:02:59.480 --> 00:03:04.010
+então precisamos modificar 
+o preço base para <i>basePrice + 2</i>.
+
+00:03:04.010 --> 00:03:08.270
+De novo, podemos ter um bloco de código
+<i>else</i>, mas não iria fazer nada.
+
+00:03:08.810 --> 00:03:12.690
+Se o usuário não quer chocolate,
+não precisamos ajustar o preço,
+
+00:03:12.690 --> 00:03:15.500
+então, vamos deletar esse código,
+pois, ele é desnecessário.
+
+00:03:15.530 --> 00:03:20.450
+Lendo o código, temos um preço base 
+de US$5 por xícara de café.
+
+00:03:20.450 --> 00:03:25.785
+Se o usuário quiser chantilly, então temos
+que aumentar o preço base para US$1.
+
+00:03:25.785 --> 00:03:27.610
+E aí, se o o usuário quiser chocolate,
+
+00:03:27.610 --> 00:03:29.703
+temos que aumentar o preço base para US$2.
+
+00:03:29.703 --> 00:03:32.290
+Para calcular o preço total do pedido,
+
+00:03:32.290 --> 00:03:35.835
+temos que multiplicar a quantidade vezes
+o preço de uma xícara de café.
+
+00:03:35.835 --> 00:03:38.735
+Certo, parece que o código vai funcionar.
+
+00:03:38.735 --> 00:03:41.935
+Adicionei comentários em cima 
+de cada bloco de código,
+
+00:03:41.935 --> 00:03:45.695
+então, quando voltarmos a ele,
+vamos lembrar o que fizemos.
+
+00:03:45.695 --> 00:03:48.175
+Agora, vamos rodar o aplicativo
+para ver se funciona.
+
+00:03:48.175 --> 00:03:50.635
+Vamos testar os <i>cases</i> que vimos juntos.
+
+00:03:51.965 --> 00:03:55.319
+Se escolhemos cobertura de chantilly
+e a quantidade de 3.
+
+00:03:55.319 --> 00:03:57.426
+Então, cada xícara será US$6.
+
+00:03:58.606 --> 00:04:03.290
+US$6 vezes 3 é US$18, 
+e calcula para 18, ótimo.
+
+00:04:03.290 --> 00:04:07.679
+Se eu adicionar a cobertura de chocolate,
+então cada xícara custará US$8.
+
+00:04:07.679 --> 00:04:11.650
+Se eu tiver a quantidade de 2,
+o preço total será de US$16.
+
+00:04:11.650 --> 00:04:15.700
+Tentamos com a cobertura de chantilly,
+e tivemos a resposta correta.
+
+00:04:15.700 --> 00:04:18.900
+Tentamos com o <i>case</i> de ambas as coberturas
+de chantilly e chocolate,
+
+00:04:18.900 --> 00:04:21.350
+e tivemos a resposta correta.
+
+00:04:21.350 --> 00:04:23.760
+Agora, vamos escolher 
+a cobertura de chocolate.
+
+00:04:24.300 --> 00:04:27.290
+Vou mudar a quantidade para 1,
+e pressionar <i>Order</i>.
+
+00:04:27.290 --> 00:04:31.810
+Parece estar correto, porque temos
+US$5 para uma xícara mais US$2 para
+
+00:04:31.810 --> 00:04:34.530
+o chocolate, que nos leva ao total de U$7.
+
+00:04:34.840 --> 00:04:40.960
+Se eu mudar isso para 4, então o total
+atualiza, assumindo US$7 para cada xícara.
+
+00:04:40.960 --> 00:04:41.870
+Incrível.
+
+00:04:42.910 --> 00:04:44.550
+Parece que funciona.
+
+00:04:44.550 --> 00:04:47.650
+Passei por esses testes de <i>cases</i>
+bem rapidamente.
+
+00:04:47.650 --> 00:04:48.820
+O que eu estava fazendo,
+
+00:04:48.820 --> 00:04:53.160
+era ter certeza que todos os caminhos
+de códigos possíveis foram executados.
+
+00:04:53.160 --> 00:04:56.823
+Por exemplo, se rodarmos o aplicativo,
+e não marcarmos a caixa do chantilly,
+
+00:04:56.823 --> 00:05:00.490
+então, nunca saberíamos 
+se o código iria funcionar.
+
+00:05:00.490 --> 00:05:05.720
+Temos que escolher condições
+para que todas as partes sejam executadas.
+
+00:05:05.720 --> 00:05:09.180
+Então selecionamos a cobertura 
+de chantilly e a de chocolate,
+
+00:05:09.180 --> 00:05:12.160
+para ter certeza que esse código executou.
+
+00:05:12.550 --> 00:05:14.170
+Para sermos ainda mais minuciosos,
+
+00:05:14.170 --> 00:05:17.170
+vamos testar todas as combinações
+dessas duas variáveis boolean.
+
+00:05:17.450 --> 00:05:21.580
+Todas essas combinações vão resultar
+em diferentes comportamentos,
+
+00:05:21.580 --> 00:05:24.820
+temos que ter certeza que nosso código
+funciona em todos esses <i>cases</i>.
+
+00:05:24.870 --> 00:05:28.530
+Já que o preço base está sendo calculado,
+
+00:05:28.670 --> 00:05:33.630
+podemos usar log messages para ter certeza
+que são calculados como o esperado.
+
+00:05:34.000 --> 00:05:37.760
+São coisas para se ter em mente
+quando for escrever um código
+
+00:05:37.760 --> 00:05:40.760
+que fica cada vez mais complexo 
+com essas declarações de fluxo.
+

@@ -1,0 +1,210 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.260 --> 00:00:04.120
+Bunun bir eposta uygulamasında
+bir InboxActivity.java dosyasından
+
+00:00:04.120 --> 00:00:05.840
+bir kod parçacığı olduğunu düşünün.
+
+00:00:05.840 --> 00:00:08.830
+Burada daha önce öğrenmediğiniz
+içerikte pek çok kod var.
+
+00:00:08.830 --> 00:00:10.880
+Bu yüzden bunu doğru
+yapmadıysanız önemli değil.
+
+00:00:10.880 --> 00:00:12.360
+Üstünden beraber geçelim.
+
+00:00:12.360 --> 00:00:16.379
+İlk olarak, numberOfEmailsInInbox denilen
+bir tamsayı değişkeni oluşturuyoruz.
+
+00:00:16.379 --> 00:00:18.530
+Değişkeni 0 değeri alacak
+şekilde başlatıyoruz.
+
+00:00:18.530 --> 00:00:23.270
+Sonra numberOfDraftEmails adında
+başka bir tamsayı değişkeni oluşturuyoruz.
+
+00:00:23.270 --> 00:00:25.700
+Bunu 2 değeri alacak
+şekilde başlatıyoruz.
+
+00:00:25.700 --> 00:00:29.460
+Sonra emailMessage adında
+bir string değişkeni oluşturuyoruz.
+
+00:00:29.460 --> 00:00:32.820
+Değer “Sahipsiniz boşluk epostaya”
+
+00:00:32.820 --> 00:00:37.350
+ki burada boşluk numberOfEmailsInInbox
+değişkenine işaret etmektedir.
+
+00:00:37.350 --> 00:00:43.660
+Yani bu “Sahipsiniz 0 epostaya” anlamında,
+çünkü bu değişkenin değeri 0.
+
+00:00:43.660 --> 00:00:47.090
+Sonra draftMessage adında
+başka bir string değişkenimiz var.
+
+00:00:47.090 --> 00:00:51.120
+Değer “Sahipsiniz boşluk taslak epostaya”
+
+00:00:51.120 --> 00:00:54.020
+Boşluk burada numberofDraftEmails
+değişkenine işaret ediyor ve
+
+00:00:54.020 --> 00:00:55.050
+bunun değeri 2.
+
+00:00:55.050 --> 00:01:00.550
+Yani bu sağ taraf
+“Sahipsiniz 2 taslak epostaya” diyor.
+
+00:01:00.550 --> 00:01:02.510
+Şimdiye kadar dört değişkenimiz var ve
+
+00:01:02.510 --> 00:01:04.800
+henüz loğlara bir şey yazdırılmadı.
+
+00:01:04.800 --> 00:01:06.485
+Şimdi bir if ifademiz var.
+
+00:01:06.485 --> 00:01:10.260
+Burada aşağıda else kod bloğu bulunmuyor
+ve bu tamamen normal.
+
+00:01:10.260 --> 00:01:15.330
+Bu ifade söyle diyor: if
+the numberOfEmailsInInbox = 0,
+
+00:01:15.330 --> 00:01:19.190
+sonra kodu bu açma ve kapama
+ayraçları arasında çalıştırıyor.
+
+00:01:19.190 --> 00:01:23.060
+numberOfEmailsInInbox
+0’a eşit olduğunu hatırlıyoruz,
+
+00:01:23.060 --> 00:01:28.170
+yani açma ve kapama ayraçları
+arasındaki kod çalışacaktır.
+
+00:01:28.170 --> 00:01:30.870
+Bu basitçe eposta mesaj
+değişkenini “Hiç yeni mesajınız yok”
+
+00:01:30.870 --> 00:01:33.290
+söyleyecek şeklinde güncelliyor.
+
+00:01:33.290 --> 00:01:37.880
+Yani en son eposta mesaj değerinin
+hiç yeni mesajını yok olduğunu
+
+00:01:37.880 --> 00:01:42.150
+ve en son taslak mesaj değerinin
+burada yukarda olduğunu biliyoruz.
+
+00:01:42.150 --> 00:01:43.850
+2 taslak epostanız var.
+
+00:01:43.850 --> 00:01:44.960
+Okumaya devam edelim.
+
+00:01:44.960 --> 00:01:47.118
+Burada bir başka if ifadesi var.
+
+00:01:47.118 --> 00:01:49.110
+Eğer numberOfDraftEmails 0’a eşitse
+
+00:01:49.110 --> 00:01:53.050
+o zaman kodu açma ve kapama
+ayraçlarının arasında çalıştırır.
+
+00:01:53.050 --> 00:01:56.390
+Ne var ki, numberOfDraftEmails
+2 değerine sahip.
+
+00:01:56.390 --> 00:02:02.620
+Buradaki durum false
+ve bu kod bloğunu atlayabiliriz.
+
+00:02:02.620 --> 00:02:05.950
+Dolayısıyla, draftMessage değişkeni
+Sahipsiniz 2 taslak epostaya
+
+00:02:05.950 --> 00:02:07.830
+değerine sahip.
+
+00:02:07.830 --> 00:02:10.500
+Bu yeni mesaj şeklinde güncellenmiyor.
+
+00:02:10.500 --> 00:02:14.310
+Son olarak, yöntemin olağan
+çalışma akışına geri dönüyoruz.
+
+00:02:14.310 --> 00:02:16.240
+Daha çok if ifadesi var ve
+
+00:02:16.240 --> 00:02:19.710
+loglara yazacak olan bu
+kod satırını çalıştırabiliriz.
+
+00:02:19.710 --> 00:02:22.440
+emailMessage’ı loglara
+yazdırıyor ve
+
+00:02:22.440 --> 00:02:25.850
+sonra draftMessage’ı loglara
+yazdırıyor.
+
+00:02:25.850 --> 00:02:30.679
+Şu anda bu noktada emailMessage,
+Hiç yeni mesajını yok diyor,
+
+00:02:30.679 --> 00:02:34.360
+ve draftMessage
+2 taslak epostanız var diyor.
+
+00:02:34.360 --> 00:02:37.870
+Seçeneklere baktığımızda,
+C şıkkı aradığımız şık.
+
+00:02:37.870 --> 00:02:40.560
+A şıkkı yanlış
+çünkü mesajı zaman içinde
+
+00:02:40.560 --> 00:02:42.420
+noktada yazdırmıyoruz.
+
+00:02:42.420 --> 00:02:45.820
+Loglara yazdırılan sadece
+iki kod satırımız bulunuyor.
+
+00:02:45.820 --> 00:02:50.000
+B şıkkı yanlış çünkü
+emailMessage stringi
+
+00:02:50.000 --> 00:02:51.660
+if ifadesi içinde güncelleniyor.
+
+00:02:51.660 --> 00:02:55.830
+Gerçekte 2 taslak epostamız var
+0 taslak eposta değil, yani
+
+00:02:55.830 --> 00:02:58.340
+ikinci log ifadesi de
+yanlış,
+
+00:02:58.340 --> 00:03:00.830
+Bu geriye tek bir doğru
+seçenek bırakıyor, C şıkkı.
+

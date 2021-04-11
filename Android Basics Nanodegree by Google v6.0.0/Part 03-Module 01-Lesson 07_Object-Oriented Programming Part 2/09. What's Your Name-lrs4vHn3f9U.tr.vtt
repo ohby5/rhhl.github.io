@@ -1,0 +1,965 @@
+WEBVTT
+Kind: captions
+Language: tr
+
+00:00:00.452 --> 00:00:03.620
+Pekala, bu gerçekten
+zorlayıcı bir kodlama göreviydi.
+
+00:00:03.620 --> 00:00:08.150
+Birçok kısmı vardı ve daha önce
+kullanmadığınız bir görünüm barındırıyordu.
+
+00:00:08.150 --> 00:00:10.650
+Çözümün üzerinden
+beraberce geçelim.
+
+00:00:10.650 --> 00:00:13.840
+İlk olarak, atacağınız adımları
+planlamanızı istiyorum.
+
+00:00:13.840 --> 00:00:16.160
+İlk adım bu metin alanın eklenmesidir
+
+00:00:16.160 --> 00:00:18.250
+böylece kullanıcı isim girişi
+yapabilecektir.
+
+00:00:18.250 --> 00:00:20.880
+İkinci adım,
+sipariş tuşunu tıkladığımız da
+
+00:00:20.880 --> 00:00:24.630
+metin alanından ismin alınması ve
+bir değişken içinde depolanmasıdır.
+
+00:00:24.630 --> 00:00:27.270
+Üçüncü adım, sipariş özetinin
+güncellenmesi ve böylece
+
+00:00:27.270 --> 00:00:27.880
+alınan ismin
+görüntülenmesidir.
+
+00:00:29.240 --> 00:00:30.460
+İlk adıma daha ayrıntılı bakalım.
+
+00:00:31.500 --> 00:00:34.800
+Uygulamamızda daha önce
+metin girdisi alanı eklememiştik
+
+00:00:34.800 --> 00:00:36.250
+Bu nedenle, Google'dabunu nasıl
+yapacağımıza dair bir arama yapalım.
+
+00:00:37.270 --> 00:00:38.850
+Kullanıcıdan bir girdi
+almak istediğimiz için
+
+00:00:38.850 --> 00:00:42.165
+Aramayı, kullanıcı girdi android
+şeklinde yapacağım.
+
+00:00:42.165 --> 00:00:45.275
+Sonuç, developer.android.com sitesi,
+oldukça iyi görünüyor.
+
+00:00:46.295 --> 00:00:49.765
+Bu sayfa kullanıcı girdileri için en iyi
+alıştırmaları tanımlıyor.
+
+00:00:49.765 --> 00:00:55.455
+El ya da klavye yoluyla girdi hakkında
+ve oyun kolları hakkında bilgi veriyor.
+
+00:00:55.455 --> 00:00:59.455
+Bizim istediğimiz klavye girdisi,
+bu nedenle ilk linke tıklayalım.
+
+00:00:59.455 --> 00:01:02.045
+Sayfayı hızlıca aşağıya
+kaydırarak başlıyorum.
+
+00:01:02.045 --> 00:01:05.150
+Faydalı olabilecek bir demet XML
+örneği görüyorum.
+
+00:01:05.150 --> 00:01:08.710
+Bir açılı parantez ve bir görünüm adı
+olduğunu fark ediyorum.
+
+00:01:08.710 --> 00:01:11.550
+Görünüm adı bu örnekte
+MetinDüzenle olarak görünüyor.
+
+00:01:12.610 --> 00:01:17.260
+Aşağıya kaydırarak diğerlerine bakıyorum ve
+MetinDüzenle görünümünü onlarda da var.
+
+00:01:17.260 --> 00:01:22.330
+Yani klavye girdisi görünümü
+MetinDüzenle olarak adlandırılıyor.
+
+00:01:22.330 --> 00:01:25.269
+Diğer bir yaklaşım, Genel Android
+Görünmüleri kopya kağıtları kullanımıdır.
+
+00:01:26.330 --> 00:01:29.360
+MetinDüzenle de bu görünümler
+listesinde ve
+
+00:01:29.360 --> 00:01:32.670
+bu albüm tanımlaması örneği bizim
+uygulamadaki isim alanına benziyor.
+
+00:01:33.730 --> 00:01:35.680
+Bu XML'i kendi uygulamamıza
+kopyalayalım.
+
+00:01:36.850 --> 00:01:39.790
+İsim alanını sipariş formunun
+en üstünde,
+
+00:01:39.790 --> 00:01:42.910
+malzemeler başlığının üzerinde istiyoruz
+bu yüzden onu buraya ekleyelim.
+
+00:01:42.910 --> 00:01:45.440
+Bunu yapmamızın hemen ardından bir hata
+bildirimi görüyoruz: ipucu sembolü
+
+00:01:45.440 --> 00:01:46.449
+çözümlenemedi.
+
+00:01:47.600 --> 00:01:51.430
+Burada referans albüm tanımlamasıdır
+fakat hata kopya kağıdı ile ilgilidir.
+
+00:01:51.430 --> 00:01:55.640
+Bunu silelim ve kendi ipucumuz olan
+İsim ile değiştirelim.
+
+00:01:55.640 --> 00:01:58.640
+İsim alanını formumuzun en üstünde,
+malzemeler başlığının üzerinde
+
+00:01:58.640 --> 00:02:01.910
+istediğimiz için
+onu buraya yapıştıralım.
+
+00:02:01.910 --> 00:02:05.150
+İsim alanı, buradaki dikey çizgisel
+yerleşimin ilk göz ağrısı olacak.
+
+00:02:05.150 --> 00:02:08.109
+Tüm değerlerin istediğimiz şekilde
+verildiğinden emin olalım.
+
+00:02:09.120 --> 00:02:10.220
+İlk olarak, elimizde kimlik görünümü
+
+00:02:10.220 --> 00:02:13.350
+ve onun albüm_tanımlama_görünümü var.
+
+00:02:13.350 --> 00:02:15.590
+Bu, kopya kağıdı örneğine
+gönderme yapıyor,
+
+00:02:15.590 --> 00:02:18.000
+bunu daha uygun
+bir isimle değiştirelim.
+
+00:02:19.020 --> 00:02:20.470
+İsim alanı
+olarak adlandıralım.
+
+00:02:21.840 --> 00:02:24.419
+Sonra genişlik ve yükseklik
+değerlerini görüyoruz.
+
+00:02:26.000 --> 00:02:29.052
+Şu an, metin düzenle alanının genişliği
+eşleşen_öğe olarak verilmiş.
+
+00:02:29.052 --> 00:02:33.620
+Bunun anlamı, alanın çizgisel yerleştirme
+öğesi kadar geniş olacağıdır.
+
+00:02:33.620 --> 00:02:34.960
+Sonra yüksekliği görüyoruz.
+
+00:02:34.960 --> 00:02:36.820
+Yükseklik, kaydırma içeriği
+olarak verilmiş, yani
+
+00:02:36.820 --> 00:02:39.380
+yükseklik, içerik kadar uzun olacak.
+
+00:02:39.380 --> 00:02:42.630
+Bu iki değer makul görünüyor,
+bu yüzden oldukları gibi bırakalım.
+
+00:02:42.630 --> 00:02:44.230
+Sonra ipucunu görüyoruz.
+
+00:02:44.230 --> 00:02:46.450
+Bu değer ile daha önce
+çalışmadık ve
+
+00:02:46.450 --> 00:02:49.800
+dizinin çözümlenemediğine dair
+bir hata görüyoruz.
+
+00:02:49.800 --> 00:02:51.580
+Kılavuzun, MetinDüzenle anroidi
+ile ilgili
+
+00:02:51.580 --> 00:02:55.020
+kısmına bakarak bu değerlerin
+ne demek olduğunu anlayalım.
+
+00:02:56.020 --> 00:03:00.220
+metinDüzenle androidi için arama yaparak
+kılavuzun ilgi sayfasını bulabiliriz.
+
+00:03:00.220 --> 00:03:05.040
+Burada hızlı bir sınıf gözden geçirmesi ve
+takiben XML değerleri listesi var.
+
+00:03:05.040 --> 00:03:08.900
+Metin düzenleme sınıfının, metin ve
+metin görünümünden devranıldığı görülür.
+
+00:03:08.900 --> 00:03:12.250
+Bu devranılan XML değerlerine sahip
+olmamızın nedeni budur.
+
+00:03:12.250 --> 00:03:14.720
+Genişlettiğimiz zaman
+android ipucu için arama yapabiliriz.
+
+00:03:15.990 --> 00:03:18.230
+Pekala, işte bu aradığımız
+değerdi.
+
+00:03:18.230 --> 00:03:21.270
+Sağa doğru kaydırırsak,
+metin boş olduğu zaman
+
+00:03:21.270 --> 00:03:24.860
+gösterilen ipucu metni
+dendiğini görürüz.
+
+00:03:24.860 --> 00:03:27.850
+Bu, kullanıcıya bu alana ne yazması
+gerektiği konusunda yardımcı olur.
+
+00:03:27.850 --> 00:03:31.870
+Size gösterdiğim uygulamada,
+ipucu metni, isim'i tayin eder.
+
+00:03:31.870 --> 00:03:35.440
+Yani kodumuzda, bu satırı silmeli
+ve isim yazmalıyız.
+
+00:03:36.500 --> 00:03:37.750
+Sonra girdiTürü'nü görüyoruz.
+
+00:03:37.750 --> 00:03:41.690
+Bu da yeni bir özellik bu nedenle
+yine kılavuza bakalım.
+
+00:03:41.690 --> 00:03:44.790
+Android girdi türünü
+aratacağım.
+
+00:03:44.790 --> 00:03:46.100
+Listeyi görüyorsunuz.
+
+00:03:46.100 --> 00:03:50.830
+Buradaki tanımlama, bir metin alanına
+yerleştirilen ve kullanıcıya metin giriş
+
+00:03:50.830 --> 00:03:54.980
+izninin nasıl verileceğine karar vermeye
+yardımcı olan veri türüdür diyor.
+
+00:03:54.980 --> 00:03:58.240
+Bu, biraz belirsiz bir tanımlama,
+bu yüzden daha fazla bilgi için
+
+00:03:58.240 --> 00:03:59.610
+bu özelliğin üstüne tıklayalım.
+
+00:03:59.610 --> 00:04:02.760
+İşte, GirdiTürü'nün
+tam tanımlaması.
+
+00:04:02.760 --> 00:04:05.780
+Bunlar atayabileceğimiz
+muhtemel değerler.
+
+00:04:05.780 --> 00:04:09.750
+Kopya kağıdı örneğinde,
+XML ÇokSatırlımetin'nin değerini atar.
+
+00:04:09.750 --> 00:04:14.120
+Görünüşe göre, bunun anlamı, metin düzenle
+alanı çok satırlı metne izin veriyor.
+
+00:04:14.120 --> 00:04:16.470
+Birinin ismi çok satırı gerektirecek
+kadar uzun olmayacağı için
+
+00:04:16.470 --> 00:04:19.550
+tek satırlı metin
+yeterli olmalı.
+
+00:04:19.550 --> 00:04:21.959
+Metni girdi türü olarak kullanalım.
+
+00:04:21.959 --> 00:04:25.010
+Eğer çokSatırlımetni siler ve
+metni girmeye başlarsam,
+
+00:04:25.010 --> 00:04:29.710
+otomatik tamamlama önerileri olan
+seçenek listesinin tümü önüme gelir.
+
+00:04:29.710 --> 00:04:31.910
+Sadece metni seçeceğim
+ve enter'e basacağım.
+
+00:04:31.910 --> 00:04:34.660
+Uygulamayı cihazda yürüteceğim ve
+MetinDüzenle alanının görünüp görünmediğini
+
+00:04:34.660 --> 00:04:36.180
+kontrol edeceğim.
+
+00:04:36.180 --> 00:04:38.490
+Uygulama başlatıldığında,
+isim alanını görüyorum.
+
+00:04:38.490 --> 00:04:39.410
+Harika.
+
+00:04:39.410 --> 00:04:40.055
+İsim girişi yapabiliyorum.
+
+00:04:40.055 --> 00:04:42.540
+Ancak gördünüz gibi
+küçük harf ile başlıyor.
+
+00:04:42.540 --> 00:04:47.260
+Giriş yaptığımda
+büyük harf ile başlamasını istiyorum.
+
+00:04:47.260 --> 00:04:51.030
+Bunun için
+girdi türünde değişiklik yapıyorum.
+
+00:04:51.030 --> 00:04:52.350
+Diğer seçeneklere de bakalım.
+
+00:04:53.390 --> 00:04:57.713
+metinBüyükkarakter, metinBüyükkelimeler,
+metinBüyükcümleler ve daha
+
+00:04:57.713 --> 00:05:00.210
+şey var.
+
+00:05:00.210 --> 00:05:02.350
+Büyük harf kullanmayla ilgili olanlar
+vaadkar görünüyor.
+
+00:05:03.690 --> 00:05:05.530
+Bu tanımlamaları
+okuduktan sonra
+
+00:05:05.530 --> 00:05:08.500
+metinBüyükkelimeler seçeneğinin
+denemek için iyi olduğunu düşünüyorum.
+
+00:05:08.500 --> 00:05:10.000
+Bunu kopyalayalım ve kullanalım.
+
+00:05:11.040 --> 00:05:13.699
+Metin yerine metinBüyük kelimeleri
+kullanacağım.
+
+00:05:14.930 --> 00:05:16.170
+Uygulamayı tekrar yürütelim.
+
+00:05:16.170 --> 00:05:19.415
+Pekala, klavye artık büyük
+harfler ile başlıyor,
+
+00:05:19.415 --> 00:05:22.306
+artık ismi girebilirim ve
+eğer bir boşluk bırakırsam
+
+00:05:22.306 --> 00:05:24.088
+bir sonraki kelimede de
+büyük harfle başlıyor.
+
+00:05:24.088 --> 00:05:25.380
+Harika.
+
+00:05:25.380 --> 00:05:29.220
+Farkına vardığım son şey
+isim alanı ile malzeme alanı arasında
+
+00:05:29.220 --> 00:05:31.645
+küçük bir boşluk
+bırakmam gerektiği.
+
+00:05:31.645 --> 00:05:36.010
+16 dp dikey boşluk bıraktık
+aynısı burada da yapalım.
+
+00:05:36.010 --> 00:05:38.816
+Boşluğu, MetinDüzenle alanının alt
+boşluğu olarak da bırakabilirim ama
+
+00:05:38.816 --> 00:05:42.800
+boşluğu, malzemeler başlığı üzerinde
+üst boşluk olarak eklemeyi seçeceğim.
+
+00:05:42.800 --> 00:05:45.700
+Boşluklar görünüyor ve
+isim alanı zaten doğru.
+
+00:05:46.730 --> 00:05:49.650
+Bu, ilk adım için yapılan tüm XML
+değişiklikleri üslenir.
+
+00:05:49.650 --> 00:05:51.970
+Şimdi Java kodunda değişiklikler
+yapmaya ihtiyacımız var.
+
+00:05:51.970 --> 00:05:54.340
+İkinci adımda,
+sipariş tuşuna tıkladığımızda
+
+00:05:54.340 --> 00:05:57.650
+metin alanından ismi almak ve
+bir değişken içinde depolamak istiyoruz.
+
+00:05:58.730 --> 00:06:03.140
+İnsan gözleri için bu alandaki ismi görmek
+kolaydır fakat Android
+
+00:06:03.140 --> 00:06:06.980
+uygulaması, bu adı sipariş özetine
+koymak istediğimizi bilemez.
+
+00:06:08.070 --> 00:06:10.840
+Hala Lyla'nın sabit kodlu
+ismini kullanıyor.
+
+00:06:10.840 --> 00:06:13.190
+Bu ismi kullanmak için bunu değiştirmeye
+ihtiyacımız var.
+
+00:06:13.190 --> 00:06:16.540
+Bu, sipariş özetini güncellemek için
+kutucuğun işaretlenip
+
+00:06:16.540 --> 00:06:19.560
+işaretlenmediğini kontrol etmeye
+benzer.
+
+00:06:19.560 --> 00:06:22.560
+MetinDüzelt alanında metni nasıl
+okuyacağımızı öğrenmedik bu nedenle
+
+00:06:22.560 --> 00:06:23.570
+Google'da bunun için
+arama yapalım.
+
+00:06:23.570 --> 00:06:29.190
+Android MetinDüzenle alanından
+ismin nasıl alınacağını aratacağım.
+
+00:06:29.190 --> 00:06:30.390
+İlk sonuç iyi görünüyor.
+
+00:06:30.390 --> 00:06:32.720
+bu, stack overflow sitesinde
+sorulmuş bir soru.
+
+00:06:32.720 --> 00:06:35.880
+Soruyu okuyorum ama
+cevapla daha çok ilgiliyim.
+
+00:06:35.880 --> 00:06:40.050
+Sayfanın faydalı olup olmadığını görmek
+için hızlıca tarıyorum.
+
+00:06:40.050 --> 00:06:43.510
+Bu cevabının yanında yeşil onay var
+ve yüksek oy almış bu yüzden
+
+00:06:43.510 --> 00:06:45.610
+daha dikkatli okuyacağım.
+
+00:06:45.610 --> 00:06:47.810
+Kodun yazılı olduğu bu kısım ile
+başlıyorum.
+
+00:06:47.810 --> 00:06:51.820
+Bu kod bir aktivite sınıfına dahil olacak
+gibi görünüyor çünkü burada
+
+00:06:51.820 --> 00:06:53.030
+Kimlik-ile-Görünüm-Bul yazıyor.
+
+00:06:53.030 --> 00:06:57.970
+Bu kimliğe sahip bir görünüm bulmak için
+görünüm hiyerarşisinde arama yapıyoruz.
+
+00:06:57.970 --> 00:07:01.910
+Bu görünümü bulduğumuzda
+bunu MeitnDüzenle kalıbına koyuyoruz ve
+
+00:07:01.910 --> 00:07:05.250
+metin denilen değişkenin
+içinde depoluyoruz.
+
+00:07:05.250 --> 00:07:09.100
+İkinci satırda, değer adı verilen bir
+dizi değişkeni bildiriyoruz ve
+
+00:07:09.100 --> 00:07:10.330
+bunu onun içinde depoluyoruz.
+
+00:07:10.330 --> 00:07:14.751
+birçok parantezler, noktalar ve kelimeler
+var ama metni MetinDüzenle
+
+00:07:14.751 --> 00:07:18.780
+alanından almaya çalıştığımızı
+tahmin edebilirsiniz.
+
+00:07:18.780 --> 00:07:23.260
+Ve onu değer adı verilen bir dizi
+değişkeni içinde depolamaya çalışıyoruz.
+
+00:07:23.260 --> 00:07:27.120
+Bu kodu, çalışıp çalışmadığını görmek için
+kendi uygulamamıza kopya yapıştıralım.
+
+00:07:27.120 --> 00:07:31.480
+AnaAktivite sınıfında bu kodu
+SiparişTeslim metoduna ekleyeceğim.
+
+00:07:31.480 --> 00:07:34.400
+Bu metodu seçtim çünkü burası sipariş
+tuşunun tıklandığı ve
+
+00:07:34.400 --> 00:07:37.170
+isim alanından ismi okumak
+isteğimiz yer.
+
+00:07:38.230 --> 00:07:41.260
+Stack overflow gönderisinden kodu
+metodun üstüne
+
+00:07:41.260 --> 00:07:41.820
+yapıştırıyorum.
+
+00:07:43.110 --> 00:07:46.610
+Hemen ardından bu sembolün
+çözümlenemediğine dair bir hata geliyor.
+
+00:07:46.610 --> 00:07:50.340
+İsim alanına uygun olarak
+bunu, GörünümKimliği ile değiştirmeliyiz.
+
+00:07:50.340 --> 00:07:52.440
+görünüm.xml'ye geri dönerek
+
+00:07:52.440 --> 00:07:56.588
+MetinDüzenle alanına, isim_alanı
+görünüm kimliğini verdik,
+
+00:07:56.588 --> 00:08:01.410
+yani Java dosyasında, bunu
+R.kimlik.isim_alanı olarak değiştireceğim.
+
+00:08:01.410 --> 00:08:04.530
+Artık daha fazla hata yok,
+şimdi uygulamayı yürütebilirim fakat
+
+00:08:04.530 --> 00:08:07.400
+bu kodun gerçekten çalışıp çalışmadığını
+nasıl bileceğim?
+
+00:08:07.400 --> 00:08:10.520
+Buraya, bu alanda değerin gerçekten
+ismi tutuğunu doğrulayan
+
+00:08:10.520 --> 00:08:14.300
+bir log mesajı ekleyebilirim.
+
+00:08:14.300 --> 00:08:16.760
+İşte log mesajı için gereken kod.
+
+00:08:16.760 --> 00:08:20.110
+İsim: ve değer dizinin çıktısını alacağım.
+
+00:08:21.110 --> 00:08:23.150
+Değer, bu değişken için belirsiz
+bir isim bu yüzden
+
+00:08:23.150 --> 00:08:25.260
+bunu, isim ile değiştireceğim.
+
+00:08:25.260 --> 00:08:28.460
+Bu biraz daha tanımlayıcı bir ad olacaktır.
+
+00:08:28.460 --> 00:08:31.005
+MetinDüzenle alanın
+değişken adını da
+
+00:08:31.005 --> 00:08:33.760
+isim alanı olarak
+değiştireceğim.
+
+00:08:33.760 --> 00:08:37.070
+Metin, kodumuzdaki diğer
+şeylerle karışabilir.
+
+00:08:37.070 --> 00:08:40.299
+Şimdi uygulamayı yürütelim
+ve kayıt mesajını kontrol edelim.
+
+00:08:40.299 --> 00:08:40.840
+Tamam.
+
+00:08:40.840 --> 00:08:42.190
+Sipariş formunu doldurursam ve
+
+00:08:42.190 --> 00:08:45.790
+sipariş tuşuna basarsam
+kayıtları kontrol edebilirim.
+
+00:08:46.810 --> 00:08:51.210
+AnaAktivite'den yeni bir mesaj görüyorum:
+İsim: Antigravity Anthony.
+
+00:08:51.210 --> 00:08:52.680
+Yani, çalışıyor.
+
+00:08:52.680 --> 00:08:56.360
+Bu kod aslında ismi bu
+alandan çekip almadı.
+
+00:08:56.360 --> 00:08:59.620
+Harika.
+Kullanıcı ismini bir değişken içinde,
+
+00:08:59.620 --> 00:09:04.060
+bunu kayıtlar ile doğruladık ve
+isim doğru
+
+00:09:04.060 --> 00:09:06.330
+öyleyse ismi görüntülemek için
+sipariş özetini güncelleyebiliriz.
+
+00:09:07.380 --> 00:09:10.280
+Sipariş özetinin doğru
+ismi göstermesi için
+
+00:09:10.280 --> 00:09:13.860
+girdi parametresi olarak bu metoda
+geçirmemiz gerekiyor.
+
+00:09:13.860 --> 00:09:16.610
+Bunun anlamı, sipariş özeti oluştur'u
+çağırdığımız zaman
+
+00:09:16.610 --> 00:09:20.450
+bu isim değişkeni, girdi bağımsız değişkeni
+olarak geçirilmelidir.
+
+00:09:20.450 --> 00:09:22.410
+İlk önce bu değişikliği yapalım.
+
+00:09:22.410 --> 00:09:24.840
+Eğer isim, girdi bağımsız değişkeni olarak
+eklenirse,
+
+00:09:24.840 --> 00:09:29.660
+Hata oluşur çünkü metod çağrısı ile
+metod imzası uyuşmuyor.
+
+00:09:29.660 --> 00:09:31.950
+Metod tanımına kaydırdığımda,
+
+00:09:31.950 --> 00:09:35.670
+Dizi isim'i bir girdi parametresi
+olarak ekleyebilirim.
+
+00:09:35.670 --> 00:09:38.410
+Java doc'u da güncelleyeceğim.
+
+00:09:38.410 --> 00:09:41.600
+siparişÖzetiYarat metodu içinde,
+bu değişkeni kullanabilirim.
+
+00:09:41.600 --> 00:09:46.630
+Sabit kodlu ismi kaldıracağım ve
+bu isim değişkenini birleştireceğim.
+
+00:09:47.930 --> 00:09:51.360
+Tekrarlayalım, ismi
+isim_alanı'ndan alıyoruz ve
+
+00:09:51.360 --> 00:09:55.590
+girdi olarak siparişÖzetiYarat'a
+geçiriyoruz.
+
+00:09:55.590 --> 00:09:59.620
+Bu metod içinde, ismi
+sipariş özetine ilave ediyoruz.
+
+00:09:59.620 --> 00:10:01.720
+Kodumuzu kontrol etmek için
+uygulamayı yürütelim.
+
+00:10:01.720 --> 00:10:05.200
+Uygulamayı başlatınca, bir isim yazabilir,
+bazı malzemeler seçebilir ve
+
+00:10:05.200 --> 00:10:06.790
+niceliği değiştirebilirim.
+
+00:10:06.790 --> 00:10:08.600
+Sonra da sipariş tuşuna basabilirim.
+
+00:10:08.600 --> 00:10:11.190
+Sipariş özetinin daha önce
+girdiğim ismi içerdiğini
+
+00:10:11.190 --> 00:10:12.160
+görüyorum.
+
+00:10:12.160 --> 00:10:13.458
+Harika!
+
+00:10:13.458 --> 00:10:17.140
+Eğer ismi değiştirir ve
+siparişe basarsam, yeniden güncellenir.
+
+00:10:17.140 --> 00:10:17.800
+Heyecan verici.
+
+00:10:17.800 --> 00:10:22.440
+Uygulamadaki herşey çalışıyor,
+kayıt mesajını silebilirim.
+
+00:10:22.440 --> 00:10:24.900
+Uygulamayı bir kez daha yürütüp
+herşeyin çalıştığına emin olabilirim.
+
+00:10:26.000 --> 00:10:28.640
+Şimdi geri dönelim ve
+bu quiz sorularını cevaplayalım.
+
+00:10:28.640 --> 00:10:31.700
+Uygulamamıza eklediğimiz görünüm
+MetinDüzelt olarak adlandırılıyor.
+
+00:10:31.700 --> 00:10:35.260
+İkinci soru, bu görünümden metni almak
+için hangi Java metodunu
+
+00:10:35.260 --> 00:10:37.010
+çağırdığımızı soruyor.
+
+00:10:38.120 --> 00:10:40.910
+Bu soruyu kodumuza geri
+dönerek cevaplayabiliriz.
+
+00:10:40.910 --> 00:10:42.885
+İsim alanını temsil eden MetinDüzenle
+Java nesnesi için
+
+00:10:42.885 --> 00:10:46.710
+görünüm hiyerarşisinde
+arama yaparız.
+
+00:10:46.710 --> 00:10:49.570
+Bunu, isimAlanı adı verilen
+değişken içinde depolarız.
+
+00:10:49.570 --> 00:10:52.310
+Ve bu nesne üzerinde
+gerekli metodu çağırdık.
+
+00:10:52.310 --> 00:10:56.310
+Girdi bağımsız değişkeni almayan ve
+başka bir nesnenin döndürülen değerine
+
+00:10:56.310 --> 00:10:58.500
+sahip olan metniEdin metodunu çağırdık.
+
+00:10:59.510 --> 00:11:01.460
+Bu bizi üçüncü soruya götürüyor.
+
+00:11:01.460 --> 00:11:04.790
+metniEdin metodunun döndürülen
+veri türü nedir?
+
+00:11:04.790 --> 00:11:06.330
+Cevap, düzenlenebilirdir ve
+
+00:11:06.330 --> 00:11:09.540
+Bunu Android kılavuzuna bakarak
+anladım.
+
+00:11:09.540 --> 00:11:14.320
+Metin Düzenle Sınıfında, aşağıya
+kaydırırsanız tüm metotları görebilirsiniz.
+
+00:11:14.320 --> 00:11:17.970
+metniEdin bir metot olarak listelenir,
+MetinGörünümünün gösterdiği metni
+
+00:11:17.970 --> 00:11:19.350
+döndürür.
+
+00:11:19.350 --> 00:11:21.960
+Döndürülen veri düzenlenebilirdir.
+
+00:11:21.960 --> 00:11:27.280
+Bu, düzenlenebilir bir nesene olarak döner
+ve bu nesne üzerinde
+
+00:11:27.280 --> 00:11:30.750
+yeni bir metot çağırabiliriz,
+nokta gösterimi ve metot ismi ekleyerek.
+
+00:11:30.750 --> 00:11:35.730
+Bu örnekte, Diziye metodunu düzenlenebilir
+nesne üzerine çağırıyoruz,
+
+00:11:35.730 --> 00:11:38.790
+Dizeye metodu bir dizi döndürür
+böylece
+
+00:11:38.790 --> 00:11:41.050
+bu, isim değişkeni içinde
+depolanabilir.
+
+00:11:42.080 --> 00:11:45.880
+Bu, daha ileri bir kavram ve
+zincirleme metot çağrıları deniyor
+
+00:11:45.880 --> 00:11:49.560
+çünkü bir metot çağırıyoruz,
+döndürülen değeri ediniyoruz ve
+
+00:11:49.560 --> 00:11:52.800
+başka bir metot çağırıyoruz ve eğer
+bir nesne döndürürse
+
+00:11:52.800 --> 00:11:53.980
+başka bir metot çağırabilirsiniz.
+
+00:11:53.980 --> 00:11:57.690
+Yani metotları arka arkaya
+çağırabilirsiniz.
+
+00:11:57.690 --> 00:12:01.230
+Metot çağrılarını birbirine eklememizin
+sebebi metniEdin metodunun düzenlenebilir
+
+00:12:01.230 --> 00:12:02.650
+bir nesne döndürmesidir.
+
+00:12:02.650 --> 00:12:05.920
+Düzenlenebilir bir nesne dizi değişkeni
+içinde depolanamaz,
+
+00:12:05.920 --> 00:12:09.980
+bu Android Studio hatasının da
+uyumsuz türüler olarak tanımladığı gibi.
+
+00:12:09.980 --> 00:12:14.410
+Eğer Diziye metodunu eklersek
+tüm bu şeyin döndürülen değeri
+
+00:12:14.410 --> 00:12:17.790
+bir dizidir ve
+isim değişkeninde depolanabilir.
+
+00:12:17.790 --> 00:12:20.550
+Bunu kılavuzu kontrol ederek
+doğrulayabiliriz.
+
+00:12:20.550 --> 00:12:23.160
+metniEdin metodu düzenlenebilir
+bir nesne döndürür.
+
+00:12:23.160 --> 00:12:25.660
+Düzenlenebilir sınıfta
+buna tıklanırsa
+
+00:12:25.660 --> 00:12:27.880
+Diziye adı verilen bir metot bulmalıyız.
+
+00:12:27.880 --> 00:12:28.600
+Aşağı kaydırdığımda,
+
+00:12:28.600 --> 00:12:32.830
+açık metot bölümünde
+Diziye'nin listelendiğini göremiyorum.
+
+00:12:32.830 --> 00:12:34.670
+Ama devralınmış metotlar var.
+
+00:12:34.670 --> 00:12:38.520
+Bunu aşağıya doğru açarsam,
+Diziye metodunu görürüm.
+
+00:12:38.520 --> 00:12:40.930
+Döndürülen değer bir dizidir.
+
+00:12:40.930 --> 00:12:44.850
+Bir kez daha tekrarlarsak,
+bu metot çağrısı düzenlenebilir bir
+
+00:12:44.850 --> 00:12:48.000
+nesne döndürür ve sonra
+Dizeye metodunu bunun üzerine çağırırız.
+
+00:12:48.000 --> 00:12:50.670
+Diziye metodu bir dizi döndürür ve
+
+00:12:50.670 --> 00:12:53.680
+sağ taraftaki tüm bu şey
+bir dizi döndürür.
+
+00:12:53.680 --> 00:12:57.150
+Bu, isim adı verilen bir
+dizi değişkeni içinde depolanabilir.
+
+00:12:58.270 --> 00:13:00.180
+Vay canına, bu gerçekten uzun bir
+kodlama göreviydi.
+
+00:13:01.330 --> 00:13:04.070
+Hemen bir ara verin ve
+sonra geri gelin çünkü
+
+00:13:04.070 --> 00:13:07.620
+kullanıcı siparişi üzerine fiyatın
+nasıl değiştirileceğini kavramamız gerek.
+
+00:13:07.620 --> 00:13:09.740
+Bunu kontrol akışını
+öğrenerek yapacağız.
+

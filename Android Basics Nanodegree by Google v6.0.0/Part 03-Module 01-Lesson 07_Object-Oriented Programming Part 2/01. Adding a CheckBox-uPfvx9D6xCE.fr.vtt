@@ -1,0 +1,402 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.750 --> 00:00:03.360
+Pour construire de cette mise en page, pensez
+d'abord aux vues dont on a besoin.
+
+00:00:03.360 --> 00:00:07.420
+Je vais supposer que tout cela
+est déjà construit et qu'on va juste
+
+00:00:07.420 --> 00:00:10.910
+parler de nouvelles choses qu'on
+doit ajouter à notre mise en page.
+
+00:00:10.910 --> 00:00:15.030
+Les deux nouvelles vues dont on doit ajouter
+sont le <i>TextView</i> pour les garnitures
+
+00:00:15.030 --> 00:00:18.090
+et la vue <i>CheckBox</i> pour
+l'article crème fouettée.
+
+00:00:18.090 --> 00:00:21.470
+Vous ne saviez probablement pas que
+cette vue existait dans Android, mais
+
+00:00:21.470 --> 00:00:24.210
+heureusement faire une recherche sur Google
+vous a aidé à trouver cette réponse.
+
+00:00:25.380 --> 00:00:28.300
+En passant à l'étape 2,
+on doit positionner les vues.
+
+00:00:28.300 --> 00:00:30.820
+En supposant que ces vues sont déjà
+positionnées correctement,
+
+00:00:30.820 --> 00:00:35.470
+on doit juste ajouter les garnitures et la crème 
+fouettée, verticalement, dans la même colonne.
+
+00:00:35.470 --> 00:00:37.000
+Tant que la vue racine est 
+une mise en page,
+
+00:00:37.000 --> 00:00:39.990
+verticale linéaire, on peut juste ajouter
+ces deux Vues en haut de ceci.
+
+00:00:40.990 --> 00:00:43.580
+Pour la troisième étape,
+on doit styler les vues.
+
+00:00:43.580 --> 00:00:46.260
+Le style à l'en-tête des garnitures
+est le même que la quantité et
+
+00:00:46.260 --> 00:00:49.030
+les en-têtes du récapitulatif des commandes,
+donc on sera apte à juste copier et
+
+00:00:49.030 --> 00:00:51.434
+coller les en-têtes 
+qui existent déjà.
+
+00:00:51.434 --> 00:00:54.920
+La vue <i>CheckBox</i> est nouveau quoique
+on doit le styler en conséquence.
+
+00:00:54.920 --> 00:00:59.176
+On devrait tenir compte de 24 dp 
+d'espace entre la boîte et le texte,
+
+00:00:59.176 --> 00:01:04.054
+et on devrait changer la taille de police de
+crème fouettée pour être de 16 sp.
+
+00:01:04.054 --> 00:01:05.910
+Effectuons ces changement à 
+notre app maintenant.
+
+00:01:07.180 --> 00:01:11.020
+Pour ajouter une en-tête de garniture qui
+ressemble à l'en-tête Quantity, on peut
+
+00:01:11.020 --> 00:01:12.730
+copier et coller le code.
+
+00:01:12.730 --> 00:01:16.775
+Je le copie et l'ajoute ensuite au 
+sommet de ce vertical <i>LinearLayout</i>.
+
+00:01:18.080 --> 00:01:20.170
+Ok, donc maintenant ça 
+dit <i>Quantity twice</i> ici.
+
+00:01:20.170 --> 00:01:22.960
+Je vais changer le texte de sorte à
+ce que ça dise <i>Toppings</i>.
+
+00:01:22.960 --> 00:01:25.380
+J'ai aussi copié le margin 
+bottom dessus de
+
+00:01:25.380 --> 00:01:28.790
+sorte à ce qu'il y ait de l'espace entre
+cette en-tête et le contenu en-dessous.
+
+00:01:30.260 --> 00:01:32.660
+Maintenant on n'a pas ajouté un <i>CheckBox</i>
+à notre app avant, donc
+
+00:01:32.660 --> 00:01:33.990
+Je vais chercher sur google comment
+on fait ça.
+
+00:01:33.990 --> 00:01:37.720
+Je vais chercher le
+<i>checkbox</i> android.
+
+00:01:37.720 --> 00:01:40.840
+Rappelez-vous d'ajouter android car
+il pourrait y avoir des cases à cocher pour
+
+00:01:40.840 --> 00:01:44.850
+les autres plateformes, comme pour
+le web ou autres plateformes mobiles,
+
+00:01:44.850 --> 00:01:48.090
+ça vous aidera à obtenir un
+résultat spécifique pour Android.
+
+00:01:48.090 --> 00:01:49.760
+Essayons le premier lien.
+
+00:01:49.760 --> 00:01:52.900
+C'est la documentation de référence pour
+la classe <i>CheckBox</i>.
+
+00:01:52.900 --> 00:01:56.420
+Je fais défiler et
+je vois un bon aperçu de la classe et
+
+00:01:56.420 --> 00:01:58.960
+Alors il va tout droit
+dans les attributs XML.
+
+00:01:58.960 --> 00:02:02.880
+Ce que je voudrais quoiqu'il en soit est
+un exemple de certains XML pour <i>Checkbox</i>.
+
+00:02:02.880 --> 00:02:05.100
+Bon revenons aux résultats 
+de la recherche.
+
+00:02:05.100 --> 00:02:07.070
+Cliquez sur le second lien.
+
+00:02:07.070 --> 00:02:10.440
+Cool, maintenant ça montre quelques
+images de cases à cocher.
+
+00:02:10.440 --> 00:02:12.040
+Et voici quelques XML.
+
+00:02:12.040 --> 00:02:13.180
+Ça semble assez bien.
+
+00:02:13.180 --> 00:02:16.140
+Il a deux cases à cocher
+dans un <i>LinearLayout</i>.
+
+00:02:16.140 --> 00:02:19.070
+Je vais juste copier cette
+première case à cocher et
+
+00:02:19.070 --> 00:02:20.330
+puis je vais le coller 
+dans notre app.
+
+00:02:21.590 --> 00:02:25.912
+Retour dans notre app, je vais le coller
+après le texte de garnitures, mais
+
+00:02:25.912 --> 00:02:28.753
+avant le texte <i>Quantity</i>, donc ici.
+
+00:02:28.753 --> 00:02:33.040
+Je vais modifier le XML car il
+ne s'adapte pas exactement à notre cas.
+
+00:02:33.040 --> 00:02:36.710
+Je vais supprimer l'id et
+aussi le text ici.
+
+00:02:36.710 --> 00:02:39.750
+Au lieu de viande, car notre
+café ne vend pas de viande,
+
+00:02:39.750 --> 00:02:41.660
+Je vais taper Crème fouettée.
+
+00:02:43.030 --> 00:02:45.940
+En passant, ce que vous avez 
+vu avant, <i>@string/meat</i>,
+
+00:02:45.940 --> 00:02:50.410
+se référait à une chaîne de ressource
+dans le fichier <i>strings.xml</i>.
+
+00:02:50.410 --> 00:02:52.690
+Nous en parlerons un peu
+plus tard, mais pour le moment,
+
+00:02:52.690 --> 00:02:55.550
+vous pouvez taper la chaîne
+directement ici.
+
+00:02:55.550 --> 00:02:59.350
+Et regardez, les mises à jour précédemment,
+donc on a une case qui dit Crème fouettée.
+
+00:02:59.350 --> 00:03:03.380
+Ce qui est cool avec la vue case
+à cocher est que ça vous donne une case,
+
+00:03:03.380 --> 00:03:08.100
+aussi bien que quelque texte, donc vous
+n'avez pas à ajouter une autre vue texte.
+
+00:03:08.100 --> 00:03:10.850
+On n'a pas non plus besoin de cette ligne
+qui parle de <i>onClick</i>.
+
+00:03:12.089 --> 00:03:16.500
+Tout ce qui nous importe pour cette tache de
+codage est de faire apparaître la case ici.
+
+00:03:16.500 --> 00:03:20.260
+L'autre moyen pour arriver à ce
+XML est en cochant cette feuille de triche
+
+00:03:20.260 --> 00:03:21.460
+des vues communes Android.
+
+00:03:22.540 --> 00:03:25.410
+Cette feuille de triche liste un tas
+de vues communes Android views et
+
+00:03:25.410 --> 00:03:27.460
+ça a aussi bien un exemple pour le XML.
+
+00:03:28.480 --> 00:03:32.739
+Voici la vue de case à cocher et voici un
+exemple de ce que ça ressemblerait et
+
+00:03:32.739 --> 00:03:34.125
+le XML correspondant.
+
+00:03:34.125 --> 00:03:37.270
+Vous auriez pu copier le formulaire XML
+ici et le coller dans l'app.
+
+00:03:38.340 --> 00:03:41.010
+En revenant à Android Studio exécutons
+l'app pour voir à quoi ça ressemble.
+
+00:03:42.480 --> 00:03:43.320
+Et voilà.
+
+00:03:43.320 --> 00:03:44.050
+Il semble assez bien.
+
+00:03:44.050 --> 00:03:46.695
+On a l'en-tête de garnitures et
+une case Crème fouettée.
+
+00:03:47.750 --> 00:03:50.330
+On a aussi une cool animation
+quand on coche la case.
+
+00:03:51.360 --> 00:03:54.790
+Le seul problème que je vois 
+est que l'espacement est inactif.
+
+00:03:54.790 --> 00:03:57.840
+Par exemple, c'est trop serré 
+entre l'en-tête Quantity et
+
+00:03:57.840 --> 00:04:01.390
+la case Crème fouettée et il n'y a pas
+assez de place entre eux ici.
+
+00:04:02.410 --> 00:04:04.480
+En revenant à la ligne
+rouge qui a été fourni,
+
+00:04:04.480 --> 00:04:09.370
+on devrait ajouter 24 dp d'espace ici
+et changer la taille de la police à 16 sp.
+
+00:04:10.830 --> 00:04:12.960
+Premièrement je vais changer la taille de
+la police.
+
+00:04:12.960 --> 00:04:18.110
+Je vais taper <i>android:textSize</i>
+et alors mettre 16sp.
+
+00:04:18.110 --> 00:04:22.043
+Je vais ouvrir la prévisualisation pour
+vérifier que ça augmente en taille de la
+
+00:04:22.043 --> 00:04:23.690
+police et c'est le cas.
+
+00:04:23.690 --> 00:04:26.600
+Si vous n'êtes pas sûr si actualisé ou non,
+vous pouvez toujours appuyer sur le bouton.
+
+00:04:26.600 --> 00:04:27.430
+Ok.
+
+00:04:27.430 --> 00:04:29.950
+Maintenant pour découvrir l'espacement
+je l'ai fait fonctionner
+
+00:04:29.950 --> 00:04:32.240
+en faisant un tas d'essai et d'erreur.
+
+00:04:32.240 --> 00:04:34.370
+J'ai essayé de régler les 
+valeurs de <i>margin</i> et puis
+
+00:04:34.370 --> 00:04:38.340
+j'ai essayé de régler les valeurs de <i>padding</i>,
+et il s'avère que <i>paddingLeft</i>
+
+00:04:38.340 --> 00:04:42.520
+contrôle l'espacement entre
+la case et le texte.
+
+00:04:42.520 --> 00:04:43.285
+Ajoutons le <i>padding</i> 
+maintenant.
+
+00:04:44.900 --> 00:04:46.960
+Cool, le texte s'est déplacé.
+
+00:04:46.960 --> 00:04:49.040
+Je vois encore un problème pourtant
+
+00:04:49.040 --> 00:04:53.090
+Il y a assez d'espace vertical ici, mais
+là il n'y a pas assez d'espace vertical.
+
+00:04:53.090 --> 00:04:57.760
+Je dois même ajouter <i>bottom padding</i> ou
+<i>bottom margin</i> à cette vue case à cocher ou
+
+00:04:57.760 --> 00:05:01.720
+je dois ajouter <i>top padding</i> ou
+<i>top margin</i> à cette en-tête Quantity.
+
+00:05:01.720 --> 00:05:02.620
+Dans tous les cas ça marcherait,
+
+00:05:02.620 --> 00:05:07.110
+je vais juste ajouter une marge
+supérieur à cette en-tête Quantity.
+
+00:05:07.110 --> 00:05:08.880
+Là, ça semble mieux !
+
+00:05:08.880 --> 00:05:10.990
+Maintenant, les choses apparaissent plus
+proportionnellement espacées.
+
+00:05:10.990 --> 00:05:12.790
+Je vais exécuter cette app sur mon 
+dispositif.
+
+00:05:14.210 --> 00:05:15.170
+Et voilà l'app.
+
+00:05:15.170 --> 00:05:16.320
+Ça semble vraiment bien.
+
+00:05:16.320 --> 00:05:17.460
+Beau travail.
+
+00:05:17.460 --> 00:05:21.250
+Quand vous devez ajouter plus de changements UI
+à votre app, vous pouvez suivre ce modèle
+
+00:05:21.250 --> 00:05:25.360
+de recherche google pour les informations
+en ligne et l'appliquer ensuite à votre app.
+

@@ -1,0 +1,277 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.510 --> 00:00:03.240
+La prochaine chose à faire dans l'app
+est de changer le prix du café
+
+00:00:03.240 --> 00:00:06.880
+au cas où quelqu'un commande une garniture,
+telle que la crème fouettée ou le chocolat.
+
+00:00:06.880 --> 00:00:08.160
+C'est une bonne idée.
+
+00:00:08.160 --> 00:00:12.170
+S'il commande la crème fouettée,
+alors on les facturera juste $1.
+
+00:00:12.170 --> 00:00:15.000
+S'il commande le chocolat,
+alors on les facturera $2.
+
+00:00:15.000 --> 00:00:15.620
+&gt;&gt; Bien.
+
+00:00:15.620 --> 00:00:17.070
+Découvrons comment faire
+cela dans l'app.
+
+00:00:18.340 --> 00:00:20.970
+Voici des exemples 
+dans d'autres apps google,
+
+00:00:20.970 --> 00:00:24.390
+où le comportement peut changer
+en fonction de certaines conditions.
+
+00:00:24.390 --> 00:00:28.630
+Dans la boite de réception de Gmail, 
+voici une capture d'écran des emails
+
+00:00:28.630 --> 00:00:31.590
+Pour un seul email,
+si un rappel lui est attaché,
+
+00:00:31.590 --> 00:00:36.260
+puis l'appsait montrer cette icône,
+cette étiquette et le texte de rappel.
+
+00:00:36.260 --> 00:00:38.310
+Si un email a des images 
+en pièces jointes,
+
+00:00:38.310 --> 00:00:41.110
+puis l'app sait montrer ces
+dans la ligne ici.
+
+00:00:41.110 --> 00:00:43.040
+Si un email mentionne 
+un voyage,
+
+00:00:43.040 --> 00:00:46.510
+puis une carte de Voyage se montre
+avec les informations de vol.
+
+00:00:46.510 --> 00:00:49.910
+Dans Google Now Launcher app,
+il y a plus d'exemples sur comment
+
+00:00:49.910 --> 00:00:52.610
+le comportement de l'app change
+en fonction de certaines conditions.
+
+00:00:52.610 --> 00:00:56.130
+Par exemple, si le prix d'achat
+augmente, alors le delta ou
+
+00:00:56.130 --> 00:01:00.160
+l'augmentation dans le prix sera
+affiché ici en police de couleur verte.
+
+00:01:00.160 --> 00:01:02.120
+Si le prix d'achat 
+diminue,
+
+00:01:02.120 --> 00:01:05.250
+alors la différence sera affiché
+ici en police de couleur rouge.
+
+00:01:05.250 --> 00:01:08.140
+Pour cette carte météo,
+si la température est bonne et
+
+00:01:08.140 --> 00:01:11.260
+et le temps est ensoleillé,
+alors on affiche une icône soleil.
+
+00:01:11.260 --> 00:01:15.120
+Si le temps est venteux ou nuageux,
+alors on affiche des icône différents.
+
+00:01:15.120 --> 00:01:16.850
+On modifiera notre app 
+dans peu de temps
+
+00:01:16.850 --> 00:01:20.180
+alors que ces changements de prix basé
+sur les garnitures commandées mais
+
+00:01:20.180 --> 00:01:23.100
+en premier, je veux que vous soyez 
+familier avec le flux de contrôle.
+
+00:01:23.100 --> 00:01:26.620
+Normalement, le code dans nos méthodes
+est exécuté de haut en bas,
+
+00:01:26.620 --> 00:01:29.820
+ligne après ligne mais avec
+les déclarations du flux de contrôle,
+
+00:01:29.820 --> 00:01:33.030
+vous pouvez changer que les
+instructions soient exécutées dedans.
+
+00:01:33.030 --> 00:01:33.690
+Par exemple,
+
+00:01:33.690 --> 00:01:38.130
+vous pouvez ignorer certaines instructions
+si certaines conditions sont rencontrées.
+
+00:01:38.130 --> 00:01:40.444
+On va faire ça en
+apprenant la logique <i>if/else</i>.
+
+00:01:41.580 --> 00:01:44.400
+Vous n'avez pas vu le code pour les
+déclarations <i>if/else</i> avant mais
+
+00:01:44.400 --> 00:01:46.470
+je vais vous jeter dans
+la fin profond et voir comment vous faites.
+
+00:01:46.470 --> 00:01:51.080
+Dans les deux prochains défis, vous allez
+lire quelques extraits de code par vous-même,
+
+00:01:51.080 --> 00:01:54.000
+et ceux-ci sont liés
+dans les notes de l'instructeur.
+
+00:01:54.000 --> 00:01:56.640
+Ensuite, vous allez essayer de
+devinez ce que ce code fait et
+
+00:01:56.640 --> 00:01:58.550
+essayer de determiner la sortie.
+
+00:01:58.550 --> 00:02:00.200
+Vous aurez plusieurs
+options à choisir de manière
+
+00:02:00.200 --> 00:02:03.120
+pouvoir choisir le meilleur
+qui correspond ce code.
+
+00:02:03.120 --> 00:02:04.390
+Quand je dis sortie,
+
+00:02:04.390 --> 00:02:08.008
+qui sont imprimées pour le 
+chat de journal.
+
+00:02:08.008 --> 00:02:11.510
+Rappelez-vous que vous pouvez accéder au chat
+de journal àè partir de cet onglet Android ici,
+
+00:02:11.510 --> 00:02:15.070
+et il affiche tous les messages du
+système et de nos apps.
+
+00:02:15.070 --> 00:02:18.380
+Les extraits de code que nous vous 
+fournissons vont écrire des messages
+
+00:02:18.380 --> 00:02:19.510
+au journal ici.
+
+00:02:19.510 --> 00:02:21.830
+Faisons un exemple de 
+question ensemble.
+
+00:02:21.830 --> 00:02:24.310
+Vous pouvez trouver ce lien
+dans les notes de l'instructeur.
+
+00:02:24.310 --> 00:02:28.270
+Supposons que ce soit un extrait de code
+du fichier <i>WeatherActivity.java</i>
+
+00:02:28.270 --> 00:02:29.830
+au sein d'une 
+application météo.
+
+00:02:29.830 --> 00:02:33.850
+Cette première ligne de code crée
+une variable booléenne appelé <i>isRaining</i>
+
+00:02:33.850 --> 00:02:35.910
+et la valeur initiale 
+est <i>vrai</i>.
+
+00:02:35.910 --> 00:02:38.500
+Puis on a cette 
+déclaration <i>if/else</i>.
+
+00:02:38.500 --> 00:02:43.150
+S'il pleut est vrai,
+alors on écrit ça aux journaux.
+
+00:02:43.150 --> 00:02:46.330
+Ça dit, Il pleut,
+c'est mieux d'emmener un parapluie.
+
+00:02:46.330 --> 00:02:50.910
+S'il pleut est <i>faux</i>, alors on va
+dans ce cas <i>else</i> et on écrit,
+
+00:02:50.910 --> 00:02:53.230
+ce message, Il est peu probable 
+qu'il pleuve.
+
+00:02:53.230 --> 00:02:57.730
+Tant qu'il pleut est <i>vrai</i>,
+alors on tombe dans ce cas et
+
+00:02:57.730 --> 00:03:00.210
+on écrit, Il pleut,
+c'est mieux d'emmener un parapluie.
+
+00:03:00.210 --> 00:03:04.780
+Comme on tombe dans ce cas, on peut
+ignorer ce bloc <i>else</i>, cette ligne de code
+
+00:03:04.780 --> 00:03:08.620
+vit à l'extérieur de la déclaration <i>if/else</i> 
+donc, elle sera toujours exécutée.
+
+00:03:08.620 --> 00:03:11.670
+Ça dit, Merci d'
+utiliser l'app <i>Whetherweather</i>.
+
+00:03:11.670 --> 00:03:14.520
+Cherchons une option dans
+le quiz qui montre, Il pleut,
+
+00:03:14.520 --> 00:03:17.690
+c'est mieux d'emmener un parapluie.,
+immediatement suivi de, Merci
+
+00:03:17.690 --> 00:03:19.660
+d'utiliser l'app 
+<i>WhetherWeather</i>.
+
+00:03:19.660 --> 00:03:21.550
+C'est exactement l'option B.
+
+00:03:21.550 --> 00:03:23.870
+Maintenant, voici un probème différent
+que vous allez essayer.
+
+00:03:23.870 --> 00:03:26.510
+Vérifiez les notes de l'extrait de 
+code et alors faites votre choix.
+
