@@ -1,0 +1,321 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.333 --> 00:00:02.333
+Fiz download dos ícones
+de setas de reprodução
+
+00:00:02.367 --> 00:00:03.667
+do site Material Design,
+
+00:00:03.700 --> 00:00:07.433
+e incluí todas as versões
+nas suas pastas drawable respectivas.
+
+00:00:07.467 --> 00:00:10.800
+Agora preciso mudar o layout
+para incluí-los.
+
+00:00:10.833 --> 00:00:13.967
+Precisamos fazer essa mudança
+no layout dos itens de lista.
+
+00:00:14.000 --> 00:00:16.433
+Essa será
+uma mudança complicada,
+
+00:00:16.467 --> 00:00:22.333
+porque tenho um LinearLayout horizontal
+como elemento raiz deste layout.
+
+00:00:22.367 --> 00:00:26.167
+Se eu adicionasse o ícone de reprodução
+como 3º filho neste layout,
+
+00:00:26.200 --> 00:00:28.767
+a cor do plano de fundo não ficaria
+atrás dele.
+
+00:00:28.800 --> 00:00:31.600
+Para que a seta de reprodução
+sobreponha o fundo colorido,
+
+00:00:31.633 --> 00:00:34.133
+eu mudei meu layout
+para um RelativeLayout.
+
+00:00:34.167 --> 00:00:37.000
+Fiz muitos testes
+antes de descobrir isso,
+
+00:00:37.033 --> 00:00:39.467
+e não acertei os atributos
+de primeira.
+
+00:00:39.500 --> 00:00:43.033
+Também há vários modos
+de implementar o mesmo layout,
+
+00:00:43.067 --> 00:00:45.067
+este foi só o modo
+que decidi usar.
+
+00:00:45.100 --> 00:00:48.967
+No nosso caso, transformei a ImageView
+em 1º filho do RelativeLayout.
+
+00:00:49.000 --> 00:00:52.067
+Como as Views já são adicionadas
+ao canto superior esquerdo,
+
+00:00:52.100 --> 00:00:56.600
+não precisei adicionar
+atributos especiais para posicioná-la.
+
+00:00:56.633 --> 00:01:01.267
+Aí temos dois LinearLayouts
+com as duas TextViews.
+
+00:01:01.300 --> 00:01:03.133
+Eles terão o mesmo
+plano de fundo colorido
+
+00:01:03.167 --> 00:01:05.100
+de acordo
+com o tema da categoria.
+
+00:01:05.133 --> 00:01:07.067
+As TextViews
+devem estar alinhadas
+
+00:01:07.100 --> 00:01:10.533
+com a borda superior,
+da direita e inferior do pai.
+
+00:01:10.567 --> 00:01:11.733
+Também devemos especificar
+
+00:01:11.767 --> 00:01:14.267
+que elas se localizam
+à direita da imagem.
+
+00:01:14.300 --> 00:01:16.933
+Se não,
+elas irão se sobrepor a ela.
+
+00:01:16.967 --> 00:01:18.700
+Depois, podemos colocar
+a seta de reprodução
+
+00:01:18.733 --> 00:01:20.367
+em cima do LinearLayout.
+
+00:01:20.400 --> 00:01:22.534
+Vamos adicioná-la
+como ImageView,
+
+00:01:22.567 --> 00:01:24.667
+em que a fonte aponta
+para a imagem drawable
+
+00:01:24.700 --> 00:01:26.267
+que adicionamos
+ao aplicativo.
+
+00:01:26.300 --> 00:01:27.700
+Em relação à posição,
+
+00:01:27.733 --> 00:01:32.067
+queremos que ela se alinhe
+com a borda direita do RelativeLayout.
+
+00:01:32.100 --> 00:01:34.733
+Também queremos centralizá-la
+dentro do pai,
+
+00:01:34.767 --> 00:01:38.367
+então especifiquei aqui:
+center vertical = true.
+
+00:01:38.400 --> 00:01:40.367
+De acordo com as indicações
+no quiz,
+
+00:01:40.400 --> 00:01:43.933
+queremos 16dp de espaço
+da borda direita da tela.
+
+00:01:43.967 --> 00:01:48.600
+Para isso, adicionamos à ImageView
+uma margem direita de 16dp.
+
+00:01:48.633 --> 00:01:53.567
+Quando você fizer as mudanças no código,
+o XML dos itens deve ficar assim.
+
+00:01:53.600 --> 00:01:57.233
+Temos aqui uma RelativeLayout
+como a View raiz do layout.
+
+00:01:57.267 --> 00:02:01.433
+Aí temos nossa ImageView,
+o LinearLayout logo depois
+
+00:02:02.467 --> 00:02:04.700
+com duas TextViews
+dentro dele.
+
+00:02:04.733 --> 00:02:08.833
+Precisamos pôr novos parâmetros
+de RelativeLayout
+
+00:02:08.867 --> 00:02:10.333
+ao LinearLayout
+que adicionamos.
+
+00:02:10.367 --> 00:02:14.100
+Quero dizer que consertei a altura
+do item de lista
+
+00:02:14.133 --> 00:02:16.533
+para ser
+uma @dimen/list_item_height.
+
+00:02:16.567 --> 00:02:21.900
+Se não, a cor de fundo não se estenderia
+para o item todo embora eu quisesse.
+
+00:02:21.933 --> 00:02:25.133
+E fiz isso
+com os 3 atributos pai aqui.
+
+00:02:25.167 --> 00:02:27.700
+O alignParentBottom,
+o alignParentRight
+
+00:02:27.733 --> 00:02:30.967
+e o alignParentTop
+estão definidos como "true".
+
+00:02:31.000 --> 00:02:33.033
+Por último,
+nosso RelativeLayout.
+
+00:02:33.067 --> 00:02:35.700
+Temos uma nova ImageView
+para a seta de reprodução.
+
+00:02:35.733 --> 00:02:39.067
+Ela tem altura
+e largura de 24dp.
+
+00:02:39.100 --> 00:02:41.200
+Também está alinhada
+com o lado direito do pai.
+
+00:02:41.233 --> 00:02:45.667
+Ela está centralizada verticalmente
+e tem uma margem direita de 16dp.
+
+00:02:45.700 --> 00:02:49.767
+Quando você terminar as mudanças,
+não esqueça de reformatar o XML
+
+00:02:49.800 --> 00:02:53.533
+pra que os atributos sigam as diretrizes
+de célula de código do Android.
+
+00:02:53.567 --> 00:02:55.033
+E é assim
+que você faz isso.
+
+00:02:55.067 --> 00:02:56.667
+Vá até "Projeto",
+
+00:02:56.700 --> 00:03:02.500
+destaque o arquivo que você quer,
+vá em "Código" e em "Reformatar Código".
+
+00:03:02.533 --> 00:03:06.900
+Quando ele perguntar se você quer
+reformatar os arquivos selecionados,
+
+00:03:06.933 --> 00:03:08.933
+clique em OK.
+
+00:03:08.967 --> 00:03:11.500
+Agora queremos executar
+o aplicativo.
+
+00:03:11.533 --> 00:03:14.133
+Vamos ver
+como a NumbersActivity está.
+
+00:03:14.167 --> 00:03:15.667
+Uau, está bem melhor.
+
+00:03:15.700 --> 00:03:18.567
+Agora temos as setas aparecendo
+para todos os itens.
+
+00:03:18.600 --> 00:03:20.867
+Vamos confirmar
+nas outras categorias também.
+
+00:03:20.900 --> 00:03:23.600
+As setas estão
+na activity Família.
+
+00:03:24.867 --> 00:03:27.133
+Temos setas
+na activity Cores
+
+00:03:28.133 --> 00:03:30.000
+e na activity Expressões.
+
+00:03:30.667 --> 00:03:33.433
+Agora vamos testar
+a reprodução de áudio
+
+00:03:33.467 --> 00:03:36.233
+para ver se ainda funciona
+em cada lista.
+
+00:03:50.033 --> 00:03:51.733
+Beleza, tudo está ótimo.
+
+00:03:51.767 --> 00:03:54.333
+Por fim, queremos testar
+se o layout fica bom
+
+00:03:54.367 --> 00:03:58.333
+quando rodamos o dispositivo e ocupamos
+mais espaço horizontal na tela.
+
+00:03:58.367 --> 00:04:00.667
+Vamos checar
+todas as activities.
+
+00:04:00.700 --> 00:04:02.033
+Beleza, fantástico!
+
+00:04:02.067 --> 00:04:05.333
+O recurso de reprodução está mais fácil
+de ser descoberto agora,
+
+00:04:05.367 --> 00:04:07.533
+o que resulta
+numa experiência melhor.
+
+00:04:07.567 --> 00:04:09.933
+O usuário agora sabe que,
+clicando num item,
+
+00:04:09.967 --> 00:04:11.967
+a pronúncia de cada palavra
+é reproduzida.
+
+00:04:12.000 --> 00:04:13.333
+Ótimo trabalho!
+

@@ -1,0 +1,156 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.380 --> 00:00:03.600
+If you look through the media player
+documentation, you'll find this method,
+
+00:00:03.600 --> 00:00:05.012
+setOnCompletionListener.
+
+00:00:05.012 --> 00:00:07.939
+So the description says
+here that this method
+
+00:00:07.939 --> 00:00:09.350
+allows you to register a callback.
+
+00:00:09.350 --> 00:00:12.260
+They'll be called when the end
+of the media source or
+
+00:00:12.260 --> 00:00:14.002
+audio file has been reached.
+
+00:00:14.002 --> 00:00:17.170
+Notices that the input of this
+method is an on completion listener.
+
+00:00:17.170 --> 00:00:19.300
+So let's click into it for more details.
+
+00:00:19.300 --> 00:00:22.420
+So MediaPlayer.OnCompletionListener
+is an interface.
+
+00:00:22.420 --> 00:00:24.990
+So that means you'll
+need to implement it and
+
+00:00:24.990 --> 00:00:27.120
+provide the code for
+it's onCompletion() method.
+
+00:00:28.240 --> 00:00:32.470
+So the answer to this first question
+is that the onCompletion() method
+
+00:00:32.470 --> 00:00:35.020
+of the onCompletionListener
+object will be called
+
+00:00:35.020 --> 00:00:37.170
+when the MediaPlayer has
+finished playing the media file.
+
+00:00:37.170 --> 00:00:41.830
+And then in step number two,
+I asked you to use this information.
+
+00:00:41.830 --> 00:00:44.010
+To modify the music player sample app.
+
+00:00:44.010 --> 00:00:46.740
+So that when the song is done playing,
+a toast message pops up.
+
+00:00:47.900 --> 00:00:50.910
+So let's go back to our music
+player project in Android Studio.
+
+00:00:50.910 --> 00:00:52.300
+So after the media player started,
+
+00:00:52.300 --> 00:00:56.400
+I'm going to set up a callback to
+be notified when the song is done.
+
+00:00:56.400 --> 00:00:59.250
+And as noted in the quiz hint we
+provided you, we need to set up
+
+00:00:59.250 --> 00:01:02.095
+the completion listener after
+the media player has started.
+
+00:01:02.095 --> 00:01:05.260
+So after mediaPlayer.start is called,
+
+00:01:05.260 --> 00:01:07.770
+let's call the set on
+completion listener method.
+
+00:01:09.900 --> 00:01:13.670
+So inside this method I'm going to
+define an anonymous listener class
+
+00:01:13.670 --> 00:01:18.870
+in line and remember that it's anonymous
+because I'm not giving it a class name.
+
+00:01:18.870 --> 00:01:21.010
+So there's no need to give
+it a class name here.
+
+00:01:21.010 --> 00:01:23.447
+Because I'm only going to be
+using this class definition once.
+
+00:01:23.447 --> 00:01:26.860
+[BLANK_AUDIO]
+
+00:01:26.860 --> 00:01:29.661
+Now inside the onCompletion
+method I'm going to modify it so
+
+00:01:29.661 --> 00:01:32.243
+that it pops up a toast
+message that says, I'm done!
+
+00:01:32.243 --> 00:01:35.482
+[BLANK_AUDIO]
+
+00:01:35.482 --> 00:01:38.287
+All right, so now let's test it,
+I'm going to hit the play button.
+
+00:01:38.287 --> 00:01:48.002
+[MUSIC]
+
+00:01:48.002 --> 00:01:50.490
+And when it's done,
+the toast message pops up.
+
+00:01:50.490 --> 00:01:51.600
+So great work.
+
+00:01:51.600 --> 00:01:54.790
+So to summarize,
+I'm using an asynchronous callback
+
+00:01:54.790 --> 00:01:57.530
+to get notified when the media
+player is done playing the song.
+
+00:01:57.530 --> 00:02:00.500
+And in the meantime,
+I can go about doing other things.
+
+00:02:00.500 --> 00:02:02.940
+Like respond to other button
+clicks from the user.
+
+00:02:02.940 --> 00:02:04.490
+All while waiting to get called back.
+

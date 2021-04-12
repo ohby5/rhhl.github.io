@@ -1,0 +1,321 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.460 --> 00:00:03.220
+Baik, saya mengunduh ikon pemutar
+anak panah dari situs material design,
+
+00:00:03.220 --> 00:00:07.630
+dan menyertakan semua versi di
+folder drawable-nya masing-masing.
+
+00:00:07.630 --> 00:00:11.000
+Sekarang saya perlu mengubah tata letak
+agar mencakup panah-panah pemutar ini.
+
+00:00:11.000 --> 00:00:14.170
+Kita perlu membuat perubahan ini
+dalam tata letak item list kita.
+
+00:00:14.170 --> 00:00:16.620
+Jadi, ini akan menjadi perubahan tata letak
+yang cukup rumit,
+
+00:00:16.620 --> 00:00:20.780
+karena saat ini saya punya horizontal
+linear layout sebagai elemen root untuk
+
+00:00:20.780 --> 00:00:22.600
+tata letak item list saya.
+
+00:00:22.600 --> 00:00:26.380
+Jika saya harus menambahkan ikon pemutar
+sebagai child ketiga tata letak ini,
+
+00:00:26.380 --> 00:00:28.150
+maka latar belakang berwarna
+tidak akan ada.
+
+00:00:29.250 --> 00:00:31.795
+Agar panah pemutar melampaui
+warna latar belakang,
+
+00:00:31.795 --> 00:00:34.335
+saya mengganti tata letak menjadi relative layout.
+
+00:00:34.335 --> 00:00:37.425
+Untuk memahami hal ini, saya harus melakukan
+beberapa kali trial and error, dan
+
+00:00:37.425 --> 00:00:39.675
+awalnya atribut-atribut
+tidak benar.
+
+00:00:39.675 --> 00:00:43.445
+Ada juga beberapa cara di mana Anda
+mengimplementasikan tata letak yang sama
+
+00:00:43.445 --> 00:00:45.280
+dan inilah yang akan saya lakukan.
+
+00:00:45.280 --> 00:00:49.180
+Dalam kasus kita, saya membuat image view
+sebagai child pertama dalam relative layout.
+
+00:00:49.180 --> 00:00:53.030
+Karena view ditambahkan ke sisi kiri
+atas secara default, saya tidak perlu menambahkan
+
+00:00:53.030 --> 00:00:56.800
+atribut khusus apa pun terkait dengan
+pemosisian view ini.
+
+00:00:56.800 --> 00:01:01.470
+Lalu di sini ada dua vertical linear
+layout yang berisi dua text view.
+
+00:01:01.470 --> 00:01:03.460
+Jadi akan punya latar belakang
+berwarna sesuai
+
+00:01:03.460 --> 00:01:05.310
+tema kategori.
+
+00:01:05.310 --> 00:01:09.620
+Jadi, text view ini harus sejajar dengan
+tepi kanan atas dan dasar parent.
+
+00:01:10.740 --> 00:01:14.470
+Kita juga harus menentukan bahwa lokasinya
+di sisi kanan gambar.
+
+00:01:14.470 --> 00:01:17.140
+Jika tidak, akan
+melampaui gambar.
+
+00:01:17.140 --> 00:01:20.000
+Berikutnya, kita dapat menempatkan pemutar
+di bagian atas LinearLayout.
+
+00:01:20.000 --> 00:01:23.470
+Kita tambahkan ini sebagai image view
+di mana source
+
+00:01:23.470 --> 00:01:26.480
+mengarah ke image drawable yang
+kita tambahkan ke aplikasi.
+
+00:01:26.480 --> 00:01:27.900
+Dalam hal pemosisian,
+
+00:01:27.900 --> 00:01:32.268
+kita ingin ikon pemutar sejajar dengan
+tepi kanan relative layout.
+
+00:01:32.268 --> 00:01:35.110
+Kita juga ingin menengahkan
+di dalam parent, jadi
+
+00:01:35.110 --> 00:01:38.560
+kita tentukan center vertical
+sama dengan true.
+
+00:01:38.560 --> 00:01:40.560
+Menurut baris merah
+di kuis ini,
+
+00:01:40.560 --> 00:01:44.150
+kita ingin spasi 16 dips dari
+tepi kanan layar.
+
+00:01:44.150 --> 00:01:47.630
+Untuk itu, kita tambahkan margin kanan
+16 dips di ImageView.
+
+00:01:48.790 --> 00:01:51.750
+Jadi, saat Anda membuat perubahan dalam
+kode, seperti inilah tampilan XML
+
+00:01:51.750 --> 00:01:53.780
+untuk item-item tersebut.
+
+00:01:53.780 --> 00:01:57.680
+Jadi, kita punya RelativeLayut sebagai
+view root untuk tata letak dan
+
+00:01:57.680 --> 00:02:01.370
+ada ImageView disusul dengan
+vertical LinearLayout
+
+00:02:02.620 --> 00:02:04.910
+dengan dua textView di dalamnya.
+
+00:02:04.910 --> 00:02:07.070
+Untuk LinearLayout yang baru saja ditambahkan,
+
+00:02:07.070 --> 00:02:09.598
+kita perlu menambahkan beberapa parameter
+RelativeLayout baru ke sini.
+
+00:02:10.639 --> 00:02:14.300
+Maksud saya, saya membenahi
+tinggi item list
+
+00:02:14.300 --> 00:02:16.740
+menjadi dimensi tinggi item list.
+
+00:02:16.740 --> 00:02:20.190
+Jika tidak, warna latar belakang warna tidak
+merentang di seluruh item list
+
+00:02:20.190 --> 00:02:22.100
+walaupun saya menginginkannya.
+
+00:02:22.100 --> 00:02:25.350
+Saya melakukannya dengan tiga
+atribut align parent ini.
+
+00:02:25.350 --> 00:02:28.360
+Align parent bottom,
+align parent right, dan
+
+00:02:28.360 --> 00:02:31.220
+align parent top semua diatur ke true.
+
+00:02:31.220 --> 00:02:33.240
+Terakhir tapi tak kalah penting,
+adalah relative layout.
+
+00:02:33.240 --> 00:02:35.890
+Ada ImageView baru untuk
+panah pemutar.
+
+00:02:35.890 --> 00:02:38.690
+Jadi, dia punya tinggi dan
+lebar sama-sama 24 DPS.
+
+00:02:38.690 --> 00:02:40.872
+Ini juga sejajar dengan
+sisi kanan parent.
+
+00:02:40.872 --> 00:02:45.248
+Ini ditengahkan secara vertikal dan
+punya margin kanan 16 DPS.
+
+00:02:45.248 --> 00:02:49.335
+Setelah Anda selesai mengubah kode,
+jangan lupa memformat ulang XML
+
+00:02:49.335 --> 00:02:53.750
+tersebut untuk memastikan atribut
+mengikuti panduan sel kode Android.
+
+00:02:53.750 --> 00:02:55.240
+Begini cara melakukannya.
+
+00:02:55.240 --> 00:02:56.870
+Dari view project,
+
+00:02:56.870 --> 00:03:01.630
+sorot file yang diinginkan, pindah ke
+Code, lalu Reformat Code.
+
+00:03:03.120 --> 00:03:07.110
+Saat jendela sembulan ini bertanya, apakah
+Anda ingin memformat ulang file yang dipilih?
+
+00:03:07.110 --> 00:03:07.927
+Lanjutkan dan klik OK.
+
+00:03:07.927 --> 00:03:11.710
+Baik, sekarang kita harus
+menjalankan aplikasi ini di perangkat.
+
+00:03:11.710 --> 00:03:14.340
+Kita ketuk NumbersActivity dan
+lihat bagaimana tampilannya.
+
+00:03:14.340 --> 00:03:15.860
+Whoa, jauh lebih baik sekarang.
+
+00:03:15.860 --> 00:03:18.770
+Sekarang kita memerintahkan pemutar
+menampilkan semua item dalam list.
+
+00:03:18.770 --> 00:03:20.490
+Mari periksa ulang untuk
+semua kategori yang lain juga.
+
+00:03:20.490 --> 00:03:22.967
+Baik, panah pemutar
+ada di FamilyActivity.
+
+00:03:22.967 --> 00:03:27.650
+Kita punya panah pemutar di
+ColorsActivity dan juga
+
+00:03:27.650 --> 00:03:29.740
+di PhrasesActivity.
+
+00:03:30.840 --> 00:03:32.300
+Sekarang mari kembali dan
+
+00:03:32.300 --> 00:03:35.760
+menguji pemutaran audio untuk memastikan
+masih bekerja di tiap list.
+
+00:03:35.760 --> 00:03:38.287
+[AUDIO]
+
+00:03:38.287 --> 00:03:40.642
+[BLANK_AUDIO]
+
+00:03:40.642 --> 00:03:42.070
+[AUDIO]
+
+00:03:42.070 --> 00:03:44.102
+[BLANK_AUDIO]
+
+00:03:44.102 --> 00:03:45.379
+[AUDIO]
+
+00:03:45.379 --> 00:03:48.142
+[BLANK_AUDIO]
+
+00:03:48.142 --> 00:03:51.930
+Baik, terdengar bagus.
+
+00:03:51.930 --> 00:03:54.990
+Terakhir, kita perlu menguji bahwa
+tata letak ini tampak bagus saat kita memutar
+
+00:03:54.990 --> 00:03:58.550
+perangkat dan mengambil lebih banyak
+ruang horizontal di layar.
+
+00:03:58.550 --> 00:04:00.870
+Mari periksa ini untuk
+semua activity.
+
+00:04:00.870 --> 00:04:02.230
+Bagus, fantastis.
+
+00:04:02.230 --> 00:04:05.550
+Sekarang fitur pemutaran audio
+lebih mudah ditemukan, yang menimbulkan
+
+00:04:05.550 --> 00:04:07.720
+pengalaman pengguna yang lebih baik.
+
+00:04:07.720 --> 00:04:10.190
+Pengguna baru dapat memahami bahwa
+mengeklik item list
+
+00:04:10.190 --> 00:04:12.440
+akan memutar
+tiap kata.
+
+00:04:12.440 --> 00:04:12.940
+Kerja bagus.
+

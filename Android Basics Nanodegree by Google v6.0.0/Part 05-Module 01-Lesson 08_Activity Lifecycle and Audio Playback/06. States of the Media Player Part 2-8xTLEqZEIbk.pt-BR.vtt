@@ -1,0 +1,206 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.234
+Para transitar
+entre os estados,
+
+00:00:02.267 --> 00:00:06.334
+precisamos que um objeto MediaPlayer
+seja inicializado para um áudio.
+
+00:00:06.367 --> 00:00:10.167
+Aí, podemos chamar métodos nele
+para transitar entre os estados.
+
+00:00:10.200 --> 00:00:14.467
+Criamos um MediaPlayer
+chamando o método MediaPlayer.create.
+
+00:00:14.501 --> 00:00:19.400
+Veja que ele está usando um método Factory
+em vez de um construtor para criar o objeto.
+
+00:00:19.434 --> 00:00:24.801
+Se você se lembrar do curso passado,
+métodos factory também podem criar objetos.
+
+00:00:24.834 --> 00:00:28.567
+Por exemplo,
+para criar um objeto de mensagem toast,
+
+00:00:28.601 --> 00:00:32.167
+temos usado
+o método Factory Toast.makeText.
+
+00:00:32.200 --> 00:00:36.267
+Para deixar claro, quando você chama
+um método static, você chama a classe.
+
+00:00:36.300 --> 00:00:39.100
+E tem que ser o nome exato
+da classe Java.
+
+00:00:39.133 --> 00:00:42.534
+Quando você chama um método regular
+ou que não foi declarado como static,
+
+00:00:42.567 --> 00:00:45.367
+você pode chamar o método
+numa instância de objeto da classe.
+
+00:00:45.400 --> 00:00:49.501
+Então este nome pode mudar dependendo
+do nome da variável do seu objeto.
+
+00:00:49.534 --> 00:00:51.968
+Para mais detalhes sobre reprodução de mídia
+no Android,
+
+00:00:52.000 --> 00:00:55.801
+recomendo a palestra do Ian Lake
+"Media playback the right way",
+
+00:00:55.834 --> 00:00:58.467
+que ele deu
+na conferência Big Android BBQ.
+
+00:00:58.501 --> 00:01:00.767
+O link está logo abaixo.
+
+00:01:00.801 --> 00:01:04.067
+Na documentação de desenvolvedor
+para MediaPlayer,
+
+00:01:04.100 --> 00:01:07.934
+os métodos create são mostrados aqui
+na seção de método public.
+
+00:01:07.968 --> 00:01:11.367
+A escolha de usar um método factory
+no lugar do construtor
+
+00:01:11.400 --> 00:01:14.601
+para criar novos objetos foi feita
+pelo desenvolvedor original
+
+00:01:14.634 --> 00:01:16.868
+que escreveu
+este código MediaPlayer.
+
+00:01:16.901 --> 00:01:20.267
+Em vez de ter construtores diferentes
+na classe MediaPlayer,
+
+00:01:20.300 --> 00:01:23.133
+o desenvolvedor escolheu
+ter métodos create diferentes
+
+00:01:23.167 --> 00:01:28.434
+com um conjunto diferente de parâmetros
+que dependem se você quer o áudio no aplicativo
+
+00:01:28.467 --> 00:01:32.434
+ou transmitido por uma outra fonte de dados,
+como a internet.
+
+00:01:32.467 --> 00:01:35.000
+No nosso caso,
+usamos este construtor.
+
+00:01:35.033 --> 00:01:40.767
+Então create, Context context
+e res ID do tipo inteiro.
+
+00:01:40.801 --> 00:01:44.767
+Então chamamos este método create
+e atribuímos suas duas entradas.
+
+00:01:44.801 --> 00:01:49.200
+O context current e a ID de recurso
+para o arquivo que queremos tocar.
+
+00:01:49.234 --> 00:01:53.100
+E o valor de retorno deste método
+é um objeto MediaPlayer novo.
+
+00:01:53.133 --> 00:01:56.834
+Você deve ter notado
+que o método create é static.
+
+00:01:56.868 --> 00:02:01.734
+Assim como as variáveis static pertencem
+a uma classe e não a instâncias individuais,
+
+00:02:01.767 --> 00:02:05.200
+os métodos static estão ligados
+à classe em si.
+
+00:02:05.234 --> 00:02:08.200
+Uma vantagem legal
+é que podemos chamar os métodos
+
+00:02:08.234 --> 00:02:10.868
+sem nunca criar uma instância
+da classe.
+
+00:02:10.901 --> 00:02:14.968
+Se voltarmos ao guia da API do MediaPlayer,
+no código aqui,
+
+00:02:15.000 --> 00:02:17.100
+podemos chamar o método static
+assim.
+
+00:02:17.133 --> 00:02:20.133
+Podemos usar o nome exato
+da classe MediaPlayer
+
+00:02:20.167 --> 00:02:22.734
+sem usar o nome
+de uma variável de objeto.
+
+00:02:22.767 --> 00:02:25.968
+Podemos usar o mesmo operador ponto
+que usaríamos numa instância,
+
+00:02:26.000 --> 00:02:28.767
+e, do lado dele,
+o nome do método static.
+
+00:02:28.801 --> 00:02:33.868
+Atribuímos o context e a ID de recurso
+para o áudio que queremos tocar.
+
+00:02:33.901 --> 00:02:38.367
+O MediaPlayer precisa do context para acessar
+recursos compartilhados no dispositivo
+
+00:02:38.400 --> 00:02:40.801
+e para saber
+em que ambiente ele está sendo usado.
+
+00:02:40.834 --> 00:02:43.734
+Depois disso, podemos dizer
+para o MediaPlayer reproduzir
+
+00:02:43.767 --> 00:02:45.501
+chamando seu método start.
+
+00:02:45.534 --> 00:02:50.133
+Veja que este comentário indica
+que não é preciso chamar o método prepare,
+
+00:02:50.167 --> 00:02:53.968
+pois o método create
+já nos ajuda a preparar o áudio.
+
+00:02:54.000 --> 00:02:58.100
+Então podemos chamar o método create
+e, imediatamente, chamar o método start.
+
+00:02:58.133 --> 00:03:01.267
+Depois disso,
+podemos chamar outros métodos do MediaPlayer.
+

@@ -1,0 +1,83 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:04.867
+Até agora, aprendemos que
+a classe AudioManager, no framework do Android,
+
+00:00:04.900 --> 00:00:09.333
+nos permite solicitar foco de áudio
+quando precisamos tocar um áudio.
+
+00:00:09.367 --> 00:00:13.067
+Depois, ela nos permite abandonar
+o foco de áudio.
+
+00:00:13.100 --> 00:00:15.600
+Podemos registrar um listener
+para sermos notificados
+
+00:00:15.633 --> 00:00:18.000
+quando o estado
+do foco de áudio mudar.
+
+00:00:18.033 --> 00:00:23.100
+Ou seja, vamos precisar de uma instância
+de objeto AudioManager da nossa activity
+
+00:00:23.133 --> 00:00:25.433
+para manipularmos
+o foco de áudio.
+
+00:00:26.200 --> 00:00:31.567
+Se lermos este tutorial de foco de áudio,
+na seção chamada "Manipulando o Foco de Áudio",
+
+00:00:31.600 --> 00:00:36.667
+aqui diz que podemos usar
+esta linha de código: Context.getSystemService,
+
+00:00:36.700 --> 00:00:39.100
+com a entrada
+AUDIO_SERVICE,
+
+00:00:39.133 --> 00:00:42.333
+para obtermos uma instância
+da classe AudioManager,
+
+00:00:42.367 --> 00:00:43.567
+Nesta linha de código,
+
+00:00:43.600 --> 00:00:46.333
+vemos que o AudioManager
+é um serviço de sistema.
+
+00:00:46.367 --> 00:00:48.900
+É a 1ª vez
+que ouvimos falar disso.
+
+00:00:48.933 --> 00:00:52.867
+Há serviços de sistema que oferecem,
+a todos os aplicativos, funcionalidades comuns.
+
+00:00:52.900 --> 00:00:56.567
+Coisas como o serviço de notificação
+ou o do gerenciador de alarme.
+
+00:00:56.600 --> 00:01:00.733
+E há serviços que dão acesso
+a componentes do hardware do dispositivo,
+
+00:01:00.767 --> 00:01:03.267
+como o serviço
+do gerenciador de localização.
+
+00:01:03.300 --> 00:01:06.800
+No fim das contas,
+um serviço de sistema é só uma classe Java,
+
+00:01:06.833 --> 00:01:11.000
+e você pode interagir com ela
+chamando métodos numa instância de objeto.
+

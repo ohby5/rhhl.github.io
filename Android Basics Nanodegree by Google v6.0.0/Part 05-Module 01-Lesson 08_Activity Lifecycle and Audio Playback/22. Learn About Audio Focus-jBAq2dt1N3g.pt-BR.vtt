@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.000
+Os dois artigos que fornecemos
+têm a resposta,
+
+00:00:03.033 --> 00:00:05.300
+mas vamos analisar
+um deles.
+
+00:00:05.333 --> 00:00:07.300
+A publicação da Joanna.
+
+00:00:07.333 --> 00:00:11.133
+Na 1ª seção,
+ela explica o foco de áudio.
+
+00:00:11.167 --> 00:00:12.667
+Mais embaixo,
+
+00:00:12.700 --> 00:00:16.633
+ela diz que você pode solicitar o foco de áudio
+a partir da classe AudioManager.
+
+00:00:16.667 --> 00:00:20.300
+Ela forneceu um link para o método
+que podemos chamar para pedir o foco de áudio.
+
+00:00:20.333 --> 00:00:21.400
+Então vamos clicar.
+
+00:00:21.433 --> 00:00:25.767
+Aqui está o método requestAudioFocus
+na documentação Android.
+
+00:00:25.800 --> 00:00:27.733
+Agora vamos voltar
+à publicação.
+
+00:00:27.767 --> 00:00:29.800
+Na mesma frase,
+ela forneceu um link
+
+00:00:29.833 --> 00:00:33.200
+sobre como liberar o foco de áudio
+quando terminar de tocar o som.
+
+00:00:33.233 --> 00:00:38.233
+E ele nos leva ao método abandonAudioFocus
+dentro da classe AudioManager.
+
+00:00:38.267 --> 00:00:40.733
+Então respondemos às 1ªs duas perguntas
+até agora.
+
+00:00:40.767 --> 00:00:43.900
+Podemos solicitar o foco de áudio
+do sistema
+
+00:00:43.933 --> 00:00:48.533
+chamando o método requestAudioFocus()
+da classe AudioManager,
+
+00:00:48.567 --> 00:00:50.167
+e aí podemos tocar o áudio.
+
+00:00:50.200 --> 00:00:54.700
+Logo que terminarmos de tocar,
+podemos liberar o foco de áudio
+
+00:00:54.733 --> 00:00:59.133
+chamando o método abandonAudioFocus
+na classe AudioManager.
+
+00:00:59.167 --> 00:01:02.967
+Estes dois métodos têm parâmetros de entrada
+que você terá que atribuir,
+
+00:01:03.000 --> 00:01:05.100
+mas você pode checar isso
+na documentação
+
+00:01:05.133 --> 00:01:07.267
+quando precisarmos usá-los.
+
+00:01:07.300 --> 00:01:12.200
+Agora a 3ª pergunta: "Que método callback
+devemos implementar para sermos notificados
+
+00:01:12.233 --> 00:01:14.800
+quando o foco de áudio mudar?"
+
+00:01:14.833 --> 00:01:20.067
+Por exemplo, se o usuário receber uma ligação,
+precisamos ajudar a reprodução de acordo.
+
+00:01:20.100 --> 00:01:24.367
+Voltando à publicação, no mesmo parágrafo,
+ela explica que o sistema pode precisar tirar,
+
+00:01:24.400 --> 00:01:28.333
+temporária ou permanentemente,
+o foco de áudio do nosso aplicativo.
+
+00:01:28.367 --> 00:01:32.733
+Para isso, precisamos criar uma instância
+do OnAudioFocusChangeListener
+
+00:01:32.767 --> 00:01:35.967
+para prestar atenção nas mudanças
+para que possamos reagir a elas.
+
+00:01:36.000 --> 00:01:39.700
+Vamos para a interface
+OnAudioFocusChangeListener.
+
+00:01:39.733 --> 00:01:42.867
+O OnAudioFocusChangeListener
+é outra interface,
+
+00:01:42.900 --> 00:01:44.800
+como as outras interfaces
+que usamos.
+
+00:01:44.833 --> 00:01:49.533
+Como o OnClickListener
+e o OnCompletionListener do MediaPlayer.
+
+00:01:49.567 --> 00:01:53.333
+Ela contém um método abstract
+que teremos que implementar.
+
+00:01:53.367 --> 00:01:57.000
+Temos que fornecer um código
+para o que fazer quando o foco de áudio mudar.
+
+00:01:57.033 --> 00:02:02.200
+Por exemplo, se perdermos o foco de áudio,
+devemos parar de tocar a pronúncia da palavra.
+
+00:02:02.233 --> 00:02:06.267
+Podemos descobrir os detalhes
+de como manipular o foco de áudio mais tarde.
+
+00:02:06.300 --> 00:02:08.033
+Voltando
+para a 3ª pergunta.
+
+00:02:08.067 --> 00:02:10.767
+Para sermos notificados das mudanças
+no foco de áudio,
+
+00:02:10.800 --> 00:02:14.367
+precisamos criar
+um OnAudioFocusChangeListener.
+
+00:02:14.400 --> 00:02:19.100
+Aí, precisamos implementar
+o método callback onAudioFocusChange.
+

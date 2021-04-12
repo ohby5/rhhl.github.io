@@ -1,0 +1,237 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.240 --> 00:00:03.390
+Ingatlah bahwa activity yang Anda buat itu,
+akan bergerak melintasi tahap-tahap
+
+00:00:03.390 --> 00:00:08.050
+siklus hidup berupa dibuat,
+dimulai, lalu dilanjutkan.
+
+00:00:08.050 --> 00:00:10.150
+Lalu pengguna bisa berinteraksi
+dengan activity.
+
+00:00:11.180 --> 00:00:14.870
+Saat pengguna menjauh dari
+activity, activity akan memasuki status
+
+00:00:14.870 --> 00:00:16.178
+jeda dan kemudian berhenti.
+
+00:00:16.178 --> 00:00:19.370
+Jika sistem mematikan activity karena
+tidak dibutuhkan lagi,
+
+00:00:19.370 --> 00:00:21.480
+maka akan berpindah ke status mati.
+
+00:00:21.480 --> 00:00:24.430
+Karena metode onDestroy
+mungkin tidak dipanggil,
+
+00:00:24.430 --> 00:00:29.150
+kita hanya bisa yakin bahwa metode onPause
+dan onStop akan dipanggil.
+
+00:00:29.150 --> 00:00:31.080
+Mari kita lihat lagi dokumentasi
+
+00:00:31.080 --> 00:00:34.550
+untuk metode release di dalam
+kelas Media Player.
+
+00:00:34.550 --> 00:00:39.010
+Di sini dikatakan bahwa saat activity
+dijeda melalui metode onPause atau
+
+00:00:39.010 --> 00:00:41.980
+dihentikan melalui metode onStop,
+maka metode ini,
+
+00:00:41.980 --> 00:00:45.670
+yaitu metode release kita, dipanggil untuk
+melepaskan objek Media Player.
+
+00:00:45.670 --> 00:00:48.700
+Dalam hal ini, salah satu dari kedua
+metode siklus hidup sama-sama baik.
+
+00:00:48.700 --> 00:00:51.260
+Baik metode onPause maupun
+metode onStop.
+
+00:00:51.260 --> 00:00:53.700
+Karena Anda hanya perlu melepaskannya
+sekali saja.
+
+00:00:53.700 --> 00:00:57.320
+Kita akan memilih untuk melepaskan
+resources di metode onStop.
+
+00:00:57.320 --> 00:01:00.710
+Saat activity tersembunyi sepenuhnya dari
+pengguna, kita akan melepaskan resources
+
+00:01:00.710 --> 00:01:03.620
+media, bahkan jika belum selesai
+memutar file audio saat ini.
+
+00:01:03.620 --> 00:01:06.270
+Baik, mari kita lakukan perubahan kode
+tersebut di aplikasi kita sekarang.
+
+00:01:06.270 --> 00:01:10.090
+Di NumbersActivity ini, scroll kebawah sebelum
+metode releaseMediaPlayer.
+
+00:01:10.090 --> 00:01:14.360
+Saya akan mengesampingkan metode panggilan
+balik siklus hidup activity onStop.
+
+00:01:14.360 --> 00:01:17.840
+Ingat, tiap kali kita menimpa metode siklus
+hidup activity seperti ditunjukkan
+
+00:01:17.840 --> 00:01:20.850
+di sini, kita akan memanggil versi super
+kelas dari metode itu.
+
+00:01:20.850 --> 00:01:24.820
+Yang saya lakukan di sini dengan super.onStop
+karena activity tahu cara menangani
+
+00:01:24.820 --> 00:01:28.030
+penghentian activity dan melakukan hal lain
+di balik layar, yaitu penghapusan,
+
+00:01:28.030 --> 00:01:30.410
+yang tidak perlu kita khawatirkan
+sebagai pengembang.
+
+00:01:30.410 --> 00:01:33.180
+Jika Anda pernah mencoba memberi
+komentar dari baris kode ini,
+
+00:01:33.180 --> 00:01:36.110
+Anda akan melihat bahwa aplikasi
+akan tiba-tiba macet.
+
+00:01:36.110 --> 00:01:36.680
+Jangan lakukan itu.
+
+00:01:37.790 --> 00:01:40.470
+Daripada memanggil metode release
+calling the release method
+
+00:01:40.470 --> 00:01:42.070
+secara langsung di objek MediaPlayer,
+
+00:01:42.070 --> 00:01:46.910
+saya akan memanggil metode helper
+releaseMediaPlayer yang kita tambahkan tadi.
+
+00:01:46.910 --> 00:01:49.540
+Alasan kita menggunakan metode
+releaseMediaPlayer dan bukannya
+
+00:01:49.540 --> 00:01:50.730
+metode release adalah bahwa
+
+00:01:50.730 --> 00:01:54.070
+ini memiliki logika aktual untuk mengatur
+variabel MediaPlayer kembali
+
+00:01:54.070 --> 00:01:57.630
+ke null jika saat ini tidak
+dikonfigurasi untuk memutar suara.
+
+00:01:57.630 --> 00:02:01.370
+Dengan demikian, akan secara konsisten menangani
+pelepasan resources MediaPlayer dalam
+
+00:02:01.370 --> 00:02:05.150
+activity, baik dilepaskan dengan
+menyelesaikan file audio maupun
+
+00:02:05.150 --> 00:02:08.250
+karena activity dihentikan sekarang
+hanya untuk menguji aplikasi kita.
+
+00:02:10.370 --> 00:02:12.590
+Di versi baru aplikasi yang
+berjalan di perangkat saya,
+
+00:02:12.590 --> 00:02:16.170
+saat saya membuka activity kategori apa pun,
+misalnya angka,
+
+00:02:16.170 --> 00:02:18.495
+saya dapat memutar suara
+untuk tiap kata seperti biasa.
+
+00:02:18.495 --> 00:02:20.590
+&gt;&gt; [INAUDIBLE].
+
+00:02:20.590 --> 00:02:22.400
+&gt;&gt; Tapi jika saya memutar suara dan
+
+00:02:22.400 --> 00:02:25.340
+tiba-tiba meninggalkan aplikasi dengan menekan
+tombol Home di perangkat,
+
+00:02:25.340 --> 00:02:29.230
+suara harus berhenti tiba-tiba karena kode
+saya adalah metode onStop.
+
+00:02:29.230 --> 00:02:30.555
+Mari kita coba.
+
+00:02:30.555 --> 00:02:33.130
+&gt;&gt; [INAUDIBLE].
+
+00:02:33.130 --> 00:02:35.780
+&gt;&gt; Bagus, bekerja sesuai harapan
+karena, ingat, pelafalan tiap
+
+00:02:35.780 --> 00:02:38.570
+kata sebelumnya akan
+terus berjalan bahkan setelah saya meninggalkan
+
+00:02:38.570 --> 00:02:42.480
+activity dan sekarang berhenti
+saat saya meninggalkan activity.
+
+00:02:42.480 --> 00:02:44.600
+Bagus, logika bekerja
+sesuai harapan.
+
+00:02:44.600 --> 00:02:46.810
+Sekarang saya akan mengulanginya
+untuk semua activity yang lain.
+
+00:02:47.930 --> 00:02:52.660
+Di sini, metode onStop menimpa
+kode activity dan
+
+00:02:52.660 --> 00:02:53.420
+FamilyActivity,
+
+00:02:55.300 --> 00:02:56.780
+Dan terakhir di PhrasesActivity.
+
+00:02:57.860 --> 00:03:00.810
+Mari jalankan aplikasi sekali lagi untuk
+memastikan bahwa semua activity yang lain
+
+00:03:00.810 --> 00:03:01.911
+bekerja sesuai harapan.
+
+00:03:01.911 --> 00:03:06.299
+[BLANK_AUDIO]
+
+00:03:06.299 --> 00:03:16.299
+[AUDIO]
+

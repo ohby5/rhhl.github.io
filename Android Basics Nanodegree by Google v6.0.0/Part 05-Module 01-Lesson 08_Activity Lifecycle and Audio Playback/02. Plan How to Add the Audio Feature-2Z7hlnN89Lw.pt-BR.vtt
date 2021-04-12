@@ -1,0 +1,200 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.367
+Para a 1ª pergunta,
+tínhamos que bolar um plano.
+
+00:00:02.400 --> 00:00:05.734
+Acho que a adição de áudio será parecida
+com a adição de imagens ao aplicativo
+
+00:00:05.767 --> 00:00:09.534
+porque temos informações adicionais
+para cada palavra.
+
+00:00:09.567 --> 00:00:14.434
+Eu li as etapas que seguimos na lição 3
+e criei esta lista resumida de tarefas
+
+00:00:14.467 --> 00:00:17.868
+para a adição de imagens.
+Agora posso modificar estas tarefas.
+
+00:00:17.901 --> 00:00:23.067
+Em vez de imagens,
+as tarefas se aplicam para a adição de áudio.
+
+00:00:23.100 --> 00:00:27.467
+Elas são: modificar o layout dos itens de lista
+para incluir um botão "tocar";
+
+00:00:27.501 --> 00:00:30.801
+fazer com que um clique num item
+toque o arquivo de áudio;
+
+00:00:30.834 --> 00:00:33.133
+adicionar
+todos os arquivos de áudio;
+
+00:00:33.167 --> 00:00:36.868
+modificar a classe Word
+para armazenar uma ID de recurso de áudio;
+
+00:00:36.901 --> 00:00:39.801
+tocar o arquivo de áudio correto
+para cada palavra;
+
+00:00:39.834 --> 00:00:43.000
+e, por último,
+os retoques visuais legais.
+
+00:00:43.033 --> 00:00:46.234
+Vamos escrever isso como resposta
+para a 1ª pergunta.
+
+00:00:46.267 --> 00:00:49.167
+Beleza, temos um bom plano
+de etapas necessárias.
+
+00:00:49.200 --> 00:00:52.634
+Sempre surgirão mais etapas
+à medida que escrevemos o código
+
+00:00:52.667 --> 00:00:55.467
+e percebemos que há muito mais coisas
+a serem feitas.
+
+00:00:55.501 --> 00:00:57.667
+Esta lista
+pode acabar evoluindo.
+
+00:00:57.701 --> 00:01:01.968
+Vamos para a próxima pergunta:
+como tocar um arquivo de áudio no Android?
+
+00:01:02.000 --> 00:01:05.834
+Para descobrir, você pode perguntar
+para um desenvolvedor de Android
+
+00:01:05.868 --> 00:01:10.167
+ou pesquisar on-line
+por algo como "tocar áudio Android".
+
+00:01:11.167 --> 00:01:16.300
+Nosso 1º resultado parece bom
+porque é do site developer.android.com.
+
+00:01:16.334 --> 00:01:17.734
+Vamos clicar ali.
+
+00:01:17.767 --> 00:01:22.033
+Quando encontro um artigo ou tutorial,
+não leio todos os detalhes.
+
+00:01:22.067 --> 00:01:26.267
+Esta página pode parecer intimidadora
+por ter palavras que você talvez não conheça,
+
+00:01:26.300 --> 00:01:27.634
+mas não se preocupe.
+
+00:01:27.667 --> 00:01:31.834
+Só queremos ter uma ideia de alto nível
+sobre o que precisamos usar no Android.
+
+00:01:31.868 --> 00:01:34.033
+Vamos ler o 1º parágrafo.
+
+00:01:34.067 --> 00:01:39.634
+Ele diz que você pode tocar áudio
+ou vídeo usando a classe MediaPlayer.
+
+00:01:39.667 --> 00:01:43.033
+Se rolarmos um pouco para baixo,
+veremos esta seção dos básicos,
+
+00:01:43.067 --> 00:01:47.033
+que fala de duas classes no Android
+que você precisa usar.
+
+00:01:47.067 --> 00:01:52.667
+Precisamos de algo chamado MediaPlayer,
+o modo principal de tocar som no Android.
+
+00:01:52.701 --> 00:01:54.801
+Tem algo
+chamado AudioManager.
+
+00:01:54.834 --> 00:01:58.567
+Não sei o que isso faz,
+mas podemos descobrir mais tarde.
+
+00:01:58.601 --> 00:02:02.567
+Rolando mais a página,
+ela fala de declarações de manifesto.
+
+00:02:02.601 --> 00:02:06.067
+Por ora,
+esta é uma expressão confusa e desconhecida,
+
+00:02:06.100 --> 00:02:08.300
+então vamos pular
+esta parte.
+
+00:02:08.334 --> 00:02:12.133
+Embaixo,
+há uma seção chamada "Usando o MediaPlayer".
+
+00:02:12.167 --> 00:02:14.767
+Nela,
+há exemplos de trechos de código.
+
+00:02:15.534 --> 00:02:19.267
+Tudo isto parece útil,
+então podemos retornar mais tarde.
+
+00:02:19.300 --> 00:02:24.300
+Rolando o resto da página,
+há várias outras seções detalhadas.
+
+00:02:24.334 --> 00:02:28.767
+Umas coisas são fáceis de reconhecer,
+outras são mais desafiadoras,
+
+00:02:28.801 --> 00:02:30.067
+mas esse é o esperado.
+
+00:02:30.100 --> 00:02:32.634
+Por ora,
+não leremos o resto da página
+
+00:02:32.667 --> 00:02:35.234
+Há muita informação boa aqui,
+e podemos retornar
+
+00:02:35.267 --> 00:02:37.901
+quando precisarmos
+dos detalhes do código.
+
+00:02:37.934 --> 00:02:40.734
+Então pesquisamos e descobrimos que,
+no Android,
+
+00:02:40.767 --> 00:02:44.167
+podemos usar a classe MediaPlayer
+para tocar um arquivo de áudio.
+
+00:02:44.200 --> 00:02:48.067
+Não precisamos saber como ele funciona
+ou até mesmo como usá-lo,
+
+00:02:48.100 --> 00:02:50.367
+mas, pelo menos,
+sabemos que ele existe.
+
+00:02:50.400 --> 00:02:53.868
+Teremos um ótimo começo com este recurso.
+Mas vamos em frente.
+

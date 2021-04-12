@@ -1,0 +1,505 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.702 --> 00:00:04.510
+Saya akan menangani tugas pengodean
+ini dengan mengikuti empat langkah ini.
+
+00:00:04.510 --> 00:00:07.410
+Pertama-tama, kita perlu memperbarui
+kelas Word untuk menyimpan informasi
+
+00:00:07.410 --> 00:00:09.050
+audio untuk tiap kata.
+
+00:00:09.050 --> 00:00:12.990
+Setelah itu, kita perlu memperbarui cara
+membuat list kata.
+
+00:00:12.990 --> 00:00:15.850
+Lalu, kita perlu memperbarui
+onClickListener
+
+00:00:15.850 --> 00:00:19.280
+agar memutar file suara yang benar
+saat item diklik.
+
+00:00:19.280 --> 00:00:22.800
+Terakhir, untuk saat ini saya akan
+fokus pada NumbersActivity, tapi
+
+00:00:22.800 --> 00:00:25.520
+lalu kita akan mengulangi proses
+ini untuk kategori yang lain.
+
+00:00:26.830 --> 00:00:30.740
+Di dalam kelas Word ini, saya ingin
+mulai dengan menambahkan variabel integer
+
+00:00:30.740 --> 00:00:32.990
+yang bisa kita pakai untuk menyimpan
+audioResourceID.
+
+00:00:34.020 --> 00:00:36.370
+Ini hanya akan berupa resourceID
+yang kita rujuk,
+
+00:00:36.370 --> 00:00:38.550
+di mana file audio aktual
+dapat ditemukan.
+
+00:00:38.550 --> 00:00:42.375
+Perhatikan di sini, bahwa saya
+menamainya mAudioResourceID.
+
+00:00:42.375 --> 00:00:45.797
+Lalu, saya memodifikasi constructor Word
+untuk menerima input lain,
+
+00:00:45.797 --> 00:00:48.068
+untuk mengatur bidang audio.
+
+00:00:48.068 --> 00:00:50.880
+Saya akan menambahkannya di kedua
+constructor karena semua kata harus
+
+00:00:50.880 --> 00:00:53.690
+punya file audio, tak bergantung pada
+apakah punya gambar atau tidak.
+
+00:00:54.830 --> 00:00:58.070
+Lalu, saya akan mengatur variabel anggota
+mAudioResourceID
+
+00:00:58.070 --> 00:01:00.510
+agar sama dengan parameter audio
+yang kita masukkan.
+
+00:01:01.620 --> 00:01:03.780
+Tiap kali Anda
+memodifikasi constructor,
+
+00:01:03.780 --> 00:01:06.190
+ingatlah untuk memperbarui java.comment.
+
+00:01:06.190 --> 00:01:09.150
+Dengan begitu, pengembang lain yang
+memanggil constructor
+
+00:01:09.150 --> 00:01:11.090
+tahu input apa yang harus dimasukkan.
+
+00:01:11.090 --> 00:01:13.630
+Karena kita mendeklarasikan variabel
+audio sebagai private,
+
+00:01:13.630 --> 00:01:15.960
+kita harus membuat metode getter public.
+
+00:01:15.960 --> 00:01:19.070
+Sebagaimana kita membuat metode public
+untuk kelas lain untuk mengakses
+
+00:01:19.070 --> 00:01:22.180
+string Inggris dan Miwok, dan juga
+imageResourceId.
+
+00:01:22.180 --> 00:01:27.030
+Saya ingin membuat metode public ini,
+lalu mengembalikan integerResourceID dan
+
+00:01:27.030 --> 00:01:30.212
+saya akan menamai metode ini
+getAudioResourceId.
+
+00:01:30.212 --> 00:01:33.490
+Tidak ada persyaratan
+input dan
+
+00:01:33.490 --> 00:01:36.890
+metode ini hanya akan mengembalikan
+variabel audio private.
+
+00:01:36.890 --> 00:01:39.730
+Karena ini adalah metode public,
+saya akan menambahkan komentar ke
+
+00:01:39.730 --> 00:01:42.512
+metode untuk mengklarifikasi
+apa tujuannya.
+
+00:01:42.512 --> 00:01:45.530
+Baik, itu semua perubahan yang
+kita perlukan untuk membuat kelas Word.
+
+00:01:45.530 --> 00:01:48.910
+Sekarang kita punya variabel audio
+private baru dan ini dibuat
+
+00:01:48.910 --> 00:01:53.412
+melalui dua constructor, dan kita punya
+metode public untuk mengakses variabel itu.
+
+00:01:53.412 --> 00:01:55.460
+Baik, ini menyelesaikan
+langkah pertama kita, dan
+
+00:01:55.460 --> 00:01:57.650
+karena kita memodifikasi constructor
+kelas Word,
+
+00:01:57.650 --> 00:02:00.510
+kita perlu memodifikasi tempat
+di mana kita menggunakan constructor.
+
+00:02:00.510 --> 00:02:03.740
+Misalnya, di NumbersActivity,
+FamilyActivity, dan
+
+00:02:03.740 --> 00:02:05.130
+semua activity yang lain.
+
+00:02:05.130 --> 00:02:08.250
+Di sana kita perlu mengubah bagaimana
+cara objek Word dibuat.
+
+00:02:08.250 --> 00:02:12.180
+Di NumbersActivity, kita membuat
+ArrayList berisi kata-kata dan
+
+00:02:12.180 --> 00:02:14.710
+tiap kata dibuat
+dengan tiga argumen.
+
+00:02:14.710 --> 00:02:19.830
+Pertama, kata Inggris, kata
+Miwok, dan kemudian gambar.
+
+00:02:19.830 --> 00:02:22.530
+Kita perlu menambahkan argumen keempat
+yang akan berupa resource ID
+
+00:02:22.530 --> 00:02:25.020
+untuk file audio yang
+muncul bersama kata.
+
+00:02:25.020 --> 00:02:29.949
+Maka untuk number 1, saya
+akan tambahkan R.raw.number_1.
+
+00:02:29.949 --> 00:02:33.973
+Seperti Anda bisa lihat di sini, Android
+Studio cukup cerdas untuk menyarankan
+
+00:02:33.973 --> 00:02:36.813
+secara otomatis file yang telah ditambahkan
+ke folder Raw,
+
+00:02:36.813 --> 00:02:39.440
+jaga-jaga jika saya lupa resources
+diberi nama apa.
+
+00:02:39.440 --> 00:02:44.059
+Untuk number 2, saya akan
+tambahkan R.raw.number_2.
+
+00:02:45.400 --> 00:02:47.560
+Saya akan menyalin dan menempelkan
+serta melakukan modifikasi untuk
+
+00:02:47.560 --> 00:02:48.780
+nomor-nomor yang lain.
+
+00:02:49.980 --> 00:02:52.610
+Beginilah tampilan kode setelah
+semua kata memiliki
+
+00:02:52.610 --> 00:02:53.520
+audioResourceId.
+
+00:02:54.890 --> 00:02:58.370
+Sisa kode lain dalam NumbersActivity
+bisa terus menggunakan ArrayList
+
+00:02:58.370 --> 00:02:59.350
+kata-kata seperti sebelumnya.
+
+00:03:00.410 --> 00:03:02.780
+Saya ingin melakukan pembaruan untuk
+kategori lain sehingga
+
+00:03:02.780 --> 00:03:04.880
+menggunakan constructor yang benar.
+
+00:03:04.880 --> 00:03:08.850
+Saat saya membuka PhrasesActivity,
+saya lihat ada kesalahan yang muncul.
+
+00:03:08.850 --> 00:03:12.235
+Ini karena tidak ada constructor
+lagi yang valid jika
+
+00:03:12.235 --> 00:03:13.619
+hanya dua input saja.
+
+00:03:13.619 --> 00:03:16.490
+Mari kita lakukan perubahan untuk
+menghilangkan kesalahan ini.
+
+00:03:16.490 --> 00:03:19.140
+Seperti inilah list kata
+setelah tiap kata
+
+00:03:19.140 --> 00:03:21.450
+menggunakan tiga constructor
+input yang benar.
+
+00:03:22.570 --> 00:03:25.550
+Ingat, jika baris kode melebihi
+100 kolom,
+
+00:03:25.550 --> 00:03:29.995
+kita harus membungkus teks ke
+baris berikutnya, lalu diberi inden 8 spasi.
+
+00:03:29.995 --> 00:03:32.810
+Perhatikan juga bahwa
+ArrayList sekarang final.
+
+00:03:32.810 --> 00:03:36.000
+Saya ingin melakukan perubahan serupa
+untuk FamilyActivity dan ColorsActivity.
+
+00:03:37.070 --> 00:03:41.383
+Dan inilah kode yang selesai untuk
+FamilyActivity dan
+
+00:03:41.383 --> 00:03:42.732
+ColorsActivity.
+
+00:03:42.732 --> 00:03:45.098
+Baik, sekarang kelas Word
+telah diperbarui,
+
+00:03:45.098 --> 00:03:47.980
+dan juga tempat-tempat kita
+memanggil constructor kelas Word.
+
+00:03:47.980 --> 00:03:50.338
+Lalu, kita akan memperbarui
+onItemClickListener sehingga
+
+00:03:50.338 --> 00:03:52.758
+memutar file audio yang benar.
+
+00:03:52.758 --> 00:03:55.380
+Dalam NumbersActivity, saya
+akan memodifikasi kode untuk
+
+00:03:55.380 --> 00:03:57.260
+saat item list diklik.
+
+00:03:57.260 --> 00:04:01.580
+Sekarang, kita selalu memutar
+file MP3 number_one yang sama.
+
+00:04:01.580 --> 00:04:03.050
+Mari kita sisipkan kode di atasnya.
+
+00:04:03.050 --> 00:04:05.950
+Tapi pertama-tama kita perlu memikirkan
+kata mana yang akan diklik dan
+
+00:04:05.950 --> 00:04:08.130
+lalu disimpan dalam variabel itu.
+
+00:04:08.130 --> 00:04:11.190
+Dari parameter posisi metode
+onItemClick,
+
+00:04:11.190 --> 00:04:14.720
+saya bisa memeriksa ArrayList kata untuk
+mengambil kata yang diklik.
+
+00:04:14.720 --> 00:04:18.950
+Untuk itu, saya hanya
+akan memanggil words.get dan
+
+00:04:18.950 --> 00:04:21.060
+memasukkan variabel posisi.
+
+00:04:21.060 --> 00:04:24.378
+Metode ini akan mengembalikan
+satu variabel Word, lalu saya lanjut dan
+
+00:04:24.378 --> 00:04:26.750
+menyimpan variabel itu di
+sisi kiri ini.
+
+00:04:27.810 --> 00:04:31.470
+Jika muncul garis bengkok merah
+di sini yang menandai kesalahan, dan
+
+00:04:31.470 --> 00:04:35.570
+kesalahan mengatakan, misalnya, variabel
+Words diakses dari dalam dan
+
+00:04:35.570 --> 00:04:38.150
+kelas enter perlu dideklarasikan sebagai final.
+
+00:04:38.150 --> 00:04:41.930
+Ingat, ini berarti bahwa kita perlu
+mendeklarasikan ArrayList Words sebagai final,
+
+00:04:41.930 --> 00:04:44.650
+jadi periksa ulang apakah Anda telah
+mengaturnya sebagai final.
+
+00:04:44.650 --> 00:04:47.060
+Setelah saya tahu bahwa kata itu diklik,
+
+00:04:47.060 --> 00:04:51.660
+saya bisa mengambil audioResourceId darinya
+lalu memasukkannya ke dalam Mediaplayer.
+
+00:04:51.660 --> 00:04:56.550
+Artinya, saya bisa menghapus
+R.raw.numbers_one yang telah kita
+
+00:04:56.550 --> 00:05:01.190
+tulis kodenya di sini, dan hanya
+menggunakan word.getAudioResourceId.
+
+00:05:02.440 --> 00:05:03.930
+Selesai, dan seharusnya berfungsi.
+
+00:05:03.930 --> 00:05:07.438
+Setelah MediaPlayer dibuat, kita bisa
+mulai memutar file audio.
+
+00:05:07.438 --> 00:05:10.570
+Sekarang saya akan menambahkan
+komentar di sini juga,
+
+00:05:10.570 --> 00:05:11.640
+agar kita ingat apa yang terjadi.
+
+00:05:12.810 --> 00:05:14.730
+Ini menyelesaikan langkah ketiga.
+
+00:05:14.730 --> 00:05:17.110
+Langkah terakhir adalah
+memastikan bahwa ini berfungsi
+
+00:05:17.110 --> 00:05:19.540
+untuk semua kategori yang lain.
+
+00:05:19.540 --> 00:05:23.880
+Agar FamilyActivity berfungsi, saya
+menyalin variabel MediaPlayer
+
+00:05:23.880 --> 00:05:26.485
+dan juga kode untuk
+setOnItemClickListener.
+
+00:05:27.610 --> 00:05:29.260
+Ingat, saat Anda menyalin dan menempel,
+
+00:05:29.260 --> 00:05:35.000
+pastikan untuk mencakup tanda kurung
+kurawal penutup, tanda kurung tutup, dan titik dua.
+
+00:05:35.000 --> 00:05:37.370
+Saya juga membuat ArrayList
+kata-kata menjadi final,
+
+00:05:37.370 --> 00:05:40.780
+sehingga saya bisa merujuknya di dalam
+ClickListener item.
+
+00:05:40.780 --> 00:05:43.748
+MediaPlayer perlu merujuk
+context activity,
+
+00:05:43.748 --> 00:05:46.830
+jadi saya mengubahnya dari NumbersActivity
+ke FamilyActivity
+
+00:05:46.830 --> 00:05:50.320
+karena activity itulah tempat
+kita berada saat ini.
+
+00:05:50.320 --> 00:05:54.420
+Lalu saya mengulang proses yang sama
+untuk kelas Colors, dan sekali lagi untuk
+
+00:05:54.420 --> 00:05:56.240
+PhrasesActivity.
+
+00:05:56.240 --> 00:05:59.550
+Harapannya, setelah mengaturnya
+beberapa kali, Anda memahami
+
+00:05:59.550 --> 00:06:02.630
+cara mengatur itemClickListener dan
+juga menggunakan MediaPlayer.
+
+00:06:04.480 --> 00:06:07.986
+Sekarnag kita coba aplikasinya, dan kita seharusnya
+mendengar suara Andrea
+
+00:06:07.986 --> 00:06:08.744
+untuk semua kata.
+
+00:06:08.744 --> 00:06:10.147
+Mari kita mulai dengan Phrases.
+
+00:06:10.147 --> 00:06:13.979
+Bagus.
+
+00:06:13.979 --> 00:06:14.699
+Lalu masuk ke Colors.
+
+00:06:14.699 --> 00:06:19.018
+Terdengar bagus sejauh ini.
+
+00:06:19.018 --> 00:06:20.585
+Sekarang ke FamilyMembers.
+
+00:06:20.585 --> 00:06:23.311
+Dan terakhir,
+
+00:06:23.311 --> 00:06:24.277
+NumbersActivity.
+
+00:06:24.277 --> 00:06:28.700
+Sempurna.
+
+00:06:28.700 --> 00:06:29.800
+Saya ingin berhenti sejenak
+
+00:06:29.800 --> 00:06:32.790
+dan mengucapkan selamat kepada Anda
+untuk semua kerja keras yang dilakukan.
+
+00:06:32.790 --> 00:06:36.400
+Anda telah mencapai tonggak yang penting
+dengan memasukkan semua fitur ini
+
+00:06:36.400 --> 00:06:40.010
+ke dalam aplikasi ini, dan juga belajar
+begitu banyak keterampilan baru.
+
+00:06:40.010 --> 00:06:42.420
+Silakan istirahat sejenak
+dan merasa bangga sebentar.
+
+00:06:42.420 --> 00:06:45.040
+Lalu jangan lupa untuk memamerkan aplikasi Anda
+kepada teman-teman dan keluarga.
+
+00:06:45.040 --> 00:06:46.830
+Kami sangat bangga dengan Anda
+dan Anda layak menerimanya.
+

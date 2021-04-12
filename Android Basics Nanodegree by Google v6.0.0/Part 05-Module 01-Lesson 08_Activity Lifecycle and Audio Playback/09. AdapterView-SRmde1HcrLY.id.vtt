@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.340 --> 00:00:03.350
+Apakah kalian ingat pada pelajaran kedua kita
+belajar bahwa ListView
+
+00:00:03.350 --> 00:00:04.960
+adalah salah satu tipe dari AdapterView.
+
+00:00:04.960 --> 00:00:08.020
+Tipe lain dari AdapterView 
+adalah GridView.
+
+00:00:08.020 --> 00:00:10.740
+Jadi kita melihat pada
+dokumentasi ListView dan
+
+00:00:10.740 --> 00:00:14.190
+di dalamnya ada hirarki
+diagram dari ListView.
+
+00:00:14.190 --> 00:00:18.110
+Ingat bahwa diagram itu menunjukkan
+apa yang sebuah kelas wariskan dari kelas lain.
+
+00:00:18.110 --> 00:00:20.850
+Dan pada tiap level
+kode diperpanjang dan
+
+00:00:20.850 --> 00:00:22.770
+kode baru akan
+ditambahkan lewat subkelas.
+
+00:00:23.780 --> 00:00:26.410
+Sekarang dari diagram kita bisa
+memverifikasi apakah sebuah ListView
+
+00:00:26.410 --> 00:00:29.012
+merupakan subkelas dari kelas AdapterView.
+
+00:00:29.012 --> 00:00:31.180
+AdapterView punya field dan
+metode untuk
+
+00:00:31.180 --> 00:00:33.712
+view group yang anak-anaknya
+terkumpul dari adapter dan
+
+00:00:33.712 --> 00:00:38.650
+ListView bisa mewariskan keadaan dan
+metode dari kelas adapterview serta
+
+00:00:38.650 --> 00:00:43.300
+menambah kodenya sendiri
+untuk daftar kasus tertentu.
+
+00:00:43.300 --> 00:00:46.220
+Mari lihat lebih dekat pada
+set metode item click listener.
+
+00:00:47.870 --> 00:00:51.910
+Metode ini biasanya didefinisikan
+di kelas super AdapterView.
+
+00:00:51.910 --> 00:00:55.600
+Coba klik, dan
+perhatikan lebih seksama.
+
+00:00:55.600 --> 00:00:58.230
+Kita pindah ke halaman
+referensi AdapterView.
+
+00:00:58.230 --> 00:01:00.920
+Jadi untuk memperbaiki set
+OnItemClickListener
+
+00:01:00.920 --> 00:01:03.020
+adalah sebagaimana yang didefinisikan di kelas AdapterView.
+
+00:01:03.020 --> 00:01:06.580
+AdapterView mendefinisikan input
+dari metode ini menjadi sebuah obyek OnItemClickListener
+
+00:01:06.580 --> 00:01:09.860
+yang didefinisikan
+di dalam kelas AdapterView.
+
+00:01:09.860 --> 00:01:11.320
+Mari klik ke situ.
+
+00:01:11.320 --> 00:01:15.650
+Jadi, obyek OnItemClickListener ini
+terdefinisi di dalam kelas AdapterView dan
+
+00:01:15.650 --> 00:01:21.019
+sehingga hal itu dirujuk sebagai
+AdapterView.OnItemClickListener.
+

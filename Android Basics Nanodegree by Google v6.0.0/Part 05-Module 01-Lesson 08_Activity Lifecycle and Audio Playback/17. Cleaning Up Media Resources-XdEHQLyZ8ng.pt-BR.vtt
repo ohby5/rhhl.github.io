@@ -1,0 +1,366 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.733 --> 00:00:01.767
+Na lição 2,
+
+00:00:01.800 --> 00:00:05.367
+você aprendeu sobre a importância
+de gerir a memória oficialmente.
+
+00:00:05.400 --> 00:00:08.033
+Isso é crucial em portáteis,
+pois celulares e tablets
+
+00:00:08.067 --> 00:00:13.800
+têm recursos de memória muito mais limitados
+que um computador de mesa grande.
+
+00:00:13.833 --> 00:00:17.567
+Você verá que a eficiência de recursos
+é um fator significante
+
+00:00:17.600 --> 00:00:20.467
+ao influenciar o design
+do framework do Android.
+
+00:00:20.500 --> 00:00:23.367
+Por exemplo, vimos isso
+na reciclagem de Views,
+
+00:00:23.400 --> 00:00:27.200
+onde precisamos criar um jeito
+de mostrar dados de modo eficaz.
+
+00:00:27.233 --> 00:00:29.367
+Isso é só metade
+da história.
+
+00:00:29.400 --> 00:00:33.467
+Para o aplicativo executar bem,
+responder depressa à entrada do usuário
+
+00:00:33.500 --> 00:00:37.433
+e não consumir a bateria do usuário,
+desenvolvedores como você e eu
+
+00:00:37.467 --> 00:00:39.800
+precisam ter consciência
+a respeito da memória.
+
+00:00:39.833 --> 00:00:42.800
+Uma das coisas mais importantes
+a fazer
+
+00:00:42.833 --> 00:00:45.833
+é liberar os recursos
+quando não forem mais necessários,
+
+00:00:45.867 --> 00:00:48.833
+para que os outros aplicativos
+os usem também.
+
+00:00:48.867 --> 00:00:53.800
+O MediaPlayer é excelente
+para este tipo de comportamento.
+
+00:00:53.833 --> 00:00:57.800
+Vamos ver o que temos que fazer
+para tocar áudio.
+
+00:00:57.833 --> 00:01:01.600
+Primeiro, temos que obter uma instância
+da classe MediaPlayer.
+
+00:01:01.633 --> 00:01:04.033
+Sempre
+que você instancia um objeto,
+
+00:01:04.067 --> 00:01:06.867
+você usa parte da memória alocada
+no aplicativo.
+
+00:01:06.900 --> 00:01:09.400
+Aí você precisa
+atribuir um áudio,
+
+00:01:09.433 --> 00:01:12.467
+que deve consumir memória
+para ser reproduzido.
+
+00:01:12.500 --> 00:01:17.633
+Todas essas coisas consomem memória,
+o que também é chamado de "consumir recursos".
+
+00:01:17.667 --> 00:01:20.733
+A pergunta ou tarefa ideal
+torna-se duas.
+
+00:01:20.767 --> 00:01:25.500
+Um: como determinar quando não se precisa mais
+de recursos do MediaPlayer?
+
+00:01:25.533 --> 00:01:28.467
+E dois:
+como liberar esses recursos?
+
+00:01:29.233 --> 00:01:31.767
+Para determinar
+quando não são mais necessários,
+
+00:01:31.800 --> 00:01:36.033
+temos que nos lembrar
+dos estados do MediaPlayer.
+
+00:01:36.067 --> 00:01:38.400
+Quando criamos
+o MediaPlayer,
+
+00:01:38.433 --> 00:01:42.100
+usamos o método create,
+que o levou para o estado Prepared.
+
+00:01:42.133 --> 00:01:44.133
+Depois, ele passou
+para o estado Started.
+
+00:01:44.167 --> 00:01:45.367
+E depois para o Paused.
+
+00:01:45.400 --> 00:01:50.100
+Ele também pode ir para o estado Stopped
+ou PlaybackCompleted.
+
+00:01:50.133 --> 00:01:53.133
+Tem uma etapa final crucial aqui,
+o estado End.
+
+00:01:53.167 --> 00:01:57.033
+Quando o objeto MediaPlayer está no End,
+não pode mais ser usado.
+
+00:01:57.067 --> 00:01:59.833
+Então não podemos movê-lo mais
+para outro estado.
+
+00:01:59.867 --> 00:02:03.500
+Quando o MediaPlayer é destruído,
+a memória usada pelo reprodutor
+
+00:02:03.533 --> 00:02:06.500
+pode ser retomada pelo sistema
+para outras tarefas.
+
+00:02:06.533 --> 00:02:08.233
+De volta
+à pergunta original:
+
+00:02:08.267 --> 00:02:11.633
+como determinamos quando os recursos
+de memória não são mais necessários?
+
+00:02:11.667 --> 00:02:15.733
+Bem, nossos áudios são bem pequenos.
+Só têm 1 ou 2 segundos,
+
+00:02:15.767 --> 00:02:19.767
+ou seja,
+a reprodução terminará depressa.
+
+00:02:19.800 --> 00:02:23.600
+Depois que o áudio toca,
+não precisamos mais dos recursos.
+
+00:02:23.633 --> 00:02:26.133
+Não devemos nos agarrar
+aos recursos do MediaPlayer
+
+00:02:26.167 --> 00:02:29.300
+torcendo para o usuário clicar
+no mesmo item da lista.
+
+00:02:29.333 --> 00:02:33.233
+Devemos liberar os recursos imediatamente
+chamando o método release.
+
+00:02:33.267 --> 00:02:37.400
+Isso move o reprodutor para o estado End
+para o sistema retomar os recursos.
+
+00:02:37.433 --> 00:02:41.600
+A documentação, especificamente
+este parágrafo, destaca que,
+
+00:02:41.633 --> 00:02:44.833
+quando o objeto MediaPlayer
+não é mais usado,
+
+00:02:44.867 --> 00:02:49.933
+eu chamo o método release para que os recursos
+sejam liberados imediatamente.
+
+00:02:49.967 --> 00:02:54.933
+Isso faria com que as instâncias
+de objetos MediaPlayer futuras
+
+00:02:54.967 --> 00:02:58.833
+não executassem com muita eficiência
+e consumissem as baterias de que precisamos.
+
+00:02:58.867 --> 00:03:00.667
+Se quiser saber
+mais detalhes,
+
+00:03:00.700 --> 00:03:04.500
+recomendo que você leia a documentação
+sobre o método release.
+
+00:03:04.533 --> 00:03:06.533
+De volta
+ao diagrama de estados.
+
+00:03:06.567 --> 00:03:10.867
+No caso dos cliques do usuário,
+eles terão que criar um novo objeto MediaPlayer
+
+00:03:10.900 --> 00:03:16.600
+para o mesmo ou talvez outro áudio
+e passar por este ciclo de vida de novo.
+
+00:03:16.633 --> 00:03:22.100
+Neste exercício, complete as tarefas abaixo
+para limpar bem os recursos no aplicativo.
+
+00:03:22.133 --> 00:03:25.200
+Para esta 1ª etapa, em que temos
+que usar o trecho de código dado
+
+00:03:25.233 --> 00:03:29.167
+para liberar os recursos depois
+que o áudio terminar de tocar,
+
+00:03:29.200 --> 00:03:31.600
+o trecho de código é
+para um método auxiliar
+
+00:03:31.633 --> 00:03:34.000
+que chama
+o próprio método release.
+
+00:03:34.033 --> 00:03:36.100
+O trecho de código é assim.
+
+00:03:36.133 --> 00:03:38.900
+É chamado de método auxiliar
+porque realiza uma tarefa
+
+00:03:38.933 --> 00:03:41.200
+para ajudar outra parte
+do código.
+
+00:03:41.233 --> 00:03:45.733
+Você pode copiar e colar este método,
+que chamamos de releaseMediaPlayer,
+
+00:03:45.767 --> 00:03:49.967
+na NumbersActivity
+e nas outras activities.
+
+00:03:50.000 --> 00:03:54.400
+Este método checa
+se o MediaPlayer foi inicializado.
+
+00:03:54.433 --> 00:03:58.200
+Se a variável mMediaPlayer
+não for nula ou vazia,
+
+00:03:58.233 --> 00:04:00.733
+então temos
+um objeto MediaPlayer inválido
+
+00:04:00.767 --> 00:04:02.867
+e devemos
+chamar o release nele.
+
+00:04:03.600 --> 00:04:06.833
+Você verá que essa verificação é comum
+em Java.
+
+00:04:06.867 --> 00:04:11.467
+Se você tiver uma variável com um tipo
+de dado de objeto, como o MediaPlayer,
+
+00:04:11.500 --> 00:04:17.233
+e a variável padrão for nula, ou seja, vazia,
+nada será definido igual a ela.
+
+00:04:17.267 --> 00:04:18.967
+E, antes de chamar
+um método nela,
+
+00:04:19.000 --> 00:04:22.567
+você precisa ver
+se ela faz referência a um objeto válido.
+
+00:04:22.600 --> 00:04:24.967
+Caso contrário,
+aparecerá um erro Java.
+
+00:04:25.000 --> 00:04:26.667
+Quando chamarmos o release,
+
+00:04:26.700 --> 00:04:31.333
+poderemos definir a variável como nula,
+e usamos esse valor para indicar
+
+00:04:31.367 --> 00:04:34.700
+que o MediaPlayer não está configurado
+para tocar áudio.
+
+00:04:34.733 --> 00:04:36.833
+De volta às instruções.
+
+00:04:36.867 --> 00:04:40.267
+Você pode copiar e colar o método
+que mostramos no trecho do código
+
+00:04:40.300 --> 00:04:43.933
+nas 4 activities,
+e aí chamar o método
+
+00:04:43.967 --> 00:04:46.733
+quando o MediaPlayer terminar
+de tocar o arquivo.
+
+00:04:46.767 --> 00:04:49.533
+Você precisa usar o que aprendeu
+no exercício passado,
+
+00:04:49.567 --> 00:04:53.000
+que foi receber uma callback
+quando um arquivo terminar de tocar,
+
+00:04:53.033 --> 00:04:56.400
+para saber
+quando chamar o método releaseMediaPlayer.
+
+00:04:56.433 --> 00:04:59.800
+Por fim, quero que você chame
+o método auxiliar de novo
+
+00:04:59.833 --> 00:05:02.400
+para liberar os recursos
+do MediaPlayer
+
+00:05:02.433 --> 00:05:07.700
+antes de inicializar outro objeto MediaPlayer
+para tocar um áudio diferente.
+
+00:05:07.733 --> 00:05:11.933
+Fazendo isso, liberamos os recursos
+que o Android usou para tocar o áudio anterior
+
+00:05:11.967 --> 00:05:14.700
+antes de passar para o áudio novo.
+

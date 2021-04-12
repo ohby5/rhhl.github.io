@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.190 --> 00:00:02.270
+Agar dapat berpindah di antara
+status yang berbeda-beda,
+
+00:00:02.270 --> 00:00:06.360
+kita membutuhkan objek MediaPlayer yang
+dapat diinisialisasi untuk file audio tertentu.
+
+00:00:06.360 --> 00:00:10.190
+Lalu kita bisa memanggil metode di objek
+tersebut agar berpindah di antara status.
+
+00:00:10.190 --> 00:00:14.510
+Kita membuat objek MediaPlayer dengan
+memanggil metode MediaPlayer.create.
+
+00:00:14.510 --> 00:00:16.940
+Perhatikan bahwa ini
+menggunakan metode factory
+
+00:00:16.940 --> 00:00:19.420
+dan bukan constructor
+untuk membuat objek kita.
+
+00:00:19.420 --> 00:00:21.270
+Jika Anda ingat kursus terakhir,
+
+00:00:21.270 --> 00:00:24.830
+kita belajar tentang metode factory
+sebagai cara lain untuk membuat objek.
+
+00:00:24.830 --> 00:00:28.176
+Misalnya, untuk
+membuat objek toast message,
+
+00:00:28.176 --> 00:00:32.200
+kita telah menggunakan
+metode factory Toast.makeText.
+
+00:00:32.200 --> 00:00:36.310
+Sebagai klarifikasi, saat Anda memanggil
+metode statis, Anda memanggil kelas.
+
+00:00:36.310 --> 00:00:39.120
+Ingat, harus nama kelas
+Java sebelumnya.
+
+00:00:39.120 --> 00:00:42.570
+Saat Anda memanggil metode reguler atau
+yang tidak dideklarasikan sebagai statis,
+
+00:00:42.570 --> 00:00:45.390
+Anda memanggil metode pada
+contoh objek kelas tersebut.
+
+00:00:45.390 --> 00:00:49.540
+Nama ini dapat berubah bergantung pada
+nama variabel objek Anda.
+
+00:00:49.540 --> 00:00:52.010
+Untuk belajar lebih detail tentang
+pemutaran media di Android,
+
+00:00:52.010 --> 00:00:55.840
+saya sangat menganjurkan pembahasan oleh
+Ian Lake, berjudul "Media playback the right way"
+
+00:00:55.840 --> 00:00:58.000
+yang diungkapkannya di
+konferensi Big Android BBQ.
+
+00:00:58.000 --> 00:01:00.120
+Anda dapat menemukan tautannya di bawah.
+
+00:01:01.420 --> 00:01:02.920
+Dalam dokumentasi pengembang untuk
+
+00:01:02.920 --> 00:01:06.900
+MediaPlayer, metode create ditunjukkan
+di bagian metode public ini.
+
+00:01:07.960 --> 00:01:11.410
+Pilihan untuk menggunakan metode factory
+atau constructor untuk
+
+00:01:11.410 --> 00:01:14.650
+membuat objek baru diputuskan
+oleh pengembang asli
+
+00:01:14.650 --> 00:01:16.910
+yang menulis kode MediaPlayer ini.
+
+00:01:16.910 --> 00:01:20.780
+Daripada menuliskan constructor yang
+berbeda-beda di kelas MediaPlayer, pengembang
+
+00:01:20.780 --> 00:01:24.180
+memilih untuk menuliskan metode create
+yang berbeda yang dapat memiliki rangkaian
+
+00:01:24.180 --> 00:01:28.460
+parameter berbeda, bergantung pada apakah Anda
+ingin memutar file audio yang disertakan dalam
+
+00:01:28.460 --> 00:01:32.470
+atau menyetel audio itu dari sumber
+data lain seperti internet.
+
+00:01:32.470 --> 00:01:35.050
+Dalam kasus kita, kita memakai constructor ini.
+
+00:01:35.050 --> 00:01:40.300
+Create, dan memasukkan konteks
+context, dan res id bertipe integer.
+
+00:01:41.300 --> 00:01:44.800
+Kita panggil metode create ini, lalu
+memasukkan dua input ke dalamnya,
+
+00:01:44.800 --> 00:01:48.600
+Jadi, context saat ini dan resource id
+untuk file yang ingin kita putar,
+
+00:01:48.600 --> 00:01:53.130
+dan nilai kembali metode ini adalah
+objek media player yang benar-benar baru.
+
+00:01:53.130 --> 00:01:56.870
+Mungkin Anda memperhatikan bahwa
+metode create adalah metode statis.
+
+00:01:56.870 --> 00:02:01.760
+Sebagaimana variabel statis merupakan milik
+suatu kelas dan bukan contoh individual,
+
+00:02:01.760 --> 00:02:05.220
+metode statik merupakan metode yang
+terikat dengan kelas itu sendiri.
+
+00:02:05.220 --> 00:02:08.800
+Keunggulannya adalah bahwa
+kita dapat memanggil metode tanpa
+
+00:02:08.800 --> 00:02:10.910
+harus membuat contoh kelas tersebut.
+
+00:02:10.910 --> 00:02:15.110
+Jika kita kembali ke panduan API
+media player, dalam kode ini,
+
+00:02:15.110 --> 00:02:17.120
+kita bisa memanggil metode statis seperti ini.
+
+00:02:17.120 --> 00:02:20.410
+Kita bisa memakai nama sebenarnya
+dari kelas MediaPlayer dan
+
+00:02:20.410 --> 00:02:22.770
+tidak perlu menggunakan nama
+variabel objek.
+
+00:02:22.770 --> 00:02:26.170
+Kita dapat menggunakan operator dot yang
+sama yang kita pakai di contoh, dan
+
+00:02:26.170 --> 00:02:28.786
+menambahinya dengan nama
+metode statis.
+
+00:02:28.786 --> 00:02:31.501
+Kita masukkan context dan resource
+identifier untuk
+
+00:02:31.501 --> 00:02:33.888
+file suara yang ingin kita putar.
+
+00:02:33.888 --> 00:02:37.600
+MediaPlayer membutuhkan context agar
+dapat mengakses resources bersama di
+
+00:02:37.600 --> 00:02:40.820
+perangkat dan mengetahui lingkungan
+tempat resource itu digunakan.
+
+00:02:40.820 --> 00:02:44.178
+Setelah itu, kita bisa memerintahkan media
+player untuk mulai memutar dengan memanggil
+
+00:02:44.178 --> 00:02:45.550
+metode start-nya.
+
+00:02:45.550 --> 00:02:48.790
+Perhatikan bahwa komentar ini menekankan
+bahwa tidak perlu memanggil metode
+
+00:02:48.790 --> 00:02:51.430
+prepare secara eksplisit karena
+metode create
+
+00:02:51.430 --> 00:02:54.000
+telah membantu kita menyiapkan
+file audio untuk kita.
+
+00:02:54.000 --> 00:02:58.150
+Kita bisa memanggil metode create, lalu
+segera memanggil metode start.
+
+00:02:58.150 --> 00:03:00.877
+Setelah itu, kita bisa
+memanggil metode MediaPlayer lainnya.
+

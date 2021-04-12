@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.430 --> 00:00:04.540
+Setelah kita memiliki audio focus, kita perlu
+memikirkan tentang perubahan status focus.
+
+00:00:04.540 --> 00:00:09.030
+Di dalam dokumentasi ini, untuk
+AudioManager.OnAudioFocusChangeListener,
+
+00:00:09.030 --> 00:00:12.960
+dikatakan bahwa kita perlu mengimplementasikan
+metode onAudioFocusChange,
+
+00:00:12.960 --> 00:00:15.652
+di mana kita mengharapkan untuk diberi
+status audio focus baru.
+
+00:00:15.652 --> 00:00:18.880
+Di dalam deskripsi metode
+onAudioFocusChange, kita harus melihat
+
+00:00:18.880 --> 00:00:22.072
+bahwa ada empat kemungkinan status
+yang direpresentasikan oleh konstanta ini.
+
+00:00:22.072 --> 00:00:26.821
+AUDIOFOCUS_GAIN, AUDIOFOCUS_LOSS,
+AUDIOFOCUS_LOSS_TRANSIENT, dan
+
+00:00:26.821 --> 00:00:29.700
+AUDIOFOCUS_LOSS_TRANSITION_CAN_DUCK.
+
+00:00:29.700 --> 00:00:33.800
+Sebagai pengembang, kita harus memutuskan
+cara menangani tiap perubahan status ini,
+
+00:00:33.800 --> 00:00:36.350
+sesuai dengan tipe media yang kita
+putar di aplikasi kita, dan juga,
+
+00:00:36.350 --> 00:00:37.610
+apa yang diharapkan oleh pengguna.
+
+00:00:37.610 --> 00:00:40.500
+Kita luangkan waktu untuk mengeklik tiap
+status untuk tahu lebih dalam tentang tiap status.
+
+00:00:41.540 --> 00:00:44.690
+Di kuis ini,
+saya ingin Anda mengisi tabel ini.
+
+00:00:44.690 --> 00:00:48.990
+Deskripsikan dengan kata-kata Anda sendiri,
+apa arti dari tiap status audio focus.
+
+00:00:48.990 --> 00:00:51.765
+Lalu, tuliskan apa yang menurut Anda harus
+kita lakukan di aplikasi Miwok,
+
+00:00:51.765 --> 00:00:54.125
+saat kita menerima perubahan status ini.
+
+00:00:54.125 --> 00:00:57.310
+Saya ingin Anda memikirkan tipe audio
+apa yang kita putar, dan seperti apa
+
+00:00:57.310 --> 00:00:59.090
+pengalaman pengguna yang ideal.
+

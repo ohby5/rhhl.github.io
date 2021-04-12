@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.502
+Boa parte dos códigos
+que você escreveu foi síncrona,
+
+00:00:03.535 --> 00:00:08.168
+ou seja, cada linha é executada
+uma após a outra.
+
+00:00:08.202 --> 00:00:12.302
+Você deve esperar cada linha terminar
+antes de ir para a próxima.
+
+00:00:13.001 --> 00:00:16.769
+Mas, recentemente, aprendemos
+sobre callbacks assíncronas.
+
+00:00:16.802 --> 00:00:18.920
+Ou seja, dizemos ao sistema
+que estamos interessados
+
+00:00:18.921 --> 00:00:21.390
+em um certo evento,
+como um evento de clique,
+
+00:00:21.423 --> 00:00:24.559
+e dizemos a ele para nos avisar
+ou chamar de volta
+
+00:00:24.560 --> 00:00:26.628
+quando o evento ocorrer.
+
+00:00:26.669 --> 00:00:29.635
+Enquanto isso,
+poderemos fazer outra coisa no app,
+
+00:00:29.669 --> 00:00:34.836
+ou seja, não vamos ficar parados
+esperando um usuário clicar num botão.
+
+00:00:34.868 --> 00:00:37.702
+Quando o evento ocorrer,
+ou se ele ocorrer,
+
+00:00:37.736 --> 00:00:42.635
+o sistema nos chamará de volta,
+e poderemos executar as instruções dadas.
+
+00:00:42.669 --> 00:00:47.702
+Então a callback onClickListener e
+a callback onItemClickListener da ListView
+
+00:00:47.736 --> 00:00:50.736
+foram exemplos
+de callbacks assíncronas.
+
+00:00:50.769 --> 00:00:54.935
+Por exemplo, só queremos
+tocar o áudio para cada palavra
+
+00:00:54.968 --> 00:01:00.369
+quando o sistema nos chamar de volta
+e disser que certo item foi clicado.
+
+00:01:00.402 --> 00:01:03.901
+Ou seja, enquanto esperamos,
+podemos fazer outras coisas,
+
+00:01:03.935 --> 00:01:08.202
+como rolar a lista ou esperar
+por outros eventos de entrada do usuário.
+
+00:01:08.235 --> 00:01:11.001
+Fazer algo enquanto esperamos
+por um evento
+
+00:01:11.035 --> 00:01:15.235
+e depois voltar à ativa é chamado
+de callback assíncrona.
+
+00:01:15.268 --> 00:01:18.736
+Às vezes, podem chamá-las
+de "callbacks async".
+
+00:01:18.769 --> 00:01:22.569
+A-S-Y-N-C, callback async.
+
+00:01:23.435 --> 00:01:26.135
+Durante o aprendizado
+sobre o desenvolvimento Android,
+
+00:01:26.168 --> 00:01:29.135
+você verá que callbacks async
+são um padrão comum no Android
+
+00:01:29.168 --> 00:01:32.402
+para definir listeners
+para eventos no dispositivo.
+
+00:01:32.435 --> 00:01:36.535
+Assim, por exemplo, há listeners
+para quando a localização do usuário muda.
+
+00:01:36.569 --> 00:01:39.602
+Para o app se comportar
+como esperado,
+
+00:01:39.635 --> 00:01:42.371
+você terá que enganchar
+nas callbacks async
+
+00:01:42.372 --> 00:01:45.707
+e cuidar dos casos
+de modo adequado.
+
+00:01:45.736 --> 00:01:48.965
+Vamos aprender mais
+sobre outra callback.
+
+00:01:49.602 --> 00:01:52.202
+A API do MediaPlayer
+oferece várias callbacks
+
+00:01:52.235 --> 00:01:53.915
+para que os desenvolvedores
+sejam avisados
+
+00:01:53.916 --> 00:01:55.817
+quando certos eventos
+ocorrerem.
+
+00:01:55.836 --> 00:01:59.068
+Especificamente, há uma callback
+que diz se o áudio
+
+00:01:59.102 --> 00:02:02.102
+ou o arquivo de mídia terminou
+de reproduzir.
+
+00:02:02.135 --> 00:02:05.102
+Você pode pesquisar on-line
+que método callback é esse?
+
+00:02:05.135 --> 00:02:08.202
+Escreva a resposta neste quadrado
+quando encontrar.
+
+00:02:08.235 --> 00:02:11.102
+Quando achar a resposta,
+use a informação
+
+00:02:11.135 --> 00:02:14.102
+para modificar o aplicativo reprodutor
+de exemplo.
+
+00:02:14.135 --> 00:02:16.905
+Mude-o para que,
+quando uma música terminar,
+
+00:02:16.906 --> 00:02:19.975
+uma mensagem toast apareça
+dizendo: "Acabei!"
+
+00:02:20.001 --> 00:02:22.535
+Esta etapa
+pode ser complicada,
+
+00:02:22.569 --> 00:02:26.199
+então veja as dicas
+que estão abaixo do quiz.
+

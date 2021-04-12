@@ -1,0 +1,188 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.370 --> 00:00:03.170
+Endi dasturimizda audio 
+fokusni boshqarish juda 
+
+00:00:03.170 --> 00:00:04.750
+muhim kod o‘zgarishiga olib keladi.
+
+00:00:04.750 --> 00:00:08.010
+Shunday qilib, mustaqil ishlashni 
+boshlashingizdan oldin, keling, "Audio Manager API" ni 
+
+00:00:08.010 --> 00:00:10.570
+ishlatishda qanday muhim qarorlarni qabul qilishingizga 
+to‘g‘ri kelishini ko‘rib chiqaylik.
+
+00:00:11.680 --> 00:00:15.480
+Shuni esda tutingki, API shunchaki dasturchi sifatida 
+foydalanishingiz mumkin bo‘lgan "Android" 
+
+00:00:15.480 --> 00:00:19.120
+platformasi tomonidan taklif etiladigan 
+sinflar va usullardan iboratligini anglatadi.
+
+00:00:19.120 --> 00:00:23.070
+Endi "AudioManager" dan audio fokusni 
+so‘rash bilan boshlaylik.
+
+00:00:23.070 --> 00:00:25.830
+Ilovada audio ijro 
+etishni boshlash uchun.
+
+00:00:25.830 --> 00:00:30.840
+So‘nggi so‘rovda biz "requestAudioFocus" metodini 
+chaqirishimiz kerakligini aniqladik va 
+
+00:00:30.840 --> 00:00:36.049
+unga uchta kirish qiymatlari 
+"onAudioFocusChangeListener" 
+
+00:00:36.049 --> 00:00:38.410
+ob’ekti, "streamType" va 
+"durationHint" kerak bo‘ladi.
+
+00:00:39.690 --> 00:00:42.443
+Shunday qilib, bu yyerda oxirgi ikkita 
+kirish qiymati, ya’ni "streamType" 
+
+00:00:42.443 --> 00:00:44.303
+va "durationHint" butun sonlardan iboratdir.
+
+00:00:44.303 --> 00:00:48.300
+Endi ushbu metodni "requestAudioFocus" deb nomlaganimizda,
+ikkinchi parametrimiz bo‘lgan va 
+
+00:00:48.300 --> 00:00:51.550
+oqim turiga kiradigan oqim turi sifatida 
+nimaga o‘tishimiz kerak.
+
+00:00:51.550 --> 00:00:54.560
+va bu o‘ynayotgan audio
+turiga murojaat etmoqdami?
+
+00:00:54.560 --> 00:00:56.540
+Xo‘sh, bu qo‘shiqmi yoki ohangmi?
+
+00:00:57.610 --> 00:01:01.130
+Ikkinchi savolga kelsak,
+"durationHint" kirish qiymatini yuboramizmi? 
+
+00:01:01.130 --> 00:01:02.550
+Shunday qilib, uchinchi parametr.
+
+00:01:02.550 --> 00:01:05.780
+Va bu audio fokusimizga qancha 
+vaqt kerakligini anglatadi.
+
+00:01:05.780 --> 00:01:09.350
+Shunday qilib, qisqa muddat yoki 
+uzoq vaqt kerakmi?
+
+00:01:09.350 --> 00:01:13.050
+Ikkala javob tanlovi ham butun sonlar,
+
+00:01:13.050 --> 00:01:16.990
+aniqrog‘i, "AudioManager" sinfida allaqachon 
+
+00:01:16.990 --> 00:01:19.280
+aniqlangan butun sonlar bo‘lishi kerak.
+
+00:01:19.280 --> 00:01:23.110
+"AudioManager" sinfi uchun ma’lumotnoma hujjatlarida,
+ushbu umumiy doimiy qismga 
+
+00:01:23.110 --> 00:01:27.100
+o’tamiz va bir oz pastga tushamiz.
+
+00:01:27.100 --> 00:01:29.030
+Bular barcha oqim turlari hisoblanadi, 
+
+00:01:29.030 --> 00:01:31.280
+ya’ni "requestAudioFocus" usuliga o‘tish uchun.
+
+00:01:31.280 --> 00:01:34.686
+Ularga "audiomanager.stream" yoki 
+"audiomanager.stream.DTMF" 
+
+00:01:34.686 --> 00:01:38.650
+va hokazo deb nomlashingiz mumkin va 
+har bir oqim turi 
+
+00:01:38.650 --> 00:01:42.730
+uchun tavsiflar o‘ng ustunda.
+
+00:01:44.070 --> 00:01:48.400
+Shunday qilib, batafsil ma’lumot
+olish uchun doimiy ravishda oqimga kiring. 
+
+00:01:48.400 --> 00:01:51.680
+Endi esda tutingki, doimiy - 
+bu o‘zgarmas qiymat va hech qachon o‘zgarmaydi
+
+00:01:51.680 --> 00:01:55.090
+va konvensiya yordamida barcha katta 
+harflarda o‘zgaruvchini nomlaymiz.
+
+00:01:55.090 --> 00:01:57.620
+U ko‘pincha ma’lum bir davlat bilan 
+aloqa qilish uchun ishlatiladi.
+
+00:01:57.620 --> 00:02:00.830
+Bu holda oqim faqat to‘rtta qiymatga 
+
+00:02:00.830 --> 00:02:02.490
+ega va bu hech qachon o‘zgarmaydi.
+
+00:02:02.490 --> 00:02:05.420
+Doimiy qiymatni "AudioManager" ga o‘tkazganimizda, 
+"Android" platformasi ushbu aniq oqim turini 
+
+00:02:05.420 --> 00:02:07.690
+nazarda tutayotganimizni biladi.
+
+00:02:07.690 --> 00:02:10.610
+Shu bilan oqim turlarimiz bilan 
+bog‘liq masalalar hal bo‘ldi. 
+
+00:02:10.610 --> 00:02:12.100
+"durationHint" ob’ektichi?
+
+00:02:12.100 --> 00:02:15.110
+Keling, "AudioFocus" . usulini so‘rash 
+uchun bu yerga o‘tamiz va usul 
+
+00:02:15.110 --> 00:02:17.295
+tavsifida "DurationHint" uchun 
+turli xil tegishli variantlar 
+
+00:02:17.295 --> 00:02:20.140
+ko‘rsatilganini ko‘ramiz.
+
+00:02:20.140 --> 00:02:22.764
+Shunday qilib, bizda "audioFocus_Gain_Transient" , "audioFocus_Gain_Transient_May_Duck" kabi turli 
+
+00:02:22.764 --> 00:02:25.030
+xil elementlar bor, keyin yana ikkitasi 
+va ikkalasi ham qaysi birini 
+
+00:02:25.030 --> 00:02:28.370
+tanlashni tanlashga yordam 
+
+00:02:28.370 --> 00:02:31.590
+beradigan tushuntirishlar mavjud.
+
+00:02:31.590 --> 00:02:32.970
+Agar ushbu ikkita savolga javob berishda 
+yordamga muhtoj bo‘lsangiz, 
+
+00:02:32.970 --> 00:02:35.850
+darsliklarni onlayn qidirib toping.
+
+00:02:35.850 --> 00:02:38.750
+Va javoblaringizni bu yerda to‘ldirib,
+keyin davom o‘rganishda davom eting.
+

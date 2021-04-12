@@ -1,0 +1,85 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.500 --> 00:00:03.410
+Sejauh ini kita telah mengetahui bahwa
+kelas AudioManager
+
+00:00:03.410 --> 00:00:06.880
+dalam framework Android mengizinkan
+kita untuk meminta audio focus
+
+00:00:06.880 --> 00:00:07.840
+saat kita perlu memutar audio.
+
+00:00:09.360 --> 00:00:13.100
+Android juga mengizinkan kita untuk
+membatalkan audio focus setelahnya.
+
+00:00:13.100 --> 00:00:15.640
+Kita juga bisa menlistkan
+listener agar diberi tahu
+
+00:00:15.640 --> 00:00:18.040
+saat status audio focus berubah.
+
+00:00:18.040 --> 00:00:21.120
+Ini berarti bahwa kita akan
+membutuhkan contoh objek
+
+00:00:21.120 --> 00:00:24.910
+AudioManager di activity kita sehingga
+kita bisa mengelola audio focus.
+
+00:00:26.200 --> 00:00:29.720
+Jika kita melihat tutorial audio focus
+ini, di bagian berjudul
+
+00:00:29.720 --> 00:00:33.365
+Managing Audio Focus, dikatakan bahwa
+kita bisa menggunakan baris kode ini,
+
+00:00:33.365 --> 00:00:39.120
+Context.getSystemService dengan
+input AUDIO_SERVICE
+
+00:00:39.120 --> 00:00:42.360
+untuk mengambil contoh
+kelas AudioManager.
+
+00:00:42.360 --> 00:00:46.360
+Dari baris kode ini, kita melihat bahwa
+AudioManager merupakan system service.
+
+00:00:46.360 --> 00:00:48.940
+Ini kali pertama kita mendengar tentang
+system service.
+
+00:00:48.940 --> 00:00:51.800
+Jadi, ada system services
+yang memberi semua aplikasi
+
+00:00:51.800 --> 00:00:52.890
+fungsionalitas bersama.
+
+00:00:52.890 --> 00:00:56.600
+Hal-hal seperti layanan notifikasi,
+atau layanan pengelola alarm.
+
+00:00:56.600 --> 00:00:59.320
+Dan ada beberapa layanan yang
+mengizinkan kita mengakses
+
+00:00:59.320 --> 00:01:03.300
+komponen peranti keras di perangkat
+seperti layanan pengelola lokasi.
+
+00:01:03.300 --> 00:01:07.180
+Tapi, pada akhirnya, system service
+hanyalah kelas Java dan Anda bisa
+
+00:01:07.180 --> 00:01:10.540
+berinteraksi dengannya dengan memiliki contoh
+objek dan memanggil metode-metode di dalamnya.
+

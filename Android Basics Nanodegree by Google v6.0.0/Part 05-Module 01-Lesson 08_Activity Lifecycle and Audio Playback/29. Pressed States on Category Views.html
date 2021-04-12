@@ -1,0 +1,336 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pressed States on Category Views</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Activity Lifecycle and Audio Playback</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Lesson 4 Course Map.html">01. Lesson 4 Course Map</a>
+    </li>
+    <li class="">
+      <a href="02. Plan How to Add the Audio Feature.html">02. Plan How to Add the Audio Feature</a>
+    </li>
+    <li class="">
+      <a href="03. Music Player App.html">03. Music Player App</a>
+    </li>
+    <li class="">
+      <a href="04. MediaPlayer Class.html">04. MediaPlayer Class</a>
+    </li>
+    <li class="">
+      <a href="05. States of the Media Player Part 1.html">05. States of the Media Player Part 1</a>
+    </li>
+    <li class="">
+      <a href="06. States of the Media Player Part 2.html">06. States of the Media Player Part 2</a>
+    </li>
+    <li class="">
+      <a href="07. Challenge Complete the Audio Feature.html">07. Challenge: Complete the Audio Feature</a>
+    </li>
+    <li class="">
+      <a href="08. Handling Touch Events On A ListView.html">08. Handling Touch Events On A ListView</a>
+    </li>
+    <li class="">
+      <a href="09. AdapterView.html">09. AdapterView</a>
+    </li>
+    <li class="">
+      <a href="10. Play One Audio File.html">10. Play One Audio File</a>
+    </li>
+    <li class="">
+      <a href="11. Add Remaining MP3 Files.html">11. Add Remaining MP3 Files</a>
+    </li>
+    <li class="">
+      <a href="12. Which Audio File to Play.html">12. Which Audio File to Play</a>
+    </li>
+    <li class="">
+      <a href="13. Play Correct Audio File Per Word.html">13. Play Correct Audio File Per Word</a>
+    </li>
+    <li class="">
+      <a href="14. Andrea Interview.html">14. Andrea Interview</a>
+    </li>
+    <li class="">
+      <a href="15. The toString() Method (Optional).html">15. The toString() Method (Optional)</a>
+    </li>
+    <li class="">
+      <a href="16. Async Callbacks in Android.html">16. Async Callbacks in Android</a>
+    </li>
+    <li class="">
+      <a href="17. Cleaning Up Media Resources.html">17. Cleaning Up Media Resources</a>
+    </li>
+    <li class="">
+      <a href="18. Understanding The Activity Lifecycle.html">18. Understanding The Activity Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="19. Understanding The Activity Callbacks.html">19. Understanding The Activity Callbacks</a>
+    </li>
+    <li class="">
+      <a href="20. Sample App With Lifecycle Callbacks.html">20. Sample App With Lifecycle Callbacks</a>
+    </li>
+    <li class="">
+      <a href="21. MediaPlayer And Activity Lifecycle.html">21. MediaPlayer And Activity Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="22. Learn About Audio Focus.html">22. Learn About Audio Focus</a>
+    </li>
+    <li class="">
+      <a href="23. AudioManager Service.html">23. AudioManager Service</a>
+    </li>
+    <li class="">
+      <a href="24. Request Audio Focus.html">24. Request Audio Focus</a>
+    </li>
+    <li class="">
+      <a href="25. Audio Focus States.html">25. Audio Focus States</a>
+    </li>
+    <li class="">
+      <a href="26. Manage Audio Focus in the App.html">26. Manage Audio Focus in the App</a>
+    </li>
+    <li class="">
+      <a href="27. Add Audio Icon to List Item Layout.html">27. Add Audio Icon to List Item Layout</a>
+    </li>
+    <li class="">
+      <a href="28. Quiz Touch Feedback for Clickable Views.html">28. Quiz: Touch Feedback for Clickable Views</a>
+    </li>
+    <li class="">
+      <a href="29. Pressed States on Category Views.html">29. Pressed States on Category Views</a>
+    </li>
+    <li class="">
+      <a href="30. Pressed States on List Item Views.html">30. Pressed States on List Item Views</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">29. Pressed States on Category Views</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Pressed States on Category Views</p></h3>
+  <div>
+  <p>Touch feedback provides the user with instantaneous visual confirmation at the point of contact where they interacted with the UI elements on the screen. It is vital that the apps you develop on Android have touch feedback. They can make your app appear fast and responsive, even if nothing else happens yet.</p>
+<p>Ever since Material Design was introduced in Lollipop, there is a circular ripple animation that happens when you interact with a UI elements. </p>
+<p><img src="media/unnamed-4766-0.gif" alt="Screenshot showing circular ripple."></p>
+<p>On older versions of Android, there is a static colored pressed state.</p>
+<p><img src="media/unnamed-4766-1.gif" alt="Sunshine app screenshot showing static colored pressed state."></p>
+<p>In the last course, when we made the Just Java app, we used the standard Buttons from the Android framework. These buttons come up with standard feedback when you touch them.</p>
+<p><img src="media/unnamed-4766-2.gif" alt="Just Java app screenshot."></p>
+<p>In the Miwok app, we are creating our own clickable views - the category views in the MainActivity, and the list items in the category activities. We have to handle pressed states on our own.</p>
+<p><img src="media/unnamed-4766-3.gif" alt="Miwok App screenshots for each activity."></p>
+<p>By setting a view to have a background of <code>?android:attr/selectableItemBackground</code>, the View will have a transparent background by default. When you touch or press the view, it will show the pressed state (which is the circular ripple animation). This behavior is the default touch feedback behavior defined in the Android framework.</p>
+<h2 id="modify-the-miwok-app">Modify the Miwok app</h2>
+<p>In the last exercise, you modified the numbers category TextView to have the selectable item background. However, we lost the colored background.</p>
+<p><strong>1)</strong> In this coding task, replace the contents of the activity_main.xml with the below XML. Code is also provided in this <a href="https://gist.github.com/udacityandroid/e11b81e3bdcff1c073c6e24a4fdb3365" target="_blank">gist</a>. Each TextView is wrapped in a FrameLayout with a themed background, and then set the background of the TextView to be a <code>?android:attr/selectableItemBackground</code>. </p>
+<p>This way, we can keep the colored background per category view, as well as have touch feedback. And by the way, a <a href="http://developer.android.com/reference/android/widget/FrameLayout.html" target="_blank">FrameLayout</a> is simply a ViewGroup that typically contains 1 child view.</p>
+<p><strong>In activity_main.xml file</strong></p>
+<pre><code> &lt;?xml version="1.0" encoding="utf-8"?&gt;
+ &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/tan_background"
+  android:orientation="vertical"
+  tools:context="com.example.android.miwok.MainActivity"&gt;
+
+&lt;!-- Numbers category --&gt;
+&lt;FrameLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/category_numbers"&gt;
+   &lt;TextView
+       android:id="@+id/numbers"
+       style="@style/CategoryStyle"
+       android:background="?android:attr/selectableItemBackground"
+       android:text="@string/category_numbers" /&gt;
+&lt;/FrameLayout&gt;
+
+&lt;!-- Family category --&gt;
+&lt;FrameLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:background="@color/category_family"&gt;
+   &lt;TextView
+       android:id="@+id/family"
+       style="@style/CategoryStyle"
+       android:background="?android:attr/selectableItemBackground"
+       android:text="@string/category_family" /&gt;
+&lt;/FrameLayout&gt;
+
+&lt;!-- Colors category --&gt;
+&lt;FrameLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:background="@color/category_colors"&gt;
+   &lt;TextView
+       android:id="@+id/colors"
+       style="@style/CategoryStyle"
+       android:background="?android:attr/selectableItemBackground"
+       android:text="@string/category_colors" /&gt;
+&lt;/FrameLayout&gt;
+
+&lt;!-- Phrases category --&gt;
+&lt;FrameLayout
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:background="@color/category_phrases"&gt;
+   &lt;TextView
+       android:id="@+id/phrases"
+       style="@style/CategoryStyle"
+       android:background="?android:attr/selectableItemBackground"
+       android:text="@string/category_phrases" /&gt;
+&lt;/FrameLayout&gt;
+&lt;/LinearLayout&gt;</code></pre>
+<p><strong>2)</strong> Then run the app on your device and test that each button in the MainActivity has touch feedback.</p>
+<p><strong>Note:</strong> You could move the background attribute to the CategoryStyle definition in styles.xml, but I just declared it inline here, so it’d be easier for you to add into your app.</p>
+<h3 id="more-resources">More Resources</h3>
+<p>We showed you a simplified way of adding touch feedback in your MainActivity in order to avoid going on too far of a tangent with new topics (such as state list drawables and managing resources for backward compatibility on older devices). However, our current approach does introduce more views into the view hierarchy, so it is less efficient. </p>
+<p>If you want to learn the proper and more efficient way to setup touch feedback with a custom drawable, check out this video from the intermediate <a href="https://classroom.udacity.com/courses/ud853/lessons/1623168625/concepts/16358494290923" target="_blank">Udacity Android Fundamentals course</a>. Or you can check out this <a href="http://guides.codepath.com/android/ripple-animation" target="_blank">Codepath tutorial</a> on ripple animations.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud839_Miwok/commit/05acb6e0134807c6ecd248591afbf246235ecbee" target="_blank">These are the changes needed to complete the quiz.</a><br />
+<a href="https://github.com/udacity/ud839_Miwok/tree/05acb6e0134807c6ecd248591afbf246235ecbee" target="_blank">This is the state of the code after completing the quiz.</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="30. Pressed States on List Item Views.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('29. Pressed States on Category Views')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

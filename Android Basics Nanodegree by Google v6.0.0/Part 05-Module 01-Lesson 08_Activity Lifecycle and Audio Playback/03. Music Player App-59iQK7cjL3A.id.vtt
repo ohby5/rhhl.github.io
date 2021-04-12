@@ -1,0 +1,234 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.440 --> 00:00:02.260
+Melihat list tugas yang harus dilakukan,
+
+00:00:02.260 --> 00:00:04.280
+kita dapat menanganinya
+dari atas ke bawah.
+
+00:00:04.280 --> 00:00:06.880
+Ingat, dalam pelajaran terakhir, saya
+mengungkapkan ada beberapa cara
+
+00:00:06.880 --> 00:00:08.930
+dalam memprioritaskan tugas Anda.
+
+00:00:08.930 --> 00:00:11.240
+Salah satu cara untuk melakukannya
+adalah mencoba tugas paling sulit
+
+00:00:11.240 --> 00:00:15.260
+atau paling rumit dulu untuk memastikan
+bahwa fitur itu memang bisa dibuat.
+
+00:00:15.260 --> 00:00:18.020
+Untuk kita, kita belum pernah memutar
+file audio sebelumnya, jadi
+
+00:00:18.020 --> 00:00:19.920
+mari pastikan memang bisa bekerja.
+
+00:00:19.920 --> 00:00:24.060
+Item dengan risiko terendah di list ini
+adalah menambahkan ikon tombol pemutar
+
+00:00:24.060 --> 00:00:27.920
+ke item list dan sebabnya adalah
+kita telah memodifikasi tata letak sebelumnya
+
+00:00:27.920 --> 00:00:29.440
+sehingga ini bisa dilakukan.
+
+00:00:29.440 --> 00:00:31.830
+Jadi, mari lanjut dan simpan
+perubahan UI ini untuk
+
+00:00:31.830 --> 00:00:35.330
+akhir pelajaran saat kita melanjutkan
+dan melakukan pemolesan visual.
+
+00:00:35.330 --> 00:00:38.550
+Sebagai permulaan, kami akan meminta Anda
+membuat aplikasi pemutar musik mungil
+
+00:00:38.550 --> 00:00:40.490
+yang terpisah dari aplikasi Miwok.
+
+00:00:40.490 --> 00:00:44.717
+Pengembang sering menulis aplikasi kecil untuk
+menguji teknologi baru sebelum membangunnya
+
+00:00:44.717 --> 00:00:46.219
+di dalam aplikasi yang lebih besar.
+
+00:00:46.219 --> 00:00:49.770
+Dengan membuat aplikasi sampel ini,
+Anda akan familiar dengan
+
+00:00:49.770 --> 00:00:53.656
+API MediaPlayer, dan ngomong-ngomong,
+Anda mungkin mendengar istilah API
+
+00:00:53.656 --> 00:00:58.423
+kadang-kadang muncul, dan ini adalah singkatan
+dari application programming interface.
+
+00:00:58.423 --> 00:01:00.438
+Saat kita berbicara tentang
+antarmuka tadi,
+
+00:01:00.438 --> 00:01:03.830
+ingatlah bahwa itu seperti kontrak yang
+disediakan Android, yang menjanjikan
+
+00:01:03.830 --> 00:01:07.292
+fungsionalitas, seperti memutar media
+menggunakan kelas MediaPlayer.
+
+00:01:08.452 --> 00:01:11.664
+Kita tidak perlu tahu semua detail
+di dalam kelas MediaPlayer,
+
+00:01:11.664 --> 00:01:14.736
+seperti cara membawa suara keluar
+dari speaker di perangkat,
+
+00:01:14.736 --> 00:01:18.186
+tapi sebagai pengembang, kita hanya peduli
+bahwa kita bisa memakai MediaPlayer dan
+
+00:01:18.186 --> 00:01:20.506
+metode panggilan di sana untuk memutar file media.
+
+00:01:21.866 --> 00:01:22.956
+Baik, untuk kuis ini,
+
+00:01:22.956 --> 00:01:27.660
+Anda akan membangun aplikasi musik simpel
+ini yang bekerja dengan satu lagu saja.
+
+00:01:27.660 --> 00:01:29.232
+Dalam aplikasi ini, mengetuk Play
+
+00:01:29.232 --> 00:01:35.985
+[MUSIC]
+
+00:01:35.985 --> 00:01:41.407
+akan memutar lagi dan mengetuk
+Pause akan menjeda lagu.
+
+00:01:41.407 --> 00:01:43.926
+Saat Anda mengetuk Play lagi, akan
+melanjutkan dari saat dijeda.
+
+00:01:43.926 --> 00:01:51.381
+[MUSIC]
+
+00:01:51.381 --> 00:01:53.932
+Pertama-tama, buatlah proyek baru
+di Android Studio, dan
+
+00:01:53.932 --> 00:01:58.740
+dimulai dengan template activity kosong,
+lalu lanjutkan dengan membangun tata letak ini.
+
+00:01:58.740 --> 00:02:01.960
+Dalam catatan di bawah kuis, kami
+menyediakan tautan untuk membantu mencari
+
+00:02:01.960 --> 00:02:03.719
+dan mengunduh file MP3 sampel untuk aplikasi Anda.
+
+00:02:04.730 --> 00:02:07.380
+Perhatikan bahwa Anda juga bisa memakai
+file MP3 Anda sendiri jika mau.
+
+00:02:07.380 --> 00:02:10.750
+Pastikan bahwa file audio tersebut
+disimpan di folder raw,
+
+00:02:10.750 --> 00:02:12.140
+di dalam res directory aplikasi.
+
+00:02:13.480 --> 00:02:17.195
+Untuk membuat folder raw, di dalam
+bilah struktur proyek aplikasi Anda,
+
+00:02:17.195 --> 00:02:22.330
+klik kanan pada folder res &amp;gt; New &amp;gt;
+
+00:02:22.330 --> 00:02:27.775
+direktori Android resource,
+lalu beri nama direktori ini "raw",
+
+00:02:27.775 --> 00:02:33.540
+r-a-w, lalu pilih tipe resource-nya
+sebagai raw juga, dan klik OK.
+
+00:02:35.210 --> 00:02:38.302
+Lalu Anda bisa menyalin dan menempel
+file lagu ke dalam folder raw ini.
+
+00:02:38.302 --> 00:02:44.622
+File MP3 kita adalah file prakode yang
+perlu diproses sebagaimana adanya atau raw.
+
+00:02:44.622 --> 00:02:48.730
+Untuk deskripsi lebih detail tentang
+folder resource, periksa
+
+00:02:48.730 --> 00:02:52.840
+artikel resource yang tersedia dalam
+catatan di bawah kuis, lalu kami ingin
+
+00:02:52.840 --> 00:02:57.030
+Anda menambah file audio yang disediakan
+itu ke direktori res/raw di aplikasi Anda.
+
+00:02:58.410 --> 00:03:01.980
+Lalu saya ingin Anda memodifikasi kode
+tersebut dengan menambahkan onClickListener
+
+00:03:01.980 --> 00:03:04.760
+untuk membuat tiap tombol benar-benar
+memutar dan menjeda lagu.
+
+00:03:05.820 --> 00:03:07.120
+Silakan mencoba dan
+
+00:03:07.120 --> 00:03:10.930
+bereksperimen dengan fungsionalitas lain
+yang disediakan oleh kelas MediaPlayer.
+
+00:03:10.930 --> 00:03:15.530
+Sebagai contoh, Anda bisa menambahkan
+tombol yang mengubah volume atau
+
+00:03:15.530 --> 00:03:16.840
+bahkan melewatkan bagian tengah lagu.
+
+00:03:18.020 --> 00:03:18.792
+Untuk tugas ini,
+
+00:03:18.792 --> 00:03:22.300
+Anda perlu meriset tentang cara
+menggunakan MediaPlayer di Android.
+
+00:03:22.300 --> 00:03:26.030
+Untuk memfungsikan semua ini, kami tak akan
+menyediakan situs web tertentu sebagai referensi.
+
+00:03:26.030 --> 00:03:29.960
+Justru, silakan melihat tutorial tentang
+MediaPlayer di Android sendiri dan
+
+00:03:29.960 --> 00:03:33.260
+kemudian lakukan trial and error
+di aplikasi Anda untuk membuatnya berfungsi.
+
+00:03:33.260 --> 00:03:33.880
+Selamat mencoba.
+

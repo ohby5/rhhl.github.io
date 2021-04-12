@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.700
+A última tarefa que fizemos
+para o aplicativo Miwok
+
+00:00:02.733 --> 00:00:06.167
+foi liberar os recursos do MediaPlayer
+quando não precisarmos mais deles.
+
+00:00:06.200 --> 00:00:10.000
+Mas não podemos supor
+que o áudio será tocado até o fim,
+
+00:00:10.033 --> 00:00:13.567
+pois, se for interrompido pelo usuário
+ao abrir outra activity,
+
+00:00:13.600 --> 00:00:16.900
+ainda precisaremos limpar tudo
+adequadamente.
+
+00:00:16.933 --> 00:00:19.933
+Minha pergunta é:
+se o usuário sair da activity,
+
+00:00:19.967 --> 00:00:25.767
+em que estágio do ciclo de vida
+devemos liberar os recursos do MediaPlayer?
+
+00:00:25.800 --> 00:00:31.133
+Durante o onResume, o onCreate,
+o OnStop ou o onDestroy?
+
+00:00:31.833 --> 00:00:34.700
+Quando você escolher uma opção,
+modifique o aplicativo
+
+00:00:34.733 --> 00:00:39.067
+para que possamos liberar os recursos
+durante esse estágio.
+
+00:00:39.100 --> 00:00:44.467
+Mostrarei como o aplicativo deverá estar antes
+e depois da mudança no código.
+
+00:00:44.500 --> 00:00:46.700
+Seu aplicativo se comporta assim
+atualmente.
+
+00:00:46.733 --> 00:00:50.000
+Se eu clicar numa palavra,
+ele falará a palavra em voz alta,
+
+00:00:50.033 --> 00:00:52.667
+e, se eu sair da atividade
+sem deixá-la terminar,
+
+00:00:52.700 --> 00:00:56.600
+o aplicativo continuará
+a tocar o arquivo de áudio inteiro.
+
+00:00:59.533 --> 00:01:03.300
+Aqui está a versão do código
+onde limpamos os recursos de mídia
+
+00:01:03.333 --> 00:01:05.467
+de acordo
+com o ciclo de vida da activity.
+
+00:01:05.500 --> 00:01:08.800
+Neste caso,
+quando clicamos no botão "Home",
+
+00:01:08.833 --> 00:01:11.800
+o aplicativo deve parar
+de reproduzir o áudio imediatamente,
+
+00:01:11.833 --> 00:01:13.267
+mesmo no meio da palavra.
+
+00:01:13.300 --> 00:01:16.267
+Isso reforça o fato
+de que só devemos tocar áudio
+
+00:01:16.300 --> 00:01:18.133
+quando o usuário estiver
+no aplicativo,
+
+00:01:18.167 --> 00:01:21.733
+pois, no nosso caso,
+somos um aplicativo de música ou podcast.
+
+00:01:21.767 --> 00:01:23.067
+Vou demonstrar.
+
+00:01:25.467 --> 00:01:28.100
+Certo,
+faça as mudanças de código agora.
+
+00:01:28.133 --> 00:01:31.233
+E lembre-se
+de atualizar as 4 activities.
+

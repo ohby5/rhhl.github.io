@@ -1,0 +1,216 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.190 --> 00:00:02.270
+Shunday qilib, har xil holatlar 
+o‘rtasisda harakat qilish uchun
+
+00:00:02.270 --> 00:00:06.360
+bizga ma’lum audio fayl bilan boshlanadigan 
+"MediaPlayer" obyekti kerak bo‘ladi.
+
+00:00:06.360 --> 00:00:10.190
+Shunda biz ushbu obyekt bo‘yicha holatlar o‘rtasida
+harakat qilish uchun usullarni chaqirishimiz mumkin.
+
+00:00:10.190 --> 00:00:14.510
+Shunday qilib, biz "MediaPlayer.create" 
+usulini chaqirib, "MediaPlayer" obyektini yaratdik.
+
+00:00:14.510 --> 00:00:16.940
+E’tibor bering, bu bizning obyektimizni
+yaratish uchun konstruktor "(constructor)" 
+
+00:00:16.940 --> 00:00:19.420
+o‘rniga zavod "(factory)"  
+usulidan foydalanmoqda.
+
+00:00:19.420 --> 00:00:21.270
+Agar eslasangiz oxirgi kursda,
+
+00:00:21.270 --> 00:00:24.830
+biz obyektlarni yaratishning boshqa usuli
+sifatida zavod usullari haqida bilib olgan edik.
+
+00:00:24.830 --> 00:00:28.176
+Misol uchun,
+tost xabarlari obyektini yaratish uchun,
+
+00:00:28.176 --> 00:00:32.200
+biz allaqachon "Toast.makeText" 
+zavod usulidan foydalanganmiz.
+
+00:00:32.200 --> 00:00:36.310
+Buni aniqroq qilib aytadigan bo‘lsak, siz statik usulni
+chaqirganingizda, to‘g‘ridan-to‘g‘ri sinfga murojaat qilasiz.
+
+00:00:36.310 --> 00:00:39.120
+Yana shuni unutmangki, bu "Java"
+sinfining aniq nomi bo‘lishi kerak.
+
+00:00:39.120 --> 00:00:42.570
+Endi siz odatiy yoki e’lon qilinmagan 
+usulni chaqirganingizda, siz usulni 
+
+00:00:42.570 --> 00:00:45.390
+sinfning obyekt namunasida 
+chaqirishingiz mumkin.
+
+00:00:45.390 --> 00:00:49.540
+Shunday qilib, ushbu nom obyektingiz 
+o‘zgaruvchisining nomiga qarab o‘zgarishi mumkin.
+
+00:00:49.540 --> 00:00:52.010
+"Android"da media fayllarni ijro etish
+haqida ko‘proq ma’lumot olish uchun men 
+
+00:00:52.010 --> 00:00:55.840
+Ian Leykning "Big Android BBQ" 
+konferensiyasida so‘zlagan, 
+
+00:00:55.840 --> 00:00:58.000
+""Media"ni to‘g‘ri ijro etish" 
+deb nomlangan nutqini tavsiya qilaman.
+
+00:00:58.000 --> 00:01:00.120
+Buning uchun kerakli havolani quyida topishingiz mumkin.
+
+00:01:01.420 --> 00:01:02.920
+"MediaPlayer" uchun dasturchi hujjatlarida
+
+00:01:02.920 --> 00:01:06.900
+yaratish usullari, 
+ommaviy usul bo‘limida ko‘rsatilgan.
+
+00:01:07.960 --> 00:01:11.410
+Shunday qilib, yangi obyektlarni 
+yaratish uchun konstruktorga qarshi 
+
+00:01:11.410 --> 00:01:14.650
+zavod usulini tanlashni ushbu 
+"MediaPlayer" kodini yozgan 
+
+00:01:14.650 --> 00:01:16.910
+asl dasturchi hal qildi.
+
+00:01:16.910 --> 00:01:20.780
+Agar siz ilova tarkibidagi audio 
+faylni tinglamoqchi bo‘lsangiz yoki 
+
+00:01:20.780 --> 00:01:24.180
+ushbu audioni Internet yoki boshqa
+ma’lumot manbasidan uzatmoqchi bo‘lsangiz,
+
+00:01:24.180 --> 00:01:28.460
+dasturchi "MediaPlayer" sinfida   
+turli xil konstruktorlarga ega bo‘lish o‘rniga,  
+
+00:01:28.460 --> 00:01:32.470
+turli xil parametrlar to‘plamiga ega bo‘lishi 
+mumkin bo‘lgan har xil yaratish usullarini tanlaydi.
+
+00:01:32.470 --> 00:01:35.050
+Bizning holatimizda esa, biz ushbu konstruktordan foydalanamiz.
+
+00:01:35.050 --> 00:01:40.300
+Shunday qilib, yarating va uni kontekstga oling,
+bu yerda "res" butun sonning id raqamidir.
+
+00:01:41.300 --> 00:01:44.800
+Shuning uchun biz uni "yaratish usuli" deb 
+nomlaymiz va uni ikkita kirishidan o‘tamiz.
+
+00:01:44.800 --> 00:01:48.600
+Shunday qilib, biz ijro etilishini
+istagan fayl uchun hozirgi kontekst, 
+
+00:01:48.600 --> 00:01:53.130
+manba identifikatori va ushbu usulning qaytish 
+qiymati - bu yangi media ijro etuvchining obyekti hisoblanadi.
+
+00:01:53.130 --> 00:01:56.870
+Bu yerda yaratish usuli statik usul 
+ekanligiga e’tibor bergan bo‘lsangiz kerak.
+
+00:01:56.870 --> 00:02:01.760
+Xuddi statik o‘zgaruvchilar alohida 
+holatlarga emas, balki sinfga tegishli ekanligi kabi,
+
+00:02:01.760 --> 00:02:05.220
+statik usullar bu sinfning
+o‘ziga bog‘langan usullardir.
+
+00:02:05.220 --> 00:02:08.800
+Buning yaxshi tomoni shundaki,
+biz metodlarni sinf misolida 
+
+00:02:08.800 --> 00:02:10.910
+ko‘rsatmasdan turib chaqirishimiz mumkin. 
+
+00:02:10.910 --> 00:02:15.110
+Endi biz media ijro etuvchining 
+"API" qo‘llanmasiga qaytsak, 
+
+00:02:15.110 --> 00:02:17.120
+ushbu kodda biz statik usulni shunday chaqiramiz.
+
+00:02:17.120 --> 00:02:20.410
+Biz "MediaPlayer" sinfining 
+aniq nomidan foydalanishimiz mumkin va 
+
+00:02:20.410 --> 00:02:22.770
+obyekt o‘zgaruvchisining 
+nomidan foydalanishimiz shart emas.
+
+00:02:22.770 --> 00:02:26.170
+Biz namunada ishlatadigan bir xil 
+nuqta operatoridan foydalanishimiz mumkin 
+
+00:02:26.170 --> 00:02:28.786
+va keyin uni statik usul 
+nomi bilan kuzatamiz.
+
+00:02:28.786 --> 00:02:31.501
+Shunday qilib, biz ijro ettirishni
+xohlagan ovozli fayl uchun kontekstdan
+
+00:02:31.501 --> 00:02:33.888
+va resurs identifikatoridan o‘tamiz.
+
+00:02:33.888 --> 00:02:37.600
+"MediaPlayer" qurilmadagi 
+umumiy manbalarga kirishi va uning qanday 
+
+00:02:37.600 --> 00:02:40.820
+muhitda ishlatilishini bilish 
+uchun kontekst kerak bo‘ladi.
+
+00:02:40.820 --> 00:02:44.178
+Shundan so‘ng biz media ijro etuvchiga 
+boshlash usulini chaqirgan holda ijro etishni 
+
+00:02:44.178 --> 00:02:45.550
+boshlashni ayta olamiz.
+
+00:02:45.550 --> 00:02:48.790
+Shunga e’tibor beringki, ushbu izoh 
+"tayyorlash" usulini chaqirishning 
+
+00:02:48.790 --> 00:02:51.430
+hojati yo‘qligini ta’kidlaydi, 
+chunki "yaratish" usuli allaqachon 
+
+00:02:51.430 --> 00:02:54.000
+audio faylni bizga 
+tayyorlashga yordam beradi.
+
+00:02:54.000 --> 00:02:58.150
+Demak, biz ilovaga yaratish usulini chaqirishimiz 
+va keyin darhol boshlash usulini ham chaqirishimiz mumkin.
+
+00:02:58.150 --> 00:03:00.877
+Mana shundan keyin esa biz,
+"MediaPlayer" ning boshqa usullarini chaqirishimiz mumkin.
+ 
+

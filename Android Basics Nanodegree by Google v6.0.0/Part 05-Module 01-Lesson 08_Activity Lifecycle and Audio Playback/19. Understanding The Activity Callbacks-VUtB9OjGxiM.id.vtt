@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.230 --> 00:00:03.550
+Setelah Anda tahu berbagai
+keadaan dalam aktivitas siklus hidup,
+
+00:00:03.550 --> 00:00:07.200
+bagaimana memberitahu sistem bahwa
+Anda ingin tahu transisi tertentu?
+
+00:00:07.200 --> 00:00:11.030
+Misalnya, Anda hanya ingin
+menampilkan animasi di layar
+
+00:00:11.030 --> 00:00:13.475
+jika pengguna secara aktif
+melihat aktivitas Anda.
+
+00:00:13.475 --> 00:00:16.155
+Dan Anda ingin 
+menghentikan animasi itu
+
+00:00:16.155 --> 00:00:17.535
+saat layar tak terlihat lagi.
+
+00:00:17.535 --> 00:00:20.665
+Mirip click handling,
+sistem akan memberitahu Anda
+
+00:00:20.665 --> 00:00:24.255
+bahwa transisi siklus hidup
+terjadi lewat metode pemanggilan kembali dan
+
+00:00:24.255 --> 00:00:26.795
+tiap transisi
+memiliki pemanggilan kembali tersendiri
+
+00:00:26.795 --> 00:00:29.185
+Dengan menggunakan pemanggilan kembali, akan memberikanmu
+
+00:00:29.185 --> 00:00:33.405
+kesempatan untuk
+menyela dan mengeksekusi pernyataan.
+
+00:00:33.405 --> 00:00:37.600
+Jadi misalnya mengembalikan atau menyimpan
+data atau membersihkan referensi
+
+00:00:37.600 --> 00:00:40.660
+yang tak lagi Anda perlukan
+saat Anda membutuhkannya.
+
+00:00:40.660 --> 00:00:44.360
+Sekarang saya di aktivitas angka dan
+Anda perhatikan bahwa kita telah
+
+00:00:44.360 --> 00:00:48.420
+menulis sebagian besar kode di
+aktivitas metode onCreate.
+
+00:00:48.420 --> 00:00:51.790
+Ini adalah pemanggilan kembali yang sistem
+lakukan saat ia membuat
+
+00:00:51.790 --> 00:00:56.450
+aktivitas Anda, dan dengan mengganti
+metode di definisi kelas Anda,
+
+00:00:56.450 --> 00:01:00.360
+Anda bisa menspesifikasi apa yang
+Anda inginkan selama fase itu.
+
+00:01:00.360 --> 00:01:04.110
+Di sini juga kita kembangkan
+tataletak XML sumber kita
+
+00:01:04.110 --> 00:01:07.390
+dapatkan referensi pada tampilan
+yang kita ingin kita manipulasi dan
+
+00:01:07.390 --> 00:01:10.820
+inisialisasi obyek penting lain
+yang jadi tumpuan aplikasi kita.
+
+00:01:12.210 --> 00:01:14.460
+Sekarang di dokumentasi
+pengembang Android,
+
+00:01:14.460 --> 00:01:18.080
+jika kita lihat di kelas aktivitas,
+tampak semua pemanggilan kembali sistem
+
+00:01:18.080 --> 00:01:20.430
+untuk berbagai keadaan dari
+aktivitas siklus hidup
+
+00:01:20.430 --> 00:01:24.040
+Jadi Anda bisa mengganti tiap
+metode dalam kelas yang aktif
+
+00:01:24.040 --> 00:01:25.750
+jika Anda mau menjalankan kode
+
+00:01:25.750 --> 00:01:28.020
+saat aktivitas transisi ke
+keadaan tertentu.
+

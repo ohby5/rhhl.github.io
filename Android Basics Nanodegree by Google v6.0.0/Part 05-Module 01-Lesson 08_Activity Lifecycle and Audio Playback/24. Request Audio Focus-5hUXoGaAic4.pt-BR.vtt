@@ -1,0 +1,179 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.700
+A manipulação do foco de áudio
+será uma mudança de código bem significativa.
+
+00:00:04.733 --> 00:00:07.967
+Antes de fazê-la sozinho,
+vamos analisar as principais decisões
+
+00:00:08.000 --> 00:00:11.633
+que você terá que fazer
+quando usar a API do AudioManager.
+
+00:00:11.667 --> 00:00:16.633
+API refere-se a classes e métodos oferecidos
+pelo framework do Android
+
+00:00:16.667 --> 00:00:19.100
+que você, como desenvolvedor,
+pode usar.
+
+00:00:19.133 --> 00:00:23.033
+Vamos começar solicitando o foco de áudio
+do AudioManager
+
+00:00:23.067 --> 00:00:25.800
+para começar a tocar o áudio
+no aplicativo.
+
+00:00:25.833 --> 00:00:30.600
+No quiz passado, vimos que precisamos
+chamar o método requestAudioFocus,
+
+00:00:30.633 --> 00:00:35.900
+e ele exige 3 entradas:
+um objeto OnAudioFocusChangeListener,
+
+00:00:35.933 --> 00:00:38.733
+um streamType
+e um durationHint.
+
+00:00:39.700 --> 00:00:44.533
+Estes dois últimos, o streamType
+e o durationHint, são inteiros.
+
+00:00:44.567 --> 00:00:49.600
+Quando chamarmos o método requestAudioFocus,
+o que devemos atribuir como streamType,
+
+00:00:49.633 --> 00:00:51.400
+que será
+nosso 2º parâmetro?
+
+00:00:51.433 --> 00:00:54.533
+Isto se refere ao tipo de áudio
+a ser tocado.
+
+00:00:54.567 --> 00:00:57.567
+É uma música
+ou um toque de celular?
+
+00:00:57.600 --> 00:01:01.100
+Agora a 2ª pergunta:
+"O que devemos atribuir como durationHint?"
+
+00:01:01.133 --> 00:01:02.500
+Que é o 3º parâmetro.
+
+00:01:02.533 --> 00:01:05.733
+Isto se refere por quanto tempo precisaremos
+do foco de áudio.
+
+00:01:05.767 --> 00:01:09.300
+Precisamos dele
+por um período de tempo curto ou longo?
+
+00:01:09.333 --> 00:01:12.867
+Como dica,
+ambas as respostas devem ser inteiros,
+
+00:01:12.900 --> 00:01:18.767
+mais especificamente, constantes inteiras
+já definidas na classe AudioManager.
+
+00:01:18.800 --> 00:01:22.567
+Na documentação "Reference"
+para a classe AudioManager,
+
+00:01:22.600 --> 00:01:26.867
+se descermos até a seção da constante public
+e depois descermos mais um pouco,
+
+00:01:26.900 --> 00:01:29.267
+veremos os tipos de stream
+que você pode atribuir
+
+00:01:29.300 --> 00:01:31.233
+num método
+requestAudioFocus.
+
+00:01:31.267 --> 00:01:34.900
+Você pode se referir a eles
+como AudioManager.STREAM_ALARM
+
+00:01:34.933 --> 00:01:40.033
+ou AudioManager.STREAM_DTMF
+e assim vai.
+
+00:01:40.067 --> 00:01:44.033
+E as descrições para cada tipo de stream estão
+na coluna da direita.
+
+00:01:44.067 --> 00:01:48.367
+Vamos clicar na constante STREAM_ALARM
+para obter mais detalhes.
+
+00:01:48.400 --> 00:01:51.467
+Uma constante é um valor fixo
+que nunca muda,
+
+00:01:51.500 --> 00:01:55.067
+e, por convenção,
+chamamos a variável em letra maiúscula.
+
+00:01:55.100 --> 00:01:57.600
+Elas costumam ser usadas
+para comunicar um estado.
+
+00:01:57.633 --> 00:02:02.467
+neste caso, nosso STREAM_ALARM
+tem o valor 4 que nunca irá mudar.
+
+00:02:02.500 --> 00:02:05.400
+Quando atribuirmos este valor constante
+ao AudioManager,
+
+00:02:05.433 --> 00:02:08.433
+ele saberá que estaremos nos referindo
+a este tipo de stream.
+
+00:02:08.467 --> 00:02:12.067
+Isso dá conta do streamType.
+Mas e o durationHint?
+
+00:02:12.100 --> 00:02:14.867
+Vamos
+até o método requestAudioFocus.
+
+00:02:14.900 --> 00:02:20.100
+Veja que as opções válidas diferentes
+para o durationHint estão na descrição,
+
+00:02:20.133 --> 00:02:24.867
+como o AUDIOFOCUS_GAIN_TRANSIENT,
+o AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
+
+00:02:24.900 --> 00:02:28.333
+e outras duas,
+e cada uma tem explicações
+
+00:02:28.367 --> 00:02:31.267
+para ajudar você
+a escolher a mais adequada.
+
+00:02:31.300 --> 00:02:33.600
+Fique à vontade para pesquisar on-line
+por tutoriais
+
+00:02:33.633 --> 00:02:35.800
+se precisar de ajuda
+para responder.
+
+00:02:35.833 --> 00:02:39.400
+Quero que você escreva suas respostas aqui
+e continue.
+

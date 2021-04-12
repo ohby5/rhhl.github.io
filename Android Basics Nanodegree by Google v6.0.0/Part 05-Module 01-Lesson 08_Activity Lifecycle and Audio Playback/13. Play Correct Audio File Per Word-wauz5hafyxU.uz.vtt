@@ -1,0 +1,510 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.702 --> 00:00:04.510
+Men ushbu to‘rt bosqichni bajarib, 
+kodlash vazifasini hal qilmoqchiman.
+
+00:00:04.510 --> 00:00:07.410
+Shunday qilib, birinchi navbatda, 
+har bir so‘z uchun audio ma’lumotni saqlash 
+
+00:00:07.410 --> 00:00:09.050
+uchun so‘z sinfini yangilashimiz kerak.
+
+00:00:09.050 --> 00:00:12.990
+Shundan so‘ng, biz so‘zlar ro‘yxatini 
+yaratish usulini yangilashimiz kerak.
+
+00:00:12.990 --> 00:00:15.850
+Keyin, biron bir tugmani 
+bosganda to‘g‘ri ovozli faylni ijro etish
+
+00:00:15.850 --> 00:00:19.280
+uchun "OnItemClickListener" ni 
+yangilashimiz kerak.
+
+00:00:19.280 --> 00:00:22.800
+Hozirda men raqamlar faoliyatiga 
+e’tibor qaratmoqchiman, lekin 
+
+00:00:22.800 --> 00:00:25.520
+keyin biz boshqa barcha
+kategoriyalarimiz uchun jarayonni takrorlaymiz.
+
+00:00:26.830 --> 00:00:30.740
+Endi men, bizning "world" nomli sinfimizda,
+audio manba identifikatorini saqlash uchun
+
+00:00:30.740 --> 00:00:32.990
+foydalanishimiz mumkin bo‘lgan butun 
+o‘zgaruvchini qo‘shishni boshlamoqchiman.
+
+00:00:34.020 --> 00:00:36.370
+Endi, bu shunchaki biz murojaat
+qiladigan manbaning identifikatori bo‘lib, 
+
+00:00:36.370 --> 00:00:38.550
+u yerda haqiqiy 
+audio faylni topish mumkin.
+
+00:00:38.550 --> 00:00:42.375
+Va men buni
+"mAudioResourceId" deb nomlaganimga e’tibor bering.
+
+00:00:42.375 --> 00:00:45.797
+Keyinchalik, so‘z konstruktorlarini 
+audio maydonini o‘rnatish va boshqa kirishni 
+
+00:00:45.797 --> 00:00:48.068
+qabul qilish uchun o‘zgartirmoqchiman.
+
+00:00:48.068 --> 00:00:50.880
+Shuning uchun men uni ikkala 
+konstruktorga qo‘shmoqchiman, chunki rasm yoki 
+
+00:00:50.880 --> 00:00:53.690
+rasm bo‘lmasligidan qat’iy nazar, 
+barcha so‘zlar audio faylga ega bo‘lishi kerak.
+
+00:00:54.830 --> 00:00:58.070
+Keyin, "mAudioResourceId" 
+a’zosi o‘zgaruvchisini 
+
+00:00:58.070 --> 00:01:00.510
+qabul qilingan audio
+parametriga tenglashtiraman.
+
+00:01:01.620 --> 00:01:03.780
+Endi har safar
+konstruktorni o‘zgartirganda, 
+
+00:01:03.780 --> 00:01:06.190
+"java.comment" ni yangilashni unutmang.
+
+00:01:06.190 --> 00:01:09.150
+Shu tarzda, konstruktorga 
+murojaat qiladigan har qanday boshqa dasturchilar 
+
+00:01:09.150 --> 00:01:11.090
+kirishga nima kiritilishini bilishadi.
+
+00:01:11.090 --> 00:01:13.630
+Biz audio o‘zgaruvchini 
+xususiy deb e’lon qilganimiz uchun 
+
+00:01:13.630 --> 00:01:15.960
+ommaviy kirish usulini yaratishimiz kerak.
+
+00:01:15.960 --> 00:01:19.070
+Xuddi "English" va "Miwok" satrlariga, 
+shuningdek, "Image Resource" identifikatorlariga 
+
+00:01:19.070 --> 00:01:22.180
+kirish uchun biz boshqa sinflar
+uchun ham ommaviy usullarni yaratganimizdek.
+
+00:01:22.180 --> 00:01:27.030
+Shunday qilib, men bu yerda ommaviy usulni amalga oshirmochiman, 
+u "Integer Resurs" identifikator raqamini qaytaradi va
+
+00:01:27.030 --> 00:01:30.212
+men shuningdek, 
+"getAudioResourceId" usulini nomlamoqchiman.
+
+00:01:30.212 --> 00:01:33.490
+Bunda kirishga hech qanday
+talablar bo‘lmaydi va 
+
+00:01:33.490 --> 00:01:36.890
+usul shunchaki xususiy 
+audio o‘zgaruvchini qaytaradi.
+
+00:01:36.890 --> 00:01:39.730
+Bundan tashqari, bu ommaviy usul 
+bo‘lgani uchun, men ushbu usulning maqsadi 
+
+00:01:39.730 --> 00:01:42.512
+nima ekanligini aniqlashtirish 
+uchun izohni qo‘shmoqchiman.
+
+00:01:42.512 --> 00:01:45.530
+Bular so‘zlar sinfini yaratish uchun 
+zarur bo‘lgan barcha o‘zgarishlar edi.
+
+00:01:45.530 --> 00:01:48.910
+Shunday qilib, endi bizda yangi
+xususiy ovoz o‘zgaruvchisi bor bo‘lib, u 
+
+00:01:48.910 --> 00:01:53.412
+ikkita konstruktor orqali o‘rnatiladi va bizda 
+ushbu o‘zgaruvchiga kirishning umumiy usuli mavjud.
+
+00:01:53.412 --> 00:01:55.460
+Xo‘sh, bizning birinchi 
+qadamimiz shu bilan tugadi va 
+
+00:01:55.460 --> 00:01:57.650
+biz so‘z sinfi konstruktorlarini
+o‘zgartirganimizdan so‘ng, 
+
+00:01:57.650 --> 00:02:00.510
+ushbu konstruktorlardan 
+foydalanadigan joylarni ham o‘zgartirishimiz kerak. 
+
+00:02:00.510 --> 00:02:03.740
+Masalan, "NumbersActivity" , 
+"FamilyActivity" va boshqa
+
+00:02:03.740 --> 00:02:05.130
+barcha faoliyatlar.
+
+00:02:05.130 --> 00:02:08.250
+Demak, u yerda biz so‘z ob’ektlari 
+qanday yaratilishini o‘zgartirishimiz kerak.
+
+00:02:08.250 --> 00:02:12.180
+Endi raqamlar faoliyatida biz 
+bir qatordagi so‘zlar ro‘yxatini tuzdik va 
+
+00:02:12.180 --> 00:02:14.710
+har bir so‘z uchta
+argument (dalil) bilan yaratildi.
+
+00:02:14.710 --> 00:02:19.830
+Shunday qilib, avval inglizcha so‘z, 
+"Miwok" so‘zi va keyin rasm.
+
+00:02:19.830 --> 00:02:22.530
+Endi biz to‘rtinchi 
+argumentni qo‘shishimiz kerak, 
+
+00:02:22.530 --> 00:02:25.020
+bu audio faylning manba identifikatori
+bo‘lib, u so‘z bilan birga keladi.
+
+00:02:25.020 --> 00:02:29.949
+Shunday qilib, "1" raqami uchun men,
+"R.raw.number_1" ni qo‘shmoqchiman.
+
+00:02:29.949 --> 00:02:33.973
+Bu yerda ko‘rib turganingizdek, 
+agar men resurslar nomi qanday ekanligini unutgan bo‘lsam,
+
+00:02:33.973 --> 00:02:36.813
+"Android Studio" "Raw" nomli
+papkasiga qo‘shilgan fayllarni 
+
+00:02:36.813 --> 00:02:39.440
+avtomatik ravishda taklif
+qilish uchun yetarlicha aqlli.
+
+00:02:39.440 --> 00:02:44.059
+Endi "2" raqami uchun men 
+"R.raw.number_2" ni qo‘shmoqchiman.
+
+00:02:45.400 --> 00:02:47.560
+Shunday qilib, nusxa ko‘chirishni 
+va qolgan o‘nta raqamga 
+
+00:02:47.560 --> 00:02:48.780
+o‘zgartirishlar kiritishni boshlayman.
+
+00:02:49.980 --> 00:02:52.610
+Xo‘sh, barcha so‘zlar "Audio Resource" 
+identifikatoriga ega bo‘lganda 
+
+00:02:52.610 --> 00:02:53.520
+kod qanday bo‘lishi kerak?
+
+00:02:54.890 --> 00:02:58.370
+Demak, raqamlar bilan ishlashda 
+kodning qolgan qismi, avvalgidek, so‘zlar qatoridan 
+
+00:02:58.370 --> 00:02:59.350
+foydalanishni davom ettirishi mumkin.
+
+00:03:00.410 --> 00:03:02.780
+Endi, men boshqa kategoriyalarga
+yangilanishlarni kiritmoqchiman, 
+
+00:03:02.780 --> 00:03:04.880
+shunda ular to‘g‘ri konstruktordan foydalanadilar.
+
+00:03:04.880 --> 00:03:08.850
+Men "PhrasesActivity" ni ochganimda, 
+namoyishda xatolar borligini ko‘raman.
+
+00:03:08.850 --> 00:03:12.235
+Buning sababi shundaki, 
+faqat ikkita kirish uchun 
+
+00:03:12.235 --> 00:03:13.619
+ko‘proq so‘z konstruktorlari mavjud emas.
+
+00:03:13.619 --> 00:03:16.490
+Shuning uchun, ushbu xatolardan 
+xalos bo‘lish uchun ba’zi o‘zgarishlar qilaylik.
+
+00:03:16.490 --> 00:03:19.140
+Xo‘sh, har bir so‘z uchta kiritish
+konstruktoridan foydalanganda 
+
+00:03:19.140 --> 00:03:21.450
+so‘zlar ro‘yxati 
+qanday bo‘lishi kerak?
+
+00:03:22.570 --> 00:03:25.550
+Shuni esda tutingki, 
+agar kod satri 100 ta ustundan oshsa,
+
+00:03:25.550 --> 00:03:29.995
+biz matnni keyingi qatorga o‘tkazamiz 
+va keyin 8 ta bo‘sh joy qoldiramiz.
+
+00:03:29.995 --> 00:03:32.810
+Bundan tashqari, bu yerda 
+"ArrayList" endi yakuniy ekanligini unutmang.
+
+00:03:32.810 --> 00:03:36.000
+Shuning uchun men "FamilyActivity" va 
+"ColorsActivity" ga o‘xshash o‘zgarishlarni kiritmoqchiman.
+
+00:03:37.070 --> 00:03:41.383
+"FamilyActivity" va 
+"ColorsActivity" uchun tugallangan kod 
+
+00:03:41.383 --> 00:03:42.732
+mana qanday ko‘rinishga ega bo‘ladi.
+
+00:03:42.732 --> 00:03:45.098
+Mana endi, 
+so‘zlar sinfi shuningdek,
+ 
+74
+00:03:45,098 --&gt; 00:03:47,980
+so‘z sinfi konstruktori 
+deb nomlagan joylar yangilandi.
+
+00:03:47.980 --> 00:03:50.338
+Keyinroq "OnItemClickListener" ni 
+yangilaymiz, shunda u 
+
+00:03:50.338 --> 00:03:52.758
+to‘g‘ri audio faylni ijro etadi.
+
+00:03:52.758 --> 00:03:55.380
+Endi esa "NumberActivity" da, 
+ro‘yxat elementi bosilganda 
+
+00:03:55.380 --> 00:03:57.260
+kodni o‘zgartiraman.
+
+00:03:57.260 --> 00:04:01.580
+Shunday qilib, biz har doim bir xil 
+"number_one" raqamli MP3 faylini ijro ettiramiz.
+
+00:04:01.580 --> 00:04:03.050
+Uning ustiga bir nechta kodni kiritamiz.
+
+00:04:03.050 --> 00:04:05.950
+Ammo birinchi navbatda, qaysi so‘z ustiga
+bosilayotganini aniqlashimiz kerak va keyin uni 
+
+00:04:05.950 --> 00:04:08.130
+o‘zgarmaydigan holda saqlashimiz kerak.
+
+00:04:08.130 --> 00:04:11.190
+Shunday qilib, "onItemClick" 
+usulining vaziyat parametridan men bosilgan so‘zni 
+
+00:04:11.190 --> 00:04:14.720
+olish uchun so‘zlar qatori ro‘yxatini
+tekshirib ko‘rishim mumkin.
+
+00:04:14.720 --> 00:04:18.950
+Xo‘sh, men shunchaki 
+"word.get" ga murojaat qilishim va holatdagi 
+
+00:04:18.950 --> 00:04:21.060
+o‘zgaruvchiga o‘tishim mumkin.
+
+00:04:21.060 --> 00:04:24.378
+Ushbu usul bitta
+so‘z o‘zgaruvchini qaytaradi, 
+
+00:04:24.378 --> 00:04:26.750
+men bu o‘zgaruvchini 
+chap tomonda saqlashim mumkin.
+
+00:04:27.810 --> 00:04:31.470
+Endi, agar siz bu yerda xato borligini 
+ko‘rsatadigan qizil belgini ko‘rsangiz, 
+
+00:04:31.470 --> 00:04:35.570
+xato o‘zgaruvchan so‘zlar kabi biror 
+narsaga ichkaridan kirish mumkinligini aytadi 
+
+00:04:35.570 --> 00:04:38.150
+va sinf kiritilishi "final" deb e’lon qilinishini talab qiladi.
+
+00:04:38.150 --> 00:04:41.930
+Yodingizda bo‘lsin, biz "ArrayList" 
+so‘zlarini yakuniy deb e’lon qilishimiz kerak, 
+
+00:04:41.930 --> 00:04:44.650
+shuning uchun siz bu yerda "final" 
+deb e’lon qilinganligini ikki marta tekshiring.
+
+00:04:44.650 --> 00:04:47.060
+Shunday qilib, qaysi so‘z ustiga bosilganini bilganimdan so‘ng, 
+
+00:04:47.060 --> 00:04:51.660
+men uning audio manbayi identifikatorini olib, 
+uni "MediaPlayer" ga o‘tkazishim mumkin.
+
+00:04:51.660 --> 00:04:56.550
+Demak, men bu yerda kodlangan ushbu 
+"R.raw.number_one" ni o‘chirib tashlashim va 
+
+00:04:56.550 --> 00:05:01.190
+shunchaki "word.getAudioResourceId" dan 
+foydalanishim mumkin.
+
+00:05:02.440 --> 00:05:03.930
+Mana bu yerga boramiz va u ishlashi kerak.
+
+00:05:03.930 --> 00:05:07.438
+"MediaPlayer" yaratilgandan so‘ng,
+biz audio fayl ijro ettirishni boshlashimiz mumkin.
+
+00:05:07.438 --> 00:05:10.570
+Men bu yerda ham ba’zi izohlarni 
+qo‘shmoqchiman, shuning uchun 
+
+00:05:10.570 --> 00:05:11.640
+nima sodir bo‘lganligini eslaymiz.
+
+00:05:12.810 --> 00:05:14.730
+Shuning bilan bizning uchinchi bosqichimiz yakunlandi.
+
+00:05:14.730 --> 00:05:17.110
+Endi oxirgi qadam - bu 
+boshqa kategoriyadagi harakatlar uchun ham 
+
+00:05:17.110 --> 00:05:19.540
+ishlashiga ishonch hosil qilishdir.
+
+00:05:19.540 --> 00:05:23.880
+Endi esa "FamilyActivity" ishlashi uchun
+men "MediaPlayer" o‘zgaruvchisidan va
+
+00:05:23.880 --> 00:05:26.485
+"setOnItemClickListener" 
+kodidan nusxa ko‘chirib oldim.
+
+00:05:27.610 --> 00:05:29.260
+Shuni esda tutingki, nusxa ko‘chirganda, 
+
+00:05:29.260 --> 00:05:35.000
+oxirgi figurali qavsni, yopilish qavslarini va 
+nuqta-vergullarni ham olganingizga ishonch hosil qiling.
+
+00:05:35.000 --> 00:05:37.370
+Bundan tashqari, men "ArrayList" 
+so‘zlarini yakuniy "(final)" " qildim,
+
+00:05:37.370 --> 00:05:40.780
+shunda men uni "ClickListener" 
+bandiga havola qilishim mumkin.
+
+00:05:40.780 --> 00:05:43.748
+Endi media ijro etuvchi,
+faoliyat kontekstiga murojaat qilishi kerak,
+
+00:05:43.748 --> 00:05:46.830
+shuning uchun men uni 
+"NumberActivity" dan "FamilyActivity" ga 
+
+00:05:46.830 --> 00:05:50.320
+o‘zgartirdim, chunki 
+hozirda biz shu faoliyatdamiz.
+
+00:05:50.320 --> 00:05:54.420
+Keyin men xuddi shu jarayonni "Ranglar" 
+sinfi va "PhrasesActivity" uchun 
+
+00:05:54.420 --> 00:05:56.240
+yana bir bor takrorladim.
+
+00:05:56.240 --> 00:05:59.550
+Umid qilamanki, ushbu sozlamani
+bir necha marta o‘rnatganingizdan so‘ng, 
+
+00:05:59.550 --> 00:06:02.630
+"MediaPlayer" dan foydalanish bilan bir qatorda, 
+"ItemClickListeners" ni sozlash masalasini ham ko‘rib chiqasiz.
+
+00:06:04.480 --> 00:06:07.986
+Endi ilovani demo versiyadan chiqaramiz va 
+bunda barcha so‘zlar uchun "Andrea" ning ovozini 
+
+00:06:07.986 --> 00:06:08.744
+eshitishimiz kerak.
+
+00:06:08.744 --> 00:06:10.147
+Shunday qilib, bu safar iboralar bilan boshlaylik.
+
+00:06:10.147 --> 00:06:13.979
+&gt;&gt; [FOREIGN]
+&gt;&gt; Ajoyib.
+
+00:06:13.979 --> 00:06:14.699
+Keyin esa ranglarga o‘ting.
+
+00:06:14.699 --> 00:06:19.018
+&gt;&gt; [FOREIGN]
+&gt;&gt; Hozircha ovozlar yaxshi eshitilmoqda.
+
+00:06:19.018 --> 00:06:20.585
+Endi Oila a’zolariga o‘ting.
+
+00:06:20.585 --> 00:06:23.311
+&gt;&gt; [FOREIGN]
+&gt;&gt; Va nihoyat,
+
+00:06:23.311 --> 00:06:24.277
+bizning "Numbers Activity" (Raqamlar faoliyati).
+
+00:06:24.277 --> 00:06:28.700
+&gt;&gt; [FOREIGN]
+&gt;&gt; Juda yaxshi.
+
+00:06:28.700 --> 00:06:29.800
+Men sizning bir daqiqangizni olaman 
+
+00:06:29.800 --> 00:06:32.790
+va barcha og‘ir ishlarni
+qilganingiz bilan tabriklayman!
+
+00:06:32.790 --> 00:06:36.400
+Ushbu xususiyatlarning barchasini 
+mazkur ilovaga kiritib, yo‘l davomida 
+
+00:06:36.400 --> 00:06:40.010
+juda ko‘p yangi ko‘nikmalarni o‘rganib,
+katta bosqichdan o‘tishga erishdingiz.
+
+00:06:40.010 --> 00:06:42.420
+Shunday qilib, 
+bir oz vaqt o‘zingizga dam bering.
+
+00:06:42.420 --> 00:06:45.040
+Keyin esa do‘stlaringiz va 
+oilangizga ilovangizni ko‘rsating.
+
+00:06:45.040 --> 00:06:46.830
+Biz siz bilan haqiqatan ham g‘ururlanamiz
+va siz bunga loyiqsiz.
+

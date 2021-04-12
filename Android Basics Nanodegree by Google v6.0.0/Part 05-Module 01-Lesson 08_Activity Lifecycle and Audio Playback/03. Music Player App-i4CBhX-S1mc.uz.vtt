@@ -1,0 +1,429 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.470 --> 00:00:03.340
+Shunday qilib, "Musiqa pleyeri"
+deb ataluvchi yangi loyiha yaratishni boshlaymiz, 
+
+00:00:03.340 --> 00:00:06.460
+buning uchun "Android Studio" da yangi loyihani 
+boshlash uchun mo‘ljallangan maxsus tugmani bosamiz. 
+
+00:00:06.460 --> 00:00:09.070
+Men bu ilovani "MusicPlayer" 
+(Musiqa pleyeri) deb nomlayman.
+
+00:00:09.070 --> 00:00:12.298
+"Next" (Keyingi) tugmasini bosamiz shunda biz standart minimal dasturiy
+ta’minotni ishlab chiqarish uchun to‘palmni qabul qilayotgan bo‘lamiz.
+
+00:00:12.298 --> 00:00:15.370
+Endi esa "Empty Activity" 
+shablonini tanlab olamiz, buning uchun
+
+00:00:15.370 --> 00:00:16.910
+avval "Next" keyin esa "Finish" tugmalarini bosish lozim.
+
+00:00:18.670 --> 00:00:21.380
+Ushbu amallar bajarilgandan so‘ng tugmalar
+joylashish tartibini o‘zgartiradigan bo‘lsak, 
+
+00:00:21.380 --> 00:00:23.210
+ekrandagi tugmalar ikkita bo‘ladi.
+
+00:00:23.210 --> 00:00:26.470
+Shundan so‘ng o‘zimizning 
+"activity_main.xml" faylimizni 
+
+00:00:26.470 --> 00:00:29.780
+ochib olamiz, keyin "text view" ga o‘tamiz 
+so‘ngra uni yopiq qo‘yamiz. 
+
+00:00:29.780 --> 00:00:32.200
+Shunday qilib, asosiy "XML" 
+formatlash fayli ochilganda,
+
+00:00:32.200 --> 00:00:34.160
+"preview" (oldindan ko‘rish) panelini ochib olamiz.
+
+00:00:34.160 --> 00:00:38.380
+Men mavjud faoliyatning 
+asosiy "XML" faylini
+
+00:00:38.380 --> 00:00:41.010
+nisbiy joylashuvdan chiziqli
+joylashuvga o‘zgartirmoqchiman.
+
+00:00:41.010 --> 00:00:45.500
+Bunday o‘zgarishni amalga oshirish bizga ustma-ust 
+tushib qolgan "play" va "pause" tugmalarini 
+
+00:00:45.500 --> 00:00:49.820
+o‘zimiz xohlagan joyga kerakli 
+tartibda joylashtirish imkoniyatini beradi. 
+
+00:00:49.820 --> 00:00:53.132
+Ehtimol, men bularning 
+barchasini ekranning o‘rtasida yoki 
+
+00:00:53.132 --> 00:00:55.928
+gorizontal bir qatorda va hatto 
+vertikal holda joylashtirishni istarman. 
+
+00:00:55.928 --> 00:00:59.328
+Men bu yerga vertikal 
+joylashtirishni ham qo‘shmoqchiman. 
+
+00:00:59.328 --> 00:01:03.758
+Keyinchalik esa "textView" ni ham 
+tugmachaga o‘zgartirmoqchiman. 
+
+00:01:03.758 --> 00:01:06.510
+Endi esa ushbu tugmadan nusxa ko‘chirib, uni qo‘yamiz, 
+shunda bizda ikkita tugma hosil bo‘ladi.
+
+00:01:08.140 --> 00:01:11.118
+Birinchi tugmaga 
+"Play" nomini beraman. 
+
+00:01:11.118 --> 00:01:13.805
+Ikkinchi tugmani esa 
+"pause" deb nomlaymiz.
+
+00:01:13.805 --> 00:01:17.175
+Shuningdek, men har bir tugmaga ko‘rish
+identifikatori (ID)ni qo‘shmoqchiman, chunki, biz 
+
+00:01:17.175 --> 00:01:20.415
+tugmaning bosish holatini aniqlash uchun 
+ularga "Java" kod orqali murojaat qilishimiz kerak. 
+
+00:01:22.185 --> 00:01:25.455
+Endi esa yaxshi ko‘rinishga ega bo‘lgan 
+oldindan ko‘rish panelidagi tartibni ko‘rib chiqing.
+
+00:01:25.455 --> 00:01:28.005
+Endi asosiy faoliyat
+fayliga o‘tsak ham bo5ladi.
+
+00:01:28.005 --> 00:01:30.775
+Bu yerda men birinchi 
+darsga o‘xshab har bir tugmani 
+
+00:01:30.775 --> 00:01:34.720
+bosadigan tinglovchilarni biriktirmoqchiman, 
+biz ushbu tugmaga noma’lum 
+
+00:01:34.720 --> 00:01:38.130
+murojaatni amalga oshiramiz
+va bu qayta murojaat usulida ishlaydi. 
+
+00:01:38.130 --> 00:01:41.940
+Shunday qilib, "onCreate" usuli ichida 
+"findViewByld" usulidan foydalanib, 
+
+00:01:41.940 --> 00:01:45.360
+uni "ViewId" ga o‘tkazgan 
+"playButton" ni topmoqchiman.
+
+00:01:47.200 --> 00:01:49.430
+Keyin esa tugmaga 
+"OnClickListener" usulini o‘rnataman.
+
+00:01:53.500 --> 00:01:57.797
+"onClick" usulidagi 
+ko‘rsatmalar uchun, qo‘shiq fayli 
+
+00:01:57.797 --> 00:02:01.648
+qanday ijro etilishi aniqlanmagunicha 
+ekranda shunchaki "Tost" xabar paydo bo‘ladi. 
+
+00:02:01.648 --> 00:02:04.600
+[BLANK_AUDIO] 
+
+00:02:04.600 --> 00:02:07.068
+Xuddi shunday maqntiqni
+"pause" tugmasiga nisbatan ham qo‘llash mumkin.
+
+00:02:07.068 --> 00:02:11.024
+Men ushbu kod blokini tanlayman, 
+nusxa ko‘chiraman va nusxani joylashtiraman, 
+
+00:02:11.024 --> 00:02:14.757
+endi esa "pause" tugmasiga 
+murojaat qilish uchun "view ID" 
+
+00:02:14.757 --> 00:02:18.820
+(ko‘rish identifikatori)ning o‘zgaruvchan nomi
+va tost xabarini o‘zgartirishim kerak bo‘ladi.
+
+00:02:18.820 --> 00:02:22.160
+Keling, ushbu kod xuddi bizning telefonimizdagi kabi 
+ishlayotganligiga ishonch hosil qilib olaylik.
+
+00:02:22.160 --> 00:02:22.820
+Ajoyib.
+Shunday qilib, 
+
+00:02:22.820 --> 00:02:25.430
+har bir har bir tugmada 
+turli tost xabarlari paydo bo‘ladi. 
+
+00:02:25.430 --> 00:02:27.560
+Bulardan biri "play" , ikkinchisi esa "pause" tugmalari uchun.
+
+00:02:27.560 --> 00:02:29.920
+Hammasi joyida endi esa bularni 
+qo‘shiq fayliga qo‘shamiz.
+
+00:02:29.920 --> 00:02:32.980
+Endi men qayta ishlanmagan papkani 
+sizlarga ilgari ko‘rsatganimdek tozalayman.
+
+00:02:32.980 --> 00:02:35.390
+Bu mening kompyuterimdagi 
+qo‘shiq fayli, 
+
+00:02:35.390 --> 00:02:38.900
+qiziquvchilar uchun qo‘shimcha sifatida
+aytib o‘tishim mumkin, bu aslida dasturchining 
+
+00:02:38.900 --> 00:02:41.030
+"YouTube" kanalidagi treylerlar video qo‘shig‘idir.
+
+00:02:41.030 --> 00:02:42.461
+Endi ushbu fayldan nusxa ko‘chirib, 
+
+00:02:42.461 --> 00:02:45.608
+"Android Studio" dagi ishlov 
+berilmaagn papka ichiga joylashtiraman.
+
+00:02:45.608 --> 00:02:48.510
+Ajoyib, qo‘shiq fayli 
+bizning ilovamizga joylandi.
+
+00:02:48.510 --> 00:02:50.700
+Endi esa ushbu qo‘shiqni 
+qanday ijro ettirishni aniqlab olaylik.
+
+00:02:50.700 --> 00:02:53.820
+Buni amalga oshirish yo‘llaridan biri 
+bu oldingi "Media Player" paragrafiga qaytishdir, 
+
+00:02:53.820 --> 00:02:57.520
+lekin, men sizlarga bu ishni amalga oshirishning 
+boshqa yo‘lini ko‘rsatmoqchiman. 
+
+00:02:57.520 --> 00:03:02.210
+Shunday qilib, keling internetdan "Android" da 
+media fayllarni ijro ettirish bo‘yicha qo‘llanma qidiramiz. 
+
+00:03:02.210 --> 00:03:03.450
+Bu yerdagi birinchi natija ko‘rinishidan kerakliga o‘xshaydi.
+
+00:03:04.860 --> 00:03:07.640
+Mana bu kod parchalari 
+ham foydali ko‘rinadi.
+
+00:03:07.640 --> 00:03:08.970
+Kod tavsifini o‘qib ko‘radigan bo‘lsak, 
+
+00:03:08.970 --> 00:03:12.520
+kodning ushbu qatori biz uchun medianing 
+ijro etiluvchi ob’ektini yaratadiganga o‘xshaydi.
+
+00:03:12.520 --> 00:03:16.750
+Shunday qilib, biz ikkita kirishdan, kontekst 
+va ishlov berilmagan audio fayl uchun 
+
+00:03:16.750 --> 00:03:18.500
+manba identifikatoridan foydalanganimizga e’tibor bering. 
+
+00:03:18.500 --> 00:03:22.160
+Masalan, bu yerda "song" 
+(qo‘shiq) fayl nomidir.
+
+00:03:22.160 --> 00:03:27.080
+Media ijro etuvchi "(media pleer)" yaratilgandan so‘ng, 
+"start" va "pause" kabi usullarni chaqirishimiz mumkin.
+
+00:03:27.080 --> 00:03:30.760
+Bu "play" tugmasi uchun biz xohlagan
+va "pause" tugmasi uchun kerak bo‘lgan
+
+00:03:30.760 --> 00:03:32.130
+narsaga o‘xshaydi.
+
+00:03:32.130 --> 00:03:35.317
+Ushbu paragrafning qolgan qismida siz foydalanishingiz 
+mumkin bo‘lgan boshqa usullar haqida gap boradi
+
+00:03:35.317 --> 00:03:37.418
+va siz albatta keyinroq orqaga qaytib, 
+o‘tilganlarni takrorlab olishingiz mumkin. 
+
+00:03:37.418 --> 00:03:40.296
+Shunday qilib, kodning birinchi qatori 
+ko‘rinishidan yetarlicha kerakliga o‘xshaydi.
+
+00:03:40.296 --> 00:03:42.890
+Hozir esa men shunchaki nusxa ko‘chiraman 
+va uni ilovamizga joylashtiraman.
+
+00:03:42.890 --> 00:03:46.390
+Kodga qaytib o‘ylab ko‘raylik, 
+media ijro etuvchini qayerda yaratishimiz kerak?
+
+00:03:46.390 --> 00:03:48.670
+Testda aytib o‘tilganidek, 
+media ijro etuvchini 
+
+00:03:48.670 --> 00:03:51.920
+global o‘zgaruvchiga aylantirish lozim, 
+chunki biz har bir tugma uchun 
+
+00:03:51.920 --> 00:03:56.000
+"OnClickListeners" orqali 
+media ijro etuvchiga murojaat qilamiz.
+
+00:03:56.000 --> 00:04:00.460
+Agar bular siz uchun 
+tushunarsiz bo‘lsa xavotir olmang, 
+
+00:04:00.460 --> 00:04:03.760
+siz "Java" da ko‘proq tajriba orttirsangiz, 
+tugma bosgan tinglovchilar singari 
+
+00:04:03.760 --> 00:04:07.500
+noma’lum sinflarda ishlatiladigan o‘zgaruvchilarga
+bo‘lgan talablarni ham yaxshi tushunasiz.
+
+00:04:07.500 --> 00:04:09.570
+Keling, davom etamiz va media ijro etuvchisi 
+
+00:04:09.570 --> 00:04:11.800
+global o‘zgaruvchi ekanligiga 
+ishonch hosil qilib olamiz. 
+
+00:04:12.930 --> 00:04:15.780
+Bu yerda endi media ijro etuvchini 
+asosiy faoliyat faylida qachon o‘rnatamiz 
+
+00:04:15.780 --> 00:04:17.670
+yoki ishga tushiramiz? degan savol paydo bo‘ladi.
+
+00:04:17.670 --> 00:04:19.570
+Xo‘sh, bu "play" tugmasi 
+bosilganda amalaga oshirilishi kerakmi?
+
+00:04:21.380 --> 00:04:24.000
+Albatta yo‘q, bundan oldin biz 
+media ijro etuvchini sozlab olishimiz kerak.
+
+00:04:24.000 --> 00:04:27.700
+Keling, ilova uchun fayl yaratilganda 
+media ijro etuvchini ham sozlab olamiz,
+
+00:04:27.700 --> 00:04:30.680
+chunki, keyin har safar "play" tugmasini bosganimizda 
+media ijro ettirish ob’ekti tayyor turadi.
+
+00:04:31.700 --> 00:04:34.250
+Shuning uchun, men qo‘llanmada berilgan 
+koddan nusxa olib, bu yerga joylashtiraman. 
+
+00:04:35.320 --> 00:04:37.870
+Endi esa,
+men uni bizning ilovamizga moslashtirmoqchiman.
+
+00:04:37.870 --> 00:04:40.400
+Bu yerda men kiritilayotgan ob’ektni 
+qayta e’lon qilishim shart emas,
+
+00:04:40.400 --> 00:04:44.090
+chunki, kiritilayotgan o‘zgaruvchi allaqachon 
+global o‘zgaruvchi deb e’lon qilingan. 
+
+00:04:44.090 --> 00:04:47.225
+Shuningdek, "R.raw.song" nomi 
+
+00:04:47.225 --> 00:04:53.560
+"R.raw.android_trailer" nomiga o‘zgartirildi, 
+chunki, bu bizning qo‘shiq faylimiz nomidir.
+
+00:04:53.560 --> 00:04:55.940
+Keyin esa,
+"playButton ClickListener" dagi,
+
+00:04:55.940 --> 00:05:00.990
+tost xabarni o‘chirib tashlab bu yerga 
+"mediaPlayer.start" ni chaqiramiz.
+
+00:05:00.990 --> 00:05:04.028
+Shuningdek, "pauseButton ClickListener" 
+bilan ham Xuddi shunday amalni bajarib,
+
+00:05:04.028 --> 00:05:07.318
+tost xabarni o‘chiqib tashlab, 
+"mediaPlayer.pause" ni chaqiramiz.
+
+00:05:07.318 --> 00:05:08.838
+Endi esa ilovani ishga tushirgan holda uni sinab ko‘raylik.
+
+00:05:08.838 --> 00:05:15.458
+[MUSIC]
+
+00:05:15.458 --> 00:05:17.510
+Ajoyib.
+Haqiqatdan ham bu a’lo darajada yangramoqda.
+
+00:05:17.510 --> 00:05:19.560
+Shunday qilib musiqa ijro etilmoqda
+hamda "play" va 
+
+00:05:19.560 --> 00:05:21.910
+"pause" tugmalari ishlamoqda.
+
+00:05:21.910 --> 00:05:24.230
+Endi esa biz ilgari topilgan 
+qo‘llanmaga qaytamiz.
+
+00:05:24.230 --> 00:05:25.830
+Agar sizning qo‘shimcha vaqtingiz bo‘lsa, 
+
+00:05:25.830 --> 00:05:28.990
+boshqa media ijro ettirish usullari 
+bilan ham tajriba o‘tkazib ko‘rishingiz mumkin.
+
+00:05:28.990 --> 00:05:31.990
+Misol uchun bu yerda qo‘shiqning 
+boshqa qismiga o‘tish uchun 
+
+00:05:31.990 --> 00:05:35.880
+ishlatiladigan "seekTo" (izlash) usuli, 
+yoki katta hajmli ishlarda 
+
+00:05:35.880 --> 00:05:38.850
+ovozni o‘zgartirish uchun ishlatiladigan 
+"setVolume" usullari ham keltirilgan.
+
+00:05:38.850 --> 00:05:39.770
+Ko‘rib turganingizdek,
+
+00:05:39.770 --> 00:05:43.890
+to‘liq huquqli haqiqiy ilovaning qo‘shimcha 
+qiyinchiliklaridan holi bo‘lgan kichik namunaviy ilovani yozish 
+
+00:05:43.890 --> 00:05:48.010
+"Android" da yangi dasturiy ilova interfeysi 
+bilan qulay bo‘lishning yaxshi usuli hisoblanadi.
+
+00:05:48.010 --> 00:05:50.654
+Keling endi musiqa pleyeri 
+ilovasidan biroz chetlashaylik, 
+
+00:05:50.654 --> 00:05:53.600
+bunga keyinroq yana to‘xtalamiz, 
+hozir esa "Miwok" ilovasiga qaytaylik.
+

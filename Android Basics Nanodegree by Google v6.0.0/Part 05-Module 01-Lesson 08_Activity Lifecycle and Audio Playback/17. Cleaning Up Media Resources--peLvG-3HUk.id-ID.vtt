@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.110 --> 00:00:03.000
+Mari kita mulai dengan menambahkan potongan
+kode yang kami sediakan untuk Anda.
+
+00:00:03.000 --> 00:00:04.155
+Dan tambahkan kode itu ke aplikasi.
+
+00:00:04.155 --> 00:00:08.220
+Saya akan menyalin kode ini lalu
+beralih ke Android Studio dan
+
+00:00:08.220 --> 00:00:10.050
+menempelkannya di dasar
+numbersActivity.
+
+00:00:10.050 --> 00:00:13.900
+Sekarang saya ingin memanggil metode
+yang baru saja kita tambahkan
+
+00:00:13.900 --> 00:00:18.140
+releaseMediaPlayer saat file audio
+selesai diputar.
+
+00:00:18.140 --> 00:00:21.510
+Ini berarti saya perlu
+memasukkan onCompletionListener
+
+00:00:21.510 --> 00:00:23.080
+untuk media player.
+
+00:00:23.080 --> 00:00:27.070
+Ingatlah bahwa ini harus diatur
+setelah media player dimulai.
+
+00:00:27.070 --> 00:00:31.820
+Jadi saya akan menambahkan kode di bawah
+baris mMediaPlayer.start ini.
+
+00:00:31.820 --> 00:00:34.470
+Dan saya biarkan auto complete Android Studio
+
+00:00:34.470 --> 00:00:36.930
+menambahkan panggilan balik antarmuka
+di sini.
+
+00:00:36.930 --> 00:00:40.875
+Sekarang dalam panggilan balik metode
+completion saya dapat memanggil
+
+00:00:40.875 --> 00:00:42.220
+metode Media Player.
+
+00:00:42.220 --> 00:00:44.253
+[BLANK_AUDIO]
+
+00:00:44.253 --> 00:00:46.993
+Saya baru menyadari bahwa harus ada
+cara yang lebih efisien untuk melakukan hal ini.
+
+00:00:46.993 --> 00:00:50.593
+Daripada membuat onCompletionListener yang
+baru tiap kali kita mengeklik
+
+00:00:50.593 --> 00:00:54.193
+sebuah item list, kita bisa membuat
+satu contoh onCompletionListener
+
+00:00:54.193 --> 00:00:56.870
+dan menggunakannya lagi.
+
+00:00:56.870 --> 00:00:59.210
+Jadi dengan melakukan hal itu kita
+akan lebih efisien karena kita tidak perlu
+
+00:00:59.210 --> 00:01:03.380
+membuat tiap objek baru
+yang akan memakan resources baru.
+
+00:01:03.380 --> 00:01:06.790
+Saya ingin memindahkan blok kode ini, yang
+mengimplementasikan antarmuka
+
+00:01:06.790 --> 00:01:10.070
+onCompletonListener dan meletakkannya
+ke dalam variabel global.
+
+00:01:10.070 --> 00:01:11.630
+Jadinya seperti ini.
+
+00:01:11.630 --> 00:01:14.530
+Saya pindahkan kode yang
+mengimplementasikan antarmuka
+
+00:01:14.530 --> 00:01:15.430
+onCompletionListener.
+
+00:01:17.760 --> 00:01:22.100
+Dan memindahkannya ke variabel global
+yang saya sebut mCompletionListener.
+
+00:01:22.100 --> 00:01:28.180
+Kembali ke sini lagi, tiap kali saya membuat
+objek media player baru dan memulai
+
+00:01:28.180 --> 00:01:32.570
+player tersebut, saya bisa mengatur
+onCompletionListener ke variabel global itu.
+
+00:01:33.700 --> 00:01:36.062
+Saya akan memasukkan onCompletionListener
+
+00:01:36.062 --> 00:01:39.172
+lalu mengklarifikasi bahwa saya akan
+menambahkan beberapa komentar.
+
+00:01:39.172 --> 00:01:41.401
+[BLANK_AUDIO]
+
+00:01:41.401 --> 00:01:43.900
+Baik, ini mengakhiri
+tugas pertama.
+
+00:01:43.900 --> 00:01:46.830
+Jadi kita telah mengaitkan numbersActivity
+sehingga setelah selesai
+
+00:01:46.830 --> 00:01:50.630
+memutar file suara, dia akan
+melepaskan resources media player.
+
+00:01:50.630 --> 00:01:54.640
+Tugas kedua juga memerintahkan untuk
+melepaskan resources media player
+
+00:01:54.640 --> 00:01:57.760
+sebelum media player diinisialisasi
+untuk memainkan suara yang berbeda.
+
+00:01:57.760 --> 00:01:59.630
+Ini bisa terjadi jika, misalnya,
+
+00:01:59.630 --> 00:02:02.150
+pengguna mengetuk dengan cepat
+beberapa item list dalam satu baris.
+
+00:02:02.150 --> 00:02:06.070
+Perangkat mungkin tidak cukup waktu
+untuk memutar tiap file audio, jadi
+
+00:02:06.070 --> 00:02:08.380
+onCompletionListener
+mungkin tidak terpicu.
+
+00:02:09.410 --> 00:02:11.516
+Jadi jika kita sedang memutar
+sebuah suara dan
+
+00:02:11.516 --> 00:02:13.785
+pengguna mengeklik suara
+yang sangat berbeda,
+
+00:02:13.785 --> 00:02:16.593
+maka kita harus berhenti dan
+melepaskan resources media player lalu
+
+00:02:16.593 --> 00:02:20.380
+cepat-cepat membuat objek media player
+baru untuk zona saat ini.
+
+00:02:20.380 --> 00:02:25.480
+Kembali ke numbersActivity di metode
+onItem sebelum media player
+
+00:02:25.480 --> 00:02:29.280
+dibuat, kita akan melepaskan resources
+media player juga.
+
+00:02:30.360 --> 00:02:32.890
+Kita melakukannya untuk jaga-jaga jika
+dikonfigurasi untuk memutar file
+
+00:02:32.890 --> 00:02:33.460
+audio yang berbeda.
+
+00:02:34.890 --> 00:02:38.111
+Jadi, itulah semua perubahan yang perlu
+kita lakukan untuk numbersActivity
+
+00:02:38.111 --> 00:02:41.199
+dan sekarang saya akan mengulanginya
+untuk semua activity yang lain.
+
+00:02:41.199 --> 00:02:51.199
+[BLANK_AUDIO]
+
+00:02:54.081 --> 00:02:57.212
+Jadi, itulah semua perubahan yang perlu
+kita lakukan untuk semua activity
+
+00:02:57.212 --> 00:03:00.340
+dan sekarang saya akan menguji aplikasi
+untuk memastikan tidak ada yang rusak.
+
+00:03:00.340 --> 00:03:04.490
+Jadi aplikasi berjalan di
+perangkat saya dan secara visual,
+
+00:03:04.490 --> 00:03:05.810
+tampak tidak ada yang berubah.
+
+00:03:05.810 --> 00:03:07.180
+Bagus.
+
+00:03:07.180 --> 00:03:09.260
+Sekarang mari kita periksa
+apakah audio masih berfungsi.
+
+00:03:09.260 --> 00:03:11.620
+Saya akan mengetuk
+phrasesActivity.
+
+00:03:11.620 --> 00:03:14.410
+Di sini, apakah saya mengeklik suara
+untuk kata dan
+
+00:03:14.410 --> 00:03:19.060
+membiarkannya selesai atau saya mengeklik
+banyak sekali item list bergantian dengan cepat,
+
+00:03:19.060 --> 00:03:21.130
+resources media player
+seharusnya telah dibersihkan.
+
+00:03:22.170 --> 00:03:24.800
+Pertama-tama saya akan mencobanya dengan
+satu kata dan membiarkannya selesai.
+
+00:03:26.140 --> 00:03:30.260
+&gt;&gt; Baik, sekarang saya akan
+mengujinya dengan beberapa item list
+
+00:03:30.260 --> 00:03:32.945
+bergantian dengan cepat dan
+seharusnya langsung mati.
+
+00:03:32.945 --> 00:03:40.950
+[SOUND]
+Baik, kelihatannya bagus.
+

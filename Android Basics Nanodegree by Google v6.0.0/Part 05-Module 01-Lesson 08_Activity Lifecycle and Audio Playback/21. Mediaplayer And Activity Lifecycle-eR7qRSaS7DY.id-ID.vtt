@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.190 --> 00:00:02.730
+Tugas pengodean terakhir yang kita
+lakukan untuk aplikasi Miwok mencakup
+
+00:00:02.730 --> 00:00:06.190
+melepaskan resource MediaPlayer segera
+setelah kita tidak membutuhkannya lagi.
+
+00:00:06.190 --> 00:00:10.020
+Tapi kita tidak bisa selalu mengasumsikan
+bahwa file audio akan diputar hingga selesai.
+
+00:00:10.020 --> 00:00:13.605
+Karena jika diinterupsi oleh pengguna,
+yang beralih ke activity lain
+
+00:00:13.605 --> 00:00:16.935
+maka kita masih harus memastikan
+untuk menghapus semuanya dengan benar.
+
+00:00:16.935 --> 00:00:19.995
+Pertanyaan untuk Anda adalah bagaimana
+jika pengguna meninggalkan activity
+
+00:00:19.995 --> 00:00:24.055
+dan selama tahap siklus hidup activity itu
+kita melepaskan resources
+
+00:00:24.055 --> 00:00:25.785
+yang digunakan oleh MediaPlayer?
+
+00:00:25.785 --> 00:00:30.870
+Apakah pada saat onResume,
+onCreate, onStop, atau onDestroy?
+
+00:00:32.000 --> 00:00:34.930
+Setelah Anda memilih,
+modifikasilah aplikasi Anda sehingga
+
+00:00:34.930 --> 00:00:39.110
+kita dapat melepaskan resources
+selama tahap siklus hidup tersebut.
+
+00:00:39.110 --> 00:00:42.250
+Sekarang saya tunjukkan kepada Anda
+bagaimana aplikasi Anda sebelum dan
+
+00:00:42.250 --> 00:00:44.490
+sesudah melakukan perubahan kode ini.
+
+00:00:44.490 --> 00:00:46.730
+Saat ini, aplikasi Anda berperilaku seperti ini.
+
+00:00:46.730 --> 00:00:50.027
+Jika saya mengeklik sebuah kata, saya
+aplikasi mengucapkan kata itu keras-keras,
+
+00:00:50.027 --> 00:00:52.703
+dan jika saya meninggalkan activity tanpa
+membiarkan suara itu selesai,
+
+00:00:52.703 --> 00:00:55.649
+aplikasi masih akan memutar
+file audio utuh.
+
+00:00:55.649 --> 00:00:57.530
+[BLANK_AUDIO]
+
+00:00:59.520 --> 00:01:02.680
+&gt;&gt; Inilah versi kode yang
+telah kita bersihkan resources media-nya
+
+00:01:02.680 --> 00:01:05.500
+dengan benar menurut
+siklus hidup activity.
+
+00:01:05.500 --> 00:01:08.820
+Dalam hal ini, saat kita
+mengetuk tombol Home perangkat.
+
+00:01:08.820 --> 00:01:11.820
+Aplikasi harus segera berhenti
+memutar file audio,
+
+00:01:11.820 --> 00:01:13.290
+bahkan saat di tengah kata.
+
+00:01:13.290 --> 00:01:16.290
+Ini memperkuat fakta bahwa kita harus
+memutar audio hanya pada saat
+
+00:01:16.290 --> 00:01:18.180
+pengguna berada di dalam aplikasi kita.
+
+00:01:18.180 --> 00:01:21.780
+Karena dalam kasus kita, kita adalah
+aplikasi pemutar musik atau podcast.
+
+00:01:21.780 --> 00:01:24.054
+Biar saya demonstrasikan.
+
+00:01:24.054 --> 00:01:25.471
+[SOUND].
+
+00:01:25.471 --> 00:01:28.140
+Baik, silakan lanjut dan lakukan
+perubahan kode tersebut sekarang.
+
+00:01:28.140 --> 00:01:30.650
+Ingatlah untuk memperbarui
+keempat activity kita.
+

@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.337 --> 00:00:03.168
+Aqui está o diagrama
+para a 1ª pergunta.
+
+00:00:03.201 --> 00:00:06.368
+É assim que a classe Word ficará
+depois de a modificarmos
+
+00:00:06.401 --> 00:00:09.535
+para que contenha a ID
+de recurso de áudio para cada palavra.
+
+00:00:09.568 --> 00:00:13.735
+Com isso, podemos criar um ArrayList
+dos objetos para cada categoria.
+
+00:00:13.768 --> 00:00:17.335
+Agora, a 2ª pergunta.
+Quando um item da lista é clicado,
+
+00:00:17.368 --> 00:00:22.401
+o onItemClickListener é acionado,
+e o método onItemClick() é executado.
+
+00:00:22.435 --> 00:00:25.001
+Este método
+tem 4 entradas diferentes.
+
+00:00:25.035 --> 00:00:27.135
+O seu código
+dentro do método onItemClick()
+
+00:00:27.168 --> 00:00:30.001
+pode se aproveitar
+de uma destas variáveis.
+
+00:00:30.035 --> 00:00:32.033
+Se olharmos
+a documentação oficial Android
+
+00:00:32.066 --> 00:00:34.635
+que mostramos
+antes do método,
+
+00:00:34.668 --> 00:00:38.035
+há uma descrição
+sobre o que cada parâmetro significa.
+
+00:00:38.068 --> 00:00:40.768
+Vamos analisar cada uma
+destas 4 escolhas.
+
+00:00:40.801 --> 00:00:44.601
+A 1ª resposta, AdapterView,
+é só uma referência para a ListView,
+
+00:00:44.635 --> 00:00:46.535
+e não é
+o que queremos aqui.
+
+00:00:46.568 --> 00:00:47.735
+A 2ª escolha, View,
+
+00:00:47.768 --> 00:00:49.801
+é a exibição dos itens
+que clicamos da lista.
+
+00:00:49.868 --> 00:00:51.301
+Isto é quase
+o que queremos.
+
+00:00:51.335 --> 00:00:54.535
+Com ela, podemos achar a TextView
+dentro do layout dos itens da lista
+
+00:00:54.568 --> 00:00:55.868
+e chamar o método getText
+
+00:00:55.901 --> 00:00:58.035
+para pegar a palavra desejada
+como string.
+
+00:00:58.068 --> 00:01:01.968
+Mas só ter uma string não nos ajudaria
+a achar o áudio associado a cada palavra.
+
+00:01:02.001 --> 00:01:04.468
+Então não precisamos
+deste parâmetro.
+
+00:01:04.501 --> 00:01:06.168
+Em seguida, temos position,
+
+00:01:06.201 --> 00:01:10.301
+que é a posição do item dentro
+da fonte de dados do adaptador.
+
+00:01:10.335 --> 00:01:14.568
+Se o 2º item da lista fosse clicado,
+ele corresponderia à posição 2
+
+00:01:14.601 --> 00:01:17.101
+dentro da lista de dados interna
+do adaptador.
+
+00:01:17.135 --> 00:01:20.968
+Esta escolha é bem promissora
+porque nos leva ao objeto Word
+
+00:01:21.001 --> 00:01:23.368
+dentro da ArrayList, e,
+partindo dele,
+
+00:01:23.401 --> 00:01:25.768
+podemos recuperar
+a ID de recurso de áudio.
+
+00:01:25.801 --> 00:01:28.735
+Para sermos meticulosos,
+vamos ver a última opção.
+
+00:01:28.768 --> 00:01:30.368
+Esta última escolha, ID,
+
+00:01:30.401 --> 00:01:33.235
+é a ID para a linha do item
+em que clicamos.
+
+00:01:33.268 --> 00:01:36.135
+Dentro do adaptador,
+você pode especificar a ID numérica
+
+00:01:36.168 --> 00:01:37.601
+para identificar cada linha.
+
+00:01:37.635 --> 00:01:40.335
+Você também pode usar
+números aleatórios para cada linha,
+
+00:01:40.368 --> 00:01:43.435
+mas, em geral,
+não precisamos depender da ID.
+
+00:01:43.468 --> 00:01:48.368
+Depois de analisar todas as respostas,
+a melhor é o parâmetro position,
+
+00:01:48.401 --> 00:01:51.001
+porque dele conseguimos
+o objeto Word correspondente
+
+00:01:51.035 --> 00:01:52.601
+da ArrayList de palavras.
+
+00:01:52.635 --> 00:01:55.501
+Ou seja, podemos achar
+a ID de recurso de áudio correta
+
+00:01:55.535 --> 00:01:59.201
+e configurar o objeto MediaPlayer
+para tocar esse áudio.
+

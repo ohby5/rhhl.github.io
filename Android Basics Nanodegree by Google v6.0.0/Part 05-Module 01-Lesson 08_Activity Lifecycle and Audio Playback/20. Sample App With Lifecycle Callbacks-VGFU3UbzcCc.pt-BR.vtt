@@ -1,0 +1,165 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.333
+Para mostrar como registrar
+estas callbacks do ciclo de vida das activities,
+
+00:00:03.367 --> 00:00:05.800
+criei um novo projeto
+chamado Lifecycle.
+
+00:00:05.833 --> 00:00:10.867
+Usei o template Empty Activity
+e comecei a modificar o arquivo MainActivity.
+
+00:00:10.900 --> 00:00:15.100
+Eu sobrepus cada método principal
+do ciclo de vida das activities:
+
+00:00:15.133 --> 00:00:18.967
+onCreate, onStart,
+onResume,
+
+00:00:19.633 --> 00:00:21.633
+onPause, e assim vai.
+
+00:00:21.667 --> 00:00:24.033
+Vou dar um exemplo
+de como fiz isso.
+
+00:00:24.067 --> 00:00:26.767
+Na minha versão do Android Studio,
+eu tenho um atalho de teclado
+
+00:00:26.800 --> 00:00:30.467
+para o menu de sobreposição de método.
+Eu aperto Ctrl+O,
+
+00:00:30.500 --> 00:00:33.000
+e aparece uma lista de métodos
+que posso sobrepor.
+
+00:00:33.033 --> 00:00:34.933
+Aqui,
+vou escolher o onStop.
+
+00:00:34.967 --> 00:00:38.133
+Eu clico em OK,
+e isso insere o método para mim.
+
+00:00:38.167 --> 00:00:42.033
+O Android Studio me ajudou automaticamente
+a adicionar o método no aplicativo.
+
+00:00:42.067 --> 00:00:45.333
+Dentro de cada método,
+vou chamar sua versão superclasse.
+
+00:00:45.367 --> 00:00:48.267
+Isso executará instruções dentro
+do método onStop
+
+00:00:48.300 --> 00:00:50.300
+da AppCompatActivity.
+
+00:00:50.333 --> 00:00:52.767
+Esta é a classe
+que sobrepusemos.
+
+00:00:52.800 --> 00:00:55.033
+Esta classe super
+é a que faz o trabalho real
+
+00:00:55.067 --> 00:00:58.133
+quanto a mostrar a janela na tela
+e outras coisas dos bastidores
+
+00:00:58.167 --> 00:00:59.800
+que fazem
+a activity funcionar.
+
+00:00:59.833 --> 00:01:02.267
+Sempre que sobrepuser um método
+de ciclo de vida,
+
+00:01:02.300 --> 00:01:05.700
+chame antes a versão de classe super
+daquele método.
+
+00:01:05.733 --> 00:01:08.467
+Depois desta linha,
+podemos adicionar nossa própria lógica.
+
+00:01:08.500 --> 00:01:12.267
+Vou adicionar uma linha de código que imprime
+uma mensagem log com o nome do método
+
+00:01:12.300 --> 00:01:15.500
+e que método de ciclo de vida da activity
+é acionado.
+
+00:01:17.633 --> 00:01:20.933
+Com o aplicativo em execução,
+a activity é lançada imediatamente,
+
+00:01:20.967 --> 00:01:23.300
+e posso checar os logs
+e ver que os métodos onCreate,
+
+00:01:23.333 --> 00:01:25.900
+onStart
+e onResume foram chamados.
+
+00:01:25.933 --> 00:01:27.700
+Ao clicar no botão "Home",
+
+00:01:28.400 --> 00:01:30.433
+a activity
+não é mais visível.
+
+00:01:30.467 --> 00:01:33.533
+Então os métodos onPause
+e onStop devem ter sido chamados
+
+00:01:33.567 --> 00:01:36.600
+Aqui estão eles nos logs.
+Estamos indo bem.
+
+00:01:36.633 --> 00:01:38.733
+Quando eu volto
+ao aplicativo...
+
+00:01:44.800 --> 00:01:47.567
+os métodos onStart
+e onResume são chamados.
+
+00:01:47.600 --> 00:01:51.000
+Aí a activity fica ativa,
+e eu posso interagir com ela.
+
+00:01:51.033 --> 00:01:53.433
+Sei que foi muita informação
+para absorver,
+
+00:01:53.467 --> 00:01:56.333
+e pode ser difícil de entender de primeira,
+mas não se preocupe.
+
+00:01:56.367 --> 00:01:59.100
+Ao ver mais cenários neste
+e em outros aplicativos,
+
+00:01:59.133 --> 00:02:01.667
+você saberá gerir melhor
+o ciclo de vida das activities.
+
+00:02:01.700 --> 00:02:04.233
+Se você quiser experimentar outros métodos
+desse tipo,
+
+00:02:04.267 --> 00:02:07.367
+criei um link logo abaixo
+para o código que vimos.
+

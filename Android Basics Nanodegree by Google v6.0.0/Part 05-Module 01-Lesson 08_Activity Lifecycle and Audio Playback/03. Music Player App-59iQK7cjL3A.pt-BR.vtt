@@ -1,0 +1,228 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.233
+Olhando para nossa lista de tarefas,
+podemos começar de cima para baixo.
+
+00:00:04.267 --> 00:00:07.133
+Na lição passada,
+mencionei que há várias maneiras
+
+00:00:07.167 --> 00:00:08.900
+de priorizar suas tarefas.
+
+00:00:08.933 --> 00:00:12.700
+Uma delas é tentar as mais difíceis
+ou arriscadas primeiro
+
+00:00:12.733 --> 00:00:15.233
+para garantir
+se o recurso é possível.
+
+00:00:15.267 --> 00:00:17.800
+Nunca tocamos
+um arquivo de áudio antes,
+
+00:00:17.833 --> 00:00:19.900
+então vamos ver
+se ele funciona.
+
+00:00:19.933 --> 00:00:25.167
+A tarefa menos arriscada é adicionar
+o ícone do botão "tocar" aos itens de lista,
+
+00:00:25.200 --> 00:00:29.400
+pois já modificamos layouts antes,
+então sabemos que é possível.
+
+00:00:29.433 --> 00:00:33.100
+Então vamos deixar esta mudança de interface
+para o fim da lição,
+
+00:00:33.133 --> 00:00:35.300
+na hora
+dos retoques visuais.
+
+00:00:35.333 --> 00:00:38.500
+Para começar, você vai criar
+um aplicativo reprodutor de música pequeno
+
+00:00:38.533 --> 00:00:40.467
+separado
+do aplicativo Miwok.
+
+00:00:40.500 --> 00:00:44.000
+Os desenvolvedores criam aplicativos pequenos
+para testar novas tecnologias
+
+00:00:44.033 --> 00:00:46.500
+antes de adicioná-las
+ao aplicativo maior.
+
+00:00:46.533 --> 00:00:50.767
+Criando este aplicativo de exemplo,
+você conhecerá a API MediaPlayer.
+
+00:00:50.800 --> 00:00:55.000
+Aliás, o termo API
+pode aparecer às vezes.
+
+00:00:55.033 --> 00:00:59.067
+Ele é só um acrônimo
+para "interface de programação de aplicações".
+
+00:00:59.100 --> 00:01:03.033
+Quando falamos de interfaces,
+vimos que elas são como contratos
+
+00:01:03.067 --> 00:01:08.433
+prometendo uma certa funcionalidade,
+como reproduzir mídia com a classe MediaPlayer.
+
+00:01:08.467 --> 00:01:11.633
+Não precisamos saber dos detalhes
+da classe MediaPlayer,
+
+00:01:11.667 --> 00:01:14.700
+como a forma que ela faz o som sair
+dos alto-falantes.
+
+00:01:14.733 --> 00:01:17.967
+Como desenvolvedores,
+só ligamos para o fato de que podemos usá-la
+
+00:01:18.000 --> 00:01:21.833
+e chamar métodos nela
+para tocar arquivos de mídia.
+
+00:01:21.867 --> 00:01:27.633
+Para este quiz, você construirá este aplicativo
+de reprodução simplificado para uma só música.
+
+00:01:27.667 --> 00:01:30.133
+Neste aplicativo,
+o botão "tocar"...
+
+00:01:35.900 --> 00:01:38.900
+toca uma música,
+e o "pause"...
+
+00:01:40.067 --> 00:01:41.367
+interrompe a música.
+
+00:01:41.400 --> 00:01:44.967
+Ao clicar em "tocar" de novo,
+ela vai tocar de onde parou.
+
+00:01:51.567 --> 00:01:54.600
+Primeiro,
+crie um novo projeto no Android Studio,
+
+00:01:54.633 --> 00:01:58.633
+comece com o template Empty Activity
+e construa este layout.
+
+00:01:58.667 --> 00:02:01.933
+Nas anotações abaixo do quiz,
+há um link para ajudá-lo
+
+00:02:01.967 --> 00:02:04.700
+a baixar amostras de arquivos MP3
+para seu aplicativo.
+
+00:02:04.733 --> 00:02:07.333
+Você também pode usar
+seus próprios arquivos MP3.
+
+00:02:07.367 --> 00:02:12.867
+Certifique-se de que o áudio esteja armazenado
+na pasta raw dentro do diretório res.
+
+00:02:13.467 --> 00:02:17.500
+Para criá-la,
+dentro da aba de estrutura Project,
+
+00:02:18.400 --> 00:02:21.833
+clique com o botão direito na pasta res,
+em "novo"
+
+00:02:21.867 --> 00:02:24.667
+e em "diretório de recursos
+do Android".
+
+00:02:26.100 --> 00:02:29.467
+Aí chame o novo diretório
+de "raw",
+
+00:02:29.500 --> 00:02:32.900
+escolha o tipo de recurso "raw"
+também
+
+00:02:32.933 --> 00:02:34.200
+e clique em OK.
+
+00:02:35.200 --> 00:02:38.700
+Aí copie e cole o arquivo de música
+na pasta raw.
+
+00:02:39.500 --> 00:02:41.933
+Nosso arquivo MP3
+é pré-codificado
+
+00:02:41.967 --> 00:02:45.300
+e precisa ser processado
+na forma bruta ou "raw".
+
+00:02:45.333 --> 00:02:48.333
+Para uma descrição detalhada
+de pastas de recurso,
+
+00:02:48.367 --> 00:02:52.300
+veja o artigo sobre o fornecimento de recursos
+nas anotações abaixo do quiz.
+
+00:02:52.333 --> 00:02:57.733
+Depois, adicione o arquivo de áudio fornecido
+ao diretório res/raw do aplicativo.
+
+00:02:58.400 --> 00:03:01.933
+Aí modifique o código
+adicionando OnClickListener
+
+00:03:01.967 --> 00:03:05.700
+para que cada botão toque
+e interrompa a música.
+
+00:03:05.733 --> 00:03:10.900
+Também tente outras funcionalidades
+da classe MediaPlayer.
+
+00:03:10.933 --> 00:03:15.400
+Por exemplo, você pode tentar
+adicionar um botão que muda o volume
+
+00:03:15.433 --> 00:03:17.933
+ou pula
+para o meio da música.
+
+00:03:17.967 --> 00:03:19.100
+Para esta tarefa,
+
+00:03:19.133 --> 00:03:22.267
+você terá que pesquisar
+como usar o MediaPlayer no Android.
+
+00:03:22.300 --> 00:03:26.000
+Para tudo isto funcionar,
+não daremos o site exato para referenciar.
+
+00:03:26.033 --> 00:03:29.933
+Em vez disso,
+veja tutoriais sobre isso sozinho
+
+00:03:29.967 --> 00:03:34.500
+e use o processo de tentativa e erro
+para tudo funcionar. Boa sorte!
+

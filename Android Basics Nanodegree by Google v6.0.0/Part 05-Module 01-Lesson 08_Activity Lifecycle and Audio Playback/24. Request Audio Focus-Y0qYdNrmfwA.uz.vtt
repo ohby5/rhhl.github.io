@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.250 --> 00:00:03.448
+Shunday qilib, audio fokusni talab 
+qilganimizda, biz oqim turini belgilashimiz kerak.
+
+00:00:03.448 --> 00:00:06.610
+Shuni esda tutingki, "Android" sizga
+ushbu variantlarni tanlash imkoniyatini beradi.
+
+00:00:06.610 --> 00:00:10.648
+Xo‘sh, biz bularni 
+doimiy ommaviy bo‘limdagi "AudioManager" ning 
+
+00:00:10.648 --> 00:00:11.208
+ma’lumotlari qismida topdik.
+
+00:00:11.208 --> 00:00:13.364
+Ammo ushbu tavsiflarning
+barchasini o‘qib chiqqandan so‘ng, 
+
+00:00:13.364 --> 00:00:15.480
+aytishimiz mumkinki, ularning 
+hech biri mos kelmaydiganga o‘xshaydi.
+
+00:00:15.480 --> 00:00:17.130
+Bizda qisqa audio fayl mavjud.
+
+00:00:17.130 --> 00:00:18.430
+Shunday qilib, bu signal emas.
+
+00:00:18.430 --> 00:00:21.850
+Bu telefon raqamlarini terishda 
+ishlatiladigan "DTMF" ohangi emas.
+
+00:00:21.850 --> 00:00:24.920
+Va bu haqiqatan ham musiqa yoki 
+biron bir narsa haqida xabar berish emas.
+
+00:00:24.920 --> 00:00:28.300
+Shuningdek, bu tizim ovozi 
+yoki ovozli qo‘ng‘iroq emas.
+
+00:00:28.300 --> 00:00:31.900
+Xo‘sh, ushbu variantlar ichidan 
+"STREAM_MUSIC" eng mos keladi.
+
+00:00:31.900 --> 00:00:35.260
+Shunday qilib, audio, musiqa 
+yoki "podcast" ijro etuvchi kabi 
+
+00:00:35.260 --> 00:00:38.740
+ilovalarni ishlab chiqayotganda 
+ushbu "STREAM" turidan foydalanishingiz mumkin.
+
+00:00:38.740 --> 00:00:40.090
+Demak, birinchi savol uchun 
+
+00:00:40.090 --> 00:00:45.750
+biz xohlagan oqim turi - 
+bu "AudioManager.STREAM_MUSIC" . 
+
+00:00:45.750 --> 00:00:48.060
+Keling, endi bizning uchinchi 
+parametrimiz "durationHint" ni aniqlaymiz.
+
+00:00:49.280 --> 00:00:52.830
+Endi esa, "requestAudioFocus" 
+usulining hujjatlariga qaytamiz.
+
+00:00:52.830 --> 00:00:55.050
+"durationHint" uchun parametr 
+tavsiflarini o‘qib aytishimiz mumkinki,
+
+00:00:55.050 --> 00:00:57.760
+biz uchun "AUDIOFOCUS_GAIN_TRANSIENT" 
+eng mos keladi, chunki bu ovozni qisqa vaqtga 
+
+00:00:57.760 --> 00:01:01.730
+yo‘naltirishni talab 
+qilishimizni anglatadi, 
+
+00:01:01.730 --> 00:01:04.780
+buning sababi shundaki, bizning 
+audio fayllarimiz juda qisqa va 
+
+00:01:04.780 --> 00:01:06.960
+bir necha soniya
+davomida ijro etiladi xolos.
+
+00:01:06.960 --> 00:01:09.620
+Shunday qilib, boshqa 
+audio fokuslangan holatlar biz uchun 
+
+00:01:09.620 --> 00:01:10.320
+unchalik ahamiyatli bo‘lmaydi.
+
+00:01:10.320 --> 00:01:13.320
+Masalan, biz uzoq davom etadigan 
+qo‘shiq yoki videoni ijro qilmayapmiz,
+
+00:01:13.320 --> 00:01:15.177
+shuning uchun bizga "AUDIOFOCUS_GAIN" kerak emas.
+
+00:01:15.177 --> 00:01:18.029
+Bundan tashqari, 
+"AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIV" 
+
+00:01:18.029 --> 00:01:20.944
+bizning ovozimiz tinglanganda 
+bildirish xabarlari kabi tizim 
+
+00:01:20.944 --> 00:01:23.218
+tovushlarini eshitilmasligini anglatadi. 
+
+00:01:23.218 --> 00:01:26.012
+Bizning foydalanuvchi ushbu muhim 
+tovushlarni e’tibordan chetda qoldirishini istamaymiz, 
+
+00:01:26.012 --> 00:01:28.568
+shuning uchun biz ushbu imkoniyatdan foydalanmaymiz.
+
+00:01:28.568 --> 00:01:29.092
+Va nihoyat, 
+
+00:01:29.092 --> 00:01:32.650
+"AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK" 
+ishlashi mumkin edi, ammo undan foydalanish 
+
+00:01:32.650 --> 00:01:35.190
+fonda shovqin bo‘lishi
+mumkinligini anglatadi.
+
+00:01:35.190 --> 00:01:38.700
+Endi "ducking" nimani anglatishini 
+oydinlashtirish uchun keling, ushbu hujjatga o‘tamiz.
+
+00:01:38.700 --> 00:01:42.020
+Shunday qilib, ushbu birinchi 
+jumlada aytilishicha, u qisqa vaqt 
+
+00:01:42.020 --> 00:01:45.372
+davom etishi kutilgan audio fokusning 
+vaqtincha so‘rovini bildirish uchun 
+
+00:01:45.372 --> 00:01:46.560
+ishlatiladi va boshqa audio dasturlar 
+
+00:01:46.560 --> 00:01:50.930
+ijro balandligini 
+pasaytirgandan so‘ng ijro etishlari mumkin.
+
+00:01:50.930 --> 00:01:55.500
+Demak, bu holat "(ducking)" 
+pastga tushish yoki darajani tushirish deb nomlanadi.
+
+00:01:55.500 --> 00:01:58.420
+Masalan, bizning holatlarimizda,
+agar musiqa yangrayotgan bo‘lsa va 
+
+00:01:58.420 --> 00:02:02.030
+foydalanuvchi "Miwok" so‘zini eshitishni
+istasa, biz bu qo‘shiqni "Miwok" so‘zi bilan 
+
+00:02:02.030 --> 00:02:06.133
+bir vaqtning o‘zida ijro etishni xohlamaymiz, 
+hatto bu qo‘shiq kamroq hajmda ijro etilsa ham.
+
+00:02:06.133 --> 00:02:09.060
+Shunday qilib, bizning ovozimizni 
+tinglashni xohlasangiz, tizim tovushlaridan tashqari,
+
+00:02:09.060 --> 00:02:13.030
+hamma narsani vaqtincha 
+o‘chirib qo‘yishimiz lozim.
+
+00:02:13.030 --> 00:02:19.448
+Keling, bu holatda
+"AudioManager.AUDIO_GAIN_TRANSIENT" ni ishlatamiz.
+
+00:02:19.448 --> 00:02:20.990
+Ajoyib o‘rganilgan ish.
+
+00:02:20.990 --> 00:02:24.260
+Siz ushbu hujjatlarni 
+o‘qish orqali "AudioManager" bilan 
+
+00:02:24.260 --> 00:02:25.330
+ko‘proq tanishasiz.
+
+00:02:25.330 --> 00:02:27.850
+Shunday qilib, keling,
+keyingi savollarga o‘taylik.
+

@@ -1,0 +1,163 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.270 --> 00:00:03.800
+Sebagian besar dari kode yang
+telah Anda tulis adalah sinkronis, dan
+
+00:00:03.800 --> 00:00:08.350
+ini berarti bahwa tiap baris kode
+dieksekusi secara berurutan.
+
+00:00:08.350 --> 00:00:11.330
+Dan Anda harus menunggu tiap baris untuk
+selesai mengeksekusi sebelum berlanjut
+
+00:00:11.330 --> 00:00:16.020
+ke baris berikutnya, tapi baru-baru ini kita telah
+belajar tentang panggilan balik asinkronis.
+
+00:00:16.020 --> 00:00:20.380
+Artinya, kita memberi tahu sistem bahwa
+kita tertarik dengan suatu kejadian tertentu,
+
+00:00:20.380 --> 00:00:23.600
+seperti kejadian klik, lalu memerintahkan
+sistem untuk memberi tahu kita
+
+00:00:23.600 --> 00:00:26.790
+atau memanggil kita saat kejadian terjadi.
+
+00:00:26.790 --> 00:00:30.010
+Sementara itu, kita bisa mengerjakan hal
+lain dalam aplikasi, dan
+
+00:00:30.010 --> 00:00:32.530
+artinya kita tidak hanya duduk
+menganggur atau menunggu
+
+00:00:32.530 --> 00:00:35.000
+pengguna mengeklik
+tombol pada layar.
+
+00:00:35.000 --> 00:00:37.980
+Saat kejadian terjadi, atau
+jika memang benar-benar terjadi, maka
+
+00:00:37.980 --> 00:00:41.790
+sistem akan memanggil kita dan kita dapat
+mengeksekusi instruksi yang telah ditentukan.
+
+00:00:42.800 --> 00:00:46.140
+Panggilan balik onClickListener
+dan list view pada panggilan balik
+
+00:00:46.140 --> 00:00:50.910
+I Don't Click Listener merupakan
+contoh panggilan balik asinkronis.
+
+00:00:50.910 --> 00:00:55.620
+Misalnya, kita hanya ingin memutar file audio
+untuk tiap kata saat sistem
+
+00:00:55.620 --> 00:00:59.400
+memanggil kita dan memberi tahu kita bahwa
+item list tertentu diklik.
+
+00:01:00.520 --> 00:01:04.060
+Artinya, saat kita menunggu,
+kita masih bisa melakukan hal lain,
+
+00:01:04.060 --> 00:01:07.290
+seperti menggulir list, atau menunggu
+kejadian input pengguna.
+
+00:01:08.380 --> 00:01:11.170
+Jadi, melakukan sesuatu sementara
+kita menunggu kejadian terjadi dan
+
+00:01:11.170 --> 00:01:15.400
+kemudian bertindak disebut
+sebagai panggilan balik asinkronis.
+
+00:01:15.400 --> 00:01:18.910
+Pasti Anda juga pernah mendengarnya
+disebut sebagai panggilan balik async.
+
+00:01:18.910 --> 00:01:23.980
+Panggilan balik A-S-Y-N-C, async.
+
+00:01:23.980 --> 00:01:26.290
+Saat Anda belajar lebih banyak
+tentang pengembangan Android,
+
+00:01:26.290 --> 00:01:29.480
+Anda akan menyadari bahwa panggilan balik
+async adalah pola umum dalam Android
+
+00:01:29.480 --> 00:01:32.570
+untuk mengatur listener bagi
+kejadian pada perangkat.
+
+00:01:32.570 --> 00:01:35.649
+Misalnya, ada listener untuk saat
+lokasi pengguna berubah.
+
+00:01:36.710 --> 00:01:40.610
+Agar aplikasi berperilaku seperti
+yang diharapkan pengguna, Anda harus mampu
+
+00:01:40.610 --> 00:01:44.490
+mengendalikannya dan mampu
+menangani kasus tersebut dengan benar.
+
+00:01:45.860 --> 00:01:48.220
+Mari belajar lebih banyak
+tentang panggilan balik lain.
+
+00:01:49.740 --> 00:01:51.950
+API media player
+menawarkan beberapa panggilan balik
+
+00:01:51.950 --> 00:01:55.980
+sehingga pengembang dapat diberi tahu
+saat kejadian tertentu terjadi.
+
+00:01:55.980 --> 00:01:59.330
+Khususnya, ada panggilan balik yang
+memberi tahu saat audio atau
+
+00:01:59.330 --> 00:02:00.700
+file media selesai diputar.
+
+00:02:02.270 --> 00:02:05.280
+Bisakah Anda mencari secara online untuk
+membayangkan metode panggilan balik tersebut?
+
+00:02:05.280 --> 00:02:07.200
+Tuliskan jawabannya
+di kota ini setelah Anda menemukannya.
+
+00:02:08.380 --> 00:02:09.330
+Saat Anda menemukan jawaban tersebut,
+
+00:02:09.330 --> 00:02:13.180
+saya ingin menggunakan informasi tersebut
+untuk memodifikasi aplikasi music player sampel.
+
+00:02:14.270 --> 00:02:15.560
+Jadi, mengubah aplikasi sehingga
+
+00:02:15.560 --> 00:02:19.530
+saat lagu selesai diputar, akan menyembulkan
+pesan yang mengatakan "saya sudah selesai".
+
+00:02:20.950 --> 00:02:22.830
+Langkah ini dapat menjadi
+agak rumit, maka
+
+00:02:22.830 --> 00:02:25.650
+perhatikan petunjuk yang disediakan
+untuk Anda di bawah kuis.
+

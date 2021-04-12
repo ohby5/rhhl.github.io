@@ -1,0 +1,238 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.033 --> 00:00:02.000
+Quando criamos uma activity,
+
+00:00:02.033 --> 00:00:05.133
+ela passa pelos estágios
+do ciclo de vida de primeiro ser criada,
+
+00:00:05.167 --> 00:00:08.000
+iniciada e aí retomada.
+
+00:00:08.033 --> 00:00:11.133
+Aí, o usuário pode interagir
+com ela.
+
+00:00:11.167 --> 00:00:14.700
+Quando o usuário sai da activity,
+ela vai para o estado pausado
+
+00:00:14.733 --> 00:00:16.133
+e, depois, interrompido.
+
+00:00:16.167 --> 00:00:19.333
+O sistema mata a activity
+por não ser mais necessária,
+
+00:00:19.367 --> 00:00:21.433
+e aí ela vai
+para o estado destruído.
+
+00:00:21.467 --> 00:00:24.400
+Como o método onDestroy
+pode não ser chamado,
+
+00:00:24.433 --> 00:00:29.100
+só temos certeza de que os métodos
+onPause e onStop serão chamados.
+
+00:00:29.133 --> 00:00:30.800
+Vamos ver de novo
+a documentação
+
+00:00:30.833 --> 00:00:34.500
+para o método release
+na classe MediaPlayer.
+
+00:00:34.533 --> 00:00:35.833
+Aqui diz que,
+
+00:00:35.867 --> 00:00:38.767
+quando uma activity é pausada
+pelo método onPause
+
+00:00:38.800 --> 00:00:40.967
+ou interrompida
+pelo método onStop,
+
+00:00:41.000 --> 00:00:45.633
+nosso método release é chamado
+para liberar o objeto MediaPlayer.
+
+00:00:45.667 --> 00:00:48.667
+Neste caso,
+qualquer método de ciclo de vida serve.
+
+00:00:48.700 --> 00:00:51.233
+Tanto faz o método onPause
+ou o onStop,
+
+00:00:51.267 --> 00:00:53.667
+pois você só precisa liberá-lo
+uma vez.
+
+00:00:53.700 --> 00:00:57.300
+Vamos escolher liberar os recursos
+no método onStop.
+
+00:00:57.333 --> 00:00:59.567
+Quando a activity
+estiver escondida do usuário,
+
+00:00:59.600 --> 00:01:01.366
+liberaremos os recursos
+do MediaPlayer,
+
+00:01:01.400 --> 00:01:04.167
+mesmo se ela não tiver terminado
+de tocar o áudio.
+
+00:01:04.200 --> 00:01:06.233
+Vamos fazer as mudanças
+no aplicativo agora.
+
+00:01:06.267 --> 00:01:10.367
+Aqui está a NumbersActivity,
+e, antes do método release.MediaPlayer,
+
+00:01:10.400 --> 00:01:14.233
+vou sobrepor o método callback onStop,
+do ciclo de vida.
+
+00:01:14.267 --> 00:01:17.500
+Nunca iremos sobrepor de um método
+de ciclo de vida de verdade.
+
+00:01:17.533 --> 00:01:20.800
+Como mostrado, você deve chamar
+a versão de classe super desse método.
+
+00:01:20.833 --> 00:01:24.800
+Foi o que fiz aqui com super.onStop,
+pois a activity sabe lidar
+
+00:01:24.833 --> 00:01:28.000
+com sua interrupção
+e com a limpeza nos bastidores
+
+00:01:28.033 --> 00:01:30.367
+com que nós
+não precisamos nos preocupar.
+
+00:01:30.400 --> 00:01:33.133
+Se você tentar tornar esta linha
+um comentário,
+
+00:01:33.167 --> 00:01:35.567
+você verá que o app
+falhará de repente.
+
+00:01:35.600 --> 00:01:37.767
+Então não faça isso.
+
+00:01:37.800 --> 00:01:42.033
+Aqui, em vez de chamar o método release
+diretamente no objeto MediaPlayer,
+
+00:01:42.067 --> 00:01:45.000
+chamarei o método auxiliar
+releaseMediaPlayer
+
+00:01:45.033 --> 00:01:46.867
+que adicionamos antes.
+
+00:01:46.900 --> 00:01:50.700
+A razão de usá-lo
+em vez do método release
+
+00:01:50.733 --> 00:01:54.967
+é que ele define a variável MediaPlayer
+como nula
+
+00:01:55.000 --> 00:01:57.600
+se ela não estiver configurada
+para tocar um áudio.
+
+00:01:57.633 --> 00:02:01.200
+Assim, vamos liberar recursos
+do MediaPlayer continuamente
+
+00:02:01.233 --> 00:02:02.365
+na nossa activity,
+
+00:02:02.398 --> 00:02:06.933
+seja porque o áudio chegou ao fim
+ou porque a activity foi interrompida.
+
+00:02:06.967 --> 00:02:09.533
+Agora temos que testar
+no dispositivo.
+
+00:02:10.367 --> 00:02:12.567
+Com esta nova versão
+do aplicativo,
+
+00:02:12.600 --> 00:02:15.200
+quando eu clico
+em qualquer activity,
+
+00:02:15.233 --> 00:02:19.033
+como a Números, eu posso tocar o som
+de cada palavra como de costume.
+
+00:02:20.600 --> 00:02:23.800
+Mas agora, se eu tocar um som
+e sair logo do aplicativo
+
+00:02:23.833 --> 00:02:25.300
+clicando no botão "Home",
+
+00:02:25.333 --> 00:02:29.200
+o som deve parar imediatamente,
+por causa do código no método onStop.
+
+00:02:29.233 --> 00:02:30.567
+Então vamos tentar.
+
+00:02:32.633 --> 00:02:34.800
+Legal,
+está funcionando como esperado.
+
+00:02:34.833 --> 00:02:37.133
+Antes,
+a pronúncia de cada palavra
+
+00:02:37.167 --> 00:02:39.600
+continuaria mesmo depois
+de eu sair da activity,
+
+00:02:39.633 --> 00:02:42.167
+e agora ela é cortada
+quando eu saio.
+
+00:02:42.200 --> 00:02:44.567
+Ótimo, a lógica está funcionando
+como esperado.
+
+00:02:44.600 --> 00:02:47.900
+Agora vou replicá-la
+para as outras activities.
+
+00:02:47.933 --> 00:02:51.600
+Aqui está o método onStop sobreposto
+na ColorsActivity.
+
+00:02:52.500 --> 00:02:54.033
+E na FamilyActivity.
+
+00:02:55.300 --> 00:02:57.833
+E, por fim,
+na PhrasesActivity.
+
+00:02:57.867 --> 00:03:02.400
+Vamos executar o app mais uma vez
+para ver se as activities funcionam bem.
+

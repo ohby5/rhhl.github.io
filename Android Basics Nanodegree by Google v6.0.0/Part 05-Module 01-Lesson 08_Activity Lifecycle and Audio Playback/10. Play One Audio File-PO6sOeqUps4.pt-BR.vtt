@@ -1,0 +1,329 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.633 --> 00:00:02.333
+Abra a NumbersActivity.
+
+00:00:02.367 --> 00:00:05.700
+Vamos começar aqui,
+detectando o clique no item de lista.
+
+00:00:05.733 --> 00:00:09.033
+Temos que fazê-lo tocar
+a mensagem toast
+
+00:00:09.067 --> 00:00:11.433
+para sabermos
+se o código estiver funcionando.
+
+00:00:11.467 --> 00:00:13.033
+Vou rolar para baixo.
+
+00:00:13.067 --> 00:00:17.600
+Esta linha, listView.setAdapter,
+é onde vinculamos o WordAdapter à ListView.
+
+00:00:17.633 --> 00:00:21.967
+Após esta linha, seria uma boa ideia
+configurar nosso onClickListener.
+
+00:00:22.000 --> 00:00:26.767
+Vamos usar um objeto ListView
+e chamar o método setOnItemClickListener nele.
+
+00:00:26.800 --> 00:00:30.700
+Quando apareceu no preenchimento automático,
+cliquei Enter.
+
+00:00:30.733 --> 00:00:34.000
+Agora vamos ter
+que atribuir um OnItemClickListener aqui.
+
+00:00:34.033 --> 00:00:37.500
+Como esta é uma interface,
+temos que implementar o método sozinhos.
+
+00:00:37.533 --> 00:00:39.767
+Aqui, como estamos escrevendo
+só um método,
+
+00:00:39.800 --> 00:00:43.967
+é fácil implementar em linha aqui
+como uma classe anônima.
+
+00:00:44.000 --> 00:00:46.700
+Porém,
+se fôssemos definir muitos métodos,
+
+00:00:46.733 --> 00:00:49.733
+acho que definiríamos tudo
+num arquivo de classe separado
+
+00:00:49.767 --> 00:00:52.667
+e chamar o construtor
+das classes aqui.
+
+00:00:52.700 --> 00:00:54.467
+Para começar
+nossa classe anônima,
+
+00:00:54.500 --> 00:00:57.867
+vou digitar aqui:
+new OnItemClickListener.
+
+00:00:57.900 --> 00:01:01.267
+O Android Studio está dando sugestões
+de preenchimento automático,
+
+00:01:01.300 --> 00:01:03.300
+então vou selecionar
+a sugestão.
+
+00:01:03.333 --> 00:01:07.500
+Com ela, o Android Studio fica sabendo
+que temos que encontrar um OnItemClickListener
+
+00:01:07.533 --> 00:01:10.033
+e sobrepor
+o método onClick.
+
+00:01:10.067 --> 00:01:15.167
+Em vez do método onItemClick,
+vamos fazer surgir uma mensagem toast por ora.
+
+00:01:15.200 --> 00:01:18.700
+Vou chamar Toast.makeText
+e atribuir um context.
+
+00:01:18.733 --> 00:01:21.600
+Lembre-se
+de que nossa activity é um context.
+
+00:01:21.633 --> 00:01:24.467
+Normalmente, podemos nos referir
+à classe em que estamos.
+
+00:01:24.500 --> 00:01:27.600
+Esta aqui, a NumbersActivity,
+será apenas "this".
+
+00:01:27.633 --> 00:01:30.933
+Mas em certos lugares,
+como dentro do OnItemClickListener,
+
+00:01:30.967 --> 00:01:33.667
+usar apenas "this"
+pode se tornar ambíguo.
+
+00:01:33.700 --> 00:01:38.933
+Aqui, 1º especificamos a classe,
+então temos NumbersActivity.this.
+
+00:01:38.967 --> 00:01:42.967
+A 2ª entrada da mensagem toast
+vai mostrar o que queremos na tela.
+
+00:01:43.000 --> 00:01:46.333
+Aqui,
+vamos mostrar "Item de lista clicado".
+
+00:01:46.367 --> 00:01:49.733
+Como 3ª entrada,
+vamos especificar a duração da toast.
+
+00:01:49.767 --> 00:01:52.800
+Vamos fazê-la aparecer
+por pouco tempo.
+
+00:01:53.733 --> 00:01:58.300
+A saída da chamada do método makeText
+será um novo objeto toast.
+
+00:01:58.333 --> 00:02:00.433
+Em seguida,
+podemos chamar o método show nele.
+
+00:02:01.067 --> 00:02:03.467
+Vamos executar o aplicativo
+no dispositivo.
+
+00:02:03.500 --> 00:02:07.400
+Vamos clicar na NumbersActivity
+e depois num item da lista.
+
+00:02:07.433 --> 00:02:09.100
+Legal,
+nosso toast funciona.
+
+00:02:09.133 --> 00:02:12.267
+Vamos modificar o comportamento
+para que o clique num item
+
+00:02:12.300 --> 00:02:15.300
+toque um áudio
+em vez de mostrar uma mensagem toast.
+
+00:02:15.333 --> 00:02:19.900
+Primeiro, baixei o arquivo de áudio,
+que forneci para você no quiz.
+
+00:02:19.933 --> 00:02:21.167
+Vou copiar e colar.
+
+00:02:21.200 --> 00:02:22.467
+No Android Studio,
+
+00:02:22.500 --> 00:02:25.900
+criei uma pasta raw
+no diretório de recursos do aplicativo.
+
+00:02:25.933 --> 00:02:28.833
+Dentro dela,
+vou colar o arquivo de áudio.
+
+00:02:29.433 --> 00:02:34.267
+O nome padrão que temos serve,
+e agora o áudio está no aplicativo.
+
+00:02:34.300 --> 00:02:37.767
+Agora, vamos nos concentrar na NumbersActivity
+e em como tocar o áudio.
+
+00:02:37.800 --> 00:02:40.467
+Vamos precisar
+de uma instância de objeto reprodutora,
+
+00:02:40.500 --> 00:02:43.900
+então vamos declarar uma nova variável membro
+nesta activity.
+
+00:02:43.933 --> 00:02:47.300
+Podemos voltar ao tutorial
+que usamos para o aplicativo reprodutor
+
+00:02:47.333 --> 00:02:51.200
+ou voltar para o 1º artigo
+que vimos na seção Media Playback.
+
+00:02:51.233 --> 00:02:52.800
+Qualquer um funcionará.
+
+00:02:52.833 --> 00:02:56.267
+Aqui, podemos copiar este código
+que cria um novo objeto MediaPlayer
+
+00:02:56.300 --> 00:02:58.467
+para um áudio raw
+específico.
+
+00:02:58.500 --> 00:03:01.433
+Vamos voltar ao aplicativo
+no Android Studio.
+
+00:03:01.467 --> 00:03:05.133
+Dentro do método onItemClick,
+vamos remover esta linha
+
+00:03:05.167 --> 00:03:09.200
+que mostra uma mensagem toast
+e, no lugar, colar o código MediaPlayer.
+
+00:03:09.233 --> 00:03:11.600
+Temos
+que modificar este código.
+
+00:03:11.633 --> 00:03:15.700
+Aqui, não precisamos definir o tipo de dado
+do objeto MediaPlayer de novo.
+
+00:03:15.733 --> 00:03:20.967
+No lugar, podemos apenas nos referir
+à variável global chamada mMediaPlayer.
+
+00:03:21.000 --> 00:03:23.667
+Também vamos ter
+que atualizar todas as referências
+
+00:03:23.700 --> 00:03:27.133
+à variável MediaPlayer
+com mMediaPlayer.
+
+00:03:27.167 --> 00:03:28.900
+Agora,
+só há uns dois erros.
+
+00:03:28.933 --> 00:03:31.733
+Aqui, a variável context
+não está reconhecida.
+
+00:03:31.767 --> 00:03:35.267
+Temos que substituí-la pela referência
+ao context da NumbersActivity
+
+00:03:35.300 --> 00:03:38.933
+usando
+a sintaxe NumbersActivity.this.
+
+00:03:38.967 --> 00:03:41.967
+O Android Studio
+também não reconhece
+
+00:03:42.000 --> 00:03:46.133
+o recurso raw
+chamado sound_file_1.
+
+00:03:46.167 --> 00:03:49.200
+Vamos ter que chamar
+o arquivo de áudio number_1.
+
+00:03:49.233 --> 00:03:51.500
+Vou atualizar o nome aqui.
+
+00:03:51.533 --> 00:03:53.567
+Agora podemos usar
+só o nome do recurso,
+
+00:03:53.600 --> 00:03:57.033
+então podemos deixar o nome da extensão
+do arquivo MP3.
+
+00:03:57.067 --> 00:04:00.800
+Depois de termos criado o objeto MediaPlayer
+para um dado som,
+
+00:04:00.833 --> 00:04:04.433
+podemos chamar o método start
+para começar a tocar o som.
+
+00:04:04.467 --> 00:04:06.067
+Vamos testar
+no dispositivo.
+
+00:04:06.100 --> 00:04:08.133
+Vamos clicar
+na categoria Números,
+
+00:04:08.167 --> 00:04:12.267
+e vamos clicar em qualquer item
+e ver se ele toca o áudio lutti.
+
+00:04:13.267 --> 00:04:14.500
+Lutti.
+
+00:04:15.300 --> 00:04:16.533
+Lutti.
+
+00:04:17.667 --> 00:04:19.167
+Lutti.
+
+00:04:19.200 --> 00:04:20.200
+Perfeito.
+
+00:04:20.233 --> 00:04:22.567
+Nosso aplicativo funciona
+para um único áudio.
+
+00:04:22.600 --> 00:04:24.033
+Bom trabalho!
+

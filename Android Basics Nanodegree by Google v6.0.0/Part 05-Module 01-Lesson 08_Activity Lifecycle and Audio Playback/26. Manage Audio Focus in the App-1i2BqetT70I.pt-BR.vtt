@@ -1,0 +1,753 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:03.868
+Prepare-se para um vídeo longo
+de solução.
+
+00:00:03.901 --> 00:00:06.100
+Mas vamos resolver isto
+etapa por etapa.
+
+00:00:06.133 --> 00:00:08.767
+Primeiro,
+queremos solicitar o foco de áudio,
+
+00:00:08.801 --> 00:00:12.601
+ou seja, precisamos de uma instância
+de objeto AudioManager.
+
+00:00:12.634 --> 00:00:16.734
+Dentro da NumbersActivity, vou criar
+uma variável global para o AudioManager
+
+00:00:16.767 --> 00:00:19.968
+para que eu possa inicializá-lo uma vez
+durante o curso da activity.
+
+00:00:20.000 --> 00:00:22.534
+Depois, dentro do método onCreate
+na NumbersActivity,
+
+00:00:22.567 --> 00:00:26.000
+vou inicializar o AudioManager
+chamando o getSystemService
+
+00:00:26.033 --> 00:00:28.367
+e atribuindo
+a constante AUDIO_SERVICE.
+
+00:00:28.400 --> 00:00:30.701
+Eu sabia que tinha
+que escrever esta linha de código
+
+00:00:30.734 --> 00:00:34.734
+porque vi neste tutorial do MediaPlayer
+que ela mostra como obter uma referência
+
+00:00:34.767 --> 00:00:37.234
+para o SystemService
+do AudioManager.
+
+00:00:37.267 --> 00:00:41.868
+Com o objeto AudioManager criado,
+podemos chamar o método requestAudioFocus nele.
+
+00:00:41.901 --> 00:00:45.901
+Vamos copiar este trecho de código
+e adicionar ao aplicativo.
+
+00:00:47.300 --> 00:00:50.334
+Qual o lugar adequado
+para solicitar o foco de áudio?
+
+00:00:50.367 --> 00:00:53.567
+Sei que, quando um item é clicado,
+quero usar o AudioManager
+
+00:00:53.601 --> 00:00:57.400
+para solicitar o foco de áudio lá
+antes de preparar o MediaPlayer para tocar.
+
+00:00:57.434 --> 00:01:01.133
+Então vou colar o código aqui depois
+do código para o objeto Word
+
+00:01:01.167 --> 00:01:03.968
+e depois de termos liberado
+o MediaPlayer.
+
+00:01:04.734 --> 00:01:07.234
+Quero nomes
+de variáveis mais descritivos,
+
+00:01:07.267 --> 00:01:11.834
+então vou mudar o nome atual da variável
+de am para mAudioManager.
+
+00:01:11.868 --> 00:01:15.501
+Quando eu solicitar o foco de áudio,
+vou atribuir 3 entradas.
+
+00:01:15.534 --> 00:01:19.467
+Tenho que atribuir um listener
+e especificar o streamType da música
+
+00:01:19.501 --> 00:01:22.767
+e também quanto tempo teremos
+que ter o foco de áudio.
+
+00:01:22.801 --> 00:01:26.534
+O exemplo de código que copiamos
+solicitava o AUDIOFOCUS_GAIN.
+
+00:01:26.567 --> 00:01:30.567
+que solicita o foco de áudio
+para uma duração longa de tempo desconhecida,
+
+00:01:30.601 --> 00:01:32.701
+como para tocar uma música.
+
+00:01:32.734 --> 00:01:36.167
+Porém, no nosso aplicativo,
+os áudios só têm 1 ou 2 segundos,
+
+00:01:36.200 --> 00:01:39.400
+então só precisamos do foco de áudio
+por um período curto de tempo.
+
+00:01:39.434 --> 00:01:44.534
+Assim, vamos alterar o AUDIOOCUS_GAIN
+para AUDIOFOCUS_GAIN_TRANSIENT.
+
+00:01:44.567 --> 00:01:46.801
+Parece que ainda temos
+dois erros aqui.
+
+00:01:46.834 --> 00:01:51.434
+Isso é porque o Android Studio
+não reconhece a definição do listener,
+
+00:01:51.467 --> 00:01:53.534
+pois não o definimos ainda.
+
+00:01:53.567 --> 00:01:55.434
+Mas podemos consertar isso
+mais tarde.
+
+00:01:55.467 --> 00:01:59.801
+Agora, se voltarmos ao tutorial
+e analisarmos mais o método requestAudioFocus,
+
+00:01:59.834 --> 00:02:02.634
+veremos que este método
+retorna um inteiro.
+
+00:02:02.667 --> 00:02:05.834
+E adivinha?
+O resultado também é um valor constante.
+
+00:02:05.868 --> 00:02:08.234
+Aqui embaixo,
+na documentação do método,
+
+00:02:08.267 --> 00:02:13.033
+os dois valores de retorno possíveis
+são as constantes AUDIOFOCUS_REQUEST_FAILED
+
+00:02:13.067 --> 00:02:15.534
+e AUDIOFOCUS_REQUEST_GRANTED.
+
+00:02:15.567 --> 00:02:19.167
+Cada uma delas
+é uma variável static final
+
+00:02:19.200 --> 00:02:21.901
+igual
+a um valor inteiro fixo.
+
+00:02:21.934 --> 00:02:23.934
+Voltando
+para o exemplo de código,
+
+00:02:23.968 --> 00:02:27.868
+se o resultado
+for AUDIOFOCUS_REQUEST_GRANTED,
+
+00:02:27.901 --> 00:02:32.701
+teremos ganhado o foco de áudio com sucesso
+e poderemos tocar o áudio no aplicativo.
+
+00:02:32.734 --> 00:02:35.601
+No nosso código,
+adicionamos a instrução if embaixo do bloco
+
+00:02:35.634 --> 00:02:37.400
+onde solicitamos o foco
+de áudio.
+
+00:02:37.434 --> 00:02:41.534
+Se ganharmos o foco de áudio,
+iremos querer criar e iniciar o MediaPlayer
+
+00:02:41.567 --> 00:02:43.534
+e criar
+o CompletionListener.
+
+00:02:43.567 --> 00:02:47.334
+Então este bloco de código aqui
+precisa ir dentro da instrução if.
+
+00:02:47.367 --> 00:02:49.400
+Vou passar
+esta chave final...
+
+00:02:50.400 --> 00:02:51.868
+para baixo.
+
+00:02:51.901 --> 00:02:53.467
+E vou modificar
+o comentário.
+
+00:02:53.501 --> 00:02:56.801
+Vou dizer
+que agora temos o foco de áudio.
+
+00:02:56.834 --> 00:02:58.934
+Aí, vou dar espaços
+nestas linhas de código
+
+00:02:58.968 --> 00:03:00.868
+porque estão dentro
+da instrução if.
+
+00:03:00.901 --> 00:03:04.634
+Se não recebermos o foco de áudio,
+não precisaremos preparar o MediaPlayer.
+
+00:03:04.667 --> 00:03:06.601
+O usuário terá que clicar
+no item de novo.
+
+00:03:06.634 --> 00:03:09.501
+E, com sorte,
+poderemos ganhar o foco de áudio.
+
+00:03:09.534 --> 00:03:13.000
+Certo, cuidamos da tarefa 1,
+a solicitação de foco de áudio.
+
+00:03:13.033 --> 00:03:17.567
+Agora vamos nos concentrar na implementação
+do OnAudioFocusChangeListener.
+
+00:03:17.601 --> 00:03:20.434
+Isso vai resolver o erro
+no nosso código.
+
+00:03:20.467 --> 00:03:22.367
+Vamos descobrir
+como o listener deve ser.
+
+00:03:22.400 --> 00:03:26.267
+Se você descer a página do tutorial,
+há um exemplo de como o listener poderia ser.
+
+00:03:26.300 --> 00:03:30.267
+Como precisamos atribui-lo como entrada
+sempre que solicitarmos o foco de áudio,
+
+00:03:30.300 --> 00:03:34.934
+vamos transformá-lo em variável global
+para o reutilizarmos todas as vezes.
+
+00:03:34.968 --> 00:03:39.968
+Então vou copiar este trecho
+e colar na NumbersActivity.
+
+00:03:40.968 --> 00:03:45.667
+Vou colar o trecho de código embaixo
+de todas as variáveis globais.
+
+00:03:45.701 --> 00:03:48.100
+Você pode renomear esta variável
+como quiser.
+
+00:03:48.133 --> 00:03:53.133
+No meu caso, vou chamá-la
+de mOnAudioFocusChangeListener.
+
+00:03:53.167 --> 00:03:57.901
+Aqui, criamos uma nova instância de objeto
+que implementa a interface listener.
+
+00:03:57.934 --> 00:04:02.100
+Isso significa que teremos
+que sobrepor o método onAudioFocusChange.
+
+00:04:02.133 --> 00:04:06.868
+O que está atribuindo um parâmetro,
+o novo estado de foco de áudio.
+
+00:04:06.901 --> 00:04:11.033
+Dentro deste método onAudioFocusChange,
+vamos pôr instruções sobre o que deve acontecer
+
+00:04:11.067 --> 00:04:16.934
+quando o sistema chamá-lo porque o estado
+do foco do áudio mudou no aplicativo.
+
+00:04:16.968 --> 00:04:20.200
+A melhor coisa a fazer
+é descobrir qual é o novo estado
+
+00:04:20.234 --> 00:04:23.200
+olhando a variável focusChange
+que atribuímos.
+
+00:04:23.234 --> 00:04:28.767
+Aqui, usamos as instruções condicionais if/else
+para checar o valor da variável focusChange.
+
+00:04:28.801 --> 00:04:33.167
+O sinal de igual em dobro checa se os valores
+da direita e da esquerda são iguais.
+
+00:04:33.200 --> 00:04:35.400
+Se forem,
+a expressão é verdadeira,
+
+00:04:35.434 --> 00:04:38.300
+e aí executamos o código
+neste bloco if.
+
+00:04:38.334 --> 00:04:41.801
+Caso contrário, a expressão será falsa,
+e aí pularemos este 1º bloco
+
+00:04:41.834 --> 00:04:44.267
+e iremos direto
+para a instrução else if.
+
+00:04:44.300 --> 00:04:48.400
+Se a variável de foco de áudio for igual
+ao estado AUDIOFOCUS_LOSS_TRANSIENT,
+
+00:04:48.434 --> 00:04:51.434
+perdemos temporariamente
+o foco de áudio.
+
+00:04:51.467 --> 00:04:53.334
+Ou seja,
+podemos pausar o MediaPlayer.
+
+00:04:53.367 --> 00:04:55.133
+Então vou adicionar a linha
+de código aqui.
+
+00:04:55.167 --> 00:04:57.167
+Com o método seekTo
+do MediaPlayer,
+
+00:04:57.200 --> 00:05:00.467
+vou mudar a posição
+para começar no início do áudio.
+
+00:05:00.501 --> 00:05:01.868
+Ele começará na posição 0.
+
+00:05:01.901 --> 00:05:04.534
+Isso porque,
+se ganharmos o foco de áudio de volta,
+
+00:05:04.567 --> 00:05:07.601
+seria melhor que o usuário ouvisse a palavra
+desde o início,
+
+00:05:07.634 --> 00:05:11.667
+em vez de ouvir o resto dela,
+já que as palavras são curtas mesmo.
+
+00:05:11.701 --> 00:05:13.367
+Agora quero modificar
+este caso de teste,
+
+00:05:13.400 --> 00:05:15.834
+pois quero que este comportamento
+seja aplicado também
+
+00:05:15.868 --> 00:05:18.200
+ao estado
+LOSS_TRANSIENT_CAN_DUCK.
+
+00:05:18.234 --> 00:05:24.133
+Também vou consertar este erro
+especificando que o estado é do AudioManager.
+
+00:05:24.167 --> 00:05:27.734
+Se você se lembrar do quiz passado,
+decidimos que estes dois estados -
+
+00:05:27.767 --> 00:05:32.167
+AUDIOFOCUS_LOSS_TRANSIENT
+e AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -
+
+00:05:32.200 --> 00:05:34.601
+podem ser administrados
+da mesma forma.
+
+00:05:34.634 --> 00:05:37.701
+O MediaPlayer deve pausar
+em ambos.
+
+00:05:37.734 --> 00:05:41.667
+Então podemos usar esta barra vertical dupla,
+que significa "ou". Então, O-U.
+
+00:05:41.701 --> 00:05:45.667
+É a 1ª vez que a usamos,
+então é normal parecer pouco familiar.
+
+00:05:45.701 --> 00:05:50.434
+Usando-a, a instrução fica:
+"Se a variável focusChange for igual
+
+00:05:50.467 --> 00:05:52.601
+ao estado
+AUDIOFOCUS_LOSS_TRANSIENT
+
+00:05:52.634 --> 00:05:58.033
+ou se a variável focusChange for igual ao estado
+AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK,
+
+00:05:58.067 --> 00:06:02.968
+então a expressão toda é verdadeira,
+e podemos executar o bloco if".
+
+00:06:03.000 --> 00:06:06.534
+Ou seja,
+a expressão à esquerda do símbolo "ou"
+
+00:06:06.567 --> 00:06:09.300
+ou a expressão à direita dele
+devem ser verdadeiras
+
+00:06:09.334 --> 00:06:12.634
+para esta expressão toda
+ser verdadeira.
+
+00:06:12.667 --> 00:06:16.934
+Se você não quiser usar este símbolo,
+você poderia criar outro bloco else if
+
+00:06:16.968 --> 00:06:20.834
+para verificar o estado
+AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK.
+
+00:06:20.868 --> 00:06:23.033
+No nosso caso,
+combinamos tudo numa verificação só,
+
+00:06:23.067 --> 00:06:28.033
+pois a lógica de pausar e reiniciar a posição
+do MediaPlayer será a mesma para ambos.
+
+00:06:28.067 --> 00:06:31.167
+Vou adicionar um comentário
+para você se lembrar desta escolha.
+
+00:06:31.200 --> 00:06:35.033
+Se a variável focusChange não estiver
+em nenhum destes estados,
+
+00:06:35.067 --> 00:06:38.667
+poderemos checar
+se ela é igual ao estado AUDIOFOCUS_GAIN.
+
+00:06:38.701 --> 00:06:40.467
+Voltando à tabela do quiz.
+
+00:06:40.501 --> 00:06:44.667
+Quando ganhamos foco de áudio,
+podemos retomar o MediaPlayer.
+
+00:06:44.701 --> 00:06:47.701
+Na API do MediaPlayer,
+não há método resume.
+
+00:06:47.734 --> 00:06:51.567
+Você pode apenas chamar o método start,
+e ele retomará de onde parou.
+
+00:06:51.601 --> 00:06:57.300
+Então vou mudar este comentário
+para mMediaPlayer.start().
+
+00:06:58.467 --> 00:07:01.801
+Também vou adicionar um comentário
+para descrever aquele caso.
+
+00:07:01.834 --> 00:07:06.267
+Por fim, se a variável focusChange
+não for igual a nenhum dos 3 estados,
+
+00:07:06.300 --> 00:07:11.234
+mas for igual ao estado AUDIOFOCUS_LOSS,
+executaremos este bloco.
+
+00:07:11.267 --> 00:07:13.567
+Vamos voltar à tabela.
+
+00:07:13.601 --> 00:07:16.467
+Dissemos que interromperíamos
+e liberaríamos o MediaPlayer
+
+00:07:16.501 --> 00:07:18.968
+quando houvesse perda permanente
+de foco de áudio.
+
+00:07:19.000 --> 00:07:22.167
+Com sorte,
+temos o método auxiliar releaseMediaPlayer
+
+00:07:22.200 --> 00:07:23.901
+para nos ajudar com isso.
+
+00:07:23.934 --> 00:07:27.400
+Dentro deste bloco else if,
+vou deletar o código de exemplo
+
+00:07:27.434 --> 00:07:30.734
+e chamar
+nosso próprio método releaseMediaPlayer.
+
+00:07:30.767 --> 00:07:34.734
+Também vou adicionar um comentário
+para ajudar na descrição do que está ocorrendo.
+
+00:07:34.767 --> 00:07:39.300
+Isso deu conta da tarefa 2:
+"Criar uma instância do FocusChangeListener
+
+00:07:39.334 --> 00:07:41.200
+e sobrepor
+o método callback".
+
+00:07:41.234 --> 00:07:43.300
+Ah, isso também deu conta
+da tarefa 3,
+
+00:07:43.334 --> 00:07:47.434
+pois modifiamos o comportamento da reprodução
+com base nas mudanças de estado.
+
+00:07:47.467 --> 00:07:49.200
+Parece que só temos
+mais uma tarefa.
+
+00:07:49.234 --> 00:07:52.267
+Temos que liberar o foco de áudio
+quando terminarmos de tocar.
+
+00:07:52.300 --> 00:07:56.901
+Voltando ao tutorial,
+havia um trecho de código aqui
+
+00:07:56.934 --> 00:07:59.667
+para abandonar o foco
+de áudio.
+
+00:07:59.701 --> 00:08:03.567
+O parágrafo acima deste código diz que,
+quando você termina de tocar,
+
+00:08:03.601 --> 00:08:05.501
+você deve abandonar o foco
+de áudio.
+
+00:08:05.534 --> 00:08:08.567
+Isso tira o listener especificado
+do registro,
+
+00:08:08.601 --> 00:08:12.100
+nosso parâmetro de entrada aqui,
+para que não sejamos mais notificados
+
+00:08:12.133 --> 00:08:13.601
+sobre as mudanças
+de estado.
+
+00:08:13.634 --> 00:08:16.667
+Também diz que,
+se você solicitar um foco transient,
+
+00:08:16.701 --> 00:08:19.968
+que nós solicitamos,
+qualquer aplicativo interrompido
+
+00:08:20.000 --> 00:08:21.567
+poderá continuar
+sua reprodução.
+
+00:08:21.601 --> 00:08:24.200
+Vamos copiar este código
+e colar no aplicativo.
+
+00:08:24.234 --> 00:08:26.834
+Onde devemos pôr a linha de código
+na NumbersActivity?
+
+00:08:26.868 --> 00:08:30.067
+Quando terminamos de tocar o arquivo,
+temos que abandonar o foco.
+
+00:08:30.100 --> 00:08:33.534
+Então poderíamos colar
+na callback OnCompletion, do MediaPlayer,
+
+00:08:33.567 --> 00:08:36.801
+mas devemos ter cuidado
+com o ciclo de vida da activity.
+
+00:08:36.834 --> 00:08:40.868
+Adicionamos um código antes para que,
+quando a activity for interrompida,
+
+00:08:40.901 --> 00:08:43.367
+nós paramos
+e liberamos o MediaPlayer.
+
+00:08:43.400 --> 00:08:46.367
+Então queremos abandonar o foco de áudio
+nos dois lugares,
+
+00:08:46.400 --> 00:08:50.167
+que já chamam
+o método releaseMediaPlayer.
+
+00:08:50.200 --> 00:08:55.400
+Então vamos abandonar o foco de áudio dentro
+do método auxiliar releaseMediaPlayer.
+
+00:08:55.434 --> 00:08:59.467
+Na parte de baixo do método,
+vou adicionar a linha para abandonar o foco.
+
+00:08:59.501 --> 00:09:01.801
+Vou adicioná-la
+dentro do bloco if.
+
+00:09:01.834 --> 00:09:04.234
+Sabemos que é seguro
+liberar o foco de áudio aqui
+
+00:09:04.267 --> 00:09:07.400
+porque não estamos mais
+tocando o arquivo.
+
+00:09:07.434 --> 00:09:12.434
+Vou mudar os nomes das variáveis de am
+para mAudioManager.
+
+00:09:12.467 --> 00:09:16.801
+Também vou mudar o nome do listener
+para mOnAudioFocusChangeListener.
+
+00:09:16.834 --> 00:09:19.934
+Também vou atualizar os comentários
+desta seção.
+
+00:09:19.968 --> 00:09:22.167
+Beleza,
+isso deu conta da tarefa 4.
+
+00:09:22.200 --> 00:09:26.067
+Eu sei que foram muitas mudanças de código,
+mas terminamos as 4 etapas.
+
+00:09:26.100 --> 00:09:28.701
+Então se dê um tapinha de aprovação
+nas costas!
+
+00:09:28.734 --> 00:09:33.000
+Se houver outras variáveis para atualizar,
+vamos fazer as mudanças aqui.
+
+00:09:33.033 --> 00:09:34.734
+Certo, não há mais erros.
+
+00:09:34.767 --> 00:09:38.400
+Agora vamos executar o aplicativo
+para ver se ele funciona.
+
+00:09:38.434 --> 00:09:40.000
+Aqui está o aplicativo.
+
+00:09:40.033 --> 00:09:43.334
+Vamos ver se ele funciona
+e se se comporta como esperado.
+
+00:09:43.367 --> 00:09:45.434
+Vamos para os Números.
+
+00:09:49.701 --> 00:09:52.467
+O áudio para
+quando outro começa a tocar.
+
+00:09:52.501 --> 00:09:55.133
+Mas não vou passar
+por todos os casos de teste agora.
+
+00:09:55.167 --> 00:09:57.901
+Se quiser testar as interrupções
+de áudio,
+
+00:09:57.934 --> 00:10:00.300
+tente tocar o som no meio
+de uma ligação.
+
+00:10:00.334 --> 00:10:03.701
+Ou até mesmo descer a barra de notificação
+no meio do som.
+
+00:10:03.734 --> 00:10:07.534
+Idealmente, você deve testar cada caso
+que temos nas instruções if/else
+
+00:10:07.567 --> 00:10:10.200
+para garantir que podemos pausar um áudio
+quando perdermos o foco
+
+00:10:10.234 --> 00:10:13.000
+e depois retomá-lo
+quando ganharmos o foco.
+
+00:10:13.033 --> 00:10:14.801
+Como a NumbersActivity
+funciona,
+
+00:10:14.834 --> 00:10:17.334
+vou aplicar as mesmas mudanças
+às outras activities.
+
+00:10:17.367 --> 00:10:20.634
+As mudanças estão assim
+para a ColorsActivity,
+
+00:10:20.667 --> 00:10:24.467
+para a FamilyActivity
+e para a PhrasesActivity.
+
+00:10:24.501 --> 00:10:28.434
+Veja as anotações abaixo
+para ver o link do código de solução.
+
+00:10:28.467 --> 00:10:31.033
+Uau,
+esse foi um baita recurso.
+
+00:10:31.067 --> 00:10:34.934
+Parabéns por ter terminado a tarefa
+de codificar o foco de áudio.
+

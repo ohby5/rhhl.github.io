@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.667
+Quando solicitamos o foco de áudio,
+devemos especificar o tipo de stream.
+
+00:00:03.700 --> 00:00:06.567
+Lembre-se de que o Android
+oferece estas opções,
+
+00:00:06.600 --> 00:00:09.367
+que achamos na seção "Reference"
+do AudioManager,
+
+00:00:09.400 --> 00:00:11.433
+na seção
+de constantes public.
+
+00:00:11.467 --> 00:00:15.433
+Mas, depois de ler as descrições,
+parece que nenhuma se encaixa.
+
+00:00:15.467 --> 00:00:18.400
+Só temos um áudio curto,
+então não é um alarme.
+
+00:00:18.433 --> 00:00:21.800
+Não é um toque DTMF,
+que é usado para discar números de telefone.
+
+00:00:21.833 --> 00:00:24.900
+Não é música
+ou uma notificação de nada.
+
+00:00:24.933 --> 00:00:28.267
+Também não é um som de sistema
+ou uma chamada de voz.
+
+00:00:28.300 --> 00:00:31.867
+Dentre estas opções,
+parece que a STREAM_MUSIC é a melhor.
+
+00:00:31.900 --> 00:00:36.367
+Ao desenvolver um aplicativo de áudio,
+como um reprodutor de música ou podcasts,
+
+00:00:36.400 --> 00:00:38.700
+você provavelmente usará este tipo
+de stream.
+
+00:00:38.733 --> 00:00:40.067
+Para a 1ª pergunta,
+
+00:00:40.100 --> 00:00:45.700
+o streamType que queremos
+é o AudioManager.STREAM_MUSIC.
+
+00:00:45.733 --> 00:00:49.233
+Vamos agora descobrir nosso 3º parâmetro,
+o durationHint.
+
+00:00:49.267 --> 00:00:52.800
+Vamos voltar para a documentação
+do método requestAudioFocus.
+
+00:00:52.833 --> 00:00:55.833
+Lendo as descrições
+do parâmetro,
+
+00:00:55.867 --> 00:00:59.900
+parece que o durationHint mais apropriado
+é o AUDIOFOCUS_GAIN_TRANSIENT,
+
+00:00:59.933 --> 00:01:03.000
+pois vamos solicitar o foco de áudio
+por pouco tempo,
+
+00:01:03.033 --> 00:01:06.933
+já que nossos arquivos são muito curtos,
+durando poucos segundos.
+
+00:01:06.967 --> 00:01:10.300
+Os outros estados de foco de áudio
+não se encaixariam neste caso.
+
+00:01:10.333 --> 00:01:13.067
+Por exemplo, não temos uma música longa
+ou um vídeo,
+
+00:01:13.100 --> 00:01:15.467
+então não precisamos
+do AUDIOFOCUS_GAIN.
+
+00:01:15.500 --> 00:01:18.700
+E o AUDIOFOCUS_GAIN_
+TRANSIENT_EXCLUSIVE
+
+00:01:18.733 --> 00:01:21.333
+significa que os sons de sistema,
+como as notificações,
+
+00:01:21.367 --> 00:01:23.333
+não serão tocados
+ao tocarmos nosso áudio.
+
+00:01:23.367 --> 00:01:26.400
+Não queremos que nosso usuário
+perca esses sons importantes,
+
+00:01:26.433 --> 00:01:28.533
+então não vamos escolher
+esta opção.
+
+00:01:28.567 --> 00:01:31.300
+Por fim,
+o AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
+
+00:01:31.333 --> 00:01:35.167
+poderia funcionar,
+mas poderia haver ruído de fundo.
+
+00:01:35.200 --> 00:01:38.667
+Para esclarecer o que é "ducking",
+vamos clicar na documentação.
+
+00:01:38.700 --> 00:01:43.233
+A 1ª frase diz que ele é usado para indicar
+uma solicitação temporária de foco de áudio
+
+00:01:43.267 --> 00:01:47.767
+prevista para durar pouco tempo,
+e é aceitável que outras aplicações de áudio
+
+00:01:47.800 --> 00:01:50.900
+continuem a tocar depois
+de reduzirem seu nível de saída.
+
+00:01:50.933 --> 00:01:55.467
+Isso é chamado de ducking,
+ou mergulho de sinal, ou redução de volume.
+
+00:01:55.500 --> 00:01:58.233
+No nosso caso, por exemplo,
+se uma música estiver tocando
+
+00:01:58.267 --> 00:02:02.667
+e o usuário quiser ouvir uma palavra miwok,
+não queremos que a música toque ao mesmo tempo
+
+00:02:02.700 --> 00:02:06.300
+que a palavra miwok,
+mesmo se estiver num volume mais baixo.
+
+00:02:06.333 --> 00:02:10.767
+Quando tocarmos nosso áudio,
+queremos silenciar tudo temporariamente,
+
+00:02:10.800 --> 00:02:12.933
+com exceção
+dos sons do sistema.
+
+00:02:12.967 --> 00:02:14.000
+Neste caso,
+
+00:02:14.033 --> 00:02:19.400
+vamos usar
+o AudioManager.AUDIO_GAIN_TRANSIENT.
+
+00:02:19.433 --> 00:02:20.933
+Ótima investigação!
+
+00:02:20.967 --> 00:02:25.300
+Você está conhecendo mais o AudioManager
+lendo as documentações.
+
+00:02:25.333 --> 00:02:28.133
+Vamos nos aprofundar mais
+e passar para o próximo quiz.
+

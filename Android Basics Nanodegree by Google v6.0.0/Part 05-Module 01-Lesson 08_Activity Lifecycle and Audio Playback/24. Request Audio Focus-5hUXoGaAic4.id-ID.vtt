@@ -1,0 +1,196 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.370 --> 00:00:03.170
+Menangani audio focus dalam aplikasi
+kita akan menjadi perubahan kode
+
+00:00:03.170 --> 00:00:04.750
+yang cukup signifikan.
+
+00:00:04.750 --> 00:00:08.010
+Sebelum Anda memulai sendiri, mari
+periksa berbagai keputusan penting
+
+00:00:08.010 --> 00:00:10.570
+yang harus dibuat saat
+menggunakan API Audio Manager.
+
+00:00:11.680 --> 00:00:15.480
+Ingat, API merujuk pada kelas dan
+metode yang ditawarkan oleh
+
+00:00:15.480 --> 00:00:19.120
+framework Android yang dapat
+Anda gunakan sebagai pengembang.
+
+00:00:19.120 --> 00:00:23.070
+Sekarang mari kita mulai dengan meminta
+audio focus dari AudioManager.
+
+00:00:23.070 --> 00:00:25.830
+Untuk mulai memutar
+audio dalam aplikasi.
+
+00:00:25.830 --> 00:00:30.840
+Dalam kuis terakhir, kita tahu harus
+memanggil metode requestAutoFocus dan
+
+00:00:30.840 --> 00:00:36.049
+ini membutuhkan tiga input, yaitu
+objek onAudioFocusChangeListener,
+
+00:00:36.049 --> 00:00:38.410
+streamType, dan durationHint.
+
+00:00:39.690 --> 00:00:42.443
+Jadi, kedua input terakhir ini,
+yaitu streamType dan
+
+00:00:42.443 --> 00:00:44.303
+durationHint merupakan integer.
+
+00:00:44.303 --> 00:00:48.300
+Saat kita memanggil metode
+requestAudioFocus ini, apa yang harus kita
+
+00:00:48.300 --> 00:00:51.550
+masukkan sebagai streamType yang akan
+menjadi parameter kedua dan
+
+00:00:51.550 --> 00:00:54.560
+merujuk pada tipe audio
+saat kita memutarnya?
+
+00:00:54.560 --> 00:00:56.540
+Apakah ini lagu atau nada dering?
+
+00:00:57.610 --> 00:01:01.130
+Untuk pertanyaan kedua, mana yang akan
+kita masukkan sebagai durationHint?
+
+00:01:01.130 --> 00:01:02.550
+Untuk parameter ketiga.
+
+00:01:02.550 --> 00:01:05.780
+Dan ini merujuk pada berapa lama
+kita membutuhkan audio focus ini.
+
+00:01:05.780 --> 00:01:09.350
+Apakah kita membutuhkan untuk periode
+singkat atau periode panjang?
+
+00:01:09.350 --> 00:01:13.050
+Sebagai petunjuk, kedua pilihan jawaban
+tersebut harus berupa integer, dan
+
+00:01:13.050 --> 00:01:16.990
+lebih spesifik lagi, harus konstanta
+integer yang telah didefinisikan
+
+00:01:16.990 --> 00:01:19.280
+dalam kelas AudioManager.
+
+00:01:19.280 --> 00:01:23.110
+Dalam dokumentasi referensi untuk
+kelas AudioManager, jika kita gulir
+
+00:01:23.110 --> 00:01:27.100
+ke bawah ke bagian konstanta publik, lalu
+turun sedikit lebih jauh,
+
+00:01:27.100 --> 00:01:29.030
+ada semua kemungkinan typeStream
+yang dapat Anda
+
+00:01:29.030 --> 00:01:31.280
+masukkan ke metode requestAudioFocus.
+
+00:01:31.280 --> 00:01:34.686
+Anda dapat menamainya sebagai
+audiomanager.stream atau
+
+00:01:34.686 --> 00:01:38.650
+audiomanager.stream.DTMF dan sebagainya
+
+00:01:38.650 --> 00:01:42.730
+dan deskripsi untuk tiap streamType
+ada di kolom kanan.
+
+00:01:44.070 --> 00:01:48.400
+Mari kita klik stream dan konstanta
+untuk melihat lebih detail.
+
+00:01:48.400 --> 00:01:51.680
+Ingat bahwa konstanta adalah nilai
+tetap yang tak pernah berubah, dan
+
+00:01:51.680 --> 00:01:55.090
+sesuai konvensi, kita menamai variabel
+dengan huruf besar semua.
+
+00:01:55.090 --> 00:01:57.620
+Ini sering digunakan untuk
+mengomunikasikan status tertentu.
+
+00:01:57.620 --> 00:02:00.830
+Case ini hanya stream, memiliki
+nilai empat dan
+
+00:02:00.830 --> 00:02:02.490
+ini tidak akan pernah berubah.
+
+00:02:02.490 --> 00:02:05.420
+Saat kita masukkan nilai konstanta
+ke AudioManager,
+
+00:02:05.420 --> 00:02:07.690
+dia tahu bahwa kita merujuk
+pada streamType ini.
+
+00:02:07.690 --> 00:02:10.610
+Baik, ini menangani
+streamType.
+
+00:02:10.610 --> 00:02:12.100
+Bagaimana dengan durationHint?
+
+00:02:12.100 --> 00:02:15.110
+Mari menavigasi ke sini,
+metode requestAudioFocus, dan
+
+00:02:15.110 --> 00:02:17.295
+perhatikan perbedaan untuk
+opsi-opsi valid untuk
+
+00:02:17.295 --> 00:02:20.140
+durationHint dilist dalam
+deskripsi metode.
+
+00:02:20.140 --> 00:02:22.764
+Jadi, ada opsi yang berbeda-beda seperti
+audioFocus_Gain_Transient,
+
+00:02:22.764 --> 00:02:25.030
+audioFocus_Gain_Transient_May_Duck dan
+
+00:02:25.030 --> 00:02:28.370
+ada beberapa yang lain dan
+masing-masing punya penjelasan
+
+00:02:28.370 --> 00:02:31.590
+untuk membantu Anda memilih mana yang
+cocok untuk dipilih.
+
+00:02:31.590 --> 00:02:32.970
+Silakan mencari secara online untuk memperoleh
+
+00:02:32.970 --> 00:02:35.850
+tutorial jika Anda butuh bantuan untuk
+menjawab pertanyaan-pertanyaan ini.
+
+00:02:35.850 --> 00:02:38.750
+Saya ingin Anda mengisi jawaban
+lalu melanjutkan.
+

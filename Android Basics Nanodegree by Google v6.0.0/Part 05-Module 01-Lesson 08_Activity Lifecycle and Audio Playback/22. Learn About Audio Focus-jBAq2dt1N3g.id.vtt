@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.160 --> 00:00:03.220
+Kedua artikel yang kami sediakan tersebut
+berisi jawaban, tapi
+
+00:00:03.220 --> 00:00:05.350
+mari kita lihat
+salah satu artikel.
+
+00:00:05.350 --> 00:00:06.721
+Pos blog Joanna ini.
+
+00:00:06.721 --> 00:00:11.440
+Di bagian pertama, dia
+menjelaskan tentang audio focus.
+
+00:00:11.440 --> 00:00:12.700
+Jauh lebih ke bawah,
+
+00:00:12.700 --> 00:00:16.780
+ia mengatakan bahwa Anda bisa meminta
+audio focus dari kelas AudioManager dan
+
+00:00:16.780 --> 00:00:20.330
+ia memberikan tautan ke metode yang bisa
+kita panggil untuk meminta audio focus.
+
+00:00:20.330 --> 00:00:21.450
+Mari kita menavigasi ke sana.
+
+00:00:21.450 --> 00:00:25.061
+Inilah metode requestAudioFocus
+di dokumentasi Android.
+
+00:00:25.061 --> 00:00:26.942
+Sekarang kembali ke pos blog.
+
+00:00:26.942 --> 00:00:30.979
+Dalam kalimat yang sama, ia memberikan
+tautan tentang cara melepaskan audio focus
+
+00:00:30.979 --> 00:00:33.230
+saat Anda selesai memutar suara.
+
+00:00:33.230 --> 00:00:36.090
+Dan ini membawa kita ke metode
+abandonAudioFocus
+
+00:00:36.090 --> 00:00:38.260
+di dalam kelas AudioManager,
+
+00:00:38.260 --> 00:00:40.780
+Baik, jadi sejauh ini kita telah
+menjawab dua pertanyaan.
+
+00:00:40.780 --> 00:00:45.190
+Kita bisa meminta audio focus dari
+sistem Android dengan memanggil
+
+00:00:45.190 --> 00:00:50.210
+metode requestAudioFocus AudioManager
+lalu kita memutar audio kita.
+
+00:00:50.210 --> 00:00:54.730
+Segera setelah kita selesai memutar
+audio, kita bisa melepaskan audio focus
+
+00:00:54.730 --> 00:00:59.260
+dengan memanggil metode
+abandonAudioFocus dalam kelas AudioManager.
+
+00:00:59.260 --> 00:01:02.499
+Perhatikan bahwa kedua metode ini memiliki
+parameter input yang harus Anda
+
+00:01:02.499 --> 00:01:05.687
+masukkan, tapi Anda bisa menyimpan dulu
+di dokumentasi nanti saat kita
+
+00:01:05.687 --> 00:01:07.300
+perlu menggunakan metode ini.
+
+00:01:07.300 --> 00:01:11.240
+Baik, ke pertanyaan ketiga, tentang
+panggilan balik apa yang harus diimplementasikan
+
+00:01:11.240 --> 00:01:14.615
+sehingga kita bisa diberi tahu saat audio
+focus mengubah aplikasi kita?
+
+00:01:14.615 --> 00:01:16.290
+Satu contoh kasus ini adalah,
+
+00:01:16.290 --> 00:01:20.100
+jika panggilan telepon masuk, maka kita
+perlu menyesuaikan pemutaran audio kita.
+
+00:01:20.100 --> 00:01:23.850
+Kembali ke pos blog di paragraf
+yang sama, dijelaskan bahwa sistem
+
+00:01:23.850 --> 00:01:28.360
+mungkin perlu untuk sementara atau permanen
+mengeluarkan audio focus dari aplikasi kita.
+
+00:01:28.360 --> 00:01:30.580
+Karena itu kita
+perlu membuat contoh
+
+00:01:30.580 --> 00:01:33.280
+OnAudioFocusChangeListener
+untuk menyimak
+
+00:01:33.280 --> 00:01:36.000
+perubahan ini di perangkat sehingga
+kita bereaksi terhadapnya.
+
+00:01:36.000 --> 00:01:39.740
+Mari kita menavigasi interface
+OnAudioFocuschageListener.
+
+00:01:39.740 --> 00:01:42.890
+OnAudioFocuschangeListener
+adalah interface lain
+
+00:01:42.890 --> 00:01:44.820
+seperti interface yang
+kita gunakan.
+
+00:01:44.820 --> 00:01:49.580
+Seperti OnClickListener dan interface
+OnCompletionListener media player.
+
+00:01:49.580 --> 00:01:53.370
+Perhatikan bahwa ini berisi satu metode
+abstrak yang harus kita implementasikan.
+
+00:01:53.370 --> 00:01:57.040
+Kita perlu menyediakan kode untuk apa
+yang harus dilakukan saat audio focus berubah.
+
+00:01:57.040 --> 00:01:59.890
+Misalnya, jika kita kehilangan
+audio focus, mungkin kita
+
+00:01:59.890 --> 00:02:02.220
+harus berhenti memutar pelafalan
+kata di aplikasi kita.
+
+00:02:02.220 --> 00:02:05.426
+Dan kita bisa memahami perincian tentang
+cara menangani perubahan audio focus nantinya.
+
+00:02:05.426 --> 00:02:07.783
+Baik, kembali ke
+pertanyaan kuis ketiga.
+
+00:02:07.783 --> 00:02:10.699
+Agar kita diberi tahu tentang
+perubahan dalam audio focus,
+
+00:02:10.699 --> 00:02:14.410
+kita harus membuat
+OnAudioFocusChangeListener.
+
+00:02:14.410 --> 00:02:18.055
+Lalu kita harus mengimplementasikan
+metode panggilan balik onAudioFocusChange.
+
+00:02:18.055 --> 00:02:19.089
+[BLANK_AUDIO]
+

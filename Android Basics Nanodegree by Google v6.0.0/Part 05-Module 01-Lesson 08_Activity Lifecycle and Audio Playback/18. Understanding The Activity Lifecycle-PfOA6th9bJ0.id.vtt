@@ -1,0 +1,347 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.300 --> 00:00:03.040
+Kerja bagus dalam menghapus resources
+Media Player segera setelah Anda
+
+00:00:03.040 --> 00:00:04.380
+tidak membutuhkannya lagi.
+
+00:00:04.380 --> 00:00:07.780
+Anda telah mengikuti praktik terbaik
+pengembangan Android,
+
+00:00:07.780 --> 00:00:09.460
+setidaknya untuk sebagian besar.
+
+00:00:09.460 --> 00:00:13.180
+Saya ingin memberi tahu beberapa perincian
+yang akan meminta kita memodifikasi kode
+
+00:00:13.180 --> 00:00:13.940
+agak lebih banyak lagi.
+
+00:00:13.940 --> 00:00:17.370
+Jadi, masalahnya adalah kita
+beroperasi dengan asumsi
+
+00:00:17.370 --> 00:00:19.299
+bahwa pengguna akan selalu
+tetap di dalam aplikasi kita.
+
+00:00:20.470 --> 00:00:24.410
+Bagaimana jika pengguna memutuskan untuk
+beralih ke, misalnya, browser web atau
+
+00:00:24.410 --> 00:00:25.440
+bahkan menjawab panggilan telepon?
+
+00:00:27.160 --> 00:00:29.770
+Jika pengguna tidak secara aktif
+melihat pada aplikasi kita,
+
+00:00:29.770 --> 00:00:33.570
+kita tidak bisa selesai mengeksekusi kode
+dan menghapus resources Media Player.
+
+00:00:33.570 --> 00:00:36.860
+Jika pengguna beralih ke beberapa aplikasi
+lain dan tidak pernah kembali ke
+
+00:00:36.860 --> 00:00:40.418
+aplikasi Miwok, maka akhirnya
+Android akan mematikan activity kita.
+
+00:00:40.418 --> 00:00:44.050
+Sehingga, Android dapat menggunakan resources
+tersebut untuk menjalankan aplikasi terbaru yang
+
+00:00:44.050 --> 00:00:44.950
+berinteraksi dengan pengguna.
+
+00:00:44.950 --> 00:00:46.660
+Sebagai pengembang,
+kita harus siap jika
+
+00:00:46.660 --> 00:00:49.100
+pengguna meninggalkan activity
+kita kapan saja.
+
+00:00:49.100 --> 00:00:52.110
+Atau jika sistem menonaktifkan activity
+kita karena membutuhkan
+
+00:00:52.110 --> 00:00:54.110
+resources untuk sesuatu yang lain.
+
+00:00:54.110 --> 00:00:57.250
+Maka, misalnya, di aplikasi email,
+pengembang bertanggung jawab untuk
+
+00:00:57.250 --> 00:01:00.350
+menyimpan versi terakhir
+draf email pengguna.
+
+00:01:00.350 --> 00:01:02.970
+Sehingga saat pengguna kembali
+ke aplikasi, bahkan setelah berhari-hari
+
+00:01:02.970 --> 00:01:05.340
+atau berbulan-bulan, akan tampak seolah-olah
+tidak pernah meninggalkan aplikasi.
+
+00:01:06.560 --> 00:01:09.570
+Dalam hal ini, pengembang harus
+menunjukkan kepada sistem
+
+00:01:09.570 --> 00:01:12.970
+bahwa dia tertarik untuk tahu kapan
+pengguna meninggalkan activity saat ini.
+
+00:01:12.970 --> 00:01:13.730
+Di titik itu,
+
+00:01:13.730 --> 00:01:16.890
+pengembang harus menyimpan versi
+terkini draf email tersebut.
+
+00:01:16.890 --> 00:01:19.170
+Nantinya, saat pengguna kembali
+ke activity,
+
+00:01:19.170 --> 00:01:22.150
+draf email harus
+dimunculkan di layar.
+
+00:01:22.150 --> 00:01:25.110
+Akan buruk jika dia kembali ke draf
+email yang sedang ditulis
+
+00:01:25.110 --> 00:01:28.910
+dan layar hanya kosong karena
+perubahan yang dilakukan
+
+00:01:28.910 --> 00:01:30.490
+tidak pernah disimpan.
+
+00:01:30.490 --> 00:01:33.190
+Maka, semua perilaku ini dikendalikan
+oleh kebutuhan untuk mengawetkan
+
+00:01:33.190 --> 00:01:35.080
+resources memori di perangkat.
+
+00:01:35.080 --> 00:01:38.090
+Android ingin memiliki resources yang
+memadai sehingga aplikasi yang saat ini
+
+00:01:38.090 --> 00:01:42.600
+berinteraksi dengan pengguna bisa cepat,
+responsif, dan resources
+
+00:01:42.600 --> 00:01:46.430
+tidak terbuang sia-sia di aplikasi yang belum
+berinteraksi dengan pengguna.
+
+00:01:46.430 --> 00:01:49.570
+Untuk memberikan struktur bagi semua
+kekacauan yang bisa terjadi di
+
+00:01:49.570 --> 00:01:53.690
+perangkat, Android memiliki siklus hidup
+yang dapat diikuti semua activity.
+
+00:01:53.690 --> 00:01:56.360
+Sehingga sistem akan menangani
+transisi activity dari
+
+00:01:56.360 --> 00:02:00.350
+satu tahap siklus hidup ke tahap yang
+lain, dan menawarkan panggilan balik
+
+00:02:00.350 --> 00:02:04.430
+sehingga Anda sebagai pengembang dapat diberi
+tahu saat perubahan ini terjadi di activity Anda.
+
+00:02:04.430 --> 00:02:05.480
+Saat Anda diberi tahu,
+
+00:02:05.480 --> 00:02:08.940
+Anda bisa mengambil kesempatan tersebut untuk
+mengeksekusi instruksi tertentu yang dibutuhkan.
+
+00:02:08.940 --> 00:02:11.630
+Mari kita bahas status
+activity yang lain.
+
+00:02:11.630 --> 00:02:15.360
+Saat activity pertama kali diluncurkan,
+dia dibuat, lalu dimulai, dan
+
+00:02:15.360 --> 00:02:16.250
+lalu dilanjutkan.
+
+00:02:16.250 --> 00:02:19.850
+Di titik ini, activity aktif dan pengguna
+dapat berinteraksi dengannya.
+
+00:02:19.850 --> 00:02:23.400
+Segera setelah pengguna pindah ke
+activity berbeda atau aplikasi berbeda,
+
+00:02:23.400 --> 00:02:26.960
+maka activity ini beralih ke status jeda,
+lalu status berhenti.
+
+00:02:26.960 --> 00:02:29.670
+Dan jika ditutup, maka
+otomatis akan dimatikan.
+
+00:02:29.670 --> 00:02:32.800
+Jika pengguna kembali ke activity
+ini, maka ini akan dimulai ulang,
+
+00:02:32.800 --> 00:02:35.640
+lalu kita beralih ke
+status dimulai dan
+
+00:02:35.640 --> 00:02:38.190
+sekarang pengguna bisa berinteraksi
+dengan activity lagi.
+
+00:02:38.190 --> 00:02:41.530
+Saya telah menunjukkan kepada Anda
+diagram siklus hidup activity sederhana.
+
+00:02:41.530 --> 00:02:44.475
+Sehingga pertama-tama Anda dapat memperoleh
+tinjauan tingkat tinggi tentang apa yang terjadi.
+
+00:02:44.475 --> 00:02:49.120
+Di dokumentasi Android resmi, dalam
+bagian Starting Activity,
+
+00:02:49.120 --> 00:02:52.190
+ada diagram siklus hidup
+activity penuh di sini.
+
+00:02:52.190 --> 00:02:54.980
+Diagram ini agak kompleks
+daripada yang saya tunjukkan kepada Anda
+
+00:02:54.980 --> 00:02:56.960
+tadi, tapi ide utamanya tetap sama.
+
+00:02:57.970 --> 00:03:00.140
+Ingat bahwa sistem Android
+bertanggung jawab untuk
+
+00:03:00.140 --> 00:03:03.230
+transisi activity Anda
+ke dalam tiap status.
+
+00:03:03.230 --> 00:03:06.115
+Anda sebagai pengembang tidak bisa
+mengontrol status Anda.
+
+00:03:06.115 --> 00:03:09.380
+Dimulai dari sini, saat
+activity Anda diluncurkan,
+
+00:03:09.380 --> 00:03:12.560
+activity beralih ke status dibuat
+menggunakan metode onCreate.
+
+00:03:14.060 --> 00:03:18.000
+Lalu dialihkan ke status diawali
+menggunakan metode Start.
+
+00:03:18.000 --> 00:03:20.880
+Di titik ini, activity menjadi
+tampak kepada pengguna.
+
+00:03:20.880 --> 00:03:24.260
+Dari sana, akan dialihkan ke status
+dilanjutkan melalui metode resume.
+
+00:03:24.260 --> 00:03:27.860
+Dalam hal ini, activity
+masih tampak kepada pengguna,
+
+00:03:27.860 --> 00:03:30.680
+tapi pengguna sekarang dapat mulai
+berinteraksi dengan activity.
+
+00:03:30.680 --> 00:03:35.270
+Di sini, Anda dapat menampilkan animasi,
+menggunakan sensor seperti sensor lokasi
+
+00:03:35.270 --> 00:03:36.390
+atau bahkan menggunakan kamera di perangkat.
+
+00:03:36.390 --> 00:03:40.970
+Activity tetap dapat berada di dalam status
+dilanjutkan selama pengguna
+
+00:03:40.970 --> 00:03:44.740
+melihat layar, sehingga bisa bermenit-menit
+atau berjam-jam atau bahkan lebih lama.
+
+00:03:45.860 --> 00:03:48.580
+Segera setelah pengguna beralih
+ke activity berbeda,
+
+00:03:48.580 --> 00:03:51.910
+maka activity Anda dijeda melalui
+metode Pause, dan
+
+00:03:51.910 --> 00:03:55.400
+dari sana beralih ke status berhenti
+melalui metode Stop.
+
+00:03:55.400 --> 00:03:59.760
+Jadi, di titik ini, activity
+tidak lagi terlihat oleh pembaca.
+
+00:03:59.760 --> 00:04:02.400
+Maka, karena pengguna Anda
+tidak bisa melihat activity.
+
+00:04:02.400 --> 00:04:05.870
+Jika sistem menentukan bahwa
+activity Anda tidak lagi dibutuhkan,
+
+00:04:05.870 --> 00:04:09.460
+sistem mungkin mematikan activity
+Anda melalui metode Destroy
+
+00:04:09.460 --> 00:04:12.380
+untuk membebaskan resources
+di perangkat, dan
+
+00:04:12.380 --> 00:04:15.610
+kemudian activity Anda dapat
+memasuki status dimatikan.
+
+00:04:15.610 --> 00:04:18.769
+Tapi jika tidak, activity Anda bisa
+tetap berada di status berhenti.
+
+00:04:18.769 --> 00:04:22.670
+Jika pengguna Anda memutuskan untuk
+kembali ke activity sebelum dimatikan,
+
+00:04:22.670 --> 00:04:26.840
+maka activity dimulai ulang
+melalui metode onRestart, lalu
+
+00:04:26.840 --> 00:04:29.830
+beralih ke status dimulai
+melalui metode onStart.
+
+00:04:29.830 --> 00:04:34.790
+Lalu akhirnya kembali ke status
+dilanjutkan melalui metode onResume.
+

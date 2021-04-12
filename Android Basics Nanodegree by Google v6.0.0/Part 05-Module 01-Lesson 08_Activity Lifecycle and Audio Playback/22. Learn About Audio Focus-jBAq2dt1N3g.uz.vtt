@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.160 --> 00:00:03.220
+Shunday qilib, taqdim etgan ikkala 
+maqolada ham javob mavjud, 
+
+00:00:03.220 --> 00:00:05.350
+ammo keling, maqolalardan 
+birini ko‘rib chiqaylik.
+
+00:00:05.350 --> 00:00:06.721
+Joannaning blogi bu yerda joylashgan.
+
+00:00:06.721 --> 00:00:11.440
+Endi ushbu birinchi bo‘lim 
+audio fokus haqida tushuntirish beradi.
+
+00:00:11.440 --> 00:00:12.700
+Bu yerda yana "AudioManager" sinfidan audio 
+fokusni so‘rashingiz mumkinligini 
+
+00:00:12.700 --> 00:00:16.780
+aytiladi va u biz audio fokusni 
+so‘rashimiz mumkin bo‘lgan
+
+00:00:16.780 --> 00:00:20.330
+usulga havolani taqdim etdi.
+
+00:00:20.330 --> 00:00:21.450
+Shunday qilib, keling,
+u yerga o‘taylik.
+
+00:00:21.450 --> 00:00:25.061
+Shunday qilib, "Android" hujjatlarida bu 
+yerda "requestAudioFocus" usuli mavjud.
+
+00:00:25.061 --> 00:00:26.942
+Endi blog postiga qaytaylik.
+
+00:00:26.942 --> 00:00:30.979
+Xuddi shu jumlada, u tovushni 
+ijro etishni tugatganingizda, 
+
+00:00:30.979 --> 00:00:33.230
+audio fokusni qanday chiqarish 
+haqida havolani taqdim etadi.
+
+00:00:33.230 --> 00:00:36.090
+Va bu bizni "AudioManager" sinfidagi qolib 
+
+00:00:36.090 --> 00:00:38.260
+ketgan "AudioFocus" usuliga olib boradi.
+
+00:00:38.260 --> 00:00:40.780
+Mayli, shu bois biz birinchi 
+ikkita savolga javob berdik.
+
+00:00:40.780 --> 00:00:45.190
+"AudioManager" ning "requestAudioFocus" usuli chaqirib, 
+"Android" tizimidan audio fokusni 
+
+00:00:45.190 --> 00:00:50.210
+so‘rashimiz mumkin va shundan 
+so‘ng biz o‘z ovozimizni tinglay olamiz.
+
+00:00:50.210 --> 00:00:54.730
+Biz darhol audio ijro etishni tugatgandan so‘ng,
+"AudioManager" sinfidagi 
+
+00:00:54.730 --> 00:00:59.260
+tashlab ketilgan "AudioFocus" usulini chaqirib,
+audio fokusni chiqaramiz.
+
+00:00:59.260 --> 00:01:02.499
+Endi shuni esda tutingki, ushbu ikkita 
+usul siz kiritishingiz kerak bo‘lgan
+
+00:01:02.499 --> 00:01:05.687
+kirish parametrlariga ega, ammo keyinroq 
+biz ushbu usullardan foydalanishimiz 
+
+00:01:05.687 --> 00:01:07.300
+kerak bo‘lganda uni hujjatlashtirishga 
+o‘zgartirishingiz mumkin.
+
+00:01:07.300 --> 00:01:11.240
+Yaxshisi, shu sababli, bizning ilova uchun 
+audio fokus o‘zgarganda, biz xabardor bo‘lishimiz uchun,
+
+00:01:11.240 --> 00:01:14.615
+biz qanday qilib chaqiruvni 
+qayta amalga oshirishimiz kerak?
+
+00:01:14.615 --> 00:01:16.290
+Bunga misol, agar telefon 
+qo‘ng‘irog‘i kelsa, 
+
+00:01:16.290 --> 00:01:20.100
+biz ovozni mos ravishda 
+moslashtirishimiz kerak.
+
+00:01:20.100 --> 00:01:23.850
+Endi ushbu xatboshidagi xatolarga qaytib,
+tizim audio fokusni bizning 
+
+00:01:23.850 --> 00:01:28.360
+ilovamizdan vaqtincha yoki 
+butunlay olib qo‘yishi kerakligini tushuntiradi.
+
+00:01:28.360 --> 00:01:30.580
+Va shuning uchun biz qurilmadagi ushbu 
+o‘zgarishlarni tinglashimiz uchun 
+
+00:01:30.580 --> 00:01:33.280
+"OnAudioFocusChangeListener" ning namunasini 
+yaratishimiz kerak, 
+
+00:01:33.280 --> 00:01:36.000
+shunda biz ularga ta’sir qila olamiz.
+
+00:01:36.000 --> 00:01:39.740
+Shunday qilib, "OnAudioFocusChangeListener" 
+interfeysiga o‘tamiz.
+
+00:01:39.740 --> 00:01:42.890
+Shunday qilib, "OnAudioFocusChangeListener" - 
+biz ishlatgan boshqa 
+
+00:01:42.890 --> 00:01:44.820
+interfeyslarga o‘xshaydi.
+
+00:01:44.820 --> 00:01:49.580
+"OnClickListener" va media pleyerlar kabi 
+"OnCompletionListener" interfeysi.
+
+00:01:49.580 --> 00:01:53.370
+Unda amalga oshirishimiz kerak bo‘lgan 
+bitta mavhum usul mavjudligiga e’tibor bering.
+
+00:01:53.370 --> 00:01:57.040
+Shunday qilib, audio fokus o‘zgarganda 
+nima qilish kerakligi haqida kodni berishimiz kerak.
+
+00:01:57.040 --> 00:01:59.890
+Masalan, agar audio fokusni yo‘qotib qo‘ysak,
+ehtimol ilovamizda so‘zlarning 
+
+00:01:59.890 --> 00:02:02.220
+talaffuz qilinishini to‘xtatishimiz kerak.
+
+00:02:02.220 --> 00:02:05.426
+Keyinchalik audio fokus o‘zgarishlarini 
+qanday hal qilish kerakligini aniqlaymiz.
+
+00:02:05.426 --> 00:02:07.783
+Yaxshi, shuning uchun uchinchi 
+savolga qaytamiz.
+
+00:02:07.783 --> 00:02:10.699
+Ovoz fokusidagi o‘zgarishlar to‘g‘risida 
+xabardor bo‘lish uchun biz 
+
+00:02:10.699 --> 00:02:14.410
+"OnAudioFocusChangeListener" ni 
+yaratishimiz, talaffuz qilinishini to‘xtatishimiz kerak.
+
+00:02:14.410 --> 00:02:18.055
+Va keyin "onAudioFocusChange" qo‘ng‘iroqni 
+qaytarish usulini amalga oshirishimiz kerak.
+
+00:02:18.055 --> 00:02:19.089
+[BLANK_AUDIO]
+

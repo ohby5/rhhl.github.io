@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.150 --> 00:00:03.780
+Baik, sekarang kita telah akrab dengan
+dasar-dasar media player di Android.
+
+00:00:03.780 --> 00:00:06.190
+Kita perlu membawa apa yang telah dipelajari
+di aplikasi music player dan
+
+00:00:06.190 --> 00:00:07.910
+menerapkannya di aplikasi Miwok kita.
+
+00:00:07.910 --> 00:00:11.140
+Tapi, pertama-tama, kita perlu memikirkan di
+mana kita harus menaruh kode media player
+
+00:00:11.140 --> 00:00:12.550
+di dalam aplikasi Miwok kita.
+
+00:00:12.550 --> 00:00:15.050
+Di demo aplikasi, saya menunjukkan kepada Anda
+bahwa saat kita mengeklik item list,
+
+00:00:18.000 --> 00:00:21.450
+kita akan memutar pelafalan audio
+untuk kata yang dipilih.
+
+00:00:21.450 --> 00:00:23.932
+Jadi, bagaimana kita melakukannya
+secara terprogram di kode Java?
+
+00:00:23.932 --> 00:00:27.970
+Salah satu caranya adalah dengan menambahkan
+ClickListener ke tiap item list.
+
+00:00:27.970 --> 00:00:30.950
+Ingatlah dari pelajaran satu,
+kita mendefinisikan ClickListener untuk
+
+00:00:30.950 --> 00:00:34.550
+tiap view kategori, lalu kita implementasikan
+OnClickListener untuk
+
+00:00:34.550 --> 00:00:38.020
+kategori angka, anggota keluarga,
+dan kategori yang lain.
+
+00:00:39.140 --> 00:00:39.850
+Dengan logika itu,
+
+00:00:39.850 --> 00:00:43.360
+kita bisa membuat OnCLickListener yang
+berbeda untuk tiap item list.
+
+00:00:43.360 --> 00:00:45.520
+Tapi jika, misalnya, ada
+ribuan kata dalam list,
+
+00:00:45.520 --> 00:00:48.175
+berarti akan ada banyak sekali
+objek OnClickListener.
+
+00:00:48.175 --> 00:00:50.520
+Tentu saja, tim Android berpikir bahwa
+ini akan menjadi permintaan
+
+00:00:50.520 --> 00:00:53.980
+yang lazim, yaitu menangani klik pada item
+list dalam ListView.
+
+00:00:53.980 --> 00:00:57.670
+Jadi mereka membuat cara bagi kita sebagai
+pengembang untuk menangani perilaku ini dengan mudah.
+
+00:00:58.710 --> 00:01:01.735
+Untuk membantu memahaminya, mari
+kita lakukan latihan ini.
+
+00:01:01.735 --> 00:01:05.019
+Saya ingin Anda meriset tentang bagaimana kita
+bisa mendefinisikan apa yang harus terjadi
+
+00:01:05.019 --> 00:01:08.460
+saat item list diklik dan, lebih spesifik lagi,
+metode apa yang harus kita panggil
+
+00:01:08.460 --> 00:01:12.680
+di ListView, serta apakah input
+untuk metode tersebut?
+
+00:01:12.680 --> 00:01:15.720
+Saya ingin Anda menentukan tipe data
+untuk tiap input.
+
+00:01:15.720 --> 00:01:17.820
+Lanjutkan dan tulis jawaban di sini.
+
+00:01:17.820 --> 00:01:21.250
+Perhatikan bahwa tidak ada perubahan
+kode di latihan ini.
+
+00:01:21.250 --> 00:01:23.620
+Anda akan memodifikasi aplikasi
+di latihan berikut.
+

@@ -1,0 +1,158 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.310 --> 00:00:03.380
+Untuk menunjukkan cara registrasi
+pada pemanggilan kembali aktivitas siklus hidup,
+
+00:00:03.380 --> 00:00:05.830
+saya buat proyek baru bernama Lifecycle.
+
+00:00:05.830 --> 00:00:07.770
+Saya gunakan
+panduan aktivitas kosong dan
+
+00:00:07.770 --> 00:00:10.890
+mulai memodifikasi
+dokumen MainActivity.
+
+00:00:10.890 --> 00:00:14.666
+Saya coba ganti tiap
+metode aktivitas utama siklus hidup
+
+00:00:14.666 --> 00:00:21.680
+onCreate, onStart, onResume,
+onPause, dan seterusnya.
+
+00:00:21.680 --> 00:00:24.060
+Saya beri Anda
+contoh cara melakukannya.
+
+00:00:24.060 --> 00:00:26.810
+Dalam versi Android Studio
+saya punya shortcut keyboard
+
+00:00:26.810 --> 00:00:28.580
+untuk menarik menu pergantian method.
+
+00:00:28.580 --> 00:00:33.040
+Saya tekan Ctrl+O dan menarik
+daftar metode yang bisa diganti.
+
+00:00:33.040 --> 00:00:37.010
+Misal saya pilih onStop, klik
+OK, dan metodenya tertarik.
+
+00:00:38.810 --> 00:00:42.070
+Android Studio otomatis
+menambahkan metode ke aplikasi saya.
+
+00:00:42.070 --> 00:00:45.357
+Dalam tiap metode saya panggil
+versi kelas super dari metode.
+
+00:00:45.357 --> 00:00:48.781
+Ini akan memotong instruksi
+dalam metode onStop dari
+
+00:00:48.781 --> 00:00:50.292
+AppCompact Activity.
+
+00:00:50.292 --> 00:00:52.790
+Dan ingat
+kelas yang kita ganti.
+
+00:00:52.790 --> 00:00:55.670
+Kelas super ini satu-satunya
+yang bekerja dalam hal
+
+00:00:55.670 --> 00:00:57.060
+menunjukkan window di layar
+
+00:00:57.060 --> 00:00:59.840
+dan di balik layar
+yang membuat aktivitas bekerja.
+
+00:00:59.840 --> 00:01:03.670
+Kapanpun Anda ganti metode siklus hidup
+pastikan panggil versi kelas super
+
+00:01:03.670 --> 00:01:08.189
+dari metode pertama setelah
+baris ini, kita bisa tambah ke logika kita.
+
+00:01:08.189 --> 00:01:11.604
+Saya menambah sebaris kode
+yang mencetak pesan log
+
+00:01:11.604 --> 00:01:14.847
+dengan nama metode seperti yang
+aktivitas siklus hidup lakukan.
+
+00:01:14.847 --> 00:01:17.661
+[BLANK_AUDIO]
+
+00:01:17.661 --> 00:01:21.138
+Jadi saat aplikasi berjalan,
+aktivitas langsung dimulai dan
+
+00:01:21.138 --> 00:01:23.562
+saya bisa cek log dan
+melihat onCreate, onStart dan
+
+00:01:23.562 --> 00:01:25.930
+onResume yang dipanggil.
+
+00:01:25.930 --> 00:01:30.430
+Saat saya tekan tombol Home
+aktivitas tak lagi terlihat.
+
+00:01:30.430 --> 00:01:33.760
+Metode onPause dan OnStop
+perlu dipanggil dan
+
+00:01:33.760 --> 00:01:34.770
+inilah mereka di Log.
+
+00:01:34.770 --> 00:01:35.410
+Sejauh ini kita berhasil.
+
+00:01:36.630 --> 00:01:37.861
+Jika saya kembali ke aplikasi
+
+00:01:37.861 --> 00:01:44.790
+[BLANK_AUDIO]
+
+00:01:44.790 --> 00:01:47.610
+Maka onStart dan
+onResume terpanggil.
+
+00:01:47.610 --> 00:01:51.020
+Kemudian aktivitas berubah aktif dan
+saya bisa berinteraksi dengannya.
+
+00:01:51.020 --> 00:01:53.630
+Saya tahu, banyak sekali
+informasi yang harus dipahami.
+
+00:01:53.630 --> 00:01:55.730
+Mungkin konsepnya sulit
+dipahami pada awalnya, tapi
+
+00:01:55.730 --> 00:01:59.110
+tenang saja, saat Anda lihat
+skenario aplikasi ini dan aplikasi lainnya
+
+00:01:59.110 --> 00:02:01.688
+Anda akan belajar cara mengatur
+aktivitas siklus hidup
+
+00:02:01.688 --> 00:02:04.280
+Jika Anda ingin bereksperimen
+dengan metode aktivitas siklus hidup
+
+00:02:04.280 --> 00:02:06.650
+saya tautkan kode
+yang bisa dilihat di bawah ini.
+

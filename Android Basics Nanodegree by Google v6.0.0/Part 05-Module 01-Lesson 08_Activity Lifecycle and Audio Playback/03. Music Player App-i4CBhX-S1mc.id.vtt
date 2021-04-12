@@ -1,0 +1,429 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.470 --> 00:00:03.340
+Baik, saya akan membuat proyek baru
+bernama MusicPlayer, jadi
+
+00:00:03.340 --> 00:00:06.460
+klik Start a New Android
+Studio Project ini.
+
+00:00:06.460 --> 00:00:09.070
+Saya akan menamai aplikasi saya
+MusicPlayer.
+
+00:00:09.070 --> 00:00:12.298
+Klik Next, saya akan menerima
+default minimum SDK ini.
+
+00:00:12.298 --> 00:00:15.370
+Lalu saya akan memilih template
+Empty Activity,
+
+00:00:15.370 --> 00:00:16.910
+klik Next, lalu Finish.
+
+00:00:18.670 --> 00:00:21.380
+Setelah itu, pertama-tama saya
+akan memodifikasi tata letak sehingga
+
+00:00:21.380 --> 00:00:23.210
+ada dua tombol di layar.
+
+00:00:23.210 --> 00:00:26.470
+Saya akan membuka
+activity_main.xml dan
+
+00:00:26.470 --> 00:00:29.780
+menuju ke TextView dan
+menutup ini.
+
+00:00:29.780 --> 00:00:32.200
+Dengan file tata letak
+activity_main.xml terbuka,
+
+00:00:32.200 --> 00:00:34.160
+saya akan membuka panel pratinjau.
+
+00:00:34.160 --> 00:00:38.380
+Saya akan memodifikasi file
+activity_main.xml yang ada
+
+00:00:38.380 --> 00:00:41.010
+dari relative layout
+menjadi linear layout.
+
+00:00:41.010 --> 00:00:45.500
+Lakuan perubahan di sini agar
+tombol putar dan jeda saling
+
+00:00:45.500 --> 00:00:49.820
+bertumpuk dan silakan untuk
+menata tombol sesuka Anda.
+
+00:00:49.820 --> 00:00:53.132
+Mungkin di tengah layar atau
+bahkan secara horizontal dalam deret, lalu
+
+00:00:53.132 --> 00:00:55.928
+saya akan memindahkan ini sehingga
+saya bisa melihat semua secara vertikal.
+
+00:00:55.928 --> 00:00:59.328
+Saya juga akan menambahkan
+orientasi vertikal di sini.
+
+00:00:59.328 --> 00:01:03.758
+Selanjutnya, saya akan memodifikasi TextView
+ini dan mengubahnya menjadi tombol.
+
+00:01:03.758 --> 00:01:06.510
+Lalu menyalin dan menempelkannya sehingga
+ada dua tombol.
+
+00:01:08.140 --> 00:01:11.118
+Sekarang, saya ingin teks tombol
+pertama bertuliskan Play.
+
+00:01:11.118 --> 00:01:13.805
+Dan teks di tombol kedua
+bertuliskan Pause.
+
+00:01:13.805 --> 00:01:17.175
+Saya juga akan menambahkan ID view
+untuk tiap tombol karena kita nanti perlu
+
+00:01:17.175 --> 00:01:20.415
+merujuknya di kode Java untuk mendefinisikan
+perilaku ButtonClick untuk masing-masing.
+
+00:01:22.185 --> 00:01:25.455
+Di panel pratinjau, tata letak ini
+sudah tampak bagus.
+
+00:01:25.455 --> 00:01:28.005
+Sekarang kita beralih ke
+file main_activity.
+
+00:01:28.005 --> 00:01:30.775
+Di sini, saya ingin memasukkan
+ClickListener ke tiap tombol dan
+
+00:01:30.775 --> 00:01:34.720
+sebagaimana di pelajaran satu, kita akan
+mengimplementasikan ClickListener anonim
+
+00:01:34.720 --> 00:01:38.130
+untuk tombol ini dan ini ada di
+metode panggilan balik onClick.
+
+00:01:38.130 --> 00:01:41.940
+Di dalam metode onCreate, saya akan
+mencari playButton yang telah kita buat
+
+00:01:41.940 --> 00:01:45.360
+menggunakan metode findViewById dan
+memasukkan ViewID.
+
+00:01:47.200 --> 00:01:49.430
+Lalu saya akan mengatur metode
+onClickListener di tombol.
+
+00:01:53.500 --> 00:01:57.797
+Untuk instruksi di dalam metode onClick,
+saat ini saya hanya akan membuatnya
+
+00:01:57.797 --> 00:02:01.648
+menyembulkan pesan Toast hingga kita
+memikirkan cara memutar file lagu.
+
+00:02:01.648 --> 00:02:04.600
+[BLANK_AUDIO]
+
+00:02:04.600 --> 00:02:07.068
+Saya dapat menggunakan logika yang sama
+untuk tombol Pause.
+
+00:02:07.068 --> 00:02:11.024
+Saya akan memilih seluruh blok kode
+ini, salin dan tempel,
+
+00:02:11.024 --> 00:02:14.757
+yang harus saya lakukan sekarang adalah
+mengubah nama variabel, ViewId, dan
+
+00:02:14.757 --> 00:02:18.820
+pesan Toast untuk merujuk
+tombol Pause.
+
+00:02:18.820 --> 00:02:22.160
+Sekarang, mari pastikan kode ini berfungsi
+dengan menjalankannya di ponsel.
+
+00:02:22.160 --> 00:02:22.820
+Keren.
+Jadi,
+
+00:02:22.820 --> 00:02:25.430
+tiap tombol menyembul dengan
+pesan Toast yang berbeda.
+
+00:02:25.430 --> 00:02:27.560
+Satu untuk Play dan lainnya untuk Pause.
+
+00:02:27.560 --> 00:02:29.920
+Baik, jadi sekarang kita
+tambahkan file lagu.
+
+00:02:29.920 --> 00:02:32.980
+Saya bersihkan folder raw seperti
+yang sudah saya tunjukkan sebelumnya.
+
+00:02:32.980 --> 00:02:35.390
+Ini adalah file lagu di
+komputer saya untuk
+
+00:02:35.390 --> 00:02:38.900
+Anda yang penasaran, ini sebenarnya lagu
+video trailer dari
+
+00:02:38.900 --> 00:02:41.030
+entri saluran YouTube pengembang.
+
+00:02:41.030 --> 00:02:42.461
+Saya akan menyalinnya dan
+
+00:02:42.461 --> 00:02:45.608
+menempelkannya ke folder raw di
+Android Studio.
+
+00:02:45.608 --> 00:02:48.510
+Bagus, sudah selesai, jadi
+file lagu sekarang ada di aplikasi kita.
+
+00:02:48.510 --> 00:02:50.700
+Sekarang mari kita pikirkan
+cara memutar lagu itu.
+
+00:02:50.700 --> 00:02:53.820
+Salah satu caranya adalah kita bisa
+kembali ke artikel MediaPlayer kita,
+
+00:02:53.820 --> 00:02:57.520
+tapi saya ingin menunjukkan
+cara yang berbeda.
+
+00:02:57.520 --> 00:03:02.210
+Mari kita online dan mencari
+tutorial media player Android.
+
+00:03:02.210 --> 00:03:03.450
+Hasil pertama tampak bagus.
+
+00:03:04.860 --> 00:03:07.640
+Oh, dan potongan kode ini
+juga tampak berguna.
+
+00:03:07.640 --> 00:03:08.970
+Dengan membaca deskripsi,
+
+00:03:08.970 --> 00:03:12.520
+tampaknya baris kode ini membuat
+objek media player untuk kita.
+
+00:03:12.520 --> 00:03:16.750
+Perhatikan bahwa kita memasukkan dua input,
+yaitu context dan resource ID untuk
+
+00:03:16.750 --> 00:03:18.500
+file audio raw.
+
+00:03:18.500 --> 00:03:22.160
+Dalam contoh di sini,
+lagu adalah nama file tersebut.
+
+00:03:22.160 --> 00:03:27.080
+Maka, setelah media player dibuat, kita dapat
+memanggil metode seperti start dan pause.
+
+00:03:27.080 --> 00:03:30.760
+Tampaknya ini yang kita butuhkan untuk
+tombol Play dan yang kita butuhkan untuk
+
+00:03:30.760 --> 00:03:32.130
+tombol Pause.
+
+00:03:32.130 --> 00:03:35.317
+Sisa artikel ini berbicara tentang metode
+lain yang dapat Anda panggil dan
+
+00:03:35.317 --> 00:03:37.418
+Anda bisa kembali ke sini dan
+membacanya lagi nanti.
+
+00:03:37.418 --> 00:03:40.296
+Baik, jadi baris pertama kode
+ini tampak cukup menjanjikan.
+
+00:03:40.296 --> 00:03:42.890
+Saya hanya akan menyalin dan
+menempelkannya di aplikasi kita.
+
+00:03:42.890 --> 00:03:46.390
+Kembali ke kode kita, di mana
+kita harus membuat media player?
+
+00:03:46.390 --> 00:03:48.670
+Seperti disarankan oleh
+petunjuk kuis,
+
+00:03:48.670 --> 00:03:51.920
+mari kita buat media player sebagai
+variabel global karena kita ingin
+
+00:03:51.920 --> 00:03:56.000
+merujuk media player dari
+onClickListener untuk tiap tombol.
+
+00:03:56.000 --> 00:04:00.460
+Jika penalaran itu tidak jelas, tidak masalah,
+semakin Anda memperoleh banyak pengalaman
+
+00:04:00.460 --> 00:04:03.760
+tentang Java, Anda akan lebih baik dalam
+memahami persyaratan variabel
+
+00:04:03.760 --> 00:04:07.500
+yang digunakan dalam kelas-kelas
+anonim seperti ClickListener ini.
+
+00:04:07.500 --> 00:04:09.570
+Untuk kasus ini, silakan lanjutkan dan
+
+00:04:09.570 --> 00:04:11.800
+pastikan bahwa media player
+memang variabel global.
+
+00:04:12.930 --> 00:04:15.780
+Di file Main_Activity ini,
+kapan kita harus mengatur
+
+00:04:15.780 --> 00:04:17.670
+atau menginisialisasi media player?
+
+00:04:17.670 --> 00:04:19.570
+Apakah pada saat
+tombol Play diklik?
+
+00:04:21.380 --> 00:04:24.000
+Saya pikir kita harus mengaturnya
+sebelum itu.
+
+00:04:24.000 --> 00:04:27.700
+Mari kita inisialisasi media player
+saat activity pertama kali dibuat,
+
+00:04:27.700 --> 00:04:30.680
+lalu objek media player akan siap
+tiap kali kita ketuk Play.
+
+00:04:31.700 --> 00:04:34.250
+Saya akan menempelkan kode yang kita
+salin dari tutorial ini.
+
+00:04:35.320 --> 00:04:37.870
+Dan sekarang, saya ingin memodifikasinya
+agar cocok dengan aplikasi kita.
+
+00:04:37.870 --> 00:04:40.400
+Saya tidak perlu mendeklarasikan
+objek yang saya tulis lagi,
+
+00:04:40.400 --> 00:04:44.090
+karena variabel itu telah dideklarasikan
+sebagai variabel global.
+
+00:04:44.090 --> 00:04:47.225
+Saya juga menamai ulang R.raw.song
+
+00:04:47.225 --> 00:04:53.560
+menjadi R.raw.android_trailer karena
+itulah nama file lagu kita.
+
+00:04:53.560 --> 00:04:55.940
+Baik, lalu di
+PlayButton ClickListener,
+
+00:04:55.940 --> 00:05:00.990
+kita bisa menghapus pesan Toast dan
+memanggil mediaPlayer.start.
+
+00:05:00.990 --> 00:05:04.028
+Dan melakukan hal serupa pada
+pauseButton ClickListener,
+
+00:05:04.028 --> 00:05:07.318
+kita hapus pesan Toast dan
+memanggil mediaPlayer.pause.
+
+00:05:07.318 --> 00:05:08.838
+Baik, sekarang, kita uji aplikasi.
+
+00:05:08.838 --> 00:05:15.458
+[MUSIC]
+
+00:05:15.458 --> 00:05:17.510
+Bagus.
+Terdengar fantastis.
+
+00:05:17.510 --> 00:05:19.560
+Lagu diputar,
+dan tombol Play
+
+00:05:19.560 --> 00:05:21.910
+dan Button bekerja sesuai harapan.
+
+00:05:21.910 --> 00:05:24.230
+Kembali ke tutorial yang
+kita jumpai tadi.
+
+00:05:24.230 --> 00:05:25.830
+Jika ada waktu luang,
+
+00:05:25.830 --> 00:05:28.990
+mungkin Anda punya kesempatan untuk
+bereksperimen dengan metode media player lain.
+
+00:05:28.990 --> 00:05:31.990
+Sebagai contoh di sini, metode
+seekTo yang digunakan untuk
+
+00:05:31.990 --> 00:05:35.880
+melewatkan bagian tertentu dari lagu
+atau metode setVolume ini,
+
+00:05:35.880 --> 00:05:38.850
+yang digunakan untuk mengubah
+volume agar lebih bagus.
+
+00:05:38.850 --> 00:05:39.770
+Seperti Anda lihat,
+
+00:05:39.770 --> 00:05:43.890
+menulis aplikasi sampel kecil adalah cara
+bagus untuk menjadi nyaman dengan API di
+
+00:05:43.890 --> 00:05:48.010
+Android tanpa semua kompleksitas
+pada aplikasi yang utuh dan lengkap.
+
+00:05:48.010 --> 00:05:50.654
+Baik, mari kita sampingkan aplikasi
+Music Player, 
+
+00:05:50.654 --> 00:05:53.600
+kita akan kembali ke sini lagi nanti, tapi
+sekarang kita kembali ke aplikasi Miwok.
+

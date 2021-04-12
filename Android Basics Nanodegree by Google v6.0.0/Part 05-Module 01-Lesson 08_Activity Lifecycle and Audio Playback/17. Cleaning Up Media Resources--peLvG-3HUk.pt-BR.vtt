@@ -1,0 +1,228 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.733
+Vamos começar
+adicionando o trecho de código dado.
+
+00:00:02.767 --> 00:00:04.300
+Adicione
+ao aplicativo Miwok.
+
+00:00:04.333 --> 00:00:08.033
+Vou copiar isto,
+mudar para o Android Studio
+
+00:00:08.067 --> 00:00:11.233
+e colar na parte de baixo
+da NumbersActivity.
+
+00:00:11.267 --> 00:00:15.600
+Agora quero chamar este método
+que adicionamos, releaseMediaPlayer,
+
+00:00:15.633 --> 00:00:18.100
+quando o áudio terminar de tocar.
+
+00:00:18.133 --> 00:00:23.033
+Ou seja, tenho que registrar
+um onCompletionListener com o MediaPlayer.
+
+00:00:23.067 --> 00:00:27.033
+Isso precisa ser criado depois
+do MediaPlayer ser iniciado.
+
+00:00:27.067 --> 00:00:31.800
+Então vou adicionar o código abaixo
+da linha mMediaPlayer.start.
+
+00:00:31.833 --> 00:00:34.433
+Eu deixo o Android Studio
+preencher automaticamente,
+
+00:00:34.467 --> 00:00:36.900
+adicionando a interface callback
+para mim.
+
+00:00:36.933 --> 00:00:42.633
+Na callback do método onCompletion,
+eu posso chamar o método releaseMediaPlayer.
+
+00:00:43.833 --> 00:00:46.933
+Percebi que há um jeito mais eficiente
+de fazer isso.
+
+00:00:46.967 --> 00:00:49.433
+Em vez de criarmos um novo
+onCompletionListener
+
+00:00:49.467 --> 00:00:51.500
+sempre que clicarmos num item da lista,
+
+00:00:51.533 --> 00:00:54.933
+podemos criar uma única instância
+deste onCompletionListener
+
+00:00:54.967 --> 00:00:56.833
+e reutilizá-la
+todas as vezes.
+
+00:00:56.867 --> 00:01:00.800
+Isso seria mais eficiente
+porque não criaríamos sempre um novo objeto
+
+00:01:00.833 --> 00:01:03.333
+que consumiria novos recursos.
+
+00:01:03.367 --> 00:01:08.100
+Quero mover este bloco de código
+que implementa a interface onCompletionListener
+
+00:01:08.133 --> 00:01:10.033
+e colocá-lo numa variável global.
+
+00:01:10.067 --> 00:01:11.600
+Foi assim que ficou.
+
+00:01:11.633 --> 00:01:15.967
+Movi o código que implementava
+a interface onCompletionListener
+
+00:01:17.767 --> 00:01:22.067
+para uma variável global
+que chamei de mCompletionListener.
+
+00:01:22.100 --> 00:01:23.500
+De volta para cá.
+
+00:01:24.433 --> 00:01:29.333
+Toda vez que eu crio um objeto MediaPlayer novo
+e inicio o Mediaplayer,
+
+00:01:29.367 --> 00:01:33.667
+posso definir o onCompletionListener
+para ser a variável global.
+
+00:01:33.700 --> 00:01:39.433
+Então vou atribuir o mCompletionListener
+e, para esclarecer, vou adicionar comentários.
+
+00:01:41.567 --> 00:01:43.867
+Certo, completamos a 1ª tarefa.
+
+00:01:43.900 --> 00:01:48.067
+Quando a NumbersActivity
+terminar de tocar um áudio,
+
+00:01:48.100 --> 00:01:50.600
+ela irá liberar os recursos
+do MediaPlayer.
+
+00:01:50.633 --> 00:01:54.600
+A 2ª tarefa diz que também é
+para liberar os recursos
+
+00:01:54.633 --> 00:01:57.733
+antes do MediaPlayer ser inicializado
+para tocar outro áudio.
+
+00:01:57.767 --> 00:02:02.100
+Isso pode acontecer se o usuário clicar
+rapidamente em vários itens em sequência.
+
+00:02:02.133 --> 00:02:05.867
+O dispositivo pode não ter tempo suficiente
+parar terminar de tocar cada áudio,
+
+00:02:05.900 --> 00:02:09.233
+de forma que o onCompletionListener
+pode não ser acionado.
+
+00:02:09.267 --> 00:02:13.300
+Se estivéssemos no meio de uma música,
+e o usuário clicasse em outra,
+
+00:02:13.333 --> 00:02:16.433
+precisaríamos parar,
+liberar os recursos do MediaPlayer
+
+00:02:16.467 --> 00:02:20.333
+e criar imediatamente um novo objeto
+para a música atual.
+
+00:02:20.367 --> 00:02:24.533
+Voltando para a NumbersActivity,
+no método OnItem,
+
+00:02:24.567 --> 00:02:27.233
+antes do MediaPlayer
+ser criado,
+
+00:02:27.267 --> 00:02:30.333
+devemos liberar
+os recursos também.
+
+00:02:30.367 --> 00:02:34.867
+Faremos isso só para o caso do MediaPlayer
+ter sido configurado para tocar outro áudio.
+
+00:02:34.900 --> 00:02:38.467
+Essas foram todas as mudanças necessárias
+na NumbersActivity,
+
+00:02:38.500 --> 00:02:42.400
+e agora vou repetir a mesma coisa
+para as outras activities.
+
+00:02:54.067 --> 00:02:57.400
+Essas foram todas as mudanças necessárias
+para todas as activities,
+
+00:02:57.433 --> 00:03:00.300
+e agora vou testar o aplicativo
+para ver se não há nada errado.
+
+00:03:00.333 --> 00:03:03.900
+O aplicativo está executando
+no meu dispositivo.
+
+00:03:03.933 --> 00:03:07.133
+Visualmente, parece que nada mudou.
+Isso é bom.
+
+00:03:07.167 --> 00:03:09.233
+Vamos checar
+se o áudio ainda funciona
+
+00:03:09.267 --> 00:03:11.600
+Vou clicar
+na PhrasesActivity.
+
+00:03:11.633 --> 00:03:15.900
+Aqui, ou eu toco um som para uma palavra
+e deixo terminar
+
+00:03:15.933 --> 00:03:19.033
+ou eu clico em vários itens
+em uma sucessão rápida.
+
+00:03:19.067 --> 00:03:22.133
+Os recursos do MediaPlayer
+devem ser liberados.
+
+00:03:22.167 --> 00:03:25.367
+Vou tentar 1º com uma única palavra
+e deixá-la terminar.
+
+00:03:27.900 --> 00:03:31.600
+Agora vou testar com vários itens
+em sucessão rápida,
+
+00:03:31.633 --> 00:03:33.700
+e eles devem
+ser interrompidos.
+
+00:03:40.033 --> 00:03:41.533
+Isso parece bom.
+

@@ -1,0 +1,410 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.100
+Vou criar um projeto novo
+chamado MusicPlayer.
+
+00:00:03.133 --> 00:00:06.433
+Clique em "Começar um novo projeto
+no Android Studio".
+
+00:00:06.467 --> 00:00:09.033
+Minha aplicação
+será MusicPlayer.
+
+00:00:09.067 --> 00:00:12.500
+Clique em "Próximo".
+Vou aceitar este SDK mínimo padrão.
+
+00:00:12.533 --> 00:00:17.467
+Vou escolher o template Empty Activity.
+Clique em "Próximo" e em "Terminar".
+
+00:00:18.667 --> 00:00:23.167
+Como terminei, vou modificar o layout
+para ter dois botões na tela.
+
+00:00:23.200 --> 00:00:26.333
+Vou abrir
+meu arquivo activity_main.xml.,
+
+00:00:26.367 --> 00:00:29.600
+ir para a TextView
+e fechar isto.
+
+00:00:29.633 --> 00:00:32.700
+Com o arquivo de layout
+activity_main.xml aberto,
+
+00:00:32.733 --> 00:00:35.033
+vou abrir a área
+de pré-visualização.
+
+00:00:35.067 --> 00:00:38.500
+Vou modificar
+o arquivo activity_main.xml existente
+
+00:00:38.533 --> 00:00:40.967
+de um layout relativo
+para um linear.
+
+00:00:41.000 --> 00:00:42.867
+Faça essa mudança aqui.
+
+00:00:42.900 --> 00:00:46.933
+Assim, os botões "tocar" e "pause"
+ficam um em cima do outro.
+
+00:00:46.967 --> 00:00:49.800
+Organize os botões
+da forma que quiser.
+
+00:00:49.833 --> 00:00:52.933
+Talvez no meio da tela
+ou até mesmo horizontalmente numa linha.
+
+00:00:52.967 --> 00:00:55.900
+Vou mudar isto
+para vê-los verticalmente.
+
+00:00:55.933 --> 00:00:59.533
+Também vou adicionar em "orientation"
+o valor vertical.
+
+00:00:59.567 --> 00:01:03.733
+Em seguida, vou modificar esta TextView
+e mudá-la para "Button".
+
+00:01:03.767 --> 00:01:06.967
+Aí vou copiar e colar
+para termos dois botões.
+
+00:01:08.100 --> 00:01:11.300
+Agora quero que o texto do 1º botão
+diga "Tocar",
+
+00:01:11.333 --> 00:01:13.700
+e o do 2º diga "Pause".
+
+00:01:13.733 --> 00:01:16.100
+Também vou adicionar IDs View
+para cada botão,
+
+00:01:16.133 --> 00:01:18.433
+pois teremos que nos referir a eles
+no Java
+
+00:01:18.467 --> 00:01:22.167
+para definir o comportamento ButtonClick
+para cada um deles.
+
+00:01:22.200 --> 00:01:25.333
+O layout na área de pré-visualização
+parece bom.
+
+00:01:25.367 --> 00:01:27.833
+Agora vamos
+para o arquivo MainActivity.
+
+00:01:27.867 --> 00:01:30.633
+Aqui quero conectar ClickListeners
+a cada botão,
+
+00:01:30.667 --> 00:01:35.633
+e, como na lição 1, vamos implementar
+um ClickListener anônimo para este botão
+
+00:01:35.667 --> 00:01:38.100
+que estará
+num método de retorno de cliques.
+
+00:01:38.133 --> 00:01:41.900
+Dentro do método onCreate,
+vou achar o botão "tocar" que criamos
+
+00:01:41.933 --> 00:01:46.233
+usando o método findViewById
+e atribuindo a ID da View.
+
+00:01:47.200 --> 00:01:50.700
+Depois vou definir o método OnClickListener
+ao botão.
+
+00:01:53.500 --> 00:01:57.033
+Para as instruções dentro
+do método onClick,
+
+00:01:57.067 --> 00:02:02.533
+agora ele fará aparecer uma mensagem Toast
+até descobrirmos como tocar o áudio.
+
+00:02:04.167 --> 00:02:07.267
+Posso usar a mesma lógica
+para o botão "pause",
+
+00:02:07.300 --> 00:02:12.633
+então vou selecionar este bloco de código,
+copiar e colar,
+
+00:02:12.667 --> 00:02:16.733
+e agora só tenho que mudar o nome da variável,
+a ID da View e a mensagem toast
+
+00:02:16.767 --> 00:02:18.800
+para referenciar
+ao botão "pause".
+
+00:02:18.833 --> 00:02:22.133
+Vamos ver se o código funciona
+executando-o no celular.
+
+00:02:22.167 --> 00:02:25.400
+Ótimo! Cada botão aparece
+com uma mensagem toast diferente.
+
+00:02:25.433 --> 00:02:27.533
+Um para "tocar"
+e outro para "pause".
+
+00:02:27.567 --> 00:02:29.900
+Agora vamos adicionar
+o arquivo de música.
+
+00:02:29.933 --> 00:02:32.933
+Eu criei as pastas raw
+como mostrei antes.
+
+00:02:32.967 --> 00:02:36.933
+Este é o arquivo no meu computador,
+e, para os curiosos,
+
+00:02:36.967 --> 00:02:41.000
+é a música do trailer
+do canal Android Developers, no YouTube.
+
+00:02:41.033 --> 00:02:45.567
+Agora vou copiar e colar este arquivo
+na pasta raw no Android Studio.
+
+00:02:45.600 --> 00:02:48.467
+Ótimo, o arquivo de música está
+no aplicativo.
+
+00:02:48.500 --> 00:02:50.667
+Vamos descobrir
+como tocar essa música.
+
+00:02:50.700 --> 00:02:54.533
+Uma maneira é voltar
+para o artigo do MediaPlayer,
+
+00:02:54.567 --> 00:02:57.500
+mas quero mostrar uma forma diferente
+de achar a resposta.
+
+00:02:57.533 --> 00:03:02.033
+Vamos on-line pesquisar pelo tutorial
+do MediaPlayer do Android.
+
+00:03:02.067 --> 00:03:04.133
+Este 1º resultado
+parece bom.
+
+00:03:04.667 --> 00:03:07.600
+Ah, estes trechos de código
+parecem úteis também.
+
+00:03:07.633 --> 00:03:08.933
+Lendo a descrição,
+
+00:03:08.967 --> 00:03:12.500
+parece que esta linha de código
+cria um objeto MediaPlayer para nós.
+
+00:03:12.533 --> 00:03:18.233
+Veja que se atribui duas entradas, um contexto
+e a ID de recurso para o áudio raw.
+
+00:03:18.267 --> 00:03:22.133
+Nesta instância,
+o nome do arquivo é song.
+
+00:03:22.167 --> 00:03:27.033
+Com o MediaPlayer criado,
+é possível chamar métodos como start e pause.
+
+00:03:27.067 --> 00:03:29.667
+Acho que é o que queremos
+para nosso botão "tocar"
+
+00:03:29.700 --> 00:03:32.100
+e o que precisamos
+para o botão "pause"
+
+00:03:32.133 --> 00:03:35.133
+O resto do artigo fala
+de outros métodos de chamada,
+
+00:03:35.167 --> 00:03:37.667
+e você pode voltar
+e ler mais tarde.
+
+00:03:37.700 --> 00:03:40.467
+A 1ª linha de código aqui
+parece promissora.
+
+00:03:40.500 --> 00:03:42.867
+Vamos copiar
+e colar no aplicativo.
+
+00:03:42.900 --> 00:03:46.367
+No nosso código,
+onde devemos criar o MediaPlayer?
+
+00:03:46.400 --> 00:03:51.267
+Como sugerido pela dica no quiz,
+vamos tornar o MediaPlayer uma variável global,
+
+00:03:51.300 --> 00:03:55.967
+pois queremos referenciar ao MediaPlayer
+pelos OnClickListeners a cada botão.
+
+00:03:56.000 --> 00:03:59.400
+Se o raciocínio não estiver claro,
+tudo bem.
+
+00:03:59.433 --> 00:04:03.733
+Ganhando mais experiência com o Java,
+você entenderá as exigências das variáveis
+
+00:04:03.767 --> 00:04:07.467
+que são usadas dentro de classes anônimas
+como esses ClickListeners.
+
+00:04:07.500 --> 00:04:12.900
+Para este caso, vamos nos assegurar
+de que o MediaPlayer seja uma variável global.
+
+00:04:12.933 --> 00:04:17.633
+No arquivo MainActivity, quando devemos definir
+ou inicializar o MediaPlayer?
+
+00:04:17.667 --> 00:04:20.033
+Quando o botão "tocar"
+for clicado?
+
+00:04:21.367 --> 00:04:23.967
+Não,
+acho que devemos defini-lo antes.
+
+00:04:24.000 --> 00:04:27.667
+Vamos inicializar o MediaPlayer
+quando a activity for criada,
+
+00:04:27.700 --> 00:04:31.667
+aí o objeto MediaPlayer estará pronto sempre
+que clicarmos em "tocar".
+
+00:04:31.700 --> 00:04:35.300
+Então vou colar o código
+que copiamos do tutorial aqui.
+
+00:04:35.333 --> 00:04:37.833
+Agora vou adequá-lo
+ao aplicativo.
+
+00:04:37.867 --> 00:04:40.367
+Não preciso declarar o objeto
+de novo,
+
+00:04:40.400 --> 00:04:44.067
+pois a variável já foi declarada
+como global.
+
+00:04:44.100 --> 00:04:47.267
+Também renomeei
+o R.raw.song
+
+00:04:47.300 --> 00:04:50.400
+para R.raw.android_trailer,
+
+00:04:50.433 --> 00:04:53.533
+pois esse é o nome
+do nosso arquivo de música.
+
+00:04:53.567 --> 00:04:55.900
+No ClickListener
+do botão "tocar",
+
+00:04:55.933 --> 00:05:00.933
+podemos deletar a mensagem toast
+e chamar o mediaPlayer.start.
+
+00:05:00.967 --> 00:05:03.300
+E podemos fazer o mesmo
+com o botão "pause".
+
+00:05:03.333 --> 00:05:07.300
+Vamos deletar a mensagem toast
+e chamar o mediaPlayer.pause.
+
+00:05:07.333 --> 00:05:09.433
+Agora vamos testar
+o aplicativo.
+
+00:05:15.733 --> 00:05:17.467
+Legal!
+O som está ótimo.
+
+00:05:17.500 --> 00:05:21.867
+A música toca, e os botões "tocar"
+e "pause" funcionam como esperávamos.
+
+00:05:21.900 --> 00:05:24.200
+Voltando ao tutorial
+que achamos antes.
+
+00:05:24.233 --> 00:05:25.800
+Se você tiver tempo extra,
+
+00:05:25.833 --> 00:05:28.933
+talvez possa experimentar
+com outros métodos MediaPlayer.
+
+00:05:28.967 --> 00:05:31.400
+Por exemplo,
+aqui, o método seekTo,
+
+00:05:31.433 --> 00:05:33.933
+usado para pular
+para uma parte diferente da música,
+
+00:05:33.967 --> 00:05:37.833
+ou o método setVolume,
+usado para mudar o volume.
+
+00:05:37.867 --> 00:05:39.733
+Então bom trabalho!
+Como você pode ver,
+
+00:05:39.767 --> 00:05:42.867
+um aplicativo de exemplo pequeno
+é um bom jeito de ficar confortável
+
+00:05:42.900 --> 00:05:44.733
+com uma nova API no Android
+
+00:05:44.767 --> 00:05:47.967
+sem as complexidades extras
+de um aplicativo grande.
+
+00:05:48.000 --> 00:05:51.867
+Vamos deixar o aplicativo reprodutor de música
+para mais tarde.
+
+00:05:51.900 --> 00:05:54.133
+Agora vamos voltar
+para o Miwok.
+

@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.500
+Agora que você conhece os estados
+do ciclo de vida das activities,
+
+00:00:03.533 --> 00:00:07.167
+como dizer ao sistema
+que você quer saber de certas transições?
+
+00:00:07.200 --> 00:00:10.667
+Por exemplo,
+você só quer exibir uma animação na tela
+
+00:00:10.700 --> 00:00:13.433
+se o usuário estiver olhando ativamente
+para sua activity,
+
+00:00:13.467 --> 00:00:17.500
+e você quer interromper a animação
+assim que a tela não estiver mais visível.
+
+00:00:17.533 --> 00:00:20.633
+Do mesmo modo que você lida com cliques,
+o sistema vai sinalizar
+
+00:00:20.667 --> 00:00:24.233
+que uma transição de ciclo de vida ocorreu
+através do método callback,
+
+00:00:24.267 --> 00:00:26.767
+e cada transição
+tem sua própria callback.
+
+00:00:26.800 --> 00:00:30.033
+Usá-las dá a você,
+como desenvolvedor,
+
+00:00:30.067 --> 00:00:33.367
+uma oportunidade de intervir
+e executar instruções.
+
+00:00:33.400 --> 00:00:38.733
+Coisas como restaurar ou salvar dados,
+ou limpar referências não mais necessárias
+
+00:00:38.767 --> 00:00:40.633
+na hora
+em que você precisa delas.
+
+00:00:40.667 --> 00:00:42.633
+Aqui estou
+na NumbersActivity,
+
+00:00:42.667 --> 00:00:46.000
+e você deve ter notado que temos escrito
+a boa parte do código
+
+00:00:46.033 --> 00:00:48.400
+no método onCreate
+das activities.
+
+00:00:48.433 --> 00:00:53.300
+Esta é a callback que o sistema executa
+ao criar sua activity,
+
+00:00:53.333 --> 00:00:56.400
+e, assim, sobrepondo o método
+na sua definição de classe,
+
+00:00:56.433 --> 00:01:00.333
+você consegue especificar
+o que quer que aconteça nesse estágio.
+
+00:01:00.367 --> 00:01:04.067
+É aqui que inflamos nossos recursos
+de layout XML,
+
+00:01:04.100 --> 00:01:07.233
+obtemos referências à View
+que queremos manipular,
+
+00:01:07.267 --> 00:01:12.167
+e inicializamos outros objetos cruciais
+de que nosso aplicativo depende para funcionar.
+
+00:01:12.200 --> 00:01:14.433
+Na documentação
+de desenvolvedor Android,
+
+00:01:14.467 --> 00:01:17.867
+se olharmos a classe activity,
+ela mostra todas as callbacks do sistema
+
+00:01:17.900 --> 00:01:20.400
+para os vários estados
+do ciclo de vida das atividades.
+
+00:01:20.433 --> 00:01:23.967
+Você pode sobrepor qualquer um destes métodos
+dentro da classe activity
+
+00:01:24.000 --> 00:01:28.367
+se você quiser executar algum código
+quando a activity mudar de estado.
+

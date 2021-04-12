@@ -1,0 +1,225 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.934
+Vamos fazer um exercício rápido para mostrar
+os estados de um reprodutor de mídia.
+
+00:00:03.968 --> 00:00:06.334
+Mas você será o reprodutor
+de mídia.
+
+00:00:06.367 --> 00:00:09.868
+Então sente-se um pouco
+e espere pela minha 1ª instrução.
+
+00:00:09.901 --> 00:00:12.801
+Pense numa música
+e se prepare para cantar.
+
+00:00:13.367 --> 00:00:15.400
+Certo.
+Agora cante em voz alta.
+
+00:00:18.000 --> 00:00:19.133
+E pare.
+
+00:00:20.000 --> 00:00:22.167
+Agora retome
+de onde você parou.
+
+00:00:24.667 --> 00:00:27.934
+E agora pare!
+E esqueça completamente a música.
+
+00:00:28.634 --> 00:00:33.400
+Agora pense numa música bem diferente,
+mas não cante ainda.
+
+00:00:34.634 --> 00:00:36.934
+Certo,
+comece a cantar agora.
+
+00:00:39.467 --> 00:00:41.701
+E pare!
+Ótimo trabalho.
+
+00:00:41.734 --> 00:00:43.901
+Descanse um pouco,
+sente-se e relaxe.
+
+00:00:43.934 --> 00:00:45.501
+Por que fiz você cantar?
+
+00:00:45.534 --> 00:00:47.534
+Para ajudar
+a explicar este conceito.
+
+00:00:47.567 --> 00:00:50.501
+A reprodução dos áudios dentro
+da classe MediaPlayer
+
+00:00:50.534 --> 00:00:52.934
+é feita através
+da máquina de estados.
+
+00:00:52.968 --> 00:00:55.934
+Ou seja, podemos transitar
+entre estados diferentes
+
+00:00:55.968 --> 00:00:57.968
+enquanto o reprodutor
+toca a música.
+
+00:00:58.000 --> 00:01:01.200
+Podemos desenhar algo
+chamado diagrama de máquina de estados
+
+00:01:01.234 --> 00:01:05.801
+para ajudar a visualizar os diferentes estados
+que um reprodutor pode assumir.
+
+00:01:05.834 --> 00:01:11.300
+O 1º é o estado Idle,
+em que o MediaPlayer fica ocioso,
+
+00:01:11.334 --> 00:01:12.701
+sem emitir sons.
+
+00:01:12.734 --> 00:01:16.434
+E como quando você ficou ocioso
+esperando por minhas instruções.
+
+00:01:16.467 --> 00:01:19.968
+Em seguida, há o estado Prepared,
+em que o MediaPlayer se prepara
+
+00:01:20.000 --> 00:01:22.434
+para tocar o áudio,
+como uma música.
+
+00:01:22.467 --> 00:01:26.267
+Que nem quando você pensou numa música
+e se preparou para cantar,
+
+00:01:26.300 --> 00:01:28.234
+mas não emitiu nenhum som.
+
+00:01:28.267 --> 00:01:33.434
+E depois vem o estado Started,
+em que ele toca o áudio, como nossa música.
+
+00:01:33.467 --> 00:01:36.234
+Que nem quando você começou
+a cantar.
+
+00:01:36.267 --> 00:01:39.901
+Reme, reme, reme seu barco
+gentilmente rio abaixo
+
+00:01:39.934 --> 00:01:42.601
+Aí vem o estado Paused,
+quando você interrompe a música.
+
+00:01:42.634 --> 00:01:45.000
+Que nem quando você parou
+de cantar.
+
+00:01:45.033 --> 00:01:47.934
+Dele, você pode voltar
+para o estado Started
+
+00:01:47.968 --> 00:01:49.934
+se quiser retomar a música.
+
+00:01:49.968 --> 00:01:53.234
+Feliz, feliz, feliz, feliz
+a vida é um sonho, sim
+
+00:01:53.267 --> 00:01:58.567
+Você pode parar de cantar a qualquer hora,
+quando o MediaPlayer está no estado Stopped.
+
+00:01:58.601 --> 00:01:59.801
+Há uma pegadinha.
+
+00:01:59.834 --> 00:02:02.567
+Quando você para o MediaPlayer,
+não pode retomar mais.
+
+00:02:02.601 --> 00:02:07.067
+Você tem que prepará-lo para cantar de novo
+especificando que música quer ouvir.
+
+00:02:07.100 --> 00:02:09.868
+Pode ser a mesma
+ou uma música diferente.
+
+00:02:09.901 --> 00:02:13.267
+Por isso fiz você pensar em outra música
+e se preparar para cantar.
+
+00:02:13.300 --> 00:02:17.267
+Depois você cantou a música nova,
+voltando para o estado Started.
+
+00:02:17.300 --> 00:02:21.167
+A, B, C, D, E, F, G
+
+00:02:21.200 --> 00:02:24.601
+Como pode ver,
+há vários estados do MediaPlayer
+
+00:02:24.634 --> 00:02:27.534
+que controlam
+como o áudio é reproduzido.
+
+00:02:27.567 --> 00:02:31.601
+De novo, o nome disto
+é diagrama dos estados de máquina.
+
+00:02:31.634 --> 00:02:35.234
+Mostramos uma versão simplificada
+do ciclo de vida do MediaPlayer
+
+00:02:35.267 --> 00:02:37.601
+para ajudá-lo
+a entender o panorama geral.
+
+00:02:37.634 --> 00:02:42.267
+A página de documentação oficial
+contém o diagrama completo,
+
+00:02:42.300 --> 00:02:44.501
+ao qual vamos nos referir
+no futuro.
+
+00:02:44.534 --> 00:02:47.200
+De cara,
+tudo parece impressionante,
+
+00:02:47.234 --> 00:02:52.467
+mas ele diz o que já falamos,
+os estados Idle, Prepared,
+
+00:02:52.501 --> 00:02:56.968
+Started, Paused, Stopped
+e outros dois.
+
+00:02:57.000 --> 00:03:00.534
+Veja que ele dá detalhes
+sobre os métodos que podemos chamar
+
+00:03:00.567 --> 00:03:02.934
+para transitar
+entre os estados.
+
+00:03:02.968 --> 00:03:05.934
+Fique à vontade
+para analisar o diagrama sozinho.
+
+00:03:05.968 --> 00:03:08.000
+O link está abaixo
+das anotações.
+

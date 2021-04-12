@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.501
+Tendo o foco de áudio, precisamos
+nos preocupar com suas mudanças de estado.
+
+00:00:04.534 --> 00:00:09.000
+Diz aqui, na documentação para
+o AudioManager.OnAudioFocusChangeListener,
+
+00:00:09.033 --> 00:00:12.934
+que precisamos implementar
+o método ionAudioFocusChange,
+
+00:00:12.968 --> 00:00:15.634
+onde esperamos receber um novo estado
+de foco de áudio.
+
+00:00:15.667 --> 00:00:20.400
+Na descrição do método onAudioFocusChange,
+vemos que há 4 estados possíveis
+
+00:00:20.434 --> 00:00:22.267
+representados
+por estas constantes:
+
+00:00:22.300 --> 00:00:26.801
+AUDIOFOCUS_GAIN, AUDIOFOCUS_LOSS,
+AUDIOFOCUS_LOSS_TRANSIENT
+
+00:00:26.834 --> 00:00:29.667
+e AUDIOFOCUS_LOSS_TRANSIENT_
+CAN_DUCK.
+
+00:00:29.701 --> 00:00:33.767
+Como desenvolvedores, decidimos
+como manipular cada mudança de estado
+
+00:00:33.801 --> 00:00:37.567
+de acordo com o tipo de mídia tocando
+e com as expectativas do usuário.
+
+00:00:37.601 --> 00:00:41.501
+Agora reserve um tempo para clicar
+em cada um deles para aprender mais.
+
+00:00:41.534 --> 00:00:44.667
+No quiz,
+quero que você preencha esta tabela.
+
+00:00:44.701 --> 00:00:48.934
+Descreve com suas próprias palavras
+o que cada estado de foco de áudio significa.
+
+00:00:48.968 --> 00:00:52.067
+Aí, descreva o que devemos fazer
+no nosso aplicativo Miwok
+
+00:00:52.100 --> 00:00:54.100
+quando recebermos essa mudança
+de estado.
+
+00:00:54.133 --> 00:00:57.100
+Pense no tipo de áudio
+que vamos tocar,
+
+00:00:57.133 --> 00:00:59.834
+e a qual deve ser a experiência ideal
+para o usuário.
+
