@@ -1,0 +1,407 @@
+{
+  "data": {
+    "lesson": {
+      "id": 352746,
+      "key": "1d087a38-78cb-4adc-b54d-56bc149b154a",
+      "title": "Practice Set: JSON Parsing and HTTP Networking",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Practice applying what we learned about JSON Parsing and HTTP Networking. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/1d087a38-78cb-4adc-b54d-56bc149b154a/352746/1544459981181/Practice+Set%3A+JSON+Parsing+and+HTTP+Networking+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/1d087a38-78cb-4adc-b54d-56bc149b154a/352746/1544459978749/Practice+Set%3A+JSON+Parsing+and+HTTP+Networking+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 352747,
+          "key": "fda1803f-54e0-4855-85f6-5b7c0222bace",
+          "title": "Welcome to the Practice Set",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fda1803f-54e0-4855-85f6-5b7c0222bace",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369784,
+              "key": "2d5a1a99-2f8f-4a04-8e1a-fdfac9222e1a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Welcome to the Practice Set\n\nLet's take a moment to reflect on what we just learned. We learned how an app can communicate and request for information via JSON Parsing and HTTP Networking.\n\n## In this Practice Set...\n\nWe'll work through some questions that are related to review the concepts you just learned. A lot of the concepts that  what you learned was  were very abstract, so we want to make sure you have a solid foundation understanding of them before moving on! \n\nWe will be going through an analogy as well as practice coding, so let's get started!\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 372141,
+          "key": "1856d422-1527-4c19-a627-9ebaf0b13caf",
+          "title": "Pasta Analogy",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1856d422-1527-4c19-a627-9ebaf0b13caf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409920,
+              "key": "decc35dc-c3cc-4414-83c4-49d30fc46f35",
+              "title": "Pasta Analogy",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "L0V2MUx6dPg",
+                "china_cdn_id": "L0V2MUx6dPg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 372143,
+          "key": "0ba47439-c303-4b0e-b452-04e484b85bc6",
+          "title": "Introduction: Pokemon App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0ba47439-c303-4b0e-b452-04e484b85bc6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 377256,
+              "key": "aa565b18-e1f5-4720-985c-ae630bca2e34",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Introduction: Pokemon App\n\nIn this section, we will be applying what we learned to code. \n\nWe will be making a simple Pokemon app that lists out Pokemons with their respective attributes using the  JSON at this link: https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json\n\n## What is Pokemon?\nPokemon is a Japanese game where players collect small monsters called Pokemons who have specific traits such as their experience level, height, weight, ability, etc. They compete with each other in battles and each one has specific characteristics. For example, each Pokemon will have their own specific type of candy that they eat, which helps them evolve. When a Pokemon evolves it gains new abilities or improves its existing abilities. You can read more about the Pokemon game here: https://en.wikipedia.org/wiki/Gameplay_of_Pok%C3%A9mon\n\nWe will practice making a HTTP Request and parsing through the JSON nodes.\n\nThe skeleton code is provided on our Github at this link: https://github.com/udacity/Pokemon",
+              "instructor_notes": ""
+            },
+            {
+              "id": 378146,
+              "key": "4a059f5c-1c6b-4f53-b4a1-d398dfa27e9c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/599c9407_pokemon/pokemon.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4a059f5c-1c6b-4f53-b4a1-d398dfa27e9c",
+              "caption": "Pokemon is a popular Japanese game featuring several hundred different characters like the ones above.",
+              "alt": "",
+              "width": 980,
+              "height": 490,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 402104,
+          "key": "9c774561-40e7-40b6-b23e-6cda850ecac5",
+          "title": "Pokemon App Walkthrough",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9c774561-40e7-40b6-b23e-6cda850ecac5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 409917,
+              "key": "0d9e2b49-1f7f-4d06-b6e6-803d6b0f06fb",
+              "title": "Pokemon App Walkthrough",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_t7eiw3yEDo",
+                "china_cdn_id": "_t7eiw3yEDo.mp4"
+              }
+            },
+            {
+              "id": 515481,
+              "key": "9349cd60-cd3a-41e5-8f66-1f739f772a90",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Pokemon App Skeleton Code](https://github.com/udacity/Pokemon)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515480,
+              "key": "7190f953-a574-4ff7-9ddc-f7bd56a06c2d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Pokemon App Skeleton Code](https://github.com/udacity/Pokemon)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 372144,
+          "key": "b69928b8-e5e3-4f39-a299-0a4314362b24",
+          "title": "Making HTTP Request",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b69928b8-e5e3-4f39-a299-0a4314362b24",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 377487,
+              "key": "2c6d66a4-2cde-443e-9306-a7b6aedfbaf9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Step 1: Making an HTTP Request\n\nHere, we are going to make the HTTP Request. In the MainActivity.java file, fill in the blanks under the first TODO (Line 66 [here](https://github.com/udacity/Pokemon/blob/master/app/src/main/java/udacity/pokemon/MainActivity.java#L66)).",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515482,
+              "key": "cdc865ca-1c3d-4fd2-a8a7-272a7f09e0ae",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/January/5a690129_screen-shot-2018-01-24-at-1.56.45-pm/screen-shot-2018-01-24-at-1.56.45-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cdc865ca-1c3d-4fd2-a8a7-272a7f09e0ae",
+              "caption": "First TODO to make a request to the URL in the MainActivity `GetPokemon` class",
+              "alt": "",
+              "width": 1568,
+              "height": 452,
+              "instructor_notes": null
+            },
+            {
+              "id": 515483,
+              "key": "6f74d092-93e1-4176-8bc6-f9021f71b809",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "By making the HTTP Request, we can successfully request information from the URL, and start grabbing necessary data to display in our app. This is the first step we must take to start our process of HTTP Networking.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515484,
+              "key": "db969345-03fe-493b-92d1-3fafe549a87b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```java\n  ...\n private class GetPokemon extends AsyncTask<Void, Void, Void> {\n\n        @Override\n        protected Void doInBackground(Void... arg0) {\n            HttpHandler sh = new HttpHandler();\n            \n          String url = \"https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json\";\n            String jsonString = \"\";\n           try {\n               // TODO: make a request to the URL\n                jsonString = sh.makeHttpRequest(createUrl(url));\n\n...\n```\n\nSolution in code found [here](https://github.com/udacity/Pokemon-Solution/blob/master/app/src/main/java/com/example/vickytu/json_practice/MainActivity.java#L47-L51).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 377488,
+          "key": "019b154c-d01f-4fce-9ad1-f026acffc645",
+          "title": "Creating JSON Object",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "019b154c-d01f-4fce-9ad1-f026acffc645",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 385125,
+              "key": "bda7b25b-2d09-497f-9277-ad316baa5cd8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Step 2: Creating JSON Object\n\nIn the second TODO (in code [here](https://github.com/udacity/Pokemon/blob/master/app/src/main/java/udacity/pokemon/MainActivity.java#L75)) we are going to grab the JSON Array node and name it <code>\"pokemons\"</code>.\n\nBy grabbing the JSON Array node, we are essentially specifying the JSON node that we want to look into. In this case, grabbing the node will give us the JSON of all of the Pokemons and their respective attributes.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515486,
+              "key": "cfe4b8be-5ed9-403c-bef1-a7616f91b04b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/January/5a6902fe_screen-shot-2018-01-24-at-2.04.33-pm/screen-shot-2018-01-24-at-2.04.33-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cfe4b8be-5ed9-403c-bef1-a7616f91b04b",
+              "caption": "In the Second TODO, are asked to create a new JSONObject if the jsonString is not null",
+              "alt": "",
+              "width": 966,
+              "height": 150,
+              "instructor_notes": null
+            },
+            {
+              "id": 515488,
+              "key": "a8457365-7a80-4ef0-af01-72288e23dca1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```java\n            if (jsonString != null) {\n                try {\n                    //TODO: Create a new JSONObject\n                    JSONObject jsonObj = new JSONObject(jsonString);\n```\n\nSolution code [here](https://github.com/udacity/Pokemon-Solution/blob/master/app/src/main/java/com/example/vickytu/json_practice/MainActivity.java#L57-L61).",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 377489,
+          "key": "dc5427da-ba82-4f93-a5ec-cf5cd642dbf7",
+          "title": "Grabbing Attributes",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "dc5427da-ba82-4f93-a5ec-cf5cd642dbf7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 377491,
+              "key": "9c5ad363-e9f7-4ced-a27e-ccbb18e56e78",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Step 3: Grabbing Attributes \n\nIn this section, we're going to get the JSON array node called <code>\"pokemon\"</code> as well as grab three of its attributes (code [here](https://github.com/udacity/Pokemon/blob/master/app/src/main/java/udacity/pokemon/MainActivity.java#L77-L84)). \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515491,
+              "key": "a9a3ea91-974d-4a0a-9345-094de0d7c602",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2018/January/5a69045e_screen-shot-2018-01-24-at-2.10.25-pm/screen-shot-2018-01-24-at-2.10.25-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a9a3ea91-974d-4a0a-9345-094de0d7c602",
+              "caption": "The next TODOs are to get the JSON Array node, name it, and get the JSONObject with its 3 attributes. ",
+              "alt": "",
+              "width": 1096,
+              "height": 262,
+              "instructor_notes": null
+            },
+            {
+              "id": 515490,
+              "key": "5ea32d4a-bcfa-4974-8a4d-e3b8a0f0ea6a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "First, we will grab its \"id\" and \"name\". Then, we will grab its array \"type\" and grab the first element inside.\n\nFor each Pokemon, we need to grab its three attributes, store them, and then display them in the List layout. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 515495,
+              "key": "620a16ed-99f6-4ecd-9904-5714ec66beef",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```java\n\n                    // TODO: Get the JSON Array node\n                    JSONArray pokemons = jsonObj.getJSONArray(\"pokemon\");\n\n                    // looping through all Contacts\n                    for (int i = 0; i < pokemons.length(); i++) {\n                    //TODO: get the JSONObject and its three attributes\n                        JSONObject c = pokemons.getJSONObject(i);\n                        String name = c.getString(\"name\");\n                        String id = c.getString(\"id\");\n                        String candy = c.getString(\"candy\");\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 402106,
+          "key": "9e32a2c9-e88f-4f06-928c-e34e4ef2d88b",
+          "title": "Running the App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e32a2c9-e88f-4f06-928c-e34e4ef2d88b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 402108,
+              "key": "23a0e61c-0726-42b6-bc87-82be868876db",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Now, try running the app. You should be able to see a List layout of the Pokemons with their three attributes.\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 402115,
+              "key": "7cbef6f2-19a6-45da-a246-4f2dcb92b097",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59bc563f_screen-shot-2017-09-15-at-3.37.13-pm/screen-shot-2017-09-15-at-3.37.13-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7cbef6f2-19a6-45da-a246-4f2dcb92b097",
+              "caption": "This is what your final product should look like!",
+              "alt": "",
+              "width": 606,
+              "height": 1084,
+              "instructor_notes": null
+            },
+            {
+              "id": 402116,
+              "key": "df3c558c-515c-4146-a32f-b5b6c654dc57",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Solution Code\n\nGood job! If you'd like to see how we did it, here's our solution code:\n\n[Pokemon Code](https://github.com/udacity/Pokemon-Solution)\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

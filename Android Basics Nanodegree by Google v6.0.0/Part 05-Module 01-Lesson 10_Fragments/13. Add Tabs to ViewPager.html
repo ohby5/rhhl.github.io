@@ -1,0 +1,471 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Tabs to ViewPager</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Fragments</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Navigation Patterns in Android.html">02. Navigation Patterns in Android</a>
+    </li>
+    <li class="">
+      <a href="03. Navigation Patterns in Other Apps.html">03. Navigation Patterns in Other Apps</a>
+    </li>
+    <li class="">
+      <a href="04. Up Button.html">04. Up Button</a>
+    </li>
+    <li class="">
+      <a href="05. An Alternative Version of the App.html">05. An Alternative Version of the App</a>
+    </li>
+    <li class="">
+      <a href="06. Upcoming Changes.html">06. Upcoming Changes</a>
+    </li>
+    <li class="">
+      <a href="07. Android Development Patterns.html">07. Android Development Patterns</a>
+    </li>
+    <li class="">
+      <a href="08. Sample ViewPager.html">08. Sample ViewPager</a>
+    </li>
+    <li class="">
+      <a href="09. Intro to Fragments.html">09. Intro to Fragments</a>
+    </li>
+    <li class="">
+      <a href="10. Fragment Lifecycle.html">10. Fragment Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="11. Refactor Category Activities.html">11. Refactor Category Activities</a>
+    </li>
+    <li class="">
+      <a href="12. ViewPager and FragmentPagerAdapter.html">12. ViewPager and FragmentPagerAdapter</a>
+    </li>
+    <li class="">
+      <a href="13. Add Tabs to ViewPager.html">13. Add Tabs to ViewPager</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">13. Add Tabs to ViewPager</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-4-add-tabs">Step 4: Add Tabs</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><p>Now let’s add tabs so the user can tell that there are more pages to swipe to.</p>
+<p>First you’ll need to use the Android Design Support Library. This helps you create a Material Design app that runs even on older versions of Android. Learn more about the support library in this <a href="http://android-developers.blogspot.com/2015/05/android-design-support-library.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">blogpost</a>. There are periodic updates to the support library, so you can check this <a href="http://developer.android.com/tools/support-library/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">site</a> for the latest updates or subscribe to the <a href="http://android-developers.blogspot.com/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">Android Developers blog</a>.</p>
+<h2 id="add-android-design-support-library-to-your-project">Add Android Design Support Library to Your Project</h2>
+<p><strong>1)</strong> In Android Studio, within the Project Directory pane, navigate to Miwok &gt; app &gt; build.gradle and open the build.gradle file.</p>
+<p>Gradle is the tool that Android Studio uses to generate the apk (app file) that goes onto the device. For more info on configuring the build.gradle file, see this <a href="http://developer.android.com/tools/building/configuring-gradle.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">article</a>. There’s also an advanced <a href="https://www.udacity.com/course/gradle-for-android-and-java--ud867" target="_blank">Udacity course</a> on this topic, so don’t worry if you don’t understand it now.</p>
+<p><img src="media/unnamed-93681-0.gif" alt="build dot gradle file" /></p>
+<p><strong>2)</strong> This build.gradle file contains information about how your app should be packaged. Go to the dependencies section, and add a line that includes the Android Support Design Library. This indicates that our app depends on the Android Design Library, and that our Miwok app code can now refer to components within the design library.</p>
+<p><code>compile 'com.android.support:design:23.3.0'</code></p>
+<p>Afterwards, it should look similar to this:</p>
+<pre><code>dependencies {
+   compile fileTree(dir: 'libs', include: ['*.jar'])
+   testCompile 'junit:junit:4.12'
+   compile 'com.android.support:appcompat-v7:23.2.1'
+   compile 'com.android.support:support-v4:23.2.1'
+   compile 'com.android.support:design:23.3.0'
+}</code></pre>
+<p><strong>3)</strong> You will see a yellow warning at the top of your file saying that the Gradle file has changed and a project sync is needed. Click the “Sync Now” button.</p>
+<p><img src="media/unnamed-93681-1.gif" alt="build dot gradle warning" /></p>
+<p>Now you can start using components from the Android Design Support Library, such as the TabLayout for the Viewpager!</p>
+<p>In this next coding task, modify the app to add tabs to your ViewPager in the MainActivity. This is what the app should look like when you’re done. You can consult this <a href="https://guides.codepath.com/android/google-play-style-tabs-using-tablayout#sliding-tabs-layout" target="_blank">Codepath tutorial</a> for help. </p>
+<p><img src="media/unnamed-93681-2.gif" width="150">  <img src="media/unnamed-93681-3.gif" width="150">  <img src="media/unnamed-93681-4.gif" width="150">  <img src="media/unnamed-93681-5.gif" width="150"></p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8216560635.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 22.429323725055433%; left: 5.176511845386534%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="Checkbox to add tabs to ViewPager">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 55.304185144124176%; left: 4.956359102244389%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="Checkbox to add visual polish">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><p><a href="https://github.com/udacity/ud839_Miwok/commit/8c9cbfe5c53b2ede38ccb73d81ecbed2bd30fb46" target="_blank">These are the changes needed to complete the quiz.</a></p>
+<p><a href="https://github.com/udacity/ud839_Miwok/tree/8c9cbfe5c53b2ede38ccb73d81ecbed2bd30fb46" target="_blank">This is the state of the code after completing the quiz.</a></p>
+<p>First, we’ll get the tabs showing up on screen. Then we’ll worry about the visual polish to match the redlines afterwards.</p>
+<p><strong>1)</strong> Since the Design Library should be linked as a dependency in the project already, modify MainActivity layout to contain a ViewPager and TabLayout. The activity_main.xml layout file should look like this. Notice that the TabLayout has a view ID assigned to it because we’ll need to refer to the view in the Java code.</p>
+<p>The xml file might look like this: </p>
+<pre><code>  &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/tan_background"
+       android:orientation="vertical"
+       tools:context="com.example.android.miwok.MainActivity"&gt;
+
+       &lt;android.support.design.widget.TabLayout
+           android:id="@+id/tabs"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" /&gt;
+
+       &lt;android.support.v4.view.ViewPager
+           android:id="@+id/viewpager"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/&gt;
+
+    &lt;/LinearLayout&gt;</code></pre>
+<p><strong>2)</strong> Modify the MainActivity onCreate() method to connect the TabLayout with the ViewPager.</p>
+<p>Your code should look like this: </p>
+<pre><code> package com.example.android.miwok;
+ import android.os.Bundle;
+ import android.support.design.widget.TabLayout;
+ import android.support.v4.view.ViewPager;
+ import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+
+       // Set the content of the activity to use the activity_main.xml layout file
+       setContentView(R.layout.activity_main);
+
+       // Find the view pager that will allow the user to swipe between fragments
+       ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+       // Create an adapter that knows which fragment should be shown on each page
+       CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
+
+       // Set the adapter onto the view pager
+       viewPager.setAdapter(adapter);
+
+       // Find the tab layout that shows the tabs
+       TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+       // Connect the tab layout with the view pager. This will
+       //   1. Update the tab layout when the view pager is swiped
+       //   2. Update the view pager when a tab is selected
+       //   3. Set the tab layout's tab names with the view pager's adapter's titles
+       //      by calling onPageTitle()
+       tabLayout.setupWithViewPager(viewPager);
+   }
+}</code></pre>
+<p><strong>3)</strong> Now we have to tell the app what text to display in each tab. Go into the CategoryAdapter.java file and override the getPageTitle() method of the class. This method was originally defined in the superclass (the FragmentPagerAdapter), but we want to override the method to customize the tab text (which is known as the page title in the code).</p>
+<p>To override the method, use the keyboard shortcut Ctl + O. Type in “getPageTitle” and hit OK.</p>
+<p><img src="media/unnamed-93681-0.gif" alt="overriding getPage" /></p>
+<p>Android Studio will automatically add this method into the CategoryAdapter class.</p>
+<pre><code>@Override
+public CharSequence getPageTitle(int position) {
+   return super.getPageTitle(position);
+}</code></pre>
+<p><strong>4)</strong> Modify the default CategoryAdapter getPageTitle(int position) implementation to return the proper category name per page. We could return a hardcoded string such as “Numbers,” “Family,” and so on. However, as emphasized at the end of Lesson 4, we don’t want to restrict our app to only support the English language. Instead, we should use the string resource for those category names.</p>
+<p>Unfortunately, that also means we need a Context object in order to turn the string resource ID into an actual String. So we modify the CategoryAdapter constructor to also require a Context input so that we can get the proper text string.</p>
+<p>This is what the CategoryAdapter class looks like with the proper getPageTitle(int position) code, where we rely on string resources instead of hardcoded strings in the Java code. </p>
+<pre><code> package com.example.android.miwok;
+
+ import android.content.Context;
+ import android.support.v4.app.Fragment;
+ import android.support.v4.app.FragmentManager;
+ import android.support.v4.app.FragmentPagerAdapter;
+
+ /**
+ * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
+ * each list item based on a data source which is a list of {@link Word} objects.
+ */
+ public class CategoryAdapter extends FragmentPagerAdapter {
+
+    /** Context of the app */
+    private Context mContext;
+
+    /**
+     * Create a new {@link CategoryAdapter} object.
+     *
+     * @param context is the context of the app
+     * @param fm is the fragment manager that will keep each fragment's state in the adapter
+     *           across swipes.
+     */
+    public CategoryAdapter(Context context, FragmentManager fm) {
+        super(fm);
+        mContext = context;
+    }
+
+    /**
+     * Return the {@link Fragment} that should be displayed for the given page number.
+     */
+    @Override
+    public Fragment getItem(int position) {
+        if (position == 0) {
+            return new NumbersFragment();
+        } else if (position == 1) {
+            return new FamilyFragment();
+        } else if (position == 2) {
+            return new ColorsFragment();
+        } else {
+            return new PhrasesFragment();
+        }
+    }
+
+    /**
+     * Return the total number of pages.
+     */
+    @Override
+    public int getCount() {
+        return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (position == 0) {
+            return mContext.getString(R.string.category_numbers);
+        } else if (position == 1) {
+            return mContext.getString(R.string.category_family);
+        } else if (position == 2) {
+            return mContext.getString(R.string.category_colors);
+        } else {
+            return mContext.getString(R.string.category_phrases);
+        }
+    }
+ }</code></pre>
+<p><strong>5)</strong> Since we modified the CategoryAdapter constructor, we also need to update the MainActivity (which uses that constructor). When we create a CategoryAdapter, we pass in a Context (which is “this” or the activity) and the FragmentManager.</p>
+<p>That declaration line might look like this: </p>
+<pre><code> CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());</code></pre>
+<p><strong>6)</strong> If you run the app now, the tabs should successfully be displayed on the screen! However, it doesn’t look that great with the current color scheme of the rest of the app. Let’s move onto the visual polish stage, using the redlines from the designer to guide us.</p>
+<p><strong>7)</strong> The first thing we notice is that the “Family Members” text is too long, compared to the other tab labels. In the strings.xml file, we can change the string to Family instead of Family Members. </p>
+<p>When you modify strings, be careful of all the places that use that string. In this case, we only use the string in one place, so it’s safe to change.</p>
+<pre><code> &lt;!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] --&gt;
+ &lt;string name="category_family"&gt;Family&lt;/string&gt;</code></pre>
+<p><strong>8)</strong> Make visual tweaks to the app by following the <a href="https://guides.codepath.com/android/google-play-style-tabs-using-tablayout#styling-the-tablayout" target="_blank">Codepath tutorial</a> we linked for you.</p>
+<p>Modify the activity_main.xml file. Change the background of the root LinearLayout as well, so that the tabs are the same color as the app bar. We also want to apply a style to the tabs, to change the visual appearance of them.</p>
+<pre><code> &lt;?xml version="1.0" encoding="utf-8"?&gt;
+ &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    android:orientation="vertical"
+    tools:context="com.example.android.miwok.MainActivity"&gt;
+
+    &lt;android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        style="@style/CategoryTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /&gt;
+
+    &lt;android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/&gt;
+
+ &lt;/LinearLayout&gt;</code></pre>
+<p>Define the theme of the tab layout in your styles.xml file. Note that there should be no shadow below the app bar. See this <a href="http://stackoverflow.com/questions/12246388/remove-shadow-below-actionbar/27203224#27203224" target="_blank">StackOverflow discussion</a> thread.</p>
+<p>When you’re done, the styles.xml file should look like this:</p>
+<pre><code> &lt;resources&gt;
+
+    &lt;!-- Base application theme. --&gt;
+    &lt;style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"&gt;
+        &lt;item name="colorPrimary"&gt;@color/primary_color&lt;/item&gt;
+        &lt;item name="colorPrimaryDark"&gt;@color/primary_dark_color&lt;/item&gt;
+        &lt;item name="actionBarStyle"&gt;@style/MiwokAppBarStyle&lt;/item&gt;
+        &lt;item name="android:windowContentOverlay"&gt;@null&lt;/item&gt;
+    &lt;/style&gt;
+
+    &lt;!-- App bar style --&gt;
+    &lt;style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse"&gt;
+        &lt;!-- Remove the shadow below the app bar --&gt;
+        &lt;item name="elevation"&gt;0dp&lt;/item&gt;
+    &lt;/style&gt;
+
+    &lt;!-- Style for a tab that displays a category name --&gt;
+    &lt;style name="CategoryTab" parent="Widget.Design.TabLayout"&gt;
+        &lt;item name="tabIndicatorColor"&gt;@android:color/white&lt;/item&gt;
+        &lt;item name="tabSelectedTextColor"&gt;@android:color/white&lt;/item&gt;
+        &lt;item name="tabTextAppearance"&gt;@style/CategoryTabTextAppearance&lt;/item&gt;
+    &lt;/style&gt;
+
+    &lt;!-- Text appearance style for a category tab --&gt;
+    &lt;style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab"&gt;
+        &lt;item name="android:textColor"&gt;#A8A19E&lt;/item&gt;
+    &lt;/style&gt;
+ &lt;/resources&gt;</code></pre>
+<p><strong>9)</strong> After all those code changes (you guessed it), we should run the app to make sure it looks and works as we expect. :)</p>
+<p>If you want to double-check your code against ours, this is the <a href="https://github.com/udacity/ud839_Miwok/commit/837ef56a4b97d3e15bdb8249dd75b73262a469e8" target="_blank">code diff</a> for what changed in this quiz. This is the <a href="https://github.com/udacity/ud839_Miwok/tree/lesson-five" target="_blank">full ending state of the app</a>. (Hard to believe it’s the end, I know!)</p>
+<p>In the future, if you want to learn more, check out the open-source <a href="https://github.com/chrisbanes/cheesesquare" target="_blank">Cheesesquare app</a> by Developer Programs Engineer <a href="https://plus.google.com/+ChrisBanes" target="_blank">Chris Banes</a>. Download the code, import it into Android Studio, and run the Cheesesquare app on your device to check out more cool things you can do with the Android Design Support Library.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('13. Add Tabs to ViewPager')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

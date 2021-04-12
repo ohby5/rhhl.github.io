@@ -1,0 +1,351 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.800 --> 00:00:03.700
+Parabéns pelo trabalho
+na análise de parsing de JSON.
+
+00:00:03.733 --> 00:00:07.233
+Vamos nos aprofundar
+em dados reais do USGS
+
+00:00:07.267 --> 00:00:10.967
+e nos preparar para escrever
+o código do nosso app de terremoto
+
+00:00:11.000 --> 00:00:12.633
+para fazer parsing de JSON.
+
+00:00:12.667 --> 00:00:15.133
+Na página principal
+da documentação do USGS,
+
+00:00:15.167 --> 00:00:19.067
+vamos descer até a seção
+sobre métodos
+
+00:00:19.100 --> 00:00:22.700
+e entrar na subseção
+chamada "consulta".
+
+00:00:23.733 --> 00:00:27.467
+Nesta seção há alguns exemplos
+de consultas de URL
+
+00:00:27.500 --> 00:00:30.500
+que você pode fazer
+para extrair dados do API.
+
+00:00:30.567 --> 00:00:35.567
+Vou executar uma versão atualizada
+da 2ª opção.
+
+00:00:36.133 --> 00:00:40.733
+Esta é a resposta em texto bruto
+em formato geoJSON
+
+00:00:40.767 --> 00:00:44.667
+que você recebe
+quando solicita dados do API.
+
+00:00:45.167 --> 00:00:49.700
+Esta na hora de examinar a resposta
+e extrair os dados que queremos.
+
+00:00:49.733 --> 00:00:52.333
+Dá para notar que esta
+
+00:00:52.367 --> 00:00:56.333
+é uma quantidade
+absurda de texto.
+
+00:00:56.767 --> 00:01:00.700
+Não há quebras de linha
+para deixar a resposta mais concisa
+
+00:01:00.733 --> 00:01:03.233
+e fácil de ser enviada
+pela internet.
+
+00:01:03.267 --> 00:01:06.867
+Por outro lado,
+fica mais difícil de ler.
+
+00:01:06.900 --> 00:01:09.667
+Podemos usar uma ferramenta
+de formatação JSON
+
+00:01:09.700 --> 00:01:14.067
+para nos ajudar a ler
+e examinar o código.
+
+00:01:14.533 --> 00:01:19.633
+Os dados não mudam e são mostrados
+com quebras de linha e espaços.
+
+00:01:19.667 --> 00:01:21.867
+Podemos achar
+esta ferramenta online.
+
+00:01:21.900 --> 00:01:27.300
+Pesquisamos por "json formatter"
+e surgem algumas opções.
+
+00:01:27.333 --> 00:01:29.667
+Vamos ver a 1ª.
+Ela parece boa.
+
+00:01:29.967 --> 00:01:34.600
+Vamos copiar o JSON bruto
+que recebemos de resposta
+
+00:01:34.633 --> 00:01:38.700
+e colá-lo aqui nesta ferramenta
+de formatação de JSON.
+
+00:01:38.733 --> 00:01:40.933
+Clicamos em "process".
+
+00:01:42.067 --> 00:01:45.967
+A aparência já está melhor.
+Vamos ampliar a tela.
+
+00:01:46.000 --> 00:01:49.433
+Muito bem. Ótimo.
+Está bem mais fácil de ler.
+
+00:01:49.467 --> 00:01:52.733
+Podemos ler
+todos estes dados JSON.
+
+00:01:52.967 --> 00:01:56.433
+Conhecemos bem
+esta estrutura de árvore,
+
+00:01:56.467 --> 00:02:01.567
+algo parecido com o Windows Explorer
+e o Finder do Mac Os.
+
+00:02:01.600 --> 00:02:03.367
+É bem mais fácil de ler.
+
+00:02:03.400 --> 00:02:05.967
+Estes botões de mais e menos
+
+00:02:06.000 --> 00:02:11.833
+permitem expandir e fechar
+subseções da resposta JSON,
+
+00:02:11.867 --> 00:02:15.200
+facilitando a leitura
+de cada seção.
+
+00:02:15.467 --> 00:02:19.533
+Expandimos o objeto JSON raiz
+
+00:02:19.567 --> 00:02:24.900
+e vemos a chave "features"
+que mapeia um arranjo JSON.
+
+00:02:24.933 --> 00:02:28.200
+O arranjo é indicado
+por esses colchetes.
+
+00:02:28.233 --> 00:02:33.867
+Neste arranjo, "feature" corresponde
+aos dados de um terremoto.
+
+00:02:33.900 --> 00:02:35.567
+Cada elemento neste arranjo
+
+00:02:35.600 --> 00:02:40.500
+mapeia a informação
+de um terremoto.
+
+00:02:40.667 --> 00:02:43.800
+Vamos expandir
+alguns elementos.
+
+00:02:43.833 --> 00:02:46.900
+Vamos examinar e expandir
+o 1º elemento do arranjo.
+
+00:02:46.933 --> 00:02:50.633
+Ele contém um objeto JSON
+com toda a metadata
+
+00:02:50.667 --> 00:02:52.733
+que precisamos
+para o 1º arranjo.
+
+00:02:52.767 --> 00:02:57.633
+Se expandirmos o 2º elemento,
+veremos dados similares.
+
+00:02:57.667 --> 00:03:02.700
+Você pode expandir os elementos
+e ver os dados específicos
+
+00:03:02.733 --> 00:03:06.867
+que nossa requisição retornou.
+Bacana, não é?
+
+00:03:06.900 --> 00:03:08.933
+Vamos fechar tudo agora.
+
+00:03:09.400 --> 00:03:12.833
+Na raiz do nosso objeto JSON,
+temos quatro chaves:
+
+00:03:12.867 --> 00:03:18.167
+"type", "metadata", "features"
+e esse tal de "bbox".
+
+00:03:18.200 --> 00:03:20.467
+Estamos interessados
+na chave "features"
+
+00:03:20.500 --> 00:03:24.233
+que contém o arranjo com os dados
+dos tremores que queremos.
+
+00:03:24.267 --> 00:03:27.300
+Note que o arranjo "features"
+contém 10 objetos
+
+00:03:27.333 --> 00:03:31.400
+porque pedimos 10 resultados
+quando consultamos o API.
+
+00:03:31.433 --> 00:03:34.500
+No 1º objeto no arranjo,
+
+00:03:34.533 --> 00:03:38.333
+vemos que ele também
+tem quatro chaves:
+
+00:03:38.367 --> 00:03:41.167
+"type", "properties",
+
+00:03:41.200 --> 00:03:44.500
+"geometry" e o último é "id".
+
+00:03:44.533 --> 00:03:48.533
+Destes quatro, a chave "properties"
+tem os dados que queremos.
+
+00:03:48.567 --> 00:03:52.800
+Por último, vemos que o objeto JSON
+mapeado pela chave "properties"
+
+00:03:52.833 --> 00:03:58.333
+contém as chaves e dos dados
+que nosso app requer.
+
+00:03:58.367 --> 00:04:01.367
+Temos magnitude,
+local, horário
+
+00:04:01.400 --> 00:04:04.967
+e um URL que aponta
+para mais dados sobre o terremoto.
+
+00:04:05.000 --> 00:04:08.567
+Neste quiz, você vai se familiarizar
+com os pares chave-valor
+
+00:04:08.600 --> 00:04:12.167
+contidos na resposta JSON
+enviada pelo API do USGS.
+
+00:04:12.200 --> 00:04:16.100
+Vamos fornecer um URL de consulta
+que está nas notas abaixo.
+
+00:04:16.633 --> 00:04:19.600
+Primeiro,
+copie o URL fornecido
+
+00:04:19.633 --> 00:04:21.967
+e o cole num navegador
+de internet.
+
+00:04:22.500 --> 00:04:26.767
+Você receberá uma resposta JSON
+que será um grande bloco de texto.
+
+00:04:26.800 --> 00:04:30.333
+Coloque-a num formatador JSON,
+como vimos antes.
+
+00:04:30.900 --> 00:04:33.167
+Depois, num pedaço de papel,
+
+00:04:33.200 --> 00:04:35.800
+faça um esboço do app
+de terremotos
+
+00:04:35.833 --> 00:04:39.300
+se tivéssemos que exibir
+uma lista de tremores.
+
+00:04:39.900 --> 00:04:43.467
+Para o 1º tremor na lista,
+examine a resposta JSON
+
+00:04:43.500 --> 00:04:46.367
+para achar o 1º tremor
+no arrnajo "features".
+
+00:04:46.400 --> 00:04:49.933
+A chave "magnitude"
+está nesse objeto JSON.
+
+00:04:49.967 --> 00:04:52.500
+A magnitude deste tremor
+é 7,2.
+
+00:04:52.533 --> 00:04:55.400
+Escreva isso no seu esboço.
+
+00:04:56.300 --> 00:05:00.800
+Siga o mesmo processo
+para o local e a data do tremor.
+
+00:05:01.833 --> 00:05:04.867
+Tempo é um número bem extenso.
+
+00:05:04.900 --> 00:05:08.667
+São os milissegundos que passaram
+desde 1º de janeiro de 1970.
+
+00:05:08.700 --> 00:05:10.767
+É uma representação de Era Unix.
+
+00:05:10.800 --> 00:05:14.200
+Para saber a data correta,
+use uma ferramenta online
+
+00:05:14.233 --> 00:05:17.967
+para converter os milissegundos
+para uma data.
+
+00:05:18.000 --> 00:05:20.667
+Deixarei um exemplo nas notas.
+
+00:05:20.700 --> 00:05:22.800
+Para o esboço deste quiz,
+
+00:05:22.833 --> 00:05:25.600
+você pode deixar o tempo
+em milissegundos.
+
+00:05:25.633 --> 00:05:29.167
+Repita esses passos
+para completar os dados
+
+00:05:29.200 --> 00:05:32.000
+dos outros terremotos
+para encher a lista.
+

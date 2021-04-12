@@ -1,0 +1,111 @@
+{
+  "data": {
+    "lesson": {
+      "id": 633318,
+      "key": "d8f71104-4c28-4a9e-8371-a3b484f3245b",
+      "title": "News App",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "For this project, create an app to display recent news stories on a topic of your choice using an API. ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": {
+        "key": "0f3ef27c-46d7-4053-b8af-a11645b07f1a",
+        "version": "1.0.0",
+        "locale": "en-us",
+        "duration": 20160,
+        "semantic_type": "Project",
+        "title": "News App",
+        "description": "To submit your project, you will upload your zip file. \n \nOn the submission page, you'll see a **Notes to reviewer** section (image below) - \n \n![image](https://lh3.googleusercontent.com/edFd4IyrrwW3EEsm1yZC8M-aPtLX7f9pz9mhugFLn1RcnuRs0cK-Wrlh_FeZaFPleTKc74nvA8HdQhmaQQ=s0#w=1448&h=444)\n \nIn order to help project reviewers test and troubleshoot the project, please provide the devices (emulator and physical) and API level on which you tested your work. Note, providing this information does not guarantee the review will be done on the exact same device type(s); however, it will assist in providing a more efficient review experience for you as a student.\n \nYou can also provide any other additional notes to the reviewer in that section. \n- - - \n### What to Expect After Submitting\n\nIt can take us up to a week to grade the project, but in most cases it is much faster. You will get an email when your submission has been reviewed. \n\nYour reviewer will provide a code review with helpful comments and review your project against the project rubric. ",
+        "is_public": true,
+        "summary": null,
+        "forum_path": "",
+        "rubric_id": "1950",
+        "terminal_project_id": null,
+        "resources": null,
+        "image": null
+      },
+      "lab": null,
+      "concepts": [
+        {
+          "id": 633320,
+          "key": "10f07ba8-b292-40ad-837f-20a2d41bc849",
+          "title": "Project Overview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "10f07ba8-b292-40ad-837f-20a2d41bc849",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 633351,
+              "key": "0858f0e8-a9ed-4b78-9c29-83381c51deb4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# News App\n<br >   \n<img src=\"https://lh3.googleusercontent.com/22vI-D9H9CprTLOpXtgselsfVjoiMTLOGJEv46a2oQ5EI6jgUGIP-JBiLR6_NSd3oLgKBbGIpjYG14InO0s=s0#w=554&h=50\n\" />\n<br >   \n<br >   \n<img src=\"https://lh3.googleusercontent.com/np6h6ACxXbr44qCmflPYKzACZlQMs31dBJX_it0t6m_v2ylhvQKq8YNWPDAhe2ItZunpU-srNc6-Mg6b-Fdv=s0#w=45&h=45\n\" width=\"45\"/>\n\n## Project Overview\n\nThe final project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making your own app that connects to the Internet to provide news articles on a topic of your choice.\n\nThe goal is to create a **News Feed app** which gives a user regularly-updated news from the Internet related to a particular topic, person, or location. The presentation of the information  as well as the topic is up to you. \n- - - \n### Why this project?\nIn the most recent portion of the Nanodegree program, you worked to build the News app. Along the way, you learned about connecting to the Internet in Android, parsing responses from an API, updating the information in your app, and properly displaying that information. Practicing these skills is imperative in order to build apps that delight and surprise users by anticipating their needs and supplying them with relevant information. \n- - -\n### What will I learn?\nThis project is about combining various ideas and skills we’ve been practicing throughout the course. They include:\n\n* Connecting to an API\n* Parsing the JSON response\n* Handling error cases gracefully\n* Updating information regularly\n* Using an AsyncTask\n* Doing network operations independent of the Activity lifecycle\n* Use Uri.Builder class to add query parameters to the URL\n---\n**Note:** As the focus of this program is Java, only projects completed with Java as the source code will be accepted.  Projects using Kotlin as the source code will not be accepted. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 633321,
+          "key": "b1ea8b45-d9e6-4e05-801a-c99ead6b60df",
+          "title": "Build Your Project",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b1ea8b45-d9e6-4e05-801a-c99ead6b60df",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 633440,
+              "key": "b7879dde-8919-4204-bc82-c9d17dbd0d8c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<img src=\"https://lh3.googleusercontent.com/ggvLXpYBpUrE253PNmbgTnxhZtMn8rfsjq9FujOsrK9QZef-wyLGCYuJ0ddYQJgQ-Z7LBTqxWm3YKQt6w5pz=s0#w=90&h=90\n\" width=50/>\n\n## Build Your Project\n\nFor this project, you will create a  News feed app which gives a user regularly-updated news from the internet related to a particular topic, person, or location. The presentation of the information as well as the topic is up to you.\n\nTo achieve this, you will use the [Guardian API](http://open-platform.theguardian.com/documentation/). This is a well-maintained API which returns information in a JSON format.\n\nWe suggest first exploring the API and learning what information it returns given a particular query. Here are some example queries: \n\n```\nhttp://content.guardianapis.com/search?q=debates&api-key=test\n```\n\n```\nhttps://content.guardianapis.com/search?q=debate&tag=politics/politics&from-date=2014-01-01&api-key=test\n```\n\nOnce you've explored the API, begin work in Android Studio. Start with a simple layout to test retrieving and displaying data from the API.\n\nThen, you'll want to build the AsyncTask that queries the API. This can be a complex step, so be sure to reference the course materials when needed.\n\nOnce you've queried the API, parse the results. This will involved storing the information returned by the API in a custom class.\n\nFinally, you'll use the List and Adapter pattern to populate a list on the user's screen with the information stored in the custom objects you wrote earlier.\n\nYour project will be evaluated using the [News App project rubric](https://review.udacity.com/#!/rubrics/1950/view).\n\n- - -\n### Additional Criteria\n\nThe intent of this project is to give you practice writing raw Java code using the necessary classes provided by the Android framework; therefore, the use of external libraries will not be permitted to complete this project. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 633322,
+          "key": "a06a5590-ef68-445e-b053-6270e41d7c39",
+          "title": "Prepare for Submission",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a06a5590-ef68-445e-b053-6270e41d7c39",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 633441,
+              "key": "d7d26acf-c7f9-45b6-971c-8f57fc471511",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<img src=\"https://lh3.googleusercontent.com/OctcO-7n2iK-hJjUVtOp4FWdx1IrxKB1Ue_L5WCt6eI7_5Hm1cHfvjZXBNQfp_eU04mTWJeHbieINZpKs7Kd=s0#w=90&h=90\n\" width=\"50\" />\n## Prepare for Submission\n- - - \n### Clean Your Build\n\nBefore submitting, please follow the instructions for cleaning your project files. This removes some temporary files and greatly decreases the size of your project. \n\n<a href=\"https://d17h27t6h515a5.cloudfront.net/topher/2016/June/5769c116_1000-files-tutorial/1000-files-tutorial.pdf\" target=\"_blank\">\n<img src=\"https://lh3.googleusercontent.com/_hZj1QG9Xd_9F_pIyBKezYJkVlY2xobnK0UwrE-ZEgcZnY4xsd5E2bdKC3aiXUbXbkJ2xpdH7OzO3jR0gg=s0#w=231&h=70\n\" /></a>\n\n- - - \n\n\n### Review the Project Rubric\n\nUdacity reviewers will be reviewing your project based on the project rubric. All specifications must be met to pass the project. \n\n\n\n\n<a href=\"https://review.udacity.com/#!/rubrics/1950/view \" target=\"_blank\">\n<img src=\"https://lh3.googleusercontent.com/_1lofzZ5gdceXR8y82nsf1gy5CeHQbIc21AEB7LDFXPx9m-aM3S1NBzOUAXx79V4PVKi-CAweT_VuwgHMj4=s0#w=206&h=70\n\" /></a>\n- - - \n\n### Final Submission Checklist\n\nBefore submitting your project for evaluation, we recommend that you check that each of the following is true: \n\n1. Your app compiles and runs as expected.\n2. You are proud of your app and its output.\n3. You completed this project according to instructions. \n4. You cleaned the project using the instructions above. \n5. You checked your project against the rubric.\n\n- - -\n### Zip Your Project for Submission\n\nBe sure to zip your whole android project only after you have cleaned it. \n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

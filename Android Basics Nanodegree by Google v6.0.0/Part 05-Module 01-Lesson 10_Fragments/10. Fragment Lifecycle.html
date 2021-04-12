@@ -1,0 +1,218 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fragment Lifecycle</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Fragments</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Navigation Patterns in Android.html">02. Navigation Patterns in Android</a>
+    </li>
+    <li class="">
+      <a href="03. Navigation Patterns in Other Apps.html">03. Navigation Patterns in Other Apps</a>
+    </li>
+    <li class="">
+      <a href="04. Up Button.html">04. Up Button</a>
+    </li>
+    <li class="">
+      <a href="05. An Alternative Version of the App.html">05. An Alternative Version of the App</a>
+    </li>
+    <li class="">
+      <a href="06. Upcoming Changes.html">06. Upcoming Changes</a>
+    </li>
+    <li class="">
+      <a href="07. Android Development Patterns.html">07. Android Development Patterns</a>
+    </li>
+    <li class="">
+      <a href="08. Sample ViewPager.html">08. Sample ViewPager</a>
+    </li>
+    <li class="">
+      <a href="09. Intro to Fragments.html">09. Intro to Fragments</a>
+    </li>
+    <li class="">
+      <a href="10. Fragment Lifecycle.html">10. Fragment Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="11. Refactor Category Activities.html">11. Refactor Category Activities</a>
+    </li>
+    <li class="">
+      <a href="12. ViewPager and FragmentPagerAdapter.html">12. ViewPager and FragmentPagerAdapter</a>
+    </li>
+    <li class="">
+      <a href="13. Add Tabs to ViewPager.html">13. Add Tabs to ViewPager</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">10. Fragment Lifecycle</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="fragment-lifecycle">Fragment Lifecycle</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Fragment Lifecycle</p></h3>
+  <div>
+  <p>Because a Fragment can be created, added to the screen, then removed from the screen, it has its own lifecycle. And guess what? Android provides asynchronous callbacks where you can get notified of these state changes. The style of these callbacks is similar to the Activity.</p>
+<p>Imagine an Activity containing a Fragment that takes up the whole screen. When the Activity is created, the Fragment is created as well. When the Activity is resumed and active, the Fragment is resumed and active as well. There is a close relationship between the Activity lifecycle and the Fragment lifecycle. </p>
+<p>The Fragment also has additional callbacks where you, as the developer, can get notified when it is attached to the enclosing Activity, or detached from the Activity.</p>
+<p>If multiple fragments make up a whole screen, then they all need to tie into the same activity. They need to know when the activity is resumed / paused, so they can resume or pause what they’re doing within the fragment. If you swap out and replace different fragments throughout the lifetime of the app, the Fragments need to be created and destroyed properly too.</p>
+<p>Remember this is the activity lifecycle.</p>
+<p><img src="media/unnamed-8002-0.gif" alt="Activity Lifecycle" /></p>
+<p>(<a href="http://developer.android.com/guide/components/activities.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">Source</a>)</p>
+<p>Similarly, the fragment has a lifecycle that is tied to the stages of the activity lifecycle.</p>
+<p><img src="media/unnamed-8002-1.gif" alt="Fragment Lifecycle" /></p>
+<p>(<a href="http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">Source</a>)</p>
+<p>Fragment is a tricky topic. You’ll encounter Fragments more as you advance in your journey as an Android developer. If you’re curious for more details now, see the <a href="http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">Fragment developer guide</a> on how to <a href="http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Lifecycle" target="_blank">handle the Fragment lifecycle</a> or how to <a href="http://developer.android.com/training/basics/fragments/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">build a dynamic UI with Fragments</a>. There are also plenty of other tutorials on Fragments written by developers in the community.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="11. Refactor Category Activities.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('10. Fragment Lifecycle')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

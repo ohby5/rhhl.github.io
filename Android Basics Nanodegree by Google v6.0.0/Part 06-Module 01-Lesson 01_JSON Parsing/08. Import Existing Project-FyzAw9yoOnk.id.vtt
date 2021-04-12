@@ -1,0 +1,173 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.280 --> 00:00:03.170
+Oke, saat ini kita berada di Android Studio.
+
+00:00:03.170 --> 00:00:06.085
+Dan kita punya jendela proyek yang terbuka.
+
+00:00:06.085 --> 00:00:08.530
+Mari mengakrabkan diri dengan basis kode
+untuk aplikasi Laporan Gempa.
+
+00:00:09.580 --> 00:00:12.720
+Yang pertama kali saya lakukan
+adalah masuk ke direktori aplikasi dan
+
+00:00:12.720 --> 00:00:14.790
+mencari dalam folder java.
+
+00:00:14.790 --> 00:00:17.750
+Di sinilah terletak semua
+logika aplikasi ini.
+
+00:00:17.750 --> 00:00:21.930
+Lalu saya akan turun ke folder
+resource ini, dan memperluasnya.
+
+00:00:21.930 --> 00:00:25.238
+Inilah folder yang berisi semua yang
+terkait dengan tampilan
+
+00:00:25.238 --> 00:00:25.804
+aplikasi.
+
+00:00:25.804 --> 00:00:28.830
+Dokumen-dokumen ini mengendalikan bagaimana
+aplikasi tampil di perangkat yang berbeda.
+
+00:00:28.830 --> 00:00:34.140
+Resource dapat mencakup dokumen XML, gambar,
+atau dokumen media lainnya.
+
+00:00:34.140 --> 00:00:36.700
+Kita dapat memulai dengan memperluas
+folder layout.
+
+00:00:36.700 --> 00:00:40.320
+Di sini ada
+dokumen earthquake_activity.xml.
+
+00:00:40.320 --> 00:00:41.700
+dokumen ini menentukan tata letak untuk
+
+00:00:41.700 --> 00:00:44.610
+layar utama dalam aplikasi kita,
+yang hanya berupa tampilan daftar.
+
+00:00:44.610 --> 00:00:48.720
+Lalu ada folder mipmap, yang merupakan
+folder khusus untuk ikon aplikasi.
+
+00:00:49.960 --> 00:00:52.470
+Gambar lain dalam aplikasi Anda harus
+masuk dalam folder-folder yang dapat ditarik.
+
+00:00:54.030 --> 00:00:55.880
+Lalu ada folder values.
+
+00:00:55.880 --> 00:01:00.330
+Ini berisi dokumen colors.xml, yang
+menentukan warna-warna untuk aplikasi kita.
+
+00:01:00.330 --> 00:01:03.100
+Ada juga beberapa dokumen resource
+tambahan untuk style dan
+
+00:01:03.100 --> 00:01:05.379
+tema serta string-string teks.
+
+00:01:06.920 --> 00:01:08.510
+Mari kembali ke folder java.
+
+00:01:08.510 --> 00:01:13.100
+Ada satu dokumen Java bernama
+EarthquakeActivity.
+
+00:01:13.100 --> 00:01:15.926
+Ternyata EartquakeActivity
+merupakan layar utama
+
+00:01:15.926 --> 00:01:17.420
+untuk aplikasi kita.
+
+00:01:17.420 --> 00:01:19.070
+Saat activity ini dibuat,
+
+00:01:19.070 --> 00:01:23.300
+kita mengatur tampilan konten untuk
+tata letak earthquake_activity.XML.
+
+00:01:23.300 --> 00:01:26.410
+Lalu kita buat daftar gempa bumi palsu
+karena ini hanya data variabel sementara
+
+00:01:26.410 --> 00:01:29.290
+sampai kita memperoleh data
+sebenarnya dari server.
+
+00:01:29.290 --> 00:01:32.133
+Kita merepresentasikan daftar gempa bumi
+sebagai string-string ArrayList,
+
+00:01:32.133 --> 00:01:35.970
+yang berisi nama-nama
+dari berbagai kota.
+
+00:01:35.970 --> 00:01:39.920
+Lalu kita buat ArrayAdapter yang
+tahu cara membuat tampilan item daftar,
+
+00:01:39.920 --> 00:01:42.410
+satu untuk tiap gempa bumi
+dalam ArrayList.
+
+00:01:42.410 --> 00:01:45.540
+Lalu item daftar akan
+ditambahkan ke dalam ListView
+
+00:01:45.540 --> 00:01:48.210
+yang kita tentukan dalam tata letak
+earthquake_activity kita.
+
+00:01:49.310 --> 00:01:52.430
+Lalu tak kalah pentingnya,
+ada dokumen AndroidManifest.
+
+00:01:52.430 --> 00:01:57.813
+dokumen ini berisi informasi penting
+tentang aplikasi kita yang harus diketahui
+
+00:01:57.813 --> 00:02:04.100
+oleh sistem Android, misalnya, nama paket,
+nama aplikasi, dan berbagai activity.
+
+00:02:04.100 --> 00:02:07.010
+Kembali ke kuis,
+berikut jawaban untuk pertanyaan.
+
+00:02:08.020 --> 00:02:12.280
+Main activity ditentukan dalam
+dokumen EarthquakeActivity.java.
+
+00:02:13.330 --> 00:02:13.930
+Tata letak untuk
+
+00:02:13.930 --> 00:02:18.720
+activity ditentukan dalam
+dokumen earthquake_activity.xml.
+
+00:02:20.230 --> 00:02:22.750
+Terakhir, di dalam
+kelas EarthquakeActivity,
+
+00:02:22.750 --> 00:02:25.860
+ada variabel daftar array
+bernama earthquakes,
+
+00:02:25.860 --> 00:02:28.581
+yang memegang daftar lokasi
+gempa bumi sebagai string.
+

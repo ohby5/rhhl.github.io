@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.310 --> 00:00:04.159
+Jika Anda penasaran, URL ini
+merepresentasikan gempa bumi
+
+00:00:04.159 --> 00:00:07.760
+di dunia dari 1 Januari hingga
+30 Januari 2016.
+
+00:00:07.760 --> 00:00:11.230
+Gempa-gempa yang setidaknya memiliki magnitudo
+minimum enam pada skala Richter.
+
+00:00:11.230 --> 00:00:13.890
+Sekarang saya juga batasi respons
+hingga sepuluh gempa bumi sehingga
+
+00:00:13.890 --> 00:00:15.850
+Anda tidak perlu mensketsa sebanyak
+itu dalam waktu yang panjang.
+
+00:00:15.850 --> 00:00:20.210
+Lalu saya salin respons JSON mentah dan
+menempelkannya di formatter JSON dan
+
+00:00:20.210 --> 00:00:22.900
+memprosesnya.
+
+00:00:22.900 --> 00:00:24.770
+Oke, jadi tampak jauh lebih baik.
+
+00:00:24.770 --> 00:00:27.060
+Pertama-tama kita perlu mengambil
+kunci features,
+
+00:00:27.060 --> 00:00:30.740
+lalu mengambil elemen pertama dari array.
+
+00:00:30.740 --> 00:00:34.700
+Lalu mengambil kunci properties yang
+mengembalikan objek JSON.
+
+00:00:34.700 --> 00:00:39.360
+Lalu ke kunci mag, place,
+
+00:00:39.360 --> 00:00:42.690
+dan time untuk
+data yang kita butuhkan di aplikasi.
+
+00:00:42.690 --> 00:00:46.230
+Perhatikan bahwa magnitudonya
+7,2 seperti disebutkan tadi.
+
+00:00:46.230 --> 00:00:48.820
+Lokasi disimpan dalam
+kunci place, dan
+
+00:00:48.820 --> 00:00:53.948
+nilai yang berhubungan adalah
+88 km di utara Yelizovo, Rusia.
+
+00:00:53.948 --> 00:00:57.165
+Untuk saat ini, kita tulis saja
+lokasi kota dalam sketsa.
+
+00:00:57.165 --> 00:00:58.576
+Tidak ada kunci tanggal, tapi
+
+00:00:58.576 --> 00:01:02.622
+ada time yang merujuk pada angka yang
+sangat panjang seperti disebutkan tadi.
+
+00:01:02.622 --> 00:01:05.315
+Ini adalah waktu dalam milidetik sejak
+1 Januari 1970.
+
+00:01:05.315 --> 00:01:08.915
+Kita bisa mengonversinya menjadi
+tanggal yang bisa dibaca, tapi
+
+00:01:08.915 --> 00:01:11.025
+untuk saat ini kita biarkan saja
+dalam milidetik.
+
+00:01:11.025 --> 00:01:13.435
+Oke, bagus, item pertama
+sudah selesai,
+
+00:01:13.435 --> 00:01:15.351
+lalu kita bisa pindah ke gempa bumi
+kedua dalam daftar.
+
+00:01:15.351 --> 00:01:19.533
+Dalam respons JSON, kita gulir
+turun ke fitur kedua.
+
+00:01:19.533 --> 00:01:24.459
+Yang ini punya magnitudo 6,1 dan
+berlokasi di Papua Nugini, dan
+
+00:01:24.459 --> 00:01:27.220
+terjadi pada waktu 145377 dst.
+
+00:01:27.220 --> 00:01:31.330
+Kita bisa memperbarui sketsa kita
+dengan informasi ini.
+
+00:01:31.330 --> 00:01:32.640
+Kita bisa ulangi langkah-langkah ini
+
+00:01:32.640 --> 00:01:34.930
+untuk sepuluh gempa bumi lainnya
+dalam respons JSON.
+
+00:01:36.340 --> 00:01:38.700
+Setelah selesai, sketsa Anda akan
+tampak seperti ini.
+

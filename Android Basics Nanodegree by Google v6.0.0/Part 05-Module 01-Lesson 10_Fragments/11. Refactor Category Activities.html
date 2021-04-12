@@ -1,0 +1,374 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Refactor Category Activities</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Fragments</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Navigation Patterns in Android.html">02. Navigation Patterns in Android</a>
+    </li>
+    <li class="">
+      <a href="03. Navigation Patterns in Other Apps.html">03. Navigation Patterns in Other Apps</a>
+    </li>
+    <li class="">
+      <a href="04. Up Button.html">04. Up Button</a>
+    </li>
+    <li class="">
+      <a href="05. An Alternative Version of the App.html">05. An Alternative Version of the App</a>
+    </li>
+    <li class="">
+      <a href="06. Upcoming Changes.html">06. Upcoming Changes</a>
+    </li>
+    <li class="">
+      <a href="07. Android Development Patterns.html">07. Android Development Patterns</a>
+    </li>
+    <li class="">
+      <a href="08. Sample ViewPager.html">08. Sample ViewPager</a>
+    </li>
+    <li class="">
+      <a href="09. Intro to Fragments.html">09. Intro to Fragments</a>
+    </li>
+    <li class="">
+      <a href="10. Fragment Lifecycle.html">10. Fragment Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="11. Refactor Category Activities.html">11. Refactor Category Activities</a>
+    </li>
+    <li class="">
+      <a href="12. ViewPager and FragmentPagerAdapter.html">12. ViewPager and FragmentPagerAdapter</a>
+    </li>
+    <li class="">
+      <a href="13. Add Tabs to ViewPager.html">13. Add Tabs to ViewPager</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. Refactor Category Activities</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-2-refactor-the-logic-for-the-four-activities-to-use-fragments">Step 2: Refactor the Logic for the Four activities to Use Fragments</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Refactor Category Activities</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><p>We won’t use a ViewPager yet. Let’s prepare our fragments first. Currently, we have 4 category activities and 0 fragments.</p>
+<p><img src="media/unnamed-112330-0.gif" alt="Category Activities" /></p>
+<p>By the end of this coding task, we want 4 category activities with 4 fragments. Each activity will contain a fragment.</p>
+<p><img src="media/unnamed-112330-1.gif" alt="Category Fragments" /></p>
+<p>In order to move the logic into the fragment java files, we’re going to have to copy/paste a lot of code. The code is mostly the same. However, any code that assumed we were inside an Activity class will have to be slightly tweaked to take into account that now the code is inside a Fragment class. For example, the Activity lifecycle callbacks (onCreate, onStop) don’t exist when we’re inside a Fragment class. There are similar methods though (onCreateView, onStop), so we just need small modifications to adjust to the Fragment lifecycle callbacks.</p>
+<p><img src="media/unnamed-112330-2.gif" alt="Activity Fragment Table" /></p>
+<p>Don’t worry if the table is confusing. Let’s go step by step through the code changes for the NumbersActivity, and then hopefully the process will become clearer to you. As shown in the diagram below, we’re going to go from having a NumbersActivity (before state) to having a NumbersActivity with a NumbersFragment contained inside it (after state). Then for the upcoming quiz, you’ll convert the rest of the category activities on your own following the same process.</p>
+<p><img src="media/unnamed-112330-3.gif" alt="Before After" /></p>
+<h3 id="create-numbersfragment-class">Create NumbersFragment class</h3>
+<p><strong>1)</strong> To start, create a new Java file for the NumbersFragment. Right click on the “com.example.android.miwok” folder. Go to New &gt; Fragment &gt; Fragment (Blank).</p>
+<p><img src="media/unnamed-112330-4.gif" alt="NumbersFragment" /></p>
+<p><strong>2)</strong> Fill out the wizard. Give the fragment a name: NumbersFragment. Uncheck all the boxes because we’ll be adding code to the file on our own.</p>
+<p><img src="media/unnamed-112330-5.gif" alt="Dialog" /></p>
+<p><strong>3)</strong> Android Studio will auto-generate a new Fragment class for you in a file called NumbersFragment.java. It will look something like this:</p>
+<pre><code>package com.example.android.miwok;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+/**
+* A simple {@link Fragment} subclass.
+*/
+public class NumbersFragment extends Fragment {
+
+    public NumbersFragment() {
+       // Required empty public constructor
+   }
+
+   @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                        Bundle savedInstanceState) {
+   TextView textView = new TextView(getActivity());
+   textView.setText(R.string.hello_blank_fragment);
+   return textView;
+   }
+}</code></pre>
+<h3 id="copy-code-from-the-numbersactivity-and-paste-it-into-the-numbersfragment">Copy code from the NumbersActivity and paste it into the NumbersFragment</h3>
+<p><strong>4)</strong> Start by copying over the global variables from the NumbersActivity over to the NumbersFragment. (Delete them from the NumbersActivity as you do this.)<br />
+Code should look like <a href="https://gist.github.com/udacityandroid/3a2fdbf1e487a292d199bebe51c2d4e6" target="_blank">this</a>.</p>
+<p><strong>5)</strong> Copy over the releaseMediaPlayer() helper method from the NumbersActivity into the NumbersFragment.<br />
+Code code for <a href="https://gist.github.com/udacityandroid/17851f0932e58eed13dc27d8267bc4ea" target="_blank">releaseMediaPlayer()</a>.</p>
+<h3 id="adapt-the-code-for-the-fragment-lifecycle-instead-of-the-activity-lifecycle">Adapt the code for the Fragment Lifecycle (instead of the Activity Lifecycle)</h3>
+<p><strong>6)</strong> Override the Fragment’s onStop() method.</p>
+<p>You can’t copy the exact onStop() method over from the NumbersActivity because the Fragment onStop() method has a slightly different method signature. In case you’re wondering, the Activity class uses the “protected” modifier on the method, while the Fragment class has the “public” modifier on the method. But don’t worry about the details of those modifiers now.</p>
+<p>Move your cursor to an empty space in the class, where you can add a new method. Use the keyboard shortcut Ctl + O to pop up a dialog and select a method to override. Type in “onStop” and when you find that result, hit OK.</p>
+<p><img src="media/unnamed-112330-6.gif" alt="second onStop" /></p>
+<p>Android Studio will automatically add this method to your NumbersFragment class for you:</p>
+<pre><code>@Override
+public void onStop() {
+    super.onStop();
+}</code></pre>
+<p>Modify the onStop() method so that it calls the releaseMediaPlayer method:</p>
+<pre><code>@Override
+public void onStop() {
+   super.onStop();
+
+   // When the activity is stopped, release the media player resources because we won't
+   // be playing any more sounds.
+   releaseMediaPlayer();
+}</code></pre>
+<p><strong>7)</strong> Override the Fragment’s onCreateView() method.</p>
+<p>The Activity’s onCreate() method is slightly different from the Fragment’s onCreateView() method. Within the Activity’s onCreate() method, we can call setContentView() to set the layout for the activity. In the Fragment, we need to inflate the view from the XML layout resource ID and return that view in the onCreateView() method. Note that the layout for the Fragment will use the word_list XML layout resource because it will be displaying a list of words.</p>
+<pre><code>@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                    Bundle savedInstanceState) {
+   View rootView = inflater.inflate(R.layout.word_list, container, false);
+
+   /** TODO: Insert all the code from the NumberActivity’s onCreate() method after the setContentView method call */
+
+   return rootView;
+}</code></pre>
+<p>Once you copy over the code from the NumbersActivity’s onCreate() method, you will get a bunch of errors in Android Studio because the code assumed that it would be run inside an Activity class, not a Fragment class. Below are instructions on how you would resolve each of these errors. If you don’t want to fix each error one by one, you can skip to the code snippet below that shows you what your NumbersFragment onCreateView() should look like when you’re done.</p>
+<p><em>Error #1:</em> You will get get an error saying cannot resolve method “findViewById(int)” because the Fragment does not have a findViewById method, whereas the Activity did have that method (see <a href="http://developer.android.com/reference/android/app/Activity.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#findViewById(int)" target="_blank">link</a>).  <br />
+<code>ListView listView = (ListView) findViewById(R.id.list);</code></p>
+<p>Fix the error by calling findViewById(int) on the rootView object, which should contain children views such as the ListView.<br />
+<code>ListView listView = (ListView) rootView.findViewById(R.id.list);</code></p>
+<p><em>Error #2:</em> You will get an error saying cannot resolve method “getSystemService(String)” because the Fragment does not have access to system services, whereas the Activity does (see <a href="http://developer.android.com/reference/android/app/Activity.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#getSystemService(java.lang.String)" target="_blank">link</a>). <br />
+<code>mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);</code></p>
+<p>Fix the error by getting the Activity object instance first. This is the Activity that encloses the current Fragment, which will be the NumbersActivity for the NumbersFragment. Then call getSystemService(String) on that Activity object.</p>
+<p><code>mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);</code></p>
+<p><em>Error #3:</em> There’s a problem with the arguments passed into the WordAdapter constructor because the first parameter “this” refers to this class (which is the NumbersFragment), and a Fragment is not a valid Context. However, the code used to work when “this” referred the NumbersActivity because an Activity is a valid Context.<br />
+<code>WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);</code></p>
+<p>Fix the error by passing in a reference to the Activity that encloses this Fragment as the context.<br />
+<code>WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);</code></p>
+<p><em>Error #4:</em> When creating a MediaPlayer object, we need to pass in a context. Again, “this” refers to the NumbersFragment (and not the NumbersActivity), and the Fragment is not a valid Context.<br />
+<code>mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getAudioResourceId());</code></p>
+<p>Fix the error by passing in the activity for the first input parameter.<br />
+<code>mMediaPlayer = MediaPlayer.create(getActivity(), word.getAudioResourceId());</code></p>
+<p>After fixing these 4 cases, there should be no more errors in this file! The NumbersFragment onCreateView() method should look like <a href="https://gist.github.com/udacityandroid/5808ce6e0c0b816bcf9a3125e8eeced0" target="_blank">this</a>. </p>
+<p>As a sanity check, this is the end result of the <a href="https://github.com/udacity/ud839_Miwok/blob/d7effcef3bf7fdccdd045c974d67abd5b960fae7/app/src/main/java/com/example/android/miwok/NumbersFragment.java" target="_blank">NumbersFragment</a> class.</p>
+<h3 id="update-numbersactivity">Update NumbersActivity</h3>
+<p><strong>8)</strong> Under the res/layout directory, create a new layout file called activity_category.xml. The important part is that the view has an ID. We chose to give the view an ID called “container”.</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/container"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:orientation="vertical"/&gt;</code></pre>
+<p><strong>9)</strong> Now we need to update the NumbersActivity to use the NumbersFragment, otherwise there will be duplicate code that does the same thing in both classes.</p>
+<p>Replace the NumbersActivity code with this entire code snippet. We’re going to use this simplified activity that sets the activity_category XML layout resource as the content view. Then a new NumbersFragment is created and inserted it into the container view, using a <a href="http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Transactions" target="_blank">FragmentTransaction</a> (no need to understand the details of this now). Since the container has “match_parent” for width and height, the NumbersFragment will take up the whole width and height of the screen.</p>
+<pre><code>package com.example.android.miwok;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class NumbersActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+   super.onCreate(savedInstanceState);
+   setContentView(R.layout.activity_category);
+   getSupportFragmentManager().beginTransaction()
+           .replace(R.id.container, new NumbersFragment())
+           .commit();
+   }
+}</code></pre>
+<p><strong>10)</strong> To clarify, the NumbersActivity used to display the word_list.xml layout. Now, the NumbersActivity displays the activity_category.xml layout, and the NumbersFragment displays the word_list.xml layout.</p>
+<p><img src="media/unnamed-112330-7.gif" alt="Before and After" /></p>
+<p>Now the NumbersActivity is using a NumbersFragment! Run the app to make sure the numbers list still works. It should look the same because this is just a midpoint along the way to our goal, as explained earlier.</p>
+<p>Great work! In the upcoming quiz, you’re going to repeat the same steps #1 - 9 for the other categories. All category activities can use the activity_category.xml layout resource. </p>
+<p>At the end, your app should look the same, but each category activity will contain a different fragment. Test your app to make sure the right activity is showing the right fragment. Make sure each fragment has the right theme color. (These were both bugs in my app when I first implemented the solution.) Also ensure that the audio playback still works.</p>
+<p>There’s a lot of copy/pasting, good luck!!</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8194803077.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 24.18930155210643%; left: 5.421991895261845%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="Checkbox to change from activities to fragments">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><p><a href="https://github.com/udacity/ud839_Miwok/commit/1db4f0cd8d8099451731bf41c4b67f776a90d231" target="_blank">These are the changes needed to complete the quiz.</a></p>
+<p><a href="https://github.com/udacity/ud839_Miwok/tree/1db4f0cd8d8099451731bf41c4b67f776a90d231" target="_blank">This is the state of the code after completing the quiz.</a></p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p>For the quiz, clicking on each category will open up a new activity <a href="https://lh3.googleusercontent.com/55xt0N-6F3AQnJjGkkigMOrjHKVRgyQygp_KQksKmCxEuAJgcODZGGLNd-BEuR1bNYeH4oXxT4HL4glbS84=s0#w=1440&h=900" target="_blank">(see image here).</a></p>
+<p><strong>Note:</strong> All activities can use the activity_category.xml layout resource.</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="12. ViewPager and FragmentPagerAdapter.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('11. Refactor Category Activities')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

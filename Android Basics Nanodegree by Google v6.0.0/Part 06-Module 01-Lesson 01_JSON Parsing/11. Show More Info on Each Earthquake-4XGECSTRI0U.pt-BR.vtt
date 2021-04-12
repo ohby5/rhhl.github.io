@@ -1,0 +1,324 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:04.467
+Essa explicação será rápida
+porque já cobrimos isso.
+
+00:00:04.501 --> 00:00:07.133
+Caso queria revê-lo,
+o link está abaixo.
+
+00:00:07.167 --> 00:00:10.834
+Para conseguirmos esta imagem,
+temos que modificar a lista
+
+00:00:10.868 --> 00:00:13.734
+para que cada item
+mostre mais informação.
+
+00:00:13.767 --> 00:00:18.200
+Ao invés de usar o layout XML
+de lista fornecido pelo framework,
+
+00:00:18.234 --> 00:00:21.167
+temos que criar nosso próprio
+layout XML para um item de lista
+
+00:00:21.200 --> 00:00:23.434
+que contenha três TextViews.
+
+00:00:24.000 --> 00:00:26.634
+Para fazer isso,
+criei um novo arquivo de layout
+
+00:00:26.667 --> 00:00:29.968
+chamado
+"earthquake_list_item.xml".
+
+00:00:30.000 --> 00:00:34.267
+Vamos para na janela de texto
+para ver o layout.
+
+00:00:34.300 --> 00:00:38.100
+Este arquivo de item de lista
+tem um layout horizontal linear
+
+00:00:38.133 --> 00:00:40.200
+que contém três TextViews,
+
+00:00:40.234 --> 00:00:41.801
+um para a magnitude,
+
+00:00:41.834 --> 00:00:44.734
+um para o local
+e outro para a data.
+
+00:00:45.434 --> 00:00:47.701
+A aparência agora não importa.
+
+00:00:47.734 --> 00:00:52.167
+Separamos os views
+usando um largura de layout de 0dp
+
+00:00:52.200 --> 00:00:55.400
+e o peso do layout dos filhos
+é igual a um.
+
+00:00:55.934 --> 00:00:59.067
+Também colocamos 16pd
+de preenchimento nos itens de lista
+
+00:00:59.100 --> 00:01:02.267
+para que eles não sejam
+tão pequenos.
+
+00:01:02.901 --> 00:01:04.901
+Na janela de design,
+
+00:01:04.934 --> 00:01:08.133
+os dados fictícios temporários
+nos dizem
+
+00:01:08.167 --> 00:01:10.200
+se o layout
+está da forma que queremos.
+
+00:01:10.234 --> 00:01:13.300
+Depois, inserimos
+o conjunto de nomes "tools"
+
+00:01:13.334 --> 00:01:15.167
+no elemento raiz
+do LinearLayout
+
+00:01:15.200 --> 00:01:17.901
+sob a linha onde declaramos
+o conjunto de nomes do Android.
+
+00:01:18.434 --> 00:01:22.501
+Depois podemos usar o atributo
+"tools:text" em cada TextView
+
+00:01:22.534 --> 00:01:24.567
+e colocar dados fictícios.
+
+00:01:24.601 --> 00:01:28.868
+Dessa forma, surgirá texto
+no preview do Android Studio,
+
+00:01:28.901 --> 00:01:31.434
+mas não no aparelho
+quando rodarmos o app.
+
+00:01:31.968 --> 00:01:35.567
+Legal. Nosso layout de lista
+customizado está pronto.
+
+00:01:35.601 --> 00:01:39.000
+Precisamos de um objeto java
+para armazenar os dados dos tremores
+
+00:01:39.033 --> 00:01:41.200
+que vão ser exibidos
+em cada item de lista.
+
+00:01:41.234 --> 00:01:43.934
+Vamos voltar ao arquivo
+"Earthquake.java".
+
+00:01:44.467 --> 00:01:46.934
+Definimos
+a nova classe "Earthquake"
+
+00:01:46.968 --> 00:01:49.267
+que representa
+apenas um terremoto.
+
+00:01:49.300 --> 00:01:52.767
+Depois definimos três variáveis
+globais do tipo string,
+
+00:01:52.801 --> 00:01:56.767
+uma para a magnitude,
+uma para local e outra para data.
+
+00:01:56.801 --> 00:01:58.934
+Cada tremor tem
+estes atributos.
+
+00:01:58.968 --> 00:02:01.267
+No construtor "public"
+na classe "Earthquake",
+
+00:02:01.300 --> 00:02:03.200
+iniciamos as três variáveis
+membro de classe
+
+00:02:03.234 --> 00:02:06.133
+baseadas nos valores passados
+para o construtor.
+
+00:02:06.167 --> 00:02:08.434
+Como essas variáveis globais
+são privadas,
+
+00:02:08.467 --> 00:02:10.667
+temos que criar
+métodos get públicos
+
+00:02:10.701 --> 00:02:14.634
+para que outras classes acessem
+estas informações do tremor.
+
+00:02:14.667 --> 00:02:17.100
+Vamos para a classe
+"earthquake_activity"
+
+00:02:17.133 --> 00:02:21.133
+e podemos criar novos objetos
+chamando o construtor
+
+00:02:21.167 --> 00:02:22.767
+que acabamos de criar.
+
+00:02:23.300 --> 00:02:24.834
+Veja essa linha.
+
+00:02:24.868 --> 00:02:27.167
+Ao invés de criar
+uma ArrayList de strings,
+
+00:02:27.200 --> 00:02:30.000
+queremos criar uma
+de objetos "earthquake".
+
+00:02:30.033 --> 00:02:33.868
+Criamos um novo objeto "earthquake"
+e o adicionamos à lista,
+
+00:02:33.901 --> 00:02:35.200
+um por vez.
+
+00:02:35.234 --> 00:02:37.801
+Para cada tremor,
+colocamos valores fictícios
+
+00:02:37.834 --> 00:02:39.834
+para magnitude e data.
+
+00:02:39.868 --> 00:02:42.767
+Depois temos que criar
+um adapter "earthquake"
+
+00:02:42.801 --> 00:02:45.734
+customizado para exibir
+uma lista de terremotos.
+
+00:02:45.767 --> 00:02:47.567
+Definimos o adapter "earthquake"
+
+00:02:47.601 --> 00:02:50.467
+como uma extensão
+da superclasse ArrayAdapter
+
+00:02:50.501 --> 00:02:52.734
+e anulando o método getView
+
+00:02:52.767 --> 00:02:55.868
+para controlarmos a criação
+das views de itens de lista.
+
+00:02:55.901 --> 00:02:57.467
+Quando chamamos um getView,
+
+00:02:57.501 --> 00:03:00.367
+dá para ver se dá para usar
+uma view reciclada.
+
+00:03:00.400 --> 00:03:02.634
+Ou temos que inflar
+um novo layout de itens de lista
+
+00:03:02.667 --> 00:03:05.467
+e redefinir o layout
+do arquivo "earthquake.xml".
+
+00:03:05.501 --> 00:03:07.501
+Podemos usar
+o parâmetro "position"
+
+00:03:07.534 --> 00:03:10.467
+para criar uma referência
+do objeto "earthquake" desejado
+
+00:03:10.501 --> 00:03:12.133
+da nossa lista de tremores.
+
+00:03:12.167 --> 00:03:15.334
+Depois, podemos ligar dos dados
+do objeto "earthquake"
+
+00:03:15.367 --> 00:03:17.634
+para os views
+no layout de item de lista.
+
+00:03:17.667 --> 00:03:20.868
+Achamos cada TextView na lista
+através do ViewId
+
+00:03:20.901 --> 00:03:23.701
+e mandamos os dados
+correspondentes para eles.
+
+00:03:23.734 --> 00:03:27.634
+Assim que o item de lista
+tem o dado certo para um tremor,
+
+00:03:27.667 --> 00:03:30.200
+podemos retornar o view
+para o chamador.
+
+00:03:30.234 --> 00:03:32.601
+O chamador neste caso
+é o ListView
+
+00:03:32.634 --> 00:03:35.968
+que vai pegar e exibir todos
+estes itens de lista na tela.
+
+00:03:36.501 --> 00:03:39.400
+Para uma explicação mais detalhada
+de ListView e Adapters,
+
+00:03:39.434 --> 00:03:42.767
+vejam o curso passado que tem
+uma aula inteira neste tema.
+
+00:03:42.801 --> 00:03:44.501
+O link está abaixo.
+
+00:03:44.534 --> 00:03:47.067
+Vamos voltar
+ao "EarthquakeActivity".
+
+00:03:47.100 --> 00:03:49.067
+Podemos criar
+um novo adapter "earthquake"
+
+00:03:49.100 --> 00:03:51.434
+passando uma lista
+de terremotos.
+
+00:03:51.467 --> 00:03:54.067
+Depois montamos o adapter
+no ListView.
+
+00:03:54.601 --> 00:03:56.567
+Vamos rodar o app
+no nosso aparelho.
+
+00:03:57.701 --> 00:03:59.567
+Ficou assim. Bacana.
+

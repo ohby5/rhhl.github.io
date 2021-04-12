@@ -1,0 +1,390 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.776 --> 00:00:03.647
+Luar biasa hebat, kamu sudah memahami
+parsing JSON sejauh ini.
+
+00:00:03.647 --> 00:00:08.037
+Mari mulai melihat lebih dekat pada data
+USGS sungguhan, lalu pelan-pelan
+
+00:00:08.037 --> 00:00:11.705
+melaksanakan tugas agar mampu merekam
+dalam aplikasi laporan cepat Anda
+
+00:00:11.705 --> 00:00:12.570
+untuk melakukan parse JSON.
+
+00:00:12.570 --> 00:00:17.362
+Di laman utama dokumentasi USGS,
+saya ingin gulir turun ke
+
+00:00:17.362 --> 00:00:22.889
+bagian tentang metode lalu melihat
+subbagian khusus bernama query.
+
+00:00:22.889 --> 00:00:26.507
+Di bagian ini, ada beberapa contoh
+query URL yang
+
+00:00:26.507 --> 00:00:29.389
+dapat Anda lakukan untuk memperoleh
+data dari API.
+
+00:00:29.389 --> 00:00:34.097
+Saya akan mengambil varian di baris
+kedua untuk menjadikannya lebih
+
+00:00:34.097 --> 00:00:36.870
+baru dan mengeksekusinya.
+
+00:00:36.870 --> 00:00:41.539
+Jadi, inilah respons teks mentah aktual dalam
+format GeoJSON yang akan Anda dapatkan
+
+00:00:41.539 --> 00:00:44.410
+saat Anda meminta data
+spesifik dari API.
+
+00:00:44.410 --> 00:00:46.435
+Sekarang, saatnya menggali
+data tersebut dan
+
+00:00:46.435 --> 00:00:49.601
+mengambil informasi khusus yang
+kita butuhkan untuk aplikasi kita.
+
+00:00:49.601 --> 00:00:53.858
+Satu hal yang mungkin
+Anda perhatikan adalah bahwa
+
+00:00:53.858 --> 00:00:56.537
+banyak sekali jumlah teksnya.
+
+00:00:56.537 --> 00:00:59.540
+Tidak ada break baris baru, yang
+dimaksudkan untuk menjadikan
+
+00:00:59.540 --> 00:01:02.780
+respons ini lebih ringkas dan mudah
+ditransfer melalui internet.
+
+00:01:02.780 --> 00:01:06.640
+Tapi akibatnya menjadi sangat sulit
+untuk dibaca manusia.
+
+00:01:06.640 --> 00:01:10.754
+Untungnya, kita bisa menggunakan tool
+pemformatan JSON untuk memformat JSON.
+
+00:01:10.754 --> 00:01:14.120
+Jadi agak mudah untuk dibaca manusia
+dan kita bisa melakukan debug sendiri.
+
+00:01:14.120 --> 00:01:17.804
+Sebenarnya datanya masih sama, hanya
+saja disajikan kepada kita dengan lebih
+
+00:01:17.804 --> 00:01:21.499
+banyak line break dan spasi dan kita bisa
+menelusuri internet untuk tool tipe ini.
+
+00:01:21.499 --> 00:01:27.391
+Jika Anda mencari JSON formatter,
+ada beberapa pilihan.
+
+00:01:27.391 --> 00:01:29.240
+Mari lihat yang pertama ini,
+kelihatannya cukup bagus.
+
+00:01:30.260 --> 00:01:35.089
+Saya akan menyalin dan menempel JSON
+mentah yang didapat dari query awal
+
+00:01:35.089 --> 00:01:39.603
+dan akan menempatkannya di dalam
+tool pemformatan JSON ini,
+
+00:01:39.603 --> 00:01:42.069
+lalu saya akan lanjut dan tekan Process.
+
+00:01:42.069 --> 00:01:43.191
+Sudah terlihat jauh lebih baik.
+
+00:01:43.191 --> 00:01:45.522
+Mari kita lihat dalam layar penuh.
+
+00:01:45.522 --> 00:01:46.937
+Keren.
+
+00:01:46.937 --> 00:01:48.656
+Ini benar-benar jauh lebih mudah dibaca.
+
+00:01:48.656 --> 00:01:52.852
+Sekarang, ada banyak data JSON terformat
+yang bisa kita baca.
+
+00:01:52.852 --> 00:01:53.684
+Seperti Anda lihat,
+
+00:01:53.684 --> 00:01:56.192
+ada struktur pohon yang mungkin
+sudah kita akrabi.
+
+00:01:56.192 --> 00:02:01.008
+Seperti yang Anda lihat di Windows Explorer
+atau Mac OS Finder dan
+
+00:02:01.008 --> 00:02:03.475
+lebih mudah dibaca.
+
+00:02:03.475 --> 00:02:09.020
+Perhatikan bahwa ada tombol minus dan
+plus ini yang membantu Anda memperluas
+
+00:02:09.020 --> 00:02:11.910
+dan menutup subbagian
+respons JSON tersebut,
+
+00:02:11.910 --> 00:02:15.600
+yang memudahkan membaca
+tiap-tiap bagian satu-satu.
+
+00:02:15.600 --> 00:02:19.310
+Saat saya arahkan objek JSON, saat kita
+menutup di sini menggunakan tool.
+
+00:02:20.340 --> 00:02:25.000
+Ada kunci bernama features, yang merujuk
+pada array JSON.
+
+00:02:25.000 --> 00:02:28.480
+Kita tahu hal ini dari tanda kurung
+kiri dan kanan.
+
+00:02:28.480 --> 00:02:32.347
+Ternyata array ini mengandung
+yang dimaksud dengan fitur,
+
+00:02:32.347 --> 00:02:33.757
+sebagai satu gempa bumi tunggal.
+
+00:02:33.757 --> 00:02:37.890
+Maka, tiap fitur dalam array ini atau tiap
+elemen dalam array ini merujuk ke
+
+00:02:37.890 --> 00:02:40.554
+informasi untuk tiap
+gempa bumi spesifik.
+
+00:02:40.554 --> 00:02:43.052
+Jika Anda lihat dan kita
+tutup sedikit di sini,
+
+00:02:43.052 --> 00:02:46.548
+jika Anda lihat elemen pertama dalam
+array dan kita perluas,
+
+00:02:46.548 --> 00:02:49.608
+kita lihat bahwa elemen ini mengandung
+objek JSON dengan semua detailnya,
+
+00:02:49.608 --> 00:02:52.680
+semua informasi meta yang kita
+butuhkan untuk array pertama.
+
+00:02:52.680 --> 00:02:55.447
+Demikian juga kita kita perluas
+elemen kedua,
+
+00:02:55.447 --> 00:02:57.475
+kita bisa melihat rangkaian data serupa.
+
+00:02:57.475 --> 00:03:00.789
+Seperti Anda lihat di sini, Anda bisa masuk
+ke array satu demi satu dan
+
+00:03:00.789 --> 00:03:02.659
+melihat informasi spesifik untuk
+
+00:03:02.659 --> 00:03:05.509
+tiap fitur gempa bumi yang kembali
+dari permintaan data kita.
+
+00:03:05.509 --> 00:03:06.090
+Keren.
+
+00:03:06.090 --> 00:03:08.862
+Mari kita tutup
+sedikit lagi.
+
+00:03:08.862 --> 00:03:12.612
+Kembali ke root objek
+JSON, ada empat kunci.
+
+00:03:12.612 --> 00:03:18.350
+Ada type, metadata, features
+dan satu hal yang disebut bbox.
+
+00:03:18.350 --> 00:03:21.454
+Kita hanya tertarik dengan kunci features,
+karena berisi
+
+00:03:21.454 --> 00:03:23.940
+array dari semua data gempa bumi
+yang kita butuhkan untuk aplikasi kita.
+
+00:03:23.940 --> 00:03:27.113
+Anda perhatikan bahwa array features
+berisi sepuluh objek untuk saat ini,
+
+00:03:27.113 --> 00:03:28.393
+karena kita memang meminta
+
+00:03:28.393 --> 00:03:30.403
+sepuluh hasil saat kita
+meminta API.
+
+00:03:30.403 --> 00:03:34.910
+Jika Anda lihat objek
+pertama dalam array, bisa kita lihat,
+
+00:03:34.910 --> 00:03:38.306
+jika kita tutup, objek ini juga
+punya empat kunci.
+
+00:03:38.306 --> 00:03:42.868
+Satu disebut type, satu disebut properties,
+satu disebut geometry, dan
+
+00:03:42.868 --> 00:03:44.425
+terakhir adalah ID.
+
+00:03:44.425 --> 00:03:45.219
+Keempat kunci ini,
+
+00:03:45.219 --> 00:03:48.412
+tampaknya kunci properties memiliki
+informasi yang kita inginkan.
+
+00:03:48.412 --> 00:03:52.586
+Terakhir, kita bisa lihat bahwa data atau
+objek JSON yang dirujuk oleh kunci properties
+
+00:03:52.586 --> 00:03:55.760
+jika kita perluas di sini, berisi
+banyak sekali kunci dan
+
+00:03:55.760 --> 00:03:58.219
+data terkait yang kita perlukan
+untuk aplikasi kita.
+
+00:03:58.219 --> 00:04:01.444
+Di sini ada magnitude,
+place, time, dan
+
+00:04:01.444 --> 00:04:04.678
+URL pengguna untuk menunjuk perincian
+lebih banyak tentang gempa bumi.
+
+00:04:04.678 --> 00:04:08.486
+Dalam kuis berikut, Anda akan semakin
+akrab dengan pasangan nilai kunci yang
+
+00:04:08.486 --> 00:04:11.080
+disediakan dalam respons JSON
+dari API USGS.
+
+00:04:11.080 --> 00:04:14.089
+Kami akan sediakan
+URL query yang
+
+00:04:14.089 --> 00:04:16.394
+ditautkan di catatan di bawah kuis.
+
+00:04:16.394 --> 00:04:19.826
+Pertama, saya ingin Anda salin
+URL yang kami sediakan dan
+
+00:04:19.826 --> 00:04:24.060
+menempelkannya di peramban web, lalu Anda
+akan memperoleh respons JSON, tapi
+
+00:04:24.060 --> 00:04:26.617
+akan ada banyak sekali teks.
+
+00:04:26.617 --> 00:04:29.850
+Silakan lanjut dan masukkan ke JSON
+formatter seperti ditunjukkan tadi.
+
+00:04:31.120 --> 00:04:35.150
+Lalu di kertas kosong, saya ingin Anda gambar
+sketsa tentang seperti apa jadinya
+
+00:04:35.150 --> 00:04:39.030
+aplikasi laporan query kita jika kita harus
+menampilkan seluruh daftar gempa bumi.
+
+00:04:40.150 --> 00:04:43.694
+Untuk gempa pertama di daftar, saya akan
+melihat pada respons JSON untuk
+
+00:04:43.694 --> 00:04:46.174
+mencari gempa bumi pertama
+dalam array features.
+
+00:04:46.174 --> 00:04:49.353
+Di dalam objek JSON itu, saya
+bisa temukan kunci magnitude.
+
+00:04:49.353 --> 00:04:51.803
+Magnitudonya dalam hal ini adalah 7,2.
+
+00:04:51.803 --> 00:04:54.670
+Saya akan lanjut dan menuliskannya
+dalam sketsa kita.
+
+00:04:56.530 --> 00:05:01.552
+Ikuti proses yang sama untuk lokasi
+dan tanggal untuk gempa bumi ini.
+
+00:05:01.552 --> 00:05:04.747
+Anda mungkin perhatikan bahwa time
+itu berisi angka yang sangat panjang,
+
+00:05:04.747 --> 00:05:08.485
+dalam milidetik yang dimulai sejak
+1 Januari 1970.
+
+00:05:08.485 --> 00:05:09.855
+Ini dikenal sebagai Unix time.
+
+00:05:09.855 --> 00:05:13.350
+Jika Anda ingin tahu data aktual
+yang terkait,
+
+00:05:13.350 --> 00:05:16.965
+Anda bisa menemukan tool di internet yang
+mengonversi waktu dalam milidetik menjadi
+
+00:05:16.965 --> 00:05:17.808
+tanggal aktual.
+
+00:05:17.808 --> 00:05:20.531
+Saya akan lanjut dan memberikan
+contoh dalam catatan.
+
+00:05:20.531 --> 00:05:25.768
+Tapi untuk kuis, untuk sketsa, Anda bisa
+biarkan time tetap dalam milidetik.
+
+00:05:25.768 --> 00:05:29.120
+Silakan Anda ulangi langkah-langkah itu
+untuk menyelesaikan menulis informasi
+
+00:05:29.120 --> 00:05:31.390
+tentang gempa bumi lain
+yang ada dalam daftar.
+

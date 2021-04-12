@@ -1,0 +1,418 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.400 --> 00:00:03.440
+Mari melangkah mundur dari aplikasi
+Laporan Gempa sejenak untuk mempelajari
+
+00:00:03.440 --> 00:00:07.300
+struktur aliran kontrol baru yang akan Anda
+butuhkan di tes pemrograman aplikasi berikutnya.
+
+00:00:07.300 --> 00:00:11.410
+Dalam kursus pemula pertama, kita akan
+belajar tentang struktur kontrol pertama,
+
+00:00:11.410 --> 00:00:18.050
+yaitu 'statement if else', dengan menggunakan
+kunci kata khusus Java, if dan else.
+
+00:00:18.050 --> 00:00:20.960
+Anda bisa membuat path eksekusi
+yang berbeda-beda.
+
+00:00:20.960 --> 00:00:24.080
+Daripada mengeksekusi tiap
+baris kode
+
+00:00:24.080 --> 00:00:28.240
+satu demi satu,
+Anda bisa mengeksekusi satu blok kode dan
+
+00:00:28.240 --> 00:00:33.050
+melewatkan blok lain jika kondisi
+tertentu adalah true.
+
+00:00:33.050 --> 00:00:36.800
+Sekarang kita bahas sesuatu yang bernama
+statement switch dalam Java.
+
+00:00:36.800 --> 00:00:39.770
+statement switch menyediakan cara untuk
+mengeksekusi logika unik untuk
+
+00:00:39.770 --> 00:00:43.260
+nilai berlainan yang berbeda
+dengan kondisi non-Boolean.
+
+00:00:43.260 --> 00:00:46.680
+Ini adalah contoh kode di mana kita
+mengeksekusi path kode yang berbeda
+
+00:00:46.680 --> 00:00:51.180
+berdasarkan nilai variabel tunggal
+bernama numberOfStars
+
+00:00:51.180 --> 00:00:53.680
+yang merepresentasikan jumlah bintang
+yang diterima sebuah restoran.
+
+00:00:54.880 --> 00:00:58.860
+Dalam tiap path kode yang direpresentasikan
+dalam statement case ini,
+
+00:00:58.860 --> 00:01:01.710
+kita bisa melaksanakan logika
+apa pun yang kita inginkan.
+
+00:01:01.710 --> 00:01:05.690
+Kebetulan kita hanya mengatur string
+rating ke nilai yang berbeda-beda.
+
+00:01:05.690 --> 00:01:09.650
+statement switch berguna untuk menghindari
+menulis banyak sekali statement if, atau
+
+00:01:09.650 --> 00:01:11.430
+statement if tertempel.
+
+00:01:11.430 --> 00:01:15.050
+Sekarang Anda dapat memperoleh logika
+yang baru saja kita lihat dalam statement
+
+00:01:15.050 --> 00:01:16.740
+switch di atas dengan statement if else.
+
+00:01:16.740 --> 00:01:20.640
+Tapi, pendekatan if else lebih tenang dan
+berisi jauh lebih banyak pengulangan.
+
+00:01:20.640 --> 00:01:25.620
+Misalnya, kita harus terus menulis,
+atau memeriksa setara numberOfStars, dan
+
+00:01:25.620 --> 00:01:27.910
+mengubah-ubah tiap nilai.
+
+00:01:27.910 --> 00:01:31.720
+Contohnya, memeriksa apakah jumlah
+bintang setara dengan satu,
+
+00:01:31.720 --> 00:01:36.080
+memeriksa apakah jumlah bintang setara
+dengan dua, tiga, dan seterusnya.
+
+00:01:37.470 --> 00:01:40.300
+Statement switch terdiri dari
+kata kunci switch,
+
+00:01:40.300 --> 00:01:44.280
+disusul nilai yang ingin kita evaluasi
+dengan tanda kurung.
+
+00:01:44.280 --> 00:01:47.720
+Di antara tanda-tanda kurung kurawal ini,
+kita akan lanjutkan dan
+
+00:01:47.720 --> 00:01:48.889
+mendaftar case kita.
+
+00:01:50.190 --> 00:01:53.700
+Tiap case terdiri dari satu kata kunci case.
+
+00:01:53.700 --> 00:01:58.680
+Perkiraan nilai disusul titik dua, misalnya,
+saat variabel numberOfStars setara
+
+00:01:58.680 --> 00:02:04.420
+dengan 1, kita eksekusi baris kode
+di dalam blok case ini.
+
+00:02:04.420 --> 00:02:08.180
+Ini terjadi saat rangkaian string rating
+setara dengan restoran yang buruk.
+
+00:02:08.180 --> 00:02:10.570
+Kita tetap mengeksekusi kode, satu demi satu,
+
+00:02:10.570 --> 00:02:14.670
+di dalam statement switch, hingga kita
+mencapai statement break.
+
+00:02:14.670 --> 00:02:17.460
+Lalu tiba saatnya mengeksekusi seluruh
+statement switch itu sendiri dan
+
+00:02:17.460 --> 00:02:20.960
+berlanjut mengeksekusi kode yang
+muncul setelahnya.
+
+00:02:20.960 --> 00:02:21.750
+Misalnya, anggap saja
+
+00:02:21.750 --> 00:02:25.230
+bahwa variabel numberOfStars
+tidak setara dengan satu.
+
+00:02:25.230 --> 00:02:28.930
+Lalu kita melewatkan seluruh case pertama
+ini, dan lanjut ke case selanjutnya,
+
+00:02:28.930 --> 00:02:31.690
+di mana kita memeriksa apakah jumlah
+bintang setara dengan 2.
+
+00:02:31.690 --> 00:02:33.210
+Jika begitu,
+
+00:02:33.210 --> 00:02:38.640
+kita eksekusi kode di sini, mengatur string
+rating setara dengan restoran yang bagus.
+
+00:02:38.640 --> 00:02:41.450
+Lalu kita lanjut hingga kita tiba di
+statement "break".
+
+00:02:41.450 --> 00:02:43.990
+Lalu kita keluar dari seluruh
+switch secara keseluruhan.
+
+00:02:43.990 --> 00:02:47.070
+Kita tidak perlu terus memeriksa apakah
+case-case lain cocok atau tidak.
+
+00:02:47.070 --> 00:02:49.440
+Jika jumlah variabel bintang tidak setara
+dengan satu atau
+
+00:02:49.440 --> 00:02:54.050
+dua, maka kita masuk ke case ketiga
+dan Anda tahu apa yang terjadi di sini.
+
+00:02:54.050 --> 00:02:57.330
+Anda bisa memiliki case sebanyak-banyaknya
+selama nilai case
+
+00:02:57.330 --> 00:02:58.700
+masih merupakan bilangan bulat.
+
+00:02:58.700 --> 00:03:02.330
+Karena variabel asli dalam statement
+switch adalah bilangan bulat.
+
+00:03:02.330 --> 00:03:06.160
+Jika statement switch Anda menguji
+nilai variabel string,
+
+00:03:06.160 --> 00:03:08.340
+maka nilai case harus berupa
+string juga.
+
+00:03:08.340 --> 00:03:13.470
+Baris kode di dalam tiap case
+dapat sepanjang yang Anda inginkan.
+
+00:03:13.470 --> 00:03:17.720
+Anda bisa memiliki nol baris kode dalam
+satu case, 20 baris kode, atau lebih.
+
+00:03:17.720 --> 00:03:19.690
+Di sini ada kata khusus default.
+
+00:03:19.690 --> 00:03:23.670
+Jika jumlah variabel bintang tidak setara
+dengan salah satu nilai case,
+
+00:03:23.670 --> 00:03:27.140
+maka switch dapat menyediakan
+case default opsional.
+
+00:03:27.140 --> 00:03:30.280
+Di sinilah kita gunakan kunci kata
+default, disusul titik dua.
+
+00:03:31.330 --> 00:03:34.450
+Jika kita masuk ke case ini,
+maka string rating menjadi,
+
+00:03:34.450 --> 00:03:35.390
+rating tidak tersedia.
+
+00:03:35.390 --> 00:03:38.510
+Lalu kita keluar dari
+statement switch ini.
+
+00:03:38.510 --> 00:03:41.560
+Secara umum,
+bagus jika ada case default,
+
+00:03:41.560 --> 00:03:45.280
+untuk jaga-jaga jika nilai asli punya nilai
+yang tidak Anda sediakan case-nya.
+
+00:03:45.280 --> 00:03:48.930
+Setidaknya Anda akan punya perilaku yang masuk
+akal sebagai cadangan dalam kode Anda.
+
+00:03:48.930 --> 00:03:52.100
+Seperti yang mungkin Anda perhatikan,
+statement switch punya format spesifik dan
+
+00:03:52.100 --> 00:03:55.960
+memakai beberapa kata yang punya makna
+khusus seperti switch dan case.
+
+00:03:55.960 --> 00:03:59.250
+Jika kita periksa daftar kata kunci Java, kita
+dapat verifikasi bahwa kata-kata ini muncul
+
+00:03:59.250 --> 00:04:00.410
+dalam daftar.
+
+00:04:00.410 --> 00:04:03.070
+Misalnya, switch adalah kata kunci Java.
+
+00:04:03.070 --> 00:04:06.820
+Kita juga lihat case,
+break, dan default.
+
+00:04:06.820 --> 00:04:08.940
+Jadi, pastikan Anda menggunakan
+kata-kata ini seperti adanya, sehingga
+
+00:04:08.940 --> 00:04:11.360
+Java dapat menafsirkan
+kode Anda dengan benar.
+
+00:04:11.360 --> 00:04:13.620
+Berikut ini contoh lain
+statement switch,
+
+00:04:13.620 --> 00:04:16.230
+di mana kita memeriksa nilai
+variabel bernama grade.
+
+00:04:16.230 --> 00:04:21.399
+Ini adalah tipe data char yang berarti
+memegang satu karakter seperti a,
+
+00:04:21.399 --> 00:04:22.100
+b, dan c.
+
+00:04:22.100 --> 00:04:26.870
+Seperti Anda lihat, pesan string berubah
+berdasarkan nilai grade.
+
+00:04:26.870 --> 00:04:32.210
+Misalnya, dalam hal a, ada pesan
+string setara superb work.
+
+00:04:32.210 --> 00:04:35.570
+Jika ada grade b, pesan
+setara dengan great job.
+
+00:04:36.750 --> 00:04:39.260
+Satu hal menarik untuk diketahui
+dari contoh ini adalah
+
+00:04:39.260 --> 00:04:41.710
+bahwa Anda bisa masuk
+ke case lain.
+
+00:04:41.710 --> 00:04:45.000
+Artinya, path eksekusi tidak akan
+keluar dari switch yang ditemuinya
+
+00:04:45.000 --> 00:04:47.750
+hanya karena Anda selesai dengan satu case.
+
+00:04:47.750 --> 00:04:51.040
+Anda perlu secara eksplisit menambahkan
+break jika Anda ingin keluar di sana.
+
+00:04:51.040 --> 00:04:54.330
+Perhatikan bahwa tidak ada statement
+break di akhir case D.
+
+00:04:54.330 --> 00:04:58.230
+Jika grade D, kode akan terus lewat ke
+kode kondisional
+
+00:04:58.230 --> 00:05:02.810
+untuk case F di mana pesan string
+diatur ke needs improvement.
+
+00:05:02.810 --> 00:05:05.620
+Sekarang kita tahu aliran eksekusi
+akan berlanjut melintasi
+
+00:05:05.620 --> 00:05:09.170
+tiap baris kode hingga kita berjumpa
+dengan statement break pertama kita.
+
+00:05:09.170 --> 00:05:10.530
+Lalu kita keluar.
+
+00:05:10.530 --> 00:05:14.000
+Sekadar mengulang, dalam case yang
+tidak memiliki statement break
+
+00:05:14.000 --> 00:05:17.080
+seperti case D, kode sebenarnya
+akan tetap masuk.
+
+00:05:17.080 --> 00:05:21.100
+Yang artinya logika ini bersifat
+umum antara case D dan
+
+00:05:21.100 --> 00:05:25.720
+F hingga kita berjumpa statement
+break ini lalu kita keluar.
+
+00:05:25.720 --> 00:05:29.410
+Sekarang mari uji kemampuan Anda untuk
+membaca statement switch di kode berikut.
+
+00:05:29.410 --> 00:05:30.470
+Saat Anda masuk ke restoran,
+
+00:05:30.470 --> 00:05:34.450
+kadang Anda ditanyai kadar pedas yang Anda
+inginkan berdasarkan skala angka.
+
+00:05:34.450 --> 00:05:36.700
+Maka, dengan tingkat kepedasan tertentu,
+
+00:05:36.700 --> 00:05:39.310
+bagaimana Anda ingin memakai statement
+switch untuk menyesuaikan rasa?
+
+00:05:39.310 --> 00:05:43.560
+Saya ingin Anda ambil tabel ini dan untuk
+tiap baris di mana Anda diberi tingkat
+
+00:05:43.560 --> 00:05:47.060
+pedas tertentu, saya ingin Anda terapkan
+nilai itu ke statement switch di sini dan
+
+00:05:47.060 --> 00:05:50.860
+beri tahu saya nilai apa yang akan
+diatur untuk string flavor.
+
+00:05:50.860 --> 00:05:54.950
+Misalnya, jika kita diberi tingkat pedas
+nol, kita akan lihat statement switch
+
+00:05:54.950 --> 00:05:58.200
+di sini, tidak ada case yang akan
+dievaluasi sebagai true.
+
+00:05:58.200 --> 00:06:02.290
+Karena itu, kode kita akan terus lewat
+hingga ke case default,
+
+00:06:02.290 --> 00:06:05.550
+dan karena itu string flavor
+akan diatur ke tidak pedas.
+

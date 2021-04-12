@@ -1,0 +1,377 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.290 --> 00:00:03.890
+Kita harus memodifikasi aplikasi Laporan Gempa
+untuk melakukan parse atas respons JSON dari server
+
+00:00:03.890 --> 00:00:07.220
+USGS dan mengubahnya menjadi
+arraylist gempa bumi.
+
+00:00:07.220 --> 00:00:10.430
+Pertama-tama saya minta Anda menyalin
+kelas QueryUtils yang saya sediakan
+
+00:00:10.430 --> 00:00:11.900
+untuk Anda di tautan ini.
+
+00:00:11.900 --> 00:00:14.480
+Pilih semua teks ini dan salinlah.
+
+00:00:14.480 --> 00:00:16.392
+Lalu di Android Studio, lanjutkan dan
+
+00:00:16.392 --> 00:00:19.580
+buat dokumen kelas Java baru
+bernama QueryUtils.
+
+00:00:19.580 --> 00:00:23.850
+Anda dapat membuang kode standar
+awal lalu menempelkannya di konten ini.
+
+00:00:23.850 --> 00:00:25.825
+Mari tutup jendela ini sehingga
+lebih mudah membaca dokumen ini.
+
+00:00:25.825 --> 00:00:28.775
+Sekarang Anda bisa memindai dokumen ini agar
+semakin akrab, tapi
+
+00:00:28.775 --> 00:00:31.060
+mari kita tinjau sekarang.
+
+00:00:31.060 --> 00:00:33.990
+Di kelas ini, ada konstanta string
+dengan huruf kapital seluruhnya,
+
+00:00:33.990 --> 00:00:36.170
+bernama SAMPLE_JSON_RESPONSE.
+
+00:00:36.170 --> 00:00:38.480
+Karena ini merupakan nilai
+konstanta final yang statik,
+
+00:00:38.480 --> 00:00:40.490
+artinya nilai ini tak akan pernah berubah.
+
+00:00:40.490 --> 00:00:43.090
+Jadi, ingatlah itu saat kita mengatur konstanta
+ini agar setara dengan respons
+
+00:00:43.090 --> 00:00:44.630
+dari query USGS.
+
+00:00:44.630 --> 00:00:47.500
+Karakter khusus seperti tanda
+tanya ditutup dengan baik
+
+00:00:47.500 --> 00:00:49.260
+dengan karakter tanda miring terbalik.
+
+00:00:49.260 --> 00:00:50.870
+Lalu ada private constructor,
+
+00:00:50.870 --> 00:00:53.830
+yang artinya tak ada yang boleh membuat
+instance dari kelas ini.
+
+00:00:53.830 --> 00:00:57.040
+Ini adalah kelas utility, sehingga berisi
+variabel statik dan
+
+00:00:57.040 --> 00:00:59.690
+metode statik, di mana Anda bisa
+memanggil metode ini secara langsung,
+
+00:00:59.690 --> 00:01:02.560
+tanpa harus memiliki
+instance objek dari kelas.
+
+00:01:02.560 --> 00:01:05.730
+Metode paling penting adalah
+metode statik publik ini yang
+
+00:01:05.730 --> 00:01:09.320
+bernama extractEarthquakes yang
+tidak menerima input dan
+
+00:01:09.320 --> 00:01:11.970
+mengembalikan arraylist gempa bumi.
+
+00:01:11.970 --> 00:01:15.910
+Di dalam metode ini, kita membuat daftar
+array kosong gempa bumi dan
+
+00:01:15.910 --> 00:01:18.060
+mengembalikannya di ujung metode.
+
+00:01:18.060 --> 00:01:21.080
+Ada juga blok try catch, yang
+bertugas mencegat
+
+00:01:21.080 --> 00:01:23.740
+exception apa pun yang diberikan
+dari kode parse JSON.
+
+00:01:23.740 --> 00:01:26.140
+Kita akan bicarakan lebih detil
+tentang blok try catch di Java
+
+00:01:26.140 --> 00:01:27.310
+dalam pelajaran berikutnya.
+
+00:01:27.310 --> 00:01:30.520
+Tapi sekarang ada tanda TODO tunggal
+dalam metode ini yang masih kami sisakan
+
+00:01:30.520 --> 00:01:31.350
+untuk Anda selesaikan.
+
+00:01:31.350 --> 00:01:33.130
+Jadi mari kita tulis bersama-sama.
+
+00:01:33.130 --> 00:01:35.505
+Anda dapat menggunakan pseudocode
+yang kami sediakan untuk memandu Anda
+
+00:01:35.505 --> 00:01:36.940
+dalam menulis kode ini.
+
+00:01:36.940 --> 00:01:40.540
+Pertama-tama, kita membuat root objek JSON
+dengan memanggil constructor, dan
+
+00:01:40.540 --> 00:01:42.980
+memberikan sampel string
+respons JSON.
+
+00:01:42.980 --> 00:01:47.230
+Kelas ini akan melakukan parse seluruh string GL JSON
+yang kita dapatkan dari API USGS.
+
+00:01:47.230 --> 00:01:51.240
+Lalu kita simpan objek ini dalam
+variabel bernama baseJsonResponse.
+
+00:01:51.240 --> 00:01:54.930
+Sekarang, kita mencari magnitudo,
+tempat, dan waktu gempa bumi.
+
+00:01:54.930 --> 00:01:58.310
+Untuk menggali info itu,
+pertama-tama kita butuh array features.
+
+00:01:58.310 --> 00:01:59.630
+Di dalam root JSONObject,
+
+00:01:59.630 --> 00:02:02.700
+kita ingin memperoleh nilai
+yang terkait dengan kunci features.
+
+00:02:02.700 --> 00:02:06.320
+Kunci ini harus merujuk pada JSONArray yang
+berisi daftar gempa bumi.
+
+00:02:06.320 --> 00:02:10.419
+Jadi mari kita panggil getJSONArray
+di objek baseJsonResponse,
+
+00:02:10.419 --> 00:02:13.500
+dan memasukkan kunci features sebagai string.
+
+00:02:13.500 --> 00:02:16.060
+Lalu kita bisa menyimpan hasilnya dalam
+variabel array gempa bumi,
+
+00:02:16.060 --> 00:02:18.470
+yang merupakan tipe data JSONArray.
+
+00:02:18.470 --> 00:02:21.650
+Sampai di sini, kita ingin meloop tiap
+gempa bumi dalam array gempa bumi.
+
+00:02:21.650 --> 00:02:23.150
+Jadi, mari mulai dengan loop "for".
+
+00:02:23.150 --> 00:02:24.540
+Jika Anda ingin meninjau loop dan for
+
+00:02:24.540 --> 00:02:27.975
+loop, Anda bisa memeriksa catatan
+di bawah untuk melihat video kursus terakhir.
+
+00:02:27.975 --> 00:02:30.810
+Sekarang kita mulai membuat loop dengan
+menginisialisasi variabel penghitung
+
+00:02:30.810 --> 00:02:32.230
+i menjadi 0.
+
+00:02:32.230 --> 00:02:34.960
+Sebelum tiap pengulangan loop,
+kita menguji bahwa kondisi
+
+00:02:34.960 --> 00:02:38.120
+i kurang dari panjang
+earthqquakeArray adalah masih benar.
+
+00:02:38.120 --> 00:02:41.810
+Jika benar, kita dapat menjalankan semua
+baris kode di dalam loop.
+
+00:02:41.810 --> 00:02:45.010
+Di akhir pengulangan, kita
+tingkatkan nilai i sebesar 1,
+
+00:02:45.010 --> 00:02:47.190
+yang ditunjukkan di sini dengan sintaksis i++.
+
+00:02:47.190 --> 00:02:49.620
+Lalu kita bisa lanjut dan
+membuat loop lagi.
+
+00:02:49.620 --> 00:02:52.790
+Lalu kita tarik keluar objek JSON
+dengan posisi yang telah ditentukan
+
+00:02:52.790 --> 00:02:53.870
+di earthquakeArray.
+
+00:02:53.870 --> 00:02:58.260
+Kita mulai dengan posisi 0, yang merupakan
+nilai awal variabel i penghitung.
+
+00:02:58.260 --> 00:03:00.290
+Setelah kita memiliki objek
+JSON gempa bumi ini,
+
+00:03:00.290 --> 00:03:04.230
+kita dapat mengekstrak objek JSON
+yang terkait dengan kunci properties.
+
+00:03:04.230 --> 00:03:07.340
+Ingatlah bahwa ini akan mendaftar banyak
+atribut gempa bumi.
+
+00:03:07.340 --> 00:03:08.280
+Seperti yang Anda lihat,
+
+00:03:08.280 --> 00:03:11.540
+objek JSON ini tertanam sangat
+kuat di dalam keseluruhan respons.
+
+00:03:11.540 --> 00:03:14.880
+Tapi akhirnya, kita tiba di tahapan di mana
+kita dapat mengakses tiap nilai dari
+
+00:03:14.880 --> 00:03:18.190
+properties JSONObject dengan
+merujuk pada kunci mag untuk
+
+00:03:18.190 --> 00:03:21.590
+magnitudo, place untuk
+lokasi, dan time untuk
+
+00:03:21.590 --> 00:03:24.280
+waktu dalam milidetik di mana
+gempa bumi terjadi.
+
+00:03:24.280 --> 00:03:26.360
+Sekarang, kita dapat mengekstrak semua
+nilai ini sebagai string,
+
+00:03:26.360 --> 00:03:28.830
+karena kita hanya menampilkannya
+langsung ke layar, dan
+
+00:03:28.830 --> 00:03:31.900
+tidak melakukan kalkulasi tambahan
+atau memformatnya.
+
+00:03:31.900 --> 00:03:35.550
+Lalu kita dapat membuat objek gempa bumi
+baru dari ketiga string ini.
+
+00:03:35.550 --> 00:03:39.100
+Terakhir, kita harus menambahkan gempa bumi
+baru ke dalam daftar gempa bumi.
+
+00:03:39.100 --> 00:03:42.130
+Setelah loop selesai menjalankan
+tiap gempa bumi dalam
+
+00:03:42.130 --> 00:03:46.095
+array features ini, lalu kita akan bangun
+seluruh arraylist gempa bumi.
+
+00:03:46.095 --> 00:03:49.165
+Lalu kita dapat mengembalikan daftar ini sebagai
+nilai pengembalian dari metode ini.
+
+00:03:49.165 --> 00:03:49.685
+Kerja bagus.
+
+00:03:49.685 --> 00:03:52.895
+Itu tadi masalah yang sangat menantang
+dengan banyak tugas sintaksis rumit, jadi
+
+00:03:52.895 --> 00:03:54.495
+Anda berhak bangga karena berhasil
+menyelesaikannya.
+
+00:03:54.495 --> 00:03:57.655
+Saya akan kembali dan menambahkan
+beberapa komentar untuk kode saya.
+
+00:03:57.655 --> 00:03:59.205
+Baik, kelihatan bagus.
+
+00:03:59.205 --> 00:04:01.395
+Sekarang mari kita uji kode ini
+dengan memanggil metode ini.
+
+00:04:01.395 --> 00:04:04.225
+Untuk langkah nomor tiga dalam kuis,
+saya meminta Anda memodifikasi activity
+
+00:04:04.225 --> 00:04:08.060
+gempa bumi untuk memanggil metode
+queryUtils extractEarthquakes.
+
+00:04:08.060 --> 00:04:10.988
+Jadi dalam dokumen ini, kita hapus
+arraylist gempa bumi palsu
+
+00:04:10.988 --> 00:04:14.143
+yang kita bangun sebelumnya, dan
+sekarang kita panggil metode QueryUtils.
+
+00:04:14.143 --> 00:04:16.846
+Tidak ada kesalahan dalam kode,
+jadi mari jalankan dalam perangkat dan
+
+00:04:16.846 --> 00:04:18.279
+lihat bagaimana hasilnya.
+
+00:04:18.279 --> 00:04:20.930
+Keren, aplikasi kita sekarang menunjukkan
+daftar gempa bumi.
+
+00:04:20.930 --> 00:04:22.900
+Ini seharusnya sudah mirip dengan
+sketsa yang Anda gambar sebelumnya
+
+00:04:22.900 --> 00:04:25.430
+saat Anda melakukan parse atas respons JSON
+secara manual dalam kepala Anda.
+
+00:04:25.430 --> 00:04:27.380
+Jika Anda ingin merujuk kode
+apa pun yang telah kami tunjukan,
+
+00:04:27.380 --> 00:04:28.800
+silakan periksa catatan di bawah
+untuk kode diff.
+

@@ -1,0 +1,445 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Circle Background for Magnitude</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>JSON Parsing</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Earthquake at the Coffee Shop.html">01. Earthquake at the Coffee Shop</a>
+    </li>
+    <li class="">
+      <a href="02. Where to Find Earthquake Data .html">02. Where to Find Earthquake Data? </a>
+    </li>
+    <li class="">
+      <a href="03. Receiving Mocks from Our Designer.html">03. Receiving Mocks from Our Designer</a>
+    </li>
+    <li class="">
+      <a href="04. Course Map.html">04. Course Map</a>
+    </li>
+    <li class="">
+      <a href="05. Explore USGS Website As A User.html">05. Explore USGS Website As A User</a>
+    </li>
+    <li class="">
+      <a href="06. Drive-Through Data.html">06. Drive-Through Data</a>
+    </li>
+    <li class="">
+      <a href="07. Explore USGS Website As A Developer.html">07. Explore USGS Website As A Developer</a>
+    </li>
+    <li class="">
+      <a href="08. Import Existing Project.html">08. Import Existing Project</a>
+    </li>
+    <li class="">
+      <a href="09. Checking the build.gradle file.html">09. Checking the build.gradle file</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Code on GitHub.html">10. Solution Code on GitHub</a>
+    </li>
+    <li class="">
+      <a href="11. Show more info on each earthquake.html">11. Show more info on each earthquake</a>
+    </li>
+    <li class="">
+      <a href="12. Overview of JSON.html">12. Overview of JSON</a>
+    </li>
+    <li class="">
+      <a href="13. JSON Components.html">13. JSON Components</a>
+    </li>
+    <li class="">
+      <a href="14. Traverse Nodes in JSON Object Tree.html">14. Traverse Nodes in JSON Object Tree</a>
+    </li>
+    <li class="">
+      <a href="15. Parsing JSON in Android.html">15. Parsing JSON in Android</a>
+    </li>
+    <li class="">
+      <a href="16. Look at Earthquake Query Result.html">16. Look at Earthquake Query Result</a>
+    </li>
+    <li class="">
+      <a href="17. Traversing Earthquake JSON Object Tree.html">17. Traversing Earthquake JSON Object Tree</a>
+    </li>
+    <li class="">
+      <a href="18. Parse JSON response in Quake Report app.html">18. Parse JSON response in Quake Report app</a>
+    </li>
+    <li class="">
+      <a href="19. Display date and time of earthquake.html">19. Display date and time of earthquake</a>
+    </li>
+    <li class="">
+      <a href="20. Quiz Display date and time of earthquake.html">20. Quiz: Display date and time of earthquake</a>
+    </li>
+    <li class="">
+      <a href="21. Split location into 2 TextViews.html">21. Split location into 2 TextViews</a>
+    </li>
+    <li class="">
+      <a href="22. Magnitude as a Decimal Value.html">22. Magnitude as a Decimal Value</a>
+    </li>
+    <li class="">
+      <a href="23. Switch Statement.html">23. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="24. Circle Background for Magnitude.html">24. Circle Background for Magnitude</a>
+    </li>
+    <li class="">
+      <a href="25. Visual Polish.html">25. Visual Polish</a>
+    </li>
+    <li class="">
+      <a href="26. Add Earthquake Intent.html">26. Add Earthquake Intent</a>
+    </li>
+    <li class="">
+      <a href="27. Reflection.html">27. Reflection</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">24. Circle Background for Magnitude</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Circle Background for Magnitude</p></h3>
+  <div>
+  <p>Now you’ll have a chance to apply what you learned about switch statements to the Quake Report app! Let me provide some context first and walk you through setting your app for the next coding task.</p>
+<p>In the final designs, you’ll notice that there’s a colored circle behind the magnitude value in each list item.</p>
+<p><img src="media/unnamed-160981-0.gif" width=200></p>
+<p>Our designer provided us this guide on what color the circle should be. The colors range from blue (low magnitude value) to red (high magnitude value). Anything above a magnitude 10 earthquake uses the darkest red color (#C03823). Anything between a magnitude 9 and 10 earthquake uses a slightly lighter red color (#D93218), anything between a magnitude 8 and 9 earthquake uses an even lighter red color (#E13A20), and so on. Each level has a different color. Anything below a 2.0 earthquake uses a blue color (#4A7BA7). The specific hex values are provided below.</p>
+<p><img src="media/unnamed-160981-1.gif" width=50/></p>
+<h3 id="setup-your-app-for-the-quiz">Setup Your App for the Quiz</h3>
+<p>Add these colors to your res/values/colors.xml file. You will need to refer to these color resource IDs later in the EarthquakeAdapter when setting up the list item layouts.</p>
+<pre><code> &lt;!-- Color for an earthquake with magnitude 0 and 2 --&gt;
+ &lt;color name="magnitude1"&gt;#4A7BA7&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 2 and 3 --&gt;
+ &lt;color name="magnitude2"&gt;#04B4B3&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 3 and 4 --&gt;
+ &lt;color name="magnitude3"&gt;#10CAC9&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 4 and 5 --&gt;
+ &lt;color name="magnitude4"&gt;#F5A623&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 5 and 6 --&gt;
+ &lt;color name="magnitude5"&gt;#FF7D50&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 6 and 7 --&gt;
+ &lt;color name="magnitude6"&gt;#FC6644&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 7 and 8 --&gt;
+ &lt;color name="magnitude7"&gt;#E75F40&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 8 and 9 --&gt;
+ &lt;color name="magnitude8"&gt;#E13A20&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude between 9 and 10 --&gt;
+ &lt;color name="magnitude9"&gt;#D93218&lt;/color&gt;
+
+ &lt;!-- Magnitude circle color for an earthquake with magnitude over 10 --&gt;
+ &lt;color name="magnitude10plus"&gt;#C03823&lt;/color&gt;</code></pre>
+<p>Define a new drawable for the colored circle. Within the project directory pane of Android Studio, right click on the res/drawable folder to add a new drawable resource XML file. Name the file “magnitude_circle”. </p>
+<p><img src="media/unnamed-160981-2.gif"></p>
+<p><img src="media/unnamed-160981-3.gif"></p>
+<p>Afterwards, in the project directory pane, you should see the magnitude_circle.xml file appear.</p>
+<p><img src="media/unnamed-160981-4.gif"></p>
+<p>Replace the contents of the res/drawable/magnitude_circle.xml file with the below XML. </p>
+<p>In magnitude_circle.xml:</p>
+<pre><code> &lt;?xml version="1.0" encoding="utf-8"?&gt;
+ &lt;!-- Background circle for the magnitude value --&gt;
+ &lt;shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"&gt;
+    &lt;solid android:color="@color/magnitude1" /&gt;
+    &lt;size
+        android:width="36dp"
+        android:height="36dp" /&gt;
+    &lt;corners android:radius="18dp" /&gt;
+ &lt;/shape&gt;</code></pre>
+<p>By defining the circle shape in XML, we create a single flexible asset that will scale across devices instead of including multiple image assets from our designer. We can also manipulate the color from Java code, further reducing the number of required assets. Fewer image files in our project means the size of our app will be smaller, which is better for the end user! </p>
+<p>Diving deep into the topic of shape drawables is out of scope for this course, but you can see this <a href="https://developer.android.com/guide/topics/resources/drawable-resource.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Shape" rel="noopener noreferrer" target="_blank">documentation link</a> or this <a href="https://guides.codepath.com/android/Drawables" rel="noopener noreferrer" target="_blank">Codepath tutorial</a> for more information.</p>
+<p>Now modify the list item layout so that the background attribute of the magnitude TextView refers to the new drawable resource we just defined (android:background="@drawable/magnitude_circle"). There are also other tweaks to the TextView appearance, such as font size and color, so that it matches the design mocks.</p>
+<p>In earthquake_list_item.xml:</p>
+<pre><code> …
+
+ &lt;TextView
+    android:id="@+id/magnitude"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/magnitude_circle"
+    android:fontFamily="sans-serif-medium"
+    android:gravity="center"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+    tools:text="8.9" /&gt;
+
+ … </code></pre>
+<p>Optionally, you can add 16dp of left margin on the location offset TextView, so that there is some whitespace between the location TextView and the magnitude TextView.</p>
+<p>In earthquake_list_item.xml:</p>
+<pre><code> …
+
+ &lt;TextView
+     android:id="@+id/location_offset"
+     android:layout_marginLeft="16dp"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_weight="1"
+     tools:text="30km S of" /&gt;
+
+ … </code></pre>
+<p>Finally, you need to modify the EarthquakeAdapter so that the correct color gets set on the background circle for each list item. This code snippet assumes that magnitudeView is a reference to the R.id.magnitude TextView in the list item layout. You will also need to import the GradientDrawable class.</p>
+<p>In EarthquakeAdapter.java:</p>
+<pre><code> import android.graphics.drawable.GradientDrawable;</code></pre>
+<p>In EarthquakeAdapter getView():</p>
+<pre><code> …
+
+ // Set the proper background color on the magnitude circle.
+ // Fetch the background from the TextView, which is a GradientDrawable.
+ GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
+
+ // Get the appropriate background color based on the current earthquake magnitude
+ int magnitudeColor = getMagnitudeColor(currentEarthquake.getMagnitude());
+
+ // Set the color on the magnitude circle
+ magnitudeCircle.setColor(magnitudeColor);
+
+ …</code></pre>
+<p>If you add the above code to your app, you’ll see an error in Android Studio mentioning that it doesn’t recognize the method getMagnitudeColor() because it will be your job to define this method! </p>
+<h3 id="your-turn">Your Turn</h3>
+<p>Finish implementing this design change by defining a private helper method called getMagnitudeColor(double magnitude) that returns the correct color value based on the current earthquake’s magnitude value. Use this opportunity to practice writing a switch statement in the helper method.</p>
+<p><img src="media/unnamed-160981-5.gif" width=200/></p>
+<p>Note on color values: In Java code, you can refer to the colors that you defined in the colors.xml file using the color resource ID such as R.color.magnitude1, R.color.magnitude2. You still need to convert the color resource ID into a color integer value though. Example:</p>
+<pre><code> int magnitude1Color = ContextCompat.getColor(getContext(), R.color.magnitude1);</code></pre>
+<p>Note on testing: Once you think your code is working, you can test it by modifying the sample JSON response in the QueryUtils class. Change the QueryUtils SAMPLE_JSON_RESPONSE constant value so that the earthquakes temporarily have different magnitude values from 0 to over 10. Use the example SAMPLE_JSON_RESPONSE <a href="https://gist.github.com/anonymous/e8992fb9c5b5e8cc717c74f84139d4d6" target="_blank">code snippet</a>. When you run the app on your device, you should see the full range of magnitude color values. </p>
+<p><img src="media/unnamed-160981-6.gif" width=200 /></p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Circle Background for Magnitude</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Finish implementing this design change by defining a private helper method called getMagnitudeColor(double magnitude) that returns the correct color value based on the current earthquake’s magnitude.</p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1468989347339" name="160982" id="a1468989347339">
+      <label for="a1468989347339"><p>Follow the steps provided in the quiz instructions (defining new colors, modifying the list item layout, adding a shape drawable).</p></label>
+    </div>
+    <div>
+      <input type="checkbox" value="a1468989348132" name="160982" id="a1468989348132">
+      <label for="a1468989348132"><p>In the EarthquakeAdapter, define this new helper method. Use a switch statement to find the appropriate color resource based on the magnitude value.</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>Follow the steps provided in the quiz instructions (defining new colors, modifying the list item layout, adding a shape drawable).</li>
+      <li>In the EarthquakeAdapter, define this new helper method. Use a switch statement to find the appropriate color resource based on the magnitude value.</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Circle Background for Magnitude - Solution</p></h3>
+  <div>
+  <p>In this quiz, we asked you to define the getMagnitudeColor() helper method in the EarthquakeAdapter class. We also encouraged you to use a switch statement. This is one way you could have implemented the method. Remember to add break statements in between each case, if you intend to exit at the end of each case!</p>
+<p>In EarthquakeAdapter.java:</p>
+<pre><code> …
+
+ import android.support.v4.content.ContextCompat;
+
+ … 
+
+ private int getMagnitudeColor(double magnitude) {
+    int magnitudeColorResourceId;
+    int magnitudeFloor = (int) Math.floor(magnitude);
+    switch (magnitudeFloor) {
+        case 0:
+        case 1:
+            magnitudeColorResourceId = R.color.magnitude1;
+            break;
+        case 2:
+            magnitudeColorResourceId = R.color.magnitude2;
+            break;
+        case 3:
+            magnitudeColorResourceId = R.color.magnitude3;
+            break;
+        case 4:
+            magnitudeColorResourceId = R.color.magnitude4;
+            break;
+        case 5:
+            magnitudeColorResourceId = R.color.magnitude5;
+            break;
+        case 6:
+            magnitudeColorResourceId = R.color.magnitude6;
+            break;
+        case 7:
+            magnitudeColorResourceId = R.color.magnitude7;
+            break;
+        case 8:
+            magnitudeColorResourceId = R.color.magnitude8;
+            break;
+        case 9:
+            magnitudeColorResourceId = R.color.magnitude9;
+            break;
+        default:
+            magnitudeColorResourceId = R.color.magnitude10plus;
+            break;
+    }
+    return ContextCompat.getColor(getContext(), magnitudeColorResourceId);
+ }</code></pre>
+<p>We provided you with the method signature, so that the method would take a double magnitude value as input and return a color integer value. According to the documentation, the switch statement cannot accept a double value, so we should convert our decimal magnitude value into an integer. Also, the precision of the decimal doesn’t matter at this point because we just need to know if the magnitude falls into 1 of 10 possible buckets.</p>
+<p>We can use the <a href="https://developer.android.com/reference/java/lang/Math.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">Math class</a> to do some handy mathematical calculations. In this case, we can take the <a href="https://developer.android.com/reference/java/lang/Math.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#floor(double)" target="_blank">“floor”</a> of the decimal magnitude value. This means finding the closest integer less than the decimal value. The floor of the value 1.2 would be the integer 1. Informally, for a positive decimal number, you can think of it as truncating the part of the number after the decimal point.  </p>
+<pre><code> int magnitudeFloor = (int) Math.floor(magnitude);</code></pre>
+<p>Once we have the magnitude in an integer form (stored in the magnitudeFloor variable), we can write a switch statement that performs different logic based on the magnitudeFloor value.</p>
+<pre><code> switch (magnitudeFloor) {
+   ...
+ }</code></pre>
+<p>Within each case, we set the value of the magnitudeColorResourceId variable to be one of the color resources that we defined the colors.xml file. For case 0 and 1, we fall through to the same logic, which is to use the R.color.magnitude1 color. This was a design decision to use the same color for earthquakes with magnitude less than 2. We also have a default case where any earthquake with magnitude higher than 10 will use the R.color.magnitude10plus color resource.</p>
+<p>Once we find the right color resource ID, we still have one more step to convert it into an actual color value. Remember that color resource IDs just point to the resource we defined, but not the value of the color. For example, R.layout.earthquake_list_item is a reference to tell us where the layout is located. It’s just a number, not the full XML layout. </p>
+<p>You can call ContextCompat <a href="https://developer.android.com/reference/android/support/v4/content/ContextCompat.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#getColor(android.content.Context,%20int)" target="_blank">getColor()</a> to convert the color resource ID into an actual integer color value, and return the result as the return value of the getMagnitudeColor() helper method.</p>
+<pre><code> ContextCompat.getColor(getContext(), magnitudeColorResourceId);</code></pre>
+<p>Earlier in the EarthquakeAdapter getView() code that we provided you, we set the color value onto the GraidentDrawable which is set on the background of the magnitude TextView. And there you go! The proper color is automatically set on the magnitude circle in the UI!</p>
+<p>The full code difference is located <a href="https://github.com/udacity/ud843-QuakeReport/commit/6b40e2d799a59db9e45f7ce80d0ff9f4777e8cc8" target=_"blank">here</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="25. Visual Polish.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('24. Circle Background for Magnitude')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

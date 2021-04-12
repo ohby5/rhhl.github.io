@@ -1,0 +1,1247 @@
+{
+  "data": {
+    "lesson": {
+      "id": 369168,
+      "key": "e2e32ec7-13d8-4d09-aa4c-fa7c740a1dbe",
+      "title": "Preferences",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 369169,
+          "key": "a84c9b86-cab5-4dd7-8d4f-b82be512ea4b",
+          "title": "Intro to Preferences",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a84c9b86-cab5-4dd7-8d4f-b82be512ea4b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369170,
+              "key": "5fcb6e37-a98d-4ab0-9735-b7d34c057fe1",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Intro to Preferences\n\nIn this lesson we will add code to the app we created in the previous lesson that will allow the user to select what size earthquakes they want to see, and to select whether they'd like to see earthquakes ordered by magnitude, or time. \n\nTo do this we'll add a new Settings Activity and use the user's stored preferences to change the URL used to query for earthquakes.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369172,
+              "key": "c1d1b1b1-407b-42ad-9941-85cc055110e9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598ceeda_screen-shot-2017-08-10-at-4.40.00-pm/screen-shot-2017-08-10-at-4.40.00-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c1d1b1b1-407b-42ad-9941-85cc055110e9",
+              "caption": "Settings Activity you will add in the Earthquake App",
+              "alt": null,
+              "width": 344,
+              "height": 604,
+              "instructor_notes": null
+            },
+            {
+              "id": 369174,
+              "key": "5157e4c5-21c6-4973-882e-c5f5e22795bf",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "One of the foundations of Android is that it should \"Make me amazing\". That often means that each user needs a slightly different experience, tailored to them and their particular preferences. That means we need a way for the user to adjust settings in our apps, and remember what settings they've chosen. Say, for instance, you ask the user for the minimum magnitude of earthquake they're interested in, and they say \"5\". \n\nBecause the user has already specified a preference for which magnitude of earthquakes they are interested in receiving information about (greater than 5), every time we fetch earthquakes for the user, we need to get them only earthquakes with a magnitude greater than 5, even after they've closed and reopened the app, and even after they've turned off their phone, and turned it back on again!\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369175,
+              "key": "8eed1ddf-c22a-402f-8aee-98165e03c9b2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cef22_screen-shot-2017-08-10-at-4.41.07-pm/screen-shot-2017-08-10-at-4.41.07-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8eed1ddf-c22a-402f-8aee-98165e03c9b2",
+              "caption": "Prompt the user for a Minimum Magnitude",
+              "alt": "",
+              "width": 362,
+              "height": 622,
+              "instructor_notes": null
+            },
+            {
+              "id": 369176,
+              "key": "681d0da3-7876-41fd-9828-b8e91b95fc17",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "So how do we do this?",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369177,
+          "key": "06a8897e-7166-4dd5-acb2-2e2c9d0199c0",
+          "title": "Intro to Preferences (Continued)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "06a8897e-7166-4dd5-acb2-2e2c9d0199c0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369182,
+              "key": "50bf6f82-f045-4903-b51a-c60d55505719",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Data Persistence\n\nStoring data on a user's device (which is referred to more generally as data persistence), is a huge topic that will the topic of the entire next course.\n\nFor now though, the designers of Android anticipated that needing to store small amounts of data to keep track of user preferences was likely to be a very common need, so there's an Android system component that can handle this for us. \n\n---\n\n##### Data Persistence - Storing data on a user’s device\n\n##### An example of this is storing small amounts of data like user preferences \n\n---\nA Preference is really just a string key associated with a primitive type, String, or set of Strings. Android will hold onto that data for you even when the app is closed, and even if the phone is turned off. \n\n----\n\n##### A Preference is a String Key associated with a primitive type, String or set of Strings\n---\n\n## SharedPreferences\n\nAndroid provides a [SharedPreferences class](https://developer.android.com/reference/android/content/SharedPreferences.html) to make getting and setting preferences super straight forward. SharedPreferences handles all the details of reading and writing preference data to the persistent storage on the device.\n\nThe other piece to making preferences work is a way for the user to edit the preferences your app cares about. For a preference that's a number, we can let users pick from a selector. \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369186,
+              "key": "b334080c-8a99-47f8-9151-5aff9437f93d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf2c0_screen-shot-2017-08-10-at-4.56.29-pm/screen-shot-2017-08-10-at-4.56.29-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b334080c-8a99-47f8-9151-5aff9437f93d",
+              "caption": "For a preference that's a number, we can let users pick a number from a selector",
+              "alt": null,
+              "width": 706,
+              "height": 578,
+              "instructor_notes": null
+            },
+            {
+              "id": 369187,
+              "key": "d2ed57de-e0fa-402e-9565-23deacd94ac9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For a preference that should be selected from a list, we can present a list of buttons, and let the user pick one. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369188,
+              "key": "ea1f7d01-eb26-4edf-925d-784612a8d21b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf2f5_screen-shot-2017-08-10-at-4.57.25-pm/screen-shot-2017-08-10-at-4.57.25-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ea1f7d01-eb26-4edf-925d-784612a8d21b",
+              "caption": "",
+              "alt": null,
+              "width": 404,
+              "height": 706,
+              "instructor_notes": null
+            },
+            {
+              "id": 369190,
+              "key": "58266ebf-32d4-4aa1-a965-2f1546812539",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## PreferenceFragment\n\nWe could definitely make such an Activity ourselves, but Android provides a class called [PreferenceFragment](https://developer.android.com/reference/android/preference/PreferenceFragment.html) that can supply widgets for editing all sort of preferences.\n\nIn case it snuck past you, that term Fragment is new. Let's talk about what that means.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369191,
+          "key": "55236d74-efa6-4f0c-a60d-ff3fe543cd6b",
+          "title": "Fragments",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "55236d74-efa6-4f0c-a60d-ff3fe543cd6b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369193,
+              "key": "c6d571e7-aa8a-4bc0-9d9c-d41da598553d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Fragments\n\nThere are many possible Android activities that could benefit from embedding a collection of preference editing widgets, so that's a thing that the Android system would love to make as easy as possible.\n\nYou could imagine a world where this is done with a hypothetical PreferencesView, which you could drop into your activity's layout. However, we need a way to make PreferencesView a little smarter than just a View, without making it into a full-blown activity. \n\nIt only needs to be a little piece of an activity, like, a *fragment* of an activity. In our situation, we’ll use a PreferenceFragment that will live inside the SettingsActivity. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369194,
+              "key": "baf5c0ef-7ef5-413f-be02-d75280595f2e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf46b_screen-shot-2017-08-10-at-5.02.40-pm/screen-shot-2017-08-10-at-5.02.40-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/baf5c0ef-7ef5-413f-be02-d75280595f2e",
+              "caption": "Use a PreferenceFragment that will live inside the SettingsActivity",
+              "alt": null,
+              "width": 734,
+              "height": 386,
+              "instructor_notes": null
+            },
+            {
+              "id": 369201,
+              "key": "368c2357-ffec-4bef-868d-d3b35402208f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We discussed Fragments earlier in the Multi-Activity course when we used them to refactor our Miwok App to use Tabs.\n\n[Link to Fragments lesson](https://classroom.udacity.com/nanodegrees/nd803/parts/97b78ded-790c-4cda-a6b1-f66d920f011e/modules/cfd37960-d702-4cd1-b444-00e62aa185c3/lessons/afb9a1c9-fbd4-40c8-b995-da603be45d72/concepts/91b2d2b1-8074-4305-9090-cd997cb09f26)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369202,
+              "key": "aef4c36c-3bcf-4876-a66b-d0dd8b1b63b9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf6a8_screen-shot-2017-08-10-at-5.12.41-pm/screen-shot-2017-08-10-at-5.12.41-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/aef4c36c-3bcf-4876-a66b-d0dd8b1b63b9",
+              "caption": "In the Multi-Activity course, we used Fragments to refactor our Miwok App to use Tabs.",
+              "alt": "",
+              "width": 698,
+              "height": 516,
+              "instructor_notes": null
+            },
+            {
+              "id": 369203,
+              "key": "7e84cafb-9c6d-467d-a443-e3cd9335246b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "An Android Fragment behaves a lot like a mini-activity that lives inside a proper activity. They were introduced as a way to make more flexible layouts for tablets and other android devices with large screens.\n\nFragments can be used inside multiple activities, and a single activity can make use of multiple fragments. A very common pattern is for a tablet UI to use two fragments side by side.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369204,
+              "key": "eba2520a-b2b8-4eb5-b5d9-e85f042c80ba",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf6ee_screen-shot-2017-08-10-at-5.14.28-pm/screen-shot-2017-08-10-at-5.14.28-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eba2520a-b2b8-4eb5-b5d9-e85f042c80ba",
+              "caption": "Both tablets and phones make sure of Fragments",
+              "alt": "",
+              "width": 720,
+              "height": 420,
+              "instructor_notes": null
+            },
+            {
+              "id": 369206,
+              "key": "e8f0fcb8-5751-46c3-b92f-c1febb1fea13",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You don't need to know much more about Fragments for now, and we're not going do any complex shenanigans with multiple fragments. \n\n**For now, you can think of Activities as a picture frame container and Fragments as interchangeable picture that goes inside and can be taken out and replaced.**\n\nAll we're going to do is use a PreferenceFragment inside our SettingsActivity to present widgets for editing preferences.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369207,
+              "key": "a1fe8657-17cf-43c7-8506-06192e0dc56b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf78e_screen-shot-2017-08-10-at-5.17.06-pm/screen-shot-2017-08-10-at-5.17.06-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a1fe8657-17cf-43c7-8506-06192e0dc56b",
+              "caption": "Diagram of PreferenceFragment that will be used in the SettingsActivity",
+              "alt": null,
+              "width": 378,
+              "height": 602,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 369208,
+          "key": "854058ee-d7ba-4c5e-8b8d-5304d5153889",
+          "title": " Making a Preference Screen",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "854058ee-d7ba-4c5e-8b8d-5304d5153889",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369209,
+              "key": "4752f2bb-5b04-432d-bec6-0c025f80ebc8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Making a Preference Screen\n\nTo allow our users to set their user preferences, we’ll create a Settings screen. We’ll add a button to the top right corner of  EarthquakeActivity that will launch the Settings Activity. This button that lives in the app bar is generally referred to as a Menu or Options Menu button. \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369298,
+              "key": "5e5ee135-5b80-4922-bf6d-a29c673e6d03",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d3e8f_screen-shot-2017-08-10-at-5.27.44-pm/screen-shot-2017-08-10-at-5.27.44-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5e5ee135-5b80-4922-bf6d-a29c673e6d03",
+              "caption": "By the end of this section, clicking the Menu button will open an empty SettingsActivity",
+              "alt": null,
+              "width": 904,
+              "height": 642,
+              "instructor_notes": null
+            },
+            {
+              "id": 369211,
+              "key": "e582d189-a62a-4d24-b090-5404f547bf4c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We will be building this UI out in parts. In this section, we'll build a blank SettingsActivity and then put the Menu in the app bar of the EarthquakeActivity . We will also specify that the menu should open the SettingsActivity\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369213,
+              "key": "79af925e-7a2e-494e-98a6-6eed61849163",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Lesson Structure\nWe will be building out the preference in stages throughout this lesson. Since this is a Text-based lesson, each section will start with a link to the state of the code at the beginning of the section and a link of diff-ed code at the end of the section.\n\nIt’s highly recommended that you have the diff-ed code open as you work through the section since each section contains changes within several files.\n\n### QuakeReport Code\n\nHere’s the [Current Code for QuakeReport](https://github.com/udacity/ud843-QuakeReport/tree/66f5903bf20a3fbb072c3692979403e7f4009bda) at the end of the Lesson 3, the previous lesson.\n\nRemember you can always see the incremental code changes we make in the [GitHub Repo Code Commits](https://github.com/udacity/ud843-QuakeReport/commits/lesson-four). \n\n\n## SettingsActivity\nLet’s start with building our blank SettingsActivity: \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369214,
+              "key": "a06f70eb-7d62-402e-9b77-f8ff7c3a6698",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf888_screen-shot-2017-08-10-at-5.21.14-pm/screen-shot-2017-08-10-at-5.21.14-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a06f70eb-7d62-402e-9b77-f8ff7c3a6698",
+              "caption": "Blank Settings Activity",
+              "alt": "",
+              "width": 380,
+              "height": 668,
+              "instructor_notes": null
+            },
+            {
+              "id": 369215,
+              "key": "71538435-eadf-403e-a36d-c421b833a5fe",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 1: Add Strings to `strings.xml`\nFirst order of business, let's add some strings to `strings.xml` that we’ll be using in for this activity.\n\n[Full strings.xml here](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/values/strings.xml)\n\n```xml\n    <string name=\"settings_menu_item\">Settings</string>\n    <string name=\"settings_title\">Earthquake Settings</string>\n```\n\n### Step 2: Create the `SettingsActivity`\n\nWe’ll need to create the new activity and call it `SettingsActivity.java`. Remember that in the Fragments concept earlier, we discussed that we will use a PreferenceFragment inside our SettingsActivity like this: \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369216,
+              "key": "062e8180-17bd-4694-ba13-0d4372a923e5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf8a9_screen-shot-2017-08-10-at-5.21.48-pm/screen-shot-2017-08-10-at-5.21.48-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/062e8180-17bd-4694-ba13-0d4372a923e5",
+              "caption": "Diagram of PreferenceFragment that will be used in the SettingsActivity",
+              "alt": null,
+              "width": 372,
+              "height": 596,
+              "instructor_notes": null
+            },
+            {
+              "id": 369217,
+              "key": "647a546e-3763-480f-9c3c-552217af305f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Given that, here’s the starter code you’ll need in the SettingsActivity. Inside the SettingsActivity file, we will create a EarthquakePreferenceFragment that extends PreferenceFragment, and we will keep it blank for now. \n\n[Full SettingsActivity.java here](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/java/com/example/android/quakereport/SettingsActivity.java)\n\n```java\n\n    package com.example.android.quakereport;\n\n    import android.os.Bundle;\n    import android.preference.PreferenceFragment;\n    import android.support.v7.app.AppCompatActivity;\n\n    public class SettingsActivity extends AppCompatActivity {\n\n        @Override\n        protected void onCreate(Bundle savedInstanceState) {\n            super.onCreate(savedInstanceState);\n            setContentView(R.layout.settings_activity);\n        }\n\n        public static class EarthquakePreferenceFragment extends PreferenceFragment {\n\n        }\n    }\n```\n\nAnd we'll define fragment layout for the settings activity. Create a new `settings_activity.xml` in `res/layout/settings_activity.xml`.\n\n[Full settings_activity.xml here](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/layout/settings_activity.xml)\n\n```xml\n    <fragment\n        android:name=\"com.example.android.quakereport.SettingsActivity$EarthquakePreferenceFragment\"\n        xmlns:android=\"http://schemas.android.com/apk/res/android\"\n        xmlns:tools=\"http://schemas.android.com/tools\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        tools:context=\"com.example.android.quakereport.SettingsActivity\">\n    </fragment>\n```\n\nAnd lastly, we'll need to declare our new Settings Activity in `AndroidManifest.xml` inside the `<application>` tag. It’s parent activity will be EarthquakeActivity because later we will set Settings to open from the Earthquake Activity.\n\n[Full AndroidManifest here](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/AndroidManifest.xml)\n\n    <activity\n        android:name=\".SettingsActivity\"\n        android:label=\"@string/settings_title\"\n        android:screenOrientation=\"portrait\">\n        <meta-data\n            android:name=\"android.support.PARENT_ACTIVITY\"\n            android:value=\"com.example.android.quakereport.EarthquakeActivity\"/>\n    </activity>\n\n## Menu\n\nIt would really clutter up our EarthquakeActivity if we put a big button that said SETTINGS above or below our list of earthquakes like this:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369218,
+              "key": "e326be49-585b-43cf-ba01-2376fb19d17c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf8f1_screen-shot-2017-08-10-at-5.23.02-pm/screen-shot-2017-08-10-at-5.23.02-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e326be49-585b-43cf-ba01-2376fb19d17c",
+              "caption": "Let's figure out a better UI than using a big SETTINGS button",
+              "alt": "",
+              "width": 470,
+              "height": 824,
+              "instructor_notes": null
+            },
+            {
+              "id": 369219,
+              "key": "c5045b60-29b2-4b1b-bde8-54c18bb877a5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "A much better place for this button is inside the tool bar at the top of the app. And instead of the text SETTINGS, we’ll use the hamburger icon (named this because it's 3 stacks like 2 buns and patty):",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369220,
+              "key": "ecf956aa-649d-4d90-84d4-247126225e86",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf90f_screen-shot-2017-08-10-at-5.23.31-pm/screen-shot-2017-08-10-at-5.23.31-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ecf956aa-649d-4d90-84d4-247126225e86",
+              "caption": "A commonly used icon for settings is a hamburger icon",
+              "alt": "",
+              "width": 478,
+              "height": 812,
+              "instructor_notes": null
+            },
+            {
+              "id": 369221,
+              "key": "b4654e56-51f8-4d2a-8024-5a5c6351daf9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 3: Setup the Menu xml file\n\nAndroid activities can inflate a menu resource file, and display the menu in the app bar. To do so, in `res/menu/`, create a new xml file and name it `main.xml`. Here we created a menu item whose id is action_settings because this menu will open up the actions we can take in the SettingsActivity. \n\n[Full main.xml file](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/menu/main.xml)\n\n```xml\n\n    <menu xmlns:android=\"http://schemas.android.com/apk/res/android\"\n        xmlns:tools=\"http://schemas.android.com/tools\"\n        tools:context=\"com.example.android.quakereport.EarthquakeActivity\">\n        <item\n            android:id=\"@+id/action_settings\"\n            android:title=\"@string/settings_menu_item\" />\n    </menu>\n```\n\n\n### Step 4: Setup the Menu item in the EarthquakeActivity\n\nWith the xml setup, we’ll need to override a couple of methods in `EarthquakeActivity.java` in order to inflate the menu, and respond when users click on our menu item. \n\nThe first method is [onCreateOptionsMenu](https://developer.android.com/reference/android/app/Activity.html#onCreateOptionsMenu(android.view.Menu). Similar to how onCreate() helps us inflate our Activity, `onCreateOptionsMenu()` inflates the Options Menu we specified in the XML when the EarthquakeActivity opens up. \n\n```java\n    @Override\n    // This method initialize the contents of the Activity's options menu.\n    public boolean onCreateOptionsMenu(Menu menu) {\n        // Inflate the Options Menu we specified in XML \n        getMenuInflater().inflate(R.menu.main, menu);\n        return true;\n    }\n```\n\nThe second method is [onOptionsItemSelected](https://developer.android.com/reference/android/app/Activity.html#onOptionsItemSelected(android.view.MenuItem). This method is where we can setup the specific action that occurs when any of the items in the Options Menu are selected. \n\nLet’s break this code down:\n\n```java\n    @Override\n    public boolean onOptionsItemSelected(MenuItem item) {\n        int id = item.getItemId();\n        if (id == R.id.action_settings) {\n            Intent settingsIntent = new Intent(this, SettingsActivity.class);\n            startActivity(settingsIntent);\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n    }\n```\n\n(A) This method passes the MenuItem that is selected:\n\n ```java\n    public boolean onOptionsItemSelected(MenuItem item)\n```\n\n\n(B) An Options Menu may have one or more items. For example:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369222,
+              "key": "209d35ee-961e-4bcd-adbc-afad304982bd",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598cf987_screen-shot-2017-08-10-at-5.25.29-pm/screen-shot-2017-08-10-at-5.25.29-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/209d35ee-961e-4bcd-adbc-afad304982bd",
+              "caption": "An options drop-down menu may have more than one item",
+              "alt": "",
+              "width": 644,
+              "height": 604,
+              "instructor_notes": null
+            },
+            {
+              "id": 369225,
+              "key": "d319c707-2f4e-4868-bd5a-b053c0b3d028",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To determine which item was selected and what action to take, call [getItemId](https://developer.android.com/reference/android/view/MenuItem.html#getItemId(), which returns the unique ID for the menu item (defined by the android:id attribute in the menu resource). \n\n```java\nint id = item.getItemId();\n```\nIn our case, our menu only has one item (which we setup in Step #3 above) and it’s `android:id=\"@+id/action_settings\"`.\n\n(3) You then match the ID against known menu items to perform the appropriate action. In our case, we open the SettingsActivity via an intent.\n\n```java\n        if (id == R.id.action_settings) {\n            Intent settingsIntent = new Intent(this, SettingsActivity.class);\n            startActivity(settingsIntent);\n            return true;\n        }\n```\n\nWe’ll add the `onCreateOptionsMenu` and `onOptionsItemSelected` at the end of the `EarthquakeActivity.java` file:\n\n[Full EarthquakeActivity.java here](https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java)\n\n```java\n    @Override\n    // This method initialize the contents of the Activity's options menu\n    public boolean onCreateOptionsMenu(Menu menu) {\n        getMenuInflater().inflate(R.menu.main, menu);\n        return true;\n    }\n\n    @Override\n    // This method is called whenever an item in the options menu is selected. \n    public boolean onOptionsItemSelected(MenuItem item) {\n        int id = item.getItemId();\n        if (id == R.id.action_settings) {\n            Intent settingsIntent = new Intent(this, SettingsActivity.class);\n            startActivity(settingsIntent);\n            return true;\n        }\n        return super.onOptionsItemSelected(item);\n```\n\n\n\n## Summary\n\nNow we've got a menu with a \"Settings\" item that opens our (blank for now) SettingsActivity!\n\nTo recap what we’ve implemented:\n\n(1) Build a blank SettingsActivity. \n- Step 1: Add Strings to `strings.xml`\n- Step 2: Create the `SettingsActivity`\n     - Create java file\n     - Create xml file\n     - Add in Android Manifest\n\n(2) Add Menu in the app bar of the EarthquakeActivity\n- Step 3: Setup the Menu xml file\n- Step 4: Setup the Menu item in the EarthquakeActivity\n     - Add onCreateOptionsMenu to put Options Menu in app bar\n     - Add onOptionsItemSelected method that specifies to open the SettingsActivity when the user selects the Options Menu \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369227,
+              "key": "d0ca23fc-493a-417d-91cf-6a8228e20cf8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For more information on menus, check the Android Developer Guide in http://developer.android.com/guide/topics/ui/menus.html\n\nIf you want to see a summary with these changes, go to https://github.com/udacity/ud843-QuakeReport/commit/c24e4a9d3226d4aec8c847d454a7eab23872d721\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369296,
+          "key": "62be5b5f-d596-4c30-85e9-e5bb193428cb",
+          "title": "Min Magnitude Preference",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "62be5b5f-d596-4c30-85e9-e5bb193428cb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369297,
+              "key": "b4e19b31-903e-4da4-87c2-e4daa9267377",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Code at Beginning of Section](https://github.com/udacity/ud843-QuakeReport/tree/65a82f3b9b7252f2e4a86f8d353719bae0178f41)\n\n[Changes in this Section](https://github.com/udacity/ud843-QuakeReport/commit/efccfedb00a031d6582bdc7c873fff51ab3d909d)\n\n---\n\nNow that we've got our SettingsActivity up and running, let's add a preference we can edit! Until now we've hardcoded that we're only interested in earthquakes that have a magnitude greater than 5.0. That seems a little arbitrary, so let's make it a preference that the user can set in the SettingsActivity!\n\n### Step 1: Add Strings to be used for the Preference Labels\n\nFirst, let's add a few more strings to `strings.xml` - the name of the preference.\n\n[Full strings.xml file](https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/res/values/strings.xml)\n\n```xml\n    <string name=\"settings_min_magnitude_label\">Minimum Magnitude</string>\n    <string name=\"settings_min_magnitude_key\" translatable=\"false\">min_magnitude</string>\n    <string name=\"settings_min_magnitude_default\" translatable=\"false\">0</string>\n```\n\n### Step 2: Set Type of Preference Editing Widget \n\nFor each preference, you can decide what type of widget the user can use to make their selection.\n\n*Here are some potential options*\n\n(A) A list of options\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369300,
+              "key": "05de842b-505c-4ce9-bf2c-63b8c1803dd0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d3f6f_screen-shot-2017-08-10-at-10.22.57-pm/screen-shot-2017-08-10-at-10.22.57-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/05de842b-505c-4ce9-bf2c-63b8c1803dd0",
+              "caption": "Some preferences present users with a list of options",
+              "alt": null,
+              "width": 406,
+              "height": 706,
+              "instructor_notes": null
+            },
+            {
+              "id": 369301,
+              "key": "64cfd3c7-833b-40b7-b645-3963c703faa8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "(B) An EditText field",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369302,
+              "key": "7ad00532-7485-4e88-ad05-ed8f038a1db2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d3fb0_screen-shot-2017-08-10-at-10.24.48-pm/screen-shot-2017-08-10-at-10.24.48-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7ad00532-7485-4e88-ad05-ed8f038a1db2",
+              "caption": "Some preferences allow the user to insert values in the EditText field",
+              "alt": "",
+              "width": 420,
+              "height": 728,
+              "instructor_notes": null
+            },
+            {
+              "id": 369304,
+              "key": "ff715387-7468-4054-a8fd-6f686b6f4bc8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For our Minimum Magnitude preference, we’ll use an EditText field.\n\nCreate `res/xml/settings_main.xml` with the following contents:\n\n[Full settings_main.xml file](https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/res/xml/settings_main.xml)\n\n```xml\n    <PreferenceScreen\n        xmlns:android=\"http://schemas.android.com/apk/res/android\"\n        android:title=\"@string/settings_title\">\n\n        <EditTextPreference\n            android:defaultValue=\"@string/settings_min_magnitude_default\"\n            android:inputType=\"numberDecimal\"\n            android:key=\"@string/settings_min_magnitude_key\"\n            android:selectAllOnFocus=\"true\"\n            android:title=\"@string/settings_min_magnitude_label\" />\n\n    </PreferenceScreen>\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369305,
+              "key": "4d43fafe-c86a-41ee-a301-2ebb82bb5435",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 3: Override onCreate of EarthquakePreferenceFragment\n\nFinally we just have to override the `onCreate()` method of `EarthquakePreferenceFragment` (which is in `SettingsActivity.java`):\n\n[Full SettingsActivity.java](https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/java/com/example/android/quakereport/SettingsActivity.java)\n\n```java\n    @Override\n    public void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        addPreferencesFromResource(R.xml.settings_main);\n    }\n```\n\n## Summary\n\nWith those 3 steps, we setup a preference in our SettingsActivity the user can edit!\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369306,
+              "key": "a3b9fae4-97d0-4e04-a9c4-9a83872f4a6d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d400f_screen-shot-2017-08-10-at-10.26.19-pm/screen-shot-2017-08-10-at-10.26.19-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a3b9fae4-97d0-4e04-a9c4-9a83872f4a6d",
+              "caption": "We just implemented a preference in the SettingsActivity that users can modify",
+              "alt": "",
+              "width": 414,
+              "height": 732,
+              "instructor_notes": null
+            },
+            {
+              "id": 369308,
+              "key": "33ed1d96-da7f-4fa4-921c-df72625ea2a6",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "For a summary of all the code changes in this section, check out https://github.com/udacity/ud843-QuakeReport/commit/d27e7f65ce03d8305f71b5bd11dfef6b593e0d0a",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369309,
+          "key": "72fc45c4-c1c2-4935-98e0-7209a029f2c6",
+          "title": "URL Building",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "72fc45c4-c1c2-4935-98e0-7209a029f2c6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369310,
+              "key": "2ecf7ba7-bd7b-4fac-96e6-da3cd7e3c76e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Code at Beginning of Section](https://github.com/udacity/ud843-QuakeReport/tree/efccfedb00a031d6582bdc7c873fff51ab3d909d)\n\n[Changes in this Section](https://github.com/udacity/ud843-QuakeReport/commit/9a2cbee7b87cc49449b75610192554199d532918)\n\n---\nSo far we've been requesting earthquakes using a hard-coded URL. \n\nFrom [EarthquakeActivity.java at Commit 1.15](https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java):\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369311,
+              "key": "cd3e91ca-c4d3-48b0-8f83-417f7108e1fb",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4065_screen-shot-2017-08-10-at-10.27.42-pm/screen-shot-2017-08-10-at-10.27.42-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cd3e91ca-c4d3-48b0-8f83-417f7108e1fb",
+              "caption": "",
+              "alt": null,
+              "width": 1480,
+              "height": 142,
+              "instructor_notes": null
+            },
+            {
+              "id": 369312,
+              "key": "94c47c0f-379e-4680-b00b-36e00405a970",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "However, now we need to insert our preference for minimum earthquake magnitude into the URL as a query parameter. We could do this with some horrible string concatenation, but there's a better way using the the Uri.Builder class.\n\n### Wait, what's a URI?\n\nA URI, or uniform resource identifier, is a more general URL. While a URL always points to a resource that's available on a computer network somewhere, a URI can identify a much broader range of things, from files and email mailboxes, to physical objects like books.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369313,
+              "key": "2d098fd1-3d64-4ede-b7ee-e7d32d09c59c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4096_screen-shot-2017-08-10-at-10.28.37-pm/screen-shot-2017-08-10-at-10.28.37-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2d098fd1-3d64-4ede-b7ee-e7d32d09c59c",
+              "caption": "URLs are a subset of URIs\n",
+              "alt": null,
+              "width": 444,
+              "height": 458,
+              "instructor_notes": null
+            },
+            {
+              "id": 369314,
+              "key": "b4e47161-ccee-4aae-aa15-757c712541dc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Since URLs are a subset of URIs, it made more sense for Android to just provide ways to manipulate URIs, since those will work for URLs as well\n\nFirst let's change the value of `USGS_REQUEST_URL` to the following:\n```java\n    private static final String USGS_REQUEST_URL = \"http://earthquake.usgs.gov/fdsnws/event/1/query\";\n```\n\nThen we can replace the body of `onCreateLoader()` in EarthquakeActivity with the following:\n\n[Full EarthquakeActivity file](https://github.com/udacity/ud843-QuakeReport/blob/30a05f980f2cb404b324b96bcc8e6b29c248ea16/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java)\n\n```java\n    @Override\n    // onCreateLoader instantiates and returns a new Loader for the given ID\n    public Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {\n    \n    SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);\n\n    // getString retrieves a String value from the preferences. The second parameter is the default value for this preference. \n    String minMagnitude = sharedPrefs.getString(\n            getString(R.string.settings_min_magnitude_key),\n            getString(R.string.settings_min_magnitude_default));\n\n   // parse breaks apart the URI string that's passed into its parameter\n    Uri baseUri = Uri.parse(USGS_REQUEST_URL);\n\n    // buildUpon prepares the baseUri that we just parsed so we can add query parameters to it\n    Uri.Builder uriBuilder = baseUri.buildUpon();\n\n     // Append query parameter and its value. For example, the `format=geojson`\n    uriBuilder.appendQueryParameter(\"format\", \"geojson\");\n    uriBuilder.appendQueryParameter(\"limit\", \"10\");\n    uriBuilder.appendQueryParameter(\"minmag\", minMagnitude);\n    uriBuilder.appendQueryParameter(\"orderby\", \"time\");\n\n    // Return the completed uri `http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&limit=10&minmag=minMagnitude&orderby=time\n    return new EarthquakeLoader(this, uriBuilder.toString());\n\n    }\n```\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369322,
+          "key": "3c15ec1c-7b6b-47ea-9fb8-cd037bd3827c",
+          "title": "Preference Summaries",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3c15ec1c-7b6b-47ea-9fb8-cd037bd3827c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369324,
+              "key": "b6cc58b7-08fa-4519-9182-b9e48c681824",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Code at Beginning of Section](https://github.com/udacity/ud843-QuakeReport/tree/9a2cbee7b87cc49449b75610192554199d532918)\n\n[Changes in this Section](https://github.com/udacity/ud843-QuakeReport/commit/daaccdfea0fffa772a54c67d177596bc7976dd64)\n\n---\nCurrently this is what the Settings screen looks like:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369325,
+              "key": "1341ed7c-2cc5-4afa-afa4-ea29796ae647",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4827_screen-shot-2017-08-10-at-11.00.55-pm/screen-shot-2017-08-10-at-11.00.55-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1341ed7c-2cc5-4afa-afa4-ea29796ae647",
+              "caption": "Current state of Settings Activity with one Preference the user can modify - Minimum Magnitude",
+              "alt": "",
+              "width": 354,
+              "height": 614,
+              "instructor_notes": null
+            },
+            {
+              "id": 369326,
+              "key": "5c3232be-d5e5-4ed9-8c79-c8c888ce7449",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "It's not a great experience for our user that they have to click on the Minimum Magnitude preference in order find out what its current setting is. It'd be much nicer if, when we opened our Setting Activity, we could see the value of our preference right below the preference name, and when we change it, we see the summary update immediately. \n\nIn this section, we’ll update our Settings UI to look like this:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369329,
+              "key": "02f761b9-ad79-4dc4-89c3-e0d51d3e2ec2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4852_screen-shot-2017-08-10-at-11.01.22-pm/screen-shot-2017-08-10-at-11.01.22-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/02f761b9-ad79-4dc4-89c3-e0d51d3e2ec2",
+              "caption": "We will update the Settings UI to display the chosen preference value",
+              "alt": "",
+              "width": 356,
+              "height": 620,
+              "instructor_notes": null
+            },
+            {
+              "id": 369330,
+              "key": "cf6c07d2-f763-46c5-8451-5b88054a0878",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "It's often useful for a component to be notified immediately when a preference is changed, especially when that preference change should have some visible impact.\n\n# Event Listeners - OnPreferenceChangeListener Interface\n\nTo do this, we’ll need to recall the concept of Event Listeners. Remember in the Multi-Screens Course, we saw how the `OnClickListener` is used to listen for when a specific View is Clicked on and then perform a specific action. If you need a refresher, checkout this [video](https://classroom.udacity.com/nanodegrees/nd803/parts/e575c209-3295-4e3f-9b39-d9b4c851ac57/modules/97e3bf88-4d11-4053-9a49-8ff8df3f33ff/lessons/7633778648/concepts/75563355000923?contentVersion=1.0.0&contentLocale=en-us).\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369331,
+              "key": "534a9a34-e118-4789-9278-c54c956bf4fd",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4879_screen-shot-2017-08-10-at-11.02.10-pm/screen-shot-2017-08-10-at-11.02.10-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/534a9a34-e118-4789-9278-c54c956bf4fd",
+              "caption": "Previously, we learned how the `OnClickListener` is used to listen for when a specific View is Clicked on and then perform a specific action",
+              "alt": null,
+              "width": 980,
+              "height": 538,
+              "instructor_notes": null
+            },
+            {
+              "id": 369332,
+              "key": "06bfc001-0994-48f8-bdb6-420cb215f787",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Similarly, we’ll there’s an interface called `OnPreferenceChangeListener` that we can use to notify us when a shared preference has changed. Here’s a review of [Interfaces](https://classroom.udacity.com/nanodegrees/nd803/parts/e575c209-3295-4e3f-9b39-d9b4c851ac57/modules/97e3bf88-4d11-4053-9a49-8ff8df3f33ff/lessons/7633778648/concepts/75563355030923).\n\nCan you guess how this works?\n\nSay our user modifies the preference. In this case, changes the Minimum Magnitude from 5 to 10. We want a way to be notified when this happens so we can do some action, like update the Preference Summary field to display that the value has been updated to 10. \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369333,
+              "key": "f08c31ee-f33a-43e2-a92a-bac67edb251c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d48c1_screen-shot-2017-08-10-at-11.03.28-pm/screen-shot-2017-08-10-at-11.03.28-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f08c31ee-f33a-43e2-a92a-bac67edb251c",
+              "caption": "We want a way to be notified when the Preference Summary field is updated",
+              "alt": "",
+              "width": 1030,
+              "height": 532,
+              "instructor_notes": null
+            },
+            {
+              "id": 369334,
+              "key": "117b2332-d121-4dbe-9bf0-9a3ec9ec303d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We can use a Listener which will “listen” for when then change we’re interested in happens: \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369335,
+              "key": "fa37c981-84a2-48ed-934e-94d89c10999a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d48eb_screen-shot-2017-08-10-at-11.04.05-pm/screen-shot-2017-08-10-at-11.04.05-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/fa37c981-84a2-48ed-934e-94d89c10999a",
+              "caption": "We can use a \"Listener\" to tell when the user has changed a preference",
+              "alt": "",
+              "width": 1176,
+              "height": 750,
+              "instructor_notes": null
+            },
+            {
+              "id": 369336,
+              "key": "c3f004e9-d38a-4506-b9ea-e1e067390040",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This Listener comes in the form of an `OnPreferenceChangeListener` interface:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369337,
+              "key": "8abf3074-7d88-40e2-ae6e-1b5548bef22f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Remember that interfaces are like templates and require us to fill in the methods. From the documentation for the [OnPreferenceChangeListener interface](https://developer.android.com/reference/android/preference/Preference.OnPreferenceChangeListener.html), we see it has one method we’re required to fill in, `onPreferenceChanged`:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369338,
+              "key": "9e191da8-dca6-40f0-8fc2-1480e0353dfc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d491f_screen-shot-2017-08-10-at-11.04.58-pm/screen-shot-2017-08-10-at-11.04.58-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/9e191da8-dca6-40f0-8fc2-1480e0353dfc",
+              "caption": "In the  OnPreferenceChangeListener interface, we see it has one method we’re required to fill in, onPreferenceChanged ",
+              "alt": "",
+              "width": 1124,
+              "height": 618,
+              "instructor_notes": null
+            },
+            {
+              "id": 369339,
+              "key": "cb1d1c57-fb10-4559-adc7-cf0152a34f59",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this method, we’ll update the preference summary that a preference has changed. We can setup the TextView to update to the new value the user has set the shared preference to. In the next section, we’ll see how to implement the `OnPreferenceChangeListener` in code.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369340,
+          "key": "b03c02fb-dc64-4fbb-a6c9-ad11731686e8",
+          "title": "  Implement Preference Summaries ",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b03c02fb-dc64-4fbb-a6c9-ad11731686e8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369341,
+              "key": "76b5ea07-8acd-4b9c-b9b6-00f521eeb7ad",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Code at Beginning of Section](https://github.com/udacity/ud843-QuakeReport/tree/9a2cbee7b87cc49449b75610192554199d532918)\n\n[Changes in this Section](https://github.com/udacity/ud843-QuakeReport/commit/daaccdfea0fffa772a54c67d177596bc7976dd64)\n\n---\nIn this section, we'll write some code in the SettingsActivity so that the user can easily view the value of the preference right below the preference name:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 377065,
+              "key": "c61b485c-5364-4a75-9389-d7c7d4de55c5",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/5997649e_screen-shot-2017-08-18-at-3.05.00-pm/screen-shot-2017-08-18-at-3.05.00-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c61b485c-5364-4a75-9389-d7c7d4de55c5",
+              "caption": "To provide users with a delightful experience, we'll implement a summary so users can easily see the preference values. ",
+              "alt": null,
+              "width": 678,
+              "height": 1192,
+              "instructor_notes": null
+            },
+            {
+              "id": 377066,
+              "key": "a1164519-5fdf-4852-8e0f-2a25ecfd49ed",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Step 1 - Setup OnPreferenceChangeListener Interface\n\nIn the SettingsActivity inside the `EarthquakePreferenceFragment`, implement the `Preference.OnPreferenceChangeListener` interface. Remember that classes that implement this interface are setup to listen for any Preference changes made by the user.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369342,
+              "key": "47a236b2-36dc-4ce6-8dd8-b83aaa118273",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4969_screen-shot-2017-08-10-at-11.06.17-pm/screen-shot-2017-08-10-at-11.06.17-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/47a236b2-36dc-4ce6-8dd8-b83aaa118273",
+              "caption": "For the EarthquakePreferenceFragment, implement the Preference.OnPreferenceChangeListener interface",
+              "alt": null,
+              "width": 856,
+              "height": 102,
+              "instructor_notes": null
+            },
+            {
+              "id": 369343,
+              "key": "2e4b5e18-b04d-41f6-87cb-f12b07a414ca",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As we see in the documentation for [Prefrence.OnPreferenceChangeListener](https://developer.android.com/reference/android/preference/Preference.OnPreferenceChangeListener.html), this interface requires us to fill in the OnPreferenceChange method.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369344,
+              "key": "36ca4525-ad9e-4547-8daa-ab5b5788982d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d49a2_screen-shot-2017-08-10-at-11.07.17-pm/screen-shot-2017-08-10-at-11.07.17-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/36ca4525-ad9e-4547-8daa-ab5b5788982d",
+              "caption": "",
+              "alt": null,
+              "width": 1100,
+              "height": 570,
+              "instructor_notes": null
+            },
+            {
+              "id": 369345,
+              "key": "68508e2c-c336-447b-a3c0-4015b4bdd508",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Step 2 - Setup OnPreferenceChange Method\n\nIn the SettingsActivity, set up an empty `onPreferenceChange` method right under the onCreate() method that we’ll be filling in. Remember that this method will be called when the user has changed a Preference, so inside of it we should add whatever action we want to happen after this change. In this case, we’ll want to update the displayed preference summary (the UI) after it’s been changed: \n\n```java\n      @Override\n       public boolean onPreferenceChange(Preference preference, Object value) { \n       // The code in this method takes care of updating the displayed preference summary after it has been changed\n            String stringValue = value.toString();\n            preference.setSummary(stringValue);\n```\n\n## Step 3 - Update Preference Summary in onCreate\n\nNext, we’ll need to update the preference summary (the UI) when the settings activity is launched in `onCreate()`. To do so, we’ll need to first find the preference we’re interested in and then bind the current preference value to be displayed.\n\nSince we are already inside the PreferenceFragment (which is inside the SettingsActivity), we can use its `findPreference()` method to get the Preference object. To help us with binding the value that’s in SharedPreferences to what will show up in the preference summary, we’ll create a help method and call it `bindPreferenceSummaryToValue()`.\n\nIn `EarthquakePreferenceFragment`:\n\n```java\n@Override\n public void onCreate(Bundle savedInstanceState) {\n     super.onCreate(savedInstanceState);\n     addPreferencesFromResource(R.xml.settings_main);\n\n     Preference minMagnitude = findPreference(getString(R.string.settings_min_magnitude_key));\n     bindPreferenceSummaryToValue(minMagnitude);\n }\n```\n\n## Step 4 - Complete bindPreferenceSummaryToValue() Helper Method\n\nNow we need to define the `bindPreferenceSummaryToValue()` helper method. This method takes in a Preference as its parameter, and we use setOnPreferenceChangeListener to set the current EarthquakePreferenceFragment instance to listen for changes to the preference we pass in using:\n```java\npreference.setOnPreferenceChangeListener(this);\n```\nWe also read the current value of the preference stored in the SharedPreferences on the device, and display that in the preference summary (so that the user can see the current value of the preference):\n```java\nSharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());\n     String preferenceString = preferences.getString(preference.getKey(), \"\");\n     onPreferenceChange(preference, preferenceString);\n```\nThe completed `bindPreferenceSummaryToValue()`method looks like this:\n```java\nprivate void bindPreferenceSummaryToValue(Preference preference) {\n     preference.setOnPreferenceChangeListener(this);\n     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());\n     String preferenceString = preferences.getString(preference.getKey(), \"\");\n     onPreferenceChange(preference, preferenceString);\n }\n```\n# Summary\nWe saw how we can use the `OnPreferenceChangeListener` interface to listen for when the user updates the preferences and update the preference summary with the change.  \n\nIn the code we first setup the OnPreferenceChangeListener Interface. Then we implemented the OnPreferenceChange() method. Then in order to update the preference summary when the settings activity is launched we setup the bindPreferenceSummaryToValue() helper method and which we used in onCreate().\n\nFor a summary of these changes, check out: https://github.com/udacity/ud843-QuakeReport/commit/3d71663dc4edaebb9cf22c06dbb9b4789696f974\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 369346,
+          "key": "f5b7616a-b9dc-4ad8-881b-5918a026dd5b",
+          "title": "Order by Preference",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f5b7616a-b9dc-4ad8-881b-5918a026dd5b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 369347,
+              "key": "25713052-ee7c-47d8-9507-b6d20ce46285",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Code at Beginning of Section](https://github.com/udacity/ud843-QuakeReport/tree/daaccdfea0fffa772a54c67d177596bc7976dd64)\n\n[Changes in this Section](https://github.com/udacity/ud843-QuakeReport/commit/5b61ca20030c30604bb9d68b961ec91d46c23cd4)\n\n---\n# List Preference\n\nSometimes users may be interested in organizing earthquakes by magnitude, and other times they may be interested in organizing them by the date and time during which they occurred. For that reason we will add one more user preference, the **Order By** preference.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369348,
+              "key": "83389b89-23f9-4099-adc4-a859b001152e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4b23_screen-shot-2017-08-10-at-11.13.43-pm/screen-shot-2017-08-10-at-11.13.43-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/83389b89-23f9-4099-adc4-a859b001152e",
+              "caption": "In this section, we'll add one more user preference, the Order By Preference ",
+              "alt": "",
+              "width": 1006,
+              "height": 706,
+              "instructor_notes": null
+            },
+            {
+              "id": 369349,
+              "key": "b1dbfac3-647b-4d0c-a6d8-d7ae3bbb54e4",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We can easily accommodate this using a ListPreference. A List Preference, as the name implies, displays a list of possible preference entries as a dialog.\n\n\nThe List Preference is populated by an array of Strings we’ll set up in xml.\n\n# Step 1 - Create XML String Labels\n\n\nFirst, let's define strings for the preference labels in the string resource file. We’ll have the “Order By” preference label, the “Magnitude” and the “Most Recent” label options:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369350,
+              "key": "11b91680-3fc2-438b-8ab7-bfbd01e2bd74",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4b3c_screen-shot-2017-08-10-at-11.14.08-pm/screen-shot-2017-08-10-at-11.14.08-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/11b91680-3fc2-438b-8ab7-bfbd01e2bd74",
+              "caption": "We need to add string resources for the preference labels that will be displayed",
+              "alt": "",
+              "width": 626,
+              "height": 396,
+              "instructor_notes": null
+            },
+            {
+              "id": 369351,
+              "key": "30147caf-c409-4796-9f27-c1e895ac11f0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In strings.xml:\n\n```xml\n     <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->\n     <string name=\"settings_order_by_label\">Order By</string>\n     <string name=\"settings_order_by_key\" translatable=\"false\">order_by</string>\n     <string name=\"settings_order_by_default\" translatable=\"false\">@string/settings_order_by_magnitude_value</string>\n\n     <!-- Label for order-by magnitude option [CHAR LIMIT=20] -->\n     <string name=\"settings_order_by_magnitude_label\">Magnitude</string>\n     <string name=\"settings_order_by_magnitude_value\" translatable=\"false\">magnitude</string>\n\n     <!-- Label for order-by most recent option [CHAR LIMIT=20] -->\n     <string name=\"settings_order_by_most_recent_label\">Most Recent</string>\n     <string name=\"settings_order_by_most_recent_value\" translatable=\"false\">time</string>\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369352,
+              "key": "e679e92b-53d4-4a89-8e58-9b31640596ab",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "---\n# Step 2 - Put String Values in String Arrays\n\nNext, we'll package the strings we just created and put them into 2 string arrays - \none for the human-readable labels labels (<string-array name=\"settings_order_by_labels\">)\n\nand another for the value to save for a preference when an entry from entries is selected (<string-array name=\"settings_order_by_values\">). \n\nIn res/values/arrays.xml:\n\n```xml\n     <?xml version=\"1.0\" encoding=\"utf-8\"?>\n     <resources>\n         <string-array name=\"settings_order_by_labels\">\n             <item>@string/settings_order_by_magnitude_label</item>\n             <item>@string/settings_order_by_most_recent_label</item>\n         </string-array>\n\n         <string-array name=\"settings_order_by_values\">\n             <item>@string/settings_order_by_magnitude_value</item>\n             <item>@string/settings_order_by_most_recent_value</item>\n         </string-array>\n     </resources>\n```\n---\n\n# Step 3 - Add ListPreference in XML\n\nThen we can add a <a href=\"https://developer.android.com/reference/android/preference/ListPreference.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">ListPreference</a> to the res/xml/settings_main.xml file.\n\nIn res/xml/settings_main.xml:\n\n```xml\n\n         <ListPreference\n             android:defaultValue=\"@string/settings_order_by_default\"\n             android:entries=\"@array/settings_order_by_labels\"\n             android:entryValues=\"@array/settings_order_by_values\"\n             android:key=\"@string/settings_order_by_key\"\n             android:title=\"@string/settings_order_by_label\" />\n```\n\nFrom the ListPreference documentation, we see the description of these 2 XML attributes:\n\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369353,
+              "key": "e263f62b-2250-409d-94b3-87f1c15da2bc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4ba4_screen-shot-2017-08-10-at-11.15.52-pm/screen-shot-2017-08-10-at-11.15.52-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e263f62b-2250-409d-94b3-87f1c15da2bc",
+              "caption": "2 XML attributes for ListPreferences",
+              "alt": "",
+              "width": 886,
+              "height": 208,
+              "instructor_notes": null
+            },
+            {
+              "id": 369355,
+              "key": "be0fddd0-5964-4ea6-813a-e73952f0a504",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "`android:entries=\"@array/settings_order_by_labels\"` - Uses the string array we setup earlier in res/values/arrays.xml which are what appears as the labels for the user to read. \n\n` android:entryValues=\"@array/settings_order_by_values\"` - Uses the other string array from res/values/arrays.xml contains the value to save for a preference when an entry from entries is selected. \n   \n---\n\n# Step 4 - Update URI to Use the User’s Preferred Sort Order\n\nNow that we’ve setup to allow the user to choose a preferred sort order, we need to look up which method of ordering the user has chosen (by “Magnitude” or by “Most Recent”) and build the URI for making the HTTP request accordingly.\n\nWe’ll make these changes in the EarthquakeActivity.java.\n\nWe’ll get this information from SharedPreferences and check for the value associated with the key using getString(R.string.settings_order_by_key). We’ll also set an order by default set initially:\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431030,
+              "key": "20d91532-2583-4b22-8416-5a385627bde2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```java\nString orderBy  = sharedPrefs.getString(\n     getString(R.string.settings_order_by_key),\n     getString(R.string.settings_order_by_default)\n);\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369357,
+              "key": "1d64ae79-6245-468f-9083-a4a6acb9e07b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "When building the URI and appending query parameters, currently the value of the “orderby” parameter is time. We’ll update it so that it takes in the user’s preference stored in the orderBy variable instead of hardcoding the “orderby” parameter to be “time”, we will use the user’s preference (stored in the orderBy variable). This is what that will look like in EarthquakeActivity.java:\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369358,
+              "key": "6b182fcb-0e40-42df-a5bc-6ffed6d0d870",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4bf0_screen-shot-2017-08-10-at-11.16.59-pm/screen-shot-2017-08-10-at-11.16.59-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/6b182fcb-0e40-42df-a5bc-6ffed6d0d870",
+              "caption": "",
+              "alt": null,
+              "width": 1478,
+              "height": 166,
+              "instructor_notes": null
+            },
+            {
+              "id": 369359,
+              "key": "24c68a3e-3128-4362-9a26-99a10c4d008d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Here](https://github.com/udacity/ud843-QuakeReport/commit/5b61ca20030c30604bb9d68b961ec91d46c23cd4) are the changes made to EarthquakeActivity.java:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369360,
+              "key": "3591b04e-c865-4011-bad2-a0e6798fe321",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4c1f_screen-shot-2017-08-10-at-11.17.45-pm/screen-shot-2017-08-10-at-11.17.45-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3591b04e-c865-4011-bad2-a0e6798fe321",
+              "caption": "Screenshot from code diff of code changes",
+              "alt": "",
+              "width": 1484,
+              "height": 890,
+              "instructor_notes": null
+            },
+            {
+              "id": 369361,
+              "key": "98b6e63d-5933-45ad-b1dc-b04992930eff",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "---\n# Step 5 - Update EarthquakePreferenceFragment with Order By Preference\n\nFinally, we'll add additional logic in the EarthquakePreferenceFragment so that it is aware of the new ListPreference, similar to what we did for the EditTextPreference in the [Preference for Minimum Earthquake Magnitude Concept](62be5b5f-d596-4c30-85e9-e5bb193428cb).\n\nIn SettingActivity.java, inside EarthquakePreferenceFragment in the onCreate() method, find the “order by” Preference object according to its key. Then call the bindPreferenceSummaryToValue() helper method on this Preference object, which will set this fragment as the OnPreferenceChangeListener and update the summary so that it displays the current value stored in SharedPreferences:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 431032,
+              "key": "fead6edf-6030-45c4-92f0-375f5a9a37bd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "```java\n@Override\npublic void onCreate(Bundle savedInstanceState) {\n     ...\n     Preference orderBy = findPreference(getString(R.string.settings_order_by_key));\n     bindPreferenceSummaryToValue(orderBy);\n     ...\n}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369363,
+              "key": "ebee7839-7ff4-48f2-85d0-ad2c7f7c80e5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Currently the onPreferenceChange() method in EarthquakePreferenceFragment just takes in the preference value, converts it to a String, and displays that value in the summary UI:\n\n```java\n     @Override\n     public boolean onPreferenceChange(Preference preference, Object value) {\n         String stringValue = value.toString();\n         preference.setSummary(stringValue);\n    return true;\n     }\n```\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369364,
+              "key": "e1ae3a64-c280-448f-8687-608df276402c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "We’ll need to update the onPreferenceChange() method in EarthquakePreferenceFragmet to properly update the summary of a ListPreference (using the label, instead of the key):\n\nIn SettingsActivity.java, in EarthquakePreferenceFragment class:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 369365,
+              "key": "d0772e03-a2d1-4990-b299-af7016674a7f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598d4c96_screen-shot-2017-08-10-at-11.19.47-pm/screen-shot-2017-08-10-at-11.19.47-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/d0772e03-a2d1-4990-b299-af7016674a7f",
+              "caption": "Code to be added in EarthquakePreferenceFragment class",
+              "alt": "",
+              "width": 1022,
+              "height": 554,
+              "instructor_notes": null
+            },
+            {
+              "id": 369366,
+              "key": "df4409b7-5de3-4021-8ee7-433e1cfe893c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "And we're done with a simple settings activity! \n\nWhen you run the app, go to settings, and modify the sort order based on magnitude or time, and see how the list of earthquakes changes!\n\nTake a look at this repo to see the changes: https://github.com/udacity/ud843-QuakeReport/commit/05190298d7e6a7de21e3beb8f940e133fea67b4c\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

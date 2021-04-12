@@ -1,0 +1,279 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up Button</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Fragments</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Navigation Patterns in Android.html">02. Navigation Patterns in Android</a>
+    </li>
+    <li class="">
+      <a href="03. Navigation Patterns in Other Apps.html">03. Navigation Patterns in Other Apps</a>
+    </li>
+    <li class="">
+      <a href="04. Up Button.html">04. Up Button</a>
+    </li>
+    <li class="">
+      <a href="05. An Alternative Version of the App.html">05. An Alternative Version of the App</a>
+    </li>
+    <li class="">
+      <a href="06. Upcoming Changes.html">06. Upcoming Changes</a>
+    </li>
+    <li class="">
+      <a href="07. Android Development Patterns.html">07. Android Development Patterns</a>
+    </li>
+    <li class="">
+      <a href="08. Sample ViewPager.html">08. Sample ViewPager</a>
+    </li>
+    <li class="">
+      <a href="09. Intro to Fragments.html">09. Intro to Fragments</a>
+    </li>
+    <li class="">
+      <a href="10. Fragment Lifecycle.html">10. Fragment Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="11. Refactor Category Activities.html">11. Refactor Category Activities</a>
+    </li>
+    <li class="">
+      <a href="12. ViewPager and FragmentPagerAdapter.html">12. ViewPager and FragmentPagerAdapter</a>
+    </li>
+    <li class="">
+      <a href="13. Add Tabs to ViewPager.html">13. Add Tabs to ViewPager</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Up Button</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Up Button</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><p>You can create a diagram of the relationships between the screens of an app. </p>
+<p>The following diagram shows an example of the relationship between screens in the Miwok app. The home screen (with the four category buttons) is the “parent” activity. It leads to the list of vocab words, which are the “children” activities. This type of parent-child relationship is important because sometimes the user may want to navigate to parent or child activities. It’s another way of navigating around the app, and can come in useful if the user lands  somewhere within the app that’s not the home screen. See more details in <a href="http://developer.android.com/training/design-navigation/screen-planning.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#diagram-relationships" target="_blank">the training documentation</a>.</p>
+<p><img src="media/unnamed-7455-0.gif" alt="Navigation Diagram" /></p>
+<p>When viewing Android apps, you may have noticed a horizontal arrow pointing left in the app bar. This is called the “Up” button. In the upcoming coding task, you will be adding the “Up” button to NumbersActivity, FamilyActivity, ColorsActivity, and PhrasesActivity. </p>
+<p><img src="media/unnamed-7455-1.gif" alt="Up Button" /></p>
+<p>This button allows the user to navigate to the parent activity, which we will call MainActivity.</p>
+<p><img src="media/unnamed-7455-2.gif" alt="Navigate to Parent Activity" /></p>
+<h2 id="“up”-button-vs-“back”-button">“Up” Button vs. “Back” Button</h2>
+<p>Now you might be wondering, doesn’t the “Up” button just do the same thing as the “Back” button? </p>
+<p>Well, not exactly. The “Back” button is part of the system navigation bar on Android (leftmost triangle icon). No matter which app you’re in, when you tap the “Back” button, you’ll go back to where you previously came from.</p>
+<p><img src="media/unnamed-7455-3.gif" alt="Back Button" /></p>
+<p>However, there are certain cases where “Back” and “Up” result in different behavior. The “Up” button ALWAYS leads you to the parent activity. The “Back” button can lead you to the parent activity, or the home screen, or to another app, depending on how you arrived at the current screen. </p>
+<p>Here’s an example scenario. Say you are browsing the web in an app. You receive notification of a new email. You click the notification, and suddenly you’re in the email app. Once you’re done reading the email, if you tap the “Back” button, you’ll go back to the web app. If you tap the “Up” button, you’ll go to the parent activity, which is the list of all emails.</p>
+<p>The distinction between “Up” and “Back” really starts to matter if the user can get directly to a screen in your app without going through the main page (i.e. directly opening a single email without going through the list of all emails). In the Miwok app, the user has to go through the main screen, so “Up” and “Back” have the same effect. However, the ideal thing would be to provide the user with another way to navigate to the MainActivity. </p>
+<p>For best practices, we will practice implementing the “Up” button. For information on how to do this, check out <a href="http://developer.android.com/training/implementing-navigation/ancestral.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">this tutorial</a>.</p>
+<p>This is what the app looks like before the coding task: </p>
+<p><img src="media/unnamed-7455-4.gif" alt="Miwok Activities_No Up" /></p>
+<p>This is what the app looks like after the coding task (look closely at the app bar):</p>
+<p><img src="media/unnamed-7455-5.gif" alt="Miwok Activities" /></p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8088648217.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 27.220759423503328%; left: 10.372506234413965%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="Checkbox to add "Up" button">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><p>This is what a single category activity in the AndroidManifest.xml should look like when you’re done:</p>
+<pre><code>&lt;activity
+        android:name=".NumbersActivity"
+        android:label="@string/category_numbers"
+        android:parentActivityName=".MainActivity"&gt;
+
+        &lt;!-- Parent activity meta-data to support 4.0 and lower --&gt;
+        &lt;meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity"/&gt;
+    &lt;/activity&gt;</code></pre>
+<p>See the full <a href="https://github.com/udacity/ud839_Miwok/blob/efd5efed141371d3aa58262e6a38fdb97e057ce9/app/src/main/AndroidManifest.xml" target="_blank">AndroidManifest.xml file</a>.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p><strong>Add Up Button to your Activity</strong></p>
+<ul>
+<li><a href="http://developer.android.com/training/implementing-navigation/ancestral.html" rel="noopener noreferrer" target="_blank">http://developer.android.com/training/implementing-navigation/ancestral.html</a> </li>
+</ul>
+<p><strong>Additional Resources on Navigation:</strong> </p>
+<ul>
+<li><a href="http://developer.android.com/training/design-navigation/ancestral-temporal.html" rel="noopener noreferrer" target="_blank">http://developer.android.com/training/design-navigation/ancestral-temporal.html</a> </li>
+<li><a href="http://developer.android.com/design/patterns/navigation.html" rel="noopener noreferrer" target="_blank">http://developer.android.com/design/patterns/navigation.html</a></li>
+</ul>
+<p><a href="https://github.com/udacity/ud839_Miwok/commit/6262b8ba0e0a6f20c81cd7cd5ee71b326f636a94" target="_blank">These are the changes needed to complete the quiz.</a><br />
+<a href="https://github.com/udacity/ud839_Miwok/tree/6262b8ba0e0a6f20c81cd7cd5ee71b326f636a94" target="_blank">This is the state of the code after completing the quiz.</a></p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. An Alternative Version of the App.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Up Button')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

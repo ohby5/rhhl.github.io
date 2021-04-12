@@ -1,0 +1,331 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.180 --> 00:00:05.190
+Bagus, setelah kita memahami struktur nilai
+kunci JSON dan mampu
+
+00:00:05.190 --> 00:00:10.140
+mengidentifikasi tiap komponen JSON,
+kita bisa memanfaatkan pengetahuan ini untuk
+
+00:00:10.140 --> 00:00:14.690
+menavigasi JSON response untuk
+mengekstrak 'field' yang kita inginkan.
+
+00:00:14.690 --> 00:00:18.510
+Dengan kata lain, kita akan gunakan pengetahuan
+ini untuk mencari path dari root
+
+00:00:18.510 --> 00:00:22.300
+JSON response hingga nilai
+yang kita inginkan,
+
+00:00:22.300 --> 00:00:24.560
+melalui kelompok yang berhubungan.
+
+00:00:24.560 --> 00:00:27.541
+Kita lihat kembali respons
+Twitter dari kuis terakhir.
+
+00:00:27.541 --> 00:00:31.530
+Anggap saja kita ingin mengekstrak
+'hashtags' yang berkaitan dengan empat besar
+
+00:00:31.530 --> 00:00:33.869
+tweet favorit Chris yang terbaru,
+
+00:00:33.869 --> 00:00:38.170
+yaitu pukulan bisbol dari
+tengah stadion.
+
+00:00:38.170 --> 00:00:41.910
+Saya sudah lebih dulu memformat
+respons ini agar lebih mudah dibaca
+
+00:00:41.910 --> 00:00:46.620
+dengan memasukkannya dalam
+jsonformatter.curiousconcept.com.
+
+00:00:46.620 --> 00:00:48.320
+Dengan semua yang diperluas,
+
+00:00:48.320 --> 00:00:53.770
+perhatikan bahwa di root ada array
+JSON seperti ditunjukkan oleh tanda kurung ini.
+
+00:00:53.770 --> 00:00:57.390
+Lalu jika saya tutup semua kelompok,
+saya bisa lihat
+
+00:00:57.390 --> 00:01:01.650
+array ini berisi JSONObjects
+dengan data yang dapat kita tafsirkan.
+
+00:01:01.650 --> 00:01:04.900
+Array ini kemungkinan besar memegang
+tweet paling baru
+
+00:01:04.900 --> 00:01:06.930
+dengan urutan terbalik secara kronologis.
+
+00:01:06.930 --> 00:01:11.590
+Jika kita perluas salah satu entri, kita bisa
+konfirmasi bahwa memang ada satu JSONObject
+
+00:01:11.590 --> 00:01:14.750
+yang memegang data yang merepresentasikan
+satu tweet tunggal.
+
+00:01:14.750 --> 00:01:17.610
+Untuk memperoleh empat besar
+tweet terbaru,
+
+00:01:17.610 --> 00:01:22.360
+kita harus mengakses empat elemen
+array menggunakan indeks tiga.
+
+00:01:22.360 --> 00:01:29.140
+Jika kita menghitung indeks,
+ada indeks nol, satu, dua, dan tiga.
+
+00:01:29.140 --> 00:01:33.600
+Di indeks ini, ada JSONObject
+tunggal yang dapat kita navigasi
+
+00:01:33.600 --> 00:01:38.580
+lebih jauh dengan mengambil JSONObject
+yang dirujuk oleh kunci 'entities' ini.
+
+00:01:38.580 --> 00:01:42.960
+Lalu kita dapat mengekstrak nilai
+kunci 'hashtags' yang merupakan array JSON
+
+00:01:42.960 --> 00:01:45.329
+yang memegang semua tagar ini.
+
+00:01:45.329 --> 00:01:50.488
+Setelah itu, kita harus mulai
+memproses tiap entri satu demi satu.
+
+00:01:50.488 --> 00:01:54.490
+Untuk tiap JSONObject dalam array,
+kita perlu mengekstrak string teks
+
+00:01:54.490 --> 00:01:56.470
+yang dirujuk oleh kunci 'text'.
+
+00:01:56.470 --> 00:02:01.760
+Dalam hal ini, tagar pertama
+adalah NBA, berikutnya adalah Knicks.
+
+00:02:01.760 --> 00:02:05.920
+Ringkasnya, kita harus melintasi
+urutan komponen JSON untuk
+
+00:02:05.920 --> 00:02:08.080
+memperoleh nilai yang kita inginkan.
+
+00:02:08.080 --> 00:02:09.370
+Mari lihat lagi path itu.
+
+00:02:10.380 --> 00:02:14.720
+Dimulai dengan root,
+array JSON, tiga, nol,
+
+00:02:14.720 --> 00:02:18.620
+satu, dua, tiga, mengembalikan JSONObject,
+
+00:02:18.620 --> 00:02:23.540
+lalu kita gunakan kunci 'entities'
+untuk memperoleh JSONObject lain.
+
+00:02:23.540 --> 00:02:28.455
+Lalu kita gunakan kunci 'hashtags' untuk
+memperoleh array JSON yang berisi
+
+00:02:28.455 --> 00:02:31.021
+tagar sebagai JSONObject.
+
+00:02:31.021 --> 00:02:33.016
+Terakhir, untuk tiap JSONObject,
+
+00:02:33.016 --> 00:02:37.840
+kita gunakan kunci 'text' untuk mengekstrak
+nama individual dari tiap tagar.
+
+00:02:37.840 --> 00:02:39.810
+Jadi apa maksudnya?
+
+00:02:39.810 --> 00:02:43.658
+Yang baru saja kita lakukan adalah mengisolasi
+path melalui komponen JSON
+
+00:02:43.658 --> 00:02:48.590
+dari respons ini untuk memperoleh data
+yang ingin diekstrak untuk aplikasi kita.
+
+00:02:48.590 --> 00:02:53.220
+Logika serupa yang digunakan untuk melintasi
+respons ini adalah path traversal
+
+00:02:53.220 --> 00:02:57.610
+yang sama yang harus diikuti kode kita
+dalam memprogram langkah untuk melakukan parsing atau
+
+00:02:57.610 --> 00:02:59.570
+mendekonstruksi respons JSON.
+
+00:03:00.820 --> 00:03:03.870
+Dalam kuis berikut, Anda akan berlatih
+melintasi pohon JSONObject
+
+00:03:03.870 --> 00:03:06.170
+untuk mencari kelompok
+yang Anda inginkan.
+
+00:03:06.170 --> 00:03:09.520
+Untuk memberikan contoh lain
+tentang respons JSON,
+
+00:03:09.520 --> 00:03:13.390
+kita akan lihat respons contoh
+dari API Instagram.
+
+00:03:13.390 --> 00:03:17.720
+Instagram adalah aplikasi media sosial untuk
+berbagi foto dan video yang populer.
+
+00:03:17.720 --> 00:03:21.660
+Aplikasi ini memberikan API di mana Anda
+dapat secara programatis mengakses informasi
+
+00:03:21.660 --> 00:03:22.455
+tentang dokumen media.
+
+00:03:23.810 --> 00:03:28.810
+URL ini memberi kita akses pada informasi
+tentang dokumen media spesifik.
+
+00:03:28.810 --> 00:03:31.430
+Klik tombol RESPONSE untuk
+melihat respons contoh.
+
+00:03:31.430 --> 00:03:34.785
+[BLANK_AUDIO]
+
+00:03:34.785 --> 00:03:37.850
+Chris mengepos gambar ini
+di akun Instagramnya.
+
+00:03:38.960 --> 00:03:42.510
+Kita membuat permintaan untuk gambar ini
+kepada API Instagram dan
+
+00:03:42.510 --> 00:03:45.360
+menerima kembali respons JSON.
+
+00:03:45.360 --> 00:03:50.360
+Ini mencakup informasi tentang
+gambar, seperti tag, penyaring,
+
+00:03:50.360 --> 00:03:53.570
+waktu diambil, dan tautan.
+
+00:03:53.570 --> 00:03:57.381
+Dalam kuis ini, Anda akan memeriksa
+respons ini lebih dekat dan
+
+00:03:57.381 --> 00:03:58.960
+menjawab pertanyaan.
+
+00:03:58.960 --> 00:04:00.803
+Jadi untuk kuis ini,
+
+00:04:00.803 --> 00:04:04.420
+Anda diminta menentukan path traversal
+untuk bidang-bidang tertentu.
+
+00:04:04.420 --> 00:04:08.540
+Misalnya, cari path traversal yang kelompoknya
+harus Anda lintasi untuk
+
+00:04:08.540 --> 00:04:10.950
+menemukan jumlah suka untuk suatu gambar.
+
+00:04:10.950 --> 00:04:12.940
+Mari kerjakan yang ini bersama-sama.
+
+00:04:12.940 --> 00:04:16.560
+Jika dipindai sangat cepat,
+tampak ada kunci 'count'
+
+00:04:16.560 --> 00:04:19.820
+di dalam kunci 'likes', mungkin
+itulah angka yang saya cari.
+
+00:04:21.019 --> 00:04:24.330
+Untuk mencari path traversal, kita harus
+menentukan cara mulai dari root,
+
+00:04:24.330 --> 00:04:30.080
+di puncak JSONObject, turun terus
+hingga pasangan nilai kunci 'likes'.
+
+00:04:30.080 --> 00:04:33.410
+Sebenarnya, pasangan nilai kunci
+'count' yang ada di dalam 'likes'.
+
+00:04:33.410 --> 00:04:35.402
+Pertama-tama, kita mulai dari root,
+
+00:04:35.402 --> 00:04:39.002
+lalu melintasi JSONObject
+dengan kunci 'data'.
+
+00:04:39.002 --> 00:04:41.333
+Ada banyak sekali
+atribut di dalamnya tapi
+
+00:04:41.333 --> 00:04:44.130
+yang kita inginkan ada
+di dalam kunci 'likes'.
+
+00:04:44.130 --> 00:04:48.690
+Kita tahu kunci 'likes' merujuk pada JSONObject
+karena adanya tanda kurung kurawal.
+
+00:04:48.690 --> 00:04:53.650
+Di dalam sini, kita cari kunci 'count',
+yang merujuk pada bilangan bulat 5.
+
+00:04:53.650 --> 00:04:57.990
+Kembali ke kuis kita, kita ketikkan ini
+untuk mengekspresikan path yang harus kita
+
+00:04:57.990 --> 00:05:00.950
+ikuti untuk memperoleh
+pasangan nilai kunci 'count'.
+
+00:05:02.060 --> 00:05:05.720
+Ulangi proses ini untuk
+'field' yang lain.
+
+00:05:05.720 --> 00:05:09.590
+Tuliskan bagaimana Anda bisa melintas
+dari root JSONObject hingga
+
+00:05:09.590 --> 00:05:11.870
+mencapai pasangan nilai kunci yang cocok.
+
+00:05:11.870 --> 00:05:13.700
+Anda bisa gunakan simbol tanda pisah dan
+
+00:05:13.700 --> 00:05:15.840
+tanda kurung siku kanan untuk
+mengetikkan simbol tanda panah.
+
+00:05:16.920 --> 00:05:18.320
+Setelah selesai, klik Continue.
+

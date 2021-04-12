@@ -1,0 +1,1831 @@
+{
+  "data": {
+    "lesson": {
+      "id": 160644,
+      "key": "0fdf2184-5ea3-4751-afc6-9287274982b0",
+      "title": "Threads & Parallelism",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn how to use threads to make your device do multiple things at once! ",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/0fdf2184-5ea3-4751-afc6-9287274982b0/160644/1516907195503/Threads%20%26%20Parallelism%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "http://d2uz2655q5g6b2.cloudfront.net/0fdf2184-5ea3-4751-afc6-9287274982b0/160644/1516907111910/Threads%20%26%20Parallelism%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 161180,
+          "key": "7af0ec13-273f-47fe-96fc-6563d49dee6c",
+          "title": "Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7af0ec13-273f-47fe-96fc-6563d49dee6c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161274,
+              "key": "0cdbe2d4-df50-4ae4-b888-653967a552b6",
+              "title": "Intro",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "TMQO-bfxQgk",
+                "china_cdn_id": "TMQO-bfxQgk.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 161181,
+          "key": "fa14ba05-8053-41ec-983b-04275cfe7c29",
+          "title": "\"Did You Feel It?\" App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fa14ba05-8053-41ec-983b-04275cfe7c29",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161281,
+              "key": "8927475286",
+              "title": "Did You Feel It App",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://github.com/udacity/ud843_DidYouFeelIt\" target=\"_blank\"> Repo for the \"Did you feel it?\" App</a>.",
+              "user_state": {
+                "node_key": "8927475286",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "zVtVCgIMYvM",
+                  "china_cdn_id": "zVtVCgIMYvM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Did You Feel It App",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/hOenF-67VRUUuJtbwJC2atCjib1GDByStyCyOCuFCplsQY0U0wKwg5k5utGO_JJbpAFBedWQ0PPISmuBXQ=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475286",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8972200339",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.8254364089775561,
+                      "x": 0.08515819825436409,
+                      "y": 0.47124445676274945
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "V7or-nyhmos",
+                  "china_cdn_id": "V7or-nyhmos.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161182,
+          "key": "a4919349-ab9c-4080-aa9b-5458c64d8e8c",
+          "title": "Main vs Background Threads 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a4919349-ab9c-4080-aa9b-5458c64d8e8c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161276,
+              "key": "0b9f77c0-c18b-444f-b731-dbd04b5ab744",
+              "title": "Main Thread Vs. Background Thread Part 1",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "kjTWCogGERI",
+                "china_cdn_id": "kjTWCogGERI.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 161275,
+          "key": "62ec4cf3-5747-41c2-8639-6fb46feb9907",
+          "title": "Main vs Background Threads 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "62ec4cf3-5747-41c2-8639-6fb46feb9907",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161277,
+              "key": "656965c0-c036-41b8-ae67-265a9c1cda10",
+              "title": "Main Thread Vs. Background Thread Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "xJSrYrCXewU",
+                "china_cdn_id": "xJSrYrCXewU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 161278,
+          "key": "98712181-9cec-4f30-8b60-189f50d3c7cd",
+          "title": "Main vs Background Threads 3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "98712181-9cec-4f30-8b60-189f50d3c7cd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161282,
+              "key": "a851006e-f509-46f4-8a47-2a5ea079dd81",
+              "title": "Extra info! ",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The Android system is capable of running more than one thread at the same time, so that two or more sets of tasks can be processed independent of each other. If there are many threads that need to be run, Android also prioritizes which ones will run at what time and for how long. \n\nA thread also knows how to save its place. It records the values of all variables, and remembers what series of function calls resulted in it getting to the instruction it's currently executing: everything it needs to be able to pick up its work again.\n\nThe goal of building any multithreaded application is to run two or more processes at the same time. Modern programming languages and CPUs are designed to take advantage of multithreading, and building apps on the Android platform is no different!\n\nFor a more advanced discussion, see this <a href=\"https://developer.android.com/guide/components/processes-and-threads.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">\nProcesses and Threads article</a>.\n\nThere's another <a href=\"https://developer.android.com/training/articles/perf-anr.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">\ndeveloper guide</a> on the topic of keeping your app responsive.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 161183,
+          "key": "7f24f82e-8bdf-493d-94e9-cf5d743f4d45",
+          "title": "AsyncTask to the Rescue",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7f24f82e-8bdf-493d-94e9-cf5d743f4d45",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161279,
+              "key": "5715da70-d3d1-4966-acc1-6283b4f94459",
+              "title": "Async Task To The Rescue",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "I highly recommend this Android Performance Patterns <a href=\"https://www.youtube.com/watch?v=qk5F6Bxqhr4&index=1&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE\" target=\"_blank\">video on threading</a> by Google Developer Advocate Colt McAnlis.\n\nThe concept of AsyncTasks is often challenging for new developers. If you're having trouble, take some time to read <a href=\"http://programmerguru.com/android-tutorial/what-is-asynctask-in-android/\" target=\"_blank\">this article</a>, or to watch these videos on <a href=\"https://www.youtube.com/watch?v=rOBtgaXaba0\" target=\"_blank\">Java Generics</a> and <a href=\"https://www.youtube.com/watch?v=DZWlO1jCVas\" target=\"_blank\">Inner Classes</a>",
+              "video": {
+                "youtube_id": "3IzKNplB_LU",
+                "china_cdn_id": "3IzKNplB_LU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 161184,
+          "key": "ff03badd-ce83-4050-b1e9-c32e094a3f64",
+          "title": "AsyncTask Callback Methods",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ff03badd-ce83-4050-b1e9-c32e094a3f64",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161283,
+              "key": "8927475292",
+              "title": "AsyncTask Callback Methods",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Design tip: Ideally, the content in your app loads immediately. If not, try to allow the user to interact with other parts of the app so they’re not sitting idle and watching a progress bar. If there isn’t anything else meaningful in your app for the user to be doing, the <a href=\"https://material.google.com/components/progress-activity.html#progress-activity-types-of-indicators?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">\nMaterial Design spec</a> offers guidelines on how to show progress for content that takes a long time to load.\n\n<a href=\"https://developer.android.com/reference/android/os/AsyncTask.html\" target=\"_blank\">AsyncTask Documentation </a>",
+              "user_state": {
+                "node_key": "8927475292",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "73s3KL1QiTs",
+                  "china_cdn_id": "73s3KL1QiTs.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "AsyncTask Callback Methods",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/DhJUfGXmesNFQbM436Pts-MHVRZz4VWfwp2jtDcLU2FnH6xE_tIsQL5jq8a4tUWhqEWchuNNWJ-nfgQMZw=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475292",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8971980784",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07538802660753881,
+                      "width": 0.21571072319201995,
+                      "x": 0.6937538965087282,
+                      "y": 0.39166435698447893
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.22069825436408977,
+                      "x": 0.691883572319202,
+                      "y": 0.4803561529933481
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.22069825436408977,
+                      "x": 0.692078397755611,
+                      "y": 0.5783328713968958
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.21820448877805487,
+                      "x": 0.693968204488778,
+                      "y": 0.6764828159645233
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text5",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.2793017456359102,
+                      "x": 0.3976192331670823,
+                      "y": 0.3901746119733925
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text6",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.27805486284289277,
+                      "x": 0.397482855361596,
+                      "y": 0.48316241685144123
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text7",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 3,
+                    "placement": {
+                      "height": 0.082039911308204,
+                      "width": 0.286783042394015,
+                      "x": 0.3946384039900249,
+                      "y": 0.5785060975609756
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text8",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 4,
+                    "placement": {
+                      "height": 0.08425720620842572,
+                      "width": 0.29052369077306733,
+                      "x": 0.3940928927680798,
+                      "y": 0.6784922394678492
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "0mrM4QW_5tM",
+                  "china_cdn_id": "0mrM4QW_5tM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161185,
+          "key": "4ce4b84d-66db-473a-9ddf-b4b81d499a60",
+          "title": "Review of Generics",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4ce4b84d-66db-473a-9ddf-b4b81d499a60",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 162567,
+              "key": "702cdc9b-fd91-4aa4-9db4-0ddeb2ef3933",
+              "title": "Review Of Generics",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "lHQ7TKa_JrU",
+                "china_cdn_id": "lHQ7TKa_JrU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 161186,
+          "key": "37bfe587-0bcb-4185-8df1-f54d9e6ecabf",
+          "title": "AsyncTask Generic Params",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "37bfe587-0bcb-4185-8df1-f54d9e6ecabf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161284,
+              "key": "8927475295",
+              "title": "AsyncTask Generic Parameters",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"http://developer.android.com/reference/android/os/AsyncTask.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">AsyncTask documentation</a>\n\n<a href=\"http://www.vogella.com/tutorials/AndroidBackgroundProcessing/article.html\" target=\"_blank\">Background processing with AsyncTask</a>",
+              "user_state": {
+                "node_key": "8927475295",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "yyBTehlr0lU",
+                  "china_cdn_id": "yyBTehlr0lU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "AsyncTask Generic Parameters",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/prIaP4QxjQhb1ThdoCWHfKlyWHptYwjCWn1RTn0UMYp3wdM2cSWVz9rQdTYy0wb5vRH2EJDPNv_hFR-WGg=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475295",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8973590914",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.09975062344139651,
+                      "x": 0.5795472256857855,
+                      "y": 0.3070260532150776
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07317073170731707,
+                      "width": 0.08977556109725686,
+                      "x": 0.6839152119700748,
+                      "y": 0.3080307649667406
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.09226932668329177,
+                      "x": 0.7792238154613467,
+                      "y": 0.3080654101995565
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "IVxgLW8fW-g",
+                  "china_cdn_id": "IVxgLW8fW-g.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161187,
+          "key": "821c8395-5804-40b4-a919-ab58773f1ab9",
+          "title": "Inner Classes",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "821c8395-5804-40b4-a919-ab58773f1ab9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161280,
+              "key": "3bae6fa5-4cc3-4602-9b48-b75d97397a3e",
+              "title": "Inner Classes",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "To check out the NetworkConnect app, you can <a href=\"https://github.com/googlesamples/android-NetworkConnect\" target=\"_blank\">download the code</a> from the developer site. Or within Android Studio, click on File > New > Import Sample and search for the “Network Connect” sample.\n\n<a href=\"http://code.tutsplus.com/tutorials/learn-java-for-android-development-inner-classes--mobile-3530?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Inner classes</a>.",
+              "video": {
+                "youtube_id": "pnB9LyXjhPg",
+                "china_cdn_id": "pnB9LyXjhPg.mp4"
+              }
+            },
+            {
+              "id": 468584,
+              "key": "5b7b7c84-244a-4b9b-93c3-20f140ef6e3b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "To check out the NetworkConnect app, you can <a href=\"https://github.com/googlesamples/android-NetworkConnect\" target=\"_blank\">download the code</a> from the developer site. Or within Android Studio, click on File > New > Import Sample and search for the “Network Connect” sample.\n\nTutorial on <a href=\"http://code.tutsplus.com/tutorials/learn-java-for-android-development-inner-classes--mobile-3530?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Inner classes</a>\n\n**Note:** In the video at 3:27, Chris mentions the  DownloadTask is declared as an inner class of the MainActivity. Since the recording of this video, the \"Network Connect\" sample code has been updated. The DownloadTask is now an inner class of the NetworkFragment; however, the logic he proceeds to discuss is still the same. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 161188,
+          "key": "35a1c5fb-e518-4a05-b64e-1d6cb6c5dc11",
+          "title": "Fix the \"Did You Feel It?\" App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "35a1c5fb-e518-4a05-b64e-1d6cb6c5dc11",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161285,
+              "key": "8927475298",
+              "title": "Fix The Did You Feel It App",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "Hint: If you get stuck, and need more detailed steps, refer to this list. But try the task on your own first! \n\n1. Create a subclass of AsyncTask as a private inner class in the MainActivity class.\nImplement the doInBackground() method to fetch the earthquake data and return the result.\nImplement the onPostExecute() method to update the UI based on our results.\n\n2. Create an instance of our inner class in the MainActivity onCreate() method and execute it.\n\n\nYou can find the code from the solution video <a href=\"https://github.com/udacity/ud843_DidYouFeelIt/commit/0a9e6c2338969c6ad0311f5b2b09ea3895a3f5fa\" target=\"_blank\">here</a>.",
+              "user_state": {
+                "node_key": "8927475298",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "FF0hpdjNzI0",
+                  "china_cdn_id": "FF0hpdjNzI0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Fix The Did You Feel It App",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/t1ObHRYGzQlZpPE0zaG3IMjKdDzDuC_DQE9yqoSslbPjWeA1pXHDPt5wMX_vvfxwy1SfBjESB_0V5RKPjh0=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475298",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8970300642",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.10095854114713217,
+                      "y": 0.6269054878048781
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "Check the solution in ***GitHub repository*** [here](https://github.com/udacity/ud843_DidYouFeelIt/commit/0a9e6c2338969c6ad0311f5b2b09ea3895a3f5fa).\n\n&nbsp;",
+                "video": {
+                  "youtube_id": "PtYldHqZVO4",
+                  "china_cdn_id": "PtYldHqZVO4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161189,
+          "key": "a2e5c520-7a8d-46bc-85b2-4f70f77bd3f4",
+          "title": "Handle Empty or Null Cases",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a2e5c520-7a8d-46bc-85b2-4f70f77bd3f4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161265,
+              "key": "ee13f490-6343-472a-8ff6-67b91008ce29",
+              "title": "Handle Empty or Null Cases",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "I’d like to point out that our code is currently written for the best case scenario. We assume that the EarthquakeAsyncTask is called with inputs that we expect and performs the network request without any errors.\n\n### What if…\n\n * A future teammate, who works on this app, changes the code and tries to execute the EarthquakeAsyncTask with 0 input parameters? Our app would crash because it assumes there is at least 1 String input to the task.\n * There’s an internal server error with the computers at USGS and the response cannot be parsed into an Event object? Our app would try to update the UI with an invalid or null Event object.\n\nWe try to future-proof our app so that we or any other developer who touches the code, won’t accidentally cause bugs or crashes in the app. In order to do this, we need to minimize the assumptions about the code that is written outside of the current class, outside of our current control. \n\nOur code becomes more robust if we can accept any inputs (0 inputs, 1 input, 2 inputs, etc..) or handle any unexpected behavior (server gives valid or invalid response), and handle it gracefully without crashing the app.\n\nTo this end, please make the following modifications to the “Did You Feel It?” app to handle the empty or null cases in the EarthquakeAsyncTask.\n\nIn the doInBackground method, check if the urls array has at least 1 entry and that the first entry is not null. If the array is length 0 or the first entry is null, then bail out of the method early by returning null. We need to return null because an object is expected as the return value. If there 1 valid String URL, then proceed with fetching the data.\n\n      protected Event doInBackground(String... urls) {\n          // Don't perform the request if there are no URLs, or the first URL is null.\n          if (urls.length < 1 || urls[0] == null) {\n             return null;\n          }\n\n          Event result = Utils.fetchEarthquakeData(urls[0]);\n          return result;\n      }\n\nIn the onPostExecute method, return early if there is no earthquake result.\n\n      protected void onPostExecute(Event result) {\n         // If there is no result, do nothing.\n         if (result == null) {\n             return;\n         }\n      \n         updateUi(result);\n      }\n\nHere’s the complete EarthquakeAsyncTask class declaration.\n\n      /**\n      * {@link AsyncTask} to perform the network request on a background thread, and then\n      * update the UI with the first earthquake in the response.\n      */\n      private class EarthquakeAsyncTask extends AsyncTask<String, Void, Event> {\n      \n         /**\n          * This method is invoked (or called) on a background thread, so we can perform\n          * long-running operations like making a network request.\n          *\n          * It is NOT okay to update the UI from a background thread, so we just return an\n          * {@link Event} object as the result.\n          */\n         protected Event doInBackground(String... urls) {\n             // Don't perform the request if there are no URLs, or the first URL is null.\n             if (urls.length < 1 || urls[0] == null) {\n                 return null;\n             }\n   \n             Event result = Utils.fetchEarthquakeData(urls[0]);\n             return result;\n         }\n\n         /**\n          * This method is invoked on the main UI thread after the background work has been\n          * completed.\n          *\n          * It IS okay to modify the UI within this method. We take the {@link Event} object\n          * (which was returned from the doInBackground() method) and update the views on the screen.\n          */\n         protected void onPostExecute(Event result) {\n             // If there is no result, do nothing.\n             if (result == null) {\n                 return;\n             }\n\n             updateUi(result);\n         }\n      }\n\nWhen you compile and run the app, it should still look the same.\n\n<img src=\"https://lh3.googleusercontent.com/udN1XZRa5gERbIKlkq5x_kGZkPk6rpbrSIBNNrRYR-G8PSMLzcowZ_Vet-h8q9DuSrVrc14lfB4puSpAL-nH=s0#w=1440&h=2560\" width=\"200\">\n\nTo browse the complete and final state of the “Did You Feel It?” app on GitHub, click <a href=\"https://github.com/udacity/ud843_DidYouFeelIt/tree/solution\" target=\"_blank\">here</a>. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 161190,
+          "key": "e357b4b3-36d7-4fa7-86d3-29d648b735db",
+          "title": "Plan Changes to Quake Report App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e357b4b3-36d7-4fa7-86d3-29d648b735db",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161286,
+              "key": "8927475301",
+              "title": "Plan Changes to Quake Report App",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8927475301",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "q33cwvNUlGY",
+                  "china_cdn_id": "q33cwvNUlGY.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Plan Changes to Quake Report App",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/nSg9UuEBcgtC4kkQGq2UTFVr-u92JVXGr5e-q0z2gzcV7FECDrQoXH7kqihDQhUE8MHBWDH5cRmHON13Js1N=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475301",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8972150527",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.4124168514412417,
+                      "width": 0.8678304239401496,
+                      "x": 0.05696695760598504,
+                      "y": 0.374064578713969
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "DuPTqNFHaAM",
+                  "china_cdn_id": "DuPTqNFHaAM.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161191,
+          "key": "b9d67793-a3d2-43f4-91cc-83a7cb273238",
+          "title": "AsyncTask Generic Params in Quake Report App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b9d67793-a3d2-43f4-91cc-83a7cb273238",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161287,
+              "key": "8927475304",
+              "title": "AsyncTask Generic Parameters in Quake Report App",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8927475304",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "h3YubOrm0Uo",
+                  "china_cdn_id": "h3YubOrm0Uo.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "AsyncTask Generic Parameters in Quake Re",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/pFcEq-QEhl0FpFDkjB_lFXCYGxleWhzh-VOzTCmRogkL39BJWk_8lPpL5hG1LGIPokWzqO8-YqHquIgSlfoL=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475304",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8970380529",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.1,
+                      "width": 0.2,
+                      "x": 0.3907029301745636,
+                      "y": 0.470690133037694
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.0975609756097561,
+                      "width": 0.2144638403990025,
+                      "x": 0.6043485037406484,
+                      "y": 0.4723877494456763
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Ri8vhqNB3WU",
+                  "china_cdn_id": "Ri8vhqNB3WU.mp4"
+                }
+              }
+            },
+            {
+              "id": 161288,
+              "key": "e3d444c3-77e0-4e00-8de6-ea3583545b19",
+              "title": "List vs ArrayList",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "So lately we've seen a lot of usage of List<E> and ArrayList<E>. They both appear to be used in a similar way -- so what's the difference here?\n\nThe fundamental difference here is pretty simple: List<E> is an interface, whereas ArrayList<E> is a concrete class. You CANNOT create an object instance of List<E> because it’s an interface and its methods are not implemented. However, you CAN create an object instance of ArrayList<E> and specify a generic parameter for E, because it is a concrete class.\n\nFor example: To define an instance of an ArrayList using the Earthquake data type, you could write:\n\n      ArrayList<Earthquake> earthquakeList = new ArrayList<Earthquake>();\n\nThat would work fine. However, you can also store that object in a variable of data type List<E>:\n\n      List<Earthquake> earthquakeList = new ArrayList<Earthquake>();\n\nThe reason why you'd ever want to do such a thing is for flexibility: \n\nAnother similar type of class to ArrayList<E> is LinkedList<E>, which also implements the List interface. Both classes have similar methods and implementation strategies, but somewhat different internal details and memory implications. If for some reason your app would benefit from using LinkedList<E> instead of ArrayList<E>, then it would be easy to just update the instance where it is defined, and then all of your List code should still work! Here's an example:\n\n      List<Earthquake> earthquakeList = new ArrayList<Earthquake>();\n      earthquakeList.add(foo);\n\nBecomes:\n\n      List<Earthquake> earthquakeList = new LinkedList<Earthquake>();\n      earthquakeList.add(foo);\n\nAnd it still works!\n\nIn all cases, the best practice is to use List<Earthquake> whenever you need a list object (whether ArrayList or LinkedList), so you can keep your code flexible.\n\nTo learn more about this, please read the documentation for the List interface, and check out these great discussions on StackOverflow on <a href=\"http://stackoverflow.com/questions/2279030/type-list-vs-type-arraylist-in-java\" target=\"_blank\">when to use List<E></a> and <a href=\"http://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist\" target=\"_blank\">when you might use ArrayList<E> vs. LinkedList<E></a>. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 161192,
+          "key": "c9814667-dcd1-4a70-97df-5a118806827b",
+          "title": "Networking in Quake Report App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c9814667-dcd1-4a70-97df-5a118806827b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 352904,
+              "key": "01d46102-809a-4fed-9708-7791e869b551",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Time to roll up your sleeves and start coding!\n\nModify the Quake Report app to make the network request to this URL. This query will provide you with the top 10 most recent earthquakes in the world with at least a magnitude of 6.\nhttps://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10\n\nWhen you receive the response, parse the JSON and then update the list in the app.\n\n*Tip #1:* Try to compile and run the app as often as you can, as you make these incremental changes. Otherwise, you may have a lot of errors to fix at the very end.\n\n*Tip #2:* Remember that you can refer back to the <a href=\"https://github.com/udacity/ud843_Soonami/tree/solution\" target=\"_blank\">“Soonami”</a> and <a href=\"https://github.com/udacity/ud843_DidYouFeelIt/tree/solution\" target=\"_blank\">“Did You Feel it”</a> sample apps. \n\nIf you need more debugging tips, check out <a href=\"https://discussions.udacity.com/t/networking-in-the-quake-report-app/180298\" target=\"_blank\">this discussion forum thread</a> where other students post advice on how to get through this long coding task.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 352905,
+              "key": "695c6461-bc13-48c7-9c90-777f0c617c7c",
+              "title": "Networking in Quake Report App",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "695c6461-bc13-48c7-9c90-777f0c617c7c",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Modify the app to make a network request to USGS to fetch the 10 most recent earthquakes of magnitude 6 or higher, using this URL: https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10",
+                "answers": [
+                  {
+                    "id": "a1501299951488",
+                    "text": "I did it!",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 352906,
+              "key": "52c87266-4415-4bdc-942e-becee1eea37b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Networking in Quake Report App - Solution\n\n### Setup\n\n\n * First declare the internet permission in the AndroidManifest.xml file so that the app can access the network.\n\n*In AndroidManifest.xml:*\n\n     <uses-permission android:name=\"android.permission.INTERNET\"/>\n\n *  Then store the String URL that we gave you, as a static final constant in the EarthquakeActivity file. We use the “private” access modifier on the variable because no other classes except for the EarthquakeActivity that need to reference it.\n\n*In EarthquakeActivity.java:*\n\n     /** URL for earthquake data from the USGS dataset */\n     private static final String USGS_REQUEST_URL =\n            \"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=6&limit=10\";\n\n * Based on the solution in the last quiz, we define the skeleton (or bare-bones outline) of the EarthquakeAsyncTask as an inner class to the EarthquakeActivity class.\n\n*In EarthquakeActivity.java:*\n\n     private class EarthquakeAsyncTask extends AsyncTask<String, Void, List<Earthquake>> {\n\n        @Override\n        protected List<Earthquake> doInBackground(String... urls) {\n            \n        }\n     \n        @Override\n        protected void onPostExecute(List<Earthquake> data) {\n\n        }\n     }\n\nIn the EarthquakeAsyncTask doInBackground() method, we need to execute the network request. There’s no code in our app that does that yet.\n\n *  Open up the QueryUtils.java file. Add in the following new helper methods. These are basically copied and pasted from the “Soonami” and “Did You Feel It?” apps that we used earlier.\n\n*In QueryUtils.java:*\n\n     /**\n     * Returns new URL object from the given string URL.\n     */\n     private static URL createUrl(String stringUrl) {\n        URL url = null;\n        try {\n            url = new URL(stringUrl);\n        } catch (MalformedURLException e) {\n            Log.e(LOG_TAG, \"Problem building the URL \", e);\n        }\n        return url;\n     }\n\n     /**\n     * Make an HTTP request to the given URL and return a String as the response.\n     */\n     private static String makeHttpRequest(URL url) throws IOException {\n        String jsonResponse = \"\";\n\n        // If the URL is null, then return early.\n        if (url == null) {\n            return jsonResponse;\n        }\n\n        HttpURLConnection urlConnection = null;\n        InputStream inputStream = null;\n        try {\n            urlConnection = (HttpURLConnection) url.openConnection();\n            urlConnection.setReadTimeout(10000 /* milliseconds */);\n            urlConnection.setConnectTimeout(15000 /* milliseconds */);\n            urlConnection.setRequestMethod(\"GET\");\n            urlConnection.connect();\n     \n            // If the request was successful (response code 200),\n            // then read the input stream and parse the response.\n            if (urlConnection.getResponseCode() == 200) {\n                inputStream = urlConnection.getInputStream();\n                jsonResponse = readFromStream(inputStream);\n            } else {\n                Log.e(LOG_TAG, \"Error response code: \" + urlConnection.getResponseCode());\n            }\n        } catch (IOException e) {\n            Log.e(LOG_TAG, \"Problem retrieving the earthquake JSON results.\", e);\n        } finally {\n            if (urlConnection != null) {\n                urlConnection.disconnect();\n            }\n            if (inputStream != null) {\n                // Closing the input stream could throw an IOException, which is why\n                // the makeHttpRequest(URL url) method signature specifies than an IOException\n                // could be thrown.\n                inputStream.close();\n            }\n        }\n        return jsonResponse;\n     }\n\n     /**\n     * Convert the {@link InputStream} into a String which contains the\n     * whole JSON response from the server.\n     */\n     private static String readFromStream(InputStream inputStream) throws IOException {\n        StringBuilder output = new StringBuilder();\n        if (inputStream != null) {\n            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName(\"UTF-8\"));\n            BufferedReader reader = new BufferedReader(inputStreamReader);\n            String line = reader.readLine();\n            while (line != null) {\n                output.append(line);\n                line = reader.readLine();\n            }\n        }\n        return output.toString();\n     }\n\n *  Modify the extractEarthquakes() method that handles JSON parsing. I renamed it to extractFeatureFromJson() and to take a JSON response String as input. Instead of hardcoding the extractFeatureFromJson() method to only be able to parse the hardcoded SAMPLE_JSON_RESPONSE String, this method becomes more reusable in different contexts if we accept a String input.\n\n*In QueryUtils.java:*\n\n     /**\n     * Return a list of {@link Earthquake} objects that has been built up from\n     * parsing the given JSON response.\n     */\n     private static List<Earthquake> extractFeatureFromJson(String earthquakeJSON) {\n        // If the JSON string is empty or null, then return early.\n        if (TextUtils.isEmpty(earthquakeJSON)) {\n            return null;\n        }\n\n        // Create an empty ArrayList that we can start adding earthquakes to\n        List<Earthquake> earthquakes = new ArrayList<>();\n\n        // Try to parse the JSON response string. If there's a problem with the way the JSON\n        // is formatted, a JSONException exception object will be thrown.\n        // Catch the exception so the app doesn't crash, and print the error message to the logs.\n        try {\n\n            // Create a JSONObject from the JSON response string\n            JSONObject baseJsonResponse = new JSONObject(earthquakeJSON);\n\n            // Extract the JSONArray associated with the key called \"features\",\n            // which represents a list of features (or earthquakes).\n            JSONArray earthquakeArray = baseJsonResponse.getJSONArray(\"features\");\n\n            // For each earthquake in the earthquakeArray, create an {@link Earthquake} object\n            for (int i = 0; i < earthquakeArray.length(); i++) {\n\n                // Get a single earthquake at position i within the list of earthquakes\n                JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);\n\n                // For a given earthquake, extract the JSONObject associated with the\n                // key called \"properties\", which represents a list of all properties\n                // for that earthquake.\n                JSONObject properties = currentEarthquake.getJSONObject(\"properties\");\n\n                // Extract the value for the key called \"mag\"\n                double magnitude = properties.getDouble(\"mag\");\n\n                // Extract the value for the key called \"place\"\n                String location = properties.getString(\"place\");\n\n                // Extract the value for the key called \"time\"\n                long time = properties.getLong(\"time\");\n\n                // Extract the value for the key called \"url\"\n                String url = properties.getString(\"url\");\n\n                // Create a new {@link Earthquake} object with the magnitude, location, time,\n                // and url from the JSON response.\n                Earthquake earthquake = new Earthquake(magnitude, location, time, url);\n\n                // Add the new {@link Earthquake} to the list of earthquakes.\n                earthquakes.add(earthquake);\n            }\n\n        } catch (JSONException e) {\n            // If an error is thrown when executing any of the above statements in the \"try\" block,\n            // catch the exception here, so the app doesn't crash. Print a log message\n            // with the message from the exception.\n            Log.e(\"QueryUtils\", \"Problem parsing the earthquake JSON results\", e);\n        }\n\n        // Return the list of earthquakes\n        return earthquakes;\n     }\n\n * Add in the fetchEarthquakeData() helper method that ties all the steps together - creating a URL, sending the request, processing the response. Since this is the only “public” QueryUtils method that the EarthquakeAsyncTask needs to interact with, make all other helper methods in QueryUtils “private”. \n\n*In QueryUtils.java:*\n\n     /**\n     * Query the USGS dataset and return a list of {@link Earthquake} objects.\n     */\n     public static List<Earthquake> fetchEarthquakeData(String requestUrl) {\n        // Create URL object\n        URL url = createUrl(requestUrl);\n\n        // Perform HTTP request to the URL and receive a JSON response back\n        String jsonResponse = null;\n        try {\n            jsonResponse = makeHttpRequest(url);\n        } catch (IOException e) {\n            Log.e(LOG_TAG, \"Problem making the HTTP request.\", e);\n        }\n\n        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s\n        List<Earthquake> earthquakes = extractFeatureFromJson(jsonResponse);\n\n        // Return the list of {@link Earthquake}s\n        return earthquakes;\n     }\n\n\n *  When we get to the onPostExecute() method, we need to update the ListView. The only way to update the contents of the list is to update the data set within the EarthquakeAdapter. To access and modify the instance of the EarthquakeAdapter, we need to make it a global variable in the EarthquakeActivity. \n\n*In MainActivity.java:*\n\n     /** Adapter for the list of earthquakes */\n     private EarthquakeAdapter mAdapter;\n\n *  Then we update all references to the adapter to use the mAdapter variable name. \n\n\n*In MainActivity.java:*\n\n     @Override\n     protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.earthquake_activity);\n\n        // Find a reference to the {@link ListView} in the layout\n        ListView earthquakeListView = (ListView) findViewById(R.id.list);\n     \n        // Create a new adapter that takes an empty list of earthquakes as input\n        mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());\n\n        // Set the adapter on the {@link ListView}\n        // so the list can be populated in the user interface\n        earthquakeListView.setAdapter(mAdapter);\n\n        // Set an item click listener on the ListView, which sends an intent to a web browser\n        // to open a website with more information about the selected earthquake.\n        earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {\n            @Override\n            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {\n                // Find the current earthquake that was clicked on\n                Earthquake currentEarthquake = mAdapter.getItem(position);\n\n                // Convert the String URL into a URI object (to pass into the Intent constructor)\n                Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());\n\n                // Create a new intent to view the earthquake URI\n                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);\n\n                // Send the intent to launch a new activity\n                startActivity(websiteIntent);\n            }\n        });\n     }\n\n *  Now we can reference the adapter in the EarthquakeAsyncTask onPostExecute() method.\n\n*In EarthquakeAsyncTask (within EarthquakeActivity):*\n\n\n\n     @Override\n     protected void onPostExecute(List<Earthquake> data) {\n            // Clear the adapter of previous earthquake data\n            mAdapter.clear();\n\n            // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n            // data set. This will trigger the ListView to update.\n            if (data != null && !data.isEmpty()) {\n                mAdapter.addAll(data);\n            }\n        }\n\n\n\n *  Here’s the complete EarthquakeAsyncTask class.\n\n\n\n          /**\n          * {@link AsyncTask} to perform the network request on a background thread, and then\n          * update the UI with the list of earthquakes in the response.\n          *\n          * AsyncTask has three generic parameters: the input type, a type used for progress updates, and\n          * an output type. Our task will take a String URL, and return an Earthquake. We won't do\n          * progress updates, so the second generic is just Void.\n          *\n          * We'll only override two of the methods of AsyncTask: doInBackground() and onPostExecute().\n          * The doInBackground() method runs on a background thread, so it can run long-running code\n          * (like network activity), without interfering with the responsiveness of the app.\n          * Then onPostExecute() is passed the result of doInBackground() method, but runs on the\n          * UI thread, so it can use the produced data to update the UI.\n          */\n          private class EarthquakeAsyncTask extends AsyncTask<String, Void, List<Earthquake>> {\n\n             /**\n              * This method runs on a background thread and performs the network request.\n              * We should not update the UI from a background thread, so we return a list of\n              * {@link Earthquake}s as the result.\n              */\n             @Override\n             protected List<Earthquake> doInBackground(String... urls) {\n                // Don't perform the request if there are no URLs, or the first URL is null.\n                if (urls.length < 1 || urls[0] == null) {\n                    return null;\n                }\n\n                 List<Earthquake> result = QueryUtils.fetchEarthquakeData(urls[0]);\n                 return result;\n             }\n          \n             /**\n              * This method runs on the main UI thread after the background work has been\n              * completed. This method receives as input, the return value from the doInBackground()\n              * method. First we clear out the adapter, to get rid of earthquake data from a previous\n              * query to USGS. Then we update the adapter with the new list of earthquakes,\n              * which will trigger the ListView to re-populate its list items.\n              */\n             @Override\n             protected void onPostExecute(List<Earthquake> data) {\n                 // Clear the adapter of previous earthquake data\n                 mAdapter.clear();\n     \n                 // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n                 // data set. This will trigger the ListView to update.\n                 if (data != null && !data.isEmpty()) {\n                     mAdapter.addAll(data);\n                 }\n             }\n          }\n\n *  We can remove the code that called QueryUtils.extractEarthquakes() to get a list of earthquakes from the hardcoded response. Instead we are going to initialize the adapter with an empty list.\n\n\n\n          @Override\n          protected void onCreate(Bundle savedInstanceState) {\n             super.onCreate(savedInstanceState);\n             setContentView(R.layout.earthquake_activity);\n\n             // Find a reference to the {@link ListView} in the layout\n             ListView earthquakeListView = (ListView) findViewById(R.id.list);\n\n             // Create a new adapter that takes an empty list of earthquakes as input\n             mAdapter = new EarthquakeAdapter(this, new ArrayList<Earthquake>());\n\n             // Set the adapter on the {@link ListView}\n             // so the list can be populated in the user interface\n             earthquakeListView.setAdapter(mAdapter);\n   \n              ...\n          }\n\n *  Now the task can be initialized and executed, passing in the request URL constant. \n\n*In EarthquakeActivity.java:*\n\n\n\n     @Override\n     protected void onCreate(Bundle savedInstanceState) {\n        \n        ...\n     \n        // Start the AsyncTask to fetch the earthquake data\n        EarthquakeAsyncTask task = new EarthquakeAsyncTask();\n        task.execute(USGS_REQUEST_URL);\n     }\n\n *  Don’t forget to delete the SAMPLE_JSON_RESPONSE constant in the QueryUtils class.\n\n *  The app should look like this! \n\n<img src=\"//lh3.googleusercontent.com/WL4xpklQIPnAvY51sunUpRGD2I0wzfGlkTRKWzAQK2KDzKFU5Dna9UuKLZO_oMKkdVzg01va7QwLJhbc1LU=s0#w=1440&h=2560\" width=\"200\" />\n\n\nIf not enough earthquakes show up in that response, try this URL instead:\nhttps://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=10\n\nIf you want to see the code changes in more detail, see the code diff in this <a href=\"https://github.com/udacity/ud843-QuakeReport/commit/14541da929b771249ea8209698d324b61bbeee7e\" target=\"_blank\">GitHub commit</a>. Instead of the “Unified” view, click on the “Split” view to see the before-and-after comparison of the files. The latter view may make it easier for you to see the changes. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 161193,
+          "key": "17de5050-80a2-498c-b92e-ae9c9474b3af",
+          "title": "Limitations of AsyncTask",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "17de5050-80a2-498c-b92e-ae9c9474b3af",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161291,
+              "key": "8927475307",
+              "title": "Limitations of AsyncTask",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://www.youtube.com/watch?v=s4eAtMHU5gI&index=8&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE\" target=\"_blank\">Android Performance Patterns Video</a>",
+              "user_state": {
+                "node_key": "8927475307",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "jrntJPyumF4",
+                  "china_cdn_id": "jrntJPyumF4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Limitations of AsyncTask",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/vnh5GepBhmbA_dYewJguDnJSBWhpLHjiOGswHFHHOteBWnkHFV8o7FgqAM1TifBI6iX75usjbzu0Kj04BlEK=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475307",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8974990290",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.3877805486284289,
+                      "x": 0.07169576059850374,
+                      "y": 0.5365853658536586
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "yjdGnH5FTWQ",
+                  "china_cdn_id": "yjdGnH5FTWQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161194,
+          "key": "21b01e68-7e85-4ef5-b25b-2cc10dacb8e6",
+          "title": "Intro to Loaders, Part 1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "21b01e68-7e85-4ef5-b25b-2cc10dacb8e6",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161293,
+              "key": "8927475310",
+              "title": "Intro to Loaders Part One",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**As a hint, here are possible answer choices:**\n\n* onLoaderReset()\n\n* onCreateLoader() \n\n* LoaderManager.LoaderCallbacks\n\n* LoaderManager\n\n* onLoadFinished()\n\n* getLoaderManager().initLoader(0, null, this);\n\n**For more info, check here:**\n\n* <a href=\"https://developer.android.com/guide/components/loaders.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Loaders Developer Guide</a>\n\n* <a href=\"https://developer.android.com/reference/android/app/LoaderManager.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">LoaderManager</a>\n\n* <a href=\"https://developer.android.com/reference/android/app/LoaderManager.LoaderCallbacks.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">LoaderCallbacks</a>",
+              "user_state": {
+                "node_key": "8927475310",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "5THN9QTCzVU",
+                  "china_cdn_id": "5THN9QTCzVU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Intro to Loaders Part One",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/TQCqKxBefh_aI-6gsEC6TMJ7gR0I_6_Zng_tIXdYpIi33fS2UpG7tnbDMlwkeZhzXUtI9WbNbLAKGRsZg9U=s0#w=1737&h=859",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475310",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8976570805",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.18329177057356608,
+                      "x": 0,
+                      "y": 0.19293930155210642
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.3428927680798005,
+                      "x": 0.5294576059850374,
+                      "y": 0.38411169623059865
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.1970074812967581,
+                      "x": 0.015819825436408978,
+                      "y": 0.5573032150776053
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.20074812967581046,
+                      "x": 0.012702618453865337,
+                      "y": 0.6219512195121951
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text5",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.20074812967581046,
+                      "x": 0.012780548628428928,
+                      "y": 0.6905487804878049
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text6",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": 2,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.3229426433915212,
+                      "x": 0.6771742518703242,
+                      "y": 0.9289079822616408
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "s_rm1O19rBg",
+                  "china_cdn_id": "s_rm1O19rBg.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161195,
+          "key": "d4d90576-4c2d-4672-b4a4-9a91e300c326",
+          "title": "Intro to Loaders, Part 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d4d90576-4c2d-4672-b4a4-9a91e300c326",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161294,
+              "key": "8927475313",
+              "title": "Intro to Loaders Part Two",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**As a hint, here are possible answer choices:**\n\n- AsyncTaskLoader\n- List<Earthquake>\n- loadInBackground()\n\n**If you get stuck, take a look at these resources: **\n\n- <a href=\"http://www.concretepage.com/android/android-asynctaskloader-example-with-listview-and-baseadapter\" target=\"_blank\">AsyncTaskLoader example</a>\n- <a href=\"https://developer.android.com/guide/components/loaders.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Loaders Developer Guide</a>\n- <a href=\"https://developer.android.com/reference/android/app/LoaderManager.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">LoaderManager</a>\n- <a href=\"https://developer.android.com/reference/android/app/LoaderManager.LoaderCallbacks.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">LoaderManager.LoaderCallbacks</a>",
+              "user_state": {
+                "node_key": "8927475313",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Jc5S-dbL_uM",
+                  "china_cdn_id": "Jc5S-dbL_uM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Intro to Loaders Part Two",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/8qwnAY1hjDM2mrPCzj4lZ0bpePvsH8i5nZDeBQZr47ih8smt0eCmDSOjFlGeb4HvxmDh9TdMiQXFnPjSow=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475313",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8971150380",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.17830423940149626,
+                      "x": 0.05669420199501247,
+                      "y": 0.23375138580931265
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.18079800498753118,
+                      "x": 0.2569552680798005,
+                      "y": 0.4822269955654102
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.18703241895261846,
+                      "x": 0.05564214463840399,
+                      "y": 0.6248267738359202
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "0P2Ku767m8c",
+                  "china_cdn_id": "0P2Ku767m8c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161196,
+          "key": "0f0a6b15-426a-480e-b9ad-f008198685fe",
+          "title": "Switch to Using a Loader",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f0a6b15-426a-480e-b9ad-f008198685fe",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161295,
+              "key": "8927475316",
+              "title": "Switch to Using a Loader",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "In case you’re wondering, see this definition of <a href=\"https://en.wikipedia.org/wiki/Code_refactoring\" target=\"_blank\">code refactoring</a>.\n\n**Hints:**\n\n* <a href=\"https://gist.github.com/udacityandroid/ee8fe10c04ec2d912c509ee3fb287149\" target=\"_blank\">Code gist</a> with a skeleton of the solution code.\n\n* Remember to import the right Loader class. It should be `import android.content.AsyncTaskLoader;` instead of `import android.support.v4.content.AsyncTaskLoader;`.",
+              "user_state": {
+                "node_key": "8927475316",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "HEApdgSS9mg",
+                  "china_cdn_id": "HEApdgSS9mg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Switch to Using a Loader",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/1bieajQnPOJo0WAgnIh1bEeAKCVH2Yr3VxnLt3GBQd6IF_92HqI8BFScFfxEWUIpf3HKnEQqfDW4lOi0SvU=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475316",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8972060632",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06926044264339153,
+                      "y": 0.4318181818181818
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06437032418952618,
+                      "y": 0.5340216186252772
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06614323566084788,
+                      "y": 0.6383384146341463
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "To define the EarthquakeLoader class, we extend AsyncTaskLoader and specify List<Earthquake> as the generic parameter, which explains what type of data is expected to be loaded. In this case, the loader is loading a list of Earthquake objects. Then we take a String URL in the constructor, and in loadInBackground(), we'll do the exact same operations as in doInBackground back in EarthquakeAsyncTask. Important: Notice that we also override the onStartLoading() method to call forceLoad() which is a required step to actually trigger the loadInBackground() method to execute. \n\nIn EarthquakeLoader.java:\n\n     package com.example.android.quakereport;\n\n     import android.content.AsyncTaskLoader;\n     import android.content.Context;\n\n     import java.util.List;\n\n     /**\n     * Loads a list of earthquakes by using an AsyncTask to perform the\n     * network request to the given URL.\n     */\n     public class EarthquakeLoader extends AsyncTaskLoader<List<Earthquake>> {\n     \n        /** Tag for log messages */\n        private static final String LOG_TAG = EarthquakeLoader.class.getName();\n\n        /** Query URL */\n        private String mUrl;\n\n        /**\n         * Constructs a new {@link EarthquakeLoader}.\n         *\n         * @param context of the activity\n         * @param url to load data from\n         */\n        public EarthquakeLoader(Context context, String url) {\n            super(context);\n            mUrl = url;\n        }\n\n        @Override\n        protected void onStartLoading() {\n            forceLoad();\n        }\n\n        /**\n         * This is on a background thread.\n         */\n        @Override\n        public List<Earthquake> loadInBackground() {\n            if (mUrl == null) {\n                return null;\n            }\n\n            // Perform the network request, parse the response, and extract a list of earthquakes.\n            List<Earthquake> earthquakes = QueryUtils.fetchEarthquakeData(mUrl);\n            return earthquakes;\n        }\n     }\n\nImplementing the LoaderCallbacks in our activity is a little more complex. First we need to say that EarthquakeActivity implements the LoaderCallbacks interface, along with a generic parameter specifying what the loader will return (in this case an Earthquake).\n\nIn EarthquakeActivity.java:\n\n     public class EarthquakeActivity extends AppCompatActivity implements LoaderCallbacks<List<Earthquake>> {\n\nBy the way, remember to import the following statements so that we can reference these classes in the code.\n\n     import android.app.LoaderManager;\n     import android.app.LoaderManager.LoaderCallbacks;\n     import android.content.Loader;\n\nFirst we need to specify an ID for our loader. This is only really relevant if we were using multiple loaders in the same activity. We can choose any integer number, so we choose the number 1.\n\n     /**\n     * Constant value for the earthquake loader ID. We can choose any integer.\n     * This really only comes into play if you're using multiple loaders.\n     */\n     private static final int EARTHQUAKE_LOADER_ID = 1;\n\nThen we need to override the three methods specified in the LoaderCallbacks interface. We need onCreateLoader(), for when the LoaderManager has determined that the loader with our specified ID isn't running, so we should create a new one.\n\n     @Override\n     public Loader<List<Earthquake>> onCreateLoader(int i, Bundle bundle) {\n        // Create a new loader for the given URL\n        return new EarthquakeLoader(this, USGS_REQUEST_URL);\n     }\n\nWe need onLoadFinished(), where we'll do exactly what we did in onPostExecute(), and use the earthquake data to update our UI - by updating the dataset in the adapter.\n\n     @Override\n     public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n        // Clear the adapter of previous earthquake data\n        mAdapter.clear();\n     \n        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n        // data set. This will trigger the ListView to update.\n        if (earthquakes != null && !earthquakes.isEmpty()) {\n            mAdapter.addAll(earthquakes);\n        }\n     }\n\nAnd we need onLoaderReset(), we're we're being informed that the data from our loader is no longer valid. This isn't actually a case that's going to come up with our simple loader, but the correct thing to do is to remove all the earthquake data from our UI by clearing out the adapter’s data set.\n\n     @Override\n     public void onLoaderReset(Loader<List<Earthquake>> loader) {\n        // Loader reset, so we can clear out our existing data.\n        mAdapter.clear();\n     }\n\nFinally, to retrieve an earthquake, we need to get the loader manager and tell the loader manager to initialize the loader with the specified ID, the second argument allows us to pass a bundle of additional information, which we'll skip. The third argument is what object should receive the LoaderCallbacks (and therefore, the data when the load is complete!) - which will be this activity. This code goes inside the onCreate() method of the EarthquakeActivity, so that the loader can be initialized as soon as the app opens.\n\n     @Override\n     protected void onCreate(Bundle savedInstanceState) {\n    \n        …\n\n        // Get a reference to the LoaderManager, in order to interact with loaders.\n        LoaderManager loaderManager = getLoaderManager();\n\n        // Initialize the loader. Pass in the int ID constant defined above and pass in null for\n        // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid\n        // because this activity implements the LoaderCallbacks interface).\n        loaderManager.initLoader(EARTHQUAKE_LOADER_ID, null, this);\n     }\n\nIt’s now safe to delete the EarthquakeAsyncTask class that was declared within the EarthquakeActivity. You should have also removed the code to create and execute the task within the activity’s onCreate() method. Delete the AsyncTask import statement at the top of the file too. \n\nWhen you run the app on your device, there should be no errors, and you should see the same list of earthquakes as before - except your code underneath is a lot more robust!\n\nTo see the full code difference, take a look at <a href=\"https://github.com/udacity/ud843-QuakeReport/commit/78e07dce2ab5ed3a7df2b254b853a7cc7ad0b0e8\" target=\"_blank\">this GitHub code checkpoint</a>. ",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161197,
+          "key": "99bb2d10-0683-4ee5-a6d6-eebd1e35b9a2",
+          "title": "Verify Loader Behavior",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "99bb2d10-0683-4ee5-a6d6-eebd1e35b9a2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161297,
+              "key": "8927475318",
+              "title": "Verify Loader Behavior",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "When your Quake Report app has log messages added throughout the code, test out the following scenarios:\n\n* Rotate the device\n* Go to the home screen and return to app\n* Press back button\n* Open Recent tasks\n* Switch to different app\n*  Return to app\n* Come up with your own scenarios!",
+              "user_state": {
+                "node_key": "8927475318",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "-7WodCTJmzw",
+                  "china_cdn_id": "-7WodCTJmzw.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Verify Loader Behavior",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/riX2c55Zw9GqQQzt0HjVeZVGUV2ZmUgFtqNAi7F92w8vz-mZAuyglPkE8d-nVwysaO6clx5nEGi8tVk95X0=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475318",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8975920540",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07678070448877805,
+                      "y": 0.7413040465631929
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "OUqjxKxtDLQ",
+                  "china_cdn_id": "OUqjxKxtDLQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161198,
+          "key": "215a662c-3449-4655-b1fd-c0f8fa2b1141",
+          "title": "Empty State of the List",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "215a662c-3449-4655-b1fd-c0f8fa2b1141",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161298,
+              "key": "8927475321",
+              "title": "Empty State of the List",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Optional:** Do you know of an Android app that tries to make the empty state be a pleasant user experience? Share a screenshot in the discussion forum.\n\nListView <a href=\"https://developer.android.com/reference/android/widget/AdapterView.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#setEmptyView(android.view.View)\" target=\"_blank\">setEmptyView()</a> method.\n\nMaterial Design guidelines on <a href=\"https://material.google.com/patterns/empty-states.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">empty states</a>.",
+              "user_state": {
+                "node_key": "8927475321",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "YxYEFBzpV54",
+                  "china_cdn_id": "YxYEFBzpV54.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Empty State of the List",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/GAcavOiISq_vEY3a-wv5qJfhpMKJX5iCKEMPB9C04fJj8uksp2eRhAO7hqxHOetSTbtARDV9gbh7UIzS1A=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475321",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8974030337",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07395573566084788,
+                      "y": 0.21192488913525498
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07736518079800499,
+                      "y": 0.41058065410199557
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.08024859725685786,
+                      "y": 0.6228173503325942
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "Here are the changes you need to make in order to show the empty view.\n\nFor the first task, we modify the earthquake_activity layout. Instead of a single ListView, we add a parent RelativeLayout, because it allows children views to overlap each other. The first child is the ListView, with width/height match parent, to take up the full screen. The second child is a TextView, which will be the empty view. The TextView has height and width wrap_content, and we center it vertically and horizontally within the parent with the attribute \n\n      “android:layout_centerInParent” = true. \n\nIn earthquake_activity.xml:\n\n      <RelativeLayout\n         xmlns:android=\"http://schemas.android.com/apk/res/android\"\n         android:layout_width=\"match_parent\"\n         android:layout_height=\"match_parent\">\n\n         <ListView\n             android:id=\"@+id/list\"\n             android:orientation=\"vertical\"\n             android:layout_width=\"match_parent\"\n             android:layout_height=\"match_parent\"\n             android:divider=\"@null\"\n             android:dividerHeight=\"0dp\"/>\n\n         <!-- Empty view is only visible when the list has no items. -->\n         <TextView\n             android:id=\"@+id/empty_view\"\n             android:layout_width=\"wrap_content\"\n             android:layout_height=\"wrap_content\"\n             android:layout_centerInParent=\"true\"\n             android:textAppearance=\"?android:textAppearanceMedium\"/>\n\n      </RelativeLayout>\n\nNow we need to hook up the TextView as the empty view of the ListView. We can use the ListView setEmptyView() method. We can also make the empty state TextView be a global variable, so we can refer to it in a later method. The TextView class was also automatically imported into the java file, as soon as we used that class.\n\nIn EarthquakeActivity.java:\n\n      /** TextView that is displayed when the list is empty */\n      private TextView mEmptyStateTextView;\n\n      @Override\n      protected void onCreate(Bundle savedInstanceState) {\n\n           …\n \n          mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);\n          earthquakeListView.setEmptyView(mEmptyStateTextView);\n\n          … \n      }\n\nTo avoid the “No earthquakes found.” message blinking on the screen when the app first launches, we can leave the empty state TextView blank, until the first load completes. In the onLoadFinished callback method, we can set the text to be the string “No earthquakes found.” It’s okay if this text is set every time the loader finishes because it’s not too expensive of an operation. There’s always tradeoffs, and this user experience is better.\n\nIn EarthquakeActivity.java:\n\n      @Override\n      public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n         // Set empty state text to display \"No earthquakes found.\"\n         mEmptyStateTextView.setText(R.string.no_earthquakes);\n\n         …\n      }\n\nAlso remember to declare the empty state message as a string in the resources file, so the app can be localized to other languages (if you decide to support those in the future).\n\n      <!-- Text to display in the list when there are no earthquakes [CHAR LIMIT=NONE] -->\n      <string name=\"no_earthquakes\">No earthquakes found.</string>\n\nRun the app on your device to check that it still works.\n\n<img src=\"https://lh3.googleusercontent.com/IajFYLVRJVZ_jeFT7FKNF_0yYgaD2sON7PHxovxbYUw5kNvQefWiImD7PeRtBzpG0BsBNOIxURf7vli8Kiim=s0#w=1440&h=2560\" width=\"200\">\n\n\nTo test the empty state, you can temporarily comment out the line of code that adds earthquake data to the adapter, which is the mAdapter.addAll(earthquakes) method call. This will pretend like 0 results came back from the web server, and you should see the empty state in the app.\n\nIn EarthquakeActivity.java:\n\n      @Override\n      public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n         // Set empty state text to display \"No earthquakes found.\"\n         mEmptyStateTextView.setText(R.string.no_earthquakes);\n\n         // Clear the adapter of previous earthquake data\n         mAdapter.clear();\n\n         // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n         // data set. This will trigger the ListView to update.\n         if (earthquakes != null && !earthquakes.isEmpty()) {\n             // mAdapter.addAll(earthquakes);\n         }\n      }\n\n<img src=\"//lh3.googleusercontent.com/-NGhfAHujijvTJ0oCkm5Wnca2DGCsGEdkWPnWO2RJGm0306HSrxRnJ5NmZ2pKtuIFEQBz6hELLKsITbkxw=s0#w=1440&h=2560\" width=\"200\">         \n(Source image)          \n\nThen undo this change, and continue to the next task! Great work on improving the user experience of your app!\n\nIn the discussion forum, if you shared a screenshot of an Android app that tries to make the empty state be a pleasant user experience, thank you!",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161199,
+          "key": "f1b3b19f-4f0e-429b-be66-9df0174a16c1",
+          "title": "Loading Indicator",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f1b3b19f-4f0e-429b-be66-9df0174a16c1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161299,
+              "key": "8927475323",
+              "title": "Loading Indicator",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "### Material Design Progress & Activity\n\n*Hint #1:* See example of ProgressBar view in the <a href=\"https://d17h27t6h515a5.cloudfront.net/topher/2016/July/579697eb_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf\" target=\"_blank\">Common Android Views Cheat Sheet</a>. \n\n*Hint #2:* Perform the following 2 tests to check that the loading indicator will lead to the list of earthquake results OR that the loading indicator will lead to the empty view.\n\n*Test #1:* Force the background thread to sleep for 2 seconds\n\nTo force the background thread to sleep for 2 seconds, we are temporarily simulating a very slow network response time. We are “pretending” that it took a long time to fetch the response. That allows us to see the loading spinner on the screen for a little longer than it normally would appear for.\n\nIn the QueryUtils.java file, within the fetchEarthquakeData() method, add this snippet of code at the top of the method. Leave the rest of the code in the method as-is. We are forcing the background thread to pause execution and wait for 2 seconds (which is 2000 milliseconds), before proceeding to execute the rest of lines of code in this method. If you try to add the Thread.sleep(2000); method call by itself, Android Studio will complain that there is an uncaught exception, so we need to surround that statement with a try/catch block.\n\nIn QueryUtils.java:\n\n      public static List<Earthquake> fetchEarthquakeData(String requestUrl) {\n\n          try {\n             Thread.sleep(2000);\n          } catch (InterruptedException e) {\n             e.printStackTrace();\n          }\n\n          …\n\n      }\n  \nNow when you run the app, you should see the loading indicator for 2 seconds, and then the list of earthquakes appear.\n\n*Test #2:* Pretend like no results came back from the server\n\nIn the EarthquakeActivity onLoadFInished method, temporarily comment out the line of code where the earthquake data is added to the adapter. This will make it seem like there are no earthquakes results to show.\n\nIn QueryUtils.java: \n\n      @Override\n      public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n   \n         ...\n\n         // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n         // data set. This will trigger the ListView to update.\n         if (earthquakes != null && !earthquakes.isEmpty()) {\n             // mAdapter.addAll(earthquakes);\n         }\n      }\n\nNow when you run the app, you should see the loading indicator for 2 seconds, and then the empty state saying “No earthquakes found.”",
+              "user_state": {
+                "node_key": "8927475323",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "ZA_RPvMPV3A",
+                  "china_cdn_id": "ZA_RPvMPV3A.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Loading Indicator",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/Wo98vmklr30jIBJDZ8UJrkzi-uCy2BNMB_1sebiH2aipSK7g-KN2ULFOV_Nlbp7RaSA-StAmtyvVAf7lsdYw=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475323",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8950255057",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06813045511221945,
+                      "y": 0.2895648558758315
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06961112842892768,
+                      "y": 0.4844789356984479
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07093594139650873,
+                      "y": 0.6763788802660754
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "## Code changes\n\nFirst, add the ProgressBar view to the layout. You could have referred to the <a href=\"https://d17h27t6h515a5.cloudfront.net/topher/2016/July/579697eb_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf\" target=\"_blank\">Common Android Views Cheat Sheet</a> to see an example of a ProgressBar in XML. I added the view as the last child of the RelativeLayout, so that it would appear on top of the other children views. The height and width are set as “wrap_content” and the view is centered in the middle of the screen. The style “@style/Widget.AppCompat.ProgressBar” makes the ProgressBar appear as a circular loading indicator.\n\nIn earthquake_activity.xml:\n\n     <RelativeLayout\n        xmlns:android=\"http://schemas.android.com/apk/res/android\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\">\n\n        <ListView\n            android:id=\"@+id/list\"\n            android:orientation=\"vertical\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"match_parent\"\n            android:divider=\"@null\"\n            android:dividerHeight=\"0dp\"/>\n\n        <!-- Empty view is only visible when the list has no items. -->\n        <TextView\n            android:id=\"@+id/empty_view\"\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"wrap_content\"\n            android:layout_centerInParent=\"true\"\n            android:textAppearance=\"?android:textAppearanceMedium\"/>\n\n        <!-- Loading indicator is only shown before the first load -->\n        <ProgressBar\n            android:id=\"@+id/loading_indicator\"\n            style=\"@style/Widget.AppCompat.ProgressBar\"\n            android:layout_width=\"wrap_content\"\n            android:layout_height=\"wrap_content\"\n            android:layout_centerInParent=\"true\"/>\n\n     </RelativeLayout>\n\nIn EarthquakeActivity.java, hide the loading indicator (by setting visibility to View.GONE) after the first load is completed - when onLoadFinished() is called.\n\nIn EarthquakeActivity.java:\n\n     @Override\n     public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n        // Hide loading indicator because the data has been loaded\n        View loadingIndicator = findViewById(R.id.loading_indicator);\n        loadingIndicator.setVisibility(View.GONE);\n\n        // Set empty state text to display \"No earthquakes found.\"\n        mEmptyStateTextView.setText(R.string.no_earthquakes);\n\n        // Clear the adapter of previous earthquake data\n        mAdapter.clear();\n\n        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n        // data set. This will trigger the ListView to update.\n        if (earthquakes != null && !earthquakes.isEmpty()) {\n            mAdapter.addAll(earthquakes);\n        }\n     }\n\nRun the app on a device and the loading indicator should appear if the network call takes a long time. Sometimes, the internet connection may be so fast that the loading indicator is not visible on screen for enough time for the human eye to catch it.\n\n## Testing \n\nHence, as detailed in the notes below the quiz, perform the following 2 tests to check that the loading indicator will lead to the list of earthquake results OR that the loading indicator will lead to the empty view.\n\n### Test #1: Force the background thread to sleep for 2 seconds\n\nTo force the background thread to sleep for 2 seconds, we are temporarily simulating a very slow network response time. We are “pretending” that it took a long time to fetch the response. That allows us to see the loading spinner on the screen for a little longer than it normally would appear for.\n\nIn the QueryUtils.java file, within the fetchEarthquakeData() method, add this snippet of code at the top of the method. Leave the rest of the code in the method as-is. We are forcing the background thread to pause execution and wait for 2 seconds (which is 2000 milliseconds), before proceeding to execute the rest of lines of code in this method. If you try to add the Thread.sleep(2000); method call by itself, Android Studio will complain that there is an uncaught exception, so we need to surround that statement with a try/catch block.\n\nIn QueryUtils.java:\n\n     public static List<Earthquake> fetchEarthquakeData(String requestUrl) {\n\n         try {\n            Thread.sleep(2000);\n         } catch (InterruptedException e) {\n            e.printStackTrace();\n         }\n\n         …\n\n     }\n  \nNow when you run the app, you should see the loading indicator for 2 seconds, and then the list of earthquakes appear.\n\n### Test #2: Pretend like no results came back from the server\n\nIn the EarthquakeActivity onLoadFInished method, temporarily comment out the line of code where the earthquake data is added to the adapter. This will make it seem like there are no earthquakes in the list, and should trigger the empty state.\n\nIn QueryUtils.java: \n\n     @Override\n     public void onLoadFinished(Loader<List<Earthquake>> loader, List<Earthquake> earthquakes) {\n   \n        ...\n\n        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's\n        // data set. This will trigger the ListView to update.\n        if (earthquakes != null && !earthquakes.isEmpty()) {\n            // mAdapter.addAll(earthquakes);\n        }\n     }\n\nNow when you run the app, you should see the loading indicator for 2 seconds, and then the empty state saying “No earthquakes found.”\n\nThe code diff for this checkpoint is located <a href=\"https://github.com/udacity/ud843-QuakeReport/commit/71bbadd17eafdfaaa594a76cf711cb22e695cdcb\" target=\"_blank\">here</a>.",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161200,
+          "key": "3bca9663-cb5a-47b0-9c35-f6db7924da9b",
+          "title": "No Internet Connection",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3bca9663-cb5a-47b0-9c35-f6db7924da9b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161300,
+              "key": "8927475325",
+              "title": "No Internet Connection",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://en.wikipedia.org/wiki/Airplane_mode\" target=\"_blank\">What is Airplane Mode?</a>\n\n<a href=\"https://support.google.com/nexus/answer/2819583?hl=en\" target=\"_blank\">How to turn on Airplane Mode on Android device</a>",
+              "user_state": {
+                "node_key": "8927475325",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "08_FQm7o_HI",
+                  "china_cdn_id": "08_FQm7o_HI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "No Internet Connection",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/dTK_1is_03GO8ahYvJwpAy0W1wb1D4sWl2u7BGBjMpihqLQIXkeiPo4MnQ-4mQkumKXB4l4MzP2HJTW07Wg=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475325",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8974970319",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.8503740648379052,
+                      "x": 0.07584554239401496,
+                      "y": 0.5959672949002217
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "r3e_CHTpHps",
+                  "china_cdn_id": "r3e_CHTpHps.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161201,
+          "key": "f5ea8109-e9b4-44d8-8aa0-c0f32a5e18c0",
+          "title": "Check Network Connectivity Status",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f5ea8109-e9b4-44d8-8aa0-c0f32a5e18c0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161301,
+              "key": "8927475328",
+              "title": "Check Network Connectivity Status",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://developer.android.com/training/basics/network-ops/connecting.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Check Network Connection (remember to add the “Access Network State” permission)</a>\n\n<a href=\"https://developer.android.com/training/monitoring-device-state/connectivity-monitoring.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Detecting & Monitoring Network Status</a>\n\n<a href=\"http://www.gottabemobile.com/2016/02/03/how-to-close-apps-on-the-nexus-6p/\" target=\"_blank\">How to force stop an app from the Recents list</a>",
+              "user_state": {
+                "node_key": "8927475328",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Yf4uvQEDRGk",
+                  "china_cdn_id": "Yf4uvQEDRGk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Check Network Connectivity Status",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/XL9_GxgV5lJYhJ4kh5FPi64IejB5-PvG1Pl9wNGLQfvvxDQKNTHF6u_M1MmqQZbrpe2oVuP9vVYDtpz4eQ=s0#w=1920&h=1200",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8927475328",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8975900533",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06526652119700749,
+                      "y": 0.210954822616408
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06413653366583541,
+                      "y": 0.5621189024390244
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.06349360972568578,
+                      "y": 0.6827536031042128
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "\n\nTake a look at the <a href=\"https://github.com/udacity/ud843-QuakeReport/commit/f0f9cd5ee7a8d67bd2e6f7e2539664a95499831b\" target=\"_blank\"> github repo</a> to see the answer for this quiz. ",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 161202,
+          "key": "f9b83395-5637-4b4a-ac3a-8d1be90689bd",
+          "title": "Congrats",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "f9b83395-5637-4b4a-ac3a-8d1be90689bd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 161302,
+              "key": "8c137d96-11b5-4c87-b4b9-9e41ad0a1f61",
+              "title": "Congrats! ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "cmTXKo805Oo",
+                "china_cdn_id": "cmTXKo805Oo.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

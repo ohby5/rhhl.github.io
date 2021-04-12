@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.410 --> 00:00:02.020
+Oke, mari kita cari traversal path untuk
+
+00:00:02.020 --> 00:00:05.530
+penyaring gambar yang digunakan
+pada dokumen media tertentu.
+
+00:00:05.530 --> 00:00:08.670
+Dari pemindaian respons, kita dapat
+lihat bahwa ada kunci 'filter' di sini
+
+00:00:08.670 --> 00:00:11.070
+yang terhubung dengan nilai
+string Sierra.
+
+00:00:12.230 --> 00:00:15.140
+Jika Anda pernah menggunakan Instagram,
+Sierra adalah nama salah satu penyaring
+
+00:00:15.140 --> 00:00:17.930
+yang dapat Anda terapkan pada gambar
+Anda untuk memberinya efek yang bagus.
+
+00:00:17.930 --> 00:00:22.250
+Untuk memperoleh pasangan nilai kunci ini,
+kita perlu memulai dengan root JSONObject,
+
+00:00:22.250 --> 00:00:25.870
+temukan JSONObject dengan
+kunci 'data', dan
+
+00:00:25.870 --> 00:00:29.410
+lalu ke nilai string untuk
+kunci 'filter'.
+
+00:00:29.410 --> 00:00:31.590
+Inilah path yang sudah ditulis.
+
+00:00:31.590 --> 00:00:33.850
+Yang ini cukup jelas.
+
+00:00:33.850 --> 00:00:39.490
+Root, JSONObject dengan kunci 'data', lalu
+mengambil nilai String untuk kunci 'filter'.
+
+00:00:39.490 --> 00:00:42.310
+Berikutnya, kita cari path
+untuk mengambil URL situs web untuk
+
+00:00:42.310 --> 00:00:43.669
+versi thumbnail gambar ini.
+
+00:00:44.670 --> 00:00:48.020
+Baik, untuk yang satu ini, saya harus menggulir
+cukup banyak dan mencari-cari.
+
+00:00:48.020 --> 00:00:50.581
+Dan saya lihat ada
+kata thumbnail di sini, jadi
+
+00:00:50.581 --> 00:00:53.500
+mungkin itulah kunci yang saya cari.
+
+00:00:53.500 --> 00:00:56.875
+Setelah sedikit mempelajari respons,
+saya temukan thumbnail ini,
+
+00:00:56.875 --> 00:01:00.318
+bersama dengan gambar-gambar lain untuk
+dokumen media khusus ini,
+
+00:01:00.318 --> 00:01:05.248
+termasuk dokumen dengan resolusi rendah,
+thumbnail, dan resolusi standar.
+
+00:01:06.750 --> 00:01:10.410
+Path untuk mengambil nilai ini
+bermula di objek root,
+
+00:01:11.600 --> 00:01:16.390
+lalu pergi ke data JSONObject,
+kemudian temukan 'images' JSONObject.
+
+00:01:16.390 --> 00:01:18.430
+Lalu kita perhatikan kunci 'thumbnail',
+
+00:01:18.430 --> 00:01:22.510
+yang merupakan JSONObject dengan informasi
+tentang gambar thumbnail.
+
+00:01:22.510 --> 00:01:28.460
+Terakhir, kita temukan kunci URL, di mana
+dapat kita temukan path gambar thumbnail.
+
+00:01:28.460 --> 00:01:31.720
+Jadi kembali ke kuis,
+inilah tampilan path.
+
+00:01:31.720 --> 00:01:36.510
+Root, objek JSON dengan kunci 'data',
+objek JSON dengan kunci 'images',
+
+00:01:36.510 --> 00:01:41.050
+objek JSON dengan kunci 'thumbnail', dan
+lalu mendapatkan nilai String untuk kunci 'url'.
+
+00:01:42.930 --> 00:01:46.950
+Sekarang kita kerjakan pertanyaan terakhir,
+yaitu mencari tagar pertama untuk gambar.
+
+00:01:46.950 --> 00:01:48.170
+Melihat respons ini,
+
+00:01:48.170 --> 00:01:51.920
+kita lihat daftar tag, yang berisi
+daftar tagar untuk gambar.
+
+00:01:53.030 --> 00:01:57.480
+Lalu kita lihat tagar pertama
+dan satu-satunya, yaitu hammocklife.
+
+00:01:57.480 --> 00:02:00.515
+Kalau saja saya sedang menikmati
+hidup dengan bersantai di hammock.
+
+00:02:00.515 --> 00:02:04.120
+Lanjut, mari kita cari path
+dari tagar pertama ini.
+
+00:02:05.600 --> 00:02:08.630
+Kita mulai di objek root seperti biasa,
+
+00:02:08.630 --> 00:02:12.490
+lalu pergi ke JSONObject data dan
+mencari
+
+00:02:12.490 --> 00:02:17.150
+kunci tags, yang terhubung dengan array
+JSON karena ada tanda kurung siku.
+
+00:02:17.150 --> 00:02:20.565
+Lalu kita lihat elemen pertama
+dalam array itu, yaitu hammocklife.
+
+00:02:21.610 --> 00:02:24.210
+Dan inilah path
+yang tadi kita bahas.
+
+00:02:24.210 --> 00:02:26.650
+Root JSONObject dengan data kunci,
+
+00:02:26.650 --> 00:02:31.290
+array JSON dengan tag kunci, lalu lihat
+elemen pertama dalam array tersebut.
+
+00:02:31.290 --> 00:02:33.110
+Hore, hasil yang bagus untuk kuis ini.
+

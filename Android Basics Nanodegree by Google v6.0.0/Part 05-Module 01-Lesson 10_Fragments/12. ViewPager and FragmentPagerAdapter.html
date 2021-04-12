@@ -1,0 +1,414 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ViewPager and FragmentPagerAdapter</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Fragments</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction.html">01. Introduction</a>
+    </li>
+    <li class="">
+      <a href="02. Navigation Patterns in Android.html">02. Navigation Patterns in Android</a>
+    </li>
+    <li class="">
+      <a href="03. Navigation Patterns in Other Apps.html">03. Navigation Patterns in Other Apps</a>
+    </li>
+    <li class="">
+      <a href="04. Up Button.html">04. Up Button</a>
+    </li>
+    <li class="">
+      <a href="05. An Alternative Version of the App.html">05. An Alternative Version of the App</a>
+    </li>
+    <li class="">
+      <a href="06. Upcoming Changes.html">06. Upcoming Changes</a>
+    </li>
+    <li class="">
+      <a href="07. Android Development Patterns.html">07. Android Development Patterns</a>
+    </li>
+    <li class="">
+      <a href="08. Sample ViewPager.html">08. Sample ViewPager</a>
+    </li>
+    <li class="">
+      <a href="09. Intro to Fragments.html">09. Intro to Fragments</a>
+    </li>
+    <li class="">
+      <a href="10. Fragment Lifecycle.html">10. Fragment Lifecycle</a>
+    </li>
+    <li class="">
+      <a href="11. Refactor Category Activities.html">11. Refactor Category Activities</a>
+    </li>
+    <li class="">
+      <a href="12. ViewPager and FragmentPagerAdapter.html">12. ViewPager and FragmentPagerAdapter</a>
+    </li>
+    <li class="">
+      <a href="13. Add Tabs to ViewPager.html">13. Add Tabs to ViewPager</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. ViewPager and FragmentPagerAdapter</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="step-3-modify-main-activity-so-that-it-uses-a-viewpager">Step 3: Modify Main Activity So That It Uses A ViewPager</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>ViewPager and FragmentPagerAdapter</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><p>Now that the logic to display word lists is in the Fragment, you can move over to using a ViewPager in the MainActivity.</p>
+<p>You will complete this task on your own, but feel free to refer to the Android Development Patterns video that you watched earlier. You can also review the earlier ViewPager sample app too.</p>
+<p>This is what the app should look like when you’re done. When the app opens, you immediately see the list of number words. Then you can swipe horizontally between the lists of words. Behind the scenes, we have a single activity (MainActivity) that contains a ViewPager with 4 different Fragments. You can tell it’s a single activity because the name “Miwok” stays in the app bar as you swipe between screens.</p>
+<p><img src="media/unnamed-108999-0.gif" width="150">  <img src="media/unnamed-108999-1.gif" width="150">  <img src="media/unnamed-108999-2.gif" width="150">  <img src="media/unnamed-108999-3.gif" width="150"></p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8193677929.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 25.381097560975608%; left: 5.632403366583541%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="Checkbox to Modify MainActivity">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 46.46272172949002%; left: 5.466801745635911%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="Checkbox to create CategoryAdapter class">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 72.7515243902439%; left: 5.371337281795512%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check3" aria-label="Checkbox to delete unused files">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><p><a href="https://github.com/udacity/ud839_Miwok/commit/ea2c404305274b0e624ef920902bdb40d3acbba0" target="_blank">These are the changes needed to complete the quiz.</a></p>
+<p><a href="https://github.com/udacity/ud839_Miwok/tree/ea2c404305274b0e624ef920902bdb40d3acbba0" target="_blank">This is the state of the code after completing the quiz.</a></p>
+<p>Here are the changes needed to switch to a ViewPager and FragmentPagerAdapter in the Miwok app.</p>
+<p><strong>1)</strong> First modify activity_main.xml layout to contain a ViewPager. You can delete the 4 category TextViews that used to be in this layout file.</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:background="@color/tan_background"
+   android:orientation="vertical"
+   tools:context="com.example.android.miwok.MainActivity"&gt;
+
+   &lt;android.support.v4.view.ViewPager
+       android:id="@+id/viewpager"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/&gt;
+
+&lt;/LinearLayout&gt;</code></pre>
+<p><strong>2)</strong> In order to populate pages in the ViewPager, we need an adapter.</p>
+<p>Create a new file for the adapter by right-clicking on the com.example.android.miwok folder in the Project directory pane. Then go to New &gt; Java class. Create a new class called CategoryAdapter.</p>
+<p><img src="media/unnamed-108999-0.gif" alt="CategoryAdapter" /></p>
+<p><strong>3)</strong> Android Studio will automatically create a new Java class in the CategoryAdapter.java file with these contents:</p>
+<pre><code>package com.example.android.miwok;
+
+public class CategoryAdapter {
+
+}</code></pre>
+<p><strong>4)</strong> Modify the CategoryAdapter class declaration line to extend the FragmentPagerAdapter class. Android Studio will report errors, warning you that you need to fill in required methods. You can hit Alt + Enter for a quick fix to the file, or right click and try to resolve the error. Android Studio will add in a bare-bones version of the methods you need to implement. Android Studio will also add in a constructor for the CategoryAdapter that takes in a FragmentManager. See below:</p>
+<pre><code>package com.example.android.miwok;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+/**
+  * Created by katherinekuan on 4/14/16.
+*/
+public class CategoryAdapter extends FragmentPagerAdapter {
+
+   public CategoryAdapter(FragmentManager fm) {
+       super(fm);
+   }
+
+   @Override
+   public Fragment getItem(int position) {
+   return null;
+   }
+
+   @Override
+   public int getCount() {
+       return 0;
+   }
+}</code></pre>
+<p><strong>5)</strong> Override the methods with the logic we want in our Miwok app. We need to think about:</p>
+<p><em>Question:</em> How many pages do we need in the ViewPager?<br />
+<em>Answer:</em> 4 pages, so we should return 4 in the CategoryAdapter getCount() method.</p>
+<p><em>Question:</em> Which Fragment should we display if the position is 0? Or 1 or 2?<br />
+<em>Answer:</em> Within the CategoryAdapter getItem(int position) method, we create a conditional if/else statement to return the appropriate category fragment for the given position.</p>
+<p>The resulting CategoryAdapter class looks like this:</p>
+<pre><code>package com.example.android.miwok;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+/**
+ * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
+ * each list item based on a data source which is a list of {@link Word} objects.
+ */
+public class CategoryAdapter extends FragmentPagerAdapter {
+
+/**
+ * Create a new {@link CategoryAdapter} object.
+ *
+ * @param fm is the fragment manager that will keep each fragment's state in the adapter
+ *           across swipes.
+ */
+public CategoryAdapter(FragmentManager fm) {
+    super(fm);
+}
+
+/**
+ * Return the {@link Fragment} that should be displayed for the given page number.
+ */
+@Override
+public Fragment getItem(int position) {
+    if (position == 0) {
+        return new NumbersFragment();
+    } else if (position == 1) {
+        return new FamilyFragment();
+    } else if (position == 2) {
+        return new ColorsFragment();
+    } else {
+        return new PhrasesFragment();
+    }
+}
+
+/**
+ * Return the total number of pages.
+ */
+@Override
+public int getCount() {
+    return 4;
+}</code></pre>
+<p>}</p>
+<p><strong>6)</strong> Then in the MainActivity, we can hook up the CategoryAdapter to power the ViewPager. Delete all the old code related to the 4 category TextViews. </p>
+<p>All we need to do is find the ViewPager that was declared in the XML layout. Then create a new CategoryAdapter, and set the adapter onto the ViewPager (using the setAdapter method).</p>
+<pre><code>package com.example.android.miwok;
+
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+
+       // Set the content of the activity to use the activity_main.xml layout file
+   setContentView(R.layout.activity_main);
+
+       // Find the view pager that will allow the user to swipe between fragments
+       ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+       // Create an adapter that knows which fragment should be shown on each page
+       CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
+
+       // Set the adapter onto the view pager
+       viewPager.setAdapter(adapter);
+   }
+}</code></pre>
+<p><strong>7)</strong> Test the code to make sure everything runs.</p>
+<p><strong>8)</strong> If the app works as expected, delete the unnecessary files:</p>
+<ul>
+<li>NumbersActivity.java</li>
+<li>FamilyActivity.java</li>
+<li>ColorsActivity.java</li>
+<li>PhrasesActivity.java</li>
+<li>activity_category.xml layout file</li>
+</ul>
+<p>Also delete the activity declarations from the AndroidManifest.xml file.</p>
+<p><strong>9)</strong> After all those deletions, test the app AGAIN to make sure everything works and you didn’t delete anything important. Make sure audio playback still works.</p>
+<p>If you want to double-check your code against ours, this is the <a href="https://github.com/udacity/beginner_android_learn_miwok/commit/c80d8bdfe407be01a3097ea922a8f61caf53b82e" target="_blank">difference</a> (or delta) for what changed in this coding task. This is the <a href="https://github.com/udacity/beginner_android_learn_miwok/tree/c80d8bdfe407be01a3097ea922a8f61caf53b82e" target="_blank">full state</a> of the app at this point.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p><strong>Refer to the these resources from earlier in the lesson:</strong></p>
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=zQekzaAgIlQ" target="_blank">Android Development Patterns</a> video on Tabs and ViewPager</p></li>
+<li><p><a href="https://github.com/udacity/ud839_ViewPager_Example/tree/quiz" target="_blank">Sample ViewPager app that you modified</a></p></li>
+</ul>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Add Tabs to ViewPager.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. ViewPager and FragmentPagerAdapter')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

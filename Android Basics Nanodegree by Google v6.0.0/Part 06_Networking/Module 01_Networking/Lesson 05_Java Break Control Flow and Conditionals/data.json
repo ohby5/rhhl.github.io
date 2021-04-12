@@ -1,0 +1,1466 @@
+{
+  "data": {
+    "lesson": {
+      "id": 530934,
+      "key": "bc3346f0-2abd-4bba-b8fa-c67f2b0434d3",
+      "title": "Java Break: Control Flow and Conditionals",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Use if-else statements and switch-case statements to write Java programs to tackle any decision making scenario.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/bc3346f0-2abd-4bba-b8fa-c67f2b0434d3/530934/1544459767057/Java+Break%3A+Control+Flow+and+Conditionals+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/bc3346f0-2abd-4bba-b8fa-c67f2b0434d3/530934/1544459759782/Java+Break%3A+Control+Flow+and+Conditionals+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 419950,
+          "key": "0acd5644-6d32-4c63-b48b-94a5e8d5f1fa",
+          "title": "Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0acd5644-6d32-4c63-b48b-94a5e8d5f1fa",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419955,
+              "key": "55296359-267d-4a6d-8caa-0ff9ca68f957",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Java Break: Control Flow and Conditionals\n\nWelcome back to another exciting episode of Java Break! In this segment, we'll cover the topics of *Control Flow* and *Conditionals*.\n\nYou first encounter one type of Control Flow in the first course - the `if/else` statement.\n```java\nif (condition)\n     // Code to be executed\nelse\n     // Code to be executed\n```\n\nLater, [Chris showed you](https://classroom.udacity.com/nanodegrees/nd803/parts/54293ab0-253b-410d-be3d-6662cc3fd071/modules/ef9aab21-f124-4354-9aee-581db628214e/lessons/1335cf7d-bb4f-48c6-8503-f14b127d2abc/concepts/feb082f7-3824-4a31-8d7b-cd1f70d94588?contentVersion=3.0.0&contentLocale=en-us) how to use the `switch statement` to display the correct color value based on the current earthquake's magnitude.\n\n```java\nswitch (magnitudeFloor) {\n        case 0:\n        case 1:\n            magnitudeColorResourceId = R.color.magnitude1;\n            break;\n        case 2:\n            magnitudeColorResourceId = R.color.magnitude2;\n            break;\n...\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419956,
+              "key": "cb623faf-b9dd-4bf3-89d1-ac0859c27a9d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59daa8f0_screen-shot-2017-10-08-at-3.36.43-pm/screen-shot-2017-10-08-at-3.36.43-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cb623faf-b9dd-4bf3-89d1-ac0859c27a9d",
+              "caption": "Chris showed you how to use switch statements to display correct color value based on the current earthquake’s magnitude.",
+              "alt": "",
+              "width": 420,
+              "height": 726,
+              "instructor_notes": null
+            },
+            {
+              "id": 419957,
+              "key": "9ecd607f-ebfb-4d43-ac3a-438864a16bb0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Control Flow and Conditionals are powerful Java concepts implemented in scenarios from helping self-driving cars make decisions  to purchasing tickets at your favorite art museum.\n\nLet's follow Cezanne and Asser to explore these concepts further!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419958,
+              "key": "eac24388-ab77-4729-871a-ee3a17ea95ad",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59daaa85_screen-shot-2017-10-08-at-3.06.38-pm/screen-shot-2017-10-08-at-3.06.38-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/eac24388-ab77-4729-871a-ee3a17ea95ad",
+              "caption": "Java Break time! Let's see some cool use cases and practice control flow and conditionals. ",
+              "alt": "",
+              "width": 826,
+              "height": 538,
+              "instructor_notes": null
+            },
+            {
+              "id": 419969,
+              "key": "e3771aaf-eb0e-4163-b023-e58c98f690d8",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dabb96_mario-ibrahimi-324275/mario-ibrahimi-324275.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e3771aaf-eb0e-4163-b023-e58c98f690d8",
+              "caption": "Should it read \"Java makes you happy\" instead :) ?\n\nPhoto by [Mario Ibrahimi](https://unsplash.com/photos/2RrAct0Rf8E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com)",
+              "alt": "Image of Coffee cup",
+              "width": 300,
+              "height": 200,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137667,
+          "key": "7e96cc97-e3e8-43a9-8c61-c515d0ca1757",
+          "title": "Introducing Control Flow",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7e96cc97-e3e8-43a9-8c61-c515d0ca1757",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127183,
+              "key": "ad13128f-fde4-490b-8dd7-a7461834fe8a",
+              "title": "Introducing Control Flow",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "MnNqMgiRJdY",
+                "china_cdn_id": "MnNqMgiRJdY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137658,
+          "key": "c07f3988-2817-46a1-a759-7dc11bf09409",
+          "title": "Decision Making",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c07f3988-2817-46a1-a759-7dc11bf09409",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126902,
+              "key": "8408467351",
+              "title": "Decision Making",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8408467351",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "WwSjnc4xfeA",
+                  "china_cdn_id": "WwSjnc4xfeA.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Decision Making - quiz",
+                "alt_text": "Image of person shopping for different shirts",
+                "background_image": "//lh3.googleusercontent.com/974gFGSLgGy_p0Ihp1ntdNrggX0Sy5tbbs8Y-vRd6OJ1EYBoBQ684THajNoo33uDg8MVSv6uxMxUWz3879E=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8408467351",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8400246268",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.22394678492239467,
+                      "width": 0.8827930174563591,
+                      "x": 0.06031795511221945,
+                      "y": 0.6436044900221729
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ROh95Sy2umk",
+                  "china_cdn_id": "ROh95Sy2umk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137666,
+          "key": "bf5aaecd-983e-46e1-b812-38652660a859",
+          "title": "if Statement",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "bf5aaecd-983e-46e1-b812-38652660a859",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127059,
+              "key": "6d7c8578-f0d3-4726-a6e0-1aa11d9742d8",
+              "title": "If Statement",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "UZ8gEnPSHsw",
+                "china_cdn_id": "UZ8gEnPSHsw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137609,
+          "key": "03860cba-eda2-4c21-bc1b-1a4b144c0e27",
+          "title": "Self-Driving Car",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "03860cba-eda2-4c21-bc1b-1a4b144c0e27",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 13373,
+              "key": "0b3232d8-8531-4bb5-8937-cdfa2dab0ba9",
+              "title": "Self-Driving Car",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "azKRGy3NkwM",
+                "china_cdn_id": "azKRGy3NkwM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137897,
+          "key": "3046d8b8-6d64-4fe7-84a7-17ae8f7d7839",
+          "title": "Recognize Traffic Lights",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3046d8b8-6d64-4fe7-84a7-17ae8f7d7839",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 13113,
+              "key": "a4fc8b19-a4b8-4fe4-a96f-828257afba55",
+              "title": "Recognize Traffic Lights",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "QVQGMx6vB6E",
+                "china_cdn_id": "QVQGMx6vB6E.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 530929,
+          "key": "11456019-86c3-402e-b3ab-be381f62bef2",
+          "title": "Windshield Wipers",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "11456019-86c3-402e-b3ab-be381f62bef2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 121998,
+              "key": "8459018538",
+              "title": "Windshield Wipers",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8459018538",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TEttmOWcLJU",
+                  "china_cdn_id": "TEttmOWcLJU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Windshield Wipers",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "8474636017",
+                "initial_code_files": [
+                  {
+                    "text": "boolean isRaining; // true or false\n// Write an if statement below that prints out \"Windshield wipers on.\" when isRaining is true.\n",
+                    "name": "starter.java"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "IsP0uPD1tP4",
+                  "china_cdn_id": "IsP0uPD1tP4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137574,
+          "key": "3f8b804b-5e43-4934-b00b-37c1aa9669a9",
+          "title": "Variable Scope",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3f8b804b-5e43-4934-b00b-37c1aa9669a9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126985,
+              "key": "c7224dcb-2345-4c5b-8d08-459564767ff0",
+              "title": "Variable Scope",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "N5XYmlvWaOg",
+                "china_cdn_id": "N5XYmlvWaOg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137708,
+          "key": "9e30895a-7d04-4025-bd18-9707b24bfd42",
+          "title": "What's the Scope?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "9e30895a-7d04-4025-bd18-9707b24bfd42",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126892,
+              "key": "8450118974",
+              "title": "What's the Scope?",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8450118974",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "7tr6x82rZ-0",
+                  "china_cdn_id": "7tr6x82rZ-0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "What's the Scope? - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/Gebbx0XodwE5BD0cAwnLormR_1wcY8RPosYJeFUkek1Qj057o9wgO2vNThCwhhJeajUojCzULZaeT0oH5w=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8450118974",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8405586845",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8935084164588528,
+                      "y": 0.3120149667405765
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8759351620947631,
+                      "y": 0.40746258314855877
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8550498753117207,
+                      "y": 0.49185837028824836
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "fWwsK1XZ8OU",
+                  "china_cdn_id": "fWwsK1XZ8OU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137888,
+          "key": "a94e4cd4-1ca8-4e11-8931-1b00a6df132c",
+          "title": "else Statement",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a94e4cd4-1ca8-4e11-8931-1b00a6df132c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 13311,
+              "key": "4278c774-1e83-49e1-a166-0f88d5e44ce6",
+              "title": "else Statement",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "V5iB3phYtSA",
+                "china_cdn_id": "V5iB3phYtSA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137685,
+          "key": "4d6cf5a1-1d3f-4270-8da2-9e9a8b42c923",
+          "title": "else-if",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4d6cf5a1-1d3f-4270-8da2-9e9a8b42c923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126938,
+              "key": "efc5069d-2207-4c6c-a308-1deb8137c5fc",
+              "title": "else-if",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "hd_8nc6NfH8",
+                "china_cdn_id": "hd_8nc6NfH8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137734,
+          "key": "02a70a1a-ab54-49f4-aa29-f0cc5024eeb7",
+          "title": "Multiple else-if's",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "02a70a1a-ab54-49f4-aa29-f0cc5024eeb7",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127259,
+              "key": "8450208540",
+              "title": "Multiple else-if's",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8450208540",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "GUC_sIwJ8L0",
+                  "china_cdn_id": "GUC_sIwJ8L0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Multiple else-if's - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/f0qiBJZxvyHHeKChavE3_JDmDvnLvWiBkYVyZloZLn381qHjJU3Gk5X0dkbwS9W_9chudNsWxUIAXMBNDQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8450208540",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8407616596",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09977827050997783,
+                      "width": 0.600997506234414,
+                      "x": 0.11077774314214464,
+                      "y": 0.7443874722838137
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "z10hjm8xmJE",
+                  "china_cdn_id": "z10hjm8xmJE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137505,
+          "key": "e5ec1516-ca1b-4adc-88ea-488bc09d073b",
+          "title": "Boolean Expressions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e5ec1516-ca1b-4adc-88ea-488bc09d073b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126915,
+              "key": "053ec851-657c-44a9-ae53-fb1a65fae533",
+              "title": "Boolean Expressions",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "zPphSMCTh5Y",
+                "china_cdn_id": "zPphSMCTh5Y.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137489,
+          "key": "e11098f3-eeaa-45c5-b039-c7c52a0536d4",
+          "title": "Evaluate these Expressions",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e11098f3-eeaa-45c5-b039-c7c52a0536d4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126880,
+              "key": "8408527106",
+              "title": "Evaluate These Expressions",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8408527106",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "XIPU0pcCS_g",
+                  "china_cdn_id": "XIPU0pcCS_g.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Evaluate These Expressions - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/I7y0oi1RBjCa6QDfOZSJj33QQda_g30AcpT9RE3X0TEty0kvpc4vvJ0OUzxZry86GjXQWmexX7xvDcwJkHDi=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8408527106",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8407867224",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6099010286783042,
+                      "y": 0.42249861419068735
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7748597256857855,
+                      "y": 0.4237111973392461
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6104660224438903,
+                      "y": 0.5304531596452328
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7743142144638404,
+                      "y": 0.5304531596452328
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.609375,
+                      "y": 0.6358786031042128
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check6",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7748207605985037,
+                      "y": 0.6331762749445676
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check7",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6109920511221946,
+                      "y": 0.7408536585365854
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check8",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7744116271820449,
+                      "y": 0.7406457871396895
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "mkXPWXffZ54",
+                  "china_cdn_id": "mkXPWXffZ54.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137575,
+          "key": "8509a003-f82e-42ba-8414-7f847fb2969f",
+          "title": "The Art Museum",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8509a003-f82e-42ba-8414-7f847fb2969f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126958,
+              "key": "3abb7835-2b77-44eb-98d5-3e2acd52bd7c",
+              "title": "The Art Museum",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "RBao6sZ8QbE",
+                "china_cdn_id": "RBao6sZ8QbE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137519,
+          "key": "5ca96ca3-17ee-4b0f-858a-23f9418775c2",
+          "title": "Tickets to the Museum",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5ca96ca3-17ee-4b0f-858a-23f9418775c2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 24981,
+              "key": "31aab7f6-ee2d-40de-b777-bb55329f7071",
+              "title": "Tickets to the Museum",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "qLgBwHc1IGg",
+                "china_cdn_id": "qLgBwHc1IGg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137881,
+          "key": "4a6a5ecd-59e9-4ff7-8a50-484d7a6bccd4",
+          "title": "Complete Museum Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4a6a5ecd-59e9-4ff7-8a50-484d7a6bccd4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126865,
+              "key": "8455318664",
+              "title": "Complete Museum Code",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8455318664",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "SLS6hCosVok",
+                  "china_cdn_id": "SLS6hCosVok.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Complete Museum Code - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/oR1ZYm3-rNlDeUY6ZZ8tRnprI9gEdzl-GdqdqxnqECvrGXZDaBDGBWf5WzyoiB3ykpQS2fH3uNqaPwt0bA=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8455318664",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8456348542",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09534368070953436,
+                      "width": 0.26807980049875313,
+                      "x": 0.6050303927680798,
+                      "y": 0.4557926829268293
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09534368070953436,
+                      "width": 0.2805486284289277,
+                      "x": 0.598893391521197,
+                      "y": 0.6957455654101996
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "5cDdOBIQibw",
+                  "china_cdn_id": "5cDdOBIQibw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 121973,
+          "key": "7f66ddec-2aa6-41f9-998c-29812c25ab69",
+          "title": "Logical Operators",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7f66ddec-2aa6-41f9-998c-29812c25ab69",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 121979,
+              "key": "0eb2c95e-1d2c-404b-8250-f199c58a20f0",
+              "title": "Logical Operators",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "FlUmtjTnB5E",
+                "china_cdn_id": "FlUmtjTnB5E.mp4"
+              }
+            },
+            {
+              "id": 5302,
+              "key": "94ec61ef-4715-4be1-9200-bc62942f56b0",
+              "title": "Complete if statement in Java code",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "*This code assumes that age and isStudent have both been declared and initialized to have some value.*\n\nHere is the complete if statement that checks if someone's age is less-than or equal to 15 OR greater-than 60 OR if they are a student, and if any of those conditions are met, then they get a discounted ticket price = $5.\n\n![if statement](http://i.imgur.com/Qlg3xqo.png?1)",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 123348,
+          "key": "05fb273c-fd73-4dd4-b614-aa83cc635938",
+          "title": "Order of Operations for Logical Operators",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "05fb273c-fd73-4dd4-b614-aa83cc635938",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 111435,
+              "key": "8cbc3cd5-a24f-44d6-9a9c-82535f90bc78",
+              "title": "Order of Operations for Logical Operators",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Order of Operations (for Logical Operators)\n\nJust like how math operators `(*, /, +, -)` have an order that they are evaluated in, ie. multiplication is evaluated before addition, so do logical operators!\n\nThe `!` operator will be evaluated first, then `&&`, and finally `||`. If you have a bunch of the same operations in an expression, like multiple `||` combinations, then you just operate from left to right.\n\nTo *change the order of operations* you can surround expressions in parentheses because **parentheses will be evaluated before anything else**.\n\nSo, the order of operations is:\n\n1. Parentheses\n2. NOT `!`\n3. AND `&&`\n4. OR `||`\n\nFor the expression:\n\n `!true || false && true` \n\nThis will have the NOT `!` operator evaluated first, so this simplifies to:\n\n`false || false && true`\n\nThen the AND `&&` operator will be evaluated. The combination `false && true` equals `false`, and the whole expression becomes:\n\n`false || false`\n\nFinally the OR `||` operator will be evaluated, and the whole expression evaluates to `false`.",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137867,
+          "key": "b8565858-f1e4-4c0a-9c94-45209133c263",
+          "title": "Logical Operators Practice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b8565858-f1e4-4c0a-9c94-45209133c263",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126914,
+              "key": "a594a53c-2df7-40f5-a579-42c27c9b2617",
+              "title": "Logical Operators Practice",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "JeYfO7AlwpY",
+                "china_cdn_id": "JeYfO7AlwpY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137638,
+          "key": "be96a642-bb3d-4ce4-9210-ae6701ce5d34",
+          "title": "true or false?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "be96a642-bb3d-4ce4-9210-ae6701ce5d34",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126843,
+              "key": "8457878758",
+              "title": "True or False?",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8457878758",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "T-SJm62-JY4",
+                  "china_cdn_id": "T-SJm62-JY4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "True or False? - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/8GvRNILlN6cOUh6tQ9D2hjT5JaIkBDbmWNpUVTCyORqX7t-dakB1SfpW3o1S3zY5uPPi2VI_GzZ14W4QOeo=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8457878758",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8450119061",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7236401184538653,
+                      "y": 0.4096798780487805
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8878195137157108,
+                      "y": 0.41179323725055433
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7235427057356608,
+                      "y": 0.5159368070953437
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check4",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8868259039900249,
+                      "y": 0.5173572616407982
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check5",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7232894326683291,
+                      "y": 0.6238913525498891
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check6",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8872934850374065,
+                      "y": 0.6232677383592018
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check7",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7228023690773068,
+                      "y": 0.7283467294900222
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check8",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.8874298628428927,
+                      "y": 0.7282774390243902
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "wslrySBw6q0",
+                  "china_cdn_id": "wslrySBw6q0.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137594,
+          "key": "7ca032f5-9146-4ca6-b6f3-5a8886532400",
+          "title": "Nested if Statements",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7ca032f5-9146-4ca6-b6f3-5a8886532400",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126904,
+              "key": "ae69bbb3-52c2-467e-9da7-9a6827424e6d",
+              "title": "Nested if Statements",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "wHZ9hOThwEU",
+                "china_cdn_id": "wHZ9hOThwEU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 126836,
+          "key": "8c65b151-d44c-4cc3-9f7c-2d8d8c6c3047",
+          "title": "Restaurant Rating",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8c65b151-d44c-4cc3-9f7c-2d8d8c6c3047",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127111,
+              "key": "8424173902",
+              "title": "Restaurant Rating",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8424173902",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "cp3Hs1cx8Ds",
+                  "china_cdn_id": "cp3Hs1cx8Ds.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Restaurant Rating - quiz",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/Rwx7kGZegpCdqWAkhRtOMvP6nvJsRc9nwN5hkiMyEsMPhAGZbi6UgyIoSWOPKUZROZVndWSvee7ZTY-OqEs=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8424173902",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8451079153",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": 1,
+                    "placement": {
+                      "height": 0.1130820399113082,
+                      "width": 0.7381546134663342,
+                      "x": 0.12963684538653367,
+                      "y": 0.7021895787139689
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "CcGBLhY7l5g",
+                  "china_cdn_id": "CcGBLhY7l5g.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137542,
+          "key": "82b3cfba-da4c-454c-970f-3cad61ff2bc4",
+          "title": "switch Statement",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "82b3cfba-da4c-454c-970f-3cad61ff2bc4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 13312,
+              "key": "0aa9c957-8b81-4c0a-9024-446a3fc32a1c",
+              "title": "switch Statement",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "DukuxLs1gaI",
+                "china_cdn_id": "DukuxLs1gaI.mp4"
+              }
+            },
+            {
+              "id": 6051,
+              "key": "408db31b-8450-4c27-8539-d560c041f146",
+              "title": "Switch Statement Components",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Switch statement\n\nA **switch** statement let’s you check the value of a certain variable (like our coffee maker `passcode`) and test it for equality against a list of possible values that it can take.\n\nEach of these specific values is called a **case** and you can program different behavior for each case.\n\nIn Java this looks like this:\n\n![coffee maker switch](http://i.imgur.com/c7tx8yK.png?1)\n\n*This code checks the value of `passcode`, which is some 3-digit integer value, and compares it to the specific case values: `555`, `312`, and `629`.*\n\nThen if the variable equals a certain case value, the code after that case will be executed. For example, in the code above, if `passcode` is equal to `312` then the `coffeeType` String will be set to *”Vanilla latte”*.\n\n### Break;\n\nAfter this code is this word `break;` which will **break** out of the case code and go to the ending curly brace of the switch statement, where this code prints the value of `coffeeType`.\n\n**So the break ensures that only one case at a time will have it’s code executed.**\n\nIf the break were ***not*** included, Java would continue reading code in the switch statement line by line and keep executing statements (like the default case code) until it reaches the end of the switch statement or hits another break!\n\n### Default case\n\nThe **default** case typically comes at the end of a switch statement and its code will execute whenever the other cases aren’t met. So, if the `passcode` was something like `914`, this code doesn’t have a case for this particular value, and so it would fall into the default category and the `coffeeType` String would be set to “Unknown\".\n",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137645,
+          "key": "b0483250-a001-4343-9f78-823239ffebd4",
+          "title": "switch(month)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b0483250-a001-4343-9f78-823239ffebd4",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 122430,
+              "key": "8458748920",
+              "title": "Switch(month)",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8458748920",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "z9uCG3HCUo0",
+                  "china_cdn_id": "z9uCG3HCUo0.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Switch(month)",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "8521549000",
+                "initial_code_files": [
+                  {
+                    "text": "//Complete this switch statement by 1) writing the last case (case 12), so that it prints out \"December\"\n// and 2) writing a default case that for any month number not between 1 and 12, will print out \"Invalid month\"\n\nint month; // should be a number 1-12\nString monthString;\n\nswitch(month) {\n    case 1: monthString = \"January\";\n        break;\n    case 2: monthString = \"February\";\n        break;\n    case 3: monthString = \"March\";\n        break;\n    case 4: monthString = \"April\";\n        break;\n    case 5: monthString = \"May\";\n        break;\n    case 6: monthString = \"June\";\n        break;\n    case 7: monthString = \"July\";\n        break;\n    case 8: monthString = \"August\";\n        break;\n    case 9: monthString = \"September\";\n        break;\n    case 10: monthString = \"October\";\n        break;\n    case 11: monthString = \"November\";\n        break;\n    // write case 12 and a default case below\n}\nSystem.out.println(monthString);",
+                    "name": "starter.java"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "2sf_6oOtO8E",
+                  "china_cdn_id": "2sf_6oOtO8E.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137701,
+          "key": "15e8ce41-e855-4197-b94c-d48c2a1f61e8",
+          "title": "Conclusion",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "15e8ce41-e855-4197-b94c-d48c2a1f61e8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 126894,
+              "key": "fdf6cb27-10bc-4ec5-a95b-ab397f5aeeaa",
+              "title": "Conclusion",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "ZNhViTImZ-A",
+                "china_cdn_id": "ZNhViTImZ-A.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

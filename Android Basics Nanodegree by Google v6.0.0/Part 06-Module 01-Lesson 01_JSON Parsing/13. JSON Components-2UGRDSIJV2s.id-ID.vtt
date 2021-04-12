@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.670 --> 00:00:04.059
+Baik, mari bicarakan tentang kemungkinan
+nilai yang bisa ada di sisi kanan dari
+
+00:00:04.059 --> 00:00:05.592
+pasangan nilai kunci.
+
+00:00:05.592 --> 00:00:09.220
+Kita telah lihat di catatan terakhir bahwa
+kunci kita dapat merujuk pada tipe data primitif
+
+00:00:09.220 --> 00:00:14.720
+seperti number, boolean, dan
+string, tetapi kunci itu juga dapat
+
+00:00:14.720 --> 00:00:20.020
+merepresentasikan potongan data yang lebih
+kompleks dalam bentuk objek dan array.
+
+00:00:20.020 --> 00:00:23.620
+Benar, kunci dapat merujuk pada objek
+lain yang berkelompok atau
+
+00:00:23.620 --> 00:00:25.690
+array objek-objek lain.
+
+00:00:25.690 --> 00:00:27.870
+Mari lihat contoh
+sepatu lagi.
+
+00:00:27.870 --> 00:00:31.360
+Anda mungkin menduga bahwa kunci 'style'
+merujuk pada suatu kelompok objek.
+
+00:00:31.360 --> 00:00:36.480
+Karena kontennya dikurung dalam tanda
+kurung kurawal, Anda benar.
+
+00:00:36.480 --> 00:00:39.230
+Baik, jadi
+nilainya adalah kelompok objek JSON.
+
+00:00:40.250 --> 00:00:42.400
+Nah, bagaimana cara membaliknya?
+
+00:00:42.400 --> 00:00:44.544
+Jika Anda lihat kontennya,
+
+00:00:44.544 --> 00:00:47.780
+konten ini hanya meneruskan struktur
+pasangan nilai kunci yang sama.
+
+00:00:47.780 --> 00:00:50.430
+Anda bisa membacanya dengan cara yang
+sama seperti sebelumnya.
+
+00:00:50.430 --> 00:00:53.160
+Kali ini, kita melangkah lebih jauh.
+
+00:00:53.160 --> 00:00:55.640
+Mari lihat kunci 'categories'.
+
+00:00:55.640 --> 00:01:00.970
+Ini punya nilai yang dimulai dengan
+tanda kurung kiri, punya konten,
+
+00:01:00.970 --> 00:01:03.410
+dan kemudian diakhiri dengan tanda kurung kanan.
+
+00:01:03.410 --> 00:01:05.330
+Menurut Anda, tanda-tanda kurung ini
+merepresentasikan apa?
+
+00:01:07.020 --> 00:01:08.880
+Ini merupakan sintaksis untuk array.
+
+00:01:09.960 --> 00:01:14.740
+Array JSON dapat mengandung tipe data
+primitif atau objek JSON.
+
+00:01:14.740 --> 00:01:17.060
+Mirip dengan array yang Anda
+lihat di Java,
+
+00:01:17.060 --> 00:01:20.949
+Anda dapat menavigasi konten suatu
+array menggunakan indeks.
+
+00:01:22.160 --> 00:01:27.400
+Di posisi awal, yang merupakan indeks nol,
+ada nilai string boot.
+
+00:01:29.030 --> 00:01:33.850
+Di posisi indeks berikutnya, yaitu indeks
+satu, ada winklepicker.
+
+00:01:35.730 --> 00:01:40.940
+Lalu ada kunci warna, yang merujuk pada
+string primitif warna hitam.
+
+00:01:42.270 --> 00:01:45.095
+Itu menutup contoh kita, JSON, yang
+mendeskripsikan tentang sepatu.
+
+00:01:46.440 --> 00:01:48.505
+Tapi seperti yang mungkin Anda bayangkan,
+
+00:01:48.505 --> 00:01:52.799
+pengelompokan yang kita lihat pada contoh
+sepatu dapat menjadi compound (gabungan).
+
+00:01:52.799 --> 00:01:57.506
+Array dapat mengandung lebih banyak
+objek dan array,
+
+00:01:57.506 --> 00:02:01.175
+dan artinya beban data
+bisa menjadi sangat
+
+00:02:01.175 --> 00:02:04.151
+besar, dan memang benar demikian.
+
+00:02:04.151 --> 00:02:06.884
+Tapi yang penting adalah
+walaupun ukurannya bisa besar,
+
+00:02:06.884 --> 00:02:10.110
+kita punya cara yang sangat
+simpel untuk menavigasi.
+
+00:02:10.110 --> 00:02:14.390
+Kita hanya perlu mengikuti
+pasangan nilai kunci.
+
+00:02:15.750 --> 00:02:17.280
+Belum paham?
+
+00:02:17.280 --> 00:02:20.330
+Dalam catatan berikut, kita akan mengeksplorasi
+contoh yang lebih rumit dan
+
+00:02:20.330 --> 00:02:23.980
+berlatih lebih banyak dalam
+menjelajahi JSON.
+
+00:02:23.980 --> 00:02:24.520
+Tapi pertama-tama,
+
+00:02:24.520 --> 00:02:27.660
+mari berlatih mengidentifikasi komponen
+JSON dengan kuis.
+
+00:02:29.330 --> 00:02:33.520
+Dalam kuis berikut, Anda akan berlatih
+memilah antara objek JSON,
+
+00:02:33.520 --> 00:02:38.560
+array, atau primitif dengan melihat pada
+respons JSON yang sangat berbeda.
+
+00:02:38.560 --> 00:02:41.370
+Ini contoh dari Twitter API
+
+00:02:41.370 --> 00:02:44.920
+tempat Anda bisa meminta tweet paling baru
+yang disukai pengguna.
+
+00:02:44.920 --> 00:02:47.100
+Ini adalah URL yang kita mintai data,
+
+00:02:47.100 --> 00:02:50.530
+dan respons yang dikembalikan
+dalam format JSON.
+
+00:02:50.530 --> 00:02:54.230
+Ini memang butuh autentikasi, yang berarti
+Anda harus memberikan nama pengguna dan
+
+00:02:54.230 --> 00:02:56.370
+kata sandi untuk mengakses data.
+
+00:02:56.370 --> 00:02:59.060
+Anda tidak bisa hanya menyalin
+URL ke browser dan
+
+00:02:59.060 --> 00:03:01.850
+melihat hasilnya seperti yang kita lakukan
+pada data gempa bumi.
+
+00:03:01.850 --> 00:03:05.970
+Tanpa harus menggali perincian
+tentang autentikasi,
+
+00:03:05.970 --> 00:03:10.900
+dokumentasi ini memberi kita contoh
+permintaan dan contoh respons.
+
+00:03:10.900 --> 00:03:14.200
+Respons ini tampak mirip dengan JSON yang
+sebelumnya kita lihat.
+
+00:03:14.200 --> 00:03:18.759
+Ada pasangan nilai kunci, dan beberapa
+nilai merupakan objek JSON dengan tanda kurung,
+
+00:03:19.790 --> 00:03:23.560
+dan sebagian merupakan array JSON
+dengan tanda kurung.
+
+00:03:23.560 --> 00:03:28.530
+Nilai-nilai lain yang akan Anda lihat di sini
+mencakup string, boolean, angka.
+
+00:03:28.530 --> 00:03:33.180
+Chris dan saya melakukan pencarian sendiri
+pada API ini dan memperoleh respons ini.
+
+00:03:33.180 --> 00:03:37.230
+Untuk kuis, lihatlah respons ini dan
+jawablah pertanyaan.
+
+00:03:37.230 --> 00:03:39.970
+Dalam kuis ini, saya menanyakan kepada Anda
+tentang nilai-nilai tertentu dalam respons
+
+00:03:39.970 --> 00:03:43.500
+JSON yang kami dapat dari
+Twitter favorites API.
+
+00:03:43.500 --> 00:03:47.160
+Tautan ke respons saya dan situs
+dokumentasi asli ada di bawah ini.
+
+00:03:48.700 --> 00:03:54.950
+Tentukan apakah setiap kunci merujuk pada
+nilai yang merupakan objek JSON,
+
+00:03:54.950 --> 00:03:57.470
+array JSON, atau primitif JSON.
+

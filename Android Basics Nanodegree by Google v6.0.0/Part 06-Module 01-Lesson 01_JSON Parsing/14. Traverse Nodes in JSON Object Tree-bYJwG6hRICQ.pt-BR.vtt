@@ -1,0 +1,348 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.067
+Que bacana.
+
+00:00:01.100 --> 00:00:04.501
+Agora que entendemos
+a estrutura chave-valor de JSON
+
+00:00:04.534 --> 00:00:07.834
+e sabemos distinguir
+componentes JSON,
+
+00:00:07.868 --> 00:00:11.801
+podemos usar este conhecimento
+para navegar pela resposta JSON
+
+00:00:11.834 --> 00:00:14.367
+e extrair os campos
+que queremos.
+
+00:00:14.400 --> 00:00:17.701
+Vamos usar este conhecimento
+para achar um caminho
+
+00:00:17.734 --> 00:00:21.868
+do raiz da resposta JSON
+até valor que queremos,
+
+00:00:21.901 --> 00:00:24.334
+percorrendo por vários nós.
+
+00:00:24.367 --> 00:00:27.567
+Vamos ver esta resposta do Twitter
+do quiz passado.
+
+00:00:27.601 --> 00:00:30.167
+Queremos extrair os hashtags
+
+00:00:30.200 --> 00:00:34.234
+associados com o 4º Tweet
+mais recente que Chris curtiu
+
+00:00:34.267 --> 00:00:37.834
+que é sobre um cesta de basquete
+feita do corredor.
+
+00:00:37.868 --> 00:00:41.434
+Formatei a resposta
+para facilitar a leitura
+
+00:00:41.467 --> 00:00:46.200
+no site
+jsonformatter.curiousconcept.com.
+
+00:00:46.234 --> 00:00:48.033
+Com tudo expandido,
+
+00:00:48.067 --> 00:00:53.167
+vemos uma array JSON
+indicada por esta chave.
+
+00:00:53.200 --> 00:00:55.834
+Se fecharmos todos os nós,
+
+00:00:55.868 --> 00:00:59.300
+podemos ver que esta array
+contém objetos JSON
+
+00:00:59.334 --> 00:01:01.434
+com dados
+que podemos interpretar.
+
+00:01:01.467 --> 00:01:04.667
+Esta array provavelmente contém
+os Tweets mais recentes
+
+00:01:04.701 --> 00:01:06.801
+em ordem cronológica
+decrescente.
+
+00:01:06.834 --> 00:01:09.067
+Se expandirmos
+uma dessas entradas,
+
+00:01:09.100 --> 00:01:14.300
+confirmamos que tem um objeto JSON
+com dados de apenas um Tweet.
+
+00:01:14.334 --> 00:01:17.501
+Para pegarmos
+o 4º mais recente,
+
+00:01:17.534 --> 00:01:20.434
+temos que acessar
+o 4º elemento da array
+
+00:01:20.467 --> 00:01:22.234
+cujo valor de índice é três.
+
+00:01:22.267 --> 00:01:26.000
+Vamos contar os índices.
+Índice zero, um,
+
+00:01:26.033 --> 00:01:28.334
+dois e três.
+
+00:01:28.834 --> 00:01:34.367
+Neste índice, podemos examinar
+este objeto JSON em detalhe
+
+00:01:34.400 --> 00:01:38.234
+se pegarmos o objeto JSON
+referenciado pela chave "entities".
+
+00:01:38.267 --> 00:01:41.601
+Podemos extrair o valor
+da chave "hashtag",
+
+00:01:41.634 --> 00:01:45.267
+que é outra array JSON
+que contém as hashtags.
+
+00:01:45.300 --> 00:01:50.067
+Aqui, temos que processar
+uma entrada por vez.
+
+00:01:50.100 --> 00:01:52.601
+Para cada objeto JSON
+na array,
+
+00:01:52.634 --> 00:01:56.100
+temos que extrair a string de texto
+na chave "text".
+
+00:01:56.133 --> 00:02:01.467
+Neste caso, a 1ª hashtag é "nba"
+e a 2ª é "knicks".
+
+00:02:01.501 --> 00:02:05.501
+Resumindo, percorremos a sequência
+dos componentes JSON
+
+00:02:05.534 --> 00:02:07.934
+para achar o valor
+que queríamos.
+
+00:02:07.968 --> 00:02:10.067
+Vamos rever este caminho.
+
+00:02:10.100 --> 00:02:13.868
+Começando na raiz,
+contamos até a array JSON três.
+
+00:02:13.901 --> 00:02:16.501
+Zero, um, dois e três.
+
+00:02:16.534 --> 00:02:18.501
+Expandimos o objeto JSON.
+
+00:02:18.534 --> 00:02:23.267
+Fomos até a chave "entities"
+para ver outro objeto JSON.
+
+00:02:23.300 --> 00:02:27.100
+Fomos até a chave "hashtag"
+para achar uma array JSON
+
+00:02:27.133 --> 00:02:30.801
+que contém as hashtags
+como objetos JSON.
+
+00:02:30.834 --> 00:02:34.300
+Por último, para cada objeto,
+fomos até a chave "text"
+
+00:02:34.334 --> 00:02:37.534
+para extrair os valores individuais
+de cada hashtag.
+
+00:02:37.567 --> 00:02:39.701
+Qual é o propósito disso?
+
+00:02:39.734 --> 00:02:44.467
+Isolamos um caminho através
+dos componentes JSON desta resposta
+
+00:02:44.501 --> 00:02:48.300
+para extrair os dados
+que queríamos para o nosso app.
+
+00:02:48.334 --> 00:02:52.100
+A mesma lógica que usamos
+para percorrer por essa resposta
+
+00:02:52.133 --> 00:02:55.400
+é o caminho
+que o nosso código deve seguir
+
+00:02:55.434 --> 00:02:59.667
+na programação dos passos
+para analisar a resposta JSON.
+
+00:03:00.400 --> 00:03:03.934
+Neste quiz, você vai percorrer
+uma árvore de objetos JSON
+
+00:03:03.968 --> 00:03:05.868
+para achar os nós que deseja.
+
+00:03:05.901 --> 00:03:09.334
+Para mais exemplos
+de respostas JSON,
+
+00:03:09.367 --> 00:03:12.868
+vamos ver uma resposta
+do API do Instagram.
+
+00:03:12.901 --> 00:03:17.267
+O Instagram é um app popular
+de compartilhamento de foto e vídeo.
+
+00:03:17.300 --> 00:03:23.100
+O API dele permite que você acesse
+dados sobre arquivos de mídia.
+
+00:03:23.601 --> 00:03:28.367
+Este URL permite acessar dados
+de um arquivo específico.
+
+00:03:28.400 --> 00:03:31.601
+Clique no botão "response"
+para ver uma resposta.
+
+00:03:34.734 --> 00:03:38.300
+Chris postou esta imagem
+na conta dele do Instagram.
+
+00:03:38.801 --> 00:03:42.200
+Fizemos uma requisição desta imagem
+para o API do Instagram
+
+00:03:42.234 --> 00:03:45.033
+e recebemos
+esta resposta JSON.
+
+00:03:45.067 --> 00:03:47.467
+Ela inclui informações
+sobre a imagem
+
+00:03:47.501 --> 00:03:53.133
+como tags, filtros, hora tirada
+e o próprio link.
+
+00:03:53.167 --> 00:03:58.033
+Neste quiz, examine esta resposta
+e responda as perguntas.
+
+00:03:59.033 --> 00:04:04.167
+Para este quiz, determine o caminho
+para certos campos de entrada.
+
+00:04:04.200 --> 00:04:08.033
+Por exemplo, determine o caminho
+de nós que você tem que percorrer
+
+00:04:08.067 --> 00:04:10.767
+para achar o número de likes
+para uma imagem.
+
+00:04:10.801 --> 00:04:12.767
+Vamos fazer
+a 1ª pergunta juntos.
+
+00:04:12.801 --> 00:04:15.901
+Examinei o código
+e achei a chave "count"
+
+00:04:15.934 --> 00:04:17.667
+dentro da chave "likes".
+
+00:04:17.701 --> 00:04:20.501
+Provavelmente é o valor
+que eu quero.
+
+00:04:20.534 --> 00:04:24.133
+Para achar a travessia,
+mostramos como vamos da raiz,
+
+00:04:24.167 --> 00:04:29.434
+no topo do objeto JSON,
+até o par chave-valor "likes".
+
+00:04:29.467 --> 00:04:33.000
+Falar a verdade, queremos
+o par chave-valor "count".
+
+00:04:33.033 --> 00:04:38.601
+Começamos na raiz,
+depois vamos para a chave "data".
+
+00:04:38.634 --> 00:04:43.834
+Há vários atributos aqui,
+mas queremos a chave "likes".
+
+00:04:43.868 --> 00:04:46.934
+Sabemos que a chave "likes"
+mapeia um objeto JSON
+
+00:04:46.968 --> 00:04:48.534
+por causa das chaves.
+
+00:04:48.567 --> 00:04:53.467
+Queremos a chave "count"
+que traz aqui o número cinco.
+
+00:04:53.501 --> 00:04:55.200
+Voltando para o quiz,
+
+00:04:55.234 --> 00:04:58.000
+vamos expressar o caminho
+que temos que seguir
+
+00:04:58.033 --> 00:05:01.400
+para chegar
+ao par chave-valor "count".
+
+00:05:01.434 --> 00:05:05.267
+Repita este processo
+para as demais perguntas.
+
+00:05:05.300 --> 00:05:07.400
+Percorra todo o caminho,
+
+00:05:07.434 --> 00:05:11.467
+da raiz do objeto JSON
+até o par chave-valor apropriado.
+
+00:05:11.501 --> 00:05:16.200
+Você pode usar os sinais de menos
+ou de maior para indicar a seta.
+
+00:05:16.234 --> 00:05:18.634
+Clique em continuar
+ao terminar.
+

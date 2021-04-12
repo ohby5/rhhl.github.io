@@ -1,0 +1,165 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.190 --> 00:00:01.110
+Baik.
+
+00:00:01.110 --> 00:00:05.033
+Jadi kita telah memutuskan mengambil
+data gempa bumi dari 
+
+00:00:05.033 --> 00:00:06.431
+katalog gempa bumi USGS.
+
+00:00:06.431 --> 00:00:09.255
+Dan kita sudah punya desain antarmuka
+pengguna yang sudah dipoles untuk
+
+00:00:09.255 --> 00:00:13.350
+aplikasi kita dari desainer kita,
+yang berarti kita sudah siap untuk mulai.
+
+00:00:13.350 --> 00:00:14.815
+Jadi mari bicara tentang perjalanan kita,
+
+00:00:14.815 --> 00:00:18.320
+kita akan merujuk pada peta
+kursus ini untuk memantau kemajuan kita.
+
+00:00:18.320 --> 00:00:21.390
+Dalam pelajaran satu, kita akan
+mengeksplorasi situs USGS dan
+
+00:00:21.390 --> 00:00:24.840
+memahami cara meminta
+data yang dibutuhkan aplikasi kita.
+
+00:00:24.840 --> 00:00:28.420
+Kita juga akan belajar tentang struktur
+data yang dikembalikan kepada kita, dan
+
+00:00:28.420 --> 00:00:31.780
+menyusun rencana untuk mengekstrak
+data itu secara programatis dalam kode.
+
+00:00:31.780 --> 00:00:35.350
+Dalam pelajaran dua, kita akan mengurai
+konsep-konsep yang perlu Anda pahami
+
+00:00:35.350 --> 00:00:38.830
+untuk memasukkan informasi dari
+Internet ke dalam aplikasi Android,
+
+00:00:38.830 --> 00:00:42.630
+misalnya izin di Android, dan menyusun
+cara menangani ancaman di latar belakang.
+
+00:00:42.630 --> 00:00:46.100
+Dalam pelajaran tiga, kita akan menggali
+semua bagian dalam topik jaringan dan
+
+00:00:46.100 --> 00:00:49.910
+Anda akan memahami jalur http request
+mulai dari pangkal hingga ujung.
+
+00:00:49.910 --> 00:00:54.120
+Lalu kita perbarui aplikasi laporan cepat
+dengan data pencarian waktu nyata USGS
+
+00:00:54.120 --> 00:00:57.120
+dan menampilkan gempa bumi terbaru
+di dunia dalam aplikasi ini.
+
+00:00:57.120 --> 00:01:00.060
+Oke, mari kita lihat lebih dekat
+pada pelajaran satu.
+
+00:01:00.060 --> 00:01:04.160
+Dalam pelajaran ini, kita akan membangun
+aplikasi laporan gempa secara bertahap.
+
+00:01:04.160 --> 00:01:07.780
+Setelah Anda mengenal akrab
+USGS API,
+
+00:01:07.780 --> 00:01:10.540
+kita akan mulai menyiapkan aplikasi kita
+untuk menangani informasi gempa bumi
+
+00:01:10.540 --> 00:01:11.920
+yang ingin kita tampilkan.
+
+00:01:11.920 --> 00:01:14.381
+Anda perlu mengimpor beberapa kode yang
+kami sediakan bagi Anda untuk memulai
+
+00:01:14.381 --> 00:01:17.000
+dan berlatih agar semakin
+akrab dengan basis kode.
+
+00:01:17.000 --> 00:01:21.090
+Lalu, Anda akan berfokus pada praktik Java
+dengan menulis beberapa fungsi utilitas
+
+00:01:21.090 --> 00:01:23.710
+yang akan menjadi kunci untuk mengekstrak
+dan memformat metadata
+
+00:01:23.710 --> 00:01:25.870
+yang ingin kita tampilkan untuk tiap
+gempa bumi dalam daftar kita.
+
+00:01:25.870 --> 00:01:28.680
+Lalu Anda akan meneruskan dengan
+mempelajari cara yang tepat untuk
+
+00:01:28.680 --> 00:01:32.580
+melakukan parse pada struktur JSON yang ada
+dalam http response dari server.
+
+00:01:32.580 --> 00:01:35.570
+Untuk itu, kita akan membuat
+sampel respons dan menyalinnya dan
+
+00:01:35.570 --> 00:01:39.400
+menempelkannya ke dalam aplikasi, pura-pura
+kita sudah mendapatkan respons dari internet.
+
+00:01:39.400 --> 00:01:42.990
+Dalam paruh terakhir pelajaran ini, kita akan
+memperbarui tata letak item daftar untuk menampilkan
+
+00:01:42.990 --> 00:01:47.220
+informasi meta penting untuk tiap
+gempa, seperti magnitudo,
+
+00:01:47.220 --> 00:01:50.120
+perincian lokasi, tanggal, dan waktu.
+
+00:01:50.120 --> 00:01:53.290
+Bagian ini terutama akan meninjau konsep
+dari kursus terakhir, tapi
+
+00:01:53.290 --> 00:01:54.920
+akan menjadi landasan yang baik sehingga
+
+00:01:54.920 --> 00:01:57.880
+setelah itu kita dapat menggali jaringan
+di Android dengan lebih dalam.
+
+00:01:57.880 --> 00:02:01.080
+Banyak yang akan kita bahas, tapi setelah
+menyelesaikan pelajaran ini, kami harap
+
+00:02:01.080 --> 00:02:04.860
+Anda merasa nyaman dalam mengeksplorasi
+Internet untuk mencari sumber daya data eksternal
+
+00:02:04.860 --> 00:02:08.660
+dan mendekati Web API untuk memahami
+cara meminta data menggunakan API.
+
+00:02:08.660 --> 00:02:09.288
+Mari kita mulai.
+

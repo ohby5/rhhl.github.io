@@ -1,0 +1,323 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.234
+Antes de extrair os dados
+que precisamos para o app,
+
+00:00:04.267 --> 00:00:06.634
+temos que falar
+do formato dos dados
+
+00:00:06.667 --> 00:00:09.601
+que recebemos do API do USGS.
+
+00:00:09.634 --> 00:00:13.868
+Temos que entender a estrutura
+e a organização dos dados
+
+00:00:13.901 --> 00:00:18.601
+para dissecarmos e extrairmos
+as partes que queremos.
+
+00:00:18.634 --> 00:00:22.601
+Anteriormente, mostramos alguns
+dos parâmetros de requisição HTTP
+
+00:00:22.634 --> 00:00:25.968
+que servem para consultarmos
+o site do USGS.
+
+00:00:26.000 --> 00:00:29.801
+Um desses parâmetros,
+"format=valor",
+
+00:00:29.834 --> 00:00:32.367
+nos permite especificar
+o formato da resposta,
+
+00:00:32.400 --> 00:00:35.734
+ou a estrutura dos dados
+de resposta.
+
+00:00:36.467 --> 00:00:39.734
+Optamos pelo formato GeoJSON
+
+00:00:39.767 --> 00:00:45.167
+que envia os dados numa estrutura
+que observa a sintaxe JSON.
+
+00:00:45.767 --> 00:00:49.100
+Há formatos
+com pontos fortes e fracos
+
+00:00:49.133 --> 00:00:51.400
+que superam o escopo
+dessa lição,
+
+00:00:51.434 --> 00:00:55.133
+mas escolhemos JSON porque
+é o formato de resposta mais comum
+
+00:00:55.167 --> 00:00:58.601
+usado por vários
+serviços renomados na internet.
+
+00:00:58.634 --> 00:01:01.901
+Não estamos dizendo
+que JSON é melhor
+
+00:01:01.934 --> 00:01:04.934
+do que os outros formatos
+como XML.
+
+00:01:04.968 --> 00:01:08.968
+Incentivamos você a explorar
+outros formatos no seu tempo livre
+
+00:01:09.000 --> 00:01:11.701
+para se familiarizar
+com a intenção de design,
+
+00:01:11.734 --> 00:01:15.734
+os pontos fortes e fracos
+e história do formato.
+
+00:01:17.334 --> 00:01:20.868
+Como toda tecnologia, a web
+mudou muito com o tempo
+
+00:01:20.901 --> 00:01:22.734
+e vários formatos surgiram.
+
+00:01:22.767 --> 00:01:27.701
+Mas fique tranquilo que tudo
+que você aprender sobre JSON
+
+00:01:27.734 --> 00:01:31.033
+vai ajudá-lo a assimilar
+outros formatos rapidamente.
+
+00:01:31.067 --> 00:01:34.234
+Vamos dar um zoom em JSON.
+
+00:01:34.267 --> 00:01:39.367
+Para o API do USGS,
+temos o formato GeoJSON.
+
+00:01:39.400 --> 00:01:42.634
+GeoJSON é um tipo especial
+de JSON
+
+00:01:42.667 --> 00:01:46.767
+criado para representar
+informações geográficas.
+
+00:01:47.367 --> 00:01:51.634
+JSON significa notação
+de objetos JavaScript.
+
+00:01:51.667 --> 00:01:56.868
+Do nome, JSON parece vinculado
+à linguagem JavaScript,
+
+00:01:56.901 --> 00:01:59.033
+mas não é o caso.
+
+00:01:59.734 --> 00:02:04.834
+JSON, originalmente criado
+para facilitar comunicação na web,
+
+00:02:04.868 --> 00:02:06.834
+por isso JavaScript no nome,
+
+00:02:06.868 --> 00:02:10.467
+é conjunto de regras
+para organizar dados
+
+00:02:10.501 --> 00:02:13.701
+e é independente
+da linguagem de programação.
+
+00:02:13.734 --> 00:02:18.033
+Ou seja, JSON pode ser interpretado
+por qualquer linguagem,
+
+00:02:18.634 --> 00:02:22.734
+incluindo o código Java que usamos
+para desenvolver apps de Android.
+
+00:02:23.367 --> 00:02:27.767
+Vamos aprender a ler JSON
+através de um exemplo simples.
+
+00:02:27.801 --> 00:02:30.534
+Este exemple descreve
+um tipo de sapato.
+
+00:02:30.567 --> 00:02:33.133
+Vamos começar
+na chave esquerda no topo,
+
+00:02:33.167 --> 00:02:36.167
+que estabelece o início
+de um objeto JSON.
+
+00:02:36.200 --> 00:02:39.467
+Tudo neste espaço,
+até a chave direita embaixo,
+
+00:02:39.501 --> 00:02:40.767
+é o conteúdo.
+
+00:02:41.300 --> 00:02:45.100
+Pense nessas chaves
+como um recipiente.
+
+00:02:45.133 --> 00:02:48.534
+No coração da estrutura
+sintática JSON
+
+00:02:48.567 --> 00:02:51.200
+está a noção
+de pareamento chave-valor.
+
+00:02:51.234 --> 00:02:55.267
+Na linguagem, a chave
+fica à direita dos dois pontos
+
+00:02:55.300 --> 00:02:57.267
+e o valor, à esquerda.
+
+00:02:57.300 --> 00:03:01.801
+Este pareamento é uma forma
+de encapsular uma associação
+
+00:03:01.834 --> 00:03:05.133
+entre um nome que escolhemos,
+representado pela chave,
+
+00:03:05.167 --> 00:03:07.534
+e seu valor correspondente.
+
+00:03:08.267 --> 00:03:14.234
+Esta é uma semântica importante
+em programação e computação.
+
+00:03:14.267 --> 00:03:18.234
+Por quê? Este pareamento
+entre chave e valor
+
+00:03:18.267 --> 00:03:22.767
+nos permite chamar a camada de dados
+de forma simples e lógica.
+
+00:03:22.801 --> 00:03:27.801
+Em outras palavras, quando queremos
+chamar a camada de dados,
+
+00:03:27.834 --> 00:03:31.667
+em vez de termos que nos lembrar
+das especificidades dos dados,
+
+00:03:31.701 --> 00:03:34.467
+que às vezes
+é muita informação,
+
+00:03:35.000 --> 00:03:38.200
+podemos usar uma chave
+para chamá-la.
+
+00:03:38.701 --> 00:03:41.734
+É como um bilhete
+de chapelaria.
+
+00:03:41.767 --> 00:03:45.167
+Você pode deixar vários itens
+na chapelaria,
+
+00:03:45.200 --> 00:03:48.167
+e para recuperar
+tudo que você deixou
+
+00:03:48.200 --> 00:03:52.501
+basta apresentar o bilhete
+para o guardador.
+
+00:03:53.033 --> 00:03:55.634
+Vamos ver alguns exemplos
+de chaves.
+
+00:03:55.667 --> 00:03:58.167
+Aqui temos a chave string
+"tamanho"
+
+00:03:58.200 --> 00:04:01.334
+que se refere
+a um decimal positivo
+
+00:04:01.367 --> 00:04:04.868
+e representa
+o tamanho do sapato, 9,5.
+
+00:04:04.901 --> 00:04:08.400
+A vírgula é um delimitador
+
+00:04:08.434 --> 00:04:11.634
+que diz que há outro
+par chave-valor em sequência.
+
+00:04:11.667 --> 00:04:17.033
+Temos o valor "largo"
+que carrega o valor de "verdadeiro".
+
+00:04:17.067 --> 00:04:19.033
+Depois tem "país de origem"
+
+00:04:19.067 --> 00:04:21.801
+que é uma string
+marcada como "EUA".
+
+00:04:22.334 --> 00:04:26.701
+Essa semântica chave-valor
+parece bem simples, não é?
+
+00:04:26.734 --> 00:04:29.701
+Bacana. Esses exemplo
+foram bem simples,
+
+00:04:29.734 --> 00:04:32.901
+chaves com nomes lógicos
+que mapeiam valores primitivos
+
+00:04:32.934 --> 00:04:37.501
+como números,
+boolean e strings.
+
+00:04:37.534 --> 00:04:39.234
+Mas esperem.
+
+00:04:39.267 --> 00:04:43.701
+O estilo da chave faz referência...
+Que chave é essa?
+
+00:04:43.734 --> 00:04:47.801
+Tem muita coisa acontecendo aqui.
+Por que fizeram isso comigo?
+
+00:04:47.834 --> 00:04:50.601
+Isso parece interessante,
+e falar a verdade,
+
+00:04:50.634 --> 00:04:56.100
+este é a força e o poder de extensão
+do formato JSON.
+
+00:04:56.133 --> 00:04:57.601
+Vamos dar uma pausa
+
+00:04:57.634 --> 00:05:01.934
+e depois nos aprofundarmos
+nesses valores no próximo vídeo.
+

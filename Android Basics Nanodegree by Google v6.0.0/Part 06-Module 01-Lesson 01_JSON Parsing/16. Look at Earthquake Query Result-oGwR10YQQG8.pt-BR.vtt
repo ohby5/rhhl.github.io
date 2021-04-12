@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.101 --> 00:00:03.268
+Caso esteja curioso,
+este URL representa os tremores
+
+00:00:03.301 --> 00:00:07.601
+que ocorreram entre os dias
+1 e 30 de janeiro de 2016
+
+00:00:07.634 --> 00:00:10.934
+que ultrapassaram
+seis pontos na escala Richter.
+
+00:00:10.968 --> 00:00:13.668
+Limitamos a resposta
+para 10 terremotos,
+
+00:00:13.701 --> 00:00:15.734
+então o esboço
+não será tão grande.
+
+00:00:15.768 --> 00:00:19.834
+Vamos copiar a resposta JSON bruta
+e copiá-la num formatador JSON.
+
+00:00:19.868 --> 00:00:21.634
+Vamos processá-la.
+
+00:00:22.634 --> 00:00:24.401
+Está bem melhor.
+
+00:00:24.434 --> 00:00:30.334
+Vamos para a chave "features"
+e expandimos o 1º elemento do arranjo.
+
+00:00:30.368 --> 00:00:34.134
+A chave "properties" retorna
+um objeto JSON.
+
+00:00:34.468 --> 00:00:39.901
+Depois pegamos as chaves "mag",
+"place" e "time"
+
+00:00:39.934 --> 00:00:42.368
+para os dados do nosso app.
+
+00:00:42.401 --> 00:00:46.001
+Veja que a magnitude é 7,2,
+como mencionamos antes.
+
+00:00:46.034 --> 00:00:48.368
+O local está na chave "place"
+
+00:00:48.401 --> 00:00:53.668
+e o valor dela é:
+88km ao norte de Yelizovo, Rússia.
+
+00:00:53.701 --> 00:00:57.001
+Vamos escrever a cidade
+no nosso esboço.
+
+00:00:57.034 --> 00:00:59.534
+Não há uma chave para a data,
+mas temos "time",
+
+00:00:59.568 --> 00:01:02.434
+que mapeia um número grande,
+como já mencionamos.
+
+00:01:02.468 --> 00:01:06.368
+É o tempo em milissegundos desde
+1º de janeiro de 1970.
+
+00:01:06.401 --> 00:01:08.634
+Podemos converter isso
+para uma data,
+
+00:01:08.668 --> 00:01:11.134
+mas vamos deixar
+em milissegundos por enquanto.
+
+00:01:11.168 --> 00:01:13.468
+Perfeito.
+Completamos o 1º item.
+
+00:01:13.501 --> 00:01:15.734
+Podemos ir
+para o 2º tremor na lista.
+
+00:01:15.768 --> 00:01:19.434
+Na resposta JSON, vamos para
+o 2º item em "feature".
+
+00:01:19.468 --> 00:01:21.934
+A magnitude do tremor é 6,1,
+
+00:01:21.968 --> 00:01:24.034
+o local é Papua Nova Guiné,
+
+00:01:24.068 --> 00:01:28.534
+e ele ocorreu neste tempo
+em milissegundos.
+
+00:01:28.568 --> 00:01:31.001
+Vamos atualizar
+o nosso esboço.
+
+00:01:31.034 --> 00:01:35.234
+Repetimos esses passos
+para os demais tremores na resposta.
+
+00:01:36.068 --> 00:01:39.333
+Quando terminar,
+seu esboço ficará assim.
+

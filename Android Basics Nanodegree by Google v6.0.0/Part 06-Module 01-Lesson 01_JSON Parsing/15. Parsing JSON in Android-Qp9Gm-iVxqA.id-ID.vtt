@@ -1,0 +1,414 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.350 --> 00:00:03.660
+Setelah banyak berlatih, diharapkan
+Anda mengerti cara mengidentifikasi
+
+00:00:03.660 --> 00:00:06.890
+komponen JSON dan cara melintangkan
+pohon objek JSON, sehingga
+
+00:00:06.890 --> 00:00:08.920
+Anda bisa mengekstrak nilai yang
+kita butuhkan.
+
+00:00:10.220 --> 00:00:13.490
+Mentransformasi string JSON menjadi
+objek JSON aktif atau
+
+00:00:13.490 --> 00:00:16.370
+array JSON membutuhkan parsing.
+
+00:00:16.370 --> 00:00:20.180
+Parsing adalah bagian penting dalam 
+sains komputer dan pada dasarnya berarti
+
+00:00:20.180 --> 00:00:23.130
+bahwa komputer perlu membaca teks yang
+ditulis dalam bahasa yang dikenalnya, dan
+
+00:00:23.130 --> 00:00:28.380
+mentransformasinya menjadi representasi
+lain yang lebih berguna seperti objek JSON
+
+00:00:28.380 --> 00:00:32.229
+yang bisa kita panggil metodenya, lalu
+mengekstrak data yang dibutuhkan darinya.
+
+00:00:33.500 --> 00:00:36.440
+Sekarang kita tahu cara melakukan parse
+JSON dalam kepala kita
+
+00:00:36.440 --> 00:00:40.060
+dengan mengidentifikasi pasangan nilai
+kunci dan melintangkannya, tapi
+
+00:00:40.060 --> 00:00:44.030
+kita perlu mempelajari cara menerapkan
+proses serupa dalam kode Java kita.
+
+00:00:44.030 --> 00:00:47.260
+Jadi, mari kita bahas.
+
+00:00:47.260 --> 00:00:49.904
+Saya beralih ke
+peramban web saya dan
+
+00:00:49.904 --> 00:00:54.854
+mencari dokumentasi resmi Android
+di developer.android.com.
+
+00:00:54.854 --> 00:00:58.160
+Untungnya, ada kelas
+bernama JSONObject.
+
+00:00:58.160 --> 00:01:01.420
+Ini memudahkan dalam mengonversi string
+JSON simpel menjadi objek yang jauh
+
+00:01:01.420 --> 00:01:05.600
+lebih cerdas, yaitu objek yang tahu tentang
+kunci yang dikandungnya dan
+
+00:01:05.600 --> 00:01:08.100
+cara mengakses nilai yang menyertainya.
+
+00:01:08.100 --> 00:01:12.088
+Jika kita gulir turun ke bagian ringkasan,
+kita bisa meninjau constructor
+
+00:01:12.088 --> 00:01:15.183
+yang tersedia yang dapat digunakan
+untuk membuat contoh atau
+
+00:01:15.183 --> 00:01:17.136
+objek kelas JSONObject.
+
+00:01:17.136 --> 00:01:18.228
+Ini dia.
+
+00:01:18.228 --> 00:01:21.040
+Ini adalah constructor spesifik
+yang kita butuhkan.
+
+00:01:21.040 --> 00:01:25.270
+Ini memungkinkan kita membangun
+JSONObject dengan memasukkan string
+
+00:01:25.270 --> 00:01:26.600
+JSON simpel yang berisi JSON mentah.
+
+00:01:28.410 --> 00:01:32.000
+Kita lihat ada rangkaian metode getter yang
+cukup besar yang bisa kita panggil dalam
+
+00:01:32.000 --> 00:01:36.860
+contoh JSONObject untuk memperoleh
+nilai yang terkait dengan kunci tertentu.
+
+00:01:36.860 --> 00:01:38.594
+Seperti yang telah Anda tahu,
+
+00:01:38.594 --> 00:01:43.053
+ada berbagai komponen JSON mulai
+dari tipe data dasar
+
+00:01:43.053 --> 00:01:48.024
+seperti bilangan bulat hingga tipe data besar
+seperti JSONObject dan JSONArray.
+
+00:01:48.024 --> 00:01:52.944
+Misalnya, jika Anda ingin mengekstrak
+bilangan bulat, Anda bisa memanggil metode
+
+00:01:52.944 --> 00:01:56.407
+getInt dengan memasukkan nama kunci
+di sini sebagai string.
+
+00:01:56.407 --> 00:02:01.250
+Ada pola yang sama untuk mengambil
+string ganda maupun tunggal.
+
+00:02:02.820 --> 00:02:07.120
+Untuk komponen JSON lebih besar, Anda
+bisa panggil misalnya getJSONArray.
+
+00:02:07.120 --> 00:02:09.513
+Maka, Anda dapatkan JSON yang
+telah dirujuk dengan kuncinya.
+
+00:02:09.513 --> 00:02:14.800
+Perhatikan bahwa tipe data yang dikembalikan
+oleh metode getter adalah tipe JSONArray.
+
+00:02:14.800 --> 00:02:18.929
+Anda juga bisa memanggil getJSONObject
+untuk memperoleh kembali JSONObject.
+
+00:02:18.929 --> 00:02:22.330
+Perhatikan bahwa tipe data yang
+dikembalikan di sini adalah JSONObject.
+
+00:02:24.310 --> 00:02:26.020
+Mari klik lebih dalam.
+
+00:02:26.020 --> 00:02:29.353
+Perhatikan bahwa tiap kali kita mencoba
+mengambil permintaan dari JSONObject,
+
+00:02:29.353 --> 00:02:31.400
+kunci yang diminta mungkin tidak ada.
+
+00:02:31.400 --> 00:02:34.739
+Dalam hal itu, permintaan akan menghasilkan
+JSONException,
+
+00:02:34.739 --> 00:02:37.690
+yang harus kita tangkap dan atasi.
+
+00:02:37.690 --> 00:02:40.940
+Jika tidak, ada metode opt ini yang
+dapat dipanggil pada
+
+00:02:40.940 --> 00:02:45.290
+JSONObject di mana opt singkatan
+dari pasangan nilai kunci opsional.
+
+00:02:45.290 --> 00:02:48.170
+Metode ini mengambil nilai yang terkait
+untuk kunci tertentu, tapi
+
+00:02:48.170 --> 00:02:50.100
+mengembalikan null jika nilai tidak ada.
+
+00:02:52.100 --> 00:02:54.440
+Mari kita parse potongan kecil JSON ini.
+
+00:02:54.440 --> 00:02:58.161
+Kita memperoleh objek root dengan
+satu kunci bernama candies ini.
+
+00:02:58.161 --> 00:03:03.507
+Kunci ini berkaitan dengan array di sini,
+karena adanya tanda kurung persegi,
+
+00:03:03.507 --> 00:03:09.030
+yang berisi objek JSON lain di dalam
+tanda kurung kurawal ini.
+
+00:03:09.030 --> 00:03:11.529
+Objek bagian dalam ini
+berisi dua kunci.
+
+00:03:11.529 --> 00:03:16.311
+Yang satu adalah name, yang berkaitan
+dengan nilai string Jelly Beans dan
+
+00:03:16.311 --> 00:03:21.261
+kunci lain bernama count, yang berkaitan
+dengan nilai bilangan bulat 10.
+
+00:03:21.261 --> 00:03:24.400
+Mari kita tinjau lintangan parse
+akan jadi seperti apa,
+
+00:03:24.400 --> 00:03:27.300
+jika kita ingin mengekstrak data
+yang dirujuk oleh kunci-kunci ini.
+
+00:03:27.300 --> 00:03:32.389
+Jadi untuk data Jelly Beans, kita ingin mulai
+di root payload JSON
+
+00:03:32.389 --> 00:03:37.562
+di root ini, lalu kita akan lanjut dan
+mengindeks menggunakan kunci candies,
+
+00:03:37.562 --> 00:03:41.636
+yang akan mengembalikan
+array JSON kepada kita.
+
+00:03:41.636 --> 00:03:44.482
+Lalu kita harus mengambil elemen
+pertama pada array ini,
+
+00:03:44.482 --> 00:03:46.990
+yang berupa
+JSONObject tunggal ini.
+
+00:03:46.990 --> 00:03:50.247
+Lalu kita sekadar mengambil nilai
+string untuk kunci name,
+
+00:03:50.247 --> 00:03:52.270
+yang dalam hal ini adalah Jelly Beans.
+
+00:03:53.920 --> 00:03:57.660
+Sekarang, cara melintas untuk mengambil
+nilai count.
+
+00:03:57.660 --> 00:04:01.320
+Kita juga mulai dari root, lalu lanjut dan
+then we're going to go and
+
+00:04:01.320 --> 00:04:05.440
+mengindeks nilai kunci menggunakan kunci
+candies, kembali ke array JSON.
+
+00:04:05.440 --> 00:04:08.366
+Lalu kita harus mengambil elemen
+pertama dari array itu,
+
+00:04:08.366 --> 00:04:10.370
+yang berupa objek JSON.
+
+00:04:10.370 --> 00:04:14.863
+Lalu kita pergi ke panduan kunci yang Anda
+indeks guna mengambil nilai yang diwakili
+
+00:04:14.863 --> 00:04:18.515
+oleh kunci count, yang dalam hal ini adalah
+bilangan bulat dengan nilai 10.
+
+00:04:18.515 --> 00:04:21.613
+Kita harus mengambil proses melintas
+ini dan
+
+00:04:21.613 --> 00:04:25.100
+merujuknya pada statemen yang dapat
+kita tulis dalam kode pekerjaan.
+
+00:04:25.100 --> 00:04:26.010
+Mari lanjut dan lihat.
+
+00:04:27.480 --> 00:04:31.390
+Anggap saja kita diberi string berisi JSON
+di sisi kiri ini.
+
+00:04:31.390 --> 00:04:35.904
+Sebenarnya, kita menerima versi yang
+ringkas, yaitu yang semua
+
+00:04:35.904 --> 00:04:39.861
+spasi kosongnya dihilangkan dan semua
+tanda kutip dikeluarkan.
+
+00:04:39.861 --> 00:04:41.505
+Apa maksudnya dikeluarkan?
+
+00:04:41.505 --> 00:04:44.703
+Artinya dengan menambahkan karakter tanda
+kurung terbalik di depannya, karena Anda tidak
+
+00:04:44.703 --> 00:04:46.920
+boleh menulis tanda kutip di tengah string.
+
+00:04:46.920 --> 00:04:48.737
+Jika tidak, bagaimana Anda akan tahu
+di mana string itu berakhir?
+
+00:04:48.737 --> 00:04:53.518
+Sekarang kita bisa mengubah variabel string JSON
+JSON aktif ini menjadi JSONObject aktif
+
+00:04:53.518 --> 00:04:57.195
+dengan memasukkan string ke dalam
+constructor JSONObject.
+
+00:04:57.195 --> 00:05:01.435
+JSONObject ini telah melakukan semua
+tugas parsing string JSON untuk kita.
+
+00:05:01.435 --> 00:05:05.697
+Objek ini tahu kunci apa yang dikandungnya dan
+semua bentuk metode yang berguna,
+
+00:05:05.697 --> 00:05:07.801
+misalnya, tentang objek root ini.
+
+00:05:07.801 --> 00:05:12.617
+Mari kita panggil getJSONArray untuk mencari
+array yang dipasang dalam objek root dengan
+
+00:05:12.617 --> 00:05:13.735
+kunci candies.
+
+00:05:14.975 --> 00:05:19.770
+Kita bisa simpan ini dalam variabel
+bernama candiesArray dengan tipe data
+
+00:05:19.770 --> 00:05:20.380
+JSONArray.
+
+00:05:21.600 --> 00:05:24.820
+Kelas JSONArray
+memaparkan metode bernama
+
+00:05:24.820 --> 00:05:30.230
+getJSONobject untuk mengakses objek
+pada posisi indeks yang telah ditentukan.
+
+00:05:30.230 --> 00:05:33.150
+Jadi kita dapatkan JSONObject
+nol ini di array tersebut,
+
+00:05:33.150 --> 00:05:37.290
+yang berarti yang pertama dalam daftar
+lalu kita simpan elemen pertama ini
+
+00:05:37.290 --> 00:05:41.250
+dalam variabel firstCandy
+dengan tipe JSONObject.
+
+00:05:43.090 --> 00:05:46.960
+Karena kita harus menemukan atribut di
+dalam firstCandy JSONObject,
+
+00:05:46.960 --> 00:05:50.920
+kita bisa panggil metode getString untuk
+mengekstrak nilai primitif yang terkait
+
+00:05:50.920 --> 00:05:52.270
+dengan kunci name.
+
+00:05:52.270 --> 00:05:53.810
+Dalam hal ini, "Jelly Beans".
+
+00:05:54.860 --> 00:05:58.920
+Kita juga bisa panggil metode getInt pada
+firstCandy JSONObject
+
+00:05:58.920 --> 00:06:02.382
+untuk mengekstrak nilai bilangan bulat
+primitif dengan kunci count.
+
+00:06:02.382 --> 00:06:04.293
+Dalam hal ini, nilainya adalah 10.
+
+00:06:04.293 --> 00:06:05.533
+Dalam kuis berikutnya,
+
+00:06:05.533 --> 00:06:10.581
+saya ingin Anda membaca tautan tutorial
+Mari kita parse potongan kecil JSON ini.
+
+00:06:10.581 --> 00:06:14.185
+Contoh ini akan sedikit lebih rumit
+daripada contoh candies yang baru
+
+00:06:14.185 --> 00:06:16.513
+saja kita bahas, tapi
+saya ingin Anda mencoba dan
+
+00:06:16.513 --> 00:06:17.968
+memahami sebanyak mungkin.
+
+00:06:17.968 --> 00:06:22.415
+Terutama, mencoba membaca dan memahami
+kode MainActivity.java
+
+00:06:22.415 --> 00:06:23.730
+Centang di sini setelah selesai.
+

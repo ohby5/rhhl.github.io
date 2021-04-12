@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.440 --> 00:00:01.200
+Jadi tujuan dari
+
+00:00:01.200 --> 00:00:05.050
+tugas ini adalah untuk memberi Anda latihan
+membaca tutorial di web dan
+
+00:00:05.050 --> 00:00:08.920
+melihat contoh lain parsing JSON
+untuk Android.
+
+00:00:08.920 --> 00:00:13.000
+Contoh ini mulai dengan mengasumsikan respons
+JSON spesifik disimpan dalam string
+
+00:00:13.000 --> 00:00:17.630
+yang disebut STR JSON atau singkatnya STR JSON.
+
+00:00:17.630 --> 00:00:21.050
+Anda mungkin memperhatikan juga bahwa string ini
+berisi karakter garis miring terbalik yang dimasukkan
+
+00:00:21.050 --> 00:00:22.860
+di mana saja ada tanda tanya.
+
+00:00:22.860 --> 00:00:26.100
+Tapi normalnya akan tampak
+seperti JSON yang telah kita lihat.
+
+00:00:26.100 --> 00:00:29.290
+Oke, mari lanjut dan periksa
+kode dalam contoh ini.
+
+00:00:29.290 --> 00:00:32.049
+Pertama-tama saya akan menyalin
+dan menempelkan blok
+
+00:00:32.049 --> 00:00:35.540
+kode ini di jendela tengah kecil
+sehingga lebih mudah dibaca.
+
+00:00:35.540 --> 00:00:37.690
+Lalu kita bisa memeriksanya di sana.
+
+00:00:37.690 --> 00:00:41.710
+Jadi yang saya lakukan adalah menyalin contoh
+kode ke dalam editor teks simpel.
+
+00:00:41.710 --> 00:00:45.890
+Dalam hal ini saya gunakan editor teks Sublime,
+tapi editor teks apa pun bisa berfungsi.
+
+00:00:45.890 --> 00:00:50.290
+Mari lanjut dan bicarakan tentang kode
+yang ada di onCreate ini.
+
+00:00:50.290 --> 00:00:52.320
+Anda telah tahu tentang
+string STRJSON,
+
+00:00:52.320 --> 00:00:56.240
+yang berisi JSON mentah,
+dan kode utama
+
+00:00:56.240 --> 00:01:00.330
+yang ingin kita lihat di sini sebenarnya
+ada di dalam blok try di sini.
+
+00:01:00.330 --> 00:01:03.290
+Mari kita periksa
+baris-baris ini satu demi satu.
+
+00:01:03.290 --> 00:01:06.400
+Yang pertama kita lakukan
+adalah membuat objek JSON baru
+
+00:01:06.400 --> 00:01:09.020
+dari string JSON
+yang telah kita buat.
+
+00:01:09.020 --> 00:01:12.650
+Selanjutnya kita cari
+jsonArray employee
+
+00:01:12.650 --> 00:01:15.590
+dengan mencari kunci bernama employee.
+
+00:01:15.590 --> 00:01:18.240
+Daripada menggunakan metode getter
+seperti getjsonArray,
+
+00:01:18.240 --> 00:01:22.180
+Anda lihat metode
+optjsonArray digunakan.
+
+00:01:22.180 --> 00:01:25.820
+Ini sekadar alternatif untuk
+mengambil kembali JSONArray.
+
+00:01:25.820 --> 00:01:28.210
+Jika Anda memeriksa dokumentasi
+Android resmi di
+
+00:01:28.210 --> 00:01:33.580
+developer.android.com, Anda akan lihat
+bahwa metode optJSONArray
+
+00:01:33.580 --> 00:01:38.250
+harus mengembalikan JSONArray jika ada
+untuk nama kunci tertentu.
+
+00:01:38.250 --> 00:01:42.510
+Jika array itu tidak ada, maka
+metode ini tidak akan mengembalikan apa-apa.
+
+00:01:42.510 --> 00:01:46.200
+Baiklah, jadi hal penting berikutnya
+adalah membuat loop
+
+00:01:46.200 --> 00:01:48.720
+untuk mengulangi setiap
+elemen dalam array.
+
+00:01:48.720 --> 00:01:52.640
+Di baris pertama ini, kita
+mengekstrak elemen individual dari
+
+00:01:52.640 --> 00:01:56.392
+array yang dalam hal ini kebetulan
+merupakan objek JSON.
+
+00:01:56.392 --> 00:02:00.510
+Dengan memanggil metode untuk mengambil
+objek JSON dengan indeks i.
+
+00:02:00.510 --> 00:02:06.140
+Lalu kita mengekstrak integer ID,
+string name, dan float salary,
+
+00:02:06.140 --> 00:02:08.710
+yang disini adalah nilai desimal,
+
+00:02:08.710 --> 00:02:12.420
+lalu kita dapat menghitung semua
+nilai ini dalam satu string panjang.
+
+00:02:12.420 --> 00:02:15.040
+Lalu menampilkan semua teks
+dalam layar teks.
+
+00:02:16.810 --> 00:02:19.460
+Mungkin Anda perhatikan bahwa ada
+blok try mengelilingi
+
+00:02:19.460 --> 00:02:21.340
+kode JSONEparseInt.
+
+00:02:21.340 --> 00:02:24.120
+yang mencegah aplikasi agar tidak
+macet jika ada masalah
+
+00:02:24.120 --> 00:02:25.160
+dalam parsing.
+
+00:02:25.160 --> 00:02:27.330
+Tapi jangan khawatir, kita akan bahas
+ini lebih rinci lagi nanti.
+

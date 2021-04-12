@@ -1,0 +1,294 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.800 --> 00:00:04.832
+Sebelum kita mengekstrak data gempa
+bumi yang dibutuhkan untuk aplikasi, kita
+
+00:00:04.832 --> 00:00:08.936
+harus membahas struktur format data
+yang kita dapatkan dari API USGS.
+
+00:00:08.936 --> 00:00:10.083
+Saat kita mengatakan format,
+
+00:00:10.083 --> 00:00:14.400
+artinya membahas hal-hal spesifik dalam
+cara data diorganisasi atau distrukturkan,
+
+00:00:14.400 --> 00:00:18.840
+sehingga kita tahu cara membedah dan
+mengekstrak bagian yang dibutuhkan.
+
+00:00:18.840 --> 00:00:22.970
+Tadi dalam pelajaran ini, kita meninjau
+beberapa parameter permintaan HTTP
+
+00:00:22.970 --> 00:00:25.545
+yang tersedia bagi kita untuk
+menelusuri dataset USGS.
+
+00:00:26.640 --> 00:00:31.330
+Salah satunya adalah format parameter sama dengan
+nilai yang memungkinkan kita memerinci
+
+00:00:31.330 --> 00:00:35.310
+format respons atau struktur dari
+data respons yang akan dikirim.
+
+00:00:36.690 --> 00:00:39.850
+Kita pilih format=geosjon,
+
+00:00:39.850 --> 00:00:44.850
+yang mengirim balik data ke kita dengan
+struktur memakai aturan sintaksis JSON.
+
+00:00:45.980 --> 00:00:49.380
+Walaupun ada format lain yang punya
+kelebihan, kekurangan, dan riwayat
+
+00:00:49.380 --> 00:00:53.450
+di luar jangkauan kelas ini, kita pilih
+JSON karena inilah
+
+00:00:53.450 --> 00:00:58.990
+format respons paling umum yang dipakai
+oleh banyak webster ternama saat ini.
+
+00:00:58.990 --> 00:01:03.687
+Bukan berarti JSON lebih baik daripada
+format lainnya seperti
+
+00:01:03.687 --> 00:01:05.235
+XML.
+
+00:01:05.235 --> 00:01:09.110
+Selanjutnya, kami mendorong Anda untuk
+mengeksplorasi format lain saat senggang
+
+00:01:09.110 --> 00:01:12.600
+untuk memperoleh pemahaman lebih
+tentang maksud desain, kelebihan dan
+
+00:01:12.600 --> 00:01:15.560
+kekurangan, dan bahkan riwayat
+format tersebut.
+
+00:01:17.510 --> 00:01:20.750
+Seperti semua teknologi, web telah
+berubah sangat cepat seiring waktu
+
+00:01:20.750 --> 00:01:22.320
+sehingga berbagai format pun muncul.
+
+00:01:23.510 --> 00:01:27.085
+Tapi tenang saja, pengalaman yang akan
+Anda dapatkan dengan mengakrabkan diri
+
+00:01:27.085 --> 00:01:31.300
+dengan JSON juga akan membantu Anda
+memahami format lain dengan cepat.
+
+00:01:31.300 --> 00:01:34.710
+Jadi, mari fokus ke JSON.
+
+00:01:34.710 --> 00:01:39.640
+Untuk API gempa bumi USGS, tersedia
+format bernama geojson.
+
+00:01:39.640 --> 00:01:42.605
+Geojson adalah ramuan
+khusus JSON,
+
+00:01:42.605 --> 00:01:46.420
+dirancang khusus untuk merepresentasikan
+informasi geografis.
+
+00:01:47.560 --> 00:01:51.940
+JSON adalah singkatan dari JavaScript,
+Object, Notation.
+
+00:01:51.940 --> 00:01:55.710
+Karena nama itu, mungkin Anda anggap
+sangat terkait dengan bahasa program
+
+00:01:55.710 --> 00:01:59.860
+JavaScript, tapi sebenarnya
+tidak begitu.
+
+00:01:59.860 --> 00:02:04.130
+JSON awalnya dirancang untuk membantu
+memfasilitasi komunikasi yang efisien di
+
+00:02:04.130 --> 00:02:06.990
+web sehingga nama JavaScript
+
+00:02:06.990 --> 00:02:10.580
+sebenarnya hanya serangkaian aturan
+taktis untuk mengorganisasi data dan
+
+00:02:10.580 --> 00:02:13.080
+dengan demikian tak bergantung pada
+bahasa pemrograman.
+
+00:02:14.190 --> 00:02:18.900
+Maka, JSON dapat ditafsirkan memakai
+bahasa pemrograman apa pun yang dipilih,
+
+00:02:18.900 --> 00:02:22.460
+termasuk kode Java yang kita pakai
+untuk membangun aplikasi Android kita.
+
+00:02:23.530 --> 00:02:27.920
+Mari mulai mempelajari cara membaca
+JSON dengan melihat contoh sederhana.
+
+00:02:27.920 --> 00:02:30.720
+Contoh ini mendeskripsikan jenis sepatu.
+
+00:02:30.720 --> 00:02:36.430
+Kita mulai dari tanda kurung besar kiri
+yang menandai awal objek JSON.
+
+00:02:36.430 --> 00:02:41.330
+Semua yang di dalamnya sebelum penutup
+tanda kurung besar kanan adalah kontennya.
+
+00:02:41.330 --> 00:02:44.290
+Anda bisa membayangkan tanda-tanda
+kurung ini sebagai wadah tongkat.
+
+00:02:45.550 --> 00:02:49.260
+Di pusat struktur sintaksis
+JSON adalah penanda
+
+00:02:49.260 --> 00:02:51.180
+pasangan nilai kunci.
+
+00:02:51.180 --> 00:02:56.420
+Secara sintaksis, kunci di kiri titik dua
+nilai di sisi kanan.
+
+00:02:57.700 --> 00:03:01.860
+Pasangan ini sekadar cara mengurung
+ikatan atau asosiasi
+
+00:03:01.860 --> 00:03:07.240
+antara nama pilihan kita, yaitu kunci,
+dan nilai yang berkaitan.
+
+00:03:08.710 --> 00:03:12.580
+Ternyata ini merupakan semantik penting
+dalam pemrograman dan
+
+00:03:12.580 --> 00:03:14.270
+sains komputer.
+
+00:03:14.270 --> 00:03:15.350
+Kenapa?
+
+00:03:15.350 --> 00:03:18.420
+Pemetaan atau
+pengikatan kunci ke nilai ini
+
+00:03:18.420 --> 00:03:23.210
+membantu kita memanggil lapisan data
+dengan lebih mudah dan lebih logis.
+
+00:03:23.210 --> 00:03:27.130
+Dengan kata lain, saat kita ingin
+menarik atau memanggil lapisan data
+
+00:03:28.130 --> 00:03:32.300
+dan tidak harus mengingat semua
+perincian data karena pada beberapa
+
+00:03:32.300 --> 00:03:37.870
+kasus bisa banyak sekali data, kita bisa
+melakukannya dengan tag atau kunci.
+
+00:03:38.930 --> 00:03:41.820
+Bayangkan pemeriksaan jaket saat Anda
+pergi ke aula simfoni.
+
+00:03:41.820 --> 00:03:45.510
+Anda mungkin mengeluarkan beberapa
+barang di meja konter, tapi
+
+00:03:45.510 --> 00:03:49.950
+agar bisa mengambil kembali barang Anda,
+Anda hanya perlu memegang tiket dan
+
+00:03:49.950 --> 00:03:52.070
+memberikannya kepada petugas pada
+akhir pertunjukan.
+
+00:03:53.170 --> 00:03:55.890
+Mari lihat beberapa contoh kunci.
+
+00:03:55.890 --> 00:04:01.470
+Di sini ada kunci string 'size', yang
+merujuk pada angka desimal positif,
+
+00:04:01.470 --> 00:04:04.522
+yang kebetulan untuk sepatu
+berukuran 9,5.
+
+00:04:04.522 --> 00:04:09.160
+Saat kita lihat koma, ini sekadar
+pembatas untuk memberi tahu kita ada
+
+00:04:09.160 --> 00:04:12.000
+pasangan nilai kunci lain yang menyusul.
+
+00:04:12.000 --> 00:04:17.100
+Ada juga 'wide', yang
+merujuk pada nilai boolean untuk benar.
+
+00:04:17.100 --> 00:04:20.970
+Lalu ada 'country-of-origin', yang
+berupa rangkaian string untuk AS.
+
+00:04:22.540 --> 00:04:25.910
+Nilai kunci ini semantis dan mulai
+terasa cukup mudah.
+
+00:04:26.940 --> 00:04:28.060
+Keren!
+
+00:04:28.060 --> 00:04:32.190
+Kunci-kunci ini cukup simpel, kunci
+dengan nama logis merujuk ke primitif
+
+00:04:32.190 --> 00:04:34.000
+tunggal yang sudah Anda kenal.
+
+00:04:34.000 --> 00:04:38.050
+Number, boolean, dan string.
+
+00:04:38.050 --> 00:04:42.440
+Tapi tunggu, kunci style merujuk nilai apa,
+
+00:04:42.440 --> 00:04:45.550
+tanda kurung apa ini, ada banyak
+sekali hal lain.
+
+00:04:45.550 --> 00:04:48.150
+Apa yang kaulakukan ini?
+
+00:04:48.150 --> 00:04:52.830
+Ini menarik, dan sebenarnya, di
+sinilah terletak kekuatan dan
+
+00:04:52.830 --> 00:04:56.450
+ekstensibilitas JSON
+sebagai format data.
+
+00:04:56.450 --> 00:04:57.850
+Kita istirahat sebentar, dan
+
+00:04:57.850 --> 00:05:01.170
+melihat lebih dekat pada
+nilai-nilai dalam catatan berikutnya.
+

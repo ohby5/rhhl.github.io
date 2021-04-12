@@ -1,0 +1,387 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Split location into 2 TextViews</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>JSON Parsing</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Earthquake at the Coffee Shop.html">01. Earthquake at the Coffee Shop</a>
+    </li>
+    <li class="">
+      <a href="02. Where to Find Earthquake Data .html">02. Where to Find Earthquake Data? </a>
+    </li>
+    <li class="">
+      <a href="03. Receiving Mocks from Our Designer.html">03. Receiving Mocks from Our Designer</a>
+    </li>
+    <li class="">
+      <a href="04. Course Map.html">04. Course Map</a>
+    </li>
+    <li class="">
+      <a href="05. Explore USGS Website As A User.html">05. Explore USGS Website As A User</a>
+    </li>
+    <li class="">
+      <a href="06. Drive-Through Data.html">06. Drive-Through Data</a>
+    </li>
+    <li class="">
+      <a href="07. Explore USGS Website As A Developer.html">07. Explore USGS Website As A Developer</a>
+    </li>
+    <li class="">
+      <a href="08. Import Existing Project.html">08. Import Existing Project</a>
+    </li>
+    <li class="">
+      <a href="09. Checking the build.gradle file.html">09. Checking the build.gradle file</a>
+    </li>
+    <li class="">
+      <a href="10. Solution Code on GitHub.html">10. Solution Code on GitHub</a>
+    </li>
+    <li class="">
+      <a href="11. Show more info on each earthquake.html">11. Show more info on each earthquake</a>
+    </li>
+    <li class="">
+      <a href="12. Overview of JSON.html">12. Overview of JSON</a>
+    </li>
+    <li class="">
+      <a href="13. JSON Components.html">13. JSON Components</a>
+    </li>
+    <li class="">
+      <a href="14. Traverse Nodes in JSON Object Tree.html">14. Traverse Nodes in JSON Object Tree</a>
+    </li>
+    <li class="">
+      <a href="15. Parsing JSON in Android.html">15. Parsing JSON in Android</a>
+    </li>
+    <li class="">
+      <a href="16. Look at Earthquake Query Result.html">16. Look at Earthquake Query Result</a>
+    </li>
+    <li class="">
+      <a href="17. Traversing Earthquake JSON Object Tree.html">17. Traversing Earthquake JSON Object Tree</a>
+    </li>
+    <li class="">
+      <a href="18. Parse JSON response in Quake Report app.html">18. Parse JSON response in Quake Report app</a>
+    </li>
+    <li class="">
+      <a href="19. Display date and time of earthquake.html">19. Display date and time of earthquake</a>
+    </li>
+    <li class="">
+      <a href="20. Quiz Display date and time of earthquake.html">20. Quiz: Display date and time of earthquake</a>
+    </li>
+    <li class="">
+      <a href="21. Split location into 2 TextViews.html">21. Split location into 2 TextViews</a>
+    </li>
+    <li class="">
+      <a href="22. Magnitude as a Decimal Value.html">22. Magnitude as a Decimal Value</a>
+    </li>
+    <li class="">
+      <a href="23. Switch Statement.html">23. Switch Statement</a>
+    </li>
+    <li class="">
+      <a href="24. Circle Background for Magnitude.html">24. Circle Background for Magnitude</a>
+    </li>
+    <li class="">
+      <a href="25. Visual Polish.html">25. Visual Polish</a>
+    </li>
+    <li class="">
+      <a href="26. Add Earthquake Intent.html">26. Add Earthquake Intent</a>
+    </li>
+    <li class="">
+      <a href="27. Reflection.html">27. Reflection</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">21. Split location into 2 TextViews</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Split location into 2 TextViews</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+
+    <p><p>Now let’s move onto location. We can revisit our design mocks to see how the location of each earthquake should be displayed. The design displays proximity information on two lines; the first line shows the distance from the city specified in the second line. Since both lines of text appear in different font styles and font colors, it would be wise to use 2 different TextViews here.</p>
+<p><img src="media/unnamed-160975-0.gif" width="200"/></p>
+<h3 id="split-one-string-into-two-separate-strings">Split one String into two separate Strings</h3>
+<p>If you look at the JSON response we receive from the USGS dataset, the String value from the “place” key comes in two forms:<br />
+“74km NW of Rumoi, Japan”<br />
+“Pacific-Antarctic Ridge”</p>
+<p>The goal is to split the one location String into two Strings, so that they can be displayed in two separate TextViews. Since some locations may not provide details on a km distance from the location, we can use the phrase “Near the” as a substitute. <br />
+“74km NW of Rumoi, Japan” --&gt; “74km NW of” and “Rumoi, Japan”<br />
+“Pacific-Antarctic Ridge” --&gt; “Near the” and “Pacific-Antarctic Ridge”</p>
+<p>To make it easier to refer to these separate Strings, we can call one String the primary location (i.e. “Rumoi, Japan” or “Pacific-Antarctic Rdige”) and the other String the location offset (“74km NW of” or “Near the”).</p>
+<h3 id="string-manipulation">String Manipulation</h3>
+<p>In this task, you’ll practice manipulating Strings. This means learning to chop and piece together different parts of Strings, so that you can create a String in the format you desire. There is a whole bunch of methods offered by the <a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">String class</a> in Java, to help you perform these tasks. </p>
+<p>Many of them assume that you understand that a String is simply a sequence of characters. For a String like “hello”, the length is 5 characters long, and the first character “h” is located at index 0, “e” is located at index 1, “l” at index 2, and so on.</p>
+<p>You may also see <a href="https://developer.android.com/reference/java/lang/CharSequence.html" target="_blank">CharSequence</a> in the documentation. A CharSequence is set of characters, and a String is a more specific type of CharSequence (the String class extends from CharSequence class). If a method requires a CharSequence as input, you can pass in a String.  </p>
+<p>Here are some additional methods you can call on a String object:</p>
+<p><a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#length()" target="_blank">length()</a> - Returns the number of characters in a String</p>
+<p><a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#contains(java.lang.CharSequence)" target="_blank">contains(CharSequence cs)</a> - Returns true or false depending on whether or not the input CharSequence (or input String) is contained within the original String </p>
+<p><a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#indexOf(java.lang.String)" target="_blank">indexOf(String string)</a> - Returns the index of where the input String first appears in the original String, or returns -1 if there input String is not found in the original String</p>
+<p><a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#split(java.lang.String)" target="_blank">split(String string)</a> - Returns an array of String parts by splitting the original String at the locations specified in the input String.</p>
+<p><a href="https://developer.android.com/reference/java/lang/String.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#substring(int,%20int)" target="_blank">substring(int start, int end)</a> - Returns a new String that starts at the start index and goes up to (but doesn’t include) the end index.</p>
+<h3 id="your-turn">Your Turn</h3>
+<p>In this coding task, you will split the location text into a location offset (“74km NW of “) and a primary location (“Rumoi, Japan”) and display the 2 Strings in 2 separate TextViews. If there’s no location offset, use “Near the”, along with the primary location (“Pacific-Antarctic Ridge”).</p>
+<p>Since this logic is related to how the information is displayed in the UI, make the code changes in the EarthquakeAdapter class. You could technically make the code change in the Earthquake class, and ultimately it can come down to personal preference of the developer on where to put the code. In this case, we prefer to store the original location String in the Earthquake class, and keep all UI-related modifications to the earthquake data in the EarthquakeAdapter class. In the future, if our designer wants to display the whole location string together in the UI, we can leave our Earthquake class code as-is, and just modify the logic in the EarthquakeAdapter on how the location is displayed.</p>
+<p>The app should look like the following screenshot when you’re done:</p>
+<p><img src="media/unnamed-160975-1.gif" width="200"></p>
+<p>This is a tricky task that involves String manipulation with methods you may not have used before, but feel free to use trial and error. There are multiple ways to achieve the desired result. Good luck!</p></p>
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8926530184.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 69.18306541019955%; left: 5.723971321695761%; width: 63.092269326683294%; height: 9.977827050997783%;
+  ">
+      
+        <input type="text" style="width: 100%; height: 100%;" name="null" id="text1" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><p>To achieve the desired UI mocks, we should add another TextView to the list item layout. The 2 location TextViews have view IDs “@+id/primary_location” and “@+id/location_offset”, respectively.</p>
+<p>In earthquake_list_item.xml:</p>
+<pre><code> &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="horizontal"
+android:padding="16dp"&gt;
+
+&lt;TextView
+    android:id="@+id/magnitude"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:text="8.9" /&gt;
+
+&lt;TextView
+    android:id="@+id/location_offset"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:text="30km S of" /&gt;
+
+&lt;TextView
+    android:id="@+id/primary_location"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:text="San Francisco, CA" /&gt;
+
+&lt;TextView
+    android:id="@+id/date"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:text="Mar 6, 2010" /&gt;
+
+&lt;TextView
+    android:id="@+id/time"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    tools:text="3:00 PM" /&gt;
+
+ &lt;/LinearLayout&gt;</code></pre>
+<p>Another change we need is to add “Near the” as a string resource for the locations that don’t have a location offset in km. This String doesn’t come from the original JSON response, and is added to satisfy our application’s UI design. We add the string in the res/values/strings.xml resource file, so we don’t hardcode English strings into the Java code. </p>
+<p>In res/values/strings.xml:</p>
+<pre><code> &lt;!-- Default text to show with the earthquake location ("Near the Pacific-Antarctic Ridge")
+  if no specific kilometer distance from the primary location is given [CHAR LIMIT=30] --&gt;
+ &lt;string name="near_the"&gt;Near the&lt;/string&gt;</code></pre>
+<p>Next, we need to modify the EarthquakeAdapter getView() method. At the bottom of this solution, there will be a link to the full EarthquakeAdapter class. As mentioned earlier, it’s okay if you didn’t implement this exactly like we did. Here’s one approach to creating the desired Strings.</p>
+<p>First, we get the original location String from the Earthquake object and store that in a variable.</p>
+<p>In EarthquakeAdapter getView():</p>
+<pre><code> String originalLocation = currentEarthquake.getLocation();</code></pre>
+<p>We also create new variables (primary location and location offset) to store the resulting Strings.</p>
+<pre><code> String primaryLocation;
+ String locationOffset;</code></pre>
+<p>We will be using the split(String string) method in the String class to split the original string at the position where the text “ of “ occurs. The result will be a String containing the characters PRIOR to the “ of ” text and a String containing the characters AFTER the “ of “ text. Since we’ll frequently need to refer to the “ of “ text, we can define a static final String constant (that is a global variable) at the top of the EarthquakeAdapter class.</p>
+<p>In EarthquakeAdapter:</p>
+<pre><code> private static final String LOCATION_SEPARATOR = " of ";</code></pre>
+<p>Let’s dive into the details of the split. If the original location String is “74km NW of Rumoi, Japan” and we split the string using the LOCATION_SEPARATOR, then we will get a String array as the return value. In the String array, the 0th element of the array is “74km NW” and the 1st element of the array is “Rumoi, Japan”. Note that we also add the “ of “ text back to the 0th element of the array, so the locationOffset will say “74km NW of “.</p>
+<p>There is still the issue that some location Strings don’t have a location offset. Hence, we should check if the original location String contains the LOCATION_SEPARATOR first, before we decide to split the string with that separator. If there is no LOCATION_SEPARATOR in the original location String, then we can assume that we should we use the “Near the” text as the location offset, and just use the original location String as the primary location. Here’s the code for the logic we just discussed.</p>
+<p>In EarthquakeAdapter getView():</p>
+<pre><code> if (originalLocation.contains(LOCATION_SEPARATOR)) {
+    String[] parts = originalLocation.split(LOCATION_SEPARATOR);
+    locationOffset = parts[0] + LOCATION_SEPARATOR;
+    primaryLocation = parts[1];
+ } else {
+    locationOffset = getContext().getString(R.string.near_the);
+    primaryLocation = originalLocation;
+ }</code></pre>
+<p>Once we have the 2 separate Strings, we can display them in the 2 TextViews in the list item layout.</p>
+<pre><code> TextView primaryLocationView = (TextView) listItemView.findViewById(R.id.primary_location);
+ primaryLocationView.setText(primaryLocation);
+
+ TextView locationOffsetView = (TextView) listItemView.findViewById(R.id.location_offset);
+ locationOffsetView.setText(locationOffset);</code></pre>
+<p>Then we’re done! The code for the full EarthquakeAdapter class is linked <a href="https://github.com/udacity/ud843-QuakeReport/blob/lesson-one/app/src/main/java/com/example/android/quakereport/EarthquakeAdapter.java" target="_blank">here</a>.</p>
+<p>The app should look like this:</p>
+<p><img src="media/unnamed-160975-0.gif" width="200"></p>
+<p>Note: An alternative approach to creating the primaryLocation and locationOffset Strings is to use the indexOf(String string) method and the substring(int start, int end) methods. First you would find the index of the “ of ” text. Then you would take a substring of the original location String from the 0th index to the location after the “ of ” text to produce a String that says “74km NW of”. Then you would create another substring on the original String going from the starting index (where we last left off) to the end of the original String, to produce a String that says “Rumoi, Japan”. This approach involves meticulously keeping track of the right indices within the String, so that may get more complicated than using the String split() method. Regardless, either way would work and there are also probably multiple other approaches too!</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <p>Hint: If you get stuck, check out this StackOverflow <a href="http://stackoverflow.com/questions/3481828/how-to-split-a-string-in-java/3481842#3481842" target="_blank">post</a>.</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="22. Magnitude as a Decimal Value.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('21. Split location into 2 TextViews')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

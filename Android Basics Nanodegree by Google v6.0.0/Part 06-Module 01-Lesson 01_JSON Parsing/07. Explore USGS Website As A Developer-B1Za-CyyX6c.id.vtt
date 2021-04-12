@@ -1,0 +1,318 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.500 --> 00:00:03.860
+Ini benar-benar bagus, tapi yang
+ingin kita lakukan adalah
+
+00:00:03.860 --> 00:00:07.190
+memiliki data aktif yang
+dapat dimengerti oleh aplikasi kita.
+
+00:00:08.270 --> 00:00:12.380
+Melanjutkan analogi dengan data
+drive through, kita akan gunakan API
+
+00:00:12.380 --> 00:00:18.000
+agar aplikasi kita bisa meminta dan mengonsumsi
+data dari situs USGS yang diperlukan.
+
+00:00:18.000 --> 00:00:21.797
+Mari lihat bagian For Developers
+(Untuk Pengembang) di sisi kiri dan
+
+00:00:21.797 --> 00:00:23.556
+pilih Dokumentasi API.
+
+00:00:23.556 --> 00:00:28.519
+Dokumen ini membantu kita memahami
+cara membangun URL
+
+00:00:28.519 --> 00:00:32.631
+untuk mencari situs bagi tipe
+data tertentu yang kita inginkan.
+
+00:00:32.631 --> 00:00:37.699
+Di atas, dokumentasi mengatakan
+bahwa URL yang ingin kita cari
+
+00:00:37.699 --> 00:00:42.693
+ada di sini lalu memberikan dua
+komponen di akhir.
+
+00:00:42.693 --> 00:00:46.497
+Dilanjutkan dengan metode dan
+beberapa parameter.
+
+00:00:46.497 --> 00:00:49.464
+Daftar metode yang valid
+ada di bawah URL dan
+
+00:00:49.464 --> 00:00:53.853
+ada beberapa pilihan yang sebagian besar
+terkait dengan pengambilan metadata
+
+00:00:53.853 --> 00:00:55.095
+tentang API itu sendiri.
+
+00:00:55.095 --> 00:00:59.008
+Scroll sedikit ke bawah dan
+temukan yang disebut query,
+
+00:00:59.008 --> 00:01:03.347
+yang mungkin merupakan metode yang
+digunakan untuk mengumpulkan permintaan data
+
+00:01:03.347 --> 00:01:07.190
+dan deskripsinya mengatakan,
+untuk mengumpulkan permintaan data.
+
+00:01:07.190 --> 00:01:10.564
+Lalu, ada parameter
+query yang tersedia.
+
+00:01:10.564 --> 00:01:15.605
+Yang pertama memerinci cara memformat
+data USGS yang dikirim kepada kita.
+
+00:01:15.605 --> 00:01:19.944
+Kita akan bicarakan ini lebih lanjut
+kemudian kita ada parameter query untuk periode
+
+00:01:19.944 --> 00:01:24.484
+waktu yang kita inginkan dan banyak
+cara untuk menarik lokasi dan
+
+00:01:24.484 --> 00:01:28.822
+cara lain untuk menahan hasilnya,
+seperti membatasi jumlah hasil
+
+00:01:28.822 --> 00:01:31.193
+yang kita peroleh atau
+kedalaman maksimum atau
+
+00:01:31.193 --> 00:01:35.110
+magnitudo maksimum, kedalaman maksimum,
+magnitudo minimum, dan sebagainya.
+
+00:01:36.130 --> 00:01:40.030
+Mari kita coba dalam peramban dan
+lihat apa hasilnya.
+
+00:01:40.030 --> 00:01:43.838
+Anggap saja saya ingin memperoleh
+daftar gempa bumi hari kemarin.
+
+00:01:43.838 --> 00:01:48.161
+Saya akan mengetik di URL ini,
+menambahkan metode query dan
+
+00:01:48.161 --> 00:01:53.874
+menambahkan parameter untuk
+waktu mulai dan waktu berakhir.
+
+00:01:53.874 --> 00:01:58.324
+Saya menggunakan tanggal 2016-05-02,
+dan
+
+00:01:58.324 --> 00:02:03.487
+2016-05-03, sehingga
+data ini hanya selisih satu hari.
+
+00:02:03.487 --> 00:02:08.586
+Formatnya juga spesifik, yaitu
+tahun strip bulan strip hari.
+
+00:02:08.586 --> 00:02:12.909
+Kemudian, saya akan
+menambahkan format=geojson.
+
+00:02:12.909 --> 00:02:17.521
+Alasannya adalah karena
+JSON adalah format yang cukup bagus untuk
+
+00:02:17.521 --> 00:02:22.133
+bekerja dengan data API dan GeoJSON
+adalah tipe JSON khusus yang dirancang
+
+00:02:22.133 --> 00:02:25.327
+hanya untuk mendeskripsikan
+informasi geografis.
+
+00:02:25.327 --> 00:02:28.724
+Kita akan bahas JSON lebih
+terperinci dalam kursus ini nanti.
+
+00:02:28.724 --> 00:02:30.710
+Tekan Enter dan
+lihat apa hasilnya.
+
+00:02:31.880 --> 00:02:34.017
+Bagus, hasilnya banyak sekali kode.
+
+00:02:34.017 --> 00:02:37.730
+Terlihat belum dapat dibaca
+saat ini, tapi
+
+00:02:37.730 --> 00:02:40.498
+kita dapat menggunakan pengaturan efek
+tool pemformatan.
+
+00:02:40.498 --> 00:02:44.946
+Jika saya salin dan tempel kode ini
+ke dalam JSON pretty print,
+
+00:02:44.946 --> 00:02:48.146
+hasilnya akan jauh lebih dapat dibaca.
+
+00:02:48.146 --> 00:02:52.553
+Jadi saya tempel kode ini,
+saya klik tombol dan ini hasilnya.
+
+00:02:52.553 --> 00:02:54.240
+Lebih mudah dibaca.
+
+00:02:55.620 --> 00:02:59.310
+Saya segera bisa melihat bahwa kejadian gempa
+bumi disusun dalam kelompok
+
+00:02:59.310 --> 00:03:04.070
+yang disebut fitur dan dalam tiap
+fitur bisa dilihat misalnya magnitudo,
+
+00:03:04.070 --> 00:03:08.760
+tempat, dan waktunya.
+
+00:03:09.990 --> 00:03:13.785
+Ngomong-ngomong, cara yang bagus
+untuk menunjukkan waktu.
+
+00:03:13.785 --> 00:03:16.404
+Ini sebenarnya disebut Unix timestamp.
+
+00:03:16.404 --> 00:03:19.986
+Komputer sering menggunakan UNIX timestamp,
+karena merupakan bilangan bulat.
+
+00:03:19.986 --> 00:03:24.190
+Karena itu lebih mudah saat
+mengerjakan perhitungan dengan
+
+00:03:24.190 --> 00:03:27.040
+dua tanggal atau operasi
+matematika apa pun.
+
+00:03:27.040 --> 00:03:31.781
+Unix timestamp ditentukan dengan jumlah
+
+00:03:31.781 --> 00:03:34.921
+detik setelah tanggal 1 Januari 1970.
+
+00:03:34.921 --> 00:03:39.604
+Jangan khawatir saat Anda menampilkan
+tanggal dan waktu dalam perangkat lunak.
+
+00:03:39.604 --> 00:03:41.517
+Ada banyak library dan
+
+00:03:41.517 --> 00:03:45.550
+cara lain untuk merepresentasikannya
+agar dapat lebih mudah dibaca.
+
+00:03:45.550 --> 00:03:50.626
+Dari daftar ini juga saya lihat
+nilai magnitudo yang sering kali rendah.
+
+00:03:50.626 --> 00:03:53.697
+Tak ada yang takut dengan gempa bumi 0,1.
+
+00:03:53.697 --> 00:03:59.097
+Sebenarnya, anggap saja kita hanya perhatikan
+gempa bumi dengan magnitudo 4,5 atau
+
+00:03:59.097 --> 00:03:59.699
+lebih tinggi.
+
+00:03:59.699 --> 00:04:04.652
+Parameter query apa yang perlu ditambahkan
+pada URL sehingga hanya menunjukkan
+
+00:04:04.652 --> 00:04:06.340
+gempa yang lebih besar itu?
+
+00:04:07.520 --> 00:04:11.280
+Melihat sekelas pada
+dokumentasi, saya lihat minmagnitude
+
+00:04:11.280 --> 00:04:15.779
+akan memberikan kejadian yang
+lebih besar dari nilai yang ditunjukkan,
+
+00:04:15.779 --> 00:04:17.197
+jadi mari kita masukkan.
+
+00:04:17.197 --> 00:04:21.367
+Saya akan melanjutkan dan
+mengambil kode ini dan
+
+00:04:21.367 --> 00:04:24.895
+menempelkannya di JSON pretty print.
+
+00:04:24.895 --> 00:04:27.135
+Sekarang,
+coba lihat apa hasilnya.
+
+00:04:27.135 --> 00:04:31.383
+Dan benar sekali, saya bisa lihat
+gempa bumi magnitudo 4,7.
+
+00:04:31.383 --> 00:04:33.342
+Mari scroll ke bawah.
+
+00:04:33.342 --> 00:04:38.193
+Ada 4,5, 4,6.
+
+00:04:38.193 --> 00:04:39.807
+Dan ada lagi 4,6.
+
+00:04:39.807 --> 00:04:42.143
+Jadi, sepertinya memang
+berfungsi seperti yang dibilang.
+
+00:04:42.143 --> 00:04:42.703
+Keren.
+
+00:04:42.703 --> 00:04:46.260
+Apa lagi cara untuk
+memodifikasi URL?
+
+00:04:46.260 --> 00:04:47.070
+Sekarang, tiba saatnya bagi
+
+00:04:47.070 --> 00:04:51.820
+Anda untuk memeriksa dokumentasi
+dan mengeksplorasi sendiri.
+
+00:04:51.820 --> 00:04:56.560
+Di tabel ini, tulis dengan kata-kata Anda
+sendiri deskripsi yang bagus untuk
+
+00:04:56.560 --> 00:04:58.530
+tiap parameter yang telah terdaftar.
+
+00:04:58.530 --> 00:05:01.420
+Gunakan tautan untuk umpan data
+di catatan kelas untuk mengambil
+
+00:05:01.420 --> 00:05:03.310
+data gempa bumi USGS.
+
+00:05:03.310 --> 00:05:05.770
+Masukkan ke formatter,
+jika Anda mau, dan
+
+00:05:05.770 --> 00:05:09.390
+tebaklah sebaik-baiknya untuk apa
+tiap tipe data digunakan.
+

@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.835
+Okay. So, here we are in Android Studio.
+
+00:00:02.835 --> 00:00:05.775
+And we have the project pane open.
+
+00:00:05.775 --> 00:00:09.630
+Let's become familiar with the code base for the Quake-Report app. All right.
+
+00:00:09.630 --> 00:00:10.980
+So, the first thing we're going to do is go to
+
+00:00:10.980 --> 00:00:14.310
+the app directory and look in the Java folder.
+
+00:00:14.310 --> 00:00:17.070
+This is where all the logic for the app is.
+
+00:00:17.070 --> 00:00:21.620
+Then when I moved down here to the resources folder, expand it.
+
+00:00:21.620 --> 00:00:25.545
+This is the folder that contains everything related to the appearance of the app.
+
+00:00:25.545 --> 00:00:28.875
+These files control how the app appears on different devices.
+
+00:00:28.875 --> 00:00:31.409
+Resources can include XML files,
+
+00:00:31.409 --> 00:00:33.825
+images and other media files.
+
+00:00:33.825 --> 00:00:36.410
+We can start by expanding out the layout folder.
+
+00:00:36.410 --> 00:00:40.005
+Here we have the earthquake_activity.xml file.
+
+00:00:40.005 --> 00:00:43.095
+This file defines the layout for the main screen in our app,
+
+00:00:43.095 --> 00:00:44.490
+which is just a list view.
+
+00:00:44.490 --> 00:00:46.485
+Then we have the mipmap folder,
+
+00:00:46.485 --> 00:00:48.930
+which is a special folder just for the app icon.
+
+00:00:48.930 --> 00:00:52.980
+Other images in your app should go in the drawable folders.
+
+00:00:52.980 --> 00:00:55.695
+Then we have the values folder,
+
+00:00:55.695 --> 00:00:59.560
+this contains the colors.xml file which defines the colors for our app.
+
+00:00:59.560 --> 00:01:03.955
+And we also have some additional resource files for the styles and themes,
+
+00:01:03.955 --> 00:01:06.050
+as well as tech strings.
+
+00:01:06.050 --> 00:01:08.880
+All right, so let's go back to the Java folder.
+
+00:01:08.880 --> 00:01:12.395
+We have one Java file called the EarthquakeActivity.
+
+00:01:12.395 --> 00:01:16.740
+And it turns out that the EarthquakeActivity is the main screen for our app.
+
+00:01:16.740 --> 00:01:18.890
+When the activity is created,
+
+00:01:18.890 --> 00:01:23.000
+we set the content view to the earthquake_activity.xml layout.
+
+00:01:23.000 --> 00:01:25.130
+Then we create a fake list of earthquakes,
+
+00:01:25.130 --> 00:01:28.895
+because this is placeholder data until we get real data from the server.
+
+00:01:28.895 --> 00:01:32.435
+We represent the list of earthquakes as an array list of strings,
+
+00:01:32.435 --> 00:01:35.505
+which then contains the names of different cities.
+
+00:01:35.505 --> 00:01:39.810
+Then we create an array adapter which knows how to create list item views,
+
+00:01:39.810 --> 00:01:41.900
+one for each earthquake in the array list.
+
+00:01:41.900 --> 00:01:44.170
+And then the list items will be added into
+
+00:01:44.170 --> 00:01:48.810
+the list view that we defined in our earthquake_activity.xml layout.
+
+00:01:48.810 --> 00:01:52.200
+Last but not least, we have the AndroidManifest file.
+
+00:01:52.200 --> 00:01:54.220
+This file contains important information about
+
+00:01:54.220 --> 00:01:56.530
+our app that the Android system needs to know.
+
+00:01:56.530 --> 00:01:59.125
+For example, the package name,
+
+00:01:59.125 --> 00:02:04.530
+the app name and the activities. All right.
+
+00:02:04.530 --> 00:02:05.730
+Now going back to our quiz,
+
+00:02:05.730 --> 00:02:07.580
+here are the answers to the questions.
+
+00:02:07.580 --> 00:02:12.490
+Our main activity is defined in the EarthquakeActivity.java file.
+
+00:02:12.490 --> 00:02:19.605
+And the layout for the activity is defined in the earthquake_activity.xml file.
+
+00:02:19.605 --> 00:02:22.759
+And lastly, within our earthquake activity class,
+
+00:02:22.759 --> 00:02:25.715
+we have an array list variable called earthquakes,
+
+00:02:25.715 --> 00:02:29.330
+which holds the list of earthquake locations as strings.
+

@@ -1,0 +1,291 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.490 --> 00:00:03.401
+Oke, kita akan menjelaskan ini cukup
+cepat karena hanya merupakan tinjauan dari
+
+00:00:03.401 --> 00:00:04.660
+pelajaran terakhir.
+
+00:00:04.660 --> 00:00:07.180
+Jadi jika Anda butuh pengingat,
+tautan ada di bawah.
+
+00:00:07.180 --> 00:00:11.010
+Untuk menghasilkan screenshot yang diinginkan
+seperti ini, kita perlu memodifikasi daftar sehingga
+
+00:00:11.010 --> 00:00:13.920
+tiap item daftar
+menunjukkan informasi lebih banyak.
+
+00:00:13.920 --> 00:00:17.210
+Daripada menggunakan tata letak yang sederhana dari
+XML item daftar yang disediakan oleh
+
+00:00:17.210 --> 00:00:20.220
+framework, kita perlu
+membuat tata letak XML sendiri untuk
+
+00:00:20.220 --> 00:00:22.904
+item daftar tunggal yang akan
+berisi tiga TextViews.
+
+00:00:24.180 --> 00:00:25.724
+Untuk itu,
+
+00:00:25.724 --> 00:00:30.146
+Saya akan membuat dokumen tata letak baru
+bernama earthquake_list_item.xml.
+
+00:00:30.146 --> 00:00:34.440
+Jika kita melihat TextView ini,
+kita bisa melihat tata letak XML kita.
+
+00:00:34.440 --> 00:00:36.078
+Di dalam dokumen item daftar ini,
+
+00:00:36.078 --> 00:00:40.070
+saya punya tata LinearLayout horizontal
+yang berisi tiga TextViews,
+
+00:00:40.070 --> 00:00:44.150
+satu untuk magnitudo, satu untuk
+lokasi, dan satu lagi untuk tanggal.
+
+00:00:45.610 --> 00:00:47.950
+Kita tak perlu khawatir dengan
+tampilannya saat ini.
+
+00:00:47.950 --> 00:00:52.880
+Jadi saya beri spasi secara acak di semua
+view menggunakan tata letak dengan 0dp dan
+
+00:00:52.880 --> 00:00:54.900
+bobot tata letak 1 untuk
+semua anak.
+
+00:00:54.900 --> 00:01:00.010
+Saya juga menambahkan padding 16 dips
+di tata letak item daftar sehingga
+
+00:01:00.010 --> 00:01:01.930
+item daftar itu tidak akan
+terlalu pendek.
+
+00:01:03.100 --> 00:01:07.540
+Jika kita beralih ke layar desain, kita
+dapat melihat data variabel sementara
+
+00:01:07.540 --> 00:01:09.540
+untuk memastikan bahwa tata letak
+terlihat seperti yang kita inginkan.
+
+00:01:10.560 --> 00:01:15.250
+Berikutnya, kita tambahkan XML tools namespace
+ke root elemen LinearLayout,
+
+00:01:15.250 --> 00:01:18.480
+di bawah baris di mana kita
+mendeklarasikan namespace Android.
+
+00:01:18.480 --> 00:01:22.720
+Lalu kita bisa menggunakan atribut tools:text
+untuk tiap TextView dan
+
+00:01:22.720 --> 00:01:24.920
+menambahkan teks sementara.
+
+00:01:24.920 --> 00:01:28.400
+Jadi, kita tambahkan teks yang akan
+ditunjukkan dalam layar pratinjau Android Studio,
+
+00:01:28.400 --> 00:01:31.010
+tapi bukan di telepon kita
+saat kita benar-benar menjalankan aplikasi.
+
+00:01:32.100 --> 00:01:35.920
+Keren, sekarang tata letak kustom
+item daftar kita sudah selesai.
+
+00:01:35.920 --> 00:01:39.000
+Sekarang kita butuh objek Java untuk memegang
+semua informasi gempa bumi,
+
+00:01:39.000 --> 00:01:41.350
+yang akan ditampilkan dalam tiap item daftar.
+
+00:01:41.350 --> 00:01:44.830
+Sekarang saya akan kembali ke
+dokumen Earthquake-java, di mana kita
+
+00:01:44.830 --> 00:01:49.420
+telah menetapkan kelas Earthquake baru yang
+merepresentasikan gempa bumi tunggal.
+
+00:01:49.420 --> 00:01:53.000
+Lalu kita menentukan tiga variabel
+global dengan tipe string,
+
+00:01:53.000 --> 00:01:55.300
+satu untuk memegang magnitudo, lokasi,
+
+00:01:55.300 --> 00:01:59.090
+dan tanggal, karena tiap
+gempa bumi punya atribut-atribut ini.
+
+00:01:59.090 --> 00:02:00.390
+Lalu di constructor publik untuk
+
+00:02:00.390 --> 00:02:03.360
+kelas Earthquake, kita mengawali
+ketiga variabel anggota
+
+00:02:03.360 --> 00:02:06.370
+berdasarkan nilai yang diberikan
+ke dalam constructor.
+
+00:02:06.370 --> 00:02:09.970
+Karena variabel-variabel global ini
+bersifat privat, kita perlu membuat metode
+
+00:02:09.970 --> 00:02:14.768
+public getter sehingga kelas-kelas lain dapat
+mengakses informasi tentang gempa bumi ini.
+
+00:02:14.768 --> 00:02:17.300
+Sekarang saya akan pergi ke
+kelas EarthquakeActivity kita,
+
+00:02:17.300 --> 00:02:20.030
+di mana kita benar-benar membuat
+objek-objek gempa bumi dengan memanggil
+
+00:02:20.030 --> 00:02:22.189
+constructor yang telah kita buat.
+
+00:02:23.370 --> 00:02:25.040
+Perhatikan baris ini.
+
+00:02:25.040 --> 00:02:27.233
+Daripada membuat
+ArrayList berisi string,
+
+00:02:27.233 --> 00:02:30.520
+saya ingin ArrayList berisi
+objek-objek gempa bumi sebenarnya.
+
+00:02:30.520 --> 00:02:32.550
+Lalu saya membuat objek
+gempa bumi baru dan
+
+00:02:32.550 --> 00:02:35.420
+menambahkannya ke dalam daftar,
+satu demi satu.
+
+00:02:35.420 --> 00:02:37.920
+Untuk tiap gempa bumi,
+saya sudah membuat nilai palsu
+
+00:02:37.920 --> 00:02:40.210
+untuk magnitudo dan tanggal.
+
+00:02:40.210 --> 00:02:42.970
+Lalu kita harus membuat
+EarthquakeAdapter kita sendiri,
+
+00:02:42.970 --> 00:02:46.000
+yang dikustomisasi untuk menampilkan
+daftar gempa bumi.
+
+00:02:46.000 --> 00:02:50.175
+Kita tentukan agar EarthquakeAdapter merentang
+dari super kelas
+
+00:02:50.175 --> 00:02:52.880
+ArrayAdapter dan
+mengesampingkan metode getView sehingga
+
+00:02:52.880 --> 00:02:56.040
+kita mengontrol bagaimana view item
+daftar dibuat.
+
+00:02:56.040 --> 00:03:00.600
+Saat getView dipanggil, kita dapat memeriksa
+apakah kita bisa menggunakan tampilan yang diulang.
+
+00:03:00.600 --> 00:03:03.180
+Jika tidak, kita masukkan tata letak
+item daftar baru yang ditentukan dalam
+
+00:03:03.180 --> 00:03:05.640
+dokumen earthquake_list_item XML.
+
+00:03:05.640 --> 00:03:08.930
+Lalu kita bisa menggunakan parameter posisi
+yang diberikan untuk memperoleh referensi untuk
+
+00:03:08.930 --> 00:03:12.280
+objek gempa bumi yang sesuai
+dari daftar gempa bumi.
+
+00:03:12.280 --> 00:03:15.940
+Berikutnya, kita dapat mulai mengikat data dari
+objek gempa bumi ini ke tampilan dalam
+
+00:03:15.940 --> 00:03:17.750
+tata letak item daftar
+
+00:03:17.750 --> 00:03:21.140
+Kita temukan tiap TextView dalam
+daftar yang didasarkan pada view ID dan
+
+00:03:21.140 --> 00:03:22.990
+menetapkan data yang terkait ke atasnya.
+
+00:03:24.130 --> 00:03:27.110
+Setelah item daftar memiliki data yang tepat
+untuk tiap gempa bumi tunggal di posisi
+
+00:03:27.110 --> 00:03:30.310
+tertentu, lalu kita bisa mengembalikan
+view ke pemanggil.
+
+00:03:30.310 --> 00:03:34.510
+Dalam hal ini, pemanggilnya adalah ListView,
+yang akan mengambil semua item daftar ini dan
+
+00:03:34.510 --> 00:03:35.414
+menampilkannya di layar.
+
+00:03:35.414 --> 00:03:38.690
+Untuk penjelasan yang lebih
+menyeluruh tentang ListView dan
+
+00:03:38.690 --> 00:03:42.760
+adapter, silakan periksa bab terakhir
+yang berisi seluruh pelajaran tentang topik ini.
+
+00:03:42.760 --> 00:03:44.790
+Tautannya ada di bawah.
+
+00:03:44.790 --> 00:03:47.220
+Jadi mari kembali ke
+EarthquakeActivity kita.
+
+00:03:47.220 --> 00:03:51.029
+Kita dapat membuat adapter gempa bumi
+baru dengan memberikan daftar
+
+00:03:51.029 --> 00:03:54.730
+gempa bumi dan mengatur
+adapter di ListView.
+
+00:03:54.730 --> 00:03:57.644
+Sekarang mari kita jalankan perangkat kita.
+
+00:03:57.644 --> 00:03:59.390
+Tampilannya seperti ini. Keren.
+

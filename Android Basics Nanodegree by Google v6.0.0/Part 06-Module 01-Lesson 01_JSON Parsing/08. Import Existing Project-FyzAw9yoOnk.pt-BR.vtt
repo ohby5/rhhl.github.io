@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:02.800
+Estamos no Android Studio
+
+00:00:03.400 --> 00:00:05.900
+e abrimos janela do projeto.
+
+00:00:05.933 --> 00:00:09.167
+Vamos examinar a base de código
+para o app de terremotos.
+
+00:00:09.200 --> 00:00:14.500
+Primeiro, vamos acessar o diretório
+e entrar na pasta "java".
+
+00:00:14.533 --> 00:00:17.500
+Toda a lógica do app
+está aqui.
+
+00:00:17.533 --> 00:00:21.867
+Vamos até a pasta "res".
+Queremos expandi-la.
+
+00:00:21.900 --> 00:00:25.633
+Todos os recursos visuais
+do app estão nesta pasta.
+
+00:00:25.667 --> 00:00:28.900
+Estes arquivos controlam a aparência
+do app em aparelhos diferentes.
+
+00:00:28.933 --> 00:00:33.700
+Recursos incluem arquivos XML,
+imagens e outros arquivos de mídia.
+
+00:00:33.733 --> 00:00:36.467
+Vamos expandir
+a pasta "layout".
+
+00:00:36.500 --> 00:00:40.033
+Aqui tem o arquivo
+"earthquake_activity.xml".
+
+00:00:40.067 --> 00:00:43.100
+Este arquivo define o layout
+da tela principal do app,
+
+00:00:43.133 --> 00:00:44.633
+que é apenas um ListView.
+
+00:00:44.667 --> 00:00:46.467
+Depois temos a pasta "mipmap",
+
+00:00:46.500 --> 00:00:49.433
+uma pasta especial
+para o ícone do app.
+
+00:00:49.467 --> 00:00:52.767
+Outras imagens do app
+devem ir em pastas "drawable".
+
+00:00:53.833 --> 00:00:55.667
+Depois temos a pasta "values".
+
+00:00:55.700 --> 00:00:59.767
+Ela contém o arquivo "colors.xml"
+que define as cores do app.
+
+00:00:59.800 --> 00:01:03.933
+O arquivo "styles.xml"
+define estilos e temas,
+
+00:01:03.967 --> 00:01:06.033
+e há também o arquivo
+de strings de texto.
+
+00:01:06.533 --> 00:01:08.900
+Vamos voltar à pasta "java".
+
+00:01:08.933 --> 00:01:12.100
+Temos o arquivo java
+"EarthquakeActivity".
+
+00:01:13.067 --> 00:01:17.133
+Este arquivo é a tela principal
+do nosso app.
+
+00:01:17.167 --> 00:01:18.900
+Quando a activity é criada,
+
+00:01:18.933 --> 00:01:23.133
+definimos o ContentView com o layout
+do "earthquake_activity".
+
+00:01:23.167 --> 00:01:25.367
+Depois criamos uma lista
+de tremores falsos,
+
+00:01:25.400 --> 00:01:28.767
+dados fictícios até puxarmos
+os dados do servidor.
+
+00:01:28.800 --> 00:01:32.533
+Representamos a lista de tremores
+como uma ArrayList de strings
+
+00:01:32.567 --> 00:01:35.467
+que contém o nome
+de várias cidades.
+
+00:01:35.500 --> 00:01:39.700
+Criamos um ArrayAdapter que gera
+exibições de itens de lista,
+
+00:01:39.733 --> 00:01:42.133
+um para cada tremor
+na ArrayList.
+
+00:01:42.167 --> 00:01:45.333
+Os itens vão ser adicionados
+no ListView
+
+00:01:45.367 --> 00:01:49.000
+que definimos no nosso layout
+do "earthquake_activity".
+
+00:01:49.033 --> 00:01:52.267
+Por ultimo, o arquivo
+"AndroidManifest.xml"
+
+00:01:52.300 --> 00:01:54.800
+que contém informações
+importantes sobre o app
+
+00:01:54.833 --> 00:01:56.867
+que o sistema Android
+precisa saber.
+
+00:01:56.900 --> 00:02:00.700
+Por exemplo, o nome do pacote,
+o nome do app
+
+00:02:02.267 --> 00:02:03.800
+e as atividades.
+
+00:02:03.833 --> 00:02:07.533
+Voltando para o quiz,
+estas são as respostas.
+
+00:02:07.567 --> 00:02:13.067
+A atividade principal é definida
+em "EarthquakeActivity.java".
+
+00:02:13.100 --> 00:02:15.700
+O layout para a atividade
+
+00:02:15.733 --> 00:02:19.267
+está em
+"earthquake_activity. xml".
+
+00:02:20.033 --> 00:02:22.733
+Por último, na classe
+"EarthquakeActivity",
+
+00:02:22.767 --> 00:02:25.767
+temos uma variável de ArrayList
+chamado "eathquakes"
+
+00:02:25.800 --> 00:02:28.933
+que traz os locais dos tremores
+em formato de string.
+

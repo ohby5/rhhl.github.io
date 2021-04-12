@@ -1,0 +1,399 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:02.100
+Isso é tudo ótimo.
+
+00:00:02.133 --> 00:00:04.267
+Mas o que queremos fazer,
+no fim,
+
+00:00:04.300 --> 00:00:07.733
+é ter dados em tempo real
+que o nosso app entenda.
+
+00:00:07.767 --> 00:00:10.933
+Para continuar a analogia
+de dados drive-thru,
+
+00:00:10.967 --> 00:00:13.467
+vamos usar uma API
+para permitir que o app
+
+00:00:13.500 --> 00:00:16.633
+para requerer e consumir
+dados do site da USGS,
+
+00:00:16.667 --> 00:00:17.967
+conforme necessite.
+
+00:00:18.000 --> 00:00:20.733
+Na sessão "para desenvolvedores"
+à esquerda,
+
+00:00:20.767 --> 00:00:23.033
+vamos selecionar
+"documentação API".
+
+00:00:23.667 --> 00:00:26.700
+Esta documentação existe
+para nos ajudar e entender
+
+00:00:26.733 --> 00:00:30.133
+a achar o URL para consultar
+os dados que queremos no site
+
+00:00:30.167 --> 00:00:32.633
+para o tipo de dados
+que queremos.
+
+00:00:32.667 --> 00:00:34.000
+Bem aqui no topo,
+
+00:00:34.033 --> 00:00:38.033
+a documentação está dizendo
+que a URL está bem aqui.
+
+00:00:38.633 --> 00:00:42.833
+Temos mais dois componentes
+no fim.
+
+00:00:42.867 --> 00:00:46.433
+Quer um método.
+E parâmetros.
+
+00:00:46.467 --> 00:00:49.700
+A lista de métodos válidos
+está bem abaixo da URL.
+
+00:00:49.733 --> 00:00:51.167
+Temos várias opções.
+
+00:00:51.200 --> 00:00:53.733
+A maior parte é sobre
+recuperar metadata
+
+00:00:53.767 --> 00:00:55.233
+sobre a própria API.
+
+00:00:55.267 --> 00:00:58.767
+Descemos um pouco,
+e encontramos "consulta",
+
+00:00:58.800 --> 00:01:02.600
+que é, provavelmente, a forma
+de se enviar requisições.
+
+00:01:02.633 --> 00:01:07.200
+E a descrição diz: "para submeter
+uma requisição de dados".
+
+00:01:07.233 --> 00:01:10.667
+Depois temos parâmetros
+de consulta disponíveis.
+
+00:01:10.700 --> 00:01:13.833
+O primeiro especifica
+como queremos que o USGS
+
+00:01:13.867 --> 00:01:15.767
+formate os dados
+que nos envia.
+
+00:01:15.800 --> 00:01:17.733
+Vamos falar mais disso
+em breve.
+
+00:01:17.767 --> 00:01:21.733
+Então temos parâmetros
+de consulta de período de tempo.
+
+00:01:21.767 --> 00:01:24.267
+E muitas formas de pegar
+a localização.
+
+00:01:24.300 --> 00:01:26.567
+E outras formas de limitar
+os resultados.
+
+00:01:26.600 --> 00:01:29.800
+Tal como limitar o número
+de resultados que recebemos
+
+00:01:29.833 --> 00:01:32.800
+ou qual é a profundidade máxima
+e a magnitude máxima.
+
+00:01:32.833 --> 00:01:35.667
+Profundidade mínima
+e magnitude mínima. Por aí.
+
+00:01:35.700 --> 00:01:38.000
+Vamos testar isso
+num browser
+
+00:01:38.033 --> 00:01:39.867
+e ver o que volta.
+
+00:01:39.900 --> 00:01:43.867
+Digamos que queremos uma lista
+de tremores do último dia.
+
+00:01:43.900 --> 00:01:45.900
+Digitamos a URL,
+
+00:01:45.933 --> 00:01:47.800
+adicionamos o método
+de consulta
+
+00:01:48.467 --> 00:01:51.667
+e adicionamos parâmetros
+para o tempo de início
+
+00:01:52.267 --> 00:01:53.967
+e para o tempo final.
+
+00:01:54.000 --> 00:01:58.233
+Usamos as datas: 2016-05-02
+
+00:01:58.767 --> 00:02:00.900
+e 2016-05-03.
+
+00:02:00.933 --> 00:02:03.400
+É apenas um dia
+de diferença.
+
+00:02:03.433 --> 00:02:05.767
+O formato é bem específico:
+
+00:02:05.800 --> 00:02:08.700
+ano, hífen, mês, hífen, dia.
+
+00:02:08.733 --> 00:02:13.033
+Por fim, acrescentamos
+"format=geojson".
+
+00:02:13.067 --> 00:02:17.200
+Adicionamos isso porque JSON
+é um ótimo formato para trabalhar
+
+00:02:17.233 --> 00:02:19.100
+com dados de API.
+
+00:02:19.133 --> 00:02:21.933
+E geojson é um tipo
+especial de JSON
+
+00:02:21.967 --> 00:02:25.400
+que serve para descrever
+informações geográficas.
+
+00:02:25.433 --> 00:02:28.533
+Vamos discutir JSON
+em detalhes mais tarde.
+
+00:02:28.567 --> 00:02:31.033
+Vamos dar "enter"
+e ver o que aparece.
+
+00:02:31.667 --> 00:02:34.033
+Legal! Apareceu
+um monte de códigos.
+
+00:02:34.067 --> 00:02:37.433
+Não parece que dá
+para ler ainda, neste estado,
+
+00:02:37.467 --> 00:02:40.467
+mas podemos usar
+uma ferramenta de formatação.
+
+00:02:40.500 --> 00:02:43.300
+Se copiarmos e colarmos
+esse código
+
+00:02:44.200 --> 00:02:47.567
+no JSON Pretty Print
+veremos algo que dá para ler.
+
+00:02:48.267 --> 00:02:51.467
+Colamos código
+e clicamos o botão.
+
+00:02:52.167 --> 00:02:55.133
+E pronto: agora está bem
+mais fácil de ler, certo?
+
+00:02:55.167 --> 00:02:59.133
+Logo vejo os terremotos
+estão agrupados em nós
+
+00:02:59.167 --> 00:03:00.933
+chamados de "recursos".
+
+00:03:00.967 --> 00:03:04.567
+Podemos ver a magnitude.
+
+00:03:05.100 --> 00:03:06.667
+E o local.
+
+00:03:07.867 --> 00:03:09.433
+E a hora.
+
+00:03:09.967 --> 00:03:13.700
+Aliás, esta é uma forma
+interessante de ver o tempo.
+
+00:03:13.733 --> 00:03:16.467
+Isso se chama horário Unix.
+
+00:03:16.500 --> 00:03:19.133
+Computadores costumam usar
+o horário Unix
+
+00:03:19.167 --> 00:03:21.967
+porque são mais fáceis
+de trabalhar
+
+00:03:22.000 --> 00:03:24.800
+para fazer cálculos
+entre duas datas
+
+00:03:24.833 --> 00:03:26.900
+ou qualquer outra
+operação matemática.
+
+00:03:26.933 --> 00:03:28.633
+Um horário Unix, aliás,
+
+00:03:28.667 --> 00:03:30.767
+é definido pelo
+número de segundos
+
+00:03:30.800 --> 00:03:35.033
+desde o dia 1º de janeiro
+de 1970.
+
+00:03:35.067 --> 00:03:36.233
+Não se preocupe.
+
+00:03:36.267 --> 00:03:38.967
+Quando você tiver que
+demonstrar um dia no tempo
+
+00:03:39.000 --> 00:03:42.300
+num software, há várias
+bibliotecas e formas
+
+00:03:42.333 --> 00:03:45.333
+para representar isso
+de uma forma mais reconhecível.
+
+00:03:45.367 --> 00:03:47.167
+Também podemos
+ver por esta lista
+
+00:03:47.200 --> 00:03:50.267
+que os valores de magnitude
+são muito baixos.
+
+00:03:50.800 --> 00:03:53.833
+Ninguém vai sentir
+um terremoto 0.1.
+
+00:03:53.867 --> 00:03:56.100
+Vamos presumir
+que só nos importamos
+
+00:03:56.133 --> 00:03:59.367
+com terremotos
+de magnitude 4.5 ou mais alto.
+
+00:03:59.400 --> 00:04:03.267
+Que parâmetro de consulta
+adicionaríamos à URL
+
+00:04:03.300 --> 00:04:06.533
+para que ela só mostrasse
+os terremotos grandes?
+
+00:04:07.100 --> 00:04:09.033
+Depois de analisar
+a documentação,
+
+00:04:09.067 --> 00:04:13.067
+posso ver que "minmagnitude"
+vai me dar valores maiores
+
+00:04:13.100 --> 00:04:15.767
+do que o valor indicado.
+Então vamos colocar.
+
+00:04:17.367 --> 00:04:20.233
+Vamos pegar todo este código
+
+00:04:21.000 --> 00:04:24.067
+e colar no Pretty Print JSON.
+
+00:04:24.967 --> 00:04:27.167
+Agora vamos ver o que temos.
+
+00:04:27.200 --> 00:04:31.033
+Já vemos um tremor
+de magnitude 4.7.
+
+00:04:31.533 --> 00:04:33.200
+Vamos descer.
+
+00:04:33.233 --> 00:04:35.267
+Tem um 4.5.
+
+00:04:36.167 --> 00:04:37.733
+Um 4.6.
+
+00:04:38.367 --> 00:04:40.067
+E mais um de 4.6.
+
+00:04:40.100 --> 00:04:42.333
+Parece que funciona
+como o prometido.
+
+00:04:42.367 --> 00:04:45.800
+Ótimo. Como mais podemos
+modificar a URL?
+
+00:04:45.833 --> 00:04:49.233
+Agora você tem que examinar
+a documentação
+
+00:04:49.267 --> 00:04:51.533
+e explorar coisas sozinho.
+
+00:04:51.567 --> 00:04:54.433
+Nesta tabela, escreva
+com suas palavras,
+
+00:04:54.467 --> 00:04:58.500
+uma boa descrição para cada um
+dos parâmetros listados.
+
+00:04:58.533 --> 00:05:00.900
+Use o link no feed
+de dados das anotações
+
+00:05:00.933 --> 00:05:03.300
+para receber dados
+de terremotos na USGS.
+
+00:05:03.333 --> 00:05:05.333
+Formate, se você quiser,
+
+00:05:05.367 --> 00:05:07.667
+e dê a sua opinião sobre
+o que acha
+
+00:05:07.700 --> 00:05:09.800
+que cada tipo de dado
+é utilizado.
+

@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.310 --> 00:00:04.159
+In case you're curious, this URL is
+actually representing the earthquakes
+
+00:00:04.159 --> 00:00:07.760
+from the world from January
+1st to January 30th in 2016.
+
+00:00:07.760 --> 00:00:11.230
+That at least have a minimum magnitude
+of six on the Richter scale.
+
+00:00:11.230 --> 00:00:13.890
+Now I also limited the response
+to ten earthquakes so
+
+00:00:13.890 --> 00:00:15.850
+you wouldn't have to sketch as much for
+a long time.
+
+00:00:15.850 --> 00:00:20.210
+Then I copied the raw JSON response and
+pasted it into a JSON formatter and
+
+00:00:20.210 --> 00:00:22.900
+went ahead and processed it.
+
+00:00:22.900 --> 00:00:24.770
+Okay, this looks a lot better.
+
+00:00:24.770 --> 00:00:27.060
+So first we need to get
+to the features key,
+
+00:00:27.060 --> 00:00:30.740
+then get the first element of the array.
+
+00:00:30.740 --> 00:00:34.700
+Then get the properties key
+which returns the JSON object.
+
+00:00:34.700 --> 00:00:39.360
+And then get to the mag, place, and
+
+00:00:39.360 --> 00:00:42.690
+time keys for
+the data that we need in our app.
+
+00:00:42.690 --> 00:00:46.230
+Notice that the magnitude is
+7.2 as we mentioned earlier.
+
+00:00:46.230 --> 00:00:48.820
+The location is stored
+in a key cold place, and
+
+00:00:48.820 --> 00:00:53.948
+corresponding value is 88 kilometers
+north of Yelizovo, Russia.
+
+00:00:53.948 --> 00:00:57.165
+For now, let's just write
+the city location in our sketch.
+
+00:00:57.165 --> 00:00:58.576
+There is no date key, but
+
+00:00:58.576 --> 00:01:02.622
+we have time which maps to a really
+long number as we mentioned earlier.
+
+00:01:02.622 --> 00:01:05.315
+This is the time in milliseconds
+since January 1st 1970.
+
+00:01:05.315 --> 00:01:08.915
+We could convert this
+into a readable date, but
+
+00:01:08.915 --> 00:01:11.025
+let's just leave it in milliseconds for
+now.
+
+00:01:11.025 --> 00:01:13.435
+Okay great,
+that completes the first item,
+
+00:01:13.435 --> 00:01:15.351
+then we can move onto the second
+earthquake in the list.
+
+00:01:15.351 --> 00:01:19.533
+In the JSON response,
+let's scroll down to our second feature.
+
+00:01:19.533 --> 00:01:24.459
+This one has a magnitude of 6.1 and
+it's located in Papua, New Guinea, and
+
+00:01:24.459 --> 00:01:27.220
+it happened at a time of 145377 etc.
+
+00:01:27.220 --> 00:01:31.330
+We can update our sketch
+with this information.
+
+00:01:31.330 --> 00:01:32.640
+We can repeat these steps for
+
+00:01:32.640 --> 00:01:34.930
+the remaining ten earthquakes
+in the JSON response.
+
+00:01:36.340 --> 00:01:38.700
+And when you finish, your sketch
+will look something like this.
+
