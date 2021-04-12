@@ -1,0 +1,321 @@
+{
+  "data": {
+    "lesson": {
+      "id": 325040,
+      "key": "522c8dba-2e9d-425e-a042-e783fc1e59c5",
+      "title": "Practice Set: Activity Lifecycle and Audio Playback",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Solidify your understanding of the Activity Lifecycle and Audio Playback. \n",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 352603,
+          "key": "aaa22a9d-8518-4590-b74a-c6b9366d18bf",
+          "title": "Welcome to Practice Set",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aaa22a9d-8518-4590-b74a-c6b9366d18bf",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 371485,
+              "key": "5816835b-f19a-4010-a13e-0042964fb40d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Welcome to the Practice Set!\n\nThe Activity Lifecycle is a huge component of our Android apps so it's important that you gain a solid understanding of this material.\n\n### In this Practice Set...\n\nWe'll work through a couple of questions that tests your understanding of what happens at each stage of the Activity Lifecycle.\n\nLet's get started!\n\n---\nIf you do need a review of the Activity Lifecycle, check out these resources:\n- Lesson Concept: [Understanding the Activity Lifecycle](https://classroom.udacity.com/nanodegrees/nd803/parts/97b78ded-790c-4cda-a6b1-f66d920f011e/modules/cfd37960-d702-4cd1-b444-00e62aa185c3/lessons/8e669b70-81c0-4761-b58a-020463ede18f/concepts/80811827170923?contentVersion=3.0.0&contentLocale=en-us)\n- Lesson Concept: [Sample App with Lifecycle Callbacks](https://classroom.udacity.com/nanodegrees/nd803/parts/97b78ded-790c-4cda-a6b1-f66d920f011e/modules/cfd37960-d702-4cd1-b444-00e62aa185c3/lessons/8e669b70-81c0-4761-b58a-020463ede18f/concepts/80820923020923?contentVersion=3.0.0&contentLocale=en-us)\n- [Helpful StackOverflow Post](https://stackoverflow.com/a/8516056)",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 371486,
+          "key": "5be86727-0f20-421f-9db5-16e67d3caf6e",
+          "title": "1",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5be86727-0f20-421f-9db5-16e67d3caf6e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 377328,
+              "key": "db374622-5c07-4b37-ae6c-d2c520634f64",
+              "title": "Quiz 1",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "db374622-5c07-4b37-ae6c-d2c520634f64",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "In the onCreate method of a given Activity, what does the call to  super.onCreate() do?",
+                "answers": [
+                  {
+                    "id": "a1503338329651",
+                    "text": "It plays audio from the super class.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1503338335414",
+                    "text": "It returns null from the super class.",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1503338336127",
+                    "text": "It calls the super class constructor and allows the activity to enter the \"Created\" state.",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1503338337179",
+                    "text": "It creates a thread from the super class.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 393922,
+          "key": "0f6ebc16-9bfa-4e08-b5a0-8b0d1d12895c",
+          "title": "2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0f6ebc16-9bfa-4e08-b5a0-8b0d1d12895c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 394005,
+              "key": "5dd04a4d-a3b4-4073-b55d-5a9bf7f8e69f",
+              "title": "Quiz 2",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "5dd04a4d-a3b4-4073-b55d-5a9bf7f8e69f",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "Fill in the blank. When an Activity first starts, the __ method is called:",
+                "answers": [
+                  {
+                    "id": "a1504906787625",
+                    "text": "onDestroy()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504907598187",
+                    "text": "onResume()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504907598904",
+                    "text": "onPause()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504907599561",
+                    "text": "onCreate()",
+                    "is_correct": true
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 377512,
+          "key": "85b3239a-dc05-406c-8ed1-4909dbaa8ec2",
+          "title": "3",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "85b3239a-dc05-406c-8ed1-4909dbaa8ec2",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 393928,
+              "key": "f2c0c13e-2200-4dee-acbc-70dc322e6bbd",
+              "title": "MediaPlayer",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f2c0c13e-2200-4dee-acbc-70dc322e6bbd",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "If I stop the MediaPlayer at any time, and enter the Stopped state, which state would I go to next to continue?",
+                "answers": [
+                  {
+                    "id": "a1504902293384",
+                    "text": "Started",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504902560918",
+                    "text": "Prepared",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504902561672",
+                    "text": "Paused",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504902562496",
+                    "text": "Idle",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 393921,
+          "key": "ada73618-16fd-4af5-bdbc-87334a9dfe35",
+          "title": "4",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ada73618-16fd-4af5-bdbc-87334a9dfe35",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 393981,
+              "key": "05ba9f94-c486-4471-b338-f44397e14773",
+              "title": "Quiz 3",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "05ba9f94-c486-4471-b338-f44397e14773",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What's wrong with the code below?\n\n\t@Override\n\tprotected void onCreate(Bundle savedInstanceState) {\n\t        setContentView(R.layout.main);\n                MediaPlayer mediaPlayer = MediaPlayer.create(context, R.sound);\n                mediaPlayer.start();\n\t\tToast.makeText(getApplicationContext(), \"onStop called\", Toast.LENGTH_LONG).show();\n\t}\n",
+                "answers": [
+                  {
+                    "id": "a1504902809774",
+                    "text": "It didn't call super.onCreate(savedInstanceState) first",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504905546669",
+                    "text": "It didn't call mediaPlayer.prepare()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504905547486",
+                    "text": "You can't create a MediaPlayer in the onCreate method",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504905548531",
+                    "text": "There is nothing wrong.",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 393923,
+          "key": "03694c00-d16d-4df5-b17e-2aee7b9f1b61",
+          "title": "5",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "03694c00-d16d-4df5-b17e-2aee7b9f1b61",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 394024,
+              "key": "125c878c-030f-4b78-879a-d44630f89803",
+              "title": "Audio Focus",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "125c878c-030f-4b78-879a-d44630f89803",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "According to the [Android guide](https://developer.android.com/guide/topics/media-apps/audio-focus.html), in which of the states listed below should you call requestAudioFocus()?",
+                "answers": [
+                  {
+                    "id": "a1504907734450",
+                    "text": "onPlay()",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1504908339461",
+                    "text": "onDestroy()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504908340526",
+                    "text": "onPause()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1504908341239",
+                    "text": "onSkipToNext()",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

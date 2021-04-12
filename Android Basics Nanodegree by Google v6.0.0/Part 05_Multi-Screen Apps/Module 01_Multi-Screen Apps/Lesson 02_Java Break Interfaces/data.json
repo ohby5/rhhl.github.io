@@ -1,0 +1,356 @@
+{
+  "data": {
+    "lesson": {
+      "id": 419959,
+      "key": "d9bdef0c-9328-4b81-97fd-3bd55735f67b",
+      "title": "Java Break: Interfaces",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Learn how to take advantage of Interfaces - a core OOP concept in Java that makes your code more flexible.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/d9bdef0c-9328-4b81-97fd-3bd55735f67b/419959/1544459671043/Java+Break%3A+Interfaces+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/d9bdef0c-9328-4b81-97fd-3bd55735f67b/419959/1544459666901/Java+Break%3A+Interfaces+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 419963,
+          "key": "507ba221-5b37-4765-8f0c-2dfb7bd390d3",
+          "title": "Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "507ba221-5b37-4765-8f0c-2dfb7bd390d3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419964,
+              "key": "93482eff-3c02-4a05-a97f-4b837df56c76",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Java Break: Interfaces\n\nYou just learned about a new Java OOP (Object-Oriented Programming) Principle called Interfaces and saw it used to implement event listeners.\n\nThis new concept is often tricky for beginner students. In this section, our Java Instructors James and Asser will lead you through some extra practice as well as review the concepts of Final and Static. \n\nGrab yourself a delicious cup of Java and let's brew up some delicious code!\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419965,
+              "key": "30f41afe-a087-4e98-880f-3f6808fb2f87",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dab8fe_screen-shot-2017-10-08-at-4.45.16-pm/screen-shot-2017-10-08-at-4.45.16-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/30f41afe-a087-4e98-880f-3f6808fb2f87",
+              "caption": "Let's brew up some delicious code and review Interfaces!",
+              "alt": "",
+              "width": 802,
+              "height": 508,
+              "instructor_notes": null
+            },
+            {
+              "id": 419966,
+              "key": "1fcdec72-5365-460e-85a4-602eae720bbc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dab963_fireskystudios-com-80402/fireskystudios-com-80402.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1fcdec72-5365-460e-85a4-602eae720bbc",
+              "caption": "Photo by [fireskystudios.com](https://unsplash.com/photos/zlwDJoKTuA8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)",
+              "alt": "Image of coffee cup ",
+              "width": 300,
+              "height": 200,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 299992,
+          "key": "6c7545c4-582e-412d-9c48-a098d5efd43a",
+          "title": "Interfaces",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "6c7545c4-582e-412d-9c48-a098d5efd43a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355237,
+              "key": "696a89de-17f7-4636-a9c5-2f7372747e07",
+              "title": " ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_2Kd4RUlWUg",
+                "china_cdn_id": "_2Kd4RUlWUg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 299993,
+          "key": "0278e9d5-a6ff-4332-8647-5eda515a9037",
+          "title": "Comparable Interface",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0278e9d5-a6ff-4332-8647-5eda515a9037",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 305038,
+              "key": "6e8cccfb-d170-428f-bada-4c7fe1a9aeb3",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# The Comparable Interface\n\nA very popular interface in Java is the [Comparable Interface](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html).\n\nThis interface includes a single method definition called `compareTo` which takes an object as an input parameter of the same type and compares both objects (\"this\" object against the input argument object).\n\nThe main purpose of this interface is to give any class a chance to describe how to compare 2 objects of that class against each other. This will be really handy when we get to sorting or searching for such objects of that type.\n\nFor example:\n\nAssume you have a class that represents a book:\n\n```Java \npublic class Book{\n   int numberOfPages;\n   String title;\n   String author;\n}\n```\n\nAnd you are asked to implement the Comparable Interface so that you can sort the books according to the following criteria:\n\n1. If a book has more pages than the other, then the book with the more pages goes first.\n2. If both books have the same number of pages, then sort by the title alphabetically.\n3. If both books have the same number of pages and the same title, then sort by the author alphabetically.\n\nBefore we start coding, let’s go through how the compareTo method should work:\n\nThe compareTo method takes a single input parameter (let's refer to it as the \"specified object\") and since this method belongs to an object itself (let's refer to it as \"this object\"), then the method simply compares the \"specified\" object against \"this\" object.\n\nAccording to the documentation, there are 3 possible outcomes when comparing any 2 objects:\n\n1. \"This\" object is considered _less than_ the \"specified\" object\n2. \"This\" object is considered _equal to_ the \"specified\" object\n3. \"This\" object is considered _greater than_ the \"specified\" object\n\n\nRespectively, for each of those cases, `compareTo` method should return:\n\n1. A negative integer (any number less than 0)\n2. zero (0)\n3. A positive integer (any number greater than 0)\n\nOk, now that we've got everything well defined, let's start coding:\n\n```Java\npublic class Book implements Comparable<Book>{\n   public int compareTo(Book specifiedBook) {\n      // First check if they have different page counts\n      if(this.numberOfPages != specifiedBook.numberOfPages){\n         // this will return a negative value if this < specified but will return a positive value if this > specified\n         return this.numberOfPages - specifiedBook.numberOfPages;\n      }\n      // If page counts are identical then check if the titles are different\n      if(!this.title.equals(specifiedBook.title){\n         return this.title.compareTo(specifiedBook.title);\n      }\n      // If page titles are also identical then return the comparison of the authors\n      return this.author.compareTo(specifiedBook.author);\n    }\n}\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 302412,
+          "key": "1a102a3c-be87-4cde-8014-635daaa0791c",
+          "title": "Final methods",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "1a102a3c-be87-4cde-8014-635daaa0791c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 302462,
+              "key": "ded4a615-d50a-4ec4-99da-793fe3650c16",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Final methods\n\nOOP (Object Oriented Programming) is powerful - you can extend classes, add features to them and even override their methods to behave differently.\n\nBut, remember ...",
+              "instructor_notes": ""
+            },
+            {
+              "id": 302463,
+              "key": "35c8de6d-e94f-4a42-8f9a-6ac35e47d09c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/May/5906d1e9_spiderman/spiderman.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/35c8de6d-e94f-4a42-8f9a-6ac35e47d09c",
+              "caption": "",
+              "alt": null,
+              "width": 570,
+              "height": 570,
+              "instructor_notes": null
+            },
+            {
+              "id": 302464,
+              "key": "4603e1b0-5e61-4f78-b112-63c0ff9d5d0a",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Being able to override any method could be dangerous. If someone creates a class with a certain method, they assume this method behaves in a certain way.\n\nThat's why, if you want to protect your method from being overridden in a child class you can prefix it with the keyword `final`.\n\nA final method can still be accessed by the child class (if the permissions allow so) but cannot be overridden, hence you can guarantee that any final method will behave exactly like the parent's implementation.\n\nHere's an example:\n\n```Java\npublic class Room{\n   private double width;\n   private double height;\n   public Room(double width, double height){\n      this.width = width;\n      this.height =height;\n   }\n   public final double getArea(){\n      return width*height;\n   }\n}\n```\n\nNow if another class extends `Room`, no matter what type of room it is it shouldn't be allowed to override the method `getArea` because the area should always be calculated the same way:\n\n```Java\npublic class LivingRoom extends Room{\n   // The constructor simply calls the parent's constructor using super()\n   public LivingRoom(double width, double height){\n        super(width,height);\n    }\n   // Not allowed to override getArea() here\n}\n```\n\nBut since the method is public, it means that it's also available in the child class:\n\n```Java\nLivingRoom myLivingRoom = new LivingRoom(5,3);\ndouble area = myLivingRoom.getArea();\nSystem.out.println(area);\n```\nThe above code will work just fine, and the output will be **15.0** as expected!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 309270,
+          "key": "897d3b6c-d5c7-40d1-bccb-751b3b4df03a",
+          "title": "Final fields",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "897d3b6c-d5c7-40d1-bccb-751b3b4df03a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 309272,
+              "key": "36631500-4c81-42c8-b0bd-bfc1cf84a46d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Final fields\n\nThe `final` keyword can also be used to describe fields. However, unlike with methods, a final field has nothing to do with inheritance!\n\nA final field is simply a constant variable! In other words, a variable that is only to be set once and is not allowed to change ever again!\n\nA good example of a final field is defining math constants, like **PI**:\n\n```Java\npublic class MathLib{\n   public final double PI = 3.14;\n}\n```\n\nThis basically means that even though the field is public, you are not allowed to change the value of PI anywhere (inside or outside of this class).\n\n```Java\npublic static void main(String [] args){\n   MathLib mathlib = new MathLib();\n   mathlib.PI = 0; // This is not allowed and will show a compiler error!\n}\n```",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 305031,
+          "key": "d6c01bff-1010-4f4e-a4cd-6172d410cc3c",
+          "title": "Static",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d6c01bff-1010-4f4e-a4cd-6172d410cc3c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 355400,
+              "key": "72a2c0c5-7cd8-4742-9577-586c1c0eb883",
+              "title": " ",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jL0-39ZEtb0",
+                "china_cdn_id": "jL0-39ZEtb0.mp4"
+              }
+            },
+            {
+              "id": 309273,
+              "key": "277473a4-dee3-4da0-a870-237c3068819c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Static methods\n\nThe `static` keyword can also be used to describe methods, allowing you to simply call the method from the class rather than having to create an object first and then calling the method. Static methods, however, have limited capabilities since it can't access non-static fields in the object anymore.\n\nBut before we get too much into static methods, go ahead and try out the static fields yourself.\n\nSo when should we declare fields or methods to be static and when should we not?\n\n\nThe short answer is in most cases you would want the variables and methods to belong to a certain object rather than the entire class, which means most of the time you won't declare them as static. However, if you end up creating a class that provides some sort of functionality rather than have a state of its own, then that's a perfect case to use static for almost all of its methods and fields.\n\nFor example, remember the Math class that we used to generate random numbers? It turns out that Math is nothing more than a class with a bunch of static methods like `random()` and others. Because it doesn't really make sense to create an object called math1 and another called math2, all Maths are the same and hence we can simply use the class itself to call its methods directly, and that's why static was a good choice here.\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 419960,
+          "key": "4516ef3f-a903-4858-9cce-5c73d5633205",
+          "title": "Quiz: Try Static field",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "4516ef3f-a903-4858-9cce-5c73d5633205",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419961,
+              "key": "221b32bb-a057-48db-a8fb-ec25e1e4db7c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Try it out yourself\n\nFor this exercise, you can either (1) create a new project in Android studio or (2) write this on paper and mentally walk-through the code. \n\nFirst, make a new class called Person that contains a static counter and another non-static counter. Increment both counters in the constructor:\n\n```Java\npublic class Person {\n    public static int instanceCount;\n    public int localCount;\n    public Person(){\n        instanceCount++;\n        localCount++;\n    }\n}\n```\n\nThen, in the main function, create multiple instances of the class `Person` and check out what the values are for each counter.\n\n```Java\npublic static void main(String[] args) {\n   Person person1 = new Person();\n   Person person2 = new Person();\n   Person person3 = new Person();\n   Person person4 = new Person();\n   // Print the values of both counters to the Log console\n   Log.i(\"(\" + person4.localCount + \",\" + Person.instanceCount + \")\");\n}\n```",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419962,
+              "key": "53f185da-a196-4832-bb0a-209905d995b9",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "53f185da-a196-4832-bb0a-209905d995b9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What will the above code print for the values of (localCount, instanceCount)?",
+                "answers": [
+                  {
+                    "id": "a1507505550909",
+                    "text": "(4,4)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507505561326",
+                    "text": "(1,4)",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1507505565414",
+                    "text": "(4,1)",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1507505569836",
+                    "text": "(1,1)",
+                    "is_correct": false
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": 305032,
+          "key": "727c558e-b6d8-47c6-aec8-46d95b323d97",
+          "title": "Static Methods",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "727c558e-b6d8-47c6-aec8-46d95b323d97",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 324455,
+              "key": "d325fc92-167e-4904-a112-497d1a4c9ace",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Static Methods\n\nJust like static fields, static methods also belong to the class rather than the object.\n\nIt's ideally used to create a method that doesn't need to access any fields in the object, in other words, a method that is a standalone function. \n\nA static method takes input arguments and returns a result based only on those input values and nothing else.\n\nNot needing any field values makes it easy for a method to be attached to the class definition and not an individual object since it doesn't care about the values of any of the fields.\n\nHowever, a static method can still access static fields, that's because static fields also belong to the class and are shared amongst all objects of that class.\n\nHere's an example of a calculator implementation with some static methods:\n\n```Java\n\npublic class Calculator {\n\n    public static int add(int a, int b) {\n        return a + b;\n    }\n\n    public static int subtract(int a, int b) {\n        return a - b;\n    }\n    \n}\n\n```\n\nSince both `add` and `subtract` don't need any object-specific values, they can be declared static as seen above and hence you can call them directly using the class name `Calculator` without the need to create an object variable at all:\n```Java\nCalculator.add(5,10);\n```",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

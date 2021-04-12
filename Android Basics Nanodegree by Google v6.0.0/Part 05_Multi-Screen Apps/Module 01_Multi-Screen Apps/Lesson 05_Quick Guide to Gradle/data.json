@@ -1,0 +1,506 @@
+{
+  "data": {
+    "lesson": {
+      "id": 356962,
+      "key": "75bc2717-91b5-469b-9973-5c7fa63fabe4",
+      "title": "Quick Guide to Gradle",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": null,
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": null,
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 360265,
+          "key": "b406fca4-d38e-4049-bfdb-2766ba68b766",
+          "title": "What is Gradle?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b406fca4-d38e-4049-bfdb-2766ba68b766",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395155,
+              "key": "2e41747a-bbf7-401a-981c-d60c7df5fc03",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What is Gradle?\n\nUp until this point you’ve interacted with the mysterious build.gradle file without much background as to its purpose. So what is Gradle and why does it have it’s own pane in Android Studio?\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395152,
+              "key": "cfdcbeed-3c04-47d4-b3bf-978c2ebf2e3c",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87045_screen-shot-2017-09-12-at-4.39.33-pm/screen-shot-2017-09-12-at-4.39.33-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cfdcbeed-3c04-47d4-b3bf-978c2ebf2e3c",
+              "caption": "Android Studio and Gradle logos ([Image Source](https://www.youtube.com/watch?v=cD7NPxuuXYY))\n",
+              "alt": "",
+              "width": 420,
+              "height": 370,
+              "instructor_notes": null
+            },
+            {
+              "id": 395153,
+              "key": "fa394eb8-1bd2-42c5-aa87-72b61a514437",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Currently the scope of our apps is rather small, a couple of activities at max with a small handful of resources. But at the professional level, developers work on huge apps that not only contain multiple projects that are dependent on each other, but rely on a number of dependencies and libraries. On top of that, these multi-project apps need to be built, tested, and deployed rapidly. Having a build system that can bundle each of these individual build variations (e.g. debug build, release build), generate the documentation, add in libraries, publish to the Play Store, and much more, all with one click, is a life saver.\n\nGoogle decided rather than re-writing an entirely new tool to do all of this, it would be better to just leverage an existing build tool called Gradle. The files built in Gradle are written using a *Domain Specific Language (DSL)* called [Groovy](https://en.wikipedia.org/wiki/Groovy_(programming_language)). Domain Specific Languages are small, expressive programming languages custom-designed for specific tasks.  For example, HTML is used for web pages.\n\nDon’t worry too much about the definition of DSL. Just know that Gradle is written in Groovy and it was chosen because of its easy to use, flexible, and customizable nature. \n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 395156,
+          "key": "3bccbb0c-34b1-4bc4-be30-e701ab77576c",
+          "title": "Build Configuration Files (build.gradle)",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3bccbb0c-34b1-4bc4-be30-e701ab77576c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395157,
+              "key": "9ef278ee-3e8e-4c7f-aa9f-04fc130aa343",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Build Configuration Files (build.gradle)\n\nEarlier we mentioned the potential for a single project to have many different variations due to all the possible variables.\n\nFor example a project could be a debug or release version; in could be the case that one version would use a certain set of dependencies but another version of the project  would not; or there could be an additional version that uses a particular library.\n\nAll these variables come together to create a custom build configurations. These configurations are reflected in the *build configuration files* also known as *build.gradle* files. \n\nFor each Android Studio project there are 2 *build.gradle* files: one at the Project level and another at the Module level.\n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395158,
+              "key": "30a6749d-32ab-45e3-9206-54ae3f2f270a",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87103_screen-shot-2017-09-12-at-4.42.42-pm/screen-shot-2017-09-12-at-4.42.42-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/30a6749d-32ab-45e3-9206-54ae3f2f270a",
+              "caption": "Project structure for Android project. Note the two build.gradle files at the Project and Module levels. ([Image Source](https://developer.android.com/studio/build/index.html))",
+              "alt": "",
+              "width": 518,
+              "height": 708,
+              "instructor_notes": null
+            },
+            {
+              "id": 395159,
+              "key": "e4b954a1-4645-4a17-bc6a-29bdb81376ac",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Before we discuss the differences between these two build configuration files, we need to clarify the difference between a Project and a Module. \n\nA **Project** in Android Studio represents a complete Android app - all the source code and assets needed to test code and build configurations. An Android Studio project consist of one or more **Modules**. \n\nA **Module**  provides a container for your app's source code, resource files, and app level settings, such as the module-level build file and Android manifest file. Each module can be independently built, tested, and debugged. Android Studio uses modules to make it easy for your project to be available on different devices - you can create a module that contains code that's specific to a device type, such as Android Wear or Android TV ([Source](https://developer.android.com/studio/projects/index.html)) \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395160,
+              "key": "11ce3749-169f-40e6-9a37-1dc9c42748a7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**Project level gradle build** is where you can add build configurations that apply to all modules in your project.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395161,
+              "key": "e07162ce-ef64-476e-8805-40fd735c606f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87134_screen-shot-2017-09-12-at-4.43.28-pm/screen-shot-2017-09-12-at-4.43.28-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/e07162ce-ef64-476e-8805-40fd735c606f",
+              "caption": "Project-level build.gradle in the Miwok app ",
+              "alt": "",
+              "width": 1206,
+              "height": 482,
+              "instructor_notes": null
+            },
+            {
+              "id": 395162,
+              "key": "16f4ff2d-7e37-4ca1-bc90-bc91b10a5f1c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "**Module level gradle build**  allows you to configure build settings for the specific module it is located in. Configuring the build settings here allows you to provide custom packaging options, such as additional **build types** and **product flavors** (covered next), and override settings in the main/ app manifest or top-level build.gradle file.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395163,
+              "key": "bc323b46-ddcf-477d-8377-89c8c523cb79",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b8715b_screen-shot-2017-09-12-at-4.44.10-pm/screen-shot-2017-09-12-at-4.44.10-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/bc323b46-ddcf-477d-8377-89c8c523cb79",
+              "caption": "Module-level build.gradle in the Miwok app ",
+              "alt": "",
+              "width": 1204,
+              "height": 494,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 395164,
+          "key": "01500c72-f2b7-41da-b8cb-0c6951247b1f",
+          "title": "Build Type + Product Flavors = Build Variant",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "01500c72-f2b7-41da-b8cb-0c6951247b1f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395165,
+              "key": "769b57c2-0632-434d-8c83-43f6080881d9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Build Type + Product Flavors = Build Variant\n([Source](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Variants))",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395166,
+              "key": "acbc515f-2e39-484a-bc81-4c7495cf67ca",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b871b2_screen-shot-2017-09-12-at-4.45.39-pm/screen-shot-2017-09-12-at-4.45.39-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/acbc515f-2e39-484a-bc81-4c7495cf67ca",
+              "caption": "Use the Build Variant Tool Window to change the build variant. It’s also accessible from the toolbar **Build > Select Build Variant**",
+              "alt": "",
+              "width": 480,
+              "height": 576,
+              "instructor_notes": null
+            },
+            {
+              "id": 395168,
+              "key": "4c191d91-8821-45f2-b573-a7040f228978",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As alluded previously, it’s very common for a single app to have different variations which come about by different Build Types and Product Flavors (Build Type + Product Flavors = Build Variant). \n\n## Build Types\nAndroid will automatically build a *debug* and *release* version for any application.  The biggest difference between the two is how the APK is signed - the *debug* version is signed with an auto-generated key + certificate so it can be built on the spot while the *release* version is not signed during the build, therefore  a release key + certificate need to be created and signing happens after the build.\n\n(APK is short for Application Package Kit.  Application Package Kit  is the file format used for installing software on the Android operating system. Files with this format have the extension .apk)",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395169,
+              "key": "a09795b3-ada2-4c7b-9608-4568ad4dbac6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b871fd_screen-shot-2017-09-12-at-4.46.53-pm/screen-shot-2017-09-12-at-4.46.53-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/a09795b3-ada2-4c7b-9608-4568ad4dbac6",
+              "caption": "Note the 2 buildTypes - release and debugs - found in the module-level build.gradle file. Within each buildType are specified properties. See a full list of buildType properties [here](http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.BuildType.html). ",
+              "alt": "",
+              "width": 560,
+              "height": 452,
+              "instructor_notes": null
+            },
+            {
+              "id": 395170,
+              "key": "4ccea57d-5539-4ff5-bdb1-766a4ca539a5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Product Flavors\n\nIn addition to Build Types which allow us to apply specify how to build and package an app, Android Studio also provides Product Flavors, which allow developers to build out and manage different code versions of a single app. For example, an app may have different flavors depending on code or depending on context (e.g. connectivity, device and API requirements, min and target API levels). ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395171,
+              "key": "7be9db9a-5561-472c-b284-587ba3acc6f9",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87221_screen-shot-2017-09-12-at-4.47.33-pm/screen-shot-2017-09-12-at-4.47.33-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7be9db9a-5561-472c-b284-587ba3acc6f9",
+              "caption": "Example of configured product Flavors in the module-level build.gradle file",
+              "alt": "",
+              "width": 466,
+              "height": 288,
+              "instructor_notes": null
+            },
+            {
+              "id": 395172,
+              "key": "7cc1472c-38f1-4915-b856-6f68ad67eac2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Build Variants\nThe combination of different Build Types and Product Flavors gives us the possible Build Variants. Gradle automatically creates build variants based on your build types and product flavors, and names them according to `<product-flavor><Build-Type>`.\n\nFor example, if we have the following:\n\n- 2 Build Types — debug and release\n\nAnd\n\n- 2 Product Flavors — staging and production\n\nThere will be 4 APKs generated by the project:\n\n- app-staging-debug.apk\n- app-staging-release.apk\n- app-production-debug.apk\n- app-production-release.apk\n\nThis may seem like a lot, but just remember:\n\n### Build Type + Product Flavors = Build Variant",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 395173,
+          "key": "c9cd5205-c427-415c-8fb7-7d1e56294f5b",
+          "title": "Elements of build.gradle file",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c9cd5205-c427-415c-8fb7-7d1e56294f5b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395174,
+              "key": "4480b94c-10ee-4986-8916-986034203647",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Elements of build.gradle file\n\nThere’s a lot that can go on in the build.gradle file, so let’s break it down block-of-code by block-of-code. Not every app will have all these blocks, but it’s good to be aware of what’s possible in case you in run into one of these build properties in the future. A complete list of configurable build properties and default values can be found [here](http://google.github.io/android-gradle-dsl/current/). There's no need to memorize the values in the list, just be aware you can always find out more information about them if you need to.  \n\nThroughout the apps in this Nanodegree program, we’ll have you modify some of the properties in the module-level build.gradle file, most commonly in the dependencies block. \n\n## Module-Level build.gradle File\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418508,
+              "key": "56e184eb-4810-449c-83e3-36812ad00ed5",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Below is an example build.gradle file with descriptions of each dependency blocks in the comments. \n\n**Understanding the purpose of these dependency blocks is beyond the scope of this course.** If you are interested, read through the comments in the file below; however, don't fret if some terms don't make sense yet. You'll build up an understanding as you continue in the program.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395175,
+              "key": "8afae127-b895-49d7-9ae5-7cd350f7d3d1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87314_screen-shot-2017-09-12-at-4.51.33-pm/screen-shot-2017-09-12-at-4.51.33-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8afae127-b895-49d7-9ae5-7cd350f7d3d1",
+              "caption": "",
+              "alt": "",
+              "width": 708,
+              "height": 790,
+              "instructor_notes": null
+            },
+            {
+              "id": 395176,
+              "key": "4e54ffa9-c5c4-4fe3-ba31-73536cfce74d",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87324_screen-shot-2017-09-12-at-4.51.49-pm/screen-shot-2017-09-12-at-4.51.49-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/4e54ffa9-c5c4-4fe3-ba31-73536cfce74d",
+              "caption": "",
+              "alt": "",
+              "width": 708,
+              "height": 580,
+              "instructor_notes": null
+            },
+            {
+              "id": 395177,
+              "key": "0ac0c292-9bb9-41dd-b78e-b6158a2e5e93",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87333_screen-shot-2017-09-12-at-4.52.04-pm/screen-shot-2017-09-12-at-4.52.04-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/0ac0c292-9bb9-41dd-b78e-b6158a2e5e93",
+              "caption": "[Image Source](https://developer.android.com/studio/build/index.html)",
+              "alt": "",
+              "width": 708,
+              "height": 426,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 395178,
+          "key": "3e17abc6-faff-41de-80c7-896cfedddc39",
+          "title": "Using Gradle in Android Studio",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3e17abc6-faff-41de-80c7-896cfedddc39",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395180,
+              "key": "1d718f2d-598c-4614-8ad3-2601ae3f0e8b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Using Gradle in Android Studio\n\nBelow are some common terms and use cases you’ll encounter when dealing with Gradle in Android.\n\n## Sync Project with Gradle Files\nAfter making changes to the build.gradle files, you’ve likely seen a banner with the text ”Gradle files have changed since the last project sync. A project sync may be necessary for the IDE to work properly. Sync now ” appear (see image below):",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395181,
+              "key": "b16cde3c-6aaf-4446-996f-5a4adb7cd63e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b87398_screen-shot-2017-09-12-at-4.53.42-pm/screen-shot-2017-09-12-at-4.53.42-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b16cde3c-6aaf-4446-996f-5a4adb7cd63e",
+              "caption": "Image of Banner appearing after making changes to Gradle.",
+              "alt": "",
+              "width": 1176,
+              "height": 222,
+              "instructor_notes": null
+            },
+            {
+              "id": 395182,
+              "key": "4f7052a8-6f95-4e3d-801a-7f88504606d9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This indicates you must sync your project to import the changes last made and to run checks to ensure the changes won’t cause build errors.\n\nYou can either click the “Sync Now” hyperlink in the banner or click the  Sync Project button from the Android Studio menu bar. \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395183,
+              "key": "3ad6d7af-8d15-46f4-8302-66169a48a6ab",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b873f0_screen-shot-2017-09-12-at-4.55.10-pm/screen-shot-2017-09-12-at-4.55.10-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3ad6d7af-8d15-46f4-8302-66169a48a6ab",
+              "caption": "Sync Project Button\n",
+              "alt": "",
+              "width": 76,
+              "height": 86,
+              "instructor_notes": null
+            },
+            {
+              "id": 395184,
+              "key": "81225ef7-f0c7-42c0-bda0-2bf47252e0dd",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Clean Project \nYou may have heard the term \"clean task\", which simply means to remove the buildDir folder ([source](https://docs.gradle.org/current/userguide/java_plugin.html#sec:clean)). Removing the buildDir folder cleans out the no-longer needed leftovers from previous builds. Not doing so may result in an unclean build which may be broken due to build artifacts produced by previous builds.\n\nFor example, suppose that some resources and classes were removed from the source files, but still remained in the build folder. If these files are not cleaned out, this could result in build failure. \n\nNote that executing these clean tasks are beyond the scope of this program. The material in this section is presented in order to familiarize you with a commonly asked about Gradle topic. \n\n## Rebuild Project",
+              "instructor_notes": ""
+            },
+            {
+              "id": 395185,
+              "key": "cd2a4627-f1e5-4814-ba80-1d7c2991df6b",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59b8743c_screen-shot-2017-09-12-at-4.56.30-pm/screen-shot-2017-09-12-at-4.56.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/cd2a4627-f1e5-4814-ba80-1d7c2991df6b",
+              "caption": "To rebuild a project in Android Studio, in the tool bar click *Build > Rebuild Project*. ",
+              "alt": "",
+              "width": 324,
+              "height": 314,
+              "instructor_notes": null
+            },
+            {
+              "id": 395186,
+              "key": "961484fa-dd58-4d33-8b05-123e9052bee9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "The `Build -> Rebuild Project` option recompiles all the source file in the project.  This may be necessary when the classpath entries have changed, for example, in case SDKs or libraries are added, removed or altered.\nRebuilding the Project will also clean it. \n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 395187,
+          "key": "0612adf1-a064-4401-8b2d-d8fd7994026a",
+          "title": "Additional Resources",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "0612adf1-a064-4401-8b2d-d8fd7994026a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 395188,
+              "key": "7aa16992-c7df-4559-ba37-9dd2c8e3202d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Additional Resources\n\nWe've only scratched the surface of the power of Gradle. If you're interested in learning more, check out these resources:\n\n- [Introducing Gradle (Dev Bytes Video)](https://www.youtube.com/watch?v=cD7NPxuuXYY)\n- [Why Gradle (Udacity Video)](https://www.youtube.com/watch?v=VOUmY4_hPeM)\n- [Android Studio Project Site - Gradle Plugin User Guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Tasks)\n - Note the Gradle Plugin User Guide goes into extensive detail about Gradle which is beyond the scope of this course. There’s lots of useful information, but don’t feel pressured to read through or understand everything that’s going on. If you’d like a deeper dive, checkout [Udacity's Gradle for Android and Java online course](https://www.udacity.com/course/gradle-for-android-and-java--ud867)",
+              "instructor_notes": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    }
+  ]
+}

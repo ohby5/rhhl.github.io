@@ -1,0 +1,1624 @@
+{
+  "data": {
+    "lesson": {
+      "id": 419944,
+      "key": "5eb37cb1-2ecb-44bc-b0fb-cfc585826cc3",
+      "title": "Java Break: Loops",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Use for and while loops to iterate over a block of code. Learn how to write nested loops. Use 2D arrays to store and retrieve information. \n",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/5eb37cb1-2ecb-44bc-b0fb-cfc585826cc3/419944/1544459381075/Java+Break%3A+Loops+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/5eb37cb1-2ecb-44bc-b0fb-cfc585826cc3/419944/1544459369167/Java+Break%3A+Loops+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 419946,
+          "key": "3c3c1d8c-a502-4cff-a6a5-fea0120b1c70",
+          "title": "Intro",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3c3c1d8c-a502-4cff-a6a5-fea0120b1c70",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419968,
+              "key": "2475904e-d1ba-4804-a31d-da7cf87fb02b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Java Break: Loops\n\nIt's time for a Coffee, excuse me, *Java Break*!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419967,
+              "key": "65167c54-c0a4-4cd9-8b7f-586e9f266ffd",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59dabac1_nolan-issac-38299/nolan-issac-38299.jpg",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/65167c54-c0a4-4cd9-8b7f-586e9f266ffd",
+              "caption": "Photo by [Nolan Issac](https://unsplash.com/photos/It0DCaCBr40?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)",
+              "alt": "Image of coffee cup",
+              "width": 300,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 419947,
+              "key": "92083a9c-5d46-4fbd-ae35-b41594a3e250",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In the previous lesson, you used loops to retrieve Word objects from an ArrayList and display it in a ListView.\n\nYou saw how to use a *for* loop as well as a *while* loop. Remember that being a great Android develop requires a solid foundation in Java. You're learning a whole new language (remember when Kunal and Katherine talked about learning a brand new skill?), so you can never get too much practice!\n\nCezanne and Asser who will guide you through a number of fun examples that show the power of loops and arrays. Look forward to playing a game of Yahtzee, completing a Rubik's Cube Championship, and even learning a new concept called *Nested Loops*!",
+              "instructor_notes": ""
+            },
+            {
+              "id": 419948,
+              "key": "c5cf6d6c-0eae-4c90-a0bc-813e41e4ff38",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59daa25d_screen-shot-2017-10-08-at-3.06.38-pm/screen-shot-2017-10-08-at-3.06.38-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/c5cf6d6c-0eae-4c90-a0bc-813e41e4ff38",
+              "caption": "We'll be your Java Review guides in this lesson. Let's checkout the power of loops in Java!",
+              "alt": "",
+              "width": 826,
+              "height": 538,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137352,
+          "key": "65526124-0b59-4308-84b5-64d6ec560905",
+          "title": "Alarm",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65526124-0b59-4308-84b5-64d6ec560905",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 10891,
+              "key": "2623e07a-f50e-4e70-a0ec-e1b378f79a31",
+              "title": "Alarm",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "jr65lrpT5nc",
+                "china_cdn_id": "jr65lrpT5nc.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137328,
+          "key": "331f42a9-e918-413e-8631-f1ab5b815b0a",
+          "title": "How Many Repeats?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "331f42a9-e918-413e-8631-f1ab5b815b0a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134889,
+              "key": "8298100164",
+              "title": "How Many Repeats",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8298100164",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "H5AynrtulUw",
+                  "china_cdn_id": "H5AynrtulUw.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "How Many Repeats",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/ZLX18hQsSopTwhIh94GZuGAwxk27aDIu6VfbX4yHkurTAssSdhMFajgZZ6XpCVZrzVcTMF-R6CkJhaELATU=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8298100164",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8266688149",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6581203241895262,
+                      "y": 0.334950110864745
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6573215399002493,
+                      "y": 0.46265243902439024
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6575163653366584,
+                      "y": 0.5911516075388027
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6582372194513716,
+                      "y": 0.7210365853658537
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "2KKlbUuq3TI",
+                  "china_cdn_id": "2KKlbUuq3TI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137908,
+          "key": "30ced96a-7684-46ac-b6fa-43337b0b860c",
+          "title": "While Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30ced96a-7684-46ac-b6fa-43337b0b860c",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160464,
+              "key": "a96c2597-8123-4b78-90b7-f62b8336c049",
+              "title": "While Loops",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "_jrlCI86qOQ",
+                "china_cdn_id": "_jrlCI86qOQ.mp4"
+              }
+            },
+            {
+              "id": 130951,
+              "key": "3c6a3d39-bf22-40af-ac96-47189b9d985c",
+              "title": "While loops",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "<code>while</code> loops allow you to repeat an <code>if</code> condition over and over for as long as that condition remains <code>true</code>, hence the name <code>while</code>!\n\nTo create a <code>while</code> loop, simply follow the same steps like an <code>if</code> condition, but replace the <code>if</code> with a <code>while</code> to look something like this:\n\n```java\nwhile(isRaining){\n   System.out.println(\"It's still raining outside!\");\n   isRaining = checkWeather();\n}\nSystem.out.println(\"Now it's not raining anymore\");\n```\nThis code block above will continue to print the message <code>\"It's still raining outside!\"</code> for as long as the boolean <code>isRaining</code> is **true**, once the function <code>checkWeather()</code> returns **false** <code>isRaining</code> will no longer be **true**, so the while loop would end and the message <code>\"Now it's not raining anymore\"</code> will be displayed.\n\nUnlike <code>if</code> blocks however, <code>while</code> loops don't have <code>else</code> blocks, they are simply like a repeated <code>if</code> block that would only end when the condition becomes false.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 137238,
+          "key": "e6de471a-98a5-41e1-82b5-d6739bc104a3",
+          "title": "Googol",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "e6de471a-98a5-41e1-82b5-d6739bc104a3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102243,
+              "key": "8412593988",
+              "title": "Googol",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8412593988",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "TXeRINvO7o4",
+                  "china_cdn_id": "TXeRINvO7o4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Googol",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/z-2pMbgsnusIK7FXXk9sqF5_YD01p9ruQrQZeYHrA0eVtfrITCq0cIGgjByZArZXNo9VWwHT7FczHwxySw=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8412593988",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8401241959",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": null,
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07095343680709534,
+                      "width": 0.12967581047381546,
+                      "x": 0.2978686097256858,
+                      "y": 0.5086266629711752
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "cYEvZSqQE-c",
+                  "china_cdn_id": "cYEvZSqQE-c.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 135255,
+          "key": "7b468169-3b61-436f-8963-72f28d08cee5",
+          "title": "Yahtzee",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "7b468169-3b61-436f-8963-72f28d08cee5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 129193,
+              "key": "cbd22243-32b3-41e5-9484-3261d29cdefe",
+              "title": "Yahtzee",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "h7tzm7NDZOQ",
+                "china_cdn_id": "h7tzm7NDZOQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137378,
+          "key": "23a334fc-3ff8-4e8a-8242-224298b5bae5",
+          "title": "It's a Match",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "23a334fc-3ff8-4e8a-8242-224298b5bae5",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 11404,
+              "key": "efe4fb95-7b04-47f1-82e5-4080ad74aa0d",
+              "title": "It's a Match",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "5dTi-TF41MA",
+                "china_cdn_id": "5dTi-TF41MA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137254,
+          "key": "730f6a55-716c-4979-85a2-25a83ccc07c3",
+          "title": "Three Dice",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "730f6a55-716c-4979-85a2-25a83ccc07c3",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134796,
+              "key": "8401071948",
+              "title": "Three Dice",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8401071948",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "QA-8hmG-rgM",
+                  "china_cdn_id": "QA-8hmG-rgM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Three Dice",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/hAsNoUQK0YoYHasjmnJTYi_Zi9Y607c6ihIa6rD-5DrwzAFhit6Y4kZYr_FmaIHZ25la057Q_0F9ex0i05Y=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8401071948",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8405101616",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.520768391521197,
+                      "y": 0.3571923503325942
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5215671758104738,
+                      "y": 0.46805709534368073
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5217814837905237,
+                      "y": 0.5817281042128604
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5219568266832918,
+                      "y": 0.6948447893569845
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "MkVMJTb9pYw",
+                  "china_cdn_id": "MkVMJTb9pYw.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137650,
+          "key": "cdc4bef8-0c72-4834-91d5-b009e5704f9b",
+          "title": "Roll a Yahtzee",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cdc4bef8-0c72-4834-91d5-b009e5704f9b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 103000,
+              "key": "8451368687",
+              "title": "Roll a Yahtzee",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8451368687",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "vAKB5s_ahMs",
+                  "china_cdn_id": "vAKB5s_ahMs.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Roll a Yahtzee",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "8404957149",
+                "initial_code_files": [
+                  {
+                    "text": "public int keepRolling() {\n    int dice1 = rollDice();\n    int dice2 = rollDice();\n    int dice3 = rollDice();\n    int count = 1;\n    while (!(dice1 == dice2 && dice2 == dice3)) {\n        //we need to re-roll\n        dice1 = rollDice();\n        dice2 = rollDice();\n        dice3 = rollDice();\n        count = count + 1;\n    }\n    return count;\n}\n",
+                    "name": "starter.java"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "ZMabVBQwh7o",
+                  "china_cdn_id": "ZMabVBQwh7o.mp4"
+                }
+              }
+            },
+            {
+              "id": 9809,
+              "key": "8df3795e-758c-4a56-a603-73f59e96a09c",
+              "title": "Quiz help",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You should modify the function <code>int keepRolling()</code> by adding code to check for a 5 dice match (Yahtzee) rather than just 3 dice.\n\nTo do so, follow these steps:\n\n1. Add 2 new integer variables <code>dice4</code> and <code>dice5</code> and initialize them to the function call <code>rollDice()</code>\n2. Then inside the while loop, make sure you reset the values of those integers to another call of <code>rollDice()</code> each.\n3. Finally, update the while loop condition to check for the mismatch of all 5 dice. Remember you can simply check that all dice match and surround that with the <code>!</code> not operator like with the existing 3 dice implementation.",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137766,
+          "key": "ef331f0b-e8e1-46ac-b853-4b2891027892",
+          "title": "Warning Alert",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ef331f0b-e8e1-46ac-b853-4b2891027892",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 129186,
+              "key": "8d2f214a-aee4-4dd0-8502-417ab2c5af6a",
+              "title": "Warning Alert",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "3MNAkbASgQ8",
+                "china_cdn_id": "3MNAkbASgQ8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137441,
+          "key": "a83d015a-f214-4fb0-8065-9827f46156ce",
+          "title": "For Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "a83d015a-f214-4fb0-8065-9827f46156ce",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 124050,
+              "key": "14614c86-54e8-4fd5-abe2-8b3cdece89be",
+              "title": "For Loops",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "27XY809Xj2o",
+                "china_cdn_id": "27XY809Xj2o.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137732,
+          "key": "66cae6cf-0fcf-4319-9679-fc249585a237",
+          "title": "Loop Counters",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "66cae6cf-0fcf-4319-9679-fc249585a237",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160466,
+              "key": "8ad32262-6003-408e-a5b6-8f364898b2bb",
+              "title": "Loop Counters",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "c-hzUnhSCKg",
+                "china_cdn_id": "c-hzUnhSCKg.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137332,
+          "key": "aada0069-c93b-44e2-a246-77a8dc21a285",
+          "title": "Count the Blocks",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "aada0069-c93b-44e2-a246-77a8dc21a285",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102723,
+              "key": "8400247595",
+              "title": "Count the blocks",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8400247595",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "HRzTGMRcg6g",
+                  "china_cdn_id": "HRzTGMRcg6g.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Count the blocks",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "8465279325",
+                "initial_code_files": [
+                  {
+                    "text": "public int countBlocks(int levels){\n\n\n    return 0;\n}",
+                    "name": "starter.java"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "FfgYy5uLWdo",
+                  "china_cdn_id": "FfgYy5uLWdo.mp4"
+                }
+              }
+            },
+            {
+              "id": 8129,
+              "key": "754bef87-4d27-480f-8edf-6eb645b5940d",
+              "title": "Count the blocks",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\nYou need to implement this function\n<code> public int countBlocks(int levels)</code> that takes the number of levels as an input argument and returns the number of blocks required to build a pyramid made up of that many levels.\n\nRemember that <code>for</code> loops help count up to a certain number (which is the value of <code>levels</code>  in this case) and inside the loop, the number of blocks for that level would be the result of multiplying the loop counter by itself (for example <code> i*i</code>)\n\nThis means that if for every level, the number of blocks in that level was added to some variable <code>total</code> then by the end of the loop the total number of blocks needed to build the entire pyramid would be in that <code>total</code> variable and could be returned as the result of that function!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 137731,
+          "key": "c5f08029-4188-43a4-8b07-98e2170acb3f",
+          "title": "Not Just Increment",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c5f08029-4188-43a4-8b07-98e2170acb3f",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 129185,
+              "key": "80e13a21-ce55-4349-b30a-b6839ea5b0df",
+              "title": "Not Just Increment",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "MUUSeckVQaM",
+                "china_cdn_id": "MUUSeckVQaM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137651,
+          "key": "66f04657-7d6d-4813-8d0c-7c04f89882d9",
+          "title": "Counting Down",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "66f04657-7d6d-4813-8d0c-7c04f89882d9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134768,
+              "key": "8402912700",
+              "title": "Counting Down",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8402912700",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "HJiLS9t9f58",
+                  "china_cdn_id": "HJiLS9t9f58.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Counting Down",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/-FkistLPAULRli-kTh0a26mKs_w_UnnzZdwNu79gt1DUstmwIzS3ZRRYOjB_Cc0lYAvjy_Q6xdW3dkM4Tg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8402912700",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8403001805",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.3056226620947631,
+                      "y": 0.7132760532150776
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5646625623441397,
+                      "y": 0.7124099223946785
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.3061292082294264,
+                      "y": 0.8425720620842572
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5644677369077307,
+                      "y": 0.8436460643015521
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "7Rc8avKoaK8",
+                  "china_cdn_id": "7Rc8avKoaK8.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 135241,
+          "key": "22c3b2e3-6493-4790-b462-a03032ba1b72",
+          "title": "Step Faster",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "22c3b2e3-6493-4790-b462-a03032ba1b72",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160497,
+              "key": "a2c4e5c7-7cb8-4917-93d7-58be1e067eb7",
+              "title": "Step Faster",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "O3uLxDpFfyY",
+                "china_cdn_id": "O3uLxDpFfyY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137326,
+          "key": "5e0fd2ed-c760-4c34-beb2-2d14ab33b6fd",
+          "title": "Break",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5e0fd2ed-c760-4c34-beb2-2d14ab33b6fd",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 135238,
+              "key": "95ed20dc-b995-4799-b33e-d4908ab91920",
+              "title": "Break",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "kClpJWOLGfY",
+                "china_cdn_id": "kClpJWOLGfY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137445,
+          "key": "61bac6f2-d30d-4a7f-a671-f22676f235c1",
+          "title": "Press Conference",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "61bac6f2-d30d-4a7f-a671-f22676f235c1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 129194,
+              "key": "0b45e864-ce15-4fdf-8e66-31e627b3152b",
+              "title": "Press Conference",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "N2lINxKw2QE",
+                "china_cdn_id": "N2lINxKw2QE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137336,
+          "key": "65b15c63-8c07-468d-9273-fc1f063e68a8",
+          "title": "Arrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "65b15c63-8c07-468d-9273-fc1f063e68a8",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 129180,
+              "key": "d94eb8f0-c8cd-4267-871d-529557cedb71",
+              "title": "Arrays",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "Xrjcge5lAT4",
+                "china_cdn_id": "Xrjcge5lAT4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 135254,
+          "key": "19f816f2-507c-47a9-b067-de20197bb57e",
+          "title": "Press Conference Part 2",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "19f816f2-507c-47a9-b067-de20197bb57e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 124072,
+              "key": "8237c7e3-39b1-4475-8d77-72b778a231a1",
+              "title": "Press Conference Part 2",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "SQobESRmvUE",
+                "china_cdn_id": "SQobESRmvUE.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137353,
+          "key": "cce809a7-6d76-4a5e-be5a-245199ab66eb",
+          "title": "Arrays and Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "cce809a7-6d76-4a5e-be5a-245199ab66eb",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 135204,
+              "key": "c48dd54f-fe79-4b3a-bb72-9a3674b4b774",
+              "title": "Arrays and Loops",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "2YpyYufl498",
+                "china_cdn_id": "2YpyYufl498.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137523,
+          "key": "fb1f8293-e13b-42f4-8d78-34ac9aa87185",
+          "title": "Rubik's Cube Championship",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "fb1f8293-e13b-42f4-8d78-34ac9aa87185",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 45532,
+              "key": "4f02a862-7682-4070-bc6b-c75a445c0255",
+              "title": "Rubik's Cube Championship",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "5pTu0ys3t1M",
+                "china_cdn_id": "5pTu0ys3t1M.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137361,
+          "key": "006fe6e8-d09c-4482-9ed9-ece16cc69e5e",
+          "title": "Find the Longest Name",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "006fe6e8-d09c-4482-9ed9-ece16cc69e5e",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 102954,
+              "key": "8454290518",
+              "title": "Find the longest name",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8454290518",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "bZ0pmat1nmE",
+                  "china_cdn_id": "bZ0pmat1nmE.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Find the longest name",
+                "semantic_type": "ProgrammingQuestion",
+                "evaluation_id": "8470918722",
+                "initial_code_files": [
+                  {
+                    "text": "public String findLongestName(String [] names){\n\n\n    return \"\";\n}",
+                    "name": "starter.java"
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "xpKFHqIWwzU",
+                  "china_cdn_id": "xpKFHqIWwzU.mp4"
+                }
+              }
+            },
+            {
+              "id": 9804,
+              "key": "7bc64706-a891-4653-89aa-087c20196907",
+              "title": "Quiz hints",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "You should implement the function <code>String findLongestName(String [] names)</code> which takes an array of Strings as an input containing a list of names, and return the String that has the longest name.\n\nTo do so, try to follow these steps:\n\n1. The first step is to calculate and store the length of the input array, this is done using <code>names.length;</code> and store that in an integer variable.\n\n2. Then create a new String called <code>longestName</code> that will store the longest name in the array of names, initialize it with the first name in the array, that is <code>names[0]</code>.\n\n3. Next, you should create a <code>for</code> loop that will compare every name in the array using <code>names[i]</code> against the <code>longestName</code>. Only replace the <code>longestName</code> value if the <code>names[i]</code> is longer .\n\n4. Finally, return the <code>longestName</code> variable as the return value of the function.",
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 137444,
+          "key": "74a12a23-151a-4cb3-a04c-06889c67b492",
+          "title": "What if There's a Tie?",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "74a12a23-151a-4cb3-a04c-06889c67b492",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127245,
+              "key": "8404901828",
+              "title": "What If There's a Tie?",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8404901828",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "XWwXzeQfdk8",
+                  "china_cdn_id": "XWwXzeQfdk8.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "What If There's a Tie?",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/3s0fj8816SaqDXJKRZVETbyBodz2U2AB-H7L9ffddyZdDHp3PwyEygIL657p-I_4MrWQt75yHJ2srkOlEQ=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8404901828",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8428568697",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.2725802680798005,
+                      "y": 0.7931333148558758
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5393937032418953,
+                      "y": 0.7947616407982262
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.27320370947630923,
+                      "y": 0.8688331485587583
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5389845698254364,
+                      "y": 0.8666851441241685
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "v82UtbCi_iE",
+                  "china_cdn_id": "v82UtbCi_iE.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137188,
+          "key": "3b665a7d-a9ba-4638-8138-aa1d38f9f6f9",
+          "title": "2D Arrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "3b665a7d-a9ba-4638-8138-aa1d38f9f6f9",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160495,
+              "key": "3bec32cb-1c20-4b65-a8a4-4ae96f4b0089",
+              "title": "2D Arrays",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "Ylh7_JBeAao",
+                "china_cdn_id": "Ylh7_JBeAao.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 8765,
+          "key": "b2b2eed6-045d-49ae-8e78-c8acbfdd06ba",
+          "title": "Sandra's Grade",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "b2b2eed6-045d-49ae-8e78-c8acbfdd06ba",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 9327,
+              "key": "8407722062",
+              "title": "Sandra's Grade",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8407722062",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": null,
+              "question": {
+                "title": "Sandra's Grade",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/kQxiw_JaLvo44gWcTPLCLEstfxYBEf4Kh8vQPzV99_9g2cWB8HlpBAsYBnQ_tNXdVKGsFVc2hO_aU5dFNg=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8407722062",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8402891795",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.08722334788029926,
+                      "y": 0.8216116962305987
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.4044186408977556,
+                      "y": 0.8215077605321508
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7026184538653366,
+                      "y": 0.823240022172949
+                    }
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 137748,
+          "key": "36bc1f9f-5b3a-491d-af8e-5a1872e4b966",
+          "title": "Iterating Over 2D Arrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "36bc1f9f-5b3a-491d-af8e-5a1872e4b966",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 124048,
+              "key": "0fd04071-b6fa-41e1-8a08-8ec625da6159",
+              "title": "Iterating Over 2D Arrays",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "Z6VQHzIO_K8",
+                "china_cdn_id": "Z6VQHzIO_K8.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137442,
+          "key": "c9135ff2-5ea4-474c-986f-41741aadff16",
+          "title": "Nested Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "c9135ff2-5ea4-474c-986f-41741aadff16",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 11471,
+              "key": "be22a4aa-1d7b-451f-97fe-97a166d4e96c",
+              "title": "Nested Loops",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "WFkVk2QCfl4",
+                "china_cdn_id": "WFkVk2QCfl4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 126819,
+          "key": "ebc9bc81-d3a9-4270-9d84-a5a2deefaba0",
+          "title": "Inside a Nested Loop",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "ebc9bc81-d3a9-4270-9d84-a5a2deefaba0",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 127248,
+              "key": "8417419863",
+              "title": "Inside a Nested Loop",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8417419863",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "1yNe_lSmnew",
+                  "china_cdn_id": "1yNe_lSmnew.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Inside a Nested Loop",
+                "alt_text": null,
+                "background_image": "//lh3.googleusercontent.com/wHwccL_ygzEom2YuFVkgDcA0NcvHFpJUmWhlJZF_ZYaQHUgRRhiaQzt43uMcTtGzdinlCmptzmUkqzhjAJ5H=s0#w=1920&h=1080",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8417419863",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8401122081",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.16562110349127182,
+                      "y": 0.6860449002217295
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.34587359725685785,
+                      "y": 0.6844512195121951
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5249961034912718,
+                      "y": 0.6849362527716186
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.6974360972568578,
+                      "y": 0.6840354767184036
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "tWWgq5ev4wk",
+                  "china_cdn_id": "tWWgq5ev4wk.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 135217,
+          "key": "8ad1aaf0-d9e0-42c5-bb73-3d46bbdcd563",
+          "title": "How Nested Loops Work",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "8ad1aaf0-d9e0-42c5-bb73-3d46bbdcd563",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 135163,
+              "key": "fe79135d-62d6-4279-a781-eab5ba7e6fc3",
+              "title": "How Nested Loops Work",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "nRiRCf1zZKU",
+                "china_cdn_id": "nRiRCf1zZKU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137503,
+          "key": "d42a1304-823c-4247-be32-1b089fa7d57a",
+          "title": "Summary",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "d42a1304-823c-4247-be32-1b089fa7d57a",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 135156,
+              "key": "37b0eacc-f524-4885-bedd-b93b6c0a89cc",
+              "title": "Summary",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "NqwfQ-DhnT4",
+                "china_cdn_id": "NqwfQ-DhnT4.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

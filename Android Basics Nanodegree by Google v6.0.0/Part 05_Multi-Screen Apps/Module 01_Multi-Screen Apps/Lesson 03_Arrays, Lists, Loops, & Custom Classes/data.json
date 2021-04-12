@@ -1,0 +1,2116 @@
+{
+  "data": {
+    "lesson": {
+      "id": 324986,
+      "key": "a1937649-3229-4f89-a0c6-3ae84a42813a",
+      "title": "Arrays, Lists, Loops, & Custom Classes",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Use Arrays, Lists, and Loops to populate the Miwok app with words.",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/a1937649-3229-4f89-a0c6-3ae84a42813a/324986/1544459822060/Arrays%2C+Lists%2C+Loops%2C+%26+Custom+Classes+Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/a1937649-3229-4f89-a0c6-3ae84a42813a/324986/1544459804714/Arrays%2C+Lists%2C+Loops%2C+%26+Custom+Classes+Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 105564,
+          "key": "78832374510923",
+          "title": "Lesson 2 Course Map",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374510923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 53007,
+              "key": "7883237451",
+              "title": "Lesson 2 Course Map",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "WkqCLhJtdmA",
+                "china_cdn_id": "WkqCLhJtdmA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 39215,
+          "key": "78832374520923",
+          "title": "When to Use Arrays",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374520923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 308956,
+              "key": "9fa3b419-a2fc-4208-b369-787508963165",
+              "title": "When to Use Arrays",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "### Resource\n\n<a href=\"https://docs.google.com/document/d/1A6RLePdvEp6JwvZhWH55fBz0t311Cl-vWFHZjypeo1k/pub?embedded=true\" target=\"_blank\">Java Data Types Summary Page</a>",
+              "video": {
+                "youtube_id": "5HoohBJYepA",
+                "china_cdn_id": "5HoohBJYepA.mp4"
+              }
+            },
+            {
+              "id": 308955,
+              "key": "9f6e5a4f-5cab-471c-baff-ecd4566ceeff",
+              "title": "When to Use Arrays",
+              "semantic_type": "MatchingQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "9f6e5a4f-5cab-471c-baff-ecd4566ceeff",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "complex_prompt": {
+                  "text": "Given these scenarios, which data structure would you use to store the data in the app? "
+                },
+                "concepts_label": "Scenario",
+                "answers_label": "Data structure",
+                "concepts": [
+                  {
+                    "text": "Travel app (item to pack for traveling)",
+                    "correct_answer": {
+                      "id": "a1494366167803",
+                      "text": "array of Strings"
+                    }
+                  },
+                  {
+                    "text": "YouTube app (number of views)",
+                    "correct_answer": {
+                      "id": "a1494366271500",
+                      "text": "integer"
+                    }
+                  },
+                  {
+                    "text": "Settings app (languages supported)",
+                    "correct_answer": {
+                      "id": "a1494366327552",
+                      "text": "array of Strings"
+                    }
+                  },
+                  {
+                    "text": "Shopping app (whether a product is in stock)",
+                    "correct_answer": {
+                      "id": "a1494366384950",
+                      "text": "boolean"
+                    }
+                  },
+                  {
+                    "text": "Lottery app (winning combination of 5 numbers for a single round in the lottery)",
+                    "correct_answer": {
+                      "id": "a1494366411996",
+                      "text": "array of integers"
+                    }
+                  },
+                  {
+                    "text": "Health track app (miles or km walked for each day)",
+                    "correct_answer": {
+                      "id": "a1494366466788",
+                      "text": "array of floats"
+                    }
+                  }
+                ],
+                "answers": [
+                  {
+                    "id": "a1494366167803",
+                    "text": "array of Strings"
+                  },
+                  {
+                    "id": "a1494366466788",
+                    "text": "array of floats"
+                  },
+                  {
+                    "id": "a1494366327552",
+                    "text": "array of Strings"
+                  },
+                  {
+                    "id": "a1494366411996",
+                    "text": "array of integers"
+                  },
+                  {
+                    "id": "a1494366271500",
+                    "text": "integer"
+                  },
+                  {
+                    "id": "a1494366384950",
+                    "text": "boolean"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 308959,
+              "key": "f57d2bab-1baf-4089-8acf-206be9af9a7c",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Solution - When to Use Arrays",
+              "instructor_notes": ""
+            },
+            {
+              "id": 308957,
+              "key": "d54db889-47a6-436a-8863-3437c67de11a",
+              "title": "When To Use Arrays - Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "YzsdgFKKrkM",
+                "china_cdn_id": "YzsdgFKKrkM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 125818,
+          "key": "78832374550923",
+          "title": "Working with an Array",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374550923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 31341,
+              "key": "7883237455",
+              "title": "Working with an Array",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Video Correction:** At 2:00, Jessica incorrectly says that we initialize the 10th index to be the value 4. The 10th index in Option 3 is actually set as the value 1. \n\n#### Resources\n\n\n<a href=\"https://gist.github.com/kkuan2011/e0f7eea14ecd7e3a1e12\" target=\"_blank\">Gist</a> for 4 options of code in quiz. \n\nIf you would like another resource to reference for the correct way to create and initialize an array, check out this <a href=\"https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html\" target=\"_blank\">article</a>.\n",
+              "user_state": {
+                "node_key": "7883237455",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "J-OSSg0K_ec",
+                  "china_cdn_id": "J-OSSg0K_ec.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Bekerja Menggunakan Array",
+                "alt_text": "Kuis tentang bekerja menggunakan array",
+                "background_image": "//lh3.googleusercontent.com/kqk7yaTDyAOwbPHl7lvSS6MQThcwUc8rDXSJ_J8p-uk6h_bvf1W9Z8s1iIQMsPPEi4gxXZxH8Ww_9Cr6kg=s0#w=1347&h=673",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237455",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8023205053",
+                "widgets": [
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": "Code option 1",
+                    "marker": "radio1",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.1372155548628429,
+                      "y": 0.7801413525498891
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": "Code option 2",
+                    "marker": "radio2",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.32648846633416456,
+                      "y": 0.785164911308204
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": "Code option 3",
+                    "marker": "radio3",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.5218983790523691,
+                      "y": 0.7864814301552107
+                    }
+                  },
+                  {
+                    "group": "group1",
+                    "initial_value": "false",
+                    "label": "Code option 4",
+                    "marker": "radio4",
+                    "model": "RadioButtonWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.7151652119700748,
+                      "y": 0.7813885809312638
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "BQMjuIkgt8E",
+                  "china_cdn_id": "BQMjuIkgt8E.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 8106,
+          "key": "78832374580923",
+          "title": "Add Words to NumbersActivity",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374580923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 116759,
+              "key": "7883237458",
+              "title": "Add Words to NumbersActivity",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "<a href=\"https://github.com/udacity/ud839_Miwok/commit/c4098ace79330648c2d47bcb976d4f27218d0898\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/c4098ace79330648c2d47bcb976d4f27218d0898\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "7883237458",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "iH2ddag5gpU",
+                  "china_cdn_id": "iH2ddag5gpU.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Menambahkan Kata ke NumbersActivity",
+                "alt_text": "Kuis tentang menambahkan daftar kata ke aplikasi",
+                "background_image": "//lh3.googleusercontent.com/od1Xygur7OmIF7-QYPguwMWsngty8PU5YBP0HQXasj4cILuTjlg4Ofgt8u5s-G8Tc76f7Zry6_77G3cqfKoV=s0#w=1440&h=791",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237458",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8021975607",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox about array's data type",
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.10864745011086474,
+                      "width": 0.5249376558603491,
+                      "x": 0.047342581047381545,
+                      "y": 0.2394678492239468
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox about array's size",
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.12195121951219512,
+                      "width": 0.09102244389027432,
+                      "x": 0.05063513092269327,
+                      "y": 0.46414218403547675
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "CGOXNE3BM0U",
+                  "china_cdn_id": "CGOXNE3BM0U.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 23286,
+          "key": "78832374610923",
+          "title": "Verify Array Elements with Log Messages",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374610923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 24743,
+              "key": "7883237461",
+              "title": "Verify Array Elements with Log Messages",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "#### Resources\n\nIf you want more practice with arrays, check out the exercises on the CodingBats<a href=\"http://codingbat.com/java/Array-1\" target=\"_blank\"> site</a>.\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/b09aa1f9e991a4d2d236aa5728a3e7b5c4ae465d\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/b09aa1f9e991a4d2d236aa5728a3e7b5c4ae465d\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "7883237461",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Thj1E-R85oM",
+                  "china_cdn_id": "Thj1E-R85oM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Verifikasi Elemen Array dengan Pesan Log",
+                "alt_text": "Kuis mencetak word array ke log",
+                "background_image": "//lh3.googleusercontent.com/wT9h_Gr5gdNqd4Hv4fQQYxWhtzQqe8IURQtC5z60ucchwkbLii8wRe-SFHYQKGJYl8y6JHzsDwDWPpS13WU=s0#w=2560&h=1528",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237461",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8027805110",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for having printed out each element of the words array",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.1517690149625935,
+                      "y": 0.21400360310421285
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "Pae2-929uEI",
+                  "china_cdn_id": "Pae2-929uEI.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 12280,
+          "key": "80231948020923",
+          "title": "Working with An ArrayList",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80231948020923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 42621,
+              "key": "8023194802",
+              "title": "Working with An ArrayList",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "OI0jOKxoDO4",
+                "china_cdn_id": "OI0jOKxoDO4.mp4"
+              }
+            },
+            {
+              "id": 394634,
+              "key": "7684621d-1b91-4683-bd26-9e6cc87400f2",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Array vs ArrayList  Comparison Table\n||**Array**|**ArrayList**|\n|---|---|\n|**Can it change size once created?**|No|Yes|\n|**Is it a class?**|No|Yes\n|**Does it use methods to access and modify elements?**|No|Yes|\n|**What can it store?**|Primitives and Objects|Only Objects|\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 805,
+          "key": "79237803650923",
+          "title": "Working with an ArrayList Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79237803650923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 75217,
+              "key": "7923780365",
+              "title": "Working with an ArrayList Quiz",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "7923780365",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "FarlHOsMmHk",
+                  "china_cdn_id": "FarlHOsMmHk.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Bekerja Menggunakan ArrayList",
+                "alt_text": "Kuis tentang bekerja menggunakan ArrayList",
+                "background_image": "//lh3.googleusercontent.com/oyOIPWsfFneeRUCT86jwd83l0tg5Oyf5aZzNEamLRV_7LTDC0yG_8lU2RNiOuyqtcS6azqp1aXQwNnISPGY1=s0#w=1440&h=870",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7923780365",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8027695814",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox for answer to Question 1",
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.08647450110864745,
+                      "width": 0.8877805486284289,
+                      "x": 0.04438123441396509,
+                      "y": 0.29663248337028825
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox for answer to Question 2",
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07760532150776053,
+                      "width": 0.8815461346633416,
+                      "x": 0.046991895261845384,
+                      "y": 0.44217710643015523
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Texbox for answer to Question 3",
+                    "marker": "text3",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.8753117206982544,
+                      "x": 0.05069357855361596,
+                      "y": 0.5832524944567627
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox for answer to Question 4",
+                    "marker": "text4",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.8728179551122195,
+                      "x": 0.05234959476309227,
+                      "y": 0.722734201773836
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox for answer to Question 5",
+                    "marker": "text5",
+                    "model": "TextInputWidget",
+                    "is_text_area": false,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.07982261640798226,
+                      "width": 0.8703241895261845,
+                      "x": 0.053167861596009974,
+                      "y": 0.8607261640798226
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "JfzaR9nJz2g",
+                  "china_cdn_id": "JfzaR9nJz2g.mp4"
+                }
+              }
+            },
+            {
+              "id": 135073,
+              "key": "7b4c4eff-905b-4456-985d-c2a1ed72f600",
+              "title": "Catatan Instruktur:",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Resources\n\n- <a href=\"http://developer.android.com/reference/java/util/List.html\" target=\"_blank\">List interface</a>\n- <a href=\"https://developer.android.com/reference/java/util/ArrayList.html\" target=\"_blank\">ArrayList class</a>\n\nHere is a list of common Type Parameters:\n- E - Element (used extensively by the Java Collections Framework)\n- K - Key\n- N - Number\n- T - Type\n- V - Value\n- S,U,V etc. - 2nd, 3rd, 4th types (when there is more than one parameter)\n\nBy convention, they are single, uppercase letters. Don’t worry, you won’t need to memorize these and for the rest of this course, we will explain the ones that do come up.\nLearn more about Generic Types <a href=\"https://docs.oracle.com/javase/tutorial/java/generics/types.html\" target=\"_blank\">here</a>.\n\n---\n#### Note\nIn the solution video, there is a typo and misreading in question #3. The answer should add `\"BBQ Time\"` instead of `\"BBQ Heaven\"`. Guess I was really craving BBQ :)",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 103879,
+          "key": "78832374660923",
+          "title": "Switch from Array to ArrayList",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374660923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 24570,
+              "key": "7883237466",
+              "title": "Switch from Array to ArrayList",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "#### Hint \n\nCheck out this <a href=\"http://beginnersbook.com/2013/12/java-arraylist/\" target=\"_blank\">example</a>\n on ArrayLists in Java.\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/4ffd4a73a8d4e44b4cf78a32f16b46c004ac28cc\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/4ffd4a73a8d4e44b4cf78a32f16b46c004ac28cc\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "7883237466",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "k4diFXwNcgs",
+                  "china_cdn_id": "k4diFXwNcgs.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Pindah dari Array ke ArrayList",
+                "alt_text": "Kuis menggunakan ArrayList di NumbersActivity",
+                "background_image": "//lh3.googleusercontent.com/b9j_BATJBoKCddThl_BI8qoGKpTMtyoGd9Amsz3QiXNKFOdfDWxzqQoJvMHnJXYQ9Dgn4ZOxE-sy6YeiGCyH=s0#w=1440&h=863",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237466",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8029893608",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to store words in ArrayList",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.08036549251870324,
+                      "y": 0.3151330376940133
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to update logging statements",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.08531405860349127,
+                      "y": 0.5816588137472284
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-wpjZ41V4ds",
+                  "china_cdn_id": "-wpjZ41V4ds.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 16156,
+          "key": "79237803670923",
+          "title": "Add Text Views to the Layout Based on the List",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79237803670923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 54694,
+              "key": "7923780367",
+              "title": "Add Text Views to the Layout Based on the List",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "3mnRtER76c0",
+                "china_cdn_id": "3mnRtER76c0.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 116310,
+          "key": "78832374970923",
+          "title": "Intro to Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374970923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 54555,
+              "key": "7883237497",
+              "title": "Intro to Loops",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "4dolAwhPkBw",
+                "china_cdn_id": "4dolAwhPkBw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 15198,
+          "key": "80851088190923",
+          "title": "Add TextViews to Layout with While Loop",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80851088190923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 16004,
+              "key": "8085108819",
+              "title": "Add TextViews to Layout with While Loop",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "#### Video Correction\nAt 5:35, Jessica uses `words[index]`, but it should be `words.get(index)` because we are using an ArrayList not an Array anymore.\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/0d570a506a1b51f5333c7741c47e714d55c35ab2\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/0d570a506a1b51f5333c7741c47e714d55c35ab2\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "8085108819",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "DZ6s_IG3KyM",
+                  "china_cdn_id": "DZ6s_IG3KyM.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Menambahkan TextViews ke Layout dengan While Loop",
+                "alt_text": "Kuis tentang penggunaan while loop",
+                "background_image": "//lh3.googleusercontent.com/xF41B8SsJnIo5fI471-hUnGgPG9Jl3I6liM4U9g280veOkdX-iFU2UCn9frxEkUXof2n5hHMSiS2jq_Do5E=s0#w=1726&h=1074",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8085108819",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8084988849",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for step 1",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.023554395261845388,
+                      "y": 0.18725748337028825
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for step 2",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.02145028054862843,
+                      "y": 0.31101025498891355
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for step 3",
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.027372973815461346,
+                      "y": 0.5276122505543237
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "3tudev54vMc",
+                  "china_cdn_id": "3tudev54vMc.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 107745,
+          "key": "78832374690923",
+          "title": "Use the For Loop",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 55776,
+              "key": "7883237469",
+              "title": "Use the For Loop",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "7883237469",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "Enocpdsz_eg",
+                  "china_cdn_id": "Enocpdsz_eg.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Menggunakan For Loop",
+                "alt_text": "Kuis tentang penggunaan For Loop",
+                "background_image": "//lh3.googleusercontent.com/xKFUR9PnFQcvMdRJTctO4cIwgEY1nHy1Nhg1OI_w2qK2H53oKIUjy0EzC-EMfp9UR_Lc8Nfw9in_Oc7wAA=s0#w=1440&h=807",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237469",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8049089628",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for changing code to use for loop",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.072026963840399,
+                      "y": 0.22356568736141907
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "dgLl0WbCjYw",
+                  "china_cdn_id": "dgLl0WbCjYw.mp4"
+                }
+              }
+            },
+            {
+              "id": 394636,
+              "key": "f9c9b050-5d62-4229-9434-a74f08e5a840",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "#### Hint \nHere is an example of a for loop:\n\n```java\nfor (int index = 0; index < 3; index++) { \nLog.v(\"NumbersActivity\", \"Index:\" + index + \" Value:\" + words.get(index));\n}\n```\n\nthat will display the following  output in the logs:\n\n<pre><code>\nIndex:0 Value:one\nIndex:1 Value:two\nIndex:2 Value:three\n</pre></code>\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/b7c723c3c38c2c2ca9eb7067e34fb526052cfd34\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/b7c723c3c38c2c2ca9eb7067e34fb526052cfd34\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 394657,
+          "key": "88fde404-3ccc-420a-aea0-eaa1a11bb738",
+          "title": "Review of Loops",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "88fde404-3ccc-420a-aea0-eaa1a11bb738",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 394660,
+              "key": "1d3329c5-2f75-4de9-9d1a-39e7648f72f8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Review of Loops\n\nYou were just introduced to two types of Loops - *while* loops and *for* loops.\nThen practiced using loops to display TextViews in a Layout.\n\nAs you continue developing, you'll notice loops used in a number of circumstances from Runnables (e.g. running different tasks on different tasks which will be covered later) to Image Processing. Don't worry about these implementations for now. Focus on understanding how and when to setup these types of loops and why you'd choose each type. \n\n## Additional Looping Practice \nLooping is a fundamental Java concept. Later in this course, there will be a [Java Break: Loops Review](https://classroom.udacity.com/nanodegrees/nd803/parts/97b78ded-790c-4cda-a6b1-f66d920f011e/modules/cfd37960-d702-4cd1-b444-00e62aa185c3/lessons/5eb37cb1-2ecb-44bc-b0fb-cfc585826cc3/concepts/3c3c1d8c-a502-4cff-a6a5-fea0120b1c70) for you to dive deeper into Java looping principles and practice that we covered here. \n\nLet's continue the discussion of how we will use loops to display words from our ArrayList to users!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 136981,
+          "key": "78832374730923",
+          "title": "Memory is a Limited Resource",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374730923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 38805,
+              "key": "7883237473",
+              "title": "Memory is a Limited Resource",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "jNggLBdld-s",
+                "china_cdn_id": "jNggLBdld-s.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 38020,
+          "key": "79237803680923",
+          "title": "View Recycling",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79237803680923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 68216,
+              "key": "7923780368",
+              "title": "View Recycling",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "#### Resources\n\nIf you’re interested, here’s a link to a <a href=\"http://developer.android.com/tools/performance/memory-monitor/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Memory Monitor walkthrough</a>.\n\nWe have an advanced Udacity course on Android Performance which covers <a href=\"https://classroom.udacity.com/courses/ud825/lessons/3846748822/concepts/37868186490923\" target=\"_blank\">Memory Monitor</a> as well.",
+              "video": {
+                "youtube_id": "2lcoB5-PCCw",
+                "china_cdn_id": "2lcoB5-PCCw.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 16838,
+          "key": "78832374740923",
+          "title": "Analogy for ListView",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374740923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 24528,
+              "key": "7883237474",
+              "title": "Analogy for ListView",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Discussion forum post to share with your classmates:**\n\n[For students enrolled in OMAC](https://macdiscussions.udacity.com)\n\n**More resources:**\n\nCodepath tutorial on [ListView and ArrayAdapter](https://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView).\n\nGoogle I/O talk on [ListView](https://www.youtube.com/watch?v=wDBM6wVEO70).",
+              "user_state": {
+                "node_key": "7883237474",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "hIk7qaNxkX4",
+                  "china_cdn_id": "hIk7qaNxkX4.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "Analogy for ListView",
+                "alt_text": "Quiz to find examples of Android app examples",
+                "background_image": "//lh3.googleusercontent.com/f44XelRX0odPmFo4eEvbMqCXxuougN8J7SbEyv3dGX-K5j7Nx-YI04pcDFndGNDsclTQ0JJDIfx19ec5Qfs=s0#w=1440&h=853",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237474",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8026075626",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox when you find example of vertical LinearLayout",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07134507481296758,
+                      "y": 0.38147865853658536
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox for example of recycle view",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.07066318578553615,
+                      "y": 0.574244733924612
+                    }
+                  }
+                ]
+              },
+              "answer": null
+            }
+          ]
+        },
+        {
+          "id": 134526,
+          "key": "77b814f0-6a85-496d-a593-d477f1e2aade",
+          "title": "Switch to Using ListView and ArrayAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "77b814f0-6a85-496d-a593-d477f1e2aade",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160155,
+              "key": "e44623d7-3be3-46d6-b8b3-dab0bf9d600f",
+              "title": "Switch to Using ListView and ArrayAdapter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "8hIal6K4HGQ",
+                "china_cdn_id": "8hIal6K4HGQ.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 137025,
+          "key": "78832374760923",
+          "title": "Switch to Using a ListView and Adapter Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374760923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134457,
+              "key": "8770289640",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8770289640",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "Modify the NumbersActivity onCreate() method:\n--\n\n1. Remove the for loop which created a new TextView and added it to the layout for each word in the list.\n\n2. Add these 3 lines of code to the method, after the words list has been created:\n\n\n        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);\n\n        ListView listView = (ListView) findViewById(R.id.list);\n\n        listView.setAdapter(itemsAdapter);\n\n\nTo see what your NumbersActivity.java file should look like after this change, check out the github link [here.](https://github.com/udacity/ud839_Miwok/blob/3b03dc9d978c7c412c907d23d4c4f4aba10d6d8f/app/src/main/java/com/example/android/miwok/NumbersActivity.java)\n\nModify the activity_numbers.xml layout file:\n-\n\n 3 .  Replace the whole file with this XML. It contains a single ListView element with view ID list.\n\n    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n    <ListView xmlns:android=\"http://schemas.android.com/apk/res/android\"\n       xmlns:tools=\"http://schemas.android.com/tools\"\n       android:id=\"@+id/list\"\n       android:orientation=\"vertical\"\n       android:layout_width=\"match_parent\"\n       android:layout_height=\"match_parent\"\n       android:paddingBottom=\"@dimen/activity_vertical_margin\"\n       android:paddingLeft=\"@dimen/activity_horizontal_margin\"\n       android:paddingRight=\"@dimen/activity_horizontal_margin\"\n       android:paddingTop=\"@dimen/activity_vertical_margin\"\n       tools:context=\"com.example.android.miwok.NumbersActivity\"/>"
+              },
+              "question": {
+                "title": "Switch to Using ListView and Adapter",
+                "alt_text": "Quiz about switching to use a ListView and Adapter",
+                "background_image": "//lh3.googleusercontent.com/dIAUHsyr9_jrbXGT6wjZBEQELA9PFx5VC2j0rcKqRh-Rxj3PFKuNLoCdj6Jgyo0EgzWoEGogUgKv-4RolhM=s0#w=1440&h=821",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8770289640",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8119265045",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox about NumbersActivity",
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.18181818181818182,
+                      "width": 0.8379052369077307,
+                      "x": 0.07463762468827931,
+                      "y": 0.3086890243902439
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Texbox about 3 observations",
+                    "marker": "text2",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.2549889135254989,
+                      "width": 0.8291770573566085,
+                      "x": 0.08313201371571072,
+                      "y": 0.628014135254989
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "YqlJXdaSUw4",
+                  "china_cdn_id": "YqlJXdaSUw4.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 102780,
+          "key": "78832374790923",
+          "title": "ListView and ArrayAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 54710,
+              "key": "7883237479",
+              "title": "ListView and ArrayAdapter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "iES7i17TEGM",
+                "china_cdn_id": "iES7i17TEGM.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 15181,
+          "key": "79237803690923",
+          "title": "ListView and ArrayAdapter Code",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79237803690923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 24564,
+              "key": "7923780369",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "7923780369",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "s4FwfX583WI",
+                  "china_cdn_id": "s4FwfX583WI.mp4"
+                },
+                "text": null
+              },
+              "question": {
+                "title": "ListView and ArrayAdapter Code",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/zMrxEsYMTqXDriCYNQIySEaJWCPt0Z7G5J0rzYJ5YR15uU_yzU2xX6t8Dek7-sk6UuOmDKqlVzKPsAPYMpU=s0#w=1280&h=698",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7923780369",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8084158886",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.356900716957606,
+                      "y": 0.8269817073170732
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "lBuC5YAE65s",
+                  "china_cdn_id": "lBuC5YAE65s.mp4"
+                }
+              }
+            },
+            {
+              "id": 394614,
+              "key": "a1c11a53-c5c2-4dcf-a181-32e03738d369",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Resources \n- <a href=\"https://developer.android.com/guide/topics/ui/layout/gridview.html\" target=\"_blank\">GridView Article</a>\n\n- Helpful article summarizing [Using an ArrayAdapter with ListView](https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView)\n\n### Code Changes\n\nSince we return to the previous state after this quiz, continue using <a href=\"https://github.com/udacity/ud839_Miwok/tree/3b03dc9d978c7c412c907d23d4c4f4aba10d6d8f\" target=\"_blank\">this code state.</a>\n\n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 125830,
+          "key": "81479722360923",
+          "title": "Andrea Interview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81479722360923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 43169,
+              "key": "8147972236",
+              "title": "Andrea Interview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "NzuvosWpfjk",
+                "china_cdn_id": "NzuvosWpfjk.mp4"
+              }
+            },
+            {
+              "id": 5975,
+              "key": "5ce9e9fd-910e-4035-b30a-a09d73030c9e",
+              "title": "Andrea Delgado-Olsen",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Andrea is part of <em>Native American Women in Computing</em>, an Anita Borg <a href=\"http://anitaborg.org/get-involved/systers/\" target=\"_blank\">Systers Community</a>. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 30280,
+          "key": "78832374830923",
+          "title": "Build List Item Layout",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374830923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 49639,
+              "key": "7883237483",
+              "title": "Build List Item Layout",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "abDzMBXDKDk",
+                "china_cdn_id": "abDzMBXDKDk.mp4"
+              }
+            },
+            {
+              "id": 394618,
+              "key": "d03ef72b-6155-48bc-b47e-2e13183a0bfc",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Since we return to the previous state after this quiz, continue using <a href=\"https://github.com/udacity/ud839_Miwok/tree/3b03dc9d978c7c412c907d23d4c4f4aba10d6d8f\" target=\"_blank\">this code state.</a>",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 102688,
+          "key": "78832374820923",
+          "title": "Build List Item Layout Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374820923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134236,
+              "key": "8763373313",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8763373313",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "## Creating a New Layout File:\n\nTo create a new layout file, go to the project directory pane.\n\nRight click on the res/layout folder, and select New > Layout resource file and call it “list_item.xml”. The root element of your new layout can be a LinearLayout.\n\n![create layout resource](https://lh3.googleusercontent.com/1hKugCN9TtQwxynQw5-xwNDFhn846hi_Dobm2IYnxwSewfWQYE2k0Sv6Koz-aAHzdIfuYAV9zGKAe-RrERc=s0#w=686&h=316)\n\n![make root element linear layout](https://lh3.googleusercontent.com/VzmsY9_wHq5c8dNgLKZtoAmtrii-FXJ-7-CPBkJe_TtSdKgxVsxI-9xQgAPm3bxPYaOly2cHHVW89Ykk6g=s0#w=705&h=412)\n\nAssign view IDs to the TextViews so that we can refer to them in the Java code later.\n\nThen answer the following quiz question."
+              },
+              "question": {
+                "title": "Build List Item Layout",
+                "alt_text": "Quiz to Build List Item Layout",
+                "background_image": "//lh3.googleusercontent.com/WFI764tA69Oun04zw3Fs-YevK5b_WuC8p9W9zV1oj6lCb9xm7uIutU6Dpagf8MSCTaRvnjfQYIaThDXZAR0=s0#w=1440&h=798",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8763373313",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8147971617",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "",
+                    "label": "Textbox for which ViewGroup to use as root view",
+                    "marker": "text1",
+                    "model": "TextInputWidget",
+                    "is_text_area": true,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.09090909090909091,
+                      "width": 0.19451371571072318,
+                      "x": 0.0772677680798005,
+                      "y": 0.7602896341463414
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "-hFzRMwiITY",
+                  "china_cdn_id": "-hFzRMwiITY.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 359,
+          "key": "79237803710923",
+          "title": "When to Create a Custom Class",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "79237803710923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 322634,
+              "key": "85f4405f-a316-4261-8f43-ac67738a3f8b",
+              "title": "When to Create a Custom Class",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "#### Hint\nCheck out these links to related videos:\n\n- <a href=\"https://www.youtube.com/watch?time_continue=2&v=tppI4lJDnY4\" target=\"_blank\">What are Java Objects?</a>\n\n- <a href=\"https://www.youtube.com/watch?v=IQV3QNaFD64\" target=\"_blank\">What is a Java Class?</a>",
+              "video": {
+                "youtube_id": "IvoJ-PKgB84",
+                "china_cdn_id": "IvoJ-PKgB84.mp4"
+              }
+            },
+            {
+              "id": 322628,
+              "key": "2a5f4b98-a5eb-4574-9b5b-3724ed40a808",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "2a5f4b98-a5eb-4574-9b5b-3724ed40a808",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What state(s) should a Word object contain? Select as many options as you think apply.",
+                "answers": [
+                  {
+                    "id": "a1495210842637",
+                    "text": "The default translation of the word",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1495210937221",
+                    "text": "The Miwok translation of the word",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1495210948075",
+                    "text": "The English translation of the word",
+                    "is_correct": true
+                  }
+                ]
+              }
+            },
+            {
+              "id": 322631,
+              "key": "e31cc7f0-6f0f-4d65-a51b-a5004321a387",
+              "title": "",
+              "semantic_type": "RadioQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "e31cc7f0-6f0f-4d65-a51b-a5004321a387",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What is the data type of each variable?",
+                "answers": [
+                  {
+                    "id": "a1495212029670",
+                    "text": "String",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1495212056930",
+                    "text": "array of Strings",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1495212066573",
+                    "text": "integer",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1495212069576",
+                    "text": "boolean",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 322638,
+              "key": "f6ea6b44-33a1-4169-a62c-a68458276fb9",
+              "title": "",
+              "semantic_type": "CheckboxQuizAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "user_state": {
+                "node_key": "f6ea6b44-33a1-4169-a62c-a68458276fb9",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "question": {
+                "prompt": "What methods should we have? Select all that apply.",
+                "answers": [
+                  {
+                    "id": "a1495212492509",
+                    "text": "getMiwokTranslation()",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1495212531822",
+                    "text": "getEnglishTranslation()",
+                    "is_correct": false
+                  },
+                  {
+                    "id": "a1495212566887",
+                    "text": "getDefaultTranslation()",
+                    "is_correct": true
+                  },
+                  {
+                    "id": "a1495212572931",
+                    "text": "getTranslation()",
+                    "is_correct": false
+                  }
+                ]
+              }
+            },
+            {
+              "id": 322955,
+              "key": "7fda11b2-1646-4644-9640-4664f24eec66",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Solution Video",
+              "instructor_notes": ""
+            },
+            {
+              "id": 322640,
+              "key": "aa939695-9f1b-42d2-937a-86ff8555058c",
+              "title": "When to Create a Custom Word Class - Solution",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "video": {
+                "youtube_id": "DP-8rZUNrV4",
+                "china_cdn_id": "DP-8rZUNrV4.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 15167,
+          "key": "78832374880923",
+          "title": "Custom Word Class",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 53912,
+              "key": "7883237488",
+              "title": "Custom Word Class",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "NOtQlvq_CCY",
+                "china_cdn_id": "NOtQlvq_CCY.mp4"
+              }
+            },
+            {
+              "id": 325711,
+              "key": "cffab73d-333e-437e-b529-c957e10fe999",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "[Gist](https://gist.github.com/udacityandroid/47592c621d32450d7dbc) for Simplified TextView class",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 159986,
+          "key": "5920a900-a578-4dba-855d-81389455484b",
+          "title": "Custom Word Class Quiz",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "5920a900-a578-4dba-855d-81389455484b",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 135057,
+              "key": "8749428539",
+              "title": "Custom Word Class",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "#### Resources\n\n* <a href=\"https://gist.github.com/udacityandroid/47592c621d32450d7dbc\" target=\"_blank\">Simplified TextView class</a>\n\n* <a href=\"https://docs.oracle.com/javase/tutorial/java/concepts/class.html\" target=\"_blank\">Java Documentation - What is a class?</a>\n- <a href=\"http://tools.android.com/tech-docs/tools-attributes\" target=\"_blank\">Tools Attributes</a>\n- <a href=\"https://en.wikipedia.org/wiki/XML_namespace#Namespace_names\" target=\"_blank\">XML Namespaces</a>\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/59291abd678f1e5c9eccc1dcc6c575ecdac0a2b6\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/59291abd678f1e5c9eccc1dcc6c575ecdac0a2b6\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "8749428539",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "Create the Word Class\n---\n\n### 1. Create a new file called “Word.java” and add it under the “com.example.android.miwok” folder.\n\n To create a new Class in Android Studio. Right click on the package in the project directory. Go to new Class.\n\n ![Create a new Java Class](http:////lh3.googleusercontent.com/xBDR88Omzlnw7yZnrxkgeVZiZYdZzon4zWq9xt4AvYcvOT8DdF808-dIthwCU8qYGI91C4ExmIur0PRm47Q=s0#w=1076&h=343)\n\n When the wizard pops up, give the class a name: Word. Accept the defaults and click Finish.\n\n ![Word Activity](https://lh3.googleusercontent.com/OK4bHU9GR2m6hJl1KbKFXKLgMty8_alPkuD5F2aWFYHyZcr13sRWUmkyidx-bkoWPEmk1lSGOn9ZeAdOtZg=s0#w=354&h=138)\n\n### 2. Define the Word class in the Word.java file with state and methods.\n\n\nThere should be no change in the appearance of your app yet, but be sure to run the app on your device to verify there are no errors in your code."
+              },
+              "question": {
+                "title": "Custom Word Class",
+                "alt_text": "Quiz to create the Word class",
+                "background_image": "//lh3.googleusercontent.com/IapyICSAHALPKsLH410EXXxMSILp5Ni7igME4efbK2I5K5i-qmtQwmEicD2ME_vGUIGYa3kCPs0L6ztDUgw=s0#w=1278&h=712",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8749428539",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8125487148",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to create new Word.java file",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.10356920199501247,
+                      "y": 0.43112527716186255
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to define state and methods for Word class",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.09945838528678304,
+                      "y": 0.6586751662971175
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "sDtr1mpcBcU",
+                  "china_cdn_id": "sDtr1mpcBcU.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 52884,
+          "key": "78832374900923",
+          "title": "Need a Custom ArrayAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374900923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160598,
+              "key": "97e487f8-2338-4c04-afb8-bcd3acff6022",
+              "title": "Need a Custom ArrayAdapter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "#### Note\n\nPlease use this <a href=\"https://github.com/udacity/ud839_CustomAdapter_Example\" target=\"_blank\">Github Link</a> for the Custom ArrayAdapter example from the lesson.\n\n#### Resource\n\n<a href=\"http://developer.android.com/reference/android/widget/ArrayAdapter.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Android documentation for ArrayAdapter</a>\n\n",
+              "video": {
+                "youtube_id": "Lc40eC3HLtA",
+                "china_cdn_id": "Lc40eC3HLtA.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 160023,
+          "key": "30b33d8b-2a90-4d39-805f-7975bbc0bcd1",
+          "title": "Need a Custom ArrayAdapter Exercise",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "30b33d8b-2a90-4d39-805f-7975bbc0bcd1",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 160024,
+              "key": "8abd7dca-852c-4e9d-af05-6f7986550eb1",
+              "title": "Need a Custom ArrayAdapter Quiz",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This exercise will help you practice implementing a custom ArrayAdapter. Complete this before moving on to the next video.\n\n---\n## Display List of Numbers (with Miwok and English Translations)\n\n\n#### Modify the NumbersActivity\n1.Change the ArrayList of Strings called \"words\" into an ArrayList of `Word` objects\n\n2.We’re providing you the code that you should add in the onCreate() method of the NumbersActivity. See <a href=\"https://gist.github.com/anonymous/e19e1c844cd428eb312f\" target=\"_blank\">this link</a> for what the whole file should look like. Make sure your WordAdapter works with this code, otherwise modify your WordAdapter class further.\n\n#### Create new class WordAdapter\n3.Create a new WordAdapter class. Remember to add a new file, go to New > Java Class > and then type in the name of the class WordAdapter.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 160025,
+              "key": "696f6a9c-0052-42f6-a657-a30ba4fd704a",
+              "title": "Create WordAdapter class",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2016/July/577e9609_screen-shot-2016-07-06-at-3.57.43-pm/screen-shot-2016-07-06-at-3.57.43-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/696f6a9c-0052-42f6-a657-a30ba4fd704a",
+              "caption": "",
+              "alt": null,
+              "width": 700,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 160026,
+              "key": "42373a1c-183b-41ec-a0ea-97937878f1e3",
+              "title": "Create WordAdapter class",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479d13_6omrtec8ilaqlaehwrqzwr-vu10a-vgak2etedjvlm-0qd4fqbj1ptly8kcc4mupwmoh65xznxxxndv3bc0-s0w-354-h-138/6omrtec8ilaqlaehwrqzwr-vu10a-vgak2etedjvlm-0qd4fqbj1ptly8kcc4mupwmoh65xznxxxndv3bc0-s0w-354-h-138",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/42373a1c-183b-41ec-a0ea-97937878f1e3",
+              "caption": "",
+              "alt": null,
+              "width": 300,
+              "height": 200,
+              "instructor_notes": null
+            },
+            {
+              "id": 160027,
+              "key": "31dbd80d-880a-4062-b522-8a2602e071fd",
+              "title": "Need CustomArrayAdapter Quiz",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "4.Modify the auto-generated file from Android Studio. We want the class declaration to specify that the WordAdapter extends or inherits behavior from the ArrayAdapter class.\n```\npublic class WordAdapter extends ArrayAdapter<Word>  {\n```\n\n5.Use keyboard shortcut Ctl + O to show the available methods to override from the ArrayAdapter class.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 160028,
+              "key": "3db19a5b-116a-436c-93b6-44f9ee1edbdb",
+              "title": "Method Override Screenshot",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479f58_h4pmqf-w9omvitvtued2cmt8ph7pjyvitygmsuql8tw8jhi0c49kpi-rhlyyzh5mnabisbybt2ywwvrtjoy-s0w-278-h-427/h4pmqf-w9omvitvtued2cmt8ph7pjyvitygmsuql8tw8jhi0c49kpi-rhlyyzh5mnabisbybt2ywwvrtjoy-s0w-278-h-427",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/3db19a5b-116a-436c-93b6-44f9ee1edbdb",
+              "caption": "",
+              "alt": null,
+              "width": 400,
+              "height": 700,
+              "instructor_notes": null
+            },
+            {
+              "id": 160029,
+              "key": "d8c600df-406f-4a45-be65-52505ed2e5b5",
+              "title": "Need Custom ArrayAdapter Quiz",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "\nFind getView method and click OK. The getView() method gets generated by default.\n```\n@Override\npublic View getView(int position, View convertView, ViewGroup parent) {\n   return super.getView(position, convertView, parent);\n}\n```\n\n6.Finish implementing the WordAdapter class by looking at the sample Android Flavors app hosted on  <a href=\"https://github.com/udacity/ud839_CustomAdapter_Example\" target=\"_blank\">Github here</a>. Make sure the code we provided you in NumbersActivity works with your WordAdapter class, otherwise fix your WordAdapter class.\n\n7.Then run the app on your device and make sure the NumbersActivity looks like this screenshot:",
+              "instructor_notes": ""
+            },
+            {
+              "id": 160030,
+              "key": "18a1f9a4-fa04-429e-9d5c-4ae70f9de28c",
+              "title": "NumbersActivity screenshot",
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2019/August/5d479f57_u5utoydak1i4znh7vbvvpw5ckuo5ldtruwyplax4iega-dsrcqamus2oukeb05rynv15xsoc8hphwqb0bay-s0w-235-h-413/u5utoydak1i4znh7vbvvpw5ckuo5ldtruwyplax4iega-dsrcqamus2oukeb05rynv15xsoc8hphwqb0bay-s0w-235-h-413",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/18a1f9a4-fa04-429e-9d5c-4ae70f9de28c",
+              "caption": "",
+              "alt": null,
+              "width": 400,
+              "height": 700,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 116346,
+          "key": "78879267310923",
+          "title": "Example App with Custom ArrayAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78879267310923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 134915,
+              "key": "7887926731",
+              "title": "Example App with Custom ArrayAdapter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": "#### Note\n\nPlease use this <a href=\"https://github.com/udacity/ud839_CustomAdapter_Example\" target=\"_blank\">Github Link</a> for the Custom ArrayAdapter example from the lesson. ",
+              "video": {
+                "youtube_id": "ec9YBW3OTpY",
+                "china_cdn_id": "ec9YBW3OTpY.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 12236,
+          "key": "78832374930923",
+          "title": "Custom ArrayAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 67663,
+              "key": "7883237493",
+              "title": "Custom ArrayAdapter",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "C4zSpiZPyXU",
+                "china_cdn_id": "C4zSpiZPyXU.mp4"
+              }
+            }
+          ]
+        },
+        {
+          "id": 125819,
+          "key": "78832374910923",
+          "title": "Remaining Words",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "78832374910923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 96433,
+              "key": "7883237491",
+              "title": "Remaining Words",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "#### Note\n\nSee the <a href=\"https://docs.google.com/document/d/16sQ-0r5zMrdRXUwOaYbTLNXADasuSYFpy7K0Bn8oVfg/pub?embedded=true\" target=\"_blank\">Miwok Dictionary </a> for the lists of words for colors, family members, and phrases.\n\n---\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/534b9a382dc0aaab47a87a808e101b3bdc8073c3\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/534b9a382dc0aaab47a87a808e101b3bdc8073c3\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "7883237491",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "# Adding the Remaining Words\n\nYou’ve successfully added a ListView and a custom ArrayAdapter to your app to display the English and Miwok words for the Numbers category.\n\n## Step 1:\nFinish modifying the ColorsActivity, FamilyActivity, and PhrasesActivity so we see the English and Miwok translations for all words in the app. See the [Miwok Dictionary](https://docs.google.com/document/d/16sQ-0r5zMrdRXUwOaYbTLNXADasuSYFpy7K0Bn8oVfg/pub?embedded=true) document for the list of the other words.\n\nWe don’t have images yet, but that will come in the next step.\n\n---\n**Hint #1:** To get started with the ColorsActivity, instead of writing all the list code again from scratch, start off by copying the NumbersActivity code over to the ColorsActivity file. We’ll use this as a base and then modify as needed. Rename the class to be called ColorsActivity (so it matches the name of the file).\n\n---\n\n## Step: 2\nRun it on the device to make sure the ColorsActivity is displaying something - even though it’s still the wrong vocab words. We can switch them later.\n\n\n## Step: 3\nOk, we know the code works, we just need to swap out the numbers with the color words. You can repeat the copy/pasting for the other activities as well. Run your app again to make sure everything worked.\n\n---\n\n**Hint #2:** To save yourself some extra work, we can reuse the activity_numbers.xml for all 4 activities, instead of updating activity_colors.xml, activity_family.xml, and activity_phrases.xml to also have a ListView XML element. The activity_numbers.xml has nothing specific to numbers in it because all the words are added to the list dynamically when the app is running via Java code.\n\n**activity_numbers.xml file**\n\n\n    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n    <ListView xmlns:android=\"http://schemas.android.com/apk/res/android\"\n     xmlns:tools=\"http://schemas.android.com/tools\"\n     android:id=\"@+id/list\"\n     android:layout_width=\"match_parent\"\n     android:layout_height=\"match_parent\"\n     tools:context=\"com.example.android.miwok.NumbersActivity\"/>\n\nRemember the tools attribute is Numbers-specific, so we can remove that.\n\n___\n\nLet’s just pick a better name for the activity_numbers.xml file to make it more general to all the categories (not just the Numbers category). How about renaming the file to word_list.xml?\n\nSelect activity_numbers.xml -> Refactor -> Rename:\n![Remaining_Words_Rename](https://lh3.googleusercontent.com/wsPaDzeR-Uz6TGjnegcKli5d9JFv2ZDByO0MSwCDIvGYQISaOEQRnOrrD-wBiqQ8TZE-owMq3J2sA6gumQva=s0#w=941&h=567)\n\nRename to word_list.xml:\n\n![Remaining_Words_Rename_Dialog](https://lh3.googleusercontent.com/9iY3Ia3Zls7TyiPNFPZcvVSX7mU-o_dSLND_1eMfkGwsziG3cvbD69JMOPEZMW9ZB6pfm8v-1HW0UEJcG-4=s0#w=329&h=161)\n\n\nThen click the “Do Refactor” button. All occurrences of activity_numbers will be replaced with the new name: word_list:\n![Remaining_Words_Refactor](https://lh3.googleusercontent.com/bSqtER_Bou_P_BpPqPRIONMJRrnMFhLOj_PDgtoc8rXPOYSni2Iq0X4n2oNNaONtihG9IthSdwzO0N38ROU=s0#w=1179&h=518)\n---\n\n## Step: 4\nNow we can set the content view of each activity to be word_list layout.\n\n*Example:*\n\n    public class ColorsActivity extends AppCompatActivity {\n      @Override\n      protected void onCreate(Bundle savedInstanceState) {\n       super.onCreate(savedInstanceState);\n       setContentView(R.layout.word_list);\n\n\nBe sure to delete any unused layout files such as activity_colors.xml, activity_phrases.xml, and activity_family.xml."
+              },
+              "question": {
+                "title": "Remaining Words",
+                "alt_text": "",
+                "background_image": "//lh3.googleusercontent.com/a7ltqIsslSb32zjILOnU4J5aCeRnt0UJgWXPS-Kf3ThQCl7kvqjJ_V2HiXfGJIyaX2bU9N-79pqm1IP3dg=s0#w=1726&h=994",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/7883237491",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8163673209",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": null,
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.061253117206982545,
+                      "y": 0.16255543237250555
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": null,
+                "video": {
+                  "youtube_id": "DvkWaxRJOVQ",
+                  "china_cdn_id": "DvkWaxRJOVQ.mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 26104,
+          "key": "80830024370923",
+          "title": "Eric Gonzalez Interview",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80830024370923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 95236,
+              "key": "8083002437",
+              "title": "Eric Gonzalez Interview",
+              "semantic_type": "VideoAtom",
+              "is_public": true,
+              "instructor_notes": null,
+              "video": {
+                "youtube_id": "yhu7hOo20W4",
+                "china_cdn_id": "yhu7hOo20W4.mp4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}

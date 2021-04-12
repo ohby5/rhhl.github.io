@@ -1,0 +1,1102 @@
+{
+  "data": {
+    "lesson": {
+      "id": 325038,
+      "key": "afb9a1c9-fbd4-40c8-b995-da603be45d72",
+      "title": "Fragments",
+      "semantic_type": "Lesson",
+      "is_public": true,
+      "version": "1.0.0",
+      "locale": "en-us",
+      "summary": "Modify the structure of the Miwok app and make a smoother user experience",
+      "lesson_type": "Classroom",
+      "display_workspace_project_only": null,
+      "resources": {
+        "files": [
+          {
+            "name": "Videos Zip File",
+            "uri": "https://zips.udacity-data.com/afb9a1c9-fbd4-40c8-b995-da603be45d72/325038/1500436221054/%28OPTIONAL%29%20Fragments%20Videos.zip"
+          },
+          {
+            "name": "Transcripts Zip File",
+            "uri": "https://zips.udacity-data.com/afb9a1c9-fbd4-40c8-b995-da603be45d72/325038/1500436217188/%28OPTIONAL%29%20Fragments%20Subtitles.zip"
+          }
+        ],
+        "google_plus_link": null,
+        "career_resource_center_link": null,
+        "coaching_appointments_link": null,
+        "office_hours_link": null,
+        "aws_provisioning_link": null
+      },
+      "project": null,
+      "lab": null,
+      "concepts": [
+        {
+          "id": 394610,
+          "key": "91b2d2b1-8074-4305-9090-cd997cb09f26",
+          "title": "Introduction",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "91b2d2b1-8074-4305-9090-cd997cb09f26",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 394611,
+              "key": "63aaa89a-bcfe-4400-9b3d-a48c85e6f927",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# What's next?\n\nYour Miwok app now has all it's core components - visuals, audio, word display. \n\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 403124,
+              "key": "b7e80d71-b0d7-4834-b0a0-da1b87be1d2e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/September/59c195cd_screen-shot-2017-09-19-at-3.10.05-pm/screen-shot-2017-09-19-at-3.10.05-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/b7e80d71-b0d7-4834-b0a0-da1b87be1d2e",
+              "caption": "Here's our final version of the Miwok App! But stick around, we'll make it even better.",
+              "alt": "",
+              "width": 1012,
+              "height": 422,
+              "instructor_notes": null
+            },
+            {
+              "id": 403125,
+              "key": "83b15b47-9d9e-44a7-8c64-5479b2144a09",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this final section of the course, we'll explore some new **Navigation Patterns** (ways for a user to move through an app) as well as an important concept called **Fragments**.\n\nLet's get started!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 117324,
+          "key": "81509686560923",
+          "title": "Navigation Patterns in Android",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81509686560923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 360295,
+              "key": "4705804b-ca12-49bb-9ab5-fe756f54c1b0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Navigation Patterns in Android\n\nNavigation guides users between different parts of your app.\n\nThere are many ways to navigate around apps, each of which is best suited to the type of data that is being presented to the user. As you view more apps, you’ll notice some common navigation patterns.\n\nThe “master detail layout” consists of a master list of data. When you click one of those items of data, a detailed view of that item appears. You can easily adapt this layout to larger screen devices. When there is more screen real estate (meaning, more space on the screen) available, then we can view the master list of data alongside the detailed view of an item, at the same time. \n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 377143,
+              "key": "aad513e7-295a-4c31-9b62-c27013811b4e",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/5998639b_screen-shot-2017-08-19-at-9.13.04-am/screen-shot-2017-08-19-at-9.13.04-am.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/aad513e7-295a-4c31-9b62-c27013811b4e",
+              "caption": "Selecting an item from the Master Screen opens up more Details",
+              "alt": null,
+              "width": 834,
+              "height": 616,
+              "instructor_notes": null
+            },
+            {
+              "id": 360284,
+              "key": "f83add2f-af57-4d0e-8a81-4de85cbaa456",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Another way to view your data is to use a “Navigation Drawer” pattern. If an app has many screens that are \"siblings\" to each other, then the different screens can be listed in a \"Drawer\" that pulls out from the left side of the screen. In the Google News & Weather app, the navigation drawer provides links to different categories of news.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 360285,
+              "key": "32dd2f22-5ed0-4940-b6ac-76266d9f6c9f",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598ba350_screen-shot-2017-08-09-at-5.05.07-pm/screen-shot-2017-08-09-at-5.05.07-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/32dd2f22-5ed0-4940-b6ac-76266d9f6c9f",
+              "caption": "Example of Navigation Drawer that comes in from the left side of the screen",
+              "alt": null,
+              "width": 616,
+              "height": 1090,
+              "instructor_notes": null
+            },
+            {
+              "id": 360288,
+              "key": "c4dc525f-b061-4e3a-80cd-28e371ca892f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Another pattern that you’ll see is “swipeable tabs.” You can swipe horizontally left and right between different screens, or you can tap one of the tabs across the top of the screen. There’s a section on [tabs](https://www.google.com/design/spec/components/tabs.html#) in the Design spec. Here’s an example of the YouTube app, which uses icons for each tab:\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 360289,
+              "key": "feb33456-3bec-47b2-9d24-8d4c99465dcc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598ba39e_screen-shot-2017-08-09-at-5.06.37-pm/screen-shot-2017-08-09-at-5.06.37-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/feb33456-3bec-47b2-9d24-8d4c99465dcc",
+              "caption": "This app contains 3 tabs that users can swipe through",
+              "alt": null,
+              "width": 512,
+              "height": 892,
+              "instructor_notes": null
+            },
+            {
+              "id": 360290,
+              "key": "c7dc6dc0-0a87-480d-8431-b686a954cdfa",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "There are many other types of navigation. For example, the Google Calendar app has a scrolling agenda view, but you can jump to specific days by using the calendar month view. Or you can view different lengths of time like the week view. These interactions are specific to a calendar-based app.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 360291,
+              "key": "415bbe82-7f61-4831-a0aa-1ee89f000324",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/August/598ba412_screen-shot-2017-08-09-at-5.08.37-pm/screen-shot-2017-08-09-at-5.08.37-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/415bbe82-7f61-4831-a0aa-1ee89f000324",
+              "caption": "Google Calendar app contains a variety of user navigation patterns",
+              "alt": null,
+              "width": 1026,
+              "height": 790,
+              "instructor_notes": null
+            },
+            {
+              "id": 360293,
+              "key": "d306177d-1109-42a9-99ac-50e3369a8fa9",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "As you build your own app, you can learn more about how to structure your app in both the [navigation section](https://www.google.com/design/spec/patterns/navigation.html#) of the Google Material Design spec and this guide on [designing effective navigation](http://developer.android.com/training/design-navigation/index.html). Keep in mind that your app will need to adapt  to devices with a variety of screen sizes. This is known as responsive design, which we first talked about in the last course. Android apps must work across phones, tablets, and TVs, as well as watches and cars!",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 134542,
+          "key": "81565385600923",
+          "title": "Navigation Patterns in Other Apps",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81565385600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 42331,
+              "key": "8156538560",
+              "title": "Navigation Patterns in Other Apps.",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Evaluate the navigation pattern in another app.\n\nTake some time to evaluate the navigation pattern in another app! Doing this will give you a better understanding of how apps are designed and how you can work to make better apps in the future. To do so, follow the steps below:\n\n1. Pick an app to download from Google Play. If you need help deciding which one to download, you can check out\n * http://androidniceties.tumblr.com/ \n * https://pttrns.com/android-patterns?srtby=popularity_desc\n\n2. Play around with the app. Navigate through the different screens and try out the different features.\n\n3. For those in the Android Basics Nanodegree program, <a href=\"https://discussions.udacity.com/t/app-navigation-patterns/167864/1\" target=\"_blank\">on the discussion forum</a>, share a short description of how you navigate around the app.  Take a moment to read some of the descriptions other students have left as well! \n",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 105563,
+          "key": "81388905930923",
+          "title": "Up Button",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81388905930923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 7455,
+              "key": "8138890593",
+              "title": "Up Button",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Add Up Button to your Activity**\n\n* http://developer.android.com/training/implementing-navigation/ancestral.html \n\n**Additional Resources on Navigation:** \n\n* http://developer.android.com/training/design-navigation/ancestral-temporal.html \n* http://developer.android.com/design/patterns/navigation.html\n\n<a href=\"https://github.com/udacity/ud839_Miwok/commit/6262b8ba0e0a6f20c81cd7cd5ee71b326f636a94\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/6262b8ba0e0a6f20c81cd7cd5ee71b326f636a94\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+              "user_state": {
+                "node_key": "8138890593",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "You can create a diagram of the relationships between the screens of an app. \n\nThe following diagram shows an example of the relationship between screens in the Miwok app. The home screen (with the four category buttons) is the “parent” activity. It leads to the list of vocab words, which are the “children” activities. This type of parent-child relationship is important because sometimes the user may want to navigate to parent or child activities. It’s another way of navigating around the app, and can come in useful if the user lands  somewhere within the app that’s not the home screen. See more details in <a href=\"http://developer.android.com/training/design-navigation/screen-planning.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#diagram-relationships\" target=\"_blank\">the training documentation</a>.\n\n![Navigation Diagram](https://lh3.googleusercontent.com/XfQMzgxp0MebaoS6vPO7Or_iv9zJvJeB1Ne6-aJc1zTSnvoHL-C5xhOh0tcsjQGiXIcPZtrUozavpjmcl-BF=s0#w=1434&h=510)\n\nWhen viewing Android apps, you may have noticed a horizontal arrow pointing left in the app bar. This is called the “Up” button. In the upcoming coding task, you will be adding the “Up” button to NumbersActivity, FamilyActivity, ColorsActivity, and PhrasesActivity. \n\n\n![Up Button](https://lh3.googleusercontent.com/lal_C8yMtghRRW3YnN1TKzB-UwyFDl_ZfeWue5xZkwPpbQHvyqFfv9qXN58ysUvA8LEwim67lK6arNJwmRGc=s0#w=294&h=452)\n\nThis button allows the user to navigate to the parent activity, which we will call MainActivity.\n\n\n![Navigate to Parent Activity](//lh3.googleusercontent.com/nl5gYjPEU0UoqzQ-XqgQ4kCJPJIcEMSVnui_a-YMX26KZcl1BL8Kxihg8eE-YDDOrN4wGV01d5SVhJcxlQ93=s0#w=1359&h=899)\n\n## “Up” Button vs. “Back” Button\n\nNow you might be wondering, doesn’t the “Up” button just do the same thing as the “Back” button? \n\nWell, not exactly. The “Back” button is part of the system navigation bar on Android (leftmost triangle icon). No matter which app you’re in, when you tap the “Back” button, you’ll go back to where you previously came from.\n\n![Back Button](https://lh3.googleusercontent.com/zhtLy5YU38YLkvLnwpNBshTnT7-4t1Th8UZz6eABDOT0CCrS2W4QppU8OLwvwvcahVFnhne2c2h0_pHcSj4=s0#w=345&h=100)\n\nHowever, there are certain cases where “Back” and “Up” result in different behavior. The “Up” button ALWAYS leads you to the parent activity. The “Back” button can lead you to the parent activity, or the home screen, or to another app, depending on how you arrived at the current screen. \n\nHere’s an example scenario. Say you are browsing the web in an app. You receive notification of a new email. You click the notification, and suddenly you’re in the email app. Once you’re done reading the email, if you tap the “Back” button, you’ll go back to the web app. If you tap the “Up” button, you’ll go to the parent activity, which is the list of all emails.\n\nThe distinction between “Up” and “Back” really starts to matter if the user can get directly to a screen in your app without going through the main page (i.e. directly opening a single email without going through the list of all emails). In the Miwok app, the user has to go through the main screen, so “Up” and “Back” have the same effect. However, the ideal thing would be to provide the user with another way to navigate to the MainActivity. \n\nFor best practices, we will practice implementing the “Up” button. For information on how to do this, check out <a href=\"http://developer.android.com/training/implementing-navigation/ancestral.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">this tutorial</a>.\n\nThis is what the app looks like before the coding task: \n\n![Miwok Activities_No Up](https://lh3.googleusercontent.com/8nOD7VAmunotODH_NbkrQPSvMIHrWdPyW5z-7WYi9yt0iFYuL24xNnhyYjcgeNCzldFhKM6OHrTEvz5Ksg=s0#w=1440&h=900)\n\n\nThis is what the app looks like after the coding task (look closely at the app bar):\n\n![Miwok Activities](https://lh3.googleusercontent.com/xo-OZyLGnjT1i9yzEUe41vTGtmtxHpiO0LbeV-UMCKahBQKOi6BBd-HQM9S8hFOry8G81Ob3uE0ZDg0_4JM=s0#w=1440&h=502)"
+              },
+              "question": {
+                "title": "Up Button - Quiz",
+                "alt_text": "Quiz to Update Manifest to include the parent",
+                "background_image": "//lh3.googleusercontent.com/vCQvMixoAFpHlRrv0qRHiaAe3EzYNfFJWHw1LYk_bKwZ4dEJeA3LbeWfADeL9dmAJbluJjpaSxbvlJUmpHU=s0#w=1440&h=853",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8138890593",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8088648217",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to add \"Up\" button",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.10372506234413965,
+                      "y": 0.27220759423503327
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "This is what a single category activity in the AndroidManifest.xml should look like when you’re done:\n\n    <activity\n            android:name=\".NumbersActivity\"\n            android:label=\"@string/category_numbers\"\n            android:parentActivityName=\".MainActivity\">\n\n            <!-- Parent activity meta-data to support 4.0 and lower -->\n            <meta-data\n                android:name=\"android.support.PARENT_ACTIVITY\"\n                android:value=\".MainActivity\"/>\n        </activity>\n\n\nSee the full <a href=\"https://github.com/udacity/ud839_Miwok/blob/efd5efed141371d3aa58262e6a38fdb97e057ce9/app/src/main/AndroidManifest.xml\" target=\"_blank\">AndroidManifest.xml file</a>.\n\n\n",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 137024,
+          "key": "81278436880923",
+          "title": "An Alternative Version of the App",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81278436880923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 78349,
+              "key": "8127843688",
+              "title": "An Alternative Version of the App",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### The app looks amazingly awesome and beautiful! It looks done! So why change it?\n\nThis can happen in app development teams. You build version 1 of an app. Then the team decides to do a design refresh, to have an even better user experience. Then you proceed to build version 2 of the app!\n\nWhen you talk to any professional Android developer, they can tell you lots of stories of how the user interface for their app has evolved over the last months or even years.\n\nAs a developer, being able to **refactor** your code is an important skill to have. This means that the functionality of the app will remain the same, but visually the app will look differently. You can’t break any existing functionality (for example, you can’t lose the images or audio playback capabilities) when switching over to the new design. When you break something, and the user loses the ability to do something in the app compared to earlier versions, this is called **regression**.\n\nTo make sure that we don’t break anything, let’s move in small stages at a time. Try to make the app run on your device as often as possible. You don’t want to spend 5 days writing new code, and then realize that it doesn’t run on your device anymore.\n\nHere are the new designs. We want to swipe between the word lists. This saves us an extra tap from having to open the vocab word lists. When we launch the app, we can immediately see the word lists. \n \n <img src=\"https://lh3.googleusercontent.com/7Wdw5aH4JzUbGw8OXuUWt80Ta9zGyV5bLjEHWISW8IO3ZUjk2FsBysnM-_zJtS-8dNkHsUSXXjKxBeZfviM=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/aqQpG6hWtbeyWbx4deYXXbt316WyAJA5QQxncJRE54eUbrrD7nd4fBoGgXlgAw2p1rF9EVEtjIn_8aHj70s6=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/czf5e79_yqs9oiPhqeXZiT2X8av_I4kYClyD-rRE0VDM8N5WxPCOFJRJPAyF26Eu2QF5YdMtkHKqIoa5CA=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/FGJc7jk3jNnFkLdORC2_IM5Zscyq8i-_ByO26t4aJEznL46cS4-bG0PvoLbwBk9XRi0Qqti9RMuWK8YwAReB=s0#w=1440&h=2560\" width=\"150\">\n\nNew design above with tabs to swipe for different lists of words. \n\n## Save a copy of the current state of the app\n\n**IMPORTANT:** Since we’re going to be moving major parts of the code around, definitely make a copy of the current version of your app. Save it as backup, so at least you have a working version of the app to fall back onto.\n\nOn your computer, search for the “AndroidStudioProjects” folder. There should be a “Miwok” folder with all of your code for this app inside of it. Make a copy of that folder and save it somewhere else. ",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 126485,
+          "key": "81537185580923",
+          "title": "Upcoming Changes",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81537185580923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 87215,
+              "key": "8153718558",
+              "title": "Upcoming Changes",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Upcoming Changes\n\nWe’re going to approach this change in multiple stages through the remainder of this lesson. \n\n- **Step 1:** Review a Sample App\n- ** Step 2:** Refactor the logic for the four activities to use Fragments\n- **Step 3:** Modify Main Activity so that it uses a ViewPager\n- **Step 4:** Add Tabs\n\nHere's an overview of what we'll do at each step:\n\n### Step 1: Review a Sample App\n\nFirst you’ll experiment with a sample app that contains something called a ViewPager. You’ll see how a FragmentPagerAdapter will provide a different Fragment for each “page” that you swipe to. Then we’ll learn a little more about *Fragments*, to prepare you for the next coding step.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418623,
+              "key": "5985dc22-1be0-4254-bdef-c8a17cc75290",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54a5e_screen-shot-2017-10-04-at-1.53.33-pm/screen-shot-2017-10-04-at-1.53.33-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/5985dc22-1be0-4254-bdef-c8a17cc75290",
+              "caption": "Above is example app called ViewPager. Each screen is a separate Fragment. ",
+              "alt": "",
+              "width": 1232,
+              "height": 726,
+              "instructor_notes": null
+            },
+            {
+              "id": 418624,
+              "key": "0897cc0d-024d-494c-ae10-71b9bd8f9b3b",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 2: Refactor the logic for the four activities to use Fragments\n\nNext, you’re going to refactor the current Miwok app from the 4 activities (numbers, colors, family, phrases) into the 4 fragments. The user-facing app will look the same, but all the logic to display the list of words will be in the fragments instead of the activity files. Once the logic is inside fragments, we can move to the next step. \n\n * NumbersActivity will contain the NumbersFragment\n * FamilyActivity will contain the FamilyFragment\n * ColorsActivity will contain the ColorsFragment\n * PhrasesActivity will contain the PhrasesFragment",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418625,
+              "key": "ea9152e7-4a1a-4f89-9889-4ce3bb894b53",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54ad3_screen-shot-2017-10-04-at-1.55.30-pm/screen-shot-2017-10-04-at-1.55.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ea9152e7-4a1a-4f89-9889-4ce3bb894b53",
+              "caption": "We will refactor the 4 word list activities to use fragments, but the final UI will appear the same to the user. ",
+              "alt": "",
+              "width": 2096,
+              "height": 826,
+              "instructor_notes": null
+            },
+            {
+              "id": 418626,
+              "key": "d47ff3b1-bca5-4b6a-b7c5-4dd713999635",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 3: Modify Main Activity so that it uses a ViewPager\n\nA ViewPager allows you to swipe between different “pages” or screens. We’re going to modify the MainActivity so it contains a ViewPager with 4 pages, where each page is a Fragment. We can swipe between each Fragment to see a different list of words.\n\nAt this point, we’re removing the layout that had a button for each category. We will also delete the category activities (NumbersActivity, FamilyActivity, ColorsActivity, PhrasesActivity) because the app only has 1 activity now (MainActivity). You can tell that we’re in the MainActivity because the app bar says “Miwok” across all the screens.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418627,
+              "key": "ec523bc0-66d3-4515-84dc-408b15374130",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54b49_screen-shot-2017-10-04-at-1.57.30-pm/screen-shot-2017-10-04-at-1.57.30-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ec523bc0-66d3-4515-84dc-408b15374130",
+              "caption": "We will remove the layout that had a button for each category. We will also delete the category activities and consolidate into a single MainActivity that contains fragments. ",
+              "alt": "",
+              "width": 1248,
+              "height": 566,
+              "instructor_notes": null
+            },
+            {
+              "id": 418633,
+              "key": "532a2c84-631f-44a8-b67a-48965abff79f",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Step 4: Add Tabs\n\nLastly, once the ViewPager is working, we’ll add tabs across the top of the ViewPager, so you can tap to jump to a specific page.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418631,
+              "key": "781920b3-a666-401e-aa8d-7b57c36532d1",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54c4a_screen-shot-2017-10-04-at-2.01.48-pm/screen-shot-2017-10-04-at-2.01.48-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/781920b3-a666-401e-aa8d-7b57c36532d1",
+              "caption": "The finished version of the app will have tabs across the top of the ViewPager, so you can tap to jump to a specific page.",
+              "alt": "",
+              "width": 1254,
+              "height": 552,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 90945,
+          "key": "80830075960923",
+          "title": "Android Development Patterns",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80830075960923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 99268,
+              "key": "8083007596",
+              "title": "Android Developer Patterns",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Android Development Patterns\n\nNow before we jump into Step 1: Review a Sample App, I’d like you to watch <a href=\"https://www.youtube.com/watch?v=zQekzaAgIlQ\" target=\"_blank\">this short Android Development Patterns video</a> on Tabs and ViewPager so that you can become familiar with the Android ViewPager component. After you are done, continue to the next step!\n\n*Note: You’ll hear the term “Fragments” in the video. We have not talked about Fragments yet, so don’t worry if you don’t understand everything perfectly.*\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418618,
+              "key": "002b8e0d-7b83-4ad9-9377-bb25290592ba",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d5473b_ian-lake/ian-lake.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/002b8e0d-7b83-4ad9-9377-bb25290592ba",
+              "caption": "Watch the Ian Lake discuss [Android Development Patterns](https://www.youtube.com/watch?v=zQekzaAgIlQ). ",
+              "alt": "",
+              "width": 469,
+              "height": 232,
+              "instructor_notes": null
+            },
+            {
+              "id": 418620,
+              "key": "14de02f7-83ad-4a2c-8212-c061e8caee67",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "## Background context\n\nThis video is part of the Android Development Patterns created by Developer Advocates Ian Lake and Joanna Smith. (You saw them in the videos and articles from Lesson 4.)\n\nAndroid Development Patterns will teach you how to build better apps by explaining the fundamental components of Android development, the reasoning behind them, and best practices for using them in your app. Feel free to check out [these videos](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc-lJo_RGGXL2Psr8vVCTWjM) later.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418621,
+              "key": "ed326600-ba0c-429e-b0d7-724f3cc0aacc",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54842_android-development-pattern/android-development-pattern.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/ed326600-ba0c-429e-b0d7-724f3cc0aacc",
+              "caption": "Checkout [more Android Development Patterns videos](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc-lJo_RGGXL2Psr8vVCTWjM).",
+              "alt": "",
+              "width": 800,
+              "height": 320,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 99654,
+          "key": "80886480790923",
+          "title": "Sample ViewPager",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80886480790923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419652,
+              "key": "bbc5f7a5-4151-4b7b-a2b4-9475cfbe0ab7",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 1: Review a Sample App\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 56637,
+              "key": "8088648079",
+              "title": "Sample ViewPager",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8088648079",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "Let’s play with a sample app to explore how a ViewPager works in a simple scenario.\n\n**1.** Download this sample app from the <a href=\"https://github.com/udacity/ud839_ViewPager_Example/tree/quiz\" target=\"_blank\">GitHub link</a> by clicking on the “Download zip” (make sure you are on the \"quiz\" branch).\n![Github](https://lh3.googleusercontent.com/msqz9DzpGf-bGSwWHCJQoGcuD3pp6LQ6aYzsA0v19LYCwDqia05I4oFQbY_6Li46FlWiLEgMdmcDAcp86w=s0#w=1025&h=494)\n\n**2.** Import this project into Android Studio and run the app on your device.\n\n**3.** When you open the app, there should be 3 pages to swipe between in this ViewPager. First it should say “Monday”, then “Tuesday”, then “Wednesday.\n\n<img src=\"https://lh3.googleusercontent.com/CK1Wj14mRh9W8xX-kSd65c65KANPxF3A39lxJ7Qdj5R0RkzKfpxfTC2lp_slsCvFAphC_eDG_Z233JVujjg=s0#w=1440&h=2560\" width=\"200\"/> <img src=\"https://lh3.googleusercontent.com/wL8AHXORG37aLuDkIixi5s3ws1Y0hj_PTmP4XpGaialX52s0AjO5H_5_0Zf-VgNp5NoawiAOno8ZQI4EdNo=s0#w=1440&h=2560\" width=\"200\" /> <img src=\"https://lh3.googleusercontent.com/GPTu9Cx-Y-lIpb6m-Rabcmm62Ktbnwe0WoNhq0fmbfXwk8gAApRVfO3Sexc-zeQz9ozqvD_UanIx-ZhVNA=s0#w=1440&h=2560\" width=\"200\" /> \n\n**4.** Browse around the codebase and see how the layout and Java files are working together. Prepare for the quiz, which will ask you to modify this sample app.\n\n## How does it work?\n\nThe ViewPager works by getting its data from an adapter - called a FragmentPagerAdapter.\n\nIn our case, we want to customize the adapter to display our own fragments, so we have to use inheritance to subclass the FragmentPagerAdapter. By inheriting, we get all the functionality from the FragmentPagerAdapter for free, and we can add our own customization on top of it. We create the SimpleFragmentPagerAdapter class and extend from the FragmentPagerAdapter class.\n\nWhen you launch the app on your device, first the ViewPager asks the adapter how many pages there will be. In our case, the adapter says there will be 3 pages. See the SimpleFragmentPagerAdapter getCount() method.\n\nIn order for the ViewPager to display page 0, the ViewPager asks the adapter for the 0th fragment. See the SimpleFragmentPagerAdapter getItem(int position) method. When the user swipes leftward, we move onto page 1, which means the ViewPager asks the adapter for the fragment at position 1. When we get to page 2, the ViewPager asks the adapter for the fragment at position 2. Thus, depending on which page (also known as position), the user has swiped to, the corresponding fragment gets shown."
+              },
+              "question": {
+                "title": "Sample View Pager",
+                "alt_text": "Quiz on ViewPager Sample App",
+                "background_image": "//lh3.googleusercontent.com/9LkfHDpdTDDNj-Dtj6gJWuO1AYZFz0_07eKsArevmIiDXPlvLJr9nmzCNAHf_vu6wPm4xaX3Z0hr9DqRvXg=s0#w=1440&h=872",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8088648079",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8194452837",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to Modify sample app",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.0390430174563591,
+                      "y": 0.13764550997782704
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "To have 5 pages, we add a couple more Fragment java files:\n\n* <a href=\"https://github.com/udacity/ud839_ViewPager_Example/blob/master/app/src/main/java/com/example/android/viewpager/ThursdayFragment.java\" target=\"_blank\">ThursdayFragment.java</a>\n* <a href=\"https://github.com/udacity/ud839_ViewPager_Example/blob/master/app/src/main/java/com/example/android/viewpager/FridayFragment.java\" target=\"_blank\">FridayFragment.java</a>\n\nWe also added corresponding layout files:\n\n* <a href=\"https://github.com/udacity/ud839_ViewPager_Example/blob/master/app/src/main/res/layout/fragment_thursday.xml\" target=\"_blank\">fragment_thursday.xml</a>\n* <a href=\"https://github.com/udacity/ud839_ViewPager_Example/blob/master/app/src/main/res/layout/fragment_friday.xml\" target=\"_blank\">fragment_friday.xml</a>\n\nThen we modified the <a href=\"https://github.com/udacity/ud839_ViewPager_Example/blob/master/app/src/main/java/com/example/android/viewpager/SimpleFragmentPagerAdapter.java\" target=\"_blank\">SimpleFragmentPagerAdapter.java file</a> to create these 5 different fragments.\n\nHere’s the <a href=\"https://github.com/udacity/ud839_ViewPager_Example/tree/master\" target=\"_blank\">code</a> for the latest version of the app.\n\nAdvanced tip: Instead of having 5 individual Fragment files that do practically the same thing, you can also pass in a String argument into the Fragment. Then that Fragment can contain logic to change the text displayed in the TextView depending on the String passed into it. Use the Fragment <a href=\"http://developer.android.com/reference/android/app/Fragment.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#setArguments(android.os.Bundle)\" target=\"_blank\">setArguments(Bundle args) method</a>. See the <a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Fragments guide</a> for more details. ",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 50026,
+          "key": "80895884160923",
+          "title": "Intro to Fragments",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "80895884160923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 78521,
+              "key": "8089588416",
+              "title": "Intro to Fragments",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Intro to Fragments\n\nA fragment is just a part of an activity. You can have a fragment that takes up part of a screen or a whole screen. Or you can show multiple fragments at the same time to make up a whole screen. Within an activity, you can also swap out different fragments with each other. (You can also have invisible fragments as well, that do some work related to the activity, but we won’t cover those in this course.)\n\nFragments were introduced in Android when we started building for larger screen devices like tablets. Let me show you an example.\n\nIn the master/detail pattern, a list fragment is on the left-side of the screen, while the detail fragment on the right swaps out depending on the list item selected.\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418641,
+              "key": "f9f34c78-f980-41fb-916c-110badd114c0",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54d85_screen-shot-2017-10-04-at-2.07.06-pm/screen-shot-2017-10-04-at-2.07.06-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/f9f34c78-f980-41fb-916c-110badd114c0",
+              "caption": "Fragments are used to create a master/detail flow. ([Image Source](<a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Design\" target=\"_blank\">Source</a>))",
+              "alt": "",
+              "width": 604,
+              "height": 650,
+              "instructor_notes": null
+            },
+            {
+              "id": 418644,
+              "key": "b0fdef14-1b4a-4785-9dc5-be5caeb83eb8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "In this case, using fragments is convenient when adapting the app to smaller devices like phones. When the user opens the app on a phone, they can see the list fragment. If they tap on an item in the list, they can navigate to the detail fragment. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418645,
+              "key": "2ea7c0e8-420f-447d-8143-4d0e5ee76ec6",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54daf_screen-shot-2017-10-04-at-2.07.44-pm/screen-shot-2017-10-04-at-2.07.44-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2ea7c0e8-420f-447d-8143-4d0e5ee76ec6",
+              "caption": "(<a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Design\" target=\"_blank\">Source</a>)",
+              "alt": "",
+              "width": 524,
+              "height": 642,
+              "instructor_notes": null
+            },
+            {
+              "id": 418647,
+              "key": "4ebe4c30-4a0b-4842-b71c-5c3c4034e308",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "On the phone, only 1 fragment is shown at a time. On the tablet, 2 fragments are shown beside each other at the same time, to take advantage of the larger screen real estate available. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418648,
+              "key": "1fc06898-b019-4fdc-93a1-aa3449a5dcb2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54dd2_screen-shot-2017-10-04-at-2.08.22-pm/screen-shot-2017-10-04-at-2.08.22-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/1fc06898-b019-4fdc-93a1-aa3449a5dcb2",
+              "caption": "The number of fragments that appear on a device differ depending on device screen real estate. ([Image Source](<a href=\"http://developer.android.com/training/basics/fragments/fragment-ui.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Source</a>))",
+              "alt": "",
+              "width": 1190,
+              "height": 478,
+              "instructor_notes": null
+            },
+            {
+              "id": 418649,
+              "key": "13fc36b2-febd-40e8-9d28-6e6dbf25ec30",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "This is just one use case for fragments. You can split up the logic of your app into as many fragments as you want. However, splitting it up into too many fragments can cause extra overhead because your Activity will need to manage communication between the fragments.\n\nA Fragment is a Java class. You create your own Fragment, just like you created your own activities. You subclass the Fragment class in the Android framework.",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418662,
+              "key": "1c1fc0a8-e0ca-4a28-b30f-883faf6fcf2d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "### Review Inheritance\n\nRemember earlier we discussed the concept of *inheritance* in Java in which *subclasses* are derived from a *superclass*. In our original code, the Activity class created by the Android framework is the superclass and classes we created such as the MainActivity or NumbersActivity are subclasses that inherit from the Activity class. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418663,
+              "key": "2bed7818-6fdd-4520-8296-564bbe39e3b2",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54f1b_screen-shot-2017-10-04-at-2.10.14-pm/screen-shot-2017-10-04-at-2.10.14-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/2bed7818-6fdd-4520-8296-564bbe39e3b2",
+              "caption": "Activity is the super class. MainActivity, NumbersActivity, FamilyActivity, etc are sub classes that inherit from the super class. ",
+              "alt": "",
+              "width": 1370,
+              "height": 678,
+              "instructor_notes": null
+            },
+            {
+              "id": 418664,
+              "key": "3e656af0-fe1a-40bf-9c5e-b6d4539267a0",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Similarly, the Fragment class is a class provided by the Android framework. The fragments we've create -  NumbersFragment, ColorsFragment, etc - are subclasses that inherit from the Fragment super class. ",
+              "instructor_notes": ""
+            },
+            {
+              "id": 418665,
+              "key": "55fce1fc-f19e-4968-beac-17eb20ce2e16",
+              "title": null,
+              "semantic_type": "ImageAtom",
+              "is_public": true,
+              "url": "https://video.udacity-data.com/topher/2017/October/59d54fad_screen-shot-2017-10-04-at-2.16.19-pm/screen-shot-2017-10-04-at-2.16.19-pm.png",
+              "non_google_url": "https://s3.cn-north-1.amazonaws.com.cn/u-img/55fce1fc-f19e-4968-beac-17eb20ce2e16",
+              "caption": "Fragment is the super class. NumberFragament, FamilyFragment, ColorsFragment, etc. are sub classes that inherit from the super class. ",
+              "alt": "",
+              "width": 1426,
+              "height": 662,
+              "instructor_notes": null
+            }
+          ]
+        },
+        {
+          "id": 102694,
+          "key": "81408185410923",
+          "title": "Fragment Lifecycle",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81408185410923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419656,
+              "key": "5b5895a7-3e47-4db3-80c1-64fbc5810627",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Fragment Lifecycle\n",
+              "instructor_notes": ""
+            },
+            {
+              "id": 8002,
+              "key": "8140818541",
+              "title": "Fragment Lifecycle",
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "Because a Fragment can be created, added to the screen, then removed from the screen, it has its own lifecycle. And guess what? Android provides asynchronous callbacks where you can get notified of these state changes. The style of these callbacks is similar to the Activity.\n\nImagine an Activity containing a Fragment that takes up the whole screen. When the Activity is created, the Fragment is created as well. When the Activity is resumed and active, the Fragment is resumed and active as well. There is a close relationship between the Activity lifecycle and the Fragment lifecycle. \n\nThe Fragment also has additional callbacks where you, as the developer, can get notified when it is attached to the enclosing Activity, or detached from the Activity.\n\nIf multiple fragments make up a whole screen, then they all need to tie into the same activity. They need to know when the activity is resumed / paused, so they can resume or pause what they’re doing within the fragment. If you swap out and replace different fragments throughout the lifetime of the app, the Fragments need to be created and destroyed properly too.\n\nRemember this is the activity lifecycle.\n\n![Activity Lifecycle](https://lh3.googleusercontent.com/cOUOGlyqOaL4JIv3xnBlvvlGYlgUuHPVbRMIfF2ZCqY61ZqPOFqPX2Nnn15JPxC3VQldRhe15pQDb04QK3o=s0#w=560&h=685)\n\n(<a href=\"http://developer.android.com/guide/components/activities.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Source</a>)\n\nSimilarly, the fragment has a lifecycle that is tied to the stages of the activity lifecycle.\n\n![Fragment Lifecycle](https://lh3.googleusercontent.com/AMqfbsy68f143vgb-s8FNzYZ2zYsZsnx-aC02fJ9skqj2YSKTCf3eWcVZYw8nlZUcqQTVnhc5uWN1HkAdQ0=s0#w=253&h=646)\n\n\n(<a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Source</a>)\n\nFragment is a tricky topic. You’ll encounter Fragments more as you advance in your journey as an Android developer. If you’re curious for more details now, see the <a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Fragment developer guide</a> on how to <a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Lifecycle\" target=\"_blank\">handle the Fragment lifecycle</a> or how to <a href=\"http://developer.android.com/training/basics/fragments/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">build a dynamic UI with Fragments</a>. There are also plenty of other tutorials on Fragments written by developers in the community.",
+              "instructor_notes": ""
+            }
+          ]
+        },
+        {
+          "id": 116344,
+          "key": "81537585740923",
+          "title": "Refactor Category Activities",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81537585740923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419653,
+              "key": "f339923b-c98b-4d15-9c33-6b9591058c3e",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 2: Refactor the Logic for the Four activities to Use Fragments",
+              "instructor_notes": ""
+            },
+            {
+              "id": 112330,
+              "key": "8153758574",
+              "title": "Refactor Category Activities",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "For the quiz, clicking on each category will open up a new activity <a href=\"https://lh3.googleusercontent.com/55xt0N-6F3AQnJjGkkigMOrjHKVRgyQygp_KQksKmCxEuAJgcODZGGLNd-BEuR1bNYeH4oXxT4HL4glbS84=s0#w=1440&h=900\" target=\"_blank\">(see image here).</a>\n\n**Note:** All activities can use the activity_category.xml layout resource.",
+              "user_state": {
+                "node_key": "8153758574",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "We won’t use a ViewPager yet. Let’s prepare our fragments first. Currently, we have 4 category activities and 0 fragments.\n\n![Category Activities](https://lh3.googleusercontent.com/Y89iueOOu0i2BE8DZer500PSMwNI5hklXASBFV-vwcGf7Dz_-9RtuQrTGsJnpevuMzbVYMrg_Uhs-Nf8Vg=s0#w=1440&h=899)\n\nBy the end of this coding task, we want 4 category activities with 4 fragments. Each activity will contain a fragment.\n\n![Category Fragments](https://lh3.googleusercontent.com/cUcICmAN81IqWhkHE9VEiL3YcA8tBJtjCs3UzYd-QkFrt51Y2vVH_PcXDrK3fbMp46uX30Utj_yHY_sxrOQ=s0#w=1440&h=896)\n\nIn order to move the logic into the fragment java files, we’re going to have to copy/paste a lot of code. The code is mostly the same. However, any code that assumed we were inside an Activity class will have to be slightly tweaked to take into account that now the code is inside a Fragment class. For example, the Activity lifecycle callbacks (onCreate, onStop) don’t exist when we’re inside a Fragment class. There are similar methods though (onCreateView, onStop), so we just need small modifications to adjust to the Fragment lifecycle callbacks.\n\n![Activity Fragment Table](https://lh3.googleusercontent.com/kjr2av0DhqSiDhOuRu1AYbWbFzWPwzMPe48p8Yi5lT8eNM--ET3-iJLJPAmO7TLyCH95zOH5AIMZ2IxOMRyh=s0#w=1440&h=899)\n\nDon’t worry if the table is confusing. Let’s go step by step through the code changes for the NumbersActivity, and then hopefully the process will become clearer to you. As shown in the diagram below, we’re going to go from having a NumbersActivity (before state) to having a NumbersActivity with a NumbersFragment contained inside it (after state). Then for the upcoming quiz, you’ll convert the rest of the category activities on your own following the same process.\n\n![Before After](https://lh3.googleusercontent.com/N_5SZ5xWRcTCVgb6_E8b-jps5Kl-x-Fo1Nn9yMTVVp1x2X77bQeoTBqBkH-nIzLirC0K6l0WWvweQf7DhP0=s0#w=1440&h=835)\n\n### Create NumbersFragment class\n\n**1)** To start, create a new Java file for the NumbersFragment. Right click on the “com.example.android.miwok” folder. Go to New > Fragment > Fragment (Blank).\n\n![NumbersFragment](https://lh3.googleusercontent.com/2_2M6MrPQ_NBX0MNqCJX5imCzr2El2ajx2UA_5swvsGTRx0YG8BrehumWtWVHuKzA43Mj5BNElLIqyKIaSwD=s0#w=702&h=325)\n\n**2)** Fill out the wizard. Give the fragment a name: NumbersFragment. Uncheck all the boxes because we’ll be adding code to the file on our own.\n\n![Dialog](https://lh3.googleusercontent.com/DTlGM3OWZwPG2RY-xRioTQzFtFPbwRv8cysaA6S6gVe4rGnzBdzWwB-U-YxUSkQEXCEVwH035XplHXPRtA=s0#w=583&h=338)\n\n\n**3)** Android Studio will auto-generate a new Fragment class for you in a file called NumbersFragment.java. It will look something like this:\n\n    package com.example.android.miwok;\n\n    import android.os.Bundle;\n    import android.support.v4.app.Fragment;\n    import android.view.LayoutInflater;\n    import android.view.View;\n    import android.view.ViewGroup;\n    import android.widget.TextView;\n\n    /**\n    * A simple {@link Fragment} subclass.\n    */\n    public class NumbersFragment extends Fragment {\n\n        public NumbersFragment() {\n           // Required empty public constructor\n       }\n\n       @Override\n       public View onCreateView(LayoutInflater inflater, ViewGroup container,\n                            Bundle savedInstanceState) {\n       TextView textView = new TextView(getActivity());\n       textView.setText(R.string.hello_blank_fragment);\n       return textView;\n       }\n    }\n    \n\n### Copy code from the NumbersActivity and paste it into the NumbersFragment\n\n**4)** Start by copying over the global variables from the NumbersActivity over to the NumbersFragment. (Delete them from the NumbersActivity as you do this.)\nCode should look like <a href=\"https://gist.github.com/udacityandroid/3a2fdbf1e487a292d199bebe51c2d4e6\" target=\"_blank\">this</a>.\n\n**5)** Copy over the releaseMediaPlayer() helper method from the NumbersActivity into the NumbersFragment.\nCode code for <a href=\"https://gist.github.com/udacityandroid/17851f0932e58eed13dc27d8267bc4ea\" target=\"_blank\">releaseMediaPlayer()</a>.\n\n### Adapt the code for the Fragment Lifecycle (instead of the Activity Lifecycle)\n\n\n**6)** Override the Fragment’s onStop() method.\n\nYou can’t copy the exact onStop() method over from the NumbersActivity because the Fragment onStop() method has a slightly different method signature. In case you’re wondering, the Activity class uses the “protected” modifier on the method, while the Fragment class has the “public” modifier on the method. But don’t worry about the details of those modifiers now.\n\nMove your cursor to an empty space in the class, where you can add a new method. Use the keyboard shortcut Ctl + O to pop up a dialog and select a method to override. Type in “onStop” and when you find that result, hit OK.\n\n![second onStop](https://lh3.googleusercontent.com/4kGL9mLWNxQTjQ2ll8wz5DoIqKbVsbfnab-vfMi4P3VBe7cGxC_pJEgsniJ34UP9DrsSh9H_QWqcfAnJzRir=s0#w=298&h=459)\n\nAndroid Studio will automatically add this method to your NumbersFragment class for you:\n\n    @Override\n    public void onStop() {\n        super.onStop();\n    }\n\nModify the onStop() method so that it calls the releaseMediaPlayer method:\n\n    @Override\n    public void onStop() {\n       super.onStop();\n\n       // When the activity is stopped, release the media player resources because we won't\n       // be playing any more sounds.\n       releaseMediaPlayer();\n    }\n\n**7)** Override the Fragment’s onCreateView() method.\n\nThe Activity’s onCreate() method is slightly different from the Fragment’s onCreateView() method. Within the Activity’s onCreate() method, we can call setContentView() to set the layout for the activity. In the Fragment, we need to inflate the view from the XML layout resource ID and return that view in the onCreateView() method. Note that the layout for the Fragment will use the word_list XML layout resource because it will be displaying a list of words.\n\n    @Override\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\n                        Bundle savedInstanceState) {\n       View rootView = inflater.inflate(R.layout.word_list, container, false);\n\n       /** TODO: Insert all the code from the NumberActivity’s onCreate() method after the setContentView method call */\n   \n       return rootView;\n    }\n    \n    \nOnce you copy over the code from the NumbersActivity’s onCreate() method, you will get a bunch of errors in Android Studio because the code assumed that it would be run inside an Activity class, not a Fragment class. Below are instructions on how you would resolve each of these errors. If you don’t want to fix each error one by one, you can skip to the code snippet below that shows you what your NumbersFragment onCreateView() should look like when you’re done.\n\n*Error #1:* You will get get an error saying cannot resolve method “findViewById(int)” because the Fragment does not have a findViewById method, whereas the Activity did have that method (see <a href=\"http://developer.android.com/reference/android/app/Activity.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#findViewById(int)\" target=\"_blank\">link</a>).  \n`ListView listView = (ListView) findViewById(R.id.list);`\n\nFix the error by calling findViewById(int) on the rootView object, which should contain children views such as the ListView.\n`ListView listView = (ListView) rootView.findViewById(R.id.list);`\n\n\n*Error #2:* You will get an error saying cannot resolve method “getSystemService(String)” because the Fragment does not have access to system services, whereas the Activity does (see <a href=\"http://developer.android.com/reference/android/app/Activity.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#getSystemService(java.lang.String)\" target=\"_blank\">link</a>). \n`mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);`\n\nFix the error by getting the Activity object instance first. This is the Activity that encloses the current Fragment, which will be the NumbersActivity for the NumbersFragment. Then call getSystemService(String) on that Activity object.\n\n`mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);`\n\n*Error #3:* There’s a problem with the arguments passed into the WordAdapter constructor because the first parameter “this” refers to this class (which is the NumbersFragment), and a Fragment is not a valid Context. However, the code used to work when “this” referred the NumbersActivity because an Activity is a valid Context.\n`WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);`\n\nFix the error by passing in a reference to the Activity that encloses this Fragment as the context.\n`WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);`\n\n*Error #4:* When creating a MediaPlayer object, we need to pass in a context. Again, “this” refers to the NumbersFragment (and not the NumbersActivity), and the Fragment is not a valid Context.\n`mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getAudioResourceId());`\n\nFix the error by passing in the activity for the first input parameter.\n`mMediaPlayer = MediaPlayer.create(getActivity(), word.getAudioResourceId());`\n\nAfter fixing these 4 cases, there should be no more errors in this file! The NumbersFragment onCreateView() method should look like <a href=\"https://gist.github.com/udacityandroid/5808ce6e0c0b816bcf9a3125e8eeced0\" target=\"_blank\">this</a>. \n\n\n\nAs a sanity check, this is the end result of the <a href=\"https://github.com/udacity/ud839_Miwok/blob/d7effcef3bf7fdccdd045c974d67abd5b960fae7/app/src/main/java/com/example/android/miwok/NumbersFragment.java\" target=\"_blank\">NumbersFragment</a> class.\n\n### Update NumbersActivity\n\n**8)** Under the res/layout directory, create a new layout file called activity_category.xml. The important part is that the view has an ID. We chose to give the view an ID called “container”.\n\n    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n    <LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n       android:id=\"@+id/container\"\n       android:layout_width=\"match_parent\"\n       android:layout_height=\"match_parent\"\n       android:orientation=\"vertical\"/>\n\n**9)** Now we need to update the NumbersActivity to use the NumbersFragment, otherwise there will be duplicate code that does the same thing in both classes.\n\nReplace the NumbersActivity code with this entire code snippet. We’re going to use this simplified activity that sets the activity_category XML layout resource as the content view. Then a new NumbersFragment is created and inserted it into the container view, using a <a href=\"http://developer.android.com/guide/components/fragments.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Transactions\" target=\"_blank\">FragmentTransaction</a> (no need to understand the details of this now). Since the container has “match_parent” for width and height, the NumbersFragment will take up the whole width and height of the screen.\n\n    package com.example.android.miwok;\n    \n    import android.support.v7.app.AppCompatActivity;\n    import android.os.Bundle;\n\n    public class NumbersActivity extends AppCompatActivity {\n\n       @Override\n       protected void onCreate(Bundle savedInstanceState) {\n       super.onCreate(savedInstanceState);\n       setContentView(R.layout.activity_category);\n       getSupportFragmentManager().beginTransaction()\n               .replace(R.id.container, new NumbersFragment())\n               .commit();\n       }\n    }\n\n\n**10)** To clarify, the NumbersActivity used to display the word_list.xml layout. Now, the NumbersActivity displays the activity_category.xml layout, and the NumbersFragment displays the word_list.xml layout.\n\n![Before and After](https://lh3.googleusercontent.com/vOhxaq-uFg0sg1J5ye9eqbEmtKtPgP6yI0r1g4XxcGxbSavqyLVbptRSMDMpWjtgCLrmMC6CrJba0-ONFc8=s0#w=1440&h=854)\n\n\nNow the NumbersActivity is using a NumbersFragment! Run the app to make sure the numbers list still works. It should look the same because this is just a midpoint along the way to our goal, as explained earlier.\n\nGreat work! In the upcoming quiz, you’re going to repeat the same steps #1 - 9 for the other categories. All category activities can use the activity_category.xml layout resource. \n\nAt the end, your app should look the same, but each category activity will contain a different fragment. Test your app to make sure the right activity is showing the right fragment. Make sure each fragment has the right theme color. (These were both bugs in my app when I first implemented the solution.) Also ensure that the audio playback still works.\n\nThere’s a lot of copy/pasting, good luck!!"
+              },
+              "question": {
+                "title": "Refactor Category Activities",
+                "alt_text": "Quiz to Refactor App",
+                "background_image": "//lh3.googleusercontent.com/9UUZ_SRgKp0ZmPec1jZ5jZzRVlGNP9ihQvKomNu6OFLtnVlqTipQQeL_KRcvmnQz435B3Uqboaw5F0jZCuQ=s0#w=1494&h=760",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8153758574",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8194803077",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to change from activities to fragments",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.054219918952618455,
+                      "y": 0.2418930155210643
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "<a href=\"https://github.com/udacity/ud839_Miwok/commit/1db4f0cd8d8099451731bf41c4b67f776a90d231\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/1db4f0cd8d8099451731bf41c4b67f776a90d231\" target=\"_blank\">This is the state of the code after completing the quiz.</a>",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": 102725,
+          "key": "81489788660923",
+          "title": "ViewPager and FragmentPagerAdapter",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81489788660923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419654,
+              "key": "d5a8fdf0-3de7-4584-8802-1d62d37447f8",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 3: Modify Main Activity So That It Uses A ViewPager",
+              "instructor_notes": ""
+            },
+            {
+              "id": 108999,
+              "key": "8148978866",
+              "title": "ViewPager and FragmentPagerAdapter",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "**Refer to the these resources from earlier in the lesson:**\n\n* <a href=\"https://www.youtube.com/watch?v=zQekzaAgIlQ\" target=\"_blank\">Android Development Patterns</a> video on Tabs and ViewPager\n\n* <a href=\"https://github.com/udacity/ud839_ViewPager_Example/tree/quiz\" target=\"_blank\">Sample ViewPager app that you modified</a>",
+              "user_state": {
+                "node_key": "8148978866",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": null,
+                "text": "Now that the logic to display word lists is in the Fragment, you can move over to using a ViewPager in the MainActivity.\n\nYou will complete this task on your own, but feel free to refer to the Android Development Patterns video that you watched earlier. You can also review the earlier ViewPager sample app too.\n\nThis is what the app should look like when you’re done. When the app opens, you immediately see the list of number words. Then you can swipe horizontally between the lists of words. Behind the scenes, we have a single activity (MainActivity) that contains a ViewPager with 4 different Fragments. You can tell it’s a single activity because the name “Miwok” stays in the app bar as you swipe between screens.\n\n   \n   <img src=\"https://lh3.googleusercontent.com/_nR60-CGXR_yCFvHXXnkrfL_8n7D9-Xom86d2qsxa4IgBmk34OHoQjpc-xJfZiXS6pARSeY1lFfRuwRoig=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/S1SlIqdZZT3kkmGwLxvbJp9cGCnlyX_e6_AB1q_NHmoHhB400nPhv4hq9pFcOdH3PaGEaZNV3_B9eQUAcxc=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/Ow3CUKKkPgjpU-zsC6qTnbJ_-GSBAJ8wUaIF890BVkx3CBXhF-FDt7GciBHAuqGcarJXwzJqYf6qe8UIlVE=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/wLtMTAjdrKdScaavRuOi59jNYSR5IJw5eBtmxUb7-IphqeJL0_Q_YEG5snVLzqD8X_qw5pdTNwUv5wWQdN0=s0#w=1440&h=2560\" width=\"150\">\n"
+              },
+              "question": {
+                "title": "ViewPager and FragmentPagerAdapter",
+                "alt_text": "Quiz to Add ViewPager to MainActivity",
+                "background_image": "//lh3.googleusercontent.com/nG0ezNsyOjcgeW8uWOxPJ9QCgyH582Gp6RaTNfUasIQlffBeR_dJYumQ6DTHoels9ANhm74Ox2Mb6AaFCtw=s0#w=1440&h=900",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8148978866",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8193677929",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to Modify MainActivity",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.05632403366583541,
+                      "y": 0.2538109756097561
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to create CategoryAdapter class",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.0546680174563591,
+                      "y": 0.4646272172949002
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to delete unused files",
+                    "marker": "check3",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.053713372817955116,
+                      "y": 0.727515243902439
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "<a href=\"https://github.com/udacity/ud839_Miwok/commit/ea2c404305274b0e624ef920902bdb40d3acbba0\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/ea2c404305274b0e624ef920902bdb40d3acbba0\" target=\"_blank\">This is the state of the code after completing the quiz.</a>\n\nHere are the changes needed to switch to a ViewPager and FragmentPagerAdapter in the Miwok app.\n\n**1)** First modify activity_main.xml layout to contain a ViewPager. You can delete the 4 category TextViews that used to be in this layout file.\n\n    <?xml version=\"1.0\" encoding=\"utf-8\"?>\n    <LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n       xmlns:tools=\"http://schemas.android.com/tools\"\n       android:layout_width=\"match_parent\"\n       android:layout_height=\"match_parent\"\n       android:background=\"@color/tan_background\"\n       android:orientation=\"vertical\"\n       tools:context=\"com.example.android.miwok.MainActivity\">\n\n       <android.support.v4.view.ViewPager\n           android:id=\"@+id/viewpager\"\n           android:layout_width=\"match_parent\"\n           android:layout_height=\"match_parent\"/>\n\n    </LinearLayout>\n    \n**2)** In order to populate pages in the ViewPager, we need an adapter.\n\nCreate a new file for the adapter by right-clicking on the com.example.android.miwok folder in the Project directory pane. Then go to New > Java class. Create a new class called CategoryAdapter.\n\n![CategoryAdapter](https://lh3.googleusercontent.com/xEwCiEk19xvgisgaXJ8Av-SGe0WuHUBFSEepwcZnOZz4jsyYXF9BU8NqwxTFMeAji4VjAvMEn3Hkz9hU4KDp=s0#w=676&h=310)\n\n\n**3)** Android Studio will automatically create a new Java class in the CategoryAdapter.java file with these contents:\n\n    package com.example.android.miwok;\n\n    public class CategoryAdapter {\n  \n    }\n\n**4)** Modify the CategoryAdapter class declaration line to extend the FragmentPagerAdapter class. Android Studio will report errors, warning you that you need to fill in required methods. You can hit Alt + Enter for a quick fix to the file, or right click and try to resolve the error. Android Studio will add in a bare-bones version of the methods you need to implement. Android Studio will also add in a constructor for the CategoryAdapter that takes in a FragmentManager. See below:\n\n    package com.example.android.miwok;\n\n    import android.support.v4.app.Fragment;\n    import android.support.v4.app.FragmentManager;\n    import android.support.v4.app.FragmentPagerAdapter;\n\n    /**\n      * Created by katherinekuan on 4/14/16.\n    */\n    public class CategoryAdapter extends FragmentPagerAdapter {\n  \n       public CategoryAdapter(FragmentManager fm) {\n           super(fm);\n       }\n\n       @Override\n       public Fragment getItem(int position) {\n       return null;\n       }\n\n       @Override\n       public int getCount() {\n           return 0;\n       }\n    }\n\n**5)** Override the methods with the logic we want in our Miwok app. We need to think about:\n\n*Question:* How many pages do we need in the ViewPager?\n*Answer:* 4 pages, so we should return 4 in the CategoryAdapter getCount() method.\n\n*Question:* Which Fragment should we display if the position is 0? Or 1 or 2?\n*Answer:* Within the CategoryAdapter getItem(int position) method, we create a conditional if/else statement to return the appropriate category fragment for the given position.\n\nThe resulting CategoryAdapter class looks like this:\n\n    package com.example.android.miwok;\n\n    import android.support.v4.app.Fragment;\n    import android.support.v4.app.FragmentManager;\n    import android.support.v4.app.FragmentPagerAdapter;\n\n    /**\n     * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for\n     * each list item based on a data source which is a list of {@link Word} objects.\n     */\n    public class CategoryAdapter extends FragmentPagerAdapter {\n\n    /**\n     * Create a new {@link CategoryAdapter} object.\n     *\n     * @param fm is the fragment manager that will keep each fragment's state in the adapter\n     *           across swipes.\n     */\n    public CategoryAdapter(FragmentManager fm) {\n        super(fm);\n    }\n\n    /**\n     * Return the {@link Fragment} that should be displayed for the given page number.\n     */\n    @Override\n    public Fragment getItem(int position) {\n        if (position == 0) {\n            return new NumbersFragment();\n        } else if (position == 1) {\n            return new FamilyFragment();\n        } else if (position == 2) {\n            return new ColorsFragment();\n        } else {\n            return new PhrasesFragment();\n        }\n    }\n\n    /**\n     * Return the total number of pages.\n     */\n    @Override\n    public int getCount() {\n        return 4;\n    }\n}\n\n**6)** Then in the MainActivity, we can hook up the CategoryAdapter to power the ViewPager. Delete all the old code related to the 4 category TextViews. \n\nAll we need to do is find the ViewPager that was declared in the XML layout. Then create a new CategoryAdapter, and set the adapter onto the ViewPager (using the setAdapter method).\n\n    package com.example.android.miwok;\n\n    import android.os.Bundle;\n    import android.support.v4.view.ViewPager;\n    import android.support.v7.app.AppCompatActivity;\n\n    public class MainActivity extends AppCompatActivity {\n\n       @Override\n       protected void onCreate(Bundle savedInstanceState) {\n           super.onCreate(savedInstanceState);\n\n           // Set the content of the activity to use the activity_main.xml layout file\n       setContentView(R.layout.activity_main);\n    \n           // Find the view pager that will allow the user to swipe between fragments\n           ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);\n\n           // Create an adapter that knows which fragment should be shown on each page\n           CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());\n\n           // Set the adapter onto the view pager\n           viewPager.setAdapter(adapter);\n       }\n    }\n\n**7)** Test the code to make sure everything runs.\n\n**8)** If the app works as expected, delete the unnecessary files:\n\n* NumbersActivity.java\n* FamilyActivity.java\n* ColorsActivity.java\n* PhrasesActivity.java\n* activity_category.xml layout file\n\nAlso delete the activity declarations from the AndroidManifest.xml file.\n\n**9)** After all those deletions, test the app AGAIN to make sure everything works and you didn’t delete anything important. Make sure audio playback still works.\n\nIf you want to double-check your code against ours, this is the <a href=\"https://github.com/udacity/beginner_android_learn_miwok/commit/c80d8bdfe407be01a3097ea922a8f61caf53b82e\" target=\"_blank\">difference</a> (or delta) for what changed in this coding task. This is the <a href=\"https://github.com/udacity/beginner_android_learn_miwok/tree/c80d8bdfe407be01a3097ea922a8f61caf53b82e\" target=\"_blank\">full state</a> of the app at this point.\n\n\n",
+                "video": null
+              }
+            }
+          ]
+        },
+        {
+          "id": 52849,
+          "key": "81408285600923",
+          "title": "Add Tabs to ViewPager",
+          "semantic_type": "Concept",
+          "is_public": true,
+          "user_state": {
+            "node_key": "81408285600923",
+            "completed_at": null,
+            "last_viewed_at": null,
+            "unstructured": null
+          },
+          "resources": null,
+          "atoms": [
+            {
+              "id": 419655,
+              "key": "e7a7d6cd-dba4-47ff-8a46-6b2e113d134d",
+              "title": null,
+              "semantic_type": "TextAtom",
+              "is_public": true,
+              "text": "# Step 4: Add Tabs",
+              "instructor_notes": ""
+            },
+            {
+              "id": 93681,
+              "key": "8140828560",
+              "title": "",
+              "semantic_type": "QuizAtom",
+              "is_public": true,
+              "instructor_notes": "",
+              "user_state": {
+                "node_key": "8140828560",
+                "completed_at": null,
+                "last_viewed_at": null,
+                "unstructured": null
+              },
+              "instruction": {
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                },
+                "text": "Now let’s add tabs so the user can tell that there are more pages to swipe to.\n\nFirst you’ll need to use the Android Design Support Library. This helps you create a Material Design app that runs even on older versions of Android. Learn more about the support library in this <a href=\"http://android-developers.blogspot.com/2015/05/android-design-support-library.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">blogpost</a>. There are periodic updates to the support library, so you can check this <a href=\"http://developer.android.com/tools/support-library/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">site</a> for the latest updates or subscribe to the <a href=\"http://android-developers.blogspot.com/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">Android Developers blog</a>.\n\n## Add Android Design Support Library to Your Project\n\n**1)** In Android Studio, within the Project Directory pane, navigate to Miwok > app > build.gradle and open the build.gradle file.\n\nGradle is the tool that Android Studio uses to generate the apk (app file) that goes onto the device. For more info on configuring the build.gradle file, see this <a href=\"http://developer.android.com/tools/building/configuring-gradle.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics\" target=\"_blank\">article</a>. There’s also an advanced <a href=\"https://www.udacity.com/course/gradle-for-android-and-java--ud867\" target=\"_blank\">Udacity course</a> on this topic, so don’t worry if you don’t understand it now.\n\n![build dot gradle file](https://lh3.googleusercontent.com/-GkkFcIJIFgoGhBwvMxNpjiB6GxEkZYoBSfCWUQHDzuSw-ywhDg8jy3mKeoEvOHfgomc-uqAfVFCRjAt5uE=s0#w=987&h=677)\n\n**2)** This build.gradle file contains information about how your app should be packaged. Go to the dependencies section, and add a line that includes the Android Support Design Library. This indicates that our app depends on the Android Design Library, and that our Miwok app code can now refer to components within the design library.\n\n`compile 'com.android.support:design:23.3.0'`\n\nAfterwards, it should look similar to this:\n\n    dependencies {\n       compile fileTree(dir: 'libs', include: ['*.jar'])\n       testCompile 'junit:junit:4.12'\n       compile 'com.android.support:appcompat-v7:23.2.1'\n       compile 'com.android.support:support-v4:23.2.1'\n       compile 'com.android.support:design:23.3.0'\n    }\n\n**3)** You will see a yellow warning at the top of your file saying that the Gradle file has changed and a project sync is needed. Click the “Sync Now” button.\n\n![build dot gradle warning](https://lh3.googleusercontent.com/xQLRZ6uLbBD2H4SeIHWNdDPc3eSTsaYWPM4mI_3FGU9kr8OfUBw4MtqVV-TKR-GIHrWDcKWfLTFtVY69swBT=s0#w=616&h=361)\n\nNow you can start using components from the Android Design Support Library, such as the TabLayout for the Viewpager!\n\nIn this next coding task, modify the app to add tabs to your ViewPager in the MainActivity. This is what the app should look like when you’re done. You can consult this <a href=\"https://guides.codepath.com/android/google-play-style-tabs-using-tablayout#sliding-tabs-layout\" target=\"_blank\">Codepath tutorial</a> for help. \n\n   \n   <img src=\"https://lh3.googleusercontent.com/7Wdw5aH4JzUbGw8OXuUWt80Ta9zGyV5bLjEHWISW8IO3ZUjk2FsBysnM-_zJtS-8dNkHsUSXXjKxBeZfviM=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/aqQpG6hWtbeyWbx4deYXXbt316WyAJA5QQxncJRE54eUbrrD7nd4fBoGgXlgAw2p1rF9EVEtjIn_8aHj70s6=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/czf5e79_yqs9oiPhqeXZiT2X8av_I4kYClyD-rRE0VDM8N5WxPCOFJRJPAyF26Eu2QF5YdMtkHKqIoa5CA=s0#w=1440&h=2560\" width=\"150\">  <img src=\"https://lh3.googleusercontent.com/FGJc7jk3jNnFkLdORC2_IM5Zscyq8i-_ByO26t4aJEznL46cS4-bG0PvoLbwBk9XRi0Qqti9RMuWK8YwAReB=s0#w=1440&h=2560\" width=\"150\">"
+              },
+              "question": {
+                "title": "Add Tabs to ViewPager",
+                "alt_text": "Quiz to add tabs to ViewPager",
+                "background_image": "//lh3.googleusercontent.com/qIICrlsK_x-gUQIq9Xrs1GZd7WR_9aLzkKXKcY0P8uw_AiyHEpvQFQi6ZCteui6JbYB0eJN1o2e-y00cIo77=s0#w=1437&h=855",
+                "non_google_background_image": "https://s3.cn-north-1.amazonaws.com.cn/u-img/8140828560",
+                "semantic_type": "ImageFormQuestion",
+                "evaluation_id": "8216560635",
+                "widgets": [
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to add tabs to ViewPager",
+                    "marker": "check1",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.05176511845386534,
+                      "y": 0.22429323725055433
+                    }
+                  },
+                  {
+                    "group": null,
+                    "initial_value": "false",
+                    "label": "Checkbox to add visual polish",
+                    "marker": "check2",
+                    "model": "CheckboxWidget",
+                    "is_text_area": null,
+                    "tabindex": null,
+                    "placement": {
+                      "height": 0.05,
+                      "width": 0.05,
+                      "x": 0.04956359102244389,
+                      "y": 0.5530418514412417
+                    }
+                  }
+                ]
+              },
+              "answer": {
+                "text": "<a href=\"https://github.com/udacity/ud839_Miwok/commit/8c9cbfe5c53b2ede38ccb73d81ecbed2bd30fb46\" target=\"_blank\">These are the changes needed to complete the quiz.</a>\n\n<a href=\"https://github.com/udacity/ud839_Miwok/tree/8c9cbfe5c53b2ede38ccb73d81ecbed2bd30fb46\" target=\"_blank\">This is the state of the code after completing the quiz.</a>\n\nFirst, we’ll get the tabs showing up on screen. Then we’ll worry about the visual polish to match the redlines afterwards.\n\n**1)** Since the Design Library should be linked as a dependency in the project already, modify MainActivity layout to contain a ViewPager and TabLayout. The activity_main.xml layout file should look like this. Notice that the TabLayout has a view ID assigned to it because we’ll need to refer to the view in the Java code.\n\nThe xml file might look like this: \n\n\n      <?xml version=\"1.0\" encoding=\"utf-8\"?>\n        <LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n           xmlns:tools=\"http://schemas.android.com/tools\"\n           android:layout_width=\"match_parent\"\n           android:layout_height=\"match_parent\"\n           android:background=\"@color/tan_background\"\n           android:orientation=\"vertical\"\n           tools:context=\"com.example.android.miwok.MainActivity\">\n\n           <android.support.design.widget.TabLayout\n               android:id=\"@+id/tabs\"\n               android:layout_width=\"match_parent\"\n               android:layout_height=\"wrap_content\" />\n\n           <android.support.v4.view.ViewPager\n               android:id=\"@+id/viewpager\"\n               android:layout_width=\"match_parent\"\n               android:layout_height=\"match_parent\"/>\n\n        </LinearLayout>\n\n**2)** Modify the MainActivity onCreate() method to connect the TabLayout with the ViewPager.\n\n\nYour code should look like this: \n\n     package com.example.android.miwok;\n     import android.os.Bundle;\n     import android.support.design.widget.TabLayout;\n     import android.support.v4.view.ViewPager;\n     import android.support.v7.app.AppCompatActivity;\n\n    public class MainActivity extends AppCompatActivity {\n\n       @Override\n       protected void onCreate(Bundle savedInstanceState) {\n           super.onCreate(savedInstanceState);\n    \n           // Set the content of the activity to use the activity_main.xml layout file\n           setContentView(R.layout.activity_main);\n\n           // Find the view pager that will allow the user to swipe between fragments\n           ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);\n\n           // Create an adapter that knows which fragment should be shown on each page\n           CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());\n\n           // Set the adapter onto the view pager\n           viewPager.setAdapter(adapter);\n\n           // Find the tab layout that shows the tabs\n           TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);\n\n           // Connect the tab layout with the view pager. This will\n           //   1. Update the tab layout when the view pager is swiped\n           //   2. Update the view pager when a tab is selected\n           //   3. Set the tab layout's tab names with the view pager's adapter's titles\n           //      by calling onPageTitle()\n           tabLayout.setupWithViewPager(viewPager);\n       }\n    }\n\n**3)** Now we have to tell the app what text to display in each tab. Go into the CategoryAdapter.java file and override the getPageTitle() method of the class. This method was originally defined in the superclass (the FragmentPagerAdapter), but we want to override the method to customize the tab text (which is known as the page title in the code).\n\nTo override the method, use the keyboard shortcut Ctl + O. Type in “getPageTitle” and hit OK.\n\n![overriding getPage](https://lh3.googleusercontent.com/19DgzF_glw8dA7HEFJq1w1ZerfHjtTZLmtdRLJR-EAPUYUe-9MJJT-Wb0UY4EKlbJCSAco9BR8IW9_X-bAI=s0#w=374&h=579)\n\n\nAndroid Studio will automatically add this method into the CategoryAdapter class.\n\n    @Override\n    public CharSequence getPageTitle(int position) {\n       return super.getPageTitle(position);\n    }\n    \n**4)** Modify the default CategoryAdapter getPageTitle(int position) implementation to return the proper category name per page. We could return a hardcoded string such as “Numbers,” “Family,” and so on. However, as emphasized at the end of Lesson 4, we don’t want to restrict our app to only support the English language. Instead, we should use the string resource for those category names.\n\nUnfortunately, that also means we need a Context object in order to turn the string resource ID into an actual String. So we modify the CategoryAdapter constructor to also require a Context input so that we can get the proper text string.\n\nThis is what the CategoryAdapter class looks like with the proper getPageTitle(int position) code, where we rely on string resources instead of hardcoded strings in the Java code. \n\n     package com.example.android.miwok;\n\n     import android.content.Context;\n     import android.support.v4.app.Fragment;\n     import android.support.v4.app.FragmentManager;\n     import android.support.v4.app.FragmentPagerAdapter;\n\n     /**\n     * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for\n     * each list item based on a data source which is a list of {@link Word} objects.\n     */\n     public class CategoryAdapter extends FragmentPagerAdapter {\n\n        /** Context of the app */\n        private Context mContext;\n     \n        /**\n         * Create a new {@link CategoryAdapter} object.\n         *\n         * @param context is the context of the app\n         * @param fm is the fragment manager that will keep each fragment's state in the adapter\n         *           across swipes.\n         */\n        public CategoryAdapter(Context context, FragmentManager fm) {\n            super(fm);\n            mContext = context;\n        }\n\n        /**\n         * Return the {@link Fragment} that should be displayed for the given page number.\n         */\n        @Override\n        public Fragment getItem(int position) {\n            if (position == 0) {\n                return new NumbersFragment();\n            } else if (position == 1) {\n                return new FamilyFragment();\n            } else if (position == 2) {\n                return new ColorsFragment();\n            } else {\n                return new PhrasesFragment();\n            }\n        }\n\n        /**\n         * Return the total number of pages.\n         */\n        @Override\n        public int getCount() {\n            return 4;\n        }\n\n        @Override\n        public CharSequence getPageTitle(int position) {\n            if (position == 0) {\n                return mContext.getString(R.string.category_numbers);\n            } else if (position == 1) {\n                return mContext.getString(R.string.category_family);\n            } else if (position == 2) {\n                return mContext.getString(R.string.category_colors);\n            } else {\n                return mContext.getString(R.string.category_phrases);\n            }\n        }\n     }\n\n**5)** Since we modified the CategoryAdapter constructor, we also need to update the MainActivity (which uses that constructor). When we create a CategoryAdapter, we pass in a Context (which is “this” or the activity) and the FragmentManager.\n\nThat declaration line might look like this: \n\n     CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());\n\n**6)** If you run the app now, the tabs should successfully be displayed on the screen! However, it doesn’t look that great with the current color scheme of the rest of the app. Let’s move onto the visual polish stage, using the redlines from the designer to guide us.\n\n**7)** The first thing we notice is that the “Family Members” text is too long, compared to the other tab labels. In the strings.xml file, we can change the string to Family instead of Family Members. \n\nWhen you modify strings, be careful of all the places that use that string. In this case, we only use the string in one place, so it’s safe to change.\n\n     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->\n     <string name=\"category_family\">Family</string>\n\n**8)** Make visual tweaks to the app by following the <a href=\"https://guides.codepath.com/android/google-play-style-tabs-using-tablayout#styling-the-tablayout\" target=\"_blank\">Codepath tutorial</a> we linked for you.\n\nModify the activity_main.xml file. Change the background of the root LinearLayout as well, so that the tabs are the same color as the app bar. We also want to apply a style to the tabs, to change the visual appearance of them.\n\n     <?xml version=\"1.0\" encoding=\"utf-8\"?>\n     <LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n        xmlns:tools=\"http://schemas.android.com/tools\"\n        android:layout_width=\"match_parent\"\n        android:layout_height=\"match_parent\"\n        android:background=\"@color/primary_color\"\n        android:orientation=\"vertical\"\n        tools:context=\"com.example.android.miwok.MainActivity\">\n     \n        <android.support.design.widget.TabLayout\n            android:id=\"@+id/tabs\"\n            style=\"@style/CategoryTab\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"wrap_content\" />\n\n        <android.support.v4.view.ViewPager\n            android:id=\"@+id/viewpager\"\n            android:layout_width=\"match_parent\"\n            android:layout_height=\"match_parent\"/>\n     \n     </LinearLayout>\n\nDefine the theme of the tab layout in your styles.xml file. Note that there should be no shadow below the app bar. See this <a href=\"http://stackoverflow.com/questions/12246388/remove-shadow-below-actionbar/27203224#27203224\" target=\"_blank\">StackOverflow discussion</a> thread.\n\nWhen you’re done, the styles.xml file should look like this:\n\n     <resources>\n\n        <!-- Base application theme. -->\n        <style name=\"AppTheme\" parent=\"Theme.AppCompat.Light.DarkActionBar\">\n            <item name=\"colorPrimary\">@color/primary_color</item>\n            <item name=\"colorPrimaryDark\">@color/primary_dark_color</item>\n            <item name=\"actionBarStyle\">@style/MiwokAppBarStyle</item>\n            <item name=\"android:windowContentOverlay\">@null</item>\n        </style>\n\n        <!-- App bar style -->\n        <style name=\"MiwokAppBarStyle\" parent=\"style/Widget.AppCompat.Light.ActionBar.Solid.Inverse\">\n            <!-- Remove the shadow below the app bar -->\n            <item name=\"elevation\">0dp</item>\n        </style>\n\n        <!-- Style for a tab that displays a category name -->\n        <style name=\"CategoryTab\" parent=\"Widget.Design.TabLayout\">\n            <item name=\"tabIndicatorColor\">@android:color/white</item>\n            <item name=\"tabSelectedTextColor\">@android:color/white</item>\n            <item name=\"tabTextAppearance\">@style/CategoryTabTextAppearance</item>\n        </style>\n\n        <!-- Text appearance style for a category tab -->\n        <style name=\"CategoryTabTextAppearance\" parent=\"TextAppearance.Design.Tab\">\n            <item name=\"android:textColor\">#A8A19E</item>\n        </style>\n     </resources>\n\n**9)** After all those code changes (you guessed it), we should run the app to make sure it looks and works as we expect. :)\n\nIf you want to double-check your code against ours, this is the <a href=\"https://github.com/udacity/ud839_Miwok/commit/837ef56a4b97d3e15bdb8249dd75b73262a469e8\" target=\"_blank\">code diff</a> for what changed in this quiz. This is the <a href=\"https://github.com/udacity/ud839_Miwok/tree/lesson-five\" target=\"_blank\">full ending state of the app</a>. (Hard to believe it’s the end, I know!)\n\nIn the future, if you want to learn more, check out the open-source <a href=\"https://github.com/chrisbanes/cheesesquare\" target=\"_blank\">Cheesesquare app</a> by Developer Programs Engineer <a href=\"https://plus.google.com/+ChrisBanes\" target=\"_blank\">Chris Banes</a>. Download the code, import it into Android Studio, and run the Cheesesquare app on your device to check out more cool things you can do with the Android Design Support Library.",
+                "video": {
+                  "youtube_id": "",
+                  "china_cdn_id": ".mp4"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_deprecated": [
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_url",
+      "reason": "(2016/8/18) Not sure, ask i18n team for reason"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    },
+    {
+      "name": "non_google_background_image",
+      "reason": "(2016/8/18) Not sure, ask i18n team for alternative"
+    }
+  ]
+}
