@@ -1,0 +1,149 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.000 --> 00:00:03.629
+Dari contoh kode dalam dokumentasi
+Anda akan lihat bahwa
+
+00:00:03.629 --> 00:00:09.590
+kelas DownloadFilesTask extend ke Async
+Task, nama ini diikuti nama kelas
+
+00:00:09.590 --> 00:00:10.739
+tambahan dalam tanda kurung.
+
+00:00:10.740 --> 00:00:14.639
+Ingatlah bahwa tanda kurung menunjukkan bahwa
+ada tiga parameter generik untuk
+
+00:00:14.639 --> 00:00:19.470
+AsyncTask. Kita tahu pertama kali tentang
+generik saat kita membangun aplikasi Miwok,
+
+00:00:19.470 --> 00:00:23.880
+kita membuat ArrayList kosakata
+dan menampilkannya
+
+00:00:23.880 --> 00:00:28.619
+menggunakan ArrayAdapter kustom, yaitu
+kelas ArrayList dan ArrayAdapter
+
+00:00:28.619 --> 00:00:35.219
+kecuali parameter tipe generik. E dan T
+adalah placeholder untuk tipe data objek
+
+00:00:35.219 --> 00:00:40.200
+spesifik yang ingin kita pakai. Dengan memakai
+generik, kita mengandalkan bahasa Java
+
+00:00:40.200 --> 00:00:44.760
+untuk memastikan bahwa tipe data yang benar
+dikirim masuk dan keluar
+
+00:00:44.760 --> 00:00:47.489
+metode. Misalnya,
+
+00:00:47.489 --> 00:00:52.260
+apa pun yang diwakili oleh tipe data E, akan
+merupakan tipe data yang diperlukan untuk input
+
+00:00:52.260 --> 00:00:56.309
+ke metode tambahkan ArrayList untuk
+menambah elemen lain ke dalam daftar.
+
+00:00:56.309 --> 00:01:00.959
+Jika Anda panggil metode GET pada indeks
+tertentu, objek tipe E akan
+
+00:01:00.960 --> 00:01:01.980
+dikembalikan.
+
+00:01:01.980 --> 00:01:06.750
+Hal ini disebut keamanan tipe, bahasa Java
+memaksakan keamanan tipe dengan
+
+00:01:06.750 --> 00:01:11.100
+menampilkan kesalahan jika Anda memasukkan
+tipe data yang salah, atau jika Anda menyimpan
+
+00:01:11.100 --> 00:01:13.890
+nilai kembali metode dalam tipe data
+yang salah.
+
+00:01:13.890 --> 00:01:18.720
+Anda tidak akan mampu menjalankan aplikasi
+Anda hingga kesalahan ini dibenahi. Saat kita
+
+00:01:18.720 --> 00:01:23.640
+gunakan kelas generik ini, kita mengganti
+generik placeholder E dengan tipe data spesifik
+
+00:01:23.640 --> 00:01:28.110
+seperti kelas string untuk memerintahkan ArrayList
+string yang kita ganti jika ada
+
+00:01:28.110 --> 00:01:35.340
+E dengan string. Akibatnya,
+kita hanya bisa menambahkan objek
+
+00:01:35.340 --> 00:01:37.500
+tipe data string ke dalam daftar.
+
+00:01:37.500 --> 00:01:42.150
+Jika kita meminta item dengan indeks spesifik,
+ArrayList akan mengembalikan tipe data
+
+00:01:42.150 --> 00:01:45.900
+string. Dalam aplikasi Miwok
+
+00:01:45.900 --> 00:01:48.899
+kita ingin memakai tipe data kustom yang sedikit
+lebih kompleks daripada
+
+00:01:48.899 --> 00:01:54.540
+objek string. Ingatlah bahwa kita membuat kelas
+kata kustom untuk memegang Bahasa Inggris
+
+00:01:54.540 --> 00:02:00.119
+dan terjemahan Bahasa Miwok untuk suatu kata dari
+daftar yang kita tentukan bahwa parameter E
+
+00:02:00.119 --> 00:02:05.000
+generik harus merupakan objek kata sehingga kita akan
+punya ArrayList kata-kata,
+
+00:02:05.159 --> 00:02:09.660
+lalu saat kita menambahkan untuk mengambil
+entri dari ArrayList, kita dapat memastikan
+
+00:02:09.660 --> 00:02:13.329
+bahwa itu adalah objek kata, lalu kita bisa
+memanggil metode spesifik
+
+00:02:13.330 --> 00:02:17.620
+untuk objek kata untuk mengekstrak Bahasa Inggris
+untuk terjemahan Bahasa Miwok yang
+
+00:02:17.620 --> 00:02:21.880
+tidak mungkin dilakukan jika metode GET
+mengembalikan string atau tipe data objek
+
+00:02:21.880 --> 00:02:23.260
+yang berbeda.
+
+00:02:23.260 --> 00:02:27.609
+Demikian juga, di aplikasi Miwok kita gunakan
+generik untuk membuat ArrayAdapter kustom
+
+00:02:27.610 --> 00:02:32.920
+berisi kata-kata, kita bisa perkirakan tiap item
+dalam rangkaian data adapter sebagai
+
+00:02:32.920 --> 00:02:33.820
+objek kata.
+
+00:02:33.820 --> 00:02:39.340
+Setelah kita meninjau generik, mari kembali
+ke dokumentasi AsyncTask.
+

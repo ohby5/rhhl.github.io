@@ -1,0 +1,422 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loading Indicator</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Threads &amp; Parallelism</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Did You Feel It App.html">02. &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="03. Main vs Background Threads 1.html">03. Main vs Background Threads 1</a>
+    </li>
+    <li class="">
+      <a href="04. Main vs Background Threads 2.html">04. Main vs Background Threads 2</a>
+    </li>
+    <li class="">
+      <a href="05. Main vs Background Threads 3.html">05. Main vs Background Threads 3</a>
+    </li>
+    <li class="">
+      <a href="06. AsyncTask to the Rescue.html">06. AsyncTask to the Rescue</a>
+    </li>
+    <li class="">
+      <a href="07. AsyncTask Callback Methods.html">07. AsyncTask Callback Methods</a>
+    </li>
+    <li class="">
+      <a href="08. Review of Generics.html">08. Review of Generics</a>
+    </li>
+    <li class="">
+      <a href="09. AsyncTask Generic Params.html">09. AsyncTask Generic Params</a>
+    </li>
+    <li class="">
+      <a href="10. Inner Classes.html">10. Inner Classes</a>
+    </li>
+    <li class="">
+      <a href="11. Fix the Did You Feel It App.html">11. Fix the &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="12. Handle Empty or Null Cases.html">12. Handle Empty or Null Cases</a>
+    </li>
+    <li class="">
+      <a href="13. Plan Changes to Quake Report App.html">13. Plan Changes to Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="14. AsyncTask Generic Params in Quake Report App.html">14. AsyncTask Generic Params in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="15. Networking in Quake Report App.html">15. Networking in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="16. Limitations of AsyncTask.html">16. Limitations of AsyncTask</a>
+    </li>
+    <li class="">
+      <a href="17. Intro to Loaders, Part 1.html">17. Intro to Loaders, Part 1</a>
+    </li>
+    <li class="">
+      <a href="18. Intro to Loaders, Part 2.html">18. Intro to Loaders, Part 2</a>
+    </li>
+    <li class="">
+      <a href="19. Switch to Using a Loader.html">19. Switch to Using a Loader</a>
+    </li>
+    <li class="">
+      <a href="20. Verify Loader Behavior.html">20. Verify Loader Behavior</a>
+    </li>
+    <li class="">
+      <a href="21. Empty State of the List.html">21. Empty State of the List</a>
+    </li>
+    <li class="">
+      <a href="22. Loading Indicator.html">22. Loading Indicator</a>
+    </li>
+    <li class="">
+      <a href="23. No Internet Connection.html">23. No Internet Connection</a>
+    </li>
+    <li class="">
+      <a href="24. Check Network Connectivity Status.html">24. Check Network Connectivity Status</a>
+    </li>
+    <li class="">
+      <a href="25. Congrats.html">25. Congrats</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">22. Loading Indicator</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Loading Indicator</p></h3>
+  <div>
+  <div>
+    <h4>Question:</h4>
+
+    <video controls>
+  <source src="22. Loading Indicator-ZA_RPvMPV3A.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="22. Loading Indicator-ZA_RPvMPV3A.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="id-ID" src="22. Loading Indicator-ZA_RPvMPV3A.id-ID.vtt" label="id-ID">
+  <track default="false" kind="subtitles" srclang="zh-CN" src="22. Loading Indicator-ZA_RPvMPV3A.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="22. Loading Indicator-ZA_RPvMPV3A.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="22. Loading Indicator-ZA_RPvMPV3A.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="id" src="22. Loading Indicator-ZA_RPvMPV3A.id.vtt" label="id">
+</video>
+
+
+  </div>
+
+  <h4>Start Quiz:</h4>
+  <div>
+  <div style="display: block;">
+    <div style="position: relative;">
+      <img src="img/8950255057.gif" style="width: 100%; max-height: 100%" alt="">
+      
+    <div style="
+    position: absolute; top: 28.956485587583146%; left: 6.813045511221945%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check1" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 48.447893569844794%; left: 6.961112842892768%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check2" aria-label="">
+      
+    </div>
+  
+    <div style="
+    position: absolute; top: 67.63788802660754%; left: 7.0935941396508735%; width: 5%; height: 5%;
+  ">
+      
+        <input type="checkbox" style="width: 100%; height: 100%; max-width: 15px; max-height: 15px;" name="null" id="check3" aria-label="">
+      
+    </div>
+  
+    </div>
+  </div>
+</div>
+
+
+  <div>
+    <details>
+      <summary><strong>Solution:</strong></summary>
+      <div>
+
+        <p><h2 id="code-changes">Code changes</h2>
+<p>First, add the ProgressBar view to the layout. You could have referred to the <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/July/579697eb_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf" target="_blank">Common Android Views Cheat Sheet</a> to see an example of a ProgressBar in XML. I added the view as the last child of the RelativeLayout, so that it would appear on top of the other children views. The height and width are set as “wrap_content” and the view is centered in the middle of the screen. The style “@style/Widget.AppCompat.ProgressBar” makes the ProgressBar appear as a circular loading indicator.</p>
+<p>In earthquake_activity.xml:</p>
+<pre><code> &lt;RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;ListView
+        android:id="@+id/list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"/&gt;
+
+    &lt;!-- Empty view is only visible when the list has no items. --&gt;
+    &lt;TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:textAppearanceMedium"/&gt;
+
+    &lt;!-- Loading indicator is only shown before the first load --&gt;
+    &lt;ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/&gt;
+
+ &lt;/RelativeLayout&gt;</code></pre>
+<p>In EarthquakeActivity.java, hide the loading indicator (by setting visibility to View.GONE) after the first load is completed - when onLoadFinished() is called.</p>
+<p>In EarthquakeActivity.java:</p>
+<pre><code> @Override
+ public void onLoadFinished(Loader&lt;List&lt;Earthquake&gt;&gt; loader, List&lt;Earthquake&gt; earthquakes) {
+    // Hide loading indicator because the data has been loaded
+    View loadingIndicator = findViewById(R.id.loading_indicator);
+    loadingIndicator.setVisibility(View.GONE);
+
+    // Set empty state text to display "No earthquakes found."
+    mEmptyStateTextView.setText(R.string.no_earthquakes);
+
+    // Clear the adapter of previous earthquake data
+    mAdapter.clear();
+
+    // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+    // data set. This will trigger the ListView to update.
+    if (earthquakes != null &amp;&amp; !earthquakes.isEmpty()) {
+        mAdapter.addAll(earthquakes);
+    }
+ }</code></pre>
+<p>Run the app on a device and the loading indicator should appear if the network call takes a long time. Sometimes, the internet connection may be so fast that the loading indicator is not visible on screen for enough time for the human eye to catch it.</p>
+<h2 id="testing">Testing</h2>
+<p>Hence, as detailed in the notes below the quiz, perform the following 2 tests to check that the loading indicator will lead to the list of earthquake results OR that the loading indicator will lead to the empty view.</p>
+<h3 id="test-1-force-the-background-thread-to-sleep-for-2-seconds">Test #1: Force the background thread to sleep for 2 seconds</h3>
+<p>To force the background thread to sleep for 2 seconds, we are temporarily simulating a very slow network response time. We are “pretending” that it took a long time to fetch the response. That allows us to see the loading spinner on the screen for a little longer than it normally would appear for.</p>
+<p>In the QueryUtils.java file, within the fetchEarthquakeData() method, add this snippet of code at the top of the method. Leave the rest of the code in the method as-is. We are forcing the background thread to pause execution and wait for 2 seconds (which is 2000 milliseconds), before proceeding to execute the rest of lines of code in this method. If you try to add the Thread.sleep(2000); method call by itself, Android Studio will complain that there is an uncaught exception, so we need to surround that statement with a try/catch block.</p>
+<p>In QueryUtils.java:</p>
+<pre><code> public static List&lt;Earthquake&gt; fetchEarthquakeData(String requestUrl) {
+
+     try {
+        Thread.sleep(2000);
+     } catch (InterruptedException e) {
+        e.printStackTrace();
+     }
+
+     …
+
+ }</code></pre>
+<p>Now when you run the app, you should see the loading indicator for 2 seconds, and then the list of earthquakes appear.</p>
+<h3 id="test-2-pretend-like-no-results-came-back-from-the-server">Test #2: Pretend like no results came back from the server</h3>
+<p>In the EarthquakeActivity onLoadFInished method, temporarily comment out the line of code where the earthquake data is added to the adapter. This will make it seem like there are no earthquakes in the list, and should trigger the empty state.</p>
+<p>In QueryUtils.java: </p>
+<pre><code> @Override
+ public void onLoadFinished(Loader&lt;List&lt;Earthquake&gt;&gt; loader, List&lt;Earthquake&gt; earthquakes) {
+
+    ...
+
+    // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+    // data set. This will trigger the ListView to update.
+    if (earthquakes != null &amp;&amp; !earthquakes.isEmpty()) {
+        // mAdapter.addAll(earthquakes);
+    }
+ }</code></pre>
+<p>Now when you run the app, you should see the loading indicator for 2 seconds, and then the empty state saying “No earthquakes found.”</p>
+<p>The code diff for this checkpoint is located <a href="https://github.com/udacity/ud843-QuakeReport/commit/71bbadd17eafdfaaa594a76cf711cb22e695cdcb" target="_blank">here</a>.</p></p>
+      </div>
+    </details>
+  </div>
+</div>
+
+
+  <div class="jumbotron" style="margin-top: 50px; margin-bottom: 50px;">
+    <h3>INSTRUCTOR NOTE:</h3>
+    <h3 id="material-design-progress--activity">Material Design Progress &amp; Activity</h3>
+<p><em>Hint #1:</em> See example of ProgressBar view in the <a href="https://d17h27t6h515a5.cloudfront.net/topher/2016/July/579697eb_common-android-views-cheat-sheet/common-android-views-cheat-sheet.pdf" target="_blank">Common Android Views Cheat Sheet</a>. </p>
+<p><em>Hint #2:</em> Perform the following 2 tests to check that the loading indicator will lead to the list of earthquake results OR that the loading indicator will lead to the empty view.</p>
+<p><em>Test #1:</em> Force the background thread to sleep for 2 seconds</p>
+<p>To force the background thread to sleep for 2 seconds, we are temporarily simulating a very slow network response time. We are “pretending” that it took a long time to fetch the response. That allows us to see the loading spinner on the screen for a little longer than it normally would appear for.</p>
+<p>In the QueryUtils.java file, within the fetchEarthquakeData() method, add this snippet of code at the top of the method. Leave the rest of the code in the method as-is. We are forcing the background thread to pause execution and wait for 2 seconds (which is 2000 milliseconds), before proceeding to execute the rest of lines of code in this method. If you try to add the Thread.sleep(2000); method call by itself, Android Studio will complain that there is an uncaught exception, so we need to surround that statement with a try/catch block.</p>
+<p>In QueryUtils.java:</p>
+<pre><code>  public static List&lt;Earthquake&gt; fetchEarthquakeData(String requestUrl) {
+
+      try {
+         Thread.sleep(2000);
+      } catch (InterruptedException e) {
+         e.printStackTrace();
+      }
+
+      …
+
+  }</code></pre>
+<p>Now when you run the app, you should see the loading indicator for 2 seconds, and then the list of earthquakes appear.</p>
+<p><em>Test #2:</em> Pretend like no results came back from the server</p>
+<p>In the EarthquakeActivity onLoadFInished method, temporarily comment out the line of code where the earthquake data is added to the adapter. This will make it seem like there are no earthquakes results to show.</p>
+<p>In QueryUtils.java: </p>
+<pre><code>  @Override
+  public void onLoadFinished(Loader&lt;List&lt;Earthquake&gt;&gt; loader, List&lt;Earthquake&gt; earthquakes) {
+
+     ...
+
+     // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+     // data set. This will trigger the ListView to update.
+     if (earthquakes != null &amp;&amp; !earthquakes.isEmpty()) {
+         // mAdapter.addAll(earthquakes);
+     }
+  }</code></pre>
+<p>Now when you run the app, you should see the loading indicator for 2 seconds, and then the empty state saying “No earthquakes found.”</p>
+  </div>
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="23. No Internet Connection.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('22. Loading Indicator')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

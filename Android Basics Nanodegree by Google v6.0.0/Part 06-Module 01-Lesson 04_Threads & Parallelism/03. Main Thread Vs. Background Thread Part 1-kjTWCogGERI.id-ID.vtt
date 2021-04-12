@@ -1,0 +1,213 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.780 --> 00:00:01.540
+Hai Joe.
+
+00:00:01.540 --> 00:00:02.220
+Tunggu sebentar.
+
+00:00:02.220 --> 00:00:05.250
+Kau beri murid-murid aplikasi Did You Feel It
+yang macet?
+
+00:00:05.250 --> 00:00:06.060
+Ya.
+
+00:00:06.060 --> 00:00:07.440
+Kenapa?
+
+00:00:07.440 --> 00:00:10.350
+Aku ingin mereka tahu bahwa aplikasi
+macet karena
+
+00:00:10.350 --> 00:00:11.560
+terjadi exception.
+
+00:00:11.560 --> 00:00:13.404
+Oke.
+Exception yang muncul itu
+
+00:00:13.404 --> 00:00:15.730
+disebut NetworkOnMainThreadException.
+
+00:00:15.730 --> 00:00:17.479
+Tunggu, tapi apakah kau
+jelaskan apa artinya?
+
+00:00:18.740 --> 00:00:21.389
+Tidak, tapi aku punya ide
+bagaimana kita bisa lakukan itu.
+
+00:00:21.389 --> 00:00:22.587
+Oke, coba lihat.
+
+00:00:22.587 --> 00:00:25.167
+Oke.
+NetworkOnMainThreadException
+
+00:00:25.167 --> 00:00:28.644
+berarti bahwa kita melakukan operasi
+jaringan di thread utama, dan
+
+00:00:28.644 --> 00:00:29.742
+ini tidak diizinkan.
+
+00:00:29.742 --> 00:00:31.509
+Tunggu, tapi saat kau bilang jaringan,
+
+00:00:31.509 --> 00:00:35.056
+maksudmu seperti permintaan jaringan
+seperti yang kita pelajari di pelajaran terakhir?
+
+00:00:35.056 --> 00:00:35.783
+Ya.
+Oke, tapi
+
+00:00:35.783 --> 00:00:37.840
+kau bilang di thread utama?
+
+00:00:37.840 --> 00:00:40.078
+Mungkin murid-murid bertanya
+apa itu artinya.
+
+00:00:40.078 --> 00:00:41.090
+Benar sekali.
+
+00:00:41.090 --> 00:00:42.815
+Jadi ada thread yang bisa kujelaskan.
+
+00:00:42.815 --> 00:00:45.087
+[SUARA] Ini, pegang ini.
+
+00:00:45.087 --> 00:00:46.529
+Apa-apaan?
+
+00:00:46.529 --> 00:00:49.840
+Thread ini akan mewakili
+thread utama aplikasi.
+
+00:00:49.840 --> 00:00:52.790
+Thread adalah kontainer yang
+memegang rangkaian instruksi,
+
+00:00:52.790 --> 00:00:56.030
+seperti kode Java, yang
+akan dijalankan aplikasi.
+
+00:00:56.030 --> 00:00:59.510
+Dan Android perlu menjadwal semua
+tugas yang perlu dijalankan di
+
+00:00:59.510 --> 00:01:01.270
+peranti keras perangkat.
+
+00:01:01.270 --> 00:01:02.560
+Jadi, saat kita membangun aplikasi Android,
+
+00:01:02.560 --> 00:01:06.050
+penting untuk memahami bahwa kode aplikasi
+dijalankan secara default di apa yang
+
+00:01:06.050 --> 00:01:10.060
+disebut thread utama, yang
+juga dikenal sebagai thread UI.
+
+00:01:11.370 --> 00:01:12.810
+Mari kita elaborasi.
+
+00:01:12.810 --> 00:01:16.270
+Thread utama bertugas menangani operasi
+sebagai respons atas
+
+00:01:16.270 --> 00:01:19.970
+input pengguna seperti klik, scroll,
+dan semacamnya.
+
+00:01:19.970 --> 00:01:23.250
+Thread utama hanya dapat menangani
+satu tugas dalam satu waktu, jadi
+
+00:01:23.250 --> 00:01:26.900
+jika banyak hal sekaligus mencoba
+dilakukan pada saat yang sama,
+
+00:01:26.900 --> 00:01:29.560
+itu semua akan ditaruh
+di antrean seperti ini.
+
+00:01:29.560 --> 00:01:32.039
+Tunggu, jadi antrean seperti saat aku
+pergi ke toko kelontong dan
+
+00:01:32.039 --> 00:01:33.642
+aku berdiri di baris paling panjang dan
+
+00:01:33.642 --> 00:01:37.380
+hanya ada satu kasir yang menangani
+semua pelanggan pada satu waktu?
+
+00:01:37.380 --> 00:01:37.980
+Ya.
+
+00:01:37.980 --> 00:01:38.580
+Astaga.
+
+00:01:38.580 --> 00:01:40.498
+Seperti itulah tipe antreannya.
+
+00:01:40.498 --> 00:01:41.840
+UI ini semua menarik dan
+
+00:01:41.840 --> 00:01:45.600
+menangani input pengguna secara satu
+demi satu sesuai urutan.
+
+00:01:45.600 --> 00:01:49.670
+Sejauh ini, semua kode yang telah kita
+tulis menjalankan di thread utama.
+
+00:01:49.670 --> 00:01:52.770
+Saat Anda membaca kode Java,
+Anda membaca dari atas ke bawah.
+
+00:01:52.770 --> 00:01:55.690
+Mungkin me-loop atau mengambil
+cabang tertentu, atau
+
+00:01:55.690 --> 00:01:57.890
+melompat keluar-masuk metode lain.
+
+00:01:57.890 --> 00:01:59.210
+Saat program menjalankan,
+
+00:01:59.210 --> 00:02:02.630
+dia harus menunggu satu tugas selesai
+sebelum berlanjut dengan tugas berikutnya.
+
+00:02:02.630 --> 00:02:04.620
+Itulah yang kira-kira
+dilakukan satu thread tunggal.
+
+00:02:04.620 --> 00:02:07.470
+Mengeksekusi Java sesuai
+urutan yang dituliskan.
+
+00:02:07.470 --> 00:02:08.130
+Tunggu sebentar.
+
+00:02:08.130 --> 00:02:11.820
+Joe, para murid mungkin berpikir,
+jika kode kita berjalan baik sejauh ini,
+
+00:02:11.820 --> 00:02:15.070
+kenapa kita tidak lanjut saja menulis
+semua kode di thread utama?
+
+00:02:15.070 --> 00:02:16.450
+Pertanyaan bagus.
+
+00:02:16.450 --> 00:02:17.440
+Biar kutunjukkan kenapa begitu.
+

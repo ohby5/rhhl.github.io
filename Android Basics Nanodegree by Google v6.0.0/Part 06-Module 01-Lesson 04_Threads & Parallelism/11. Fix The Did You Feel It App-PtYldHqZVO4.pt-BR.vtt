@@ -1,0 +1,298 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.300
+O problema com o código existente
+é que na atividade principal
+
+00:00:03.334 --> 00:00:04.734
+no método OnCreate,
+
+00:00:04.767 --> 00:00:07.834
+tentamos executar a requisição
+de rede na thread principal.
+
+00:00:07.868 --> 00:00:09.868
+Precisamos mover
+esses dois métodos
+
+00:00:09.901 --> 00:00:11.968
+a uma AsyncTask.
+
+00:00:12.000 --> 00:00:14.000
+A chamada do método
+fetchEarthquakeData
+
+00:00:14.033 --> 00:00:16.167
+deve ser rodado
+numa thread de 2º plano.
+
+00:00:16.200 --> 00:00:18.067
+Enquanto esta chamada
+updateUi
+
+00:00:18.100 --> 00:00:20.100
+deve ser rodada numa thread
+principal ou UI,
+
+00:00:20.133 --> 00:00:22.834
+depois de recebermos
+a resposta da instância.
+
+00:00:23.367 --> 00:00:25.467
+Vamos fazer programação
+ao vivo.
+
+00:00:25.501 --> 00:00:28.267
+Primeiro, vou definir
+uma subclasse de AsyncTask
+
+00:00:28.300 --> 00:00:30.367
+chamada Earthquake AsyncTask.
+
+00:00:30.400 --> 00:00:32.701
+Também vou definir
+como uma innerclass privada
+
+00:00:32.734 --> 00:00:34.133
+da atividade principal.
+
+00:00:34.167 --> 00:00:36.367
+Se a AsyncTask não já tiver
+sido importada,
+
+00:00:36.400 --> 00:00:38.834
+posso usar um atalho
+no Android Studio.
+
+00:00:38.868 --> 00:00:40.667
+Seguro as teclas "+" e "enter"
+
+00:00:40.701 --> 00:00:43.100
+para automaticamente
+importar a classe AsyncTask
+
+00:00:43.133 --> 00:00:44.868
+no topo do arquivo de Java.
+
+00:00:45.968 --> 00:00:48.501
+Como pode ver,
+foi importada para cá.
+
+00:00:48.534 --> 00:00:51.100
+Como pode ver nessa
+linha vermelha ondulada,
+
+00:00:51.133 --> 00:00:53.234
+o Android Studio
+está informando um erro.
+
+00:00:53.267 --> 00:00:56.334
+Quero usar o QuickFix de novo
+com "alt+Enter"
+
+00:00:56.367 --> 00:00:58.734
+para gerar os métodos
+que preciso override.
+
+00:00:59.334 --> 00:01:01.434
+Seleciono "implement methods".
+
+00:01:01.968 --> 00:01:04.167
+E seleciono "ok" aqui
+para implementar o esboço
+
+00:01:04.200 --> 00:01:06.367
+para o método doInBackground.
+
+00:01:06.400 --> 00:01:09.033
+Vamos rever os tipos genéricos
+usados aqui.
+
+00:01:09.067 --> 00:01:12.067
+Especifiquei o tipo de dados
+string para os parâmetros de entrada
+
+00:01:12.100 --> 00:01:14.200
+porque a string da URL do USGS
+será a entrada
+
+00:01:14.234 --> 00:01:16.567
+do método doInBackground.
+
+00:01:16.601 --> 00:01:18.767
+Usei "Void" para o parâmetro
+de progresso
+
+00:01:18.801 --> 00:01:22.701
+porque não preciso
+fazer update ao usuário.
+
+00:01:22.734 --> 00:01:24.200
+Para o parâmetro
+de resultado,
+
+00:01:24.234 --> 00:01:26.000
+especifiquei o tipo de dado
+"Event"
+
+00:01:26.033 --> 00:01:28.033
+porque quero que o resultado
+da tarefa de 2º plano
+
+00:01:28.067 --> 00:01:29.934
+seja uma instância de evento.
+
+00:01:29.968 --> 00:01:32.267
+Agora podemos pôr o evento
+FetchUpdateData
+
+00:01:32.300 --> 00:01:34.434
+direto no método
+doInBackground.
+
+00:01:34.467 --> 00:01:37.000
+Mas ainda temos algumas
+modificações.
+
+00:01:37.033 --> 00:01:38.834
+Em vez de fazer hardcode
+nesta tarefa,
+
+00:01:38.868 --> 00:01:41.567
+que só funciona para esta
+URL específica,
+
+00:01:41.601 --> 00:01:45.200
+vou usar o parâmetro de entrada
+ao acessar o elemento "0"
+
+00:01:45.234 --> 00:01:46.701
+da array da URL.
+
+00:01:46.734 --> 00:01:48.667
+Assim, esse AsyncTask
+de terremoto
+
+00:01:48.701 --> 00:01:51.000
+pode funcionar
+para qualquer string de URL.
+
+00:01:51.033 --> 00:01:52.701
+Também vou devolver
+o objeto "Event"
+
+00:01:52.734 --> 00:01:54.868
+como o valor de retorno
+do método doInBackground.
+
+00:01:54.901 --> 00:01:58.067
+Também vamos override
+o método onPostExecute.
+
+00:01:58.100 --> 00:01:59.968
+Nele, recebemos o objeto
+"event"
+
+00:02:00.067 --> 00:02:03.300
+que foi devolvido mais cedo
+no método doInBackground.
+
+00:02:03.334 --> 00:02:06.667
+Ótimo, já definimos
+a AsyncTask.
+
+00:02:06.701 --> 00:02:09.167
+Vou também adicionar
+os comentários ao método
+
+00:02:09.200 --> 00:02:10.601
+e às classes também.
+
+00:02:10.634 --> 00:02:13.467
+Aqui na atividade principal,
+no método onCreate,
+
+00:02:13.501 --> 00:02:16.000
+agora posso criar
+uma nova tarefa.
+
+00:02:16.033 --> 00:02:17.667
+E chamar "executar"
+
+00:02:17.701 --> 00:02:20.167
+enquanto passo
+a URL específica.
+
+00:02:20.200 --> 00:02:23.367
+Vamos compilar
+e rodar o app.
+
+00:02:24.400 --> 00:02:27.267
+Legal. Veja.
+O app não trava mais.
+
+00:02:28.434 --> 00:02:29.634
+Como pode ver,
+
+00:02:29.667 --> 00:02:32.701
+o app mostra detalhes sobre
+um tremor de magnitude 7,8
+
+00:02:32.734 --> 00:02:34.067
+no Equador.
+
+00:02:34.100 --> 00:02:36.334
+183 pessoas sentiram.
+
+00:02:36.367 --> 00:02:40.000
+E, na média, eles reportaram
+que sentiram 9,1 em média.
+
+00:02:40.033 --> 00:02:42.434
+Foi um terremoto grande.
+
+00:02:43.400 --> 00:02:44.467
+De qualquer forma,
+
+00:02:44.501 --> 00:02:46.400
+se você quiser checar o código
+que eu escrevi,
+
+00:02:46.434 --> 00:02:48.901
+veja o link abaixo
+do GitHub.
+
+00:02:48.934 --> 00:02:52.234
+Se você conseguiu completar
+este exercício, meus parabéns.
+
+00:02:52.267 --> 00:02:54.467
+Se não, não tem problema.
+
+00:02:54.501 --> 00:02:57.200
+Para quem começou
+a aprender Java e Android
+
+00:02:57.234 --> 00:02:59.000
+há meses ou semanas,
+
+00:02:59.033 --> 00:03:00.968
+fazer uma chamada
+numa thread de 2º plano
+
+00:03:01.000 --> 00:03:03.634
+implementando
+métodos em subclasses,
+
+00:03:03.667 --> 00:03:05.133
+usando tipos genéricos...
+
+00:03:05.934 --> 00:03:07.868
+Nossa, são muitos conceitos!
+
+00:03:07.901 --> 00:03:10.033
+Tenha orgulho do que
+já conseguiu fazer.
+

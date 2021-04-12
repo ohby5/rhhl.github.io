@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.330 --> 00:00:03.170
+Well Chris, we've learned
+a lot about networking so far.
+
+00:00:03.170 --> 00:00:05.110
+So how are you feeling about
+getting some of that sweet,
+
+00:00:05.110 --> 00:00:07.710
+sweet networking code baked
+into our Quake Report app?
+
+00:00:07.710 --> 00:00:08.660
+&gt;&gt; I'm pretty pumped.
+
+00:00:08.660 --> 00:00:10.570
+We've made some good progress so far.
+
+00:00:10.570 --> 00:00:12.925
+I'd really like to get this
+app talking to the USGS.
+
+00:00:12.925 --> 00:00:14.435
+So we can get some
+live data into the app.
+
+00:00:14.435 --> 00:00:18.095
+&gt;&gt; Indeed, there's just a couple more
+concepts that we need to understand.
+
+00:00:18.095 --> 00:00:19.585
+&gt;&gt; Wait, which ones?
+
+00:00:19.585 --> 00:00:21.935
+&gt;&gt; Well, when handling network calls,
+
+00:00:21.935 --> 00:00:26.335
+we're relying on a lot of things to
+happen in a timely manner as you know.
+
+00:00:26.335 --> 00:00:28.995
+The device needs to connect
+to the wireless signal and
+
+00:00:28.995 --> 00:00:33.340
+send a request, then the server has to
+create a response and send it back.
+
+00:00:33.340 --> 00:00:37.380
+This can take an unknown amount of time,
+and we want the app to perform
+
+00:00:37.380 --> 00:00:41.060
+other tasks in the meantime,
+such as responding to user input.
+
+00:00:41.060 --> 00:00:44.912
+Working on several different tasks at
+the same time is known as multitasking.
+
+00:00:44.912 --> 00:00:47.126
+&gt;&gt; [LAUGH] Yeah,
+I'm great a multitasking.
+
+00:00:47.126 --> 00:00:48.240
+&gt;&gt; [LAUGH] Yeah.
+
+00:00:48.240 --> 00:00:52.220
+You can think of tasks
+as threads in Java.
+
+00:00:52.220 --> 00:00:55.605
+In this lesson, we'll show you how our
+app can take advantage of more than
+
+00:00:55.605 --> 00:00:56.924
+one thread at the same time.
+
+00:00:56.924 --> 00:01:01.372
+Now a single thread executes
+one task at a time in order,
+
+00:01:01.372 --> 00:01:06.410
+even when one of the tasks
+takes longer than expected.
+
+00:01:06.410 --> 00:01:09.950
+For example, imagine that
+you're baking something, and
+
+00:01:09.950 --> 00:01:11.870
+the first step is to preheat the oven.
+
+00:01:11.870 --> 00:01:12.720
+&gt;&gt; Okay.
+
+00:01:12.720 --> 00:01:14.720
+&gt;&gt; Well, what if you had to wait for
+
+00:01:14.720 --> 00:01:18.860
+your oven to warm to 400 degrees
+before you could do anything else?
+
+00:01:18.860 --> 00:01:20.660
+That'd be a bunch of wasted time, right?
+
+00:01:20.660 --> 00:01:21.410
+&gt;&gt; Yeah, for sure.
+
+00:01:21.410 --> 00:01:24.570
+&gt;&gt; Now it'd be much better if you
+could chop up the veggies and
+
+00:01:24.570 --> 00:01:28.080
+season the meat at the same time
+that the oven was heating up.
+
+00:01:28.080 --> 00:01:30.810
+Computers follow the same
+philosophy of trying to get
+
+00:01:30.810 --> 00:01:34.120
+things done at the same time,
+and we call this multitasking.
+
+00:01:35.260 --> 00:01:39.830
+At any rate, threads and
+parallelism are fundamental concepts of
+
+00:01:39.830 --> 00:01:42.900
+computer science, and you'll get
+a taste of them in this lesson.
+
+00:01:42.900 --> 00:01:46.180
+I thought it would be great to
+introduce a small sample app for
+
+00:01:46.180 --> 00:01:48.630
+the student to become comfortable
+with these ideas first.
+
+00:01:48.630 --> 00:01:49.600
+&gt;&gt; Wait, hold on a second.
+
+00:01:49.600 --> 00:01:50.860
+Another simple app?
+
+00:01:50.860 --> 00:01:52.230
+&gt;&gt; Yeah, trust me.
+
+00:01:52.230 --> 00:01:55.640
+It's a very small one called
+the Did You Feel It app.
+
+00:01:55.640 --> 00:02:00.045
+Once they get comfortable with these
+concepts of threads, I'll send them off
+
+00:02:00.045 --> 00:02:03.525
+to you so you can help them update
+the Quake Report app, deal?
+
+00:02:03.525 --> 00:02:04.508
+&gt;&gt; [SOUND] Okay, deal.
+
+00:02:04.508 --> 00:02:07.840
+At that point you'll be able to modify
+the Quake Report app to go fetch some
+
+00:02:07.840 --> 00:02:10.366
+earthquake data from the server,
+and at the same time,
+
+00:02:10.366 --> 00:02:12.920
+be ready to respond to user input.
+
+00:02:12.920 --> 00:02:16.620
+&gt;&gt; These concepts can be a challenge,
+even for advanced developers.
+
+00:02:16.620 --> 00:02:19.520
+So don't worry if you don't
+understand them right away.
+
+00:02:19.520 --> 00:02:21.110
+&gt;&gt; Agreed, and one more thing.
+
+00:02:21.110 --> 00:02:24.965
+Another fundamental idea in building
+apps is handling errors properly.
+
+00:02:24.965 --> 00:02:27.825
+That is, planning ahead for unique
+conditions in which your app may not be
+
+00:02:27.825 --> 00:02:30.225
+able to perform
+the functions as expected.
+
+00:02:30.225 --> 00:02:33.595
+So it's always a good idea to
+consider these what if scenarios, and
+
+00:02:33.595 --> 00:02:36.962
+then make the necessary adjustments
+in code to handle them gracefully.
+
+00:02:36.962 --> 00:02:40.642
+&gt;&gt; Cool, so in lesson three,
+we're going to learn about threads and
+
+00:02:40.642 --> 00:02:43.642
+parallelism, and
+finally update the Quake Report with
+
+00:02:43.642 --> 00:02:47.132
+the end to end networking code to
+fetch the data from the server.
+
+00:02:47.132 --> 00:02:47.742
+&gt;&gt; Sounds good.
+

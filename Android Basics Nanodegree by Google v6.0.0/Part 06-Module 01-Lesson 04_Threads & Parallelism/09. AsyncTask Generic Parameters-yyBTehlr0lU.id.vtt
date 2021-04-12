@@ -1,0 +1,377 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.025 --> 00:00:07.045
+AsyncTask punya tiga parameter generik,
+yaitu params, progress, dan result.
+
+00:00:07.045 --> 00:00:11.309
+Metode AsyncTask memanfaatkan generik
+ini sebagai placeholder untuk
+
+00:00:11.309 --> 00:00:14.360
+tipe data aktual yang ingin kita pakai.
+
+00:00:14.360 --> 00:00:17.536
+Anda lihat metode signature merujuk
+tipe data placeholder param, progress,
+
+00:00:17.536 --> 00:00:19.286
+dan result.
+
+00:00:19.286 --> 00:00:22.056
+Jika kita menjadikan AsyncTask
+sebagai subkelas dalam aplikasi kita,
+
+00:00:22.056 --> 00:00:26.647
+kita dapat mengganti placeholder
+dengan tipe data yang ingin kita pakai,
+
+00:00:26.647 --> 00:00:30.550
+seperti string atau earthquake atau
+tipe objek lainnya.
+
+00:00:30.550 --> 00:00:33.420
+Saya akan menjelaskan tujuan dari tiap
+parameter generik
+
+00:00:33.420 --> 00:00:35.650
+dalam konteks potongan
+kode di bawah ini.
+
+00:00:36.660 --> 00:00:39.960
+Kelas tugas unduh dokumen dimaksudkan
+untuk mengambil satu atau
+
+00:00:39.960 --> 00:00:44.740
+lebih URL, mengunduh masing-masing
+sambil memublikasikan kemajuan.
+
+00:00:44.740 --> 00:00:45.260
+Akhirnya,
+
+00:00:45.260 --> 00:00:50.610
+tugas mengembalikan ukuran total dari
+semua dokumen terunduh dalam unit byte
+
+00:00:50.610 --> 00:00:53.850
+Setelah kelas ini didefinisikan,
+kita perintahkan constructor
+
+00:00:53.850 --> 00:00:57.700
+untuk membuat contoh objek tugas
+unduh dokumen.
+
+00:00:57.700 --> 00:01:01.120
+Lalu, kita dapat mengeksekusi
+tugas dengan segera dan
+
+00:01:01.120 --> 00:01:05.330
+memasukkan jumlah URL dokumen berapa pun
+yang ingin kita ambil.
+
+00:01:05.330 --> 00:01:08.723
+Di sini kita masukkan
+url1, url2, dan url3.
+
+00:01:08.723 --> 00:01:12.421
+Mari lihat lebih dekat
+pada definisi kelas,
+
+00:01:12.421 --> 00:01:16.800
+yang merupakan subkelas yang
+meluas dari AsyncTask.
+
+00:01:16.800 --> 00:01:20.830
+Perhatikan bahwa nama AsyncTask diikuti
+dengan name tiga kelas
+
+00:01:20.830 --> 00:01:22.390
+dalam tanda kurung.
+
+00:01:22.390 --> 00:01:24.880
+Tipe generik pertama adalah params
+
+00:01:24.880 --> 00:01:28.620
+yang merupakan tipe data parameter
+yang dikirim ke tugas latar belakang.
+
+00:01:29.910 --> 00:01:33.840
+Dalam potongan kode, tipe
+data params adalah URL.
+
+00:01:33.840 --> 00:01:38.720
+Artinya, metode doInBackground akan
+menerima daftar input URL.
+
+00:01:38.720 --> 00:01:40.150
+Anda belum melihat notasi titik, titik,
+
+00:01:40.150 --> 00:01:44.250
+titik seperti ini tapi artinya ada
+beragam jumlah
+
+00:01:44.250 --> 00:01:48.930
+argumen yang dapat kita masukkan di sana,
+ini sering disebut varags.
+
+00:01:48.930 --> 00:01:51.800
+Berapa pun jumlah input di sini
+tetap valid selama memiliki
+
+00:01:51.800 --> 00:01:53.800
+tipe data yang sama, dalam hal ini URL.
+
+00:01:54.820 --> 00:01:58.649
+Artinya, Anda dapat mengeksekusi
+tugas dengan satu URL, dua URL, atau
+
+00:01:58.649 --> 00:02:02.105
+lebih bergantung pada berapa banyak
+dokumen yang ingin diunduh.
+
+00:02:02.105 --> 00:02:04.396
+Kembali ke metode do dan background,
+
+00:02:04.396 --> 00:02:08.949
+argumen input disimpan dalam
+variabel array bernama URL.s.
+
+00:02:08.949 --> 00:02:13.040
+Kita dapat memeriksa panjang
+array URL menggunakan urls.length,
+
+00:02:13.040 --> 00:02:17.000
+lalu kita dapat mengakses tiap elemen
+array menggunakan notasi tanda kurung
+
+00:02:17.000 --> 00:02:18.660
+siku yang telah Anda kenal.
+
+00:02:18.660 --> 00:02:22.940
+URL memberi kita akses ke elemen nol
+dalam array dan seterusnya.
+
+00:02:22.940 --> 00:02:26.650
+Dalam contoh ini, kita gunakan forloop
+untuk mengulang tiap elemen
+
+00:02:26.650 --> 00:02:32.220
+array URL dan mengunduh sebuah dokumen
+memakai kelas Download.
+
+00:02:32.220 --> 00:02:35.720
+Kita juga menyimpan total ukuran dokumen
+yang berjalan untuk semua dokumen
+
+00:02:35.720 --> 00:02:37.480
+dalam variabel bilangan bulat totalSize.
+
+00:02:38.510 --> 00:02:42.550
+Ingat, doInBackground berlangsung
+di luar thread UI.
+
+00:02:42.550 --> 00:02:46.630
+Aplikasi kita akan tetap responsif meskipun
+doInBackground butuh beberapa saat.
+
+00:02:47.870 --> 00:02:50.460
+Parameter generik kedua
+adalah progress.
+
+00:02:50.460 --> 00:02:51.770
+Yaitu tipe data yang digunakan untuk
+
+00:02:51.770 --> 00:02:54.750
+mengukur kemajuan pekerjaan yang
+dilakukan di thread latar belakang.
+
+00:02:56.170 --> 00:02:59.710
+Dalam tugas unduh dokumen, kita secara
+periodik memublikasi pembaruan dan
+
+00:02:59.710 --> 00:03:02.890
+memperbarui UI dengan
+persentase yang diselesaikan.
+
+00:03:02.890 --> 00:03:08.016
+Untuk itu, kita tentukan bilangan bulat
+sebagai parameter kemajuan.
+
+00:03:08.016 --> 00:03:11.360
+Artinya kita memanggil publish progress
+dengan nilai bilangan
+
+00:03:11.360 --> 00:03:14.479
+bulat sementara pekerjaan latar
+belakang berlangsung.
+
+00:03:14.479 --> 00:03:19.620
+Lalu, dalam metode onProgressUpdate,
+yang dipanggil oleh thread utama,
+
+00:03:19.620 --> 00:03:24.580
+kita menerima nilai input bilangan bulat
+dan bisa memodifikasi UI.
+
+00:03:24.580 --> 00:03:29.670
+Kita lihat lagi notasi tiga titik yang menyusul
+tipe data input di sini,
+
+00:03:29.670 --> 00:03:33.990
+yang berarti kita bisa menerima beragam
+jumlah argumen input.
+
+00:03:33.990 --> 00:03:38.450
+Jika Anda memanggil publish progress
+dari thread latar belakang dengan dua nilai,
+
+00:03:38.450 --> 00:03:42.330
+maka dalam onProgressUpdate Anda
+akan menerima dua input.
+
+00:03:42.330 --> 00:03:46.330
+Fungsionalitas ini berguna jika Anda
+mengunduh beberapa dokumen sekaligus,
+
+00:03:46.330 --> 00:03:49.450
+dan ingin menunjukkan nilai kemajuan
+yang berbeda untuk tiap dokumen.
+
+00:03:50.490 --> 00:03:55.040
+Sama dengan input URL di atas,
+variabel progress merupakan array.
+
+00:03:55.040 --> 00:03:59.380
+Kita dapat mengakses tiap nilai kemajuan
+menggunakan tanda kurung siku dengan posisi indeks,
+
+00:03:59.380 --> 00:04:02.460
+misalnya kemajuan sebesar nol.
+
+00:04:02.460 --> 00:04:05.890
+Lalu kita dapat memperbarui UI dengan
+nilai kemajuan yang baru.
+
+00:04:07.030 --> 00:04:11.340
+Sama dengan input URL di atas,
+variabel progress merupakan array.
+
+00:04:12.400 --> 00:04:16.089
+Kita dapat mengakses tiap nilai kemajuan
+menggunakan tanda kurung siku dengan posisi indeks,
+
+00:04:16.089 --> 00:04:19.290
+misalnya kemajuan sebesar nol.
+
+00:04:19.290 --> 00:04:21.990
+Lalu kita dapat memperbarui UI dengan
+nilai kemajuan yang baru.
+
+00:04:23.890 --> 00:04:28.170
+Kita tiba pada tipe data generik ketiga
+dan terakhir bernama result.
+
+00:04:29.220 --> 00:04:34.080
+Result merupakan tipe data pada nilai
+yang kembali dari metode doInBackground.
+
+00:04:34.080 --> 00:04:37.880
+Anda bisa memahaminya sebagai tipe data
+hasil dari pekerjaan latar belakang.
+
+00:04:39.340 --> 00:04:43.950
+Dalam hal ini, kita mengembalikan ukuran
+total setelah semua dokumen terunduh.
+
+00:04:43.950 --> 00:04:49.240
+Metode signature pada doInBackground
+menetapkan long sebagai tipe data kembali.
+
+00:04:49.240 --> 00:04:52.610
+Perhatikan bahwa long dieja
+dengan L kapital.
+
+00:04:52.610 --> 00:04:57.530
+Dulu, kita pernah melihat long sebagai
+tipe data Java primitif seperti int,
+
+00:04:57.530 --> 00:05:00.630
+yang mencakup kisaran angka yang luas.
+
+00:05:00.630 --> 00:05:05.210
+Tapi, tipe data generik harus merupakan
+tipe data objek di sini.
+
+00:05:05.210 --> 00:05:09.670
+Maka kita pakai Long dengan L kapital,
+yang merupakan versi objek
+
+00:05:09.670 --> 00:05:12.550
+ditempatkan di sekitar tipe data
+long primitif yang lama.
+
+00:05:12.550 --> 00:05:18.010
+Dalam AsyncTask, hasil Long diberikan
+ke onPostExecute.
+
+00:05:18.010 --> 00:05:20.420
+Yang sekarang kembali ke thread UI.
+
+00:05:20.420 --> 00:05:24.130
+Kita tidak menggunakan penandaan titik-titik
+argumen beragam disini
+
+00:05:24.130 --> 00:05:26.800
+Input untuk metode onPostExecute
+
+00:05:26.800 --> 00:05:31.620
+harus berupa nilai tunggal dengan tipe
+data yang ditetapkan dalam deklarasi kelas.
+
+00:05:31.620 --> 00:05:32.670
+Dalam contoh ini,
+
+00:05:32.670 --> 00:05:37.250
+kita hanya ingin menunjukkan dialog
+dengan ukuran dokumen yang kita peroleh.
+
+00:05:37.250 --> 00:05:40.120
+Bergantung pada bagaimana
+subkelas diimplementasikan,
+
+00:05:40.120 --> 00:05:43.140
+mungkin kita tidak memerlukan semua
+tipe data generik.
+
+00:05:43.140 --> 00:05:47.820
+Misalnya, mungkin tidak ada parameter
+input, tidak ada nilai kembali, atau
+
+00:05:47.820 --> 00:05:49.510
+tidak ada nilai kemajuan.
+
+00:05:49.510 --> 00:05:53.740
+Dalam kasus itu, gunakan Void untuk
+parameter tipe generik.
+
+00:05:53.740 --> 00:05:57.600
+Pastikan Anda memakai V kapital dalam
+Void karena parameter generik
+
+00:05:57.600 --> 00:06:00.442
+harus merupakan tipe data objek.
+
+00:06:00.442 --> 00:06:03.183
+Tiba saatnya untuk kuis untuk memperkokoh
+apa yang telah Anda pelajari.
+
+00:06:03.183 --> 00:06:07.438
+Perhatikan kode StepIt dan isilah
+ruang kosong untuk tipe generik dan
+
+00:06:07.438 --> 00:06:10.510
+deklarasi kelas untuk
+tugas unduh laman web.
+

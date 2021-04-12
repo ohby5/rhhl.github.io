@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.133
+Vimos a teoria
+por trás de loaders
+
+00:00:02.167 --> 00:00:03.734
+e um exemplo de código.
+
+00:00:03.767 --> 00:00:05.033
+Então...
+
+00:00:06.367 --> 00:00:10.267
+Prepare-se para implementar
+um loader no app de tremores.
+
+00:00:10.300 --> 00:00:13.434
+Seu app já consegue
+extrair dados da internet,
+
+00:00:13.467 --> 00:00:16.033
+e nesta tarefa você vai
+refatorar o app
+
+00:00:16.067 --> 00:00:19.434
+para usar AsyncTaskLoader
+em vez de AsyncTask.
+
+00:00:19.467 --> 00:00:21.968
+Refatoração significa mudar
+os detalhes de implementação
+
+00:00:22.000 --> 00:00:23.868
+da estrutura do seu código,
+
+00:00:23.901 --> 00:00:26.667
+porém mantendo o mesmo
+comportamento externo.
+
+00:00:26.701 --> 00:00:28.968
+A interface terá a mesma
+aparência e execução
+
+00:00:29.000 --> 00:00:31.367
+e o usuário não perceberá
+nenhuma diferença.
+
+00:00:31.400 --> 00:00:35.868
+Mas seremos mais eficazes
+porque o loader lida bem melhor
+
+00:00:35.901 --> 00:00:38.467
+com as rotações
+e o clico de vida da atividade.
+
+00:00:38.501 --> 00:00:41.834
+Há três partes que precisamos
+montar para trocar a AsyncTask
+
+00:00:41.868 --> 00:00:43.734
+para uma AsyncTaskLoader.
+
+00:00:43.767 --> 00:00:47.701
+Primeiro, temos que escrever
+uma subclasse da AsyncTaskLoader
+
+00:00:47.734 --> 00:00:50.734
+que chamaremos de classe
+EarthquakeLoader.
+
+00:00:50.767 --> 00:00:53.567
+O método mais importante
+é LoadInBackground
+
+00:00:53.601 --> 00:00:56.667
+que funciona o método
+doInBackGround da AsyncTask.
+
+00:00:56.701 --> 00:01:01.033
+Depois, precisamos ligar
+o EarthquakeActivity ao loader.
+
+00:01:01.067 --> 00:01:04.334
+Temos que implementar
+a interface LoaderCallbacks.
+
+00:01:04.367 --> 00:01:08.267
+Dessa forma, o LoaderManager pode
+nos notificar para criar um loader
+
+00:01:08.300 --> 00:01:11.067
+ou notificar se o loader
+tem resultados.
+
+00:01:11.100 --> 00:01:13.767
+Por fim, quando
+a EarthquakeActivity é criada,
+
+00:01:13.801 --> 00:01:17.367
+pedimos para o LoaderManager
+iniciar um novo EarthquakeLoader
+
+00:01:17.400 --> 00:01:19.367
+ou usar um existe.
+
+00:01:19.400 --> 00:01:21.767
+Veja outra forma de pensar
+em refatoração.
+
+00:01:21.801 --> 00:01:23.901
+Queremos transferir o código
+
+00:01:23.934 --> 00:01:26.567
+que estava no método
+doInBackground da AsyncTask
+
+00:01:26.601 --> 00:01:29.901
+para o método
+LoadInBackground do loader.
+
+00:01:29.934 --> 00:01:34.400
+Já o método onPostExecute
+da Asynctask deve ser transferido
+
+00:01:34.434 --> 00:01:37.734
+para o método onLoadFinished
+da Earthquakeactivity
+
+00:01:37.767 --> 00:01:39.634
+porque ele roda
+na thread principal.
+
+00:01:39.667 --> 00:01:41.934
+Nesse método, pegamos
+o resultado do loader
+
+00:01:41.968 --> 00:01:43.701
+e atualizamos a interface.
+
+00:01:43.734 --> 00:01:46.534
+Para mais uma dica,
+veja as notas abaixo do quiz
+
+00:01:46.567 --> 00:01:49.367
+para um código parcial
+que pode ajudá-lo no começo.
+
+00:01:49.400 --> 00:01:52.000
+O código não tem todos
+os detalhes de um arquivo Java,
+
+00:01:52.033 --> 00:01:54.501
+como um nome de pacote
+ou declarações de entrada,
+
+00:01:54.534 --> 00:01:56.434
+mas deve apontá-lo
+na direção certa.
+
+00:01:56.467 --> 00:01:58.167
+Quando terminar
+estes três passos,
+
+00:01:58.200 --> 00:02:00.701
+assinale estas caixas
+para continuar.
+

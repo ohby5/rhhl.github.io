@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.055
+We've covered that theory behind loaders,
+
+00:00:02.055 --> 00:00:03.480
+as well as a code sample.
+
+00:00:03.480 --> 00:00:10.280
+So, you're ready to practice implementing a loader on your own in a quick Report App.
+
+00:00:10.280 --> 00:00:13.500
+Your App already successfully fetches earthquake data from the Internet.
+
+00:00:13.500 --> 00:00:16.305
+So in this task, you'll be refactoring your app to use
+
+00:00:16.305 --> 00:00:19.190
+an AsyncTaskLoader instead of an AsyncTask.
+
+00:00:19.190 --> 00:00:20.880
+Code refactoring means changing
+
+00:00:20.880 --> 00:00:23.820
+the implementation details of how your code is structured,
+
+00:00:23.820 --> 00:00:26.505
+while still maintaining the same external behavior.
+
+00:00:26.505 --> 00:00:28.680
+The UI will still look and behave the same,
+
+00:00:28.680 --> 00:00:31.420
+so the end user of the app won't notice the difference.
+
+00:00:31.420 --> 00:00:34.440
+But now will be more memory efficient because loaders can
+
+00:00:34.440 --> 00:00:38.100
+handle device rotations and the activity life cycle much better.
+
+00:00:38.100 --> 00:00:40.620
+There are three pieces we need to put together to
+
+00:00:40.620 --> 00:00:43.575
+swap out our AsyncTask for an AsyncTaskLoader.
+
+00:00:43.575 --> 00:00:47.680
+First, we need to write a subclass of the AsyncTaskLoader,
+
+00:00:47.680 --> 00:00:50.505
+which will call the earthquakeLoader class.
+
+00:00:50.505 --> 00:00:52.770
+The most important method is load and
+
+00:00:52.770 --> 00:00:56.480
+background which works just like AsyncTasks do in background.
+
+00:00:56.480 --> 00:01:00.840
+Next, we need to do some plumbing to allow earthquake activity to use our Loader.
+
+00:01:00.840 --> 00:01:04.320
+So we need to implement the LoaderCallbacks interface.
+
+00:01:04.320 --> 00:01:07.590
+That way, the Loader manager can either notify us to create
+
+00:01:07.590 --> 00:01:10.905
+a Loader or notify us when our Loader has results to deliver.
+
+00:01:10.905 --> 00:01:13.755
+Finally, when the EarthquakeActivity is created,
+
+00:01:13.755 --> 00:01:16.065
+we should ask the Loader manager to initialize
+
+00:01:16.065 --> 00:01:19.200
+a new Earthquake Loader or we use an existing one.
+
+00:01:19.200 --> 00:01:21.680
+Here's another way to think about the code refactoring.
+
+00:01:21.680 --> 00:01:24.225
+In essence, you want to move over the code that was in
+
+00:01:24.225 --> 00:01:29.575
+the AsyncTasks doInBackground method to the Loaders, LoadInBackground method.
+
+00:01:29.575 --> 00:01:33.030
+As for the AsyncTasks onPostsExecute method,
+
+00:01:33.030 --> 00:01:37.425
+that code should be moved over to the Earthquake Activities onLoadFinished method,
+
+00:01:37.425 --> 00:01:39.375
+because that's run on the main threat.
+
+00:01:39.375 --> 00:01:43.335
+In this method, we take the result from the Loader and update the UI.
+
+00:01:43.335 --> 00:01:45.990
+As an extra hint, you can check the notes below
+
+00:01:45.990 --> 00:01:49.215
+the quiz for a jest with some partial code to help you get started.
+
+00:01:49.215 --> 00:01:51.940
+It doesn't have all the details of a proper java file,
+
+00:01:51.940 --> 00:01:54.450
+such as a package name or import statements,
+
+00:01:54.450 --> 00:01:56.325
+but hopefully, it points you in the right direction.
+
+00:01:56.325 --> 00:01:57.990
+When you're done with these three steps,
+
+00:01:57.990 --> 00:02:00.780
+check these boxes right here to continue.
+

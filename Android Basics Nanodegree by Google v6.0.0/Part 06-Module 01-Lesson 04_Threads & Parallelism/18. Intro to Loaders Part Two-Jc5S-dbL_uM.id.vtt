@@ -1,0 +1,486 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.080 --> 00:00:03.107
+Anda menyebutkan bahwa saat activity
+menerapkan metode LoaderCallBack
+
+00:00:03.107 --> 00:00:06.050
+onCreateLoader, kita perlu membuat dan
+mengembalikan loader.
+
+00:00:06.050 --> 00:00:07.720
+Jadi, bagaimana kita melakukannya?
+
+00:00:07.720 --> 00:00:12.132
+Untuk membuat loader, kita pergi ke
+subkelas kelas AsyncTaskLoader.
+
+00:00:12.132 --> 00:00:15.590
+AsyncTaskLoader memiliki semua
+keunggulan loader,
+
+00:00:15.590 --> 00:00:18.260
+misalnya dikelola oleh
+loader manager.
+
+00:00:18.260 --> 00:00:22.680
+Di balik layar, sebenarnya menggunakan
+AsyncTask untuk melakukan tugas tersebut.
+
+00:00:22.680 --> 00:00:26.630
+Sekarang kita berinteraksi dengan
+AsyncTaskLoader seperti loader lainnya.
+
+00:00:26.630 --> 00:00:30.570
+Perhatikan bahwa AsyncTaskLoader mewarisi
+perilaku dari kelas loader.
+
+00:00:30.570 --> 00:00:33.050
+Ini juga merupakan kelas generik dengan
+parameter generik D.
+
+00:00:34.150 --> 00:00:37.780
+Scroll ke bawah di bagian metode publik,
+kita lihat bahwa parameter D
+
+00:00:37.780 --> 00:00:41.290
+digunakan sebagai nilai kembali
+dari metode loadInBackground.
+
+00:00:41.290 --> 00:00:45.030
+Metode ini juga abstrak, artinya kita perlu
+menentukan perilakunya dan
+
+00:00:45.030 --> 00:00:48.350
+kita perlu mengembalikan nilai dengan tipe
+data apa pun pilihan kita.
+
+00:00:48.350 --> 00:00:51.400
+Selama deklarasi kelas menentukan
+tipe data apa itu
+
+00:00:51.400 --> 00:00:52.220
+maka dapat dipakai.
+
+00:00:54.410 --> 00:00:56.861
+Saya rasa contoh konkret akan membantu
+Anda mengklarifikasi dan
+
+00:00:56.861 --> 00:00:59.145
+mengombinasikan semua hal yang
+baru saja kita bahas.
+
+00:00:59.145 --> 00:01:02.274
+Tapi tutorial ini agak lawas seperti terlihat
+dari UI-nya, tapi
+
+00:01:02.274 --> 00:01:04.590
+saya suka kesederhanaan kode ini.
+
+00:01:04.590 --> 00:01:08.390
+Tujuan kode ini adalah menunjukkan daftar
+karyawan dalam ListView
+
+00:01:08.390 --> 00:01:11.429
+dengan memuat data dari thread latar
+belakang dalam AsyncTaskLoader.
+
+00:01:12.440 --> 00:01:14.650
+Halaman situsnya ditautkan di bawah jika
+Anda ingin memeriksanya nanti.
+
+00:01:15.730 --> 00:01:18.030
+Mari lihat kelas EmployeeLoader.
+
+00:01:18.030 --> 00:01:21.770
+Seperti Anda lihat, kita mengextend
+kelas AsyncTaskLoader.
+
+00:01:21.770 --> 00:01:25.950
+Untuk parameter generik dalam tanda kurung,
+kita memerinci daftar karyawan.
+
+00:01:25.950 --> 00:01:29.230
+Artinya, nilai kembali dari
+metode loadInBackground
+
+00:01:29.230 --> 00:01:30.970
+adalah daftar karyawan.
+
+00:01:30.970 --> 00:01:34.150
+Baik, jadi di dalam
+metode loadInBackground,
+
+00:01:34.150 --> 00:01:36.880
+kita lihat daftar array
+karyawan yang baru dibuat.
+
+00:01:36.880 --> 00:01:40.670
+Kita tambahkan tiga entri ke dalam daftar
+lalu mengembalikan daftar.
+
+00:01:40.670 --> 00:01:41.400
+Secara teknis,
+
+00:01:41.400 --> 00:01:44.580
+pekerjaan yang dilakukan dalam metode ini
+dapat dilakukan di thread utama.
+
+00:01:44.580 --> 00:01:48.090
+Karena bukan kalkulasi yang rumit
+atau panggilan jaringan.
+
+00:01:48.090 --> 00:01:50.760
+Tapi penulis artikel ini hanya ingin
+contoh sederhana untuk menunjukkan
+
+00:01:50.760 --> 00:01:52.220
+kelas AsyncTaskLoader.
+
+00:01:53.430 --> 00:01:57.210
+Ada juga constructor untuk membuat
+contoh EmployeeLoader yang baru.
+
+00:01:57.210 --> 00:02:00.010
+Di dalamnya, kita hanya memanggil
+constructor kelas super dan
+
+00:02:00.010 --> 00:02:02.890
+memasukkan konteks, lalu selesai.
+
+00:02:02.890 --> 00:02:06.150
+Lihat, loader cukup mudah
+untuk diterapkan.
+
+00:02:06.150 --> 00:02:07.520
+Mari mundur sedikit.
+
+00:02:07.520 --> 00:02:11.009
+Kita bisa lihat bagaimana loader
+digunakan dalam konteks aplikasi.
+
+00:02:11.009 --> 00:02:13.235
+Dalam deklarasi kelas activity,
+
+00:02:13.235 --> 00:02:17.103
+kita lihat bahwa MainActivity bercabang
+dari FragmentActivity.
+
+00:02:17.103 --> 00:02:20.700
+Lalu mengimplementasikan antarmuka
+LoaderManeger LoaderCallbacks.
+
+00:02:20.700 --> 00:02:24.290
+Tipe generik yang diperinci
+adalah daftar karyawan.
+
+00:02:24.290 --> 00:02:26.138
+Scroll ke bawah, seperti Anda lihat,
+
+00:02:26.138 --> 00:02:30.494
+artinya activity harus mengimplementasikan
+tiga metode panggilan balik abstrak,
+
+00:02:30.494 --> 00:02:34.410
+onCreateLoader, onLoaderFinished, dan
+onLoaderReset.
+
+00:02:34.410 --> 00:02:38.309
+Perhatikan bahwa tipe data List Employee
+digunakan di seluruh
+
+00:02:38.309 --> 00:02:39.000
+metode panggilan balik.
+
+00:02:39.000 --> 00:02:40.620
+Walaupun ada banyak
+tanda kurung,
+
+00:02:40.620 --> 00:02:43.520
+perlakukan saja List Employee
+sebagai satu potongan tunggal.
+
+00:02:43.520 --> 00:02:47.029
+Potongan ini juga disisipkan ke dalam berbagai
+spot berbeda di seluruh tanda tangan metode
+
+00:02:47.029 --> 00:02:47.720
+panggilan balik.
+
+00:02:47.720 --> 00:02:51.440
+Misalnya, dalam metode onCreateLoader,
+mengembalikan loader yang memuat
+
+00:02:51.440 --> 00:02:54.680
+data dalam bentuk daftar karyawan,
+potongan yang sama yang dipakai di atas.
+
+00:02:55.840 --> 00:02:59.190
+Dalam metode ini, kita membuat
+EmployeeLoader yang baru,
+
+00:02:59.190 --> 00:03:04.010
+yang bercabang dari List Employee loader,
+jadi cocok dengan nilai kembali yang diminta.
+
+00:03:04.010 --> 00:03:05.960
+Lalu kita kembalikan contoh loader.
+
+00:03:05.960 --> 00:03:10.080
+Dalam metode onLoadFinished,
+kita menerima dua input.
+
+00:03:10.080 --> 00:03:12.100
+Loader dan hasil.
+
+00:03:12.100 --> 00:03:14.810
+Hasilnya adalah tipe data
+List Employee dan
+
+00:03:14.810 --> 00:03:17.610
+loader memuat data List Employee.
+
+00:03:17.610 --> 00:03:20.740
+Nilai asli yang kita perhatikan adalah
+objek hasil ini.
+
+00:03:20.740 --> 00:03:24.150
+Kita ambil daftar karyawan dan perbarui
+rangkaian data dalam adapter yang
+
+00:03:24.150 --> 00:03:26.580
+akan memperbarui list view
+yang terikat dengannya.
+
+00:03:26.580 --> 00:03:31.610
+Dalam metode onLoadReset, kita
+menerima satu input, yaitu loader itu sendiri.
+
+00:03:31.610 --> 00:03:34.090
+Karena kita hanya punya satu
+loader dalam activity,
+
+00:03:34.090 --> 00:03:38.210
+kita bisa hapus data sebelumnya yang
+diberikan loader kepada kita tadi.
+
+00:03:38.210 --> 00:03:41.620
+Jadi kita atur rangkaian data adapter menjadi
+daftar karyawan yang kosong.
+
+00:03:41.620 --> 00:03:43.090
+Begini skenario utuhnya.
+
+00:03:43.090 --> 00:03:45.765
+Pertama-tama, untuk menyalakan loader
+di dalam activity,
+
+00:03:45.765 --> 00:03:48.300
+kita ambil LoaderManager dan memanggil
+initLoader dengannya.
+
+00:03:49.340 --> 00:03:54.150
+GetSupportLoaderManager itu
+sama dengan getLoaderManager.
+
+00:03:54.150 --> 00:03:57.808
+Tapi versi ini memakai versi loader
+dukungan LoaderManager.
+
+00:03:57.808 --> 00:04:01.300
+Di dalam panggilan initLoader, manager
+mula-mula memeriksa apakah loader
+
+00:04:01.300 --> 00:04:05.550
+telah dibuat dan mengirim balik
+salinannya jika sudah ada.
+
+00:04:05.550 --> 00:04:07.470
+Jika contoh loader tidak ada,
+
+00:04:07.470 --> 00:04:10.850
+panggilan balik onCreateLoader dipicu
+untuk membuat contoh baru.
+
+00:04:10.850 --> 00:04:13.410
+Lalu kita buat contoh EmployeeLoader
+yang baru dan mengembalikannya.
+
+00:04:14.546 --> 00:04:17.870
+Ini skenario utuhnya, pertama-tama, untuk
+menyalakan loader di dalam activity,
+
+00:04:17.870 --> 00:04:22.190
+kita ambil LoaderManager dan memanggil
+initLoader dengannya.
+
+00:04:22.190 --> 00:04:26.360
+SupportLoaderManager itu sama dengan
+getLoaderManager.
+
+00:04:26.360 --> 00:04:29.235
+Tapi versi ini menggunakan versi loader
+dukungan LoaderManager.
+
+00:04:30.580 --> 00:04:33.950
+Maka di dalam panggilan initLoader,
+mula-mula manager memeriksa apakah
+
+00:04:33.950 --> 00:04:37.960
+loader telah dibuat dan memberikan
+salinannya jika ada.
+
+00:04:38.990 --> 00:04:40.940
+Jika contoh loader tidak ada,
+
+00:04:40.940 --> 00:04:43.650
+maka panggilan balik onCreateLeader dipicu
+untuk membuat contoh yang baru.
+
+00:04:44.780 --> 00:04:47.640
+Lalu kita buat contoh EmployeeLoader
+yang baru dan mengembalikannya.
+
+00:04:47.640 --> 00:04:52.070
+Anda perhatikan bahwa setelah kita inisialisasi
+loader, kode memanggil forceLoad.
+
+00:04:52.070 --> 00:04:54.860
+Ini diperlukan untuk memicu loader agar
+memulai pekerjaan latar belakang.
+
+00:04:56.070 --> 00:04:58.570
+Tapi, adalah praktik bagus jika
+meletakkan panggilan forceLoad
+
+00:04:58.570 --> 00:05:00.680
+di dalam subkelas loader.
+
+00:05:00.680 --> 00:05:03.607
+Anda mengoverride metode
+onStartLoading di dalam kelas loader dan
+
+00:05:03.607 --> 00:05:05.050
+lalu memanggil forceLoad dari sana.
+
+00:05:06.090 --> 00:05:10.170
+Metode onStartLoading dipicu secara
+otomatis dari initLoader.
+
+00:05:10.170 --> 00:05:12.900
+Oke, setelah kita panggil forceLoad,
+lalu loader dimulai.
+
+00:05:13.962 --> 00:05:17.260
+Metode loadInBackground dijalankan di
+thread latar belakang dan
+
+00:05:17.260 --> 00:05:21.470
+daftar karyawan dibuat dan dikembalikan
+sebagai hasil dari loader.
+
+00:05:21.470 --> 00:05:25.090
+Setelah loader selesai memuat data,
+loader akan memberi tahu LoaderManager
+
+00:05:25.090 --> 00:05:27.758
+yang kemudian mengirim data ke
+metode onLoadFinished.
+
+00:05:27.758 --> 00:05:31.890
+Setelah metode onLoadFinished dipanggil
+dengan daftar karyawan,
+
+00:05:31.890 --> 00:05:35.425
+lalu kita perbarui adapter dengan data yang
+baru, yang menyebabkan daftar diperbarui dan
+
+00:05:35.425 --> 00:05:36.400
+menarik ulang.
+
+00:05:36.400 --> 00:05:38.340
+Saat activity kita dimatikan,
+
+00:05:38.340 --> 00:05:41.140
+LoaderManager akan mengurus
+penutupan loader kita.
+
+00:05:41.140 --> 00:05:44.150
+Dan akan memberi tahu kita saat data
+disediakan oleh loader
+
+00:05:44.150 --> 00:05:45.780
+tidak lagi valid.
+
+00:05:45.780 --> 00:05:49.660
+Dalam hal ini, kita harus membuangnya
+dari UI dan tidak menggunakannya lagi.
+
+00:05:49.660 --> 00:05:52.130
+Jika activity dimatikan sebelum
+pemuatan selesai,
+
+00:05:52.130 --> 00:05:54.220
+maka metode ini tak akan dipanggil.
+
+00:05:54.220 --> 00:05:56.070
+Jika kita jalankan kode ini di perangkat,
+
+00:05:56.070 --> 00:05:57.920
+aplikasi akan tampak
+seperti screenshot ini.
+
+00:05:58.930 --> 00:06:01.450
+Saya tahu, UI-nya tampak usang.
+
+00:06:01.450 --> 00:06:04.220
+Tapi ini disebabkan emulator dalam Android
+Studio telah diperbarui sedikit
+
+00:06:04.220 --> 00:06:06.520
+sejak tutorial ini dibuat.
+
+00:06:06.520 --> 00:06:08.870
+Sekarang kita telah selesai membahas
+cara kerja panggilan balik Loader dan
+
+00:06:08.870 --> 00:06:11.010
+Loader Manager.
+
+00:06:11.010 --> 00:06:13.070
+Karena kita membahas cara mengimplementasikan
+Loader dalam video ini,
+
+00:06:13.070 --> 00:06:16.740
+saya ingin Anda mencoba kuis berikut
+dengan mengisi titik-titik.
+
+00:06:16.740 --> 00:06:20.800
+Tipe Loader apa yang memakai AsyncTask
+untuk melakukan pekerjaan latar belakang?
+
+00:06:20.800 --> 00:06:24.240
+Untuk membuat Loader kustom yang
+mengambil daftar objek gempa bumi,
+
+00:06:24.240 --> 00:06:28.010
+kita dapat menentukan kelas
+EarthquakeLoader yang bercabang dari apa?
+
+00:06:28.010 --> 00:06:31.440
+Di dalam kelas EarthquakeLoader, kita perlu
+mengeoverride metode apa,
+
+00:06:31.440 --> 00:06:34.970
+yang akan menjalankan thread latar belakang
+dan mengembalikan daftar Earthquakes.
+
+00:06:34.970 --> 00:06:36.090
+Sebagai petunjuk,
+
+00:06:36.090 --> 00:06:39.260
+Anda bisa memilih kemungkinan pilihan
+jawaban di catatan di bawah kuis.
+

@@ -1,0 +1,215 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.968
+Chris, aprendemos muito
+sobre redes.
+
+00:00:03.000 --> 00:00:07.601
+O que acha de misturar esses códigos
+de rede no app de tremores?
+
+00:00:07.634 --> 00:00:10.100
+Estou empolgado.
+Progredimos bem até agora.
+
+00:00:10.133 --> 00:00:12.434
+Quero fazer este app
+falar com o USGS
+
+00:00:12.467 --> 00:00:14.300
+para pegar dados
+em tempo real.
+
+00:00:14.334 --> 00:00:17.801
+Mas falta alguns conceitos
+que precisamos entender.
+
+00:00:17.834 --> 00:00:19.167
+Quais?
+
+00:00:19.200 --> 00:00:21.667
+Quando lidamos com redes,
+
+00:00:21.701 --> 00:00:25.601
+várias coisas têm que acontecer
+num período curto de tempo.
+
+00:00:25.634 --> 00:00:29.767
+O aparelho tem que se conectar
+a um sinal e enviar a requisição.
+
+00:00:29.801 --> 00:00:33.067
+Depois o servidor tem que criar
+uma resposta e enviá-la.
+
+00:00:33.100 --> 00:00:35.434
+Não sabemos quanto tempo
+isso pode levar
+
+00:00:35.467 --> 00:00:38.801
+e queremos que o app
+faça outras coisas enquanto aguarda,
+
+00:00:38.834 --> 00:00:40.868
+como responder ao usuário.
+
+00:00:40.901 --> 00:00:45.067
+A capacidade de fazer várias tarefas
+ao mesmo tempo é ser multitarefa.
+
+00:00:45.100 --> 00:00:47.734
+-Sou ótimo nisso.
+-Está certo.
+
+00:00:47.767 --> 00:00:51.467
+Pense em tarefas
+como threads no Java.
+
+00:00:51.501 --> 00:00:54.234
+Nesta lição,
+vamos ver como o app
+
+00:00:54.267 --> 00:00:57.334
+pode aproveitar vários threads
+ao mesmo tempo.
+
+00:00:57.868 --> 00:01:02.400
+Uma thread executa
+uma tarefa por vez em ordem,
+
+00:01:02.434 --> 00:01:05.968
+mesmo que uma tarefa
+dure mais que o esperado.
+
+00:01:06.000 --> 00:01:09.334
+Por exemplo, imagine
+que você está assando algo.
+
+00:01:09.367 --> 00:01:12.033
+O 1º passo
+é preaquecer o forno.
+
+00:01:12.067 --> 00:01:16.133
+E se você tivesse que esperar
+o forno chegar a 200°
+
+00:01:16.167 --> 00:01:18.267
+antes de começar?
+
+00:01:18.300 --> 00:01:20.534
+Seria uma perda de tempo.
+
+00:01:20.567 --> 00:01:25.033
+Seria melhor se desse para cortar
+os vegetais e temperar a carne
+
+00:01:25.067 --> 00:01:27.534
+enquanto o forno aquece.
+
+00:01:27.567 --> 00:01:31.734
+Computadores tentam fazer
+várias coisas ao mesmo tempo
+
+00:01:31.767 --> 00:01:34.901
+e isso é chamado
+de multitarefa.
+
+00:01:34.934 --> 00:01:40.567
+Threads e paralelismo são conceitos
+fundamentais da computação
+
+00:01:40.601 --> 00:01:43.000
+e você vai experimentá-los
+nesta lição.
+
+00:01:43.033 --> 00:01:45.734
+Pensei em apresentar
+um app simples e pequeno
+
+00:01:45.767 --> 00:01:48.501
+para o aluno se familiarizar
+com essas ideais.
+
+00:01:48.534 --> 00:01:50.534
+Espera.
+Outro app de exemplo?
+
+00:01:50.567 --> 00:01:51.934
+Confie em mim.
+
+00:01:51.968 --> 00:01:55.200
+É um app bem pequeno
+chamado "Você Sentiu?".
+
+00:01:55.234 --> 00:01:58.934
+Assim que os alunos entenderem
+threads, eu os passo para você
+
+00:01:58.968 --> 00:02:01.634
+e você os ajuda a atualizar
+o app de tremores.
+
+00:02:01.667 --> 00:02:03.934
+-Fechado?
+-Está bem.
+
+00:02:03.968 --> 00:02:06.968
+Depois disso, você poderá
+modificar o app de tremores
+
+00:02:07.000 --> 00:02:09.300
+para que ele busque dados
+no servidor
+
+00:02:09.334 --> 00:02:12.234
+enquanto responde
+a comandos do usuário.
+
+00:02:12.267 --> 00:02:16.234
+Estes conceitos são desafiadores,
+até para desenvolvedores avançados.
+
+00:02:16.267 --> 00:02:19.300
+Não se preocupe se você
+não entendê-los logo de cara.
+
+00:02:19.334 --> 00:02:20.767
+Concordo. Mais uma coisa.
+
+00:02:20.801 --> 00:02:24.400
+Outra ideia fundamental
+da criação apps é lidar com erros.
+
+00:02:24.434 --> 00:02:26.567
+Você tem que antever
+condições únicas
+
+00:02:26.601 --> 00:02:29.601
+que possam impedir
+que o app execute suas funções.
+
+00:02:29.634 --> 00:02:32.901
+Vale a pena considerar
+esses possíveis cenários
+
+00:02:32.934 --> 00:02:36.567
+e fazer os ajustes no código
+para lidar com eles.
+
+00:02:36.601 --> 00:02:41.100
+Bacana. Na lição 3 vamos falar
+de threads e paralelismo
+
+00:02:41.133 --> 00:02:44.767
+e atualizar o app de tremores
+com o código de rede
+
+00:02:44.801 --> 00:02:46.868
+para buscar os dados
+no servidor.
+
+00:02:46.901 --> 00:02:48.200
+Parece ótimo.
+

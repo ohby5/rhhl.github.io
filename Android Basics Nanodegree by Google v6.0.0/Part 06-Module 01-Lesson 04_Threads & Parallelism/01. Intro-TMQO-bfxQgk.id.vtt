@@ -1,0 +1,226 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.330 --> 00:00:03.170
+Chris, kita telah belajar banyak
+tentang jaringan sejauh ini.
+
+00:00:03.170 --> 00:00:05.110
+Jadi bagaimana menurutmu jika
+masukkan kode jaringan
+
+00:00:05.110 --> 00:00:07.710
+manis yang telah kita masak itu
+ke dalam aplikasi Quake Report?
+
+00:00:07.710 --> 00:00:08.660
+Aku sangat bersemangat.
+
+00:00:08.660 --> 00:00:10.570
+Sejauh ini kita telah melakukan banyak kemajuan
+
+00:00:10.570 --> 00:00:12.925
+Aku sangat ingin aplikasi ini
+berbicara kepada USGS.
+
+00:00:12.925 --> 00:00:14.435
+Sehingga kita bisa memasukkan data
+aktif ke dalam aplikasi.
+
+00:00:14.435 --> 00:00:18.095
+Benar, hanya saja ada beberapa
+konsep lagi yang perlu kita pahami.
+
+00:00:18.095 --> 00:00:19.585
+Tunggu, yang mana?
+
+00:00:19.585 --> 00:00:21.935
+Saat menangani panggilan jaringan,
+
+00:00:21.935 --> 00:00:26.335
+kita mengandalkan banyak sekali hal
+agar terjadi secara tepat waktu.
+
+00:00:26.335 --> 00:00:28.995
+Perangkat harus terhubung dengan
+sinyal nirkabel dan
+
+00:00:28.995 --> 00:00:33.340
+mengirim permintaan, lalu server harus
+membuat respons dan mengirim balik.
+
+00:00:33.340 --> 00:00:37.380
+Ini bisa memakan entah berapa waktu,
+dan kita ingin aplikasi melaksanakan
+
+00:00:37.380 --> 00:00:41.060
+tugas-tugas lain pada saat yang sama,
+seperti merespons input pengguna.
+
+00:00:41.060 --> 00:00:44.912
+Mengerjakan sejumlah tugas berbeda pada
+saat yang sama disebut multitasking.
+
+00:00:44.912 --> 00:00:47.126
+[TERTAWA] Ya,
+aku pintar dalam multitasking.
+
+00:00:47.126 --> 00:00:48.240
+[TERTAWA] Ya.
+
+00:00:48.240 --> 00:00:52.220
+Anda bisa membayangkan tugas
+sebagai thread di Java.
+
+00:00:52.220 --> 00:00:55.605
+Dalam pelajaran ini, kami akan tunjukkan
+bagaimana aplikasi bisa mengambil
+
+00:00:55.605 --> 00:00:56.924
+manfaat dari lebih dari satu thread sekaligus.
+
+00:00:56.924 --> 00:01:01.372
+Satu thread mengeksekusi satu
+tugas pada satu waktu sesuai urutan,
+
+00:01:01.372 --> 00:01:06.410
+bahkan meskipun salah satu tugas
+lebih lama dari yang diperkirakan.
+
+00:01:06.410 --> 00:01:09.950
+Misalnya, bayangkan Anda memanggang
+sesuatu, dan
+
+00:01:09.950 --> 00:01:11.870
+langkah pertamanya adalah memanaskan oven terlebih dahulu.
+
+00:01:11.870 --> 00:01:12.720
+Oke.
+
+00:01:12.720 --> 00:01:14.720
+Bagaimana jika Anda harus menunggu
+
+00:01:14.720 --> 00:01:18.860
+oven Anda bersuhu 400 derajat sebelum
+Anda bisa melakukan hal lain?
+
+00:01:18.860 --> 00:01:20.660
+Banyak waktu yang akan terbuang, kan?
+
+00:01:20.660 --> 00:01:21.410
+Ya, tentu.
+
+00:01:21.410 --> 00:01:24.570
+Akan lebih baik jika Anda memotong
+sayuran dan bumbu
+
+00:01:24.570 --> 00:01:28.080
+serta daging pada saat yang sama
+sementara oven memanas.
+
+00:01:28.080 --> 00:01:30.810
+Komputer mengikuti filosofi
+yang sama dalam mencoba menyelesaikan
+
+00:01:30.810 --> 00:01:34.120
+segala sesuatu pada saat yang sama,
+dan kita sebut ini multitasking.
+
+00:01:35.260 --> 00:01:39.830
+Thread dan paralelisme
+adalah konsep fundamental
+
+00:01:39.830 --> 00:01:42.900
+sains komputer, dan Anda akan
+mencicipinya dalam pelajaran ini.
+
+00:01:42.900 --> 00:01:46.180
+Saya rasa akan bagus kalau
+memperkenalkan aplikasi sampel untuk
+
+00:01:46.180 --> 00:01:48.630
+siswa agar merasa nyaman
+dengan ide-ide ini pada awalnya.
+
+00:01:48.630 --> 00:01:49.600
+Tunggu sebentar.
+
+00:01:49.600 --> 00:01:50.860
+Aplikasi sampel yang lain?
+
+00:01:50.860 --> 00:01:52.230
+Ya, percayalah padaku.
+
+00:01:52.230 --> 00:01:55.640
+Ini adalah aplikasi sangat kecil
+bernama Did You Feel It.
+
+00:01:55.640 --> 00:02:00.045
+Setelah siswa nyaman dengan konsep
+thread ini, saya akan mengirim mereka ke Anda
+
+00:02:00.045 --> 00:02:03.525
+sehingga bisa dibantu memperbarui
+aplikasi Quake Report, sepakat?
+
+00:02:03.525 --> 00:02:04.508
+[SUARA] Oke, sepakat.
+
+00:02:04.508 --> 00:02:07.840
+Sampai titik ini, Anda mampu memodifikasi
+aplikasi Quake Report untuk mengambil
+
+00:02:07.840 --> 00:02:10.366
+data gempa bumi dari server, dan
+sekaligus,
+
+00:02:10.366 --> 00:02:12.920
+siap merespons input pengguna.
+
+00:02:12.920 --> 00:02:16.620
+Konsep-konsep ini bisa sangat menantang,
+bahkan bagi pengembang tingkat lanjut.
+
+00:02:16.620 --> 00:02:19.520
+Jangan khawatir jika Anda tidak
+langsung paham.
+
+00:02:19.520 --> 00:02:21.110
+Setuju, dan satu hal lagi.
+
+00:02:21.110 --> 00:02:24.965
+Ide dasar lain dalam membangun aplikasi
+adalah menangani kesalahan dengan baik.
+
+00:02:24.965 --> 00:02:27.825
+Artinya, buatlah perencanaan di awal untuk
+kondisi unik di mana aplikasi Anda mungkin
+
+00:02:27.825 --> 00:02:30.225
+tidak mampu melaksanakan
+fungsi seperti yang diharapkan.
+
+00:02:30.225 --> 00:02:33.595
+Selalu merupakan ide yang baik untuk
+memikirkan skenario kemungkinan,
+
+00:02:33.595 --> 00:02:36.962
+lalu membuat penyesuaian seperlunya dalam
+kode untuk mengatasinya dengan baik.
+
+00:02:36.962 --> 00:02:40.642
+Oke, jadi dalam pelajaran ketiga,
+kita akan belajar tentang thread dan
+
+00:02:40.642 --> 00:02:43.642
+paralelisme, dan akhirnya
+memperbarui Quake Report dengan
+
+00:02:43.642 --> 00:02:47.132
+kode jaringan dari pangkal ke ujung
+untuk mengambil data dari server.
+
+00:02:47.132 --> 00:02:47.742
+Kedengarannya seru.
+

@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.460 --> 00:00:02.719
+&gt;From the code example
+in the documentation,
+
+00:00:02.719 --> 00:00:07.640
+you'll notice that the download files
+task class extends asynch task.
+
+00:00:07.640 --> 00:00:10.830
+The name is followed by additional
+class names in brackets.
+
+00:00:10.830 --> 00:00:14.790
+Remember that the brackets indicate that
+there are three generic parameters for
+
+00:00:14.790 --> 00:00:16.520
+the asynctask.
+
+00:00:16.520 --> 00:00:20.370
+We first learned about generics when
+we were building the Miwok app.
+
+00:00:20.370 --> 00:00:23.290
+We created an array list
+of vocabulary words and
+
+00:00:23.290 --> 00:00:26.180
+displayed them using
+a custom array adapter.
+
+00:00:26.180 --> 00:00:31.670
+The ArrayList and ArrayAdapter classes
+accept generic type parameters.
+
+00:00:31.670 --> 00:00:32.380
+The E and
+
+00:00:32.380 --> 00:00:37.640
+T are placeholders for the specific
+object data types that we want to use.
+
+00:00:37.640 --> 00:00:41.980
+By using generics, we can rely on the
+Java language to ensure that the right
+
+00:00:41.980 --> 00:00:46.400
+type of data is being passed into and
+out of methods.
+
+00:00:46.400 --> 00:00:47.510
+For example,
+
+00:00:47.510 --> 00:00:51.220
+whatever data type E represents
+will be the required data type for
+
+00:00:51.220 --> 00:00:56.730
+input to the ArrayList add method
+to add another element to the list.
+
+00:00:56.730 --> 00:00:59.310
+If you call the get method
+at a certain index,
+
+00:00:59.310 --> 00:01:01.440
+an object of type E will be returned.
+
+00:01:02.450 --> 00:01:04.280
+This is called type safety.
+
+00:01:04.280 --> 00:01:08.030
+The Java language enforces
+type safety by showing errors.
+
+00:01:08.030 --> 00:01:10.370
+If you're passing on
+the wrong data type or
+
+00:01:10.370 --> 00:01:13.990
+if you store the return value
+of method in the wrong data type
+
+00:01:13.990 --> 00:01:17.930
+you won't be able to run your
+app until you fix these errors.
+
+00:01:17.930 --> 00:01:22.400
+When we use this generic class,
+we swap the generic E placeholder for
+
+00:01:22.400 --> 00:01:27.130
+a specific data type like the string
+class to have an array list of strings.
+
+00:01:27.130 --> 00:01:30.612
+We replace everywhere there
+used to be an E with a string.
+
+00:01:30.612 --> 00:01:32.579
+[BLANK_AUDIO]
+
+00:01:32.579 --> 00:01:37.580
+As a result, we can only add objects
+of the string data type to the list.
+
+00:01:37.580 --> 00:01:40.550
+If we request an item
+at a specific index,
+
+00:01:40.550 --> 00:01:42.880
+the array list will return
+a string data type.
+
+00:01:43.970 --> 00:01:47.990
+In the Miwok app, we wanted to use a
+custom data type that was a little more
+
+00:01:47.990 --> 00:01:50.550
+complex than the string object.
+
+00:01:50.550 --> 00:01:54.795
+Recall that we created a custom
+word class to hold the English and
+
+00:01:54.795 --> 00:01:57.430
+Miwok translations for a word.
+
+00:01:57.430 --> 00:02:02.760
+To form a list, we specify the generic
+E parameter to be a word object so
+
+00:02:02.760 --> 00:02:05.480
+we would have an array list of words.
+
+00:02:05.480 --> 00:02:08.970
+Then, when we added or
+retrieved an entry from the ArrayList,
+
+00:02:08.970 --> 00:02:11.670
+we could ensure that
+it was a Word object.
+
+00:02:11.670 --> 00:02:15.250
+Then we could call specific methods
+on the Word object to extract our
+
+00:02:15.250 --> 00:02:17.590
+English or Miwok translations.
+
+00:02:17.590 --> 00:02:21.250
+That would not be possible if
+the Get method returned a string or
+
+00:02:21.250 --> 00:02:23.770
+a different object data type.
+
+00:02:23.770 --> 00:02:25.250
+Similarly, in the Miwok app,
+
+00:02:25.250 --> 00:02:29.550
+we used generics to create
+a custom ArrayAdapter of Words.
+
+00:02:29.550 --> 00:02:33.360
+We could expect each item in the
+adapters dataset to be a word object.
+
+00:02:35.000 --> 00:02:39.340
+Now that we've reviewed generics, let's
+go back to the AsyncTask documentation.
+

@@ -1,0 +1,157 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.100
+Lembre-se de que os nossos
+tipos de dados genéricos
+
+00:00:03.133 --> 00:00:06.701
+para AsyncTask são "params",
+"progress" e "result".
+
+00:00:07.234 --> 00:00:10.534
+Esses tipos de dados são
+rodados pelo doInBackground
+
+00:00:10.567 --> 00:00:14.200
+no update de progresso
+e no método onPostExecute.
+
+00:00:14.234 --> 00:00:16.334
+Podemos substituir o primeiro
+tipo genérico
+
+00:00:16.367 --> 00:00:18.133
+com um objeto de string.
+
+00:00:18.667 --> 00:00:21.000
+Segundo a referência
+de AsyncTask,
+
+00:00:21.033 --> 00:00:23.100
+doInBackground
+é o método que lida
+
+00:00:23.133 --> 00:00:24.901
+com os primeiros tipos
+de dados genéricos,
+
+00:00:24.934 --> 00:00:26.334
+que são os parâmetros.
+
+00:00:26.367 --> 00:00:28.100
+E quando olhamos o método
+doInBackground,
+
+00:00:28.133 --> 00:00:31.167
+podemos ver aqui que
+tem "string" como tipo de entrada,
+
+00:00:31.200 --> 00:00:33.501
+então "string" seria
+a resposta correta.
+
+00:00:33.534 --> 00:00:37.100
+O segundo parâmetro
+usa o método onProgressUpdate.
+
+00:00:37.133 --> 00:00:38.367
+Ao olhar esse código,
+
+00:00:38.400 --> 00:00:41.033
+vejo que não há
+absolutamente nenhum sinal
+
+00:00:41.067 --> 00:00:44.367
+do método onProgressUpdate
+em qualquer lugar.
+
+00:00:44.400 --> 00:00:46.067
+Então o que isso me diz?
+
+00:00:46.100 --> 00:00:49.467
+Isso mesmo. Não estamos
+usando updates de progresso aqui.
+
+00:00:49.501 --> 00:00:53.567
+É para usar "Void" se não
+estivermos usando um tipo de dado,
+
+00:00:53.601 --> 00:00:56.334
+então esta é exatamente
+a resposta certa aqui.
+
+00:00:56.367 --> 00:00:58.567
+Repare que "Void"
+está em letra maiúscula
+
+00:00:58.601 --> 00:01:01.033
+porque é um tipo de dado
+objeto.
+
+00:01:01.067 --> 00:01:04.467
+O terceiro parâmetro
+é feito pelo onPostExecute.
+
+00:01:04.968 --> 00:01:07.200
+E aqui o código
+usa um string.
+
+00:01:07.234 --> 00:01:09.334
+Então "string"
+é a resposta correta.
+
+00:01:09.367 --> 00:01:10.667
+Ótimo trabalho.
+
+00:01:10.701 --> 00:01:13.267
+Para resumir como usar
+a AsyncTask,
+
+00:01:13.300 --> 00:01:16.934
+você precisa criar
+uma subclasse da AsyncTask.
+
+00:01:16.968 --> 00:01:20.100
+E você pode chamar
+de DownloadWebpageTask
+
+00:01:20.133 --> 00:01:23.167
+ou SortDataTask
+ou SaveVideoTask
+
+00:01:23.200 --> 00:01:25.400
+ou o que fizer sentido
+para o seu app.
+
+00:01:25.434 --> 00:01:28.701
+Use doInBackground
+para fazer qualquer tarefa
+
+00:01:28.734 --> 00:01:31.501
+que você precisa fazer
+em 2º plano e leva tempo.
+
+00:01:31.534 --> 00:01:33.801
+Tal como fazer uma chamada
+a outro servidor
+
+00:01:33.834 --> 00:01:35.567
+ou passar um filtro
+numa foto.
+
+00:01:35.601 --> 00:01:37.200
+Use onProgessUpdate
+
+00:01:37.234 --> 00:01:39.801
+para fornecer o estado do update
+para o seu app.
+
+00:01:39.834 --> 00:01:42.501
+Por fim, use onPostExecute
+para ter os resultados
+
+00:01:42.534 --> 00:01:44.367
+de sua tarefa em 2º plano.
+

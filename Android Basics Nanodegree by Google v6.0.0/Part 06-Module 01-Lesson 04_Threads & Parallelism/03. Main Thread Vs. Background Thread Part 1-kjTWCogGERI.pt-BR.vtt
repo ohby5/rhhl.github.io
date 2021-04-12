@@ -1,0 +1,218 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.601 --> 00:00:02.200
+Ei, Joe, espere aí.
+
+00:00:02.234 --> 00:00:04.467
+Você deu aos alunos
+o app "Você Sentiu?"
+
+00:00:04.501 --> 00:00:05.567
+que trava?
+
+00:00:05.601 --> 00:00:07.434
+-Sim.
+-O que foi isso?
+
+00:00:07.467 --> 00:00:10.167
+Bem, eu queria que eles vissem
+que o app trava
+
+00:00:10.200 --> 00:00:11.767
+por causa de uma exceção.
+
+00:00:11.801 --> 00:00:15.868
+A exceção que ocorreu foi
+NetworkOnMainThreadException.
+
+00:00:15.901 --> 00:00:17.801
+Você explicou
+o que isso significa?
+
+00:00:17.834 --> 00:00:20.634
+Não, mas tenho uma ideia
+de como fazer isso.
+
+00:00:20.667 --> 00:00:22.267
+Está bem. Vamos ver.
+
+00:00:22.300 --> 00:00:26.834
+"Network on Main Thread Exception"
+significa que é uma operação de rede
+
+00:00:26.868 --> 00:00:29.734
+na thread principal
+e isso não é permitido.
+
+00:00:29.767 --> 00:00:31.400
+Mas quando você
+diz "rede"
+
+00:00:31.434 --> 00:00:34.234
+quer dizer requisição de rede
+como da última aula?
+
+00:00:34.267 --> 00:00:35.334
+Sim.
+
+00:00:35.367 --> 00:00:37.934
+Sim, mas também disse
+"na thread principal".
+
+00:00:37.968 --> 00:00:39.834
+Os alunos podem não saber
+o que é isso.
+
+00:00:39.868 --> 00:00:41.033
+Exatamente.
+
+00:00:41.067 --> 00:00:43.434
+Tenho que explicar
+o que é thread.
+
+00:00:43.467 --> 00:00:46.400
+-Tome aqui. Segure isto.
+-Mas o que é...
+
+00:00:46.434 --> 00:00:49.634
+Esta linha representa
+a thread principal do app.
+
+00:00:49.667 --> 00:00:54.133
+Uma thread carrega uma sequência
+de instruções como o código Java
+
+00:00:54.167 --> 00:00:55.934
+que o aparelho irá executar.
+
+00:00:55.968 --> 00:00:58.467
+É necessária para o Android
+agendar as tarefas
+
+00:00:58.501 --> 00:01:01.133
+que precisam ser
+executadas no hardware.
+
+00:01:01.167 --> 00:01:03.934
+Ao montar apps de Android
+é importante compreender
+
+00:01:03.968 --> 00:01:06.200
+que o código da app
+é executado por default
+
+00:01:06.234 --> 00:01:07.934
+e é chamado
+de thread principal,
+
+00:01:07.968 --> 00:01:10.868
+que também é conhecida
+como UIThread.
+
+00:01:10.901 --> 00:01:12.767
+Vamos analisar melhor.
+
+00:01:12.801 --> 00:01:15.167
+A thread principal
+operações de gráficos
+
+00:01:15.200 --> 00:01:18.667
+em respostas de ações
+de usuários como cliques, rolagem,
+
+00:01:18.701 --> 00:01:20.033
+esse tipo de coisa.
+
+00:01:20.067 --> 00:01:23.033
+A thread principal só pode
+lidar com um evento por vez.
+
+00:01:23.067 --> 00:01:26.734
+Se um monte de coisas
+tentam acontecer ao mesmo tempo,
+
+00:01:26.767 --> 00:01:29.534
+serão colocados
+numa fila como esta.
+
+00:01:29.567 --> 00:01:32.167
+Espere. Fila é quando vou
+a um mercado
+
+00:01:32.200 --> 00:01:37.067
+e só tem uma fila e um caixa
+que atende um cliente por vez?
+
+00:01:37.100 --> 00:01:38.567
+-É.
+-Nossa!
+
+00:01:38.601 --> 00:01:40.300
+É esse tipo de fila.
+
+00:01:40.334 --> 00:01:42.734
+Esses gráficos UI
+e esses eventos
+
+00:01:42.767 --> 00:01:45.434
+são rodados um por vez
+em ordem sequencial.
+
+00:01:45.467 --> 00:01:48.234
+Até agora, os códigos que lemos
+têm sido executados
+
+00:01:48.267 --> 00:01:49.667
+na thread principal.
+
+00:01:49.701 --> 00:01:52.667
+Quando você lê código Java,
+lê de cima para baixo.
+
+00:01:52.701 --> 00:01:55.434
+Possivelmente fazendo loop
+em uma seção específica.
+
+00:01:55.467 --> 00:01:57.667
+Ou entrando e saindo
+de outros métodos.
+
+00:01:57.701 --> 00:01:59.133
+Quando o programa
+é executado,
+
+00:01:59.167 --> 00:02:01.033
+tem que esperar uma tarefa
+ser finalizada
+
+00:02:01.067 --> 00:02:02.634
+antes de passar para outra.
+
+00:02:02.667 --> 00:02:04.434
+É o que uma thread faz.
+
+00:02:04.467 --> 00:02:07.267
+Executa Java na ordem
+que foi escrita.
+
+00:02:07.300 --> 00:02:10.067
+Espere. Joe, alunos podem
+pensar:
+
+00:02:10.100 --> 00:02:12.100
+"Se um código funcionou
+bem até agora,
+
+00:02:12.133 --> 00:02:14.033
+por que não
+escrever todos eles
+
+00:02:14.067 --> 00:02:16.501
+-na thread principal?"
+-É uma ótima pergunta.
+
+00:02:16.534 --> 00:02:17.567
+Vou mostrar o porquê.
+

@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.330 --> 00:00:01.790
+Untuk menjawab pertanyaan kuis,
+
+00:00:01.790 --> 00:00:05.920
+kami sediakan tautan ke situs
+dokumentasi AsyncTask.
+
+00:00:05.920 --> 00:00:10.060
+Bagian yang berisi empat langkah
+sangatlah relevan, dan
+
+00:00:10.060 --> 00:00:12.608
+membahas tujuan dari
+setiap metode panggilan balik.
+
+00:00:12.608 --> 00:00:15.460
+Baik, mari kita bahas tentang
+jawaban untuk kuis ini.
+
+00:00:15.460 --> 00:00:18.390
+Yang penting Anda
+bisa memahami bahwa segera
+
+00:00:18.390 --> 00:00:22.830
+setelah Async dimulai, onPreExecute
+dipanggil di thread utama.
+
+00:00:22.830 --> 00:00:27.072
+Lalu, doinBackground akan
+berjalan di thread latar belakang.
+
+00:00:27.072 --> 00:00:31.600
+Saat doinBackground dieksekusi,
+jika Anda memanggil publishProgress,
+
+00:00:31.600 --> 00:00:37.000
+maka panggilan balik onProgressUpdate akan
+dipicu dengan nilai kemajuan baru.
+
+00:00:37.000 --> 00:00:39.190
+Ini terjadi di thread utama, jadi
+
+00:00:39.190 --> 00:00:42.490
+Anda dapat memberitahukan pembaruan
+kepada pengguna tentang kemajuan tugas.
+
+00:00:42.490 --> 00:00:45.700
+Terakhir, setelah doinBackground selesai,
+
+00:00:45.700 --> 00:00:49.470
+hasilnya diteruskan ke
+metode onPostExecute.
+
+00:00:49.470 --> 00:00:53.337
+Metode ini berjalan di thread utama sehingga
+Anda dapat memperbarui UI aplikasi Anda.
+
+00:00:54.470 --> 00:00:55.428
+Kerja bagus.
+
+00:00:55.428 --> 00:00:58.340
+Anda sudah siap untuk memahami
+cara memanfaatkan
+
+00:00:58.340 --> 00:01:01.260
+thread latar belakang
+dengan kelas AsyncTask.
+

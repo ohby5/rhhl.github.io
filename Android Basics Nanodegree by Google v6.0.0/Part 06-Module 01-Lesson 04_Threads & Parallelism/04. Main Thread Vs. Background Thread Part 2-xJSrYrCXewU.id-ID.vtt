@@ -1,0 +1,221 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:01.020 --> 00:00:03.730
+Berikut ini masalah yang mungkin pernah Anda alami
+di masa lalu.
+
+00:00:03.730 --> 00:00:06.980
+Dengan aplikasi di ponsel Anda,
+Anda tekan sebuah tombol.
+
+00:00:06.980 --> 00:00:09.640
+Tombol itu berfungsi untuk melakukan
+banyak sekali pekerjaan.
+
+00:00:09.640 --> 00:00:12.760
+Kita anggap fungsinya adalah untuk mengambil data dari
+internet, memainkan musik, atau
+
+00:00:12.760 --> 00:00:17.240
+mengolah angka untuk menerapkan
+efek blur pada gambar.
+
+00:00:17.240 --> 00:00:20.920
+Tapi, setelah tombol diklik, program Anda
+tampak membeku yang terasa
+
+00:00:20.920 --> 00:00:23.520
+seperti lama sekali
+dan terasa tak nyaman.
+
+00:00:23.520 --> 00:00:25.130
+Ini sangat menjengkelkan.
+
+00:00:25.130 --> 00:00:27.835
+Anda tidak yakin apakah program
+itu macet atau tidak.
+
+00:00:27.835 --> 00:00:29.370
+Lalu, setelah beberapa menit,
+
+00:00:29.370 --> 00:00:32.150
+tiba-tiba semuanya kembali berada
+di bawah kendali Anda.
+
+00:00:32.150 --> 00:00:35.760
+Kenapa aplikasi itu membeku dan tiba-tiba
+kembali hidup seperti itu?
+
+00:00:35.760 --> 00:00:39.440
+Kemungkinan besar, aplikasi Anda mencoba
+memproses sesuatu yang membutuhkan
+
+00:00:39.440 --> 00:00:42.480
+waktu lama, seperti mengambil informasi
+dari internet.
+
+00:00:42.480 --> 00:00:45.350
+Masalahnya, sesuatu seperti permintaan
+jaringan
+
+00:00:45.350 --> 00:00:48.710
+bisa memakan waktu lama jika
+koneksi internet lambat, atau
+
+00:00:48.710 --> 00:00:51.090
+jika ada banyak data yang harus ditransfer.
+
+00:00:51.090 --> 00:00:55.400
+Kita perlu mengatur koneksi dengan
+server web, mengirim permintaan,
+
+00:00:55.400 --> 00:00:58.750
+menunggu respons, lalu
+lakukan parse pada respons tersebut.
+
+00:00:58.750 --> 00:01:01.970
+Tidak ada hal lain yang bisa terjadi di
+thread utama saat Anda menunggu
+
+00:01:01.970 --> 00:01:04.410
+seluruh perjalanan bolak-balik ini selesai.
+
+00:01:04.410 --> 00:01:08.110
+Maka, jika pengguna mengeklik tombol
+lain dalam aplikasi sementara permintaan
+
+00:01:08.110 --> 00:01:09.820
+jaringan sedang berlangsung,
+
+00:01:09.820 --> 00:01:14.940
+aplikasi tidak bisa merespons pengguna
+hingga menyelesaikan operasi jaringan.
+
+00:01:14.940 --> 00:01:19.890
+Lebih buruk lagi, jika pengguna menekan
+dengan marah tombol itu beberapa kali,
+
+00:01:19.890 --> 00:01:24.660
+kejadian-kejadian itu akan menumpuk hingga
+aplikasi menyelesaikan tugas yang ada.
+
+00:01:24.660 --> 00:01:29.120
+Jika Anda meminta thread UI untuk memproses
+sesuatu yang butuh waktu lama, Anda
+
+00:01:29.120 --> 00:01:32.382
+berisiko menyuruh aplikasi Anda tampak
+membeku saat digunakan.
+
+00:01:33.420 --> 00:01:36.000
+Sebenarnya, jika aplikasi Anda
+memblokir thread UI selama lebih
+
+00:01:36.000 --> 00:01:40.100
+dari beberapa detik, Android dapat
+menampilkan dialog yang memberi tahu Anda,
+
+00:01:40.100 --> 00:01:45.120
+sebagai pengguna, bahwa aplikasi tidak responsif, dan
+bertanya apakah pengguna ingin mematikannya.
+
+00:01:45.120 --> 00:01:49.450
+Ini membawa kita pada aturan penting
+saat membangun aplikasi dalam Android.
+
+00:01:49.450 --> 00:01:52.160
+Jangan memblokir thread UI utama.
+
+00:01:53.240 --> 00:01:56.550
+Untungnya, perangkat Android
+sangat bagus dalam multitasking.
+
+00:01:56.550 --> 00:01:57.270
+Sungguh?
+Sungguh.
+
+00:01:58.350 --> 00:02:02.990
+Jika pengguna mengeklik tombol, kita
+ingin aplikasi merespons input pengguna.
+
+00:02:02.990 --> 00:02:06.210
+Solusi untuk masalah ini adalah dengan memerintahkan
+permintaan jaringan,
+
+00:02:06.210 --> 00:02:10.780
+pengolahan angka, dan pemutaran audio
+diproses di thread latar belakang
+
+00:02:10.780 --> 00:02:15.730
+yang berbeda, atau thread worker, sehingga
+membebaskan UI dan
+
+00:02:15.730 --> 00:02:19.350
+pengguna masih bisa menggulir dan menekan tombol
+dan melalukan apa pun yang perlu dilakukan
+
+00:02:19.350 --> 00:02:22.770
+dengan aplikasi Anda sementara menunggu
+semua pekerjaan lain itu selesai.
+
+00:02:22.770 --> 00:02:25.940
+Jadi, secara teori, Anda dapat memakai
+sebanyak mungkin thread yang dibutuhkan?
+
+00:02:25.940 --> 00:02:29.350
+Artinya lebih banyak pekerjaan yang
+akan dieksekusi secara paralel.
+
+00:02:29.350 --> 00:02:30.090
+Ya.
+
+00:02:30.090 --> 00:02:33.540
+Tapi untuk aplikasi ini, kita hanya
+membutuhkan satu thread latar belakang.
+
+00:02:34.780 --> 00:02:38.600
+Thread latar belakang itu hanya bisa lakukan
+satu operasi pada satu waktu, tapi
+
+00:02:38.600 --> 00:02:41.680
+jika permintaan jaringan akan memakan
+waktu lama karena
+
+00:02:41.680 --> 00:02:45.550
+koneksi internet Anda lambat, atau
+putus-putus, maka tidak apa-apa.
+
+00:02:45.550 --> 00:02:49.380
+Thread utama masih bisa menangani semua
+kejadian input-pengguna dengan cepat tanpa
+
+00:02:49.380 --> 00:02:51.780
+memengaruhi pengalaman pengguna.
+
+00:02:51.780 --> 00:02:53.070
+Ya, dan satu hal lagi.
+
+00:02:53.070 --> 00:02:54.510
+Setelah tugas latar belakang selesai,
+
+00:02:54.510 --> 00:02:56.920
+maka tidak perlu tetap
+mengaktifkan thread itu.
+
+00:02:56.920 --> 00:03:00.180
+Maka, dalam video ini, kita telah belajar
+bahwa aplikasi Anda bisa membagi tugas
+
+00:03:00.180 --> 00:03:03.740
+menjadi thread yang berbeda untuk
+memungkinkan tugas diproses di latar belakang
+
+00:03:03.740 --> 00:03:05.700
+sementara thread UI tetap bersih,
+
+00:03:05.700 --> 00:03:08.560
+yang berarti Anda bisa menjadikan aplikasi
+lebih dapat digunakan dan lebih cepat.
+

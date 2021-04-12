@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.240 --> 00:00:01.160
+Saya memeriksa kode kita dan
+
+00:00:01.160 --> 00:00:04.320
+menambahkan pesan log di tempat
+yang diperinci dalam kuis.
+
+00:00:04.320 --> 00:00:06.480
+Dalam metode onCreate
+activity gempa bumi,
+
+00:00:06.480 --> 00:00:08.210
+saya mencatat saat metode
+onCreate dipanggil untuk
+
+00:00:08.210 --> 00:00:12.130
+activity gempa bumi, saya mencatat saat
+kita memanggil loadermanager.netloader.
+
+00:00:12.130 --> 00:00:15.160
+Seperti Anda lihat, saya juga mencatat
+tiap kali panggilan balik loader diaktifkan.
+
+00:00:15.160 --> 00:00:19.080
+Contohnya, saat fungsi
+onCreateLoader dipanggil atau
+
+00:00:19.080 --> 00:00:20.970
+metode onLoadFinished dipanggil, dan
+
+00:00:20.970 --> 00:00:24.560
+terakhir, onLoaderReset, saat
+yang ini juga dipanggil.
+
+00:00:24.560 --> 00:00:28.123
+Kami juga mencatat pesan saat
+onStartLoading dipanggil serta saat
+
+00:00:28.123 --> 00:00:29.754
+loadInBackground dipanggil.
+
+00:00:29.754 --> 00:00:36.230
+Terakhir, kami mencatat log saat metode
+fetchEarthquakeData dipanggil.
+
+00:00:36.230 --> 00:00:37.826
+Saat menjalankan aplikasi di perangkat
+
+00:00:37.826 --> 00:00:40.689
+saya mulai bisa melihat pesan log
+dicatat di logcat ini,
+
+00:00:40.689 --> 00:00:44.180
+yang memerinci urutan perilaku
+yang diambil dalam kode kita.
+
+00:00:44.180 --> 00:00:46.290
+Pertama-tama, activity diluncurkan, jadi
+
+00:00:46.290 --> 00:00:50.200
+kita bisa lihat metode onCreate dipanggil,
+disusul initLoader.
+
+00:00:51.560 --> 00:00:54.030
+Karena belum ada
+contoh loader,
+
+00:00:54.030 --> 00:00:56.150
+panggilan balik onCreateLoader dipanggil.
+
+00:00:56.150 --> 00:00:58.891
+Lalu earthquakeLoader
+diaktifkan, dan
+
+00:00:58.891 --> 00:01:00.990
+onStartLoading dipanggil.
+
+00:01:00.990 --> 00:01:05.269
+Setelah itu, loadInBackground dijalankan
+di thread latar belakang.
+
+00:01:05.269 --> 00:01:08.500
+Akhirnya kita melihat metode
+fetchEarthquakeData query util kita
+
+00:01:08.500 --> 00:01:10.060
+dijalankan.
+
+00:01:10.060 --> 00:01:13.290
+Di titik ini, kita memperoleh respons
+dari server dan melakukan parse ke dalam
+
+00:01:13.290 --> 00:01:16.520
+daftar objek gempa bumi yang
+dikembalikan sebagai hasil loader.
+
+00:01:16.520 --> 00:01:21.385
+Terakhir, kita lihat onLoader selesai,
+lalu activity dipanggil dengan
+
+00:01:21.385 --> 00:01:25.405
+objek gempa bumi ini, lalu kita dapat
+memperbarui UI dengan sukses.
+
+00:01:25.405 --> 00:01:28.085
+Sekarang Anda tahu bahwa memutar
+perangkat Anda tidak memicu permintaan
+
+00:01:28.085 --> 00:01:29.555
+jaringan baru.
+
+00:01:29.555 --> 00:01:31.225
+Jadi, walaupun activity
+dibuat lagi,
+
+00:01:31.225 --> 00:01:35.190
+saat kita memanggil initLoader,
+sudah ada contoh loader, maka
+
+00:01:35.190 --> 00:01:38.960
+kita gunakan lagi loader yang sudah ada,
+yang sudah punya respons dari jaringan.
+
+00:01:38.960 --> 00:01:42.300
+Anda bisa lanjut dan bereksperimen dengan
+cara lain untuk masuk keluar aplikasi.
+
+00:01:42.300 --> 00:01:43.830
+Jika Anda memencet tombol
+beranda dan
+
+00:01:43.830 --> 00:01:46.080
+kembali ke aplikasi,
+load penuh dipicu lagi.
+
+00:01:46.080 --> 00:01:47.450
+Ini masuk akal,
+
+00:01:47.450 --> 00:01:50.615
+karena jika dipikir-pikir, saat pengguna
+meninggalkan aplikasi lalu kembali lagi,
+
+00:01:50.615 --> 00:01:53.653
+kita ingin meperbarui data sehingga
+memiliki informasi gempa bumi terbaru.
+

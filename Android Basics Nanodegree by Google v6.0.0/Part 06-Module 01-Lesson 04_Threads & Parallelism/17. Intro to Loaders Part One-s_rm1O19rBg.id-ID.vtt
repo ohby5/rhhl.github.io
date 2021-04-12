@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.440 --> 00:00:03.870
+Jika Anda butuh bantuan, Anda dapat
+merujuk pada panduan pengembang loader
+
+00:00:03.870 --> 00:00:06.326
+yang membahas semua komponen
+dalam API loader.
+
+00:00:06.326 --> 00:00:08.386
+Berikut ini adalah jawaban untuk kuis.
+
+00:00:08.386 --> 00:00:11.376
+Loader manager berinteraksi dengan
+activity untuk mengelola satu atau
+
+00:00:11.376 --> 00:00:13.130
+lebih contoh loader.
+
+00:00:13.130 --> 00:00:14.010
+Loader manager menangani pembuatan dan
+
+00:00:14.010 --> 00:00:17.190
+penutupan loader serta penggunaan
+kembali jika diperlukan.
+
+00:00:18.520 --> 00:00:23.009
+Agar activity menjadi klien yang berinteraksi
+dengan loader manager,
+
+00:00:23.009 --> 00:00:25.555
+activity gempa bumi perlu
+mengimplementasikan
+
+00:00:25.555 --> 00:00:28.510
+antarmuka
+LoaderManager.LoaderCallbacks.
+
+00:00:28.510 --> 00:00:33.103
+Maka, antarmuka mengandung tiga
+metode abstrak yang harus kita
+
+00:00:33.103 --> 00:00:34.795
+override dan implementasikan.
+
+00:00:34.795 --> 00:00:39.182
+Ini mencakup metode onCreateLoader()
+untuk membuat dan mengembalikan loader
+
+00:00:39.182 --> 00:00:43.769
+baru, metode onLoadFinished() yang
+menerima data setelah loader
+
+00:00:43.769 --> 00:00:48.489
+selesai memuat, dan terakhir, metode
+onLoaderreset() untuk menangani saat
+
+00:00:48.489 --> 00:00:51.432
+loader yang sebelumnya dibuat
+itu tidak lagi dibutuhkan.
+
+00:00:51.432 --> 00:00:54.090
+Maka, data yang
+sudah ada kemudian dapat dibuang.
+
+00:00:54.090 --> 00:00:56.051
+Setelah metode panggilan umpan
+balik diimplementasikan,
+
+00:00:56.051 --> 00:00:58.695
+kita dapat menyalakan loader saat
+activity diluncurkan.
+
+00:00:58.695 --> 00:01:01.575
+Maka dalam metode
+EarthquakeActivity onCreate(),
+
+00:01:01.575 --> 00:01:04.815
+kita akan panggil metode
+getLoaderManager.inItLoader,
+
+00:01:04.815 --> 00:01:09.065
+memasukkan 0, null, dan referensi kepada
+objek EarthquakeActivity saat ini.
+

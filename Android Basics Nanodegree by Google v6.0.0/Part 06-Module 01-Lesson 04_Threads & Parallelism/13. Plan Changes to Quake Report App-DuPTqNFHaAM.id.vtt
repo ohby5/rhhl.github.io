@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.650 --> 00:00:03.740
+Berikut ini beberapa langkah pemrograman yang
+kita perlukan dalam aplikasi QuakeReport
+
+00:00:03.740 --> 00:00:05.850
+agar permintaan jaringan
+diatur dengan benar.
+
+00:00:07.240 --> 00:00:11.023
+Pertama-tama, harus membuang kode
+respons JSON dalam QueryUtils.
+
+00:00:11.023 --> 00:00:15.853
+Lalu, Anda perlu menambahkan metode
+helper dalam QueryUtils untuk membuat
+
+00:00:15.853 --> 00:00:18.751
+objek URL, lakukan permintaan jaringan,
+
+00:00:18.751 --> 00:00:22.870
+mengubah InputStream menjadi string, dan
+melakukan parse atas JSON.
+
+00:00:24.300 --> 00:00:27.140
+Lalu, Anda harus memodifikasi
+metode parsing JSON untuk
+
+00:00:27.140 --> 00:00:30.520
+mengekstrak daftar gempa bumi
+dari respons server web.
+
+00:00:30.520 --> 00:00:34.790
+Deklarasikan EarthquakeAsyncTask sebagai
+kelas bagian dalam pada MainActivity.
+
+00:00:34.790 --> 00:00:35.600
+Buat dan
+
+00:00:35.600 --> 00:00:40.120
+jalankan EarthquakeAsyncTask dalam
+metode MainActivity onCreate().
+
+00:00:40.120 --> 00:00:43.350
+Terakhir, Anda perlu
+menambahkan izin internet.
+
+00:00:43.350 --> 00:00:46.100
+Lebih bagus jika Anda memberikan
+lebih banyak perincian.
+
+00:00:46.100 --> 00:00:48.710
+Hal ini menunjukkan bahwa Anda benar-benar
+siap untuk berpikir ke depan
+
+00:00:48.710 --> 00:00:50.990
+tentang kode apa yang perlu Anda tulis
+untuk suatu tugas tertentu.
+

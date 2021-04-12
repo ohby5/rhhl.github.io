@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.450 --> 00:00:03.735
+Kita telah melihat secara luas bagaimana
+AsyncTask dapat digunakan untuk memindah
+
+00:00:03.735 --> 00:00:06.770
+operasi yang memakan waktu ke
+thread latar belakang, dan
+
+00:00:06.770 --> 00:00:09.460
+bagaimana membawa hasilnya
+ke thread utama.
+
+00:00:09.460 --> 00:00:10.520
+Jadi sekarang Anda pasti gelisah.
+
+00:00:11.600 --> 00:00:14.830
+Nah, saya ingin Anda memperbaiki
+NetworkOnMainThreadException
+
+00:00:14.830 --> 00:00:18.040
+yang menyebabkan aplikasi Did You Feel It
+macet saat dinyalakan.
+
+00:00:18.040 --> 00:00:22.340
+Lanjutkan dan pindahkan kode jaringan ke
+thread utama menggunakan AsyncTask, dan
+
+00:00:22.340 --> 00:00:24.670
+centang kotak ini setelah selesai.
+
+00:00:24.670 --> 00:00:29.990
+Kami anjurkan untuk menyimpan metode
+utilitas dalam kelas utils dan
+
+00:00:29.990 --> 00:00:35.210
+kita pakai untuk menyimpan metode helper
+berguna yang ada di struktur tab ini.
+
+00:00:35.210 --> 00:00:38.960
+Perhatikan juga bahwa metode-metode ini
+dideklarasikan sebagai static, jadi
+
+00:00:38.960 --> 00:00:42.080
+dapat dirujuk secara langsung menggunakan
+nama kelas tanpa perlu
+
+00:00:42.080 --> 00:00:44.660
+metode aktual dari objek utils.
+
+00:00:44.660 --> 00:00:48.780
+Dalam main activity, kita dapat memanggil
+metode utils.fetchEarthquakeData
+
+00:00:48.780 --> 00:00:52.120
+untuk membuat permintaan jaringan dan
+melakukan parse atas respons.
+
+00:00:52.120 --> 00:00:55.750
+Setelah selesai, aplikasi harus tampak
+seperti screenshot di sisi kanan ini.
+

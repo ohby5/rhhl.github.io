@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:02.701
+Do exemplo de código
+na documentação,
+
+00:00:02.734 --> 00:00:04.968
+você vai perceber
+que a classe de tarefa
+
+00:00:05.000 --> 00:00:08.100
+de arquivos baixados se estende
+ao AsyncTask,
+
+00:00:08.133 --> 00:00:10.868
+mas o nome é seguido
+de uma classe adicional em chaves.
+
+00:00:10.901 --> 00:00:14.434
+Lembre-se de que as chaves indicam
+que há 3 parâmetros genéricos
+
+00:00:14.467 --> 00:00:16.334
+para o AsyncTask.
+
+00:00:16.367 --> 00:00:20.100
+Aprendemos sobre os genéricos
+quando montamos o app miwok.
+
+00:00:20.133 --> 00:00:22.968
+Criamos uma ArrayList
+de palavras
+
+00:00:23.000 --> 00:00:26.000
+e as demostramos
+usando uma ArrayAdapter.
+
+00:00:26.033 --> 00:00:31.267
+As classes ArrayList e ArrayAdapter
+aceitam parâmetros genéricos.
+
+00:00:31.300 --> 00:00:33.801
+O "E" e o "T"
+são placeholders
+
+00:00:33.834 --> 00:00:37.400
+para os tipos de dados
+específicos que queremos usar.
+
+00:00:37.434 --> 00:00:38.801
+Ao usar os genéricos,
+
+00:00:38.834 --> 00:00:40.734
+podemos contar
+com a linguagem Java
+
+00:00:40.767 --> 00:00:43.701
+e garantir que o tipo certo
+de dados está sendo passado
+
+00:00:43.734 --> 00:00:45.634
+pelos métodos.
+
+00:00:46.167 --> 00:00:49.300
+Por exemplo, qualquer tipo
+de dado que "E" representa
+
+00:00:49.334 --> 00:00:51.834
+será o tipo de dados
+requeridos para entrada
+
+00:00:51.868 --> 00:00:54.200
+para o método add de ArrayList
+
+00:00:54.234 --> 00:00:56.367
+para adicionar outro
+elemento à lista.
+
+00:00:56.400 --> 00:00:59.167
+Se você chamar o método Get
+em um certo índice,
+
+00:00:59.200 --> 00:01:01.968
+um objeto de tipo "E"
+vai vir em retorno.
+
+00:01:02.000 --> 00:01:04.234
+Isso se chama segurança
+de tipo.
+
+00:01:04.267 --> 00:01:06.501
+A linguagem Java reforça
+a segurança
+
+00:01:06.534 --> 00:01:07.901
+ao demonstrar erros,
+
+00:01:07.934 --> 00:01:10.100
+se você passar o tipo errado
+de dado
+
+00:01:10.133 --> 00:01:11.834
+ou se você armazenar
+o valor de retorno
+
+00:01:11.868 --> 00:01:13.968
+do método no tipo errado
+de dado.
+
+00:01:14.000 --> 00:01:15.801
+Você não vai conseguir
+rodar o seu app
+
+00:01:15.834 --> 00:01:17.734
+até consertar esses erros.
+
+00:01:17.767 --> 00:01:19.934
+Quando nós usamos
+essa classe genérica,
+
+00:01:19.968 --> 00:01:22.267
+trocamos o placeholder
+genérico "E"
+
+00:01:22.300 --> 00:01:25.067
+para um tipo de dado
+específico como a classe string
+
+00:01:25.100 --> 00:01:27.067
+para ter uma ArrayList
+de strings.
+
+00:01:27.100 --> 00:01:30.734
+Trocamos tudo que tinha "E"
+para "string".
+
+00:01:32.501 --> 00:01:35.167
+Como resultado, só podemos
+adicionar objetos
+
+00:01:35.200 --> 00:01:37.434
+que são do tipo string
+à lista.
+
+00:01:37.467 --> 00:01:40.300
+Se pedirmos um item
+num índice específico,
+
+00:01:40.334 --> 00:01:43.567
+a ArrayList vai retornar
+com um tipo de dado string.
+
+00:01:43.601 --> 00:01:47.200
+No app miwok, queríamos
+usar um tipo de dado customizado
+
+00:01:47.234 --> 00:01:50.534
+que era um pouco mais
+complexo do que o objeto string.
+
+00:01:50.567 --> 00:01:53.601
+Lembre-se de que criamos
+uma classe de palavras customizada
+
+00:01:53.634 --> 00:01:57.033
+que contém a tradução
+em inglês de uma palavra miwok.
+
+00:01:57.067 --> 00:01:58.534
+Para formar uma lista,
+
+00:01:58.567 --> 00:02:02.434
+especificamos o parâmetro "E"
+genérico para ser um objeto palavra
+
+00:02:02.467 --> 00:02:05.067
+para que tivéssemos
+uma ArrayList de palavras,
+
+00:02:05.100 --> 00:02:09.167
+então, quando adicionamos
+uma entrada na ArrayList,
+
+00:02:09.200 --> 00:02:11.501
+poderíamos garantir
+que era um objeto palavra.
+
+00:02:11.534 --> 00:02:13.567
+Então podemos chamar
+métodos específicos
+
+00:02:13.601 --> 00:02:17.534
+no objeto palavra para extrair
+a tradução em inglês ou miwok.
+
+00:02:17.567 --> 00:02:19.968
+Isso não seria possível
+se o método Get
+
+00:02:20.000 --> 00:02:23.367
+voltasse como string
+ou outro tipo de dado.
+
+00:02:23.400 --> 00:02:25.367
+Da mesma forma,
+no app miwok,
+
+00:02:25.400 --> 00:02:26.901
+usamos genéricos para criar
+
+00:02:26.934 --> 00:02:29.367
+um ArrayAdapter customizado
+de palavras.
+
+00:02:29.400 --> 00:02:32.367
+Podemos esperar que cada item
+no grupo de dados do Adapter
+
+00:02:32.400 --> 00:02:34.167
+seja um objeto palavra.
+
+00:02:34.834 --> 00:02:36.667
+Agora que já revisamos
+os genéricos,
+
+00:02:36.701 --> 00:02:39.834
+vamos voltar à documentação
+de AsyncTask.
+

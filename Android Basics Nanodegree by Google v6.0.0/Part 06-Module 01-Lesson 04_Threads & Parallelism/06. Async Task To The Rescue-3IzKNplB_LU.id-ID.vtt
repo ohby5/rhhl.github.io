@@ -1,0 +1,153 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.420 --> 00:00:03.790
+Mari kembali sebentar ke aplikasi 'Did
+you feel it?'.
+
+00:00:03.790 --> 00:00:07.650
+Kali terakhir, kita mengamati bahwa aplikasi
+itu macet saat diluncurkan
+
+00:00:07.650 --> 00:00:10.350
+dikarenakan jaringan pada exception
+thread utama.
+
+00:00:10.350 --> 00:00:13.510
+Ya, Android tidak mengizinkan pengembang
+untuk membuat permintaan jaringan pada
+
+00:00:13.510 --> 00:00:17.680
+thread utama, karena hal ini akan menjadikan
+aplikasi kita tidak responsif dan lambat.
+
+00:00:17.680 --> 00:00:20.910
+Dengan menempatkan exception yang
+menyebabkan aplikasi kita macet,
+
+00:00:20.910 --> 00:00:25.220
+hal ini memaksa pengembang untuk mengikuti
+praktik terbaik dan menjalankan kode jaringan
+
+00:00:25.220 --> 00:00:29.020
+di thread latar belakang dan mengembalikan
+hasilnya ke thread UI.
+
+00:00:29.020 --> 00:00:32.610
+Ya, jadi pahami bahwa pembuatan thread,
+koordinasi di antara berbagai thread, dan
+
+00:00:32.610 --> 00:00:34.050
+mengomunikasikan hasilnya maju mundur
+
+00:00:34.050 --> 00:00:37.160
+merupakan salah satu masalah
+tersulit dalam ilmu komputer.
+
+00:00:37.160 --> 00:00:41.320
+Dalam kasus ini, kita tidak benar-benar
+membutuhkan kekuatan threading penuh.
+
+00:00:41.320 --> 00:00:45.420
+Yang kita butuhkan adalah menjalankan satu tugas
+simpel, yaitu HTTP request,
+
+00:00:45.420 --> 00:00:49.420
+di thread yang berbeda dari yang menangani
+kejadian dalam thread UI kita.
+
+00:00:49.420 --> 00:00:52.785
+Ya, engineer framework Android
+telah menduga hal ini akan menjadi
+
+00:00:52.785 --> 00:00:53.725
+kebutuhan umum dan
+
+00:00:53.725 --> 00:00:57.995
+menciptakan kelas Java spesifik yang membuat
+pola ini menjadi sangat mudah.
+
+00:00:57.995 --> 00:01:00.325
+Ini disebut AsyncTask.
+
+00:01:00.325 --> 00:01:01.725
+Async adalah kependekan dari
+
+00:01:01.725 --> 00:01:04.739
+asynchronous yang berarti bahwa banyak hal
+yang bisa berlangsung di waktu yang berbeda.
+
+00:01:05.880 --> 00:01:06.580
+Misalnya,
+
+00:01:06.580 --> 00:01:10.920
+video yang sedang Anda tonton ini
+merupakan contoh pembelajaran asinkronis.
+
+00:01:10.920 --> 00:01:15.075
+Anda tidak perlu berada di ruang ceramah
+pada satu waktu tertentu untuk menontonnya.
+
+00:01:15.075 --> 00:01:18.290
+AsyncTask ini bagus untuk
+menolak satu tugas pendek
+
+00:01:18.290 --> 00:01:20.897
+tanpa harus repot-repot mengelola
+thread tugas standar.
+
+00:01:21.980 --> 00:01:24.350
+Tapi, tidak cocok untuk
+tiap situasi threading,
+
+00:01:24.350 --> 00:01:28.590
+jika Anda menjumpai situasi di mana
+Anda membutuhkan thread yang ada untuk
+
+00:01:28.590 --> 00:01:32.470
+lebih dari beberapa detik, Anda akan perlu
+menggunakan yang lebih kuat lagi.
+
+00:01:32.470 --> 00:01:35.200
+Ya, jangan lupa memeriksa
+serial video Android Performance Pattern
+
+00:01:35.200 --> 00:01:38.740
+tentang threading, yang ditautkan
+di bawah untuk informasi lebih lanjut.
+
+00:01:38.740 --> 00:01:42.070
+Tapi, karena kita tidak ingin UI
+untuk aplikasi kita membeku selama
+
+00:01:42.070 --> 00:01:46.060
+beberapa detik sementara aplikasi menarik
+data dari internet,
+
+00:01:46.060 --> 00:01:49.710
+AsyncTask adalah alat yang tepat
+untuk bagian aplikasi ini.
+
+00:01:49.710 --> 00:01:51.530
+Mari lihat lebih detail
+
+00:01:51.530 --> 00:01:55.754
+AsyncTask menyediakan cara mudah untuk
+mengalihkan tugas ke thread latar belakang
+
+00:01:55.754 --> 00:01:59.278
+dan menerima hasilnya setelah selesai
+sehingga kita bisa memperbarui UI.
+
+00:01:59.278 --> 00:02:02.643
+Perhatikan bahwa hanya sedikit saja waktu yang
+diambil dari thread utama untuk
+
+00:02:02.643 --> 00:02:05.200
+benar-benar memperoleh hasil dan memperbarui UI.
+
+00:02:05.200 --> 00:02:08.850
+Setelah tugas selesai, kita tidak lagi
+membutuhkan thread latar belakang.
+

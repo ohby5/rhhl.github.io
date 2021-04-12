@@ -1,0 +1,428 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.050 --> 00:00:03.820
+AsyncTask sangat berguna untuk banyak
+hal, tapi bukan pilihan terbaik
+
+00:00:03.820 --> 00:00:08.230
+untuk memperbarui data dalam antarmuka pengguna,
+untuk kebutuhan tersebut kita butuh Loader.
+
+00:00:08.230 --> 00:00:11.000
+Loader memecahkan masalah
+yang diungkapkan pada video sebelumnya.
+
+00:00:11.000 --> 00:00:14.460
+Pertama-tama, terlepas dari berapa kali
+Anda meminta data dari loader,
+
+00:00:14.460 --> 00:00:17.520
+secara default, Loader hanya akan
+mengambil data satu kali saja.
+
+00:00:17.520 --> 00:00:20.820
+Tidak perlu milyaran AsyncTask dan
+aktivitas.
+
+00:00:20.820 --> 00:00:24.570
+Kedua, saat suatu aktivitas dimatikan,
+ia akan secara otomatis memerintahkan
+
+00:00:24.570 --> 00:00:28.680
+semua Loader-nya untuk menghentikan apa
+yang sedang dilakukan karena data tak akan digunakan.
+
+00:00:28.680 --> 00:00:33.990
+Terakhir, Loader tetap bertahan pada semua perubahan
+konfigurasi aktivitas seperti rotasi.
+
+00:00:33.990 --> 00:00:37.790
+Jadi jika kita memerintahkan Loader untuk mengambil
+data dan telepon diputar,
+
+00:00:37.790 --> 00:00:41.980
+loader akan secara otomatis mengembalikan datanya
+kepada aktivitas baru setelah selesai.
+
+00:00:41.980 --> 00:00:44.390
+Mari lihat panduan pengembang
+untuk Loader.
+
+00:00:44.390 --> 00:00:47.380
+Komponen ini di dalam framework
+Android dirancang khusus untuk
+
+00:00:47.380 --> 00:00:50.950
+memuat data untuk tampilan dan
+aktivitas atau fragmen.
+
+00:00:50.950 --> 00:00:52.490
+Saya menyertakan tautan di bawah sehingga
+
+00:00:52.490 --> 00:00:54.750
+Anda bisa membaca sendiri
+dengan lebih terperinci.
+
+00:00:54.750 --> 00:00:56.910
+Kita akan memulai bagian yang
+disebut Memulai Loader.
+
+00:00:58.550 --> 00:00:59.350
+Di dalam aktivitas Anda,
+
+00:00:59.350 --> 00:01:02.830
+Anda dapat memulai Loader dengan
+bantuan LoaderManager.
+
+00:01:02.830 --> 00:01:06.689
+Setiap intro aktivitas dilengkapi dengan
+LoaderManager yang mengelola
+
+00:01:06.689 --> 00:01:10.683
+pembuatan, pemakaian ulang, dan penghentian
+serangkaian loader pada saat yang tepat.
+
+00:01:10.683 --> 00:01:13.040
+Setelah kita memperoleh referensi
+untuk LoaderManager,
+
+00:01:13.040 --> 00:01:15.780
+kita bisa memanggil metode initLoader.
+
+00:01:15.780 --> 00:01:18.931
+Input pertama adalah
+pengidentifikasi bilangan bulat unik.
+
+00:01:18.931 --> 00:01:20.275
+Dalam hal ini, kita pakai 0,
+
+00:01:20.275 --> 00:01:24.115
+ini bisa berupa angka acak karena
+hanya benar-benar penting jika Anda
+
+00:01:24.115 --> 00:01:28.225
+memiliki banyak loader dalam satu aplikasi dan
+harus membedakannya.
+
+00:01:28.225 --> 00:01:32.205
+Dua parameter lainnya adalah satu, dan
+bundel input tambahan untuk Loader
+
+00:01:32.205 --> 00:01:35.465
+yang dalam hal ini berupa null,
+dan objek pemanggilan kembali Loader.
+
+00:01:35.465 --> 00:01:38.228
+Kita memerinci ini untuk
+objek LoaderCallback,
+
+00:01:38.228 --> 00:01:41.755
+karena sudah lazim untuk aktivitas
+ini, yang dirujuk oleh hal ini,
+
+00:01:41.755 --> 00:01:44.137
+untuk mengimplementasikan
+antarmuka LoaderCallback.
+
+00:01:44.137 --> 00:01:47.905
+Maka aktivitas itu sendiri merupakan
+objek LoaderCallback yang ingin kita
+
+00:01:47.905 --> 00:01:48.860
+berikan.
+
+00:01:48.860 --> 00:01:51.300
+Nanti akan kita bahas lebih banyak
+tentang LoaderCallback, tapi
+
+00:01:51.300 --> 00:01:54.160
+saya ingin Anda memahami
+bahwa panggilan initLoader
+
+00:01:54.160 --> 00:01:57.670
+memastikan bahwa loader memang
+terinisialisasi dan aktif.
+
+00:01:57.670 --> 00:02:02.110
+Maka jika Loader dengan ID tertentu,
+misalnya 0 untuk ID ini sudah ada,
+
+00:02:02.110 --> 00:02:04.350
+maka kita akan menggunakan lagi Loader terakhir itu.
+
+00:02:04.350 --> 00:02:08.347
+Jika Loader dengan ID itu belum
+ada, maka LoaderCallback,
+
+00:02:08.347 --> 00:02:10.900
+metode onCreateLoader()
+akan dipicu,
+
+00:02:10.900 --> 00:02:12.930
+yang akan mengembalikan Loader baru.
+
+00:02:12.930 --> 00:02:17.283
+Perilaku penggunaan kembali Loader
+yang sudah ada ini 
+
+00:02:17.283 --> 00:02:18.050
+benar-benar penting.
+
+00:02:18.050 --> 00:02:21.726
+Jadi saat kita memutar perangkat berkali-kali,
+Loader yang sama
+
+00:02:21.726 --> 00:02:26.720
+akan digunakan dan bukannya menciptakan
+Loader baru untuk tiap perubahan orientasi.
+
+00:02:26.720 --> 00:02:29.370
+Jadi, bagaimana cara membuat Loader?
+
+00:02:29.370 --> 00:02:33.160
+Kita sebagai pengembang adalah orang beruntung
+yang harus menetapkan perilaku ini.
+
+00:02:33.160 --> 00:02:35.830
+Dengan mengimplementasikan
+antarmuka LoaderCallback.
+
+00:02:35.830 --> 00:02:39.420
+Aktivitas kita harus meng-override
+ketiga metode panggilan balik berikut
+
+00:02:39.420 --> 00:02:41.798
+untuk berinteraksi
+dengan LoaderManager.
+
+00:02:41.798 --> 00:02:44.950
+Saat metode onCreateLoader()
+dipanggil, kita harus membuat dan mengembalikan
+
+00:02:44.950 --> 00:02:48.790
+objek Loader baru yang akan mengambil
+data gempa bumi dari server web.
+
+00:02:48.790 --> 00:02:52.350
+Metode onLoadFinished() dipanggil
+saat Loader selesai memuat data
+
+00:02:52.350 --> 00:02:53.680
+di thread latar belakang.
+
+00:02:53.680 --> 00:02:56.980
+Ini tempat yang cocok untuk memperbarui
+UI dengan daftar gempa bumi.
+
+00:02:56.980 --> 00:03:00.320
+Metode onLoaderReset() dipanggil saat
+loader yang sudah dibuat sebelumnya
+
+00:03:00.320 --> 00:03:01.970
+direset.
+
+00:03:01.970 --> 00:03:04.590
+Maka dalam hal ini data dari
+pemuatan terakhir tidak valid dan
+
+00:03:04.590 --> 00:03:06.110
+tidak boleh digunakan lagi.
+
+00:03:06.110 --> 00:03:06.821
+Misalnya,
+
+00:03:06.821 --> 00:03:10.327
+loader mungkin direset jika kita memutuskan
+untuk mengambil data dari URL yang berbeda.
+
+00:03:10.327 --> 00:03:14.940
+Dalam hal ini, maka data gempa bumi
+yang ada tidak valid lagi.
+
+00:03:14.940 --> 00:03:18.610
+Maka dalam metode ini, kita biasanya
+menghapus data dari pemuatan terakhir,
+
+00:03:18.610 --> 00:03:21.190
+yang berarti bahwa kita harus menghapus
+gempa bumi dari daftar.
+
+00:03:21.190 --> 00:03:24.750
+Sebagai pengingat saja, saat Anda
+melihat metode panggilan balik seperti ini,
+
+00:03:24.750 --> 00:03:27.400
+ini merupakan tanda bahwa ada
+perilaku asinkronis.
+
+00:03:27.400 --> 00:03:31.000
+Jadi ingatlah bahwa asinkronis berarti bahwa
+sistem dapat melakukan tugas
+
+00:03:31.000 --> 00:03:34.310
+lain sebelum data dimuat
+secara utuh dari Loader.
+
+00:03:34.310 --> 00:03:38.200
+Kita membuat Loader hanya saat
+sistem memanggil kita balik
+
+00:03:38.200 --> 00:03:42.390
+melalui metode onCreateLoader(),
+lalu sistem bisa melakukan tugas lain.
+
+00:03:42.390 --> 00:03:45.580
+Kita hanya memperbarui UI saat sistem
+memanggil kita dengan onLoadFinished()
+
+00:03:45.580 --> 00:03:47.570
+dengan hasil Loader.
+
+00:03:47.570 --> 00:03:49.160
+Bisa jadi ada waktu yang pendek atau
+
+00:03:49.160 --> 00:03:52.230
+panjang di antara berbagai panggilan balik ini.
+
+00:03:52.230 --> 00:03:55.840
+Dalam video berikutnya, kita akan menggali
+perincian kode
+
+00:03:55.840 --> 00:03:57.920
+dan juga cara membuat
+Loader.
+
+00:03:57.920 --> 00:04:00.560
+Tapi untuk sekarang ini, saya hanya ingin memastikan
+bahwa Anda memahami manfaat
+
+00:04:00.560 --> 00:04:02.170
+besar dari Loader.
+
+00:04:02.170 --> 00:04:04.930
+Dalam pos blog oleh Ian Lake,
+Google Developer Advocate,
+
+00:04:04.930 --> 00:04:08.060
+ia berbicara tentang praktik terbaik untuk
+memuat data ke dalam aplikasi.
+
+00:04:08.060 --> 00:04:11.540
+Dalam bagian ini, ia menyorot apa yang
+istimewa dari Loader?
+
+00:04:11.540 --> 00:04:14.873
+Saat rotasi perangkat,
+walaupun aktivitas Anda dibuat ulang,
+
+00:04:14.873 --> 00:04:18.644
+Loader akan tetap bertahan dan data yang baru
+saja Anda ambil juga akan tetap ada.
+
+00:04:18.644 --> 00:04:21.339
+Jadi Anda tidak perlu repot-repot melakukan
+panggilan lagi.
+
+00:04:21.339 --> 00:04:24.630
+Yang lebih baik lagi,
+Loader tidak ada untuk selamanya.
+
+00:04:24.630 --> 00:04:28.570
+Jika aktivitas dimatikan, Loader
+akan secara otomatis membersihkan diri.
+
+00:04:28.570 --> 00:04:30.410
+Loader sebenarnya terikat dengan
+siklus hidup aktivitas,
+
+00:04:30.410 --> 00:04:34.740
+dan jauh lebih sesuai untuk
+mengambil data yang
+
+00:04:34.740 --> 00:04:39.810
+harus ditampilkan di layar
+bahkan jika aktivitas itu berhenti.
+
+00:04:39.810 --> 00:04:43.506
+Tapi, Loader hidup selama
+aktivitas hidup sehingga
+
+00:04:43.506 --> 00:04:45.274
+Loader itulah yang kita butuhkan.
+
+00:04:45.274 --> 00:04:49.010
+Oke, wow,
+informasinya banyak sekali.
+
+00:04:49.010 --> 00:04:51.510
+Saya tahu sulit mengingat
+semuanya secara langsung.
+
+00:04:51.510 --> 00:04:54.900
+Jadi saya telah meringkas poin-poin kunci
+kuis ini, tapi membiarkan kosong untuk
+
+00:04:54.900 --> 00:04:56.040
+Anda isi.
+
+00:04:56.040 --> 00:04:57.849
+Silakan dan bantu saya mengisi yang kosong itu.
+
+00:04:59.210 --> 00:05:02.790
+Apa yang berinteraksi dengan aktivitas untuk
+mengelola satu atau lebih indeks Loader?
+
+00:05:04.970 --> 00:05:08.780
+Agar Aktivitas dapat menjadi klien yang
+berinteraksi dengan LoaderManager,
+
+00:05:08.780 --> 00:05:12.080
+kita membutuhkan EarthquakeActivity untuk
+mengimplementasikan ............. antarmuka.
+
+00:05:13.650 --> 00:05:17.678
+Lalu Aktivitas harus meng-override metode .....
+itu untuk membuat dan
+
+00:05:17.678 --> 00:05:19.695
+mengembalikan indeks Loader baru.
+
+00:05:19.695 --> 00:05:23.320
+Metode ..... untuk menerima data
+setelah Loader selesai memuatnya.
+
+00:05:24.590 --> 00:05:28.420
+Terakhir, metode ..... untuk menangani
+saat Loader yang dibuat sebelumnya
+
+00:05:28.420 --> 00:05:31.890
+tidak dibutuhkan lagi, kecuali
+data yang sudah ada dapat dibuang.
+
+00:05:33.100 --> 00:05:35.310
+Terakhir, untuk memulai Loader, dan
+
+00:05:35.310 --> 00:05:38.550
+memicu metode panggilan balik Loader,
+saat aplikasi diluncurkan,
+
+00:05:38.550 --> 00:05:41.810
+dalam metode EarthquakeActivity onCreate ()
+apa yang harus kita panggil?
+
+00:05:44.310 --> 00:05:47.090
+Jika Anda butuh petunjuk, sudah saya sertakan
+pilihan jawaban yang dapat Anda
+
+00:05:47.090 --> 00:05:49.690
+pilih dari catatan di bawah kuis ini.
+
+00:05:49.690 --> 00:05:52.270
+Silakan merujuk
+tautan dokumentasi, dan
+
+00:05:52.270 --> 00:05:53.690
+juga panduan pengembangan Loader.
+

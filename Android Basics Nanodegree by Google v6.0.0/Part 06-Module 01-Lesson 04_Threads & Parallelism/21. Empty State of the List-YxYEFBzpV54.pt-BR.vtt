@@ -1,0 +1,225 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.601
+Às vezes apps
+não têm dados para exibir.
+
+00:00:02.634 --> 00:00:06.467
+Por exemplo, talvez não haja
+novos e-mails no inbox.
+
+00:00:06.501 --> 00:00:10.100
+Como desenvolvedores, temos
+que saber lidar com essa situação.
+
+00:00:10.133 --> 00:00:13.667
+Tentamos deixar a experiência
+mais agradável
+
+00:00:13.701 --> 00:00:16.267
+com um gráfico bacana,
+por exemplo.
+
+00:00:16.300 --> 00:00:19.601
+Seria melhor encher o vazio
+com algum conteúdo inicial
+
+00:00:19.634 --> 00:00:21.634
+ou dicas sobre como começar.
+
+00:00:21.667 --> 00:00:24.167
+Depende do que é apropriado
+para o seu app.
+
+00:00:24.200 --> 00:00:27.567
+Por ora, vamos focar
+num estado vazio simples
+
+00:00:27.601 --> 00:00:30.934
+que claramente comunica
+que nenhum tremor foi encontrado.
+
+00:00:30.968 --> 00:00:33.601
+É bem melhor
+do que exibir uma tela vazia.
+
+00:00:33.634 --> 00:00:37.601
+Você pode melhorar isso e deixar
+o estado vazio mais sofisticado.
+
+00:00:38.200 --> 00:00:42.434
+Caso o servidor do USGS
+não retorne tremor algum
+
+00:00:42.467 --> 00:00:43.801
+é outra história.
+
+00:00:43.834 --> 00:00:46.767
+De qualquer forma, nosso app
+deve contar processos
+
+00:00:46.801 --> 00:00:49.300
+para lidar com esse cenário
+caso ele aconteça.
+
+00:00:49.334 --> 00:00:51.567
+Felizmente, a equipe
+do Android framework
+
+00:00:51.601 --> 00:00:53.868
+esperava que esse cenário
+aconteceria.
+
+00:00:53.901 --> 00:00:57.834
+Então eles criaram uma forma
+de mostrar uma exibição vazia
+
+00:00:57.868 --> 00:01:00.634
+no lugar de uma ListView
+
+00:01:00.667 --> 00:01:02.434
+quando não há dados na lista,
+
+00:01:02.467 --> 00:01:04.801
+ou seja, quando o adaptador
+está vazio.
+
+00:01:04.834 --> 00:01:09.100
+Nesta tarefa, você vai implementar
+essa ação no app de tremores.
+
+00:01:09.133 --> 00:01:13.434
+A 1ª coisa a fazer é modificar
+o layout XML do earthoquake_activity
+
+00:01:13.467 --> 00:01:16.133
+e incluir um grupo view
+que contém dois filhos:
+
+00:01:16.167 --> 00:01:19.667
+a ListView e um TextView
+para a exibição vazia.
+
+00:01:20.667 --> 00:01:24.734
+A exibição vazia e a ListView
+devem ser irmãos no grupo view.
+
+00:01:24.767 --> 00:01:26.534
+Os irmãos deve se sobrepor.
+
+00:01:26.567 --> 00:01:29.367
+A ListView deve tomar
+a altura total da tela cheia.
+
+00:01:29.400 --> 00:01:32.501
+Já a exibição vazia
+deve estar centralizada.
+
+00:01:32.534 --> 00:01:34.167
+Assim que atualizar o layout,
+
+00:01:34.200 --> 00:01:37.300
+modifique a classe
+EarthquakeActivity.java.
+
+00:01:37.334 --> 00:01:40.601
+No método onCreate,
+defina o método setEmptyView
+
+00:01:40.634 --> 00:01:42.033
+no objeto ListView
+
+00:01:42.067 --> 00:01:44.267
+e passe a exibição vazia.
+
+00:01:44.300 --> 00:01:47.033
+Veja a documentação
+do método setEmptyView.
+
+00:01:47.067 --> 00:01:49.968
+Vemos que quando
+não há itens na lista,
+
+00:01:50.000 --> 00:01:52.200
+o framework do Android
+esconde o ListView
+
+00:01:52.234 --> 00:01:54.167
+e exibe esta exibição vazia.
+
+00:01:54.200 --> 00:01:56.634
+Se há itens,
+a ListView é exibida
+
+00:01:56.667 --> 00:01:59.901
+e a exibição vazia
+é escondida.
+
+00:01:59.934 --> 00:02:01.934
+Todas essas mudanças
+nas exibições
+
+00:02:01.968 --> 00:02:04.968
+são feitas automaticamente,
+algo bem bacana.
+
+00:02:05.000 --> 00:02:08.968
+Quero salientar outra coisa.
+Quando rodamos o app pela 1ª vez,
+
+00:02:09.000 --> 00:02:11.834
+ainda não há dados
+porque não foram carregados.
+
+00:02:11.868 --> 00:02:15.067
+Para evitar que a mensagem
+"nenhum tremor encontrado"
+
+00:02:15.100 --> 00:02:17.467
+enquanto os dados
+são carregados pela 1ª vez,
+
+00:02:17.501 --> 00:02:20.300
+apenas atribua essa mensagem
+à exibição vazia
+
+00:02:20.334 --> 00:02:22.968
+depois do término
+do 1º carregamento
+
+00:02:23.000 --> 00:02:25.601
+com o método onLoadFinish.
+
+00:02:25.634 --> 00:02:29.033
+Dá para verificar
+se a exibição vazia funciona?
+
+00:02:29.067 --> 00:02:30.267
+Aí vai uma dica.
+
+00:02:30.300 --> 00:02:32.667
+Vamos temporariamente
+anular alguns códigos.
+
+00:02:32.701 --> 00:02:34.801
+Assinale essas caixas
+quando terminar.
+
+00:02:34.834 --> 00:02:36.767
+Depois você pode tentar
+o desafio bônus.
+
+00:02:36.801 --> 00:02:38.300
+Você conhece
+algum app de Android
+
+00:02:38.334 --> 00:02:42.868
+que faz do estado vazio
+uma experiência agradável?
+
+00:02:42.901 --> 00:02:46.400
+Compartilhe uma imagem do app
+nos comentários abaixo.
+

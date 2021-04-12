@@ -1,0 +1,307 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handle Empty or Null Cases</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Threads &amp; Parallelism</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Did You Feel It App.html">02. &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="03. Main vs Background Threads 1.html">03. Main vs Background Threads 1</a>
+    </li>
+    <li class="">
+      <a href="04. Main vs Background Threads 2.html">04. Main vs Background Threads 2</a>
+    </li>
+    <li class="">
+      <a href="05. Main vs Background Threads 3.html">05. Main vs Background Threads 3</a>
+    </li>
+    <li class="">
+      <a href="06. AsyncTask to the Rescue.html">06. AsyncTask to the Rescue</a>
+    </li>
+    <li class="">
+      <a href="07. AsyncTask Callback Methods.html">07. AsyncTask Callback Methods</a>
+    </li>
+    <li class="">
+      <a href="08. Review of Generics.html">08. Review of Generics</a>
+    </li>
+    <li class="">
+      <a href="09. AsyncTask Generic Params.html">09. AsyncTask Generic Params</a>
+    </li>
+    <li class="">
+      <a href="10. Inner Classes.html">10. Inner Classes</a>
+    </li>
+    <li class="">
+      <a href="11. Fix the Did You Feel It App.html">11. Fix the &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="12. Handle Empty or Null Cases.html">12. Handle Empty or Null Cases</a>
+    </li>
+    <li class="">
+      <a href="13. Plan Changes to Quake Report App.html">13. Plan Changes to Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="14. AsyncTask Generic Params in Quake Report App.html">14. AsyncTask Generic Params in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="15. Networking in Quake Report App.html">15. Networking in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="16. Limitations of AsyncTask.html">16. Limitations of AsyncTask</a>
+    </li>
+    <li class="">
+      <a href="17. Intro to Loaders, Part 1.html">17. Intro to Loaders, Part 1</a>
+    </li>
+    <li class="">
+      <a href="18. Intro to Loaders, Part 2.html">18. Intro to Loaders, Part 2</a>
+    </li>
+    <li class="">
+      <a href="19. Switch to Using a Loader.html">19. Switch to Using a Loader</a>
+    </li>
+    <li class="">
+      <a href="20. Verify Loader Behavior.html">20. Verify Loader Behavior</a>
+    </li>
+    <li class="">
+      <a href="21. Empty State of the List.html">21. Empty State of the List</a>
+    </li>
+    <li class="">
+      <a href="22. Loading Indicator.html">22. Loading Indicator</a>
+    </li>
+    <li class="">
+      <a href="23. No Internet Connection.html">23. No Internet Connection</a>
+    </li>
+    <li class="">
+      <a href="24. Check Network Connectivity Status.html">24. Check Network Connectivity Status</a>
+    </li>
+    <li class="">
+      <a href="25. Congrats.html">25. Congrats</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">12. Handle Empty or Null Cases</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>Handle Empty or Null Cases</p></h3>
+  <div>
+  <p>I’d like to point out that our code is currently written for the best case scenario. We assume that the EarthquakeAsyncTask is called with inputs that we expect and performs the network request without any errors.</p>
+<h3 id="what-if…">What if…</h3>
+<ul>
+<li>A future teammate, who works on this app, changes the code and tries to execute the EarthquakeAsyncTask with 0 input parameters? Our app would crash because it assumes there is at least 1 String input to the task.</li>
+<li>There’s an internal server error with the computers at USGS and the response cannot be parsed into an Event object? Our app would try to update the UI with an invalid or null Event object.</li>
+</ul>
+<p>We try to future-proof our app so that we or any other developer who touches the code, won’t accidentally cause bugs or crashes in the app. In order to do this, we need to minimize the assumptions about the code that is written outside of the current class, outside of our current control. </p>
+<p>Our code becomes more robust if we can accept any inputs (0 inputs, 1 input, 2 inputs, etc..) or handle any unexpected behavior (server gives valid or invalid response), and handle it gracefully without crashing the app.</p>
+<p>To this end, please make the following modifications to the “Did You Feel It?” app to handle the empty or null cases in the EarthquakeAsyncTask.</p>
+<p>In the doInBackground method, check if the urls array has at least 1 entry and that the first entry is not null. If the array is length 0 or the first entry is null, then bail out of the method early by returning null. We need to return null because an object is expected as the return value. If there 1 valid String URL, then proceed with fetching the data.</p>
+<pre><code>  protected Event doInBackground(String... urls) {
+      // Don't perform the request if there are no URLs, or the first URL is null.
+      if (urls.length &lt; 1 || urls[0] == null) {
+         return null;
+      }
+
+      Event result = Utils.fetchEarthquakeData(urls[0]);
+      return result;
+  }</code></pre>
+<p>In the onPostExecute method, return early if there is no earthquake result.</p>
+<pre><code>  protected void onPostExecute(Event result) {
+     // If there is no result, do nothing.
+     if (result == null) {
+         return;
+     }
+
+     updateUi(result);
+  }</code></pre>
+<p>Here’s the complete EarthquakeAsyncTask class declaration.</p>
+<pre><code>  /**
+  * {@link AsyncTask} to perform the network request on a background thread, and then
+  * update the UI with the first earthquake in the response.
+  */
+  private class EarthquakeAsyncTask extends AsyncTask&lt;String, Void, Event&gt; {
+
+     /**
+      * This method is invoked (or called) on a background thread, so we can perform
+      * long-running operations like making a network request.
+      *
+      * It is NOT okay to update the UI from a background thread, so we just return an
+      * {@link Event} object as the result.
+      */
+     protected Event doInBackground(String... urls) {
+         // Don't perform the request if there are no URLs, or the first URL is null.
+         if (urls.length &lt; 1 || urls[0] == null) {
+             return null;
+         }
+
+         Event result = Utils.fetchEarthquakeData(urls[0]);
+         return result;
+     }
+
+     /**
+      * This method is invoked on the main UI thread after the background work has been
+      * completed.
+      *
+      * It IS okay to modify the UI within this method. We take the {@link Event} object
+      * (which was returned from the doInBackground() method) and update the views on the screen.
+      */
+     protected void onPostExecute(Event result) {
+         // If there is no result, do nothing.
+         if (result == null) {
+             return;
+         }
+
+         updateUi(result);
+     }
+  }</code></pre>
+<p>When you compile and run the app, it should still look the same.</p>
+<p><img src="media/unnamed-161265-0.gif" width="200"></p>
+<p>To browse the complete and final state of the “Did You Feel It?” app on GitHub, click <a href="https://github.com/udacity/ud843_DidYouFeelIt/tree/solution" target="_blank">here</a>. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="13. Plan Changes to Quake Report App.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('12. Handle Empty or Null Cases')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

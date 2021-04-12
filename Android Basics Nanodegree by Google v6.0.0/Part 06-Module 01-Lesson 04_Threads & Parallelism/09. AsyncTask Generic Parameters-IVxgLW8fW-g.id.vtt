@@ -1,0 +1,115 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.460 --> 00:00:03.070
+Ingat, tipe data generik untuk
+
+00:00:03.070 --> 00:00:06.280
+AsyncTask adalah params,
+progress, dan result.
+
+00:00:07.280 --> 00:00:11.525
+Tipe-tipe data ini ditangani metode
+doInBackground, onProgressUpdate,
+
+00:00:11.525 --> 00:00:14.420
+dan onPostExecute.
+
+00:00:14.420 --> 00:00:17.390
+Kita bisa ganti tipe generik pertama
+dengan objek string.
+
+00:00:18.760 --> 00:00:22.830
+Menurut referensi AsyncTask,
+DoInBackground adalah metode yang
+
+00:00:22.830 --> 00:00:26.090
+menangani tipe data generik pertama,
+yaitu params.
+
+00:00:26.090 --> 00:00:28.120
+Saat kita lihat metode
+DoInBackground,
+
+00:00:28.120 --> 00:00:31.150
+di sini terlihat bahwa metode ini
+memakai string sebagai tipe inputnya.
+
+00:00:31.150 --> 00:00:33.620
+Jadi, jawaban yang tepat adalah string.
+
+00:00:33.620 --> 00:00:37.280
+Param kedua menggunakan metode
+onProgressUpdate.
+
+00:00:37.280 --> 00:00:41.880
+Di kode ini, sama sekali tak terlihat
+ada tanda metode
+
+00:00:41.880 --> 00:00:44.630
+progress update.
+
+00:00:44.630 --> 00:00:46.230
+Jadi, apa artinya ini?
+
+00:00:46.230 --> 00:00:49.370
+Ya tepatnya, kita tidak sedang memakai
+progress update di sini.
+
+00:00:49.370 --> 00:00:53.810
+Dalam spek, dikatakan memakai Void
+jika kita tidak menggunakan tipe data
+
+00:00:53.810 --> 00:00:56.510
+jadi inilah jawaban yang benar.
+
+00:00:56.510 --> 00:01:00.160
+Perhatikan bahwa Void ini dengan huruf
+kapital karena ini tipe data objek.
+
+00:01:01.200 --> 00:01:05.280
+Param ketiga ditangani oleh
+onPostExecute, dan
+
+00:01:05.280 --> 00:01:09.520
+di sini kodenya memakai string,
+jadi jawabannya string.
+
+00:01:09.520 --> 00:01:10.790
+Kerja bagus.
+
+00:01:10.790 --> 00:01:13.360
+Jadi singkatnya, dalam memakai AsyncTask
+
+00:01:13.360 --> 00:01:17.110
+Anda harus lebih dulu membuat
+subkelas AsyncTask.
+
+00:01:17.110 --> 00:01:22.035
+Bisa dinamai DownloadWebpageTask,
+atau SortDataTask,
+
+00:01:22.035 --> 00:01:25.655
+atau SaveVidetask, atau apa pun
+yang masuk akal untuk aplikasi Anda.
+
+00:01:25.655 --> 00:01:29.825
+Gunakan doInBackground untuk
+tugas apa pun di latar belakang,
+
+00:01:29.825 --> 00:01:33.585
+yang butuh banyak waktu, seperti
+memanggil server web lain,
+
+00:01:33.585 --> 00:01:35.740
+atau menjalankan penyaring foto.
+
+00:01:35.740 --> 00:01:39.140
+Pakai onProgressUpdate untuk
+memberi pembaruan status aplikasi.
+
+00:01:39.140 --> 00:01:43.680
+Terakhir, gunakan onPostExecute untuk
+memperoleh hasil dari tugas latar belakang.
+

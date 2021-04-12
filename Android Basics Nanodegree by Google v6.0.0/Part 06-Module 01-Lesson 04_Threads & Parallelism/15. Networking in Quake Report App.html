@@ -1,0 +1,620 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Networking in Quake Report App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Threads &amp; Parallelism</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Did You Feel It App.html">02. &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="03. Main vs Background Threads 1.html">03. Main vs Background Threads 1</a>
+    </li>
+    <li class="">
+      <a href="04. Main vs Background Threads 2.html">04. Main vs Background Threads 2</a>
+    </li>
+    <li class="">
+      <a href="05. Main vs Background Threads 3.html">05. Main vs Background Threads 3</a>
+    </li>
+    <li class="">
+      <a href="06. AsyncTask to the Rescue.html">06. AsyncTask to the Rescue</a>
+    </li>
+    <li class="">
+      <a href="07. AsyncTask Callback Methods.html">07. AsyncTask Callback Methods</a>
+    </li>
+    <li class="">
+      <a href="08. Review of Generics.html">08. Review of Generics</a>
+    </li>
+    <li class="">
+      <a href="09. AsyncTask Generic Params.html">09. AsyncTask Generic Params</a>
+    </li>
+    <li class="">
+      <a href="10. Inner Classes.html">10. Inner Classes</a>
+    </li>
+    <li class="">
+      <a href="11. Fix the Did You Feel It App.html">11. Fix the &quot;Did You Feel It?&quot; App</a>
+    </li>
+    <li class="">
+      <a href="12. Handle Empty or Null Cases.html">12. Handle Empty or Null Cases</a>
+    </li>
+    <li class="">
+      <a href="13. Plan Changes to Quake Report App.html">13. Plan Changes to Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="14. AsyncTask Generic Params in Quake Report App.html">14. AsyncTask Generic Params in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="15. Networking in Quake Report App.html">15. Networking in Quake Report App</a>
+    </li>
+    <li class="">
+      <a href="16. Limitations of AsyncTask.html">16. Limitations of AsyncTask</a>
+    </li>
+    <li class="">
+      <a href="17. Intro to Loaders, Part 1.html">17. Intro to Loaders, Part 1</a>
+    </li>
+    <li class="">
+      <a href="18. Intro to Loaders, Part 2.html">18. Intro to Loaders, Part 2</a>
+    </li>
+    <li class="">
+      <a href="19. Switch to Using a Loader.html">19. Switch to Using a Loader</a>
+    </li>
+    <li class="">
+      <a href="20. Verify Loader Behavior.html">20. Verify Loader Behavior</a>
+    </li>
+    <li class="">
+      <a href="21. Empty State of the List.html">21. Empty State of the List</a>
+    </li>
+    <li class="">
+      <a href="22. Loading Indicator.html">22. Loading Indicator</a>
+    </li>
+    <li class="">
+      <a href="23. No Internet Connection.html">23. No Internet Connection</a>
+    </li>
+    <li class="">
+      <a href="24. Check Network Connectivity Status.html">24. Check Network Connectivity Status</a>
+    </li>
+    <li class="">
+      <a href="25. Congrats.html">25. Congrats</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">15. Networking in Quake Report App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Time to roll up your sleeves and start coding!</p>
+<p>Modify the Quake Report app to make the network request to this URL. This query will provide you with the top 10 most recent earthquakes in the world with at least a magnitude of 6.<br />
+<a href="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10" rel="noopener noreferrer" target="_blank">https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10</a></p>
+<p>When you receive the response, parse the JSON and then update the list in the app.</p>
+<p><em>Tip #1:</em> Try to compile and run the app as often as you can, as you make these incremental changes. Otherwise, you may have a lot of errors to fix at the very end.</p>
+<p><em>Tip #2:</em> Remember that you can refer back to the <a href="https://github.com/udacity/ud843_Soonami/tree/solution" target="_blank">“Soonami”</a> and <a href="https://github.com/udacity/ud843_DidYouFeelIt/tree/solution" target="_blank">“Did You Feel it”</a> sample apps. </p>
+<p>If you need more debugging tips, check out <a href="https://discussions.udacity.com/t/networking-in-the-quake-report-app/180298" target="_blank">this discussion forum thread</a> where other students post advice on how to get through this long coding task.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3><p>Networking in Quake Report App</p></h3>
+  <div>
+  <form>
+    <fieldset>
+      <legend><p>Modify the app to make a network request to USGS to fetch the 10 most recent earthquakes of magnitude 6 or higher, using this URL: <a href="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10" rel="noopener noreferrer" target="_blank">https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&eventtype=earthquake&orderby=time&minmag=6&limit=10</a></p></legend>
+    </fieldset>
+
+    <div>
+      <input type="checkbox" value="a1501299951488" name="352905" id="a1501299951488">
+      <label for="a1501299951488"><p>I did it!</p></label>
+    </div>
+  </form>
+
+  <details>
+    <summary><strong>SOLUTION:</strong></summary>
+    <ul>
+      <li>I did it!</li>
+  </ul>
+  </details>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="networking-in-quake-report-app---solution">Networking in Quake Report App - Solution</h2>
+<h3 id="setup">Setup</h3>
+<ul>
+<li>First declare the internet permission in the AndroidManifest.xml file so that the app can access the network.</li>
+</ul>
+<p><em>In AndroidManifest.xml:</em></p>
+<pre><code> &lt;uses-permission android:name="android.permission.INTERNET"/&gt;</code></pre>
+<ul>
+<li>Then store the String URL that we gave you, as a static final constant in the EarthquakeActivity file. We use the “private” access modifier on the variable because no other classes except for the EarthquakeActivity that need to reference it.</li>
+</ul>
+<p><em>In EarthquakeActivity.java:</em></p>
+<pre><code> /** URL for earthquake data from the USGS dataset */
+ private static final String USGS_REQUEST_URL =
+        "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;orderby=time&amp;minmag=6&amp;limit=10";</code></pre>
+<ul>
+<li>Based on the solution in the last quiz, we define the skeleton (or bare-bones outline) of the EarthquakeAsyncTask as an inner class to the EarthquakeActivity class.</li>
+</ul>
+<p><em>In EarthquakeActivity.java:</em></p>
+<pre><code> private class EarthquakeAsyncTask extends AsyncTask&lt;String, Void, List&lt;Earthquake&gt;&gt; {
+
+    @Override
+    protected List&lt;Earthquake&gt; doInBackground(String... urls) {
+
+    }
+
+    @Override
+    protected void onPostExecute(List&lt;Earthquake&gt; data) {
+
+    }
+ }</code></pre>
+<p>In the EarthquakeAsyncTask doInBackground() method, we need to execute the network request. There’s no code in our app that does that yet.</p>
+<ul>
+<li>Open up the QueryUtils.java file. Add in the following new helper methods. These are basically copied and pasted from the “Soonami” and “Did You Feel It?” apps that we used earlier.</li>
+</ul>
+<p><em>In QueryUtils.java:</em></p>
+<pre><code> /**
+ * Returns new URL object from the given string URL.
+ */
+ private static URL createUrl(String stringUrl) {
+    URL url = null;
+    try {
+        url = new URL(stringUrl);
+    } catch (MalformedURLException e) {
+        Log.e(LOG_TAG, "Problem building the URL ", e);
+    }
+    return url;
+ }
+
+ /**
+ * Make an HTTP request to the given URL and return a String as the response.
+ */
+ private static String makeHttpRequest(URL url) throws IOException {
+    String jsonResponse = "";
+
+    // If the URL is null, then return early.
+    if (url == null) {
+        return jsonResponse;
+    }
+
+    HttpURLConnection urlConnection = null;
+    InputStream inputStream = null;
+    try {
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setReadTimeout(10000 /* milliseconds */);
+        urlConnection.setConnectTimeout(15000 /* milliseconds */);
+        urlConnection.setRequestMethod("GET");
+        urlConnection.connect();
+
+        // If the request was successful (response code 200),
+        // then read the input stream and parse the response.
+        if (urlConnection.getResponseCode() == 200) {
+            inputStream = urlConnection.getInputStream();
+            jsonResponse = readFromStream(inputStream);
+        } else {
+            Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
+        }
+    } catch (IOException e) {
+        Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
+    } finally {
+        if (urlConnection != null) {
+            urlConnection.disconnect();
+        }
+        if (inputStream != null) {
+            // Closing the input stream could throw an IOException, which is why
+            // the makeHttpRequest(URL url) method signature specifies than an IOException
+            // could be thrown.
+            inputStream.close();
+        }
+    }
+    return jsonResponse;
+ }
+
+ /**
+ * Convert the {@link InputStream} into a String which contains the
+ * whole JSON response from the server.
+ */
+ private static String readFromStream(InputStream inputStream) throws IOException {
+    StringBuilder output = new StringBuilder();
+    if (inputStream != null) {
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+        BufferedReader reader = new BufferedReader(inputStreamReader);
+        String line = reader.readLine();
+        while (line != null) {
+            output.append(line);
+            line = reader.readLine();
+        }
+    }
+    return output.toString();
+ }</code></pre>
+<ul>
+<li>Modify the extractEarthquakes() method that handles JSON parsing. I renamed it to extractFeatureFromJson() and to take a JSON response String as input. Instead of hardcoding the extractFeatureFromJson() method to only be able to parse the hardcoded SAMPLE_JSON_RESPONSE String, this method becomes more reusable in different contexts if we accept a String input.</li>
+</ul>
+<p><em>In QueryUtils.java:</em></p>
+<pre><code> /**
+ * Return a list of {@link Earthquake} objects that has been built up from
+ * parsing the given JSON response.
+ */
+ private static List&lt;Earthquake&gt; extractFeatureFromJson(String earthquakeJSON) {
+    // If the JSON string is empty or null, then return early.
+    if (TextUtils.isEmpty(earthquakeJSON)) {
+        return null;
+    }
+
+    // Create an empty ArrayList that we can start adding earthquakes to
+    List&lt;Earthquake&gt; earthquakes = new ArrayList&lt;&gt;();
+
+    // Try to parse the JSON response string. If there's a problem with the way the JSON
+    // is formatted, a JSONException exception object will be thrown.
+    // Catch the exception so the app doesn't crash, and print the error message to the logs.
+    try {
+
+        // Create a JSONObject from the JSON response string
+        JSONObject baseJsonResponse = new JSONObject(earthquakeJSON);
+
+        // Extract the JSONArray associated with the key called "features",
+        // which represents a list of features (or earthquakes).
+        JSONArray earthquakeArray = baseJsonResponse.getJSONArray("features");
+
+        // For each earthquake in the earthquakeArray, create an {@link Earthquake} object
+        for (int i = 0; i &lt; earthquakeArray.length(); i++) {
+
+            // Get a single earthquake at position i within the list of earthquakes
+            JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);
+
+            // For a given earthquake, extract the JSONObject associated with the
+            // key called "properties", which represents a list of all properties
+            // for that earthquake.
+            JSONObject properties = currentEarthquake.getJSONObject("properties");
+
+            // Extract the value for the key called "mag"
+            double magnitude = properties.getDouble("mag");
+
+            // Extract the value for the key called "place"
+            String location = properties.getString("place");
+
+            // Extract the value for the key called "time"
+            long time = properties.getLong("time");
+
+            // Extract the value for the key called "url"
+            String url = properties.getString("url");
+
+            // Create a new {@link Earthquake} object with the magnitude, location, time,
+            // and url from the JSON response.
+            Earthquake earthquake = new Earthquake(magnitude, location, time, url);
+
+            // Add the new {@link Earthquake} to the list of earthquakes.
+            earthquakes.add(earthquake);
+        }
+
+    } catch (JSONException e) {
+        // If an error is thrown when executing any of the above statements in the "try" block,
+        // catch the exception here, so the app doesn't crash. Print a log message
+        // with the message from the exception.
+        Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+    }
+
+    // Return the list of earthquakes
+    return earthquakes;
+ }</code></pre>
+<ul>
+<li>Add in the fetchEarthquakeData() helper method that ties all the steps together - creating a URL, sending the request, processing the response. Since this is the only “public” QueryUtils method that the EarthquakeAsyncTask needs to interact with, make all other helper methods in QueryUtils “private”. </li>
+</ul>
+<p><em>In QueryUtils.java:</em></p>
+<pre><code> /**
+ * Query the USGS dataset and return a list of {@link Earthquake} objects.
+ */
+ public static List&lt;Earthquake&gt; fetchEarthquakeData(String requestUrl) {
+    // Create URL object
+    URL url = createUrl(requestUrl);
+
+    // Perform HTTP request to the URL and receive a JSON response back
+    String jsonResponse = null;
+    try {
+        jsonResponse = makeHttpRequest(url);
+    } catch (IOException e) {
+        Log.e(LOG_TAG, "Problem making the HTTP request.", e);
+    }
+
+    // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+    List&lt;Earthquake&gt; earthquakes = extractFeatureFromJson(jsonResponse);
+
+    // Return the list of {@link Earthquake}s
+    return earthquakes;
+ }</code></pre>
+<ul>
+<li>When we get to the onPostExecute() method, we need to update the ListView. The only way to update the contents of the list is to update the data set within the EarthquakeAdapter. To access and modify the instance of the EarthquakeAdapter, we need to make it a global variable in the EarthquakeActivity. </li>
+</ul>
+<p><em>In MainActivity.java:</em></p>
+<pre><code> /** Adapter for the list of earthquakes */
+ private EarthquakeAdapter mAdapter;</code></pre>
+<ul>
+<li>Then we update all references to the adapter to use the mAdapter variable name. </li>
+</ul>
+<p><em>In MainActivity.java:</em></p>
+<pre><code> @Override
+ protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.earthquake_activity);
+
+    // Find a reference to the {@link ListView} in the layout
+    ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+    // Create a new adapter that takes an empty list of earthquakes as input
+    mAdapter = new EarthquakeAdapter(this, new ArrayList&lt;Earthquake&gt;());
+
+    // Set the adapter on the {@link ListView}
+    // so the list can be populated in the user interface
+    earthquakeListView.setAdapter(mAdapter);
+
+    // Set an item click listener on the ListView, which sends an intent to a web browser
+    // to open a website with more information about the selected earthquake.
+    earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView&lt;?&gt; adapterView, View view, int position, long l) {
+            // Find the current earthquake that was clicked on
+            Earthquake currentEarthquake = mAdapter.getItem(position);
+
+            // Convert the String URL into a URI object (to pass into the Intent constructor)
+            Uri earthquakeUri = Uri.parse(currentEarthquake.getUrl());
+
+            // Create a new intent to view the earthquake URI
+            Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
+
+            // Send the intent to launch a new activity
+            startActivity(websiteIntent);
+        }
+    });
+ }</code></pre>
+<ul>
+<li>Now we can reference the adapter in the EarthquakeAsyncTask onPostExecute() method.</li>
+</ul>
+<p><em>In EarthquakeAsyncTask (within EarthquakeActivity):</em></p>
+<pre><code> @Override
+ protected void onPostExecute(List&lt;Earthquake&gt; data) {
+        // Clear the adapter of previous earthquake data
+        mAdapter.clear();
+
+        // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+        // data set. This will trigger the ListView to update.
+        if (data != null &amp;&amp; !data.isEmpty()) {
+            mAdapter.addAll(data);
+        }
+    }</code></pre>
+<ul>
+<li><p>Here’s the complete EarthquakeAsyncTask class.</p>
+<pre><code>  /**
+  * {@link AsyncTask} to perform the network request on a background thread, and then
+  * update the UI with the list of earthquakes in the response.
+  *
+  * AsyncTask has three generic parameters: the input type, a type used for progress updates, and
+  * an output type. Our task will take a String URL, and return an Earthquake. We won't do
+  * progress updates, so the second generic is just Void.
+  *
+  * We'll only override two of the methods of AsyncTask: doInBackground() and onPostExecute().
+  * The doInBackground() method runs on a background thread, so it can run long-running code
+  * (like network activity), without interfering with the responsiveness of the app.
+  * Then onPostExecute() is passed the result of doInBackground() method, but runs on the
+  * UI thread, so it can use the produced data to update the UI.
+  */
+  private class EarthquakeAsyncTask extends AsyncTask&lt;String, Void, List&lt;Earthquake&gt;&gt; {<pre><code> /**
+  * This method runs on a background thread and performs the network request.
+  * We should not update the UI from a background thread, so we return a list of
+  * {@link Earthquake}s as the result.
+  */
+ @Override
+ protected List&amp;lt;Earthquake&amp;gt; doInBackground(String... urls) {
+    // Don't perform the request if there are no URLs, or the first URL is null.
+    if (urls.length &amp;lt; 1 || urls[0] == null) {
+        return null;
+    }
+
+     List&amp;lt;Earthquake&amp;gt; result = QueryUtils.fetchEarthquakeData(urls[0]);
+     return result;
+ }
+
+ /**
+  * This method runs on the main UI thread after the background work has been
+  * completed. This method receives as input, the return value from the doInBackground()
+  * method. First we clear out the adapter, to get rid of earthquake data from a previous
+  * query to USGS. Then we update the adapter with the new list of earthquakes,
+  * which will trigger the ListView to re-populate its list items.
+  */
+ @Override
+ protected void onPostExecute(List&amp;lt;Earthquake&amp;gt; data) {
+     // Clear the adapter of previous earthquake data
+     mAdapter.clear();
+
+     // If there is a valid list of {@link Earthquake}s, then add them to the adapter's
+     // data set. This will trigger the ListView to update.
+     if (data != null &amp;amp;&amp;amp; !data.isEmpty()) {
+         mAdapter.addAll(data);
+     }
+ }</code></pre>  }</code></pre></li>
+<li><p>We can remove the code that called QueryUtils.extractEarthquakes() to get a list of earthquakes from the hardcoded response. Instead we are going to initialize the adapter with an empty list.</p>
+<pre><code>  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     setContentView(R.layout.earthquake_activity);<pre><code> // Find a reference to the {@link ListView} in the layout
+ ListView earthquakeListView = (ListView) findViewById(R.id.list);
+
+ // Create a new adapter that takes an empty list of earthquakes as input
+ mAdapter = new EarthquakeAdapter(this, new ArrayList&amp;lt;Earthquake&amp;gt;());
+
+ // Set the adapter on the {@link ListView}
+ // so the list can be populated in the user interface
+ earthquakeListView.setAdapter(mAdapter);
+
+  ...</code></pre>  }</code></pre></li>
+<li><p>Now the task can be initialized and executed, passing in the request URL constant. </p></li>
+</ul>
+<p><em>In EarthquakeActivity.java:</em></p>
+<pre><code> @Override
+ protected void onCreate(Bundle savedInstanceState) {
+
+    ...
+
+    // Start the AsyncTask to fetch the earthquake data
+    EarthquakeAsyncTask task = new EarthquakeAsyncTask();
+    task.execute(USGS_REQUEST_URL);
+ }</code></pre>
+<ul>
+<li><p>Don’t forget to delete the SAMPLE_JSON_RESPONSE constant in the QueryUtils class.</p></li>
+<li><p>The app should look like this! </p></li>
+</ul>
+<p><img src="media/unnamed-352906-0.gif" width="200" /></p>
+<p>If not enough earthquakes show up in that response, try this URL instead:<br />
+<a href="https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=10" rel="noopener noreferrer" target="_blank">https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&orderby=time&minmag=5&limit=10</a></p>
+<p>If you want to see the code changes in more detail, see the code diff in this <a href="https://github.com/udacity/ud843-QuakeReport/commit/14541da929b771249ea8209698d324b61bbeee7e" target="_blank">GitHub commit</a>. Instead of the “Unified” view, click on the “Split” view to see the before-and-after comparison of the files. The latter view may make it easier for you to see the changes. </p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="16. Limitations of AsyncTask.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('15. Networking in Quake Report App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.334
+Vamos voltar ao app
+"Você Sentiu?".
+
+00:00:03.868 --> 00:00:07.067
+Da última vez, observamos
+que o app travava
+
+00:00:07.100 --> 00:00:10.367
+por causa de uma
+NetworkOnMainException.
+
+00:00:10.400 --> 00:00:12.567
+Sim, o Android não permite
+que desenvolvedores
+
+00:00:12.601 --> 00:00:14.868
+façam requisições de rede
+na thread principal
+
+00:00:14.901 --> 00:00:17.734
+porque com isso o app
+não responderia e travaria.
+
+00:00:17.767 --> 00:00:20.801
+Ao lançar uma exceção que
+faz com que o app trave,
+
+00:00:20.834 --> 00:00:23.868
+isso forçou os desenvolvedores
+a seguirem melhores práticas
+
+00:00:23.901 --> 00:00:26.701
+e a rodarem códigos de rede
+na thread de 2º plano,
+
+00:00:26.734 --> 00:00:29.200
+então devolverem os resultados
+a UI Thread.
+
+00:00:29.234 --> 00:00:32.567
+É, então criar threads,
+coordenar o trabalho entre elas
+
+00:00:32.601 --> 00:00:34.167
+e comunicar os resultados
+
+00:00:34.200 --> 00:00:36.968
+é um dos problemas mais difíceis
+da Ciência da Computação.
+
+00:00:37.000 --> 00:00:41.067
+No nosso caso, não precisamos
+da força total das threads.
+
+00:00:41.100 --> 00:00:43.334
+Só queremos rodar
+uma única tarefa,
+
+00:00:43.367 --> 00:00:45.234
+que é a nossa requisição HTTP
+
+00:00:45.267 --> 00:00:46.934
+numa thread separada daquela
+
+00:00:46.968 --> 00:00:49.467
+que está trabalhando os eventos
+da UI Thread.
+
+00:00:49.501 --> 00:00:51.501
+Os engenheiros de framework
+do Android
+
+00:00:51.534 --> 00:00:53.801
+já sabiam que isso seria
+uma necessidade comum
+
+00:00:53.834 --> 00:00:55.767
+e criaram uma classe Java
+específica
+
+00:00:55.801 --> 00:00:57.968
+que facilita
+esse exato padrão.
+
+00:00:58.000 --> 00:01:00.167
+Ele se chama "Async Task".
+
+00:01:00.200 --> 00:01:02.767
+Async é abreviação
+de assincronia,
+
+00:01:02.801 --> 00:01:05.701
+o que significa que coisas
+podem acontecer em tempos distintos.
+
+00:01:05.734 --> 00:01:08.200
+Por exemplo: o vídeo que você
+está assistindo agora
+
+00:01:08.234 --> 00:01:10.901
+é um tipo de aprendizado
+assíncrono.
+
+00:01:10.934 --> 00:01:14.567
+Você não tem que estar
+num auditório para assisti-lo.
+
+00:01:14.601 --> 00:01:18.000
+AsyncTask é ótimo
+para adiar uma tarefa rápida
+
+00:01:18.033 --> 00:01:21.868
+sem o overhead de ter que lidar
+com uma thread Java padrão.
+
+00:01:21.901 --> 00:01:25.234
+Não é perfeito para todas
+as situações de thread.
+
+00:01:25.267 --> 00:01:27.100
+Se você se deparar
+com uma situação
+
+00:01:27.133 --> 00:01:28.467
+na qual precisa de threads
+
+00:01:28.501 --> 00:01:30.534
+que existem por mais
+de alguns segundos,
+
+00:01:30.567 --> 00:01:32.467
+precisará usar
+algo mais robusto.
+
+00:01:32.501 --> 00:01:35.901
+Sim, dê uma olhada nos vídeos
+do Android Performance Patterns
+
+00:01:35.934 --> 00:01:38.701
+sobre threading,
+no link que está abaixo.
+
+00:01:38.734 --> 00:01:42.000
+Bem, como não queremos
+que a UI do app congele
+
+00:01:42.033 --> 00:01:45.601
+enquanto o app colhe dados
+da internet,
+
+00:01:45.634 --> 00:01:49.534
+o AsyncTask é a solução
+perfeita para esta parte do app.
+
+00:01:49.567 --> 00:01:51.367
+Vejamos em mais detalhes.
+
+00:01:51.400 --> 00:01:54.234
+AsyncTask nos dá uma forma
+de enviar tarefas
+
+00:01:54.267 --> 00:01:55.901
+para uma thread de 2° plano,
+
+00:01:55.934 --> 00:01:58.100
+receber os resultados
+quando estiver finalizado
+
+00:01:58.133 --> 00:01:59.868
+para fazer update da UI.
+
+00:01:59.901 --> 00:02:03.000
+A thread principal só usará
+uma pequena parcela de tempo
+
+00:02:03.033 --> 00:02:05.367
+para receber o resultado
+e fazer update da UI.
+
+00:02:05.400 --> 00:02:07.133
+Depois que o trabalho
+for finalizado,
+
+00:02:07.167 --> 00:02:09.567
+não mais precisaremos
+da thread de 2º plano.
+

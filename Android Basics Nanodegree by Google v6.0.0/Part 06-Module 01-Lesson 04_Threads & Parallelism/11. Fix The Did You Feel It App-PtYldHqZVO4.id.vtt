@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.300 --> 00:00:04.030
+Masalah pada kode yang ada adalah bahwa
+dalam metode MainActivity onCreate,
+
+00:00:04.030 --> 00:00:07.740
+kita mencoba menjalankan permintaan
+jaringan di thread utama.
+
+00:00:07.740 --> 00:00:12.292
+Kita perlu memindah kedua panggilan metode
+ini ke AsyncTask.
+
+00:00:12.292 --> 00:00:16.719
+Panggilan metode fetchEarthquakeData
+harus dijalankan di thread latar belakang,
+
+00:00:16.719 --> 00:00:19.693
+sementara panggilan updateUI harus
+dijalankan di thread utama
+
+00:00:19.693 --> 00:00:23.169
+atau thread UI setelah kita menerima objek
+hasil gempa bumi.
+
+00:00:23.169 --> 00:00:25.650
+Oke, mari lakukan pemrograman langsung.
+
+00:00:25.650 --> 00:00:30.620
+Pertama, saya akan mendefinisikan subkelas
+AsyncTask bernama EarthquakeAsyncTask.
+
+00:00:30.620 --> 00:00:33.915
+Saya juga akan mendefinisikannya sebagai
+kelas bagian dalam yang privat dari MainActivity.
+
+00:00:33.915 --> 00:00:36.500
+Jika AsyncTask belum
+diimpor,
+
+00:00:36.500 --> 00:00:39.923
+saya bisa pakai pintasan pembenahan cepat
+dalam Android Studio, Alt+Enter,
+
+00:00:39.923 --> 00:00:43.878
+untuk secara otomatis mengimpor kelas
+AsyncTask di atas dokumen Java.
+
+00:00:43.878 --> 00:00:45.803
+[BLANK_AUDIO]
+
+00:00:45.803 --> 00:00:48.622
+Seperti Anda lihat,
+sudah diimpor di sini.
+
+00:00:48.622 --> 00:00:51.069
+Seperti terlihat di
+garis lekuk merah ini,
+
+00:00:51.069 --> 00:00:54.738
+Android Studio masih melaporkan error,
+jadi saya akan pakai pembenahan cepat
+
+00:00:54.738 --> 00:00:58.250
+lagi dengan Alt+Enter untuk menghasilkan
+otomatis metode yang harus dikesampingkan.
+
+00:00:59.530 --> 00:01:02.080
+Lanjutkan dan pilih
+metode Implement, lalu
+
+00:01:02.080 --> 00:01:05.580
+saya akan pilih OK untuk mengimplementasikan
+potingan untuk metode doInBackground.
+
+00:01:06.790 --> 00:01:09.250
+Sekarang kita tinjau tipe generik
+yang digunakan di sini.
+
+00:01:09.250 --> 00:01:12.090
+Saya tentukan tipe data string untuk
+params input
+
+00:01:12.090 --> 00:01:16.770
+karena string URL USGS akan menjadi
+input di metode doInBackground.
+
+00:01:16.770 --> 00:01:20.040
+Saya pakai Void untuk parameter kemajuan,
+karena saya tidak perlu terus-menerus
+
+00:01:20.040 --> 00:01:22.900
+memberi tahu pengguna tentang kemajuan
+tugas ini.
+
+00:01:22.900 --> 00:01:26.130
+Untuk parameter hasil, saya tentukan
+tipe data kejadian
+
+00:01:26.130 --> 00:01:29.920
+karena saya ingin hasil pekerjaan latar
+belakang sebagai objek kejadian.
+
+00:01:29.920 --> 00:01:33.095
+Kita pindah panggilan fetchEarthquakeData
+secara langsung ke dalam
+
+00:01:33.095 --> 00:01:37.044
+metode doInBackground, tapi kita masih harus
+melakukan beberapa modifikasi.
+
+00:01:37.044 --> 00:01:41.400
+Daripada menulis kode secara langsung di tes ini agar hanya
+bekerja dengan URL USGS spesifik ini,
+
+00:01:41.400 --> 00:01:44.964
+Saya akan pakai parameter input dengan
+mengakses elemen nol dari
+
+00:01:44.964 --> 00:01:46.710
+array URL.
+
+00:01:46.710 --> 00:01:50.140
+Dengan begini, EarthquakeAsynTask
+dapat bekerja dengan URL string apa pun.
+
+00:01:51.140 --> 00:01:52.570
+Saya juga akan kembalikan objek kejadian
+
+00:01:52.570 --> 00:01:54.870
+sebagai nilai kembali metode
+doInBackground.
+
+00:01:54.870 --> 00:01:58.280
+Kita juga ingin kesampingkan metode
+onPostExecuteCallback.
+
+00:01:58.280 --> 00:02:01.686
+Di dalamnya, kita terima objek kejadian
+yang dikembalikan tadi di dalam
+
+00:02:01.686 --> 00:02:03.191
+metode doInBackground ini.
+
+00:02:03.191 --> 00:02:06.740
+Oke, bagus, kita selesai mendefinisikan
+EarthquakeAsyncTask.
+
+00:02:06.740 --> 00:02:10.695
+Saya lanjut juga dan menambahkan komentar
+ke metode dan kelas.
+
+00:02:10.695 --> 00:02:15.435
+Kembali ke MainActivity dalam metode
+onCreate, saya sekarang bisa membuat
+
+00:02:15.435 --> 00:02:20.037
+tugas baru dan memanggil execute di sini
+sambil memasukkan URL yang spesifik.
+
+00:02:20.037 --> 00:02:24.314
+Baik, mari lanjut, susun, dan jalankan
+aplikasi di perangkat.
+
+00:02:24.314 --> 00:02:27.044
+Baik, dan sekarang lihat,
+aplikasi kita tidak macet lagi.
+
+00:02:27.044 --> 00:02:28.335
+Wuhuu!
+
+00:02:28.335 --> 00:02:29.276
+Seperti Anda lihat,
+
+00:02:29.276 --> 00:02:33.628
+aplikasi menunjukkan perincian tentang gempa
+bumi magnitudo 7,8 di Ekuador.
+
+00:02:33.628 --> 00:02:39.670
+Ada 183 orang merasakannya, secara rata-rata,
+mereka melaporkan rasanya seperti 9,1.
+
+00:02:39.670 --> 00:02:42.150
+Wow, gempa bumi yang besar.
+
+00:02:43.600 --> 00:02:46.520
+Tapi, jika Anda ingin memeriksa kode
+yang baru saja saya tulis,
+
+00:02:46.520 --> 00:02:49.090
+silakan periksa tautan di bawah untuk
+repositori GitHub.
+
+00:02:49.090 --> 00:02:52.540
+Jika Anda dapat menyelesaikan latihan
+ini, selamat.
+
+00:02:52.540 --> 00:02:54.587
+Jika tidak, jangan khawatir.
+
+00:02:54.587 --> 00:02:58.070
+Untuk orang yang mulai belajar Java dan
+Android beberapa bulan atau minggu
+
+00:02:58.070 --> 00:03:01.953
+yang lalu, membuat panggilan jaringan di thread
+latar belakang dengan mengimplementasikan
+
+00:03:01.953 --> 00:03:05.491
+metode panggilan balik dalam subkelas pada
+kelas yang menggunakan tipe generik, whoo,
+
+00:03:05.491 --> 00:03:07.626
+banyak sekali konsep
+yang disatukan.
+
+00:03:07.626 --> 00:03:09.790
+Dan Anda harus bangga bisa sampai
+sejauh ini.
+

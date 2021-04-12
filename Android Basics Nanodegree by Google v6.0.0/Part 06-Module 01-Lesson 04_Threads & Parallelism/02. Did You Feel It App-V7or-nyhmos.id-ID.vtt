@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.500 --> 00:00:01.040
+Baiklah.
+Jadi
+
+00:00:01.040 --> 00:00:03.530
+saya telah mengimpor proyek
+ke Android Studio.
+
+00:00:03.530 --> 00:00:05.870
+Saya akan lanjut dan menekan
+tombol Run ini.
+
+00:00:07.960 --> 00:00:09.990
+Saya akan jalankan ini dalam emulator
+sehingga Anda bisa melihatnya.
+
+00:00:11.460 --> 00:00:14.385
+Boom, langsung ada log merah.
+
+00:00:14.385 --> 00:00:15.955
+Mari lihat aplikasi dan
+lihat apa yang terjadi.
+
+00:00:15.955 --> 00:00:19.796
+Saya bisa melihat dialog error
+muncul dengan teks.
+
+00:00:19.796 --> 00:00:22.585
+Sayangnya, Did You Feel It
+telah berhenti.
+
+00:00:22.585 --> 00:00:24.534
+[BLANK_AUDIO]
+
+00:00:24.534 --> 00:00:28.405
+Mari lihat apa yang mungkin menyebabkan
+kesalahan ini terjadi.
+
+00:00:28.405 --> 00:00:32.910
+Oya, jika scroll bar horizontal membuat
+Anda pusing seperti saya,
+
+00:00:32.910 --> 00:00:36.310
+Anda bisa mengeklik tombol use soft wraps
+di sisi kiri
+
+00:00:36.310 --> 00:00:41.560
+panel log Android Studio dan ini akan
+membungkus teks di sini.
+
+00:00:41.560 --> 00:00:46.580
+Jadi yang harus kita lakukan adalah gulir
+ke atas dan mencari
+
+00:00:46.580 --> 00:00:51.310
+dari mana mulainya semua keanehan ini, dan
+di sini kita lihat Fatal Exception main.
+
+00:00:51.310 --> 00:00:52.540
+Tak ada yang perlu ditakutkan.
+
+00:00:52.540 --> 00:00:56.042
+Tahukah Anda bahwa bug lebih takut
+kepada Anda daripada Anda kepadanya?
+
+00:00:56.042 --> 00:00:59.876
+Kemungkinan besar kandidatnya
+ada di sini.
+
+00:00:59.876 --> 00:01:02.400
+[BLANK_AUDIO]
+
+00:01:02.400 --> 00:01:05.558
+Anda mungkin harus menggulir
+secara horizontal untuk melihat ini, tapi
+
+00:01:05.558 --> 00:01:10.240
+di sini tertera NetworkOnMainThreadException,
+jadi itulah yang menyebabkan macet.
+
+00:01:11.360 --> 00:01:14.780
+Maka jawaban untuk kuis kita adalah
+NetworkOnMainThreadException.
+
+00:01:16.410 --> 00:01:19.270
+Oke, sekarang kita tahu bahwa penyebab
+macet adalah
+
+00:01:19.270 --> 00:01:22.730
+NetworkOnMainThreadException yang
+sudah kita ketahui.
+
+00:01:22.730 --> 00:01:25.890
+Kita akan eksplorasi solusi
+untuk masalah ini dalam pelajaran berikut.
+

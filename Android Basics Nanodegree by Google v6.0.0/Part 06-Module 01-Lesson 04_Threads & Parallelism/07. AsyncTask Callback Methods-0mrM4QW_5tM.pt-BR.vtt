@@ -1,0 +1,93 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.067
+Para responder as perguntas
+do quiz,
+
+00:00:02.100 --> 00:00:05.834
+fornecemos um link para o site
+de documentação do AsyncTask.
+
+00:00:05.868 --> 00:00:09.868
+Uma seção chamada "Os 4 passos"
+é particularmente relevante.
+
+00:00:09.901 --> 00:00:13.000
+E discute o propósito
+de cada método callback.
+
+00:00:13.033 --> 00:00:15.667
+Vamos falar sobre as respostas
+para este quiz.
+
+00:00:15.701 --> 00:00:17.801
+A parte importante
+é que você entenda
+
+00:00:17.834 --> 00:00:20.000
+que imediatamente após
+o Async começar,
+
+00:00:20.033 --> 00:00:22.801
+onPreExecute é chamado
+na thread principal.
+
+00:00:22.834 --> 00:00:26.601
+Então, o doInBackground
+rodará em 2º plano.
+
+00:00:27.167 --> 00:00:29.267
+Enquanto o doInBackground
+é executado,
+
+00:00:29.300 --> 00:00:31.400
+se você chamar
+"publish progress",
+
+00:00:31.434 --> 00:00:34.534
+o callback onProgressUpdate
+será ativado
+
+00:00:34.567 --> 00:00:36.767
+com o novo valor de progresso.
+
+00:00:36.801 --> 00:00:38.968
+Isso acontece
+na thread principal.
+
+00:00:39.000 --> 00:00:41.000
+Assim você pode mostrar
+ao usuário
+
+00:00:41.033 --> 00:00:42.501
+o progresso da tarefa.
+
+00:00:42.534 --> 00:00:45.567
+Por fim, após o término
+do doInBackground,
+
+00:00:45.601 --> 00:00:49.033
+o resultado é passado
+no método onPostExecuted.
+
+00:00:49.067 --> 00:00:51.467
+Esse método roda
+na thread principal.
+
+00:00:51.501 --> 00:00:54.133
+Assim você pode fazer
+update a UI do seu app.
+
+00:00:54.167 --> 00:00:55.400
+Bom trabalho!
+
+00:00:55.434 --> 00:00:58.400
+Você está a caminho
+de compreender como tirar vantagem
+
+00:00:58.434 --> 00:01:01.267
+da thread de 2º plano
+com a classe de AsyncTask.
+

@@ -1,0 +1,395 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.170 --> 00:00:03.890
+Sejauh ini kita melihat cuplikan kode
+yang sudah diisolasi.
+
+00:00:03.890 --> 00:00:08.460
+Di video ini, kita akan lihat bagaimana
+kode itu terpasang dalam peta Android.
+
+00:00:08.460 --> 00:00:11.680
+Karena EarthquakeAsyncTask
+adalah kelasnya sendiri,
+
+00:00:11.680 --> 00:00:13.460
+kenapa tidak pakai dokumen Java berbeda?
+
+00:00:14.460 --> 00:00:17.850
+Setelah kita melakukan permintaan
+jaringan untuk data gempa bumi dan
+
+00:00:17.850 --> 00:00:23.350
+memperoleh hasil dan onPostExecute,
+kita ingin memperbarui UI.
+
+00:00:23.350 --> 00:00:27.500
+Tapi bagaimana cara mendapat rujukan
+ke pembaruan tampilan di layar?
+
+00:00:27.500 --> 00:00:31.100
+Tampilan itu bagian dari tata letak
+yang kita atur di MainActivity.
+
+00:00:31.100 --> 00:00:33.890
+Di Java, ternyata kita
+dapat mendeklarasikan
+
+00:00:33.890 --> 00:00:37.670
+EarthquakeAsyncTask sebagai
+kelas bagian dalam.
+
+00:00:37.670 --> 00:00:40.510
+Artinya, seluruh definisi
+kelas AsyncTask
+
+00:00:40.510 --> 00:00:43.520
+bisa masuk ke definisi
+kelas MainActivity.
+
+00:00:43.520 --> 00:00:46.170
+Kelas bagian dalam EarthquakeAsyncTask
+
+00:00:46.170 --> 00:00:49.970
+memegang rujukan implisit ke kelas
+MainActivity bagian luar.
+
+00:00:49.970 --> 00:00:53.400
+Contoh kelas
+EarthquakeAsyncTask
+
+00:00:53.400 --> 00:00:56.950
+hanya dapat ada di dalam contoh
+main activity.
+
+00:00:56.950 --> 00:00:58.070
+Dengan kata lain,
+
+00:00:58.070 --> 00:01:03.570
+tidak ada EarthquakeAsyncTask
+tanpa menutup main activity,
+
+00:01:03.570 --> 00:01:06.740
+Ada risiko memori cukup besar
+terkait hal ini,
+
+00:01:06.740 --> 00:01:08.730
+yang akan kita bahas nanti di pelajaran ini.
+
+00:01:08.730 --> 00:01:13.640
+Tapi sekarang kita tahu sebagai kelas
+bagian dalam, contoh EarthquakeAsyncTask
+
+00:01:13.640 --> 00:01:18.530
+bisa mengakses variabel dan metode global
+apa pun dari contoh MainActivity penutup.
+
+00:01:18.530 --> 00:01:22.980
+Misalnya, dalam MainActivity, jika kita
+mendeklarasikan variabel global untuk
+
+00:01:22.980 --> 00:01:26.830
+TextView yang menunjukkan kekuatan
+gempa bumi, kita bisa merujuk ke
+
+00:01:26.830 --> 00:01:32.640
+TextView dalam metode AsyncTask
+onPostExecute untuk memperbarui teks.
+
+00:01:32.640 --> 00:01:36.530
+Alasan lain kenapa memilih mendeklarasikan
+sesuatu sebagai kelas bagian dalam dari
+
+00:01:36.530 --> 00:01:40.800
+kelas lain, adalah untuk menjaga agar kode
+Anda tetap padat dan sedikit dokumen Java.
+
+00:01:40.800 --> 00:01:44.390
+Ini terutama berguna jika kedua kelas
+baru berhubungan erat.
+
+00:01:44.390 --> 00:01:50.110
+Misalnya, EarthquakeAsyncTask hanya
+pernah digunakan di MainActivity,
+
+00:01:50.110 --> 00:01:56.150
+jadi kita bisa menjadikan EarthquakeAsyncTask
+kelas privat dan bukan kelas publik.
+
+00:01:56.150 --> 00:01:59.760
+Saya serahkan pada Chris untuk memandu
+dalam contoh dengan kode nyata
+
+00:01:59.760 --> 00:02:02.260
+alih-alih baris hitam horizontal.
+
+00:02:02.260 --> 00:02:03.480
+Dengan sampel yang akan saya
+tunjukkan pada Anda,
+
+00:02:03.480 --> 00:02:06.660
+diharapkan Anda memahami bagaimana
+semua konsep yang kita bicarakan
+
+00:02:06.660 --> 00:02:08.530
+dalam video-video sebelumnya.
+
+00:02:08.530 --> 00:02:11.070
+Ini kode dalam proyek untuk
+aplikasi koneksi jaringan,
+
+00:02:11.070 --> 00:02:14.490
+yang merupakan salah satu aplikasi
+sampel dalam Android Studio.
+
+00:02:14.490 --> 00:02:17.820
+Untuk mendapatkannya, saya pergi ke
+menu dokumen, pilih Baru,
+
+00:02:17.820 --> 00:02:20.010
+lalu pilih Import Sample.
+
+00:02:21.770 --> 00:02:25.450
+Di sini Anda temukan UI untuk melihat
+semua kode sampel di Android Studio.
+
+00:02:25.450 --> 00:02:29.790
+Seperti Anda lihat, ada banyak sekali
+sub-menu, dipisahkan menurut topik,
+
+00:02:29.790 --> 00:02:33.980
+seperti AndroidTV, sampel kode tentang
+pekerjaan latar belakang.
+
+00:02:33.980 --> 00:02:38.430
+Tapi saya pergi ke sini dan menggunakan
+bar penelusuran dan mencari jaringan.
+
+00:02:40.070 --> 00:02:43.530
+Dan di bawah menu connectivity,
+item kedua
+
+00:02:43.530 --> 00:02:47.130
+ada aplikasi koneksi jaringan, yang akan
+kita bahas.
+
+00:02:47.130 --> 00:02:50.780
+Jadi aplikasi koneksi jaringan ini ditujukan
+untuk mengambil 500 karakter HTML
+
+00:02:50.780 --> 00:02:53.270
+mentah dari situs Google.com.
+
+00:02:53.270 --> 00:02:56.400
+Saat mengeklik tombol menu Fetch,
+aplikasi terbuka dan
+
+00:02:56.400 --> 00:02:59.210
+membuat permintaan jaringan di
+thread latar belakang.
+
+00:02:59.210 --> 00:03:01.980
+Lalu kita akan melihat jawaban HTML mentah
+muncul di text view
+
+00:03:01.980 --> 00:03:03.910
+di paruh bawah layar.
+
+00:03:03.910 --> 00:03:06.940
+Kita lanjut dan melihat di balik layar
+bagaimana kode ini ditulis.
+
+00:03:06.940 --> 00:03:10.990
+Di sini kita lihat tugas pengunduhan
+merupakan sub-kelas dari AsyncTask.
+
+00:03:10.990 --> 00:03:14.780
+Dia memanggil metode loadFromNetwork,
+yang melakukan permintaan jaringan dan
+
+00:03:14.780 --> 00:03:17.620
+mengubah string input yang dihasilkan,
+yang merupakan string data
+
+00:03:17.620 --> 00:03:20.410
+arbitrer, menjadi respons string
+yang dikembalikannya.
+
+00:03:21.670 --> 00:03:22.630
+Sekarang Anda perhatikan,
+
+00:03:22.630 --> 00:03:27.270
+kelas unduhan dideklarasikan
+sebagai kelas bagian dalam MainActivity.
+
+00:03:28.380 --> 00:03:33.000
+Artinya definisi kelas unduhan yang utuh
+sebenarnya berlokasi di antara
+
+00:03:33.000 --> 00:03:37.070
+tanda kurung pembuka definisi kelas
+MainActivity yang lebih luas,
+
+00:03:37.070 --> 00:03:39.180
+kita akan lihat implikasinya
+nanti.
+
+00:03:39.180 --> 00:03:42.200
+Saat aplikasi diluncurkan,
+main activity dibuat, dan
+
+00:03:42.200 --> 00:03:44.150
+di sini kita lihat tata letak diatur.
+
+00:03:44.150 --> 00:03:47.090
+Saat tombol Fetch ditekan di
+menu pilihan,
+
+00:03:47.090 --> 00:03:51.910
+tugas unduhan baru dibuat, lalu metode
+execute dipanggil di tugas tersebut,
+
+00:03:51.910 --> 00:03:56.650
+yang memberikan situs Google.com
+sebagai URL, sebagai parameter.
+
+00:03:56.650 --> 00:03:59.180
+Sekarang mari periksa tugas
+unduhan itu lebih dekat.
+
+00:03:59.180 --> 00:04:01.910
+Seperti disebutkan tadi, kita jadikan
+AsyncTask subkelas dan
+
+00:04:01.910 --> 00:04:04.150
+memerinci tiga parameter generik.
+
+00:04:04.150 --> 00:04:07.700
+Kita tentukan tipe data string untuk
+parameter pertama yang merupakan input
+
+00:04:07.700 --> 00:04:11.510
+untuk metode latar belakang, lalu kita
+pakai Void untuk parameter kemajuan,
+
+00:04:11.510 --> 00:04:15.320
+karena kita tidak melaporkan pembaruan
+kemajuan bertahap ke UI dalam hal ini.
+
+00:04:15.320 --> 00:04:18.452
+Kunci terpenting adalah ketiadaannya
+panggilan balik onProgressUpdate aktual
+
+00:04:18.452 --> 00:04:20.089
+yang diimplementasikan di sini.
+
+00:04:20.089 --> 00:04:23.570
+Terakhir, ada tipe data string untuk
+hasil dari metode doInBackground
+
+00:04:23.570 --> 00:04:28.290
+yang juga dimasukkan sebagai input
+untuk metode onPostExecute.
+
+00:04:28.290 --> 00:04:31.200
+Mari lihat lebih dekat pada metode
+doInBackground, yang dipanggil
+
+00:04:31.200 --> 00:04:35.290
+saat kita pertama kali mengeksekusi tugas,
+kita lanjut dan perkirakan angka variabel
+
+00:04:35.290 --> 00:04:39.280
+argumen input string disimpan di
+array yang bernama URL.
+
+00:04:39.280 --> 00:04:40.900
+Lalu di dalam pemanggilan loadFromNetwork,
+
+00:04:40.900 --> 00:04:45.720
+kita mengekstrak elemen pertama dalam
+array URL memakai indeks nol.
+
+00:04:45.720 --> 00:04:47.390
+Lalu kita muat data dari jaringan.
+
+00:04:47.390 --> 00:04:50.550
+Perhatikan lagi bahwa muatan dari
+definisi jaringan berada di luar
+
+00:04:50.550 --> 00:04:53.794
+tanda kurung buka dan tutup
+tugas unduhan.
+
+00:04:53.794 --> 00:04:56.920
+Normalnya, kita tidak bisa
+memanggil metode privat atau
+
+00:04:56.920 --> 00:04:59.420
+variabel di kelas yang berbeda, tapi,
+
+00:04:59.420 --> 00:05:03.270
+karena tugas unduhan adalah kelas bagian
+dalam, ini dapat diterima.
+
+00:05:03.270 --> 00:05:05.946
+Setelah pekerjaan latar belakang selesai,
+respons string
+
+00:05:05.946 --> 00:05:09.270
+dikembalikan sebagai hasil metode
+doInBackground.
+
+00:05:09.270 --> 00:05:13.160
+Setelah metode ini dijalankan, sistem
+memanggil metode onPostExecute,
+
+00:05:13.160 --> 00:05:16.490
+memberikan hasil string, lalu
+kita log pesan.
+
+00:05:16.490 --> 00:05:19.500
+Ada perilaku khusus dalam sampel ini
+yang menyebabkan fragmen log
+
+00:05:19.500 --> 00:05:22.930
+bekerja, yang menampilkan pesan log
+sistem di layar.
+
+00:05:22.930 --> 00:05:26.100
+Jadi, saat Anda memanggil log.i atau
+log.v untuk mencatat pesan,
+
+00:05:26.100 --> 00:05:29.450
+Outputnya akan ditunjukkan di paruh
+bawah layar aplikasi kita juga.
+
+00:05:29.450 --> 00:05:31.459
+Anda tidak perlu menggunakan fragmen
+log dalam aplikasi Anda,
+
+00:05:31.459 --> 00:05:33.470
+tapi ini kelas yang berguna untuk sampel.
+
+00:05:33.470 --> 00:05:37.880
+Intinya adalah dalam metode
+AsyncTask onPostExecute
+
+00:05:37.880 --> 00:05:40.981
+kita mengambil respons dari thread
+latar belakang dan memperbarui UI.
+
+00:05:40.981 --> 00:05:44.375
+Setelah Anda lihat AsyncTask bisa
+dideklarasikan sebagai kelas bagian dalam
+
+00:05:44.375 --> 00:05:47.315
+dari activity, Anda akan punya kesempatan
+untuk melakukan hal yang sama
+
+00:05:47.315 --> 00:05:50.280
+dengan menulis subkelas AsyncTask
+Anda sendiri dalam aplikasi Did you feel it.
+

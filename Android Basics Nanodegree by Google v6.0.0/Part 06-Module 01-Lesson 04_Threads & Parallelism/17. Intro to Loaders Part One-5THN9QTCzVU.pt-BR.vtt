@@ -1,0 +1,544 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.567
+AsyncTask é ótima
+para muitas coisas,
+
+00:00:02.601 --> 00:00:04.701
+mas não é a melhor opção
+para update de dados
+
+00:00:04.734 --> 00:00:06.100
+na interface do usuário.
+
+00:00:06.133 --> 00:00:08.000
+Para isso, precisamos
+de um loader
+
+00:00:08.033 --> 00:00:11.000
+Loaders solucionam os problemas
+apresentados no vídeo anterior.
+
+00:00:11.033 --> 00:00:14.434
+Primeiro, não importa o quanto
+você vá requerer dados do loader,
+
+00:00:14.467 --> 00:00:17.033
+por default, o loader
+só vai pegar os dados uma vez.
+
+00:00:17.067 --> 00:00:20.634
+Não vai criar zilhões
+de AsyncTasks e atividades.
+
+00:00:20.667 --> 00:00:23.334
+Segundo, quando uma atividade
+é fechada,
+
+00:00:23.367 --> 00:00:26.567
+automaticamente vai dizer
+aos loaders para pararem,
+
+00:00:26.601 --> 00:00:28.567
+já que os dados
+não serão usados.
+
+00:00:28.601 --> 00:00:30.400
+Por fim, os loaders
+persistem
+
+00:00:30.434 --> 00:00:32.734
+através de mudanças de
+configuração nas atividades,
+
+00:00:32.767 --> 00:00:34.000
+como rotações.
+
+00:00:34.033 --> 00:00:35.934
+Se mandarmos o loader
+pegar dados
+
+00:00:35.968 --> 00:00:37.634
+e o telefone for girado,
+
+00:00:37.667 --> 00:00:40.534
+o loader vai retornar
+os dados à nova atividade,
+
+00:00:40.567 --> 00:00:41.934
+quando estiver pronta.
+
+00:00:41.968 --> 00:00:43.934
+Vamos olhar
+o guia de loaders.
+
+00:00:43.968 --> 00:00:46.000
+Esses componentes do framework
+do Android
+
+00:00:46.033 --> 00:00:47.467
+são especificamente
+desenhados
+
+00:00:47.501 --> 00:00:49.868
+para carregar dados
+para demonstrar em atividades.
+
+00:00:49.901 --> 00:00:51.033
+Ou fragmentos.
+
+00:00:51.067 --> 00:00:54.601
+Incluí o link abaixo para que
+você possa ler em detalhes.
+
+00:00:54.634 --> 00:00:57.601
+Começaremos com a seção
+chamada "iniciar um loader".
+
+00:00:58.267 --> 00:01:00.734
+Dentro da atividade, você pode
+iniciar um loader
+
+00:01:00.767 --> 00:01:02.734
+com a ajuda
+do "LoaderManager".
+
+00:01:02.767 --> 00:01:05.567
+Toda atividade de Android
+vem com um LoaderManager,
+
+00:01:05.601 --> 00:01:09.167
+que cuida de criar,
+reutilizar e destruir loaders
+
+00:01:09.200 --> 00:01:10.534
+em tempo apropriado.
+
+00:01:10.567 --> 00:01:13.334
+Quando tivermos uma referência
+ao LoaderManager,
+
+00:01:13.367 --> 00:01:15.701
+podemos chamar
+o método inItLoader.
+
+00:01:15.734 --> 00:01:19.033
+Esta primeira entrada
+é um identificador integer especial.
+
+00:01:19.067 --> 00:01:21.100
+Neste caso, usamos "0".
+
+00:01:21.133 --> 00:01:23.267
+Esse ID pode ter
+qualquer número aleatório
+
+00:01:23.300 --> 00:01:26.167
+porque só importa quando
+há loaders múltiplos no app
+
+00:01:26.200 --> 00:01:28.100
+e você precisa
+diferenciá-los.
+
+00:01:28.133 --> 00:01:30.234
+Os outros dois parâmetros
+são "1",
+
+00:01:30.267 --> 00:01:33.501
+e um grupo de entradas
+para carregar que é "nulo", aqui.
+
+00:01:33.534 --> 00:01:35.334
+E um objeto callback.
+
+00:01:35.367 --> 00:01:38.434
+Especificamos isto
+como objeto loader callbacks
+
+00:01:38.467 --> 00:01:40.467
+porque é comum
+para a atividade,
+
+00:01:40.501 --> 00:01:43.033
+a que ele se refere,
+para implementar
+
+00:01:43.067 --> 00:01:44.901
+a interface
+do loader callback.
+
+00:01:44.934 --> 00:01:46.267
+Então, a atividade em si,
+
+00:01:46.300 --> 00:01:48.767
+é o objeto loader callback
+que queremos passar.
+
+00:01:48.801 --> 00:01:51.067
+Falaremos mais sobre
+os loaders callbacks mais tarde,
+
+00:01:51.100 --> 00:01:53.868
+mas quero que compreenda
+que a chamada inItLoader
+
+00:01:53.901 --> 00:01:56.601
+garante que o loader
+seja tanto inicializado,
+
+00:01:56.634 --> 00:01:57.734
+quanto ativado.
+
+00:01:57.767 --> 00:02:00.701
+Se um loader com um ID,
+digamos que seja "0",
+
+00:02:00.734 --> 00:02:04.200
+já existe, vamos reutilizar
+esse último loader.
+
+00:02:04.234 --> 00:02:06.968
+Mas se o loader
+não existir ainda,
+
+00:02:07.000 --> 00:02:09.501
+o loader callback
+no método onCreate
+
+00:02:09.534 --> 00:02:10.834
+será acionado.
+
+00:02:10.868 --> 00:02:12.801
+E vai retornar
+como um novo loader.
+
+00:02:12.834 --> 00:02:14.701
+Agora, é este comportamento
+
+00:02:14.734 --> 00:02:16.534
+de reutilizar
+loaders existentes
+
+00:02:16.567 --> 00:02:17.968
+que é essencial.
+
+00:02:18.000 --> 00:02:20.901
+Quando giramos o aparelho
+várias vezes,
+
+00:02:20.934 --> 00:02:24.033
+o mesmo loader será usado
+em vez de criar um novo
+
+00:02:24.067 --> 00:02:26.100
+em cada mudança de orientação.
+
+00:02:26.133 --> 00:02:29.067
+Então como o loader
+é criado?
+
+00:02:29.100 --> 00:02:30.601
+Nós, como desenvolvedores,
+
+00:02:30.634 --> 00:02:33.234
+somos os sortudos que temos
+que definir esse comportamento.
+
+00:02:33.267 --> 00:02:35.834
+Ao implementar a interface
+do loader callback,
+
+00:02:35.868 --> 00:02:39.133
+a atividade precisa override
+os três seguintes métodos,
+
+00:02:39.167 --> 00:02:41.667
+para poderem interagir
+com o loader manager.
+
+00:02:41.701 --> 00:02:43.834
+Quando o método onCreateLoader
+é chamado,
+
+00:02:43.868 --> 00:02:46.501
+precisamos criar e retornar
+um novo objeto loader,
+
+00:02:46.534 --> 00:02:48.834
+que vai pegar os dados
+dos terremotos do servidor.
+
+00:02:48.868 --> 00:02:50.868
+O método onLoadFinished
+é chamado
+
+00:02:50.901 --> 00:02:52.634
+quando o loader termina
+de carregar os dados
+
+00:02:52.667 --> 00:02:54.067
+na thread de 2º plano.
+
+00:02:54.100 --> 00:02:55.834
+Esta é uma boa hora
+para update a UI
+
+00:02:55.868 --> 00:02:57.267
+com uma lista de terremotos.
+
+00:02:57.300 --> 00:02:58.901
+O método OnLoaderReset
+é chamado
+
+00:02:58.934 --> 00:03:01.667
+quando o loader criado
+anteriormente é reiniciado.
+
+00:03:01.701 --> 00:03:03.767
+Neste caso, os dados
+do último carregamento
+
+00:03:03.801 --> 00:03:06.067
+fica inválido e não deve
+ser mais usado.
+
+00:03:06.100 --> 00:03:08.133
+Por exemplo: o loader
+pode ser reiniciado
+
+00:03:08.167 --> 00:03:10.434
+se decidirmos pegar dados
+de uma URL diferente.
+
+00:03:10.467 --> 00:03:14.734
+Nesse caso, os dados existentes
+não são mais válidos.
+
+00:03:14.767 --> 00:03:18.300
+Nesse método, limpamos
+os dados do último carregamento,
+
+00:03:18.334 --> 00:03:21.033
+ou seja, limpamos
+os tremores da lista.
+
+00:03:21.067 --> 00:03:22.434
+Apenas como lembrete:
+
+00:03:22.467 --> 00:03:24.400
+quando você vir
+métodos Callback como estes,
+
+00:03:24.434 --> 00:03:27.267
+é um sinal do comportamento
+da Async.
+
+00:03:27.300 --> 00:03:29.200
+Então lembre-se de que
+Async significa
+
+00:03:29.234 --> 00:03:31.467
+que o sistema segue para
+fazer outras tarefas
+
+00:03:31.501 --> 00:03:34.100
+antes que os dados sejam
+totalmente carregados.
+
+00:03:34.133 --> 00:03:36.901
+Criamos um loader apenas
+quando o sistema
+
+00:03:36.934 --> 00:03:40.033
+chama de volta
+com o método onCreaterLoader.
+
+00:03:40.067 --> 00:03:42.067
+Então o sistema pode fazer
+outras tarefas.
+
+00:03:42.100 --> 00:03:43.834
+Apenas fazemos update
+da UI
+
+00:03:43.868 --> 00:03:46.167
+quando o sistema chama
+o onLoadFinished
+
+00:03:46.200 --> 00:03:47.734
+com o resultado do loader.
+
+00:03:47.767 --> 00:03:51.934
+Pode ser muito ou pouco tempo
+entre essas callbacks.
+
+00:03:51.968 --> 00:03:53.200
+No próximo vídeo,
+
+00:03:53.234 --> 00:03:55.434
+vamos entrar nos detalhes
+sobre códigos,
+
+00:03:55.467 --> 00:03:57.801
+assim como sobre a forma
+de criar um loader.
+
+00:03:57.834 --> 00:03:58.968
+Mas, por enquanto,
+
+00:03:59.000 --> 00:04:02.067
+só quero que que você compreenda
+os benefícios dos loaders.
+
+00:04:02.100 --> 00:04:04.200
+Neste post de blog
+do Google Developer Advocate,
+
+00:04:04.234 --> 00:04:07.868
+Ian Lake, ele fala da melhor forma
+de carregar dados num app.
+
+00:04:07.901 --> 00:04:11.367
+Nesta seção, ele realça por que
+os loaders são especiais.
+
+00:04:11.400 --> 00:04:12.801
+Em "rotação de aparelho",
+
+00:04:12.834 --> 00:04:14.634
+mesmo que a atividade
+seja recriada,
+
+00:04:14.667 --> 00:04:16.267
+um loader vai sobreviver.
+
+00:04:16.300 --> 00:04:18.701
+E os dados que você pegou
+vão permanecer também.
+
+00:04:18.734 --> 00:04:21.267
+Então você não tem que fazer
+outra requisição de rede.
+
+00:04:21.300 --> 00:04:24.200
+E melhor ainda: loaders
+não duram para sempre.
+
+00:04:24.234 --> 00:04:25.968
+Se a atividade é destruída,
+
+00:04:26.000 --> 00:04:28.334
+o loader será automaticamente
+esvaziado.
+
+00:04:28.367 --> 00:04:30.567
+São ligados ao ciclo de vida
+da atividade
+
+00:04:30.601 --> 00:04:34.400
+e mais apropriados para pegar
+dados que aparecem na tela.
+
+00:04:34.434 --> 00:04:37.634
+Uma AsyncTask vive
+o tempo que a tarefa exista
+
+00:04:37.667 --> 00:04:39.634
+mesmo que a atividade morra.
+
+00:04:39.667 --> 00:04:42.567
+Um loader, vive
+o tempo que a atividade viva,
+
+00:04:42.601 --> 00:04:44.801
+então é dele que precisamos.
+
+00:04:45.334 --> 00:04:48.667
+Nossa, foi muita informação!
+
+00:04:48.701 --> 00:04:51.300
+Sei que é difícil guardar
+tudo na sua cabeça.
+
+00:04:51.334 --> 00:04:53.801
+Então resumi
+os pontos importantes neste quiz,
+
+00:04:53.834 --> 00:04:55.934
+mas deixei as lacunas
+para você preencher.
+
+00:04:55.968 --> 00:04:58.267
+Vá em frente e me ajude
+e preenchê-las.
+
+00:04:58.968 --> 00:05:03.367
+O que interage com uma atividade
+para lidar com um ou mais loaders?
+
+00:05:04.701 --> 00:05:07.300
+Para que uma atividade seja
+de um cliente que interage
+
+00:05:07.334 --> 00:05:08.767
+com o LoaderManager,
+
+00:05:08.801 --> 00:05:12.934
+precisamos que o EarthquakeActivity
+implement que interface?
+
+00:05:13.467 --> 00:05:17.267
+Então, a atividade tem que override
+qual método para criar
+
+00:05:17.300 --> 00:05:19.467
+e retornar uma nova
+entrada loader?
+
+00:05:19.501 --> 00:05:24.234
+Qual método para receber dados
+uma vez que o loader finalizar?
+
+00:05:24.267 --> 00:05:28.234
+E qual método para executar
+quando o loader anterior
+
+00:05:28.267 --> 00:05:32.467
+não é mais necessário,
+e os dados possam ser descartados?
+
+00:05:33.000 --> 00:05:34.100
+E, por fim,
+
+00:05:34.133 --> 00:05:37.000
+para iniciar um loader
+e iniciar os métodos callback,
+
+00:05:37.033 --> 00:05:38.367
+quando o app é iniciado,
+
+00:05:38.400 --> 00:05:40.534
+no método EarthquakeAtivity
+onCreate,
+
+00:05:40.567 --> 00:05:42.834
+devemos chamar o quê?
+
+00:05:44.133 --> 00:05:47.067
+Se você precisa de dicas, incluí
+respostas possíveis para escolher
+
+00:05:47.100 --> 00:05:49.501
+nas anotações abaixo do quiz.
+
+00:05:49.534 --> 00:05:51.734
+Pode pesquisar os links
+de documentação
+
+00:05:51.767 --> 00:05:54.200
+e o guia de desenvolvedores
+de loaders.
+

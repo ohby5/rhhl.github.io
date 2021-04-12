@@ -1,0 +1,213 @@
+WEBVTT
+Kind: captions
+Language: en-US
+
+00:00:00.780 --> 00:00:01.540
+Hey Joe.
+
+00:00:01.540 --> 00:00:02.220
+Wait a second.
+
+00:00:02.220 --> 00:00:05.250
+You gave the students the Did you
+feel it app that just crashes?
+
+00:00:05.250 --> 00:00:06.060
+&gt;&gt; Yes I did.
+
+00:00:06.060 --> 00:00:07.440
+&gt;&gt; What's up with that?
+
+00:00:07.440 --> 00:00:10.350
+&gt;&gt; Well, I wanted them to see
+that the app crashed because
+
+00:00:10.350 --> 00:00:11.560
+an exception occurred.
+
+00:00:11.560 --> 00:00:13.404
+&gt;&gt; Okay.
+&gt;&gt; And the exception that occurred was
+
+00:00:13.404 --> 00:00:15.730
+called the NetworkOnMainThreadException.
+
+00:00:15.730 --> 00:00:17.479
+&gt;&gt; Wait, but
+did you explain what that means?
+
+00:00:18.740 --> 00:00:21.389
+&gt;&gt; No, but
+I have an idea how we can do that.
+
+00:00:21.389 --> 00:00:22.587
+&gt;&gt; Okay, let's see it.
+
+00:00:22.587 --> 00:00:25.167
+&gt;&gt; Okay.
+Well, the NetworkOnMainThreadException
+
+00:00:25.167 --> 00:00:28.644
+means that we're doing a network
+operation on the main thread, and
+
+00:00:28.644 --> 00:00:29.742
+that is not allowed.
+
+00:00:29.742 --> 00:00:31.509
+&gt;&gt; Wait, but when you say network,
+
+00:00:31.509 --> 00:00:35.056
+you mean like a network request
+like we learned in the last lesson?
+
+00:00:35.056 --> 00:00:35.783
+&gt;&gt; Yes.
+&gt;&gt; Okay, but
+
+00:00:35.783 --> 00:00:37.840
+you'd also said on the main thread?
+
+00:00:37.840 --> 00:00:40.078
+The student's probably
+wondering what that means too.
+
+00:00:40.078 --> 00:00:41.090
+&gt;&gt; Precisely.
+
+00:00:41.090 --> 00:00:42.815
+So I've got some thread to explain it.
+
+00:00:42.815 --> 00:00:45.087
+[SOUND] Here, hold this.
+
+00:00:45.087 --> 00:00:46.529
+&gt;&gt; What the.
+
+00:00:46.529 --> 00:00:49.840
+&gt;&gt; This thread will represent
+the main thread of the App.
+
+00:00:49.840 --> 00:00:52.790
+A thread is a container that
+holds a sequence of instructions,
+
+00:00:52.790 --> 00:00:56.030
+such as your Java code,
+that the device will execute.
+
+00:00:56.030 --> 00:00:59.510
+And it's needed by Android to schedule
+all the tasks that need to be run on
+
+00:00:59.510 --> 00:01:01.270
+the device's hardware.
+
+00:01:01.270 --> 00:01:02.560
+So when building Android apps,
+
+00:01:02.560 --> 00:01:06.050
+it's important to understand that the
+application code is run by default on
+
+00:01:06.050 --> 00:01:10.060
+what is called the main thread,
+which is also known as the UI thread.
+
+00:01:11.370 --> 00:01:12.810
+Let's elaborate on this.
+
+00:01:12.810 --> 00:01:16.270
+The main thread handles drawing
+operations in responses to
+
+00:01:16.270 --> 00:01:19.970
+user input like clicks, scrolling,
+and that sort of thing.
+
+00:01:19.970 --> 00:01:23.250
+Now the main thread can only
+handle one event at a time, so
+
+00:01:23.250 --> 00:01:26.900
+if a bunch of things try to
+happen around the same time,
+
+00:01:26.900 --> 00:01:29.560
+they're going to get put
+into a queue just like this.
+
+00:01:29.560 --> 00:01:32.039
+&gt;&gt; Wait, so a queue's like when
+I go to the grocery store and
+
+00:01:32.039 --> 00:01:33.642
+I'm in like the longest line ever and
+
+00:01:33.642 --> 00:01:37.380
+there's only one checkout person that
+can process a customer at a time?
+
+00:01:37.380 --> 00:01:37.980
+&gt;&gt; Yep.
+
+00:01:37.980 --> 00:01:38.580
+&gt;&gt; Jeez.
+
+00:01:38.580 --> 00:01:40.498
+&gt;&gt; That's the type of queue.
+
+00:01:40.498 --> 00:01:41.840
+These UI are drawing, and
+
+00:01:41.840 --> 00:01:45.600
+user input events are handled one
+at a time in sequential order.
+
+00:01:45.600 --> 00:01:49.670
+&gt;&gt; So far, all the code we've written
+has been executing on the main thread.
+
+00:01:49.670 --> 00:01:52.770
+When you read Java code,
+you read from the top to the bottom.
+
+00:01:52.770 --> 00:01:55.690
+Possibly looping or
+picking a particular branch, or
+
+00:01:55.690 --> 00:01:57.890
+jumping into and out of other methods.
+
+00:01:57.890 --> 00:01:59.210
+When the program executes,
+
+00:01:59.210 --> 00:02:02.630
+it has to wait for one task to
+complete before moving onto the next.
+
+00:02:02.630 --> 00:02:04.620
+That's pretty much what
+a single thread does.
+
+00:02:04.620 --> 00:02:07.470
+Execute Java in
+the order it was written.
+
+00:02:07.470 --> 00:02:08.130
+Hold on a second.
+
+00:02:08.130 --> 00:02:11.820
+So Joe, students may be thinking,
+if our code has worked fine so far,
+
+00:02:11.820 --> 00:02:15.070
+why don't we just continue writing
+all our code on the main thread?
+
+00:02:15.070 --> 00:02:16.450
+&gt;&gt; That's a great question.
+
+00:02:16.450 --> 00:02:17.440
+Let me show you why.
+

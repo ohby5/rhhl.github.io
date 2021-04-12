@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.400
+As part of building a fluid user experience,
+
+00:00:02.400 --> 00:00:06.620
+it's important that you avoid leaving your user hanging or waiting for feedback.
+
+00:00:06.620 --> 00:00:10.290
+As a general rule, for any action the user takes in your app,
+
+00:00:10.290 --> 00:00:13.575
+you should give some visible change or feedback within half a second.
+
+00:00:13.575 --> 00:00:15.960
+If a task is taking a particularly long time,
+
+00:00:15.960 --> 00:00:18.660
+it's a good idea to show the user that progress is being made.
+
+00:00:18.660 --> 00:00:21.960
+As you can see here in the material design spec,
+
+00:00:21.960 --> 00:00:25.035
+there are guidelines on how to show progress and activity to the user.
+
+00:00:25.035 --> 00:00:27.560
+There are lots of great examples and ideas on this page.
+
+00:00:27.560 --> 00:00:29.550
+So, be sure to check it out later.
+
+00:00:29.550 --> 00:00:33.120
+I want to point out that there are linear progress indicators,
+
+00:00:33.120 --> 00:00:35.985
+as well as circular progress indicators.
+
+00:00:35.985 --> 00:00:39.030
+Indeterminate means you don't know how long the task will take.
+
+00:00:39.030 --> 00:00:41.355
+So, it's a generic loading indicator.
+
+00:00:41.355 --> 00:00:44.985
+Determinate means that you know exactly what percentage of the work is completed.
+
+00:00:44.985 --> 00:00:47.370
+So it gradually completes the whole circle.
+
+00:00:47.370 --> 00:00:49.990
+In our case, when the user opens our app,
+
+00:00:49.990 --> 00:00:53.370
+they should see some immediate signal that we're working on getting their data,
+
+00:00:53.370 --> 00:00:55.560
+such as a circular progress indicator.
+
+00:00:55.560 --> 00:00:57.990
+Now, when the results arrive from the server,
+
+00:00:57.990 --> 00:01:02.360
+we should hide the progress indicator and show the data in the list.
+
+00:01:02.360 --> 00:01:05.790
+Or sometimes, there may be no results from the server,
+
+00:01:05.790 --> 00:01:09.615
+so then we would hide the loading indicator and show our empty view.
+
+00:01:09.615 --> 00:01:12.570
+Fortunately, Android contains a nice progress bar view.
+
+00:01:12.570 --> 00:01:15.090
+One version of which is a spinning loading indicator.
+
+00:01:15.090 --> 00:01:18.090
+Since we don't know how long the network request will take,
+
+00:01:18.090 --> 00:01:20.730
+we'll use the indeterminate version of the indicator.
+
+00:01:20.730 --> 00:01:23.610
+In this quiz, you're going to add a loading indicator
+
+00:01:23.610 --> 00:01:26.400
+in the app when the network request is in progress.
+
+00:01:26.400 --> 00:01:30.830
+So, the first thing you want to do is in the earthquake activity XML,
+
+00:01:30.830 --> 00:01:35.145
+add a progress bar view as a sibling to the ListView in the empty state TextView,
+
+00:01:35.145 --> 00:01:37.050
+which should be centered within the screen.
+
+00:01:37.050 --> 00:01:40.020
+So, check the cheat sheet from the first course for example,
+
+00:01:40.020 --> 00:01:42.635
+on how to declare a progress view in the XML layout.
+
+00:01:42.635 --> 00:01:45.570
+Then in the earthquake activity java file.
+
+00:01:45.570 --> 00:01:48.240
+I want you to hide the loading indicator by
+
+00:01:48.240 --> 00:01:51.270
+sending the visibility to gone when the onLoadFinished is called.
+
+00:01:51.270 --> 00:01:57.290
+Lastly, I want you to test both cases work by temporarily modifying the code.
+
+00:01:57.290 --> 00:01:59.080
+So, see below for some hints.
+

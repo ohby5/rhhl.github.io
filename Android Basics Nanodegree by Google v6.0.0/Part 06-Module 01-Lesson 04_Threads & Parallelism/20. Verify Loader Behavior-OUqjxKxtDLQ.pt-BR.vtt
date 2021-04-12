@@ -1,0 +1,158 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.200
+Adicionei mensagens log
+nos locais especificados pelo quiz.
+
+00:00:04.234 --> 00:00:06.667
+No método onCreate
+do arquivo EarthquakeActivity,
+
+00:00:06.701 --> 00:00:09.133
+gerei um log quando
+o método é chamado,
+
+00:00:09.167 --> 00:00:12.200
+e gerei um log
+em loaderManager.initLoader.
+
+00:00:12.234 --> 00:00:15.334
+Também há notificações quando
+loaderCallback é chamado,
+
+00:00:15.367 --> 00:00:18.567
+por exemplo, a função
+onCreateLoader é chamada
+
+00:00:18.601 --> 00:00:20.968
+ou quando o método
+onLoadFinished é chamado
+
+00:00:21.000 --> 00:00:24.334
+e por último,
+em onLoaderReset.
+
+00:00:24.367 --> 00:00:27.801
+Também geramos mensagens
+quando onStartLoading é chamado
+
+00:00:27.834 --> 00:00:30.667
+e quando loadInBackground
+é chamado.
+
+00:00:30.701 --> 00:00:36.100
+Por fim, notificamos quando o método
+fetchEarthquakeData é chamado.
+
+00:00:36.133 --> 00:00:37.834
+Quando rodo o app,
+
+00:00:37.868 --> 00:00:41.000
+noto as mensagens log
+notificadas no LogCat
+
+00:00:41.033 --> 00:00:43.934
+que detalham a série de ações
+do nosso código.
+
+00:00:43.968 --> 00:00:46.000
+Primeiro, a atividade
+é inicializada
+
+00:00:46.033 --> 00:00:48.501
+e podemos ver o método
+onCreate sendo chamado
+
+00:00:48.534 --> 00:00:50.868
+seguido por initLoader.
+
+00:00:51.367 --> 00:00:53.901
+Já que ainda não há
+uma instância loader,
+
+00:00:53.934 --> 00:00:56.167
+o callback onCreateLoader
+é chamado.
+
+00:00:56.200 --> 00:00:58.634
+Depois o earthquakeLoader
+é instanciado
+
+00:00:58.667 --> 00:01:00.767
+e onStartLoading é chamado.
+
+00:01:00.801 --> 00:01:05.133
+Logo depois, loadInBackground
+roda num thread de 2º plano
+
+00:01:05.167 --> 00:01:09.767
+e finalmente vemos que o método
+fetchEarthquakeData é executado.
+
+00:01:09.801 --> 00:01:12.300
+Nessa altura, recebemos
+uma resposta do servidor
+
+00:01:12.334 --> 00:01:14.701
+e a traduzimos para uma lista
+de objetos Earthquake,
+
+00:01:14.734 --> 00:01:17.000
+que são retornados
+como o resultado do loader.
+
+00:01:17.033 --> 00:01:21.100
+Por fim, vemos onLoadFinished
+e a atividade é chamada
+
+00:01:21.133 --> 00:01:23.234
+com esta lista
+de objetos Earthquake
+
+00:01:23.267 --> 00:01:25.267
+e podemos atualizar
+a interface com sucesso.
+
+00:01:25.300 --> 00:01:27.267
+Você percebeu que girar
+o aparelho
+
+00:01:27.300 --> 00:01:29.367
+não ativa
+uma nova requisição.
+
+00:01:29.400 --> 00:01:33.167
+A atividade é criada novamente
+quando chamamos initLoader,
+
+00:01:33.200 --> 00:01:35.133
+já tem uma instância do loader.
+
+00:01:35.167 --> 00:01:38.834
+Reusamos esse loader
+que já tem a resposta da rede.
+
+00:01:38.868 --> 00:01:42.200
+Experimente com outras formas
+de entrar e sair do app.
+
+00:01:42.234 --> 00:01:44.901
+Se você usar botão "Home"
+e voltar para app,
+
+00:01:44.934 --> 00:01:46.701
+um novo load é ativado.
+
+00:01:46.734 --> 00:01:47.734
+Isso faz sentido
+
+00:01:47.767 --> 00:01:50.501
+porque se o usuário
+deixa o app e volta,
+
+00:01:50.534 --> 00:01:54.234
+queremos atualizá-lo
+com os dados mais recentes.
+

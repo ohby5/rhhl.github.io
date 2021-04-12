@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:03.400
+Já vimos muito como AsyncTask
+pode ser usada
+
+00:00:03.434 --> 00:00:06.334
+para levar operações demoradas
+a uma thread de 2º plano
+
+00:00:06.367 --> 00:00:09.367
+e como ter o resultado
+de volta à thread principal.
+
+00:00:09.400 --> 00:00:11.434
+Você já tem
+muitas informações.
+
+00:00:11.467 --> 00:00:14.801
+Quero que você conserte
+a NetWorkOnMainThreadException
+
+00:00:14.834 --> 00:00:17.868
+que fez com que o app
+"Você Sentiu?" travasse.
+
+00:00:17.901 --> 00:00:20.701
+Remova o código da rede
+da thread principal
+
+00:00:20.734 --> 00:00:22.167
+usando a AsyncTask
+
+00:00:22.200 --> 00:00:24.534
+e assinale esta caixa aqui
+quando terminar.
+
+00:00:24.567 --> 00:00:27.234
+Recomendamos manter
+os métodos de utilitário
+
+00:00:27.267 --> 00:00:29.400
+na classe "Utils".
+
+00:00:29.434 --> 00:00:32.033
+E podemos usá-los
+para abrigar métodos
+
+00:00:32.067 --> 00:00:34.934
+expostos aqui
+na guia de estrutura.
+
+00:00:34.968 --> 00:00:36.834
+Repare também que
+esses métodos
+
+00:00:36.868 --> 00:00:38.767
+são declarados
+como estáticos.
+
+00:00:38.801 --> 00:00:41.400
+Eles podem ser usar diretamente
+o nome da classe
+
+00:00:41.434 --> 00:00:43.067
+sem necessitarem
+de uma instância
+
+00:00:43.100 --> 00:00:44.501
+no objeto de utilitários.
+
+00:00:44.534 --> 00:00:45.767
+Na atividade principal,
+
+00:00:45.801 --> 00:00:48.334
+podemos chamar o método
+utils.fetchEarthquakedata
+
+00:00:48.367 --> 00:00:51.567
+para fazer a requisição de rede
+e fazer o parsing da resposta.
+
+00:00:52.100 --> 00:00:53.200
+Quando terminar,
+
+00:00:53.234 --> 00:00:55.934
+o app tem que ter
+esta aparência.
+

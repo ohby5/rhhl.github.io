@@ -1,0 +1,222 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.290 --> 00:00:01.280
+Wah.
+Mantap.
+
+00:00:01.280 --> 00:00:03.610
+murid-murid kita sudah memamerkan
+keahlian pengembang sekarang.
+
+00:00:03.610 --> 00:00:04.820
+Ya, sangat menyenangkan.
+
+00:00:04.820 --> 00:00:06.720
+Tunggu, Joe, aku tidak bermaksud merusak suasana,
+
+00:00:06.720 --> 00:00:09.840
+tapi sudahkah kau beri tahu murid-murid
+tentang apa sulitnya AsyncTask?
+
+00:00:09.840 --> 00:00:11.660
+Belum, tapi kenapa tidak merayakan saja?
+
+00:00:11.660 --> 00:00:13.940
+Bro, kita harus beri tahu.
+
+00:00:13.940 --> 00:00:15.490
+Baik, kau saja.
+
+00:00:15.490 --> 00:00:19.450
+Oke, bayangkan apa yang terjadi
+saat saya buka aplikasi dan
+
+00:00:19.450 --> 00:00:21.030
+meluncurkan activity gempa bumi.
+
+00:00:21.030 --> 00:00:23.092
+Di titik ini, ada objek
+activity dalam memori.
+
+00:00:23.092 --> 00:00:27.950
+Lalu dalam metode onCreate, kita
+aktifkan objek AsyncTask yang baru.
+
+00:00:27.950 --> 00:00:30.095
+Yang lalu mulai berjalan
+di thread latar belakang dan
+
+00:00:30.095 --> 00:00:32.229
+membuka koneksi HTTP.
+
+00:00:32.229 --> 00:00:35.440
+Nah, pertanyaannya, sebelum
+AsyncTask selesai,
+
+00:00:35.440 --> 00:00:38.100
+apa yang terjadi jika ponsel saya diputar?
+
+00:00:38.100 --> 00:00:41.770
+Untuk menampilkan UI dengan benar
+dalam orientasi yang baru,
+
+00:00:41.770 --> 00:00:45.720
+sistem perlu membuat activity yang
+baru dan merelai view kita.
+
+00:00:45.720 --> 00:00:49.200
+Karena memori di ponsel terbatas, ini
+berarti juga bahwa sistem
+
+00:00:49.200 --> 00:00:53.490
+mungkin harus mematikan activity lama
+dan mengambil lagi memori yang dipakai.
+
+00:00:53.490 --> 00:00:57.770
+Tapi karena AsyncTask adalah kelas
+bagian dalam activity yang lama,
+
+00:00:57.770 --> 00:01:01.920
+memori itu tak bisa diambil lagi hingga
+AsyncTask selesai menjalankan.
+
+00:01:01.920 --> 00:01:02.730
+Biar saya jelaskan apa maksud saya.
+
+00:01:03.750 --> 00:01:06.727
+Perhatikan bahwa tiap kali ponsel diputar,
+
+00:01:06.727 --> 00:01:09.887
+activity yang baru dibuat
+dari nol.
+
+00:01:09.887 --> 00:01:13.020
+Dan melalui kode kita, contoh
+AsyncTask yang baru juga dibuat.
+
+00:01:13.020 --> 00:01:17.340
+Ini mengawali thread latar belakang
+lain dan membuka koneksi HTTP.
+
+00:01:17.340 --> 00:01:21.708
+Ini pemborosan karena sekarang
+ada dua AsyncTask.
+
+00:01:21.708 --> 00:01:25.600
+dan dua lag dalam aktivitas penutupan
+di memori pada saat yang sama,
+
+00:01:25.600 --> 00:01:27.340
+sehingga jadi dua kali lebih banyak dari sebelumnya.
+
+00:01:27.340 --> 00:01:30.520
+Apa yang terjadi jika AsyncTask
+pertama akhirnya selesai?
+
+00:01:30.520 --> 00:01:33.190
+Hasil dari tugas itu
+tidak berguna lagi
+
+00:01:33.190 --> 00:01:35.590
+karena view tidak lagi tampil
+di layar.
+
+00:01:35.590 --> 00:01:37.750
+Yang merupakan semacam
+pemborosan resources perangkat.
+
+00:01:37.750 --> 00:01:41.170
+Karena ini akan mengambil dan melakukan parse respons
+server yang nantinya tak akan dilihat, ya kan?
+
+00:01:41.170 --> 00:01:43.490
+Tapi bagaimana jika kita putar
+ponsel beberapa kali?
+
+00:01:43.490 --> 00:01:45.940
+Sekarang ada banyak sekali
+AsyncTask berlebih dan
+
+00:01:45.940 --> 00:01:49.610
+activity di memori yang harus dijalankan
+dan berbicara dengan jaringan sekaligus.
+
+00:01:49.610 --> 00:01:53.500
+Akibatnya, kita memakai semua
+memori tambahan ini tanpa diperlukan,
+
+00:01:53.500 --> 00:01:55.580
+yang mungkin memperlambat ponsel.
+
+00:01:55.580 --> 00:01:59.160
+Padahal kita hanya butuh satu activity
+dan satu AsyncTask untuk
+
+00:01:59.160 --> 00:02:01.050
+apa yang sedang ditampilkan
+di layar saat ini.
+
+00:02:01.050 --> 00:02:03.020
+Ditambah lagi, jika diperhatikan,
+
+00:02:03.020 --> 00:02:05.490
+semua tugas baru ini kemungkinan akan
+menerima hasil yang sama.
+
+00:02:05.490 --> 00:02:08.000
+Karena mungkin tidak banyak data
+gempa bumi yang berubah
+
+00:02:08.000 --> 00:02:09.858
+selama beberapa detik saat kita
+putar ponsel itu.
+
+00:02:09.858 --> 00:02:14.090
+Jadi idealnya kapan pun kita membuat
+activity baru untuk mendukung perubahan
+
+00:02:14.090 --> 00:02:17.580
+orientasi, akan lebih efisien jika hanya
+memakai hasil awal dari
+
+00:02:17.580 --> 00:02:19.695
+permintaan HTTP yang pertama.
+
+00:02:19.695 --> 00:02:21.680
+Tentu saja, selama permintaan itu
+berhasil diselesaikan.
+
+00:02:21.680 --> 00:02:25.190
+Alih-alih, kita punya banyak permintaan
+jaringan kepada server yang sama.
+
+00:02:25.190 --> 00:02:27.240
+Semua mengambil dan parse
+respons yang sama.
+
+00:02:27.240 --> 00:02:29.500
+Ya ampun, boros banget.
+
+00:02:29.500 --> 00:02:31.000
+Oke, Chris, kamu membuat
+takut murid-murid.
+
+00:02:31.000 --> 00:02:32.310
+Pasti ada cara yang lebih baik.
+
+00:02:33.350 --> 00:02:35.380
+Sebenarnya, memang ada.
+
+00:02:35.380 --> 00:02:39.560
+Simaklah video pola kinerja
+Android yang ditautkan di bawah dan
+
+00:02:39.560 --> 00:02:41.000
+jawab pertanyaan kuis ini.
+
+00:02:41.000 --> 00:02:44.190
+Komponen Android mana yang
+membantu kita mengatasi masalah ini?
+

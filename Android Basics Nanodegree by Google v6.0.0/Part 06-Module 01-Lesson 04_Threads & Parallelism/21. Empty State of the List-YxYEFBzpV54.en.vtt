@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.430
+Sometimes, apps have no data to display.
+
+00:00:02.430 --> 00:00:06.465
+For example, there may be no new messages in someone's email inbox.
+
+00:00:06.465 --> 00:00:10.095
+So as developers, we need to handle this situation gracefully.
+
+00:00:10.095 --> 00:00:14.025
+Well-designed apps will even try to make the experience a little bit more pleasant,
+
+00:00:14.025 --> 00:00:16.245
+would say, a cute graphic for example.
+
+00:00:16.245 --> 00:00:18.570
+Even better, would be to fill the empty space with
+
+00:00:18.570 --> 00:00:21.510
+some starter content or advice on how to get started.
+
+00:00:21.510 --> 00:00:24.060
+This will vary based on what's appropriate for your app.
+
+00:00:24.060 --> 00:00:26.005
+For now, let's focus on
+
+00:00:26.005 --> 00:00:30.865
+a very simple empty state that clearly communicates that there were no earthquakes found.
+
+00:00:30.865 --> 00:00:33.430
+This is much better than having a blank screen.
+
+00:00:33.430 --> 00:00:36.190
+Now, you're welcome to expand on this and make the empty state
+
+00:00:36.190 --> 00:00:38.980
+more sophisticated in the future but the question
+
+00:00:38.980 --> 00:00:41.740
+of whether or not the USGS webserver will ever returns
+
+00:00:41.740 --> 00:00:44.920
+zero earthquakes is a different story and in any case,
+
+00:00:44.920 --> 00:00:49.150
+it's ideal for our app to contain logic to handle the scenario if it ever happens.
+
+00:00:49.150 --> 00:00:51.430
+Fortunately, the Android framework team
+
+00:00:51.430 --> 00:00:54.010
+already expected that this would be a common use case.
+
+00:00:54.010 --> 00:00:58.795
+So they exposed a way for developers to set an empty view for ListView,
+
+00:00:58.795 --> 00:01:02.065
+which will only be displayed whenever there is no data in the list.
+
+00:01:02.065 --> 00:01:04.580
+Meaning, the adapters dataset is empty.
+
+00:01:04.580 --> 00:01:06.170
+In this coding task,
+
+00:01:06.170 --> 00:01:08.990
+you're going to implement this behavior in a quick report app.
+
+00:01:08.990 --> 00:01:12.290
+The first thing you should do is modify the XML layout for
+
+00:01:12.290 --> 00:01:16.010
+the earthquake activity to have a ViewGroup that contains two children,
+
+00:01:16.010 --> 00:01:19.655
+the ListView and a TextView for the EmptyView.
+
+00:01:19.655 --> 00:01:24.695
+Now, the EmptyView and the ListView should be siblings within the parent view group.
+
+00:01:24.695 --> 00:01:26.960
+Both siblings should overlap and
+
+00:01:26.960 --> 00:01:29.495
+the ListView should take up the full height and width the screen,
+
+00:01:29.495 --> 00:01:32.375
+while the TextView should be centered within the full screen.
+
+00:01:32.375 --> 00:01:34.699
+Once you've updated the layout, next,
+
+00:01:34.699 --> 00:01:37.500
+I want you to modify that an earthquake activity Java class,
+
+00:01:37.500 --> 00:01:39.630
+so that in the onCreate method you set
+
+00:01:39.630 --> 00:01:44.115
+the EmptyView method on the ListView object and pass in the EmptyView.
+
+00:01:44.115 --> 00:01:47.070
+Here's the documentation for the setEmptyView method.
+
+00:01:47.070 --> 00:01:50.130
+What is said, when there are no items in the list,
+
+00:01:50.130 --> 00:01:54.210
+the Android framework will hide the ListView and make this EmptyView visible.
+
+00:01:54.210 --> 00:01:55.965
+If there are items, however,
+
+00:01:55.965 --> 00:01:59.910
+the ListView will be made visible and this EmptyView will be hidden.
+
+00:01:59.910 --> 00:02:03.630
+All these changes in view visibility are automatically handled for you,
+
+00:02:03.630 --> 00:02:05.055
+which is pretty sweet.
+
+00:02:05.055 --> 00:02:09.210
+One more caveat I want to point out is that when you first launch the app,
+
+00:02:09.210 --> 00:02:11.840
+there's no data yet because we haven't finished loading it.
+
+00:02:11.840 --> 00:02:14.140
+To avoid having the no earthquakes found
+
+00:02:14.140 --> 00:02:17.590
+message blink on the screen briefly while the data's being loaded for the first time,
+
+00:02:17.590 --> 00:02:22.915
+only assign the text in the empty state TextView after the first load is completed,
+
+00:02:22.915 --> 00:02:25.690
+so here in the onload finished method.
+
+00:02:25.690 --> 00:02:28.995
+Now, can you think of a way to verify that the empty view works?
+
+00:02:28.995 --> 00:02:32.560
+Here's a little hint. You'll want to temporarily comment out some code.
+
+00:02:32.560 --> 00:02:34.720
+Check these boxes when you're done.
+
+00:02:34.720 --> 00:02:36.730
+Then you can try the bonus challenge.
+
+00:02:36.730 --> 00:02:38.740
+Do you know of an Android app that tries to make
+
+00:02:38.740 --> 00:02:42.955
+the empty state be a pleasant user experience?
+
+00:02:42.955 --> 00:02:47.000
+Go ahead and share a screenshot in the discussion forum link below the quiz.
+

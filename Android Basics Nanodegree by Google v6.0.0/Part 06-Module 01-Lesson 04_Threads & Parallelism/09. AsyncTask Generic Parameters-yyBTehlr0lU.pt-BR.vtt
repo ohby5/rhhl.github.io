@@ -1,0 +1,507 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.033
+AsyncTask tem
+três parâmetros genéricos:
+
+00:00:03.067 --> 00:00:06.334
+"Params", "Progress" e "Result".
+
+00:00:07.133 --> 00:00:09.567
+E os métodos utilizam
+esses genéricos
+
+00:00:09.601 --> 00:00:12.634
+como espaços reservados
+para os tipos de dados
+
+00:00:12.667 --> 00:00:14.234
+que queremos usar.
+
+00:00:14.267 --> 00:00:17.133
+A assinatura do método se referem
+aos espaços reservados
+
+00:00:17.167 --> 00:00:19.400
+para dados "params",
+"progress" e "result".
+
+00:00:19.434 --> 00:00:22.667
+Quando fazemos subclasse
+de AsyncTask no app,
+
+00:00:22.701 --> 00:00:24.834
+podemos substituir
+os espaços reservados
+
+00:00:24.868 --> 00:00:26.901
+com os tipos de dados
+que queremos usar.
+
+00:00:26.934 --> 00:00:30.467
+Como string ou earthquake
+ou outros tipos de objetos.
+
+00:00:30.501 --> 00:00:33.300
+Vou explicar o propósito
+de cada parâmetro genérico
+
+00:00:33.334 --> 00:00:36.300
+no contexto do
+código snippet abaixo.
+
+00:00:36.334 --> 00:00:40.968
+A classe DownloadFilesTask
+tem que pegar uma ou mais URLs,
+
+00:00:41.000 --> 00:00:44.567
+baixar cada uma delas
+e publicar o progresso.
+
+00:00:44.601 --> 00:00:47.067
+E finalmente a tarefa retorna
+o tamanho total
+
+00:00:47.100 --> 00:00:50.234
+dos arquivos baixados
+em unidades de bytes.
+
+00:00:50.267 --> 00:00:52.033
+Quando essa classe é definida,
+
+00:00:52.067 --> 00:00:53.801
+podemos chamar o construtor
+
+00:00:53.834 --> 00:00:57.334
+para criar uma instância
+DownloadFilesTask.
+
+00:00:57.367 --> 00:01:00.734
+Então, podemos executar
+a tarefa imediatamente
+
+00:01:00.767 --> 00:01:05.000
+e passar qualquer número
+de URLs que queremos buscar.
+
+00:01:05.033 --> 00:01:09.634
+Aqui estamos passando três:
+URL1, URL2 e URL3.
+
+00:01:09.667 --> 00:01:12.801
+Vamos dar uma olhada mais
+de perto na definição de classe,
+
+00:01:12.834 --> 00:01:16.634
+que é uma subclasse
+que se estende do AsyncTask.
+
+00:01:16.667 --> 00:01:19.734
+Note que o nome AsyncTask
+é seguido pelos nomes
+
+00:01:19.767 --> 00:01:21.934
+de três classes em chaves.
+
+00:01:22.467 --> 00:01:24.968
+O primeiro tipo genérico
+é "Params",
+
+00:01:25.000 --> 00:01:27.234
+que é o tipo de dados
+dos parâmetros "M"
+
+00:01:27.267 --> 00:01:29.367
+enviados à tarefa
+de 2º plano.
+
+00:01:29.868 --> 00:01:31.434
+No código snippet,
+
+00:01:31.467 --> 00:01:33.767
+os tipos de dados do parâmetro
+são "URLs",
+
+00:01:33.801 --> 00:01:36.334
+isso significa que o método
+doInBackground
+
+00:01:36.367 --> 00:01:38.701
+vai aceitar uma lista
+de entradas URL.
+
+00:01:38.734 --> 00:01:41.901
+Você ainda não tinha visto
+este tipo de "...",
+
+00:01:41.934 --> 00:01:44.400
+mas só significa que há
+um número variável
+
+00:01:44.434 --> 00:01:46.434
+de argumentos que podemos
+colocar aí.
+
+00:01:46.467 --> 00:01:48.734
+Isso costuma ser chamado
+de "varargs".
+
+00:01:48.767 --> 00:01:50.934
+Qualquer número de entradas
+aqui é válido,
+
+00:01:50.968 --> 00:01:53.167
+contanto que todos tenham
+o mesmo tipo de dados.
+
+00:01:53.200 --> 00:01:54.667
+Neste caso: "URL".
+
+00:01:54.701 --> 00:01:56.801
+Isso significa que você pode
+executar a tarefa
+
+00:01:56.834 --> 00:01:59.434
+com uma URL,
+duas URLs ou mais,
+
+00:01:59.467 --> 00:02:02.300
+dependendo de quantos
+arquivos você quer baixar.
+
+00:02:02.334 --> 00:02:04.267
+Voltando ao método
+doInBackground
+
+00:02:04.300 --> 00:02:06.133
+os argumentos de entrada
+são armazenados
+
+00:02:06.167 --> 00:02:08.901
+numa variável de array
+chamada "URls".
+
+00:02:08.934 --> 00:02:11.300
+Podemos checar o comprimento
+das arrays de URL
+
+00:02:11.334 --> 00:02:13.133
+usando "urls.length".
+
+00:02:13.167 --> 00:02:15.367
+Então podemos acessar
+cada elemento da array
+
+00:02:15.400 --> 00:02:17.901
+usando os colchetes
+que conhecemos.
+
+00:02:17.934 --> 00:02:21.667
+A URL 0 nos dá acesso
+ao elemento "0" da array
+
+00:02:21.701 --> 00:02:23.033
+e por aí vai.
+
+00:02:23.067 --> 00:02:25.033
+Neste exemplo usamos
+um loop "para"
+
+00:02:25.067 --> 00:02:28.133
+para repetir cada elemento
+da array da URL.
+
+00:02:28.167 --> 00:02:31.934
+E baixamos um arquivo
+usando a classe download.
+
+00:02:31.968 --> 00:02:34.501
+Também estamos mantendo
+um total do tamanho
+
+00:02:34.534 --> 00:02:38.033
+de todos os arquivos
+na variável "totalSize".
+
+00:02:38.067 --> 00:02:40.400
+Lembre-se de que
+doInBackground acontece
+
+00:02:40.434 --> 00:02:42.300
+fora da thread UI,
+
+00:02:42.334 --> 00:02:44.167
+então o app continuará
+respondendo
+
+00:02:44.200 --> 00:02:47.434
+mesmo que o doInBackground
+demore um pouco.
+
+00:02:47.467 --> 00:02:50.400
+O segundo parâmetro genérico
+é "progress".
+
+00:02:50.434 --> 00:02:52.868
+É o tipo de dados usados
+para medir o progresso
+
+00:02:52.901 --> 00:02:55.934
+do trabalho que está sendo feito
+na thread de 2º plano.
+
+00:02:55.968 --> 00:02:59.033
+Em DownloadFilesTask
+publicamos periodicamente
+
+00:02:59.067 --> 00:03:02.934
+os updates e renovamos
+a UI com a percentagem completada.
+
+00:03:02.968 --> 00:03:05.567
+Para fazer isso,
+especificamos integer
+
+00:03:05.601 --> 00:03:08.200
+como o parâmetro de progresso.
+
+00:03:08.234 --> 00:03:10.334
+Isso significa que chamamos
+o progresso público
+
+00:03:10.367 --> 00:03:14.534
+com o valor de integer, enquanto
+o 2º plano acontece.
+
+00:03:14.567 --> 00:03:17.601
+Então no método
+onProgressUpdate,
+
+00:03:17.634 --> 00:03:19.567
+que é chamado
+pela thread principal,
+
+00:03:19.601 --> 00:03:21.834
+recebemos este valor
+de entrada
+
+00:03:21.868 --> 00:03:24.334
+e podemos modificar a UI.
+
+00:03:24.367 --> 00:03:27.300
+Novamente, vemos os "..."
+
+00:03:27.334 --> 00:03:29.767
+seguindo os tipos de dados
+de entrada aqui.
+
+00:03:29.801 --> 00:03:33.400
+Então podemos aceitar um número
+variável de argumentos de entrada.
+
+00:03:33.934 --> 00:03:36.801
+Se você chamar "public progress"
+numa thread de 2º plano
+
+00:03:36.834 --> 00:03:38.334
+com dois valores,
+
+00:03:38.367 --> 00:03:41.901
+então, no onProgressUpdate
+você vai receber duas entradas.
+
+00:03:41.934 --> 00:03:45.667
+Esta funcionalidade é útil
+para baixar múltiplos arquivos
+
+00:03:45.701 --> 00:03:48.868
+ao mesmo tempo e quer mostrar
+os diferentes valores de progresso
+
+00:03:48.901 --> 00:03:50.367
+de cada arquivo.
+
+00:03:50.400 --> 00:03:52.601
+Similar às entradas de URL acima,
+
+00:03:52.634 --> 00:03:54.934
+a variável de progresso
+é uma array.
+
+00:03:54.968 --> 00:03:57.300
+Podemos acessar cada
+valor de progresso
+
+00:03:57.334 --> 00:04:00.067
+usando os colchetes
+com uma posição de índice
+
+00:04:00.100 --> 00:04:02.467
+como "progress 0".
+
+00:04:02.501 --> 00:04:06.801
+Então podemos fazer update
+da UI com um novo valor de progresso.
+
+00:04:06.834 --> 00:04:09.300
+Similar às entradas de URL acima,
+
+00:04:09.334 --> 00:04:12.267
+a variável de progresso
+é uma array.
+
+00:04:12.300 --> 00:04:14.400
+Podemos acessar cada
+valor de progresso
+
+00:04:14.434 --> 00:04:16.734
+usando os colchetes
+com uma posição de índice
+
+00:04:16.767 --> 00:04:19.100
+como "progress 0".
+
+00:04:19.133 --> 00:04:23.167
+Então podemos fazer update
+da UI com um novo valor de progresso.
+
+00:04:23.667 --> 00:04:27.267
+Agora chegamos ao terceiro
+e último tipo de dado genérico
+
+00:04:27.300 --> 00:04:29.067
+chamado "resultado".
+
+00:04:29.100 --> 00:04:32.033
+Resultado é o tipo de dado
+do valor retornado
+
+00:04:32.067 --> 00:04:34.000
+do método doInBackground.
+
+00:04:34.033 --> 00:04:35.968
+Você pode pensar nele
+como o tipo de dado
+
+00:04:36.000 --> 00:04:38.767
+do resultado
+da tarefa em 2º plano.
+
+00:04:39.300 --> 00:04:41.801
+Neste caso, o tamanho total
+é reportado
+
+00:04:41.834 --> 00:04:44.033
+quando todos os arquivos
+forem baixados.
+
+00:04:44.067 --> 00:04:46.434
+A assinatura do método
+de fazer algo em 2º plano
+
+00:04:46.467 --> 00:04:49.133
+está especificando "Long",
+como o tipo de dado.
+
+00:04:49.167 --> 00:04:52.400
+Note que "Long"
+está com "L" maiúsculo.
+
+00:04:52.434 --> 00:04:56.100
+No passado, vimos que "Long"
+é um tipo de dado Java primitivo,
+
+00:04:56.133 --> 00:05:00.400
+tal como "int", mas cobre
+uma gama numérica mais ampla.
+
+00:05:00.434 --> 00:05:02.334
+Porém, tipos de dados
+genéricos
+
+00:05:02.367 --> 00:05:05.033
+devem ser instâncias
+de tipos de dados aqui.
+
+00:05:05.067 --> 00:05:07.801
+Então usamos "Long"
+com "L" maiúsculo,
+
+00:05:07.834 --> 00:05:12.200
+que é uma versão de objeto
+em um tipo de dado primitivo.
+
+00:05:12.234 --> 00:05:17.868
+No AsyncTask, o "Long result"
+é passado para onPostExecute,
+
+00:05:17.901 --> 00:05:20.200
+que está de volta
+à thread UI.
+
+00:05:20.234 --> 00:05:24.000
+Não usamos os argumentos
+variáveis com pontos neste caso.
+
+00:05:24.033 --> 00:05:28.133
+A entrada do método onPostExecute
+tem que ter um valor único
+
+00:05:28.167 --> 00:05:31.534
+com o tipo de dado especificado
+na declaração de classe.
+
+00:05:31.567 --> 00:05:34.367
+Neste exemplo, só queremos
+mostrar um diálogo
+
+00:05:34.400 --> 00:05:36.968
+com o tamanho do arquivo
+que recebemos.
+
+00:05:37.000 --> 00:05:39.868
+Dependendo de como as subclasses
+são implementadas,
+
+00:05:39.901 --> 00:05:43.067
+talvez não precisemos de todos
+os tipos de dados genéricos.
+
+00:05:43.100 --> 00:05:46.033
+Por exemplo, pode não ter
+parâmetros de entrada,
+
+00:05:46.067 --> 00:05:49.234
+nenhum valor de volta
+ou nenhum valor de progresso.
+
+00:05:49.267 --> 00:05:53.534
+Nesses casos, use "Void"
+para o parâmetro genérico.
+
+00:05:53.567 --> 00:05:58.067
+Coloque "V" em maiúsculo
+porque o parâmetro genérico
+
+00:05:58.100 --> 00:06:00.300
+tem que ser um
+tipo de dado do objeto.
+
+00:06:00.334 --> 00:06:03.934
+Agora é hora de um quiz
+para reforçar o que aprendemos.
+
+00:06:03.968 --> 00:06:06.400
+Veja os códigos fornecidos
+e preencha as lacunas
+
+00:06:06.434 --> 00:06:08.801
+para os tipos genéricos
+na declaração de classe
+
+00:06:08.834 --> 00:06:11.133
+para a tarefa de download
+em webpage.
+

@@ -1,0 +1,385 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.100
+AsyncTask é diferente
+de todas as classes
+
+00:00:03.133 --> 00:00:04.634
+que usamos antes.
+
+00:00:04.667 --> 00:00:07.267
+As outras,
+como Activity ou View,
+
+00:00:07.300 --> 00:00:09.501
+fazem a conexão
+na thread principal.
+
+00:00:09.534 --> 00:00:11.234
+Porém, com o AsyncTask,
+
+00:00:11.267 --> 00:00:13.767
+algumas partes da tarefa
+rodam na thread principal,
+
+00:00:13.801 --> 00:00:15.267
+em primeiro plano.
+
+00:00:16.000 --> 00:00:18.801
+E outras partes da tarefa
+rodam numa thread separada
+
+00:00:18.834 --> 00:00:21.400
+que, obviamente,
+está em segundo plano.
+
+00:00:22.601 --> 00:00:26.400
+Sim, então o AsyncTask
+lida com mais de uma thread.
+
+00:00:26.434 --> 00:00:29.067
+Então vamos analisar juntos,
+passo a passo.
+
+00:00:29.100 --> 00:00:32.400
+AsyncTask
+é uma classe abstrata.
+
+00:00:32.434 --> 00:00:35.033
+Você aprendeu sobre
+classes abstratas
+
+00:00:35.067 --> 00:00:37.067
+no último curso
+com a Jessica,
+
+00:00:37.100 --> 00:00:39.701
+quando estava montando
+o app de miwok.
+
+00:00:39.734 --> 00:00:42.334
+Uma classe abstrata contém
+os métodos
+
+00:00:42.367 --> 00:00:45.033
+que forem deixados em branco
+para nós, desenvolvedores,
+
+00:00:45.067 --> 00:00:48.767
+para ir além e fornecer
+nossas próprias implementações.
+
+00:00:49.300 --> 00:00:51.234
+Para usar o AsyncTask,
+
+00:00:51.267 --> 00:00:53.567
+precisamos fazer uma subclasse.
+
+00:00:53.601 --> 00:00:57.067
+Vamos chamar esta de
+EarthquakeAsyncTask.
+
+00:00:57.801 --> 00:01:01.100
+A subclasse tem que
+ultrapassar o método
+
+00:01:01.133 --> 00:01:02.567
+em plano de fundo.
+
+00:01:03.067 --> 00:01:05.033
+De nossa
+demonstração anterior,
+
+00:01:05.067 --> 00:01:08.567
+qualquer tarefa que você quer
+que aconteça na thread de 2º plano
+
+00:01:08.601 --> 00:01:12.267
+deve ser incluída no método
+doInBackground.
+
+00:01:12.767 --> 00:01:15.734
+Quando você tiver os dados
+dos terremotos do servidor,
+
+00:01:15.767 --> 00:01:18.067
+vai querer fazer update
+da UI.
+
+00:01:18.100 --> 00:01:20.000
+Mas, para fazer o update,
+
+00:01:20.033 --> 00:01:22.033
+você tem que estar
+na thread principal,
+
+00:01:22.067 --> 00:01:24.033
+e não numa thread
+de segundo plano.
+
+00:01:24.767 --> 00:01:28.701
+Então como você faz a comunicação
+entre as threads?
+
+00:01:29.200 --> 00:01:31.767
+Você pode passar um método
+no AsyncTask
+
+00:01:31.801 --> 00:01:33.701
+chamado onPostExecute.
+
+00:01:33.734 --> 00:01:35.734
+Esse método roda
+na thread principal,
+
+00:01:35.767 --> 00:01:38.067
+que é por isso que
+a realcei em verde.
+
+00:01:38.100 --> 00:01:39.334
+Esse método será chamado
+
+00:01:39.367 --> 00:01:41.801
+depois que a tarefa
+em 2º plano finalizar.
+
+00:01:41.834 --> 00:01:44.767
+E é por isso que se chama
+onPostExecute.
+
+00:01:45.300 --> 00:01:48.100
+Se eu revelar mais detalhes
+sobre os métodos,
+
+00:01:48.133 --> 00:01:50.734
+poderemos ver que
+o método doInBackground
+
+00:01:50.767 --> 00:01:52.400
+devolverá um resultado.
+
+00:01:52.434 --> 00:01:55.534
+Esse resultado é passado
+como o input
+
+00:01:55.567 --> 00:01:58.234
+ao método onPostExecute.
+
+00:01:58.267 --> 00:02:00.400
+Se o resultado do método
+doInBackground
+
+00:02:00.434 --> 00:02:02.634
+for uma lista de terremotos
+do servidor,
+
+00:02:02.667 --> 00:02:04.400
+com o onPostExecute,
+
+00:02:04.434 --> 00:02:08.067
+a lista de dados agora terá
+migrado para a thread principal,
+
+00:02:08.100 --> 00:02:10.701
+onde podemos fazer update
+a lista no app
+
+00:02:10.734 --> 00:02:12.734
+para demonstrar novos dados.
+
+00:02:12.767 --> 00:02:14.367
+Se você precisar,
+
+00:02:14.400 --> 00:02:18.434
+também há um método AsyncTask
+que se chama onPreExecute,
+
+00:02:18.467 --> 00:02:20.234
+que é chamada na thread principal
+
+00:02:20.267 --> 00:02:22.400
+antes que a tarefa de 2º plano
+comece.
+
+00:02:22.434 --> 00:02:24.400
+É por isso que se chama
+onPreExecute.
+
+00:02:24.434 --> 00:02:27.033
+Desenvolvedores vão ultrapassar
+esse método
+
+00:02:27.067 --> 00:02:28.734
+se houver algo que precisa
+ser feito
+
+00:02:28.767 --> 00:02:31.567
+antes de preparar para
+fazer a tarefa de 2º plano.
+
+00:02:32.400 --> 00:02:36.367
+Às vezes, a tarefa de 2º plano
+demora muito tempo.
+
+00:02:36.400 --> 00:02:39.367
+Alguns desenvolvedores
+podem querer mostrar ao usuário
+
+00:02:39.400 --> 00:02:41.667
+sobre o progresso
+da tarefa de 2º plano.
+
+00:02:41.701 --> 00:02:45.100
+Por exemplo, um app pode
+baixar uma foto da internet,
+
+00:02:45.133 --> 00:02:47.601
+e pode mostrar
+uma barra de progresso.
+
+00:02:48.234 --> 00:02:50.167
+No método do InBackground
+
+00:02:50.200 --> 00:02:53.400
+podemos chamar o método
+publish Progress
+
+00:02:53.434 --> 00:02:56.334
+e passar um novo valor
+de progresso.
+
+00:02:57.000 --> 00:03:00.501
+Então, podemos ultrapassar
+o método OnProgressUpdate,
+
+00:03:00.534 --> 00:03:02.601
+que ocorre na thread principal.
+
+00:03:02.634 --> 00:03:05.000
+E pode ser usado para
+o update da UI
+
+00:03:05.033 --> 00:03:08.501
+com novos valores de progresso.
+Neste caso é 72%.
+
+00:03:08.534 --> 00:03:12.534
+Vamos ver a documentação
+para a classe do AsyncTask.
+
+00:03:12.567 --> 00:03:15.033
+Podemos descer
+até a seção de métodos
+
+00:03:15.067 --> 00:03:17.100
+e você pode ver que
+doInBackground
+
+00:03:17.133 --> 00:03:19.334
+está listado
+como método abstrato.
+
+00:03:19.367 --> 00:03:22.234
+Então temos que
+implementar esse método.
+
+00:03:22.267 --> 00:03:24.267
+Também reconhecemos
+outros métodos
+
+00:03:24.300 --> 00:03:26.801
+como onPreExecute,
+onProgressUpdate
+
+00:03:26.834 --> 00:03:28.667
+e onPostExecute.
+
+00:03:28.701 --> 00:03:30.634
+Esses métodos
+não são abstratos.
+
+00:03:30.667 --> 00:03:34.200
+Então não temos que implementar
+esses métodos.
+
+00:03:34.734 --> 00:03:36.033
+Subindo de novo
+
+00:03:36.067 --> 00:03:38.501
+vemos esse exemplo de código
+de classe chamado
+
+00:03:38.534 --> 00:03:42.567
+DownloadFilesTask que é
+uma subclasse de AsyncTask.
+
+00:03:42.601 --> 00:03:46.000
+Vamos falar sobre esse exemplo
+mais detalhadamente depois.
+
+00:03:46.033 --> 00:03:49.000
+Ao usar um método
+de 2º plano,
+
+00:03:49.033 --> 00:03:52.100
+um arquivo é baixado,
+o que pode levar um tempão,
+
+00:03:52.133 --> 00:03:54.367
+por isso é feito
+em segundo plano.
+
+00:03:54.400 --> 00:03:57.067
+Note que o input
+no método doInBackground
+
+00:03:57.100 --> 00:03:59.167
+pode ser uma lista
+de itens para processar,
+
+00:03:59.200 --> 00:04:02.100
+o que, neste caso,
+são arquivos para baixar.
+
+00:04:02.133 --> 00:04:04.334
+O progresso é reportado
+
+00:04:04.367 --> 00:04:08.334
+e podemos fazer update
+da tela da porcentagem do progresso.
+
+00:04:08.367 --> 00:04:10.734
+Depois que a tarefa
+em 2º plano é finalizada,
+
+00:04:10.767 --> 00:04:13.534
+mostramos um diálogo
+de quantos bites de informação
+
+00:04:13.567 --> 00:04:15.767
+foram baixados com sucesso.
+
+00:04:15.801 --> 00:04:20.567
+Neste quiz, preencha esta tabela
+sobre os métodos callback
+
+00:04:20.601 --> 00:04:22.434
+do AsyncTask.
+
+00:04:22.467 --> 00:04:25.734
+Descreva o que cada método
+é chamado em suas palavras.
+
+00:04:25.767 --> 00:04:29.267
+Então, indique se o método
+é rodado na thread principal
+
+00:04:29.300 --> 00:04:31.501
+ou numa thread de 2º plano.
+
+00:04:31.534 --> 00:04:34.501
+Você pode ver o link
+abaixo do quiz se precisar.
+

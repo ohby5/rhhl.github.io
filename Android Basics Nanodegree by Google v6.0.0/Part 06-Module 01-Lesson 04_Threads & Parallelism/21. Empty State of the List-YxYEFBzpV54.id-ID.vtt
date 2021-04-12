@@ -1,0 +1,207 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.240 --> 00:00:02.580
+Kadang aplikasi tak punya data untuk ditampilkan.
+
+00:00:02.580 --> 00:00:06.840
+Misalnya, mungkin tidak ada pesan baru di
+kotak masuk email seseorang, sehingga
+
+00:00:06.840 --> 00:00:10.380
+pengembang perlu menangani
+situasi ini dengan baik.
+
+00:00:10.380 --> 00:00:13.280
+Aplikasi yang dirancang baik akan mencoba untuk
+bahkan menjadikan pengalaman ini lebih
+
+00:00:13.280 --> 00:00:16.370
+menyenangkan dengan, misalnya, grafis yang
+elok.
+
+00:00:16.370 --> 00:00:20.000
+Lebih baik lagi, jika mengisi ruang kosong dengan
+konten awalan atau
+
+00:00:20.000 --> 00:00:21.610
+saran untuk memulai.
+
+00:00:21.610 --> 00:00:24.420
+Hal ini akan bervariasi bergantung pada
+apa yang sesuai dengan aplikasi Anda.
+
+00:00:24.420 --> 00:00:27.860
+Untuk saat ini, mari fokus ke
+Empty State yang sangat simpel
+
+00:00:27.860 --> 00:00:31.110
+yang mengomunikasikan dengan jelas
+bahwa tidak ditemukan gempa bumi.
+
+00:00:31.110 --> 00:00:33.690
+Ini jauh lebih baik daripada
+sekadar layar kosong.
+
+00:00:33.690 --> 00:00:36.360
+Anda dipersilakan memperluas hal ini
+dan menjadikan Empty State lebih
+
+00:00:36.360 --> 00:00:39.640
+rumit nantinya, tapi
+pertanyaan apakah
+
+00:00:39.640 --> 00:00:44.010
+server web USGS akan mengembalikan nol gempa
+bumi atau tidak, ceritanya berbeda.
+
+00:00:44.010 --> 00:00:45.560
+Dan apa pun yang terjadi, idealnya
+
+00:00:45.560 --> 00:00:49.380
+aplikasi kita berisi logika untuk menangani
+skenario jika terjadi seperti ini.
+
+00:00:49.380 --> 00:00:52.610
+Untungnya, tim framework Android sudah
+memperkirakan bahwa hal ini akan
+
+00:00:52.610 --> 00:00:54.290
+lazim terjadi.
+
+00:00:54.290 --> 00:00:57.970
+Maka mereka memaparkan cara bagi
+pengembang untuk mengatur Empty View untuk
+
+00:00:57.970 --> 00:01:02.240
+ListView yang hanya akan ditampilkan
+tiap kali tidak ada data dalam daftar,
+
+00:01:02.240 --> 00:01:03.940
+berarti dataset adapter kosong.
+
+00:01:05.050 --> 00:01:06.180
+Dalam tugas pemrograman ini,
+
+00:01:06.180 --> 00:01:09.260
+Anda akan mengimplementasikan perilaku
+ini dalam aplikasi Laporan Gempa.
+
+00:01:09.260 --> 00:01:12.170
+Hal pertama yang harus Anda lakukan adalah
+memodifikasi tata letak xml
+
+00:01:12.170 --> 00:01:15.460
+bagi activity gempa bumi agar memiliki
+kelompok tampilan yang berisi dua anak,
+
+00:01:15.460 --> 00:01:18.980
+yaitu ListView dan
+TextView untuk empty view.
+
+00:01:20.220 --> 00:01:23.900
+Empty View dan ListView harus
+sekerabat dengan kelompok tampilan
+
+00:01:23.900 --> 00:01:26.748
+orangtua, kedua kerabat ini
+harus saling tumpang tindih.
+
+00:01:26.748 --> 00:01:29.540
+Dan ListView harus berukuran tinggi penuh
+dan lebar penuh pada layar
+
+00:01:29.540 --> 00:01:32.720
+sementara TextView harus dipusatkan
+di dalam layar penuh.
+
+00:01:32.720 --> 00:01:35.490
+Setelah Anda memperbarui tata letak,
+selanjutnya saya ingin Anda memodifikasi
+
+00:01:35.490 --> 00:01:39.720
+kelas Java EarthquakeActivity, sehingga
+dalam metode onCreate, Anda mengatur
+
+00:01:39.720 --> 00:01:44.410
+metode EmptyView pada objek ListView,
+dan memasukkan EmptyView.
+
+00:01:44.410 --> 00:01:47.160
+Inilah dokumentasi untuk
+metode setEmptyView.
+
+00:01:47.160 --> 00:01:50.070
+Yang diungkapkannya adalah saat tidak
+ada item dalam daftar,
+
+00:01:50.070 --> 00:01:54.390
+framework entri akan menyimpan list view
+dan membuat EmptyView ini terlihat.
+
+00:01:54.390 --> 00:01:58.150
+Namun, jika ada item, ListView akan
+dibuat terlihat dan
+
+00:01:58.150 --> 00:02:00.150
+EmptyView ini akan disembunyikan.
+
+00:02:00.150 --> 00:02:03.150
+Semua perubahan dan visibilitas tampilan ini
+secara otomatis ditangani untuk
+
+00:02:03.150 --> 00:02:05.480
+Anda, yang tentu menyenangkan.
+
+00:02:05.480 --> 00:02:09.139
+Satu lagi kelemahan yang ingin saya tekankan
+adalah bahwa jika Anda pertama kali meluncurkan
+
+00:02:09.139 --> 00:02:12.060
+aplikasi Anda, sudah ada data tapi kita
+belum selesai memuatnya.
+
+00:02:12.060 --> 00:02:15.170
+Untuk menghindari agar pesan tidak ditemukan
+gempa bumi berkedip di layar sejenak
+
+00:02:15.170 --> 00:02:18.182
+sementara data dimuat untuk pertama
+kalinya, tugaskan saja
+
+00:02:18.182 --> 00:02:23.290
+teks dalam empty state TextView setelah
+pemuatan pertama selesai.
+
+00:02:23.290 --> 00:02:26.020
+Jadi, di dalam metode onLoadFinished ini.
+
+00:02:26.020 --> 00:02:29.070
+Bisakah Anda pikirkan cara untuk memverifikasi
+bahwa EmptyView berfungsi?
+
+00:02:29.070 --> 00:02:30.350
+Ini petunjuk kecilnya.
+
+00:02:30.350 --> 00:02:32.820
+Anda perlu memberi komentar tentang
+kode secara temporer.
+
+00:02:32.820 --> 00:02:35.010
+Centang kotak ini setelah selesai.
+
+00:02:35.010 --> 00:02:36.200
+Lalu silakan coba tantangan bonus ini.
+
+00:02:36.200 --> 00:02:39.379
+Apakah Anda tahu aplikasi Android
+yang mencoba membuat empty state menjadi
+
+00:02:40.990 --> 00:02:43.210
+pengalaman pengguna yang menyenangkan?
+
+00:02:43.210 --> 00:02:45.880
+Silahkan bagikan screnshot dalam
+forum diskusi yang ditautkan di bawah kuis.
+

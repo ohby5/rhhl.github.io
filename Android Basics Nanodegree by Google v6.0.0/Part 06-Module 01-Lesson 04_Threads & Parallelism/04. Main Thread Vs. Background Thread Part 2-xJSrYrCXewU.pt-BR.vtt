@@ -1,0 +1,257 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.801 --> 00:00:03.734
+Aqui está um problema com o qual
+você pode já ter se deparado.
+
+00:00:03.767 --> 00:00:06.934
+Ao usar um app no celular,
+você clica num botão
+
+00:00:06.968 --> 00:00:09.601
+e esse botão tem que fazer
+um monte de coisa.
+
+00:00:09.634 --> 00:00:12.767
+Digamos que colherá dados
+da internet, tocar música
+
+00:00:12.801 --> 00:00:14.634
+ou fazer cálculos numéricos
+
+00:00:14.667 --> 00:00:17.100
+para dar efeito embaçado
+em uma imagem.
+
+00:00:17.133 --> 00:00:20.801
+Quando esse botão é clicado,
+o seu programa parece congelar
+
+00:00:20.834 --> 00:00:23.534
+pelo que parece
+ser muito tempo.
+
+00:00:23.567 --> 00:00:25.000
+Isso é muito chato.
+
+00:00:25.033 --> 00:00:28.133
+Você não sabe se travou
+ou o que houve.
+
+00:00:28.167 --> 00:00:29.601
+Após alguns instantes,
+
+00:00:29.634 --> 00:00:32.033
+tudo volta ao seu controle.
+
+00:00:32.067 --> 00:00:35.501
+Por que congelou e voltou
+à vida de repente?
+
+00:00:35.534 --> 00:00:38.367
+Possivelmente, o seu app
+estava tentando processar
+
+00:00:38.400 --> 00:00:42.334
+algo que leva muito tempo
+como colher informação da rede.
+
+00:00:42.367 --> 00:00:45.234
+O problema é que algo
+como uma requisição de rede
+
+00:00:45.267 --> 00:00:48.634
+pode demorar muito tempo
+se a conexão estiver fraca
+
+00:00:48.667 --> 00:00:51.000
+ou se tiver muitos dados
+a transferir.
+
+00:00:51.033 --> 00:00:53.734
+Precisamos fazer a conexão
+com o servidor,
+
+00:00:53.767 --> 00:00:56.767
+mandar a requisição,
+esperar uma resposta
+
+00:00:56.801 --> 00:00:58.534
+e fazer o parsing.
+
+00:00:58.567 --> 00:01:01.100
+Nada mais pode acontecer
+na thread principal
+
+00:01:01.133 --> 00:01:04.234
+enquanto você espera
+esses comandos terminarem.
+
+00:01:04.267 --> 00:01:07.367
+Então, se o usuário clica
+outros botões no app
+
+00:01:07.400 --> 00:01:10.033
+enquanto a requisição
+de rede está acontecendo,
+
+00:01:10.067 --> 00:01:12.167
+o app não poderá responder
+ao usuário
+
+00:01:12.200 --> 00:01:15.000
+até que essa operação
+de rede seja finalizada.
+
+00:01:15.033 --> 00:01:19.634
+E o que é pior: se o usuário clica
+no botão mais vezes,
+
+00:01:19.667 --> 00:01:24.334
+esses eventos formarão fila
+até que o app complete a tarefa.
+
+00:01:24.367 --> 00:01:28.901
+Se você pedir a UI Thread
+para processar algo que leva tempo,
+
+00:01:28.934 --> 00:01:33.200
+correrá o risco de o app
+parecer congelar ao ser usado.
+
+00:01:33.234 --> 00:01:36.100
+Na verdade, se o app
+bloquear a UI Thread
+
+00:01:36.133 --> 00:01:37.667
+por mais de alguns segundos,
+
+00:01:37.701 --> 00:01:39.701
+o Android pode mostrar
+um diálogo,
+
+00:01:39.734 --> 00:01:42.634
+dizendo ao usuário
+que o app não está respondendo
+
+00:01:42.667 --> 00:01:45.067
+e perguntar se ele
+deve ser fechado.
+
+00:01:45.100 --> 00:01:49.367
+Isto nos leva a uma regra importante
+ao montar apps para Android.
+
+00:01:49.400 --> 00:01:52.567
+Não bloqueie
+a thread principal.
+
+00:01:52.601 --> 00:01:56.334
+Por sorte, aparelhos Android
+são bons em tarefas múltiplas.
+
+00:01:56.367 --> 00:01:58.100
+-É?
+-É!
+
+00:01:58.133 --> 00:02:01.434
+Se o usuário clica um botão,
+queremos que o app
+
+00:02:01.467 --> 00:02:03.167
+seja atento
+à ação do usuário.
+
+00:02:03.200 --> 00:02:06.234
+A solução para o problema
+é ter a requisição de rede,
+
+00:02:06.267 --> 00:02:08.834
+os cálculos numéricos
+e o som do áudio,
+
+00:02:08.868 --> 00:02:11.901
+todos processando
+em threads de 2º plano separadas,
+
+00:02:11.934 --> 00:02:13.434
+ou worker threads.
+
+00:02:13.467 --> 00:02:15.300
+Assim, a UI é liberada
+
+00:02:15.334 --> 00:02:19.267
+para que o usuário ainda possa
+rolar, clicar e fazer o que quiser
+
+00:02:19.300 --> 00:02:22.601
+enquanto espera
+a finalização das tarefas.
+
+00:02:22.634 --> 00:02:25.901
+Em teoria, você pode usar
+quantas threads quiser, certo?
+
+00:02:25.934 --> 00:02:29.334
+Mais trabalho pode ser executado
+paralelamente.
+
+00:02:29.367 --> 00:02:31.133
+Sim. Mas para este app,
+
+00:02:31.167 --> 00:02:34.267
+só precisamos de
+uma única thread em 2º plano.
+
+00:02:34.801 --> 00:02:38.400
+A thread em 2º plano só pode
+fazer uma operação por vez.
+
+00:02:38.434 --> 00:02:41.400
+Mas se a requisição de rede
+demorar muito
+
+00:02:41.434 --> 00:02:44.234
+porque sua conexão está lenta
+ou fraca,
+
+00:02:44.267 --> 00:02:45.467
+não tem problema.
+
+00:02:45.501 --> 00:02:48.601
+A thread principal ainda
+pode lidar com as ações do usuário
+
+00:02:48.634 --> 00:02:51.834
+sem causar impacto
+na experiência dele.
+
+00:02:51.868 --> 00:02:53.000
+Sim. E mais uma coisa:
+
+00:02:53.033 --> 00:02:55.033
+depois que a tarefa em 2º plano
+terminar,
+
+00:02:55.067 --> 00:02:57.133
+não é necessário
+mantê-la ativa.
+
+00:02:57.167 --> 00:03:00.300
+Então, aprendemos
+que o app pode dividir tarefas
+
+00:03:00.334 --> 00:03:02.501
+em threads separadas para permitir
+que tarefas
+
+00:03:02.534 --> 00:03:05.601
+sejam processadas em 2º plano,
+mantendo a thread principal livre.
+
+00:03:05.634 --> 00:03:08.934
+Assim, você pode deixar o app
+mais eficiente e rápido.
+
