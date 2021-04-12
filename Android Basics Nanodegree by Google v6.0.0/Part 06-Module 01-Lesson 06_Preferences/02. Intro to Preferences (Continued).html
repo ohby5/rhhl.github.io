@@ -1,0 +1,243 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro to Preferences (Continued)</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. Intro to Preferences (Continued)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="data-persistence">Data Persistence</h2>
+<p>Storing data on a user's device (which is referred to more generally as data persistence), is a huge topic that will the topic of the entire next course.</p>
+<p>For now though, the designers of Android anticipated that needing to store small amounts of data to keep track of user preferences was likely to be a very common need, so there's an Android system component that can handle this for us. </p>
+<hr />
+<h5 id="data-persistence---storing-data-on-a-user’s-device">Data Persistence - Storing data on a user’s device</h5>
+<h5 id="an-example-of-this-is-storing-small-amounts-of-data-like-user-preferences">An example of this is storing small amounts of data like user preferences</h5>
+<hr />
+<p>A Preference is really just a string key associated with a primitive type, String, or set of Strings. Android will hold onto that data for you even when the app is closed, and even if the phone is turned off. </p>
+<hr />
+<h2 id="-a-preference-is-a-string-key-associated-with-a-primitive-type-string-or-set-of-strings">##### A Preference is a String Key associated with a primitive type, String or set of Strings</h2>
+<h2 id="sharedpreferences">SharedPreferences</h2>
+<p>Android provides a <a href="https://developer.android.com/reference/android/content/SharedPreferences.html" rel="noopener noreferrer" target="_blank">SharedPreferences class</a> to make getting and setting preferences super straight forward. SharedPreferences handles all the details of reading and writing preference data to the persistent storage on the device.</p>
+<p>The other piece to making preferences work is a way for the user to edit the preferences your app cares about. For a preference that's a number, we can let users pick from a selector. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-4.56.29-pm.png" alt="For a preference that&#x27;s a number, we can let users pick a number from a selector" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>For a preference that's a number, we can let users pick a number from a selector</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For a preference that should be selected from a list, we can present a list of buttons, and let the user pick one. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-4.57.25-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="preferencefragment">PreferenceFragment</h2>
+<p>We could definitely make such an Activity ourselves, but Android provides a class called <a href="https://developer.android.com/reference/android/preference/PreferenceFragment.html" rel="noopener noreferrer" target="_blank">PreferenceFragment</a> that can supply widgets for editing all sort of preferences.</p>
+<p>In case it snuck past you, that term Fragment is new. Let's talk about what that means.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="03. Fragments.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('02. Intro to Preferences (Continued)')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

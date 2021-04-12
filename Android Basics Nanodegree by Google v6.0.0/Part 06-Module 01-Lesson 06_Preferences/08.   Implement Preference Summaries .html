@@ -1,0 +1,289 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>  Implement Preference Summaries </title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">08.   Implement Preference Summaries </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/tree/9a2cbee7b87cc49449b75610192554199d532918" rel="noopener noreferrer" target="_blank">Code at Beginning of Section</a></p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/commit/daaccdfea0fffa772a54c67d177596bc7976dd64" rel="noopener noreferrer" target="_blank">Changes in this Section</a></p>
+<hr />
+<p>In this section, we'll write some code in the SettingsActivity so that the user can easily view the value of the preference right below the preference name:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-18-at-3.05.00-pm.png" alt="To provide users with a delightful experience, we&#x27;ll implement a summary so users can easily see the preference values. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>To provide users with a delightful experience, we'll implement a summary so users can easily see the preference values. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-1---setup-onpreferencechangelistener-interface">Step 1 - Setup OnPreferenceChangeListener Interface</h2>
+<p>In the SettingsActivity inside the <code>EarthquakePreferenceFragment</code>, implement the <code>Preference.OnPreferenceChangeListener</code> interface. Remember that classes that implement this interface are setup to listen for any Preference changes made by the user.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.06.17-pm.png" alt="For the EarthquakePreferenceFragment, implement the Preference.OnPreferenceChangeListener interface" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>For the EarthquakePreferenceFragment, implement the Preference.OnPreferenceChangeListener interface</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>As we see in the documentation for <a href="https://developer.android.com/reference/android/preference/Preference.OnPreferenceChangeListener.html" rel="noopener noreferrer" target="_blank">Prefrence.OnPreferenceChangeListener</a>, this interface requires us to fill in the OnPreferenceChange method.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.07.17-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="step-2---setup-onpreferencechange-method">Step 2 - Setup OnPreferenceChange Method</h2>
+<p>In the SettingsActivity, set up an empty <code>onPreferenceChange</code> method right under the onCreate() method that we’ll be filling in. Remember that this method will be called when the user has changed a Preference, so inside of it we should add whatever action we want to happen after this change. In this case, we’ll want to update the displayed preference summary (the UI) after it’s been changed: </p>
+<pre><code class="java language-java">      @Override
+       public boolean onPreferenceChange(Preference preference, Object value) { 
+       // The code in this method takes care of updating the displayed preference summary after it has been changed
+            String stringValue = value.toString();
+            preference.setSummary(stringValue);</code></pre>
+<h2 id="step-3---update-preference-summary-in-oncreate">Step 3 - Update Preference Summary in onCreate</h2>
+<p>Next, we’ll need to update the preference summary (the UI) when the settings activity is launched in <code>onCreate()</code>. To do so, we’ll need to first find the preference we’re interested in and then bind the current preference value to be displayed.</p>
+<p>Since we are already inside the PreferenceFragment (which is inside the SettingsActivity), we can use its <code>findPreference()</code> method to get the Preference object. To help us with binding the value that’s in SharedPreferences to what will show up in the preference summary, we’ll create a help method and call it <code>bindPreferenceSummaryToValue()</code>.</p>
+<p>In <code>EarthquakePreferenceFragment</code>:</p>
+<pre><code class="java language-java">@Override
+ public void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     addPreferencesFromResource(R.xml.settings_main);
+
+     Preference minMagnitude = findPreference(getString(R.string.settings_min_magnitude_key));
+     bindPreferenceSummaryToValue(minMagnitude);
+ }</code></pre>
+<h2 id="step-4---complete-bindpreferencesummarytovalue-helper-method">Step 4 - Complete bindPreferenceSummaryToValue() Helper Method</h2>
+<p>Now we need to define the <code>bindPreferenceSummaryToValue()</code> helper method. This method takes in a Preference as its parameter, and we use setOnPreferenceChangeListener to set the current EarthquakePreferenceFragment instance to listen for changes to the preference we pass in using:</p>
+<pre><code class="java language-java">preference.setOnPreferenceChangeListener(this);</code></pre>
+<p>We also read the current value of the preference stored in the SharedPreferences on the device, and display that in the preference summary (so that the user can see the current value of the preference):</p>
+<pre><code class="java language-java">SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
+     String preferenceString = preferences.getString(preference.getKey(), "");
+     onPreferenceChange(preference, preferenceString);</code></pre>
+<p>The completed <code>bindPreferenceSummaryToValue()</code>method looks like this:</p>
+<pre><code class="java language-java">private void bindPreferenceSummaryToValue(Preference preference) {
+     preference.setOnPreferenceChangeListener(this);
+     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
+     String preferenceString = preferences.getString(preference.getKey(), "");
+     onPreferenceChange(preference, preferenceString);
+ }</code></pre>
+<h1 id="summary">Summary</h1>
+<p>We saw how we can use the <code>OnPreferenceChangeListener</code> interface to listen for when the user updates the preferences and update the preference summary with the change.  </p>
+<p>In the code we first setup the OnPreferenceChangeListener Interface. Then we implemented the OnPreferenceChange() method. Then in order to update the preference summary when the settings activity is launched we setup the bindPreferenceSummaryToValue() helper method and which we used in onCreate().</p>
+<p>For a summary of these changes, check out: <a href="https://github.com/udacity/ud843-QuakeReport/commit/3d71663dc4edaebb9cf22c06dbb9b4789696f974" rel="noopener noreferrer" target="_blank">https://github.com/udacity/ud843-QuakeReport/commit/3d71663dc4edaebb9cf22c06dbb9b4789696f974</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="09. Order by Preference.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('08.   Implement Preference Summaries ')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

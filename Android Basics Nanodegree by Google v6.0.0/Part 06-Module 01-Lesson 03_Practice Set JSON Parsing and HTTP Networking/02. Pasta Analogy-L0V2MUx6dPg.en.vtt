@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.250
+Hi my name's Vicky,
+
+00:00:02.250 --> 00:00:05.320
+and I'm one of the Content Developers here at Udacity.
+
+00:00:05.320 --> 00:00:09.965
+We just finished learning about HTTP networking in JSON parsing.
+
+00:00:09.965 --> 00:00:12.720
+We're now going to go through a food analogy to better
+
+00:00:12.720 --> 00:00:16.270
+understand how all of these concepts fit together.
+
+00:00:16.270 --> 00:00:19.620
+Pretend you have a huge craving for pasta.
+
+00:00:19.620 --> 00:00:22.175
+So you're at your favorite pasta restaurant.
+
+00:00:22.175 --> 00:00:27.200
+You tell the waiter you want to order specifically the red sauce pasta dish.
+
+00:00:27.200 --> 00:00:30.715
+This order information represents the address.
+
+00:00:30.715 --> 00:00:32.955
+Now the waiter has your order information,
+
+00:00:32.955 --> 00:00:37.320
+which is equivalent to the address used to retrieve that information.
+
+00:00:37.320 --> 00:00:42.085
+The waiter then uses this information to go fetch your food in the main thread.
+
+00:00:42.085 --> 00:00:44.520
+While the waiter is fetching your dish,
+
+00:00:44.520 --> 00:00:46.190
+you can do other stuff while waiting,
+
+00:00:46.190 --> 00:00:49.530
+such as drink water in the background thread.
+
+00:00:49.530 --> 00:00:51.248
+Once you receive your pasta,
+
+00:00:51.248 --> 00:00:52.674
+you can now go through it,
+
+00:00:52.674 --> 00:00:56.030
+just like how you would go through that information from the main thread.
+
+00:00:56.030 --> 00:01:00.045
+In this case, the food order information represents the address,
+
+00:01:00.045 --> 00:01:04.050
+and the food represents JSON, which is the data.
+
+00:01:04.050 --> 00:01:06.480
+The waiter retrieving your food is the process of
+
+00:01:06.480 --> 00:01:09.116
+HTTP networking in the background thread,
+
+00:01:09.116 --> 00:01:12.355
+while you continue to do things in the main thread.
+
+00:01:12.355 --> 00:01:15.910
+Lastly, going through your food is parsing JSON.
+
+00:01:15.910 --> 00:01:18.025
+Let's recap what we went through.
+
+00:01:18.025 --> 00:01:20.235
+When we request the pasta dish,
+
+00:01:20.235 --> 00:01:22.425
+that represents the JSON data.
+
+00:01:22.425 --> 00:01:25.380
+Communicating my request to the waiter and waiting for
+
+00:01:25.380 --> 00:01:29.295
+the waiter to retrieve my dish is HTTP networking.
+
+00:01:29.295 --> 00:01:33.000
+Going through my food and getting what I want is JSON parsing.
+

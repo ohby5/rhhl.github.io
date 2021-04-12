@@ -1,0 +1,267 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>URL Building</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">06. URL Building</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/tree/efccfedb00a031d6582bdc7c873fff51ab3d909d" rel="noopener noreferrer" target="_blank">Code at Beginning of Section</a></p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/commit/9a2cbee7b87cc49449b75610192554199d532918" rel="noopener noreferrer" target="_blank">Changes in this Section</a></p>
+<hr />
+<p>So far we've been requesting earthquakes using a hard-coded URL. </p>
+<p>From <a href="https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java" rel="noopener noreferrer" target="_blank">EarthquakeActivity.java at Commit 1.15</a>:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-10.27.42-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>However, now we need to insert our preference for minimum earthquake magnitude into the URL as a query parameter. We could do this with some horrible string concatenation, but there's a better way using the the Uri.Builder class.</p>
+<h3 id="wait-whats-a-uri">Wait, what's a URI?</h3>
+<p>A URI, or uniform resource identifier, is a more general URL. While a URL always points to a resource that's available on a computer network somewhere, a URI can identify a much broader range of things, from files and email mailboxes, to physical objects like books.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-10.28.37-pm.png" alt="URLs are a subset of URIs
+" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>URLs are a subset of URIs</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Since URLs are a subset of URIs, it made more sense for Android to just provide ways to manipulate URIs, since those will work for URLs as well</p>
+<p>First let's change the value of <code>USGS_REQUEST_URL</code> to the following:</p>
+<pre><code class="java language-java">    private static final String USGS_REQUEST_URL = "http://earthquake.usgs.gov/fdsnws/event/1/query";</code></pre>
+<p>Then we can replace the body of <code>onCreateLoader()</code> in EarthquakeActivity with the following:</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/30a05f980f2cb404b324b96bcc8e6b29c248ea16/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java" rel="noopener noreferrer" target="_blank">Full EarthquakeActivity file</a></p>
+<pre><code class="java language-java">    @Override
+    // onCreateLoader instantiates and returns a new Loader for the given ID
+    public Loader&lt;List&lt;Earthquake&gt;&gt; onCreateLoader(int i, Bundle bundle) {
+
+    SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+    // getString retrieves a String value from the preferences. The second parameter is the default value for this preference. 
+    String minMagnitude = sharedPrefs.getString(
+            getString(R.string.settings_min_magnitude_key),
+            getString(R.string.settings_min_magnitude_default));
+
+   // parse breaks apart the URI string that's passed into its parameter
+    Uri baseUri = Uri.parse(USGS_REQUEST_URL);
+
+    // buildUpon prepares the baseUri that we just parsed so we can add query parameters to it
+    Uri.Builder uriBuilder = baseUri.buildUpon();
+
+     // Append query parameter and its value. For example, the `format=geojson`
+    uriBuilder.appendQueryParameter("format", "geojson");
+    uriBuilder.appendQueryParameter("limit", "10");
+    uriBuilder.appendQueryParameter("minmag", minMagnitude);
+    uriBuilder.appendQueryParameter("orderby", "time");
+
+    // Return the completed uri `http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;limit=10&amp;minmag=minMagnitude&amp;orderby=time
+    return new EarthquakeLoader(this, uriBuilder.toString());
+
+    }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="07. Preference Summaries.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('06. URL Building')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

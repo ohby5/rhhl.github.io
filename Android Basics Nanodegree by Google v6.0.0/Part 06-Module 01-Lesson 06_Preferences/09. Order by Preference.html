@@ -1,0 +1,424 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order by Preference</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">09. Order by Preference</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/tree/daaccdfea0fffa772a54c67d177596bc7976dd64" rel="noopener noreferrer" target="_blank">Code at Beginning of Section</a></p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/commit/5b61ca20030c30604bb9d68b961ec91d46c23cd4" rel="noopener noreferrer" target="_blank">Changes in this Section</a></p>
+<hr />
+<h1 id="list-preference">List Preference</h1>
+<p>Sometimes users may be interested in organizing earthquakes by magnitude, and other times they may be interested in organizing them by the date and time during which they occurred. For that reason we will add one more user preference, the <strong>Order By</strong> preference.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.13.43-pm.png" alt="In this section, we&#x27;ll add one more user preference, the Order By Preference " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>In this section, we'll add one more user preference, the Order By Preference </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We can easily accommodate this using a ListPreference. A List Preference, as the name implies, displays a list of possible preference entries as a dialog.</p>
+<p>The List Preference is populated by an array of Strings we’ll set up in xml.</p>
+<h1 id="step-1---create-xml-string-labels">Step 1 - Create XML String Labels</h1>
+<p>First, let's define strings for the preference labels in the string resource file. We’ll have the “Order By” preference label, the “Magnitude” and the “Most Recent” label options:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.14.08-pm.png" alt="We need to add string resources for the preference labels that will be displayed" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We need to add string resources for the preference labels that will be displayed</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In strings.xml:</p>
+<pre><code class="xml language-xml">     &lt;!-- Strings For Order-By Preference [CHAR LIMIT=30] --&gt;
+     &lt;string name="settings_order_by_label"&gt;Order By&lt;/string&gt;
+     &lt;string name="settings_order_by_key" translatable="false"&gt;order_by&lt;/string&gt;
+     &lt;string name="settings_order_by_default" translatable="false"&gt;@string/settings_order_by_magnitude_value&lt;/string&gt;
+
+     &lt;!-- Label for order-by magnitude option [CHAR LIMIT=20] --&gt;
+     &lt;string name="settings_order_by_magnitude_label"&gt;Magnitude&lt;/string&gt;
+     &lt;string name="settings_order_by_magnitude_value" translatable="false"&gt;magnitude&lt;/string&gt;
+
+     &lt;!-- Label for order-by most recent option [CHAR LIMIT=20] --&gt;
+     &lt;string name="settings_order_by_most_recent_label"&gt;Most Recent&lt;/string&gt;
+     &lt;string name="settings_order_by_most_recent_value" translatable="false"&gt;time&lt;/string&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <hr />
+<h1 id="step-2---put-string-values-in-string-arrays">Step 2 - Put String Values in String Arrays</h1>
+<p>Next, we'll package the strings we just created and put them into 2 string arrays - <br />
+one for the human-readable labels labels (<string-array name="settings_order_by_labels">)</p>
+<p>and another for the value to save for a preference when an entry from entries is selected (<string-array name="settings_order_by_values">). </p>
+<p>In res/values/arrays.xml:</p>
+<pre><code class="xml language-xml">     &lt;?xml version="1.0" encoding="utf-8"?&gt;
+     &lt;resources&gt;
+         &lt;string-array name="settings_order_by_labels"&gt;
+             &lt;item&gt;@string/settings_order_by_magnitude_label&lt;/item&gt;
+             &lt;item&gt;@string/settings_order_by_most_recent_label&lt;/item&gt;
+         &lt;/string-array&gt;
+
+         &lt;string-array name="settings_order_by_values"&gt;
+             &lt;item&gt;@string/settings_order_by_magnitude_value&lt;/item&gt;
+             &lt;item&gt;@string/settings_order_by_most_recent_value&lt;/item&gt;
+         &lt;/string-array&gt;
+     &lt;/resources&gt;</code></pre>
+<hr />
+<h1 id="step-3---add-listpreference-in-xml">Step 3 - Add ListPreference in XML</h1>
+<p>Then we can add a <a href="https://developer.android.com/reference/android/preference/ListPreference.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics" target="_blank">ListPreference</a> to the res/xml/settings_main.xml file.</p>
+<p>In res/xml/settings_main.xml:</p>
+<pre><code class="xml language-xml">         &lt;ListPreference
+             android:defaultValue="@string/settings_order_by_default"
+             android:entries="@array/settings_order_by_labels"
+             android:entryValues="@array/settings_order_by_values"
+             android:key="@string/settings_order_by_key"
+             android:title="@string/settings_order_by_label" /&gt;</code></pre>
+<p>From the ListPreference documentation, we see the description of these 2 XML attributes:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.15.52-pm.png" alt="2 XML attributes for ListPreferences" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>2 XML attributes for ListPreferences</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><code>android:entries="@array/settings_order_by_labels"</code> - Uses the string array we setup earlier in res/values/arrays.xml which are what appears as the labels for the user to read. </p>
+<p><code>android:entryValues="@array/settings_order_by_values"</code> - Uses the other string array from res/values/arrays.xml contains the value to save for a preference when an entry from entries is selected. </p>
+<hr />
+<h1 id="step-4---update-uri-to-use-the-user’s-preferred-sort-order">Step 4 - Update URI to Use the User’s Preferred Sort Order</h1>
+<p>Now that we’ve setup to allow the user to choose a preferred sort order, we need to look up which method of ordering the user has chosen (by “Magnitude” or by “Most Recent”) and build the URI for making the HTTP request accordingly.</p>
+<p>We’ll make these changes in the EarthquakeActivity.java.</p>
+<p>We’ll get this information from SharedPreferences and check for the value associated with the key using getString(R.string.settings_order_by_key). We’ll also set an order by default set initially:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="java language-java">String orderBy  = sharedPrefs.getString(
+     getString(R.string.settings_order_by_key),
+     getString(R.string.settings_order_by_default)
+);</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>When building the URI and appending query parameters, currently the value of the “orderby” parameter is time. We’ll update it so that it takes in the user’s preference stored in the orderBy variable instead of hardcoding the “orderby” parameter to be “time”, we will use the user’s preference (stored in the orderBy variable). This is what that will look like in EarthquakeActivity.java:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.16.59-pm.png" alt="" class="img img-fluid">
+    <figcaption class="figure-caption">
+      
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/commit/5b61ca20030c30604bb9d68b961ec91d46c23cd4" rel="noopener noreferrer" target="_blank">Here</a> are the changes made to EarthquakeActivity.java:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.17.45-pm.png" alt="Screenshot from code diff of code changes" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Screenshot from code diff of code changes</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <hr />
+<h1 id="step-5---update-earthquakepreferencefragment-with-order-by-preference">Step 5 - Update EarthquakePreferenceFragment with Order By Preference</h1>
+<p>Finally, we'll add additional logic in the EarthquakePreferenceFragment so that it is aware of the new ListPreference, similar to what we did for the EditTextPreference in the <a href="62be5b5f-d596-4c30-85e9-e5bb193428cb" rel="noopener noreferrer" target="_blank">Preference for Minimum Earthquake Magnitude Concept</a>.</p>
+<p>In SettingActivity.java, inside EarthquakePreferenceFragment in the onCreate() method, find the “order by” Preference object according to its key. Then call the bindPreferenceSummaryToValue() helper method on this Preference object, which will set this fragment as the OnPreferenceChangeListener and update the summary so that it displays the current value stored in SharedPreferences:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <pre><code class="java language-java">@Override
+public void onCreate(Bundle savedInstanceState) {
+     ...
+     Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
+     bindPreferenceSummaryToValue(orderBy);
+     ...
+}</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Currently the onPreferenceChange() method in EarthquakePreferenceFragment just takes in the preference value, converts it to a String, and displays that value in the summary UI:</p>
+<pre><code class="java language-java">     @Override
+     public boolean onPreferenceChange(Preference preference, Object value) {
+         String stringValue = value.toString();
+         preference.setSummary(stringValue);
+    return true;
+     }</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We’ll need to update the onPreferenceChange() method in EarthquakePreferenceFragmet to properly update the summary of a ListPreference (using the label, instead of the key):</p>
+<p>In SettingsActivity.java, in EarthquakePreferenceFragment class:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.19.47-pm.png" alt="Code to be added in EarthquakePreferenceFragment class" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Code to be added in EarthquakePreferenceFragment class</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>And we're done with a simple settings activity! </p>
+<p>When you run the app, go to settings, and modify the sort order based on magnitude or time, and see how the list of earthquakes changes!</p>
+<p>Take a look at this repo to see the changes: <a href="https://github.com/udacity/ud843-QuakeReport/commit/05190298d7e6a7de21e3beb8f940e133fea67b4c" rel="noopener noreferrer" target="_blank">https://github.com/udacity/ud843-QuakeReport/commit/05190298d7e6a7de21e3beb8f940e133fea67b4c</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('09. Order by Preference')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

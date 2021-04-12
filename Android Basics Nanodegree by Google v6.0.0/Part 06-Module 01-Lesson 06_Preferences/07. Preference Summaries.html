@@ -1,0 +1,324 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Preference Summaries</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">07. Preference Summaries</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/tree/9a2cbee7b87cc49449b75610192554199d532918" rel="noopener noreferrer" target="_blank">Code at Beginning of Section</a></p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/commit/daaccdfea0fffa772a54c67d177596bc7976dd64" rel="noopener noreferrer" target="_blank">Changes in this Section</a></p>
+<hr />
+<p>Currently this is what the Settings screen looks like:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.00.55-pm.png" alt="Current state of Settings Activity with one Preference the user can modify - Minimum Magnitude" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Current state of Settings Activity with one Preference the user can modify - Minimum Magnitude</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>It's not a great experience for our user that they have to click on the Minimum Magnitude preference in order find out what its current setting is. It'd be much nicer if, when we opened our Setting Activity, we could see the value of our preference right below the preference name, and when we change it, we see the summary update immediately. </p>
+<p>In this section, we’ll update our Settings UI to look like this:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.01.22-pm.png" alt="We will update the Settings UI to display the chosen preference value" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We will update the Settings UI to display the chosen preference value</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>It's often useful for a component to be notified immediately when a preference is changed, especially when that preference change should have some visible impact.</p>
+<h1 id="event-listeners---onpreferencechangelistener-interface">Event Listeners - OnPreferenceChangeListener Interface</h1>
+<p>To do this, we’ll need to recall the concept of Event Listeners. Remember in the Multi-Screens Course, we saw how the <code>OnClickListener</code> is used to listen for when a specific View is Clicked on and then perform a specific action. If you need a refresher, checkout this <a href="https://classroom.udacity.com/nanodegrees/nd803/parts/e575c209-3295-4e3f-9b39-d9b4c851ac57/modules/97e3bf88-4d11-4053-9a49-8ff8df3f33ff/lessons/7633778648/concepts/75563355000923?contentVersion=1.0.0&contentLocale=en-us" rel="noopener noreferrer" target="_blank">video</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.02.10-pm.png" alt="Previously, we learned how the &#x60;OnClickListener&#x60; is used to listen for when a specific View is Clicked on and then perform a specific action" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Previously, we learned how the <code>OnClickListener</code> is used to listen for when a specific View is Clicked on and then perform a specific action</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Similarly, we’ll there’s an interface called <code>OnPreferenceChangeListener</code> that we can use to notify us when a shared preference has changed. Here’s a review of <a href="https://classroom.udacity.com/nanodegrees/nd803/parts/e575c209-3295-4e3f-9b39-d9b4c851ac57/modules/97e3bf88-4d11-4053-9a49-8ff8df3f33ff/lessons/7633778648/concepts/75563355030923" rel="noopener noreferrer" target="_blank">Interfaces</a>.</p>
+<p>Can you guess how this works?</p>
+<p>Say our user modifies the preference. In this case, changes the Minimum Magnitude from 5 to 10. We want a way to be notified when this happens so we can do some action, like update the Preference Summary field to display that the value has been updated to 10. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.03.28-pm.png" alt="We want a way to be notified when the Preference Summary field is updated" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We want a way to be notified when the Preference Summary field is updated</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We can use a Listener which will “listen” for when then change we’re interested in happens: </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.04.05-pm.png" alt="We can use a &quot;Listener&quot; to tell when the user has changed a preference" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We can use a "Listener" to tell when the user has changed a preference</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>This Listener comes in the form of an <code>OnPreferenceChangeListener</code> interface:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Remember that interfaces are like templates and require us to fill in the methods. From the documentation for the <a href="https://developer.android.com/reference/android/preference/Preference.OnPreferenceChangeListener.html" rel="noopener noreferrer" target="_blank">OnPreferenceChangeListener interface</a>, we see it has one method we’re required to fill in, <code>onPreferenceChanged</code>:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-11.04.58-pm.png" alt="In the  OnPreferenceChangeListener interface, we see it has one method we’re required to fill in, onPreferenceChanged " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>In the  OnPreferenceChangeListener interface, we see it has one method we’re required to fill in, onPreferenceChanged </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this method, we’ll update the preference summary that a preference has changed. We can setup the TextView to update to the new value the user has set the shared preference to. In the next section, we’ll see how to implement the <code>OnPreferenceChangeListener</code> in code.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="08.   Implement Preference Summaries .html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('07. Preference Summaries')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

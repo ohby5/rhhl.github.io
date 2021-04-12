@@ -1,0 +1,292 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Min Magnitude Preference</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">05. Min Magnitude Preference</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p><a href="https://github.com/udacity/ud843-QuakeReport/tree/65a82f3b9b7252f2e4a86f8d353719bae0178f41" rel="noopener noreferrer" target="_blank">Code at Beginning of Section</a></p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/commit/efccfedb00a031d6582bdc7c873fff51ab3d909d" rel="noopener noreferrer" target="_blank">Changes in this Section</a></p>
+<hr />
+<p>Now that we've got our SettingsActivity up and running, let's add a preference we can edit! Until now we've hardcoded that we're only interested in earthquakes that have a magnitude greater than 5.0. That seems a little arbitrary, so let's make it a preference that the user can set in the SettingsActivity!</p>
+<h3 id="step-1-add-strings-to-be-used-for-the-preference-labels">Step 1: Add Strings to be used for the Preference Labels</h3>
+<p>First, let's add a few more strings to <code>strings.xml</code> - the name of the preference.</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/res/values/strings.xml" rel="noopener noreferrer" target="_blank">Full strings.xml file</a></p>
+<pre><code class="xml language-xml">    &lt;string name="settings_min_magnitude_label"&gt;Minimum Magnitude&lt;/string&gt;
+    &lt;string name="settings_min_magnitude_key" translatable="false"&gt;min_magnitude&lt;/string&gt;
+    &lt;string name="settings_min_magnitude_default" translatable="false"&gt;0&lt;/string&gt;</code></pre>
+<h3 id="step-2-set-type-of-preference-editing-widget">Step 2: Set Type of Preference Editing Widget</h3>
+<p>For each preference, you can decide what type of widget the user can use to make their selection.</p>
+<p><em>Here are some potential options</em></p>
+<p>(A) A list of options</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-10.22.57-pm.png" alt="Some preferences present users with a list of options" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Some preferences present users with a list of options</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>(B) An EditText field</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-10.24.48-pm.png" alt="Some preferences allow the user to insert values in the EditText field" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Some preferences allow the user to insert values in the EditText field</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For our Minimum Magnitude preference, we’ll use an EditText field.</p>
+<p>Create <code>res/xml/settings_main.xml</code> with the following contents:</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/res/xml/settings_main.xml" rel="noopener noreferrer" target="_blank">Full settings_main.xml file</a></p>
+<pre><code class="xml language-xml">    &lt;PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/settings_title"&gt;
+
+        &lt;EditTextPreference
+            android:defaultValue="@string/settings_min_magnitude_default"
+            android:inputType="numberDecimal"
+            android:key="@string/settings_min_magnitude_key"
+            android:selectAllOnFocus="true"
+            android:title="@string/settings_min_magnitude_label" /&gt;
+
+    &lt;/PreferenceScreen&gt;</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-3-override-oncreate-of-earthquakepreferencefragment">Step 3: Override onCreate of EarthquakePreferenceFragment</h3>
+<p>Finally we just have to override the <code>onCreate()</code> method of <code>EarthquakePreferenceFragment</code> (which is in <code>SettingsActivity.java</code>):</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/efccfedb00a031d6582bdc7c873fff51ab3d909d/app/src/main/java/com/example/android/quakereport/SettingsActivity.java" rel="noopener noreferrer" target="_blank">Full SettingsActivity.java</a></p>
+<pre><code class="java language-java">    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.settings_main);
+    }</code></pre>
+<h2 id="summary">Summary</h2>
+<p>With those 3 steps, we setup a preference in our SettingsActivity the user can edit!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-10.26.19-pm.png" alt="We just implemented a preference in the SettingsActivity that users can modify" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>We just implemented a preference in the SettingsActivity that users can modify</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For a summary of all the code changes in this section, check out <a href="https://github.com/udacity/ud843-QuakeReport/commit/d27e7f65ce03d8305f71b5bd11dfef6b593e0d0a" rel="noopener noreferrer" target="_blank">https://github.com/udacity/ud843-QuakeReport/commit/d27e7f65ce03d8305f71b5bd11dfef6b593e0d0a</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="06. URL Building.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('05. Min Magnitude Preference')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

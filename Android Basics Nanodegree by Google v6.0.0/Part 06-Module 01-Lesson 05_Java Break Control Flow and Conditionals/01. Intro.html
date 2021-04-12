@@ -1,0 +1,306 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Break: Control Flow and Conditionals</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Introducing Control Flow.html">02. Introducing Control Flow</a>
+    </li>
+    <li class="">
+      <a href="03. Decision Making.html">03. Decision Making</a>
+    </li>
+    <li class="">
+      <a href="04. if Statement.html">04. if Statement</a>
+    </li>
+    <li class="">
+      <a href="05. Self-Driving Car.html">05. Self-Driving Car</a>
+    </li>
+    <li class="">
+      <a href="06. Recognize Traffic Lights.html">06. Recognize Traffic Lights</a>
+    </li>
+    <li class="">
+      <a href="07. Windshield Wipers.html">07. Windshield Wipers</a>
+    </li>
+    <li class="">
+      <a href="08. Variable Scope.html">08. Variable Scope</a>
+    </li>
+    <li class="">
+      <a href="09. What&#x27;s the Scope.html">09. What&#x27;s the Scope?</a>
+    </li>
+    <li class="">
+      <a href="10. else Statement.html">10. else Statement</a>
+    </li>
+    <li class="">
+      <a href="11. else-if.html">11. else-if</a>
+    </li>
+    <li class="">
+      <a href="12. Multiple else-if&#x27;s.html">12. Multiple else-if&#x27;s</a>
+    </li>
+    <li class="">
+      <a href="13. Boolean Expressions.html">13. Boolean Expressions</a>
+    </li>
+    <li class="">
+      <a href="14. Evaluate these Expressions.html">14. Evaluate these Expressions</a>
+    </li>
+    <li class="">
+      <a href="15. The Art Museum.html">15. The Art Museum</a>
+    </li>
+    <li class="">
+      <a href="16. Tickets to the Museum.html">16. Tickets to the Museum</a>
+    </li>
+    <li class="">
+      <a href="17. Complete Museum Code.html">17. Complete Museum Code</a>
+    </li>
+    <li class="">
+      <a href="18. Logical Operators.html">18. Logical Operators</a>
+    </li>
+    <li class="">
+      <a href="19. Order of Operations for Logical Operators.html">19. Order of Operations for Logical Operators</a>
+    </li>
+    <li class="">
+      <a href="20. Logical Operators Practice.html">20. Logical Operators Practice</a>
+    </li>
+    <li class="">
+      <a href="21. true or false.html">21. true or false?</a>
+    </li>
+    <li class="">
+      <a href="22. Nested if Statements.html">22. Nested if Statements</a>
+    </li>
+    <li class="">
+      <a href="23. Restaurant Rating.html">23. Restaurant Rating</a>
+    </li>
+    <li class="">
+      <a href="24. switch Statement.html">24. switch Statement</a>
+    </li>
+    <li class="">
+      <a href="25. switch(month).html">25. switch(month)</a>
+    </li>
+    <li class="">
+      <a href="26. Conclusion.html">26. Conclusion</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">01. Intro</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="java-break-control-flow-and-conditionals">Java Break: Control Flow and Conditionals</h1>
+<p>Welcome back to another exciting episode of Java Break! In this segment, we'll cover the topics of <em>Control Flow</em> and <em>Conditionals</em>.</p>
+<p>You first encounter one type of Control Flow in the first course - the <code>if/else</code> statement.</p>
+<pre><code class="java language-java">if (condition)
+     // Code to be executed
+else
+     // Code to be executed</code></pre>
+<p>Later, <a href="https://classroom.udacity.com/nanodegrees/nd803/parts/54293ab0-253b-410d-be3d-6662cc3fd071/modules/ef9aab21-f124-4354-9aee-581db628214e/lessons/1335cf7d-bb4f-48c6-8503-f14b127d2abc/concepts/feb082f7-3824-4a31-8d7b-cd1f70d94588?contentVersion=3.0.0&contentLocale=en-us" rel="noopener noreferrer" target="_blank">Chris showed you</a> how to use the <code>switch statement</code> to display the correct color value based on the current earthquake's magnitude.</p>
+<pre><code class="java language-java">switch (magnitudeFloor) {
+        case 0:
+        case 1:
+            magnitudeColorResourceId = R.color.magnitude1;
+            break;
+        case 2:
+            magnitudeColorResourceId = R.color.magnitude2;
+            break;
+...</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-10-08-at-3.36.43-pm.png" alt="Chris showed you how to use switch statements to display correct color value based on the current earthquake’s magnitude." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Chris showed you how to use switch statements to display correct color value based on the current earthquake’s magnitude.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Control Flow and Conditionals are powerful Java concepts implemented in scenarios from helping self-driving cars make decisions  to purchasing tickets at your favorite art museum.</p>
+<p>Let's follow Cezanne and Asser to explore these concepts further!</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-10-08-at-3.06.38-pm.png" alt="Java Break time! Let&#x27;s see some cool use cases and practice control flow and conditionals. " class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Java Break time! Let's see some cool use cases and practice control flow and conditionals. </p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/mario-ibrahimi-324275.jpg" alt="Should it read &quot;Java makes you happy&quot; instead :) ?
+
+Photo by [Mario Ibrahimi](https://unsplash.com/photos/2RrAct0Rf8E?utm_source&#x3D;unsplash&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;creditCopyText) on [Unsplash](https://unsplash.com)" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Should it read "Java makes you happy" instead :) ?</p>
+<p>Photo by <a href="https://unsplash.com/photos/2RrAct0Rf8E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="noopener noreferrer" target="_blank">Mario Ibrahimi</a> on <a href="https://unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="02. Introducing Control Flow.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('01. Intro')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

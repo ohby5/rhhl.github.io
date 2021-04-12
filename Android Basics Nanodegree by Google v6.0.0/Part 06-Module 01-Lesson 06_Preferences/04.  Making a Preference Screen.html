@@ -1,0 +1,458 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Making a Preference Screen</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Preferences</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro to Preferences.html">01. Intro to Preferences</a>
+    </li>
+    <li class="">
+      <a href="02. Intro to Preferences (Continued).html">02. Intro to Preferences (Continued)</a>
+    </li>
+    <li class="">
+      <a href="03. Fragments.html">03. Fragments</a>
+    </li>
+    <li class="">
+      <a href="04.  Making a Preference Screen.html">04.  Making a Preference Screen</a>
+    </li>
+    <li class="">
+      <a href="05. Min Magnitude Preference.html">05. Min Magnitude Preference</a>
+    </li>
+    <li class="">
+      <a href="06. URL Building.html">06. URL Building</a>
+    </li>
+    <li class="">
+      <a href="07. Preference Summaries.html">07. Preference Summaries</a>
+    </li>
+    <li class="">
+      <a href="08.   Implement Preference Summaries .html">08.   Implement Preference Summaries </a>
+    </li>
+    <li class="">
+      <a href="09. Order by Preference.html">09. Order by Preference</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04.  Making a Preference Screen</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="making-a-preference-screen">Making a Preference Screen</h1>
+<p>To allow our users to set their user preferences, we’ll create a Settings screen. We’ll add a button to the top right corner of  EarthquakeActivity that will launch the Settings Activity. This button that lives in the app bar is generally referred to as a Menu or Options Menu button. </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.27.44-pm.png" alt="By the end of this section, clicking the Menu button will open an empty SettingsActivity" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>By the end of this section, clicking the Menu button will open an empty SettingsActivity</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>We will be building this UI out in parts. In this section, we'll build a blank SettingsActivity and then put the Menu in the app bar of the EarthquakeActivity . We will also specify that the menu should open the SettingsActivity</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="lesson-structure">Lesson Structure</h2>
+<p>We will be building out the preference in stages throughout this lesson. Since this is a Text-based lesson, each section will start with a link to the state of the code at the beginning of the section and a link of diff-ed code at the end of the section.</p>
+<p>It’s highly recommended that you have the diff-ed code open as you work through the section since each section contains changes within several files.</p>
+<h3 id="quakereport-code">QuakeReport Code</h3>
+<p>Here’s the <a href="https://github.com/udacity/ud843-QuakeReport/tree/66f5903bf20a3fbb072c3692979403e7f4009bda" rel="noopener noreferrer" target="_blank">Current Code for QuakeReport</a> at the end of the Lesson 3, the previous lesson.</p>
+<p>Remember you can always see the incremental code changes we make in the <a href="https://github.com/udacity/ud843-QuakeReport/commits/lesson-four" rel="noopener noreferrer" target="_blank">GitHub Repo Code Commits</a>. </p>
+<h2 id="settingsactivity">SettingsActivity</h2>
+<p>Let’s start with building our blank SettingsActivity: </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.21.14-pm.png" alt="Blank Settings Activity" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Blank Settings Activity</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-1-add-strings-to-stringsxml">Step 1: Add Strings to <code>strings.xml</code></h3>
+<p>First order of business, let's add some strings to <code>strings.xml</code> that we’ll be using in for this activity.</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/values/strings.xml" rel="noopener noreferrer" target="_blank">Full strings.xml here</a></p>
+<pre><code class="xml language-xml">    &lt;string name="settings_menu_item"&gt;Settings&lt;/string&gt;
+    &lt;string name="settings_title"&gt;Earthquake Settings&lt;/string&gt;</code></pre>
+<h3 id="step-2-create-the-settingsactivity">Step 2: Create the <code>SettingsActivity</code></h3>
+<p>We’ll need to create the new activity and call it <code>SettingsActivity.java</code>. Remember that in the Fragments concept earlier, we discussed that we will use a PreferenceFragment inside our SettingsActivity like this: </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.21.48-pm.png" alt="Diagram of PreferenceFragment that will be used in the SettingsActivity" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Diagram of PreferenceFragment that will be used in the SettingsActivity</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Given that, here’s the starter code you’ll need in the SettingsActivity. Inside the SettingsActivity file, we will create a EarthquakePreferenceFragment that extends PreferenceFragment, and we will keep it blank for now. </p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/java/com/example/android/quakereport/SettingsActivity.java" rel="noopener noreferrer" target="_blank">Full SettingsActivity.java here</a></p>
+<pre><code class="java language-java">    package com.example.android.quakereport;
+
+    import android.os.Bundle;
+    import android.preference.PreferenceFragment;
+    import android.support.v7.app.AppCompatActivity;
+
+    public class SettingsActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.settings_activity);
+        }
+
+        public static class EarthquakePreferenceFragment extends PreferenceFragment {
+
+        }
+    }</code></pre>
+<p>And we'll define fragment layout for the settings activity. Create a new <code>settings_activity.xml</code> in <code>res/layout/settings_activity.xml</code>.</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/layout/settings_activity.xml" rel="noopener noreferrer" target="_blank">Full settings_activity.xml here</a></p>
+<pre><code class="xml language-xml">    &lt;fragment
+        android:name="com.example.android.quakereport.SettingsActivity$EarthquakePreferenceFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.quakereport.SettingsActivity"&gt;
+    &lt;/fragment&gt;</code></pre>
+<p>And lastly, we'll need to declare our new Settings Activity in <code>AndroidManifest.xml</code> inside the <code>&lt;application&gt;</code> tag. It’s parent activity will be EarthquakeActivity because later we will set Settings to open from the Earthquake Activity.</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/AndroidManifest.xml" rel="noopener noreferrer" target="_blank">Full AndroidManifest here</a></p>
+<pre><code>&lt;activity
+    android:name=".SettingsActivity"
+    android:label="@string/settings_title"
+    android:screenOrientation="portrait"&gt;
+    &lt;meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.example.android.quakereport.EarthquakeActivity"/&gt;
+&lt;/activity&gt;</code></pre>
+<h2 id="menu">Menu</h2>
+<p>It would really clutter up our EarthquakeActivity if we put a big button that said SETTINGS above or below our list of earthquakes like this:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.23.02-pm.png" alt="Let&#x27;s figure out a better UI than using a big SETTINGS button" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Let's figure out a better UI than using a big SETTINGS button</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>A much better place for this button is inside the tool bar at the top of the app. And instead of the text SETTINGS, we’ll use the hamburger icon (named this because it's 3 stacks like 2 buns and patty):</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.23.31-pm.png" alt="A commonly used icon for settings is a hamburger icon" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>A commonly used icon for settings is a hamburger icon</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h3 id="step-3-setup-the-menu-xml-file">Step 3: Setup the Menu xml file</h3>
+<p>Android activities can inflate a menu resource file, and display the menu in the app bar. To do so, in <code>res/menu/</code>, create a new xml file and name it <code>main.xml</code>. Here we created a menu item whose id is action_settings because this menu will open up the actions we can take in the SettingsActivity. </p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/res/menu/main.xml" rel="noopener noreferrer" target="_blank">Full main.xml file</a></p>
+<pre><code class="xml language-xml">    &lt;menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.android.quakereport.EarthquakeActivity"&gt;
+        &lt;item
+            android:id="@+id/action_settings"
+            android:title="@string/settings_menu_item" /&gt;
+    &lt;/menu&gt;</code></pre>
+<h3 id="step-4-setup-the-menu-item-in-the-earthquakeactivity">Step 4: Setup the Menu item in the EarthquakeActivity</h3>
+<p>With the xml setup, we’ll need to override a couple of methods in <code>EarthquakeActivity.java</code> in order to inflate the menu, and respond when users click on our menu item. </p>
+<p>The first method is <a href="https://developer.android.com/reference/android/app/Activity.html#onCreateOptionsMenu(android.view.Menu" rel="noopener noreferrer" target="_blank">onCreateOptionsMenu</a>. Similar to how onCreate() helps us inflate our Activity, <code>onCreateOptionsMenu()</code> inflates the Options Menu we specified in the XML when the EarthquakeActivity opens up. </p>
+<pre><code class="java language-java">    @Override
+    // This method initialize the contents of the Activity's options menu.
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the Options Menu we specified in XML 
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }</code></pre>
+<p>The second method is <a href="https://developer.android.com/reference/android/app/Activity.html#onOptionsItemSelected(android.view.MenuItem" rel="noopener noreferrer" target="_blank">onOptionsItemSelected</a>. This method is where we can setup the specific action that occurs when any of the items in the Options Menu are selected. </p>
+<p>Let’s break this code down:</p>
+<pre><code class="java language-java">    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }</code></pre>
+<p>(A) This method passes the MenuItem that is selected:</p>
+<pre><code class="java language-java">    public boolean onOptionsItemSelected(MenuItem item)</code></pre>
+<p>(B) An Options Menu may have one or more items. For example:</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-08-10-at-5.25.29-pm.png" alt="An options drop-down menu may have more than one item" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>An options drop-down menu may have more than one item</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>To determine which item was selected and what action to take, call <a href="" rel="noopener noreferrer" target="_blank">getItemId</a>, which returns the unique ID for the menu item (defined by the android:id attribute in the menu resource). </p>
+<pre><code class="java language-java">int id = item.getItemId();</code></pre>
+<p>In our case, our menu only has one item (which we setup in Step #3 above) and it’s <code>android:id="@+id/action_settings"</code>.</p>
+<p>(3) You then match the ID against known menu items to perform the appropriate action. In our case, we open the SettingsActivity via an intent.</p>
+<pre><code class="java language-java">        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }</code></pre>
+<p>We’ll add the <code>onCreateOptionsMenu</code> and <code>onOptionsItemSelected</code> at the end of the <code>EarthquakeActivity.java</code> file:</p>
+<p><a href="https://github.com/udacity/ud843-QuakeReport/blob/65a82f3b9b7252f2e4a86f8d353719bae0178f41/app/src/main/java/com/example/android/quakereport/EarthquakeActivity.java" rel="noopener noreferrer" target="_blank">Full EarthquakeActivity.java here</a></p>
+<pre><code class="java language-java">    @Override
+    // This method initialize the contents of the Activity's options menu
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    // This method is called whenever an item in the options menu is selected. 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);</code></pre>
+<h2 id="summary">Summary</h2>
+<p>Now we've got a menu with a "Settings" item that opens our (blank for now) SettingsActivity!</p>
+<p>To recap what we’ve implemented:</p>
+<p>(1) Build a blank SettingsActivity. </p>
+<ul>
+<li>Step 1: Add Strings to <code>strings.xml</code></li>
+<li>Step 2: Create the <code>SettingsActivity</code><ul>
+<li>Create java file</li>
+<li>Create xml file</li>
+<li>Add in Android Manifest</li></ul></li>
+</ul>
+<p>(2) Add Menu in the app bar of the EarthquakeActivity</p>
+<ul>
+<li>Step 3: Setup the Menu xml file</li>
+<li>Step 4: Setup the Menu item in the EarthquakeActivity<ul>
+<li>Add onCreateOptionsMenu to put Options Menu in app bar</li>
+<li>Add onOptionsItemSelected method that specifies to open the SettingsActivity when the user selects the Options Menu </li></ul></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For more information on menus, check the Android Developer Guide in <a href="http://developer.android.com/guide/topics/ui/menus.html" rel="noopener noreferrer" target="_blank">http://developer.android.com/guide/topics/ui/menus.html</a></p>
+<p>If you want to see a summary with these changes, go to <a href="https://github.com/udacity/ud843-QuakeReport/commit/c24e4a9d3226d4aec8c847d454a7eab23872d721" rel="noopener noreferrer" target="_blank">https://github.com/udacity/ud843-QuakeReport/commit/c24e4a9d3226d4aec8c847d454a7eab23872d721</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Min Magnitude Preference.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04.  Making a Preference Screen')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:03.955
+So here we have our skeleton code for the PokemonApp.
+
+00:00:03.955 --> 00:00:08.355
+If we go into app, source, main,
+
+00:00:08.355 --> 00:00:11.000
+java, we have two Java files.
+
+00:00:11.000 --> 00:00:14.235
+MainActivity and HttpHandler.
+
+00:00:14.235 --> 00:00:17.345
+Let's look at the MainActivity file first.
+
+00:00:17.345 --> 00:00:19.260
+The first thing to notice is that you'll see
+
+00:00:19.260 --> 00:00:22.050
+a few red lines in the code, but don't worry.
+
+00:00:22.050 --> 00:00:25.615
+As soon as you finish this practice set those lines should go away.
+
+00:00:25.615 --> 00:00:30.585
+We see that there is a GetPokemon class with a doInBackground at it.
+
+00:00:30.585 --> 00:00:38.595
+We have an HttpHandler and a string url with this link. Let's click on it.
+
+00:00:38.595 --> 00:00:41.734
+So, here we have the JSON data for each Pokemon,
+
+00:00:41.734 --> 00:00:46.290
+and each Pokemon will have its respective unique attributes.
+
+00:00:46.290 --> 00:00:49.975
+So for example, it will have an integer attribute called id,
+
+00:00:49.975 --> 00:00:54.660
+a string attribute called num and a couple other attributes.
+
+00:00:54.660 --> 00:00:59.430
+There is also an attribute type with an array that holds several strings.
+
+00:00:59.430 --> 00:01:04.665
+The thing to notice here is that each Pokemon will have a different set of attributes.
+
+00:01:04.665 --> 00:01:08.065
+And we'll be using its attributes to display in our app.
+
+00:01:08.065 --> 00:01:10.465
+Going back to the MainActivity.
+
+00:01:10.465 --> 00:01:14.760
+Let's keep going. There are several TODO tasks for you to do.
+
+00:01:14.760 --> 00:01:20.220
+So just make a request to the URL and create a new JSONObject.
+
+00:01:20.220 --> 00:01:24.285
+There's also a for loop that will go through all the Pokemons
+
+00:01:24.285 --> 00:01:29.490
+and put them in a list that we'll be using to display over here.
+
+00:01:29.490 --> 00:01:34.355
+Next, let's look at our HttpHandler file.
+
+00:01:34.355 --> 00:01:41.265
+Here, there is a method called makeHttpRequest and we will pass in the URL.
+
+00:01:41.265 --> 00:01:46.970
+Here is where we make the request to make a connection with the URL.
+
+00:01:46.970 --> 00:01:50.570
+Next, let's look in the res file and layout.
+
+00:01:50.570 --> 00:01:52.380
+These files are provided for you,
+
+00:01:52.380 --> 00:01:56.725
+so you don't have to worry about how to display each Pokemon.
+
+00:01:56.725 --> 00:02:00.715
+This is a simple list format that will display each Pokemon.
+
+00:02:00.715 --> 00:02:04.490
+And this is what each list item will have.
+
+00:02:04.490 --> 00:02:07.150
+There is a box for a name,
+
+00:02:07.150 --> 00:02:11.055
+an id and a candy.
+
+00:02:11.055 --> 00:02:17.820
+These files will organize the information you're parsing into a simple list format.
+
+00:02:17.820 --> 00:02:19.140
+So in the next few sections,
+
+00:02:19.140 --> 00:02:21.840
+we'll be fill in these blanks to
+
+00:02:21.840 --> 00:02:24.780
+list out all of the Pokemons with three of their attributes.
+
+00:02:24.780 --> 00:02:28.860
+Their name, their id and their candy.
+
+00:02:28.860 --> 00:02:31.180
+This is what the final product should look like.
+
+00:02:31.180 --> 00:02:36.340
+You will see that the name is at the top. So, Bulbasaur.
+
+00:02:36.340 --> 00:02:39.668
+This is their id and this is their candy.
+
+00:02:39.668 --> 00:02:41.050
+And if I scroll down,
+
+00:02:41.050 --> 00:02:44.790
+you'll find that each Pokemon will have different attributes.
+
+00:02:44.790 --> 00:02:46.110
+So, let's get started.
+

@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.000
+Temos aqui nosso código esqueleto
+para o Pokemon app.
+
+00:00:04.033 --> 00:00:09.501
+Vamos até app, source,
+main, Java.
+
+00:00:09.534 --> 00:00:14.133
+Temos dois arquivos Java:
+MainActivity e HttpHandler.
+
+00:00:14.167 --> 00:00:17.367
+Vejamos primeiro
+o arquivo MainActivity.
+
+00:00:17.400 --> 00:00:21.200
+Primeiro note que o código
+tem algumas linhas vermelhas.
+
+00:00:21.234 --> 00:00:25.601
+Mas não se preocupem, ao terminarem
+o exercício, eles desaparecerão.
+
+00:00:25.634 --> 00:00:28.234
+Vemos que há
+uma classe GetPokemon
+
+00:00:28.267 --> 00:00:30.834
+com um método doInBackground.
+
+00:00:30.868 --> 00:00:33.868
+Temos um HttpHandler
+
+00:00:33.901 --> 00:00:36.701
+e uma String url
+com este link.
+
+00:00:36.734 --> 00:00:38.734
+Vamos clicar nele.
+
+00:00:38.767 --> 00:00:41.734
+Aqui temos os dados JSON
+para cada Pokemon,
+
+00:00:41.767 --> 00:00:46.200
+e cada um terá seus
+respectivos atributos únicos.
+
+00:00:46.234 --> 00:00:50.534
+Por exemplo, terá um atributo int
+chamado id,
+
+00:00:50.567 --> 00:00:54.601
+um atributo string, chamado num,
+e alguns outros atributos.
+
+00:00:54.634 --> 00:00:57.634
+Também há um atributo type
+com um vetor
+
+00:00:57.667 --> 00:00:59.667
+que armazena
+várias strings.
+
+00:00:59.701 --> 00:01:04.601
+Note que cada Pokemon terá
+um conjunto diferente de atributos.
+
+00:01:04.634 --> 00:01:08.434
+Nós os usaremos
+para mostrar em nosso app.
+
+00:01:08.467 --> 00:01:11.968
+Voltando à MainActivity,
+vamos continuar.
+
+00:01:12.000 --> 00:01:15.067
+Há várias tarefas a fazer,
+
+00:01:15.100 --> 00:01:17.968
+como fazer um pedido à URL,
+
+00:01:18.000 --> 00:01:20.167
+e criar novo objeto JSON.
+
+00:01:20.200 --> 00:01:24.467
+Também há um laço for
+que percorrerá todos os Pokemons
+
+00:01:24.501 --> 00:01:29.801
+e os colocará numa lista
+que usaremos para mostrar aqui.
+
+00:01:29.834 --> 00:01:34.701
+Em seguida, vejamos o arquivo
+HttpHandler.
+
+00:01:34.734 --> 00:01:38.701
+Aqui, temos
+o método makeHttpRequest
+
+00:01:38.734 --> 00:01:41.367
+e passaremos uma URL.
+
+00:01:41.400 --> 00:01:46.934
+Aqui é onde fazemos o pedido
+para fazer uma conexão com a URL.
+
+00:01:46.968 --> 00:01:50.033
+Depois olhamos
+o arquivo res, em layout.
+
+00:01:50.067 --> 00:01:53.801
+Estes arquivos são fornecidos
+para que você não se preocupe
+
+00:01:53.834 --> 00:01:56.534
+com como mostrar
+cada Pokemon.
+
+00:01:56.567 --> 00:02:00.734
+Isto é um simples formato de lista
+que mostrará cada Pokemon,
+
+00:02:00.767 --> 00:02:04.534
+e isto é
+o que cada item da lista terá.
+
+00:02:04.567 --> 00:02:08.868
+Tem uma caixa para um nome,
+uma identidade
+
+00:02:08.901 --> 00:02:10.767
+e um doce.
+
+00:02:10.801 --> 00:02:14.133
+As informações que estão analisando
+serão organizadas
+
+00:02:14.167 --> 00:02:16.534
+em um simples
+formato de lista.
+
+00:02:17.767 --> 00:02:21.534
+Nas próximas seções,
+preencheremos essas lacunas
+
+00:02:21.567 --> 00:02:24.968
+para listar todos os Pokemons
+com 3 de seus atributos:
+
+00:02:25.000 --> 00:02:28.667
+nome, identidade e doce.
+
+00:02:28.701 --> 00:02:31.701
+O produto final
+ficará assim.
+
+00:02:31.734 --> 00:02:36.534
+Verão que o nome está em cima,
+Bulbasaur.
+
+00:02:36.567 --> 00:02:39.801
+Aqui, a identidade,
+e aqui, o doce.
+
+00:02:39.834 --> 00:02:44.501
+Se eu descer, verá que cada um
+terá atributos diferentes.
+
+00:02:44.534 --> 00:02:46.200
+Vamos começar.
+
