@@ -1,0 +1,355 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.460 --> 00:00:03.030
+Satu hal yang akan Anda perhatikan
+adalah bahwa untuk menggunakan
+
+00:00:03.030 --> 00:00:07.880
+variabel imageResourceID baru yang kita
+tambahkan, harus memodifikasi constructor
+
+00:00:07.880 --> 00:00:10.820
+sehingga bidang baru ini dapat diinisialisasi
+pada nilai yang spesifik.
+
+00:00:12.570 --> 00:00:17.310
+Ingat bahwa inisialisasi berarti mengatur
+nilai variabel terlebih dahulu, sehingga
+
+00:00:17.310 --> 00:00:22.208
+mirip dengan apa yang kita lakukan untuk
+menginisialisasi variabel mDefaultTranslation
+
+00:00:22.208 --> 00:00:24.435
+mMiwokTranslation.
+
+00:00:24.435 --> 00:00:27.225
+Dan ingat juga bahwa constructor
+digunakan untuk membuat
+
+00:00:27.225 --> 00:00:30.535
+contoh objek dari
+definisi kelas.
+
+00:00:30.535 --> 00:00:32.674
+Hmm, bagaimana cara melakukannya?
+
+00:00:32.674 --> 00:00:36.270
+Apakah kita harus memodifikasi constructor
+yang ada atau hanya menambahkan
+
+00:00:36.270 --> 00:00:40.220
+yang baru sehingga kita memiliki dua
+constructor untuk input yang berbeda?
+
+00:00:40.220 --> 00:00:43.900
+Cara yang baik untuk memutuskan hal ini
+adalah mengingat kode Java lain dalam
+
+00:00:43.900 --> 00:00:46.940
+aplikasi kita yang menggunakan
+kelas Word ini.
+
+00:00:46.940 --> 00:00:50.800
+Kita tahu bahwa tiga dari empat layar
+kategori memiliki gambar untuk
+
+00:00:50.800 --> 00:00:52.240
+tiap kosakata.
+
+00:00:52.240 --> 00:00:55.920
+Perkecualiannya adalah layar frasa,
+yang tidak punya gambar untuk
+
+00:00:55.920 --> 00:00:57.300
+tiap frasa.
+
+00:00:57.300 --> 00:01:00.750
+Karena ada layar frasa
+yang tidak menggunakan gambar apa pun,
+
+00:01:00.750 --> 00:01:04.885
+kita bisa membuatnya memakai constructor
+Word saat ini yang mengambil dua input,
+
+00:01:04.885 --> 00:01:07.480
+yaitu terjemahan Inggris dan Miwok.
+
+00:01:07.480 --> 00:01:12.370
+Lalu kita bisa membuat constructor lain
+yang mengambil tiga input,
+
+00:01:12.370 --> 00:01:16.010
+yaitu dua string dan
+satu imageResourceID, dan
+
+00:01:16.010 --> 00:01:20.050
+menggunakan constructor yang sama
+untuk ketiga activity yang lain.
+
+00:01:20.050 --> 00:01:23.860
+Jadi, bayangkan constructor yang berbeda
+sebagai cara untuk sampai
+
+00:01:23.860 --> 00:01:25.750
+di satu contoh objek.
+
+00:01:25.750 --> 00:01:28.560
+Satu-satunya kondisi adalah bahwa
+tiap constructor
+
+00:01:28.560 --> 00:01:31.660
+harus memiliki rangkaian parameter
+input yang berbeda.
+
+00:01:31.660 --> 00:01:35.510
+Misalnya, satu constructor
+dapat meminta dua input.
+
+00:01:35.510 --> 00:01:39.000
+Dan kita bisa memiliki constructor
+lain yang meminta tiga input,
+
+00:01:39.000 --> 00:01:42.090
+dengan dua string dan satu gambar.
+
+00:01:42.090 --> 00:01:44.490
+Perhatikan bahwa tipe data itu penting.
+
+00:01:44.490 --> 00:01:48.755
+Jika kita memiliki constructor ketiga yang
+juga memiliki tiga input tapi
+
+00:01:48.755 --> 00:01:52.315
+berisi dua integer dan
+satu gambar,
+
+00:01:52.315 --> 00:01:56.545
+constructor ini berbeda dari yang ini
+yang juga mengambil tiga input.
+
+00:01:57.625 --> 00:02:00.588
+Ingat saat kita melihat dokumentasi
+untuk ArrayAdapter?
+
+00:02:00.588 --> 00:02:04.115
+Di bagian public constructor, kita lihat
+bahwa ada beberapa constructor
+
+00:02:04.115 --> 00:02:07.324
+publik yang bisa kita panggil untuk
+membuat objek ArrayAdapter baru.
+
+00:02:08.370 --> 00:02:12.118
+Misalnya, kita bisa
+menggunakan constructor ini,
+
+00:02:12.118 --> 00:02:17.068
+memasukkan context, resourceLayoutID,
+dan array berisi objek.
+
+00:02:17.068 --> 00:02:21.509
+Di sisi lain, kita bisa menggunakan
+constructor ArrayAdapter yang mengambil
+
+00:02:21.509 --> 00:02:26.040
+context, resourceLayoutID,
+dan ArrayList berisi objek.
+
+00:02:26.040 --> 00:02:28.230
+Semua pilihan constructor ini
+akan berfungsi.
+
+00:02:28.230 --> 00:02:30.157
+Bergantung pada input apa yang kita miliki.
+
+00:02:30.157 --> 00:02:33.370
+Dan semua itu masih memungkinkan kita untuk
+membuat objek ArrayAdapter.
+
+00:02:34.650 --> 00:02:37.770
+Untuk membantu kita memahami
+constructor ganda,
+
+00:02:37.770 --> 00:02:40.240
+mari kita lihat cara
+mendeklarasikannya.
+
+00:02:40.240 --> 00:02:42.250
+Saya akan mencarinya secara online.
+
+00:02:42.250 --> 00:02:44.430
+Setelah mencari multiple constructors
+di Java,
+
+00:02:44.430 --> 00:02:48.870
+saya pikir saya akan memeriksa
+tutorial yang ketiga ini.
+
+00:02:48.870 --> 00:02:53.840
+Tutorial ini berisi bagian bernama
+Constructor Overloading, dan tampaknya
+
+00:02:53.840 --> 00:02:57.960
+sama dengan constructor ganda
+untuk satu kelas Java.
+
+00:02:57.960 --> 00:02:59.396
+Mari kita klik.
+
+00:02:59.396 --> 00:03:03.703
+Hm, saat melihat ini, tampaknya
+ini adalah contoh yang simpel, dan
+
+00:03:03.703 --> 00:03:07.500
+kita punya kelas bernama MyClass,
+dan ini punya dua constructor.
+
+00:03:08.750 --> 00:03:12.120
+Satu-satunya perbedaan antara
+kedua baris deklarasi untuk
+
+00:03:12.120 --> 00:03:14.050
+constructor ini adalah argumen
+apa yang diambilnya.
+
+00:03:15.268 --> 00:03:17.390
+Yang pertama tidak mengambil
+input apa pun, dan
+
+00:03:17.390 --> 00:03:20.675
+yang kedua mengambil integer
+bernama thisNumber.
+
+00:03:21.710 --> 00:03:26.350
+Contoh ini penting bagi kita karena,
+kita ingin satu constructor yang
+
+00:03:26.350 --> 00:03:30.460
+mengambil imageResourceID dan
+satu lagi yang tidak mengambilnya.
+
+00:03:30.460 --> 00:03:33.780
+Dalam contoh ini, tampaknya
+constructor kedua
+
+00:03:33.780 --> 00:03:36.510
+bisa memiliki perilaku yang
+berbeda dari yang pertama.
+
+00:03:36.510 --> 00:03:40.470
+Di sini, constructor menginisialisasi
+this.number agar sama dengan
+
+00:03:40.470 --> 00:03:42.820
+angka yang dimasukkan
+ke dalam constructor.
+
+00:03:42.820 --> 00:03:45.940
+Ternyata, proses ini cukup
+mirip dengan apa yang harus kita
+
+00:03:45.940 --> 00:03:48.670
+gunakan untuk menambahkan constructor
+ke kelas Word kita.
+
+00:03:48.670 --> 00:03:51.240
+Kita perlu menulis deklarasi
+constructor yang kedua
+
+00:03:51.240 --> 00:03:53.680
+yang mengambil input tambahan.
+
+00:03:53.680 --> 00:03:57.293
+Dan di dalam constructor kedua ini,
+ini akan melakukan semua pekerjaan yang sama
+
+00:03:57.293 --> 00:04:01.490
+dengan constructor awal, ditambah
+menginisialisasi variabel resourceID kita untuk
+
+00:04:01.490 --> 00:04:04.478
+integer yang dimasukkan ke dalam
+constructor yang baru.
+
+00:04:04.478 --> 00:04:06.620
+Baik, masuk ke latihan.
+
+00:04:06.620 --> 00:04:07.755
+Untuk tugas pertama,
+
+00:04:07.755 --> 00:04:11.200
+saya ingin Anda menambahkan constructor
+kedua ke kelas Word.
+
+00:04:11.200 --> 00:04:12.520
+Jika Anda ingat,
+
+00:04:12.520 --> 00:04:16.589
+kita menggunakan constructor Word untuk
+membuat ArrayList berisi kata-kata.
+
+00:04:16.589 --> 00:04:20.800
+Maka, kita perlu memperbarui tiap baris
+dalam tiap activity kategori
+
+00:04:20.800 --> 00:04:22.920
+untuk memanggil constructor Word yang benar.
+
+00:04:23.960 --> 00:04:26.670
+Izinkan saya menunjukkan apa artinya itu
+dengan kembali ke Android Studio.
+
+00:04:27.830 --> 00:04:30.040
+Saya berada di dalam
+NumbersActivity aplikasi kita.
+
+00:04:30.040 --> 00:04:33.900
+Kita dapat mengubah kata pertama dalam
+list untuk mencakup gambar juga
+
+00:04:33.900 --> 00:04:37.780
+dengan hanya memanggil constructor baru
+dan memasukkan tiga input.
+
+00:04:37.780 --> 00:04:40.850
+Seperti yang Anda perhatikan, Android Studio
+memiliki fitur komplitkan otomatis yang hebat.
+
+00:04:40.850 --> 00:04:44.270
+Fitur ini akan memberikan saran untuk resources
+apa yang mungkin akan Anda ketikkan.
+
+00:04:44.270 --> 00:04:47.930
+Ini bisa sangat bermanfaat jika Anda
+mencoba merujuk resource gambar tapi
+
+00:04:47.930 --> 00:04:49.988
+tak dapat mengingat dengan tepat
+nama filenya.
+
+00:04:49.988 --> 00:04:52.620
+Jika Anda menemukan yang Anda inginkan,
+lanjutkan dan tekan Enter.
+
+00:04:53.658 --> 00:04:56.620
+Sekarang Anda perhatikan bahwa Android
+Studio memberikan kesalahan.
+
+00:04:56.620 --> 00:04:59.420
+Ini karena kita belum membuat
+constructor yang baru.
+
+00:04:59.420 --> 00:05:02.020
+Tapi setelah constructor dibuat, kita
+tidak akan melihat kesalahan ini lagi.
+
+00:05:03.590 --> 00:05:06.660
+Perhatikan tidak ada perubahan
+dalam tampilan aplikasi.
+
+00:05:06.660 --> 00:05:07.940
+Ini akan terjadi di langkah selanjutnya.
+

@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: en-US
+
+00:00:00.590 --> 00:00:03.610
+So I want to pass in a color
+into the word adapter so
+
+00:00:03.610 --> 00:00:06.890
+all the words in that category
+have the same background color.
+
+00:00:06.890 --> 00:00:10.227
+So to do this I will need to modify
+the word adapter to hold our color
+
+00:00:10.227 --> 00:00:11.148
+resource value.
+
+00:00:11.148 --> 00:00:20.428
+[BLANK_AUDIO]
+
+00:00:20.428 --> 00:00:25.195
+And now I'll need a modifier existing
+constructor to accept this new
+
+00:00:25.195 --> 00:00:29.958
+color resource ID as an input, and
+now I need to set the value of m color
+
+00:00:29.958 --> 00:00:34.910
+resource ID to be whatever input was
+passed in as the color resource ID.
+
+00:00:37.440 --> 00:00:40.620
+And then at the bottom of the give
+you method I need to set the color.
+
+00:00:40.620 --> 00:00:42.940
+So that's done with this
+block of code here.
+
+00:00:42.940 --> 00:00:44.870
+So first I'm setting
+the theme of the color for
+
+00:00:44.870 --> 00:00:48.930
+the lists item and then I'm finding he
+color that the resource ID maps to and
+
+00:00:49.940 --> 00:00:52.680
+then finally set in the background
+color of the text container view.
+
+00:00:53.680 --> 00:00:55.280
+I know colors can be a bit tricky and
+
+00:00:55.280 --> 00:00:57.420
+it did take me a couple
+tries to get this right.
+
+00:00:57.420 --> 00:01:00.640
+But follow along and you'll be able to
+do something similar in your own app.
+
+00:01:00.640 --> 00:01:04.620
+So now, we need a convert the color
+resource ID into a color value.
+
+00:01:04.620 --> 00:01:07.705
+To do this, let's head on over
+to the list item way out.
+
+00:01:07.705 --> 00:01:11.430
+In here we need to make sure that the
+linear layout in the list item layout
+
+00:01:11.430 --> 00:01:12.510
+has an ID on the container.
+
+00:01:14.840 --> 00:01:16.270
+So back to the word adapter.
+
+00:01:16.270 --> 00:01:19.030
+So now that we have the word adapter
+constructor set up to take in the color
+
+00:01:19.030 --> 00:01:21.760
+resource ID, we need to modify
+the other activities so
+
+00:01:21.760 --> 00:01:23.990
+that when we call the word
+adopt a constructor.
+
+00:01:23.990 --> 00:01:25.020
+We're passing the right inputs.
+
+00:01:26.110 --> 00:01:28.011
+So we that here in the numbers activity.
+
+00:01:28.011 --> 00:01:30.999
+[BLANK_AUDIO]
+
+00:01:30.999 --> 00:01:36.307
+I want to add that here in the colors
+activity, and similarly for
+
+00:01:36.307 --> 00:01:41.140
+the phrases activity and
+lastly for the family activity.
+
+00:01:44.010 --> 00:01:45.770
+And one more thing before I forget.
+
+00:01:45.770 --> 00:01:49.212
+So back on the list item layout,
+remember to remove the background color
+
+00:01:49.212 --> 00:01:51.400
+that we hard coded
+into list item layout.
+
+00:01:51.400 --> 00:01:55.190
+So we had set it to always appear as an
+orange background color behind the text,
+
+00:01:55.190 --> 00:01:58.250
+but now that we can set the color
+dynamically when the list items created
+
+00:01:58.250 --> 00:01:59.050
+we don't need it any more.
+
+00:02:00.150 --> 00:02:01.880
+So let's test out the app now.
+
+00:02:01.880 --> 00:02:02.840
+So let's start with numbers.
+
+00:02:03.880 --> 00:02:08.090
+All right orange is expected and
+then family members, whoa.
+
+00:02:08.090 --> 00:02:09.750
+That looks really good.
+
+00:02:09.750 --> 00:02:13.130
+So going back to the colors nice and
+
+00:02:13.130 --> 00:02:17.530
+then lastly phrases
+while liking that blue.
+
+00:02:17.530 --> 00:02:21.630
+So each category shows a different color
+as expected and it's all coming together
+
+00:02:21.630 --> 00:02:24.590
+and looking really polished now,
+so high five on that great job.
+

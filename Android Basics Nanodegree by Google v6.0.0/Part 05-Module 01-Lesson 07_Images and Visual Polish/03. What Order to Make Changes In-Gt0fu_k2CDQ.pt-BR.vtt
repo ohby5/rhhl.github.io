@@ -1,0 +1,246 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.234
+Já temos uma ideia das mudanças
+que temos que fazer.
+
+00:00:04.267 --> 00:00:06.834
+Parece que tem
+4 grandes passos.
+
+00:00:06.868 --> 00:00:09.200
+Alguns podem ser
+mais complicados
+
+00:00:09.234 --> 00:00:11.801
+porque afetam
+vários arquivos de código.
+
+00:00:11.834 --> 00:00:13.467
+Como devemos proceder?
+
+00:00:13.501 --> 00:00:15.701
+Devemos começar
+por qualquer lugar
+
+00:00:15.734 --> 00:00:18.167
+E fazer todas as mudanças
+perfeitamente,
+
+00:00:18.200 --> 00:00:20.901
+antes de tentar rodar
+o app no aparelho?
+
+00:00:20.934 --> 00:00:22.834
+Se tentarmos este método,
+
+00:00:22.868 --> 00:00:25.267
+fazendo todos os passos
+de uma vez só,
+
+00:00:25.300 --> 00:00:28.133
+e depois tentando rodar
+o app no dispositivo,
+
+00:00:28.167 --> 00:00:32.100
+é muito provável que o app
+não funcione na primeira vez.
+
+00:00:32.133 --> 00:00:34.667
+Ele deve encontrar
+um monte de erros,
+
+00:00:34.701 --> 00:00:38.234
+e vai ser difícil encontrar
+a raiz do problema,
+
+00:00:38.267 --> 00:00:41.534
+porque já mudamos
+tanta coisa nos arquivos.
+
+00:00:41.567 --> 00:00:44.701
+Por outro lado,
+fazendo mudanças menores
+
+00:00:44.734 --> 00:00:47.567
+e checando se temos erros
+regularmente no caminho,
+
+00:00:47.601 --> 00:00:49.400
+rodando o app no aparelho
+
+00:00:49.434 --> 00:00:53.267
+podemos identificar as linhas de código
+que causaram o erro,
+
+00:00:53.300 --> 00:00:55.934
+porque menos linhas
+terão sido mudadas.
+
+00:00:55.968 --> 00:01:00.534
+Esta abordagem incremental
+nos força a planejar as mudanças
+
+00:01:00.567 --> 00:01:04.934
+que permitirão que o app rode
+mesmo sem estar tudo pronto.
+
+00:01:04.968 --> 00:01:08.200
+Já sabemos que queremos
+fazer um passo de cada vez,
+
+00:01:08.234 --> 00:01:10.634
+mas qual passo
+devemos fazer primeiro?
+
+00:01:10.667 --> 00:01:12.033
+Como programadores,
+
+00:01:12.067 --> 00:01:14.834
+podemos priorizar
+de formas diferentes.
+
+00:01:14.868 --> 00:01:19.100
+Às vezes é bom fazer primeiro
+as mudanças mais arriscadas e difíceis,
+
+00:01:19.133 --> 00:01:21.467
+porque se a estratégia
+não funcionar,
+
+00:01:21.501 --> 00:01:25.634
+precisamos saber o quanto antes,
+para repensar a estratégia.
+
+00:01:25.667 --> 00:01:27.667
+É como
+uma prova de conceito
+
+00:01:27.701 --> 00:01:30.033
+para ver se estamos
+no caminho certo.
+
+00:01:30.067 --> 00:01:34.100
+No nosso caso, todos os passos
+são mudanças pouco arriscadas,
+
+00:01:34.133 --> 00:01:36.434
+porque vimos
+no app AndroidFlavor
+
+00:01:36.467 --> 00:01:40.467
+que é possível mostrar listas
+com imagens e texto.
+
+00:01:40.501 --> 00:01:45.133
+A outra forma de priorizar
+é com base nos dados que temos.
+
+00:01:45.167 --> 00:01:48.501
+No momento, não temos
+as imagens do designer.
+
+00:01:48.534 --> 00:01:52.133
+Quando os designers entregam
+um protótipo das imagens,
+
+00:01:52.167 --> 00:01:55.767
+pode levar algum tempo
+para entregarem as imagens finais.
+
+00:01:55.801 --> 00:02:01.067
+Enquanto isso, os programadores
+podem começar a escrever código.
+
+00:02:01.100 --> 00:02:05.100
+Para fazer isso,
+vamos usar dados fictícios,
+
+00:02:05.133 --> 00:02:07.701
+também conhecidos
+como dados dummy.
+
+00:02:07.734 --> 00:02:11.467
+São dados temporários
+ou falsos,
+
+00:02:11.501 --> 00:02:13.968
+que colocamos no app
+para ter uma ideia
+
+00:02:14.000 --> 00:02:17.100
+de como vai ficar quando
+tivermos os dados reais.
+
+00:02:17.133 --> 00:02:21.133
+Está guardando o lugar
+de dados que virão em breve.
+
+00:02:21.167 --> 00:02:26.200
+Em resumo, queremos fazer
+uma mudança de cada vez
+
+00:02:27.601 --> 00:02:30.300
+e ter certeza que podemos
+reconstruir o app
+
+00:02:30.334 --> 00:02:34.567
+e rodar no aparelho
+após cada mudança, se possível.
+
+00:02:34.601 --> 00:02:37.334
+Em casos onde
+não tivermos os dados,
+
+00:02:37.367 --> 00:02:40.067
+usamos dados falsos
+para guardar os lugares
+
+00:02:40.100 --> 00:02:42.300
+até os dados reais
+estarem prontos.
+
+00:02:42.334 --> 00:02:43.501
+No nosso caso,
+
+00:02:43.534 --> 00:02:46.400
+se ainda não temos
+as imagens finais,
+
+00:02:46.434 --> 00:02:49.000
+queremos chegar
+tão longe quanto possível
+
+00:02:49.033 --> 00:02:52.701
+até travarmos completamente
+e precisarmos esperar os dados
+
+00:02:52.734 --> 00:02:55.133
+para terminar
+de implementar a função.
+
+00:02:55.167 --> 00:02:58.200
+Olhando para
+esta lista de mudanças,
+
+00:02:58.234 --> 00:03:01.601
+me ajudem a decidir
+como priorizar,
+
+00:03:01.634 --> 00:03:03.701
+em que ordem
+vamos fazê-las.
+
+00:03:03.734 --> 00:03:07.033
+Coloque os números de 1 a 4
+
+00:03:07.067 --> 00:03:09.467
+em qual passo
+você faria primeiro,
+
+00:03:09.501 --> 00:03:11.864
+segundo, terceiro,
+e quarto.
+

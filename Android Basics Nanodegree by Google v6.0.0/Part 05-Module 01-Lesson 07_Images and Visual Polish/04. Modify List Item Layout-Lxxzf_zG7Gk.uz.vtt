@@ -1,0 +1,208 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.270 --> 00:00:02.170
+Endi ro‘yxat elementlari joylashuv 
+tartibiga rasm qo‘shish uchun,
+
+00:00:02.170 --> 00:00:05.850
+men list item nuqta XML 
+joylashuv tartibi faylini ochaman.
+
+00:00:05.850 --> 00:00:08.460
+Biz bu yerda unda allaqachon ikkita matn 
+view borligini ko‘rishimiz mumkin.
+
+00:00:08.460 --> 00:00:11.580
+Bittasi Miwok so‘zini nazorat qiladi 
+va boshqa biri Inglizcha tarjima uchun.
+
+00:00:13.260 --> 00:00:16.250
+Keling, davom etamiz va mana bu yerga 
+rasm ko‘rinishini kiritamiz.
+
+00:00:16.250 --> 00:00:19.850
+Men image deb nomlanadigan 
+bitta ko‘rinish ID ini belgilamoqchiman, chunki
+
+00:00:19.850 --> 00:00:23.270
+biz bu uchun Java kod o‘quvchisida ko‘rib 
+o‘tgan edik, rasm manbasiga o‘zgartirishlar kiritishda 
+
+00:00:23.270 --> 00:00:27.560
+va bu maxsus kod bo‘yicha topshiriqda 
+ishlatishimizning hojati yo‘qligi haqida, 
+
+00:00:27.560 --> 00:00:29.250
+ammo keyinroq ishlatamiz deb aytib o‘tgan edik.
+
+00:00:29.250 --> 00:00:33.440
+Keyingisida, ikkala wrapped content 
+uchun ham balandlik va kenglikni o‘rnatamiz.
+
+00:00:33.440 --> 00:00:36.220
+Va oxirida, biz ilova ikonkasini 
+o‘rnatgan vaqtda aytib o‘tgan 
+
+00:00:36.220 --> 00:00:39.590
+to‘ldiruvchi rasmdan foydalanish uchun keling,
+Android manba atributini sozlaymiz. 
+
+00:00:39.590 --> 00:00:44.627
+Biz @mipmap/ic_launcher sintaksisidan 
+foydalanib ilova ikonkasiga ishora qilamiz.
+
+00:00:44.627 --> 00:00:49.045
+Yaxshi, u yaxshi ko‘rinyapti demak, keling, 
+hozir qurilmamizda ishlatib ko‘rish orqali uni sinab ko‘ramiz.
+
+00:00:49.045 --> 00:00:51.805
+Bizning qurilmamizda ishlayapti,
+keling, sonlar sahifasiga bosamiz.
+
+00:00:51.805 --> 00:00:55.375
+Yaxshi, demak, u ishlayapti va 
+ekranimizda o‘sha rasm bor.
+
+00:00:55.375 --> 00:00:59.335
+Biroq, ikonka va bo‘sh joy haligacha 
+biz xohlagandek ko‘rinmayapti.
+
+00:01:00.625 --> 00:01:04.310
+Savol-javob paytida biz rasmni chap tomonda va 
+
+00:01:04.310 --> 00:01:05.990
+matnni o‘ng tomonda bo‘lishini xohlagandik.
+
+00:01:05.990 --> 00:01:08.570
+Demak, biz joylashuv tartibimizda 
+bir nechta o‘zgartirishlar qilishimiz kerak.
+
+00:01:08.570 --> 00:01:13.330
+Bu ro‘yxat elementlari joylashuv tartibini 
+o‘zgartirish uchun, men birinchi gorizontal chiziqli 
+
+00:01:13.330 --> 00:01:16.790
+joylashuv tartibi bilan mana bu ro‘yxat 
+elementlarini qura olishimizga ko‘zim yetmayapti.
+
+00:01:16.790 --> 00:01:19.430
+Demak, birinchi farzand bu rasm va 
+
+00:01:19.430 --> 00:01:22.510
+ikkinchi farzand bu o‘ng tomondagi barcha matn.
+
+00:01:22.510 --> 00:01:27.590
+Demak, biz buni ikkita farzand ko‘rinishi bo‘lgan 
+gorizontal chiziqli joylashuv tartibi bilan qura olamiz.
+
+00:01:27.590 --> 00:01:31.840
+Ikkinchi farzand vertikal ravishda 
+qo‘yib chiqilgan ikkita matn ko‘rinishidan 
+
+00:01:31.840 --> 00:01:33.820
+tashkil topganligiga e’tibor beramiz.
+
+00:01:33.820 --> 00:01:37.360
+Shunday qilib, bu vertikal 
+chiziqli joylashuv tartibi bilan yaratiladi.
+
+00:01:37.360 --> 00:01:40.550
+Demak, bu yerda bizda ichma-ich joylashtirilgan 
+
+00:01:40.550 --> 00:01:43.040
+gorizontal chiziqli joylashuv tartibida vertikal 
+chiziqli joylashuv tartibi borligini ko‘ryapmiz.
+
+00:01:43.040 --> 00:01:45.610
+Bu jamlangan ko‘rinishlar guruhi deb 
+nomlanadigan bitta tushunchadir.
+
+00:01:45.610 --> 00:01:49.005
+Ya’ni ko‘rinish guruhlari boshqa bir 
+ko‘rinish guruhlaridan tashkil topgan, demakdir.
+
+00:01:49.005 --> 00:01:53.835
+Va biz buni oxirgi kursning 
+ikkinchi darsida o‘rganganligimizni eslang.
+
+00:01:53.835 --> 00:01:57.385
+Endi Android studio ga qaytamiz, keling bizning 
+listItem joylashuv tartibimizda mana bu o‘zgartirishlarni qilamiz.
+
+00:01:57.385 --> 00:02:01.142
+Birinchi, chiziqli layoutni yo‘nalishini vertikaldan 
+
+00:02:01.142 --> 00:02:02.530
+gorizontalga o‘zgartirmoqchiman.
+
+00:02:03.890 --> 00:02:07.330
+Va keyingisida men yangi vertikal LinearLayout 
+joylashuv tartibi ichida ikkita matn 
+
+00:02:07.330 --> 00:02:11.930
+ko‘rinishini joylashtiraman va 
+keyin yopilish tegini qo‘shaman.
+
+00:02:11.930 --> 00:02:14.550
+Mana bu yerda sezgan bo‘lsangiz, men hozirgina yozgan
+LinearLayout da 
+
+00:02:14.550 --> 00:02:16.510
+mana bu chap tarafda biroz 
+bo‘sh joy qoldirish bor.
+
+00:02:16.510 --> 00:02:20.710
+Matn va rasm orasidagi qoldirilgan 
+bo‘sh joy 16 dbs uzunlikda.
+
+00:02:20.710 --> 00:02:22.840
+Keling oldindan ko‘rish nimaga o‘xshashini 
+ko‘rish uchun 
+
+00:02:22.840 --> 00:02:24.840
+mana bu yerdagi Preview tugmasini bosamiz.
+
+00:02:24.840 --> 00:02:28.430
+Demak, oldindan ko‘rish panelidan men joylashuv 
+tartibi ancha yaxshiroq ko‘rinayotganini ko‘ryapman.
+
+00:02:28.430 --> 00:02:32.590
+Bizda chapda yaxshi ikonka bor va o‘ng 
+tomonda ikkita matn ko‘rinishi.
+
+00:02:32.590 --> 00:02:36.040
+Hozir davom etamiz va qurilmamizdagi ilovani 
+ishlatib ko‘ramiz hamda nimaga o‘xshashini ko‘ramiz.
+
+00:02:36.040 --> 00:02:40.250
+Men birinchi preview panelini yopishni va 
+bizning ilovamizni ishlatib ko‘rishni xohlayman.
+
+00:02:40.250 --> 00:02:43.110
+Bu yerda qurilmamizda ishlayotgan ilovaning 
+hozirgi versiyasi, 
+
+00:02:43.110 --> 00:02:45.760
+hozir men sonlar sahifasi ustiga 
+bosmoqchiman, ajoyib.
+
+00:02:45.760 --> 00:02:50.090
+Bu chap tomondagi savatcha ikonkasi bo‘lgan 
+savol-javob paytidagi skrinshotga o‘xshaydi va 
+
+00:02:50.090 --> 00:02:52.288
+u har bir ro‘yxat elementi uchun ko‘rsatilmoqda.
+
+00:02:52.288 --> 00:02:55.980
+Hozir, narsalar bizning dizayn belgilarimizdek 
+bir xil ko‘rinmayapti, ammo 
+
+00:02:55.980 --> 00:02:59.300
+biz bu kichkina tafsilotlar masalan, o‘lcham, 
+ranglar va atrofida bo‘sh joy qolishi
+
+00:02:59.300 --> 00:03:00.620
+haqida darsning oxirida o‘ylasak ham bo‘ladi.
+

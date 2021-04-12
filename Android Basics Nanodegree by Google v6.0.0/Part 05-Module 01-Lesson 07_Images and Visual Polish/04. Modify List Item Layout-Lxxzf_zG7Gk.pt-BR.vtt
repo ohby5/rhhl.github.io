@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.634
+Para adicionar a imagem
+ao layout do item,
+
+00:00:02.667 --> 00:00:05.667
+vou abrir o arquivo .xml
+do layout do item.
+
+00:00:05.701 --> 00:00:08.200
+Ele já tem
+duas exibições de texto,
+
+00:00:08.234 --> 00:00:12.434
+uma para uma palavra miwok
+e outra para a tradução.
+
+00:00:13.067 --> 00:00:16.000
+Vamos inserir
+uma exibição de imagem aqui.
+
+00:00:16.033 --> 00:00:20.334
+Vou dar um ID chamado image, para
+nos referirmos a isso no código
+
+00:00:20.367 --> 00:00:22.901
+e fazer mudanças
+na fonte da imagem.
+
+00:00:22.934 --> 00:00:27.133
+Não precisamos fazer isso
+nessa tarefa em particular,
+
+00:00:27.167 --> 00:00:28.901
+mas precisaremos no futuro.
+
+00:00:28.934 --> 00:00:31.567
+Vamos definir a largura
+e altura do layout
+
+00:00:31.601 --> 00:00:33.334
+para envolverem o conteúdo.
+
+00:00:33.367 --> 00:00:37.701
+O atributo android.src vai usar
+o ícone do app como marcador,
+
+00:00:37.734 --> 00:00:39.667
+como mencionamos no quiz.
+
+00:00:39.701 --> 00:00:45.267
+Nos referimos ao ícone
+com a sintaxe @mipmap/ic_launcher.
+
+00:00:45.300 --> 00:00:48.701
+Parece bom. Vamos testar
+rodando no nosso aparelho.
+
+00:00:48.734 --> 00:00:52.267
+Com o aparelho rodando,
+vamos clicar no NumbersActivity.
+
+00:00:52.300 --> 00:00:55.133
+Legal. Está rodando
+e temos a imagem na tela.
+
+00:00:55.167 --> 00:01:00.167
+Mas o ícone e o espaçamento ainda
+não estão bem como queremos.
+
+00:01:00.200 --> 00:01:03.968
+No quiz, vimos que queremos
+a imagem na esquerda
+
+00:01:04.000 --> 00:01:05.767
+e o texto na direita.
+
+00:01:05.801 --> 00:01:08.367
+Precisamos fazer ajustes
+no layout.
+
+00:01:08.400 --> 00:01:11.334
+Para modificar este layout,
+
+00:01:11.367 --> 00:01:16.567
+vejo que podemos construir este item
+com o layout horizontal linear.
+
+00:01:16.601 --> 00:01:19.067
+O primeiro filho
+é a imagem
+
+00:01:19.100 --> 00:01:22.200
+e o segundo filho
+é todo o texto da direita.
+
+00:01:22.234 --> 00:01:25.334
+Podemos fazer isso
+com o layout horizontal linear
+
+00:01:25.367 --> 00:01:27.367
+com duas visões filhas.
+
+00:01:27.400 --> 00:01:31.567
+Também vemos que o segundo filho
+consiste de duas visões de texto
+
+00:01:31.601 --> 00:01:33.767
+que estão empilhadas
+na vertical.
+
+00:01:33.801 --> 00:01:37.133
+Isso pode ser criado
+com um layout vertical linear.
+
+00:01:37.167 --> 00:01:40.000
+Vemos que temos
+um layout vertical linear
+
+00:01:40.033 --> 00:01:42.801
+aninhado dentro
+do layout horizontal linear.
+
+00:01:42.834 --> 00:01:45.534
+É um conceito chamado
+ViewGroups aninhados.
+
+00:01:45.567 --> 00:01:48.701
+São ViewGroups
+dentro de outros ViewGroups.
+
+00:01:48.734 --> 00:01:53.334
+Aprendemos este tópico
+na aula 2 do curso anterior.
+
+00:01:53.367 --> 00:01:56.968
+No Android Studio, vamos fazer
+as modificações ao layout.
+
+00:01:57.000 --> 00:01:59.400
+Primeiro vou modificar
+o layout linear
+
+00:01:59.434 --> 00:02:03.367
+para a orientação passar
+de vertical para horizontal.
+
+00:02:03.400 --> 00:02:06.234
+Depois vou juntar
+as duas visões de texto
+
+00:02:06.267 --> 00:02:09.300
+dentro de um novo
+layout vertical linear
+
+00:02:09.334 --> 00:02:11.734
+e adicionar o tag
+de encerramento.
+
+00:02:11.767 --> 00:02:14.334
+No novo layout linear
+que eu acrescentei,
+
+00:02:14.367 --> 00:02:16.567
+tem um pouco de espaço
+na esquerda.
+
+00:02:16.601 --> 00:02:20.534
+16dp de espaço
+entre o texto e a imagem.
+
+00:02:20.567 --> 00:02:24.634
+Vamos ver como ficou.
+Clique no botão de preview.
+
+00:02:24.667 --> 00:02:28.133
+Na janela de preview, vejo
+que o layout melhorou muito.
+
+00:02:28.167 --> 00:02:30.234
+O ícone da cesta
+está na esquerda
+
+00:02:30.267 --> 00:02:32.300
+e os dois textos
+na direita.
+
+00:02:32.334 --> 00:02:35.868
+Vamos rodar o app no dispositivo
+e ver como fica.
+
+00:02:35.901 --> 00:02:38.300
+Primeiro
+vou fechar o preview
+
+00:02:38.334 --> 00:02:40.033
+e rodar o app.
+
+00:02:40.067 --> 00:02:43.100
+Aqui está a versão atual
+rodando no dispositivo.
+
+00:02:43.133 --> 00:02:45.200
+Vou clicar
+no NumbersActivity.
+
+00:02:45.234 --> 00:02:48.000
+Perfeito!
+Parece a tela do quiz.
+
+00:02:48.033 --> 00:02:50.033
+Com o ícone da cesta
+na esquerda
+
+00:02:50.067 --> 00:02:52.033
+aparecendo para cada item.
+
+00:02:52.067 --> 00:02:55.634
+Não está exatamente
+como planejamos,
+
+00:02:55.667 --> 00:02:59.534
+mas podemos pensar nos detalhes
+como tamanho da fonte e cor
+
+00:02:59.567 --> 00:03:01.099
+no fim desta aula.
+

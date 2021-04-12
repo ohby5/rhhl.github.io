@@ -1,0 +1,589 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.410 --> 00:00:03.480
+Endi sizga qanday qilib mos XML 
+joylashuv tartibi o‘zgartirishlarini o‘rgatmoqchiman, 
+
+00:00:03.480 --> 00:00:06.700
+shunda dizaynerimiz bergan qizil 
+chiziqlar ilovamizga mos tushadi.
+
+00:00:07.710 --> 00:00:09.900
+Keling, birinchi birorta osonroq 
+o‘zgartirish bilan boshlaymiz.
+
+00:00:09.900 --> 00:00:12.400
+Mening payqashimcha, ilovamizning 
+hozirgi versiyasida juda ham 
+
+00:00:12.400 --> 00:00:13.860
+ko‘p padding bor.
+
+00:00:13.860 --> 00:00:15.970
+Demak, men ilovada sichqonchani yurgizganimda,
+
+00:00:15.970 --> 00:00:19.360
+padding butun ro‘yxat bo‘ylab hamma 
+joyda borligini payqashingiz mumkin.
+
+00:00:19.360 --> 00:00:22.530
+Hattoki men ro‘yxat ustida yurgizsam ham 
+padding hali ham o‘sha yerda.
+
+00:00:22.530 --> 00:00:25.680
+Demak, bu menga padding ehtimol ro‘yxat 
+ko’rinishida ekanligini bildiradi.
+
+00:00:26.780 --> 00:00:31.790
+Biz ro‘yxat ko’rinishi XML elementini so‘z 
+ro‘yxatining XML faylida e’lon qilishimizni yodda tuting.
+
+00:00:31.790 --> 00:00:35.320
+Yetarlicha amin bo‘lib, men padding qiymatlari 
+ichkarida o‘rnatilganligini ko‘rayapman.
+
+00:00:35.320 --> 00:00:37.300
+Keling, bu barcha padding qiymatlarni 
+olib tashlaymiz.
+
+00:00:38.900 --> 00:00:41.400
+Bizning dimensions.XML fayliga borsak ham
+
+00:00:41.400 --> 00:00:44.600
+kodim bu o‘lcham qiymatlariga boshqa qaytmaydi.
+
+00:00:44.600 --> 00:00:49.600
+Bittasi activity_horizontal uchun 
+asosiy va bittasi activity_vertical uchun asosiy.
+
+00:00:49.600 --> 00:00:53.397
+Demak, men bu ikkita qiymatni activity_horizontal_margin 
+
+00:00:53.397 --> 00:00:55.909
+va activity_vertical_margin ni boshida 16 dp qilib qo‘yilgan 
+
+00:00:55.909 --> 00:00:59.526
+values/dimensions.xml fayldan o‘chirib tashlay olaman.
+
+00:00:59.526 --> 00:01:02.784
+Davom etaman va hali ham bu faylda bor 
+bo‘lgan o‘lchamlarni olib tashlayman, 
+
+00:01:02.784 --> 00:01:06.840
+mana bu list_item_height uchun, 
+chunki, bu bizga hali ham kerak.
+
+00:01:06.840 --> 00:01:11.130
+Siz bizda yana bitta qolib ketgan o‘lchamlar 
+fayli bor ekanligini sezasiz, demak, 
+
+00:01:11.130 --> 00:01:13.360
+bu w820dp uchun.
+
+00:01:13.360 --> 00:01:16.070
+Bu fayl kattaroq ekranli qurilmalar uchun ishlatiladi.
+
+00:01:16.070 --> 00:01:18.840
+Va mana bu yerda ichkarida bizda 
+activity_horizontal_margin 
+
+00:01:18.840 --> 00:01:21.330
+uchun yanada kattaroq qiymat berilgan.
+
+00:01:21.330 --> 00:01:25.239
+Ammo bizga bu o‘lcham boshqa kerakmas, 
+biz aslida davom eta olamiz va 
+
+00:01:25.239 --> 00:01:26.636
+bu butun faylni o‘chiramiz.
+
+00:01:26.636 --> 00:01:31.680
+Loyihaning bosh qismiga borib ushbu 
+faylni ko‘raman va o‘chirib tashlayman.
+
+00:01:32.790 --> 00:01:34.970
+Endi, keling, qurilmamizda ilova qanday
+bo‘lishini ko‘ramiz.
+
+00:01:34.970 --> 00:01:38.190
+Sonlar sahifasiga bosamiz, ajoyib.
+
+00:01:38.190 --> 00:01:42.550
+Shunday qilib, koddagi bu o‘zgarishlar tufayli 
+u butun ro‘yxat bo‘ylab 16 dp chegaradan qutuldi.
+
+00:01:42.550 --> 00:01:43.680
+Ajoyib ish.
+
+00:01:43.680 --> 00:01:45.220
+Endi, keling ro‘yxat elementlari 
+joylashuv tartibiga o‘tamiz.
+
+00:01:45.220 --> 00:01:50.990
+Va agar eslasangiz, har bir ro‘yxat elementi 
+kamida 88 dps balandlikka ega bo‘lishi kerak.
+
+00:01:50.990 --> 00:01:53.940
+Hozir bu son unga tanish tuyulayapti, 
+chunki biz uni oldinroq 
+
+00:01:53.940 --> 00:01:55.850
+dimentions.xml faylimizga saqlab qo‘ygan edik.
+
+00:01:55.850 --> 00:01:58.230
+Demak, biz uni ro‘yxat elementlari 
+balandligi qiymati ostida saqlaganmiz.
+
+00:01:59.270 --> 00:02:01.460
+Men uni keyinroq ishlatish uchun 
+nusxalab olaman.
+
+00:02:01.460 --> 00:02:06.070
+Bu agar biz ro‘yxat elementlari joylashuv tartibiga 
+qaytsak, biz unga shu kabi ishora qilishimizni anglatadi.
+
+00:02:06.070 --> 00:02:12.133
+Mana bu yerda men eng kichik balandlikni 
+@dimen/list_item_height ga ishora qiladigan qilib o‘rnatayapman.
+
+00:02:12.133 --> 00:02:16.138
+Sezgan bo‘lsangiz, bu yerda men eng kichik 
+balandlikni aniq 88 ga moslashtirib 
+
+00:02:16.138 --> 00:02:19.697
+qo‘yishdan ko‘ra 88 dps qilib olishni afzal ko‘raman.
+
+00:02:19.697 --> 00:02:24.477
+Demak, qiymatlarning bu birikmasi chiziqli 
+joylashuv tartibi balandligi kamida 88 dps 
+
+00:02:24.477 --> 00:02:25.897
+bo‘lishi kerakligini bildiradi, ammo 
+
+00:02:25.897 --> 00:02:29.197
+ro‘yxat elementlarining tarkibiga bog‘liq holda 
+agar kerak bo‘lsa, uzunroq ham bo‘la oladi.
+
+00:02:30.437 --> 00:02:33.967
+Hozir sonlar sahifasimizning sinov imtihonida 
+har bir ro‘yxat elementining foni 
+
+00:02:33.967 --> 00:02:38.340
+16 lik qiymat tomonidan berilgan mana bu 10 xil rangdami?
+
+00:02:38.340 --> 00:02:41.670
+Aslida biz allaqachon sahifaning asosiy 
+ekranida o‘sha rangdan foydalanamiz.
+
+00:02:41.670 --> 00:02:44.127
+Demak, biz bu rangni colors.xml 
+fayliga kirgizib qo‘yamiz.
+
+00:02:45.580 --> 00:02:48.050
+Va bizga mana bu yerda kerak bo‘ladigan 
+rang uchun 16lik qiymat bor.
+
+00:02:49.230 --> 00:02:52.739
+Demak, mana bu rang manbasiga ishora qiluvchi 
+ro‘yxat elementlari joylashuv tartibiga qayta olasizmi?
+
+00:02:52.739 --> 00:02:56.041
+[BO‘SH_AUDIO]
+
+00:02:56.041 --> 00:03:00.827
+Shunday qilib, mana bu ildiz LinearLayout da,
+men butun chiziqli joylashuv tartibining 
+
+00:03:00.827 --> 00:03:05.617
+fonini mana bu @color/tan_background rang 
+manbasi bo‘la oladigan qilib qo‘yganman va 
+
+00:03:05.617 --> 00:03:10.086
+biz bu rang manbasiga biz xohlagan rang 
+manbasining @color syntax/name dan 
+
+00:03:10.086 --> 00:03:12.510
+foydalanib ishora qila olamiz.
+
+00:03:13.540 --> 00:03:15.450
+Keling, bizning qizil chiziqlarimizga qaytamiz.
+
+00:03:15.450 --> 00:03:19.320
+Rasm eni va bo‘yi 88 raqamiga teng 
+bo‘lgan kvadrat bo‘lishi kerak.
+
+00:03:20.320 --> 00:03:23.340
+Ayniqsa, u birorta ro‘yxat elementidek uzun bo‘lsa.
+
+00:03:23.340 --> 00:03:26.820
+Mana bu yerda o‘lchamlar XML faylida, 
+biz allaqachon o‘lchamlar manbasida 
+
+00:03:26.820 --> 00:03:30.210
+88 dpsni joylashtirib bo‘ldik, shunda, 
+biz unga ishora qila olamiz.
+
+00:03:30.210 --> 00:03:33.790
+Ya’ni agar biz ro‘yxat elemntini 
+balandligini o‘zgartirmoqchi bo‘lganimiz kabi. 
+
+00:03:33.790 --> 00:03:35.933
+Balki 96 dps ga oshirarmiz.
+
+00:03:35.933 --> 00:03:38.119
+Xo‘sh, biz uni shunchaki, bitta joyda 
+o‘zgartira olamiz va 
+
+00:03:38.119 --> 00:03:42.830
+bu o‘lchamga ishora qiladigan barcha joydagilari 
+avtomatik tarzda yangilanadi.
+
+00:03:42.830 --> 00:03:45.810
+Demak, mening rasm ko’rinishining ichidagi 
+ro‘yxat elementlari joylashuv tartibiga qaytib, 
+
+00:03:45.810 --> 00:03:50.700
+list_item_height deb nomlanadigan 
+o‘lcham manbasiga ishora 
+
+00:03:50.700 --> 00:03:55.870
+qilish uchun bo‘yi va enini o‘zgartirmoqchiman.
+
+00:03:55.870 --> 00:03:56.460
+Va oxirida, biz savatcha to‘ldiruvchi ikonkasidan 
+
+00:03:56.460 --> 00:04:00.510
+foydalanuvchi bu manba atribute ini olib tashlaylamiz.
+
+00:04:00.510 --> 00:04:04.540
+Hozir ilova ishlab turganda rasmni dinamik 
+tarzda to‘g‘ri o‘rnata olamiz,
+
+00:04:04.540 --> 00:04:06.650
+bu atribute ni bizga boshqa keragi yo‘q.
+
+00:04:07.890 --> 00:04:11.030
+Hozir, o‘sha murabbiylik kutilganidek 
+qilib ishliydigan qilib qo‘yishini ko‘ramiz.
+
+00:04:11.030 --> 00:04:16.260
+Demak, mana bu yerda qurilmamizda ilova ishlab 
+turibdi va sonlar sahifasiga bosamiz, ajoyib.
+
+00:04:16.260 --> 00:04:20.510
+Hozir rasm o‘lchami 88 dp karra 88 dp bo‘lgan kvadratdir.
+
+00:04:21.630 --> 00:04:24.570
+Va bu rasmning foni mana bu ajoyib 
+sarg‘ish rangda, demak, 
+
+00:04:24.570 --> 00:04:26.330
+hozircha u yaxshi ko‘rinayapti.
+
+00:04:26.330 --> 00:04:27.830
+Endi, keling keyingi qismga o‘tamiz.
+
+00:04:27.830 --> 00:04:31.260
+Demak, birinchi, biz matn maydoni uchun 
+fon rangini bir xil zarg’aldoq rang 
+
+00:04:31.260 --> 00:04:32.350
+qilib qo‘yishimiz kerak.
+
+00:04:32.350 --> 00:04:35.450
+Va bu zarg’aldoq rang biz asosiy 
+sahifadagi sonlar toifasi 
+
+00:04:35.450 --> 00:04:38.060
+uchun ishlatgan fon rangi bilan bir xil.
+
+00:04:38.060 --> 00:04:39.640
+Demak, uning 16lik rangini eslang, 
+
+00:04:39.640 --> 00:04:45.040
+FT 8E09 allaqachon bizning 
+colors.xml faylimizda bo‘lishi kerak.
+
+00:04:45.040 --> 00:04:50.380
+Va yetarlicha aminmanki, u category_numbers 
+deb nomlangan rang manbasi sifatida ifodalangan.
+
+00:04:50.380 --> 00:04:52.230
+Ro‘yxat elementlari joylashuv tartibimizga 
+qaytamiz va uni qo‘shib qo‘yamiz.
+
+00:04:53.600 --> 00:04:57.300
+Ikkita matn ko‘rinishidan tashkil topgan 
+joylashuv tartibi uchun, 
+
+00:04:57.300 --> 00:05:02.170
+biz uning orqa fonini toifa tagchiziq 
+sonlar manbasiga tenglamoqchi edik 
+
+00:05:02.170 --> 00:05:06.615
+va unga @color/category_numbers 
+sifatida ishora qilmoqchi edik.
+
+00:05:07.670 --> 00:05:10.780
+Demak, bu chiziqli joylashuv tartibida 
+rang o‘rnatish orqali,
+
+00:05:10.780 --> 00:05:13.720
+faqatgina mana bu matn ko’rinishlarining 
+foniga ta’sir o‘tkaziladi.
+
+00:05:14.940 --> 00:05:17.667
+Hozir keling, qizil chiziqlarga qaytamiz 
+va qilmagan nimalar qolganini ko‘ramiz.
+
+00:05:17.667 --> 00:05:20.816
+Biz bu matn ko’rinishlarining shrift 
+uslubini o‘zgartirishimiz kerak,
+
+00:05:20.816 --> 00:05:25.130
+ular oq shrift rangida bo‘lishi kerak 
+va miwok qalin bo‘lishi kerak.
+
+00:05:25.130 --> 00:05:28.110
+Va ikkalasining ham shrift o‘lchami 
+18 SP bo‘lishi kerak, 
+
+00:05:28.110 --> 00:05:32.490
+agar o‘tgan darsdan eslay olsangiz, matn 
+ko‘rinishini o‘rtacha qilib qo‘yilgandi.
+
+00:05:32.490 --> 00:05:35.850
+miwok matn ko’rinishida ham matn ko‘rinishi 
+
+00:05:35.850 --> 00:05:38.170
+atribute i text appearance medium bo‘ladi.
+
+00:05:38.170 --> 00:05:42.250
+Va shunday qilib bu bizni shrift o‘lchami 
+18 SP qilishimizni talab qiladi.
+
+00:05:42.250 --> 00:05:44.400
+Keyin men matn rangini oqqa tenglayman va men 
+
+00:05:44.400 --> 00:05:47.840
+Android framework ida oldindan ifodalab 
+qo‘yilgan rang manbasi borligini bilaman.
+
+00:05:47.840 --> 00:05:54.059
+Va men undan oddiygina @android:color/white 
+chaqirish orqali foydalana olaman.
+
+00:05:54.059 --> 00:05:57.070
+Va oxirida men matn uslubini 
+qalin qilaman.
+
+00:05:57.070 --> 00:05:58.350
+Shunga o‘xshash yoki siz ko‘rsatgan 
+o‘zi belgilab qo‘yilgan 
+
+00:05:58.350 --> 00:06:01.700
+matn yoki inglizcha tarjimaga o‘xshash nimadir.
+
+00:06:01.700 --> 00:06:05.590
+Men matn ko‘rinishini o‘rtacha 
+va rangini oq bo‘lishini xohlayman, 
+
+00:06:05.590 --> 00:06:06.640
+ammo qalin bo‘lishini xohlamayman.
+
+00:06:06.640 --> 00:06:08.470
+Demak, men bu qatorni ko‘chirmayman.
+
+00:06:08.470 --> 00:06:12.570
+Yaxshi, keling uni birorta qurilmada tekshirib 
+ko‘ramiz, hozir sonlar mashqining ustiga bosamiz.
+
+00:06:12.570 --> 00:06:16.390
+Matn ko’rinishlarning ko‘rinishi va 
+foni to‘g‘ri ko‘rinyapti, ammo 
+
+00:06:16.390 --> 00:06:19.250
+bu ikkita matn ko’rinishlarimizning joylashuvi 
+unchalik ham to‘g‘riga o‘xshamayapti.
+
+00:06:19.250 --> 00:06:21.890
+Hozirda ular zarg’aldoq rangli fonda 
+ko‘rsatilgan vertikal 
+
+00:06:21.890 --> 00:06:25.290
+chiziqli joylashuv tartibining yuqoori 
+chap burchagiga yopishib turibdi.
+
+00:06:25.290 --> 00:06:28.290
+Agar biz qizil chiziqlarimizga qayta qarab 
+chiqsak, biz ko‘ramizki, 
+
+00:06:28.290 --> 00:06:32.830
+ikkita matn ko’rinishini ro‘yxat elementlarida 
+vertikal bo‘ylab markazga joylashtirishimiz kerak.
+
+00:06:32.830 --> 00:06:36.670
+Buni tushunish uchun, keling birinchi har bir 
+matn ko’rinishining chegaralarini tushunib olamiz
+
+00:06:36.670 --> 00:06:39.440
+va bizga yordam berishi uchun, men settings dagi 
+
+00:06:39.440 --> 00:06:41.520
+developer tanlovidan show layout bounds dagini 
+chizib ko‘rmoqchiman.
+
+00:06:41.520 --> 00:06:43.170
+U yerga qanday borishni esladingizmi?
+
+00:06:43.170 --> 00:06:46.620
+settings ga qayting, developer options ga tushung 
+
+00:06:46.620 --> 00:06:50.710
+va yarim yo‘lcha pastda show layout 
+bounds bo‘lishi kerak.
+
+00:06:50.710 --> 00:06:52.430
+Demak, keling, Army ga qaytamiz.
+
+00:06:52.430 --> 00:06:55.990
+Hozir joylashuv tartibi chegaralarining 
+ko‘rsatishicha, ikkita matn ko’rinishi 
+
+00:06:55.990 --> 00:06:59.030
+vertikal chiziqlli joylashuv tartibining 
+yuqori qirrasiga yopishib turibdi.
+
+00:06:59.030 --> 00:07:01.260
+Hozir men ularni biroz pastga 
+ko‘chirishim kerak, shunda 
+
+00:07:01.260 --> 00:07:04.590
+ular chiziqli joylashuv tartibida yuqoriga qarab 
+ko‘proq vertikal balandlikka ega bo‘ladilar.
+
+00:07:04.590 --> 00:07:07.720
+Hozir bu joylashuv tartibini uni ishlaydigan qilib 
+o‘zgartirishning ko‘plab yo‘llari bor va 
+
+00:07:07.720 --> 00:07:08.820
+bu bitta yo‘lidir.
+
+00:07:08.820 --> 00:07:10.470
+Demak, o‘tgan kursdan, 
+
+00:07:10.470 --> 00:07:14.100
+biz farzand ko’rinishlar uchun joylashuv tartibi 
+vaznlarini belgilay olishni o‘rgandik.
+
+00:07:14.100 --> 00:07:18.340
+Shunda, ular ota chiziqli joylashuv tartibida 
+ko‘proq yaroqli joyni egallaydilar.
+
+00:07:18.340 --> 00:07:22.260
+Hozir men har bir ko’rinishning balandligini nol qilib 
+qo‘ya olaman va ularning har biriga 1 ga teng vazn belgilayman, 
+
+00:07:22.260 --> 00:07:28.050
+shunda, vertikal bo‘sh joy ikkala farzand 
+ko’rinishlar o‘rtasida teng bo‘linadi.
+
+00:07:28.050 --> 00:07:30.180
+Qo‘shimcha qilib, men gravity deb 
+nomlanadigan atribute ni ham ishlatishim mumkin.
+
+00:07:30.180 --> 00:07:33.490
+Demak, birinchi matn ko’rinishi uchun, 
+uning gravity qiymatini bottom qilaman, shunda,
+
+00:07:33.490 --> 00:07:36.930
+u matn tarkibiy qismini ko’rinishning 
+pastki qismiga surib qo‘yadi.
+
+00:07:36.930 --> 00:07:40.810
+Va ikkinchi matn ko’rinishi uchun, uning 
+gravity atribute ini top qilib qo‘yaman.
+
+00:07:40.810 --> 00:07:44.750
+Va hozir matn ko’rinishning joylashuvi matn 
+ko’rinishning yuqori qismida bo‘ladi.
+
+00:07:44.750 --> 00:07:46.658
+Kodga qaytsak, bu nimaga o‘xshashi 
+kerakligini ko‘ramiz.
+
+00:07:46.658 --> 00:07:51.335
+Demak, miwok_text_view ning kengligi ro‘yxat 
+elementlari joylashuv tartibining qolgan qismini 
+
+00:07:51.335 --> 00:07:53.564
+qoplab oladigan qilib, match_parent qilib qo‘yilgan.
+
+00:07:53.564 --> 00:07:56.896
+Uning balandligi 0 dps bo‘ladi va vazni bir bo‘ladi,
+
+00:07:56.896 --> 00:08:00.625
+o‘zi belgilab qo‘yilgan ko’rinishning 
+ham eni match_parent .
+
+00:08:00.625 --> 00:08:04.620
+Uning balandligi ham nol va 
+uning ham vazni bir.
+
+00:08:04.620 --> 00:08:07.813
+Demak, bu ikkala matn ko’rinishlari ota
+chiziqli joylashuv tartibida yaroqli 
+
+00:08:07.813 --> 00:08:09.222
+bo‘lgan balandlikni o‘zaro 
+bo‘lishib oladi, deganidir.
+
+00:08:09.222 --> 00:08:12.909
+Keyin ko’rinishning ichidagi tarkibiy 
+qismning joylashuvini o‘zgartiradigan 
+
+00:08:12.909 --> 00:08:13.490
+gravity ni o‘rnatamiz.
+
+00:08:13.490 --> 00:08:16.610
+Ammo eslab qoling, u ko’rinishning 
+o‘lchamini o‘zgartirmaydi.
+
+00:08:16.610 --> 00:08:20.950
+Mana bu yerda biz Miwok matn ko’rinishi 
+ichidagi matnni pastki qismga joylashtirdik va 
+
+00:08:20.950 --> 00:08:23.320
+o‘zi belgilab qo‘yiladigan matn ko’rinishining 
+ichidagi matnni yuqori qismga joylashtirib qo‘ydik.
+
+00:08:24.930 --> 00:08:27.010
+Va mana u qurilmada nimaga o‘xshaydi.
+
+00:08:27.010 --> 00:08:28.360
+Demak, Numbers ni ustiga bosish orqali,
+
+00:08:28.360 --> 00:08:32.240
+biz ikkita matn ko’rinishlari ro‘yxat elementlari 
+ichida markazlashtirilganini ko‘rishimiz mumkin.
+
+00:08:32.240 --> 00:08:34.830
+Keling, boshqa sahifalar uchun u 
+nimaga o‘xshashini ko‘ramiz.
+
+00:08:34.830 --> 00:08:36.559
+Bular yaxshiga o‘xshab ko‘rinayapti demak, 
+
+00:08:36.559 --> 00:08:40.470
+hozir to‘g‘irlashimiz kerak bo‘lgan yagona narsa 
+bu ro‘yxat elementlarining fon rangi.
+
+00:08:40.470 --> 00:08:44.100
+Ularning hammasi ham mana bu zarg’aldoq rangini 
+ishlatishayotgani yo‘q va uning o‘rniga har bir toifa uchun mos 
+
+00:08:44.100 --> 00:08:44.750
+bo‘lgan rangni ishlatishyapti.
+

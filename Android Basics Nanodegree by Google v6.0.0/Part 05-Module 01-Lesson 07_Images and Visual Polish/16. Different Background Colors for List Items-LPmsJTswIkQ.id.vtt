@@ -1,0 +1,162 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.590 --> 00:00:03.610
+Saya ingin memasukkan sebuah warna
+ke dalam WordAdapter, jadi
+
+00:00:03.610 --> 00:00:06.890
+semua kata dalam kategori tersebut
+memiliki warna latar belakang yang sama.
+
+00:00:06.890 --> 00:00:10.227
+Untuk itu, saya harus memodifikasi
+WordAdapter agar memegang nilai
+
+00:00:10.227 --> 00:00:11.148
+resource warna kita.
+
+00:00:11.148 --> 00:00:20.428
+[BLANK_AUDIO]
+
+00:00:20.428 --> 00:00:25.195
+Sekarang saya harus memodifikasi
+constructor yang ada agar menerima
+
+00:00:25.195 --> 00:00:29.958
+colorResourceID baru ini sebagai input, dan
+saya harus mengatur nilai m color
+
+00:00:29.958 --> 00:00:34.910
+resource ID untuk input apa pun yang
+dimasukkan sebagai colorResourceID.
+
+00:00:37.440 --> 00:00:40.620
+Lalu, di bawah, saya tuliskan metode yang
+dibutuhkan untuk mengatur warna itu.
+
+00:00:40.620 --> 00:00:42.940
+Ini dilakukan dengan blok
+kode ini.
+
+00:00:42.940 --> 00:00:44.870
+Pertama-tama, saya atur tema
+warna untuk
+
+00:00:44.870 --> 00:00:48.930
+item list, lalu saya cari warna yang
+dirujuk oleh resourceID, dan
+
+00:00:49.940 --> 00:00:52.680
+terakhir mengatur warna latar belakang
+untuk textContainerView.
+
+00:00:53.680 --> 00:00:55.280
+Saya tahu warna bisa agak rumit, dan
+
+00:00:55.280 --> 00:00:57.420
+memang perlu beberapa percobaan
+untuk melakukannya dengan benar.
+
+00:00:57.420 --> 00:01:00.640
+Tapi, ikutilah dan Anda akan mampu
+melakukan yang serupa di aplikasi Anda.
+
+00:01:00.640 --> 00:01:04.620
+Sekarang, kita perlu mengonversi
+colorResourceID menjadi nilai warna.
+
+00:01:04.620 --> 00:01:07.705
+Untuk itu, mari kita buka
+ListItemLayout.
+
+00:01:07.705 --> 00:01:11.430
+Di sini, kita perlu memastikan bahwa
+linear layout dalam ListItemLayout
+
+00:01:11.430 --> 00:01:12.510
+memiliki ID pada container.
+
+00:01:14.840 --> 00:01:16.270
+Kembali ke WordAdapter.
+
+00:01:16.270 --> 00:01:19.030
+Setelah kita mengatur constructor
+WordAdapter untuk mengambil
+
+00:01:19.030 --> 00:01:21.760
+colorResourceID, kita perlu memodifikasi
+activity yang lain sehingga
+
+00:01:21.760 --> 00:01:23.990
+saat kita memanggil constructor
+WordAdapter,
+
+00:01:23.990 --> 00:01:25.020
+kita memasukkan input yang benar.
+
+00:01:26.110 --> 00:01:28.011
+Jadi, di dalam NumbersActivity ini,
+
+00:01:28.011 --> 00:01:30.999
+[BLANK_AUDIO]
+
+00:01:30.999 --> 00:01:36.307
+saya harus menambahkan ke dalam
+colorsActivity, demikian juga
+
+00:01:36.307 --> 00:01:41.140
+untuk phrasesActivity dan terakhir
+untuk familyActivity.
+
+00:01:44.010 --> 00:01:45.770
+Dan satu hal lagi sebelum saya lupa.
+
+00:01:45.770 --> 00:01:49.212
+Kembali ke ListItemLayout, ingatlah
+untuk membuang warna latar belakang
+
+00:01:49.212 --> 00:01:51.400
+yang telah kita tulis kode mentahnya
+ke dalam ListItemLayout.
+
+00:01:51.400 --> 00:01:55.190
+Jadi, kita telah mengatur agar warna latar
+belakang oranye selalu muncul di balik teks,
+
+00:01:55.190 --> 00:01:58.250
+tapi sekarang karena kita bisa mengatur
+warna secara dinamis saat item list dibuat,
+
+00:01:58.250 --> 00:01:59.050
+kita tidak membutuhkannya lagi.
+
+00:02:00.150 --> 00:02:01.880
+Sekarang mari kita uji aplikasi.
+
+00:02:01.880 --> 00:02:02.840
+Kita mulai dengan angka.
+
+00:02:03.880 --> 00:02:08.090
+Baik, oranye sudah diperkirakan dan
+kemudian anggota keluarga, whoa…
+
+00:02:08.090 --> 00:02:09.750
+Tampak bagus.
+
+00:02:09.750 --> 00:02:13.130
+Kembali ke warna, bagus, dan
+
+00:02:13.130 --> 00:02:17.530
+terakhir frasa, dan
+saya suka warna biru itu.
+
+00:02:17.530 --> 00:02:21.630
+Tiap kategori menampilkan warna berbeda
+sesuai harapan dan semua tampak rapi
+
+00:02:21.630 --> 00:02:24.590
+dan sangat indah sekarang, jadi
+selamat atas kerja bagus Anda.
+

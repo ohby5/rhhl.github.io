@@ -1,0 +1,314 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.430 --> 00:00:02.830
+Baik, jadi masih ada tugas
+pengodean keempat di sini,
+
+00:00:02.830 --> 00:00:05.600
+yaitu memastikan bahwa WordAdapter
+memiliki instruksi
+
+00:00:05.600 --> 00:00:08.130
+yang benar untuk membuat
+tiap ListItemView.
+
+00:00:08.130 --> 00:00:12.010
+Artinya, kita pertama-tama perlu memodifikasi
+kelas Word sehingga WordAdapter
+
+00:00:12.010 --> 00:00:15.140
+bisa tahu apakah ada gambar valid yang
+terkait dengan kata tersebut atau tidak.
+
+00:00:15.140 --> 00:00:18.013
+Kami juga telah menyediakan petunjuk di
+bawah kuis jika Anda butuh bantuan.
+
+00:00:18.013 --> 00:00:20.830
+Lalu kita perlu memodifikasi
+kelas WordAdapter.
+
+00:00:20.830 --> 00:00:25.480
+Jadi, bisa membuat ListItem yang
+sama-sama berisi gambar dan tidak.
+
+00:00:25.480 --> 00:00:29.160
+Dengan cara ini, kelas WordAdapter yang
+sama dapat digunakan di semua
+
+00:00:29.160 --> 00:00:30.140
+kategori yang berbeda-beda.
+
+00:00:30.140 --> 00:00:34.670
+Saya ingin perkenalkan Anda pada konsep
+baru yang saya singgung di kuis terakhir.
+
+00:00:34.670 --> 00:00:38.060
+Ada metode yang dapat Anda panggil
+untuk mengubah apakah view tampak
+
+00:00:38.060 --> 00:00:40.240
+atau tidak tampak sementara aplikasi berjalan.
+
+00:00:40.240 --> 00:00:44.170
+Untuk objek view tertentu, seperti
+terlihat di kelas view ini,
+
+00:00:44.170 --> 00:00:49.400
+Anda dapat memanggil metode setVisibility
+di sini dan memasukkan input integer satu.
+
+00:00:49.400 --> 00:00:54.315
+Kemungkinan input yang ada adalah visible,
+invisible, dan gone, dan ini
+
+00:00:54.315 --> 00:00:57.665
+mungkin tampak seperti nilai string tapi
+mari kita klik dan lihat lebih dekat.
+
+00:00:58.955 --> 00:01:02.825
+Saat mengeklik visible, kita bisa
+melihat bahwa ini sebenarnya integer
+
+00:01:02.825 --> 00:01:07.860
+yang didefinisikan dalam kelas view dan
+punya nilai integer nol.
+
+00:01:07.860 --> 00:01:10.280
+Berikut ini cara menggunakan metode
+ini dalam kode Anda.
+
+00:01:10.280 --> 00:01:14.160
+Asumsikan bahwa kita punya view yang
+disimpan di variabel bernama TextView.
+
+00:01:14.160 --> 00:01:18.000
+Kita dapat memanggil metode setVisibility
+di objek TextView ini dan
+
+00:01:18.000 --> 00:01:20.450
+ke dalam metode ini kita masukkan satu input
+
+00:01:20.450 --> 00:01:23.770
+yaitu integer yang didefinisikan di
+kelas view bernama visible.
+
+00:01:23.770 --> 00:01:26.790
+Ini adalah input yang berbeda-beda
+dalam metode setVisibility.
+
+00:01:26.790 --> 00:01:30.060
+Saya tidak akan memberi tahu Anda tentang
+perilaku ketiga status ini dulu.
+
+00:01:30.060 --> 00:01:31.660
+Saya ingin Anda bereksperimen atau
+
+00:01:31.660 --> 00:01:34.690
+membaca dokumentasi untuk memahami
+sendiri tentang apa artinya.
+
+00:01:34.690 --> 00:01:38.270
+Ketiga status visibility ini direpresentasikan
+dengan tiga nilai integer yang telah
+
+00:01:38.270 --> 00:01:41.830
+didefinisikan yang kelas view tahu
+dapat diharapkan dan
+
+00:01:41.830 --> 00:01:44.670
+akan tahu harus berperilaku bagaimana
+saat menjumpainya.
+
+00:01:44.670 --> 00:01:48.820
+Jika kita harus memasukkan nilai
+integer seperti 2001,
+
+00:01:48.820 --> 00:01:50.960
+maka kelas view tidak tahu harus
+melakukan apa dengan view.
+
+00:01:51.960 --> 00:01:56.330
+Sebagai ringkasan, kelas view hanya
+mengenali ketiga angka ini.
+
+00:01:56.330 --> 00:01:59.410
+Jadi, misalnya, jika metode ini
+menerima nol sebagai input,
+
+00:01:59.410 --> 00:02:01.760
+view tahu bahwa dia
+harus menjadi visible (tampak).
+
+00:02:01.760 --> 00:02:04.770
+Saya ingin Anda memperhatikan sesuatu
+tentang variabel ini dalam dokumentasi.
+
+00:02:04.770 --> 00:02:10.680
+Dikatakan bahwa public static final
+int VISIBLE dan
+
+00:02:10.680 --> 00:02:15.060
+kita belum melihat static atau final sebelumnya
+dan keduanya adalah kunci Java yang
+
+00:02:15.060 --> 00:02:18.510
+memiliki makna khusus dan
+keduanya disebut modifier.
+
+00:02:18.510 --> 00:02:22.030
+Kali terakhir kita mendengar tentang modifier
+adalah saat kita membahas bagaimana kata
+
+00:02:22.030 --> 00:02:24.940
+seperti public dan private adalah access
+
+00:02:24.940 --> 00:02:28.620
+modifier yang digunakan untuk mengontrol
+siapa yang bisa memakai variabel atau metode kelas.
+
+00:02:28.620 --> 00:02:32.830
+Karena variabel visible dideklarasikan
+menggunakan kata kunci final,
+
+00:02:32.830 --> 00:02:34.820
+bidang ini tak pernah mengubah nilai.
+
+00:02:34.820 --> 00:02:39.370
+Jadi, bayangkan nol sebagai final
+absolut, nilai final.
+
+00:02:39.370 --> 00:02:43.410
+Setelah variabel diinisialisasi, jika Anda
+coba memberikan nilai berbeda, akan
+
+00:02:43.410 --> 00:02:46.080
+ada kesalahan Java yang mengatakan
+hal itu tidak diizinkan.
+
+00:02:46.080 --> 00:02:50.260
+Di Java, jika variabel tidak mengubah
+nilai, maka disebut constant (konstanta).
+
+00:02:50.260 --> 00:02:53.580
+Anda dapat membayangkannya sebagai
+nilai yang sama terus-menerus.
+
+00:02:53.580 --> 00:02:55.430
+Saat kita menjumpai nilai constant,
+
+00:02:55.430 --> 00:02:59.468
+konvensi di Java adalah untuk menamai
+variabel tersebut dengan huruf kapital semua.
+
+00:02:59.468 --> 00:03:01.880
+Maka, pembesaran huruf tidak menyiratkan
+bahwa huruf-huruf ini
+
+00:03:01.880 --> 00:03:05.965
+meneriakkan nama-nama variabel ini
+seperti visible, invisible, atau gone.
+
+00:03:05.965 --> 00:03:08.755
+Huruf-huruf tersebut dibesarkan sebagai
+cara mudah untuk menunjukkan kepada kita
+
+00:03:08.755 --> 00:03:10.555
+bahwa itu adalah nilai konstanta.
+
+00:03:10.555 --> 00:03:13.875
+Kata kunci final menjelaskan kenapa
+variabel ini merupakan nilai konstan dan
+
+00:03:13.875 --> 00:03:15.785
+namanya ditulis dengan huruf besar semua.
+
+00:03:15.785 --> 00:03:17.545
+Bagaimana dengan kata kunci static?
+
+00:03:17.545 --> 00:03:21.110
+Ini berarti bahwa variabel ini terkait
+dengan kelas tersebut dan tidak terkait
+
+00:03:21.110 --> 00:03:23.110
+dengan contoh objek
+kelas tersebut.
+
+00:03:23.110 --> 00:03:27.530
+Jadi, ini adalah konsep yang tidak trivial
+tapi kita tak akan membahasnya sekarang.
+
+00:03:27.530 --> 00:03:30.120
+Yang perlu Anda ketahui adalah bahwa
+karena variabel ini public dan
+
+00:03:30.120 --> 00:03:33.890
+private, Anda dapat melanjutkan
+merujuk pada variabel ini secara langsung,
+
+00:03:33.890 --> 00:03:37.170
+dengan menggunakan nama kelas view
+diikuti dengan tanda titik.
+
+00:03:37.170 --> 00:03:40.120
+Dalam hal ini, view titik visible.
+
+00:03:40.120 --> 00:03:43.280
+Notasi titik ini
+berarti bahwa variabel ini adalah
+
+00:03:43.280 --> 00:03:45.850
+bagian dari kelas yang
+muncul sebelum tanda titik.
+
+00:03:45.850 --> 00:03:50.030
+Contoh lain adalah view titik
+invisible atau view titik gone untuk
+
+00:03:50.030 --> 00:03:51.280
+status lainnya.
+
+00:03:51.280 --> 00:03:54.090
+Setelah Anda selesai memodifikasi
+kode WordAdapter,
+
+00:03:54.090 --> 00:03:56.380
+Saya ingin Anda menjawab
+kedua pertanyaan ini.
+
+00:03:56.380 --> 00:03:58.650
+Untuk tata letak ListItem
+yang kita gunakan hanya untuk
+
+00:03:58.650 --> 00:04:03.090
+frasa, apakah visibility imageView
+harus diatur ke visible,
+
+00:04:03.090 --> 00:04:05.970
+invisible, atau gone? Lalu untuk
+
+00:04:05.970 --> 00:04:10.240
+tata letak ListItem ini, yang akan kita pakai
+untuk semua kategori yang lain,
+
+00:04:10.240 --> 00:04:15.080
+apakah gambarnya harus diatur ke visible,
+invisible, atau gone?
+
+00:04:15.080 --> 00:04:17.269
+Aplikasi harus tampak seperti ini
+setelah Anda selesai.
+
+00:04:17.269 --> 00:04:20.250
+Saat membuka phrases, tidak
+ada gambar.
+
+00:04:20.250 --> 00:04:23.467
+Tapi saat kita membuka kategori lain,
+semua memiliki gambar.
+
+00:04:23.467 --> 00:04:30.779
+[BLANK_AUDIO]
+

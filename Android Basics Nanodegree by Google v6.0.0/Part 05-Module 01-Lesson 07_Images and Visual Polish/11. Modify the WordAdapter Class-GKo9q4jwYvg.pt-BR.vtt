@@ -1,0 +1,249 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.595
+Terminamos 3 dos 4 itens.
+
+00:00:03.628 --> 00:00:05.675
+Temos uma lista
+de objetos de palavra
+
+00:00:05.708 --> 00:00:08.592
+onde cada palavra é associada
+a uma imagem.
+
+00:00:08.625 --> 00:00:11.061
+Nós incluímos
+todas as imagem no app,
+
+00:00:11.094 --> 00:00:13.295
+e atualizamos
+o layout de item de lista
+
+00:00:13.328 --> 00:00:15.117
+para incluir
+uma exibição de imagem.
+
+00:00:15.150 --> 00:00:17.138
+Agora vamos para a tarefa 4.
+
+00:00:17.171 --> 00:00:19.707
+Precisamos modificar as instruções
+do WordAdapter.
+
+00:00:19.740 --> 00:00:21.699
+O WordAdapter é responsável
+
+00:00:21.732 --> 00:00:23.318
+por carregar
+a informação certa
+
+00:00:23.351 --> 00:00:26.194
+do objeto de palavra
+para o layout de item de lista.
+
+00:00:26.227 --> 00:00:29.572
+Isso inclui carregar a imagem certa
+na exibição de imagem.
+
+00:00:29.605 --> 00:00:32.146
+Vou até
+a classe WordAdapter.
+
+00:00:32.179 --> 00:00:34.673
+Foco no método getView.
+
+00:00:34.706 --> 00:00:36.571
+Lembre-se
+que esse método é chamado
+
+00:00:36.604 --> 00:00:38.535
+quando a exibição de lista
+está tentando
+
+00:00:38.568 --> 00:00:40.787
+exibir uma lista de itens
+de uma dada posição.
+
+00:00:40.820 --> 00:00:43.110
+A exibição de lista vai nos mostrar
+uma exibição em potencial
+
+00:00:43.143 --> 00:00:44.311
+que podemos reutilizar.
+
+00:00:44.344 --> 00:00:46.771
+Aqui se chama convertView.
+
+00:00:46.804 --> 00:00:49.261
+E a última entrada se refere
+ao grupo de exibição pai
+
+00:00:49.294 --> 00:00:52.882
+para todos esses itens
+que são a própria ListView.
+
+00:00:52.915 --> 00:00:54.836
+O propósito
+do método getView
+
+00:00:54.869 --> 00:00:56.869
+é pegar a exibição
+de item de lista
+
+00:00:56.902 --> 00:00:58.594
+e colocar de volta
+na lista de exibição.
+
+00:00:58.627 --> 00:01:01.998
+A seção de código nos ajuda
+a aumentar a exibição.
+
+00:01:02.031 --> 00:01:03.904
+Então aumentamos
+a exibição de item de lista,
+
+00:01:03.937 --> 00:01:06.688
+o que significa que criamos
+um novo layout de item de lista
+
+00:01:06.721 --> 00:01:11.136
+a partir desse recurso xml,
+list_item.
+
+00:01:11.169 --> 00:01:15.312
+E vamos colocar isso na variável
+da exibição de item de lista.
+
+00:01:15.345 --> 00:01:17.997
+Vou pular até que esses recursos xml
+estejam limpos.
+
+00:01:18.030 --> 00:01:20.049
+Clique com o botão direito,
+
+00:01:20.082 --> 00:01:24.291
+vá para "Ir para"
+e depois "Declarações".
+
+00:01:24.324 --> 00:01:26.262
+No recurso de xml,
+
+00:01:26.295 --> 00:01:28.540
+vemos que mesmo que seja
+uma exibição única,
+
+00:01:28.573 --> 00:01:31.456
+está referenciando o layout linear
+na raiz do layout.
+
+00:01:31.489 --> 00:01:35.514
+Nessa visão podemos encontrar
+as exibições de criança e modificá-las.
+
+00:01:35.547 --> 00:01:37.641
+Volte para WordAdapter.
+
+00:01:37.674 --> 00:01:39.819
+Essa linha de código aqui
+nos ajuda a colocar
+
+00:01:39.852 --> 00:01:42.004
+o objeto de palavra
+na posição certa da lista.
+
+00:01:42.037 --> 00:01:43.921
+Nessa outra seção do código,
+
+00:01:43.954 --> 00:01:45.873
+encontramos a exibição
+de texto de criança
+
+00:01:45.906 --> 00:01:49.843
+com o ID miwork_ text_view
+
+00:01:49.886 --> 00:01:53.760
+e colocamos a tradução em miwok
+da palavra na exibição de texto.
+
+00:01:53.793 --> 00:01:55.748
+E repita os mesmos passos
+
+00:01:55.781 --> 00:02:00.308
+para a próxima visualização de texto
+com ID default_text_view.
+
+00:02:00.341 --> 00:02:03.554
+E coloque a tradução em inglês da palavra
+na exibição de texto.
+
+00:02:03.587 --> 00:02:05.074
+Por último,
+já que adicionamos
+
+00:02:05.107 --> 00:02:07.433
+uma exibição de imagem
+ao nosso layout de item de lista,
+
+00:02:07.466 --> 00:02:10.199
+precisamos ter certeza
+que nossos adaptadores sabem disso.
+
+00:02:10.232 --> 00:02:11.762
+Na próxima
+tarefa de códigos,
+
+00:02:11.795 --> 00:02:15.100
+modifique o método getView
+do WordAdapter
+
+00:02:15.133 --> 00:02:18.172
+para que coloque a imagem certa
+no ImageView
+
+00:02:18.205 --> 00:02:19.934
+do layout de item de lista.
+
+00:02:19.967 --> 00:02:21.047
+Uma dica:
+
+00:02:21.080 --> 00:02:23.327
+se refira ao aplicativo flavor
+do Android como exemplo.
+
+00:02:23.360 --> 00:02:24.861
+Outra dica:
+
+00:02:24.894 --> 00:02:26.153
+você pode fazer referência
+ao aplicativo flavor do Android
+
+00:02:26.186 --> 00:02:27.837
+que usamos na última aula,
+se ajudar.
+
+00:02:27.870 --> 00:02:31.363
+Esse app exibe uma imagem
+para o lançamento do Android
+
+00:02:31.396 --> 00:02:33.994
+correspondente
+em cada item da lista.
+
+00:02:34.027 --> 00:02:36.910
+É assim que o novo app
+deve estar quando você terminar.
+
+00:02:36.943 --> 00:02:40.183
+Repare que tem um problema
+com a atividade de frase,
+
+00:02:40.216 --> 00:02:42.852
+mas vamos consertá-lo
+em um próximo passo do código.
+
+00:02:42.885 --> 00:02:44.923
+Não se preocupe com isso
+nessa tarefa.
+

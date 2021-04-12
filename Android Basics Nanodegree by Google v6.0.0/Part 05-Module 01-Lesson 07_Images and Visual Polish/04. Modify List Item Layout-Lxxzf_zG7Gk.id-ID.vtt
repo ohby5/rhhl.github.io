@@ -1,0 +1,211 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.270 --> 00:00:02.170
+Untuk menambahkan sebuah gambar ke
+ListItemLayout,
+
+00:00:02.170 --> 00:00:05.850
+saya akan membuka file tata letak
+list item dot XML.
+
+00:00:05.850 --> 00:00:08.460
+Kita lihat di sini bahwa file ini
+sudah punya dua text view.
+
+00:00:08.460 --> 00:00:11.580
+Yang satu memegang kata Miwok dan
+satu lagi untuk terjemahan Inggris.
+
+00:00:13.260 --> 00:00:16.250
+Mari kita lanjut dan sisipkan
+sebuah ImageView di sini.
+
+00:00:16.250 --> 00:00:19.850
+Saya akan memasukkan ID view bernama
+image karena harus melakukannya di
+
+00:00:19.850 --> 00:00:23.270
+pembaca kode Java, untuk melakukan
+perubahan di sumber gambar dan
+
+00:00:23.270 --> 00:00:27.560
+sebagai catatan kita tidak perlu melakukan
+itu dalam tugas pengodean ini, tapi
+
+00:00:27.560 --> 00:00:29.250
+kita akan melakukannya nanti.
+
+00:00:29.250 --> 00:00:33.440
+Selanjutnya, kita atur lebar dan tinggi
+tata letak menjadi wrapped content.
+
+00:00:33.440 --> 00:00:36.220
+Terakhir, kita atur atribut sumber
+Android untuk menggunakan
+
+00:00:36.220 --> 00:00:39.590
+ikon aplikasi sebagai gambar placeholder
+seperti yang kita ungkap dalam kuis.
+
+00:00:39.590 --> 00:00:44.627
+Kita merujuk ikon aplikasi menggunakan
+sintaksis @mipmap/ic_launcher.
+
+00:00:44.627 --> 00:00:49.045
+Baik, tampak bagus, jadi mari
+kita coba dengan menjalankannya di aplikasi.
+
+00:00:49.045 --> 00:00:51.805
+Dengan perangkat berjalan, mari kita
+ketuk NumbersActivity.
+
+00:00:51.805 --> 00:00:55.375
+Baik, bagus, jadi memang berjalan, dan
+ada gambar di layar kita.
+
+00:00:55.375 --> 00:00:59.335
+Tapi, ikon dan spacing tidak tepat
+seperti yang kita inginkan.
+
+00:01:00.625 --> 00:01:04.310
+Dari kuis, kita lihat bahwa kita ingin
+gambar di kiri dan
+
+00:01:04.310 --> 00:01:05.990
+teks di kanan.
+
+00:01:05.990 --> 00:01:08.570
+Jadi, kita perlu membuat beberapa
+penyesuaian untuk tata letak kita.
+
+00:01:08.570 --> 00:01:13.330
+Untuk memodifikasi ListItemLayout ini,
+pertama-tama saya bisa membuat
+
+00:01:13.330 --> 00:01:16.790
+ListItem ini dengan horizontal
+linear layout.
+
+00:01:16.790 --> 00:01:19.430
+Child pertama adalah gambar dan
+
+00:01:19.430 --> 00:01:22.510
+child kedua adalah semua
+teks di sisi kanan.
+
+00:01:22.510 --> 00:01:27.590
+Kita bisa melakukannya dengan horizontal
+linear layout dengan dua view child.
+
+00:01:27.590 --> 00:01:31.840
+Kita juga perhatikan bahwa child kedua
+tersusun dari dua textView
+
+00:01:31.840 --> 00:01:33.820
+yang ditumpuk secara vertikal.
+
+00:01:33.820 --> 00:01:37.360
+Ini bisa dibuat dengan
+vertical linear layout.
+
+00:01:37.360 --> 00:01:40.550
+Di sini, kita lihat bahwa ada
+vertical linear layout
+
+00:01:40.550 --> 00:01:43.040
+yang tertempel di horizontal
+linear layout.
+
+00:01:43.040 --> 00:01:45.610
+Ini adalah konsep yang disebut
+nested view groups.
+
+00:01:45.610 --> 00:01:49.005
+Jadi, viewGroup yang terkandung
+di dalam viewGroup lain.
+
+00:01:49.005 --> 00:01:53.835
+Ingat, kita belajar topik ini di
+pelajaran dua kursus terakhir.
+
+00:01:53.835 --> 00:01:57.385
+Kembali ke Android Studio, mari kita
+lakukan perubahan untuk ListItemLayout.
+
+00:01:57.385 --> 00:02:01.142
+Pertama-tama, saya akan memodifikasi
+linear layout untuk mengubah orientasinya
+
+00:02:01.142 --> 00:02:02.530
+dari vertikal menjadi horizontal.
+
+00:02:03.890 --> 00:02:07.330
+Lalu saya akan membungkus kedua
+TextView di dalam vertical LinearLayout
+
+00:02:07.330 --> 00:02:11.930
+baru dan menambahkan
+tag penutup.
+
+00:02:11.930 --> 00:02:14.550
+Perhatikan bahwa di dalam
+LinearLayout yang baru saja ditambahkan,
+
+00:02:14.550 --> 00:02:16.510
+ada beberapa padding
+di sisi kiri.
+
+00:02:16.510 --> 00:02:20.710
+Jadi, 16 dpi spasi antara teks
+dan gambar.
+
+00:02:20.710 --> 00:02:22.840
+Mari kita pratinjau untuk melihat
+bagaimana tampilannya, 
+
+00:02:22.840 --> 00:02:24.840
+klik tombol pratinjau di sini.
+
+00:02:24.840 --> 00:02:28.430
+Dari panel pratinjau, saya bisa melihat
+bahwa tata letak tampak jauh lebih baik.
+
+00:02:28.430 --> 00:02:32.590
+Ada ikon keranjang di sisi kiri, dan
+kedua TextView kita di sisi kanan.
+
+00:02:32.590 --> 00:02:36.040
+Kita lanjutkan, jalankan aplikasi
+di perangkat dan lihat bagaimana hasilnya.
+
+00:02:36.040 --> 00:02:40.250
+Pertama-tama, saya ingin menutup panel
+pratinjau dan menjalankan aplikasi kita.
+
+00:02:40.250 --> 00:02:43.110
+Ini adalah versi aplikasi saat ini yang
+berjalan di perangkat. Sekarang saya
+
+00:02:43.110 --> 00:02:45.760
+akan mengetuk NumbersActivity. Sempurna.
+
+00:02:45.760 --> 00:02:50.090
+Ini tampak seperti screenshot dari kuis
+dengan ikon keranjang di sisi kiri
+
+00:02:50.090 --> 00:02:52.288
+dan menampilkan tiap item list.
+
+00:02:52.288 --> 00:02:55.980
+Tidak sama persis dengan maket
+desain kita, tapi
+
+00:02:55.980 --> 00:02:59.300
+kita pikirkan detail kecil seperti ukuran
+font, warna, dan
+
+00:02:59.300 --> 00:03:00.620
+padding di akhir pelajaran ini.
+

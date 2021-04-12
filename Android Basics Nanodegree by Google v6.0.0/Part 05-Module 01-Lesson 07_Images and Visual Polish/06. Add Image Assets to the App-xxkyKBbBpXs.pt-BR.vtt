@@ -1,0 +1,450 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.702
+Vocês devem estar pensando:
+
+00:00:01.736 --> 00:00:05.003
+"Por que não podemos ter
+só uma versão dos recursos?"
+
+00:00:05.036 --> 00:00:07.070
+Vejamos esta página aqui.
+
+00:00:07.103 --> 00:00:10.470
+Estou em
+design.google.com/devices.
+
+00:00:10.503 --> 00:00:14.070
+A página lista todos
+os aparelhos Android populares.
+
+00:00:14.103 --> 00:00:17.769
+Há telefones, tablets,
+e até relógios.
+
+00:00:17.803 --> 00:00:20.803
+Mas ela não lista
+todos os aparelhos.
+
+00:00:20.836 --> 00:00:23.003
+Esta tabela é útil
+
+00:00:23.036 --> 00:00:27.036
+pois podemos ver
+as dimensões da tela em dpis
+
+00:00:27.070 --> 00:00:29.637
+e a densidade do aparelho.
+
+00:00:29.670 --> 00:00:36.370
+Aqui vemos alguns hdpis,
+alguns xhdpis e xxhdpis.
+
+00:00:36.403 --> 00:00:40.203
+Como veem, há uma grande gama
+de aparelhos Android
+
+00:00:40.237 --> 00:00:41.936
+com densidades distintas.
+
+00:00:41.970 --> 00:00:43.903
+Para relembrar densidade,
+
+00:00:43.936 --> 00:00:47.170
+vamos à documentação
+do programador do Android,
+
+00:00:47.203 --> 00:00:50.370
+no tópico
+"Aceitando Múltiplas Telas".
+
+00:00:50.403 --> 00:00:53.237
+Aqui, na definição
+de densidade da tela,
+
+00:00:53.270 --> 00:00:58.303
+diz que densidade é o número de pixels
+dentro da área física da tela,
+
+00:00:58.337 --> 00:01:00.961
+e que, geralmente,
+é chamada de dpis,
+
+00:01:00.994 --> 00:01:02.629
+ ou pontos por polegada.
+
+00:01:02.670 --> 00:01:06.604
+Há 5 recipientes de densidade comuns
+que vocês devem conhecer.
+
+00:01:06.637 --> 00:01:09.637
+Um aparelho mdpi,
+ou de densidade média,
+
+00:01:09.670 --> 00:01:12.570
+tem, aproximadamente,
+160 pontos por polegada.
+
+00:01:12.604 --> 00:01:15.136
+Um aparelho hdpi,
+ou de alta densidade,
+
+00:01:15.170 --> 00:01:18.070
+tem, aproximadamente,
+240 pontos por polegada.
+
+00:01:18.103 --> 00:01:21.136
+Um aparelho xhdpi,
+ou de densidade extra alta,
+
+00:01:21.170 --> 00:01:24.070
+tem, aproximadamente,
+320 pontos por polegada.
+
+00:01:24.103 --> 00:01:26.503
+E o número de pontos
+segue aumentando.
+
+00:01:26.537 --> 00:01:29.570
+O aparelho de densidade
+extra extra extra alta -
+
+00:01:29.604 --> 00:01:34.036
+são 3 extra - tem, aproximadamente,
+640 pontos por polegada.
+
+00:01:34.070 --> 00:01:36.537
+Como o nome
+e os números indicam,
+
+00:01:36.570 --> 00:01:40.503
+o número de pixels na tela aumenta
+ao aumentarmos a densidade.
+
+00:01:40.537 --> 00:01:43.869
+Com o tempo,
+o hardware se tornou ainda melhor.
+
+00:01:43.903 --> 00:01:46.704
+Temos aparelhos
+de resolução ainda melhor,
+
+00:01:46.736 --> 00:01:50.203
+com mais pixels na tela
+do que mostrado aqui,
+
+00:01:50.237 --> 00:01:52.769
+mas vamos nos concentrar
+nestes 5.
+
+00:01:52.803 --> 00:01:56.936
+No último curso, aprendemos
+a especificar largura e altura
+
+00:01:56.970 --> 00:01:59.370
+em pixels independentes
+de densidade.
+
+00:01:59.403 --> 00:02:03.403
+Ou seja, um botão deve ter
+um tamanho de 48 por 48 dp,
+
+00:02:03.437 --> 00:02:07.604
+e o Android traduziria esse número
+em diferentes números de pixels
+
+00:02:07.637 --> 00:02:10.403
+dependendo da densidade
+da tela do aparelho.
+
+00:02:10.437 --> 00:02:12.769
+Como isso funcionaria
+com uma imagem?
+
+00:02:12.803 --> 00:02:16.970
+Como programador, você declararia
+a largura e altura de uma imagem
+
+00:02:17.003 --> 00:02:18.670
+em valores de dp,
+
+00:02:18.704 --> 00:02:22.270
+como 48dp por 48dp,
+por exemplo.
+
+00:02:22.303 --> 00:02:25.303
+O Android garantiria
+que todas as imagens
+
+00:02:25.337 --> 00:02:28.769
+aparecessem mais ou menos
+do mesmo tamanho físico,
+
+00:02:28.803 --> 00:02:33.836
+independente do número de pixels
+por polegada.
+
+00:02:33.869 --> 00:02:36.769
+Mas se só tivermos
+uma versão da imagem,
+
+00:02:36.803 --> 00:02:39.704
+o Android pode ter
+que aumentá-la ou esticá-la
+
+00:02:39.736 --> 00:02:43.936
+para aparelhos de alta densidade,
+com mais pixels na tela.
+
+00:02:43.970 --> 00:02:47.637
+Ou se tivermos uma versão
+da imagem com muitos pixels,
+
+00:02:47.670 --> 00:02:50.503
+o Android pode
+precisar encolhê-la
+
+00:02:50.537 --> 00:02:53.003
+para aparelhos
+de densidade mais baixa.
+
+00:02:53.036 --> 00:02:56.303
+Nos dois casos, a imagem
+pode ficar distorcida,
+
+00:02:56.337 --> 00:02:57.869
+o que não queremos.
+
+00:02:57.903 --> 00:03:01.570
+Resolvemos isto fornecendo
+versões de tamanhos diferentes
+
+00:03:01.604 --> 00:03:04.769
+da mesma imagem
+para cada recipiente de densidade.
+
+00:03:04.803 --> 00:03:08.036
+Resultará em imagens nítidas
+em todos os aparelhos,
+
+00:03:08.070 --> 00:03:13.604
+sem que o Android
+precise esticá-las ou encolhê-las.
+
+00:03:14.070 --> 00:03:17.136
+Para saber quais tamanhos
+devemos fornecer
+
+00:03:17.170 --> 00:03:19.936
+há relações de conversão
+de dps para pixels.
+
+00:03:19.970 --> 00:03:23.803
+Para um aparelho de densidade média,
+1dp = 1 pixel.
+
+00:03:23.836 --> 00:03:28.203
+Se queremos uma imagem
+de 48dps por 48dps,
+
+00:03:28.237 --> 00:03:33.704
+a versão mdpi da imagem deve ser
+de 48 pixels por 48 pixels.
+
+00:03:33.736 --> 00:03:38.570
+Para aparelhos de alta densidade,
+1 dp = 1,5 pixels.
+
+00:03:38.604 --> 00:03:42.604
+Se queremos uma imagem
+de 48dps por 48dps,
+
+00:03:42.637 --> 00:03:48.036
+a versão hdpi da imagem deve ser
+de 72 pixels por 72 pixels.
+
+00:03:48.070 --> 00:03:51.036
+Podemos fazer os cálculos
+para resoluções altas
+
+00:03:51.070 --> 00:03:53.303
+usando as relações dadas.
+
+00:03:53.337 --> 00:03:57.303
+Como veem aqui,
+a versão xxxhdpi da imagem
+
+00:03:57.337 --> 00:04:00.736
+será bem maior
+do que a versão mdpi.
+
+00:04:00.769 --> 00:04:06.103
+É porque o aparelho xxxhdpi
+tem muito mais pixels na tela.
+
+00:04:06.136 --> 00:04:10.203
+No final, todas as imagens aparecerão
+do mesmo tamanho físico
+
+00:04:10.237 --> 00:04:12.936
+nos aparelhos dos usuários.
+
+00:04:12.970 --> 00:04:17.970
+Vamos ver o tamanho de pixels
+das imagens que fornecemos.
+
+00:04:18.003 --> 00:04:21.903
+Vamos à pasta drawable/mdpi.
+
+00:04:21.936 --> 00:04:25.903
+Vou ver a imagem do filho.
+
+00:04:25.936 --> 00:04:28.970
+Vou selecioná-la,
+clicar na direita,
+
+00:04:29.003 --> 00:04:30.836
+e ter a informação.
+
+00:04:31.637 --> 00:04:34.704
+Aqui, para a versão mdpi
+desta imagem,
+
+00:04:34.736 --> 00:04:39.003
+vemos as dimensões
+de 88 por 88 pixels.
+
+00:04:39.036 --> 00:04:44.237
+Vamos mostrar esta imagem
+como 88dp por 88dp no app final.
+
+00:04:44.270 --> 00:04:49.203
+O tamanho desta versão deve ser
+de 88 pixels por 88 pixels,
+
+00:04:49.237 --> 00:04:53.470
+já que 1dp = 1 pixel
+no aparelho mdpi.
+
+00:04:53.503 --> 00:04:57.136
+Então como é o tamanho do pixel
+para uma versão xxxhdpi
+
+00:04:57.170 --> 00:04:58.803
+da mesma imagem?
+
+00:04:58.836 --> 00:05:04.136
+Vou navegar
+no drawable/xxxhdpi,
+
+00:05:04.170 --> 00:05:07.036
+achar a imagem do filho,
+
+00:05:07.070 --> 00:05:10.769
+selecioná-la
+e ver a informação.
+
+00:05:12.570 --> 00:05:15.769
+Vemos que essa imagem
+é bem maior
+
+00:05:15.803 --> 00:05:21.503
+pelas dimensões listadas aqui
+como 352 por 352 pixels.
+
+00:05:21.537 --> 00:05:25.637
+Estamos fazendo uma troca
+entre o espaço de armazenamento
+
+00:05:25.670 --> 00:05:28.836
+e o poder de processamento
+de que o app precisará.
+
+00:05:28.869 --> 00:05:31.570
+Fornecendo múltiplas versões
+de um recurso,
+
+00:05:31.604 --> 00:05:34.103
+o app toma mais espaço
+de armazenamento,
+
+00:05:34.136 --> 00:05:36.470
+mas usa menos
+poder de processamento.
+
+00:05:36.503 --> 00:05:40.070
+E, para celulares,
+é uma troca muito útil.
+
+00:05:40.103 --> 00:05:43.136
+Nosso app funcionará
+em aparelhos menos potentes
+
+00:05:43.170 --> 00:05:45.103
+sem problemas de desempenho.
+
+00:05:45.136 --> 00:05:48.670
+Agora sabemos por que há
+recursos de tamanhos diferentes
+
+00:05:48.704 --> 00:05:50.503
+em pastas diferentes.
+
+00:05:50.537 --> 00:05:53.036
+Adicione todas essas imagens
+ao seu app.
+
+00:05:53.070 --> 00:05:54.769
+Copie cada pasta drawable,
+
+00:05:54.803 --> 00:05:58.869
+e acrescente-as ao diretório res
+do nosso app no Android Studio.
+
+00:05:58.903 --> 00:06:03.437
+Aqui, no Android Studio, vemos
+que todas versões mdpi das imagens
+
+00:06:03.470 --> 00:06:06.736
+estão na pasta
+drawable/mdpi.
+
+00:06:06.769 --> 00:06:09.103
+O mesmo para a pasta hdpi.
+
+00:06:09.136 --> 00:06:11.704
+Todas as imagens hdpi
+estão aqui.
+
+00:06:11.736 --> 00:06:14.836
+E também
+para as outras resoluções.
+
+00:06:14.869 --> 00:06:18.170
+Quando fizerem isso,
+
+00:06:18.203 --> 00:06:21.370
+o seu app terá
+essas 5 novas pastas.
+
+00:06:21.403 --> 00:06:25.070
+Agora que sabem por que há
+recursos de tamanhos diferentes
+
+00:06:25.103 --> 00:06:26.470
+em pastas diferentes,
+
+00:06:26.503 --> 00:06:29.503
+adicionem todos esses recursos
+ao seu app.
+
+00:06:29.537 --> 00:06:33.403
+Copie cada pasta drawable
+e acrescente-as ao diretório res
+
+00:06:33.437 --> 00:06:35.600
+do seu app
+no Android Studio.
+

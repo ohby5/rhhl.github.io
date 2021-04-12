@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.250 --> 00:00:03.710
+Untuk tugas pertama, kita akan
+menambahkan constructor Word kedua.
+
+00:00:03.710 --> 00:00:06.040
+Di kelas MyWord ini,
+saya akan menyalin dan
+
+00:00:06.040 --> 00:00:09.430
+menempelkan constructor yang ada, dan
+bekerja dengan dasar itu.
+
+00:00:09.430 --> 00:00:10.910
+Ingatlah untuk menyalin komentarnya juga.
+
+00:00:11.950 --> 00:00:13.355
+Jadi, salin dan tempel.
+
+00:00:13.355 --> 00:00:16.329
+Constructor kedua ini akan
+mengambil input ketiga,
+
+00:00:16.329 --> 00:00:18.230
+yaitu imageResourceID
+integer.
+
+00:00:19.270 --> 00:00:22.680
+Ingatlah bahwa tiap kali Anda memodifikasi
+parameter untuk constructor, atau
+
+00:00:22.680 --> 00:00:26.630
+metode apa pun, praktik yang baik
+adalah dengan selalu memperbarui komentar.
+
+00:00:26.630 --> 00:00:27.320
+Saya akan melakukannya di sini.
+
+00:00:29.100 --> 00:00:32.880
+Saya tambahkan imageResourceID,
+yaitu drawable ResourceID, untuk
+
+00:00:32.880 --> 00:00:34.410
+gambar yang berkaitan dengan kata.
+
+00:00:34.410 --> 00:00:37.760
+Di badan constructor kedua ini,
+saya akan menginisialisasi
+
+00:00:37.760 --> 00:00:41.090
+variabel gambar global yang
+kita sebut mImageResourceId,
+
+00:00:41.090 --> 00:00:45.370
+dan menginisialisasinya dengan nilai
+yang dimasukkan ke dalam constructor.
+
+00:00:45.370 --> 00:00:48.050
+Jadi, ini akan diberi nilai
+ImageResourceId.
+
+00:00:48.050 --> 00:00:49.680
+Baik.
+
+00:00:49.680 --> 00:00:53.417
+Setelah variabel ini diinisialisasi,
+pemanggil apa pun dari luar
+
+00:00:53.417 --> 00:00:58.430
+dapat mengakses variabel ini melalui metode
+public ini, yaitu getImageResourceId.
+
+00:00:58.430 --> 00:01:01.770
+Baik, ini menyelesaikan
+tugas pertama.
+
+00:01:01.770 --> 00:01:05.810
+Untuk tugas kedua, kita diminta untuk
+memperbarui semua activity kategori
+
+00:01:05.810 --> 00:01:08.612
+agar menggunakan constructor Word yang benar.
+
+00:01:08.612 --> 00:01:10.190
+Mari kita periksa bagaimana tampilan
+activity.
+
+00:01:11.630 --> 00:01:13.730
+Menuju ke
+NumbersActivity.
+
+00:01:13.730 --> 00:01:14.800
+Beginilah tampilannya
+setelah saya selesai.
+
+00:01:16.070 --> 00:01:18.850
+Di sini, saya merujuk gambar
+yang kita tambahkan ke aplikasi, yaitu
+
+00:01:18.850 --> 00:01:22.740
+memanggil number garis bawah satu,
+number garis bawah dua, dan seterusnya.
+
+00:01:22.740 --> 00:01:26.610
+Dan saya juga ingin menyebut Android
+Studio melakukan kerja bagus dalam menarik
+
+00:01:26.610 --> 00:01:27.300
+gambar.
+
+00:01:27.300 --> 00:01:30.420
+Jadi, ada pratinjau untuk
+gambar yang sedang Anda panggil.
+
+00:01:30.420 --> 00:01:32.680
+Mari kita lihat di
+ColorsActivity.
+
+00:01:32.680 --> 00:01:35.800
+Saya lihat di sini bahwa saya memakai pola
+yang sama untuk membuat list objek
+
+00:01:35.800 --> 00:01:38.240
+Word untuk gambar terkait.
+
+00:01:38.240 --> 00:01:40.080
+Hal yang sama juga berlaku
+untuk FamilyActivity.
+
+00:01:41.080 --> 00:01:43.830
+Kode yang sama digunakan untuk
+membuat objek Word Family
+
+00:01:43.830 --> 00:01:45.740
+dengan gambar yang terkait.
+
+00:01:45.740 --> 00:01:48.890
+Dan saya pikir tampak manis karena
+ada wajah-wajah lucu ini.
+
+00:01:48.890 --> 00:01:52.220
+Terakhir tapi sama pentingnya,
+PhrasesActivity.
+
+00:01:52.220 --> 00:01:56.830
+Saat melihat ini, kita perhatikan bahwa
+PhrasesActivity tidak berubah.
+
+00:01:56.830 --> 00:02:00.892
+Ini bukan masalah karena kita membuat
+tiap objek Word menggunakan terjemahan
+
+00:02:00.892 --> 00:02:03.029
+Inggris dan Miwok untuk frasa.
+
+00:02:03.029 --> 00:02:06.020
+Tapi kita tidak menyediakan input ketiga
+untuk constructor Word,
+
+00:02:06.020 --> 00:02:08.220
+karena kita tidak punya gambar untuk
+tiap frasa.
+
+00:02:08.220 --> 00:02:09.590
+Dalam hal ini,
+
+00:02:09.590 --> 00:02:13.160
+kita menggunakan constructor Word
+yang hanya mengambil dua input.
+
+00:02:14.310 --> 00:02:15.890
+Setelah melakukan perubahan kode tersebut,
+
+00:02:15.890 --> 00:02:19.360
+saya ingin memastikan bahwa aplikasi masih
+berfungsi dengan mengujinya di perangkat.
+
+00:02:19.360 --> 00:02:21.400
+mari kita ketuk kategori.
+
+00:02:21.400 --> 00:02:24.130
+Dan kita lihat bahwa tidak ada
+perubahan yang terlihat, tapi
+
+00:02:24.130 --> 00:02:24.900
+itu akan terjadi selanjutnya.
+

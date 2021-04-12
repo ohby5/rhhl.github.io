@@ -1,0 +1,98 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.520 --> 00:00:03.830
+Untuk pertanyaan di mana menyimpan
+informasi warna latar belakang.
+
+00:00:03.830 --> 00:00:06.580
+Kita bisa menyimpan warna latar belakang
+di objek Word.
+
+00:00:06.580 --> 00:00:09.380
+Artinya, semua kata-kata angka
+
+00:00:09.380 --> 00:00:12.480
+bisa kita masuki warna oranye sebagai
+input dalam constructor.
+
+00:00:12.480 --> 00:00:16.830
+Tapi itu akan sangat boros memori karena
+kita mengingat warna yang sama
+
+00:00:16.830 --> 00:00:19.780
+untuk semua kata dalam kategori yang sama.
+
+00:00:19.780 --> 00:00:23.340
+Jika kita ingin mengurangi jumlah
+informasi yang diulang dalam aplikasi kita,
+
+00:00:23.340 --> 00:00:26.460
+tempat yang lebih patut adalah
+menyimpan informasi warna
+
+00:00:26.460 --> 00:00:28.410
+di kelas WordAdapter.
+
+00:00:28.410 --> 00:00:32.650
+Tiap activity punya tampilan
+list dan WordAdapter sendiri.
+
+00:00:32.650 --> 00:00:36.390
+Untuk tiap WordAdapter,
+kita bisa menyimpan warna di dalamnya,
+
+00:00:36.390 --> 00:00:38.510
+menurut kategori
+yang dibuat untuknya.
+
+00:00:39.550 --> 00:00:43.062
+Seperti yang saya tulis di sini, kita bisa simpan
+informasi warna latar belakang di
+
+00:00:43.062 --> 00:00:46.660
+WordAdapter, jadi tiap kali objek WordAdapter
+baru dibuat untuk
+
+00:00:46.660 --> 00:00:51.050
+list tertentu, akan menerapkan warna latar
+belakang yang sama untuk semua item list.
+
+00:00:52.070 --> 00:00:53.450
+Mengikuti logika ini,
+
+00:00:53.450 --> 00:00:57.410
+WordAdapter dalam numbersActivity
+akan menyimpan warna oranye.
+
+00:00:57.410 --> 00:01:02.030
+WordAdapter dalam activity keluarga akan
+berisi warna hijau dan seterusnya.
+
+00:01:02.030 --> 00:01:05.224
+Mungkin Anda bertanya-tanya, kenapa kita tidak
+menyimpannya dalam activity saja?
+
+00:01:05.224 --> 00:01:08.210
+Karena tiap activity punya
+warna yang berbeda.
+
+00:01:08.210 --> 00:01:11.430
+Activity memang perlu tahu
+tentang warna, tapi
+
+00:01:11.430 --> 00:01:14.550
+hanya saat kita menginisialisasi WordAdapter.
+
+00:01:14.550 --> 00:01:15.840
+Jadi, pada akhirnya,
+
+00:01:15.840 --> 00:01:20.370
+WordAdapter harus menyimpan warna
+sebagai variabel global sehingga dapat
+
+00:01:20.370 --> 00:01:24.810
+terus merujuk kembali ke warna itu tiap kali
+membuat tata letak item list yang baru.
+

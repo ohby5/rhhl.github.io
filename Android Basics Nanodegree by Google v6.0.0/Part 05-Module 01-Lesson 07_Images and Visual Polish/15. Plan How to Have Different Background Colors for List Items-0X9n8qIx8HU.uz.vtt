@@ -1,0 +1,96 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.520 --> 00:00:03.830
+Fon rangi ma’lumotini qayerga 
+joylashtirish hozirda savol bo‘lib turibdi. 
+
+00:00:03.830 --> 00:00:06.580
+Biz Word ob’ektga fon rangini 
+joylasak ham bo‘lardi.
+
+00:00:06.580 --> 00:00:09.380
+Ya’ni bu barcha son so‘zlari uchun 
+
+00:00:09.380 --> 00:00:12.480
+biz constructor ga birorta kiritiladigan qiymat 
+sifatida zarg’aldoq rangni o‘tkazishimiz mumkinligini anglatadi.
+
+00:00:12.480 --> 00:00:16.830
+Ammo bu xotiraning ko‘p qismini bekorga sarflash 
+bo‘ladi, chunki, biz bir xil toifadagi 
+
+00:00:16.830 --> 00:00:19.780
+barcha so‘zlar uchun bir xil 
+rangni eslab qolayapmiz.
+
+00:00:19.780 --> 00:00:23.340
+Agar biz ilovamizda qaytalanadigan ma’lumotning 
+miqdorini kamaytirishni xohlasak, 
+
+00:00:23.340 --> 00:00:26.460
+rang ma’lumotini joylashtirish uchun eng mos joy 
+
+00:00:26.460 --> 00:00:28.410
+bu WordAdapter sinfidir.
+
+00:00:28.410 --> 00:00:32.650
+Chunki, har bir mashqning o‘zining shaxsiy 
+ro‘yxat view si va WordAdapter i bor.
+
+00:00:32.650 --> 00:00:36.390
+Demak, har bir WordAdapter uchun u yaratilgan 
+
+00:00:36.390 --> 00:00:38.510
+toifaga qarab biz uning ichida 
+rangni joylashtira olamiz.
+
+00:00:39.550 --> 00:00:43.062
+Mana bu yerda yozganimdek, biz fon ma’lumotini 
+WordAdapter ga joylashtira olamiz, 
+
+00:00:43.062 --> 00:00:46.660
+shunda har safar ma’lum bir ro‘yxat uchun 
+yangi WordAdapter ob’ekt yaratilganda, 
+
+00:00:46.660 --> 00:00:51.050
+u barcha ro‘yxat elementlari uchun 
+bir xil fon rangiga murojaat qiladi.
+
+00:00:52.070 --> 00:00:53.450
+Ushbu mantiq asosida 
+
+00:00:53.450 --> 00:00:57.410
+sonlar sahifasidagi WordAdapter da 
+zarg’aldoq rangi joylashtirilishi mumkin.
+
+00:00:57.410 --> 00:01:02.030
+Oila sahifasidagi WordAdapter yashil 
+rangni olishi mumkin va hokazolar.
+
+00:01:02.030 --> 00:01:05.224
+Xo‘sh, unda nega biz uni shunchaki activity ga joylab
+qo‘ya qolmaymiz deb hayron bo‘layotgan bo‘lishingiz mumkin.
+
+00:01:05.224 --> 00:01:08.210
+Chunki har bir sahifada turli xil rang bor.
+
+00:01:08.210 --> 00:01:11.430
+Sahifa rasmni bilishi shart eams, ammo 
+
+00:01:11.430 --> 00:01:14.550
+faqatgina biz WordAdapter ni 
+initialize qilganimizda bilishi kerak.
+
+00:01:14.550 --> 00:01:15.840
+Xullas, 
+
+00:01:15.840 --> 00:01:20.370
+WordAdapter rangni global o‘zgaruvchi 
+sifatida joylashtirishi kerak, shunda 
+
+00:01:20.370 --> 00:01:24.810
+u har safar yangi ro‘yxat elementlari joylashuv tartibini 
+yaratganda rangga qayta ishora qila oladi.
+

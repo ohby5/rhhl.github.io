@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.334
+Nessa primeira tarefa,
+
+00:00:01.367 --> 00:00:03.645
+vamos adicionar
+o 2º construtor de palavra.
+
+00:00:03.678 --> 00:00:05.298
+Aqui está
+minha classe de palavra.
+
+00:00:05.331 --> 00:00:07.325
+Eu vou copiar e colar
+o construtor existente
+
+00:00:07.358 --> 00:00:09.369
+e usá-lo como base.
+
+00:00:09.402 --> 00:00:11.395
+Lembre-se de copiar
+os comentários também.
+
+00:00:11.428 --> 00:00:13.338
+Copie e cole.
+
+00:00:13.371 --> 00:00:15.717
+Esse 2º construtor
+terá uma 3ª entrada,
+
+00:00:15.750 --> 00:00:18.584
+que será o inteiro
+da ID de recurso de imagem.
+
+00:00:18.617 --> 00:00:22.314
+Lembre-se que toda vez que você modifica
+os parâmetros de um construtor,
+
+00:00:22.347 --> 00:00:24.037
+ou qualquer outro processo,
+
+00:00:24.070 --> 00:00:26.503
+é sempre bom
+atualizar os comentários.
+
+00:00:26.536 --> 00:00:28.357
+Eu vou fazer isso aqui.
+
+00:00:28.390 --> 00:00:31.369
+Eu adicionei que a ID
+de recurso de imagem
+
+00:00:31.402 --> 00:00:35.146
+é a ID do recurso desenhável
+da imagem associada com a palavra.
+
+00:00:35.179 --> 00:00:36.891
+No corpo do 2º construtor,
+
+00:00:36.924 --> 00:00:39.056
+eu vou inicializar
+a variável global da imagem
+
+00:00:39.089 --> 00:00:41.618
+que chamamos
+de mImageResourceId.
+
+00:00:41.651 --> 00:00:44.826
+E inicializar para o valor
+que passou pelo construtor.
+
+00:00:44.859 --> 00:00:49.037
+Então será, dado o valor,
+ImageResourceId.
+
+00:00:49.070 --> 00:00:51.638
+Uma vez que a variável
+for inicializada,
+
+00:00:51.671 --> 00:00:55.064
+qualquer chamador externo
+pode acessar a variável
+
+00:00:55.097 --> 00:00:58.921
+através desse processo público,
+getImageResourceId.
+
+00:00:58.954 --> 00:01:01.264
+Isso completa
+a primeira tarefa.
+
+00:01:01.297 --> 00:01:03.084
+Agora, na segunda tarefa,
+
+00:01:03.117 --> 00:01:05.654
+vamos atualizar
+todas as categorias de atividade
+
+00:01:05.687 --> 00:01:08.186
+para utilizarmos
+o construtor de palavra correto.
+
+00:01:08.219 --> 00:01:10.552
+Vamos ver
+como são as atividades.
+
+00:01:11.415 --> 00:01:13.518
+Vamos até
+a atividade dos números.
+
+00:01:13.551 --> 00:01:15.394
+Vai ficar assim
+quando eu terminar.
+
+00:01:15.427 --> 00:01:18.452
+Estou referenciando as imagens
+que adicionamos ao app,
+
+00:01:18.485 --> 00:01:20.435
+então número de chamada
+underline 1,
+
+00:01:20.468 --> 00:01:23.328
+número underline 2,
+e assim vai.
+
+00:01:23.361 --> 00:01:27.280
+Mas preciso dizer que o Android Studio
+é ótimo para abrir imagens.
+
+00:01:27.313 --> 00:01:30.125
+Você pode visualizar a imagem
+que está abrindo.
+
+00:01:30.158 --> 00:01:32.501
+Vamos olhar
+a atividade de cores.
+
+00:01:32.534 --> 00:01:34.485
+Eu percebi
+que usei padrões parecidos
+
+00:01:34.518 --> 00:01:36.484
+para criar
+a lista de objetos de palavras
+
+00:01:36.517 --> 00:01:38.210
+para as imagens
+correspondentes.
+
+00:01:38.243 --> 00:01:40.514
+E a mesma coisa se aplica
+à nossa atividade de família.
+
+00:01:40.547 --> 00:01:43.810
+O mesmo código é usado
+para criar objetos de palavra de família
+
+00:01:43.843 --> 00:01:45.730
+com suas imagens
+correspondentes.
+
+00:01:45.763 --> 00:01:48.385
+Eu acho que está muito fofo
+com essas carinhas aqui.
+
+00:01:48.418 --> 00:01:50.381
+Por último,
+mas não menos importante,
+
+00:01:50.414 --> 00:01:52.194
+nossas atividades
+de frases.
+
+00:01:52.227 --> 00:01:56.346
+Olhando isso, percebemos
+que as atividades de frases não mudaram.
+
+00:01:56.379 --> 00:01:57.691
+E não tem problema,
+
+00:01:57.724 --> 00:01:59.420
+porque vamos criar
+cada objeto de palavra
+
+00:01:59.453 --> 00:02:02.536
+usando as traduções
+em inglês e miwok da frase.
+
+00:02:02.569 --> 00:02:05.801
+Mas não fornecemos a 3ª entrada
+ao construtor de palavra,
+
+00:02:05.834 --> 00:02:08.062
+porque não temos
+uma imagem para cada frase.
+
+00:02:08.095 --> 00:02:09.598
+Nesse caso,
+
+00:02:09.631 --> 00:02:13.356
+estamos usando o construtor de palavra
+que só tem duas entradas.
+
+00:02:14.134 --> 00:02:15.768
+Depois de fazer
+essas mudanças no código,
+
+00:02:15.801 --> 00:02:17.471
+quero ter certeza
+de que o app está funcionando
+
+00:02:17.504 --> 00:02:18.939
+testando no meu dispositivo.
+
+00:02:18.961 --> 00:02:20.958
+Vamos clicar
+em uma categoria.
+
+00:02:20.991 --> 00:02:23.681
+Vemos que nenhuma
+mudança visível aconteceu,
+
+00:02:23.714 --> 00:02:25.126
+mas isso é a seguir.
+

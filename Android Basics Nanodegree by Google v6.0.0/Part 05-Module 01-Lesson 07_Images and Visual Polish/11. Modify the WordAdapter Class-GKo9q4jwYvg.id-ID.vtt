@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.660 --> 00:00:03.840
+Baik, jadi kita telah
+menyelesaikan tiga dari empat item.
+
+00:00:03.840 --> 00:00:08.640
+Kita punya list objek Word di mana
+tiap kata terkait dengan satu gambar.
+
+00:00:08.640 --> 00:00:11.360
+Kami telah menyertakan semua
+gambar di aplikasi, dan
+
+00:00:11.360 --> 00:00:15.140
+kami telah memperbarui tata letak ListItem
+untuk mencakup ImageView.
+
+00:00:15.140 --> 00:00:20.000
+Sekarang tugas 4, kita perlu memodifikasi
+instruksi dalam WordAdapter.
+
+00:00:20.000 --> 00:00:21.720
+WordAdapter bertanggung jawab untuk
+
+00:00:21.720 --> 00:00:26.180
+memuat informasi yang benar dari objek
+Word ke tata letak ListItem,
+
+00:00:26.180 --> 00:00:29.070
+dan ini mencakup memuat informasi yang
+benar ke dalam ImageView.
+
+00:00:30.170 --> 00:00:35.000
+Masuk ke kelas WordAdapter, kita
+langsung ke metode getView.
+
+00:00:35.000 --> 00:00:38.010
+Ingat, metode ini dipanggil
+saat ListView mencoba untuk
+
+00:00:38.010 --> 00:00:40.850
+menampilkan list item
+pada posisi tertentu.
+
+00:00:40.850 --> 00:00:44.750
+Jadi, ListView akan memasukkan
+view potensial yang dapat digunakan lagi.
+
+00:00:44.750 --> 00:00:46.110
+Dan ini disebut convertView.
+
+00:00:46.110 --> 00:00:49.380
+Input terakhir ini merujuk pada
+viewGroup parent untuk
+
+00:00:49.380 --> 00:00:52.920
+semua item list ini yang merupakan
+ListView itu sendiri.
+
+00:00:52.920 --> 00:00:56.980
+Nah, tujuan metode getView adalah untuk
+mengembalikan ListItemView dan
+
+00:00:56.980 --> 00:00:58.470
+mengembalikannya ke ListView.
+
+00:00:58.470 --> 00:01:01.970
+Jadi, bagian dari kode ini membantu
+kita mengembangkan view.
+
+00:01:01.970 --> 00:01:05.810
+Jadi, kita mengembangkan ListItemView,
+artinya kita membuat tata letak
+
+00:01:05.810 --> 00:01:10.470
+ListItem baru di list_item XML resource.
+
+00:01:10.470 --> 00:01:14.790
+Dan kita akan menerapkan ini ke
+variabel ListItemView.
+
+00:01:14.790 --> 00:01:18.260
+Saya akan melompat maju ke
+resources XML ini, menghapusnya
+
+00:01:18.260 --> 00:01:24.360
+dengan mengeklik kanan menuju ke Go To
+dan kemudian Declaration.
+
+00:01:24.360 --> 00:01:28.470
+Jadi, di dalam resource XML ini,
+kita lihat bahwa ini adalah view tunggal,
+
+00:01:28.470 --> 00:01:31.990
+ini merujuk linear layout di
+root layout.
+
+00:01:31.990 --> 00:01:35.820
+Dari view ini, kita bisa mencari
+view child dan memodifikasinya.
+
+00:01:35.820 --> 00:01:37.570
+Kembali ke WordAdapter.
+
+00:01:37.570 --> 00:01:40.430
+Baris kode ini membantu kita
+mengambil objek Word
+
+00:01:40.430 --> 00:01:42.240
+di posisi tertentu dalam list.
+
+00:01:42.240 --> 00:01:44.250
+Lalu, di bagian kode berikut ini,
+
+00:01:44.250 --> 00:01:49.887
+kita mencari textView child dengan
+ID miwok_text_view dan
+
+00:01:49.887 --> 00:01:53.290
+mengatur terjemahan Miwok untuk
+kata pada textView itu.
+
+00:01:53.290 --> 00:01:59.935
+Lalu ulangi langkah yang sama untuk
+textView dengan ID default_text_view.
+
+00:01:59.935 --> 00:02:03.970
+Dan atur terjemahan Inggris untuk kata
+itu di textView ini.
+
+00:02:03.970 --> 00:02:07.065
+Terakhir, karena kita telah menambahkan
+imageView ke tata letak ListItem,
+
+00:02:07.065 --> 00:02:10.350
+kita perlu memastikan bahwa adapter
+kita juga mengetahuinya.
+
+00:02:10.350 --> 00:02:14.470
+Untuk tugas pengodean berikut, silakan
+memodifikasi metode getView
+
+00:02:14.470 --> 00:02:20.060
+WordAdapter, sehingga mengatur gambar
+yang benar ke ImageView di tata letak ListItem.
+
+00:02:20.060 --> 00:02:22.870
+Sebagai petunjuk, lihat aplikasi Android
+Flavor sebagai contoh.
+
+00:02:23.880 --> 00:02:27.248
+Sebagai petunjuk, Anda bisa melihat aplikasi
+Android Flavor dari pelajaran terakhir jika
+
+00:02:27.248 --> 00:02:28.040
+membantu.
+
+00:02:28.040 --> 00:02:30.600
+Ingat, aplikasi ini menampilkan
+gambar untuk
+
+00:02:30.600 --> 00:02:33.500
+ArrayList Android yang terkait
+di tiap item list.
+
+00:02:34.620 --> 00:02:37.480
+Beginilah seharusnya tampak aplikasi Miwok
+setelah Anda selesai.
+
+00:02:37.480 --> 00:02:40.440
+Perhatikan bahwa masih ada masalah
+dengan PhrasesActivity,
+
+00:02:40.440 --> 00:02:42.870
+tapi kita akan memperbaikinya di
+langkah pengodean nanti.
+
+00:02:42.870 --> 00:02:44.690
+Jadi jangan khawatir dulu.
+

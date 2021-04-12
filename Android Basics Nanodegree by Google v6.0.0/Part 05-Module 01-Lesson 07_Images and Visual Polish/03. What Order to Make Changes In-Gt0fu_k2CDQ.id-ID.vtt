@@ -1,0 +1,205 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.480 --> 00:00:03.340
+Sekarang kita punya gagasan perubahan
+apa yang harus dilakukan dalam kode kita.
+
+00:00:03.340 --> 00:00:07.090
+Tampaknya ada empat
+langkah utama.
+
+00:00:07.090 --> 00:00:09.240
+Dan sebagian mungkin lebih rumit
+daripada yang lain.
+
+00:00:09.240 --> 00:00:11.970
+Karena akan memengaruhi beberapa
+file kode sekaligus.
+
+00:00:11.970 --> 00:00:13.800
+Baik, jadi bagaimana
+kita melakukannya?
+
+00:00:13.800 --> 00:00:15.790
+Apakah memilih mana saja untuk memulai?
+
+00:00:15.790 --> 00:00:18.100
+Lalu melakukan perubahan dengan sempurna,
+
+00:00:18.100 --> 00:00:21.000
+sebelum kita coba menjalankan
+aplikasi di perangkat?
+
+00:00:21.000 --> 00:00:25.740
+Jika kita coba metode itu, yaitu kita
+menjalankan semua langkah sekaligus
+
+00:00:25.740 --> 00:00:27.190
+lalu menjalankan aplikasi di perangkat,
+
+00:00:28.280 --> 00:00:32.400
+ada kemungkinan bahwa aplikasi tidak
+akan berfungsi saat pertama dan
+
+00:00:32.400 --> 00:00:35.010
+mungkin akan mengalami banyak sekali
+kesalahan dan
+
+00:00:35.010 --> 00:00:38.510
+di titik itu akan sangat sulit untuk
+menentukan akar masalah
+
+00:00:38.510 --> 00:00:41.810
+karena kita telah melakukan begitu
+banyak perubahan di dalam file.
+
+00:00:41.810 --> 00:00:46.260
+Di sisi lain, jika kita membuat perubahan
+kode lebih kecil dan secara teratur memeriksa
+
+00:00:46.260 --> 00:00:50.910
+kesalahan dengan menjalankan aplikasi
+di perangkat, kita dapat mengidentifikasi
+
+00:00:50.910 --> 00:00:55.070
+dengan lebih baik baris yang menyebabkan
+kesalahan karena lebih sedikit yang diubah.
+
+00:00:56.490 --> 00:01:00.740
+Perubahan inkremental ini berarti bahwa
+kita perlu merencanakan perubahan kode
+
+00:01:00.740 --> 00:01:05.290
+yang memungkinkan aplikasi berjalan
+walaupun seluruh fitur belum selesai.
+
+00:01:05.290 --> 00:01:08.600
+Karena kita telah tahu apa yang
+perlu dilakukan langkah demi langkah,
+
+00:01:08.600 --> 00:01:10.920
+langkah mana yang harus didahulukan?
+
+00:01:10.920 --> 00:01:15.060
+Sebagai pengembang, kita bisa
+menyusun prioritas dengan beberapa cara.
+
+00:01:15.060 --> 00:01:17.180
+Sering kali kita ingin melakukan perubahan
+
+00:01:17.180 --> 00:01:21.640
+paling berisiko karena jika strategi awal
+kita tidak berhasil,
+
+00:01:21.640 --> 00:01:25.770
+kita perlu tahu sesegera mungkin,
+sehingga bisa memikirkan ulang strategi.
+
+00:01:25.770 --> 00:01:30.200
+Jadi, bayangkan sebagai konsep percobaan
+untuk memastikan kita di jalur yang benar.
+
+00:01:30.200 --> 00:01:34.280
+Dalam kasus kita, semua langkah ini adalah
+perubahan dengan risiko cukup kecil
+
+00:01:34.280 --> 00:01:38.900
+karena kita melihat aplikasi Android Flavor
+bisa menampilkan teks dan
+
+00:01:38.900 --> 00:01:40.760
+gambar dalam sebuah list.
+
+00:01:40.760 --> 00:01:44.090
+Cara lain untuk menyusun prioritas adalah
+berdasarkan data yang kita miliki.
+
+00:01:45.480 --> 00:01:48.830
+Sekarang ini, kita belum memiliki
+gambar dari desainer kita.
+
+00:01:48.830 --> 00:01:53.510
+Sering kali, setelah desainer memberikan
+maket desain kasar, mungkin perlu waktu lama
+
+00:01:53.510 --> 00:01:55.970
+sebelum memberikan gambar final.
+
+00:01:55.970 --> 00:02:00.150
+Sementara itu, kita sebagai pengembang bisa
+memulai menulis kode kita.
+
+00:02:01.280 --> 00:02:02.530
+Untuk itu,
+
+00:02:02.530 --> 00:02:06.760
+kita akan menggunakan sesuatu yang bernama
+data placeholder, atau data dummy.
+
+00:02:07.940 --> 00:02:10.669
+Data placeholder berarti
+menggunakan data temporer
+
+00:02:10.669 --> 00:02:14.270
+atau palsu, yang bisa kita letakkan
+di aplikasi yang memberi kita gagasan
+
+00:02:14.270 --> 00:02:17.100
+tentang seperti apa nantinya
+saat kita memiliki data yang sebenarnya.
+
+00:02:17.100 --> 00:02:21.350
+Anggaplah sebagai placeholder untuk data
+nyata yang akan segera diperoleh.
+
+00:02:21.350 --> 00:02:25.757
+Sebagai ringkasan, kita tahu bahwa kita ingin
+melakukan perubahan ini satu demi satu.
+
+00:02:25.757 --> 00:02:27.893
+[BLANK_AUDIO]
+
+00:02:27.893 --> 00:02:30.473
+Dan memastikan kita bisa membangun ulang
+
+00:02:30.473 --> 00:02:34.910
+aplikasi dan menjalankannya di perangkat
+di antara berbagai perubahan jika memungkinkan.
+
+00:02:34.910 --> 00:02:40.230
+Dalam kasus di mana kita tidak punya data
+sebenarnya saat memakai data palsu sebagai
+
+00:02:40.230 --> 00:02:42.480
+placehoder hingga data sebenarnya siap.
+
+00:02:42.480 --> 00:02:45.860
+Dalam kasus kita, jika kita belum punya
+gambar akhir dari desainer,
+
+00:02:46.860 --> 00:02:51.430
+kita ingin bekerja sejauh mungkin hingga kita
+tidak bisa maju lagi dan
+
+00:02:51.430 --> 00:02:55.390
+harus menunggu data sebenarnya untuk
+menyelesaikan implementasi fitur.
+
+00:02:55.390 --> 00:02:58.560
+Baik, silakan lihat
+list perubahan ini.
+
+00:02:58.560 --> 00:03:03.880
+Saya ingin Anda membantu memikirkan cara
+memprioritaskan sesuai urutan.
+
+00:03:03.880 --> 00:03:07.300
+Silakan lanjut dan berikan
+nomor satu hingga empat,
+
+00:03:07.300 --> 00:03:11.280
+untuk langkah yang ingin Anda ambil
+pertama, kedua, ketiga, dan keempat.
+

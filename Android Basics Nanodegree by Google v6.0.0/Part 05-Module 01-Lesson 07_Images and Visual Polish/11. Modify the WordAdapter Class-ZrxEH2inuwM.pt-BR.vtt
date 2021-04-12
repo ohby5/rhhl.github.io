@@ -1,0 +1,227 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.334 --> 00:00:03.333
+Vamos voltar ao app
+Android Flavor da última aula.
+
+00:00:03.366 --> 00:00:05.198
+Se entendemos
+como o Android Flavor
+
+00:00:05.231 --> 00:00:07.562
+exibe uma imagem
+pra cada item da lista,
+
+00:00:07.595 --> 00:00:10.025
+então podemos fazer algo parecido
+com aplicativo miwok.
+
+00:00:10.058 --> 00:00:12.976
+Vamos olhar primeiro
+para a classe de adaptador,
+
+00:00:13.009 --> 00:00:15.537
+que é usada para controlar
+como os itens da lista aparecem.
+
+00:00:15.570 --> 00:00:18.706
+Para nos ajudar,
+vou clicar no T
+
+00:00:18.739 --> 00:00:21.270
+e isso vai abrir
+o localizador de arquivo no GitHub.
+
+00:00:21.303 --> 00:00:23.126
+Vou procurar "adaptador".
+
+00:00:23.159 --> 00:00:26.534
+Aqui tem um arquivo
+que se chama "adaptador Android Flavor"
+
+00:00:26.567 --> 00:00:29.163
+que parece muito
+com o nosso adaptador de palavra.
+
+00:00:29.196 --> 00:00:31.556
+Olhando melhor
+para esse arquivo,
+
+00:00:31.589 --> 00:00:34.693
+parece que também vem
+da classe ArrayAdapter,
+
+00:00:34.726 --> 00:00:36.716
+mas ao invés de segurar
+objetos de palavra
+
+00:00:36.749 --> 00:00:38.169
+como o adaptador de palavra
+faz,
+
+00:00:38.202 --> 00:00:40.972
+o adaptador do Android Flavor
+segura objetos Android Flavor.
+
+00:00:41.005 --> 00:00:42.622
+Passeando pelo código,
+
+00:00:42.655 --> 00:00:44.270
+chegamos ao método getView
+de chamada
+
+00:00:44.303 --> 00:00:46.857
+e isso parece com a classe
+de adaptador de palavra.
+
+00:00:46.890 --> 00:00:50.166
+Aqui tem alguns códigos
+referentes ao ImageView.
+
+00:00:50.199 --> 00:00:52.037
+Nessa primeira linha,
+
+00:00:52.070 --> 00:00:54.713
+estamos procurando
+no layout listItemView
+
+00:00:54.754 --> 00:00:57.293
+para encontrar a exibição
+com a ID list_item_icon.
+
+00:00:57.326 --> 00:00:58.947
+Quando encontrarmos
+a exibição,
+
+00:00:58.980 --> 00:01:00.821
+colocamos
+em uma ImageView
+
+00:01:00.854 --> 00:01:03.254
+e depois guardamos em uma variável
+chamada ícone.
+
+00:01:03.287 --> 00:01:06.454
+Depois, podemos chamar
+o método setImageResource
+
+00:01:06.487 --> 00:01:07.842
+para essa ImageView,
+
+00:01:07.875 --> 00:01:08.954
+e nesse método,
+
+00:01:08.987 --> 00:01:11.887
+passamos uma entrada
+da ID de recurso de imagem
+
+00:01:11.920 --> 00:01:13.879
+para o objeto Android Flavor.
+
+00:01:13.912 --> 00:01:16.420
+Essas duas linhas de código
+estabelecem
+
+00:01:16.453 --> 00:01:18.576
+a imagem de sobremesa
+para o item da lista.
+
+00:01:18.609 --> 00:01:19.713
+Vamos pegar essa informação
+
+00:01:19.746 --> 00:01:21.882
+e fazer algo parecido
+no aplicativo miwok.
+
+00:01:21.922 --> 00:01:24.378
+Aqui está
+o aplicativo miwok.
+
+00:01:24.411 --> 00:01:26.704
+No método getView
+do WordAdapter,
+
+00:01:26.737 --> 00:01:29.559
+vamos encontrar o imageView
+no layout de item de lista.
+
+00:01:29.592 --> 00:01:32.708
+Nessa linha, eu procuro
+pelo layout listItemView
+
+00:01:32.741 --> 00:01:34.881
+para a visualização
+através da ID da imagem.
+
+00:01:34.914 --> 00:01:38.860
+Quando encontrar, guardo a exibição
+em uma variável chamada ImageView.
+
+00:01:38.893 --> 00:01:41.277
+Você lembra onde atribuímos
+essa exibição da ID de imagem?
+
+00:01:41.310 --> 00:01:44.248
+Foi aqui no layout
+de item de lista.
+
+00:01:45.047 --> 00:01:48.631
+Lembra que atribuímos a exibição
+da ID de imagem ao ImageView?
+
+00:01:48.664 --> 00:01:51.243
+Vamos voltar
+para a classe WordAdapter.
+
+00:01:51.276 --> 00:01:53.999
+Quando tivermos
+o objeto ImageView Java,
+
+00:01:54.032 --> 00:01:56.534
+podemos chamar
+um método setImageResource nele,
+
+00:01:56.567 --> 00:01:58.967
+assim como vimos
+no app Android Flavor.
+
+00:01:59.000 --> 00:02:03.158
+Nesse método, precisamos passar
+a ImageResourceId como a entrada.
+
+00:02:03.191 --> 00:02:05.792
+Por sorte, podemos pegar isso
+do atual objeto de palavra
+
+00:02:05.826 --> 00:02:08.695
+chamando o método
+getImageResourceId.
+
+00:02:09.162 --> 00:02:11.057
+Ótimo, essa eram as mudanças
+de que precisávamos.
+
+00:02:11.090 --> 00:02:13.135
+Vamos rodar o app
+no nosso dispositivo.
+
+00:02:13.168 --> 00:02:15.223
+Clicando em cada atividade,
+
+00:02:15.256 --> 00:02:18.106
+podemos ver as imagens certas
+carregando na nossa lista de exibição.
+
+00:02:18.139 --> 00:02:20.187
+Está muito bonito.
+
+00:02:20.220 --> 00:02:23.460
+Como esperávamos,
+a atividade de frase está quebrada.
+
+00:02:23.493 --> 00:02:26.849
+Vamos consertá-la
+no próximo exercício.
+

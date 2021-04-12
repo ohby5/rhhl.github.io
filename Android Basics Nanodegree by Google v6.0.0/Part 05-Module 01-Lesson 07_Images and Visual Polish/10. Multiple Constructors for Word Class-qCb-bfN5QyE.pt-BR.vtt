@@ -1,0 +1,418 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:01.301
+Você vai perceber
+
+00:00:01.335 --> 00:00:05.672
+que para usar essa variável de ID
+de recurso de imagem que adicionamos,
+
+00:00:05.703 --> 00:00:07.474
+precisamos modificar
+o construtor
+
+00:00:07.508 --> 00:00:09.877
+para que esse novo campo
+possa ser inicializado
+
+00:00:09.910 --> 00:00:12.348
+para um valor específico.
+
+00:00:12.360 --> 00:00:16.612
+Lembre-se que inicializar significa
+estabelecer o valor de uma variável.
+
+00:00:17.487 --> 00:00:19.052
+Então repetimos
+o que fizemos
+
+00:00:19.086 --> 00:00:24.097
+para inicializar as variáveis
+mDefaultTranslation e mMiwokTranslation.
+
+00:00:24.130 --> 00:00:26.691
+Lembre-se também
+que um construtor é usado
+
+00:00:26.724 --> 00:00:30.165
+para criar instâncias do objeto
+da definição de classe.
+
+00:00:31.177 --> 00:00:32.663
+O que devemos fazer?
+
+00:00:32.696 --> 00:00:34.465
+Devemos modificar
+o construtor existente
+
+00:00:34.498 --> 00:00:36.879
+ou adicionar outro
+para termos
+
+00:00:36.912 --> 00:00:39.629
+dois construtores
+com entradas diferentes?
+
+00:00:39.662 --> 00:00:41.975
+Uma das maneiras de decidir
+
+00:00:42.009 --> 00:00:44.704
+é pensar no outro código Java
+do nosso aplicativo
+
+00:00:44.737 --> 00:00:46.799
+que usa
+essa classe de palavra.
+
+00:00:46.832 --> 00:00:49.614
+Sabemos que 3 das 4
+telas de categoria
+
+00:00:49.647 --> 00:00:52.210
+têm imagens para cada
+placa de vocabulário.
+
+00:00:52.243 --> 00:00:54.225
+E a exceção
+é uma phraser screen,
+
+00:00:54.258 --> 00:00:56.836
+que não tem imagens
+para cada frase.
+
+00:00:56.869 --> 00:01:00.773
+Já que temos a phraser screen
+e ela não tem imagens,
+
+00:01:00.806 --> 00:01:05.019
+podemos usar o construtor de palavras
+que aceita duas entradas,
+
+00:01:05.052 --> 00:01:07.235
+um tradução em inglês
+e outra em miwok.
+
+00:01:07.268 --> 00:01:11.825
+E depois podemos criar
+um construtor que aceita 3 entradas.
+
+00:01:11.858 --> 00:01:15.387
+Duas strings
+e uma ID de recurso de imagem,
+
+00:01:15.420 --> 00:01:19.600
+e podemos usar o mesmo construtor
+para as nossas atividades restantes.
+
+00:01:19.633 --> 00:01:22.075
+Pense em
+diferentes construtores
+
+00:01:22.108 --> 00:01:25.378
+como meios diferentes
+de chegar a instância do objeto.
+
+00:01:25.411 --> 00:01:28.322
+A única condição
+é que cada construtor
+
+00:01:28.355 --> 00:01:31.712
+precisa ter um conjunto de parâmetros
+de entrada diferente.
+
+00:01:31.745 --> 00:01:32.987
+Por exemplo,
+
+00:01:33.020 --> 00:01:35.489
+um construtor
+pode precisar de duas entradas.
+
+00:01:35.522 --> 00:01:38.915
+E podemos ter outro
+que precisa de 3 entradas,
+
+00:01:38.948 --> 00:01:41.671
+duas strings e uma imagem.
+
+00:01:41.704 --> 00:01:44.481
+E o tipo de dado importa.
+
+00:01:44.514 --> 00:01:48.650
+Se tivéssemos um 3º construtor
+que também tivesse 3 entradas,
+
+00:01:48.683 --> 00:01:51.830
+mas dois números
+e uma imagem,
+
+00:01:51.863 --> 00:01:56.834
+esse construtor será diferente do outro
+que também precisa de 3 entradas.
+
+00:01:56.867 --> 00:02:00.507
+Lembra de quando estávamos observando
+a documentação do ArrayAdapter?
+
+00:02:00.540 --> 00:02:02.389
+E na seção
+de construtores públicos
+
+00:02:02.422 --> 00:02:04.874
+vimos que existem diversos
+construtores públicos
+
+00:02:04.907 --> 00:02:07.786
+que podíamos usar para criar
+um novo objeto ArrayAdapter.
+
+00:02:07.819 --> 00:02:10.847
+Por exemplo, poderíamos ter
+usado esse construtor,
+
+00:02:10.880 --> 00:02:13.970
+passando um contexto,
+recurso de layout de ID
+
+00:02:14.003 --> 00:02:16.447
+e arranjo de objetos.
+
+00:02:17.294 --> 00:02:20.594
+Por outro lado, poderíamos ter usado
+esse construtor de ArrayAdapter
+
+00:02:20.627 --> 00:02:23.507
+que recebeu um contexto,
+recurso de layout de ID
+
+00:02:23.540 --> 00:02:25.553
+e uma ArrayList de objetos.
+
+00:02:25.586 --> 00:02:27.954
+Todas essas opções de construtores
+funcionarão.
+
+00:02:27.987 --> 00:02:30.286
+Depende da entrada
+que tivermos.
+
+00:02:30.319 --> 00:02:34.303
+E todos eles permitirão que o resultado
+seja um objeto ArrayAdapter.
+
+00:02:34.336 --> 00:02:37.009
+Para nos ajudar a entender
+esses conceitos de construtores,
+
+00:02:37.042 --> 00:02:39.854
+vamos observar
+como podemos declará-los.
+
+00:02:39.887 --> 00:02:42.024
+Vou pesquisar isso online.
+
+00:02:42.057 --> 00:02:44.988
+Depois que pesquisar
+vários construtores de Java,
+
+00:02:45.958 --> 00:02:48.489
+acho que vou dar uma olhada
+nesse 3º tutorial aqui.
+
+00:02:48.522 --> 00:02:52.701
+Esse tutorial tem uma seção chamada
+Sobrecarga de Construtor
+
+00:02:52.734 --> 00:02:54.675
+e parece ser a mesma coisa
+
+00:02:54.708 --> 00:02:57.691
+que vários construtores
+para uma única classe Java.
+
+00:02:57.724 --> 00:02:59.697
+Vou clicar aqui.
+
+00:02:59.730 --> 00:03:02.881
+Dando uma olhada nisso,
+parece que é um exemplo simples.
+
+00:03:02.914 --> 00:03:08.054
+Temos uma classe chamada MyClass
+e dois construtores.
+
+00:03:08.765 --> 00:03:12.811
+A única diferença entre as duas linhas
+de declaração dos construtores
+
+00:03:12.844 --> 00:03:14.967
+é o raciocínio que eles fazem.
+
+00:03:15.000 --> 00:03:17.345
+O primeiro não recebe
+nenhuma entrada
+
+00:03:17.378 --> 00:03:21.007
+e o segundo recebe um inteiro
+chamado theNumber.
+
+00:03:21.040 --> 00:03:23.351
+Esse exemplo é importante
+para nós,
+
+00:03:23.384 --> 00:03:26.381
+porque também queremos
+um construtor
+
+00:03:26.414 --> 00:03:28.308
+que recebe uma ID
+de recurso de imagem
+
+00:03:28.341 --> 00:03:30.463
+e um que não recebe.
+
+00:03:30.496 --> 00:03:33.405
+Nesse exemplo,
+parece que o segundo construtor
+
+00:03:33.438 --> 00:03:36.298
+tem um comportamento
+diferente do primeiro.
+
+00:03:36.331 --> 00:03:39.427
+Então vamos inicializar
+esse número
+
+00:03:39.460 --> 00:03:42.962
+para que seja igual ao número
+que passou pelo construtor.
+
+00:03:42.995 --> 00:03:45.161
+Parece que esse
+é o mesmo processo
+
+00:03:45.194 --> 00:03:48.526
+que vamos usar para adicionar
+um construtor à nossa classe de palavra.
+
+00:03:48.559 --> 00:03:51.135
+Precisamos escrever
+outra declaração de construtor
+
+00:03:51.168 --> 00:03:53.212
+que recebe
+uma entrada adicional.
+
+00:03:53.245 --> 00:03:55.684
+E esse outro construtor
+
+00:03:55.717 --> 00:03:58.412
+vai fazer o mesmo trabalho
+que o construtor original faz,
+
+00:03:58.445 --> 00:04:01.762
+além de inicializar nossa variável
+de ID de recurso de imagem
+
+00:04:01.795 --> 00:04:04.096
+ao inteiro que passou
+pelo novo construtor.
+
+00:04:04.129 --> 00:04:06.492
+Muito bem.
+Vamos ao exercício.
+
+00:04:06.525 --> 00:04:07.814
+Na 1ª tarefa,
+
+00:04:07.848 --> 00:04:09.583
+gostaria que você adicionasse
+outro construtor
+
+00:04:09.616 --> 00:04:10.765
+à nossa classe de palavra.
+
+00:04:10.798 --> 00:04:14.015
+Lembra que usamos
+o construtor de palavra
+
+00:04:14.048 --> 00:04:16.381
+para criar
+uma ArrayList de palavras?
+
+00:04:16.414 --> 00:04:20.437
+Precisamos atualizar cada linha
+de cada categoria de atividade
+
+00:04:20.470 --> 00:04:23.368
+para usarmos
+o construtor de palavra adequado.
+
+00:04:23.401 --> 00:04:27.001
+Vou te mostrar o que eu quero dizer
+voltando ao Android Studio.
+
+00:04:27.034 --> 00:04:29.907
+Estou no NumbersActivity
+do nosso app.
+
+00:04:29.940 --> 00:04:31.918
+Para mudar
+a primeira palavra da lista
+
+00:04:31.951 --> 00:04:33.699
+para incluir
+uma imagem também
+
+00:04:33.732 --> 00:04:37.488
+podemos chamar o novo construtor
+e passar 3 entradas.
+
+00:04:37.521 --> 00:04:39.179
+Você pode ter percebido
+que o Android Studio
+
+00:04:39.212 --> 00:04:40.871
+tem um ótimo recurso
+de preenchimento automático.
+
+00:04:40.904 --> 00:04:43.950
+Ele dá sugestões para qual recurso
+você pode estar digitando.
+
+00:04:43.983 --> 00:04:45.481
+Isso pode ser muito útil
+
+00:04:45.514 --> 00:04:47.556
+se você quiser se referir
+a um recurso de imagem,
+
+00:04:47.589 --> 00:04:49.834
+mas não consegue lembrar
+o nome do arquivo.
+
+00:04:49.867 --> 00:04:52.988
+Se você encontrar o que você quer,
+é só apertar Enter.
+
+00:04:53.021 --> 00:04:56.330
+Perceba que o Android Studio
+está nos mostrando um erro.
+
+00:04:56.363 --> 00:04:59.429
+É porque ainda não criamos
+o nosso novo construtor.
+
+00:04:59.462 --> 00:05:02.496
+Mas quando criarmos,
+o erro não vai mais aparecer.
+
+00:05:03.580 --> 00:05:06.495
+Repare que a aparência do app
+não mudou.
+
+00:05:06.528 --> 00:05:08.578
+Isso vai acontecer
+no próximo passo.
+

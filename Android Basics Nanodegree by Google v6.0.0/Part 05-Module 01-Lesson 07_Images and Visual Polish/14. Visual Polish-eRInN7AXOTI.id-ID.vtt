@@ -1,0 +1,604 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.410 --> 00:00:03.480
+Sekarang saya akan memandu Anda
+untuk melakukan perubahan tata letak XML
+
+00:00:03.480 --> 00:00:06.700
+yang benar sehingga aplikasi Anda cocok
+dengan garis-garis merah dari desainer kita.
+
+00:00:07.710 --> 00:00:09.900
+Mari kita mulai
+dengan perubahan yang mudah dulu.
+
+00:00:09.900 --> 00:00:12.400
+Saya langsung memperhatikan bahwa ada
+terlalu banyak padding di aplikasi
+
+00:00:12.400 --> 00:00:13.860
+versi saat ini.
+
+00:00:13.860 --> 00:00:15.970
+Saat saya men-scroll aplikasi,
+
+00:00:15.970 --> 00:00:19.360
+perhatikan bahwa padding berlaku
+di seluruh list.
+
+00:00:19.360 --> 00:00:22.530
+Bahkan jika saya scroll list,
+masih ada padding di sana.
+
+00:00:22.530 --> 00:00:25.680
+Ini berarti bahwa padding mungkin
+berada di ListView.
+
+00:00:26.780 --> 00:00:31.790
+Ingat, kita mendeklarasikan elemen XML
+ListView di file word_list.XML.
+
+00:00:31.790 --> 00:00:35.320
+Dan memang, di dalamnya saya melihat
+nilai padding diatur di dalamnya.
+
+00:00:35.320 --> 00:00:37.300
+Mari kita hapus semua
+nilai padding ini.
+
+00:00:38.900 --> 00:00:41.400
+Saat kita juga membuka
+file dimensions.XML,
+
+00:00:41.400 --> 00:00:44.600
+kode saya tidak kembali ke
+nilai dimensi ini lagi.
+
+00:00:44.600 --> 00:00:49.600
+Yang untuk activity_horizontal_margin
+dan activity_vertical_margin.
+
+00:00:49.600 --> 00:00:53.397
+Saya bisa menghapus kedua baris ini
+dari file values/dimensions.xml,
+
+00:00:53.397 --> 00:00:55.909
+di mana activity_horizontal_margin dan
+
+00:00:55.909 --> 00:00:59.526
+activity_vertical_margin pada awalnya
+diatur ke 16 DPS.
+
+00:00:59.526 --> 00:01:02.784
+Saya akan lanjut dan membiarkan
+dimensi lain yang masih ada di dalam
+
+00:01:02.784 --> 00:01:06.840
+file ini, yang list_item_height ini
+karena kita masih memerlukannya.
+
+00:01:06.840 --> 00:01:11.130
+Anda juga perhatikan bahwa masih ada
+satu dimensi lain yang dibiarkan di file ini,
+
+00:01:11.130 --> 00:01:13.360
+yaitu w820dp.
+
+00:01:13.360 --> 00:01:16.070
+File ini digunakan untuk
+perangkat dengan layar lebih besar.
+
+00:01:16.070 --> 00:01:18.840
+Dan di dalam sini ada
+nilai yang lebih besar lagi untuk
+
+00:01:18.840 --> 00:01:21.330
+activity_horizontal_margin.
+
+00:01:21.330 --> 00:01:25.239
+Tapi kita tidak membutuhkan dimensi ini
+lagi, sehingga kita bisa lanjut dan
+
+00:01:25.239 --> 00:01:26.636
+menghapus seluruh file ini.
+
+00:01:26.636 --> 00:01:31.680
+Saya akan menuju ke Project,
+menavigasi file itu, dan menghapusnya.
+
+00:01:32.790 --> 00:01:34.970
+Sekarang mari kita lihat bagaimana
+tampilan aplikasi di dalam perangkat kita.
+
+00:01:34.970 --> 00:01:38.190
+Ketuk NumbersActivity,
+bagus.
+
+00:01:38.190 --> 00:01:42.550
+Jadi perubahan kode itu membuang border
+16dp di seluruh list.
+
+00:01:42.550 --> 00:01:43.680
+Kerja bagus.
+
+00:01:43.680 --> 00:01:45.220
+Sekarang kita pindah ke
+tata letak ListItem.
+
+00:01:45.220 --> 00:01:50.990
+Jika Anda ingat, tiap item list harus
+memiliki tinggi minimum 88 dps.
+
+00:01:50.990 --> 00:01:53.940
+Angka itu terdengar familiar karena
+kita telah menyimpannya tadi
+
+00:01:53.940 --> 00:01:55.850
+di file dimensions.xml.
+
+00:01:55.850 --> 00:01:58.230
+Kita menyimpannya di dalam
+nilai list_item_height.
+
+00:01:59.270 --> 00:02:01.460
+Saya akan menyalinnya untuk dipakai nanti.
+
+00:02:01.460 --> 00:02:06.070
+Artinya, jika kita kembali ke tata letak
+item list, kita merujuknya seperti itu.
+
+00:02:06.070 --> 00:02:12.133
+Di sini saya akan mengatur tinggi minimum
+agar merujuk ke @dimen/list_item_height.
+
+00:02:12.133 --> 00:02:16.138
+Perhatikan bahwa saya lebih suka mengatur
+nilai tinggi minimum ke 88 dps
+
+00:02:16.138 --> 00:02:19.697
+daripada memperbaiki tingginya
+menjadi 88 tepat.
+
+00:02:19.697 --> 00:02:24.477
+Kombinasi nilai ini berarti bahwa
+linear layout harus 88 dps
+
+00:02:24.477 --> 00:02:25.897
+tinggi minimumnya tapi
+
+00:02:25.897 --> 00:02:29.197
+dapat lebih tinggi jika diperlukan, bergantung
+pada konten di dalam item list.
+
+00:02:30.437 --> 00:02:33.967
+Sekarang, dalam maket desain untuk
+NumbersActivity, perhatikan latar belakang
+
+00:02:33.967 --> 00:02:38.340
+tiap item list. Apakah kesepuluh
+warna ini diberikan oleh nilai hex?
+
+00:02:38.340 --> 00:02:41.670
+Kita telah menggunakan warna itu
+di layar MainActivity.
+
+00:02:41.670 --> 00:02:44.127
+Kita menyimpan warna itu
+di file colors.xml.
+
+00:02:45.580 --> 00:02:48.050
+Dan kita memiliki nilai hex untuk
+warna yang kita butuhkan itu di sini.
+
+00:02:49.230 --> 00:02:52.739
+Kembali ke tata letak item list,
+siapa yang merujuk ke resource warna itu?
+
+00:02:52.739 --> 00:02:56.041
+[BLANK_AUDIO]
+
+00:02:56.041 --> 00:03:00.827
+di root_linear_layout ini, saya telah
+mengatur latar belakang untuk semua
+
+00:03:00.827 --> 00:03:05.617
+linear layout menjadi resource warna
+@color/tan_background dan
+
+00:03:05.617 --> 00:03:10.086
+kita bisa merujuk ke resource warna
+menggunakan @color syntax/name
+
+00:03:10.086 --> 00:03:12.510
+pada resource warna yang kita butuhkan.
+
+00:03:13.540 --> 00:03:15.450
+Sekarang kembali ke garis merah.
+
+00:03:15.450 --> 00:03:19.320
+Gambar harus persegi dengan
+tinggi dan lebar sama-sama 88 dps.
+
+00:03:20.320 --> 00:03:23.340
+Intinya, gambar harus sama tinggi
+dengan item list.
+
+00:03:23.340 --> 00:03:26.820
+Di file dimensions.XML ini,
+kita telah menyimpan 88 dps
+
+00:03:26.820 --> 00:03:30.210
+di resource dimensions sehingga
+kita bisa merujuknya.
+
+00:03:30.210 --> 00:03:33.790
+Ini berarti bahwa jika kita memutuskan bahwa
+item list harus berubah tingginya,
+
+00:03:33.790 --> 00:03:35.933
+misalnya bertambah menjadi 96 dps,
+
+00:03:35.933 --> 00:03:38.119
+kita hanya mengubahnya di satu
+tempat dan
+
+00:03:38.119 --> 00:03:42.830
+semua tempat lain yang merujuk dimensi
+ini akan secara otomatis diperbarui.
+
+00:03:42.830 --> 00:03:45.810
+Kembali ke tata letak item list
+di dalam imageView,
+
+00:03:45.810 --> 00:03:50.700
+saya akan mengubah lebar dan tinggi
+untuk merujuk ke resource dimensi
+
+00:03:50.700 --> 00:03:55.870
+bernama list_item_height.
+
+00:03:55.870 --> 00:03:56.460
+Terakhir,
+
+00:03:56.460 --> 00:04:00.510
+Kita dapat mengubah atribut resource yang
+memakai ikon placeholder keranjang.
+
+00:04:00.510 --> 00:04:04.540
+Karena kita bisa mengatur image dengan
+benar secara dinamis saat aplikasi berjalan,
+
+00:04:04.540 --> 00:04:06.650
+maka kita tidak
+membutuhkan atribut itu lagi.
+
+00:04:07.890 --> 00:04:11.030
+Mari kita lihat apakah panduan
+itu tadi berfungsi seperti yang diharapkan.
+
+00:04:11.030 --> 00:04:16.260
+Jadi, aplikasi berjalan di perangkat kita,
+dan kita ketuk NumbersActivity, bagus.
+
+00:04:16.260 --> 00:04:20.510
+Sekarang gambar sudah persegi
+dengan dimensi 88 dp kali 88 dp.
+
+00:04:21.630 --> 00:04:24.570
+Latar belakang gambar adalah warna
+cokelat muda ini, jadi
+
+00:04:24.570 --> 00:04:26.330
+sejauh ini tampak bagus.
+
+00:04:26.330 --> 00:04:27.830
+Mari lanjut ke bagian teks.
+
+00:04:27.830 --> 00:04:31.260
+Pertama-tama, kita harus mengatur latar
+belakang dengan warna oranye untuk
+
+00:04:31.260 --> 00:04:32.350
+area teks.
+
+00:04:32.350 --> 00:04:35.450
+Warna oranye ini sama dengan warna
+latar belakang yang kita gunakan untuk
+
+00:04:35.450 --> 00:04:38.060
+kategori Numbers
+di MainActivity.
+
+00:04:38.060 --> 00:04:39.640
+Ingat, warna hex-nya,
+
+00:04:39.640 --> 00:04:45.040
+FT8E09, harus sudah ada di dalam
+file colors.XML kita.
+
+00:04:45.040 --> 00:04:50.380
+Dan memang, warna itu didefinisikan
+sebagai resource bernama category_numbers.
+
+00:04:50.380 --> 00:04:52.230
+Kembali ke tata letak item list,
+mari kita tambahkan itu.
+
+00:04:53.600 --> 00:04:57.300
+Untuk LinearLayout yang berisi dua
+TextView, kita akan mengatur
+
+00:04:57.300 --> 00:05:02.170
+warna latar belakangnya ke category
+garis bawah numbers resource dan
+
+00:05:02.170 --> 00:05:06.615
+merujuknya sebagai @color/category_numbers.
+
+00:05:07.670 --> 00:05:10.780
+Dengan mengatur warna
+di linear layout ini,
+
+00:05:10.780 --> 00:05:13.720
+kita hanya akan memengaruhi latar
+belakang textView-textVIew ini.
+
+00:05:14.940 --> 00:05:17.667
+Kembali ke garis merah dan
+lihat apa yang masih harus dilakukan.
+
+00:05:17.667 --> 00:05:20.816
+Kita perlu mengubah style font
+textView,
+
+00:05:20.816 --> 00:05:25.130
+harus menjadi warna font putih, dan
+kata Miwok harus menjadi tebal.
+
+00:05:25.130 --> 00:05:28.110
+Dan keduanya harus berukur 18 SP,
+
+00:05:28.110 --> 00:05:32.490
+yang, jika Anda ingat kursus terakhir,
+merujuk ke tampilan teks medium.
+
+00:05:32.490 --> 00:05:35.850
+Di TextView Miwok, atribut
+tampilan teks
+
+00:05:35.850 --> 00:05:38.170
+juga harus tampilan teks medium.
+
+00:05:38.170 --> 00:05:42.250
+Maka, kita berikan
+ukuran font 18 SP.
+
+00:05:42.250 --> 00:05:44.400
+Lalu saya akan mengatur warna teks
+menjadi putih dan
+
+00:05:44.400 --> 00:05:47.840
+saya tahu bahwa framework Android
+memiliki resource warna pradefinisi.
+
+00:05:47.840 --> 00:05:54.059
+Saya bisa memakainya dengan tinggal
+memanggil @android.color/white.
+
+00:05:54.059 --> 00:05:57.070
+Terakhir, saya ingin mengatur
+textStyle menjadi tebal.
+
+00:05:57.070 --> 00:05:58.350
+Mirip dengan
+
+00:05:58.350 --> 00:06:01.700
+teks yang Anda tampilkan untuk default
+atau terjemahan Inggris.
+
+00:06:01.700 --> 00:06:05.590
+Saya ingin tampilan teks menjadi
+medium dan warnanya putih, tapi
+
+00:06:05.590 --> 00:06:06.640
+saya tidak ingin tebal.
+
+00:06:06.640 --> 00:06:08.470
+Jadi, saya tidak akan menyalin baris itu.
+
+00:06:08.470 --> 00:06:12.570
+Baik, mari kita periksa di perangkat,
+jadi silakan ketuk NumbersActivity,
+
+00:06:12.570 --> 00:06:16.390
+Tampilan textView dan latar belakang
+tampak benar, tapi
+
+00:06:16.390 --> 00:06:19.250
+posisi kedua textView kita
+tampak tidak benar.
+
+00:06:19.250 --> 00:06:21.890
+Keduanya dipaksa
+ke sudut kiri atas
+
+00:06:21.890 --> 00:06:25.290
+pada vertical linear layout yang
+ditunjukkan di latar belakang oranye ini.
+
+00:06:25.290 --> 00:06:28.290
+Jika kita melihat garis merah ini,
+kita lihat bahwa yang kita butuhkan
+
+00:06:28.290 --> 00:06:32.830
+adalah kedua textView itu secara vertical
+ditengahkan di dalam ListItem.
+
+00:06:32.830 --> 00:06:36.670
+Untuk memahaminya, mari kita
+bayangkan batas-batas untuk tiap textView
+
+00:06:36.670 --> 00:06:39.440
+dan untuk membantu kita, saya akan
+menarik show layout bounds
+
+00:06:39.440 --> 00:06:41.520
+di bawah opsi pengembang
+di menu pengaturan.
+
+00:06:41.520 --> 00:06:43.170
+Ingat cara membukanya?
+
+00:06:43.170 --> 00:06:46.620
+Kembali ke Pengaturan,
+scroll turun ke opsi pengembang, dan
+
+00:06:46.620 --> 00:06:50.710
+sedikit turun lagi akan
+tampak show layout bounds.
+
+00:06:50.710 --> 00:06:52.430
+Mari kembali ke aplikasi Miwok kita.
+
+00:06:52.430 --> 00:06:55.990
+Dengan layout bounds terlihat,
+saya bisa lihat bahwa kedua textView
+
+00:06:55.990 --> 00:06:59.030
+dipaksa ke tepi atas
+di vertical linear layout.
+
+00:06:59.030 --> 00:07:01.260
+Saya harus memindahkannya agak
+turun sedikit sehingga
+
+00:07:01.260 --> 00:07:04.590
+menjadi lebih tinggi
+di linear layout.
+
+00:07:04.590 --> 00:07:07.720
+Ada beberapa cara untuk mengubah
+tata letak ini agar berfungsi dan
+
+00:07:07.720 --> 00:07:08.820
+ini salah satunya.
+
+00:07:08.820 --> 00:07:10.470
+Dari kursus terakhir,
+
+00:07:10.470 --> 00:07:14.100
+kita tahu bahwa kita bisa memberikan
+bobot pada tata letak ke view children.
+
+00:07:14.100 --> 00:07:18.340
+Sehingga memakan lebih banyak ruang
+di parent linear layout.
+
+00:07:18.340 --> 00:07:22.260
+Saya bisa memberikan tinggi untuk tiap
+view menjadi 0 dan memberi masing-masing
+
+00:07:22.260 --> 00:07:28.050
+bobot satu, sehingga ruang vertikal terbagi
+secara rata di antara kedua view child ini.
+
+00:07:28.050 --> 00:07:30.180
+Selain itu, saya bisa menggunakan
+atribut bernama gravity.
+
+00:07:30.180 --> 00:07:33.490
+Untuk textView pertama, saya akan mengatur
+nilai gravity-nya menjadi bottom,
+
+00:07:33.490 --> 00:07:36.930
+yang mendorong posisi konten teks
+ke dasar view.
+
+00:07:36.930 --> 00:07:40.810
+Untuk textView kedua, saya
+akan atur atribut gravity ke top.
+
+00:07:40.810 --> 00:07:44.750
+Ini memosisikan textView di
+bagian atas textView.
+
+00:07:44.750 --> 00:07:46.658
+Kembali ke kode,
+seharusnya menjadi begini.
+
+00:07:46.658 --> 00:07:51.335
+Jadi, miwok_text_view memiliki lebar
+match_parent yang akan mengisi
+
+00:07:51.335 --> 00:07:53.564
+sisa ruang di tata letak ListItem.
+
+00:07:53.564 --> 00:07:56.896
+Tingginya adalah nol dps dan
+bobotnya adalah satu,
+143
+lebar view default juga
+match_parent.
+a with a match parent.
+
+00:08:00.625 --> 00:08:04.620
+Tingginya juga nol dps dan
+bobotnya juga satu.
+
+00:08:04.620 --> 00:08:07.813
+Ini berarti bahwa kedua textView
+akan membagi tinggi yang tersedia
+
+00:08:07.813 --> 00:08:09.222
+dalam linear layout parent.
+
+00:08:09.222 --> 00:08:12.909
+Lalu kita mengatur gravity yang
+mengubah posisi konten di dalam
+
+00:08:12.909 --> 00:08:13.490
+view.
+
+00:08:13.490 --> 00:08:16.610
+Tapi, perhatikan bahwa ini tidak
+mengubah ukuran view.
+
+00:08:16.610 --> 00:08:20.950
+Di sini, kita memosisikan teks di dalam
+textView Miwok agar berada di dasar
+
+00:08:20.950 --> 00:08:23.320
+dan teks di dalam textView default
+ada di bagian atas.
+
+00:08:24.930 --> 00:08:27.010
+Inilah tampilannya
+di perangkat.
+
+00:08:27.010 --> 00:08:28.360
+Saat mengetuk Numbers,
+
+00:08:28.360 --> 00:08:32.240
+kita lihat bahwa kedua TextView
+ditengahkan di dalam item list.
+
+00:08:32.240 --> 00:08:34.830
+Mari kita lihat bagaimana tampilannya
+di activity yang lain.
+
+00:08:34.830 --> 00:08:36.558
+Ini tampak bagus, jadi
+
+00:08:36.558 --> 00:08:40.470
+yang masih harus kita perbaiki
+adalah warna item list latar belakang.
+
+00:08:40.470 --> 00:08:44.100
+Tidak semuanya menggunakan oranye
+dan justru menggunakan warna yang
+
+00:08:44.100 --> 00:08:44.750
+benar untuk tiap kategori.
+

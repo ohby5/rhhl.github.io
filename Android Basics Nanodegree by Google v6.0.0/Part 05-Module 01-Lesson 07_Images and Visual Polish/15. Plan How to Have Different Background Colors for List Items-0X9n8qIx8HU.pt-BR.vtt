@@ -1,0 +1,94 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.801
+Para a pergunta sobre onde armazenar
+a informação de cor do plano de fundo,
+
+00:00:03.834 --> 00:00:06.968
+poderíamos tê-la armazenado
+no objeto Word.
+
+00:00:07.000 --> 00:00:09.334
+Ou seja,
+para todo Word no Números,
+
+00:00:09.367 --> 00:00:13.167
+poderíamos atribuir a cor laranja
+como uma entrada no construtor.
+
+00:00:13.200 --> 00:00:16.801
+Isso seria um desperdício de memória,
+pois faríamos referência à mesma cor
+
+00:00:16.834 --> 00:00:19.734
+para todos os objetos Word
+da mesma categoria.
+
+00:00:19.767 --> 00:00:23.300
+Se quisermos reduzir
+as informações repetidas no aplicativo,
+
+00:00:23.334 --> 00:00:28.367
+o melhor lugar é armazenar
+a informação de cor na classe WordAdapter.
+
+00:00:28.400 --> 00:00:32.601
+Cada activity tem seus próprios ListView
+e WordAdapter.
+
+00:00:32.634 --> 00:00:36.367
+Podemos armazenar uma cor
+em cada WordAdapter,
+
+00:00:36.400 --> 00:00:39.501
+de acordo com a categoria
+para que ele foi criado.
+
+00:00:39.534 --> 00:00:43.934
+Como escrevi aqui, podemos armazenar
+a informação de cor no WordAdapter.
+
+00:00:43.968 --> 00:00:47.834
+Sempre que um novo objeto WordAdapter
+for criado para uma lista,
+
+00:00:47.868 --> 00:00:52.033
+ele aplicará a mesma cor de plano de fundo
+a todos os itens da lista.
+
+00:00:52.067 --> 00:00:53.400
+Seguindo esta lógica,
+
+00:00:53.434 --> 00:00:57.367
+o WordAdapter na activity Números
+armazenaria a cor laranja.
+
+00:00:57.400 --> 00:01:02.000
+O WordAdapter na activity Família
+armazenaria a cor verde e assim vai.
+
+00:01:02.033 --> 00:01:05.267
+Então por que não armazenamos
+na activity?
+
+00:01:05.300 --> 00:01:08.167
+Já que cada activity
+tem uma cor diferente.
+
+00:01:08.200 --> 00:01:14.133
+Bem, a activity precisa saber da cor,
+mas só quando inicializamos o WordAdapter.
+
+00:01:14.167 --> 00:01:15.801
+No fim das contas,
+
+00:01:15.834 --> 00:01:19.701
+o WordAdapter tem que armazenar a cor
+como uma variável global
+
+00:01:19.734 --> 00:01:25.167
+para que possa se referir a ela sempre
+que criar um novo layout de item de lista.
+

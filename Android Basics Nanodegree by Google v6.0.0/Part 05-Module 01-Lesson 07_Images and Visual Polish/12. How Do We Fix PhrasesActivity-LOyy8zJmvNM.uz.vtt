@@ -1,0 +1,292 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.870 --> 00:00:03.840
+Shunday qilib, iboralar sahifasi yaqinda 
+qilingan ko‘plab 
+
+00:00:03.840 --> 00:00:06.150
+o‘zgarishlar oqibatida buzilganini 
+bilamiz.
+
+00:00:06.150 --> 00:00:08.150
+Keling, orqaga qaytamiz va biz nima 
+qilganimizni shunchaki ko‘rib chiqamiz.
+
+00:00:09.336 --> 00:00:11.250
+WordAdapter sinfida,
+
+00:00:11.250 --> 00:00:14.550
+biz elementlar ro‘yxatida mos rasmni 
+tasvirlashi uchun mana bu kod qismini qo‘shdik.
+
+00:00:17.130 --> 00:00:21.410
+Demak, u ehtimol biz setImageResource ni 
+chaqirganimizda g‘alati ishlayotgan bo‘lishi mumkin, chunki, 
+
+00:00:21.410 --> 00:00:22.660
+iboralarda birota ham rasm yo‘q.
+
+00:00:23.830 --> 00:00:26.200
+Demak, mana bu birinchi 
+savol uchun javob.
+
+00:00:26.200 --> 00:00:29.392
+Iboralar mashqi bilan bog‘liq 
+muammo bu ekran bo‘m-bo‘shligidir.
+
+00:00:29.392 --> 00:00:33.320
+WordAdapter word da 
+rasm bor deb hisoblayapti, ammo
+
+00:00:33.320 --> 00:00:35.470
+iboralarda rasmlar yo‘q.
+
+00:00:35.470 --> 00:00:37.000
+Xo‘p, endi ikkinchi savolga o‘tamiz.
+
+00:00:37.000 --> 00:00:40.150
+Biz muammoni to‘g‘irlash uchun 
+kodni qanday o‘zgartirishimiz 
+
+00:00:40.150 --> 00:00:43.400
+kerakligini tasvirlaydigan bir nechta 
+imkoni bor yechimlar mavjud.
+
+00:00:43.400 --> 00:00:47.350
+Biz faqatgina ikkita matn ko‘rinishida lekin ImageView dan 
+tashkil topmaydigan elementlar ro‘yxati ko‘rinishini
+
+00:00:47.350 --> 00:00:52.670
+qanday qilib yaratishni aniq bilganimizda PhraseAdapter ni 
+chaqiruvchi maxsus adapter ni 
+
+00:00:52.670 --> 00:00:54.110
+chaqira olgan bo‘lardik.
+
+00:00:54.110 --> 00:00:58.640
+PhraseAdapter faqatgina PhrasesActivity da 
+foydalanilgan bo‘lardi.
+
+00:00:58.640 --> 00:01:03.070
+WordAdapter ham qolgan boshqa uchta mashqda 
+ham ishlatila olgan bo‘lardi.
+
+00:01:03.070 --> 00:01:07.920
+Ammo bu yechim ikkala adapter da ham 
+ko‘plab nusxali mantiqni tug‘diradi.
+
+00:01:07.920 --> 00:01:11.390
+Bizda inglizcha va mivokcha tarjimalarni saqlab 
+turish uchun ham bir xil 
+
+00:01:11.390 --> 00:01:13.070
+mantiq bo‘lishi kerak.
+
+00:01:13.070 --> 00:01:17.230
+Nima uchun shunchaki yagona WordAdapter 
+sinfi bilan hal qila olmaymiz?
+
+00:01:17.230 --> 00:01:20.460
+Biz WordAdapter sinfini shunchaki 
+ozgina o‘zgartiramiz, shunda
+
+00:01:20.460 --> 00:01:25.590
+ular elementlar ro‘yxatini rasm bilan 
+ham rasmsiz ham yarata oladi.
+
+00:01:25.590 --> 00:01:30.010
+Va keyn biz qolgan barcha sahifalarda 
+yagona adapter dan foydalana olamiz.
+
+00:01:30.010 --> 00:01:32.870
+Siz PhraseActivity da elementlar ro‘yxati uchun, 
+
+00:01:32.870 --> 00:01:35.580
+ImageView yo‘qligidan tashqari 
+bizning boshqa uchta sahifamizdagi 
+
+00:01:35.580 --> 00:01:37.980
+bilan bir xil layout mavjud.
+
+00:01:37.980 --> 00:01:41.240
+Demak, matn shunchaki 
+chapga biroz siljiydi.
+
+00:01:41.240 --> 00:01:44.690
+Men savol-javob vaqtida ham sizga bitta 
+ko‘rsatma bergandim, ya’ni ilova 
+
+00:01:44.690 --> 00:01:48.100
+ishlab turgan vaqtida siz Android da ko‘rinishlarni 
+yashirib tursangiz yoki ko‘rsatsangiz ham bo‘ladi.
+
+00:01:48.100 --> 00:01:51.180
+Buni e’tiborga olgan holda, bu ba’zi 
+holatlarda biz elementlar ro‘yxatida 
+
+00:01:51.180 --> 00:01:55.270
+ImageView ni ko‘rsata olishimizni va ba’zi hollarda 
+yashira olishimizni bildiradimi?
+
+00:01:55.270 --> 00:01:56.220
+Mana bu yerda Android dagi if/else boyonoti 
+
+00:01:56.220 --> 00:02:00.000
+uchun barcha hujjatlarni qarab chiqyapman.
+
+00:02:00.000 --> 00:02:02.940
+Hozir, agar siz oxirgi kursdagi 
+uchinchi darsdan eslay olsangiz, 
+
+00:02:02.940 --> 00:02:05.570
+kodimiz control flow statements deb 
+nomlanadigan narsalardan foydalanish orqali
+
+00:02:05.570 --> 00:02:08.130
+turli xil yo‘llarda ishlashi mumkinligini o‘rgandik.
+
+00:02:08.130 --> 00:02:10.919
+Bu biz kodning mana bu yerda ma’lum bir sinov 
+shartlariga asoslangan poyezd izlari kabi 
+
+00:02:10.919 --> 00:02:15.180
+chizib tasvirlangan turli xil yo‘laklari bo‘ylab 
+pastga tusha olishimizni bildiradi, ya’ni
+
+00:02:15.180 --> 00:02:17.300
+bu yerda kalit sifatida chizib tasvirlangan.
+
+00:02:17.300 --> 00:02:21.100
+Hozir, sonlar, oila va rang so‘zlari uchun 
+bitta yo‘lak pastga tusha olamiz.
+
+00:02:22.470 --> 00:02:26.010
+Ammo iboralar uchun yana boshqa bir
+yo‘lak bo‘ylab pastga tushamiz.
+
+00:02:26.010 --> 00:02:28.750
+Yana ham batafsilroq, u qanday qilib sonlar
+oilasi va ranglar so‘zlari uchun 
+
+00:02:28.750 --> 00:02:31.020
+qanday qilib bizning kodimizni tarjima qiladi?
+
+00:02:31.020 --> 00:02:33.650
+Biz bironta ImageView ga to‘g‘ri 
+rasmni o‘rnatish uchun 
+
+00:02:33.650 --> 00:02:35.930
+ishlatiladigan mana bu qism kodni bajarib 
+ko‘ramiz.
+
+00:02:35.930 --> 00:02:39.190
+Ammo iboralar uchun davom etishni va bu mantiqni 
+tashlab o‘tishni xohlayman va 
+
+00:02:39.190 --> 00:02:42.600
+uning o‘rniga shunchaki ImageView ni 
+yashiring va umuman hech narsani ko‘rsatmaydi.
+
+00:02:42.600 --> 00:02:45.520
+Keling bu javobni bizning topshirig‘imizdagi 
+ikkinchi savolga yozib qo‘yamiz.
+
+00:02:45.520 --> 00:02:49.430
+Demak, bu muammoni yechish uchun kodni qanday 
+qilib o‘zgartirish so‘ralgan edi.
+
+00:02:49.430 --> 00:02:54.160
+Biz WordAdapter ni ImageView dagi raqam, 
+rang va oila so‘zlari uchun 
+
+00:02:54.160 --> 00:02:56.840
+faqatgina bitta rasm belgilab qo‘ya oladigan 
+qilib o‘zgartira olamiz.
+
+00:02:56.840 --> 00:03:00.150
+Ammo, iboralar uchun biz ImageView ni 
+shunchaki yashirib qo‘ya olamiz.
+
+00:03:00.150 --> 00:03:03.720
+Sizni bilmadim-u, lekin 
+men buni kodga o‘girish juda ham 
+
+00:03:04.860 --> 00:03:07.560
+qiyinligi sababli ushbu javobdan qoniqmayapman.
+
+00:03:07.560 --> 00:03:11.210
+Biz so‘z qaysi toifadaligini qanday qilib 
+aniqlashni yana ham o‘ylab ko‘rishimiz kerak.
+
+00:03:12.410 --> 00:03:13.090
+Hozir, agar biz davom etsak va 
+
+00:03:13.090 --> 00:03:16.480
+mana bu so‘zlar sinfiga qarab chiqsak,
+buni qilishning bir yo‘li har bir so‘z uchun 
+
+00:03:16.480 --> 00:03:19.770
+toifasining trekini o‘zida saqlaydigan 
+yangi o‘zgaruvchini qo‘shishdir.
+
+00:03:19.770 --> 00:03:22.109
+Ammo, va nihoyat, biz oldin bu ImageView ni 
+
+00:03:22.109 --> 00:03:23.868
+yashiramizmi yo‘qmi bilib olishimiz kerak.
+
+00:03:23.868 --> 00:03:27.004
+Hozir, so‘zlar sinfida bizda allaqachon rasm manba 
+
+00:03:27.004 --> 00:03:28.285
+ID si uchun maydon borligini eslang.
+
+00:03:28.285 --> 00:03:30.435
+Men maydon deganda, shunchaki birorta sinfning 
+
+00:03:30.435 --> 00:03:32.470
+global o‘zgaruvchisini nazarda tutyapman.
+
+00:03:32.470 --> 00:03:35.420
+Demak, biz ImageView ni bironta elementlar 
+ro‘yxatida yashirish yoki ko‘rsatishimizni aniqlash uchun 
+
+00:03:35.420 --> 00:03:39.985
+constructor ga ImageView o‘rnatilganmi 
+yo‘qmi tekshirib ko‘rsak bo‘ladi.
+
+00:03:41.530 --> 00:03:45.090
+Men orqaga qaytaman va bu nazorat 
+savoli uchun javobimni yangilamoqchiman.
+
+00:03:45.090 --> 00:03:47.960
+Uning o‘rniga WordAdapter ni 
+
+00:03:47.960 --> 00:03:50.160
+o‘zgartirish uchun shart operatorlaridan foydalanamiz.
+
+00:03:50.160 --> 00:03:54.190
+Agar so‘z ob’ekti bilan bog‘langan birorta rasm 
+bo‘lsa, ImageView ni ko‘rsating.
+
+00:03:54.190 --> 00:03:56.510
+Aks holda, ImageView ni yashiring.
+
+00:03:56.510 --> 00:03:58.120
+Va u yerga boramiz.
+Bu o‘zgarishni bajarishimiz
+
+00:03:58.120 --> 00:04:01.020
+uchun o‘sha kodni yozsak, 
+bu anchagina foydali bo‘ladi.
+
+00:04:01.020 --> 00:04:03.622
+Demak, oldingi javob shunchaki 
+juda tushunarsiz edi.
+
+00:04:03.622 --> 00:04:06.170
+Hammasi yaxshi, buni bilgan holda keling, 
+hozir keyingi bosqichga o‘tamiz.
+

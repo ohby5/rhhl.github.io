@@ -1,0 +1,307 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.800
+Ainda estamos
+na 4ª tarefa aqui,
+
+00:00:02.833 --> 00:00:06.167
+que é garantir que o WordAdapter
+tenha instruções corretas
+
+00:00:06.200 --> 00:00:08.100
+para criar cada exibição
+de item de lista.
+
+00:00:08.133 --> 00:00:10.967
+Primeiro, temos que modificar
+a classe Word
+
+00:00:11.000 --> 00:00:15.100
+para que o WordAdapter diga se há
+uma imagem válida ligada a um objeto Word.
+
+00:00:15.133 --> 00:00:17.967
+Também há uma dica abaixo do quiz
+se precisar de ajuda.
+
+00:00:18.000 --> 00:00:20.800
+Aí temos que modificar
+a classe WordAdapter
+
+00:00:20.833 --> 00:00:25.433
+para que ela crie itens de lista
+que tenham imagens e não tenham.
+
+00:00:25.467 --> 00:00:30.467
+Assim, a mesma classe WordAdapter
+pode ser usada em categorias diferentes.
+
+00:00:30.500 --> 00:00:34.633
+Quero apresentar um novo conceito
+que sugeri no quiz anterior.
+
+00:00:34.667 --> 00:00:38.733
+Você pode chamar um método
+para mudar a visibilidade da View
+
+00:00:38.767 --> 00:00:40.200
+enquanto o aplicativo
+executa.
+
+00:00:40.233 --> 00:00:43.900
+Para um dado objeto View,
+aqui na classe View,
+
+00:00:43.933 --> 00:00:46.867
+você pode chamar
+o método setVisibility nele
+
+00:00:46.900 --> 00:00:49.367
+e atribuir uma entrada inteira
+a ele.
+
+00:00:49.400 --> 00:00:54.167
+As entradas possíveis são:
+"visible", "invisible" e "gone".
+
+00:00:54.200 --> 00:00:58.100
+Eles podem parecer valores de string,
+mas vamos ver mais.
+
+00:00:58.967 --> 00:01:00.933
+Clicando no "visible",
+
+00:01:00.967 --> 00:01:04.433
+vemos um inteiro definido
+na classe View.
+
+00:01:04.933 --> 00:01:07.400
+E ele tem
+o valor inteiro 0.
+
+00:01:07.433 --> 00:01:10.233
+É assim que você usaria o método
+no seu código.
+
+00:01:10.267 --> 00:01:14.133
+Imagine que temos uma View
+chamada textView na variável.
+
+00:01:14.167 --> 00:01:17.800
+Podemos chamar o método setVisibility
+neste objeto,
+
+00:01:17.833 --> 00:01:20.400
+e, neste método,
+atribuímos uma entrada
+
+00:01:20.433 --> 00:01:23.733
+que é o inteiro "visible" definido
+na classe View.
+
+00:01:23.767 --> 00:01:26.767
+Essas são as diferentes entradas
+do método setVisibility.
+
+00:01:26.800 --> 00:01:29.933
+Não vou dizer o comportamento exato
+das 3 ainda.
+
+00:01:29.967 --> 00:01:34.667
+Prefiro que você experimente ou leia
+a documentação para descobrir sozinho.
+
+00:01:34.700 --> 00:01:39.133
+Esses 3 estados são representados
+por 3 valores inteiros predefinidos
+
+00:01:39.167 --> 00:01:44.633
+que a classe View conhece
+e sabe como se comportar se os vir.
+
+00:01:44.667 --> 00:01:48.800
+Se eu atribuísse
+um valor inteiro aleatório, como 2001,
+
+00:01:48.833 --> 00:01:51.933
+a classe View
+não saberia o que fazer.
+
+00:01:51.967 --> 00:01:56.200
+Em suma, a classe View
+só reconhece esses 3 números.
+
+00:01:56.233 --> 00:01:59.367
+Por exemplo,
+se o método receber 0 como entrada,
+
+00:01:59.400 --> 00:02:01.733
+o View sabe
+que ele deve se tornar visível.
+
+00:02:01.767 --> 00:02:04.733
+Perceba uma coisa sobre a variável
+na documentação.
+
+00:02:04.767 --> 00:02:10.500
+Diz aqui:
+"public static final int VISIBLE",
+
+00:02:10.533 --> 00:02:13.333
+mas nunca vimos "static"
+ou "final",
+
+00:02:13.367 --> 00:02:16.433
+e ambas são palavras-chave em Java
+com significados especiais
+
+00:02:16.467 --> 00:02:18.467
+chamadas de modificadores.
+
+00:02:18.500 --> 00:02:22.000
+Da última vez que ouvimos isso,
+falamos de como palavras
+
+00:02:22.033 --> 00:02:24.900
+como "public" e "private"
+eram modificadores de acesso
+
+00:02:24.933 --> 00:02:28.600
+usados para controlar quem pode
+usar uma classe variável ou método.
+
+00:02:28.633 --> 00:02:32.800
+Como a variável "visible" é declarada
+através da última palavra-chave,
+
+00:02:32.833 --> 00:02:34.800
+o campo nunca pode mudar
+de valor.
+
+00:02:34.833 --> 00:02:39.333
+Pense no 0
+como sendo o valor final absoluto.
+
+00:02:39.367 --> 00:02:43.367
+Quando a variável for inicializada,
+se você tentar atribuir outro valor,
+
+00:02:43.400 --> 00:02:46.033
+aparecerá um erro Java dizendo
+que não é permitido.
+
+00:02:46.067 --> 00:02:50.233
+Em Java, quando uma variável não muda
+de valor, é chamada de constante.
+
+00:02:50.267 --> 00:02:53.533
+Pense nela
+como tendo constantemente o mesmo valor.
+
+00:02:53.567 --> 00:02:55.400
+Quando temos
+um valor constante,
+
+00:02:55.433 --> 00:02:59.433
+a convenção em Java é dar
+à variável um nome em letras maiúsculas.
+
+00:02:59.467 --> 00:03:03.567
+As maiúsculas não significam
+que estamos gritando o nome delas,
+
+00:03:03.600 --> 00:03:05.933
+como "visible!", "invisible!"
+ou "gone!".
+
+00:03:05.967 --> 00:03:10.333
+Estão assim porque é um jeito fácil
+de indicar seus valores constantes.
+
+00:03:10.367 --> 00:03:13.733
+A última palavra-chave explica
+por que as variáveis têm valores constantes
+
+00:03:13.767 --> 00:03:15.767
+e por que são escritas
+em maiúsculas.
+
+00:03:15.800 --> 00:03:17.500
+Mas
+e a palavra-chave "static"?
+
+00:03:17.533 --> 00:03:20.867
+Significa que esta variável
+está associada à classe
+
+00:03:20.900 --> 00:03:23.567
+em vez de a uma instância
+de objeto da classe.
+
+00:03:23.600 --> 00:03:27.500
+Este conceito não é trivial,
+mas não vamos detalhá-lo agora.
+
+00:03:27.533 --> 00:03:31.067
+Só saiba que,
+como a variável é pública e estática,
+
+00:03:31.100 --> 00:03:33.867
+você pode se referir
+a ela diretamente
+
+00:03:33.900 --> 00:03:37.133
+usando o nome de classe "View" seguido
+de um ponto final.
+
+00:03:37.167 --> 00:03:40.100
+Neste caso, "View.VISIBLE".
+
+00:03:40.133 --> 00:03:44.267
+Esta notação de ponto significa
+que a variável faz parte da classe
+
+00:03:44.300 --> 00:03:45.800
+que vem antes dele.
+
+00:03:45.833 --> 00:03:51.233
+Outros exemplos são "View.INVISIBLE"
+ou "View.GONE" para os outros estados.
+
+00:03:51.267 --> 00:03:54.067
+Depois de terminar a modificação
+do código WordAdapter,
+
+00:03:54.100 --> 00:03:56.333
+aloque as respostas
+para essas duas perguntas.
+
+00:03:56.367 --> 00:03:59.500
+Para este layout de item de lista,
+que vamos usar só para expressões,
+
+00:03:59.533 --> 00:04:04.900
+a visibilidade da ImageView
+deve ser "visible", "invisible" ou "gone"?
+
+00:04:04.933 --> 00:04:10.200
+Aí, para este layout de item de lista,
+que vamos usar para as outras categorias,
+
+00:04:10.233 --> 00:04:15.033
+sua ImageView deve ser "visible",
+"invisible" ou "gone"?
+
+00:04:15.067 --> 00:04:17.233
+O aplicativo ficará assim.
+
+00:04:17.267 --> 00:04:20.200
+Quando clicamos nas expressões,
+não há imagens.
+
+00:04:20.233 --> 00:04:23.800
+Mas, nas outras categorias,
+todas têm imagens.
+

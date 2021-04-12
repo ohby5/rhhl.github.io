@@ -1,0 +1,408 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.490 --> 00:00:02.380
+Birinchi bosqich WordAdapter ni
+
+00:00:02.380 --> 00:00:05.930
+so‘zning ob’ektida rasm bor yoki yo‘qligini 
+aniqlash usulini tushunishdir.
+
+00:00:05.930 --> 00:00:08.500
+Keling, Word Adapter fayl va 
+Android studio ga qarab chiqamiz.
+
+00:00:08.500 --> 00:00:11.947
+Bu yerda Word Adapter sinfi
+esingizda bo‘lsin, 
+
+00:00:11.947 --> 00:00:16.257
+biz faqatgina ImageView ni 
+o‘rnatadigan kodning 
+
+00:00:16.257 --> 00:00:16.878
+mana bu ikki qatorinigina ishlatib ko‘ramiz.
+
+00:00:16.878 --> 00:00:20.821
+Buni amalga oshirish uchun, 
+
+00:00:20.821 --> 00:00:24.968
+Word sinfida boshqa bir method yaratib
+uni ochib berishimiz kerak.
+
+00:00:24.968 --> 00:00:27.910
+Shuning uchun men sinfga murojat qilishni va mana 
+bu method ni ta’riflashni xohlayman.
+
+00:00:27.910 --> 00:00:31.260
+word sinfining eng pastki qismida, 
+hasImage ga ega bolgan.
+ 
+11
+00:00:31,260 --&gt; 00:00:35,310
+Shuning uchun public method yaratmoqchiman va uni
+qiymatga qaytadigan qilib qo‘ymoqchiman.
+
+00:00:35.310 --> 00:00:38.740
+Agar so‘zda rasm bo‘lsa bu method true ga, 
+
+00:00:38.740 --> 00:00:42.310
+rasm bo‘lmasa false ga qaytadi va 
+eslab oling, men mana bu yerga qo‘shmoqchi bo‘lgan 
+
+00:00:42.310 --> 00:00:47.020
+sizning kodingizni o‘quvchilar tushunishi uchun doimo 
+ba’zi izohlarni qo‘shish muhim hisoblanadi.
+
+00:00:47.020 --> 00:00:49.250
+Endi so‘zda rasm borligini qanday aniqlaymiz?
+
+00:00:50.440 --> 00:00:52.670
+Keling, word sinfining yuqori qismiga o‘tamiz
+
+00:00:52.670 --> 00:00:54.970
+Va bu yerda mImageResource 
+
+00:00:54.970 --> 00:00:57.810
+borligini unutmang.
+19
+00:00:57,810 --&gt; 00:0
+Shuni ta’kidlaymizki, bu aslida bizga qaysi rasmga 
+ishora qilinishini taxmin qilishimizga yordam bermaydi.
+
+00:01:01.190 --> 00:01:03.790
+Biroq, bizning holatlarimizda, 
+biz undan faqatgina tasvir mavjud
+ 
+21
+00:01:03,790 --&gt; 00:01:04,980
+yoki yo‘qligini tekshirish uchun foydalanamiz.
+
+00:01:04.980 --> 00:01:09.240
+Bu aslida o‘zgarmas qiymatlar 
+uchun yaxshi foyda bo‘ladi.
+
+00:01:09.240 --> 00:01:12.600
+Biz tasvirlar holatini aks ettiruvchi 
+constant ni yarata olamiz va 
+
+00:01:12.600 --> 00:01:14.270
+men buni mana bu yerda qilmoqchiman.
+
+00:01:14.270 --> 00:01:18.040
+Men NO_IMAGE_PROVIDED deb nomlangan o‘zgaruvchini 
+yaratdim, hammasi katta harflarda. 
+
+00:01:18.040 --> 00:01:21.870
+chunki u o‘zgarmas va har bir so‘z pastki chiziq bilan
+ajratilgan.
+
+00:01:21.870 --> 00:01:25.180
+Hozir men bularning ko‘chiriladigan doimiy
+qiymatiga qo‘yaman va
+ 
+28
+00:01:25,180 --&gt; 00:01:25,970
+yo‘naltiriladiganidan foydalanaman.
+
+00:01:25.970 --> 00:01:30.090
+chunki bu barcha mumkin bo‘lgan yaroqli manba
+ID doirasidan tashqarida
+
+00:01:30.090 --> 00:01:33.430
+Shuni ham unutmangki, bu constant 
+private o‘zgaruvchi, 
+
+00:01:33.430 --> 00:01:36.200
+chunki, biz uni faqatgina word 
+sinfi ichida foydalanishimiz kerak.
+
+00:01:36.200 --> 00:01:38.140
+Bu yaratilgan constant,/i. bilan,
+
+00:01:38.140 --> 00:01:42.550
+men rasm o‘zgaruvchini avtomatik holatda 
+rasm yo‘q holatga tenglab qo‘yaman.
+
+00:01:42.550 --> 00:01:45.090
+Men mana bu yerdagi rasm constanat ga 
+tenglab qo‘ymoqchiman.
+
+00:01:46.450 --> 00:01:49.510
+Ushbu o‘zgaruvchining boshqa bir 
+narsaga yangilanishi bilanoq,
+
+00:01:49.510 --> 00:01:51.460
+biz Word da rasm borligini bilib olamiz.
+
+00:01:51.460 --> 00:01:54.640
+constractor da bironta rasm bo‘lsa, 
+
+00:01:54.640 --> 00:01:57.150
+bu o‘zgaruvchi yangilanadi, va 
+
+00:01:57.150 --> 00:02:01.150
+siz so‘zda tasvir borligini bilishingiz mumkin 
+bo‘ladi va aksincha tasvir bo‘lmasa, 
+
+00:02:01.150 --> 00:02:04.400
+unda rasm ID si bir xil yoziladi.
+
+00:02:04.400 --> 00:02:07.020
+Manfiyligini bironta qiymat bilan qoldiring.
+
+00:02:08.050 --> 00:02:12.040
+Keling, pastga hali ham tugatilishi kerak bo‘lgan 
+hasImage method ga qaytamiz.
+
+00:02:12.040 --> 00:02:15.850
+Ushbu usulda method da rasm o‘zgaruvchisi 
+constant berilgan rasmga 
+
+00:02:15.850 --> 00:02:20.240
+teng yoki tengmasligini tekshirishimiz kerak
+va u mana bunga o‘xshash bo‘ladi. 
+
+00:02:20.240 --> 00:02:24.930
+va undov belgisi bilan keladigan 
+tenglik belgisi teng emasligini bildiradi.
+
+00:02:24.930 --> 00:02:29.260
+Bu iboraning natijasi true yoki false bo‘ladi
+ 
+47
+00:02:29,260 --&gt; 00:02:32,590
+Ushbu usul method ning return 
+qiymati sifatida qaytariladi.
+
+00:02:33.590 --> 00:02:36.770
+Chalkashliklarga mantiq yo‘q, ammo men
+sizni harakat qilishingizni 
+
+00:02:36.770 --> 00:02:37.740
+va birga ergashishingizni xohlardim.
+50
+00:02:37,740 --&gt; 00:02:
+Agar rasm manbasining o‘zgaruvchisi manfiy bo‘lmasa, 
+
+00:02:41.480 --> 00:02:45.380
+u holda yaroqli rasm bor, va method 
+true ga qaytishi kerak, ammo
+
+00:02:45.380 --> 00:02:49.620
+rasm o‘zgaruvchisi manfiyga teng bo‘lsa, 
+unda bu so‘z uchun rasm mavjud emas
+
+00:02:49.620 --> 00:02:52.300
+va method false ga qaytadi.
+
+00:02:52.300 --> 00:02:55.290
+Biz word adapter sinfini sifatni tekshiriramiz 
+
+00:02:55.290 --> 00:02:58.590
+chunki, uning hammasi rasm bor 
+yoki yo‘qligi haqida qayg‘uradi.
+
+00:02:58.590 --> 00:03:01.660
+word adapter biz word sinfimizda bunga qaror
+qilish uchun qiymatlardan 
+
+00:03:01.660 --> 00:03:04.120
+qanday qilib foydalanganligimiz haqidagi barcha 
+detallarni bilishi shart emas.
+
+00:03:04.120 --> 00:03:06.940
+Bu word sinfda tegishliy mantiq.
+
+00:03:06.940 --> 00:03:09.040
+Yaxshi, juda soz.
+
+00:03:09.040 --> 00:03:13.100
+Endi word sinfida hasImage deb nomlanadigan 
+qanaqadir public method ni tasvirladik.
+
+00:03:13.100 --> 00:03:15.720
+Keling, word adapter sinfini
+qayta qo‘shamiz va
+
+00:03:15.720 --> 00:03:18.810
+bu hasImage method dan so‘z ob’ektida 
+qanday foydalana olishimiz mumkinligini ko‘ramiz.
+
+00:03:18.810 --> 00:03:20.580
+Endi kodning ular bilan bog‘liq bo‘lgan mana bu qatori.
+
+00:03:20.580 --> 00:03:23.860
+Esda tutinki, biz shartli mantiq,
+masalan, if/else statement ni ishlata olamiz.
+
+00:03:23.860 --> 00:03:26.600
+Shuning uchun kodimiz so‘zda rasm bor yoki 
+
+00:03:26.600 --> 00:03:28.490
+yo‘qligiga qarab turlicha ishlaydi.
+
+00:03:28.490 --> 00:03:31.950
+Shunday qilib if statement 
+hozirda rasm borligini tekshirsa, 
+
+00:03:31.950 --> 00:03:35.170
+biz oldin qilganimizdek ob’ektidan 
+
+00:03:35.170 --> 00:03:39.500
+rasm ko‘rinishiga mos rasmni o‘rnatamiz, 
+aks holda bu true emas.
+
+00:03:39.500 --> 00:03:42.610
+biz ko‘rinishni yashirishimiz kerak va u bizning 
+else statement imizga boradi.
+
+00:03:42.610 --> 00:03:46.300
+Oldinroq, men siga ilova ishlab turgan vaqtda 
+ko‘rinishning visibility sini 
+
+00:03:46.300 --> 00:03:47.860
+qanday o‘zgartirish uchun ba’zi kodlarni ko‘rsatdim.
+
+00:03:47.860 --> 00:03:50.290
+visibility method lar to‘plamidan foydalanishni eslang, 
+
+00:03:50.290 --> 00:03:54.110
+biz rasmni to‘liq yashira olamiz, shunday qilish orqali 
+men unga gone o‘rnatmoqchiman.
+
+00:03:55.390 --> 00:03:58.980
+Yoki tajriba o‘tkazish yo‘li bilan yoki 
+hujjatlarni mustaqil ravishda o‘qib chiqish yo‘li bilan.
+
+00:03:58.980 --> 00:04:01.990
+Umid qilimanki, siz gone ko‘rinish 
+yashirilganligini va joylashuv tartibida hech 
+
+00:04:01.990 --> 00:04:04.340
+qanaqa joyni egallamasligini anglatishini tushunib yetgansiz.
+
+00:04:04.340 --> 00:04:07.500
+Endi uni invisible ya’ni ko‘rinish
+yashiringan bo‘ladi ammo, joylashuv tartibida hali ham 
+
+00:04:07.500 --> 00:04:09.640
+joy egallab turishini anglatuvchi holat bilan taqqoslaymiz.
+
+00:04:10.710 --> 00:04:14.760
+Ilovamizda agar biz rasm ko‘rinishini 
+invisible qilib qo‘ysak, elementlar 
+
+00:04:14.760 --> 00:04:18.220
+ro‘yxatining chap tomonida bo‘sh 
+joy qolgan bo‘lardi va biz buni xohlamaymiz.
+
+00:04:18.220 --> 00:04:22.500
+Uning o‘rniga rasm ko‘rinishini yo‘q
+qilib qo‘yamiz, shunda u uni to‘liq yashiradi.
+
+00:04:22.500 --> 00:04:24.748
+Mana bu yerda men kodning mana bu qatori nima qilishini 
+ko‘rsatish uchun ba’zi izohlarni qo‘shishni xohlayman.
+
+00:04:24.748 --> 00:04:26.758
+[BO‘SH_AUDIO]
+
+00:04:26.758 --> 00:04:28.560
+Endi if statement ga qayting.
+
+00:04:28.560 --> 00:04:33.220
+Bizga qo‘shimcha aniqroq kod kerak va 
+visibility ni visible qo‘yamiz.
+
+00:04:33.220 --> 00:04:37.310
+Agar bizda oldin rasm bo‘lgan bo‘lsa,
+biz buni qilamiz chunki, ko‘rinish qayta ishlatiladi.
+
+00:04:37.310 --> 00:04:41.080
+Demak, ko‘rinish oldindan yashiringan bo‘lsa, biz 
+yana bu rasm ko‘rinishiga yangi rasm o‘rnatayotganimizda 
+
+00:04:41.080 --> 00:04:43.260
+u visible qilinganiga ishonch hosil qilishimiz kerak.
+
+00:04:43.260 --> 00:04:46.650
+Hammasi yaxshi, u yerda ko‘plab o‘zgarishlar
+bo‘lgan edi ammo, 
+
+00:04:46.650 --> 00:04:48.500
+keling, pastga tushib nima sodir bo‘lganini ko‘rish
+uchun qurilmamizni tekshiramiz.
+
+00:04:48.500 --> 00:04:50.320
+Xo‘sh, birinchi sinov va iboralar.
+
+00:04:50.320 --> 00:04:52.730
+Yaxshi bu yaxshidek ko‘rinayapti, rasmlar yo‘q.
+
+00:04:54.160 --> 00:04:55.296
+Endi keling, sonlarni sinab ko‘ramiz.
+
+00:04:55.296 --> 00:04:56.055
+Ajoyib.
+
+00:04:56.055 --> 00:04:57.190
+Rasmlar.
+
+00:04:57.190 --> 00:04:59.650
+Oila a’zolari.
+
+00:04:59.650 --> 00:05:02.160
+Ajoyib, mana bu yerda yoqimtoy yuzalar bor.
+
+00:05:02.160 --> 00:05:02.990
+Va keyin ranglar.
+
+00:05:04.100 --> 00:05:05.160
+Mana buning ajoyib spektri bor.
+
+00:05:06.560 --> 00:05:09.730
+Demak, a’lo, demak, bizning toiflarimiz 
+biz xohlagandek vazifalarni bajarishayapti.
+
+00:05:09.730 --> 00:05:11.150
+Topshiriq savollariga qaytamiz.
+
+00:05:11.150 --> 00:05:13.080
+Keling, bu ikkita savolga javob beramiz.
+
+00:05:13.080 --> 00:05:15.000
+Shu paytgacha iboralar ro‘yxati elementlari,
+
+00:05:15.000 --> 00:05:17.930
+rasm ko‘rinishi yo‘qolishi kerak, 
+chunki biz uni yashirishni xohlaymiz.
+
+00:05:17.930 --> 00:05:20.350
+Va biz joylashuv tartibidan hech qanaqangi 
+joy egallashni xohlamaymiz.
+
+00:05:20.350 --> 00:05:23.620
+Bu yo‘l bilan bu ikkita matn ko‘rinishlari butun yo‘l
+bo‘ylab chapga siljiy oladi.
+
+00:05:23.620 --> 00:05:25.330
+Endi boshqa barcha ro‘yxat elementlari uchun.
+
+00:05:25.330 --> 00:05:27.620
+Rasm ko‘rinishini visible ga tenglashtirilishi kerak.
+
+00:05:27.620 --> 00:05:29.310
+Shunda foydalanuvchi uni ko‘ra oladi.
+
+00:05:29.310 --> 00:05:30.730
+Bu kodimizda nima qiganimizni aks ettiradi.
+
+00:05:30.730 --> 00:05:32.760
+Va ilovamiz biz xohlaganimizdek ko‘rinishda bo‘ladi.
+
+00:05:32.760 --> 00:05:34.830
+Shunday qilib, bu juda qiyin mashq ustida 
+qilingan ajoyib ish bo‘ldi.
+

@@ -1,0 +1,298 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.870 --> 00:00:03.840
+Kita tahu bahwa layar
+PhrasesActivity rusak
+
+00:00:03.840 --> 00:00:06.150
+karena perubahan kode terakhir.
+
+00:00:06.150 --> 00:00:08.150
+Mari kembali dan
+meninjau apa yang telah kita lakukan.
+
+00:00:09.336 --> 00:00:11.250
+Di kelas WordAdapter,
+
+00:00:11.250 --> 00:00:14.550
+kita tambahkan blok kode ini untuk menampilkan
+gambar yang benar dalam item list.
+
+00:00:17.130 --> 00:00:21.410
+Mungkin ini bertindak aneh saat kita
+memanggil setImageResource karena
+
+00:00:21.410 --> 00:00:22.660
+frasa tidak punya gambar.
+
+00:00:23.830 --> 00:00:26.200
+Maka inilah jawaban
+untuk pertanyaan pertama.
+
+00:00:26.200 --> 00:00:29.392
+Masalah dengan PhrasesActivity adalah
+bahwa layarnya kosong.
+
+00:00:29.392 --> 00:00:33.320
+WordAdapter mengasumsikan bahwa
+kata memiliki gambar, tapi
+
+00:00:33.320 --> 00:00:35.470
+frasa tidak punya gambar.
+
+00:00:35.470 --> 00:00:37.000
+Jadi, beralih ke pertanyaan kedua.
+
+00:00:37.000 --> 00:00:40.150
+Ada sejumlah kemungkinan solusi
+untuk kita mendeskripsikan
+
+00:00:40.150 --> 00:00:43.400
+bagaimana kita harus memodifikasi atau
+menulis kode untuk memperbaiki masalah ini.
+
+00:00:43.400 --> 00:00:47.350
+Kita bisa menulis adapater spesifik bernama
+PhraseAdapter yang akan tahu pasti
+
+00:00:47.350 --> 00:00:52.670
+cara membuat view item list yang
+hanya berisi dua TextView dan
+
+00:00:52.670 --> 00:00:54.110
+tidak ada ImageView.
+
+00:00:54.110 --> 00:00:58.640
+PhraseAdapter tentu sudah akan digunakan
+hanya di dalam PhrasesActivity.
+
+00:00:58.640 --> 00:01:03.070
+Sementara WordAdapter bisa saja akan
+digunakan di ketiga activity yang lain.
+
+00:01:03.070 --> 00:01:07.920
+Tapi, solusi ini melibatkan banyak
+logika duplikat di kedua adapter tersebut.
+
+00:01:07.920 --> 00:01:11.390
+Kita dapat memiliki logika yang sama untuk
+menampilkan terjemahan Inggris
+
+00:01:11.390 --> 00:01:13.070
+maupun Miwok.
+
+00:01:13.070 --> 00:01:17.230
+Jadi, kenapa kita tidak tetap bekerja dengan
+satu kelas WordAdapter saja.
+
+00:01:17.230 --> 00:01:20.460
+Jadi kita bisa memodifikasi kelas
+WordAdapter sedikit saja sehingga
+
+00:01:20.460 --> 00:01:25.590
+dapat membuat item list baik dengan
+gambar maupun tanpa gambar.
+
+00:01:25.590 --> 00:01:30.010
+Lalu kita bisa menggunakan satu adapter saja
+dalam semua activity yang lain.
+
+00:01:30.010 --> 00:01:32.870
+Anda akan memperhatikan bahwa PhrasesActivity
+punya tata letak yang sama dengan
+
+00:01:32.870 --> 00:01:35.580
+item list sebagaimana ketiga
+activity yang lain
+
+00:01:35.580 --> 00:01:37.980
+kecuali bahwa tidak ada ImageView.
+
+00:01:37.980 --> 00:01:41.240
+Maka, teks hanya bergeser sedikit
+ke arah kiri.
+
+00:01:41.240 --> 00:01:44.690
+Saya juga memberikan petunjuk dalam kuis
+yang mengatakan Anda bisa menyembunyikan
+
+00:01:44.690 --> 00:01:48.100
+atau menampilkan view di Android
+sementara aplikasi berjalan.
+
+00:01:48.100 --> 00:01:51.180
+Dengan demikian, apakah itu berarti bahwa kita
+dapat menampilkan ImageView dalam item list
+
+00:01:51.180 --> 00:01:55.270
+dalam beberapa kasus, dan menyembunyikan
+ImageView dalam kasus yang lain?
+
+00:01:55.270 --> 00:01:56.220
+Saya membuka dokumentasi Android
+
+00:01:56.220 --> 00:02:00.000
+untuk Semua, melihat
+statemen if/else.
+
+00:02:00.000 --> 00:02:02.940
+Jika Anda ingat pelajaran
+tiga dalam kursus terakhir,
+
+00:02:02.940 --> 00:02:05.570
+kita tahu bahwa kode kita bisa berperilaku
+dengan cara yang berbeda-beda
+
+00:02:05.570 --> 00:02:08.130
+menggunakan sesuatu yang bernama
+statemen control flow (aliran kontrol).
+
+00:02:08.130 --> 00:02:10.919
+Artinya, kita bisa menyusuri jalur
+kode yang berbeda-beda,
+
+00:02:10.919 --> 00:02:15.180
+yang dilukiskan di sini sebagai rel kereta,
+berdasarkan kondisi tes tertentu, yang
+
+00:02:15.180 --> 00:02:17.300
+dilukiskan di sini sebagai sakelar.
+
+00:02:17.300 --> 00:02:21.100
+Untuk kata-kata angka, keluarga, dan
+warna, kita bisa menyusuri satu jalur.
+
+00:02:22.470 --> 00:02:26.010
+Tapi untuk frasa, kita bisa menyusuri
+jalur lain.
+
+00:02:26.010 --> 00:02:28.750
+Lebih spesifiknya, bagaimana itu semua
+diterjemahkan ke dalam kode kita atau
+
+00:02:28.750 --> 00:02:31.020
+untuk kata-kata angka, keluarga, dan warna?
+
+00:02:31.020 --> 00:02:33.650
+Kita perlu mengeksekusi blok kode
+ini, yang digunakan untuk
+
+00:02:33.650 --> 00:02:35.930
+mengatur gambar yang
+benar di ImageView.
+
+00:02:35.930 --> 00:02:39.190
+tapi untuk frasa, kita harus lanjut dan
+melewatkan saja logika ini dan
+
+00:02:39.190 --> 00:02:42.600
+justru menyembunyikan ImageView sehingga
+tidak menampilkan apa-apa sama sekali.
+
+00:02:42.600 --> 00:02:45.520
+Mari kita tulis jawaban untuk pertanyaan
+kedua dalam kuis kita.
+
+00:02:45.520 --> 00:02:49.430
+Diminta untuk mendeskripsikan cara memodifikasi
+kode untuk memperbaiki masalah ini.
+
+00:02:49.430 --> 00:02:54.160
+Kita bisa memodifikasi WordAdapter sehingga
+kita hanya menugaskan satu gambar ke ImageView
+
+00:02:54.160 --> 00:02:56.840
+untuk kata-kata angka, warna, dan keluarga.
+
+00:02:56.840 --> 00:03:00.150
+Tapi untuk frasa, kita
+bisa menyembunyikan ImageView.
+
+00:03:00.150 --> 00:03:03.720
+Entah bagaimana dengan Anda, tapi saya
+tidak begitu senang dengan jawaban ini.
+
+00:03:04.860 --> 00:03:07.560
+Masih cukup sulit untuk menerjemahkannya
+menjadi kode.
+
+00:03:07.560 --> 00:03:11.210
+Kita perlu memikirkan cara lain untuk
+menentukan tempat suatu kata dalam kategori.
+
+00:03:12.410 --> 00:03:13.090
+Jika kita lanjutkan, dan
+
+00:03:13.090 --> 00:03:16.480
+memeriksa kelas Word, salah satu cara
+yang bisa kita pakai adalah kita bisa tambahkan
+
+00:03:16.480 --> 00:03:19.770
+variabel baru yang melacak
+kategori untuk tiap kata.
+
+00:03:19.770 --> 00:03:22.109
+Tapi pada akhirnya, kita
+harus tahu apakah kita harus
+
+00:03:22.109 --> 00:03:23.868
+menyembunyikan ImageView atau tidak.
+
+00:03:23.868 --> 00:03:27.004
+Ingat, dalam kelas Word, kita
+telah memiliki bidang untuk
+
+00:03:27.004 --> 00:03:28.285
+imageResourceID.
+
+00:03:28.285 --> 00:03:30.435
+Dan saat saya bilang bidang,
+ini adalah kata lain untuk
+
+00:03:30.435 --> 00:03:32.470
+variabel global pada suatu kelas.
+
+00:03:32.470 --> 00:03:35.420
+Untuk menentukan apakah kita harus
+menyembunyikan ImageView dalam
+
+00:03:35.420 --> 00:03:39.985
+item list, kita bisa memeriksa apakah
+constructor telah mengatur ImageView atau belum.
+
+00:03:41.530 --> 00:03:45.090
+Saya akan kembali dan memperbarui
+jawaban saya untuk pertanyaan kuis ini.
+
+00:03:45.090 --> 00:03:47.960
+Sehingga, kita bisa memodifikasi
+WordAdapter dan
+
+00:03:47.960 --> 00:03:50.160
+menggunakan statemen if/else.
+
+00:03:50.160 --> 00:03:54.190
+Jika ada gambar yang terkait dengan objek
+Word, tampilkan ImageView.
+
+00:03:54.190 --> 00:03:56.510
+Jika tidak, sembunyikan ImageView.
+
+00:03:56.510 --> 00:03:58.120
+Dan kita berhasil.
+Ini jauh lebih membantu
+
+00:03:58.120 --> 00:04:01.020
+saat kita harus menulis kode
+untuk melakukan perubahan ini.
+
+00:04:01.020 --> 00:04:03.622
+Jadi, jawaban sebelumnya tidak
+terlalu kabur.
+
+00:04:03.622 --> 00:04:06.170
+Baik, dengan demikian, mari kita
+lanjutkan ke langkah berikutnya.
+

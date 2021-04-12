@@ -1,0 +1,155 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.601 --> 00:00:04.934
+Quero atribuir uma cor ao WordAdapter
+para que todos os objetos naquela categoria
+
+00:00:04.968 --> 00:00:06.868
+tenham a mesma cor
+do plano de fundo.
+
+00:00:06.901 --> 00:00:12.567
+Para isso, terei que modificar o WordAdapter
+para conter nosso valor de recurso de cor.
+
+00:00:20.133 --> 00:00:23.100
+Agora vou precisar modificar
+nosso construtor
+
+00:00:23.133 --> 00:00:26.634
+para aceitar a mColorResourceId
+como entrada.
+
+00:00:28.667 --> 00:00:31.667
+Vou definir o valor
+da mColorResourceId
+
+00:00:31.701 --> 00:00:35.767
+para ser qualquer entrada atribuída
+como colorResourceId.
+
+00:00:37.434 --> 00:00:40.434
+Embaixo deste método,
+tenho que definir a cor.
+
+00:00:40.467 --> 00:00:42.901
+Isso é feito
+com este bloco de código.
+
+00:00:42.934 --> 00:00:46.467
+1º, vou definir o tema da cor
+para os itens de lista,
+
+00:00:46.501 --> 00:00:49.901
+depois vou achar a cor
+para a qual o recurso de ID mapeia,
+
+00:00:49.934 --> 00:00:53.634
+e, por fim, vou definir a cor de fundo
+da View que contém o texto.
+
+00:00:53.667 --> 00:00:57.400
+Cores são complexas,
+eu demorei um pouco para acertar este código,
+
+00:00:57.434 --> 00:01:00.601
+Mas acompanhe e você poderá fazer algo assim
+no seu próprio aplicativo.
+
+00:01:00.634 --> 00:01:04.601
+Agora precisamos converter
+a colorResourceID em um valor de cor.
+
+00:01:04.634 --> 00:01:07.667
+Para isso,
+vamos para o layout dos itens de lista.
+
+00:01:07.701 --> 00:01:13.167
+Aqui, temos que ver se o LinearLayout daqui
+tem uma ID no container.
+
+00:01:14.601 --> 00:01:16.234
+De volta ao WordAdapter.
+
+00:01:16.267 --> 00:01:19.968
+Agora que o construtor do WordAdapter
+aceita a colorResourceID,
+
+00:01:20.000 --> 00:01:23.934
+temos que modificar as outras activities
+para que, quando chamarmos o construtor,
+
+00:01:23.968 --> 00:01:26.067
+atribuamos
+as entradas certas.
+
+00:01:26.100 --> 00:01:29.200
+Então faremos isso aqui,
+na activity Números.
+
+00:01:31.133 --> 00:01:34.200
+Quero adicionar isto aqui,
+na activity Cores.
+
+00:01:34.701 --> 00:01:37.734
+A mesma coisa
+para a activity Expressões...
+
+00:01:39.968 --> 00:01:42.501
+e, por fim,
+para a activity Família.
+
+00:01:43.300 --> 00:01:45.734
+Mais uma coisa,
+antes que eu esqueça.
+
+00:01:45.767 --> 00:01:49.167
+No layout dos itens de lista,
+lembre-se de remover a cor de fundo
+
+00:01:49.200 --> 00:01:51.367
+que fixamos
+no layout dos itens de lista.
+
+00:01:51.400 --> 00:01:55.167
+Tínhamos definido que ele
+sempre ficaria laranja por trás do texto,
+
+00:01:55.200 --> 00:02:00.100
+mas, agora que definimos a cor dinamicamente
+na criação dos itens, não precisamos mais.
+
+00:02:00.133 --> 00:02:03.834
+Vamos testar o aplicativo agora.
+Vamos começar com Números.
+
+00:02:03.868 --> 00:02:06.200
+Certo,
+o laranja já era esperado.
+
+00:02:06.234 --> 00:02:09.667
+Agora a categoria Família.
+Uau! Está ótimo.
+
+00:02:09.701 --> 00:02:12.901
+Agora para a categoria Cores.
+Legal.
+
+00:02:12.934 --> 00:02:17.234
+Por último, Expressões.
+Uau, curti o azul.
+
+00:02:17.267 --> 00:02:20.434
+Cada categoria
+mostra uma cor diferente,
+
+00:02:20.467 --> 00:02:23.300
+e está tudo ótimo
+e retocado agora.
+
+00:02:23.334 --> 00:02:25.601
+Bom trabalho!
+Bate aqui!
+
