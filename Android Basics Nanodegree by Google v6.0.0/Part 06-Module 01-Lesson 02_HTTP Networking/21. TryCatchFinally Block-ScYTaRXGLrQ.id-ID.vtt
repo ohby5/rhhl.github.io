@@ -1,0 +1,414 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.410 --> 00:00:03.650
+Ya, jadi saat terjadi kesalahan,
+dan exception dipasang,
+
+00:00:03.650 --> 00:00:08.530
+tugas kita sebagai pengembang adalah
+mengatasinya dengan rencana cadangan.
+
+00:00:08.530 --> 00:00:09.980
+Kita tangkap exception dan
+
+00:00:09.980 --> 00:00:14.680
+kembali ke perilaku default yang masuk akal,
+jika tidak maka aplikasi akan macet.
+
+00:00:14.680 --> 00:00:15.594
+Dengan kata lain,
+
+00:00:15.594 --> 00:00:19.854
+macetnya aplikasi merupakan akibat dari
+exception yang tak ditangkap.
+
+00:00:19.854 --> 00:00:23.698
+Ya, untuk melakukan ini, kita harus
+mempelajari sesuatu yang bernama
+
+00:00:23.698 --> 00:00:25.598
+blok try catch di Java.
+
+00:00:25.598 --> 00:00:28.699
+Try berarti Anda mencoba untuk
+menjalankan sekelompok statement,
+
+00:00:28.699 --> 00:00:33.254
+termasuk memanggil metode yang berpotensi
+dapat menyebabkan munculnya exception.
+
+00:00:33.254 --> 00:00:36.216
+Dan saat exception muncul,
+Anda menangkapnya.
+
+00:00:36.216 --> 00:00:40.367
+Jika tak ada yang menangkap exception,
+aplikasi Anda akan macet.
+
+00:00:40.367 --> 00:00:41.377
+Kau baik-baik saja, Joe?
+
+00:00:41.377 --> 00:00:42.010
+Aku baik-baik saja.
+
+00:00:42.010 --> 00:00:45.570
+Dan terlepas dari apakah exception
+terpasang atau tidak,
+
+00:00:45.570 --> 00:00:49.250
+kita dapat menyelesaikan kode eksekusi
+dalam blok terakhir.
+
+00:00:49.250 --> 00:00:52.848
+Jadi intinya adalah mencoba melakukan
+sesuatu yang bisa memunculkan exception,
+
+00:00:52.848 --> 00:00:54.918
+menangkap exception jika muncul.
+
+00:00:54.918 --> 00:00:57.009
+Terakhir, mengeksekusi beberapa kode
+terlepas dari apakah
+
+00:00:57.009 --> 00:00:58.990
+exception terjadi atau tidak.
+
+00:00:58.990 --> 00:01:00.880
+Kita harus perlihatkan kode
+kepada mereka untuk hal ini.
+
+00:01:00.880 --> 00:01:02.210
+Ya, tentu.
+
+00:01:02.210 --> 00:01:04.917
+Mari kita lakukan.
+Dalam Aplikasi Soonami ada beberapa
+
+00:01:04.917 --> 00:01:07.560
+contoh blok try catch.
+
+00:01:07.560 --> 00:01:10.540
+Mari kita lihat salah satunya
+untuk membuat metode Anda sendiri.
+
+00:01:10.540 --> 00:01:13.770
+Tujuan dari metode ini adalah untuk
+mengembalikan objek URL untuk
+
+00:01:13.770 --> 00:01:16.570
+URL string input yang disediakan.
+
+00:01:16.570 --> 00:01:21.385
+Idealnya, kita hanya panggil constructor
+URL dan memasukkan URL string,
+
+00:01:21.385 --> 00:01:25.502
+tapi melalui garis lekuk merah ini, Android
+Studio memberi tahu kita bahwa
+
+00:01:25.502 --> 00:01:28.002
+telah terdeteksi situasi error.
+
+00:01:28.002 --> 00:01:31.638
+Artinya, ada exception
+yang belum ditangani,
+
+00:01:31.638 --> 00:01:34.500
+yaitu exception URL salah format.
+
+00:01:34.500 --> 00:01:38.800
+Artinya bahwa constructor URL memasang
+exception URL salah format, dan
+
+00:01:38.800 --> 00:01:41.040
+kita perlu menangkap dan mengatasi error tersebut.
+
+00:01:41.040 --> 00:01:43.810
+Jika tidak, aplikasi kita tak akan dibangun dan
+tak bisa dijalankan di perangkat.
+
+00:01:44.890 --> 00:01:47.000
+Untuk constructor atau panggilan metode,
+
+00:01:47.000 --> 00:01:50.760
+Anda dapat memeriksa apakah akan memasang
+exception dengan memeriksa dokumentasi.
+
+00:01:50.760 --> 00:01:53.961
+Misalnya, jika kita kunjungi dokumentasi
+referensi URL,
+
+00:01:53.961 --> 00:01:57.789
+kita lihat constructor URL yang menerima
+string sebagai input melalui
+
+00:01:57.789 --> 00:01:59.250
+MalformedURLException.
+
+00:01:59.250 --> 00:02:03.719
+Parameter input tidak dapat
+dikonversi menjadi URL,
+
+00:02:03.719 --> 00:02:06.062
+artinya ini adalah MalformedURL.
+
+00:02:06.062 --> 00:02:10.880
+Untuk memperbaiki kode, kita dapat memakai
+pintas Alt+Enter untuk perbaikan cepat.
+
+00:02:10.880 --> 00:02:14.060
+Kita dapat memilih opsi, mengelilingi
+try catch, dan
+
+00:02:14.060 --> 00:02:16.790
+Android Studio akan secara otomatis
+memperbarui kode.
+
+00:02:16.790 --> 00:02:18.163
+Cukup keren, kan?
+
+00:02:18.163 --> 00:02:23.156
+Sekarang ada kunci kata try diikuti
+tanda kurung kurawal buka.
+
+00:02:23.156 --> 00:02:25.750
+Di dalam blok try, kita taruh
+semua kode di sini
+
+00:02:25.750 --> 00:02:27.330
+yang dapat memasang exception.
+
+00:02:27.330 --> 00:02:31.268
+Secara umum, adalah praktik yang baik untuk
+menjaga kode dalam blok ini tetap ramping.
+
+00:02:31.268 --> 00:02:33.368
+Anda tidak ingin metode utuh sampai di sini,
+
+00:02:33.368 --> 00:02:36.220
+maka kita tutup blok ini
+dengan tanda kurung kurawal.
+
+00:02:36.220 --> 00:02:40.310
+Lalu, ada kunci kata catch diikuti
+serangkaian tanda kurung
+
+00:02:40.310 --> 00:02:43.905
+yang berisi tipe data persis
+exception yang hendak ditangkap.
+
+00:02:43.905 --> 00:02:47.555
+Dalam hal ini, MalformedURLExecption
+dan nama variabel untuk
+
+00:02:47.555 --> 00:02:49.725
+objek exception e.
+
+00:02:49.725 --> 00:02:52.400
+Lalu ada tanda kurung buka di mana
+kita akan menangani exception,
+
+00:02:52.400 --> 00:02:57.835
+e.printStackTrace akan mencatat tumpukan
+kesalahan dengan format terperinci.
+
+00:02:57.835 --> 00:03:01.505
+Pilihan lain adalah mencatat area yang memakai
+metode log Android dan
+
+00:03:01.505 --> 00:03:04.937
+memasukkan tag log kita sendiri dan
+pesan kustom kita sendiri.
+
+00:03:04.937 --> 00:03:08.305
+Metode log.e dapat mengambil exception
+sebagai argumen ketiga.
+
+00:03:09.480 --> 00:03:12.540
+Untuk mengulang, jika kita semua baik-baik
+saja di constructor URL,
+
+00:03:12.540 --> 00:03:16.570
+maka tidak ada exception muncul dan
+tak ada apa pun dalam blok catch yang berjalan.
+
+00:03:16.570 --> 00:03:19.800
+Tapi jika kode dalam blok try memasang
+exception, maka kita segera
+
+00:03:19.800 --> 00:03:24.120
+melompat ke blok catch dengan exception
+dan mengeksekusi kode di sana.
+
+00:03:24.120 --> 00:03:25.980
+Lalu kita keluar dari statemen catch dan
+
+00:03:25.980 --> 00:03:28.679
+melanjutkan mengeksekusi kode baris
+demi baris setelah itu.
+
+00:03:29.870 --> 00:03:34.182
+Perhatikan bahwa variabel URL diinisialisasi
+sebelum blok try catch.
+
+00:03:34.182 --> 00:03:36.680
+Kita harus memikirkan lingkup variabel di sini.
+
+00:03:36.680 --> 00:03:39.720
+Jika kita mendefinisikan variabel URL
+di dalam blok try,
+
+00:03:39.720 --> 00:03:43.600
+kita tak akan mampu mengakses variabel
+URL setelah statemen selesai.
+
+00:03:43.600 --> 00:03:47.060
+Maka, karena kita ingin merujuk variabel URL
+di akhir metode
+
+00:03:47.060 --> 00:03:48.930
+di luar statemen try catch,
+
+00:03:48.930 --> 00:03:53.050
+Kita perlu menginisialisasi variabel URL
+di luarnya juga.
+
+00:03:53.050 --> 00:03:57.130
+Dalam hal ini, kita hanya mengaturnya sebagai
+null, yang berarti nilai kosong.
+
+00:03:57.130 --> 00:04:01.162
+Maka Android Studio sekarang akan memberi
+tahu Anda jika Anda perlu membungkus
+
+00:04:01.162 --> 00:04:02.840
+kode Anda dalam statemen try catch.
+
+00:04:02.840 --> 00:04:04.360
+Jika Anda butuh informasi lebih,
+
+00:04:04.360 --> 00:04:06.289
+Anda dapat memeriksa dokumentasi
+Java resmi.
+
+00:04:07.290 --> 00:04:10.260
+Contoh berikut ini agak lebih
+kompleks.
+
+00:04:10.260 --> 00:04:13.870
+Ini menunjukkan bahwa Anda dapat memiliki
+sebanyak mungkin baris kode dalam blok try.
+
+00:04:13.870 --> 00:04:17.459
+Jika ada baris dari kode itu memunculkan
+exception, kita berhenti mengeksekusi
+
+00:04:17.459 --> 00:04:21.300
+statemen dalam blok try catch dan melompat
+langsung ke blok catch.
+
+00:04:21.300 --> 00:04:23.870
+Seperti Anda lihat di sini Anda bisa
+dan memang harus
+
+00:04:23.870 --> 00:04:27.860
+punya beberapa blok catch untuk menangani
+tipe kesalahan yang berbeda seperlunya.
+
+00:04:27.860 --> 00:04:31.320
+Di sini, kode menangkap indeks dari
+exception terikat dan
+
+00:04:31.320 --> 00:04:33.030
+mencetak pesan log sistem.
+
+00:04:33.030 --> 00:04:37.330
+Kode juga menangkap exception IO
+dan mencatat pesan log yang berbeda.
+
+00:04:37.330 --> 00:04:39.450
+Bergantung pada exception
+apa yang dipasang,
+
+00:04:39.450 --> 00:04:42.690
+kita akan masuk ke salah satu dari blok
+catch ini, tapi tidak pada kedua-duanya.
+
+00:04:44.430 --> 00:04:47.490
+Jadi bisa Anda lihat tidak ada jaminan
+dalam mengeksekusi
+
+00:04:47.490 --> 00:04:49.260
+semua kode dalam blok try.
+
+00:04:49.260 --> 00:04:52.360
+Kadang Anda tidak perlu melakukan
+apa-apa jika
+
+00:04:52.360 --> 00:04:53.950
+muncul exception.
+
+00:04:53.950 --> 00:04:57.340
+Maka blok final akan selalu dieksekusi
+terlepas dari apakah exception
+
+00:04:57.340 --> 00:04:58.440
+terpasang atau tidak.
+
+00:04:59.730 --> 00:05:01.900
+Sebelum mengakhiri diskusi ini,
+
+00:05:01.900 --> 00:05:06.180
+saya ingin tekankan satu metode terakhir
+untuk mengatasi checked exception.
+
+00:05:06.180 --> 00:05:10.910
+Seperti Anda lihat, dengan memodifikasi
+metode createURL, metode signature,
+
+00:05:10.910 --> 00:05:15.160
+Anda memilik opsi untuk menolak penanganan
+exception yang menangani rantai panggilan
+
+00:05:15.160 --> 00:05:17.710
+dengan mendeklarasikan bahwa metode Anda
+mungkin memunculkan exception
+
+00:05:17.710 --> 00:05:20.390
+yang kemudian mewajibkan agar metode
+panggilan menanganinya.
+
+00:05:21.430 --> 00:05:24.940
+Ini lazim jika exception muncul
+dari dalam metode helper.
+
+00:05:24.940 --> 00:05:27.840
+Dan Anda ingin menanganinya dalam
+try catch atau tempat lain.
+
+00:05:27.840 --> 00:05:32.480
+Misalnya, siapa pun yang memanggil metode
+createURL harus membutuhkan blok try catch
+
+00:05:32.480 --> 00:05:37.650
+di sekitar panggilan metode ini, dan harus
+menangkap MalformedURLException.
+
+00:05:37.650 --> 00:05:40.570
+Kita bisa lihat di sini
+metode doInBackground.
+
+00:05:40.570 --> 00:05:44.030
+Untuk Aplikasi Soonami, jika Anda panggil
+beberapa kode framework Android
+
+00:05:44.030 --> 00:05:47.960
+yang memunculkan exception, Anda harus
+menangkapnya dan menanganinya pada saat
+
+00:05:47.960 --> 00:05:50.700
+terjadinya daripada menolaknya untuk
+ditangani kemudian.
+

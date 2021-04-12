@@ -1,0 +1,356 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.100
+No código de conexão, você já deve
+ter visto vários tipos de exceções,
+
+00:00:04.133 --> 00:00:06.434
+mas não sabe para que servem.
+
+00:00:06.467 --> 00:00:10.033
+Ainda não abordamos isso,
+então vamos fazer isso agora.
+
+00:00:10.067 --> 00:00:13.701
+A 1ª vez que vimos uma exceção
+foi na 1ª aula do Nanodegree
+
+00:00:13.734 --> 00:00:17.000
+quando estávamos criando
+o app de pedidos de café.
+
+00:00:17.033 --> 00:00:20.033
+O app se deparou
+com uma exceção e travou.
+
+00:00:20.534 --> 00:00:23.701
+Para depurar o programa,
+abrimos os logs do Android
+
+00:00:23.734 --> 00:00:26.467
+para revelar
+o rastreamento de pilha
+
+00:00:26.501 --> 00:00:29.267
+e vimos que uma
+IllegalStateException foi lançada
+
+00:00:29.300 --> 00:00:33.300
+quando método submitOrder
+não foi achado no MainActivity.
+
+00:00:33.334 --> 00:00:37.133
+Vamos ver a documentação
+sobre exceções.
+
+00:00:37.167 --> 00:00:40.801
+Quando um método Java falha
+ou encontra um estado inesperado,
+
+00:00:40.834 --> 00:00:42.734
+ele pode lançar uma exceção,
+
+00:00:42.767 --> 00:00:45.234
+que é a abreviação
+de evento excepcional.
+
+00:00:45.267 --> 00:00:47.434
+Exceção são basicamente erros,
+
+00:00:47.467 --> 00:00:52.100
+mas elas são encapsuladas
+em instâncias da classe Exception,
+
+00:00:52.133 --> 00:00:54.367
+que contém dados
+sobre o que deu errado
+
+00:00:54.400 --> 00:00:56.734
+e o que estava acontecendo
+naquela hora.
+
+00:00:56.767 --> 00:00:58.701
+Se olhar à esquerda,
+
+00:00:58.734 --> 00:01:01.767
+você notará que há
+tipos específicos de exceções
+
+00:01:01.801 --> 00:01:04.534
+que se estendem
+da superclasse Exception,
+
+00:01:04.567 --> 00:01:08.000
+um exemplo de hereditariedade
+no framework do Java.
+
+00:01:08.033 --> 00:01:10.968
+Em outras palavras,
+todas essas classes específicas
+
+00:01:11.000 --> 00:01:13.834
+são subclasses
+da classe Exception base.
+
+00:01:13.868 --> 00:01:16.567
+Por exemplo, vimos
+IllegalStateException
+
+00:01:16.601 --> 00:01:19.067
+ou NullPointerException.
+
+00:01:19.100 --> 00:01:22.534
+Também vimos SecurityException
+anteriormente nesta aula
+
+00:01:22.567 --> 00:01:25.601
+quando faltava a permissão
+de web no app de tsunami.
+
+00:01:25.634 --> 00:01:29.601
+Você pode criar uma nova
+classe Exception caso precise.
+
+00:01:29.634 --> 00:01:33.300
+Por exemplo, podemos criar
+uma exceção para um tremor inválido,
+
+00:01:33.334 --> 00:01:36.200
+defini-la como
+uma classe customizada
+
+00:01:36.234 --> 00:01:40.734
+e fazer essa classe customizada
+se estender da classe base.
+
+00:01:40.767 --> 00:01:44.667
+Podemos fazer a exceção dizer
+informações bem específicas
+
+00:01:44.701 --> 00:01:47.467
+de qualquer cenário inválido.
+
+00:01:47.501 --> 00:01:50.200
+Todo desenvolvedor
+pode criar um método
+
+00:01:50.234 --> 00:01:52.501
+que declara lançar uma exceção.
+
+00:01:52.534 --> 00:01:57.267
+O código deste método
+ou gera uma exceção
+
+00:01:57.300 --> 00:01:59.501
+que indica uma condição única
+
+00:01:59.534 --> 00:02:04.634
+ou, geralmente, chama um método
+que lança uma exceção.
+
+00:02:04.667 --> 00:02:07.901
+Quer dizer o runtime do Android
+tentou executar um código,
+
+00:02:07.934 --> 00:02:10.968
+mas encontrou um problema,
+fez a notificação
+
+00:02:11.000 --> 00:02:12.834
+lançando a exceção.
+
+00:02:13.367 --> 00:02:16.701
+Vale salientar que,
+se uma exceção é lançada,
+
+00:02:16.734 --> 00:02:20.400
+o código depois da linha
+que causou a exceção
+
+00:02:20.434 --> 00:02:21.968
+não será executado.
+
+00:02:22.000 --> 00:02:24.534
+Como lançar em código Java?
+
+00:02:24.567 --> 00:02:27.634
+Há duas distinções
+que quero que você note.
+
+00:02:27.667 --> 00:02:32.567
+Primeiro, para causar ou lançar
+uma exceção no código Java
+
+00:02:32.601 --> 00:02:34.934
+usa-se a palavra-chave
+"throw".
+
+00:02:34.968 --> 00:02:39.467
+Como neste exemplo onde lançamos
+a exceção InvalidPurchase
+
+00:02:39.501 --> 00:02:44.634
+porque vimos que algo deu errado
+no método completePurchase.
+
+00:02:45.400 --> 00:02:47.834
+A 2ª distinção é mais sutil.
+
+00:02:47.868 --> 00:02:50.100
+Sempre que o código
+lançar uma exceção
+
+00:02:50.133 --> 00:02:54.300
+que não provém das classes
+Error ou RuntimeException,
+
+00:02:54.334 --> 00:02:57.400
+temos que declarar
+na assinatura do método
+
+00:02:57.434 --> 00:03:00.234
+que este método pode lançar
+a exceção.
+
+00:03:00.267 --> 00:03:03.501
+Na terminologia Java,
+chamamos isso de exceção checked.
+
+00:03:03.534 --> 00:03:07.567
+Nesse tipo de exceção,
+todo código que chama o nosso método
+
+00:03:07.601 --> 00:03:09.601
+tem que lidar com a exceção,
+
+00:03:09.634 --> 00:03:12.234
+ou seja, chamar o nosso método
+num bloco try.
+
+00:03:12.267 --> 00:03:14.534
+Isso é executado
+pelo compilador do Java.
+
+00:03:14.567 --> 00:03:17.434
+Tudo que chamar
+o método completePurchase
+
+00:03:17.467 --> 00:03:19.300
+tem que ter um plano reserva
+
+00:03:19.334 --> 00:03:23.067
+se a exceção InvalidPurchase
+for lançada.
+
+00:03:23.100 --> 00:03:26.501
+Vamos falar sobre como lidar
+com exceções no próximo vídeo.
+
+00:03:26.534 --> 00:03:31.801
+Caso queira aprender mais
+sobre exceções unchecked e checked,
+
+00:03:31.834 --> 00:03:34.601
+veja o tutorial
+no link abaixo.
+
+00:03:34.634 --> 00:03:39.968
+Só porque existe um framework padrão
+para usar exceções no Java
+
+00:03:40.000 --> 00:03:42.400
+não quer dizer
+que você deva lançar exceções
+
+00:03:42.434 --> 00:03:44.367
+sempre que algo der errado.
+
+00:03:44.400 --> 00:03:47.501
+O desenvolvedor
+tem que ter bom senso.
+
+00:03:47.534 --> 00:03:50.968
+Se descobrimos um problema
+ou uma situação única,
+
+00:03:51.000 --> 00:03:53.834
+devemos lidar com isso
+de forma sutil
+
+00:03:53.868 --> 00:03:56.601
+e ir para
+um comportamento padrão
+
+00:03:56.634 --> 00:03:59.534
+para continuar com a execução.
+
+00:03:59.567 --> 00:04:02.334
+Chamamos isso
+de falhando silenciosamente.
+
+00:04:02.367 --> 00:04:06.801
+Mas caso seja pior continuar
+com a execução após o erro,
+
+00:04:06.834 --> 00:04:10.534
+talvez seja melhor
+notificar o código do erro
+
+00:04:10.567 --> 00:04:12.334
+lançando uma exceção.
+
+00:04:12.367 --> 00:04:14.367
+Já vimos essa situação.
+
+00:04:14.400 --> 00:04:16.234
+No nosso app de tsunami,
+
+00:04:16.267 --> 00:04:19.033
+quando tentamos
+requisitar dados da internet,
+
+00:04:19.067 --> 00:04:22.400
+o código do framework
+lançou uma exceção de segurança.
+
+00:04:22.434 --> 00:04:26.434
+Aqui, foi melhor lançar a exceção
+e provocar o travamento
+
+00:04:26.467 --> 00:04:29.133
+do que continuar
+sem a permissão para internet.
+
+00:04:29.167 --> 00:04:32.367
+Se o código do framework
+tivesse falhado silenciosamente,
+
+00:04:32.400 --> 00:04:34.968
+nós, os desenvolvedores,
+ficaríamos confusos
+
+00:04:35.000 --> 00:04:37.934
+sem saber por que
+o servidor não respondeu.
+
+00:04:37.968 --> 00:04:43.434
+Nos apps de tsunami e de terremoto
+não criaremos exceções customizadas
+
+00:04:43.467 --> 00:04:45.734
+ou lançaremos exceções
+intencionalmente.
+
+00:04:45.767 --> 00:04:49.801
+Mas vamos chamar o código
+do framework que lança exceções
+
+00:04:49.834 --> 00:04:52.734
+e vamos lidar com as exceções
+de forma apropriada.
+
+00:04:52.767 --> 00:04:54.801
+Vamos falar disso a seguir.
+

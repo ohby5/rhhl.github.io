@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.220 --> 00:00:02.220
+Mari terapkan logika itu dalam aplikasi kita.
+
+00:00:02.220 --> 00:00:04.850
+Kita akan memastikan bahwa kita
+memperoleh kode respons 200
+
+00:00:04.850 --> 00:00:08.000
+sebelum berlanjut mencoba
+melakukan parse pada respons JSON.
+
+00:00:08.000 --> 00:00:11.900
+Jika kita menerima kode response
+error, balas saja dengan string kosong
+
+00:00:11.900 --> 00:00:12.910
+untuk respons JSON.
+
+00:00:12.910 --> 00:00:15.900
+Tidak akan ada gunanya untuk memproyeksikan
+feature array dari respons itu
+
+00:00:15.900 --> 00:00:19.160
+karena tidak ada informasi
+dalam respons itu.
+
+00:00:19.160 --> 00:00:23.284
+Jadi, dalam kode aplikasi Soonami, saya
+ingin Anda memeriksa kode HTTP response
+
+00:00:23.284 --> 00:00:27.590
+dalam metode makeHttpRequest dan
+menanganinya dengan benar.
+
+00:00:27.590 --> 00:00:30.831
+Pastikan juga untuk memeriksa ulang kode
+itu untuk memastikan Anda menangani kasus
+
+00:00:30.831 --> 00:00:33.610
+kosong atau null dalam kode jaringan
+secara masuk akal.
+
+00:00:33.610 --> 00:00:36.240
+Lihat catatan di bawah kuis untuk
+perincian lebih lanjut.
+
+00:00:36.240 --> 00:00:41.080
+Misalnya, jika URL null, kita tidak boleh
+mencoba membuat HTTPrequest.
+
+00:00:41.080 --> 00:00:43.368
+Atau jika JSON null,
+atau string kosong,
+
+00:00:43.368 --> 00:00:45.920
+maka kita tidak boleh
+melakukan parsing.
+

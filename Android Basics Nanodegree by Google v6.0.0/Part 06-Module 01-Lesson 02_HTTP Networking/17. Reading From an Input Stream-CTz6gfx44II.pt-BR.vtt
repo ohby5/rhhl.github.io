@@ -1,0 +1,354 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.000
+Cada dado,
+seja ele texto ou imagem,
+
+00:00:03.033 --> 00:00:05.667
+é armazenado
+em blocos de bytes.
+
+00:00:05.701 --> 00:00:09.100
+Um app recebe os dados
+como um fluxo de entrada,
+
+00:00:09.133 --> 00:00:11.701
+ou seja, um fluxo de bytes.
+
+00:00:11.734 --> 00:00:13.701
+O fluxo de entrada
+é uma abstração.
+
+00:00:13.734 --> 00:00:16.934
+Ele não releva
+se os bytes representam
+
+00:00:16.968 --> 00:00:20.701
+um arquivo, uma página da web
+ou até conteúdo de mídia.
+
+00:00:20.734 --> 00:00:22.868
+É apenas um fluxo
+de informação.
+
+00:00:22.901 --> 00:00:24.901
+Quando recebemos este fluxo,
+
+00:00:24.934 --> 00:00:28.601
+temos que reorganizar os bytes
+em algo que faz sentido para o app.
+
+00:00:28.634 --> 00:00:30.167
+Para dados de texto,
+
+00:00:30.200 --> 00:00:32.767
+os bytes têm que ser convertidos
+para caracteres.
+
+00:00:32.801 --> 00:00:35.667
+A classe Buffer Reader
+nos permite fazer isso.
+
+00:00:35.701 --> 00:00:38.334
+A resposta JSON
+é organizada em uma string
+
+00:00:38.367 --> 00:00:41.434
+que é essencialmente
+um fluxo de caracteres.
+
+00:00:41.934 --> 00:00:44.000
+Vamos ver como é o código
+da conversão
+
+00:00:44.033 --> 00:00:47.100
+no método makeHTTPrequest.
+
+00:00:47.133 --> 00:00:49.501
+Note que começamos
+com duas variáveis:
+
+00:00:49.534 --> 00:00:52.934
+urlConnection do tipo
+httpURLConnection
+
+00:00:52.968 --> 00:00:55.901
+e inputStream
+do tipo InputStream.
+
+00:00:55.934 --> 00:00:59.100
+Em vez de retornar
+um resultado como uma string,
+
+00:00:59.133 --> 00:01:02.033
+às vezes uma função
+retorna uma InputStream.
+
+00:01:02.067 --> 00:01:06.267
+Uma InputStream permite extrair
+um bloco de dado por vez.
+
+00:01:06.300 --> 00:01:09.033
+Isso é útil se o fluxo
+retorna muitos dados
+
+00:01:09.067 --> 00:01:13.200
+ou se fluxo é uma fonte
+que envia dados ao longo do tempo.
+
+00:01:13.234 --> 00:01:17.167
+A classe HttpURLConnection,
+que usamos para pegar os dados JSON,
+
+00:01:17.200 --> 00:01:20.434
+retorna a resposta do servidor
+como uma InputStream.
+
+00:01:20.467 --> 00:01:22.467
+Depois temos
+um método auxiliar
+
+00:01:22.501 --> 00:01:24.901
+que lê os dados
+vindos do fluxo de entrada.
+
+00:01:24.934 --> 00:01:27.267
+Vamos para o método
+readFromStream.
+
+00:01:27.300 --> 00:01:31.100
+Lembre-se que o fluxo de entrada
+não retorna caracteres legíveis,
+
+00:01:31.133 --> 00:01:32.767
+como números ou letras.
+
+00:01:32.801 --> 00:01:36.400
+Em vez disso, ele retorna
+dados binários brutos, uns e zeros,
+
+00:01:36.434 --> 00:01:39.667
+sem indicar
+o que os dados representam.
+
+00:01:39.701 --> 00:01:41.834
+Os dados podem ser
+uma imagem, um som
+
+00:01:41.868 --> 00:01:44.701
+ou dados geoJSON
+para a gente traduzir.
+
+00:01:44.734 --> 00:01:47.834
+Neste caso, sabemos que os dados
+do fluxo de entrada
+
+00:01:47.868 --> 00:01:49.334
+são apenas texto
+
+00:01:49.367 --> 00:01:51.701
+e podemos usar a classe
+InputStreamReader
+
+00:01:51.734 --> 00:01:55.834
+para traduzir os dados brutos
+em caracteres legíveis.
+
+00:01:55.868 --> 00:02:00.267
+O InputStreamReader só permite ler
+um caractere por vez
+
+00:02:00.300 --> 00:02:02.701
+que pode prejudicar
+o desempenho
+
+00:02:02.734 --> 00:02:06.267
+dependendo
+do fluxo de entrada.
+
+00:02:06.300 --> 00:02:09.701
+Por exemplo, é rápido extrair dados
+do HD do seu computador
+
+00:02:09.734 --> 00:02:12.300
+se você consegue ler
+grandes blocos de dados.
+
+00:02:12.334 --> 00:02:15.567
+Mas se você só consegue ler
+um caractere por vez,
+
+00:02:15.601 --> 00:02:17.300
+vai demorar muito.
+
+00:02:17.334 --> 00:02:20.133
+Evitamos isso encapsulando
+o InputStreamReader
+
+00:02:20.167 --> 00:02:21.801
+num BufferedReader.
+
+00:02:21.834 --> 00:02:24.701
+Um BufferedReader aceita
+a requisição de um caractere
+
+00:02:24.734 --> 00:02:28.367
+mas também lê e armazena
+um bloco enorme de dados.
+
+00:02:28.400 --> 00:02:30.100
+Quando você solicitar
+outro caractere,
+
+00:02:30.133 --> 00:02:32.801
+o BufferedReader vai atender
+à sua solicitação
+
+00:02:32.834 --> 00:02:34.801
+porque ele já leu os dados
+
+00:02:34.834 --> 00:02:37.734
+e não precisa voltar
+para o InputStreamReader.
+
+00:02:37.767 --> 00:02:41.100
+Para podermos ler dados
+do fluxo de entrada,
+
+00:02:41.133 --> 00:02:44.334
+passamos o fluxo como um parâmetro
+para o InputStreamReader
+
+00:02:44.367 --> 00:02:46.067
+através do construtor.
+
+00:02:46.100 --> 00:02:50.267
+Também fornecemos
+um set de caracteres, ou Charset.
+
+00:02:50.300 --> 00:02:54.200
+Um Charset especifica como traduzir
+os dados brutos recebidos
+
+00:02:54.234 --> 00:02:56.701
+para dados legíveis,
+um byte por vez.
+
+00:02:56.734 --> 00:03:00.567
+Ele sabe como traduzir cada byte
+para um caractere legível,
+
+00:03:00.601 --> 00:03:03.501
+como um A maiúsculo,
+ou um sinal de igual.
+
+00:03:03.534 --> 00:03:08.934
+UTF-8 é a codificação Unicode usada
+para quase todo o texto na web.
+
+00:03:08.968 --> 00:03:11.467
+A última coisa é encapsular
+o InputStreamReader
+
+00:03:11.501 --> 00:03:14.567
+num BufferedReader
+e estamos prontos para a leitura.
+
+00:03:14.601 --> 00:03:16.100
+Eu sei.
+
+00:03:16.133 --> 00:03:19.834
+Estes encapsulamentos e camadas
+podem confundir muito.
+
+00:03:19.868 --> 00:03:22.767
+É uma InputStream dentro
+de um InputStreamReader
+
+00:03:22.801 --> 00:03:24.234
+dentro de um BufferedReader.
+
+00:03:24.267 --> 00:03:28.567
+Deve haver um jeito mais fácil
+de ler dados de uma conexão HTTP.
+
+00:03:28.601 --> 00:03:33.033
+Seria ideal traduzir esta resposta
+com um método simples,
+
+00:03:33.067 --> 00:03:36.567
+mas o método
+não seria reutilizável.
+
+00:03:36.601 --> 00:03:39.467
+Em vez de usar soluções
+de ponta a ponta prontas,
+
+00:03:39.501 --> 00:03:43.634
+frameworks e bibliotecas poderosas
+lhe dão ferramentas individuais
+
+00:03:43.667 --> 00:03:46.300
+que podem ser combinadas
+de várias formas.
+
+00:03:46.334 --> 00:03:50.400
+Neste caso, a cadeia
+de fluxos e leitores é longa,
+
+00:03:50.434 --> 00:03:54.200
+mas no futuro, você talvez tenha
+que combinar essas ferramentas
+
+00:03:54.234 --> 00:03:56.033
+numa configuração diferente.
+
+00:03:56.067 --> 00:04:00.367
+A flexibilidade que você ganha
+extrapola a verborreia de agora.
+
+00:04:00.400 --> 00:04:03.067
+Para testar sua compreensão
+dessas classes,
+
+00:04:03.100 --> 00:04:05.300
+quero que você descreva
+em suas palavras
+
+00:04:05.334 --> 00:04:07.767
+qual é o propósito
+de uma InputStream
+
+00:04:07.801 --> 00:04:10.167
+e qual é o propósito
+de um BufferedReader.
+
+00:04:10.200 --> 00:04:13.267
+Veja os recursos
+nos links embaixo do quiz.
+
+00:04:13.300 --> 00:04:15.901
+Depois que sabemos
+que a requisição teve êxito,
+
+00:04:15.934 --> 00:04:18.167
+podemos ler o resultado
+do fluxo de entrada
+
+00:04:18.200 --> 00:04:20.200
+através de um BufferedReader.
+
+00:04:20.234 --> 00:04:23.501
+Depois podemos convertê-lo
+para uma string e traduzir o JSON.
+
+00:04:24.200 --> 00:04:27.167
+Qual é o propósito
+de uma InputStream?
+
+00:04:27.200 --> 00:04:31.100
+E, da mesma forma, qual é
+o propósito de um BufferedReader?
+

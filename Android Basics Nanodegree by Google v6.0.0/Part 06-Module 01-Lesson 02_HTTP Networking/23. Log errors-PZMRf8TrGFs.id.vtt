@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.060 --> 00:00:02.660
+Anda akan perhatikan bahwa kita bisa
+tangani exception setidaknya dengan
+
+00:00:02.660 --> 00:00:04.230
+mencatat kondisi kesalahan,
+
+00:00:04.230 --> 00:00:07.680
+lalu setidaknya ada jejak yang tertinggal
+saat kesalahan terjadi.
+
+00:00:07.680 --> 00:00:09.300
+Ini lebih baik daripada
+menangkap exception dan
+
+00:00:09.300 --> 00:00:11.900
+tak melakukan apa pun, yang
+dikenal sebagai diam-diam gagal.
+
+00:00:12.900 --> 00:00:17.436
+Dalam tugas ini, saya ingin Anda melakukan
+modifikasi berikut di aplikasi Soonami.
+
+00:00:17.436 --> 00:00:19.845
+Dalam metode makehttprequest,
+
+00:00:19.845 --> 00:00:25.010
+saya ingin Anda mencatat kode respons
+HTTP jika kode statusnya bukan 200.
+
+00:00:25.010 --> 00:00:30.292
+Catat juga IOException
+jika ada.
+
+00:00:30.292 --> 00:00:33.047
+Perhatikan bahwa kita memutus koneksi
+HTTP dan
+
+00:00:33.047 --> 00:00:36.400
+menutup aliran input saat kita
+selesai menggunakannya.
+
+00:00:36.400 --> 00:00:39.509
+Karena kita tambahkan kode ke
+blok, kita tahu kode kita akan
+
+00:00:39.509 --> 00:00:42.314
+dijalankan terlepas dari apakah
+ada exception atau tidak.
+
+00:00:42.314 --> 00:00:45.679
+Maka dengan memutus URLConnection
+dan menutup aliran input,
+
+00:00:45.679 --> 00:00:49.272
+kita sebenarnya membersihkan dan
+membebaskan resources sistem operasi
+
+00:00:49.272 --> 00:00:51.568
+yang sekarang bisa dipakai untuk
+tugas-tugas lain.
+
+00:00:51.568 --> 00:00:54.020
+Silakan lanjutkan dan selesaikan tugas berikut.
+
+00:00:54.020 --> 00:00:58.480
+Jika butuh bantuan, lihat petunjuk di bawah
+kuis atau Anda dapat merujuk contoh
+
+00:00:58.480 --> 00:01:00.990
+lain blok try catch dalam
+kode aplikasi Soonami.
+

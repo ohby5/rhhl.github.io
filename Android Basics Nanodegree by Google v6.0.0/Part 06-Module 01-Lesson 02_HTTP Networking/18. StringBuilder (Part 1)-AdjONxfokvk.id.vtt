@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.130 --> 00:00:02.020
+Ini adalah ringkasan dari
+apa yang baru saja kita pelajari.
+
+00:00:02.020 --> 00:00:05.424
+String itu immutable, artinya tidak dapat
+berubah setelah dibuat.
+
+00:00:05.424 --> 00:00:07.978
+Anda harus membuat yang baru
+jika Anda ingin string
+
+00:00:07.978 --> 00:00:09.640
+yang sedikit berbeda.
+
+00:00:09.640 --> 00:00:13.320
+Di sisi lain, StringBuilder juga
+merupakan urutan karakter, tapi
+
+00:00:13.320 --> 00:00:14.570
+dapat berubah.
+
+00:00:14.570 --> 00:00:16.990
+Jadi StringBuilder dapat berubah
+setelah Anda membuatnya.
+
+00:00:16.990 --> 00:00:20.290
+Ada perdebatan tentang
+kapan menggunakan keduanya.
+
+00:00:20.290 --> 00:00:23.090
+Tapi jika Anda mencoba membuat
+string panjang secara bertahap dengan
+
+00:00:23.090 --> 00:00:26.550
+beberapa langkah, maka StringBuilder
+merupakan tipe data yang lebih efisien
+
+00:00:26.550 --> 00:00:27.980
+karena dapat berubah.
+
+00:00:27.980 --> 00:00:31.508
+Jika tidak, kalau Anda harus membuat
+objek string baru di setiap langkah,
+
+00:00:31.508 --> 00:00:33.309
+Anda memboroskan memori perangkat.
+
+00:00:33.309 --> 00:00:36.962
+Alokasi memori tambahan itu juga
+perlu dibersihkan segera setelah
+
+00:00:36.962 --> 00:00:38.960
+objek string itu tak digunakan lagi.
+
+00:00:38.960 --> 00:00:41.590
+Jauh lebih mudah jika menggunakan
+satu objek StringBuilder tunggal dan
+
+00:00:41.590 --> 00:00:43.630
+memodifikasinya jika diperlukan.
+
+00:00:43.630 --> 00:00:47.220
+Oke, mari lihat kode untuk cara
+menggunakan kelas StringBuilder.
+
+00:00:47.220 --> 00:00:50.970
+Kita dapat mendeklarasikan dan mengisi
+StringBuilder baru seperti biasa, lalu
+
+00:00:50.970 --> 00:00:52.740
+mengisikan kata,
+
+00:00:52.740 --> 00:00:58.798
+"world" yang dieja W-O-R-L-D, ke dalam builder
+ini menggunakan metode append (tambahan).
+
+00:00:58.798 --> 00:01:01.370
+Sekarang, StringBuilder sedang memegang
+urutan karakter
+
+00:01:01.370 --> 00:01:02.960
+yang berbunyi "world".
+
+00:01:02.960 --> 00:01:05.900
+Mari kita buat kata itu
+
+00:01:05.900 --> 00:01:09.500
+menjadi bukan world, dengan membuang huruf
+L di posisi tiga ini.
+
+00:01:09.500 --> 00:01:15.800
+Dengan melakukan ini, builder sekarang berisi
+huruf W-O-R dan D, atau word.
+
+00:01:15.800 --> 00:01:18.860
+Lalu kode menambahkan karakter
+lagi di StringBuilder.
+
+00:01:18.860 --> 00:01:23.190
+Pertama-tama, kita tambahkan builder spasi
+dan akhirnya tanda titik.
+
+00:01:23.190 --> 00:01:26.700
+Perhatikan, metode append
+mengembalikan objek builder, sehingga
+
+00:01:26.700 --> 00:01:30.370
+kita dapat memiliki banyak panggilan
+untuk menambah pada satu baris.
+
+00:01:30.370 --> 00:01:33.660
+Urutan banyak meta panggilan pada
+satu baris ini disebut perantaian
+
+00:01:33.660 --> 00:01:35.470
+metode dalam bahasa programer.
+
+00:01:35.470 --> 00:01:39.370
+Pada tambahan kedua,
+kita dapat menambahkan tanda titik.
+
+00:01:39.370 --> 00:01:42.690
+Setelah selesai, kita dapat
+mengambil frozen immutable string
+
+00:01:42.690 --> 00:01:44.700
+hanya dengan memanggil dua metode string.
+
+00:01:44.700 --> 00:01:47.970
+Setelah selesai, kita lihat bahwa
+variabel String built ini
+
+00:01:47.970 --> 00:01:50.620
+sekarang berisi konten word builder.
+

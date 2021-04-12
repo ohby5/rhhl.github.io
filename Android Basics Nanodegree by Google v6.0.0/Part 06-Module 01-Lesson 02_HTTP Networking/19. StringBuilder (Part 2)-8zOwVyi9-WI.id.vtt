@@ -1,0 +1,66 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.340 --> 00:00:03.570
+Kembali ke kode aplikasi Soonami,
+mari kita lihat bagaimana pembangun string
+
+00:00:03.570 --> 00:00:06.060
+digunakan untuk membangun
+string respons JSON.
+
+00:00:06.060 --> 00:00:07.959
+Jadi saya akan memeriksa
+metode readFromStream.
+
+00:00:07.959 --> 00:00:10.701
+Dalam metode readFromStream,
+kita punya satu stream input, dan
+
+00:00:10.701 --> 00:00:14.210
+kita ingin mengembalikan satu string yang
+mengandung konten stream tersebut.
+
+00:00:14.210 --> 00:00:17.560
+Jadi kita buat pembangun string baru dan
+kita dapat mulai menambahinya
+
+00:00:17.560 --> 00:00:20.440
+dengan semua baris teks yang tersedia
+dalam buffered reader kita.
+
+00:00:20.440 --> 00:00:22.020
+Pertama-tama, kita atur pembangun
+
+00:00:22.020 --> 00:00:25.520
+dan pembaca kita, lalu kita akan meminta
+sebaris teks kepada buffered reader.
+
+00:00:25.520 --> 00:00:29.030
+Jika baris itu bukan null, kita akan menambahi
+baris itu dengan string buffer dan
+
+00:00:29.030 --> 00:00:29.970
+membaca baris lain.
+
+00:00:29.970 --> 00:00:33.115
+Akhirnya, buffered reader akan kehabisan
+baris dan kita akan menggunakan metode
+
+00:00:33.115 --> 00:00:36.405
+toString untuk mengambil dan mengembalikan
+output final dari pembangun string.
+
+00:00:36.405 --> 00:00:39.245
+Seperti yang Anda lihat, menggunakan pembangun
+string secara bertahap untuk membangun
+
+00:00:39.245 --> 00:00:42.715
+string respons, lebih efisien daripada
+terus membuat objek string baru
+
+00:00:42.715 --> 00:00:46.035
+tiap kali kita punya konten lebih banyak
+yang harus ditambahkan ke teks respons.
+

@@ -1,0 +1,285 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.230 --> 00:00:03.476
+Mari melangkah mundur sejenak untuk
+membahas arsitektur sistem Android.
+
+00:00:03.476 --> 00:00:06.934
+Framework Android menawarkan banyak
+kelas berguna untuk membantu Anda
+
+00:00:06.934 --> 00:00:07.527
+berinteraksi dengan sistem.
+
+00:00:07.527 --> 00:00:11.713
+Pikirkan siklus hidup activity atau izin
+perangkat, misalnya.
+
+00:00:11.713 --> 00:00:15.020
+Atau membantu Anda mengakses beberapa
+tipe fungsionalitas perangkat, seperti kamera
+
+00:00:15.020 --> 00:00:16.810
+atau radio, misalnya Wi-Fi atau Bluetooth.
+
+00:00:16.810 --> 00:00:19.507
+Kadang, juga sensor seperti giroskop.
+
+00:00:19.507 --> 00:00:23.056
+Path untuk mengakses peranti keras perangkat
+dari framework muncul bersama melalui
+
+00:00:23.056 --> 00:00:24.725
+serangkaian abstraksi berlapis.
+
+00:00:24.725 --> 00:00:26.400
+Apa yang saya maksud?
+
+00:00:26.400 --> 00:00:30.630
+Tiap lapisan berfokus untuk memecahkan
+masalah sementara lapisan dasar
+
+00:00:30.630 --> 00:00:34.370
+berfokus untuk memecahkan masalah
+yang lebih kecil hingga akhirnya,
+
+00:00:34.370 --> 00:00:37.230
+dengan semua lapisan dikombinasi,
+fungsionalitas yang diinginkan tercapai.
+
+00:00:38.320 --> 00:00:41.274
+Kita tidak akan membahas perincian
+mendalam apa yang dilakukan tiap lapisan,
+
+00:00:41.274 --> 00:00:44.148
+tapi kami akan membantu Anda fokus pada
+lapisan yang harus Anda akrabi.
+
+00:00:44.148 --> 00:00:45.375
+Coba kita lihat.
+
+00:00:45.375 --> 00:00:48.511
+Anda bisa membayangkan perangkat
+Android yang berfungsi itu tersusun dari
+
+00:00:48.511 --> 00:00:50.085
+berbagai lapisan berbeda.
+
+00:00:50.085 --> 00:00:53.535
+Kami telah sedikit menyederhanakannya
+untuk fokus pada yang penting saja, tapi
+
+00:00:53.535 --> 00:00:55.685
+silakan memeriksa tautan
+di bawah catatan untuk
+
+00:00:55.685 --> 00:00:58.585
+diagram terperinci pada situs
+Android Open Source Project.
+
+00:00:59.835 --> 00:01:03.420
+Lapisan paling atas adalah
+lapisan aplikasi tempat terdapat
+
+00:01:03.420 --> 00:01:07.050
+semua aplikasi yang dibangun
+pengembang seperti Anda dan saya.
+
+00:01:07.050 --> 00:01:08.270
+Di dalam aplikasi kita,
+
+00:01:08.270 --> 00:01:13.440
+kita memakai kelas framework Android
+seperti text view dan activity.
+
+00:01:13.440 --> 00:01:16.330
+Saat kita memakai kelas-kelas ini,
+kita dapat melakukan hal-hal rumit atau
+
+00:01:16.330 --> 00:01:19.700
+kuat dengan hanya
+beberapa baris kode.
+
+00:01:19.700 --> 00:01:22.910
+Misalnya, dalam hal ini kami menampilkan
+suatu teks atau pembukaan baru,
+
+00:01:22.910 --> 00:01:24.980
+tapi ada masih banyak lagi dari hanya sekadar itu.
+
+00:01:26.030 --> 00:01:27.910
+Jadi, bagaimana hal ini mungkin?
+
+00:01:27.910 --> 00:01:31.516
+Kelas-kelas framework menghalangi
+semua kerumitan yang tidak perlu
+
+00:01:31.516 --> 00:01:35.188
+dengan memanggil level Android yang lebih
+rendah dan mengandalkan kelas-kelas itu
+
+00:01:35.188 --> 00:01:37.471
+dalam melakukan hal-hal yang berat.
+
+00:01:37.471 --> 00:01:41.646
+Ini adalah tugas yang berat dan rumit dalam mengendalikan
+peranti keras suatu perangkat.
+
+00:01:41.646 --> 00:01:47.310
+Hingga akhirnya, semuanya bekerja dan inilah
+yang kita maksud sebagai halangan lapisan.
+
+00:01:47.310 --> 00:01:49.649
+Sistem operasi dasar atau pendeknya OS
+
+00:01:49.649 --> 00:01:54.024
+punya kode rumitnya sendiri untuk mengatur
+bagaimana aplikasi dan
+
+00:01:54.024 --> 00:01:58.942
+proses sistem mengakses resources
+yang terbatas pada peranti keras perangkat.
+
+00:01:58.942 --> 00:02:03.502
+Aplikasi yang berjalan secara bersamaan harus
+berbagai resources dalam perangkat untuk
+
+00:02:03.502 --> 00:02:07.685
+melestarikan kegunaan dan keresponsifan
+sistem secara keseluruhan.
+
+00:02:07.685 --> 00:02:11.654
+Lapisan terendah merupakan peranti keras dari
+perangkat fisik sebenarnya.
+
+00:02:11.654 --> 00:02:15.530
+Ini adalah silikon yang menyusun, misalnya
+radio nirkabel,
+
+00:02:15.530 --> 00:02:17.847
+seperti seluler, Wi-Fi, dan Bluetooth.
+
+00:02:17.847 --> 00:02:22.668
+Chip yang mengontrol layar, lalu
+ada CPU, memori,
+
+00:02:22.668 --> 00:02:25.350
+GPU, dan masih banyak lagi.
+
+00:02:25.350 --> 00:02:28.288
+Semua ini adalah komponen elektronik
+fisik yang dikemas ke dalam
+
+00:02:28.288 --> 00:02:28.924
+perangkat Anda.
+
+00:02:28.924 --> 00:02:31.152
+Jika Anda ingin membuang
+satu hal,
+
+00:02:31.152 --> 00:02:35.001
+pahamilah bahwa keindahan lapisan-lapisan
+ini adalah mereka ada untuk menyederhanakan
+
+00:02:35.001 --> 00:02:38.463
+atau menyisihkan kompleksitas sistem
+dari KITA, para pengembang.
+
+00:02:38.463 --> 00:02:41.919
+Memungkinkan Anda fokus membuat
+aplikasi berkelas yang dapat memanfaatkan
+
+00:02:41.919 --> 00:02:44.630
+peranti keras perangkat sebesar-besarnya. 
+
+00:02:44.630 --> 00:02:49.228
+Jadi Anda bisa berpikir tentang framework,
+sebagai petunjuk antara aplikasi kita dan
+
+00:02:49.228 --> 00:02:50.143
+perangkat.
+
+00:02:50.143 --> 00:02:53.810
+Kelas framework memungkinkan kita untuk
+mengartikulasikan bagaimana perangkat
+
+00:02:53.810 --> 00:02:55.062
+bekerja saat pengguna memakai aplikasi.
+
+00:02:55.062 --> 00:02:58.879
+Framework terdiri dari semua kelas Java
+yang kita lihat pada
+
+00:02:58.879 --> 00:03:02.496
+developer.android.com, dan juga
+library yang ditulis
+
+00:03:02.496 --> 00:03:06.340
+dalam bahasa pemrograman bernama C dan
+saudara-saudaranya.
+
+00:03:06.340 --> 00:03:09.110
+Mari kita bahas beberapa contoh bagaimana
+kita mengandalkan diri pada lapisan-lapisan
+
+00:03:09.110 --> 00:03:11.650
+yang berbeda ini bahkan tanpa
+menyadarinya.
+
+00:03:11.650 --> 00:03:15.390
+Dalam kode aplikasi kita, kita telah
+memanggil API framework.
+
+00:03:15.390 --> 00:03:20.168
+Misalnya, saat kita membangun aplikasi
+Miwok, kita menggunakan kelas
+
+00:03:20.168 --> 00:03:24.225
+framework media untuk memainkan audio
+dari speaker perangkat.
+
+00:03:24.225 --> 00:03:28.446
+Dalam pelajaran ini, kami menggunakan
+kelas HTTP URL connection untuk
+
+00:03:28.446 --> 00:03:33.103
+membuat permintaan jaringan, yang memakai
+radio perangkat untuk mengirim paket
+
+00:03:33.103 --> 00:03:35.307
+informasi melalui internet.
+
+00:03:35.307 --> 00:03:38.988
+Kita tidak harus berurusan dengan Sistem
+Operasi Android secara langsung.
+
+00:03:38.988 --> 00:03:42.609
+Kelas framework adalah kelas Java yang
+menghalangi perincian implementasi
+
+00:03:42.609 --> 00:03:45.430
+untuk proses di balik
+perangkat.
+
+00:03:45.430 --> 00:03:48.599
+Pemain langsung dalam
+HTTP URL connection adalah
+
+00:03:48.599 --> 00:03:53.136
+dua contoh kelas yang memakai
+fungsionalitas fisik perangkat Android
+
+00:03:53.136 --> 00:03:56.102
+dengan berinteraksi dalam
+kelas framework.
+
+00:03:56.102 --> 00:03:58.160
+Ada banyak lagi contoh
+yang akan Anda jumpai
+
+00:03:58.160 --> 00:04:00.315
+saat Anda belajar lebih banyak
+tentang pengembangan Android.
+

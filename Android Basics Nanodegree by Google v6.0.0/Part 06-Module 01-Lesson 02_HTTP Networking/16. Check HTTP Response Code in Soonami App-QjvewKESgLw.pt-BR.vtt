@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.901
+No método makeHttpRequest,
+só devemos fazer a requisição HTTP
+
+00:00:04.934 --> 00:00:06.968
+se o URL está funcionando.
+
+00:00:07.000 --> 00:00:10.300
+Não faz sentido fazer uma conexão
+com um URL inválido.
+
+00:00:10.334 --> 00:00:13.868
+No começo do método,
+vamos ver se o URL é inválido.
+
+00:00:13.901 --> 00:00:16.367
+Se for inválido,
+saímos do método mais cedo
+
+00:00:16.400 --> 00:00:19.767
+retornando uma resposta JSON
+que contém um string vazia.
+
+00:00:19.801 --> 00:00:22.868
+Vamos para a tarefa
+principal do quiz
+
+00:00:22.901 --> 00:00:25.067
+que é verificar
+o código de resposta.
+
+00:00:25.100 --> 00:00:27.067
+Depois que a conexão
+foi estabelecida,
+
+00:00:27.100 --> 00:00:31.801
+verifique o código chamando
+urlConnection.getResponseCode.
+
+00:00:31.834 --> 00:00:34.901
+Na documentação, vemos
+que o método retorna um integer.
+
+00:00:34.934 --> 00:00:37.033
+Nesta condição de teste
+para a declaração if,
+
+00:00:37.067 --> 00:00:39.701
+checamos se o código de resposta
+é igual a 200.
+
+00:00:39.734 --> 00:00:42.968
+Caso seja, seguimos adiante
+para ler o fluxo de entrada
+
+00:00:43.000 --> 00:00:44.934
+e extrair a resposta JSON.
+
+00:00:44.968 --> 00:00:48.901
+Se o código de resposta apontar
+um erro, algo diferente de 200,
+
+00:00:48.934 --> 00:00:50.234
+não fazemos nada.
+
+00:00:50.267 --> 00:00:53.000
+Vamos descer aqui
+e retornar a resposta JSON,
+
+00:00:53.033 --> 00:00:55.934
+que iniciamos antes,
+para uma string vazia.
+
+00:00:55.968 --> 00:00:58.000
+Chegamos a um ponto
+importante.
+
+00:00:58.033 --> 00:01:01.000
+Se o valor de retorno
+do método makeHttpRequest
+
+00:01:01.033 --> 00:01:02.434
+pode ser uma string vazia,
+
+00:01:02.467 --> 00:01:06.601
+temos que garantir que o método
+que usa a resposta JSON como entrada
+
+00:01:06.634 --> 00:01:08.701
+está lidando
+com a string vazia.
+
+00:01:08.734 --> 00:01:11.601
+Vamos ver o método
+extractFeatureFromJSON.
+
+00:01:11.634 --> 00:01:14.934
+Antes de extrair dados
+da resposta JSON,
+
+00:01:14.968 --> 00:01:17.133
+temos que checar
+se o parâmetro de entrada
+
+00:01:17.167 --> 00:01:21.334
+é a string vazia ou "inválido"
+chamando TextUtils.isEmpty
+
+00:01:21.367 --> 00:01:22.868
+e passando a string.
+
+00:01:22.901 --> 00:01:27.601
+Vamos à declaração dessa função
+isEmpty para ver o que ela faz.
+
+00:01:27.634 --> 00:01:31.100
+O atalho é CTRL + clique.
+
+00:01:31.133 --> 00:01:35.534
+Notamos aqui que o método isEmpty
+na classe TextUtils
+
+00:01:35.567 --> 00:01:39.601
+checa se string é vazia
+ou a resposta é inválida.
+
+00:01:39.634 --> 00:01:41.200
+Voltando ao nosso código,
+
+00:01:41.234 --> 00:01:44.367
+se a string for vazia,
+esta expressão será verdadeira
+
+00:01:44.400 --> 00:01:46.501
+e retornaremos mais cedo
+do método.
+
+00:01:46.534 --> 00:01:49.801
+Retornamos "inválido" porque
+não há um objeto de evento válido
+
+00:01:49.834 --> 00:01:51.267
+na resposta JSON.
+
+00:01:51.300 --> 00:01:53.501
+Note que o método
+extractFeatureFromJson
+
+00:01:53.534 --> 00:01:55.467
+retorna um tipo de dado
+de evento.
+
+00:01:55.501 --> 00:01:59.200
+Vamos explicar todo o caminho
+da tarefa Async do nosso app
+
+00:01:59.234 --> 00:02:00.300
+na próxima lição.
+
+00:02:00.334 --> 00:02:03.634
+Mas se houver um tremor inválido,
+não atualizaremos a interface.
+
+00:02:03.667 --> 00:02:06.067
+A chave é que o método
+pode retornar "inválido",
+
+00:02:06.100 --> 00:02:08.701
+desde o caso "inválido"
+seja corretamente tratado.
+
+00:02:08.734 --> 00:02:11.000
+Agora você sabe como checar
+o código de estado
+
+00:02:11.033 --> 00:02:12.601
+e ajustar
+o comportamento do app
+
+00:02:12.634 --> 00:02:16.267
+se o código de resposta
+vier positivo ou negativo.
+

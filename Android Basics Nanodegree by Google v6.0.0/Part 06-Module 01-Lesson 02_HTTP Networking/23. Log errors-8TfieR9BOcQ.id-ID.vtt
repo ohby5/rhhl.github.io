@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.640 --> 00:00:04.180
+Berikut ini beberapa perubahan yang kita buat
+pada metode makeHttpRequest
+
+00:00:04.180 --> 00:00:05.520
+dalam aplikasi Soonami.
+
+00:00:05.520 --> 00:00:07.050
+Jika kode responsnya bukan 200,
+
+00:00:07.050 --> 00:00:12.300
+maka kita me-log kode respons kesalahan
+menggunakan panggilan metode log.e.
+
+00:00:12.300 --> 00:00:17.260
+Jika ini terjadi, kita akan melihat kesalahan itu
+di-log dalam logcat dengan aktivitas utama
+
+00:00:17.260 --> 00:00:21.600
+log tag, disusul dengan
+pesan Error response code: dan
+
+00:00:21.600 --> 00:00:23.300
+kemudian kode respons numerik.
+
+00:00:24.400 --> 00:00:27.260
+Kita juga melakukan ini dalam
+metode doInBackground,
+
+00:00:27.260 --> 00:00:31.460
+yang mungkin memicu exception I/O saat
+mencoba menutup InputStream.
+
+00:00:31.460 --> 00:00:34.230
+Kita dapat memverifikasi bahwa pernyataan pesan
+log ini akan dibuat dengan secara sengaja
+
+00:00:34.230 --> 00:00:36.630
+menciptakan
+bad request URL.
+
+00:00:37.840 --> 00:00:39.420
+Perhatikan karakter
+serbaneka ini.
+
+00:00:40.760 --> 00:00:41.850
+Saat kita menjalankan aplikasi,
+
+00:00:41.850 --> 00:00:44.320
+kita akan menjumpai kesalahan jika kita mencoba
+menyambungkan dengan URL yang tidak valid.
+
+00:00:44.320 --> 00:00:46.170
+Seperti yang Anda lihat,
+
+00:00:46.170 --> 00:00:50.280
+kita melihat pesan kesalahan merah muncul di
+log yang memiliki kode respons 400.
+
+00:00:50.280 --> 00:00:51.630
+Oke, bagus,
+
+00:00:51.630 --> 00:00:55.810
+kita memverifikasi bahwa pesan log dipanggil
+jika permintaan tidak berhasil.
+
+00:00:55.810 --> 00:00:59.167
+Tugas kedua adalah me-log kesalahan
+saat kita menangkap exception I/O.
+
+00:01:00.180 --> 00:01:03.650
+Kita dapat memverifikasi bahwa path kode ini
+dieksekusi dengan menyalakan telepon kita dalam
+
+00:01:03.650 --> 00:01:04.920
+mode pesawat.
+
+00:01:04.920 --> 00:01:07.880
+Ini jelas akan menyebabkan exception
+saat kita mencoba menyambung ke internet
+
+00:01:07.880 --> 00:01:09.400
+untuk mengambil hasil.
+
+00:01:09.400 --> 00:01:12.570
+Saat kita menjalankan aplikasi,
+tidak ada informasi gempa bumi yang akan tampil.
+
+00:01:12.570 --> 00:01:16.330
+Namun, dalam log,
+sekarang kita lihat pesan kesalahan menyatakan,
+
+00:01:16.330 --> 00:01:18.970
+terjadi masalah saat mengambil
+hasil JSON gempa bumi.
+
+00:01:18.970 --> 00:01:21.640
+Jadi kita tahu bahwa exception I/O
+dilakukan dan ditangkap.
+
+00:01:21.640 --> 00:01:23.313
+Kerja bagus dalam me-log kesalahan.
+
+00:01:23.313 --> 00:01:26.860
+Ini praktik yang baik untuk
+diikuti sebagai pengembang.
+
+00:01:26.860 --> 00:01:29.400
+Jika Anda ingin merujuk pada kondisi
+terakhir kode aplikasi Soonami,
+
+00:01:29.400 --> 00:01:30.610
+lihat tautan GitHub di bawah.
+

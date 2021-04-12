@@ -1,0 +1,63 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.167
+Vamos construir essa lógica
+no nosso app.
+
+00:00:02.200 --> 00:00:05.000
+Devemos verificar se recebemos
+o código 200 de resposta
+
+00:00:05.033 --> 00:00:08.000
+antes de fazer o parsing
+da resposta JSON.
+
+00:00:08.033 --> 00:00:10.400
+Se recebemos um erro
+de resposta,
+
+00:00:10.434 --> 00:00:12.968
+a resposta JSON
+é uma string vazia.
+
+00:00:13.000 --> 00:00:15.701
+Não dá para extrair
+a array "feature"
+
+00:00:15.734 --> 00:00:18.634
+porque não há informação
+na resposta.
+
+00:00:19.167 --> 00:00:23.501
+No código do app de tsunami,
+veja o código de resposta HTTP
+
+00:00:23.534 --> 00:00:27.434
+no método makeHttpRequest
+e faça a ação necessária.
+
+00:00:27.467 --> 00:00:31.400
+Certifique-se do código
+para lidar com respostas inválidas
+
+00:00:31.434 --> 00:00:33.467
+de forma razoável.
+
+00:00:33.501 --> 00:00:36.100
+Veja a nota abaixo do quiz
+para mais detalhes.
+
+00:00:36.133 --> 00:00:40.634
+Por exemplo, se o URL for inválido,
+não fazemos a requisição HTTP.
+
+00:00:40.667 --> 00:00:44.267
+Ou, se o JSON for inválido
+ou uma string vazia,
+
+00:00:44.300 --> 00:00:46.300
+não devemos seguir
+com o parsing.
+

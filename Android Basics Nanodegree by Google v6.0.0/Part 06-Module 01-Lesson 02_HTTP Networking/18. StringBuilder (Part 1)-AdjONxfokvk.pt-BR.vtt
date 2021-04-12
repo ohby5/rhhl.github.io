@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.000
+Este é um resumo
+do que acabamos de ver.
+
+00:00:02.033 --> 00:00:05.667
+Uma string é imutável e não pode
+ser mudada depois de criada.
+
+00:00:05.701 --> 00:00:07.701
+Você tem que criar
+um novo objeto string
+
+00:00:07.734 --> 00:00:09.467
+se quiser
+uma string diferente.
+
+00:00:09.501 --> 00:00:13.167
+Por outro lado, uma StringBuilder
+também é uma série de caracteres,
+
+00:00:13.200 --> 00:00:16.834
+mas ela é mutável e pode ser mudada
+depois da sua criação.
+
+00:00:16.868 --> 00:00:20.133
+Há vantagens e desvantagens
+de cada uma.
+
+00:00:20.167 --> 00:00:24.000
+Mas se quiser criar uma string
+de texto longa em vários passos,
+
+00:00:24.033 --> 00:00:26.634
+StringBuilder é um tipo de dado
+bem mais eficiente
+
+00:00:26.667 --> 00:00:27.968
+porque ela é mutável.
+
+00:00:28.000 --> 00:00:31.734
+Se tivesse que criar um novo
+objeto de string a cada passo,
+
+00:00:31.767 --> 00:00:33.601
+você estaria
+desperdiçando memória
+
+00:00:33.634 --> 00:00:35.734
+e as alocações
+de memória adicionais
+
+00:00:35.767 --> 00:00:38.868
+teriam que se limpadas
+depois da utilização das strings.
+
+00:00:38.901 --> 00:00:41.334
+É mais eficiente
+ter apenas uma StringBuilder
+
+00:00:41.367 --> 00:00:43.467
+e modificá-lo
+quando necessário.
+
+00:00:43.501 --> 00:00:47.033
+Vamos ver o código para usar
+a classe StringBuilder.
+
+00:00:47.067 --> 00:00:50.701
+Podemos declarar e botar
+em instância uma nova Stringbuilder
+
+00:00:50.734 --> 00:00:55.968
+e depois colocar
+a palavra "World"
+
+00:00:56.000 --> 00:00:58.667
+no construtor
+através do método append.
+
+00:00:58.701 --> 00:01:02.801
+A StringBuilder segura a sequência
+de caracteres que soletra "World".
+
+00:01:02.834 --> 00:01:06.834
+Vamos trocar e usar "Word"
+ao invés "World"
+
+00:01:06.868 --> 00:01:09.400
+tirando a letra L
+na posição três.
+
+00:01:09.434 --> 00:01:11.667
+Quando fazemos isso,
+o construtor passa a conter
+
+00:01:11.701 --> 00:01:15.634
+os caracteres W, O, R e D,
+ou "word".
+
+00:01:15.667 --> 00:01:18.567
+Com o append,
+adicionamos mais caracteres.
+
+00:01:18.601 --> 00:01:22.901
+Adicionamos espaço e "builder"
+e depois um ponto.
+
+00:01:22.934 --> 00:01:25.734
+Note que o método append
+retorna um objeto builder.
+
+00:01:25.767 --> 00:01:30.234
+É bacana porque podemos adicionar
+várias coisas a uma linha só.
+
+00:01:30.267 --> 00:01:32.567
+Esta série de várias chamadas
+de método numa linha só
+
+00:01:32.601 --> 00:01:35.300
+é chamada
+de encadeamento de método.
+
+00:01:35.334 --> 00:01:39.234
+Na 2ª vez que chamamos append,
+podemos colocar um ponto.
+
+00:01:39.267 --> 00:01:42.501
+Por fim, podemos obter
+uma string imutável
+
+00:01:42.534 --> 00:01:44.534
+chamando o método toString.
+
+00:01:44.567 --> 00:01:47.601
+Terminando, vemos
+que a variável de string "built"
+
+00:01:47.634 --> 00:01:51.200
+contém "Word builder".
+

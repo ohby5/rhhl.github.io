@@ -1,0 +1,247 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.501
+Vamos voltar
+ao diagrama de rede.
+
+00:00:02.534 --> 00:00:06.601
+A requisição HTTP
+inclui o URL que mencionamos
+
+00:00:06.634 --> 00:00:11.234
+além de outras informações
+como a ação que queremos executar,
+
+00:00:11.267 --> 00:00:14.300
+dados do nosso aparelho
+e mais.
+
+00:00:14.334 --> 00:00:16.834
+A requisição é empacotada.
+
+00:00:16.868 --> 00:00:19.133
+É como colocar uma carta
+num envelope.
+
+00:00:19.167 --> 00:00:24.534
+A requisição HTTP é um envelope
+com destinatário e remetente.
+
+00:00:24.567 --> 00:00:26.767
+Depois que a requisição
+é empacotada,
+
+00:00:26.801 --> 00:00:30.534
+Android fornece a funcionalidade
+para enviar a mensagem pela rede
+
+00:00:30.567 --> 00:00:32.334
+para o servidor correto.
+
+00:00:32.367 --> 00:00:35.033
+Ainda não definimos
+a palavra rede,
+
+00:00:35.067 --> 00:00:37.834
+mas pense nela
+como um serviço postal digital.
+
+00:00:37.868 --> 00:00:42.734
+Uma rede é a conexão que permite
+comunicação entre computadores.
+
+00:00:42.767 --> 00:00:45.834
+Computadores incluem
+qualquer aparelho de computação,
+
+00:00:45.868 --> 00:00:48.901
+como celulares,
+laptops e servidores.
+
+00:00:48.934 --> 00:00:53.901
+A internet é uma rede gigantesca
+de computadores ao redor do mundo.
+
+00:00:53.934 --> 00:00:57.367
+Podemos usar o protocolo HTTP
+para enviar uma requisição
+
+00:00:57.400 --> 00:00:59.367
+de um computador para outro.
+
+00:00:59.400 --> 00:01:02.267
+Para falarmos com um computador
+em outro local,
+
+00:01:02.300 --> 00:01:06.100
+temos que abrir uma comunicação,
+ou conexão de rede,
+
+00:01:06.133 --> 00:01:07.934
+através da internet.
+
+00:01:07.968 --> 00:01:11.167
+Assim podemos trocar mensagens
+com outro computador.
+
+00:01:12.334 --> 00:01:15.834
+Neste diagrama, o USGS
+é representado por um computador,
+
+00:01:15.868 --> 00:01:18.167
+mas lembre-se que eles têm
+muitos dados.
+
+00:01:18.200 --> 00:01:22.601
+Então eles devem ter um grupo
+de computadores respondendo.
+
+00:01:22.634 --> 00:01:26.901
+Um computador não daria conta
+de requisições do mundo inteiro
+
+00:01:26.934 --> 00:01:29.534
+para dados geológicos dos EUA.
+
+00:01:29.567 --> 00:01:35.167
+Vamos apresentar alguns termos
+que você escutará muito.
+
+00:01:35.200 --> 00:01:39.534
+Você pode chamar os computadores
+do USGS que fornecem dados
+
+00:01:39.567 --> 00:01:42.334
+como o servidor da web
+do USGS.
+
+00:01:42.367 --> 00:01:46.300
+Um servidor é um ou vários
+computadores numa rede
+
+00:01:46.334 --> 00:01:50.801
+que rodam um programa
+que responde requisições HTTP.
+
+00:01:50.834 --> 00:01:55.200
+Já o seu telefone
+pode ser chamado de cliente.
+
+00:01:55.234 --> 00:01:58.100
+O cliente requer os dados
+de um servidor
+
+00:01:58.133 --> 00:02:00.767
+e exibe os resultados
+para o usuário.
+
+00:02:00.801 --> 00:02:04.167
+Vários clientes podem estar
+conectados ao mesmo servidor,
+
+00:02:04.200 --> 00:02:07.567
+mas cada cliente pode exibir
+os dados de forma diferente.
+
+00:02:07.601 --> 00:02:11.400
+Por exemplo, um cliente móvel
+pode exibir dados
+
+00:02:11.434 --> 00:02:14.601
+que caibam melhor
+numa tela pequena.
+
+00:02:14.634 --> 00:02:19.634
+Um cliente de rede num desktop
+pode exibir dados mais detalhados,
+
+00:02:19.667 --> 00:02:22.868
+aproveitando o tamanho
+da tela grande.
+
+00:02:22.901 --> 00:02:25.801
+Cada cliente manda
+uma requisição para o servidor.
+
+00:02:25.834 --> 00:02:28.133
+Quando o servidor recebe
+a requisição,
+
+00:02:28.167 --> 00:02:30.667
+ele pode compor
+uma página em HTML
+
+00:02:30.701 --> 00:02:32.767
+e enviá-la como resposta.
+
+00:02:32.801 --> 00:02:36.567
+Ou ele pode enviar
+dados estruturados para o nosso app
+
+00:02:36.601 --> 00:02:39.834
+num formato como JSON ou XML.
+
+00:02:39.868 --> 00:02:42.567
+Depois de receber
+a resposta do servidor,
+
+00:02:42.601 --> 00:02:45.501
+o cliente controla
+como os dados são exibidos.
+
+00:02:45.534 --> 00:02:49.434
+Por exemplo, um navegador
+traduz uma página para a tela
+
+00:02:49.467 --> 00:02:52.267
+e um app executa o parsing
+
+00:02:52.300 --> 00:02:55.567
+para exibir dados importantes
+na tela.
+
+00:02:55.601 --> 00:02:59.834
+Nesta aula falaremos sobre
+o processo de troca de dados.
+
+00:02:59.868 --> 00:03:03.100
+Primeiro, vamos ver
+como criar uma requisição HTTP
+
+00:03:03.133 --> 00:03:06.901
+com base nos dados e na fonte
+que queremos.
+
+00:03:06.934 --> 00:03:09.834
+Segundo, vamos mandar
+a requisição para o servidor
+
+00:03:09.868 --> 00:03:14.467
+que vai processá-la
+e escolher uma resposta.
+
+00:03:14.501 --> 00:03:18.634
+Terceiro, vamos ver como o cliente
+processa e faz o parsing
+
+00:03:18.667 --> 00:03:21.834
+para converter a resposta
+num formato legível.
+
+00:03:22.467 --> 00:03:25.400
+Por fim, vamos atualizar
+a interface no app
+
+00:03:25.434 --> 00:03:27.400
+para exibir os resultados.
+
+00:03:27.434 --> 00:03:30.100
+Mas antes de entrar
+em conexões em detalhe,
+
+00:03:30.133 --> 00:03:34.801
+tem uma questão no Android
+que precisamos resolver.
+

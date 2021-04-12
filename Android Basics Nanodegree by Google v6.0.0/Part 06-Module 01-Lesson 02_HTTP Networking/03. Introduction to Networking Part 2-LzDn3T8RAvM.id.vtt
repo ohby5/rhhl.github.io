@@ -1,0 +1,241 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.730 --> 00:00:03.100
+Kembali ke diagram jaringan kita.
+
+00:00:03.100 --> 00:00:07.470
+Permintaan HTTP akan mencakup URL
+yang baru saja kita bahas bersama dengan
+
+00:00:07.470 --> 00:00:11.770
+banyak informasi lainnya, seperti tindakan
+apa yang ingin kita lakukan terhadap data,
+
+00:00:11.770 --> 00:00:14.660
+informasi tentang perangkat,
+membuat permintaan, dan lain-lain.
+
+00:00:14.660 --> 00:00:17.090
+Semua permintaan dikemas
+bersama-sama.
+
+00:00:17.090 --> 00:00:19.580
+Ini seperti memasukkan pesan
+di dalam amplop.
+
+00:00:19.580 --> 00:00:25.110
+Permintaan HTTP itu seperti amplop
+dengan alamat tujuan dan kembali.
+
+00:00:25.110 --> 00:00:29.450
+Setelah permintaan dikemas, Android
+memberikan fungsionalitas guna membantu
+
+00:00:29.450 --> 00:00:32.540
+pesan pengirim melintasi jaringan
+menuju server web yang benar.
+
+00:00:32.540 --> 00:00:35.495
+Kita belum secara resmi mendefinisikan
+kata jaringan, tapi
+
+00:00:35.495 --> 00:00:37.916
+Anda bisa membayangkannya sebagai
+layanan pos digital.
+
+00:00:37.916 --> 00:00:39.397
+Jaringan sebenarnya hanya merupakan
+
+00:00:39.397 --> 00:00:42.727
+dua atau lebih komputer yang terhubung dengan
+cara yang membuatnya dapat berkomunikasi.
+
+00:00:42.727 --> 00:00:47.624
+Saat saya bilang komputer, maksud saya
+adalah perangkat komputasi apa pun seperti
+
+00:00:47.624 --> 00:00:49.119
+ponsel, laptop, atau server.
+
+00:00:49.119 --> 00:00:53.214
+Internet adalah jaringan skala besar yang
+terdiri dari banyak komputer di seluruh
+
+00:00:53.214 --> 00:00:54.210
+dunia.
+
+00:00:54.210 --> 00:00:57.650
+Kita gunakan protokol HTTP
+untuk mengarahkan permintaan kita
+
+00:00:57.650 --> 00:00:59.640
+dari satu komputer ke komputer lain.
+
+00:00:59.640 --> 00:01:03.350
+Untuk berhubungan dengan satu komputer
+di lokasi berbeda, kita harus membangun
+
+00:01:03.350 --> 00:01:08.230
+saluran komunikasi, yang juga dikenal
+sebagai koneksi jaringan, melalui internet.
+
+00:01:08.230 --> 00:01:10.760
+Lalu kita dapat bertukar pesan
+dengan komputer lain.
+
+00:01:12.640 --> 00:01:16.060
+Dalam diagram ini, kita merepresentasikan
+USGS sebagai satu komputer tunggal, tapi
+
+00:01:16.060 --> 00:01:18.520
+ingat bahwa USGS memiliki
+banyak sekali data.
+
+00:01:18.520 --> 00:01:22.088
+Jadi mungkin mereka memiliki sekelompok
+komputer yang merespons pada
+
+00:01:22.088 --> 00:01:22.709
+berbagai permintaan.
+
+00:01:22.709 --> 00:01:27.355
+Satu komputer saja tidak akan bisa
+menangani permintaan dari seluruh dunia
+
+00:01:27.355 --> 00:01:29.080
+untuk data geologis USGS.
+
+00:01:30.200 --> 00:01:32.720
+Di titik ini, saya ingin perkenalkan
+Anda dengan terminologi
+
+00:01:32.720 --> 00:01:35.450
+yang lebih formal yang
+akan sering Anda dengar.
+
+00:01:35.450 --> 00:01:39.970
+Anda bisa merujuk komputer USGS
+yang menyediakan data
+
+00:01:39.970 --> 00:01:42.550
+sebagai Server Web USGS.
+
+00:01:42.550 --> 00:01:46.911
+Server web adalah komputer atau kelompok
+komputer lain di
+
+00:01:46.911 --> 00:01:51.047
+jaringan yang menjalankan program yang
+merespons permintaan HTTP.
+
+00:01:51.047 --> 00:01:55.322
+Di sisi lain, ponsel Anda bisa
+disebut sebagai klien.
+
+00:01:55.322 --> 00:01:58.472
+Klien meminta informasi
+dari server yang
+
+00:01:58.472 --> 00:02:01.100
+lalu menampilkan hasilnya kepada pengguna.
+
+00:02:01.100 --> 00:02:04.640
+Sering kali, banyak klien berbeda akan
+terhubung dengan server yang sama, tapi
+
+00:02:04.640 --> 00:02:08.050
+tiap klien dapat menampilkan
+data dengan cara berbeda.
+
+00:02:08.050 --> 00:02:12.679
+Misalnya, klien seluler dapat menampilkan
+informasi yang lebih mudah dilihat
+
+00:02:12.679 --> 00:02:15.030
+di layar seluler yang kecil.
+
+00:02:15.030 --> 00:02:20.330
+Misalnya lagi, klien pada desktop mungkin
+menampilkan informasi lebih terperinci
+
+00:02:20.330 --> 00:02:23.220
+dengan memanfaatkan keuntungan
+ukuran layar yang lebih besar.
+
+00:02:23.220 --> 00:02:26.050
+Tiap klien mengirim
+permintaan kepada server.
+
+00:02:26.050 --> 00:02:30.751
+Saat server web menerima permintaan,
+server dapat menyusun halaman web HTML
+
+00:02:30.751 --> 00:02:35.378
+untuk dikembalikan ke pengguna untuk
+ditampilkan, atau mengembalikan data
+
+00:02:35.378 --> 00:02:39.954
+terstruktur yang bisa kita gunakan di aplikasi
+yang kita bangun berformat JSON atau XML.
+
+00:02:39.954 --> 00:02:42.666
+Setelah klien menerima
+respons dari server,
+
+00:02:42.666 --> 00:02:45.730
+klien mengontrol bagaimana data
+ditampilkan kepada pengguna.
+
+00:02:45.730 --> 00:02:49.464
+Misalnya, peramban web bisa membuat
+halaman web ke layar atau
+
+00:02:49.464 --> 00:02:53.479
+aplikasi seluler dapat melakukan parse atas bit-bit
+data yang diperlukan untuk menampilkan
+
+00:02:53.479 --> 00:02:55.612
+informasi berguna di layar perangkat.
+
+00:02:55.612 --> 00:03:00.300
+Dalam pelajaran ini, kita akan berfokus pada
+langkah utama untuk proses pertukaran data.
+
+00:03:00.300 --> 00:03:03.420
+Pertama-tama, kita akan bahas tentang cara
+menyusun permintaan HTTP yang benar
+
+00:03:03.420 --> 00:03:07.400
+berdasarkan informasi yang kita inginkan,
+dan dari mana kita ingin mengambilnya.
+
+00:03:07.400 --> 00:03:11.870
+Kedua, kita akan mengirim permintaan ke
+server, yang akan memprosesnya dan
+
+00:03:11.870 --> 00:03:14.110
+menyusun respons yang benar
+untuk dikirim balik.
+
+00:03:15.210 --> 00:03:19.698
+Ketiga, kita akan bahas bagaimana klien
+memproses atau melakukan parse dari respons ini dan
+
+00:03:19.698 --> 00:03:22.359
+mengonversinya ke dalam format
+yang dipahaminya.
+
+00:03:22.359 --> 00:03:27.650
+Terakhir, kita memperbarui UI dalam aplikasi
+agar menampilkan hasil kepada pengguna.
+
+00:03:27.650 --> 00:03:30.470
+Namun, sebelum membahas perincian
+jaringan,
+
+00:03:30.470 --> 00:03:34.480
+ada satu hambatan di perangkat Android
+yang harus kita atasi lebih dulu.
+

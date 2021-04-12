@@ -1,0 +1,47 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.210 --> 00:00:02.610
+We're looking at the process of taking
+a byte stream off of the network
+
+00:00:02.610 --> 00:00:06.600
+connection and preparing the text
+to be properly used in the app.
+
+00:00:06.600 --> 00:00:09.788
+So when converting a byte stream to
+a string, we use two new classes,
+
+00:00:09.788 --> 00:00:13.008
+InputStream and BufferedReader.
+
+00:00:13.008 --> 00:00:15.620
+In the InputStream
+represents a stream of bytes
+
+00:00:15.620 --> 00:00:18.390
+where each byte is a small
+chunk of information.
+
+00:00:18.390 --> 00:00:21.730
+Any piece of data can be broken
+down into a series of bytes.
+
+00:00:21.730 --> 00:00:25.020
+A stream allows our code to
+process one byte at a time.
+
+00:00:25.020 --> 00:00:28.190
+A BufferedReader helps us read
+text from the InputStream.
+
+00:00:28.190 --> 00:00:30.450
+We can read one line of text at a time,
+and
+
+00:00:30.450 --> 00:00:33.355
+then build up a string with the entire
+contents of the InputStream.
+

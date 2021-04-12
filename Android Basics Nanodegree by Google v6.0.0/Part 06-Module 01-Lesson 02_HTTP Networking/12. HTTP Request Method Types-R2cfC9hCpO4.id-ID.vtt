@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.720 --> 00:00:03.530
+Mari kembali ke permintaan HTTP.
+
+00:00:03.530 --> 00:00:07.070
+Kita perlu menentukan beberapa perincian
+tambahan yang penting
+
+00:00:07.070 --> 00:00:08.990
+sebelum membangun
+koneksi jaringan.
+
+00:00:10.160 --> 00:00:15.285
+Sejauh ini objek HttpUrlConnection hanya
+berisi tujuan yang kita inginkan
+
+00:00:15.285 --> 00:00:19.025
+untuk permintaan ini, jadi kita masih perlu
+menentukan tindakan yang akan dilakukan
+
+00:00:19.025 --> 00:00:21.275
+server saat diminta.
+
+00:00:21.275 --> 00:00:25.865
+Ini diekspresikan menggunakan salah satu
+kata kerja HTTP seperti
+
+00:00:25.865 --> 00:00:27.335
+GET atau POST.
+
+00:00:27.335 --> 00:00:32.220
+Langkah berikutnya memastikan Anda
+mengatur metode HTTP yang diinginkan yang
+
+00:00:32.220 --> 00:00:37.450
+memungkinkan Anda menjelaskan apa yang
+ingin Anda lakukan dengan koneksi HTTP.
+
+00:00:37.450 --> 00:00:43.370
+Ada tipe atau tindakan metode HTTP yang
+lazim yang harus Anda ketahui.
+
+00:00:43.370 --> 00:00:45.530
+Saat kita mengambil informasi
+yang akan dikembalikan kepada kita.
+
+00:00:45.530 --> 00:00:47.300
+Metode terbaik adalah GET.
+
+00:00:47.300 --> 00:00:50.650
+Ada sejumlah metode yang
+digunakan dalam HTTP.
+
+00:00:50.650 --> 00:00:55.880
+GET yang paling lazim dipakai,
+POST juga sering dipakai
+
+00:00:55.880 --> 00:00:59.950
+saat Anda harus memperbarui informasi pada
+server seperti saat Anda memperbarui
+
+00:00:59.950 --> 00:01:04.950
+tulisan blog atau memasukkan informasi
+penagihan atau berbelanja daring.
+
+00:01:06.590 --> 00:01:09.950
+Dengan kata lain, permintaan GET
+biasanya
+
+00:01:09.950 --> 00:01:14.780
+membaca informasi dari server dan
+mengirimnya kembali ke klien.
+
+00:01:14.780 --> 00:01:18.390
+Permintaan POST umumnya berisi
+informasi yang akan ditulis
+
+00:01:18.390 --> 00:01:19.830
+ke server.
+
+00:01:19.830 --> 00:01:21.690
+Silakan periksa daftar dan
+catatan ini untuk tautan dan
+
+00:01:21.690 --> 00:01:25.079
+tempat Anda bisa belajar lebih banyak tentang
+berbagai metode HTTP lainnya.
+
+00:01:26.170 --> 00:01:29.500
+Misalnya, saat Anda memasukkan
+URL ke browser web,
+
+00:01:29.500 --> 00:01:34.230
+permintaan GET yang berisi informasi URL
+tujuan akan dihasilkan dan dikirim ke server.
+
+00:01:34.230 --> 00:01:37.730
+Permintaan ini juga berisi bagian judul
+yang mencakup metadata
+
+00:01:37.730 --> 00:01:39.040
+tentang permintaan tersebut.
+
+00:01:39.040 --> 00:01:41.330
+Ini mencakup hal-hal seperti
+apa tipe bahasa dan kode
+
+00:01:41.330 --> 00:01:44.170
+yang dapat diterima klien,
+informasi tentang
+
+00:01:44.170 --> 00:01:47.418
+sistem operasi yang dimiliki dalam
+dimensi layar.
+
+00:01:47.418 --> 00:01:50.380
+Aplikasi seluler melakukan hal yang sama,
+
+00:01:50.380 --> 00:01:53.410
+saat meminta informasi
+dari suatu server.
+
+00:01:53.410 --> 00:01:57.200
+Bagaimana Anda tahu metode permintaan
+apa yang akan diatur, sementara Anda
+
+00:01:57.200 --> 00:02:00.860
+memeriksa dokumentasi untuk API tertentu
+yang digunakan untuk mengonfirmasinya.
+
+00:02:01.960 --> 00:02:07.160
+Tiap endpoint API harus secara eksplisit
+terdokumentasi dengan tindakan HTTP yang wajib.
+
+00:02:07.160 --> 00:02:12.120
+Harus konsisten dengan perilaku GET dan
+POST yang dijelaskan tadi
+
+00:02:12.120 --> 00:02:17.000
+Dalam kasus di mana tidak ada tindakan yang
+ditentukan, biasanya diasumsikan ada GET.
+
+00:02:17.000 --> 00:02:20.460
+Misalnya, mari kembali ke API
+publik Twitter.
+
+00:02:20.460 --> 00:02:23.940
+Ada banyak endpoint yang disediakan untuk
+mengambil informasi tentang pengguna,
+
+00:02:23.940 --> 00:02:26.520
+tweet, teman, atau informasi akun.
+
+00:02:26.520 --> 00:02:30.150
+Twitter lebih dulu menentukan apakah
+endpoint ini berupa permintaan GET atau
+
+00:02:30.150 --> 00:02:32.040
+POST.
+
+00:02:32.040 --> 00:02:36.800
+Mari kita klik endpoint API ini
+yang memberi kita tweet paling baru
+
+00:02:36.800 --> 00:02:38.160
+yang diposkan pengguna.
+
+00:02:39.380 --> 00:02:42.960
+Jika saya gulir sedikit ke bawah
+saya bisa temukan URL resource
+
+00:02:42.960 --> 00:02:45.540
+tempat kita bisa membuat permintaan HTTP.
+
+00:02:45.540 --> 00:02:48.560
+Dan GET adalah tipe metode
+permintaan HTTP karena kita
+
+00:02:48.560 --> 00:02:51.890
+membaca tweet yang sudah ada
+dari server Twitter.
+
+00:02:51.890 --> 00:02:55.770
+Ada banyak contoh lain di mana kita melakukan
+permintaan GET untuk mendapatkan daftar
+
+00:02:55.770 --> 00:02:59.340
+pesan langsung atau daftar
+teman dari pengguna.
+
+00:02:59.340 --> 00:03:03.820
+Di sisi lain, jika kita ingin menulis data
+baru ke server Twitter,
+
+00:03:03.820 --> 00:03:06.090
+kita perlu menggunakan permintaan POST.
+
+00:03:06.090 --> 00:03:09.560
+Endpoint API mengizinkan kita untuk
+menunjuk pada tweet baru.
+
+00:03:09.560 --> 00:03:15.150
+Hanya untuk membuat koneksi ke URL baru
+dan menentukan tipe metode POST.
+
+00:03:15.150 --> 00:03:18.360
+Ingat, jika Anda membuat permintaan POST,
+
+00:03:18.360 --> 00:03:21.580
+Anda perlu mengirim data
+yang baru juga.
+
+00:03:21.580 --> 00:03:25.540
+Dalam hal ini, teks pesan
+baru untuk tweet baru.
+
+00:03:25.540 --> 00:03:29.450
+POST digunakan saat Anda menulis ke
+server, yang berarti Anda membuat,
+
+00:03:29.450 --> 00:03:32.070
+menghapus, atau memperbarui entitas.
+
+00:03:32.070 --> 00:03:35.220
+Ini menjadikan informasi baru tersedia
+bagi klien-klien lain
+
+00:03:35.220 --> 00:03:38.570
+saat mereka melaksanakan permintaan GET
+untuk tweet terbaru.
+
+00:03:38.570 --> 00:03:42.080
+Berikut contoh cepat, yaitu
+API Instagram.
+
+00:03:42.080 --> 00:03:45.730
+Endpoint mengizinkan Anda untuk memperoleh
+informasi tentang pengguna atau
+
+00:03:45.730 --> 00:03:49.990
+dokumen gambar atau video yang dipos
+atau disukai baru-baru ini.
+
+00:03:49.990 --> 00:03:53.050
+Semua permintaan ini membaca informasi
+dari server sehingga
+
+00:03:53.050 --> 00:03:55.130
+mereka merupakan permintaan GET.
+
+00:03:55.130 --> 00:03:59.420
+Di sisi lain, API komentar Instagram
+memungkinkan Anda untuk mengambil atau
+
+00:03:59.420 --> 00:04:01.710
+memodifikasi komentar di POST.
+
+00:04:01.710 --> 00:04:06.100
+Di sini Anda lihat tipe metode permintaannya
+adalah GET, POST, atau DEL.
+
+00:04:06.100 --> 00:04:10.170
+Kadang Anda akan melihat
+DEL sebagai tindakan sendiri,
+
+00:04:10.170 --> 00:04:13.165
+sementara POST adalah untuk
+membuat komentar.
+
+00:04:13.165 --> 00:04:15.560
+DEL adalah untuk menghapus komentar.
+
+00:04:15.560 --> 00:04:19.310
+Kadang semua perilaku ini digabungkan
+dalam permintaan umum POST yang
+
+00:04:19.310 --> 00:04:22.970
+menangani tipe modifikasi apa pun dalam
+data server.
+
+00:04:22.970 --> 00:04:25.400
+Bergantung pada bagaimana
+API dibangun.
+
+00:04:25.400 --> 00:04:29.490
+Untuk daftar semua metode permintaan
+API, lihat tautan di bawah.
+
+00:04:29.490 --> 00:04:31.090
+Tapi untuk tujuan kursus ini,
+
+00:04:31.090 --> 00:04:35.200
+kami hanya ingin Anda merasa nyaman dengan
+pemilahan antara GET dan
+
+00:04:35.200 --> 00:04:40.090
+POST, atau MEMBACA DARI dan MENULIS
+KE server web.
+

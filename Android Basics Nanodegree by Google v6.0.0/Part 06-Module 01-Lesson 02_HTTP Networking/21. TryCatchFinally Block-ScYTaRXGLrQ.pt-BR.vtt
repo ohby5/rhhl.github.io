@@ -1,0 +1,430 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.234
+Quando um erro ocorre
+e uma exceção é lançada,
+
+00:00:03.267 --> 00:00:05.200
+o nosso papel
+como desenvolvedor
+
+00:00:05.234 --> 00:00:08.200
+é lidar com isso
+com um plano reserva.
+
+00:00:08.234 --> 00:00:12.400
+Identificamos a exceção e voltamos
+para um comportamento padrão.
+
+00:00:12.434 --> 00:00:14.400
+Caso contrário,
+o app pode travar.
+
+00:00:14.434 --> 00:00:17.100
+Em outras palavras,
+alguns travamentos
+
+00:00:17.133 --> 00:00:19.934
+são causados por exceções
+que não foram pegas.
+
+00:00:19.968 --> 00:00:25.334
+Para fazer isso, vamos aprender
+sobre blocos Try/Catch/Finally.
+
+00:00:25.367 --> 00:00:28.534
+Try significa tentar executar
+um grupo de declarações
+
+00:00:28.567 --> 00:00:33.067
+que inclui chamar um método
+que pode vir a lançar uma exceção.
+
+00:00:33.100 --> 00:00:36.067
+Quando uma exceção é lançada,
+você a pega.
+
+00:00:36.100 --> 00:00:37.701
+Se ninguém pega a exceção,
+
+00:00:38.634 --> 00:00:40.200
+o app trava.
+
+00:00:40.234 --> 00:00:42.000
+-Tudo bem, Joe?
+-Tudo ótimo.
+
+00:00:42.634 --> 00:00:45.701
+Independente se uma exceção
+ter sido lançada ou não
+
+00:00:45.734 --> 00:00:49.000
+podemos fazer o encerramento
+através do bloco finally.
+
+00:00:49.033 --> 00:00:52.667
+A sequência é: tente fazer algo
+que talvez lance uma exceção,
+
+00:00:52.701 --> 00:00:54.767
+pegue a exceção
+se ela foi lançada
+
+00:00:54.801 --> 00:00:58.501
+e execute o código independente
+da ocorrência da exceção.
+
+00:00:58.534 --> 00:01:01.634
+-Devemos mostrar o código disso.
+-Claro.
+
+00:01:01.667 --> 00:01:02.901
+Vamos lá.
+
+00:01:02.934 --> 00:01:06.801
+No app de tsunami, há diversos
+exemplos de blocos try/catch.
+
+00:01:06.834 --> 00:01:10.067
+Vamos ver um
+no método createURL.
+
+00:01:10.100 --> 00:01:13.200
+O objetivo deste método
+é retornar um objeto URL
+
+00:01:13.234 --> 00:01:15.934
+para a stringURL fornecida.
+
+00:01:15.968 --> 00:01:21.033
+Basta chamar o construtor de URL
+e passar "stringURL".
+
+00:01:21.067 --> 00:01:23.133
+Mas através
+dessa linha vermelha
+
+00:01:23.167 --> 00:01:27.601
+o Android Studio está notificando
+que detectou um erro.
+
+00:01:27.634 --> 00:01:31.167
+Ele aponta que não lidamos
+com uma exceção
+
+00:01:31.200 --> 00:01:34.133
+do tipo MalFormedURLException.
+
+00:01:34.167 --> 00:01:38.100
+O construtor de URL lançou
+a MalFormedURLException
+
+00:01:38.133 --> 00:01:40.701
+e precisamos pegar
+e lidar com o erro,
+
+00:01:40.734 --> 00:01:44.300
+caso contrário nosso app
+não vai compilar e rodar.
+
+00:01:44.334 --> 00:01:46.901
+Para cada construtor
+ou chamada de método,
+
+00:01:46.934 --> 00:01:50.467
+podemos checar as exceções
+na documentação.
+
+00:01:50.501 --> 00:01:53.868
+Por exemplo, se formos
+na documentação sobre URL,
+
+00:01:53.901 --> 00:01:57.367
+vemos que o construtor
+que aceita a string como entrada
+
+00:01:57.400 --> 00:01:59.067
+lança a exceção MalFormedURL
+
+00:01:59.100 --> 00:02:02.767
+se o parâmetro de entrada
+não pode ser convertido para um URL.
+
+00:02:02.801 --> 00:02:05.334
+Ou seja, este URL
+é malformado.
+
+00:02:06.133 --> 00:02:10.501
+Para consertar o código, o atalho
+ALT + Enter faz uma correção rápida.
+
+00:02:10.534 --> 00:02:13.367
+Selecionamos a opção
+"surround with try/catch"
+
+00:02:13.400 --> 00:02:16.367
+e o Android Studio atualiza
+o código automaticamente.
+
+00:02:16.400 --> 00:02:17.767
+Bacana, não é?
+
+00:02:17.801 --> 00:02:22.834
+Temos a palavra-chave try
+seguida por uma chave.
+
+00:02:22.868 --> 00:02:27.000
+Dentro do bloco try, inserimos
+o código para pegar a exceção.
+
+00:02:27.033 --> 00:02:30.701
+Uma boa prática
+é manter este código simples.
+
+00:02:30.734 --> 00:02:33.801
+Você não quer encher
+esta parte de código.
+
+00:02:33.834 --> 00:02:36.067
+Fechamos o bloco
+com outra chave.
+
+00:02:36.100 --> 00:02:40.100
+Depois, usamos a palavra-chave catch
+seguida por parênteses
+
+00:02:40.133 --> 00:02:43.200
+que contêm o tipo de dado
+que queremos pegar,
+
+00:02:43.234 --> 00:02:46.434
+neste caso
+MalFormedURLException,
+
+00:02:46.467 --> 00:02:49.400
+e nome de variável
+para o objeto Exception "e".
+
+00:02:49.434 --> 00:02:52.467
+Depois abrimos um colchete
+para lidar com a exceção.
+
+00:02:52.501 --> 00:02:57.133
+e.printStackTrace vai dar
+um print do erro em detalhe.
+
+00:02:57.167 --> 00:03:01.167
+Outra opção é registrar erros através
+dos métodos de log do Android
+
+00:03:01.200 --> 00:03:04.400
+e incluir nosso próprio tag log
+e mensagem.
+
+00:03:04.434 --> 00:03:08.634
+O método Log.e pode tomar
+uma exceção como seu 3º argumento.
+
+00:03:09.167 --> 00:03:12.033
+Resumindo, se tudo deu certo
+no construtor de URL
+
+00:03:12.067 --> 00:03:13.667
+nenhuma exceção é lançada
+
+00:03:13.701 --> 00:03:16.100
+e nada ocorre
+no bloco try/catch.
+
+00:03:16.133 --> 00:03:18.701
+Mas se o código no bloco
+lançar uma exceção,
+
+00:03:18.734 --> 00:03:20.667
+vamos para o bloco catch
+
+00:03:20.701 --> 00:03:23.267
+e o código lida com a exceção.
+
+00:03:23.300 --> 00:03:25.567
+Depois saímos
+da declaração try/catch
+
+00:03:25.601 --> 00:03:29.067
+e continuamos executando
+o código linha por linha.
+
+00:03:29.601 --> 00:03:33.801
+A variável de URL é inicializada
+antes do bloco try/catch.
+
+00:03:33.834 --> 00:03:36.367
+Temos que considerar
+escopo variável aqui.
+
+00:03:36.400 --> 00:03:39.501
+Se definirmos a variável
+dentro do bloco try/catch,
+
+00:03:39.534 --> 00:03:43.133
+não poderemos acessá-la
+depois do final da declaração.
+
+00:03:43.167 --> 00:03:46.601
+Já que queremos referenciar
+a variável no fim do método,
+
+00:03:46.634 --> 00:03:48.400
+fora da declaração try/catch,
+
+00:03:48.434 --> 00:03:52.234
+temos que iniciá-la
+fora do bloco.
+
+00:03:52.767 --> 00:03:56.701
+Podemos marcá-la como "null"
+representando um valor vazio.
+
+00:03:57.234 --> 00:03:59.667
+Vimos como o Android Studio
+vai notificá-lo
+
+00:03:59.701 --> 00:04:02.767
+se precisa cercar o código
+numa declaração try/catch.
+
+00:04:02.801 --> 00:04:07.000
+Para mais informações,
+veja a documentação do Java.
+
+00:04:07.033 --> 00:04:09.567
+Este próximo exemplo
+é mais complexo.
+
+00:04:09.601 --> 00:04:13.567
+Você pode ter quantas linhas
+de código que quiser no bloco try.
+
+00:04:13.601 --> 00:04:15.734
+Se alguma linha
+lançar uma exceção,
+
+00:04:15.767 --> 00:04:18.701
+paramos de executar
+as declarações no bloco try
+
+00:04:18.734 --> 00:04:20.634
+e pulamos para o bloco catch.
+
+00:04:20.667 --> 00:04:24.467
+Como pode ver, você deve
+ter vários blocos catch
+
+00:04:24.501 --> 00:04:27.567
+para lidar com os erros diferentes
+que podem surgir.
+
+00:04:27.601 --> 00:04:30.434
+O código aqui pega
+uma exceção IndexOutOfBounds
+
+00:04:30.467 --> 00:04:32.934
+e mostra uma mensagem
+de log do sistema.
+
+00:04:32.968 --> 00:04:36.801
+O código também pega uma exceção IO
+e mostra outra mensagem.
+
+00:04:36.834 --> 00:04:39.267
+Dependendo da exceção lançada,
+
+00:04:39.300 --> 00:04:43.000
+vamos cair num dos blocos catch,
+mas não em dois.
+
+00:04:43.033 --> 00:04:48.834
+Não há forma de garantir que vamos
+executar todo o código no bloco try.
+
+00:04:48.868 --> 00:04:51.200
+Às vezes você tem
+arrumação a fazer
+
+00:04:51.234 --> 00:04:53.367
+mesmo se uma exceção
+foi lançada.
+
+00:04:53.400 --> 00:04:56.000
+Então o bloco finally
+sempre será executado
+
+00:04:56.033 --> 00:04:58.834
+independente do lançamento
+de uma exceção.
+
+00:04:59.434 --> 00:05:01.601
+Antes de encerrarmos
+esta conversa,
+
+00:05:01.634 --> 00:05:05.767
+vamos abordar um último método
+que lida com exceções checked.
+
+00:05:05.801 --> 00:05:10.334
+Como vemos aqui, quando alteramos
+a assinatura do método createURL
+
+00:05:10.367 --> 00:05:14.534
+podemos deferir a gerência
+da exceção para mais tarde
+
+00:05:14.567 --> 00:05:17.400
+declarando que o método
+pode lançar uma exceção.
+
+00:05:17.434 --> 00:05:21.067
+Mas o método que chamá-la
+terá que lidar com ela.
+
+00:05:21.100 --> 00:05:24.267
+Isso é comum se a exceção
+foi lançada do método helper
+
+00:05:24.300 --> 00:05:27.634
+e queremos lidar com ela
+num try/catch em outro lugar.
+
+00:05:27.667 --> 00:05:30.467
+Por exemplo, quem chamar
+o método createURL
+
+00:05:30.501 --> 00:05:33.534
+precisará de um bloco try/catch
+em volta desta chamada
+
+00:05:33.567 --> 00:05:36.934
+para pegar a exceção
+MalFormedURL.
+
+00:05:36.968 --> 00:05:40.067
+Veja este exemplo
+no método doInBackground.
+
+00:05:40.100 --> 00:05:41.968
+Para o app de tsunami,
+
+00:05:42.000 --> 00:05:45.267
+se chamar um código do framework
+que lança uma exceção,
+
+00:05:45.300 --> 00:05:48.567
+você deve pegá-la e lidar com ela
+logo de cara
+
+00:05:48.601 --> 00:05:50.801
+em vez de deixá-la
+para depois.
+

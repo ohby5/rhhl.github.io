@@ -1,0 +1,242 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>StringBuilder Part 2</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>HTTP Networking</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Introduction to Networking.html">02. Introduction to Networking</a>
+    </li>
+    <li class="">
+      <a href="03. Introduction to Networking Part 2.html">03. Introduction to Networking Part 2</a>
+    </li>
+    <li class="">
+      <a href="04. Permissions in Android.html">04. Permissions in Android</a>
+    </li>
+    <li class="">
+      <a href="05. Request Internet Permission.html">05. Request Internet Permission</a>
+    </li>
+    <li class="">
+      <a href="06. The HyperText Transfer Protocol (HTTP).html">06. The HyperText Transfer Protocol (HTTP)</a>
+    </li>
+    <li class="">
+      <a href="07. Read Existing Code.html">07. Read Existing Code</a>
+    </li>
+    <li class="">
+      <a href="08. HTTP Request URL.html">08. HTTP Request URL</a>
+    </li>
+    <li class="">
+      <a href="09. URL Object.html">09. URL Object</a>
+    </li>
+    <li class="">
+      <a href="10. HttpURLConnection.html">10. HttpURLConnection</a>
+    </li>
+    <li class="">
+      <a href="11. Android System Architecture.html">11. Android System Architecture</a>
+    </li>
+    <li class="">
+      <a href="12. HTTP Request Method Types.html">12. HTTP Request Method Types</a>
+    </li>
+    <li class="">
+      <a href="13. GET Request in Soonami app.html">13. GET Request in Soonami app</a>
+    </li>
+    <li class="">
+      <a href="14. Making the Connection.html">14. Making the Connection</a>
+    </li>
+    <li class="">
+      <a href="15. HTTP Response Codes.html">15. HTTP Response Codes</a>
+    </li>
+    <li class="">
+      <a href="16. Check HTTP Response Code in Soonami App.html">16. Check HTTP Response Code in Soonami App</a>
+    </li>
+    <li class="">
+      <a href="17. Reading From an Input Stream .html">17. Reading From an Input Stream </a>
+    </li>
+    <li class="">
+      <a href="18. StringBuilder.html">18. StringBuilder</a>
+    </li>
+    <li class="">
+      <a href="19. StringBuilder Part 2.html">19. StringBuilder Part 2</a>
+    </li>
+    <li class="">
+      <a href="20. Exceptions.html">20. Exceptions</a>
+    </li>
+    <li class="">
+      <a href="21. TryCatchFinally block.html">21. Try/Catch/Finally block</a>
+    </li>
+    <li class="">
+      <a href="22. Practice with TryCatch Statements.html">22. Practice with Try/Catch Statements</a>
+    </li>
+    <li class="">
+      <a href="23. Log errors.html">23. Log errors</a>
+    </li>
+    <li class="">
+      <a href="24. Congratulations.html">24. Congratulations</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">19. StringBuilder Part 2</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3><p>StringBuilder (Part 2)</p></h3>
+  <video controls>
+  <source src="19. StringBuilder (Part 2)-8zOwVyi9-WI.mp4" type="video/mp4">
+
+  <track default="true" kind="subtitles" srclang="en" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.en.vtt" label="en">
+  <track default="false" kind="subtitles" srclang="id-ID" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.id-ID.vtt" label="id-ID">
+  <track default="false" kind="subtitles" srclang="zh-CN" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.zh-CN.vtt" label="zh-CN">
+  <track default="false" kind="subtitles" srclang="ar" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.ar.vtt" label="ar">
+  <track default="false" kind="subtitles" srclang="pt-BR" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.pt-BR.vtt" label="pt-BR">
+  <track default="false" kind="subtitles" srclang="id" src="19. StringBuilder (Part 2)-8zOwVyi9-WI.id.vtt" label="id">
+</video>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="20. Exceptions.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('19. StringBuilder Part 2')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

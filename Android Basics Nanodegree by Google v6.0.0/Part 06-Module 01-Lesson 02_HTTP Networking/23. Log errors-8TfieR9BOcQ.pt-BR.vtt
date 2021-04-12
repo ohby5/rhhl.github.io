@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:03.934
+Aqui estão as mudanças que fizemos
+ao método makeHTTPrequest
+
+00:00:03.968 --> 00:00:05.367
+no app de tsunami.
+
+00:00:05.400 --> 00:00:07.868
+Se o código de resposta
+não for 200,
+
+00:00:07.901 --> 00:00:09.834
+então logamos o código
+de resposta de erro
+
+00:00:09.868 --> 00:00:11.934
+usando o método Log.E.
+
+00:00:11.968 --> 00:00:13.400
+Se isso acontecer,
+
+00:00:13.434 --> 00:00:15.868
+veremos que o erro logado
+em logcat
+
+00:00:15.901 --> 00:00:19.701
+com a atividade principal logcat
+seguida pela mensagem
+
+00:00:19.734 --> 00:00:23.901
+"Error response code:",
+então o código numérico de resposta.
+
+00:00:23.934 --> 00:00:27.100
+Também fazemos algo similar
+no método doInBackground,
+
+00:00:27.133 --> 00:00:29.300
+que pode lançar
+uma IOException
+
+00:00:29.334 --> 00:00:31.434
+quando tenta fechar
+o fluxo de entrada.
+
+00:00:31.467 --> 00:00:33.534
+Podemos verificar que essa
+declaração de log
+
+00:00:33.567 --> 00:00:35.300
+será criada intencionalmente
+
+00:00:35.334 --> 00:00:37.467
+produzindo uma requisição ruim
+de URL.
+
+00:00:37.501 --> 00:00:40.067
+Repare nesses caracteres
+que confundem.
+
+00:00:40.601 --> 00:00:41.901
+Quando rodamos o app,
+
+00:00:41.934 --> 00:00:45.200
+receberemos mensagem de erro
+ao tentarmos conectar a URL inválida.
+
+00:00:45.234 --> 00:00:46.367
+Como pode ver aqui,
+
+00:00:46.400 --> 00:00:48.200
+vemos uma mensagem
+de erro em vermelho
+
+00:00:48.234 --> 00:00:50.534
+aparecendo nos logs
+do código de resposta 400.
+
+00:00:50.567 --> 00:00:51.667
+Ótimo.
+
+00:00:51.701 --> 00:00:53.734
+Verificamos que a mensagem de log
+é chamada
+
+00:00:53.767 --> 00:00:55.767
+quando a requisição
+não é bem-sucedida.
+
+00:00:55.801 --> 00:00:59.934
+A segunda tarefa era logar
+o erro ao pegarmos uma IOException.
+
+00:00:59.968 --> 00:01:02.601
+Podemos verificar que esse
+caminho de código é executado
+
+00:01:02.634 --> 00:01:04.868
+ao colocar o nosso telefone
+em modo avião.
+
+00:01:04.901 --> 00:01:06.567
+Isso certamente chamará
+uma exceção
+
+00:01:06.601 --> 00:01:09.267
+ao tentarmos nos conectar
+a internet para termos resultados.
+
+00:01:09.300 --> 00:01:10.501
+Quando rodamos o app,
+
+00:01:10.534 --> 00:01:12.501
+nenhuma informação
+sobre terremotos aparece.
+
+00:01:12.534 --> 00:01:14.100
+Porém, nos logs,
+
+00:01:14.133 --> 00:01:16.067
+vemos que a mensagem
+de erro diz:
+
+00:01:16.100 --> 00:01:18.968
+"Problema ao extrair os resultados
+JSon de terremotos".
+
+00:01:19.000 --> 00:01:21.501
+Então sabemos que uma
+IOException foi pega.
+
+00:01:21.534 --> 00:01:23.300
+Ótimo trabalho em
+logar erros.
+
+00:01:23.334 --> 00:01:26.667
+É uma ótima prática
+para seguir como desenvolvedor.
+
+00:01:26.701 --> 00:01:29.234
+Se quiser referências
+ao estado final do app de tsunami,
+
+00:01:29.267 --> 00:01:30.601
+veja o link abaixo.
+

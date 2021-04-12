@@ -1,0 +1,120 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.000
+Vamos começar com o método
+makeHTTPRequest.
+
+00:00:03.033 --> 00:00:05.634
+No bloco try/catch,
+destacado em azul,
+
+00:00:05.667 --> 00:00:09.033
+tentamos fazer a requisição HTTP
+e ler a resposta.
+
+00:00:09.067 --> 00:00:12.767
+Mas há linhas neste código
+que podem lançar uma exceção IO.
+
+00:00:12.801 --> 00:00:15.868
+Então tem um bloco catch
+para pegar a exceção.
+
+00:00:15.901 --> 00:00:20.467
+Por último, encerramos a conexão
+se a conexão URL for válida.
+
+00:00:20.501 --> 00:00:23.033
+Se olhar a documentação
+do método de usamos,
+
+00:00:23.067 --> 00:00:27.000
+você verá que declaram a exceção IO
+como uma exceção esperada.
+
+00:00:27.033 --> 00:00:29.834
+A 1ª linha no bloco try
+é um exemplo.
+
+00:00:29.868 --> 00:00:33.033
+Chamamos openConnection
+no objeto URL.
+
+00:00:33.067 --> 00:00:36.601
+Este método deve retornar
+uma instância de URLConnection,
+
+00:00:36.634 --> 00:00:40.701
+mas pode lançar uma exceção IO
+se tiver problema com a conexão.
+
+00:00:40.734 --> 00:00:45.000
+O método connect da classe
+URLConnection pode lançar exceções,
+
+00:00:45.033 --> 00:00:48.767
+como SocketTimeout e IO
+
+00:00:49.534 --> 00:00:52.834
+Voltando ao quiz, a exceção IO
+
+00:00:52.868 --> 00:00:55.334
+é pega no método
+makeHTTPRequest.
+
+00:00:55.367 --> 00:00:57.567
+Para o método
+extractFeatureFromJSON,
+
+00:00:57.601 --> 00:01:00.868
+temos um bloco try/catch
+em volta do código de parsing.
+
+00:01:00.901 --> 00:01:03.534
+Se algum passo do parsing
+lança uma exceção,
+
+00:01:03.567 --> 00:01:05.767
+nos a pegamos
+e catalogamos o erro.
+
+00:01:06.701 --> 00:01:09.934
+A documentação mostra
+que vários lugares do nosso código
+
+00:01:09.968 --> 00:01:12.100
+podem lançar uma exceção.
+
+00:01:12.133 --> 00:01:16.267
+Para começar, chamar o construtor
+de JSONObject pode lançar uma.
+
+00:01:16.300 --> 00:01:19.968
+Pode ocorrer se a string de entrada
+não estiver bem formatada.
+
+00:01:20.000 --> 00:01:23.901
+A mesma exceção pode ser lançada
+quando extraímos o JSONArray.
+
+00:01:23.934 --> 00:01:27.467
+Extrair certos campos
+pode lançar uma exceção JSON,
+
+00:01:27.501 --> 00:01:31.000
+especialmente se tentarmos
+extrair um campo inexistente.
+
+00:01:31.033 --> 00:01:33.067
+Vamos voltar para o quiz.
+
+00:01:33.100 --> 00:01:37.334
+A resposta para 2ª pergunta
+é que instâncias de JSONException
+
+00:01:37.367 --> 00:01:40.400
+são pegas no método
+extractFeatureFromJSON.
+

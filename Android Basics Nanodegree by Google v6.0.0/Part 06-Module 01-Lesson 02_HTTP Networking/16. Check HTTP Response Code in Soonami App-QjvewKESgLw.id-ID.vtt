@@ -1,0 +1,169 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.170 --> 00:00:05.910
+Dalam metode makeHttpRequest, kita hanya
+akan melaksanakan HttpRequest jika URL
+
+00:00:05.910 --> 00:00:10.490
+tidak null dan tidak masuk akal untuk
+membuat koneksi ke URL invalid.
+
+00:00:10.490 --> 00:00:14.020
+Maka di awal metode, mari periksa
+jika URL adalah null.
+
+00:00:14.020 --> 00:00:18.349
+Jika memang null, kita keluar dari metode
+dulu dengan mengembalikan jsonResponse
+
+00:00:18.349 --> 00:00:19.865
+yang berisi string kosong.
+
+00:00:19.865 --> 00:00:22.492
+Mari lanjut ke tugas
+inti dalam kuis ini,
+
+00:00:22.492 --> 00:00:25.280
+yaitu memeriksa kode respons.
+
+00:00:25.280 --> 00:00:27.290
+Setelah koneksi
+dibangun,
+
+00:00:27.290 --> 00:00:31.960
+Anda harus memeriksa kode respons dengan
+memanggil urlConnection.getResponseCode().
+
+00:00:31.960 --> 00:00:34.900
+Jika Anda periksa dokumentasi, terlihat
+yang kembali adalah bilangan bulat.
+
+00:00:34.900 --> 00:00:37.542
+Maka di kondisi tes untuk
+statemen if ini,
+
+00:00:37.542 --> 00:00:39.796
+kita periksa apakah kode respons = 200.
+
+00:00:39.796 --> 00:00:43.206
+Jika iya, kita lanjut membaca
+dari inputStream dan
+
+00:00:43.206 --> 00:00:45.100
+mengekstrak jsonResponse.
+
+00:00:45.100 --> 00:00:47.380
+Jika tidak, jika kita mendapatkan
+kode respons kesalahan,
+
+00:00:47.380 --> 00:00:49.170
+dengan kata selain 200, kita diamkan saja.
+
+00:00:49.170 --> 00:00:53.480
+Dan kita pergi ke bawah sini dan
+mengembalikan jsonResponse, yang
+
+00:00:53.480 --> 00:00:58.210
+diinisialisasi sebelumnya ke string kosong,
+yang membawa kita ke titik penting.
+
+00:00:58.210 --> 00:01:02.320
+Jika nilai kembali metode makeHTTPRequest
+dapat berupa string kosong,
+
+00:01:02.320 --> 00:01:05.730
+maka kita perlu memastikan bahwa metode
+yang menjadikan jsonResponse sebagai
+
+00:01:05.730 --> 00:01:08.900
+input menangani kasus
+string kosong itu.
+
+00:01:08.900 --> 00:01:11.880
+Mari lihat pada metode
+extractFeatureFromJson.
+
+00:01:11.880 --> 00:01:15.120
+Sebelum lanjut dari ekstraksi informasi
+dari jsonResponse,
+
+00:01:15.120 --> 00:01:18.470
+kita harus memeriksa apakah parameter
+info berupa string kosong atau
+
+00:01:18.470 --> 00:01:22.880
+null dengan memanggil TextUtils.isEmpty
+dan memasukkan stringnya.
+
+00:01:22.880 --> 00:01:24.083
+Saya akan lanjut dan
+
+00:01:24.083 --> 00:01:27.651
+melompat ke deklarasi fungsi isEmpty
+ini untuk melihat apa yang dilakukannya.
+
+00:01:27.651 --> 00:01:31.180
+Saya melakukannya dengan pintasan
+mengeklik Cmd+klik.
+
+00:01:31.180 --> 00:01:35.846
+Anda perhatikan di sini bahwa metode
+isEmpty di dalam kelas TextUtils
+
+00:01:35.846 --> 00:01:39.973
+memeriksa string kosong atau
+apakah string null.
+
+00:01:39.973 --> 00:01:41.308
+Mari kembali ke kode kita.
+
+00:01:41.308 --> 00:01:44.304
+Jika string ini kosong,
+lalu ekspresi akan true dan
+
+00:01:44.304 --> 00:01:46.700
+kita akan kembali lebih awal dari metode ini.
+
+00:01:46.700 --> 00:01:49.950
+Kita telah mengembalikan null karena tidak
+ada objek kejadian valid dari
+
+00:01:49.950 --> 00:01:51.300
+jsonResponse.
+
+00:01:51.300 --> 00:01:55.710
+Perhatikan bagaimana fitur ekstrak dari metode
+JSON ini mengembalikan tipe data kejadian.
+
+00:01:55.710 --> 00:01:59.319
+Kami akan jelaskan path eksekusi utuh
+Tsunami AsyncTask nanti
+
+00:01:59.319 --> 00:02:00.200
+dalam pelajaran berikutnya.
+
+00:02:00.200 --> 00:02:03.540
+Tapi jika ada null earthquake, maka
+kita tidak perlu perbarui UI.
+
+00:02:03.540 --> 00:02:05.290
+Kuncinya adalah bahwa tidak masalah jika
+mengembalikan null untuk
+
+00:02:05.290 --> 00:02:08.880
+metode, selama case null
+ditangani dengan baik.
+
+00:02:08.880 --> 00:02:11.140
+Sekarang Anda tahu cara memeriksa
+kode status HTTP dan
+
+00:02:11.140 --> 00:02:14.680
+menyesuaikan perilaku aplikasi bergantung
+pada apakah Anda menerima kode respons
+
+00:02:14.680 --> 00:02:16.030
+berhasil atau tidak berhasil.
+

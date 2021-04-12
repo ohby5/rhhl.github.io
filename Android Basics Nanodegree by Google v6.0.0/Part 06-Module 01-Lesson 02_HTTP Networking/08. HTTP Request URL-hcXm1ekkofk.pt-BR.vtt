@@ -1,0 +1,140 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.167
+Estamos vendo o código
+do app de tsunami no Android Studio.
+
+00:00:04.200 --> 00:00:09.133
+Podemos achar o URL de consulta
+no arquivo "MainActivity".
+
+00:00:09.167 --> 00:00:13.801
+Vejam a string constante
+USGS_REQUEST_URL.
+
+00:00:13.834 --> 00:00:17.200
+Sabemos que é uma constante
+pela declaração "static_final",
+
+00:00:17.234 --> 00:00:20.167
+expressando que só há um valor
+e ele é imutável.
+
+00:00:20.200 --> 00:00:23.968
+Outra convenção é usar
+letras maiúsculas para nomeá-las,
+
+00:00:24.000 --> 00:00:25.934
+como vemos aqui.
+
+00:00:25.968 --> 00:00:29.801
+O valor dessa constante
+é esse URL gigantesco do USGS.
+
+00:00:29.834 --> 00:00:32.467
+Se você copiar e colar
+este URL no navegador,
+
+00:00:32.501 --> 00:00:35.767
+ele retornará uma lista
+de terremotos em formato JSON.
+
+00:00:35.801 --> 00:00:39.000
+Como você pode ver,
+a resposta JSON é imensa.
+
+00:00:39.033 --> 00:00:43.133
+Vamos facilitar a leitura
+através de um formatador.
+
+00:00:43.167 --> 00:00:46.300
+O 1º tremor na lista
+aconteceu em Papua Nova Guiné.
+
+00:00:46.334 --> 00:00:48.901
+É o tremor que aparece
+no nosso app de tsunami.
+
+00:00:48.934 --> 00:00:53.133
+Nas próximas notas e quizes,
+vamos abordar o código de fonte Java
+
+00:00:53.167 --> 00:00:56.601
+que nos permite fazer
+a requisição HTTP para este URL.
+
+00:00:56.634 --> 00:01:01.467
+A resposta para a 1ª pergunta
+é a variável USGS_REQUEST_URL.
+
+00:01:01.501 --> 00:01:04.100
+Na 2ª questão,
+você deveria modificar o URL
+
+00:01:04.133 --> 00:01:06.300
+para usar o URL
+que estava nas notas.
+
+00:01:06.334 --> 00:01:08.367
+Se abrir o novo URL
+no navegador,
+
+00:01:08.400 --> 00:01:10.601
+você verá uma nova lista
+de tremores.
+
+00:01:10.634 --> 00:01:13.801
+O 1º terremoto
+é em Kota Ternate, Indonésia.
+
+00:01:13.834 --> 00:01:17.534
+Vamos copiar e colar este URL
+para o nosso app.
+
+00:01:17.567 --> 00:01:22.267
+Quando fazemos isso, mudamos o valor
+da constante USGS_REQUEST_URL.
+
+00:01:22.300 --> 00:01:25.234
+Vamos recompilar
+e rodar o app no aparelho.
+
+00:01:25.901 --> 00:01:28.133
+Esta é a aparência do app.
+
+00:01:28.167 --> 00:01:32.100
+Temos os detalhes do tremor
+em Kota Ternate, Indonésia,
+
+00:01:32.133 --> 00:01:34.634
+cuja magnitude foi 7.1.
+
+00:01:34.667 --> 00:01:38.067
+Ele ocorreu sexta-feira,
+14 de novembro de 2014,
+
+00:01:38.100 --> 00:01:39.767
+neste horário.
+
+00:01:39.801 --> 00:01:44.033
+Veja só. Este tremor
+gerou uma alerta de tsunami.
+
+00:01:44.067 --> 00:01:47.434
+Voltando para o quiz,
+o local do novo tremor no app
+
+00:01:47.467 --> 00:01:50.234
+é Kota Ternate, Indonésia.
+Bom trabalho.
+
+00:01:50.267 --> 00:01:53.300
+Você viu que ao mudar
+o URL de consulta,
+
+00:01:53.334 --> 00:01:56.067
+os dados exibidos na tela
+também mudam.
+

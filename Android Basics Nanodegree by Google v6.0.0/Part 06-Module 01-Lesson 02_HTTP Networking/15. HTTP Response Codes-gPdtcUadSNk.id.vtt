@@ -1,0 +1,223 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.480 --> 00:00:04.190
+Mari lanjut ke tahap ketiga dari
+permintaan jaringan di mana kita bicara tentang
+
+00:00:04.190 --> 00:00:08.320
+cara menerima respons server
+di perangkat dan memahaminya.
+
+00:00:08.320 --> 00:00:11.760
+Sebagai bagian dari respons, Anda menerima
+kode respons yang mendeskripsikan apakah
+
+00:00:11.760 --> 00:00:13.480
+pertukarannya berhasil atau tidak.
+
+00:00:14.480 --> 00:00:17.130
+Kami harap hasilnya sukses.
+
+00:00:17.130 --> 00:00:21.200
+Namun, jika karena suatu alasan server
+bermasalah dengan permintaan,
+
+00:00:21.200 --> 00:00:25.200
+kita mungkin menerima kode status
+error yang menjelaskan apa yang terjadi.
+
+00:00:25.200 --> 00:00:29.930
+Boleh jadi error atas halaman tak ditemukan,
+terkait server aplikasi, atau
+
+00:00:29.930 --> 00:00:32.280
+mungkin akses yang ditolak.
+
+00:00:32.280 --> 00:00:34.920
+Mungkin Anda mengenali beberapa
+kode respons ini saat mengunjungi
+
+00:00:34.920 --> 00:00:36.790
+tautan yang rusak di web.
+
+00:00:36.790 --> 00:00:40.070
+Misalnya,
+jika Anda mencoba melihat proyek GitHub
+
+00:00:40.070 --> 00:00:45.660
+dengan akun yang tidak ada,
+Anda mungkin melihat halaman error 404.
+
+00:00:45.660 --> 00:00:48.950
+Tapi apakah Anda pernah bertanya
+apa artinya 404 atau
+
+00:00:48.950 --> 00:00:53.530
+dari mana asalnya atau pernah Anda menjumpai
+error terkait akses ditolak?
+
+00:00:53.530 --> 00:00:57.679
+Selalu ada kode status yang
+tertempel di respons HTTP.
+
+00:00:57.679 --> 00:01:02.680
+Berikut beberapa status kode HTTP
+yang mungkin lazim Anda jumpai.
+
+00:01:02.680 --> 00:01:06.914
+Status kode 200 berarti semua baik-baik
+saja, permintaan diterima dan
+
+00:01:06.914 --> 00:01:08.186
+semuanya normal.
+
+00:01:08.186 --> 00:01:11.434
+301 bisa berarti halaman pindah secara
+permanen, dan
+
+00:01:11.434 --> 00:01:13.810
+kami ingin mengarahkan-ulang Anda ke tempat lain.
+
+00:01:13.810 --> 00:01:18.040
+404 mungkin pernah Anda lihat, atau
+halaman tidak ditemukan, dan
+
+00:01:18.040 --> 00:01:22.370
+kesalahan 500 adalah kesalahan server internal.
+
+00:01:22.370 --> 00:01:27.360
+Ada daftar komprehensif status kode
+HTTP di Wikipedia yang
+
+00:01:27.360 --> 00:01:28.770
+kami tautkan di bawah.
+
+00:01:28.770 --> 00:01:31.770
+Kode respons yang diawali dengan satu dan
+diikuti oleh
+
+00:01:31.770 --> 00:01:36.720
+angka lain berupa xx,
+merupakan respons informasional.
+
+00:01:36.720 --> 00:01:42.353
+Kode yang dimulai dengan 2
+adalah respons berhasil, seperti 200 OK.
+
+00:01:42.353 --> 00:01:45.720
+Kelas error 300
+adalah error terkait pengarahan ulang.
+
+00:01:45.720 --> 00:01:50.630
+Artinya seperti halaman dipindah secara
+temporer atau permanen, dan
+
+00:01:50.630 --> 00:01:54.700
+kami ingin Anda melakukan hal lain untuk
+melanjutkan permintaan Anda.
+
+00:01:54.700 --> 00:01:56.760
+Error 400 adalah error dari klien.
+
+00:01:56.760 --> 00:01:59.150
+Ini terjadi ketika ada yang
+salah dengan perangkat,
+
+00:01:59.150 --> 00:02:02.750
+peramban, komputer, atau
+peranti lunak Anda.
+
+00:02:02.750 --> 00:02:07.418
+Ini bisa berarti bahwa URL salah atau
+Anda salah menyusun permintaan,
+
+00:02:07.418 --> 00:02:11.750
+dan server tidak tahu cara memproses
+apa yang Anda minta.
+
+00:02:11.750 --> 00:02:16.533
+Error 400 yang paling umum adalah
+Error 404 untuk halaman tidak ditemukan.
+
+00:02:16.533 --> 00:02:18.870
+Error 500 adalah error pada server.
+
+00:02:18.870 --> 00:02:21.480
+Ini bisa berarti bahwa penanganan server
+macet atau
+
+00:02:21.480 --> 00:02:25.540
+server mengalami error
+tak terduga saat menangani permintaan
+
+00:02:25.540 --> 00:02:29.870
+Ingatlah bahwa kesalahan-kesalahan ini terjadi
+sangat cepat dalam beberapa klik saja.
+
+00:02:29.870 --> 00:02:33.049
+Semenjak klien Anda mengirim permintaan,
+koneksi dengan server web
+
+00:02:33.049 --> 00:02:33.816
+dibangun.
+
+00:02:33.816 --> 00:02:39.320
+Server memproses dan mengirim
+balik dalam beberapa detik kepada Anda.
+
+00:02:39.320 --> 00:02:42.209
+Saat kita membangun peranti lunak,
+penting sekali memahami bahwa banyak
+
+00:02:42.209 --> 00:02:43.147
+hal yang terjadi.
+
+00:02:43.147 --> 00:02:45.491
+Dan semua hal itu perlu
+bekerja dengan benar bagi
+
+00:02:45.491 --> 00:02:48.940
+aplikasi Anda agar mampu menarik
+informasi dari web.
+
+00:02:48.940 --> 00:02:52.280
+Memiliki kode respons dapat sangat berguna
+karena kita dapat mengantisipasi dan
+
+00:02:52.280 --> 00:02:55.850
+menulis kode untuk apa yang terjadi
+jika terjadi kegagalan.
+
+00:02:55.850 --> 00:03:00.319
+Kita akan lihat ini langsung dalam aplikasi
+Soonami dalam tugas pemrograman nanti.
+
+00:03:00.319 --> 00:03:04.454
+Sekarang, kita terapkan apa yang telah kita pelajari
+untuk memahami lebih baik berbagai respons
+
+00:03:04.454 --> 00:03:05.690
+dari USGS.
+
+00:03:05.690 --> 00:03:10.696
+Kode respons HTTP apa yang kita peroleh
+jika respons berhasil?
+
+00:03:10.696 --> 00:03:14.260
+Bagaimana jika permintaan
+tidak berhasil?
+
+00:03:14.260 --> 00:03:18.576
+Kami sediakan tautan ke URL valid
+dan tidak valid.
+
+00:03:18.576 --> 00:03:22.134
+Anda bisa memasukkan URL ini ke browser
+web Anda untuk menemukan respons,
+
+00:03:22.134 --> 00:03:25.080
+lalu menulis kode respons
+ke dalam kotak yang disediakan.
+

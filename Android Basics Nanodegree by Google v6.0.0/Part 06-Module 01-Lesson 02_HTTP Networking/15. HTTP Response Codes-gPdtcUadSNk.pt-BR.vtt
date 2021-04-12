@@ -1,0 +1,234 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.334
+Vamos para a 3ª etapa
+de requisição de conexão
+
+00:00:03.367 --> 00:00:06.167
+e falar sobre como vamos
+receber a resposta
+
+00:00:06.200 --> 00:00:08.100
+e traduzi-la para o aparelho.
+
+00:00:08.133 --> 00:00:11.033
+Como parte da resposta,
+recebemos um código
+
+00:00:11.067 --> 00:00:14.267
+que notifica se a conexão
+funcionou ou não.
+
+00:00:14.300 --> 00:00:16.901
+Esperamos
+que ela tenha funcionado.
+
+00:00:16.934 --> 00:00:20.968
+Mas se o servidor teve um problema
+com a requisição,
+
+00:00:21.000 --> 00:00:25.033
+podemos receber um código de erro
+explicando o que houve.
+
+00:00:25.067 --> 00:00:27.234
+Pode ser um erro
+"página não encontrada",
+
+00:00:27.267 --> 00:00:31.868
+um erro entre a app e o servidor
+ou um erro de acesso negado.
+
+00:00:31.901 --> 00:00:36.834
+Você já teve ter visto estes códigos
+quando visitou links quebrados.
+
+00:00:36.868 --> 00:00:41.868
+Se tentar visualizar um projeto
+GitHub de uma conta inexistente,
+
+00:00:41.901 --> 00:00:45.400
+talvez apareça uma página
+com o erro 404.
+
+00:00:45.434 --> 00:00:48.634
+Mas você sabe
+o que 404 significa?
+
+00:00:48.667 --> 00:00:50.467
+Ou de onde o código vem?
+
+00:00:50.501 --> 00:00:53.367
+Você já viu um erro
+de acesso negado?
+
+00:00:53.400 --> 00:00:57.767
+Há sempre um código de estado
+anexado à resposta HTTP.
+
+00:00:57.801 --> 00:01:02.067
+Veja está lista dos códigos
+de estado mais comuns.
+
+00:01:02.601 --> 00:01:05.100
+200 significa que está tudo bem.
+
+00:01:05.133 --> 00:01:07.734
+A requisição foi recebida
+e tudo está normal.
+
+00:01:07.767 --> 00:01:11.534
+301 talvez signifique que a página
+se mudou permanentemente
+
+00:01:11.567 --> 00:01:14.067
+e queremos redirecioná-lo
+para outra página.
+
+00:01:14.100 --> 00:01:17.467
+404, um código comum,
+é "página não encontrada".
+
+00:01:17.501 --> 00:01:21.801
+Erro 500 é um erro interno
+de servidor.
+
+00:01:22.334 --> 00:01:27.200
+Há uma lista completa dos códigos
+de estado HTTP na Wikipedia
+
+00:01:27.234 --> 00:01:28.801
+que está no link abaixo.
+
+00:01:28.834 --> 00:01:32.634
+Códigos de resposta que começam
+com 1 seguido por outros números,
+
+00:01:32.667 --> 00:01:36.400
+como o exemplo 1xx,
+são respostas informativas.
+
+00:01:36.434 --> 00:01:40.400
+Códigos que começam com 2
+são respostas de sucesso,
+
+00:01:40.434 --> 00:01:42.300
+como 200 OK.
+
+00:01:42.334 --> 00:01:45.567
+A classe 300 é sobre erros
+de redirecionamento.
+
+00:01:45.601 --> 00:01:50.534
+Quer dizer que a página se moveu
+temporariamente ou permanentemente
+
+00:01:50.567 --> 00:01:54.501
+e queremos que você faça algo
+para prosseguir.
+
+00:01:54.534 --> 00:01:57.067
+A classe 400
+é sobre erros de cliente.
+
+00:01:57.100 --> 00:02:02.601
+Algo deu errado no seu aparelho,
+navegador, computador ou programa.
+
+00:02:02.634 --> 00:02:08.067
+Pode ser que o URL esteja errado
+ou a requisição está mal formada
+
+00:02:08.100 --> 00:02:11.801
+e servidor não sabe
+como processá-la.
+
+00:02:11.834 --> 00:02:16.033
+O erro 400 mais comum é o 404
+"página não encontrada".
+
+00:02:16.067 --> 00:02:18.701
+A classe 500
+é sobre erros de servidor.
+
+00:02:18.734 --> 00:02:21.300
+Talvez o servidor tenha travado
+
+00:02:21.334 --> 00:02:25.067
+ou tenha ocorrido um erro inesperado
+no processamento.
+
+00:02:25.100 --> 00:02:29.834
+Saiba que tudo isso acontece
+em instantes.
+
+00:02:29.868 --> 00:02:32.133
+Assim que o cliente
+envia a requisição
+
+00:02:32.167 --> 00:02:34.534
+uma conexão com o servidor
+é estabelecida.
+
+00:02:34.567 --> 00:02:38.934
+O servidor processa a requisição
+e envia a resposta em segundos.
+
+00:02:38.968 --> 00:02:41.834
+Quando criamos apps,
+é importante saber
+
+00:02:41.868 --> 00:02:45.467
+que muitas coisas estão acontecendo
+e elas têm que funcionar de acordo
+
+00:02:45.501 --> 00:02:48.801
+para o app poder
+extrair dados da web.
+
+00:02:48.834 --> 00:02:51.067
+Receber um código
+de resposta é útil
+
+00:02:51.100 --> 00:02:53.033
+porque podemos criar uma ação
+preventiva
+
+00:02:53.067 --> 00:02:55.567
+caso um erro ocorra.
+
+00:02:55.601 --> 00:03:00.067
+Vamos analisar isso no app
+de tsunami numa tarefa futura.
+
+00:03:00.100 --> 00:03:02.133
+Vamos aplicar o que aprendemos
+
+00:03:02.167 --> 00:03:05.501
+para entender melhor
+as respostas do USGS.
+
+00:03:05.534 --> 00:03:08.601
+Qual código de resposta
+que recebemos
+
+00:03:08.634 --> 00:03:10.701
+quando a requisição funciona?
+
+00:03:10.734 --> 00:03:14.000
+E se a requisição
+não funciona?
+
+00:03:14.033 --> 00:03:18.334
+Fornecemos links para
+um URL válido e outro inválido.
+
+00:03:18.367 --> 00:03:22.300
+Digite estes URLs no navegador
+para achar as respostas.
+
+00:03:22.334 --> 00:03:25.400
+Escreva os códigos nas caixas.
+

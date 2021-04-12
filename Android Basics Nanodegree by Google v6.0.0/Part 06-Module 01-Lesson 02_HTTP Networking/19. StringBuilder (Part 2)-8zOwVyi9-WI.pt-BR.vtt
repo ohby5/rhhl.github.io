@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.133
+No código do app de tsunami,
+
+00:00:02.167 --> 00:00:06.000
+vamos ver como a StringBuilder
+é usada para compor a resposta JSON.
+
+00:00:06.033 --> 00:00:08.167
+Vamos ver o método
+readFromStream.
+
+00:00:08.200 --> 00:00:10.801
+Neste método,
+temos uma inputStream
+
+00:00:10.834 --> 00:00:14.300
+e queremos retornar uma string
+com o conteúdo da inputStream.
+
+00:00:14.334 --> 00:00:16.100
+Criamos um novo StringBuilder
+
+00:00:16.133 --> 00:00:20.300
+e adicionamos as linhas de texto
+geradas pelo BufferedReader.
+
+00:00:20.334 --> 00:00:22.734
+Primeiro montamos
+o builder e o reader,
+
+00:00:22.767 --> 00:00:25.400
+e depois pedimos a linha de texto
+para o BufferedReader.
+
+00:00:25.434 --> 00:00:28.767
+Se a linha for inválida,
+nos a adicionamos ao buffer
+
+00:00:28.801 --> 00:00:30.000
+e lemos outra linha.
+
+00:00:30.033 --> 00:00:32.367
+O BufferedReader eventualmente
+lerá todas as linhas
+
+00:00:32.400 --> 00:00:35.000
+e usaremos o método toString
+para retornar
+
+00:00:35.033 --> 00:00:36.601
+o produto do StringBuilder.
+
+00:00:36.634 --> 00:00:40.133
+Usar uma StringBuilder
+para criar a string de resposta
+
+00:00:40.167 --> 00:00:43.067
+é mais eficiente do que criar
+um novo objeto de string
+
+00:00:43.100 --> 00:00:46.300
+toda vez que precisamos
+adicionar algo ao texto de resposta.
+

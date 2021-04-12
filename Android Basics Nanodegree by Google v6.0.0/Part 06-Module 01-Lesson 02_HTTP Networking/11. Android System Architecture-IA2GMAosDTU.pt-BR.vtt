@@ -1,0 +1,301 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.167 --> 00:00:03.233
+Vamos falar da arquitetura
+do sistema Android.
+
+00:00:03.267 --> 00:00:06.000
+O framework do Android
+oferece várias classes
+
+00:00:06.033 --> 00:00:07.767
+que ajudam na interação.
+
+00:00:07.800 --> 00:00:11.533
+Por exemplo, a ActivityLifeCyle
+ou permissões.
+
+00:00:11.567 --> 00:00:15.200
+Ou formas de acessar uma função
+como a câmera
+
+00:00:15.233 --> 00:00:17.100
+ou conexões wi-fi
+e bluetooth.
+
+00:00:17.133 --> 00:00:19.400
+Até acessar sensores
+como o giroscópio.
+
+00:00:19.433 --> 00:00:22.133
+O caminho para acessar hardware
+pelo framework
+
+00:00:22.167 --> 00:00:24.667
+passa por camadas
+de abstrações.
+
+00:00:24.700 --> 00:00:26.067
+O que isso quer dizer?
+
+00:00:26.100 --> 00:00:29.133
+Camadas superiores solucionam
+parte de um problema
+
+00:00:29.167 --> 00:00:33.100
+e as inferiores solucionam
+problemas menores.
+
+00:00:33.133 --> 00:00:37.733
+Quando as camadas se combinam
+a função é executada.
+
+00:00:37.767 --> 00:00:40.933
+Não vamos detalhar
+o que cada camada faz,
+
+00:00:40.967 --> 00:00:43.933
+mas vamos ver as camadas
+que você precisa conhecer.
+
+00:00:43.967 --> 00:00:45.500
+Vamos dar uma olhada.
+
+00:00:45.533 --> 00:00:49.633
+Imagine que um aparelho Android
+funciona através de camadas.
+
+00:00:49.667 --> 00:00:53.167
+Simplificamos a estrutura
+para focar no essencial.
+
+00:00:53.200 --> 00:00:56.567
+Clique no link nas notas
+para ver um diagrama completo
+
+00:00:56.600 --> 00:00:59.233
+no site do projeto Open Source
+do Android.
+
+00:00:59.667 --> 00:01:02.933
+A camada do topo
+é a camada "application"
+
+00:01:02.967 --> 00:01:06.633
+que traz os apps criados
+por desenvolvedores como eu e você.
+
+00:01:06.667 --> 00:01:10.767
+Dentro do app, utilizamos
+as classes do framework do Android
+
+00:01:10.800 --> 00:01:13.033
+como TextView e Activity.
+
+00:01:13.067 --> 00:01:15.000
+Quando usamos as classes,
+
+00:01:15.033 --> 00:01:17.133
+podemos fazer coisas complexas
+e poderosas
+
+00:01:17.167 --> 00:01:19.133
+com poucas linhas de código.
+
+00:01:19.167 --> 00:01:23.433
+Neste caso, vamos apenas
+exibir texto e abrir uma tela nova,
+
+00:01:23.467 --> 00:01:25.700
+mas podemos fazer muito mais.
+
+00:01:25.733 --> 00:01:27.400
+Como isso é possível?
+
+00:01:27.933 --> 00:01:32.900
+As classes do framework
+amenizam a complexidade
+
+00:01:32.933 --> 00:01:35.300
+usando as camadas
+mais baixas do Android
+
+00:01:35.333 --> 00:01:37.800
+para fazer o trabalho pesado.
+
+00:01:37.833 --> 00:01:41.600
+que é a tarefa dura e complexa
+de controlar o hardware
+
+00:01:41.633 --> 00:01:44.033
+para fazer com que tudo
+funcione.
+
+00:01:44.067 --> 00:01:47.067
+É assim que funciona
+as camadas de abstrações.
+
+00:01:47.100 --> 00:01:50.033
+O sistema operacional
+central, ou OS,
+
+00:01:50.067 --> 00:01:52.133
+tem o seu próprio
+código sofisticado
+
+00:01:52.167 --> 00:01:58.800
+que regula como os apps e o sistema
+usam os recursos limitados do hardware.
+
+00:01:58.833 --> 00:02:01.100
+Aplicativos que rodam
+simultaneamente
+
+00:02:01.133 --> 00:02:03.233
+compartilham
+os recursos do aparelho
+
+00:02:03.267 --> 00:02:07.533
+preservando funções
+e capacidade de resposta do sistema.
+
+00:02:07.767 --> 00:02:11.533
+A camada mais baixa
+é o hardware físico do aparelho,
+
+00:02:11.567 --> 00:02:16.467
+como os componentes dos rádios sem fio
+que emitem sinais de celular,
+
+00:02:16.500 --> 00:02:17.900
+wi-fi e bluetooth.
+
+00:02:17.933 --> 00:02:20.200
+Ou os chips
+que controlam a tela.
+
+00:02:20.233 --> 00:02:24.667
+Tem ainda o CPU, a memória,
+o GPU e muito mais.
+
+00:02:24.700 --> 00:02:28.700
+Estes são componentes eletrônicos
+físicos do seu aparelho.
+
+00:02:28.733 --> 00:02:32.833
+Se você tirar algo,
+saiba que a beleza destas camadas
+
+00:02:32.867 --> 00:02:35.600
+é que elas existem
+para simplificar ou extrair
+
+00:02:35.633 --> 00:02:38.433
+as complexidades do OS
+para o desenvolvedor.
+
+00:02:38.467 --> 00:02:41.133
+Elas permitem que você crie
+grandes apps
+
+00:02:41.167 --> 00:02:44.200
+que tiram o maior proveito possível
+do hardware.
+
+00:02:44.233 --> 00:02:47.667
+Pense no framework
+como uma cola
+
+00:02:47.700 --> 00:02:50.033
+entre o nosso app
+e o aparelho.
+
+00:02:50.067 --> 00:02:52.767
+As classes do framework
+nos deixam controlar
+
+00:02:52.800 --> 00:02:56.033
+como o aparelho age
+quando usam o nosso app.
+
+00:02:56.067 --> 00:02:58.700
+O framework é composto
+dessas classes Java
+
+00:02:58.733 --> 00:03:01.700
+que podemos ver no site
+de desenvolvedores Android,
+
+00:03:01.733 --> 00:03:05.800
+além de outras classes escritas
+nas linguagens de programação C.
+
+00:03:06.167 --> 00:03:11.267
+Vamos ver exemplos de como já usamos
+essas camadas sem perceber.
+
+00:03:11.300 --> 00:03:12.733
+No código do nosso app,
+
+00:03:12.767 --> 00:03:14.967
+chamamos APIs do framework.
+
+00:03:15.000 --> 00:03:18.267
+Na criação do app de miwok,
+
+00:03:18.300 --> 00:03:20.700
+usamos as classes de mídia
+do framework
+
+00:03:20.733 --> 00:03:24.167
+para tocar áudio
+dos alto-falantes do aparelho.
+
+00:03:24.200 --> 00:03:29.033
+Nesta lição, estamos usando
+a classe HttpURLConnection
+
+00:03:29.067 --> 00:03:32.633
+para fazer requisições de conexão
+que usam os rádios no aparelho
+
+00:03:32.667 --> 00:03:35.500
+para enviar pacotes de dados
+pela internet.
+
+00:03:35.533 --> 00:03:38.800
+Não temos que lidar diretamente
+com o sistema Android.
+
+00:03:38.833 --> 00:03:41.400
+As classes de framework
+são classes de Java
+
+00:03:41.433 --> 00:03:45.167
+que ignoram os detalhes
+das ações no hardware.
+
+00:03:45.200 --> 00:03:49.033
+Então o Media Player
+e o HttpURLConnection
+
+00:03:49.067 --> 00:03:50.633
+são dois exemplos de classes
+
+00:03:50.667 --> 00:03:53.700
+que usam as funções físicas
+do nosso aparelho Android
+
+00:03:53.733 --> 00:03:56.367
+através de interações
+com classes do framework.
+
+00:03:56.400 --> 00:03:58.267
+Você verá outros exemplos
+
+00:03:58.300 --> 00:04:00.533
+enquanto aprende mais
+sobre o Android.
+

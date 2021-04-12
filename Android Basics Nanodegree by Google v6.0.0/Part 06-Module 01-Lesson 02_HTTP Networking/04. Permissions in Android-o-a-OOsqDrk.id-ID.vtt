@@ -1,0 +1,328 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.380 --> 00:00:03.750
+Salah satu prasyarat wajib untuk mengatur
+permintaan jaringan adalah aplikasi
+
+00:00:03.750 --> 00:00:07.380
+Anda harus membuat koneksi jaringan
+untuk mengirim permintaan tersebut.
+
+00:00:07.380 --> 00:00:09.200
+Jika Anda membuat aplikasi di Android,
+
+00:00:09.200 --> 00:00:12.500
+secara aturan standar, aplikasi ini tidak
+punya akses ke internet.
+
+00:00:12.500 --> 00:00:15.050
+Biar saya tunjukkan maksud saya dengan
+memakai aplikasi Soonami yang kita buat
+
+00:00:15.050 --> 00:00:16.360
+untuk pelajaran ini.
+
+00:00:16.360 --> 00:00:19.090
+Aplikasi ini diharapkan melaksanakan
+permintaan HTTP,
+
+00:00:19.090 --> 00:00:21.290
+untuk memperoleh informasi gempa bumi.
+
+00:00:21.290 --> 00:00:23.280
+Tapi aplikasi ini justru macet.
+
+00:00:23.280 --> 00:00:26.470
+Jika kita periksa log Android,
+kita lihat ada exception keamanan
+
+00:00:26.470 --> 00:00:28.400
+menyatakan bahwa ada izin internet
+yang tidak ada.
+
+00:00:28.400 --> 00:00:31.990
+Aplikasi Soonami tidak meminta izin
+untuk mengakses internet, maka
+
+00:00:31.990 --> 00:00:35.210
+sistem operasi Android menolak upaya
+tsunami untuk melakukan permintaan
+
+00:00:35.210 --> 00:00:36.310
+HTTP.
+
+00:00:36.310 --> 00:00:38.360
+Akibatnya, aplikasi macet.
+
+00:00:38.360 --> 00:00:41.340
+Aplikasi Anda perlu meminta izin
+untuk melaksanakan tindakan terlindung di
+
+00:00:41.340 --> 00:00:42.780
+perangkat pengguna.
+
+00:00:42.780 --> 00:00:46.070
+Tindakan terlindung termasuk membuat
+koneksi jaringan,
+
+00:00:46.070 --> 00:00:52.200
+mengakses kamera, mengatur pesan SMS,
+menelfon nomor,
+
+00:00:52.200 --> 00:00:56.430
+merekam audio dari mikrofon, atau bahkan
+menentukan lokasi pengguna.
+
+00:00:56.430 --> 00:01:00.350
+Ada juga izin untuk diberi tahu tentang
+perubahan tertentu dalam status perangkat,
+
+00:01:00.350 --> 00:01:02.770
+misalnya status konektivitas jaringan.
+
+00:01:02.770 --> 00:01:05.670
+Untuk daftar lengkap formasi yang bisa diminta
+aplikasi Anda,
+
+00:01:05.670 --> 00:01:07.570
+silakan periksa dokumentasi
+intro.
+
+00:01:07.570 --> 00:01:10.510
+Anda mungkin bertanya, kenapa saya butuh
+izin jika saya bisa mengirim
+
+00:01:10.510 --> 00:01:13.150
+perintah ke aplikasi kamera untuk
+memotret atau
+
+00:01:13.150 --> 00:01:16.910
+mengirim perintah untuk mengirim pesan SMS,
+atau menghubungi nomor telepon?
+
+00:01:16.910 --> 00:01:20.040
+Kekuasaan atau perintah adalah bahwa Anda
+bisa meminta tindakan berbeda untuk melakukan
+
+00:01:20.040 --> 00:01:24.050
+suatu tindakan mewakili Anda tanpa perlu
+mendeklarasikan izin sendiri.
+
+00:01:24.050 --> 00:01:27.590
+Namun, jika Anda membangun aplikasi
+kamera kustom, misalnya, maka Anda harus
+
+00:01:27.590 --> 00:01:30.109
+meminta izin kamera untuk memperoleh
+akses langsung kepada peranti keras.
+
+00:01:31.210 --> 00:01:33.730
+Untuk tiap izin yang ingin
+Anda minta, Anda perlu
+
+00:01:33.730 --> 00:01:38.240
+menambahkan elemen izin penggunaan pada
+dokumen manifest Android dalam aplikasi.
+
+00:01:38.240 --> 00:01:41.780
+Misalnya, jika Anda membuat aplikasi
+terkait pesan dan ingin pengguna bisa mengirim
+
+00:01:41.780 --> 00:01:45.335
+pesan SMS langsung dari dalam aplikasi Anda,
+maka Anda mendeklarasikan aplikasi perlu
+
+00:01:45.335 --> 00:01:48.655
+string izin kirim SMS
+dalam manifest Android.
+
+00:01:48.655 --> 00:01:51.195
+Harus ada baris izin pengguna dalam
+manifest Anda untuk
+
+00:01:51.195 --> 00:01:53.245
+tiap izin yang diminta
+oleh aplikasi Anda.
+
+00:01:53.245 --> 00:01:56.132
+Izin aplikasi memiliki tingkat
+perlindungan yang berbeda-beda.
+
+00:01:56.132 --> 00:02:01.482
+Dua level paling penting yang harus Anda
+ketahui adalah normal dan dangerous.
+
+00:02:01.482 --> 00:02:04.772
+Izin normal punya sedikit risiko pada
+privasi pengguna atau
+
+00:02:04.772 --> 00:02:06.582
+operasi aplikasi lain.
+
+00:02:06.582 --> 00:02:09.211
+Maka sistem akan menyetujui
+izin secara otomatis.
+
+00:02:09.211 --> 00:02:13.032
+Izin dangerous memperoleh akses ke
+identitas personal pengguna atau
+
+00:02:13.032 --> 00:02:14.257
+informasi pribadi tapi
+
+00:02:14.257 --> 00:02:18.072
+juga mencakup fungsi yang dapat
+memengaruhi operasi aplikasi lain.
+
+00:02:18.072 --> 00:02:22.180
+Ini termasuk menggunakan kamera, mengakses
+kontak atau log panggilan telepon, atau
+
+00:02:22.180 --> 00:02:24.150
+merekam audio dengan mikrofon.
+
+00:02:24.150 --> 00:02:26.540
+Izin-izin ini harus diminta pada
+saat run time dan
+
+00:02:26.540 --> 00:02:29.680
+pengguna harus secara eksplisit memberi
+izin melalui dialog sistem.
+
+00:02:29.680 --> 00:02:31.800
+Dialognya tampak seperti ini.
+
+00:02:31.800 --> 00:02:35.040
+Aplikasi ini meminta izin untuk mengakses
+kontak pengguna.
+
+00:02:35.040 --> 00:02:38.540
+Setelah pengguna memberikan izin, dialog
+tak akan muncul lagi.
+
+00:02:38.540 --> 00:02:41.390
+Jika tahu pengguna menolak izin,
+aplikasi masih akan terus
+
+00:02:41.390 --> 00:02:43.690
+beroperasi secara normal
+tapi tanpa fitur tersebut.
+
+00:02:43.690 --> 00:02:47.280
+Perhatikan bahwa model izin run time hanya
+ada di rilis Android 6.0
+
+00:02:47.280 --> 00:02:51.310
+Marshmallow dan berlaku untuk perangkat
+apa pun yang lebih baru dari itu.
+
+00:02:51.310 --> 00:02:54.646
+Contohnya, dalam aplikasi Instagram,
+pengguna akan diminta banyak sekali akses
+
+00:02:54.646 --> 00:02:58.261
+ke banyak dokumen foto dan media di perangkat
+secara langsung saat mencoba mengakses
+
+00:02:58.261 --> 00:03:00.290
+foto dari galeri.
+
+00:03:00.290 --> 00:03:03.750
+Tapi, dalam perangkat Android 5.1 atau
+yang lebih lama,
+
+00:03:03.750 --> 00:03:07.610
+pengguna diminta untuk menerima semua
+formasi saat menginstal aplikasi.
+
+00:03:07.610 --> 00:03:11.100
+Jika Anda memakai perangkat Android lama,
+Anda mungkin pernah melihat layar ini.
+
+00:03:11.100 --> 00:03:13.150
+Model lama ini bersifat ya atau tidak.
+
+00:03:13.150 --> 00:03:15.685
+Pengguna harus menerima semua
+izin yang diminta atau
+
+00:03:15.685 --> 00:03:17.365
+aplikasi tak bisa dipasang.
+
+00:03:17.365 --> 00:03:18.655
+Dengan izin runtime,
+
+00:03:18.655 --> 00:03:22.145
+pengguna dapat memilih untuk izin
+yang akan diberikan pada aplikasi.
+
+00:03:22.145 --> 00:03:24.595
+Pengembang aplikasi harus mampu bereaksi
+saat izin dicabut.
+
+00:03:25.785 --> 00:03:29.225
+Ada banyak artikel tentang praktik terbaik
+jika terkait dengan izin.
+
+00:03:29.225 --> 00:03:32.950
+Secara umum, Anda harus mencoba
+menentukan sesedikit mungkin izin
+
+00:03:32.950 --> 00:03:34.720
+sambil tetap memenuhi kebutuhan aplikasi.
+
+00:03:34.720 --> 00:03:37.320
+Contohnya,
+anggap saja menggunakan perintah.
+
+00:03:37.320 --> 00:03:38.480
+Lalu, aplikasi yang meminta banyak izin
+
+00:03:38.480 --> 00:03:42.070
+yang tak diperlukan mungkin tampak
+mencurigakan bagi pengguna dan
+
+00:03:42.070 --> 00:03:44.510
+akibatnya tak akan
+sering dipasang.
+
+00:03:44.510 --> 00:03:46.160
+Jadi jangan mengancam pengguna.
+
+00:03:46.160 --> 00:03:49.600
+Kita tidak akan memakai izin dangerous
+dalam kursus ini, tapi jika memang Anda pakai,
+
+00:03:49.600 --> 00:03:53.400
+pastikan untuk menjelaskan secara memadai
+kenapa Anda butuh izin dari pengguna.
+
+00:03:53.400 --> 00:03:56.130
+Dalam kuis ini,
+jawablah pertanyaan berikut.
+
+00:03:56.130 --> 00:03:58.110
+Perlukah Anda mendeklarasikan izin
+untuk membaca dan
+
+00:03:58.110 --> 00:04:00.080
+menulis kejadian di kalender pengguna?
+
+00:04:00.080 --> 00:04:03.030
+Bagaimana jika memutar audio atau
+video di perangkat?
+
+00:04:03.030 --> 00:04:06.280
+Atau bagaimana jika mengakses lokasi
+pengguna saat ini, atau
+
+00:04:06.280 --> 00:04:09.760
+terakhir, bagaimana jika menampilkan
+notifikasi di perangkat?
+
+00:04:09.760 --> 00:04:12.260
+Anda bisa memeriksa tautan dokumentasi
+di bawah kuis untuk membantu Anda.
+

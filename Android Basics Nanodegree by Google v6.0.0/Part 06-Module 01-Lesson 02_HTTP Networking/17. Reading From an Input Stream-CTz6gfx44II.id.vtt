@@ -1,0 +1,329 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.340 --> 00:00:02.520
+Tiap kepingan data,
+baik teks maupun gambar,
+
+00:00:02.520 --> 00:00:05.810
+tersimpan sebagai kumpulan berukuran byte.
+
+00:00:05.810 --> 00:00:09.362
+Saat aplikasi menerima data,
+data itu masuk sebagai aliran input,
+
+00:00:09.362 --> 00:00:11.850
+yaitu aliran bytes ini.
+
+00:00:11.850 --> 00:00:16.149
+Aliran input merupakan abstraksi, artinya
+menyimpan perincian tentang apakah
+
+00:00:16.149 --> 00:00:20.890
+byte ini merepresentasikan dokumen atau situs web
+atau bahkan konten media atau tidak.
+
+00:00:20.890 --> 00:00:23.150
+Ini hanyalah aliran informasi.
+
+00:00:23.150 --> 00:00:26.360
+Lalu saat kita menerima aliran ini,
+kita perlu merakit ulang byte itu
+
+00:00:26.360 --> 00:00:29.090
+menjadi sesuatu yang bermakna
+yang dapat digunakan aplikasi kita.
+
+00:00:29.090 --> 00:00:33.070
+Untuk data berikutnya, byte tersebut perlu
+dikonversi kembali menjadi karakter,
+
+00:00:33.070 --> 00:00:35.260
+maka kelas Buffered Reader memungkinkan
+kita melakukannya.
+
+00:00:36.260 --> 00:00:38.580
+Lalu kita membangun string respons JSON,
+
+00:00:38.580 --> 00:00:40.809
+di mana string ini pada dasarnya
+adalah aliran karakter.
+
+00:00:42.080 --> 00:00:45.070
+Mari kita lihat bagaimana proses konversi
+ini dilakukan dalam kode
+
+00:00:45.070 --> 00:00:47.330
+di metode makeHttpRequest.
+
+00:00:47.330 --> 00:00:53.370
+Perhatikan bahwa kita mulai dengan dua variabel
+urlConnection dari tipe HttpURLConnection.
+
+00:00:53.370 --> 00:00:56.010
+dan inputStream dari tipe InputStream.
+
+00:00:56.010 --> 00:00:58.180
+Alih-alih
+mengembalikan hasil final,
+
+00:00:58.180 --> 00:01:02.302
+seperti string, kadang suatu fungsi
+akan mengembalikan inputStream.
+
+00:01:02.302 --> 00:01:06.430
+InputStream memungkinkan Anda memperoleh
+informasi satu kumpulan data di satu waktu.
+
+00:01:06.430 --> 00:01:09.700
+Ini berguna jika aliran itu akan
+mengembalikan banyak sekali data, atau
+
+00:01:09.700 --> 00:01:13.434
+jika aliran itu merepresentasikan sumber
+data yang akan mengirim data dalam waktu lama.
+
+00:01:13.434 --> 00:01:16.822
+Kelas HttpURLConnection, yang kita
+pakai untuk mengambil data JSON,
+
+00:01:16.822 --> 00:01:19.479
+mengembalikan respons
+server melalui inputStream.
+
+00:01:21.000 --> 00:01:24.111
+Lalu, kita memiliki metode helper
+untuk membaca data yang datang dari
+
+00:01:24.111 --> 00:01:25.120
+inputStream.
+
+00:01:25.120 --> 00:01:27.400
+Kita lompat ke metode readFromStream.
+
+00:01:27.400 --> 00:01:31.350
+Ingat bahwa inputStream tidak benar-benar
+mengembalikan karakter yang kita baca
+
+00:01:31.350 --> 00:01:32.890
+seperti angka atau huruf.
+
+00:01:32.890 --> 00:01:35.820
+Justru mengembalikan data biner mentah,
+berupa satu
+
+00:01:35.820 --> 00:01:39.860
+dan nol, tanpa instruksi spesifik tentang
+apa yang direpresentasikan oleh data itu.
+
+00:01:39.860 --> 00:01:44.930
+Data itu bisa berupa gambar, suara, atau
+data geoJSON yang harus kita parse.
+
+00:01:44.930 --> 00:01:48.020
+Dalam hal ini, kita tahu bahwa data
+yang kembali dari inputStream kita
+
+00:01:48.020 --> 00:01:51.340
+hanya berupa teks, dan kita dapat
+menggunakan inputStreamReader untuk
+
+00:01:51.340 --> 00:01:56.120
+menangani proses penerjemahan itu dari data
+mentah menjadi karakter yang dapat dibaca.
+
+00:01:56.120 --> 00:01:59.590
+InputStreamReader hanya mengizinkan Anda
+membaca satu karakter tunggal
+
+00:01:59.590 --> 00:02:03.190
+pada satu waktu, yang bisa berimplikasi buruk
+buruk pada kinerja, bergantung pada
+
+00:02:03.190 --> 00:02:06.760
+bagaimana inputStream dasar itu
+menyediakan data.
+
+00:02:06.760 --> 00:02:09.520
+Misalnya, memperoleh data dari
+hard drive komputer Anda
+
+00:02:09.520 --> 00:02:12.560
+cukup cepat jika Anda membaca kumpulan
+data yang sangat banyak dalam satu waktu.
+
+00:02:12.560 --> 00:02:15.495
+Tapi, jika Anda mencoba membaca data dari
+hard drive per karakter satu-satu,
+
+00:02:15.495 --> 00:02:17.420
+akan butuh waktu sangat lama.
+
+00:02:17.420 --> 00:02:21.988
+Ini bisa dihindari dengan membungkus
+inputStreamReader dalam BufferedReader.
+
+00:02:21.988 --> 00:02:25.040
+BufferedReader akan menerima permintaan
+Anda untuk satu karakter dan
+
+00:02:25.040 --> 00:02:28.460
+justru akan membaca dan menyimpan
+kumpulan data yang lebih besar di sekitarnya.
+
+00:02:28.460 --> 00:02:30.230
+Saat Anda meminta
+karakter lain,
+
+00:02:30.230 --> 00:02:33.530
+BufferedReader lalu akan mampu
+memenuhi permintaan Anda dari data
+
+00:02:33.530 --> 00:02:37.730
+yang lebih dulu dibacanya daripada kembali
+ke inputStreamReader.
+
+00:02:37.730 --> 00:02:41.380
+Seperti yang terlihat, untuk memulai
+membaca data dari inputStream kita,
+
+00:02:41.380 --> 00:02:45.040
+kita memberikannya sebagai parameter untuk
+indeks InputStreamReader
+
+00:02:45.040 --> 00:02:46.210
+melalui constructor.
+
+00:02:46.210 --> 00:02:50.257
+Kita juga memasok satu set karakter, atau
+disingkat Charset, kepada constructor.
+
+00:02:50.257 --> 00:02:54.680
+Charset memerinci cara menerjemahkan
+data mentah inputStream menjadi karakter
+
+00:02:54.680 --> 00:02:56.405
+yang dapat dibaca per byte.
+
+00:02:56.405 --> 00:03:00.693
+Artinya, Charset tahu cara mendekode tiap
+byte menjadi karakter spesifik yang dapat
+
+00:03:00.693 --> 00:03:03.347
+dibaca manusia seperti A kapital atau
+tanda sama dengan.
+
+00:03:03.347 --> 00:03:05.900
+UTF-8 adalah pengodean karakter
+Unicode yang digunakan untuk
+
+00:03:05.900 --> 00:03:09.100
+hampir setiap kepingan teks
+yang Anda temukan di web.
+
+00:03:09.100 --> 00:03:12.200
+Hal terakhir yang kita lakukan adalah membungkus
+InputStreamReader dalam BufferedReader,
+
+00:03:12.200 --> 00:03:14.810
+dan kita siap membaca baris.
+
+00:03:14.810 --> 00:03:19.709
+Oke, saya tahu, bungkus dan layer ini dapat
+sangat membingungkan dan berputar-putar.
+
+00:03:19.709 --> 00:03:22.599
+InputStream,
+dibungkus inputStreamReader,
+
+00:03:22.599 --> 00:03:24.300
+dibungkus dalam BufferedReader?
+
+00:03:24.300 --> 00:03:25.020
+Tentu ada cara
+
+00:03:25.020 --> 00:03:28.850
+yang lebih mudah untuk membaca data
+yang kembali dariHttpURLConnection.
+
+00:03:28.850 --> 00:03:29.890
+Memang,
+
+00:03:29.890 --> 00:03:33.770
+membaca seluruh metode teks respons dengan
+dengan cermat akan cukup mudah.
+
+00:03:33.770 --> 00:03:37.120
+Tapi masalahnya metode itu
+tidak akan bisa digunakan lagi.
+
+00:03:37.120 --> 00:03:39.550
+Jadi daripada membangun solusi
+dari pangkal ke ujung lebih dulu,
+
+00:03:39.550 --> 00:03:43.020
+framework pemrograman dan library
+yang kuat biasanya memberi Anda bagian
+
+00:03:43.020 --> 00:03:46.510
+individual yang dapat dikombinasikan
+bersama dengan banyak cara.
+
+00:03:46.510 --> 00:03:50.610
+Dalam hal ini, misalnya, rantai aliran
+dalam reader cukup panjang,
+
+00:03:50.610 --> 00:03:53.470
+tapi nanti Anda akan menjumpai situasi
+di mana Anda perlu merakit
+
+00:03:53.470 --> 00:03:55.960
+kepingan-kepingan ini menjadi suatu
+konfigurasi yang berbeda.
+
+00:03:55.960 --> 00:03:58.810
+Kelenturan yang Anda dapatkan
+sangat seimbang dengan kerepotan
+
+00:03:58.810 --> 00:04:00.640
+yang harus Anda tanggung sekarang.
+
+00:04:00.640 --> 00:04:03.470
+Untuk menguji pemahaman Anda tentang
+mengapa kelas-kelas ini dibutuhkan, saya
+
+00:04:03.470 --> 00:04:08.040
+ingin Anda mendeskripsikan dengan kata-kata
+sendiri, apa tujuan dari InputStream.
+
+00:04:08.040 --> 00:04:09.766
+Dan, apa tujuan
+dari BufferedReader?
+
+00:04:09.766 --> 00:04:12.993
+Silakan memeriksa resources
+yang ditautkan di bawah kuis.
+
+00:04:12.993 --> 00:04:15.778
+Setelah kita mengetahui bahwa permintaan
+HTTP berhasil,
+
+00:04:15.778 --> 00:04:19.730
+kita dapat membaca hasil dari inputStream
+menggunakan BufferedReader, dan
+
+00:04:19.730 --> 00:04:23.640
+kita bisa mengonversinya menjadi string
+dan melakukan parse dari JSON.
+
+00:04:23.640 --> 00:04:27.460
+Jadi, apa tujuan dari InputStream?
+
+00:04:27.460 --> 00:04:30.218
+Demikian juga,
+apa tujuan dari BufferedReader?
+
+00:04:30.218 --> 00:04:32.259
+[BLANK_AUDIO]
+

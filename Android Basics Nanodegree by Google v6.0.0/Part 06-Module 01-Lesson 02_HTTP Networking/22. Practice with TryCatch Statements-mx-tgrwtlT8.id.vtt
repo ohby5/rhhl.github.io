@@ -1,0 +1,126 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.140 --> 00:00:03.400
+Mari mulai dengan melihat
+metode makeHTTPRequest.
+
+00:00:03.400 --> 00:00:05.730
+Dalam blok try yang ditunjukkan
+dengan highlight biru ini,
+
+00:00:05.730 --> 00:00:09.480
+kita mencoba membuat permintaan HTTP
+dan membaca respons.
+
+00:00:09.480 --> 00:00:13.042
+Tapi, ada beberapa baris dalam kode ini
+yang dapat memasang exception IO.
+
+00:00:13.042 --> 00:00:16.100
+Jadi ada blok penangkap untuk
+menangkap exception.
+
+00:00:16.100 --> 00:00:16.910
+Dan terakhir,
+
+00:00:16.910 --> 00:00:20.850
+kita memutus koneksi jika koneksi
+URL bukan null.
+
+00:00:20.850 --> 00:00:23.490
+Jika Anda lihat dokumentasi untuk
+metode yang kita gunakan,
+
+00:00:23.490 --> 00:00:27.320
+Anda akan lihat IOException dideklarasikan
+sebagai exception yang diperkirakan.
+
+00:00:27.320 --> 00:00:30.059
+Contohnya, ambil baris pertama dalam
+blok try ini,
+
+00:00:30.059 --> 00:00:33.420
+di mana kita memanggil openConnection
+di objek URL.
+
+00:00:33.420 --> 00:00:36.595
+Metode ini seharushnya mengembalikan
+contoh koneksi URL, tapi
+
+00:00:36.595 --> 00:00:39.944
+mungkin bisa memicu exception IO
+jika ada masalah dalam membuka
+
+00:00:39.944 --> 00:00:40.827
+koneksi.
+
+00:00:40.827 --> 00:00:44.585
+Metode koneksi kelas URL connection
+bisa juga memicu beberapa
+
+00:00:44.585 --> 00:00:48.491
+exception, seperti
+SocketTimeoutException dan IOException.
+
+00:00:49.980 --> 00:00:51.498
+Kembali ke kuis,
+
+00:00:51.498 --> 00:00:55.800
+kita dapatkan IOException dalam
+metode makeHTTPRequest.
+
+00:00:55.800 --> 00:00:57.766
+Untuk metode extractFeatureFromJSON()
+
+00:00:57.766 --> 00:01:01.220
+ada blok tangkapan try lain yang
+mengelilingi kode parsing JSON.
+
+00:01:01.220 --> 00:01:04.830
+Jika ada langkah parsing yang
+memicu JSONException, kita tangkap
+
+00:01:04.830 --> 00:01:05.379
+dan catat kesalahannya.
+
+00:01:07.150 --> 00:01:10.290
+Jika kita periksa dokumentasi, kita lihat
+ada banyak tempat dalam kode kita
+
+00:01:10.290 --> 00:01:12.360
+yang berpotensi memicu
+exception.
+
+00:01:12.360 --> 00:01:13.003
+Untuk pemula,
+
+00:01:13.003 --> 00:01:16.460
+hanya memanggil constructor JSONObject
+saja dapat memicu JSONException.
+
+00:01:16.460 --> 00:01:20.485
+Ini bisa terjadi jika string input adalah
+JSON yang tidak diformat dengan benar.
+
+00:01:20.485 --> 00:01:24.050
+Atau exception ini juga dapat muncul
+saat kita coba mengekstrak JSONArray.
+
+00:01:24.050 --> 00:01:27.810
+Mengekstrak bidang yang spesifik juga
+bisa memicu JSONException,
+
+00:01:27.810 --> 00:01:31.280
+terutama jika kita coba mengekstrak
+bidang yang namanya tidak ada.
+
+00:01:31.280 --> 00:01:35.380
+Kembali ke kuis, maka jawaban
+untuk pertanyaan kedua adalah bahwa
+
+00:01:35.380 --> 00:01:39.697
+contoh JSONException ditangkap dalam
+metode extractFeatureFromJSON().
+
