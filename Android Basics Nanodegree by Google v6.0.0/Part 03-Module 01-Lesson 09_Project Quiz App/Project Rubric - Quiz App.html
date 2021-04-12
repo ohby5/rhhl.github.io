@@ -1,0 +1,358 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Project: Quiz App</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Project Overview.html">01. Project Overview</a>
+    </li>
+    <li class="">
+      <a href="02. Build Your Project.html">02. Build Your Project</a>
+    </li>
+    <li class="">
+      <a href="03. Prepare for Submission.html">03. Prepare for Submission</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Quiz App.html">Project Description - Quiz App</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Quiz App.html">Project Rubric - Quiz App</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">Quiz App</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            
+      <div>
+        <h2><p>Layout</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Overall Layout</p>
+        </td>
+        <td>
+          <p>App contains 4 - 10 questions, including at least one check box, one radio button, and one text entry.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Question types</p>
+        </td>
+        <td>
+          <p>Questions are in a variety of formats such as free text response, checkboxes, and radio buttons.</p>
+<p>Checkboxes are only used for questions with multiple right answers. Radio buttons are only used for questions with a single right answer.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Submit button</p>
+        </td>
+        <td>
+          <p>App includes a button for the user to submit their answers and receive a score. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Layout best practices</p>
+        </td>
+        <td>
+          <p>The code adheres to all of the following best practices:</p>
+<ul>
+<li>Text sizes are defined in sp</li>
+<li>Lengths are defined in dp</li>
+<li>Padding and margin is used appropriately, such that the views are not crammed up against each other.</li>
+</ul>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>View variety</p>
+        </td>
+        <td>
+          <p>The app includes at least four of the following Views: TextView, ImageView, Button, Checkbox, EditText, LinearLayout, RelativeLayout, ScrollView, RadioButton, RadioGroup.</p>
+<p>If applicable, the app uses nested ViewGroups to reduce the complexity of the layout.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Rotation</p>
+        </td>
+        <td>
+          <p>The app gracefully handles displaying all the content on screen when rotated. Either by updating the layout, adding a scrollable feature or some other mechanism that adheres to Android development guidelines. </p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Functionality</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Runtime Errors</p>
+        </td>
+        <td>
+          <p>The code runs without errors.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Question Answers</p>
+        </td>
+        <td>
+          <p>Each question has a correct answer.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Radio Button Implementation</p>
+        </td>
+        <td>
+          <p>Any question which uses radio buttons allows only one to be checked at once. </p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Control Statements</p>
+        </td>
+        <td>
+          <p>The app contains at least one if/else statement</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Grading Button Function</p>
+        </td>
+        <td>
+          <p>The grading button displays a toast which accurately displays the results of the quiz.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Grading Logic</p>
+        </td>
+        <td>
+          <p>The grading logic checks each answer correctly. The app accurately calculates the number of correct answers and does not include incorrect answers in the count. </p>
+<p>Note: When applicable, in the grading logic remember to check that the correct answers are checked AND the incorrect answers are not checked.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+      <div>
+        <h2><p>Code Readability</p></h2>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="thead-dark">
+              <th>Criteria</th>
+              <th>Meet Specification</th>
+            </tr>
+          </thead>
+          
+    <tbody>
+      
+      <tr scope="row">
+        <td>
+          <p>Naming Conventions</p>
+        </td>
+        <td>
+          <p>All variables, methods, and resource IDs are descriptively named such that another developer reading the code can easily understand their function.</p>
+        </td>
+      </tr>
+    
+      <tr scope="row">
+        <td>
+          <p>Format</p>
+        </td>
+        <td>
+          <p>The code is properly formatted i.e. there are no unnecessary blank lines; there are no unused variables or methods; there is no commented out code.<br />
+The code also has proper indentation when defining variables and methods.</p>
+        </td>
+      </tr>
+    
+    </tbody>
+  
+        </table>
+
+      </div>
+    
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('Quiz App')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

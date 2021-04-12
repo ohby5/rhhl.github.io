@@ -1,0 +1,246 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add ImageView</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Practice Set: Object-Oriented Programming</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to the Practice Set.html">01. Introduction to the Practice Set</a>
+    </li>
+    <li class="">
+      <a href="02. Layout.html">02. Layout</a>
+    </li>
+    <li class="">
+      <a href="03. Create TextView.html">03. Create TextView</a>
+    </li>
+    <li class="">
+      <a href="04. Add ImageView.html">04. Add ImageView</a>
+    </li>
+    <li class="">
+      <a href="05. Make It Pretty.html">05. Make It Pretty</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Add ImageView</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="add-imageview">Add ImageView</h1>
+<p>Let's jazz it up by adding an image of you! </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/screen-shot-2017-09-18-at-4.15.14-pm.png" alt="Can you guess which one of our Instructors this is? 
+(Hint: She can whip up one tasty cup of Java)" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Can you guess which one of our Instructors this is? <br />
+(Hint: She can whip up one tasty cup of Java)</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>Here are some resources to find images on the web with creative commons/free media licenses. Remember, be a good citizen and give credit where credit is due :) </p>
+<ul>
+<li><a href="https://www.pexels.com/" rel="noopener noreferrer" target="_blank">Pexels</a></li>
+<li><a href="https://unsplash.com/" rel="noopener noreferrer" target="_blank">Unsplash</a></li>
+<li><a href="https://search.creativecommons.org/" rel="noopener noreferrer" target="_blank">Creative Commons</a></li>
+<li><a href="http://mashable.com/2013/10/03/video-assets-creative-commons/#ROSbOEWDgiq3" rel="noopener noreferrer" target="_blank">Mashable list</a></li>
+<li><a href="https://www.sitepoint.com/5-sites-fantastic-creative-commons-design-resources/" rel="noopener noreferrer" target="_blank">Sitepoint list</a></li>
+<li><a href="https://www.sitepoint.com/30-creative-commons-sources/" rel="noopener noreferrer" target="_blank">Sitepoint list 2</a></li>
+</ul>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <div>
+    <h4>Task Description:</h4>
+    <p>In MainActivity.java…</p>
+  </div>
+
+  <form>
+    <fieldset>
+      <legend>Task List:</legend>
+
+      <div>
+        <input type="checkbox" id="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--0">
+        <label for="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--0"><p>Create an ImageView</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--1">
+        <label for="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--1"><p>Use findViewById and set the image using "setImageResource"</p></label>
+      </div>
+      <div>
+        <input type="checkbox" id="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--2">
+        <label for="1c39cfc4-9be8-468b-9c2b-62890d6b7f45--2"><p>Remember to copy whatever picture you want to use into the correct folder (Hint: it's under app/res)</p></label>
+      </div>
+    </fieldset>
+  </form>
+
+  <div>
+    <h4>Task Feedback:</h4>
+
+
+    <p><em>High five!</em> You've got the basics all set up.</p>
+<p><a href="https://github.com/udacity/UserProfile/tree/1.03-Solution-AddImageView" rel="noopener noreferrer" target="_blank">Here's our example solution code</a></p>
+  </div>
+</div>
+
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Make It Pretty.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Add ImageView')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
