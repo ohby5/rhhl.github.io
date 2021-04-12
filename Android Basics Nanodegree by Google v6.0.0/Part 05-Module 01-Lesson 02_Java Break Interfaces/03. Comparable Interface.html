@@ -1,0 +1,238 @@
+<!-- udacity2.0 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comparable Interface</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Java Break: Interfaces</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Intro.html">01. Intro</a>
+    </li>
+    <li class="">
+      <a href="02. Interfaces.html">02. Interfaces</a>
+    </li>
+    <li class="">
+      <a href="03. Comparable Interface.html">03. Comparable Interface</a>
+    </li>
+    <li class="">
+      <a href="04. Final methods.html">04. Final methods</a>
+    </li>
+    <li class="">
+      <a href="05. Final fields.html">05. Final fields</a>
+    </li>
+    <li class="">
+      <a href="06. Static.html">06. Static</a>
+    </li>
+    <li class="">
+      <a href="07. Quiz Try Static field.html">07. Quiz: Try Static field</a>
+    </li>
+    <li class="">
+      <a href="08. Static Methods.html">08. Static Methods</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">03. Comparable Interface</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="the-comparable-interface">The Comparable Interface</h1>
+<p>A very popular interface in Java is the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html" rel="noopener noreferrer" target="_blank">Comparable Interface</a>.</p>
+<p>This interface includes a single method definition called <code>compareTo</code> which takes an object as an input parameter of the same type and compares both objects ("this" object against the input argument object).</p>
+<p>The main purpose of this interface is to give any class a chance to describe how to compare 2 objects of that class against each other. This will be really handy when we get to sorting or searching for such objects of that type.</p>
+<p>For example:</p>
+<p>Assume you have a class that represents a book:</p>
+<p>```Java <br />
+public class Book{<br />
+   int numberOfPages;<br />
+   String title;<br />
+   String author;<br />
+}</p>
+<pre><code>And you are asked to implement the Comparable Interface so that you can sort the books according to the following criteria:
+
+1. If a book has more pages than the other, then the book with the more pages goes first.
+2. If both books have the same number of pages, then sort by the title alphabetically.
+3. If both books have the same number of pages and the same title, then sort by the author alphabetically.
+
+Before we start coding, let’s go through how the compareTo method should work:
+
+The compareTo method takes a single input parameter (let's refer to it as the "specified object") and since this method belongs to an object itself (let's refer to it as "this object"), then the method simply compares the "specified" object against "this" object.
+
+According to the documentation, there are 3 possible outcomes when comparing any 2 objects:
+
+1. "This" object is considered _less than_ the "specified" object
+2. "This" object is considered _equal to_ the "specified" object
+3. "This" object is considered _greater than_ the "specified" object
+
+
+Respectively, for each of those cases, `compareTo` method should return:
+
+1. A negative integer (any number less than 0)
+2. zero (0)
+3. A positive integer (any number greater than 0)
+
+Ok, now that we've got everything well defined, let's start coding:</code></pre>
+<p>Java<br />
+public class Book implements Comparable<Book>{<br />
+   public int compareTo(Book specifiedBook) {<br />
+      // First check if they have different page counts<br />
+      if(this.numberOfPages != specifiedBook.numberOfPages){<br />
+         // this will return a negative value if this < specified but will return a positive value if this > specified<br />
+         return this.numberOfPages - specifiedBook.numberOfPages;<br />
+      }<br />
+      // If page counts are identical then check if the titles are different<br />
+      if(!this.title.equals(specifiedBook.title){<br />
+         return this.title.compareTo(specifiedBook.title);<br />
+      }<br />
+      // If page titles are also identical then return the comparison of the authors<br />
+      return this.author.compareTo(specifiedBook.author);<br />
+    }<br />
+}<br />
+```</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="04. Final methods.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://us-udacity.github.io/" target="_blank">【udacity2.0 】If you need more courses, please add wechat：udacity6</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('03. Comparable Interface')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>

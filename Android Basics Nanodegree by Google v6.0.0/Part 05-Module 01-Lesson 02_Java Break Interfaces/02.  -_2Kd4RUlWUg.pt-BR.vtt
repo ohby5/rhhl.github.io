@@ -1,0 +1,288 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.767
+Uma interface é como
+uma fachada ou um esboço
+
+00:00:03.801 --> 00:00:06.167
+de uma classe imaginária.
+
+00:00:06.200 --> 00:00:10.467
+Seu único propósito é ser herdada
+por uma outra classe.
+
+00:00:10.501 --> 00:00:14.801
+Ela define o que deve ser feito,
+mas não como fazê-lo.
+
+00:00:14.834 --> 00:00:17.901
+Ou seja, a interface
+listaria os métodos
+
+00:00:17.934 --> 00:00:22.467
+que devem ser incluídos na classe,
+mas nenhum código de implementação.
+
+00:00:22.501 --> 00:00:24.367
+A implementação
+desses métodos
+
+00:00:24.400 --> 00:00:28.200
+é responsabilidade das classes
+implementando essa interface.
+
+00:00:28.234 --> 00:00:30.934
+Quando implementamos
+essa interface numa classe,
+
+00:00:30.968 --> 00:00:34.167
+podemos começar a instanciar
+objetos como sempre.
+
+00:00:34.200 --> 00:00:39.701
+O Java introduziu interfaces devido
+ao problema de heranças múltiplas.
+
+00:00:39.734 --> 00:00:43.501
+Uma única classe pode ser estendida
+por múltiplas classes.
+
+00:00:43.534 --> 00:00:48.400
+Mas uma classe filha não pode
+estender mais que uma classe mãe.
+
+00:00:48.434 --> 00:00:51.434
+Entretanto, interfaces
+não têm essa restrição.
+
+00:00:51.467 --> 00:00:55.567
+Ou seja, uma única classe pode
+implementar interfaces múltiplas,
+
+00:00:55.601 --> 00:00:57.868
+permitindo um projeto
+mais flexível,
+
+00:00:57.901 --> 00:01:01.300
+sem o problema da ambiguidade
+das múltiplas heranças.
+
+00:01:01.334 --> 00:01:02.934
+Vamos ver um exemplo.
+
+00:01:02.968 --> 00:01:07.167
+Imagine-se responsável por implementar
+uma classe chamada Caravan.
+
+00:01:07.200 --> 00:01:10.434
+Sabemos que é
+metade veículo e metade casa.
+
+00:01:10.467 --> 00:01:13.834
+Mas se temos uma classe para veículo
+e uma para casa,
+
+00:01:13.868 --> 00:01:17.667
+sabemos que não podemos
+estender as duas ao mesmo tempo.
+
+00:01:17.701 --> 00:01:21.000
+Uma boa solução
+seria introduzir interfaces.
+
+00:01:21.033 --> 00:01:24.501
+Uma interface boa seria
+a interface móvel, por exemplo.
+
+00:01:24.534 --> 00:01:28.567
+Definiria os métodos que qualquer
+classe que se move deve incluir,
+
+00:01:28.601 --> 00:01:30.634
+como a classe Veículo,
+por exemplo.
+
+00:01:30.667 --> 00:01:34.067
+Outra interface boa
+seria chamada de Habitável.
+
+00:01:34.100 --> 00:01:37.167
+Também definiria os métodos
+a serem incluídos
+
+00:01:37.200 --> 00:01:39.434
+para qualquer
+classe habitável.
+
+00:01:39.467 --> 00:01:41.567
+Definidas essas
+duas interfaces,
+
+00:01:41.601 --> 00:01:45.734
+podemos implementá-las
+na classe Caravana ao mesmo tempo.
+
+00:01:45.767 --> 00:01:47.901
+Vejamos o código Java
+para isso.
+
+00:01:47.934 --> 00:01:51.734
+Criar uma interface no Java
+é parecido com criar uma classe.
+
+00:01:51.767 --> 00:01:54.868
+Apenas troque a palavra "classe"
+por "interface".
+
+00:01:54.901 --> 00:01:58.934
+Dentro da interface,
+listamos os protótipos dos métodos,
+
+00:01:58.968 --> 00:02:01.434
+mas sem nenhum
+código de implementação.
+
+00:02:01.467 --> 00:02:05.467
+Isso é responsabilidade da classe
+que implementará a interface.
+
+00:02:05.501 --> 00:02:07.634
+O mesmo para
+a interface Habitable
+
+00:02:07.667 --> 00:02:11.133
+que, no nosso caso,
+só inclui o método canFit.
+
+00:02:11.167 --> 00:02:13.167
+Tendo criado
+as duas interfaces,
+
+00:02:13.200 --> 00:02:16.501
+podemos começar a implementar
+nossa classe Caravan,
+
+00:02:16.534 --> 00:02:20.534
+que implementa as interfaces
+Habitable e Movable.
+
+00:02:20.567 --> 00:02:23.367
+Notem que usei
+a palavra "implements" aqui.
+
+00:02:23.400 --> 00:02:27.100
+Comparado à palavra "extends"
+quando herdando de classes,
+
+00:02:27.133 --> 00:02:30.601
+essa é a palavra a usar
+ao herdar de interfaces.
+
+00:02:30.634 --> 00:02:32.701
+Implementadas
+essas interfaces,
+
+00:02:32.734 --> 00:02:37.601
+devemos implementar o código para cada
+método incluído nas duas interfaces,
+
+00:02:37.634 --> 00:02:40.968
+como o método move,
+incluído na interface Movable,
+
+00:02:41.000 --> 00:02:44.601
+e o método canFit,
+incluído na interface Habitable.
+
+00:02:44.634 --> 00:02:47.200
+Se algum método
+em qualquer da interfaces
+
+00:02:47.234 --> 00:02:49.767
+não for implementado
+na classe Caravana,
+
+00:02:49.801 --> 00:02:52.200
+isso vai causar
+um erro de compilação.
+
+00:02:52.234 --> 00:02:56.767
+Notem que herdar interfaces
+não nos salvou de reescrever um código
+
+00:02:56.801 --> 00:02:59.501
+como fizemos antes,
+com classes estendidas.
+
+00:02:59.534 --> 00:03:03.467
+É porque interfaces não são
+para nos ajudar a reduzir código,
+
+00:03:03.501 --> 00:03:05.734
+mas para impor
+um bom design.
+
+00:03:05.767 --> 00:03:09.434
+Criar interfaces força
+qualquer classe que as implementará
+
+00:03:09.467 --> 00:03:12.567
+a ter que implementar
+um certo número de métodos.
+
+00:03:12.601 --> 00:03:16.868
+Mais tarde, com qualquer classe
+que implementa uma certa interface,
+
+00:03:16.901 --> 00:03:20.901
+sem olhar o código da classe,
+terão certeza que serão incluídos
+
+00:03:20.934 --> 00:03:23.934
+todos os métodos
+que estão nessa interface.
+
+00:03:23.968 --> 00:03:28.767
+Resumindo, sabemos que interfaces
+definem o que uma classe deve fazer,
+
+00:03:28.801 --> 00:03:30.501
+mas não como fazer.
+
+00:03:30.534 --> 00:03:34.467
+Vimos que criar uma interface
+é parecido com criar uma classe,
+
+00:03:34.501 --> 00:03:37.133
+e sabemos que o único
+propósito da interface
+
+00:03:37.167 --> 00:03:39.868
+é ser implementada
+por uma ou mais classes.
+
+00:03:39.901 --> 00:03:42.801
+Você não pode criar
+uma instância ou um objeto
+
+00:03:42.834 --> 00:03:44.567
+de uma interface,
+diretamente.
+
+00:03:44.601 --> 00:03:46.634
+Deve implementá-la
+através de uma classe,
+
+00:03:46.667 --> 00:03:48.834
+e pode criar objetos
+a partir daí.
+
+00:03:48.868 --> 00:03:51.767
+E não se trata de reduzir
+repetição de código,
+
+00:03:51.801 --> 00:03:53.601
+mas de impor um bom projeto.
+

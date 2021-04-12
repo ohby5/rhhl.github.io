@@ -1,0 +1,229 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:05.929
+An interface is like a facade or an outline of some imaginary class.
+
+00:00:05.929 --> 00:00:10.964
+Its sole purpose is to be inherited by some other class.
+
+00:00:10.964 --> 00:00:13.185
+It only defines what needs to be done,
+
+00:00:13.185 --> 00:00:15.280
+but not how to do it.
+
+00:00:15.279 --> 00:00:18.570
+In other words, the interface would list the methods that need to be
+
+00:00:18.570 --> 00:00:22.454
+included in the class but no implementation code whatsoever.
+
+00:00:22.454 --> 00:00:24.479
+The implementation of these methods are
+
+00:00:24.480 --> 00:00:28.594
+the responsibility of the classes implementing that interface.
+
+00:00:28.594 --> 00:00:30.794
+Once you implement that interface in a class,
+
+00:00:30.795 --> 00:00:34.320
+you can then start instantiating objects as usual.
+
+00:00:34.320 --> 00:00:39.615
+The reason Java introduced interfaces is because of the multiple inheritance problem.
+
+00:00:39.615 --> 00:00:43.435
+A single class can be extended by multiple classes.
+
+00:00:43.435 --> 00:00:48.070
+But a child class is not allowed to extend more than one parent class.
+
+00:00:48.070 --> 00:00:51.405
+Interfaces, however, don't have that restriction,
+
+00:00:51.405 --> 00:00:56.100
+which means that a single class can implement multiple interfaces allowing
+
+00:00:56.100 --> 00:01:01.230
+for a more flexible design but without the ambiguity problem of the multiple inheritance.
+
+00:01:01.229 --> 00:01:03.209
+Let's have a look at an example.
+
+00:01:03.210 --> 00:01:07.159
+Imagine you're responsible of implementing a class called Caravan.
+
+00:01:07.159 --> 00:01:10.319
+We know that a caravan is half vehicle, half house.
+
+00:01:10.319 --> 00:01:13.604
+But if you had a class for a vehicle and a class for a house,
+
+00:01:13.605 --> 00:01:17.659
+we know that you're not allowed to extend both classes at the same time.
+
+00:01:17.659 --> 00:01:20.859
+A good solution would be to introduce interfaces.
+
+00:01:20.859 --> 00:01:24.599
+A good interface would be the movable interface, for example,
+
+00:01:24.599 --> 00:01:28.509
+which would define the methods that any class that moves should include,
+
+00:01:28.510 --> 00:01:30.540
+like the vehicle class, for example.
+
+00:01:30.540 --> 00:01:34.065
+Another good interface would be called the habitable interface,
+
+00:01:34.064 --> 00:01:39.344
+which would also define all the methods that are to be included for any habitable class.
+
+00:01:39.344 --> 00:01:41.295
+Once we define those two interfaces,
+
+00:01:41.295 --> 00:01:45.859
+we could then implement both of them in the Caravan class at the same time.
+
+00:01:45.859 --> 00:01:47.984
+Let's have a look at the Java code for that.
+
+00:01:47.984 --> 00:01:51.825
+Creating an interface in Java is very similar to creating a class.
+
+00:01:51.825 --> 00:01:54.915
+Simply swap the keyword class with interface.
+
+00:01:54.915 --> 00:01:57.000
+Inside the interface, as you can see,
+
+00:01:57.000 --> 00:01:59.745
+we have listed the method signatures but without
+
+00:01:59.745 --> 00:02:01.710
+any implementation code because that's
+
+00:02:01.709 --> 00:02:05.399
+the responsibility of the class that will be implementing that interface.
+
+00:02:05.400 --> 00:02:07.500
+The same for the habitable interface,
+
+00:02:07.500 --> 00:02:11.219
+which in our case here only includes the canFit method.
+
+00:02:11.219 --> 00:02:13.259
+Once we create both of those interfaces,
+
+00:02:13.259 --> 00:02:16.169
+we can then start implementing our Caravan class,
+
+00:02:16.169 --> 00:02:20.699
+which implements both the habitable and movable interfaces.
+
+00:02:20.699 --> 00:02:22.589
+Notice that I've used the keyword, implements,
+
+00:02:22.590 --> 00:02:25.050
+here compared to the keyword, extends.
+
+00:02:25.050 --> 00:02:27.055
+When inheriting from classes,
+
+00:02:27.055 --> 00:02:30.580
+implements is the keyword to use when inheriting from interfaces.
+
+00:02:30.580 --> 00:02:32.415
+Once we implement those interfaces,
+
+00:02:32.414 --> 00:02:34.394
+we have to implement the code for
+
+00:02:34.395 --> 00:02:37.980
+every single method included in both those interfaces like
+
+00:02:37.979 --> 00:02:40.780
+the move method which was included in the moveable interface
+
+00:02:40.780 --> 00:02:44.974
+and the canFit method which was included in the habitable interface.
+
+00:02:44.974 --> 00:02:46.560
+If there's any method in any of
+
+00:02:46.560 --> 00:02:49.800
+those interfaces that was not implemented in the Caravan class,
+
+00:02:49.800 --> 00:02:52.050
+that will show a compilation error.
+
+00:02:52.050 --> 00:02:55.530
+Notice that inheriting interfaces hasn't really saved us
+
+00:02:55.530 --> 00:02:59.370
+from rewriting any code like we've done before with extended classes.
+
+00:02:59.370 --> 00:03:02.159
+That's because interfaces isn't there to help
+
+00:03:02.159 --> 00:03:05.794
+us reduce code as much as enforce a good design.
+
+00:03:05.794 --> 00:03:08.684
+Creating interfaces forces any class that will
+
+00:03:08.685 --> 00:03:12.530
+implement it to have to implement a certain number of methods.
+
+00:03:12.530 --> 00:03:13.789
+This means that later on,
+
+00:03:13.789 --> 00:03:15.870
+if you have a look at any class that implements
+
+00:03:15.870 --> 00:03:18.944
+a certain interface without looking at the code of that class,
+
+00:03:18.944 --> 00:03:23.965
+you can guarantee that it will include all these methods that are in that interface.
+
+00:03:23.965 --> 00:03:25.819
+So, to summarize everything so far,
+
+00:03:25.819 --> 00:03:28.919
+we know that interfaces define what a class should do,
+
+00:03:28.919 --> 00:03:30.559
+but not how to do it.
+
+00:03:30.560 --> 00:03:34.409
+We've seen that creating an interface is very similar to creating a class,
+
+00:03:34.409 --> 00:03:36.944
+and we know that the interface's sole purpose
+
+00:03:36.944 --> 00:03:40.134
+is to be implemented by one or more classes.
+
+00:03:40.134 --> 00:03:41.849
+That is, you're not allowed to create
+
+00:03:41.849 --> 00:03:44.489
+an instance or an object from an interface directly.
+
+00:03:44.490 --> 00:03:46.420
+You have to first implement it through a class,
+
+00:03:46.419 --> 00:03:48.500
+and then you can create objects from that.
+
+00:03:48.500 --> 00:03:51.259
+And we've seen that it's not about reducing code or partition.
+
+00:03:51.259 --> 00:03:54.000
+It's more about enforcing a good design.
+
