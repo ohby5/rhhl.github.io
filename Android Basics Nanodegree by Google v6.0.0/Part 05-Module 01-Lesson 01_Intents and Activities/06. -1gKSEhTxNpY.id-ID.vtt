@@ -1,0 +1,180 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.430 --> 00:00:04.375
+Mari kita buka file MainActivity.java
+dan meninjau apa isinya.
+
+00:00:04.375 --> 00:00:07.170
+Di puncak tiap file
+Java ada nama package.
+
+00:00:07.170 --> 00:00:08.820
+Ditulis kata package,
+
+00:00:08.820 --> 00:00:11.638
+yang merupakan kata kunci Java
+disusul dengan nama package kita sendiri.
+
+00:00:11.638 --> 00:00:16.830
+Di sini ditulis com.example.android.miwok.
+
+00:00:16.830 --> 00:00:20.280
+Ini adalah nama package yang kita tentukan
+dalam wizard proyek baru
+
+00:00:20.280 --> 00:00:23.770
+untuk mengidentifikasi secara unik
+aplikasi kita di perangkat Android.
+
+00:00:23.770 --> 00:00:26.870
+Tiap aplikasi di Google Play Store
+punya nama package berbeda.
+
+00:00:26.870 --> 00:00:30.770
+Semua kode untuk aplikasi kita akan
+dikelompokkan di bawah nama package ini.
+
+00:00:30.770 --> 00:00:33.880
+Jadi kuis A adalah nama package.
+
+00:00:33.880 --> 00:00:38.100
+Berikutnya ada statemen impor dan
+statemen ini mengimpor kelas-kelas Java
+
+00:00:38.100 --> 00:00:41.020
+yang tidak kita tulis, tapi
+masih bisa digunakan dalam kode kita.
+
+00:00:41.020 --> 00:00:44.535
+File-file ini milik package kode lain
+dalam framework Android yang
+
+00:00:44.535 --> 00:00:45.878
+ditulis oleh tim Android.
+
+00:00:45.878 --> 00:00:50.633
+Misalnya, kita mengimpor
+kelas AppCompatActivity
+
+00:00:50.633 --> 00:00:54.857
+dari package yang disebut
+android.support.v7.ap.
+
+00:00:54.857 --> 00:00:57.423
+Kita tidak perlu cemas tentang
+bagaimana detail internal cara kerja
+
+00:00:57.423 --> 00:00:59.840
+AppCompatActivity atau Bundle.
+
+00:00:59.840 --> 00:01:02.690
+Kita tinggal memanfaatkannya saja
+secara gratis dalam kode kita.
+
+00:01:02.690 --> 00:01:04.819
+Tiap kali kita ingin menambahkan
+kode dari package lain,
+
+00:01:04.819 --> 00:01:07.110
+kita perlu menambahkan
+statemen impor lagi di sini.
+
+00:01:07.110 --> 00:01:10.730
+Jadi kuis B adalah
+statemen impor.
+
+00:01:10.730 --> 00:01:12.920
+Berikutnya adalah deklarasi kelas.
+
+00:01:12.920 --> 00:01:16.435
+Baris kelas publik ini
+ada dalam deklarasi kelas.
+
+00:01:16.435 --> 00:01:19.575
+Dia mendeklarasikan bahwa file ini berisi
+definisi kelas
+
+00:01:19.575 --> 00:01:21.055
+yang disebut MainActivity.
+
+00:01:21.055 --> 00:01:24.015
+Ini merentang dari superkelas
+bernama AppCompatActivity,
+
+00:01:24.015 --> 00:01:27.935
+yang berarti mewarisi semua
+perilaku yang dimiliki AppCompatActivity.
+
+00:01:27.935 --> 00:01:31.700
+Untuk menunjukkan jendela dalam perangkat
+dan menunjukkan batang aplikasi,
+
+00:01:31.700 --> 00:01:35.180
+kita dapat mengustomisasi perilaku
+dengan menimpa metode-metode tertentu.
+
+00:01:35.180 --> 00:01:39.500
+Kita hanya memodifikasi deklarasi kelas ini
+jika kita ingin mengubah nama kelas
+
+00:01:39.500 --> 00:01:41.420
+atau mengubah tempat asal pewarisan.
+
+00:01:41.420 --> 00:01:44.620
+Dan kuis C
+adalah deklarasi kelas.
+
+00:01:45.650 --> 00:01:47.600
+Berikutnya adalah metode override.
+
+00:01:47.600 --> 00:01:49.990
+Di sini kita mengesampingkan
+metode onCreate
+
+00:01:49.990 --> 00:01:53.390
+yang awalnya didefinisikan dalam
+kelas AppCompatActivity.
+
+00:01:53.390 --> 00:01:56.620
+Sebagai pengingat, metode onCreate
+ini dipanggil oleh Android
+
+00:01:56.620 --> 00:01:59.080
+saat pertama kali membuat
+satu contoh MainActivity.
+
+00:01:59.080 --> 00:02:01.480
+Artinya, tepat pada saat Anda membuka
+aplikasi dalam perangkat.
+
+00:02:01.480 --> 00:02:05.630
+Di sini kami sediakan langkah-langkah sendiri untuk
+apa yang harus dilakukan saat aplikasi dibuat.
+
+00:02:05.630 --> 00:02:08.970
+Kuis D adalah metode override.
+
+00:02:08.970 --> 00:02:10.977
+Terakhir adalah setContentView.
+
+00:02:10.977 --> 00:02:15.708
+Di dalam metode onCreate, ada
+baris yang membuat metode setContentView
+
+00:02:15.708 --> 00:02:20.630
+dan masuk ke tata letak activity_main
+sebagai argumen input.
+
+00:02:20.630 --> 00:02:24.230
+Kita memerintahkan Android untuk menaruh
+UI yang didefinisikan dalam file XML layout ini
+
+00:02:24.230 --> 00:02:25.990
+ke dalam layar activity.
+
+00:02:25.990 --> 00:02:31.159
+Terakhir, kuis E adalah mengatur
+contentView menjadi resource tata letak XML.
+

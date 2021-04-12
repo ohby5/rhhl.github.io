@@ -1,0 +1,203 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.025 --> 00:00:03.649
+[SOUND] Baik, kita baru saja menulis
+baris kode banyak sekali.
+
+00:00:03.649 --> 00:00:06.643
+Sekarang, saya akan menunjukkan kepada Anda
+cara lain untuk menulis
+
+00:00:06.643 --> 00:00:09.170
+clickListener tanpa
+menulis baris sebanyak itu.
+
+00:00:09.170 --> 00:00:12.060
+Sebagai pengembang, kita ingin
+sesingkat mungkin,
+
+00:00:12.060 --> 00:00:14.660
+yang memudahkan kode untuk
+dibaca oleh orang lain.
+
+00:00:14.660 --> 00:00:17.130
+Sekarang saya berada di MainActivity.Java.
+
+00:00:17.130 --> 00:00:19.920
+Perhatikan bahwa kita telah membuat
+variabel OnClickListener ini, tapi
+
+00:00:19.920 --> 00:00:21.740
+hanya menggunakannya sekali di sini.
+
+00:00:21.740 --> 00:00:25.770
+Saya akan menunjukkan kepada Anda
+cara membuat baris ini sejajar.
+
+00:00:25.770 --> 00:00:28.860
+Saya akan memotong bagian itu dan
+menggantikan objek ini.
+
+00:00:28.860 --> 00:00:30.340
+Bagus.
+
+00:00:30.340 --> 00:00:32.271
+Saya akan lanjut dan
+menghapus baris ini.
+
+00:00:32.271 --> 00:00:34.647
+Sekarang kode lebih simpel dan
+tampak seperti ini.
+
+00:00:34.647 --> 00:00:37.240
+Lebih sedikit baris kode,
+bagus, tampak lebih baik.
+
+00:00:37.240 --> 00:00:39.860
+Saya ingin menunjukkan kepada Anda
+cara untuk membuatnya lebih singkat lagi.
+
+00:00:39.860 --> 00:00:43.780
+Daripada membuat kelas
+NumbersClickListener yang benar-benar baru,
+
+00:00:43.780 --> 00:00:47.190
+dalam file yang benar-benar baru, kita
+bisa mendeklarasikannya dalam baris
+
+00:00:47.190 --> 00:00:49.790
+saat kita memanggil rangkaian
+metode OnClickListener.
+
+00:00:49.790 --> 00:00:52.810
+Saya akan menggantikan
+apa yang baru saja saya taruh di sini,
+
+00:00:52.810 --> 00:00:56.830
+NumbersClickListener baru ini,
+dengan onClickListener, dan ingatlah
+
+00:00:56.830 --> 00:01:00.760
+NumbersClickListener diimplementasikan
+dari kelas OnClickListener.
+
+00:01:00.760 --> 00:01:03.287
+Saya akan menambahkan tanda kurung buka
+dan melanjutkan dan
+
+00:01:03.287 --> 00:01:06.590
+mengimplementasikan metode OnClick,
+di baris ini.
+
+00:01:06.590 --> 00:01:09.200
+Jadi tidak diperlukan kelas Java ekstra.
+
+00:01:09.200 --> 00:01:11.950
+Sekarang saya bisa memasukkan apa saja
+yang saya inginkan di metode onClick.
+
+00:01:11.950 --> 00:01:16.740
+Saya bisa menampilkan toast atau memintanya
+membuka NumbersActivity atau lainnya.
+
+00:01:16.740 --> 00:01:20.380
+Dengan itu, mari kita tambah kode
+untuk membuka NumbersActivity.
+
+00:01:20.380 --> 00:01:24.418
+Jika Anda ingat kode dari sebelumnya,
+kita bisa membuat intent baru dan
+
+00:01:24.418 --> 00:01:26.551
+memanggil start activity dengan intent itu.
+
+00:01:26.551 --> 00:01:30.157
+Mari kita lihat bagaimana jadinya,
+ingatlah untuk memperhatikan
+
+00:01:30.157 --> 00:01:35.350
+tanda kurung tutup, tanda kurung persegi,
+dan titik koma di akhir tiap kalimat.
+
+00:01:35.350 --> 00:01:38.960
+Ini sering kali salah, tapi
+untungnya di Android Studio,
+
+00:01:38.960 --> 00:01:41.662
+ingatlah bahwa jika Anda mengeklik tanda kurung,
+akan menyorot juga tanda kurung pasangannya.
+
+00:01:42.800 --> 00:01:46.570
+Saya akan kembali dan menghapus
+file NumbersClickListener
+
+00:01:46.570 --> 00:01:48.110
+karena tidak akan digunakan
+di mana saja saat ini.
+
+00:01:48.110 --> 00:01:52.250
+Pada dasarnya, saya telah memindahkan
+kode itu ke dalam MainActivity.
+
+00:01:52.250 --> 00:01:55.485
+Yang kita pelajari sebelumnya adalah
+sama dengan cara membuat clickListener
+
+00:01:55.485 --> 00:01:59.740
+yang baru ini, dan ini tiga langkah yang sama
+dengan jumlah baris kode lebih pendek.
+
+00:01:59.740 --> 00:02:00.440
+Sebagian besar,
+
+00:02:00.440 --> 00:02:03.320
+saya selalu mengatur clickListener saya
+dengan cara ini, sejajar jika diperlukan.
+
+00:02:03.320 --> 00:02:06.440
+Ini membuat kode lebih mudah dibaca
+karena logika clickListener
+
+00:02:06.440 --> 00:02:09.220
+ditutup oleh view dan
+bukan menjadi file yang terpisah.
+
+00:02:09.220 --> 00:02:12.180
+Tentu saja, selalu ada kasus di mana
+ini bukan hal yang ideal.
+
+00:02:12.180 --> 00:02:15.980
+Tapi jika ada ClickListener yang digunakan
+di banyak tempat dalam kode Anda,
+
+00:02:15.980 --> 00:02:17.110
+maka Anda tidak harus selalu menyalin dan
+
+00:02:17.110 --> 00:02:20.280
+menempelkan blok kode itu
+di file-file yang berbeda di aplikasi Anda.
+
+00:02:20.280 --> 00:02:21.620
+Sekarang giliran Anda.
+
+00:02:21.620 --> 00:02:25.913
+Di dalam file MainActivity, pasanglah
+clickListener ke tiap view kategori
+
+00:02:25.913 --> 00:02:29.177
+untuk numbers, phrases,
+colors, dan family members.
+
+00:02:29.177 --> 00:02:32.766
+Lalu ke clickListener sejajar,
+seperti yang baru saja ditunjukkan, dan
+
+00:02:32.766 --> 00:02:35.570
+kami telah menyertakan kode untuk Anda
+gunakan sebagai referensi.
+
+00:02:35.570 --> 00:02:36.070
+Semoga berhasil.
+

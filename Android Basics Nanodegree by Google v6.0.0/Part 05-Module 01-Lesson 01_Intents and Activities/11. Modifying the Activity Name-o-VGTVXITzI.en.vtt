@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.420
+Awesome. Now, the intents are working on our app.
+
+00:00:02.420 --> 00:00:04.410
+However, one issue I do see is that
+
+00:00:04.410 --> 00:00:07.310
+the numbers activity we open still says Miwok at the top.
+
+00:00:07.310 --> 00:00:09.690
+I want to change the title of this activity to say, numbers.
+
+00:00:09.690 --> 00:00:11.600
+And for the other activities that we open,
+
+00:00:11.600 --> 00:00:12.945
+they should also say colors,
+
+00:00:12.945 --> 00:00:15.195
+phrases, and family members, respectively.
+
+00:00:15.195 --> 00:00:19.275
+I mentioned earlier that we're going to come back to the AndroidManifest.xml file.
+
+00:00:19.275 --> 00:00:22.470
+And now is that time to change the title of the numbers activity,
+
+00:00:22.470 --> 00:00:25.605
+only to modify the AndroidManifest.xml file.
+
+00:00:25.605 --> 00:00:28.320
+There is a way to modify the activity name,
+
+00:00:28.320 --> 00:00:29.910
+but I forget the exact syntax.
+
+00:00:29.910 --> 00:00:31.525
+So, let's look that up.
+
+00:00:31.525 --> 00:00:36.240
+I do a web search for AndroidManifest activity tag.
+
+00:00:36.240 --> 00:00:38.540
+And this first result looks good.
+
+00:00:38.540 --> 00:00:39.860
+In the navigation pane,
+
+00:00:39.860 --> 00:00:41.370
+on the left-hand side of the screen,
+
+00:00:41.370 --> 00:00:44.480
+we're looking at activity tag under the App Manifest.
+
+00:00:44.480 --> 00:00:46.195
+So, we are in the right place.
+
+00:00:46.195 --> 00:00:47.630
+On the right-hand side of the screen,
+
+00:00:47.630 --> 00:00:51.600
+we can see some possible attribute names related to the name of the activity.
+
+00:00:51.600 --> 00:00:55.030
+Use the keyboard shortcut command F or control
+
+00:00:55.030 --> 00:00:58.905
+F on Windows to pop-up the find menu. Then type name.
+
+00:00:58.905 --> 00:01:01.980
+Looking closely at the name attribute description,
+
+00:01:01.980 --> 00:01:06.300
+it seems like name is the name of the activity Java file.
+
+00:01:06.300 --> 00:01:08.250
+Scrolling through the attribute some more,
+
+00:01:08.250 --> 00:01:11.205
+I think the one we're trying to look for is called label.
+
+00:01:11.205 --> 00:01:12.725
+So let's take a look at that attribute.
+
+00:01:12.725 --> 00:01:16.950
+And sure enough, it says that the label is what's displayed to the user.
+
+00:01:16.950 --> 00:01:19.410
+So, going back to our AndroidManifest.xml,
+
+00:01:19.410 --> 00:01:22.695
+we'll find the activity tag related to the numbers activity.
+
+00:01:22.695 --> 00:01:26.520
+Then we'll add an extra attribute called Android label and the value
+
+00:01:26.520 --> 00:01:30.570
+will be the text that we want to show on the app bar for this activity, which is numbers.
+
+00:01:30.570 --> 00:01:32.790
+If we refer back to our mental model of the app,
+
+00:01:32.790 --> 00:01:36.680
+this stream was actually already declared in the strings.xml file.
+

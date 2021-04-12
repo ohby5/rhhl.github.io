@@ -1,0 +1,427 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.167
+Certo, você criou um intent
+
+00:00:02.200 --> 00:00:04.267
+na atividade principal
+do app Miwok,
+
+00:00:04.300 --> 00:00:06.701
+mas o código que usamos para criar
+um intent no app Miwok
+
+00:00:06.734 --> 00:00:10.801
+parece diferente do modo que criamos
+intent no app Just Java.
+
+00:00:10.834 --> 00:00:14.033
+No curso passado começamos
+a aprender sobre intents,
+
+00:00:14.067 --> 00:00:16.667
+mas não discutimos a fundo
+todos os tipos de intents.
+
+00:00:16.701 --> 00:00:20.534
+Há na verdade dois tipos de intent,
+implícitos e explícitos.
+
+00:00:20.567 --> 00:00:23.801
+Use um intent implícito quando você
+não sabe qual componente
+
+00:00:23.834 --> 00:00:25.934
+ou mesmo que app irá lidar
+com seu intent.
+
+00:00:25.968 --> 00:00:28.133
+Por exemplo, em um app
+de rede social,
+
+00:00:28.167 --> 00:00:30.567
+você pode enviar um intent
+que permita ao usuário tirar uma foto.
+
+00:00:30.601 --> 00:00:32.934
+Não importa qual app de câmera
+recebe o intent,
+
+00:00:32.968 --> 00:00:34.767
+contanto que o app
+possa tirar uma foto.
+
+00:00:34.801 --> 00:00:38.934
+Por outro lado, você deve criar
+um intent explícito quando sabe exatamente
+
+00:00:38.968 --> 00:00:42.000
+qual componente ou atividade do app
+deve receber o intent.
+
+00:00:42.033 --> 00:00:44.901
+Por exemplo, no app Miwok
+a partir da tela principal
+
+00:00:44.934 --> 00:00:48.467
+ao clicar em uma categoria,
+queremos mandar um intent explícito
+
+00:00:48.501 --> 00:00:51.601
+para que a atividade de números
+em nosso app abra essa tela.
+
+00:00:51.634 --> 00:00:54.767
+Não faz sentido deixar
+qualquer outra atividade lidar com isso.
+
+00:00:54.801 --> 00:00:57.167
+Então vamos revisar cada caso
+em mais detalhes.
+
+00:00:57.200 --> 00:00:59.934
+Você pode usar um intent implícito
+no app Just Java
+
+00:00:59.968 --> 00:01:02.434
+para abrir um app de e-mail
+para mandar um pedido de compra.
+
+00:01:02.467 --> 00:01:05.133
+Não importava qual app
+de e-mail recebia o intent,
+
+00:01:05.167 --> 00:01:08.300
+contanto que fosse um app de e-mail
+que pudesse pegar o assunto
+
+00:01:08.334 --> 00:01:10.300
+e corpo da mensagem e enviar
+como e-mail.
+
+00:01:11.300 --> 00:01:15.234
+Lembre-se que ao especificar
+um intent filter em seu arquivo manifest
+
+00:01:15.267 --> 00:01:19.334
+apps como este app de e-mail avisam
+quais intents podem receber e manejar.
+
+00:01:19.367 --> 00:01:21.701
+Outro exemplo
+de intent implícito
+
+00:01:21.734 --> 00:01:23.767
+é quando quer abrir um site
+em seu app.
+
+00:01:23.801 --> 00:01:26.868
+Pode mandar um intent para um app
+de browser mostrar o site.
+
+00:01:26.901 --> 00:01:29.267
+Não importa qual browser
+vai lidar com o intent.
+
+00:01:29.300 --> 00:01:31.601
+Todos são capazes
+de mostrar um site.
+
+00:01:31.634 --> 00:01:35.033
+Esse tipo de flexibilidade que temos
+com intents é ótimo quando você
+
+00:01:35.067 --> 00:01:37.234
+não sabe quais apps o usuário
+tem em seu dispositivo.
+
+00:01:37.267 --> 00:01:39.267
+Lembra da nossa metáfora
+de jogar uma bola
+
+00:01:39.300 --> 00:01:40.701
+que representava
+nosso intent?
+
+00:01:40.734 --> 00:01:42.834
+Não importava no que estávamos
+jogando ela,
+
+00:01:42.868 --> 00:01:46.801
+contanto que alguém estivesse lá para pegá-la.
+Isso representava um intent implícito.
+
+00:01:46.834 --> 00:01:50.801
+Às vezes, queremos ter 100% de certeza
+que quando mandamos um intent
+
+00:01:50.834 --> 00:01:52.834
+um componente em particular
+irá recebê-lo.
+
+00:01:52.868 --> 00:01:56.801
+Por exemplo, no Miwok app, clicar
+em uma categoria manda um intent explícito
+
+00:01:56.834 --> 00:02:01.534
+que abre uma nova atividade,
+mostrando palavras naquela categoria.
+
+00:02:01.567 --> 00:02:04.334
+Outro exemplo disso é o app
+Google Play Music.
+
+00:02:04.367 --> 00:02:07.801
+Na atividade que fica no topo
+você ver sua música,
+
+00:02:07.834 --> 00:02:10.701
+e clicar em um álbum abre a atividade
+do recipiente da faixa,
+
+00:02:10.734 --> 00:02:13.767
+que contém uma lista de faixas
+de um artista em particular.
+
+00:02:13.801 --> 00:02:16.400
+Então esta atividade fica dentro
+do mesmo app de música.
+
+00:02:16.434 --> 00:02:21.300
+Em casos assim, estamos usando
+um intent explícito, dizendo explicitamente
+
+00:02:21.334 --> 00:02:24.934
+que atividades devem abrir quando o intent
+é enviado para o sistema Android.
+
+00:02:24.968 --> 00:02:26.934
+Voltemos à metáfora
+de jogar uma bola.
+
+00:02:26.968 --> 00:02:30.200
+Com intents explícitos, é como se
+gritássemos o nome de uma pessoa
+
+00:02:30.234 --> 00:02:33.834
+que sabemos estar do outro lado
+e sabemos que está disposta a pegar a bola.
+
+00:02:33.868 --> 00:02:37.667
+É importante saber que você quase nunca
+deve usar intents explícitos
+
+00:02:37.701 --> 00:02:41.300
+para abrir um app de outro desenvolvedor,
+porque não podemos garantir
+
+00:02:41.334 --> 00:02:45.434
+que tal app que queremos chamar
+estará instalado no dispositivo.
+
+00:02:45.467 --> 00:02:49.200
+Por isso, intents explícitos geralmente
+são usados dentro do mesmo app
+
+00:02:49.234 --> 00:02:53.133
+porque o desenvolvedor sabe
+quais atividades estão disponíveis.
+
+00:02:53.167 --> 00:02:55.400
+Certo, agora sabemos que há
+dois tipos de intents.
+
+00:02:55.434 --> 00:02:58.400
+Vamos revisar o que há dentro da bola
+que representa nosso intent.
+
+00:02:58.434 --> 00:03:02.567
+Intents explícitos geralmente precisam
+de uma ação e um URI de dados.
+
+00:03:02.601 --> 00:03:06.300
+Podemos também adicionar categoria,
+componentes e informações extras
+
+00:03:06.334 --> 00:03:09.467
+para ajudar o Android a determinar que app
+lidaria melhor com esse pedido.
+
+00:03:09.501 --> 00:03:12.367
+Intents explícitos já sabem
+aonde precisam ir,
+
+00:03:12.400 --> 00:03:14.434
+então fornecem informações
+bem específicas.
+
+00:03:14.467 --> 00:03:16.701
+Geralmente só precisamos
+passar o contexto
+
+00:03:16.734 --> 00:03:19.567
+e componente, que é geralmente
+a classe para onde queremos navegar.
+
+00:03:19.601 --> 00:03:23.400
+Porém, há situações onde podemos querer
+configurar o URI de dados
+
+00:03:23.434 --> 00:03:26.467
+para que a outra atividade
+possa receber certa informação.
+
+00:03:26.501 --> 00:03:29.334
+Vamos ver o código para esses
+dois tipos de intents.
+
+00:03:29.367 --> 00:03:31.701
+Este é um exemplo
+de um intent implícito
+
+00:03:31.734 --> 00:03:33.501
+e um exemplo
+de um intent explícito.
+
+00:03:33.534 --> 00:03:35.534
+Que semelhanças e diferenças
+você vê?
+
+00:03:35.567 --> 00:03:39.934
+Sobre semelhanças, nos dois casos,
+criamos instâncias de objeto da classe intent
+
+00:03:39.968 --> 00:03:44.334
+e então por fim passamos o intent
+como entrada para o método
+
+00:03:44.367 --> 00:03:49.434
+de iniciar atividade. As diferenças são,
+observe as entradas de construtor diferentes.
+
+00:03:49.467 --> 00:03:53.634
+O intent implícito pediu uma string
+de ação como action_view
+
+00:03:53.667 --> 00:03:57.334
+ou action_send para anunciar
+que ação genérica o app precisa.
+
+00:03:57.367 --> 00:04:00.868
+Intents explícitos podem nomear diretamente
+o componente de classe que precisam abrir.
+
+00:04:00.901 --> 00:04:05.367
+Depois, nos intents implícitos temos
+essa atividade de manipulação "if"
+
+00:04:05.400 --> 00:04:08.901
+que pega casos em que não há apps
+no dispositivo para atender ao intent.
+
+00:04:08.934 --> 00:04:10.934
+Então, recapitulando,
+para o intent implícito,
+
+00:04:10.968 --> 00:04:15.000
+precisamos criar uma instância de objeto
+da classe do intent e no construtor
+
+00:04:15.033 --> 00:04:18.334
+passamos uma string de ação,
+que neste caso é ACTION_SENDTO.
+
+00:04:18.367 --> 00:04:21.567
+O intent implícito também tem esse bloco
+"if" de manipulação de atividade.
+
+00:04:21.601 --> 00:04:24.200
+Por outro lado, para construir
+e disparar esse intent explícito,
+
+00:04:24.234 --> 00:04:27.100
+fazemos uma nova instância
+da classe intent, passando o contexto
+
+00:04:27.133 --> 00:04:28.734
+na atividade
+que queremos abrir.
+
+00:04:28.767 --> 00:04:32.767
+Então chamamos startActivity, passando
+a instância intent que acabamos de criar.
+
+00:04:32.801 --> 00:04:36.934
+Como aviso, quero que note
+que este exemplo de intent implícito
+
+00:04:36.968 --> 00:04:40.767
+usa extras de intent, enquanto
+este exemplo de intent explícito não.
+
+00:04:40.801 --> 00:04:45.133
+Mas lembre-se que os dois tipos de intents
+são capazes de lidar com extras de intent.
+
+00:04:45.167 --> 00:04:46.868
+Então vamos praticar
+o que acabou de aprender.
+
+00:04:46.901 --> 00:04:50.467
+Nos cenários a seguir,
+determine se usamos um intent
+
+00:04:50.501 --> 00:04:51.801
+implícito ou explícito.
+
+00:04:51.834 --> 00:04:55.934
+Para cada casa, devemos criar
+um intent implícito ou explícito?
+
+00:04:55.968 --> 00:04:58.801
+No 1º caso, apps populares de mensagens
+em grupo permitem que os usuários
+
+00:04:58.834 --> 00:05:02.000
+abram links de vídeo que recebem
+nos chats.
+
+00:05:02.033 --> 00:05:05.701
+Abrir um player de vídeo
+deve usar um intent implícito ou explícito?
+
+00:05:05.734 --> 00:05:09.767
+No 2º caso, em um app de comprar
+comida, a usuária seleciona os pratos
+
+00:05:09.801 --> 00:05:12.334
+que ela quer comprar e clica
+no botão de enviar pedido.
+
+00:05:12.367 --> 00:05:15.968
+O app vai da atividade de compra
+para a de resumo da compra.
+
+00:05:16.000 --> 00:05:19.133
+Ir para a atividade de resumo da compra
+deve usar um intent
+
+00:05:19.167 --> 00:05:20.167
+implícito ou explícito?
+
+00:05:20.200 --> 00:05:21.400
+E no 3º caso,
+
+00:05:21.434 --> 00:05:25.234
+apps de carona permitem a usuários
+contatar motoristas via mensagem de texto.
+
+00:05:25.267 --> 00:05:28.968
+Acessar um app de mensagens de texto
+no celular deve usar um intent
+
+00:05:29.000 --> 00:05:30.067
+implícito ou explícito?
+

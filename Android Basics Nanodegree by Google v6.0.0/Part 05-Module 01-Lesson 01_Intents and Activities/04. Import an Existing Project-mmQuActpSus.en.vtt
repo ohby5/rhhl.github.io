@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:01.755
+As an android developer,
+
+00:00:01.755 --> 00:00:04.815
+looking at code for an existing app is a critical skill to develop.
+
+00:00:04.815 --> 00:00:06.449
+If you join a team in the future,
+
+00:00:06.449 --> 00:00:08.370
+it's likely that you would work on an existing app,
+
+00:00:08.370 --> 00:00:09.810
+instead of creating one from scratch.
+
+00:00:09.810 --> 00:00:11.460
+Some major projects may have hundreds of
+
+00:00:11.460 --> 00:00:14.205
+files and you may not have time to read through all of them.
+
+00:00:14.205 --> 00:00:18.000
+However, you can still get a high level idea by looking at the filenames,
+
+00:00:18.000 --> 00:00:21.390
+then looking closer at the files related to the work you need to do.
+
+00:00:21.390 --> 00:00:22.740
+So in this case,
+
+00:00:22.740 --> 00:00:24.060
+we currently have a small project,
+
+00:00:24.060 --> 00:00:27.720
+so in the quiz we asked you to look at each file and let's do that now together.
+
+00:00:27.720 --> 00:00:30.960
+So I'm going to start off by going over here to the "project",
+
+00:00:30.960 --> 00:00:35.175
+changing this to the project view and when I look at the code base for the first time,
+
+00:00:35.175 --> 00:00:38.730
+I expand out the "Java" folder where all the logic of the app is.
+
+00:00:38.730 --> 00:00:41.640
+Then, I head over and expand out the "resource" folder,
+
+00:00:41.640 --> 00:00:44.070
+which has everything related to the appearance of the app.
+
+00:00:44.070 --> 00:00:46.950
+In the "Java" folder, we have one java file called
+
+00:00:46.950 --> 00:00:50.865
+main activity and it turns out that main activity is the main screen of our app.
+
+00:00:50.865 --> 00:00:53.340
+Now we can move onto the app resource files,
+
+00:00:53.340 --> 00:00:58.365
+located in the app/source/main/res directory.
+
+00:00:58.365 --> 00:01:01.260
+These files control how the app appears on different devices.
+
+00:01:01.260 --> 00:01:04.320
+Resources can include XML files,
+
+00:01:04.320 --> 00:01:06.450
+images and other media files.
+
+00:01:06.450 --> 00:01:08.865
+We could start by expanding out the "layout" folder.
+
+00:01:08.865 --> 00:01:12.855
+Here we have the "activity_main.xml" file.
+
+00:01:12.855 --> 00:01:15.840
+This file defines the layout for the main screen of our app and it
+
+00:01:15.840 --> 00:01:18.810
+contains a vertical linear layout with four text views.
+
+00:01:18.810 --> 00:01:20.445
+Then we have a mipmap folder,
+
+00:01:20.445 --> 00:01:23.100
+which is a special folder just for the app icon.
+
+00:01:23.100 --> 00:01:26.400
+Other images in your app should go in the Java folder.
+
+00:01:26.400 --> 00:01:28.365
+Then we have the values folder.
+
+00:01:28.365 --> 00:01:30.780
+This contains the "colors.xml" file,
+
+00:01:30.780 --> 00:01:32.875
+which defines the colors of our app,
+
+00:01:32.875 --> 00:01:36.585
+the app theme colors and the color associated with each category of the words.
+
+00:01:36.585 --> 00:01:38.760
+Next we have the "dimensions.xml" file,
+
+00:01:38.760 --> 00:01:42.195
+which contains dimensions, such as the width and height values for our app.
+
+00:01:42.195 --> 00:01:44.310
+It also contains the list item height,
+
+00:01:44.310 --> 00:01:47.175
+which we have here set to be 88dp.
+
+00:01:47.175 --> 00:01:49.905
+Moving down we have the "strings.xml" file.
+
+00:01:49.905 --> 00:01:53.610
+These are all the text strings that will appear to the user in the app and
+
+00:01:53.610 --> 00:01:55.260
+we put them in a single file so that we can
+
+00:01:55.260 --> 00:01:57.495
+easily translate the app into other languages.
+
+00:01:57.495 --> 00:02:00.060
+And lastly, we have the "styles.xml" file.
+
+00:02:00.060 --> 00:02:03.205
+Here we define the theme of the app and specify the theme colors.
+
+00:02:03.205 --> 00:02:06.630
+We also have the style for how a category should look and that's why
+
+00:02:06.630 --> 00:02:09.990
+each category on the main screen of the app looks similar in terms of height,
+
+00:02:09.990 --> 00:02:12.330
+padding, font size and more.
+
+00:02:12.330 --> 00:02:15.150
+So now let's move to the third task of the quiz,
+
+00:02:15.150 --> 00:02:17.400
+which is to create a visual diagram of the different parts of
+
+00:02:17.400 --> 00:02:21.600
+the app and everyone's diagram will be different which is a good thing.
+
+00:02:21.600 --> 00:02:26.920
+So here's one example that represents the big picture of the Miwok app code base.
+
+00:02:26.920 --> 00:02:29.035
+After reading all those files,
+
+00:02:29.035 --> 00:02:30.400
+maybe your takeaway was,
+
+00:02:30.400 --> 00:02:33.370
+there a lot of resources that determine the appearance of
+
+00:02:33.370 --> 00:02:36.895
+the app and a single java file for the logic of that.
+
+00:02:36.895 --> 00:02:40.005
+So here's another example of a diagram you could have drawn.
+
+00:02:40.005 --> 00:02:42.180
+We have an image of what the app looks like,
+
+00:02:42.180 --> 00:02:46.695
+with the four categories and you label this as the "MainActivity.java" file.
+
+00:02:46.695 --> 00:02:49.590
+With an initation to the layout for this activity,
+
+00:02:49.590 --> 00:02:53.860
+is defined in that "activity_main.xml" layout file.
+
+00:02:53.860 --> 00:02:58.110
+Then the theme of the app is defined in the "styles.xml" file.
+
+00:02:58.110 --> 00:03:00.960
+How a category item appears is also determined by
+
+00:03:00.960 --> 00:03:03.870
+a style that is defined in the "styles.xml" file.
+
+00:03:03.870 --> 00:03:08.100
+The background color of the categories is defined in the "colors.xml" file,
+
+00:03:08.100 --> 00:03:11.955
+while the category names are defined in the "strings.xml" file.
+
+00:03:11.955 --> 00:03:16.250
+Lastly, the list item height is defined at the "dimensions.xml" file.
+
+00:03:16.250 --> 00:03:19.440
+So regardless of how you chose to create a diagram of the app,
+
+00:03:19.440 --> 00:03:22.135
+you just thought like a professional developer.
+
+00:03:22.135 --> 00:03:24.330
+And as we start to add more features,
+
+00:03:24.330 --> 00:03:26.520
+having a mental map of the app in our head,
+
+00:03:26.520 --> 00:03:29.355
+will help us figure out what parts of the app we would need to modify,
+
+00:03:29.355 --> 00:03:31.365
+to make these new features work properly.
+
+00:03:31.365 --> 00:03:33.900
+For example, if we receive a feature request from
+
+00:03:33.900 --> 00:03:36.555
+our designer to change the layout of the main screen,
+
+00:03:36.555 --> 00:03:41.185
+we should head over to the "mainactivity_.xml" layout file.
+
+00:03:41.185 --> 00:03:43.875
+But the feature request is about changing the theme of the app,
+
+00:03:43.875 --> 00:03:47.070
+we should head over to the "styles.xml" file and if
+
+00:03:47.070 --> 00:03:50.070
+we need to change how the app responds when you click on a view,
+
+00:03:50.070 --> 00:03:53.880
+then we should look at the logic in the "MainActivity.java" file.
+

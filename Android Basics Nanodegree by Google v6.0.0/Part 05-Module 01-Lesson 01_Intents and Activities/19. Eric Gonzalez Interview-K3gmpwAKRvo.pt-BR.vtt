@@ -1,0 +1,179 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:02.834
+Sou Eric Gonzales, trabalho em apps
+para Android para Udacity.
+
+00:00:02.868 --> 00:00:06.801
+Comecei a trabalhar no app
+da Udacity app
+
+00:00:06.834 --> 00:00:10.200
+para um prazo que tínhamos
+de enviar o app no dia do Google IO.
+
+00:00:10.234 --> 00:00:16.334
+Então entrei na empresa
+umas 5 semanas antes do prazo
+
+00:00:16.367 --> 00:00:18.000
+e fomos para Mountain View,
+
+00:00:18.033 --> 00:00:21.534
+trabalhamos até tarde e enviamos o app,
+esse grupo pequeno.
+
+00:00:21.567 --> 00:00:24.801
+Me familiarizei
+com o código base
+
+00:00:24.834 --> 00:00:29.234
+foi conhecendo mais os APIs da Udacity
+do que o código de entrada.
+
+00:00:29.267 --> 00:00:31.801
+Muitos códigos de entrada
+são bem diretos,
+
+00:00:31.834 --> 00:00:36.033
+em termos de desenvolvimento,
+mas o modo como se acessa dados na Udacity
+
+00:00:36.067 --> 00:00:40.167
+foi bem diferente, então houve
+uma curva de aprendizado.
+
+00:00:40.200 --> 00:00:42.934
+As atividades no app Udacity
+são bem diretas.
+
+00:00:42.968 --> 00:00:46.400
+São agrupadas logicamente pela atividade
+que normalmente faz no site
+
+00:00:46.434 --> 00:00:47.400
+ou na sala de aula.
+
+00:00:47.434 --> 00:00:50.934
+Então temos a noção
+de um catálogo, por exemplo.
+
+00:00:50.968 --> 00:00:54.801
+Temos detalhes individuais
+para cursos com suas próprias atividades.
+
+00:00:54.834 --> 00:00:58.534
+O mesmo vale para autenticação,
+há atividades para autenticação
+
+00:00:58.567 --> 00:01:01.901
+ou ver as classes, praticamente tudo
+que pode mapear para uma atividade,
+
+00:01:01.934 --> 00:01:05.801
+pode fazer na sala de aula Udacity
+leva a uma atividade no app.
+
+00:01:05.834 --> 00:01:09.067
+Então usamos intents pelo app,
+basicamente em todo lugar.
+
+00:01:09.100 --> 00:01:13.734
+Sempre que for entre, digamos,
+logar no catálogo
+
+00:01:13.767 --> 00:01:14.868
+ou para suas classes,
+
+00:01:14.901 --> 00:01:17.067
+tudo isso envolve
+intents explícitos.
+
+00:01:17.100 --> 00:01:20.000
+Então diz especificamente
+"sei que quero ir desta atividade
+
+00:01:20.033 --> 00:01:23.901
+para a próxima",
+e esses são argumentos
+
+00:01:23.934 --> 00:01:26.434
+direções que podem ser úteis
+ao carregar esse novo estado.
+
+00:01:27.534 --> 00:01:30.901
+Então usamos poucos intents implícitos
+no app por causa de sua natureza.
+
+00:01:30.934 --> 00:01:33.567
+Não dependemos muito
+de, digamos,
+
+00:01:33.601 --> 00:01:34.968
+escanear
+um código de barras
+
+00:01:35.000 --> 00:01:38.934
+ou tirar uma foto ou coisas que podem
+ter uma dependência externa.
+
+00:01:38.968 --> 00:01:42.934
+Há um lugar onde usamos intents implícitos
+e é para enviar e-mails de assistência.
+
+00:01:42.968 --> 00:01:44.667
+Se tiver um problema
+com o app
+
+00:01:44.701 --> 00:01:46.467
+ou com sua conta, o app, é claro,
+não sabe
+
+00:01:46.501 --> 00:01:50.234
+que servidor de e-mail
+você usa ou como mandar um e-mail,
+
+00:01:50.267 --> 00:01:53.400
+então usamos um intent implícito
+para gerar essa resposta.
+
+00:01:53.434 --> 00:01:55.567
+Então você pode mandar
+um pedido de ajuda.
+
+00:01:55.601 --> 00:01:57.968
+Quando quero um botão interativo
+no meu layout,
+
+00:01:58.000 --> 00:02:00.400
+claro que quando tem
+em sua atividade,
+
+00:02:00.434 --> 00:02:04.601
+preciso achar a view que leva
+àquele botão.
+
+00:02:04.634 --> 00:02:06.868
+Então, assim que o acho,
+posso configurar um listener,
+
+00:02:06.901 --> 00:02:08.200
+um click listener,
+
+00:02:08.234 --> 00:02:11.400
+para eu poder especificar
+a ação dele, se quiser.
+
+00:02:11.434 --> 00:02:14.133
+Então ele pode disparar
+uma nova atividade,
+
+00:02:14.167 --> 00:02:16.934
+ou uma chamada de rede.
+
+00:02:16.968 --> 00:02:18.334
+Como matricular um aluno
+em um curso.
+

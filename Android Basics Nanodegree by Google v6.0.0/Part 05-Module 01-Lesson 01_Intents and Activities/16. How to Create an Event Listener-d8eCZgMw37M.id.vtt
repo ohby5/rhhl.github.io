@@ -1,0 +1,445 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.530 --> 00:00:01.839
+Oke.
+Semoga Anda lebih paham
+
+00:00:01.839 --> 00:00:05.220
+mengapa OnClickListener
+adalah antarmuka dengan
+
+00:00:05.220 --> 00:00:07.820
+metode abstrak bernama OnClick.
+
+00:00:07.820 --> 00:00:11.460
+Peran Anda sebagai pengembang
+adalah mengatur event listener
+
+00:00:11.460 --> 00:00:14.230
+untuk input event yang
+ingin Anda tangani di aplikasi.
+
+00:00:14.230 --> 00:00:19.080
+Lebih khusus lagi, untuk tiap listener
+Anda harus ikuti tiga langkah.
+
+00:00:19.080 --> 00:00:21.430
+Pertama, definisikan event listener
+
+00:00:21.430 --> 00:00:24.500
+dan custom behavior atau
+waktu kejadian event.
+
+00:00:24.500 --> 00:00:27.290
+Kedua, buat contoh obyek baru
+
+00:00:27.290 --> 00:00:29.278
+dari event listener dengan
+memanggil konstruktor.
+
+00:00:29.278 --> 00:00:33.440
+Ketiga, tambahkan listener ke
+tampilan yang ingin Anda lakukan
+
+00:00:33.440 --> 00:00:36.170
+untuk event, lalu akan
+saya tunjukkan kode yang dibutuhkan di setiap tahap.
+
+00:00:36.170 --> 00:00:39.070
+Pertama, kita harus definisikan dulu kelas
+event listener yang menerapkan
+
+00:00:39.070 --> 00:00:39.990
+antarmukanya.
+
+00:00:39.990 --> 00:00:43.310
+Namanya bisa apa saja, sepanjang
+sesuai dengan ketentuan Java
+
+00:00:43.310 --> 00:00:44.840
+tentang penamaan kelas.
+
+00:00:44.840 --> 00:00:48.255
+Dalam hal ini, kita namakan
+kelasnya NumbersClickListener.
+
+00:00:48.255 --> 00:00:52.580
+Kode ini terletak di dokumen baru,
+bernama NumbersClickListener.java.
+
+00:00:52.580 --> 00:00:56.210
+Saat mendefinisikan kelas
+NumbersClickListener, pernyataannya
+
+00:00:56.210 --> 00:00:59.530
+harus berupa nama publik,
+diikuti nama kelas, lalu implementasi kata
+
+00:00:59.530 --> 00:01:03.930
+lalu nama antarmuka, yaitu
+OnClickListener dalam hal ini.
+
+00:01:03.930 --> 00:01:07.240
+Ingat, implementasi adalah kata kunci
+Java dengan makna khusus.
+
+00:01:07.240 --> 00:01:09.870
+Anda dapat menemukan daftar dari kata kunci
+yang khusus ini di dokumentasi
+
+00:01:09.870 --> 00:01:12.060
+Java Oracle ini.
+
+00:01:12.060 --> 00:01:16.270
+Kita gunakan implementasi untuk
+menyatakan kelas NumbersClickListener
+
+00:01:16.270 --> 00:01:20.450
+yang akan mendukung antarmuka tertentu
+dan menyiapkan kode untuk metode abstraknya.
+
+00:01:20.450 --> 00:01:23.150
+Dengan menerapkan antarmuka
+OnClickListener, untuk tiap
+
+00:01:23.150 --> 00:01:27.460
+kode Android yang harus diisi
+tipe obyek OnClickListener
+
+00:01:27.460 --> 00:01:29.570
+kita dapat menggunakan NumbersClickListener.
+
+00:01:29.570 --> 00:01:33.810
+Sebelum metode ini, kita punya
+anotasi @Override.
+
+00:01:33.810 --> 00:01:37.550
+Artinya, kita mengganti metode yang kosong
+di antarmuka dan menyiapkan
+
+00:01:37.550 --> 00:01:39.280
+implementasi kita sendiri.
+
+00:01:39.280 --> 00:01:42.969
+Implementasi metode OnClick kita,
+kita ingin pesan singkat muncul
+
+00:01:42.969 --> 00:01:45.390
+dan tertulis "Open the list of numbers".
+
+00:01:45.390 --> 00:01:47.900
+Kita dapat menyediakan perilaku pengguna
+yang lain juga.
+
+00:01:47.900 --> 00:01:49.010
+Ini hanya contoh.
+
+00:01:49.010 --> 00:01:51.480
+Jika angka sudah terdefinisikan,
+kelas clickListener
+
+00:01:51.480 --> 00:01:53.630
+kita perlu membuat
+contoh obyeknya.
+
+00:01:53.630 --> 00:01:57.050
+Jika Anda ingat pelajaran lalu,
+kita sudah memiliki contoh kelas, tapi
+
+00:01:57.050 --> 00:01:59.360
+kita perlu membuat
+contoh obyeknya.
+
+00:01:59.360 --> 00:02:02.990
+Kita baru saja membuat lantainya,
+tapi kita butuh rumah yang utuh.
+
+00:02:02.990 --> 00:02:06.230
+Ingatlah sintaksis dalam 
+membuat obyek dengan konstruktor.
+
+00:02:06.230 --> 00:02:09.229
+Dalam membuat contoh obyek
+NumbersClickLIstener
+
+00:02:09.229 --> 00:02:12.660
+kita dapat panggil konstruktor kelas
+dengan kata kunci baru.
+
+00:02:12.660 --> 00:02:16.100
+Ini menciptakan obyek baru yang 
+dapat disimpan di variabel ini
+
+00:02:16.100 --> 00:02:19.218
+di sisi kiri, di mana
+variabelnya tipe data ini.
+
+00:02:19.218 --> 00:02:20.320
+Dalam aplikasi Miwok,
+
+00:02:20.320 --> 00:02:23.080
+inilah hasil dari kode
+di dokumen aktivitas utama.
+
+00:02:23.080 --> 00:02:26.900
+Kita mengubah aktivitas utama
+sehingga dapat segera melakukan
+
+00:02:26.900 --> 00:02:29.600
+click event begitu
+aktivitas dibuat.
+
+00:02:29.600 --> 00:02:32.870
+Kita buat obyek baru
+NumbersClickListener dan
+
+00:02:32.870 --> 00:02:35.470
+menyimpannya di variabel
+bernama ClickListener
+
+00:02:35.470 --> 00:02:38.980
+yaitu tipe data variabel
+NumbersClickListener.
+
+00:02:38.980 --> 00:02:42.040
+Jika kita sudah memiliki
+contoh obyek NumbersClickListener
+
+00:02:42.040 --> 00:02:45.790
+kita perlu menambahkannya di tampilan
+yang ingin kita lihat saat di klik
+
+00:02:45.790 --> 00:02:47.140
+Ini dia kodenya.
+
+00:02:47.140 --> 00:02:50.560
+Asumsikan kita punya tampilan yang
+tersimpan sebagai variabel buttonView
+
+00:02:50.560 --> 00:02:54.150
+kita perlu panggil metode
+OnClickListener di tampilan dan
+
+00:02:54.150 --> 00:02:58.240
+masukkan satu argumen parameter,
+variabel ClickListener.
+
+00:02:58.240 --> 00:03:01.620
+Bagaimana cara memanggil metode ini
+dengan argumen input ini?
+
+00:03:01.620 --> 00:03:03.860
+Kembali ke dokumentasi,
+
+00:03:03.860 --> 00:03:07.370
+Di sini kita melihat kelas View,
+dan ada metode bernama
+
+00:03:07.370 --> 00:03:11.508
+setOnClickListener,
+di mana kita masukkan OnClickListener.
+
+00:03:11.508 --> 00:03:14.270
+Karena NumbersClickListener
+menerapkan antarmuka ini
+
+00:03:14.270 --> 00:03:17.070
+dinamakan juga tipe data
+OnClickListener, dan
+
+00:03:17.070 --> 00:03:20.180
+kita masukkan sebagai
+masukan di metode.
+
+00:03:20.180 --> 00:03:23.640
+Kita lihat hasil kodenya
+dalam konteks aplikasi
+
+00:03:23.640 --> 00:03:26.730
+Namun, Anda tak perlu
+membuat perubahan itu dulu.
+
+00:03:26.730 --> 00:03:29.680
+Quiz di video selanjutnya
+akan memberi instruksi spesifik
+
+00:03:29.680 --> 00:03:31.160
+apa yang harus dilakukan.
+
+00:03:31.160 --> 00:03:34.420
+Perhatikan saja dan
+coba pahami logikanya.
+
+00:03:34.420 --> 00:03:37.010
+Di sini saya buat
+kelas NumbersClickListener
+
+00:03:37.010 --> 00:03:39.450
+dan mendefinisikannya di dokumen Java.
+
+00:03:39.450 --> 00:03:42.810
+Ingat, kita spesifikasikan
+packet nama dalam kode, jadi
+
+00:03:42.810 --> 00:03:46.380
+kode kita menjadi satu dalam
+paket nama yang unik ini.
+
+00:03:46.380 --> 00:03:49.330
+Lalu ada pernyataan impor,
+sebab kita pakai kelas tampilan
+
+00:03:49.330 --> 00:03:50.340
+dan kelas Toast.
+
+00:03:50.340 --> 00:03:52.560
+Kita dapat menggunakannya walaupun
+kita tak membuat dari awal,
+
+00:03:52.560 --> 00:03:53.900
+Karena kita mengimpornya.
+
+00:03:53.900 --> 00:03:59.630
+Lalu di pernyataan kelas,
+ada implementasi View.OnClickListener.
+
+00:03:59.630 --> 00:04:03.310
+Saya ingin tunjukkan bahwa
+kita tambahkan View.OnClickLIstener
+
+00:04:03.310 --> 00:04:06.990
+agar makin jelas bahwa
+kita mengacu pada OnClickListener
+
+00:04:06.990 --> 00:04:10.070
+yang merupakan bagian dokumen
+view.java di paket ini.
+
+00:04:10.070 --> 00:04:14.460
+Ingat, kita gunakan .operator
+untuk mengakses anggota kelas Java.
+
+00:04:14.460 --> 00:04:18.031
+Di NumbersClickListener ini,
+sudah saya buat metode onClick.
+
+00:04:18.031 --> 00:04:21.320
+Di situ, saya katakan, saat
+kategori nomor diklik,
+
+00:04:21.320 --> 00:04:26.030
+kita tampilkan pesan singkat
+bertuliskan "Open the list of numbers".
+
+00:04:26.030 --> 00:04:26.980
+Jadi deh.
+
+00:04:26.980 --> 00:04:28.810
+Inilah NumbersClickListener.
+
+00:04:28.810 --> 00:04:30.893
+Saya akan beralih ke
+aktivitas utama.
+
+00:04:30.893 --> 00:04:32.740
+Di akhir metode OnCreate
+
+00:04:32.740 --> 00:04:35.420
+kita perlu buat
+obyek baru ClickListener.
+
+00:04:35.420 --> 00:04:38.420
+Kita perlu letakkan ClickListener
+ke tampilan kategori angka.
+
+00:04:38.420 --> 00:04:42.040
+Tapi, pertama cari dulu
+tampilan obyek di penampil hirarki.
+
+00:04:42.040 --> 00:04:46.190
+Proses ini harusnya Anda kenali
+dari aplikasi Just Java di pelajaran lalu.
+
+00:04:46.190 --> 00:04:48.600
+Begini cara
+menulis kodenya.
+
+00:04:48.600 --> 00:04:52.890
+Untuk mendapat tampilan yang
+menunjukkan kategori nomor
+
+00:04:53.980 --> 00:04:57.030
+saya panggil metode
+findViewById dan
+
+00:04:57.030 --> 00:04:59.860
+meminta tampilan dengan nomor ID.
+
+00:04:59.860 --> 00:05:01.380
+Sesudah menemukan text view
+
+00:05:01.380 --> 00:05:03.870
+kita dapat simpan di variabel
+yang akan saya namakan numbers.
+
+00:05:03.870 --> 00:05:07.910
+Lalu kita panggil metode
+OnClickListener di text view ini
+
+00:05:07.910 --> 00:05:10.370
+dan masukkan obyek ClickListener
+
+00:05:10.370 --> 00:05:12.110
+Beginilah hasilnya.
+
+00:05:12.110 --> 00:05:15.565
+Kita atur metode OnClickListener 
+di text view dalam memasukkan
+
+00:05:15.565 --> 00:05:17.757
+obyek ClickLIstener
+
+00:05:17.757 --> 00:05:21.487
+Angka TextView kali ini akan
+menyimpan obyek clickListener.
+
+00:05:21.487 --> 00:05:25.830
+Lalu, jika TextView ditekan,
+ClickListener akan bertindak.
+
+00:05:25.830 --> 00:05:29.116
+Untuk mengetes apakah
+kode Java ini berhasil
+
+00:05:29.116 --> 00:05:32.741
+saya hapus dulu kode lama
+yang kita tulis dari tombol klik.
+
+00:05:32.741 --> 00:05:34.783
+Di dokumen XML activity_main
+
+00:05:34.783 --> 00:05:39.910
+saya perlu hapus atribut Android
+onClick di TextView angka.
+
+00:05:39.910 --> 00:05:46.510
+Di aktivitas utama, saya juga perlu
+menghilangkan metode open numbers list.
+
+00:05:46.510 --> 00:05:52.155
+Kegiatan utama akan hanya diisi
+satu metode, onCreate.
+
+00:05:52.155 --> 00:05:53.547
+Saat saya jalankan aplikasi di perangkat,
+
+00:05:53.547 --> 00:05:55.809
+jika mengklik kategori nomor,
+muncul pesan singkat.
+
+00:05:55.809 --> 00:05:56.309
+Bagus.
+Sekarang kode ClickListener saya sudah bekerja.
+

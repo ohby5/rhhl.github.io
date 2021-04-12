@@ -1,0 +1,417 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:02.190 --> 00:00:04.310
+di MainActivity pada aplikasi Miwok,
+tapi
+
+00:00:04.310 --> 00:00:06.750
+kode yang kita pakai untuk membuat
+intent dalam aplikasi Miwok
+
+00:00:06.750 --> 00:00:10.850
+tampak berbeda dari cara membuat
+dengan intent dalam aplikasi Just Java.
+
+00:00:10.850 --> 00:00:14.074
+Pada kursus terakhir, kita mulai
+belajar tentang intent.
+
+00:00:14.074 --> 00:00:16.699
+Tapi kita belum membahas secara
+utuh tentang berbagai tipe intent.
+
+00:00:16.699 --> 00:00:20.580
+Sebenarnya ada dua tipe intent,
+yaitu implicit intent dan explicit intent.
+
+00:00:20.580 --> 00:00:23.820
+Gunakan implicit intent saat Anda
+tidak tahu komponen mana atau bahkan aplikasi
+
+00:00:23.820 --> 00:00:25.980
+mana yang akan menangani intent Anda.
+
+00:00:25.980 --> 00:00:28.180
+Misalnya, dalam aplikasi media sosial,
+
+00:00:28.180 --> 00:00:30.600
+Anda dapat mengirim intent untuk
+memungkinkan pengguna mengambil foto.
+
+00:00:30.600 --> 00:00:32.980
+Tidak peduli aplikasi kamera mana yang
+menerima intent tersebut,
+
+00:00:32.980 --> 00:00:34.790
+selama aplikasi itu dapat mengambil foto.
+
+00:00:34.790 --> 00:00:38.980
+Di sisi lain, Anda harus membuat explicit
+intent saat Anda tahu pasti
+
+00:00:38.980 --> 00:00:42.030
+komponen aplikasi atau activity mana
+yang akan menangani intent tersebut.
+
+00:00:42.030 --> 00:00:44.920
+Misalnya, dalam aplikasi
+Miwok, dari layar utama
+
+00:00:44.920 --> 00:00:48.490
+saat Anda mengeklik kategori, kita ingin
+mengirim explicit intent
+
+00:00:48.490 --> 00:00:51.650
+ke NumbersActivity di dalam
+aplikasi kita untuk membuka layar tersebut.
+
+00:00:51.650 --> 00:00:54.810
+Tidak masuk akal jika
+activity lain yang menanganinya.
+
+00:00:54.810 --> 00:00:57.210
+Mari kita tinjau tiap
+kasus lebih detail.
+
+00:00:57.210 --> 00:01:00.030
+Anda dapat menggunakan implicit
+intent dalam aplikasi Just Java
+
+00:01:00.030 --> 00:01:02.470
+untuk membuka aplikasi email untuk
+mengirim ringkasan pemesanan.
+
+00:01:02.470 --> 00:01:05.180
+Tak peduli aplikasi email mana
+yang menerima intent,
+
+00:01:05.180 --> 00:01:08.350
+selama aplikasi itu adalah aplikasi email yang
+dapat membawa subjek pesan dan
+
+00:01:08.350 --> 00:01:10.300
+badan serta mengirimnya sebagai email.
+
+00:01:11.310 --> 00:01:15.260
+Ingatlah bahwa dengan menentukan penyaring
+intent dalam file manifest Android,
+
+00:01:15.260 --> 00:01:19.360
+aplikasi seperti aplikasi email memberi tahu
+intent mana yang bisa diterima dan ditangani.
+
+00:01:19.360 --> 00:01:21.730
+Contoh lain implicit intent
+
+00:01:21.730 --> 00:01:23.810
+adalah saat Anda membuka situs
+web dalam aplikasi Anda.
+
+00:01:23.810 --> 00:01:26.900
+Anda dapat mengirim intent ke aplikasi
+browser untuk menampilkan situs web tersebut.
+
+00:01:26.900 --> 00:01:29.310
+Tak peduli browser mana
+yang menangani intent itu.
+
+00:01:29.310 --> 00:01:31.650
+Semuanya mampu menampilkan
+situs web.
+
+00:01:31.650 --> 00:01:35.080
+Kelenturan yang diberikan oleh intent
+sangat bagus saat Anda tidak yakin
+
+00:01:35.080 --> 00:01:37.260
+aplikasi apa yang dimiliki
+pengguna di perangkatnya.
+
+00:01:37.260 --> 00:01:39.310
+Ingat kembali metafora
+melempar bola
+
+00:01:39.310 --> 00:01:40.750
+yang merepresentasikan intent kita.
+
+00:01:40.750 --> 00:01:42.860
+Tak peduli kita
+melempar kepada siapa,
+
+00:01:42.860 --> 00:01:46.850
+selama ada orang yang menangkapnya
+dan ini merepresentasikan implicit intent.
+
+00:01:46.850 --> 00:01:50.840
+Kadang kita ingin yakin 100% bahwa
+saat kita mengirim intent
+
+00:01:50.840 --> 00:01:52.870
+maka suatu komponen khusus
+akan menerimanya.
+
+00:01:52.870 --> 00:01:56.820
+Misalnya, dalam aplikasi Miwok, mengeklik
+kategori akan mengirim explicit
+
+00:01:56.820 --> 00:02:01.560
+intent yang membuka activity baru yang
+menampilkan kosakata di kategori itu.
+
+00:02:01.560 --> 00:02:04.370
+Contoh lainnya adalah
+aplikasi Google Play Music.
+
+00:02:04.370 --> 00:02:07.840
+Di activity tingkat tinggi,
+Anda bisa melihat musik Anda dan
+
+00:02:07.840 --> 00:02:10.729
+mengeklik album akan meluncurkan
+track container activity,
+
+00:02:10.729 --> 00:02:13.800
+yang berisi list lagu
+menurut artis yang spesifik.
+
+00:02:13.800 --> 00:02:16.420
+Jadi activity ini ada di dalam
+aplikasi musik yang sama.
+
+00:02:16.420 --> 00:02:21.350
+Dalam kasus seperti ini, kita menggunakan
+explicit intent, secara eksplisit menyatakan
+
+00:02:21.350 --> 00:02:24.980
+dengan persis activity apa yang harus terbuka
+saat intent diberikan ke sistem Android.
+
+00:02:24.980 --> 00:02:26.970
+Kembali ke metafora
+melempar bola.
+
+00:02:26.970 --> 00:02:30.220
+Untuk explicit intent, ini seperti kita
+menyerukan nama seseorang
+
+00:02:30.220 --> 00:02:33.860
+yang kita tahu ada di sisi lain dan
+siap menangkap bola.
+
+00:02:33.860 --> 00:02:37.710
+Penting untuk tahu bahwa Anda hampir selalu
+tidak boleh memakai explicit intent
+
+00:02:37.710 --> 00:02:41.320
+untuk membuka aplikasi pihak ketiga karena
+kita tidak bisa menjamin bahwa aplikasi pihak
+
+00:02:41.320 --> 00:02:45.460
+ketiga yang ingin kita panggil itu
+benar-benar terinstal di perangkat.
+
+00:02:45.460 --> 00:02:49.240
+Untuk alasan ini, explicit intent biasanya
+digunakan dalam aplikasi yang sama
+
+00:02:49.240 --> 00:02:53.170
+karena pengembang tahu
+activity apa yang tersedia.
+
+00:02:53.170 --> 00:02:55.440
+Baik, sekarang kita sudah tahu
+bahwa ada dua tipe intent, lalu mari kita
+
+00:02:55.440 --> 00:02:58.450
+tinjau apa yang ada di dalam bola
+yang merepresentasikan intent kita.
+
+00:02:58.450 --> 00:03:02.600
+Implicit intent pada umumnya membutuhkan
+action dan URL data.
+
+00:03:02.600 --> 00:03:06.330
+Kita juga dapat menambahkan kategori,
+komponen dan informasi ekstra untuk membantu
+
+00:03:06.330 --> 00:03:09.500
+sistem Android menentukan aplikasi mana
+yang paling baik menangani permintaan ini.
+
+00:03:09.500 --> 00:03:12.410
+Implicit intent sudah tahu
+ke mana harus pergi sehingga
+
+00:03:12.410 --> 00:03:14.470
+memberikan informasi yang sangat spesifik.
+
+00:03:14.470 --> 00:03:16.720
+Kita biasanya hanya perlu memasukkan
+konteks dan
+
+00:03:16.720 --> 00:03:19.610
+komponen yang biasanya berupa kelas
+yang ingin kita tuju.
+
+00:03:19.610 --> 00:03:23.430
+Tapi, ada situasi di mana kita ingin
+mengatur data URL sehingga
+
+00:03:23.430 --> 00:03:26.490
+activity lain dapat menerima
+informasi tertentu.
+
+00:03:26.490 --> 00:03:29.370
+Mari kita lihat kode untuk
+kedua tipe intent ini.
+
+00:03:29.370 --> 00:03:31.729
+Ini adalah contoh
+implicit intent dan
+
+00:03:31.729 --> 00:03:33.536
+contoh explicit intent.
+
+00:03:33.536 --> 00:03:35.555
+Kemiripan dan
+perbedaan apa yang Anda lihat?
+
+00:03:35.555 --> 00:03:39.957
+Untuk kemiripannya, dalam kedua tipe itu,
+kita membuat contoh objek untuk kelas
+
+00:03:39.957 --> 00:03:44.358
+intent, lalu memasukkan intent itu sebagai
+input ke metode startActivity
+
+00:03:44.358 --> 00:03:49.470
+dan dua perbedaan besarnya adalah,
+perhatikan input constructor yang berbeda.
+
+00:03:49.470 --> 00:03:53.667
+Implicit intent meminta string action
+seperti action_view atau
+
+00:03:53.667 --> 00:03:57.380
+action_send untuk memberi tahu action
+generik apa yang dibutuhkan oleh aplikasi.
+
+00:03:57.380 --> 00:04:00.900
+Explicit intent dapat secara langsung menyebut
+nama komponen kelas yang perlu dibuka.
+
+00:04:00.900 --> 00:04:01.690
+Kedua, untuk
+
+00:04:01.690 --> 00:04:05.400
+implicit intent, ada blok if resolve activity
+yang menangkap
+
+00:04:05.400 --> 00:04:08.940
+cases saat tidak ada aplikasi di perangkat
+yang bisa menangani permintaan intent.
+
+00:04:08.940 --> 00:04:10.954
+Sebagai pengingat, untuk implicit intent,
+
+00:04:10.954 --> 00:04:15.043
+kita perlu membuat contoh objek untuk
+kelas intent dan dalam constructor,
+
+00:04:15.043 --> 00:04:18.353
+kita masukkan string action dan
+dalam hal ini adalah action sentTo.
+
+00:04:18.353 --> 00:04:21.612
+Implicit intent juga memiliki
+blok if result activity ini.
+
+00:04:21.612 --> 00:04:24.248
+Di sisi lain, untuk membangun dan
+menyalakan explicit intent,
+
+00:04:24.248 --> 00:04:27.133
+kita membuat contoh kelas intent yang
+baru, memasukkan konteks, dan
+
+00:04:27.133 --> 00:04:28.760
+activity yang ingin kita buka.
+
+00:04:28.760 --> 00:04:32.800
+Lalu kita memanggil startActivity, memasukkan
+contoh intent yang baru saja kita buat.
+
+00:04:32.800 --> 00:04:36.960
+Sebagai penafian, saya ingin menekankan
+bahwa contoh implicit intent yang ini
+
+00:04:36.960 --> 00:04:40.800
+menggunakan intent extras, sementara
+contoh explicit intent yang ini tidak.
+
+00:04:40.800 --> 00:04:45.160
+Tapi, ingat bahwa kedua tipe intent ini
+mampu menangani intent extras.
+
+00:04:45.160 --> 00:04:46.910
+Mari kita praktikkan apa
+yang baru saja Anda pelajari.
+
+00:04:46.910 --> 00:04:50.500
+Dalam skenario berikut,
+tentukan apakah kita menggunakan
+
+00:04:50.500 --> 00:04:51.850
+implicit intent atau explicit intent.
+
+00:04:51.850 --> 00:04:55.970
+Untuk tiap kasus itu, apakah kita harus membuat
+explicit atau implicit intent?
+
+00:04:55.970 --> 00:04:58.840
+Dalam kasus nomor satu, aplikasi perpesanan
+kelompok populer memungkinkan pengguna
+
+00:04:58.840 --> 00:05:02.040
+untuk membuka tautan video yang diterima
+dalam pesan obrolan.
+
+00:05:02.040 --> 00:05:05.740
+Apakah membuka pemutar video harus
+menggunakan implicit atau explicit intent?
+
+00:05:05.740 --> 00:05:09.802
+Dalam kasus nomor dua, dalam aplikasi
+pemesanan makanan, pengguna memilih sajian
+
+00:05:09.802 --> 00:05:12.360
+yang ingin dipesan lalu
+mengeklik tombol kirim pesanan.
+
+00:05:12.360 --> 00:05:16.010
+Lalu aplikasi berpindah dari orderActivity
+ke orderSummaryActivity.
+
+00:05:16.010 --> 00:05:19.154
+Apakah berpindah ke orderSummaryActivity
+harus menggunakan implicit atau
+
+00:05:19.154 --> 00:05:20.126
+explicit intent?
+
+00:05:20.126 --> 00:05:21.437
+Dalam kasus nomor tiga,
+
+00:05:21.437 --> 00:05:25.262
+aplikasi berbagi kendaraan memungkinkan
+pengguna menghubungi sopir lewat pesan teks.
+
+00:05:25.262 --> 00:05:29.002
+Apakah mengakses aplikasi pesan teks di
+ponsel harus menggunakan implicit
+
+00:05:29.002 --> 00:05:30.060
+atau explicit intent?
+

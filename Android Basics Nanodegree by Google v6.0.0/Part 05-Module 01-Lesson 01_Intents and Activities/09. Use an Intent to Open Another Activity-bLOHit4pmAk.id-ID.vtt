@@ -1,0 +1,183 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.480 --> 00:00:04.180
+Aplikasi kita sekarang berisi lima activity,
+tapi semua tidak terhubung.
+
+00:00:04.180 --> 00:00:07.050
+Saat kita membuka aplikasi,
+kita lihat MainActivity, tapi
+
+00:00:07.050 --> 00:00:09.730
+tidak ada cara untuk membuka
+NumbersActivity dari sini.
+
+00:00:09.730 --> 00:00:12.720
+Mari kita pikirkan kepingan yang hilang
+tentang cara membuka activity baru,
+
+00:00:12.720 --> 00:00:14.405
+saat sebuah kategori diklik.
+
+00:00:14.405 --> 00:00:18.105
+Pertama-tama, kita perlu tahu kapan
+pengguna mengeklik kategori tertentu.
+
+00:00:18.105 --> 00:00:20.905
+Lalu kita perlu belajar cara mengirim
+intent untuk membuka activity
+
+00:00:20.905 --> 00:00:22.105
+dalam aplikasi kita.
+
+00:00:22.105 --> 00:00:25.325
+Jika Anda ingat kursus terakhir, kita
+belajar tentang menangani klik tombol
+
+00:00:25.325 --> 00:00:28.025
+di tombol Kirim dalam
+aplikasi Just Java.
+
+00:00:28.025 --> 00:00:29.835
+Kita bisa menerapkan yang dipelajari di sana.
+
+00:00:29.835 --> 00:00:31.851
+Mari mulai dengan menjadikan
+NumbersCategory berfungsi.
+
+00:00:31.851 --> 00:00:35.570
+Dalam file activity_main.xml,
+
+00:00:35.570 --> 00:00:39.360
+Di sinilah NumbersCategory didefinisikan
+dalam aplikasi kita, dan di Android,
+
+00:00:39.360 --> 00:00:41.645
+view apa pun, bukan sekadar tombol.
+
+00:00:41.645 --> 00:00:44.040
+Ingat, tombol adalah
+subkelas view.
+
+00:00:44.040 --> 00:00:47.040
+View apa pun dapat dikonfigurasi
+untuk merespons input sentuhan dan
+
+00:00:47.040 --> 00:00:49.870
+menurut saya lebih mudah mendefinisikan
+semua ini sebagai text view.
+
+00:00:49.870 --> 00:00:53.050
+Lalu, beri style pada view agar
+tampak seperti maket desain.
+
+00:00:53.050 --> 00:00:57.410
+Saya bisa menambahkan atribut klik di
+elemen textView.XML ini
+
+00:00:57.410 --> 00:01:00.130
+seperti yang kita lakukan pada tombol
+Kirim di kursus terakhir.
+
+00:01:00.130 --> 00:01:03.010
+Saya bisa mengatur nilai menjadi
+open number list.
+
+00:01:03.010 --> 00:01:06.380
+yang memberi tahu Android untuk memanggil
+fungsi open number list
+
+00:01:06.380 --> 00:01:08.360
+saat text view ini disentuh.
+
+00:01:08.360 --> 00:01:10.670
+Perhatikan bahwa kita belum
+mengimplementasikan fungsi ini.
+
+00:01:10.670 --> 00:01:14.150
+Mari menuju ke file MainActivity.java
+dan melakukannya.
+
+00:01:14.150 --> 00:01:20.270
+Di file MainActivity, saya membuat metode
+baru bernama OpenNumberList ini.
+
+00:01:20.270 --> 00:01:23.700
+Ini harus merupakan metode public,
+dan memiliki nilai kembali void.
+
+00:01:23.700 --> 00:01:25.370
+Artinya, tidak mengembalikan apa-apa dan
+
+00:01:25.370 --> 00:01:27.920
+saya akan memasukkan satu parameter input,
+yang akan berupa view.
+
+00:01:27.920 --> 00:01:30.490
+Jika Anda bertanya-tanya bagaimana
+saya bisa tahu apa yang harus ditulis,
+
+00:01:30.490 --> 00:01:31.660
+silakan periksa dokumentasi untuk
+
+00:01:31.660 --> 00:01:34.220
+atribut onClick Android dalam
+catatan instruktur di bawah.
+
+00:01:34.220 --> 00:01:36.770
+Baik,
+metode openNumberList
+
+00:01:36.770 --> 00:01:40.300
+akan dipanggil saat numbersCategoryView
+diklik atau disentuh.
+
+00:01:40.300 --> 00:01:43.730
+Ini berarti semua baris kode di dalam
+metode ini akan dieksekusi.
+
+00:01:43.730 --> 00:01:46.910
+Jadi, ini menyelesaikan langkah satu
+dalam menangani klik pengguna.
+
+00:01:46.910 --> 00:01:49.510
+Sekarang, saya akan mempersilakan Anda
+memikirkan langkah dua, yang melibatkan
+
+00:01:49.510 --> 00:01:52.830
+kode yang ada di dalam
+metode OpenNumberList.
+
+00:01:52.830 --> 00:01:55.280
+Anda dapat mengatur intent untuk
+membuka NumbersActivity.
+
+00:01:56.330 --> 00:01:57.940
+Jangan khawatir dengan
+kategori yang lain sekarang.
+
+00:01:57.940 --> 00:02:02.130
+Baik, setelah Anda selesai,
+tampilannya seperti ini.
+
+00:02:02.130 --> 00:02:05.980
+Mengeklik NumbersCategory akan membawa
+Anda ke NumbersActivity, dan
+
+00:02:05.980 --> 00:02:07.910
+dapat diperkirakan jika kategori lain
+belum berfungsi.
+
+00:02:07.910 --> 00:02:10.610
+Itu akan terjadi pada langkah pengodean nanti.
+
+00:02:10.610 --> 00:02:12.720
+Jika Anda butuh petunjuk tentang
+cara melakukan hal ini,
+
+00:02:12.720 --> 00:02:14.050
+silakan periksa catatan
+di bawah kuis gambar.
+

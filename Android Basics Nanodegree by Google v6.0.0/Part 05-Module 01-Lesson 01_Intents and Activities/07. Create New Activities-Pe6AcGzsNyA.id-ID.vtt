@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: id-ID
+
+00:00:00.037 --> 00:00:03.640
+Oke, sekarang kita memiliki pemahaman
+lebih baik tentang MainActivity.
+
+00:00:03.640 --> 00:00:07.130
+Ingat, Anda bisa membayangkan activity
+sebagai satu layar atau aplikasi.
+
+00:00:07.130 --> 00:00:10.610
+Nani di pelajaran lima, kita akan belajar
+bahwa tidak selalu demikian.
+
+00:00:10.610 --> 00:00:13.370
+Tapi untuk saat ini, penyederhanaan ini cukup membantu.
+
+00:00:13.370 --> 00:00:17.393
+Di banyak aplikasi yang telah Anda bangun sejauh
+ini, aplikasi Anda memiliki satu activity.
+
+00:00:17.393 --> 00:00:21.453
+Menjelang akhir aplikasi Just Java, Anda
+menambahkan kode yang mengirim intent ke
+
+00:00:21.453 --> 00:00:25.037
+aplikasi email untuk mengirim email
+dengan ringkasan pemesanan kopi.
+
+00:00:25.037 --> 00:00:28.104
+Lalu aplikasi Miwok juga akan mengirim
+intent, tapi
+
+00:00:28.104 --> 00:00:32.250
+ini kali kita tidak meluncurkan ke dalam
+aplikasi lain di perangkat Android.
+
+00:00:32.250 --> 00:00:36.310
+Justru, kita mengirim intent untuk
+membuka activity lain yang kita buat
+
+00:00:36.310 --> 00:00:38.730
+di dalam aplikasi Miwok.
+
+00:00:38.730 --> 00:00:41.780
+Jadi, kita harus punya lima activity
+dalam aplikasi kita, yaitu MainActivity,
+
+00:00:41.780 --> 00:00:45.640
+dan juga activity untuk masing-masing
+dari keempat kategori kata.
+
+00:00:45.640 --> 00:00:48.260
+Saat kita mengklik kategori di
+MainActivity,
+
+00:00:48.260 --> 00:00:50.960
+kita akan mengirim intent untuk
+membuka activity baru.
+
+00:00:50.960 --> 00:00:54.940
+Ini akan berisi list frasa
+Miwok untuk kategori tersebut.
+
+00:00:54.940 --> 00:00:57.380
+Untuk memulai, semua
+activity akan kosong.
+
+00:00:57.380 --> 00:01:00.540
+Tapi activity ini pada akhirnya akan
+menunjukkan list kata angka, dan
+
+00:01:00.540 --> 00:01:03.200
+activity ini akan menunjukkan list kata
+anggota keluarga, dan
+
+00:01:03.200 --> 00:01:05.820
+seterusnya, untuk warna dan frasa.
+
+00:01:05.820 --> 00:01:08.730
+Mari kita membuat keempat activity
+ini di dalam aplikasi.
+
+00:01:08.730 --> 00:01:11.700
+Saya akan memandu Anda untuk membuat
+activity baru di Android Studio.
+
+00:01:11.700 --> 00:01:14.960
+Klik kanan di package
+di direktori project,
+
+00:01:14.960 --> 00:01:17.328
+mengarah ke New Activity lalu Empty Activity dan klik.
+
+00:01:17.328 --> 00:01:19.818
+Saat wizard keluar, berilah
+nama untuk activity.
+
+00:01:19.818 --> 00:01:22.442
+Dalam hal ini, kita akan menggunakan
+NumbersActivity, dan
+
+00:01:22.442 --> 00:01:24.950
+menerima default dan mengeklik Finish.
+
+00:01:24.950 --> 00:01:26.460
+Sekarang giliran Anda untuk
+membuat activity untuk
+
+00:01:26.460 --> 00:01:30.960
+kategori yang lain, yaitu frasa,
+warna, dan anggota keluarga.
+
+00:01:30.960 --> 00:01:33.890
+Jika Anda jalankan aplikasi di perangkat,
+seharusnya tidak ada kesalahan.
+
+00:01:33.890 --> 00:01:36.610
+Tapi, Anda tidak akan dapat mengeklik
+tombol kategori untuk membuka
+
+00:01:36.610 --> 00:01:39.870
+activity hingga kita menambahkan
+kode lebih banyak di langkah selanjutnya.
+
+00:01:39.870 --> 00:01:44.380
+Setelah Anda membuat tiap activity baru,
+masuklah ke file AndroidManifest.XML
+
+00:01:44.380 --> 00:01:48.440
+di bawah folder App Manifest
+untuk mengamati bagaimana perubahannya.
+
+00:01:48.440 --> 00:01:50.830
+Sekarang, untuk mengingat apakah
+tugas Anda,
+
+00:01:50.830 --> 00:01:53.585
+saya ingin Anda membuat empat activity
+baru di aplikasi Miwok.
+
+00:01:53.585 --> 00:01:55.240
+Sehingga akan ada PhrasesActivity,
+
+00:01:55.240 --> 00:01:59.440
+NumbersActivity, FamilyActivity,
+dan ColorsActivity.
+
+00:01:59.440 --> 00:02:00.750
+Selanjutnya,
+
+00:02:00.750 --> 00:02:05.870
+masuklah ke file AndroidManifest.XML
+lalu jawab pertanyaan ini.
+
+00:02:05.870 --> 00:02:08.630
+Bagaimana file AndroidManifest.XML
+
+00:02:08.630 --> 00:02:11.180
+berubah saat Anda menambahkan lebih
+banyak activity ke aplikasi?
+
+00:02:11.180 --> 00:02:14.330
+Saya tahu ini adalah file baru yang
+belum pernah Anda lihat, tapi
+
+00:02:14.330 --> 00:02:17.280
+cobalah menebak dengan alasan kuat
+dengan memeriksa perubahan visual
+
+00:02:17.280 --> 00:02:20.750
+yang Anda lihat di file itu, dan
+tuliskan jawaban Anda di sini.
+

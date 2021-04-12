@@ -1,0 +1,180 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:03.900
+Acabamos de ver o arquivo
+Android manifest pela 1ª vez
+
+00:00:03.933 --> 00:00:07.533
+e ainda que seja um arquivo XML,
+pode ser intimidante olhar para ele,
+
+00:00:07.567 --> 00:00:09.433
+porque parece diferente
+dos arquivos de layout
+
+00:00:09.467 --> 00:00:13.267
+e recursos XML que nos acostumamos
+a ver em outras partes do app.
+
+00:00:13.300 --> 00:00:16.200
+Então acho que pode ser útil
+fornecer um contexto desse arquivo.
+
+00:00:16.233 --> 00:00:21.167
+Todo app precisa ter um arquivo
+Android manifest.xml
+
+00:00:21.200 --> 00:00:24.600
+com esse nome exato, mas felizmente
+não precisamos nos preocupar em criar um.
+
+00:00:24.633 --> 00:00:27.100
+Esse arquivo é gerado
+automaticamente
+
+00:00:27.133 --> 00:00:30.133
+sempre que criamos um novo aplicativo
+no Studio Android.
+
+00:00:30.167 --> 00:00:33.133
+Você pode pensar nesse arquivo
+como um índice do seu app.
+
+00:00:33.167 --> 00:00:34.200
+Deixe-me explicar.
+
+00:00:34.233 --> 00:00:37.533
+Em um livro assim, temos um índice
+que ajuda a resumir
+
+00:00:37.567 --> 00:00:39.367
+o conteúdo do livro.
+
+00:00:39.400 --> 00:00:43.500
+De modo similar, o arquivo manifest
+resume a informação importante
+
+00:00:43.533 --> 00:00:46.067
+sobre o app
+em um único lugar.
+
+00:00:46.100 --> 00:00:49.033
+Quando instalar o app em um dispositivo,
+o sistema Android
+
+00:00:49.067 --> 00:00:52.267
+olha 1º este arquivo antes
+de executar qualquer código nele.
+
+00:00:52.300 --> 00:00:53.700
+Então, o que este arquivo
+contém?
+
+00:00:53.733 --> 00:00:57.600
+Pelo último exercício, você nota
+que todas as atividades precisam ser listadas
+
+00:00:57.633 --> 00:00:59.033
+no arquivo
+Android manifest.
+
+00:00:59.067 --> 00:01:03.600
+Bom, esse manifesto também contém
+outras informações importantes, como o nome
+
+00:01:03.633 --> 00:01:08.133
+do pacote Java, que é o identificador
+do app, componentes do app,
+
+00:01:08.167 --> 00:01:12.467
+por exemplo, os nomes das atividades,
+intents, permissões para notificações
+
+00:01:12.500 --> 00:01:17.833
+ou usar a câmera, e também ajuda
+a configurar o Android API mínimo,
+
+00:01:17.867 --> 00:01:22.233
+ou seja, especificar com que versões
+do Android o app é compatível.
+
+00:01:22.267 --> 00:01:26.467
+No arquivo Android manifest
+para nosso app Miwok, aqui está o nome
+
+00:01:26.500 --> 00:01:28.100
+do pacote e os componentes
+do nosso app.
+
+00:01:28.133 --> 00:01:30.933
+Isso leva ao tema do nosso app,
+onde o tema do app
+
+00:01:30.967 --> 00:01:34.833
+do arquivo styles.xml
+é aplicado, então nosso app
+
+00:01:34.867 --> 00:01:39.300
+e barra de status serão marrons,
+e aqui é onde nosso ícone está especificado.
+
+00:01:39.333 --> 00:01:43.167
+Na janela de todos os apps de nosso dispositivo,
+vemos uma cesta como ícone
+
+00:01:43.200 --> 00:01:44.333
+do nosso app Miwok.
+
+00:01:44.367 --> 00:01:47.800
+Dentro do app, temos 5 atividades
+listadas aqui.
+
+00:01:47.833 --> 00:01:52.033
+Na tag MainActivity, também vemos
+algo chamado intent filter.
+
+00:01:52.067 --> 00:01:56.000
+Lembre-se que um intent é uma mensagem
+que pede que algum tipo de ação
+
+00:01:56.033 --> 00:01:57.767
+seja feita por outro app.
+
+00:01:57.800 --> 00:02:02.033
+Assim, apps podem especificar
+intent filters para dizer a outros apps
+
+00:02:02.067 --> 00:02:05.700
+"ei, posso receber um tipo de intent
+e fazer alguma ação para você".
+
+00:02:05.733 --> 00:02:08.200
+Esse intent filter
+com o nome da ação
+
+00:02:08.233 --> 00:02:12.067
+e iniciador da categoria indica que esta
+é uma porta de entrada para nosso app.
+
+00:02:12.100 --> 00:02:15.867
+Quando um usuário tocar no ícone
+do app Miwok na tela do dispositivo,
+
+00:02:15.900 --> 00:02:18.100
+o Android enviará
+um intent para iniciar nosso app.
+
+00:02:18.133 --> 00:02:21.433
+Esta atividade receberá esse intent
+e abrir a tela.
+
+00:02:21.467 --> 00:02:24.367
+Teremos a chance de praticar
+modificar o Android manifest.xml
+
+00:02:24.400 --> 00:02:27.400
+mais tarde nesta lição, mas por enquanto
+vamos voltar a construir nosso app.
+

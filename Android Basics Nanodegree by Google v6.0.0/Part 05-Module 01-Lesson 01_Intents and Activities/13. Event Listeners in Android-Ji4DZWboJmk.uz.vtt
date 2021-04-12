@@ -1,0 +1,230 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.000 --> 00:00:01.920
+Endi bizning ilovamizga qaytaylik.
+
+00:00:01.920 --> 00:00:04.935
+Men sahna ortida nimalar bo‘layotganini 
+tushunishga e’tibor qaratmoqchiman,
+
+00:00:04.935 --> 00:00:06.540
+Android da biror nima bosilganda.
+
+00:00:06.540 --> 00:00:08.610
+Agar biz ilovadagi raqamlar toifasiga kirsak,
+
+00:00:08.610 --> 00:00:12.405
+ochiq raqamlar ro‘yxati usuli qanday 
+qilib sehrli tarzda bajariladi?
+
+00:00:12.405 --> 00:00:16.350
+Xo‘sh, biz bu activity_main.xml 
+faylini ko‘rdik,
+
+00:00:16.350 --> 00:00:21.300
+biz bosish xatti-harakatlarini 
+Android onclick atributini 
+
+00:00:21.300 --> 00:00:23.280
+XML tartibidagi ko‘rinishga qo‘shib belgilaymiz.
+
+00:00:23.280 --> 00:00:27.315
+Shunday qilib, aslida bu Android ta’minlaydigan 
+XML-da juda qulay qisqa yo‘l.
+
+00:00:27.315 --> 00:00:28.800
+Biroq, biz sizga qanday 
+qilishni o‘rgatmoqchimiz
+
+00:00:28.800 --> 00:00:32.580
+professional ishlab chiquvchilar odatda o‘zlarining 
+ilovalariga hookup tugmachalari kodi mantig‘iga ega.
+
+00:00:32.580 --> 00:00:34.035
+Endi ushbu dars oxiriga kelib,
+
+00:00:34.035 --> 00:00:37.655
+biz ushbu tugmachani bosish bilan atributlar xatti-harakatlarini miwok ilovasida bajaramiz.
+
+00:00:37.655 --> 00:00:42.080
+Ammo bu safar faqat Java kodi va hech qanday XML o‘zgarishi yo‘q.
+
+00:00:42.080 --> 00:00:44.915
+Foydalanuvchi Android qurilmangiz bilan ishlayotganida,
+
+00:00:44.915 --> 00:00:47.585
+ular ekranga tegib, ilovalar bilan o‘zaro ta’sirlashadi
+
+00:00:47.585 --> 00:00:51.290
+va bu Android-da foydalanuvchi kiritish voqealariga to‘g‘ri keladi.
+
+00:00:51.290 --> 00:00:54.770
+Masalan, ko‘rish bosilganda klik voqeasi mavjud.
+
+00:00:54.770 --> 00:00:59.045
+Boshqa turdagi tadbirlar qatoriga uzoq vaqt bosish orqali tortib olish voqealari,
+
+00:00:59.045 --> 00:01:02.810
+muhim voqealar, bu klaviaturadagi tugma bosilganda,
+
+00:01:02.810 --> 00:01:04.250
+va boshqalar juda ko‘p.
+
+00:01:04.250 --> 00:01:06.560
+Aytaylik, foydalanuvchi ekrandagi tugmani bosdi,
+
+00:01:06.560 --> 00:01:10.425
+ekran uskunasi teginishni aniqlaydi va Android-ga bosish yuz berganligi haqida xabar beradi.
+
+00:01:10.425 --> 00:01:14.240
+Keyin Android ekranni ekranga tegizgan joyida aniqlaydi.
+
+00:01:14.240 --> 00:01:16.650
+Endi juda yoqimli narsa shundaki, siz olishni tanlashingiz mumkin
+
+00:01:16.650 --> 00:01:20.325
+ma’lum bir ko‘rinishda ma’lum bir voqealar yuz berganda xabardor qilinadi.
+
+00:01:20.325 --> 00:01:21.990
+Kodda aytishingiz mumkin:
+
+00:01:21.990 --> 00:01:25.050
+"Men bu voqea qachon sodir bo‘lishini bilmoqchiman."
+
+00:01:25.050 --> 00:01:29.535
+Shuning uchun ishlab chiquvchilar ko‘pincha ushbu paradigmani ma’lum bir voqeani tinglash deb bilishadi.
+
+00:01:29.535 --> 00:01:32.580
+Biror tarzda, siz o‘zingizning ilovangizni qulog‘i bor deb o‘ylashingiz mumkin,
+
+00:01:32.580 --> 00:01:34.935
+sizni qiziqtirgan ba’zi signallarni tinglash.
+
+00:01:34.935 --> 00:01:37.395
+Ma’lum bir foydalanuvchi hodisalari bo‘lgan signallar.
+
+00:01:37.395 --> 00:01:39.345
+Hodisa sodir bo‘lganligini bilganingizdan so‘ng,
+
+00:01:39.345 --> 00:01:41.610
+nima bo‘lishini aniq dasturlashingiz mumkin
+
+00:01:41.610 --> 00:01:44.475
+foydalanuvchi foydalanuvchi interfeysi interfeysining muayyan qismi bilan o‘zaro aloqada bo‘lganda.
+
+00:01:44.475 --> 00:01:47.390
+Xo‘sh, ushbu sozlamani o‘zingizning ilovangizda qanday o‘rnatasiz?
+
+00:01:47.390 --> 00:01:51.170
+Xo‘sh, siz ushbu ko‘rinish uchun tadbir tinglovchisi ob’ekti yaratishingiz mumkin.
+
+00:01:51.170 --> 00:01:54.695
+Va voqea sodir bo‘lganda nima bo‘lishi kerakligini belgilaysiz.
+
+00:01:54.695 --> 00:01:56.570
+Shunday qilib, ushbu diagrammada
+
+00:01:56.570 --> 00:01:58.100
+klik voqealariga qiziqamiz.
+
+00:01:58.100 --> 00:02:02.120
+Shunday qilib, biz chertish orqali tinglovchilarni yaratamiz va ko‘rsatmalarni to‘ldiramiz,
+
+00:02:02.120 --> 00:02:04.460
+onclick usuli bilan sodir bo‘ladigan narsa deyiladi.
+
+00:02:04.460 --> 00:02:06.750
+Ushbu ko‘rsatmalar xohlagan narsangiz bo‘lishi mumkin.
+
+00:02:06.750 --> 00:02:09.785
+Foydalanuvchi ushbu ko‘rinishni bosganda yangi ekranni ochishingiz mumkin,
+
+00:02:09.785 --> 00:02:11.350
+ushbu ko‘rinishni o‘zgartirish,
+
+00:02:11.350 --> 00:02:15.200
+butun ekranning yoki boshqa biron bir narsaning fon rangini o‘zgartirish.
+
+00:02:15.200 --> 00:02:17.480
+OnClickListener-ni yaratganingizdan so‘ng,
+
+00:02:17.480 --> 00:02:22.675
+oxirgi qadam, uni bosish uchun tinglashni xohlagan ko‘rinishga yopishtirishdir.
+
+00:02:22.675 --> 00:02:24.985
+Shunday qilib, bosish hodisasi yuz berganda,
+
+00:02:24.985 --> 00:02:28.300
+agar ko‘rinishda klik tinglovchi u bilan bog‘liq bo‘lsa,
+
+00:02:28.300 --> 00:02:31.305
+Android bu yerda siz kiritgan kodni bajaradi.
+
+00:02:31.305 --> 00:02:33.520
+Bu jarayon barchasida ro‘y beradi
+
+00:02:33.520 --> 00:02:37.935
+tezda va har bir qadamning barcha tafsilotlarini eslab qolishingiz shart emas.
+
+00:02:37.935 --> 00:02:40.055
+Dasturchi sifatida sizning asosiy roli,
+
+00:02:40.055 --> 00:02:44.885
+o‘zingizning ilovangizda qiziqqan voqealar uchun tadbir tinglovchilarini sozlash,
+
+00:02:44.885 --> 00:02:48.895
+va Android siz belgilaganingizdek kodni ishlatish uchun g‘amxo‘rlik qiladi.
+
+00:02:48.895 --> 00:02:51.730
+Bu Android-dagi ba’zi voqealarni tinglovchilar ro‘yxati.
+
+00:02:51.730 --> 00:02:54.580
+Har bir tadbir tinglovchisi bitta qo‘ng‘iroqni qaytarish usulini taklif qiladi,
+
+00:02:54.580 --> 00:02:56.155
+uchun kodni taqdim etishingiz mumkin.
+
+00:02:56.155 --> 00:03:00.950
+Bu qo‘ng‘iroqni qaytarish usuli deb nomlandi, chunki voqea sodir bo‘lganda sizga qayta qo‘ng‘iroq qilishadi.
+
+00:03:00.950 --> 00:03:02.165
+Endi keling, bu yerda to‘xtalamiz.
+
+00:03:02.165 --> 00:03:05.690
+Maqolaning ushbu qismida eslatib o‘tilgan voqea sizni qiziqtirsa,
+
+00:03:05.690 --> 00:03:07.850
+siz bosadigan tinglovchi yaratishingiz kerak.
+
+00:03:07.850 --> 00:03:09.215
+Shunday qilib, u erga boraylik.
+
+00:03:09.215 --> 00:03:11.930
+Va bu yerda onclick usuli mavjud
+
+00:03:11.930 --> 00:03:14.480
+siz ontlick usuli uchun ko‘rsatmalarni to‘ldirasiz,
+
+00:03:14.480 --> 00:03:18.130
+foydalanuvchi ushbu tugmani bosganida, Android ushbu usulni chaqirish haqida g‘amxo‘rlik qiladi.
+
+00:03:18.130 --> 00:03:20.270
+Qo‘shimcha eslatma sifatida biz teginish haqida gapiramiz
+
+00:03:20.270 --> 00:03:22.700
+tarixiy sabablarga ko‘ra ekranni bosish sifatida.
+
+00:03:22.700 --> 00:03:26.480
+Kompyuter stolida sichqonchadan foydalanish,
+
+00:03:26.480 --> 00:03:29.225
+sichqoncha tugmachasini bosganingizda,
+
+00:03:29.225 --> 00:03:30.950
+sichqonchani bosdi.
+
+00:03:30.950 --> 00:03:34.760
+Va bu yerda birinchi sichqonchaning tasviri.
+

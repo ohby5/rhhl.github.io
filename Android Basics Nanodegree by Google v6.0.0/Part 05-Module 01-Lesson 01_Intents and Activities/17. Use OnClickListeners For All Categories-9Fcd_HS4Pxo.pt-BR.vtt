@@ -1,0 +1,207 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.601
+Certo, escrevemos
+muitas linhas de código.
+
+00:00:03.634 --> 00:00:06.601
+Agora vou mostrar outra forma
+que poderíamos ter escrito
+
+00:00:06.634 --> 00:00:09.133
+o clickListener sem escrever
+tantas linhas.
+
+00:00:09.167 --> 00:00:12.033
+Como desenvolvedores, queremos
+ser o mais concisos possível,
+
+00:00:12.067 --> 00:00:14.634
+para o código ficar mais fácil
+para outras pessoas lerem.
+
+00:00:14.667 --> 00:00:17.100
+Agora estou
+no MainActivity.java.
+
+00:00:17.133 --> 00:00:19.901
+Note que criamos a variável
+OnClickListener aqui,
+
+00:00:19.934 --> 00:00:21.701
+mas apenas a usamos
+uma vez aqui.
+
+00:00:21.734 --> 00:00:25.734
+Então vou mostrar uma nova maneira
+de criar um objeto nessa linha.
+
+00:00:25.767 --> 00:00:28.834
+Vou cortar essa parte
+e substituir o objeto aqui.
+
+00:00:28.868 --> 00:00:30.300
+Bom.
+
+00:00:30.334 --> 00:00:32.234
+Agora podemos deletar
+esta linha.
+
+00:00:32.267 --> 00:00:34.601
+E agora o código está simplificado
+e tem essa aparência.
+
+00:00:34.634 --> 00:00:37.200
+Então menos linhas de código
+parecem melhor.
+
+00:00:37.234 --> 00:00:39.834
+Quero mostrar como podemos
+deixar isso ainda mais conciso.
+
+00:00:39.868 --> 00:00:43.734
+Em vez de criar uma classe
+NumbersClickListener totalmente nova,
+
+00:00:43.767 --> 00:00:47.167
+em um arquivo totalmente novo,
+podemos declará-la "in line"
+
+00:00:47.200 --> 00:00:49.767
+quando acionamos o set
+OnClickListener.
+
+00:00:49.801 --> 00:00:52.767
+Então vou substituir
+o que coloquei aqui,
+
+00:00:52.801 --> 00:00:56.801
+este novo NumbersClickListener
+por OnClickListener. E lembre-se,
+
+00:00:56.834 --> 00:01:00.734
+o NumbersClickListener veio
+da classe OnClickListener.
+
+00:01:00.767 --> 00:01:03.267
+Agora vou adicionar
+um colchete
+
+00:01:03.300 --> 00:01:06.567
+e implementar o método OnClick,
+aqui na linha.
+
+00:01:06.601 --> 00:01:09.167
+Então nenhuma classe Java extra
+será necessária.
+
+00:01:09.200 --> 00:01:11.901
+Agora posso colocar o que quiser
+no método onClick.
+
+00:01:11.934 --> 00:01:16.701
+Posso mostrar um pop-up ou abrir
+a atividade Números, qualquer coisa.
+
+00:01:16.734 --> 00:01:20.334
+Dito isso, vamos adicionar mais códigos
+para abrir a atividade Números.
+
+00:01:20.367 --> 00:01:24.400
+Se você lembra do código de antes,
+podemos criar um intent novo
+
+00:01:24.434 --> 00:01:26.534
+e acionar startActivity
+nesse intent.
+
+00:01:26.567 --> 00:01:30.133
+Vamos ver como fica.
+Lembre-se de prestar atenção
+
+00:01:30.167 --> 00:01:35.300
+aos colchetes, parênteses e ponto e vírgula
+ao fim de cada frase.
+
+00:01:35.334 --> 00:01:38.934
+É bem comum esquecer algum,
+mas felizmente no Studio,
+
+00:01:38.968 --> 00:01:41.667
+se clicar em um colchete,
+ele destaca o seu par.
+
+00:01:42.801 --> 00:01:46.534
+Agora vou voltar e deletar
+o arquivo NumbersClickListener
+
+00:01:46.567 --> 00:01:48.067
+porque não será usado
+em lugar algum agora.
+
+00:01:48.100 --> 00:01:52.200
+Eu basicamente movi o código
+para minha atividade principal.
+
+00:01:52.234 --> 00:01:56.501
+O que aprendemos antes é equivalente
+a esta nova maneira de criar click listeners,
+
+00:01:56.534 --> 00:01:59.701
+e aqui estão as mesmas 3 etapas
+em número menor de linhas de código.
+
+00:01:59.734 --> 00:02:02.300
+Na maior parte, sempre configuro meus
+click listeners assim, em fila,
+
+00:02:02.334 --> 00:02:03.300
+conforme necessários.
+
+00:02:03.334 --> 00:02:06.400
+Isso deixa o código mais fácil de ler
+porque a lógica do click listener
+
+00:02:06.434 --> 00:02:09.200
+fica próxima da view,
+em vez de em outro arquivo.
+
+00:02:09.234 --> 00:02:12.133
+Claro, sempre há casos
+em que isto não é o ideal.
+
+00:02:12.167 --> 00:02:15.934
+Mas se você tiver um click listener usado
+em muitas partes do seu código,
+
+00:02:15.968 --> 00:02:17.067
+não precisa ficar copiando
+
+00:02:17.100 --> 00:02:20.234
+e colando o mesmo bloco de código
+em diferentes arquivos do seu app.
+
+00:02:20.267 --> 00:02:21.601
+Agora é sua vez.
+
+00:02:21.634 --> 00:02:25.868
+Dentro do arquivo da atividade principal,
+ligue click listeners a cada view
+
+00:02:25.901 --> 00:02:29.133
+das categorias para números, frases,
+cores e membros da família.
+
+00:02:29.167 --> 00:02:32.734
+Deixe os click listeners enfileirados,
+como mostramos,
+
+00:02:32.767 --> 00:02:35.534
+e incluímos o código para você
+usar como referência.
+
+00:02:35.567 --> 00:02:36.067
+Boa sorte!
+

@@ -1,0 +1,446 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.530 --> 00:00:01.839
+Hammasi joyida.
+o‘ylaymanki, nima sababdan 
+
+00:00:01.839 --> 00:00:05.220
+OnClickListener ni onClick deb 
+nomlangan mavhum metod bilan interfeys 
+
+00:00:05.220 --> 00:00:07.820
+ekanligini yaxshiroq tushunasiz.
+
+00:00:07.820 --> 00:00:11.460
+Dasturchi sifatida sizning vazifangiz 
+ilovangizda kirishni istagan 
+
+00:00:11.460 --> 00:00:14.230
+kirish hodisalari uchun hodisalar 
+tinglovchilarini sozlashdir.
+
+00:00:14.230 --> 00:00:19.080
+Aniqrog‘i, har bir tinglovchi uchun uchta 
+bosqichni bajarishingiz kerak.
+
+00:00:19.080 --> 00:00:21.430
+1-bosqich, hodisa tinglovchisini va 
+
+00:00:21.430 --> 00:00:24.500
+odatdagi harakatni yoki 
+voqea sodir bo‘lganini aniqlang.
+
+00:00:24.500 --> 00:00:27.290
+2-bosqich, konstruktorni chaqirib, 
+
+00:00:27.290 --> 00:00:29.278
+voqea tinglovchisining yangi 
+ob’ekt namunasini yarating.
+
+00:00:29.278 --> 00:00:33.440
+Va 3-bosqich, tinglovchilarni voqealarni 
+tinglaydigan ko‘rinishga biriktiring.
+
+00:00:33.440 --> 00:00:36.170
+Va keyin sizga har bir qadamda 
+kerak bo‘lgan kodni ko‘rsataman.
+
+00:00:36.170 --> 00:00:39.070
+Avval biz interfeysni amalga oshiradigan 
+voqea tinglovchisi sinfini 
+
+00:00:39.070 --> 00:00:39.990
+aniqlashimiz kerak.
+
+00:00:39.990 --> 00:00:43.310
+Siz sinflarni nomlash uchun 
+Java qoidalariga rioya qilgan holda, 
+
+00:00:43.310 --> 00:00:44.840
+xohlagan kodingizga
+murojaat qilishingiz mumkin.
+
+00:00:44.840 --> 00:00:48.255
+Bunday holda, sinfga 
+ClassClickListener nomini berdik.
+
+00:00:48.255 --> 00:00:52.580
+Va bu kod yangi e’lon qilingan 
+NumbersClickListener.java da joylashgan.
+
+00:00:52.580 --> 00:00:56.210
+Raqamlar NumbersClickListener sinfini
+aniqlaganimizda, e’lon qilishda public class 
+
+00:00:56.210 --> 00:00:59.530
+deb aytiladi, undan keyin sinf nomi, 
+so‘ngra so‘z bajaruvchi va 
+
+00:00:59.530 --> 00:01:03.930
+keyin interfeys nomi, 
+bu holda OnClickListener bo‘ladi.
+
+00:01:03.930 --> 00:01:07.240
+Shuni yodda tutingki, ushbu ishlar maxsus 
+ma’noga ega bo‘lgan Java kalit so‘zidir.
+
+00:01:07.240 --> 00:01:09.870
+Va ushbu maxsus kalit so‘zlarning 
+ro‘yxatini Java Oracle hujjatlarida 
+
+00:01:09.870 --> 00:01:12.060
+mana bu yerdan topishingiz mumkin.
+
+00:01:12.060 --> 00:01:16.270
+Biz uskunalardan foydalanamiz, chunki 
+NumbersClickListener sinfi belgilangan 
+
+00:01:16.270 --> 00:01:20.450
+interfeysni qo‘llab-quvvatlaydi va 
+uning barcha mavhum usullariga kod beradi.
+
+00:01:20.450 --> 00:01:23.150
+OnClickListener interfeysini ishga 
+tushirib, 
+
+00:01:23.150 --> 00:01:27.460
+Android kodidagi OnClickListener 
+ob’ekti turini kutadigan har bir narsa uchun 
+
+00:01:27.460 --> 00:01:29.570
+biz NumerlikClickListener dan 
+foydalanishimiz mumkin.
+
+00:01:29.570 --> 00:01:33.810
+Va metoddan oldin bizda bu @Override 
+annotatsiyasi bo‘ladi.
+
+00:01:33.810 --> 00:01:37.550
+Bu shuni anglatadiki, biz interfeysda bo‘sh 
+metodni bekor qilmoqdamiz va o‘zimiz 
+
+00:01:37.550 --> 00:01:39.280
+bajarishni ta’minlaymiz.
+
+00:01:39.280 --> 00:01:42.969
+OnClick metodini amalga oshirishimiz 
+shundan iboratki, biz qisqa xabarda
+
+00:01:42.969 --> 00:01:45.390
+raqamlar ro‘yxatini ochishini xohlaymiz.
+
+00:01:45.390 --> 00:01:47.900
+Biz bu yerda boshqa har qanday mijozning 
+xatti-harakatlarini taqdim etishimiz mumkin.
+
+00:01:47.900 --> 00:01:49.010
+Bu shunchaki misol.
+
+00:01:49.010 --> 00:01:51.480
+Bizning raqamlarimizni aniqlagandan so‘ng, 
+clickListener sinfini tanlang.
+
+00:01:51.480 --> 00:01:53.630
+Buning o‘rniga ob’ekt 
+namunasini yaratishimiz kerak.
+
+00:01:53.630 --> 00:01:57.050
+Agar siz oxirgi kursdan eslasangiz, 
+bizda sinf shabloniga egamiz, 
+
+00:01:57.050 --> 00:01:59.360
+lekin buning uchun ob’ekt 
+namunalarini yaratishimiz kerak.
+
+00:01:59.360 --> 00:02:02.990
+Biz shunchaki 1-qavat rejasini tuzdik, 
+ammo bizga haqiqiy uy kerak.
+
+00:02:02.990 --> 00:02:06.230
+Konstruktor yordamida ob’ekt yaratish 
+uchun sintaksisni eslang.
+
+00:02:06.230 --> 00:02:09.229
+NumbersClickListener ni yaratish uchun 
+biz yangi 
+
+00:02:09.229 --> 00:02:12.660
+kalit so‘z bilan sinf uchun konstruktorni 
+chaqirishimiz mumkin.
+
+00:02:12.660 --> 00:02:16.100
+Bu ushbu o‘zgaruvchini chap tomonda 
+saqlashimiz mumkin bo‘lgan yangi 
+
+00:02:16.100 --> 00:02:19.218
+ob’ektni yaratadi, bu yerda ushbu 
+o‘zgaruvchi mana bunday ma’lumot turiga kiradi.
+
+00:02:19.218 --> 00:02:20.320
+Miwok ilovasida
+
+00:02:20.320 --> 00:02:23.080
+kod asosiy faoliyat faylidagi kabi ko‘rinadi.
+
+00:02:23.080 --> 00:02:26.900
+Sahifa yaratilishi bilanoq biz darhol 
+bosish voqealarini tinglashni 
+
+00:02:26.900 --> 00:02:29.600
+boshlashimiz uchun asosiy 
+sahifani o‘zgartiramiz.
+
+00:02:29.600 --> 00:02:32.870
+Biz yangi NumbersClickListener ob’ektini 
+yaratmoqdamiz va uni 
+
+00:02:32.870 --> 00:02:35.470
+ClickListener nomli 
+o‘zgaruvchiga saqlaymiz, 
+
+00:02:35.470 --> 00:02:38.980
+u o‘zgaruvchining ma’lumot turi
+NumbersClickListener bo‘ladi.
+
+00:02:38.980 --> 00:02:42.040
+Shunday qilib, bizda bir sonli ob’ektlar 
+soni bo‘lsa, 
+
+00:02:42.040 --> 00:02:45.790
+uni bosish uchun tinglashni 
+istagan ko‘rinishga biriktirishimiz kerak.
+
+00:02:45.790 --> 00:02:47.140
+Mana buning kodlari.
+
+00:02:47.140 --> 00:02:50.560
+Agar biz buttonView deb nomlangan 
+o‘zgaruvchini saqlaganmiz deb faraz qilsak, 
+
+00:02:50.560 --> 00:02:54.150
+biz o‘sha ko‘rinishga OnClickListener 
+metodini chaqirishimiz kerak va 
+
+00:02:54.150 --> 00:02:58.240
+ClickListener o‘zgaruvchisining bitta parametr 
+argumentiga o‘tamiz.
+
+00:02:58.240 --> 00:03:01.620
+Ushbu metodni kirish argumenti 
+bilan chaqirishini qanday bilamiz?
+
+00:03:01.620 --> 00:03:03.860
+Qo‘lda ishlaydigan hujjatlarimizga qaytamiz.
+
+00:03:03.860 --> 00:03:07.370
+Bu yerda biz View sinfini ko‘rib 
+chiqamiz va unda 
+
+00:03:07.370 --> 00:03:11.508
+OnClickListener da o‘tadigan 
+setOnClickListener metodi mavjud.
+
+00:03:11.508 --> 00:03:14.270
+NumbersClickListener ushbu interfeysni 
+amalga oshirganligi sababli, 
+
+00:03:14.270 --> 00:03:17.070
+u OnClickListener ma’lumotlar 
+turi hisoblanadi va biz buni metodga 
+
+00:03:17.070 --> 00:03:20.180
+kirish sifatida o‘tkaza olamiz.
+
+00:03:20.180 --> 00:03:23.640
+Endi kodni ilova kontekstida qanday 
+ko‘rinishini ko‘rib chiqaylik.
+
+00:03:23.640 --> 00:03:26.730
+Biroq, bu o‘zgartirishlarni hanuzgacha 
+kiritishingiz shart emas.
+
+00:03:26.730 --> 00:03:29.680
+Keyingi videodagi mashq sizga nima 
+qilishimiz kerakligi haqida 
+
+00:03:29.680 --> 00:03:31.160
+aniq ko‘rsatmalar beradi.
+
+00:03:31.160 --> 00:03:34.420
+Shuning uchun shunchaki bizga ergashing
+va mantiqni tushunishga harakat qiling.
+
+00:03:34.420 --> 00:03:37.010
+Shunday qilib, men bu yerda 
+DigitalClickListener sinfini 
+
+00:03:37.010 --> 00:03:39.450
+yaratdim va uni Java faylining 
+ichida deb belgiladim.
+
+00:03:39.450 --> 00:03:42.810
+Eslang, biz kodni ushbu maxsus 
+to‘plam nomi bilan biriktirib qo‘yishimiz 
+
+00:03:42.810 --> 00:03:46.380
+uchun kodda to‘plam nomini belgilaymiz.
+
+00:03:46.380 --> 00:03:49.330
+So‘ngra bizda View va Toast 
+sinflaridan foydalanilganligimiz sababli 
+
+00:03:49.330 --> 00:03:50.340
+import haqidagi ma’lumotlar mavjud.
+
+00:03:50.340 --> 00:03:52.560
+Biz ularni o‘zimiz yaratmagan bo‘lsak ham, 
+ulardan foydalanishimiz mumkin, 
+79
+00:03:52,560 --&gt; 00:03:53 900
+chunki biz ularni import qilamiz.
+
+00:03:53.900 --> 00:03:59.630
+Keyin sinf e’lon qilishlarida 
+View.OnClickListener qatorlari mavjud.
+
+00:03:59.630 --> 00:04:03.310
+Va shuni ta’kidlashni istardimki, 
+biz View.OnClickListener ni ushbu 
+
+00:04:03.310 --> 00:04:06.990
+paketdagi view.java faylining 
+bir qismi bo‘lgan OnClickListener ga 
+
+00:04:06.990 --> 00:04:10.070
+murojaat qilayotganimiz haqida aniq 
+ma’lumot berish uchun qo‘shamiz.
+
+00:04:10.070 --> 00:04:14.460
+Va Java sinf a’zolariga kirish uchun 
+biz .operator dan foydalanamiz.
+
+00:04:14.460 --> 00:04:18.031
+NumClickListener da men onClick 
+usulini yaratdim.
+
+00:04:18.031 --> 00:04:21.320
+Va unda men aytdimki, 
+raqamlar toifasi bosilganda, 
+
+00:04:21.320 --> 00:04:26.030
+biz raqamlar ro‘yxatini oching degan qisqa 
+xabarini namoyish qilishni tanlaymiz.
+
+00:04:26.030 --> 00:04:26.980
+Mana bu yerda sizdagi ko‘rinishlar.
+
+00:04:26.980 --> 00:04:28.810
+Bu NumbersClickListener .
+
+00:04:28.810 --> 00:04:30.893
+Endi asosiy sahifaga o‘taman.
+
+00:04:30.893 --> 00:04:32.740
+Va OnCreate usulining oxirida 
+biz yangi ClickListener 
+
+00:04:32.740 --> 00:04:35.420
+ob’ektini yaratishimiz kerak.
+
+00:04:35.420 --> 00:04:38.420
+Endi biz ClickListener ni raqamlar 
+toifasi ko‘rinishiga biriktirishimiz kerak.
+
+00:04:38.420 --> 00:04:42.040
+Biroq, birinchi navbatda, ko‘rish ob’ekti 
+ierarxiyaning ichidan topishimiz kerak.
+
+00:04:42.040 --> 00:04:46.190
+Va bu jarayon sizga oxirgi kursda Just Java 
+ilovasidan tanish bo‘lsa kerak.
+
+00:04:46.190 --> 00:04:48.600
+Shunday qilib, bu kodni qanday 
+yozishni ko‘rib chiqamiz.
+
+00:04:48.600 --> 00:04:52.890
+Raqamlar toifasini ko‘rsatadigan 
+ko‘rinishni topish uchun.
+
+00:04:53.980 --> 00:04:57.030
+Shuning uchun men bu yerda findViewById 
+metodi deb nomlayman 
+
+00:04:57.030 --> 00:04:59.860
+va ID raqamlari bilan ko‘rinishni so‘rayman.
+
+00:04:59.860 --> 00:05:01.380
+Shunday qilib, biz matn ko‘rinishini 
+topganimizdan so‘ng, 
+
+00:05:01.380 --> 00:05:03.870
+raqamlarga murojaat qilmoqchi 
+bo‘lgan o‘zgaruvchini saqlashimiz mumkin.
+
+00:05:03.870 --> 00:05:07.910
+Keyin ushbu matn ko‘rinishida 
+o‘rnatilgan OnClickListener usuliga 
+
+00:05:07.910 --> 00:05:10.370
+murojaat qilib, EnterListener 
+ob’ektini kiritishimiz mumkin.
+
+00:05:10.370 --> 00:05:12.110
+Bu mana shunday ko‘rinishga ega.
+
+00:05:12.110 --> 00:05:15.565
+Xullas, biz bu yerda ClickListener ob’ekti 
+sifatida kirish sifatida matn ko‘rinishida 
+
+00:05:15.565 --> 00:05:17.757
+OnClickListener usulini o‘rnatdik.
+
+00:05:17.757 --> 00:05:21.487
+Bizning holatlarimizda TextView 
+raqamlari clickListener ob’ektini saqlaydi.
+
+00:05:21.487 --> 00:05:25.830
+Keyinchalik, agar ushbu TextView 
+bosilsa, ClickListener faollashadi.
+
+00:05:25.830 --> 00:05:29.116
+Men yozgan ushbu Java kod aslida 
+ishlayotganligini sinash uchun tugmani 
+
+00:05:29.116 --> 00:05:32.741
+bosish orqali biz yozgan ba’zi eski 
+kodlarni o‘chirib tashlashimiz kerak.
+
+00:05:32.741 --> 00:05:34.783
+Shunday qilib, activity_main XML faylidan
+
+00:05:34.783 --> 00:05:39.910
+TextView raqamlaridagi 
+Android onClick atributini o‘chirishim kerak.
+
+00:05:39.910 --> 00:05:46.510
+Shunday qilib, asosiy sahifada men ochiq 
+raqamlar ro‘yxati metodini o‘chirib tashlashim kerak.
+
+00:05:46.510 --> 00:05:52.155
+Va bu asosiy sahifani bitta metod, 
+onCreate metodi bilan qoldiradi.
+
+00:05:52.155 --> 00:05:53.547
+Endi men dasturni qurilmamda ishlatsam, 
+
+00:05:53.547 --> 00:05:55.809
+raqamlar toifasiga bosganingizda, 
+qisqa xabar paydo bo‘ladi.
+
+00:05:55.809 --> 00:05:56.309
+Ajoyib. Endi mening 
+ClickListener kodim ishlamoqda.
+

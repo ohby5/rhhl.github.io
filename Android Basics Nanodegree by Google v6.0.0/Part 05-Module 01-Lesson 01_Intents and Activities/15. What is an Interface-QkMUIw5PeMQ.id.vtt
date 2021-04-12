@@ -1,0 +1,263 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.680 --> 00:00:03.570
+Mari kembali ke dokumentasi
+untuk onClickListener.
+
+00:00:03.570 --> 00:00:06.680
+Seperti yang kita ketahui, Android sangat
+spesifik tentang perincian
+
+00:00:06.680 --> 00:00:09.110
+cara mendengarkan kejadian input.
+
+00:00:09.110 --> 00:00:11.110
+Nama metode ini sangat cocok.
+
+00:00:11.110 --> 00:00:14.130
+Metode ini memang harus tepat pada saat diklik
+dan memiliki
+
+00:00:14.130 --> 00:00:18.640
+satu input yaitu view yang sedang diklik
+dan tidak punya nilai kembali.
+
+00:00:18.640 --> 00:00:21.870
+Anda bisa membayangkan garis besar
+tentang OnCLickListener ini
+
+00:00:21.870 --> 00:00:26.100
+terkait dengan kelas dan metode sebagai
+kontrak yang Anda, sebagai pengembang,
+
+00:00:26.100 --> 00:00:29.330
+harus ikuti agar dapat diberi tahu
+tentang kejadian klik.
+
+00:00:29.330 --> 00:00:33.360
+Dalam peristilahan Java yang formal, ini
+adalah definisi suatu antarmuka.
+
+00:00:33.360 --> 00:00:37.740
+Di bagian atas halaman dokumentasi ini,
+dengan font kecil, dikatakan "antarmuka".
+
+00:00:37.740 --> 00:00:40.680
+Nantinya, kemungkinan besar Anda
+akan menjumpai
+
+00:00:40.680 --> 00:00:43.950
+komponen lain di Android
+yang juga merupakan antarmuka.
+
+00:00:43.950 --> 00:00:44.780
+Di titik ini,
+
+00:00:44.780 --> 00:00:49.290
+Anda mungkin heran, tunggu sebentar, bagaimana
+antarmuka bisa berbeda dari kelas?
+
+00:00:49.290 --> 00:00:51.490
+Halaman dokumen tampak cukup mirip.
+
+00:00:51.490 --> 00:00:55.500
+Di kursus terakhir, kita belajar
+tentang kelas seperti TextView,
+
+00:00:55.500 --> 00:00:59.830
+yang berisi status dan metode yang
+diimplementasikan secara utuh, artinya,
+
+00:00:59.830 --> 00:01:02.420
+ada instruksi dalam tiap metode.
+
+00:01:02.420 --> 00:01:06.540
+Sekarang kita diperkenalkan dengan
+antarmuka yang tidak berisi status,
+
+00:01:06.540 --> 00:01:09.110
+tapi berisi metode signature.
+
+00:01:09.110 --> 00:01:13.390
+Ingatlah bahwa metode signature menandai
+nilai kembali, nama metode,
+
+00:01:13.390 --> 00:01:14.560
+dan parameter input.
+
+00:01:14.560 --> 00:01:17.410
+Ini diakhiri dengan titik dua dan
+tidak ada kurung kurawal,
+
+00:01:17.410 --> 00:01:20.500
+dengan mode berada di tengah untuk
+implementasi di Android.
+
+00:01:20.500 --> 00:01:22.900
+Ini berarti metode abstrak.
+
+00:01:22.900 --> 00:01:27.060
+Implementasi suatu metode abstrak
+secara sengaja dibiarkan kosong sehingga
+
+00:01:27.060 --> 00:01:30.160
+pengembang seperti Anda, yang ingin
+menggunakan antarmuka,
+
+00:01:30.160 --> 00:01:32.790
+dapat memberikan instruksi
+spesifiknya sendiri untuknya.
+
+00:01:32.790 --> 00:01:34.880
+Ini seperti mengatakan,
+isilah bidang kosong ini dengan
+
+00:01:34.880 --> 00:01:37.140
+apa yang Anda inginkan untuk terjadi saat
+view ini diklik.
+
+00:01:38.240 --> 00:01:42.010
+Bisa ada beberapa metode abstrak
+di dalam antarmuka, tapi contoh
+
+00:01:42.010 --> 00:01:46.720
+antarmuka onClickListener ini hanya memiliki
+satu metode abstrak, yaitu metode onClick.
+
+00:01:46.720 --> 00:01:49.520
+Nantinya, kita juga akan
+menjumpai kelas abstrak.
+
+00:01:49.520 --> 00:01:53.520
+Ini merupakan kelas yang diimplementasikan
+sebagian dan berisi status dan
+
+00:01:53.520 --> 00:01:57.790
+beberapa metode lainnya diimplementasikan secara
+utuh sementara yang lain dibiarkan abstrak
+
+00:01:57.790 --> 00:01:59.770
+agar perilakunya didefinisikan orang lain.
+
+00:01:59.770 --> 00:02:02.730
+Anda bisa membayangkan ini sebagai
+kesinambungan di mana antarmuka tidak
+
+00:02:02.730 --> 00:02:06.000
+diimplementasikan sama sekali, dan kelas abstrak
+diimplementasikan sebagian, dan
+
+00:02:06.000 --> 00:02:08.220
+kelas konkret diimplementasikan secara utuh.
+
+00:02:08.220 --> 00:02:11.380
+Mengapa onClickListener
+bukan merupakan kelas konkret?
+
+00:02:11.380 --> 00:02:13.347
+Dan kenapa TextView bukan merupakan antarmuka?
+
+00:02:13.347 --> 00:02:16.520
+Dan kenapa juga ViewGroup
+merupakan kelas abstrak?
+
+00:02:16.520 --> 00:02:18.990
+Tim Android membuat tiap
+keputusan ini
+
+00:02:18.990 --> 00:02:22.730
+berdasarkan apa yang akan memudahkan bagi
+pengembang, seperti Anda, dalam membuat aplikasi.
+
+00:02:22.730 --> 00:02:25.310
+Tiap pengembang harus menampilkan
+teks di layar.
+
+00:02:25.310 --> 00:02:28.800
+Maka pengembang membuat kelas TextView
+konkret yang melakukan hal itu.
+
+00:02:28.800 --> 00:02:31.980
+Kita bisa memanggil metode untuk
+mengubah teks dalam view.
+
+00:02:31.980 --> 00:02:36.070
+Dalam kasus kelas abstrak ini, kita ingin
+menstandardidasi beberapa perilaku
+
+00:02:36.070 --> 00:02:38.980
+ViewGroup yang menjadi wadah
+untuk beberapa view child.
+
+00:02:38.980 --> 00:02:42.130
+Tapi, perincian tentang cara
+menata letak view
+
+00:02:42.130 --> 00:02:45.610
+di layar tetap tidak didefinisikan,
+dan harus didefinisikan oleh subkelas.
+
+00:02:45.610 --> 00:02:47.490
+Dalam hal ini, saat tata letak Anda
+
+00:02:47.490 --> 00:02:50.790
+dan relative layout merupakan subkelas
+dalam kelas ViewGroup,
+
+00:02:50.790 --> 00:02:55.030
+masing-masing mendefinisikan aturannya sendiri
+tentang bagaimana view harus ditata di layar.
+
+00:02:55.030 --> 00:02:58.820
+Di sisi lain, tim Android tahu bahwa
+banyak pengembang yang mungkin ingin
+
+00:02:58.820 --> 00:03:00.760
+membuat perilaku klik sendiri.
+
+00:03:00.760 --> 00:03:03.320
+Tidak masuk akal untuk
+menyediakan perilaku default untuk
+
+00:03:03.320 --> 00:03:04.780
+apa yang terjadi saat tombol diklik.
+
+00:03:04.780 --> 00:03:08.103
+Tapi tim Android memang ingin menstandardisasi
+apa metode panggilannya
+
+00:03:08.103 --> 00:03:10.710
+dan tipe kelasnya
+di onClickListener.
+
+00:03:10.710 --> 00:03:13.010
+Kemudian mereka membuat
+logika di dalam metode untuk
+
+00:03:13.010 --> 00:03:14.690
+ditulis sendiri oleh pengembang.
+
+00:03:14.690 --> 00:03:15.690
+Sebagai ringkasan,
+
+00:03:15.690 --> 00:03:19.470
+jika Anda menjumpai kelas konkret
+di Android, Anda bisa langsung menggunakannya.
+
+00:03:19.470 --> 00:03:22.490
+Jika Anda menjumpai kelas abstrak, Anda
+harus menjadikannya subkelas dan
+
+00:03:22.490 --> 00:03:25.290
+menyediakan kode Anda sendiri untuk
+metode abstrak.
+
+00:03:25.290 --> 00:03:28.260
+Jika Anda menjumpai antarmuka,
+Anda perlu menyediakan untuk
+
+00:03:28.260 --> 00:03:29.480
+semua metode abstrak.
+

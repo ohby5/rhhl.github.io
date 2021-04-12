@@ -1,0 +1,272 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.560 --> 00:00:02.132
+Sekarang kembali ke aplikasi kita.
+
+00:00:02.132 --> 00:00:05.040
+Saya ingin berfokus untuk memahami
+apa yang terjadi di balik layar
+
+00:00:05.040 --> 00:00:06.700
+saat suatu klik terjadi di Android.
+
+00:00:06.700 --> 00:00:08.860
+Jika kita mengeklik kategori
+Numbers dalam aplikasi,
+
+00:00:08.860 --> 00:00:12.670
+bagaimana metode openNumbersList
+secara ajaib dieksekusi?
+
+00:00:12.670 --> 00:00:16.329
+Di file activity_main.xml ini,
+kita lihat
+
+00:00:16.329 --> 00:00:18.770
+bahwa kita dapat mendefinisikan
+perilaku klik tombol
+
+00:00:18.770 --> 00:00:23.540
+dengan menambahkan atribut android.onClick
+ke view dalam tata letak XML.
+
+00:00:23.540 --> 00:00:27.606
+Ini sebenarnya pintasan XML yang
+cukup mudah yang disediakan Android.
+
+00:00:27.606 --> 00:00:30.070
+Tapi, kita ingin mengajari Anda
+bagaimana pengembang profesional
+
+00:00:30.070 --> 00:00:32.780
+biasanya menggarap logika kode
+tombol di aplikasi.
+
+00:00:32.780 --> 00:00:34.030
+Pada akhir pelajaran ini,
+
+00:00:34.030 --> 00:00:37.900
+kita akan mendapatkan perilaku klik
+tombol serupa di aplikasi Miwok,
+
+00:00:37.900 --> 00:00:41.520
+tapi kali ini hanya dengan kode Java
+dan tidak ada perubahan XML.
+
+00:00:42.560 --> 00:00:44.466
+Saat pengguna berinteraksi dengan
+perangkat Androidnya,
+
+00:00:44.466 --> 00:00:48.080
+dia berinteraksi dengan aplikasi dengan
+menyentuh layar, dan
+
+00:00:48.080 --> 00:00:51.530
+hal ini berkaitan dengan kejadian
+input pengguna di Android.
+
+00:00:51.530 --> 00:00:54.920
+Misalnya, ada kejadian klik
+saat view ditekan.
+
+00:00:54.920 --> 00:01:00.140
+Tipe lain kejadian mencakup klik
+panjang, kejadian seret, kejadian kunci,
+
+00:01:00.140 --> 00:01:04.480
+ini adalah saat kunci di keyboard ditekan,
+dan ada banyak lagi yang lainnya.
+
+00:01:04.480 --> 00:01:06.510
+Anggaplah pengguna mengeklik
+sebuah tombol di layar.
+
+00:01:06.510 --> 00:01:08.550
+Perangkat keras layar akan
+mendeteksi sentuhan tersebut dan
+
+00:01:08.550 --> 00:01:10.590
+memberi tahu Android bahwa
+sebuah klik telah terjadi.
+
+00:01:10.590 --> 00:01:13.227
+Lalu Android akan mengidentifikasi view
+di lokasi yang disentuh
+
+00:01:13.227 --> 00:01:14.540
+di layar.
+
+00:01:14.540 --> 00:01:17.460
+Yang paling mengesankan adalah bahwa
+Anda bisa memilih untuk diberi tahu
+
+00:01:17.460 --> 00:01:20.500
+saat kejadian tertentu terjadi
+di view tertentu.
+
+00:01:20.500 --> 00:01:25.040
+Di dalam kode, Anda bisa mengatakan, saya
+ingin tahu saat kejadian ini terjadi.
+
+00:01:25.040 --> 00:01:28.440
+Pengembang sering merujuk
+paradigma ini sebagai mendengarkan
+
+00:01:28.440 --> 00:01:29.770
+kejadian tertentu.
+
+00:01:29.770 --> 00:01:33.180
+Anda bisa memikirkan aplikasi Anda seperti
+memiliki sebuah telinga untuk mendengar
+
+00:01:33.180 --> 00:01:37.730
+sinyal tertentu yang Anda minati,
+sinyalnya berupa kejadian pengguna tertentu.
+
+00:01:37.730 --> 00:01:40.940
+Setelah Anda tahu kejadian telah terjadi,
+Anda dapat memprogram apa yang harus
+
+00:01:40.940 --> 00:01:44.730
+terjadi saat pengguna berinteraksi
+dengan bagian tertentu dari UI Anda.
+
+00:01:44.730 --> 00:01:47.380
+Bagaimana cara Anda mengatur
+semua ini di aplikasi?
+
+00:01:47.380 --> 00:01:51.510
+Anda dapat membuat sebuah objek
+eventListener untuk view ini dan
+
+00:01:51.510 --> 00:01:54.990
+Anda tentukan apa yang harus terjadi
+saat kejadian terjadi.
+
+00:01:54.990 --> 00:01:58.200
+Dalam diagram ini, kita
+tertarik pada kejadian klik.
+
+00:01:58.200 --> 00:02:00.880
+Maka kita buat onClickListener dan
+
+00:02:00.880 --> 00:02:04.550
+mengisi instruksi yang harus terjadi
+saat metode onClick dipanggil.
+
+00:02:04.550 --> 00:02:06.960
+Instruksi ini dapat berupa
+apa saja yang Anda inginkan.
+
+00:02:06.960 --> 00:02:09.880
+Anda bisa membuka layar baru saat
+pengguna mengeklik view ini,
+
+00:02:09.880 --> 00:02:11.540
+mengubah tampilan view ini,
+
+00:02:11.540 --> 00:02:15.430
+mengubah warna latar belakang seluruh
+layar, atau apa pun.
+
+00:02:15.430 --> 00:02:19.050
+Setelah Anda membuat
+onClickListener, langkah terakhir adalah
+
+00:02:19.050 --> 00:02:22.870
+menempelkannya ke view yang kita
+inginkan untuk mendengar klik.
+
+00:02:22.870 --> 00:02:25.150
+Dengan demikian, saat kejadian klik terjadi,
+
+00:02:25.150 --> 00:02:28.290
+jika view memiliki ClickListener
+yang terkait dengannya,
+
+00:02:28.290 --> 00:02:31.690
+Android akan mengeksekusi kode yang
+telah Anda tentukan di sini.
+
+00:02:31.690 --> 00:02:35.320
+Proses ini terjadi sangat
+cepat, dan
+
+00:02:35.320 --> 00:02:38.170
+Anda tidak perlu mengingat perincian
+tiap langkah.
+
+00:02:38.170 --> 00:02:42.150
+Peran kunci Anda sebagai pengembang
+adalah mengatur listener kejadian untuk
+
+00:02:42.150 --> 00:02:45.700
+kejadian input yang Anda perhatikan
+di aplikasi Anda, dan
+
+00:02:45.700 --> 00:02:49.260
+Android akan menangani kode
+seperti yang telah Anda tentukan.
+
+00:02:49.260 --> 00:02:51.930
+Ini adalah list beberapa
+listener kejadian di Android.
+
+00:02:51.930 --> 00:02:54.540
+Tiap listener kejadian menawarkan
+satu metode panggilan balik
+
+00:02:54.540 --> 00:02:56.400
+yang dapat Anda berikan kode.
+
+00:02:56.400 --> 00:02:59.830
+Ini diberi nama metode panggilan balik
+karena Anda akan dipanggil balik
+
+00:02:59.830 --> 00:03:01.010
+saat kejadian terjadi.
+
+00:03:01.010 --> 00:03:04.120
+Kita fokus ke bagian artikel yang
+mengungkapkan bahwa jika
+
+00:03:04.120 --> 00:03:08.020
+Anda tertarik dengan kejadian klik,
+Anda harus membuat onClickListener.
+
+00:03:08.020 --> 00:03:11.747
+Mari menavigasi ke sana, yang berisi
+metode onClick di mana Anda
+
+00:03:11.747 --> 00:03:14.440
+mengisikan instruksi untuk
+metode onClick.
+
+00:03:14.440 --> 00:03:17.060
+Lalu Android akan menangani pemanggilan
+oleh metode ini tiap kali pengguna
+
+00:03:17.060 --> 00:03:18.200
+mengeklik sebuah view.
+
+00:03:18.200 --> 00:03:18.780
+Sebagai catatan tambahan,
+
+00:03:18.780 --> 00:03:22.820
+kita merujuk ketukan di layar sebagai
+klik karena alasan historis.
+
+00:03:22.820 --> 00:03:26.810
+Komputer desktop menggunakan tetikus
+untuk menavigasi layar dan saat Anda
+
+00:03:26.810 --> 00:03:31.220
+menekan tombol tetikus untuk memilih
+sesuatu di layar, tetikus berbunyi klik.
+
+00:03:31.220 --> 00:03:33.250
+Dan inilah gambar
+tetikus paling awal.
+

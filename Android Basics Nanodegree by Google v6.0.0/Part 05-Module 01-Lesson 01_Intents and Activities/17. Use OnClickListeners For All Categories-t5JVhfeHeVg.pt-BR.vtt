@@ -1,0 +1,166 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.400
+Certo, vamos começar a sobrescrever
+o código para que clicando em "família"
+
+00:00:03.434 --> 00:00:04.901
+a atividade Família seja aberta.
+
+00:00:04.934 --> 00:00:09.334
+Estou na atividade principal aqui,
+e fizemos algo similar na categoria Números.
+
+00:00:09.367 --> 00:00:12.734
+Então não precisamos escrever
+nosso código para a categoria família do zero,
+
+00:00:12.767 --> 00:00:15.100
+pois podemos simplesmente copiar
+e colar o código aqui
+
+00:00:15.133 --> 00:00:17.267
+e alterá-lo para o uso em Família.
+
+00:00:17.300 --> 00:00:21.501
+Então começo atualizando o ID do recurso
+para encaminhar para a text view certa,
+
+00:00:21.534 --> 00:00:23.601
+então agora queremos
+que acione Família.
+
+00:00:23.634 --> 00:00:26.300
+Quando acharmos o texto certo para você
+nesta hierarquia de views,
+
+00:00:26.334 --> 00:00:28.567
+quero armazená-lo
+em uma variável chamada "família".
+
+00:00:28.601 --> 00:00:30.901
+Não posso deixar como "números"
+porque em um método único
+
+00:00:30.934 --> 00:00:34.033
+não posso definir uma variável
+com o mesmo nome duas vezes.
+
+00:00:34.067 --> 00:00:36.601
+Precisamos escolher nomes diferentes
+para cada variável.
+
+00:00:36.634 --> 00:00:40.634
+Então vamos também atualizar os comentários
+para se referirem à categoria Família.
+
+00:00:40.667 --> 00:00:45.267
+Depois, preciso modificar o setOnClickListener
+para que se refira à view Família.
+
+00:00:45.300 --> 00:00:47.501
+Agora, vamos atualizar o código intent.
+
+00:00:47.534 --> 00:00:51.767
+Aqui eu criei um intent com a atividade
+principal atual como contexto,
+
+00:00:51.801 --> 00:00:53.400
+e preciso modificar isto,
+
+00:00:53.434 --> 00:00:56.834
+para que a atividade Família
+seja a classe para onde ele vai.
+
+00:00:56.868 --> 00:00:59.701
+Depois, quando iniciarmos a atividade
+com esta linha de código,
+
+00:00:59.734 --> 00:01:02.033
+precisamos nos certificar
+que leva ao intent família.
+
+00:01:02.067 --> 00:01:04.968
+Então vamos modificar
+aqui e aqui.
+
+00:01:05.000 --> 00:01:07.367
+E também nos lembrar
+de atualizar os comentários.
+
+00:01:07.400 --> 00:01:10.467
+Agora farei o mesmo com a atividade Cores
+e a atividade Frases.
+
+00:01:12.033 --> 00:01:15.734
+Depois de fazer essas alterações no código,
+vamos testar o app em nosso dispositivo.
+
+00:01:15.767 --> 00:01:18.467
+Vamos clicar em todas as atividades
+e ver se funcionam.
+
+00:01:18.501 --> 00:01:21.133
+Primeiro Números, e parece bom.
+
+00:01:21.167 --> 00:01:25.067
+Membros da Família... Bom.
+Cores...
+
+00:01:26.467 --> 00:01:29.434
+E por fim, Frases. Perfeito.
+
+00:01:30.701 --> 00:01:34.000
+Notei que algumas das atividades
+ainda dizem "Miwok" no cabeçalho,
+
+00:01:34.033 --> 00:01:35.834
+em vez do nome da categoria.
+
+00:01:35.868 --> 00:01:41.501
+Em um exercício passado de códigos,
+reparamos isto para a atividade Números
+
+00:01:41.534 --> 00:01:46.334
+modificando a tag da atividade
+no arquivo androidmanifest.xml.
+
+00:01:46.367 --> 00:01:48.968
+Então vamos fazer isso
+para todas as outras atividades.
+
+00:01:50.067 --> 00:01:53.601
+Queremos que o rótulo
+para a atividade Família seja "família"
+
+00:01:53.634 --> 00:01:58.868
+e temos isso armazenado no recurso @string
+chamado category_family.
+
+00:01:58.901 --> 00:02:03.367
+Então vou fazer essa modificação
+no Android manifest
+
+00:02:03.400 --> 00:02:06.701
+e repetirei a mesma coisa
+para as outras atividades.
+
+00:02:08.267 --> 00:02:10.100
+Vamos testar mais uma vez.
+
+00:02:10.133 --> 00:02:12.067
+Quando abrimos cada categoria,
+
+00:02:12.100 --> 00:02:15.701
+o nome da categoria aparece
+no cabeçalho da atividade.
+
+00:02:15.734 --> 00:02:19.167
+Perfeito. Isso nos leva ao fim
+dos exercícios de códigos para a lição um.
+
+00:02:19.200 --> 00:02:20.567
+Parabéns!
+

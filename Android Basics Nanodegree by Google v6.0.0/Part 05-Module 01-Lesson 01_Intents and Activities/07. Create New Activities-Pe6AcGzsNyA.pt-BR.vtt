@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:03.600
+OK, agora vamos entender melhor
+a atividade principal.
+
+00:00:03.633 --> 00:00:07.100
+Lembre-se que pode pensar
+em uma atividade como uma tela do app.
+
+00:00:07.133 --> 00:00:10.567
+Até a lição 5 teremos descoberto
+que isto não é necessariamente verdade.
+
+00:00:10.600 --> 00:00:13.333
+Mas por enquanto
+essa simplificação funciona.
+
+00:00:13.367 --> 00:00:17.367
+Na maioria dos apps que já construímos,
+seu app teve apenas uma atividade.
+
+00:00:17.400 --> 00:00:21.433
+Perto do fim do app Just Java,
+você adicionou um código que mandou
+
+00:00:21.467 --> 00:00:25.000
+o intent para um app de e-mail
+para mandar um e-mail com o pedido do café.
+
+00:00:25.033 --> 00:00:28.067
+Depois o app Miwok
+também mandará intents,
+
+00:00:28.100 --> 00:00:32.200
+mas por enquanto não abriremos
+outros apps no Android.
+
+00:00:32.233 --> 00:00:36.267
+Em vez disso, vamos mandar intents
+abrir outras atividades que criamos
+
+00:00:36.300 --> 00:00:38.700
+dentro de nosso app Miwok.
+
+00:00:38.733 --> 00:00:41.733
+Então devemos ter 5 atividades
+em nosso app. A atividade principal
+
+00:00:41.767 --> 00:00:45.600
+e uma atividade para cada uma
+das 4 categorias de palavras.
+
+00:00:45.633 --> 00:00:48.233
+Quando clicamos em uma categoria
+na atividade principal,
+
+00:00:48.267 --> 00:00:50.933
+mandamos um intent
+abrir uma nova atividade.
+
+00:00:50.967 --> 00:00:54.900
+Isso no fim conterá uma lista
+de frases em miwok nessa categoria.
+
+00:00:54.933 --> 00:00:57.333
+Para começar,
+todas as atividades estarão vazias.
+
+00:00:57.367 --> 00:01:00.500
+Mas esta atividade por fim mostrará
+a lista de palavras para números,
+
+00:01:00.533 --> 00:01:03.167
+esta atividade mostrará a lista
+de membros da família,
+
+00:01:03.200 --> 00:01:05.800
+etc., para cores e frases.
+
+00:01:05.833 --> 00:01:08.700
+Então vamos trabalhar na criação
+dessas 4 outras atividades em nosso app.
+
+00:01:08.733 --> 00:01:11.667
+Vou te guiar enquanto cria
+uma nova atividade no Android Studio.
+
+00:01:11.700 --> 00:01:14.933
+Clique com o botão direito no pacote
+no diretório project,
+
+00:01:14.967 --> 00:01:17.300
+vá para New Activity,
+Empty Activity.
+
+00:01:17.333 --> 00:01:19.800
+Quando o assistente abrir,
+nomeie a atividade.
+
+00:01:19.833 --> 00:01:22.400
+Neste caso,
+usaremos NumbersActivity,
+
+00:01:22.433 --> 00:01:24.900
+aceitaremos o padrão
+e clicaremos em Finish.
+
+00:01:24.933 --> 00:01:26.433
+Agora é sua vez
+de criar atividades
+
+00:01:26.467 --> 00:01:30.933
+nas categorias restantes: frases,
+cores e membros da família.
+
+00:01:30.967 --> 00:01:33.867
+Se abrir o app em seu dispositivo,
+não devem aparecer erros.
+
+00:01:33.900 --> 00:01:36.567
+Porém, não poderá clicar
+nos botões das categorias para abrir
+
+00:01:36.600 --> 00:01:39.833
+estas atividades até adicionarmos
+mais códigos na próxima etapa.
+
+00:01:39.867 --> 00:01:44.333
+Depois de criar cada nova atividade,
+vá para o arquivo AndroidManifest.xml
+
+00:01:44.367 --> 00:01:48.400
+na pasta App Manifest para observar
+como ele foi modificado.
+
+00:01:48.433 --> 00:01:50.800
+Para recapitular, suas tarefas são:
+primeiro,
+
+00:01:50.833 --> 00:01:53.567
+quero que crie as 4 novas atividades
+no app Miwok,
+
+00:01:53.600 --> 00:01:55.200
+ou seja, a atividade
+frases,
+
+00:01:55.233 --> 00:01:59.400
+a atividade números,
+atividade família e atividade cores.
+
+00:01:59.433 --> 00:02:00.700
+Em seguida,
+
+00:02:00.733 --> 00:02:05.833
+vá para o arquivo AndroidManifest.xml
+e depois responda esta questão.
+
+00:02:05.867 --> 00:02:08.600
+Como o arquivo
+AndroidManifest.xml
+
+00:02:08.633 --> 00:02:11.133
+muda quando adiciona
+mais atividades ao app?
+
+00:02:11.167 --> 00:02:14.300
+Sei que esse é um arquivo
+que você nunca viu antes,
+
+00:02:14.333 --> 00:02:17.233
+mas tente dar um palpite
+observando as mudanças visuais
+
+00:02:17.267 --> 00:02:20.733
+que vê no arquivo,
+e então escreva sua resposta aqui.
+

@@ -1,0 +1,190 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.500 --> 00:00:04.133
+Agora nosso app contém 5 atividades,
+mas elas não estão todas conectadas.
+
+00:00:04.167 --> 00:00:07.000
+Quando abrimos nosso app,
+vemos a atividade principal,
+
+00:00:07.033 --> 00:00:09.700
+mas não há como abrir
+a atividade Números de lá.
+
+00:00:09.733 --> 00:00:12.700
+Então, vamos achar as peças que faltam
+sobre como abrir uma nova atividade
+
+00:00:12.733 --> 00:00:14.367
+quando clicamos
+em uma categoria.
+
+00:00:14.400 --> 00:00:18.067
+1º, precisamos saber quando
+um usuário clica em certa categoria.
+
+00:00:18.100 --> 00:00:20.867
+Depois, precisamos aprender como mandar
+um intent para abrir uma atividade
+
+00:00:20.900 --> 00:00:22.067
+dentro do nosso app.
+
+00:00:22.100 --> 00:00:25.300
+Se você lembra do curso passado,
+aprendemos como lidar com cliques
+
+00:00:25.333 --> 00:00:28.000
+no botão de enviar
+no app Just Java.
+
+00:00:28.033 --> 00:00:29.800
+Então, podemos aplicar
+o que aprendemos aqui.
+
+00:00:29.833 --> 00:00:31.833
+Vamos começar fazendo
+a categoria Números funcionar.
+
+00:00:31.867 --> 00:00:35.533
+No arquivo
+activity_main.xml,
+
+00:00:35.567 --> 00:00:39.333
+aqui é onde a categoria Números
+é definida em nosso app. No Android,
+
+00:00:39.367 --> 00:00:41.600
+views não são
+apenas botões.
+
+00:00:41.633 --> 00:00:44.000
+Lembre-se, botões são
+subclasses de views.
+
+00:00:44.033 --> 00:00:47.000
+Qualquer view pode ser configurada
+para responder a entradas de toque
+
+00:00:47.033 --> 00:00:49.833
+e achei mais fácil definir
+estes textos como views
+
+00:00:49.867 --> 00:00:53.000
+e depois estilizar as views para parecer
+com as marcas de design.
+
+00:00:53.033 --> 00:00:57.367
+Eu posso adicionar "onClick"
+a este elemento XML de visual de texto.
+
+00:00:57.400 --> 00:01:00.100
+Como fizemos no botão de enviar
+no curso passado,
+
+00:01:00.133 --> 00:01:02.967
+posso programar o valor
+para "openNumbersList",
+
+00:01:03.000 --> 00:01:06.333
+que manda o Android chamar
+a função de abrir a lista de números
+
+00:01:06.367 --> 00:01:08.333
+quando este view de texto
+é tocado.
+
+00:01:08.367 --> 00:01:10.633
+Note que ainda não
+implementamos essa função.
+
+00:01:10.667 --> 00:01:14.100
+Então vamos para o arquivo Java
+da atividade principal e fazer isso.
+
+00:01:14.133 --> 00:01:20.233
+No arquivo da atividade principal, crio
+esse novo método chamado openNumbersList.
+
+00:01:20.267 --> 00:01:23.667
+Precisa ser um método público,
+ter um valor de retorno vazio,
+
+00:01:23.700 --> 00:01:25.333
+o que significa que ele
+não dá retorno.
+
+00:01:25.367 --> 00:01:27.900
+Tenho um parâmetro de entrada,
+que será a exibição.
+
+00:01:27.933 --> 00:01:30.467
+Se estiver se perguntando
+como sei o que escrever,
+
+00:01:30.500 --> 00:01:31.633
+cheque a documentação
+
+00:01:31.667 --> 00:01:34.200
+para os atributos onClick do Android
+nas notas do instrutor abaixo.
+
+00:01:34.233 --> 00:01:36.733
+Certo, o método
+openNumbersList
+
+00:01:36.767 --> 00:01:40.267
+será chamado quando a categoria
+Números for clicada ou tocada.
+
+00:01:40.300 --> 00:01:43.700
+Isso significa que todas as linhas de código
+dentro desse método serão executadas.
+
+00:01:43.733 --> 00:01:46.867
+Então, isto cobre a 1ª etapa
+de como administrar o clique do usuário.
+
+00:01:46.900 --> 00:01:49.467
+Agora vou deixar você descobrir
+a 2ª etapa, que envolve descobrir
+
+00:01:49.500 --> 00:01:52.800
+o código que fica dentro do método
+openNumbersList.
+
+00:01:52.833 --> 00:01:55.267
+Você pode criar um intent para abrir
+a atividade de números.
+
+00:01:56.333 --> 00:01:57.900
+Não se preocupe
+com as outras categorias agora.
+
+00:01:57.933 --> 00:02:02.100
+Certo, quando tiver terminado,
+vai ficar assim.
+
+00:02:02.133 --> 00:02:05.933
+Clicar na categoria Números leva você
+à atividade de números
+
+00:02:05.967 --> 00:02:07.867
+e as outras categorias
+ainda não devem funcionar.
+
+00:02:07.900 --> 00:02:10.567
+Isso virá nas próximas etapas
+da codificação.
+
+00:02:10.600 --> 00:02:12.700
+Se precisar de uma dica
+sobre como conseguir isso,
+
+00:02:12.733 --> 00:02:14.033
+cheque as notas
+abaixo da questão de imagens.
+

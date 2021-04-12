@@ -1,0 +1,273 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.567 --> 00:00:02.100
+Vamos voltar ao nosso app.
+
+00:00:02.133 --> 00:00:05.000
+Quero focar em entender
+o que acontece nos bastidores
+
+00:00:05.033 --> 00:00:06.667
+quando se faz um clique
+no Android.
+
+00:00:06.701 --> 00:00:08.834
+Se clicarmos na categoria Números
+no app,
+
+00:00:08.868 --> 00:00:12.634
+como um método openNumbersList
+magicamente é executado?
+
+00:00:12.667 --> 00:00:16.300
+Bom, vimos aqui
+no arquivo activity_main.xml
+
+00:00:16.334 --> 00:00:18.734
+que poderíamos definir
+o comportamento ao clique do botão
+
+00:00:18.767 --> 00:00:23.501
+adicionando um atributo android:onClick
+a uma view no layout XML.
+
+00:00:23.534 --> 00:00:27.567
+Então esse é um atalho conveniente
+em XML que o Android fornece.
+
+00:00:27.601 --> 00:00:30.033
+Porém, queremos ensiná-lo
+como desenvolvedores profissionais
+
+00:00:30.067 --> 00:00:32.734
+geralmente adicionam lógica
+de códigos para botões em seus apps.
+
+00:00:32.767 --> 00:00:34.000
+Ao fim desta lição,
+
+00:00:34.033 --> 00:00:37.868
+vamos conseguir o mesmo comportamento
+ao clique do botão em nosso app,
+
+00:00:37.901 --> 00:00:41.534
+mas desta vez apenas em código Java
+e sem mudanças XML.
+
+00:00:42.567 --> 00:00:44.434
+Quando um usuário interage
+com seu dispositivo Android,
+
+00:00:44.467 --> 00:00:48.033
+eles interagem com os apps
+tocando a tela,
+
+00:00:48.067 --> 00:00:51.501
+e os toques correspondem a eventos
+de entradas do usuário no Android.
+
+00:00:51.534 --> 00:00:54.901
+Por exemplo, há um evento de clique
+quando uma view é pressionada.
+
+00:00:54.934 --> 00:01:00.100
+Outros tipos de eventos incluem
+clique longo, arrastes, eventos de tecla,
+
+00:01:00.133 --> 00:01:04.434
+quando uma tecla do teclado
+é pressionada, e muitos outros.
+
+00:01:04.467 --> 00:01:06.467
+Digamos que o usuário
+clicou em um botão na tela.
+
+00:01:06.501 --> 00:01:08.501
+O hardware da tela vai detectar
+o toque
+
+00:01:08.534 --> 00:01:10.567
+e notificar ao Android
+que um clique ocorreu.
+
+00:01:10.601 --> 00:01:13.200
+O Android identificará a view
+no local tocado
+
+00:01:13.234 --> 00:01:14.501
+na tela.
+
+00:01:14.534 --> 00:01:17.434
+O que é bem legal é que você
+pode escolher ser notificado
+
+00:01:17.467 --> 00:01:20.467
+quando certos eventos ocorrem
+em uma view específica.
+
+00:01:20.501 --> 00:01:25.000
+No código, você pode dizer
+"quero saber quando este evento ocorrer".
+
+00:01:25.033 --> 00:01:28.400
+Então desenvolvedores geralmente
+se referem a esse paradigma
+
+00:01:28.434 --> 00:01:29.734
+observar certo evento.
+
+00:01:29.767 --> 00:01:33.133
+De certo modo, é como se seu app
+tivesse um ouvido para escutar
+
+00:01:33.167 --> 00:01:37.701
+certos sinais com que você se importa,
+sendo eles eventos do usuário.
+
+00:01:37.734 --> 00:01:40.901
+Quando souber que o evento aconteceu,
+pode programar exatamente
+
+00:01:40.934 --> 00:01:44.701
+o que deve acontecer ao usuário
+interagir com certa parte de seu UI.
+
+00:01:44.734 --> 00:01:47.334
+Mas como configurar isso
+no seu app?
+
+00:01:47.367 --> 00:01:51.467
+Bom, pode criar um objeto
+como event listener para esta view
+
+00:01:51.501 --> 00:01:54.968
+e especificar o que deve acontecer
+na ocorrência do evento.
+
+00:01:55.000 --> 00:01:58.167
+Neste diagrama, estamos
+interessados em eventos de clique.
+
+00:01:58.200 --> 00:02:00.834
+Então criamos
+um OnClickListener
+
+00:02:00.868 --> 00:02:04.501
+e preenchemos instruções que devem acontecer
+quando o método onClick é acionado.
+
+00:02:04.534 --> 00:02:06.934
+Essas instruções podem ser
+o que você quiser.
+
+00:02:06.968 --> 00:02:09.834
+Você pode abrir uma nova tela
+quando o usuário clicar nesta view,
+
+00:02:09.868 --> 00:02:11.501
+mudar a aparência da view,
+
+00:02:11.534 --> 00:02:15.400
+mudar a cor de fundo da tela,
+ou qualquer outra coisa.
+
+00:02:15.434 --> 00:02:19.000
+Quando tiver criado o OnClickListener,
+o último passo
+
+00:02:19.033 --> 00:02:22.834
+é ligá-lo à view que queremos
+observar.
+
+00:02:22.868 --> 00:02:25.100
+Assim, quando um clique
+acontecer,
+
+00:02:25.133 --> 00:02:28.267
+se a view tiver um listener de clique
+associado a ela,
+
+00:02:28.300 --> 00:02:31.667
+o Android executará o código
+que você especificou aqui.
+
+00:02:31.701 --> 00:02:35.300
+O processo acontecerá
+bem rapidamente,
+
+00:02:35.334 --> 00:02:38.133
+e não precisará se lembrar
+de todos os detalhes de cada etapa.
+
+00:02:38.167 --> 00:02:42.100
+Seu papel como desenvolvedor
+é configurar os event listeners
+
+00:02:42.133 --> 00:02:45.667
+para os eventos de entrada
+de seu interesse no aplicativo,
+
+00:02:45.701 --> 00:02:49.234
+e o Android cuidará de executar
+o código como você especificou.
+
+00:02:49.267 --> 00:02:51.901
+Esta é uma lista de alguns
+event listeners no Android.
+
+00:02:51.934 --> 00:02:54.501
+Cada event listener oferece
+um método de callback único
+
+00:02:54.534 --> 00:02:56.367
+para o qual você pode
+fornecer o código.
+
+00:02:56.400 --> 00:02:59.801
+Se chama método callback
+porque vão retornar a você
+
+00:02:59.834 --> 00:03:00.968
+quando o evento acontecer.
+
+00:03:01.000 --> 00:03:04.100
+Vamos focar nesta parte do artigo
+que menciona
+
+00:03:04.133 --> 00:03:08.000
+que se estiver interessado em um evento
+de clique, deve criar um OnClickListener.
+
+00:03:08.033 --> 00:03:11.701
+Vamos navegar até lá. Ele contém
+o método onClick onde você
+
+00:03:11.734 --> 00:03:14.400
+preenche as instruções
+para o método onClick.
+
+00:03:14.434 --> 00:03:17.033
+Depois, o Android se encarregará
+de chamar este método quando o usuário
+
+00:03:17.067 --> 00:03:18.167
+clicar em uma view.
+
+00:03:18.200 --> 00:03:22.801
+Uma observação, nos referimos a um toque
+na tela como clique por razões históricas.
+
+00:03:22.834 --> 00:03:26.767
+Computadores de mesa usam um mouse
+para navegar pela tela, e quando você
+
+00:03:26.801 --> 00:03:31.200
+pressiona o botão para selecionar
+algo na tela, o mouse "clica".
+
+00:03:31.234 --> 00:03:33.234
+Esta é uma imagem
+do 1º mouse.
+

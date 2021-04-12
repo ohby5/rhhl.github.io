@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.495 --> 00:00:02.580
+Bagus, sekarang intent
+bekerja di aplikasi kita.
+
+00:00:02.580 --> 00:00:05.960
+Tapi, saya melihat ada masalah, yaitu
+activity angka yang kita buka,
+
+00:00:05.960 --> 00:00:07.380
+masih mengatakan Miwok di bagian atas.
+
+00:00:07.380 --> 00:00:09.710
+Saya ingin mengubah judul activity ini
+menjadi Angka.
+
+00:00:09.710 --> 00:00:12.880
+Dan untuk activity lain yang kita buka,
+harus menampilkan warna,
+
+00:00:12.880 --> 00:00:15.460
+frasa, dan anggota
+keluarga.
+
+00:00:15.460 --> 00:00:18.710
+Saya tadi mengungkapkan bahwa kita akan
+kembali ke file AndroidManifest.XML
+
+00:00:18.710 --> 00:00:20.610
+dan sekarang inilah saatnya.
+
+00:00:20.610 --> 00:00:22.570
+Untuk mengubah judul
+activity angka,
+
+00:00:22.570 --> 00:00:25.730
+hanya dengan memodifikasi file
+AndroidManifest.XML.
+
+00:00:25.730 --> 00:00:28.480
+Ada suatu cara untuk memodifikasi
+nama activity, tapi
+
+00:00:28.480 --> 00:00:31.215
+saya lupa sintaksis persisnya,
+jadi mari kita cara.
+
+00:00:31.215 --> 00:00:32.590
+Saya akan melakukan penelusuran di web untuk
+
+00:00:32.590 --> 00:00:38.860
+tag activity manifest Android dan
+hasil pertama ini tampak bagus.
+
+00:00:38.860 --> 00:00:41.620
+Di panel navigasi, di sisi
+kiri layar,
+
+00:00:41.620 --> 00:00:44.620
+kita melihat tag activity di
+bawah manifest aplikasi.
+
+00:00:44.620 --> 00:00:46.270
+Jadi, kita di tempat yang benar.
+
+00:00:46.270 --> 00:00:47.720
+Di sisi kanan layar,
+
+00:00:47.720 --> 00:00:51.910
+kita bisa melihat beberapa kemungkinan
+nama atribut terkait dengan nama activity.
+
+00:00:51.910 --> 00:00:54.540
+Gunakan pintasan command F keyboard atau
+
+00:00:54.540 --> 00:00:57.730
+control F di Windows untuk
+membuka menu pencarian.
+
+00:00:57.730 --> 00:00:59.370
+Lalu ketikkan name.
+
+00:00:59.370 --> 00:01:01.980
+Melihat lebih dekat pada deskripsi
+atribut nama,
+
+00:01:01.980 --> 00:01:06.406
+tampaknya nama adalah nama
+file Java activity.
+
+00:01:06.406 --> 00:01:08.350
+Menscroll atribut
+lebih lanjut,
+
+00:01:08.350 --> 00:01:11.340
+saya kira kita sedang mencari sesuatu
+bernama label.
+
+00:01:11.340 --> 00:01:12.970
+Mari kita lihat
+atribut itu dan
+
+00:01:12.970 --> 00:01:17.060
+jelas, dikatakan bahwa label adalah
+yang ditampilkan kepada pengguna.
+
+00:01:17.060 --> 00:01:19.514
+Oke, jadi kembali ke
+AndroidManifest.XML,
+
+00:01:19.514 --> 00:01:22.880
+kita akan mencari tag activity
+yang terkait dengan NumbersActivity.
+
+00:01:22.880 --> 00:01:26.790
+Lalu, kita akan tambahkan atribut tambahan
+bernama Android label dan nilanya akan
+
+00:01:26.790 --> 00:01:29.760
+berupa teks yang ingin kita tunjukkan
+dalam bar aplikasi untuk activity ini.
+
+00:01:29.760 --> 00:01:30.750
+Yaitu Numbers.
+
+00:01:30.750 --> 00:01:33.130
+Jika kita lihat kembali
+model mental aplikasi,
+
+00:01:33.130 --> 00:01:36.380
+string ini sudah dideklarasikan
+di file strings.XML.
+

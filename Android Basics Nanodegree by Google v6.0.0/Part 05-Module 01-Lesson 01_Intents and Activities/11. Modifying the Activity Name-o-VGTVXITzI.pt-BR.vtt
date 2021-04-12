@@ -1,0 +1,137 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.501 --> 00:00:02.534
+Ótimo, agora os intents
+estão funcionando em nosso app.
+
+00:00:02.567 --> 00:00:05.934
+Porém, um problema que vejo é
+que a atividade Números que abrimos
+
+00:00:05.968 --> 00:00:07.334
+ainda diz "Miwok" no topo.
+
+00:00:07.367 --> 00:00:09.667
+Quero mudar o título
+dessa atividade para "números".
+
+00:00:09.701 --> 00:00:12.834
+E as outras atividades que abrirmos
+devem se chamar "cores",
+
+00:00:12.868 --> 00:00:15.434
+"frases" e "membros da família",
+respectivamente.
+
+00:00:15.467 --> 00:00:18.667
+Falei mais cedo que vamos voltar
+ao arquivo Android manifest.xml,
+
+00:00:18.701 --> 00:00:20.567
+e a hora é essa.
+
+00:00:20.601 --> 00:00:22.534
+Para mudar o título
+da atividade Números,
+
+00:00:22.567 --> 00:00:25.701
+só precisamos modificar o arquivo
+Android manifest.xml.
+
+00:00:25.734 --> 00:00:28.434
+Há um modo para modificar
+o nome da atividade,
+
+00:00:28.467 --> 00:00:31.167
+mas esqueci a sintaxe exata,
+então vamos pesquisar.
+
+00:00:31.200 --> 00:00:32.567
+Vou fazer uma busca na web
+
+00:00:32.601 --> 00:00:38.834
+por "Android manifests activity tag"
+e este 1º resultado parece bom.
+
+00:00:38.868 --> 00:00:41.601
+No painel de navegação
+ao lado esquerdo da tela,
+
+00:00:41.634 --> 00:00:44.601
+vemos a tag de atividade
+sob o manifesto do app.
+
+00:00:44.634 --> 00:00:46.234
+Então estamos
+no lugar certo.
+
+00:00:46.267 --> 00:00:47.701
+Do lado direito da tela,
+
+00:00:47.734 --> 00:00:51.868
+podemos ver possíveis nomes de atributos
+relacionados ao nome da atividade.
+
+00:00:51.901 --> 00:00:54.501
+Use o atalho command + F
+
+00:00:54.534 --> 00:00:57.701
+ou Ctrl + F no Windows
+para abrir o menu de busca.
+
+00:00:57.734 --> 00:00:59.334
+Depois digite "name".
+
+00:00:59.367 --> 00:01:01.934
+Olhando atentamente a descrição
+do atributo de nome,
+
+00:01:01.968 --> 00:01:06.367
+parece que "name" é o nome
+do arquivo de atividade Java.
+
+00:01:06.400 --> 00:01:08.300
+Olhando um pouco mais
+os atributos,
+
+00:01:08.334 --> 00:01:11.300
+acho que o que estamos procurando
+se chama "label".
+
+00:01:11.334 --> 00:01:12.934
+Então vamos dar uma olhada
+nesse atributo
+
+00:01:12.968 --> 00:01:17.033
+e sim, aqui diz que "label"
+é o que é mostrado ao usuário.
+
+00:01:17.067 --> 00:01:19.467
+OK, então voltando
+ao Android manifest.xml,
+
+00:01:19.501 --> 00:01:22.834
+acharemos a tag de atividade
+relacionada à atividade Números.
+
+00:01:22.868 --> 00:01:26.767
+Depois, adicionaremos outro atributo
+chamado Android label e o valor será
+
+00:01:26.801 --> 00:01:29.734
+o texto que queremos que apareça
+na barra do app para essa atividade,
+
+00:01:29.767 --> 00:01:30.734
+que é "números".
+
+00:01:30.767 --> 00:01:33.100
+Se voltarmos ao nosso
+modelo mental do app,
+
+00:01:33.133 --> 00:01:36.367
+esta string já estava declarada
+no arquivo strings.xml.
+

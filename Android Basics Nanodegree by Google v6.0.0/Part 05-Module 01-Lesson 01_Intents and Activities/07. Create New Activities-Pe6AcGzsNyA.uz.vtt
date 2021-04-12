@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.037 --> 00:00:03.640
+Yaxshi, shunday qilib, hozir bizda asosiy 
+activity bo‘yicha yaxshiroq tushuncha bor.
+
+00:00:03.640 --> 00:00:07.130
+Eslab qoling, siz activity ni yagona sahifa yoki 
+ilova sifatida tasavvur qilishingiz mumkin.
+
+00:00:07.130 --> 00:00:10.610
+Beshinchi darsgacha, biz bu unchalik ham 
+to‘g‘ri emasligini tushunib olamiz.
+
+00:00:10.610 --> 00:00:13.370
+Ammo, hozircha bu soddalashtirish qo‘l keladi.
+
+00:00:13.370 --> 00:00:17.393
+Siz shu paytgacha yaratgan ko‘plab ilovalaringizda, 
+ular yagona activity ga ega bo‘lishgan.
+
+00:00:17.393 --> 00:00:21.453
+Just Java ilovasining oxirrog‘iga 
+kelib, siz email ilovasiga kofe 
+
+00:00:21.453 --> 00:00:25.037
+buyurtma beradigan email jo‘natish 
+istagi uchun kod qo‘shdingiz.
+
+00:00:25.037 --> 00:00:28.104
+Va shundan keyin Miwok ilovasi ham 
+istaklar jonatayotgan bo‘ladi, ammo
+
+00:00:28.104 --> 00:00:32.250
+bu vaqtda biz Android qurilmasidagi boshqa 
+qurilmalarni ishga tushirmayotgan bo‘lamiz.
+
+00:00:32.250 --> 00:00:36.310
+Uning o‘rniga biz Miwok 
+ilovasida yaratilgan boshqa 
+
+00:00:36.310 --> 00:00:38.730
+activity larni ochish uchun 
+istaklar jo‘natayapmiz.
+
+00:00:38.730 --> 00:00:41.780
+Demak, bizning ilovamizda beshta activity 
+bo‘lishi kerak, asosiy activity 
+
+00:00:41.780 --> 00:00:45.640
+shuningdek, so‘zlarning har to‘rtala 
+kategoriyalari uchun ham activity lar.
+
+00:00:45.640 --> 00:00:48.260
+Biz asosiy activity dagi 
+kategoriya ustiga bosganimizda, 
+
+00:00:48.260 --> 00:00:50.960
+biz yangi activity ni ochish 
+uchun istak yuboramiz.
+
+00:00:50.960 --> 00:00:54.940
+Va nihoyat bu o‘sha kategoriya uchun Miwok 
+jumlalarining ro‘yxatidan tashkil topgan.
+
+00:00:54.940 --> 00:00:57.380
+Boshlab olish uchun hamma activity lar bo‘sh bo‘ladi.
+
+00:00:57.380 --> 00:01:00.540
+Ammo, bu activity oxirida son so‘zlari 
+ro‘yxatini ko‘rsatadi, va 
+
+00:01:00.540 --> 00:01:03.200
+bu activity oila a’zolari so‘zlarining 
+ro‘yxatini ko‘rsatadi va
+
+00:01:03.200 --> 00:01:05.820
+boshqalar, ranglar va jumlalar uchun.
+
+00:01:05.820 --> 00:01:08.730
+Demak, keling, ilovamizda mana bu boshqa 
+to‘rtta activity ni yaratish ustida ishlaymiz.
+
+00:01:08.730 --> 00:01:11.700
+Men sizga Android Studio da qanday qilib yangi activity yaratishni ko‘rsataman.
+
+00:01:11.700 --> 00:01:14.960
+Loyiha directory sidagi 
+package o‘ng tomonini bosing, 
+
+00:01:14.960 --> 00:01:17.328
+New &gt; Activity &gt; Empty Activity ga boring.
+
+00:01:17.328 --> 00:01:19.818
+Wizard paydo bo‘lganda, activity ning nomini bering.
+
+00:01:19.818 --> 00:01:22.442
+Bu holda, biz NumbersActivity ni ishlatamiz, va 
+
+00:01:22.442 --> 00:01:24.950
+belgilab qo‘yilganini qabul qilamiz 
+va finish ni bosamiz.
+
+00:01:24.950 --> 00:01:26.460
+Endi qolgan kategoriyalar, jumlalar, 
+ranglar va oila a’zolari uchun 
+
+00:01:26.460 --> 00:01:30.960
+activity lar yaratish 
+uchun sizning navbatingiz.
+
+00:01:30.960 --> 00:01:33.890
+Agar siz ilovani qurilmangizda ishlatib ko‘rsangiz, 
+u yerda xatolar bo‘lmasligi kerak.
+
+00:01:33.890 --> 00:01:36.610
+Ammo biz keyingi bosqichda ko‘proq kod 
+qo‘shmagunimizcha, siz bu activity ni 
+
+00:01:36.610 --> 00:01:39.870
+ochish uchun kategoriya tugmachalarining 
+ustiga bosa olmaysiz.
+
+00:01:39.870 --> 00:01:44.380
+Siz har bir yangi activity ni yaratganingizdan 
+keyin, u qanday o‘zgartirilganini kuzatish uchun 
+
+00:01:44.380 --> 00:01:48.440
+App Manifest fayli ostidagi 
+AndroidManifest.xml fayliga o‘ting. 
+
+00:01:48.440 --> 00:01:50.830
+Endi takrorlab chiqish uchun qiladigan 
+ishlaringizdan birinchisi: 
+
+00:01:50.830 --> 00:01:53.585
+Men sizni Miwok ilovasida to‘rtta 
+yangi activity yaratishingizni xohlayman.
+
+00:01:53.585 --> 00:01:55.240
+Demak, bu jumla activity si, sonlar 
+activity si, oila activity si 
+
+00:01:55.240 --> 00:01:59.440
+va ranglar activity si bo‘lishi mumkin.
+
+00:01:59.440 --> 00:02:00.750
+Va keyingisi, davom eting va 
+
+00:02:00.750 --> 00:02:05.870
+AndroidManifest.xml faylga o‘ting va 
+mana bu savolga javob bering.
+
+00:02:05.870 --> 00:02:08.630
+Shunday qilib, siz ilovaga activity lar 
+qo‘shaverganingiz sayin 
+
+00:02:08.630 --> 00:02:11.180
+AndroidManifest.xml fayl qanday o‘zgaradi?
+
+00:02:11.180 --> 00:02:14.330
+Hozir, men bilaman, bu siz ilgari 
+ko‘rmagan bitta yangi fayl, ammo
+
+00:02:14.330 --> 00:02:17.280
+siz o‘sha faylda ko‘rgandaqa vizual o‘zgarishlar qilish 
+orqali bironta jo‘yali taxmin qilishga harakat qiling
+
+00:02:17.280 --> 00:02:20.750
+va davom etgan holda, javoblaringizni 
+mana bu yerga yozing.
+

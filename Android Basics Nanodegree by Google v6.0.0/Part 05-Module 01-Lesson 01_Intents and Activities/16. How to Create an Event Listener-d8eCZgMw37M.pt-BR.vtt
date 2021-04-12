@@ -1,0 +1,456 @@
+WEBVTT
+Kind: captions
+Language: pt-BR
+
+00:00:00.000 --> 00:00:04.701
+Você já deve saber que
+o onClickListener é uma interface
+
+00:00:04.734 --> 00:00:07.601
+com um método abstrato
+chamado onClick.
+
+00:00:07.634 --> 00:00:10.934
+Seu papel como desenvolvedor
+é montar event listeners
+
+00:00:10.968 --> 00:00:13.868
+para os eventos de entrada
+no seu app.
+
+00:00:13.901 --> 00:00:16.267
+Mais especificamente
+para cada listener,
+
+00:00:16.300 --> 00:00:18.634
+você vai ter que seguir
+três passos.
+
+00:00:18.667 --> 00:00:22.334
+Primeiro, defina o event listener
+e o comportamento
+
+00:00:22.367 --> 00:00:24.300
+para quando o evento ocorrer.
+
+00:00:24.334 --> 00:00:29.567
+Segundo, crie uma instância
+do event listener com o construtor.
+
+00:00:29.601 --> 00:00:33.701
+Terceiro, anexe o listener ao view
+que deve aguardar eventos.
+
+00:00:33.734 --> 00:00:35.901
+Mostrarei o código
+de cada passo.
+
+00:00:35.934 --> 00:00:39.734
+Defina a classe de event listeners
+que implemente a interface.
+
+00:00:39.767 --> 00:00:41.133
+O nome não importa,
+
+00:00:41.167 --> 00:00:44.501
+mas tem que seguir as diretrizes
+de nomeação do Java.
+
+00:00:44.534 --> 00:00:47.934
+Neste caso, chamamos a classe
+de "NumbersClickListener"
+
+00:00:47.968 --> 00:00:52.467
+e o código está no arquivo
+"NumbersClickListener.java".
+
+00:00:52.501 --> 00:00:55.968
+Quando definimos a classe,
+a declaração deve dizer:
+
+00:00:56.000 --> 00:00:58.434
+"public class",
+depois o nome da classe,
+
+00:00:58.467 --> 00:01:01.467
+a palavra "implements"
+e o nome da interface,
+
+00:01:01.501 --> 00:01:03.501
+neste caso, OnClickListener.
+
+00:01:03.534 --> 00:01:06.968
+"Implements" é uma palavra-chave
+de Java especial.
+
+00:01:07.000 --> 00:01:09.467
+Há uma lista
+de palavras especiais
+
+00:01:09.501 --> 00:01:11.868
+na documentação
+na página do Java.
+
+00:01:11.901 --> 00:01:15.267
+"Implements" expressa que
+a classe "NumbersClickListener"
+
+00:01:15.300 --> 00:01:17.501
+vai suportar
+a interface especificada
+
+00:01:17.534 --> 00:01:20.133
+e fornecer código
+para os métodos abstratos.
+
+00:01:20.167 --> 00:01:22.901
+Ao implementar
+a interface OnClickListener,
+
+00:01:22.934 --> 00:01:27.234
+para cada parte do código do Android
+que espera um objeto OnClickListener
+
+00:01:27.267 --> 00:01:29.400
+podemos usar
+NumbersClickListener.
+
+00:01:29.434 --> 00:01:33.667
+Antes do método, inserimos
+a anotação "@Override".
+
+00:01:33.701 --> 00:01:36.901
+Assim anulamos
+o método vazio na interface
+
+00:01:36.934 --> 00:01:39.033
+e fornecemos
+nossa implementação.
+
+00:01:39.067 --> 00:01:41.234
+Nessa implementação
+do método onClick
+
+00:01:41.267 --> 00:01:43.634
+queremos exibir
+a uma mensagem Toast:
+
+00:01:43.667 --> 00:01:45.200
+"abra a lista de números".
+
+00:01:45.234 --> 00:01:47.400
+Qualquer comportamento
+pode ser usado.
+
+00:01:47.434 --> 00:01:48.801
+Foi apenas um exemplo.
+
+00:01:48.834 --> 00:01:50.567
+Depois de definir a classe,
+
+00:01:50.601 --> 00:01:53.534
+criamos uma instância
+do NumbersClickListener.
+
+00:01:53.567 --> 00:01:59.100
+No curso passado, vimos o template,
+mas precisamos criar objetos agora.
+
+00:01:59.133 --> 00:02:02.467
+Criamos uma planta,
+mas queremos fazer uma casa.
+
+00:02:02.501 --> 00:02:06.100
+Lembre-se da sintaxe para criar
+um objeto com o construtor.
+
+00:02:06.133 --> 00:02:09.167
+Para criar uma instância
+do NumbersClickListener,
+
+00:02:09.200 --> 00:02:12.234
+podemos usar a palavra "new".
+
+00:02:12.267 --> 00:02:16.734
+Criamos um novo objeto,
+apesar da variável ficar à esquerda
+
+00:02:16.767 --> 00:02:19.100
+já que a variável
+é deste tipo de dado.
+
+00:02:19.133 --> 00:02:22.934
+No app Miwok, este é o código
+no arquivo de atividade principal.
+
+00:02:22.968 --> 00:02:24.901
+Modificamos a
+atividade principal
+
+00:02:24.934 --> 00:02:27.234
+para logo captarmos
+eventos de clique
+
+00:02:27.267 --> 00:02:29.200
+assim que a atividade é criada.
+
+00:02:29.234 --> 00:02:32.200
+Criamos um novo objeto
+NumbersClickListener
+
+00:02:32.234 --> 00:02:34.934
+e o armazenamos
+na variável clickListener,
+
+00:02:34.968 --> 00:02:38.701
+do tipo de dado variável
+NumbersClickListener.
+
+00:02:38.734 --> 00:02:41.701
+Assim que temos um objeto
+do NumbersClickListener,
+
+00:02:41.734 --> 00:02:45.434
+precisamos colocá-lo no view
+que deve receber os clicks.
+
+00:02:45.467 --> 00:02:46.801
+Veja o código.
+
+00:02:46.834 --> 00:02:50.300
+Supondo que o view esteja
+armazenado na variável buttonview,
+
+00:02:50.334 --> 00:02:53.567
+temos que chamar o método
+setOnClickListener no view
+
+00:02:53.601 --> 00:02:57.534
+e passar um argumento,
+a variável clickListener.
+
+00:02:57.567 --> 00:03:01.367
+Como sabemos chamar este método
+com este argumento em particular?
+
+00:03:01.400 --> 00:03:03.567
+Vamos à documentação.
+
+00:03:03.601 --> 00:03:05.734
+Veja na classe View.
+
+00:03:05.767 --> 00:03:09.300
+Tem um método chamado
+setOnClickListener
+
+00:03:09.334 --> 00:03:11.200
+passando o OnClickListener.
+
+00:03:11.234 --> 00:03:14.033
+Já que o NumbersClickListener
+implementa a interface,
+
+00:03:14.067 --> 00:03:16.901
+ele é considerado
+um tipo de dado OnClickListener
+
+00:03:16.934 --> 00:03:19.734
+e podemos passá-lo
+como um input no método.
+
+00:03:19.767 --> 00:03:23.033
+Vamos ver o código
+no contexto do app.
+
+00:03:23.067 --> 00:03:26.067
+Você deve fazer
+as alterações agora,
+
+00:03:26.100 --> 00:03:29.067
+mas o próximo quiz
+traz instruções específicas
+
+00:03:29.100 --> 00:03:30.734
+sobre o que precisa fazer.
+
+00:03:30.767 --> 00:03:34.000
+Siga e tente entender
+a lógica.
+
+00:03:34.067 --> 00:03:36.667
+Criei uma classe
+NumbersClickListener
+
+00:03:36.701 --> 00:03:39.167
+e a defina num arquivo java
+particular.
+
+00:03:39.200 --> 00:03:42.567
+Lembre-se de que especificamos
+o nome do pacote no código.
+
+00:03:42.601 --> 00:03:45.868
+O código está contido
+neste pacote.
+
+00:03:45.901 --> 00:03:47.734
+Adicionamos
+as declarações import
+
+00:03:47.767 --> 00:03:50.033
+porque usamos as
+classes View e Toast.
+
+00:03:50.067 --> 00:03:53.601
+Mesmo que não as criamos,
+podemos importá-las.
+
+00:03:53.634 --> 00:03:59.434
+Na declaração de classe, temos:
+implements View.OnClickListener
+
+00:03:59.467 --> 00:04:02.934
+Quero salientar o ponto
+em View.OnClickListener
+
+00:04:02.968 --> 00:04:06.434
+para garantir que estamos
+nos referindo ao OnClickListener
+
+00:04:06.467 --> 00:04:09.767
+que faz parte do arquivo View.java
+neste pacote.
+
+00:04:09.801 --> 00:04:11.934
+Lembre-se de que usamos o ponto
+
+00:04:11.968 --> 00:04:14.334
+para acessar membros
+de classe Java.
+
+00:04:14.367 --> 00:04:17.601
+No NumbersClickListener,
+criei um método onClick.
+
+00:04:17.634 --> 00:04:20.934
+Nele, quando alguém clica
+na categoria de números,
+
+00:04:20.968 --> 00:04:23.634
+exibimos uma mensagem de texto
+que diz:
+
+00:04:23.667 --> 00:04:25.334
+Abra a lista de números.
+
+00:04:25.367 --> 00:04:28.467
+Pronto.
+Este é o NumbersClickListener.
+
+00:04:28.501 --> 00:04:30.367
+Vamos à atividade principal.
+
+00:04:30.400 --> 00:04:32.334
+No final do método onCreate,
+
+00:04:32.367 --> 00:04:34.968
+temos criar um novo
+objeto ClickListener.
+
+00:04:35.000 --> 00:04:38.467
+Vamos anexar o ClickListener
+ao view na categoria de números.
+
+00:04:38.501 --> 00:04:41.701
+Antes, temos que achar
+o objeto view na hierarquia.
+
+00:04:41.734 --> 00:04:45.801
+Você deve se lembrar desse processo
+do app justjava do último curso.
+
+00:04:45.834 --> 00:04:48.033
+Vamos escrever o código.
+
+00:04:48.067 --> 00:04:52.834
+Vamos achar o view que exibe
+a categoria de números.
+
+00:04:53.767 --> 00:04:56.167
+Uso o método findViewById,
+
+00:04:56.200 --> 00:04:59.167
+e requisito o view
+com os números de ID.
+
+00:04:59.200 --> 00:05:03.300
+Achamos o TextView e o armazenamos
+na variável "numbers".
+
+00:05:03.334 --> 00:05:05.934
+Depois chamamos
+o método setOnClickListener
+
+00:05:05.968 --> 00:05:09.801
+neste TextView e passamos
+o objeto ClickListener como input.
+
+00:05:09.834 --> 00:05:11.400
+Veja como fica.
+
+00:05:11.434 --> 00:05:15.434
+Este é o método setOnClickListener
+no TextView.
+
+00:05:15.467 --> 00:05:18.167
+Passamos o objeto clickListener
+como input.
+
+00:05:18.200 --> 00:05:21.467
+Os números TextView
+armazenam o objeto clickListener.
+
+00:05:21.501 --> 00:05:25.534
+Se este TextView for pressionado,
+o clickListener entra em ação.
+
+00:05:25.567 --> 00:05:28.100
+Para testar
+se este código funciona,
+
+00:05:28.133 --> 00:05:31.234
+precisamos deletar códigos antigos
+do buttonclick.
+
+00:05:31.267 --> 00:05:34.400
+No arquivo XML ativity_main,
+
+00:05:34.434 --> 00:05:37.634
+temos que deletar
+o atributo AndroidOnClick
+
+00:05:37.667 --> 00:05:39.434
+no TextView de números.
+
+00:05:39.467 --> 00:05:41.934
+Na atividade principal,
+tenho que remover
+
+00:05:41.968 --> 00:05:44.267
+o método openNumbersList.
+
+00:05:44.300 --> 00:05:48.634
+Assim a atividade principal
+fica apenas com o método onCreate.
+
+00:05:48.667 --> 00:05:50.200
+Quando rodo o app,
+
+00:05:50.234 --> 00:05:53.300
+clicar na categoria números
+traz a mensagem do Toast.
+
+00:05:53.334 --> 00:05:55.834
+Nosso código clickListener
+funciona.
+

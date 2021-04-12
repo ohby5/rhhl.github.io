@@ -1,0 +1,175 @@
+WEBVTT
+Kind: captions
+Language: id
+
+00:00:00.250 --> 00:00:02.880
+Eric Gonzales. Saya mengerjakan aplikasi
+Android di Udacity.
+
+00:00:02.880 --> 00:00:06.840
+Saya mulai mengerjakan aplikasi Udacity untuk
+
+00:00:06.840 --> 00:00:10.240
+tenggat pengiriman ke aplikasi
+pada saat Google IO.
+
+00:00:10.240 --> 00:00:16.360
+Jadi saya bergabung dengan perusahaan ini
+sekitar lima minggu sebelum kami harus mengirim,
+
+00:00:16.360 --> 00:00:21.580
+maka kami pindah ke Mountain View dan
+bekerja lembur, lalu mengirim dengan tim kecil.
+
+00:00:21.580 --> 00:00:24.850
+Cara saya mengakrabkan diri dengan
+basis kode adalah
+
+00:00:24.850 --> 00:00:29.265
+dengan lebih dekat dengan API Udacity
+lebih daripada kode entri.
+
+00:00:29.265 --> 00:00:31.830
+Sebagian besar kode entri
+cukup mudah
+
+00:00:31.830 --> 00:00:36.070
+dalam hal pengembangan Android, tapi cara
+Anda mengambil data dari Udacity
+
+00:00:36.070 --> 00:00:40.210
+cukup berbeda, yaitu ada sedikit
+proses pembelajaran.
+
+00:00:40.210 --> 00:00:42.970
+Berbagai activity dalam aplikasi Udacity
+cukup mudah.
+
+00:00:42.970 --> 00:00:46.660
+Mereka dikelompokkan, tentu secara logis, dengan
+activity yang normalnya Anda lakukan di situs
+
+00:00:46.660 --> 00:00:47.420
+atau ruang kelas.
+
+00:00:47.420 --> 00:00:50.970
+Misalnya, ada notasi
+katalog.
+
+00:00:50.970 --> 00:00:54.820
+Ada perincian individual untuk berbagai kursus
+dan masing-masing merupakan activity sendiri.
+
+00:00:54.820 --> 00:00:58.580
+Begitu juga dengan autentikasi, Anda punya
+activity untuk autentikasi atau
+
+00:00:58.580 --> 00:01:01.940
+melihat penlistan Anda, cukup lengkap
+sehingga Anda bisa merujuk ke activity
+
+00:01:01.940 --> 00:01:05.850
+yang Anda lakukan di ruang kelas Udacity,
+merujuk ke activity dalam aplikasi Udacity.
+
+00:01:05.850 --> 00:01:09.090
+Jadi kami menggunakan intent
+cukup banyak di dalam aplikasi.
+
+00:01:09.090 --> 00:01:13.780
+Tiap kali Anda berpindah di antara, misalnya,
+masuk ke katalog atau
+
+00:01:13.780 --> 00:01:14.910
+penlistan Anda,
+
+00:01:14.910 --> 00:01:17.090
+itu semua merupakan explicit intent.
+
+00:01:17.090 --> 00:01:20.050
+Jadi secara khusus sama saja, saya tahu
+saya ingin beralih dari activity ini
+
+00:01:20.050 --> 00:01:23.930
+ke activity berikutnya, dan
+ini bisa berupa argumen atau
+
+00:01:23.930 --> 00:01:26.450
+primer berbeda yang dapat berguna
+saat memuat status baru.
+
+00:01:27.540 --> 00:01:30.940
+Kita menggunakan cukup sedikit implicit
+intent dalam aplikasi karena sifat
+
+00:01:30.940 --> 00:01:33.600
+aplikasi itu sendiri, tidak begitu banyak
+dependensi, misalnya saya tidak
+
+00:01:33.600 --> 00:01:34.990
+harus memindai kode batang atau
+
+00:01:34.990 --> 00:01:38.970
+mengambil gambar atau hal-hal yang
+memiliki dependensi di luar diri saya sendiri.
+
+00:01:38.970 --> 00:01:42.020
+Ada satu tempat di mana kami
+menggunakan implicit intent dan ini
+
+00:01:42.020 --> 00:01:42.970
+adalah untuk mengirim email.
+
+00:01:42.970 --> 00:01:44.700
+Jika Anda memiliki masalah
+dengan aplikasi atau
+
+00:01:44.700 --> 00:01:46.490
+Anda bermasalah dengan akun Anda
+atau aplikasi,
+
+00:01:46.490 --> 00:01:50.260
+tentu saja, klien email apa yang Anda
+gunakan atau bagaimana cara mengirim email,
+
+00:01:50.260 --> 00:01:53.450
+kami menggunakan implicit intent
+untuk menghasilkan respons tersebut.
+
+00:01:53.450 --> 00:01:55.610
+Sehingga Anda dapat mengirim tiket dukungan.
+
+00:01:55.610 --> 00:01:58.010
+Saat saya ingin menjadikan sebuah tombol
+interaktif untuk tata letak saya,
+
+00:01:58.010 --> 00:02:00.440
+tentu saja saat Anda berada
+di dalam activity Anda,
+
+00:02:00.440 --> 00:02:04.640
+saya akan mencari view yang
+merujuk ke tombol tersebut.
+
+00:02:04.640 --> 00:02:06.910
+Setelah saya menemukannya,
+saya bisa mengatur sebuah listener.
+
+00:02:06.910 --> 00:02:08.220
+Yaitu ClickListener.
+
+00:02:08.220 --> 00:02:11.420
+Sehingga saya bisa melakukan tindakan spesifik
+terhadapnya, atau jika saya ingin melakukannya.
+
+00:02:11.420 --> 00:02:14.160
+Jadi, itu bisa memicu, mungkin,
+activity lain.
+
+00:02:14.160 --> 00:02:16.970
+Atau bisa juga melakukan
+panggilan jaringan,
+
+00:02:16.970 --> 00:02:18.330
+misalnya menlistkan siswa dalam kursus.
+

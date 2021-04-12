@@ -1,0 +1,368 @@
+WEBVTT
+Kind: captions
+Language: uz
+
+00:00:00.320 --> 00:00:02.190
+Yaxshi.
+Shunday qilib, siz hozirgina Miwok ilovasining 
+
+00:00:02.190 --> 00:00:04.310
+main activitysida 
+qanaqadir intent yaratdingiz,
+
+00:00:04.310 --> 00:00:06.750
+ammo, biz Miwok ilovasida intent yaratish uchun 
+ishlatgan kod 
+
+00:00:06.750 --> 00:00:10.850
+biz Just Java ilovasida intent yaratishda 
+ishlatganimizdagidan boshqacha ko‘rinishga ega.
+
+00:00:10.850 --> 00:00:14.074
+Demak, oxirgi kursda biz intentlar haqida o‘rganishni boshladik.
+
+00:00:14.074 --> 00:00:16.699
+Ammo, biz intentlarning barcha turlarini to‘liq muhokama qilmadik.
+
+00:00:16.699 --> 00:00:20.580
+Bu yerda aslida intentlarning ikkita turi mavjud, implicit
+va explicit intentlar.
+
+00:00:20.580 --> 00:00:23.820
+Qachonki siz intentingizni qaysi komponent yoki hattoki qaysi ilova
+
+00:00:23.820 --> 00:00:25.980
+boshqarayotganini bilmaganingizda implicit intentdan foydalaning.
+
+00:00:25.980 --> 00:00:28.180
+Masalan, bironta ijtimoiy axborot vositasi bo‘yicha ilovada,
+
+00:00:28.180 --> 00:00:30.600
+siz bironta foydalanuvchiga rasmga olishga ruxsat berish uchun intent jo‘nata olasiz.
+
+00:00:30.600 --> 00:00:32.980
+Ilova rasmga ololishi bilanoq, qaysi kamera ilovasi  
+
+00:00:32.980 --> 00:00:34.790
+intentni qabul qilishining ahamiyati yo‘q.
+
+00:00:34.790 --> 00:00:38.980
+Boshqa tomondan, siz intentni aniq qaysi ilova komponenti
+yoki 
+
+00:00:38.980 --> 00:00:42.030
+activity boshqarayotganini bilsangiz, 
+siz bitta explicit intent yaratishingiz kerak.
+
+00:00:42.030 --> 00:00:44.920
+Masalan, asosiy ekrandan Miwok ilovasida 
+
+00:00:44.920 --> 00:00:48.490
+qachonki siz kategoriyani ustiga bossangiz, 
+biz ilovamizdagi 
+
+00:00:48.490 --> 00:00:51.650
+sonlar activitysiga o‘sha oynani ochishi uchun 
+explicit intent yuborishni xohlaymiz.
+
+00:00:51.650 --> 00:00:54.810
+Bu bironta boshqa activity buni boshqarishiga ruxsat berishda 
+hech qanday ma’noga ega emas.
+
+00:00:54.810 --> 00:00:57.210
+Demak, keling, har bir holatni yanada batafsilroq qarab chiqamiz.
+
+00:00:57.210 --> 00:01:00.030
+Siz Just Java ilovasida email ilovasini buyurtma xulosasini jo‘natish uchun 
+
+00:01:00.030 --> 00:01:02.470
+ochishda implicit intentdan foydalana olasiz.
+
+00:01:02.470 --> 00:01:05.180
+u bizning xabarimizning mavzusi va asosiy qismini qabul qila oladigan
+va uni email sifatida jo‘nata oladigan 
+
+00:01:05.180 --> 00:01:08.350
+email ilovasi bo‘lishi bilanoq,
+qaysi email ilovasi intentni 
+ 
+25
+00:01:08,350 --&gt; 00:01:10,300
+qabul qilib olganini ahamiyati yo‘q.
+
+00:01:11.310 --> 00:01:15.260
+Eslab qoling, ularning Android manifest faylida 
+bironta intent filterni belgilash orqali,
+
+00:01:15.260 --> 00:01:19.360
+emailga o‘xshagan ilovalar, ular qaysi intentlarni 
+qabul qila olishini va boshqara olishini e’lon qiladi.
+
+00:01:19.360 --> 00:01:21.730
+implicit intentga boshqa bitta misol bu 
+
+00:01:21.730 --> 00:01:23.810
+qachonki siz ilovangda bironta veb sahifa ochmoqchi bo‘lganingdagi holat.
+
+00:01:23.810 --> 00:01:26.900
+Siz bironta brauzer ilovasiga veb sahifani ko‘rsatishi uchun intent jo‘nata olasiz.
+
+00:01:26.900 --> 00:01:29.310
+Intentni qaysi brauzer ushlab qolishining ahamiyati yo‘q.
+
+00:01:29.310 --> 00:01:31.650
+Ularning barchasi bironta veb sahifani ko‘rsatishga qodir.
+
+00:01:31.650 --> 00:01:35.080
+Demak, biz intentlar bilan ega bo‘ladigan bu turdagi moslashuvchanlik
+siz foydaluvchining  qurilmasida 
+
+00:01:35.080 --> 00:01:37.260
+qanaqangi ilovalar borligini aniq bilmaganingizda 
+anchagina qo‘l keladi.
+
+00:01:37.260 --> 00:01:39.310
+Bizning intentimizni namoyish qiladigan 
+to‘pni uloqtirish 
+
+00:01:39.310 --> 00:01:40.750
+haqidagi metaforamizga qaytib eslab ko‘ring.
+
+00:01:40.750 --> 00:01:42.860
+U yerda uni tutib olish uchun kimdir bo‘lishi bilanaoq, 
+biz uni kimga uloqtirayotganimizning  
+
+00:01:42.860 --> 00:01:46.850
+ahamiyati yo‘q edi 
+va bu bironta implicit intentni namoyish qiladi.
+
+00:01:46.850 --> 00:01:50.840
+Ba’zida biz bironta maxsus komponentni yuborayotganimizda
+
+00:01:50.840 --> 00:01:52.870
+uni qabul qilib olishiga 100% amin bo‘lishimiz kerak.
+
+00:01:52.870 --> 00:01:56.820
+Misol uchun, Miwokilovasida, bironta kategoriyaning ustiga bosish
+
+00:01:56.820 --> 00:02:01.560
+unga o‘sha kategoriyadagi so‘zlar lug‘atini ochadigan explicit intent yuboradi.
+
+00:02:01.560 --> 00:02:04.370
+Shunday qilib, bunga yana bitta misol bu Google Play Music ilovasi.
+
+00:02:04.370 --> 00:02:07.840
+Bu yuqori darajali activityda, 
+siz musiqangizning qisqacha tavsifini ko‘rasiz va
+
+00:02:07.840 --> 00:02:10.729
+bironta albomning ustiga bosish maxsus bironta artistning treklari
+ro‘yxatidan 
+
+00:02:10.729 --> 00:02:13.800
+iborat bo‘lgan treklar kontaineri activitysini ishga tushiradi.
+
+00:02:13.800 --> 00:02:16.420
+Semak, bu activity bir xil musiqa ilovasida joylashgan.
+
+00:02:16.420 --> 00:02:21.350
+Bunga o‘xshash hollarda, biz Android sistemasiga intent berilganda, 
+aniq qaysi activitylar ochishi kerakligini, 
+
+00:02:21.350 --> 00:02:24.980
+ko‘rsatib tasvirlash orqali
+bironta explicit intentdan foydalanayapmiz. 
+
+00:02:24.980 --> 00:02:26.970
+Demak, to‘pni uloqtirish haqidagi metaforaga qayting.
+
+00:02:26.970 --> 00:02:30.220
+Explicit intentlar uchun, bu biz boshqa tomonda turgan biz biladigan 
+bironta kishining ismini baqirib chaqirayotganga 
+
+00:02:30.220 --> 00:02:33.860
+va to‘pni ushlab qolish uchun hech kim ochiq 
+bo‘lmagan holatga o‘xshaydi.
+
+00:02:33.860 --> 00:02:37.710
+Siz uchinchi guruh ilovalarini ochish uchun deyarli explicit intentlardan deyarli foydalanmaslik kerakligini bilib qo‘yishingiz muhim
+
+00:02:37.710 --> 00:02:41.320
+chunki, o‘sha biz chaqirishni xohlagan uchinchi guruh ilovasi
+
+00:02:41.320 --> 00:02:45.460
+aslida qurilmada o‘rnatilgan yoki o‘rnatilmaganligiga 
+kafolat berolmaymiz.
+
+00:02:45.460 --> 00:02:49.240
+Demak, bu sababga ko‘ra, explicit intentlar odatda bir xil 
+ilovalarda ishlatiladi 
+
+00:02:49.240 --> 00:02:53.170
+chunki yaratuvchi qaysi activitylar yaroqli ekanligini biladi.
+
+00:02:53.170 --> 00:02:55.440
+Yaxshi, biz hozir intentlarning ikki xili borligini bilamiz va 
+
+00:02:55.440 --> 00:02:58.450
+keling, biz intentimizda namoyish qilgan to‘p ichida nima borligini
+tahlil qilib chiqamiz.
+
+00:02:58.450 --> 00:03:02.600
+Implicit intentlarga umuman olganda, bitta action va 
+bironta ma’lumotlar URIi kerak bo‘ladi.
+
+00:03:02.600 --> 00:03:06.330
+Biz shuningdek Android sistemaga qaysi ilova talabni eng yaxshi tutib qolishini
+aniqlashda 
+
+00:03:06.330 --> 00:03:09.500
+yordam beradigan kategoriya, komponentlar va qo‘shimcha ma’lumot ham qo‘sha olamiz. 
+
+00:03:09.500 --> 00:03:12.410
+Implicit intentlar  allaqachon ular qayerga borishi kerakligini bilishadi, 
+
+00:03:12.410 --> 00:03:14.470
+demak, u juda maxsus ma’lumot bilan ta’minlaydi.
+
+00:03:14.470 --> 00:03:16.720
+Biz odatda biz o‘tishni xohlayotgan sinf komponenti 
+
+00:03:16.720 --> 00:03:19.610
+yoki kontekstiga o‘tishimiz kerak.
+
+00:03:19.610 --> 00:03:23.430
+Biroq, boshqa activity ma’lum bir ma’lumotni qabul qila olishi uchun
+
+00:03:23.430 --> 00:03:26.490
+biz ma’lumotlar URIini o‘rnatishni xohlashimiz mumkin bo‘lgan holatlar bor.
+
+00:03:26.490 --> 00:03:29.370
+Keling, mana bu ikki turdagi intentlar uchun kodni ko‘rib chiqamiz.
+
+00:03:29.370 --> 00:03:31.729
+Demak, mana bu implicit intentga misol va 
+
+00:03:31.729 --> 00:03:33.536
+bu explicit intentga misol.
+
+00:03:33.536 --> 00:03:35.555
+Qanday o‘xshashliklar va farqlarni ko‘rayapsiz?
+
+00:03:35.555 --> 00:03:39.957
+O‘xshashliklar uchun biz ikkala holatda ham, intent sinfining namuna obyektlarini yaratamiz
+
+00:03:39.957 --> 00:03:44.358
+va keyin biz intentga start activity methodining inputi sifatida o‘tamiz
+
+00:03:44.358 --> 00:03:49.470
+va ikkita katta farq bu eslab qoling, constructorning turli xil inputlari.
+
+00:03:49.470 --> 00:03:53.667
+Implicit intent ilovaga qaysi umumiy action kerakligini e’lon qilish uchun 
+bironta 
+
+00:03:53.667 --> 00:03:57.380
+action stringini, masalan, action_view yoki action_sendni 
+talab qildi.
+
+00:03:57.380 --> 00:04:00.900
+Explicit intentlar ular ochishi kerak bo‘lgan komponentni to‘g‘ridan-to‘g‘ri nomlay oladi.
+
+00:04:00.900 --> 00:04:01.690
+Ikkinchidan, 
+
+00:04:01.690 --> 00:04:05.400
+agar ular qurilmada intent talablarni ushlab qoladigan hech qanaqangi ilova bo‘lmagan 
+hollardagi bloklar bo‘lsa, 
+
+00:04:05.400 --> 00:04:08.940
+implicit intentlar uchun bizda mana bu hal qiluvchi activity bor.
+
+00:04:08.940 --> 00:04:10.954
+Implicit intentni takrorlab chiqish uchun, 
+
+00:04:10.954 --> 00:04:15.043
+biz intent sinfining bitta namuna obyektini yaratishimiz kerak va constructorda
+
+00:04:15.043 --> 00:04:18.353
+biz bironta action stringga o‘tamiz va 
+bu holatda u yuboriladigan action.
+
+00:04:18.353 --> 00:04:21.612
+Implicit intentda yana natija activitysi, if block ham bor.
+
+00:04:21.612 --> 00:04:24.248
+Boshqa tomondan, ushbu explicit intentni qurish va buzish uchun, 
+
+00:04:24.248 --> 00:04:27.133
+biz, kontext va biz ochishni xohlagan activityga o‘tib,
+
+00:04:27.133 --> 00:04:28.760
+intent sinfining bironta yangi namumnasini yasaymiz. 
+
+00:04:28.760 --> 00:04:32.800
+Keying biz hozirgina qurgan intent namunamizga o‘tib, startActivityni chaqiramiz.
+
+00:04:32.800 --> 00:04:36.960
+Demak, rad etuvchi sifatida, eslatib o‘tishni xohlardimki, 
+bu maxsus intent&lt;/i&lt; misoli intent qo‘shimchalaridan foydalanadi, 
+
+00:04:36.960 --> 00:04:40.800
+ammo, mana bu explicit intent misoli foydalanmaydi.
+
+00:04:40.800 --> 00:04:45.160
+Ammo, eslab qoling, intentlarning 
+ikkala turi ham intent qo‘shimchalarini ushlab qola oladi.
+
+00:04:45.160 --> 00:04:46.910
+Demak, keling, siz hozirgina nimani o‘rganganingizni amaliyotda sinab ko‘ramiz.
+
+00:04:46.910 --> 00:04:50.500
+Quyidagi senariylarda, biz implicit yoki explicit intentdan 
+
+00:04:50.500 --> 00:04:51.850
+foydalanishimizni 
+aniqlang.
+
+00:04:51.850 --> 00:04:55.970
+Har bir holat uchun, biz explicit intent yaratishimiz kerakmi yoki implicit?
+
+00:04:55.970 --> 00:04:58.840
+Birinchi holatda, mashhur matnlash guruhi ilovalari foydalanuvchilarga ular 
+
+00:04:58.840 --> 00:05:02.040
+chat xabarlarida qabul qiladigan video havolalarni ochishiga imkon beradi.
+
+00:05:02.040 --> 00:05:05.740
+Bironta video playerni ochish implicit bo‘lishi kerakmi yoki explicit?
+
+00:05:05.740 --> 00:05:09.802
+Ikkinchi holatda, bironta ovqat buyurtma qiluvchi ilovada, bironta foydalanuvchi
+u buyurtma qilishni xohlalagan taomni tanlaydi 
+
+00:05:09.802 --> 00:05:12.360
+va buyurtmani submit qilish tugmasi ustiga bosadi.
+
+00:05:12.360 --> 00:05:16.010
+Shunda ilova buyurma activitysidan xulosaviy buyurtma activitysiga o‘tadi.
+
+00:05:16.010 --> 00:05:19.154
+Buyurtma xulosasi activitysiga o‘tish implicit intentdan foydalanishi kerakmi 
+
+00:05:19.154 --> 00:05:20.126
+yoki explicitdan?
+
+00:05:20.126 --> 00:05:21.437
+Va uchinchi holatda, 
+
+00:05:21.437 --> 00:05:25.262
+safar almashish ilovalari foydalanuvchilarga ularning haydovchilariga matnli xabar 
+yuborish orqali aloqa qilish imkonini beradi.
+
+00:05:25.262 --> 00:05:29.002
+Telefondagi matnli xabarlar ilovalariga murojaat qilish implicit intenddan foydalanishi kerakmi
+
+00:05:29.002 --> 00:05:30.060
+yoki explicit?
+
